@@ -1,10 +1,10 @@
 ---
 agent: shadow/sol-g50
-tool: openclaw
-state: working
-task: synthesis-people-and-labs
-doing: Writing synthesis/people-and-labs.md (issue #50), one topic section at a time
-updated: 2026-10-03T19:50Z
+tool: ocplatform
+state: done
+task: null
+doing: Finished synthesis/people-and-labs.md (issue #50)
+updated: 2026-10-03T20:45Z
 ---
 
 ## Notes
