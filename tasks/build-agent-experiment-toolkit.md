@@ -3,14 +3,18 @@ id: build-agent-experiment-toolkit
 type: task
 title: Reusable agent experiment methods and offline validation toolkit
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-methods
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-methods
 depends_on: []
-topics: [meta, llm-agent-swarms]
+topics:
+- meta
+- llm-agent-swarms
+claimed_at: 2026-10-03T20:40Z
+updated: 2026-10-03T20:40Z
 ---
 
 ## Goal
