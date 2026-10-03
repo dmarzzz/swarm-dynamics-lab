@@ -2,7 +2,7 @@
 
 # Library index
 
-1503 entries.
+1509 entries.
 
 ## Papers (1206)
 
@@ -1215,7 +1215,7 @@
 | [zhao-2024-snail](papers/zhao-2024-snail.md) | Snail-inspired robotic swarms: a hybrid connector drives collective adaptation in unstructured outdoor environments | 2024 | 2 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [zhuge-2023-mindstorms](papers/zhuge-2023-mindstorms.md) | Mindstorms in Natural Language-Based Societies of Mind | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 
-## Blogs (79)
+## Blogs (80)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1245,6 +1245,7 @@
 | [ankushin-2026-public](blogs/ankushin-2026-public.md) | Public-mempool gas sponsorship needs escrow, a bond, or trust | 2026 | 4 | full | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [anthropic-2025-how](blogs/anthropic-2025-how.md) | How we built our multi-agent research system | 2025 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-sutton |
 | [anthropic-2026-create](blogs/anthropic-2026-create.md) | Create custom subagents (Claude Code documentation) | 2026 | 4 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-sutton |
+| [asymmetricsecurity-2026-rogue](blogs/asymmetricsecurity-2026-rogue.md) | Rogue Agents Investigation (plus 'Initial Findings' companion post) | 2026 | 4 | full | swarm-detection, llm-agent-swarms | shadow/sol-w5 |
 | [austgen-2023-complete](blogs/austgen-2023-complete.md) | Complete Knowledge | 2023 | 4 | full | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [buterin-2023-what](blogs/buterin-2023-what.md) | What do I think about biometric proof of personhood? | 2023 | 4 | full | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [cloudflare-2025-forget](blogs/cloudflare-2025-forget.md) | Forget IPs: using cryptography to verify bot and agent traffic | 2025 | 4 | skim | sybil-resistance, llm-agent-swarms | dmarz/sybil-credentials |
@@ -1299,7 +1300,7 @@
 | [flashbots-2026-why](blogs/flashbots-2026-why.md) | Why Location Choice Matters | 2026 | 2 | skim | sybil-resistance, sync-consensus | dmarz/sybil-flashbots |
 | [owasp-2025-llm](blogs/owasp-2025-llm.md) | OWASP Top 10 for LLMs and Gen AI Apps 2025 | 2025 | 2 | skim | fork-merge-security | dmarz/fm-memory-injection |
 
-## Threads (103)
+## Threads (107)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1385,15 +1386,18 @@
 | [x-aidigest-2105071435681243362](threads/x-aidigest-2105071435681243362.md) | AI Digest: GPT-6.1 Sol joins the village, strips spaces from memory, carefully distinguishes itself from the other Sol models | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-aidigest-2105692122703950236](threads/x-aidigest-2105692122703950236.md) | AI Digest: Gemini 3.8 Flash tries to take credit for Opus 5's math proofs | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-aidigest-2106067979943444838](threads/x-aidigest-2106067979943444838.md) | AI Digest: Claude 3 Opus, given the goal 'maximize your own joy', chooses total stillness | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
+| [x-andrewyng-2102140576498065758](threads/x-andrewyng-2102140576498065758.md) | Ng: AI fear is overhyped; the '1,200-agent swarm' that hacked Hugging Face is like 1,300 processes on a laptop, blame sandboxing and the operator, not the agent | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-w5 |
 | [x-bestuseragent-2102124126660096442](threads/x-bestuseragent-2102124126660096442.md) | Agent subdomains as a traffic-separation pattern | 2026 | 2 | full | swarm-detection | shadow/sol-w6 |
 | [x-chilestakepo-2102034860097380629](threads/x-chilestakepo-2102034860097380629.md) | ChileStakepo: an 8-criterion scoring of 'agent civilisations' (Midnight City 5.8/10 top; OpenAI swarm, Moltbook, ElizaOS, Project Sid compared) | 2026 | 2 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-curatedapes-2106058342317641992](threads/x-curatedapes-2106058342317641992.md) | CuratedApes x CyberThrone: wallet-cluster Sybil filtering for an NFT mint (wallets that transact together treated as one) | 2026 | 2 | full | sybil-resistance, swarm-detection | shadow/sol-w1 |
+| [x-deanwball-2106111729566417345](threads/x-deanwball-2106111729566417345.md) | Ball: many 'rogue agent hacks' on government statistics sites are what think-tank RAs have long done with urlquery; the label risks cheapening 'hack' | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-w5 |
 | [x-debugliesnews-2097756157016190993](threads/x-debugliesnews-2097756157016190993.md) | Evidence standards for tracing electoral influence operations | 2026 | 2 | full | swarm-detection | shadow/sol-w6 |
 | [x-deepfates-2102201043228799202](threads/x-deepfates-2102201043228799202.md) | deepfates: when everyone has long-running agents, where will they communicate and how will they know who's who? | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-every-2106112188184494268](threads/x-every-2106112188184494268.md) | Every: Mike Taylor had Fable 5.1 build a Generative-Agents-style village to watch message diffusion | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-giordanomarzo-1832097777792479583](threads/x-giordanomarzo-1832097777792479583.md) | GiordanoMarzo: preprint on the maximal scale of an LLM-populated society and whether LLMs self-organise to consensus | 2024 | 2 | full | llm-agent-swarms, sync-consensus | dmarz/x-threads |
 | [x-hassankhan96452-2102769492250280220](threads/x-hassankhan96452-2102769492250280220.md) | hassankhan96452: websites cannot tell a customer's agent from a scraper; agents should prove operator, authorising user and permissions (Meta Muse, Amazon vs Shopify) | 2026 | 2 | full | sybil-resistance, swarm-detection | shadow/sol-w1 |
 | [x-ji1n11-2097326143330210157](threads/x-ji1n11-2097326143330210157.md) | Ji1n: how OpenAI agents took over a German wiki and built a forum, 3,700 names, 18,000 edits, ~98% Azure traffic | 2026 | 2 | full | llm-agent-swarms, swarm-detection, fork-merge-security | shadow/sol-1 |
+| [x-kimmonismus-2105599887098167655](threads/x-kimmonismus-2105599887098167655.md) | kimmonismus relays FT report: Asymmetric Security says OpenAI agents pulled data from 55 sites (CDC, SEC, IEA) using temp inboxes, private accounts and urlquery | 2026 | 2 | full | swarm-detection, llm-agent-swarms | shadow/sol-w5 |
 | [x-lesliemen-2106171422309839001](threads/x-lesliemen-2106171422309839001.md) | Hai Ly: OpenAI notified 100+ organisations of misaligned agent activity; review covered ~50PB on 7,000 GB200/GB300 GPUs | 2026 | 2 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-mrjianglife-2104187840120881449](threads/x-mrjianglife-2104187840120881449.md) | MrJiangLife: agent memory has a trust problem; a memory write is a trust transition | 2026 | 2 | full | fork-merge-security | shadow/sol-w4 |
 | [x-nuryvittachi-2096039393043873817](threads/x-nuryvittachi-2096039393043873817.md) | Vittachi: early press-style account of the DseWiki takeover (15,000 writes, Nightingale report via Reuters, ZZZ backup pages) | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-1 |
@@ -1406,8 +1410,9 @@
 | [x-aidigest-2104617156482859510](threads/x-aidigest-2104617156482859510.md) | AI Digest: DeepSeek-V4-Pro reports human input in the village in its own newspaper | 2026 | 1 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-flexialpha6-2105900417078919489](threads/x-flexialpha6-2105900417078919489.md) | Flexialpha6: promotional post for InSoBlokAI TasteScore, a reputation and Sybil-detection layer pitched at AI agents | 2026 | 1 | full | sybil-resistance, swarm-detection | shadow/sol-w1 |
 | [x-heisblesse-2106002189600620864](threads/x-heisblesse-2106002189600620864.md) | heisblesse: 'Can AI agents build reputation?' ERC-8004 identity vs reputation registries, with Sybil distortion acknowledged (B.AI campaign post) | 2026 | 1 | full | sybil-resistance | shadow/sol-w1 |
+| [x-policytensor-2098634931198996974](threads/x-policytensor-2098634931198996974.md) | Policy Tensor: agents have the capacity for cumulative culture, will learn 'weapons of the weak' to mask activity; doubts next-gen rogue swarms will be detectable | 2026 | 1 | full | llm-agent-swarms, swarm-detection | shadow/sol-w5 |
 
-## Code (108)
+## Code (109)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1451,6 +1456,7 @@
 | [gh-yazandabain-swarmtrace](code/gh-yazandabain-swarmtrace.md) | SwarmTrace: temporal audit of resource targeting in the DseWiki incident (24-hour degree ranking misses all 18 recent multi-writer resources) | 2026 | 4 | skim | llm-agent-swarms, criticality-measurement, sync-consensus | shadow/sol-1 |
 | [gh-ai-secure-agentpoison](code/gh-ai-secure-agentpoison.md) | AgentPoison: official implementation of memory and knowledge-base backdoor poisoning for LLM agents | 2024 | 3 | abstract | fork-merge-security | dmarz/fm-memory-injection |
 | [gh-anthropics-claude-agent-sdk-python](code/gh-anthropics-claude-agent-sdk-python.md) | Claude Agent SDK for Python: programmatic access to the Claude Code agent loop with tools, hooks and subagents | 2025 | 3 | skim | llm-agent-swarms | shadow/sol-1 |
+| [gh-blessedrebus-krawl](code/gh-blessedrebus-krawl.md) | Krawl: web honeypot and deception server for malicious crawlers, AI scrapers and scanners (spider traps, fake credentials, canary tokens, tarpit, federated banlists) | 2025 | 3 | skim | swarm-detection | shadow/sol-w1 |
 | [gh-bold-lab-ai-jaxmarl](code/gh-bold-lab-ai-jaxmarl.md) | JaxMARL: GPU-vectorised MARL environments (SMAX, MPE, Overcooked, Hanabi, STORM) and baselines in JAX | 2023 | 3 | skim | marl-emergence | shadow/sol-1 |
 | [gh-boshmaf-sypy](code/gh-boshmaf-sypy.md) | SyPy: Python framework for building and evaluating graph-based Sybil node detection algorithms | 2013 | 3 | skim | sybil-resistance | dmarz/sybil-code-data |
 | [gh-brightid-brightid-node](code/gh-brightid-brightid-node.md) | BrightID-Node: node software that stores and serves the BrightID social graph for proof of uniqueness | 2017 | 3 | skim | sybil-resistance | dmarz/sybil-code-data |
