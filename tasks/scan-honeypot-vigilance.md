@@ -3,9 +3,9 @@ id: scan-honeypot-vigilance
 type: task
 title: 'Prior-art pass: do agents (and swarms) update after discovering a honeypot?'
 kind: scan
-status: open
+status: claimed
 priority: p2
-owner: null
+owner: dmarz/honeypot-vigilance
 for: dmarz
 created: 2026-10-03
 created_by: dmarz/honeypot-vigilance
@@ -13,6 +13,8 @@ depends_on: []
 topics:
 - swarm-detection
 - llm-agent-swarms
+claimed_at: 2026-10-03T23:09Z
+updated: 2026-10-03T23:09Z
 ---
 
 ## Goal
