@@ -2,7 +2,7 @@
 
 # Library index
 
-1534 entries.
+1538 entries.
 
 ## Papers (1206)
 
@@ -1215,7 +1215,7 @@
 | [zhao-2024-snail](papers/zhao-2024-snail.md) | Snail-inspired robotic swarms: a hybrid connector drives collective adaptation in unstructured outdoor environments | 2024 | 2 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [zhuge-2023-mindstorms](papers/zhuge-2023-mindstorms.md) | Mindstorms in Natural Language-Based Societies of Mind | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 
-## Blogs (92)
+## Blogs (95)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1239,10 +1239,12 @@
 | [metr-2026-brief](blogs/metr-2026-brief.md) | Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident | 2026 | 5 | full | llm-agent-swarms, sybil-resistance | vishesh/senku-1 |
 | [simonwillison-2025-camel](blogs/simonwillison-2025-camel.md) | CaMeL offers a promising new direction for mitigating prompt injection attacks | 2025 | 5 | full | fork-merge-security, llm-agent-swarms, sync-consensus | dmarz/fm-informal |
 | [simonwillison-2025-lethal](blogs/simonwillison-2025-lethal.md) | The lethal trifecta for AI agents: private data, untrusted content, and external communication | 2025 | 5 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-informal |
+| [swarmchase-2026-openai](blogs/swarmchase-2026-openai.md) | OpenAI agents tried to bruteforce a UN website's API fields | 2026 | 5 | skim | llm-agent-swarms, swarm-detection | shadow/sol-w6 |
 | [swarmtraces-2026-revealing](blogs/swarmtraces-2026-revealing.md) | Revealing the details of how OpenAI agents hacked Hugging Face | 2026 | 5 | skim | llm-agent-swarms, swarm-detection | shadow/sol-w6 |
 | [transluce-2026-early](blogs/transluce-2026-early.md) | Early rogue AI agent activity and attempts to hack found on urlquery.net | 2026 | 5 | skim | llm-agent-swarms, swarm-detection | shadow/sol-w6 |
 | [veganmosfet-2026-brokenclaw](blogs/veganmosfet-2026-brokenclaw.md) | BrokenClaw Part 2: Escape the Sub-Agent Sandbox with Prompt Injection in OpenClaw | 2026 | 5 | full | fork-merge-security, llm-agent-swarms, sync-consensus | dmarz/fm-informal |
 | [willison-2023-dual](blogs/willison-2023-dual.md) | The Dual LLM pattern for building AI assistants that can resist prompt injection | 2023 | 5 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-ai-control |
+| [aidigest-2025-season](blogs/aidigest-2025-season.md) | Season 1 Recap: Agents raise $2,000 | 2025 | 4 | skim | llm-agent-swarms | shadow/sol-w6 |
 | [aisi-2026-incident](blogs/aisi-2026-incident.md) | Incident Report: unsanctioned agent behaviour during cyber testing | 2026 | 4 | full | llm-agent-swarms, sybil-resistance | vishesh/senku-1 |
 | [alpturer-2026-aetherweave](blogs/alpturer-2026-aetherweave.md) | AetherWeave: stake-backed peer discovery for Ethereum | 2026 | 4 | skim | sybil-resistance, sync-consensus | dmarz/sybil-flashbots-informal |
 | [ankushin-2026-public](blogs/ankushin-2026-public.md) | Public-mempool gas sponsorship needs escrow, a bond, or trust | 2026 | 4 | full | sybil-resistance | dmarz/sybil-flashbots-informal |
@@ -1275,6 +1277,7 @@
 | [quanta-2019-smarter](blogs/quanta-2019-smarter.md) | Smarter Parts Make Collective Systems Too Stubborn | 2019 | 4 | full | collective-decision, llm-agent-swarms, swarm-intelligence | shadow/sol-w3 |
 | [simonwillison-2025-design](blogs/simonwillison-2025-design.md) | Design Patterns for Securing LLM Agents against Prompt Injections | 2025 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-informal |
 | [sun-2024-tee](blogs/sun-2024-tee.md) | TEE-enabled Social Games: An Experiment with Bobu's Magic Show | 2024 | 4 | full | sybil-resistance | dmarz/sybil-foundations |
+| [swarmchase-2026-budget](blogs/swarmchase-2026-budget.md) | We found the OpenAI Hugging Face swarm budget table in their blogpost and they removed it | 2026 | 4 | skim | llm-agent-swarms, swarm-detection | shadow/sol-w6 |
 | [threatdown-2026-carbonato](blogs/threatdown-2026-carbonato.md) | CARBONATO: a botnet built around an AI agent | 2026 | 4 | full | swarm-detection, llm-agent-swarms | shadow/sol-w2 |
 | [torproject-2020-first](blogs/torproject-2020-first.md) | A First Take at PoW Over Introduction Circuits (Tor Proposal 327) | 2020 | 4 | skim | sybil-resistance | dmarz/sybil-credentials |
 | [torproject-2021-res](blogs/torproject-2021-res.md) | Res tokens: Anonymous Credentials for Onion Service DoS Resilience (Tor Proposal 331) | 2021 | 4 | skim | sybil-resistance | dmarz/sybil-credentials |
@@ -1312,7 +1315,7 @@
 | [quanta-2018-simple](blogs/quanta-2018-simple.md) | The Simple Algorithm That Ants Use to Build Bridges | 2018 | 2 | full | collective-decision, swarm-robotics, swarm-intelligence | shadow/sol-w3 |
 | [quanta-2018-swarming](blogs/quanta-2018-swarming.md) | Swarming Bacteria Create an 'Impossible' Superfluid | 2018 | 2 | full | active-matter, collective-motion | shadow/sol-w3 |
 
-## Threads (117)
+## Threads (118)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1358,6 +1361,7 @@
 | [x-transluceai-2105725928357937410](threads/x-transluceai-2105725928357937410.md) | Transluce: agents used aggressive non-hacking tactics against US and Canadian government websites (technical report, WaPo) | 2026 | 4 | full | llm-agent-swarms, swarm-detection | shadow/sol-1 |
 | [x-aidigest-2095556936133734821](threads/x-aidigest-2095556936133734821.md) | AI Digest launches the Open Chat Village: a second persistent village where humans and frontier agents share one chat, weekdays 9-5 PT | 2026 | 3 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-andrewcurran-1916899271099723996](threads/x-andrewcurran-1916899271099723996.md) | AndrewCurran_: r/changemyview users were persuaded by undisclosed research bots in a secret experiment, and the bots were never detected | 2025 | 3 | full | swarm-detection | dmarz/x-threads |
+| [x-andrewcurran-2104291953127092489](threads/x-andrewcurran-2104291953127092489.md) | Curran: 'agent acausal coordination', personal-finance agents moving in unison without messages, Apollo's agentic bank run note and Gensler 2020 | 2026 | 3 | full | swarm-detection, llm-agent-swarms, sync-consensus | shadow/sol-w2 |
 | [x-andrewcurran-2106220085048410222](threads/x-andrewcurran-2106220085048410222.md) | Curran: OpenAI misalignment report 'preparing for a restart after reading Slack', the HPIM model seven weeks before the HF incident | 2026 | 3 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-anthropicai-2098097512544444447](threads/x-anthropicai-2098097512544444447.md) | AnthropicAI: announces its most detailed threat intelligence report, covering disrupted misuse of Claude for cyberattacks, influence operations, surveillance, biology and weapons | 2026 | 3 | full | swarm-detection | dmarz/x-threads |
 | [x-appledog-xyz-2106385525628395984](threads/x-appledog-xyz-2106385525628395984.md) | appledog_xyz: one operator running 30 to 60 near-identical Polymarket maker-rebate wallets with the same split-quote-merge script | 2026 | 3 | full | swarm-detection, sybil-resistance | shadow/sol-w4 |
