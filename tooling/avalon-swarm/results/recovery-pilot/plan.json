@@ -1,0 +1,107 @@
+[
+  {
+    "n": 100,
+    "seed": 0,
+    "topology": "federated",
+    "policy": "provenance",
+    "recovery": "none"
+  },
+  {
+    "n": 100,
+    "seed": 1,
+    "topology": "federated",
+    "policy": "provenance",
+    "recovery": "none"
+  },
+  {
+    "n": 100,
+    "seed": 2,
+    "topology": "federated",
+    "policy": "provenance",
+    "recovery": "none"
+  },
+  {
+    "n": 100,
+    "seed": 3,
+    "topology": "federated",
+    "policy": "provenance",
+    "recovery": "none"
+  },
+  {
+    "n": 100,
+    "seed": 4,
+    "topology": "federated",
+    "policy": "provenance",
+    "recovery": "none"
+  },
+  {
+    "n": 100,
+    "seed": 0,
+    "topology": "federated",
+    "policy": "provenance",
+    "recovery": "audit"
+  },
+  {
+    "n": 100,
+    "seed": 1,
+    "topology": "federated",
+    "policy": "provenance",
+    "recovery": "audit"
+  },
+  {
+    "n": 100,
+    "seed": 2,
+    "topology": "federated",
+    "policy": "provenance",
+    "recovery": "audit"
+  },
+  {
+    "n": 100,
+    "seed": 3,
+    "topology": "federated",
+    "policy": "provenance",
+    "recovery": "audit"
+  },
+  {
+    "n": 100,
+    "seed": 4,
+    "topology": "federated",
+    "policy": "provenance",
+    "recovery": "audit"
+  },
+  {
+    "n": 100,
+    "seed": 0,
+    "topology": "federated",
+    "policy": "provenance",
+    "recovery": "repair"
+  },
+  {
+    "n": 100,
+    "seed": 1,
+    "topology": "federated",
+    "policy": "provenance",
+    "recovery": "repair"
+  },
+  {
+    "n": 100,
+    "seed": 2,
+    "topology": "federated",
+    "policy": "provenance",
+    "recovery": "repair"
+  },
+  {
+    "n": 100,
+    "seed": 3,
+    "topology": "federated",
+    "policy": "provenance",
+    "recovery": "repair"
+  },
+  {
+    "n": 100,
+    "seed": 4,
+    "topology": "federated",
+    "policy": "provenance",
+    "recovery": "repair"
+  }
+]
