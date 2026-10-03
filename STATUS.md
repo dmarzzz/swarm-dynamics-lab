@@ -6,19 +6,19 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 314 | 8 | 3 | 15 | 2 | 24 | 366 |
-| collective-decision | 264 | 8 | 24 | 19 | 0 | 24 | 339 |
-| swarm-robotics | 278 | 13 | 2 | 7 | 1 | 21 | 322 |
-| swarm-intelligence | 108 | 1 | 2 | 4 | 0 | 0 | 115 |
+| collective-motion | 314 | 8 | 3 | 15 | 2 | 25 | 367 |
+| collective-decision | 264 | 8 | 24 | 19 | 0 | 26 | 341 |
+| swarm-robotics | 278 | 13 | 2 | 7 | 1 | 22 | 323 |
+| swarm-intelligence | 108 | 1 | 2 | 4 | 0 | 1 | 116 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 4 | 198 |
 | sync-consensus | 240 | 13 | 11 | 17 | 0 | 16 | 297 |
-| criticality-measurement | 188 | 4 | 2 | 23 | 2 | 14 | 233 |
+| criticality-measurement | 188 | 4 | 2 | 23 | 2 | 15 | 234 |
 | marl-emergence | 132 | 13 | 1 | 33 | 1 | 9 | 189 |
 | llm-agent-swarms | 350 | 59 | 99 | 198 | 22 | 10 | 738 |
 | crowds-and-traffic | 79 | 2 | 1 | 2 | 1 | 8 | 93 |
 | meta | 85 | 9 | 5 | 22 | 1 | 4 | 126 |
 | sybil-resistance | 236 | 48 | 62 | 59 | 7 | 19 | 431 |
-| fork-merge-security | 322 | 44 | 61 | 69 | 1 | 6 | 503 |
+| fork-merge-security | 322 | 44 | 61 | 69 | 1 | 7 | 504 |
 | swarm-detection | 363 | 35 | 79 | 194 | 26 | 6 | 703 |
 
 ## Tasks
@@ -27,7 +27,7 @@
 |---|---|---|---|---|---|---|---|
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
-| [scan-papers-fm-contagion](tasks/scan-papers-fm-contagion.md) | claimed | p0 | scan | dmarz/fm-contagion |  | 2026-10-03T18:12Z | Catalogue the papers: corruption spreading through multi-agent LLM systems |
+| [scan-papers-fm-contagion](tasks/scan-papers-fm-contagion.md) | claimed | p0 | scan | shadow/sol-g74 |  | 2026-10-03T20:19Z | Catalogue the papers: corruption spreading through multi-agent LLM systems |
 | [scan-papers-fm-identity-hijack](tasks/scan-papers-fm-identity-hijack.md) | claimed | p0 | scan | dmarz/fm-identity-hijack |  | 2026-10-03T18:12Z | Catalogue the papers: identity and goal hijack of agents |
 | [scan-papers-fm-memory-injection](tasks/scan-papers-fm-memory-injection.md) | claimed | p0 | scan | dmarz/fm-memory-injection |  | 2026-10-03T18:11Z | Catalogue the papers: memory poisoning and persistent prompt injection in agents |
 | [scan-papers-fm-merge-poisoning](tasks/scan-papers-fm-merge-poisoning.md) | claimed | p0 | scan | dmarz/fm-merge-poisoning |  | 2026-10-03T18:11Z | Catalogue the papers: poisoning through model merging, federated aggregation and distillation |
@@ -102,13 +102,14 @@
 
 ## Candidate batches
 
-15 free, 3 claimed, 50 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+14 free, 4 claimed, 50 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | claimed | 2026-10-03T20:14Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
 | [#40](https://github.com/dmarzzz/swarm-lab/issues/40) | claimed | 2026-10-03T20:15Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-02) |
 | [#58](https://github.com/dmarzzz/swarm-lab/issues/58) | claimed | 2026-10-03T20:12Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-02) |
+| [#70](https://github.com/dmarzzz/swarm-lab/issues/70) | claimed | 2026-10-03T20:19Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-14) |
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
 | [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |
 | [#41](https://github.com/dmarzzz/swarm-lab/issues/41) | free | 2026-10-03T19:22Z | [batch] web/sync-consensus: 8 candidates (web-sync-consensus-20261003-03) |
@@ -123,7 +124,6 @@
 | [#67](https://github.com/dmarzzz/swarm-lab/issues/67) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-11) |
 | [#68](https://github.com/dmarzzz/swarm-lab/issues/68) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-12) |
 | [#69](https://github.com/dmarzzz/swarm-lab/issues/69) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-13) |
-| [#70](https://github.com/dmarzzz/swarm-lab/issues/70) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-14) |
 
 ## Agents
 
