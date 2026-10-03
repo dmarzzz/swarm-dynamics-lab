@@ -2,9 +2,9 @@
 
 # Library index
 
-2370 entries.
+2373 entries.
 
-## Papers (1518)
+## Papers (1521)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -287,6 +287,7 @@
 | [zhang-2024-badmerging](papers/zhang-2024-badmerging.md) | BadMerging: Backdoor Attacks Against Model Merging | 2024 | 5 | full | fork-merge-security | dmarz/fm-merge-poisoning |
 | [zhang-2025-learning](papers/zhang-2025-learning.md) | Learning vision-based agile flight via differentiable physics | 2025 | 5 | full | swarm-robotics, marl-emergence, collective-motion | dmarz/swarm-robotics-recent |
 | [zhang-2026-asymmetric](papers/zhang-2026-asymmetric.md) | Asymmetric physics enables efficient learning in quadrupedal robot swarms | 2026 | 5 | full | swarm-robotics, marl-emergence, crowds-and-traffic | dmarz/swarm-robotics-recent |
+| [zhang-2026-botevo](papers/zhang-2026-botevo.md) | BotEvo: LLM-Driven social bot detection via behavioral evolution modeling and cross-modal fusion | 2026 | 5 | skim | swarm-detection, sybil-resistance | shadow/sol-w7 |
 | [zhang-2026-silo](papers/zhang-2026-silo.md) | Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems | 2026 | 5 | full | llm-agent-swarms | vishesh/senku-1 |
 | [zhao-2026-self](papers/zhao-2026-self.md) | Self-organized criticality in aquatic robot swarm | 2026 | 5 | skim | swarm-robotics, criticality-measurement, active-matter | dmarz/swarm-robotics-recent |
 | [zheng-2024-body](papers/zheng-2024-body.md) | Body orientation change of neighbors leads to scale-free correlation in collective motion | 2024 | 5 | full | collective-motion, swarm-robotics, criticality-measurement | dmarz/collective-motion-recent |
@@ -1295,6 +1296,7 @@
 | [sevinchan-2025-collective](papers/sevinchan-2025-collective.md) | Collective decision-making with heterogeneous biases: Role of network topology and susceptibility | 2025 | 3 | abstract | criticality-measurement, collective-decision, sync-consensus | dmarz/criticality-measurement |
 | [seyfried-2005-fundamental](papers/seyfried-2005-fundamental.md) | The fundamental diagram of pedestrian movement revisited | 2005 | 3 | abstract | crowds-and-traffic, criticality-measurement | dmarz/crowds-and-traffic |
 | [seyfried-2009-new](papers/seyfried-2009-new.md) | New Insights into Pedestrian Flow Through Bottlenecks | 2009 | 3 | full | crowds-and-traffic, collective-motion | dmarz/crowds-and-traffic-audit |
+| [sha-2026-stochastic](papers/sha-2026-stochastic.md) | Stochastic Dynamics of Human-Bot Interactions on Social Platforms: A Three-Population SDE Model | 2026 | 3 | abstract | swarm-detection, sync-consensus | shadow/sol-w7 |
 | [shamir-1979-share](papers/shamir-1979-share.md) | How to Share a Secret | 1979 | 3 | full | fork-merge-security | dmarz/fm-bft-aggregation |
 | [shankar-2022-topological](papers/shankar-2022-topological.md) | Topological active matter | 2022 | 3 | abstract | active-matter, swarm-robotics | dmarz/active-matter |
 | [shao-2025-sok](papers/shao-2025-sok.md) | SoK: Large Language Model Copyright Auditing via Fingerprinting | 2025 | 3 | abstract | swarm-detection, meta | dmarz/sd-attribution |
@@ -1521,6 +1523,7 @@
 | [yu-2024-overview](papers/yu-2024-overview.md) | An Overview of Swarm Coordinated Control | 2024 | 2 | abstract | swarm-robotics, sync-consensus | dmarz/swarm-robotics-audit |
 | [zaman-2025-social](papers/zaman-2025-social.md) | Social Media Information Operations | 2025 | 2 | abstract | swarm-detection | dmarz/sd-bots |
 | [zhang-2021-three](papers/zhang-2021-three.md) | Three Decades of Deception Techniques in Active Cyber Defense -- Retrospect and Outlook | 2021 | 2 | abstract | swarm-detection | dmarz/sd-honeypots |
+| [zhang-2025-when](papers/zhang-2025-when.md) | When LLMs meet cybersecurity: a systematic literature review | 2025 | 2 | skim | swarm-detection | shadow/sol-w7 |
 | [zhang-2026-measuring](papers/zhang-2026-measuring.md) | Measuring Real-World Prompt Injection Attacks in LLM-based Resume Screening | 2026 | 2 | abstract | swarm-detection | dmarz/sd-honeypots |
 | [zhao-2024-snail](papers/zhao-2024-snail.md) | Snail-inspired robotic swarms: a hybrid connector drives collective adaptation in unstructured outdoor environments | 2024 | 2 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [zhuge-2023-mindstorms](papers/zhuge-2023-mindstorms.md) | Mindstorms in Natural Language-Based Societies of Mind | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
