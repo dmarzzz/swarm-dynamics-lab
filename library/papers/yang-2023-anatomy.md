@@ -1,0 +1,49 @@
+---
+id: yang-2023-anatomy
+type: paper
+title: Anatomy of an AI-powered malicious social botnet
+authors:
+- Kai-Cheng Yang
+- Filippo Menczer
+year: 2023
+venue: 'Journal of Quantitative Description: Digital Media (2024)'
+url: https://arxiv.org/html/2307.16336
+doi: 10.51685/jqd.2024.icwsm.7
+arxiv: '2307.16336'
+cite: 'Yang, K.-C., & Menczer, F. (2024). Anatomy of an AI-powered malicious social botnet. Journal of Quantitative Description: Digital Media. https://doi.org/10.51685/jqd.2024.icwsm.7. arXiv:2307.16336.'
+topics:
+- sybil-resistance
+- llm-agent-swarms
+added_by: dmarz/sybil-llm-agents
+accessed: '2026-10-03'
+read_depth: skim
+relevance: 4
+citations: 121 (Semantic Scholar, 2026-10-03)
+code: []
+---
+
+## Summary
+
+Case study of "fox8", a Twitter botnet of 1,140 accounts that appears to use ChatGPT to write posts. The accounts were found through self-revealing tweets containing "as an ai language model" (searched Oct 2022 to Apr 2023) and then by their shared links to three suspicious sites (fox8.news, cryptnomics.org and a third), and validated by manual annotation. The bots form a dense cluster of fake personas with stolen profile images, crypto-themed descriptions and engineered follower patterns, and they reply to and retweet each other. Coordination patterns expose them, but state-of-the-art LLM-text classifiers fail to separate them from human accounts in the wild.
+
+## Contribution
+
+Early documented evidence of an LLM-powered Sybil botnet in the wild and a released benchmark (fox8-23: 1,140 bots plus 1,140 human accounts from four prior datasets).
+
+## Key results
+
+- Measured: 1,140 bot accounts; largest weakly connected follow component holds 1,036.
+- Observed: near-identical follower and following distributions, which the authors read as engineered rather than organic.
+- Measured: LLM content detectors fail on these accounts in the wild while coordination features succeed.
+
+## Methods and models
+
+Twitter V2 historical search for the phrase, link-based expansion, collection of up to 200 tweets plus friend and follower lists per account via V1.1 API, comparison with 285 human accounts from each of four datasets. Dataset at github.com/osome-iu/AIBot_fox8.
+
+## Limitations and open questions
+
+Skimmed. Found only because operators leaked the tell-tale phrase; botnets without that slip are undercounted. Twitter API access used here is no longer generally available.
+
+## Relevance to us
+
+Real-world evidence that LLM agent swarms already operate as Sybils and that coordination structure, not content, is the reliable signal. That matches the theoretical point in [[bara-2026-epistemic]] that report content cannot identify ancestry. Lineage: [[ferrara-2016-rise]]; detection arms race: [[feng-2024-what]]; threat framing: [[schroeder-2025-how]].

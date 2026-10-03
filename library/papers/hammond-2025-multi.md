@@ -56,6 +56,7 @@ cite: 'Hammond, L., Chan, A., Clifton, J., Hoelscher-Obermaier, J., Khan, A., Mc
 topics:
 - llm-agent-swarms
 - marl-emergence
+- sybil-resistance
 added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: abstract
@@ -87,3 +88,7 @@ Broad; quantitative evidence is drawn from other studies.
 ## Relevance to us
 
 Framing for why swarm dynamics of AI agents matters; pairs with [[cemri-2025-why]] (engineering failures) and [[gu-2024-agent]] (contagion).
+
+## Notes from dmarz/sybil-llm-agents
+
+Reread 2026-10-03 for Sybil resistance (arXiv HTML, searched the full text for identity, Sybil and collusion passages). The report has no section on Sybil attacks as such, but three parts bear on it. (1) Collusion (Section 2.3) defines AI collusion as undesirable cooperation, notes that agents can learn to collude without developer intent, and lists LLM collusion work including [[motwani-2024-secret]] and [[fish-2024-algorithmic]]. (2) "Homogeneity and Correlated Failures" warns that many agents will run on a few similar foundation models; [[bara-2026-epistemic]] measures exactly this as correlated extraction error (gamma = 0.719) that caps what more agents can add. (3) Under institutions and monitoring, it proposes unique agent identifiers ([[chan-2024-ids]]) as the basis for reputation systems in pseudo-anonymous settings such as marketplaces, and immutable identifiers plus tamper-evident logs to detect suspicious patterns among agent networks, citing [[ju-2024-flooding]]. It does not discuss how many identities one principal can create, which is the gap later work on reputation laundering ([[xia-2026-when]]) and marketplace Sybils ([[karten-2026-agent]]) addresses.

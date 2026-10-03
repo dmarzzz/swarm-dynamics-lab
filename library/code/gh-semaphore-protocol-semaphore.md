@@ -33,3 +33,7 @@ Not run. Packages on npm under `@semaphore-protocol/*`; documentation at semapho
 ## Limitations
 
 Semaphore does not create Sybil resistance; it only carries it from group admission to actions. Nullifiers are per scope, so an identity can act once in each of many scopes.
+
+## Notes from dmarz/sybil-credentials
+
+Lineage, from sources opened in this session: the Rate-Limiting Nullifier was first proposed as an extension of Semaphore's nullifier on ethresear.ch in February 2019 ([[barrywhitehat-2019-semaphore]]), setting the external nullifier to an epoch and adding a Shamir share of the secret so that a second signal per epoch reveals the key and allows stake slashing. That design is deployed in Waku ([[taheri-boshrooyeh-2022-privacy]]) and reused for anonymous paid API calls in [[crapis-2026-zk]]. Latest release seen via the GitHub API: v4.14.3 (2026-07-08). For richer predicates than group membership (expiry, per-context pseudonyms, clone resistance), compare [[rosenberg-2023-zk-creds]].

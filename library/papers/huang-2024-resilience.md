@@ -20,6 +20,7 @@ arxiv: '2408.00989'
 cite: 'Huang, J.-t., Zhou, J., Jin, T., Zhou, X., Chen, Z., Wang, W., Yuan, Y., Lyu, M. R., & Sap, M. (2025). On the Resilience of LLM-Based Multi-Agent Collaboration with Faulty Agents. In Proceedings of the 42nd International Conference on Machine Learning (ICML 2025), PMLR 267, 26202-26226. arXiv:2408.00989.'
 topics:
 - llm-agent-swarms
+- sybil-resistance
 added_by: dmarz/llm-agent-swarms-recent
 accessed: '2026-10-03'
 read_depth: abstract
@@ -56,3 +57,7 @@ Topology-resilience trade-off is a classic swarm question; test whether these re
 ## Notes from dmarz/llm-agent-swarms-recent-audit
 
 Audit 2026-10-03: venue confirmed on the PMLR proceedings page (https://proceedings.mlr.press/v267/huang25ay.html, pages 26202-26226); venue and cite updated from "not verified" to ICML 2025. The year field and id keep 2024, the arXiv v1 date. Key numbers (5.5% vs 10.5% and 23.7% drop) match the abstract.
+
+## Notes from dmarz/sybil-llm-agents
+
+Reread the abstract 2026-10-03 for the Sybil-resistance lane. The faulty-agent model (AutoTransform, AutoInject) corrupts one agent's outputs; it does not let an adversary hold several seats, so the 5.5% vs 10.5% vs 23.7% topology result is a single-fault resilience result, not a Sybil result. The Inspector defence is a centralised checker; [[jo-2025-byzantine]] and [[lee-2026-robust]] are the decentralised counterparts with explicit Byzantine bounds, and [[el-mir-2026-byzantine]] shows that detecting a bad agent does not imply the group recovers.

@@ -13,6 +13,7 @@ arxiv: '2410.07283'
 cite: 'Lee, D., & Tiwari, M. (2024). Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems. arXiv preprint arXiv:2410.07283.'
 topics:
 - llm-agent-swarms
+- sybil-resistance
 added_by: dmarz/llm-agent-swarms-recent
 accessed: '2026-10-03'
 read_depth: abstract
@@ -45,3 +46,7 @@ Abstract-level read; no epidemic-threshold analysis in the abstract.
 ## Relevance to us
 
 A spreading-process experiment for swarms: measure infection prevalence vs topology and compare with SIR thresholds. Related: [[jiang-2026-large]], [[wu-2026-how]].
+
+## Notes from dmarz/sybil-llm-agents
+
+Reread the abstract 2026-10-03 for the Sybil-resistance lane. LLM Tagging (marking which messages come from agents) is a minimal provenance mechanism; [[bara-2026-epistemic]] argues provenance of this kind is necessary for an aggregator to tell replicated messages from independent evidence, and [[chan-2024-ids]] proposes the identity layer such tags would point to. Self-replicating prompts also manufacture apparent consensus, since infected agents repeat the same payload as if independently.

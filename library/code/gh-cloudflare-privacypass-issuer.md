@@ -15,7 +15,7 @@ added_by: dmarz/sybil-code-data
 accessed: 2026-10-03
 read_depth: skim
 relevance: 3
-papers: []
+papers: ["davidson-2018-privacy"]
 ---
 
 ## Summary
@@ -24,7 +24,7 @@ A Privacy Pass issuer following draft-ietf-privacypass-protocol-16, running on C
 
 ## What it can do for us
 
-Privacy Pass is how the web already rate-limits anonymous clients: an attester decides who gets tokens, and tokens are spent per request. For agent swarms it is the natural way to give an agent a budget of anonymous actions backed by a single attestation, a centralised relative of [[gh-rate-limiting-nullifier-circom-rln]].
+Privacy Pass is how the web already rate-limits anonymous clients: an attester decides who gets tokens, and tokens are spent per request. The protocol descends from [[davidson-2018-privacy]]. For agent swarms it is the natural way to give an agent a budget of anonymous actions backed by a single attestation, a centralised relative of [[gh-rate-limiting-nullifier-circom-rln]].
 
 ## Run notes
 

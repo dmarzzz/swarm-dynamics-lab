@@ -33,3 +33,7 @@ Not run. `make installdeps && make build && make test` per README; also `nix dev
 ## Limitations
 
 Groth16 needs a trusted setup per circuit. Waku is the main deployment; performance figures were not in the README.
+
+## Notes from dmarz/sybil-credentials
+
+Paper behind this stack: [[taheri-boshrooyeh-2022-privacy]] (WAKU-RLN-RELAY), which reports, citing the earlier kilic/rln library, about 0.5 s membership proof generation for a 2^32 group on an iPhone 8, about 30 ms verification and a 3.89 MB prover key. The README (read this session) states the current implementation follows the RLNv2 spec at lip.logos.co, which allows a per-member message limit per epoch instead of the single message of the original proposal [[barrywhitehat-2019-semaphore]].

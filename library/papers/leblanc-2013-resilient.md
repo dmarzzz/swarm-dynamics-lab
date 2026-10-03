@@ -9,7 +9,7 @@ url: https://doi.org/10.1109/jsac.2013.130413
 doi: 10.1109/jsac.2013.130413
 arxiv: null
 cite: "LeBlanc, H. J., Zhang, H., Koutsoukos, X., & Sundaram, S. (2013). Resilient asymptotic consensus in robust networks. IEEE Journal on Selected Areas in Communications, 31(4), 766-781."
-topics: [sync-consensus, swarm-robotics]
+topics: [sync-consensus, swarm-robotics, sybil-resistance]
 added_by: dmarz/sync-consensus
 accessed: 2026-10-03
 read_depth: abstract
@@ -50,3 +50,7 @@ graphs may be costly (our note).
 
 Directly relevant if a hackathon swarm must tolerate faulty or malicious members (a spoofed drone, a buggy LLM
 agent). Its robustness condition is a concrete topology requirement to design for.
+
+## Notes from dmarz/sybil-robotics
+
+W-MSR's guarantee is stated for at most F adversarial nodes, so it gives no Sybil resistance by itself: an attacker that multiplies identities exceeds F. Measured or shown in this lane: [[strobel-2020-blockchain]] (W-MSR fails with a single robot creating a new identity each time step), [[mallmann-trenn-2021-crowd]] (spoofed nodes inflate the perceived (r, s)-robustness, so the network appears to tolerate 1 adversary while it tolerates 0), [[renganathan-2017-spoof]] (adds physical fingerprints to W-MSR). [[wardega-2023-byzantine]] lists W-MSR's scaling limits (2F+1 neighbours, F+1 observers, F known a priori) and replaces it with accusation matching. Time-varying and flocking extensions: [[saldana-2017-resilient]], [[saulnier-2017-resilient]].

@@ -15,7 +15,7 @@ accessed: 2026-10-03
 read_depth: skim
 relevance: 4
 citations: "266 (Crossref, SIGCOMM version, 2026-10-03); a journal version in IEEE/ACM ToN 2008 has 255 (Crossref)"
-code: []
+code: [gh-boshmaf-sypy]
 ---
 
 ## Summary
@@ -34,7 +34,7 @@ Replaces Douceur's resource assumption [[douceur-2002-sybil]] with a structural 
 
 ## Methods and models
 
-Random routes (a deterministic per-node permutation of edges, so routes converge and are back-traceable), route intersection as the acceptance test, a decentralised protocol with witness tables. Synthetic Kleinberg-style social graphs for evaluation.
+Crossref stores this DOI with the short title "SybilGuard"; the full title above is copied from the paper's first page, so `lab.py verify` reports a title mismatch that is a Crossref truncation, not a wrong DOI. Random routes (a deterministic per-node permutation of edges, so routes converge and are back-traceable), route intersection as the acceptance test, a decentralised protocol with witness tables. Synthetic Kleinberg-style social graphs for evaluation.
 
 ## Limitations and open questions
 
@@ -43,3 +43,7 @@ Relies on the fast-mixing assumption, which was not checked on real graphs here.
 ## Relevance to us
 
 For agent swarms the analogous scarce resource is "trust edges created by an independent party": human-attested delegations, cross-signed agent keys, or physical rendezvous between robots. SybilGuard gives the bounding argument (influence proportional to attack edges, not to identities) that an agent reputation graph would need. It also shows the cost: bounds are per attack edge, so one compromised honest agent with many links lets many Sybils in. Compare [[yu-2008-sybillimit]], [[tran-2009-sybil-resilient]], [[alvisi-2013-sok]].
+
+## Notes from dmarz/sybil-code-data
+
+A runnable SybilGuard detector is in the Python framework [[gh-boshmaf-sypy]], which stitches honest and Sybil regions with a chosen number of attack edges and reports accuracy, sensitivity and specificity. Later random-walk and belief-propagation detectors (SybilRank, SybilBelief, SybilSCAR) are implemented in [[gh-binghuiwang-sybildetection]], which we compiled and ran on its Facebook example (AUC 1 with 1,000 attack edges).

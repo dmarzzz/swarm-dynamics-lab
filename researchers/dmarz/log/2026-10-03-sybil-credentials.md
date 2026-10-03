@@ -1,0 +1,7 @@
+# 2026-10-03 dmarz/sybil-credentials
+
+**Did.** Scan task scan-papers-sybil-credentials. Added 30 library entries tagged sybil-resistance (20 papers, 6 blogs/specs, 4 code) and appended notes to three code entries another agent had just created (Semaphore, zerokit, web-bot-auth). Full reads: zk-creds, Privacy Pass 2018, WAKU-RLN-RELAY, RFC 9576. `lab.py check` 0 errors; `lab.py verify` 0 problems after fixing one Crossref title mismatch (Camenisch et al. CCS 2006 is recorded as "How to win the clonewars").
+
+**Surprised by.** (1) The 2026 x402 measurement preprint (ling-2026-how) reports 21% of 136.7M Base settlements as fictitious and 64% as intra-cluster: payment rails with sponsored gas do not impose Sybil cost on agents. (2) Every anonymous-token design names the same Sybil failure, token pooling ("hoarding"), and only recent work (durak-2024-non on non-transferability, ARC and RLN rate limits) addresses it. (3) The deployed agent-identity stack (Cloudflare Web Bot Auth, signed agents) is attributable operator signatures with no per-user quota, the opposite of the anonymous-credential literature.
+
+**Next.** Rerun Semantic Scholar forward citations for zk-creds, Camenisch 2006 and the Waku RLN paper when the rate limit clears; open the RLN v2 spec and the EF zkAPI launch post; look for any work that evaluates rate-limited credentials against one principal running many agents (none found).

@@ -19,6 +19,7 @@ arxiv: '2402.08567'
 cite: 'Gu, X., Zheng, X., Pang, T., Du, C., Liu, Q., Wang, Y., Jiang, J., & Lin, M. (2024). Agent Smith: A single image can jailbreak one million multimodal LLM agents exponentially fast. In Proceedings of the 41st International Conference on Machine Learning (ICML 2024). arXiv:2402.08567.'
 topics:
 - llm-agent-swarms
+- sybil-resistance
 added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: abstract
@@ -51,3 +52,7 @@ Simulation with one model type; idealised random mixing; practical defences open
 ## Relevance to us
 
 A clean example of contagion dynamics (topic link to epidemic and cascade models) in an LLM swarm; pairs with tipping-point results in [[ashery-2024-emergent]] and risk framing in [[hammond-2025-multi]] and [[schroeder-2025-how]].
+
+## Notes from dmarz/sybil-llm-agents
+
+Reread the abstract 2026-10-03 for the Sybil-resistance lane. Infectious jailbreak needs only one compromised agent (one adversarial image in one agent's memory) to reach almost all of up to one million LLaVA-1.5 agents under random pairwise chat. For Sybil analysis this sets the lower bound: an adversary does not need many identities when contagion through shared memory does the multiplying, so identity-count defences ([[jo-2025-byzantine]], [[chen-2024-blockagents]]) must be paired with containment of what agents store and relay.

@@ -15,12 +15,12 @@ added_by: dmarz/sybil-code-data
 accessed: 2026-10-03
 read_depth: skim
 relevance: 4
-papers: []
+papers: ["cao-2012-aiding"]
 ---
 
 ## Summary
 
-Evaluation package for the anti-Sybil algorithms used or considered by BrightID, a social-graph proof-of-uniqueness system. It implements SybilRank and several variants (GroupSybilRank on a graph of groups, WeightedSybilRank using common-neighbour edge weights, LandingProbability, NormalizedSybilRank with degree caps toward seeds), ClusterRank, SeednessScore and Yekta (a 1 to 5 rank from cluster-adjusted weighted degree). It then injects scripted attacks into the real BrightID graph: lone attackers targeting seeds, top-ranked nodes or random honest nodes; collaborative groups of attackers; seed nodes or honest nodes that turn and create Sybils; many-small-groups and multi-cluster attacks; plus a manual attack config.
+Evaluation package for the anti-Sybil algorithms used or considered by BrightID, a social-graph proof-of-uniqueness system. It implements SybilRank ([[cao-2012-aiding]]) and several variants (GroupSybilRank on a graph of groups, WeightedSybilRank using common-neighbour edge weights, LandingProbability, NormalizedSybilRank with degree caps toward seeds), ClusterRank, SeednessScore and Yekta (a 1 to 5 rank from cluster-adjusted weighted degree). It then injects scripted attacks into the real BrightID graph: lone attackers targeting seeds, top-ranked nodes or random honest nodes; collaborative groups of attackers; seed nodes or honest nodes that turn and create Sybils; many-small-groups and multi-cluster attacks; plus a manual attack config.
 
 ## What it can do for us
 

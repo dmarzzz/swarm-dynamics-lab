@@ -24,7 +24,7 @@ BrightID nodes host the social graph of BrightID, a system where people verify e
 
 ## What it can do for us
 
-An operational example of graph-based Sybil resistance with a federated set of nodes that each hold the graph and run the anti-Sybil ranking from [[gh-brightid-brightid-antisybil]]. Relevant if we want an agent swarm to rely on vouching between agents rather than on hardware or biometrics.
+An operational example of graph-based Sybil resistance with a federated set of nodes that each hold the graph and run the anti-Sybil ranking from [[gh-brightid-brightid-antisybil]]. [[siddarth-2020-who]] reviews BrightID among subjective proof-of-personhood designs. Relevant if we want an agent swarm to rely on vouching between agents rather than on hardware or biometrics.
 
 ## Run notes
 

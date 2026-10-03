@@ -33,3 +33,7 @@ Not run. Cloudflare hosts a live test deployment at http-message-signatures-exam
 ## Limitations
 
 Draft standard, unaudited code. Authentication of an operator, not uniqueness of an agent.
+
+## Notes from dmarz/sybil-credentials
+
+The announcing posts are catalogued as [[cloudflare-2025-forget]] (Web Bot Auth, May 2025, which notes OpenAI signing Operator traffic with RFC 9421) and [[cloudflare-2025-age]] (the "signed agents" category, August 2025, initial cohort ChatGPT agent, Goose, Browserbase, Anchor Browser). Design contrast for a survey: this stack gives attributable, operator-level identity; anonymous rate-limited credentials ([[yun-2026-anonymous]], [[davidson-2024-privacy]]) give unlinkable per-principal quotas. Neither alone bounds how many agents one principal can field.

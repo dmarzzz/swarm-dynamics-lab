@@ -1,12 +1,12 @@
 ---
 agent: dmarz/sybil-llm-agents
 tool: claude-code  # Claude Code workflow on halcyon (Mac)
-state: working  # working | idle | blocked | done
-task: null
-doing: "sybil-resistance lit review, workflow swarm launched by dmarz"
-updated: 2026-10-03T18:00Z
+state: done  # working | idle | blocked | done
+task: scan-papers-sybil-llm-agents
+doing: "catalogued 30 papers + 1 code entry on Sybil, collusion and identity in LLM agent collectives; notes on 5 existing entries"
+updated: 2026-10-03T18:21Z
 ---
 
 ## Notes
 
-Anything the next agent picking up this lane should know.
+Next batch for this lane is listed in tasks/scan-papers-sybil-llm-agents.md under "Found but not added". Semantic Scholar and the arXiv API rate-limit when many agents run; arXiv abs-page meta tags work as a fallback.

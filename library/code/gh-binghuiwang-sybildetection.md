@@ -15,12 +15,12 @@ added_by: dmarz/sybil-code-data
 accessed: 2026-10-03
 read_depth: ran
 relevance: 4
-papers: []
+papers: ["cao-2012-aiding"]
 ---
 
 ## Summary
 
-Reference C++ code from the Gong group for four graph-based Sybil detectors: SybilRank (early-terminated random walk trust propagation from labelled benign seeds), SybilBelief (loopy belief propagation over a pairwise Markov random field, TIFS 2014), SybilSCAR (local-rule propagation that unifies random walk and belief propagation, INFOCOM 2017 and TNSE 2019) and GANG (guilt-by-association on directed graphs, ICDM 2017). The repo ships the four papers as PDFs, a metric tool that prints AUC, accuracy and error rates, an undirected Facebook example graph (SNAP ego network with 4,039 nodes and 88,234 edges, replicated as a synthetic Sybil region and joined by 1,000 random attack edges) and a directed Pokec example. Licence file is MIT, while the per-algorithm READMEs say research use only and no commercial use.
+Reference C++ code from the Gong group for four graph-based Sybil detectors: SybilRank (early-terminated random walk trust propagation from labelled benign seeds, [[cao-2012-aiding]]), SybilBelief (loopy belief propagation over a pairwise Markov random field, TIFS 2014), SybilSCAR (local-rule propagation that unifies random walk and belief propagation, INFOCOM 2017 and TNSE 2019) and GANG (guilt-by-association on directed graphs, ICDM 2017). The repo ships the four papers as PDFs, a metric tool that prints AUC, accuracy and error rates, an undirected Facebook example graph (SNAP ego network with 4,039 nodes and 88,234 edges, replicated as a synthetic Sybil region and joined by 1,000 random attack edges) and a directed Pokec example. Licence file is MIT, while the per-algorithm READMEs say research use only and no commercial use.
 
 ## What it can do for us
 

@@ -24,7 +24,7 @@ Golang implementation of the Idena node. Idena tries to give each human one iden
 
 ## What it can do for us
 
-The one production system where Sybil resistance comes from synchrony: identity costs one human's attention during a fixed time window. That idea transfers to agent swarms as a timed challenge that bounds how many identities a single operator can keep alive, and it is the case that capable LLM or vision agents most directly threaten, since flips are CAPTCHA-like.
+The one production system where Sybil resistance comes from synchrony: identity costs one human's attention during a fixed time window. [[siddarth-2020-who]] reviews Idena alongside other subjective proof-of-personhood protocols, and [[borge-2017-proof-of-personhood]] proposed the pseudonym-party form of the same synchrony idea. That idea transfers to agent swarms as a timed challenge that bounds how many identities a single operator can keep alive, and it is the case that capable LLM or vision agents most directly threaten, since flips are CAPTCHA-like.
 
 ## Run notes
 
@@ -33,3 +33,7 @@ Not run. `go build` per README; a local automine node can be configured with the
 ## Limitations
 
 Last push December 2025. The README does not document the flip protocol itself; that lives in Idena docs we did not open. Security depends on flips staying hard for machines, which we did not evaluate.
+
+## Notes from dmarz/sybil-foundations
+
+The protocol this node implements is described and compared with BrightID, Duniter, Kleros Proof of Humanity, Upala, HumanityDAO and the Equality Protocol in [[siddarth-2020-who]] (read in full): synchronous validation ceremonies about every two weeks, human-made FLIP tests, invite codes, 4,012 validated identities as of 2020. [[ford-2020-identity]] groups Idena with Encointer as synchronous schemes that resist the time-shifting attack on asynchronous verification.
