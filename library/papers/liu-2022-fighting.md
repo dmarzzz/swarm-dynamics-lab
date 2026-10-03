@@ -13,6 +13,7 @@ arxiv: '2209.04603'
 cite: 'Liu, Z., & Zhu, H. (2022). Fighting Sybils in Airdrops. arXiv preprint arXiv:2209.04603.'
 topics:
 - sybil-resistance
+- swarm-detection
 added_by: dmarz/sybil-mechanisms
 accessed: 2026-10-03
 read_depth: abstract
@@ -44,3 +45,7 @@ Abstract-level read; the evaluation is a demonstration without ground truth.
 ## Relevance to us
 
 Detection is the alternative to Sybil-proof design when the mechanism is fixed. In agent swarms, common funding source and correlated behaviour are the analogous signals for linking agents to an operator. Compare [[messias-2023-airdrops]] and the social-graph approach in [[conitzer-2010-using]].
+
+## Notes from dmarz/sd-onchain
+
+From the swarm-detection lane: the earliest academic airdrop-Sybil detector I found. Its common-funder plus similar-DApp-activity signal is formalised in [[luo-2025-toward]], made supervised in [[liu-2025-detecting]] (F1 0.93 on Binance BAB labels), and replaced by funding-free behavioural similarity in [[bartnicki-2026-compression]]. Abstract re-read 2026-10-03.
