@@ -7,19 +7,19 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 313 | 8 | 2 | 0 | 0 | 1 | 324 |
-| collective-decision | 236 | 8 | 11 | 6 | 0 | 2 | 263 |
+| collective-decision | 236 | 8 | 14 | 6 | 0 | 2 | 266 |
 | swarm-robotics | 272 | 13 | 2 | 0 | 0 | 0 | 287 |
 | swarm-intelligence | 107 | 1 | 2 | 0 | 0 | 0 | 110 |
 | active-matter | 184 | 3 | 1 | 0 | 0 | 0 | 188 |
 | sync-consensus | 225 | 8 | 11 | 3 | 0 | 1 | 248 |
 | criticality-measurement | 186 | 4 | 0 | 5 | 0 | 1 | 196 |
 | marl-emergence | 123 | 12 | 0 | 0 | 0 | 1 | 136 |
-| llm-agent-swarms | 237 | 44 | 42 | 87 | 0 | 2 | 412 |
+| llm-agent-swarms | 237 | 44 | 46 | 87 | 0 | 2 | 416 |
 | crowds-and-traffic | 76 | 2 | 1 | 0 | 0 | 0 | 79 |
 | meta | 77 | 9 | 3 | 13 | 0 | 2 | 104 |
 | sybil-resistance | 169 | 41 | 52 | 19 | 4 | 1 | 286 |
-| fork-merge-security | 214 | 11 | 27 | 26 | 0 | 3 | 281 |
-| swarm-detection | 0 | 2 | 11 | 60 | 0 | 0 | 73 |
+| fork-merge-security | 214 | 11 | 32 | 26 | 0 | 3 | 286 |
+| swarm-detection | 0 | 2 | 12 | 60 | 0 | 0 | 74 |
 
 ## Tasks
 
@@ -105,7 +105,7 @@
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#18](https://github.com/dmarzzz/swarm-lab/issues/18) | claimed | 2026-10-03T19:21Z | [batch] blog/fork-merge-security: 10 candidates (blog-fork-merge-security-20261003-01) |
+| [#18](https://github.com/dmarzzz/swarm-lab/issues/18) | claimed | 2026-10-03T19:24Z | [batch] blog/fork-merge-security: 10 candidates (blog-fork-merge-security-20261003-01) |
 | [#19](https://github.com/dmarzzz/swarm-lab/issues/19) | free | 2026-10-03T19:21Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-02) |
 | [#20](https://github.com/dmarzzz/swarm-lab/issues/20) | free | 2026-10-03T19:21Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-03) |
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
