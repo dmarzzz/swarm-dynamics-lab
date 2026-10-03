@@ -33,3 +33,6 @@
 - slug: meta
   name: Meta and tooling
   description: Methods, surveys of surveys, hackathon logistics, tooling for this lab.
+- slug: sybil-resistance
+  name: Sybil resistance and adversarial identity
+  description: Sybil attacks and defences in multi-agent systems, robot swarms, P2P networks, consensus, reputation and mechanism design (false-name-proofness), proof of personhood, agent identity, and MEV/order-flow settings (Flashbots).
