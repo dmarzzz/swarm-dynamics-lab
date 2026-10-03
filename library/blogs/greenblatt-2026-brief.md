@@ -35,4 +35,4 @@ Primary investigators summarize a scoped incident reconstruction from supplied a
 
 ## Relevance to us
 
-Direct prior art for detecting emergent collaboration through shared artifacts, recruitment, and tool traces. Related incident evidence is indexed in the existing library; unlike ordinary single-agent monitoring, this source describes an observed population.
+Direct prior art for detecting emergent collaboration through shared artifacts, recruitment, and tool traces. Compare [[ivanov-2025-llms]] for an intentionally impossible single-agent task and [[roger-2023-preventing]] for hidden communication channels. Unlike those controlled tests, this source describes an observed collaborating population.
