@@ -3,7 +3,7 @@ id: scan-papers-fm-unlinkability
 type: task
 title: 'Catalogue the papers: hiding which part returns (unlinkability, secret election, moving target)'
 kind: scan
-status: claimed
+status: done
 priority: p0
 owner: dmarz/fm-unlinkability
 for: null
@@ -14,7 +14,9 @@ topics:
 - fork-merge-security
 - sybil-resistance
 claimed_at: 2026-10-03T18:12Z
-updated: 2026-10-03T18:12Z
+updated: 2026-10-03T18:19Z
+outputs:
+- library/papers
 ---
 
 ## Goal
