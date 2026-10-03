@@ -2,9 +2,9 @@
 
 # Library index
 
-2381 entries.
+2385 entries.
 
-## Papers (1524)
+## Papers (1528)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1138,6 +1138,7 @@
 | [jin-2026-physics](papers/jin-2026-physics.md) | Physics-Informed Modeling and Control of Emergent Behaviors in Robot Swarms | 2026 | 3 | abstract | swarm-robotics, marl-emergence, active-matter | dmarz/swarm-robotics |
 | [jond-2026-minimal](papers/jond-2026-minimal.md) | A Minimal Model for Emergent Collective Behaviors in Autonomous Robotic Multi-Agent Systems | 2026 | 3 | abstract | swarm-robotics, collective-motion, sync-consensus | dmarz/swarm-robotics-recent |
 | [jones-2025-distributed](papers/jones-2025-distributed.md) | Distributed spatial awareness for robot swarms | 2025 | 3 | skim | swarm-robotics, sync-consensus | dmarz/swarm-robotics-recent-audit |
+| [jones-2026-lies](papers/jones-2026-lies.md) | Lies, damned lies, and language statistics: a comprehensive review of risks from manipulation, persuasion, and deception with large language models | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-w5 |
 | [jovanovic-2024-watermark](papers/jovanovic-2024-watermark.md) | Watermark Stealing in Large Language Models | 2024 | 3 | abstract | swarm-detection | dmarz/sd-ai-content |
 | [ju-2024-flooding](papers/ju-2024-flooding.md) | Flooding Spread of Manipulated Knowledge in LLM-Based Multi-Agent Communities | 2024 | 3 | abstract | sybil-resistance, llm-agent-swarms, fork-merge-security | dmarz/sybil-llm-agents |
 | [kadel-2024-botracle](papers/kadel-2024-botracle.md) | BOTracle: A framework for Discriminating Bots and Humans | 2024 | 3 | abstract | swarm-detection | dmarz/sd-web-agents |
@@ -1175,6 +1176,7 @@
 | [li-2023-towards](papers/li-2023-towards.md) | Towards Understanding and Characterizing the Arbitrage Bot Scam In the Wild | 2023 | 3 | abstract | swarm-detection | dmarz/sd-onchain |
 | [li-2024-social](papers/li-2024-social.md) | Social bots spoil activist sentiment without eroding engagement | 2024 | 3 | skim | swarm-detection, collective-decision | shadow/sol-w4 |
 | [li-2025-swarmsys](papers/li-2025-swarmsys.md) | SwarmSys: Decentralized Swarm-Inspired Agents for Scalable and Adaptive Reasoning | 2025 | 3 | abstract | llm-agent-swarms, swarm-intelligence | dmarz/llm-agent-swarms |
+| [li-2025-temporal](papers/li-2025-temporal.md) | Temporal Neighbor Sequence-based Interpretable Spammer Groups Detection on E-commerce platform | 2025 | 3 | abstract | swarm-detection | shadow/sol-w5 |
 | [li-2026-adaptprint](papers/li-2026-adaptprint.md) | AdaptPrint: Response-Adaptive Fingerprinting of Black-Box LLM Services | 2026 | 3 | abstract | swarm-detection | dmarz/sd-attribution |
 | [li-2026-bubble](papers/li-2026-bubble.md) | Bubble-raft inspired shape-assembly in flying robot swarm for uniform formation and obstacle traversal | 2026 | 3 | abstract | swarm-robotics, collective-motion | dmarz/swarm-robotics-recent-audit |
 | [li-2026-five](papers/li-2026-five.md) | Five Attacks on x402 Agentic Payment Protocol | 2026 | 3 | abstract | sybil-resistance, llm-agent-swarms | dmarz/sybil-credentials |
@@ -1479,6 +1481,7 @@
 | [kurian-2025-attacks](papers/kurian-2025-attacks.md) | Attacks and Defenses Against LLM Fingerprinting | 2025 | 2 | abstract | swarm-detection | dmarz/sd-attribution |
 | [lazaridou-2020-emergent](papers/lazaridou-2020-emergent.md) | Emergent Multi-Agent Communication in the Deep Learning Era | 2020 | 2 | abstract | marl-emergence | dmarz/marl-emergence |
 | [leshin-2026-behavioral](papers/leshin-2026-behavioral.md) | Behavioral Fingerprints for LLM Endpoint Stability and Identity | 2026 | 2 | abstract | swarm-detection | dmarz/sd-attribution |
+| [li-2025-linguistic](papers/li-2025-linguistic.md) | Linguistic Differences Between AI and Human Comments in Weibo: Detect AI-Generated Text Through Stylometric Features | 2025 | 2 | abstract | swarm-detection | shadow/sol-w5 |
 | [littman-1994-markov](papers/littman-1994-markov.md) | Markov games as a framework for multi-agent reinforcement learning | 1994 | 2 | abstract | marl-emergence | dmarz/marl-emergence |
 | [liu-2022-fighting](papers/liu-2022-fighting.md) | Fighting Sybils in Airdrops | 2022 | 2 | abstract | sybil-resistance, swarm-detection | dmarz/sybil-mechanisms |
 | [lloyd-2025-there](papers/lloyd-2025-there.md) | "There Has To Be a Lot That We're Missing": Moderating AI-Generated Content on Reddit | 2025 | 2 | skim | swarm-detection | shadow/sol-w4 |
@@ -1518,6 +1521,7 @@
 | [wu-2025-mca-bench](papers/wu-2025-mca-bench.md) | MCA-Bench: A Multimodal Benchmark for Evaluating CAPTCHA Robustness Against VLM-based Attacks | 2025 | 2 | abstract | swarm-detection, sybil-resistance | dmarz/sd-web-agents |
 | [wu-2026-primate](papers/wu-2026-primate.md) | Primate-Inspired Cooperation Emergence and Strategy Generation in Heterogeneous Robot Swarm | 2026 | 2 | abstract | swarm-robotics, swarm-intelligence | dmarz/swarm-robotics-recent-audit |
 | [xi-2023-rise](papers/xi-2023-rise.md) | The Rise and Potential of Large Language Model Based Agents: A Survey | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
+| [xu-2025-social](papers/xu-2025-social.md) | Social media warfare: investigating human-bot engagement in English, Japanese and German during the Russo-Ukrainian war on Twitter and Reddit | 2025 | 2 | skim | swarm-detection | shadow/sol-w5 |
 | [xu-2026-small](papers/xu-2026-small.md) | Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms: Challenges and a Roadmap | 2026 | 2 | abstract | swarm-robotics, meta | dmarz/swarm-robotics-recent |
 | [yang-2024-machine](papers/yang-2024-machine.md) | Machine learning for micro- and nanorobots | 2024 | 2 | abstract | swarm-robotics, marl-emergence | dmarz/swarm-robotics-recent-audit |
 | [yang-2025-challenge](papers/yang-2025-challenge.md) | The Challenge of Identifying the Origin of Black-Box Large Language Models | 2025 | 2 | abstract | swarm-detection | dmarz/sd-attribution |
