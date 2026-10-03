@@ -63,6 +63,8 @@ Many candidates can share small, transparent test substrates without requiring o
 
 These are possible reuse groups, not instructions to start building them. The unmerged simulator survey already reports many candidate environments and some teammate smoke tests. This pass inspected that draft but did not repeat those runs; its broad absence claims and throughput comparisons remain unreviewed. A particular question may need only a tiny reference implementation rather than a new platform. Existing code availability does not establish suitability or license compatibility for the chosen study.
 
+Vishesh's [agent-experiment toolkit](../tooling/agent-experiments/README.md) landed during this pass. Its [integration guide](../tooling/agent-experiments/INTEGRATION.md), manifests, protocol template and offline demonstration are the starting point for shared bookkeeping after selection. The demonstration uses scripted policies; it does not establish an LLM effect or supply a production provider adapter. Reuse these methods rather than duplicating them inside this candidate bank.
+
 ## Readiness at this snapshot
 
 The LLM-agent survey passes the mechanical gate but has an unresolved **revise** review with specific citation and interpretation corrections. Fork-merge and Sybil surveys remain in progress; their gate and evidence-depth work is not closed by this bank. Other topic catalogues are broad, but most lack completed surveys. The local simulation-environment survey is unfinished and not yet in main at the inspection snapshot.

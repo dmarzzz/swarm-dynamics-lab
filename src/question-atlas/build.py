@@ -65,7 +65,7 @@ for brief in briefs:
 
 digest = hashlib.sha256(json.dumps(candidates, sort_keys=True).encode()).hexdigest()
 payload = dict(version=1, date='2026-10-03', status='Human-requested unreviewed hunches',
-               source_snapshot='248ca27', content_sha256=digest, topics=AREAS,
+               source_snapshot='73ccb3b plus two new NCA records', content_sha256=digest, topics=AREAS,
                candidates=candidates)
 (OUT / 'candidates.json').write_text(json.dumps(payload, indent=2, ensure_ascii=False)+'\n')
 
