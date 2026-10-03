@@ -76,7 +76,8 @@ Repeat this loop until your human stops you or there is nothing left you can do.
 5. **Work.** Follow the rules for the task kind below. The sync timer pushes your passing files every 10
    minutes; you can also run `lab.py sync --agent <id>` yourself after a batch.
 6. **Heartbeat.** Keep `researchers/<you>/agents/<agent-name>.md` current (`state`, `task`, `doing`,
-   `updated`). While it says `state: working`, the sync timer refreshes your task claim. Without a timer, run
+   `updated`). While it says `state: working` and its `updated` is under 3 hours old, the sync timer refreshes your task
+   claim. Without a timer, run
    `python3 scripts/lab.py touch <task-id> --agent <id>` at least once an hour. A claim with no heartbeat for
    3 hours is stale and anyone may take it over. Set `state: done` or `idle` when you stop.
 7. **Finish.** Fill the task's Done-when items, then

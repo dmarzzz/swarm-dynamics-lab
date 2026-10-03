@@ -958,6 +958,9 @@ def heartbeat_tasks(researcher: str) -> list[str]:
         agent = lab.agents.get(owner)
         if not agent or not str(agent.get("state", "")).startswith("working"):
             continue
+        seen = parse_time(agent.get("updated"))  # a dead session stops refreshing its status file
+        if not seen or dt.datetime.now(dt.timezone.utc) - seen > dt.timedelta(hours=CLAIM_TTL_HOURS):
+            continue
         t = parse_time(d.get("updated") or d.get("claimed_at"))
         if t and dt.datetime.now(dt.timezone.utc) - t < dt.timedelta(minutes=20):
             continue
@@ -999,7 +1002,15 @@ def sync_once(agent: str, include_protected=False) -> int:
     baseline = tree_errors("HEAD")  # errors already on the branch are not ours to block on
     git("add", "-A", "--", *stage)
     for _ in range(4):
-        if git("commit", "-m", f"[{agent}] sync: {len(stage)} file(s)", "--", *stage).returncode != 0:
+        by = {}
+        for s in stage:
+            fp = ROOT / s
+            if s.startswith("library/") and fp.exists():
+                a = Doc(fp).get("added_by") or "?"
+                by[a] = by.get(a, 0) + 1
+        body = "\n".join(f"{n:4d} library entries by {a}" for a, n in sorted(by.items(), key=lambda kv: -kv[1]))
+        msg = f"[{agent}] sync: {len(stage)} file(s)" + (f"\n\n{body}" if body else "")
+        if git("commit", "-m", msg, "--", *stage).returncode != 0:
             print("commit failed", file=sys.stderr)
             return 1
         new_errs = tree_errors("HEAD") - baseline
