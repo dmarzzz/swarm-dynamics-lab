@@ -3,14 +3,16 @@ id: scan-papers-collective-motion-recent
 type: task
 title: Catalogue collective motion papers from 2024 onward
 kind: scan
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: dmarz/collective-motion-recent
 created: '2026-10-03'
 created_by: dmarz/setup
 depends_on: []
 topics:
 - collective-motion
+claimed_at: 2026-10-03T17:01Z
+updated: 2026-10-03T17:01Z
 ---
 
 ## Goal
