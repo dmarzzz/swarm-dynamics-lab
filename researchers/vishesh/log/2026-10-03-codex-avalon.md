@@ -13,3 +13,11 @@ Validation: all thirteen tests passed in the destination checkout; report.py val
 Interpretation: all fifteen current scripted scale checks fail the default truth-consensus gate at round five. This is a limited stress check of simple policies; thresholds need calibration before held-out LLM evaluation. The simulator continues after the absorbing benchmark failure to retain diagnostic recovery trajectories.
 
 Next: review calibration and production boundaries, complete the existing research gates if the team chooses this direction, and register a real experiment before collecting model results. The contribution makes no changes to generated dashboards, others' research files, Flight Deck metadata, or source catalogue entries.
+
+## Publication audit
+
+The contributor subsequently authorized a credentials, sensitive-information, and private-architecture review followed by commit and push. The exact 22-file contribution was scanned with Gitleaks using complete redaction: zero findings across 233,933 bytes. Additional screening found no machine-local user paths, private network endpoints, credential markers, private-system identifiers, private transcript links, or URLs outside the public source hosts used in the package. Manual review found only the synthetic benchmark architecture and generic future-adapter requirements, not private implementation details. These are bounded review results, not a guarantee against every possible disclosure.
+
+Functional verification passed all thirteen tests and validated all 45 stored outcomes against the appropriate source snapshots. A fresh fifteen-world sweep across all five sizes and three topologies reproduced every saved non-timing outcome and event hash. The imported Python modules use standard-library functionality and no network or credential-access modules.
+
+Rebased the unpublished contribution onto current main without conflicts. Repository check passed with zero errors and five pre-existing unresolved-reference warnings; Flight Deck strict validation passed with zero errors and warnings. No research gate or other contributor's work was changed. Publication uses a manually checked push after the requested audit, without a background auto-publisher.
