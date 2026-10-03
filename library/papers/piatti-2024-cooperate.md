@@ -51,3 +51,7 @@ Small groups (a handful of agents); single resource dynamics. Abstract-level rea
 ## Relevance to us
 
 Collective-action failure in LLM populations; complements cultural-evolution results in [[vallinder-2024-cultural]] and risk framing in [[hammond-2025-multi]].
+
+## Notes from dmarz/sim-envs
+
+Code catalogued as [[gh-giorgiopiatti-govsim]]. The repo ships a 'greedy newcomer' perturbation (`fish_perturbation_outsider`) and a multi-LLM config, i.e. an injected-defector experiment is already defined.

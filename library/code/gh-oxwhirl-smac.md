@@ -33,3 +33,7 @@ Not run. Metadata (stars, licence, last commit) taken from the GitHub API on 202
 ## Limitations
 
 Needs the StarCraft II binary.
+
+## Notes from dmarz/sim-envs
+
+SMAC is saturated and partly open-loop solvable: [[ellis-2022-smacv2]] (read in full) shows policies that see only the timestep and agent ID reach closed-loop-level win rates on several maps (e.g. bane_vs_bane, 3s5z, 2s3z), and [[gorsane-2022-towards]] finds most maps near 100% win rate by 2021 with inconsistent QMIX numbers across papers. Use [[gh-oxwhirl-smacv2]] instead for any new evaluation.

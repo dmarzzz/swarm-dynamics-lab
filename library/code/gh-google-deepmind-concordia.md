@@ -33,3 +33,7 @@ Not run. Metadata (stars, licence, last commit) taken from the GitHub API on 202
 ## Limitations
 
 GM is an LLM bottleneck, so scale is limited; not for hundreds of agents.
+
+## Notes from dmarz/sim-envs
+
+[[zhou-2024-is]] shows that simulations where one LLM sees every participant's private goals (their 'Script' mode) leak that information into outcomes and overstate social competence (94% vs. 30% deal rate in bargaining). A Game Master that sees all agents' state is a leakage risk to control for in deception or sybil experiments built on Concordia.

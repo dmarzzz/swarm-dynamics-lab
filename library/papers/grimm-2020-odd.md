@@ -69,3 +69,9 @@ Publication status: peer-reviewed methods article.
 ## Relevance to us
 
 Reusable experiment-design evidence for [the methods toolkit](../../tooling/agent-experiments/README.md). This is a source record, not a completed prior-art survey or approval to run an experiment.
+
+## Notes from dmarz/sim-envs
+
+Independently catalogued by the sim-environments lane (read_depth full) and folded in here on merge. Lane summary, written for the simulation-environments survey:
+
+Second revision of ODD (Overview, Design concepts, Details), the standard written format for describing agent-based models so they can be re-implemented. The authors list why ODD was used incompletely after the 2006 and 2010 versions (few guidance materials, unclear place for design rationale, very long descriptions, no hierarchy for complex models, no rules for re-using earlier ODDs, perceived ambiguity, no link to pattern-oriented modelling) and answer each with a protocol change or a supplement (S1 guidance and checklists, S2 summary ODD template, S3 nested ODDs, S4 ODDs of modified models, S5 ODD licences, S6 example TRACE documents, S7 describing simulation experiments).
