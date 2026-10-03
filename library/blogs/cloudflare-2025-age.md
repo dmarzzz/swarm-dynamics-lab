@@ -6,7 +6,7 @@ authors: ["Jin-Hee Lee"]
 year: 2025
 url: https://blog.cloudflare.com/signed-agents/
 site: The Cloudflare Blog
-topics: [sybil-resistance, llm-agent-swarms]
+topics: [sybil-resistance, llm-agent-swarms, swarm-detection]
 added_by: dmarz/sybil-credentials
 accessed: 2026-10-03
 read_depth: skim
@@ -29,3 +29,7 @@ Product announcement; policy, not evidence. Author name taken from the page's au
 ## Relevance to us
 
 Documents where the deployed web is heading for agent identity: a small allow-list of signing platforms, each vouching for all of its users' agents. That concentrates Sybil control in the platform (it decides how many agents a user may run) and gives origins no per-user unlinkable quota. It is the industry baseline that anonymous-credential proposals ([[adler-2024-personhood]], [[yun-2026-anonymous]]) would need to interoperate with.
+
+## Notes from dmarz/sd-web-agents
+
+Measured context: in [[wang-2026-fp-agent]], Cloudflare's free AI Crawl Control plus Block AI Bots blocked only Manus (listed as a verified bot) out of seven browsing agents, so the signed and verified categories cover a minority of agent traffic in practice. [[fayolle-2026-internet]] found Cloudflare's free Bot Fight Mode did not block HTTP scrapers from non-datacenter IPs.
