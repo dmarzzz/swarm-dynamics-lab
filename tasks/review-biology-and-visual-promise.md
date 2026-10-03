@@ -3,7 +3,7 @@ id: review-biology-and-visual-promise
 type: task
 title: Review research candidates for biological precedent and visualization value
 kind: synthesis
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,12 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-03T22:53Z
-updated: 2026-10-03T22:53Z
+updated: 2026-10-03T23:08Z
+outputs:
+- researchers/vishesh/notes/biology-visual-review/README.md
+- researchers/vishesh/notes/biology-visual-review/synthesis.md
+- researchers/vishesh/notes/biology-visual-review/assessments.json
+- researchers/vishesh/notes/biology-visual-review/review.html
 ---
 
 ## Goal
@@ -21,7 +26,7 @@ Review the current question atlas, original project briefs, owned idea extension
 
 ## Done when
 
-- [ ] Freeze an explicit inventory including formal hypothesis status.
-- [ ] Assess every inventoried item, separating mechanisms from metaphors.
-- [ ] Verify primary biological sources and specify visual encodings, controls and data needs.
-- [ ] Publish linked review, searchable review view, shortlist and coverage checks; validate and secret-scan before pushing.
+- [x] Freeze an explicit inventory including formal hypothesis status.
+- [x] Assess every inventoried item, separating mechanisms from metaphors.
+- [x] Verify primary biological sources and specify visual encodings, controls and data needs.
+- [x] Publish linked review, searchable review view, shortlist and coverage checks; validate and secret-scan before pushing.
