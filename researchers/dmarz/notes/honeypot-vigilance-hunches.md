@@ -114,18 +114,85 @@ not in the library yet.
   updating from general caution after anything bad.
 - Scripted agents with a fixed policy give the floor for d′ and c in the environment.
 
-## TODO: validate before any of this moves forward
+## Prior-art verdict (2026-10-03, task scan-honeypot-vigilance)
 
-- [ ] Prior-art pass: search "honeypot" and "deception" crossed with "belief update", "vigilance",
-      "trust calibration", "multi-agent" and "rumour"; behavioural-economics and animal-behaviour work on
-      predator-cue contagion and alarm calls (the V4 analogue); the MARL literature on deceptive environments.
-- [ ] Add the evaluation-awareness papers to the library (V5 rests on them) and check whether any measure
-      awareness changing within a run.
-- [ ] Deepen [[gans-2026-when]] and [[xie-2026-llm-based]] from abstract to full read; check whether either
-      has an empirical section that already covers V1 or V2.
+A first prior-art pass: 26 new library entries, Notes appended to 6 existing ones, full reads of
+[[gans-2026-when]], [[xie-2026-llm-based]] and [[cordeiro-2026-rouxii]]. This is not a gated survey: the
+search did not reach saturation (OpenAlex hit its daily limit, Semantic Scholar returns 429). Every hunch still
+looks unmeasured in its exact form. The nearest work is closer than the first draft of this note assumed,
+mainly for V1 and V3.
+
+**V1 (discovery shifts bias more than skill): still open, and the nearest prior is close.**
+[[chen-2026-trust]] tracks LLM teammates' paid verification after a teammate fails, against a memoryless
+control. Opus and Sonnet re-check the whole team, including agents that never erred, which reads as a
+criterion shift. GPT-5.1 and Gemini Pro aim checks at the culprit (GPT-5.1's share of checks on the culprit
+went from 0.07 to 0.48), which reads as discrimination. Recovery is slower than formation. Nobody computes d′
+and c, and nobody uses traps. On static framing, the Notes on [[cordeiro-2026-rouxii]] recompute SSH-only
+figures from its tables: the fingerprint prompt raised d′ from about 2.1 to 4.5 and moved c from 0.59 to 0.21.
+That is mostly better discrimination, which cuts against V1's prediction (inferred, our arithmetic). Neither
+[[xie-2026-llm-based]] (fixed detectors, no learning from experience, 0 false skips of 12 real hosts) nor
+Rouxii (12 independent cycles) learns within a run. V1's novelty is the in-run discovery plus the split
+into d′ and c; a model-family split like Chen's is a likely result to look for.
+
+**V2 (spread, weakening with each hop): open.** [[peigne-lefebvre-2025-multi]] has agents warn their peers
+("active vaccines"), which contained a malicious prompt (robustness rose from 76.7% to 90.0%). It measures no
+decay hop by hop and compares no topologies for the warning itself. [[gans-2026-when]] is theory only (no
+experiment, no simulation); its Remark 2 says a trusted agent's skips reveal its classification to peers,
+which is V2's mechanism.
+
+**V3 (hearing versus finding): partly covered.** In Peigne, telling agents through the system prompt cut
+acceptance of harmless but unusual requests from 87% to 52-61%, a large criterion shift. A planted memory of
+having met an attack kept acceptance at 87.6% while raising robustness, which reads as a discrimination
+gain. That fits V3's prediction, but it comes from separate setups, the warning comes from the operator, and
+the memory is planted. In Rouxii's Notes, the warning "honeypots are present" alone switched 23-40% of
+planned attacks to avoidance, with real and decoy targets pooled. [[robinson-2026-under]] reports a
+forewarning effect on a combined vigilance score. Still unmeasured: a rumour from a peer against a real
+discovery in the same run.
+
+**V4 (false-alarm cascades): open, and the most likely to be new.** Nearest:
+- [[yan-2026-when]]: false testimony persists among honest agents after the deceiver leaves (truth recovery
+  fell from 72.5% to 14.2%).
+- [[abedini-2026-dont]]: one stubborn hub agent reaches about 65% attack success.
+- [[zhong-2025-disentangling]]: LLMs overweight public signals under uncertainty.
+- [[lin-2026-you]]: misinformation uptake against recovery.
+
+None of these uses a false threat label on a real resource, and none compares how long a false alarm survives
+correction with a true one. Two predictions point the other way: [[bikhchandani-1992-theory]] says a cascade
+is fragile and small corrections break it, and [[wickens-2009-false]] found no cry-wolf effect in the field.
+Both are worth stating as the null.
+
+**V5 (one trap makes the whole run look like a test): open.** Nearest:
+- [[schoen-2025-stress]]: editing o3's reasoning mid-run showed that evaluation awareness is causal (removing
+  it raised covert actions from 13.2% to 24.2%). The awareness there arose on its own or was injected.
+- [[li-2026-decomposing]]: stacked prompt cues raised awareness (Qwen3-30B from 4% to 35%), but at least 77%
+  of aware samples did not change behaviour.
+- [[krakovna-2026-realistic]]: honeypots alone almost never triggered awareness. Each run had one honeypot,
+  scored over the whole transcript.
+- [[anthropic-2026-eval]]: 2 of 1,266 runs turned eval-aware mid-run.
+- [[das-2026-you]]: agents told mid-episode how suspicious they look became more cautious and kept colluding.
+
+Counter-evidence: [[knecht-2026-evaluation]] found that verbalised awareness shifts answers by at most 3.7
+points on non-agentic tasks. Nobody has tested a mid-run trap discovery as the trigger, tracked awareness
+before and after one, or looked at suspicion spreading between agents. Usable tools:
+[[aranguri-2026-logits]] (a per-step logit monitor for awareness) and Schoen's resampling from the moment of
+onset.
+
+**Not catalogued yet (seen, not opened as entries):** Prinos et al. 2026 (arXiv 2606.21037; per Gans,
+traps that agents recognised were still exploited 73.4% of the time) and "Contagion Networks" (arXiv
+2606.20493, evaluator bias spreading between agents).
+
+**Order if this goes forward:** V1 first, extended with Chen's verification-cost design and a model-family
+contrast, then V4. V3 needs a design that separates it from Peigne. V5 can ride along as a measurement on
+every run.
+
+## TODO
+
+- [x] Prior-art pass (scan-honeypot-vigilance, 2026-10-03); verdict above. Not saturated.
+- [x] Evaluation-awareness papers added; none measures awareness triggered by a trap found mid-run.
+- [x] Gans, Xie and Rouxii read in full; none has in-run updating or false-alarm dynamics.
+- [ ] Catalogue Prinos 2026 (2606.21037) and Contagion Networks (2606.20493).
 - [ ] Decide which line owns it: swarm detection (traps as sensors) or fork-merge (does a merged memory carry
       the vigilance with it). Likely both; V2 under fork-merge is the cleanest tie-in.
-- [ ] If V1 survives the prior-art pass, run it first: one agent, about 20 resources, small and cheap, and it
-      gives the effect size that V2 to V4 need for their power estimates.
+- [ ] Before a hypothesis: a gated survey (needs a Semantic Scholar key for citation chasing and saturation).
 - [ ] Hold the full swarm build until the sim decision is made (dmarz: don't build the sim yet). V1 needs
       no sim, only a sandbox with canary files.
