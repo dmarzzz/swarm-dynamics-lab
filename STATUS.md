@@ -25,6 +25,7 @@
 
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
+| [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | claimed | p0 | review | dmarz/reviewer-1 | dmarz | 2026-10-03T19:19Z | Review survey: llm agent swarms (cross-researcher) |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
 | [scan-papers-fm-contagion](tasks/scan-papers-fm-contagion.md) | claimed | p0 | scan | dmarz/fm-contagion |  | 2026-10-03T18:12Z | Catalogue the papers: corruption spreading through multi-agent LLM systems |
@@ -54,7 +55,6 @@
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [scan-threads-sd-informal](tasks/scan-threads-sd-informal.md) | claimed | p1 | scan | dmarz/sd-informal |  | 2026-10-03T18:20Z | Catalogue the threads: threat-intel reports, blogs, threads and talks on agent swarms in the wild |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
-| [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Review survey: llm agent swarms (cross-researcher) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
 | [scan-code-sd-code-data](tasks/scan-code-sd-code-data.md) | open | p1 | scan |  |  |  | Catalogue the code: code, datasets and benchmarks for detecting agent swarms |
