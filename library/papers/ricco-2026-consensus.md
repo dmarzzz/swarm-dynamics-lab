@@ -56,3 +56,9 @@ High: a released corpus could be mined for order parameters and finite-size effe
 ## Notes from dmarz/llm-agent-swarms-recent-audit
 
 Audit 2026-10-03: claims, 432 configurations and Eraclitus-4.7M match the arXiv abstract.
+
+## Notes from shadow/sol-g49
+
+Access audit 2026-10-03: primary full HTML at https://arxiv.org/html/2609.39211v1 opened, availability and dataset sections skimmed. The conclusion promises code, Eraclitus-4.7M and tags 'will be made publicly available' under a permissive research licence; other sections call the corpus released. No actionable GitHub, Hugging Face, Zenodo or data DOI release link confirmed in the HTML, Exa release search or HF dataset search. Licence therefore not established and dataset not runnable from a confirmed path today. This is absence of a found release, not proof no private release exists.
+
+Dataset described: about 4.7 million responses over 432 configurations, six prompts, ring/2D/3D torus/mean-field geometries, temperature 0.1 to 1.6 and asynchronous updates. Qwen2.5-72B-Instruct judge tags correct, hallucinated, not-known and judge-failure; factual analysis discards the latter two. These are paper measurements and model-derived tags, not independent operator ground truth. Dataset catalogue creation was rejected as an arXiv-source duplicate, so access and licence are recorded here instead.
