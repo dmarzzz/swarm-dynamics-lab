@@ -14,6 +14,7 @@ This collection documents candidate work on swarm evidence, communication, share
 | Explore the biological framing | [Swarm ecology dossier](swarm-ecology-dossier.html) | Offline interactive overview and sixteen toy demonstrations. |
 | Understand the current influence question | [Influence research brief](agent-swarm-influence-research.md) | External attacker, exposure and propagation assumptions, comparisons, and literature. |
 | Explain the influence mechanism | [Animated influence guide](swarm-influence-guide.html) | Honest agents updating against false external evidence; all numerical outcomes are illustrative. |
+| Read the external-injection experimental design | [SEO-poisoning bundle](seo-poisoning/README.md) | Hunch-level experimental design for an outside content injector steering provider/MCP selection, whether evidence-backed dissent helps, five supporting notes, and eight open questions for dmarz and shadow. |
 
 ## How the artifacts relate
 
