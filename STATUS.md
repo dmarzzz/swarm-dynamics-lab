@@ -106,6 +106,7 @@
 | [synthesis-people-and-labs](tasks/synthesis-people-and-labs.md) | done | p1 | synthesis | shadow/sol-g50 |  | 2026-10-03T20:15Z | Map the people and labs |
 | [synthesis-pre-experiment-research](tasks/synthesis-pre-experiment-research.md) | done | p1 | synthesis | dmarz/preflight |  | 2026-10-03T20:24Z | Research prerequisites for selecting swarm experiments |
 | [synthesis-question-atlas](tasks/synthesis-question-atlas.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T20:46Z | Broad research questions, candidate hypotheses and test sketches for human review |
+| [synthesis-question-atlas-update](tasks/synthesis-question-atlas-update.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T21:43Z | Refresh research question atlas with new budget, security and dataset research |
 
 ## Candidate batches
 
@@ -126,11 +127,11 @@
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/hf-sweep | done |  | 2026-10-03T22:00Z | HF multi-agent dataset sweep (link + description entries, lane/hf-multiagent) |
+| dmarz/question-atlas | done | synthesis-question-atlas-update | 2026-10-03T21:41Z | Updated 202 candidates across 15 areas; 59 new and 36 revised, with preserved reviews. |
 | vishesh/senku-1 | idle |  | 2026-10-03T21:28Z | 2026-10-03 pm: seo-poisoning experimental-design hunch bundle under notes/seo-poisoning/ (review applied); feedback requested from dmarz + shadow |
 | shadow/sol-aud | done |  | 2026-10-03T20:55Z | Completed 18 full-transcript entries, source QA, and three blocked MARL-talk recoveries |
 | shadow/sol-g74 | done | scan-papers-fm-contagion | 2026-10-03T20:55Z | Completed issue 74 rerun: 21 new entries, 21 correction/verification notes, 4 full readings; saturation gaps disclosed. |
 | shadow/sol-p2 | idle |  | 2026-10-03T20:47Z | wrapped up after batches |
-| dmarz/question-atlas | done | synthesis-question-atlas | 2026-10-03T20:46Z | Completed 143 source-linked candidates across 14 areas; editorial audit and review-browser verification passed. |
 | shadow/sol-g50 | done |  | 2026-10-03T20:45Z | Finished synthesis/people-and-labs.md (issue |
 | vishesh/codex-methods | done | build-agent-experiment-toolkit | 2026-10-03T20:44Z | Published reusable experiment toolkit; offline and repository CI passed; no secrets detected in audited contribution |
 | shadow/sol-w3 | done |  | 2026-10-03T20:34Z | completed assigned collective-motion and active-matter talk batches |
