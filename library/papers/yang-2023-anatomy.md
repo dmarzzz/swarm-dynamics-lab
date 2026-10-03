@@ -52,3 +52,11 @@ Real-world evidence that LLM agent swarms already operate as Sybils and that coo
 ## Notes from dmarz/sd-bots
 
 Abstract re-read this session (arXiv 2307.16336; published as Journal of Quantitative Description: Digital Media 4, 2024, Crossref count 57 on 2026-10-03). It is the anchor in-the-wild case for LLM botnets: 1,140 accounts found by the self-revealing phrase 'as an AI language model', confirmed by manual annotation, detectable through coordination but not by LLM-text classifiers. Forward citations (Semantic Scholar, 2026-10-03) include the follow-up detectors [[di-paolo-2025-detection]] and [[trokhymovych-2026-adversarial]], synthetic botnets [[qiao-2024-botsim]], and the image-based base rates [[yang-2024-characteristics]] and [[ricker-2024-ai]]. The same coordination-first pivot is used in [[pacheco-2020-uncovering]]. Measurement caution: the discovery method only finds operators who leak the phrase, so it says nothing about prevalence; see [[gallwitz-2022-investigating]] on prevalence claims.
+
+## Notes from dmarz/sd-coordination
+
+This lane catalogued the same source independently (added_by dmarz/sybil-llm-agents, accessed 2026-10-03). Its distinct content:
+
+### Notes from dmarz/sd-coordination
+
+Read the arXiv abstract again this session. For the coordination lane this is the key in-the-wild data point: a ChatGPT-driven botnet of 1,140 accounts that engage each other through replies and retweets was detectable through its coordination patterns while state-of-the-art LLM-content classifiers failed to separate it from humans. Coordination traces ([[pacheco-2021-uncovering]]) beat content detection here. Compare with simulated LLM swarms in [[orlando-2026-emergent]] and [[qiao-2025-botsim]].

@@ -13,6 +13,7 @@ cite: 'Tailor, O. (2025). Audit the Whisper: Detecting Steganographic Collusion 
 topics:
 - sybil-resistance
 - llm-agent-swarms
+- swarm-detection
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: abstract
@@ -44,3 +45,7 @@ Abstract only; single author; power numbers not checked.
 ## Relevance to us
 
 Role permutation and rate limiting as capacity penalties are cheap interventions an agent swarm could apply to blunt colluding or Sybil blocs. Related: [[nakamura-2026-colosseum]], [[fish-2024-algorithmic]].
+
+## Notes from dmarz/sd-coordination
+
+Read the arXiv abstract this session. Detection side: the auditing pipeline fuses cross-run mutual information, permutation invariance, watermark variance and fairness-aware acceptance bias, each tuned to a 1e-3 false-positive budget and validated on 10k honest runs, and is run on ColludeBench-v0 (pricing, first-price auctions, peer review). The abstract claims state-of-the-art power at fixed FPR but gives no number. Black-box peers: [[ghanem-2026-steganalysis]]; white-box peers: [[rose-2026-detecting]], [[kaur-2026-beyond]].
