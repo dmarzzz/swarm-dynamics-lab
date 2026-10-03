@@ -7,12 +7,10 @@ import { SourceField } from '../components/SourceField';
 import { StackedArea, CompositionBar } from '../components/charts';
 import { GateStrip, gateStats } from '../components/GateStrip';
 
-// Lane G's HeroSwarm drops in here when it exists.
-const heroMods = import.meta.glob<{ default?: ComponentType<{ data: Dataset }>; HeroSwarm?: ComponentType<{ data: Dataset }> }>(
-  ['./../graph/HeroSwarm.tsx', './../components/HeroSwarm.tsx'],
-);
+// Lane G's HeroSwarm (dashboard/src/graph) mounts in the hero slot when present; SourceField is the fallback.
+const heroMods = import.meta.glob<{ HeroSwarm?: ComponentType<{ onSelect?: (e: { id: string }) => void; className?: string }> }>('../graph/index.tsx');
 const heroLoader = Object.values(heroMods)[0];
-const HeroSwarm = heroLoader ? lazy(() => heroLoader().then((m) => ({ default: (m.HeroSwarm ?? m.default)! }))) : null;
+const HeroSwarm = heroLoader ? lazy(() => heroLoader().then((m) => ({ default: m.HeroSwarm! }))) : null;
 
 export function Overview({ data }: { data: Dataset }) {
   const d = useMemo(() => derive(data), [data]);
@@ -53,7 +51,9 @@ export function Overview({ data }: { data: Dataset }) {
 
       <section className="wrap reveal" style={{ ['--i' as string]: 3 }} aria-label="Every source in the library">
         {HeroSwarm ? (
-          <Suspense fallback={<div className="skel" style={{ height: 300 }} />}><HeroSwarm data={data} /></Suspense>
+          <Suspense fallback={<div className="skel" style={{ height: 360 }} />}>
+            <HeroSwarm onSelect={(e) => { window.location.hash = `/library?e=${encodeURIComponent(e.id)}`; }} />
+          </Suspense>
         ) : (
           <>
             <div className="hero">
