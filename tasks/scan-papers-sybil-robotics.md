@@ -3,7 +3,7 @@ id: scan-papers-sybil-robotics
 type: task
 title: 'Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus'
 kind: scan
-status: claimed
+status: done
 priority: p0
 owner: dmarz/sybil-robotics
 for: null
@@ -15,7 +15,9 @@ topics:
 - swarm-robotics
 - sync-consensus
 claimed_at: 2026-10-03T18:01Z
-updated: 2026-10-03T18:01Z
+updated: 2026-10-03T18:20Z
+outputs:
+- library/papers
 ---
 
 ## Goal
