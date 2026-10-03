@@ -7,7 +7,7 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 314 | 8 | 3 | 15 | 0 | 4 | 344 |
-| collective-decision | 238 | 8 | 22 | 19 | 0 | 12 | 299 |
+| collective-decision | 240 | 8 | 22 | 19 | 0 | 12 | 301 |
 | swarm-robotics | 272 | 13 | 2 | 7 | 0 | 2 | 296 |
 | swarm-intelligence | 107 | 1 | 2 | 4 | 0 | 0 | 114 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 0 | 194 |
@@ -17,9 +17,9 @@
 | llm-agent-swarms | 284 | 49 | 93 | 198 | 5 | 10 | 639 |
 | crowds-and-traffic | 78 | 2 | 1 | 2 | 0 | 8 | 91 |
 | meta | 82 | 9 | 5 | 22 | 0 | 3 | 121 |
-| sybil-resistance | 207 | 45 | 61 | 59 | 5 | 2 | 379 |
+| sybil-resistance | 208 | 45 | 61 | 59 | 5 | 6 | 384 |
 | fork-merge-security | 214 | 14 | 56 | 69 | 0 | 6 | 359 |
-| swarm-detection | 320 | 35 | 70 | 194 | 8 | 6 | 633 |
+| swarm-detection | 324 | 35 | 70 | 194 | 8 | 6 | 637 |
 
 ## Tasks
 
@@ -111,7 +111,7 @@
 | [#40](https://github.com/dmarzzz/swarm-lab/issues/40) | claimed | 2026-10-03T19:53Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-02) |
 | [#52](https://github.com/dmarzzz/swarm-lab/issues/52) | claimed | 2026-10-03T19:49Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-01) |
 | [#53](https://github.com/dmarzzz/swarm-lab/issues/53) | claimed | 2026-10-03T19:49Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-02) |
-| [#54](https://github.com/dmarzzz/swarm-lab/issues/54) | claimed | 2026-10-03T19:51Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-03) |
+| [#54](https://github.com/dmarzzz/swarm-lab/issues/54) | claimed | 2026-10-03T19:54Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-03) |
 | [#55](https://github.com/dmarzzz/swarm-lab/issues/55) | claimed | 2026-10-03T19:51Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-04) |
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
