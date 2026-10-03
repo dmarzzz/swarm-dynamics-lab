@@ -39,3 +39,6 @@
 - slug: fork-merge-security
   name: Fork-and-merge agents and corruption on reintegration
   description: Agents that split into sub-agents and later merge back (Sutton's framing), corruption of a sub-agent propagating into the parent on merge, Byzantine-robust aggregation and merge thresholds, hiding which sub-agent returns, memory and identity hijack via prompt injection, model-merging and federated poisoning, mobile-agent security, and biological fission-fusion and fusion parasitism.
+- slug: swarm-detection
+  name: Detecting AI agent swarms in the wild
+  description: Detecting many LLM or autonomous agents acting in the wild, coordinated or run by one operator. Social bot and coordinated-inauthentic-behaviour detection, honeypots, canaries and tarpits for agents, browser-agent and AI-crawler detection, coordination inference from traces, population-level AI-content estimates, model and operator attribution, on-chain bot clustering, and threat-intel reports.
