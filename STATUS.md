@@ -7,7 +7,7 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 314 | 8 | 3 | 15 | 2 | 40 | 382 |
-| collective-decision | 273 | 8 | 24 | 19 | 0 | 33 | 357 |
+| collective-decision | 276 | 8 | 24 | 19 | 0 | 33 | 360 |
 | swarm-robotics | 284 | 13 | 2 | 7 | 1 | 24 | 331 |
 | swarm-intelligence | 111 | 1 | 2 | 4 | 0 | 3 | 121 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
@@ -17,9 +17,9 @@
 | llm-agent-swarms | 359 | 59 | 99 | 198 | 22 | 14 | 751 |
 | crowds-and-traffic | 80 | 2 | 1 | 2 | 1 | 8 | 94 |
 | meta | 87 | 9 | 5 | 22 | 1 | 4 | 128 |
-| sybil-resistance | 266 | 48 | 62 | 59 | 7 | 22 | 464 |
+| sybil-resistance | 273 | 48 | 62 | 59 | 7 | 22 | 471 |
 | fork-merge-security | 330 | 44 | 61 | 69 | 1 | 12 | 517 |
-| swarm-detection | 367 | 35 | 79 | 194 | 26 | 11 | 712 |
+| swarm-detection | 369 | 35 | 79 | 194 | 26 | 11 | 714 |
 
 ## Tasks
 
@@ -104,11 +104,10 @@
 
 ## Candidate batches
 
-8 free, 2 claimed, 58 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+8 free, 1 claimed, 59 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#60](https://github.com/dmarzzz/swarm-lab/issues/60) | claimed | 2026-10-03T20:38Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-04) |
 | [#69](https://github.com/dmarzzz/swarm-lab/issues/69) | claimed | 2026-10-03T20:39Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-13) |
 | [#61](https://github.com/dmarzzz/swarm-lab/issues/61) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-05) |
 | [#62](https://github.com/dmarzzz/swarm-lab/issues/62) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-06) |
