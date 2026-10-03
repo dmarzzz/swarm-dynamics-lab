@@ -47,7 +47,6 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [scan-honeypot-vigilance](tasks/scan-honeypot-vigilance.md) | claimed | p2 | scan | dmarz/honeypot-vigilance | dmarz | 2026-10-03T23:09Z | Prior-art pass: do agents (and swarms) update after discovering a honeypot? |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
@@ -119,6 +118,7 @@
 | [synthesis-pre-experiment-research](tasks/synthesis-pre-experiment-research.md) | done | p1 | synthesis | dmarz/preflight |  | 2026-10-03T20:24Z | Research prerequisites for selecting swarm experiments |
 | [synthesis-question-atlas](tasks/synthesis-question-atlas.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T20:46Z | Broad research questions, candidate hypotheses and test sketches for human review |
 | [synthesis-question-atlas-update](tasks/synthesis-question-atlas-update.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T21:43Z | Refresh research question atlas with new budget, security and dataset research |
+| [scan-honeypot-vigilance](tasks/scan-honeypot-vigilance.md) | done | p2 | scan | dmarz/honeypot-vigilance | dmarz | 2026-10-03T23:28Z | Prior-art pass: do agents (and swarms) update after discovering a honeypot? |
 
 ## Candidate batches
 
@@ -133,7 +133,7 @@
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
-| dmarz/honeypot-vigilance | working | scan-honeypot-vigilance | 2026-10-03T23:59Z | prior-art pass for honeypot-vigilance hunches V1-V5, in lane worktree ~/swarm-lab-lanes/honeypot-vigilance |
+| dmarz/honeypot-vigilance | done |  | 2026-10-03T23:50Z | scan-honeypot-vigilance done; verdict in notes/honeypot-vigilance-hunches.md |
 | dmarz/discussion-dose | working | build-discussion-dose | 2026-10-03T23:25Z | Build and deploy exploratory SEC-47 discussion-dose environment and auditable tasks |
 | vishesh/codex-methods | done | fix-dashboard-deploy-cancellation | 2026-10-03T23:24Z | Dashboard concurrency fix deployed successfully in run 37161602344 |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
