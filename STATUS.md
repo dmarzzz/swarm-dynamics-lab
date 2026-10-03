@@ -7,19 +7,19 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 314 | 8 | 3 | 15 | 1 | 13 | 354 |
-| collective-decision | 241 | 8 | 22 | 19 | 0 | 19 | 309 |
+| collective-decision | 241 | 8 | 22 | 19 | 0 | 20 | 310 |
 | swarm-robotics | 272 | 13 | 2 | 7 | 1 | 2 | 297 |
 | swarm-intelligence | 107 | 1 | 2 | 4 | 0 | 0 | 114 |
-| active-matter | 184 | 3 | 1 | 6 | 0 | 1 | 195 |
-| sync-consensus | 227 | 8 | 11 | 17 | 0 | 10 | 273 |
-| criticality-measurement | 188 | 4 | 2 | 23 | 1 | 11 | 229 |
-| marl-emergence | 125 | 12 | 0 | 33 | 1 | 8 | 179 |
-| llm-agent-swarms | 293 | 49 | 93 | 198 | 7 | 10 | 650 |
+| active-matter | 184 | 3 | 1 | 6 | 0 | 2 | 196 |
+| sync-consensus | 227 | 8 | 11 | 17 | 0 | 14 | 277 |
+| criticality-measurement | 188 | 4 | 2 | 23 | 1 | 12 | 230 |
+| marl-emergence | 125 | 12 | 0 | 33 | 1 | 9 | 180 |
+| llm-agent-swarms | 293 | 49 | 94 | 198 | 7 | 10 | 651 |
 | crowds-and-traffic | 78 | 2 | 1 | 2 | 0 | 8 | 91 |
-| meta | 82 | 9 | 5 | 22 | 0 | 3 | 121 |
-| sybil-resistance | 211 | 45 | 61 | 59 | 5 | 11 | 392 |
+| meta | 82 | 9 | 5 | 22 | 0 | 4 | 122 |
+| sybil-resistance | 212 | 45 | 61 | 59 | 5 | 11 | 393 |
 | fork-merge-security | 215 | 14 | 56 | 69 | 1 | 6 | 361 |
-| swarm-detection | 345 | 35 | 74 | 194 | 10 | 6 | 664 |
+| swarm-detection | 347 | 35 | 75 | 194 | 10 | 6 | 667 |
 
 ## Tasks
 
@@ -45,7 +45,7 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [synthesis-people-and-labs](tasks/synthesis-people-and-labs.md) | claimed | p1 | synthesis | shadow/sol-g50 |  | 2026-10-03T19:39Z | Map the people and labs |
+| [synthesis-people-and-labs](tasks/synthesis-people-and-labs.md) | claimed | p1 | synthesis | shadow/sol-g50 |  | 2026-10-03T20:00Z | Map the people and labs |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
@@ -102,14 +102,13 @@
 
 ## Candidate batches
 
-25 free, 4 claimed, 39 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+25 free, 3 claimed, 40 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
 | [#25](https://github.com/dmarzzz/swarm-lab/issues/25) | claimed | 2026-10-03T19:59Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-02) |
-| [#40](https://github.com/dmarzzz/swarm-lab/issues/40) | claimed | 2026-10-03T19:53Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-02) |
-| [#56](https://github.com/dmarzzz/swarm-lab/issues/56) | claimed | 2026-10-03T19:57Z | [batch] paper/swarm-detection: 5 candidates (paper-swarm-detection-20261003-05) |
 | [#57](https://github.com/dmarzzz/swarm-lab/issues/57) | claimed | 2026-10-03T19:58Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-01) |
+| [#77](https://github.com/dmarzzz/swarm-lab/issues/77) | claimed | 2026-10-03T19:58Z | [batch] paper/swarm-detection: 11 candidates (paper-swarm-detection-20261003-06) |
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
 | [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |
@@ -117,6 +116,7 @@
 | [#35](https://github.com/dmarzzz/swarm-lab/issues/35) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 10 candidates (web-swarm-robotics-20261003-01) |
 | [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
 | [#38](https://github.com/dmarzzz/swarm-lab/issues/38) | free | 2026-10-03T20:00Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-02) |
+| [#40](https://github.com/dmarzzz/swarm-lab/issues/40) | free | 2026-10-03T20:00Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-02) |
 | [#41](https://github.com/dmarzzz/swarm-lab/issues/41) | free | 2026-10-03T19:22Z | [batch] web/sync-consensus: 8 candidates (web-sync-consensus-20261003-03) |
 | [#52](https://github.com/dmarzzz/swarm-lab/issues/52) | free | 2026-10-03T19:59Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-01) |
 | [#58](https://github.com/dmarzzz/swarm-lab/issues/58) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-02) |
@@ -124,7 +124,6 @@
 | [#60](https://github.com/dmarzzz/swarm-lab/issues/60) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-04) |
 | [#61](https://github.com/dmarzzz/swarm-lab/issues/61) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-05) |
 | [#62](https://github.com/dmarzzz/swarm-lab/issues/62) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-06) |
-| [#63](https://github.com/dmarzzz/swarm-lab/issues/63) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-07) |
 | | | | 10 more free batches |
 
 ## Agents
@@ -133,6 +132,7 @@
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | scan-papers-sd-ai-content lane finished: 55 entries on branch lane/sd-ai-content |
+| shadow/sol-w6 | idle |  | 2026-10-03T20:05Z | writer lane finished (batch |
 | shadow/sol-w3 | working |  | 2026-10-03T20:00Z | processing talk batch 24 using yt_transcript.sh and Apify fallback |
 | shadow/sol-w4 | idle |  | 2026-10-03T19:59Z | done for session; batches |
 | shadow/sol-w7 | idle |  | 2026-10-03T19:58Z | Wrapped up on human stop; batches 48, 46, 53 catalogued; 37 and 38 all-skipped; 77 released untouched |
@@ -144,7 +144,6 @@
 | shadow/sol-g49 | working |  | 2026-10-03T19:38Z | issue 49 primary industry measurements and runnable dataset access audit |
 | dmarz/reviewer-1 | done | review-llm-agent-swarms | 2026-10-03T19:27Z | review filed, verdict revise |
 | vishesh/codex-docs | done |  | 2026-10-03T19:14Z | Expanded sixteen briefs, linked research outputs, repaired metadata, and incorporated targeted review corrections. |
-| shadow/sol-w6 | working |  | 2026-10-03T19:06Z | TODO one line |
 | shadow/sol-w2 | working |  | 2026-10-03T19:05Z | Writer lane: working candidate batch issues (swarm-detection first), see PIPELINE.md on the pipeline PR branch. |
 | dmarz/x-threads | done | scan-threads-x-security | 2026-10-03T18:57Z | 35 X threads catalogued and pushed; task scan-threads-x-security done |
 | dmarz/sybil-foundations | done | scan-papers-sybil-foundations | 2026-10-03T18:42Z | Catalogued 21 foundational Sybil papers (6 read in full) plus notes on 4 existing entries; coverage note filled |
