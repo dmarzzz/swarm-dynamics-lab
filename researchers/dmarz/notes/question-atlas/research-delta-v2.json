@@ -1,0 +1,1620 @@
+{
+  "from": "7333ef1",
+  "through": "b9cd5eb",
+  "records": [
+    {
+      "change": "M",
+      "id": "anthropic-2025-how",
+      "path": "library/blogs/anthropic-2025-how.md",
+      "type": "blog",
+      "read_depth": "full",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms",
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "anthropic-2026-context",
+      "path": "library/blogs/anthropic-2026-context.md",
+      "type": "blog",
+      "read_depth": "full",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "anthropic-2026-patterns",
+      "path": "library/blogs/anthropic-2026-patterns.md",
+      "type": "blog",
+      "read_depth": "full",
+      "topics": [
+        "llm-agent-swarms",
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "anthropic-2026-task",
+      "path": "library/blogs/anthropic-2026-task.md",
+      "type": "blog",
+      "read_depth": "full",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "cognition-2025-rebuilding",
+      "path": "library/blogs/cognition-2025-rebuilding.md",
+      "type": "blog",
+      "read_depth": "full",
+      "topics": [
+        "agent-budgets",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-agent-collusion-2026",
+      "path": "library/datasets/data-agent-collusion-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-detection"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-agent-ipi-structured-2026",
+      "path": "library/datasets/data-agent-ipi-structured-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "fork-merge-security"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-agent-safetybench-2024",
+      "path": "library/datasets/data-agent-safetybench-2024.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "fork-merge-security"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-agent-town-economy-2026",
+      "path": "library/datasets/data-agent-town-economy-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-agentlogs-2026",
+      "path": "library/datasets/data-agentlogs-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "swarm-detection",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-bayesian-social-deduction-2025",
+      "path": "library/datasets/data-bayesian-social-deduction-2025.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-c2c-ai-vs-ai-2026",
+      "path": "library/datasets/data-c2c-ai-vs-ai-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-camel-ai-society-2023",
+      "path": "library/datasets/data-camel-ai-society-2023.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-diplomacy-deception-2020",
+      "path": "library/datasets/data-diplomacy-deception-2020.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-dtap-bench-2026",
+      "path": "library/datasets/data-dtap-bench-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "fork-merge-security"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-hanabi-llm-logs-2026",
+      "path": "library/datasets/data-hanabi-llm-logs-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-instrumental-choices-2026",
+      "path": "library/datasets/data-instrumental-choices-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "fork-merge-security"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-jscmp4-moltbook-2026",
+      "path": "library/datasets/data-jscmp4-moltbook-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-detection"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-mallm-debate-2025",
+      "path": "library/datasets/data-mallm-debate-2025.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-mast-2025",
+      "path": "library/datasets/data-mast-2025.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-mcphunt-2026",
+      "path": "library/datasets/data-mcphunt-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "fork-merge-security"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-moltbook-injection-2026",
+      "path": "library/datasets/data-moltbook-injection-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "fork-merge-security",
+        "swarm-detection"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-moltnet-2026",
+      "path": "library/datasets/data-moltnet-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-detection"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-multiagent-entropy-2026",
+      "path": "library/datasets/data-multiagent-entropy-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-multiagentfraudbench-2025",
+      "path": "library/datasets/data-multiagentfraudbench-2025.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-detection"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-og-marl-2024",
+      "path": "library/datasets/data-og-marl-2024.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-sandbagging-games-2025",
+      "path": "library/datasets/data-sandbagging-games-2025.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "swarm-detection"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-scam-conversation-2024",
+      "path": "library/datasets/data-scam-conversation-2024.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-social-llm-networks-2026",
+      "path": "library/datasets/data-social-llm-networks-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "sync-consensus"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-sotopia-2024",
+      "path": "library/datasets/data-sotopia-2024.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-sotopia-pi-2024",
+      "path": "library/datasets/data-sotopia-pi-2024.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-stego-collusion-2026",
+      "path": "library/datasets/data-stego-collusion-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-detection"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-swarmbench-2025",
+      "path": "library/datasets/data-swarmbench-2025.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-intelligence",
+        "collective-motion"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-swarmworld-2026",
+      "path": "library/datasets/data-swarmworld-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-intelligence"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-trail-2025",
+      "path": "library/datasets/data-trail-2025.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-werewolf-game-reasoning-2025",
+      "path": "library/datasets/data-werewolf-game-reasoning-2025.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "data-who-and-when-2025",
+      "path": "library/datasets/data-who-and-when-2025.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "fork-merge-security"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "abdelnabi-2023-cooperation",
+      "path": "library/papers/abdelnabi-2023-cooperation.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "agent-budgets",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "alomrani-2025-reasoning",
+      "path": "library/papers/alomrani-2025-reasoning.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "amayuelas-2025-self",
+      "path": "library/papers/amayuelas-2025-self.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "agent-budgets",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "araujo-2011-maximum",
+      "path": "library/papers/araujo-2011-maximum.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "swarm-detection",
+        "sybil-resistance"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "bachrach-2008-divide",
+      "path": "library/papers/bachrach-2008-divide.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "bansal-2025-magentic",
+      "path": "library/papers/bansal-2025-magentic.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "llm-agent-swarms",
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "bianchi-2024-how",
+      "path": "library/papers/bianchi-2024-how.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "borah-2026-bosses",
+      "path": "library/papers/borah-2026-bosses.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "agent-budgets",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "cai-2026-child",
+      "path": "library/papers/cai-2026-child.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "cao-2026-systematic",
+      "path": "library/papers/cao-2026-systematic.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "chen-2026-memsecbench",
+      "path": "library/papers/chen-2026-memsecbench.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "chevaleyre-2006-issues",
+      "path": "library/papers/chevaleyre-2006-issues.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "cohen-2024-here",
+      "path": "library/papers/cohen-2024-here.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "conitzer-2010-false-name-proofness",
+      "path": "library/papers/conitzer-2010-false-name-proofness.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "dang-2025-multi",
+      "path": "library/papers/dang-2025-multi.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "agent-budgets",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "davis-2008-sybil",
+      "path": "library/papers/davis-2008-sybil.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "swarm-detection"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "dias-2006-market",
+      "path": "library/papers/dias-2006-market.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "agent-budgets",
+        "swarm-robotics"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "ding-2026-calibrate",
+      "path": "library/papers/ding-2026-calibrate.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "ebrahimi-2025-adversary",
+      "path": "library/papers/ebrahimi-2025-adversary.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "eisenbarth-2022-ethereum",
+      "path": "library/papers/eisenbarth-2022-ethereum.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "swarm-detection"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "ferrag-2025-from",
+      "path": "library/papers/ferrag-2025-from.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "fish-2024-algorithmic",
+      "path": "library/papers/fish-2024-algorithmic.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "llm-agent-swarms",
+        "swarm-detection",
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "friedman-2006-efficiency",
+      "path": "library/papers/friedman-2006-efficiency.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "gan-2026-navigating",
+      "path": "library/papers/gan-2026-navigating.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "gong-2026-security",
+      "path": "library/papers/gong-2026-security.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "gu-2024-agent",
+      "path": "library/papers/gu-2024-agent.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "sybil-resistance",
+        "fork-merge-security"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "han-2024-token",
+      "path": "library/papers/han-2024-token.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "hanzlik-2021-with",
+      "path": "library/papers/hanzlik-2021-with.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "he-2024-emerged",
+      "path": "library/papers/he-2024-emerged.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "meta"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "he-2025-red",
+      "path": "library/papers/he-2025-red.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "hu-2026-dissociative",
+      "path": "library/papers/hu-2026-dissociative.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "sybil-resistance",
+        "llm-agent-swarms",
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "huang-2024-resilience",
+      "path": "library/papers/huang-2024-resilience.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "sybil-resistance",
+        "fork-merge-security"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "iwasaki-2010-worst-case",
+      "path": "library/papers/iwasaki-2010-worst-case.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "jiang-2026-sok",
+      "path": "library/papers/jiang-2026-sok.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "jin-2025-controlling",
+      "path": "library/papers/jin-2025-controlling.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "agent-budgets",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "ju-2024-flooding",
+      "path": "library/papers/ju-2024-flooding.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "llm-agent-swarms",
+        "fork-merge-security"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "kim-2025-towards",
+      "path": "library/papers/kim-2025-towards.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "llm-agent-swarms",
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "konrath-2007-attacking",
+      "path": "library/papers/konrath-2007-attacking.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "swarm-detection"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "le-2026-cross-layer",
+      "path": "library/papers/le-2026-cross-layer.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "lee-2024-prompt",
+      "path": "library/papers/lee-2024-prompt.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "sybil-resistance",
+        "fork-merge-security"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "lee-2026-reproduction",
+      "path": "library/papers/lee-2026-reproduction.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "lesniewski-laas-2008-sybil-proof",
+      "path": "library/papers/lesniewski-laas-2008-sybil-proof.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "sync-consensus"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "li-2025-steering",
+      "path": "library/papers/li-2025-steering.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "lin-2017-sybil-proof",
+      "path": "library/papers/lin-2017-sybil-proof.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "lin-2018-sybil-proof",
+      "path": "library/papers/lin-2018-sybil-proof.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "lin-2024-strategic",
+      "path": "library/papers/lin-2024-strategic.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "agent-budgets",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "lin-2026-bagen",
+      "path": "library/papers/lin-2026-bagen.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "lin-2026-survey",
+      "path": "library/papers/lin-2026-survey.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "meta"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "ling-2026-toward",
+      "path": "library/papers/ling-2026-toward.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "liu-2014-practical",
+      "path": "library/papers/liu-2014-practical.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "liu-2025-budget",
+      "path": "library/papers/liu-2025-budget.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "liu-2025-costbench",
+      "path": "library/papers/liu-2025-costbench.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "liu-2026-contagion",
+      "path": "library/papers/liu-2026-contagion.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "louck-2026-securing",
+      "path": "library/papers/louck-2026-securing.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "fork-merge-security",
+        "sybil-resistance"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "margolin-2007-informant",
+      "path": "library/papers/margolin-2007-informant.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "swarm-detection"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "mateo-torrejon-2026-gammaf",
+      "path": "library/papers/mateo-torrejon-2026-gammaf.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "mchugh-2025-prompt",
+      "path": "library/papers/mchugh-2025-prompt.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "miao-2025-blindguard",
+      "path": "library/papers/miao-2025-blindguard.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "mostafavi-2026-trustworthy",
+      "path": "library/papers/mostafavi-2026-trustworthy.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "moulin-2007-scheduling",
+      "path": "library/papers/moulin-2007-scheduling.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "muennighoff-2025-s1",
+      "path": "library/papers/muennighoff-2025-s1.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "nakamura-2026-colosseum",
+      "path": "library/papers/nakamura-2026-colosseum.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "llm-agent-swarms",
+        "swarm-detection",
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "niu-2026-reliability-contagion",
+      "path": "library/papers/niu-2026-reliability-contagion.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "paliskara-2026-worse",
+      "path": "library/papers/paliskara-2026-worse.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "agent-budgets",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "pecori-2016-s-kademlia",
+      "path": "library/papers/pecori-2016-s-kademlia.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "peigne-lefebvre-2025-multi",
+      "path": "library/papers/peigne-lefebvre-2025-multi.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "piatti-2024-cooperate",
+      "path": "library/papers/piatti-2024-cooperate.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "marl-emergence",
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "piedrahita-2025-corrupted",
+      "path": "library/papers/piedrahita-2025-corrupted.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "agent-budgets",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "resnick-2009-sybilproof",
+      "path": "library/papers/resnick-2009-sybilproof.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "sakurai-1999-limitation",
+      "path": "library/papers/sakurai-1999-limitation.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "shi-2013-sybilshield",
+      "path": "library/papers/shi-2013-sybilshield.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "smith-1980-contract",
+      "path": "library/papers/smith-1980-contract.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "steiner-2007-exploiting",
+      "path": "library/papers/steiner-2007-exploiting.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "sybil-resistance"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "sua-2026-contagion",
+      "path": "library/papers/sua-2026-contagion.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "suyama-2005-strategy",
+      "path": "library/papers/suyama-2005-strategy.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "tan-2019-toward",
+      "path": "library/papers/tan-2019-toward.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "tao-2026-wormguard",
+      "path": "library/papers/tao-2026-wormguard.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "todo-2009-characterizing",
+      "path": "library/papers/todo-2009-characterizing.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "todo-2011-false-name-proof",
+      "path": "library/papers/todo-2011-false-name-proof.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "tran-2026-single",
+      "path": "library/papers/tran-2026-single.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "triedman-2025-multi",
+      "path": "library/papers/triedman-2025-multi.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "wagman-2008-optimal",
+      "path": "library/papers/wagman-2008-optimal.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "wang-2013-analysis",
+      "path": "library/papers/wang-2013-analysis.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "wang-2017-robust",
+      "path": "library/papers/wang-2017-robust.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "wang-2025-g-safeguard",
+      "path": "library/papers/wang-2025-g-safeguard.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "wang-2026-r3",
+      "path": "library/papers/wang-2026-r3.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "wellman-1993-market",
+      "path": "library/papers/wellman-1993-market.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "wen-2025-budgetthinker",
+      "path": "library/papers/wen-2025-budgetthinker.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "wu-2025-cowpox",
+      "path": "library/papers/wu-2025-cowpox.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "wu-2026-collective",
+      "path": "library/papers/wu-2026-collective.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "wu-2026-comparative",
+      "path": "library/papers/wu-2026-comparative.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "xiong-2013-securearray",
+      "path": "library/papers/xiong-2013-securearray.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "xu-2020-am",
+      "path": "library/papers/xu-2020-am.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "swarm-detection"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "yang-2026-sok",
+      "path": "library/papers/yang-2026-sok.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "llm-agent-swarms",
+        "fork-merge-security"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "yang-2026-zombie",
+      "path": "library/papers/yang-2026-zombie.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "yokoo-2000-effect",
+      "path": "library/papers/yokoo-2000-effect.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "yokoo-2003-characterization",
+      "path": "library/papers/yokoo-2003-characterization.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "yokoo-2004-effect",
+      "path": "library/papers/yokoo-2004-effect.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision",
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "yokoo-2005-robust",
+      "path": "library/papers/yokoo-2005-robust.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "yokoo-2006-false",
+      "path": "library/papers/yokoo-2006-false.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "yokoo-2007-making",
+      "path": "library/papers/yokoo-2007-making.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision",
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "yu-2024-netsafe",
+      "path": "library/papers/yu-2024-netsafe.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "yu-2025-survey",
+      "path": "library/papers/yu-2025-survey.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "llm-agent-swarms",
+        "fork-merge-security"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "zha-2026-autonomous",
+      "path": "library/papers/zha-2026-autonomous.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "zhang-2024-cut",
+      "path": "library/papers/zhang-2024-cut.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "zhang-2026-agentworm",
+      "path": "library/papers/zhang-2026-agentworm.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "zheng-2024-sybil",
+      "path": "library/papers/zheng-2024-sybil.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "agent-budgets"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "zhou-2025-corba",
+      "path": "library/papers/zhou-2025-corba.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "zhu-2026-fault",
+      "path": "library/papers/zhu-2026-fault.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "agent-budgets",
+        "sybil-resistance"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "blumenkamp-2020-emergence",
+      "path": "library/talks/blumenkamp-2020-emergence.md",
+      "type": "talk",
+      "read_depth": "full",
+      "topics": [
+        "marl-emergence",
+        "fork-merge-security"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "ndousse-2021-icml",
+      "path": "library/talks/ndousse-2021-icml.md",
+      "type": "talk",
+      "read_depth": "full",
+      "topics": [
+        "marl-emergence",
+        "collective-decision"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "zaslavsky-2023-noga",
+      "path": "library/talks/zaslavsky-2023-noga.md",
+      "type": "talk",
+      "read_depth": "full",
+      "topics": [
+        "marl-emergence",
+        "collective-decision"
+      ]
+    }
+  ]
+}

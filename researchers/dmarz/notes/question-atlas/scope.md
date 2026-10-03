@@ -4,7 +4,17 @@ Owner: dmarz/question-atlas. Date: 2026-10-03. Status: human-requested brainstor
 
 The human asked: “review everything and start creating a list of questions and related hypotheses and how we could test them,” generating many possibilities across the research areas for later human selection. We interpret this explicit direction as authorization for a broad preselection hunch bank. We preserve the formal survey and hypothesis gates: no files were added under `hypotheses/` or `experiments/`, and no status was promoted. This is not a substitute for a cross-researcher review.
 
-## What “review” means here
+## Update 2: new research since the first bank
+
+The user asked to bring in the research added since the first version. The content comparison runs from the first atlas tree (`7333ef1`, identical atlas content to the original PR merge `ad723697`) through main `b9cd5eb11302cd0751096c5a0896684ea1a62337`. This captures **113 new catalogue records** (75 papers, 32 datasets, 3 blogs, 3 talks) and **36 edited records** (34 papers, 2 blogs), plus the new `agent-budgets` topic, B1–B5 budget hunches, the completed contagion scan and fork-merge setups report. [The machine-readable inventory](research-delta-v2.json) records every changed library path. Inventory and relevance triage are not full-paper reading.
+
+The [update guide](update-v2.md) maps the changes to candidate IDs. Targeted primary-source checks and exact reading limits are recorded in the lane notes. No inherited read depth is upgraded. All previous 143 IDs remain in place; new IDs are appended. Candidate-content fingerprints distinguish substantive revisions from unchanged cards, separately from refreshed source metadata. Older local selections and notes remain attached to their IDs; changed cards flag them for re-review rather than erasing them.
+
+GitHub PRs and branch tips were checked again. No new open research PR was awaiting incorporation at the snapshot. `dashboard-v1` adds presentation and X-thread exploration, inspected as tooling rather than a new experimental finding. The simulator worktree and factory-scan worktree were inspected read-only; their pending work is not silently treated as merged evidence. Agentops main `f7953db` now contains the hub/reporting and public live-view plumbing formerly pending; this is operational context, not authorization or evidence of an experiment. No private operational details are copied into the public atlas.
+
+Current gate checks still show: LLM-agent survey mechanically complete with an unresolved revise review; fork-merge incomplete on saturation; Sybil incomplete on search-log coverage and saturation; agent-budgets has an open survey task and no completed survey. The contagion scan task is now **done**, although GitHub issue #74 still appeared open. The old setups report has stale absence and independence claims; the security lane notes explain which statements were not carried forward.
+
+## What the first “review” meant
 
 This pass mapped the complete topic index and the available workstreams, read the syntheses, briefs and reviews, inspected selected source records and source anchors, and reconciled overlaps. It did **not** fully read every paper in the more-than-2,700-entry catalogue. Broad coverage is not saturated prior-art coverage for each question. Individual source read depths remain the catalogue authors' claims, with the open audit caveat.
 
@@ -50,6 +60,6 @@ An editorial audit across lanes checked overlap, coverage and directional consis
 
 ## Reproducibility of the review material
 
-The four lane JSON files are the editable source. `python3 src/question-atlas/build.py` validates their fields and references and regenerates the consolidated JSON, Markdown bank and self-contained HTML review. The canvas is an optional local projection of the same bank. Its review notes and the HTML browser's notes are separate stores; JSON export allows human transfer without an external service.
+The five lane JSON files are the editable source. `revision.json` records the frozen research snapshot and previous candidate fingerprints; `research-delta-v2.json` records the input changes. `python3 src/question-atlas/build.py` validates their fields and references and regenerates the consolidated JSON, Markdown bank and self-contained HTML review. The canvas is an optional local projection of the same bank. Its review notes and the HTML browser's notes are separate stores; JSON export allows human transfer without an external service.
 
 The renderer checks unique IDs/questions, all topic areas, all original brief mappings and every source and brief path. Human editorial review is still required for semantic duplication and whether the comparison answers the question.

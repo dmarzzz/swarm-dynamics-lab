@@ -108,8 +108,8 @@
     "area": "fork-merge-security",
     "title": "Separate returned evidence from permission changes",
     "question": "How much corruption comes from a returning report changing the parent's authority rather than its factual beliefs?",
-    "hypothesis": "Unreviewed hunch: An enforced typed return interface preserves factual learning while preventing a report from directly changing tool permissions or persistent instructions.",
-    "test": "Randomize fork-join episodes among free-text report ingestion, schema-validated factual claims, and the same schema with a separate enforced authority boundary. Use benign misleading recommendations and simulated permission requests in an isolated toy tool environment. Hold the information content and child task success fixed, then measure both factual adoption and unauthorized mock actions. All outbound effects remain simulated.",
+    "hypothesis": "Unreviewed hunch: An enforced typed return interface retains factual learning while reducing report-driven permission or persistent-instruction changes under incomplete taint observations.",
+    "test": "Randomize fork-join episodes among free-text report ingestion, schema-validated factual claims, and the same schema with a separate enforced authority boundary. Use benign misleading recommendations and simulated permission requests in an isolated toy tool environment. Hold the information content and child task success fixed, then measure both factual adoption and unauthorized mock actions. All outbound effects remain simulated. Include deliberately missing taint events; compare with the combined re-entry controls as well as interface-only defenses.",
     "baseline": "Natural-language warning alone; trusted reports passed through each interface to measure usefulness cost.",
     "metrics": [
       "unauthorized mock-action rate",
@@ -125,8 +125,8 @@
         "relation": "Measured cross-agent control-flow hijacking is a close boundary failure."
       },
       {
-        "id": "cai-2026-child",
-        "relation": "Spawn invariants distinguish memory inheritance and resource authority."
+        "id": "zha-2026-autonomous",
+        "relation": "Direct predecessor combines sealed configuration, typed memory promotion, and capability attenuation; formal protection depends on its conservative taint model."
       },
       {
         "id": "louck-2026-securing",
@@ -135,7 +135,7 @@
     ],
     "novelty": "boundary-test",
     "feasibility": "api-small",
-    "needs": "Enumerated authority-changing actions and a deterministic mock enforcement layer.",
+    "needs": "Enumerated authority-changing actions and a deterministic mock enforcement layer. Full audit of temporal re-entry assumptions and unavailable platform-specific defense patches before claiming a replication.",
     "briefs": [
       "synthesis/fork-merge-questions.md"
     ]
@@ -186,7 +186,7 @@
     "question": "How should a parent retract a false claim when some derived memories have missing or incorrect parents?",
     "hypothesis": "Unreviewed hunch: Selective quarantine plus fresh evidence gathering retains more useful state than global reset and produces fewer recurring errors than recorded-edge rollback alone.",
     "test": "Generate independent reversible planning episodes with ground-truth dependency graphs, then corrupt the graph presented to the runtime using missing-edge and spurious-edge processes. Randomize repair policy after a standardized correction. Test later tasks requiring both affected and unaffected knowledge. Hold fresh-retrieval and token budgets equal. Oracle repair is a diagnostic upper bound, never a candidate deployed method.",
-    "baseline": "MemTX-style recorded-descendant retraction, full memory reset, and append-only correction.",
+    "baseline": "MemTX-style recorded-descendant retraction, full memory reset, and append-only correction. Use MemSecBench-style target-removal and benign-memory-retention checkpoints with separate all-episode and successfully-poisoned denominators.",
     "metrics": [
       "recurrence of corrected error",
       "unaffected knowledge retention",
@@ -202,8 +202,8 @@
         "relation": "Direct cascading repair predecessor explicitly limited to recorded provenance."
       },
       {
-        "id": "elnozahy-2002-survey",
-        "relation": "Recovery consistency and output commitments constrain restoration claims."
+        "id": "chen-2026-memsecbench",
+        "relation": "Already evaluates persistence, consequences, and selective repair while preserving benign memory; incomplete cross-fork provenance is the remaining extension."
       },
       {
         "id": "ouyang-2026-memlineage",
@@ -212,7 +212,7 @@
     ],
     "novelty": "extension",
     "feasibility": "api-small",
-    "needs": "A reversible environment and preregistered repair utility frontier; source-code reuse license audit.",
+    "needs": "A reversible environment and preregistered repair utility frontier; source-code reuse license audit. Audit exact runnable memory backends and judge error; selective repair itself is established prior art.",
     "briefs": [
       "synthesis/pre-experiment-research.md"
     ]
@@ -224,7 +224,7 @@
     "question": "Can a corrected parent safely reintegrate a fork that left before the correction?",
     "hypothesis": "Unreviewed hunch: Version-bound return records with explicit revalidation reduce stale-memory reintroduction better than ordinary timestamps, without requiring rejection of every late report.",
     "test": "Randomize independent task episodes to timestamp-only merge, correction-epoch checks, or checks plus selective evidence refresh. Spawn before a scheduled fact correction and vary return delay independently of report quality. Some old reports contain valuable facts unaffected by the correction. Evaluate the parent's subsequent decisions and usefulness after reintegration; compare only at equal refresh budget.",
-    "baseline": "Accept-all late reports, reject-all stale reports, and a clean parent that never forked.",
+    "baseline": "Accept-all late reports, reject-all stale reports, and a clean parent that never forked. Add a faithful conservative re-entry gate, with its overblocking cost reported.",
     "metrics": [
       "corrected-claim recurrence",
       "valid late knowledge retained",
@@ -243,8 +243,8 @@
         "relation": "Recorded-descendant repair does not automatically repair disconnected old children."
       },
       {
-        "id": "elnozahy-2002-survey",
-        "relation": "Consistent distributed recovery is the older systems analogue."
+        "id": "zha-2026-autonomous",
+        "relation": "Temporal re-entry through persistent carriers is already studied; returning forks after correction require a narrower comparison."
       }
     ],
     "novelty": "extension",
@@ -260,7 +260,7 @@
     "area": "fork-merge-security",
     "title": "Protect the honest return channel",
     "question": "Can a corrupted child dominate the parent by consuming attention even when honest children remain a majority?",
-    "hypothesis": "Unreviewed hunch: A reserved correction channel and contribution-aware queue reduce parent error more than equal per-message quotas when long or repeated reports crowd out useful dissent.",
+    "hypothesis": "Unreviewed hunch: A reserved correction channel and contribution-aware queue reduce parent error more than per-identity fair queueing when long or repeated reports crowd out useful dissent.",
     "test": "Randomize whole merge episodes to arrival-order ingestion, per-identity fair queueing, and a bounded reserved channel for checked corrections. Use a fixed set of child identities and separately a cheap-identity condition. Replay the same honest reports while a local traffic generator varies length and arrival timing under a fixed token budget. Log every stage from attempted submission to retained context.",
     "baseline": "Uniform report truncation and no-flood episodes; source-oracle prioritization only as a ceiling.",
     "metrics": [
@@ -268,7 +268,8 @@
       "correction delivery",
       "parent error",
       "legitimate throughput",
-      "queue latency"
+      "queue latency",
+      "blocked-agent proportion distinct from wrong answers"
     ],
     "falsifier": "Improvement disappears after matching delivered token budgets, or attackers occupy the correction channel as easily as the main channel.",
     "confounds": "Undefined correction verification, queue identity splitting, conflating exclusion with persuasion after exposure.",
@@ -280,6 +281,10 @@
       {
         "id": "triedman-2025-multi",
         "relation": "Cross-agent handoffs motivate preserving control boundaries."
+      },
+      {
+        "id": "zhou-2025-corba",
+        "relation": "Availability-loss propagation already has blocked-agent and interception metrics; its audit separates these from arbitrary-code execution."
       }
     ],
     "novelty": "extension",
@@ -504,11 +509,15 @@
       {
         "id": "mazorra-2023-cost",
         "relation": "False-name and commitment games limit broad mechanism claims."
+      },
+      {
+        "id": "todo-2009-characterizing",
+        "relation": "False-name implementability already constrains allocation rules; noisy agent contribution measurement is not a new mechanism-design foundation."
       }
     ],
     "novelty": "extension",
     "feasibility": "offline",
-    "needs": "An explicit value function and restricted threat model; verify closest mechanism proofs before any Sybil-proofness claim.",
+    "needs": "An explicit value function and restricted threat model; verify closest mechanism proofs before any Sybil-proofness claim. Separate a payout cap on fixed reports from false-name-proof allocation under changed reports and participation.",
     "briefs": [
       "synthesis/sybil-flashbots.md"
     ]
@@ -668,7 +677,7 @@
     "question": "How do trust-graph Sybil defenses behave when legitimate agent teams are intentionally modular?",
     "hypothesis": "Unreviewed hunch: Community-based admission disproportionately rejects honest specialist teams joined by a few bridge edges; outcome-verified bridges help more than adding unverified interactions.",
     "test": "Generate independent graphs with honest modular teams and a separate simulated adversarial cluster. Randomize graph construction to matched degree and activity distributions, then vary verified task outcomes on bridge edges without changing edge count. Evaluate existing graph rankings and a variant using verified-edge evidence. Use held-out graph families, not random nodes from the same graph, for final assessment.",
-    "baseline": "Degree-only ranking, local community detection, and graph defense with perfectly known honest seeds as a labeled ceiling.",
+    "baseline": "Degree-only ranking, local community detection, SybilShield-style multi-community verification, and trusted-seed vertex-cut admission; oracle honest seeds are a labeled ceiling.",
     "metrics": [
       "honest-team rejection",
       "adversarial admission",
@@ -684,17 +693,17 @@
         "relation": "Shows several graph defenses behave like local community detection."
       },
       {
-        "id": "tran-2009-sybil-resilient",
-        "relation": "Bounds influence through attack-edge assumptions rather than key count."
+        "id": "shi-2013-sybilshield",
+        "relation": "Already studies multi-community false positives; use this defense as a direct baseline."
       },
       {
-        "id": "douceur-2002-sybil",
-        "relation": "Trust and resource assumptions remain necessary."
+        "id": "conitzer-2010-false-name-proofness",
+        "relation": "Trusted-seed vertex-cut admission composes with strategy-proof rules only under specified bounded-coalition assumptions."
       }
     ],
     "novelty": "boundary-test",
     "feasibility": "offline",
-    "needs": "Audit and run available graph baselines; realistic team structure with independent labels.",
+    "needs": "Full implementation audit of multi-community and vertex-cut baselines; realistic endorsement acquisition and independently labeled team structure.",
     "briefs": [
       "surveys/sybil-resistance.md",
       "synthesis/sybil-flashbots.md"
@@ -928,7 +937,7 @@
     "title": "Measure the simulator fingerprint before measuring swarms",
     "question": "How much detection performance comes from the recipe used to create the benchmark?",
     "hypothesis": "Unreviewed hunch: Random session splits substantially overstate generalization when the same generator, prompt templates, or collection process appears in train and test.",
-    "test": "Construct matched authorized datasets using multiple independent swarm generators and benign controls collected through the same instrumentation. Evaluate frozen detectors under random-session, generator-disjoint, operator-disjoint, and time-disjoint splits. Randomize generator assignment to task templates and remove explicit run metadata. Fit a separate classifier predicting dataset origin to quantify construction artifacts; estimate uncertainty across held-out generator families.",
+    "test": "Construct matched authorized datasets using multiple independent swarm generators and benign controls collected through the same instrumentation. Evaluate frozen detectors under random-session, generator-disjoint, operator-disjoint, and time-disjoint splits. Randomize generator assignment to task templates and remove explicit run metadata. Fit a separate classifier predicting dataset origin to quantify construction artifacts; estimate uncertainty across held-out generator families. For the collusion release, also group by shared task sequence and exclude private reflections from deployable monitor features.",
     "baseline": "Shallow metadata tree, text-only model, and activity-only model at the same label budget.",
     "metrics": [
       "held-out precision-recall",
@@ -948,13 +957,13 @@
         "relation": "Abstract-level realism warning for generated social bots, not audited effect sizes."
       },
       {
-        "id": "park-2026-cross",
-        "relation": "Synthetic campaign benchmark provides a relevant candidate baseline."
+        "id": "data-agent-collusion-2026",
+        "relation": "Available trajectories share 50 task sequences across conditions and include private reflections; split by sequence and restrict features to the monitor view."
       }
     ],
     "novelty": "replication",
     "feasibility": "offline",
-    "needs": "At least several independent generation and collection recipes; source-license and label audit.",
+    "needs": "At least several independent generation and collection recipes; source-license and label audit. Collusion labels are judge outputs with a small human-check sample, not unqualified behavioral ground truth.",
     "briefs": [
       "synthesis/swarm-detection-methods.md"
     ]
@@ -1186,7 +1195,7 @@
       "performance without label-revealing transactions"
     ],
     "falsifier": "First-funder clusters remain precise despite independent users of shared services, or behavior adds no ownership information beyond service patterns.",
-    "confounds": "Circular labels from the detector itself, class-revealing contracts, balance or timestamp artifacts, confusing automation with harmful coordination.",
+    "confounds": "Circular labels from the detector itself, class-revealing contracts, balance or timestamp artifacts, confusing automation with harmful coordination. Shared NAT, hosted-node services, and a rotated node key must remain possible benign explanations.",
     "prior": [
       {
         "id": "xiong-2026-can",
@@ -1195,6 +1204,10 @@
       {
         "id": "bartnicki-2026-compression",
         "relation": "Behavioral grammar and label-leakage controls supply relevant baselines."
+      },
+      {
+        "id": "eisenbarth-2022-ethereum",
+        "relation": "Network identity multiplication has shared-infrastructure explanations; its historical IP thresholds do not establish malicious common ownership."
       }
     ],
     "novelty": "boundary-test",
@@ -1238,7 +1251,7 @@
     ],
     "novelty": "measurement",
     "feasibility": "offline",
-    "needs": "Complete controlled traces and explicit statements of what cannot be identified under each mask.",
+    "needs": "Complete controlled traces and explicit statements of what cannot be identified under each mask. Posts-only fraud releases cannot reconstruct propagation edges; keyword-selected Moltbook records cannot establish successful exposure or infection.",
     "briefs": [
       "synthesis/swarm-detection-methods.md",
       "synthesis/pre-experiment-research.md"
@@ -1318,6 +1331,300 @@
     "needs": "Threat model for telemetry access, benign synchronized controls, and formal privacy review if differential privacy is claimed.",
     "briefs": [
       "synthesis/swarm-detection-methods.md"
+    ]
+  },
+  {
+    "id": "SEC-37",
+    "area": "sybil-resistance",
+    "title": "Bundle allocation when tasks complement or interfere",
+    "question": "Which agent-task allocations remain resistant to false-name bids when useful work requires bundles of compute, tools, or time slots?",
+    "hypothesis": "Unreviewed hunch: A mechanism designed for additive task values becomes vulnerable when complementary bundles or resource conflicts are introduced; a correctly scoped false-name-proof baseline reduces manipulation at a measurable welfare cost.",
+    "test": "Generate independent small allocation instances with fixed true costs and capabilities. Randomize additive versus complementary task values and independent versus conflicting resource use. Compare a conventional truthful allocator with a fully specified false-name-proof rule after checking its domain assumptions. Enumerate identity splits on small instances while conserving each principal's physical capacity. Evaluate net principal utility and completed useful work, not the number of accepted identities.",
+    "baseline": "Truthful one-identity allocation, efficient oracle allocation, and a simple fixed bundle-price rule.",
+    "metrics": [
+      "best profitable false-name deviation",
+      "social welfare ratio",
+      "uncompleted complementary bundles",
+      "computation cost"
+    ],
+    "falsifier": "Complementarity and conflict produce no additional profitable deviations in the prespecified domain, or the scoped baseline does not reduce gains at comparable useful allocation.",
+    "confounds": "Applying a forward-auction theorem to procurement unchanged; unverifiable quality; violating interference assumptions.",
+    "prior": [
+      {
+        "id": "yokoo-2003-characterization",
+        "relation": "Provides a formal price-oriented allocation precedent under specified auction assumptions."
+      },
+      {
+        "id": "iwasaki-2010-worst-case",
+        "relation": "Efficiency bounds have explicit symmetry, determinism, and domain conditions."
+      },
+      {
+        "id": "wang-2017-robust",
+        "relation": "Spectrum reuse is a relevant conflict-graph analogue; methods remain abstract-level in the record."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Full methods for the selected mechanism and explicit mapping of task values to its domain; simulated credits only.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-38",
+    "area": "sybil-resistance",
+    "title": "Can a tiny counterexample invalidate our allocator?",
+    "question": "Can exact small-instance tests expose false-name incentives that ordinary performance benchmarks miss?",
+    "hypothesis": "Unreviewed hunch: Searching allocation-rule constraints and concrete split deviations finds counterexamples to plausible agent routers that appear robust under random identity multiplication.",
+    "test": "Select a fixed set of candidate task allocators before evaluation. Enumerate bounded valuation tables, honest competitor reports, and split reports for two to four resources. Where the formal auction domain applies, check weak-monotonicity and false-name implementability conditions; elsewhere test concrete utility deviations without claiming theorem coverage. Compare exact search with budget-matched random simulation. Validate every discovered counterexample by replaying its allocation and payment calculations.",
+    "baseline": "Uniform random split tests and known robust and vulnerable toy rules as positive and negative controls.",
+    "metrics": [
+      "validated counterexamples found",
+      "search time per rule",
+      "utility gain of best deviation",
+      "false counterexamples from implementation error"
+    ],
+    "falsifier": "Exact constraint-guided search finds no additional valid deviations over matched random search across the chosen rule set and bounded domains.",
+    "confounds": "A finite search cannot prove global robustness; equations applied outside their assumptions; numerical tolerances creating spurious violations.",
+    "prior": [
+      {
+        "id": "todo-2009-characterizing",
+        "relation": "Uses allocation-rule conditions to invalidate mechanisms previously thought false-name-proof."
+      },
+      {
+        "id": "yokoo-2003-characterization",
+        "relation": "Separates allocation feasibility and prices from ordinary truthfulness."
+      },
+      {
+        "id": "pan-2024-sybil",
+        "relation": "Shows the domain and incentive axioms must accompany any robustness claim."
+      }
+    ],
+    "novelty": "replication",
+    "feasibility": "offline",
+    "needs": "Executable exact small-domain rules and independently checked counterexample arithmetic; no new general impossibility claim.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-39",
+    "area": "sybil-resistance",
+    "title": "A queue may reward splitting work or merging it",
+    "question": "Does charging for declared jobs discourage identity splitting while creating incentives to merge unrelated work?",
+    "hypothesis": "Unreviewed hunch: A scheduling rule tuned to resist job splitting can still reward merging or transferring work, even when total processing time is unchanged.",
+    "test": "Generate independent deterministic job batches with known lengths and waiting costs. Compare shortest-job scheduling with candidate fee rules under honest declarations, split jobs, merged jobs, and pairwise transfers. Preserve actual required work and account for each principal's full completion time and total payment. Run the theorem-compatible identical-wait-cost setting first, then label heterogeneous costs as an extension. No real queue or payment system is touched.",
+    "baseline": "Unpriced shortest-job-first, first-in-first-out, and published split-resistant versus merge-resistant rule families after exact implementation audit.",
+    "metrics": [
+      "net gain from each manipulation",
+      "honest waiting cost",
+      "total processing efficiency",
+      "fee imbalance"
+    ],
+    "falsifier": "The proposed split-resistant rule exhibits no profitable merge or transfer deviations in the bounded evaluation domain, or the alleged gain disappears when full principal completion costs are counted.",
+    "confounds": "Treating partial job completion as full utility; unobserved processing lengths; importing an impossibility result without its continuity and symmetry assumptions.",
+    "prior": [
+      {
+        "id": "moulin-2007-scheduling",
+        "relation": "Direct prior on incompatible split, merge, and transfer incentives under explicit scheduling assumptions."
+      },
+      {
+        "id": "demers-1989-analysis",
+        "relation": "Fair queueing already depends on the accounting unit."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Full scheduling-fee specification and a model of whether actual job length can be verified.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md",
+      "synthesis/pre-experiment-research.md"
+    ]
+  },
+  {
+    "id": "SEC-40",
+    "area": "sybil-resistance",
+    "title": "Do small participation costs preserve useful collective choice?",
+    "question": "Can a nonmonetary or credit cost per extra vote make collective preferences responsive without letting wealthy coalitions dominate?",
+    "hypothesis": "Unreviewed hunch: A rule calibrated to uniform individual participation costs loses its intended false-name bound when costs vary or coalition members share them.",
+    "test": "Generate independent two-alternative preference populations with normalized utilities. Evaluate a published costly-voting rule first under its stated uniform-cost assumptions, then under heterogeneous effective costs and explicit cost-sharing coalitions. Enumerate extra-vote choices in small instances. Keep the desired quantity preference aggregation, not factual truth, and compare outcomes with a money-free robust rule whose assumptions are stated.",
+    "baseline": "Ordinary majority, one-identity honest participation, and a deliberately unresponsive anonymous rule.",
+    "metrics": [
+      "best net utility from extra votes",
+      "majority-preference selection",
+      "minority burden",
+      "coalition influence",
+      "participation loss"
+    ],
+    "falsifier": "Cost heterogeneity and coalition sharing do not create larger profitable deviations than the uniform-cost condition across the planned instances.",
+    "confounds": "Counting token expenditure as equal cost across participants; confusing preference welfare with correctness; treating synthetic utility as observed human behavior.",
+    "prior": [
+      {
+        "id": "wagman-2008-optimal",
+        "relation": "Direct costly-voting and coalition results; primary PDF reopening failed in this update, so full-method verification remains required."
+      },
+      {
+        "id": "todo-2011-false-name-proof",
+        "relation": "Money-free robustness can have strong welfare costs in its facility-location setting."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "A fully specified utility normalization and verified cost rule before testing; all costs remain simulated.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-41",
+    "area": "sybil-resistance",
+    "title": "Fake intermediaries in a chain of trust",
+    "question": "Does inserting agent intermediaries create more total usable trust than the original principal earned?",
+    "hypothesis": "Unreviewed hunch: Naive multiplicative or additive reputation forwarding permits trust amplification through extra intermediaries, whereas a conserved exposure budget limits it at a cost to legitimate indirect cooperation.",
+    "test": "Generate independent task-credit networks with evaluator-known ownership. Randomize otherwise equivalent paths to contain no extra intermediary, honest necessary intermediaries, or redundant identities under one principal. Compare naive reputation propagation with a fully specified balance-based exposure rule. Hold initial trust and actual service capacity fixed, and include delayed failures. Score aggregate risk extended to the underlying principal rather than its largest single identity score.",
+    "baseline": "Direct trust only and a closed registry with true owner grouping as an explicitly privileged ceiling.",
+    "metrics": [
+      "total trust amplification",
+      "expected loss",
+      "useful indirect tasks enabled",
+      "honest trust growth",
+      "capital or credit immobilized"
+    ],
+    "falsifier": "Redundant intermediaries do not amplify usable trust under naive rules, or conservation does not reduce amplification at a matched cooperation level.",
+    "confounds": "Treating reputation as fungible money without justification; evaluating only successful paths; unobserved shared ownership.",
+    "prior": [
+      {
+        "id": "resnick-2009-sybilproof",
+        "relation": "Sum-Sybilproof transitive trust already studies an unavoidable friction; abstract-level record only."
+      },
+      {
+        "id": "douceur-2002-sybil",
+        "relation": "Extra identities cannot certify distinct resources."
+      },
+      {
+        "id": "yu-2009-dsybil",
+        "relation": "Outcome-based trust supplies a different direct-feedback baseline."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Full transitive-trust protocol access and an explicit interpretation of trust balances for agent tasks.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-42",
+    "area": "sybil-resistance",
+    "title": "False availability windows in online task markets",
+    "question": "Can one agent gain priority by representing the same capacity as several short-lived bidders with different arrival windows?",
+    "hypothesis": "Unreviewed hunch: An allocator robust to static bid splitting can remain vulnerable to temporal splitting when it trusts self-declared availability or permits costless cancellation.",
+    "test": "Randomize independently generated online task streams across static false-name rules, an audited online rule, and fixed-price reservations. Each principal has a fixed actual capacity calendar known only to the evaluator. Allow different declaration windows and cancellation policies while conserving that capacity. Evaluate profit, missed deadlines, and service for honest intermittent participants. Analyze full streams as units and report losses on uncompleted accepted tasks.",
+    "baseline": "Truthful time declarations, static multiple-name bids, and an oracle scheduler with actual calendars.",
+    "metrics": [
+      "gain from temporal splitting",
+      "deadline completion",
+      "reserved capacity wasted",
+      "honest intermittent participation",
+      "cancellation cost"
+    ],
+    "falsifier": "Temporal declarations and cancellation create no extra profitable deviations beyond static splitting under the specified observation model.",
+    "confounds": "Assuming departure times are enforceable; free options hidden by counting only completed tasks; generalizing single-minded guarantees to multi-minded workers.",
+    "prior": [
+      {
+        "id": "lin-2018-sybil-proof",
+        "relation": "Direct online false-name mechanism predecessor; details remain abstract-level and require access."
+      },
+      {
+        "id": "lin-2017-sybil-proof",
+        "relation": "Static procurement baseline and domain distinction."
+      },
+      {
+        "id": "resnick-2023-contingent",
+        "relation": "Optional execution can change incentives even without changing identity count."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Full online mechanism specification and explicit cancellation/enforcement semantics; no live labor or financial market.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-43",
+    "area": "sybil-resistance",
+    "title": "Who should a trust network verify first?",
+    "question": "Can a small verification budget admit honest specialist communities without granting broad influence to cheap endorsements?",
+    "hypothesis": "Unreviewed hunch: Verification selected to improve trusted connectivity admits more useful honest teams than selecting the highest-degree identities, but benefits shrink when endorsements are easy for adversaries to acquire.",
+    "test": "Generate independent modular task networks with known service usefulness and a separately controlled endorsement-acquisition process. Randomize a fixed verification budget among degree ranking, random selection, and a correctly implemented trusted-connectivity policy. Compose each admitted set with the same allocation rule. Vary the number of genuinely colluding principals separately from fake identities; measure downstream manipulation as well as admission.",
+    "baseline": "Exogenous trusted seeds and oracle useful-node verification, both labeled privileged comparisons.",
+    "metrics": [
+      "honest useful capacity admitted",
+      "profitable allocation manipulation",
+      "verification cost",
+      "excluded specialist communities",
+      "sensitivity to endorsement acquisition"
+    ],
+    "falsifier": "Connectivity-oriented verification offers no admission benefit at matched manipulation risk, or gains vanish even when its stated bounded-coalition assumptions hold.",
+    "confounds": "Verification accidentally revealing true owner groups, correlating usefulness with degree, applying static graph guarantees after adversarial edge changes.",
+    "prior": [
+      {
+        "id": "conitzer-2010-false-name-proofness",
+        "relation": "Formal admission-mechanism composition and verification selection are direct prior, not novel proposals."
+      },
+      {
+        "id": "shi-2013-sybilshield",
+        "relation": "Multi-community verification already addresses honest-node exclusion."
+      },
+      {
+        "id": "viswanath-2010-analysis",
+        "relation": "Local community structure can dominate graph defenses."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Read full composition proof; explicitly distinguish trusted verification from ordinary self-created communication links.",
+    "briefs": [
+      "surveys/sybil-resistance.md",
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-44",
+    "area": "sybil-resistance",
+    "title": "Conserved voting weight can still change bargaining power",
+    "question": "Can splitting a fixed resource weight alter the credit or bargaining power assigned to one contributor even when its nominal total votes are unchanged?",
+    "hypothesis": "Unreviewed hunch: Attribution based on a power index can reward or punish identity splitting while stake-proportional seat probability remains invariant; the two outcomes should not be conflated.",
+    "test": "Enumerate small weighted voting games with independently varied quotas and weight distributions. Split one participant's fixed weight into several identities and compute exact coalition outcomes, Shapley-Shubik credit, and stake-proportional selection probability. Randomize the focal participant within sampled game families. For a task-market analogue, keep true contributed resources fixed and clearly label the power-index payout rule as a design choice.",
+    "baseline": "Unsplit identity, linear resource credit, and exact coalition enumeration rather than Monte Carlo on small games.",
+    "metrics": [
+      "change in total power-index credit",
+      "seat-probability invariance",
+      "profitable split frequency",
+      "largest credit gain and loss"
+    ],
+    "falsifier": "Identity splitting leaves both resource-proportional selection and aggregate power-index credit invariant throughout the prespecified nontrivial game family.",
+    "confounds": "Equating a power index with actual causal influence; counting coordinated false identities as independent preferences; approximator error.",
+    "prior": [
+      {
+        "id": "bachrach-2008-divide",
+        "relation": "Direct weighted-voting false-name results distinguish nominal weight from power-index payoff."
+      },
+      {
+        "id": "gilad-2017-algorand",
+        "relation": "Resource-weighted selection gives a contrasting invariant under its assumptions."
+      },
+      {
+        "id": "buildernet-2025-refunds",
+        "relation": "Coalition-aware contribution caps concern a different reward object."
+      }
+    ],
+    "novelty": "replication",
+    "feasibility": "offline",
+    "needs": "Exact small-game implementation and a declared interpretation of power-index credit; do not infer factual voting accuracy.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md"
     ]
   }
 ]
