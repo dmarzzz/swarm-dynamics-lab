@@ -103,3 +103,11 @@ Live Chrome verification passed on the public dashboard: 292 total records, all 
 Published e3952fe. The 24 EX questions now carry publication timestamps from their initial commit and timestamps for their initial project tags. Contributions shows expiring New badges, later New tag markers and separate filters. Legacy undated banks remain unbadged. The seven-day window is calculated at export time and displayed to readers; scheduled exports refresh it. No changes to the canonical atlas or saved review identities.
 
 Validation: 25 data-contract tests including exact expiry, future/unknown dates, invalid dates and tag backdating; TypeScript and production build; browser checks for 24 real new items and a locally mocked later tag addition. Secret scan found zero findings. Repository validation had zero errors and five existing citation warnings. Publication used scoped manual checked sync.
+
+## Skeptical research pass
+
+Published 9520080: three reusable context notes, source-access ledger, and forty specific critiques (24 atlas, 12 extensions, four designs), linked across all sixteen project briefs. Dispositions: 17 retain narrowly, 11 revise, five reframe, three merge, three fix-first, one defer. These are owned editorial assessments, not formal gate verdicts or new hypotheses.
+
+Fresh primary checks included eleven sources with declared abstract/targeted-passage limits. MemTX scope blind spots and MemLineage attribution conditions narrow the repair novelty claim. Scheme C's unanimous-commit counterexample remains in the inspected specification. Several candidate controls are already well designed; critiques acknowledge them and propose sharper tests rather than pretending they are absent.
+
+Validation: all forty targets and content fingerprints resolve after the latest pull, all sixteen project links and local Markdown links pass, and source codes resolve. The arithmetic counterexample was checked directly. Secret scan: zero findings across nine publication files. Repository check: zero errors, five existing citation warnings. No model experiments or private fleet inspection; existing deployment notes were treated as author reports. Scoped manual checked sync preserved the publication audit.
