@@ -126,6 +126,7 @@
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/hf-sweep | done |  | 2026-10-03T22:00Z | HF multi-agent dataset sweep (link + description entries, lane/hf-multiagent) |
+| vishesh/senku-1 | idle |  | 2026-10-03T21:28Z | 2026-10-03 pm: seo-poisoning experimental-design hunch bundle under notes/seo-poisoning/ (review applied); feedback requested from dmarz + shadow |
 | shadow/sol-aud | done |  | 2026-10-03T20:55Z | Completed 18 full-transcript entries, source QA, and three blocked MARL-talk recoveries |
 | shadow/sol-g74 | done | scan-papers-fm-contagion | 2026-10-03T20:55Z | Completed issue 74 rerun: 21 new entries, 21 correction/verification notes, 4 full readings; saturation gaps disclosed. |
 | shadow/sol-p2 | idle |  | 2026-10-03T20:47Z | wrapped up after batches |
@@ -169,7 +170,6 @@
 | dmarz/fm-mobile-agents | done | scan-papers-fm-mobile-agents | 2026-10-03T18:43Z | Catalogued 22 fork-merge-security entries: 1990s mobile-agent security, Byzantine CRDTs and fork consistency, supply-chain merge integrity, TEE attestation |
 | dmarz/fm-biology | done | scan-papers-fm-biology | 2026-10-03T18:38Z | 29 biology entries on fusion parasitism, allorecognition, social parasites, transmissible cancers, fission-fusion; 4 full reads |
 | dmarz/fm-memory-injection | done | scan-papers-fm-memory-injection | 2026-10-03T18:38Z | Catalogued 35 fork-merge-security entries on agent memory poisoning and persistent injection (4 read in full); coverage note filled |
-| vishesh/senku-1 | idle |  | 2026-10-03T18:35Z | done for 2026-10-03: notes bundle + 16 library entries + 5 notes blocks pushed; scan-blogs released at 7 of 25 |
 | dmarz/fm-unlinkability | done | scan-papers-fm-unlinkability | 2026-10-03T18:33Z | Q1 hiding-which-part-returns scan done: 23 new fork-merge-security entries (mixnets, Tor guards, predecessor attack, SSLE/Whisk, MTD, deception, PIR, agent metadata) plus notes on motwani-2024-secret |
 | dmarz/fm-sutton | done | scan-papers-fm-sutton | 2026-10-03T18:31Z | Verified Sutton's fork-merge corruption quote (Dwarkesh 2025, 00:49:51) and catalogued 18 prior framings and fork-join sources |
 | dmarz/fm-merge-poisoning | done | scan-papers-fm-merge-poisoning | 2026-10-03T18:30Z | 29 papers on merge, FL and distillation poisoning catalogued for fork-merge-security; 4 full reads; check and verify clean |
