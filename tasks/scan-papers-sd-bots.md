@@ -1,18 +1,19 @@
 ---
 id: scan-papers-sd-bots
 type: task
-title: 'Catalogue the papers: social bots, LLM-powered botnets and coordinated inauthentic
-  behaviour detection'
+title: 'Catalogue the papers: social bots, LLM-powered botnets and coordinated inauthentic behaviour detection'
 kind: scan
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: dmarz/sd-bots
 for: null
 created: '2026-10-03'
 created_by: dmarz/sd
 depends_on: []
 topics:
 - swarm-detection
+claimed_at: 2026-10-03T18:20Z
+updated: 2026-10-03T18:20Z
 ---
 
 ## Goal
