@@ -1,10 +1,12 @@
 # Research question atlas
 
-143 candidate questions, tentative hypotheses and test sketches across all 14 research areas.
+202 candidate questions, tentative hypotheses and test sketches across all 15 research areas.
 
 Owner: dmarz/question-atlas. Human-requested brainstorming, 2026-10-03. **Every item is an unreviewed hunch.** These are selection materials, not accepted hypotheses, approved protocols, measured effects, or novelty claims.
 
 [Start with the synthesis and review guide](../../../../synthesis/research-question-atlas.md). [Open the local review browser](review.html). [Machine-readable bank](candidates.json). [Review scope and limitations](scope.md).
+
+Update 2: **59 new, 36 revised, 107 unchanged** candidates. All original IDs are retained. [What changed and why](update-v2.md).
 
 Feasibility labels describe a possible first test, not a verified installation, price or runtime. Source depths are inherited catalogue metadata, not claims that this pass fully read those sources. The open evidence-depth audit still applies.
 
@@ -17,13 +19,14 @@ Feasibility labels describe a possible first test, not a verified installation, 
 - [Active matter physics](#active-matter): 6 candidates.
 - [Synchronisation, consensus and networked control](#sync-consensus): 6 candidates.
 - [Criticality, information and measurement](#criticality-measurement): 8 candidates.
-- [Multi-agent RL and emergent coordination](#marl-emergence): 8 candidates.
-- [LLM agent swarms](#llm-agent-swarms): 37 candidates.
+- [Multi-agent RL and emergent coordination](#marl-emergence): 9 candidates.
+- [LLM agent swarms](#llm-agent-swarms): 45 candidates.
 - [Human crowds and traffic](#crowds-and-traffic): 6 candidates.
-- [Meta and tooling](#meta): 10 candidates.
-- [Sybil resistance and adversarial identity](#sybil-resistance): 12 candidates.
-- [Fork-and-merge agents and corruption on reintegration](#fork-merge-security): 12 candidates.
-- [Detecting AI agent swarms in the wild](#swarm-detection): 12 candidates.
+- [Meta and tooling](#meta): 21 candidates.
+- [Sybil resistance and adversarial identity](#sybil-resistance): 21 candidates.
+- [Fork-and-merge agents and corruption on reintegration](#fork-merge-security): 19 candidates.
+- [Detecting AI agent swarms in the wild](#swarm-detection): 13 candidates.
+- [Agent budgets and resource allocation](#agent-budgets): 22 candidates.
 
 ## Shared design requirements
 
@@ -36,6 +39,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="phy-01"></a>
 ### PHY-01 — Neighbour rules under actual visibility
+
+**Update 2:** unchanged.
 
 **Question:** Does choosing a fixed number of neighbours still preserve cohesion when robots can only see unoccluded neighbours?
 
@@ -64,6 +69,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-02"></a>
 ### PHY-02 — What mechanism carries a turning wave?
 
+**Update 2:** unchanged.
+
 **Question:** Can measured propagation distinguish behavioural inertia from front-biased interactions?
 
 **Candidate hypothesis:** The same average turning-wave speed can arise from both mechanisms, but responses to reversed sensory bias and paired pulses will distinguish them.
@@ -91,6 +98,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-03"></a>
 ### PHY-03 — Polarization versus navigation value
 
+**Update 2:** revised.
+
 **Question:** When does increasing collective alignment reduce actual task performance?
 
 **Candidate hypothesis:** Stronger alignment will increase polarization while slowing response to a rapidly moving goal, producing an intermediate optimum for useful transport.
@@ -107,16 +116,18 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** boundary-test / offline.
 
-**Before promotion:** Define one measurable transport task and verify the closest responsiveness literature; novelty is not the general intermediate-optimum idea.
+**Before promotion:** Define transport utility and inspect responsiveness prior art. SwarmBench v02/v05 agent/game logs offer a separate discrete-task proxy audit after schema validation; they cannot estimate an alignment-strength intervention or establish physical-flock behavior.
 
 **Closest prior and evidence limits:**
 
 - [[mateo-2017-effect]] — [Effect of Correlations in Swarms on Collective Response](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mateo-2017-effect.md). Closest prior already predicts a responsiveness trade-off with connectivity. Catalogue depth: abstract.
 - [[couzin-2005-effective]] — [Effective leadership and decision-making in animal groups on the move](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/couzin-2005-effective.md). Informed-minority guidance is an established mechanism. Catalogue depth: abstract.
-- [[vicsek-1995-novel]] — [Novel Type of Phase Transition in a System of Self-Driven Particles](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vicsek-1995-novel.md). Order-parameter baseline; this hunch tests function rather than treating order as success. Catalogue depth: full.
+- [[data-swarmbench-2025]] — [SwarmBench experiment logs: LLMs as decentralised agents on five 2D-grid swarm tasks (Flocking, Pursuit, Synchronize, Foraging, Transport), 13 models](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-swarmbench-2025.md). LLM-grid analogy for comparing observed coordination with pursuit/transport utility; not continuous heading dynamics. Catalogue depth: skim.
 
 <a id="phy-04"></a>
 ### PHY-04 — Distributed expertise under local failure
+
+**Update 2:** unchanged.
 
 **Question:** Does spreading informed agents through a flock make guidance more reliable than concentrating them near its front?
 
@@ -145,6 +156,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-05"></a>
 ### PHY-05 — Hydrodynamic breakup beyond a single model
 
+**Update 2:** unchanged.
+
 **Question:** Does size-dependent school fragmentation survive replacing idealized long-range fluid coupling with a screened interaction?
 
 **Candidate hypothesis:** Breakup attributed to hydrodynamics will weaken when coupling is screened, even with the same local disturbance magnitude; this would identify long-range coherence rather than generic noise as the driver.
@@ -171,6 +184,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="phy-06"></a>
 ### PHY-06 — Alternating bursts in larger groups
+
+**Update 2:** unchanged.
 
 **Question:** Can the pairwise benefit of alternating movement bursts scale to a school without a shared clock?
 
@@ -202,6 +217,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-07"></a>
 ### PHY-07 — Why can less communication help adaptation?
 
+**Update 2:** unchanged.
+
 **Question:** Does constrained communication improve changing-environment decisions by preserving independent sampling or simply weakening social commitment?
 
 **Candidate hypothesis:** The benefit will depend primarily on maintaining fresh independent samples; sparse communication without increased information freshness will provide less improvement.
@@ -228,6 +245,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="phy-08"></a>
 ### PHY-08 — Finite populations and multi-option deadlock
+
+**Update 2:** unchanged.
 
 **Question:** Does a mean-field cross-inhibition policy still make accurate decisions when only a small number of agents compare several options?
 
@@ -256,6 +275,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-09"></a>
 ### PHY-09 — Group size versus independent evidence
 
+**Update 2:** unchanged.
+
 **Question:** Is collective accuracy determined more by the number of independent environmental cues than by the number of agents?
 
 **Candidate hypothesis:** Accuracy will saturate or decline as agents share increasingly correlated cues; adding independently sampled agents will help more than duplicating existing evidence.
@@ -282,6 +303,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="phy-10"></a>
 ### PHY-10 — Correcting fast-sampling option bias
+
+**Update 2:** unchanged.
 
 **Question:** Can a swarm identify the best option when inferior options are faster to inspect?
 
@@ -310,6 +333,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-11"></a>
 ### PHY-11 — When uninformed participants help
 
+**Update 2:** unchanged.
+
 **Question:** Do uninformed agents improve a decision because they dilute commitment or because their movement changes connectivity?
 
 **Candidate hypothesis:** Uninformed participants will help resolve conflicting preferences in some regimes, but that benefit will shrink when degree and movement are held constant.
@@ -336,6 +361,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="phy-12"></a>
 ### PHY-12 — Reopening a settled decision
+
+**Update 2:** unchanged.
 
 **Question:** Can occasional independent reinspection reverse an obsolete consensus without creating constant churn?
 
@@ -367,6 +394,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-19"></a>
 ### PHY-19 — Who creates the observed coordination?
 
+**Update 2:** unchanged.
+
 **Question:** How much apparent yielding and collision avoidance comes from a learned policy versus a testbed safety filter?
 
 **Candidate hypothesis:** Some coordination attributed to the policy will be introduced by command projection; policy rankings will change when evaluated on raw commands as well as executed motion.
@@ -393,6 +422,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="phy-20"></a>
 ### PHY-20 — When a few messages add value
+
+**Update 2:** unchanged.
 
 **Question:** Does limited communication help decentralized navigation specifically when visual observations are ambiguous?
 
@@ -421,6 +452,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-21"></a>
 ### PHY-21 — Correlated disturbances in transfer
 
+**Update 2:** unchanged.
+
 **Question:** Do policies robust to independent sensor noise fail when an entire swarm shares the same bias?
 
 **Candidate hypothesis:** Shared localization or timing errors will cause larger collective failures than independent errors of the same marginal magnitude; training only with independent noise will overstate resilience.
@@ -447,6 +480,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="phy-22"></a>
 ### PHY-22 — Correlated evidence in physical identity vetting
+
+**Update 2:** unchanged.
 
 **Question:** Does collaborative identity vetting remain reliable when neighbours share correlated radio-observation errors?
 
@@ -475,6 +510,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-23"></a>
 ### PHY-23 — Seed dependence in shape formation
 
+**Update 2:** revised.
+
 **Question:** How much of distributed shape assembly relies on a small privileged set of coordinate seeds?
 
 **Candidate hypothesis:** Losing coordinate seeds early will damage goal-shape accuracy more than losing the same number of ordinary robots, even when surviving robots remain connected.
@@ -491,16 +528,18 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** boundary-test / offline.
 
-**Before promotion:** Retrieve compatible controller implementations and verify exactly which robots receive coordinate information; old simulator dependencies may need repair.
+**Before promotion:** Retrieve compatible robot controllers and verify coordinate privileges. Separately inspect SwarmBench v01 agent views, prompts and game states for assumed global coordinates; its shape-task traces motivate a synthetic information-control analogue, not robot seed-failure evidence.
 
 **Closest prior and evidence limits:**
 
 - [[rubenstein-2014-programmable]] — [Programmable self-assembly in a thousand-robot swarm](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/rubenstein-2014-programmable.md). Closest seeded programmable shape-assembly reference. Catalogue depth: abstract.
 - [[slavkov-2018-morphogenesis]] — [Morphogenesis in robot swarms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/slavkov-2018-morphogenesis.md). Seedless morphogenesis is a contrasting task family, not a drop-in equivalent. Catalogue depth: abstract.
-- [[gh-jic-csb-kilombo]] — [Kilombo: C simulator for Kilobot swarms that runs the same controller code as the real robots](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-jic-csb-kilombo.md). Possible controller-level simulation route; catalogue says it has not been run. Catalogue depth: skim.
+- [[data-swarmbench-2025]] — [SwarmBench experiment logs: LLMs as decentralised agents on five 2D-grid swarm tasks (Flocking, Pursuit, Synchronize, Foraging, Transport), 13 models](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-swarmbench-2025.md). A shape-formation prompt appears in the Flocking log preview; a coordinate-information analogy only, with task semantics requiring code verification. Catalogue depth: skim.
 
 <a id="phy-24"></a>
 ### PHY-24 — Damage recovery with immobile survivors
+
+**Update 2:** unchanged.
 
 **Question:** Do swarms that recover after robots are removed also recover when damaged robots remain as obstacles?
 
@@ -531,6 +570,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-37"></a>
 ### PHY-37 — Neural cellular repair beyond familiar lesion shapes
 
+**Update 2:** unchanged.
+
 **Question:** Does a learned NCA repair task-critical hidden-state cuts as reliably as equally large random circular lesions?
 
 **Candidate hypothesis:** A cut across an active reasoning front will delay valid-solution recovery more than an equal-area random lesion, even when rendered outputs appear similarly restored.
@@ -558,6 +599,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="phy-38"></a>
 ### PHY-38 — Masked parallel updates versus independent cell clocks
+
+**Update 2:** unchanged.
 
 **Question:** Does an NCA trained with random update masks preserve its task performance under event-driven local execution with stale neighbour reads?
 
@@ -590,6 +633,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="opt-01"></a>
 ### OPT-01 — Performance after shifting and rotating the problem
 
+**Update 2:** unchanged.
+
 **Question:** Do attractive optimizer rankings survive removal of coordinate advantages?
 
 **Candidate hypothesis:** Rankings on centered axis-aligned functions will change after random translation and rotation, beyond seed variability.
@@ -615,6 +660,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="opt-02"></a>
 ### OPT-02 — Communication topology under a fair budget
+
+**Update 2:** unchanged.
 
 **Question:** Does sparse communication improve search by preserving diversity or merely by changing computation cost?
 
@@ -642,6 +689,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="opt-03"></a>
 ### OPT-03 — How much of ant-colony performance is local search?
 
+**Update 2:** unchanged.
+
 **Question:** Does pheromone sharing contribute after a strong local-search component is matched?
 
 **Candidate hypothesis:** The incremental benefit of pheromone will shrink when all variants share identical local search, particularly on easy instances.
@@ -667,6 +716,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="opt-04"></a>
 ### OPT-04 — Independent evaluations versus noisy consensus
+
+**Update 2:** unchanged.
 
 **Question:** When does a shared best solution amplify measurement noise?
 
@@ -694,6 +745,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="opt-05"></a>
 ### OPT-05 — When collective memory becomes stale
 
+**Update 2:** unchanged.
+
 **Question:** Can selective forgetting beat full restart after the objective changes?
 
 **Candidate hypothesis:** Age-weighted best-state memory will reduce post-change regret compared with permanent memory, while retaining more value than full restart.
@@ -719,6 +772,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="opt-06"></a>
 ### OPT-06 — Where the small-inertia approximation stops helping
+
+**Update 2:** unchanged.
 
 **Question:** Does a consensus approximation retain practical optimizer behavior outside the asymptotic regime?
 
@@ -749,6 +804,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-13"></a>
 ### PHY-13 — Same cluster, different mechanism
 
+**Update 2:** unchanged.
+
 **Question:** Can localized release distinguish density-dependent motility from alignment-driven aggregation when snapshots look similar?
 
 **Candidate hypothesis:** A temporary local motility release will dissolve density-trapped clusters differently from equally dense alignment clusters, allowing a small intervention to identify mechanism.
@@ -775,6 +832,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="phy-14"></a>
 ### PHY-14 — Wall geometry as a control input
+
+**Update 2:** unchanged.
 
 **Question:** Can boundary shape guide an inertial robot aggregate while preserving useful bulk mixing?
 
@@ -803,6 +862,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-15"></a>
 ### PHY-15 — Delayed density sensing in motility control
 
+**Update 2:** unchanged.
+
 **Question:** Does delayed quorum sensing destabilize otherwise stable active-particle aggregates?
 
 **Candidate hypothesis:** Delayed density-dependent speed updates will induce repeated aggregation and dissolution beyond a response-time range, and hysteretic switching may suppress that cycle.
@@ -830,6 +891,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-16"></a>
 ### PHY-16 — Reciprocity and useful collective rotation
 
+**Update 2:** unchanged.
+
 **Question:** Can asymmetric interactions generate useful rotation without simply increasing total actuation?
 
 **Candidate hypothesis:** Changing the balance of reciprocal and non-reciprocal coupling at fixed overall strength will induce persistent rotation in some regimes, but only part of that rotation will transfer work to a load.
@@ -856,6 +919,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="phy-17"></a>
 ### PHY-17 — Recovery of shape versus recovery of function
+
+**Update 2:** unchanged.
 
 **Question:** Does an acoustically coupled aggregate that regains its shape also regain its sensing and transport performance?
 
@@ -885,6 +950,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="phy-18"></a>
 ### PHY-18 — Transport by fluctuating active flows
+
+**Update 2:** unchanged.
 
 **Question:** Can a deliberately disordered active flow transport tracers more effectively than an ordered flock at the same propulsion budget?
 
@@ -916,6 +983,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-25"></a>
 ### PHY-25 — The order of communication opportunities
 
+**Update 2:** revised.
+
 **Question:** Can two networks with identical aggregate connectivity have very different finite-time consensus because contacts occur in a different order?
 
 **Candidate hypothesis:** Schedules that repeatedly isolate the same subgroup will converge more slowly than temporally interleaved contacts, despite equal edge counts and identical aggregated graphs.
@@ -932,16 +1001,18 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** boundary-test / offline.
 
-**Before promotion:** Define update weights that preserve the intended consensus quantity and review known temporal-network rate bounds before claiming novelty.
+**Before promotion:** Define average-preserving weights and check temporal-network rate bounds. Social-LLM-Networks experiment JSON may ground a later text-network comparison only if timestamps, exposure order and repeat units are recoverable; archived sentiment trajectories alone cannot identify a scheduling effect.
 
 **Closest prior and evidence limits:**
 
 - [[jadbabaie-2003-coordination]] — [Coordination of groups of mobile autonomous agents using nearest neighbor rules](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/jadbabaie-2003-coordination.md). Established joint-connectivity convergence result, not a finite-time ranking claim. Catalogue depth: full.
 - [[ren-2005-consensus]] — [Consensus seeking in multiagent systems under dynamically changing interaction topologies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ren-2005-consensus.md). Directed switching-network convergence context. Catalogue depth: abstract.
-- [[fujiwara-2011-synchronization]] — [Synchronization in networks of mobile oscillators](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/fujiwara-2011-synchronization.md). Mobile-network timescale separation motivates the physical follow-up. Catalogue depth: abstract.
+- [[data-social-llm-networks-2026]] — [Social-LLM-Networks: opinion exchange among LLMs connected over communication networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-social-llm-networks-2026.md). Candidate opinion-exchange traces with topology metadata; temporal exposure reconstruction is an unresolved prerequisite, not established physical consensus evidence. Catalogue depth: skim.
 
 <a id="phy-26"></a>
 ### PHY-26 — Fast consensus under realistic link delays
+
+**Update 2:** unchanged.
 
 **Question:** Does adding long-range links still accelerate agreement when their latency and service cost are included?
 
@@ -970,6 +1041,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-27"></a>
 ### PHY-27 — Movement as a synchronization resource
 
+**Update 2:** unchanged.
+
 **Question:** Can purposeful mixing synchronize locally coupled oscillators more efficiently than increasing their coupling strength?
 
 **Candidate hypothesis:** Occasional movement between weakly connected regions will outperform stronger within-region coupling at equal energy proxy, but only if travel changes encounters before local clusters lock into incompatible phases.
@@ -996,6 +1069,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="phy-28"></a>
 ### PHY-28 — A useful phase wave without global synchrony
+
+**Update 2:** unchanged.
 
 **Question:** Can a low global phase order hide a stable, useful spatial coordination pattern?
 
@@ -1024,6 +1099,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-29"></a>
 ### PHY-29 — How distribution tails change swarmalator predictions
 
+**Update 2:** unchanged.
+
 **Question:** Do analytic swarmalator predictions based on Lorentzian frequency disorder remain useful for bounded physical populations?
 
 **Candidate hypothesis:** The qualitative states will persist under bounded disorder, but synchronization boundaries and rare-agent escape rates will shift enough to matter for small swarms.
@@ -1050,6 +1127,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="phy-30"></a>
 ### PHY-30 — Synchrony versus shared-channel congestion
+
+**Update 2:** unchanged.
 
 **Question:** When does synchronizing activity overload the channel needed to maintain that synchronization?
 
@@ -1081,6 +1160,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="met-01"></a>
 ### MET-01 — Criticality beyond a geometric signature
 
+**Update 2:** unchanged.
+
 **Question:** Can apparent scale-free correlation be distinguished from a finite-size or mean-subtraction artifact?
 
 **Candidate hypothesis:** A critical interaction model will predict held-out response scaling better than independent motion with matched group geometry, even if both show a correlation zero crossing.
@@ -1106,6 +1187,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="met-02"></a>
 ### MET-02 — Sensitivity versus false alarms
+
+**Update 2:** unchanged.
 
 **Question:** Does maximum collective responsiveness also maximize useful decisions under asymmetric error costs?
 
@@ -1133,6 +1216,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="met-03"></a>
 ### MET-03 — What incomplete observation hides
 
+**Update 2:** unchanged.
+
 **Question:** Which collective measurements survive seeing only a biased fraction of the swarm?
 
 **Candidate hypothesis:** Spatial or degree-biased missingness will distort inferred coordination more than random dropout at the same coverage.
@@ -1158,6 +1243,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="met-04"></a>
 ### MET-04 — Does a synergy score predict useful complementarity?
+
+**Update 2:** unchanged.
 
 **Question:** Can an information-theoretic collective score forecast the damage caused by removing coordination?
 
@@ -1185,6 +1272,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="met-05"></a>
 ### MET-05 — Information flow under a shared driver
 
+**Update 2:** unchanged.
+
 **Question:** When does apparent peer information transfer come entirely from shared external input?
 
 **Candidate hypothesis:** Conditioning on a logged common driver and testing edge interventions will remove many apparent directed links found by pairwise transfer entropy.
@@ -1210,6 +1299,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="met-06"></a>
 ### MET-06 — A transition or a slow relaxation?
+
+**Update 2:** unchanged.
 
 **Question:** Does observed hysteresis survive longer observation and finite-size controls?
 
@@ -1237,6 +1328,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="met-07"></a>
 ### MET-07 — Can different mechanisms produce the same trajectories?
 
+**Update 2:** unchanged.
+
 **Question:** Can good trajectory prediction coexist with a wrong inferred interaction graph?
 
 **Candidate hypothesis:** Models with similar held-out trajectory error will disagree on the effect of targeted perturbations when fitted to passive traces alone.
@@ -1262,6 +1355,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="met-08"></a>
 ### MET-08 — Early warnings on genuinely new failures
+
+**Update 2:** unchanged.
 
 **Question:** Do warning signals predict future collective breakdown outside the scenarios used to design them?
 
@@ -1292,6 +1387,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="rl-01"></a>
 ### RL-01 — Skills with unfamiliar partners
 
+**Update 2:** unchanged.
+
 **Question:** Does training with partner diversity improve zero-shot coordination at a fixed training budget?
 
 **Candidate hypothesis:** Partner-population training will improve held-out cross-play more than self-play, even after matching environment steps.
@@ -1317,6 +1414,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="rl-02"></a>
 ### RL-02 — Credit for a rare essential contribution
+
+**Update 2:** unchanged.
 
 **Question:** Do counterfactual rewards help when only a few agents perform indispensable actions?
 
@@ -1344,6 +1443,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="rl-03"></a>
 ### RL-03 — Messages that remain useful under a broken channel
 
+**Update 2:** revised.
+
 **Question:** Does training with channel corruption yield communication that generalizes beyond its training noise?
 
 **Candidate hypothesis:** Moderate channel dropout during training will preserve more task value under unseen burst loss than clean-channel training.
@@ -1352,7 +1453,7 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Comparison:** No communication, clean-channel training, and hand-designed compressed state messages.
 
-**Measurements:** Return under channel shift; useful bits per episode; performance loss after content scrambling.
+**Measurements:** Return under channel shift; useful bits per episode; performance loss after content scrambling; Representation reconstruction error apart from task return.
 
 **Would count against it:** Gains disappear on new corruption patterns or content scrambling leaves success unchanged.
 
@@ -1360,15 +1461,18 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** extension / training.
 
-**Before promotion:** Select an environment whose success genuinely requires private information sharing.
+**Before promotion:** Select a private-information task and audit the original communication objective; the new talk motivates separate representation and utility scores, not assuming compressed messages are safe.
 
 **Closest prior and evidence limits:**
 
 - [[foerster-2016-learning]] — [Learning to Communicate with Deep Multi-Agent Reinforcement Learning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/foerster-2016-learning.md). Learned communication and channel design predecessor. Catalogue depth: abstract.
 - [[gh-farama-foundation-pettingzoo]] — [PettingZoo: multi-agent Gymnasium-style API and environment families (Atari, Butterfly, Classic, MPE, SISL)](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-farama-foundation-pettingzoo.md). Candidate controlled multi-agent environment interface. Catalogue depth: skim.
+- [[zaslavsky-2023-noga]] — [Noga Zaslavsky: Information-constrained Emergent Communication in Multi agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/talks/zaslavsky-2023-noga.md). Talk transcript distinguishes communication complexity, representation distortion and downstream utility; no security guarantee or precise effect size is assumed. Catalogue depth: full.
 
 <a id="rl-04"></a>
 ### RL-04 — When a mean neighbor is misleading
+
+**Update 2:** unchanged.
 
 **Question:** Does mean-field compression fail specifically when rare roles carry decisive information?
 
@@ -1396,6 +1500,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="rl-05"></a>
 ### RL-05 — Size transfer or topology transfer?
 
+**Update 2:** unchanged.
+
 **Question:** Are policies described as swarm-size invariant actually robust to new interaction graphs?
 
 **Candidate hypothesis:** An invariant input encoder alone will not preserve performance when neighborhood connectivity changes at fixed density.
@@ -1421,6 +1527,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="rl-06"></a>
 ### RL-06 — Emergent strategy or simulator exploit?
+
+**Update 2:** unchanged.
 
 **Question:** Do strategies discovered by competition remain useful when nonessential simulator details change?
 
@@ -1448,6 +1556,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="rl-07"></a>
 ### RL-07 — Good reward, bad collective behavior
 
+**Update 2:** unchanged.
+
 **Question:** Can a learned flock exploit an alignment reward while failing navigation or safety objectives?
 
 **Candidate hypothesis:** Optimizing alignment alone will create policies that score well while losing goal progress under obstacles.
@@ -1474,6 +1584,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="rl-08"></a>
 ### RL-08 — Coordinating while partners keep learning
 
+**Update 2:** unchanged.
+
 **Question:** Does a short history of partner behavior improve adaptation to policy drift?
 
 **Candidate hypothesis:** A history-conditioned policy will recover faster after partner changes than a memoryless policy of similar capacity.
@@ -1497,45 +1609,79 @@ API tests need matched inference and communication budgets. Training tests need 
 - [[lowe-2017-multi]] — [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lowe-2017-multi.md). Nonstationarity in MARL motivation. Catalogue depth: skim.
 - [[gh-bold-lab-ai-jaxmarl]] — [JaxMARL: GPU-vectorised MARL environments (SMAX, MPE, Overcooked, Hanabi, STORM) and baselines in JAX](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-bold-lab-ai-jaxmarl.md). Candidate training suite; no run or speed claim from this pass. Catalogue depth: skim.
 
+<a id="sim-06"></a>
+### SIM-06 — When does offline policy evaluation stop ranking policies correctly?
+
+**Update 2:** new.
+
+**Question:** Does sparse joint-action coverage break offline evaluation before ordinary single-agent coverage diagnostics detect trouble?
+
+**Candidate hypothesis:** Policies whose coordinated actions fall outside joint behavior support will be misranked offline more often than policies with similar marginal but better joint support.
+
+**How to test:** Choose one small OG-MARL archive and compatible environment after auditing its loader, license and behavior metadata. Construct matched dataset subsets that preserve individual action frequencies while reducing coverage of coordinated joint actions. Train independent policy seeds with a frozen algorithm and budget, then compare offline value estimates with fresh online environment episodes. Dataset construction and training seeds are independent units; evaluation episodes are nested replications.
+
+**Comparison:** Behavior cloning, full-support data subset and a marginal-support diagnostic at equal transition count.
+
+**Measurements:** Offline/online rank agreement; Value-estimation error; Joint-support score; Realized team return.
+
+**Would count against it:** Joint-support reduction adds no ranking error beyond marginal support and sample size, or the offline estimator remains calibrated across the tested policy shifts.
+
+**Main confounds:** Removing joint actions can alter state visitation and return quality. Match these where possible and report unmatched shifts; classical RL trajectories do not establish LLM-agent generalization.
+
+**Framing / first-test class:** boundary-test / training.
+
+**Before promotion:** Inspect archive size and schema before download, verify environment/version compatibility and action support, and cap one scenario. A lightweight supported environment is preferable to assuming StarCraft runs locally.
+
+**Closest prior and evidence limits:**
+
+- [[data-og-marl-2024]] — [OG-MARL offline multi-agent RL datasets: SMAC v1/v2, MAMuJoCo, Flatland and RWARE experience, plus re-hosted prior-work datasets](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-og-marl-2024.md). Concrete offline MARL archives; the catalogue’s 74 index rows are not the trajectory count. Catalogue depth: skim.
+- [[ellis-2022-smacv2]] — [SMACv2: An Improved Benchmark for Cooperative Multi-Agent Reinforcement Learning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ellis-2022-smacv2.md). Procedural task variability motivates held-out online validation, without requiring its heavy environment for the initial test. Catalogue depth: full.
+- [[papoudakis-2021-benchmarking]] — [Benchmarking Multi-Agent Deep Reinforcement Learning Algorithms in Cooperative Tasks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/papoudakis-2021-benchmarking.md). Multi-environment cooperative MARL comparison context for baseline and seed discipline. Catalogue depth: skim.
+
 <a id="llm-agent-swarms"></a>
 ## LLM agent swarms
 
 <a id="soc-01"></a>
 ### SOC-01 — Separate information diversity from model diversity
 
+**Update 2:** revised.
+
 **Question:** When does mixing model families help beyond giving identical models complementary evidence?
 
-**Candidate hypothesis:** Complementary observations explain more of the gain on distributed tasks than provider labels; model diversity adds value mainly when pre-discussion errors remain correlated.
+**Candidate hypothesis:** Complementary observations explain more distributed-task improvement than family labels; family mixing adds value only when it reduces residual shared errors after capability is controlled.
 
-**How to test:** Randomize complete task episodes in a two-by-two design: homogeneous versus mixed models, crossed with overlapping versus complementary evidence. Keep the union of available facts, total inference tokens and tool calls fixed; rotate which model receives each shard. Estimate episode-level contrasts across held-out task families, with a separately reported matched-spend sensitivity analysis.
+**How to test:** Randomize whole task episodes to homogeneous/mixed models crossed with overlapping/complementary evidence. Keep the fact union, inference and tool caps fixed; rotate shard assignments. Choose capability-matched pools using separate calibration tasks, then freeze them. Estimate contrasts on held-out task families, including rare-fact and fully supplied synthetic-evidence strata; report matched-spend sensitivity separately.
 
 **Comparison:** Independent voting and the strongest single model under the same resource cap; a full-information oracle is an explicit diagnostic ceiling.
 
 **Measurements:** Designated-answer accuracy; Pre/post-discussion error correlation; Cost per correct task.
 
-**Would count against it:** The diversity contrast vanishes after matching capability, or overlap changes explain neither error correlation nor performance.
+**Would count against it:** Complementary evidence has no larger benefit than family mixing at matched capability, or mixing helps without the predicted residual-error reduction.
 
 **Main confounds:** Tokenizer differences, stronger individual models and shard difficulty can masquerade as diversity; cluster uncertainty by generated task, not agent.
 
 **Framing / first-test class:** boundary-test / api-small.
 
-**Before promotion:** Choose calibrated model pairs and verify the evidence union is equally solvable.
+**Before promotion:** Audit InfoDelphi methods and establish calibration/test separation plus solvable evidence unions before choosing model pools.
 
 **Closest prior and evidence limits:**
 
-- [[kim-2025-correlated]] — [Correlated Errors in Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2025-correlated.md). Measures shared errors; does not establish benefits of this intervention. Catalogue depth: full.
-- [[tambwekar-2026-proxifield]] — [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tambwekar-2026-proxifield.md). Provides complementary-information routing precedent and hidden-profile tasks. Catalogue depth: full.
+- [[li-2026-diverse]] — [Diverse Evidence, Better Forecasts: Multi-Agent Deliberation Under Information Asymmetry](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-diverse.md). Direct evidence-partitioning precedent; this factorial tests added family effects and task transfer. Catalogue depth: abstract.
+- [[kim-2026-are]] — [Are Diversity Metrics Measuring Diversity? A Capability-Controlled Audit of Majority-Vote Gain in LLM Ensembles](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2026-are.md). Capability-controlled audit warns that raw diversity metrics can re-express accuracy. Catalogue depth: abstract.
+- [[rai-2026-when]] — [When Too Many Cooks Spoil the Broth: Three Failure Modes of Multi-Agent LLM Reliability](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/rai-2026-when.md). Reported cross-family co-failure on rare queries cautions against treating vendor labels as independent evidence. Catalogue depth: abstract.
 
 **Related team work:** [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md), [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md).
 
 <a id="soc-02"></a>
 ### SOC-02 — Measure effective team size on distributed evidence
 
+**Update 2:** revised.
+
 **Question:** Does effective team size increase with population when each worker holds useful private evidence?
 
 **Candidate hypothesis:** Communication increases effective evidence on complementary tasks but creates a ceiling when observations overlap; answer agreement alone overstates independence.
 
-**How to test:** Randomize whole synthetic task episodes to independent voting, debate, self-correction and unrelated-message placebo. Sweep team size at fixed total evidence and inference budget, then repeat a separately labelled fixed-per-agent-budget sensitivity analysis. Estimate covariance of scored errors across independent tasks, alongside aggregate accuracy; bootstrap tasks rather than messages.
+**How to test:** Randomize whole synthetic episodes to independent voting, debate, self-correction and unrelated-message placebo, crossed with overlapping/complementary evidence. Sweep team size at fixed fact union and inference budget; label fixed-per-agent-budget sensitivity separately. Estimate pre/post error covariance across independent tasks, alongside accuracy and shared-wrong-answer rates; bootstrap tasks rather than messages.
 
 **Comparison:** Matched independent samples and a single agent with the evidence union; never treat oracle access as equivalent deployment cost.
 
@@ -1547,17 +1693,20 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** measurement / api-small.
 
-**Before promotion:** Audit effective-size assumptions and select exact-answer tasks outside ordinary multiple-choice QA.
+**Before promotion:** Audit covariance assumptions; novelty requires split evidence and a charged placebo, not another generic effective-size ceiling.
 
 **Closest prior and evidence limits:**
 
 - [[bertalanic-2026-ringelmann]] — [The Ringelmann Effect in Multi-Agent LLM Systems: A Scaling Law for Effective Team Size](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bertalanic-2026-ringelmann.md). Supplies a QA-based effective-size model and placebo comparisons. Catalogue depth: full.
 - [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2026-silo.md). Already studies distributed evidence; qualitative overhead is not a new finding. Catalogue depth: full.
+- [[begin-2026-preference]] — [Preference Optimization Drives Monoculture in LLM Prediction Markets](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/begin-2026-preference.md). Already measures effective-size saturation in a prediction market; its Kish proxy is not derived from market dynamics. Catalogue depth: skim.
 
 **Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md), [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md).
 
 <a id="soc-03"></a>
 ### SOC-03 — Distinguish group failure from a strict scoring rule
+
+**Update 2:** unchanged.
 
 **Question:** How much apparent deterioration with team size comes from requiring every agent to answer correctly?
 
@@ -1587,6 +1736,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-04"></a>
 ### SOC-04 — Ablate why semantic routing works
 
+**Update 2:** unchanged.
+
 **Question:** Do complementary-information routing signals outperform simple direct addressing once delivery is matched?
 
 **Candidate hypothesis:** Complementarity helps when private evidence is distributed, while direct addressing alone explains gains on obvious request-response tasks.
@@ -1615,6 +1766,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-05"></a>
 ### SOC-05 — Measure reading capacity separately from wording bias
 
+**Update 2:** unchanged.
+
 **Question:** Does increasing inbox capacity improve truth finding after controlling the bias induced by claim wording?
 
 **Candidate hypothesis:** Capacity helps only when the wording-induced prior is weak; otherwise more communication can amplify a biased starting field.
@@ -1636,12 +1789,14 @@ API tests need matched inference and communication budgets. Training tests need 
 **Closest prior and evidence limits:**
 
 - [[fukushima-2026-message]] — [Message capacity and claim wording set the transition points of collective truth-finding in language-model networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/fukushima-2026-message.md). Direct prior measuring inbox capacity and claim wording; this is a transfer test. Catalogue depth: abstract.
-- [[liu-2026-social]] — [Social Networks of LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2026-social.md). Attention-based proxy supplies conditional network predictions, not a universal theorem for LLMs. Catalogue depth: abstract.
+- [[liu-2026-social]] — [Social Networks of LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2026-social.md). Attention-based proxy supplies conditional network predictions, not a universal theorem for LLMs. Catalogue depth: skim.
 
 **Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md), [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md).
 
 <a id="soc-06"></a>
 ### SOC-06 — Social influence or ordinary anchoring?
+
+**Update 2:** unchanged.
 
 **Question:** Does a peer-labelled opinion change judgments more than identical information presented as a numeric anchor?
 
@@ -1671,6 +1826,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-07"></a>
 ### SOC-07 — Protect private judgments before public discussion
 
+**Update 2:** revised.
+
 **Question:** Does requiring a private pre-discussion answer preserve useful minority evidence without preventing correction?
 
 **Candidate hypothesis:** A private committed judgment reduces unsupported public conformity, but the benefit disappears when the commitment becomes an instruction never to revise.
@@ -1693,11 +1850,14 @@ API tests need matched inference and communication budgets. Training tests need 
 
 - [[shehata-2026-bystander]] — [The Bystander Effect in Multi-Agent Reasoning: Quantifying Cognitive Loafing in Collaborative Interactions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shehata-2026-bystander.md). Abstract reports private/public conformity gaps; this design does not assume its internal-state interpretation. Catalogue depth: abstract.
 - [[choi-2025-debate]] — [Debate or Vote: Which Yields Better Decisions in Multi-Agent Large Language Models?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/choi-2025-debate.md). Provides a voting baseline and cautions against attributing gains to interaction alone. Catalogue depth: abstract.
+- [[ren-2026-sepal]] — [SEPAL: Separated Expert Pairs with Answer-Level Fusion for Reliable LLM Collaboration](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ren-2026-sepal.md). Private actor-critic groups with late answer fusion are a direct separation precedent; this card isolates initial commitment. Catalogue depth: abstract.
 
 **Related team work:** [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md), [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md).
 
 <a id="soc-08"></a>
 ### SOC-08 — Stop on evidence sufficiency instead of verbal agreement
+
+**Update 2:** unchanged.
 
 **Question:** Can a checkable evidence checklist improve the speed-accuracy tradeoff for group commitment?
 
@@ -1727,6 +1887,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-09"></a>
 ### SOC-09 — Evidence-seeking critics versus generic opposition
 
+**Update 2:** unchanged.
+
 **Question:** When does a critic improve an answer rather than merely add another expensive pass?
 
 **Candidate hypothesis:** A critic required to request or cite a discriminating observation corrects more wrong answers than an equally funded generic skeptic.
@@ -1755,6 +1917,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-10"></a>
 ### SOC-10 — Test dissent quality rather than dissent quantity
 
+**Update 2:** revised.
+
 **Question:** Will a group weight a dissenting claim by evidence quality when the critic is confidently wrong?
 
 **Candidate hypothesis:** Evidence-quality metadata improves correction only when recipients can inspect the underlying observation; confidence labels alone increase harmful reversals.
@@ -1765,7 +1929,7 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Measurements:** Correct dissent acceptance; Incorrect dissent acceptance; Verification uptake; Final accuracy.
 
-**Would count against it:** Underlying evidence does not improve discrimination between correct and incorrect critics, or confidence is equally reliable across both classes.
+**Would count against it:** Underlying evidence does not improve discrimination between correct and incorrect critics, or confidence-only labels do not increase incorrect-dissent acceptance or right-to-wrong reversals versus an unlabelled matched message.
 
 **Main confounds:** Scripted critics measure recipient behavior rather than emergent dissent; evidence difficulty and verbosity must be balanced across correct and wrong challenges.
 
@@ -1775,13 +1939,16 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[kraidia-2026-when]] — [When collaboration fails: persuasion driven adversarial influence in multi agent large language model debate](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kraidia-2026-when.md). Shows ordinary persuasive arguments can distort tested debates; no universal effect assumed. Catalogue depth: full.
-- [[kim-2025-correlated]] — [Correlated Errors in Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2025-correlated.md). Shared errors motivate tests where a confident majority is wrong. Catalogue depth: full.
+- [[kraidia-2026-when]] — [When collaboration fails: persuasion driven adversarial influence in multi agent large language model debate](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kraidia-2026-when.md). Ordinary persuasive arguments can distort tested debates; effects remain task-specific. Catalogue depth: full.
+- [[he-2026-minority]] — [Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/he-2026-minority.md). Minority-correct cases and a learned overturn rule are direct prior; this factorial isolates evidence from confidence. Catalogue depth: abstract.
+- [[shu-2026-forged]] — [Forged Peer Judgments Mislead Multimodal LLM Judge Panels: Source-Blind Anchoring and Panel-Consensus Verification](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shu-2026-forged.md). Quoted judgments can anchor recipients beyond source labels; here dissent is controlled and benign. Catalogue depth: abstract.
 
 **Related team work:** [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md), [whistleblowing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/whistleblowing.md).
 
 <a id="soc-11"></a>
 ### SOC-11 — Make uncertainty useful without forcing abstention
+
+**Update 2:** revised.
 
 **Question:** Does explicit uncertainty sharing help groups ask the right follow-up question?
 
@@ -1805,11 +1972,14 @@ API tests need matched inference and communication budgets. Training tests need 
 
 - [[tambwekar-2026-proxifield]] — [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tambwekar-2026-proxifield.md). Need matching already routes information; candidate tests message semantics and query value. Catalogue depth: full.
 - [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2026-silo.md). Distributed tasks motivate distinguishing information delivery from integration. Catalogue depth: full.
+- [[zhu-2026-demystifying]] — [Demystifying Multi-Agent Debate: The Role of Confidence and Diversity](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhu-2026-demystifying.md). Calibrated-confidence updates are existing intervention prior; missing-evidence requests need an incremental comparison. Catalogue depth: abstract.
 
 **Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md), [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md), [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md).
 
 <a id="soc-12"></a>
 ### SOC-12 — Useful disagreement after a changing task
+
+**Update 2:** unchanged.
 
 **Question:** Does preserving a minority answer help adaptation when the environment changes?
 
@@ -1839,6 +2009,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-13"></a>
 ### SOC-13 — Separate discovery time from discussion time
 
+**Update 2:** unchanged.
+
 **Question:** Does delaying communication improve search coverage before the team integrates results?
 
 **Candidate hypothesis:** An initial independent exploration phase reduces redundant search and improves final solutions on decomposable tasks, but harms tightly coupled tasks.
@@ -1866,6 +2038,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="soc-14"></a>
 ### SOC-14 — Treat shared artifacts as a communication channel
+
+**Update 2:** unchanged.
 
 **Question:** How much coordination is carried by artifact observation rather than explicit messages?
 
@@ -1895,17 +2069,19 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-15"></a>
 ### SOC-15 — Asynchronous teams under uneven tool latency
 
+**Update 2:** revised.
+
 **Question:** When does asynchronous work beat round-based discussion once stale information is counted?
 
 **Candidate hypothesis:** Asynchrony improves completion under variable tool delays but loses accuracy when rapid state changes make old messages misleading.
 
-**How to test:** Randomize complete task episodes to synchronous rounds or event-driven execution. Independently randomize tool delay distributions and environment-change rates, using identical scripted delays for paired worlds. Fix total generated tokens, tool calls and a wall-clock deadline; charge retries and timeouts. Repeated calls within one world remain one statistical unit.
+**How to test:** Randomize complete task episodes to synchronous rounds or event-driven execution. Cross tool-delay variance and environment-change rate using paired scripted worlds; randomize initial activation order. Fix total generated tokens, tool calls, budget visibility and deadline; charge retries and timeouts. Each world is one statistical unit, with agent participation tracked rather than assumed.
 
 **Comparison:** A synchronous team and a single worker with the same aggregate compute cap, with latency reported separately from throughput.
 
 **Measurements:** Deadline success; Stale-message decisions; Wall time; Idle fraction; Tokens per completion.
 
-**Would count against it:** The asynchronous arm has no completion advantage under high delay variance or retains that advantage without the predicted staleness interaction.
+**Would count against it:** Asynchrony provides no completion advantage under high delay variance, or shows no predicted accuracy loss as state-change rate rises.
 
 **Main confounds:** API rate limits, hidden batching and scheduling fairness can create implementation effects; use controllable simulated tool delays for the initial test.
 
@@ -1917,17 +2093,20 @@ API tests need matched inference and communication budgets. Training tests need 
 
 - [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2026-silo.md). Distributed coordination tasks supply a benchmark family, not an asynchronous comparison. Catalogue depth: full.
 - [[kim-2025-towards]] — [Towards a Science of Scaling Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2025-towards.md). Makes coordination overhead a measured cost rather than a universal scaling law. Catalogue depth: full.
+- [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/paliskara-2026-worse.md). Shared-resource teams exhibit participation and coordination failures; does not isolate asynchronous execution. Catalogue depth: full.
 
 **Related team work:** [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md).
 
 <a id="soc-16"></a>
 ### SOC-16 — Allocate roles by observed bottlenecks
 
+**Update 2:** revised.
+
 **Question:** Can teams choose useful temporary roles from their actual information deficits?
 
 **Candidate hypothesis:** Reallocating a limited role budget toward unresolved subproblems improves completion more than fixed persona assignments.
 
-**How to test:** Randomize complete generated project episodes to fixed roles, periodically reassigned roles or role-free work. Reassignment uses only publicly available progress and unmet requirements, with its computation charged to the shared budget. Hold model composition, task evidence and action allowance constant. Rotate initial role assignments and include tasks whose bottleneck changes halfway through.
+**How to test:** Randomize complete project episodes to fixed roles, periodically reassigned roles or role-free work. Reassignment sees only public progress and unmet requirements; charge it to the hard shared budget. Hold model composition, evidence, capability metadata and action allowance constant. Rotate initial roles and include tasks whose bottleneck changes halfway through.
 
 **Comparison:** Uniform round-robin assignments and a centralized planner with identical information and token cap.
 
@@ -1945,11 +2124,14 @@ API tests need matched inference and communication budgets. Training tests need 
 
 - [[pal-2026-swarmworld]] — [SwarmWorld: Stigmergic technological evolution in societies of language-model agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pal-2026-swarmworld.md). Reports functional differentiation; does not establish this allocation policy. Catalogue depth: abstract.
 - [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/cemri-2025-why.md). Failure taxonomy motivates explicit task alignment and completion checks. Catalogue depth: full.
+- [[amayuelas-2025-self]] — [Self-Resource Allocation in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/amayuelas-2025-self.md). Direct allocation/planner precedent with explicit worker capabilities; novelty requires the changing-bottleneck and hard-cap contrast. Catalogue depth: full.
 
 **Related team work:** [leadership](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/leadership.md), [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md).
 
 <a id="soc-17"></a>
 ### SOC-17 — Separate a leader's name from its information
+
+**Update 2:** unchanged.
 
 **Question:** Does apparent authority change task outcomes beyond the content of the same proposal?
 
@@ -1979,6 +2161,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-18"></a>
 ### SOC-18 — Rotate coordination without losing continuity
 
+**Update 2:** unchanged.
+
 **Question:** Can rotating a coordinator improve resilience while preserving accumulated task knowledge?
 
 **Candidate hypothesis:** Rotation helps after coordinator loss only when a compact public task ledger is available; otherwise handoff cost outweighs redundancy.
@@ -2007,6 +2191,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-19"></a>
 ### SOC-19 — Ask a specific peer instead of broadcasting
 
+**Update 2:** unchanged.
+
 **Question:** Are targeted evidence requests more useful than broadcasting everything under the same attention budget?
 
 **Candidate hypothesis:** Targeted requests reduce wasted delivery when tasks have sparse dependencies, but miss surprises that a board would expose.
@@ -2028,12 +2214,14 @@ API tests need matched inference and communication budgets. Training tests need 
 **Closest prior and evidence limits:**
 
 - [[tambwekar-2026-proxifield]] — [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tambwekar-2026-proxifield.md). Need-matching and direct addressing are existing mechanisms to compare. Catalogue depth: full.
-- [[liu-2026-social]] — [Social Networks of LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2026-social.md). Attention rather than graph edges motivates delivery-aware evaluation. Catalogue depth: abstract.
+- [[liu-2026-social]] — [Social Networks of LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2026-social.md). Attention rather than graph edges motivates delivery-aware evaluation. Catalogue depth: skim.
 
 **Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md), [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md).
 
 <a id="soc-20"></a>
 ### SOC-20 — Recognize unachievable tasks and request repair
+
+**Update 2:** unchanged.
 
 **Question:** Can a team identify missing prerequisites without abandoning difficult but solvable work?
 
@@ -2063,6 +2251,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-21"></a>
 ### SOC-21 — Compress memory by information value
 
+**Update 2:** unchanged.
+
 **Question:** Which memory contents preserve useful collective knowledge under a fixed context limit?
 
 **Candidate hypothesis:** Retaining rare task-relevant observations and unresolved questions beats recency-only summaries on future tasks requiring distributed facts.
@@ -2090,6 +2280,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="soc-22"></a>
 ### SOC-22 — Spend redundancy on rare knowledge
+
+**Update 2:** unchanged.
 
 **Question:** Is selective replication better than uniformly duplicating every workers notes?
 
@@ -2119,6 +2311,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-23"></a>
 ### SOC-23 — Recover function after genuine knowledge loss
 
+**Update 2:** unchanged.
+
 **Question:** When can a replacement worker reconstruct missing evidence from the environment rather than a hidden backup?
 
 **Candidate hypothesis:** A task-aware reacquisition policy recovers function more efficiently than restarting all workers when evidence is recoverable, but cannot restore permanently destroyed unique facts.
@@ -2146,6 +2340,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="soc-24"></a>
 ### SOC-24 — What survives complete population turnover?
+
+**Update 2:** unchanged.
 
 **Question:** Do useful procedures survive replacement through shared artifacts, direct interaction or model priors?
 
@@ -2175,6 +2371,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-25"></a>
 ### SOC-25 — Retire an obsolete convention after the task changes
 
+**Update 2:** unchanged.
+
 **Question:** Can a population keep useful traditions while abandoning a convention that has become costly?
 
 **Candidate hypothesis:** A periodic outcome review accelerates adaptation more than replacing members, because newcomers otherwise inherit the same obsolete guide.
@@ -2202,6 +2400,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="soc-26"></a>
 ### SOC-26 — Reward a useful portfolio instead of one champion
+
+**Update 2:** unchanged.
 
 **Question:** Does rewarding complementary artifacts change the value of sharing in collective invention?
 
@@ -2231,6 +2431,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-27"></a>
 ### SOC-27 — Credit verified contributions instead of message volume
 
+**Update 2:** revised.
+
 **Question:** Does contribution credit increase useful shared work or merely change how agents report it?
 
 **Candidate hypothesis:** Credit tied to independently validated artifacts increases useful contributions more than visibility-based credit, but may reduce help on uncredited tasks.
@@ -2243,9 +2445,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Would count against it:** Credit only increases reported contribution, or verified output gains are offset by abandoned maintenance.
 
-**Main confounds:** The reward design can predetermine behavior; show outcomes across more than one incentive strength. Programmed noncontributors are introduced roles, not evidence that cheating emerged spontaneously.
+**Main confounds:** Reward design can predetermine behavior; vary incentive strength. Programmed noncontributors are introduced roles. Distinguish game credit, real resource costs and independent utility; inferred cooperation is not established by equal contributions.
 
-**Framing / first-test class:** speculative / api-small.
+**Framing / first-test class:** extension / api-small.
 
 **Before promotion:** Specify utility independently of credit, including maintenance that the credit rule may neglect.
 
@@ -2253,11 +2455,14 @@ API tests need matched inference and communication budgets. Training tests need 
 
 - [[leibo-2021-scalable]] — [Scalable Evaluation of Multi-Agent Reinforcement Learning with Melting Pot](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/leibo-2021-scalable.md). Existing social-dilemma benchmark motivates varied partners and held-out situations. Catalogue depth: abstract.
 - [[pal-2026-swarmworld]] — [SwarmWorld: Stigmergic technological evolution in societies of language-model agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pal-2026-swarmworld.md). Functional artifacts provide a concrete collective-output comparison. Catalogue depth: abstract.
+- [[piatti-2024-cooperate]] — [Cooperate or Collapse: Emergence of Sustainable Cooperation in a Society of LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/piatti-2024-cooperate.md). Commons cooperation has direct simulation precedent; verified research-artifact credit is a domain extension. Catalogue depth: abstract.
 
 **Related team work:** [commons](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/commons.md), [institutions](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/institutions.md).
 
 <a id="soc-28"></a>
 ### SOC-28 — Pay for verification as a public good
+
+**Update 2:** revised.
 
 **Question:** Can a small shared verification allowance prevent everyone from waiting for somebody else to check a result?
 
@@ -2271,7 +2476,7 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Would count against it:** Funding does not improve net utility beyond random checking, or its overhead dominates at the prespecified error mixture.
 
-**Main confounds:** Forced checks test a scheduling rule, not spontaneous cooperation; a perfect validator is an explicit environmental assumption. Keep false reports separate from noncontribution.
+**Main confounds:** Forced checks test scheduling, not spontaneous cooperation; perfect validation is an environmental assumption. Keep game rewards and inference budgets separate, charge enforcement too, and do not give subsidy arms extra resources.
 
 **Framing / first-test class:** extension / api-small.
 
@@ -2281,11 +2486,14 @@ API tests need matched inference and communication budgets. Training tests need 
 
 - [[leibo-2021-scalable]] — [Scalable Evaluation of Multi-Agent Reinforcement Learning with Melting Pot](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/leibo-2021-scalable.md). Social sharing and partner variation are established benchmark concerns. Catalogue depth: abstract.
 - [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/cemri-2025-why.md). Documents verification failures; does not prove subsidies solve them. Catalogue depth: full.
+- [[piedrahita-2025-corrupted]] — [Corrupted by Reasoning: Reasoning Language Models Become Free-Riders in Public Goods Games](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/piedrahita-2025-corrupted.md). Public-goods sanctioning is direct institutional prior; extra sanction budgets and model-family differences require separate controls. Catalogue depth: full.
 
 **Related team work:** [commons](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/commons.md), [whistleblowing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/whistleblowing.md), [institutions](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/institutions.md).
 
 <a id="soc-29"></a>
 ### SOC-29 — Make a report lead to a verifiable response
+
+**Update 2:** unchanged.
 
 **Question:** Does an acknowledged review channel improve remediation beyond simply making reporting available?
 
@@ -2315,6 +2523,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-30"></a>
 ### SOC-30 — Appeal false rejections without overwhelming review
 
+**Update 2:** unchanged.
+
 **Question:** When is an appeal step worth its cost in collective artifact review?
 
 **Candidate hypothesis:** A single evidence-bearing appeal restores valid work mistakenly rejected by peers, with gains concentrated where first-pass review is noisy.
@@ -2342,6 +2552,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="soc-31"></a>
 ### SOC-31 — Find where uncertainty disappears in retelling
+
+**Update 2:** unchanged.
 
 **Question:** Which message format preserves a claims scope and uncertainty across repeated summaries?
 
@@ -2371,6 +2583,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-32"></a>
 ### SOC-32 — Stress-test a casefile when logs are missing
 
+**Update 2:** unchanged.
+
 **Question:** Can evidence-linked casefiles prevent an automated investigator from inventing causal connections under partial logs?
 
 **Candidate hypothesis:** Explicit missing-record markers improve abstention and supported answers relative to a polished chronological summary.
@@ -2398,6 +2612,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="soc-33"></a>
 ### SOC-33 — Predict unseen agents' choices from one agent
+
+**Update 2:** unchanged.
 
 **Question:** How far does a benign choice model learned from one agent transfer across roles and model families?
 
@@ -2427,6 +2643,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-34"></a>
 ### SOC-34 — Separate wording convergence from changed decisions
 
+**Update 2:** revised.
+
 **Question:** Does a group that starts using the same wording also make the same substantive choices?
 
 **Candidate hypothesis:** Visible examples increase lexical similarity more reliably than they change independently scored beliefs or actions.
@@ -2443,17 +2661,20 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** boundary-test / api-small.
 
-**Before promotion:** Choose objective choice/action measures and inspect methods of both observational anchors before transfer claims.
+**Before promotion:** Audit the feed experiment, retain objective action scores, and separate message exposure from ranking before claiming a mechanism.
 
 **Closest prior and evidence limits:**
 
 - [[de-marzo-2026-copying]] — [Copying explains the collective behavior of AI agents in the wild](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/de-marzo-2026-copying.md). One observational episode supports visible convention and wording copying, not universal belief contagion. Catalogue depth: skim.
-- [[li-2026-socialization]] — [Does Socialization Emerge in AI Agent Society? A Case Study of Moltbook](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-socialization.md). Moltbook counterevidence motivates separating semantic stability from mutual influence. Catalogue depth: abstract.
+- [[li-2026-socialization]] — [Does Socialization Emerge in AI Agent Society? A Case Study of Moltbook](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-socialization.md). Moltbook counterevidence motivates separating semantic stability from mutual influence. Catalogue depth: skim.
+- [[usman-2026-peer-voted]] — [Peer-Voted LLM-Agent Stress Tests Find Feed-Induced Lexical Convergence but No Reliable Matched-Exposure Advantage for Distributed Sources](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/usman-2026-peer-voted.md). Direct matched-exposure lexical-convergence precedent; its feed treatment bundles exposure and ranking. Catalogue depth: abstract.
 
 **Related team work:** [culture](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/culture.md), [telephone](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/telephone.md), [agent-swarm-influence-research](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/agent-swarm-influence-research.md).
 
 <a id="soc-35"></a>
 ### SOC-35 — Validate a cheap surrogate at the collective level
+
+**Update 2:** unchanged.
 
 **Question:** Can a model of individual updates reproduce group-level outcomes on new questions and network structures?
 
@@ -2475,13 +2696,15 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[itkin-2026-local]] — [Local Predictability and Collective Fidelity in LLM-Agent Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/itkin-2026-local.md). Direct prior reports transfer limits and unconfirmed earlier history effects. Catalogue depth: abstract.
+- [[itkin-2026-local]] — [Local Predictability and Collective Fidelity in LLM-Agent Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/itkin-2026-local.md). Direct prior reports transfer limits and unconfirmed earlier history effects. Catalogue depth: skim.
 - [[fukushima-2026-message]] — [Message capacity and claim wording set the transition points of collective truth-finding in language-model networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/fukushima-2026-message.md). Claim-dependent fields show why microscopic weights alone may fail collectively. Catalogue depth: abstract.
 
 **Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md), [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md).
 
 <a id="soc-36"></a>
 ### SOC-36 — Rank trace clusters by useful evidence, not spectacle
+
+**Update 2:** unchanged.
 
 **Question:** Can a transparent triage rule retrieve useful coordination cases across different scaffolds?
 
@@ -2511,11 +2734,13 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="soc-37"></a>
 ### SOC-37 — Does profiling improve influence through ordinary retrieval?
 
+**Update 2:** revised.
+
 **Question:** Does tailoring a bounded external document from one agents observed choices shift an unseen groups decisions more than generic framing?
 
 **Candidate hypothesis:** Tailoring produces greater held-out target-choice lift than generic framing, with a larger incremental effect when peer communication is enabled.
 
-**How to test:** Profile one agent on separate fictional project-choice tasks, then freeze the tailoring rule. Randomize independent group episodes to neutral, generic or tailored fact-preserving documents, crossed with peer communication enabled or disabled. Publish one bounded document in a local search corpus reached through ordinary retrieval; never force delivery. Match document length, adaptation-query budget, external information opportunities and total inference. Log retrieval rank, access, pre-discussion choices and final decisions.
+**How to test:** Profile one agent on separate fictional project-choice tasks, then freeze tailoring. Randomize independent group episodes to neutral, generic or tailored fact-preserving documents, crossed with peer communication. Publish one bounded document in a local corpus reached through ordinary retrieval; never force delivery. Match length, tuning-query budget, information opportunities and total inference. Lock private choices and retrieved evidence before peer exchange in every arm. Log retrieval rank, access and final decisions.
 
 **Comparison:** Generic framing with equal tuning budget, neutral documents, and matched no-communication episodes.
 
@@ -2534,13 +2759,258 @@ API tests need matched inference and communication budgets. Training tests need 
 - [[nestaas-2024-adversarial]] — [Adversarial Search Engine Optimization for Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/nestaas-2024-adversarial.md). External-content choice influence is established; retrieval access assumptions matter. Catalogue depth: full.
 - [[liu-2025-can]] — [Can an Individual Manipulate the Collective Decisions of Multi-Agents?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2025-can.md). One-known-agent influence precedent uses optimized adversarial inputs, not this framing. Catalogue depth: full.
 
-**Related team work:** [agent-swarm-influence-research](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/agent-swarm-influence-research.md).
+**Related team work:** [agent-swarm-influence-research](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/agent-swarm-influence-research.md), [experimental-design](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/seo-poisoning/experimental-design.md).
+
+<a id="soc-38"></a>
+### SOC-38 — Select complementary teams on a separate task set
+
+**Update 2:** new.
+
+**Question:** Does observed error complementarity select better teams than family diversity once member capability and selection cost are matched?
+
+**Candidate hypothesis:** A capability-controlled complementarity selector improves held-out team accuracy over family-balanced selection within a domain, but its advantage shrinks after a task-family shift.
+
+**How to test:** Use disjoint calibration and evaluation task families. Freeze equal-size team selectors based on individual accuracy, family balance, or residual co-failure after capability adjustment. Randomize which selector is used for independent evaluation task blocks, with a fixed model pool and aggregate inference/tool budget. Charge profiling cost amortized over a prespecified workload; report a cold-start comparison too. Model subsets sharing outputs are paired comparisons, not independent replications.
+
+**Comparison:** The strongest member chosen on calibration data, random capability-matched teams and accuracy-only team selection.
+
+**Measurements:** Held-out gain over best member; Rescue and damage rates; Shifted-domain gain; Profiling cost; Selection stability.
+
+**Would count against it:** Complementarity-based selection fails to beat capability-matched family balance, or its proposed transfer penalty is absent under the specified task shift.
+
+**Main confounds:** Diversity proxies can encode weak models rather than useful differences. Selecting the best member on test outcomes or counting overlapping subsets independently inflates results.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** Read selector methods and freeze calibration size, deployment workload and held-out family shift before estimating improvement.
+
+**Closest prior and evidence limits:**
+
+- [[kim-2026-are]] — [Are Diversity Metrics Measuring Diversity? A Capability-Controlled Audit of Majority-Vote Gain in LLM Ensembles](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2026-are.md). Direct capability-confounding audit; does not establish this transfer outcome. Catalogue depth: abstract.
+- [[teng-2026-which]] — [Which Models Work Well Together? Measuring Heterogeneity for LLM Team Selection](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/teng-2026-which.md). Team profiling and complementarity selection are existing methods. Catalogue depth: abstract.
+- [[ali-2026-quantifying]] — [Quantifying Diversity of Thought: A Predictive Law of Weighted LLM Ensemble Lift](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ali-2026-quantifying.md). Rescue/damage decomposition supplies a more informative endpoint than disagreement alone. Catalogue depth: abstract.
+
+**Related team work:** [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md), [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md).
+
+<a id="soc-39"></a>
+### SOC-39 — The same average correlation can hide different failures
+
+**Update 2:** new.
+
+**Question:** Do panels with equal average accuracy and pairwise correlation need different aggregation rules when their shared-error pattern differs?
+
+**Candidate hypothesis:** Error structures concentrated in a subgroup favor dependence-aware weighting more than errors shared across the whole panel, despite matched mean correlation.
+
+**How to test:** First generate independent synthetic panel-response banks with matched member accuracy and average error correlation but different higher-order co-failure patterns. Freeze unweighted, subgroup-weighted and scalar-effective-size rules using separate calibration banks; compare on untouched banks. Then test the diagnostic on held-out exact-answer LLM task blocks without forcing the result. Hold votes, available labels and decision-compute cap fixed. Whole banks or independent task blocks are units, not voter pairs.
+
+**Comparison:** Majority vote, calibrated best-member selection and a predictor using only mean accuracy plus average correlation.
+
+**Measurements:** Aggregation error; Calibration of consensus confidence; All-wrong frequency; One-vote-margin errors; Weight stability.
+
+**Would count against it:** The pattern-aware rule has no incremental predictive or decision value once matched mean accuracy and correlation are supplied.
+
+**Main confounds:** Artificial covariance targets must correspond to feasible joint distributions. Replay shows a measurement limitation, not a causal account of how real models acquired shared errors.
+
+**Framing / first-test class:** measurement / offline.
+
+**Before promotion:** Construct feasible matched error banks and obtain reusable task-level votes; verify exact scoring before any empirical transfer claim.
+
+**Closest prior and evidence limits:**
+
+- [[hossain-2026-agreement]] — [Agreement Overstates Evidence: Error Dependence in LLM Judge Consensus](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hossain-2026-agreement.md). Direct prior says co-error pattern matters beyond average correlation. Catalogue depth: abstract.
+- [[shu-2026-blind]] — [Blind to the Pivotal Vote: Aggregate Independence Metrics Miss Where Verification Actually Helps](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shu-2026-blind.md). Pivotal-vote verification gains can be invisible to aggregate effective-size metrics. Catalogue depth: abstract.
+
+**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md), [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md).
+
+<a id="soc-40"></a>
+### SOC-40 — Keep small deliberating groups independent until the end
+
+**Update 2:** new.
+
+**Question:** Does isolating small discussion groups preserve more useful correction than one fully connected discussion?
+
+**Candidate hypothesis:** Small isolated groups followed by answer-only fusion outperform full-group discussion for heterogeneous workers, with little benefit for model clones.
+
+**How to test:** Randomize complete task episodes to one discussion group, several isolated subgroups with final answer-only fusion, or independent answers. Cross clone and capability-matched mixed-model teams. Hold worker count, fact union, initial private reasoning and aggregate token/tool cap fixed; charge final fusion and discussion. Randomize subgroup membership before evidence assignment and block on task world. Score a designated final answer with an objective validator.
+
+**Comparison:** Independent voting and a single solver with the same total budget; include separated actor-critic pairs as an established architectural comparator.
+
+**Measurements:** Final accuracy; Correct-to-wrong revisions; Cross-group error dependence; Useful evidence retained; Communication cost.
+
+**Would count against it:** Isolation does not improve heterogeneous-team accuracy relative to full discussion, or equal gains appear for clones despite the predicted interaction.
+
+**Main confounds:** Partitioning can change who sees essential evidence; balance evidence access separately from communication. Extra fusion computation or unequal first-pass work would obscure the cause.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** Audit group-size and compute matching in both priors; choose tasks needing integration without making subgroup isolation impossible.
+
+**Closest prior and evidence limits:**
+
+- [[barrera-lemarchand-2026-wisdom]] — [The Wisdom of Artificial Deliberative Crowds](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/barrera-lemarchand-2026-wisdom.md). Direct small-group deliberation precedent with clone-group counterevidence. Catalogue depth: abstract.
+- [[ren-2026-sepal]] — [SEPAL: Separated Expert Pairs with Answer-Level Fusion for Reliable LLM Collaboration](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ren-2026-sepal.md). Separated expert pairs with late fusion are existing prior, not a new architecture. Catalogue depth: abstract.
+
+**Related team work:** [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md), [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md), [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md).
+
+<a id="soc-41"></a>
+### SOC-41 — Diverse interpretations versus diverse personas
+
+**Update 2:** new.
+
+**Question:** Can alternative valid interpretations of a question create useful answer diversity more reliably than assigning personality profiles?
+
+**Candidate hypothesis:** Truth-preserving question reframing increases correct-answer coverage and final accuracy more than equally long persona variation at fixed model and evidence.
+
+**How to test:** Randomize independent exact-answer task episodes to repeated neutral prompts, distinct benign personas, or verified equivalent problem framings. Use one model initially, with a capability-matched mixed-model sensitivity arm. Hold facts, sample count and total generation tokens fixed; charge generation or validation of framings to the comparison. Freeze prompt generators on separate task families. Aggregate with the same rule and track both coverage and selected-answer correctness.
+
+**Comparison:** Repeated sampling with identical prompts and length-matched neutral context; model-family variation is a separate comparator.
+
+**Measurements:** Correct answer present; Selected-answer accuracy; Shared wrong answers; Framing validity; Added prompt cost.
+
+**Would count against it:** Reframing fails to improve accuracy beyond persona variation and neutral prompting, or apparent gains require adding facts or changing the question.
+
+**Main confounds:** Semantic distance does not prove reasoning diversity. A persona can change goals, and an invalid paraphrase can change the correct answer; audit both before evaluation.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** Create independently validated equivalent framings and a fixed persona set; preserve the task objective in every arm.
+
+**Closest prior and evidence limits:**
+
+- [[rosales-2025-diverse]] — [Diverse LLMs or Diverse Question Interpretations? That is the Ensembling Question](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/rosales-2025-diverse.md). Direct comparison of question-interpretation and model diversity. Catalogue depth: abstract.
+- [[qian-2026-nous]] — [Nous: An Attempt to Extract and Inject the Cognition Behind Prediction-Market Behavior](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/qian-2026-nous.md). Prompted behavioral profiles failed to transfer useful forecast diversity in the reported setting. Catalogue depth: abstract.
+
+**Related team work:** [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md), [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md).
+
+<a id="soc-42"></a>
+### SOC-42 — More correct candidates or a better final selector?
+
+**Update 2:** new.
+
+**Question:** When additional sampling stops improving accuracy, is the bottleneck generating a correct answer or choosing one?
+
+**Candidate hypothesis:** After correct-answer coverage saturates, shifting a fixed budget from extra samples to evidence-based selection improves final accuracy more than continued voting.
+
+**How to test:** Randomize complete exact-answer task episodes to different generation/selection budget splits while keeping aggregate tokens and tool credits fixed. Compare majority voting with a selector allowed a charged objective evidence check. Both selectors see the same candidate format and have identical initial evidence access. Use independent task families, freeze split ratios in advance, and evaluate every episode including those with no correct candidate. Track hidden oracle coverage only for diagnosis.
+
+**Comparison:** More samples plus vote, best single solver and the oracle that selects a correct candidate whenever one exists, explicitly unavailable to deployment.
+
+**Measurements:** Correct-candidate coverage; Selection success conditional on coverage; Final accuracy; Selector-induced damage; Total cost.
+
+**Would count against it:** Spending on selection does not improve final accuracy once coverage plateaus, or its gains disappear after charging evidence checks.
+
+**Main confounds:** An oracle gap is opportunity, not an attainable gain. Conditional selection scores need their coverage denominator; shared cached candidates do not create independent trials.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** Choose an affordable verifiable evidence check and inspect selector baselines; define plateau operationally using separate development data.
+
+**Closest prior and evidence limits:**
+
+- [[bay-2026-when]] — [When More Sampling Hurts: The Modal Ceiling and Correlation Ceiling of Test-Time Scaling](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bay-2026-when.md). Separates sampling coverage from modal selection and correlation ceilings. Catalogue depth: abstract.
+- [[liu-2026-llms]] — [LLMs as a Jury: Cross-Model Consensus Can Outperform Process Reward Models for LLM Reasoning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2026-llms.md). Cross-model answer selection is existing prior with task-specific claims. Catalogue depth: abstract.
+
+**Related team work:** [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md), [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md).
+
+<a id="soc-43"></a>
+### SOC-43 — Abstain when confidence is high but errors are shared
+
+**Update 2:** new.
+
+**Question:** Does a calibrated confidence gate still improve collective decisions when high-confidence failures are correlated?
+
+**Candidate hypothesis:** Confidence-only abstention improves selective accuracy under weak dependence but loses its advantage when shared confident mistakes dominate; a dependence-risk gate recovers accuracy at matched coverage.
+
+**How to test:** Randomize independent task blocks to always-vote, calibrated confidence gating or gating augmented with a fixed dependence-risk diagnostic. Calibrate thresholds on separate labelled blocks and compare at matched answer coverage. Cross ordinary exact-answer worlds with generated shared-misconception worlds, keeping individual evidence, team size and total inference/tool cap fixed. Count abstentions as unserved tasks in total utility; do not report only accepted answers.
+
+**Comparison:** Random abstention at equal coverage, calibrated single-model abstention and unanimous high-confidence acceptance.
+
+**Measurements:** Selective error at fixed coverage; Total correctly served tasks; Wrong unanimous accepts; Calibration error; Diagnostic cost.
+
+**Would count against it:** Confidence-only gating retains the same advantage under shared confident errors, or the dependence diagnostic provides no incremental benefit after charging its cost.
+
+**Main confounds:** Lower coverage can manufacture apparent reliability. A theorem for independent calibrated voters does not establish guarantees for dependent LLM outputs or uncertain task labels.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** Audit theorem assumptions and freeze practical error/coverage targets before choosing thresholds or a diagnostic.
+
+**Closest prior and evidence limits:**
+
+- [[karge-2026-epistemic]] — [Epistemic Filtering and Collective Hallucination: A Jury Theorem for Confidence-Calibrated Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/karge-2026-epistemic.md). Confidence-gated jury theory motivates a boundary test of its independence and calibration assumptions. Catalogue depth: abstract.
+- [[kota-2026-design]] — [Design and Evaluation of Multi-Agent AI Oracle Systems for Prediction Market Resolution](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kota-2026-design.md). High-confidence consensus and independent aggregation have direct task-specific precedent. Catalogue depth: abstract.
+- [[zhou-2026-juryprobe]] — [JuryProbe: An Empirical Consensus-Risk Diagnostic for Routing Reference-Free Factuality Judge Panels to Grounded Verification](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2026-juryprobe.md). Dependence-risk routing is existing prior; exact tasks and charged diagnosis are the transfer question. Catalogue depth: abstract.
+
+**Related team work:** [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md), [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md), [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md).
+
+<a id="soc-44"></a>
+### SOC-44 — Preference optimization and shared mistakes beyond familiar QA
+
+**Update 2:** new.
+
+**Question:** Does the error-correlation increase seen after preference optimization persist on newly generated distributed-evidence tasks?
+
+**Candidate hypothesis:** Matched SFT-to-DPO checkpoint transitions increase shared errors more on familiar misconception questions than on novel tasks whose necessary facts are fully supplied.
+
+**How to test:** Evaluate paired released SFT and derived DPO checkpoints on independent task blocks crossing misconception-style QA with newly generated evidence tasks. Within each block randomize prompt variants and decoding seeds, match team size and aggregate generation budget, and measure standalone capability alongside collective outputs. Use multiple genuinely matched checkpoint lineages; uncertainty generalizes over tasks within each lineage, not arbitrary sampled agents. Keep voting and fixed-rule market aggregation separately labelled.
+
+**Comparison:** SFT-only teams, single-checkpoint solvers, and mixed-checkpoint teams under the same resource cap.
+
+**Measurements:** Change in shared errors; Individual accuracy; Ensemble gain; Answer concentration; Task-family interaction.
+
+**Would count against it:** The predicted smaller DPO-associated increase on newly supplied-evidence tasks is absent, or checkpoint differences vanish after the prespecified capability adjustment.
+
+**Main confounds:** Checkpoint comparisons isolate a recorded pipeline step only when provenance matches; they do not establish that alignment generally harms cooperation. Near-chance baselines can distort correlation.
+
+**Framing / first-test class:** boundary-test / hardware.
+
+**Before promotion:** Verify checkpoint lineage, licenses and feasible local inference; audit the prior's controls without assuming all alignment stages are equivalent.
+
+**Closest prior and evidence limits:**
+
+- [[begin-2026-preference]] — [Preference Optimization Drives Monoculture in LLM Prediction Markets](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/begin-2026-preference.md). Direct matched-checkpoint market prior; task and aggregation transfer remains to be checked. Catalogue depth: skim.
+- [[kim-2026-are]] — [Are Diversity Metrics Measuring Diversity? A Capability-Controlled Audit of Majority-Vote Gain in LLM Ensembles](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2026-are.md). Capability confounding requires joint reporting of skill and dependence. Catalogue depth: abstract.
+
+**Related team work:** [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md), [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md).
+
+<a id="soc-45"></a>
+### SOC-45 — Does local memory preserve a convention after pressure ends?
+
+**Update 2:** new.
+
+**Question:** Does a convention calibrated as metastable under whole-population observation remain persistent under local encounters and bounded memory?
+
+**Candidate hypothesis:** Under local encounters, bounded memory prolongs post-pressure convention persistence, especially for pairs near the stability boundary calibrated under whole-population observation.
+
+**How to test:** Calibrate response curves on separate benign fictional convention pairs and classify proximity to the mean-field spinodal boundary before evaluation. Randomize independent populations to local/full observation crossed with no history/bounded history. Apply the same temporary scripted convention pressure and remove it on a fixed schedule; include no-pressure controls. Match population, update opportunities and total inference allowance, charging history tokens. Report recovery over a fixed horizon, not claims of infinite irreversibility.
+
+**Comparison:** The calibrated memoryless full-observation model and convention pairs outside its metastable region.
+
+**Measurements:** Post-removal convention persistence; Recovery time; Boundary forecast error; Hysteresis over fixed cycles; Memory cost.
+
+**Would count against it:** Bounded memory does not prolong post-pressure persistence under local encounters, or the predicted larger effect near the calibrated boundary is absent on held-out pairs.
+
+**Main confounds:** The bias-preferred convention is not objective truth. Pair selection after observing persistence would leak outcomes; scripted pressure is introduced, not spontaneous behavior.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** Audit both protocols and freeze memory length, boundary bands and a finite-horizon persistence endpoint before evaluation; calibration pairs stay separate.
+
+**Closest prior and evidence limits:**
+
+- [[de-marzo-2026-conformity]] — [Conformity Generates Collective Misalignment in AI Agents Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/de-marzo-2026-conformity.md). Direct prior already predicts both persistence and relaxation by regime. Catalogue depth: full.
+- [[magistrali-2026-aligned]] — [Aligned Alone, Misaligned Together: Forecasting Adversarial Capture in LLM Agent Populations](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/magistrali-2026-aligned.md). Local bounded-memory recovery was measured in a single-stable-state regime, not a general reversibility theorem. Catalogue depth: full.
+- [[hishiki-2026-how]] — [How memory can affect collective and cooperative behaviors in an LLM-Based Social Particle Swarm](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hishiki-2026-how.md). Memory alters regimes in an adjacent spatial game; no equivalence is assumed. Catalogue depth: abstract.
+
+**Related team work:** [culture](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/culture.md), [memory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/memory.md), [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md).
 
 <a id="crowds-and-traffic"></a>
 ## Human crowds and traffic
 
 <a id="phy-31"></a>
 ### PHY-31 — Anticipation versus slower walking
+
+**Update 2:** unchanged.
 
 **Question:** Can the collective effect of a distracted walker be separated from reduced speed and altered gait?
 
@@ -2569,6 +3039,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-32"></a>
 ### PHY-32 — Avoiding congestion without hiding the queue
 
+**Update 2:** unchanged.
+
 **Question:** Does local admission control improve total throughput, or merely move waiting outside the measured corridor?
 
 **Candidate hypothesis:** For bursty arrivals within service capacity, occupancy-based admission will reduce total arrival-to-exit delay versus fixed-rate throttling while preserving completed trip count.
@@ -2596,6 +3068,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-33"></a>
 ### PHY-33 — Does one smoothing vehicle help beyond a ring?
 
+**Update 2:** unchanged.
+
 **Question:** How much of minority-controller traffic smoothing survives open boundaries and disruptive merging?
 
 **Candidate hypothesis:** A small controlled minority will still reduce speed variance, but throughput benefits will shrink when incoming traffic repeatedly occupies the gaps used for smoothing.
@@ -2621,6 +3095,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="phy-34"></a>
 ### PHY-34 — Confinement and collective rotation
+
+**Update 2:** unchanged.
 
 **Question:** Can changes in confinement geometry alter collective crowd oscillations without changing local density?
 
@@ -2649,6 +3125,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="phy-35"></a>
 ### PHY-35 — Wider crossings with more directional disorder
 
+**Update 2:** unchanged.
+
 **Question:** Can widening a crossing reduce efficiency when it also allows more crossing angles?
 
 **Candidate hypothesis:** A wider passage will improve flow for fixed desired directions, but may lose that benefit if the added space creates a broader distribution of encounter angles.
@@ -2675,6 +3153,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="phy-36"></a>
 ### PHY-36 — Capacity estimates that transfer between bottlenecks
+
+**Update 2:** unchanged.
 
 **Question:** Does controlling upstream density explain more variation in measured bottleneck capacity than doorway width alone?
 
@@ -2706,11 +3186,13 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="mth-01"></a>
 ### MTH-01 — How much certainty comes from counting the wrong units?
 
+**Update 2:** revised.
+
 **Question:** How badly does treating interacting agents as independent samples overstate confidence?
 
 **Candidate hypothesis:** Agent-level uncertainty estimates will under-cover known episode-level effects when within-swarm dependence is strong.
 
-**How to test:** Generate independent swarm episodes with a known randomized treatment effect and tunable within-episode dependence. Compare agent-level resampling, episode-level resampling and exposure-aware analysis over repeated synthetic studies.
+**How to test:** Generate independent swarm episodes with a known randomized treatment effect and tunable within-episode dependence. Compare agent-level resampling, episode-level resampling and exposure-aware analysis over repeated synthetic studies. Use SwarmWorld metadata/episodes.csv and matched condition-seed cells as a concrete reanalysis design; keep its discovery-seed units distinct from agents and held-out portfolio assay seeds. The synthetic arm, not this observational reanalysis, supplies known coverage truth.
 
 **Comparison:** Known generator effect and episode-level randomized estimate.
 
@@ -2722,21 +3204,24 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** measurement / offline.
 
-**Before promotion:** Specify randomization and interference boundaries; this is methodological validation, not a new causal estimator.
+**Before promotion:** Pin the SwarmWorld release, check manifests and file hashes, and verify pairing before loading endpoints. Specify interference boundaries; this is methodological validation, not a new estimator.
 
 **Closest prior and evidence limits:**
 
 - [[aronow-2013-estimating]] — [Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/aronow-2013-estimating.md). Assignment and interference framework. Catalogue depth: skim.
 - [[shalizi-2011-homophily]] — [Homophily and Contagion Are Generically Confounded in Observational Social Network Studies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shalizi-2011-homophily.md). Observational confounding is a separate problem from dependence. Catalogue depth: skim.
+- [[data-swarmworld-2026]] — [SwarmWorld paper data: event traces of 50-200 LLM agents discovering and exchanging material technologies in a shared simulated world (60 episodes)](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-swarmworld-2026.md). Concrete matched-episode corpus for unit-of-analysis sensitivity; four discovery seeds do not become hundreds of independent agents. Catalogue depth: skim.
 
 <a id="mth-02"></a>
 ### MTH-02 — Do outcome labels change the conclusion?
+
+**Update 2:** revised.
 
 **Question:** Can the same intervention improve consensus while worsening correctness or welfare?
 
 **Candidate hypothesis:** An intervention that increases agreement will sometimes reduce calibrated correctness on tasks with shared misleading evidence.
 
-**How to test:** Randomize independent synthetic teams to an agreement-promoting rule or neutral aggregation under known task truth. Score the same frozen traces for agreement, correctness, calibration and resource-adjusted utility using evaluators blind to treatment.
+**How to test:** Randomize independent synthetic teams to an agreement-promoting rule or neutral aggregation under known task truth. Score the same frozen traces for agreement, correctness, calibration and resource-adjusted utility using evaluators blind to treatment. As a retrospective diagnostic, align DEBATE configuration records by original task and compare decisionSuccess with independently recoverable task truth; where truth is unavailable, do not call agreement accuracy.
 
 **Comparison:** Independent answers with aggregation and neutral communication at matched budget.
 
@@ -2748,15 +3233,18 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** measurement / api-small.
 
-**Before promotion:** Human reviewers must pick the primary outcome before any confirmatory comparison.
+**Before promotion:** Inspect DEBATE task IDs, reference answers and decisionSuccess semantics before selecting a subset. Human reviewers pick the primary outcome before confirmation.
 
 **Closest prior and evidence limits:**
 
 - [[pavlova-2026-flag]] — [Flag Game: A Toy Model for Mechanistic Swarm Interpretability](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pavlova-2026-flag.md). Ground-truth-aware collective task precedent. Catalogue depth: full.
 - [[zhou-2025-pimmur]] — [The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2025-pimmur.md). Measurement validity context; abstract rechecked, methods not fully audited. Catalogue depth: abstract.
+- [[data-mallm-debate-2025]] — [DEBATE: Diverse Multi-Agent Debates, 144 configurations of LLM discussion paradigm, persona and decision protocol (MALLM)](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-mallm-debate-2025.md). Released agreement and decision traces offer a concrete outcome-mismatch audit, not validated correctness labels. Catalogue depth: skim.
 
 <a id="mth-03"></a>
 ### MTH-03 — Does a finding survive a model or runtime change?
+
+**Update 2:** revised.
 
 **Question:** How portable are candidate effect sizes across model versions and orchestration scaffolds?
 
@@ -2770,25 +3258,28 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Would count against it:** Effects and rankings remain stable within a prespecified practical tolerance across all tested configurations.
 
-**Main confounds:** Provider drift, retries and decoding defaults can masquerade as model differences.
+**Main confounds:** Provider drift, retry policy, tool schema and decoding defaults can masquerade as model differences. Town model arms have serving-stack differences; their archived comparisons cannot identify a pure model effect.
 
 **Framing / first-test class:** boundary-test / api-small.
 
-**Before promotion:** Pin available versions and log retries, prompts and scheduler settings; do not assume a seed makes hosted APIs deterministic.
+**Before promotion:** Inspect production_final run.json and model_calls.csv for stack differences; build the crossed test in a small released harness. Pin models, retry/tool policies and scheduler settings; API seeds do not ensure determinism.
 
 **Closest prior and evidence limits:**
 
 - [[zhou-2025-pimmur]] — [The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2025-pimmur.md). Validity motivates explicit implementation controls. Catalogue depth: abstract.
 - [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/elnozahy-2002-survey.md). Nondeterminism and replay are conceptual precedents, not LLM-specific evidence. Catalogue depth: skim.
+- [[data-agent-town-economy-2026]] — [Agent Town Economy: 98 runs of a 100-agent LLM economic simulation with a fully ledgered, money-conserving economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-agent-town-economy-2026.md). Concrete runtime-confounding example and failure ledger; released model arms are not a fully crossed causal design. Catalogue depth: skim.
 
 <a id="mth-04"></a>
 ### MTH-04 — Spend the budget on more seeds or more worlds?
+
+**Update 2:** revised.
 
 **Question:** Which source of variation dominates uncertainty in our chosen collective task?
 
 **Candidate hypothesis:** Variation across task worlds will exceed sampling variation within a single world for at least some candidate interventions.
 
-**How to test:** Run a small balanced pilot crossing independent world instances and run seeds for a selected task. Estimate variance components without selecting the best treatment from the same pilot, then compare predicted precision for equal-cost sampling allocations on fresh worlds.
+**How to test:** Run a small balanced pilot crossing independent world instances and run seeds for a selected task. Estimate variance components without selecting the best treatment from the same pilot, then compare predicted precision for equal-cost sampling allocations on fresh worlds. First audit Town run.json world identifiers against layout content, excluding timestamps from geometry fingerprints. Treat repeats on the same geometry as within-layout runs; its many world labels cannot stand in for a new-world sample.
 
 **Comparison:** Equal allocation, many seeds on one world, and many worlds with few seeds.
 
@@ -2800,15 +3291,18 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** measurement / api-small.
 
-**Before promotion:** Choose the first candidate and use pilot data for planning, not confirmation or optional stopping.
+**Before promotion:** Validate layout fingerprints and licensing before reanalysis; the archived two-layout corpus is too narrow to determine a general optimum. Use pilot data for planning, not confirmation.
 
 **Closest prior and evidence limits:**
 
 - [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vermetten-2024-large.md). Function instances and run budgets motivate the design question. Catalogue depth: full.
 - [[aronow-2013-estimating]] — [Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/aronow-2013-estimating.md). Independent assignment units constrain uncertainty estimates. Catalogue depth: skim.
+- [[data-agent-town-economy-2026]] — [Agent Town Economy: 98 runs of a 100-agent LLM economic simulation with a fully ledgered, money-conserving economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-agent-town-economy-2026.md). Concrete replication-unit caution: the primary card documents two layouts under multiple world IDs. Catalogue depth: skim.
 
 <a id="mth-05"></a>
 ### MTH-05 — Can an interrupted run be meaningfully resumed?
+
+**Update 2:** revised.
 
 **Question:** Does restoring agent state without scheduler and external-response state change the collective outcome?
 
@@ -2826,21 +3320,24 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** measurement / offline.
 
-**Before promotion:** Define the checkpoint boundary; inspect current agentops reporting without assuming it already supports replay.
+**Before promotion:** Inspect tass committed snapshots and resume boundaries, then use its offline baseline and controlled HTTP responses. Verify scheduler, pending decisions and shared budget restoration; replaying saved snapshots alone is not a counterfactual rerun.
 
 **Closest prior and evidence limits:**
 
 - [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/elnozahy-2002-survey.md). Classical consistent recovery and nondeterminism logging. Catalogue depth: skim.
 - [[li-2026-memtx]] — [MemTX: Transactional Belief Commit for Stateful Agent Memory](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-memtx.md). Agent-memory repair overlap; this candidate isolates execution reproducibility rather than invalid-claim rollback. Catalogue depth: skim.
+- [[gh-apromisedland-trustworthy-agent-simulation]] — [Trustworthy Agent Simulation (tass): auditable LLM town society on AgentScope + Mesa with replay, resume, policy batches and Streamlit dashboard](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-apromisedland-trustworthy-agent-simulation.md). Released baseline-mode resume/replay harness is a candidate audit substrate; its advertised restoration still needs verification. Catalogue depth: abstract.
 
 <a id="mth-06"></a>
 ### MTH-06 — How much of a discovery is selecting the best run?
+
+**Update 2:** revised.
 
 **Question:** How often does a promising-looking effect disappear when the whole search process is accounted for?
 
 **Candidate hypothesis:** Selecting the strongest of many prompts or seeds will produce a larger discovery-to-confirmation drop than a frozen small candidate set.
 
-**How to test:** On synthetic null and known-effect tasks, replay a simulated research workflow: search over varying numbers of configurations, choose the winner, and evaluate on untouched cases. Repeat the full selection procedure, not just the winning run.
+**How to test:** On synthetic null and known-effect tasks, replay a simulated research workflow: search over varying numbers of configurations, choose the winner, and evaluate on untouched cases. Repeat the full selection procedure, not just the winning run. DEBATE offers a concrete configuration-search analogue: after checking task overlap and references, select configurations on development task families and confirm once on untouched families. Null permutations must preserve task and configuration dependence.
 
 **Comparison:** Preregistered fixed comparison, random configuration selection, and selection-aware held-out evaluation.
 
@@ -2858,15 +3355,18 @@ API tests need matched inference and communication budgets. Training tests need 
 
 - [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vermetten-2024-large.md). Benchmark-design sensitivity motivates selection controls. Catalogue depth: full.
 - [[zhou-2025-pimmur]] — [The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2025-pimmur.md). Methodological audit motivation; this resampling design is a proposed lab audit. Catalogue depth: abstract.
+- [[data-mallm-debate-2025]] — [DEBATE: Diverse Multi-Agent Debates, 144 configurations of LLM discussion paradigm, persona and decision protocol (MALLM)](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-mallm-debate-2025.md). Many released configurations motivate a bounded selection audit; completeness and common task coverage remain to be checked. Catalogue depth: skim.
 
 <a id="sim-01"></a>
 ### SIM-01 — Private information leaks through the narrator
+
+**Update 2:** revised.
 
 **Question:** Does a shared game master accidentally improve coordination by exposing private state?
 
 **Candidate hypothesis:** A narrator with access to every agent's private evidence will inflate apparent cooperation unless outgoing messages enforce visibility boundaries.
 
-**How to test:** Randomize independent synthetic negotiation episodes between a deterministic rule engine, a narrator with partitioned contexts, and a shared-context narrator. Keep private facts, allowed actions and inference budget matched. Plant harmless private-state markers solely to measure unintended disclosure.
+**How to test:** Adapt a small Sotopia negotiation scenario with deterministic factual scoring. Randomize independent scenario-seed episodes between partitioned agent contexts, a partitioned Concordia-style narrator and a shared-context narrator. Match private facts, actions and inference budgets; plant harmless private markers to measure disclosure. Evaluate on new scenarios and keep judge access distinct from participant access.
 
 **Comparison:** Separate-agent rule engine and explicitly public-information variant as a diagnostic ceiling.
 
@@ -2878,15 +3378,18 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** boundary-test / api-small.
 
-**Before promotion:** Inspect the precise visibility contract; the local sim-environments draft flags narrator leakage but has not passed its gate.
+**Before promotion:** Read the visibility contract and source before adapting either runner. The merged sim-environments survey remains in-progress; its source links and teammate smoke tests are leads, not approval or evidence of this leak.
 
 **Closest prior and evidence limits:**
 
-- [[gh-google-deepmind-concordia]] — [Concordia: generative agent-based modelling with a Game Master that adjudicates natural-language actions](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-google-deepmind-concordia.md). Game-master environment motivating a context-isolation audit. Catalogue depth: skim.
-- [[park-2023-generative]] — [Generative Agents: Interactive Simulacra of Human Behavior](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/park-2023-generative.md). Generative-agent simulation precedent; not proof of this specific leak. Catalogue depth: abstract.
+- [[zhou-2024-is]] — [Is this the real life? Is this just fantasy? The Misleading Success of Simulating Social Interactions With LLMs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2024-is.md). Closest prior already contrasts omniscient Script and private-goal Agents modes; extend to an audited narrator boundary. Catalogue depth: full.
+- [[gh-google-deepmind-concordia]] — [Concordia: generative agent-based modelling with a Game Master that adjudicates natural-language actions](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-google-deepmind-concordia.md). Candidate game-master architecture; no claim that every implementation leaks. Catalogue depth: skim.
+- [[gh-sotopia-lab-sotopia]] — [Sotopia: open-ended social role-play environment with private goals and the SOTOPIA-Eval multi-dimensional judge](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-sotopia-lab-sotopia.md). Concrete private-goal scenario and execution-mode substrate; primarily dyadic. Catalogue depth: skim.
 
 <a id="sim-02"></a>
 ### SIM-02 — The scheduler as an experimental treatment
+
+**Update 2:** revised.
 
 **Question:** Does synchronous versus asynchronous activation change the effect of majority-following compared with independent updates?
 
@@ -2904,15 +3407,18 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** boundary-test / offline.
 
-**Before promotion:** Implement matching state-read semantics and audit schedule literature flagged by the unmerged simulator survey.
+**Before promotion:** Start with an exact binary-rule reference before an AgentsNet adapter. Audit when state is read and committed; teammate four-node colouring smoke tests verify a path runs, not asynchronous semantics.
 
 **Closest prior and evidence limits:**
 
-- [[grotschla-2025-agentsnet]] — [AgentsNet: Coordination and Collaborative Reasoning in Multi-Agent LLMs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/grotschla-2025-agentsnet.md). Graph coordination setting where scheduling must be explicit. Catalogue depth: abstract.
-- [[vicsek-1995-novel]] — [Novel Type of Phase Transition in a System of Self-Driven Particles](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vicsek-1995-novel.md). Classical collective model provides a synchronous-update contrast, not a theorem about LLMs. Catalogue depth: full.
+- [[radax-2010-timing]] — [Timing matters: Lessons From The CA Literature On Updating](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/radax-2010-timing.md). Scheduler sensitivity is established in ABMs; this is a task-specific boundary test, not a new general phenomenon. Catalogue depth: full.
+- [[gh-floriangroetschla-agentsnet]] — [AgentsNet: benchmark of LLM agents on a graph solving distributed-computing tasks (colouring, matching, leader election, consensus, vertex cover) by synchronous message passing](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-floriangroetschla-agentsnet.md). Concrete synchronous message-passing runner; asynchronous modes must be implemented and verified. Catalogue depth: ran.
+- [[grotschla-2025-agentsnet]] — [AgentsNet: Coordination and Collaborative Reasoning in Multi-Agent LLMs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/grotschla-2025-agentsnet.md). Known graph-task scoring and baseline for the adaptation. Catalogue depth: abstract.
 
 <a id="sim-03"></a>
 ### SIM-03 — Can the benchmark be solved without observing peers?
+
+**Update 2:** revised.
 
 **Question:** Does a purported interaction benchmark require the observations it is intended to study?
 
@@ -2930,21 +3436,24 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** measurement / api-small.
 
-**Before promotion:** Select one runnable task; inspect the local simulator scan's SMACv2 lead before claiming a new diagnostic.
+**Before promotion:** Inspect SwarmBench task code and match the dataset release to the runner before reproducing one task. Its mixed agent/game schemas require separate parsing. This transfers an existing diagnostic; StarCraft installation is unnecessary for the first LLM-grid test.
 
 **Closest prior and evidence limits:**
 
-- [[grotschla-2025-agentsnet]] — [AgentsNet: Coordination and Collaborative Reasoning in Multi-Agent LLMs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/grotschla-2025-agentsnet.md). Graph-task benchmark to audit for observation dependence. Catalogue depth: abstract.
-- [[ruan-2025-benchmarking]] — [Benchmarking LLMs' Swarm intelligence](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ruan-2025-benchmarking.md). Swarm-task benchmark motivating a classical and blind-policy comparison. Catalogue depth: full.
+- [[ellis-2022-smacv2]] — [SMACv2: An Improved Benchmark for Cooperative Multi-Agent Reinforcement Learning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ellis-2022-smacv2.md). Closest diagnostic already establishes observation-blind policies as a benchmark-validity test. Catalogue depth: full.
+- [[data-swarmbench-2025]] — [SwarmBench experiment logs: LLMs as decentralised agents on five 2D-grid swarm tasks (Flocking, Pursuit, Synchronize, Foraging, Transport), 13 models](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-swarmbench-2025.md). Released per-agent and whole-game logs can identify candidate observation shortcuts. Catalogue depth: skim.
+- [[gh-ruc-gsai-yulan-swarmintell]] — [SwarmBench (YuLan-SwarmIntell): 2D grid benchmark of LLM agents on pursuit, synchronisation, foraging, flocking and transport with local views and local messages](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-ruc-gsai-yulan-swarmintell.md). Concrete LLM-grid runner for prospective masked-observation and randomized-layout tests. Catalogue depth: skim.
 
 <a id="sim-04"></a>
 ### SIM-04 — Same rules, different engines
+
+**Update 2:** revised.
 
 **Question:** Do two implementations of a collective model agree after matching semantics rather than just parameter names?
 
 **Candidate hypothesis:** Apparent framework-dependent behavior will shrink after matching update order, neighborhood rules, boundaries and random-number consumption.
 
-**How to test:** Implement a minimal model in two small engines, record those semantic choices, and compare trajectories under deterministic noise input plus distributional results under independent seeds. Introduce one deliberate mismatch at a time to identify which discrepancy matters.
+**How to test:** Implement one explicitly specified boid model in Mesa and AgentPy using identical initial states and noise tapes. Match state-read/commit timing, neighbor distance, boundaries, integration and normalization. Compare one-step transitions, then independent-seed distributions. Deliberately vary one semantic choice at a time. Only after agreement time identical workloads, including neighbor queries and logging, at fixed hardware and precision.
 
 **Comparison:** A small transparent reference implementation and step-size/precision convergence checks.
 
@@ -2956,18 +3465,334 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** measurement / offline.
 
-**Before promotion:** Use an existing model and tiny reference engine; the broad local simulator survey is still unfinished.
+**Before promotion:** Pin isolated versions; AgentPy is unmaintained. Reconcile the teammate run scripts before comparing outcomes or speed. The merged survey offers heterogeneous smoke workloads, not an apples-to-apples performance ranking.
 
 **Closest prior and evidence limits:**
 
-- [[shaebani-2020-computational]] — [Computational models for active matter](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shaebani-2020-computational.md). Computational-model reference for matching physical assumptions. Catalogue depth: full.
-- [[gh-mesa-mesa]] — [Mesa: Python agent-based modelling framework (grids, continuous space, schedulers, browser visualisation), with a bundled Boids flocking example](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-mesa-mesa.md). ABM engine candidate; existing run notes do not establish cross-engine equivalence. Catalogue depth: ran.
+- [[gh-mesa-mesa]] — [Mesa: Python agent-based modelling framework (grids, continuous space, schedulers, browser visualisation), with a bundled Boids flocking example](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-mesa-mesa.md). Candidate current Python reference; teammate example run used its own rules. Catalogue depth: ran.
+- [[gh-jofmi-agentpy]] — [AgentPy: Python ABM library integrating model design, experiments and analysis (grid, continuous space with KD-tree, networks)](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-jofmi-agentpy.md). Second implementation route; its teammate boids timing used different weights and is not an equivalence result. Catalogue depth: ran.
+- [[grimm-2020-odd]] — [The ODD Protocol for Describing Agent-Based and Other Simulation Models: A Second Update to Improve Clarity, Replication, and Structural Realism](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/grimm-2020-odd.md). Model-description framework motivates an explicit semantics contract, not empirical validity by documentation alone. Catalogue depth: abstract.
+
+<a id="mth-07"></a>
+### MTH-07 — Do failure rankings survive independent relabelling?
+
+**Update 2:** new.
+
+**Question:** Would our preferred trace debugger change if independent humans supplied the reference labels?
+
+**Candidate hypothesis:** Some debugger rankings will change when judge-generated error labels are replaced by adjudicated human labels, especially for blame location rather than final task failure.
+
+**How to test:** Sample whole MAST traces stratified by framework, outcome and original label; randomize anonymized trace order to two independent annotators. Freeze one taxonomy before annotation and adjudicate disagreements without model names or debugger predictions. Evaluate frozen debuggers on both label versions using trace-level paired analysis. Use TRAIL only as a separately reported external check after access approval, and keep its single-agent and multi-agent subsets separate.
+
+**Comparison:** Original MAST labels, majority-class prediction and a simple last-error heuristic; compare end-outcome labels separately from causal blame.
+
+**Measurements:** Trace-level label agreement; Debugger ranking stability; Error-localization distance; Abstention coverage.
+
+**Would count against it:** Rankings and practically relevant performance differences remain stable within a prespecified margin under independent labels.
+
+**Main confounds:** MAST annotation rounds use differing category counts, so numeric codes require semantic mapping. Null annotations are not negative labels; a judged decisive step is not counterfactual causation.
+
+**Framing / first-test class:** measurement / offline.
+
+**Before promotion:** Check taxonomy versions and trace rights; budget blinded annotation. TRAIL gate terms and Who&When reuse terms must be resolved before use or redistribution.
+
+**Closest prior and evidence limits:**
+
+- [[data-mast-2025]] — [MAD: Multi-Agent System Traces Dataset, 1,642 MAS execution traces annotated with the 14 MAST failure modes](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-mast-2025.md). Closest available judge-labelled traces and small human subset; motivates measurement rather than accepting all labels as truth. Catalogue depth: skim.
+- [[data-trail-2025]] — [TRAIL: 148 human-annotated agent traces (GAIA and SWE-bench) for trace reasoning and agentic issue localization](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-trail-2025.md). Human-annotated external corpus with restricted access and redistribution. Catalogue depth: skim.
+- [[data-who-and-when-2025]] — [Who&When: 184 multi-agent failure logs annotated with the responsible agent, the decisive error step and an explanation](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-who-and-when-2025.md). Alternative attribution target; failures-only sampling limits prevalence claims. Catalogue depth: skim.
+
+<a id="mth-08"></a>
+### MTH-08 — Does the split separate new games or just new turns?
+
+**Update 2:** new.
+
+**Question:** How much apparent generalization comes from seeing another turn or condition of the same underlying game?
+
+**Candidate hypothesis:** Random-row evaluation will overstate predictive accuracy relative to holding out whole game-generating sequences, beyond the gap explained by sample size.
+
+**How to test:** For Hanabi, reconstruct complete episodes from file, model, scaffold, player count, seed and turn resets; audit collisions rather than assuming a seed is a unique game. For the collusion corpus, group all conditions sharing a base task sequence. Train identical bounded outcome predictors under row, episode and base-sequence splits with equal training counts. Repeat split assignments and evaluate a final untouched sequence set; units are independent generating sequences, not messages.
+
+**Comparison:** Model/task metadata-only predictor and group-preserving label permutations alongside naive row splitting.
+
+**Measurements:** Held-out sequence accuracy; Calibration; Cross-split duplicate rate; Performance drop at equal sample count.
+
+**Would count against it:** Grouped and row splits agree within a practical margin after training-size and difficulty matching, with no residual overlap.
+
+**Main confounds:** Grouping can introduce genuine distribution shift; report that separately. Different filenames, seeds or agent roles do not establish independent underlying tasks.
+
+**Framing / first-test class:** measurement / offline.
+
+**Before promotion:** Inspect raw JSONL schemas and manifests, pin revisions, verify the sequence map, and keep malformed or duplicate rows in an exclusion ledger rather than silently dropping them.
+
+**Closest prior and evidence limits:**
+
+- [[data-hanabi-llm-logs-2026]] — [HanabiLogs and HanabiRewards: 92,923 turn-level logs of 17 LLMs playing cooperative Hanabi (2-5 players) under three scaffolds, with LLM-judge move ratings](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-hanabi-llm-logs-2026.md). Turn-level logs need episode reconstruction and scaffold-aware grouping. Catalogue depth: skim.
+- [[data-agent-collusion-2026]] — [Emergent Collusion in Long-Horizon LLM Agent Interaction: 2,650 two-agent trajectories (27,100 episodes) with judge labels](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-agent-collusion-2026.md). Shared base sequences across conditions provide a concrete leakage hazard. Catalogue depth: skim.
+
+<a id="mth-09"></a>
+### MTH-09 — Does the evaluator know more than the acting agent?
+
+**Update 2:** new.
+
+**Question:** Does privileged state in archived traces make an agent look less competent than its actual information permitted?
+
+**Candidate hypothesis:** Evaluators given omniscient state will over-attribute avoidable mistakes compared with evaluators restricted to the acting agent’s legal information.
+
+**How to test:** Select complete Hanabi episodes with recoverable views and pair two evaluator packets for each decision: exact visible prompt/history versus that packet plus hidden engine state. Randomize packet presentation between blinded annotators; cluster analysis by game and exclude the same annotator seeing both versions. Score avoidability, not simply whether the eventual action lost points. Repeat on a small private-goal Sotopia subset only if its visibility contract and comparable action labels can be reconstructed.
+
+**Comparison:** A rules-based legality checker plus an information-set policy that cannot inspect the hidden state; omniscient scoring is a labelled diagnostic ceiling.
+
+**Measurements:** Avoidable-error disagreement; Calibration conditional on information; Hindsight blame rate; Evaluator agreement.
+
+**Would count against it:** Privileged state does not increase avoidable-error attribution, or differences vanish when the legal information set is explicit.
+
+**Main confounds:** Legality, expected value and realized luck differ. Engine-computed Bayesian beliefs legitimately supplied to a scaffold are visible assistance, not hidden leakage.
+
+**Framing / first-test class:** measurement / offline.
+
+**Before promotion:** Validate the Hanabi observation renderer and raw-state fields; confirm Sotopia JSON provenance and reuse terms. No logged private reflection is assumed visible to an ordinary participant.
+
+**Closest prior and evidence limits:**
+
+- [[data-hanabi-llm-logs-2026]] — [HanabiLogs and HanabiRewards: 92,923 turn-level logs of 17 LLMs playing cooperative Hanabi (2-5 players) under three scaffolds, with LLM-judge move ratings](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-hanabi-llm-logs-2026.md). Logs contain prompts, legal moves and raw state; exact visibility remains to be audited. Catalogue depth: skim.
+- [[data-sotopia-2024]] — [SOTOPIA episodes v1: role-played social-interaction episodes between language agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-sotopia-2024.md). Private-goal setting for an external boundary check. Catalogue depth: skim.
+- [[zhou-2024-is]] — [Is this the real life? Is this just fantasy? The Misleading Success of Simulating Social Interactions With LLMs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2024-is.md). Information-asymmetry precedent; evaluator hindsight is distinct from omniscient dialogue generation. Catalogue depth: full.
+
+<a id="mth-10"></a>
+### MTH-10 — Does translation preserve the interaction being measured?
+
+**Update 2:** new.
+
+**Question:** Do translated game logs change judgments of uncertainty, commitment or reasoning quality?
+
+**Candidate hypothesis:** English translations will systematically alter some pragmatic labels relative to the original Chinese turns, producing apparent cross-language behavior differences without changed play.
+
+**How to test:** Draw whole Werewolf games with paired original and translated events. Randomize bilingual annotators to original or translated packets, preserving surrounding turns and hiding player identity; never show both versions of one game to the same annotator. Use a predeclared rubric for uncertainty, accusations and commitments, with bilingual adjudication of disagreements. Fit paired game-level effects and separately test missing-translation selection. A small independently translated sample distinguishes this release’s translation pipeline from a universal language effect.
+
+**Comparison:** Original-language judgments, independently translated packets and within-language repeated annotation at matched context length.
+
+**Measurements:** Pragmatic-label agreement; Confidence shift; Player-ranking changes; Missing-translation sensitivity.
+
+**Would count against it:** Translation effects stay inside the equivalence margin and are no larger than ordinary annotator variation across all prespecified labels.
+
+**Main confounds:** Human versus model authorship of the original play is not established by the card. Reasoning-note translations may differ from public dialogue and should not be pooled.
+
+**Framing / first-test class:** measurement / offline.
+
+**Before promotion:** Verify licences, pairing keys, missingness and game boundaries; recruit bilingual review. Do not auto-fill missing translations and then treat them as original released observations.
+
+**Closest prior and evidence limits:**
+
+- [[data-werewolf-game-reasoning-2025]] — [Werewolf game dataset: raw 7- and 9-player game records with thinking-process notes, plus SFT instruction sets (Multi-agent KTO)](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-werewolf-game-reasoning-2025.md). Actual paired Chinese and English events and notes; the card identifies an LLM translation process. Catalogue depth: skim.
+- [[data-diplomacy-deception-2020]] — [Diplomacy deception detection: 17,289 pairwise in-game messages from 12 games, labelled truthful/deceptive by sender and receiver](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-diplomacy-deception-2020.md). Analogy for separating communicative intent from receiver interpretation, not a parallel translation corpus. Catalogue depth: skim.
+
+<a id="mth-11"></a>
+### MTH-11 — Which system wins when failed runs count?
+
+**Update 2:** new.
+
+**Question:** Do completion-conditioned rankings agree with reliability-adjusted utility across all attempted runs?
+
+**Candidate hypothesis:** A system that looks strong on completed episodes may rank lower when malformed calls, retries and abandoned episodes are included at a fixed resource budget.
+
+**How to test:** Reconstruct Town run attempts from manifests, validation records and call ledgers, separating infrastructure aborts from complete runs excluded by a statistical rule. Report accepted-only scores and all-attempt utility with prespecified failure costs and sensitivity bounds. Because archived stacks are not randomized, confirm in a small controlled mock economy: randomize independent episodes to serving configurations, hold model and task fixed, and include every attempt, retry and timeout.
+
+**Comparison:** Accepted-only analysis, deterministic valid-action fallback and a fixed no-retry policy; compare equal resource budgets rather than equal successful episodes.
+
+**Measurements:** Completion probability; Utility per attempted episode; Utility per token/time budget; Retry burden; Ranking sensitivity.
+
+**Would count against it:** Rankings remain practically stable across defensible failure costs, or completion rates do not differ under the randomized stack comparison.
+
+**Main confounds:** Infrastructure failure is not evidence of poor strategic reasoning. Outlier exclusion, budget censoring and invalid output are different mechanisms; retain them as separate categories.
+
+**Framing / first-test class:** measurement / offline.
+
+**Before promotion:** Reconcile run/call counters and terminal states before scoring; specify the failure-cost range in advance. The Town engine is unavailable, so the controlled confirmation requires a distinct validated toy implementation.
+
+**Closest prior and evidence limits:**
+
+- [[data-agent-town-economy-2026]] — [Agent Town Economy: 98 runs of a 100-agent LLM economic simulation with a fully ledgered, money-conserving economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-agent-town-economy-2026.md). Release retains quarantined runs and documents serving-stack problems; supports a reliability audit, not clean model attribution. Catalogue depth: skim.
+- [[gh-apromisedland-trustworthy-agent-simulation]] — [Trustworthy Agent Simulation (tass): auditable LLM town society on AgentScope + Mesa with replay, resume, policy batches and Streamlit dashboard](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-apromisedland-trustworthy-agent-simulation.md). Candidate small offline harness with explicit budget and failure logging. Catalogue depth: abstract.
+
+<a id="mth-12"></a>
+### MTH-12 — When does a collection of sessions become a team?
+
+**Update 2:** new.
+
+**Question:** Does counting multiple agent sessions per task identify collaboration, or mostly sequential retries and handoffs?
+
+**Candidate hypothesis:** Session fan-out alone will overstate concurrent collaboration compared with a trace-based definition requiring overlapping activity and a verifiable information dependency.
+
+**How to test:** Sample AgentLogs tasks stratified by session count and outcome after checking table joins. Independently reconstruct session intervals and explicit handoff or shared-artifact dependencies from event records. Have blinded reviewers label sequential retry, parallel independent work and interacting work, allowing unknown where evidence is missing. Compare the resulting prevalence estimates and outcome associations with session-count labels using task-level analysis and repository-clustered uncertainty. Validate the labeling procedure on synthetic workflows with known execution graphs.
+
+**Comparison:** One-session threshold, time-overlap-only rule, and synthetic retry-only negative controls.
+
+**Measurements:** Collaboration precision; Unclassifiable fraction; Outcome association after relabelling; Join completeness; Concurrency reconstruction error.
+
+**Would count against it:** Session-count classification already agrees with audited dependencies and outcome conclusions remain stable under the stricter definition.
+
+**Main confounds:** Shared task IDs do not imply causal interaction; overlapping timestamps may reflect waiting. Public repository sampling and incomplete logs limit population generalization, and users are not verified independent operators.
+
+**Framing / first-test class:** measurement / offline.
+
+**Before promotion:** Pin v0.2, inspect foreign keys and timestamp semantics, sample before touching the large event table, and measure missing sessions. This is a task-execution audit, not a claim to recover real-world operator identities.
+
+**Closest prior and evidence limits:**
+
+- [[data-agentlogs-2026]] — [AgentLogs: tasks, sessions and 64M session-log entries from GitHub's cloud coding agent across 1.8M public repositories](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-agentlogs-2026.md). Relational task, session and event corpus offers concrete provenance evidence but no automatic collaboration ground truth. Catalogue depth: skim.
+- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/elnozahy-2002-survey.md). Execution-history and causality concepts motivate synthetic known-graph validation. Catalogue depth: skim.
+
+<a id="mth-13"></a>
+### MTH-13 — Is there a stable ranking of cooperative ability?
+
+**Update 2:** new.
+
+**Question:** Do model rankings carry across common-payoff games, mixed-motive negotiation and open-ended social goals after matching execution conditions?
+
+**Candidate hypothesis:** Within-task rankings will be more stable than cross-task rankings even after common model versions, costs and visibility are matched, weakening a single general cooperation score.
+
+**How to test:** Inventory exact model/scaffold overlap in Hanabi, C2C and Sotopia before analyzing. On an adequate common subset, normalize each task’s outcome against its own legal scripted baseline, hold out entire games or scenarios, and estimate rank uncertainty without pooling turns. If the released overlap is inadequate, specify a small prospective common-model panel with balanced game instances and fixed budgets; treat it as required new data, not an imputed cross-corpus result.
+
+**Comparison:** Task-specific rankings, rank predictions from cost alone, and within-task split-half reliability as a reference for measurement stability.
+
+**Measurements:** Cross-task rank correlation; Within-task reliability; Rank uncertainty; Performance relative to task baseline.
+
+**Would count against it:** A single ranking predicts held-out task outcomes nearly as well as task-specific rankings within practical tolerance.
+
+**Main confounds:** Shared payoff, kept deals and private-goal achievement are different constructs. A rank reversal may reflect prompts, partners or visibility rather than a model trait; human welfare is not inferred from game score.
+
+**Framing / first-test class:** measurement / access-dependent.
+
+**Before promotion:** Confirm compatible models, benchmark reuse rights, episode keys and outcome provenance; reject an aggregate score if measurement compatibility or common support fails.
+
+**Closest prior and evidence limits:**
+
+- [[data-hanabi-llm-logs-2026]] — [HanabiLogs and HanabiRewards: 92,923 turn-level logs of 17 LLMs playing cooperative Hanabi (2-5 players) under three scaffolds, with LLM-judge move ratings](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-hanabi-llm-logs-2026.md). Common-payoff coordination corpus with important scaffold variation. Catalogue depth: skim.
+- [[data-c2c-ai-vs-ai-2026]] — [C2C (Cooperate to Compete) AI-vs-AI games: 972 logged four-player LLM conquest-and-negotiation games under six prompt interventions](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-c2c-ai-vs-ai-2026.md). Mixed-motive negotiation comparison with matched board conditions. Catalogue depth: skim.
+- [[data-sotopia-2024]] — [SOTOPIA episodes v1: role-played social-interaction episodes between language agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-sotopia-2024.md). Social-goal corpus requires JSON to retain model and reward metadata. Catalogue depth: skim.
+
+<a id="mth-14"></a>
+### MTH-14 — Does the apparent trend survive the crawler?
+
+**Update 2:** new.
+
+**Question:** Can an apparent change in agent interaction be explained by collection or moderation changes rather than behavior?
+
+**Candidate hypothesis:** Some longitudinal interaction trends will shrink or reverse when analysis is restricted to a stable observation rule and overlapping entity-time coverage.
+
+**How to test:** Choose a narrow overlapping time window in the jscmp4 and MoltNet releases. Reconcile immutable entity IDs, revisions, deletion states and crawler provenance before matching posts and comments. Compare daily reply concentration and thread depth under each source, common-observed entities, and a fixed post-eligibility rule. Analyze days and communities as clustered observational units, then inject known observation-rule changes into synthetic stationary networks to check the estimator.
+
+**Comparison:** Naive full-release trend, matched-coverage trend and synthetic stationary-network negative control.
+
+**Measurements:** Trend sensitivity to eligibility; Cross-source missingness; Duplicate/revision rate; Interaction-statistic agreement.
+
+**Would count against it:** Trends remain practically unchanged under stable coverage and are absent from the synthetic collection-change controls.
+
+**Main confounds:** The two releases share some upstream crawls, so agreement is not independent replication. Comments below a collection threshold and changing spam flags cannot be treated as random omissions or stable labels.
+
+**Framing / first-test class:** measurement / offline.
+
+**Before promotion:** Freeze revisions, inspect upstream terms, dedup lineage and fetch-completeness flags. The supplemental takschdube release has a documented older reply-graph omission; rebuild affected graphs. Restrict the estimand to observable activity; moderation timing alone does not identify causality.
+
+**Closest prior and evidence limits:**
+
+- [[data-jscmp4-moltbook-2026]] — [Moltbook AI Agent Social Media Corpus: 3.2M posts, 15.9M comments and 99,621 agent profiles from daily crawls, Jan 27 to Jul 3, 2026](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-jscmp4-moltbook-2026.md). Longitudinal crawl documents selective comment retrieval and field-regime changes. Catalogue depth: skim.
+- [[data-moltnet-2026]] — [MoltNet: integrated Moltbook corpus of 1.04M posts, 3.16M comments, 149,574 AI-agent profiles and 18,244 communities with longitudinal histories (Jan 27 to Feb 28, 2026)](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-moltnet-2026.md). Merged crawl histories provide provenance checks, with overlapping upstream observations. Catalogue depth: skim.
+- [[data-moltbook-dataset-2026]] — [Moltbook Social Interactions Dataset (takschdube/moltbook-dataset): longitudinal posts, comments, agents, social and reply graphs from the agent-only network Moltbook](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-moltbook-dataset-2026.md). Supplemental crawl documents fetch completeness and a historical reply-graph construction error; source metadata alone is not social ground truth. Catalogue depth: skim.
+
+<a id="mth-15"></a>
+### MTH-15 — Does entropy predict collaboration beyond task difficulty?
+
+**Update 2:** new.
+
+**Question:** Does an entropy summary identify when collaboration helps on unseen task families, beyond model and single-agent performance?
+
+**Candidate hypothesis:** Some within-benchmark entropy associations will lose predictive value after controlling for difficulty and holding out entire task families or model sizes.
+
+**How to test:** Audit the entropy release’s master table and metric computation order. Define collaboration gain relative to the matched single-agent result and fit a bounded predictor using only features available at the proposed decision time. Compare nested models with and without entropy, holding out base questions, task families and model groups. Repeat group-preserving label permutations. If features require completed collaborative traces, evaluate retrospective diagnosis only and require new early-prefix traces for a routing claim.
+
+**Comparison:** Task/model metadata, single-agent confidence or performance where legitimately available, and equal-cost always-single/always-collaborate rules.
+
+**Measurements:** Held-out incremental predictive value; Calibration; Expected routing utility; Leakage audit failures.
+
+**Would count against it:** Entropy retains incremental predictive and decision value within the prespecified tolerance across every held-out family after all controls.
+
+**Main confounds:** Correctness can affect completed-trace entropy; repeated rows may share questions. Aggregated outputs cannot identify a causal benefit from manipulating entropy.
+
+**Framing / first-test class:** measurement / offline.
+
+**Before promotion:** Verify table keys, timing of every feature and underlying benchmark licences. Do not promise prefix-based routing or token-level remeasurement from a release that lacks the requisite traces.
+
+**Closest prior and evidence limits:**
+
+- [[data-multiagent-entropy-2026]] — [Raw data for "When Does Multi-Agent Collaboration Help? An Entropy Perspective": token-entropy metrics across 7 MAS architectures](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-multiagent-entropy-2026.md). Concrete released evaluation summaries; raw stage-one traces and token tensors are not included. Catalogue depth: skim.
+- [[zhou-2025-pimmur]] — [The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2025-pimmur.md). Measurement-validity framing, not prior proof that entropy fails. Catalogue depth: abstract.
+
+<a id="sim-05"></a>
+### SIM-05 — Can the published summary be rebuilt from committed events?
+
+**Update 2:** new.
+
+**Question:** Do exported metrics describe the same frozen run as the event ledger from which they are supposed to derive?
+
+**Candidate hypothesis:** Independent event-based reconstruction will expose some apparent outcome differences as export or accounting artifacts rather than agent behavior.
+
+**How to test:** Select complete Town episodes across arms and independently reconstruct a small frozen set of terminal outcomes from pulse and transaction records. Compare against run summaries without using their cached values. Cross-check conservation only after including documented external accounts. In a separate tass offline test, randomize export timing and interruption points while replaying identical committed states; whole deterministic episodes are units, and synthetic event corruptions supply known positives.
+
+**Comparison:** Authoritative pulse reconstruction, a tiny hand-audited ledger and unmodified export under one fixed terminal snapshot.
+
+**Measurements:** Terminal-metric disagreement; Ledger residual; Effect-size change after reconstruction; Corruption detection rate.
+
+**Would count against it:** All checked metrics agree within numerical tolerance and treatment conclusions are invariant to export timing after accounting definitions are matched.
+
+**Main confounds:** A state-summary mismatch is not proof of a broken simulation. Rounding, open-system transfers and different measurement times can explain legitimate differences; label each before interpreting residuals.
+
+**Framing / first-test class:** measurement / offline.
+
+**Before promotion:** Verify file hashes and measurement times, identify authoritative fields, and inspect external-account definitions. No released ledger has been loaded or validated in this atlas pass.
+
+**Closest prior and evidence limits:**
+
+- [[data-agent-town-economy-2026]] — [Agent Town Economy: 98 runs of a 100-agent LLM economic simulation with a fully ledgered, money-conserving economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-agent-town-economy-2026.md). Primary card explicitly warns that export-state metrics can drift from authoritative pulse values. Catalogue depth: skim.
+- [[gh-apromisedland-trustworthy-agent-simulation]] — [Trustworthy Agent Simulation (tass): auditable LLM town society on AgentScope + Mesa with replay, resume, policy batches and Streamlit dashboard](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-apromisedland-trustworthy-agent-simulation.md). Concrete committed-snapshot and replay route for a controlled export audit. Catalogue depth: abstract.
+- [[grimm-2020-odd]] — [The ODD Protocol for Describing Agent-Based and Other Simulation Models: A Second Update to Improve Clarity, Replication, and Structural Realism](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/grimm-2020-odd.md). Explicit state and measurement definitions precede cross-implementation comparisons. Catalogue depth: abstract.
+
+<a id="sim-07"></a>
+### SIM-07 — What does a best-of-many baseline actually buy?
+
+**Update 2:** new.
+
+**Question:** Does a collective advantage depend on comparing one deployed group with an endpoint-wise oracle over isolated searches?
+
+**Candidate hypothesis:** The apparent collective-versus-independent ranking will depend on whether the comparator is an oracle envelope, a preselected single artifact, or a deployable portfolio at matched cost.
+
+**How to test:** Using SwarmWorld’s isolated member traces and frozen portfolio evaluations, reconstruct the endpoint-wise best-of-N envelope separately from a member selected on development disturbances and from a portfolio selected under one predeclared deployment rule. Evaluate each on untouched disturbance seeds, pairing comparisons by discovery seed and population budget. Preserve full outcome vectors so the oracle cannot silently select a different member for each metric and be described as one system.
+
+**Comparison:** Random isolated member, best member on development data, endpoint-wise oracle ceiling and resource-matched interacting group.
+
+**Measurements:** Held-out functional utility; Oracle-to-deployable gap; Selection overhead; Ranking by comparator; Decision/token budget.
+
+**Would count against it:** Rankings remain within a practical margin across deployable and oracle comparators after full resource accounting.
+
+**Main confounds:** Held-out assay seeds replicate disturbances on the same artifacts, not independent discoveries. Equal decision opportunities do not necessarily equal tokens, runtime or effective search space; frozen portfolios exclude later agent adaptation.
+
+**Framing / first-test class:** boundary-test / offline.
+
+**Before promotion:** Inspect manifests, isolated-member coverage and held-out scoring data; check whether all proposed portfolio rules are evaluable without the unreleased engine. Unsupported rules require new access, not invented counterfactual scores.
+
+**Closest prior and evidence limits:**
+
+- [[data-swarmworld-2026]] — [SwarmWorld paper data: event traces of 50-200 LLM agents discovering and exchanging material technologies in a shared simulated world (60 episodes)](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-swarmworld-2026.md). Release explicitly defines independent search as an endpoint-wise best-of-N envelope and retains member traces. Catalogue depth: skim.
+- [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vermetten-2024-large.md). Benchmark aggregation and selection sensitivity motivate explicit comparator definitions. Catalogue depth: full.
 
 <a id="sybil-resistance"></a>
 ## Sybil resistance and adversarial identity
 
 <a id="sec-13"></a>
 ### SEC-13 — Budget useful attention when identities are cheap
+
+**Update 2:** unchanged.
 
 **Question:** Which accounting unit limits a single contributor's attention capture without knowing its operator identity?
 
@@ -2998,6 +3823,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-14"></a>
 ### SEC-14 — Coalition caps with noisy contribution estimates
 
+**Update 2:** revised.
+
 **Question:** Can joint-contribution caps deter duplicate agent submissions when task value is only approximately measurable?
 
 **Candidate hypothesis:** Unreviewed hunch: A cap over observable subsets reduces payouts from duplicate submissions, but measurement noise and complementary contributions create a practical accuracy-cost limit.
@@ -3014,17 +3841,20 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** extension / offline.
 
-**Before promotion:** An explicit value function and restricted threat model; verify closest mechanism proofs before any Sybil-proofness claim.
+**Before promotion:** An explicit value function and restricted threat model; verify closest mechanism proofs before any Sybil-proofness claim. Separate a payout cap on fixed reports from false-name-proof allocation under changed reports and participation.
 
 **Closest prior and evidence limits:**
 
 - [[buildernet-2025-refunds]] — [Refunds](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/buildernet-2025-refunds.md). Published identity constraint motivates transfer; docs say the described implementation is indicative. Catalogue depth: full.
 - [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mazorra-2023-cost.md). False-name and commitment games limit broad mechanism claims. Catalogue depth: full.
+- [[todo-2009-characterizing]] — [Characterizing false-name-proof allocation rules in combinatorial auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/todo-2009-characterizing.md). False-name implementability already constrains allocation rules; noisy agent contribution measurement is not a new mechanism-design foundation. Catalogue depth: skim.
 
 **Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
 
 <a id="sec-15"></a>
 ### SEC-15 — Reputation should not become transferable expertise
+
+**Update 2:** unchanged.
 
 **Question:** Can a router gain from sharing reputation across related skills without letting cheap successes purchase authority on untested skills?
 
@@ -3053,6 +3883,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="sec-16"></a>
 ### SEC-16 — Re-entry penalties versus the newcomer tax
+
+**Update 2:** unchanged.
 
 **Question:** How can a service discourage retire-and-replace identities without permanently favoring incumbents?
 
@@ -3083,6 +3915,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-17"></a>
 ### SEC-17 — Private rate limits across many credentials
 
+**Update 2:** unchanged.
+
 **Question:** What does anonymous rate limiting guarantee when one principal can legitimately hold several credentials?
 
 **Candidate hypothesis:** Unreviewed hunch: Per-epoch nullifiers prevent reuse of one allowance but total usage still scales with acquired credentials unless a conserved resource is bound across them.
@@ -3111,6 +3945,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="sec-18"></a>
 ### SEC-18 — Identity-invariant selection can still concentrate knowledge
+
+**Update 2:** unchanged.
 
 **Question:** Does stake-weighted assignment preserve independent evidence when money and expertise are unevenly distributed?
 
@@ -3141,13 +3977,15 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-19"></a>
 ### SEC-19 — Do graph defenses mistake new teams for Sybils?
 
+**Update 2:** revised.
+
 **Question:** How do trust-graph Sybil defenses behave when legitimate agent teams are intentionally modular?
 
 **Candidate hypothesis:** Unreviewed hunch: Community-based admission disproportionately rejects honest specialist teams joined by a few bridge edges; outcome-verified bridges help more than adding unverified interactions.
 
 **How to test:** Generate independent graphs with honest modular teams and a separate simulated adversarial cluster. Randomize graph construction to matched degree and activity distributions, then vary verified task outcomes on bridge edges without changing edge count. Evaluate existing graph rankings and a variant using verified-edge evidence. Use held-out graph families, not random nodes from the same graph, for final assessment.
 
-**Comparison:** Degree-only ranking, local community detection, and graph defense with perfectly known honest seeds as a labeled ceiling.
+**Comparison:** Degree-only ranking, local community detection, SybilShield-style multi-community verification, and trusted-seed vertex-cut admission; oracle honest seeds are a labeled ceiling.
 
 **Measurements:** honest-team rejection; adversarial admission; task coverage lost; sensitivity to seed placement; verification cost.
 
@@ -3157,18 +3995,20 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** boundary-test / offline.
 
-**Before promotion:** Audit and run available graph baselines; realistic team structure with independent labels.
+**Before promotion:** Full implementation audit of multi-community and vertex-cut baselines; realistic endorsement acquisition and independently labeled team structure.
 
 **Closest prior and evidence limits:**
 
 - [[viswanath-2010-analysis]] — [An Analysis of Social Network-Based Sybil Defenses](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/viswanath-2010-analysis.md). Shows several graph defenses behave like local community detection. Catalogue depth: skim.
-- [[tran-2009-sybil-resilient]] — [Sybil-Resilient Online Content Voting](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tran-2009-sybil-resilient.md). Bounds influence through attack-edge assumptions rather than key count. Catalogue depth: skim.
-- [[douceur-2002-sybil]] — [The Sybil Attack](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/douceur-2002-sybil.md). Trust and resource assumptions remain necessary. Catalogue depth: full.
+- [[shi-2013-sybilshield]] — [SybilShield: An agent-aided social network-based Sybil defense among multiple communities](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shi-2013-sybilshield.md). Already studies multi-community false positives; use this defense as a direct baseline. Catalogue depth: skim.
+- [[conitzer-2010-false-name-proofness]] — [False-Name-Proofness in Social Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/conitzer-2010-false-name-proofness.md). Trusted-seed vertex-cut admission composes with strategy-proof rules only under specified bounded-coalition assumptions. Catalogue depth: skim.
 
 **Related team work:** [sybil-resistance](https://github.com/dmarzzz/swarm-lab/blob/main/surveys/sybil-resistance.md), [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
 
 <a id="sec-20"></a>
 ### SEC-20 — One human credential does not mean one autonomous agent
+
+**Update 2:** unchanged.
 
 **Question:** What influence bound survives when genuine credential holders delegate or pool their access?
 
@@ -3198,13 +4038,15 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-21"></a>
 ### SEC-21 — Audit what an attestation actually identifies
 
+**Update 2:** revised.
+
 **Question:** Can an agent registry distinguish software integrity, machine identity, runtime instance, and operator ownership?
 
 **Candidate hypothesis:** Unreviewed hunch: A registry using workload measurements alone accepts many indistinguishable replicas; binding an instance challenge improves replay detection but still does not establish distinct operators.
 
 **How to test:** On authorized test hardware or a faithful attestation mock, randomize registration trials across one image on many instances, many images on one host, restarts, and independent operators running the same image. Compare measurement-only checks, freshness challenges, and an external operator allowlist. Record which label each observed field can support. Mock results remain protocol tests rather than claims about real TEE security. Treat independent host/hardware configurations, or independently generated mock configurations, as analysis units; registration retries and restarts are nested observations.
 
-**Comparison:** Signed self-declared metadata and the explicitly centralized allowlist.
+**Comparison:** Signed self-declared or software-collected hardware metadata and the explicitly centralized allowlist. Score code-signature validity separately from whether measurements originate in a trusted component.
 
 **Measurements:** duplicate-instance acceptance; restart false rejection; operator-linking error; registration latency; fields revealing host identity.
 
@@ -3214,17 +4056,20 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** measurement / hardware.
 
-**Before promotion:** Current registry specification and authorized hardware access; full attestation field audit.
+**Before promotion:** Current registry specification and authorized hardware access; full attestation field audit. Obtain the mobile-agent methods before attempting that protocol; its publisher reopening exposed no readable abstract or methods in this pass.
 
 **Closest prior and evidence limits:**
 
 - [[collective-2024-portrait]] — [Portrait of a TEE: applications and identity](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/collective-2024-portrait.md). Direct analysis of code, CPU, instance, and application identity limits. Catalogue depth: full.
 - [[douceur-2002-sybil]] — [The Sybil Attack](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/douceur-2002-sybil.md). Authentication does not alone establish distinct entities. Catalogue depth: full.
+- [[hashmi-2010-towards]] — [Towards Sybil Resistant Authentication in Mobile Ad Hoc Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hashmi-2010-towards.md). Abstract-level device-identity proposal uses signed mobile code; it is a comparator requiring a malicious-host model, not evidence that code signing authenticates reported hardware. Catalogue depth: abstract.
 
 **Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
 
 <a id="sec-22"></a>
 ### SEC-22 — Do agents spam because timing rewards attempts?
+
+**Update 2:** unchanged.
 
 **Question:** Can explicit allocation of task opportunities reduce redundant polling without suppressing useful competition?
 
@@ -3255,13 +4100,15 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-23"></a>
 ### SEC-23 — Physical identity under multiple radios and motion
 
+**Update 2:** revised.
+
 **Question:** When does a radio fingerprint stop being a useful bound on distinct robots?
 
 **Candidate hypothesis:** Unreviewed hunch: Spatial fingerprint confidence degrades under co-located honest robots and multi-radio adversaries; fusing independent motion observations improves calibration without proving distinct operators.
 
-**How to test:** Use authorized robot or radio trials with randomized physical layouts: one transmitter with several software names, distinct co-located transmitters, and one controller driving multiple radios. Compare single-observation and motion-aggregated fingerprint policies under matched observation time. Evaluate coverage-control performance separately from identity classification. Run trials in permitted spectrum conditions and analyze independent layouts as replicates.
+**How to test:** Use authorized robot or radio trials with randomized physical layouts: one transmitter with several software names, distinct co-located transmitters, and one controller driving multiple radios. Compare single-observation and motion-aggregated fingerprint policies under matched observation time. Evaluate coverage-control performance separately from identity classification. Run trials in permitted spectrum conditions and analyze independent layouts as replicates. Estimate fingerprint moments on separate calibration layouts and evaluate proposed misclassification bounds separately from observed classification accuracy.
 
-**Comparison:** Authenticated keys alone and oracle physical-transmitter labels, which do not reveal operator identity.
+**Comparison:** Authenticated keys alone, a published moment-based fingerprint bound after full-method audit, and oracle physical-transmitter labels, which do not reveal operator identity.
 
 **Measurements:** transmitter grouping accuracy; honest co-location rejection; coverage error; observation latency; confidence calibration.
 
@@ -3271,18 +4118,20 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** boundary-test / hardware.
 
-**Before promotion:** Available radios, raw channel measurements, calibration procedures, and explicit physical attacker budget.
+**Before promotion:** Available radios, raw channel measurements, calibration procedures, and explicit physical attacker budget. Read the journal methods and bound assumptions before implementation; the publisher reopening exposed no readable text in this pass.
 
 **Closest prior and evidence limits:**
 
 - [[gil-2015-guaranteeing]] — [Guaranteeing Spoof-Resilient Multi-Robot Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/gil-2015-guaranteeing.md). Spatial fingerprints already defend a specific multi-robot setting. Catalogue depth: skim.
 - [[douceur-2002-sybil]] — [The Sybil Attack](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/douceur-2002-sybil.md). Resource assumptions limit physical tests as identity proofs. Catalogue depth: full.
-- [[strobel-2020-blockchain]] — [Blockchain Technology Secures Robot Swarms: A Comparison of Consensus Protocols and Their Resilience to Byzantine Robots](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/strobel-2020-blockchain.md). Task-level swarm utility should accompany adversary classification. Catalogue depth: full.
+- [[renganathan-2022-spoof]] — [Spoof Resilient Coordination in Distributed and Robust Robotic Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/renganathan-2022-spoof.md). Abstract-level journal record already combines physical fingerprints with resilient consensus and moment-based misclassification bounds; this candidate tests operational boundaries, not first composition. Catalogue depth: abstract.
 
 **Related team work:** [sybil-resistance](https://github.com/dmarzzz/swarm-lab/blob/main/surveys/sybil-resistance.md), [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
 
 <a id="sec-24"></a>
 ### SEC-24 — Stop fake value even when every identity is real
+
+**Update 2:** unchanged.
 
 **Question:** Can contribution verification resist colluding distinct participants whose work looks mutually supportive but adds no task value?
 
@@ -3310,11 +4159,290 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
 
+<a id="sec-37"></a>
+### SEC-37 — Bundle allocation when tasks complement or interfere
+
+**Update 2:** new.
+
+**Question:** Which agent-task allocations remain resistant to false-name bids when useful work requires bundles of compute, tools, or time slots?
+
+**Candidate hypothesis:** Unreviewed hunch: A mechanism designed for additive task values becomes vulnerable when complementary bundles or resource conflicts are introduced; a correctly scoped false-name-proof baseline reduces manipulation at a measurable welfare cost.
+
+**How to test:** Generate independent small allocation instances with fixed true costs and capabilities. Randomize additive versus complementary task values and independent versus conflicting resource use. Compare a conventional truthful allocator with a fully specified false-name-proof rule after checking its domain assumptions. Enumerate identity splits on small instances while conserving each principal's physical capacity. Evaluate net principal utility and completed useful work, not the number of accepted identities. Include a VCG forward-auction benchmark in its own compatible valuation domain; measure deviation gain and welfare separately, and report best-response regret before interpreting any outcome as an equilibrium.
+
+**Comparison:** Truthful one-identity allocation, efficient oracle allocation, a simple fixed bundle-price rule, and VCG with bounded complementary valuations in the domain where its equilibrium welfare prior applies.
+
+**Measurements:** best profitable false-name deviation; social welfare ratio; uncompleted complementary bundles; computation cost; seller revenue separate from welfare.
+
+**Would count against it:** Complementarity and conflict produce no additional profitable deviations in the prespecified domain, or the scoped baseline does not reduce gains at comparable useful allocation.
+
+**Main confounds:** Applying a forward-auction theorem to procurement unchanged; unverifiable quality; violating interference assumptions; treating welfare resilience as false-name-proofness or finite best-response search as proof of Nash equilibrium.
+
+**Framing / first-test class:** boundary-test / offline.
+
+**Before promotion:** Full methods for the selected mechanism and explicit mapping of task values to its domain; simulated credits only. Check bidder, valuation, free-disposal, and equilibrium assumptions before comparing with a welfare theorem; arbitrary transient or conflict-constrained outcomes are not covered automatically.
+
+**Closest prior and evidence limits:**
+
+- [[alkalay-houlihan-2014-false-name]] — [False-Name Bidding and Economic Efficiency in Combinatorial Auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/alkalay-houlihan-2014-false-name.md). VCG can retain bounded equilibrium welfare under specified near-submodularity and false-name assumptions; profitable manipulation alone does not establish a worse allocation mechanism. Catalogue depth: skim.
+- [[iwasaki-2010-worst-case]] — [Worst-case efficiency ratio in false-name-proof combinatorial auction mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/iwasaki-2010-worst-case.md). Efficiency bounds have explicit symmetry, determinism, and domain conditions. Catalogue depth: skim.
+- [[wang-2017-robust]] — [Robust Large-Scale Spectrum Auctions against False-Name Bids](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wang-2017-robust.md). Spectrum reuse is a relevant conflict-graph analogue; methods remain abstract-level in the record. Catalogue depth: abstract.
+
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+
+<a id="sec-38"></a>
+### SEC-38 — Can a tiny counterexample invalidate our allocator?
+
+**Update 2:** new.
+
+**Question:** Can exact small-instance tests expose false-name incentives that ordinary performance benchmarks miss?
+
+**Candidate hypothesis:** Unreviewed hunch: Searching allocation-rule constraints and concrete split deviations finds counterexamples to plausible agent routers that appear robust under random identity multiplication.
+
+**How to test:** Select a fixed set of candidate task allocators before evaluation. Enumerate bounded valuation tables, honest competitor reports, and split reports for two to four resources. Where the formal auction domain applies, check weak-monotonicity and false-name implementability conditions; elsewhere test concrete utility deviations without claiming theorem coverage. Compare exact search with budget-matched random simulation. Validate every discovered counterexample by replaying its allocation and payment calculations.
+
+**Comparison:** Uniform random split tests and known robust and vulnerable toy rules as positive and negative controls.
+
+**Measurements:** validated counterexamples found; search time per rule; utility gain of best deviation; false counterexamples from implementation error.
+
+**Would count against it:** Exact constraint-guided search finds no additional valid deviations over matched random search across the chosen rule set and bounded domains.
+
+**Main confounds:** A finite search cannot prove global robustness; equations applied outside their assumptions; numerical tolerances creating spurious violations.
+
+**Framing / first-test class:** replication / offline.
+
+**Before promotion:** Executable exact small-domain rules and independently checked counterexample arithmetic; no new general impossibility claim.
+
+**Closest prior and evidence limits:**
+
+- [[todo-2009-characterizing]] — [Characterizing false-name-proof allocation rules in combinatorial auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/todo-2009-characterizing.md). Uses allocation-rule conditions to invalidate mechanisms previously thought false-name-proof. Catalogue depth: skim.
+- [[yokoo-2003-characterization]] — [Characterization of Strategy/False-name Proof Combinatorial Auction Protocols: Price-oriented, Rationing-free Protocol](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yokoo-2003-characterization.md). Separates allocation feasibility and prices from ordinary truthfulness. Catalogue depth: skim.
+- [[pan-2024-sybil]] — [On Sybil-proof Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pan-2024-sybil.md). Shows the domain and incentive axioms must accompany any robustness claim. Catalogue depth: full.
+
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+
+<a id="sec-39"></a>
+### SEC-39 — A queue may reward splitting work or merging it
+
+**Update 2:** new.
+
+**Question:** Does charging for declared jobs discourage identity splitting while creating incentives to merge unrelated work?
+
+**Candidate hypothesis:** Unreviewed hunch: A scheduling rule tuned to resist job splitting can still reward merging or transferring work, even when total processing time is unchanged.
+
+**How to test:** Generate independent deterministic job batches with known lengths and waiting costs. Compare shortest-job scheduling with candidate fee rules under honest declarations, split jobs, merged jobs, and pairwise transfers. Preserve actual required work and account for each principal's full completion time and total payment. Run the theorem-compatible identical-wait-cost setting first, then label heterogeneous costs as an extension. No real queue or payment system is touched.
+
+**Comparison:** Unpriced shortest-job-first, first-in-first-out, and published split-resistant versus merge-resistant rule families after exact implementation audit.
+
+**Measurements:** net gain from each manipulation; honest waiting cost; total processing efficiency; fee imbalance.
+
+**Would count against it:** The proposed split-resistant rule exhibits no profitable merge or transfer deviations in the bounded evaluation domain, or the alleged gain disappears when full principal completion costs are counted.
+
+**Main confounds:** Treating partial job completion as full utility; unobserved processing lengths; importing an impossibility result without its continuity and symmetry assumptions.
+
+**Framing / first-test class:** boundary-test / offline.
+
+**Before promotion:** Full scheduling-fee specification and a model of whether actual job length can be verified.
+
+**Closest prior and evidence limits:**
+
+- [[moulin-2007-scheduling]] — [On Scheduling Fees to Prevent Merging, Splitting, and Transferring of Jobs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/moulin-2007-scheduling.md). Direct prior on incompatible split, merge, and transfer incentives under explicit scheduling assumptions. Catalogue depth: skim.
+- [[demers-1989-analysis]] — [Analysis and simulation of a fair queueing algorithm](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/demers-1989-analysis.md). Fair queueing already depends on the accounting unit. Catalogue depth: skim.
+
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+
+<a id="sec-40"></a>
+### SEC-40 — Do small participation costs preserve useful collective choice?
+
+**Update 2:** new.
+
+**Question:** Can a nonmonetary or credit cost per extra vote make collective preferences responsive without letting wealthy coalitions dominate?
+
+**Candidate hypothesis:** Unreviewed hunch: A rule calibrated to uniform individual participation costs loses its intended false-name bound when costs vary or coalition members share them.
+
+**How to test:** Generate independent two-alternative preference populations with normalized utilities. Evaluate a published costly-voting rule first under its stated uniform-cost assumptions, then under heterogeneous effective costs and explicit cost-sharing coalitions. Enumerate extra-vote choices in small instances. Keep the desired quantity preference aggregation, not factual truth, and compare outcomes with a money-free robust rule whose assumptions are stated.
+
+**Comparison:** Ordinary majority, one-identity honest participation, and a deliberately unresponsive anonymous rule.
+
+**Measurements:** best net utility from extra votes; majority-preference selection; minority burden; coalition influence; participation loss.
+
+**Would count against it:** Cost heterogeneity and coalition sharing do not create larger profitable deviations than the uniform-cost condition across the planned instances.
+
+**Main confounds:** Counting token expenditure as equal cost across participants; confusing preference welfare with correctness; treating synthetic utility as observed human behavior.
+
+**Framing / first-test class:** boundary-test / offline.
+
+**Before promotion:** A fully specified utility normalization and verified cost rule before testing; all costs remain simulated.
+
+**Closest prior and evidence limits:**
+
+- [[wagman-2008-optimal]] — [Optimal False-Name-Proof Voting Rules with Costly Voting](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wagman-2008-optimal.md). Direct costly-voting and coalition results; primary PDF reopening failed in this update, so full-method verification remains required. Catalogue depth: skim.
+- [[todo-2011-false-name-proof]] — [False-name-proof mechanism design without money](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/todo-2011-false-name-proof.md). Money-free robustness can have strong welfare costs in its facility-location setting. Catalogue depth: skim.
+
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+
+<a id="sec-41"></a>
+### SEC-41 — Fake intermediaries in a chain of trust
+
+**Update 2:** new.
+
+**Question:** Does inserting agent intermediaries create more total usable trust than the original principal earned?
+
+**Candidate hypothesis:** Unreviewed hunch: Naive multiplicative or additive reputation forwarding permits trust amplification through extra intermediaries, whereas a conserved exposure budget limits it at a cost to legitimate indirect cooperation.
+
+**How to test:** Generate independent task-credit networks with evaluator-known ownership. Randomize otherwise equivalent paths to contain no extra intermediary, honest necessary intermediaries, or redundant identities under one principal. Compare naive reputation propagation with a fully specified balance-based exposure rule. Hold initial trust and actual service capacity fixed, and include delayed failures. Score aggregate risk extended to the underlying principal rather than its largest single identity score.
+
+**Comparison:** Direct trust only and a closed registry with true owner grouping as an explicitly privileged ceiling.
+
+**Measurements:** total trust amplification; expected loss; useful indirect tasks enabled; honest trust growth; capital or credit immobilized.
+
+**Would count against it:** Redundant intermediaries do not amplify usable trust under naive rules, or conservation does not reduce amplification at a matched cooperation level.
+
+**Main confounds:** Treating reputation as fungible money without justification; evaluating only successful paths; unobserved shared ownership.
+
+**Framing / first-test class:** extension / offline.
+
+**Before promotion:** Full transitive-trust protocol access and an explicit interpretation of trust balances for agent tasks.
+
+**Closest prior and evidence limits:**
+
+- [[resnick-2009-sybilproof]] — [Sybilproof transitive trust protocols](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/resnick-2009-sybilproof.md). Sum-Sybilproof transitive trust already studies an unavoidable friction; abstract-level record only. Catalogue depth: abstract.
+- [[douceur-2002-sybil]] — [The Sybil Attack](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/douceur-2002-sybil.md). Extra identities cannot certify distinct resources. Catalogue depth: full.
+- [[yu-2009-dsybil]] — [DSybil: Optimal Sybil-Resistance for Recommendation Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yu-2009-dsybil.md). Outcome-based trust supplies a different direct-feedback baseline. Catalogue depth: skim.
+
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+
+<a id="sec-42"></a>
+### SEC-42 — False availability windows in online task markets
+
+**Update 2:** new.
+
+**Question:** Can one agent gain priority by representing the same capacity as several short-lived bidders with different arrival windows?
+
+**Candidate hypothesis:** Unreviewed hunch: An allocator robust to static bid splitting can remain vulnerable to temporal splitting when it trusts self-declared availability or permits costless cancellation.
+
+**How to test:** Randomize independently generated online task streams across static false-name rules, an audited online rule, and fixed-price reservations. Each principal has a fixed actual capacity calendar known only to the evaluator. Allow different declaration windows and cancellation policies while conserving that capacity. Evaluate profit, missed deadlines, and service for honest intermittent participants. Analyze full streams as units and report losses on uncompleted accepted tasks.
+
+**Comparison:** Truthful time declarations, static multiple-name bids, and an oracle scheduler with actual calendars.
+
+**Measurements:** gain from temporal splitting; deadline completion; reserved capacity wasted; honest intermittent participation; cancellation cost.
+
+**Would count against it:** Temporal declarations and cancellation create no extra profitable deviations beyond static splitting under the specified observation model.
+
+**Main confounds:** Assuming departure times are enforceable; free options hidden by counting only completed tasks; generalizing single-minded guarantees to multi-minded workers.
+
+**Framing / first-test class:** boundary-test / offline.
+
+**Before promotion:** Full online mechanism specification and explicit cancellation/enforcement semantics; no live labor or financial market.
+
+**Closest prior and evidence limits:**
+
+- [[lin-2018-sybil-proof]] — [Sybil-Proof Online Incentive Mechanisms for Crowdsensing](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2018-sybil-proof.md). Direct online false-name mechanism predecessor; details remain abstract-level and require access. Catalogue depth: abstract.
+- [[lin-2017-sybil-proof]] — [Sybil-proof incentive mechanisms for crowdsensing](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2017-sybil-proof.md). Static procurement baseline and domain distinction. Catalogue depth: abstract.
+- [[resnick-2023-contingent]] — [Contingent Fees in Order Flow Auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/resnick-2023-contingent.md). Optional execution can change incentives even without changing identity count. Catalogue depth: skim.
+
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+
+<a id="sec-43"></a>
+### SEC-43 — Who should a trust network verify first?
+
+**Update 2:** new.
+
+**Question:** Can a small verification budget admit honest specialist communities without granting broad influence to cheap endorsements?
+
+**Candidate hypothesis:** Unreviewed hunch: Verification selected to improve trusted connectivity admits more useful honest teams than selecting the highest-degree identities, but benefits shrink when endorsements are easy for adversaries to acquire.
+
+**How to test:** Generate independent modular task networks with known service usefulness and a separately controlled endorsement-acquisition process. Randomize a fixed verification budget among degree ranking, random selection, and a correctly implemented trusted-connectivity policy. Compose each admitted set with the same allocation rule. Vary the number of genuinely colluding principals separately from fake identities; measure downstream manipulation as well as admission.
+
+**Comparison:** Exogenous trusted seeds and oracle useful-node verification, both labeled privileged comparisons.
+
+**Measurements:** honest useful capacity admitted; profitable allocation manipulation; verification cost; excluded specialist communities; sensitivity to endorsement acquisition.
+
+**Would count against it:** Connectivity-oriented verification offers no admission benefit at matched manipulation risk, or gains vanish even when its stated bounded-coalition assumptions hold.
+
+**Main confounds:** Verification accidentally revealing true owner groups, correlating usefulness with degree, applying static graph guarantees after adversarial edge changes.
+
+**Framing / first-test class:** boundary-test / offline.
+
+**Before promotion:** Read full composition proof; explicitly distinguish trusted verification from ordinary self-created communication links.
+
+**Closest prior and evidence limits:**
+
+- [[conitzer-2010-false-name-proofness]] — [False-Name-Proofness in Social Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/conitzer-2010-false-name-proofness.md). Formal admission-mechanism composition and verification selection are direct prior, not novel proposals. Catalogue depth: skim.
+- [[shi-2013-sybilshield]] — [SybilShield: An agent-aided social network-based Sybil defense among multiple communities](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shi-2013-sybilshield.md). Multi-community verification already addresses honest-node exclusion. Catalogue depth: skim.
+- [[viswanath-2010-analysis]] — [An Analysis of Social Network-Based Sybil Defenses](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/viswanath-2010-analysis.md). Local community structure can dominate graph defenses. Catalogue depth: skim.
+
+**Related team work:** [sybil-resistance](https://github.com/dmarzzz/swarm-lab/blob/main/surveys/sybil-resistance.md), [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+
+<a id="sec-44"></a>
+### SEC-44 — Conserved voting weight can still change bargaining power
+
+**Update 2:** new.
+
+**Question:** Can splitting a fixed resource weight alter the credit or bargaining power assigned to one contributor even when its nominal total votes are unchanged?
+
+**Candidate hypothesis:** Unreviewed hunch: Attribution based on a power index can reward or punish identity splitting while stake-proportional seat probability remains invariant; the two outcomes should not be conflated.
+
+**How to test:** Enumerate small weighted voting games with independently varied quotas and weight distributions. Split one participant's fixed weight into several identities and compute exact coalition outcomes, Shapley-Shubik credit, and stake-proportional selection probability. Randomize the focal participant within sampled game families. For a task-market analogue, keep true contributed resources fixed and clearly label the power-index payout rule as a design choice.
+
+**Comparison:** Unsplit identity, linear resource credit, and exact coalition enumeration rather than Monte Carlo on small games.
+
+**Measurements:** change in total power-index credit; seat-probability invariance; profitable split frequency; largest credit gain and loss.
+
+**Would count against it:** Identity splitting leaves both resource-proportional selection and aggregate power-index credit invariant throughout the prespecified nontrivial game family.
+
+**Main confounds:** Equating a power index with actual causal influence; counting coordinated false identities as independent preferences; approximator error.
+
+**Framing / first-test class:** replication / offline.
+
+**Before promotion:** Exact small-game implementation and a declared interpretation of power-index credit; do not infer factual voting accuracy.
+
+**Closest prior and evidence limits:**
+
+- [[bachrach-2008-divide]] — [Divide and Conquer: False-Name Manipulations in Weighted Voting Games](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bachrach-2008-divide.md). Direct weighted-voting false-name results distinguish nominal weight from power-index payoff. Catalogue depth: skim.
+- [[gilad-2017-algorand]] — [Algorand: Scaling Byzantine Agreements for Cryptocurrencies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/gilad-2017-algorand.md). Resource-weighted selection gives a contrasting invariant under its assumptions. Catalogue depth: skim.
+- [[buildernet-2025-refunds]] — [Refunds](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/buildernet-2025-refunds.md). Coalition-aware contribution caps concern a different reward object. Catalogue depth: full.
+
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+
+<a id="sec-53"></a>
+### SEC-53 — Can reliable service history hide selective routing failure?
+
+**Update 2:** new.
+
+**Question:** Does reputation-based peer routing remain useful when a contributor behaves correctly on common requests but withholds a narrow class of important results?
+
+**Candidate hypothesis:** Unreviewed hunch: A global peer score can retain selectively unreliable identities, while task-conditioned checks improve retrieval coverage at the cost of sparse evidence and newcomer burden.
+
+**How to test:** In an isolated simulated discovery network, randomize independent topology-and-request streams to global reputation, per-task-class reputation, or random diversified routing. Give some peers high ordinary-service quality but evaluator-controlled withholding on one rare benign task class. Keep total requests, peer capacity, and optional identity rotation fixed. Do not query or alter a public overlay. Separate missing results from incorrect results and analyze whole streams as replicates. Block comparisons by whether target keys are known before peer placement and by honest republication policy; keep both fixed within matched streams.
+
+**Comparison:** Plain routing, fixed trusted peers, and oracle unreliable-peer removal as a privileged ceiling.
+
+**Measurements:** rare-task retrieval success; overall latency; honest newcomer rejection; route concentration; evidence needed to demote.
+
+**Would count against it:** Selective withholding is already penalized adequately by the global score, or task-conditioned checks do not improve rare-task coverage at matched honest burden.
+
+**Main confounds:** Unavailable content mistaken for malicious withholding, adversarial peer placement fixed unrealistically, rediscovery through republication mistaken for a reputation benefit, self-reported reputation accepted as verified evidence.
+
+**Framing / first-test class:** boundary-test / offline.
+
+**Before promotion:** Full routing-score specification, separate content availability ground truth, and no claim that simulation identifies real operator intent. Resolve simulator reuse terms or implement the minimal model independently; PeerSim timing cannot validate network latency.
+
+**Closest prior and evidence limits:**
+
+- [[pecori-2016-s-kademlia]] — [S-Kademlia: A trust and reputation method to mitigate a Sybil attack in Kademlia](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pecori-2016-s-kademlia.md). Trust-based routing is an established tolerance approach; source methods remain abstract-level. Catalogue depth: abstract.
+- [[maccari-2009-avoiding]] — [Avoiding Eclipse Attacks on Kad/Kademlia: An Identity Based Approach](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/maccari-2009-avoiding.md). Kad simulations show target predictability, placement timing, and honest republication affect eclipse outcomes. Certified random IDs do not establish one identity per operator. Catalogue depth: skim.
+- [[gh-datahop-kademlia-simulator]] — [kademlia-simulator: PeerSim-based Kademlia DHT simulator with malicious-node scenarios (discv5, data availability sampling)](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-datahop-kademlia-simulator.md). Concrete PeerSim discovery-network substrate; README inspected, not executed, transport abstracted and no license stated. Catalogue depth: skim.
+
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md), [sybil-resistance](https://github.com/dmarzzz/swarm-lab/blob/main/surveys/sybil-resistance.md).
+
 <a id="fork-merge-security"></a>
 ## Fork-and-merge agents and corruption on reintegration
 
 <a id="sec-01"></a>
 ### SEC-01 — Does hiding the returning fork survive metadata?
+
+**Update 2:** unchanged.
 
 **Question:** When does private selection of one returning text report reduce targeted corruption?
 
@@ -3344,6 +4472,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-02"></a>
 ### SEC-02 — Keep merge decisions outside an untrusted child
 
+**Update 2:** unchanged.
+
 **Question:** Does sampling the returner only after reports are committed protect selection better than giving each child its own selection predicate?
 
 **Candidate hypothesis:** Unreviewed hunch: A parent-held postcommit draw resists a replay-capable local host better than a secret predicate carried by the child, provided the host cannot revise or withhold the already committed report without detection.
@@ -3371,6 +4501,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="sec-03"></a>
 ### SEC-03 — Count evidence domains rather than returning copies
+
+**Update 2:** unchanged.
 
 **Question:** Can a merge quorum based on auditable evidence sources beat a quorum over nominal forks?
 
@@ -3401,11 +4533,13 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-04"></a>
 ### SEC-04 — Separate returned evidence from permission changes
 
+**Update 2:** revised.
+
 **Question:** How much corruption comes from a returning report changing the parent's authority rather than its factual beliefs?
 
-**Candidate hypothesis:** Unreviewed hunch: An enforced typed return interface preserves factual learning while preventing a report from directly changing tool permissions or persistent instructions.
+**Candidate hypothesis:** Unreviewed hunch: An enforced typed return interface retains factual learning while reducing report-driven permission or persistent-instruction changes under incomplete taint observations.
 
-**How to test:** Randomize fork-join episodes among free-text report ingestion, schema-validated factual claims, and the same schema with a separate enforced authority boundary. Use benign misleading recommendations and simulated permission requests in an isolated toy tool environment. Hold the information content and child task success fixed, then measure both factual adoption and unauthorized mock actions. All outbound effects remain simulated.
+**How to test:** Randomize fork-join episodes among free-text report ingestion, schema-validated factual claims, and the same schema with a separate enforced authority boundary. Use benign misleading recommendations and simulated permission requests in an isolated toy tool environment. Hold the information content and child task success fixed, then measure both factual adoption and unauthorized mock actions. All outbound effects remain simulated. Include deliberately missing taint events; compare with the combined re-entry controls as well as interface-only defenses.
 
 **Comparison:** Natural-language warning alone; trusted reports passed through each interface to measure usefulness cost.
 
@@ -3417,18 +4551,20 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** boundary-test / api-small.
 
-**Before promotion:** Enumerated authority-changing actions and a deterministic mock enforcement layer.
+**Before promotion:** Enumerated authority-changing actions and a deterministic mock enforcement layer. Full audit of temporal re-entry assumptions and unavailable platform-specific defense patches before claiming a replication.
 
 **Closest prior and evidence limits:**
 
 - [[triedman-2025-multi]] — [Multi-Agent Systems Execute Arbitrary Malicious Code](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/triedman-2025-multi.md). Measured cross-agent control-flow hijacking is a close boundary failure. Catalogue depth: full.
-- [[cai-2026-child]] — [When Child Inherits: Modeling and Exploiting Subagent Spawn in Multi-Agent Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/cai-2026-child.md). Spawn invariants distinguish memory inheritance and resource authority. Catalogue depth: skim.
+- [[zha-2026-autonomous]] — [Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zha-2026-autonomous.md). Direct predecessor combines sealed configuration, typed memory promotion, and capability attenuation; formal protection depends on its conservative taint model. Catalogue depth: abstract.
 - [[louck-2026-securing]] — [Securing LLM-Agent Long-Term Memory Against Poisoning: Non-Malleable, Origin-Bound Authority with Machine-Checked Guarantees](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/louck-2026-securing.md). Origin-bound authority is a direct predecessor, with explicit trusted-principal assumptions. Catalogue depth: skim.
 
 **Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md).
 
 <a id="sec-05"></a>
 ### SEC-05 — Preserve uncertainty through repeated compaction
+
+**Update 2:** unchanged.
 
 **Question:** Can concise memory summaries retain uncertain origins without becoming too large to use?
 
@@ -3459,13 +4595,15 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-06"></a>
 ### SEC-06 — Repair when the dependency graph is wrong
 
+**Update 2:** revised.
+
 **Question:** How should a parent retract a false claim when some derived memories have missing or incorrect parents?
 
 **Candidate hypothesis:** Unreviewed hunch: Selective quarantine plus fresh evidence gathering retains more useful state than global reset and produces fewer recurring errors than recorded-edge rollback alone.
 
 **How to test:** Generate independent reversible planning episodes with ground-truth dependency graphs, then corrupt the graph presented to the runtime using missing-edge and spurious-edge processes. Randomize repair policy after a standardized correction. Test later tasks requiring both affected and unaffected knowledge. Hold fresh-retrieval and token budgets equal. Oracle repair is a diagnostic upper bound, never a candidate deployed method.
 
-**Comparison:** MemTX-style recorded-descendant retraction, full memory reset, and append-only correction.
+**Comparison:** MemTX-style recorded-descendant retraction, full memory reset, and append-only correction. Use MemSecBench-style target-removal and benign-memory-retention checkpoints with separate all-episode and successfully-poisoned denominators.
 
 **Measurements:** recurrence of corrected error; unaffected knowledge retention; legitimate completion; repair latency; unnecessary quarantine.
 
@@ -3475,12 +4613,12 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** extension / api-small.
 
-**Before promotion:** A reversible environment and preregistered repair utility frontier; source-code reuse license audit.
+**Before promotion:** A reversible environment and preregistered repair utility frontier; source-code reuse license audit. Audit exact runnable memory backends and judge error; selective repair itself is established prior art.
 
 **Closest prior and evidence limits:**
 
 - [[li-2026-memtx]] — [MemTX: Transactional Belief Commit for Stateful Agent Memory](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-memtx.md). Direct cascading repair predecessor explicitly limited to recorded provenance. Catalogue depth: skim.
-- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/elnozahy-2002-survey.md). Recovery consistency and output commitments constrain restoration claims. Catalogue depth: skim.
+- [[chen-2026-memsecbench]] — [MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/chen-2026-memsecbench.md). Already evaluates persistence, consequences, and selective repair while preserving benign memory; incomplete cross-fork provenance is the remaining extension. Catalogue depth: abstract.
 - [[ouyang-2026-memlineage]] — [MemLineage: Lineage-Guided Enforcement for LLM Agent Memory](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ouyang-2026-memlineage.md). Trust propagation supplies an adjacent tracked-lineage baseline. Catalogue depth: skim.
 
 **Related team work:** [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
@@ -3488,13 +4626,15 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-07"></a>
 ### SEC-07 — Stale children can undo a correction
 
+**Update 2:** revised.
+
 **Question:** Can a corrected parent safely reintegrate a fork that left before the correction?
 
 **Candidate hypothesis:** Unreviewed hunch: Version-bound return records with explicit revalidation reduce stale-memory reintroduction better than ordinary timestamps, without requiring rejection of every late report.
 
 **How to test:** Randomize independent task episodes to timestamp-only merge, correction-epoch checks, or checks plus selective evidence refresh. Spawn before a scheduled fact correction and vary return delay independently of report quality. Some old reports contain valuable facts unaffected by the correction. Evaluate the parent's subsequent decisions and usefulness after reintegration; compare only at equal refresh budget.
 
-**Comparison:** Accept-all late reports, reject-all stale reports, and a clean parent that never forked.
+**Comparison:** Accept-all late reports, reject-all stale reports, and a clean parent that never forked. Add a faithful conservative re-entry gate, with its overblocking cost reported.
 
 **Measurements:** corrected-claim recurrence; valid late knowledge retained; revalidation cost; late-report rejection rate.
 
@@ -3510,22 +4650,24 @@ API tests need matched inference and communication budgets. Training tests need 
 
 - [[cai-2026-child]] — [When Child Inherits: Modeling and Exploiting Subagent Spawn in Multi-Agent Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/cai-2026-child.md). Reports asynchronous memory divergence in spawned children. Catalogue depth: skim.
 - [[li-2026-memtx]] — [MemTX: Transactional Belief Commit for Stateful Agent Memory](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-memtx.md). Recorded-descendant repair does not automatically repair disconnected old children. Catalogue depth: skim.
-- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/elnozahy-2002-survey.md). Consistent distributed recovery is the older systems analogue. Catalogue depth: skim.
+- [[zha-2026-autonomous]] — [Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zha-2026-autonomous.md). Temporal re-entry through persistent carriers is already studied; returning forks after correction require a narrower comparison. Catalogue depth: abstract.
 
 **Related team work:** [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md), [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md).
 
 <a id="sec-08"></a>
 ### SEC-08 — Protect the honest return channel
 
+**Update 2:** revised.
+
 **Question:** Can a corrupted child dominate the parent by consuming attention even when honest children remain a majority?
 
-**Candidate hypothesis:** Unreviewed hunch: A reserved correction channel and contribution-aware queue reduce parent error more than equal per-message quotas when long or repeated reports crowd out useful dissent.
+**Candidate hypothesis:** Unreviewed hunch: A reserved correction channel and contribution-aware queue reduce parent error more than per-identity fair queueing when long or repeated reports crowd out useful dissent.
 
 **How to test:** Randomize whole merge episodes to arrival-order ingestion, per-identity fair queueing, and a bounded reserved channel for checked corrections. Use a fixed set of child identities and separately a cheap-identity condition. Replay the same honest reports while a local traffic generator varies length and arrival timing under a fixed token budget. Log every stage from attempted submission to retained context.
 
 **Comparison:** Uniform report truncation and no-flood episodes; source-oracle prioritization only as a ceiling.
 
-**Measurements:** honest tokens actually read; correction delivery; parent error; legitimate throughput; queue latency.
+**Measurements:** honest tokens actually read; correction delivery; parent error; legitimate throughput; queue latency; blocked-agent proportion distinct from wrong answers.
 
 **Would count against it:** Improvement disappears after matching delivered token budgets, or attackers occupy the correction channel as easily as the main channel.
 
@@ -3539,11 +4681,14 @@ API tests need matched inference and communication budgets. Training tests need 
 
 - [[demers-1989-analysis]] — [Analysis and simulation of a fair queueing algorithm](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/demers-1989-analysis.md). Fair resource allocation and per-process splitting are established issues. Catalogue depth: skim.
 - [[triedman-2025-multi]] — [Multi-Agent Systems Execute Arbitrary Malicious Code](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/triedman-2025-multi.md). Cross-agent handoffs motivate preserving control boundaries. Catalogue depth: full.
+- [[zhou-2025-corba]] — [CORBA: Contagious Recursive Blocking Attacks on Multi-Agent Systems Based on Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2025-corba.md). Availability-loss propagation already has blocked-agent and interception metrics; its audit separates these from arbitrary-code execution. Catalogue depth: full.
 
 **Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
 
 <a id="sec-09"></a>
 ### SEC-09 — Screen the combination, not only each weight update
+
+**Update 2:** unchanged.
 
 **Question:** When does testing each returned weight update miss failures created only by their combination?
 
@@ -3572,6 +4717,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="sec-10"></a>
 ### SEC-10 — Distinguish useful specialization from harmful drift
+
+**Update 2:** unchanged.
 
 **Question:** Do merge validators reject useful unusual expertise because it differs from the parent's expectations?
 
@@ -3602,6 +4749,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-11"></a>
 ### SEC-11 — Does merge order change what the parent believes?
 
+**Update 2:** unchanged.
+
 **Question:** How much does sequential report order change a parent's final state when the underlying evidence is identical?
 
 **Candidate hypothesis:** Unreviewed hunch: Staging all claims before joint consolidation reduces order-induced authority promotion compared with repeated immediate summarization, especially when corrections arrive late.
@@ -3631,6 +4780,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-12"></a>
 ### SEC-12 — What kind of validator diversity actually helps?
 
+**Update 2:** unchanged.
+
 **Question:** Does using a different model to validate returned work help beyond changing its evidence and tools?
 
 **Candidate hypothesis:** Unreviewed hunch: Independent evidence access reduces joint validator failures more reliably than model-name diversity alone, although the effects can interact.
@@ -3657,11 +4808,230 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
 
+<a id="sec-45"></a>
+### SEC-45 — Does a false fact spread like a policy violation?
+
+**Update 2:** new.
+
+**Question:** Can containment measured on ordinary erroneous claims predict containment of instructions that request unauthorized behavior?
+
+**Candidate hypothesis:** Unreviewed hunch: Rankings of containment policies differ between factual-error propagation and policy-violation propagation even with matched contact opportunities and apparent credibility.
+
+**How to test:** Generate independent closed-world task episodes with either a benign false claim or a harmless instruction to violate a mock task rule. Randomize source type and containment policy across matched task families; include correct facts and authorized instructions as controls. Record exposure, factual adoption, instruction acceptance, retransmission, and executed mock consequences separately. Use both fixed-sender and fixed-edge exposure conditions, and analyze episodes rather than recipient messages as replicates.
+
+**Comparison:** No containment, correction-only messaging, origin-bound action gating, and node isolation at matched communication budgets.
+
+**Measurements:** policy ranking by propagation type; erroneous adoption; unauthorized mock actions; correct task completion; first-generation retransmission.
+
+**Would count against it:** Containment rankings and safety-utility frontiers remain equivalent within prespecified tolerances across both propagation types and held-out task families.
+
+**Main confounds:** Unequal plausibility of stimuli, confusing copied text with adopted intent, different control over source content, comparing contact counts with token budgets.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** Matched harmless stimuli, endpoint definitions, and full nearest-method review; no live harmful actions.
+
+**Closest prior and evidence limits:**
+
+- [[niu-2026-reliability-contagion]] — [Reliability-Contagion Feasibility in LLM Multi-Agent Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/niu-2026-reliability-contagion.md). Models an externally checkable false claim and explicitly fixes communication-budget conventions. Catalogue depth: abstract.
+- [[wu-2026-collective]] — [Collective Loss of Control in LLM Agent Systems: An Epidemic Account of Mutation, Contagion, and Recovery](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wu-2026-collective.md). Separates modeled collective loss from observed handoff susceptibility. Catalogue depth: abstract.
+- [[zhou-2025-corba]] — [CORBA: Contagious Recursive Blocking Attacks on Multi-Agent Systems Based on Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2025-corba.md). Availability loss is another distinct endpoint, not arbitrary harmful execution. Catalogue depth: full.
+
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [rigs](https://github.com/dmarzzz/swarm-lab/blob/main/src/fork-merge-setups/rigs.json).
+
+<a id="sec-46"></a>
+### SEC-46 — Shared tools can reconnect isolated children
+
+**Update 2:** new.
+
+**Question:** Does cutting peer messages contain contamination when children still share a retrieval store or tool output cache?
+
+**Candidate hypothesis:** Unreviewed hunch: Peer isolation alone leaves a reusable shared-store pathway, while targeted store invalidation plus isolated revalidation reduces reinfection with less utility loss than disabling every shared tool.
+
+**How to test:** Randomize independent parent-child episodes in a factorial design: peer links available or cut, shared cache clean or seeded with a harmless false rule, and store repair enabled or absent. Keep task evidence and tool-call budgets matched. Retain complete evaluator lineage but expose only declared runtime events to policies. Test new children after initial cleanup to distinguish persistent reservoir effects from simultaneous common exposure.
+
+**Comparison:** Agent-only reset, peer-edge cutting, full shared-tool shutdown, and clean-cache controls.
+
+**Measurements:** post-cleanup recurrence; new-child exposure; unauthorized mock decisions; legitimate tool utility; cleanup cost.
+
+**Would count against it:** Shared-store access creates no recurrence after peer isolation, or targeted repair cannot improve the utility-recurrence tradeoff relative to broad shutdown.
+
+**Main confounds:** Cache contents accidentally differ in legitimate evidence, unobserved model-memory persistence, calling shared initial exposure onward transmission.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** Local mock tools, store-version logs, and no assumption that the complete causal graph is deployably observed.
+
+**Closest prior and evidence limits:**
+
+- [[le-2026-cross-layer]] — [Cross-layer contagion of prompt injections in multi-agent swarms: a multiplex microscopic markov chain approach](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/le-2026-cross-layer.md). Multiplex agent/tool contagion is already modeled; primary full methods remain unavailable in this pass. Catalogue depth: abstract.
+- [[lee-2026-reproduction]] — [The Reproduction Number of AI Worms: Epidemic Modeling of Adversarial Attacks in LLM Agent Ecosystems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lee-2026-reproduction.md). Poisoned reservoirs are explicit in the abstract-level epidemic framing. Catalogue depth: abstract.
+- [[zha-2026-autonomous]] — [Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zha-2026-autonomous.md). Persistent carrier re-entry gives a concrete adjacent runtime mechanism. Catalogue depth: abstract.
+
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+
+<a id="sec-47"></a>
+### SEC-47 — Where does the full fork-and-return chain actually fail?
+
+**Update 2:** new.
+
+**Question:** Which stage contributes most to parent corruption when a clean child first encounters untrusted material during legitimate work?
+
+**Candidate hypothesis:** Unreviewed hunch: End-to-end parent failure is substantially lower than susceptibility measured after directly installing a compromised child state, and the dominant bottleneck changes with the returned object.
+
+**How to test:** Randomize independent synthetic research tasks between natural source exposure and an explicitly preseeded child-state diagnostic condition. Cross text-report versus persistent-memory return while keeping useful source facts constant. Score a frozen sequence of acquisition, retained child state, report submission, parent adoption, mock consequence, and later recurrence. Report all-assigned-episode rates alongside conditional transition rates. Repeat retries only within an episode and disclose their budget.
+
+**Comparison:** Clean child returns, direct parent exposure, and state-preseeded susceptibility with the same downstream task.
+
+**Measurements:** end-to-end parent consequence rate; conditional stage transitions; benign completion; restart recurrence; failures and provider rejections.
+
+**Would count against it:** Natural acquisition and preseeded susceptibility yield equivalent end-to-end rates within planned tolerances, with no stage-bottleneck change between return objects.
+
+**Main confounds:** Dropping unsuccessful acquisitions from the denominator; counting pending calls as executed effects; seed-state fabrication artifacts.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** Deterministic local consequence ledger and source-carrier threat model; no exploit strings or real external effects.
+
+**Closest prior and evidence limits:**
+
+- [[zhang-2026-agentworm]] — [AgentWorm: Self-Propagating Attacks Across LLM Agent Ecosystems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2026-agentworm.md). Audit distinguishes composite laboratory success, retries, persistence, and bounded relay chains. Catalogue depth: full.
+- [[chen-2026-memsecbench]] — [MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/chen-2026-memsecbench.md). Lifecycle checkpoints and conditional repair denominators are direct prior. Catalogue depth: abstract.
+- [[wu-2026-collective]] — [Collective Loss of Control in LLM Agent Systems: An Epidemic Account of Mutation, Contagion, and Recovery](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wu-2026-collective.md). Controlled handoff susceptibility does not alone demonstrate an autonomous cascade. Catalogue depth: abstract.
+
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [rigs](https://github.com/dmarzzz/swarm-lab/blob/main/src/fork-merge-setups/rigs.json), [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md).
+
+<a id="sec-48"></a>
+### SEC-48 — When can an isolated child safely return?
+
+**Update 2:** new.
+
+**Question:** What evidence should allow a quarantined child back into the merge without discarding its useful discoveries?
+
+**Candidate hypothesis:** Unreviewed hunch: Release based on held-out behavior plus constrained return capabilities reduces recurrence more than a single clean response, while retaining more useful work than permanent exclusion.
+
+**How to test:** Randomize independently generated contaminated-child episodes among immediate release after one clean check, fixed-time quarantine, constrained text-only re-entry, and held-out behavioral checks plus constrained re-entry. Freeze the checks before evaluation and use distinct legitimate follow-up tasks. Include clean children falsely quarantined to measure recovery burden. Keep review calls, elapsed opportunities, and parent evidence budgets explicit; compare the resulting utility-risk frontier.
+
+**Comparison:** Permanent exclusion, full reset and rerun, and unrestricted release with a correction note.
+
+**Measurements:** post-release recurrence; useful child findings retained; clean-child release delay; review cost; parent mock-action violations.
+
+**Would count against it:** Combined release checks and constrained capabilities offer no recurrence advantage at matched useful-work retention and review budget.
+
+**Main confounds:** Checks sharing templates with the original mistake, contamination assumed cleared by silence, hidden evaluator lineage used for release, survivor selection after unsuccessful repair.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** A defined declassification authority and safe local tasks; pass/fail checks cannot establish universal future behavior.
+
+**Closest prior and evidence limits:**
+
+- [[zha-2026-autonomous]] — [Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zha-2026-autonomous.md). Conservative taint persists until external declassification; that authority is an assumption to examine. Catalogue depth: abstract.
+- [[chen-2026-memsecbench]] — [MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/chen-2026-memsecbench.md). Selective repair already requires removal and benign-memory preservation. Catalogue depth: abstract.
+- [[mateo-torrejon-2026-gammaf]] — [GAMMAF: A Common Framework for Graph-Based Anomaly Monitoring Benchmarking in LLM Multi-Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mateo-torrejon-2026-gammaf.md). Live node isolation is established; return criteria extend beyond simply isolating nodes. Catalogue depth: abstract.
+
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+
+<a id="sec-49"></a>
+### SEC-49 — Recovery can look good after damage is already done
+
+**Update 2:** new.
+
+**Question:** Can a defense with excellent final recovery still produce worse cumulative consequences than an earlier, less complete containment policy?
+
+**Candidate hypothesis:** Unreviewed hunch: Ranking policies by final clean-agent fraction can reverse their ranking by cumulative mock harm and retained task usefulness when recovery arrives after consequential actions.
+
+**How to test:** Randomize independent controlled network episodes to preventive admission checks, delayed correction diffusion, or a mixture at matched intervention budget. Use harmless rule violations recorded as irreversible ledger marks in a local simulator, alongside legitimate task completion. Vary action timing separately from communication topology. Score the entire time series, including already-recovered nodes, and test whether terminal-state rankings predict cumulative outcomes on held-out schedules.
+
+**Comparison:** No intervention, full communication halt, and instantaneous oracle correction as a labeled ceiling.
+
+**Measurements:** cumulative mock consequences; ever-affected fraction; final recovered fraction; useful completed work; time to effective containment.
+
+**Would count against it:** Terminal recovery rankings remain aligned with cumulative consequence and utility rankings across the prespecified timing conditions.
+
+**Main confounds:** Defining recovery as an acknowledgement, counting repeated exposures as distinct affected agents, assuming logged compensation reverses an external effect.
+
+**Framing / first-test class:** measurement / offline.
+
+**Before promotion:** Time-indexed endpoint definitions and safe irreversible stand-ins; do not infer real outbreak rates from the simulator.
+
+**Closest prior and evidence limits:**
+
+- [[wu-2025-cowpox]] — [Cowpox: Towards the Immunity of VLM-based Multi-Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wu-2025-cowpox.md). The source audit distinguishes high recovery from substantial cumulative infection and conditional extinction assumptions. Catalogue depth: skim.
+- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/elnozahy-2002-survey.md). External outputs constrain what rollback can undo. Catalogue depth: skim.
+- [[lee-2026-reproduction]] — [The Reproduction Number of AI Worms: Epidemic Modeling of Adversarial Attacks in LLM Agent Ecosystems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lee-2026-reproduction.md). Interception and recovery affect different model parameters; full equations need verification. Catalogue depth: abstract.
+
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+
+<a id="sec-51"></a>
+### SEC-51 — Can harmless evaluator preferences narrow a swarm's reasoning?
+
+**Update 2:** new.
+
+**Question:** Can peer evaluation drive strategy convergence without spreading a false claim or any malicious instruction?
+
+**Candidate hypothesis:** Unreviewed hunch: Shared evaluator preferences reduce strategy diversity beyond ordinary task-driven convergence, and diverse evaluators help only when their judgments add independent information at matched budget.
+
+**How to test:** Randomize independent task networks among shared preference judges, heterogeneous judges, shuffled-feedback controls, and a task-only objective scorer. Match evaluator calls and token budgets rather than committee size alone. Use tasks admitting several valid solution strategies and separately tasks where one strategy is objectively best. Track strategy choices and held-out task quality over rounds; distinguish true correctness gains from conformity to evaluator style.
+
+**Comparison:** No peer feedback, one stronger evaluator with the same budget, and randomized feedback preserving score marginals.
+
+**Measurements:** strategy diversity; cross-agent preference shift; held-out correctness; feedback calibration; evaluation cost.
+
+**Would count against it:** Shared evaluators cause no additional diversity loss versus shuffled or task-only controls, or heterogeneous judges add no benefit at matched quality and budget.
+
+**Main confounds:** Calling all convergence pathological, larger committees receiving more compute, latent common priors, strategy labels defined by the same judge.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** Full preference-dynamics methods and independent strategy coding; this studies convergence, not inferred malicious intent.
+
+**Closest prior and evidence limits:**
+
+- [[liu-2026-contagion]] — [Contagion Networks: Evaluator Preference Propagation in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2026-contagion.md). Direct evaluator-preference propagation precedent with narrow strategy-orientation meaning. Catalogue depth: abstract.
+- [[ebrahimi-2025-adversary]] — [An Adversary-Resistant Multi-Agent LLM System via Credibility Scoring](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ebrahimi-2025-adversary.md). Trusted-judge and architecture assumptions constrain credibility-based defenses. Catalogue depth: skim.
+- [[kim-2025-correlated]] — [Correlated Errors in Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2025-correlated.md). Different model identities do not guarantee independent judgments. Catalogue depth: full.
+
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+
+<a id="sec-52"></a>
+### SEC-52 — Do small per-merge failures accumulate across generations?
+
+**Update 2:** new.
+
+**Question:** Can a gate that looks effective on one return remain useful over repeated fork, learning, return, and restart cycles?
+
+**Candidate hypothesis:** Unreviewed hunch: A fixed per-return admission gate understates long-run recurrence when accepted state becomes a shared starting point for later children; periodic revalidation trades retained knowledge for reduced accumulation.
+
+**How to test:** Randomize independent multi-generation task runs to a static merge gate, the same gate plus periodic source revalidation, or fresh restart each generation. Use harmless rare false rules and new legitimate facts at each cycle. Hold total task count and verification budget fixed while varying whether retained state is inherited by new children. Evaluate all generations, including abandoned runs, and fit recurrence by independent lineage rather than by individual child.
+
+**Comparison:** One-shot susceptibility at the same per-return policy, no new exposure after generation one, and clean inherited-state controls.
+
+**Measurements:** cumulative parent error; cross-generation recurrence; new knowledge retained; legitimate tasks completed; verification and restart cost.
+
+**Would count against it:** Retained inheritance produces no excess recurrence over the one-shot-calibrated prediction, or periodic revalidation has no utility-risk benefit over full restart.
+
+**Main confounds:** Assuming independent returns, changing task difficulty over generations, model version drift, attributing every repeat error to persisted content.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** Stable model versions, explicit inheritance map, and a prespecified independent-return reference model.
+
+**Closest prior and evidence limits:**
+
+- [[yang-2026-zombie]] — [Zombie Agents: Persistent Control of Self-Evolving LLM Agents via Self-Reinforcing Injections](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yang-2026-zombie.md). Persistent self-reinforcing control is existing prior; entry remains abstract-level. Catalogue depth: abstract.
+- [[zha-2026-autonomous]] — [Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zha-2026-autonomous.md). Temporal re-entry and scheduled context loading are already studied. Catalogue depth: abstract.
+- [[chen-2026-memsecbench]] — [MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/chen-2026-memsecbench.md). Single-lifecycle repair checkpoints provide a starting comparator, not longitudinal proof. Catalogue depth: abstract.
+
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [rigs](https://github.com/dmarzzz/swarm-lab/blob/main/src/fork-merge-setups/rigs.json), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+
 <a id="swarm-detection"></a>
 ## Detecting AI agent swarms in the wild
 
 <a id="sec-25"></a>
 ### SEC-25 — Separate model, prompt, scaffold, and operator attribution
+
+**Update 2:** unchanged.
 
 **Question:** Which entity does a conversational fingerprint actually identify?
 
@@ -3692,11 +5062,13 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-26"></a>
 ### SEC-26 — Measure the simulator fingerprint before measuring swarms
 
+**Update 2:** revised.
+
 **Question:** How much detection performance comes from the recipe used to create the benchmark?
 
 **Candidate hypothesis:** Unreviewed hunch: Random session splits substantially overstate generalization when the same generator, prompt templates, or collection process appears in train and test.
 
-**How to test:** Construct matched authorized datasets using multiple independent swarm generators and benign controls collected through the same instrumentation. Evaluate frozen detectors under random-session, generator-disjoint, operator-disjoint, and time-disjoint splits. Randomize generator assignment to task templates and remove explicit run metadata. Fit a separate classifier predicting dataset origin to quantify construction artifacts; estimate uncertainty across held-out generator families.
+**How to test:** Construct matched authorized datasets using multiple independent swarm generators and benign controls collected through the same instrumentation. Evaluate frozen detectors under random-session, generator-disjoint, operator-disjoint, and time-disjoint splits. Randomize generator assignment to task templates and remove explicit run metadata. Fit a separate classifier predicting dataset origin to quantify construction artifacts; estimate uncertainty across held-out generator families. For the collusion release, also group by shared task sequence and exclude private reflections from deployable monitor features.
 
 **Comparison:** Shallow metadata tree, text-only model, and activity-only model at the same label budget.
 
@@ -3708,18 +5080,20 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** replication / offline.
 
-**Before promotion:** At least several independent generation and collection recipes; source-license and label audit.
+**Before promotion:** At least several independent generation and collection recipes; source-license and label audit. Collusion labels are judge outputs with a small human-check sample, not unqualified behavioral ground truth.
 
 **Closest prior and evidence limits:**
 
 - [[hays-2023-simplistic]] — [Simplistic Collection and Labeling Practices Limit the Utility of Benchmark Datasets for Twitter Bot Detection](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hays-2023-simplistic.md). Direct evidence of dataset construction confounds in bot detection. Catalogue depth: full.
 - [[ng-2025-are]] — [Are LLM-Powered Social Media Bots Realistic?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ng-2025-are.md). Abstract-level realism warning for generated social bots, not audited effect sizes. Catalogue depth: abstract.
-- [[park-2026-cross]] — [Cross-Agent Campaign Attribution: Linking Asynchronous Attacks Across LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/park-2026-cross.md). Synthetic campaign benchmark provides a relevant candidate baseline. Catalogue depth: skim.
+- [[data-agent-collusion-2026]] — [Emergent Collusion in Long-Horizon LLM Agent Interaction: 2,650 two-agent trajectories (27,100 episodes) with judge labels](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-agent-collusion-2026.md). Available trajectories share 50 task sequences across conditions and include private reflections; split by sequence and restrict features to the monitor view. Catalogue depth: skim.
 
 **Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md).
 
 <a id="sec-27"></a>
 ### SEC-27 — Shared news is not necessarily shared control
+
+**Update 2:** unchanged.
 
 **Question:** Can a detector distinguish common external exposure from direct peer influence?
 
@@ -3750,6 +5124,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-28"></a>
 ### SEC-28 — A canary identifies a route, not always an operator
 
+**Update 2:** unchanged.
+
 **Question:** What attribution can a per-recipient canary support when content passes through shared caches or search services?
 
 **Candidate hypothesis:** Unreviewed hunch: Distinct harmless canaries identify exposure pathways more reliably than direct ownership; shared intermediaries create false operator links unless routing uncertainty is reported.
@@ -3778,6 +5154,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-29"></a>
 ### SEC-29 — Does shared memory teach agents to recognize test probes?
 
+**Update 2:** unchanged.
+
 **Question:** How quickly does a canary detector lose sensitivity when a team can pool experience about the test environment?
 
 **Candidate hypothesis:** Unreviewed hunch: A fixed probe family becomes less diagnostic under pooled memory than under isolated sessions; rotating superficial token values does less than changing the underlying observable probe mechanism.
@@ -3805,6 +5183,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="sec-30"></a>
 ### SEC-30 — Would the detector produce a useful review queue?
+
+**Update 2:** unchanged.
 
 **Question:** Does high balanced-benchmark accuracy translate into useful precision when coordinated agent traffic is rare?
 
@@ -3835,6 +5215,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-31"></a>
 ### SEC-31 — Separate assistance from autonomous action
 
+**Update 2:** unchanged.
+
 **Question:** Can observable traces distinguish a human using AI for wording from an autonomous agent completing the whole task?
 
 **Candidate hypothesis:** Unreviewed hunch: Text-only detectors confound assistance with autonomy; consented interaction traces improve separation but vary strongly with accessibility tools and task type.
@@ -3862,6 +5244,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="sec-32"></a>
 ### SEC-32 — Are browser detectors detecting the automation library?
+
+**Update 2:** unchanged.
 
 **Question:** How much browser-agent detection survives a change in the control interface?
 
@@ -3891,6 +5275,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-33"></a>
 ### SEC-33 — A shared funder may be a service, not a shared owner
 
+**Update 2:** revised.
+
 **Question:** Can on-chain behavioral clustering distinguish common ownership from use of the same funding or automation service?
 
 **Candidate hypothesis:** Unreviewed hunch: First-funder clustering overlinks independent users of a shared service; combining task-level behavior helps only if evaluation labels are independent of those same features.
@@ -3903,7 +5289,7 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Would count against it:** First-funder clusters remain precise despite independent users of shared services, or behavior adds no ownership information beyond service patterns.
 
-**Main confounds:** Circular labels from the detector itself, class-revealing contracts, balance or timestamp artifacts, confusing automation with harmful coordination.
+**Main confounds:** Circular labels from the detector itself, class-revealing contracts, balance or timestamp artifacts, confusing automation with harmful coordination. Shared NAT, hosted-node services, and a rotated node key must remain possible benign explanations.
 
 **Framing / first-test class:** boundary-test / offline.
 
@@ -3913,11 +5299,14 @@ API tests need matched inference and communication budgets. Training tests need 
 
 - [[xiong-2026-can]] — [Can Trustless Agents Be Trusted? An Empirical Study of the ERC-8004 Decentralized AI Agent Ecosystem](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/xiong-2026-can.md). Shared-funder heuristic is a measurement approach, not verified ownership ground truth. Catalogue depth: full.
 - [[bartnicki-2026-compression]] — [Compression-Based Behavioral Similarity for Open-World Sybil Discovery on Ethereum](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bartnicki-2026-compression.md). Behavioral grammar and label-leakage controls supply relevant baselines. Catalogue depth: full.
+- [[eisenbarth-2022-ethereum]] — [Ethereum's Peer-to-Peer Network Monitoring and Sybil Attack Prevention](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/eisenbarth-2022-ethereum.md). Network identity multiplication has shared-infrastructure explanations; its historical IP thresholds do not establish malicious common ownership. Catalogue depth: skim.
 
 **Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md), [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
 
 <a id="sec-34"></a>
 ### SEC-34 — What disappears when only successful activity is logged?
+
+**Update 2:** revised.
 
 **Question:** How does selective trace loss bias estimates of swarm size and coordination?
 
@@ -3935,7 +5324,7 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Framing / first-test class:** measurement / offline.
 
-**Before promotion:** Complete controlled traces and explicit statements of what cannot be identified under each mask.
+**Before promotion:** Complete controlled traces and explicit statements of what cannot be identified under each mask. Posts-only fraud releases cannot reconstruct propagation edges; keyword-selected Moltbook records cannot establish successful exposure or infection.
 
 **Closest prior and evidence limits:**
 
@@ -3947,6 +5336,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 <a id="sec-35"></a>
 ### SEC-35 — How quickly does an attribution detector expire?
+
+**Update 2:** unchanged.
 
 **Question:** What happens to model and campaign attribution after model, prompt, or scaffold updates?
 
@@ -3977,6 +5368,8 @@ API tests need matched inference and communication budgets. Training tests need 
 <a id="sec-36"></a>
 ### SEC-36 — Detect coordination with less identifying telemetry
 
+**Update 2:** unchanged.
+
 **Question:** How much useful coordination detection survives when detailed identifiers and raw message content are removed?
 
 **Candidate hypothesis:** Unreviewed hunch: Coarse timing and task-category aggregates retain some campaign-level signal but fail on benign synchronized teams unless the detector explicitly models shared schedules.
@@ -4003,21 +5396,717 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md).
 
+<a id="sec-50"></a>
+### SEC-50 — A detector that isolates nodes changes the evidence
+
+**Update 2:** new.
+
+**Question:** Does a graph monitor still identify useful interventions once isolation changes who can communicate and finish the task?
+
+**Candidate hypothesis:** Unreviewed hunch: The best static anomaly classifier is not always the best live isolation policy, because false isolation removes legitimate expertise and also changes later observable traces.
+
+**How to test:** Randomize complete authorized synthetic communities to no action, frozen-detector isolation, utility-aware isolation, or random isolation at the same action budget. Keep an offline replay evaluation on the original unmodified trace as a separate comparison. Vary whether suspicious nodes hold unique legitimate evidence. Analyze independent community-task episodes and report actions assigned, not only nodes surviving to the final trace.
+
+**Comparison:** Static classification scores, random removals, and evaluator-known faulty-node isolation as a privileged ceiling.
+
+**Measurements:** final task accuracy; harmful onward transmissions; honest expertise lost; classification-action ranking disagreement; total compute.
+
+**Would count against it:** Static detector rankings predict live safety-utility rankings across held-out graphs and evidence assignments, with no meaningful false-isolation cost.
+
+**Main confounds:** Evaluating a monitor on labels generated by itself, free oracle graph visibility, treating post-isolation survivors as a random sample.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** Full monitor implementation and training-data audit; equal monitoring/decision budgets and held-out task graphs. AgentsNet is a possible substrate, but isolation hooks and the monitor must be implemented; its synchronous delivery is not a real-network timing model.
+
+**Closest prior and evidence limits:**
+
+- [[mateo-torrejon-2026-gammaf]] — [GAMMAF: A Common Framework for Graph-Based Anomaly Monitoring Benchmarking in LLM Multi-Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mateo-torrejon-2026-gammaf.md). Live graph-monitor remediation already exists, so this is a decision-quality boundary test. Catalogue depth: abstract.
+- [[gh-floriangroetschla-agentsnet]] — [AgentsNet: benchmark of LLM agents on a graph solving distributed-computing tasks (colouring, matching, leader election, consensus, vertex cover) by synchronous message passing](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-floriangroetschla-agentsnet.md). Concrete synchronous graph-task harness with task scoring; the cataloguing lane ran one coloring example, but no security intervention was run here. Catalogue depth: ran.
+- [[aronow-2013-estimating]] — [Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/aronow-2013-estimating.md). Interference and policy assignment determine the causal quantity. Catalogue depth: skim.
+
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md).
+
+<a id="agent-budgets"></a>
+## Agent budgets and resource allocation
+
+<a id="bud-01"></a>
+### BUD-01 — Visible budgets in private and shared pools
+
+**Update 2:** new.
+
+**Question:** Does a remaining-budget display help private accounts but accelerate exhaustion of a shared pool?
+
+**Candidate hypothesis:** Under pressure, visibility improves private-account efficiency but induces earlier spending and lower group utility in a shared pool.
+
+**How to test:** Randomize complete synthetic task episodes in a hidden/visible countdown by private/shared allocation factorial. Keep aggregate root cap, models, task evidence and action prices identical; private accounts initially receive equal shares. Use the same neutral status-message footprint in hidden arms. Cross decomposable and sequential tasks, randomize activation order, and pair world seeds. Score each whole episode once; individual requests are correlated observations.
+
+**Comparison:** Hidden private accounts, hidden shared pool, and a single solver with the same aggregate cap.
+
+**Measurements:** Verified utility; First-quarter spend share; Rejected requests; Unused balance at stopping; Spend concentration.
+
+**Would count against it:** Visibility does not worsen shared-pool utility or accelerate spending relative to its private-account effect at the prespecified pressure range.
+
+**Main confounds:** Pooling changes feasible transfers as well as incentives. Countdown messages consume context; meter their overhead. Early spending can be efficient on some tasks.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** B1 expansion: specify root-cap accounting, optimal task cost and a utility margin before choosing pressure levels.
+
+**Closest prior and evidence limits:**
+
+- [[liu-2025-budget]] — [Budget-Aware Tool Use Enables Effective Agent Scaling](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2025-budget.md). Single-agent budget tracking supplies a visibility precedent, not a pooling result. Catalogue depth: skim.
+- [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/paliskara-2026-worse.md). Direct shared API-budget coordination precedent; not this visibility factorial. Catalogue depth: full.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-02"></a>
+### BUD-02 — Which parts of peer spending should be visible?
+
+**Update 2:** new.
+
+**Question:** Is total pool balance enough for coordination, or does naming each worker's spending change behavior?
+
+**Candidate hypothesis:** Individual spending displays increase early spending imitation without improving allocation when peers have no useful cost differences.
+
+**How to test:** Randomize independent group episodes to own balance only, aggregate pool balance, or aggregate plus named peer spending. Keep true pool, task progress indicators, token footprint and action opportunities fixed. Cross homogeneous workers with a separate known-cost heterogeneous stratum. Shuffle display row order and neutral identities. Charge all monitoring costs; compare trajectories as repeated measurements within an episode, never as independent agents.
+
+**Comparison:** An anonymous aggregate ledger and an equal-share scheduler with the same hard cap.
+
+**Measurements:** Useful completions; Early spending slope; Response to peer spend; Allocation regret; Monitoring tokens.
+
+**Would count against it:** Named peer spending improves utility in homogeneous groups without increased waste, or produces no incremental spending response beyond the aggregate balance.
+
+**Main confounds:** Shared task progress can justify correlated spending. Identifiable capability information must be held constant outside the stated heterogeneity manipulation.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** B1/B4 expansion: define waste against a task validator and a cost floor, separately from equal spending.
+
+**Closest prior and evidence limits:**
+
+- [[anthropic-2026-patterns]] — [Patterns and problems in emerging multiagent systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/anthropic-2026-patterns.md). Public-board interactions motivate exposure controls; vendor examples do not establish a spending effect. Catalogue depth: full.
+- [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/paliskara-2026-worse.md). Shared-resource teams make coordination overhead a relevant comparator. Catalogue depth: full.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-03"></a>
+### BUD-03 — Displayed balance versus the enforced balance
+
+**Update 2:** new.
+
+**Question:** Does a misleading remaining-budget display alter collective pacing beyond its effect on a single solver?
+
+**Candidate hypothesis:** An understated display increases premature stopping; an overstated display increases rejected action attempts, with larger effects in interacting groups.
+
+**How to test:** Randomize complete synthetic episodes to displays of 0.5, 1 or 2 times the true remaining balance, crossed with single solver or communicating team. Hold aggregate enforced resources, evidence and action prices fixed. Apply the multiplier consistently after each accepted charge, and meter communications. Predefine stopping opportunities and include solvable tasks near the cap. Block on world seed and model; analyze the population-by-display interaction.
+
+**Comparison:** Accurate displays in each population condition and a hidden-display sensitivity arm.
+
+**Measurements:** Incomplete stops with balance left; Rejected requested cost; Validated output; Exhaustion time; Billed spend.
+
+**Would count against it:** Display multipliers do not shift the predicted stopping and rejection outcomes, or team effects are no larger than the matched single-solver effects.
+
+**Main confounds:** Hard enforcement prevents actual overspend. Distinguish attempted requests from accepted charges, and model-visible task budget from context capacity.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** B5 expansion: validate the metering proxy and specify completion credit for interrupted actions before running agents.
+
+**Closest prior and evidence limits:**
+
+- [[lin-2026-bagen]] — [BAGEN: Are LLM Agents Budget-Aware?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2026-bagen.md). Abstract reports miscalibrated remaining-cost forecasts; not misleading displays in populations. Catalogue depth: abstract.
+- [[cognition-2025-rebuilding]] — [Rebuilding Devin for Claude Sonnet 4.5: Lessons and Challenges](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/cognition-2025-rebuilding.md). Context-anxiety engineering anecdote motivates a contrast but provides no controlled effect estimate. Catalogue depth: full.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-04"></a>
+### BUD-04 — Context anxiety or spending anxiety?
+
+**Update 2:** new.
+
+**Question:** Do agents respond differently to context-window headroom and remaining action budget?
+
+**Candidate hypothesis:** Low displayed context headroom mainly changes summarization and early wrap-up, whereas low displayed action budget mainly reduces tool exploration.
+
+**How to test:** Randomize whole multi-step task episodes in a displayed-context-headroom by displayed-spend-balance factorial, while actual context capacity and hard root budget remain constant and sufficient. Use truthful common labels for the two resource types, with experimentally varied numeric signals. Hold task history content, output allowance and tool prices fixed. Include a single-agent replication before teams; randomize worlds, not individual turns. Charge summaries and tool results.
+
+**Comparison:** Accurate dual displays and an information-matched display containing only the action budget.
+
+**Measurements:** Summarization frequency; Tool exploration depth; Premature final answers; Task success; Spent resources.
+
+**Would count against it:** The two displays have indistinguishable effects on both summarization and exploration, or low context signals do not selectively increase wrap-up.
+
+**Main confounds:** Provider countdown features and prompt-based displays are different interventions. Keep model/version fixed; actual truncation would create an information-loss confound.
+
+**Framing / first-test class:** measurement / api-small.
+
+**Before promotion:** B5 expansion: implement separable counters and predefine observable wrap-up behavior without inferring subjective anxiety.
+
+**Closest prior and evidence limits:**
+
+- [[anthropic-2026-context]] — [Context windows](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/anthropic-2026-context.md). Documents context-awareness signals without a controlled behavioral comparison. Catalogue depth: full.
+- [[cognition-2025-rebuilding]] — [Rebuilding Devin for Claude Sonnet 4.5: Lessons and Challenges](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/cognition-2025-rebuilding.md). Reports context anxiety anecdotally. Catalogue depth: full.
+- [[lin-2026-bagen]] — [BAGEN: Are LLM Agents Budget-Aware?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2026-bagen.md). Separates internal computation from external action costs; not the same resource as context headroom. Catalogue depth: abstract.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-05"></a>
+### BUD-05 — Use cost forecasts to release stranded budget
+
+**Update 2:** new.
+
+**Question:** Can calibrated completion-cost forecasts improve shared-budget reallocation without abandoning recoverable tasks?
+
+**Candidate hypothesis:** Forecasts calibrated on separate worlds support better stop-or-continue decisions than raw self-estimates at the same overall budget.
+
+**How to test:** Randomize complete task portfolios to raw worker cost intervals, empirically calibrated intervals, or a fixed stopping rule. Use an independent calibration set, frozen thresholds and held-out task families. A common allocator reallocates released balance to pending tasks using only online observations. Fix root cap and charge interval generation plus allocation calls. Validate stopped tasks through separately labelled evaluation replays; replay outcomes never guide the online allocator.
+
+**Comparison:** Equal shares with fixed cutoffs and an offline clairvoyant bound labelled as unavailable to deployment.
+
+**Measurements:** Portfolio successes; Interval coverage; Recoverable tasks abandoned; Resources rescued; Forecast overhead.
+
+**Would count against it:** Calibrated forecasts improve coverage but fail to improve portfolio success, or gain only by exceeding the matched decision-cost allowance.
+
+**Main confounds:** Success after a larger replay budget is not proof that the original allocation was sufficient. Calibration may fail across task families or model changes.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** B1/B5 expansion: define cost-to-completion labels for censored failures and freeze the allocation rule before evaluation.
+
+**Closest prior and evidence limits:**
+
+- [[lin-2026-bagen]] — [BAGEN: Are LLM Agents Budget-Aware?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2026-bagen.md). Defines progressive budget estimation and reports remaining calibration limits. Catalogue depth: abstract.
+- [[ding-2026-calibrate]] — [Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ding-2026-calibrate.md). Calibration before cost-aware exploration is prior art in a different allocation setting. Catalogue depth: skim.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-06"></a>
+### BUD-06 — Do quotas cause unnecessary spawning?
+
+**Update 2:** new.
+
+**Question:** Do agents create extra identities when each identity unlocks a new claim on a fixed shared pool?
+
+**Candidate hypothesis:** Per-identity quotas increase spawning and pool capture beyond task-driven delegation, especially under tight root budgets.
+
+**How to test:** Randomize independent sandboxed group episodes to no spawning, spawning under root-only metering, or spawning with stated per-identity claim limits. Keep the same global cap in every arm; extra identities never create real resources. Cross quota pressure with tasks having high or low useful parallelism. Charge spawn setup and child inference, and match goal incentives and tool access. Compare spawned count with the root-only delegation arm on paired worlds.
+
+**Comparison:** Root-only delegation estimates task-driven spawning; a fixed worker roster provides a scheduling reference.
+
+**Measurements:** Excess identities; Verified child contributions; Share of pool captured; Other workers' completion; Spawn cost.
+
+**Would count against it:** Identity quotas do not increase excess spawning or resource capture relative to root-only delegation at the tested pressure levels.
+
+**Main confounds:** Extra workers can be useful. Transcripts mentioning quotas are supplementary evidence, not proof of intent; model-family differences do not isolate reasoning.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** B2 expansion: create a toy claim allocator with an unchanged root cap and quantify useful parallelism independently.
+
+**Closest prior and evidence limits:**
+
+- [[yokoo-2004-effect]] — [The effect of false-name bids in combinatorial auctions: new fraud in internet auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yokoo-2004-effect.md). False-name bidding establishes a mechanism-design concern, not observed LLM spawning. Catalogue depth: skim.
+- [[anthropic-2025-how]] — [How we built our multi-agent research system](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/anthropic-2025-how.md). Reports over-spawning in engineering practice without a quota manipulation. Catalogue depth: full.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-07"></a>
+### BUD-07 — Discovering a quota rule
+
+**Update 2:** new.
+
+**Question:** Does making per-identity quota information discoverable change spontaneous delegation relative to stating it explicitly?
+
+**Candidate hypothesis:** Explicit quota information increases quota-responsive spawning sooner than discoverable information; incidental discovery produces a delayed increase.
+
+**How to test:** Randomize complete sandbox episodes to a stated quota rule, a rule available through an ordinary help tool, or no informative rule disclosure. The actual per-identity allocation and global hard cap are identical. Randomize a benign task step that exposes the help entry independently of workload, without suggesting an exploit. Hold tool interface, objectives and baseline delegation options fixed; charge help calls and child work. Analyze exposure assignment as the primary contrast.
+
+**Comparison:** Explicit disclosure and the same task under a root-only rule; no-information episodes remain in the denominator.
+
+**Measurements:** Spawn timing; Excess delegation; Help exposure; Useful output; Pool capture.
+
+**Would count against it:** Rule disclosure and randomized incidental exposure do not change spawning or capture, or changes are fully explained by useful task decomposition.
+
+**Main confounds:** Conditioning only on agents that read help would select on behavior. This tests a bounded synthetic incentive, not covert real-service probing.
+
+**Framing / first-test class:** speculative / api-small.
+
+**Before promotion:** B2 expansion: separate the randomized exposure intervention from voluntary help-seeking and keep all effects within the simulator.
+
+**Closest prior and evidence limits:**
+
+- [[yokoo-2007-making]] — [Making VCG More Robust in Combinatorial Auctions via Submodular Approximation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yokoo-2007-making.md). False-name-resistant mechanism theory supplies context, not a rule-discovery result. Catalogue depth: full.
+- [[hu-2026-dissociative]] — [Dissociative Identity: Language Model Agents Lack Grounding for Reputation Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hu-2026-dissociative.md). Position paper questions identity-based governance; it is not a theorem forbidding Sybil-proof reputation. Catalogue depth: abstract.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-08"></a>
+### BUD-08 — Spawn fees versus lineage budgets
+
+**Update 2:** new.
+
+**Question:** Which quota policy suppresses wasteful spawning while preserving valuable parallel work?
+
+**Candidate hypothesis:** Lineage accounting removes quota-driven spawning with less damage to useful high-parallelism tasks than a uniform per-spawn fee.
+
+**How to test:** Randomize independent group episodes to per-identity quotas, several prespecified spawn fees, or a shared lineage allowance. Use the same root cap, initial principal allocations and actual inference prices. Fees consume or reserve part of that allowance according to one fixed rule, never creating extra budget. Cross low and high parallelism tasks and randomize initial role assignment. Evaluate task outcomes and extra identities jointly; do not infer effectiveness from spawn count alone.
+
+**Comparison:** Root-only unconstrained delegation and no spawning, both under the same aggregate cap.
+
+**Measurements:** Useful output; Unproductive spawn cost; Completion of other principals' tasks; Parallelism retained; Unused balance.
+
+**Would count against it:** Lineage accounting causes equal or greater useful-output loss than the fee policy while offering no additional reduction in wasteful delegation.
+
+**Main confounds:** Lineage is supplied ground truth here. Inferring operator identity is a separate security question; fees may tax helpful workers more than wasteful ones.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** B2 expansion: preregister fee ranges and a task-based excess-spawn definition; do not treat the security mechanism as new.
+
+**Closest prior and evidence limits:**
+
+- [[zhu-2026-fault]] — [Fault-Tolerant Budget Conservation in Distributed Multi-Agent Delegation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhu-2026-fault.md). Escrow lineage constrains descendant resources under explicit system assumptions; not an incentive study. Catalogue depth: skim.
+- [[yokoo-2004-effect]] — [The effect of false-name bids in combinatorial auctions: new fraud in internet auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yokoo-2004-effect.md). False-name mechanisms motivate evaluating both manipulation resistance and efficiency. Catalogue depth: skim.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-09"></a>
+### BUD-09 — Safe escrow that still gets work done
+
+**Update 2:** new.
+
+**Question:** How much useful work is lost when safe preallocated budgets cannot move during a partition?
+
+**Candidate hypothesis:** Demand-informed preallocation improves deadline utility over equal escrow shares under uneven demand, but loses its advantage when demand forecasts shift.
+
+**How to test:** Randomize independent simulated workload episodes to equal preallocation, forecast-based preallocation, or a connected central allocator. Inject paired crash and partition schedules crossed with forecast error. Every distributed arm uses the same already-specified conservative reservation and settlement rules; uncertain effects remain charged. Hold issued budget, deadlines and fault schedule fixed. Model forecast and reallocation overhead explicitly, and score whole workloads rather than individual crash events.
+
+**Comparison:** Equal safe escrow and a connected scheduler whose availability advantage is explicitly labelled.
+
+**Measurements:** Completed task value; Idle reserved credits; Unfinished high-value work; Recovery delay; Conservation violations.
+
+**Would count against it:** Forecast-based escrow does not improve useful completion under stable heterogeneous demand, or remains equally effective despite large demand shifts.
+
+**Main confounds:** Conservation is a prerequisite, not evidence of good allocation. Crash-fault guarantees do not establish Byzantine resistance; simulated costs may omit real billing semantics.
+
+**Framing / first-test class:** boundary-test / offline.
+
+**Before promotion:** B2/B3 expansion: implement or obtain an auditable safe baseline; published executable artifacts and provider-cost mapping remain unresolved.
+
+**Closest prior and evidence limits:**
+
+- [[zhu-2026-fault]] — [Fault-Tolerant Budget Conservation in Distributed Multi-Agent Delegation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhu-2026-fault.md). Direct conservation and partition-preallocation prior; this card tests allocation usefulness instead. Catalogue depth: skim.
+- [[chevaleyre-2006-issues]] — [Issues in Multiagent Resource Allocation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/chevaleyre-2006-issues.md). Resource-allocation survey supplies distinct efficiency and fairness objectives. Catalogue depth: skim.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-10"></a>
+### BUD-10 — Peers, coordinator, equal shares or auction?
+
+**Update 2:** new.
+
+**Question:** Which allocation mechanism wins when every decision consumes the same limited root budget?
+
+**Candidate hypothesis:** A coordinator or equal shares outperform peer bargaining on homogeneous tasks; a contract-net auction helps chiefly when worker costs differ.
+
+**How to test:** Randomize complete task portfolios to peer negotiation, one coordinator, fixed equal shares, or announce-bid-award allocation. Cross homogeneous/heterogeneous worker costs and decomposable/sequential tasks. Fix aggregate tokens, tool credits, deadlines and available task evidence; charge bids, negotiation, coordination and retries to the cap. Randomize presentation and activation order, and include all failed allocations. Independent portfolios are the analysis units.
+
+**Comparison:** A fixed equal split and an offline optimal allocation computed from known task costs, clearly labelled as a diagnostic ceiling.
+
+**Measurements:** Validated utility; Allocation overhead; Duplicate work; Idle credits; Distance from feasible optimum.
+
+**Would count against it:** Peers match or beat simpler rules under homogeneous conditions, or auctions improve just as much without cost heterogeneity as with it.
+
+**Main confounds:** Private information and decision authority differ across architectures. Report common-goal and multiple-principal settings separately; one-model problem allocation is not peer negotiation.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** B3 expansion: specify information symmetry, action authority and every mechanism's charged decision work before selection.
+
+**Closest prior and evidence limits:**
+
+- [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/paliskara-2026-worse.md). Direct coordinator/team comparison includes shared API budgets. Catalogue depth: full.
+- [[wang-2026-r3]] — [$R^3$-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wang-2026-r3.md). Studies one model allocating across problems, not bargaining peers. Catalogue depth: skim.
+- [[smith-1980-contract]] — [The Contract Net Protocol: High-Level Communication and Control in a Distributed Problem Solver](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/smith-1980-contract.md). Contract-net allocation is established prior art. Catalogue depth: abstract.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-11"></a>
+### BUD-11 — Can cost bids beat measured capability?
+
+**Update 2:** new.
+
+**Question:** When workers have different task costs, should an allocator trust bids or pay to measure them?
+
+**Candidate hypothesis:** Cheap calibration trials improve allocation under noisy cost bids, but their overhead erases the benefit on small homogeneous portfolios.
+
+**How to test:** Randomize whole heterogeneous-worker portfolios to self-reported bids, charged calibration trials plus bids, or fixed capability metadata. Cross portfolio size and scripted bid-noise levels while keeping worker policies and root cap fixed. Freeze the common assignment algorithm so the intervention is evidence quality, not allocator skill. Calibration tasks must be disjoint from evaluation tasks; their costs count even when the resulting allocation fails.
+
+**Comparison:** Equal shares and an assignment using true synthetic worker costs as an explicitly unavailable oracle.
+
+**Measurements:** Completed value; Bid error; Calibration cost; Allocation regret; Failures from underestimation.
+
+**Would count against it:** Calibration fails to improve net utility in large heterogeneous portfolios, or helps equally despite removing heterogeneity and bid noise.
+
+**Main confounds:** Scripted noisy bids test robustness, not emergent deception. Capability metadata must not reveal hidden task solutions; observed speed may differ from verified competence.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** B3 expansion: define a worker capability generator, bid-cost units and a separate calibration pool with charged costs.
+
+**Closest prior and evidence limits:**
+
+- [[amayuelas-2025-self]] — [Self-Resource Allocation in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/amayuelas-2025-self.md). Explicit capability information and orchestrator/planner allocation are direct precedents. Catalogue depth: full.
+- [[bianchi-2024-how]] — [How Well Can LLMs Negotiate? NegotiationArena Platform and Analysis](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bianchi-2024-how.md). Negotiation studies motivate controlling framing and order; they do not validate truthful compute bids. Catalogue depth: full.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-12"></a>
+### BUD-12 — Replan on events or every action?
+
+**Update 2:** new.
+
+**Question:** Does event-triggered budget reallocation preserve coordination quality while reducing managerial cost?
+
+**Candidate hypothesis:** Event-triggered replanning improves net completion over per-action orchestration when changes are sparse, but loses under rapid unobserved changes.
+
+**How to test:** Randomize independent project episodes to fixed allocation, event-triggered planning or per-action orchestration. Cross task-change frequency and public progress-signal delay. All arms receive identical worker capability metadata and have the same total inference/tool cap and deadline; charge monitoring and manager calls. Use a frozen event rule tuned only on pilot worlds, and pair evaluation world schedules without sharing agent histories.
+
+**Comparison:** Fixed equal roles and a per-action manager with identical observations and action authority.
+
+**Measurements:** Verified milestones; Manager fraction of budget; Reaction delay; Stale assignments; Net utility.
+
+**Would count against it:** Event-triggered planning has no utility advantage under sparse changes after charging overhead, or does not degrade relative to frequent planning under the specified hidden changes.
+
+**Main confounds:** Poor trigger choice can masquerade as a general architecture failure. Concurrent execution and manager capability must be fixed or separately stratified.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** B3 expansion: define which events are observable and how each unfinished action is charged when a replan interrupts it.
+
+**Closest prior and evidence limits:**
+
+- [[amayuelas-2025-self]] — [Self-Resource Allocation in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/amayuelas-2025-self.md). Planner/orchestrator comparisons are direct prior; their cost analysis is not this hard-cap experiment. Catalogue depth: full.
+- [[dang-2025-multi]] — [Multi-Agent Collaboration via Evolving Orchestration](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/dang-2025-multi.md). Learned orchestration with cost penalties is adjacent; sequential activation differs from concurrent workers. Catalogue depth: skim.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-13"></a>
+### BUD-13 — Difficulty-aware allocation without hindsight
+
+**Update 2:** new.
+
+**Question:** Can an online allocator improve over equal problem budgets without using retrospective success information?
+
+**Candidate hypothesis:** A small charged diagnostic stage improves portfolio success when problem difficulty varies, but simple equal allocation wins when diagnostic signals are weak.
+
+**How to test:** Randomize independent generated problem portfolios to equal allocation, model-only allocation, or a fixed diagnostic-then-allocate policy. Cross difficulty dispersion and diagnostic informativeness using separately generated families. Randomize problem order, keep total root tokens fixed, and charge the diagnostic attempts. Freeze the allocation rule using separate development portfolios. Evaluate all sampled portfolios; successful pilot traces must not be selected into the test set.
+
+**Comparison:** Equal allocation and a hindsight best allocation reported only as a nondeployable bound.
+
+**Measurements:** Portfolio success count; Diagnostic cost; Order sensitivity; Allocation regret; Unsolved tasks abandoned.
+
+**Would count against it:** Diagnostics provide no benefit with informative signals and varied difficulty, or outperform equal shares equally when their signal is randomized.
+
+**Main confounds:** Offline optimal allocation from observed successful runs can overstate attainable performance. Problems share a budget, so they are not independent replicates.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** B3 expansion: define held-out difficulty families and measure the diagnostic policy's information without access to evaluation answers.
+
+**Closest prior and evidence limits:**
+
+- [[wang-2026-r3]] — [$R^3$-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wang-2026-r3.md). Direct shared-budget problem-allocation precedent with retrospective oracle limitations. Catalogue depth: skim.
+- [[ding-2026-calibrate]] — [Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ding-2026-calibrate.md). Cost-aware exploration after calibration motivates charging information acquisition. Catalogue depth: skim.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-14"></a>
+### BUD-14 — Divide work through a ledger alone
+
+**Update 2:** new.
+
+**Question:** Can visible subtask claims reduce duplicate work without a chat channel?
+
+**Candidate hypothesis:** A public claim ledger improves completion on decomposable tasks chiefly by reducing duplicated effort, with little benefit on sequential tasks.
+
+**How to test:** Randomize independent synthetic project episodes to private ledgers, a public spending ledger, or a public spending-plus-subtask-claim ledger. Disable direct messages while retaining identical tool observations and action authority. Cross decomposable and sequential worlds, randomize first access and worker identifiers, and cap total inference plus tool use. Charge ledger reads and writes, and allow conflicting claims so successful coordination is measured rather than guaranteed by a lock.
+
+**Comparison:** Private records and a deterministic central task assignment charged at its implementation cost.
+
+**Measurements:** Distinct verified subtasks; Duplicate effort; Claim conflicts; Idle claimed tasks; Utility per root budget.
+
+**Would count against it:** The claim ledger fails to reduce duplication or improve net completion in decomposable tasks, or gains arise only because access order grants one worker extra turns.
+
+**Main confounds:** No chat does not mean no communication: the public environment is a channel. Task labels or locking semantics can perform the allocation mechanically.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** B4 expansion: design claim semantics that reveal intent without enforcing exclusive assignment and define duplicate useful work.
+
+**Closest prior and evidence limits:**
+
+- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2024-strategic.md). Public outcomes support coordination in an economic game, not a compute-ledger test. Catalogue depth: full.
+- [[anthropic-2026-patterns]] — [Patterns and problems in emerging multiagent systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/anthropic-2026-patterns.md). Public-board vendor examples motivate distinguishing environmental observation from direct messages. Catalogue depth: full.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-15"></a>
+### BUD-15 — Do peer spending norms increase waste?
+
+**Update 2:** new.
+
+**Question:** Does observing another worker's higher spending increase an agent's own cost when its task has not become harder?
+
+**Candidate hypothesis:** A randomized upward shift in displayed peer spending raises own spending without a corresponding gain in independently scored task utility.
+
+**How to test:** Randomize complete groups to private or public spending ledgers. Within public groups assign a scripted peer a higher or lower displayed spending history drawn from matched valid runs, while keeping focal tasks, true remaining pool, available actions and hard cap identical. Cross slack and tight budgets. Report episode-level intent-to-exposure contrasts; trajectories and individual workers are repeated observations. Keep task claims and evidence unchanged.
+
+**Comparison:** Accurate private accounting and an aggregate-only display that removes individual spending norms.
+
+**Measurements:** Focal spending change; Verified utility; Cost above task floor; Pool exhaustion; Spend convergence.
+
+**Would count against it:** Higher displayed peer spending does not increase waste, or increased spending yields proportionate independently verified utility rather than padding.
+
+**Main confounds:** Shared shocks can create honest convergence, hence randomized exposure. Spending imitation alone does not establish agreement, intent, or collusion against a principal.
+
+**Framing / first-test class:** speculative / api-small.
+
+**Before promotion:** B4 expansion: fix a utility function independent of spending and create coherent synthetic displays with unchanged true balances.
+
+**Closest prior and evidence limits:**
+
+- [[fish-2024-algorithmic]] — [Algorithmic Collusion by Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/fish-2024-algorithmic.md). Pricing collusion is an adjacent outcome, not evidence of budget padding. Catalogue depth: abstract.
+- [[nakamura-2026-colosseum]] — [Colosseum: Auditing Collusion in Cooperative Multi-Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/nakamura-2026-colosseum.md). Collusion auditing motivates measuring principal utility and behavior rather than inferring agreement from talk. Catalogue depth: abstract.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-16"></a>
+### BUD-16 — Authority, labels and asymmetric spending rights
+
+**Update 2:** new.
+
+**Question:** Are budget imbalances driven by a leader label or by privileged access to the pool?
+
+**Candidate hypothesis:** Giving one worker priority spending rights shifts resource capture more than calling that worker the leader, and can reduce total task utility.
+
+**How to test:** Randomize independent synthetic group episodes in a neutral/leader role-label by equal/priority-spending-rights factorial. Hold models, observations, task difficulty and aggregate root cap fixed. Rotate which worker gets the role and counterbalance activation order within each rights regime. Give all workers the same verified budget ledger; do not also manipulate misinformation. Score whole groups and retain both high- and low-demand tasks.
+
+**Comparison:** Equal rights with neutral labels and a deterministic fair scheduler with the same cap.
+
+**Measurements:** Privileged worker's spend share; Total verified utility; Unfinished other tasks; Fairness across principals; Unused funds.
+
+**Would count against it:** Priority rights do not increase capture or reduce utility, or labels explain the effect fully when rights are held fixed.
+
+**Main confounds:** More spending can reflect greater legitimate need, so randomize role assignment independently of demand. A renewable commons and a finite compute pool have different dynamics.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** B1/B3 expansion: specify enforceable priority rights and inspect role-label controls in the closest prior before promotion.
+
+**Closest prior and evidence limits:**
+
+- [[borah-2026-bosses]] — [Bosses, Kings, and the Commons: Cooperation Under Power Asymmetry in LLM Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/borah-2026-bosses.md). Direct asymmetric-commons prior; finite compute spending is a domain extension. Catalogue depth: skim.
+- [[piatti-2024-cooperate]] — [Cooperate or Collapse: Emergence of Sustainable Cooperation in a Society of LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/piatti-2024-cooperate.md). Renewable commons cooperation motivates group-level utility, not a compute-budget prediction. Catalogue depth: abstract.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-17"></a>
+### BUD-17 — Keep enough budget to finish and verify
+
+**Update 2:** new.
+
+**Question:** Does protecting a small finalization reserve improve completed work under a hard shared cap?
+
+**Candidate hypothesis:** A protected reserve increases validated deliverables near exhaustion, but wastes useful exploration budget when final checks are cheap or unnecessary.
+
+**How to test:** Randomize complete project episodes to a freely shared pool, a fixed finalization reserve, or a dynamically released reserve triggered by observable completion progress. Cross tasks with expensive/cheap final validation and tasks whose exploration usually fails. Keep total issued budget and validator accuracy identical; reserves come out of the production pool. Freeze release rules on separate pilot worlds and meter all finalization, bookkeeping and abandoned work.
+
+**Comparison:** Equal per-stage allocation and the unreserved pool; an offline best split is a diagnostic ceiling only.
+
+**Measurements:** Validated deliverables; Exploration success; Unspent reserve; Incomplete near-finished work; Total cost.
+
+**Would count against it:** Reserves fail to improve validated completion near the cap, or their predicted opportunity cost is absent across low-value finalization tasks.
+
+**Main confounds:** This is scheduling a terminal resource, not evidence of spontaneous public-good cooperation. A validator unavailable to ordinary workers would change capabilities.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** B1/B3 expansion: specify observable finish conditions and a realistic validator cost; keep distinct from SOC-28's social verification incentives.
+
+**Closest prior and evidence limits:**
+
+- [[liu-2025-budget]] — [Budget-Aware Tool Use Enables Effective Agent Scaling](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2025-budget.md). Tool-budget tracking motivates controlling early stopping and resource use across stages. Catalogue depth: skim.
+- [[lin-2026-bagen]] — [BAGEN: Are LLM Agents Budget-Aware?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2026-bagen.md). Remaining-cost estimation motivates a progress-based release rule but does not validate it. Catalogue depth: abstract.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-18"></a>
+### BUD-18 — Tokens, money or a resource vector?
+
+**Update 2:** new.
+
+**Question:** Does the resource unit used by an allocator change the task portfolio it completes?
+
+**Candidate hypothesis:** A vector of token, tool and monetary limits improves feasible completion over a token-only heuristic when prices and tool costs vary.
+
+**How to test:** Randomize independent workload portfolios to allocation using token counts alone, estimated dollars alone, or explicit resource vectors. All arms operate under the same real vector of enforced limits and receive the same raw price table; only the planning representation differs. Cross homogeneous costs with heterogeneous model tiers and tools. Charge estimation and allocation work, and compare results within each resource envelope rather than declaring unequal budgets matched.
+
+**Comparison:** A deterministic feasible greedy allocator using the same price information and a known-cost optimization ceiling.
+
+**Measurements:** Feasible task value; Which constraint binds; Rejected requested resources; Stranded resources; Planning overhead.
+
+**Would count against it:** Vector-aware planning does not improve feasible value in heterogeneous-cost worlds, or apparent gains disappear when decision overhead is charged.
+
+**Main confounds:** Token counts are not interchangeable with billed cost, context occupancy or latency. A richer display can increase cognitive load; equal raw information matters.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** B3/B5 expansion: fix reproducible synthetic prices and define admission for each resource dimension before comparing planners.
+
+**Closest prior and evidence limits:**
+
+- [[zhu-2026-fault]] — [Fault-Tolerant Budget Conservation in Distributed Multi-Agent Delegation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhu-2026-fault.md). Resource-vector accounting is existing systems prior, not proof of allocator quality. Catalogue depth: skim.
+- [[liu-2025-costbench]] — [CostBench: Evaluating Multi-Turn Cost-Optimal Planning and Adaptation in Dynamic Environments for LLM Tool-Use Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2025-costbench.md). Synthetic costed tool planning supplies exact-cost evaluation ideas. Catalogue depth: abstract.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-19"></a>
+### BUD-19 — Advisory targets inside a hard cap
+
+**Update 2:** new.
+
+**Question:** Can an advisory target with bounded finishing room produce better outcomes than abrupt truncation at that target?
+
+**Candidate hypothesis:** A lower advisory target plus reserved finishing room reduces incomplete final actions compared with an abrupt cutoff at the same planning target.
+
+**How to test:** Randomize whole agent-loop episodes to an advisory target with a bounded grace reserve, a hard inner cutoff at that target with remaining resources reallocatable, or no inner target. Keep the same aggregate outer cap across all arms, and count every accepted action against it. Cross short and long atomic final actions. Randomize task worlds and charge all target messages; report unused or reallocated grace funds explicitly.
+
+**Comparison:** An outer-cap-only controller and a deterministic reserve policy with identical total resources.
+
+**Measurements:** Validated completion; Interrupted actions; Unused reserve; Reallocated work value; Attempts beyond target.
+
+**Would count against it:** Advisory pacing with reserved finishing room fails to improve completed actions or net portfolio utility over the hard-target comparator.
+
+**Main confounds:** Advisory exceedance is not a breach of the outer cap. Provider-native signals differ from prompt hints; a per-request output limit is not a whole-loop spending limit.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** B5 expansion: predefine the maximum finishing reservation and select native or emulated signals without conflating them.
+
+**Closest prior and evidence limits:**
+
+- [[anthropic-2026-task]] — [Task budgets](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/anthropic-2026-task.md). Documents advisory loop targets and separate enforced per-request limits; no controlled efficacy estimate. Catalogue depth: full.
+- [[han-2024-token]] — [Token-Budget-Aware LLM Reasoning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/han-2024-token.md). Prompted token-budget behavior motivates checking nonlinear responses to tight targets. Catalogue depth: skim.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-20"></a>
+### BUD-20 — Budget accounting across tools and compaction
+
+**Update 2:** new.
+
+**Question:** Does preserving the correct remaining-budget signal through compaction prevent avoidable stopping or retries?
+
+**Candidate hypothesis:** A correctly carried countdown improves planning relative to reset or double-decremented displays, especially when tool results dominate new context.
+
+**How to test:** Randomize complete multi-step episodes to correct carry-forward, reset-to-total, or double-counted-history budget displays after an identical compaction event. Cross short/long tool-result payloads without changing useful facts. Keep actual root cap, summary content, tool prices and worker model fixed; meter compaction and resumed requests. The episode is the independent unit, with pre/post steps treated as a paired trajectory rather than separate runs.
+
+**Comparison:** Correctly metered uncompacted histories where context allows, and correct carry-forward under the shared compaction policy.
+
+**Measurements:** Premature stopping; Rejected requests; Task completion; Display error; Compaction overhead.
+
+**Would count against it:** Correct accounting provides no completion or pacing advantage, or errors do not matter more when payload-heavy histories amplify the mismatch.
+
+**Main confounds:** History removal changes memory, so summaries must match across display arms. Vendor task-budget counters can differ from billing counters; retain both telemetry streams.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** B5 expansion: implement testable counters and freeze compaction content independently of the displayed balance; provider feature access is optional.
+
+**Closest prior and evidence limits:**
+
+- [[anthropic-2026-task]] — [Task budgets](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/anthropic-2026-task.md). Documents loop counting and carrying remaining budget through client compaction. Catalogue depth: full.
+- [[liu-2025-budget]] — [Budget-Aware Tool Use Enables Effective Agent Scaling](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2025-budget.md). Budget tracking supplies a behavioral precedent, not a compaction test. Catalogue depth: skim.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-21"></a>
+### BUD-21 — Train for a penalty or a strict budget?
+
+**Update 2:** new.
+
+**Question:** Which learned allocation objective transfers better to budget pressures absent from training?
+
+**Candidate hypothesis:** A controller trained with explicit remaining balance and a smooth violation penalty transfers better to tighter caps than one trained only with a terminal overspend cliff.
+
+**How to test:** Train controllers on the same task families and frozen worker pool, randomizing independent training seeds to smooth penalty or terminal cliff objectives, crossed with visible or omitted numeric balance. Match training interactions and tuning budget. Evaluate frozen policies on held-out tasks and tighter/looser caps under identical hard enforcement. Use training seed as the independent unit; evaluation portfolios estimate each policy's performance, not extra independent training replicates.
+
+**Comparison:** A cost-penalized learned controller and a fixed nonlearned allocation rule under the same test cap.
+
+**Measurements:** Feasible test utility; Violation attempts; Unseen-cap performance; Training stability; Worker-call cost.
+
+**Would count against it:** The proposed objective-and-balance combination does not improve held-out feasible utility or reduces it relative to cliff training at the prespecified tighter caps.
+
+**Main confounds:** Joint reward and observation changes need the factorial to identify their effects. A training reward for cheap behavior is not an enforced spending guarantee.
+
+**Framing / first-test class:** extension / training.
+
+**Before promotion:** B3/B5 expansion: audit reward formulas, freeze a modest controller class and allocate genuinely independent training runs before estimating transfer.
+
+**Closest prior and evidence limits:**
+
+- [[jin-2025-controlling]] — [Controlling Performance and Budget of a Centralized Multi-agent LLM System with Reinforcement Learning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/jin-2025-controlling.md). Budget-penalized expert control motivates the terminal-cliff comparator. Catalogue depth: full.
+- [[dang-2025-multi]] — [Multi-Agent Collaboration via Evolving Orchestration](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/dang-2025-multi.md). Learned cost-aware orchestration is prior art; different activation rules require harmonization. Catalogue depth: skim.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="bud-22"></a>
+### BUD-22 — Efficiency and starvation in shared budgets
+
+**Update 2:** new.
+
+**Question:** Can a minimum-service rule improve the least-served principal without destroying collective task value?
+
+**Candidate hypothesis:** A small protected service floor reduces zero-completion principals at modest total-utility cost when cheap tasks otherwise dominate allocation.
+
+**How to test:** Randomize independent multi-principal workload episodes to sum-utility allocation, a fixed minimum-service floor, or equal shares. Cross task-cost inequality and arrival order using known synthetic utilities. Hold total hard cap, worker capabilities and information fixed; charge the allocator and reserve service from the same pool. Freeze floor levels on development workloads, include infeasible-demand worlds, and aggregate uncertainty over workloads rather than principals.
+
+**Comparison:** Equal shares and a feasible Pareto frontier computed from known task costs as an offline reference.
+
+**Measurements:** Total task utility; Worst-principal completion; Zero-service rate; Delay inequality; Unused budget.
+
+**Would count against it:** The service floor does not reduce starvation, or its utility loss exceeds the prespecified acceptable tradeoff even on feasible workloads.
+
+**Main confounds:** Fairness is a chosen objective, not a universal scalar fact. Different principals may have unequal legitimate needs; report the full tradeoff rather than one winner.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** B1/B3 expansion: select a synthetic utility scale, feasibility definition and acceptable service-cost tradeoff through human review.
+
+**Closest prior and evidence limits:**
+
+- [[chevaleyre-2006-issues]] — [Issues in Multiagent Resource Allocation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/chevaleyre-2006-issues.md). Classical allocation distinguishes utilitarian, egalitarian and other welfare criteria. Catalogue depth: skim.
+- [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/paliskara-2026-worse.md). Multi-user shared-resource settings motivate keeping individual and group outcomes separate. Catalogue depth: full.
+
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
 ## Original brief coverage
 
 - [casefile](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/casefile.md): [SOC-32](#soc-32), [SOC-36](#soc-36)
-- [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md): [SOC-01](#soc-01), [SOC-02](#soc-02), [SOC-03](#soc-03), [SOC-04](#soc-04), [SOC-05](#soc-05), [SOC-08](#soc-08), [SOC-11](#soc-11), [SOC-13](#soc-13), [SOC-19](#soc-19), [SOC-35](#soc-35)
+- [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md): [SOC-01](#soc-01), [SOC-02](#soc-02), [SOC-03](#soc-03), [SOC-04](#soc-04), [SOC-05](#soc-05), [SOC-08](#soc-08), [SOC-11](#soc-11), [SOC-13](#soc-13), [SOC-19](#soc-19), [SOC-35](#soc-35), [SOC-38](#soc-38), [SOC-39](#soc-39), [SOC-41](#soc-41), [SOC-42](#soc-42), [SOC-43](#soc-43), [SOC-44](#soc-44)
 - [commons](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/commons.md): [SOC-14](#soc-14), [SOC-26](#soc-26), [SOC-27](#soc-27), [SOC-28](#soc-28)
-- [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md): [SOC-03](#soc-03), [SOC-04](#soc-04), [SOC-13](#soc-13), [SOC-14](#soc-14), [SOC-15](#soc-15), [SOC-16](#soc-16), [SOC-19](#soc-19), [SOC-20](#soc-20), [SOC-35](#soc-35)
-- [culture](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/culture.md): [SOC-12](#soc-12), [SOC-14](#soc-14), [SOC-24](#soc-24), [SOC-25](#soc-25), [SOC-26](#soc-26), [SOC-34](#soc-34)
+- [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md): [SOC-03](#soc-03), [SOC-04](#soc-04), [SOC-13](#soc-13), [SOC-14](#soc-14), [SOC-15](#soc-15), [SOC-16](#soc-16), [SOC-19](#soc-19), [SOC-20](#soc-20), [SOC-35](#soc-35), [SOC-40](#soc-40)
+- [culture](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/culture.md): [SOC-12](#soc-12), [SOC-14](#soc-14), [SOC-24](#soc-24), [SOC-25](#soc-25), [SOC-26](#soc-26), [SOC-34](#soc-34), [SOC-45](#soc-45)
 - [discovery](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/discovery.md): [SOC-36](#soc-36)
-- [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md): [SOC-06](#soc-06), [SOC-07](#soc-07), [SOC-09](#soc-09), [SOC-10](#soc-10), [SOC-11](#soc-11), [SOC-12](#soc-12), [SOC-29](#soc-29), [SOC-30](#soc-30)
-- [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md): [SOC-01](#soc-01), [SOC-02](#soc-02), [SOC-07](#soc-07), [SOC-12](#soc-12), [SOC-13](#soc-13), [SOC-26](#soc-26), [SOC-33](#soc-33)
+- [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md): [SOC-06](#soc-06), [SOC-07](#soc-07), [SOC-09](#soc-09), [SOC-10](#soc-10), [SOC-11](#soc-11), [SOC-12](#soc-12), [SOC-29](#soc-29), [SOC-30](#soc-30), [SOC-40](#soc-40), [SOC-43](#soc-43)
+- [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md): [SOC-01](#soc-01), [SOC-02](#soc-02), [SOC-07](#soc-07), [SOC-12](#soc-12), [SOC-13](#soc-13), [SOC-26](#soc-26), [SOC-33](#soc-33), [SOC-38](#soc-38), [SOC-40](#soc-40), [SOC-41](#soc-41), [SOC-44](#soc-44)
 - [institutions](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/institutions.md): [SOC-20](#soc-20), [SOC-25](#soc-25), [SOC-27](#soc-27), [SOC-28](#soc-28), [SOC-29](#soc-29), [SOC-30](#soc-30)
 - [leadership](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/leadership.md): [SOC-06](#soc-06), [SOC-16](#soc-16), [SOC-17](#soc-17), [SOC-18](#soc-18)
-- [memory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/memory.md): [SOC-21](#soc-21), [SOC-22](#soc-22), [SOC-23](#soc-23), [SOC-24](#soc-24), [SOC-31](#soc-31)
+- [memory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/memory.md): [SOC-21](#soc-21), [SOC-22](#soc-22), [SOC-23](#soc-23), [SOC-24](#soc-24), [SOC-31](#soc-31), [SOC-45](#soc-45)
 - [nca-observatory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/nca-observatory.md): [PHY-17](#phy-17), [PHY-24](#phy-24), [PHY-37](#phy-37), [PHY-38](#phy-38)
-- [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md): [SOC-05](#soc-05), [SOC-08](#soc-08), [SOC-11](#soc-11)
+- [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md): [SOC-05](#soc-05), [SOC-08](#soc-08), [SOC-11](#soc-11), [SOC-39](#soc-39), [SOC-42](#soc-42), [SOC-43](#soc-43), [SOC-45](#soc-45)
 - [regrowth](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/regrowth.md): [SOC-18](#soc-18), [SOC-22](#soc-22), [SOC-23](#soc-23)
 - [telephone](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/telephone.md): [SOC-21](#soc-21), [SOC-31](#soc-31), [SOC-32](#soc-32), [SOC-34](#soc-34)
 - [whistleblowing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/whistleblowing.md): [SOC-10](#soc-10), [SOC-28](#soc-28), [SOC-29](#soc-29)

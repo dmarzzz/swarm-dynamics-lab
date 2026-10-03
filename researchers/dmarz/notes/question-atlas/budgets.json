@@ -1,0 +1,758 @@
+[
+  {
+    "id": "BUD-01",
+    "area": "agent-budgets",
+    "title": "Visible budgets in private and shared pools",
+    "question": "Does a remaining-budget display help private accounts but accelerate exhaustion of a shared pool?",
+    "hypothesis": "Under pressure, visibility improves private-account efficiency but induces earlier spending and lower group utility in a shared pool.",
+    "test": "Randomize complete synthetic task episodes in a hidden/visible countdown by private/shared allocation factorial. Keep aggregate root cap, models, task evidence and action prices identical; private accounts initially receive equal shares. Use the same neutral status-message footprint in hidden arms. Cross decomposable and sequential tasks, randomize activation order, and pair world seeds. Score each whole episode once; individual requests are correlated observations.",
+    "baseline": "Hidden private accounts, hidden shared pool, and a single solver with the same aggregate cap.",
+    "metrics": [
+      "Verified utility",
+      "First-quarter spend share",
+      "Rejected requests",
+      "Unused balance at stopping",
+      "Spend concentration"
+    ],
+    "falsifier": "Visibility does not worsen shared-pool utility or accelerate spending relative to its private-account effect at the prespecified pressure range.",
+    "confounds": "Pooling changes feasible transfers as well as incentives. Countdown messages consume context; meter their overhead. Early spending can be efficient on some tasks.",
+    "prior": [
+      {
+        "id": "liu-2025-budget",
+        "relation": "Single-agent budget tracking supplies a visibility precedent, not a pooling result."
+      },
+      {
+        "id": "paliskara-2026-worse",
+        "relation": "Direct shared API-budget coordination precedent; not this visibility factorial."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "B1 expansion: specify root-cap accounting, optimal task cost and a utility margin before choosing pressure levels.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-02",
+    "area": "agent-budgets",
+    "title": "Which parts of peer spending should be visible?",
+    "question": "Is total pool balance enough for coordination, or does naming each worker's spending change behavior?",
+    "hypothesis": "Individual spending displays increase early spending imitation without improving allocation when peers have no useful cost differences.",
+    "test": "Randomize independent group episodes to own balance only, aggregate pool balance, or aggregate plus named peer spending. Keep true pool, task progress indicators, token footprint and action opportunities fixed. Cross homogeneous workers with a separate known-cost heterogeneous stratum. Shuffle display row order and neutral identities. Charge all monitoring costs; compare trajectories as repeated measurements within an episode, never as independent agents.",
+    "baseline": "An anonymous aggregate ledger and an equal-share scheduler with the same hard cap.",
+    "metrics": [
+      "Useful completions",
+      "Early spending slope",
+      "Response to peer spend",
+      "Allocation regret",
+      "Monitoring tokens"
+    ],
+    "falsifier": "Named peer spending improves utility in homogeneous groups without increased waste, or produces no incremental spending response beyond the aggregate balance.",
+    "confounds": "Shared task progress can justify correlated spending. Identifiable capability information must be held constant outside the stated heterogeneity manipulation.",
+    "prior": [
+      {
+        "id": "anthropic-2026-patterns",
+        "relation": "Public-board interactions motivate exposure controls; vendor examples do not establish a spending effect."
+      },
+      {
+        "id": "paliskara-2026-worse",
+        "relation": "Shared-resource teams make coordination overhead a relevant comparator."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "B1/B4 expansion: define waste against a task validator and a cost floor, separately from equal spending.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-03",
+    "area": "agent-budgets",
+    "title": "Displayed balance versus the enforced balance",
+    "question": "Does a misleading remaining-budget display alter collective pacing beyond its effect on a single solver?",
+    "hypothesis": "An understated display increases premature stopping; an overstated display increases rejected action attempts, with larger effects in interacting groups.",
+    "test": "Randomize complete synthetic episodes to displays of 0.5, 1 or 2 times the true remaining balance, crossed with single solver or communicating team. Hold aggregate enforced resources, evidence and action prices fixed. Apply the multiplier consistently after each accepted charge, and meter communications. Predefine stopping opportunities and include solvable tasks near the cap. Block on world seed and model; analyze the population-by-display interaction.",
+    "baseline": "Accurate displays in each population condition and a hidden-display sensitivity arm.",
+    "metrics": [
+      "Incomplete stops with balance left",
+      "Rejected requested cost",
+      "Validated output",
+      "Exhaustion time",
+      "Billed spend"
+    ],
+    "falsifier": "Display multipliers do not shift the predicted stopping and rejection outcomes, or team effects are no larger than the matched single-solver effects.",
+    "confounds": "Hard enforcement prevents actual overspend. Distinguish attempted requests from accepted charges, and model-visible task budget from context capacity.",
+    "prior": [
+      {
+        "id": "lin-2026-bagen",
+        "relation": "Abstract reports miscalibrated remaining-cost forecasts; not misleading displays in populations."
+      },
+      {
+        "id": "cognition-2025-rebuilding",
+        "relation": "Context-anxiety engineering anecdote motivates a contrast but provides no controlled effect estimate."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "B5 expansion: validate the metering proxy and specify completion credit for interrupted actions before running agents.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-04",
+    "area": "agent-budgets",
+    "title": "Context anxiety or spending anxiety?",
+    "question": "Do agents respond differently to context-window headroom and remaining action budget?",
+    "hypothesis": "Low displayed context headroom mainly changes summarization and early wrap-up, whereas low displayed action budget mainly reduces tool exploration.",
+    "test": "Randomize whole multi-step task episodes in a displayed-context-headroom by displayed-spend-balance factorial, while actual context capacity and hard root budget remain constant and sufficient. Use truthful common labels for the two resource types, with experimentally varied numeric signals. Hold task history content, output allowance and tool prices fixed. Include a single-agent replication before teams; randomize worlds, not individual turns. Charge summaries and tool results.",
+    "baseline": "Accurate dual displays and an information-matched display containing only the action budget.",
+    "metrics": [
+      "Summarization frequency",
+      "Tool exploration depth",
+      "Premature final answers",
+      "Task success",
+      "Spent resources"
+    ],
+    "falsifier": "The two displays have indistinguishable effects on both summarization and exploration, or low context signals do not selectively increase wrap-up.",
+    "confounds": "Provider countdown features and prompt-based displays are different interventions. Keep model/version fixed; actual truncation would create an information-loss confound.",
+    "prior": [
+      {
+        "id": "anthropic-2026-context",
+        "relation": "Documents context-awareness signals without a controlled behavioral comparison."
+      },
+      {
+        "id": "cognition-2025-rebuilding",
+        "relation": "Reports context anxiety anecdotally."
+      },
+      {
+        "id": "lin-2026-bagen",
+        "relation": "Separates internal computation from external action costs; not the same resource as context headroom."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "api-small",
+    "needs": "B5 expansion: implement separable counters and predefine observable wrap-up behavior without inferring subjective anxiety.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-05",
+    "area": "agent-budgets",
+    "title": "Use cost forecasts to release stranded budget",
+    "question": "Can calibrated completion-cost forecasts improve shared-budget reallocation without abandoning recoverable tasks?",
+    "hypothesis": "Forecasts calibrated on separate worlds support better stop-or-continue decisions than raw self-estimates at the same overall budget.",
+    "test": "Randomize complete task portfolios to raw worker cost intervals, empirically calibrated intervals, or a fixed stopping rule. Use an independent calibration set, frozen thresholds and held-out task families. A common allocator reallocates released balance to pending tasks using only online observations. Fix root cap and charge interval generation plus allocation calls. Validate stopped tasks through separately labelled evaluation replays; replay outcomes never guide the online allocator.",
+    "baseline": "Equal shares with fixed cutoffs and an offline clairvoyant bound labelled as unavailable to deployment.",
+    "metrics": [
+      "Portfolio successes",
+      "Interval coverage",
+      "Recoverable tasks abandoned",
+      "Resources rescued",
+      "Forecast overhead"
+    ],
+    "falsifier": "Calibrated forecasts improve coverage but fail to improve portfolio success, or gain only by exceeding the matched decision-cost allowance.",
+    "confounds": "Success after a larger replay budget is not proof that the original allocation was sufficient. Calibration may fail across task families or model changes.",
+    "prior": [
+      {
+        "id": "lin-2026-bagen",
+        "relation": "Defines progressive budget estimation and reports remaining calibration limits."
+      },
+      {
+        "id": "ding-2026-calibrate",
+        "relation": "Calibration before cost-aware exploration is prior art in a different allocation setting."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "B1/B5 expansion: define cost-to-completion labels for censored failures and freeze the allocation rule before evaluation.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-06",
+    "area": "agent-budgets",
+    "title": "Do quotas cause unnecessary spawning?",
+    "question": "Do agents create extra identities when each identity unlocks a new claim on a fixed shared pool?",
+    "hypothesis": "Per-identity quotas increase spawning and pool capture beyond task-driven delegation, especially under tight root budgets.",
+    "test": "Randomize independent sandboxed group episodes to no spawning, spawning under root-only metering, or spawning with stated per-identity claim limits. Keep the same global cap in every arm; extra identities never create real resources. Cross quota pressure with tasks having high or low useful parallelism. Charge spawn setup and child inference, and match goal incentives and tool access. Compare spawned count with the root-only delegation arm on paired worlds.",
+    "baseline": "Root-only delegation estimates task-driven spawning; a fixed worker roster provides a scheduling reference.",
+    "metrics": [
+      "Excess identities",
+      "Verified child contributions",
+      "Share of pool captured",
+      "Other workers' completion",
+      "Spawn cost"
+    ],
+    "falsifier": "Identity quotas do not increase excess spawning or resource capture relative to root-only delegation at the tested pressure levels.",
+    "confounds": "Extra workers can be useful. Transcripts mentioning quotas are supplementary evidence, not proof of intent; model-family differences do not isolate reasoning.",
+    "prior": [
+      {
+        "id": "yokoo-2004-effect",
+        "relation": "False-name bidding establishes a mechanism-design concern, not observed LLM spawning."
+      },
+      {
+        "id": "anthropic-2025-how",
+        "relation": "Reports over-spawning in engineering practice without a quota manipulation."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "B2 expansion: create a toy claim allocator with an unchanged root cap and quantify useful parallelism independently.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-07",
+    "area": "agent-budgets",
+    "title": "Discovering a quota rule",
+    "question": "Does making per-identity quota information discoverable change spontaneous delegation relative to stating it explicitly?",
+    "hypothesis": "Explicit quota information increases quota-responsive spawning sooner than discoverable information; incidental discovery produces a delayed increase.",
+    "test": "Randomize complete sandbox episodes to a stated quota rule, a rule available through an ordinary help tool, or no informative rule disclosure. The actual per-identity allocation and global hard cap are identical. Randomize a benign task step that exposes the help entry independently of workload, without suggesting an exploit. Hold tool interface, objectives and baseline delegation options fixed; charge help calls and child work. Analyze exposure assignment as the primary contrast.",
+    "baseline": "Explicit disclosure and the same task under a root-only rule; no-information episodes remain in the denominator.",
+    "metrics": [
+      "Spawn timing",
+      "Excess delegation",
+      "Help exposure",
+      "Useful output",
+      "Pool capture"
+    ],
+    "falsifier": "Rule disclosure and randomized incidental exposure do not change spawning or capture, or changes are fully explained by useful task decomposition.",
+    "confounds": "Conditioning only on agents that read help would select on behavior. This tests a bounded synthetic incentive, not covert real-service probing.",
+    "prior": [
+      {
+        "id": "yokoo-2007-making",
+        "relation": "False-name-resistant mechanism theory supplies context, not a rule-discovery result."
+      },
+      {
+        "id": "hu-2026-dissociative",
+        "relation": "Position paper questions identity-based governance; it is not a theorem forbidding Sybil-proof reputation."
+      }
+    ],
+    "novelty": "speculative",
+    "feasibility": "api-small",
+    "needs": "B2 expansion: separate the randomized exposure intervention from voluntary help-seeking and keep all effects within the simulator.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-08",
+    "area": "agent-budgets",
+    "title": "Spawn fees versus lineage budgets",
+    "question": "Which quota policy suppresses wasteful spawning while preserving valuable parallel work?",
+    "hypothesis": "Lineage accounting removes quota-driven spawning with less damage to useful high-parallelism tasks than a uniform per-spawn fee.",
+    "test": "Randomize independent group episodes to per-identity quotas, several prespecified spawn fees, or a shared lineage allowance. Use the same root cap, initial principal allocations and actual inference prices. Fees consume or reserve part of that allowance according to one fixed rule, never creating extra budget. Cross low and high parallelism tasks and randomize initial role assignment. Evaluate task outcomes and extra identities jointly; do not infer effectiveness from spawn count alone.",
+    "baseline": "Root-only unconstrained delegation and no spawning, both under the same aggregate cap.",
+    "metrics": [
+      "Useful output",
+      "Unproductive spawn cost",
+      "Completion of other principals' tasks",
+      "Parallelism retained",
+      "Unused balance"
+    ],
+    "falsifier": "Lineage accounting causes equal or greater useful-output loss than the fee policy while offering no additional reduction in wasteful delegation.",
+    "confounds": "Lineage is supplied ground truth here. Inferring operator identity is a separate security question; fees may tax helpful workers more than wasteful ones.",
+    "prior": [
+      {
+        "id": "zhu-2026-fault",
+        "relation": "Escrow lineage constrains descendant resources under explicit system assumptions; not an incentive study."
+      },
+      {
+        "id": "yokoo-2004-effect",
+        "relation": "False-name mechanisms motivate evaluating both manipulation resistance and efficiency."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "B2 expansion: preregister fee ranges and a task-based excess-spawn definition; do not treat the security mechanism as new.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-09",
+    "area": "agent-budgets",
+    "title": "Safe escrow that still gets work done",
+    "question": "How much useful work is lost when safe preallocated budgets cannot move during a partition?",
+    "hypothesis": "Demand-informed preallocation improves deadline utility over equal escrow shares under uneven demand, but loses its advantage when demand forecasts shift.",
+    "test": "Randomize independent simulated workload episodes to equal preallocation, forecast-based preallocation, or a connected central allocator. Inject paired crash and partition schedules crossed with forecast error. Every distributed arm uses the same already-specified conservative reservation and settlement rules; uncertain effects remain charged. Hold issued budget, deadlines and fault schedule fixed. Model forecast and reallocation overhead explicitly, and score whole workloads rather than individual crash events.",
+    "baseline": "Equal safe escrow and a connected scheduler whose availability advantage is explicitly labelled.",
+    "metrics": [
+      "Completed task value",
+      "Idle reserved credits",
+      "Unfinished high-value work",
+      "Recovery delay",
+      "Conservation violations"
+    ],
+    "falsifier": "Forecast-based escrow does not improve useful completion under stable heterogeneous demand, or remains equally effective despite large demand shifts.",
+    "confounds": "Conservation is a prerequisite, not evidence of good allocation. Crash-fault guarantees do not establish Byzantine resistance; simulated costs may omit real billing semantics.",
+    "prior": [
+      {
+        "id": "zhu-2026-fault",
+        "relation": "Direct conservation and partition-preallocation prior; this card tests allocation usefulness instead."
+      },
+      {
+        "id": "chevaleyre-2006-issues",
+        "relation": "Resource-allocation survey supplies distinct efficiency and fairness objectives."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "B2/B3 expansion: implement or obtain an auditable safe baseline; published executable artifacts and provider-cost mapping remain unresolved.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-10",
+    "area": "agent-budgets",
+    "title": "Peers, coordinator, equal shares or auction?",
+    "question": "Which allocation mechanism wins when every decision consumes the same limited root budget?",
+    "hypothesis": "A coordinator or equal shares outperform peer bargaining on homogeneous tasks; a contract-net auction helps chiefly when worker costs differ.",
+    "test": "Randomize complete task portfolios to peer negotiation, one coordinator, fixed equal shares, or announce-bid-award allocation. Cross homogeneous/heterogeneous worker costs and decomposable/sequential tasks. Fix aggregate tokens, tool credits, deadlines and available task evidence; charge bids, negotiation, coordination and retries to the cap. Randomize presentation and activation order, and include all failed allocations. Independent portfolios are the analysis units.",
+    "baseline": "A fixed equal split and an offline optimal allocation computed from known task costs, clearly labelled as a diagnostic ceiling.",
+    "metrics": [
+      "Validated utility",
+      "Allocation overhead",
+      "Duplicate work",
+      "Idle credits",
+      "Distance from feasible optimum"
+    ],
+    "falsifier": "Peers match or beat simpler rules under homogeneous conditions, or auctions improve just as much without cost heterogeneity as with it.",
+    "confounds": "Private information and decision authority differ across architectures. Report common-goal and multiple-principal settings separately; one-model problem allocation is not peer negotiation.",
+    "prior": [
+      {
+        "id": "paliskara-2026-worse",
+        "relation": "Direct coordinator/team comparison includes shared API budgets."
+      },
+      {
+        "id": "wang-2026-r3",
+        "relation": "Studies one model allocating across problems, not bargaining peers."
+      },
+      {
+        "id": "smith-1980-contract",
+        "relation": "Contract-net allocation is established prior art."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "B3 expansion: specify information symmetry, action authority and every mechanism's charged decision work before selection.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-11",
+    "area": "agent-budgets",
+    "title": "Can cost bids beat measured capability?",
+    "question": "When workers have different task costs, should an allocator trust bids or pay to measure them?",
+    "hypothesis": "Cheap calibration trials improve allocation under noisy cost bids, but their overhead erases the benefit on small homogeneous portfolios.",
+    "test": "Randomize whole heterogeneous-worker portfolios to self-reported bids, charged calibration trials plus bids, or fixed capability metadata. Cross portfolio size and scripted bid-noise levels while keeping worker policies and root cap fixed. Freeze the common assignment algorithm so the intervention is evidence quality, not allocator skill. Calibration tasks must be disjoint from evaluation tasks; their costs count even when the resulting allocation fails.",
+    "baseline": "Equal shares and an assignment using true synthetic worker costs as an explicitly unavailable oracle.",
+    "metrics": [
+      "Completed value",
+      "Bid error",
+      "Calibration cost",
+      "Allocation regret",
+      "Failures from underestimation"
+    ],
+    "falsifier": "Calibration fails to improve net utility in large heterogeneous portfolios, or helps equally despite removing heterogeneity and bid noise.",
+    "confounds": "Scripted noisy bids test robustness, not emergent deception. Capability metadata must not reveal hidden task solutions; observed speed may differ from verified competence.",
+    "prior": [
+      {
+        "id": "amayuelas-2025-self",
+        "relation": "Explicit capability information and orchestrator/planner allocation are direct precedents."
+      },
+      {
+        "id": "bianchi-2024-how",
+        "relation": "Negotiation studies motivate controlling framing and order; they do not validate truthful compute bids."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "B3 expansion: define a worker capability generator, bid-cost units and a separate calibration pool with charged costs.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-12",
+    "area": "agent-budgets",
+    "title": "Replan on events or every action?",
+    "question": "Does event-triggered budget reallocation preserve coordination quality while reducing managerial cost?",
+    "hypothesis": "Event-triggered replanning improves net completion over per-action orchestration when changes are sparse, but loses under rapid unobserved changes.",
+    "test": "Randomize independent project episodes to fixed allocation, event-triggered planning or per-action orchestration. Cross task-change frequency and public progress-signal delay. All arms receive identical worker capability metadata and have the same total inference/tool cap and deadline; charge monitoring and manager calls. Use a frozen event rule tuned only on pilot worlds, and pair evaluation world schedules without sharing agent histories.",
+    "baseline": "Fixed equal roles and a per-action manager with identical observations and action authority.",
+    "metrics": [
+      "Verified milestones",
+      "Manager fraction of budget",
+      "Reaction delay",
+      "Stale assignments",
+      "Net utility"
+    ],
+    "falsifier": "Event-triggered planning has no utility advantage under sparse changes after charging overhead, or does not degrade relative to frequent planning under the specified hidden changes.",
+    "confounds": "Poor trigger choice can masquerade as a general architecture failure. Concurrent execution and manager capability must be fixed or separately stratified.",
+    "prior": [
+      {
+        "id": "amayuelas-2025-self",
+        "relation": "Planner/orchestrator comparisons are direct prior; their cost analysis is not this hard-cap experiment."
+      },
+      {
+        "id": "dang-2025-multi",
+        "relation": "Learned orchestration with cost penalties is adjacent; sequential activation differs from concurrent workers."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "B3 expansion: define which events are observable and how each unfinished action is charged when a replan interrupts it.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-13",
+    "area": "agent-budgets",
+    "title": "Difficulty-aware allocation without hindsight",
+    "question": "Can an online allocator improve over equal problem budgets without using retrospective success information?",
+    "hypothesis": "A small charged diagnostic stage improves portfolio success when problem difficulty varies, but simple equal allocation wins when diagnostic signals are weak.",
+    "test": "Randomize independent generated problem portfolios to equal allocation, model-only allocation, or a fixed diagnostic-then-allocate policy. Cross difficulty dispersion and diagnostic informativeness using separately generated families. Randomize problem order, keep total root tokens fixed, and charge the diagnostic attempts. Freeze the allocation rule using separate development portfolios. Evaluate all sampled portfolios; successful pilot traces must not be selected into the test set.",
+    "baseline": "Equal allocation and a hindsight best allocation reported only as a nondeployable bound.",
+    "metrics": [
+      "Portfolio success count",
+      "Diagnostic cost",
+      "Order sensitivity",
+      "Allocation regret",
+      "Unsolved tasks abandoned"
+    ],
+    "falsifier": "Diagnostics provide no benefit with informative signals and varied difficulty, or outperform equal shares equally when their signal is randomized.",
+    "confounds": "Offline optimal allocation from observed successful runs can overstate attainable performance. Problems share a budget, so they are not independent replicates.",
+    "prior": [
+      {
+        "id": "wang-2026-r3",
+        "relation": "Direct shared-budget problem-allocation precedent with retrospective oracle limitations."
+      },
+      {
+        "id": "ding-2026-calibrate",
+        "relation": "Cost-aware exploration after calibration motivates charging information acquisition."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "B3 expansion: define held-out difficulty families and measure the diagnostic policy's information without access to evaluation answers.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-14",
+    "area": "agent-budgets",
+    "title": "Divide work through a ledger alone",
+    "question": "Can visible subtask claims reduce duplicate work without a chat channel?",
+    "hypothesis": "A public claim ledger improves completion on decomposable tasks chiefly by reducing duplicated effort, with little benefit on sequential tasks.",
+    "test": "Randomize independent synthetic project episodes to private ledgers, a public spending ledger, or a public spending-plus-subtask-claim ledger. Disable direct messages while retaining identical tool observations and action authority. Cross decomposable and sequential worlds, randomize first access and worker identifiers, and cap total inference plus tool use. Charge ledger reads and writes, and allow conflicting claims so successful coordination is measured rather than guaranteed by a lock.",
+    "baseline": "Private records and a deterministic central task assignment charged at its implementation cost.",
+    "metrics": [
+      "Distinct verified subtasks",
+      "Duplicate effort",
+      "Claim conflicts",
+      "Idle claimed tasks",
+      "Utility per root budget"
+    ],
+    "falsifier": "The claim ledger fails to reduce duplication or improve net completion in decomposable tasks, or gains arise only because access order grants one worker extra turns.",
+    "confounds": "No chat does not mean no communication: the public environment is a channel. Task labels or locking semantics can perform the allocation mechanically.",
+    "prior": [
+      {
+        "id": "lin-2024-strategic",
+        "relation": "Public outcomes support coordination in an economic game, not a compute-ledger test."
+      },
+      {
+        "id": "anthropic-2026-patterns",
+        "relation": "Public-board vendor examples motivate distinguishing environmental observation from direct messages."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "B4 expansion: design claim semantics that reveal intent without enforcing exclusive assignment and define duplicate useful work.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-15",
+    "area": "agent-budgets",
+    "title": "Do peer spending norms increase waste?",
+    "question": "Does observing another worker's higher spending increase an agent's own cost when its task has not become harder?",
+    "hypothesis": "A randomized upward shift in displayed peer spending raises own spending without a corresponding gain in independently scored task utility.",
+    "test": "Randomize complete groups to private or public spending ledgers. Within public groups assign a scripted peer a higher or lower displayed spending history drawn from matched valid runs, while keeping focal tasks, true remaining pool, available actions and hard cap identical. Cross slack and tight budgets. Report episode-level intent-to-exposure contrasts; trajectories and individual workers are repeated observations. Keep task claims and evidence unchanged.",
+    "baseline": "Accurate private accounting and an aggregate-only display that removes individual spending norms.",
+    "metrics": [
+      "Focal spending change",
+      "Verified utility",
+      "Cost above task floor",
+      "Pool exhaustion",
+      "Spend convergence"
+    ],
+    "falsifier": "Higher displayed peer spending does not increase waste, or increased spending yields proportionate independently verified utility rather than padding.",
+    "confounds": "Shared shocks can create honest convergence, hence randomized exposure. Spending imitation alone does not establish agreement, intent, or collusion against a principal.",
+    "prior": [
+      {
+        "id": "fish-2024-algorithmic",
+        "relation": "Pricing collusion is an adjacent outcome, not evidence of budget padding."
+      },
+      {
+        "id": "nakamura-2026-colosseum",
+        "relation": "Collusion auditing motivates measuring principal utility and behavior rather than inferring agreement from talk."
+      }
+    ],
+    "novelty": "speculative",
+    "feasibility": "api-small",
+    "needs": "B4 expansion: fix a utility function independent of spending and create coherent synthetic displays with unchanged true balances.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-16",
+    "area": "agent-budgets",
+    "title": "Authority, labels and asymmetric spending rights",
+    "question": "Are budget imbalances driven by a leader label or by privileged access to the pool?",
+    "hypothesis": "Giving one worker priority spending rights shifts resource capture more than calling that worker the leader, and can reduce total task utility.",
+    "test": "Randomize independent synthetic group episodes in a neutral/leader role-label by equal/priority-spending-rights factorial. Hold models, observations, task difficulty and aggregate root cap fixed. Rotate which worker gets the role and counterbalance activation order within each rights regime. Give all workers the same verified budget ledger; do not also manipulate misinformation. Score whole groups and retain both high- and low-demand tasks.",
+    "baseline": "Equal rights with neutral labels and a deterministic fair scheduler with the same cap.",
+    "metrics": [
+      "Privileged worker's spend share",
+      "Total verified utility",
+      "Unfinished other tasks",
+      "Fairness across principals",
+      "Unused funds"
+    ],
+    "falsifier": "Priority rights do not increase capture or reduce utility, or labels explain the effect fully when rights are held fixed.",
+    "confounds": "More spending can reflect greater legitimate need, so randomize role assignment independently of demand. A renewable commons and a finite compute pool have different dynamics.",
+    "prior": [
+      {
+        "id": "borah-2026-bosses",
+        "relation": "Direct asymmetric-commons prior; finite compute spending is a domain extension."
+      },
+      {
+        "id": "piatti-2024-cooperate",
+        "relation": "Renewable commons cooperation motivates group-level utility, not a compute-budget prediction."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "B1/B3 expansion: specify enforceable priority rights and inspect role-label controls in the closest prior before promotion.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-17",
+    "area": "agent-budgets",
+    "title": "Keep enough budget to finish and verify",
+    "question": "Does protecting a small finalization reserve improve completed work under a hard shared cap?",
+    "hypothesis": "A protected reserve increases validated deliverables near exhaustion, but wastes useful exploration budget when final checks are cheap or unnecessary.",
+    "test": "Randomize complete project episodes to a freely shared pool, a fixed finalization reserve, or a dynamically released reserve triggered by observable completion progress. Cross tasks with expensive/cheap final validation and tasks whose exploration usually fails. Keep total issued budget and validator accuracy identical; reserves come out of the production pool. Freeze release rules on separate pilot worlds and meter all finalization, bookkeeping and abandoned work.",
+    "baseline": "Equal per-stage allocation and the unreserved pool; an offline best split is a diagnostic ceiling only.",
+    "metrics": [
+      "Validated deliverables",
+      "Exploration success",
+      "Unspent reserve",
+      "Incomplete near-finished work",
+      "Total cost"
+    ],
+    "falsifier": "Reserves fail to improve validated completion near the cap, or their predicted opportunity cost is absent across low-value finalization tasks.",
+    "confounds": "This is scheduling a terminal resource, not evidence of spontaneous public-good cooperation. A validator unavailable to ordinary workers would change capabilities.",
+    "prior": [
+      {
+        "id": "liu-2025-budget",
+        "relation": "Tool-budget tracking motivates controlling early stopping and resource use across stages."
+      },
+      {
+        "id": "lin-2026-bagen",
+        "relation": "Remaining-cost estimation motivates a progress-based release rule but does not validate it."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "B1/B3 expansion: specify observable finish conditions and a realistic validator cost; keep distinct from SOC-28's social verification incentives.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-18",
+    "area": "agent-budgets",
+    "title": "Tokens, money or a resource vector?",
+    "question": "Does the resource unit used by an allocator change the task portfolio it completes?",
+    "hypothesis": "A vector of token, tool and monetary limits improves feasible completion over a token-only heuristic when prices and tool costs vary.",
+    "test": "Randomize independent workload portfolios to allocation using token counts alone, estimated dollars alone, or explicit resource vectors. All arms operate under the same real vector of enforced limits and receive the same raw price table; only the planning representation differs. Cross homogeneous costs with heterogeneous model tiers and tools. Charge estimation and allocation work, and compare results within each resource envelope rather than declaring unequal budgets matched.",
+    "baseline": "A deterministic feasible greedy allocator using the same price information and a known-cost optimization ceiling.",
+    "metrics": [
+      "Feasible task value",
+      "Which constraint binds",
+      "Rejected requested resources",
+      "Stranded resources",
+      "Planning overhead"
+    ],
+    "falsifier": "Vector-aware planning does not improve feasible value in heterogeneous-cost worlds, or apparent gains disappear when decision overhead is charged.",
+    "confounds": "Token counts are not interchangeable with billed cost, context occupancy or latency. A richer display can increase cognitive load; equal raw information matters.",
+    "prior": [
+      {
+        "id": "zhu-2026-fault",
+        "relation": "Resource-vector accounting is existing systems prior, not proof of allocator quality."
+      },
+      {
+        "id": "liu-2025-costbench",
+        "relation": "Synthetic costed tool planning supplies exact-cost evaluation ideas."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "B3/B5 expansion: fix reproducible synthetic prices and define admission for each resource dimension before comparing planners.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-19",
+    "area": "agent-budgets",
+    "title": "Advisory targets inside a hard cap",
+    "question": "Can an advisory target with bounded finishing room produce better outcomes than abrupt truncation at that target?",
+    "hypothesis": "A lower advisory target plus reserved finishing room reduces incomplete final actions compared with an abrupt cutoff at the same planning target.",
+    "test": "Randomize whole agent-loop episodes to an advisory target with a bounded grace reserve, a hard inner cutoff at that target with remaining resources reallocatable, or no inner target. Keep the same aggregate outer cap across all arms, and count every accepted action against it. Cross short and long atomic final actions. Randomize task worlds and charge all target messages; report unused or reallocated grace funds explicitly.",
+    "baseline": "An outer-cap-only controller and a deterministic reserve policy with identical total resources.",
+    "metrics": [
+      "Validated completion",
+      "Interrupted actions",
+      "Unused reserve",
+      "Reallocated work value",
+      "Attempts beyond target"
+    ],
+    "falsifier": "Advisory pacing with reserved finishing room fails to improve completed actions or net portfolio utility over the hard-target comparator.",
+    "confounds": "Advisory exceedance is not a breach of the outer cap. Provider-native signals differ from prompt hints; a per-request output limit is not a whole-loop spending limit.",
+    "prior": [
+      {
+        "id": "anthropic-2026-task",
+        "relation": "Documents advisory loop targets and separate enforced per-request limits; no controlled efficacy estimate."
+      },
+      {
+        "id": "han-2024-token",
+        "relation": "Prompted token-budget behavior motivates checking nonlinear responses to tight targets."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "B5 expansion: predefine the maximum finishing reservation and select native or emulated signals without conflating them.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-20",
+    "area": "agent-budgets",
+    "title": "Budget accounting across tools and compaction",
+    "question": "Does preserving the correct remaining-budget signal through compaction prevent avoidable stopping or retries?",
+    "hypothesis": "A correctly carried countdown improves planning relative to reset or double-decremented displays, especially when tool results dominate new context.",
+    "test": "Randomize complete multi-step episodes to correct carry-forward, reset-to-total, or double-counted-history budget displays after an identical compaction event. Cross short/long tool-result payloads without changing useful facts. Keep actual root cap, summary content, tool prices and worker model fixed; meter compaction and resumed requests. The episode is the independent unit, with pre/post steps treated as a paired trajectory rather than separate runs.",
+    "baseline": "Correctly metered uncompacted histories where context allows, and correct carry-forward under the shared compaction policy.",
+    "metrics": [
+      "Premature stopping",
+      "Rejected requests",
+      "Task completion",
+      "Display error",
+      "Compaction overhead"
+    ],
+    "falsifier": "Correct accounting provides no completion or pacing advantage, or errors do not matter more when payload-heavy histories amplify the mismatch.",
+    "confounds": "History removal changes memory, so summaries must match across display arms. Vendor task-budget counters can differ from billing counters; retain both telemetry streams.",
+    "prior": [
+      {
+        "id": "anthropic-2026-task",
+        "relation": "Documents loop counting and carrying remaining budget through client compaction."
+      },
+      {
+        "id": "liu-2025-budget",
+        "relation": "Budget tracking supplies a behavioral precedent, not a compaction test."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "B5 expansion: implement testable counters and freeze compaction content independently of the displayed balance; provider feature access is optional.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-21",
+    "area": "agent-budgets",
+    "title": "Train for a penalty or a strict budget?",
+    "question": "Which learned allocation objective transfers better to budget pressures absent from training?",
+    "hypothesis": "A controller trained with explicit remaining balance and a smooth violation penalty transfers better to tighter caps than one trained only with a terminal overspend cliff.",
+    "test": "Train controllers on the same task families and frozen worker pool, randomizing independent training seeds to smooth penalty or terminal cliff objectives, crossed with visible or omitted numeric balance. Match training interactions and tuning budget. Evaluate frozen policies on held-out tasks and tighter/looser caps under identical hard enforcement. Use training seed as the independent unit; evaluation portfolios estimate each policy's performance, not extra independent training replicates.",
+    "baseline": "A cost-penalized learned controller and a fixed nonlearned allocation rule under the same test cap.",
+    "metrics": [
+      "Feasible test utility",
+      "Violation attempts",
+      "Unseen-cap performance",
+      "Training stability",
+      "Worker-call cost"
+    ],
+    "falsifier": "The proposed objective-and-balance combination does not improve held-out feasible utility or reduces it relative to cliff training at the prespecified tighter caps.",
+    "confounds": "Joint reward and observation changes need the factorial to identify their effects. A training reward for cheap behavior is not an enforced spending guarantee.",
+    "prior": [
+      {
+        "id": "jin-2025-controlling",
+        "relation": "Budget-penalized expert control motivates the terminal-cliff comparator."
+      },
+      {
+        "id": "dang-2025-multi",
+        "relation": "Learned cost-aware orchestration is prior art; different activation rules require harmonization."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "training",
+    "needs": "B3/B5 expansion: audit reward formulas, freeze a modest controller class and allocate genuinely independent training runs before estimating transfer.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  },
+  {
+    "id": "BUD-22",
+    "area": "agent-budgets",
+    "title": "Efficiency and starvation in shared budgets",
+    "question": "Can a minimum-service rule improve the least-served principal without destroying collective task value?",
+    "hypothesis": "A small protected service floor reduces zero-completion principals at modest total-utility cost when cheap tasks otherwise dominate allocation.",
+    "test": "Randomize independent multi-principal workload episodes to sum-utility allocation, a fixed minimum-service floor, or equal shares. Cross task-cost inequality and arrival order using known synthetic utilities. Hold total hard cap, worker capabilities and information fixed; charge the allocator and reserve service from the same pool. Freeze floor levels on development workloads, include infeasible-demand worlds, and aggregate uncertainty over workloads rather than principals.",
+    "baseline": "Equal shares and a feasible Pareto frontier computed from known task costs as an offline reference.",
+    "metrics": [
+      "Total task utility",
+      "Worst-principal completion",
+      "Zero-service rate",
+      "Delay inequality",
+      "Unused budget"
+    ],
+    "falsifier": "The service floor does not reduce starvation, or its utility loss exceeds the prespecified acceptable tradeoff even on feasible workloads.",
+    "confounds": "Fairness is a chosen objective, not a universal scalar fact. Different principals may have unequal legitimate needs; report the full tradeoff rather than one winner.",
+    "prior": [
+      {
+        "id": "chevaleyre-2006-issues",
+        "relation": "Classical allocation distinguishes utilitarian, egalitarian and other welfare criteria."
+      },
+      {
+        "id": "paliskara-2026-worse",
+        "relation": "Multi-user shared-resource settings motivate keeping individual and group outcomes separate."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "B1/B3 expansion: select a synthetic utility scale, feasibility definition and acceptable service-cost tradeoff through human review.",
+    "briefs": [
+      "researchers/dmarz/notes/agent-budgets-hunches.md"
+    ]
+  }
+]

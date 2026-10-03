@@ -21,6 +21,8 @@ FIELDS = ['id', 'area', 'title', 'question', 'hypothesis', 'test', 'baseline', '
           'falsifier', 'confounds', 'prior', 'novelty', 'feasibility', 'needs', 'briefs']
 NOVELTY = {'replication', 'boundary-test', 'extension', 'measurement', 'speculative'}
 FEASIBILITY = {'offline', 'api-small', 'training', 'hardware', 'access-dependent'}
+REVISION = json.loads((OUT / 'revision.json').read_text())
+BASELINE = REVISION['baseline_candidate_sha256']
 records = {}
 for p in (ROOT / 'library').glob('*/*.md'):
     text = p.read_text()
@@ -30,7 +32,7 @@ for p in (ROOT / 'library').glob('*/*.md'):
             records[fm['id']] = (p, fm)
 
 candidates = []
-for lane in ['physical', 'society', 'security', 'methods']:
+for lane in ['physical', 'society', 'security', 'methods', 'budgets']:
     rows = json.loads((OUT / f'{lane}.json').read_text())
     for row in rows:
         assert all(k in row for k in FIELDS), (lane, row.get('id'), 'missing fields')
@@ -39,6 +41,10 @@ for lane in ['physical', 'society', 'security', 'methods']:
         assert row['novelty'] in NOVELTY, (row['id'], 'novelty')
         assert row['feasibility'] in FEASIBILITY, (row['id'], 'feasibility')
         assert len(row['prior']) >= 2 and len(row['metrics']) >= 2, row['id']
+        # Hash editable content before enriching sources with catalogue metadata.
+        row['candidate_sha256'] = hashlib.sha256(json.dumps(row, sort_keys=True).encode()).hexdigest()
+        row['change'] = ('new' if row['id'] not in BASELINE else
+                         'unchanged' if BASELINE[row['id']] == row['candidate_sha256'] else 'revised')
         row['lane'] = lane
         row['status'] = 'unreviewed-hunch'
         for source in row['prior']:
@@ -54,6 +60,7 @@ for lane in ['physical', 'society', 'security', 'methods']:
         candidates.append(row)
 
 assert len({r['id'] for r in candidates}) == len(candidates), 'duplicate ids'
+assert set(BASELINE) <= {r['id'] for r in candidates}, 'existing candidate IDs must be preserved'
 assert len({r['question'].strip().lower() for r in candidates}) == len(candidates), 'duplicate questions'
 assert set(r['area'] for r in candidates) == set(AREAS), 'missing research area'
 briefs = sorted((ROOT / 'researchers/vishesh/notes/project-briefs').glob('*.md'))
@@ -64,10 +71,19 @@ for brief in briefs:
     assert any(rel in r['briefs'] for r in candidates), ('unmapped project brief', rel)
 
 digest = hashlib.sha256(json.dumps(candidates, sort_keys=True).encode()).hexdigest()
-payload = dict(version=1, date='2026-10-03', status='Human-requested unreviewed hunches',
-               source_snapshot='73ccb3b plus two new NCA records', content_sha256=digest, topics=AREAS,
+changes = {kind: [r['id'] for r in candidates if r['change'] == kind]
+           for kind in ['new', 'revised', 'unchanged']}
+payload = dict(version=REVISION['version'], date=REVISION['date'], status='Human-requested unreviewed hunches',
+               source_snapshot=REVISION['source_snapshot'], previous_atlas_commit=REVISION['previous_atlas_commit'],
+               changes=changes, content_sha256=digest, topics=AREAS,
                candidates=candidates)
 (OUT / 'candidates.json').write_text(json.dumps(payload, indent=2, ensure_ascii=False)+'\n')
+delta_path = OUT / 'research-delta-v2.json'
+delta = json.loads(delta_path.read_text())
+for record in delta['records']:
+    record['cited_by'] = [r['id'] for r in candidates
+                          if any(s['id'] == record['id'] for s in r['prior'])]
+delta_path.write_text(json.dumps(delta, indent=2, ensure_ascii=False)+'\n')
 
 def link(path):
     return 'https://github.com/dmarzzz/swarm-lab/blob/main/' + path
@@ -79,6 +95,9 @@ lines = ['# Research question atlas', '',
          '[Start with the synthesis and review guide](../../../../synthesis/research-question-atlas.md). '
          '[Open the local review browser](review.html). [Machine-readable bank](candidates.json). '
          '[Review scope and limitations](scope.md).', '',
+         f'Update {REVISION["version"]}: **{len(changes["new"])} new, {len(changes["revised"])} revised, '
+         f'{len(changes["unchanged"])} unchanged** candidates. All original IDs are retained. '
+         '[What changed and why](update-v2.md).', '',
          'Feasibility labels describe a possible first test, not a verified installation, price or runtime. Source depths are inherited catalogue metadata, not claims that this pass fully read those sources. The open evidence-depth audit still applies.', '',
          '## Areas', '']
 for area, name in AREAS.items():
@@ -90,6 +109,7 @@ for area, name in AREAS.items():
     lines += [f'<a id="{area}"></a>', f'## {name}', '']
     for r in [x for x in candidates if x['area'] == area]:
         lines += [f'<a id="{r["id"].lower()}"></a>', f'### {r["id"]} — {r["title"]}', '',
+                  f'**Update {REVISION["version"]}:** {r["change"]}.', '',
                   f'**Question:** {r["question"]}', '', f'**Candidate hypothesis:** {r["hypothesis"]}', '',
                   f'**How to test:** {r["test"]}', '', f'**Comparison:** {r["baseline"]}', '',
                   '**Measurements:** '+ '; '.join(r['metrics'])+'.', '',
@@ -116,5 +136,6 @@ canvas = (ROOT / 'src/question-atlas/canvas-template.txt').read_text()
 if args.canvas:
     args.canvas.write_text(canvas.replace('__ATLAS_DATA__', embedded))
 print(json.dumps(dict(candidates=len(candidates), topics=len(counts),
+                      changes={k: len(v) for k, v in changes.items()},
                       unique_sources=len({s['id'] for r in candidates for s in r['prior']}),
                       briefs=len(briefs)-1, counts=dict(counts)), indent=2))

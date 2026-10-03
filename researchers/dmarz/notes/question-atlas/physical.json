@@ -97,13 +97,13 @@
         "relation": "Informed-minority guidance is an established mechanism."
       },
       {
-        "id": "vicsek-1995-novel",
-        "relation": "Order-parameter baseline; this hunch tests function rather than treating order as success."
+        "id": "data-swarmbench-2025",
+        "relation": "LLM-grid analogy for comparing observed coordination with pursuit/transport utility; not continuous heading dynamics."
       }
     ],
     "novelty": "boundary-test",
     "feasibility": "offline",
-    "needs": "Define one measurable transport task and verify the closest responsiveness literature; novelty is not the general intermediate-optimum idea.",
+    "needs": "Define transport utility and inspect responsiveness prior art. SwarmBench v02/v05 agent/game logs offer a separate discrete-task proxy audit after schema validation; they cannot estimate an alignment-strength intervention or establish physical-flock behavior.",
     "briefs": []
   },
   {
@@ -808,13 +808,13 @@
         "relation": "Seedless morphogenesis is a contrasting task family, not a drop-in equivalent."
       },
       {
-        "id": "gh-jic-csb-kilombo",
-        "relation": "Possible controller-level simulation route; catalogue says it has not been run."
+        "id": "data-swarmbench-2025",
+        "relation": "A shape-formation prompt appears in the Flocking log preview; a coordinate-information analogy only, with task semantics requiring code verification."
       }
     ],
     "novelty": "boundary-test",
     "feasibility": "offline",
-    "needs": "Retrieve compatible controller implementations and verify exactly which robots receive coordinate information; old simulator dependencies may need repair.",
+    "needs": "Retrieve compatible robot controllers and verify coordinate privileges. Separately inspect SwarmBench v01 agent views, prompts and game states for assumed global coordinates; its shape-task traces motivate a synthetic information-control analogue, not robot seed-failure evidence.",
     "briefs": []
   },
   {
@@ -881,13 +881,13 @@
         "relation": "Directed switching-network convergence context."
       },
       {
-        "id": "fujiwara-2011-synchronization",
-        "relation": "Mobile-network timescale separation motivates the physical follow-up."
+        "id": "data-social-llm-networks-2026",
+        "relation": "Candidate opinion-exchange traces with topology metadata; temporal exposure reconstruction is an unresolved prerequisite, not established physical consensus evidence."
       }
     ],
     "novelty": "boundary-test",
     "feasibility": "offline",
-    "needs": "Define update weights that preserve the intended consensus quantity and review known temporal-network rate bounds before claiming novelty.",
+    "needs": "Define average-preserving weights and check temporal-network rate bounds. Social-LLM-Networks experiment JSON may ground a later text-network comparison only if timestamps, exposure order and repeat units are recoverable; archived sentiment trajectories alone cannot identify a scheduling effect.",
     "briefs": []
   },
   {

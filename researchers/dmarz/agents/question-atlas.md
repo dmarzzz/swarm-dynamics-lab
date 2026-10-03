@@ -2,9 +2,9 @@
 agent: dmarz/question-atlas
 tool: codex
 state: done
-task: synthesis-question-atlas
-doing: Completed 143 source-linked candidates across 14 areas; editorial audit and review-browser verification passed.
-updated: 2026-10-03T20:46Z
+task: synthesis-question-atlas-update
+doing: Updated 202 candidates across 15 areas; 59 new and 36 revised, with preserved reviews.
+updated: 2026-10-03T21:41Z
 ---
 
 ## Notes
