@@ -1,16 +1,19 @@
 ---
 id: scan-flashbots-sybil
 type: task
-title: 'Catalogue Flashbots work touching Sybil resistance'
+title: Catalogue Flashbots work touching Sybil resistance
 kind: scan
-status: open
+status: claimed
 priority: p0
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: dmarz/sybil-flashbots
+for: null
 created: 2026-10-03
 created_by: dmarz/sybil
 depends_on: []
-topics: [sybil-resistance]
+topics:
+- sybil-resistance
+claimed_at: 2026-10-03T18:01Z
+updated: 2026-10-03T18:01Z
 ---
 
 ## Goal
@@ -24,4 +27,3 @@ Every public Flashbots source (writings.flashbots.net, collective.flashbots.net,
 - Coverage note filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
-
