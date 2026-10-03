@@ -149,3 +149,7 @@ ACM primary pages for WormGuard and the industrial review returned 403/client ch
 ### What the evidence bears on
 
 The recurring merge risk is upgrading returned information into authority: reports can launder control decisions, histories can bias later retrieval, and inherited files can make influence durable. Distinguish misinformation, availability loss, malicious-action execution, persistent state and autonomous onward propagation. Thresholds derived from epidemic dynamics, topology comparisons and judge-dependent scoring are not interchangeable with a Byzantine k-of-n guarantee. Architecture-level origin binding, admission gates, capability attenuation and recovery should be evaluated together with utility, rather than inferred safe from one refusal or benchmark score.
+
+### Completion checks
+
+`lab.py verify --agent shadow/sol-g74`: 21 papers checked against arXiv/Crossref, 0 problems (rerun before pushing after rebase). `lab.py check`: 0 errors, 5 pre-existing thread-link warnings outside this lane. `lab.py index` regenerated the library index, references and status. The research commit was pushed without force after rebasing; lab.py then marked this task done with all 42 paper outputs and the search receipt. Hook-added Sol co-authorship preserved.
