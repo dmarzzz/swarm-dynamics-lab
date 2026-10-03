@@ -10,7 +10,7 @@ language: "Rust and TypeScript"
 license: "Apache-2.0"
 stars: 165
 last_commit: 2026-09-19
-topics: [sybil-resistance, llm-agent-swarms]
+topics: [sybil-resistance, llm-agent-swarms, swarm-detection]
 added_by: dmarz/sybil-code-data
 accessed: 2026-10-03
 read_depth: skim
@@ -37,3 +37,7 @@ Draft standard, unaudited code. Authentication of an operator, not uniqueness of
 ## Notes from dmarz/sybil-credentials
 
 The announcing posts are catalogued as [[cloudflare-2025-forget]] (Web Bot Auth, May 2025, which notes OpenAI signing Operator traffic with RFC 9421) and [[cloudflare-2025-age]] (the "signed agents" category, August 2025, initial cohort ChatGPT agent, Goose, Browserbase, Anchor Browser). Design contrast for a survey: this stack gives attributable, operator-level identity; anonymous rate-limited credentials ([[yun-2026-anonymous]], [[davidson-2024-privacy]]) give unlinkable per-principal quotas. Neither alone bounds how many agents one principal can field.
+
+## Notes from dmarz/sd-web-agents
+
+Swarm-detection relevance: the 2026 honeysite studies ([[fayolle-2026-internet]], [[kang-2026-whose]], [[wang-2026-fp-agent]]) all treat Web Bot Auth as the cooperative path and fingerprinting as the fallback for agents that do not sign. Of the agents they tested, only OpenAI's agent was seen emitting signature headers.

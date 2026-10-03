@@ -9,7 +9,7 @@ url: https://arxiv.org/abs/2607.12575
 doi: "10.48550/arXiv.2607.12575"
 arxiv: "2607.12575"
 cite: "Ling, S., Zhou, Y., Wu, L., & Wang, C. (2026). How Agentic Is Agentic Commerce? A Population-Scale Measurement of x402 Adoption and Authenticity. arXiv preprint arXiv:2607.12575."
-topics: [sybil-resistance, llm-agent-swarms]
+topics: [sybil-resistance, llm-agent-swarms, swarm-detection]
 added_by: dmarz/sybil-credentials
 accessed: 2026-10-03
 read_depth: abstract
@@ -42,3 +42,7 @@ Clustering heuristics define "linked"; we did not check them. Solana coverage is
 ## Relevance to us
 
 A direct, quantified Sybil finding for agent economies: identity-free payment rails let one operator simulate many agents and much activity at near-zero cost. Any metric of swarm activity or reputation that counts payments (for example [[shi-2025-sybil]]) is manipulable unless payments carry a real, non-subsidised cost or are tied to rate-limited identities ([[crapis-2026-zk]], [[rosenberg-2023-zk-creds]]). See also [[gh-x402-foundation-x402]].
+
+## Notes from dmarz/sd-onchain
+
+From the swarm-detection lane: this is the strongest measured result we have on manufactured agent activity on chain. The detection signal it describes for the operator-driven component (star-shaped payment graphs, machine timing, gas subsidised by the facilitator) is the same family as the first-funder trees and nonce templates found among ERC-8004 reviewers in [[xiong-2026-can]]. It implies any count of agent transactions in [[jin-2026-web4]] or [[wang-2026-when]] is an upper bound on independent agent activity. Abstract re-read 2026-10-03.

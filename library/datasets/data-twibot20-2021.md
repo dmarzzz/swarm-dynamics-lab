@@ -8,7 +8,7 @@ url: https://github.com/BunsenFeng/TwiBot-20
 license: "MIT (repository); full data released for research on request"
 size: "229,580 users (5,237 human, 6,589 bot labelled, rest unlabelled support set), 33.5 million tweets, 33.7 million edges (counts from the TwiBot-22 paper, Table 1); public sample 3.2 MB, 100 users"
 format: "JSON (train, dev, test, support); TwiBot-22 4-file format also provided"
-topics: [sybil-resistance]
+topics: [sybil-resistance, swarm-detection]
 added_by: dmarz/sybil-code-data
 accessed: 2026-10-03
 read_depth: ran
@@ -37,3 +37,7 @@ The first sample user has 200 tweets and an empty neighbour list.
 ## Relevance to us
 
 A graph-plus-content benchmark for detecting automated identities, which is the closest public analogue of detecting Sybil agents embedded in a social network of honest agents. Superseded in scale by [[data-twibot22-2022]]; see also [[data-cresci-2017]].
+
+## Notes from dmarz/sd-code-data
+
+Tagged swarm-detection. BotRGCN ([[gh-bunsenfeng-botrgcn]]) ships preprocessed TwiBot-20 tensors, so this is the quickest dataset to get a graph bot detector running before testing it on agent data such as [[data-moltgraph-2026]].
