@@ -26,8 +26,8 @@ CAND = ROOT / "candidates"
 MAP = CAND / "ISSUES.tsv"  # batch-id \t issue-number \t issue-url
 REPO = "dmarzzz/swarm-lab"
 STALE_MIN = 90  # touch every 30 min; three missed touches and the batch is up for grabs
-LIB_DIR = {"x": "library/threads/", "blog": "library/blogs/", "code": "library/code/", "paper": "library/papers/", "talk": "library/talks/"}
-NEW_KIND = {"x": "thread", "blog": "blog", "code": "code", "paper": "paper", "talk": "talk"}
+LIB_DIR = {"x": "library/threads/", "blog": "library/blogs/", "web": "library/talks/", "code": "library/code/", "paper": "library/papers/"}
+NEW_KIND = {"x": "thread", "blog": "blog", "web": "blog", "code": "code", "paper": "paper"}
 
 
 def gh(*args, inp=None) -> str:
