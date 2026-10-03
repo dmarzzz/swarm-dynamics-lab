@@ -2,9 +2,9 @@
 
 # Library index
 
-2884 entries.
+2888 entries.
 
-## Papers (1838)
+## Papers (1842)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -471,6 +471,7 @@
 | [cohen-2024-here](papers/cohen-2024-here.md) | Here Comes The AI Worm: Unleashing Zero-click Worms that Target GenAI-Powered Applications | 2024 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-contagion |
 | [cong-2021-crypto](papers/cong-2021-crypto.md) | Crypto Wash Trading | 2021 | 4 | abstract | swarm-detection | dmarz/sd-onchain |
 | [conitzer-2006-computing](papers/conitzer-2006-computing.md) | Computing the Optimal Strategy to Commit to | 2006 | 4 | skim | fork-merge-security, collective-decision | dmarz/fm |
+| [conitzer-2010-false-name-proofness](papers/conitzer-2010-false-name-proofness.md) | False-Name-Proofness in Social Networks | 2010 | 4 | skim | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [conradt-2003-group](papers/conradt-2003-group.md) | Group decision-making in animals | 2003 | 4 | abstract | collective-decision | dmarz/collective-decision |
 | [cordes-2024-dimensionless](papers/cordes-2024-dimensionless.md) | Dimensionless numbers reveal distinct regimes in the structure and dynamics of pedestrian crowds | 2024 | 4 | abstract | crowds-and-traffic, criticality-measurement | dmarz/crowds-and-traffic |
 | [cowden-2014-pioneering](papers/cowden-2014-pioneering.md) | A Pioneering Experiment: OSS Double-Agent Operations in World War II | 2014 | 4 | full | fork-merge-security | dmarz/fm |
@@ -530,6 +531,7 @@
 | [ebrahimi-2025-adversary](papers/ebrahimi-2025-adversary.md) | An Adversary-Resistant Multi-Agent LLM System via Credibility Scoring | 2025 | 4 | skim | fork-merge-security, llm-agent-swarms, collective-decision | dmarz/fm |
 | [echeverria-2018-lobo](papers/echeverria-2018-lobo.md) | LOBO -- Evaluation of Generalization Deficiencies in Twitter Bot Classifiers | 2018 | 4 | abstract | swarm-detection | dmarz/sd-bots |
 | [echeverria-huarte-2022-spontaneous](papers/echeverria-huarte-2022-spontaneous.md) | Spontaneous emergence of counterclockwise vortex motion in assemblies of pedestrians roaming within an enclosure | 2022 | 4 | skim | crowds-and-traffic, collective-motion, active-matter | dmarz/crowds-and-traffic |
+| [eisenbarth-2022-ethereum](papers/eisenbarth-2022-ethereum.md) | Ethereum's Peer-to-Peer Network Monitoring and Sybil Attack Prevention | 2022 | 4 | skim | sybil-resistance, swarm-detection | shadow/sol-p1 |
 | [el-mhamdi-2018-hidden](papers/el-mhamdi-2018-hidden.md) | The Hidden Vulnerability of Distributed Learning in Byzantium | 2018 | 4 | abstract | fork-merge-security, sync-consensus | dmarz/fm-bft-aggregation |
 | [elnozahy-2002-survey](papers/elnozahy-2002-survey.md) | A survey of rollback-recovery protocols in message-passing systems | 2002 | 4 | skim | fork-merge-security, llm-agent-swarms, meta | dmarz/preflight |
 | [escobedo-2026-closed](papers/escobedo-2026-closed.md) | Closed-loop real-virtual interactions validate 3D model of social coordination in fish | 2026 | 4 | abstract | collective-motion | dmarz/collective-motion-recent |
@@ -1618,6 +1620,7 @@
 | [waggoner-2012-evaluating](papers/waggoner-2012-evaluating.md) | Evaluating Resistance to False-Name Manipulations in Elections | 2012 | 3 | abstract | sybil-resistance, collective-decision | dmarz/sybil-mechanisms |
 | [wallace-2024-instruction](papers/wallace-2024-instruction.md) | The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions | 2024 | 3 | abstract | fork-merge-security | dmarz/fm-ai-control |
 | [wang-2013-analysis](papers/wang-2013-analysis.md) | Analysis on perfect location spoofing attacks using beamforming | 2013 | 3 | abstract | sybil-resistance | shadow/sol-p1 |
+| [wang-2017-robust](papers/wang-2017-robust.md) | Robust Large-Scale Spectrum Auctions against False-Name Bids | 2017 | 3 | abstract | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [wang-2024-mixture](papers/wang-2024-mixture.md) | Mixture-of-Agents Enhances Large Language Model Capabilities | 2024 | 3 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 | [wang-2025-cognition](papers/wang-2025-cognition.md) | COGNITION: From Evaluation to Defense against Multimodal LLM CAPTCHA Solvers | 2025 | 3 | abstract | swarm-detection, sybil-resistance | dmarz/sd-web-agents |
 | [wang-2025-collective](papers/wang-2025-collective.md) | Collective phases and long-term dynamics in a fish school model with burst-and-coast swimming | 2025 | 3 | abstract | collective-motion | dmarz/collective-motion |
@@ -1787,6 +1790,7 @@
 | [neupane-2024-security](papers/neupane-2024-security.md) | Security Considerations in AI-Robotics: A Survey of Current Methods, Challenges, and Opportunities | 2024 | 2 | skim | swarm-robotics, sybil-resistance | shadow/sol-p1 |
 | [okeeffe-2025-detecting](papers/okeeffe-2025-detecting.md) | Detecting and diagnosing faults in autonomous robot swarms with an artificial antibody population model | 2025 | 2 | skim | swarm-robotics | dmarz/swarm-robotics-recent-audit |
 | [otal-2024-llm](papers/otal-2024-llm.md) | LLM Honeypot: Leveraging Large Language Models as Advanced Interactive Honeypot Systems | 2024 | 2 | abstract | swarm-detection | dmarz/sd-honeypots |
+| [pecori-2016-s-kademlia](papers/pecori-2016-s-kademlia.md) | S-Kademlia: A trust and reputation method to mitigate a Sybil attack in Kademlia | 2016 | 2 | abstract | sybil-resistance | shadow/sol-p1 |
 | [perrier-2025-position](papers/perrier-2025-position.md) | Position: Stop Acting Like Language Model Agents Are Normal Agents | 2025 | 2 | abstract | fork-merge-security, llm-agent-swarms, meta | dmarz/fm |
 | [pramanik-2024-emergent](papers/pramanik-2024-emergent.md) | Emergent dynamics and spatiotemporal patterns in soft robotic swarms | 2024 | 2 | abstract | active-matter, swarm-robotics | dmarz/swarm-robotics-recent |
 | [raj-2026-recent](papers/raj-2026-recent.md) | Recent Developments and Applications of Drone Swarm: Techniques, Strategies, and Challenges | 2026 | 2 | skim | swarm-robotics | dmarz/swarm-robotics-recent-audit |
