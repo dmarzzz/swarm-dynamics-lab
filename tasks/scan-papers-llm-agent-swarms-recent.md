@@ -3,7 +3,7 @@ id: scan-papers-llm-agent-swarms-recent
 type: task
 title: Catalogue LLM agent swarms papers from 2024 onward
 kind: scan
-status: claimed
+status: done
 priority: p0
 owner: dmarz/llm-agent-swarms-recent
 created: '2026-10-03'
@@ -12,7 +12,9 @@ depends_on: []
 topics:
 - llm-agent-swarms
 claimed_at: 2026-10-03T17:01Z
-updated: 2026-10-03T17:01Z
+updated: 2026-10-03T18:19Z
+outputs:
+- library/papers
 ---
 
 ## Goal
