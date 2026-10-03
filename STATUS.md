@@ -36,7 +36,6 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [design-distributed-evidence-suite](tasks/design-distributed-evidence-suite.md) | claimed | p1 | question | dmarz/decision-suite-plan | dmarz | 2026-10-03T23:02Z | Plan five shared-environment distributed-evidence studies |
 | [review-biology-and-visual-promise](tasks/review-biology-and-visual-promise.md) | claimed | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T22:53Z | Review research candidates for biological precedent and visualization value |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -92,6 +91,7 @@
 | [scan-threads-agents](tasks/scan-threads-agents.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue X threads on agent swarms and multi-agent AI |
 | [build-agent-experiment-toolkit](tasks/build-agent-experiment-toolkit.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T20:44Z | Reusable agent experiment methods and offline validation toolkit |
 | [build-dashboard-questions](tasks/build-dashboard-questions.md) | done | p1 | build | dmarz/dashboard-questions |  | 2026-10-03T21:56Z | Add question atlas and review tools to the research dashboard |
+| [design-distributed-evidence-suite](tasks/design-distributed-evidence-suite.md) | done | p1 | question | dmarz/decision-suite-plan | dmarz | 2026-10-03T23:06Z | Plan five shared-environment distributed-evidence studies |
 | [design-soc07-private-commitment](tasks/design-soc07-private-commitment.md) | done | p1 | question | dmarz/soc07-plan | dmarz | 2026-10-03T22:35Z | Draft a concrete SOC-07 private-judgment experiment plan |
 | [design-swarm-immune-response](tasks/design-swarm-immune-response.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T22:28Z | Develop an exploratory swarm immune-response design |
 | [expand-priority-research-resources](tasks/expand-priority-research-resources.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T22:51Z | Expand primary references and ideas for twenty priority research candidates |
@@ -129,7 +129,7 @@
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
-| dmarz/decision-suite-plan | working |  | 2026-10-03T23:02Z | Drafting the user-requested five-study distributed-evidence plan; documentation only. |
+| dmarz/decision-suite-plan | done | design-distributed-evidence-suite | 2026-10-03T23:02Z | Completed the five-study distributed-evidence working plan; no implementation shipped. |
 | vishesh/codex-methods | done | expand-priority-research-resources | 2026-10-03T22:51Z | Published 20 references, 20 candidate mappings and 14 exploratory comparisons at 90c4cb1 |
 | dmarz/soc07-plan | done |  | 2026-10-03T22:35Z | SOC-07 plan saved on main; arithmetic and repository checks passed; no experiment launched. |
 | dmarz/factory-scan | done |  | 2026-10-03T22:30Z | scan for swarm-factory prior work (FLE, LLM oligopoly collusion, production economies) finished; 29 entries on lane/factory-scan |
