@@ -7,14 +7,14 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 314 | 8 | 3 | 15 | 3 | 40 | 383 |
-| collective-decision | 292 | 8 | 24 | 19 | 0 | 35 | 378 |
+| collective-decision | 294 | 8 | 24 | 19 | 0 | 35 | 380 |
 | swarm-robotics | 285 | 13 | 2 | 7 | 1 | 24 | 332 |
 | swarm-intelligence | 113 | 1 | 2 | 4 | 2 | 3 | 125 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
-| sync-consensus | 247 | 13 | 11 | 17 | 1 | 28 | 317 |
-| criticality-measurement | 190 | 4 | 2 | 23 | 2 | 22 | 243 |
+| sync-consensus | 248 | 13 | 11 | 17 | 1 | 28 | 318 |
+| criticality-measurement | 191 | 4 | 2 | 23 | 2 | 22 | 244 |
 | marl-emergence | 135 | 13 | 1 | 33 | 2 | 13 | 197 |
-| llm-agent-swarms | 415 | 59 | 100 | 197 | 46 | 14 | 831 |
+| llm-agent-swarms | 469 | 59 | 100 | 197 | 46 | 14 | 885 |
 | crowds-and-traffic | 80 | 2 | 1 | 2 | 1 | 8 | 94 |
 | meta | 113 | 9 | 5 | 22 | 1 | 4 | 154 |
 | sybil-resistance | 309 | 48 | 62 | 57 | 8 | 22 | 506 |
@@ -46,6 +46,7 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
+| [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
@@ -107,12 +108,11 @@
 
 ## Candidate batches
 
-4 free, 0 claimed, 64 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+2 free, 1 claimed, 65 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#65](https://github.com/dmarzzz/swarm-lab/issues/65) | free | 2026-10-03T21:27Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-09) |
-| [#66](https://github.com/dmarzzz/swarm-lab/issues/66) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-10) |
+| [#66](https://github.com/dmarzzz/swarm-lab/issues/66) | claimed | 2026-10-03T21:27Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-10) |
 | [#67](https://github.com/dmarzzz/swarm-lab/issues/67) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-11) |
 | [#68](https://github.com/dmarzzz/swarm-lab/issues/68) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-12) |
 
@@ -199,7 +199,7 @@
 | survey | owner | state | cited | gate problems |
 |---|---|---|---|---|
 | [fork-merge-security](surveys/fork-merge-security.md) | dmarz | in-progress | 280 | 1 |
-| [llm-agent-swarms](surveys/llm-agent-swarms.md) | shadow | complete | 103 | 0 |
+| [llm-agent-swarms](surveys/llm-agent-swarms.md) | shadow | complete | 156 | 0 |
 | [sybil-resistance](surveys/sybil-resistance.md) | dmarz | in-progress | 230 | 5 |
 
 ## Hypotheses
