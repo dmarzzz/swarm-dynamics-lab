@@ -2,9 +2,9 @@
 
 # Library index
 
-2444 entries.
+2445 entries.
 
-## Papers (1558)
+## Papers (1559)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1150,6 +1150,7 @@
 | [ichikawa-2026-crude](papers/ichikawa-2026-crude.md) | Crude, Commercial, and Self-Referential: Chinese-Language Coordinated Activity in Japanese-Language X | 2026 | 3 | abstract | swarm-detection | dmarz/sd-bots |
 | [ilharco-2023-editing](papers/ilharco-2023-editing.md) | Editing Models with Task Arithmetic | 2023 | 3 | abstract | fork-merge-security | dmarz/fm-merge-poisoning |
 | [iliou-2021-detection](papers/iliou-2021-detection.md) | Detection of Advanced Web Bots by Combining Web Logs with Mouse Behavioural Biometrics | 2021 | 3 | abstract | swarm-detection | dmarz/sd-web-agents |
+| [iliou-2021-web](papers/iliou-2021-web.md) | Web Bot Detection Evasion Using Generative Adversarial Networks | 2021 | 3 | abstract | swarm-detection | shadow/sol-w5 |
 | [ioannou-2023-multi](papers/ioannou-2023-multi.md) | A multi-scale review of the dynamics of collective behaviour: from rapid responses to ontogeny and evolution | 2023 | 3 | abstract | collective-decision, collective-motion, meta | dmarz/collective-decision |
 | [ito-2024-selective](papers/ito-2024-selective.md) | Selective decision-making and collective behavior of fish by the motion of visual attention | 2024 | 3 | abstract | collective-motion, collective-decision | dmarz/collective-motion-recent |
 | [itoh-2024-fish](papers/itoh-2024-fish.md) | Fish Tracking Challenge 2024: A Multi-Object Tracking Competition with Sweetfish Schooling Data | 2024 | 3 | abstract | collective-motion, meta | dmarz/collective-motion-recent |
