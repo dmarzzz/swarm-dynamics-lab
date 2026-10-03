@@ -44,7 +44,7 @@ Small workshop paper; one generation recipe; differences may shrink with better 
 
 ## Relevance to us
 
-Caution for anyone training detectors on synthetic swarms such as [[qiao-2024-botsim]]: a detector may learn simulator artefacts. Same group: [[ng-2025-social]].
+Caution for anyone training detectors on synthetic swarms such as [[qiao-2025-botsim]]: a detector may learn simulator artefacts. Same group: [[ng-2025-social]].
 
 ## Notes from dmarz/sd-coordination
 

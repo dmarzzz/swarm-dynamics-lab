@@ -44,4 +44,4 @@ Not an empirical study; preprint.
 
 ## Relevance to us
 
-Useful framing if we model a swarm operator as optimising influence under a detection budget. Related: [[meier-2023-social]], [[mannocci-2024-detection]].
+Useful framing if we model a swarm operator as optimising influence under a detection budget. Related: [[meier-2023-social]], [[mannocci-2026-detection]].

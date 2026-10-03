@@ -48,4 +48,4 @@ Chirper is an all-bot platform, so 'detection' is not tested against a realistic
 
 ## Relevance to us
 
-Direct evidence for the hypothesis that LLM agents look human one by one but leave group-level signatures. Synthetic counterparts: [[qiao-2024-botsim]], [[ng-2025-are]].
+Direct evidence for the hypothesis that LLM agents look human one by one but leave group-level signatures. Synthetic counterparts: [[qiao-2025-botsim]], [[ng-2025-are]].

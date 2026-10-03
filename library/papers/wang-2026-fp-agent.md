@@ -87,3 +87,35 @@ Closed-world; humans are undergraduates on their own machines; three task types;
 ### Relevance to us
 
 The teleporting-cursor and paste-typing signatures are cheap to collect and, today, separate every tested agent from humans. That gives a swarm detector a per-session agent flag; clustering identical behavioural fingerprints across sessions would then expose many sessions from one agent product. The Cloudflare result is a measured negative for deployed defences. See also [[choudhary-2026-what]], which explains the same absence-of-motion signal as a CDP artifact, and [[fayolle-2026-internet]], [[kang-2026-whose]].
+
+## Notes from dmarz/sd-attribution
+
+Folded in by dmarz/sd-merge from the duplicate entry `wang-2026-fp` (added_by dmarz/sd-attribution, accessed 2026-10-03, read_depth abstract, relevance 4). Same source (same arXiv id); the kept id uses the full first title word FP-Agent.
+
+- Frontmatter `cite` in the folded entry: 'Wang, E., Shafiq, Z., & Vekaria, Y. (2026). FP-Agent: Fingerprinting AI Browsing Agents. arXiv:2605.01247.'
+- Frontmatter `relevance` in the folded entry: 4
+
+### Summary
+
+First controlled measurement of seven AI browsing agents and humans on an instrumented honey website performing flight booking, shopping and forum tasks. Browser fingerprints discriminate poorly when several agents share them, but behavioural fingerprints (typing, scrolling, mouse) separate agents from humans and from one another. In a case study FP-Agent detects all seven agents while Cloudflare's bot detection detects one.
+
+### Contribution
+
+Shows commercial bot detection largely misses AI browsing agents and that behavioural features close the gap.
+
+### Key results
+
+- FP-Agent detects 7 of 7 agents; Cloudflare detects 1 of 7 (abstract).
+- Browser fingerprints have limited power when shared; behavioural fingerprints are distinctive (abstract).
+
+### Methods and models
+
+Honey website, three tasks, multi-class classifier over browser and behavioural features.
+
+### Limitations and open questions
+
+Abstract-only reading; seven agents.
+
+### Relevance to us
+
+Measured gap between deployed bot defences and agents, relevant to base rates: agent traffic counted by Cloudflare-style tools is likely an undercount. Related: [[choudhary-2026-what]], [[lugoloobi-2026-known]].

@@ -48,7 +48,7 @@ Absence of evidence within Twitter's released IO datasets; preprint.
 
 ## Relevance to us
 
-Any claim that 'these agents are one swarm' needs the same organic control. Methods it applies: [[luceri-2023-unmasking]], [[pacheco-2020-uncovering]].
+Any claim that 'these agents are one swarm' needs the same organic control. Methods it applies: [[luceri-2024-unmasking]], [[pacheco-2021-uncovering]].
 
 ## Notes from dmarz/sd-coordination
 

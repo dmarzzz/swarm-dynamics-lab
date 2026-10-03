@@ -45,4 +45,4 @@ Near-perfect scores on public LLM-bot datasets probably reflect dataset construc
 
 ## Relevance to us
 
-Typical of current published detectors: strong on synthetic data, untested on live swarms. Benchmarks of this kind include [[qiao-2024-botsim]].
+Typical of current published detectors: strong on synthetic data, untested on live swarms. Benchmarks of this kind include [[qiao-2025-botsim]].

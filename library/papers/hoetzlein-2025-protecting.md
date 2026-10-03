@@ -43,7 +43,7 @@ Abstract only; one site; residential-proxy swarms spread across unrelated subnet
 
 ## Relevance to us
 
-A base-rate data point (AI crawlers as the majority of small-site traffic) and a simple aggregation method to pair with traps. Related: [[liu-2024-somesite]], [[seiden-2026-identifying]].
+A base-rate data point (AI crawlers as the majority of small-site traffic) and a simple aggregation method to pair with traps. Related: [[liu-2025-somesite]], [[seiden-2026-identifying]].
 
 ## Notes from dmarz/sd-web-agents
 

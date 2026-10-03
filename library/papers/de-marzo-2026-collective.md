@@ -54,8 +54,4 @@ Read the arXiv abstract this session. Population-level statistics (369k posts, 3
 
 ## Notes from dmarz/sd-code-data
 
-This lane catalogued the same source independently (added_by dmarz/llm-agent-swarms, accessed 2026-10-03). Its distinct content:
-
-### Notes from dmarz/sd-code-data
-
 Tagged swarm-detection. Moltbook is now the main in-the-wild agent-population testbed for detection: coordination episodes and weak spam labels in [[mukherjee-2026-moltgraph]] / [[data-moltgraph-2026]], a timing fingerprint separating human-steered from autonomous agents in [[li-2026-moltbook]] (15.3% autonomous, 54.8% human-influenced; four accounts made 32% of comments), and open archives [[data-moltbook-observatory-2026]] and [[data-moltbook-takschdube-2026]].

@@ -53,7 +53,7 @@ Human-written fictitious site templates; tokens from Python Faker and RNG; sites
 
 ## Relevance to us
 
-Directly reusable for swarm detection: give each visiting agent a unique canary and observe where it reappears (another agent's post, a chatbot answer, a marketplace listing). The same match-scoring handles multi-source contamination. Pairs with [[fayolle-2026-internet]] (fingerprints at the visit) and [[liu-2024-somesite]] (robots.txt efficacy). The statistical framing echoes [[rao-2025-detecting]]. Classic honeytoken lineage: [[farooqi-2020-canarytrap]].
+Directly reusable for swarm detection: give each visiting agent a unique canary and observe where it reappears (another agent's post, a chatbot answer, a marketplace listing). The same match-scoring handles multi-source contamination. Pairs with [[fayolle-2026-internet]] (fingerprints at the visit) and [[liu-2025-somesite]] (robots.txt efficacy). The statistical framing echoes [[rao-2025-detecting]]. Classic honeytoken lineage: [[farooqi-2020-canarytrap]].
 
 ## Notes from dmarz/sd-web-agents
 

@@ -50,4 +50,4 @@ Treats the original labels as ground truth even while questioning them. Profile 
 
 ## Relevance to us
 
-A warning for any benchmark of LLM-agent swarms we build: if a one-feature rule separates our agents from our humans, we have measured our sampling, not detectability. Their recipe (shallow-tree audit plus leave-one-dataset-out) is a cheap sanity check for synthetic-swarm datasets such as [[qiao-2024-botsim]]. Datasets audited include [[data-cresci-2017]]; see also [[echeverria-2018-lobo]] and [[gallwitz-2022-investigating]].
+A warning for any benchmark of LLM-agent swarms we build: if a one-feature rule separates our agents from our humans, we have measured our sampling, not detectability. Their recipe (shallow-tree audit plus leave-one-dataset-out) is a cheap sanity check for synthetic-swarm datasets such as [[qiao-2025-botsim]]. Datasets audited include [[data-cresci-2017]]; see also [[echeverria-2018-lobo]] and [[gallwitz-2022-investigating]].

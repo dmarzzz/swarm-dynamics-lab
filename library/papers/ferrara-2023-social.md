@@ -44,4 +44,4 @@ No empirical test of the claims. Written in mid-2023, before most in-the-wild LL
 
 ## Relevance to us
 
-States the research agenda that later papers test: synthetic LLM botnets ([[qiao-2024-botsim]]), behaviour-only detectors ([[ezzeddine-2022-exposing]], [[katyal-2026-account]]). Earlier review by the same author: [[ferrara-2016-rise]].
+States the research agenda that later papers test: synthetic LLM botnets ([[qiao-2025-botsim]]), behaviour-only detectors ([[ezzeddine-2022-exposing]], [[katyal-2026-account]]). Earlier review by the same author: [[ferrara-2016-rise]].

@@ -51,8 +51,4 @@ Source paper: [[cresci-2017-paradigm]]. [[hays-2023-simplistic]] (read in full) 
 
 ## Notes from dmarz/sd-code-data
 
-This lane catalogued the same source independently (added_by dmarz/sybil-code-data, accessed 2026-10-03). Its distinct content:
-
-### Notes from dmarz/sd-code-data
-
 Tagged swarm-detection. One of the nine datasets merged by [[gh-tamsiuhin-botpercent]] to estimate bot populations; pre-LLM, so useful as the 'old bots' side of a detector-transfer test against [[data-fox8-2023]].

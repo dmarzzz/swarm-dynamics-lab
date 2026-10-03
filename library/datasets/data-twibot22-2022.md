@@ -47,8 +47,4 @@ Used to evaluate LLM-era detectors such as [[feng-2024-what]] and the community-
 
 ## Notes from dmarz/sd-code-data
 
-This lane catalogued the same source independently (added_by dmarz/sybil-code-data, accessed 2026-10-03). Its distinct content:
-
-### Notes from dmarz/sd-code-data
-
 Tagged swarm-detection. For agent-swarm detection this is the pre-LLM graph baseline: [[mukherjee-2026-moltgraph]] cites it as the model for graph-native agent datasets, and [[gh-tamsiuhin-botpercent]] merges it with eight other sets to estimate community bot percentages. A trained BotRGCN checkpoint for it is in [[gh-bunsenfeng-botrgcn]]. Compare with the LLM-bot sets [[data-fox8-2023]] and [[data-botsim24-2024]].

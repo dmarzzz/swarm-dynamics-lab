@@ -45,4 +45,4 @@ Broad and pre-LLM in most of its sources. A related SoK with a similar title is 
 
 ## Relevance to us
 
-Background map. The same authors later built TBTrackerX (NDSS 2026, not catalogued: abstract not reachable this session). Related review: [[mannocci-2024-detection]].
+Background map. The same authors later built TBTrackerX (NDSS 2026, not catalogued: abstract not reachable this session). Related review: [[mannocci-2026-detection]].

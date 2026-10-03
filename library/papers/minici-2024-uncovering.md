@@ -46,4 +46,4 @@ Single month of data; attribution of the operator unknown.
 
 ## Relevance to us
 
-Measured enforcement gap matches [[radivojevic-2024-social]]. Cross-platform follow-up: [[cinus-2024-exposing]].
+Measured enforcement gap matches [[radivojevic-2024-social]]. Cross-platform follow-up: [[cinus-2025-exposing]].

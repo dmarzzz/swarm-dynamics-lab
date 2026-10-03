@@ -87,4 +87,4 @@ The authors stress the signal is an automation artefact: agents driving real inp
 
 ### Relevance to us
 
-A clear statement of what current agent detection actually keys on, and therefore of its expiry date. Related: [[wang-2026-fp]], [[rmus-2026-process]].
+A clear statement of what current agent detection actually keys on, and therefore of its expiry date. Related: [[wang-2026-fp-agent]], [[rmus-2026-process]].

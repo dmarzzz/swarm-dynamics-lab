@@ -51,36 +51,20 @@ Real-world evidence that LLM agent swarms already operate as Sybils and that coo
 
 ## Notes from dmarz/sd-bots
 
-Abstract re-read this session (arXiv 2307.16336; published as Journal of Quantitative Description: Digital Media 4, 2024, Crossref count 57 on 2026-10-03). It is the anchor in-the-wild case for LLM botnets: 1,140 accounts found by the self-revealing phrase 'as an AI language model', confirmed by manual annotation, detectable through coordination but not by LLM-text classifiers. Forward citations (Semantic Scholar, 2026-10-03) include the follow-up detectors [[di-paolo-2025-detection]] and [[trokhymovych-2026-adversarial]], synthetic botnets [[qiao-2024-botsim]], and the image-based base rates [[yang-2024-characteristics]] and [[ricker-2024-ai]]. The same coordination-first pivot is used in [[pacheco-2020-uncovering]]. Measurement caution: the discovery method only finds operators who leak the phrase, so it says nothing about prevalence; see [[gallwitz-2022-investigating]] on prevalence claims.
+Abstract re-read this session (arXiv 2307.16336; published as Journal of Quantitative Description: Digital Media 4, 2024, Crossref count 57 on 2026-10-03). It is the anchor in-the-wild case for LLM botnets: 1,140 accounts found by the self-revealing phrase 'as an AI language model', confirmed by manual annotation, detectable through coordination but not by LLM-text classifiers. Forward citations (Semantic Scholar, 2026-10-03) include the follow-up detectors [[di-paolo-2025-detection]] and [[trokhymovych-2026-adversarial]], synthetic botnets [[qiao-2025-botsim]], and the image-based base rates [[yang-2024-characteristics]] and [[ricker-2024-ai]]. The same coordination-first pivot is used in [[pacheco-2021-uncovering]]. Measurement caution: the discovery method only finds operators who leak the phrase, so it says nothing about prevalence; see [[gallwitz-2022-investigating]] on prevalence claims.
 
 ## Notes from dmarz/sd-coordination
-
-This lane catalogued the same source independently (added_by dmarz/sybil-llm-agents, accessed 2026-10-03). Its distinct content:
-
-### Notes from dmarz/sd-coordination
 
 Read the arXiv abstract again this session. For the coordination lane this is the key in-the-wild data point: a ChatGPT-driven botnet of 1,140 accounts that engage each other through replies and retweets was detectable through its coordination patterns while state-of-the-art LLM-content classifiers failed to separate it from humans. Coordination traces ([[pacheco-2021-uncovering]]) beat content detection here. Compare with simulated LLM swarms in [[orlando-2026-emergent]] and [[qiao-2025-botsim]].
 
 ## Notes from dmarz/sd-attribution
 
-This lane catalogued the same source independently (added_by dmarz/sybil-llm-agents, accessed 2026-10-03). Its distinct content:
-
-### Notes from dmarz/sd-attribution
-
 Read the arXiv abstract page on 2026-10-03. For attribution, the useful facts are: 1,140 accounts found by heuristics (self-revealing ChatGPT phrases) and validated by hand; the accounts form a dense cluster that replies to and retweets each other; state-of-the-art LLM-content classifiers failed to separate them from human accounts in the wild, while coordination patterns did. This is a wild base-rate datapoint where model attribution came from operator mistakes (leaked refusal phrases), not from fingerprinting. Model-level attribution methods that could replace the phrase heuristic: [[sun-2025-idiosyncrasies]], [[white-2026-black]], [[bruckner-2026-one]]. Same-operator linking without the slip: [[park-2026-cross]], [[chen-2026-do]].
 
 ## Notes from dmarz/sd-informal
 
-This lane catalogued the same source independently (added_by dmarz/sybil-llm-agents, accessed 2026-10-03). Its distinct content:
-
-### Notes from dmarz/sd-informal
-
 The self-disclosure method used here ("as an ai language model" in posts) recurs across later in-the-wild cases catalogued from threat-intel and press sources: the Clemson reply network that first leaked "I'm an AI language model trained by OpenAI" and later "Dolphin here!" ([[linvill-2024-digital]], [[nbcnews-2024-ai]]), Russia's "Bad Grammar" posting ChatGPT refusal messages on Telegram ([[openai-2024-covert]]), and NewsGuard's AI content-farm criteria, which rely on leaked chatbot error messages ([[newsguard-2026-tracking]]). Operators adapt once a tell becomes known: the Clemson network switched to an uncensored model, and a scam network in OpenAI's October 2025 report stripped em-dashes ([[openai-2025-disrupting-update]]). Kai-Cheng Yang, quoted in [[nbcnews-2024-ai]], adds invented hashtags as a further LLM-bot tell.
 
 ## Notes from dmarz/sd-code-data
-
-This lane catalogued the same source independently (added_by dmarz/sybil-llm-agents, accessed 2026-10-03). Its distinct content:
-
-### Notes from dmarz/sd-code-data
 
 Tagged swarm-detection. The released benchmark is catalogued as [[data-fox8-2023]] (Zenodo 8035289, CC-BY-4.0: 1,140 fox8 bots and 1,140 humans, up to 200 tweets each); the repo osome-iu/AIBot_fox8 includes the script that queried OpenAI's AI-text classifier. My run of a text-reuse coordination detector on Moltbook found zero identical-text pairs among 4,526 agent posts in a day ([[gh-qut-digital-observatory-coordination-network-toolkit]]), consistent with this paper's point that coordination structure, not copied content, is what exposes LLM swarms (inferred).

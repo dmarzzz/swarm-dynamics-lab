@@ -45,4 +45,4 @@ Pre-LLM. Review rather than new measurement; built mostly on Twitter studies.
 
 ## Relevance to us
 
-The 'detect the group, not the agent' turn is the core idea for detecting LLM agent swarms, whose individual outputs may be indistinguishable. Follow-ups: [[cresci-2017-paradigm]], [[mannocci-2024-detection]], [[cresci-2023-demystifying]].
+The 'detect the group, not the agent' turn is the core idea for detecting LLM agent swarms, whose individual outputs may be indistinguishable. Follow-ups: [[cresci-2017-paradigm]], [[mannocci-2026-detection]], [[cresci-2023-demystifying]].

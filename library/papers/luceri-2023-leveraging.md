@@ -44,4 +44,4 @@ LLM-as-judge detectors are themselves attackable ([[orenstein-2026-breaking]]); 
 
 ## Relevance to us
 
-Option for a swarm detector front end. Same group as [[luceri-2023-unmasking]] and [[ezzeddine-2022-exposing]].
+Option for a swarm detector front end. Same group as [[luceri-2024-unmasking]] and [[ezzeddine-2022-exposing]].

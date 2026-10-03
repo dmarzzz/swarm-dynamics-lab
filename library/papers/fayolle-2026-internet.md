@@ -126,4 +126,4 @@ Six agents; abstract-only reading.
 
 ### Relevance to us
 
-Stealth-backfires is a useful prior for swarm detection: evasion tooling itself becomes a signature. Related: [[kang-2026-whose]], [[wang-2026-fp]].
+Stealth-backfires is a useful prior for swarm detection: evasion tooling itself becomes a signature. Related: [[kang-2026-whose]], [[wang-2026-fp-agent]].

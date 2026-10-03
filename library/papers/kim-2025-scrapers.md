@@ -47,7 +47,7 @@ Abstract only; one institution's logs.
 
 ## Relevance to us
 
-A robots.txt change is a zero-cost trap: a disallowed path that only non-compliant bots visit labels them. Same group as [[seiden-2026-identifying]]; context in [[liu-2024-somesite]].
+A robots.txt change is a zero-cost trap: a disallowed path that only non-compliant bots visit labels them. Same group as [[seiden-2026-identifying]]; context in [[liu-2025-somesite]].
 
 ## Notes from dmarz/sd-web-agents
 

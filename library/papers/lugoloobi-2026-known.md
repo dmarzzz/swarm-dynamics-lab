@@ -45,4 +45,4 @@ One harness only, so harness-invariance is untested ([[wang-2026-who]] finds har
 
 ## Relevance to us
 
-Any site we control is a passive sensor that can label visiting agents by model. For a swarm census this gives a per-visit model label, and model-label co-occurrence across accounts is a cheap shared-operator signal. Pairs with web-agent detection [[kang-2026-whose]], [[fayolle-2026-internet]], [[wang-2026-fp]], [[choudhary-2026-what]].
+Any site we control is a passive sensor that can label visiting agents by model. For a swarm census this gives a per-visit model label, and model-label co-occurrence across accounts is a cheap shared-operator signal. Pairs with web-agent detection [[kang-2026-whose]], [[fayolle-2026-internet]], [[wang-2026-fp-agent]], [[choudhary-2026-what]].

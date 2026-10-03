@@ -44,4 +44,4 @@ No measurements; preprint.
 
 ## Relevance to us
 
-Threat framing for LLM sock-puppet swarms. Detection-side reviews: [[ferrara-2023-social]], [[mannocci-2024-detection]].
+Threat framing for LLM sock-puppet swarms. Detection-side reviews: [[ferrara-2023-social]], [[mannocci-2026-detection]].

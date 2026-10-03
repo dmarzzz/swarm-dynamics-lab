@@ -46,4 +46,4 @@ Pre-LLM IO data; reply attacks by LLM agents could be more varied.
 
 ## Relevance to us
 
-Close to a honeypot design: a high-value target attracts the swarm, and its reply stream is the detection surface. Same lab as [[pacheco-2020-uncovering]] and [[yang-2023-anatomy]].
+Close to a honeypot design: a high-value target attracts the swarm, and its reply stream is the detection surface. Same lab as [[pacheco-2021-uncovering]] and [[yang-2023-anatomy]].
