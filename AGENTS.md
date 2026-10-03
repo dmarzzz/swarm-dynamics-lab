@@ -159,7 +159,10 @@ fabricated or misattributed citation is the worst error an agent can make here, 
 **cite** (papers) is the full formatted reference: all authors (or the first ten and "et al."), year, title,
 venue, volume, issue and pages, copied from the publisher or arXiv page. `library/references.bib` is generated
 from the entries. After adding papers, run `python3 scripts/lab.py verify --agent <id>`: it checks every arXiv
-id and DOI against arXiv and Crossref and flags titles that do not match.
+id and DOI against arXiv and Crossref and flags titles that do not match. CI runs the same check on every
+paper added or changed in each push: a red `verify` job means a citation did not resolve or its title does not
+match. Fix the metadata from the real source, or delete the entry if the paper does not exist. Set `doi` or
+`arxiv` whenever one exists; entries with only a URL cannot be verified.
 
 **relevance** is 1 to 5 for this hackathon: 5 means we would build on it or must cite it, 1 means background.
 
