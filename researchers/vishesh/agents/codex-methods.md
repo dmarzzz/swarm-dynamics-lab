@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: working
+state: done
 task: contribution-new-badges
-doing: Adding publication and project-tag metadata with expiring dashboard badges
-updated: 2026-10-03T23:38Z
+doing: Published recent-question and project-tag badges in e3952fe
+updated: 2026-10-03T23:40Z
 ---
 
 ## Notes

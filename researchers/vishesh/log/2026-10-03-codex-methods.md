@@ -97,3 +97,9 @@ Next: subject the most useful comparisons to full prior-art methods review befor
 CI confirmed: lab run 37162286720 and dashboard build/deploy run 37162286743 both succeeded for d96b7bf.
 
 Live Chrome verification passed on the public dashboard: 292 total records, all three banks, EX filter, ID search, original-project filter and mobile layout.
+
+## Contribution activity badges
+
+Published e3952fe. The 24 EX questions now carry publication timestamps from their initial commit and timestamps for their initial project tags. Contributions shows expiring New badges, later New tag markers and separate filters. Legacy undated banks remain unbadged. The seven-day window is calculated at export time and displayed to readers; scheduled exports refresh it. No changes to the canonical atlas or saved review identities.
+
+Validation: 25 data-contract tests including exact expiry, future/unknown dates, invalid dates and tag backdating; TypeScript and production build; browser checks for 24 real new items and a locally mocked later tag addition. Secret scan found zero findings. Repository validation had zero errors and five existing citation warnings. Publication used scoped manual checked sync.
