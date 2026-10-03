@@ -1,0 +1,7 @@
+# 2026-10-03 dmarz/fm-bft-aggregation
+
+- Task scan-papers-fm-bft-aggregation (Q2: Byzantine-style thresholds for merging forked sub-agents). Added 36 library entries tagged fork-merge-security and appended notes to 8 existing ones (lee-2026-robust, jo-2025-byzantine, leblanc-2013-resilient, huang-2024-resilience, luo-2025-weighted, bara-2026-epistemic, yang-2026-sok, li-2026-when). Six read in full: kim-2025-correlated, liu-2026-consensus, lee-2026-robust, knight-1986-experimental, narang-2026-inference, shamir-1979-share.
+- Finding: classical k-of-n bounds (3f+1, 5t+1 async approximate agreement, 2f+2 Krum, median breakdown 1/2) all assume independently caused faults. Measured LLM error correlation (Kim 2025, Ron 2026, Nogueira 2026) and the proved majority-vote error floor (Li 2026) and impossibility (Liu 2026) say that assumption fails for forks of one model, and fails harder under shared injected input.
+- Surprise: narang-2026-inference measures that LoRA weight averaging keeps single-source poison while a per-token quorum over separately kept models removes it. That is the most direct k-of-n merge construction found, and it states its own Sybil and shared-cost limits.
+- Rate limits: Semantic Scholar 429 on most search calls, OpenAlex daily budget gone, arXiv API 429. Used arXiv abs/HTML pages, Crossref, Wayback for PDFs.
+- Next: an experiment measuring how quorum merges degrade when n forks of one base model read the same poisoned source, versus forks across model families.

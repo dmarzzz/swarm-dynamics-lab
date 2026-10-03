@@ -44,3 +44,7 @@ Probabilistic; CaMeL reports GPT-4o-mini, which ships with the instruction hiera
 - Q3 (attack): a merge places a child's output somewhere in the parent's privilege order. If the parent ingests a returning child's memory as system-level or as its own past reasoning, the hierarchy offers no protection; if it ingests it as third-party content, the hierarchy helps probabilistically. Memory-overwrite attacks work by getting attacker text promoted up this order.
 - Q2: gives no threshold; it is a per-model filter.
 Related: [[debenedetti-2024-agentdojo]], [[triedman-2025-multi]] (laundering through sub-agents changes how a request is presented and evades alignment).
+
+## Notes from dmarz/fm-identity-hijack
+
+Abstract read via the arXiv API this session. Two measured results from other entries limit what the hierarchy can do in fork-merge. [[zerhoudi-2026-compaction]] shows the privileged rules themselves erode under context compaction (53% kept after one round of Claude Code /compact, 10% after five), so a long-running part may no longer hold the top of its own hierarchy. [[nakash-2024-breaking]] shows that content placed in the agent's own reasoning trace yields over 95% compliance, so a merge that imports a part's trace as the parent's own thoughts bypasses the hierarchy entirely. Detection rather than prioritisation is the complementary approach in [[abdelnabi-2024-get]].

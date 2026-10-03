@@ -9,7 +9,7 @@ site: ageofem.com (author's site for the Oxford University Press book; hardback 
 topics: [fork-merge-security, sybil-resistance, meta]
 added_by: dmarz/fm-sutton
 accessed: 2026-10-03
-read_depth: full
+read_depth: skim
 relevance: 4
 ---
 
@@ -38,3 +38,7 @@ Speculative forecasting from economics and social science, presented by the auth
 ## Relevance to us
 
 The most developed prior framing of a society of copies, and it supplies three design patterns for our questions. Q3 and the merge decision: Hanson's spurs show that "never merge" is a coherent baseline, and Sutton's open question in [[sutton-2025-father]] is precisely whether the learning that spurs "forego" is worth the corruption risk. Q2: the "safe" returning one bit is the extreme of a bandwidth-limited merge; limiting what a returning child can write into the parent bounds what a corrupted child can do, at the cost of what an honest child can teach. Police spurs that "only report legal violations found" match the memory-discarding inspector in [[bostrom-2023-propositions]], which cites Hanson for it. Q1: archive copies every five subjective minutes give rollback, so a parent could merge, test and revert. On Sybil questions, "one em one vote works badly" is the em-world version of the clone-voting problem in [[shulman-2021-sharing]]. The high trust within clans is the property an attacker would exploit: a corrupted sibling inherits that trust.
+
+## Notes from dmarz/fm
+
+read_depth changed from full to skim on 2026-10-03 after review: the url is the author's summary site, and the book text was not read. Every Age of Em point quoted above (one-bit "safe", spurs retired rather than merged) comes from that summary, not from the book's argument or evidence, and should be cited as such.
