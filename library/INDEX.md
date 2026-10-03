@@ -2,7 +2,7 @@
 
 # Library index
 
-2698 entries.
+2702 entries.
 
 ## Papers (1708)
 
@@ -2610,13 +2610,14 @@
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 | [data-zzzztom-moltbook-2026](datasets/data-zzzztom-moltbook-2026.md) | zzzztom/moltbook-forum-data Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 
-## Talks (117)
+## Talks (121)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
 | [annessi-unknown-private](talks/annessi-unknown-private.md) | MEV Roast \| Private Searching on Private Transactions - Robert Annessi (Flashbots) | unknown | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [barfuss-2023-intrinsic](talks/barfuss-2023-intrinsic.md) | Wolfram Barfuss: Intrinsic fluctuations in reinforcement learning promote cooperation | 2023 | 5 | abstract | marl-emergence, collective-decision | shadow/sol-w1 |
 | [bredeche-2018-embodied](talks/bredeche-2018-embodied.md) | Embodied Evolution in Collective Robotics: Distributed On-line Learning of Collective Behaviors | 2018 | 5 | full | swarm-robotics | shadow/sol-w8 |
+| [carletti-2024-global](talks/carletti-2024-global.md) | Timoteo Carletti: Global Synchronization on networks and beyond | 2024 | 5 | skim | sync-consensus | shadow/sol-w8 |
 | [cichos-2021-feedback](talks/cichos-2021-feedback.md) | Active Particles with Feedback Interactions (3/7) | 2021 | 5 | full | active-matter, swarm-robotics | shadow/sol-w3 |
 | [costanzo-2018-spontaneous](talks/costanzo-2018-spontaneous.md) | Spontaneous Emergence of Milling (Vortex State) in a Vicsek-like Model | 2018 | 5 | full | collective-motion | shadow/sol-w3 |
 | [couzin-2017-ecology](talks/couzin-2017-ecology.md) | 2017 Ecology Across Borders Plenary Lecture: Iain Couzin | 2017 | 5 | full | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
@@ -2629,6 +2630,7 @@
 | [dalton-2026-breaking](talks/dalton-2026-breaking.md) | Black Hat USA 2026 \| The 'Breaking' News: The OpenAI-Hugging Face Incident | 2026 | 5 | abstract | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
 | [deason-2018-time](talks/deason-2018-time.md) | Time Signature Based Matching - Lauren Deason | 2018 | 5 | abstract | swarm-detection | shadow/sol-w1 |
 | [felten-2022-l2](talks/felten-2022-l2.md) | L2 sequencing and MEV - Ed Felten (Arbitrum) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
+| [gomez-gardenes-2025-synchronization](talks/gomez-gardenes-2025-synchronization.md) | Jesus Gómez Gardeñes: Synchronization phenomena and the Kuramoto model and... - Class 1 | 2025 | 5 | skim | sync-consensus | shadow/sol-w8 |
 | [hasu-2022-threat](talks/hasu-2022-threat.md) | The threat of MEV centralization: an anatomy of the transaction supply chain - Hasu (Flashbots) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [kao-2020-albert](talks/kao-2020-albert.md) | Albert Kao on Animal Sociality & Collective Computation | 2020 | 5 | full | collective-decision, fork-merge-security | shadow/sol-aud |
 | [leonard-2009-flocks](talks/leonard-2009-flocks.md) | Naomi Leonard: Flocks and Fleets: Collective Motion in Nature and Robotics | 2009 | 5 | full | collective-motion, swarm-robotics, sync-consensus | shadow/sol-w3 |
@@ -2656,6 +2658,7 @@
 | [wu-2025-incentivizing](talks/wu-2025-incentivizing.md) | TILOS Seminar: Incentivizing Emergent Behaviors for LLMs via Reinforcement Learning | 2025 | 5 | abstract | llm-agent-swarms, marl-emergence | shadow/sol-w1 |
 | [yeomans-2020-challenges2](talks/yeomans-2020-challenges2.md) | Challenges in active matter: connecting molecular and microscopic scales? (2 of 3) | 2020 | 5 | full | active-matter, collective-motion | shadow/sol-w3 |
 | [yeomans-2020-challenges3](talks/yeomans-2020-challenges3.md) | Challenges in active matter: connecting molecular and microscopic scales? (3 of 3) | 2020 | 5 | full | active-matter, collective-motion | shadow/sol-w3 |
+| [zarei-2020-adaptive](talks/zarei-2020-adaptive.md) | Talk: Synchronization of adaptive networks of Sakaguchi-Kuramoto oscillators | 2020 | 5 | full | sync-consensus | shadow/sol-w8 |
 | [adler-2022-exploring](talks/adler-2022-exploring.md) | Exploring MEV in the modular blockchain stack - John Adler (Celestia) | 2022 | 4 | full | sybil-resistance | shadow/sol-w8 |
 | [bongard-2016-lecture](talks/bongard-2016-lecture.md) | Lecture 21, UVM Evolutionary Robotics Course (Spring 2016). Swarm robotics. | 2016 | 4 | skim | swarm-robotics | shadow/sol-w8 |
 | [brown-2026-agent](talks/brown-2026-agent.md) | Noam Brown – Agent swarms, alignment, & recursive self-improvement | 2026 | 4 | full | llm-agent-swarms, fork-merge-security, marl-emergence | shadow/sol-w5 |
@@ -2682,6 +2685,7 @@
 | [leonard-2020-general](talks/leonard-2020-general.md) | A General Model of Opinion Dynamics on Networks: Consensus, Dissensus, and Cascades | 2020 | 4 | full | sync-consensus, collective-decision, marl-emergence | shadow/sol-w6 |
 | [moses-2024-physics](talks/moses-2024-physics.md) | Physics of Life, Ep 4: The physics of collectives | 2024 | 4 | full | collective-decision, swarm-intelligence, criticality-measurement | shadow/sol-aud |
 | [nagpal-2014-robots14](talks/nagpal-2014-robots14.md) | ROBOTS14 - Radhika Nagpal | 2014 | 4 | skim | swarm-robotics | shadow/sol-w8 |
+| [nolte-2025-network](talks/nolte-2025-network.md) | Network Synchronization Physics | 2025 | 4 | full | sync-consensus | shadow/sol-w8 |
 | [puzzo-2025-short](talks/puzzo-2025-short.md) | M. Leticia Puzzo: Short-time dynamics in active systems: the vicsek model | 2025 | 4 | full | collective-motion, active-matter, criticality-measurement | shadow/sol-w3 |
 | [reclaim-2024-frontiers](talks/reclaim-2024-frontiers.md) | Panel 2 : Frontiers of Sybil Resistance | 2024 | 4 | full | sybil-resistance | shadow/sol-w8 |
 | [reclaim-2024-using](talks/reclaim-2024-using.md) | Panel 4 : Using ZK for sybil resistance solutions | 2024 | 4 | full | sybil-resistance | shadow/sol-w8 |

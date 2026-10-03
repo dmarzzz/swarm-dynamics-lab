@@ -11,7 +11,7 @@
 | swarm-robotics | 280 | 13 | 2 | 7 | 1 | 24 | 327 |
 | swarm-intelligence | 108 | 1 | 2 | 4 | 0 | 3 | 118 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 16 | 210 |
-| sync-consensus | 243 | 13 | 11 | 17 | 0 | 20 | 304 |
+| sync-consensus | 243 | 13 | 11 | 17 | 0 | 24 | 308 |
 | criticality-measurement | 190 | 4 | 2 | 23 | 2 | 18 | 239 |
 | marl-emergence | 132 | 13 | 1 | 33 | 1 | 9 | 189 |
 | llm-agent-swarms | 358 | 59 | 99 | 198 | 22 | 10 | 746 |
