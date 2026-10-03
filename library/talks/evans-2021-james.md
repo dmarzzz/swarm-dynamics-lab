@@ -6,7 +6,7 @@ authors:
 - James Evans
 - Michael Garfield
 year: 2021
-url: https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/812a2932-f271-4e9b-a23f-8d2d443a1682/episodes/902fee89-e667-43ce-b280-dfa964b82428/audio/c121c68e-5641-43c3-be24-40bb05fab6cb/default_tc.mp3?aid=rss_feed&feed=OzDH_At2
+url: https://complexity.simplecast.com/episodes/55-0fe4UFdR
 venue: COMPLEXITY, 2021-03-12
 topics:
 - collective-decision

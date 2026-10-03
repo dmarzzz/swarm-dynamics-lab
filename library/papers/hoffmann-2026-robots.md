@@ -21,7 +21,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 3
 citations: null
 code: []
 ---
@@ -32,7 +32,7 @@ The authors measure web permission and descriptor files across roughly four mill
 
 ## Contribution
 
-Large-scale measurement of permission and descriptor files across domains.
+Measures robots.txt, ai.txt, llms.txt and llms-full.txt adoption and conflicts across about 4M domains.
 
 ## Key results
 
@@ -48,7 +48,7 @@ Permission files signal intended policy rather than demonstrate crawler complian
 
 ## Relevance to us
 
-A comparison source for coordinated automation and security measurement. Full-text methods and replication have not been checked.
+Context for the crawler side of swarm detection: declared permissions are the baseline that agent traffic is supposed to respect, but the paper measures policy, not compliance.
 
 ## Access provenance
 

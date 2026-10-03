@@ -21,7 +21,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 2
 citations: null
 code: []
 ---
@@ -32,7 +32,7 @@ This longitudinal measurement tests more than 640,600 free proxies from eleven p
 
 ## Contribution
 
-Daily proxy testing, Shodan vulnerability checks, and content-manipulation measurement.
+Tests more than 640,600 free proxies from eleven providers over thirty months for availability, vulnerabilities and content manipulation.
 
 ## Key results
 
@@ -48,7 +48,7 @@ The population covers collected free proxies, not all proxy infrastructure; a pr
 
 ## Relevance to us
 
-A comparison source for coordinated automation and security measurement. Full-text methods and replication have not been checked.
+Background on the proxy layer that cheap swarms route through; useful only for IP-reputation assumptions.
 
 ## Access provenance
 

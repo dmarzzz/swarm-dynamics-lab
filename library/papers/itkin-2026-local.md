@@ -27,7 +27,7 @@ This study compares individual prediction and collective forecasting for compact
 
 ## Contribution
 
-9,455 published trajectories, held-out collective forecasts, and new opinion-dynamics experiments.
+Tests whether surrogates that predict individual LLM agents well also forecast collective outcomes, using 9,455 published trajectories plus new opinion-dynamics runs.
 
 ## Key results
 
@@ -43,7 +43,7 @@ Individual predictive accuracy is not sufficient for collective fidelity, and av
 
 ## Relevance to us
 
-A primary-source abstract for comparisons of agent behavior and measurement. Full text and replication were not checked.
+A direct warning for simulation-based work here: individual-level fit does not guarantee collective fidelity, so any surrogate swarm we build needs a collective-level validation step.
 
 ## Access provenance
 

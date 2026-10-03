@@ -20,7 +20,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 2
 citations: null
 code: []
 ---
@@ -31,7 +31,7 @@ This comparison deploys reCAPTCHA and Turnstile on test websites and examines ne
 
 ## Contribution
 
-Network and script inspection, client-code deobfuscation, and regulatory analysis.
+Deploys reCAPTCHA and Turnstile on test sites and compares network behavior, scripts and privacy rules, reproducing a token-exploitation flaw in Turnstile.
 
 ## Key results
 
@@ -47,7 +47,7 @@ Regulatory conclusions are the authors analysis, not legal advice or a current c
 
 ## Relevance to us
 
-A comparison source for coordinated automation and security measurement. Full-text methods and replication have not been checked.
+Background on CAPTCHA infrastructure that agent swarms must pass; see [[teoh-2025-captchas]] and [[zhang-2026-captchaarena]] for solver capability.
 
 ## Access provenance
 

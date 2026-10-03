@@ -7,7 +7,7 @@ authors:
 - Evelyn Douek
 - Quinta Jurecic
 year: 2021
-url: https://sphinx.acast.com/p/open/s/61e878a1419a9b0013b27134/e/61fd4c33116c080013f39acc/media.mp3
+url: https://shows.acast.com/arbiters-of-truth/episodes/coordinating-inauthentic-behavior-with-facebooks-head-of-sec
 venue: Lawfare / Arbiters of Truth, 2021-07-01; Scaling Laws republication, 2022-02-04
 topics:
 - swarm-detection

@@ -19,7 +19,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 3
 citations: 793
 code: []
 ---
@@ -46,7 +46,7 @@ The indexed abstract is incomplete for technical comparison. Do not infer classi
 
 ## Relevance to us
 
-This provides a prior-art comparison for detecting coordinated automation, not evidence that any observed population is an LLM swarm.
+Highly cited social-network spam detection paper (793 OpenAlex citations); the indexed abstract lacks the method, so read the PDF before citing any specifics.
 
 ## Access and citation provenance
 

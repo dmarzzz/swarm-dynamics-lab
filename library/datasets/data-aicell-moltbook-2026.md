@@ -22,7 +22,7 @@ accessed: '2026-10-03'
 
 ## Summary
 
-A separate Hugging Face release of Moltbook platform data discovered by inspecting dataset links in the arXiv Moltbook paper list. Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2606.17174v1.
+AIcell/moltbook-data on Hugging Face: 4 data files (json, parquet, png), top-level entries claw.png, data, filter_mbc_all_comments_until_0208.json; 2.05 GB repository storage, licence mit, 264 downloads, last modified 2026-02-18. Card text: "Moltbook Social Interaction Dataset Moltbook is consists of individual "claws" Dataset Summary The Moltbook Social Interaction Dataset captures large-scale social interactions from Moltbook, a persistent online platform..." Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2606.17174v1.
 
 ## Access
 

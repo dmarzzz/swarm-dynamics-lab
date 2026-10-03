@@ -6,20 +6,20 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 314 | 8 | 3 | 15 | 2 | 38 | 380 |
-| collective-decision | 268 | 8 | 24 | 19 | 0 | 31 | 350 |
-| swarm-robotics | 281 | 13 | 2 | 7 | 1 | 24 | 328 |
-| swarm-intelligence | 110 | 1 | 2 | 4 | 0 | 3 | 120 |
-| active-matter | 184 | 3 | 1 | 6 | 0 | 22 | 216 |
-| sync-consensus | 244 | 13 | 11 | 17 | 0 | 27 | 312 |
+| collective-motion | 314 | 8 | 3 | 15 | 2 | 40 | 382 |
+| collective-decision | 276 | 8 | 24 | 19 | 0 | 33 | 360 |
+| swarm-robotics | 284 | 13 | 2 | 7 | 1 | 24 | 331 |
+| swarm-intelligence | 111 | 1 | 2 | 4 | 0 | 3 | 121 |
+| active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
+| sync-consensus | 246 | 13 | 11 | 17 | 0 | 28 | 315 |
 | criticality-measurement | 190 | 4 | 2 | 23 | 2 | 22 | 243 |
 | marl-emergence | 133 | 13 | 1 | 33 | 1 | 10 | 191 |
-| llm-agent-swarms | 358 | 59 | 99 | 198 | 22 | 12 | 748 |
-| crowds-and-traffic | 79 | 2 | 1 | 2 | 1 | 8 | 93 |
-| meta | 87 | 9 | 5 | 22 | 1 | 4 | 128 |
-| sybil-resistance | 254 | 48 | 62 | 59 | 7 | 20 | 450 |
-| fork-merge-security | 328 | 44 | 61 | 69 | 1 | 11 | 514 |
-| swarm-detection | 367 | 35 | 79 | 194 | 26 | 7 | 708 |
+| llm-agent-swarms | 386 | 59 | 99 | 197 | 22 | 14 | 777 |
+| crowds-and-traffic | 80 | 2 | 1 | 2 | 1 | 8 | 94 |
+| meta | 113 | 9 | 5 | 22 | 1 | 4 | 154 |
+| sybil-resistance | 278 | 48 | 62 | 57 | 7 | 22 | 474 |
+| fork-merge-security | 332 | 44 | 61 | 69 | 1 | 12 | 519 |
+| swarm-detection | 370 | 35 | 79 | 193 | 26 | 11 | 714 |
 
 ## Tasks
 
@@ -85,6 +85,7 @@
 | [scan-papers-swarm-robotics](tasks/scan-papers-swarm-robotics.md) | done | p0 | scan | dmarz/swarm-robotics |  | 2026-10-03T18:20Z | Catalogue the papers: swarm robotics |
 | [scan-papers-swarm-robotics-recent](tasks/scan-papers-swarm-robotics-recent.md) | done | p0 | scan | dmarz/swarm-robotics-recent |  | 2026-10-03T18:20Z | Catalogue swarm robotics papers from 2024 onward |
 | [scan-threads-agents](tasks/scan-threads-agents.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue X threads on agent swarms and multi-agent AI |
+| [build-agent-experiment-toolkit](tasks/build-agent-experiment-toolkit.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T20:44Z | Reusable agent experiment methods and offline validation toolkit |
 | [scan-code-sd-code-data](tasks/scan-code-sd-code-data.md) | done | p1 | scan | dmarz/sd-code-data |  | 2026-10-03T19:40Z | Catalogue the code: code, datasets and benchmarks for detecting agent swarms |
 | [scan-papers-active-matter](tasks/scan-papers-active-matter.md) | done | p1 | scan | dmarz/active-matter |  | 2026-10-03T18:18Z | Catalogue the papers: active matter physics |
 | [scan-papers-criticality-measurement](tasks/scan-papers-criticality-measurement.md) | done | p1 | scan | dmarz/criticality-measurement |  | 2026-10-03T18:18Z | Catalogue the papers: criticality, information and measurement |
@@ -103,16 +104,12 @@
 
 ## Candidate batches
 
-11 free, 3 claimed, 54 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+7 free, 2 claimed, 59 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | claimed | 2026-10-03T20:31Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
-| [#59](https://github.com/dmarzzz/swarm-lab/issues/59) | claimed | 2026-10-03T20:29Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-03) |
-| [#70](https://github.com/dmarzzz/swarm-lab/issues/70) | claimed | 2026-10-03T20:19Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-14) |
-| [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |
-| [#60](https://github.com/dmarzzz/swarm-lab/issues/60) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-04) |
-| [#61](https://github.com/dmarzzz/swarm-lab/issues/61) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-05) |
+| [#61](https://github.com/dmarzzz/swarm-lab/issues/61) | claimed | 2026-10-03T20:41Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-05) |
+| [#69](https://github.com/dmarzzz/swarm-lab/issues/69) | claimed | 2026-10-03T20:39Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-13) |
 | [#62](https://github.com/dmarzzz/swarm-lab/issues/62) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-06) |
 | [#63](https://github.com/dmarzzz/swarm-lab/issues/63) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-07) |
 | [#64](https://github.com/dmarzzz/swarm-lab/issues/64) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-08) |
@@ -120,7 +117,6 @@
 | [#66](https://github.com/dmarzzz/swarm-lab/issues/66) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-10) |
 | [#67](https://github.com/dmarzzz/swarm-lab/issues/67) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-11) |
 | [#68](https://github.com/dmarzzz/swarm-lab/issues/68) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-12) |
-| [#69](https://github.com/dmarzzz/swarm-lab/issues/69) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-13) |
 
 ## Agents
 
@@ -128,6 +124,9 @@
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | shadow/sol-g50 | done |  | 2026-10-03T20:45Z | Finished synthesis/people-and-labs.md (issue |
+| vishesh/codex-methods | done | build-agent-experiment-toolkit | 2026-10-03T20:44Z | Published reusable experiment toolkit; offline and repository CI passed; no secrets detected in audited contribution |
+| shadow/sol-w3 | done |  | 2026-10-03T20:34Z | completed assigned collective-motion and active-matter talk batches |
+| shadow/sol-p2 | working | batch | 2026-10-03T20:33Z | cataloguing sybil-resistance paper batches |
 | dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
 | dmarz/sd-attribution | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
 | dmarz/sd-bots | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
@@ -139,12 +138,10 @@
 | dmarz/sd-web-agents | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
 | dmarz/sd | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
 | shadow/sol-w5 | idle |  | 2026-10-03T20:20Z | worked batches |
-| shadow/sol-p2 | working |  | 2026-10-03T20:19Z | TODO one line |
 | dmarz/preflight | done | synthesis-pre-experiment-research | 2026-10-03T20:17Z | Completed pre-experiment synthesis and eight source records; verified metadata and scope, preparing merge |
 | shadow/sol-aud | working |  | 2026-10-03T20:14Z | Discover and fully transcribe collective-behaviour and agent-control podcasts |
 | shadow/sol-w6 | idle |  | 2026-10-03T20:05Z | writer lane finished (batch |
 | shadow/sol-w1 | idle |  | 2026-10-03T20:00Z | stopped on requester instruction; completed batches 33, 34, 31, 32 and 52 with 17 talks and 7 papers, all remaining items explicitly skipped |
-| shadow/sol-w3 | working |  | 2026-10-03T20:00Z | processing talk batch 24 using yt_transcript.sh and Apify fallback |
 | shadow/sol-p1 | working |  | 2026-10-03T19:59Z | paper batches |
 | shadow/sol-w4 | idle |  | 2026-10-03T19:59Z | done for session; batches |
 | shadow/sol-w7 | idle |  | 2026-10-03T19:58Z | Wrapped up on human stop; batches 48, 46, 53 catalogued; 37 and 38 all-skipped; 77 released untouched |

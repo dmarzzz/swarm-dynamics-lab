@@ -22,7 +22,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 2
 citations: null
 code: []
 ---
@@ -33,7 +33,7 @@ This paper tests whether existing AI-text detectors can identify LLM-written pee
 
 ## Contribution
 
-Comparison of AI-text detection algorithms and a proposed review-specific detector.
+Tests whether existing AI-text detectors can find GPT-4o-written peer reviews at low false-positive rates and proposes an improved method.
 
 ## Key results
 
@@ -49,7 +49,7 @@ The abstract does not provide enough detail to independently assess thresholds o
 
 ## Relevance to us
 
-A primary-source abstract for comparisons of agent behavior and measurement. Full text and replication were not checked.
+Background for content-based detection; superseded for our purposes by the larger benchmark in [[yu-2025-paper]].
 
 ## Access provenance
 

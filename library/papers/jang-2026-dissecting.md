@@ -22,7 +22,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 3
 citations: null
 code: []
 ---
@@ -33,7 +33,7 @@ This study measures browser-extension bandwidth sharing through Mellowtel using 
 
 ## Contribution
 
-Chrome Web Store measurement, six AWS regions, and 34 students across 25 countries.
+Measures the Mellowtel bandwidth-sharing SDK across 116 equipped Chrome extensions, six AWS regions and a 34-student deployment.
 
 ## Key results
 
@@ -49,7 +49,7 @@ Crossref dates the proceedings publication to 2026-10-12, after access; this ent
 
 ## Relevance to us
 
-A comparison source for coordinated automation and security measurement. Full-text methods and replication have not been checked.
+Residential-IP crawling through browser extensions is one way agent swarms can look like many independent users; relevant to IP-based detection assumptions.
 
 ## Access provenance
 

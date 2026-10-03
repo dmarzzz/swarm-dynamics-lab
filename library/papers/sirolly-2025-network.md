@@ -30,7 +30,7 @@ The authors propose iterative network-based detection of wash trading based on n
 
 ## Contribution
 
-Iterative counterparty-network scoring of potentially colluding trading clusters.
+Detects wash trading by iteratively finding nearly closed counterparty clusters, applied to Polymarket.
 
 ## Key results
 
@@ -46,7 +46,7 @@ Patterns indicative of wash trading are not legal adjudication or verified share
 
 ## Relevance to us
 
-A comparison source for coordinated automation and security measurement. Full-text methods and replication have not been checked.
+A concrete Sybil-cluster detector on a live prediction market (about 60% of volume at the December 2024 peak, about 20% in October 2025); the closed-cluster idea transfers to agent wallets.
 
 ## Access provenance
 

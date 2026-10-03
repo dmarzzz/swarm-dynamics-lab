@@ -25,7 +25,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 3
 citations: null
 code: []
 ---
@@ -36,7 +36,7 @@ CaptchaArena supplies execution-verified screenshot-action trajectories for inte
 
 ## Contribution
 
-Execution-verified trajectories and supervised plus reinforcement learning.
+Releases 50K execution-verified CAPTCHA puzzles and trajectories and trains a single 9B solver with SFT then RL.
 
 ## Key results
 
@@ -52,7 +52,7 @@ These results concern the released task collection; success on arbitrary product
 
 ## Relevance to us
 
-A primary-source abstract for comparisons of agent behavior and measurement. Full text and replication were not checked.
+Shows interactive CAPTCHAs are trainable for computer-use agents (71.7 Pass@1); background on how weak challenge-based gating is against agent swarms.
 
 ## Access provenance
 

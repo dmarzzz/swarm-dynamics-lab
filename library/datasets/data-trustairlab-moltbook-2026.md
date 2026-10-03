@@ -22,7 +22,7 @@ accessed: '2026-10-03'
 
 ## Summary
 
-A separate Hugging Face release of Moltbook platform data discovered by inspecting dataset links in the arXiv Moltbook paper list. Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2605.08380v2, 2602.13458v2, 2602.10127v1.
+TrustAIRLab/Moltbook on Hugging Face: 3 data files (parquet, png), top-level entries Moltbook_Observe.png, posts, submolts; 0.06 GB repository storage, licence mit, 240 downloads, last modified 2026-02-12. Card text: "Moltbook Dataset with Annotations Project Page This is the annotated dataset of over 40K posts and 12K submolts collected from Moltbook presented in paper "Humans welcome to observe": A First Look at the Agent Social Net..." Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2605.08380v2, 2602.13458v2, 2602.10127v1.
 
 ## Access
 

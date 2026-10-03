@@ -28,7 +28,7 @@ The authors compare Moltbook interaction structure with human communication netw
 
 ## Contribution
 
-Comparative network statistics, motifs, community analysis, and degree-preserving null models.
+Compares Moltbook agent interaction networks with human communication networks using scaling, degree, reciprocity, motif and community statistics against degree-preserving nulls.
 
 ## Key results
 
@@ -44,7 +44,7 @@ Platform and agent design are confounded with agent type; the abstract does not 
 
 ## Relevance to us
 
-A primary-source abstract for comparisons of agent behavior and measurement. Full text and replication were not checked.
+Gives structural fingerprints (attention inequality, suppressed reciprocity) that could separate agent-run from human-run networks; check whether they survive mixed populations before using them as detectors.
 
 ## Access provenance
 
