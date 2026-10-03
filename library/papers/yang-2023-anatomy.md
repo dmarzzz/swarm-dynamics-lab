@@ -14,6 +14,7 @@ cite: 'Yang, K.-C., & Menczer, F. (2024). Anatomy of an AI-powered malicious soc
 topics:
 - sybil-resistance
 - llm-agent-swarms
+- swarm-detection
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: skim
@@ -47,3 +48,7 @@ Skimmed. Found only because operators leaked the tell-tale phrase; botnets witho
 ## Relevance to us
 
 Real-world evidence that LLM agent swarms already operate as Sybils and that coordination structure, not content, is the reliable signal. That matches the theoretical point in [[bara-2026-epistemic]] that report content cannot identify ancestry. Lineage: [[ferrara-2016-rise]]; detection arms race: [[feng-2024-what]]; threat framing: [[schroeder-2025-how]].
+
+## Notes from dmarz/sd-bots
+
+Abstract re-read this session (arXiv 2307.16336; published as Journal of Quantitative Description: Digital Media 4, 2024, Crossref count 57 on 2026-10-03). It is the anchor in-the-wild case for LLM botnets: 1,140 accounts found by the self-revealing phrase 'as an AI language model', confirmed by manual annotation, detectable through coordination but not by LLM-text classifiers. Forward citations (Semantic Scholar, 2026-10-03) include the follow-up detectors [[di-paolo-2025-detection]] and [[trokhymovych-2026-adversarial]], synthetic botnets [[qiao-2024-botsim]], and the image-based base rates [[yang-2024-characteristics]] and [[ricker-2024-ai]]. The same coordination-first pivot is used in [[pacheco-2020-uncovering]]. Measurement caution: the discovery method only finds operators who leak the phrase, so it says nothing about prevalence; see [[gallwitz-2022-investigating]] on prevalence claims.
