@@ -2,7 +2,7 @@
 
 # Library index
 
-2354 entries.
+2356 entries.
 
 ## Papers (1509)
 
@@ -2346,7 +2346,7 @@
 | [data-moltbook-takschdube-2026](datasets/data-moltbook-takschdube-2026.md) | Moltbook longitudinal dataset (Taksch Dube): timestamped crawls with derived social and reply graphs | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 
-## Talks (37)
+## Talks (39)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -2380,6 +2380,7 @@
 | [strogatz-2024-how](talks/strogatz-2024-how.md) | How Is Flocking Like Computing? | 2024 | 3 | full | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
 | [sutton-2024-perspective](talks/sutton-2024-perspective.md) | A Perspective on Intelligence | 2024 | 3 | full | fork-merge-security, collective-decision, meta | dmarz/fm-sutton |
 | [benzi-2020-nonlocal](talks/benzi-2020-nonlocal.md) | Nonlocal dynamics on networks via fractional graph Laplacians: theory and numerical methods | 2020 | 2 | skim | sync-consensus, meta | shadow/sol-w6 |
+| [chandrasekar-2023-kuramoto](talks/chandrasekar-2023-kuramoto.md) | Kuramoto model in the presence of additional asymmetric interactions (Lecture 89) | 2023 | 2 | skim | sync-consensus | shadow/sol-w6 |
 | [helbing-2013-planetary](talks/helbing-2013-planetary.md) | A Planetary Nervous System, and What to Do with It. Part I: Seminar | 2013 | 2 | full | crowds-and-traffic, collective-decision, llm-agent-swarms | shadow/sol-w5 |
 | [krishna-2018-network](talks/krishna-2018-network.md) | Network dynamics (Lecture 03): the Erdos-Renyi giant-component transition via aggregation kinetics | 2018 | 2 | skim | criticality-measurement, sync-consensus | shadow/sol-w6 |
 | [matlab-2022-introduction](talks/matlab-2022-introduction.md) | Introduction to Multi-Agent Reinforcement Learning | 2022 | 2 | abstract | marl-emergence | shadow/sol-w1 |
@@ -2387,3 +2388,4 @@
 | [moussaid-2018-wise](talks/moussaid-2018-wise.md) | Wise and Mad Crowds on the Move | 2018 | 2 | abstract | crowds-and-traffic, collective-decision | shadow/sol-w5 |
 | [saberi-2018-calibrating](talks/saberi-2018-calibrating.md) | UNSW rCITI seminar on calibrating a social force model for bidirectional pedestrian streams | 2018 | 2 | abstract | crowds-and-traffic | shadow/sol-w5 |
 | [strogatz-2018-sowers](talks/strogatz-2018-sowers.md) | Sync: how order emerges from chaos (J. Mark Sowers Distinguished Lecture) | 2018 | 2 | skim | sync-consensus, crowds-and-traffic | shadow/sol-w6 |
+| [blockchain-at-berkeley-2020-distributed](talks/blockchain-at-berkeley-2020-distributed.md) | Lecture 6: Distributed Systems & Consensus (Blockchain Fundamentals, Fall 2020) | 2020 | 1 | skim | sync-consensus, sybil-resistance | shadow/sol-w6 |
