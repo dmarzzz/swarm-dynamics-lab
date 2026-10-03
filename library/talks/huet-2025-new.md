@@ -1,5 +1,5 @@
 ---
-id: huet-2025-openai
+id: huet-2025-new
 type: talk
 title: ⚡️The new OpenAI Agents Platform
 authors:

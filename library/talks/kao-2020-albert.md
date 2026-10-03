@@ -28,4 +28,4 @@ Albert Kao discusses the conditional value of collective computation with host M
 
 ## Relevance to us
 
-Strong conceptual companion for agent-swarm scaling and fork/merge aggregation: distinguish raw agent count from effective independent information, test modular voting against correlated errors, and include the cost of abstention. The interview does not study adversarial delegates or provide secure merge thresholds. Direct transfer to LLM agents is a proposed analogy, not evidence from this source.
+Interview companion to the already catalogued primary study [[kao-2014-decision]]. Strong conceptual companion for agent-swarm scaling and fork/merge aggregation: distinguish raw agent count from effective independent information, test modular voting against correlated errors, and include the cost of abstention. The interview does not study adversarial delegates or provide secure merge thresholds. Direct transfer to LLM agents is a proposed analogy, not evidence from this source.

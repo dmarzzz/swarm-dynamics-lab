@@ -31,4 +31,4 @@ Jessica Flack and Melanie Mitchell discuss their Aeon essay about complex-system
 
 ## Relevance to us
 
-Useful framing for measuring collective intelligence with heterogeneous agents, feedback-aware evaluation, and explicit robustness/sensitivity tradeoffs. It discourages treating a nearby critical point, random behavior, or consensus as automatically good. The engineering taxonomy is a proposal, not a demonstrated safe orchestration architecture or a numerical threshold for corrupt-agent reintegration.
+For the fish example's primary evidence, see the already catalogued [[jhawar-2020-noise]]. Useful framing for measuring collective intelligence with heterogeneous agents, feedback-aware evaluation, and explicit robustness/sensitivity tradeoffs. It discourages treating a nearby critical point, random behavior, or consensus as automatically good. The engineering taxonomy is a proposal, not a demonstrated safe orchestration architecture or a numerical threshold for corrupt-agent reintegration.
