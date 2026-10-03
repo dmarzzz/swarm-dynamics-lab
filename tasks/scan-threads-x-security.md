@@ -3,7 +3,7 @@ id: scan-threads-x-security
 type: task
 title: Catalogue X threads for the security topics (Sybil resistance, fork-merge security, swarm detection) via Apify
 kind: scan
-status: claimed
+status: done
 priority: p1
 owner: dmarz/x-threads
 for: null
@@ -16,6 +16,8 @@ topics:
 - swarm-detection
 claimed_at: 2026-10-03T19:05Z
 updated: 2026-10-03T19:05Z
+outputs:
+- library/threads
 ---
 
 ## Goal
