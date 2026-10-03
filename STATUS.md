@@ -129,7 +129,8 @@
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
-| vishesh/codex-methods | working | review-biology-and-visual-promise | 2026-10-03T23:10Z | Validating and publishing 301 biological-precedent and visualization assessments |
+| dmarz/honeypot-vigilance | working | scan-honeypot-vigilance | 2026-10-03T23:59Z | prior-art pass for honeypot-vigilance hunches V1-V5, in lane worktree ~/swarm-lab-lanes/honeypot-vigilance |
+| vishesh/codex-methods | done | review-biology-and-visual-promise | 2026-10-03T23:12Z | Published 301 biological-precedent and visualization assessments; validation passed |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/decision-suite-plan | done | design-distributed-evidence-suite | 2026-10-03T23:02Z | Completed the five-study distributed-evidence working plan; no implementation shipped. |
 | dmarz/soc07-plan | done |  | 2026-10-03T22:35Z | SOC-07 plan saved on main; arithmetic and repository checks passed; no experiment launched. |
