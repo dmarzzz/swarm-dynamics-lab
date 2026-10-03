@@ -2,9 +2,9 @@
 
 # Library index
 
-2644 entries.
+2648 entries.
 
-## Papers (1687)
+## Papers (1691)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1073,6 +1073,7 @@
 | [boccaletti-2023-structure](papers/boccaletti-2023-structure.md) | The structure and dynamics of networks with higher order interactions | 2023 | 3 | skim | sync-consensus | dmarz/sync-consensus-audit |
 | [bocheva-2026-llms](papers/bocheva-2026-llms.md) | LLMs are transforming persuasion: A scoping review of LLM-powered social bots | 2026 | 3 | abstract | swarm-detection, llm-agent-swarms | dmarz/sd-bots |
 | [boffi-2024-model](papers/boffi-2024-model.md) | Model-free learning of probability flows: Elucidating the nonequilibrium dynamics of flocking | 2024 | 3 | abstract | collective-motion, active-matter, criticality-measurement | dmarz/collective-motion-recent |
+| [bonifacio-2025-voting](papers/bonifacio-2025-voting.md) | On voting rules satisfying false-name-proofness and participation | 2025 | 3 | skim | sybil-resistance, collective-decision | shadow/sol-w5 |
 | [borysenko-2026-developer](papers/borysenko-2026-developer.md) | Developer Experience with AI Coding Agents: HTTP Behavioral Signatures in Documentation Portals | 2026 | 3 | abstract | swarm-detection, llm-agent-swarms | dmarz/sd-web-agents |
 | [bosch-2026-biased](papers/bosch-2026-biased.md) | Biased decisions of Large Language Models (LLM): Computer control agents and the decoy effect | 2026 | 3 | abstract | llm-agent-swarms | vishesh/senku-1 |
 | [bostrom-2023-propositions](papers/bostrom-2023-propositions.md) | Propositions Concerning Digital Minds and Society | 2023 | 3 | skim | fork-merge-security, sybil-resistance, meta | dmarz/fm-sutton |
@@ -1417,6 +1418,7 @@
 | [russell-2025-people](papers/russell-2025-people.md) | People who frequently use ChatGPT for writing tasks are accurate and robust detectors of AI-generated text | 2025 | 3 | abstract | swarm-detection | dmarz/sd-ai-content |
 | [russo-latona-2024-ai](papers/russo-latona-2024-ai.md) | The AI Review Lottery: Widespread AI-Assisted Peer Reviews Boost Paper Scores and Acceptance Rates | 2024 | 3 | abstract | swarm-detection | dmarz/sd-ai-content |
 | [sagwal-2026-detecting](papers/sagwal-2026-detecting.md) | Detecting Sybil Identities in Distributed Multi-Robot Exploration via Geometric Ranking | 2026 | 3 | abstract | sybil-resistance, swarm-robotics | dmarz/sybil-robotics |
+| [sagwal-2026-disrupting](papers/sagwal-2026-disrupting.md) | Disrupting Multi-Robot Coordination: Strategic Sybil Attack on Exploration Algorithms | 2026 | 3 | abstract | sybil-resistance, swarm-robotics | shadow/sol-w5 |
 | [saldana-2017-resilient](papers/saldana-2017-resilient.md) | Resilient consensus for time-varying networks of dynamic agents | 2017 | 3 | abstract | sybil-resistance, sync-consensus, swarm-robotics | dmarz/sybil-robotics |
 | [salman-2026-captchas](papers/salman-2026-captchas.md) | CAPTCHAs in the Agentic Era: Solvers That Learn from Every Encounter | 2026 | 3 | abstract | swarm-detection, sybil-resistance, llm-agent-swarms | dmarz/sd-web-agents |
 | [salzmann-2020-trajectron](papers/salzmann-2020-trajectron.md) | Trajectron++: Dynamically-Feasible Trajectory Forecasting with Heterogeneous Data | 2020 | 3 | skim | crowds-and-traffic, swarm-robotics | dmarz/crowds-and-traffic-audit |
@@ -1568,6 +1570,7 @@
 | [zhang-2026-invisible](papers/zhang-2026-invisible.md) | Invisible in Space, Visible in Time: Motion Vision CAPTCHA against GUI Agents | 2026 | 3 | abstract | swarm-detection, sybil-resistance, llm-agent-swarms | dmarz/sd-web-agents |
 | [zhang-2026-real](papers/zhang-2026-real.md) | Real Money, Fake Models: Deceptive Model Claims in Shadow APIs | 2026 | 3 | abstract | swarm-detection | dmarz/sd-attribution |
 | [zhang-2026-which](papers/zhang-2026-which.md) | Which Model Is Actually Serving You? IRIS: Budgeted Black-Box Auditing of Model Substitution and Routing Dilution in LLM Gateways | 2026 | 3 | abstract | swarm-detection | dmarz/sd-attribution |
+| [zheng-2024-sybil](papers/zheng-2024-sybil.md) | Sybil-Proof Mechanism for Information Propagation with Budgets | 2024 | 3 | skim | sybil-resistance | shadow/sol-w5 |
 | [zheng-2025-rethinking](papers/zheng-2025-rethinking.md) | Rethinking the Reliability of Multi-agent System: A Perspective from Byzantine Fault Tolerance | 2025 | 3 | abstract | fork-merge-security, llm-agent-swarms, sync-consensus | dmarz/fm-bft-aggregation |
 | [zheng-2026-brief](papers/zheng-2026-brief.md) | A brief review of evolutionary game dynamics in the reinforcement learning paradigm | 2026 | 3 | abstract | marl-emergence, collective-decision | dmarz/marl-emergence |
 | [zheng-2026-survey](papers/zheng-2026-survey.md) | A survey on large language models driven meta-optimizers for automated intelligent optimization | 2026 | 3 | abstract | swarm-intelligence, llm-agent-swarms | dmarz/swarm-intelligence-audit |
@@ -1590,6 +1593,7 @@
 | [cao-2025-analyzing](papers/cao-2025-analyzing.md) | Analyzing Memory Effects in Large Language Models through the lens of Cognitive Psychology | 2025 | 2 | abstract | fork-merge-security | dmarz/fm |
 | [ceviz-2024-survey](papers/ceviz-2024-survey.md) | A Survey of Security in UAVs and FANETs: Issues, Threats, Analysis of Attacks, and Solutions | 2024 | 2 | abstract | sybil-resistance, swarm-robotics | dmarz/sybil-robotics |
 | [chabanne-2025-turnstile](papers/chabanne-2025-turnstile.md) | Turnstile cookies: A new root of trust for personhood credentials | 2025 | 2 | abstract | sybil-resistance, swarm-detection | shadow/sol-w5 |
+| [chen-2026-agent](papers/chen-2026-agent.md) | Agent-based modelling of Sybil attack using network expansion strategies | 2026 | 2 | abstract | sybil-resistance | shadow/sol-w5 |
 | [chen-2026-captcha](papers/chen-2026-captcha.md) | CAPTCHA Solving for Native GUI Agents: Automated Reasoning-Action Data Generation and Self-Corrective Training | 2026 | 2 | abstract | swarm-detection, sybil-resistance, llm-agent-swarms | dmarz/sd-web-agents |
 | [chulerttiyawong-2023-sybil](papers/chulerttiyawong-2023-sybil.md) | Sybil Attack Detection in Internet of Flying Things-IoFT: A Machine Learning Approach | 2023 | 2 | abstract | sybil-resistance, swarm-robotics | dmarz/sybil-robotics |
 | [collu-2025-misleading](papers/collu-2025-misleading.md) | Misleading Large Language Models used (or misused) in Scientific Peer-Reviewing via Hidden Prompt-Injection Attacks | 2025 | 2 | abstract | swarm-detection | dmarz/sd-honeypots |
