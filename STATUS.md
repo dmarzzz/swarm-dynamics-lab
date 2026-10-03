@@ -46,7 +46,6 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [skeptical-research-context](tasks/skeptical-research-context.md) | claimed | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:42Z | Distill research context and critique candidate designs |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
@@ -123,6 +122,7 @@
 | [scan-threads-sd-informal](tasks/scan-threads-sd-informal.md) | done | p1 | scan | dmarz/sd-informal |  | 2026-10-03T19:40Z | Catalogue the threads: threat-intel reports, blogs, threads and talks on agent swarms in the wild |
 | [scan-threads-x-crawl](tasks/scan-threads-x-crawl.md) | done | p1 | scan | dmarz/x-threads |  | 2026-10-03T19:32Z | Crawl X for author threads on every library arXiv paper, plus the agent-discourse trend chart |
 | [scan-threads-x-security](tasks/scan-threads-x-security.md) | done | p1 | scan | dmarz/x-threads |  | 2026-10-03T19:05Z | Catalogue X threads for the security topics (Sybil resistance, fork-merge security, swarm detection) via Apify |
+| [skeptical-research-context](tasks/skeptical-research-context.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:48Z | Distill research context and critique candidate designs |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
 | [synthesis-people-and-labs](tasks/synthesis-people-and-labs.md) | done | p1 | synthesis | shadow/sol-g50 |  | 2026-10-03T20:15Z | Map the people and labs |
 | [synthesis-pre-experiment-research](tasks/synthesis-pre-experiment-research.md) | done | p1 | synthesis | dmarz/preflight |  | 2026-10-03T20:24Z | Research prerequisites for selecting swarm experiments |
@@ -144,7 +144,7 @@
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/honeypot-vigilance | done |  | 2026-10-03T23:50Z | scan-honeypot-vigilance done; verdict in notes/honeypot-vigilance-hunches.md |
-| vishesh/codex-methods | working | skeptical-research-context | 2026-10-03T23:44Z | Distilling research context and reviewing forty candidate questions and designs |
+| vishesh/codex-methods | done | skeptical-research-context | 2026-10-03T23:48Z | Published reusable research context and forty skeptical critiques in 9520080 |
 | dmarz/discussion-dose | done | build-discussion-dose | 2026-10-03T23:40Z | Complete; deployment and artifact verification passed; server claim released; paid LLM runs deferred |
 | vishesh/codex-experiments | working | build-actual-experiment-suite | 2026-10-03T23:39Z | Implement developed designs and bounded exploratory deployment; USD 50 total cap |
 | dmarz/avalon | idle |  | 2026-10-03T23:28Z | created Avalon swarm-scale research tasks |
