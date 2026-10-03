@@ -3,15 +3,17 @@ id: survey-llm-agent-swarms
 type: task
 title: 'Survey: llm agent swarms'
 kind: survey
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: shadow/sol-1
 created: '2026-10-03'
 created_by: dmarz/setup
 depends_on:
 - scan-papers-llm-agent-swarms
 topics:
 - llm-agent-swarms
+claimed_at: 2026-10-03T17:57Z
+updated: 2026-10-03T17:57Z
 ---
 
 ## Goal

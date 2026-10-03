@@ -6,25 +6,24 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 273 | 8 | 0 | 0 | 0 | 0 | 281 |
-| collective-decision | 151 | 6 | 0 | 6 | 0 | 0 | 163 |
-| swarm-robotics | 192 | 8 | 0 | 0 | 0 | 0 | 200 |
-| swarm-intelligence | 80 | 1 | 0 | 0 | 0 | 0 | 81 |
-| active-matter | 163 | 3 | 0 | 0 | 0 | 0 | 166 |
-| sync-consensus | 124 | 4 | 0 | 0 | 0 | 0 | 128 |
-| criticality-measurement | 158 | 4 | 0 | 4 | 0 | 0 | 166 |
-| marl-emergence | 103 | 12 | 0 | 0 | 0 | 0 | 115 |
-| llm-agent-swarms | 110 | 34 | 0 | 50 | 0 | 0 | 194 |
-| crowds-and-traffic | 61 | 2 | 0 | 0 | 0 | 0 | 63 |
-| meta | 46 | 8 | 0 | 13 | 0 | 0 | 67 |
+| collective-motion | 291 | 8 | 0 | 0 | 0 | 0 | 299 |
+| collective-decision | 173 | 6 | 0 | 6 | 0 | 0 | 185 |
+| swarm-robotics | 227 | 8 | 0 | 0 | 0 | 0 | 235 |
+| swarm-intelligence | 92 | 1 | 0 | 0 | 0 | 0 | 93 |
+| active-matter | 169 | 3 | 0 | 0 | 0 | 0 | 172 |
+| sync-consensus | 153 | 4 | 0 | 0 | 0 | 0 | 157 |
+| criticality-measurement | 165 | 4 | 0 | 4 | 0 | 0 | 173 |
+| marl-emergence | 120 | 12 | 0 | 0 | 0 | 0 | 132 |
+| llm-agent-swarms | 125 | 34 | 0 | 50 | 0 | 0 | 209 |
+| crowds-and-traffic | 75 | 2 | 0 | 0 | 0 | 0 | 77 |
+| meta | 49 | 8 | 0 | 13 | 0 | 0 | 70 |
+| sybil-resistance | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## Tasks
 
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
-| [scan-code-agent-orchestration](tasks/scan-code-agent-orchestration.md) | claimed | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:54Z | Catalogue LLM multi-agent and orchestration frameworks |
-| [scan-code-collective-sims](tasks/scan-code-collective-sims.md) | claimed | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:54Z | Catalogue simulators for collective motion and active matter |
-| [scan-code-robotics-marl](tasks/scan-code-robotics-marl.md) | claimed | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:54Z | Catalogue swarm robotics simulators and MARL environments |
+| [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-collective-decision](tasks/scan-papers-collective-decision.md) | claimed | p0 | scan | dmarz/collective-decision |  | 2026-10-03T17:01Z | Catalogue the papers: collective decision-making in biology |
 | [scan-papers-collective-motion](tasks/scan-papers-collective-motion.md) | claimed | p0 | scan | dmarz/collective-motion |  | 2026-10-03T17:01Z | Catalogue the papers: collective motion models |
 | [scan-papers-collective-motion-recent](tasks/scan-papers-collective-motion-recent.md) | claimed | p0 | scan | dmarz/collective-motion-recent |  | 2026-10-03T17:01Z | Catalogue collective motion papers from 2024 onward |
@@ -33,12 +32,19 @@
 | [scan-papers-marl-emergence](tasks/scan-papers-marl-emergence.md) | claimed | p0 | scan | dmarz/marl-emergence |  | 2026-10-03T17:01Z | Catalogue the papers: multi-agent rl and emergent coordination |
 | [scan-papers-swarm-robotics](tasks/scan-papers-swarm-robotics.md) | claimed | p0 | scan | dmarz/swarm-robotics |  | 2026-10-03T17:01Z | Catalogue the papers: swarm robotics |
 | [scan-papers-swarm-robotics-recent](tasks/scan-papers-swarm-robotics-recent.md) | claimed | p0 | scan | dmarz/swarm-robotics-recent |  | 2026-10-03T17:01Z | Catalogue swarm robotics papers from 2024 onward |
-| [scan-threads-agents](tasks/scan-threads-agents.md) | claimed | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:54Z | Catalogue X threads on agent swarms and multi-agent AI |
+| [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
+| [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
+| [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
+| [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
+| [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
 | [scan-papers-active-matter](tasks/scan-papers-active-matter.md) | claimed | p1 | scan | dmarz/active-matter |  | 2026-10-03T17:01Z | Catalogue the papers: active matter physics |
 | [scan-papers-criticality-measurement](tasks/scan-papers-criticality-measurement.md) | claimed | p1 | scan | dmarz/criticality-measurement |  | 2026-10-03T17:01Z | Catalogue the papers: criticality, information and measurement |
 | [scan-papers-crowds-and-traffic](tasks/scan-papers-crowds-and-traffic.md) | claimed | p1 | scan | dmarz/crowds-and-traffic |  | 2026-10-03T17:01Z | Catalogue the papers: human crowds and traffic |
 | [scan-papers-swarm-intelligence](tasks/scan-papers-swarm-intelligence.md) | claimed | p1 | scan | dmarz/swarm-intelligence |  | 2026-10-03T17:01Z | Catalogue the papers: swarm intelligence algorithms |
+| [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
+| [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-papers-sync-consensus](tasks/scan-papers-sync-consensus.md) | claimed | p1 | scan | dmarz/sync-consensus |  | 2026-10-03T17:01Z | Catalogue the papers: synchronisation, consensus and networked control |
+| [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | claimed | p1 | survey | shadow/sol-1 |  | 2026-10-03T17:57Z | Survey: llm agent swarms |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  |  | Catalogue the blogs and long-form web writing |
@@ -50,20 +56,34 @@
 | [survey-collective-motion](tasks/survey-collective-motion.md) | open | p1 | survey |  |  |  | Survey: collective motion models |
 | [survey-criticality-measurement](tasks/survey-criticality-measurement.md) | open | p1 | survey |  |  |  | Survey: criticality, information and measurement |
 | [survey-crowds-and-traffic](tasks/survey-crowds-and-traffic.md) | open | p1 | survey |  |  |  | Survey: human crowds and traffic |
-| [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | open | p1 | survey |  |  |  | Survey: llm agent swarms |
 | [survey-marl-emergence](tasks/survey-marl-emergence.md) | open | p1 | survey |  |  |  | Survey: multi-agent rl and emergent coordination |
 | [survey-swarm-intelligence](tasks/survey-swarm-intelligence.md) | open | p1 | survey |  |  |  | Survey: swarm intelligence algorithms |
 | [survey-swarm-robotics](tasks/survey-swarm-robotics.md) | open | p1 | survey |  |  |  | Survey: swarm robotics |
+| [survey-sybil-resistance](tasks/survey-sybil-resistance.md) | open | p1 | survey |  |  |  | Survey: Sybil resistance in multi-agent and swarm systems |
 | [survey-sync-consensus](tasks/survey-sync-consensus.md) | open | p1 | survey |  |  |  | Survey: synchronisation, consensus and networked control |
 | [synthesis-open-problems](tasks/synthesis-open-problems.md) | open | p1 | synthesis |  |  |  | Build the open-problems register |
 | [synthesis-people-and-labs](tasks/synthesis-people-and-labs.md) | open | p1 | synthesis |  |  |  | Map the people and labs |
+| [synthesis-sybil-flashbots](tasks/synthesis-sybil-flashbots.md) | open | p1 | synthesis |  |  |  | Synthesis: how Flashbots Sybil work relates to swarm and agent Sybil resistance |
 | [synthesis-glossary](tasks/synthesis-glossary.md) | open | p2 | synthesis |  |  |  | Write the shared glossary |
+| [scan-code-agent-orchestration](tasks/scan-code-agent-orchestration.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue LLM multi-agent and orchestration frameworks |
+| [scan-code-collective-sims](tasks/scan-code-collective-sims.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue simulators for collective motion and active matter |
+| [scan-code-robotics-marl](tasks/scan-code-robotics-marl.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue swarm robotics simulators and MARL environments |
+| [scan-threads-agents](tasks/scan-threads-agents.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue X threads on agent swarms and multi-agent AI |
 
 ## Agents
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-1 | blocked |  | 2026-10-03T19:10Z | Scan done locally (51 threads, 58 code, 3 ran). Cannot push: wakesync has pull-only access to dmarzzz/swarm-lab. Need shadow to either get push for wakesync or pull from /home/shad0w/projects/swarm-lab (5 commits ahead of origin/main) and push. |
+| dmarz/sybil-code-data | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
+| dmarz/sybil-credentials | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
+| dmarz/sybil-flashbots-informal | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
+| dmarz/sybil-flashbots | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
+| dmarz/sybil-foundations | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
+| dmarz/sybil-llm-agents | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
+| dmarz/sybil-mechanisms | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
+| dmarz/sybil-robotics | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
+| dmarz/sybil | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
 | dmarz/sync-consensus | working | scan-papers-sync-consensus | 2026-10-03T17:01Z | academic literature scan, workflow swarm launched by dmarz |
 | dmarz/active-matter | working | scan-papers-active-matter | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
 | dmarz/collective-decision | working | scan-papers-collective-decision | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
