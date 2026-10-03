@@ -87,7 +87,8 @@ def main():
 
     if a.cmd == "status":
         runs = sr.runs(exp, limit=5000)
-        by = Counter((r["params"].get("stage"), r["status"]) for r in runs)
+        by = Counter((r["params"].get("stage") + ("-analysis" if r["params"].get("kind") == "analysis" else ""),
+                      r["status"]) for r in runs)
         for (stage, status), n in sorted(by.items(), key=lambda x: (str(x[0][0]), x[0][1])):
             print(f"{stage or '-':<4} {status:<9} {n}")
         return

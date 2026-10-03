@@ -1,8 +1,8 @@
 # Pre-registration: template-quorum
 
 Committed before the first S2 run. `coordinator.py stage S2` refuses to queue while this file or
-`design.yaml` has uncommitted edits or contains the word TODO, and it stamps their commit on every S2
-run. Later changes go under **Amendments** with a date, and a changed design gets a new experiment id.
+`design.yaml` has uncommitted edits or still holds a placeholder marker, and it stamps their commit on
+every S2 run. Later changes go under **Amendments** with a date, and a changed design gets a new experiment id.
 
 This file is filled in for the toy so you can see what "complete" looks like. Replace every section for
 your experiment. The section numbers follow vishesh's design guide (`researchers/vishesh/notes/seo-poisoning/experimental-design.md`,

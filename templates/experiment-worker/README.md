@@ -79,7 +79,7 @@ not, fix the simulator before going on.
 Use S1 to debug, and to estimate the discordant-pair rate and the variance of the per-task difference.
 Write the sample size into `preregistration.md` §4 and `design.yaml` `stages.S2.tasks`.
 
-**8. Pre-register.** Commit and push `design.yaml` and `preregistration.md` with no TODOs left. This is
+**8. Pre-register.** Commit and push `design.yaml` and `preregistration.md` with no `TODO` markers left. This is
 the point of no return: `stage S2` refuses uncommitted or TODO-bearing files, stamps their commit on every
 S2 run, and refuses to open the holdout twice.
 
