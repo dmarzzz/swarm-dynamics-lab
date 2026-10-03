@@ -1,0 +1,5 @@
+.tl-ctrl { display: flex; gap: 8px; flex-wrap: wrap; }
+.tl-ctrl .seg { height: 30px; }
+.river circle { transition: fill-opacity 120ms var(--ease-out); cursor: default; }
+.river circle:hover { fill-opacity: 1; stroke: var(--ink); stroke-width: 1; }
+@media (max-width: 720px) { .section-head { grid-template-columns: 1fr; } }
