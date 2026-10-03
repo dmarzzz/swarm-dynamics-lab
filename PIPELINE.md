@@ -47,6 +47,30 @@ Every raw row has: `id` (`x:<status-id>` or `url:<normalised url>`), `source` (`
 `url`, `title`, `text`, `author`, `date`, `topic` (guessed from keywords, the batcher groups by it),
 `likes`, `links`, `found_by`, `query`, `collected`. X API calls are logged to `data/x-api-calls.log`.
 
+### Free collectors (added 2026-10-03, no keys, no spend)
+
+```bash
+# LessWrong / Alignment Forum public GraphQL: tag feeds (only posts that actually carry the tag) + keyword search over
+# the new/top pools. --keywords narrows tag pulls; --search takes `topic<TAB>kw1,kw2` lines. Hand-curate before batching:
+# the `subagents` tag is mostly IFS / therapy posts, and `ai-control` is 800 posts deep.
+python3 scripts/collect.py lesswrong --site alignmentforum --by <id> --tags ai-control:fork-merge-security untrusted-monitoring:fork-merge-security \
+        --min-karma 25 --keywords "collusion,untrusted,multi-agent,injection,merge" --search data/lw-search.txt
+
+# RSS / Atom (plain xml.etree, feedparser not needed): `topic<TAB>url[<TAB>kw1,kw2]`, word-start match on title + lede.
+python3 scripts/collect.py rss --feeds candidates/queries/rss-feeds-2026-10-03.txt --by <id>
+
+# Talks: yt-dlp flat search, no download. Rows land as source `talk` -> candidates/talk/ -> library/talks/.
+python3 scripts/collect.py ytsearch --queries candidates/queries/talks-2026-10-03.txt --by <id> --n 12 --min-minutes 10
+
+# Page text through r.jina.ai for blog rows that only have a url (links pass, seeds). Dead / empty pages score 0; --prune drops them.
+python3 scripts/collect.py jina --by <id> --max 60 --prune
+```
+
+Scorer notes (writer feedback, w1, 2026-10-03): tickers / airdrop / promo language now score 0 rather than 1; pointer posts
+("must read", "thoughts?") are capped; a tweet whose outbound link is already in the library is dropped
+(`linked-in-library`); code candidates are checked with `gh api repos/<owner>/<repo>` and dead repos dropped. Prefer the
+primary source a tweet links to over the tweet. Fewer, denser batches.
+
 ## 2. Batch
 
 ```bash
