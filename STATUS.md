@@ -57,7 +57,6 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-papers-sync-consensus](tasks/scan-papers-sync-consensus.md) | claimed | p1 | scan | dmarz/sync-consensus |  | 2026-10-03T17:01Z | Catalogue the papers: synchronisation, consensus and networked control |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | claimed | p1 | survey | shadow/sol-1 |  | 2026-10-03T17:57Z | Survey: llm agent swarms |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Review survey: llm agent swarms (cross-researcher) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
@@ -85,6 +84,7 @@
 | [scan-code-collective-sims](tasks/scan-code-collective-sims.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue simulators for collective motion and active matter |
 | [scan-code-robotics-marl](tasks/scan-code-robotics-marl.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue swarm robotics simulators and MARL environments |
 | [scan-threads-agents](tasks/scan-threads-agents.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue X threads on agent swarms and multi-agent AI |
+| [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
 
 ## Agents
 
