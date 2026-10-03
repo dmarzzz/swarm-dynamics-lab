@@ -74,7 +74,7 @@
       "regime misclassification",
       "minimum observation fraction"
     ],
-    "falsifier": "Biased masks perform no worse than random masks, or correction restores prespecified coverage throughout.",
+    "falsifier": "Raw estimates under biased masks perform no worse than under uniform masks at matched coverage. Successful correction is a useful outcome, not a refutation of the raw-bias prediction.",
     "confounds": "Tracking errors and missing identities can be more damaging than simple missing frames.",
     "prior": [
       {
@@ -347,7 +347,7 @@
       "rare-event miss rate",
       "compute per action"
     ],
-    "falsifier": "A role histogram matches the richer method, or mean aggregation performs equally across role-sensitive tasks.",
+    "falsifier": "Neither role-conditioned aggregation nor a simple role histogram improves over the unconditioned mean on held-out role-sensitive tasks. If the histogram matches attention, that argues against the extra complexity, not against the role-conditioning hypothesis.",
     "confounds": "Role labels can leak the answer; separate observable roles from hidden ground-truth importance.",
     "prior": [
       {
@@ -534,7 +534,7 @@
       "messages",
       "wall-clock"
     ],
-    "falsifier": "Independent restarts match the gain or topology effects vanish after update and evaluation budgets are equalized.",
+    "falsifier": "Sparse topology does not delay collapse or improve search over dense PSO after matching updates and evaluation budgets. If independent restarts match the gain, prefer the simpler method; that alone does not refute the topology effect.",
     "confounds": "Stale best values and asynchronous updates can change the algorithm independently of topology.",
     "prior": [
       {
@@ -564,7 +564,7 @@
       "objective evaluations",
       "improvement attributed to each component"
     ],
-    "falsifier": "Pheromone adds a stable gain beyond matched local search across held-out instance families.",
+    "falsifier": "The pheromone benefit is unchanged or larger after adding matched local search, rather than shrinking, on held-out instance families. A smaller but still positive benefit is compatible with the prediction.",
     "confounds": "Wall-clock alone can reward a faster implementation; also measure operation and objective-call budgets.",
     "prior": [
       {
@@ -648,7 +648,7 @@
     "area": "swarm-intelligence",
     "title": "Where the small-inertia approximation stops helping",
     "question": "Does a consensus approximation retain practical optimizer behavior outside the asymptotic regime?",
-    "hypothesis": "CBO-like and PSO-like trajectories will agree better as inertia shrinks, but optimization rankings may diverge at finite particle count.",
+    "hypothesis": "CBO-like and PSO-like trajectories will agree better as inertia shrinks; optimization rankings will diverge more at small than large particle counts in the chosen test regime.",
     "test": "Reproduce a simple published small-inertia setting, then vary inertia and particle count independently on paired objectives. Compare distributional trajectories and held-out optimization success, using independent run seeds.",
     "baseline": "Original PSO formulation, its stated CBO approximation, and a numerical step-size convergence control.",
     "metrics": [
@@ -657,7 +657,7 @@
       "failure probability",
       "numerical stability"
     ],
-    "falsifier": "Approximation error does not fall in the stated limit after controlling discretization, or practical rankings remain unchanged everywhere tested.",
+    "falsifier": "After controlling discretization, trajectory error does not fall as inertia shrinks, or rankings are no less stable at small particle counts. Score these two predictions separately; neither alone decides the other.",
     "confounds": "Parameters must be mapped according to the derivation; arbitrary matching is not a test of the approximation.",
     "prior": [
       {
@@ -893,9 +893,9 @@
     "id": "SIM-02",
     "area": "meta",
     "title": "The scheduler as an experimental treatment",
-    "question": "Does synchronous versus asynchronous activation change the sign of a collective effect?",
-    "hypothesis": "An intervention that helps under simultaneous updates will have a smaller or reversed effect when agents see fresh state sequentially.",
-    "test": "Implement one simple coordination game with simultaneous, fixed-order sequential and randomized-order sequential schedules. Pair independently generated worlds and randomize schedule assignment; hold action opportunities fixed. Separately charge wall-clock and communication work.",
+    "question": "Does synchronous versus asynchronous activation change the effect of majority-following compared with independent updates?",
+    "hypothesis": "The benefit of majority-following over independent updates will shrink or reverse when agents see fresh state sequentially rather than simultaneous snapshots.",
+    "test": "Implement a binary decision game with noisy private evidence. Cross majority-following versus independent updates with simultaneous, fixed-order sequential and randomized-order sequential schedules. Pair independent worlds and randomize conditions; hold action opportunities fixed, logging information freshness. Report episode-level accuracy effects and separately charge wall-clock and communication work.",
     "baseline": "Synchronous update, randomized sequential update and fixed order with permuted agent labels.",
     "metrics": [
       "Intervention effect by schedule",
