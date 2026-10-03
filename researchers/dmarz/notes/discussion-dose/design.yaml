@@ -1,0 +1,46 @@
+# The frozen design. coordinator.py builds every queued run from this file, and S2 refuses to start
+# unless this file and preregistration.md are committed and unchanged. Edit before S2; after S2 starts,
+# changes need a dated note in preregistration.md ("Amendments") and a new experiment id.
+
+arms: [A0_plurality, A1_provenance]        # every arm runs on the same draws (paired)
+
+cfg:                                        # fixed across all arms and cells
+  k: 3                                      # options
+  n_agents: 15
+  reliability: 0.6                          # P(independent agent observes the truth)
+  theta: 0.4                                # quorum threshold as a fraction of n_agents
+  abstain_cost: 0.3                         # regret of not committing (declared, not tuned)
+
+block: 25                                   # tasks per hub run (one run = one unit of queued work)
+
+splits:                                     # task ids never overlap between dev and holdout
+  dev: [0, 199]
+  holdout: [1000, 1999]
+
+stages:
+  S0:                                       # clean task validation: both arms must do the clean task
+    split: dev
+    tasks: 50
+    worlds: [W0_CLEAN]
+    doses: [0.0]
+    seeds: [1]
+  S1:                                       # development: debug, estimate variance and discordant rate
+    split: dev
+    tasks: 200
+    worlds: [W1_TRUE, W2_FALSE]
+    doses: [0.2, 0.4]
+    seeds: [1, 2]
+  S2:                                       # primary, holdout opened once
+    split: holdout
+    tasks: 300                              # replace with the S1-based sample size (preregistration.md §4)
+    worlds: [W1_TRUE, W2_FALSE]
+    doses: [0.2, 0.4]
+    seeds: [11, 12, 13]                     # fixed now; never chosen after looking at results
+
+primary_contrast:                           # the one contrast declared in advance; everything else is exploratory
+  stage: S2
+  world: W2_FALSE
+  dose: 0.4
+  metric: false_commit                      # paired binary per episode
+  compare: [A1_provenance, A0_plurality]    # reported as A1 - A0
+  secondary: [delay, regret]
