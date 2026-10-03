@@ -78,6 +78,12 @@ payload = dict(version=REVISION['version'], date=REVISION['date'], status='Human
                changes=changes, content_sha256=digest, topics=AREAS,
                candidates=candidates)
 (OUT / 'candidates.json').write_text(json.dumps(payload, indent=2, ensure_ascii=False)+'\n')
+delta_path = OUT / 'research-delta-v2.json'
+delta = json.loads(delta_path.read_text())
+for record in delta['records']:
+    record['cited_by'] = [r['id'] for r in candidates
+                          if any(s['id'] == record['id'] for s in r['prior'])]
+delta_path.write_text(json.dumps(delta, indent=2, ensure_ascii=False)+'\n')
 
 def link(path):
     return 'https://github.com/dmarzzz/swarm-lab/blob/main/' + path

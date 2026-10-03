@@ -315,7 +315,8 @@
     "metrics": [
       "Return under channel shift",
       "useful bits per episode",
-      "performance loss after content scrambling"
+      "performance loss after content scrambling",
+      "Representation reconstruction error apart from task return"
     ],
     "falsifier": "Gains disappear on new corruption patterns or content scrambling leaves success unchanged.",
     "confounds": "Timing and agent order can be covert communication channels; log and control them.",
@@ -327,11 +328,15 @@
       {
         "id": "gh-farama-foundation-pettingzoo",
         "relation": "Candidate controlled multi-agent environment interface."
+      },
+      {
+        "id": "zaslavsky-2023-noga",
+        "relation": "Talk transcript distinguishes communication complexity, representation distortion and downstream utility; no security guarantee or precise effect size is assumed."
       }
     ],
     "novelty": "extension",
     "feasibility": "training",
-    "needs": "Select an environment whose success genuinely requires private information sharing.",
+    "needs": "Select a private-information task and audit the original communication objective; the new talk motivates separate representation and utility scores, not assuming compressed messages are safe.",
     "briefs": []
   },
   {
@@ -680,7 +685,7 @@
     "title": "How much certainty comes from counting the wrong units?",
     "question": "How badly does treating interacting agents as independent samples overstate confidence?",
     "hypothesis": "Agent-level uncertainty estimates will under-cover known episode-level effects when within-swarm dependence is strong.",
-    "test": "Generate independent swarm episodes with a known randomized treatment effect and tunable within-episode dependence. Compare agent-level resampling, episode-level resampling and exposure-aware analysis over repeated synthetic studies.",
+    "test": "Generate independent swarm episodes with a known randomized treatment effect and tunable within-episode dependence. Compare agent-level resampling, episode-level resampling and exposure-aware analysis over repeated synthetic studies. Use SwarmWorld metadata/episodes.csv and matched condition-seed cells as a concrete reanalysis design; keep its discovery-seed units distinct from agents and held-out portfolio assay seeds. The synthetic arm, not this observational reanalysis, supplies known coverage truth.",
     "baseline": "Known generator effect and episode-level randomized estimate.",
     "metrics": [
       "Confidence-interval coverage",
@@ -697,11 +702,15 @@
       {
         "id": "shalizi-2011-homophily",
         "relation": "Observational confounding is a separate problem from dependence."
+      },
+      {
+        "id": "data-swarmworld-2026",
+        "relation": "Concrete matched-episode corpus for unit-of-analysis sensitivity; four discovery seeds do not become hundreds of independent agents."
       }
     ],
     "novelty": "measurement",
     "feasibility": "offline",
-    "needs": "Specify randomization and interference boundaries; this is methodological validation, not a new causal estimator.",
+    "needs": "Pin the SwarmWorld release, check manifests and file hashes, and verify pairing before loading endpoints. Specify interference boundaries; this is methodological validation, not a new estimator.",
     "briefs": []
   },
   {
@@ -710,7 +719,7 @@
     "title": "Do outcome labels change the conclusion?",
     "question": "Can the same intervention improve consensus while worsening correctness or welfare?",
     "hypothesis": "An intervention that increases agreement will sometimes reduce calibrated correctness on tasks with shared misleading evidence.",
-    "test": "Randomize independent synthetic teams to an agreement-promoting rule or neutral aggregation under known task truth. Score the same frozen traces for agreement, correctness, calibration and resource-adjusted utility using evaluators blind to treatment.",
+    "test": "Randomize independent synthetic teams to an agreement-promoting rule or neutral aggregation under known task truth. Score the same frozen traces for agreement, correctness, calibration and resource-adjusted utility using evaluators blind to treatment. As a retrospective diagnostic, align DEBATE configuration records by original task and compare decisionSuccess with independently recoverable task truth; where truth is unavailable, do not call agreement accuracy.",
     "baseline": "Independent answers with aggregation and neutral communication at matched budget.",
     "metrics": [
       "Agreement",
@@ -728,11 +737,15 @@
       {
         "id": "zhou-2025-pimmur",
         "relation": "Measurement validity context; abstract rechecked, methods not fully audited."
+      },
+      {
+        "id": "data-mallm-debate-2025",
+        "relation": "Released agreement and decision traces offer a concrete outcome-mismatch audit, not validated correctness labels."
       }
     ],
     "novelty": "measurement",
     "feasibility": "api-small",
-    "needs": "Human reviewers must pick the primary outcome before any confirmatory comparison.",
+    "needs": "Inspect DEBATE task IDs, reference answers and decisionSuccess semantics before selecting a subset. Human reviewers pick the primary outcome before confirmation.",
     "briefs": []
   },
   {
@@ -750,7 +763,7 @@
       "cost"
     ],
     "falsifier": "Effects and rankings remain stable within a prespecified practical tolerance across all tested configurations.",
-    "confounds": "Provider drift, retries and decoding defaults can masquerade as model differences.",
+    "confounds": "Provider drift, retry policy, tool schema and decoding defaults can masquerade as model differences. Town model arms have serving-stack differences; their archived comparisons cannot identify a pure model effect.",
     "prior": [
       {
         "id": "zhou-2025-pimmur",
@@ -759,11 +772,15 @@
       {
         "id": "elnozahy-2002-survey",
         "relation": "Nondeterminism and replay are conceptual precedents, not LLM-specific evidence."
+      },
+      {
+        "id": "data-agent-town-economy-2026",
+        "relation": "Concrete runtime-confounding example and failure ledger; released model arms are not a fully crossed causal design."
       }
     ],
     "novelty": "boundary-test",
     "feasibility": "api-small",
-    "needs": "Pin available versions and log retries, prompts and scheduler settings; do not assume a seed makes hosted APIs deterministic.",
+    "needs": "Inspect production_final run.json and model_calls.csv for stack differences; build the crossed test in a small released harness. Pin models, retry/tool policies and scheduler settings; API seeds do not ensure determinism.",
     "briefs": []
   },
   {
@@ -772,7 +789,7 @@
     "title": "Spend the budget on more seeds or more worlds?",
     "question": "Which source of variation dominates uncertainty in our chosen collective task?",
     "hypothesis": "Variation across task worlds will exceed sampling variation within a single world for at least some candidate interventions.",
-    "test": "Run a small balanced pilot crossing independent world instances and run seeds for a selected task. Estimate variance components without selecting the best treatment from the same pilot, then compare predicted precision for equal-cost sampling allocations on fresh worlds.",
+    "test": "Run a small balanced pilot crossing independent world instances and run seeds for a selected task. Estimate variance components without selecting the best treatment from the same pilot, then compare predicted precision for equal-cost sampling allocations on fresh worlds. First audit Town run.json world identifiers against layout content, excluding timestamps from geometry fingerprints. Treat repeats on the same geometry as within-layout runs; its many world labels cannot stand in for a new-world sample.",
     "baseline": "Equal allocation, many seeds on one world, and many worlds with few seeds.",
     "metrics": [
       "Between-world variance",
@@ -790,11 +807,15 @@
       {
         "id": "aronow-2013-estimating",
         "relation": "Independent assignment units constrain uncertainty estimates."
+      },
+      {
+        "id": "data-agent-town-economy-2026",
+        "relation": "Concrete replication-unit caution: the primary card documents two layouts under multiple world IDs."
       }
     ],
     "novelty": "measurement",
     "feasibility": "api-small",
-    "needs": "Choose the first candidate and use pilot data for planning, not confirmation or optional stopping.",
+    "needs": "Validate layout fingerprints and licensing before reanalysis; the archived two-layout corpus is too narrow to determine a general optimum. Use pilot data for planning, not confirmation.",
     "briefs": []
   },
   {
@@ -821,11 +842,15 @@
       {
         "id": "li-2026-memtx",
         "relation": "Agent-memory repair overlap; this candidate isolates execution reproducibility rather than invalid-claim rollback."
+      },
+      {
+        "id": "gh-apromisedland-trustworthy-agent-simulation",
+        "relation": "Released baseline-mode resume/replay harness is a candidate audit substrate; its advertised restoration still needs verification."
       }
     ],
     "novelty": "measurement",
     "feasibility": "offline",
-    "needs": "Define the checkpoint boundary; inspect current agentops reporting without assuming it already supports replay.",
+    "needs": "Inspect tass committed snapshots and resume boundaries, then use its offline baseline and controlled HTTP responses. Verify scheduler, pending decisions and shared budget restoration; replaying saved snapshots alone is not a counterfactual rerun.",
     "briefs": []
   },
   {
@@ -834,7 +859,7 @@
     "title": "How much of a discovery is selecting the best run?",
     "question": "How often does a promising-looking effect disappear when the whole search process is accounted for?",
     "hypothesis": "Selecting the strongest of many prompts or seeds will produce a larger discovery-to-confirmation drop than a frozen small candidate set.",
-    "test": "On synthetic null and known-effect tasks, replay a simulated research workflow: search over varying numbers of configurations, choose the winner, and evaluate on untouched cases. Repeat the full selection procedure, not just the winning run.",
+    "test": "On synthetic null and known-effect tasks, replay a simulated research workflow: search over varying numbers of configurations, choose the winner, and evaluate on untouched cases. Repeat the full selection procedure, not just the winning run. DEBATE offers a concrete configuration-search analogue: after checking task overlap and references, select configurations on development task families and confirm once on untouched families. Null permutations must preserve task and configuration dependence.",
     "baseline": "Preregistered fixed comparison, random configuration selection, and selection-aware held-out evaluation.",
     "metrics": [
       "False discovery rate",
@@ -851,6 +876,10 @@
       {
         "id": "zhou-2025-pimmur",
         "relation": "Methodological audit motivation; this resampling design is a proposed lab audit."
+      },
+      {
+        "id": "data-mallm-debate-2025",
+        "relation": "Many released configurations motivate a bounded selection audit; completeness and common task coverage remain to be checked."
       }
     ],
     "novelty": "measurement",
@@ -864,7 +893,7 @@
     "title": "Private information leaks through the narrator",
     "question": "Does a shared game master accidentally improve coordination by exposing private state?",
     "hypothesis": "A narrator with access to every agent's private evidence will inflate apparent cooperation unless outgoing messages enforce visibility boundaries.",
-    "test": "Randomize independent synthetic negotiation episodes between a deterministic rule engine, a narrator with partitioned contexts, and a shared-context narrator. Keep private facts, allowed actions and inference budget matched. Plant harmless private-state markers solely to measure unintended disclosure.",
+    "test": "Adapt a small Sotopia negotiation scenario with deterministic factual scoring. Randomize independent scenario-seed episodes between partitioned agent contexts, a partitioned Concordia-style narrator and a shared-context narrator. Match private facts, actions and inference budgets; plant harmless private markers to measure disclosure. Evaluate on new scenarios and keep judge access distinct from participant access.",
     "baseline": "Separate-agent rule engine and explicitly public-information variant as a diagnostic ceiling.",
     "metrics": [
       "Private-state disclosure rate",
@@ -876,17 +905,21 @@
     "confounds": "Narrator competence and context length differ; include matched summaries and deterministic scoring independent of the narrator.",
     "prior": [
       {
-        "id": "gh-google-deepmind-concordia",
-        "relation": "Game-master environment motivating a context-isolation audit."
+        "id": "zhou-2024-is",
+        "relation": "Closest prior already contrasts omniscient Script and private-goal Agents modes; extend to an audited narrator boundary."
       },
       {
-        "id": "park-2023-generative",
-        "relation": "Generative-agent simulation precedent; not proof of this specific leak."
+        "id": "gh-google-deepmind-concordia",
+        "relation": "Candidate game-master architecture; no claim that every implementation leaks."
+      },
+      {
+        "id": "gh-sotopia-lab-sotopia",
+        "relation": "Concrete private-goal scenario and execution-mode substrate; primarily dyadic."
       }
     ],
     "novelty": "boundary-test",
     "feasibility": "api-small",
-    "needs": "Inspect the precise visibility contract; the local sim-environments draft flags narrator leakage but has not passed its gate.",
+    "needs": "Read the visibility contract and source before adapting either runner. The merged sim-environments survey remains in-progress; its source links and teammate smoke tests are leads, not approval or evidence of this leak.",
     "briefs": []
   },
   {
@@ -907,17 +940,21 @@
     "confounds": "Update schedules change information freshness; record that mechanism rather than attributing all differences to psychology.",
     "prior": [
       {
-        "id": "grotschla-2025-agentsnet",
-        "relation": "Graph coordination setting where scheduling must be explicit."
+        "id": "radax-2010-timing",
+        "relation": "Scheduler sensitivity is established in ABMs; this is a task-specific boundary test, not a new general phenomenon."
       },
       {
-        "id": "vicsek-1995-novel",
-        "relation": "Classical collective model provides a synchronous-update contrast, not a theorem about LLMs."
+        "id": "gh-floriangroetschla-agentsnet",
+        "relation": "Concrete synchronous message-passing runner; asynchronous modes must be implemented and verified."
+      },
+      {
+        "id": "grotschla-2025-agentsnet",
+        "relation": "Known graph-task scoring and baseline for the adaptation."
       }
     ],
     "novelty": "boundary-test",
     "feasibility": "offline",
-    "needs": "Implement matching state-read semantics and audit schedule literature flagged by the unmerged simulator survey.",
+    "needs": "Start with an exact binary-rule reference before an AgentsNet adapter. Audit when state is read and committed; teammate four-node colouring smoke tests verify a path runs, not asynchronous semantics.",
     "briefs": []
   },
   {
@@ -938,17 +975,21 @@
     "confounds": "Masking inputs can create out-of-distribution prompts; also train or prompt blind policies from the start.",
     "prior": [
       {
-        "id": "grotschla-2025-agentsnet",
-        "relation": "Graph-task benchmark to audit for observation dependence."
+        "id": "ellis-2022-smacv2",
+        "relation": "Closest diagnostic already establishes observation-blind policies as a benchmark-validity test."
       },
       {
-        "id": "ruan-2025-benchmarking",
-        "relation": "Swarm-task benchmark motivating a classical and blind-policy comparison."
+        "id": "data-swarmbench-2025",
+        "relation": "Released per-agent and whole-game logs can identify candidate observation shortcuts."
+      },
+      {
+        "id": "gh-ruc-gsai-yulan-swarmintell",
+        "relation": "Concrete LLM-grid runner for prospective masked-observation and randomized-layout tests."
       }
     ],
     "novelty": "measurement",
     "feasibility": "api-small",
-    "needs": "Select one runnable task; inspect the local simulator scan's SMACv2 lead before claiming a new diagnostic.",
+    "needs": "Inspect SwarmBench task code and match the dataset release to the runner before reproducing one task. Its mixed agent/game schemas require separate parsing. This transfers an existing diagnostic; StarCraft installation is unnecessary for the first LLM-grid test.",
     "briefs": []
   },
   {
@@ -957,7 +998,7 @@
     "title": "Same rules, different engines",
     "question": "Do two implementations of a collective model agree after matching semantics rather than just parameter names?",
     "hypothesis": "Apparent framework-dependent behavior will shrink after matching update order, neighborhood rules, boundaries and random-number consumption.",
-    "test": "Implement a minimal model in two small engines, record those semantic choices, and compare trajectories under deterministic noise input plus distributional results under independent seeds. Introduce one deliberate mismatch at a time to identify which discrepancy matters.",
+    "test": "Implement one explicitly specified boid model in Mesa and AgentPy using identical initial states and noise tapes. Match state-read/commit timing, neighbor distance, boundaries, integration and normalization. Compare one-step transitions, then independent-seed distributions. Deliberately vary one semantic choice at a time. Only after agreement time identical workloads, including neighbor queries and logging, at fixed hardware and precision.",
     "baseline": "A small transparent reference implementation and step-size/precision convergence checks.",
     "metrics": [
       "One-step state error",
@@ -969,17 +1010,416 @@
     "confounds": "Bitwise equality is not expected across hardware; distinguish pathwise replay from distributional agreement.",
     "prior": [
       {
-        "id": "shaebani-2020-computational",
-        "relation": "Computational-model reference for matching physical assumptions."
+        "id": "gh-mesa-mesa",
+        "relation": "Candidate current Python reference; teammate example run used its own rules."
       },
       {
-        "id": "gh-mesa-mesa",
-        "relation": "ABM engine candidate; existing run notes do not establish cross-engine equivalence."
+        "id": "gh-jofmi-agentpy",
+        "relation": "Second implementation route; its teammate boids timing used different weights and is not an equivalence result."
+      },
+      {
+        "id": "grimm-2020-odd",
+        "relation": "Model-description framework motivates an explicit semantics contract, not empirical validity by documentation alone."
       }
     ],
     "novelty": "measurement",
     "feasibility": "offline",
-    "needs": "Use an existing model and tiny reference engine; the broad local simulator survey is still unfinished.",
+    "needs": "Pin isolated versions; AgentPy is unmaintained. Reconcile the teammate run scripts before comparing outcomes or speed. The merged survey offers heterogeneous smoke workloads, not an apples-to-apples performance ranking.",
+    "briefs": []
+  },
+  {
+    "id": "MTH-07",
+    "area": "meta",
+    "title": "Do failure rankings survive independent relabelling?",
+    "question": "Would our preferred trace debugger change if independent humans supplied the reference labels?",
+    "hypothesis": "Some debugger rankings will change when judge-generated error labels are replaced by adjudicated human labels, especially for blame location rather than final task failure.",
+    "test": "Sample whole MAST traces stratified by framework, outcome and original label; randomize anonymized trace order to two independent annotators. Freeze one taxonomy before annotation and adjudicate disagreements without model names or debugger predictions. Evaluate frozen debuggers on both label versions using trace-level paired analysis. Use TRAIL only as a separately reported external check after access approval, and keep its single-agent and multi-agent subsets separate.",
+    "baseline": "Original MAST labels, majority-class prediction and a simple last-error heuristic; compare end-outcome labels separately from causal blame.",
+    "metrics": [
+      "Trace-level label agreement",
+      "Debugger ranking stability",
+      "Error-localization distance",
+      "Abstention coverage"
+    ],
+    "falsifier": "Rankings and practically relevant performance differences remain stable within a prespecified margin under independent labels.",
+    "confounds": "MAST annotation rounds use differing category counts, so numeric codes require semantic mapping. Null annotations are not negative labels; a judged decisive step is not counterfactual causation.",
+    "prior": [
+      {
+        "id": "data-mast-2025",
+        "relation": "Closest available judge-labelled traces and small human subset; motivates measurement rather than accepting all labels as truth."
+      },
+      {
+        "id": "data-trail-2025",
+        "relation": "Human-annotated external corpus with restricted access and redistribution."
+      },
+      {
+        "id": "data-who-and-when-2025",
+        "relation": "Alternative attribution target; failures-only sampling limits prevalence claims."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Check taxonomy versions and trace rights; budget blinded annotation. TRAIL gate terms and Who&When reuse terms must be resolved before use or redistribution.",
+    "briefs": []
+  },
+  {
+    "id": "MTH-08",
+    "area": "meta",
+    "title": "Does the split separate new games or just new turns?",
+    "question": "How much apparent generalization comes from seeing another turn or condition of the same underlying game?",
+    "hypothesis": "Random-row evaluation will overstate predictive accuracy relative to holding out whole game-generating sequences, beyond the gap explained by sample size.",
+    "test": "For Hanabi, reconstruct complete episodes from file, model, scaffold, player count, seed and turn resets; audit collisions rather than assuming a seed is a unique game. For the collusion corpus, group all conditions sharing a base task sequence. Train identical bounded outcome predictors under row, episode and base-sequence splits with equal training counts. Repeat split assignments and evaluate a final untouched sequence set; units are independent generating sequences, not messages.",
+    "baseline": "Model/task metadata-only predictor and group-preserving label permutations alongside naive row splitting.",
+    "metrics": [
+      "Held-out sequence accuracy",
+      "Calibration",
+      "Cross-split duplicate rate",
+      "Performance drop at equal sample count"
+    ],
+    "falsifier": "Grouped and row splits agree within a practical margin after training-size and difficulty matching, with no residual overlap.",
+    "confounds": "Grouping can introduce genuine distribution shift; report that separately. Different filenames, seeds or agent roles do not establish independent underlying tasks.",
+    "prior": [
+      {
+        "id": "data-hanabi-llm-logs-2026",
+        "relation": "Turn-level logs need episode reconstruction and scaffold-aware grouping."
+      },
+      {
+        "id": "data-agent-collusion-2026",
+        "relation": "Shared base sequences across conditions provide a concrete leakage hazard."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Inspect raw JSONL schemas and manifests, pin revisions, verify the sequence map, and keep malformed or duplicate rows in an exclusion ledger rather than silently dropping them.",
+    "briefs": []
+  },
+  {
+    "id": "MTH-09",
+    "area": "meta",
+    "title": "Does the evaluator know more than the acting agent?",
+    "question": "Does privileged state in archived traces make an agent look less competent than its actual information permitted?",
+    "hypothesis": "Evaluators given omniscient state will over-attribute avoidable mistakes compared with evaluators restricted to the acting agent’s legal information.",
+    "test": "Select complete Hanabi episodes with recoverable views and pair two evaluator packets for each decision: exact visible prompt/history versus that packet plus hidden engine state. Randomize packet presentation between blinded annotators; cluster analysis by game and exclude the same annotator seeing both versions. Score avoidability, not simply whether the eventual action lost points. Repeat on a small private-goal Sotopia subset only if its visibility contract and comparable action labels can be reconstructed.",
+    "baseline": "A rules-based legality checker plus an information-set policy that cannot inspect the hidden state; omniscient scoring is a labelled diagnostic ceiling.",
+    "metrics": [
+      "Avoidable-error disagreement",
+      "Calibration conditional on information",
+      "Hindsight blame rate",
+      "Evaluator agreement"
+    ],
+    "falsifier": "Privileged state does not increase avoidable-error attribution, or differences vanish when the legal information set is explicit.",
+    "confounds": "Legality, expected value and realized luck differ. Engine-computed Bayesian beliefs legitimately supplied to a scaffold are visible assistance, not hidden leakage.",
+    "prior": [
+      {
+        "id": "data-hanabi-llm-logs-2026",
+        "relation": "Logs contain prompts, legal moves and raw state; exact visibility remains to be audited."
+      },
+      {
+        "id": "data-sotopia-2024",
+        "relation": "Private-goal setting for an external boundary check."
+      },
+      {
+        "id": "zhou-2024-is",
+        "relation": "Information-asymmetry precedent; evaluator hindsight is distinct from omniscient dialogue generation."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Validate the Hanabi observation renderer and raw-state fields; confirm Sotopia JSON provenance and reuse terms. No logged private reflection is assumed visible to an ordinary participant.",
+    "briefs": []
+  },
+  {
+    "id": "MTH-10",
+    "area": "meta",
+    "title": "Does translation preserve the interaction being measured?",
+    "question": "Do translated game logs change judgments of uncertainty, commitment or reasoning quality?",
+    "hypothesis": "English translations will systematically alter some pragmatic labels relative to the original Chinese turns, producing apparent cross-language behavior differences without changed play.",
+    "test": "Draw whole Werewolf games with paired original and translated events. Randomize bilingual annotators to original or translated packets, preserving surrounding turns and hiding player identity; never show both versions of one game to the same annotator. Use a predeclared rubric for uncertainty, accusations and commitments, with bilingual adjudication of disagreements. Fit paired game-level effects and separately test missing-translation selection. A small independently translated sample distinguishes this release’s translation pipeline from a universal language effect.",
+    "baseline": "Original-language judgments, independently translated packets and within-language repeated annotation at matched context length.",
+    "metrics": [
+      "Pragmatic-label agreement",
+      "Confidence shift",
+      "Player-ranking changes",
+      "Missing-translation sensitivity"
+    ],
+    "falsifier": "Translation effects stay inside the equivalence margin and are no larger than ordinary annotator variation across all prespecified labels.",
+    "confounds": "Human versus model authorship of the original play is not established by the card. Reasoning-note translations may differ from public dialogue and should not be pooled.",
+    "prior": [
+      {
+        "id": "data-werewolf-game-reasoning-2025",
+        "relation": "Actual paired Chinese and English events and notes; the card identifies an LLM translation process."
+      },
+      {
+        "id": "data-diplomacy-deception-2020",
+        "relation": "Analogy for separating communicative intent from receiver interpretation, not a parallel translation corpus."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Verify licences, pairing keys, missingness and game boundaries; recruit bilingual review. Do not auto-fill missing translations and then treat them as original released observations.",
+    "briefs": []
+  },
+  {
+    "id": "MTH-11",
+    "area": "meta",
+    "title": "Which system wins when failed runs count?",
+    "question": "Do completion-conditioned rankings agree with reliability-adjusted utility across all attempted runs?",
+    "hypothesis": "A system that looks strong on completed episodes may rank lower when malformed calls, retries and abandoned episodes are included at a fixed resource budget.",
+    "test": "Reconstruct Town run attempts from manifests, validation records and call ledgers, separating infrastructure aborts from complete runs excluded by a statistical rule. Report accepted-only scores and all-attempt utility with prespecified failure costs and sensitivity bounds. Because archived stacks are not randomized, confirm in a small controlled mock economy: randomize independent episodes to serving configurations, hold model and task fixed, and include every attempt, retry and timeout.",
+    "baseline": "Accepted-only analysis, deterministic valid-action fallback and a fixed no-retry policy; compare equal resource budgets rather than equal successful episodes.",
+    "metrics": [
+      "Completion probability",
+      "Utility per attempted episode",
+      "Utility per token/time budget",
+      "Retry burden",
+      "Ranking sensitivity"
+    ],
+    "falsifier": "Rankings remain practically stable across defensible failure costs, or completion rates do not differ under the randomized stack comparison.",
+    "confounds": "Infrastructure failure is not evidence of poor strategic reasoning. Outlier exclusion, budget censoring and invalid output are different mechanisms; retain them as separate categories.",
+    "prior": [
+      {
+        "id": "data-agent-town-economy-2026",
+        "relation": "Release retains quarantined runs and documents serving-stack problems; supports a reliability audit, not clean model attribution."
+      },
+      {
+        "id": "gh-apromisedland-trustworthy-agent-simulation",
+        "relation": "Candidate small offline harness with explicit budget and failure logging."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Reconcile run/call counters and terminal states before scoring; specify the failure-cost range in advance. The Town engine is unavailable, so the controlled confirmation requires a distinct validated toy implementation.",
+    "briefs": []
+  },
+  {
+    "id": "MTH-12",
+    "area": "meta",
+    "title": "When does a collection of sessions become a team?",
+    "question": "Does counting multiple agent sessions per task identify collaboration, or mostly sequential retries and handoffs?",
+    "hypothesis": "Session fan-out alone will overstate concurrent collaboration compared with a trace-based definition requiring overlapping activity and a verifiable information dependency.",
+    "test": "Sample AgentLogs tasks stratified by session count and outcome after checking table joins. Independently reconstruct session intervals and explicit handoff or shared-artifact dependencies from event records. Have blinded reviewers label sequential retry, parallel independent work and interacting work, allowing unknown where evidence is missing. Compare the resulting prevalence estimates and outcome associations with session-count labels using task-level analysis and repository-clustered uncertainty. Validate the labeling procedure on synthetic workflows with known execution graphs.",
+    "baseline": "One-session threshold, time-overlap-only rule, and synthetic retry-only negative controls.",
+    "metrics": [
+      "Collaboration precision",
+      "Unclassifiable fraction",
+      "Outcome association after relabelling",
+      "Join completeness",
+      "Concurrency reconstruction error"
+    ],
+    "falsifier": "Session-count classification already agrees with audited dependencies and outcome conclusions remain stable under the stricter definition.",
+    "confounds": "Shared task IDs do not imply causal interaction; overlapping timestamps may reflect waiting. Public repository sampling and incomplete logs limit population generalization, and users are not verified independent operators.",
+    "prior": [
+      {
+        "id": "data-agentlogs-2026",
+        "relation": "Relational task, session and event corpus offers concrete provenance evidence but no automatic collaboration ground truth."
+      },
+      {
+        "id": "elnozahy-2002-survey",
+        "relation": "Execution-history and causality concepts motivate synthetic known-graph validation."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Pin v0.2, inspect foreign keys and timestamp semantics, sample before touching the large event table, and measure missing sessions. This is a task-execution audit, not a claim to recover real-world operator identities.",
+    "briefs": []
+  },
+  {
+    "id": "MTH-13",
+    "area": "meta",
+    "title": "Is there a stable ranking of cooperative ability?",
+    "question": "Do model rankings carry across common-payoff games, mixed-motive negotiation and open-ended social goals after matching execution conditions?",
+    "hypothesis": "Within-task rankings will be more stable than cross-task rankings even after common model versions, costs and visibility are matched, weakening a single general cooperation score.",
+    "test": "Inventory exact model/scaffold overlap in Hanabi, C2C and Sotopia before analyzing. On an adequate common subset, normalize each task’s outcome against its own legal scripted baseline, hold out entire games or scenarios, and estimate rank uncertainty without pooling turns. If the released overlap is inadequate, specify a small prospective common-model panel with balanced game instances and fixed budgets; treat it as required new data, not an imputed cross-corpus result.",
+    "baseline": "Task-specific rankings, rank predictions from cost alone, and within-task split-half reliability as an upper bound on stable ranking.",
+    "metrics": [
+      "Cross-task rank correlation",
+      "Within-task reliability",
+      "Rank uncertainty",
+      "Performance relative to task baseline"
+    ],
+    "falsifier": "A single ranking predicts held-out task outcomes nearly as well as task-specific rankings within practical tolerance.",
+    "confounds": "Shared payoff, kept deals and private-goal achievement are different constructs. A rank reversal may reflect prompts, partners or visibility rather than a model trait; human welfare is not inferred from game score.",
+    "prior": [
+      {
+        "id": "data-hanabi-llm-logs-2026",
+        "relation": "Common-payoff coordination corpus with important scaffold variation."
+      },
+      {
+        "id": "data-c2c-ai-vs-ai-2026",
+        "relation": "Mixed-motive negotiation comparison with matched board conditions."
+      },
+      {
+        "id": "data-sotopia-2024",
+        "relation": "Social-goal corpus requires JSON to retain model and reward metadata."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "access-dependent",
+    "needs": "Confirm compatible models, benchmark reuse rights, episode keys and outcome provenance; reject an aggregate score if measurement compatibility or common support fails.",
+    "briefs": []
+  },
+  {
+    "id": "MTH-14",
+    "area": "meta",
+    "title": "Does the apparent trend survive the crawler?",
+    "question": "Can an apparent change in agent interaction be explained by collection or moderation changes rather than behavior?",
+    "hypothesis": "Some longitudinal interaction trends will shrink or reverse when analysis is restricted to a stable observation rule and overlapping entity-time coverage.",
+    "test": "Choose a narrow overlapping time window in the jscmp4 and MoltNet releases. Reconcile immutable entity IDs, revisions, deletion states and crawler provenance before matching posts and comments. Compare daily reply concentration and thread depth under each source, common-observed entities, and a fixed post-eligibility rule. Analyze days and communities as clustered observational units, then inject known observation-rule changes into synthetic stationary networks to check the estimator.",
+    "baseline": "Naive full-release trend, matched-coverage trend and synthetic stationary-network negative control.",
+    "metrics": [
+      "Trend sensitivity to eligibility",
+      "Cross-source missingness",
+      "Duplicate/revision rate",
+      "Interaction-statistic agreement"
+    ],
+    "falsifier": "Trends remain practically unchanged under stable coverage and are absent from the synthetic collection-change controls.",
+    "confounds": "The two releases share some upstream crawls, so agreement is not independent replication. Comments below a collection threshold and changing spam flags cannot be treated as random omissions or stable labels.",
+    "prior": [
+      {
+        "id": "data-jscmp4-moltbook-2026",
+        "relation": "Longitudinal crawl documents selective comment retrieval and field-regime changes."
+      },
+      {
+        "id": "data-moltnet-2026",
+        "relation": "Merged crawl histories provide provenance checks, with overlapping upstream observations."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Freeze revisions, inspect upstream terms and dedup lineage, and define the estimand on observable activity. A before/after moderation comparison alone cannot identify a causal platform effect.",
+    "briefs": []
+  },
+  {
+    "id": "MTH-15",
+    "area": "meta",
+    "title": "Does entropy predict collaboration beyond task difficulty?",
+    "question": "Does an entropy summary identify when collaboration helps on unseen task families, beyond model and single-agent performance?",
+    "hypothesis": "Some within-benchmark entropy associations will lose predictive value after controlling for difficulty and holding out entire task families or model sizes.",
+    "test": "Audit the entropy release’s master table and metric computation order. Define collaboration gain relative to the matched single-agent result and fit a bounded predictor using only features available at the proposed decision time. Compare nested models with and without entropy, holding out base questions, task families and model groups. Repeat group-preserving label permutations. If features require completed collaborative traces, evaluate retrospective diagnosis only and require new early-prefix traces for a routing claim.",
+    "baseline": "Task/model metadata, single-agent confidence or performance where legitimately available, and equal-cost always-single/always-collaborate rules.",
+    "metrics": [
+      "Held-out incremental predictive value",
+      "Calibration",
+      "Expected routing utility",
+      "Leakage audit failures"
+    ],
+    "falsifier": "Entropy adds stable predictive and decision value on held-out families beyond all prespecified controls, contradicting the expected loss of generality.",
+    "confounds": "Correctness can affect completed-trace entropy; repeated rows may share questions. Aggregated outputs cannot identify a causal benefit from manipulating entropy.",
+    "prior": [
+      {
+        "id": "data-multiagent-entropy-2026",
+        "relation": "Concrete released evaluation summaries; raw stage-one traces and token tensors are not included."
+      },
+      {
+        "id": "zhou-2025-pimmur",
+        "relation": "Measurement-validity framing, not prior proof that entropy fails."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Verify table keys, timing of every feature and underlying benchmark licences. Do not promise prefix-based routing or token-level remeasurement from a release that lacks the requisite traces.",
+    "briefs": []
+  },
+  {
+    "id": "SIM-05",
+    "area": "meta",
+    "title": "Can the published summary be rebuilt from committed events?",
+    "question": "Do exported metrics describe the same frozen run as the event ledger from which they are supposed to derive?",
+    "hypothesis": "Independent event-based reconstruction will expose some apparent outcome differences as export or accounting artifacts rather than agent behavior.",
+    "test": "Select complete Town episodes across arms and independently reconstruct a small frozen set of terminal outcomes from pulse and transaction records. Compare against run summaries without using their cached values. Cross-check conservation only after including documented external accounts. In a separate tass offline test, randomize export timing and interruption points while replaying identical committed states; whole deterministic episodes are units, and synthetic event corruptions supply known positives.",
+    "baseline": "Authoritative pulse reconstruction, a tiny hand-audited ledger and unmodified export under one fixed terminal snapshot.",
+    "metrics": [
+      "Terminal-metric disagreement",
+      "Ledger residual",
+      "Effect-size change after reconstruction",
+      "Corruption detection rate"
+    ],
+    "falsifier": "All checked metrics agree within numerical tolerance and treatment conclusions are invariant to export timing after accounting definitions are matched.",
+    "confounds": "A state-summary mismatch is not proof of a broken simulation. Rounding, open-system transfers and different measurement times can explain legitimate differences; label each before interpreting residuals.",
+    "prior": [
+      {
+        "id": "data-agent-town-economy-2026",
+        "relation": "Primary card explicitly warns that export-state metrics can drift from authoritative pulse values."
+      },
+      {
+        "id": "gh-apromisedland-trustworthy-agent-simulation",
+        "relation": "Concrete committed-snapshot and replay route for a controlled export audit."
+      },
+      {
+        "id": "grimm-2020-odd",
+        "relation": "Explicit state and measurement definitions precede cross-implementation comparisons."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Verify file hashes and measurement times, identify authoritative fields, and inspect external-account definitions. No released ledger has been loaded or validated in this atlas pass.",
+    "briefs": []
+  },
+  {
+    "id": "SIM-06",
+    "area": "marl-emergence",
+    "title": "When does offline policy evaluation stop ranking policies correctly?",
+    "question": "Does sparse joint-action coverage break offline evaluation before ordinary single-agent coverage diagnostics detect trouble?",
+    "hypothesis": "Policies whose coordinated actions fall outside joint behavior support will be misranked offline more often than policies with similar marginal but better joint support.",
+    "test": "Choose one small OG-MARL archive and compatible environment after auditing its loader, license and behavior metadata. Construct matched dataset subsets that preserve individual action frequencies while reducing coverage of coordinated joint actions. Train independent policy seeds with a frozen algorithm and budget, then compare offline value estimates with fresh online environment episodes. Dataset construction and training seeds are independent units; evaluation episodes are nested replications.",
+    "baseline": "Behavior cloning, full-support data subset and a marginal-support diagnostic at equal transition count.",
+    "metrics": [
+      "Offline/online rank agreement",
+      "Value-estimation error",
+      "Joint-support score",
+      "Realized team return"
+    ],
+    "falsifier": "Joint-support reduction adds no ranking error beyond marginal support and sample size, or the offline estimator remains calibrated across the tested policy shifts.",
+    "confounds": "Removing joint actions can alter state visitation and return quality. Match these where possible and report unmatched shifts; classical RL trajectories do not establish LLM-agent generalization.",
+    "prior": [
+      {
+        "id": "data-og-marl-2024",
+        "relation": "Concrete offline MARL archives; the catalogue’s 74 index rows are not the trajectory count."
+      },
+      {
+        "id": "ellis-2022-smacv2",
+        "relation": "Procedural task variability motivates held-out online validation, without requiring its heavy environment for the initial test."
+      },
+      {
+        "id": "papoudakis-2021-benchmarking",
+        "relation": "Multi-environment cooperative MARL comparison context for baseline and seed discipline."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "training",
+    "needs": "Inspect archive size and schema before download, verify environment/version compatibility and action support, and cap one scenario. A lightweight supported environment is preferable to assuming StarCraft runs locally.",
+    "briefs": []
+  },
+  {
+    "id": "SIM-07",
+    "area": "meta",
+    "title": "What does a best-of-many baseline actually buy?",
+    "question": "Does a collective advantage depend on comparing one deployed group with an endpoint-wise oracle over isolated searches?",
+    "hypothesis": "The apparent collective-versus-independent ranking will depend on whether the comparator is an oracle envelope, a preselected single artifact, or a deployable portfolio at matched cost.",
+    "test": "Using SwarmWorld’s isolated member traces and frozen portfolio evaluations, reconstruct the endpoint-wise best-of-N envelope separately from a member selected on development disturbances and from a portfolio selected under one predeclared deployment rule. Evaluate each on untouched disturbance seeds, pairing comparisons by discovery seed and population budget. Preserve full outcome vectors so the oracle cannot silently select a different member for each metric and be described as one system.",
+    "baseline": "Random isolated member, best member on development data, endpoint-wise oracle ceiling and resource-matched interacting group.",
+    "metrics": [
+      "Held-out functional utility",
+      "Oracle-to-deployable gap",
+      "Selection overhead",
+      "Ranking by comparator",
+      "Decision/token budget"
+    ],
+    "falsifier": "Rankings remain within a practical margin across deployable and oracle comparators after full resource accounting.",
+    "confounds": "Held-out assay seeds replicate disturbances on the same artifacts, not independent discoveries. Equal decision opportunities do not necessarily equal tokens, runtime or effective search space; frozen portfolios exclude later agent adaptation.",
+    "prior": [
+      {
+        "id": "data-swarmworld-2026",
+        "relation": "Release explicitly defines independent search as an endpoint-wise best-of-N envelope and retains member traces."
+      },
+      {
+        "id": "vermetten-2024-large",
+        "relation": "Benchmark aggregation and selection sensitivity motivate explicit comparator definitions."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Inspect manifests, isolated-member coverage and held-out scoring data; check whether all proposed portfolio rules are evaluable without the unreleased engine. Unsupported rules require new access, not invented counterfactual scores.",
     "briefs": []
   }
 ]

@@ -480,7 +480,7 @@
     "title": "Asynchronous teams under uneven tool latency",
     "question": "When does asynchronous work beat round-based discussion once stale information is counted?",
     "hypothesis": "Asynchrony improves completion under variable tool delays but loses accuracy when rapid state changes make old messages misleading.",
-    "test": "Randomize complete task episodes to synchronous rounds or event-driven execution. Independently randomize tool delay distributions and environment-change rates, using identical scripted delays for paired worlds. Fix total generated tokens, tool calls and a wall-clock deadline; charge retries and timeouts. Repeated calls within one world remain one statistical unit.",
+    "test": "Randomize complete task episodes to synchronous rounds or event-driven execution. Cross tool-delay variance and environment-change rate using paired scripted worlds; randomize initial activation order. Fix total generated tokens, tool calls, budget visibility and deadline; charge retries and timeouts. Each world is one statistical unit, with agent participation tracked rather than assumed.",
     "baseline": "A synchronous team and a single worker with the same aggregate compute cap, with latency reported separately from throughput.",
     "metrics": [
       "Deadline success",
@@ -499,6 +499,10 @@
       {
         "id": "kim-2025-towards",
         "relation": "Makes coordination overhead a measured cost rather than a universal scaling law."
+      },
+      {
+        "id": "paliskara-2026-worse",
+        "relation": "Shared-resource teams exhibit participation and coordination failures; does not isolate asynchronous execution."
       }
     ],
     "novelty": "speculative",
@@ -514,7 +518,7 @@
     "title": "Allocate roles by observed bottlenecks",
     "question": "Can teams choose useful temporary roles from their actual information deficits?",
     "hypothesis": "Reallocating a limited role budget toward unresolved subproblems improves completion more than fixed persona assignments.",
-    "test": "Randomize complete generated project episodes to fixed roles, periodically reassigned roles or role-free work. Reassignment uses only publicly available progress and unmet requirements, with its computation charged to the shared budget. Hold model composition, task evidence and action allowance constant. Rotate initial role assignments and include tasks whose bottleneck changes halfway through.",
+    "test": "Randomize complete project episodes to fixed roles, periodically reassigned roles or role-free work. Reassignment sees only public progress and unmet requirements; charge it to the hard shared budget. Hold model composition, evidence, capability metadata and action allowance constant. Rotate initial roles and include tasks whose bottleneck changes halfway through.",
     "baseline": "Uniform round-robin assignments and a centralized planner with identical information and token cap.",
     "metrics": [
       "Verified milestones completed",
@@ -532,6 +536,10 @@
       {
         "id": "cemri-2025-why",
         "relation": "Failure taxonomy motivates explicit task alignment and completion checks."
+      },
+      {
+        "id": "amayuelas-2025-self",
+        "relation": "Direct allocation/planner precedent with explicit worker capabilities; novelty requires the changing-bottleneck and hard-cap contrast."
       }
     ],
     "novelty": "extension",
@@ -900,7 +908,7 @@
       "Total utility"
     ],
     "falsifier": "Credit only increases reported contribution, or verified output gains are offset by abandoned maintenance.",
-    "confounds": "The reward design can predetermine behavior; show outcomes across more than one incentive strength. Programmed noncontributors are introduced roles, not evidence that cheating emerged spontaneously.",
+    "confounds": "Reward design can predetermine behavior; vary incentive strength. Programmed noncontributors are introduced roles. Distinguish game credit, real resource costs and independent utility; inferred cooperation is not established by equal contributions.",
     "prior": [
       {
         "id": "leibo-2021-scalable",
@@ -909,9 +917,13 @@
       {
         "id": "pal-2026-swarmworld",
         "relation": "Functional artifacts provide a concrete collective-output comparison."
+      },
+      {
+        "id": "piatti-2024-cooperate",
+        "relation": "Commons cooperation has direct simulation precedent; verified research-artifact credit is a domain extension."
       }
     ],
-    "novelty": "speculative",
+    "novelty": "extension",
     "feasibility": "api-small",
     "needs": "Specify utility independently of credit, including maintenance that the credit rule may neglect.",
     "briefs": [
@@ -934,7 +946,7 @@
       "Good work delayed"
     ],
     "falsifier": "Funding does not improve net utility beyond random checking, or its overhead dominates at the prespecified error mixture.",
-    "confounds": "Forced checks test a scheduling rule, not spontaneous cooperation; a perfect validator is an explicit environmental assumption. Keep false reports separate from noncontribution.",
+    "confounds": "Forced checks test scheduling, not spontaneous cooperation; perfect validation is an environmental assumption. Keep game rewards and inference budgets separate, charge enforcement too, and do not give subsidy arms extra resources.",
     "prior": [
       {
         "id": "leibo-2021-scalable",
@@ -943,6 +955,10 @@
       {
         "id": "cemri-2025-why",
         "relation": "Documents verification failures; does not prove subsidies solve them."
+      },
+      {
+        "id": "piedrahita-2025-corrupted",
+        "relation": "Public-goods sanctioning is direct institutional prior; extra sanction budgets and model-family differences require separate controls."
       }
     ],
     "novelty": "extension",

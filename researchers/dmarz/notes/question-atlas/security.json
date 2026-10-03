@@ -1626,5 +1626,358 @@
     "briefs": [
       "synthesis/sybil-flashbots.md"
     ]
+  },
+  {
+    "id": "SEC-45",
+    "area": "fork-merge-security",
+    "title": "Does a false fact spread like a policy violation?",
+    "question": "Can containment measured on ordinary erroneous claims predict containment of instructions that request unauthorized behavior?",
+    "hypothesis": "Unreviewed hunch: Rankings of containment policies differ between factual-error propagation and policy-violation propagation even with matched contact opportunities and apparent credibility.",
+    "test": "Generate independent closed-world task episodes with either a benign false claim or a harmless instruction to violate a mock task rule. Randomize source type and containment policy across matched task families; include correct facts and authorized instructions as controls. Record exposure, factual adoption, instruction acceptance, retransmission, and executed mock consequences separately. Use both fixed-sender and fixed-edge exposure conditions, and analyze episodes rather than recipient messages as replicates.",
+    "baseline": "No containment, correction-only messaging, origin-bound action gating, and node isolation at matched communication budgets.",
+    "metrics": [
+      "policy ranking by propagation type",
+      "erroneous adoption",
+      "unauthorized mock actions",
+      "correct task completion",
+      "first-generation retransmission"
+    ],
+    "falsifier": "Containment rankings and safety-utility frontiers remain equivalent within prespecified tolerances across both propagation types and held-out task families.",
+    "confounds": "Unequal plausibility of stimuli, confusing copied text with adopted intent, different control over source content, comparing contact counts with token budgets.",
+    "prior": [
+      {
+        "id": "niu-2026-reliability-contagion",
+        "relation": "Models an externally checkable false claim and explicitly fixes communication-budget conventions."
+      },
+      {
+        "id": "wu-2026-collective",
+        "relation": "Separates modeled collective loss from observed handoff susceptibility."
+      },
+      {
+        "id": "zhou-2025-corba",
+        "relation": "Availability loss is another distinct endpoint, not arbitrary harmful execution."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Matched harmless stimuli, endpoint definitions, and full nearest-method review; no live harmful actions.",
+    "briefs": [
+      "tasks/scan-papers-fm-contagion.md",
+      "src/fork-merge-setups/rigs.json"
+    ]
+  },
+  {
+    "id": "SEC-46",
+    "area": "fork-merge-security",
+    "title": "Shared tools can reconnect isolated children",
+    "question": "Does cutting peer messages contain contamination when children still share a retrieval store or tool output cache?",
+    "hypothesis": "Unreviewed hunch: Peer isolation alone leaves a reusable shared-store pathway, while targeted store invalidation plus isolated revalidation reduces reinfection with less utility loss than disabling every shared tool.",
+    "test": "Randomize independent parent-child episodes in a factorial design: peer links available or cut, shared cache clean or seeded with a harmless false rule, and store repair enabled or absent. Keep task evidence and tool-call budgets matched. Retain complete evaluator lineage but expose only declared runtime events to policies. Test new children after initial cleanup to distinguish persistent reservoir effects from simultaneous common exposure.",
+    "baseline": "Agent-only reset, peer-edge cutting, full shared-tool shutdown, and clean-cache controls.",
+    "metrics": [
+      "post-cleanup recurrence",
+      "new-child exposure",
+      "unauthorized mock decisions",
+      "legitimate tool utility",
+      "cleanup cost"
+    ],
+    "falsifier": "Shared-store access creates no recurrence after peer isolation, or targeted repair cannot improve the utility-recurrence tradeoff relative to broad shutdown.",
+    "confounds": "Cache contents accidentally differ in legitimate evidence, unobserved model-memory persistence, calling shared initial exposure onward transmission.",
+    "prior": [
+      {
+        "id": "le-2026-cross-layer",
+        "relation": "Multiplex agent/tool contagion is already modeled; primary full methods remain unavailable in this pass."
+      },
+      {
+        "id": "lee-2026-reproduction",
+        "relation": "Poisoned reservoirs are explicit in the abstract-level epidemic framing."
+      },
+      {
+        "id": "zha-2026-autonomous",
+        "relation": "Persistent carrier re-entry gives a concrete adjacent runtime mechanism."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Local mock tools, store-version logs, and no assumption that the complete causal graph is deployably observed.",
+    "briefs": [
+      "tasks/scan-papers-fm-contagion.md",
+      "synthesis/pre-experiment-research.md"
+    ]
+  },
+  {
+    "id": "SEC-47",
+    "area": "fork-merge-security",
+    "title": "Where does the full fork-and-return chain actually fail?",
+    "question": "Which stage contributes most to parent corruption when a clean child first encounters untrusted material during legitimate work?",
+    "hypothesis": "Unreviewed hunch: End-to-end parent failure is substantially lower than susceptibility measured after directly installing a compromised child state, and the dominant bottleneck changes with the returned object.",
+    "test": "Randomize independent synthetic research tasks between natural source exposure and an explicitly preseeded child-state diagnostic condition. Cross text-report versus persistent-memory return while keeping useful source facts constant. Score a frozen sequence of acquisition, retained child state, report submission, parent adoption, mock consequence, and later recurrence. Report all-assigned-episode rates alongside conditional transition rates. Repeat retries only within an episode and disclose their budget.",
+    "baseline": "Clean child returns, direct parent exposure, and state-preseeded susceptibility with the same downstream task.",
+    "metrics": [
+      "end-to-end parent consequence rate",
+      "conditional stage transitions",
+      "benign completion",
+      "restart recurrence",
+      "failures and provider rejections"
+    ],
+    "falsifier": "Natural acquisition and preseeded susceptibility yield equivalent end-to-end rates within planned tolerances, with no stage-bottleneck change between return objects.",
+    "confounds": "Dropping unsuccessful acquisitions from the denominator; counting pending calls as executed effects; seed-state fabrication artifacts.",
+    "prior": [
+      {
+        "id": "zhang-2026-agentworm",
+        "relation": "Audit distinguishes composite laboratory success, retries, persistence, and bounded relay chains."
+      },
+      {
+        "id": "chen-2026-memsecbench",
+        "relation": "Lifecycle checkpoints and conditional repair denominators are direct prior."
+      },
+      {
+        "id": "wu-2026-collective",
+        "relation": "Controlled handoff susceptibility does not alone demonstrate an autonomous cascade."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Deterministic local consequence ledger and source-carrier threat model; no exploit strings or real external effects.",
+    "briefs": [
+      "tasks/scan-papers-fm-contagion.md",
+      "src/fork-merge-setups/rigs.json",
+      "synthesis/fork-merge-questions.md"
+    ]
+  },
+  {
+    "id": "SEC-48",
+    "area": "fork-merge-security",
+    "title": "When can an isolated child safely return?",
+    "question": "What evidence should allow a quarantined child back into the merge without discarding its useful discoveries?",
+    "hypothesis": "Unreviewed hunch: Release based on held-out behavior plus constrained return capabilities reduces recurrence more than a single clean response, while retaining more useful work than permanent exclusion.",
+    "test": "Randomize independently generated contaminated-child episodes among immediate release after one clean check, fixed-time quarantine, constrained text-only re-entry, and held-out behavioral checks plus constrained re-entry. Freeze the checks before evaluation and use distinct legitimate follow-up tasks. Include clean children falsely quarantined to measure recovery burden. Keep review calls, elapsed opportunities, and parent evidence budgets explicit; compare the resulting utility-risk frontier.",
+    "baseline": "Permanent exclusion, full reset and rerun, and unrestricted release with a correction note.",
+    "metrics": [
+      "post-release recurrence",
+      "useful child findings retained",
+      "clean-child release delay",
+      "review cost",
+      "parent mock-action violations"
+    ],
+    "falsifier": "Combined release checks and constrained capabilities offer no recurrence advantage at matched useful-work retention and review budget.",
+    "confounds": "Checks sharing templates with the original mistake, contamination assumed cleared by silence, hidden evaluator lineage used for release, survivor selection after unsuccessful repair.",
+    "prior": [
+      {
+        "id": "zha-2026-autonomous",
+        "relation": "Conservative taint persists until external declassification; that authority is an assumption to examine."
+      },
+      {
+        "id": "chen-2026-memsecbench",
+        "relation": "Selective repair already requires removal and benign-memory preservation."
+      },
+      {
+        "id": "mateo-torrejon-2026-gammaf",
+        "relation": "Live node isolation is established; return criteria extend beyond simply isolating nodes."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "A defined declassification authority and safe local tasks; pass/fail checks cannot establish universal future behavior.",
+    "briefs": [
+      "tasks/scan-papers-fm-contagion.md",
+      "synthesis/pre-experiment-research.md"
+    ]
+  },
+  {
+    "id": "SEC-49",
+    "area": "fork-merge-security",
+    "title": "Recovery can look good after damage is already done",
+    "question": "Can a defense with excellent final recovery still produce worse cumulative consequences than an earlier, less complete containment policy?",
+    "hypothesis": "Unreviewed hunch: Ranking policies by final clean-agent fraction can reverse their ranking by cumulative mock harm and retained task usefulness when recovery arrives after consequential actions.",
+    "test": "Randomize independent controlled network episodes to preventive admission checks, delayed correction diffusion, or a mixture at matched intervention budget. Use harmless rule violations recorded as irreversible ledger marks in a local simulator, alongside legitimate task completion. Vary action timing separately from communication topology. Score the entire time series, including already-recovered nodes, and test whether terminal-state rankings predict cumulative outcomes on held-out schedules.",
+    "baseline": "No intervention, full communication halt, and instantaneous oracle correction as a labeled ceiling.",
+    "metrics": [
+      "cumulative mock consequences",
+      "ever-affected fraction",
+      "final recovered fraction",
+      "useful completed work",
+      "time to effective containment"
+    ],
+    "falsifier": "Terminal recovery rankings remain aligned with cumulative consequence and utility rankings across the prespecified timing conditions.",
+    "confounds": "Defining recovery as an acknowledgement, counting repeated exposures as distinct affected agents, assuming logged compensation reverses an external effect.",
+    "prior": [
+      {
+        "id": "wu-2025-cowpox",
+        "relation": "The source audit distinguishes high recovery from substantial cumulative infection and conditional extinction assumptions."
+      },
+      {
+        "id": "elnozahy-2002-survey",
+        "relation": "External outputs constrain what rollback can undo."
+      },
+      {
+        "id": "lee-2026-reproduction",
+        "relation": "Interception and recovery affect different model parameters; full equations need verification."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Time-indexed endpoint definitions and safe irreversible stand-ins; do not infer real outbreak rates from the simulator.",
+    "briefs": [
+      "tasks/scan-papers-fm-contagion.md",
+      "synthesis/pre-experiment-research.md"
+    ]
+  },
+  {
+    "id": "SEC-50",
+    "area": "swarm-detection",
+    "title": "A detector that isolates nodes changes the evidence",
+    "question": "Does a graph monitor still identify useful interventions once isolation changes who can communicate and finish the task?",
+    "hypothesis": "Unreviewed hunch: The best static anomaly classifier is not always the best live isolation policy, because false isolation removes legitimate expertise and also changes later observable traces.",
+    "test": "Randomize complete authorized synthetic communities to no action, frozen-detector isolation, utility-aware isolation, or random isolation at the same action budget. Keep an offline replay evaluation on the original unmodified trace as a separate comparison. Vary whether suspicious nodes hold unique legitimate evidence. Analyze independent community-task episodes and report actions assigned, not only nodes surviving to the final trace.",
+    "baseline": "Static classification scores, random removals, and evaluator-known faulty-node isolation as a privileged ceiling.",
+    "metrics": [
+      "final task accuracy",
+      "harmful onward transmissions",
+      "honest expertise lost",
+      "classification-action ranking disagreement",
+      "total compute"
+    ],
+    "falsifier": "Static detector rankings predict live safety-utility rankings across held-out graphs and evidence assignments, with no meaningful false-isolation cost.",
+    "confounds": "Evaluating a monitor on labels generated by itself, free oracle graph visibility, treating post-isolation survivors as a random sample.",
+    "prior": [
+      {
+        "id": "mateo-torrejon-2026-gammaf",
+        "relation": "Live graph-monitor remediation already exists, so this is a decision-quality boundary test."
+      },
+      {
+        "id": "gh-floriangroetschla-agentsnet",
+        "relation": "Concrete synchronous graph-task harness with task scoring; the cataloguing lane ran one coloring example, but no security intervention was run here."
+      },
+      {
+        "id": "aronow-2013-estimating",
+        "relation": "Interference and policy assignment determine the causal quantity."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Full monitor implementation and training-data audit; equal monitoring/decision budgets and held-out task graphs. AgentsNet is a possible substrate, but isolation hooks and the monitor must be implemented; its synchronous delivery is not a real-network timing model.",
+    "briefs": [
+      "tasks/scan-papers-fm-contagion.md",
+      "synthesis/swarm-detection-methods.md"
+    ]
+  },
+  {
+    "id": "SEC-51",
+    "area": "fork-merge-security",
+    "title": "Can harmless evaluator preferences narrow a swarm's reasoning?",
+    "question": "Can peer evaluation drive strategy convergence without spreading a false claim or any malicious instruction?",
+    "hypothesis": "Unreviewed hunch: Shared evaluator preferences reduce strategy diversity beyond ordinary task-driven convergence, and diverse evaluators help only when their judgments add independent information at matched budget.",
+    "test": "Randomize independent task networks among shared preference judges, heterogeneous judges, shuffled-feedback controls, and a task-only objective scorer. Match evaluator calls and token budgets rather than committee size alone. Use tasks admitting several valid solution strategies and separately tasks where one strategy is objectively best. Track strategy choices and held-out task quality over rounds; distinguish true correctness gains from conformity to evaluator style.",
+    "baseline": "No peer feedback, one stronger evaluator with the same budget, and randomized feedback preserving score marginals.",
+    "metrics": [
+      "strategy diversity",
+      "cross-agent preference shift",
+      "held-out correctness",
+      "feedback calibration",
+      "evaluation cost"
+    ],
+    "falsifier": "Shared evaluators cause no additional diversity loss versus shuffled or task-only controls, or heterogeneous judges add no benefit at matched quality and budget.",
+    "confounds": "Calling all convergence pathological, larger committees receiving more compute, latent common priors, strategy labels defined by the same judge.",
+    "prior": [
+      {
+        "id": "liu-2026-contagion",
+        "relation": "Direct evaluator-preference propagation precedent with narrow strategy-orientation meaning."
+      },
+      {
+        "id": "ebrahimi-2025-adversary",
+        "relation": "Trusted-judge and architecture assumptions constrain credibility-based defenses."
+      },
+      {
+        "id": "kim-2025-correlated",
+        "relation": "Different model identities do not guarantee independent judgments."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Full preference-dynamics methods and independent strategy coding; this studies convergence, not inferred malicious intent.",
+    "briefs": [
+      "tasks/scan-papers-fm-contagion.md",
+      "synthesis/pre-experiment-research.md"
+    ]
+  },
+  {
+    "id": "SEC-52",
+    "area": "fork-merge-security",
+    "title": "Do small per-merge failures accumulate across generations?",
+    "question": "Can a gate that looks effective on one return remain useful over repeated fork, learning, return, and restart cycles?",
+    "hypothesis": "Unreviewed hunch: A fixed per-return admission gate understates long-run recurrence when accepted state becomes a shared starting point for later children; periodic revalidation trades retained knowledge for reduced accumulation.",
+    "test": "Randomize independent multi-generation task runs to a static merge gate, the same gate plus periodic source revalidation, or fresh restart each generation. Use harmless rare false rules and new legitimate facts at each cycle. Hold total task count and verification budget fixed while varying whether retained state is inherited by new children. Evaluate all generations, including abandoned runs, and fit recurrence by independent lineage rather than by individual child.",
+    "baseline": "One-shot susceptibility at the same per-return policy, no new exposure after generation one, and clean inherited-state controls.",
+    "metrics": [
+      "cumulative parent error",
+      "cross-generation recurrence",
+      "new knowledge retained",
+      "legitimate tasks completed",
+      "verification and restart cost"
+    ],
+    "falsifier": "Retained inheritance produces no excess recurrence over the one-shot-calibrated prediction, or periodic revalidation has no utility-risk benefit over full restart.",
+    "confounds": "Assuming independent returns, changing task difficulty over generations, model version drift, attributing every repeat error to persisted content.",
+    "prior": [
+      {
+        "id": "yang-2026-zombie",
+        "relation": "Persistent self-reinforcing control is existing prior; entry remains abstract-level."
+      },
+      {
+        "id": "zha-2026-autonomous",
+        "relation": "Temporal re-entry and scheduled context loading are already studied."
+      },
+      {
+        "id": "chen-2026-memsecbench",
+        "relation": "Single-lifecycle repair checkpoints provide a starting comparator, not longitudinal proof."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Stable model versions, explicit inheritance map, and a prespecified independent-return reference model.",
+    "briefs": [
+      "tasks/scan-papers-fm-contagion.md",
+      "src/fork-merge-setups/rigs.json",
+      "synthesis/pre-experiment-research.md"
+    ]
+  },
+  {
+    "id": "SEC-53",
+    "area": "sybil-resistance",
+    "title": "Can reliable service history hide selective routing failure?",
+    "question": "Does reputation-based peer routing remain useful when a contributor behaves correctly on common requests but withholds a narrow class of important results?",
+    "hypothesis": "Unreviewed hunch: A global peer score can retain selectively unreliable identities, while task-conditioned checks improve retrieval coverage at the cost of sparse evidence and newcomer burden.",
+    "test": "In an isolated simulated discovery network, randomize independent topology-and-request streams to global reputation, per-task-class reputation, or random diversified routing. Give some peers high ordinary-service quality but evaluator-controlled withholding on one rare benign task class. Keep total requests, peer capacity, and optional identity rotation fixed. Do not query or alter a public overlay. Separate missing results from incorrect results and analyze whole streams as replicates.",
+    "baseline": "Plain routing, fixed trusted peers, and oracle unreliable-peer removal as a privileged ceiling.",
+    "metrics": [
+      "rare-task retrieval success",
+      "overall latency",
+      "honest newcomer rejection",
+      "route concentration",
+      "evidence needed to demote"
+    ],
+    "falsifier": "Selective withholding is already penalized adequately by the global score, or task-conditioned checks do not improve rare-task coverage at matched honest burden.",
+    "confounds": "Unavailable content mistaken for malicious withholding, adversarial peer location fixed unrealistically, self-reported reputation accepted as verified evidence.",
+    "prior": [
+      {
+        "id": "pecori-2016-s-kademlia",
+        "relation": "Trust-based routing is an established tolerance approach; source methods remain abstract-level."
+      },
+      {
+        "id": "xia-2026-when",
+        "relation": "Conditional trust creates both routing benefit and sparse-evidence risks."
+      },
+      {
+        "id": "gh-datahop-kademlia-simulator",
+        "relation": "Concrete PeerSim discovery-network substrate; README inspected, not executed, transport abstracted and no license stated."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Full routing-score specification, separate content availability ground truth, and no claim that simulation identifies real operator intent. Resolve simulator reuse terms or implement the minimal model independently; PeerSim timing cannot validate network latency.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md",
+      "surveys/sybil-resistance.md"
+    ]
   }
 ]

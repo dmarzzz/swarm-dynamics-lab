@@ -1,6 +1,6 @@
 {
   "from": "7333ef1",
-  "through": "b9cd5eb",
+  "through": "bf74eb0",
   "records": [
     {
       "change": "M",
@@ -12,6 +12,9 @@
         "fork-merge-security",
         "llm-agent-swarms",
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-06"
       ]
     },
     {
@@ -22,6 +25,9 @@
       "read_depth": "full",
       "topics": [
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-04"
       ]
     },
     {
@@ -33,6 +39,10 @@
       "topics": [
         "llm-agent-swarms",
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-02",
+        "BUD-14"
       ]
     },
     {
@@ -43,6 +53,10 @@
       "read_depth": "full",
       "topics": [
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-19",
+        "BUD-20"
       ]
     },
     {
@@ -54,7 +68,1742 @@
       "topics": [
         "agent-budgets",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "BUD-03",
+        "BUD-04"
       ]
+    },
+    {
+      "change": "A",
+      "id": "gh-101dotxyz-gpteam",
+      "path": "library/code/gh-101dotxyz-gpteam.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-2youg1-sprawling-agents",
+      "path": "library/code/gh-2youg1-sprawling-agents.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-4thfever-cultivation-world-simulator",
+      "path": "library/code/gh-4thfever-cultivation-world-simulator.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-666ghj-mirofish",
+      "path": "library/code/gh-666ghj-mirofish.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-a11to1n3-amber",
+      "path": "library/code/gh-a11to1n3-amber.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-ab-ce-abce",
+      "path": "library/code/gh-ab-ce-abce.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-abides-sim-abides",
+      "path": "library/code/gh-abides-sim-abides.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-abm4all-melodie",
+      "path": "library/code/gh-abm4all-melodie.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-agentlabcn-visa",
+      "path": "library/code/gh-agentlabcn-visa.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-agentscope-ai-agentscope",
+      "path": "library/code/gh-agentscope-ai-agentscope.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-agentshire-agentshire",
+      "path": "library/code/gh-agentshire-agentshire.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-agenttorch-agenttorch",
+      "path": "library/code/gh-agenttorch-agenttorch.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-agi-templar-stable-alignment",
+      "path": "library/code/gh-agi-templar-stable-alignment.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-agiresearch-waragent",
+      "path": "library/code/gh-agiresearch-waragent.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-aiscientists-dev-worldseed",
+      "path": "library/code/gh-aiscientists-dev-worldseed.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-alem-world-alem-env",
+      "path": "library/code/gh-alem-world-alem-env.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-apromisedland-trustworthy-agent-simulation",
+      "path": "library/code/gh-apromisedland-trustworthy-agent-simulation.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "MTH-05"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "gh-bark-simulator-bark",
+      "path": "library/code/gh-bark-simulator-bark.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "crowds-and-traffic"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-baselomari-ma-craftax",
+      "path": "library/code/gh-baselomari-ma-craftax.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-bigpig4396-multi-agent-reinforcement-learning-environment",
+      "path": "library/code/gh-bigpig4396-multi-agent-reinforcement-learning-environment.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "gh-bold-lab-ai-jaxmarl",
+      "path": "library/code/gh-bold-lab-ai-jaxmarl.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": [
+        "RL-08"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "gh-btx0424-omnidrones",
+      "path": "library/code/gh-btx0424-omnidrones.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "swarm-robotics",
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-cadcad-org-cadcad",
+      "path": "library/code/gh-cadcad-org-cadcad.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "meta",
+        "sybil-resistance"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-cadlabs-radcad",
+      "path": "library/code/gh-cadlabs-radcad.md",
+      "type": "code",
+      "read_depth": "ran",
+      "topics": [
+        "meta",
+        "sybil-resistance"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-ceresopa-alicization-town",
+      "path": "library/code/gh-ceresopa-alicization-town.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-chroma-citi-dancers",
+      "path": "library/code/gh-chroma-citi-dancers.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "swarm-robotics"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-cityflow-project-cityflow",
+      "path": "library/code/gh-cityflow-project-cityflow.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "crowds-and-traffic",
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-cocacola-lab-mineland",
+      "path": "library/code/gh-cocacola-lab-mineland.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-cognitive-ai-systems-pogema",
+      "path": "library/code/gh-cognitive-ai-systems-pogema.md",
+      "type": "code",
+      "read_depth": "ran",
+      "topics": [
+        "marl-emergence",
+        "swarm-robotics",
+        "collective-motion"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-crytic-attacknet",
+      "path": "library/code/gh-crytic-attacknet.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "sync-consensus",
+        "sybil-resistance"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-cyberbotics-webots",
+      "path": "library/code/gh-cyberbotics-webots.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "swarm-robotics"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-datahop-kademlia-simulator",
+      "path": "library/code/gh-datahop-kademlia-simulator.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "sync-consensus"
+      ],
+      "cited_by": [
+        "SEC-53"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "gh-datamllab-rlcard",
+      "path": "library/code/gh-datamllab-rlcard.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-dsg-titech-simblock",
+      "path": "library/code/gh-dsg-titech-simblock.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "sync-consensus"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-eclab-mason",
+      "path": "library/code/gh-eclab-mason.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "collective-motion",
+        "swarm-robotics",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-edbeeching-godot-rl-agents",
+      "path": "library/code/gh-edbeeching-godot-rl-agents.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-emerge-lab-gpudrive",
+      "path": "library/code/gh-emerge-lab-gpudrive.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "crowds-and-traffic"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-emergenceai-emergence-world",
+      "path": "library/code/gh-emergenceai-emergence-world.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "sybil-resistance"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-ethereum-ethshadow",
+      "path": "library/code/gh-ethereum-ethshadow.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "sync-consensus"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-ethpandaops-ethereum-package",
+      "path": "library/code/gh-ethpandaops-ethereum-package.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "sync-consensus",
+        "sybil-resistance"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-eugenevinitsky-sequential-social-dilemma-games",
+      "path": "library/code/gh-eugenevinitsky-sequential-social-dilemma-games.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-evoplex-evoplex",
+      "path": "library/code/gh-evoplex-evoplex.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-facebookresearch-egg",
+      "path": "library/code/gh-facebookresearch-egg.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-farama-foundation-chatarena",
+      "path": "library/code/gh-farama-foundation-chatarena.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-flamegpu-flamegpu2",
+      "path": "library/code/gh-flamegpu-flamegpu2.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "collective-motion",
+        "crowds-and-traffic",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-flatland-association-flatland-rl",
+      "path": "library/code/gh-flatland-association-flatland-rl.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "crowds-and-traffic"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-floriangroetschla-agentsnet",
+      "path": "library/code/gh-floriangroetschla-agentsnet.md",
+      "type": "code",
+      "read_depth": "ran",
+      "topics": [
+        "llm-agent-swarms",
+        "sync-consensus",
+        "collective-decision"
+      ],
+      "cited_by": [
+        "SEC-50",
+        "SIM-02"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "gh-freedomintelligence-twinmarket",
+      "path": "library/code/gh-freedomintelligence-twinmarket.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-detection"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-fudandisc-socioverse",
+      "path": "library/code/gh-fudandisc-socioverse.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-gama-platform-gama",
+      "path": "library/code/gh-gama-platform-gama.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "crowds-and-traffic",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-giorgiopiatti-govsim",
+      "path": "library/code/gh-giorgiopiatti-govsim.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-goodstartlabs-ai-diplomacy",
+      "path": "library/code/gh-goodstartlabs-ai-diplomacy.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "gh-google-deepmind-concordia",
+      "path": "library/code/gh-google-deepmind-concordia.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "collective-decision"
+      ],
+      "cited_by": [
+        "SIM-01"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "gh-google-deepmind-hanabi-learning-environment",
+      "path": "library/code/gh-google-deepmind-hanabi-learning-environment.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-google-research-football",
+      "path": "library/code/gh-google-research-football.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-google-werewolf-arena",
+      "path": "library/code/gh-google-werewolf-arena.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-detection"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-googlecloudplatform-race-condition",
+      "path": "library/code/gh-googlecloudplatform-race-condition.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-gtri-scrimmage",
+      "path": "library/code/gh-gtri-scrimmage.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "swarm-robotics",
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-hanruihua-ir-sim",
+      "path": "library/code/gh-hanruihua-ir-sim.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "swarm-robotics"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-hardmaru-slimevolleygym",
+      "path": "library/code/gh-hardmaru-slimevolleygym.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-harnesslabs-arbiter",
+      "path": "library/code/gh-harnesslabs-arbiter.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-huawei-noah-smarts",
+      "path": "library/code/gh-huawei-noah-smarts.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "crowds-and-traffic",
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-humancompatibleai-overcooked-ai",
+      "path": "library/code/gh-humancompatibleai-overcooked-ai.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-i-m-iron-man-abmax",
+      "path": "library/code/gh-i-m-iron-man-abmax.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-ibm-amlsim",
+      "path": "library/code/gh-ibm-amlsim.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "swarm-detection",
+        "sybil-resistance"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-jacopopan-aerial-autonomy-stack",
+      "path": "library/code/gh-jacopopan-aerial-autonomy-stack.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "swarm-robotics"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-jepsen-io-maelstrom",
+      "path": "library/code/gh-jepsen-io-maelstrom.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "fork-merge-security",
+        "sync-consensus"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-jofmi-agentpy",
+      "path": "library/code/gh-jofmi-agentpy.md",
+      "type": "code",
+      "read_depth": "ran",
+      "topics": [
+        "collective-motion",
+        "meta"
+      ],
+      "cited_by": [
+        "SIM-04"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "gh-jpmorganchase-abides-jpmc-public",
+      "path": "library/code/gh-jpmorganchase-abides-jpmc-public.md",
+      "type": "code",
+      "read_depth": "ran",
+      "topics": [
+        "meta",
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-juliadynamics-abmframeworkscomparison",
+      "path": "library/code/gh-juliadynamics-abmframeworkscomparison.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "meta",
+        "collective-motion"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-juliadynamics-agents-jl",
+      "path": "library/code/gh-juliadynamics-agents-jl.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "collective-motion",
+        "crowds-and-traffic",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-kelkalot-moltbook-observatory",
+      "path": "library/code/gh-kelkalot-moltbook-observatory.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-detection"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-kingofspace0wzz-weclawarena",
+      "path": "library/code/gh-kingofspace0wzz-weclawarena.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "sybil-resistance"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-koulanurag-ma-gym",
+      "path": "library/code/gh-koulanurag-ma-gym.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-krabmaga-krabmaga",
+      "path": "library/code/gh-krabmaga-krabmaga.md",
+      "type": "code",
+      "read_depth": "ran",
+      "topics": [
+        "collective-motion",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-ksanadock-microverse",
+      "path": "library/code/gh-ksanadock-microverse.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-kywch-meta-mmo",
+      "path": "library/code/gh-kywch-meta-mmo.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-learnsyslab-crazyflow",
+      "path": "library/code/gh-learnsyslab-crazyflow.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "swarm-robotics",
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-learnsyslab-gym-pybullet-drones",
+      "path": "library/code/gh-learnsyslab-gym-pybullet-drones.md",
+      "type": "code",
+      "read_depth": "ran",
+      "topics": [
+        "swarm-robotics",
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-libp2p-gossipsub-hardening",
+      "path": "library/code/gh-libp2p-gossipsub-hardening.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "sync-consensus"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-lis-epfl-swarmlab",
+      "path": "library/code/gh-lis-epfl-swarmlab.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "swarm-robotics",
+        "collective-motion"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-llnl-abmarl",
+      "path": "library/code/gh-llnl-abmarl.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-lux-ai-challenge-lux-design-s3",
+      "path": "library/code/gh-lux-ai-challenge-lux-design-s3.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-m1kuw1ll-mmasim",
+      "path": "library/code/gh-m1kuw1ll-mmasim.md",
+      "type": "code",
+      "read_depth": "ran",
+      "topics": [
+        "sybil-resistance",
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-maher243-blocksim",
+      "path": "library/code/gh-maher243-blocksim.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "sync-consensus"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-marcopatzelt-brunnfeld-agentic-world",
+      "path": "library/code/gh-marcopatzelt-brunnfeld-agentic-world.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-matraix-ai-matraix-persona-8b",
+      "path": "library/code/gh-matraix-ai-matraix-persona-8b.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-matsim-org-matsim-libs",
+      "path": "library/code/gh-matsim-org-matsim-libs.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "crowds-and-traffic"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-meridianlabs-ai-inspect-petri",
+      "path": "library/code/gh-meridianlabs-ai-inspect-petri.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-detection"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-mesa-mesa-frames",
+      "path": "library/code/gh-mesa-mesa-frames.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-mesa-mesa-geo",
+      "path": "library/code/gh-mesa-mesa-geo.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "crowds-and-traffic"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-mesa-mesa-llm",
+      "path": "library/code/gh-mesa-mesa-llm.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "gh-mesa-mesa",
+      "path": "library/code/gh-mesa-mesa.md",
+      "type": "code",
+      "read_depth": "ran",
+      "topics": [
+        "collective-motion",
+        "meta"
+      ],
+      "cited_by": [
+        "SIM-04"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "gh-metadriverse-metadrive",
+      "path": "library/code/gh-metadriverse-metadrive.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "crowds-and-traffic"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-metta-ai-cogames",
+      "path": "library/code/gh-metta-ai-cogames.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-metta-ai-coworld",
+      "path": "library/code/gh-metta-ai-coworld.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence",
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-metta-ai-mettagrid",
+      "path": "library/code/gh-metta-ai-mettagrid.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-microsoft-maro",
+      "path": "library/code/gh-microsoft-maro.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-microsoft-multi-agent-marketplace",
+      "path": "library/code/gh-microsoft-multi-agent-marketplace.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "sybil-resistance"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-microsoft-tinytroupe",
+      "path": "library/code/gh-microsoft-tinytroupe.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-mlech26l-gigastep",
+      "path": "library/code/gh-mlech26l-gigastep.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "swarm-robotics"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-mukobi-welfare-diplomacy",
+      "path": "library/code/gh-mukobi-welfare-diplomacy.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "marl-emergence",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-nekonaute-roborobo4",
+      "path": "library/code/gh-nekonaute-roborobo4.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "swarm-robotics",
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-neuralmmo-environment",
+      "path": "library/code/gh-neuralmmo-environment.md",
+      "type": "code",
+      "read_depth": "ran",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-noncomputable-agentmaps",
+      "path": "library/code/gh-noncomputable-agentmaps.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "crowds-and-traffic"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-nsnam-ns-3-dev-git",
+      "path": "library/code/gh-nsnam-ns-3-dev-git.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-ntnu-arl-aerial-gym-simulator",
+      "path": "library/code/gh-ntnu-arl-aerial-gym-simulator.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "swarm-robotics"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-openbmb-agentverse",
+      "path": "library/code/gh-openbmb-agentverse.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-opendilab-gobigger",
+      "path": "library/code/gh-opendilab-gobigger.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "gh-oxwhirl-smac",
+      "path": "library/code/gh-oxwhirl-smac.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-oxwhirl-smacv2",
+      "path": "library/code/gh-oxwhirl-smacv2.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-pair-code-deliberate-lab",
+      "path": "library/code/gh-pair-code-deliberate-lab.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "gh-palisaderesearch-llm-honeypot",
+      "path": "library/code/gh-palisaderesearch-llm-honeypot.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "swarm-detection",
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-pufferai-pufferlib",
+      "path": "library/code/gh-pufferai-pufferlib.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-qqqqqqby-botsim",
+      "path": "library/code/gh-qqqqqqby-botsim.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "swarm-detection",
+        "llm-agent-swarms",
+        "sybil-resistance"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-rdllab-posggym",
+      "path": "library/code/gh-rdllab-posggym.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-renh2-policysim",
+      "path": "library/code/gh-renh2-policysim.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-repast-repast4py",
+      "path": "library/code/gh-repast-repast4py.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-ruc-gsai-yulan-onesim",
+      "path": "library/code/gh-ruc-gsai-yulan-onesim.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-ruc-gsai-yulan-swarmintell",
+      "path": "library/code/gh-ruc-gsai-yulan-swarmintell.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "collective-motion",
+        "swarm-intelligence"
+      ],
+      "cited_by": [
+        "SIM-03"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "gh-salesforce-ai-economist",
+      "path": "library/code/gh-salesforce-ai-economist.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-salesforce-warp-drive",
+      "path": "library/code/gh-salesforce-warp-drive.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-schroederdewitt-multiagent-mujoco",
+      "path": "library/code/gh-schroederdewitt-multiagent-mujoco.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-semitable-lb-foraging",
+      "path": "library/code/gh-semitable-lb-foraging.md",
+      "type": "code",
+      "read_depth": "ran",
+      "topics": [
+        "marl-emergence",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-semitable-robotic-warehouse",
+      "path": "library/code/gh-semitable-robotic-warehouse.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "swarm-robotics"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-shacklettbp-madrona",
+      "path": "library/code/gh-shacklettbp-madrona.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-shadow-shadow",
+      "path": "library/code/gh-shadow-shadow.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "swarm-detection",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-shadow-tornettools",
+      "path": "library/code/gh-shadow-tornettools.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "meta",
+        "sybil-resistance"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-shichengf-acworld",
+      "path": "library/code/gh-shichengf-acworld.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-simworld-ai-simworld",
+      "path": "library/code/gh-simworld-ai-simworld.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-sotopia-lab-sotopia",
+      "path": "library/code/gh-sotopia-lab-sotopia.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SIM-01"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "gh-stanfordhci-genagents",
+      "path": "library/code/gh-stanfordhci-genagents.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-tamlhp-awesome-sns",
+      "path": "library/code/gh-tamlhp-awesome-sns.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-testground-testground",
+      "path": "library/code/gh-testground-testground.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "sync-consensus",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-textarena-textarena",
+      "path": "library/code/gh-textarena-textarena.md",
+      "type": "code",
+      "read_depth": "ran",
+      "topics": [
+        "llm-agent-swarms",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-thytu-agentarium",
+      "path": "library/code/gh-thytu-agentarium.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-tokenspice-tokenspice",
+      "path": "library/code/gh-tokenspice-tokenspice.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-tsinghua-fib-lab-acl24-econagent",
+      "path": "library/code/gh-tsinghua-fib-lab-acl24-econagent.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-tsinghua-fib-lab-llm-agent-based-modeling-and-simulation",
+      "path": "library/code/gh-tsinghua-fib-lab-llm-agent-based-modeling-and-simulation.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-ukgovernmentbeis-inspect-ai",
+      "path": "library/code/gh-ukgovernmentbeis-inspect-ai.md",
+      "type": "code",
+      "read_depth": "ran",
+      "topics": [
+        "llm-agent-swarms",
+        "fork-merge-security",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-ulab-uiuc-marble",
+      "path": "library/code/gh-ulab-uiuc-marble.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-unity-technologies-ml-agents",
+      "path": "library/code/gh-unity-technologies-ml-agents.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-xavierpuigf-virtualhome",
+      "path": "library/code/gh-xavierpuigf-virtualhome.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-xuehaipan-mate",
+      "path": "library/code/gh-xuehaipan-mate.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "swarm-robotics"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-ysocialtwin-ysocial",
+      "path": "library/code/gh-ysocialtwin-ysocial.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-detection",
+        "sybil-resistance"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-yunshiuan-llm-agent-opinion-dynamics",
+      "path": "library/code/gh-yunshiuan-llm-agent-opinion-dynamics.md",
+      "type": "code",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "sync-consensus",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-yuxiang-gao-pysocialforce",
+      "path": "library/code/gh-yuxiang-gao-pysocialforce.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "crowds-and-traffic"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gh-zju-llms-agent-kernel",
+      "path": "library/code/gh-zju-llms-agent-kernel.md",
+      "type": "code",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -65,6 +1814,9 @@
       "topics": [
         "llm-agent-swarms",
         "swarm-detection"
+      ],
+      "cited_by": [
+        "SEC-26"
       ]
     },
     {
@@ -75,7 +1827,8 @@
       "read_depth": "skim",
       "topics": [
         "fork-merge-security"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -85,7 +1838,8 @@
       "read_depth": "skim",
       "topics": [
         "fork-merge-security"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -95,6 +1849,10 @@
       "read_depth": "skim",
       "topics": [
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "MTH-03",
+        "MTH-04"
       ]
     },
     {
@@ -106,7 +1864,8 @@
       "topics": [
         "swarm-detection",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -116,7 +1875,8 @@
       "read_depth": "skim",
       "topics": [
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -126,7 +1886,8 @@
       "read_depth": "skim",
       "topics": [
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -136,7 +1897,8 @@
       "read_depth": "skim",
       "topics": [
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -146,7 +1908,8 @@
       "read_depth": "skim",
       "topics": [
         "sybil-resistance"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -156,7 +1919,8 @@
       "read_depth": "skim",
       "topics": [
         "fork-merge-security"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -166,7 +1930,8 @@
       "read_depth": "skim",
       "topics": [
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -176,7 +1941,8 @@
       "read_depth": "skim",
       "topics": [
         "fork-merge-security"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -187,7 +1953,8 @@
       "topics": [
         "llm-agent-swarms",
         "swarm-detection"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -197,6 +1964,10 @@
       "read_depth": "skim",
       "topics": [
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "MTH-02",
+        "MTH-06"
       ]
     },
     {
@@ -207,7 +1978,8 @@
       "read_depth": "skim",
       "topics": [
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -217,7 +1989,20 @@
       "read_depth": "skim",
       "topics": [
         "fork-merge-security"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "data-moltbook-dataset-2026",
+      "path": "library/datasets/data-moltbook-dataset-2026.md",
+      "type": "dataset",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-detection"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -229,7 +2014,8 @@
         "llm-agent-swarms",
         "fork-merge-security",
         "swarm-detection"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -240,7 +2026,8 @@
       "topics": [
         "llm-agent-swarms",
         "swarm-detection"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -250,7 +2037,8 @@
       "read_depth": "skim",
       "topics": [
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -261,7 +2049,8 @@
       "topics": [
         "llm-agent-swarms",
         "swarm-detection"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -271,7 +2060,8 @@
       "read_depth": "skim",
       "topics": [
         "marl-emergence"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -281,7 +2071,8 @@
       "read_depth": "skim",
       "topics": [
         "swarm-detection"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -291,7 +2082,8 @@
       "read_depth": "skim",
       "topics": [
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -302,6 +2094,9 @@
       "topics": [
         "llm-agent-swarms",
         "sync-consensus"
+      ],
+      "cited_by": [
+        "PHY-25"
       ]
     },
     {
@@ -312,7 +2107,8 @@
       "read_depth": "skim",
       "topics": [
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -322,7 +2118,8 @@
       "read_depth": "skim",
       "topics": [
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -333,7 +2130,8 @@
       "topics": [
         "llm-agent-swarms",
         "swarm-detection"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -345,6 +2143,11 @@
         "llm-agent-swarms",
         "swarm-intelligence",
         "collective-motion"
+      ],
+      "cited_by": [
+        "PHY-03",
+        "PHY-23",
+        "SIM-03"
       ]
     },
     {
@@ -356,6 +2159,9 @@
       "topics": [
         "llm-agent-swarms",
         "swarm-intelligence"
+      ],
+      "cited_by": [
+        "MTH-01"
       ]
     },
     {
@@ -366,7 +2172,8 @@
       "read_depth": "skim",
       "topics": [
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -376,7 +2183,8 @@
       "read_depth": "skim",
       "topics": [
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -387,7 +2195,8 @@
       "topics": [
         "llm-agent-swarms",
         "fork-merge-security"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -398,7 +2207,76 @@
       "topics": [
         "agent-budgets",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "ai-2025-beyond",
+      "path": "library/papers/ai-2025-beyond.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "akkil-2026-emergence-platform",
+      "path": "library/papers/akkil-2026-emergence-platform.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "akkil-2026-emergence",
+      "path": "library/papers/akkil-2026-emergence.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "fork-merge-security",
+        "llm-agent-swarms",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "al-omari-2025-multi",
+      "path": "library/papers/al-omari-2025-multi.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "alharby-2020-blocksim",
+      "path": "library/papers/alharby-2020-blocksim.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sync-consensus"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "ali-2026-quantifying",
+      "path": "library/papers/ali-2026-quantifying.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -408,7 +2286,8 @@
       "read_depth": "abstract",
       "topics": [
         "agent-budgets"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -419,7 +2298,35 @@
       "topics": [
         "agent-budgets",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SOC-16",
+        "BUD-11",
+        "BUD-12"
       ]
+    },
+    {
+      "change": "A",
+      "id": "amrouni-2021-abides",
+      "path": "library/papers/amrouni-2021-abides.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "aoki-2019-simblock",
+      "path": "library/papers/aoki-2019-simblock.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sync-consensus"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -430,7 +2337,19 @@
       "topics": [
         "swarm-detection",
         "sybil-resistance"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "awuni-2026-who",
+      "path": "library/papers/awuni-2026-who.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -441,7 +2360,21 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
+      ],
+      "cited_by": [
+        "SEC-44"
       ]
+    },
+    {
+      "change": "A",
+      "id": "ballestero-2026-strategic",
+      "path": "library/papers/ballestero-2026-strategic.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -453,7 +2386,54 @@
         "sybil-resistance",
         "llm-agent-swarms",
         "agent-budgets"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "barrera-lemarchand-2026-wisdom",
+      "path": "library/papers/barrera-lemarchand-2026-wisdom.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "bay-2026-when",
+      "path": "library/papers/bay-2026-when.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "begin-2026-preference",
+      "path": "library/papers/begin-2026-preference.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "bertalanic-2026-cost",
+      "path": "library/papers/bertalanic-2026-cost.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -463,7 +2443,22 @@
       "read_depth": "full",
       "topics": [
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-11"
       ]
+    },
+    {
+      "change": "A",
+      "id": "blando-2026-towards",
+      "path": "library/papers/blando-2026-towards.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "meta"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -474,7 +2469,32 @@
       "topics": [
         "agent-budgets",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "BUD-16"
       ]
+    },
+    {
+      "change": "A",
+      "id": "bugaud-2026-hidden",
+      "path": "library/papers/bugaud-2026-hidden.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "byrd-2019-abides",
+      "path": "library/papers/byrd-2019-abides.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -485,6 +2505,9 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SEC-07"
       ]
     },
     {
@@ -496,7 +2519,41 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "chaturvedi-2025-abmax",
+      "path": "library/papers/chaturvedi-2025-abmax.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "chen-2026-agents",
+      "path": "library/papers/chen-2026-agents.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "chen-2026-diversity",
+      "path": "library/papers/chen-2026-diversity.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -507,6 +2564,12 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SEC-06",
+        "SEC-47",
+        "SEC-48",
+        "SEC-52"
       ]
     },
     {
@@ -517,7 +2580,68 @@
       "read_depth": "skim",
       "topics": [
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-09",
+        "BUD-22"
       ]
+    },
+    {
+      "change": "A",
+      "id": "choe-2024-massively",
+      "path": "library/papers/choe-2024-massively.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "chopra-2024-limits",
+      "path": "library/papers/chopra-2024-limits.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "chopra-2025-large",
+      "path": "library/papers/chopra-2025-large.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "choudhary-2026-manipulation",
+      "path": "library/papers/choudhary-2026-manipulation.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "chupilkin-2026-artificial",
+      "path": "library/papers/chupilkin-2026-artificial.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "meta"
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -528,7 +2652,8 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -539,7 +2664,23 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
+      ],
+      "cited_by": [
+        "SEC-19",
+        "SEC-43"
       ]
+    },
+    {
+      "change": "A",
+      "id": "curvo-2025-traitors",
+      "path": "library/papers/curvo-2025-traitors.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "sybil-resistance"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -550,7 +2691,23 @@
       "topics": [
         "agent-budgets",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "BUD-12",
+        "BUD-21"
       ]
+    },
+    {
+      "change": "A",
+      "id": "datseris-2022-agents",
+      "path": "library/papers/datseris-2022-agents.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "meta",
+        "collective-motion"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -561,7 +2718,34 @@
       "topics": [
         "sybil-resistance",
         "swarm-detection"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "de-marzo-2026-collective",
+      "path": "library/papers/de-marzo-2026-collective.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "criticality-measurement",
+        "swarm-detection"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "de-marzo-2026-conformity",
+      "path": "library/papers/de-marzo-2026-conformity.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "llm-agent-swarms",
+        "collective-decision",
+        "criticality-measurement"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -572,7 +2756,8 @@
       "topics": [
         "agent-budgets",
         "swarm-robotics"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -582,7 +2767,22 @@
       "read_depth": "skim",
       "topics": [
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-05",
+        "BUD-13"
       ]
+    },
+    {
+      "change": "A",
+      "id": "douven-2026-wisdom",
+      "path": "library/papers/douven-2026-wisdom.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -594,6 +2794,9 @@
         "fork-merge-security",
         "llm-agent-swarms",
         "collective-decision"
+      ],
+      "cited_by": [
+        "SEC-51"
       ]
     },
     {
@@ -605,7 +2808,46 @@
       "topics": [
         "sybil-resistance",
         "swarm-detection"
+      ],
+      "cited_by": [
+        "SEC-33"
       ]
+    },
+    {
+      "change": "A",
+      "id": "ellis-2022-smacv2",
+      "path": "library/papers/ellis-2022-smacv2.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "marl-emergence",
+        "meta"
+      ],
+      "cited_by": [
+        "SIM-03"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "fachada-2026-can",
+      "path": "library/papers/fachada-2026-can.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "fan-2026-agentic",
+      "path": "library/papers/fan-2026-agentic.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -616,7 +2858,8 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -629,6 +2872,9 @@
         "llm-agent-swarms",
         "swarm-detection",
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-15"
       ]
     },
     {
@@ -640,7 +2886,8 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -651,7 +2898,20 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gautam-2026-moltbook",
+      "path": "library/papers/gautam-2026-moltbook.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-detection"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -662,6 +2922,47 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "gorsane-2022-towards",
+      "path": "library/papers/gorsane-2022-towards.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "grimm-2020-odd",
+      "path": "library/papers/grimm-2020-odd.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "meta",
+        "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SIM-04"
+      ]
+    },
+    {
+      "change": "M",
+      "id": "grotschla-2025-agentsnet",
+      "path": "library/papers/grotschla-2025-agentsnet.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "sync-consensus"
+      ],
+      "cited_by": [
+        "SIM-02"
       ]
     },
     {
@@ -674,7 +2975,19 @@
         "llm-agent-swarms",
         "sybil-resistance",
         "fork-merge-security"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "guertler-2025-textarena",
+      "path": "library/papers/guertler-2025-textarena.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -684,6 +2997,9 @@
       "read_depth": "skim",
       "topics": [
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-19"
       ]
     },
     {
@@ -694,7 +3010,19 @@
       "read_depth": "skim",
       "topics": [
         "sybil-resistance"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "hashemi-2026-empirical",
+      "path": "library/papers/hashemi-2026-empirical.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -705,7 +3033,8 @@
       "topics": [
         "fork-merge-security",
         "meta"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -716,7 +3045,86 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "he-2026-minority",
+      "path": "library/papers/he-2026-minority.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "he-2026-visa",
+      "path": "library/papers/he-2026-visa.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "hegazy-2024-diversity",
+      "path": "library/papers/hegazy-2024-diversity.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "hishiki-2026-how",
+      "path": "library/papers/hishiki-2026-how.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "hossain-2026-agreement",
+      "path": "library/papers/hossain-2026-agreement.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "hou-2026-structural",
+      "path": "library/papers/hou-2026-structural.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "hu-2025-toward",
+      "path": "library/papers/hu-2025-toward.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "meta"
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -729,6 +3137,9 @@
         "sybil-resistance",
         "llm-agent-swarms",
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-07"
       ]
     },
     {
@@ -741,6 +3152,42 @@
         "llm-agent-swarms",
         "sybil-resistance",
         "fork-merge-security"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "huang-2026-policysim",
+      "path": "library/papers/huang-2026-policysim.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "huberman-1993-evolutionary",
+      "path": "library/papers/huberman-1993-evolutionary.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "itkin-2026-local",
+      "path": "library/papers/itkin-2026-local.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SOC-35"
       ]
     },
     {
@@ -752,7 +3199,33 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
+      ],
+      "cited_by": [
+        "SEC-37"
       ]
+    },
+    {
+      "change": "A",
+      "id": "jansen-2021-once",
+      "path": "library/papers/jansen-2021-once.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "meta",
+        "sybil-resistance"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "jansen-2022-co-opting",
+      "path": "library/papers/jansen-2022-co-opting.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -763,7 +3236,8 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -774,6 +3248,9 @@
       "topics": [
         "agent-budgets",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "BUD-21"
       ]
     },
     {
@@ -786,7 +3263,31 @@
         "sybil-resistance",
         "llm-agent-swarms",
         "fork-merge-security"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "karge-2026-epistemic",
+      "path": "library/papers/karge-2026-epistemic.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "kazemkhani-2024-gpudrive",
+      "path": "library/papers/kazemkhani-2024-gpudrive.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "crowds-and-traffic"
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -797,7 +3298,34 @@
       "topics": [
         "llm-agent-swarms",
         "agent-budgets"
+      ],
+      "cited_by": [
+        "SOC-03",
+        "SOC-13",
+        "SOC-15"
       ]
+    },
+    {
+      "change": "A",
+      "id": "kim-2026-are",
+      "path": "library/papers/kim-2026-are.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "kohli-2026-nine",
+      "path": "library/papers/kohli-2026-nine.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -808,7 +3336,54 @@
       "topics": [
         "sybil-resistance",
         "swarm-detection"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "kota-2026-design",
+      "path": "library/papers/kota-2026-design.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "kuai-2026-statistical",
+      "path": "library/papers/kuai-2026-statistical.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "lan-2021-warpdrive",
+      "path": "library/papers/lan-2021-warpdrive.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "larooij-2025-do",
+      "path": "library/papers/larooij-2025-do.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "llm-agent-swarms",
+        "meta"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -819,7 +3394,22 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SEC-46"
       ]
+    },
+    {
+      "change": "A",
+      "id": "lechner-2023-gigastep",
+      "path": "library/papers/lechner-2023-gigastep.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "swarm-robotics"
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -831,7 +3421,8 @@
         "llm-agent-swarms",
         "sybil-resistance",
         "fork-merge-security"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -842,7 +3433,34 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SEC-46",
+        "SEC-49"
       ]
+    },
+    {
+      "change": "A",
+      "id": "lefort-2024-examining",
+      "path": "library/papers/lefort-2024-examining.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "lei-2026-strategic",
+      "path": "library/papers/lei-2026-strategic.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "sybil-resistance"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -853,7 +3471,8 @@
       "topics": [
         "sybil-resistance",
         "sync-consensus"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -863,6 +3482,42 @@
       "read_depth": "abstract",
       "topics": [
         "agent-budgets"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "li-2026-diverse",
+      "path": "library/papers/li-2026-diverse.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "li-2026-matraix",
+      "path": "library/papers/li-2026-matraix.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "li-2026-socialization",
+      "path": "library/papers/li-2026-socialization.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SOC-34"
       ]
     },
     {
@@ -874,6 +3529,9 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
+      ],
+      "cited_by": [
+        "SEC-42"
       ]
     },
     {
@@ -885,6 +3543,9 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
+      ],
+      "cited_by": [
+        "SEC-42"
       ]
     },
     {
@@ -896,6 +3557,9 @@
       "topics": [
         "agent-budgets",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "BUD-14"
       ]
     },
     {
@@ -906,6 +3570,12 @@
       "read_depth": "abstract",
       "topics": [
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-03",
+        "BUD-04",
+        "BUD-05",
+        "BUD-17"
       ]
     },
     {
@@ -917,7 +3587,8 @@
       "topics": [
         "fork-merge-security",
         "meta"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -928,7 +3599,8 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -938,7 +3610,8 @@
       "read_depth": "skim",
       "topics": [
         "sybil-resistance"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -948,6 +3621,11 @@
       "read_depth": "skim",
       "topics": [
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-01",
+        "BUD-17",
+        "BUD-20"
       ]
     },
     {
@@ -958,7 +3636,21 @@
       "read_depth": "abstract",
       "topics": [
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-18"
       ]
+    },
+    {
+      "change": "A",
+      "id": "liu-2026-breaking",
+      "path": "library/papers/liu-2026-breaking.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -969,6 +3661,57 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SEC-51"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "liu-2026-do",
+      "path": "library/papers/liu-2026-do.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "liu-2026-llms",
+      "path": "library/papers/liu-2026-llms.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "liu-2026-phase",
+      "path": "library/papers/liu-2026-phase.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "criticality-measurement"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "liu-2026-social",
+      "path": "library/papers/liu-2026-social.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SOC-05",
+        "SOC-19"
       ]
     },
     {
@@ -980,7 +3723,34 @@
       "topics": [
         "fork-merge-security",
         "sybil-resistance"
+      ],
+      "cited_by": [
+        "SEC-04",
+        "SEC-10"
       ]
+    },
+    {
+      "change": "M",
+      "id": "magistrali-2026-aligned",
+      "path": "library/papers/magistrali-2026-aligned.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "llm-agent-swarms",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "mao-2025-agent-kernel",
+      "path": "library/papers/mao-2025-agent-kernel.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -991,7 +3761,19 @@
       "topics": [
         "sybil-resistance",
         "swarm-detection"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "marjanovic-2026-mo",
+      "path": "library/papers/marjanovic-2026-mo.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1002,6 +3784,10 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SEC-48",
+        "SEC-50"
       ]
     },
     {
@@ -1013,7 +3799,8 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -1024,7 +3811,8 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1035,7 +3823,8 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1046,6 +3835,9 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
+      ],
+      "cited_by": [
+        "SEC-39"
       ]
     },
     {
@@ -1056,7 +3848,21 @@
       "read_depth": "abstract",
       "topics": [
         "agent-budgets"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "mukobi-2023-welfare",
+      "path": "library/papers/mukobi-2023-welfare.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "marl-emergence",
+        "collective-decision"
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -1069,7 +3875,32 @@
         "llm-agent-swarms",
         "swarm-detection",
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-15"
       ]
+    },
+    {
+      "change": "A",
+      "id": "ng-2026-microverse",
+      "path": "library/papers/ng-2026-microverse.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "niu-2026-armor",
+      "path": "library/papers/niu-2026-armor.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1080,7 +3911,32 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SEC-45"
       ]
+    },
+    {
+      "change": "A",
+      "id": "oh-2025-belief",
+      "path": "library/papers/oh-2025-belief.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "onofri-2026-raim",
+      "path": "library/papers/onofri-2026-raim.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1091,7 +3947,71 @@
       "topics": [
         "agent-budgets",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SOC-15",
+        "BUD-01",
+        "BUD-02",
+        "BUD-10",
+        "BUD-22"
       ]
+    },
+    {
+      "change": "A",
+      "id": "pan-2024-very",
+      "path": "library/papers/pan-2024-very.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "panerati-2021-learning",
+      "path": "library/papers/panerati-2021-learning.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "swarm-robotics",
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "papoudakis-2021-benchmarking",
+      "path": "library/papers/papoudakis-2021-benchmarking.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "marl-emergence",
+        "meta"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "park-2024-llm",
+      "path": "library/papers/park-2024-llm.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "patel-2026-representational",
+      "path": "library/papers/patel-2026-representational.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1101,6 +4021,9 @@
       "read_depth": "abstract",
       "topics": [
         "sybil-resistance"
+      ],
+      "cited_by": [
+        "SEC-53"
       ]
     },
     {
@@ -1112,7 +4035,19 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "pham-2026-amber",
+      "path": "library/papers/pham-2026-amber.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -1124,6 +4059,10 @@
         "llm-agent-swarms",
         "marl-emergence",
         "agent-budgets"
+      ],
+      "cited_by": [
+        "SOC-27",
+        "BUD-16"
       ]
     },
     {
@@ -1135,7 +4074,102 @@
       "topics": [
         "agent-budgets",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SOC-28"
       ]
+    },
+    {
+      "change": "A",
+      "id": "qian-2025-deliberate",
+      "path": "library/papers/qian-2025-deliberate.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "qian-2026-nous",
+      "path": "library/papers/qian-2026-nous.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "qiao-2025-botsim",
+      "path": "library/papers/qiao-2025-botsim.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "swarm-detection",
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "radax-2010-timing",
+      "path": "library/papers/radax-2010-timing.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "meta"
+      ],
+      "cited_by": [
+        "SIM-02"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "rai-2026-when",
+      "path": "library/papers/rai-2026-when.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "rao-2026-jev",
+      "path": "library/papers/rao-2026-jev.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "ren-2025-simworld",
+      "path": "library/papers/ren-2025-simworld.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "ren-2026-sepal",
+      "path": "library/papers/ren-2026-sepal.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1146,7 +4180,83 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
+      ],
+      "cited_by": [
+        "SEC-41"
       ]
+    },
+    {
+      "change": "M",
+      "id": "reworr-2024-llm",
+      "path": "library/papers/reworr-2024-llm.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "swarm-detection",
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "richmond-2023-flame",
+      "path": "library/papers/richmond-2023-flame.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "meta",
+        "collective-motion"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "rosales-2025-diverse",
+      "path": "library/papers/rosales-2025-diverse.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "rossetti-2024-y",
+      "path": "library/papers/rossetti-2024-y.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-detection"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "ruan-2025-benchmarking",
+      "path": "library/papers/ruan-2025-benchmarking.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "llm-agent-swarms",
+        "swarm-intelligence",
+        "collective-motion",
+        "swarm-robotics",
+        "sync-consensus"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "rutherford-2023-jaxmarl",
+      "path": "library/papers/rutherford-2023-jaxmarl.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -1157,7 +4267,42 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "salem-2025-tinytroupe",
+      "path": "library/papers/salem-2025-tinytroupe.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "sasahara-2026-latent",
+      "path": "library/papers/sasahara-2026-latent.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "shacklett-2023-extensible",
+      "path": "library/papers/shacklett-2023-extensible.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence",
+        "meta"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1167,7 +4312,45 @@
       "read_depth": "skim",
       "topics": [
         "sybil-resistance"
+      ],
+      "cited_by": [
+        "SEC-19",
+        "SEC-43"
       ]
+    },
+    {
+      "change": "A",
+      "id": "shu-2026-blind",
+      "path": "library/papers/shu-2026-blind.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "shu-2026-forged",
+      "path": "library/papers/shu-2026-forged.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "skrynnik-2024-pogema",
+      "path": "library/papers/skrynnik-2024-pogema.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence",
+        "swarm-robotics"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1177,7 +4360,21 @@
       "read_depth": "abstract",
       "topics": [
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-10"
       ]
+    },
+    {
+      "change": "A",
+      "id": "spiro-2026-oracles",
+      "path": "library/papers/spiro-2026-oracles.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1187,7 +4384,8 @@
       "read_depth": "full",
       "topics": [
         "sybil-resistance"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1198,7 +4396,30 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "suarez-2023-neural",
+      "path": "library/papers/suarez-2023-neural.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "sunkavalli-2026-closed",
+      "path": "library/papers/sunkavalli-2026-closed.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1209,7 +4430,8 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1219,7 +4441,19 @@
       "read_depth": "abstract",
       "topics": [
         "sybil-resistance"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "tang-2024-gensim",
+      "path": "library/papers/tang-2024-gensim.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1230,7 +4464,31 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "teng-2026-which",
+      "path": "library/papers/teng-2026-which.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "tessera-2026-benchmarking",
+      "path": "library/papers/tessera-2026-benchmarking.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "llm-agent-swarms",
+        "marl-emergence"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1241,6 +4499,10 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
+      ],
+      "cited_by": [
+        "SEC-14",
+        "SEC-38"
       ]
     },
     {
@@ -1252,6 +4514,9 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
+      ],
+      "cited_by": [
+        "SEC-40"
       ]
     },
     {
@@ -1263,7 +4528,8 @@
       "topics": [
         "llm-agent-swarms",
         "agent-budgets"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -1274,7 +4540,45 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SEC-04",
+        "SEC-08"
       ]
+    },
+    {
+      "change": "A",
+      "id": "turkmen-2026-dont",
+      "path": "library/papers/turkmen-2026-dont.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "usman-2026-peer-voted",
+      "path": "library/papers/usman-2026-peer-voted.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "sync-consensus"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "vega-barbas-2026-sixteen",
+      "path": "library/papers/vega-barbas-2026-sixteen.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1285,6 +4589,9 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
+      ],
+      "cited_by": [
+        "SEC-40"
       ]
     },
     {
@@ -1295,7 +4602,8 @@
       "read_depth": "abstract",
       "topics": [
         "sybil-resistance"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1306,6 +4614,9 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
+      ],
+      "cited_by": [
+        "SEC-37"
       ]
     },
     {
@@ -1317,7 +4628,8 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1327,7 +4639,23 @@
       "read_depth": "skim",
       "topics": [
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-10",
+        "BUD-13"
       ]
+    },
+    {
+      "change": "A",
+      "id": "wang-2026-weclawarena",
+      "path": "library/papers/wang-2026-weclawarena.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "sybil-resistance"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1337,7 +4665,8 @@
       "read_depth": "skim",
       "topics": [
         "agent-budgets"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1347,7 +4676,20 @@
       "read_depth": "skim",
       "topics": [
         "agent-budgets"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "wu-2023-strategic",
+      "path": "library/papers/wu-2023-strategic.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "marl-emergence"
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -1358,6 +4700,9 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SEC-49"
       ]
     },
     {
@@ -1369,6 +4714,10 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SEC-45",
+        "SEC-47"
       ]
     },
     {
@@ -1380,7 +4729,19 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "xie-2024-ai",
+      "path": "library/papers/xie-2024-ai.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -1390,7 +4751,8 @@
       "read_depth": "skim",
       "topics": [
         "sybil-resistance"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1401,7 +4763,41 @@
       "topics": [
         "sybil-resistance",
         "swarm-detection"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "yan-2026-ceo",
+      "path": "library/papers/yan-2026-ceo.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "yang-2026-geomherd",
+      "path": "library/papers/yang-2026-geomherd.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "yang-2026-judge",
+      "path": "library/papers/yang-2026-judge.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -1413,7 +4809,8 @@
         "sybil-resistance",
         "llm-agent-swarms",
         "fork-merge-security"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1424,7 +4821,33 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SEC-52"
       ]
+    },
+    {
+      "change": "A",
+      "id": "ye-2025-efficient",
+      "path": "library/papers/ye-2025-efficient.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "marl-emergence"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "ye-2026-stop",
+      "path": "library/papers/ye-2026-stop.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "meta"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1435,7 +4858,8 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1446,6 +4870,10 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
+      ],
+      "cited_by": [
+        "SEC-37",
+        "SEC-38"
       ]
     },
     {
@@ -1458,6 +4886,10 @@
         "sybil-resistance",
         "collective-decision",
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-06",
+        "BUD-08"
       ]
     },
     {
@@ -1469,7 +4901,8 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -1480,7 +4913,8 @@
       "topics": [
         "sybil-resistance",
         "collective-decision"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -1492,6 +4926,9 @@
         "sybil-resistance",
         "collective-decision",
         "agent-budgets"
+      ],
+      "cited_by": [
+        "BUD-07"
       ]
     },
     {
@@ -1503,7 +4940,8 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -1515,7 +4953,30 @@
         "sybil-resistance",
         "llm-agent-swarms",
         "fork-merge-security"
-      ]
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "yuan-2026-mixed",
+      "path": "library/papers/yuan-2026-mixed.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "zavattari-2026-one",
+      "path": "library/papers/zavattari-2026-one.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1526,6 +4987,13 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SEC-04",
+        "SEC-07",
+        "SEC-46",
+        "SEC-48",
+        "SEC-52"
       ]
     },
     {
@@ -1537,6 +5005,9 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SOC-04"
       ]
     },
     {
@@ -1548,7 +5019,21 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SEC-47"
       ]
+    },
+    {
+      "change": "A",
+      "id": "zhao-2026-care",
+      "path": "library/papers/zhao-2026-care.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "M",
@@ -1559,6 +5044,33 @@
       "topics": [
         "sybil-resistance",
         "agent-budgets"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "M",
+      "id": "zhou-2023-sotopia",
+      "path": "library/papers/zhou-2023-sotopia.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "meta",
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "zhou-2024-is",
+      "path": "library/papers/zhou-2024-is.md",
+      "type": "paper",
+      "read_depth": "full",
+      "topics": [
+        "llm-agent-swarms",
+        "meta"
+      ],
+      "cited_by": [
+        "SIM-01"
       ]
     },
     {
@@ -1570,7 +5082,56 @@
       "topics": [
         "fork-merge-security",
         "llm-agent-swarms"
+      ],
+      "cited_by": [
+        "SEC-08",
+        "SEC-45"
       ]
+    },
+    {
+      "change": "A",
+      "id": "zhou-2025-sotopia-s4",
+      "path": "library/papers/zhou-2025-sotopia-s4.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "zhou-2026-juryprobe",
+      "path": "library/papers/zhou-2026-juryprobe.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "zhu-2025-multiagentbench",
+      "path": "library/papers/zhu-2025-multiagentbench.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "zhu-2026-demystifying",
+      "path": "library/papers/zhu-2026-demystifying.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "llm-agent-swarms"
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1581,6 +5142,11 @@
       "topics": [
         "agent-budgets",
         "sybil-resistance"
+      ],
+      "cited_by": [
+        "BUD-08",
+        "BUD-09",
+        "BUD-18"
       ]
     },
     {
@@ -1592,7 +5158,8 @@
       "topics": [
         "marl-emergence",
         "fork-merge-security"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1603,7 +5170,8 @@
       "topics": [
         "marl-emergence",
         "collective-decision"
-      ]
+      ],
+      "cited_by": []
     },
     {
       "change": "A",
@@ -1614,6 +5182,9 @@
       "topics": [
         "marl-emergence",
         "collective-decision"
+      ],
+      "cited_by": [
+        "RL-03"
       ]
     }
   ]

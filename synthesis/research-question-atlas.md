@@ -1,14 +1,20 @@
 # Research questions for human selection
 
-Owner: dmarz/question-atlas, holding `synthesis-question-atlas`. Written 2026-10-03.
+Owner: dmarz/question-atlas, holding `synthesis-question-atlas-update`. Updated 2026-10-03.
 
 This bank contains **143 candidates supported by 189 distinct source records**, prepared for the team's human review: research questions, tentative predictions and ways to test them across all 14 research areas. **Every item is an unreviewed hunch.** The user explicitly requested hypothesis brainstorming before selecting projects. These working notes do not create formal hypotheses, approve protocols, pass survey gates, or report experimental findings.
 
 **[Read the full candidate bank](../researchers/dmarz/notes/question-atlas/README.md).** The [review browser](../researchers/dmarz/notes/question-atlas/review.html) supports search, topic and feasibility filters, shortlisting, comments, and review export/import. Download/open the HTML locally; GitHub's code view will not execute it. [Structured data](../researchers/dmarz/notes/question-atlas/candidates.json) supports other review tools. The [scope record](../researchers/dmarz/notes/question-atlas/scope.md) states what was inspected and what remains uncertain.
 
+## What changed in this update
+
+New research has expanded the bank and changed several test designs. [The update guide](../researchers/dmarz/notes/question-atlas/update-v2.md) lists the new and revised IDs, maps B1–B5 to budget questions, and records the research cutoff. Use **New in this update**, **Revised in this update** or **Needs review again** in the browser to focus your review. Existing IDs, local decisions and notes are preserved. A changed candidate keeps its previous choice but asks you to review it again; editing notes alone does not clear that flag.
+
+The additions cover shared budgets and truthful metering; false-name allocation and scheduling; containment, reintegration and recovery; dataset validity and evaluator leakage; and the distinction between fresh model generation and replay. The newly revised LLM survey also narrows claims about effective team size, capture, diversity and belief change. These are proposed comparisons, not new empirical findings.
+
 ## What is in the bank
 
-The bank covers collective motion, biological decisions, active matter, physical robot swarms, synchronization and consensus, crowds and traffic, swarm optimization, learned coordination, LLM societies, Sybil resistance, fork-and-merge security, swarm detection, and measurement and research methods.
+The bank covers collective motion, biological decisions, active matter, physical robot swarms, synchronization and consensus, crowds and traffic, swarm optimization, learned coordination, LLM societies, Sybil resistance, fork-and-merge security, swarm detection, measurement and research methods, and agent budgets and resource allocation.
 
 Each entry has a stable ID, a question, a directional candidate hypothesis, a test sketch, comparators, measurements, evidence that would count against it, confounds, closest-prior relationships, and a prerequisite for promotion. Entries link back to the team's original briefs where relevant. The closing section of the full bank maps all sixteen original briefs to candidates; the external-influence direction is also included.
 
@@ -46,7 +52,7 @@ For each shortlisted idea, answer five questions:
 4. **Interpretability:** Would the proposed comparison distinguish the mechanism from a simpler explanation?
 5. **Feasibility:** Is there an accessible environment, independent evaluator, realistic resource budget and a smallest useful study?
 
-Export individual reviews before combining them. The HTML browser saves choices locally, not to a shared team database. Importing a review replaces overlapping candidate choices in that browser, so preserve separate reviewer exports when disagreements matter. Discuss disagreement rather than averaging it into a spurious precise ranking.
+Existing review exports remain importable. Per-candidate fingerprints on new decisions let later versions flag changed content; legacy reviews without fingerprints are flagged on revised cards. The browser and canvas have separate local stores, so export before moving between them. Export individual reviews before combining them. The HTML browser saves choices locally, not to a shared team database. Importing a review replaces overlapping candidate choices in that browser, so preserve separate reviewer exports when disagreements matter. Discuss disagreement rather than averaging it into a spurious precise ranking.
 
 After human selection, audit the few load-bearing methods in full and finish the relevant survey/review work. Then write the formal hypothesis with at least three closest prior entries, a primary outcome, smallest effect worth pursuing, independent sampling unit and uncertainty-aware kill rule. Most cards currently name two or three sources: they are starting anchors, not complete novelty reviews. A noisy estimate near zero is inconclusive, not a refutation. Choose confirmatory sample sizes from a precision or power analysis and keep pilot/tuning cases separate.
 
@@ -61,12 +67,12 @@ Many candidates can share small, transparent test substrates without requiring o
 - Existing particle, robot, traffic and learned-policy environments for physical and MARL questions.
 - A fixed-budget optimizer harness for component, coordinate, topology and noise tests.
 
-These are possible reuse groups, not instructions to start building them. The unmerged simulator survey already reports many candidate environments and some teammate smoke tests. This pass inspected that draft but did not repeat those runs; its broad absence claims and throughput comparisons remain unreviewed. A particular question may need only a tiny reference implementation rather than a new platform. Existing code availability does not establish suitability or license compatibility for the chosen study.
+These are possible reuse groups, not instructions to start building them. The now-merged [simulator survey](../surveys/sim-environments.md) reports many candidate environments and twelve teammate CPU smoke tests. This update incorporates its source records and practical test routes without repeating those runs. The survey remains in progress; its broad absence claims and speed comparisons across different workloads are not established novelty or performance claims. A particular question may need only a tiny reference implementation rather than a new platform. Existing code availability does not establish suitability or license compatibility for the chosen study.
 
-Vishesh's [agent-experiment toolkit](../tooling/agent-experiments/README.md) landed during this pass. Its [integration guide](../tooling/agent-experiments/INTEGRATION.md), manifests, protocol template and offline demonstration are the starting point for shared bookkeeping after selection. The demonstration uses scripted policies; it does not establish an LLM effect or supply a production provider adapter. Reuse these methods rather than duplicating them inside this candidate bank.
+Vishesh's [agent-experiment toolkit](../tooling/agent-experiments/README.md) remains the shared methods starting point. Its [integration guide](../tooling/agent-experiments/INTEGRATION.md), manifests, protocol template and offline demonstration are the starting point for shared bookkeeping after selection. The demonstration uses scripted policies; it does not establish an LLM effect or supply a production provider adapter. Reuse these methods rather than duplicating them inside this candidate bank.
 
 ## Readiness at this snapshot
 
-The LLM-agent survey passes the mechanical gate but has an unresolved **revise** review with specific citation and interpretation corrections. Fork-merge and Sybil surveys remain in progress; their gate and evidence-depth work is not closed by this bank. Other topic catalogues are broad, but most lack completed surveys. The local simulation-environment survey is unfinished and not yet in main at the inspection snapshot.
+The LLM-agent survey passes the mechanical gate and now includes a response to the citation and interpretation corrections. Its existing review is still **revise**, with a new re-review task open; this atlas does not approve that response. Fork-merge and Sybil surveys remain in progress. The contagion scan is now complete, which changes the evidence available for those questions without completing their surveys. The simulation-environment survey is merged and meets mechanical floors but deliberately remains in progress because paper coverage is not saturated. Agent budgets has an open survey task and no completed survey. Other topic catalogues are broad, but most lack completed surveys.
 
 The immediate next action is human selection from the bank. Formal promotion still needs the repository's focused prior-art and review process. No experiment, model-training job, hardware run, deployment or paid simulation was launched in producing this list.
