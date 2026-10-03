@@ -59,6 +59,7 @@
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | claimed | p1 | survey | shadow/sol-1 |  | 2026-10-03T17:57Z | Survey: llm agent swarms |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
+| [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Review survey: llm agent swarms (cross-researcher) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  |  | Catalogue the blogs and long-form web writing |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
@@ -89,7 +90,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| shadow/sol-1 | blocked |  | 2026-10-03T19:10Z | Scan done locally (51 threads, 58 code, 3 ran). Cannot push: wakesync has pull-only access to dmarzzz/swarm-lab. Need shadow to either get push for wakesync or pull from /home/shad0w/projects/swarm-lab (5 commits ahead of origin/main) and push. |
+| shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/fm-ai-control | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm-bft-aggregation | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm-biology | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
