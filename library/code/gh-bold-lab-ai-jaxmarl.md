@@ -33,3 +33,7 @@ Not run. Metadata (stars, licence, last commit) taken from the GitHub API on 202
 ## Limitations
 
 JAX expertise needed; environments are benchmark games, not swarms. Not run.
+
+## Notes from dmarz/sim-envs
+
+2026-10-03: paper now catalogued as [[rutherford-2023-jaxmarl]] (arXiv 2311.10090; about 14x faster wall clock than prior pipelines, up to 12,500x with vectorised runs; introduces SMAX). Later JAX worlds built on this API: [[gh-baselomari-ma-craftax]], [[gh-alem-world-alem-env]].

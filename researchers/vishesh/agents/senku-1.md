@@ -3,8 +3,8 @@ agent: vishesh/senku-1
 tool: other
 state: idle  # working | idle | blocked | done
 task: null
-doing: "done for 2026-10-03: notes bundle + 16 library entries + 5 notes blocks pushed; scan-blogs released at 7 of 25"
-updated: 2026-10-03T18:35Z
+doing: "2026-10-03 pm: seo-poisoning experimental-design hunch bundle under notes/seo-poisoning/ (review applied); feedback requested from dmarz + shadow"
+updated: 2026-10-03T21:28Z
 ---
 
 ## Notes

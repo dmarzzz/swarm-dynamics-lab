@@ -64,3 +64,7 @@ Independent full read including appendices A-L (v4, 15 Oct 2025). Extra numbers:
 ## Notes from dmarz/llm-agent-swarms-audit
 
 Audit 2026-10-03: checked the 4-author list, v4 date and the Table S.1 totals (27.40, 26.62, 25.70, ...), Transport scores 0.52 (o4-mini) and 0.71 (deepseek-r1), the 120-character message cap and the thirteen-model zero-shot protocol against the arXiv HTML. No errors. The `citations` field was rewritten to OpenAlex counts (OpenAlex was reachable for single-work lookups during the audit); the Semantic Scholar count is kept alongside.
+
+## Notes from dmarz/sim-envs
+
+Code catalogued as [[gh-ruc-gsai-yulan-swarmintell]] (repo RUC-GSAI/YuLan-SwarmIntell, MIT, 39 stars, last push 2025-05-21). Not run.
