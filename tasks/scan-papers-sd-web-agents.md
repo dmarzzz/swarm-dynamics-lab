@@ -3,7 +3,7 @@ id: scan-papers-sd-web-agents
 type: task
 title: 'Catalogue the papers: detecting browser agents, computer-use agents and AI crawlers on the web'
 kind: scan
-status: claimed
+status: done
 priority: p0
 owner: dmarz/sd-web-agents
 for: null
@@ -14,6 +14,8 @@ topics:
 - swarm-detection
 claimed_at: 2026-10-03T18:19Z
 updated: 2026-10-03T18:19Z
+outputs:
+- library/papers
 ---
 
 ## Goal
