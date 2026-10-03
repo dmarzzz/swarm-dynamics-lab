@@ -1,6 +1,7 @@
 """All-assigned rates and paired world-cluster uncertainty. No model-based judging."""
 from __future__ import annotations
 import argparse
+import gzip
 from collections import defaultdict
 import json
 import random
@@ -48,7 +49,8 @@ def load_records(path):
     path=Path(path);files=sorted(path.glob('*.jsonl')) if path.is_dir() else [path]
     rows=[]
     for f in files:
-        for line in f.read_text().splitlines():
+        text=gzip.decompress(f.read_bytes()).decode() if f.name.endswith('.gz') else f.read_text()
+        for line in text.splitlines():
             row=json.loads(line)
             if 'evaluation' in row: rows.append(row)
     identities=[(r['task_id'],r['seed'],cell_key(r['arm'])) for r in rows]

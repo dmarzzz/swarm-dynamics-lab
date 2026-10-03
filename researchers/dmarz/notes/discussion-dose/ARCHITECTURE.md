@@ -59,3 +59,7 @@ Each task/exposure acquisition is run once and reused across all dose arms. Shar
 The planned ledger precedes inference. `events.jsonl` is append-only and flushed during calls. Records carry an event-chain hash and code digest; hashes detect modification, not scientific validity. Failures are sanitized to exception classes. Never upload provider headers, endpoint credentials or error bodies. A hard crash leaves missing outcomes in the planned ledger; the hub run must remain failed/stale until reconciled. Do not pretend a partial run has finished.
 
 This implementation is a reusable starting point, not a general workflow engine. Add persistence stores, browser sandboxes, distributed model workers or dependency frameworks only when a new study actually needs them.
+
+## Artifact transport
+
+The hub's current reverse proxy limits each upload to 2 MB. `src/artifacts.py` compresses trace files and splits any larger compressed payload into parts of at most 1,000,000 bytes. `artifact-index.json` records ordered parts, encodings, sizes and SHA-256 hashes. Rejoin parts in order, verify the payload hash, decompress if needed, and verify the raw hash. `analyze.py` can read an intact `.jsonl.gz` directly. `recover_upload.py RUN_ID` repairs existing artifact uploads without reexecuting episodes or changing a failed run's terminal status. Raw local outputs remain unchanged.

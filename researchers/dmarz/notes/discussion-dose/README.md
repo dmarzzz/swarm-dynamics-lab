@@ -102,3 +102,7 @@ No LLM behavioral result has been collected. Scripted smoke outputs validate imp
 ## Analysis
 
 Pending live qualification and later exploratory collection. The first useful result can be a clean ceiling, an invalid-output problem, successful correction, or amplification. Do not read engineering-script agreement as evidence for the hypothesis.
+
+## Artifact transport
+
+The hub's current reverse proxy limits each upload to 2 MB. `src/artifacts.py` compresses trace files and splits any larger compressed payload into parts of at most 1,000,000 bytes. `artifact-index.json` records ordered parts, encodings, sizes and SHA-256 hashes. Rejoin parts in order, verify the payload hash, decompress if needed, and verify the raw hash. `analyze.py` can read an intact `.jsonl.gz` directly. `recover_upload.py RUN_ID` repairs existing artifact uploads without reexecuting episodes or changing a failed run's terminal status. Raw local outputs remain unchanged.

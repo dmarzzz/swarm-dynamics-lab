@@ -25,3 +25,5 @@ Survey/hypothesis acceptance; independent task review; pinned model and budget; 
 ## Amendments
 
 2026-10-03: Initial engineering implementation uses new constraint fixtures inspired by HiddenBench rather than copying native benchmark cases. It guarantees a controlled initial exposure, freezes verification before discussion, and measures private ballots on disposable contexts. These choices narrow the earlier conversational proposal. User explicitly requested deployment and validation first, deferring paid model runs.
+
+2026-10-03: First fleet S0 computation completed 48 scripted episodes, but its raw trace upload exceeded the hub proxy limit. Added deterministic gzip/chunk transport and an artifact-only recovery command. Preserve that failed run and its original outcomes; verify transport separately on new engineering task 6, eight conditions. This is not an outcome-based retry.

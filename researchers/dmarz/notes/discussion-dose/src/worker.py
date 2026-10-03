@@ -8,6 +8,7 @@ from pathlib import Path
 import subprocess
 import time
 from analyze import summarize,contrast
+from artifacts import publish_artifacts
 from providers import Scripted,HTTP
 from sim import arms_for,run_episode
 from tasks import digest
@@ -69,8 +70,7 @@ def main():
             try:
                 summary=execute_bundle(params,out,provider,lambda done,total:run.progress(done,total,episodes=done))
             finally:
-                for name in ('manifest.json','episodes.jsonl','events.jsonl','summary.json'):
-                    if (out/name).exists(): run.artifact(out/name,name)
+                if out.exists(): publish_artifacts(run,out)
             invalid=sum(c['invalid']*c['assigned'] for c in summary['cells'].values())
             run.done(message='Engineering scripted smoke; not LLM evidence' if not provider.scientific else 'Exploratory LLM pilot',
                      episodes=summary['episodes'],invalid_rate=invalid/summary['episodes'],scientific=int(provider.scientific))

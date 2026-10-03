@@ -13,6 +13,7 @@ from sim import Runner,DEFAULT_CFG,arms_for,run_episode,majority,merge_memory,ev
 from providers import Scripted,HTTP,ProviderFailure
 from analyze import summarize,contrast
 from worker import execute_bundle
+from artifacts import prepare_artifacts
 
 class Tests(unittest.TestCase):
     def test_worlds(self):
@@ -127,6 +128,20 @@ class Tests(unittest.TestCase):
             result=execute_bundle(p,path,Scripted());self.assertEqual(result['episodes'],4)
             self.assertEqual(len(json.loads((path/'manifest.json').read_text())['planned_episodes']),4)
             with self.assertRaises(FileExistsError):execute_bundle(p,path,Scripted())
+    def test_compressed_chunked_artifacts(self):
+        import gzip,hashlib
+        with tempfile.TemporaryDirectory() as tmp:
+            p=Path(tmp);payload=json.dumps({'data':list(range(2000))}).encode()
+            (p/'episodes.jsonl').write_bytes(payload)
+            parts=prepare_artifacts(p,limit=300)
+            index=json.loads(parts[-1].read_text())['files'][0]
+            self.assertGreater(len(index['parts']),1)
+            self.assertTrue(all(x.stat().st_size<=300 for x in parts[:-1]))
+            compressed=b''.join((p/'upload'/name).read_bytes() for name in index['parts'])
+            self.assertEqual(gzip.decompress(compressed),payload)
+            self.assertEqual(hashlib.sha256(payload).hexdigest(),index['raw_sha256'])
+            first=[x.read_bytes() for x in parts];second=[x.read_bytes() for x in prepare_artifacts(p,limit=300)]
+            self.assertEqual(first,second)
     def test_http_adapter_and_caps(self):
         requests=[]
         class Handler(BaseHTTPRequestHandler):
