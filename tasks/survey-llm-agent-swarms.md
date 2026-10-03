@@ -3,7 +3,7 @@ id: survey-llm-agent-swarms
 type: task
 title: 'Survey: llm agent swarms'
 kind: survey
-status: claimed
+status: done
 priority: p1
 owner: shadow/sol-1
 created: '2026-10-03'
@@ -13,7 +13,9 @@ depends_on:
 topics:
 - llm-agent-swarms
 claimed_at: 2026-10-03T17:57Z
-updated: 2026-10-03T17:57Z
+updated: 2026-10-03T18:16Z
+outputs:
+- surveys/llm-agent-swarms.md
 ---
 
 ## Goal
