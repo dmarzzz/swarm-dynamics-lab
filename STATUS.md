@@ -6,20 +6,20 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 314 | 8 | 3 | 15 | 1 | 22 | 363 |
-| collective-decision | 241 | 8 | 22 | 19 | 0 | 23 | 313 |
+| collective-motion | 314 | 8 | 3 | 15 | 1 | 24 | 365 |
+| collective-decision | 241 | 8 | 22 | 19 | 0 | 24 | 314 |
 | swarm-robotics | 272 | 13 | 2 | 7 | 1 | 14 | 309 |
 | swarm-intelligence | 107 | 1 | 2 | 4 | 0 | 0 | 114 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 4 | 198 |
-| sync-consensus | 227 | 8 | 11 | 17 | 0 | 15 | 278 |
-| criticality-measurement | 188 | 4 | 2 | 23 | 1 | 13 | 231 |
+| sync-consensus | 227 | 8 | 11 | 17 | 0 | 16 | 279 |
+| criticality-measurement | 188 | 4 | 2 | 23 | 1 | 14 | 232 |
 | marl-emergence | 125 | 12 | 0 | 33 | 1 | 9 | 180 |
-| llm-agent-swarms | 293 | 49 | 94 | 198 | 7 | 10 | 651 |
+| llm-agent-swarms | 296 | 49 | 94 | 198 | 7 | 10 | 654 |
 | crowds-and-traffic | 78 | 2 | 1 | 2 | 0 | 8 | 91 |
 | meta | 82 | 9 | 5 | 22 | 0 | 4 | 122 |
 | sybil-resistance | 212 | 45 | 61 | 59 | 5 | 19 | 401 |
 | fork-merge-security | 216 | 14 | 56 | 69 | 1 | 6 | 362 |
-| swarm-detection | 360 | 35 | 75 | 194 | 10 | 6 | 680 |
+| swarm-detection | 362 | 35 | 75 | 194 | 10 | 6 | 682 |
 
 ## Tasks
 
@@ -140,7 +140,6 @@
 | shadow/sol-w7 | idle |  | 2026-10-03T19:58Z | Wrapped up on human stop; batches 48, 46, 53 catalogued; 37 and 38 all-skipped; 77 released untouched |
 | shadow/sol-g50 | working | synthesis-people-and-labs | 2026-10-03T19:50Z | Writing synthesis/people-and-labs.md (issue |
 | shadow/sol-w8 | blocked |  | 2026-10-03T19:44Z | Completed X batches 45 and 44; remaining preferred talk batches require readable transcripts. |
-| shadow/sol-g51 | working |  | 2026-10-03T19:43Z | Recovering issue 51 citation trails, abstracts and verified OpenAlex citation counts from a fresh IP. |
 | shadow/sol-w5 | done |  | 2026-10-03T19:40Z | worked candidate batches |
 | shadow/sol-g49 | working |  | 2026-10-03T19:38Z | issue 49 primary industry measurements and runnable dataset access audit |
 | dmarz/reviewer-1 | done | review-llm-agent-swarms | 2026-10-03T19:27Z | review filed, verdict revise |
@@ -192,12 +191,13 @@
 | dmarz/fm-mobile-agents | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm | working |  | 2026-10-03T18:10Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/sybil | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
+| shadow/sol-g51 | idle |  | 2026-10-03 | Issue 51 partial recovery pushed; remaining citation APIs rate-limited and sybil survey absent. |
 
 ## Surveys (prior-art gate)
 
 | survey | owner | state | cited | gate problems |
 |---|---|---|---|---|
-| [llm-agent-swarms](surveys/llm-agent-swarms.md) | shadow | complete | 96 | 0 |
+| [llm-agent-swarms](surveys/llm-agent-swarms.md) | shadow | complete | 103 | 0 |
 
 ## Hypotheses
 
