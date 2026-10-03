@@ -5,7 +5,7 @@ import json
 import time
 from collections import Counter
 from tasks import allocation, digest, document, independent_answer, make_world, rng_for, task_view
-from providers import Scripted
+from providers import Scripted,ProviderFailure
 
 VERSION='discussion-dose-v1'
 DEFAULT_CFG={'n_agents':3,'rounds':[0,1,3,6],'post_words':150,'verification_reads':3,'include_private_control':False}
@@ -73,7 +73,8 @@ class Runner:
             return validate_response(raw,phase,context,self.cfg)
         except Exception as e:
             # Only exception class is public. Provider/body/URL errors can contain secrets.
-            self.emit('call_failure',agent=agent,phase=phase,round=round_no,error=type(e).__name__)
+            self.emit('call_failure',agent=agent,phase=phase,round=round_no,error=type(e).__name__,
+                      provider_reason=e.public_reason if isinstance(e,ProviderFailure) else None)
             raise
     def acquire(self,world,seed,attack):
         n=self.cfg['n_agents']; assignments,exposed=allocation(world,n,seed)

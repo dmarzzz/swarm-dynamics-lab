@@ -7,7 +7,11 @@ import urllib.error
 import urllib.request
 from tasks import feasible
 
-class ProviderFailure(Exception): pass
+class ProviderFailure(Exception):
+    def __init__(self,message,public_reason=None):
+        super().__init__(message)
+        self.public_reason=public_reason
+
 
 class Scripted:
     name = 'scripted-canonical-reader-v1'
@@ -149,6 +153,13 @@ class Anthropic(HTTP):
             blocks=response['content']
             if len(blocks)!=1 or blocks[0].get('type')!='text': raise ProviderFailure('unexpected response blocks')
             return json.loads(blocks[0]['text'])
-        except urllib.error.HTTPError as e: raise ProviderFailure(f'provider HTTP {e.code}') from None
+        except urllib.error.HTTPError as e:
+            # Map known provider categories; never persist arbitrary error bodies or headers.
+            reason='provider_http_'+str(e.code)
+            try:
+                error=json.loads(e.read(16384)).get('error',{})
+                if e.code==400 and 'credit balance is too low' in error.get('message','').lower(): reason='provider_credit_balance_low'
+            except Exception: pass
+            raise ProviderFailure(f'provider HTTP {e.code}',public_reason=reason) from None
         except ProviderFailure: raise
         except Exception as e: raise ProviderFailure('provider '+type(e).__name__) from None

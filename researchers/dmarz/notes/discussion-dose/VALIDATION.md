@@ -32,3 +32,10 @@ The upload issue was a transport failure, not a policy failure. It is recorded i
 ## Remaining scientific qualification
 
 Paid model runs are deferred at the user's request. The compatible HTTP adapter has only been tested against a local mock server. A real endpoint/model, source/model pricing and run limits must be pinned and qualified before S1. The independent task-review request remains [open](../../../../tasks/review-discussion-dose.md). Formal hypothesis acceptance and confirmatory S2 remain pending; this deployment is an exploratory environment.
+
+
+## First native Anthropic attempt, 2026-10-03
+
+Pinned runtime `c53cb78b9ca7f23af39578a839296cc6a0e9097e` passed 18 offline tests locally and on `sim-test-01`. Model-list authentication succeeded and confirmed Haiku 4.5 availability. Run `discussion-dose/775e3cd6` assigned all eight preflight episodes (world 6, seed 1). Both acquisition calls failed before any model response, making all eight episodes invalid. A separate minimal generation diagnostic returned HTTP 400: Anthropic API credit balance too low. No behavioral conclusion can be drawn; the reported zero correctness/attack rates are invalid-outcome bookkeeping, not model performance. No generated tokens or billed usage were returned. S0 qualification was not queued.
+
+The worker originally marked process completion as done even with 100% invalid outcomes. A corrective fail event now states the billing blocker; the earlier event and all artifacts remain. The subsequent revision makes qualification failures explicit automatically, records safe provider failure categories, and tests the billing-error path (19 offline tests). `haiku45-preflight-v2` is a declared engineering restart after account funding; it does not replace v1 and must not launch while the billing blocker remains. No task, prompt, model or scoring rule changed based on behavioral outcomes, because there were none.

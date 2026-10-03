@@ -170,6 +170,18 @@ class Tests(unittest.TestCase):
             self.assertEqual(model.calls,3)
             with self.assertRaisesRegex(ProviderFailure,'call budget'): model.complete({'phase':'parent','context':{}})
 
+    def test_anthropic_billing_error_is_safe(self):
+        from io import BytesIO
+        import urllib.error
+        with patch.dict('os.environ',{'SWARM_MODEL_API_KEY':'test-secret'}):
+            model=Anthropic(model='mock',max_cost_usd=1,input_usd_per_million=1,output_usd_per_million=5)
+            body=json.dumps({'error':{'message':'Your credit balance is too low test-secret'}}).encode()
+            error=urllib.error.HTTPError('https://api.anthropic.com',400,'test-secret',{},BytesIO(body))
+            with patch('urllib.request.urlopen',side_effect=error):
+                with self.assertRaises(ProviderFailure) as raised: model.complete({'phase':'parent','context':{}})
+            self.assertEqual(raised.exception.public_reason,'provider_credit_balance_low')
+            self.assertNotIn('test-secret',str(raised.exception))
+
     def test_pilot_budget_covers_complete_plan(self):
         from pilot import plan
         for smoke,worlds in ((True,1),(False,6)):
