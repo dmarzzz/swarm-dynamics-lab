@@ -7,19 +7,19 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 314 | 8 | 3 | 15 | 2 | 40 | 382 |
-| collective-decision | 281 | 8 | 24 | 19 | 0 | 35 | 367 |
+| collective-decision | 285 | 8 | 24 | 19 | 0 | 35 | 371 |
 | swarm-robotics | 284 | 13 | 2 | 7 | 1 | 24 | 331 |
 | swarm-intelligence | 113 | 1 | 2 | 4 | 0 | 3 | 123 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
-| sync-consensus | 246 | 13 | 11 | 17 | 0 | 28 | 315 |
+| sync-consensus | 247 | 13 | 11 | 17 | 0 | 28 | 316 |
 | criticality-measurement | 190 | 4 | 2 | 23 | 2 | 22 | 243 |
 | marl-emergence | 135 | 13 | 1 | 33 | 1 | 13 | 196 |
 | llm-agent-swarms | 407 | 59 | 99 | 197 | 22 | 14 | 798 |
 | crowds-and-traffic | 80 | 2 | 1 | 2 | 1 | 8 | 94 |
 | meta | 113 | 9 | 5 | 22 | 1 | 4 | 154 |
-| sybil-resistance | 289 | 48 | 62 | 57 | 7 | 22 | 485 |
+| sybil-resistance | 297 | 48 | 62 | 57 | 7 | 22 | 493 |
 | fork-merge-security | 353 | 44 | 61 | 69 | 1 | 13 | 541 |
-| swarm-detection | 372 | 35 | 79 | 193 | 26 | 11 | 716 |
+| swarm-detection | 373 | 35 | 79 | 193 | 26 | 11 | 717 |
 
 ## Tasks
 
@@ -35,13 +35,13 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
+| [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
-| [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
+| [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
 | [scan-papers-fm-ai-control](tasks/scan-papers-fm-ai-control.md) | claimed | p1 | scan | dmarz/fm-ai-control |  | 2026-10-03T18:12Z | Catalogue the papers: AI control, sub-agent delegation and self-replication |
 | [scan-papers-fm-biology](tasks/scan-papers-fm-biology.md) | claimed | p1 | scan | dmarz/fm-biology |  | 2026-10-03T18:12Z | Catalogue the papers: fission-fusion and fusion parasitism in biology |
 | [scan-papers-fm-mobile-agents](tasks/scan-papers-fm-mobile-agents.md) | claimed | p1 | scan | dmarz/fm-mobile-agents |  | 2026-10-03T18:12Z | Catalogue the papers: mobile-agent security and Byzantine state merge |
-| [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
+| [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
@@ -105,11 +105,10 @@
 
 ## Candidate batches
 
-5 free, 1 claimed, 62 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+5 free, 0 claimed, 63 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#63](https://github.com/dmarzzz/swarm-lab/issues/63) | claimed | 2026-10-03T20:58Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-07) |
 | [#64](https://github.com/dmarzzz/swarm-lab/issues/64) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-08) |
 | [#65](https://github.com/dmarzzz/swarm-lab/issues/65) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-09) |
 | [#66](https://github.com/dmarzzz/swarm-lab/issues/66) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-10) |
