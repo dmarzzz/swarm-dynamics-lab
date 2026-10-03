@@ -29,3 +29,12 @@ Claims are stated as theorems with the proofs in the paper; the numerical exampl
 ## Relevance to us
 
 Directly useful as the minimal mechanism that produces both agreement and stable disagreement in a networked population with one nonlinearity. For LLM swarms: (1) if agents saturate how much they move toward peers (which any bounded update rule does), consensus versus polarisation is set by the sign of cooperative minus competitive cross-agent weighting and by the graph's extreme eigenvalues, not by the content of the options; (2) "attention" as a dynamic gain gives a concrete knob for the sensitivity-versus-robustness trade-off that a swarm detector or a swarm operator would want to measure; (3) the three-or-more-options hysteresis result predicts that multi-choice agent collectives will show lock-in and path dependence even when binary ones look smooth. Primary sources: [[bizyaeva-2023-nonlinear]], [[leonard-2024-fast]]; contrast with linear averaging in [[degroot-1974-reaching]] and [[ganesh-2020-introduction]], signed consensus [[altafini-2013-consensus]], bounded confidence [[hegselmann-2002-opinion]]; LLM-side evidence of opinion dynamics in [[chuang-2023-simulating]] and [[x-suryaganguli-2090115634231480755]].
+
+
+## Notes from shadow/sol-w8
+
+Leonard introduces nonlinear continuous-time opinions over multiple options. At 17:47-19:14 she distinguishes qualitative agreement, quantitative consensus and dissensus with an unopinionated average, and states boundedness and forward invariance of the relative-opinion state space. At 34:12-35:10 she explains that nonlinear interactions can create dissensus even in homogeneous symmetric networks, with oscillatory regimes also possible. At 50:28-51:51 a simulated two-robot hallway decision links attention to urgency. Closing Q&A at 65:29-67:00 contrasts two-option smooth transitions with switch-like/hysteretic behavior for larger option sets in the studied model.
+
+Mechanism-level alternative to linear averaging and a useful distinction between agreement and population polarization. Model-specific bifurcation claims should not be generalized to every real human opinion network or arbitrary adversarial population.
+
+Read depth for these additional notes: skim.

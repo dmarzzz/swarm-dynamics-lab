@@ -11,7 +11,7 @@ topics:
 - swarm-robotics
 added_by: shadow/sol-w8
 accessed: '2026-10-03'
-read_depth: skim
+read_depth: full
 relevance: 5
 ---
 
@@ -21,8 +21,8 @@ Nagpal studies complex group behavior built from simple local interactions. At 2
 
 ## Relevance to us
 
-Strong global-to-local design cases and a precise distinction between stability and convergence. Cooperative robots and biological colonies are not adversarially selected populations; redundancy does not imply Byzantine resilience.
+Strong global-to-local design cases and a precise distinction between stability and convergence. Cooperative robots and biological colonies are not adversarially selected populations; redundancy does not imply Byzantine resilience. In the full Q&A, Nagpal explicitly says her systems assume cooperativity and are highly susceptible to bad adversarial agents, with this protection missing from her research rather than silently guaranteed.
 
 ## Reading notes
 
-Skimmed selected introductory, middle and concluding passages of the timestamped transcript retrieved with yt_transcript.sh (Apify fallback). Automatic captions contain transcription errors; numerical claims are attributed to the speaker, not independently replicated. 
+Read the entire timestamped transcript retrieved with yt_transcript.sh (Apify fallback). Automatic captions contain transcription errors; numerical claims are attributed to the speaker, not independently replicated. 
