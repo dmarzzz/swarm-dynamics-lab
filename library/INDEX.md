@@ -2,9 +2,9 @@
 
 # Library index
 
-3147 entries.
+3154 entries.
 
-## Papers (1957)
+## Papers (1964)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -341,6 +341,7 @@
 | [alert-2022-active](papers/alert-2022-active.md) | Active Turbulence | 2022 | 4 | abstract | active-matter, collective-motion | dmarz/active-matter |
 | [algesheimer-2001-cryptographic](papers/algesheimer-2001-cryptographic.md) | Cryptographic Security for Mobile Code | 2001 | 4 | skim | fork-merge-security | dmarz/fm-mobile-agents |
 | [alistarh-2018-byzantine](papers/alistarh-2018-byzantine.md) | Byzantine Stochastic Gradient Descent | 2018 | 4 | abstract | fork-merge-security, sync-consensus | dmarz/fm-bft-aggregation |
+| [alkalay-houlihan-2014-false-name](papers/alkalay-houlihan-2014-false-name.md) | False-Name Bidding and Economic Efficiency in Combinatorial Auctions | 2014 | 4 | skim | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [alonso-llanes-2024-single](papers/alonso-llanes-2024-single.md) | Single file motion of robot swarms | 2024 | 4 | abstract | swarm-robotics, crowds-and-traffic, active-matter | dmarz/swarm-robotics-recent |
 | [alvisi-2013-sok](papers/alvisi-2013-sok.md) | SoK: The Evolution of Sybil Defense via Social Networks | 2013 | 4 | skim | sybil-resistance, meta | dmarz/sybil-foundations |
 | [amayuelas-2025-self](papers/amayuelas-2025-self.md) | Self-Resource Allocation in Multi-Agent LLM Systems | 2025 | 4 | full | agent-budgets, llm-agent-swarms | dmarz/budget-b |
@@ -897,6 +898,7 @@
 | [ren-2007-information](papers/ren-2007-information.md) | Information consensus in multivehicle cooperative control | 2007 | 4 | abstract | sync-consensus, swarm-robotics | dmarz/sync-consensus |
 | [rendueles-2015-rapid](papers/rendueles-2015-rapid.md) | Rapid and widespread de novo evolution of kin discrimination | 2015 | 4 | abstract | fork-merge-security, collective-decision | dmarz/fm-biology |
 | [renganathan-2017-spoof](papers/renganathan-2017-spoof.md) | Spoof resilient coordination for distributed multi-robot systems | 2017 | 4 | abstract | sybil-resistance, sync-consensus, swarm-robotics | dmarz/sybil-robotics |
+| [renganathan-2022-spoof](papers/renganathan-2022-spoof.md) | Spoof Resilient Coordination in Distributed and Robust Robotic Networks | 2022 | 4 | abstract | sybil-resistance, sync-consensus, swarm-robotics | shadow/sol-p1 |
 | [resnick-2009-sybilproof](papers/resnick-2009-sybilproof.md) | Sybilproof transitive trust protocols | 2009 | 4 | abstract | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [reynolds-2026-evoflock](papers/reynolds-2026-evoflock.md) | EvoFlock: evolved inverse design of multi-agent motion | 2026 | 4 | abstract | collective-motion, swarm-intelligence | dmarz/collective-motion-recent |
 | [rezabek-2025-proof](papers/rezabek-2025-proof.md) | Proof of Cloud: Data Center Execution Assurance for Confidential VMs | 2025 | 4 | abstract | sybil-resistance | dmarz/sybil-flashbots |
@@ -1374,6 +1376,7 @@
 | [ito-2024-selective](papers/ito-2024-selective.md) | Selective decision-making and collective behavior of fish by the motion of visual attention | 2024 | 3 | abstract | collective-motion, collective-decision | dmarz/collective-motion-recent |
 | [itoh-2024-fish](papers/itoh-2024-fish.md) | Fish Tracking Challenge 2024: A Multi-Object Tracking Competition with Sweetfish Schooling Data | 2024 | 3 | abstract | collective-motion, meta | dmarz/collective-motion-recent |
 | [ivanov-2022-collective](papers/ivanov-2022-collective.md) | Collective Adaptation in Multi-Agent Systems: How Predator Confusion Shapes Swarm-Like Behaviors | 2022 | 3 | skim | marl-emergence, collective-motion | dmarz/marl-emergence-audit |
+| [iwasaki-2003-robust](papers/iwasaki-2003-robust.md) | A robust open ascending-price multi-unit auction protocol against false-name bids | 2003 | 3 | abstract | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [jang-2026-dissecting](papers/jang-2026-dissecting.md) | Dissecting Mellowtel: Bandwidth-as-a-Service Through Browser Extensions | 2026 | 3 | abstract | swarm-detection | shadow/sol-g51 |
 | [jansen-2022-co-opting](papers/jansen-2022-co-opting.md) | Co-opting Linux Processes for High-Performance Network Simulation | 2022 | 3 | abstract | meta | dmarz/sim-envs |
 | [jaques-2019-social](papers/jaques-2019-social.md) | Social Influence as Intrinsic Motivation for Multi-Agent Deep Reinforcement Learning | 2019 | 3 | abstract | marl-emergence, criticality-measurement | dmarz/marl-emergence |
@@ -1473,6 +1476,7 @@
 | [luo-2026-resisting](papers/luo-2026-resisting.md) | Resisting Manipulative Bots in Meme Coin Copy Trading: A Multi-Agent Approach with Chain-of-Thought Reasoning | 2026 | 3 | abstract | swarm-detection, llm-agent-swarms | dmarz/sd-onchain |
 | [luz-de-araujo-2025-persistent](papers/luz-de-araujo-2025-persistent.md) | Persistent Personas? Role-Playing, Instruction Following, and Safety in Extended Interactions | 2025 | 3 | abstract | fork-merge-security, llm-agent-swarms | dmarz/fm-identity-hijack |
 | [ma-2026-catching](papers/ma-2026-catching.md) | Catching the Infection Before It Spreads: Foresight-Guided Defense in Multi-Agent Systems | 2026 | 3 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm |
+| [maccari-2009-avoiding](papers/maccari-2009-avoiding.md) | Avoiding Eclipse Attacks on Kad/Kademlia: An Identity Based Approach | 2009 | 3 | skim | sybil-resistance | shadow/sol-p1 |
 | [macko-2025-beyond](papers/macko-2025-beyond.md) | Beyond speculation: Measuring the growing presence of LLM-generated texts in multilingual disinformation | 2025 | 3 | abstract | swarm-detection | dmarz/sd-ai-content |
 | [madgwick-2019-greenbeard](papers/madgwick-2019-greenbeard.md) | Greenbeard Genes: Theory and Reality | 2019 | 3 | abstract | fork-merge-security, collective-decision, sybil-resistance | dmarz/fm-biology |
 | [magelinski-2021-synchronized](papers/magelinski-2021-synchronized.md) | A Synchronized Action Framework for Responsible Detection of Coordination on Social Media | 2021 | 3 | abstract | swarm-detection | dmarz/sd-coordination |
@@ -1653,6 +1657,7 @@
 | [sueur-2012-from](papers/sueur-2012-from.md) | From Social Network (Centralized vs. Decentralized) to Collective Decision-Making (Unshared vs. Shared Consensus) | 2012 | 3 | skim | collective-decision, collective-motion | dmarz/collective-decision-audit |
 | [sukhbaatar-2016-learning](papers/sukhbaatar-2016-learning.md) | Learning Multiagent Communication with Backpropagation | 2016 | 3 | abstract | marl-emergence | dmarz/marl-emergence |
 | [sumpter-2010-collective](papers/sumpter-2010-collective.md) | Collective Animal Behavior | 2010 | 3 | abstract | collective-motion, collective-decision | dmarz/collective-motion |
+| [sun-2007-ddos](papers/sun-2007-ddos.md) | DDoS Attacks by Subverting Membership Management in P2P Systems | 2007 | 3 | abstract | sybil-resistance | shadow/sol-p1 |
 | [sun-2014-information](papers/sun-2014-information.md) | Information Transfer in Swarms with Leaders | 2014 | 3 | abstract | criticality-measurement, collective-motion, collective-decision | dmarz/criticality-measurement |
 | [sun-2026-mapping](papers/sun-2026-mapping.md) | Mapping the Reddit Bot Ecosystem: Taxonomy and Evolution | 2026 | 3 | abstract | swarm-detection | dmarz/sd-bots |
 | [suyama-2005-strategy](papers/suyama-2005-strategy.md) | Strategy/False-name Proof Protocols for Combinatorial Multi-Attribute Procurement Auction | 2005 | 3 | abstract | sybil-resistance, collective-decision | shadow/sol-p1 |
@@ -1840,6 +1845,7 @@
 | [gressel-2025-love](papers/gressel-2025-love.md) | Love, Lies, and Language Models: Investigating AI's Role in Romance-Baiting Scams | 2025 | 2 | abstract | swarm-detection | shadow/sol-g51 |
 | [hanzlik-2021-with](papers/hanzlik-2021-with.md) | With a Little Help from My Friends | 2021 | 2 | skim | sybil-resistance | shadow/sol-p1 |
 | [harrigan-2018-airdrops](papers/harrigan-2018-airdrops.md) | Airdrops and Privacy: A Case Study in Cross-Blockchain Analysis | 2018 | 2 | abstract | swarm-detection, sybil-resistance | dmarz/sd-onchain |
+| [hashmi-2010-towards](papers/hashmi-2010-towards.md) | Towards Sybil Resistant Authentication in Mobile Ad Hoc Networks | 2010 | 2 | abstract | sybil-resistance | shadow/sol-p1 |
 | [he-2024-emerged](papers/he-2024-emerged.md) | The Emerged Security and Privacy of LLM Agent: A Survey with Case Studies | 2024 | 2 | abstract | fork-merge-security, meta | dmarz/fm-memory-injection |
 | [hegazy-2024-diversity](papers/hegazy-2024-diversity.md) | Diversity of Thought Elicits Stronger Reasoning Capabilities in Multi-Agent Debate Frameworks | 2024 | 2 | abstract | llm-agent-swarms | shadow/sol-1 |
 | [hosain-2025-web](papers/hosain-2025-web.md) | Web Technologies Security in the AI Era: A Survey of CDN-Enhanced Defenses | 2025 | 2 | abstract | swarm-detection | dmarz/sd-web-agents |
@@ -1940,6 +1946,7 @@
 | [yu-2024-memes](papers/yu-2024-memes.md) | Memes, Markets, and Machines: The Evolution of On Chain Autonomy through Hyperstition | 2024 | 2 | abstract | swarm-detection, llm-agent-swarms | dmarz/sd-onchain |
 | [yu-2024-overview](papers/yu-2024-overview.md) | An Overview of Swarm Coordinated Control | 2024 | 2 | abstract | swarm-robotics, sync-consensus | dmarz/swarm-robotics-audit |
 | [yu-2024-paper](papers/yu-2024-paper.md) | Is Your Paper Being Reviewed by an LLM? Investigating AI Text Detectability in Peer Review | 2024 | 2 | abstract | swarm-detection | shadow/sol-g51 |
+| [yves-christian-2018-total](papers/yves-christian-2018-total.md) | Total Eclipse: How To Completely Isolate a Bitcoin Peer | 2018 | 2 | abstract | sybil-resistance | shadow/sol-p1 |
 | [zaman-2025-social](papers/zaman-2025-social.md) | Social Media Information Operations | 2025 | 2 | abstract | swarm-detection | dmarz/sd-bots |
 | [zhang-2009-promoting](papers/zhang-2009-promoting.md) | Promoting Honesty in Electronic Marketplaces: Combining Trust Modeling and Incentive Mechanism Design | 2009 | 2 | skim | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [zhang-2011-survey](papers/zhang-2011-survey.md) | A Survey on Trust Management for VANETs | 2011 | 2 | abstract | sybil-resistance, crowds-and-traffic | shadow/sol-p1 |
