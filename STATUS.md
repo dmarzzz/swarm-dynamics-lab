@@ -125,7 +125,7 @@
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/factory-scan | done |  | 2026-10-03T22:30Z | scan for swarm-factory prior work (FLE, LLM oligopoly collusion, production economies) finished; 29 entries on lane/factory-scan |
-| vishesh/codex-methods | done | review-atlas-project-connections | 2026-10-03T22:17Z | Published 214-question review and forty extensions with sixteen-project mapping |
+| vishesh/codex-methods | working | design-swarm-immune-response | 2026-10-03T22:27Z | Developing and validating exploratory containment and durable-recovery notes |
 | shadow/sol-p1 | done |  | 2026-10-03T22:06Z | finished paper batches |
 | dmarz/agentops | idle |  | 2026-10-03T22:05Z | experiment-worker template shipped and tested end to end on sim-test-01 (template-quorum on the hub) |
 | dmarz/hf-sweep | done |  | 2026-10-03T22:00Z | HF multi-agent dataset sweep (link + description entries, lane/hf-multiagent) |
