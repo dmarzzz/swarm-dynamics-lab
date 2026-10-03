@@ -1,0 +1,19 @@
+# OpenAlex citation chasing for issue #51 (rate-limited lanes). topic<TAB>fwd|back|both<TAB>seed<TAB>keywords
+# Run from a box with a fresh IP: python3 scripts/collect.py openalex --seeds candidates/queries/openalex-seeds-2026-10-03.tsv --by dmarz/research-01
+# --- swarm-detection: honeypots
+swarm-detection	fwd	reworr-2024-llm	agent,llm,honeypot,autonomous,ai
+swarm-detection	fwd	pasquini-2024-hacking	agent,llm,honeypot,prompt injection,defen
+swarm-detection	fwd	ayzenshteyn-2025-cloak	agent,llm,honeypot,deception,web
+# --- swarm-detection: attribution
+swarm-detection	fwd	white-2026-black	fingerprint,attribution,identify,model,agent
+swarm-detection	fwd	LLMmap: Fingerprinting For Large Language Models	fingerprint,attribution,identify,model
+# --- swarm-detection: code-data seeds
+swarm-detection	both	arxiv:2410.13919	bot,detect,coordinat,llm,agent
+swarm-detection	both	arxiv:2603.00646	bot,detect,coordinat,llm,agent,moltbook
+swarm-detection	fwd	yang-2023-anatomy	bot,botnet,detect,llm,coordinat
+# --- sybil-resistance: seminal works (forward + backward, keyword-filtered; Douceur has thousands of citers)
+sybil-resistance	fwd	douceur-2002-sybil	agent,llm,swarm,multi-agent,robot,proof of personhood,language model
+sybil-resistance	both	yokoo-2004-effect	sybil,false-name,agent,mechanism
+sybil-resistance	fwd	singh-2006-eclipse	sybil,eclipse,agent,gossip,swarm
+sybil-resistance	fwd	davidson-2018-privacy	sybil,rate limit,anonymous credential,agent,bot
+sybil-resistance	both	gil-2015-guaranteeing	sybil,spoof,robot,swarm,multi-agent,consensus

@@ -13,6 +13,7 @@ turns each batch into a claimable GitHub issue. See PIPELINE.md.
   python3 scripts/collect.py links --by <agent-id>                     outbound links in collected posts -> blog candidates
   python3 scripts/collect.py seed --urls <file> --topic <slug> --by <agent-id> [--source blog]   hand-fed URLs
   python3 scripts/collect.py batch --by <agent-id> [--size 10] [--min-score 1]
+  python3 scripts/collect.py openalex --seeds <file> --by <agent-id> [--max 600] [--refs 'refs/remotes/origin/lane/*']
   python3 scripts/collect.py status
 
 Query file for x-search: one query per line, `<topic-slug>\t<X search query>`; blank lines and # comments ignored.
@@ -604,6 +605,185 @@ def cmd_seed(a):
     return 0
 
 
+# ------------------------------------------------------------------------------------------------ openalex
+OA = "https://api.openalex.org"
+
+
+def _title_key(t: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", (t or "").lower()).strip()[:120]
+
+
+def known_papers(refs: list[str]) -> tuple[set[str], set[str], dict[str, dict]]:
+    """dois, normalised titles and {library id: frontmatter} for library/papers in the working tree plus each git
+    ref (e.g. origin/lane/*), so unmerged lanes count as already catalogued."""
+    import subprocess
+    dois, titles, byid = set(), set(), {}
+
+    def take(lid: str, text: str):
+        fm = {}
+        for k in ("doi", "url", "title"):
+            m = re.search(rf"^{k}:\s*(.+)$", text, re.M)
+            if m:
+                fm[k] = m.group(1).strip().strip("'\"")
+        if fm.get("doi") and fm["doi"] != "null":
+            dois.add(fm["doi"].lower())
+        if fm.get("title"):
+            titles.add(_title_key(fm["title"]))
+        byid.setdefault(lid, fm)
+
+    for p in (ROOT / "library" / "papers").glob("*.md"):
+        take(p.stem, p.read_text(encoding="utf-8", errors="replace")[:3000])
+    for ref in refs:
+        r = subprocess.run(["git", "-C", str(ROOT), "grep", "-h", "--no-color", "-E", "-e", "^(doi|url|title):",
+                            "-e", "^id:", ref, "--", "library/papers"], capture_output=True, text=True)
+        names = subprocess.run(["git", "-C", str(ROOT), "ls-tree", "--name-only", f"{ref}:library/papers"],
+                               capture_output=True, text=True).stdout.split()
+        for line in r.stdout.splitlines():
+            k, _, v = line.partition(":")
+            v = v.strip().strip("'\"")
+            if k == "doi" and v and v != "null":
+                dois.add(v.lower())
+            elif k == "title":
+                titles.add(_title_key(v))
+        for n in names:  # resolve seed ids from lanes lazily, below
+            byid.setdefault(n.removesuffix(".md"), {"_ref": ref})
+    return dois, titles, byid
+
+
+def _lib_fm(lid: str, byid: dict) -> dict:
+    import subprocess
+    fm = byid.get(lid) or {}
+    if fm.get("_ref"):
+        text = subprocess.run(["git", "-C", str(ROOT), "show", f"{fm['_ref']}:library/papers/{lid}.md"],
+                              capture_output=True, text=True).stdout[:3000]
+        fm = {}
+        for k in ("doi", "url", "title"):
+            m = re.search(rf"^{k}:\s*(.+)$", text, re.M)
+            if m:
+                fm[k] = m.group(1).strip().strip("'\"")
+    return fm
+
+
+def oa_get(path: str, params: dict) -> dict:
+    if os.environ.get("OPENALEX_API_KEY"):
+        params = {**params, "api_key": os.environ["OPENALEX_API_KEY"]}
+    for attempt in range(5):
+        d, _ = http(f"{OA}{path}?{urllib.parse.urlencode(params)}", headers={"User-Agent": "swarm-lab-collect/1"})
+        if d.get("error") in (429, 503):
+            time.sleep(5 * (attempt + 1))
+            continue
+        time.sleep(0.15)
+        return d
+    return d
+
+
+def oa_resolve(seed: str, byid: dict) -> dict | None:
+    """seed = a library id, doi:<doi>, arxiv:<id>, W<openalex id> or a title."""
+    s = seed.strip()
+    if re.fullmatch(r"W\d+", s):
+        return oa_get(f"/works/{s}", {})
+    fm = _lib_fm(s, byid) if re.fullmatch(r"[a-z0-9-]+-\d{4}-[a-z0-9-]+", s) else {}
+    doi = s[4:] if s.startswith("doi:") else (fm.get("doi") if fm.get("doi") not in (None, "null") else None)
+    arx = s[6:] if s.startswith("arxiv:") else None
+    if not arx and fm.get("url"):
+        m = re.search(r"arxiv\.org/(?:abs|pdf|html)/([0-9]{4}\.[0-9]{4,5})", fm["url"])
+        arx = m.group(1) if m else None
+    for cand in ([f"doi:{doi}"] if doi else []) + ([f"doi:10.48550/arxiv.{arx}"] if arx else []):
+        d = oa_get(f"/works/{cand}", {})
+        if d.get("id"):
+            return d
+    title = fm.get("title") or (s if " " in s else None)
+    if title:
+        d = oa_get("/works", {"search": title, "per-page": 1})
+        res = d.get("results") or []
+        if res and _title_key(res[0].get("title"))[:60] == _title_key(title)[:60]:
+            return res[0]
+    return None
+
+
+def oa_abstract(w: dict) -> str:
+    inv = w.get("abstract_inverted_index") or {}
+    pos = sorted((i, word) for word, idx in inv.items() for i in idx)
+    return " ".join(word for _, word in pos)
+
+
+def oa_row(w: dict, topic: str, query: str, by: str, kws: list[str]) -> dict:
+    abstract = oa_abstract(w)
+    ids = w.get("ids") or {}
+    loc = (w.get("primary_location") or {}).get("landing_page_url") or ""
+    arx = next((l.get("landing_page_url") for l in w.get("locations") or [] if "arxiv.org" in (l.get("landing_page_url") or "")), None)
+    url = arx or (ids.get("doi") or loc or w["id"])
+    text = f"{w.get('title') or ''} {abstract}".lower()
+    hits = sum(1 for k in (kws or TOPIC_KEYWORDS.get(topic, [])) if k in text)
+    year = w.get("publication_year") or 0
+    sc = min(3, hits) + (1 if (w.get("cited_by_count") or 0) >= 20 else 0) + (1 if year >= 2024 else 0)
+    return {"id": cand_id("paper", url), "source": "paper", "url": url, "title": w.get("title") or "",
+            "text": abstract[:1500], "author": ", ".join(a["author"]["display_name"] for a in (w.get("authorships") or [])[:4]),
+            "date": w.get("publication_date") or str(year), "topic": topic, "likes": w.get("cited_by_count") or 0,
+            "doi": (w.get("doi") or "").replace("https://doi.org/", "") or None, "openalex": w["id"],
+            "venue": ((w.get("primary_location") or {}).get("source") or {}).get("display_name"),
+            "links": [], "found_by": by, "query": query, "collected": now(), "seed_score": sc if hits else 0}
+
+
+def cmd_openalex(a):
+    """--seeds file: `<topic><TAB><fwd|back|both><TAB><seed>[<TAB>kw1,kw2]` per line. Seed = library id (resolved
+    from main or any --refs lane), doi:..., arxiv:..., W123 or an exact title. Forward = works citing the seed,
+    newest relevant first; back = the seed's references. Rows with no keyword hit get seed_score 0 (dropped by
+    `batch`). Rows already in library/ (by doi or title, across --refs) are dropped here."""
+    import subprocess
+    refs = []
+    for pat in a.refs or []:
+        refs += subprocess.run(["git", "-C", str(ROOT), "for-each-ref", "--format=%(refname)", pat],
+                               capture_output=True, text=True).stdout.split()
+    dois, titles, byid = known_papers(refs)
+    print(f"known papers: {len(dois)} dois, {len(titles)} titles across worktree + {len(refs)} refs")
+    out = RAW / f"openalex-{dt.date.today()}.jsonl"
+    log = []
+    for ln in Path(a.seeds).read_text().splitlines():
+        if not ln.strip() or ln.startswith("#"):
+            continue
+        parts = ln.split("\t")
+        topic, direction, seed = parts[0].strip(), parts[1].strip(), parts[2].strip()
+        kws = [k.strip().lower() for k in parts[3].split(",")] if len(parts) > 3 and parts[3].strip() else []
+        w = oa_resolve(seed, byid)
+        if not w or not w.get("id"):
+            print(f"  ! could not resolve {seed}")
+            log.append({"seed": seed, "resolved": None})
+            continue
+        wid = w["id"].rsplit("/", 1)[-1]
+        works = []
+        if direction in ("fwd", "both"):
+            cursor, got = "*", 0
+            while cursor and got < a.max:
+                d = oa_get("/works", {"filter": f"cites:{wid}", "per-page": 200, "cursor": cursor,
+                                      "sort": "cited_by_count:desc"})
+                res = d.get("results") or []
+                works += [("fwd", r) for r in res]
+                got += len(res)
+                cursor = (d.get("meta") or {}).get("next_cursor") if res else None
+        if direction in ("back", "both"):
+            refs_ = [r.rsplit("/", 1)[-1] for r in w.get("referenced_works") or []]
+            for i in range(0, len(refs_), 50):
+                d = oa_get("/works", {"filter": "openalex:" + "|".join(refs_[i:i + 50]), "per-page": 50})
+                works += [("back", r) for r in d.get("results") or []]
+        rows, known = [], 0
+        for kind, r in works:
+            doi = (r.get("doi") or "").replace("https://doi.org/", "").lower()
+            if (doi and doi in dois) or _title_key(r.get("title")) in titles:
+                known += 1
+                continue
+            rows.append(oa_row(r, topic, f"openalex-{kind}:{seed}", a.by, kws))
+        relevant = [r for r in rows if r["seed_score"]]
+        jl_write(out, relevant)
+        print(f"  {seed} ({wid}, cited {w.get('cited_by_count')}): {len(works)} looked at, {known} already in library, "
+              f"{len(rows)} new, {len(relevant)} on-topic")
+        log.append({"seed": seed, "openalex": wid, "direction": direction, "results": len(works), "known": known,
+                    "new": len(rows), "on_topic": len(relevant)})
+    jl_write(RAW / f"openalex-log-{dt.date.today()}.jsonl", log)
+    print(f"openalex: rows -> {out.relative_to(ROOT)}; per-seed counts (for survey search_log rows) -> openalex-log")
+    return 0
+
+
 # ------------------------------------------------------------------------------------------------ batch
 def score(r: dict) -> int:
     if r.get("seed_score") is not None:
@@ -766,11 +946,14 @@ def main(argv=None):
     p = sub.add_parser("jina", help="fetch page text through r.jina.ai for blog rows that only have a url")
     p.add_argument("--by", required=True); p.add_argument("--max", type=int, default=60); p.add_argument("--sleep", type=float, default=1.0)
     p.add_argument("--prune", action="store_true", help="drop rows whose page is dead or empty")
+    p = sub.add_parser("openalex", help="forward/backward citation chasing via OpenAlex: `topic<TAB>fwd|back|both<TAB>seed[<TAB>kws]`")
+    p.add_argument("--seeds", required=True); p.add_argument("--by", required=True); p.add_argument("--max", type=int, default=600)
+    p.add_argument("--refs", nargs="*", default=["refs/remotes/origin/lane/*"], help="git refs whose library/papers count as known")
     sub.add_parser("status")
     a = ap.parse_args(argv)
     return {"x-search": cmd_x_search, "apify": cmd_apify, "links": cmd_links, "seed": cmd_seed,
             "lesswrong": cmd_lesswrong, "rss": cmd_rss, "ytsearch": cmd_ytsearch, "jina": cmd_jina,
-            "batch": cmd_batch, "status": cmd_status}[a.cmd](a)
+            "openalex": cmd_openalex, "batch": cmd_batch, "status": cmd_status}[a.cmd](a)
 
 
 if __name__ == "__main__":
