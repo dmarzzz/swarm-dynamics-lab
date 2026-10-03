@@ -12,14 +12,14 @@
 | swarm-intelligence | 107 | 1 | 2 | 4 | 0 | 0 | 114 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 0 | 194 |
 | sync-consensus | 225 | 8 | 11 | 17 | 0 | 1 | 262 |
-| criticality-measurement | 186 | 4 | 0 | 23 | 0 | 1 | 214 |
+| criticality-measurement | 186 | 4 | 1 | 23 | 0 | 1 | 215 |
 | marl-emergence | 123 | 12 | 0 | 33 | 0 | 1 | 169 |
-| llm-agent-swarms | 237 | 44 | 47 | 197 | 0 | 2 | 527 |
+| llm-agent-swarms | 237 | 44 | 50 | 197 | 0 | 2 | 530 |
 | crowds-and-traffic | 76 | 2 | 1 | 2 | 0 | 0 | 81 |
 | meta | 77 | 9 | 3 | 22 | 0 | 2 | 113 |
 | sybil-resistance | 169 | 41 | 52 | 53 | 4 | 1 | 320 |
-| fork-merge-security | 214 | 11 | 37 | 67 | 0 | 3 | 332 |
-| swarm-detection | 0 | 2 | 12 | 186 | 0 | 0 | 200 |
+| fork-merge-security | 214 | 11 | 38 | 67 | 0 | 3 | 333 |
+| swarm-detection | 0 | 2 | 14 | 186 | 0 | 0 | 202 |
 
 ## Tasks
 
@@ -106,7 +106,7 @@
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#19](https://github.com/dmarzzz/swarm-lab/issues/19) | claimed | 2026-10-03T19:30Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-02) |
+| [#19](https://github.com/dmarzzz/swarm-lab/issues/19) | claimed | 2026-10-03T19:32Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-02) |
 | [#24](https://github.com/dmarzzz/swarm-lab/issues/24) | claimed | 2026-10-03T19:32Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-01) |
 | [#28](https://github.com/dmarzzz/swarm-lab/issues/28) | claimed | 2026-10-03T19:32Z | [batch] web/crowds-and-traffic: 10 candidates (web-crowds-and-traffic-20261003-01) |
 | [#33](https://github.com/dmarzzz/swarm-lab/issues/33) | claimed | 2026-10-03T19:32Z | [batch] web/swarm-detection: 10 candidates (web-swarm-detection-20261003-01) |
