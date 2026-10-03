@@ -19,6 +19,7 @@
 | meta | 52 | 8 | 0 | 13 | 0 | 0 | 73 |
 | sybil-resistance | 8 | 20 | 0 | 0 | 0 | 0 | 28 |
 | fork-merge-security | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| swarm-detection | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## Tasks
 
@@ -59,11 +60,20 @@
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Review survey: llm agent swarms (cross-researcher) |
+| [scan-papers-sd-bots](tasks/scan-papers-sd-bots.md) | open | p0 | scan |  |  |  | Catalogue the papers: social bots, LLM-powered botnets and coordinated inauthentic behaviour detection |
+| [scan-papers-sd-coordination](tasks/scan-papers-sd-coordination.md) | open | p0 | scan |  |  |  | Catalogue the papers: statistical detection of coordination and collective behaviour from traces |
+| [scan-papers-sd-honeypots](tasks/scan-papers-sd-honeypots.md) | open | p0 | scan |  |  |  | Catalogue the papers: honeypots, canaries, tarpits and traps for autonomous agents |
+| [scan-papers-sd-web-agents](tasks/scan-papers-sd-web-agents.md) | open | p0 | scan |  |  |  | Catalogue the papers: detecting browser agents, computer-use agents and AI crawlers on the web |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  |  | Catalogue the blogs and long-form web writing |
+| [scan-code-sd-code-data](tasks/scan-code-sd-code-data.md) | open | p1 | scan |  |  |  | Catalogue the code: code, datasets and benchmarks for detecting agent swarms |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
 | [scan-metrics-benchmarks](tasks/scan-metrics-benchmarks.md) | open | p1 | scan |  |  |  | Catalogue metrics and benchmarks for swarm behaviour |
+| [scan-papers-sd-ai-content](tasks/scan-papers-sd-ai-content.md) | open | p1 | scan |  |  |  | Catalogue the papers: population-level detection of AI-generated content |
+| [scan-papers-sd-attribution](tasks/scan-papers-sd-attribution.md) | open | p1 | scan |  |  |  | Catalogue the papers: identifying the model or agent behind observed behaviour |
+| [scan-papers-sd-onchain](tasks/scan-papers-sd-onchain.md) | open | p1 | scan |  |  |  | Catalogue the papers: agent and bot swarms on blockchains |
 | [scan-threads-science](tasks/scan-threads-science.md) | open | p1 | scan |  |  |  | Catalogue X threads on the science of collectives |
+| [scan-threads-sd-informal](tasks/scan-threads-sd-informal.md) | open | p1 | scan |  |  |  | Catalogue the threads: threat-intel reports, blogs, threads and talks on agent swarms in the wild |
 | [survey-active-matter](tasks/survey-active-matter.md) | open | p1 | survey |  |  |  | Survey: active matter physics |
 | [survey-collective-decision](tasks/survey-collective-decision.md) | open | p1 | survey |  |  |  | Survey: collective decision-making in biology |
 | [survey-collective-motion](tasks/survey-collective-motion.md) | open | p1 | survey |  |  |  | Survey: collective motion models |
@@ -71,6 +81,7 @@
 | [survey-crowds-and-traffic](tasks/survey-crowds-and-traffic.md) | open | p1 | survey |  |  |  | Survey: human crowds and traffic |
 | [survey-fork-merge-security](tasks/survey-fork-merge-security.md) | open | p1 | survey |  |  |  | Survey: corruption on reintegration in fork-and-merge agents |
 | [survey-marl-emergence](tasks/survey-marl-emergence.md) | open | p1 | survey |  |  |  | Survey: multi-agent rl and emergent coordination |
+| [survey-swarm-detection](tasks/survey-swarm-detection.md) | open | p1 | survey |  |  |  | Survey: detecting AI agent swarms in the wild |
 | [survey-swarm-intelligence](tasks/survey-swarm-intelligence.md) | open | p1 | survey |  |  |  | Survey: swarm intelligence algorithms |
 | [survey-swarm-robotics](tasks/survey-swarm-robotics.md) | open | p1 | survey |  |  |  | Survey: swarm robotics |
 | [survey-sybil-resistance](tasks/survey-sybil-resistance.md) | open | p1 | survey |  |  |  | Survey: Sybil resistance in multi-agent and swarm systems |
@@ -78,6 +89,7 @@
 | [synthesis-fork-merge-questions](tasks/synthesis-fork-merge-questions.md) | open | p1 | synthesis |  |  |  | Synthesis: the three fork-merge questions against prior art |
 | [synthesis-open-problems](tasks/synthesis-open-problems.md) | open | p1 | synthesis |  |  |  | Build the open-problems register |
 | [synthesis-people-and-labs](tasks/synthesis-people-and-labs.md) | open | p1 | synthesis |  |  |  | Map the people and labs |
+| [synthesis-swarm-detection-methods](tasks/synthesis-swarm-detection-methods.md) | open | p1 | synthesis |  |  |  | Synthesis: taxonomy of swarm-detection methods and the honeypot design space |
 | [synthesis-sybil-flashbots](tasks/synthesis-sybil-flashbots.md) | open | p1 | synthesis |  |  |  | Synthesis: how Flashbots Sybil work relates to swarm and agent Sybil resistance |
 | [synthesis-glossary](tasks/synthesis-glossary.md) | open | p2 | synthesis |  |  |  | Write the shared glossary |
 | [scan-code-agent-orchestration](tasks/scan-code-agent-orchestration.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue LLM multi-agent and orchestration frameworks |
@@ -91,6 +103,16 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
+| dmarz/sd-ai-content | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
+| dmarz/sd-attribution | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
+| dmarz/sd-bots | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
+| dmarz/sd-code-data | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
+| dmarz/sd-coordination | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
+| dmarz/sd-honeypots | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
+| dmarz/sd-informal | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
+| dmarz/sd-onchain | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
+| dmarz/sd-web-agents | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
+| dmarz/sd | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
 | dmarz/fm-ai-control | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm-bft-aggregation | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm-biology | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
