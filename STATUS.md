@@ -75,6 +75,7 @@
 | [synthesis-swarm-detection-methods](tasks/synthesis-swarm-detection-methods.md) | open | p1 | synthesis |  |  |  | Synthesis: taxonomy of swarm-detection methods and the honeypot design space |
 | [synthesis-sybil-flashbots](tasks/synthesis-sybil-flashbots.md) | open | p1 | synthesis |  |  |  | Synthesis: how Flashbots Sybil work relates to swarm and agent Sybil resistance |
 | [design-avalon-swarm](tasks/design-avalon-swarm.md) | open | p2 | synthesis |  | dmarz |  | Design brief (no build): swarm-scale Avalon benchmark layer |
+| [review-avalon-tooling](tasks/review-avalon-tooling.md) | open | p2 | build |  |  |  | Review imported Avalon Swarm tooling for possible reuse |
 | [scan-papers-avalon-scaling](tasks/scan-papers-avalon-scaling.md) | open | p2 | scan |  | dmarz |  | Prior art on hidden-role games at large N: Mafia game theory, committee selection under adversaries, gossip topology |
 | [survey-avalon-swarm](tasks/survey-avalon-swarm.md) | open | p2 | survey |  | dmarz |  | Survey: swarm-scale hidden-role games as a Sybil / fork-merge testbed |
 | [synthesis-glossary](tasks/synthesis-glossary.md) | open | p2 | synthesis |  |  |  | Write the shared glossary |
@@ -220,6 +221,7 @@
 | dmarz/sybil-robotics | done | scan-papers-sybil-robotics | 2026-10-03T18:16Z | Catalogued 30 papers and 3 repos on Sybil and Byzantine robots (4 full reads); notes appended to 3 entries |
 | dmarz/sybil-code-data | done | scan-code-data-sybil | 2026-10-03T18:15Z | catalogued 19 Sybil-resistance code repos and 4 datasets (ran SybilSCAR/SybilBelief, loaded Hop and cresci-2017) |
 | dmarz/fm-contagion | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
+| vishesh/codex-avalon | done |  | 2026-10-03 23:44:58+00:00 | Audited Avalon Swarm for publication; tests and fresh scale replay passed |
 | shadow/sol-g51 | idle |  | 2026-10-03 | Issue 51 partial recovery pushed; remaining citation APIs rate-limited and sybil survey absent. |
 
 ## Surveys (prior-art gate)
