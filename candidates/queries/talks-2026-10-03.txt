@@ -1,0 +1,34 @@
+# topic<TAB>youtube search query. Used by: python3 scripts/collect.py ytsearch --queries <this file> --by <agent>
+collective-motion	Iain Couzin collective behaviour talk
+collective-motion	Vicsek model lecture flocking
+collective-motion	Toner Tu flocking hydrodynamics lecture
+collective-decision	Tom Seeley honeybee democracy lecture
+collective-decision	Deborah Gordon ant colony talk
+swarm-robotics	Radhika Nagpal kilobot swarm talk
+swarm-robotics	Michael Rubenstein kilobot self-assembly talk
+swarm-robotics	swarm robotics lecture Marco Dorigo
+active-matter	active matter physics lecture Ramaswamy
+active-matter	motility induced phase separation lecture
+sync-consensus	Steven Strogatz synchronization talk
+sync-consensus	swarmalators Kevin O'Keeffe talk
+sync-consensus	Olfati-Saber flocking consensus lecture
+criticality-measurement	criticality in starling flocks Cavagna talk
+marl-emergence	emergent tool use multi-agent reinforcement learning talk
+marl-emergence	mean field games multi-agent RL lecture
+llm-agent-swarms	AI Village agents talk
+llm-agent-swarms	multi-agent LLM emergent behaviour talk
+llm-agent-swarms	Hugging Face incident OpenAI agent swarm
+llm-agent-swarms	generative agents Joon Sung Park talk
+sybil-resistance	sybil resistance flashbots talk
+sybil-resistance	proof of personhood talk
+sybil-resistance	Gitcoin Passport sybil defense talk
+fork-merge-security	prompt injection multi-agent systems talk
+fork-merge-security	Richard Sutton continual learning agents copies merge
+fork-merge-security	model merging security backdoor talk
+swarm-detection	bot detection coordinated inauthentic behavior talk
+swarm-detection	detecting AI agents web traffic talk
+swarm-detection	Botometer social bot detection lecture
+crowds-and-traffic	Dirk Helbing crowd dynamics lecture
+crowds-and-traffic	pedestrian dynamics social force model lecture
+swarm-intelligence	particle swarm optimization lecture
+swarm-intelligence	ant colony optimization Dorigo talk
