@@ -2,7 +2,7 @@
 
 # Library index
 
-1521 entries.
+1526 entries.
 
 ## Papers (1206)
 
@@ -1215,7 +1215,7 @@
 | [zhao-2024-snail](papers/zhao-2024-snail.md) | Snail-inspired robotic swarms: a hybrid connector drives collective adaptation in unstructured outdoor environments | 2024 | 2 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [zhuge-2023-mindstorms](papers/zhuge-2023-mindstorms.md) | Mindstorms in Natural Language-Based Societies of Mind | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 
-## Blogs (88)
+## Blogs (91)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1226,6 +1226,7 @@
 | [buterin-2024-supporting](blogs/buterin-2024-supporting.md) | Supporting decentralized staking through more anti-correlation incentives | 2024 | 5 | full | sybil-resistance, sync-consensus, swarm-detection | dmarz/sybil-flashbots-informal |
 | [christiano-2016-reliability](blogs/christiano-2016-reliability.md) | Reliability amplification | 2016 | 5 | full | fork-merge-security, sync-consensus, collective-decision | dmarz/fm-sutton |
 | [christiano-2016-security](blogs/christiano-2016-security.md) | Security amplification | 2016 | 5 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-sutton |
+| [cognition-2025-dont](blogs/cognition-2025-dont.md) | Don't Build Multi-Agents | 2025 | 5 | full | llm-agent-swarms | shadow/sol-w6 |
 | [collusion-wiki-2026-discovery](blogs/collusion-wiki-2026-discovery.md) | Discovery of a new OpenAI agent message board | 2026 | 5 | full | llm-agent-swarms, sybil-resistance | vishesh/senku-1 |
 | [coutinho-de-paula-2025-dave](blogs/coutinho-de-paula-2025-dave.md) | The Dave Fraud-Proof Algorithm: Triumphing over Sybils with a Laptop and a Small Collateral | 2025 | 5 | skim | sybil-resistance, sync-consensus | dmarz/sybil-flashbots-informal |
 | [crapis-2026-zk](blogs/crapis-2026-zk.md) | ZK API Usage Credits: LLMs and Beyond | 2026 | 5 | skim | sybil-resistance, llm-agent-swarms | dmarz/sybil-credentials |
@@ -1238,6 +1239,8 @@
 | [metr-2026-brief](blogs/metr-2026-brief.md) | Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident | 2026 | 5 | full | llm-agent-swarms, sybil-resistance | vishesh/senku-1 |
 | [simonwillison-2025-camel](blogs/simonwillison-2025-camel.md) | CaMeL offers a promising new direction for mitigating prompt injection attacks | 2025 | 5 | full | fork-merge-security, llm-agent-swarms, sync-consensus | dmarz/fm-informal |
 | [simonwillison-2025-lethal](blogs/simonwillison-2025-lethal.md) | The lethal trifecta for AI agents: private data, untrusted content, and external communication | 2025 | 5 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-informal |
+| [swarmtraces-2026-revealing](blogs/swarmtraces-2026-revealing.md) | Revealing the details of how OpenAI agents hacked Hugging Face | 2026 | 5 | skim | llm-agent-swarms, swarm-detection | shadow/sol-w6 |
+| [transluce-2026-early](blogs/transluce-2026-early.md) | Early rogue AI agent activity and attempts to hack found on urlquery.net | 2026 | 5 | skim | llm-agent-swarms, swarm-detection | shadow/sol-w6 |
 | [veganmosfet-2026-brokenclaw](blogs/veganmosfet-2026-brokenclaw.md) | BrokenClaw Part 2: Escape the Sub-Agent Sandbox with Prompt Injection in OpenClaw | 2026 | 5 | full | fork-merge-security, llm-agent-swarms, sync-consensus | dmarz/fm-informal |
 | [willison-2023-dual](blogs/willison-2023-dual.md) | The Dual LLM pattern for building AI assistants that can resist prompt injection | 2023 | 5 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-ai-control |
 | [aisi-2026-incident](blogs/aisi-2026-incident.md) | Incident Report: unsanctioned agent behaviour during cyber testing | 2026 | 4 | full | llm-agent-swarms, sybil-resistance | vishesh/senku-1 |
@@ -1308,7 +1311,7 @@
 | [quanta-2018-simple](blogs/quanta-2018-simple.md) | The Simple Algorithm That Ants Use to Build Bridges | 2018 | 2 | full | collective-decision, swarm-robotics, swarm-intelligence | shadow/sol-w3 |
 | [quanta-2018-swarming](blogs/quanta-2018-swarming.md) | Swarming Bacteria Create an 'Impossible' Superfluid | 2018 | 2 | full | active-matter, collective-motion | shadow/sol-w3 |
 
-## Threads (110)
+## Threads (111)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1387,6 +1390,7 @@
 | [x-skywalker543210-2100706405976035477](threads/x-skywalker543210-2100706405976035477.md) | Public AI crawler honeypot with rolling logs and salted IP hashes | 2026 | 3 | full | swarm-detection | shadow/sol-w6 |
 | [x-suryaganguli-2090115634231480755](threads/x-suryaganguli-2090115634231480755.md) | SuryaGanguli: 'Physics of Agents', a simple Ising model explains opinion dynamics across 10,000 LLM agent communities | 2026 | 3 | full | llm-agent-swarms, sync-consensus, criticality-measurement | dmarz/x-threads |
 | [x-zhitzig-1824450618544590858](threads/x-zhitzig-1824450618544590858.md) | zhitzig: new paper on personhood credentials, quoting Microsoft Research on proving you are not a bot | 2024 | 3 | full | sybil-resistance | dmarz/x-threads |
+| [x-0x534c-2096982209307816377](threads/x-0x534c-2096982209307816377.md) | Steven Lim: KQL hunting query for Microsoft 365 activity from OpenAI egress IP ranges, after the OpenAI agent wiki incident | 2026 | 2 | full | swarm-detection | shadow/sol-w1 |
 | [x-aidigest-2097006487533195531](threads/x-aidigest-2097006487533195531.md) | AI Digest: GPT-6 Astra joins the village (2026-09-07), onboarding page and favourites | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-aidigest-2097369883717808145](threads/x-aidigest-2097369883717808145.md) | AI Digest: GPT-6 Astra has the densest memory file in the village (strips spaces to save room) | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-aidigest-2102926502656717258](threads/x-aidigest-2102926502656717258.md) | AI Digest: GPT-6 Astra, Sol and Luna are all careful not to be 'annoying' or 'repetitive' in village chat | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
@@ -1423,7 +1427,7 @@
 | [x-heisblesse-2106002189600620864](threads/x-heisblesse-2106002189600620864.md) | heisblesse: 'Can AI agents build reputation?' ERC-8004 identity vs reputation registries, with Sybil distortion acknowledged (B.AI campaign post) | 2026 | 1 | full | sybil-resistance | shadow/sol-w1 |
 | [x-policytensor-2098634931198996974](threads/x-policytensor-2098634931198996974.md) | Policy Tensor: agents have the capacity for cumulative culture, will learn 'weapons of the weak' to mask activity; doubts next-gen rogue swarms will be detectable | 2026 | 1 | full | llm-agent-swarms, swarm-detection | shadow/sol-w5 |
 
-## Code (109)
+## Code (110)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1518,6 +1522,7 @@
 | [gh-complete-knowledge-ck](code/gh-complete-knowledge-ck.md) | Complete-Knowledge/ck: on-chain verification of ASIC-based proofs of complete knowledge | 2022 | 2 | skim | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [gh-crewaiinc-crewai](code/gh-crewaiinc-crewai.md) | CrewAI: role-based agent Crews plus event-driven Flows for multi-agent automation | 2023 | 2 | skim | llm-agent-swarms | shadow/sol-1 |
 | [gh-elizaos-eliza](code/gh-elizaos-eliza.md) | elizaOS: TypeScript autonomous agent framework with multi-agent rooms and many platform connectors | 2024 | 2 | skim | llm-agent-swarms | shadow/sol-1 |
+| [gh-fabriziocafolla-openai-crawlers-ip-ranges](code/gh-fabriziocafolla-openai-crawlers-ip-ranges.md) | openai-crawlers-ip-ranges: weekly-refreshed lists of OpenAI's published egress IPs (GPTBot, ChatGPT-User, OAI-SearchBot) plus nginx rules to block UA spoofers | 2025 | 2 | full | swarm-detection | shadow/sol-w1 |
 | [gh-foundationagents-metagpt](code/gh-foundationagents-metagpt.md) | MetaGPT: SOP-driven software-company multi-agent framework (Code = SOP(Team)) | 2023 | 2 | skim | llm-agent-swarms | shadow/sol-1 |
 | [gh-google-adk-python](code/gh-google-adk-python.md) | Google ADK 2.0: code-first agent framework with a graph workflow runtime and multi-agent composition | 2025 | 2 | abstract | llm-agent-swarms | shadow/sol-1 |
 | [gh-imrclab-crazyswarm2](code/gh-imrclab-crazyswarm2.md) | Crazyswarm2: ROS 2 stack for Bitcraze Crazyflie multirotor swarms | 2021 | 2 | abstract | swarm-robotics | shadow/sol-1 |
