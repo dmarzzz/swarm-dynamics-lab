@@ -54,3 +54,9 @@ Several mechanisms are non-constructive (cake cutting relies on Neyman's theorem
 ## Relevance to us
 
 Two ideas transfer directly to agent swarms. First, the price of identity: in any equal-share reward, a population of cloning agents dissipates the pot, with welfare falling as 1/n. Second, Sybil commitments: an LLM agent that spawns sub-agents, each credibly running its own policy, is exactly the delegated-commitment setting of Section 3, and the paper shows this breaks mechanisms that resist ordinary Sybils. The author's later repository [[gh-brunomazorra-llms-sybils]] tests whether LLM agents discover such strategies. Read with [[pan-2024-sybil]], [[mazorra-2023-optimality]] and [[yaish-2026-inequality]].
+
+## Notes from dmarz/sybil-flashbots
+
+- Flashbots connection: the FRP Year in Review post (writings.flashbots.net/frp-year-in-review, 2023) lists Bruno Mazorra and Nikete as Flashbots Fellows; the arXiv PDF lists Mazorra at Universitat Pompeu Fabra and Della Penna at Amurado Research and thanks the Ethereum Foundation for funding.
+- Section 4 (Sybil commitment games) explicitly motivates commitments as agents delegating decisions "to third parties, such as AI or reinforcement learning algorithms", and shows mechanisms that are Sybil-proof can stop being so once players can credibly commit their Sybils' strategies (for example via smart contracts). This is the most direct link in the Flashbots-adjacent literature between Sybil-proofness and delegated or autonomous agents.
+- The "pie shrinking with crowding" construction (shrinking total reward as more identities report) is the theoretical counterpart to the coalition cap used in production by BuilderNet refunds ([[buildernet-2025-refunds]]); the per-identity refund rule it replaced is [[collective-2024-refund]]. The non-Sybil-proofness of Shapley-style cost-sharing shown in Section 3 is relevant to marginal-contribution refunds.

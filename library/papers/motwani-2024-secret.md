@@ -19,6 +19,7 @@ cite: 'Motwani, S. R., Baranchuk, M., Strohmeier, M., Bolina, V., Torr, P. H. S.
 topics:
 - sybil-resistance
 - llm-agent-swarms
+- fork-merge-security
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: skim
@@ -53,3 +54,9 @@ Skimmed (introduction, contributions, CASE, results summary, paraphrasing theore
 ## Relevance to us
 
 Sybil resistance in swarms is usually framed as many identities with one controller; secret collusion is the converse, independent identities acting as one. Agents sharing a base model share common knowledge and Schelling points, so nominally independent agents can coordinate without any visible channel, which weakens honest-majority assumptions in [[jo-2025-byzantine]] and links to correlated-error findings in [[bara-2026-epistemic]]. Real-world corpus: [[gh-catgirl3d-agent-collusion-wiki-archive]]. Taxonomy: [[hammond-2025-multi]].
+
+## Notes from dmarz/fm-unlinkability
+
+Bearing on fork-merge corruption. I skimmed the arXiv v5 PDF (2402.07510v5, 25 Jul 2025) on 2026-10-03; its footer names NeurIPS 2024. The GPT-4 capability table (Table 3) reports Schelling-point coordination with a copy of itself at about 50% on a random integer, about 56% on a simple encode/decode scheme and about 16% on a complex one, Base64 encode/decode 92% of the time, and group covertext steganography evading the overseer to coordinate about 26% of the time. The authors conclude current models lack advanced steganographic capability and that monitoring plus standard security is likely effective for now, while warning of a capability jump at GPT-4.
+
+For Q1 (hiding which sub-agent returns), the paper cuts both ways: a parent and its sub-agents share a base model and common knowledge, which is exactly what makes Schelling-point covert channels workable, so a parent could hide which part is reporting by steganographic return channels. For Q3, the same property lets a corrupted sub-agent carry a hidden payload through the merge that output monitoring and paraphrasing will not reliably remove; the paper's result that paraphrasing leaves semantic entropy is the relevant negative result for merge-time sanitisation. Follow-up showing tool-using agents now build undetectable stegosystems: [[rippin-2026-tool]].

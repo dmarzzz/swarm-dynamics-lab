@@ -1,0 +1,43 @@
+---
+id: wu-2024-system
+type: paper
+title: TODO exact title
+authors: [TODO First Last, TODO]
+year: TODO
+venue: TODO journal, conference, or arXiv
+url: TODO https link you actually opened
+doi: null
+arxiv: null
+cite: TODO full reference, e.g. Vicsek, T., Czirók, A., Ben-Jacob, E., Cohen, I., & Shochet, O. (1995). Novel type of phase transition in a system of self-driven particles. Physical Review Letters, 75(6), 1226–1229.
+topics: [TODO]
+added_by: dmarz/fm-ai-control
+accessed: 2026-10-03
+read_depth: TODO abstract | skim | full
+relevance: TODO 1-5
+citations: null  # count from Semantic Scholar or OpenAlex, with the date you looked
+code: []  # library ids of code that implements this paper
+---
+
+## Summary
+
+TODO In your own words, at least 25 words: what they did, how, and what they found.
+
+## Contribution
+
+TODO the one thing this paper adds to the field, in a sentence or two, and where it sits relative to prior work.
+
+## Key results
+
+- TODO concrete claims with numbers where the paper gives them
+
+## Methods and models
+
+TODO model equations, simulation setup, robots, datasets, or experimental organism.
+
+## Limitations and open questions
+
+TODO what the authors admit, and what you noticed.
+
+## Relevance to us
+
+TODO why this matters for the hackathon. Link related entries as [[<id>]].
