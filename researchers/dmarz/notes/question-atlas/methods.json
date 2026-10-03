@@ -1,0 +1,985 @@
+[
+  {
+    "id": "MET-01",
+    "area": "criticality-measurement",
+    "title": "Criticality beyond a geometric signature",
+    "question": "Can apparent scale-free correlation be distinguished from a finite-size or mean-subtraction artifact?",
+    "hypothesis": "A critical interaction model will predict held-out response scaling better than independent motion with matched group geometry, even if both show a correlation zero crossing.",
+    "test": "Generate independent simulated flocks across sizes and densities under interacting and noninteracting mechanisms. Apply identical tracking loss and mean subtraction. Fit scaling on some sizes, then compare predictions on held-out sizes and controlled impulse responses. Treat a flock realization as the replicate.",
+    "baseline": "Matched independent motion, common environmental drive, and ordered low-noise noncritical models.",
+    "metrics": [
+      "Correlation length/group diameter",
+      "held-out scaling error",
+      "impulse-response gain"
+    ],
+    "falsifier": "The nulls explain both the static scaling and response as well as the critical model.",
+    "confounds": "Boundary shape, density and zero-sum constraints can move the estimated correlation length.",
+    "prior": [
+      {
+        "id": "cavagna-2010-scale",
+        "relation": "Static correlation precedent; not alone a criticality diagnostic."
+      },
+      {
+        "id": "mora-2011-biological",
+        "relation": "Criticality framework whose signatures require competing explanations."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Read the scaling estimators and predefine null generation without tuning on the held-out sizes.",
+    "briefs": []
+  },
+  {
+    "id": "MET-02",
+    "area": "criticality-measurement",
+    "title": "Sensitivity versus false alarms",
+    "question": "Does maximum collective responsiveness also maximize useful decisions under asymmetric error costs?",
+    "hypothesis": "The best operating point will move below the response maximum when false alarms are costly.",
+    "test": "In a seeded cascade simulator, randomize signal presence and severity across independent episodes, sweep coupling, and evaluate policies under a prespecified range of false-positive/negative costs. Select coupling on training episodes and evaluate utility on held-out episodes.",
+    "baseline": "Always respond, never respond, fixed subcritical coupling, and coupling selected only for maximum response.",
+    "metrics": [
+      "True-positive rate",
+      "false-positive rate",
+      "expected loss",
+      "decision delay"
+    ],
+    "falsifier": "Maximum-response coupling remains utility-optimal across the tested asymmetric cost regimes.",
+    "confounds": "The result may be built into the payoff; report the full response/error frontier before scalarizing.",
+    "prior": [
+      {
+        "id": "poel-2022-subcritical",
+        "relation": "Direct closest prior for risk-dependent distance to criticality; this is a replication/transfer test."
+      },
+      {
+        "id": "klamser-2021-collective",
+        "relation": "Functional criticality comparison in predator evasion."
+      }
+    ],
+    "novelty": "replication",
+    "feasibility": "offline",
+    "needs": "Reproduce a closest-prior regime first; select a new task only if the transfer question remains open.",
+    "briefs": []
+  },
+  {
+    "id": "MET-03",
+    "area": "criticality-measurement",
+    "title": "What incomplete observation hides",
+    "question": "Which collective measurements survive seeing only a biased fraction of the swarm?",
+    "hypothesis": "Spatial or degree-biased missingness will distort inferred coordination more than random dropout at the same coverage.",
+    "test": "Take fully observed synthetic trajectories with known interactions. Randomize observation masks by episode: uniform, spatial, high-degree-only, and burst loss. Estimate branching, correlation and coordination metrics blind to truth, then compare errors against the full trajectory.",
+    "baseline": "Full observation, uniform subsampling, and a published correction method where its assumptions hold.",
+    "metrics": [
+      "Estimation bias",
+      "interval coverage",
+      "regime misclassification",
+      "minimum observation fraction"
+    ],
+    "falsifier": "Biased masks perform no worse than random masks, or correction restores prespecified coverage throughout.",
+    "confounds": "Tracking errors and missing identities can be more damaging than simple missing frames.",
+    "prior": [
+      {
+        "id": "levina-2022-tackling",
+        "relation": "Subsampling problem and candidate corrections; catalogue at abstract depth."
+      },
+      {
+        "id": "han-2024-collective",
+        "relation": "Interaction inference offers a second target beyond aggregate order."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Choose estimators with explicit assumptions and verify ground-truth generators and mask mechanisms.",
+    "briefs": []
+  },
+  {
+    "id": "MET-04",
+    "area": "criticality-measurement",
+    "title": "Does a synergy score predict useful complementarity?",
+    "question": "Can an information-theoretic collective score forecast the damage caused by removing coordination?",
+    "hypothesis": "A score measured before intervention will predict task loss after breaking complementary interactions better than pairwise correlation does.",
+    "test": "Across independent simulated teams, compute scores on an initial trace segment. Randomize targeted interaction scrambling versus matched random scrambling in a later segment; hold message count fixed. Predict held-out performance loss, stratifying by baseline competence.",
+    "baseline": "Pairwise correlation, activity rate, team size, and a simple performance-only predictor.",
+    "metrics": [
+      "Held-out predictive error",
+      "intervention effect on task score",
+      "score stability across estimators"
+    ],
+    "falsifier": "The score adds no out-of-sample prediction over simpler baselines, or predicts activity rather than useful loss.",
+    "confounds": "Observed synergy is not causal proof; information estimators and macro-variable choice matter.",
+    "prior": [
+      {
+        "id": "rosas-2020-reconciling",
+        "relation": "Information decomposition framework with observational assumptions."
+      },
+      {
+        "id": "riedl-2025-emergent",
+        "relation": "Task-specific collective information measurements; mechanism needs intervention."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "api-small",
+    "needs": "Select a task with independently scored success and calibrate finite-sample entropy estimation.",
+    "briefs": []
+  },
+  {
+    "id": "MET-05",
+    "area": "criticality-measurement",
+    "title": "Information flow under a shared driver",
+    "question": "When does apparent peer information transfer come entirely from shared external input?",
+    "hypothesis": "Conditioning on a logged common driver and testing edge interventions will remove many apparent directed links found by pairwise transfer entropy.",
+    "test": "Generate paired systems with common drive only, peer influence only, and both. Randomize selected edges across independent episodes. Compare estimated links with the known graph and intervention effects using identical observation windows.",
+    "baseline": "Pairwise transfer entropy, lagged correlation, and a conditional estimator with the driver observed.",
+    "metrics": [
+      "Edge precision/recall",
+      "false discovery rate",
+      "intervention-effect prediction"
+    ],
+    "falsifier": "Pairwise and conditional methods are equally accurate under shared drive or edge interventions contradict the conditional graph.",
+    "confounds": "Conditioning fails if the driver is unobserved; label residual ambiguity rather than claiming causal discovery.",
+    "prior": [
+      {
+        "id": "lizier-2008-local",
+        "relation": "Information-transfer measurement, not automatic intervention identification."
+      },
+      {
+        "id": "shalizi-2011-homophily",
+        "relation": "General warning about confounded apparent transmission."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Verify estimator bias on small analytically tractable processes before using agent traces.",
+    "briefs": []
+  },
+  {
+    "id": "MET-06",
+    "area": "criticality-measurement",
+    "title": "A transition or a slow relaxation?",
+    "question": "Does observed hysteresis survive longer observation and finite-size controls?",
+    "hypothesis": "Some apparent regime switches will shrink as dwell time increases, indicating slow relaxation rather than a stable bistable region.",
+    "test": "Use independent seeded simulations for upward and downward coupling sweeps at several sizes and dwell times. Repeat with fresh initial states at each parameter. Estimate transition locations and relaxation time without treating time steps as replicates.",
+    "baseline": "Independent parameter samples, known bistable reference model, and a slow single-attractor null.",
+    "metrics": [
+      "Hysteresis-loop area",
+      "switch-location uncertainty",
+      "relaxation time",
+      "residence-time distribution"
+    ],
+    "falsifier": "The loop stabilizes with increasing dwell time and a single-attractor null cannot reproduce it.",
+    "confounds": "Changing size at fixed volume changes density; rare switches require long traces.",
+    "prior": [
+      {
+        "id": "vicsek-1995-novel",
+        "relation": "Order transition reference to reproduce before extension."
+      },
+      {
+        "id": "tunstrom-2013-collective",
+        "relation": "Collective-state and multistability motivation."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Read phase definitions and identify a feasible range of relaxation times before committing a sweep.",
+    "briefs": []
+  },
+  {
+    "id": "MET-07",
+    "area": "criticality-measurement",
+    "title": "Can different mechanisms produce the same trajectories?",
+    "question": "Can good trajectory prediction coexist with a wrong inferred interaction graph?",
+    "hypothesis": "Models with similar held-out trajectory error will disagree on the effect of targeted perturbations when fitted to passive traces alone.",
+    "test": "Generate trajectories from known heterogeneous interactions; fit several graph models on passive data. Select equally predictive fits before revealing randomized local perturbations. Compare graph recovery and perturbation predictions on independent initial conditions.",
+    "baseline": "No-interaction predictor, oracle graph diagnostic, and a simple distance-based interaction model.",
+    "metrics": [
+      "Trajectory prediction error",
+      "edge-type accuracy",
+      "intervention prediction error"
+    ],
+    "falsifier": "Passive predictive accuracy reliably determines both graph and perturbation response across tested generators.",
+    "confounds": "Misspecified interaction types, unobserved state and identical symmetries create non-identifiability.",
+    "prior": [
+      {
+        "id": "han-2024-collective",
+        "relation": "Closest interaction-inference method; assumptions on types and neighborhoods need audit."
+      },
+      {
+        "id": "gao-2024-learning",
+        "relation": "Interpretable stochastic-dynamics inference comparator."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Read model assumptions; use oracle graph only as a diagnostic, not an achievable baseline.",
+    "briefs": []
+  },
+  {
+    "id": "MET-08",
+    "area": "criticality-measurement",
+    "title": "Early warnings on genuinely new failures",
+    "question": "Do warning signals predict future collective breakdown outside the scenarios used to design them?",
+    "hypothesis": "A multivariate warning combining slowing recovery and rising disagreement will beat a threshold on current error at matched false-alarm rate.",
+    "test": "Create independent simulator episodes with gradually changing conditions and abrupt changes. Train thresholds on one failure mechanism, lock them, and evaluate on held-out mechanisms with nonfailure episodes. Score event-level alarms and lead time.",
+    "baseline": "Current-error threshold, activity-only alarm, and no alarm; calibrate all at the same false-alarm burden.",
+    "metrics": [
+      "Event recall at fixed false alarms/hour",
+      "median useful lead time",
+      "missed-event cost"
+    ],
+    "falsifier": "The warning has no positive lead time or loses its advantage on unseen mechanisms.",
+    "confounds": "A gradual drift generator can favor slowing-down signals by construction; abrupt failures test that boundary.",
+    "prior": [
+      {
+        "id": "mora-2011-biological",
+        "relation": "Criticality provides motivation, not evidence for this warning system."
+      },
+      {
+        "id": "sooter-2025-defining",
+        "relation": "Measurement definitions to audit before interpreting proximity to a transition."
+      }
+    ],
+    "novelty": "speculative",
+    "feasibility": "offline",
+    "needs": "Identify independent failure mechanisms and acceptable warning costs before collecting traces.",
+    "briefs": []
+  },
+  {
+    "id": "RL-01",
+    "area": "marl-emergence",
+    "title": "Skills with unfamiliar partners",
+    "question": "Does training with partner diversity improve zero-shot coordination at a fixed training budget?",
+    "hypothesis": "Partner-population training will improve held-out cross-play more than self-play, even after matching environment steps.",
+    "test": "Randomize training seeds to fixed-partner or partner-population curricula. Freeze policies and evaluate on unseen partner families and task layouts. Analyze independently trained policy seeds, with held-out episodes nested within seeds.",
+    "baseline": "Self-play, independent learning, and a simple scripted partner-compatible policy.",
+    "metrics": [
+      "Cross-play return",
+      "worst-partner return",
+      "self-play to cross-play gap",
+      "training steps"
+    ],
+    "falsifier": "The cross-play improvement vanishes with matched steps or is confined to partners seen during training.",
+    "confounds": "More partner diversity may also provide broader state coverage; include a state-coverage-matched control.",
+    "prior": [
+      {
+        "id": "lowe-2017-multi",
+        "relation": "Policy ensembles and centralized training predecessor."
+      },
+      {
+        "id": "gh-google-deepmind-meltingpot",
+        "relation": "Candidate social generalization environment; exact substrate must be selected."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "training",
+    "needs": "Confirm a runnable environment and choose held-out partner families before tuning.",
+    "briefs": []
+  },
+  {
+    "id": "RL-02",
+    "area": "marl-emergence",
+    "title": "Credit for a rare essential contribution",
+    "question": "Do counterfactual rewards help when only a few agents perform indispensable actions?",
+    "hypothesis": "Counterfactual credit will improve discovery of rare cooperative actions relative to a shared reward at the same training budget.",
+    "test": "Build a small task with a controllable fraction of essential roles and a separately measured completion condition. Randomize training seeds across shared reward, difference reward and counterfactual-critic variants; evaluate on new role assignments.",
+    "baseline": "Team reward with the same architecture and training steps; a scripted assignment oracle as diagnostic.",
+    "metrics": [
+      "Task success",
+      "essential-action frequency",
+      "sample efficiency",
+      "variance across seeds"
+    ],
+    "falsifier": "Counterfactual variants do not improve success, or gains vanish after matching critic capacity and observations.",
+    "confounds": "The critic may get privileged state; isolate information access from credit assignment.",
+    "prior": [
+      {
+        "id": "foerster-2018-counterfactual",
+        "relation": "Direct algorithmic precedent; novelty must be in the task boundary."
+      },
+      {
+        "id": "rashid-2018-qmix",
+        "relation": "Cooperative value-factorization comparison."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "training",
+    "needs": "Read both implementations and ensure all reward variants preserve the same true objective.",
+    "briefs": []
+  },
+  {
+    "id": "RL-03",
+    "area": "marl-emergence",
+    "title": "Messages that remain useful under a broken channel",
+    "question": "Does training with channel corruption yield communication that generalizes beyond its training noise?",
+    "hypothesis": "Moderate channel dropout during training will preserve more task value under unseen burst loss than clean-channel training.",
+    "test": "Train independent policy seeds under clean, independent-dropout and burst-loss channels with equal transmitted-bit budgets. Freeze them and evaluate unfamiliar delays, burst lengths and sender permutations. Include interventions that replace content while preserving message timing.",
+    "baseline": "No communication, clean-channel training, and hand-designed compressed state messages.",
+    "metrics": [
+      "Return under channel shift",
+      "useful bits per episode",
+      "performance loss after content scrambling"
+    ],
+    "falsifier": "Gains disappear on new corruption patterns or content scrambling leaves success unchanged.",
+    "confounds": "Timing and agent order can be covert communication channels; log and control them.",
+    "prior": [
+      {
+        "id": "foerster-2016-learning",
+        "relation": "Learned communication and channel design predecessor."
+      },
+      {
+        "id": "gh-farama-foundation-pettingzoo",
+        "relation": "Candidate controlled multi-agent environment interface."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "training",
+    "needs": "Select an environment whose success genuinely requires private information sharing.",
+    "briefs": []
+  },
+  {
+    "id": "RL-04",
+    "area": "marl-emergence",
+    "title": "When a mean neighbor is misleading",
+    "question": "Does mean-field compression fail specifically when rare roles carry decisive information?",
+    "hypothesis": "Role-conditioned aggregation will improve decisions over an unconditioned mean as rare specialist observations become decisive.",
+    "test": "Construct matched tasks with identical marginal observations but varied dependence on rare roles. Randomize training seeds across mean aggregation, role-conditioned mean and capacity-matched attention. Hold inputs and steps equal; test new role proportions.",
+    "baseline": "Unconditioned mean, simple histogram of roles, and an oracle full-state controller as ceiling.",
+    "metrics": [
+      "Return by specialist fraction",
+      "rare-event miss rate",
+      "compute per action"
+    ],
+    "falsifier": "A role histogram matches the richer method, or mean aggregation performs equally across role-sensitive tasks.",
+    "confounds": "Role labels can leak the answer; separate observable roles from hidden ground-truth importance.",
+    "prior": [
+      {
+        "id": "yang-2018-mean",
+        "relation": "Mean-field approximation to audit under heterogeneous interactions."
+      },
+      {
+        "id": "huttenrauch-2019-deep",
+        "relation": "Mean observation embedding is a distinct baseline."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "training",
+    "needs": "Specify legitimate role observability and separate action averaging from observation pooling.",
+    "briefs": []
+  },
+  {
+    "id": "RL-05",
+    "area": "marl-emergence",
+    "title": "Size transfer or topology transfer?",
+    "question": "Are policies described as swarm-size invariant actually robust to new interaction graphs?",
+    "hypothesis": "An invariant input encoder alone will not preserve performance when neighborhood connectivity changes at fixed density.",
+    "test": "Train at one size and density, then factorially vary size, density and degree distribution on independent worlds. Compare mean embedding and graph-policy encoders at matched capacity and communication budget; report each shift separately.",
+    "baseline": "Classical local controller and an encoder trained on the same topology distribution.",
+    "metrics": [
+      "Task completion",
+      "collision rate",
+      "connectivity loss",
+      "degradation per distribution shift"
+    ],
+    "falsifier": "Both encoders transfer across topology shifts without degradation, or size alone explains the losses.",
+    "confounds": "Fixed area and fixed density are different tests; avoid silently coupling size to crowding.",
+    "prior": [
+      {
+        "id": "huttenrauch-2019-deep",
+        "relation": "Size-invariant observation representation precedent."
+      },
+      {
+        "id": "tolstaya-2020-learning",
+        "relation": "Local graph-controller comparison, originally imitation learning."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "training",
+    "needs": "Reproduce one published transfer setting before extending to topology shifts.",
+    "briefs": []
+  },
+  {
+    "id": "RL-06",
+    "area": "marl-emergence",
+    "title": "Emergent strategy or simulator exploit?",
+    "question": "Do strategies discovered by competition remain useful when nonessential simulator details change?",
+    "hypothesis": "Some apparent strategic advances will disappear under equivalent physics implementations while robust tool use persists.",
+    "test": "Train or load policies in a small competitive object-interaction task. Freeze policies, then randomize friction integration, collision tolerance and action timing within a validated range that preserves task solvability. Evaluate independent seeds in both engines.",
+    "baseline": "Scripted physically valid strategies and policies trained with domain randomization.",
+    "metrics": [
+      "Task success",
+      "constraint violations",
+      "cross-engine retention",
+      "valid tool-use frequency"
+    ],
+    "falsifier": "All gains transfer with preserved action feasibility, or performance changes are fully explained by changed difficulty.",
+    "confounds": "An altered engine may change the actual task; verify with scripted solutions before drawing conclusions.",
+    "prior": [
+      {
+        "id": "baker-2020-emergent",
+        "relation": "Autocurriculum and simulator-exploit precedent, expensive original setting."
+      },
+      {
+        "id": "gh-proroklab-vectorizedmultiagentsimulator",
+        "relation": "Possible small simulation substrate, not a reproduced hide-and-seek implementation."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "training",
+    "needs": "Use a bounded toy setting or released policies; do not budget for reproducing billions of original frames.",
+    "briefs": []
+  },
+  {
+    "id": "RL-07",
+    "area": "marl-emergence",
+    "title": "Good reward, bad collective behavior",
+    "question": "Can a learned flock exploit an alignment reward while failing navigation or safety objectives?",
+    "hypothesis": "Optimizing alignment alone will create policies that score well while losing goal progress under obstacles.",
+    "test": "Randomize training seeds among alignment-only, task-only and combined rewards in the same simulator. Evaluate held-out layouts with independent success, safety and energy measurements, including stationary or circular-motion loophole controls.",
+    "baseline": "Hand-designed flocking/navigation controller and task-only policy with matched observations.",
+    "metrics": [
+      "Goal completion",
+      "alignment score",
+      "collisions",
+      "energy per successful task"
+    ],
+    "falsifier": "Alignment-only reward generalizes equally on task and safety metrics, with no proxy exploit.",
+    "confounds": "Combined rewards may simply add privileged goal information; equalize observability.",
+    "prior": [
+      {
+        "id": "durve-2020-learning",
+        "relation": "Learning flocking predecessor to audit for reward definition."
+      },
+      {
+        "id": "brambati-2025-learning",
+        "relation": "Collision and cohesion learning comparator."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "training",
+    "needs": "Read reward formulations and predefine the independent task evaluator.",
+    "briefs": []
+  },
+  {
+    "id": "RL-08",
+    "area": "marl-emergence",
+    "title": "Coordinating while partners keep learning",
+    "question": "Does a short history of partner behavior improve adaptation to policy drift?",
+    "hypothesis": "A history-conditioned policy will recover faster after partner changes than a memoryless policy of similar capacity.",
+    "test": "Train matched recurrent and feedforward agents. In held-out independent episodes, switch partners at randomized times among a fixed policy pool; compare sudden and gradual drift. Include no-switch episodes to measure overhead.",
+    "baseline": "Memoryless policy, explicit partner-type estimator, and oracle switch notification as diagnostic.",
+    "metrics": [
+      "Recovery episodes",
+      "post-switch regret",
+      "steady-state return",
+      "unnecessary adaptation"
+    ],
+    "falsifier": "History offers no improvement beyond the simple estimator or only works with known switch times.",
+    "confounds": "Recurrence also improves partial-observation memory; include drifting and stationary partial-observation controls.",
+    "prior": [
+      {
+        "id": "lowe-2017-multi",
+        "relation": "Nonstationarity in MARL motivation."
+      },
+      {
+        "id": "gh-bold-lab-ai-jaxmarl",
+        "relation": "Candidate training suite; no run or speed claim from this pass."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "training",
+    "needs": "Choose checkpointed partner policies and hold environment steps and model capacity explicit.",
+    "briefs": []
+  },
+  {
+    "id": "OPT-01",
+    "area": "swarm-intelligence",
+    "title": "Performance after shifting and rotating the problem",
+    "question": "Do attractive optimizer rankings survive removal of coordinate advantages?",
+    "hypothesis": "Rankings on centered axis-aligned functions will change after random translation and rotation, beyond seed variability.",
+    "test": "Run frozen implementations on paired original, shifted and rotated instances of several function families. Use equal objective-call and tuning budgets; analyze independent function instances, with repeated seeds nested within instance.",
+    "baseline": "Random search, differential evolution, CMA-ES and a standard PSO implementation.",
+    "metrics": [
+      "Anytime best-value curve",
+      "evaluations to target",
+      "rank stability",
+      "failure rate"
+    ],
+    "falsifier": "Rankings remain stable across transformations within uncertainty on held-out families.",
+    "confounds": "Boundary handling can reintroduce bias; transform constraints consistently and charge all evaluations.",
+    "prior": [
+      {
+        "id": "kudela-2023-evolutionary",
+        "relation": "Direct center-bias test predecessor."
+      },
+      {
+        "id": "vermetten-2024-large",
+        "relation": "Broad benchmarking and budget-sensitive rankings."
+      }
+    ],
+    "novelty": "replication",
+    "feasibility": "offline",
+    "needs": "Pin optimizer versions and reserve transformed functions for evaluation rather than tuning.",
+    "briefs": []
+  },
+  {
+    "id": "OPT-02",
+    "area": "swarm-intelligence",
+    "title": "Communication topology under a fair budget",
+    "question": "Does sparse communication improve search by preserving diversity or merely by changing computation cost?",
+    "hypothesis": "A sparse PSO topology will delay premature collapse on multimodal tasks at equal objective evaluations, with task-dependent tradeoffs.",
+    "test": "Randomize independent optimizer runs across global, ring and degree-matched rewired graphs. Match particle count, objective calls and update frequency; separately report wall-clock and messages. Evaluate on held-out multimodal and unimodal functions.",
+    "baseline": "Global-best PSO, independent restarts, and a fixed sparse topology.",
+    "metrics": [
+      "Best objective",
+      "population diversity",
+      "evaluations to target",
+      "messages",
+      "wall-clock"
+    ],
+    "falsifier": "Independent restarts match the gain or topology effects vanish after update and evaluation budgets are equalized.",
+    "confounds": "Stale best values and asynchronous updates can change the algorithm independently of topology.",
+    "prior": [
+      {
+        "id": "kennedy-1999-small",
+        "relation": "Direct topology precedent; not a new sparse-swarm idea."
+      },
+      {
+        "id": "vermetten-2024-large",
+        "relation": "Benchmarking framework to prevent single-function conclusions."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Read topology/update definitions and include objective-evaluation cost in every comparison.",
+    "briefs": []
+  },
+  {
+    "id": "OPT-03",
+    "area": "swarm-intelligence",
+    "title": "How much of ant-colony performance is local search?",
+    "question": "Does pheromone sharing contribute after a strong local-search component is matched?",
+    "hypothesis": "The incremental benefit of pheromone will shrink when all variants share identical local search, particularly on easy instances.",
+    "test": "Use a factorial design over pheromone sharing and local search on held-out routing instances. Pair random seeds and initial tours; charge edge evaluations and local-search calls to the same total budget.",
+    "baseline": "Multistart local search, randomized construction plus local search, and full ant-colony system.",
+    "metrics": [
+      "Tour gap to reference",
+      "objective evaluations",
+      "improvement attributed to each component"
+    ],
+    "falsifier": "Pheromone adds a stable gain beyond matched local search across held-out instance families.",
+    "confounds": "Wall-clock alone can reward a faster implementation; also measure operation and objective-call budgets.",
+    "prior": [
+      {
+        "id": "dorigo-1997-ant",
+        "relation": "ACS and ACS with local search are the closest original comparisons."
+      },
+      {
+        "id": "camacho-villalon-2023-exposing",
+        "relation": "Component-level analysis motivation, not evidence about this ablation."
+      }
+    ],
+    "novelty": "replication",
+    "feasibility": "offline",
+    "needs": "Read exact update rules and select routing instances with reliable reference solutions.",
+    "briefs": []
+  },
+  {
+    "id": "OPT-04",
+    "area": "swarm-intelligence",
+    "title": "Independent evaluations versus noisy consensus",
+    "question": "When does a shared best solution amplify measurement noise?",
+    "hypothesis": "Reevaluating promising solutions with independent noise will reduce false convergence more than adding particles at equal objective-call budget.",
+    "test": "Add controlled unbiased and correlated noise to known objectives. Randomize runs to more particles, repeated evaluations, or robust selection. Hold calls fixed and evaluate final solutions with a separate high-precision audit stream.",
+    "baseline": "Naive best-observed selection, independent restarts, and equal-call averaging.",
+    "metrics": [
+      "True final objective",
+      "winner selection bias",
+      "noise sensitivity",
+      "evaluation count"
+    ],
+    "falsifier": "Extra independent evaluation does not outperform particles, or benefit disappears under held-out noise models.",
+    "confounds": "A high-precision evaluator is a diagnostic unavailable to the optimizer; never feed audit truth back into selection.",
+    "prior": [
+      {
+        "id": "pinnau-2017-consensus",
+        "relation": "Weighted collective optimization mechanism to stress under noisy objective values."
+      },
+      {
+        "id": "vermetten-2024-large",
+        "relation": "Budget-aware evaluation precedent; noisy setting is an extension to verify."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Check noisy-optimization prior work before claiming novelty and separate shared from independent noise.",
+    "briefs": []
+  },
+  {
+    "id": "OPT-05",
+    "area": "swarm-intelligence",
+    "title": "When collective memory becomes stale",
+    "question": "Can selective forgetting beat full restart after the objective changes?",
+    "hypothesis": "Age-weighted best-state memory will reduce post-change regret compared with permanent memory, while retaining more value than full restart.",
+    "test": "Create independent dynamic objective sequences with randomized changes in optimum and irrelevant surface details. Compare fixed memory, age decay, detected-change reset and full restart with equal objective-call budgets and hidden change times.",
+    "baseline": "Permanent personal/global best, periodic restart, and oracle change notification as ceiling.",
+    "metrics": [
+      "Dynamic regret",
+      "recovery evaluations",
+      "false resets",
+      "stationary performance loss"
+    ],
+    "falsifier": "Periodic restart matches the gain or age decay loses more in stationary periods than it recovers after changes.",
+    "confounds": "Decay can merely inject exploration; compare with matched random perturbation.",
+    "prior": [
+      {
+        "id": "grassi-2021-particle",
+        "relation": "Personal-best memory is explicit in the PSO-to-CBO framing."
+      },
+      {
+        "id": "dorigo-1996-ant",
+        "relation": "Pheromone persistence/evaporation provides a related memory mechanism."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Survey dynamic optimization before promotion; fix change distributions and scoring horizon.",
+    "briefs": []
+  },
+  {
+    "id": "OPT-06",
+    "area": "swarm-intelligence",
+    "title": "Where the small-inertia approximation stops helping",
+    "question": "Does a consensus approximation retain practical optimizer behavior outside the asymptotic regime?",
+    "hypothesis": "CBO-like and PSO-like trajectories will agree better as inertia shrinks, but optimization rankings may diverge at finite particle count.",
+    "test": "Reproduce a simple published small-inertia setting, then vary inertia and particle count independently on paired objectives. Compare distributional trajectories and held-out optimization success, using independent run seeds.",
+    "baseline": "Original PSO formulation, its stated CBO approximation, and a numerical step-size convergence control.",
+    "metrics": [
+      "Distribution distance",
+      "final objective",
+      "failure probability",
+      "numerical stability"
+    ],
+    "falsifier": "Approximation error does not fall in the stated limit after controlling discretization, or practical rankings remain unchanged everywhere tested.",
+    "confounds": "Parameters must be mapped according to the derivation; arbitrary matching is not a test of the approximation.",
+    "prior": [
+      {
+        "id": "grassi-2021-particle",
+        "relation": "Direct formal-limit predecessor; replication first."
+      },
+      {
+        "id": "pinnau-2017-consensus",
+        "relation": "CBO formulation and assumptions."
+      }
+    ],
+    "novelty": "replication",
+    "feasibility": "offline",
+    "needs": "Read the parameter mapping and convergence assumptions fully; do not equate consensus with a global optimum.",
+    "briefs": []
+  },
+  {
+    "id": "MTH-01",
+    "area": "meta",
+    "title": "How much certainty comes from counting the wrong units?",
+    "question": "How badly does treating interacting agents as independent samples overstate confidence?",
+    "hypothesis": "Agent-level uncertainty estimates will under-cover known episode-level effects when within-swarm dependence is strong.",
+    "test": "Generate independent swarm episodes with a known randomized treatment effect and tunable within-episode dependence. Compare agent-level resampling, episode-level resampling and exposure-aware analysis over repeated synthetic studies.",
+    "baseline": "Known generator effect and episode-level randomized estimate.",
+    "metrics": [
+      "Confidence-interval coverage",
+      "false-positive rate",
+      "interval width"
+    ],
+    "falsifier": "Agent-level intervals maintain nominal coverage across strong dependence, or clustered methods also fail under their stated design.",
+    "confounds": "A valid cluster must contain the interference; shared global boards can couple ostensibly separate episodes.",
+    "prior": [
+      {
+        "id": "aronow-2013-estimating",
+        "relation": "Assignment and interference framework."
+      },
+      {
+        "id": "shalizi-2011-homophily",
+        "relation": "Observational confounding is a separate problem from dependence."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Specify randomization and interference boundaries; this is methodological validation, not a new causal estimator.",
+    "briefs": []
+  },
+  {
+    "id": "MTH-02",
+    "area": "meta",
+    "title": "Do outcome labels change the conclusion?",
+    "question": "Can the same intervention improve consensus while worsening correctness or welfare?",
+    "hypothesis": "An intervention that increases agreement will sometimes reduce calibrated correctness on tasks with shared misleading evidence.",
+    "test": "Randomize independent synthetic teams to an agreement-promoting rule or neutral aggregation under known task truth. Score the same frozen traces for agreement, correctness, calibration and resource-adjusted utility using evaluators blind to treatment.",
+    "baseline": "Independent answers with aggregation and neutral communication at matched budget.",
+    "metrics": [
+      "Agreement",
+      "exact accuracy",
+      "calibration error",
+      "useful output per token"
+    ],
+    "falsifier": "Agreement improves only when correctness and utility also improve across the tested evidence regimes.",
+    "confounds": "Utility weights express human choices; publish the separate outcomes before combining them.",
+    "prior": [
+      {
+        "id": "pavlova-2026-flag",
+        "relation": "Ground-truth-aware collective task precedent."
+      },
+      {
+        "id": "zhou-2025-pimmur",
+        "relation": "Measurement validity context; abstract rechecked, methods not fully audited."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "api-small",
+    "needs": "Human reviewers must pick the primary outcome before any confirmatory comparison.",
+    "briefs": []
+  },
+  {
+    "id": "MTH-03",
+    "area": "meta",
+    "title": "Does a finding survive a model or runtime change?",
+    "question": "How portable are candidate effect sizes across model versions and orchestration scaffolds?",
+    "hypothesis": "Some intervention rankings will reverse across versions or scaffolds even when prompts and task cases are held fixed.",
+    "test": "After selecting a small task, cross intervention with two pinned models and two independently implemented runners. Randomize run order and compare episode-level effects on identical held-out cases. If two versions cannot be pinned, label time-confounded comparisons exploratory.",
+    "baseline": "Within-runner repeated execution and no-intervention control.",
+    "metrics": [
+      "Interaction effect by runner/model",
+      "ranking reversals",
+      "trace divergence",
+      "cost"
+    ],
+    "falsifier": "Effects and rankings remain stable within a prespecified practical tolerance across all tested configurations.",
+    "confounds": "Provider drift, retries and decoding defaults can masquerade as model differences.",
+    "prior": [
+      {
+        "id": "zhou-2025-pimmur",
+        "relation": "Validity motivates explicit implementation controls."
+      },
+      {
+        "id": "elnozahy-2002-survey",
+        "relation": "Nondeterminism and replay are conceptual precedents, not LLM-specific evidence."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Pin available versions and log retries, prompts and scheduler settings; do not assume a seed makes hosted APIs deterministic.",
+    "briefs": []
+  },
+  {
+    "id": "MTH-04",
+    "area": "meta",
+    "title": "Spend the budget on more seeds or more worlds?",
+    "question": "Which source of variation dominates uncertainty in our chosen collective task?",
+    "hypothesis": "Variation across task worlds will exceed sampling variation within a single world for at least some candidate interventions.",
+    "test": "Run a small balanced pilot crossing independent world instances and run seeds for a selected task. Estimate variance components without selecting the best treatment from the same pilot, then compare predicted precision for equal-cost sampling allocations on fresh worlds.",
+    "baseline": "Equal allocation, many seeds on one world, and many worlds with few seeds.",
+    "metrics": [
+      "Between-world variance",
+      "within-world variance",
+      "interval width per unit cost",
+      "out-of-sample precision"
+    ],
+    "falsifier": "Within-world randomness dominates and more worlds do not improve equal-cost precision.",
+    "confounds": "Pilot variance estimates are uncertain; report a range of allocations rather than a single magic sample size.",
+    "prior": [
+      {
+        "id": "vermetten-2024-large",
+        "relation": "Function instances and run budgets motivate the design question."
+      },
+      {
+        "id": "aronow-2013-estimating",
+        "relation": "Independent assignment units constrain uncertainty estimates."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "api-small",
+    "needs": "Choose the first candidate and use pilot data for planning, not confirmation or optional stopping.",
+    "briefs": []
+  },
+  {
+    "id": "MTH-05",
+    "area": "meta",
+    "title": "Can an interrupted run be meaningfully resumed?",
+    "question": "Does restoring agent state without scheduler and external-response state change the collective outcome?",
+    "hypothesis": "Full replay checkpoints will preserve outcomes better than memory-only checkpoints in asynchronous synthetic tasks.",
+    "test": "Randomize interruption times in independent deterministic mock-tool episodes. Compare uninterrupted runs, agent-memory restore and full-state restore including queues/RNG/tool-response logs. Use fixed replay data first, then explicitly stochastic responses as a separate condition.",
+    "baseline": "Uninterrupted replay and restart-from-scratch at matched completed-work budget.",
+    "metrics": [
+      "Trace divergence",
+      "final task score",
+      "duplicated actions",
+      "recovery overhead"
+    ],
+    "falsifier": "Memory-only restore matches full replay across ordering-sensitive tasks.",
+    "confounds": "Real external side effects cannot generally be undone; use reversible mock tools and distinguish record restoration from compensation.",
+    "prior": [
+      {
+        "id": "elnozahy-2002-survey",
+        "relation": "Classical consistent recovery and nondeterminism logging."
+      },
+      {
+        "id": "li-2026-memtx",
+        "relation": "Agent-memory repair overlap; this candidate isolates execution reproducibility rather than invalid-claim rollback."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Define the checkpoint boundary; inspect current agentops reporting without assuming it already supports replay.",
+    "briefs": []
+  },
+  {
+    "id": "MTH-06",
+    "area": "meta",
+    "title": "How much of a discovery is selecting the best run?",
+    "question": "How often does a promising-looking effect disappear when the whole search process is accounted for?",
+    "hypothesis": "Selecting the strongest of many prompts or seeds will produce a larger discovery-to-confirmation drop than a frozen small candidate set.",
+    "test": "On synthetic null and known-effect tasks, replay a simulated research workflow: search over varying numbers of configurations, choose the winner, and evaluate on untouched cases. Repeat the full selection procedure, not just the winning run.",
+    "baseline": "Preregistered fixed comparison, random configuration selection, and selection-aware held-out evaluation.",
+    "metrics": [
+      "False discovery rate",
+      "discovery-to-confirmation effect drop",
+      "winner retention"
+    ],
+    "falsifier": "Increasing search breadth produces no optimism under controlled nulls, or independent confirmation retains the selected effects.",
+    "confounds": "Search budget and evaluation budget must be reported separately; a null result may reflect low power.",
+    "prior": [
+      {
+        "id": "vermetten-2024-large",
+        "relation": "Benchmark-design sensitivity motivates selection controls."
+      },
+      {
+        "id": "zhou-2025-pimmur",
+        "relation": "Methodological audit motivation; this resampling design is a proposed lab audit."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Keep this as a methodological replication/validation unless a new selection procedure survives literature review.",
+    "briefs": []
+  },
+  {
+    "id": "SIM-01",
+    "area": "meta",
+    "title": "Private information leaks through the narrator",
+    "question": "Does a shared game master accidentally improve coordination by exposing private state?",
+    "hypothesis": "A narrator with access to every agent's private evidence will inflate apparent cooperation unless outgoing messages enforce visibility boundaries.",
+    "test": "Randomize independent synthetic negotiation episodes between a deterministic rule engine, a narrator with partitioned contexts, and a shared-context narrator. Keep private facts, allowed actions and inference budget matched. Plant harmless private-state markers solely to measure unintended disclosure.",
+    "baseline": "Separate-agent rule engine and explicitly public-information variant as a diagnostic ceiling.",
+    "metrics": [
+      "Private-state disclosure rate",
+      "Task success",
+      "Agreement conditional on authorized information",
+      "Narration cost"
+    ],
+    "falsifier": "Shared narration produces no extra disclosure or performance gap once legitimate public information is matched.",
+    "confounds": "Narrator competence and context length differ; include matched summaries and deterministic scoring independent of the narrator.",
+    "prior": [
+      {
+        "id": "gh-google-deepmind-concordia",
+        "relation": "Game-master environment motivating a context-isolation audit."
+      },
+      {
+        "id": "park-2023-generative",
+        "relation": "Generative-agent simulation precedent; not proof of this specific leak."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Inspect the precise visibility contract; the local sim-environments draft flags narrator leakage but has not passed its gate.",
+    "briefs": []
+  },
+  {
+    "id": "SIM-02",
+    "area": "meta",
+    "title": "The scheduler as an experimental treatment",
+    "question": "Does synchronous versus asynchronous activation change the sign of a collective effect?",
+    "hypothesis": "An intervention that helps under simultaneous updates will have a smaller or reversed effect when agents see fresh state sequentially.",
+    "test": "Implement one simple coordination game with simultaneous, fixed-order sequential and randomized-order sequential schedules. Pair independently generated worlds and randomize schedule assignment; hold action opportunities fixed. Separately charge wall-clock and communication work.",
+    "baseline": "Synchronous update, randomized sequential update and fixed order with permuted agent labels.",
+    "metrics": [
+      "Intervention effect by schedule",
+      "Task success",
+      "First-mover advantage",
+      "Actions to completion"
+    ],
+    "falsifier": "The effect remains within a prespecified equivalence margin across schedules and update-order permutations.",
+    "confounds": "Update schedules change information freshness; record that mechanism rather than attributing all differences to psychology.",
+    "prior": [
+      {
+        "id": "grotschla-2025-agentsnet",
+        "relation": "Graph coordination setting where scheduling must be explicit."
+      },
+      {
+        "id": "vicsek-1995-novel",
+        "relation": "Classical collective model provides a synchronous-update contrast, not a theorem about LLMs."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Implement matching state-read semantics and audit schedule literature flagged by the unmerged simulator survey.",
+    "briefs": []
+  },
+  {
+    "id": "SIM-03",
+    "area": "meta",
+    "title": "Can the benchmark be solved without observing peers?",
+    "question": "Does a purported interaction benchmark require the observations it is intended to study?",
+    "hypothesis": "A timestep-only or memorized-action policy will solve some fixed-layout cases, but fail on held-out randomized layouts and role assignments.",
+    "test": "Compare full-observation, masked-observation and timestep-only policies on matched task instances. Freeze policies before evaluating new seeds, graph label permutations and layouts. Analyze independently trained policies or independently prompted episodes as appropriate.",
+    "baseline": "Random actions, scripted open-loop policy and fully observing agent with equal action budget.",
+    "metrics": [
+      "Success without observations",
+      "Generalization gap",
+      "Marginal value of peer observations",
+      "Policy cost"
+    ],
+    "falsifier": "Blind policies remain near chance on fixed cases while observed policies generalize, supporting benchmark validity.",
+    "confounds": "Masking inputs can create out-of-distribution prompts; also train or prompt blind policies from the start.",
+    "prior": [
+      {
+        "id": "grotschla-2025-agentsnet",
+        "relation": "Graph-task benchmark to audit for observation dependence."
+      },
+      {
+        "id": "ruan-2025-benchmarking",
+        "relation": "Swarm-task benchmark motivating a classical and blind-policy comparison."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "api-small",
+    "needs": "Select one runnable task; inspect the local simulator scan's SMACv2 lead before claiming a new diagnostic.",
+    "briefs": []
+  },
+  {
+    "id": "SIM-04",
+    "area": "meta",
+    "title": "Same rules, different engines",
+    "question": "Do two implementations of a collective model agree after matching semantics rather than just parameter names?",
+    "hypothesis": "Apparent framework-dependent behavior will shrink after matching update order, neighborhood rules, boundaries and random-number consumption.",
+    "test": "Implement a minimal model in two small engines, record those semantic choices, and compare trajectories under deterministic noise input plus distributional results under independent seeds. Introduce one deliberate mismatch at a time to identify which discrepancy matters.",
+    "baseline": "A small transparent reference implementation and step-size/precision convergence checks.",
+    "metrics": [
+      "One-step state error",
+      "Distributional order-parameter distance",
+      "Regime classification agreement",
+      "Runtime per agent-step"
+    ],
+    "falsifier": "A material behavioral gap survives matched semantics and validated numerical tolerance.",
+    "confounds": "Bitwise equality is not expected across hardware; distinguish pathwise replay from distributional agreement.",
+    "prior": [
+      {
+        "id": "shaebani-2020-computational",
+        "relation": "Computational-model reference for matching physical assumptions."
+      },
+      {
+        "id": "gh-mesa-mesa",
+        "relation": "ABM engine candidate; existing run notes do not establish cross-engine equivalence."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Use an existing model and tiny reference engine; the broad local simulator survey is still unfinished.",
+    "briefs": []
+  }
+]
