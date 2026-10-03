@@ -6,20 +6,20 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 314 | 8 | 3 | 15 | 0 | 3 | 343 |
-| collective-decision | 238 | 8 | 22 | 19 | 0 | 11 | 298 |
+| collective-motion | 314 | 8 | 3 | 15 | 0 | 4 | 344 |
+| collective-decision | 238 | 8 | 22 | 19 | 0 | 12 | 299 |
 | swarm-robotics | 272 | 13 | 2 | 7 | 0 | 2 | 296 |
 | swarm-intelligence | 107 | 1 | 2 | 4 | 0 | 0 | 114 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 0 | 194 |
 | sync-consensus | 225 | 8 | 11 | 17 | 0 | 10 | 271 |
-| criticality-measurement | 188 | 4 | 2 | 23 | 0 | 6 | 223 |
+| criticality-measurement | 188 | 4 | 2 | 23 | 0 | 7 | 224 |
 | marl-emergence | 125 | 12 | 0 | 33 | 0 | 8 | 178 |
 | llm-agent-swarms | 284 | 49 | 93 | 198 | 5 | 10 | 639 |
 | crowds-and-traffic | 78 | 2 | 1 | 2 | 0 | 8 | 91 |
 | meta | 82 | 9 | 5 | 22 | 0 | 3 | 121 |
 | sybil-resistance | 207 | 45 | 61 | 59 | 5 | 2 | 379 |
 | fork-merge-security | 214 | 14 | 56 | 69 | 0 | 6 | 359 |
-| swarm-detection | 315 | 35 | 70 | 194 | 8 | 6 | 628 |
+| swarm-detection | 320 | 35 | 70 | 194 | 8 | 6 | 633 |
 
 ## Tasks
 
@@ -136,7 +136,7 @@
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | scan-papers-sd-ai-content lane finished: 55 entries on branch lane/sd-ai-content |
-| shadow/sol-w3 | done |  | 2026-10-03T20:02Z | completed batch 47 with 10 new blogs and notes on 2 papers; talk batches 24 and 26 released due transcript access blocker |
+| shadow/sol-w3 | working |  | 2026-10-03T20:00Z | processing talk batch 24 using yt_transcript.sh and Apify fallback |
 | shadow/sol-g50 | working | synthesis-people-and-labs | 2026-10-03T19:50Z | Writing synthesis/people-and-labs.md (issue |
 | shadow/sol-w7 | working |  | 2026-10-03T19:45Z | Cataloguing GitHub batch 48, monitoring and collective cheating blogs |
 | shadow/sol-w8 | blocked |  | 2026-10-03T19:44Z | Completed X batches 45 and 44; remaining preferred talk batches require readable transcripts. |
