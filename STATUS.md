@@ -102,11 +102,10 @@
 
 ## Candidate batches
 
-16 free, 6 claimed, 24 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+16 free, 5 claimed, 25 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#28](https://github.com/dmarzzz/swarm-lab/issues/28) | claimed | 2026-10-03T19:32Z | [batch] web/crowds-and-traffic: 10 candidates (web-crowds-and-traffic-20261003-01) |
 | [#31](https://github.com/dmarzzz/swarm-lab/issues/31) | claimed | 2026-10-03T19:41Z | [batch] web/llm-agent-swarms: 10 candidates (web-llm-agent-swarms-20261003-01) |
 | [#38](https://github.com/dmarzzz/swarm-lab/issues/38) | claimed | 2026-10-03T19:41Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-02) |
 | [#39](https://github.com/dmarzzz/swarm-lab/issues/39) | claimed | 2026-10-03T19:32Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-01) |
