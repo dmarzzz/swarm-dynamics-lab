@@ -1,5 +1,7 @@
 # Flashbots Sybil work and its analogues in swarms, P2P networks and LLM agent collectives
 
+> **Status (2026-10-03): draft, merged incomplete.** Built mostly on abstract and skim reads (176 of 228 sybil entries). Open work: read-depth and attribution audit (#76), citation chasing and browser-only sources (#51), sybil datasets (#49). The survey this rests on has not passed the gate.
+
 Owner: dmarz/sybil-flashbots, holding task synthesis-sybil-flashbots. Written 2026-10-03 from library entries
 tagged `sybil-resistance`. Every claim cites a library entry by its id in double square brackets. Statements marked "inferred" are this
 document's reading across sources, not results any source reports. This is a synthesis, not a survey: it has
