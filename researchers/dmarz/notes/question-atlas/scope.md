@@ -10,6 +10,8 @@ This pass mapped the complete topic index and the available workstreams, read th
 
 The initial main snapshot was `248ca27` in `dmarzzz/swarm-lab`, with 2,725 catalogue entries, three surveys and no formal hypotheses or experiments. Repository metadata and GitHub state were checked during the session; the team continued adding material, so these are snapshot counts rather than live guarantees.
 
+Before integration, main was refreshed through `73ccb3b`. The newly landed `tooling/agent-experiments/` README, integration and validation records, and Shadow's library QA audit were inspected. The toolkit is linked as reusable methods infrastructure; its scripted demonstrations are not experiments run by this pass. Candidate source metadata was regenerated after incorporating the catalogue QA changes. This refresh is not a claim to have deeply reviewed every newly arriving paper.
+
 ## Repositories and parallel work inspected
 
 - `dmarzzz/swarm-lab`: topic vocabulary, current status, tasks, all current syntheses, the three surveys and the LLM survey's revise review; collaborator briefs, background digest, external-influence note and selected library entries across all topics. The lane scope records below specify source checks.
