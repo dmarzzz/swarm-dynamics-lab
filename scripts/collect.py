@@ -63,7 +63,15 @@ RELEVANT = ["agent", "swarm", "llm", " ai ", "ai-", "bot", "model", "sybil", "vi
             "anthropic", "claude", "codex", "alignment", "byzantine", "flock", "boids", "collective"]
 NOISE = ["airdrop", "presale", " ca:", "pump.fun", "token launch", "legendary websites", "pdf tools", "product hunt",
          "must-use", "skills for your", "stock token", "giveaway", "whitelist", "$sei", "$icp", "testnet", "bankai",
-         "room in sf", "newsletter", "zeru", "jevstocks", "monark", "termix"]
+         "room in sf", "newsletter", "zeru", "jevstocks", "monark", "termix",
+         # writer feedback 2026-10-03 (w1): token/campaign shill, product promos, scraper/browser-tool ads
+         "$wld", "$trx", "$b.ai", "b.ai", "worldcoin app", "tron", "staking", "tokenomics", "mint now", "join the waitlist",
+         "sign up free", "free trial", "use code", "promo", "% off", "launching today", "we just launched", "our scraper",
+         "scraping api", "proxy", "residential ip", "web unlocker", "no-code", "try it free", "link in bio", "dm me",
+         "follow for more", "thread 🧵 below", "pre-order", "early access", "sponsored", "#ad "]
+# a post that is only a pointer ("great thread", "must read", "thoughts?") with no claim of its own
+DIGEST = ["must read", "great thread", "worth reading", "thoughts?", "interesting take", "this is huge", "bookmark this",
+          "weekly roundup", "top 10", "top 5", "here's everything", "daily digest", "in case you missed", "icymi"]
 SKIP_HOSTS = ("x.com", "twitter.com", "t.co", "youtu.be", "youtube.com", "instagram.com", "tiktok.com",
               "linkedin.com", "facebook.com", "discord.gg", "t.me", "bit.ly", "amazon.com", "apple.com")
 
@@ -626,9 +634,31 @@ def score(r: dict) -> int:
     if r.get("source") in {"x", "apify-x"}:
         if not any(k in txt for k in RELEVANT) or hits == 0:
             s = min(s, 1.0)
-        if any(k in txt for k in NOISE) or txt.count("$") >= 2 or "#" * 1 in txt and txt.count("#") >= 4:
-            s = min(s, 1.0)
+        if any(k in txt for k in NOISE) or re.search(r"\$[a-z]{2,6}\b", txt) or txt.count("$") >= 2 or txt.count("#") >= 4:
+            return 0  # shill / promo: out, not merely down-ranked
+        if any(k in txt for k in DIGEST) and len(txt) < 400 and not r.get("thread_text"):
+            s = min(s, 1.0)  # pointer post with no content of its own; the links pass will pick up what it points at
+        if r.get("links") and any("github.com" in u or "arxiv.org" in u for u in r["links"]) and len(txt) < 200:
+            s -= 0.5  # the tweet is just an announcement; prefer the primary source it links to
     return max(0, min(5, round(s)))
+
+
+_REPO_CACHE: dict[str, bool] = {}
+
+
+def repo_alive(url: str) -> bool:
+    """gh api repos/<owner>/<repo> returns non-zero on 404 / renamed-away repos."""
+    import subprocess
+    m = re.search(r"github\.com/([^/\s#?]+)/([^/\s#?]+)", url)
+    if not m:
+        return True
+    key = f"{m.group(1)}/{m.group(2).removesuffix('.git')}"
+    if key not in _REPO_CACHE:
+        r = subprocess.run(["gh", "api", f"repos/{key}", "--jq", ".full_name"], capture_output=True, text=True)
+        _REPO_CACHE[key] = r.returncode == 0
+        if not _REPO_CACHE[key]:
+            print(f"  dead repo {key}", file=sys.stderr)
+    return _REPO_CACHE[key]
 
 
 def cmd_batch(a):
@@ -637,11 +667,15 @@ def cmd_batch(a):
     raw = []
     for p in sorted(RAW.glob("*.jsonl")):
         raw += jl_read(p)
-    fresh, dropped = {}, {"library": 0, "seen": 0, "low": 0, "dupe": 0}
+    fresh, dropped = {}, {"library": 0, "seen": 0, "low": 0, "dupe": 0, "linked-in-library": 0, "dead-repo": 0}
     for r in raw:
         cid = r["id"]
         if cid in lib:
             dropped["library"] += 1
+        elif r.get("source") in {"x", "apify-x"} and any(cand_id("", u) in lib for u in r.get("links") or []):
+            dropped["linked-in-library"] += 1  # the thing the tweet points at is already catalogued
+        elif r.get("source") == "code" and not a.no_repo_check and not repo_alive(r["url"]):
+            dropped["dead-repo"] += 1
         elif cid in seen:
             dropped["seen"] += 1
         elif cid in fresh:
