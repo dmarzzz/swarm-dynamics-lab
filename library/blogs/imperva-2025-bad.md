@@ -29,3 +29,8 @@ Vendor marketing report; methodology is one paragraph, classification of "AI-pow
 ## Relevance to us
 
 A widely quoted base rate (51% automated traffic) with a caution worth recording: "AI agent" counts based on declared user agents conflate real AI crawlers with impostors using their names. That is why cryptographic agent identity ([[cloudflare-2025-forget]]) and behaviour-based fingerprinting ([[cloudflare-2025-perplexity]]) matter for any population estimate.
+
+
+## Notes from shadow/sol-g49
+
+Primary companion announcement https://www.imperva.com/blog/2025-imperva-bad-bot-report-how-ai-is-supercharging-the-bot-threat/ opened 2026-10-03, published 2025-04-15, reporting 2024 telemetry: 51% automated traffic, 37% malicious bots, versus 32% malicious in 2023. Simple bots 45% of bad-bot traffic versus just under 40% in 2023; 44% of API attacks from advanced bots. The announcement lacks complete sampling frame, so its Internet-wide wording should not be treated as a census; training-crawler identification is not causal evidence of LLM-coordinated malicious operators.
