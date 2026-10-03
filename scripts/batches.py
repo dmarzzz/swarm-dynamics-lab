@@ -224,9 +224,22 @@ def cmd_touch(a):
 
 
 def cmd_done(a):
-    missing = [e for e in a.entries if not (ROOT / e).exists()]
+    # Writers may have committed their entries in a different worktree. Refresh
+    # main once, then accept either this checkout or the published git object.
+    fetched = subprocess.run(["git", "fetch", "origin", "main"], cwd=ROOT,
+                             capture_output=True, text=True, timeout=60)
+    if fetched.returncode:
+        print(f"warning: could not refresh origin/main: {fetched.stderr.strip()}", file=sys.stderr)
+    missing = []
+    for entry in a.entries:
+        if (ROOT / entry).exists():
+            continue
+        published = subprocess.run(["git", "cat-file", "-e", f"origin/main:{entry}"],
+                                   cwd=ROOT, capture_output=True)
+        if published.returncode:
+            missing.append(entry)
     if missing and not a.force:
-        sys.exit(f"entries not found in the clone: {missing}")
+        sys.exit(f"entries not found locally or on origin/main: {missing}")
     body = [f"done by `{a.agent}` at {now_utc():%Y-%m-%d %H:%M}Z", "", "Entries:"] + [f"- `{e}`" for e in a.entries]
     if a.skipped:
         body += ["", f"Skipped: {a.skipped}"]
