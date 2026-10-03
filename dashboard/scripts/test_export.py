@@ -259,5 +259,40 @@ class ContributionTest(unittest.TestCase):
         self.assertFalse({q['id'] for q in data['questions']} & {q['id'] for q in canonical['candidates']})
         self.assertEqual(data['registered_hypothesis_count'], len(load('hypotheses')))
 
+class ContributionActivityTest(unittest.TestCase):
+    def test_publication_expiry_and_independent_tag_additions(self):
+        from contributions import activity_payload
+        from datetime import datetime, timezone
+        row = {'briefs':['memory','quorum'], 'activity': {'added_at':'2026-10-01T12:00:00Z',
+            'tags_added_at': {'memory':'2026-10-01T12:00:00Z','quorum':'2026-10-08T10:00:00Z'}}}
+        now = datetime(2026,10,8,12,tzinfo=timezone.utc)
+        result = activity_payload(row, now)
+        self.assertFalse(result['is_new'])  # Exactly seven days old.
+        self.assertEqual(result['new_tags'], ['quorum'])
+        row['activity']['added_at'] = '2026-10-01T12:00:01Z'
+        row['activity']['tags_added_at']['memory'] = row['activity']['added_at']
+        self.assertTrue(activity_payload(row, now)['is_new'])
+        self.assertEqual(activity_payload(row, datetime(2026,10,16,tzinfo=timezone.utc))['new_tags'], [])
+
+    def test_unknown_and_future_dates_are_not_new(self):
+        from contributions import activity_payload
+        from datetime import datetime, timezone
+        now = datetime(2026,10,3,tzinfo=timezone.utc)
+        self.assertFalse(activity_payload({'briefs':[]}, now)['is_new'])
+        self.assertFalse(activity_payload({'briefs':[], 'activity': {'added_at':'2026-10-04T00:00:00Z'}}, now)['is_new'])
+
+    def test_invalid_dates_unknown_tags_and_backdating_rejected(self):
+        from contributions import activity_payload
+        from datetime import datetime, timezone
+        now = datetime(2026,10,3,tzinfo=timezone.utc)
+        for metadata in [
+            {'added_at':'2026-10-03'},
+            {'added_at':'2026-99-03T00:00:00Z'},
+            {'added_at':'2026-10-03T00:00:00Z','tags_added_at':{'missing':'2026-10-03T01:00:00Z'}},
+            {'added_at':'2026-10-03T00:00:00Z','tags_added_at':{'memory':'2026-10-02T00:00:00Z'}},
+        ]:
+            with self.subTest(metadata=metadata):
+                with self.assertRaises(ValueError): activity_payload({'briefs':['memory'], 'activity':metadata}, now)
+
 if __name__ == '__main__':
     unittest.main()

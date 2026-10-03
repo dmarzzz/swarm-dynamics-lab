@@ -26,3 +26,9 @@ Start with seeded synthetic fixtures, held-out worlds and equal information/acti
 The dashboard exports these notes separately from Dan’s canonical atlas. `dashboard/contribution-banks.json` registers the VX, PX and EX banks. Each bank declares an owner, researcher-notes path, collection key and ID prefix. Export validation checks ownership paths, IDs, explicit exploratory status and resolvable atlas/source/brief/related links. New banks must satisfy that contract. Contribution records currently use the original sixteen Vishesh brief slugs; supporting another project-brief taxonomy requires an explicit schema extension.
 
 Contribution cards are read-only. They do not inherit the canonical atlas’s local shortlist/review state or claim formal hypothesis status. The Questions page reports both record counts and links to the contribution view.
+
+## Publication activity metadata
+
+The EX records include `activity.added_at`, backfilled from their first publication commit, and `activity.tags_added_at`, keyed by current project-brief slug. Timestamps use UTC `YYYY-MM-DDTHH:MM:SSZ`. Preserve the publication timestamp on edits. When adding a project tag later, record its actual addition timestamp; remove its metadata when removing the tag. Do not reset timestamps during export or deployment. Initial tags share the publication timestamp and do not count as later additions.
+
+The Contributions dashboard shows **New** for seven days after publication, and **New tag** beside project tags added later within that window. It supports separate recent-item and recent-tag filters. Badges are calculated at export time; the view displays that reference time, and the existing scheduled dashboard build refreshes expiry. Undated legacy records remain unbadged rather than assigning invented dates. These markers do not change research status, canonical atlas review hashes or scientific novelty assessments.

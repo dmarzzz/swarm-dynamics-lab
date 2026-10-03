@@ -4,11 +4,13 @@ export interface Contribution {
   falsifier: string; confounds: string; feasibility: string; decision_value: string;
   scenario: string; delta: string; metrics: string[]; briefs: string[]; atlas: string[];
   related: string[]; sources: string[]; source_note: string; status: string;
+  activity?: { added_at: string | null; tags_added_at: Record<string, string>; is_new: boolean; new_tags: string[] };
   bank: string; owner: string; source_path: string;
 }
 export interface ContributionsData {
   schema: string; atlas_count: number; contribution_count: number; question_record_count: number;
   registered_hypothesis_count: number;
+  activity_as_of?: string; recent_days?: number;
   banks: { id: string; owner: string; path: string; count: number }[];
   questions: Contribution[];
 }
