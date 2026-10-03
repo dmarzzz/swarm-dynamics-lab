@@ -6,20 +6,20 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 316 | 17 | 3 | 15 | 3 | 40 | 394 |
-| collective-decision | 306 | 22 | 24 | 19 | 0 | 35 | 406 |
+| collective-motion | 317 | 17 | 3 | 15 | 3 | 40 | 395 |
+| collective-decision | 311 | 22 | 24 | 19 | 0 | 35 | 411 |
 | swarm-robotics | 291 | 29 | 2 | 7 | 1 | 24 | 354 |
 | swarm-intelligence | 113 | 2 | 2 | 4 | 2 | 3 | 126 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
-| sync-consensus | 252 | 24 | 11 | 17 | 1 | 28 | 333 |
+| sync-consensus | 255 | 24 | 11 | 17 | 1 | 28 | 336 |
 | criticality-measurement | 194 | 4 | 3 | 23 | 2 | 22 | 248 |
 | marl-emergence | 160 | 60 | 1 | 33 | 2 | 13 | 269 |
-| llm-agent-swarms | 533 | 118 | 104 | 197 | 47 | 14 | 1013 |
+| llm-agent-swarms | 553 | 118 | 106 | 197 | 47 | 14 | 1035 |
 | crowds-and-traffic | 82 | 15 | 1 | 2 | 1 | 8 | 109 |
 | meta | 138 | 39 | 6 | 22 | 1 | 4 | 210 |
-| sybil-resistance | 330 | 65 | 62 | 57 | 8 | 22 | 544 |
+| sybil-resistance | 331 | 65 | 62 | 57 | 8 | 22 | 545 |
 | fork-merge-security | 357 | 46 | 62 | 69 | 8 | 13 | 555 |
-| swarm-detection | 385 | 45 | 79 | 193 | 35 | 11 | 748 |
+| swarm-detection | 390 | 45 | 80 | 193 | 35 | 11 | 754 |
 | agent-budgets | 53 | 1 | 7 | 0 | 0 | 0 | 61 |
 
 ## Tasks
