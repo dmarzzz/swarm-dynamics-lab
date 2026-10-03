@@ -2,9 +2,9 @@
 
 # Library index
 
-2373 entries.
+2381 entries.
 
-## Papers (1521)
+## Papers (1524)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -770,6 +770,7 @@
 | [rosas-2019-quantifying](papers/rosas-2019-quantifying.md) | Quantifying high-order interdependencies via multivariate extensions of the mutual information | 2019 | 4 | abstract | criticality-measurement | dmarz/criticality-measurement-audit |
 | [rose-2026-detecting](papers/rose-2026-detecting.md) | Detecting Multi-Agent Collusion Through Multi-Agent Interpretability | 2026 | 4 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-coordination |
 | [rosenthal-2015-revealing](papers/rosenthal-2015-revealing.md) | Revealing the hidden networks of interaction in mobile animal groups allows prediction of complex behavioral contagion | 2015 | 4 | abstract | collective-decision, collective-motion, criticality-measurement | dmarz/collective-decision |
+| [rossi-2024-bots](papers/rossi-2024-bots.md) | Bots on Social Media: The Past, Present and Future | 2024 | 4 | abstract | swarm-detection, llm-agent-swarms | shadow/sol-w7 |
 | [rubenstein-2012-kilobot](papers/rubenstein-2012-kilobot.md) | Kilobot: A low cost scalable robot system for collective behaviors | 2012 | 4 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [russell-2025-ai](papers/russell-2025-ai.md) | AI use in American newspapers is widespread, uneven, and rarely disclosed | 2025 | 4 | abstract | swarm-detection | dmarz/sd-ai-content |
 | [saab-2026-graph](papers/saab-2026-graph.md) | Graph Feedback Controls Consensus and Clique Formation in Open-Weight Language-Model Populations | 2026 | 4 | abstract | llm-agent-swarms, sync-consensus | dmarz/llm-agent-swarms-recent |
@@ -841,6 +842,7 @@
 | [tran-2026-single](papers/tran-2026-single.md) | Single-Agent LLMs Outperform Multi-Agent Systems on Multi-Hop Reasoning Under Equal Thinking Token Budgets | 2026 | 4 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms-recent |
 | [treiber-2000-congested](papers/treiber-2000-congested.md) | Congested traffic states in empirical observations and microscopic simulations | 2000 | 4 | abstract | crowds-and-traffic | dmarz/crowds-and-traffic |
 | [trokhymovych-2026-adversarial](papers/trokhymovych-2026-adversarial.md) | Adversarial Creation and Detection of AI-Generated Social Bot Content | 2026 | 4 | abstract | swarm-detection, llm-agent-swarms | dmarz/sd-bots |
+| [tsai-2026-llm](papers/tsai-2026-llm.md) | LLM-Enabled Cloud-Native Dynamic Honeypot Systems: Architecture, Ethical Governance, and Empirical Evaluation | 2026 | 4 | abstract | swarm-detection, fork-merge-security | shadow/sol-w7 |
 | [tsutsui-2003-genetic](papers/tsutsui-2003-genetic.md) | Genetic diversity, asymmetrical aggression, and recognition in a widespread invasive species | 2003 | 4 | full | fork-merge-security, collective-decision, sybil-resistance | dmarz/fm-biology |
 | [tump-2024-cognitive](papers/tump-2024-cognitive.md) | A Cognitive Computational Approach to Social and Collective Decision-Making | 2024 | 4 | skim | collective-decision, llm-agent-swarms, crowds-and-traffic | dmarz/collective-decision-audit |
 | [turgut-2008-self](papers/turgut-2008-self.md) | Self-organized flocking in mobile robot swarms | 2008 | 4 | abstract | swarm-robotics, collective-motion | dmarz/swarm-robotics |
@@ -974,6 +976,7 @@
 | [bostrom-2023-propositions](papers/bostrom-2023-propositions.md) | Propositions Concerning Digital Minds and Society | 2023 | 3 | skim | fork-merge-security, sybil-resistance, meta | dmarz/fm-sutton |
 | [boyd-2006-randomized](papers/boyd-2006-randomized.md) | Randomized gossip algorithms | 2006 | 3 | abstract | sync-consensus | dmarz/sync-consensus |
 | [brauns-2024-nonreciprocal](papers/brauns-2024-nonreciprocal.md) | Nonreciprocal Pattern Formation of Conserved Fields | 2024 | 3 | skim | active-matter, collective-motion | dmarz/active-matter-audit |
+| [breum-2024-persuasive](papers/breum-2024-persuasive.md) | The Persuasive Power of Large Language Models | 2024 | 3 | abstract | swarm-detection, llm-agent-swarms, sync-consensus | shadow/sol-w7 |
 | [brockers-2025-disentangling](papers/brockers-2025-disentangling.md) | Disentangling Interaction and Bias Effects in Opinion Dynamics of Large Language Models | 2025 | 3 | abstract | llm-agent-swarms, sync-consensus | dmarz/llm-agent-swarms |
 | [bu-2026-re-derivability](papers/bu-2026-re-derivability.md) | Re-derivability Decides What a Staged Agent Pipeline Recovers After an Upstream Fault | 2026 | 3 | abstract | fork-merge-security, llm-agent-swarms | dmarz/fm-bft-aggregation |
 | [burton-2024-how](papers/burton-2024-how.md) | How large language models can reshape collective intelligence | 2024 | 3 | abstract | llm-agent-swarms, collective-decision | dmarz/llm-agent-swarms |
@@ -2358,16 +2361,19 @@
 | [data-moltbook-takschdube-2026](datasets/data-moltbook-takschdube-2026.md) | Moltbook longitudinal dataset (Taksch Dube): timestamped crawls with derived social and reply graphs | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 
-## Talks (44)
+## Talks (49)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
+| [annessi-unknown-private](talks/annessi-unknown-private.md) | MEV Roast \| Private Searching on Private Transactions - Robert Annessi (Flashbots) | unknown | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [barfuss-2023-intrinsic](talks/barfuss-2023-intrinsic.md) | Wolfram Barfuss: Intrinsic fluctuations in reinforcement learning promote cooperation | 2023 | 5 | abstract | marl-emergence, collective-decision | shadow/sol-w1 |
 | [couzin-2017-ecology](talks/couzin-2017-ecology.md) | 2017 Ecology Across Borders Plenary Lecture: Iain Couzin | 2017 | 5 | full | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
 | [dalton-2026-breaking](talks/dalton-2026-breaking.md) | Black Hat USA 2026 \| The 'Breaking' News: The OpenAI-Hugging Face Incident | 2026 | 5 | abstract | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
 | [deason-2018-time](talks/deason-2018-time.md) | Time Signature Based Matching - Lauren Deason | 2018 | 5 | abstract | swarm-detection | shadow/sol-w1 |
+| [felten-2022-l2](talks/felten-2022-l2.md) | L2 sequencing and MEV - Ed Felten (Arbitrum) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [monnot-2022-study](talks/monnot-2022-study.md) | A study of the transaction supply chain from CryptoKitties to MEV-Boost to PBS - Barnabé Monnot (EF) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [raj-2022-case](talks/raj-2022-case.md) | A Case-Study of MEV on Low-Fee Chains - Supragya Raj (Marlin) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
+| [salles-2022-mev](talks/salles-2022-mev.md) | MEV formalization - Alejo Salles (Flashbots) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [sutton-2025-father](talks/sutton-2025-father.md) | Richard Sutton – Father of RL thinks LLMs are a dead end | 2025 | 5 | full | fork-merge-security, llm-agent-swarms, meta | dmarz/fm-sutton |
 | [wu-2025-incentivizing](talks/wu-2025-incentivizing.md) | TILOS Seminar: Incentivizing Emergent Behaviors for LLMs via Reinforcement Learning | 2025 | 5 | abstract | llm-agent-swarms, marl-emergence | shadow/sol-w1 |
 | [adler-2022-exploring](talks/adler-2022-exploring.md) | Exploring MEV in the modular blockchain stack - John Adler (Celestia) | 2022 | 4 | full | sybil-resistance | shadow/sol-w8 |
@@ -2376,6 +2382,7 @@
 | [coutinho-de-paula-2024-dave](talks/coutinho-de-paula-2024-dave.md) | The Dave fraud-proof algorithm — triumphing over Sybils with a laptop and a small collateral | 2024 | 4 | skim | sybil-resistance, sync-consensus | dmarz/sybil-flashbots-informal |
 | [cubbon-2020-inauthentic](talks/cubbon-2020-inauthentic.md) | Inauthentic & coordinated online activity \| Webinar with Seb Cubbon, Carlotta Dotto & Alastair Reid | 2020 | 4 | abstract | swarm-detection | shadow/sol-w1 |
 | [dafoe-2021-open](talks/dafoe-2021-open.md) | Open Problems in Cooperative AI - Allan Dafoe and Edward Hughes | 2021 | 4 | abstract | marl-emergence, collective-decision, llm-agent-swarms | shadow/sol-w1 |
+| [hermann-2022-mev](talks/hermann-2022-mev.md) | MEV Reduction via Batch Auction - Alex Hermann (Cowswap) | 2022 | 4 | full | sybil-resistance | shadow/sol-w8 |
 | [hickey-2018-identifying](talks/hickey-2018-identifying.md) | Identifying and Monitoring Disinformation across Social Platforms: Techniques for Discovery and Analysis | 2018 | 4 | abstract | swarm-detection | shadow/sol-w1 |
 | [jaques-2022-allen](talks/jaques-2022-allen.md) | Allen School Colloquium: Natasha Jaques (Google + UC Berkeley) | 2022 | 4 | abstract | marl-emergence, collective-decision | shadow/sol-w1 |
 | [jin-2021-power](talks/jin-2021-power.md) | The Power of Exploiter: Provable Multi-Agent RL in Large State Spaces | 2021 | 4 | abstract | marl-emergence | shadow/sol-w1 |
@@ -2387,6 +2394,7 @@
 | [zhang-2025-how](talks/zhang-2025-how.md) | How to Build Effective AI Agents Without Overengineering Them | 2025 | 4 | full | llm-agent-swarms | shadow/sol-w1 |
 | [amodei-2026-anthropic](talks/amodei-2026-anthropic.md) | Anthropic CEO tells CNN how AI 'agent swarms' could threaten humanity | 2026 | 3 | abstract | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
 | [bialek-2020-criticality](talks/bialek-2020-criticality.md) | Criticality in biological systems, from molecules to brains | 2020 | 3 | abstract | criticality-measurement | shadow/sol-w5 |
+| [flashbots-2022-research](talks/flashbots-2022-research.md) | Flashbots Research Workshop #4: FRP Presentations & Review | 2022 | 3 | full | sybil-resistance | shadow/sol-w8 |
 | [ganesh-2020-introduction](talks/ganesh-2020-introduction.md) | Lecture 8: Introduction to consensus, and the de Groot model | 2020 | 3 | full | sync-consensus, collective-decision | shadow/sol-w6 |
 | [meir-2026-prediction](talks/meir-2026-prediction.md) | Why Prediction Markets and AI Agents Are a Compliance Nightmare \| Solidus Labs Co-Founder Asaf Meir | 2026 | 3 | abstract | swarm-detection, llm-agent-swarms | shadow/sol-w1 |
 | [motsch-2020-fundamental](talks/motsch-2020-fundamental.md) | Fundamental diagrams for pedestrian and ant dynamics | 2020 | 3 | abstract | crowds-and-traffic, collective-motion | shadow/sol-w5 |
