@@ -3,7 +3,7 @@ id: scan-papers-sd-attribution
 type: task
 title: 'Catalogue the papers: identifying the model or agent behind observed behaviour'
 kind: scan
-status: claimed
+status: done
 priority: p1
 owner: dmarz/sd-attribution
 for: null
@@ -14,6 +14,8 @@ topics:
 - swarm-detection
 claimed_at: 2026-10-03T18:19Z
 updated: 2026-10-03T18:19Z
+outputs:
+- library/papers
 ---
 
 ## Goal
