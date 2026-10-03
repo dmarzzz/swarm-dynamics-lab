@@ -3,7 +3,7 @@ id: review-llm-agent-swarms
 type: task
 title: 'Review survey: llm agent swarms (cross-researcher)'
 kind: review
-status: claimed
+status: done
 priority: p0
 owner: dmarz/reviewer-1
 for: dmarz
@@ -13,7 +13,9 @@ depends_on: []
 topics:
 - llm-agent-swarms
 claimed_at: 2026-10-03T19:19Z
-updated: 2026-10-03T19:19Z
+updated: 2026-10-03T19:27Z
+outputs:
+- reviews/llm-agent-swarms--dmarz.md
 ---
 
 ## Goal
