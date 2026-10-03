@@ -2,7 +2,7 @@
 
 # Library index
 
-1488 entries.
+1492 entries.
 
 ## Papers (1206)
 
@@ -1299,7 +1299,7 @@
 | [flashbots-2026-why](blogs/flashbots-2026-why.md) | Why Location Choice Matters | 2026 | 2 | skim | sybil-resistance, sync-consensus | dmarz/sybil-flashbots |
 | [owasp-2025-llm](blogs/owasp-2025-llm.md) | OWASP Top 10 for LLMs and Gen AI Apps 2025 | 2025 | 2 | skim | fork-merge-security | dmarz/fm-memory-injection |
 
-## Threads (89)
+## Threads (93)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1354,6 +1354,7 @@
 | [x-gastronomy-2104768000616185980](threads/x-gastronomy-2104768000616185980.md) | ORBIT: a configurable framework for multi-agent safety and security evaluations built on UK AISI Inspect (abstract repost) | 2026 | 3 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-globalaffairs-2093130747796148634](threads/x-globalaffairs-2093130747796148634.md) | GlobalAffairs: X Safety reports a ~200,000-account suspected Chinese bot farm, 200 of whose accounts pushed AI data-center electricity-price claims | 2026 | 3 | full | swarm-detection | dmarz/x-threads |
 | [x-hackerlogs-2104361759943667893](threads/x-hackerlogs-2104361759943667893.md) | hackerlogs: GET-only sandboxes still shipped Hugging Face 'LOOT', 80,000+ payloads reassembled by Swarmtraces | 2026 | 3 | full | llm-agent-swarms, swarm-detection | shadow/sol-1 |
+| [x-insecureagents-2104556743003193585](threads/x-insecureagents-2104556743003193585.md) | Insecure Agents podcast: 'From Pets to Cattle' panel on agent identity on the web (Keycard, Browserbase, Visa): Web Bot Auth, Trusted Agent Protocol, task-scoped permissions | 2026 | 3 | full | sybil-resistance, swarm-detection, llm-agent-swarms | shadow/sol-w1 |
 | [x-joinedgecity-2104956750374085113](threads/x-joinedgecity-2104956750374085113.md) | Edge City: Edge Agent Village V2, three weeks of hundreds of people and hundreds of personal agents at Edge City India (Goa, Oct 11 to Nov 1 2026) | 2026 | 3 | full | llm-agent-swarms, collective-decision | shadow/sol-1 |
 | [x-joshua-saxe-2099356748763041934](threads/x-joshua-saxe-2099356748763041934.md) | joshua_saxe: eleven-step scenario for an exponentially self-replicating AI agent botnet that steals inference and evades detection | 2026 | 3 | full | swarm-detection, fork-merge-security, llm-agent-swarms | dmarz/x-threads |
 | [x-ke-li-2021-1764838294439727567](threads/x-ke-li-2021-1764838294439727567.md) | ke_li_2021: new paper quantifies 'persona drift', chatbots wandering from their initial instructions, and proposes mitigations | 2024 | 3 | full | fork-merge-security | dmarz/x-threads |
@@ -1362,6 +1363,7 @@
 | [x-lbeurerkellner-1913204991977828708](threads/x-lbeurerkellner-1913204991977828708.md) | lbeurerkellner: in CaMeL, data flow can turn into control flow when the planner writes an interpreter over tools | 2025 | 3 | full | fork-merge-security | dmarz/x-threads |
 | [x-levelsio-2018012417586786775](threads/x-levelsio-2018012417586786775.md) | levelsio: blocks over 6 AI reply bots a day, almost 200 a month, up from a few a week last year | 2026 | 3 | full | swarm-detection | dmarz/x-threads |
 | [x-levelsio-2023152123202982288](threads/x-levelsio-2023152123202982288.md) | levelsio: chart of his manual AI-reply blocks shows exponential growth, which he attributes to OpenClaw | 2026 | 3 | full | swarm-detection | dmarz/x-threads |
+| [x-nikitabier-2102432368158245252](threads/x-nikitabier-2102432368158245252.md) | Nikita Bier (X): bot detection and human verification will be urgent as agent swarms 'suffocate every website and form'; X built its own stack in-house | 2026 | 3 | full | swarm-detection, sybil-resistance | shadow/sol-w1 |
 | [x-openai-2103566736356458911](threads/x-openai-2103566736356458911.md) | OpenAI: broader review of model actions during training and evaluation after the Hugging Face incident, expected to take months | 2026 | 3 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-petruhaai-2097211439664480703](threads/x-petruhaai-2097211439664480703.md) | Petr AI: DseWiki explainer, GET-accepting ProWiki engine, 18,000 posts under 3,700 names, 98.5% from Azure, 'lookahead party' | 2026 | 3 | full | llm-agent-swarms, swarm-detection | shadow/sol-1 |
 | [x-redwood-ai-1912544547118412010](threads/x-redwood-ai-1912544547118412010.md) | redwood_ai: release of 'Ctrl-Z: Controlling AI Agents via Resampling', AI control in a command-line agent setting | 2025 | 3 | full | fork-merge-security | dmarz/x-threads |
@@ -1383,6 +1385,7 @@
 | [x-deepfates-2102201043228799202](threads/x-deepfates-2102201043228799202.md) | deepfates: when everyone has long-running agents, where will they communicate and how will they know who's who? | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-every-2106112188184494268](threads/x-every-2106112188184494268.md) | Every: Mike Taylor had Fable 5.1 build a Generative-Agents-style village to watch message diffusion | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-giordanomarzo-1832097777792479583](threads/x-giordanomarzo-1832097777792479583.md) | GiordanoMarzo: preprint on the maximal scale of an LLM-populated society and whether LLMs self-organise to consensus | 2024 | 2 | full | llm-agent-swarms, sync-consensus | dmarz/x-threads |
+| [x-hassankhan96452-2102769492250280220](threads/x-hassankhan96452-2102769492250280220.md) | hassankhan96452: websites cannot tell a customer's agent from a scraper; agents should prove operator, authorising user and permissions (Meta Muse, Amazon vs Shopify) | 2026 | 2 | full | sybil-resistance, swarm-detection | shadow/sol-w1 |
 | [x-ji1n11-2097326143330210157](threads/x-ji1n11-2097326143330210157.md) | Ji1n: how OpenAI agents took over a German wiki and built a forum, 3,700 names, 18,000 edits, ~98% Azure traffic | 2026 | 2 | full | llm-agent-swarms, swarm-detection, fork-merge-security | shadow/sol-1 |
 | [x-lesliemen-2106171422309839001](threads/x-lesliemen-2106171422309839001.md) | Hai Ly: OpenAI notified 100+ organisations of misaligned agent activity; review covered ~50PB on 7,000 GB200/GB300 GPUs | 2026 | 2 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-nuryvittachi-2096039393043873817](threads/x-nuryvittachi-2096039393043873817.md) | Vittachi: early press-style account of the DseWiki takeover (15,000 writes, Nightingale report via Reuters, ZZZ backup pages) | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-1 |
@@ -1392,6 +1395,7 @@
 | [x-2xnmore-2104843632104587383](threads/x-2xnmore-2104843632104587383.md) | 2xnmore: Exploit Summit framing, const (Bittensor) on 'pointing the swarm' rather than fearing it | 2026 | 1 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-aidigest-2104617156482859510](threads/x-aidigest-2104617156482859510.md) | AI Digest: DeepSeek-V4-Pro reports human input in the village in its own newspaper | 2026 | 1 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-flexialpha6-2105900417078919489](threads/x-flexialpha6-2105900417078919489.md) | Flexialpha6: promotional post for InSoBlokAI TasteScore, a reputation and Sybil-detection layer pitched at AI agents | 2026 | 1 | full | sybil-resistance, swarm-detection | shadow/sol-w1 |
+| [x-heisblesse-2106002189600620864](threads/x-heisblesse-2106002189600620864.md) | heisblesse: 'Can AI agents build reputation?' ERC-8004 identity vs reputation registries, with Sybil distortion acknowledged (B.AI campaign post) | 2026 | 1 | full | sybil-resistance | shadow/sol-w1 |
 
 ## Code (107)
 
