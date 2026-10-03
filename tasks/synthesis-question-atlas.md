@@ -3,14 +3,30 @@ id: synthesis-question-atlas
 type: task
 title: Broad research questions, candidate hypotheses and test sketches for human review
 kind: synthesis
-status: open
+status: claimed
 priority: p1
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: dmarz/question-atlas
+for: null
 created: 2026-10-03
 created_by: dmarz/question-atlas
 depends_on: []
-topics: [meta, collective-motion, collective-decision, swarm-robotics, swarm-intelligence, active-matter, sync-consensus, criticality-measurement, marl-emergence, llm-agent-swarms, crowds-and-traffic, sybil-resistance, fork-merge-security, swarm-detection]
+topics:
+- meta
+- collective-motion
+- collective-decision
+- swarm-robotics
+- swarm-intelligence
+- active-matter
+- sync-consensus
+- criticality-measurement
+- marl-emergence
+- llm-agent-swarms
+- crowds-and-traffic
+- sybil-resistance
+- fork-merge-security
+- swarm-detection
+claimed_at: 2026-10-03T20:34Z
+updated: 2026-10-03T20:34Z
 ---
 
 ## Goal
