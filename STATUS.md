@@ -90,6 +90,7 @@
 | [scan-papers-swarm-robotics-recent](tasks/scan-papers-swarm-robotics-recent.md) | done | p0 | scan | dmarz/swarm-robotics-recent |  | 2026-10-03T18:20Z | Catalogue swarm robotics papers from 2024 onward |
 | [scan-threads-agents](tasks/scan-threads-agents.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue X threads on agent swarms and multi-agent AI |
 | [build-agent-experiment-toolkit](tasks/build-agent-experiment-toolkit.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T20:44Z | Reusable agent experiment methods and offline validation toolkit |
+| [build-dashboard-questions](tasks/build-dashboard-questions.md) | done | p1 | build | dmarz/dashboard-questions |  | 2026-10-03T21:56Z | Add question atlas and review tools to the research dashboard |
 | [scan-code-sd-code-data](tasks/scan-code-sd-code-data.md) | done | p1 | scan | dmarz/sd-code-data |  | 2026-10-03T19:40Z | Catalogue the code: code, datasets and benchmarks for detecting agent swarms |
 | [scan-papers-active-matter](tasks/scan-papers-active-matter.md) | done | p1 | scan | dmarz/active-matter |  | 2026-10-03T18:18Z | Catalogue the papers: active matter physics |
 | [scan-papers-criticality-measurement](tasks/scan-papers-criticality-measurement.md) | done | p1 | scan | dmarz/criticality-measurement |  | 2026-10-03T18:18Z | Catalogue the papers: criticality, information and measurement |
@@ -127,6 +128,7 @@
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/factory-scan | done |  | 2026-10-03T22:30Z | scan for swarm-factory prior work (FLE, LLM oligopoly collusion, production economies) finished; 29 entries on lane/factory-scan |
 | dmarz/hf-sweep | done |  | 2026-10-03T22:00Z | HF multi-agent dataset sweep (link + description entries, lane/hf-multiagent) |
+| dmarz/dashboard-questions | done | build-dashboard-questions | 2026-10-03T21:56Z | Questions dashboard tested in PR 81; human subsequently authorized merging and automatic publication. |
 | dmarz/agentops | working |  | 2026-10-03T21:45Z | experiment-worker template (templates/experiment-worker) + fleet infra in swarm-labs-agentops |
 | dmarz/question-atlas | done | synthesis-question-atlas-update | 2026-10-03T21:41Z | Updated 202 candidates across 15 areas; 59 new and 36 revised, with preserved reviews. |
 | vishesh/senku-1 | idle |  | 2026-10-03T21:28Z | 2026-10-03 pm: seo-poisoning experimental-design hunch bundle under notes/seo-poisoning/ (review applied); feedback requested from dmarz + shadow |
