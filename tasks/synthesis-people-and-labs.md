@@ -22,6 +22,9 @@ topics:
 - marl-emergence
 - llm-agent-swarms
 - crowds-and-traffic
+- sybil-resistance
+- fork-merge-security
+- swarm-detection
 claimed_at: 2026-10-03T19:39Z
 updated: 2026-10-03T19:39Z
 ---
