@@ -36,3 +36,6 @@
 - slug: sybil-resistance
   name: Sybil resistance and adversarial identity
   description: Sybil attacks and defences in multi-agent systems, robot swarms, P2P networks, consensus, reputation and mechanism design (false-name-proofness), proof of personhood, agent identity, and MEV/order-flow settings (Flashbots).
+- slug: fork-merge-security
+  name: Fork-and-merge agents and corruption on reintegration
+  description: Agents that split into sub-agents and later merge back (Sutton's framing), corruption of a sub-agent propagating into the parent on merge, Byzantine-robust aggregation and merge thresholds, hiding which sub-agent returns, memory and identity hijack via prompt injection, model-merging and federated poisoning, mobile-agent security, and biological fission-fusion and fusion parasitism.
