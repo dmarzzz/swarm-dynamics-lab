@@ -27,3 +27,13 @@ The shipped HTTP adapter's mock-server test is not real-provider qualification. 
 ## Artifact transport
 
 The hub's current reverse proxy limits each upload to 2 MB. `src/artifacts.py` compresses trace files and splits any larger compressed payload into parts of at most 1,000,000 bytes. `artifact-index.json` records ordered parts, encodings, sizes and SHA-256 hashes. Rejoin parts in order, verify the payload hash, decompress if needed, and verify the raw hash. `analyze.py` can read an intact `.jsonl.gz` directly. `recover_upload.py RUN_ID` repairs existing artifact uploads without reexecuting episodes or changing a failed run's terminal status. Raw local outputs remain unchanged.
+
+## Scaling capacity through DigitalOcean
+
+The user authorized adding DigitalOcean servers when more capacity is useful. The present scripted N=3 environment fits the existing two-vCPU, 4-GB simulation server; no new server was created. Hosted LLM workers chiefly need bounded request concurrency and token budgets. Adding CPUs does not remove provider rate limits.
+
+For a measured CPU/memory bottleneck or a later local-model deployment, add a dmarz-owned DigitalOcean server to private `fleet.yml`, with the `sim` blueprint, `access: all`, a capacity chosen from measured needs, and an explicit short expiry. Run the owner-scoped `task up` from the machine that owns the Terraform/OpenTofu state so the preflight can prevent duplicate creation; provision it, claim it, and report all work to the hub. Keep addresses and credentials private. Extend the deployment script's allowed host deliberately; it currently targets sim-test-01 only.
+
+Start with one worker per model-budget allocation, not one per CPU. Each HTTP adapter's dollar cap is local to that worker, so multiple workers need a separately enforced aggregate budget before paid parallel execution. N=5 and N=9 are supported by the runtime; run their access and clean-task checks before using extra capacity for a sweep. A local model additionally needs pinned weights/tokenizer/runtime, measured memory and throughput, and its own qualification. Release claims and destroy newly created temporary servers when the run ends, following agentops ownership rules.
+
+For code-only redeployment without collecting another batch, use `scripts/deploy-discussion-dose.sh <commit> --verify-only` in the private agentops repo. An earlier failed batch is never overwritten or silently requeued.

@@ -24,7 +24,7 @@ At the human's request, write an exploratory SEC-47 plan, link related atlas que
 
 ## Done when
 
-- [ ] Plan, architecture, metrics and benchmark audit are linked and committed before pilot collection.
-- [ ] Offline tests cover task validity, access isolation, board barriers, merge, scoring and failure accounting.
-- [ ] Code is deployed to a claimed fleet server, registered in the live list, and an engineering smoke run is reported.
-- [ ] Execution limits, results, review status and remaining launch requirements are documented.
+- [x] Plan, architecture, metrics and benchmark audit are linked and committed before pilot collection.
+- [x] Offline tests cover task validity, access isolation, board barriers, merge, scoring and failure accounting.
+- [x] Code is deployed to a claimed fleet server, registered in the live list, and an engineering smoke run is reported.
+- [x] Execution limits, results, review status and remaining launch requirements are documented.

@@ -97,7 +97,7 @@ Use a new output directory every time; existing runs cannot be overwritten. Flee
 
 ## Results
 
-No LLM behavioral result has been collected. Scripted smoke outputs validate implementation and will be recorded in [VALIDATION.md](VALIDATION.md), with exact deployment revision and hub run ID. These outputs cannot establish resistance to persuasion, a discussion-dose effect, or real-world task validity.
+No LLM behavioral result has been collected. [VALIDATION.md](VALIDATION.md) records 56 valid scripted episodes, exact revisions, hub run IDs, artifact read-back checks and the recovered upload failure. These outputs cannot establish resistance to persuasion, a discussion-dose effect, or real-world task validity.
 
 ## Analysis
 
