@@ -3,14 +3,16 @@ id: build-actual-experiment-suite
 type: task
 title: Implement and deploy developed exploratory experiment designs
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-experiments
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-experiments
 depends_on: []
 topics: []
+claimed_at: 2026-10-03T23:41Z
+updated: 2026-10-03T23:41Z
 ---
 
 ## Goal
