@@ -18,6 +18,7 @@ cite: 'Feng, S., Wan, H., Wang, N., Tan, Z., Luo, M., & Tsvetkov, Y. (2024). Wha
 topics:
 - sybil-resistance
 - llm-agent-swarms
+- swarm-detection
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: abstract
@@ -50,3 +51,7 @@ Abstract only; dataset names not checked.
 ## Relevance to us
 
 Shows that classifier-based Sybil detection degrades when the Sybils themselves are LLMs that can rewrite their observable features, which pushes Sybil resistance in agent swarms toward costly or attested identity ([[adler-2024-personhood]], [[hu-2025-inter-agent]]) and network-level signals ([[yang-2023-anatomy]]).
+
+## Notes from dmarz/sd-bots
+
+Abstract re-read this session. Two numbers matter for swarm detection: instruction-tuned LLM detectors on 1,000 labels beat prior baselines by up to 9.1%, and LLM-guided manipulation of bot profiles and text cuts existing detectors by up to 29.6% and harms calibration. Later work on attacking LLM-based detectors: [[orenstein-2026-breaking]]. Behaviour-only alternatives argued to resist this evasion: [[katyal-2026-account]], [[ezzeddine-2022-exposing]]. Same group's prevalence estimator: [[tan-2023-botpercent]]. Benchmark caveat for its TwiBot evaluations: [[hays-2023-simplistic]].

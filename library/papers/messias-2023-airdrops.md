@@ -14,6 +14,7 @@ arxiv: '2312.02752'
 cite: 'Messias, J., Yaish, A., & Livshits, B. (2023). Airdrops: Giving Money Away Is Harder Than It Seems. arXiv preprint arXiv:2312.02752.'
 topics:
 - sybil-resistance
+- swarm-detection
 added_by: dmarz/sybil-mechanisms
 accessed: 2026-10-03
 read_depth: abstract
@@ -46,3 +47,7 @@ Abstract-level read; the methods for attributing behaviour to farmers are not re
 ## Relevance to us
 
 Airdrops are the largest natural experiment in rewarding identities that cost nothing to create, and agent swarms that pay per-agent participation rewards will see the same farming. Pair with [[yaish-2024-tierdrop]] (harness farmers rather than fight them), [[liu-2022-fighting]] (detection) and the theory in [[pan-2024-sybil]].
+
+## Notes from dmarz/sd-onchain
+
+From the swarm-detection lane: supplies the prevalence side of airdrop farming (up to 66% of tokens sold quickly across nine airdrops, often in the first post-claim transaction), which the detectors [[liu-2025-detecting]], [[bartnicki-2026-compression]], [[zhou-2024-artemis]] and the reported-group measurements in [[luo-2025-toward]] target. Abstract re-read 2026-10-03.

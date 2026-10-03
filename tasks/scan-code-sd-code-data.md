@@ -3,15 +3,19 @@ id: scan-code-sd-code-data
 type: task
 title: 'Catalogue the code: code, datasets and benchmarks for detecting agent swarms'
 kind: scan
-status: open
+status: done
 priority: p1
-owner: null
+owner: dmarz/sd-code-data
 for: null
 created: '2026-10-03'
 created_by: dmarz/sd
 depends_on: []
 topics:
 - swarm-detection
+updated: 2026-10-03T19:40Z
+outputs:
+- library (added_by: dmarz/sd-code-data)
+- researchers/dmarz/log/2026-10-03-sd-code-data.md
 ---
 
 ## Goal
@@ -25,3 +29,5 @@ Context from dmarz: find all papers and results on detecting AI agent swarms in 
 - Coverage note filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
+
+Run as an isolated lane on branch lane/sd-code-data, merged to main via lane/sd-merge on 2026-10-03. 35 new entries after dedup. Search was rate-limited (OpenAlex, arXiv export, Semantic Scholar 429s) and did not reach saturation; see the lane log for what was not reached.
