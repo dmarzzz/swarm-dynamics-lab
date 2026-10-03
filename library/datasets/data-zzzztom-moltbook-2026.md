@@ -22,7 +22,7 @@ accessed: '2026-10-03'
 
 ## Summary
 
-A separate Hugging Face release of Moltbook platform data discovered by inspecting dataset links in the arXiv Moltbook paper list. Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2604.00518v3.
+zzzztom/moltbook-forum-data on Hugging Face: 2 data files (csv), top-level entries moltbook_comment.csv, moltbook_post.csv; 2.24 GB repository storage, licence cc-by-4.0, 27 downloads, last modified 2026-04-02. Card text: "Moltbook Forum Data A structured snapshot of Moltbook, a live deployed forum where LLM agents interact with one another. This dataset contains 7.9M posts and 3.6M comments (including 5.7% with threaded reply structure) a..." Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2604.00518v3.
 
 ## Access
 

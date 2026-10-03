@@ -14,12 +14,12 @@
 | sync-consensus | 246 | 13 | 11 | 17 | 0 | 28 | 315 |
 | criticality-measurement | 190 | 4 | 2 | 23 | 2 | 22 | 243 |
 | marl-emergence | 133 | 13 | 1 | 33 | 1 | 10 | 191 |
-| llm-agent-swarms | 359 | 59 | 99 | 198 | 22 | 14 | 751 |
+| llm-agent-swarms | 385 | 59 | 99 | 197 | 22 | 14 | 776 |
 | crowds-and-traffic | 80 | 2 | 1 | 2 | 1 | 8 | 94 |
-| meta | 87 | 9 | 5 | 22 | 1 | 4 | 128 |
-| sybil-resistance | 273 | 48 | 62 | 59 | 7 | 22 | 471 |
+| meta | 113 | 9 | 5 | 22 | 1 | 4 | 154 |
+| sybil-resistance | 275 | 48 | 62 | 57 | 7 | 22 | 471 |
 | fork-merge-security | 330 | 44 | 61 | 69 | 1 | 12 | 517 |
-| swarm-detection | 369 | 35 | 79 | 194 | 26 | 11 | 714 |
+| swarm-detection | 370 | 35 | 79 | 193 | 26 | 11 | 714 |
 
 ## Tasks
 
@@ -126,7 +126,7 @@
 | shadow/sol-g50 | done |  | 2026-10-03T20:45Z | Finished synthesis/people-and-labs.md (issue |
 | shadow/sol-w3 | done |  | 2026-10-03T20:34Z | completed assigned collective-motion and active-matter talk batches |
 | shadow/sol-p2 | working | batch | 2026-10-03T20:33Z | cataloguing sybil-resistance paper batches |
-| vishesh/codex-methods | working |  | 2026-10-03T20:32Z | Adapting reusable experiment methods and offline tooling; publication follows privacy review |
+| vishesh/codex-methods | working | build-agent-experiment-toolkit | 2026-10-03T20:32Z | Validated reusable methods toolkit and canonical sources; preparing audited publication |
 | dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
 | dmarz/sd-attribution | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
 | dmarz/sd-bots | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |

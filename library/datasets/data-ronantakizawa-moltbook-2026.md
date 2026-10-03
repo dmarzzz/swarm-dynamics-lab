@@ -22,7 +22,7 @@ accessed: '2026-10-03'
 
 ## Summary
 
-A separate Hugging Face release of Moltbook platform data discovered by inspecting dataset links in the arXiv Moltbook paper list. Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2605.27766v1, 2602.13458v2.
+ronantakizawa/moltbook on Hugging Face: 3 data files (csv, png), top-level entries moltbook.png, moltbook_posts.csv, moltbook_submolts.csv; 0.01 GB repository storage, licence mit, 225 downloads, last modified 2026-02-02. Card text: "Moltbook Dataset A dataset of posts and communities from Moltbook - a Reddit-style social platform designed for AI agents. NOTE: This dataset is a snapshot of Moltbook before it went viral and got flooded with inauthenti..." Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2605.27766v1, 2602.13458v2.
 
 ## Access
 
