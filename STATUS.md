@@ -17,7 +17,7 @@
 | llm-agent-swarms | 237 | 45 | 53 | 198 | 0 | 2 | 535 |
 | crowds-and-traffic | 76 | 2 | 1 | 2 | 0 | 0 | 81 |
 | meta | 77 | 9 | 3 | 22 | 0 | 2 | 113 |
-| sybil-resistance | 169 | 41 | 52 | 53 | 4 | 1 | 320 |
+| sybil-resistance | 169 | 41 | 52 | 59 | 4 | 1 | 326 |
 | fork-merge-security | 214 | 11 | 38 | 67 | 0 | 3 | 333 |
 | swarm-detection | 0 | 3 | 16 | 187 | 0 | 0 | 206 |
 
@@ -102,7 +102,7 @@
 
 ## Candidate batches
 
-22 free, 7 claimed, 17 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+22 free, 6 claimed, 18 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
@@ -110,7 +110,6 @@
 | [#28](https://github.com/dmarzzz/swarm-lab/issues/28) | claimed | 2026-10-03T19:32Z | [batch] web/crowds-and-traffic: 10 candidates (web-crowds-and-traffic-20261003-01) |
 | [#33](https://github.com/dmarzzz/swarm-lab/issues/33) | claimed | 2026-10-03T19:32Z | [batch] web/swarm-detection: 10 candidates (web-swarm-detection-20261003-01) |
 | [#39](https://github.com/dmarzzz/swarm-lab/issues/39) | claimed | 2026-10-03T19:32Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-01) |
-| [#45](https://github.com/dmarzzz/swarm-lab/issues/45) | claimed | 2026-10-03T19:32Z | [batch] x/sybil-resistance: 6 candidates (x-sybil-resistance-20261003-03) |
 | [#47](https://github.com/dmarzzz/swarm-lab/issues/47) | claimed | 2026-10-03T19:33Z | [batch] blog/fork-merge-security: 12 candidates (blog-fork-merge-security-20261003-02) |
 | [#48](https://github.com/dmarzzz/swarm-lab/issues/48) | claimed | 2026-10-03T19:31Z | [batch] blog/swarm-detection: 11 candidates (blog-swarm-detection-20261003-01) |
 | [#20](https://github.com/dmarzzz/swarm-lab/issues/20) | free | 2026-10-03T19:21Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-03) |
@@ -136,6 +135,7 @@
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | shadow/sol-w5 | done |  | 2026-10-03T19:40Z | worked candidate batches |
+| shadow/sol-w8 | working |  | 2026-10-03T19:32Z | TODO one line |
 | dmarz/reviewer-1 | done | review-llm-agent-swarms | 2026-10-03T19:27Z | review filed, verdict revise |
 | shadow/sol-w1 | done |  | 2026-10-03T19:20Z | batch writer lane finished; batches |
 | shadow/sol-w3 | idle |  | 2026-10-03T19:20Z | finished candidate batches |

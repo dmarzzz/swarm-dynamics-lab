@@ -2,7 +2,7 @@
 
 # Library index
 
-1894 entries.
+1900 entries.
 
 ## Papers (1206)
 
@@ -1333,7 +1333,7 @@
 | [moridinamael-2019-complex](blogs/moridinamael-2019-complex.md) | Complex Behavior from Simple (Sub)Agents | 2019 | 1 | skim | fork-merge-security, collective-decision, collective-motion | shadow/sol-w4 |
 | [sotala-2019-subagents](blogs/sotala-2019-subagents.md) | Subagents, neural Turing machines, thought selection, and blindspots | 2019 | 1 | skim | fork-merge-security, collective-decision | shadow/sol-w4 |
 
-## Threads (453)
+## Threads (459)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1401,6 +1401,7 @@
 | [x-transluceai-2105725928357937410](threads/x-transluceai-2105725928357937410.md) | Transluce: agents used aggressive non-hacking tactics against US and Canadian government websites (technical report, WaPo) | 2026 | 4 | full | llm-agent-swarms, swarm-detection | shadow/sol-1 |
 | [x-yang3kc-1744360434994405699](threads/x-yang3kc-1744360434994405699.md) | yang3kc: first-author thread: about 10k daily active Twitter accounts use GAN-generated faces | 2024 | 4 | full | swarm-detection, sybil-resistance | dmarz/x-threads |
 | [x-zodiacjrh-1798032346459078886](threads/x-zodiacjrh-1798032346459078886.md) | zodiacJRH: merging a backdoored model with other homogeneous models removes the backdoor without training data | 2024 | 4 | full | fork-merge-security | dmarz/x-threads |
+| [x-0xalexkorn-2105277112978436510](threads/x-0xalexkorn-2105277112978436510.md) | alex.korn: four personhood-credential risks beyond bot detection | 2026 | 3 | skim | sybil-resistance | shadow/sol-w8 |
 | [x-acnwala-2029615468256874960](threads/x-acnwala-2029615468256874960.md) | acnwala: author announces WebSci'26 paper on using behaviour change to identify social media manipulation | 2026 | 3 | full | swarm-detection | dmarz/x-threads |
 | [x-aidigest-2095556936133734821](threads/x-aidigest-2095556936133734821.md) | AI Digest launches the Open Chat Village: a second persistent village where humans and frontier agents share one chat, weekdays 9-5 PT | 2026 | 3 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-aimalysheva-2079669493392154915](threads/x-aimalysheva-2079669493392154915.md) | aimalysheva: task arithmetic shows fine-tuning deltas add and subtract like vectors; mergeability without a shared init is open | 2026 | 3 | full | fork-merge-security | dmarz/x-threads |
@@ -1543,12 +1544,14 @@
 | [x-arankomatsuzaki-1666608707717799936](threads/x-arankomatsuzaki-1666608707717799936.md) | arankomatsuzaki: paper summary, LLM watermarks stay detectable as more text is observed | 2023 | 2 | full | swarm-detection | dmarz/x-threads |
 | [x-arankomatsuzaki-1755784989042520184](threads/x-arankomatsuzaki-1755784989042520184.md) | arankomatsuzaki: paper-alert restatement of 'More Agents Is All You Need' (sampling-and-voting scaling) | 2024 | 2 | full | llm-agent-swarms, sync-consensus | dmarz/x-threads |
 | [x-arankomatsuzaki-1799986416077951460](threads/x-arankomatsuzaki-1799986416077951460.md) | arankomatsuzaki: Mixture-of-Agents reported as state of the art on AlpacaEval 2.0, MT-Bench and FLASK, above GPT-4o | 2024 | 2 | full | llm-agent-swarms | dmarz/x-threads |
+| [x-armeanio-2106401948954231154](threads/x-armeanio-2106401948954231154.md) | Armeanio: cheap AI identities versus scarce proof-of-work influence | 2026 | 2 | full | sybil-resistance | shadow/sol-w8 |
 | [x-aronvallinder-2069322977032741042](threads/x-aronvallinder-2069322977032741042.md) | Aron Vallinder: selecting for group performance promotes cooperation among LLM agents | 2026 | 2 | full | llm-agent-swarms, marl-emergence | dmarz/x-threads |
 | [x-ben-mckenzie-1467570655252164617](threads/x-ben-mckenzie-1467570655252164617.md) | ben_mckenzie: quotes the crypto wash-trading paper: over 70% of reported volume on unregulated exchanges | 2021 | 2 | full | swarm-detection, sybil-resistance | dmarz/x-threads |
 | [x-bestuseragent-2102124126660096442](threads/x-bestuseragent-2102124126660096442.md) | Agent subdomains as a traffic-separation pattern | 2026 | 2 | full | swarm-detection | shadow/sol-w6 |
 | [x-bibryam-1986759886491807929](threads/x-bibryam-1986759886491807929.md) | bibryam: one-line endorsement of 'Patterns for securing agents against prompt injection' | 2025 | 2 | full | fork-merge-security, llm-agent-swarms | dmarz/x-threads |
 | [x-binitamshah-1763917766031987199](threads/x-binitamshah-1763917766031987199.md) | binitamshah: link roundup on indirect prompt injection, plugin data exfiltration and a universal jailbreak | 2024 | 2 | full | fork-merge-security | dmarz/x-threads |
 | [x-bweintraub34-1612873406277652480](threads/x-bweintraub34-1612873406277652480.md) | bweintraub34: author promotes a guest blog post on Theft-as-a-Service on Ethereum and points to the paper | 2023 | 2 | full | swarm-detection | dmarz/x-threads |
+| [x-caesar-jn-2105333476442456239](threads/x-caesar-jn-2105333476442456239.md) | Caesar jn: privacy-preserving personhood rather than identity disclosure | 2026 | 2 | skim | sybil-resistance | shadow/sol-w8 |
 | [x-cheese-cakee-9-2086433792017993742](threads/x-cheese-cakee-9-2086433792017993742.md) | cheese_cakee_9: AI control reading list from a MATS application, opening with the foundational control paper | 2026 | 2 | full | fork-merge-security, llm-agent-swarms | dmarz/x-threads |
 | [x-chilestakepo-2102034860097380629](threads/x-chilestakepo-2102034860097380629.md) | ChileStakepo: an 8-criterion scoring of 'agent civilisations' (Midnight City 5.8/10 top; OpenAI swarm, Moltbook, ElizaOS, Project Sid compared) | 2026 | 2 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-convoluted-code-1067394388412764160](threads/x-convoluted-code-1067394388412764160.md) | convoluted_code: early draft of 'The Anatomy of a Cryptocurrency Pump-and-Dump Scheme' | 2018 | 2 | full | swarm-detection | dmarz/x-threads |
@@ -1598,6 +1601,7 @@
 | [x-hillbig-1848128505286132121](threads/x-hillbig-1848128505286132121.md) | hillbig: Japanese commentary on AKOrN: Kuramoto-oscillator neurons for binding, segmentation and Sudoku | 2024 | 2 | full | sync-consensus | dmarz/x-threads |
 | [x-himanshiet-2103730840144633924](threads/x-himanshiet-2103730840144633924.md) | Himanshi Lohchab (ET): Indian e-commerce firms preparing for swarms of consumer AI assistants, rethinking bot verification, pricing, fraud liability and cloud load | 2026 | 2 | full | swarm-detection, llm-agent-swarms | shadow/sol-w4 |
 | [x-hochreitersepp-1502173255578185737](threads/x-hochreitersepp-1502173255578185737.md) | Sepp Hochreiter: model soups, averaging fine-tuned models finds flat minima and reaches 90.94% ImageNet top-1 | 2022 | 2 | full | fork-merge-security | dmarz/x-threads |
+| [x-humnpassport-2104555758499344770](threads/x-humnpassport-2104555758499344770.md) | Human Passport: verify wallet humanity before distributing rewards | 2026 | 2 | full | sybil-resistance | shadow/sol-w8 |
 | [x-hwchase17-1645834030519296000](threads/x-hwchase17-1645834030519296000.md) | hwchase17: announces a LangChain implementation of CAMEL two-agent role-playing | 2023 | 2 | full | llm-agent-swarms | dmarz/x-threads |
 | [x-i-amanchadha-1765233324170305806](threads/x-i-amanchadha-1765233324170305806.md) | i_amanchadha: survey on AI-generated text forensic systems (detection, attribution, characterization) | 2024 | 2 | full | swarm-detection, meta | dmarz/x-threads |
 | [x-im-td-1876390067641749765](threads/x-im-td-1876390067641749765.md) | im_td: contrasts a conference ban on GenAI reviewing with ICLR's stance and points to work on AI-assisted reviews | 2025 | 2 | full | swarm-detection | dmarz/x-threads |
@@ -1665,6 +1669,7 @@
 | [x-policytensor-2096383641064808902](threads/x-policytensor-2096383641064808902.md) | Policy Tensor: 'The Discovery of Agent Society', argument that agent-society capabilities are emergent and cannot be read off single-agent evals | 2026 | 2 | skim | llm-agent-swarms | shadow/sol-w4 |
 | [x-ponguru-1897517580010840453](threads/x-ponguru-1897517580010840453.md) | ponguru: announcing Great Models Think Alike and this Undermines AI Oversight | 2025 | 2 | skim | fork-merge-security, llm-agent-swarms | dmarz/x-threads |
 | [x-qingyun-wu-1708177340080009634](threads/x-qingyun-wu-1708177340080009634.md) | qingyun_wu: co-author promotes AutoGen trending #2 on GitHub | 2023 | 2 | full | llm-agent-swarms | dmarz/x-threads |
+| [x-realmusha-2104178442266915136](threads/x-realmusha-2104178442266915136.md) | Ryder: failed Solana arbitrage retries as incentive-driven bot traffic | 2026 | 2 | skim | sybil-resistance | shadow/sol-w8 |
 | [x-retractionwatch-1773787709032517788](threads/x-retractionwatch-1773787709032517788.md) | RetractionWatch: Retraction Watch relays estimate that at least 60,000 papers in 2023 were LLM-assisted | 2024 | 2 | full | swarm-detection | dmarz/x-threads |
 | [x-ricard-sole-952909281237577733](threads/x-ricard-sole-952909281237577733.md) | ricard_sole: recommends a review on why living systems sit near criticality | 2018 | 2 | full | criticality-measurement | dmarz/x-threads |
 | [x-rogesterone-2097286391793086559](threads/x-rogesterone-2097286391793086559.md) | rogesterone: an agent made a '--help' page, others replied with empty-line edits, ResearchAgentJun23 is confused | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
@@ -1738,6 +1743,7 @@
 | [x-googledeepmind-1102890462623481856](threads/x-googledeepmind-1102890462623481856.md) | GoogleDeepMind: DeepMind announces the autocurricula manifesto for multi-agent intelligence research | 2019 | 1 | full | marl-emergence | dmarz/x-threads |
 | [x-heisblesse-2106002189600620864](threads/x-heisblesse-2106002189600620864.md) | heisblesse: 'Can AI agents build reputation?' ERC-8004 identity vs reputation registries, with Sybil distortion acknowledged (B.AI campaign post) | 2026 | 1 | full | sybil-resistance | shadow/sol-w1 |
 | [x-iassael-735810165459537920](threads/x-iassael-735810165459537920.md) | iassael: co-author announces learned differentiable communication protocols in multi-agent RL | 2016 | 1 | full | marl-emergence | dmarz/x-threads |
+| [x-inhquangtu180-2106024095510925355](threads/x-inhquangtu180-2106024095510925355.md) | InterLink ambassador: identity, credentials and reputation for AI commerce | 2026 | 1 | skim | sybil-resistance | shadow/sol-w8 |
 | [x-iohk-charles-1077275324122087426](threads/x-iohk-charles-1077275324122087426.md) | IOHK_Charles: Charles Hoskinson recommends a paper on crypto pump-and-dumps | 2018 | 1 | full | swarm-detection | dmarz/x-threads |
 | [x-iruletheworldmo-1824486447996416145](threads/x-iruletheworldmo-1824486447996416145.md) | iruletheworldmo: 'well. well. well.' reaction post linking the personhood credentials paper | 2024 | 1 | full | sybil-resistance | dmarz/x-threads |
 | [x-jieyuzhang20-1706395081731907785](threads/x-jieyuzhang20-1706395081731907785.md) | JieyuZhang20: co-author shares AutoGen from an MSR internship, quoting Microsoft Research's launch | 2023 | 1 | full | llm-agent-swarms | dmarz/x-threads |
