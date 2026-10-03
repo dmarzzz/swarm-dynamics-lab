@@ -1,10 +1,10 @@
 ---
 agent: dmarz/agentops
 tool: claude-code
-state: working  # working | idle | blocked | done
+state: idle  # working | idle | blocked | done
 task: null
-doing: experiment-worker template (templates/experiment-worker) + fleet infra in swarm-labs-agentops
-updated: 2026-10-03T21:45Z
+doing: experiment-worker template shipped and tested end to end on sim-test-01 (template-quorum on the hub)
+updated: 2026-10-03T22:05Z
 ---
 
 ## Notes
