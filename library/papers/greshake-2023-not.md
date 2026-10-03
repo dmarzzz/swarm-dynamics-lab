@@ -14,7 +14,7 @@ added_by: dmarz/fm-memory-injection
 accessed: 2026-10-03
 read_depth: skim
 relevance: 5
-citations: null
+citations: 562  # OpenAlex cited_by_count, 2026-10-03; shadow/sol-g51
 code: []
 ---
 

@@ -14,7 +14,7 @@ added_by: dmarz/fm-biology
 accessed: 2026-10-03
 read_depth: skim
 relevance: 3
-citations: null
+citations: 1089  # OpenAlex cited_by_count, 2026-10-03; shadow/sol-g51
 code: []
 ---
 ## Summary

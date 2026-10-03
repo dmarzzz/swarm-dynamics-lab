@@ -21,7 +21,7 @@ added_by: dmarz/fm-bft-aggregation
 accessed: '2026-10-03'
 read_depth: full
 relevance: 5
-citations: null
+citations: 3  # OpenAlex cited_by_count, 2026-10-03; shadow/sol-g51
 code: []
 ---
 
