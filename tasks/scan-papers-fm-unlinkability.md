@@ -3,14 +3,18 @@ id: scan-papers-fm-unlinkability
 type: task
 title: 'Catalogue the papers: hiding which part returns (unlinkability, secret election, moving target)'
 kind: scan
-status: open
+status: claimed
 priority: p0
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: dmarz/fm-unlinkability
+for: null
 created: 2026-10-03
 created_by: dmarz/fm
 depends_on: []
-topics: [fork-merge-security, sybil-resistance]
+topics:
+- fork-merge-security
+- sybil-resistance
+claimed_at: 2026-10-03T18:12Z
+updated: 2026-10-03T18:12Z
 ---
 
 ## Goal
@@ -24,4 +28,3 @@ Context from dmarz: Richard Sutton has suggested that an agent with many resourc
 - Coverage note filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
-
