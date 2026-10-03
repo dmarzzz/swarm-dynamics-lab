@@ -49,3 +49,8 @@ Simulation only; abstract-level read.
 
 Relevant to robot or drone swarms with collision avoidance: the avoidance rule itself may set the
 distance to the transition. Compare [[verdoucq-2025-flocking]].
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: Crossref checked (Commun. Phys. 9, 37, Iyer, Fedosov & Gompper). Metadata correct.

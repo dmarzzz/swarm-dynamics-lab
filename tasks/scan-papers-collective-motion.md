@@ -135,3 +135,67 @@ saturated: rounds 4-8 surfaced almost no seminal paper that was not already foun
 - A targeted scan of nonreciprocal and perception-based (vision-cone) flocking models, 2023-2026.
 - survey-collective-motion: the library now has enough seminal papers (Vicsek 1995, Couzin 2002, Ballerini 2008,
   Cavagna 2010, Toner-Tu 1998) with forward citations followed to start the prior-art survey.
+
+### Audit (dmarz/collective-motion-audit)
+
+Audit on 2026-10-03. `lab.py verify` found no bad lines in the 54 entries. I also compared every entry with its
+OpenAlex record (title, year, venue, volume/issue/pages, author list): no metadata errors, and no entries
+deleted. I re-read the sources for 11 entries. All six `full` entries
+([[vicsek-1995-novel]], [[ballerini-2008-interaction]], [[cavagna-2010-scale]], [[couzin-2002-collective]],
+[[sayin-2025-behavioral]], [[chate-2024-dynamic]]) were checked number by number against the PDFs, and every
+key-result number matched. So `full` is plausible and nothing was downgraded. [[katz-2011-inferring]],
+[[jentsch-2024-new]], [[buhl-2006-disorder]], [[bialek-2012-statistical]] and [[vicsek-2012-collective]]
+were checked against their abstracts or text.
+
+Fixes:
+- [[ballerini-2008-interaction]] misquoted Bialek et al. as n_c ~ 11-12. The paper gives 21.2 +/- 1.7 averaged
+  over flocks, which corresponds to a calibrated true range of about 7.8. This is corrected, and the cite
+  punctuation is fixed.
+- [[bialek-2012-statistical]] now has the fitted n_c and J values.
+- All 54 entries now lead their `citations` field with the OpenAlex cited_by_count (2026-10-03), as the
+  scan's follow-up asked. The earlier Crossref and Semantic Scholar counts are kept after it.
+
+Search rounds the scan did not run:
+- (A) Europe PMC forward citations of Vicsek 1995 (1835 citing records) and Couzin 2002 (711), with the
+  536 and 178 since 2023 sorted by citations. Most relevant hits were already in the library from other
+  topic agents, for example [[caprini-2023-flocking]], [[amichay-2024-revealing]],
+  [[zampetaki-2024-dynamical]], [[ioannou-2023-multi]] and [[huang-2024-collective]].
+- (B) Crossref, applied-maths vocabulary: "kinetic and hydrodynamic descriptions of flocking".
+- (C) Crossref, fluid-mechanics vocabulary: "fish school hydrodynamic interactions".
+- (D) Crossref and web searches for 2023-2026 reviews, plus a trail on the 2025 dispute over flock
+  exponents.
+
+OpenAlex list and search queries were over quota during the audit; only single-record lookups worked.
+
+Added 9 entries:
+- [[chen-2025-inconvenient]]: the missing Chen et al. critique.
+- [[ling-2019-behavioural]]: jackdaws switch between metric and topological interactions, and show a
+  density-driven transition.
+- [[ha-2008-particle]]: kinetic Cucker-Smale.
+- [[solon-2015-pattern]]
+- [[filella-2018-model]]
+- [[ko-2023-role]]: hydrodynamics review.
+- [[barberis-2016-large]]: vision-cone, non-reciprocal flocking.
+- [[ginelli-2015-intermittent]]: sheep.
+- [[lecheval-2018-social]]: U-turns.
+
+Found but not added:
+- Carrillo, Fornasier, Toscani and Vecil 2010, "Particle, kinetic, and hydrodynamic models of swarming",
+  doi:10.1007/978-0-8176-4946-3_12.
+- Ihle 2011, PRE, doi:10.1103/physreve.83.030901.
+- Karper et al., M3AS, doi:10.1142/s0218202515500050.
+- Peruani 2017, JPSJ, doi:10.7566/jpsj.86.101010.
+- The later replies in the exponent dispute: arXiv 2504.13683, 2505.21602 and 2506.13437.
+- Ikeda 2024, PRL 133, 258301.
+- Hallatschek et al. 2023, "Proliferating active matter", Nat Rev Phys.
+- Supekar et al. 2023, "Learning hydrodynamic equations for active matter", PNAS.
+- Wirth et al. 2023, "Is the neighborhood of interaction in human crowds metric, topological, or visual?",
+  PNAS Nexus.
+
+Still thin:
+- Huth and Wissel 1992, and Couzin and Krause 2003: still not reachable.
+- Hemelrijk-style starling models.
+- 3D insect-swarm lab data beyond [[sinhuber-2017-phase]].
+- Reviews published 2024-2026 specifically on collective motion.
+- Full reads of [[katz-2011-inferring]], [[ginelli-2015-intermittent]] and [[lecheval-2018-social]]: the full
+  texts returned errors from this machine.

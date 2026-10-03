@@ -47,3 +47,8 @@ Preprint; abstract-level read.
 
 A rule we could implement in robot swarms to get responsiveness without precise tuning; test against
 [[klamser-2021-collective]]-style controls.
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: arXiv 2603.07254 abstract page checked; title, five authors, date (2026-03-07) and summary match the abstract. No corrections.

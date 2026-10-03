@@ -49,3 +49,8 @@ Abstract-level read; one species and task.
 Gold-standard design for the hackathon: measure susceptibility by applying a controlled
 perturbation (e.g. a robot leader) while sweeping a control parameter. Related: [[lei-2023-exploring]],
 [[verdoucq-2025-flocking]].
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: Crossref checked (Nat. Commun. 16, 5983, 4 authors). Metadata correct. No corrections.

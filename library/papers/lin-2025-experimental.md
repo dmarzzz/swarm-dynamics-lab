@@ -51,3 +51,8 @@ Abstract-level read; criticality is inferred through the fitted model.
 
 Supports a "context-tuned distance to criticality" hypothesis and gives the order parameters to
 use. Same species as [[crosato-2018-informative]].
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: Crossref checked (PRX Life 3(3) 033018, 8 authors). Metadata correct. No corrections.

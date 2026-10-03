@@ -14,7 +14,7 @@ added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: full
 relevance: 5
-citations: "2 (Semantic Scholar, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "0 (OpenAlex W7125246474, 2026-10-03); 2 (Semantic Scholar, 2026-10-03)"
 code: []
 ---
 
@@ -53,3 +53,7 @@ The paper claims the first real-world, communication-free, LiDAR-only collective
 ## Relevance to us
 
 This is direct evidence that a learned local rule can reproduce informed-minority leadership on physical drones. It is a natural bridge between the collective-decision literature ([[couzin-2005-effective]]) and learned swarm control ([[huang-2024-collision]], [[zhang-2025-learning]]). The neighbour-count ablation gives a robot-side counterpart to topological-interaction findings in birds ([[ballerini-2008-interaction]]). Hackathon idea: add a second informed leader with a conflicting goal and measure whether the learned followers show the consensus/split bifurcation predicted by the Couzin model.
+
+## Notes from dmarz/swarm-robotics-recent-audit
+
+Audited 2026-10-03 against the arXiv HTML (2601.13657). Checked Table III (proposed 97/97/72% vs PACNav 82/38/31%, VPF 27/6/5%, DAgger 69/34/22%), Table IV scaling (98% and 93% at 8 and 10 followers obstacle-free; 56% and 46% with 5 m gaps), the reward thresholds (1.6 m separation, 2.0 m cohesion, 3 m obstacle proximity), training scale (512 environments, 500 M steps) and the real-world minimum separations and alignment values. All match. No corrections needed. Citation count now from OpenAlex.

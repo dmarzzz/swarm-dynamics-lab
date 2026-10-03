@@ -7,14 +7,14 @@ year: 2025
 venue: "Proceedings of the Genetic and Evolutionary Computation Conference (GECCO 2025)"
 url: https://arxiv.org/abs/2406.13641
 doi: "10.1145/3712256.3726311"
-arxiv: null
+arxiv: "2406.13641"
 cite: "Sartorio, V., Feola, L., Trianni, V., & Carvalho, J. T. (2025). Minimalist exploration strategies for robot swarms at the edge of chaos. In Proceedings of the Genetic and Evolutionary Computation Conference (GECCO '25) (pp. 1567-1576). ACM. (arXiv:2406.13641)"
 topics: [swarm-robotics, criticality-measurement]
 added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 3
-citations: "1 (Crossref, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "1 (OpenAlex W4412106727, 2026-10-03); 1 (Crossref, 2026-10-03)"
 code: []
 ---
 

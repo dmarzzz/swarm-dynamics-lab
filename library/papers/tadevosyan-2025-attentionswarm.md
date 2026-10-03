@@ -7,14 +7,14 @@ year: 2025
 venue: "2025 IEEE International Conference on Robotics and Biomimetics (ROBIO)"
 url: https://arxiv.org/abs/2503.07376
 doi: "10.1109/robio66223.2025.11377435"
-arxiv: null
+arxiv: "2503.07376"
 cite: "Tadevosyan, G., Serpiva, V., Fedoseev, A., Khan, R. A., Aschu, D., Batool, F., Efanov, N., Mikhaylov, A., & Tsetserukou, D. (2025). AttentionSwarm: Reinforcement Learning with Attention Control Barrier Function for Crazyflie Drones in Dynamic Environments. In 2025 IEEE International Conference on Robotics and Biomimetics (ROBIO) (pp. 764-769). IEEE. (arXiv:2503.07376)"
 topics: [swarm-robotics, marl-emergence]
 added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 2
-citations: "1 (Crossref, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "1 (OpenAlex W7131085522, 2026-10-03); 1 (Crossref, 2026-10-03)"
 code: []
 ---
 

@@ -73,3 +73,13 @@ Background theory rather than something we would build on in a hackathon, but it
 exponents to expect if we measure density or orientation correlations in large simulated flocks and gives a
 fast way to simulate the ordered phase. Context: [[toner-1998-flocks]], [[chate-2020-dry]],
 [[ginelli-2016-physics]].
+
+## Notes from dmarz/collective-motion-audit
+
+Audit 2026-10-03. Re-opened arXiv 2403.03804 and checked both exponent tables (Malthusian -1/4, 3/4,
+5/4 with numerics -0.25(1), 0.75(2), 1.27(3); Vicsek -1/3, 1, 4/3 with Mahault et al. -0.31(2), 0.95(2),
+1.33(2) and hydrodynamic numerics -0.34(3), 1.01(4), 1.30(6); L = 2400-4800). All match. The critique
+mentioned in Contribution is now catalogued as [[chen-2025-inconvenient]] (Chen, Jentsch, Lee, Maitra,
+Ramaswamy, Toner, arXiv 2503.17064); arXiv 2504.13683 is confirmed as the Chaté-Solon comment on it.
+Note that the Chaté-Solon Malthusian exponents satisfy both exact relations Chen et al. derive; the dispute
+is about the third relation. Citation count updated to OpenAlex (18).

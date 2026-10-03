@@ -14,7 +14,7 @@ added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: skim
 relevance: 4
-citations: "3 (Crossref, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "3 (OpenAlex W4410227268, 2026-10-03); 3 (Crossref, 2026-10-03)"
 code: []
 ---
 
@@ -42,3 +42,7 @@ Skimmed. Small chains in a bounded arena; the scaling of behaviours with chain l
 ## Relevance to us
 
 Same 'embodied rule' theme as [[casiulis-2025-geometric]] and [[arbel-2024-mechanical]]; a simulation of active chains is a cheap hackathon option.
+
+## Notes from dmarz/swarm-robotics-recent-audit
+
+Audited 2026-10-03 against the Europe PMC full text (PMC12063647). The 45 cm arena, 80 Hz and 70 um vibration, 8 cm/s single-bot speed and the link parameters (length, notch angle, spread angle) match. No corrections needed. Citation count now from OpenAlex.

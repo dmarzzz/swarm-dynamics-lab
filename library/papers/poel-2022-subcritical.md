@@ -64,3 +64,8 @@ The best worked example of measuring distance to criticality with a functional o
 (cascade size) and a finite-size susceptibility (sensitivity to 1 vs 2 initiators). Directly reusable for
 agent or robot swarms with alarm propagation. Pairs with [[klamser-2021-collective]], [[gomez-nava-2023-fish]],
 [[daniels-2017-control]] and [[strandburg-peshkin-2013-visual]].
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: re-opened arXiv 2108.05537 (PDF) and Crossref (Sci. Adv. 8(25) eabm6385). Verified sensitivity 0.035 +/- 0.007 and 0.058 +/- 0.019, NND 1.23 +/- 0.3 and 0.68 +/- 0.12 BL, factors 5.9 and 3.4, peak at NND 0.3-0.4 BL, tau_m = 1 s, 10,000 simulated cascades per network, N = 40 golden shiners: all match. No corrections. For an estimator of branching ratio that is robust to partial observation see [[wilting-2018-inferring]].

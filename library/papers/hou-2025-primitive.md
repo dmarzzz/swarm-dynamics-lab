@@ -7,14 +7,14 @@ year: 2025
 venue: "IEEE Transactions on Robotics"
 url: https://arxiv.org/abs/2502.16887
 doi: "10.1109/tro.2025.3573667"
-arxiv: null
+arxiv: "2502.16887"
 cite: "Hou, J., Zhou, X., Pan, N., Li, A., Guan, Y., Xu, C., Gan, Z., & Gao, F. (2025). Primitive-Swarm: An Ultra-Lightweight and Scalable Planner for Large-Scale Aerial Swarms. IEEE Transactions on Robotics, 41, 3629-3648. (arXiv:2502.16887)"
 topics: [swarm-robotics]
 added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 3
-citations: "19 (Crossref, 2026-10-03); 22 (Semantic Scholar, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "19 (OpenAlex W4410737470, 2026-10-03); 19 (Crossref, 2026-10-03); 22 (Semantic Scholar, 2026-10-03)"
 code: []
 ---
 

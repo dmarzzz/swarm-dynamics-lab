@@ -48,3 +48,8 @@ Demonstrated on discrete CA; continuous swarm data need estimators (see [[lizier
 
 Core definition for measuring who informs whom, when, in a swarm. Local values can be negative
 (misinformative), which [[crosato-2018-informative]] exploits.
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: arXiv 0809.3275 abstract page checked; journal-ref Phys. Rev. E 77, 026110 (2008), authors Lizier, Prokopenko, Zomaya. Metadata consistent.

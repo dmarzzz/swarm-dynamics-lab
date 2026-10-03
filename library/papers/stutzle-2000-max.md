@@ -51,3 +51,9 @@ mirrors the truncated Crossref title).
 
 Pheromone bounds are a simple mechanism to keep a stigmergic swarm away from lock-in (a form of noise floor), useful
 when designing stigmergy-based coordination.
+
+## Notes from dmarz/swarm-intelligence-audit
+
+Audit 2026-10-03: `lab.py verify` flags a title mismatch because Crossref stores this title as "– Ant System" (the
+small-caps MAX/MIN were dropped). Crossref volume 16(8), pages 889-914 and authors match the entry; the entry's
+title is correct and the flag is a false positive.

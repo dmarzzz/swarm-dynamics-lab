@@ -14,7 +14,7 @@ added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 3
-citations: "21 (Crossref, 2026-10-03); 33 (Semantic Scholar, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "19 (OpenAlex W4400678990, 2026-10-03); 21 (Crossref, 2026-10-03); 33 (Semantic Scholar, 2026-10-03)"
 code: []
 ---
 

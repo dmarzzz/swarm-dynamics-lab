@@ -14,7 +14,7 @@ added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: skim
 relevance: 5
-citations: "0 (Crossref, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "0 (OpenAlex W7161009362, 2026-10-03); 0 (Crossref, 2026-10-03)"
 code: []
 ---
 
@@ -31,7 +31,7 @@ A rare physical, programmable realisation of SOC in a robot swarm, with measured
 - Cluster-size exponent tau = 1.68(3) (MLE), duration exponent alpha = 1.54(2), size-duration exponent gamma = 0.74(4), spectral exponent beta = 1.26(3) over 0.01-1 Hz (measured in experiments; values from the full text I skimmed).
 - Lattice-model simulations give tau = 1.16(2), alpha = 2.67(1), gamma = 0.11(1): power laws, but different exponents from experiment.
 - Under strong parameter changes, tau_exp = 1.35(2) and tau_sim = 1.23(1), still power-law (measured).
-- A system of N = 64 appears in the cluster-composition figure (I did not check whether that panel is experiment or simulation).
+- The avalanche statistics come from physical experiments with N = 64 robots placed uniformly on the water surface and started simultaneously (Methods; Fig. 2B shows the cluster composition of this stable 64-robot system).
 
 ## Methods and models
 
@@ -44,3 +44,7 @@ Skimmed. Power-law claims over limited ranges with finite-size cutoffs; experime
 ## Relevance to us
 
 A key empirical paper for any hackathon claim about criticality in swarms; its methods (cluster statistics, MLE exponents, 1/f spectra) are directly reusable. See [[cavagna-2010-scale]] and [[verdoucq-2025-flocking]].
+
+## Notes from dmarz/swarm-robotics-recent-audit
+
+Audited 2026-10-03 against the Europe PMC full text (PMC13170653). Exponents tau = 1.68(3), alpha = 1.54(2), gamma = 0.74(4), beta = 1.26(3), the lattice-model values 1.16(2)/2.67(1)/0.11(1) and the perturbed tau_exp = 1.35(2), tau_sim = 1.23(1) all match the paper. Corrected the open N = 64 bullet: the 64-robot system is the physical experiment. Note the paper is internally inconsistent on film size: the text gives 4 cm TPU films, the Fig. 1A caption 3 cm. Replaced the Crossref-only citation count with OpenAlex.

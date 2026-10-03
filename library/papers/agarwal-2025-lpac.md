@@ -7,14 +7,14 @@ year: 2025
 venue: "IEEE Transactions on Robotics"
 url: https://arxiv.org/abs/2401.04855
 doi: "10.1109/tro.2025.3619047"
-arxiv: null
+arxiv: "2401.04855"
 cite: "Agarwal, S., Muthukrishnan, R., Gosrich, W., Kumar, V., & Ribeiro, A. (2025). LPAC: Learnable Perception-Action-Communication Loops With Applications to Coverage Control. IEEE Transactions on Robotics, 41, 5986-6005. (arXiv:2401.04855)"
 topics: [swarm-robotics, marl-emergence, sync-consensus]
 added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 3
-citations: "6 (Crossref, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "8 (OpenAlex W4414955774, 2026-10-03); 6 (Crossref, 2026-10-03)"
 code: []
 ---
 

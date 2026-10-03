@@ -49,3 +49,8 @@ Abstract-level read.
 
 Network-structure lever for responsiveness, complementary to tuning near a transition. Same group as
 [[lei-2023-exploring]] and [[zheng-2024-body]].
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: Crossref checked (Commun. Phys. 9, 75, 8 authors). Metadata correct.

@@ -71,3 +71,8 @@ Essential counterweight for any hackathon hypothesis of the form "swarms should 
 criticality". Its control-condition design (responsive vs non-responsive school with identical positions) is
 a pattern we should copy when we claim information-transfer benefits. Model and code are a ready testbed. Read
 with [[cavagna-2010-scale]], [[mateo-2017-effect]], [[lei-2023-exploring]] and [[romanczuk-2022-phase]].
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: re-opened arXiv 2009.02079 (PDF) and Crossref. Metadata and cite correct. Verified mu_c,alg about 0.9 at D = 0.5, N = 400, Ns = 40 runs per point, R = -0.69 capture rate vs IID, ESS about 4.4, Nf = 76 attack simulations, predator speed 2 v0, code at github.com/PaPeK/PredatorPrey: all match the paper. No corrections.

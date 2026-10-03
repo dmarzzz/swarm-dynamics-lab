@@ -48,3 +48,8 @@ Preprint; abstract-level read; real flocking data set not identified from the ab
 
 Probably the best current estimator for scoring emergence in our swarm simulations; read in full
 before use. Related: [[rosas-2020-reconciling]], [[sas-2026-synch]].
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: arXiv abstract page and DataCite checked. Authors and title correct. arXiv v1 is dated 2025-12-20 although DataCite lists publicationYear 2026; year 2026 kept to match DataCite and the id. Summary matches the abstract. No corrections.

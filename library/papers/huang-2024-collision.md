@@ -14,7 +14,7 @@ added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: full
 relevance: 5
-citations: "25 (Crossref, 2026-10-03); 35 (Semantic Scholar, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "21 (OpenAlex W4401416687, 2026-10-03); 25 (Crossref, 2026-10-03); 35 (Semantic Scholar, 2026-10-03)"
 code: []
 ---
 
@@ -56,3 +56,7 @@ This is the first purely end-to-end DRL controller (observations to motor thrust
 ## Relevance to us
 
 This paper is the reference point for model-free end-to-end swarm RL on real micro-drones, and the baseline any hackathon learned-swarm controller should beat or reproduce. It contrasts with differentiable-physics training ([[zhang-2025-learning]]) and with graph/attention policy structure ([[agarwal-2025-lpac]], [[zhang-2025-gcbf]]).
+
+## Notes from dmarz/swarm-robotics-recent-audit
+
+Audited 2026-10-03 against the arXiv v2 HTML (2309.13285). Title, authors, venue and pages (ICRA 2024, 300-306) match Crossref. Every number in Key results checked against the text and tables: Table I (0.97/0.99/0.75 success; 5/21/15 ms), ablations (0.05 to 0.12; 0.88 to 0.79; 0.79 to 0.10; K-nearest 0.95 vs range-based 0.89), generalisation (0.83, 0.85), Table II (0.88/0.04 vs 0.72/0.28) and the 1820-parameter, 7 KB, 0.35 ms on-board model. No corrections needed. read_depth full is supported. Citation count now from OpenAlex.

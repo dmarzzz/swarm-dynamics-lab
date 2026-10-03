@@ -63,3 +63,8 @@ Gives us an emergence score computable from swarm trajectories (e.g. centre of m
 or milling order parameter as V_t). The boids result suggests emergence peaks at intermediate interaction
 regimes, a hypothesis worth testing against order-disorder transitions in larger swarms. Read with
 [[mediano-2022-greater]], [[varley-2022-emergence]], [[hoel-2013-quantifying]] and [[niizato-2023-functional]].
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: re-opened arXiv 2004.08220 (PDF) and Crossref (PLOS Comput Biol 16(12) e1008289, 7 authors). Verified Game of Life 15x15 arrays, 1000 update steps, Psi = 0.58 +/- 0.02, Gamma = 0.009, I(V;V') = 0.99; boids N = 10; ECoG 64 channels, Psi = 1.275 +/- 0.002 and Gamma = 0.049 at 8 ms, criterion up to about 0.2 s: all match. No corrections. Companion high-order measure: [[rosas-2019-quantifying]] (O-information).

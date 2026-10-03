@@ -7,14 +7,14 @@ year: 2025
 venue: "IEEE Transactions on Robotics"
 url: https://arxiv.org/abs/2401.14554
 doi: "10.1109/tro.2025.3530348"
-arxiv: null
+arxiv: "2401.14554"
 cite: "Zhang, S., So, O., Garg, K., & Fan, C. (2025). GCBF+: A Neural Graph Control Barrier Function Framework for Distributed Safe Multiagent Control. IEEE Transactions on Robotics, 41, 1533-1552. (arXiv:2401.14554)"
 topics: [swarm-robotics, sync-consensus, marl-emergence]
 added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 4
-citations: "50 (Crossref, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "42 (OpenAlex W4391335029, 2026-10-03); 50 (Crossref, 2026-10-03)"
 code: []
 ---
 

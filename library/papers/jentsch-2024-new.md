@@ -46,3 +46,10 @@ Abstract-level read; simplified model.
 ## Relevance to us
 
 Theory background only.
+
+## Notes from dmarz/collective-motion-audit
+
+Audit 2026-10-03. Checked against the OpenAlex abstract and record (W4402576392; PRL 133(12),
+128301): FRG on a simplified Toner-Tu model, new universality class matching Mahault et al. in d = 2 and 3.
+Summary matches. The 2025 critique of exact exponents, co-authored by both Jentsch and Lee, is now
+catalogued as [[chen-2025-inconvenient]]. Citation count updated to OpenAlex (12).

@@ -85,3 +85,10 @@ Read in full (arXiv 0911.4393 including SI). Points useful for measurement work,
 - SI argument: information transfer that changes state permanently needs a finite zero-frequency response (static susceptibility), set by the static correlation length, not just travelling waves.
 - Tracking efficiency was 0.77, so about a quarter of birds are missing in each snapshot; subsampling effects ([[priesemann-2014-spike]]) are not discussed.
 - Methods links: [[mora-2011-biological]] (maximum entropy follow-up), [[attanasi-2014-finite]] (finite-size scaling), [[hang-2026-self]] (correlation length drops before fragmentation in large simulated schools).
+
+## Notes from dmarz/collective-motion-audit
+
+Audit 2026-10-03. Re-opened arXiv 0911.4393 and checked 24 flocks, 122-4268 birds, 9.1-85.7 m,
+Phi = 0.96 +/- 0.03, a = 0.35 (r = 0.98) and 0.36 (r = 0.97), gamma = 0.19 +/- 0.08 and 0.19 +/- 0.11,
+Palazzo Massimo 2005-2007, tracking efficiency 0.77. All match; no correction needed. OpenAlex
+(W2044247492) metadata agrees; citation count updated to OpenAlex (1112).

@@ -7,14 +7,14 @@ year: 2025
 venue: "Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences"
 url: https://arxiv.org/abs/2411.11616
 doi: "10.1098/rsta.2024.0148"
-arxiv: null
+arxiv: "2411.11616"
 cite: "Cazenille, L., Toquebiau, M., Lobato-Dauzier, N., Loi, A., Macabre, L., Aubert-Kato, N., Genot, A. J., & Bredeche, N. (2025). Signalling and social learning in swarms of robots. Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, 383(2289), 20240148. (arXiv:2411.11616)"
 topics: [swarm-robotics, collective-decision, marl-emergence]
 added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 3
-citations: "4 (Crossref, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "3 (OpenAlex W4406924551, 2026-10-03); 4 (Crossref, 2026-10-03)"
 code: []
 ---
 

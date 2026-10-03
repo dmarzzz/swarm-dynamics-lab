@@ -14,7 +14,7 @@ added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: full
 relevance: 5
-citations: "0 (Semantic Scholar, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "0 (OpenAlex W7165630637, 2026-10-03); 0 (Semantic Scholar, 2026-10-03)"
 code: []
 ---
 
@@ -52,3 +52,7 @@ This is the first demonstration, as the authors frame it, of vision-only learned
 ## Relevance to us
 
 This paper makes a strong case that the differentiable-surrogate trick scales to hundreds of embodied agents and gives better sample efficiency than PPO by about 50x. The emergent right-side yielding is a symmetry-breaking convention worth studying on its own: how and why does a convention emerge in a decentralised learner population? That links to lane formation and pedestrian conventions in [[helbing-1995-social]] and related crowd literature. Compare [[huang-2024-collision]] (model-free) and [[mednikov-2026-calibrate]] (mixed fidelity).
+
+## Notes from dmarz/swarm-robotics-recent-audit
+
+Audited 2026-10-03 against the arXiv HTML (2606.23153). Checked 2% of PPO samples, the 11.8 m fence with two 2 m exits and a 36 s limit for 24-96 robots, the 128-512-robot maze with under 3% failures, the 0.75-1.5 m/s command sweep, PPO failing below 0.8 m gaps while DPL works to 0.5 m, and the four emergent behaviours. All match. No corrections needed. Citation count now from OpenAlex.

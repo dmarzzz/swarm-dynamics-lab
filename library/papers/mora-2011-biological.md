@@ -71,3 +71,8 @@ sweep a fictitious temperature to see whether the heat capacity peaks at T=1; (2
 discretised group states. Read alongside the empirical flock papers [[cavagna-2010-scale]],
 [[bialek-2012-statistical]], [[bialek-2014-social]], the broader review [[munoz-2018-colloquium]], and the
 skeptical line [[schwab-2014-zipfs]] and [[touboul-2017-power]].
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: re-opened arXiv 1012.2242 (PDF) and Crossref. Title, authors, venue, 144(2) 268-302 correct. Checked the key numbers against the text: I2/I about 90% (salamander retina), 70-90% of correlations and 15 to 9 bits (zebrafish D regions), polarization 0.96 +/- 0.03, avalanche exponent near -3/2, Hopf gain F^-2/3: all match. read_depth full is consistent with the detail given. No corrections. Later measurement critiques of the heat-capacity and inferred-model signatures: [[mastromatteo-2011-criticality]], [[nonnenmacher-2017-signatures]], [[kloucek-2023-biases]]; data-driven RG alternative: [[meshulam-2019-coarse]].

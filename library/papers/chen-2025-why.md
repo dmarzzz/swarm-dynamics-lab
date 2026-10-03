@@ -64,3 +64,8 @@ Useful framing for hackathon experiments with learning agents: which objective a
 determines whether the swarm ends near criticality. Thermodynamic efficiency (Fisher information over entropy
 change) is a computable diagnostic for simulated swarms with a tunable coupling. Read with
 [[crosato-2018-thermodynamics]], [[hidalgo-2014-information]], [[barnett-2013-information]].
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: re-opened arXiv 2409.15668 (PDF) and Crossref (R. Soc. Open Sci. 12(6) 241655). Verified 50 x 50 torus, J step 0.02, 100 simulations of 20 million steps, last 200k steps sampled, Kikuchi entropy, J_c about 0.4407, Glauber vs Metropolis contrast for predictive information: all match. No corrections. A related Fisher-information readout of distance to criticality: [[du-2026-fisher]].

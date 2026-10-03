@@ -14,7 +14,7 @@ added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: full
 relevance: 4
-citations: "1 (Semantic Scholar, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "1 (OpenAlex W4396715347, 2026-10-03); 1 (Semantic Scholar, 2026-10-03)"
 code: []
 ---
 
@@ -54,3 +54,7 @@ The paper makes an empirical case, with a simple stochastic-geometry model, that
 ## Relevance to us
 
 This paper gives a quantitative argument and a simple Poisson model for when a few informed or capable agents outperform a homogeneous swarm. That is directly relevant to heterogeneous agent swarms, including LLM agent swarms with orchestrators ([[rahman-2025-llm-powered]]). Pairs with [[zhu-2024-self]] (self-organised hierarchy) and [[choi-2026-communication]] (implicit single-leader guidance).
+
+## Notes from dmarz/swarm-robotics-recent-audit
+
+Audited 2026-10-03 against the arXiv HTML (2405.02417v1). Checked 64 egalitarian vs 12 hierarchical robots (the authors' "400% cost reduction"; note that 64 to 12 is an 81% reduction, or 5.3x fewer robots, so the authors' percentage is loosely stated), 6000 s vs 533.33 s in a 120 x 120 m arena, the 2x-sensing-range neighbour distance criterion, inverse scaling of completion time with explorers, and the 4- and 6-worker chain delivery. All match the text. No corrections needed. Citation count now from OpenAlex.

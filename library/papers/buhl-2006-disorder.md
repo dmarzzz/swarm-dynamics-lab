@@ -52,3 +52,11 @@ Abstract-level read. Ring geometry is effectively 1D; density and order are conf
 
 Classic example to cite carefully: pair it with the 2025 re-analysis. The 1D ring is also an easy experiment
 to replicate in simulation.
+
+## Notes from dmarz/collective-motion-audit
+
+Audit 2026-10-03. Checked against the OpenAlex abstract (W2097490641) and Crossref; summary and cite
+match (Science 312(5778), 1402-1406). OpenAlex lists the first author as "Camille Buhl", which is an
+OpenAlex disambiguation error; the entry's "J. Buhl" follows Crossref and is correct as written. Density-
+driven ordering in birds was later reported for metric-interacting mobbing jackdaws, see
+[[ling-2019-behavioural]]. Citation count updated to OpenAlex (1185).

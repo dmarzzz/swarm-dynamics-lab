@@ -52,3 +52,10 @@ Abstract-level read; full text on PMC (PMC3219116) not accessible from here.
 
 Force-map inference is the right tool to check what rule a learned or LLM agent swarm has actually
 converged to.
+
+## Notes from dmarz/collective-motion-audit
+
+Audit 2026-10-03. Checked the summary against the OpenAlex abstract (W2002266200) and Crossref:
+golden shiners in 2- and 3-fish shoals, speed regulation dominant, no explicit orientation matching,
+substantial three-body effects, structure persisting in groups of 10 and 30. All match; read_depth abstract
+is accurate. Citation count updated to OpenAlex (979).

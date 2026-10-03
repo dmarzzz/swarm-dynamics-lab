@@ -65,3 +65,9 @@ to be novel (Kudela notes HS, CS, FA, MFO, ALO are equivalent to older methods).
 Any hackathon experiment that benchmarks a swarm optimiser must use shifted/rotated problems (e.g. BBOB) or this
 artefact will dominate. Pairs with [[vermetten-2024-large]] (294 implementations on BBOB) and
 [[camacho-villalon-2023-exposing]].
+
+## Notes from dmarz/swarm-intelligence-audit
+
+Audit 2026-10-03: checked every number in Key results against the arXiv v1 PDF (Tables 1-2, Sections 3-4); all
+match. Corrected one label: the 1.14 ratio belongs to "Evolution Strategies (2002)" in Kudela's Table 2, not a
+"CMA-like ES"; the paper does not say which ES variant. read_depth full is consistent with the content.

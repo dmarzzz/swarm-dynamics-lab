@@ -79,3 +79,11 @@ The canonical model to reproduce for a swarm-dynamics hackathon: it is cheap, ha
 shows a phase diagram with milling and hysteresis, and is the comparison point for learned controllers and
 LLM-agent swarms. Polarization and angular momentum are the two order parameters to log. Related:
 [[calovi-2014-swarming]] (data-driven phase diagram), [[couzin-2005-effective]] (adds informed individuals).
+
+## Notes from dmarz/collective-motion-audit
+
+Audit 2026-10-03. Re-opened the PDF at the entry url and checked Table 1 (N 10-100, r_r = 1,
+Delta r_o and Delta r_a 0-15, alpha 200-360 deg, theta 10-100 deg/s, s 1-5, sigma 0-0.2 rad, tau = 0.1 s),
+the hysteresis run (r_a = 14, 2000 steps per value, 15 replicates, thresholds near r_o = 1.5 and 2.5),
+fragmentation below about alpha = 230 deg, convergence within 5000 steps and 30 replicates per parameter
+pair. All match; no correction needed. Citation count updated to OpenAlex (2213).

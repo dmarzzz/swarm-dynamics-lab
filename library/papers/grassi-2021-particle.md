@@ -74,3 +74,10 @@ Gives the exact dictionary between PSO and kinetic/active-matter language (inert
 Vlasov-Fokker-Planck), which is what we need to talk about "swarm optimisers as swarm dynamics". Pair with
 [[pinnau-2017-consensus]], [[clerc-2002-particle]] (constriction from the discrete dynamical-systems side) and
 [[kadirkamanathan-2006-stability]] (Lyapunov view).
+
+## Notes from dmarz/swarm-intelligence-audit
+
+Audit 2026-10-03: checked the SDE mapping (c_k = 2 to lambda = 1, sigma = 1/sqrt(3)), N = 5e5, grid 90 x 120,
+nu = 0.5, m in {0.5, 0.1, 0.01}, 500 runs and alpha up to 5e4 against the arXiv PDF; all match. Corrected one
+claim: the poor results of classical PSO constraints and Matlab particleswarm are stated in the text without
+tabulated numbers, not "numbers in tables".

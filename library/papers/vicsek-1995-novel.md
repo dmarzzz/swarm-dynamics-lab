@@ -71,3 +71,11 @@ The default baseline for any swarm-dynamics experiment. A minimal implementation
 gives a polarization order parameter we can reuse to compare learned or LLM-driven agents against the
 physics baseline. Expect bands and a first-order transition if we simulate large N. See review context in
 [[vicsek-2012-collective]] and [[chate-2020-dry]].
+
+## Notes from dmarz/collective-motion-audit
+
+Audit 2026-10-03. Re-opened the arXiv repost (cond-mat/0611743) and checked metadata against OpenAlex
+(W2015410655) and every number in Key results and Methods: beta = 0.45 +/- 0.07, delta = 0.35 +/- 0.06,
+eta_c = 2.9 +/- 0.05 at rho = 0.4, 0.003 < v < 0.3, N = 40-10000 with L = 3.1-50, 5 runs. All match; no
+correction needed. read_depth full is plausible for a 4-page letter. Citation count updated to OpenAlex
+(7539 on 2026-10-03).

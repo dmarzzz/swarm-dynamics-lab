@@ -82,3 +82,11 @@ macro data. For our hackathon this argues for testing agent rules that are perce
 (bearing-only, choose-a-target) against Vicsek alignment, which is also closer to how an LLM or RL agent
 would act. Related: [[bastien-2020-model]] (vision-only model), [[heins-2024-collective]] (active
 inference agents), [[li-2025-reverse]] (VR reverse engineering in zebrafish).
+
+## Notes from dmarz/collective-motion-audit
+
+Audit 2026-10-03. Re-opened the KOPS PDF (6 pages, main text) and checked the field sample sizes
+(56 bands; control n = 110, olfaction- n = 89, polarized-vision- n = 54, vision- n = 114; 112 locales,
+27 Feb-12 Mar 2020, Samburu and Isiolo), VR numbers (density 1-64 per m^2, 421 trials, n = 32 and 34 in the
+optomotor test, n = 21 for the 5 cm offset band, 100 Hz projection, 2000-locust arena, 4000 posterior
+samples). All match; no correction needed. Citation count updated to OpenAlex (66).

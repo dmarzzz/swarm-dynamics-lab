@@ -14,7 +14,7 @@ added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: full
 relevance: 5
-citations: "62 (Crossref, 2026-10-03); 118 (Semantic Scholar, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "47 (OpenAlex W4403753154, 2026-10-03); 62 (Crossref, 2026-10-03); 118 (Semantic Scholar, 2026-10-03)"
 code: []
 ---
 
@@ -56,3 +56,7 @@ This is the first real-world quadrotor system trained by differentiable physics 
 ## Relevance to us
 
 This is a strong template for a hackathon experiment: a differentiable point-mass swarm simulator where one designs a local loss and backpropagates. It is cheap, GPU-friendly and has real-world evidence behind it. It pairs with the later quadruped extension [[zhang-2026-asymmetric]], with model-free RL swarms [[huang-2024-collision]] and [[choi-2026-communication]], and with the mixed-fidelity point-mass training of [[mednikov-2026-calibrate]]. An open question we could test: does adding a weak alignment loss to this framework produce a Vicsek-like order-disorder transition, as hand-tuned gains do in [[verdoucq-2025-flocking]]?
+
+## Notes from dmarz/swarm-robotics-recent-audit
+
+Audited 2026-10-03 against the arXiv v2 HTML (2407.10648) and Crossref. Authors, volume 7(6) and pages 954-966 match Crossref. Checked 90% success, 20 m/s in forest and 7 m/s in dense urban clutter, the $21 board, 10% of PPO samples, gradient decay rate 0.92, 50,000 iterations, the 192-d feature, thrust-to-weight 3.6, the Mango Pi and the six-drone gate swap. All match. The arxiv field stays null on purpose: the arXiv record carries the preprint title, which lab.py verify flags as a mismatch; the id is in cite. Citation count now from OpenAlex.

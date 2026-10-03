@@ -7,14 +7,14 @@ year: 2026
 venue: "IEEE Intelligent Transportation Systems Magazine"
 url: https://arxiv.org/abs/2503.05656
 doi: "10.1109/mits.2026.3666681"
-arxiv: null
+arxiv: "2503.05656"
 cite: "Xu, J., Betz, J., Mokhtarian, A., Mittal, A., Cai, M., Mangharam, R., Shehata, O. M., Elias, C. M., Zaech, J.-N., Scheffe, P., et al. (2026). Small-Scale Testbeds for Connected and Automated Vehicles and Robot Swarms: Challenges and a Roadmap. IEEE Intelligent Transportation Systems Magazine, 18(5), 6-20. (arXiv:2503.05656)"
 topics: [swarm-robotics, meta]
 added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 2
-citations: "1 (Crossref, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "1 (OpenAlex W7138991521, 2026-10-03); 1 (Crossref, 2026-10-03)"
 code: []
 ---
 

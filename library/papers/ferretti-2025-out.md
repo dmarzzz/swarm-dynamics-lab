@@ -50,3 +50,8 @@ Abstract-level read.
 Important caveat for anyone estimating susceptibility from polarisation fluctuations in swarms
 (e.g. chi = N var(Phi) used in [[klamser-2021-collective]]); direct perturbation experiments
 ([[chatterjee-2025-maximal]]) avoid it.
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: arXiv 2405.12874 and Crossref checked (Phys. Rev. Research 7(3) L032006, 5 authors). Summary matches the abstract. No corrections. A direct-perturbation measurement in real swarms that complements this: [[van-der-vaart-2019-mechanical]].

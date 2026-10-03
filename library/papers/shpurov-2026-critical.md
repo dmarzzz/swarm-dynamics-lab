@@ -44,3 +44,8 @@ Abstract-level read.
 ## Relevance to us
 
 Simple CA we could reuse to test criticality measurement pipelines on jamming-like swarms.
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: Crossref checked (Phys. Rev. E 113(2) 024405, Shpurov & Froese). Metadata correct.

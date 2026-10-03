@@ -8,13 +8,13 @@ venue: Proceedings of the National Academy of Sciences
 url: https://arxiv.org/abs/0709.1916
 doi: 10.1073/pnas.0711437105
 arxiv: '0709.1916'
-cite: Ballerini, M., Cabibbo, N., Candelier, R., Cavagna, A., Cisbani, E., Giardina, I., Lecomte, V., Orlandi, A., Parisi, G., Procaccini, A., et al. (2008). Interaction ruling animal collective behavior depends on topological rather than metric distance - Evidence from a field study. Proceedings of the National Academy of Sciences, 105(4), 1232–1237.
+cite: 'Ballerini, M., Cabibbo, N., Candelier, R., Cavagna, A., Cisbani, E., Giardina, I., Lecomte, V., Orlandi, A., Parisi, G., Procaccini, A., et al. (2008). Interaction ruling animal collective behavior depends on topological rather than metric distance: Evidence from a field study. Proceedings of the National Academy of Sciences, 105(4), 1232–1237.'
 topics: [collective-motion, criticality-measurement]
 added_by: dmarz/collective-motion
 accessed: 2026-10-03
 read_depth: full
 relevance: 5
-citations: "1860 (Crossref is-referenced-by-count, 2026-10-03); 2009 (Semantic Scholar, 2026-10-03)"
+citations: "2079 (OpenAlex, 2026-10-03); 1860 (Crossref is-referenced-by-count, 2026-10-03); 2009 (Semantic Scholar, 2026-10-03)"
 code: []
 ---
 
@@ -61,8 +61,9 @@ attraction/repulsion (from [[gregoire-2004-onset]]) modified to interact with a 
 ## Limitations and open questions
 
 - Only ten flocks; the inference is from static structure (anisotropy), not from dynamics. Later dynamic
-  inference ([[bialek-2012-statistical]]) reached the same topological conclusion with n_c ~ 11-12 effective
-  neighbours, so the exact number depends on method.
+  inference ([[bialek-2012-statistical]]) reached the same topological conclusion: its maximum-entropy fit
+  gives an effective n_c = 21.2 +/- 1.7 averaged over flocks, which after calibration on simulated
+  flocks corresponds to a true range of about 7.8 neighbours, so the raw number depends on method.
 - Density range limited: the densest flocks were excluded because matching failed.
 - The cohesion simulation is 2D and the predator is a crude perturbation.
 - Topological vs metric is not universal: fish studies find mixed or visual-network rules
@@ -74,3 +75,13 @@ attraction/repulsion (from [[gregoire-2004-onset]]) modified to interact with a 
 If we design neighbour selection for simulated or LLM agents, k-nearest (k ~ 6-7) is the empirically
 grounded default and is robust to density swings. Pair with [[cavagna-2010-scale]] (correlations far exceed
 the interaction range) and the review [[cavagna-2014-bird]].
+
+## Notes from dmarz/collective-motion-audit
+
+Audit 2026-10-03. Re-opened arXiv 0709.1916 and checked every number in Key results and Methods (n_c = 6.5
++/- 0.9, R^2 = 0.00021 / P = 0.97 and R^2 = 0.78 / P = 0.00072, r_1 0.68-1.51 m, 2600 birds, 88% matching,
+25 m baseline, 0.09 m depth error, about 500 events): all match. Corrected: the Limitations bullet said
+[[bialek-2012-statistical]] found n_c ~ 11-12; that paper reports n_c = 11 for one snapshot, 21.2 +/- 1.7
+averaged over flocks, and a calibrated true range of about 7.8 (arXiv 1107.0604, Fig. 2 and Discussion).
+Cite string title punctuation fixed to the published colon. Metadata confirmed on OpenAlex (W2112164016);
+cited_by_count 2079 (OpenAlex, 2026-10-03).

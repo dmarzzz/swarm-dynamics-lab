@@ -14,7 +14,7 @@ added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: full
 relevance: 5
-citations: "0 (Semantic Scholar, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "0 (OpenAlex W7117298302, 2026-10-03); 0 (Semantic Scholar, 2026-10-03)"
 code: []
 ---
 
@@ -52,3 +52,7 @@ This is, as far as I know, the first outdoor aerial-swarm study to frame interac
 ## Relevance to us
 
 This is the closest physical-robot analogue to the hackathon's core question of whether operating near an order-disorder transition buys responsiveness. It gives concrete observables (polarisation variance, recovery time, switching asymmetry) and an open dataset we could reanalyse. It links to criticality measurement in animal groups ([[cavagna-2010-scale]], [[attanasi-2014-collective]]), to the fish model it inherits from ([[calovi-2014-swarming]]), and to learned controllers that do not tune for criticality at all ([[choi-2026-communication]], [[zhang-2025-learning]]).
+
+## Notes from dmarz/swarm-robotics-recent-audit
+
+Audited 2026-10-03 against the arXiv HTML (2512.21196). Checked the two-fold slope shift of the critical line with doubled N, the 5 s vs 15 s switching asymmetry, 18-22 km/h wind with 33 km/h gusts, 1 Hz telemetry, two influential neighbours, the 50 m arena at 5-15 m altitude, 200 simulation repetitions per intruder condition, the about-twice dispersion change of swarming vs schooling and the 1.5x velocity response of the critical regime, and the Zenodo DOI. All match. No corrections needed. Citation count now from OpenAlex.

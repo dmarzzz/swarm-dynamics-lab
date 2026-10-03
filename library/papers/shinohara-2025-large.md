@@ -51,3 +51,10 @@ Abstract-level reading; preprint; baselines and cost not checked.
 
 Candidate baseline if the hackathon explores LLM agents performing swarm search; compare with [[feng-2024-model]]
 and [[zhang-2025-swarmagentic]].
+
+## Notes from dmarz/swarm-intelligence-audit
+
+Audit 2026-10-03: a peer-reviewed version appeared as Shinohara, Y., Xu, J., Li, T., & Iba, H. (2025). Large
+language models as particle swarm optimizers. In 2025 IEEE Congress on Evolutionary Computation (CEC), pp. 1-4.
+https://doi.org/10.1109/CEC65147.2025.11043021 (Crossref record; found as a 2025 forward citation of
+[[kennedy-1995-particle]]). Entry left on the arXiv version, which is the text that was read.

@@ -45,3 +45,8 @@ Simulation; abstract-level read.
 
 Simple leader-detection diagnostic for agent swarms; interpret with the caveats in
 [[sattari-2022-modes]]. Related: [[wang-2012-quantifying]], [[butail-2016-model]].
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: arXiv 1407.0007 abstract page checked; 8 authors and title correct. The arXiv journal-ref is 'ci-2014/141', i.e. an extended abstract for the ACM Collective Intelligence 2014 conference, so treat it as a short conference abstract rather than a full paper. The summary's covert-leader claim is consistent with the page; left as is.

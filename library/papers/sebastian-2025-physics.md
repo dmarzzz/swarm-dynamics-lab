@@ -7,14 +7,14 @@ year: 2025
 venue: "IEEE Transactions on Robotics"
 url: https://arxiv.org/abs/2401.00212
 doi: "10.1109/tro.2025.3582836"
-arxiv: null
+arxiv: "2401.00212"
 cite: "Sebastián, E., Duong, T., Atanasov, N., Montijano, E., & Sagüés, C. (2025). Physics-Informed Multiagent Reinforcement Learning for Distributed Multirobot Problems. IEEE Transactions on Robotics, 41, 4499-4517. (arXiv:2401.00212)"
 topics: [swarm-robotics, marl-emergence, sync-consensus]
 added_by: dmarz/swarm-robotics-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 4
-citations: "33 (Crossref, 2026-10-03). OpenAlex daily budget exhausted on this IP during the session."
+citations: "29 (OpenAlex W4411599507, 2026-10-03); 33 (Crossref, 2026-10-03)"
 code: []
 ---
 

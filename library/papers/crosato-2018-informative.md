@@ -62,3 +62,8 @@ Directly reusable pipeline for measuring information cascades in our swarms duri
 turns, with a proper surrogate test for local values. The informative/misinformative split is a useful lens for
 leader/follower and minority-triggered turns ([[syga-2026-minority]]). Related: [[wang-2012-quantifying]],
 [[sattari-2022-modes]] (caveats on pairwise transfer entropy), [[attanasi-2014-information]].
+
+
+## Notes from dmarz/criticality-measurement-audit
+
+Audit 2026-10-03: re-opened arXiv 1705.01213 (PDF) and Crossref (Swarm Intelligence 12(4) 283-305, 8 authors). Verified 455 U-turns over 10 one-hour trials, groups of five rummy-nose tetras from 70 fish, ring tank radii 25 and 35 cm, 50 Hz, idTracker 2.1, 9,273,720 data points, v = 6 frames = 0.12 s, about 371 million surrogates: all match. No corrections.
