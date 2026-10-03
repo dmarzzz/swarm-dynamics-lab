@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: working
+state: done
 task: organize-research-navigation
-doing: Connecting research focus areas, project briefs and formal hypothesis tags
-updated: 2026-10-03T22:30Z
+doing: Published research-area navigation and hypothesis tagging at 269e901
+updated: 2026-10-03T22:37Z
 ---
 
 ## Notes
