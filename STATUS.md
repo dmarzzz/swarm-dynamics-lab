@@ -116,7 +116,7 @@
 | [#35](https://github.com/dmarzzz/swarm-lab/issues/35) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 10 candidates (web-swarm-robotics-20261003-01) |
 | [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
 | [#38](https://github.com/dmarzzz/swarm-lab/issues/38) | free | 2026-10-03T20:00Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-02) |
-| [#40](https://github.com/dmarzzz/swarm-lab/issues/40) | free | 2026-10-03T20:00Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-02) |
+| [#40](https://github.com/dmarzzz/swarm-lab/issues/40) | free | 2026-10-03T20:01Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-02) |
 | [#41](https://github.com/dmarzzz/swarm-lab/issues/41) | free | 2026-10-03T19:22Z | [batch] web/sync-consensus: 8 candidates (web-sync-consensus-20261003-03) |
 | [#52](https://github.com/dmarzzz/swarm-lab/issues/52) | free | 2026-10-03T19:59Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-01) |
 | [#58](https://github.com/dmarzzz/swarm-lab/issues/58) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-02) |
