@@ -1,18 +1,19 @@
 ---
 id: scan-threads-sd-informal
 type: task
-title: 'Catalogue the threads: threat-intel reports, blogs, threads and talks on agent
-  swarms in the wild'
+title: 'Catalogue the threads: threat-intel reports, blogs, threads and talks on agent swarms in the wild'
 kind: scan
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/sd-informal
 for: null
 created: '2026-10-03'
 created_by: dmarz/sd
 depends_on: []
 topics:
 - swarm-detection
+claimed_at: 2026-10-03T18:20Z
+updated: 2026-10-03T18:20Z
 ---
 
 ## Goal
