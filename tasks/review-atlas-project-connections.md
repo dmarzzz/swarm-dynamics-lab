@@ -25,8 +25,10 @@ Synthesis output: `synthesis/atlas-project-connections.md`, with supporting owne
 
 - [x] Review atlas, areas, briefs, and newly published simulation survey.
 - [x] Publish per-candidate comments, distinct extensions, source checks, and project crosswalk.
-- [ ] Validate references, inspect for secrets, and push the contribution.
+- [x] Validate references, inspect for secrets, and push the contribution.
 
 ## Coverage note
 
 Reconciled through main `25a7575`: 214 candidates across 15 areas, including 36 revised originals and all 71 additions since the 143-card bank. Forty reviewer-authored questions/refinements map to all sixteen original briefs; four substantial overlaps are explicitly labeled. Primary-source access depths and UI observations are recorded separately. The canonical hosted Questions page imported all 214 comments successfully. No formal hypotheses or model experiments were created.
+
+Published research contribution: `36d9a3b`. Repository check and source verification passed on GitHub; no new citation warnings were introduced.

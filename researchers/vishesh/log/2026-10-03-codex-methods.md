@@ -19,3 +19,13 @@ Next: projects should adapt the toolkit only after their own survey and hypothes
 Published toolkit commit: [4d8eadde6b26f6299d67ba2af90fde7427bba6ac](https://github.com/dmarzzz/swarm-lab/commit/4d8eadde6b26f6299d67ba2af90fde7427bba6ac). The final exact-staged-file Gitleaks review covered 57 files / 210,591 bytes with zero findings. All 34 canonical source links in the toolkit resolve.
 
 GitHub Actions passed: [offline toolkit validation](https://github.com/dmarzzz/swarm-lab/actions/runs/37152506049) and [repository check, source verification and generated index](https://github.com/dmarzzz/swarm-lab/actions/runs/37152505912). The contribution is general tooling; no paid experiment was launched and no project hypothesis was selected. The build task is closed through `lab.py done` after publication.
+
+## Research review publication
+
+Published [36d9a3b](https://github.com/dmarzzz/swarm-lab/commit/36d9a3b): all 214 current atlas candidates reviewed, forty reviewer-authored questions/refinements and cross-connections, a mapping to all sixteen original briefs, fifteen-area context, an eight-candidate shortlist, design review, UI findings and a primary-source access ledger. Review cutoff is main 25a7575 and atlas hash 221d012538054f1770caadee9b63c7681504ec970cb390328e0ad52b345e4fe1. Four extensions substantially overlap newer cards and are explicitly labeled as refinements.
+
+The new hunch bundle at 45b363a is included. Important findings: Scheme C's upper concentration threshold rejects correct unanimity; its citation concentration statistic does not establish independent sample size; five agents with one fault do not satisfy Bulyan's seven-gradient minimum; TypeSafe/Jev confidence is a probability transform requiring task-specific calibration. Source reading depths are explicit, and no full catalogue audit or empirical result is claimed.
+
+Validation checked 214 matching candidate fingerprints, all sixteen brief mappings, relative links and 321 distinct canonical citation targets. Gitleaks with full redaction found zero matches across fifteen contribution files, with no private-path matches. Repository check passed with the five pre-existing warnings. GitHub check and verify jobs passed. The hosted Questions UI imported all 214 comments and displayed eight shortlisted candidates. Browser import is local review state; the public contribution is the Git commit.
+
+No formal hypothesis or paid/model experiment was created. Next work should select one comparison, inspect the closest primary implementation in depth and complete the appropriate survey/review gates. The separate inbox request for formal LLM-survey review remains outside this task.
