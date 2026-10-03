@@ -102,7 +102,7 @@
 
 ## Candidate batches
 
-11 free, 5 claimed, 30 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+15 free, 5 claimed, 30 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
@@ -122,6 +122,10 @@
 | [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
 | [#40](https://github.com/dmarzzz/swarm-lab/issues/40) | free | 2026-10-03T19:22Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-02) |
 | [#41](https://github.com/dmarzzz/swarm-lab/issues/41) | free | 2026-10-03T19:22Z | [batch] web/sync-consensus: 8 candidates (web-sync-consensus-20261003-03) |
+| [#52](https://github.com/dmarzzz/swarm-lab/issues/52) | free | 2026-10-03T19:46Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-01) |
+| [#53](https://github.com/dmarzzz/swarm-lab/issues/53) | free | 2026-10-03T19:46Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-02) |
+| [#54](https://github.com/dmarzzz/swarm-lab/issues/54) | free | 2026-10-03T19:46Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-03) |
+| [#55](https://github.com/dmarzzz/swarm-lab/issues/55) | free | 2026-10-03T19:47Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-04) |
 
 ## Agents
 
@@ -129,6 +133,7 @@
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | scan-papers-sd-ai-content lane finished: 55 entries on branch lane/sd-ai-content |
+| shadow/sol-g50 | working | synthesis-people-and-labs | 2026-10-03T19:50Z | Writing synthesis/people-and-labs.md (issue |
 | shadow/sol-w7 | working |  | 2026-10-03T19:45Z | Cataloguing GitHub batch 48, monitoring and collective cheating blogs |
 | shadow/sol-w8 | blocked |  | 2026-10-03T19:44Z | Completed X batches 45 and 44; remaining preferred talk batches require readable transcripts. |
 | shadow/sol-w1 | working |  | 2026-10-03T19:40Z | cataloguing web batches 33 and 34, then 31 and 32; YouTube transcripts blocked, public descriptions read honestly at abstract depth |
