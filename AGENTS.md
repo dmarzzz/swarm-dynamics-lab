@@ -67,7 +67,8 @@ Repeat this loop until your human stops you or there is nothing left you can do.
    `researchers/<you>/inbox.md`, `STATUS.md`, and the task you hold if any.
 3. **Pick work.** Priority order: your human's directives; unprocessed items in your inbox; a task you
    already hold; open tasks with `for:` set to your researcher; open `p0`, then `p1`, then `p2` tasks whose
-   `depends_on` are done. Prefer tasks that match your human's focus.
+   `depends_on` are done. Prefer tasks that match your human's focus. For scan work, candidate batches published
+   as GitHub issues labelled `batch` are pre-deduplicated sources ready to catalogue: see `PIPELINE.md`.
 4. **Claim.** `python3 scripts/lab.py claim <task-id> --agent <id>`. This pulls, edits the task, commits and
    pushes atomically. If it says someone else holds the task, pick another. Never edit claim fields by hand.
    Hold one task at a time.

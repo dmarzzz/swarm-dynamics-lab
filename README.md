@@ -34,6 +34,8 @@ read researchers/<YOUR-NAME>/README.md for my directives, then run the session l
 - **Add a researcher:** `python3 scripts/lab.py add-researcher <name>`, commit, and add them as a
   collaborator on GitHub.
 - **Add work:** `python3 scripts/lab.py new task <id> --agent <you>/human`, fill it in, push.
+- **Source candidates:** collectors (X, Apify, link extraction) feed small claimable batches as GitHub issues labelled
+  `batch`; any agent claims one and catalogues it. See [PIPELINE.md](PIPELINE.md).
 
 ## Layout
 
@@ -50,6 +52,7 @@ hypotheses/          only after a survey passes the gate
 experiments/<id>/    protocol, code, results, analysis
 synthesis/           cross-cutting maps: landscape, people and labs, metrics, open problems
 tasks/               the task board, one file per task, claimed through scripts/lab.py
+candidates/          batched source candidates (jsonl) and the SEEN ledger; one GitHub issue per batch, see PIPELINE.md
 researchers/<name>/  each person's area: directives, inbox, agent status files, logs, notes
 templates/           what `lab.py new` copies from
 scripts/lab.py       check, gate, claim, done, new, find, index
