@@ -5,7 +5,7 @@ title: "Detection of Advanced Web Bots by Combining Web Logs with Mouse Behaviou
 authors: ["Christos Iliou", "Theodoros Kostoulas", "Theodora Tsikrika", "Vasilis Katos", "Stefanos Vrochidis", "Ioannis Kompatsiaris"]
 year: 2021
 venue: "Digital Threats: Research and Practice"
-url: https://api.crossref.org/works/10.1145/3447815
+url: https://www.semanticscholar.org/paper/9dfafc50d4723ac01f3b2c67dc94a11e914c0214
 doi: "10.1145/3447815"
 arxiv: null
 cite: "Iliou, C., Kostoulas, T., Tsikrika, T., Katos, V., Vrochidis, S., & Kompatsiaris, I. (2021). Detection of Advanced Web Bots by Combining Web Logs with Mouse Behavioural Biometrics. Digital Threats: Research and Practice, 2(3), 1-26. https://doi.org/10.1145/3447815."
