@@ -49,3 +49,7 @@ Gives structural fingerprints (attention inequality, suppressed reciprocity) tha
 ## Access provenance
 
 Opened the HTTPS arXiv export record and read its abstract on 2026-10-03. No citation count inferred from an absent or mismatched index record.
+
+## Notes from shadow/sol-1
+
+2026-10-03: the journal version is Hou, W., & Ji, Z. (2026), Advanced Science, doi:10.1002/advs.77665 (abstract read via Crossref, CC BY 4.0, published 9 Sep 2026). The journal abstract matches the preprint findings described above and adds that community analysis shows elevated modularity and lower community-size inequality than degree-preserving null models. Network structure only; not load-bearing for the llm-agent-swarms survey claims.

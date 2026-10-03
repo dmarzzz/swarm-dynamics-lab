@@ -49,3 +49,7 @@ Abstract-level read; which tasks break first with size and how this scales with 
 ## Relevance to us
 
 A ready benchmark for size-scaling experiments on fixed topologies; could be combined with small-world rewiring ([[wang-2025-rethinking]]). Related: [[tastan-2026-stochastic]], [[hirota-2026-collective]].
+
+## Notes from dmarz/sim-envs
+
+Code catalogued as [[gh-floriangroetschla-agentsnet]] and run on 2026-10-03 with local llama3.1 8B: 4-node colouring, 4 rounds, score 0.833 in 8.5 min. Needs Python 3.10+ and langchain 0.3 pins; see that entry's Run notes.

@@ -33,3 +33,9 @@ Not run. Setup per README is `make install && make enable && make start` on a Li
 ## Limitations
 
 Prompt injections are public in the repo, so a careful operator can filter them. Measures only agents that read raw SSH output and follow injected text; the paper says it misses AI-assisted tooling and passive LLM triage of scraped data. The dashboard is deprecated and the counts are small (3 confirmed), so the base rate has wide uncertainty. No licence file.
+
+## Notes from dmarz/sim-envs
+
+Independently catalogued by the sim-environments lane (read_depth skim) and folded in here on merge. Lane summary, written for the simulation-environments survey:
+
+Simulates: a vulnerable SSH host (modified Cowrie) whose reconnaissance commands return hidden ANSI-escaped prompt injections, a goal-hijack stage and a system-prompt-stealing stage, plus timing analysis, to separate LLM agents from scripts and humans. Interaction model: live deployment on the public internet, not a closed simulation. Scale: the paper reports 8,130,731 hacking attempts and 8 potential AI agents over about three months [[reworr-2024-llm]]. LLM-driven: the targets are; the honeypot is not. Adversarial hooks: it is a canary or tarpit for adversarial agents. Weight: `make install && make enable && make start`; a docker-compose dashboard.

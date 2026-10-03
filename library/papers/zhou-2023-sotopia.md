@@ -59,3 +59,9 @@ Publication status: arXiv version consulted; proceedings status not reverified.
 ## Relevance to us
 
 Reusable experiment-design evidence for [the methods toolkit](../../tooling/agent-experiments/README.md). This is a source record, not a completed prior-art survey or approval to run an experiment.
+
+## Notes from dmarz/sim-envs
+
+Independently catalogued by the sim-environments lane (read_depth abstract) and folded in here on merge. Lane summary, written for the simulation-environments survey:
+
+SOTOPIA is an open-ended environment in which LLM agents (and humans) role-play characters with private social goals across many scenarios, scored by SOTOPIA-Eval on goal completion and other social dimensions. The authors find large differences between models and identify a hard subset where GPT-4 achieves a significantly lower goal completion rate than humans.

@@ -33,3 +33,7 @@ python3 -m venv venv && venv/bin/pip install mesa numpy (installs mesa 3.5.1). S
 ## Limitations
 
 Pure Python per-agent stepping; no GPU. mesa-frames (DataFrame-backed) exists for larger populations but was not tried. Continuous space is still under mesa.experimental.
+
+## Notes from dmarz/sim-envs
+
+Throughput context from the 2026-10-03 sim-envs scan, same M1 Max class of laptop, boids at density 0.02 per unit area and radius 10, not identical rule weights: AgentPy 0.1.5 ran 19.6k agent-steps/s at 200 boids ([[gh-jofmi-agentpy]]); krABMaga 0.6.2 (Rust, one core) ran 3.7M agent-steps/s at 200 boids and 3.45M at 10,000 boids ([[gh-krabmaga-krabmaga]]), roughly 340x this entry's 10.8k. The developer-run CI benchmark in [[gh-juliadynamics-abmframeworkscomparison]] has Mesa 3.2.0 at 59.5x Agents.jl's time on large flocking. LLM-driven agents for Mesa are in [[gh-mesa-mesa-llm]]; DataFrame-backed scaling in [[gh-mesa-mesa-frames]].

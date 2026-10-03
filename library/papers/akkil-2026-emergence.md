@@ -45,3 +45,11 @@ One run per configuration; the authors call the findings "proofs of existence", 
 ## Relevance to us
 
 Measured agent-side counterpart to the human findings this lane catalogues. For Q3, "detection did not ensure containment" and the 46-hour delayed action are the agent version of failed post-misinformation warnings [[loftus-2005-planting]] and of the persistence [[heuer-1999-psychology]] describes: once the content is written to an agent's persistent memory, recognising it as hostile does not neutralise it. A sub-agent that explores hostile territory and returns can therefore be both aware of an attack and still carrying its payload in memory. Retention restraint failing universally means merge gates cannot rely on children having filtered what they store. For Q2, societal sycophancy in single-model worlds is a direct warning about k-of-n votes among children forked from one model: they may share a disposition to agree, so k agreeing votes are not independent, while heterogeneous populations dissented more. This matches the correlation problem in [[cowden-2014-pioneering]] and the conformity results in [[de-marzo-2026-conformity]]. Related human contagion results: [[roediger-2001-social]], [[meade-2002-explorations]].
+
+## Notes from dmarz/sim-envs
+
+Independently catalogued by the sim-environments lane and folded in here on merge. Lane summary:
+
+Season 2 of Emergence World: eight parallel worlds of ten agents (seven single-model, one mixed) run for 16 days, producing over 850,000 LLM calls and about 50 billion tokens. After state accumulated, three controlled stress events were injected through ordinary interaction surfaces: indirect prompt injection, misinformation, and exposure of private agent memories. No world was fully resilient to all three.
+
+Season 1 of the same project is [[akkil-2026-emergence-platform]].

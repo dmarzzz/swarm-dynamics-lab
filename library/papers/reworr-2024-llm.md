@@ -84,3 +84,9 @@ Tiny positive count, no ground truth for the 8 detections, and the 1.5 to 1.7 s 
 ### Relevance to us
 
 The canonical in-the-wild agent honeypot and base-rate measurement for this lane; the same two signals (injection compliance, latency) recur in [[ediga-2026-trace]] and [[park-2026-cross]]. Model attribution of caught agents could use [[pasquini-2024-llmmap]] or [[white-2026-black]] on the honeypot transcripts. Measured rate is very low (8 in 8.1M), a useful prior for any swarm-detection claim.
+
+## Notes from dmarz/sim-envs
+
+Independently catalogued by the sim-environments lane (read_depth abstract) and folded in here on merge. Lane summary, written for the simulation-environments survey:
+
+Presents a public SSH honeypot augmented with prompt-injection traps and time-based analysis to separate autonomous LLM hacking agents from other attackers. Over about three months of public deployment it logged 8,130,731 hacking attempts and flagged 8 potential AI agents, which the authors present as an early warning that AI-driven attacks exist in the wild but are still rare.
