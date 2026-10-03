@@ -8,7 +8,7 @@
 |---|---|---|---|---|---|---|---|
 | collective-motion | 314 | 8 | 3 | 15 | 1 | 22 | 363 |
 | collective-decision | 241 | 8 | 22 | 19 | 0 | 23 | 313 |
-| swarm-robotics | 272 | 13 | 2 | 7 | 1 | 9 | 304 |
+| swarm-robotics | 272 | 13 | 2 | 7 | 1 | 14 | 309 |
 | swarm-intelligence | 107 | 1 | 2 | 4 | 0 | 0 | 114 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 4 | 198 |
 | sync-consensus | 227 | 8 | 11 | 17 | 0 | 15 | 278 |
@@ -102,17 +102,17 @@
 
 ## Candidate batches
 
-21 free, 3 claimed, 44 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+20 free, 4 claimed, 44 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
+| [#26](https://github.com/dmarzzz/swarm-lab/issues/26) | claimed | 2026-10-03T20:07Z | [batch] web/collective-motion: 3 candidates (web-collective-motion-20261003-03) |
 | [#35](https://github.com/dmarzzz/swarm-lab/issues/35) | claimed | 2026-10-03T20:05Z | [batch] web/swarm-robotics: 10 candidates (web-swarm-robotics-20261003-01) |
 | [#57](https://github.com/dmarzzz/swarm-lab/issues/57) | claimed | 2026-10-03T20:07Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-01) |
 | [#72](https://github.com/dmarzzz/swarm-lab/issues/72) | claimed | 2026-10-03T20:06Z | [batch] paper/sybil-resistance: 11 candidates (paper-sybil-resistance-20261003-16) |
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
 | [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |
-| [#26](https://github.com/dmarzzz/swarm-lab/issues/26) | free | 2026-10-03T19:46Z | [batch] web/collective-motion: 3 candidates (web-collective-motion-20261003-03) |
 | [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
 | [#40](https://github.com/dmarzzz/swarm-lab/issues/40) | free | 2026-10-03T20:01Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-02) |
 | [#41](https://github.com/dmarzzz/swarm-lab/issues/41) | free | 2026-10-03T19:22Z | [batch] web/sync-consensus: 8 candidates (web-sync-consensus-20261003-03) |
@@ -124,7 +124,8 @@
 | [#63](https://github.com/dmarzzz/swarm-lab/issues/63) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-07) |
 | [#64](https://github.com/dmarzzz/swarm-lab/issues/64) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-08) |
 | [#65](https://github.com/dmarzzz/swarm-lab/issues/65) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-09) |
-| | | | 6 more free batches |
+| [#66](https://github.com/dmarzzz/swarm-lab/issues/66) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-10) |
+| | | | 5 more free batches |
 
 ## Agents
 

@@ -2,7 +2,7 @@
 
 # Library index
 
-2458 entries.
+2463 entries.
 
 ## Papers (1559)
 
@@ -2404,7 +2404,7 @@
 | [data-moltbook-takschdube-2026](datasets/data-moltbook-takschdube-2026.md) | Moltbook longitudinal dataset (Taksch Dube): timestamped crawls with derived social and reply graphs | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 
-## Talks (83)
+## Talks (88)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -2423,8 +2423,10 @@
 | [leonard-2009-flocks](talks/leonard-2009-flocks.md) | Naomi Leonard: Flocks and Fleets: Collective Motion in Nature and Robotics | 2009 | 5 | full | collective-motion, swarm-robotics, sync-consensus | shadow/sol-w3 |
 | [marchetti-2018-physics](talks/marchetti-2018-physics.md) | The Physics of Active Matter ▸ KITP Colloquium by Cristina Marchetti | 2018 | 5 | full | collective-motion, active-matter | shadow/sol-w3 |
 | [monnot-2022-study](talks/monnot-2022-study.md) | A study of the transaction supply chain from CryptoKitties to MEV-Boost to PBS - Barnabé Monnot (EF) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
+| [nagpal-2015-taming](talks/nagpal-2015-taming.md) | Taming the Swarm - Radhika Nagpal, Harvard University | 2015 | 5 | skim | swarm-robotics | shadow/sol-w8 |
 | [nagpal-2019-mit](talks/nagpal-2019-mit.md) | MIT Robotics - Radhika Nagpal - Collective Intelligence, from Nature to Robots | 2019 | 5 | skim | swarm-robotics | shadow/sol-w8 |
 | [nagpal-2022-grasp](talks/nagpal-2022-grasp.md) | GRASP On Robotics:  Radhika Nagpal, Princeton University | 2022 | 5 | skim | swarm-robotics | shadow/sol-w8 |
+| [nagpal-2023-taming](talks/nagpal-2023-taming.md) | Taming the Swarm: Towards Collective Artificial Intelligence | 2023 | 5 | skim | swarm-robotics | shadow/sol-w8 |
 | [nayak-2023-order](talks/nayak-2023-order.md) | Order Policy Enforcement: Limitations and Circumvention - Kartik Nayak \| MEV-SBC ’23 | 2023 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [obadia-2022-multichain](talks/obadia-2022-multichain.md) | The multichain world is centralized 🙁 - studying cross-domain MEV - Alex Obadia (Flashbots) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [raj-2022-case](talks/raj-2022-case.md) | A Case-Study of MEV on Low-Fee Chains - Supragya Raj (Marlin) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
@@ -2443,12 +2445,14 @@
 | [cubbon-2020-inauthentic](talks/cubbon-2020-inauthentic.md) | Inauthentic & coordinated online activity \| Webinar with Seb Cubbon, Carlotta Dotto & Alastair Reid | 2020 | 4 | abstract | swarm-detection | shadow/sol-w1 |
 | [dafoe-2021-open](talks/dafoe-2021-open.md) | Open Problems in Cooperative AI - Allan Dafoe and Edward Hughes | 2021 | 4 | abstract | marl-emergence, collective-decision, llm-agent-swarms | shadow/sol-w1 |
 | [drake-2022-tackling](talks/drake-2022-tackling.md) | Tackling MEV with cryptography - Justin Drake (Ethereum Foundation) | 2022 | 4 | full | sybil-resistance | shadow/sol-w8 |
+| [hauert-2017-robots](talks/hauert-2017-robots.md) | Robots to nanoparticles: Engineering swarms to fix global problems \| Sabine Hauert \| TEDxExeterSalon | 2017 | 4 | full | swarm-robotics | shadow/sol-w8 |
 | [hermann-2022-mev](talks/hermann-2022-mev.md) | MEV Reduction via Batch Auction - Alex Hermann (Cowswap) | 2022 | 4 | full | sybil-resistance | shadow/sol-w8 |
 | [hickey-2018-identifying](talks/hickey-2018-identifying.md) | Identifying and Monitoring Disinformation across Social Platforms: Techniques for Discovery and Analysis | 2018 | 4 | abstract | swarm-detection | shadow/sol-w1 |
 | [jaques-2022-allen](talks/jaques-2022-allen.md) | Allen School Colloquium: Natasha Jaques (Google + UC Berkeley) | 2022 | 4 | abstract | marl-emergence, collective-decision | shadow/sol-w1 |
 | [jin-2021-power](talks/jin-2021-power.md) | The Power of Exploiter: Provable Multi-Agent RL in Large State Spaces | 2021 | 4 | abstract | marl-emergence | shadow/sol-w1 |
 | [jordan-2019-interpreting](talks/jordan-2019-interpreting.md) | Alex Jordan - Interpreting Animal Behaviour \| Collective Behaviour Seminar Series | 2019 | 4 | full | collective-motion, criticality-measurement | shadow/sol-w3 |
 | [leonard-2020-general](talks/leonard-2020-general.md) | A General Model of Opinion Dynamics on Networks: Consensus, Dissensus, and Cascades | 2020 | 4 | full | sync-consensus, collective-decision, marl-emergence | shadow/sol-w6 |
+| [nagpal-2014-robots14](talks/nagpal-2014-robots14.md) | ROBOTS14 - Radhika Nagpal | 2014 | 4 | skim | swarm-robotics | shadow/sol-w8 |
 | [puzzo-2025-short](talks/puzzo-2025-short.md) | M. Leticia Puzzo: Short-time dynamics in active systems: the vicsek model | 2025 | 4 | full | collective-motion, active-matter, criticality-measurement | shadow/sol-w3 |
 | [reclaim-2024-frontiers](talks/reclaim-2024-frontiers.md) | Panel 2 : Frontiers of Sybil Resistance | 2024 | 4 | full | sybil-resistance | shadow/sol-w8 |
 | [reclaim-2024-using](talks/reclaim-2024-using.md) | Panel 4 : Using ZK for sybil resistance solutions | 2024 | 4 | full | sybil-resistance | shadow/sol-w8 |
@@ -2466,6 +2470,7 @@
 | [couzin-2019-principles](talks/couzin-2019-principles.md) | Iain Couzin - "The Principles of Collective Behavior" (C4 Public Lectures) | 2019 | 3 | abstract | collective-motion, collective-decision | shadow/sol-w3 |
 | [couzin-2023-geometry](talks/couzin-2023-geometry.md) | Prof. Iain Couzin \| MMV Rothschild Lecture: The Geometry of Decision-Making | 2023 | 3 | abstract | collective-motion, collective-decision | shadow/sol-w3 |
 | [couzin-2023-visual](talks/couzin-2023-visual.md) | Prof. Iain Couzin \| A Visual Introduction to Collective Animal Behavior | 2023 | 3 | abstract | collective-motion, collective-decision | shadow/sol-w3 |
+| [dorigo-2020-robotica](talks/dorigo-2020-robotica.md) | La Robotica che sta arrivando con Marco Dorigo | 2020 | 3 | skim | swarm-robotics | shadow/sol-w8 |
 | [flashbots-2022-research](talks/flashbots-2022-research.md) | Flashbots Research Workshop #4: FRP Presentations & Review | 2022 | 3 | full | sybil-resistance | shadow/sol-w8 |
 | [ganesh-2020-introduction](talks/ganesh-2020-introduction.md) | Lecture 8: Introduction to consensus, and the de Groot model | 2020 | 3 | full | sync-consensus, collective-decision | shadow/sol-w6 |
 | [meir-2026-prediction](talks/meir-2026-prediction.md) | Why Prediction Markets and AI Agents Are a Compliance Nightmare \| Solidus Labs Co-Founder Asaf Meir | 2026 | 3 | abstract | swarm-detection, llm-agent-swarms | shadow/sol-w1 |
