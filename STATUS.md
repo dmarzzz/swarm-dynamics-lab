@@ -22,9 +22,6 @@
 
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
-| [scan-code-agent-orchestration](tasks/scan-code-agent-orchestration.md) | claimed | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:54Z | Catalogue LLM multi-agent and orchestration frameworks |
-| [scan-code-collective-sims](tasks/scan-code-collective-sims.md) | claimed | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:54Z | Catalogue simulators for collective motion and active matter |
-| [scan-code-robotics-marl](tasks/scan-code-robotics-marl.md) | claimed | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:54Z | Catalogue swarm robotics simulators and MARL environments |
 | [scan-papers-collective-decision](tasks/scan-papers-collective-decision.md) | claimed | p0 | scan | dmarz/collective-decision |  | 2026-10-03T17:01Z | Catalogue the papers: collective decision-making in biology |
 | [scan-papers-collective-motion](tasks/scan-papers-collective-motion.md) | claimed | p0 | scan | dmarz/collective-motion |  | 2026-10-03T17:01Z | Catalogue the papers: collective motion models |
 | [scan-papers-collective-motion-recent](tasks/scan-papers-collective-motion-recent.md) | claimed | p0 | scan | dmarz/collective-motion-recent |  | 2026-10-03T17:01Z | Catalogue collective motion papers from 2024 onward |
@@ -33,7 +30,6 @@
 | [scan-papers-marl-emergence](tasks/scan-papers-marl-emergence.md) | claimed | p0 | scan | dmarz/marl-emergence |  | 2026-10-03T17:01Z | Catalogue the papers: multi-agent rl and emergent coordination |
 | [scan-papers-swarm-robotics](tasks/scan-papers-swarm-robotics.md) | claimed | p0 | scan | dmarz/swarm-robotics |  | 2026-10-03T17:01Z | Catalogue the papers: swarm robotics |
 | [scan-papers-swarm-robotics-recent](tasks/scan-papers-swarm-robotics-recent.md) | claimed | p0 | scan | dmarz/swarm-robotics-recent |  | 2026-10-03T17:01Z | Catalogue swarm robotics papers from 2024 onward |
-| [scan-threads-agents](tasks/scan-threads-agents.md) | claimed | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:54Z | Catalogue X threads on agent swarms and multi-agent AI |
 | [scan-papers-active-matter](tasks/scan-papers-active-matter.md) | claimed | p1 | scan | dmarz/active-matter |  | 2026-10-03T17:01Z | Catalogue the papers: active matter physics |
 | [scan-papers-criticality-measurement](tasks/scan-papers-criticality-measurement.md) | claimed | p1 | scan | dmarz/criticality-measurement |  | 2026-10-03T17:01Z | Catalogue the papers: criticality, information and measurement |
 | [scan-papers-crowds-and-traffic](tasks/scan-papers-crowds-and-traffic.md) | claimed | p1 | scan | dmarz/crowds-and-traffic |  | 2026-10-03T17:01Z | Catalogue the papers: human crowds and traffic |
@@ -58,6 +54,10 @@
 | [synthesis-open-problems](tasks/synthesis-open-problems.md) | open | p1 | synthesis |  |  |  | Build the open-problems register |
 | [synthesis-people-and-labs](tasks/synthesis-people-and-labs.md) | open | p1 | synthesis |  |  |  | Map the people and labs |
 | [synthesis-glossary](tasks/synthesis-glossary.md) | open | p2 | synthesis |  |  |  | Write the shared glossary |
+| [scan-code-agent-orchestration](tasks/scan-code-agent-orchestration.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue LLM multi-agent and orchestration frameworks |
+| [scan-code-collective-sims](tasks/scan-code-collective-sims.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue simulators for collective motion and active matter |
+| [scan-code-robotics-marl](tasks/scan-code-robotics-marl.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue swarm robotics simulators and MARL environments |
+| [scan-threads-agents](tasks/scan-threads-agents.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue X threads on agent swarms and multi-agent AI |
 
 ## Agents
 
