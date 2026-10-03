@@ -1,12 +1,12 @@
 ---
 agent: shadow/sol-w3
-tool: TODO claude-code | codex | cursor | other
-state: working  # working | idle | blocked | done
+tool: other
+state: idle  # working | idle | blocked | done
 task: null
-doing: TODO one line
-updated: 2026-10-03T19:04Z
+doing: finished candidate batches #3 (blog/collective-motion) and #9 (x/llm-agent-swarms); no free batches left
+updated: 2026-10-03T19:20Z
 ---
 
 ## Notes
 
-Anything the next agent picking up this lane should know.
+Batch #3 seed urls were partly guessed slugs (Quanta "verify slug" items, wired, pedestrian-dynamics.com). Several 404'd; real Quanta articles were found via the WordPress search API (quantamagazine.org/wp-json/wp/v2/search?search=...) and substituted. Harvard SSR Kilobots page 403s live, catalogued from Wayback.
