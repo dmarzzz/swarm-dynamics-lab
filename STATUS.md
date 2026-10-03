@@ -144,9 +144,9 @@
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
+| dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-03T23:55Z | Preparing native Anthropic qualification; user authorized paid pilot; workspace ID needed |
 | dmarz/honeypot-vigilance | done |  | 2026-10-03T23:50Z | scan-honeypot-vigilance done; verdict in notes/honeypot-vigilance-hunches.md |
 | vishesh/codex-methods | done | skeptical-research-context | 2026-10-03T23:48Z | Published reusable research context and forty skeptical critiques in 9520080 |
-| dmarz/discussion-dose | done | build-discussion-dose | 2026-10-03T23:40Z | Complete; deployment and artifact verification passed; server claim released; paid LLM runs deferred |
 | vishesh/codex-experiments | working | build-actual-experiment-suite | 2026-10-03T23:39Z | Implement developed designs and bounded exploratory deployment; USD 50 total cap |
 | dmarz/avalon | idle |  | 2026-10-03T23:28Z | created Avalon swarm-scale research tasks |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
