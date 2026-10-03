@@ -39,7 +39,15 @@
         "zerhoudi-2026-compaction",
         "liu-2026-safe"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "collective-sensing": "2026-10-03T23:35:40Z",
+          "coordination": "2026-10-03T23:35:40Z",
+          "casefile": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-02",
@@ -77,7 +85,15 @@
         "liu-2026-llms",
         "data-swarmworld-2026"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "discovery": "2026-10-03T23:35:40Z",
+          "collective-sensing": "2026-10-03T23:35:40Z",
+          "quorum": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-03",
@@ -115,7 +131,15 @@
         "zerhoudi-2026-compaction",
         "liu-2026-safe"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "coordination": "2026-10-03T23:35:40Z",
+          "institutions": "2026-10-03T23:35:40Z",
+          "commons": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-04",
@@ -153,7 +177,15 @@
         "lee-2026-reproduction",
         "zha-2026-autonomous"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "institutions": "2026-10-03T23:35:40Z",
+          "coordination": "2026-10-03T23:35:40Z",
+          "memory": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-05",
@@ -191,7 +223,15 @@
         "perez-2024-cultural",
         "ashery-2024-emergent"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "memory": "2026-10-03T23:35:40Z",
+          "telephone": "2026-10-03T23:35:40Z",
+          "casefile": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-06",
@@ -230,7 +270,15 @@
         "chen-2026-memsecbench",
         "mateo-torrejon-2026-gammaf"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "institutions": "2026-10-03T23:35:40Z",
+          "coordination": "2026-10-03T23:35:40Z",
+          "regrowth": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-07",
@@ -268,7 +316,15 @@
         "li-2026-memtx",
         "gh-apromisedland-trustworthy-agent-simulation"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "coordination": "2026-10-03T23:35:40Z",
+          "memory": "2026-10-03T23:35:40Z",
+          "regrowth": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-08",
@@ -306,7 +362,15 @@
         "li-2026-memtx",
         "zha-2026-autonomous"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "regrowth": "2026-10-03T23:35:40Z",
+          "memory": "2026-10-03T23:35:40Z",
+          "institutions": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-09",
@@ -344,7 +408,15 @@
         "cemri-2025-why",
         "amayuelas-2025-self"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "coordination": "2026-10-03T23:35:40Z",
+          "collective-sensing": "2026-10-03T23:35:40Z",
+          "leadership": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-10",
@@ -382,7 +454,15 @@
         "kim-2026-are",
         "rai-2026-when"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "collective-sensing": "2026-10-03T23:35:40Z",
+          "coordination": "2026-10-03T23:35:40Z",
+          "discovery": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-11",
@@ -420,7 +500,15 @@
         "pal-2026-swarmworld",
         "piatti-2024-cooperate"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "casefile": "2026-10-03T23:35:40Z",
+          "dissent": "2026-10-03T23:35:40Z",
+          "institutions": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-12",
@@ -458,7 +546,15 @@
         "leonard-2024-fast",
         "valentini-2017-best"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "memory": "2026-10-03T23:35:40Z",
+          "quorum": "2026-10-03T23:35:40Z",
+          "culture": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-13",
@@ -496,7 +592,15 @@
         "seiden-2026-identifying",
         "todo-2009-characterizing"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "institutions": "2026-10-03T23:35:40Z",
+          "casefile": "2026-10-03T23:35:40Z",
+          "commons": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-14",
@@ -535,7 +639,15 @@
         "zhang-2024-cut",
         "zhang-2026-silo"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "discovery": "2026-10-03T23:35:40Z",
+          "telephone": "2026-10-03T23:35:40Z",
+          "collective-sensing": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-15",
@@ -573,7 +685,15 @@
         "zhang-2026-silo",
         "leibo-2021-scalable"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "commons": "2026-10-03T23:35:40Z",
+          "institutions": "2026-10-03T23:35:40Z",
+          "dissent": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-16",
@@ -611,7 +731,15 @@
         "zha-2026-autonomous",
         "louck-2026-securing"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "dissent": "2026-10-03T23:35:40Z",
+          "coordination": "2026-10-03T23:35:40Z",
+          "institutions": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-17",
@@ -649,7 +777,15 @@
         "zhang-2026-silo",
         "zhu-2026-demystifying"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "collective-sensing": "2026-10-03T23:35:40Z",
+          "leadership": "2026-10-03T23:35:40Z",
+          "quorum": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-18",
@@ -688,7 +824,15 @@
         "kim-2025-towards",
         "paliskara-2026-worse"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "leadership": "2026-10-03T23:35:40Z",
+          "coordination": "2026-10-03T23:35:40Z",
+          "culture": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-19",
@@ -726,7 +870,15 @@
         "chen-2026-memsecbench",
         "ouyang-2026-memlineage"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "regrowth": "2026-10-03T23:35:40Z",
+          "commons": "2026-10-03T23:35:40Z",
+          "coordination": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-20",
@@ -765,7 +917,15 @@
         "perez-2024-cultural",
         "zerhoudi-2026-compaction"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "memory": "2026-10-03T23:35:40Z",
+          "coordination": "2026-10-03T23:35:40Z",
+          "collective-sensing": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-21",
@@ -803,7 +963,15 @@
         "zhang-2026-silo",
         "zhu-2026-demystifying"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "quorum": "2026-10-03T23:35:40Z",
+          "discovery": "2026-10-03T23:35:40Z",
+          "collective-sensing": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-22",
@@ -842,7 +1010,15 @@
         "maccari-2009-avoiding",
         "gh-datahop-kademlia-simulator"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "casefile": "2026-10-03T23:35:40Z",
+          "coordination": "2026-10-03T23:35:40Z",
+          "memory": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-23",
@@ -880,7 +1056,15 @@
         "zha-2026-autonomous",
         "louck-2026-securing"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "institutions": "2026-10-03T23:35:40Z",
+          "coordination": "2026-10-03T23:35:40Z",
+          "collective-sensing": "2026-10-03T23:35:40Z"
+        }
+      }
     },
     {
       "id": "EX-24",
@@ -919,7 +1103,15 @@
         "aronow-2013-estimating",
         "pante-2025-beyond"
       ],
-      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch.",
+      "activity": {
+        "added_at": "2026-10-03T23:35:40Z",
+        "tags_added_at": {
+          "whistleblowing": "2026-10-03T23:35:40Z",
+          "discovery": "2026-10-03T23:35:40Z",
+          "regrowth": "2026-10-03T23:35:40Z"
+        }
+      }
     }
   ]
 }

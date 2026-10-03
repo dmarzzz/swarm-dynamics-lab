@@ -2,9 +2,9 @@
 agent: vishesh/codex-methods
 tool: codex
 state: done
-task: expand-experimental-question-bank
-doing: Published 24 EX questions and contribution dashboard; validation and deployment passed
-updated: 2026-10-03T23:37Z
+task: contribution-new-badges
+doing: Published recent-question and project-tag badges in e3952fe
+updated: 2026-10-03T23:40Z
 ---
 
 ## Notes
