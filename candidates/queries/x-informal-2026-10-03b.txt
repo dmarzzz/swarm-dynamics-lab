@@ -1,0 +1,9 @@
+# Round 2: tighter phrasing for the two thinnest topics.
+fork-merge-security	(subagent OR "sub-agent" OR subagents) (compromised OR poisoned OR hijacked OR "prompt injection") (orchestrator OR parent OR "main agent") -is:retweet lang:en
+fork-merge-security	("memory poisoning" OR "poisoned memory" OR "memory injection") agent -is:retweet lang:en
+fork-merge-security	"multi-agent" "prompt injection" (propagat OR spread OR cascade OR worm) -is:retweet lang:en
+fork-merge-security	("model merging" OR "merge the weights" OR "weight merging") (backdoor OR poison OR safety) -is:retweet lang:en
+swarm-detection	("AI crawler" OR "AI crawlers" OR "ai scrapers") (tarpit OR honeypot OR nepenthes OR "labyrinth") -is:retweet lang:en
+swarm-detection	("web bot auth" OR "agent signatures" OR "signed agents" OR "bot verification") (cloudflare OR agents) -is:retweet lang:en
+swarm-detection	("agentic traffic" OR "agent traffic") (detect OR identify OR fingerprint) -is:retweet lang:en
+swarm-detection	("coordinated inauthentic" OR "bot network" OR botnet) ("llm" OR "ai agents" OR "ai-generated") detection -is:retweet lang:en
