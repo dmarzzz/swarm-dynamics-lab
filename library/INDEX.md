@@ -2,9 +2,9 @@
 
 # Library index
 
-2391 entries.
+2398 entries.
 
-## Papers (1534)
+## Papers (1538)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1007,6 +1007,7 @@
 | [chan-2025-infrastructure](papers/chan-2025-infrastructure.md) | Infrastructure for AI Agents | 2025 | 3 | abstract | sybil-resistance, llm-agent-swarms | dmarz/sybil-llm-agents |
 | [chan-2026-noise](papers/chan-2026-noise.md) | Noise-induced collective memory in schooling fish | 2026 | 3 | abstract | collective-motion, criticality-measurement | dmarz/collective-motion-recent |
 | [chase-2014-algebraic](papers/chase-2014-algebraic.md) | Algebraic MACs and Keyed-Verification Anonymous Credentials | 2014 | 3 | abstract | sybil-resistance | dmarz/sybil-credentials |
+| [chechulin-2024-approach](papers/chechulin-2024-approach.md) | Approach to Detecting Malicious Bots in the Vkontakte Social Network and Assessing Their Parameters | 2024 | 3 | abstract | swarm-detection, sybil-resistance | shadow/sol-w4 |
 | [chen-2022-sybil](papers/chen-2022-sybil.md) | Sybil-Proof Diffusion Auction in Social Networks | 2022 | 3 | abstract | sybil-resistance | dmarz/sybil-mechanisms |
 | [chen-2023-agentverse](papers/chen-2023-agentverse.md) | AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors | 2023 | 3 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 | [chen-2023-dark](papers/chen-2023-dark.md) | The Dark Side of NFTs: A Large-Scale Empirical Study of Wash Trading | 2023 | 3 | abstract | swarm-detection | dmarz/sd-onchain |
@@ -1510,6 +1511,7 @@
 | [sagar-2023-poisoning](papers/sagar-2023-poisoning.md) | Poisoning Attacks and Defenses in Federated Learning: A Survey | 2023 | 2 | abstract | fork-merge-security, meta | dmarz/fm-merge-poisoning |
 | [salman-2026-how](papers/salman-2026-how.md) | How Effective Is Mouse Dynamics Against Web Bots? A Study Across Different Sophistication Levels | 2026 | 2 | abstract | swarm-detection | dmarz/sd-web-agents |
 | [samvelyan-2019-starcraft](papers/samvelyan-2019-starcraft.md) | The StarCraft Multi-Agent Challenge | 2019 | 2 | abstract | marl-emergence | dmarz/marl-emergence |
+| [saucier-2026-content](papers/saucier-2026-content.md) | Content camouflage: How diversified posting patterns influence human detection of AI-enabled social bots | 2026 | 2 | abstract | swarm-detection | shadow/sol-w4 |
 | [searles-2023-dazed](papers/searles-2023-dazed.md) | Dazed & Confused: A Large-Scale Real-World User Study of reCAPTCHAv2 | 2023 | 2 | abstract | swarm-detection, sybil-resistance | dmarz/sd-web-agents |
 | [shahriar-2025-survey](papers/shahriar-2025-survey.md) | A Survey on Agentic Security: Applications, Threats and Defenses | 2025 | 2 | abstract | fork-merge-security, meta | dmarz/fm-memory-injection |
 | [shen-2026-ghosts](papers/shen-2026-ghosts.md) | The Ghosts of Polymarket: When Off-Chain Matches Meet On-Chain Reverts | 2026 | 2 | abstract | swarm-detection | dmarz/sd-onchain |
@@ -1523,6 +1525,7 @@
 | [vinyals-2019-grandmaster](papers/vinyals-2019-grandmaster.md) | Grandmaster level in StarCraft II using multi-agent reinforcement learning | 2019 | 2 | abstract | marl-emergence | dmarz/marl-emergence |
 | [wang-2023-resilient](papers/wang-2023-resilient.md) | Resilient Consensus Control for Multi-Agent Systems: A Comparative Survey | 2023 | 2 | abstract | sybil-resistance, sync-consensus | dmarz/sybil-robotics |
 | [wang-2023-survey](papers/wang-2023-survey.md) | A Survey on Large Language Model based Autonomous Agents | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
+| [wang-2026-botchf](papers/wang-2026-botchf.md) | BotCHF: camouflage-heterogeneity-aware fusion for social bot detection | 2026 | 2 | abstract | swarm-detection, sybil-resistance | shadow/sol-w4 |
 | [williams-2023-epidemic](papers/williams-2023-epidemic.md) | Epidemic Modeling with Generative Agents | 2023 | 2 | abstract | llm-agent-swarms, crowds-and-traffic | dmarz/llm-agent-swarms-audit |
 | [wu-2025-mca-bench](papers/wu-2025-mca-bench.md) | MCA-Bench: A Multimodal Benchmark for Evaluating CAPTCHA Robustness Against VLM-based Attacks | 2025 | 2 | abstract | swarm-detection, sybil-resistance | dmarz/sd-web-agents |
 | [wu-2026-primate](papers/wu-2026-primate.md) | Primate-Inspired Cooperation Emergence and Strategy Generation in Heterogeneous Robot Swarm | 2026 | 2 | abstract | swarm-robotics, swarm-intelligence | dmarz/swarm-robotics-recent-audit |
@@ -1541,6 +1544,7 @@
 | [zhao-2024-snail](papers/zhao-2024-snail.md) | Snail-inspired robotic swarms: a hybrid connector drives collective adaptation in unstructured outdoor environments | 2024 | 2 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [zhuge-2023-mindstorms](papers/zhuge-2023-mindstorms.md) | Mindstorms in Natural Language-Based Societies of Mind | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 | [zwang-2018-detecting](papers/zwang-2018-detecting.md) | Detecting Bot Activity in the Ethereum Blockchain Network | 2018 | 2 | abstract | swarm-detection | dmarz/sd-onchain |
+| [elgammal-2026-evolution](papers/elgammal-2026-evolution.md) | Evolution of Deep Learning Models for Misinformation Detection in Social Media Textual Data: Background, Architectures, Datasets, and Emerging LLM Applications | 2026 | 1 | abstract | swarm-detection | shadow/sol-w4 |
 | [mckee-2023-chatbots](papers/mckee-2023-chatbots.md) | Chatbots in a Honeypot World | 2023 | 1 | abstract | swarm-detection | dmarz/sd-honeypots |
 
 ## Blogs (188)
@@ -2357,11 +2361,14 @@
 | [gh-px4-px4-autopilot](code/gh-px4-px4-autopilot.md) | PX4 Autopilot: open-source flight control stack with multi-vehicle SITL simulation used for drone-swarm tooling | 2012 | 1 | abstract | swarm-robotics | shadow/sol-1 |
 | [gh-ruvnet-ruflo](code/gh-ruvnet-ruflo.md) | Ruflo (formerly claude-flow): meta-harness for Claude Code and Codex with '100+ agents' and 'coordinated swarms' | 2025 | 1 | abstract | llm-agent-swarms | shadow/sol-1 |
 
-## Datasets (9)
+## Datasets (12)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
+| [data-ai-village-2026](datasets/data-ai-village-2026.md) | AI Village dataset | 2026 | 5 | skim | llm-agent-swarms, swarm-detection, fork-merge-security | shadow/sol-g49 |
 | [data-fox8-2023](datasets/data-fox8-2023.md) | fox8-23: ChatGPT-powered Twitter botnet accounts (1,140 bots) plus 1,140 human accounts, up to 200 tweets each | 2023 | 5 | skim | swarm-detection, llm-agent-swarms, sybil-resistance | dmarz/sd-code-data |
+| [data-lurebot-2023](datasets/data-lurebot-2023.md) | Preliminary biohybrid experiments with the Behavioral Observation & Biohybrid Interaction framework (featuring the LureBot) | 2023 | 5 | ran | collective-motion, swarm-robotics, criticality-measurement | shadow/sol-g49 |
+| [data-sealed-swarm-2026](datasets/data-sealed-swarm-2026.md) | sealed-swarm-transcripts: Run manifest | 2026 | 5 | ran | llm-agent-swarms, swarm-detection, marl-emergence | shadow/sol-g49 |
 | [data-botsim24-2024](datasets/data-botsim24-2024.md) | BotSim-24: Reddit-based dataset of 1,000 LLM-driven agent bots simulated alongside 1,907 real human accounts | 2024 | 4 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-hop-sybil-2022](datasets/data-hop-sybil-2022.md) | Hop Protocol airdrop Sybil lists: eliminated Sybil attacker addresses and final eligible set (2022) | 2022 | 4 | ran | sybil-resistance | dmarz/sybil-code-data |
 | [data-moltbook-observatory-2026](datasets/data-moltbook-observatory-2026.md) | Moltbook Observatory Archive: incremental, date-partitioned dump of the agent-only social network Moltbook | 2026 | 4 | ran | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
