@@ -2,9 +2,9 @@
 
 # Library index
 
-2768 entries.
+2770 entries.
 
-## Papers (1760)
+## Papers (1762)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1139,6 +1139,7 @@
 | [cho-2020-toward](papers/cho-2020-toward.md) | Toward Proactive, Adaptive Defense: A Survey on Moving Target Defense | 2020 | 3 | skim | fork-merge-security | dmarz/fm-unlinkability |
 | [cho-2025-herd](papers/cho-2025-herd.md) | Herd Behavior: Investigating Peer Influence in LLM-based Multi-Agent Systems | 2025 | 3 | abstract | llm-agent-swarms, collective-decision | dmarz/llm-agent-swarms |
 | [choi-2025-empirical](papers/choi-2025-empirical.md) | An Empirical Study of Group Conformity in Multi-Agent Systems | 2025 | 3 | abstract | llm-agent-swarms, collective-decision | shadow/sol-1 |
+| [cholez-2024-sybil](papers/cholez-2024-sybil.md) | Sybil Attack Strikes Again: Denying Content Access in IPFS with a Single Computer | 2024 | 3 | full | sybil-resistance | shadow/sol-p2 |
 | [chor-1998-private](papers/chor-1998-private.md) | Private Information Retrieval | 1998 | 3 | skim | fork-merge-security | dmarz/fm-unlinkability |
 | [christiano-2018-supervising](papers/christiano-2018-supervising.md) | Supervising strong learners by amplifying weak experts | 2018 | 3 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-sutton |
 | [chrysidis-2026-synthetic](papers/chrysidis-2026-synthetic.md) | The Synthetic Media Shift: Tracking the Rise, Virality, and Detectability of AI-Generated Multimodal Misinformation | 2026 | 3 | abstract | swarm-detection | dmarz/sd-ai-content |
@@ -1473,6 +1474,7 @@
 | [schroeder-2025-how](papers/schroeder-2025-how.md) | How malicious AI swarms can threaten democracy: The fusion of agentic AI and LLMs marks a new frontier in information warfare | 2025 | 3 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 | [schuck-2025-swarmgpt](papers/schuck-2025-swarmgpt.md) | SwarmGPT: Combining Large Language Models With Safe Motion Planning for Drone Swarm Choreography | 2025 | 3 | abstract | swarm-robotics, llm-agent-swarms | dmarz/swarm-robotics-recent |
 | [schwager-2009-decentralized](papers/schwager-2009-decentralized.md) | Decentralized, Adaptive Coverage Control for Networked Robots | 2009 | 3 | skim | swarm-robotics, sync-consensus, sybil-resistance | shadow/sol-p1 |
+| [see-2024-encrypted](papers/see-2024-encrypted.md) | Encrypted Endpoints: Defending Online Services from Illegitimate Bot Automation | 2024 | 3 | skim | sybil-resistance, swarm-detection | shadow/sol-p2 |
 | [sengupta-2020-survey](papers/sengupta-2020-survey.md) | A Survey of Moving Target Defenses for Network Security | 2020 | 3 | skim | fork-merge-security | dmarz/fm-unlinkability |
 | [sevinchan-2025-collective](papers/sevinchan-2025-collective.md) | Collective decision-making with heterogeneous biases: Role of network topology and susceptibility | 2025 | 3 | abstract | criticality-measurement, collective-decision, sync-consensus | dmarz/criticality-measurement |
 | [seyfried-2005-fundamental](papers/seyfried-2005-fundamental.md) | The fundamental diagram of pedestrian movement revisited | 2005 | 3 | abstract | crowds-and-traffic, criticality-measurement | dmarz/crowds-and-traffic |
