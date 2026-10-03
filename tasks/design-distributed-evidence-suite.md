@@ -3,14 +3,18 @@ id: design-distributed-evidence-suite
 type: task
 title: Plan five shared-environment distributed-evidence studies
 kind: question
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/decision-suite-plan
 for: dmarz
 created: 2026-10-03
 created_by: dmarz/decision-suite-plan
 depends_on: []
-topics: [llm-agent-swarms, collective-decision]
+topics:
+- llm-agent-swarms
+- collective-decision
+claimed_at: 2026-10-03T23:02Z
+updated: 2026-10-03T23:02Z
 ---
 
 ## Goal
