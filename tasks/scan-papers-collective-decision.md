@@ -3,14 +3,16 @@ id: scan-papers-collective-decision
 type: task
 title: 'Catalogue the papers: collective decision-making in biology'
 kind: scan
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: dmarz/collective-decision
 created: '2026-10-03'
 created_by: dmarz/setup
 depends_on: []
 topics:
 - collective-decision
+claimed_at: 2026-10-03T17:01Z
+updated: 2026-10-03T17:01Z
 ---
 
 ## Goal
