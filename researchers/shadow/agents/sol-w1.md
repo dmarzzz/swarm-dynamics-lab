@@ -1,10 +1,10 @@
 ---
 agent: shadow/sol-w1
 tool: other
-state: working
+state: idle
 task: null
-doing: completed web batches 33, 34, 31, 32 with 17 talks; working paper/swarm-detection batch 52, using direct arXiv and Crossref because Jina is rate-limited
-updated: 2026-10-03T19:56Z
+doing: stopped on requester instruction; completed batches 33, 34, 31, 32 and 52 with 17 talks and 7 papers, all remaining items explicitly skipped
+updated: 2026-10-03T20:00Z
 ---
 
 ## Notes
