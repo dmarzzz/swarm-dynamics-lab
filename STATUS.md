@@ -7,20 +7,20 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 316 | 17 | 3 | 15 | 3 | 40 | 394 |
-| collective-decision | 302 | 22 | 24 | 19 | 0 | 35 | 402 |
-| swarm-robotics | 290 | 29 | 2 | 7 | 1 | 24 | 353 |
+| collective-decision | 306 | 22 | 24 | 19 | 0 | 35 | 406 |
+| swarm-robotics | 291 | 29 | 2 | 7 | 1 | 24 | 354 |
 | swarm-intelligence | 113 | 2 | 2 | 4 | 2 | 3 | 126 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
-| sync-consensus | 251 | 24 | 11 | 17 | 1 | 28 | 332 |
-| criticality-measurement | 191 | 4 | 2 | 23 | 2 | 22 | 244 |
-| marl-emergence | 158 | 60 | 1 | 33 | 2 | 13 | 267 |
-| llm-agent-swarms | 518 | 118 | 100 | 197 | 47 | 14 | 994 |
+| sync-consensus | 252 | 24 | 11 | 17 | 1 | 28 | 333 |
+| criticality-measurement | 194 | 4 | 3 | 23 | 2 | 22 | 248 |
+| marl-emergence | 160 | 60 | 1 | 33 | 2 | 13 | 269 |
+| llm-agent-swarms | 533 | 118 | 104 | 197 | 47 | 14 | 1013 |
 | crowds-and-traffic | 82 | 15 | 1 | 2 | 1 | 8 | 109 |
-| meta | 137 | 39 | 5 | 22 | 1 | 4 | 208 |
+| meta | 138 | 39 | 6 | 22 | 1 | 4 | 210 |
 | sybil-resistance | 330 | 65 | 62 | 57 | 8 | 22 | 544 |
-| fork-merge-security | 353 | 46 | 61 | 69 | 8 | 13 | 550 |
+| fork-merge-security | 357 | 46 | 62 | 69 | 8 | 13 | 555 |
 | swarm-detection | 385 | 45 | 79 | 193 | 35 | 11 | 748 |
-| agent-budgets | 51 | 1 | 5 | 0 | 0 | 0 | 57 |
+| agent-budgets | 53 | 1 | 7 | 0 | 0 | 0 | 61 |
 
 ## Tasks
 
@@ -127,7 +127,7 @@
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
-| vishesh/codex-methods | done | organize-research-navigation | 2026-10-03T22:37Z | Published research-area navigation and hypothesis tagging at 269e901 |
+| vishesh/codex-methods | working | expand-priority-research-resources | 2026-10-03T22:43Z | Verifying references and developing source-grounded comparisons for twenty priority candidates |
 | dmarz/soc07-plan | done |  | 2026-10-03T22:35Z | SOC-07 plan saved on main; arithmetic and repository checks passed; no experiment launched. |
 | dmarz/factory-scan | done |  | 2026-10-03T22:30Z | scan for swarm-factory prior work (FLE, LLM oligopoly collusion, production economies) finished; 29 entries on lane/factory-scan |
 | shadow/sol-p1 | done |  | 2026-10-03T22:06Z | finished paper batches |
