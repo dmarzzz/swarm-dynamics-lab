@@ -6,20 +6,20 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 314 | 8 | 3 | 15 | 2 | 34 | 376 |
+| collective-motion | 314 | 8 | 3 | 15 | 2 | 36 | 378 |
 | collective-decision | 268 | 8 | 24 | 19 | 0 | 29 | 348 |
-| swarm-robotics | 280 | 13 | 2 | 7 | 1 | 24 | 327 |
-| swarm-intelligence | 108 | 1 | 2 | 4 | 0 | 3 | 118 |
-| active-matter | 184 | 3 | 1 | 6 | 0 | 16 | 210 |
-| sync-consensus | 243 | 13 | 11 | 17 | 0 | 24 | 308 |
-| criticality-measurement | 190 | 4 | 2 | 23 | 2 | 18 | 239 |
-| marl-emergence | 132 | 13 | 1 | 33 | 1 | 10 | 190 |
+| swarm-robotics | 281 | 13 | 2 | 7 | 1 | 24 | 328 |
+| swarm-intelligence | 110 | 1 | 2 | 4 | 0 | 3 | 120 |
+| active-matter | 184 | 3 | 1 | 6 | 0 | 20 | 214 |
+| sync-consensus | 244 | 13 | 11 | 17 | 0 | 25 | 310 |
+| criticality-measurement | 190 | 4 | 2 | 23 | 2 | 20 | 241 |
+| marl-emergence | 133 | 13 | 1 | 33 | 1 | 10 | 191 |
 | llm-agent-swarms | 358 | 59 | 99 | 198 | 22 | 12 | 748 |
 | crowds-and-traffic | 79 | 2 | 1 | 2 | 1 | 8 | 93 |
 | meta | 87 | 9 | 5 | 22 | 1 | 4 | 128 |
-| sybil-resistance | 247 | 48 | 62 | 59 | 7 | 20 | 443 |
-| fork-merge-security | 327 | 44 | 61 | 69 | 1 | 10 | 512 |
-| swarm-detection | 365 | 35 | 79 | 194 | 26 | 7 | 706 |
+| sybil-resistance | 254 | 48 | 62 | 59 | 7 | 20 | 450 |
+| fork-merge-security | 328 | 44 | 61 | 69 | 1 | 10 | 513 |
+| swarm-detection | 367 | 35 | 79 | 194 | 26 | 7 | 708 |
 
 ## Tasks
 
@@ -108,7 +108,7 @@
 | issue | state | updated | batch |
 |---|---|---|---|
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | claimed | 2026-10-03T20:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
-| [#59](https://github.com/dmarzzz/swarm-lab/issues/59) | claimed | 2026-10-03T20:25Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-03) |
+| [#59](https://github.com/dmarzzz/swarm-lab/issues/59) | claimed | 2026-10-03T20:29Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-03) |
 | [#70](https://github.com/dmarzzz/swarm-lab/issues/70) | claimed | 2026-10-03T20:19Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-14) |
 | [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |
 | [#60](https://github.com/dmarzzz/swarm-lab/issues/60) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-04) |
@@ -139,6 +139,7 @@
 | dmarz/sd-web-agents | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
 | dmarz/sd | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
 | shadow/sol-w5 | idle |  | 2026-10-03T20:20Z | worked batches |
+| shadow/sol-p2 | working |  | 2026-10-03T20:19Z | TODO one line |
 | dmarz/preflight | done | synthesis-pre-experiment-research | 2026-10-03T20:17Z | Completed pre-experiment synthesis and eight source records; verified metadata and scope, preparing merge |
 | shadow/sol-aud | working |  | 2026-10-03T20:14Z | Discover and fully transcribe collective-behaviour and agent-control podcasts |
 | shadow/sol-w6 | idle |  | 2026-10-03T20:05Z | writer lane finished (batch |
