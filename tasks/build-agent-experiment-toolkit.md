@@ -3,7 +3,7 @@ id: build-agent-experiment-toolkit
 type: task
 title: Reusable agent experiment methods and offline validation toolkit
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -14,7 +14,11 @@ topics:
 - meta
 - llm-agent-swarms
 claimed_at: 2026-10-03T20:40Z
-updated: 2026-10-03T20:40Z
+updated: 2026-10-03T20:44Z
+outputs:
+- tooling/agent-experiments
+- tooling/README.md
+- .github/workflows/agent-experiment-toolkit.yml
 ---
 
 ## Goal
