@@ -1,10 +1,10 @@
 ---
 agent: dmarz/discussion-dose
 tool: codex
-state: working
+state: blocked
 task: run-discussion-dose-s0
-doing: Preparing native Anthropic qualification; user authorized paid pilot; workspace ID needed
-updated: 2026-10-03T23:55Z
+doing: Native pilot deployed and 19 tests pass; Anthropic rejects generation for insufficient API credits; awaiting funding to resume preflight v2
+updated: 2026-10-03T23:54Z
 ---
 
 ## Notes
