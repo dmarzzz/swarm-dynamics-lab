@@ -34,13 +34,19 @@ def agent_from(message):
 def history():
     first, additions = {}, []
     # Reverse history means the first observed A record really is the first addition.
-    raw = git('log', '--reverse', '--diff-filter=A', '--name-status',
+    raw = git('log', '--reverse', '--diff-filter=AR', '--name-status',
               '--format=@@%H\t%aI\t%s', '--', 'library/')
     current = None
     for line in raw.splitlines():
         if line.startswith('@@'):
             sha, stamp, message = line[2:].split('\t', 2)
             current = {'sha': sha, 't': stamp, 'agent': agent_from(message)}
+            continue
+        if current and line.startswith('R'):
+            # Renamed entry keeps its original addition stamp and agent.
+            _, old, new = line.split('\t', 2)
+            if new.endswith('.md'):
+                first.setdefault(new, dict(first.get(old, current)))
             continue
         if current and line.startswith('A\t'):
             path = line[2:]
