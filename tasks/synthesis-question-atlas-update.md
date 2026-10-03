@@ -3,14 +3,23 @@ id: synthesis-question-atlas-update
 type: task
 title: Refresh research question atlas with new budget, security and dataset research
 kind: synthesis
-status: open
+status: claimed
 priority: p1
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: dmarz/question-atlas
+for: null
 created: 2026-10-03
 created_by: dmarz/question-atlas
 depends_on: []
-topics: [meta, agent-budgets, llm-agent-swarms, sybil-resistance, fork-merge-security, swarm-detection, marl-emergence]
+topics:
+- meta
+- agent-budgets
+- llm-agent-swarms
+- sybil-resistance
+- fork-merge-security
+- swarm-detection
+- marl-emergence
+claimed_at: 2026-10-03T21:29Z
+updated: 2026-10-03T21:29Z
 ---
 
 ## Goal
