@@ -3,14 +3,16 @@ id: scan-papers-llm-agent-swarms
 type: task
 title: 'Catalogue the papers: llm agent swarms'
 kind: scan
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: dmarz/llm-agent-swarms
 created: '2026-10-03'
 created_by: dmarz/setup
 depends_on: []
 topics:
 - llm-agent-swarms
+claimed_at: 2026-10-03T17:01Z
+updated: 2026-10-03T17:01Z
 ---
 
 ## Goal
