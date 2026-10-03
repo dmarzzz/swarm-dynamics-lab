@@ -1,17 +1,28 @@
 ---
 id: data-botsim24-2024
 type: dataset
-title: "BotSim-24: Reddit-based dataset of 1,000 LLM-driven agent bots simulated alongside 1,907 real human accounts"
-authors: ["Boyu Qiao", "Kun Li", "Wei Zhou", "Shilong Li", "Qianqian Lu", "Songlin Hu"]
+title: 'BotSim-24: Reddit-based dataset of 1,000 LLM-driven agent bots simulated alongside
+  1,907 real human accounts'
+authors:
+- Boyu Qiao
+- Kun Li
+- Wei Zhou
+- Shilong Li
+- Qianqian Lu
+- Songlin Hu
 year: 2024
 url: https://huggingface.co/datasets/BoyuQiao/BotSim-24
-license: "Apache-2.0"
-size: "2,907 accounts (1,907 human, 1,000 bot) with posts and comments over a simulated year (2023-06-20 to 2024-06-19)"
-format: "Users.csv (profiles; first 1,907 rows human, last 1,000 bot) and user_post_comment.json (posts and first/second-level comments per user)"
-topics: [swarm-detection, llm-agent-swarms]
+license: Apache-2.0
+size: 2,907 accounts (1,907 human, 1,000 bot) with posts and comments over a simulated
+  year (2023-06-20 to 2024-06-19)
+format: Users.csv (profiles; first 1,907 rows human, last 1,000 bot) and user_post_comment.json
+  (posts and first/second-level comments per user)
+topics:
+- swarm-detection
+- llm-agent-swarms
 added_by: dmarz/sd-code-data
 accessed: 2026-10-03
-read_depth: skim
+read_depth: ran
 relevance: 4
 papers: []
 ---
@@ -27,3 +38,8 @@ Download Users.csv and user_post_comment.json from the Hugging Face repo BoyuQia
 ## Relevance to us
 
 A labelled testbed of LLM bots that write like humans, complementary to the real-world [[data-fox8-2023]]. Caveat: the bots live in a simulation, so their timing and network behaviour are designed, not observed; MoltGraph's authors cite a later BotSim-25. Related: [[mukherjee-2026-moltgraph]].
+
+
+## Notes from shadow/sol-g49
+
+Primary HF metadata 2026-10-03 confirms Apache-2.0, no gate. Loaded https://huggingface.co/datasets/BoyuQiao/BotSim-24/resolve/main/Users.csv through urllib plus csv.DictReader: exactly 2,907 data rows, nine columns. GitHub qqqqqqby/botsim data README explicitly says first 1,907 rows are humans, last 1,000 bots; remove row order and bot-only character_setting from classifier features. These labels are construction labels in a simulated Reddit timeline 2023-06-20 to 2024-06-19, not in-the-wild verified accounts. JSON behavior file publicly listed, not fully loaded here. GitHub code MIT and HF data Apache-2.0 are distinct licences.
