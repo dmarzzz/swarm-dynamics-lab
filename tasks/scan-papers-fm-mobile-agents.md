@@ -3,14 +3,17 @@ id: scan-papers-fm-mobile-agents
 type: task
 title: 'Catalogue the papers: mobile-agent security and Byzantine state merge'
 kind: scan
-status: open
+status: claimed
 priority: p1
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: dmarz/fm-mobile-agents
+for: null
 created: 2026-10-03
 created_by: dmarz/fm
 depends_on: []
-topics: [fork-merge-security]
+topics:
+- fork-merge-security
+claimed_at: 2026-10-03T18:12Z
+updated: 2026-10-03T18:12Z
 ---
 
 ## Goal
@@ -24,4 +27,3 @@ Context from dmarz: Richard Sutton has suggested that an agent with many resourc
 - Coverage note filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
-
