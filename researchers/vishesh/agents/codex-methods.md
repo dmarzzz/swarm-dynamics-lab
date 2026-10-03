@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: working
+state: done
 task: expand-priority-research-resources
-doing: Verifying references and developing source-grounded comparisons for twenty priority candidates
-updated: 2026-10-03T22:43Z
+doing: Published 20 references, 20 candidate mappings and 14 exploratory comparisons at 90c4cb1
+updated: 2026-10-03T22:51Z
 ---
 
 ## Notes

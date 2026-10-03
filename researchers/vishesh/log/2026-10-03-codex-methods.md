@@ -51,3 +51,12 @@ Added optional explicit focus_areas and project_briefs metadata for future eligi
 Validation: 17 export/contract tests, filtering assertions, 11 saved-review regression tests, TypeScript and production build passed. Browser verification showed 19 immune-response questions, 12 intersecting Memory, all 214 after clearing filters, and the Topics focus index plus linked design. Existing review data is not changed by navigation. The build retains a non-blocking large-chunk warning. Publication is manually checked and secret-scanned before push.
 
 Published [269e901](https://github.com/dmarzzz/swarm-lab/commit/269e901): navigation metadata, shared UI, export validation and contribution guidance. The staged implementation/source audit found no secret matches; no credentials or private discussion were published. Repository validation passed with five pre-existing citation warnings. Deployment is automatic from main; source and review identities are preserved.
+
+
+## Priority references and source-grounded extensions
+
+Published [90c4cb1](https://github.com/dmarzzz/swarm-lab/commit/90c4cb1): twenty new references (sixteen papers and four first-party posts), an editorial set of twenty priority atlas candidates and fourteen controlled comparisons. The bundle links all sixteen original briefs while explicitly parking NCA-specific source work. Sources are deduplicated; paper reading depth remains abstract and technical posts skim. Existing social references are reused, with blocked X access recorded rather than invented thread archives.
+
+The most useful new connections are negative dependencies in repair, correction visibility across readers, completeness contracts for omitted logs, and lost retrieval keys versus lost facts. The hidden-profile intervention predates our minority-support framing and reports limited team-performance effects, so preservation of dissent and improvement of decisions remain separate outcomes.
+
+Verification: sixteen arXiv/Crossref lookups completed with zero problems; repository check had zero errors and five unchanged warnings. All candidate fingerprints, canonical IDs and relative links passed targeted validation. The exact 27-file contribution passed a redacted secret scan with zero findings. No formal survey or hypothesis is promoted, and no model or paid experiment was run. Next work is full-methods inspection and deterministic task fixtures after the relevant review gates. Manual checked sync preserves the requested publication audit.
