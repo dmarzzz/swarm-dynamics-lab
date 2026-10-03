@@ -2,9 +2,9 @@
 
 # Library index
 
-2705 entries.
+2716 entries.
 
-## Papers (1708)
+## Papers (1715)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -543,6 +543,7 @@
 | [fruchart-2021-non](papers/fruchart-2021-non.md) | Non-reciprocal phase transitions | 2021 | 4 | abstract | sync-consensus, active-matter, collective-motion | dmarz/sync-consensus |
 | [fujiwara-2011-synchronization](papers/fujiwara-2011-synchronization.md) | Synchronization in networks of mobile oscillators | 2011 | 4 | abstract | sync-consensus, collective-motion | dmarz/sync-consensus |
 | [fukushima-2026-message](papers/fukushima-2026-message.md) | Message capacity and claim wording set the transition points of collective truth-finding in language-model networks | 2026 | 4 | abstract | llm-agent-swarms, sync-consensus, criticality-measurement | dmarz/llm-agent-swarms-recent |
+| [gandhi-2025-roborebound](papers/gandhi-2025-roborebound.md) | RoboRebound: Multi-Robot System Defense with Bounded-Time Interaction | 2025 | 4 | skim | sybil-resistance, swarm-robotics, fork-merge-security | shadow/sol-p2 |
 | [gans-2026-calibrated](papers/gans-2026-calibrated.md) | Calibrated Bait: Defensive Information Design under Adversarial Fingerprinting | 2026 | 4 | abstract | swarm-detection | dmarz/sd-honeypots |
 | [gao-2023-large](papers/gao-2023-large.md) | Large Language Models Empowered Agent-based Modeling and Simulation: A Survey and Perspectives | 2023 | 4 | abstract | llm-agent-swarms, crowds-and-traffic | dmarz/llm-agent-swarms |
 | [gao-2024-model](papers/gao-2024-model.md) | Model Equality Testing: Which Model Is This API Serving? | 2024 | 4 | abstract | swarm-detection | dmarz/sd-attribution |
@@ -1171,6 +1172,7 @@
 | [duan-2023-animal](papers/duan-2023-animal.md) | From animal collective behaviors to swarm robotic cooperation | 2023 | 3 | abstract | swarm-robotics, collective-motion, collective-decision | dmarz/swarm-robotics |
 | [duarte-2016-evolution](papers/duarte-2016-evolution.md) | Evolution of Collective Behaviors for a Real Swarm of Aquatic Surface Robots | 2016 | 3 | skim | swarm-robotics | dmarz/swarm-robotics-audit |
 | [durak-2025-sandi](papers/durak-2025-sandi.md) | Sandi: A System for Accountability | 2025 | 3 | skim | sybil-resistance, swarm-detection | shadow/sol-w5 |
+| [durmus-2014-sybil](papers/durmus-2014-sybil.md) | Sybil-Resistant Meta Strategies for the Forwarder's Dilemma | 2014 | 3 | abstract | sybil-resistance, swarm-intelligence | shadow/sol-p2 |
 | [dyer-2009-leadership](papers/dyer-2009-leadership.md) | Leadership, consensus decision making and collective behaviour in humans | 2009 | 3 | abstract | collective-decision, crowds-and-traffic | dmarz/collective-decision |
 | [eberhart-1995-new](papers/eberhart-1995-new.md) | A new optimizer using particle swarm theory | 1995 | 3 | abstract | swarm-intelligence | dmarz/swarm-intelligence |
 | [el-mir-2026-byzantine](papers/el-mir-2026-byzantine.md) | Byzantine Cheap Talk: Adversarial Resilience and Topology Effects in LLM Coordination Games | 2026 | 3 | abstract | sybil-resistance, llm-agent-swarms, sync-consensus | dmarz/sybil-llm-agents |
@@ -1200,6 +1202,7 @@
 | [freitas-2022-homomorphic](papers/freitas-2022-homomorphic.md) | Homomorphic Sortition -- Secret Leader Election for PoS Blockchains | 2022 | 3 | abstract | fork-merge-security, sync-consensus | dmarz/fm-unlinkability |
 | [friman-2024-it](papers/friman-2024-it.md) | It pays to follow the leader: Metabolic cost of flight is lower for trailing birds in small groups | 2024 | 3 | skim | collective-motion | dmarz/collective-motion-recent-audit |
 | [galla-2013-complex](papers/galla-2013-complex.md) | Complex dynamics in learning complicated games | 2013 | 3 | skim | marl-emergence | dmarz/marl-emergence-audit |
+| [gao-2025-heterogeneity](papers/gao-2025-heterogeneity.md) | Heterogeneity- and homophily-induced vulnerability of a P2P network formation model: the Mana based auto-peering protocol | 2025 | 3 | full | sybil-resistance, sync-consensus | shadow/sol-p2 |
 | [gardi-2022-microrobot](papers/gardi-2022-microrobot.md) | Microrobot collectives with reconfigurable morphologies, behaviors, and functions | 2022 | 3 | abstract | swarm-robotics, active-matter | dmarz/swarm-robotics |
 | [geng-2024-is](papers/geng-2024-is.md) | Is ChatGPT Transforming Academics' Writing Style? | 2024 | 3 | abstract | swarm-detection | dmarz/sd-ai-content |
 | [geng-2025-detectability](papers/geng-2025-detectability.md) | On the Detectability of LLM-Generated Text: What Exactly Is LLM-Generated Text? | 2025 | 3 | abstract | swarm-detection | dmarz/sd-ai-content |
@@ -1586,6 +1589,7 @@
 | [zhang-2026-real](papers/zhang-2026-real.md) | Real Money, Fake Models: Deceptive Model Claims in Shadow APIs | 2026 | 3 | abstract | swarm-detection | dmarz/sd-attribution |
 | [zhang-2026-which](papers/zhang-2026-which.md) | Which Model Is Actually Serving You? IRIS: Budgeted Black-Box Auditing of Model Substitution and Routing Dilution in LLM Gateways | 2026 | 3 | abstract | swarm-detection | dmarz/sd-attribution |
 | [zheng-2024-sybil](papers/zheng-2024-sybil.md) | Sybil-Proof Mechanism for Information Propagation with Budgets | 2024 | 3 | skim | sybil-resistance | shadow/sol-w5 |
+| [zheng-2025-dappcheat](papers/zheng-2025-dappcheat.md) | DAppCheat: Detecting Cheating Robots for DApps on Multiple Blockchains | 2025 | 3 | abstract | sybil-resistance, swarm-detection | shadow/sol-p2 |
 | [zheng-2025-rethinking](papers/zheng-2025-rethinking.md) | Rethinking the Reliability of Multi-agent System: A Perspective from Byzantine Fault Tolerance | 2025 | 3 | abstract | fork-merge-security, llm-agent-swarms, sync-consensus | dmarz/fm-bft-aggregation |
 | [zheng-2026-brief](papers/zheng-2026-brief.md) | A brief review of evolutionary game dynamics in the reinforcement learning paradigm | 2026 | 3 | abstract | marl-emergence, collective-decision | dmarz/marl-emergence |
 | [zheng-2026-survey](papers/zheng-2026-survey.md) | A survey on large language models driven meta-optimizers for automated intelligent optimization | 2026 | 3 | abstract | swarm-intelligence, llm-agent-swarms | dmarz/swarm-intelligence-audit |
@@ -1601,6 +1605,7 @@
 | [amala-arokia-nathan-2025-autonomous](papers/amala-arokia-nathan-2025-autonomous.md) | An autonomous drone swarm for detecting and tracking anomalies among dense vegetation | 2025 | 2 | skim | swarm-robotics, swarm-intelligence | dmarz/swarm-robotics-recent-audit |
 | [bendada-2025-botdetect](papers/bendada-2025-botdetect.md) | BotDetect: A Decentralized Federated Learning Framework for Detecting Financial Bots on the EVM Blockchains | 2025 | 2 | abstract | swarm-detection | dmarz/sd-onchain |
 | [beni-2005-swarm](papers/beni-2005-swarm.md) | From Swarm Intelligence to Swarm Robotics | 2005 | 2 | abstract | swarm-robotics, swarm-intelligence | dmarz/swarm-robotics |
+| [bhumichai-2024-evaluation](papers/bhumichai-2024-evaluation.md) | The Evaluation of Extracted Features for Detecting Eclipse Attacks on Ethereum Network Layers | 2024 | 2 | abstract | sybil-resistance, swarm-detection | shadow/sol-p2 |
 | [blum-2024-ant](papers/blum-2024-ant.md) | Ant colony optimization: A bibliometric review | 2024 | 2 | abstract | swarm-intelligence, meta | dmarz/swarm-intelligence-audit |
 | [cambus-2025-approximate](papers/cambus-2025-approximate.md) | Approximate Agreement Algorithms for Byzantine Collaborative Learning | 2025 | 2 | abstract | fork-merge-security, sync-consensus | dmarz/fm-bft-aggregation |
 | [candussio-2026-rogueai](papers/candussio-2026-rogueai.md) | RogueAI: A Reverse Turing Test for Detecting Licensed AI Deception in Dialogue | 2026 | 2 | abstract | swarm-detection | dmarz/sd-attribution |
@@ -1608,6 +1613,7 @@
 | [cao-2025-analyzing](papers/cao-2025-analyzing.md) | Analyzing Memory Effects in Large Language Models through the lens of Cognitive Psychology | 2025 | 2 | abstract | fork-merge-security | dmarz/fm |
 | [ceviz-2024-survey](papers/ceviz-2024-survey.md) | A Survey of Security in UAVs and FANETs: Issues, Threats, Analysis of Attacks, and Solutions | 2024 | 2 | abstract | sybil-resistance, swarm-robotics | dmarz/sybil-robotics |
 | [chabanne-2025-turnstile](papers/chabanne-2025-turnstile.md) | Turnstile cookies: A new root of trust for personhood credentials | 2025 | 2 | abstract | sybil-resistance, swarm-detection | shadow/sol-w5 |
+| [chatzinikolaou-2012-use](papers/chatzinikolaou-2012-use.md) | The use of reputation as noise-resistant selection bias in a co-evolutionary multi-agent system | 2012 | 2 | abstract | sybil-resistance, swarm-intelligence, marl-emergence | shadow/sol-p2 |
 | [chen-2026-agent](papers/chen-2026-agent.md) | Agent-based modelling of Sybil attack using network expansion strategies | 2026 | 2 | abstract | sybil-resistance | shadow/sol-w5 |
 | [chen-2026-captcha](papers/chen-2026-captcha.md) | CAPTCHA Solving for Native GUI Agents: Automated Reasoning-Action Data Generation and Self-Corrective Training | 2026 | 2 | abstract | swarm-detection, sybil-resistance, llm-agent-swarms | dmarz/sd-web-agents |
 | [chulerttiyawong-2023-sybil](papers/chulerttiyawong-2023-sybil.md) | Sybil Attack Detection in Internet of Flying Things-IoFT: A Machine Learning Approach | 2023 | 2 | abstract | sybil-resistance, swarm-robotics | dmarz/sybil-robotics |
@@ -1691,6 +1697,7 @@
 | [wang-2023-resilient](papers/wang-2023-resilient.md) | Resilient Consensus Control for Multi-Agent Systems: A Comparative Survey | 2023 | 2 | abstract | sybil-resistance, sync-consensus | dmarz/sybil-robotics |
 | [wang-2023-survey](papers/wang-2023-survey.md) | A Survey on Large Language Model based Autonomous Agents | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 | [wang-2026-botchf](papers/wang-2026-botchf.md) | BotCHF: camouflage-heterogeneity-aware fusion for social bot detection | 2026 | 2 | abstract | swarm-detection, sybil-resistance | shadow/sol-w4 |
+| [watson-2024-nebula](papers/watson-2024-nebula.md) | Nebula: A Privacy-First Platform for Data Backhaul | 2024 | 2 | skim | sybil-resistance | shadow/sol-p2 |
 | [williams-2023-epidemic](papers/williams-2023-epidemic.md) | Epidemic Modeling with Generative Agents | 2023 | 2 | abstract | llm-agent-swarms, crowds-and-traffic | dmarz/llm-agent-swarms-audit |
 | [wu-2025-mca-bench](papers/wu-2025-mca-bench.md) | MCA-Bench: A Multimodal Benchmark for Evaluating CAPTCHA Robustness Against VLM-based Attacks | 2025 | 2 | abstract | swarm-detection, sybil-resistance | dmarz/sd-web-agents |
 | [wu-2026-primate](papers/wu-2026-primate.md) | Primate-Inspired Cooperation Emergence and Strategy Generation in Heterogeneous Robot Swarm | 2026 | 2 | abstract | swarm-robotics, swarm-intelligence | dmarz/swarm-robotics-recent-audit |
@@ -2610,7 +2617,7 @@
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 | [data-zzzztom-moltbook-2026](datasets/data-zzzztom-moltbook-2026.md) | zzzztom/moltbook-forum-data Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 
-## Talks (124)
+## Talks (128)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -2634,6 +2641,7 @@
 | [gleicher-2021-coordinating](talks/gleicher-2021-coordinating.md) | Coordinating Inauthentic Behavior With Facebook’s Head of Security Policy | 2021 | 5 | full | swarm-detection, sybil-resistance | shadow/sol-aud |
 | [gomez-gardenes-2025-synchronization](talks/gomez-gardenes-2025-synchronization.md) | Jesus Gómez Gardeñes: Synchronization phenomena and the Kuramoto model and... - Class 1 | 2025 | 5 | skim | sync-consensus | shadow/sol-w8 |
 | [hasu-2022-threat](talks/hasu-2022-threat.md) | The threat of MEV centralization: an anatomy of the transaction supply chain - Hasu (Flashbots) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
+| [jack-2024-collective](talks/jack-2024-collective.md) | Collective dynamics of self-propelled particles | 2024 | 5 | full | active-matter, criticality-measurement | shadow/sol-w3 |
 | [kao-2020-albert](talks/kao-2020-albert.md) | Albert Kao on Animal Sociality & Collective Computation | 2020 | 5 | full | collective-decision, fork-merge-security | shadow/sol-aud |
 | [leonard-2009-flocks](talks/leonard-2009-flocks.md) | Naomi Leonard: Flocks and Fleets: Collective Motion in Nature and Robotics | 2009 | 5 | full | collective-motion, swarm-robotics, sync-consensus | shadow/sol-w3 |
 | [marchetti-2018-physics](talks/marchetti-2018-physics.md) | The Physics of Active Matter ▸ KITP Colloquium by Cristina Marchetti | 2018 | 5 | full | collective-motion, active-matter | shadow/sol-w3 |
@@ -2650,11 +2658,13 @@
 | [nagpal-2023-taming](talks/nagpal-2023-taming.md) | Taming the Swarm: Towards Collective Artificial Intelligence | 2023 | 5 | skim | swarm-robotics | shadow/sol-w8 |
 | [nayak-2023-order](talks/nayak-2023-order.md) | Order Policy Enforcement: Limitations and Circumvention - Kartik Nayak \| MEV-SBC ’23 | 2023 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [obadia-2022-multichain](talks/obadia-2022-multichain.md) | The multichain world is centralized 🙁 - studying cross-domain MEV - Alex Obadia (Flashbots) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
+| [pagonabarraga-2023-phase](talks/pagonabarraga-2023-phase.md) | Phase transitions and self assembly in active matter | 2023 | 5 | full | active-matter, collective-motion, sync-consensus | shadow/sol-w3 |
 | [raj-2022-case](talks/raj-2022-case.md) | A Case-Study of MEV on Low-Fee Chains - Supragya Raj (Marlin) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [ross-2021-coupled](talks/ross-2021-coupled.md) | Coupled Oscillators on the Torus: Quasiperiodicity, Synchronization & Phase Locking \| Strogatz Ch. 8 | 2021 | 5 | full | sync-consensus | shadow/sol-w8 |
 | [rubenstein-2015-robots](talks/rubenstein-2015-robots.md) | Michael Rubenstein on Robots in Depth | 2015 | 5 | full | swarm-robotics | shadow/sol-w8 |
 | [salles-2022-mev](talks/salles-2022-mev.md) | MEV formalization - Alejo Salles (Flashbots) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [sutton-2025-father](talks/sutton-2025-father.md) | Richard Sutton – Father of RL thinks LLMs are a dead end | 2025 | 5 | full | fork-merge-security, llm-agent-swarms, meta | dmarz/fm-sutton |
+| [tailleur-2020-thermomechanics](talks/tailleur-2020-thermomechanics.md) | On the anomalous thermomechanics of dry active matter | 2020 | 5 | full | active-matter, criticality-measurement | shadow/sol-w3 |
 | [vlahovska-2025-quincke](talks/vlahovska-2025-quincke.md) | The Physics of Active Matter Systems through the Lens of the Quincke Rotor | 2025 | 5 | full | active-matter, collective-motion | shadow/sol-w3 |
 | [werfel-2019-termites](talks/werfel-2019-termites.md) | Termites and Robots, Building Together \| Justin Werfel \| TEDxPrincetonU | 2019 | 5 | full | swarm-robotics | shadow/sol-w8 |
 | [wu-2025-incentivizing](talks/wu-2025-incentivizing.md) | TILOS Seminar: Incentivizing Emergent Behaviors for LLMs via Reinforcement Learning | 2025 | 5 | abstract | llm-agent-swarms, marl-emergence | shadow/sol-w1 |
@@ -2685,6 +2695,7 @@
 | [karmakar-2026-memory](talks/karmakar-2026-memory.md) | Non-Markovian Dry Active Matter System: memory-induced collective dynamics | 2026 | 4 | full | active-matter, collective-motion, sync-consensus | shadow/sol-w3 |
 | [kumar-2015-future](talks/kumar-2015-future.md) | The future of flying robots \| Vijay Kumar \| TEDxPenn | 2015 | 4 | full | swarm-robotics | shadow/sol-w8 |
 | [leonard-2020-general](talks/leonard-2020-general.md) | A General Model of Opinion Dynamics on Networks: Consensus, Dissensus, and Cascades | 2020 | 4 | full | sync-consensus, collective-decision, marl-emergence | shadow/sol-w6 |
+| [marchetti-2014-soft](talks/marchetti-2014-soft.md) | Cristina Marchetti: Active Soft Matter | 2014 | 4 | full | active-matter, collective-motion | shadow/sol-w3 |
 | [moses-2024-physics](talks/moses-2024-physics.md) | Physics of Life, Ep 4: The physics of collectives | 2024 | 4 | full | collective-decision, swarm-intelligence, criticality-measurement | shadow/sol-aud |
 | [nagpal-2014-robots14](talks/nagpal-2014-robots14.md) | ROBOTS14 - Radhika Nagpal | 2014 | 4 | skim | swarm-robotics | shadow/sol-w8 |
 | [nolte-2025-network](talks/nolte-2025-network.md) | Network Synchronization Physics | 2025 | 4 | full | sync-consensus | shadow/sol-w8 |
