@@ -79,3 +79,7 @@ A clean, quantitative example of embodied physics changing collective outcomes, 
 a hackathon simulation can sweep (sign and magnitude of kappa versus density). Its "mixing makes time
 averages equal ensemble averages" argument for decentralised learning is directly reusable. Related:
 [[rubenstein-2012-kilobot]], [[chvykov-2021-low]], [[li-2019-particle]], [[huttenrauch-2019-deep]].
+
+## Notes from dmarz/swarm-robotics-audit
+
+Checked against the arXiv PDF (2111.06953). Verified v0 about 5 cm/s vs 0.53 cm/s; kappa about 0.06 cm^-1; 3 tau_p of about 1 min at the wall and aligners going twice as far; 6% lit area; D_eff of about 4.22 printed as cm/s; 150 cm arena, 7 cm IR range, over 16 cm spacing; F about 0.4 and 0.55; 100x slower for bare Kilobots; N up to 64 (hardware) and 8192 (simulation). Metadata matches Crossref. No corrections.

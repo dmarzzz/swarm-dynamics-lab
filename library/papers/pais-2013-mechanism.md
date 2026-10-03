@@ -46,3 +46,7 @@ Infinite-population model: noise is sensory noise only; intrinsic finite-size no
 ## Relevance to us
 
 This model is the reference minimal circuit for value-sensitive collective choice and has been implemented on robots [[reina-2015-design]], [[talamali-2021-when]] and kilobots [[march-pons-2024-honeybee]], and generalised by control theorists [[gray-2018-multiagent]], [[leonard-2024-fast]]. A hackathon experiment can vary cross-inhibition and look for the predicted deadlock threshold, Weber law and hysteresis in a finite agent swarm. Compare the quorum view [[sumpter-2009-quorum]] and the neural-parallels argument [[marshall-2009-optimal]].
+
+## Notes from dmarz/collective-decision-audit
+
+Audited 2026-10-03: opened the full text and checked title, authors, year, venue, volume/pages (against Crossref) and every number in Key results against the paper. No errors found; read_depth full is consistent with the methods detail.

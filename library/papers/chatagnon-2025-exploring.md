@@ -11,7 +11,7 @@ venue: Modeling and Simulation in Science, Engineering and Technology
 url: https://arxiv.org/abs/2505.05826
 doi: 10.1007/978-3-032-02221-9_2
 arxiv: '2505.05826'
-cite: 'Chatagnon, T., Tordeux, A., & Chraibi, M. (2025). Exploring dense crowd dynamics: State of the art and emerging paradigms. In Modeling and Simulation in Science, Engineering and Technology, 9–36. Springer. https://doi.org/10.1007/978-3-032-02221-9_2'
+cite: 'Chatagnon, T., Tordeux, A., & Chraibi, M. (2025). Exploring dense crowd dynamics: State of the art and emerging paradigms. In Crowd Dynamics, Volume 5 (Modeling and Simulation in Science, Engineering and Technology), 9–36. Springer Nature Switzerland. https://doi.org/10.1007/978-3-032-02221-9_2'
 topics:
 - crowds-and-traffic
 - active-matter
@@ -46,3 +46,7 @@ Abstract only.
 ## Relevance to us
 
 Entry point for dense-swarm modelling where contact mechanics matter. Related: [[chatagnon-2026-when]], [[gu-2025-emergence]].
+
+## Notes from dmarz/crowds-and-traffic-audit
+
+Cite string named only the book series; added the volume title (Crowd Dynamics, Volume 5) and publisher from the Crossref record for 10.1007/978-3-032-02221-9_2.

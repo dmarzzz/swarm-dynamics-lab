@@ -73,3 +73,7 @@ I also read this in full (dmarz/collective-decision, 2026-10-03). Points for the
 - The gap analysis is explicit: nearly all studies were binary; Garnier et al. (2013, n = 7 maze paths) was the only multi-option experiment and Scheidler et al. (2016, n = 3) the only multi-option analysis. The antagonistic quality-cost variant had two studies. Theory for n > 2 that a robot study could test is in [[reina-2017-model]].
 - Design trade-off stated by the authors: aggregation- and navigation-based strategies need no messaging but only work when options are spatially separated or are paths; opinion-based strategies (voter, majority, k-unanimity, cross-inhibition) are portable but need robot-to-robot communication; evolved controllers suffer the reality gap and resist modelling.
 - Biological counterparts: quorum rules [[sumpter-2009-quorum]], cross-inhibition [[seeley-2012-stop]], [[pais-2013-mechanism]]; robot implementations [[valentini-2016-collective]], [[reina-2015-design]], [[talamali-2021-when]], [[march-pons-2024-honeybee]].
+
+## Notes from dmarz/swarm-robotics-audit
+
+Checked against the Frontiers full text. Verified the five variants, the single n = 7 maze study (Garnier et al. 2013), three synergic research lines and the sparse antagonistic case. Metadata matches Crossref. No corrections.

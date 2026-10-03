@@ -40,3 +40,7 @@ Abstract only; whether the pigeon-inferred rules are unique is not addressed in 
 ## Relevance to us
 
 Inverse design is a natural hackathon project; compare the evolutionary approach in [[reynolds-2026-evoflock]] and inference in [[gao-2024-learning]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+The url is arXiv 2407.11330, whose arXiv title is 'Navigating the swarm: Deep neural networks command emergent behaviours' (DataCite). Left arxiv: null because verify flags the title mismatch against the journal title; the preprint is the same work under its earlier title. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

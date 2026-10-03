@@ -49,3 +49,7 @@ Very recent (forward citation of [[el-2026-physics]]), abstract-level read; the 
 ## Relevance to us
 
 Offers a concrete, testable control parameter (degree d) for swarm experiments, complementing topology-learning work ([[zhang-2024-g-designer]], [[zhuge-2024-language]]) and the coordination-cost curves of [[kim-2025-towards]].
+
+## Notes from dmarz/llm-agent-swarms-audit
+
+Audit 2026-10-03: checked title, the 5 authors (Zheng, Yang, Qu, Wang, Jeong) and the abstract on arXiv; the summary matches the abstract. No errors. Note that `authors` should be checked if a published version appears. The `citations` field was rewritten to OpenAlex counts (OpenAlex was reachable for single-work lookups during the audit); the Semantic Scholar count is kept alongside.

@@ -40,3 +40,7 @@ Read the publisher description only. Biological realism (cognition, heterogeneit
 ## Relevance to us
 
 Background theory for any claim about long-range order or scaling. Recent technical updates: [[chate-2024-dynamic]], [[martin-2025-transition]]. Accessible overview: [[solon-2024-thirty]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Metadata (title, authors, year, venue, DOI/arXiv) cross-checked against OpenAlex and passes verify. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

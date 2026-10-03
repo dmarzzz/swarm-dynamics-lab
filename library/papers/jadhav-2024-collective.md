@@ -40,3 +40,7 @@ Abstract only; one flock of 14.
 ## Relevance to us
 
 A shepherding benchmark (dog as controller) with direct links to swarm-robot herding; compare [[papadopoulou-2026-mechanistic]] (predator-driven starlings).
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Spot-checked against the abstract: 14 sheep, UWB tags, front-to-back information flow match. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

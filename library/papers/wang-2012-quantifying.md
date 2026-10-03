@@ -5,7 +5,7 @@ title: 'Quantifying and Tracing Information Cascades in Swarms'
 authors: ['X. Rosalind Wang', 'Jennifer M. Miller', 'Joseph T. Lizier', 'Mikhail Prokopenko', 'Louis F. Rossi']
 year: 2012
 venue: 'PLoS ONE'
-url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0040084
+url: https://doi.org/10.1371/journal.pone.0040084
 doi: 10.1371/journal.pone.0040084
 arxiv: null
 cite: 'Wang, X. R., Miller, J. M., Lizier, J. T., Prokopenko, M., & Rossi, L. F. (2012). Quantifying and Tracing Information Cascades in Swarms. PLoS ONE, 7(7), e40084.'

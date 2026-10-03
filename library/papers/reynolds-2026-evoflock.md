@@ -40,3 +40,7 @@ Abstract only; objective is hand-designed.
 ## Relevance to us
 
 Directly reusable for tuning our simulators; compare [[kim-2025-commanding]] (gradient-based inverse design) and the alignment-is-emergent results in [[brambati-2025-learning]] and [[salahshour-2025-allocentric]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Metadata (title, authors, year) cross-checked against the DataCite arXiv record and passes verify. Not found in OpenAlex by arXiv DOI on 2026-10-03, so citations stays null.

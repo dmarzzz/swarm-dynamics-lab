@@ -64,3 +64,7 @@ No empirical measurements; the threat model rests on capabilities shown elsewher
 ## Relevance to us
 
 Motivation and risk framing; links swarm-dynamics findings (tipping points, conformity) to misuse. Pair with [[hammond-2025-multi]] and [[gu-2024-agent]].
+
+## Notes from dmarz/llm-agent-swarms-audit
+
+Audit 2026-10-03: checked Crossref (Science 391(6783), 354-357, 22 authors, published 2026-01-22) and DataCite for the arXiv title with subtitle. `title` keeps the arXiv subtitle while `cite` uses the shorter journal title; both are correct for their versions. No errors. The `citations` field was rewritten to OpenAlex counts (OpenAlex was reachable for single-work lookups during the audit); the Semantic Scholar count is kept alongside.

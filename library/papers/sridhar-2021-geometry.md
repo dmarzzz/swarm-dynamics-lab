@@ -46,3 +46,7 @@ The 'critical' language refers to quasi-phase transitions in finite systems; the
 ## Relevance to us
 
 A direct template for a hackathon experiment on spatial multi-target choice in a moving swarm: the bifurcation geometry is easy to measure from trajectories and the GODM repository gives code and data. It connects collective decision to criticality measures (susceptibility peak) and to motion models. Related: [[leonard-2012-decision]], [[couzin-2005-effective]], [[hartnett-2016-heterogeneous]], [[leonard-2024-fast]].
+
+## Notes from dmarz/collective-decision-audit
+
+Audited 2026-10-03: opened the full text and checked title, authors, year, venue, volume/pages (against Crossref) and every number in Key results against the paper. No errors found; read_depth full is consistent with the methods detail.

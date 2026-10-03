@@ -28,8 +28,8 @@ Unifies scattered empirical quorum findings (Ame et al. cockroach shelters, Prat
 
 ## Key results
 
-- Condorcet baseline: with p = 0.6 per voter the majority is almost never wrong for n = 100; with n = 40 and p = 2/3 the majority error is 3.33 per cent (computed in the paper).
-- Model, n = 40, px = 1, py = 0.5, T = 10, a = 0.1, m = 0.9, r = 0.02, 1000 runs: 75.5 per cent choose the better option with a linear response (k = 1) and 83.3 per cent with a steep quorum (k = 9), against 66.7 per cent for independent choice.
+- Condorcet baseline: Fig. 1 plots majority correctness for p = 0.6, which tends to 1 as n grows. With n = 40 and a 1/3 individual error rate, the majority error is 3.33 per cent, lower than even the best quorum rules in their model, where about 10 per cent of individuals still take the worse option (steep thresholds, T between 5 and 15, low baseline acceptance).
+- Model, n = 40, px = 1, py = 0.5, T = 10, a = 0.1, m = 0.9, r = 0.02, 1000 runs: 75.5 per cent of individuals choose the better option with a linear response (k = 1) and 83.3 per cent with a steep quorum (k = 9), against 66.7 per cent for independent choice.
 - Steep quorums are slower on average: 307.8 plus or minus 71.0 time steps (k = 9) against 253.7 plus or minus 64.0 (k = 1), and have a wider accuracy distribution because early random errors get amplified.
 - Under a fixed accuracy requirement, steeper k gives faster attainable decisions; the threshold T can vary roughly between 5 and 15 with little effect while a (baseline acceptance) is the sensitive tuning knob.
 - Re-analysis of Pratt and Sumpter (2006) data: Temnothorax colonies used a steeper quorum under low urgency (k = 3.7) than under high urgency (k = 1.7), ANOVA p < 0.01. Measured, not modelled.
@@ -46,3 +46,7 @@ The model assumes no conflict of interest and identical individuals; the authors
 ## Relevance to us
 
 This is the cleanest statement of the nonlinearity-is-the-mechanism idea we can test in simulation: a Hill-function commitment rule with tunable k and T drops straight into any agent model. It links the fish quorum experiments [[ward-2008-quorum]] and [[sumpter-2008-consensus]], the ant speed-accuracy work [[franks-2003-speed]] and [[pratt-2006-tunable]], and the cockroach work [[ame-2006-collegial]]. The amplification-of-early-errors result is the same phenomenon later framed as information cascades [[mccormick-2024-information]]. For robot swarms, compare the majority-rule neighbourhood size effect in [[valentini-2016-collective]].
+
+## Notes from dmarz/collective-decision-audit
+
+Audited 2026-10-03 against the PMC full text (www.ncbi.nlm.nih.gov/pmc/articles/PMC2689713/; the pmc.ncbi.nlm.nih.gov host now serves a captcha). All key numbers check out (75.5 and 83.3 per cent, 66.7 per cent, 307.8 +- 71.0 and 253.7 +- 64.0 steps, k = 3.7 versus 1.7, k >= 2 condition, 32 runs). Corrected two details: the Condorcet bullet claimed a specific n = 100 result that the paper only shows as a curve, and now also records the paper's point that quorum rules leave about 10 per cent of individuals on the worse option against 3.33 per cent majority error; the 75.5 and 83.3 per cent figures are fractions of individuals, not of groups. read_depth full is consistent with the content.

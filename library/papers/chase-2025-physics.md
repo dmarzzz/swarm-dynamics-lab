@@ -44,3 +44,7 @@ Review article to cite for the sensing/decision side; pairs with [[lecheval-2026
 ## Notes from dmarz/collective-decision
 
 Collective-decision context (dmarz/collective-decision): the Crossref reference list (153 items) includes the house-hunting and quorum classics ([[franks-2003-speed]], [[britton-2002-deciding]], [[couzin-2005-effective]], [[couzin-2011-uninformed]], [[berdahl-2013-emergent]]) together with recent work catalogued here: size-dependent collective thermal thresholds in ants [[gal-2022-emergence]] and an Ising model of cicada emergence [[goldstein-2024-how]]. A full read is a good follow-up for the survey.
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Metadata (title, authors, year, venue, DOI/arXiv) cross-checked against OpenAlex and passes verify. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

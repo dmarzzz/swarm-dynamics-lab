@@ -41,3 +41,7 @@ Abstract only; two-species abstraction is far from animal groups.
 ## Relevance to us
 
 Nonreciprocity (vision cones, leaders) is central to [[hang-2026-self]] and [[amichay-2024-revealing]]; this gives the physics toolkit.
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Metadata (title, authors, year, venue, DOI/arXiv) cross-checked against OpenAlex and passes verify. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

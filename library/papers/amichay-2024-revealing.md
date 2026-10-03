@@ -45,3 +45,7 @@ Pairs only; how temporal coupling scales to schools of tens or hundreds is untes
 ## Relevance to us
 
 A clean, testable rule for temporal coupling that a swarm simulator can add on top of spatial rules; suggests that synchronised intermittent motion (burst-and-coast) is part of the interaction, not noise. Pairs with [[li-2025-reverse]] (same lab, VR control law), [[de-lamo-2025-data]] (burst-and-coast synchrony emerging in a data-driven model) and the swarmalator line in sync-consensus. Same group's theory: [[heins-2024-collective]], [[salahshour-2025-allocentric]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Audited against the Nature Communications full text: 29 pairs, slope 1.71 with R^2 = 0.48, open-loop lags 311.8-332.9 ms, N = 423 vs 144, Kuiper p = 0.001, 101,000-step simulations and cite string (15, 4356) all confirmed. No content corrections. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

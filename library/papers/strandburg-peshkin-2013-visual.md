@@ -9,7 +9,7 @@ url: https://europepmc.org/article/MED/24028946
 doi: 10.1016/j.cub.2013.07.059
 arxiv: null
 cite: 'Strandburg-Peshkin, A., Twomey, C. R., Bode, N. W. F., Kao, A. B., Katz, Y., Ioannou, C. C., Rosenthal, S. B., Torney, C. J., Wu, H. S., Levin, S. A., et al. (2013). Visual sensory networks and effective information transfer in animal groups. Current Biology, 23(17), R709–R711.'
-topics: [collective-motion, collective-decision]
+topics: [collective-motion, collective-decision, criticality-measurement]
 added_by: dmarz/collective-motion
 accessed: 2026-10-03
 read_depth: abstract

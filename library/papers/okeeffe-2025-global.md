@@ -40,8 +40,8 @@ z' = -grad V + S grad H with V = -(K N^2/2)(r^2 + s^2) and H = (J N^2/2)(r^2 - s
   in sum/difference couplings), for any finite N > 2; N = 2 is non-generic and excluded.
 - Lemma 1: the model becomes a gradient flow after rescaling X = x/J', T = theta/K'; the metric is positive
   definite only when J', K' > 0, which is why the theorem is restricted to that region.
-- Lemma 3: sync eigenvalues are 0 (multiplicity 2, from rotational symmetry), -(K + J) and -(K - J)
-  (each multiplicity N - 1).
+- Lemma 3: sync eigenvalues (in the transformed J, K couplings) are lambda_0 = 0 (multiplicity 1, rotational
+  symmetry), lambda_1 = J + K and lambda_2 = J - K (each multiplicity N - 1), so sync is locally stable only on D_sync.
 - Lemmas 4-6: pi_pq states (agents split into groups pi apart) are saddles for all J, K != 0; phase-wave fixed points
   are stable only on D_wave = {K > 0, J + K > 0, J - K < 0}; theoretical eigenvalues match numerically computed
   ones (Fig. 5, n = 6, 100 trials).

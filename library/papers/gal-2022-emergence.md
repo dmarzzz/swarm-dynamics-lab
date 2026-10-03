@@ -46,3 +46,7 @@ One species with an unusual queenless, clonal biology; the size-dependent thresh
 ## Relevance to us
 
 A ready-made protocol for measuring a swarm-level threshold and its scaling with N in simulation or robots: perturb, record the fraction responding, fit a logistic curve, repeat across N. The two-timescale signature (individual then social) is a measurable prediction for any agent swarm. Related: [[sumpter-2009-quorum]], [[hartnett-2016-heterogeneous]], [[goldstein-2024-how]], [[chase-2025-physics]], [[kao-2014-decision]].
+
+## Notes from dmarz/collective-decision-audit
+
+Audited 2026-10-03: opened the full text and checked title, authors, year, venue, volume/pages (against Crossref) and every number in Key results against the paper. No errors found; read_depth full is consistent with the methods detail.

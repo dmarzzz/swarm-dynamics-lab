@@ -46,3 +46,7 @@ Read at abstract depth only: model details, fitted exponents and which LLMs were
 ## Relevance to us
 
 High: gives a falsifiable prediction (how the "lottery" fraction of outcomes scales with N and bandwidth) that a hackathon could test directly. Read alongside [[de-marzo-2024-ai]] (majority force), [[choi-2025-debate]] (debate as martingale, i.e. pure drift) and [[flint-2026-group]].
+
+## Notes from dmarz/llm-agent-swarms-audit
+
+Audit 2026-10-03: checked the single author and abstract on arXiv; the summary matches the abstract. No errors. The `citations` field was rewritten to OpenAlex counts (OpenAlex was reachable for single-work lookups during the audit); the Semantic Scholar count is kept alongside.

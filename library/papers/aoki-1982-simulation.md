@@ -30,7 +30,7 @@ school movement patterns. Read at abstract level on J-STAGE.
 ## Contribution
 
 Arguably the first published zonal (attraction/repulsion/alignment) model of collective motion, predating
-[[reynolds-1987-flocks]]; a direct ancestor of [[huth-1992-simulation]] and [[couzin-2002-collective]].
+[[reynolds-1987-flocks]]; a direct ancestor of Huth and Wissel (1992, J. Theor. Biol. 156:365-385; not catalogued, full text not reachable) and [[couzin-2002-collective]].
 
 ## Key results
 

@@ -40,3 +40,7 @@ Abstract only; the specific flocking section content has not been read.
 ## Relevance to us
 
 Review article for the physics framing; pairs with [[toner-2024-physics]] and [[cai-2025-reinforcement]] (RL for active swarms).
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Added arxiv: 2411.19783 (confirmed via DataCite; the arXiv version is titled 'The 2024 Motile Active Matter Roadmap'). citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

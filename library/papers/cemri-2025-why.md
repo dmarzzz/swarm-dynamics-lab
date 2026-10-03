@@ -58,3 +58,7 @@ Traces come from task-oriented, small-team software frameworks (a handful of age
 ## Relevance to us
 
 Useful as the vocabulary for describing failures in any swarm experiment, and as a reminder that MAS failure often comes from interaction structure (topology, termination, verification) rather than individual capability. Connects to error amplification in [[kim-2025-towards]], infectious spread in [[gu-2024-agent]], conformity and herding in [[weng-2025-do]] and [[cho-2025-herd]], and the risk taxonomy of [[hammond-2025-multi]].
+
+## Notes from dmarz/llm-agent-swarms-audit
+
+Audit 2026-10-03: checked the 13-author list, kappa = 0.88 (human), 0.77 and accuracy 0.94 (o1 few-shot judge), 0.79 on unseen systems, 1642 traces, 41-86.7% failure rates, +9.4% and +15.6% interventions and 1.56x FC3 against the arXiv HTML (v3). No errors. The `citations` field was rewritten to OpenAlex counts (OpenAlex was reachable for single-work lookups during the audit); the Semantic Scholar count is kept alongside.

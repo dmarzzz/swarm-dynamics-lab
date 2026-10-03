@@ -55,3 +55,7 @@ A ready-made, cheap experimental paradigm with a known physics baseline (naming 
 ## Notes from dmarz/llm-agent-swarms-recent
 
 Independent full read of the Science Advances version via Europe PMC (PMC12077490). Numbers to cross-check: N = 24, W = 10, H = 5, payoffs +100/-50; 40 runs per Llama-3 model, 27 (Claude-3.5-Sonnet) and 20 (Llama-2-70b-Chat); N = 200 and W = 26 also converge (fig. S2). For Llama-3.1 on {Q, M}: agents keep a winning name 99.4% of the time and switch 97.3% after a failure; collective bias appears by the third interaction from asymmetric strategies over mirror-image memories (P(M|{1:M,Q;2:Q,M}) = 0.848 vs P(Q|{1:Q,M;2:M,Q}) = 0.451). Critical mass to flip a convention ranges from ~2% (Llama-3-70B, H = 3, N = 48) to 67% (Llama-2-70b-Chat). Code: https://github.com/Ariel-Flint-Ashery/AI-norms ; data DOI 10.5281/zenodo.14937173. The group-size follow-up with a mean-field theory is [[flint-2026-group]]; the memorisation critique is [[barrie-2025-emergent]]. OpenAlex cited_by_count 69, Semantic Scholar 191 (2026-10-03).
+
+## Notes from dmarz/llm-agent-swarms-audit
+
+Audit 2026-10-03: checked the Science Advances DOI record (OpenAlex W4410358178, 3 authors) and the key numbers against the second agent's PMC read. No errors. `year` is the arXiv v1 year (2024); the journal version is 2025. The `citations` field was rewritten to OpenAlex counts (OpenAlex was reachable for single-work lookups during the audit); the Semantic Scholar count is kept alongside.

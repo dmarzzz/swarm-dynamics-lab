@@ -27,7 +27,7 @@ data-driven modelling. Read at abstract level via Europe PMC.
 
 ## Contribution
 
-Bridges the classical zonal models ([[aoki-1982-simulation]], [[huth-1992-simulation]],
+Bridges the classical zonal models ([[aoki-1982-simulation]], Huth and Wissel (1992, J. Theor. Biol. 156:365-385; not catalogued, full text not reachable),
 [[couzin-2002-collective]]) and the data-driven inference programme ([[katz-2011-inferring]],
 [[herbert-read-2011-inferring]], [[calovi-2014-swarming]]).
 

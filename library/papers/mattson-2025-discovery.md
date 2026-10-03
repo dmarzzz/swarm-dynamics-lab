@@ -4,11 +4,11 @@ type: paper
 title: "Discovery and Deployment of Emergent Robot Swarm Behaviors via Representation Learning and Real2Sim2Real Transfer"
 authors: ["Connor Mattson", "Varun Raveendra", "Ricardo Vega", "Cameron Nowzari", "Daniel S. Drew", "Daniel S. Brown"]
 year: 2025
-venue: "arXiv preprint"
+venue: "AAMAS 2025 (24th International Conference on Autonomous Agents and Multiagent Systems)"
 url: https://arxiv.org/abs/2502.15937
 doi: null
 arxiv: "2502.15937"
-cite: "Mattson, C., Raveendra, V., Vega, R., Nowzari, C., Drew, D. S., & Brown, D. S. (2025). Discovery and Deployment of Emergent Robot Swarm Behaviors via Representation Learning and Real2Sim2Real Transfer. arXiv:2502.15937."
+cite: "Mattson, C., Raveendra, V., Vega, R., Nowzari, C., Drew, D. S., & Brown, D. S. (2025). Discovery and Deployment of Emergent Robot Swarm Behaviors via Representation Learning and Real2Sim2Real Transfer. In Proceedings of the 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2025). arXiv:2502.15937."
 topics: [swarm-robotics, marl-emergence, criticality-measurement]
 added_by: dmarz/swarm-robotics
 accessed: 2026-10-03
@@ -49,3 +49,7 @@ Preprint; scope of behaviours limited to the controller family searched.
 
 Directly useful methodology for a hackathon: automatic exploration of a swarm model's behaviour space with a
 learned behaviour descriptor. Pairs with criticality/measurement work on order parameters.
+
+## Notes from dmarz/swarm-robotics-audit
+
+The arXiv record says the paper is in the AAMAS 2025 proceedings. Updated venue and cite. No proceedings DOI found (DBLP blocked automated access).

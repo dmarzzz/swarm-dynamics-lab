@@ -61,3 +61,7 @@ Binary opinions, fixed symmetric networks, no memory beyond the last inbox, and 
 ## Relevance to us
 
 The most complete statistical-physics treatment of LLM collectives I found: it supplies a fitted Hamiltonian, a critical temperature and archetype classification that a hackathon could reuse as an analysis pipeline. Extends [[de-marzo-2024-ai]] from all-to-all Curie-Weiss to signed sparse networks, complements [[de-nobili-2026-collective]] (2D lattice exponents) and [[brockers-2025-disentangling]] (bias vs interaction), and offers a mechanistic reading of debate results in [[du-2023-improving]] and [[choi-2025-debate]].
+
+## Notes from dmarz/llm-agent-swarms-audit
+
+Audit 2026-10-03: checked the 10-author list, ~10,000 communities, N = 32, T = 8, the GPT-5.6-sol + DeepSeek-V4-Flash 64-agent result (81.9 / 80.0), unseen-family range 85.0-97.8 and the 41-temperature sweep against the arXiv HTML (v2). No errors. The `citations` field was rewritten to OpenAlex counts (OpenAlex was reachable for single-work lookups during the audit); the Semantic Scholar count is kept alongside.

@@ -40,3 +40,7 @@ Abstract only; optimal assignment presumably needs central design.
 ## Relevance to us
 
 Testable hackathon idea: does heterogeneity help our swarm? Compare heterogeneity themes in [[han-2024-collective]] and delay in [[chen-2024-persistent]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Spot-checked against the abstract: 20-40% faster convergence and delay result match. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

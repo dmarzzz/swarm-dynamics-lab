@@ -107,3 +107,48 @@ Saturation: rounds 15 and 16 yielded 0/50 and 1/19 (5%) new relevant items. Roun
 3. fullread-collective-motion-empirical: full reads of [[sayin-2025-behavioral]] (already full by sibling), [[li-2025-reverse]], [[puy-2024-selective]], [[papadopoulou-2026-mechanistic]], [[ko-2025-beyond]], [[gao-2024-learning]].
 4. scan-papers-insect-swarms-recent: mosquito, midge and locust 2024-2026 field work.
 5. Rerun forward-citation chasing via OpenAlex (cites:W-id, sorted by date) once the IP budget resets, to replace Crossref counts and pick up items missed by Semantic Scholar.
+
+### Audit (dmarz/collective-motion-recent-audit)
+
+Audit on 2026-10-03. `verify` on the scan's 48 own entries returned 0 BAD lines before and after the audit (cai-2025-reinforcement is by dmarz/marl-emergence and only tagged here). All 48 were cross-checked against OpenAlex single-work records (title, authors, year, venue). None was a phantom and none was deleted. Spot-checks against full text: all 8 read_depth: full entries (amichay-2024, zheng-2024, heins-2024, hang-2026, salahshour-2025, han-2024, de-lamo-2025-data, couzin-2025). Numbers and cite strings were confirmed against the papers, and the full-read claims stand. Six abstract-level entries (ko-2025, gao-2024, montanari-2025, jadhav-2024, xiao-2024, huang-2024) were checked against their abstracts and match.
+
+Fixes:
+- [[de-lamo-2025-data]] now says 60-minute recordings for N = 40/50/60 at 50 fps, not 20-minute.
+- Every citations field now holds the OpenAlex count with its W-id, replacing the Crossref count. The two exceptions are reynolds-2026 and volkening-2024, which are not in OpenAlex.
+- arxiv ids were added to gonzalez-albaladejo-2024, gompper-2025 and fabregas-2026.
+- kim-2025 has a note that its arXiv version carries a different title.
+- The dangling [[caprini-2023-flocking]] link in das-2024 was removed.
+
+Completeness: three extra rounds were run.
+1. OpenCitations forward citations of Vicsek 1995 and Ballerini 2008, filtered to 2024+. This gave 874 citing works, resolved via Crossref and ranked by citations. The Vicsek list came back truncated at 1664 of its citing works.
+2. Crossref bibliographic queries in neighbouring vocabularies: reviews, interaction-rule inference, 3D field tracking.
+3. WebSearch for insect swarms, drone-based field studies and ML-venue learned interaction rules.
+
+Added 11 entries:
+- Reviews: [[amichay-2025-integration]], [[nguyen-2025-where]], [[kline-2025-studying]].
+- Insect swarms (closes the scan's noted gap): [[cribellier-2026-complex]], [[gupta-2024-mosquitoes]].
+- Birds: [[friman-2024-it]].
+- Vision models: [[castro-2024-modeling]].
+- Robots and active matter: [[casiulis-2025-geometric]], [[xu-2024-self]].
+- Inference methodology: [[martina-perez-2025-inverse]].
+- Fish VR: [[escobedo-2026-swimming]].
+
+Found but not added:
+- Zhu et al. 2026, "Inferring the rules of social interaction in moving Tibetan antelopes", Behav Ecol Sociobiol, 10.1007/s00265-026-03773-x. Paywalled, not opened.
+- Seara et al. 2025, Sociohydrodynamics, PNAS, 10.1073/pnas.2508692122. About human residential dynamics, so off-topic.
+- Negi, Winkler and Gompper 2024, PRR 6, 013118 (visual perception + alignment).
+- Wang et al. 2024, NJP, 10.1088/1367-2630/ad1b81 (visual-attention neighbour selection).
+- Confinement bistability in schooling fish, PRE 110, 034613.
+- Burst-and-coast fish school phases, R Soc Open Sci, 10.1098/rsos.240885.
+- Motion-salience threshold SPPs, Chaos Solitons Fractals 2025.
+- Nambu-Goldstone exponents in the Vicsek model, PRL 133, 258301.
+- Xu et al. 2026, spatial correlation functions for living matter, PRR 8, 033179.
+- Kawashima/Stednitz items listed in the scan's gaps.
+- Hierarchical equivariant GNN forecasting of collective motion, arXiv 2501.00626.
+- Locust visual attention, Proc B 2026 (10.1098/rspb.2026.0755).
+
+Still thin:
+- OpenReview/ICLR/NeurIPS/ICML proceedings were not searched (OpenAlex list queries were out of budget again during the audit).
+- Field 3D bird data remain thin.
+- Mammal herds beyond sheep remain thin.
+- The forward-citation rounds rank only on Crossref counts and only on a truncated Vicsek citing list.

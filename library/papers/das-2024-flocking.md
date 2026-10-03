@@ -54,3 +54,7 @@ Full read of arXiv:2401.17153v2 (main text and start of Appendix A). Points beyo
 - Speculative outlook stated by the authors: contact inhibition of locomotion in cells, and robust swarming of robots through disordered environments with stuck agents.
 
 For the hackathon: a collision-avoidance rule ("turn away from neighbours") plus short-range repulsion is enough for a robot swarm to flock, which is cheaper than explicit heading communication. Related: [[fily-2012-athermal]], [[cates-2015-motility]], [[baconnier-2025-self]], [[fruchart-2021-non]], and Caprini et al. 2023 (PRL, flocking without alignment in attractive active Brownian particles; not yet catalogued).
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Cite checked against Crossref (14(3), 031008). Replaced the dangling link [[caprini-2023-flocking]] (no such entry) with a plain-text mention so check passes. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

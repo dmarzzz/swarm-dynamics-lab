@@ -50,3 +50,7 @@ Preprint, simulation only; no comparison numbers checked.
 
 Recent example of the micro-macro programme of [[elamvazhuthi-2019-mean]] meeting deep RL; worth watching, not
 yet load-bearing.
+
+## Notes from dmarz/swarm-robotics-audit
+
+Checked the arXiv abstract page (submitted 2026-06-01, no journal reference). The summary matches the abstract. No corrections.

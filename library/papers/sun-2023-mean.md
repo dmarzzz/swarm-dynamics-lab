@@ -46,8 +46,9 @@ consensus-based formation control ([[olfati-saber-2004-consensus]], [[ren-2005-c
   faster.
 - Simulated robustness (512 runs): coverage above 93% and entering rate 100% for n_cell/n_robot from 0.45 to
   128; convergence time rises only mildly from N = 16 to 1024.
-- Measured: starfish regrows an arm after robots are removed, with no reassignment; 2 informed robots out of 8
-  steer cargo transport; 7 informed robots out of 128 suffice for a moving shape in simulation.
+- Measured: starfish regrows an arm after robots are removed, with no reassignment; two informed robots lead
+  the cooperative cargo transport (total robot count for that run not checked). Simulated: 7 informed robots
+  out of 128 suffice for a moving shape (Supplementary Fig. 6).
 
 ## Methods and models
 
@@ -74,3 +75,7 @@ A strong baseline for any shape-formation or coverage task, simple enough to rei
 a nice example of an ML primitive (mean shift) turned into a local swarm law. Pair with
 [[rubenstein-2014-programmable]] for the minimal-sensing contrast and with [[elamvazhuthi-2019-mean]] for
 density-level analysis.
+
+## Notes from dmarz/swarm-robotics-audit
+
+Checked against the full text (Europe PMC PMC10264375). Title, authors, venue, 14:3476 and the numbers 100% vs 75% coverage, at least 20x faster at N = 300, 512 runs, coverage above 93% for n_cell/n_robot 0.45-128, N = 16-1024 and 7 of 128 informed robots all match. Corrected one claim: the paper says two informed robots lead the cargo transport, but I found no "out of 8" total, so that number was removed.

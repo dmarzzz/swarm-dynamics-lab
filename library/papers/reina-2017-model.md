@@ -46,3 +46,7 @@ Deterministic and infinite-population only; inferior options are assumed equal; 
 ## Relevance to us
 
 Gives us exact formulas to check a simulated swarm against when scaling the number of options, which is exactly the regime robot studies rarely test (see the n = 2 bias noted in [[valentini-2017-best]]). The r-ramping idea is a cheap, testable hypothesis for a swarm experiment. Related: [[reina-2015-design]], [[reina-2024-speed]], [[gray-2018-multiagent]], [[march-pons-2024-honeybee]].
+
+## Notes from dmarz/collective-decision-audit
+
+Audited 2026-10-03: opened the full text and checked title, authors, year, venue, volume/pages (against Crossref) and every number in Key results against the paper. No errors found; read_depth full is consistent with the methods detail.

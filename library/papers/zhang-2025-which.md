@@ -15,11 +15,11 @@ authors:
 - Yiran Chen
 - Qingyun Wu
 year: 2025
-venue: arXiv preprint (camera-ready version; Semantic Scholar lists ICML 2025, not verified on the proceedings page)
+venue: Proceedings of the 42nd International Conference on Machine Learning (ICML 2025), PMLR 267 (spotlight)
 url: https://arxiv.org/abs/2505.00212
 doi: null
 arxiv: '2505.00212'
-cite: Zhang, S., Yin, M., Zhang, J., Liu, J., Han, Z., Zhang, J., Li, B., Wang, C., Wang, H., Chen, Y., & Wu, Q. (2025). Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems. arXiv preprint arXiv:2505.00212.
+cite: 'Zhang, S., Yin, M., Zhang, J., Liu, J., Han, Z., Zhang, J., Li, B., Wang, C., Wang, H., Chen, Y., & Wu, Q. (2025). Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems. In Proceedings of the 42nd International Conference on Machine Learning (ICML 2025), PMLR 267, 76583-76599. arXiv:2505.00212.'
 topics:
 - llm-agent-swarms
 added_by: dmarz/llm-agent-swarms-recent
@@ -55,3 +55,7 @@ Abstract-level read; systems are mostly small task teams, not swarms.
 ## Relevance to us
 
 Relevant if we need to localise the source of a cascade in a swarm; compare information-theoretic localisation in [[riedl-2025-emergent]]. Related: [[huang-2024-resilience]], [[kim-2025-towards]].
+
+## Notes from dmarz/llm-agent-swarms-recent-audit
+
+Audit 2026-10-03: venue confirmed on the PMLR proceedings page (https://proceedings.mlr.press/v267/zhang25cq.html, pages 76583-76599); venue and cite updated to ICML 2025. Key numbers (53.5% agent-level, 14.2% step-level, 127 systems) match the abstract.

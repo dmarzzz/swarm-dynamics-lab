@@ -40,3 +40,7 @@ Abstract only; publication venue not checked.
 ## Relevance to us
 
 Metric toolkit for our evaluation; pair with [[papadopoulou-2024-swarmverse]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Metadata (title, authors, year) cross-checked against the DataCite arXiv record and passes verify. Not found in OpenAlex by arXiv DOI on 2026-10-03, so citations stays null.

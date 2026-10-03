@@ -44,4 +44,4 @@ Application-oriented classification; little on emergent collective phenomena.
 
 ## Relevance to us
 
-Reference list for swarm-robotics MARL tasks. Related: [[batra-2022-decentralized]], [[huttenrauch-2019-deep]].
+Reference list for swarm-robotics MARL tasks. Related: [[batra-2022-decentralized]], [[huttenrauch-2019-deep]], [[kuckling-2023-recent]] (robot learning and evolution for swarms).

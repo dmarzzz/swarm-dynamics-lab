@@ -40,3 +40,7 @@ Abstract only; colloids, not animals.
 ## Relevance to us
 
 Method template for inferring rules from our data; compare [[han-2024-collective]] and [[gao-2024-learning]]. Same colloid class as [[das-2024-flocking]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Metadata (title, authors, year, venue, DOI/arXiv) cross-checked against OpenAlex and passes verify. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

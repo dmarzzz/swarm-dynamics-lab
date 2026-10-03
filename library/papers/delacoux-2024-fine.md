@@ -40,3 +40,7 @@ Abstract only; captive setting, simulated predator.
 ## Relevance to us
 
 Gaze-resolved data are the kind of input perception-based models ([[zheng-2024-body]], [[xiao-2024-perception]]) need. Same group's tracking tool: [[waldmann-2024-3d]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Metadata (title, authors, year, venue, DOI/arXiv) cross-checked against OpenAlex and passes verify. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

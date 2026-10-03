@@ -40,3 +40,7 @@ Abstract only; group-centric scope.
 ## Relevance to us
 
 Recent review to cite for fish collective motion; see also [[de-lamo-2025-data]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Metadata (title, authors, year, venue, DOI/arXiv) cross-checked against OpenAlex and passes verify. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

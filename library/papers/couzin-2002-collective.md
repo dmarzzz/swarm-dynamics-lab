@@ -33,7 +33,7 @@ PDF copy of the journal article.
 
 The "Couzin zonal model", which made attraction/repulsion/alignment zones the standard biological model of
 flocking and schooling (building on [[aoki-1982-simulation]], [[reynolds-1987-flocks]] and
-[[huth-1992-simulation]]). Unlike [[vicsek-1995-novel]] it produces self-bounded groups in open space and
+Huth and Wissel (1992, J. Theor. Biol. 156:365-385; not catalogued, full text not reachable)). Unlike [[vicsek-1995-novel]] it produces self-bounded groups in open space and
 shows multiple ordered states (including milling) and bistability, which later fish experiments confirmed
 ([[tunstrom-2013-collective]]).
 

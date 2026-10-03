@@ -41,3 +41,7 @@ Selective, collection-focused; no systematic review of evidence. Claims about tu
 ## Relevance to us
 
 Good framing citation for a hackathon pitch linking biology and swarm robotics. Points to [[salahshour-2025-allocentric]], [[heins-2024-collective]] and [[li-2025-reverse]] as the perception-first programme.
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Audited against the Comment: collection name, Reina et al. 100-robot experiments, March-Pons et al., and the 'animals are not self-propelled particles' framing confirmed; cite (16, 9574) confirmed. No corrections. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

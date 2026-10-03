@@ -40,3 +40,7 @@ Abstract only; 10 individuals maximum, so not yet flock-scale.
 ## Relevance to us
 
 Tooling for 3D data collection; for the code/dataset scans. Related 3D tracking: [[phurtivilai-2026-trackfish3d]], [[itoh-2024-fish]]; application: [[delacoux-2024-fine]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Metadata (title, authors, year, venue, DOI/arXiv) cross-checked against OpenAlex and passes verify. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

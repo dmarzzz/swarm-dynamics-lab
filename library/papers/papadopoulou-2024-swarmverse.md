@@ -40,3 +40,7 @@ Abstract only; 2D positional data assumed.
 ## Relevance to us
 
 A ready-made way to compare our simulated swarms to real data; flag for the code-scan task (CRAN package). Same first author: [[papadopoulou-2026-mechanistic]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Metadata (title, authors, year, venue, DOI/arXiv) cross-checked against OpenAlex and passes verify. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

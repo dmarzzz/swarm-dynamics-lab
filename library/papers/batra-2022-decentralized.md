@@ -49,4 +49,4 @@ Real-world experiments cover simpler behaviours than simulation; swarm sizes sma
 
 ## Relevance to us
 
-Best reference if a team wants learned swarm behaviour on drones. Related: [[tolstaya-2020-learning]], [[de-souza-2021-decentralized]], [[orr-2023-multi]].
+Best reference if a team wants learned swarm behaviour on drones. Related: [[tolstaya-2020-learning]], [[de-souza-2021-decentralized]], [[orr-2023-multi]], and the follow-up [[huang-2024-collision]] from the same group.

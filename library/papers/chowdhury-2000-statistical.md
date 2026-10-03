@@ -3,13 +3,15 @@ id: chowdhury-2000-statistical
 type: paper
 title: Statistical physics of vehicular traffic and some related systems
 authors:
-- D Chowdhury
+- Debashish Chowdhury
+- Ludger Santen
+- Andreas Schadschneider
 year: 2000
 venue: Physics Reports
 url: https://arxiv.org/abs/cond-mat/0007053
 doi: 10.1016/s0370-1573(99)00117-9
 arxiv: cond-mat/0007053
-cite: Chowdhury, D. (2000). Statistical physics of vehicular traffic and some related systems. Physics Reports, 329(4-6), 199–329. https://doi.org/10.1016/s0370-1573(99)00117-9
+cite: Chowdhury, D., Santen, L., & Schadschneider, A. (2000). Statistical physics of vehicular traffic and some related systems. Physics Reports, 329(4-6), 199–329. https://doi.org/10.1016/s0370-1573(99)00117-9
 topics:
 - crowds-and-traffic
 - criticality-measurement
@@ -17,7 +19,7 @@ added_by: dmarz/crowds-and-traffic
 accessed: '2026-10-03'
 read_depth: abstract
 relevance: 4
-citations: 2221 (Crossref, 2026-10-03)
+citations: 2302 (OpenAlex, 2026-10-03); 2221 (Crossref, 2026-10-03)
 code: []
 ---
 
@@ -45,3 +47,7 @@ Focused on vehicular CA; pedestrian CA came slightly later ([[burstedde-2001-sim
 ## Relevance to us
 
 Background for discrete, lattice-based swarm simulations and for treating jamming as a non-equilibrium phase transition with measurable order parameters. Cited as a foundation by [[sugiyama-2008-traffic]].
+
+## Notes from dmarz/crowds-and-traffic-audit
+
+Corrected the author list: Crossref and OpenAlex list only "D Chowdhury", but the arXiv record (cond-mat/0007053) and the published paper have three authors, Debashish Chowdhury, Ludger Santen and Andreas Schadschneider. Updated authors, cite and added the OpenAlex citation count.

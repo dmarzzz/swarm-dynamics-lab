@@ -44,3 +44,7 @@ No direct fit to animal trajectories in this paper (empirical anchor is the locu
 ## Relevance to us
 
 A strong, very recent alternative model class for the hackathon: agents with an internal ring attractor instead of alignment rules. Testable prediction: removing allocentric cues (landmarks, sky) should impair flocking. Compare [[heins-2024-collective]], [[sayin-2025-behavioral]], [[li-2025-reverse]] (zebrafish pursuit uses egocentric positional information), and [[couzin-2025-collective]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Audited against the Nature Communications full text: N = 10 bistable versus N = 320 continuous transitions confirmed; cite (16, 9051) confirmed. No corrections. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

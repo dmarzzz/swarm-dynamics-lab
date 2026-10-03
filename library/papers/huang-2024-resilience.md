@@ -13,11 +13,11 @@ authors:
 - Michael R. Lyu
 - Maarten Sap
 year: 2024
-venue: arXiv preprint (Semantic Scholar lists ICML 2025; not verified on the proceedings page)
+venue: Proceedings of the 42nd International Conference on Machine Learning (ICML 2025), PMLR 267
 url: https://arxiv.org/abs/2408.00989
 doi: null
 arxiv: '2408.00989'
-cite: Huang, J.-t., Zhou, J., Jin, T., Zhou, X., Chen, Z., Wang, W., Yuan, Y., Lyu, M. R., & Sap, M. (2024). On the Resilience of LLM-Based Multi-Agent Collaboration with Faulty Agents. arXiv preprint arXiv:2408.00989 (v3, May 2025).
+cite: 'Huang, J.-t., Zhou, J., Jin, T., Zhou, X., Chen, Z., Wang, W., Yuan, Y., Lyu, M. R., & Sap, M. (2025). On the Resilience of LLM-Based Multi-Agent Collaboration with Faulty Agents. In Proceedings of the 42nd International Conference on Machine Learning (ICML 2025), PMLR 267, 26202-26226. arXiv:2408.00989.'
 topics:
 - llm-agent-swarms
 added_by: dmarz/llm-agent-swarms-recent
@@ -52,3 +52,7 @@ Abstract-level read; small teams (3-5 agents).
 ## Relevance to us
 
 Topology-resilience trade-off is a classic swarm question; test whether these results hold in larger sparse swarms. Related: [[wu-2026-how]], [[zhang-2025-which]].
+
+## Notes from dmarz/llm-agent-swarms-recent-audit
+
+Audit 2026-10-03: venue confirmed on the PMLR proceedings page (https://proceedings.mlr.press/v267/huang25ay.html, pages 26202-26226); venue and cite updated from "not verified" to ICML 2025. The year field and id keep 2024, the arXiv v1 date. Key numbers (5.5% vs 10.5% and 23.7% drop) match the abstract.

@@ -40,3 +40,7 @@ Abstract only; one species in a laboratory setting.
 ## Relevance to us
 
 A 3D structural statistic to compare with 3D models; contrasts with 2D formation assumptions in [[hang-2026-self]]. Underwater robot formations (Nagpal lab) are a natural follow-on.
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Spot-checked against the abstract (OpenAlex): 25.2%, 54.6/30.0/15.4%, < 0.1% diamond, 79% ladder all match. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

@@ -93,7 +93,7 @@ one-way-coupled mobile-oscillator papers keep appearing and were deliberately no
   [[ghosh-2022-synchronized]], [[olfati-saber-2007-consensus]], [[ren-2007-information]], [[cao-2013-overview]],
   [[castellano-2009-statistical]], [[proskurnikov-2017-tutorial]], [[bernardo-2024-bounded]],
   [[sar-2022-dynamics]], [[sar-2026-interplay]], [[kuramoto-1984-chemical]].
-- 15 papers from 2023-2026, including robot swarmalators [[ceron-2024-reciprocal]], [[beattie-2025-realizing]],
+- 11 papers from 2023-2026, including robot swarmalators [[ceron-2024-reciprocal]], [[beattie-2025-realizing]],
   [[quinn-2025-decentralised]].
 - read_depth: 6 full, 3 skim, 44 abstract.
 - Existing entries tagged with sync-consensus: [[vicsek-1995-novel]], [[conradt-2005-consensus]],

@@ -40,3 +40,7 @@ Abstract only; 2D.
 ## Relevance to us
 
 Warns that tank or arena geometry can produce apparent state switches; relevant when comparing simulations with lab data such as [[de-lamo-2025-data]] and [[zampetaki-2024-dynamical]]. Noise-driven collective memory in the same family: [[chan-2026-noise]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Spot-checked against the abstract: matches. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

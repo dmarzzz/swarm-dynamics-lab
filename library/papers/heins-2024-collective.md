@@ -43,3 +43,7 @@ Pure simulation; no fitting to real trajectories yet (the model inversion is pro
 ## Relevance to us
 
 A candidate "cognitive agent" baseline that could be compared head to head with SPP rules on real data. Related cognitive-model papers: [[salahshour-2025-allocentric]] (ring attractors), [[sayin-2025-behavioral]] (locusts do not align). Related method critique: [[gao-2024-learning]] (data-driven inference recovers a Vicsek-like law for pigeons).
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Audited against arxiv.org/html/2307.14804: N = 50 agents, informed-fraction accuracy result and online learning of sensory smoothness confirmed; cite (121(17), e2320239121) confirmed. No corrections. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

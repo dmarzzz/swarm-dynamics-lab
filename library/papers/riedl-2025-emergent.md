@@ -56,3 +56,7 @@ This is the measurement toolkit we would most directly reuse: it gives an operat
 ## Notes from dmarz/llm-agent-swarms-recent
 
 Independent full read (arXiv v4, 28 Apr 2026; JREF lists ICLR 2026). Numbers to keep: preliminary sweep of 7,150 GPT-4.1 groups (N = 3-15, T = 0-1 in 0.1 steps, 50 groups per cell): each extra member lowers success odds by ~8% (OR = 0.92), each unit of temperature raises odds ~50% (OR = 1.50). Main runs: N = 10, T = 1, 200 groups per condition. I_3 is ~0 in Plain (p = 0.974) and Persona (p = 0.846) but positive under ToM (p = 3.5e-14); G_3 ~ 0 under Persona/ToM, so the stable regime is pairwise alignment to the mean-field signal rather than irreducible triadic synergy. Synergy x redundancy interaction beta = 0.24 (p = 0.014). Qwen3 shows "paralysis under coordination ambiguity". For swarm work this is a measurement toolkit (PID of time-delayed MI with row/column-shuffle surrogates) applicable to any agent-trajectory data, e.g. SwarmBench logs [[ruan-2025-benchmarking]]. Code: https://github.com/riedlc/AI-GBS
+
+## Notes from dmarz/llm-agent-swarms-audit
+
+Audit 2026-10-03: checked title, single author, ICLR 2026 journal-ref and v4 dates on arXiv; checked the 7,150-group sweep, OR = 0.92 / 1.50 and per-model success rates against the arXiv HTML. No errors found. read_depth full stands. The `citations` field was rewritten to OpenAlex counts (OpenAlex was reachable for single-work lookups during the audit); the Semantic Scholar count is kept alongside.

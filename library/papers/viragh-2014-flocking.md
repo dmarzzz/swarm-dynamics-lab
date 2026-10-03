@@ -38,7 +38,8 @@ It made delays and robot imperfections first-class parts of a flocking model and
 - Simulated: the friction-like alignment term substantially reduces delay- and noise-induced oscillations;
   without it flocks oscillate and collide (qualitative, from the stability plots).
 - Fixed model values representative of their quadcopters: t_s = 0.2 s, tau_CTRL = 1 s, a_max = 6 m/s^2.
-- Real flights with a small group of quadcopters demonstrate both algorithms (details in the paper; I skimmed).
+- Measured: real flights with 9 quadcopters (including a 20-minute free-flocking measurement) demonstrate both
+  algorithms.
 
 ## Methods and models
 
@@ -56,3 +57,7 @@ limited (later fixed by the braking-curve alignment).
 
 The robot-imperfection model here is a compact, reusable recipe for making a simulated swarm realistic
 (delay, refresh, range, noise, inertia). See [[vasarhelyi-2014-outdoor]] and [[vasarhelyi-2018-optimized]].
+
+## Notes from dmarz/swarm-robotics-audit
+
+Checked against the arXiv PDF (1310.3601). Verified the parameter values t_s = 0.2 s, tau_CTRL = 1 s and a_max = 6 m/s^2. Added: the field tests used 9 quadcopters, including a 20-minute free-flocking measurement (Sec. 4). read_depth: skim stands.

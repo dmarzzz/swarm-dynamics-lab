@@ -41,3 +41,7 @@ Abstract only; pairs only.
 ## Relevance to us
 
 Same validation philosophy as [[li-2025-reverse]] and [[amichay-2024-revealing]]; the rummy-nose tetra U-turn data also underlie [[zheng-2024-body]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Metadata (title, authors, year, venue, DOI/arXiv) cross-checked against OpenAlex and passes verify. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

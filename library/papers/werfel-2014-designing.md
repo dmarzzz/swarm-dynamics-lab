@@ -50,3 +50,7 @@ Small physical team; speed and robustness to robot failures at scale not checked
 
 Reference for stigmergy-based coordination in robots; see [[salman-2024-automatic]] for automatically designed
 stigmergy and the swarm-intelligence topic for algorithmic stigmergy.
+
+## Notes from dmarz/swarm-robotics-audit
+
+Checked the abstract (OpenAlex record) and the Crossref metadata (Science 343(6172), 754-758). The summary and the three-robot claim match the abstract. No corrections.

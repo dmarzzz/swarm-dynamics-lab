@@ -43,3 +43,7 @@ Mean-field: no explicit pairwise kernels, no neighbour-map structure, so it cann
 ## Relevance to us
 
 A ready template for building "synthetic schools" from data at low cost, useful as a null model for any interaction-rule hypothesis. The same group's review [[de-lamo-2026-statistical]] places it alongside avalanche and leadership results ([[puy-2024-signatures]], [[puy-2024-selective]]). Compare data-driven SDE learning in [[gao-2024-learning]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Audited against arxiv.org/html/2509.08630. Corrected: recordings are three independent 60-minute recordings per group size (N = 40, 50, 60) at 50 fps, not 20-minute; added camera resolution and frame count to Methods. Other numbers and the model description match the paper. Also citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

@@ -69,3 +69,7 @@ Shows that a swarm's coupling structure (here an elastic network) can select a c
 ranking would not predict. Useful conceptual contrast to consensus and synchronisation on graphs
 ([[okeeffe-2017-oscillators]], [[fruchart-2021-non]]) and a candidate toy system for "physical
 interaction instead of communication" experiments.
+
+## Notes from dmarz/swarm-robotics-audit
+
+Checked against the arXiv PDF (2110.01516). Verified N = 19 triangular and N = 12 kagome; pi_FD = 0.800 and pi_CA = 1.29 (triangular), 0.564 and 0.600 (kagome); modes 4 and 5; large lattices N = 1141 and 930; the bifurcation is not a Hopf bifurcation. Metadata matches Crossref (Nat. Phys. 18(10), 1234-1239). No corrections.

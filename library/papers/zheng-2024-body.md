@@ -43,3 +43,7 @@ The robots' "vision" is simulated centrally from motion capture, not onboard. Ag
 ## Relevance to us
 
 Directly usable selective-attention rule for a hackathon swarm sim and a benchmark (collective turn responsiveness, correlation length vs size). Compare with [[xiao-2024-perception]], [[puy-2024-selective]] (fish attend to faster neighbours), [[mezey-2025-purely]] (onboard vision robots), and [[hang-2026-self]] (loss of scale-free correlation before fragmentation).
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Audited against the Nature Communications full text: 444 U-turns (44 of 10 fish, 400 of 8), Spearman analysis with frontal weighting alpha, 50 SwarmBang robots, cite (15, 8968) and author order (Yuan Tao per Crossref) confirmed. No corrections. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

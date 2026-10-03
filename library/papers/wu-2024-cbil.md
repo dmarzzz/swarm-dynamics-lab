@@ -40,3 +40,7 @@ Abstract only; graphics-oriented evaluation, not a biological validation of inte
 ## Relevance to us
 
 A learned generative model of schools; compare [[mcgraw-2024-parallel]] and the 3D tracker from the same group [[phurtivilai-2026-trackfish3d]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Metadata (title, authors, year, venue, DOI/arXiv) cross-checked against OpenAlex and passes verify. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

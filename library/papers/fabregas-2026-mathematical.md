@@ -40,3 +40,7 @@ Abstract only; little contact with animal trajectory data.
 ## Relevance to us
 
 Background for internal-state models; compare the cognitive-state models [[heins-2024-collective]] and [[salahshour-2025-allocentric]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Added arxiv: 2508.12183 (confirmed via DataCite). Year 2026 is correct for the journal issue (Crossref: 36(02), 439-482, issued 2026-01-05; OpenAlex lists 2025 for the online version). citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

@@ -41,3 +41,7 @@ Abstract only. Correlational evidence; causality of salience in birds not establ
 ## Relevance to us
 
 Selective-attention rules are a recurrent 2024-2026 theme: [[zheng-2024-body]], [[puy-2024-selective]], [[ito-2024-selective]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Spot-checked against the abstract: three bird datasets and about 10^2 robots match. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

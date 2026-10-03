@@ -42,3 +42,7 @@ Abstract only. Pursuit of one or few targets; group-level emergence is only part
 ## Relevance to us
 
 Directly implementable controller for a hackathon robot or sim demo. Same rig: [[amichay-2024-revealing]]. Closed-loop VR validation in another species: [[escobedo-2026-closed]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Spot-checked metadata against Crossref (10(101), eadq6784; eight authors): matches. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

@@ -41,3 +41,7 @@ Abstract only; agreement is partly from mixing data across conditions, which add
 ## Relevance to us
 
 Background for criticality claims in insect swarms; compare [[puy-2024-signatures]] for fish.
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Added arxiv: 2309.05064 (the url already pointed to it; confirmed via DataCite; arXiv title reads 'Power laws of natural swarms are fingerprints of an extended critical region'). citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

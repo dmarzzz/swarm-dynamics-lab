@@ -40,3 +40,7 @@ Abstract only. The conclusion "Vicsek captures genuine flocking" sits in tension
 ## Relevance to us
 
 Candidate method to infer interaction laws from our own trajectory data; compare [[han-2024-collective]], [[kim-2025-commanding]] and [[de-lamo-2025-data]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Spot-checked against the abstract and Crossref (15, 6029): matches. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

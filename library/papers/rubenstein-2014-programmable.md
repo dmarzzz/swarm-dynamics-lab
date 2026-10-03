@@ -52,3 +52,7 @@ Sequential edge-following is slow and only edge robots move (per [[sun-2023-mean
 
 The canonical large-N physical swarm result to cite; useful baseline when we argue about scaling and
 robustness. Links to [[werfel-2014-designing]] (same lab, construction).
+
+## Notes from dmarz/swarm-robotics-audit
+
+Checked the abstract (OpenAlex) and the Crossref metadata (Science 345(6198), 795-799). The quoted abstract sentence is exact. Claims about the edge-following mechanism are correctly attributed to [[sun-2023-mean]] and not to this paper's text. No corrections.

@@ -40,3 +40,7 @@ Abstract only. Feedback-controlled particles implement rules in software, so thi
 ## Relevance to us
 
 A concrete mechanism (adaptive delay) to test against the responsiveness metrics of [[zheng-2024-body]]. Related to time-delay themes in [[amichay-2024-revealing]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Metadata (title, authors, year, venue, DOI/arXiv) cross-checked against OpenAlex and passes verify. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

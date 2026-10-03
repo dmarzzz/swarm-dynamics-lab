@@ -89,3 +89,7 @@ are a ready-made measurement kit, and its delay/comm-range collision map is a co
 reproduce or extend in simulation. Compare with vision-only flocking ([[mezey-2025-purely]]), MPC-based
 swarms ([[soria-2021-predictive]]) and planning-based swarms ([[zhou-2022-swarm]]); theory context in
 [[olfati-saber-2006-flocking]] and [[tanner-2007-flocking]].
+
+## Notes from dmarz/swarm-robotics-audit
+
+Checked against the author PDF. Metadata matches Crossref. Verified: 30 drones at 4/6/8 m/s; 11 parameters; population 100 x 150 generations (15,000 evaluations, 2-6 days); best fitness 0.92/0.87/0.80; means 0.812 +/- 0.101, 0.776 +/- 0.086, 0.728 +/- 0.075; 16 and 32 m/s best 0.91/0.89 (means 0.79 +/- 0.12, 0.63 +/- 0.23); 3.53 +/- 3.61 collisions at 32 m/s; Fig. 2 thresholds (<1 s delay, >240 m range); old model phi_corr 0.63 +/- 0.07; closest-neighbour distance 12-30 m, minimum distance 5-15 m; safety detuning of the field parameters. No corrections needed. read_depth: full is consistent with the detail given.

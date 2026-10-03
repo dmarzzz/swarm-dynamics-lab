@@ -46,3 +46,7 @@ Behavioural rules are fixed in form (only three traits evolve); heading does not
 ## Relevance to us
 
 Directly relevant to any hackathon idea about swarms poised near transitions or about distributed sensing without gradient sensors. The model is simple enough to reimplement in a day. Pair with [[berdahl-2013-emergent]] (experiment), [[kao-2014-decision]] (group size and correlated cues), [[sridhar-2021-geometry]] (criticality in individual choice) and [[chase-2025-physics]] (review).
+
+## Notes from dmarz/collective-decision-audit
+
+Audited 2026-10-03: opened the full text and checked title, authors, year, venue, volume/pages (against Crossref) and every number in Key results against the paper. No errors found; read_depth full is consistent with the methods detail.

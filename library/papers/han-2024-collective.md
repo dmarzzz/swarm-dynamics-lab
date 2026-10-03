@@ -44,3 +44,7 @@ Only simulated physical systems; no animal or robot trajectories. Requires known
 ## Relevance to us
 
 A candidate tool to infer heterogeneous roles (leaders, followers, different species) from swarm trajectories, e.g. on datasets like those in [[jadhav-2024-collective]] or [[waldmann-2024-3d]]. Compare with [[gao-2024-learning]] (stochastic equations from bird flocks) and [[hem-2025-learning]] (stochastic force inference on colloids).
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Audited against the Nature Communications full text: generalisation accuracy > 99% versus about 70% for baselines confirmed; cite (15, 3191) confirmed. No corrections. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

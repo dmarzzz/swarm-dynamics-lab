@@ -41,3 +41,7 @@ Abstract only; force maps are correlational and confounded by group geometry.
 ## Relevance to us
 
 A specific selective-interaction rule to test, alongside [[zheng-2024-body]] and [[xiao-2024-perception]]. Synthesised in [[de-lamo-2026-statistical]].
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Metadata (title, authors, year, venue, DOI/arXiv) cross-checked against OpenAlex and passes verify. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

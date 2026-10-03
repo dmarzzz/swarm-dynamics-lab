@@ -4,17 +4,17 @@ type: paper
 title: "A Mechanical Route for Cooperative Transport in Autonomous Robotic Swarms"
 authors: ["Eden Arbel", "Luco L. K. M. Buise", "Charlotte C. R. M. M. van Waes", "Naomi Oppenheimer", "Yoav Lahini", "Matan Yah Ben Zion"]
 year: 2024
-venue: "arXiv preprint"
+venue: "Nature Communications"
 url: https://arxiv.org/abs/2402.05659
-doi: null
+doi: "10.1038/s41467-025-61896-7"
 arxiv: "2402.05659"
-cite: "Arbel, E., Buise, L. L. K. M., van Waes, C. C. R. M. M., Oppenheimer, N., Lahini, Y., & Ben Zion, M. Y. (2024). A Mechanical Route for Cooperative Transport in Autonomous Robotic Swarms. arXiv:2402.05659."
+cite: "Arbel, E., Buise, L., van Waes, C., Oppenheimer, N., Lahini, Y., & Ben Zion, M. Y. (2025). A mechanical route for cooperative transport in autonomous robotic swarms. Nature Communications, 16(1), 7519. (Preprint arXiv:2402.05659, 2024.)"
 topics: [swarm-robotics, active-matter]
 added_by: dmarz/swarm-robotics
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 4
-citations: null
+citations: "6 (OpenAlex, 2026-10-03)"
 code: []
 ---
 ## Summary
@@ -50,3 +50,7 @@ Preprint; only circular payloads; no sensing.
 ## Relevance to us
 
 A sharp, testable mechanism (sign of a single parameter decides cooperation); ideal for a simulation study.
+
+## Notes from dmarz/swarm-robotics-audit
+
+The preprint was published as Arbel et al. (2025), Nature Communications 16, 7519, DOI 10.1038/s41467-025-61896-7 (Crossref, checked). Updated venue, doi, cite and citations. The id keeps the preprint year 2024 so existing [[arbel-2024-mechanical]] links do not break. Content is still abstract-level.

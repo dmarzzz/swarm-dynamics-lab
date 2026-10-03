@@ -45,3 +45,7 @@ Kinematic model, Eqs. (1)-(2): dx_i/dt = U p_i + U_i (dipole flow), dtheta_i = w
 ## Relevance to us
 
 Gives a concrete, measurable early-warning indicator (xi/L drop) and a scaling law for information speed that we could test in our own simulations or on tracking data. Builds on [[huang-2024-collective]] (same model, confined). Compare with [[zheng-2024-body]] and [[puy-2024-signatures]] on scale-free correlation and avalanches.
+
+## Notes from dmarz/collective-motion-recent-audit
+
+Audited against the Nature Communications full text: N up to 50,000; xi = 0.37 L - 0.84 with R^2 = 0.83; speeds 1.20/1.08/0.54 U; c = 0.65 I_a/I_n + 0.73; P = 1 - I_n/I_a; cite (17, 4324) confirmed. No corrections. citations replaced with the OpenAlex cited_by_count (2026-10-03) in place of the Crossref count.

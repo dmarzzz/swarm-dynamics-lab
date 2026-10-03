@@ -71,3 +71,7 @@ A measurable quantity (rattling) we could compute from simulated or tracked swar
 which collective states persist, and a principled way to choose global drives. Relates to the
 criticality/measurement thread ([[sar-2022-dynamics]] for context on collective-state measures) and to
 [[baconnier-2022-selective]] and [[ben-zion-2023-morphological]] on robotic active matter.
+
+## Notes from dmarz/swarm-robotics-audit
+
+Checked against the arXiv PDF (2101.00683). Verified 15 smarticles and 45-D space; over 99% of probability in 0.1% of states; Zenodo 10.5281/zenodo.4056700; metadata matches Crossref (Science 371(6524), 90-95). No corrections.

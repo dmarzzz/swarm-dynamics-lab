@@ -47,3 +47,7 @@ Small open-weight models only; lattice sizes limited by inference cost; temperat
 ## Relevance to us
 
 A direct template for testing criticality claims in LLM swarms with local interactions; complements the all-to-all analysis of [[de-marzo-2024-ai]] and the signed-network fit of [[el-2026-physics]], and warns that apparent order can be bias rather than coupling.
+
+## Notes from dmarz/llm-agent-swarms-audit
+
+Audit 2026-10-03: checked the single author and abstract on arXiv (three models, global-flip protocol, gamma/nu near but incompatible with 7/4, h >> J). The summary matches. No errors. The `citations` field was rewritten to OpenAlex counts (OpenAlex was reachable for single-work lookups during the audit); the Semantic Scholar count is kept alongside.
