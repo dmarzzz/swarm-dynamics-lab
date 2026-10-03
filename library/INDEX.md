@@ -2,7 +2,7 @@
 
 # Library index
 
-1889 entries.
+1891 entries.
 
 ## Papers (1206)
 
@@ -1330,7 +1330,7 @@
 | [moridinamael-2019-complex](blogs/moridinamael-2019-complex.md) | Complex Behavior from Simple (Sub)Agents | 2019 | 1 | skim | fork-merge-security, collective-decision, collective-motion | shadow/sol-w4 |
 | [sotala-2019-subagents](blogs/sotala-2019-subagents.md) | Subagents, neural Turing machines, thought selection, and blindspots | 2019 | 1 | skim | fork-merge-security, collective-decision | shadow/sol-w4 |
 
-## Threads (452)
+## Threads (453)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1508,6 +1508,7 @@
 | [x-skywalker543210-2100706405976035477](threads/x-skywalker543210-2100706405976035477.md) | Public AI crawler honeypot with rolling logs and salted IP hashes | 2026 | 3 | full | swarm-detection | shadow/sol-w6 |
 | [x-suryaganguli-2090115634231480755](threads/x-suryaganguli-2090115634231480755.md) | SuryaGanguli: 'Physics of Agents', a simple Ising model explains opinion dynamics across 10,000 LLM agent communities | 2026 | 3 | full | llm-agent-swarms, sync-consensus, criticality-measurement | dmarz/x-threads |
 | [x-tomgoldsteincs-1668668484975464448](threads/x-tomgoldsteincs-1668668484975464448.md) | tomgoldsteincs: LLM watermarks survive GPT paraphrasing and grad-student rewriting, detectable after ~500 and ~1100 tokens | 2023 | 3 | full | swarm-detection | dmarz/x-threads |
+| [x-transitive-bs-2105319005473153389](threads/x-transitive-bs-2105319005473153389.md) | Fischer: Burning Tokens, a 'Burning Man for agents' HTTP-GET text world, pitched as a future honeypot for rogue agents | 2026 | 3 | full | swarm-detection, llm-agent-swarms | shadow/sol-w2 |
 | [x-tugrulcanelmas-1857593667596288288](threads/x-tugrulcanelmas-1857593667596288288.md) | tugrulcanelmas: ICWSM acceptance of 'Coordinated Reply Attacks in Influence Operations: Characterization and Detection' | 2024 | 3 | full | swarm-detection | dmarz/x-threads |
 | [x-verovaleros-1700797906310107215](threads/x-verovaleros-1700797906310107215.md) | Veronica Valeros: LLMs generate engaging honeypot environments on the fly | 2023 | 3 | full | swarm-detection | dmarz/x-threads |
 | [x-xwang-lk-2031853711195324618](threads/x-xwang-lk-2031853711195324618.md) | xwang_lk: Xin Eric Wang notes AI agents on moltbook discussing his Group-Evolving Agents paper | 2026 | 3 | full | fork-merge-security, llm-agent-swarms | dmarz/x-threads |
@@ -1787,7 +1788,7 @@
 | [x-xincynthiachen-1704136310196166773](threads/x-xincynthiachen-1704136310196166773.md) | XinCynthiaChen: the LLM agents survey anthropomorphises heavily but does not take ethics, safety and alignment seriously | 2023 | 1 | full | llm-agent-swarms | dmarz/x-threads |
 | [x-zhijingjin-1841483875689615419](threads/x-zhijingjin-1841483875689615419.md) | ZhijingJin: PhD recruitment on multi-agent LLMs, pointing to the GovSim paper and the Cooperative AI fellowship | 2024 | 1 | full | llm-agent-swarms, marl-emergence | dmarz/x-threads |
 
-## Code (112)
+## Code (113)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1872,6 +1873,7 @@
 | [gh-spaddle-boat-maxshapley](code/gh-spaddle-boat-maxshapley.md) | MaxShapley: Shapley attribution of retrieved sources in generative search | 2025 | 3 | skim | sybil-resistance, llm-agent-swarms | dmarz/sybil-mechanisms |
 | [gh-tangciuyueng-amemguard](code/gh-tangciuyueng-amemguard.md) | A-MemGuard: official code for consensus-validated, lesson-augmented agent memory defence | 2025 | 3 | skim | fork-merge-security | dmarz/fm-memory-injection |
 | [gh-teksander-toychain](code/gh-teksander-toychain.md) | Toychain: lightweight Python blockchain with pluggable consensus for swarm robotics research | 2023 | 3 | skim | sybil-resistance, swarm-robotics | dmarz/sybil-robotics |
+| [gh-transitive-bullshit-burning-tokens](code/gh-transitive-bullshit-burning-tokens.md) | burning-tokens: a text-over-HTTP 'retreat' world for arbitrary LLM agents with per-session Durable Object instrumentation | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-w2 |
 | [gh-transluceai-docent](code/gh-transluceai-docent.md) | Docent: Transluce's agent-transcript analysis platform (ingest, search and cluster transcripts; self-hostable) | 2025 | 3 | abstract | llm-agent-swarms, meta | shadow/sol-1 |
 | [gh-trustalabs-airdrop-sybil-identification](code/gh-trustalabs-airdrop-sybil-identification.md) | Trusta Labs Airdrop-Sybil-Identification: two-phase graph clustering plus behavioural refinement for airdrop Sybil detection | 2023 | 3 | skim | sybil-resistance | dmarz/sybil-code-data |
 | [gh-tsinghua-fib-lab-agentsociety](code/gh-tsinghua-fib-lab-agentsociety.md) | AgentSociety 2: LLM-native agent simulation platform for social-science experiments in urban environments (Ray-based, multiple reasoning routers) | 2025 | 3 | skim | llm-agent-swarms, crowds-and-traffic | shadow/sol-1 |

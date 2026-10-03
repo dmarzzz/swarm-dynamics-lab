@@ -14,12 +14,12 @@
 | sync-consensus | 225 | 8 | 11 | 17 | 0 | 1 | 262 |
 | criticality-measurement | 186 | 4 | 1 | 23 | 0 | 1 | 215 |
 | marl-emergence | 123 | 12 | 0 | 33 | 0 | 1 | 169 |
-| llm-agent-swarms | 237 | 44 | 50 | 197 | 0 | 2 | 530 |
+| llm-agent-swarms | 237 | 45 | 50 | 198 | 0 | 2 | 532 |
 | crowds-and-traffic | 76 | 2 | 1 | 2 | 0 | 0 | 81 |
 | meta | 77 | 9 | 3 | 22 | 0 | 2 | 113 |
 | sybil-resistance | 169 | 41 | 52 | 53 | 4 | 1 | 320 |
 | fork-merge-security | 214 | 11 | 38 | 67 | 0 | 3 | 333 |
-| swarm-detection | 0 | 2 | 14 | 186 | 0 | 0 | 202 |
+| swarm-detection | 0 | 3 | 14 | 187 | 0 | 0 | 204 |
 
 ## Tasks
 
@@ -107,16 +107,17 @@
 | issue | state | updated | batch |
 |---|---|---|---|
 | [#19](https://github.com/dmarzzz/swarm-lab/issues/19) | claimed | 2026-10-03T19:32Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-02) |
-| [#24](https://github.com/dmarzzz/swarm-lab/issues/24) | claimed | 2026-10-03T19:32Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-01) |
 | [#28](https://github.com/dmarzzz/swarm-lab/issues/28) | claimed | 2026-10-03T19:32Z | [batch] web/crowds-and-traffic: 10 candidates (web-crowds-and-traffic-20261003-01) |
 | [#33](https://github.com/dmarzzz/swarm-lab/issues/33) | claimed | 2026-10-03T19:32Z | [batch] web/swarm-detection: 10 candidates (web-swarm-detection-20261003-01) |
 | [#39](https://github.com/dmarzzz/swarm-lab/issues/39) | claimed | 2026-10-03T19:32Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-01) |
 | [#45](https://github.com/dmarzzz/swarm-lab/issues/45) | claimed | 2026-10-03T19:32Z | [batch] x/sybil-resistance: 6 candidates (x-sybil-resistance-20261003-03) |
+| [#47](https://github.com/dmarzzz/swarm-lab/issues/47) | claimed | 2026-10-03T19:33Z | [batch] blog/fork-merge-security: 12 candidates (blog-fork-merge-security-20261003-02) |
 | [#48](https://github.com/dmarzzz/swarm-lab/issues/48) | claimed | 2026-10-03T19:31Z | [batch] blog/swarm-detection: 11 candidates (blog-swarm-detection-20261003-01) |
 | [#20](https://github.com/dmarzzz/swarm-lab/issues/20) | free | 2026-10-03T19:21Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-03) |
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
 | [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |
+| [#24](https://github.com/dmarzzz/swarm-lab/issues/24) | free | 2026-10-03T19:33Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-01) |
 | [#25](https://github.com/dmarzzz/swarm-lab/issues/25) | free | 2026-10-03T19:21Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-02) |
 | [#26](https://github.com/dmarzzz/swarm-lab/issues/26) | free | 2026-10-03T19:21Z | [batch] web/collective-motion: 3 candidates (web-collective-motion-20261003-03) |
 | [#27](https://github.com/dmarzzz/swarm-lab/issues/27) | free | 2026-10-03T19:21Z | [batch] web/criticality-measurement: 10 candidates (web-criticality-measurement-20261003-01) |
@@ -127,7 +128,6 @@
 | [#34](https://github.com/dmarzzz/swarm-lab/issues/34) | free | 2026-10-03T19:22Z | [batch] web/swarm-detection: 3 candidates (web-swarm-detection-20261003-02) |
 | [#35](https://github.com/dmarzzz/swarm-lab/issues/35) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 10 candidates (web-swarm-robotics-20261003-01) |
 | [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
-| [#37](https://github.com/dmarzzz/swarm-lab/issues/37) | free | 2026-10-03T19:22Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-01) |
 | | | | 7 more free batches |
 
 ## Agents
