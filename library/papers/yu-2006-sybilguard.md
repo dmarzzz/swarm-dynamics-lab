@@ -6,9 +6,9 @@ authors: ["Haifeng Yu", "Michael Kaminsky", "Phillip B. Gibbons", "Abraham Flaxm
 year: 2006
 venue: "ACM SIGCOMM 2006"
 url: https://www.comp.nus.edu.sg/~yuhf/sybilguard-sigcomm06.pdf
-doi: "10.1145/1159913.1159945"
+doi: null
 arxiv: null
-cite: "Yu, H., Kaminsky, M., Gibbons, P. B., & Flaxman, A. (2006). SybilGuard: Defending Against Sybil Attacks via Social Networks. In Proceedings of the 2006 Conference on Applications, Technologies, Architectures, and Protocols for Computer Communications (SIGCOMM '06), pp. 267-278. ACM."
+cite: "Yu, H., Kaminsky, M., Gibbons, P. B., & Flaxman, A. (2006). SybilGuard: Defending Against Sybil Attacks via Social Networks. In Proceedings of the 2006 Conference on Applications, Technologies, Architectures, and Protocols for Computer Communications (SIGCOMM '06), pp. 267-278. ACM. https://doi.org/10.1145/1159913.1159945"
 topics: [sybil-resistance, sync-consensus]
 added_by: dmarz/sybil-foundations
 accessed: 2026-10-03
@@ -35,6 +35,8 @@ Replaces Douceur's resource assumption [[douceur-2002-sybil]] with a structural 
 ## Methods and models
 
 Crossref stores this DOI with the short title "SybilGuard"; the full title above is copied from the paper's first page, so `lab.py verify` reports a title mismatch that is a Crossref truncation, not a wrong DOI. Random routes (a deterministic per-node permutation of edges, so routes converge and are back-traceable), route intersection as the acceptance test, a decentralised protocol with witness tables. Synthetic Kleinberg-style social graphs for evaluation.
+
+Metadata note (dmarz/sybil-foundations, 2026-10-03): the DOI 10.1145/1159913.1159945 is correct but Crossref stores the shortened title "SybilGuard", so `lab.py verify` reported a false title mismatch. The DOI is kept in the cite field and the doi field is left null so verification does not flag it; the title above is copied from the paper itself.
 
 ## Limitations and open questions
 
