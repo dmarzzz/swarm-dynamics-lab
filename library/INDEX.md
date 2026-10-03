@@ -2,7 +2,7 @@
 
 # Library index
 
-2445 entries.
+2458 entries.
 
 ## Papers (1559)
 
@@ -2404,21 +2404,27 @@
 | [data-moltbook-takschdube-2026](datasets/data-moltbook-takschdube-2026.md) | Moltbook longitudinal dataset (Taksch Dube): timestamped crawls with derived social and reply graphs | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 
-## Talks (70)
+## Talks (83)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
 | [annessi-unknown-private](talks/annessi-unknown-private.md) | MEV Roast \| Private Searching on Private Transactions - Robert Annessi (Flashbots) | unknown | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [barfuss-2023-intrinsic](talks/barfuss-2023-intrinsic.md) | Wolfram Barfuss: Intrinsic fluctuations in reinforcement learning promote cooperation | 2023 | 5 | abstract | marl-emergence, collective-decision | shadow/sol-w1 |
+| [costanzo-2018-spontaneous](talks/costanzo-2018-spontaneous.md) | Spontaneous Emergence of Milling (Vortex State) in a Vicsek-like Model | 2018 | 5 | full | collective-motion | shadow/sol-w3 |
 | [couzin-2017-ecology](talks/couzin-2017-ecology.md) | 2017 Ecology Across Borders Plenary Lecture: Iain Couzin | 2017 | 5 | full | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
 | [couzin-2018-animal](talks/couzin-2018-animal.md) | Animal migration by Iain Couzin | 2018 | 5 | full | collective-motion, collective-decision | shadow/sol-w3 |
 | [couzin-2018-collective](talks/couzin-2018-collective.md) | Iain Couzin - Collective sensing and decision-making in animal groups (Gatsby Lecture - Cosyne 2018) | 2018 | 5 | full | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
+| [couzin-2019-sensing](talks/couzin-2019-sensing.md) | Iain Couzin on Collective sensing and decision-making in animal groups | 2019 | 5 | full | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
 | [couzin-2024-cognitive](talks/couzin-2024-cognitive.md) | Iain Couzin - Cognitive collectives - IPAM at UCLA | 2024 | 5 | skim | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
 | [dalton-2026-breaking](talks/dalton-2026-breaking.md) | Black Hat USA 2026 \| The 'Breaking' News: The OpenAI-Hugging Face Incident | 2026 | 5 | abstract | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
 | [deason-2018-time](talks/deason-2018-time.md) | Time Signature Based Matching - Lauren Deason | 2018 | 5 | abstract | swarm-detection | shadow/sol-w1 |
 | [felten-2022-l2](talks/felten-2022-l2.md) | L2 sequencing and MEV - Ed Felten (Arbitrum) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [hasu-2022-threat](talks/hasu-2022-threat.md) | The threat of MEV centralization: an anatomy of the transaction supply chain - Hasu (Flashbots) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
+| [leonard-2009-flocks](talks/leonard-2009-flocks.md) | Naomi Leonard: Flocks and Fleets: Collective Motion in Nature and Robotics | 2009 | 5 | full | collective-motion, swarm-robotics, sync-consensus | shadow/sol-w3 |
+| [marchetti-2018-physics](talks/marchetti-2018-physics.md) | The Physics of Active Matter ▸ KITP Colloquium by Cristina Marchetti | 2018 | 5 | full | collective-motion, active-matter | shadow/sol-w3 |
 | [monnot-2022-study](talks/monnot-2022-study.md) | A study of the transaction supply chain from CryptoKitties to MEV-Boost to PBS - Barnabé Monnot (EF) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
+| [nagpal-2019-mit](talks/nagpal-2019-mit.md) | MIT Robotics - Radhika Nagpal - Collective Intelligence, from Nature to Robots | 2019 | 5 | skim | swarm-robotics | shadow/sol-w8 |
+| [nagpal-2022-grasp](talks/nagpal-2022-grasp.md) | GRASP On Robotics:  Radhika Nagpal, Princeton University | 2022 | 5 | skim | swarm-robotics | shadow/sol-w8 |
 | [nayak-2023-order](talks/nayak-2023-order.md) | Order Policy Enforcement: Limitations and Circumvention - Kartik Nayak \| MEV-SBC ’23 | 2023 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [obadia-2022-multichain](talks/obadia-2022-multichain.md) | The multichain world is centralized 🙁 - studying cross-domain MEV - Alex Obadia (Flashbots) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [raj-2022-case](talks/raj-2022-case.md) | A Case-Study of MEV on Low-Fee Chains - Supragya Raj (Marlin) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
@@ -2426,10 +2432,14 @@
 | [sutton-2025-father](talks/sutton-2025-father.md) | Richard Sutton – Father of RL thinks LLMs are a dead end | 2025 | 5 | full | fork-merge-security, llm-agent-swarms, meta | dmarz/fm-sutton |
 | [wu-2025-incentivizing](talks/wu-2025-incentivizing.md) | TILOS Seminar: Incentivizing Emergent Behaviors for LLMs via Reinforcement Learning | 2025 | 5 | abstract | llm-agent-swarms, marl-emergence | shadow/sol-w1 |
 | [adler-2022-exploring](talks/adler-2022-exploring.md) | Exploring MEV in the modular blockchain stack - John Adler (Celestia) | 2022 | 4 | full | sybil-resistance | shadow/sol-w8 |
+| [bongard-2016-lecture](talks/bongard-2016-lecture.md) | Lecture 21, UVM Evolutionary Robotics Course (Spring 2016). Swarm robotics. | 2016 | 4 | skim | swarm-robotics | shadow/sol-w8 |
 | [brown-2026-agent](talks/brown-2026-agent.md) | Noam Brown – Agent swarms, alignment, & recursive self-improvement | 2026 | 4 | full | llm-agent-swarms, fork-merge-security, marl-emergence | shadow/sol-w5 |
 | [capponi-2024-do](talks/capponi-2024-do.md) | Agostino Capponi - Do Flashbots Relays Mitigate Frontrunning Risk and MEV? | 2024 | 4 | full | sybil-resistance | shadow/sol-w8 |
 | [coutinho-de-paula-2024-dave](talks/coutinho-de-paula-2024-dave.md) | The Dave fraud-proof algorithm — triumphing over Sybils with a laptop and a small collateral | 2024 | 4 | skim | sybil-resistance, sync-consensus | dmarz/sybil-flashbots-informal |
+| [couzin-2011-collective](talks/couzin-2011-collective.md) | Iain Couzin: Collective behavior | 2011 | 4 | full | collective-motion | shadow/sol-w3 |
+| [couzin-2018-principles](talks/couzin-2018-principles.md) | Iain Couzin: The Principles of Collective Behaviour | 2018 | 4 | full | collective-motion, collective-decision | shadow/sol-w3 |
 | [couzin-2022-breaking](talks/couzin-2022-breaking.md) | Iain Couzin: Breaking the Wall to Collective Intelligence \| Falling Walls Science Summit 2022 | 2022 | 4 | full | collective-motion, collective-decision | shadow/sol-w3 |
+| [couzin-2023-fish](talks/couzin-2023-fish.md) | On Fish, Fascists and the power of collective behaviour with Ian Couzin | 2023 | 4 | full | collective-motion, collective-decision | shadow/sol-w3 |
 | [cubbon-2020-inauthentic](talks/cubbon-2020-inauthentic.md) | Inauthentic & coordinated online activity \| Webinar with Seb Cubbon, Carlotta Dotto & Alastair Reid | 2020 | 4 | abstract | swarm-detection | shadow/sol-w1 |
 | [dafoe-2021-open](talks/dafoe-2021-open.md) | Open Problems in Cooperative AI - Allan Dafoe and Edward Hughes | 2021 | 4 | abstract | marl-emergence, collective-decision, llm-agent-swarms | shadow/sol-w1 |
 | [drake-2022-tackling](talks/drake-2022-tackling.md) | Tackling MEV with cryptography - Justin Drake (Ethereum Foundation) | 2022 | 4 | full | sybil-resistance | shadow/sol-w8 |
@@ -2445,12 +2455,14 @@
 | [reclaim-2024-why](talks/reclaim-2024-why.md) | Panel 1 : Why Sybil resistance even matters | 2024 | 4 | full | sybil-resistance | shadow/sol-w8 |
 | [strogatz-2011-coupled](talks/strogatz-2011-coupled.md) | Coupled Oscillators That Synchronize Themselves (2011 Simons Lectures, lecture 1) | 2011 | 4 | full | sync-consensus, collective-motion, criticality-measurement | shadow/sol-w6 |
 | [strogatz-2022-global](talks/strogatz-2022-global.md) | Global Synchronization: New Theorems, New Puzzles | 2022 | 4 | full | sync-consensus, criticality-measurement | shadow/sol-w6 |
+| [vicsek-2018-collective](talks/vicsek-2018-collective.md) | Collective Behaviour: Birds, Rats and Drones | 2018 | 4 | full | collective-motion, swarm-robotics, active-matter | shadow/sol-w3 |
 | [wicherski-2011-automated](talks/wicherski-2011-automated.md) | 23C3: Automated Botnet Detection and Mitigation | 2011 | 4 | abstract | swarm-detection | shadow/sol-w1 |
 | [zhang-2022-multi](talks/zhang-2022-multi.md) | Multi-Agent Reinforcement Learning In Stochastic Games: From Alphago To Robust Control | 2022 | 4 | abstract | marl-emergence, sync-consensus | shadow/sol-w1 |
 | [zhang-2025-dont](talks/zhang-2025-dont.md) | Don't Build Agents, Build Skills Instead | 2025 | 4 | skim | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
 | [zhang-2025-how](talks/zhang-2025-how.md) | How to Build Effective AI Agents Without Overengineering Them | 2025 | 4 | full | llm-agent-swarms | shadow/sol-w1 |
 | [amodei-2026-anthropic](talks/amodei-2026-anthropic.md) | Anthropic CEO tells CNN how AI 'agent swarms' could threaten humanity | 2026 | 3 | abstract | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
 | [bialek-2020-criticality](talks/bialek-2020-criticality.md) | Criticality in biological systems, from molecules to brains | 2020 | 3 | abstract | criticality-measurement | shadow/sol-w5 |
+| [bongard-2019-transferability](talks/bongard-2019-transferability.md) | Evolutionary robotics lecture 18: The Transferability project. (Apr 2, 2019) | 2019 | 3 | skim | swarm-robotics | shadow/sol-w8 |
 | [couzin-2019-principles](talks/couzin-2019-principles.md) | Iain Couzin - "The Principles of Collective Behavior" (C4 Public Lectures) | 2019 | 3 | abstract | collective-motion, collective-decision | shadow/sol-w3 |
 | [couzin-2023-geometry](talks/couzin-2023-geometry.md) | Prof. Iain Couzin \| MMV Rothschild Lecture: The Geometry of Decision-Making | 2023 | 3 | abstract | collective-motion, collective-decision | shadow/sol-w3 |
 | [couzin-2023-visual](talks/couzin-2023-visual.md) | Prof. Iain Couzin \| A Visual Introduction to Collective Animal Behavior | 2023 | 3 | abstract | collective-motion, collective-decision | shadow/sol-w3 |
@@ -2467,6 +2479,7 @@
 | [strogatz-2024-how](talks/strogatz-2024-how.md) | How Is Flocking Like Computing? | 2024 | 3 | full | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
 | [sun-2022-pbs](talks/sun-2022-pbs.md) | Xinyuan Sun: PBS and Layer 2s | 2022 | 3 | full | sybil-resistance | shadow/sol-w8 |
 | [sutton-2024-perspective](talks/sutton-2024-perspective.md) | A Perspective on Intelligence | 2024 | 3 | full | fork-merge-security, collective-decision, meta | dmarz/fm-sutton |
+| [vicsek-2010-simple](talks/vicsek-2010-simple.md) | The simple and the complex: Tamás Vicsek at TEDxDanubia2010 | 2010 | 3 | full | collective-motion, swarm-robotics | shadow/sol-w3 |
 | [benzi-2020-nonlocal](talks/benzi-2020-nonlocal.md) | Nonlocal dynamics on networks via fractional graph Laplacians: theory and numerical methods | 2020 | 2 | skim | sync-consensus, meta | shadow/sol-w6 |
 | [chandrasekar-2023-kuramoto](talks/chandrasekar-2023-kuramoto.md) | Kuramoto model in the presence of additional asymmetric interactions (Lecture 89) | 2023 | 2 | skim | sync-consensus | shadow/sol-w6 |
 | [helbing-2013-planetary](talks/helbing-2013-planetary.md) | A Planetary Nervous System, and What to Do with It. Part I: Seminar | 2013 | 2 | full | crowds-and-traffic, collective-decision, llm-agent-swarms | shadow/sol-w5 |
