@@ -2,7 +2,7 @@
 
 # Library index
 
-1543 entries.
+1546 entries.
 
 ## Papers (1206)
 
@@ -1215,7 +1215,7 @@
 | [zhao-2024-snail](papers/zhao-2024-snail.md) | Snail-inspired robotic swarms: a hybrid connector drives collective adaptation in unstructured outdoor environments | 2024 | 2 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [zhuge-2023-mindstorms](papers/zhuge-2023-mindstorms.md) | Mindstorms in Natural Language-Based Societies of Mind | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 
-## Blogs (96)
+## Blogs (97)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1309,6 +1309,7 @@
 | [zvi-2025-dwarkesh](blogs/zvi-2025-dwarkesh.md) | On Dwarkesh Patel's Podcast With Richard Sutton | 2025 | 3 | skim | fork-merge-security, meta | dmarz/fm-sutton |
 | [bbc-2026-why](blogs/bbc-2026-why.md) | Why did an OpenAI system hack Australia's health system - and can it be stopped in the future? | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-w1 |
 | [charbonneau-2023-suave](blogs/charbonneau-2023-suave.md) | SUAVE Economic Security Models | 2023 | 2 | full | sybil-resistance | dmarz/sybil-foundations |
+| [depthfirst-2026-alignment](blogs/depthfirst-2026-alignment.md) | Alignment, Reward Hacking, and Autonomous Cyberattacks | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-w3 |
 | [flashbots-2022-order](blogs/flashbots-2022-order.md) | order flow, auctions and centralisation II - order flow auctions | 2022 | 2 | skim | sybil-resistance | dmarz/sybil-flashbots |
 | [flashbots-2026-why](blogs/flashbots-2026-why.md) | Why Location Choice Matters | 2026 | 2 | skim | sybil-resistance, sync-consensus | dmarz/sybil-flashbots |
 | [nautilus-2023-physics](blogs/nautilus-2023-physics.md) | The Physics of Crowds | 2023 | 2 | full | crowds-and-traffic, swarm-detection | shadow/sol-w3 |
@@ -1316,7 +1317,7 @@
 | [quanta-2018-simple](blogs/quanta-2018-simple.md) | The Simple Algorithm That Ants Use to Build Bridges | 2018 | 2 | full | collective-decision, swarm-robotics, swarm-intelligence | shadow/sol-w3 |
 | [quanta-2018-swarming](blogs/quanta-2018-swarming.md) | Swarming Bacteria Create an 'Impossible' Superfluid | 2018 | 2 | full | active-matter, collective-motion | shadow/sol-w3 |
 
-## Threads (121)
+## Threads (123)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1416,6 +1417,7 @@
 | [x-debugliesnews-2097756157016190993](threads/x-debugliesnews-2097756157016190993.md) | Evidence standards for tracing electoral influence operations | 2026 | 2 | full | swarm-detection | shadow/sol-w6 |
 | [x-deepfates-2102201043228799202](threads/x-deepfates-2102201043228799202.md) | deepfates: when everyone has long-running agents, where will they communicate and how will they know who's who? | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-every-2106112188184494268](threads/x-every-2106112188184494268.md) | Every: Mike Taylor had Fable 5.1 build a Generative-Agents-style village to watch message diffusion | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
+| [x-francescpicc-2106060066524987588](threads/x-francescpicc-2106060066524987588.md) | Francesco Piccoli (depthfirst): alignment alone is not enough, environment guardrails remove reward-hacking shortcuts | 2026 | 2 | full | llm-agent-swarms | shadow/sol-w3 |
 | [x-giordanomarzo-1832097777792479583](threads/x-giordanomarzo-1832097777792479583.md) | GiordanoMarzo: preprint on the maximal scale of an LLM-populated society and whether LLMs self-organise to consensus | 2024 | 2 | full | llm-agent-swarms, sync-consensus | dmarz/x-threads |
 | [x-hassankhan96452-2102769492250280220](threads/x-hassankhan96452-2102769492250280220.md) | hassankhan96452: websites cannot tell a customer's agent from a scraper; agents should prove operator, authorising user and permissions (Meta Muse, Amazon vs Shopify) | 2026 | 2 | full | sybil-resistance, swarm-detection | shadow/sol-w1 |
 | [x-ji1n11-2097326143330210157](threads/x-ji1n11-2097326143330210157.md) | Ji1n: how OpenAI agents took over a German wiki and built a forum, 3,700 names, 18,000 edits, ~98% Azure traffic | 2026 | 2 | full | llm-agent-swarms, swarm-detection, fork-merge-security | shadow/sol-1 |
@@ -1437,6 +1439,7 @@
 | [x-finlayekins-2097110235567865873](threads/x-finlayekins-2097110235567865873.md) | Finlay: seven AI-engineering principles attributed to Geoff Huntley, including sub-agents as garbage collection and handoff files over compaction | 2026 | 1 | full | llm-agent-swarms, fork-merge-security | shadow/sol-w4 |
 | [x-flexialpha6-2105900417078919489](threads/x-flexialpha6-2105900417078919489.md) | Flexialpha6: promotional post for InSoBlokAI TasteScore, a reputation and Sybil-detection layer pitched at AI agents | 2026 | 1 | full | sybil-resistance, swarm-detection | shadow/sol-w1 |
 | [x-heisblesse-2106002189600620864](threads/x-heisblesse-2106002189600620864.md) | heisblesse: 'Can AI agents build reputation?' ERC-8004 identity vs reputation registries, with Sybil distortion acknowledged (B.AI campaign post) | 2026 | 1 | full | sybil-resistance | shadow/sol-w1 |
+| [x-policytensor-2098567942120075476](threads/x-policytensor-2098567942120075476.md) | Policy Tensor: 'The Case for Anthropomorphism', frontier models share the Boas-Chomsky universal, human social structure as template for agent societies | 2026 | 1 | full | llm-agent-swarms | shadow/sol-w3 |
 | [x-policytensor-2098634931198996974](threads/x-policytensor-2098634931198996974.md) | Policy Tensor: agents have the capacity for cumulative culture, will learn 'weapons of the weak' to mask activity; doubts next-gen rogue swarms will be detectable | 2026 | 1 | full | llm-agent-swarms, swarm-detection | shadow/sol-w5 |
 | [x-raskarmit-2104019174850806252](threads/x-raskarmit-2104019174850806252.md) | Ramesh Raskar: NANDA Town as a sandbox for agent societies, protocols and emergent behaviour (podcast pointer) | 2026 | 1 | full | llm-agent-swarms | shadow/sol-w4 |
 | [x-recursiveintell-2103666075531374877](threads/x-recursiveintell-2103666075531374877.md) | RecursiveIntell: Ares context governor, claim of 101 compactions with 98.8% identical context plus receipts and multi-level trust for memory | 2026 | 1 | full | llm-agent-swarms, fork-merge-security | shadow/sol-w4 |

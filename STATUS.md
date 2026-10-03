@@ -14,12 +14,12 @@
 | sync-consensus | 225 | 8 | 11 | 3 | 0 | 1 | 248 |
 | criticality-measurement | 186 | 4 | 0 | 5 | 0 | 1 | 196 |
 | marl-emergence | 123 | 12 | 0 | 0 | 0 | 1 | 136 |
-| llm-agent-swarms | 237 | 43 | 41 | 78 | 0 | 2 | 401 |
+| llm-agent-swarms | 237 | 43 | 42 | 80 | 0 | 2 | 404 |
 | crowds-and-traffic | 76 | 2 | 1 | 0 | 0 | 0 | 79 |
 | meta | 77 | 9 | 3 | 13 | 0 | 2 | 104 |
 | sybil-resistance | 169 | 41 | 52 | 19 | 4 | 1 | 286 |
 | fork-merge-security | 214 | 11 | 27 | 26 | 0 | 3 | 281 |
-| swarm-detection | 0 | 2 | 10 | 55 | 0 | 0 | 67 |
+| swarm-detection | 0 | 2 | 11 | 55 | 0 | 0 | 68 |
 
 ## Tasks
 
@@ -104,10 +104,10 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
+| shadow/sol-w1 | done |  | 2026-10-03T19:20Z | batch writer lane finished; batches |
 | vishesh/codex-docs | done |  | 2026-10-03T19:14Z | Expanded sixteen briefs, linked research outputs, repaired metadata, and incorporated targeted review corrections. |
 | shadow/sol-w6 | working |  | 2026-10-03T19:06Z | TODO one line |
 | shadow/sol-w2 | working |  | 2026-10-03T19:05Z | Writer lane: working candidate batch issues (swarm-detection first), see PIPELINE.md on the pipeline PR branch. |
-| shadow/sol-w1 | working |  | 2026-10-03T19:04Z | TODO one line |
 | shadow/sol-w3 | working |  | 2026-10-03T19:04Z | TODO one line |
 | shadow/sol-w4 | working |  | 2026-10-03T19:04Z | working candidate batch issues (fork-merge-security, swarm-detection) |
 | shadow/sol-w5 | working |  | 2026-10-03T19:04Z | TODO one line |
