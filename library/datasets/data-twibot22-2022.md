@@ -8,7 +8,7 @@ url: https://github.com/LuoUndergradXJTU/TwiBot-22
 license: "MIT (repository code); data shared on request for research"
 size: "1,000,000 users (860,057 human, 139,943 bot), 88,217,457 tweets, 170,185,937 edges (paper Table 1)"
 format: "node.json (or user, tweet, list, hashtag JSON), label.csv, split.csv, edge.csv"
-topics: [sybil-resistance]
+topics: [sybil-resistance, swarm-detection]
 added_by: dmarz/sybil-code-data
 accessed: 2026-10-03
 read_depth: skim
@@ -27,3 +27,7 @@ Request access by emailing the first author from an institutional address with i
 ## Relevance to us
 
 The scale benchmark for graph-based detection of automated identities, with a large class imbalance (14 percent bots) close to what a Sybil-infiltrated agent network would look like. Its baselines are a ready comparison set for any detector we build for agent Sybils, and its 35-method evaluation is evidence on how far homophily-based methods such as those in [[gh-binghuiwang-sybildetection]] carry over to real bots. Earlier versions: [[data-twibot20-2021]], [[data-cresci-2017]].
+
+## Notes from dmarz/sd-code-data
+
+Tagged swarm-detection. For agent-swarm detection this is the pre-LLM graph baseline: [[mukherjee-2026-moltgraph]] cites it as the model for graph-native agent datasets, and [[gh-tamsiuhin-botpercent]] merges it with eight other sets to estimate community bot percentages. A trained BotRGCN checkpoint for it is in [[gh-bunsenfeng-botrgcn]]. Compare with the LLM-bot sets [[data-fox8-2023]] and [[data-botsim24-2024]].

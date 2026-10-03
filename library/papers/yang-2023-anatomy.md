@@ -14,6 +14,7 @@ cite: 'Yang, K.-C., & Menczer, F. (2024). Anatomy of an AI-powered malicious soc
 topics:
 - sybil-resistance
 - llm-agent-swarms
+- swarm-detection
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: skim
@@ -47,3 +48,7 @@ Skimmed. Found only because operators leaked the tell-tale phrase; botnets witho
 ## Relevance to us
 
 Real-world evidence that LLM agent swarms already operate as Sybils and that coordination structure, not content, is the reliable signal. That matches the theoretical point in [[bara-2026-epistemic]] that report content cannot identify ancestry. Lineage: [[ferrara-2016-rise]]; detection arms race: [[feng-2024-what]]; threat framing: [[schroeder-2025-how]].
+
+## Notes from dmarz/sd-code-data
+
+Tagged swarm-detection. The released benchmark is catalogued as [[data-fox8-2023]] (Zenodo 8035289, CC-BY-4.0: 1,140 fox8 bots and 1,140 humans, up to 200 tweets each); the repo osome-iu/AIBot_fox8 includes the script that queried OpenAI's AI-text classifier. My run of a text-reuse coordination detector on Moltbook found zero identical-text pairs among 4,526 agent posts in a day ([[gh-qut-digital-observatory-coordination-network-toolkit]]), consistent with this paper's point that coordination structure, not copied content, is what exposes LLM swarms (inferred).

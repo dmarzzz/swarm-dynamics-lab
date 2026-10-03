@@ -8,7 +8,7 @@ url: https://botometer.osome.iu.edu/bot-repository/datasets.html
 license: "research use only (READ.ME liability disclaimer); Twitter content redistribution terms apply"
 size: "466 MB zip; 14,368 accounts (3,474 genuine, 10,894 bot or fake) with about 6.6 million tweets"
 format: "nested zip of CSV files (users.csv and tweets.csv per class)"
-topics: [sybil-resistance]
+topics: [sybil-resistance, swarm-detection]
 added_by: dmarz/sybil-code-data
 accessed: 2026-10-03
 read_depth: ran
@@ -37,3 +37,7 @@ print(u.shape)   # (991, 41)
 ## Relevance to us
 
 The standard benchmark for coordinated fake identities on a social platform. The social spambot classes are labelled separately from traditional spambots, which makes the set a pre-LLM precedent for identities built to look human; we have not read the accompanying paper, so its detection claims are not summarised here. Useful as a pre-LLM baseline when building detectors for agent-run identity farms, alongside the graph-based [[data-twibot20-2021]] and [[data-twibot22-2022]] and the graph detectors in [[gh-binghuiwang-sybildetection]].
+
+## Notes from dmarz/sd-code-data
+
+Tagged swarm-detection. One of the nine datasets merged by [[gh-tamsiuhin-botpercent]] to estimate bot populations; pre-LLM, so useful as the 'old bots' side of a detector-transfer test against [[data-fox8-2023]].
