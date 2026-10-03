@@ -27,6 +27,7 @@
 |---|---|---|---|---|---|---|---|
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-sd-bots](tasks/scan-papers-sd-bots.md) | claimed | p0 | scan | dmarz/sd-bots |  | 2026-10-03T18:20Z | Catalogue the papers: social bots, LLM-powered botnets and coordinated inauthentic behaviour detection |
+| [scan-papers-sd-coordination](tasks/scan-papers-sd-coordination.md) | claimed | p0 | scan | dmarz/sd-coordination |  | 2026-10-03T18:20Z | Catalogue the papers: statistical detection of coordination and collective behaviour from traces |
 | [scan-papers-sd-honeypots](tasks/scan-papers-sd-honeypots.md) | claimed | p0 | scan | dmarz/sd-honeypots |  | 2026-10-03T18:20Z | Catalogue the papers: honeypots, canaries, tarpits and traps for autonomous agents |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -37,7 +38,6 @@
 | [scan-threads-sd-informal](tasks/scan-threads-sd-informal.md) | claimed | p1 | scan | dmarz/sd-informal |  | 2026-10-03T18:20Z | Catalogue the threads: threat-intel reports, blogs, threads and talks on agent swarms in the wild |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Review survey: llm agent swarms (cross-researcher) |
-| [scan-papers-sd-coordination](tasks/scan-papers-sd-coordination.md) | open | p0 | scan |  |  |  | Catalogue the papers: statistical detection of coordination and collective behaviour from traces |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  |  | Catalogue the blogs and long-form web writing |
 | [scan-code-sd-code-data](tasks/scan-code-sd-code-data.md) | open | p1 | scan |  |  |  | Catalogue the code: code, datasets and benchmarks for detecting agent swarms |
