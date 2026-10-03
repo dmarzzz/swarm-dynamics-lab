@@ -37,7 +37,6 @@
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [build-actual-experiment-suite](tasks/build-actual-experiment-suite.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-03T23:41Z | Implement and deploy developed exploratory experiment designs |
-| [run-discussion-dose-s0](tasks/run-discussion-dose-s0.md) | claimed | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-03T23:50Z | Prepare and run the first real-model discussion-dose qualification |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -51,6 +50,7 @@
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [review-discussion-dose](tasks/review-discussion-dose.md) | open | p1 | review |  |  |  | Review SEC-47 discussion dose tasks and exploratory protocol |
+| [run-discussion-dose-s0](tasks/run-discussion-dose-s0.md) | open | p1 | build |  | dmarz | 2026-10-03T23:54Z | Prepare and run the first real-model discussion-dose qualification |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
 | [scan-code-avalon-swarm](tasks/scan-code-avalon-swarm.md) | open | p1 | scan |  | dmarz |  | Catalogue and run Avalon / social-deduction environments we could extend to N seats |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
