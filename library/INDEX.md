@@ -2,7 +2,7 @@
 
 # Library index
 
-2672 entries.
+2678 entries.
 
 ## Papers (1691)
 
@@ -2593,7 +2593,7 @@
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 | [data-zzzztom-moltbook-2026](datasets/data-zzzztom-moltbook-2026.md) | zzzztom/moltbook-forum-data Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 
-## Talks (108)
+## Talks (114)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -2613,21 +2613,24 @@
 | [deason-2018-time](talks/deason-2018-time.md) | Time Signature Based Matching - Lauren Deason | 2018 | 5 | abstract | swarm-detection | shadow/sol-w1 |
 | [felten-2022-l2](talks/felten-2022-l2.md) | L2 sequencing and MEV - Ed Felten (Arbitrum) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [hasu-2022-threat](talks/hasu-2022-threat.md) | The threat of MEV centralization: an anatomy of the transaction supply chain - Hasu (Flashbots) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
+| [kao-2020-albert](talks/kao-2020-albert.md) | Albert Kao on Animal Sociality & Collective Computation | 2020 | 5 | full | collective-decision, fork-merge-security | shadow/sol-aud |
 | [leonard-2009-flocks](talks/leonard-2009-flocks.md) | Naomi Leonard: Flocks and Fleets: Collective Motion in Nature and Robotics | 2009 | 5 | full | collective-motion, swarm-robotics, sync-consensus | shadow/sol-w3 |
 | [marchetti-2018-physics](talks/marchetti-2018-physics.md) | The Physics of Active Matter ▸ KITP Colloquium by Cristina Marchetti | 2018 | 5 | full | collective-motion, active-matter | shadow/sol-w3 |
 | [marchetti-2020-why](talks/marchetti-2020-why.md) | Active matter: why does it matter? KITP Blackboard Talk | 2020 | 5 | full | active-matter, collective-motion | shadow/sol-w3 |
 | [marchetti-2021-topology](talks/marchetti-2021-topology.md) | Cristina Marchetti: Active Topology | 2021 | 5 | full | active-matter, collective-motion | shadow/sol-w3 |
 | [marchetti-2022-physics](talks/marchetti-2022-physics.md) | LOEB LECTURE: MARCHETTI, Cristina, The Physics of Active Matter | 2022 | 5 | full | active-matter, collective-motion | shadow/sol-w3 |
 | [monnot-2022-study](talks/monnot-2022-study.md) | A study of the transaction supply chain from CryptoKitties to MEV-Boost to PBS - Barnabé Monnot (EF) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
+| [moses-2019-melanie](talks/moses-2019-melanie.md) | Melanie Moses on Metabolic Scaling in Biology & Computation | 2019 | 5 | full | swarm-robotics, swarm-intelligence, criticality-measurement, fork-merge-security | shadow/sol-aud |
 | [nagpal-2014-collective](talks/nagpal-2014-collective.md) | Radhika Nagpal | 2014 | 5 | full | swarm-robotics | shadow/sol-w8 |
 | [nagpal-2015-taming](talks/nagpal-2015-taming.md) | Taming the Swarm - Radhika Nagpal, Harvard University | 2015 | 5 | skim | swarm-robotics | shadow/sol-w8 |
 | [nagpal-2015-tamu](talks/nagpal-2015-tamu.md) | Radhika Nagpal - "Taming the swarm" | 2015 | 5 | full | swarm-robotics | shadow/sol-w8 |
 | [nagpal-2019-mit](talks/nagpal-2019-mit.md) | MIT Robotics - Radhika Nagpal - Collective Intelligence, from Nature to Robots | 2019 | 5 | skim | swarm-robotics | shadow/sol-w8 |
-| [nagpal-2022-grasp](talks/nagpal-2022-grasp.md) | GRASP On Robotics:  Radhika Nagpal, Princeton University | 2022 | 5 | skim | swarm-robotics | shadow/sol-w8 |
+| [nagpal-2022-grasp](talks/nagpal-2022-grasp.md) | GRASP On Robotics:  Radhika Nagpal, Princeton University | 2022 | 5 | full | swarm-robotics | shadow/sol-w8 |
 | [nagpal-2023-taming](talks/nagpal-2023-taming.md) | Taming the Swarm: Towards Collective Artificial Intelligence | 2023 | 5 | skim | swarm-robotics | shadow/sol-w8 |
 | [nayak-2023-order](talks/nayak-2023-order.md) | Order Policy Enforcement: Limitations and Circumvention - Kartik Nayak \| MEV-SBC ’23 | 2023 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [obadia-2022-multichain](talks/obadia-2022-multichain.md) | The multichain world is centralized 🙁 - studying cross-domain MEV - Alex Obadia (Flashbots) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [raj-2022-case](talks/raj-2022-case.md) | A Case-Study of MEV on Low-Fee Chains - Supragya Raj (Marlin) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
+| [ross-2021-coupled](talks/ross-2021-coupled.md) | Coupled Oscillators on the Torus: Quasiperiodicity, Synchronization & Phase Locking \| Strogatz Ch. 8 | 2021 | 5 | full | sync-consensus | shadow/sol-w8 |
 | [rubenstein-2015-robots](talks/rubenstein-2015-robots.md) | Michael Rubenstein on Robots in Depth | 2015 | 5 | full | swarm-robotics | shadow/sol-w8 |
 | [salles-2022-mev](talks/salles-2022-mev.md) | MEV formalization - Alejo Salles (Flashbots) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [sutton-2025-father](talks/sutton-2025-father.md) | Richard Sutton – Father of RL thinks LLMs are a dead end | 2025 | 5 | full | fork-merge-security, llm-agent-swarms, meta | dmarz/fm-sutton |
@@ -2657,6 +2660,7 @@
 | [jordan-2019-interpreting](talks/jordan-2019-interpreting.md) | Alex Jordan - Interpreting Animal Behaviour \| Collective Behaviour Seminar Series | 2019 | 4 | full | collective-motion, criticality-measurement | shadow/sol-w3 |
 | [kumar-2015-future](talks/kumar-2015-future.md) | The future of flying robots \| Vijay Kumar \| TEDxPenn | 2015 | 4 | full | swarm-robotics | shadow/sol-w8 |
 | [leonard-2020-general](talks/leonard-2020-general.md) | A General Model of Opinion Dynamics on Networks: Consensus, Dissensus, and Cascades | 2020 | 4 | full | sync-consensus, collective-decision, marl-emergence | shadow/sol-w6 |
+| [moses-2024-physics](talks/moses-2024-physics.md) | Physics of Life, Ep 4: The physics of collectives | 2024 | 4 | full | collective-decision, swarm-intelligence, criticality-measurement | shadow/sol-aud |
 | [nagpal-2014-robots14](talks/nagpal-2014-robots14.md) | ROBOTS14 - Radhika Nagpal | 2014 | 4 | skim | swarm-robotics | shadow/sol-w8 |
 | [puzzo-2025-short](talks/puzzo-2025-short.md) | M. Leticia Puzzo: Short-time dynamics in active systems: the vicsek model | 2025 | 4 | full | collective-motion, active-matter, criticality-measurement | shadow/sol-w3 |
 | [reclaim-2024-frontiers](talks/reclaim-2024-frontiers.md) | Panel 2 : Frontiers of Sybil Resistance | 2024 | 4 | full | sybil-resistance | shadow/sol-w8 |
@@ -2664,6 +2668,7 @@
 | [reclaim-2024-why](talks/reclaim-2024-why.md) | Panel 1 : Why Sybil resistance even matters | 2024 | 4 | full | sybil-resistance | shadow/sol-w8 |
 | [sood-2017-single](talks/sood-2017-single.md) | Single particle and collective behavior of self-propelled active particles (Lecture 02) | 2017 | 4 | abstract | active-matter, collective-motion | shadow/sol-w3 |
 | [strogatz-2011-coupled](talks/strogatz-2011-coupled.md) | Coupled Oscillators That Synchronize Themselves (2011 Simons Lectures, lecture 1) | 2011 | 4 | full | sync-consensus, collective-motion, criticality-measurement | shadow/sol-w6 |
+| [strogatz-2013-science](talks/strogatz-2013-science.md) | Steven Strogatz The Science of Sync | 2013 | 4 | full | sync-consensus | shadow/sol-w8 |
 | [strogatz-2022-global](talks/strogatz-2022-global.md) | Global Synchronization: New Theorems, New Puzzles | 2022 | 4 | full | sync-consensus, criticality-measurement | shadow/sol-w6 |
 | [vicsek-2018-collective](talks/vicsek-2018-collective.md) | Collective Behaviour: Birds, Rats and Drones | 2018 | 4 | full | collective-motion, swarm-robotics, active-matter | shadow/sol-w3 |
 | [wicherski-2011-automated](talks/wicherski-2011-automated.md) | 23C3: Automated Botnet Detection and Mitigation | 2011 | 4 | abstract | swarm-detection | shadow/sol-w1 |
@@ -2689,6 +2694,7 @@
 | [seibold-2024-swarm](talks/seibold-2024-swarm.md) | Swarm-Performance of Heterogeneous Multi-Agent Systems Across Scales | 2024 | 3 | abstract | crowds-and-traffic, swarm-robotics, collective-decision | shadow/sol-w5 |
 | [sood-2018-exciting](talks/sood-2018-exciting.md) | Exciting Physics of Active Matter Inspired by Nature | 2018 | 3 | abstract | active-matter | shadow/sol-w3 |
 | [strogatz-2020-networks](talks/strogatz-2020-networks.md) | Networks of Oscillators That Synchronise Themselves | 2020 | 3 | full | sync-consensus | shadow/sol-w6 |
+| [strogatz-2022-story](talks/strogatz-2022-story.md) | The Story of Sync - Steven Strogatz 2022 Ulam Memorial Lecture 2/2 | 2022 | 3 | abstract | sync-consensus | shadow/sol-w8 |
 | [strogatz-2024-how](talks/strogatz-2024-how.md) | How Is Flocking Like Computing? | 2024 | 3 | full | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
 | [sun-2022-pbs](talks/sun-2022-pbs.md) | Xinyuan Sun: PBS and Layer 2s | 2022 | 3 | full | sybil-resistance | shadow/sol-w8 |
 | [sutton-2024-perspective](talks/sutton-2024-perspective.md) | A Perspective on Intelligence | 2024 | 3 | full | fork-merge-security, collective-decision, meta | dmarz/fm-sutton |
