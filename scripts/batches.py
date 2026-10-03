@@ -6,16 +6,17 @@ Needs the `gh` CLI, logged in with push or triage on the repo. See PIPELINE.md.
   python3 scripts/batches.py publish [--batch <id> ...]  one issue per batch that has none yet
   python3 scripts/batches.py list [--open|--free]        batches and their issues
   python3 scripts/batches.py claim <issue> --agent <id>  assign yourself, label claimed, comment
-  python3 scripts/batches.py touch <issue> --agent <id>  hb_signal comment (claims go stale after 60 min of silence)
+  python3 scripts/batches.py touch <issue> --agent <id>  hb_signal comment; run every 30 min (claims go stale after 90 min of silence)
   python3 scripts/batches.py done <issue> --agent <id> --entries <library paths...> [--skipped "<why>"]
   python3 scripts/batches.py release <issue> --agent <id> --note "<where you got to>"
-  python3 scripts/batches.py stale                       claimed issues with no activity for 60 min
+  python3 scripts/batches.py stale                       claimed issues with no activity for 90 min
 """
 from __future__ import annotations
 
 import argparse
 import datetime as dt
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -24,7 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CAND = ROOT / "candidates"
 MAP = CAND / "ISSUES.tsv"  # batch-id \t issue-number \t issue-url
 REPO = "dmarzzz/swarm-lab"
-STALE_MIN = 60
+STALE_MIN = 90  # touch every 30 min; three missed touches and the batch is up for grabs
 LIB_DIR = {"x": "library/threads/", "blog": "library/blogs/", "code": "library/code/", "paper": "library/papers/"}
 NEW_KIND = {"x": "thread", "blog": "blog", "code": "code", "paper": "paper"}
 
@@ -70,7 +71,7 @@ def now_utc() -> dt.datetime:
 # ------------------------------------------------------------------------------------------------ setup
 def cmd_setup(a):
     want = {"batch": ("0E8A16", "a claimable batch of source candidates (see PIPELINE.md)"),
-            "claimed": ("FBCA04", "an agent is working this batch; stale after 60 min without a comment"),
+            "claimed": ("FBCA04", "an agent is working this batch; stale after 90 min without a comment"),
             "needs-review": ("D93F0B", "entries written but something is off; a second agent should look"),
             "source:x": ("1D76DB", "X posts and threads -> library/threads"),
             "source:blog": ("1D76DB", "blogs and long-form web -> library/blogs"),
@@ -104,7 +105,7 @@ def issue_body(bid: str, src: str, topic: str, items: list[dict]) -> str:
              "4. Keep `python3 scripts/lab.py sync --agent <id> --every 180` running so entries land on `main` every 3 min.",
              f"5. `python3 scripts/batches.py done {{this-issue}} --agent <id> --entries {lib}<id>.md ...` closes this.",
              "",
-             "A claim with no comment or commit for 60 minutes is stale and anyone may `claim` it again.", "",
+             "Run `batches.py touch` every 30 minutes. A claim with no issue activity for 90 minutes is stale and anyone may `claim` it again.", "",
              "## Items", ""]
     for i, r in enumerate(items, 1):
         meta = []
@@ -189,6 +190,27 @@ def cmd_claim(a):
     note = "reclaimed (previous claim stale)" if "claimed" in names else "claimed"
     gh("issue", "edit", a.issue, "-R", REPO, "--add-label", "claimed", "--add-assignee", "@me")
     gh("issue", "comment", a.issue, "-R", REPO, "--body", f"{note} by `{a.agent}` at {now_utc():%Y-%m-%d %H:%M}Z")
+    # Issues have no compare-and-swap: two agents can pass the label check at the same moment. Settle it by
+    # replaying the comments in order: release/done frees the batch, the first claim on a free batch wins, a
+    # reclaim takes over a stale holder, and reclaims within 2 minutes of each other are a race the first wins.
+    import time
+    time.sleep(3)
+    cs = sorted(issue(a.issue).get("comments", []), key=lambda c: c["createdAt"])
+    winner, last_reclaim = None, None
+    for c in cs:
+        body, at = c["body"], dt.datetime.fromisoformat(c["createdAt"].replace("Z", "+00:00"))
+        if re.match(r"^(released by|done by)", body):
+            winner, last_reclaim = None, None
+        elif m := re.match(r"^reclaimed.*? by `([^`]+)`", body):
+            if last_reclaim is None or (at - last_reclaim).total_seconds() > 120:
+                winner = m.group(1)
+            last_reclaim = at
+        elif m := re.match(r"^claimed by `([^`]+)`", body):
+            if winner is None:
+                winner = m.group(1)
+    if winner and winner != a.agent:
+        gh("issue", "comment", a.issue, "-R", REPO, "--body", f"`{a.agent}` backing off: `{winner}` claimed first")
+        sys.exit(f"#{a.issue}: {winner} claimed it first; pick another batch")
     print(f"#{a.issue} {note} by {a.agent}: {i['url']}")
     return 0
 

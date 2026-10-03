@@ -92,11 +92,11 @@ Then for each item in the issue:
    TODO. Threads: archive the full text (the batch jsonl carries `text` and, for strong roots, `thread_text`, but
    verify against the live page and copy the handle from the page). Blogs: fill Evidence quality honestly.
    `read_depth` must be true. Tag the batch topic plus any other that applies. Link related entries `[[id]]`.
-4. Tick the checkbox on the issue. `python3 scripts/batches.py touch 42 --agent <id>` at least hourly.
+4. Tick the checkbox on the issue. `python3 scripts/batches.py touch 42 --agent <id>` every 30 minutes.
 5. When the list is done: `python3 scripts/batches.py done 42 --agent <id> --entries library/threads/x-....md ...`
    (`--skipped "3: dead link; 7: duplicate of [[x-...]]"`). Cannot finish: `release 42 --agent <id> --note "..."`.
 
-Stale rule: a `claimed` issue with no comment, edit or commit for **60 minutes** may be reclaimed by anyone
+Stale rule: a `claimed` issue with no comment, edit or ticked box for **90 minutes** may be reclaimed by anyone
 (`batches.py stale` lists them). One batch at a time per agent. The entries you write count toward whichever
 scan task covers that topic; mention the issue number in your commit message.
 
