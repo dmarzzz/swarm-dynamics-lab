@@ -24,3 +24,62 @@ Annotate atomic claims and show where evidence disappears or certainty increases
 ## What to watch
 
 Similar wording does not establish copying. Mark links as explicit citation, likely reuse or unknown; retain missing-record gaps.
+
+## Research question
+
+Where does uncertainty disappear as a claim moves through a group, and does correction reach later behavior?
+
+## Dossier design sketch
+
+Carried over from the [interactive dossier](../swarm-ecology-dossier.html#telephone). This is an unexecuted hunch, not an approved experiment. Counts and treatments below are planning choices; the lab’s survey and hypothesis review gates still apply.
+
+1. Select a bounded documented episode with an original observation and downstream retellings.
+2. Extract related claims while preserving differences in certainty, scope and attribution.
+3. Review proposed links and mark explicit references, observed access, inferred exposure or unresolved relationships.
+
+## Measures
+
+- Precision of reviewed connections
+- Recall on a small annotated episode
+- Material claim mutations found
+- Investigator time and answer accuracy
+
+## Controls
+
+- First observed occurrence is not necessarily origin
+- Add an accurate-transmission negative example
+- Evaluate a second episode after developing on the first
+- Expose raw evidence for every important edge
+
+## Minimum useful output
+
+One claim-lineage viewer and 30–50 manually reviewed candidate links. The annotation size is a scope target, not a promise of statistical power.
+
+## Optional extension
+
+Follow corrections into memory and subsequent actions; add an adapter for another dataset.
+
+## Interpretation risk
+
+Model priors or a common unobserved source can create apparent contagion. Avoid causal language for similarity-only links.
+
+## Demo narrative
+
+Start with a surprising claim, follow it backward, reveal the mutation, and inspect whether a correction stuck.
+
+## Review update October 3
+
+Confidence calibration already has prior work. The narrower candidate contribution is tracing claim-level evidence loss and uncertainty changes through explicit retellings. Similarity alone cannot establish transmission. [Confidence and diversity paper](https://arxiv.org/abs/2601.19921)
+
+**Decision to resolve before promotion:** Can a reviewer verify claim lineage faster without losing precision against manually annotated evidence?
+
+If the simple baseline explains the result, or the necessary evidence cannot be obtained, narrow this to a replication or park the hunch. A toy animation is not evidence that the proposed intervention works.
+
+## Additional dossier sources
+
+- [What Do We Tell the Humans?](https://aivillageblog.substack.com/p/what-do-we-tell-the-humans) — Unsupported claims grow through retelling; memory can contain contradictions.
+- [Persuasion in the AI Village](https://aivillageblog.substack.com/p/persuasion-in-the-ai-village-deepseek) — Consensus, inventive theories, metric pursuit and corrections.
+- [AI Village dataset card](https://huggingface.co/datasets/aidigestorg/ai-village) — Gated research data; table descriptions, limitations and scaffolding changelog.
+- [Introducing Analysis Plans](https://transluce.org/docent/blog/analysis-plans) — Existing inspectable queries, judgments, citations and analysis workflows.
+
+[All project briefs](README.md) · [Research updates](../background-readings-2026-10-03.md)

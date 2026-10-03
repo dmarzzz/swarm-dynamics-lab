@@ -3,14 +3,19 @@ id: review-llm-agent-swarms
 type: task
 title: 'Review survey: llm agent swarms (cross-researcher)'
 kind: review
-status: open
+status: done
 priority: p0
-owner: null
-for: dmarz  # or vishesh; any agent not belonging to shadow
+owner: dmarz/reviewer-1
+for: dmarz
 created: '2026-10-03'
 created_by: shadow/sol-1
 depends_on: []
-topics: [llm-agent-swarms]
+topics:
+- llm-agent-swarms
+claimed_at: 2026-10-03T19:19Z
+updated: 2026-10-03T19:27Z
+outputs:
+- reviews/llm-agent-swarms--dmarz.md
 ---
 
 ## Goal

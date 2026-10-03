@@ -4,12 +4,15 @@ title: "Debate or Vote: Which Yields Better Decisions in Multi-Agent Large Langu
 authors: Hyeong Kyu Choi, Xiaojin Zhu, Sharon Li
 org_or_venue: NeurIPS 2025 Spotlight (arXiv:2508.17536, cs.CL / cs.MA)
 date: 2025-08-24 (v1); v2 2025-10-23 (version read = v2)
-url_loaded: https://export.arxiv.org/api/query?search_query=ti:%22Debate+or+Vote%22&max_results=10
-  https://arxiv.org/abs/2508.17536
-  https://arxiv.org/html/2508.17536v2
-  https://arxiv.org/html/2508.17536
 status: found
 fetched: 2026-10-03
+urls_loaded:
+  - "https://export.arxiv.org/api/query?search_query=ti:%22Debate+or+Vote%22&max_results=10"
+  - "https://arxiv.org/abs/2508.17536"
+  - "https://arxiv.org/html/2508.17536v2"
+  - "https://arxiv.org/html/2508.17536"
+library_ids:
+  - choi-2025-debate
 ---
 
 ## What it is (2-4 sentences)
@@ -30,7 +33,7 @@ martingale (bias the update toward correction) and do help.
   from the test split), MMLU Professional Medicine (272), MMLU Formal Logic (126), HellaSwag (300
   sampled), CommonsenseQA (300 sampled), HH-RLHF (300 preference pairs sampled).
 - **Models:** Qwen2.5-7B-Instruct and Llama3.1-8B-Instruct as the two primary models;
-  Qwen2.5-32B-Instruct as an extension (Table 3). All open-weight, all small — see limitations.
+  Qwen2.5-32B-Instruct as an extension (Table 3). Appendix G additionally evaluates three GPT-4 agents across four benchmarks; the main tables emphasize open-weight models.
 - **Agents / rounds:** N = 5 agents in the main comparison, ablated N = 1..5 (Fig. 3). Debate rounds
   T = 2, 3, 5. Decoding: temperature 1.0, nucleus p = 0.9, max 512 tokens.
 - **Baselines and conditions:**
@@ -100,9 +103,7 @@ martingale (bias the update toward correction) and do help.
   unverified at the scales where they would bite.
 
 **Noticed:**
-- **Model scale is small.** Two 7-8B models plus one 32B. All the measured MAD damage may be partly
-  "small models are bad at revising under peer pressure". Frontier models could behave differently,
-  and the paper does not test any. This is the single biggest threat to transferring the conclusion.
+- **Model scale is small.** The main experiments use two 7–8B models plus one 32B. Appendix G also tests GPT-4 on four benchmarks with three agents. That extension broadens coverage, but does not establish performance for every larger model or deployment protocol.
 - **The martingale theorem is an assumption-shaped result.** It holds *under homogeneous agents and
   uniform belief updates*. Heterogeneous agents, asymmetric confidence, or an agent with privileged
   evidence all break the premise — and Table 4's persona result plus the follow-up literature
@@ -114,8 +115,7 @@ martingale (bias the update toward correction) and do help.
   live.
 - **"Centralized MAD" being worse than a single agent** is a striking number that deserves more
   scrutiny than the paper gives it; it suggests an aggregator-prompt artifact as much as a finding.
-- **Decimal discrepancy to flag:** two independent reads of Table 1/2 gave the Decentralized T=2
-  Qwen average as **0.7377** and **0.7332**. Re-check against the PDF before quoting to 4 digits.
+- **Source inconsistency verified October 3:** Table 1 gives Decentralized T=2 Qwen average **0.7377**, while Table 2 gives **0.7332**. Their Formal Logic cells differ (0.5556 versus 0.5238). Preserve the table attribution; the source does not resolve the discrepancy. This is not merely disagreement between extraction attempts.
 
 ## Relevance to the hackathon shortlist
 
@@ -143,8 +143,8 @@ martingale (bias the update toward correction) and do help.
   tells you the ceiling available to a perfect "who-is-actually-right" detector — i.e. how much a
   good quorum rule can win at most.
 - **Telephone (atomic claims through retellings; lost evidence, inflated certainty):** the
-  martingale is the precise statement of what Telephone should *violate*. A fair-game process has
-  flat expected belief; a telephone chain is predicted to show **drift plus variance growth** — so
+  martingale is a candidate comparison model, not a required property of retelling. A fair-game process has
+  flat expected belief; a hypothesis for a telephone chain is **drift plus variance growth** — so
   the measurement to make is not "did the answer change" but "did the belief trajectory stay a
   martingale". Their Fig. 4 flat-trajectory plot is the figure to reproduce and break. Second gift:
   their T=2/3/5 sweep showing monotone degradation with more rounds (Arithmetics 0.99 -> 0.67 at
@@ -168,9 +168,7 @@ martingale (bias the update toward correction) and do help.
   v2 and the no-version HTML render with a targeted prompt for a share-of-gain percentage; the claim
   is qualitative, supported by Table 1. Do not invent a percentage for it.
 - Table 1 is reported here as averages across the seven benchmarks as returned by the HTML reader;
-  the per-cell values I quote (Arithmetics, GSM8K, MMLU Formal Logic) came from a separate read of
-  the same table and are consistent with the averages, but the Decentralized-T=2 average has a
-  0.7377/0.7332 discrepancy between the two reads (noted above).
+  the Decentralized-T=2 average differs between Tables 1 and 2, as verified in the v2 HTML and documented above. Do not merge their baseline rows.
 - All extraction was via the page fetcher over arXiv HTML, not a direct PDF read.
 - **Related-but-distinct paper, identified during discovery:** `arXiv:2601.19921` (checked at the
   assignment's prompt) is **NOT** one of the four. It is *"Demystifying Multi-Agent Debate: The Role
@@ -185,3 +183,7 @@ martingale (bias the update toward correction) and do help.
   result, and it is highly relevant to Quorum (confidence calibration) and Collective Sensing
   (diversity of private views). It was fetched from `https://arxiv.org/abs/2601.19921` but has no
   note file of its own in this assignment.
+
+## Documentation correction October 3
+
+The GPT-4 appendix and table inconsistency were checked against [v2 full text](https://arxiv.org/html/2508.17536v2). This targeted correction is not a fresh full-paper review. Conclusions about debate remain conditional on the task, protocol, and theoretical assumptions. [[choi-2025-debate]]

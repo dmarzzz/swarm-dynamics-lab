@@ -1,0 +1,21 @@
+# topic-slug <TAB> X search query. Used by: python3 scripts/collect.py x-search --queries <this file> --archive
+# Gaps dmarz-side agents cannot reach (no X access): fork-merge, sybil, swarm detection, agent swarms in the wild.
+fork-merge-security	sutton agents "fork" OR "split" "merge" -is:retweet lang:en
+fork-merge-security	(subagent OR "sub-agent" OR subagents) ("prompt injection" OR hijack OR poison) memory -is:retweet lang:en
+fork-merge-security	"model merging" (poison OR backdoor OR attack) -is:retweet lang:en
+fork-merge-security	agent (spawns OR forks) copies "merge back" -is:retweet lang:en
+fork-merge-security	"byzantine" agents (merge OR aggregation OR threshold) llm -is:retweet lang:en
+sybil-resistance	flashbots sybil -is:retweet lang:en
+sybil-resistance	sybil (agents OR "ai agents" OR bots) ("proof of personhood" OR identity OR reputation) -is:retweet lang:en
+sybil-resistance	"agent identity" (sybil OR impersonat OR spoof) -is:retweet lang:en
+sybil-resistance	"false-name" OR "false name proof" mechanism -is:retweet lang:en
+swarm-detection	("agent swarm" OR "swarm of agents" OR "ai swarm") (detect OR detection OR detected) -is:retweet lang:en
+swarm-detection	(honeypot OR canary OR tarpit) ("ai agents" OR "llm agents" OR crawlers) -is:retweet lang:en
+swarm-detection	"hugging face" (swarm OR agents) (incident OR attack OR intrusion) -is:retweet lang:en
+swarm-detection	"browser agent" OR "computer use" (detect OR fingerprint OR "bot detection") -is:retweet lang:en
+swarm-detection	(collusion.wiki OR swarmtraces OR urlquery) agents -is:retweet lang:en
+llm-agent-swarms	"AI Village" agents -is:retweet lang:en
+llm-agent-swarms	"agent village" OR "ai village" (coordination OR collusion OR emergent) -is:retweet lang:en
+llm-agent-swarms	(moltbook OR "agent society" OR "agent societies") emergent -is:retweet lang:en
+llm-agent-swarms	("700 agents" OR "thousand agents" OR "1000 agents" OR "hundreds of agents") (openai OR codex OR "hugging face") -is:retweet lang:en
+llm-agent-swarms	"swarm dynamics" OR "swarmchasing" OR "swarm chasing" -is:retweet lang:en

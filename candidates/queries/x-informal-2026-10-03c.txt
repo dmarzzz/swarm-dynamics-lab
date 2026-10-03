@@ -1,0 +1,22 @@
+# Round 3 (sol-c1): thin topics, primary-source bias (min_faves filters out shill; url: pulls posts that link out).
+sybil-resistance	(sybil OR "sybil attack" OR "sybil resistance") ("ai agents" OR "agent swarm" OR "llm agents" OR bots) -is:retweet lang:en
+sybil-resistance	("proof of personhood" OR "proof-of-personhood" OR "personhood credential" OR "personhood credentials") (agents OR bots OR ai) -is:retweet lang:en
+sybil-resistance	(flashbots OR "order flow" OR searchers OR "mev bots") (sybil OR collusion OR "spam" OR "agentic") -is:retweet lang:en
+sybil-resistance	("agent identity" OR "agent passport" OR "know your agent" OR KYA OR "verifiable agent") (sybil OR spoof OR impersonat OR identity) -is:retweet lang:en
+sybil-resistance	("gitcoin passport" OR "human passport" OR "sybil defense" OR "sybil scoring") -is:retweet lang:en
+swarm-detection	("bot swarm" OR "swarm of bots" OR "bot swarms" OR "coordinated bots") (llm OR "ai agents" OR "ai-generated" OR openai) -is:retweet lang:en
+swarm-detection	("coordinated inauthentic behavior" OR "coordinated inauthentic behaviour" OR "influence operation") (llm OR "ai agents" OR "generative ai" OR chatgpt) -is:retweet lang:en
+swarm-detection	("ai agent traffic" OR "agentic traffic" OR "agentic browsing" OR "agent browsers") (detect OR fingerprint OR "bot management" OR block) -is:retweet lang:en
+swarm-detection	("web bot auth" OR "signed agents" OR "verified bots" OR "bot verification" OR "ai labyrinth" OR nepenthes OR iocaine) crawler -is:retweet lang:en
+swarm-detection	("same operator" OR "one operator" OR "single operator" OR "operator attribution") (agents OR bots OR accounts) (cluster OR detect OR fingerprint) -is:retweet lang:en
+swarm-detection	("ai-generated" OR "llm-generated" OR "ai text") (fraction OR share OR percent OR "% of") (posts OR tweets OR comments OR reviews OR web) (estimate OR study OR measured) -is:retweet lang:en
+fork-merge-security	(subagent OR "sub-agent" OR subagents OR "sub-agents") (poisoned OR compromised OR hijacked OR injected OR "prompt injection") -is:retweet lang:en
+fork-merge-security	("memory poisoning" OR "poisoned memory" OR "memory injection" OR "persistent injection") (agent OR agents OR claude OR gemini OR chatgpt) -is:retweet lang:en
+fork-merge-security	("agent worm" OR "ai worm" OR "self-replicating prompt" OR "prompt worm" OR "morris ii") -is:retweet lang:en
+fork-merge-security	("model merging" OR "merging models" OR "weight merging" OR "merged model") (backdoor OR poison OR unsafe OR safety OR attack) -is:retweet lang:en
+fork-merge-security	(sutton OR "continual learning") (copies OR fork OR spawn OR "spawn off") (merge OR reincorporat OR "report back" OR corruption) -is:retweet lang:en
+fork-merge-security	("byzantine" OR "robust aggregation" OR "krum" OR "trimmed mean") (agents OR "federated" OR llm) (poison OR malicious) -is:retweet lang:en
+llm-agent-swarms	("hugging face" OR huggingface) (incident OR intrusion OR breach OR compromise) (agents OR swarm OR openai) -is:retweet lang:en
+llm-agent-swarms	("ai village" OR "agent village" OR theaidigest) -is:retweet lang:en
+llm-agent-swarms	("swarm scaling" OR "agent swarms" OR "swarm of agents" OR "thousands of agents" OR "1000 agents") (emergent OR coordination OR collusion OR failure OR cost) -is:retweet lang:en
+llm-agent-swarms	(moltbook OR "agent society" OR "agent societies" OR "agent civilization" OR "agent economy") (emergent OR norms OR collusion OR coordination) -is:retweet lang:en

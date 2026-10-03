@@ -1,0 +1,19 @@
+# topic<TAB>feed url<TAB>keywords (comma list, optional; item kept if title or lede mentions one)
+# Used by: python3 scripts/collect.py rss --feeds <this file> --by <agent>
+sybil-resistance	https://writings.flashbots.net/rss.xml	sybil,searcher,identity,collusion,reputation,order flow,spam,bot,agent,searchers,exclusive,centralis,centraliz,sgx,tee
+sybil-resistance	https://collective.flashbots.net/latest.rss	sybil,identity,collusion,agent,reputation,spam
+sybil-resistance	https://vitalik.eth.limo/feed.xml	sybil,proof of personhood,plurality,quadratic,collusion,bot,swarm
+sybil-resistance	https://ethresear.ch/latest.rss	sybil,identity,collusion,agent
+swarm-detection	https://blog.cloudflare.com/rss/	bot,crawler,agent,scraper,labyrinth,signature,verified,abuse
+fork-merge-security	https://embracethered.com/blog/index.xml	agent,injection,memory,hijack,multi-agent,sub-agent,worm,command and control,hugging face
+swarm-detection	https://unit42.paloaltonetworks.com/feed/	agent,llm,ai-assisted,ai-enabled,bot,swarm
+swarm-detection	https://simonwillison.net/atom/everything/	agent,injection,swarm,multi-agent,bot,hugging face,sub-agent
+llm-agent-swarms	https://metr.org/feed.xml	agent,swarm,incident,autonom,hugging face,propensit
+llm-agent-swarms	https://www.lesswrong.com/feed.xml?view=rss&karmaThreshold=30	agent,swarm,multi-agent,subagent,injection,hugging face
+fork-merge-security	https://www.alignmentforum.org/feed.xml?view=rss&karmaThreshold=20	agent,swarm,multi-agent,subagent,injection,control,merge,monitor
+llm-agent-swarms	https://news.mit.edu/rss/topic/artificial-intelligence2	agentic,swarm,multi-agent,collective,flock,robot
+llm-agent-swarms	https://openai.com/news/rss.xml	agents api,swarm,multi-agent,hugging face,incident,safety case
+collective-motion	https://www.quantamagazine.org/physics/feed/	flock,swarm,collective,active matter,synchron,crowd,ant,bird,fish,bacteria,turbulence
+collective-decision	https://www.quantamagazine.org/biology/feed/	flock,swarm,collective,ant,bee,colony,crowd,bird,fish,bacteria,school
+collective-motion	https://www.quantamagazine.org/feed/	flock,swarm,collective,ant,bee,colony,active matter,synchron,crowd
+collective-decision	https://santafe.edu/news-center/feed	collective,swarm,ant,emergen,agent

@@ -1,0 +1,26 @@
+# Blog seeds: Vishesh's remaining items from tasks/scan-blogs.md coverage note + task seeds + the informal-writing
+# targets of scan-threads-fm. One url per line, then a note. Open each one and verify before cataloguing.
+# Used by: python3 scripts/collect.py seed --urls <this file> --topic <slug> --by <agent>
+# topic: llm-agent-swarms
+# (scan-blogs leftovers)
+https://cognition.ai/blog/dont-build-multi-agents Cognition, Don't build multi-agents (2025); the opposing side to Anthropic's multi-agent research system post
+https://swarmcha.se/ swarmcha.se posts (hackathon host writing on the HF incident and swarm dynamics)
+https://swarmtraces.org/ SwarmTraces: reconstructed payloads from the HF intrusion; the write-up on the landing page
+https://transluce.org/agent-activity Transluce, early rogue agent activity on urlquery.net (Sep 2026)
+https://theaidigest.org/village AI Village (AI Digest) landing + blog; the running write-ups of the village agents
+https://cosmos-institute.org/ Cosmos Institute village post (find the exact post url on the site)
+https://www.groveresearch.com/ Grove Research posts on swarm incidents
+https://www.lesswrong.com/posts/ywiq3A9m9pfhL9iLL/ai-village-agents-raise-money-for-charity LessWrong write-up of the AI Village charity run (verify url on load)
+https://news.ycombinator.com/item?id=44183134 HN discussion of Cognition's don't-build-multi-agents (verify id)
+# topic: collective-motion
+# (scan-blogs needs 6 topics; this group spans collective-motion, swarm-robotics, active-matter, sync-consensus, crowds; retag per entry)
+https://www.red3d.com/cwr/boids/ Craig Reynolds, Boids page (1995 onward)
+https://www.quantamagazine.org/the-simple-algorithm-that-ants-use-to-build-bridges-20180226/ Quanta, ant bridges algorithm
+https://www.quantamagazine.org/swarming-bacteria-create-an-impossible-superfluid-20180605/ Quanta, active matter superfluid
+https://www.quantamagazine.org/physicists-discover-swarmalators-20180321/ Quanta, swarmalators (verify slug)
+https://www.quantamagazine.org/the-physics-of-flocking-20230724/ Quanta, physics of flocking (verify slug)
+https://www.quantamagazine.org/how-animals-make-collective-decisions-20240208/ Quanta, collective decision (verify slug)
+https://www.ssr.seas.harvard.edu/kilobots Harvard SSR lab, Kilobots explainer
+https://collectivebehaviour.com/ Couzin lab (MPI Animal Behavior) site, explainers and videos
+https://www.wired.com/story/the-physics-of-crowds/ Wired, the physics of crowds (verify)
+https://www.pedestrian-dynamics.com/ Pedestrian dynamics resource (Helbing circle), verify what is there

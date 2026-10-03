@@ -4,13 +4,16 @@ title: Why Do Multi-Agent LLM Systems Fail?
 authors: Mert Cemri, Melissa Z. Pan, Shuyi Yang, Lakshya A. Agrawal, Bhavya Chopra, Rishabh Tiwari, Kurt Keutzer, Aditya Parameswaran, Dan Klein, Kannan Ramchandran, Matei Zaharia, Joseph E. Gonzalez, Ion Stoica
 org_or_venue: NeurIPS 2025 Datasets and Benchmarks Track (published); arXiv:2503.13657 (cs.AI); UC Berkeley et al.
 date: 2025-03-17 (v1); v2 2025-04-22; v3 2025-10-26 (version read = v3)
-url_loaded: https://arxiv.org/abs/2503.13657
-  https://arxiv.org/abs/2503.13657v1
-  https://arxiv.org/html/2503.13657v3
-  https://export.arxiv.org/api/query?search_query=ti:%22Why+Do+Multi-Agent+LLM+Systems+Fail%22&max_results=10
-  https://proceedings.neurips.cc/paper_files/paper/2025/hash/b1041e52d3be19f0a9bc491657488e4a-Abstract-Datasets_and_Benchmarks_Track.html
 status: found
 fetched: 2026-10-03
+urls_loaded:
+  - "https://arxiv.org/abs/2503.13657"
+  - "https://arxiv.org/abs/2503.13657v1"
+  - "https://arxiv.org/html/2503.13657v3"
+  - "https://export.arxiv.org/api/query?search_query=ti:%22Why+Do+Multi-Agent+LLM+Systems+Fail%22&max_results=10"
+  - "https://proceedings.neurips.cc/paper_files/paper/2025/hash/b1041e52d3be19f0a9bc491657488e4a-Abstract-Datasets_and_Benchmarks_Track.html"
+library_ids:
+  - cemri-2025-why
 ---
 
 ## What it is (2-4 sentences)
