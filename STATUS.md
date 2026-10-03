@@ -102,11 +102,12 @@
 
 ## Candidate batches
 
-14 free, 5 claimed, 27 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+13 free, 6 claimed, 27 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
 | [#20](https://github.com/dmarzzz/swarm-lab/issues/20) | claimed | 2026-10-03T19:44Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-03) |
+| [#26](https://github.com/dmarzzz/swarm-lab/issues/26) | claimed | 2026-10-03T19:45Z | [batch] web/collective-motion: 3 candidates (web-collective-motion-20261003-03) |
 | [#29](https://github.com/dmarzzz/swarm-lab/issues/29) | claimed | 2026-10-03T19:42Z | [batch] web/crowds-and-traffic: 10 candidates (web-crowds-and-traffic-20261003-02) |
 | [#31](https://github.com/dmarzzz/swarm-lab/issues/31) | claimed | 2026-10-03T19:41Z | [batch] web/llm-agent-swarms: 10 candidates (web-llm-agent-swarms-20261003-01) |
 | [#38](https://github.com/dmarzzz/swarm-lab/issues/38) | claimed | 2026-10-03T19:43Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-02) |
@@ -116,7 +117,6 @@
 | [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |
 | [#24](https://github.com/dmarzzz/swarm-lab/issues/24) | free | 2026-10-03T19:33Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-01) |
 | [#25](https://github.com/dmarzzz/swarm-lab/issues/25) | free | 2026-10-03T19:21Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-02) |
-| [#26](https://github.com/dmarzzz/swarm-lab/issues/26) | free | 2026-10-03T19:21Z | [batch] web/collective-motion: 3 candidates (web-collective-motion-20261003-03) |
 | [#27](https://github.com/dmarzzz/swarm-lab/issues/27) | free | 2026-10-03T19:21Z | [batch] web/criticality-measurement: 10 candidates (web-criticality-measurement-20261003-01) |
 | [#30](https://github.com/dmarzzz/swarm-lab/issues/30) | free | 2026-10-03T19:21Z | [batch] web/crowds-and-traffic: 3 candidates (web-crowds-and-traffic-20261003-03) |
 | [#32](https://github.com/dmarzzz/swarm-lab/issues/32) | free | 2026-10-03T19:22Z | [batch] web/marl-emergence: 10 candidates (web-marl-emergence-20261003-01) |
