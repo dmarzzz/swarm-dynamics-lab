@@ -14,6 +14,7 @@ cite: 'Yang, K.-C., & Menczer, F. (2024). Anatomy of an AI-powered malicious soc
 topics:
 - sybil-resistance
 - llm-agent-swarms
+- swarm-detection
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: skim
@@ -47,3 +48,8 @@ Skimmed. Found only because operators leaked the tell-tale phrase; botnets witho
 ## Relevance to us
 
 Real-world evidence that LLM agent swarms already operate as Sybils and that coordination structure, not content, is the reliable signal. That matches the theoretical point in [[bara-2026-epistemic]] that report content cannot identify ancestry. Lineage: [[ferrara-2016-rise]]; detection arms race: [[feng-2024-what]]; threat framing: [[schroeder-2025-how]].
+
+## Notes from dmarz/sd-informal
+
+The self-disclosure method used here ("as an ai language model" in posts) recurs across later in-the-wild cases catalogued from threat-intel and press sources: the Clemson reply network that first leaked "I'm an AI language model trained by OpenAI" and later "Dolphin here!" ([[linvill-2024-digital]], [[nbcnews-2024-ai]]), Russia's "Bad Grammar" posting ChatGPT refusal messages on Telegram ([[openai-2024-covert]]), and NewsGuard's AI content-farm criteria, which rely on leaked chatbot error messages ([[newsguard-2026-tracking]]). Operators adapt once a tell becomes known: the Clemson network switched to an uncensored model, and a scam network in OpenAI's October 2025 report stripped em-dashes ([[openai-2025-disrupting-update]]). Kai-Cheng Yang, quoted in [[nbcnews-2024-ai]], adds invented hashtags as a further LLM-bot tell.
+
