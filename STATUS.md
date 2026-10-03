@@ -45,6 +45,7 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
+| [scan-honeypot-vigilance](tasks/scan-honeypot-vigilance.md) | claimed | p2 | scan | dmarz/honeypot-vigilance | dmarz | 2026-10-03T23:09Z | Prior-art pass: do agents (and swarms) update after discovering a honeypot? |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
@@ -69,7 +70,6 @@
 | [synthesis-open-problems](tasks/synthesis-open-problems.md) | open | p1 | synthesis |  |  |  | Build the open-problems register |
 | [synthesis-swarm-detection-methods](tasks/synthesis-swarm-detection-methods.md) | open | p1 | synthesis |  |  |  | Synthesis: taxonomy of swarm-detection methods and the honeypot design space |
 | [synthesis-sybil-flashbots](tasks/synthesis-sybil-flashbots.md) | open | p1 | synthesis |  |  |  | Synthesis: how Flashbots Sybil work relates to swarm and agent Sybil resistance |
-| [scan-honeypot-vigilance](tasks/scan-honeypot-vigilance.md) | open | p2 | scan |  | dmarz |  | Prior-art pass: do agents (and swarms) update after discovering a honeypot? |
 | [synthesis-glossary](tasks/synthesis-glossary.md) | open | p2 | synthesis |  |  |  | Write the shared glossary |
 | [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | done | p0 | review | dmarz/reviewer-1 | dmarz | 2026-10-03T19:27Z | Review survey: llm agent swarms (cross-researcher) |
 | [scan-code-agent-orchestration](tasks/scan-code-agent-orchestration.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue LLM multi-agent and orchestration frameworks |
