@@ -2,7 +2,7 @@
 
 # Library index
 
-1526 entries.
+1532 entries.
 
 ## Papers (1206)
 
@@ -1311,7 +1311,7 @@
 | [quanta-2018-simple](blogs/quanta-2018-simple.md) | The Simple Algorithm That Ants Use to Build Bridges | 2018 | 2 | full | collective-decision, swarm-robotics, swarm-intelligence | shadow/sol-w3 |
 | [quanta-2018-swarming](blogs/quanta-2018-swarming.md) | Swarming Bacteria Create an 'Impossible' Superfluid | 2018 | 2 | full | active-matter, collective-motion | shadow/sol-w3 |
 
-## Threads (111)
+## Threads (116)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1359,6 +1359,7 @@
 | [x-andrewcurran-1916899271099723996](threads/x-andrewcurran-1916899271099723996.md) | AndrewCurran_: r/changemyview users were persuaded by undisclosed research bots in a secret experiment, and the bots were never detected | 2025 | 3 | full | swarm-detection | dmarz/x-threads |
 | [x-andrewcurran-2106220085048410222](threads/x-andrewcurran-2106220085048410222.md) | Curran: OpenAI misalignment report 'preparing for a restart after reading Slack', the HPIM model seven weeks before the HF incident | 2026 | 3 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-anthropicai-2098097512544444447](threads/x-anthropicai-2098097512544444447.md) | AnthropicAI: announces its most detailed threat intelligence report, covering disrupted misuse of Claude for cyberattacks, influence operations, surveillance, biology and weapons | 2026 | 3 | full | swarm-detection | dmarz/x-threads |
+| [x-appledog-xyz-2106385525628395984](threads/x-appledog-xyz-2106385525628395984.md) | appledog_xyz: one operator running 30 to 60 near-identical Polymarket maker-rebate wallets with the same split-quote-merge script | 2026 | 3 | full | swarm-detection, sybil-resistance | shadow/sol-w4 |
 | [x-chiefofautism-2024483631067021348](threads/x-chiefofautism-2024483631067021348.md) | chiefofautism: 1,184 malicious skills on OpenClaw's ClawHub, the #1 skill was malware that stole keys and opened reverse shells | 2026 | 3 | full | swarm-detection, sybil-resistance, fork-merge-security | dmarz/x-threads |
 | [x-crsegerie-2105534432455340486](threads/x-crsegerie-2105534432455340486.md) | Segerie: summary of the Gleave vs Habryka debate on whether current safety techniques suffice after the Hugging Face incident | 2026 | 3 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-ddkang-1767225494422876668](threads/x-ddkang-1767225494422876668.md) | ddkang: InjecAgent benchmarks LLM agents against indirect prompt injection with 1,054 cases | 2024 | 3 | skim | fork-merge-security | dmarz/x-threads |
@@ -1414,6 +1415,7 @@
 | [x-lesliemen-2106171422309839001](threads/x-lesliemen-2106171422309839001.md) | Hai Ly: OpenAI notified 100+ organisations of misaligned agent activity; review covered ~50PB on 7,000 GB200/GB300 GPUs | 2026 | 2 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-mrjianglife-2104187840120881449](threads/x-mrjianglife-2104187840120881449.md) | MrJiangLife: agent memory has a trust problem; a memory write is a trust transition | 2026 | 2 | full | fork-merge-security | shadow/sol-w4 |
 | [x-nuryvittachi-2096039393043873817](threads/x-nuryvittachi-2096039393043873817.md) | Vittachi: early press-style account of the DseWiki takeover (15,000 writes, Nightingale report via Reuters, ZZZ backup pages) | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-1 |
+| [x-policytensor-2096383641064808902](threads/x-policytensor-2096383641064808902.md) | Policy Tensor: 'The Discovery of Agent Society', argument that agent-society capabilities are emergent and cannot be read off single-agent evals | 2026 | 2 | skim | llm-agent-swarms | shadow/sol-w4 |
 | [x-rogesterone-2097286391793086559](threads/x-rogesterone-2097286391793086559.md) | rogesterone: an agent made a '--help' page, others replied with empty-line edits, ResearchAgentJun23 is confused | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-sarangmahatwo-2104918283086344578](threads/x-sarangmahatwo-2104918283086344578.md) | Sarang Mahatwo: session history vs long-term memory on Gemini Enterprise Memory Bank; consolidation scope and memory poisoning as governance | 2026 | 2 | full | fork-merge-security, llm-agent-swarms | shadow/sol-w4 |
 | [x-semianalysis-2105394776920985675](threads/x-semianalysis-2105394776920985675.md) | SemiAnalysis: GLM-5.3 traces on ExploitGym, model spent budget testing hidden runtime conditions | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
@@ -1423,11 +1425,14 @@
 | [x-zing-xoro-2101891877498953883](threads/x-zing-xoro-2101891877498953883.md) | Zing_Xoro: agent identity as hardware-bound enrollment (TPM / secure enclave) to raise Sybil cost | 2026 | 2 | full | sybil-resistance, llm-agent-swarms | shadow/sol-w1 |
 | [x-2xnmore-2104843632104587383](threads/x-2xnmore-2104843632104587383.md) | 2xnmore: Exploit Summit framing, const (Bittensor) on 'pointing the swarm' rather than fearing it | 2026 | 1 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-aidigest-2104617156482859510](threads/x-aidigest-2104617156482859510.md) | AI Digest: DeepSeek-V4-Pro reports human input in the village in its own newspaper | 2026 | 1 | full | llm-agent-swarms | shadow/sol-1 |
+| [x-finlayekins-2097110235567865873](threads/x-finlayekins-2097110235567865873.md) | Finlay: seven AI-engineering principles attributed to Geoff Huntley, including sub-agents as garbage collection and handoff files over compaction | 2026 | 1 | full | llm-agent-swarms, fork-merge-security | shadow/sol-w4 |
 | [x-flexialpha6-2105900417078919489](threads/x-flexialpha6-2105900417078919489.md) | Flexialpha6: promotional post for InSoBlokAI TasteScore, a reputation and Sybil-detection layer pitched at AI agents | 2026 | 1 | full | sybil-resistance, swarm-detection | shadow/sol-w1 |
 | [x-heisblesse-2106002189600620864](threads/x-heisblesse-2106002189600620864.md) | heisblesse: 'Can AI agents build reputation?' ERC-8004 identity vs reputation registries, with Sybil distortion acknowledged (B.AI campaign post) | 2026 | 1 | full | sybil-resistance | shadow/sol-w1 |
 | [x-policytensor-2098634931198996974](threads/x-policytensor-2098634931198996974.md) | Policy Tensor: agents have the capacity for cumulative culture, will learn 'weapons of the weak' to mask activity; doubts next-gen rogue swarms will be detectable | 2026 | 1 | full | llm-agent-swarms, swarm-detection | shadow/sol-w5 |
+| [x-raskarmit-2104019174850806252](threads/x-raskarmit-2104019174850806252.md) | Ramesh Raskar: NANDA Town as a sandbox for agent societies, protocols and emergent behaviour (podcast pointer) | 2026 | 1 | full | llm-agent-swarms | shadow/sol-w4 |
+| [x-recursiveintell-2103666075531374877](threads/x-recursiveintell-2103666075531374877.md) | RecursiveIntell: Ares context governor, claim of 101 compactions with 98.8% identical context plus receipts and multi-level trust for memory | 2026 | 1 | full | llm-agent-swarms, fork-merge-security | shadow/sol-w4 |
 
-## Code (110)
+## Code (111)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1507,6 +1512,7 @@
 | [gh-pmocz-activematter-python](code/gh-pmocz-activematter-python.md) | activematter-python: Philip Mocz's single-file Vicsek model (N=500, L=10, eta=0.5) from the 'Create Your Own Active Matter Simulation' tutorial | 2021 | 3 | ran | collective-motion, active-matter | shadow/sol-1 |
 | [gh-pold87-ab-interface-argos-module](code/gh-pold87-ab-interface-argos-module.md) | AB-interface-ARGoS-module: ARGoS side of the ARGoS-Blockchain interface comparing consensus protocols under Byzantine robots (Strobel et al., Frontiers 2020) | 2018 | 3 | skim | sybil-resistance, swarm-robotics, collective-decision | dmarz/sybil-code-data |
 | [gh-pold87-ab-interface-blockchain-module](code/gh-pold87-ab-interface-blockchain-module.md) | ARGoS-Blockchain interface, blockchain module: private Ethereum network of Docker geth nodes for robot swarm simulations | 2020 | 3 | skim | sybil-resistance, swarm-robotics | dmarz/sybil-robotics |
+| [gh-projnanda-nandatown](code/gh-projnanda-nandatown.md) | nandatown: local test track and sandbox for multi-agent protocols (twelve replaceable protocol layers, seeded simulation, fault injection, evidence bundles) | 2026 | 3 | skim | llm-agent-swarms, sybil-resistance, meta | shadow/sol-w4 |
 | [gh-sleeeepeer-poisonedrag](code/gh-sleeeepeer-poisonedrag.md) | PoisonedRAG: official code for knowledge corruption attacks on RAG | 2024 | 3 | skim | fork-merge-security | dmarz/fm-memory-injection |
 | [gh-spaddle-boat-maxshapley](code/gh-spaddle-boat-maxshapley.md) | MaxShapley: Shapley attribution of retrieved sources in generative search | 2025 | 3 | skim | sybil-resistance, llm-agent-swarms | dmarz/sybil-mechanisms |
 | [gh-tangciuyueng-amemguard](code/gh-tangciuyueng-amemguard.md) | A-MemGuard: official code for consensus-validated, lesson-augmented agent memory defence | 2025 | 3 | skim | fork-merge-security | dmarz/fm-memory-injection |
