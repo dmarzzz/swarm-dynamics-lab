@@ -2,7 +2,7 @@
 
 # Library index
 
-2657 entries.
+2661 entries.
 
 ## Papers (1691)
 
@@ -2559,7 +2559,7 @@
 | [gh-px4-px4-autopilot](code/gh-px4-px4-autopilot.md) | PX4 Autopilot: open-source flight control stack with multi-vehicle SITL simulation used for drone-swarm tooling | 2012 | 1 | abstract | swarm-robotics | shadow/sol-1 |
 | [gh-ruvnet-ruflo](code/gh-ruvnet-ruflo.md) | Ruflo (formerly claude-flow): meta-harness for Claude Code and Codex with '100+ agents' and 'coordinated swarms' | 2025 | 1 | abstract | llm-agent-swarms | shadow/sol-1 |
 
-## Datasets (25)
+## Datasets (29)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -2584,10 +2584,14 @@
 | [data-joinmassive-moltbook-2026](datasets/data-joinmassive-moltbook-2026.md) | joinmassive/moltbook Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-lnajt-moltbook-2026](datasets/data-lnajt-moltbook-2026.md) | lnajt/moltbook Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-lysandrehooh-moltbook-2026](datasets/data-lysandrehooh-moltbook-2026.md) | lysandrehooh/moltbook Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
+| [data-lysandrehooh-moltbook-submolts-2026](datasets/data-lysandrehooh-moltbook-submolts-2026.md) | lysandrehooh/moltbook_submolt Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-moltbook-takschdube-2026](datasets/data-moltbook-takschdube-2026.md) | Moltbook longitudinal dataset (Taksch Dube): timestamped crawls with derived social and reply graphs | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
+| [data-opusmagnumown-moltbook-2026](datasets/data-opusmagnumown-moltbook-2026.md) | opusmagnumown/moltbook-dataset Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-padas-lab-moltbook-2026](datasets/data-padas-lab-moltbook-2026.md) | PaDaS-Lab/moltbook-corpus Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
+| [data-ronantakizawa-moltbook-2026](datasets/data-ronantakizawa-moltbook-2026.md) | ronantakizawa/moltbook Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-trustairlab-moltbook-2026](datasets/data-trustairlab-moltbook-2026.md) | TrustAIRLab/Moltbook Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
+| [data-zzzztom-moltbook-2026](datasets/data-zzzztom-moltbook-2026.md) | zzzztom/moltbook-forum-data Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 
 ## Talks (97)
 
