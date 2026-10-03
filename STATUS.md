@@ -26,30 +26,23 @@
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
-| [scan-papers-swarm-robotics](tasks/scan-papers-swarm-robotics.md) | claimed | p0 | scan | dmarz/swarm-robotics |  | 2026-10-03T17:01Z | Catalogue the papers: swarm robotics |
-| [scan-papers-swarm-robotics-recent](tasks/scan-papers-swarm-robotics-recent.md) | claimed | p0 | scan | dmarz/swarm-robotics-recent |  | 2026-10-03T17:01Z | Catalogue swarm robotics papers from 2024 onward |
-| [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
-| [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
-| [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
+| [scan-papers-sd-honeypots](tasks/scan-papers-sd-honeypots.md) | claimed | p0 | scan | dmarz/sd-honeypots |  | 2026-10-03T18:20Z | Catalogue the papers: honeypots, canaries, tarpits and traps for autonomous agents |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
 | [scan-papers-sd-ai-content](tasks/scan-papers-sd-ai-content.md) | claimed | p1 | scan | dmarz/sd-ai-content |  | 2026-10-03T18:19Z | Catalogue the papers: population-level detection of AI-generated content |
-| [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
-| [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
+| [scan-papers-sd-onchain](tasks/scan-papers-sd-onchain.md) | claimed | p1 | scan | dmarz/sd-onchain |  | 2026-10-03T18:20Z | Catalogue the papers: agent and bot swarms on blockchains |
 | [scan-papers-sync-consensus](tasks/scan-papers-sync-consensus.md) | claimed | p1 | scan | dmarz/sync-consensus |  | 2026-10-03T17:01Z | Catalogue the papers: synchronisation, consensus and networked control |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Review survey: llm agent swarms (cross-researcher) |
 | [scan-papers-sd-bots](tasks/scan-papers-sd-bots.md) | open | p0 | scan |  |  |  | Catalogue the papers: social bots, LLM-powered botnets and coordinated inauthentic behaviour detection |
 | [scan-papers-sd-coordination](tasks/scan-papers-sd-coordination.md) | open | p0 | scan |  |  |  | Catalogue the papers: statistical detection of coordination and collective behaviour from traces |
-| [scan-papers-sd-honeypots](tasks/scan-papers-sd-honeypots.md) | open | p0 | scan |  |  |  | Catalogue the papers: honeypots, canaries, tarpits and traps for autonomous agents |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  |  | Catalogue the blogs and long-form web writing |
 | [scan-code-sd-code-data](tasks/scan-code-sd-code-data.md) | open | p1 | scan |  |  |  | Catalogue the code: code, datasets and benchmarks for detecting agent swarms |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
 | [scan-metrics-benchmarks](tasks/scan-metrics-benchmarks.md) | open | p1 | scan |  |  |  | Catalogue metrics and benchmarks for swarm behaviour |
-| [scan-papers-sd-onchain](tasks/scan-papers-sd-onchain.md) | open | p1 | scan |  |  |  | Catalogue the papers: agent and bot swarms on blockchains |
 | [scan-threads-science](tasks/scan-threads-science.md) | open | p1 | scan |  |  |  | Catalogue X threads on the science of collectives |
 | [scan-threads-sd-informal](tasks/scan-threads-sd-informal.md) | open | p1 | scan |  |  |  | Catalogue the threads: threat-intel reports, blogs, threads and talks on agent swarms in the wild |
 | [survey-active-matter](tasks/survey-active-matter.md) | open | p1 | survey |  |  |  | Survey: active matter physics |
@@ -87,6 +80,11 @@
 | [scan-papers-llm-agent-swarms-recent](tasks/scan-papers-llm-agent-swarms-recent.md) | done | p0 | scan | dmarz/llm-agent-swarms-recent |  | 2026-10-03T18:19Z | Catalogue LLM agent swarms papers from 2024 onward |
 | [scan-papers-marl-emergence](tasks/scan-papers-marl-emergence.md) | done | p0 | scan | dmarz/marl-emergence |  | 2026-10-03T18:19Z | Catalogue the papers: multi-agent rl and emergent coordination |
 | [scan-papers-sd-web-agents](tasks/scan-papers-sd-web-agents.md) | done | p0 | scan | dmarz/sd-web-agents |  | 2026-10-03T18:19Z | Catalogue the papers: detecting browser agents, computer-use agents and AI crawlers on the web |
+| [scan-papers-swarm-robotics](tasks/scan-papers-swarm-robotics.md) | done | p0 | scan | dmarz/swarm-robotics |  | 2026-10-03T18:20Z | Catalogue the papers: swarm robotics |
+| [scan-papers-swarm-robotics-recent](tasks/scan-papers-swarm-robotics-recent.md) | done | p0 | scan | dmarz/swarm-robotics-recent |  | 2026-10-03T18:20Z | Catalogue swarm robotics papers from 2024 onward |
+| [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | done | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:20Z | Catalogue the papers: Sybil attacks and defences (foundations) |
+| [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | done | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:20Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
+| [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | done | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:20Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [scan-threads-agents](tasks/scan-threads-agents.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue X threads on agent swarms and multi-agent AI |
 | [scan-papers-active-matter](tasks/scan-papers-active-matter.md) | done | p1 | scan | dmarz/active-matter |  | 2026-10-03T18:18Z | Catalogue the papers: active matter physics |
 | [scan-papers-criticality-measurement](tasks/scan-papers-criticality-measurement.md) | done | p1 | scan | dmarz/criticality-measurement |  | 2026-10-03T18:18Z | Catalogue the papers: criticality, information and measurement |
@@ -96,6 +94,8 @@
 | [scan-papers-fm-mobile-agents](tasks/scan-papers-fm-mobile-agents.md) | done | p1 | scan | dmarz/fm-mobile-agents |  | 2026-10-03T18:19Z | Catalogue the papers: mobile-agent security and Byzantine state merge |
 | [scan-papers-sd-attribution](tasks/scan-papers-sd-attribution.md) | done | p1 | scan | dmarz/sd-attribution |  | 2026-10-03T18:19Z | Catalogue the papers: identifying the model or agent behind observed behaviour |
 | [scan-papers-swarm-intelligence](tasks/scan-papers-swarm-intelligence.md) | done | p1 | scan | dmarz/swarm-intelligence |  | 2026-10-03T18:19Z | Catalogue the papers: swarm intelligence algorithms |
+| [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | done | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:20Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
+| [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | done | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:20Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
 
 ## Agents
