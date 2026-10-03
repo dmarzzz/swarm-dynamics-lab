@@ -3,7 +3,7 @@ id: map-hackathon-scenarios
 type: task
 title: Map every research candidate to ranked hackathon task scenarios
 kind: synthesis
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,12 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-03T23:10Z
-updated: 2026-10-03T23:10Z
+updated: 2026-10-03T23:21Z
+outputs:
+- researchers/vishesh/notes/hackathon-scenarios/README.md
+- researchers/vishesh/notes/hackathon-scenarios/ranked-map.md
+- researchers/vishesh/notes/hackathon-scenarios/scenario-map.json
+- researchers/vishesh/notes/hackathon-scenarios/review.html
 ---
 
 ## Goal
@@ -21,7 +26,7 @@ At the human's request, identify the best one to three concrete tasks or scenari
 
 ## Done when
 
-- [ ] Freeze the current candidate, extension and formal-hypothesis inventory.
-- [ ] Give every assessed item one to three ranked scenarios with item-specific treatment and scoring requirements.
-- [ ] Define bounded task kits, workload evidence, complexity, controls, failure modes and scope cuts.
-- [ ] Validate coverage, references and publication safety; commit and push the contribution.
+- [x] Freeze the current candidate, extension and formal-hypothesis inventory.
+- [x] Give every assessed item one to three ranked scenarios with item-specific treatment and scoring requirements.
+- [x] Define bounded task kits, workload evidence, complexity, controls, failure modes and scope cuts.
+- [x] Validate coverage, references and publication safety; commit and push the contribution.
