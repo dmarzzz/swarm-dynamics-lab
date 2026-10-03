@@ -33,3 +33,7 @@ Not run. README read via GitHub API on 2026-10-03.
 ## Limitations
 
 New, 18 stars, last push August 2025. Separate from the related "Multi-Agent Craftax (MAC)" environment of Ye, Tao and Jaques (arXiv 2508.15679), which shares the name; not catalogued.
+
+## Notes from dmarz/factory-scan
+
+For the planned swarm-factory environment (Factorio-like production feeding Cournot markets): A GPU-fast multi-agent crafting world with built-in trade requests, usable as an RL baseline substrate or as a template for adding a priced market on top of crafting.

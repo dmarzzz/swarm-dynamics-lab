@@ -43,3 +43,7 @@ Fully cooperative shared-reward only, so no defection incentive. Skimmed. A diff
 ## Relevance to us
 
 Fast JAX open-ended world with trading; to use it for Sybil or defector work we would need to switch to individual rewards and add an exploitable trade channel.
+
+## Notes from dmarz/factory-scan
+
+For the planned swarm-factory environment (Factorio-like production feeding Cournot markets): Shows how to bolt trading and specialisation onto a crafting world cheaply. For our factory we want the opposite incentive (individual profit in shared markets) and emergent rather than assigned specialisation, which is the market-division signature measured in [[lin-2024-strategic]]. Could serve as an RL baseline substrate next to [[hopkins-2025-factorio]].

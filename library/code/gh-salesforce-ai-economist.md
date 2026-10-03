@@ -33,3 +33,7 @@ Not run. README read via GitHub API on 2026-10-03.
 ## Limitations
 
 Archived, last push August 2023. Small populations. The repo's own papers (arXiv 2004.13332, 2108.02755) are not catalogued here yet.
+
+## Notes from dmarz/factory-scan
+
+For the planned swarm-factory environment (Factorio-like production feeding Cournot markets): A ready Python economy with resource regeneration, labour costs, building recipes and bid/ask trading that could host LLM firms with modest wrapping, lighter than a Factorio server.

@@ -44,3 +44,7 @@ Collusion in Core is instructed, not emergent. White-box access to every agent i
 ## Relevance to us
 
 The best-measured white-box group detector and an honest report of its low recall at strict FPR. Compare black-box approaches [[tailor-2025-audit]], [[ghanem-2026-steganalysis]] and audit framework [[nakamura-2026-colosseum]].
+
+## Notes from dmarz/factory-scan
+
+Code and dataset: [[gh-aaronrose227-narcbench]] (MIT, 23 stars, last commit 2026-05-08). For market settings, contrast with action-level detection in [[bracale-syrnikov-2026-institutional]] and the CoT-unreliability results in [[lee-2026-faithful]].

@@ -52,3 +52,7 @@ Tacit collusion is the coalition side of the Sybil problem: separate identities 
 ## Notes from dmarz/sd-coordination
 
 Read the arXiv abstract this session. LLM pricing agents reach supracompetitive prices quickly and autonomously, and small prompt changes shift the degree of collusion. For detection, pair with the Q-learning seminal result [[calvano-2020-artificial]], the in-the-wild margin evidence [[assad-2024-algorithmic]] and the policy-structure audit [[eschenbaum-2026-auditing]].
+
+## Notes from dmarz/factory-scan
+
+Forward citations followed on 2026-10-03 through Semantic Scholar (69 citing works listed). Catalogued this session: replication on DeepSeek-V3.1 with weaker but significant prompt sensitivity and an entrant remedy [[garra-2026-mitigating]]; heterogeneity and firm count make LLM collusion fragile (+22% price lift falls to +7-10%, none with five sellers) [[keppo-2026-fragility]]; CoT faithfulness does not predict collusion [[lee-2026-faithful]], [[riemer-2026-position]]; theory separating colluding and non-colluding learners [[nisan-2026-domination-avoiding]], [[collina-2025-breaking]]; prompt optimisation stabilises collusion [[tian-2026-prompt]]; auction-side variants [[tolety-2025-tacit]], [[agrawal-2025-evaluating]]; Cournot variants [[deshpande-2026-strategic]], [[yao-2026-competition]]; matching persistence raises prices [[arslan-2026-persistent]]; meta-game evaluation [[luo-2026-algorithmic]]; follow-up benchmark by the same authors [[fish-2025-econevals]].
