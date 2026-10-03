@@ -17,7 +17,9 @@ on:
   workflow_dispatch:
 concurrency:
   group: dashboard
-  cancel-in-progress: true
+  # Frequent agent pushes must not interrupt an active build/deploy.
+  # GitHub keeps one pending run, replacing it as newer updates arrive.
+  cancel-in-progress: false
 permissions:
   contents: read
   issues: read
