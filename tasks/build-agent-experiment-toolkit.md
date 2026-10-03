@@ -23,8 +23,8 @@ Contribute general experiment-design documentation, reusable configuration/schem
 
 ## Done when
 
-- [ ] Toolkit documented with a clear integration map and limitations.
-- [ ] Source references reconciled with the canonical library without inflated reading-depth claims.
-- [ ] Local checks, repository checks and secret/privacy review pass.
-- [ ] Full generated logs remain outside version control.
-- [ ] Contribution is published using the repository workflow.
+- [x] Toolkit documented with a clear integration map and limitations.
+- [x] Source references reconciled with the canonical library without inflated reading-depth claims.
+- [x] Local checks, repository checks and secret/privacy review pass.
+- [x] Full generated logs remain outside version control.
+- [x] Contribution is published using the repository workflow.

@@ -13,3 +13,9 @@ Source integration: reused three canonical paper records and added 26. `lab.py v
 Workflow choice: automatic sync was deferred until the requested publication/privacy review was complete, so unreviewed imported files could not be pushed by a timer. Manual checkpoints are used in this isolated contribution checkout. The user request to audit before contribution takes precedence over starting a broad automatic sync immediately. Registration and task claiming use the repository tools; claim fields are never edited by hand.
 
 Next: projects should adapt the toolkit only after their own survey and hypothesis gates, validate production adapters independently, and keep paid collection separate from this offline teaching example.
+
+## Publication result
+
+Published toolkit commit: [4d8eadde6b26f6299d67ba2af90fde7427bba6ac](https://github.com/dmarzzz/swarm-lab/commit/4d8eadde6b26f6299d67ba2af90fde7427bba6ac). The final exact-staged-file Gitleaks review covered 57 files / 210,591 bytes with zero findings. All 34 canonical source links in the toolkit resolve.
+
+GitHub Actions passed: [offline toolkit validation](https://github.com/dmarzzz/swarm-lab/actions/runs/37152506049) and [repository check, source verification and generated index](https://github.com/dmarzzz/swarm-lab/actions/runs/37152505912). The contribution is general tooling; no paid experiment was launched and no project hypothesis was selected. The build task is closed through `lab.py done` after publication.
