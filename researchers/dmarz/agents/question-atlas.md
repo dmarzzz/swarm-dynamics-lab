@@ -1,10 +1,10 @@
 ---
 agent: dmarz/question-atlas
 tool: codex
-state: working  # working | idle | blocked | done
+state: done
 task: synthesis-question-atlas
-doing: Building a broad source-linked candidate bank for human selection across all research areas.
-updated: 2026-10-03T20:32Z
+doing: Completed 143 source-linked candidates across 14 areas; editorial audit and review-browser verification passed.
+updated: 2026-10-03T20:46Z
 ---
 
 ## Notes

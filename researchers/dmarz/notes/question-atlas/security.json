@@ -600,7 +600,7 @@
       "verification overhead",
       "budget conservation failures"
     ],
-    "falsifier": "Resource-bounded tickets still permit usage beyond the conserved budget or require identity linkage indistinguishable from public account quotas.",
+    "falsifier": "Multiplying acquired credentials does not increase allowed usage despite the absence of cross-credential resource binding. Ticket reuse or spending beyond a conserved budget is a separate protocol-integrity failure, not the direct test of credential multiplication.",
     "confounds": "Treating a credential as one person, omitted refunds, boundary bursts, claiming cryptographic implementation security from ideal primitives.",
     "prior": [
       {
@@ -638,7 +638,7 @@
       "stake concentration",
       "low-stake specialist inclusion"
     ],
-    "falsifier": "Stake concentration does not affect evidence coverage under the designed overlap condition, or diversity additions create larger splitting gains than their quality benefit.",
+    "falsifier": "Stake-proportional selection changes materially under simple splitting of unchanged total stake, or concentrating stake in contributors with shared sources does not reduce evidence coverage at matched capability and selected seat count.",
     "confounds": "Assuming capital predicts competence, fixed identities in a supposedly open market, transferring auction theorems outside their utility assumptions.",
     "prior": [
       {
@@ -715,7 +715,7 @@
       "false common-control attribution",
       "privacy exposure"
     ],
-    "falsifier": "Pooling creates no additional decision concentration in the specified task, or disclosed delegation controls cannot distinguish useful delegation from abuse at any viable threshold.",
+    "falsifier": "Permitted pooling does not increase common-planner decision concentration relative to independent holders with the same total resources, or the apparent increase is fully explained by a larger resource budget rather than delegation.",
     "confounds": "Equating common control with harmful intent, treating non-disclosure as malicious, assuming transferable credentials when the scheme forbids it mechanically.",
     "prior": [
       {
@@ -740,7 +740,7 @@
     "title": "Audit what an attestation actually identifies",
     "question": "Can an agent registry distinguish software integrity, machine identity, runtime instance, and operator ownership?",
     "hypothesis": "Unreviewed hunch: A registry using workload measurements alone accepts many indistinguishable replicas; binding an instance challenge improves replay detection but still does not establish distinct operators.",
-    "test": "On authorized test hardware or a faithful attestation mock, randomize registration trials across one image on many instances, many images on one host, restarts, and independent operators running the same image. Compare measurement-only checks, freshness challenges, and an external operator allowlist. Record which label each observed field can support. Mock results remain protocol tests rather than claims about real TEE security.",
+    "test": "On authorized test hardware or a faithful attestation mock, randomize registration trials across one image on many instances, many images on one host, restarts, and independent operators running the same image. Compare measurement-only checks, freshness challenges, and an external operator allowlist. Record which label each observed field can support. Mock results remain protocol tests rather than claims about real TEE security. Treat independent host/hardware configurations, or independently generated mock configurations, as analysis units; registration retries and restarts are nested observations.",
     "baseline": "Signed self-declared metadata and the explicitly centralized allowlist.",
     "metrics": [
       "duplicate-instance acceptance",
@@ -973,7 +973,7 @@
       "detection delay",
       "precision at fixed review budget"
     ],
-    "falsifier": "The detector cleanly separates shared exposure from peer influence across held-out update schedules, or randomized peer links have no measurable adoption effect.",
+    "falsifier": "Across held-out schedules, the detector consistently assigns higher coordination scores to peer-influence episodes than to matched shared-exposure-only episodes, with shared-exposure false alerts below a prespecified tolerance. A null adoption effect from peer assignment makes this design inconclusive about actual influence rather than refuting the detection hunch.",
     "confounds": "Different evidence volume after disabling links, unmodeled exposure mappings, treating many messages as independent replicates.",
     "prior": [
       {
@@ -1012,7 +1012,7 @@
       "token collision rate",
       "delay to observable reuse"
     ],
-    "falsifier": "Multi-token evidence cannot improve route attribution, or operator conclusions remain correct despite shared routing under the specified controls.",
+    "falsifier": "Canary evidence identifies operator ownership as precisely as exposure pathways despite shared intermediaries, without privileged routing labels, or route-attribution precision is no better than passive response similarity at matched exposure recall.",
     "confounds": "Correlated token generation, caches leaking condition names, treating absent emission as proof of no exposure, queries that themselves reveal the canary.",
     "prior": [
       {
@@ -1143,7 +1143,7 @@
     "title": "Are browser detectors detecting the automation library?",
     "question": "How much browser-agent detection survives a change in the control interface?",
     "hypothesis": "Unreviewed hunch: Performance based on missing mouse events and click timing degrades across control stacks, even when task autonomy and model family stay fixed.",
-    "test": "On a local authorized website, randomize identical benign tasks across an LLM agent using different browser interfaces, a deterministic script using those same interfaces, and consented human operation. Hold browser profile and machine settings constant where possible. Train on one control stack and test on another, with entire task templates held out. Do not design bypasses for public anti-abuse systems.",
+    "test": "On a local authorized website, randomize identical benign tasks across an LLM agent using different browser interfaces, a deterministic script using those same interfaces, and consented human operation. Hold browser profile and machine settings constant where possible. Train on one control stack and test on another, with entire task templates held out. Do not design bypasses for public anti-abuse systems. Evaluate human controls on held-out participants as well as held-out tasks, and cluster uncertainty by participant/device rather than treating repeated sessions as independent.",
     "baseline": "Environment metadata alone, interaction features alone, and task-success traces alone.",
     "metrics": [
       "cross-stack precision-recall",
@@ -1220,7 +1220,7 @@
       "ranking reversals",
       "unresolved-case fraction"
     ],
-    "falsifier": "All policies preserve rankings and calibrated uncertainty under the planned selective-loss mechanisms, or modeled corrections cannot improve even known-probability sampling.",
+    "falsifier": "Detector rankings remain stable across all planned selective-loss mechanisms at prespecified meaningful-effect tolerances. Failure of a missingness correction alone does not refute the ranking-reversal hunch.",
     "confounds": "Assuming the missingness mechanism is known in deployment, treating dropped content as no action, correlated events within one run.",
     "prior": [
       {
@@ -1249,7 +1249,7 @@
     "area": "swarm-detection",
     "title": "How quickly does an attribution detector expire?",
     "question": "What happens to model and campaign attribution after model, prompt, or scaffold updates?",
-    "hypothesis": "Unreviewed hunch: A detector's confidence becomes miscalibrated before its aggregate accuracy visibly collapses, and selective abstention with a small fresh calibration set limits false attribution.",
+    "hypothesis": "Unreviewed hunch: Model, prompt, or scaffold changes can make a detector's confidence miscalibrated, and selective abstention with a small fresh calibration set limits false attribution.",
     "test": "Create authorized repeated session batches before and after independently randomized model-version, prompt, and scaffold changes. Freeze the original detector and compare no update, recalibration only, and limited retraining using equal new-label budgets. Hold out complete configurations and preserve a no-change control. Evaluate attribution targets separately rather than relabeling every changed model as a changed operator.",
     "baseline": "Static detector and a fully retrained detector with clearly disclosed larger data cost.",
     "metrics": [
@@ -1297,7 +1297,7 @@
       "data retained",
       "task-group coverage"
     ],
-    "falsifier": "Aggregated telemetry retains no useful signal beyond volume, or apparent privacy gains disappear under held-out linkage attacks while detection falls substantially.",
+    "falsifier": "Coarse telemetry provides no coordination discrimination beyond activity volume, or an unconditioned detector already separates benign scheduled teams from the target coordination class as reliably as a schedule-aware detector at matched recall.",
     "confounds": "Privacy noise altering labels, shared heartbeat artifacts, repeatedly releasing aggregates without accounting for composition, equating coordination with maliciousness.",
     "prior": [
       {

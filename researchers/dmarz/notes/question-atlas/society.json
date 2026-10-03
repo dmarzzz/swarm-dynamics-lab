@@ -180,7 +180,7 @@
       "Accuracy change",
       "Evidence-conditioned revision"
     ],
-    "falsifier": "Peer labels add a reproducible effect after content matching across held-out tasks, contradicting the anchoring-only prediction.",
+    "falsifier": "Peer labels add materially greater coupling than identical anonymous anchors in the no-evidence stratum, or the predicted additional coupling for evidence-bearing peers is absent across held-out tasks.",
     "confounds": "Role labels may imply expertise; demand characteristics and familiar factual claims can predetermine answers. This test measures behavior, not a human-like social mechanism.",
     "prior": [
       {
@@ -206,7 +206,7 @@
     "title": "Protect private judgments before public discussion",
     "question": "Does requiring a private pre-discussion answer preserve useful minority evidence without preventing correction?",
     "hypothesis": "A private committed judgment reduces unsupported public conformity, but the benefit disappears when the commitment becomes an instruction never to revise.",
-    "test": "Randomize whole team episodes to private structured answers, public first answers or no preliminary answer. Equalize generation tokens by allocating the same first-pass work in every arm. After an identical evidence exchange, collect public and private final choices and score both against synthetic ground truth. Rotate the initially informed minority.",
+    "test": "Randomize whole team episodes to private structured answers, private answers with a never-revise instruction, public first answers or no preliminary answer. Equalize generation tokens by allocating the same first-pass work in every arm. After an identical evidence exchange, collect public and private final choices and score both against synthetic ground truth. Rotate the initially informed minority.",
     "baseline": "Independent voting and an ordinary debate arm with identical evidence and total cost.",
     "metrics": [
       "Wrong-to-right and right-to-wrong revisions",
@@ -239,7 +239,7 @@
     "title": "Stop on evidence sufficiency instead of verbal agreement",
     "question": "Can a checkable evidence checklist improve the speed-accuracy tradeoff for group commitment?",
     "hypothesis": "Requiring coverage of task-relevant facts reduces premature commitment more efficiently than adding a fixed number of discussion rounds.",
-    "test": "Randomize independent distributed-constraint episodes to checklist-triggered stopping, confidence-triggered stopping or a fixed round count. Use known required facts supplied by the task schema, not privileged solution labels. Charge checklist checks to a shared token/tool budget and vary the deadline. Plot error against actual delay for each rule.",
+    "test": "Randomize independent distributed-constraint episodes to checklist-triggered stopping, confidence-triggered stopping or a fixed round count. Every arm sees the same schema of required fact types, without privileged solution labels. Charge checklist checks to a shared token/tool budget and vary the deadline. Plot error against actual delay for each rule.",
     "baseline": "Matched-budget independent voting and fixed-round discussion, with a full-information solver as a diagnostic ceiling.",
     "metrics": [
       "False commits",
@@ -545,7 +545,7 @@
   {
     "id": "SOC-17",
     "area": "llm-agent-swarms",
-    "title": "Separate a leaders name from its information",
+    "title": "Separate a leader's name from its information",
     "question": "Does apparent authority change task outcomes beyond the content of the same proposal?",
     "hypothesis": "Leader labels change adoption without improving execution; useful influence is better predicted by evidence quality than message volume.",
     "test": "Randomize whole team episodes to the same frozen proposal labelled as coordinator, ordinary peer or anonymous note. Independently vary whether the proposal contains the decisive observation. Counterbalance author labels and placement, keep text and total token budgets identical, and measure downstream tool actions using an exact environment log.",
@@ -1097,7 +1097,7 @@
   {
     "id": "SOC-33",
     "area": "llm-agent-swarms",
-    "title": "Predict unseen agents choices from one agent",
+    "title": "Predict unseen agents' choices from one agent",
     "question": "How far does a benign choice model learned from one agent transfer across roles and model families?",
     "hypothesis": "A choice predictor transfers within a shared model and task rubric better than across roles, and adds little beyond a generic task-feature baseline after role changes.",
     "test": "Split synthetic project-allocation tasks into profiling and sealed evaluation sets. Observe one agents choices, freeze a simple predictor, then randomize fresh team episodes to homogeneous or mixed models and stable or changed roles. Keep profiling-query budget fixed and separately charge it to end-to-end cost. Predict pre-discussion individual choices and final group choices without manipulating content.",
@@ -1169,7 +1169,7 @@
     "area": "llm-agent-swarms",
     "title": "Validate a cheap surrogate at the collective level",
     "question": "Can a model of individual updates reproduce group-level outcomes on new questions and network structures?",
-    "hypothesis": "Good one-step prediction is insufficient; calibration that includes task-specific priors and several observed rounds forecasts collective outcomes better but transfers less broadly.",
+    "hypothesis": "At equal calibration cost, a surrogate including claim-specific priors and observed history improves collective forecasts within the calibration distribution, but its advantage shrinks on new question families or topologies.",
     "test": "Create independent small-population episodes with randomized starting conditions and network topology. Split by question family and topology before fitting a surrogate. Compare one-step, history-aware and simple copying models under an equal calibration-call budget. Reserve real LLM episodes for a held-out collective forecast test; report offline sweep savings only after fidelity is checked.",
     "baseline": "Persistence, majority copying and a prior-only predictor, all given the same observable history.",
     "metrics": [
@@ -1178,7 +1178,7 @@
       "Calibration of consensus probability",
       "Compute saved at fixed forecast error"
     ],
-    "falsifier": "Better local prediction fails to improve held-out collective fidelity, or a simpler baseline matches the complex surrogate.",
+    "falsifier": "The history-and-prior model fails to improve collective forecasts over simpler models given the same observed rounds and budget, or its advantage does not shrink under the prespecified transfer shifts.",
     "confounds": "Future trajectory leakage, reused statements and fitted claim priors can make forecasts look transferable. Single runs at large population are not replicated evidence.",
     "prior": [
       {
@@ -1204,7 +1204,7 @@
     "title": "Rank trace clusters by useful evidence, not spectacle",
     "question": "Can a transparent triage rule retrieve useful coordination cases across different scaffolds?",
     "hypothesis": "Features tied to verifiable shared artifacts transfer better than repeated phrasing or temporal coincidence, but performance falls when access logs are absent.",
-    "test": "Generate independently seeded benign multi-agent and ordinary automation episodes in several synthetic scaffolds, with known communication channels. Hold out an entire scaffold and task family. Freeze a transparent ranking rule on development data, then give investigator agents a fixed review-token budget for top-ranked versus random or keyword-selected clusters. Score evidence-supported answers, not claims about real operators.",
+    "test": "Generate independent benign multi-agent and ordinary automation episodes across synthetic scaffolds with known communication channels. Hold out an entire scaffold and task family. Cross intact versus missing access logs using prespecified masks. Freeze ranking on development data, then give investigator agents equal review-token budgets for ranked, random or keyword-selected clusters. Score evidence-supported answers, not real-operator claims.",
     "baseline": "Random review, simple keyword filtering and an artifact-only heuristic with the same inspection allowance.",
     "metrics": [
       "Precision at fixed review budget",
@@ -1230,6 +1230,40 @@
     "briefs": [
       "researchers/vishesh/notes/project-briefs/discovery.md",
       "researchers/vishesh/notes/project-briefs/casefile.md"
+    ]
+  },
+  {
+    "id": "SOC-37",
+    "area": "llm-agent-swarms",
+    "title": "Does profiling improve influence through ordinary retrieval?",
+    "question": "Does tailoring a bounded external document from one agents observed choices shift an unseen groups decisions more than generic framing?",
+    "hypothesis": "Tailoring produces greater held-out target-choice lift than generic framing, with a larger incremental effect when peer communication is enabled.",
+    "test": "Profile one agent on separate fictional project-choice tasks, then freeze the tailoring rule. Randomize independent group episodes to neutral, generic or tailored fact-preserving documents, crossed with peer communication enabled or disabled. Publish one bounded document in a local search corpus reached through ordinary retrieval; never force delivery. Match document length, adaptation-query budget, external information opportunities and total inference. Log retrieval rank, access, pre-discussion choices and final decisions.",
+    "baseline": "Generic framing with equal tuning budget, neutral documents, and matched no-communication episodes.",
+    "metrics": [
+      "End-to-end target-choice lift",
+      "Retrieval-conditional lift",
+      "Independent task utility",
+      "Peer-channel interaction",
+      "Profiling cost"
+    ],
+    "falsifier": "Tailoring adds no held-out lift over generic framing, or enabling communication does not amplify its incremental effect.",
+    "confounds": "Better substantive options are not manipulation; report utility separately. Common retrieval is not peer transmission, and channel assignment alone does not identify mediation.",
+    "prior": [
+      {
+        "id": "nestaas-2024-adversarial",
+        "relation": "External-content choice influence is established; retrieval access assumptions matter."
+      },
+      {
+        "id": "liu-2025-can",
+        "relation": "One-known-agent influence precedent uses optimized adversarial inputs, not this framing."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Seal profiling/evaluation tasks and define a fact-preserving rewrite rubric; synthetic content only, no real outreach.",
+    "briefs": [
+      "researchers/vishesh/notes/agent-swarm-influence-research.md"
     ]
   }
 ]
