@@ -7,14 +7,14 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 306 | 8 | 0 | 0 | 0 | 0 | 314 |
-| collective-decision | 180 | 6 | 0 | 6 | 0 | 0 | 192 |
+| collective-decision | 182 | 6 | 0 | 6 | 0 | 0 | 194 |
 | swarm-robotics | 231 | 8 | 0 | 0 | 0 | 0 | 239 |
 | swarm-intelligence | 104 | 1 | 0 | 0 | 0 | 0 | 105 |
 | active-matter | 182 | 3 | 0 | 0 | 0 | 0 | 185 |
 | sync-consensus | 160 | 4 | 0 | 0 | 0 | 0 | 164 |
-| criticality-measurement | 180 | 4 | 0 | 4 | 0 | 0 | 188 |
+| criticality-measurement | 183 | 4 | 0 | 4 | 0 | 0 | 191 |
 | marl-emergence | 120 | 12 | 0 | 0 | 0 | 0 | 132 |
-| llm-agent-swarms | 126 | 34 | 0 | 50 | 0 | 0 | 210 |
+| llm-agent-swarms | 130 | 34 | 0 | 50 | 0 | 0 | 214 |
 | crowds-and-traffic | 75 | 2 | 0 | 0 | 0 | 0 | 77 |
 | meta | 51 | 8 | 0 | 13 | 0 | 0 | 72 |
 | sybil-resistance | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

@@ -2,9 +2,9 @@
 
 # Library index
 
-942 entries.
+946 entries.
 
-## Papers (833)
+## Papers (837)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -120,6 +120,7 @@
 | [olfati-saber-2006-flocking](papers/olfati-saber-2006-flocking.md) | Flocking for Multi-Agent Dynamic Systems: Algorithms and Theory | 2006 | 5 | abstract | sync-consensus, collective-motion, swarm-robotics | dmarz/sync-consensus |
 | [olfati-saber-2007-consensus](papers/olfati-saber-2007-consensus.md) | Consensus and Cooperation in Networked Multi-Agent Systems | 2007 | 5 | abstract | sync-consensus, swarm-robotics, collective-motion | dmarz/sync-consensus |
 | [pais-2013-mechanism](papers/pais-2013-mechanism.md) | A Mechanism for Value-Sensitive Decision-Making | 2013 | 5 | full | collective-decision, swarm-intelligence, sync-consensus | dmarz/collective-decision |
+| [pavlova-2026-flag](papers/pavlova-2026-flag.md) | Flag Game: A Toy Model for Mechanistic Swarm Interpretability | 2026 | 5 | full | llm-agent-swarms, collective-decision, criticality-measurement | shadow/sol-1 |
 | [pinnau-2017-consensus](papers/pinnau-2017-consensus.md) | A consensus-based model for global optimization and its mean-field limit | 2017 | 5 | full | swarm-intelligence, sync-consensus | dmarz/swarm-intelligence |
 | [poel-2022-subcritical](papers/poel-2022-subcritical.md) | Subcritical escape waves in schooling fish | 2022 | 5 | full | criticality-measurement, collective-motion, collective-decision | dmarz/criticality-measurement |
 | [puy-2024-selective](papers/puy-2024-selective.md) | Selective social interactions and speed-induced leadership in schooling fish | 2024 | 5 | abstract | collective-motion, collective-decision | dmarz/collective-motion-recent |
@@ -338,6 +339,7 @@
 | [hoffmann-2026-consensus](papers/hoffmann-2026-consensus.md) | From Consensus-Based Optimization to Particle Swarm Optimization: Convergence Guarantees under Drift-Diffusion Coupling | 2026 | 4 | abstract | swarm-intelligence, sync-consensus | dmarz/swarm-intelligence |
 | [horyna-2024-fast](papers/horyna-2024-fast.md) | Fast Swarming of UAVs in GNSS-Denied Feature-Poor Environments Without Explicit Communication | 2024 | 4 | abstract | swarm-robotics, collective-motion | dmarz/swarm-robotics-recent |
 | [huang-2024-collective](papers/huang-2024-collective.md) | Collective phase transitions in confined fish schools | 2024 | 4 | abstract | collective-motion, active-matter | dmarz/collective-motion-recent |
+| [itkin-2026-poor](papers/itkin-2026-poor.md) | Poor Man's Agentic Modeling: Simulating Large LLM-Agent Societies on a Laptop | 2026 | 4 | abstract | llm-agent-swarms, criticality-measurement | shadow/sol-1 |
 | [iyer-2026-dynamics](papers/iyer-2026-dynamics.md) | Dynamics of active swarms at the edge of disorder | 2026 | 4 | abstract | criticality-measurement, collective-motion, active-matter | dmarz/criticality-measurement |
 | [jadhav-2024-collective](papers/jadhav-2024-collective.md) | Collective responses of flocking sheep (Ovis aries) to a herding dog (border collie) | 2024 | 4 | abstract | collective-motion, collective-decision | dmarz/collective-motion-recent |
 | [jang-2025-reinforcement](papers/jang-2025-reinforcement.md) | Reinforcement Learning-Based Oscillation Dampening: Scaling Up Single-Agent Reinforcement Learning Algorithms to a 100-Autonomous-Vehicle Highway Field Operational Test | 2025 | 4 | abstract | crowds-and-traffic, marl-emergence | dmarz/crowds-and-traffic |
@@ -510,6 +512,7 @@
 | [tolstaya-2020-learning](papers/tolstaya-2020-learning.md) | Learning Decentralized Controllers for Robot Swarms with Graph Neural Networks | 2020 | 4 | abstract | marl-emergence, swarm-robotics, sync-consensus | dmarz/marl-emergence |
 | [toner-2005-hydrodynamics](papers/toner-2005-hydrodynamics.md) | Hydrodynamics and phases of flocks | 2005 | 4 | abstract | collective-motion, active-matter | dmarz/collective-motion |
 | [toner-2024-physics](papers/toner-2024-physics.md) | The Physics of Flocking | 2024 | 4 | abstract | collective-motion, active-matter | dmarz/collective-motion-recent |
+| [torpmann-hagen-2026-memetic](papers/torpmann-hagen-2026-memetic.md) | Memetic Trojans: Social Contagions as Carriers of Adversarial Payloads in Agent Networks | 2026 | 4 | abstract | llm-agent-swarms, criticality-measurement | shadow/sol-1 |
 | [totzeck-2021-trends](papers/totzeck-2021-trends.md) | Trends in Consensus-based optimization | 2021 | 4 | abstract | swarm-intelligence, sync-consensus | dmarz/swarm-intelligence |
 | [touboul-2017-power](papers/touboul-2017-power.md) | Power-law statistics and universal scaling in the absence of criticality | 2017 | 4 | abstract | criticality-measurement | dmarz/criticality-measurement |
 | [tran-2025-multi](papers/tran-2025-multi.md) | Multi-Agent Collaboration Mechanisms: A Survey of LLMs | 2025 | 4 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
@@ -597,6 +600,7 @@
 | [chen-2025-online](papers/chen-2025-online.md) | Online Planning for Multi-UAV Pursuit-Evasion in Unknown Environments Using Deep Reinforcement Learning | 2025 | 3 | abstract | swarm-robotics, marl-emergence | dmarz/swarm-robotics-recent |
 | [chen-2026-five](papers/chen-2026-five.md) | The Five Ws of Multi-Agent Communication: Who Talks to Whom, When, What, and Why -- A Survey from MARL to Emergent Language and LLMs | 2026 | 3 | abstract | marl-emergence, llm-agent-swarms | dmarz/marl-emergence |
 | [cho-2025-herd](papers/cho-2025-herd.md) | Herd Behavior: Investigating Peer Influence in LLM-based Multi-Agent Systems | 2025 | 3 | abstract | llm-agent-swarms, collective-decision | dmarz/llm-agent-swarms |
+| [choi-2025-empirical](papers/choi-2025-empirical.md) | An Empirical Study of Group Conformity in Multi-Agent Systems | 2025 | 3 | abstract | llm-agent-swarms, collective-decision | shadow/sol-1 |
 | [cichos-2020-machine](papers/cichos-2020-machine.md) | Machine learning for active matter | 2020 | 3 | abstract | marl-emergence, active-matter | dmarz/marl-emergence |
 | [cleghorn-2018-particle](papers/cleghorn-2018-particle.md) | Particle swarm stability: a theoretical extension using the non-stagnate distribution assumption | 2018 | 3 | skim | swarm-intelligence | dmarz/swarm-intelligence-audit |
 | [colombo-2026-stabilizing](papers/colombo-2026-stabilizing.md) | Stabilizing Role of Uninformed Participants in Collective Decision Making | 2026 | 3 | skim | collective-decision, sync-consensus | dmarz/collective-decision-audit |
