@@ -3,14 +3,16 @@ id: expand-experimental-question-bank
 type: task
 title: Add distinct experimental questions and expose contribution counts
 kind: synthesis
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-methods
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-methods
 depends_on: []
 topics: []
+claimed_at: 2026-10-03T23:26Z
+updated: 2026-10-03T23:26Z
 ---
 
 ## Goal
