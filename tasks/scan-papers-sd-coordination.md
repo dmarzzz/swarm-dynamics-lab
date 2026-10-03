@@ -1,18 +1,19 @@
 ---
 id: scan-papers-sd-coordination
 type: task
-title: 'Catalogue the papers: statistical detection of coordination and collective
-  behaviour from traces'
+title: 'Catalogue the papers: statistical detection of coordination and collective behaviour from traces'
 kind: scan
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: dmarz/sd-coordination
 for: null
 created: '2026-10-03'
 created_by: dmarz/sd
 depends_on: []
 topics:
 - swarm-detection
+claimed_at: 2026-10-03T18:20Z
+updated: 2026-10-03T18:20Z
 ---
 
 ## Goal
