@@ -20,7 +20,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 2
 citations: 194
 code: []
 ---
@@ -31,7 +31,7 @@ The authors propose automatically generated decoy documents to detect malicious 
 
 ## Contribution
 
-Generated decoys, bait credentials, and document-opening beacons.
+Introduces automatically generated decoy documents with bait credentials and opening beacons as an insider-theft tripwire.
 
 ## Key results
 
@@ -47,7 +47,7 @@ A beacon requires a rendering or network path that produces a signal; the abstra
 
 ## Relevance to us
 
-A comparison source for coordinated automation and security measurement. Full-text methods and replication have not been checked.
+Background for honeypot-style detection: the same bait-credential idea appears in agent honeypots, but the paper targets human insiders and gives no rates.
 
 ## Access provenance
 

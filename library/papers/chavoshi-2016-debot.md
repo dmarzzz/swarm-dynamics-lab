@@ -46,7 +46,7 @@ Sustained synchrony is a detection assumption, not proof of malicious intent. Tr
 
 ## Relevance to us
 
-This provides a prior-art comparison for detecting coordinated automation, not evidence that any observed population is an LLM swarm.
+Correlated activity timing under warping is directly testable on agent traces; the 94% precision is author-reported on 2016 Twitter bots, so treat it as a ceiling to check, not a transferable number.
 
 ## Access and citation provenance
 

@@ -20,7 +20,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 3
 citations: 4
 code: []
 ---
@@ -47,7 +47,7 @@ Dataset labeling, performance differences, and cross-platform generalization can
 
 ## Relevance to us
 
-This provides a prior-art comparison for detecting coordinated automation, not evidence that any observed population is an LLM swarm.
+A recent map of social-bot definitions and four detector families evaluated on one Bluesky dataset; good for the related-work section of a detection survey, no transferable numbers in the abstract.
 
 ## Access and citation provenance
 

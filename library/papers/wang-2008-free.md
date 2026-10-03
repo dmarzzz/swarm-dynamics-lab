@@ -20,7 +20,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 1
 citations: null
 code: []
 ---
@@ -31,7 +31,7 @@ This paper proposes a free-roaming mobile-agent protocol combining anonymous oni
 
 ## Contribution
 
-Anonymous onion routing with two-hop-forward and k-hop-backward chaining.
+Proposes a free-roaming mobile-agent protocol using onion routing and k anonymous backward hops to resist colluding truncation attacks.
 
 ## Key results
 
@@ -47,7 +47,7 @@ Threat assumptions and collusion bounds require full-text review; protecting iti
 
 ## Relevance to us
 
-A comparison source for coordinated automation and security measurement. Full-text methods and replication have not been checked.
+Old mobile-agent security work; only tangential to fork-merge security through its collusion-resistance framing.
 
 ## Access provenance
 
