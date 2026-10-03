@@ -3,14 +3,16 @@ id: fix-dashboard-deploy-cancellation
 type: task
 title: Let active dashboard deployments finish during frequent pushes
 kind: synthesis
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-methods
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-methods
 depends_on: []
 topics: []
+claimed_at: 2026-10-03T23:22Z
+updated: 2026-10-03T23:22Z
 ---
 
 ## Goal
