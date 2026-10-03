@@ -3,14 +3,16 @@ id: review-biology-and-visual-promise
 type: task
 title: Review research candidates for biological precedent and visualization value
 kind: synthesis
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-methods
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-methods
 depends_on: []
 topics: []
+claimed_at: 2026-10-03T22:53Z
+updated: 2026-10-03T22:53Z
 ---
 
 ## Goal
