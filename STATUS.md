@@ -6,26 +6,25 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 313 | 8 | 2 | 0 | 0 | 1 | 324 |
-| collective-decision | 236 | 8 | 14 | 6 | 0 | 2 | 266 |
+| collective-motion | 313 | 8 | 3 | 0 | 0 | 1 | 325 |
+| collective-decision | 236 | 8 | 18 | 6 | 0 | 2 | 270 |
 | swarm-robotics | 272 | 13 | 2 | 0 | 0 | 0 | 287 |
 | swarm-intelligence | 107 | 1 | 2 | 0 | 0 | 0 | 110 |
 | active-matter | 184 | 3 | 1 | 0 | 0 | 0 | 188 |
 | sync-consensus | 225 | 8 | 11 | 3 | 0 | 1 | 248 |
 | criticality-measurement | 186 | 4 | 0 | 5 | 0 | 1 | 196 |
 | marl-emergence | 123 | 12 | 0 | 0 | 0 | 1 | 136 |
-| llm-agent-swarms | 237 | 44 | 46 | 87 | 0 | 2 | 416 |
+| llm-agent-swarms | 237 | 44 | 47 | 87 | 0 | 2 | 417 |
 | crowds-and-traffic | 76 | 2 | 1 | 0 | 0 | 0 | 79 |
 | meta | 77 | 9 | 3 | 13 | 0 | 2 | 104 |
 | sybil-resistance | 169 | 41 | 52 | 19 | 4 | 1 | 286 |
-| fork-merge-security | 214 | 11 | 32 | 26 | 0 | 3 | 286 |
+| fork-merge-security | 214 | 11 | 37 | 26 | 0 | 3 | 291 |
 | swarm-detection | 0 | 2 | 12 | 60 | 0 | 0 | 74 |
 
 ## Tasks
 
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
-| [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | claimed | p0 | review | dmarz/reviewer-1 | dmarz | 2026-10-03T19:19Z | Review survey: llm agent swarms (cross-researcher) |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
 | [scan-papers-fm-contagion](tasks/scan-papers-fm-contagion.md) | claimed | p0 | scan | dmarz/fm-contagion |  | 2026-10-03T18:12Z | Catalogue the papers: corruption spreading through multi-agent LLM systems |
@@ -79,6 +78,7 @@
 | [synthesis-swarm-detection-methods](tasks/synthesis-swarm-detection-methods.md) | open | p1 | synthesis |  |  |  | Synthesis: taxonomy of swarm-detection methods and the honeypot design space |
 | [synthesis-sybil-flashbots](tasks/synthesis-sybil-flashbots.md) | open | p1 | synthesis |  |  |  | Synthesis: how Flashbots Sybil work relates to swarm and agent Sybil resistance |
 | [synthesis-glossary](tasks/synthesis-glossary.md) | open | p2 | synthesis |  |  |  | Write the shared glossary |
+| [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | done | p0 | review | dmarz/reviewer-1 | dmarz | 2026-10-03T19:27Z | Review survey: llm agent swarms (cross-researcher) |
 | [scan-code-agent-orchestration](tasks/scan-code-agent-orchestration.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue LLM multi-agent and orchestration frameworks |
 | [scan-code-collective-sims](tasks/scan-code-collective-sims.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue simulators for collective motion and active matter |
 | [scan-code-robotics-marl](tasks/scan-code-robotics-marl.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue swarm robotics simulators and MARL environments |
@@ -101,11 +101,10 @@
 
 ## Candidate batches
 
-23 free, 1 claimed, 16 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+23 free, 0 claimed, 17 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#18](https://github.com/dmarzzz/swarm-lab/issues/18) | claimed | 2026-10-03T19:24Z | [batch] blog/fork-merge-security: 10 candidates (blog-fork-merge-security-20261003-01) |
 | [#19](https://github.com/dmarzzz/swarm-lab/issues/19) | free | 2026-10-03T19:21Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-02) |
 | [#20](https://github.com/dmarzzz/swarm-lab/issues/20) | free | 2026-10-03T19:21Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-03) |
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
@@ -129,6 +128,7 @@
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | shadow/sol-w5 | done |  | 2026-10-03T19:40Z | worked candidate batches |
+| dmarz/reviewer-1 | done | review-llm-agent-swarms | 2026-10-03T19:27Z | review filed, verdict revise |
 | shadow/sol-w1 | done |  | 2026-10-03T19:20Z | batch writer lane finished; batches |
 | shadow/sol-w3 | idle |  | 2026-10-03T19:20Z | finished candidate batches |
 | vishesh/codex-docs | done |  | 2026-10-03T19:14Z | Expanded sixteen briefs, linked research outputs, repaired metadata, and incorporated targeted review corrections. |

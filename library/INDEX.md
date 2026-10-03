@@ -2,7 +2,7 @@
 
 # Library index
 
-1559 entries.
+1564 entries.
 
 ## Papers (1206)
 
@@ -1215,7 +1215,7 @@
 | [zhao-2024-snail](papers/zhao-2024-snail.md) | Snail-inspired robotic swarms: a hybrid connector drives collective adaptation in unstructured outdoor environments | 2024 | 2 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [zhuge-2023-mindstorms](papers/zhuge-2023-mindstorms.md) | Mindstorms in Natural Language-Based Societies of Mind | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 
-## Blogs (102)
+## Blogs (107)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1315,12 +1315,17 @@
 | [flashbots-2022-order](blogs/flashbots-2022-order.md) | order flow, auctions and centralisation II - order flow auctions | 2022 | 2 | skim | sybil-resistance | dmarz/sybil-flashbots |
 | [flashbots-2026-why](blogs/flashbots-2026-why.md) | Why Location Choice Matters | 2026 | 2 | skim | sybil-resistance, sync-consensus | dmarz/sybil-flashbots |
 | [kulveit-2022-announcing](blogs/kulveit-2022-announcing.md) | Announcing the Alignment of Complex Systems Research Group | 2022 | 2 | full | fork-merge-security, llm-agent-swarms, collective-decision | shadow/sol-w4 |
+| [kulveit-2023-self-unalignment](blogs/kulveit-2023-self-unalignment.md) | The self-unalignment problem | 2023 | 2 | full | fork-merge-security, collective-decision | shadow/sol-w4 |
 | [kulveit-2024-hierarchical](blogs/kulveit-2024-hierarchical.md) | Hierarchical Agency: A Missing Piece in AI Alignment | 2024 | 2 | skim | fork-merge-security, collective-decision, llm-agent-swarms | shadow/sol-w4 |
 | [nautilus-2023-physics](blogs/nautilus-2023-physics.md) | The Physics of Crowds | 2023 | 2 | full | crowds-and-traffic, swarm-detection | shadow/sol-w3 |
 | [owasp-2025-llm](blogs/owasp-2025-llm.md) | OWASP Top 10 for LLMs and Gen AI Apps 2025 | 2025 | 2 | skim | fork-merge-security | dmarz/fm-memory-injection |
 | [quanta-2018-simple](blogs/quanta-2018-simple.md) | The Simple Algorithm That Ants Use to Build Bridges | 2018 | 2 | full | collective-decision, swarm-robotics, swarm-intelligence | shadow/sol-w3 |
 | [quanta-2018-swarming](blogs/quanta-2018-swarming.md) | Swarming Bacteria Create an 'Impossible' Superfluid | 2018 | 2 | full | active-matter, collective-motion | shadow/sol-w3 |
+| [sotala-2023-quick](blogs/sotala-2023-quick.md) | Quick thoughts on the implications of multi-agent views of mind on AI takeover | 2023 | 2 | full | fork-merge-security, llm-agent-swarms | shadow/sol-w4 |
 | [wentworth-2019-why](blogs/wentworth-2019-why.md) | Why Subagents? | 2019 | 2 | full | fork-merge-security, collective-decision | shadow/sol-w4 |
+| [kulveit-2018-multi-agent](blogs/kulveit-2018-multi-agent.md) | Multi-agent predictive minds and AI alignment | 2018 | 1 | skim | fork-merge-security, collective-decision | shadow/sol-w4 |
+| [moridinamael-2019-complex](blogs/moridinamael-2019-complex.md) | Complex Behavior from Simple (Sub)Agents | 2019 | 1 | skim | fork-merge-security, collective-decision, collective-motion | shadow/sol-w4 |
+| [sotala-2019-subagents](blogs/sotala-2019-subagents.md) | Subagents, neural Turing machines, thought selection, and blindspots | 2019 | 1 | skim | fork-merge-security, collective-decision | shadow/sol-w4 |
 
 ## Threads (130)
 
