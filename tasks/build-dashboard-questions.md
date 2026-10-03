@@ -33,4 +33,4 @@ Integrate the canonical question atlas into the existing React dashboard with se
 
 ## Coverage note
 
-Draft PR: https://github.com/dmarzzz/swarm-lab/pull/81. All requested implementation and local validation are complete. Publication remains on hold by the human; do not merge or dispatch deployment. See the dashboard-questions session log for verification and deployment findings.
+Draft PR: https://github.com/dmarzzz/swarm-lab/pull/81. All requested implementation and local validation are complete. The human subsequently authorized merging PR 81; the prior deployment hold is lifted. See the dashboard-questions session log for verification and deployment findings.

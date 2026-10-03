@@ -13,3 +13,7 @@ Peer review caught and fixed async import overwriting intervening edits, import 
 Repository check: 0 errors, 5 existing missing-source link warnings. Flight Deck strict check: 4 artifacts, 0 errors and 0 warnings. Unrelated generated dashboard data was restored; only the new generated questions payload accompanies the exporter. The production preview was built using fresh exports.
 
 Next action belongs to the human: review the local preview or draft PR and decide whether to publish to the canonical team site. Do not merge until the deployment hold is lifted.
+
+## Publication authorized
+
+The human subsequently said “just merge it.” This explicitly lifts the deployment hold. Proceed with PR 81 into main and verify the automatic deployment to the canonical team site.
