@@ -144,8 +144,8 @@
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/honeypot-vigilance | done |  | 2026-10-03T23:50Z | scan-honeypot-vigilance done; verdict in notes/honeypot-vigilance-hunches.md |
+| vishesh/codex-methods | working | skeptical-research-context | 2026-10-03T23:44Z | Distilling research context and reviewing forty candidate questions and designs |
 | dmarz/discussion-dose | done | build-discussion-dose | 2026-10-03T23:40Z | Complete; deployment and artifact verification passed; server claim released; paid LLM runs deferred |
-| vishesh/codex-methods | done | contribution-new-badges | 2026-10-03T23:40Z | Published recent-question and project-tag badges in e3952fe |
 | vishesh/codex-experiments | working | build-actual-experiment-suite | 2026-10-03T23:39Z | Implement developed designs and bounded exploratory deployment; USD 50 total cap |
 | dmarz/avalon | idle |  | 2026-10-03T23:28Z | created Avalon swarm-scale research tasks |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
