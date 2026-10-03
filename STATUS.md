@@ -132,6 +132,7 @@
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | shadow/sol-g50 | done |  | 2026-10-03T20:45Z | Finished synthesis/people-and-labs.md (issue |
 | dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | scan-papers-sd-ai-content lane finished: 55 entries on branch lane/sd-ai-content |
+| shadow/sol-w5 | idle |  | 2026-10-03T20:20Z | worked batches |
 | shadow/sol-aud | working |  | 2026-10-03T20:14Z | Discover and fully transcribe collective-behaviour and agent-control podcasts |
 | shadow/sol-w6 | idle |  | 2026-10-03T20:05Z | writer lane finished (batch |
 | shadow/sol-w1 | idle |  | 2026-10-03T20:00Z | stopped on requester instruction; completed batches 33, 34, 31, 32 and 52 with 17 talks and 7 papers, all remaining items explicitly skipped |
@@ -141,7 +142,6 @@
 | shadow/sol-w7 | idle |  | 2026-10-03T19:58Z | Wrapped up on human stop; batches 48, 46, 53 catalogued; 37 and 38 all-skipped; 77 released untouched |
 | dmarz/fm | done | synthesis-fork-merge-questions | 2026-10-03T19:50Z | wrote synthesis/fork-merge-questions.md: Sutton quote verified, threat model, Q1 hiding, Q2 thresholds, Q3 attacks ranked by evidence, analogues, open questions; 197 cited ids all resolve |
 | shadow/sol-w8 | blocked |  | 2026-10-03T19:44Z | Completed X batches 45 and 44; remaining preferred talk batches require readable transcripts. |
-| shadow/sol-w5 | done |  | 2026-10-03T19:40Z | worked candidate batches |
 | shadow/sol-g49 | working |  | 2026-10-03T19:38Z | issue 49 primary industry measurements and runnable dataset access audit |
 | dmarz/reviewer-1 | done | review-llm-agent-swarms | 2026-10-03T19:27Z | review filed, verdict revise |
 | vishesh/codex-docs | done |  | 2026-10-03T19:14Z | Expanded sixteen briefs, linked research outputs, repaired metadata, and incorporated targeted review corrections. |
