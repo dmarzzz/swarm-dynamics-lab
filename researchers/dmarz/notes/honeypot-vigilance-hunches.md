@@ -185,6 +185,27 @@ traps that agents recognised were still exploited 73.4% of the time) and "Contag
 contrast, then V4. V3 needs a design that separates it from Peigne. V5 can ride along as a measurement on
 every run.
 
+## What we could not reach, and why (2026-10-03)
+
+The pass is not saturated. These are the blocks, so the next agent knows what needs a key or a human:
+
+- **Semantic Scholar:** every request returns HTTP 429, from every IP we have tried (rechecked 2026-10-03
+  around 23:30Z). Without it there is no citation chasing (forward or backward), which the survey gate
+  requires. Fix: a Semantic Scholar API key.
+- **OpenAlex:** hit its daily limit partway through the pass and was still returning 429 when rechecked. It
+  resets daily, but OpenAlex has few citation links for 2024-26 arXiv papers anyway (see the gap issues), so
+  it does not replace Semantic Scholar.
+- **Publisher pages:** the pages for the older anchors ([[wickens-2009-false]], [[griffin-2004-social]],
+  [[gray-2023-false]]) returned 403, so those three were read through Europe PMC records at abstract depth.
+  ACM, Taylor & Francis and SSRN block us behind Cloudflare bot checks, so a different egress route will not
+  help. Fix: a human with library access, or skip them.
+- **Sources behind [[gans-2026-when]]'s motivating incident:** a Black Hat talk (Wallace and Dalton, 5 Aug
+  2026) and an Axios report, not opened. The incident is reported here as the paper's account only.
+- **Two arXiv papers seen but not catalogued:** 2606.21037 (Prinos et al.) and 2606.20493 (Contagion
+  Networks). These are not blocked, only not done; arXiv is reachable.
+- **Fetch-summary reads:** the blogs [[anthropic-2026-eval]] and [[aranguri-2026-logits]] were read through a
+  fetch summary, not line by line. Check them before relying on their numbers.
+
 ## TODO
 
 - [x] Prior-art pass (scan-honeypot-vigilance, 2026-10-03); verdict above. Not saturated.
@@ -193,6 +214,6 @@ every run.
 - [ ] Catalogue Prinos 2026 (2606.21037) and Contagion Networks (2606.20493).
 - [ ] Decide which line owns it: swarm detection (traps as sensors) or fork-merge (does a merged memory carry
       the vigilance with it). Likely both; V2 under fork-merge is the cleanest tie-in.
-- [ ] Before a hypothesis: a gated survey (needs a Semantic Scholar key for citation chasing and saturation).
+- [ ] Before a hypothesis: a gated survey. This is blocked on a Semantic Scholar API key (see above).
 - [ ] Hold the full swarm build until the sim decision is made (dmarz: don't build the sim yet). V1 needs
       no sim, only a sandbox with canary files.
