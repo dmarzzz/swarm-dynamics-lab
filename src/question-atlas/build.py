@@ -32,7 +32,7 @@ for p in (ROOT / 'library').glob('*/*.md'):
             records[fm['id']] = (p, fm)
 
 candidates = []
-for lane in ['physical', 'society', 'security', 'methods', 'budgets']:
+for lane in ['physical', 'society', 'security', 'methods', 'budgets', 'markets']:
     rows = json.loads((OUT / f'{lane}.json').read_text())
     for row in rows:
         assert all(k in row for k in FIELDS), (lane, row.get('id'), 'missing fields')

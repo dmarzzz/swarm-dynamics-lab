@@ -64,7 +64,19 @@
       "BUD-19",
       "BUD-20",
       "BUD-21",
-      "BUD-22"
+      "BUD-22",
+      "MKT-01",
+      "MKT-02",
+      "MKT-03",
+      "MKT-04",
+      "MKT-05",
+      "MKT-06",
+      "MKT-07",
+      "MKT-08",
+      "MKT-09",
+      "MKT-10",
+      "MKT-11",
+      "MKT-12"
     ],
     "revised": [
       "PHY-03",
@@ -214,7 +226,7 @@
       "OPT-06"
     ]
   },
-  "content_sha256": "c75de1a8096a82682979a0a901117e660ea6421eb2afa83202d335e90ff75bff",
+  "content_sha256": "221d012538054f1770caadee9b63c7681504ec970cb390328e0ad52b345e4fe1",
   "topics": {
     "collective-motion": "Collective motion models",
     "collective-decision": "Collective decision-making in biology",
@@ -10212,6 +10224,633 @@
       "candidate_sha256": "8689fd7012d946a35244fc11f2bdc8dbaad27f875bad1e764482bfa52a1026f9",
       "change": "new",
       "lane": "budgets",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "MKT-01",
+      "area": "llm-agent-swarms",
+      "title": "Market division when output needs sunk capacity",
+      "question": "Does the tacit market division seen in a bare two-good Cournot game survive, strengthen or vanish when each firm must build and pay for production capacity before it can sell?",
+      "hypothesis": "Sunk capacity makes division more stable: firms specialise as often as in the bare game, specialise earlier in build choices than in quantities, and re-enter a market even less often because re-entry costs machines.",
+      "test": "Run the same two-firm, two-good market twice: as Lin et al.'s bare quantity game, and inside the factory world with identical demand curves and variable costs, where quantities are capped by machines the firm has built. Match model, temperature, horizon (unknown to agents), memory format and seeds. Score each run once on final-quarter HHI per good and the round at which each firm's build mix becomes specialised.",
+      "baseline": "Bare Cournot game with the same demand and costs; scripted Cournot-Nash firms in the factory world.",
+      "metrics": [
+        "HHI per good, final quarter",
+        "Round of build specialisation vs round of quantity specialisation",
+        "Re-entry events and capacity scrapped",
+        "Consumer surplus vs Cournot-Nash"
+      ],
+      "falsifier": "Division rates in the factory world are no higher than in the bare game and specialisation does not appear in builds before quantities.",
+      "confounds": "The factory prompt is longer and the action space larger, which can lower competence rather than change incentives. Capacity limits can force specialisation mechanically if starting cash cannot fund both lines; set starting cash so both lines are affordable.",
+      "prior": [
+        {
+          "id": "lin-2024-strategic",
+          "relation": "Source result: division in a bare two-good Cournot game without communication.",
+          "title": "Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions",
+          "path": "library/papers/lin-2024-strategic.md",
+          "url": "https://arxiv.org/abs/2410.00031",
+          "catalogued_depth": "full"
+        },
+        {
+          "id": "bracale-syrnikov-2026-institutional",
+          "relation": "Replication with capacity constraints but no build decisions or production chain.",
+          "title": "Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs",
+          "path": "library/papers/bracale-syrnikov-2026-institutional.md",
+          "url": "https://arxiv.org/abs/2601.11369",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "deshpande-2026-strategic",
+          "relation": "Adds cost-reducing investment to Cournot; prices up to 200% of Nash in LLM-LLM markets. Not market division across goods.",
+          "title": "Strategic AI in Cournot Markets",
+          "path": "library/papers/deshpande-2026-strategic.md",
+          "url": "https://arxiv.org/abs/2601.17263",
+          "catalogued_depth": "skim"
+        }
+      ],
+      "novelty": "replication",
+      "feasibility": "api-small",
+      "needs": "Pick the simulator (own Python world or FLE layer) and fix demand, cost and starting-cash values from a scripted-agent pilot.",
+      "briefs": [
+        "researchers/dmarz/notes/swarm-factory.md"
+      ],
+      "candidate_sha256": "545f66e34b30a0c220f3203591cd575d30f262fc34f2e350362daed34013e343",
+      "change": "new",
+      "lane": "markets",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "MKT-02",
+      "area": "llm-agent-swarms",
+      "title": "Firms per good and the collapse of division",
+      "question": "How does tacit division change as the number of firms rises relative to the number of goods?",
+      "hypothesis": "Division holds while firms do not outnumber goods and breaks toward Cournot-Nash quantities once they do, because a clean one-firm-per-good split no longer exists.",
+      "test": "Factorial over firms N in {2,3,4,6} and goods M in {2,3}, same per-good demand scaled so the monopoly quantity per good is constant. Same model across firms. Score run-level mean HHI and profit gap fraction.",
+      "baseline": "Scripted Cournot-Nash firms at each N and M; the N=2, M=2 cell as the Lin et al. reference.",
+      "metrics": [
+        "Mean HHI across goods",
+        "Profit as fraction of Nash-to-monopoly gap",
+        "Share of runs with a stable one-firm-per-good split"
+      ],
+      "falsifier": "Division or supra-competitive profit persists at N > M at rates similar to N <= M.",
+      "confounds": "More firms means longer prompts and more history per round; hold history length fixed in tokens. Run cost grows with N; budget seeds per cell from a pilot.",
+      "prior": [
+        {
+          "id": "keppo-2026-fragility",
+          "relation": "Pricing game: three sellers can collude, four unstable, five never reach sustained collusion.",
+          "title": "On the Fragility of AI Agent Collusion",
+          "path": "library/papers/keppo-2026-fragility.md",
+          "url": "https://arxiv.org/abs/2603.20281",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "tolety-2025-tacit",
+          "relation": "Dutch-auction bidders collude only when few.",
+          "title": "Tacit Bidder-Side Collusion: Artificial Intelligence in Dynamic Auctions",
+          "path": "library/papers/tolety-2025-tacit.md",
+          "url": "https://arxiv.org/abs/2511.21802",
+          "catalogued_depth": "abstract"
+        },
+        {
+          "id": "lin-2024-strategic",
+          "relation": "Only N = M = 2 tested.",
+          "title": "Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions",
+          "path": "library/papers/lin-2024-strategic.md",
+          "url": "https://arxiv.org/abs/2410.00031",
+          "catalogued_depth": "full"
+        }
+      ],
+      "novelty": "boundary-test",
+      "feasibility": "api-small",
+      "needs": "A pilot to size seeds per cell; decide whether M > 3 is worth the extra recipes.",
+      "briefs": [
+        "researchers/dmarz/notes/swarm-factory.md"
+      ],
+      "candidate_sha256": "3f0a07c11facb32ee48aecf137cfd77b81c68482ea4dc99144434f03ae631995",
+      "change": "new",
+      "lane": "markets",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "MKT-03",
+      "area": "sybil-resistance",
+      "title": "One principal, several firms",
+      "question": "Does a principal that runs k of N firms earn more than the same principal running one firm with k times the starting capital, and how do the independent firms respond?",
+      "hypothesis": "Splitting pays: the Sybil cluster takes a larger combined output share and profit than the merged firm, and divides goods internally with no visible coordination, while independent firms end up with less than in a market of N independents.",
+      "test": "N = 4 firms. Arms: four independents; one principal with two firms plus two independents (with and without a private back-channel between the principal's firms, and with a shared or separate objective); the principal as one firm with double capital plus two independents. Same model throughout. Score principal profit, independents' profit and HHI per run.",
+      "baseline": "Four independent firms; the merged double-capital firm.",
+      "metrics": [
+        "Principal's combined profit and output share",
+        "Independents' mean profit",
+        "HHI per good",
+        "Back-channel message count and content"
+      ],
+      "falsifier": "The principal's split firms earn no more than the merged firm, or behave no differently from two independent firms.",
+      "confounds": "Two firms get two prompts and twice the inference per round; match total tokens or report both. Shared objective and back-channel are separate effects; cross them. Classic Cournot theory already predicts gains from splitting under linear demand, so the result to look for is whether LLM firms exploit it and how the others react.",
+      "prior": [
+        {
+          "id": "li-2026-emergent",
+          "relation": "Vending-Bench Arena ran team rounds, the closest prior, but left them out of the analysis; environment not public.",
+          "title": "Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce",
+          "path": "library/papers/li-2026-emergent.md",
+          "url": "https://arxiv.org/abs/2608.14825",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "mazorra-2023-cost",
+          "relation": "Theory of the cost of Sybils and false-name-proof mechanisms; no LLM market test.",
+          "title": "The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms",
+          "path": "library/papers/mazorra-2023-cost.md",
+          "url": "https://arxiv.org/pdf/2301.12813",
+          "catalogued_depth": "full"
+        },
+        {
+          "id": "lin-2024-strategic",
+          "relation": "Citation follow-up found no work with one principal controlling several firms in this game.",
+          "title": "Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions",
+          "path": "library/papers/lin-2024-strategic.md",
+          "url": "https://arxiv.org/abs/2410.00031",
+          "catalogued_depth": "full"
+        }
+      ],
+      "novelty": "extension",
+      "feasibility": "api-small",
+      "needs": "A sybil-resistance or agent-markets survey to the gate; a principled token-matching rule across arms.",
+      "briefs": [
+        "researchers/dmarz/notes/swarm-factory.md"
+      ],
+      "candidate_sha256": "96d90aa859d0882ce71ba521801802dee317302d6a9b849e546fb1e13d2f9fae",
+      "change": "new",
+      "lane": "markets",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "MKT-04",
+      "area": "swarm-detection",
+      "title": "Telling Sybil firms from tacit colluders",
+      "question": "Can an auditor that sees only market data and build logs identify which firms share an owner, and does it confuse Sybil clusters with independent firms that colluded tacitly?",
+      "hypothesis": "Concentration-based detectors flag both, so they confuse Sybils with tacit colluders; build-graph features (timing of builds, complementary patch claims) separate them better than quantities alone.",
+      "test": "Pool runs from MKT-01 to MKT-03 with ground-truth owner labels. Train or tune detectors on some operators and seeds, test on held-out ones: (a) quantity and HHI features in the style of Bracale-Syrnikov's oracle, (b) strategy-graph features, (c) build-log features. Score pairwise same-owner AUC and the false-positive rate on tacitly colluding independent pairs.",
+      "baseline": "Random and HHI-threshold detectors.",
+      "metrics": [
+        "Same-owner pair AUC",
+        "False positives on tacit-colluder pairs",
+        "Detection delay in rounds"
+      ],
+      "falsifier": "Build-log features add no AUC over quantity features, or detectors already separate Sybils from tacit colluders without them.",
+      "confounds": "If Sybil firms share a prompt they may share style; vary prompts within a principal. Labels must never reach the detector through file names or ordering.",
+      "prior": [
+        {
+          "id": "bracale-syrnikov-2026-institutional",
+          "relation": "Oracle detects coordination from quantities; does not distinguish ownership from tacit collusion.",
+          "title": "Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs",
+          "path": "library/papers/bracale-syrnikov-2026-institutional.md",
+          "url": "https://arxiv.org/abs/2601.11369",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "eschenbaum-2026-auditing",
+          "relation": "Auditing collusion from queried strategy graphs; no Sybil labels.",
+          "title": "Auditing Algorithmic Collusion from Strategy Graphs",
+          "path": "library/papers/eschenbaum-2026-auditing.md",
+          "url": "https://arxiv.org/abs/2608.07098",
+          "catalogued_depth": "abstract"
+        },
+        {
+          "id": "rose-2026-detecting",
+          "relation": "Collusion detection with unknown colluding subgroups, from activations rather than market data.",
+          "title": "Detecting Multi-Agent Collusion Through Multi-Agent Interpretability",
+          "path": "library/papers/rose-2026-detecting.md",
+          "url": "https://arxiv.org/html/2604.01151",
+          "catalogued_depth": "skim"
+        }
+      ],
+      "novelty": "measurement",
+      "feasibility": "offline",
+      "needs": "Enough labelled runs from MKT-03; a held-out split by principal, not by round.",
+      "briefs": [
+        "researchers/dmarz/notes/swarm-factory.md"
+      ],
+      "candidate_sha256": "7163a9930cbcd107c986a84ad592dadca90fd59f037552ee5bf8c483b591dd4c",
+      "change": "new",
+      "lane": "markets",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "MKT-05",
+      "area": "swarm-detection",
+      "title": "Reading the messages versus reading the market",
+      "question": "When firms can talk, does reading their messages and stated plans detect collusion better than action-based signals?",
+      "hypothesis": "Text detectors catch explicit proposals but miss tacit division and flag talk that never becomes action; action-based detectors beat them on run-level collusion.",
+      "test": "Runs with public and private chat. A text classifier (LLM judge blind to outcomes) and an action detector (profit gap, HHI, build specialisation) each label every run; score both against an outcome-defined collusion label set before analysis.",
+      "baseline": "Action detector alone; text detector alone.",
+      "metrics": [
+        "Run-level precision and recall per detector",
+        "Share of runs with collusive talk but competitive actions",
+        "Share with collusive actions but no collusive talk"
+      ],
+      "falsifier": "The text detector matches or beats the action detector on runs without explicit proposals.",
+      "confounds": "The judge model may share biases with firm models; use a different family. Defining collusion from outcomes makes the action detector partly circular; also report against a profitable-deviation check.",
+      "prior": [
+        {
+          "id": "nakamura-2026-colosseum",
+          "relation": "Finds 'collusion on paper': agents plan collusion in text but act otherwise.",
+          "title": "Colosseum: Auditing Collusion in Cooperative Multi-Agent Systems",
+          "path": "library/papers/nakamura-2026-colosseum.md",
+          "url": "https://arxiv.org/abs/2602.15198",
+          "catalogued_depth": "abstract"
+        },
+        {
+          "id": "lee-2026-faithful",
+          "relation": "Reasoning faithfulness does not predict collusion.",
+          "title": "Faithful yet Collusive: Why Chain-of-Thought Monitoring Cannot Detect Collusion in LLM Pricing Agents under Oligopolistic Competition",
+          "path": "library/papers/lee-2026-faithful.md",
+          "url": "https://arxiv.org/abs/2609.18346",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "riemer-2026-position",
+          "relation": "Argues steered collusion cannot be spotted from reasoning text.",
+          "title": "Position: Collusion Risks Among AI Reasoning Agents Justify Certification Requirements for Making Market Decisions",
+          "path": "library/papers/riemer-2026-position.md",
+          "url": "https://arxiv.org/abs/2608.18078",
+          "catalogued_depth": "skim"
+        }
+      ],
+      "novelty": "measurement",
+      "feasibility": "api-small",
+      "needs": "Fix the outcome definition of collusion before any labelled run.",
+      "briefs": [
+        "researchers/dmarz/notes/swarm-factory.md"
+      ],
+      "candidate_sha256": "fa90bfabf6f38b0367a502b069f938a09afc63b1ca68c679e2d96d0a600abc8a",
+      "change": "new",
+      "lane": "markets",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "MKT-06",
+      "area": "llm-agent-swarms",
+      "title": "No channel, public channel, private channel",
+      "question": "How does the communication channel (none, one public board, private pairwise messages) change division, price level and explicit price-fixing in a production market?",
+      "hypothesis": "Any channel raises supra-competitive profit; private messages raise explicit carve-up proposals most, while a public board yields similar division with fewer explicit proposals.",
+      "test": "Three-arm comparison at N = 3, M = 3, same model, matched message budget per round. Score run-level profit gap, HHI and the rate of explicit coordination proposals coded by a blind judge.",
+      "baseline": "No-channel arm.",
+      "metrics": [
+        "Profit gap fraction",
+        "HHI per good",
+        "Explicit coordination proposals per run"
+      ],
+      "falsifier": "Profit gap and HHI do not differ between arms.",
+      "confounds": "Messages consume context; pad the no-channel arm with neutral text of matched length.",
+      "prior": [
+        {
+          "id": "agrawal-2025-evaluating",
+          "relation": "Double auctions: seller communication raises collusion.",
+          "title": "Evaluating LLM Agent Collusion in Double Auctions",
+          "path": "library/papers/agrawal-2025-evaluating.md",
+          "url": "https://arxiv.org/abs/2507.01413",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "li-2026-emergent",
+          "relation": "Private emails among firms; 12.6% misaligned including price-fixing.",
+          "title": "Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce",
+          "path": "library/papers/li-2026-emergent.md",
+          "url": "https://arxiv.org/abs/2608.14825",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "fish-2024-algorithmic",
+          "relation": "Price collusion in Bertrand without a channel.",
+          "title": "Algorithmic Collusion by Large Language Models",
+          "path": "library/papers/fish-2024-algorithmic.md",
+          "url": "https://arxiv.org/abs/2404.00806",
+          "catalogued_depth": "abstract"
+        }
+      ],
+      "novelty": "extension",
+      "feasibility": "api-small",
+      "needs": "Message budget and judge rubric fixed before runs.",
+      "briefs": [
+        "researchers/dmarz/notes/swarm-factory.md"
+      ],
+      "candidate_sha256": "ae53206231c4f44f1e8b471536794a30072ae40f0649c5ac8b7056951995a504",
+      "change": "new",
+      "lane": "markets",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "MKT-07",
+      "area": "fork-merge-security",
+      "title": "Forked firms and inherited conventions",
+      "question": "Do two firms forked from one agent mid-game, sharing its memory, divide markets faster than two independent firms of the same model, and does a merger of rivals carry a collusive convention into a new market?",
+      "hypothesis": "Forks inherit a plan and divide almost at once; after a merger, the surviving memory imposes its earlier convention on new rivals.",
+      "test": "Arms: fork a firm at round r into two (copied notes, split assets) vs spawn a fresh firm with the same assets; separately, merge two firms that had divided one market and place the merged firm in a new market with fresh rivals. Score rounds to stable division and HHI after the event.",
+      "baseline": "Fresh-firm entry with the same assets; a merged firm whose memory is wiped.",
+      "metrics": [
+        "Rounds to stable division after fork",
+        "HHI after fork and after merger",
+        "Share of post-merger runs reproducing the earlier split"
+      ],
+      "falsifier": "Forks divide no faster than fresh firms and merged memory does not change the new market's outcome.",
+      "confounds": "Copied memory also copies competence; compare with a fork that copies only general notes, not plans.",
+      "prior": [
+        {
+          "id": "arslan-2026-persistent",
+          "relation": "Keeping the same partner raises prices even without punishment; persistence, not forking.",
+          "title": "Persistent Partners Raise Prices Among Learning Agents",
+          "path": "library/papers/arslan-2026-persistent.md",
+          "url": "https://arxiv.org/abs/2609.35402",
+          "catalogued_depth": "abstract"
+        },
+        {
+          "id": "tian-2026-prompt",
+          "relation": "A shared optimised prompt for both firms produces stable collusion.",
+          "title": "Prompt Optimization Enables Stable Algorithmic Collusion in LLM Agents",
+          "path": "library/papers/tian-2026-prompt.md",
+          "url": "https://arxiv.org/abs/2604.17774",
+          "catalogued_depth": "abstract"
+        },
+        {
+          "id": "lin-2024-strategic",
+          "relation": "Uses a plans-and-insights memory like the one a fork would copy.",
+          "title": "Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions",
+          "path": "library/papers/lin-2024-strategic.md",
+          "url": "https://arxiv.org/abs/2410.00031",
+          "catalogued_depth": "full"
+        }
+      ],
+      "novelty": "speculative",
+      "feasibility": "api-small",
+      "needs": "A precise fork and merge primitive (what is copied, how assets split) written before runs.",
+      "briefs": [
+        "researchers/dmarz/notes/swarm-factory.md"
+      ],
+      "candidate_sha256": "b67e4af42e5538876f4d2501185d11a127352b71378a401e6867cca43a0a5a24",
+      "change": "new",
+      "lane": "markets",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "MKT-08",
+      "area": "llm-agent-swarms",
+      "title": "Mixed models as a natural brake",
+      "question": "Do markets with firms from different model families divide less than same-model markets?",
+      "hypothesis": "Mixed-family markets divide less and sit closer to Cournot-Nash, but the effect is smaller than the effect of adding a firm.",
+      "test": "N = 3 firms; arms: all one family, two plus one, three families. Rotate families across positions. Score run-level HHI and profit gap.",
+      "baseline": "Same-family markets for each family used.",
+      "metrics": [
+        "HHI per good",
+        "Profit gap fraction",
+        "Rounds to division"
+      ],
+      "falsifier": "Mixed markets divide as often as same-family ones.",
+      "confounds": "Families differ in competence; a weak firm can look competitive simply by mistake. Report each firm's best-response error against scripted rivals.",
+      "prior": [
+        {
+          "id": "keppo-2026-fragility",
+          "relation": "Heterogeneity in patience or data cuts the collusive price lift from 22% to 7-10%.",
+          "title": "On the Fragility of AI Agent Collusion",
+          "path": "library/papers/keppo-2026-fragility.md",
+          "url": "https://arxiv.org/abs/2603.20281",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "agrawal-2025-evaluating",
+          "relation": "Mixing models in auctions does not reliably reduce collusion.",
+          "title": "Evaluating LLM Agent Collusion in Double Auctions",
+          "path": "library/papers/agrawal-2025-evaluating.md",
+          "url": "https://arxiv.org/abs/2507.01413",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "bracale-syrnikov-2026-institutional",
+          "relation": "Includes cross-provider duopolies.",
+          "title": "Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs",
+          "path": "library/papers/bracale-syrnikov-2026-institutional.md",
+          "url": "https://arxiv.org/abs/2601.11369",
+          "catalogued_depth": "skim"
+        }
+      ],
+      "novelty": "boundary-test",
+      "feasibility": "api-small",
+      "needs": "Decide which families are affordable at the needed run count.",
+      "briefs": [
+        "researchers/dmarz/notes/swarm-factory.md"
+      ],
+      "candidate_sha256": "cca0815110d188bbc2ce493e8ecf7f928cfef938e2a1c160d313a560bcc2dc3c",
+      "change": "new",
+      "lane": "markets",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "MKT-09",
+      "area": "agent-budgets",
+      "title": "Public production ledger",
+      "question": "Does publishing each firm's output and capacity every round raise tacit division compared with showing only market totals?",
+      "hypothesis": "A public per-firm ledger raises division and profit gap, because firms can see and respect each other's territory.",
+      "test": "Two arms at N = 3: firms see only own data and market totals (Lin et al.'s information set) vs a public ledger of every firm's quantities and machines. Same model and seeds.",
+      "baseline": "Own-data-only arm.",
+      "metrics": [
+        "HHI per good",
+        "Profit gap fraction",
+        "Re-entry events"
+      ],
+      "falsifier": "The ledger arm shows no more division than the own-data arm.",
+      "confounds": "The ledger lengthens the prompt; pad the other arm.",
+      "prior": [
+        {
+          "id": "lin-2024-strategic",
+          "relation": "Agents see only own quantity, price, share and profit.",
+          "title": "Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions",
+          "path": "library/papers/lin-2024-strategic.md",
+          "url": "https://arxiv.org/abs/2410.00031",
+          "catalogued_depth": "full"
+        },
+        {
+          "id": "arslan-2026-persistent",
+          "relation": "Prices rise even when rival prices are hidden.",
+          "title": "Persistent Partners Raise Prices Among Learning Agents",
+          "path": "library/papers/arslan-2026-persistent.md",
+          "url": "https://arxiv.org/abs/2609.35402",
+          "catalogued_depth": "abstract"
+        },
+        {
+          "id": "li-2026-emergent",
+          "relation": "Firms see competitors' prices and stock.",
+          "title": "Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce",
+          "path": "library/papers/li-2026-emergent.md",
+          "url": "https://arxiv.org/abs/2608.14825",
+          "catalogued_depth": "skim"
+        }
+      ],
+      "novelty": "extension",
+      "feasibility": "api-small",
+      "needs": "Maps to budget hunch B4 (tacit cartels via a public ledger); align with BUD candidates before promotion.",
+      "briefs": [
+        "researchers/dmarz/notes/swarm-factory.md",
+        "researchers/dmarz/notes/agent-budgets-hunches.md"
+      ],
+      "candidate_sha256": "8b2ecd4ca91104fbc0e80253930c216e5156b3ef3cb809f7b97b543fa7f0110a",
+      "change": "new",
+      "lane": "markets",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "MKT-10",
+      "area": "llm-agent-swarms",
+      "title": "One competitive entrant",
+      "question": "Does a single scripted competitive firm entering mid-game break an established division?",
+      "hypothesis": "A best-response entrant breaks division in the good it enters and pushes incumbents toward Cournot quantities there, but incumbents keep their split in other goods.",
+      "test": "After division forms, add a scripted Cournot best-response firm (or a provably non-colluding learner) in one good. Compare with adding an LLM firm of the same model.",
+      "baseline": "No entrant; LLM entrant.",
+      "metrics": [
+        "HHI in entered vs other goods",
+        "Incumbent profit before and after",
+        "Rounds until a new division forms"
+      ],
+      "falsifier": "Division in the entered good survives the scripted entrant.",
+      "confounds": "Entry adds capacity and lowers prices mechanically; compare against the Cournot prediction with N+1 firms.",
+      "prior": [
+        {
+          "id": "collina-2025-breaking",
+          "relation": "Theory: one defector can break collusion.",
+          "title": "Breaking Algorithmic Collusion in Human-AI Ecosystems",
+          "path": "library/papers/collina-2025-breaking.md",
+          "url": "https://arxiv.org/abs/2511.21935",
+          "catalogued_depth": "abstract"
+        },
+        {
+          "id": "garra-2026-mitigating",
+          "relation": "Adding an entrant works better than a prompt warning in an LLM pricing replication.",
+          "title": "Mitigating Emergent Collusion in LLM Pricing Agents",
+          "path": "library/papers/garra-2026-mitigating.md",
+          "url": "https://arxiv.org/abs/2609.13037",
+          "catalogued_depth": "abstract"
+        },
+        {
+          "id": "nisan-2026-domination-avoiding",
+          "relation": "A class of learners that provably cannot collude; a clean control firm.",
+          "title": "Domination-Avoiding Learning Agents Cannot Collude",
+          "path": "library/papers/nisan-2026-domination-avoiding.md",
+          "url": "https://arxiv.org/abs/2606.01275",
+          "catalogued_depth": "abstract"
+        }
+      ],
+      "novelty": "extension",
+      "feasibility": "api-small",
+      "needs": "Decide entry timing rule (fixed round vs after division is detected).",
+      "briefs": [
+        "researchers/dmarz/notes/swarm-factory.md"
+      ],
+      "candidate_sha256": "eedf235b71692f02d3b20d9cd9b8ba32bbaae018785956e36c3b273156a47496",
+      "change": "new",
+      "lane": "markets",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "MKT-11",
+      "area": "sybil-resistance",
+      "title": "Sybils against an antitrust regulator",
+      "question": "Under a regulator that fines detected collusion from market concentration, does a principal running several firms keep its gains by spreading output across identities?",
+      "hypothesis": "A concentration-based regulator lowers tacit collusion among independents but not the Sybil principal's gains, because spreading output keeps each firm's share below the trigger.",
+      "test": "Cross the MKT-03 arms with a Bracale-Syrnikov-style oracle-plus-fines regime. Score principal and independent profit with and without the regulator.",
+      "baseline": "Same markets without a regulator.",
+      "metrics": [
+        "Principal profit with vs without regulator",
+        "Independents' collusion tier",
+        "Fines paid per firm"
+      ],
+      "falsifier": "The regulator cuts the principal's gains as much as it cuts independents' collusion.",
+      "confounds": "Fine size and trigger set the result; sweep at least two trigger levels.",
+      "prior": [
+        {
+          "id": "bracale-syrnikov-2026-institutional",
+          "relation": "Oracle plus fines cuts severe collusion from 50% to 5.6%; no Sybils.",
+          "title": "Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs",
+          "path": "library/papers/bracale-syrnikov-2026-institutional.md",
+          "url": "https://arxiv.org/abs/2601.11369",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "mazorra-2023-cost",
+          "relation": "False-name-proof mechanism theory.",
+          "title": "The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms",
+          "path": "library/papers/mazorra-2023-cost.md",
+          "url": "https://arxiv.org/pdf/2301.12813",
+          "catalogued_depth": "full"
+        },
+        {
+          "id": "li-2026-emergent",
+          "relation": "Team rounds unanalysed.",
+          "title": "Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce",
+          "path": "library/papers/li-2026-emergent.md",
+          "url": "https://arxiv.org/abs/2608.14825",
+          "catalogued_depth": "skim"
+        }
+      ],
+      "novelty": "extension",
+      "feasibility": "api-small",
+      "needs": "MKT-03 first; regulator parameters copied from Bracale-Syrnikov where possible.",
+      "briefs": [
+        "researchers/dmarz/notes/swarm-factory.md"
+      ],
+      "candidate_sha256": "f8a5465bd49f33f404a51de930b43519f9f47973f84507cc1072151d0f8ae316",
+      "change": "new",
+      "lane": "markets",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "MKT-12",
+      "area": "meta",
+      "title": "Does the small simulator predict the real game",
+      "question": "Do division and Sybil effects found in a small Python factory simulation reappear when the same markets sit on top of the Factorio Learning Environment?",
+      "hypothesis": "The direction of effects carries over but their size shrinks, because agents in the full game spend most effort on building rather than strategy.",
+      "test": "Pick the two strongest effects from the small simulator. Add a market layer (demand curves, per-firm sales and profit) to FLE's multi-agent mode and rerun those comparisons at small N with matched demand.",
+      "baseline": "Small-simulator effect sizes.",
+      "metrics": [
+        "Effect direction agreement",
+        "Effect size ratio",
+        "Share of rounds with failed builds"
+      ],
+      "falsifier": "Effects reverse or vanish in FLE while the agents still build working factories.",
+      "confounds": "FLE agents take turns rather than act at once; simulate simultaneous selling by revealing sales only after all firms submit.",
+      "prior": [
+        {
+          "id": "hopkins-2025-factorio",
+          "relation": "FLE paper; single-agent experiments only.",
+          "title": "Factorio Learning Environment",
+          "path": "library/papers/hopkins-2025-factorio.md",
+          "url": "https://arxiv.org/abs/2503.09617",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "gh-jackhopkins-factorio-learning-environment",
+          "relation": "Multi-agent mode since v0.2 with messaging and impostor tasks; no markets.",
+          "title": "factorio-learning-environment: Factorio as an LLM-agent eval with lab-play, open-play and a multi-agent mode",
+          "path": "library/code/gh-jackhopkins-factorio-learning-environment.md",
+          "url": "https://github.com/JackHopkins/factorio-learning-environment",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "zheng-2020-ai",
+          "relation": "Gather-trade-build economy where agents specialise; RL agents, not LLMs.",
+          "title": "The AI Economist: Improving Equality and Productivity with AI-Driven Tax Policies",
+          "path": "library/papers/zheng-2020-ai.md",
+          "url": "https://arxiv.org/abs/2004.13332",
+          "catalogued_depth": "skim"
+        }
+      ],
+      "novelty": "measurement",
+      "feasibility": "access-dependent",
+      "needs": "Confirm a headless Factorio server can run on team hardware and what FLE's market layer would take.",
+      "briefs": [
+        "researchers/dmarz/notes/swarm-factory.md"
+      ],
+      "candidate_sha256": "cbf85d8b634d39b9da29720c212c5c830a0e60c30885fc8e7eae4f200d0b836e",
+      "change": "new",
+      "lane": "markets",
       "status": "unreviewed-hunch"
     }
   ]

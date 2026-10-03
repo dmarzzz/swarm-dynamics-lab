@@ -2951,7 +2951,8 @@
         "agent-budgets"
       ],
       "cited_by": [
-        "BUD-15"
+        "BUD-15",
+        "MKT-06"
       ]
     },
     {
@@ -3678,7 +3679,12 @@
         "llm-agent-swarms"
       ],
       "cited_by": [
-        "BUD-14"
+        "BUD-14",
+        "MKT-01",
+        "MKT-02",
+        "MKT-03",
+        "MKT-07",
+        "MKT-09"
       ]
     },
     {
@@ -4013,7 +4019,8 @@
         "agent-budgets"
       ],
       "cited_by": [
-        "BUD-15"
+        "BUD-15",
+        "MKT-05"
       ]
     },
     {

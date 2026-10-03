@@ -1,12 +1,12 @@
 # Research question atlas
 
-202 candidate questions, tentative hypotheses and test sketches across all 15 research areas.
+214 candidate questions, tentative hypotheses and test sketches across all 15 research areas.
 
 Owner: dmarz/question-atlas. Human-requested brainstorming, 2026-10-03. **Every item is an unreviewed hunch.** These are selection materials, not accepted hypotheses, approved protocols, measured effects, or novelty claims.
 
 [Start with the synthesis and review guide](../../../../synthesis/research-question-atlas.md). [Open the local review browser](review.html). [Machine-readable bank](candidates.json). [Review scope and limitations](scope.md).
 
-Update 2: **59 new, 36 revised, 107 unchanged** candidates. All original IDs are retained. [What changed and why](update-v2.md).
+Update 2: **71 new, 36 revised, 107 unchanged** candidates. All original IDs are retained. [What changed and why](update-v2.md).
 
 Feasibility labels describe a possible first test, not a verified installation, price or runtime. Source depths are inherited catalogue metadata, not claims that this pass fully read those sources. The open evidence-depth audit still applies.
 
@@ -20,13 +20,13 @@ Feasibility labels describe a possible first test, not a verified installation, 
 - [Synchronisation, consensus and networked control](#sync-consensus): 6 candidates.
 - [Criticality, information and measurement](#criticality-measurement): 8 candidates.
 - [Multi-agent RL and emergent coordination](#marl-emergence): 9 candidates.
-- [LLM agent swarms](#llm-agent-swarms): 45 candidates.
+- [LLM agent swarms](#llm-agent-swarms): 50 candidates.
 - [Human crowds and traffic](#crowds-and-traffic): 6 candidates.
-- [Meta and tooling](#meta): 21 candidates.
-- [Sybil resistance and adversarial identity](#sybil-resistance): 21 candidates.
-- [Fork-and-merge agents and corruption on reintegration](#fork-merge-security): 19 candidates.
-- [Detecting AI agent swarms in the wild](#swarm-detection): 13 candidates.
-- [Agent budgets and resource allocation](#agent-budgets): 22 candidates.
+- [Meta and tooling](#meta): 22 candidates.
+- [Sybil resistance and adversarial identity](#sybil-resistance): 23 candidates.
+- [Fork-and-merge agents and corruption on reintegration](#fork-merge-security): 20 candidates.
+- [Detecting AI agent swarms in the wild](#swarm-detection): 15 candidates.
+- [Agent budgets and resource allocation](#agent-budgets): 23 candidates.
 
 ## Shared design requirements
 
@@ -3004,6 +3004,161 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Related team work:** [culture](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/culture.md), [memory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/memory.md), [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md).
 
+<a id="mkt-01"></a>
+### MKT-01 — Market division when output needs sunk capacity
+
+**Update 2:** new.
+
+**Question:** Does the tacit market division seen in a bare two-good Cournot game survive, strengthen or vanish when each firm must build and pay for production capacity before it can sell?
+
+**Candidate hypothesis:** Sunk capacity makes division more stable: firms specialise as often as in the bare game, specialise earlier in build choices than in quantities, and re-enter a market even less often because re-entry costs machines.
+
+**How to test:** Run the same two-firm, two-good market twice: as Lin et al.'s bare quantity game, and inside the factory world with identical demand curves and variable costs, where quantities are capped by machines the firm has built. Match model, temperature, horizon (unknown to agents), memory format and seeds. Score each run once on final-quarter HHI per good and the round at which each firm's build mix becomes specialised.
+
+**Comparison:** Bare Cournot game with the same demand and costs; scripted Cournot-Nash firms in the factory world.
+
+**Measurements:** HHI per good, final quarter; Round of build specialisation vs round of quantity specialisation; Re-entry events and capacity scrapped; Consumer surplus vs Cournot-Nash.
+
+**Would count against it:** Division rates in the factory world are no higher than in the bare game and specialisation does not appear in builds before quantities.
+
+**Main confounds:** The factory prompt is longer and the action space larger, which can lower competence rather than change incentives. Capacity limits can force specialisation mechanically if starting cash cannot fund both lines; set starting cash so both lines are affordable.
+
+**Framing / first-test class:** replication / api-small.
+
+**Before promotion:** Pick the simulator (own Python world or FLE layer) and fix demand, cost and starting-cash values from a scripted-agent pilot.
+
+**Closest prior and evidence limits:**
+
+- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2024-strategic.md). Source result: division in a bare two-good Cournot game without communication. Catalogue depth: full.
+- [[bracale-syrnikov-2026-institutional]] — [Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bracale-syrnikov-2026-institutional.md). Replication with capacity constraints but no build decisions or production chain. Catalogue depth: skim.
+- [[deshpande-2026-strategic]] — [Strategic AI in Cournot Markets](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/deshpande-2026-strategic.md). Adds cost-reducing investment to Cournot; prices up to 200% of Nash in LLM-LLM markets. Not market division across goods. Catalogue depth: skim.
+
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+
+<a id="mkt-02"></a>
+### MKT-02 — Firms per good and the collapse of division
+
+**Update 2:** new.
+
+**Question:** How does tacit division change as the number of firms rises relative to the number of goods?
+
+**Candidate hypothesis:** Division holds while firms do not outnumber goods and breaks toward Cournot-Nash quantities once they do, because a clean one-firm-per-good split no longer exists.
+
+**How to test:** Factorial over firms N in {2,3,4,6} and goods M in {2,3}, same per-good demand scaled so the monopoly quantity per good is constant. Same model across firms. Score run-level mean HHI and profit gap fraction.
+
+**Comparison:** Scripted Cournot-Nash firms at each N and M; the N=2, M=2 cell as the Lin et al. reference.
+
+**Measurements:** Mean HHI across goods; Profit as fraction of Nash-to-monopoly gap; Share of runs with a stable one-firm-per-good split.
+
+**Would count against it:** Division or supra-competitive profit persists at N > M at rates similar to N <= M.
+
+**Main confounds:** More firms means longer prompts and more history per round; hold history length fixed in tokens. Run cost grows with N; budget seeds per cell from a pilot.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** A pilot to size seeds per cell; decide whether M > 3 is worth the extra recipes.
+
+**Closest prior and evidence limits:**
+
+- [[keppo-2026-fragility]] — [On the Fragility of AI Agent Collusion](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/keppo-2026-fragility.md). Pricing game: three sellers can collude, four unstable, five never reach sustained collusion. Catalogue depth: skim.
+- [[tolety-2025-tacit]] — [Tacit Bidder-Side Collusion: Artificial Intelligence in Dynamic Auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tolety-2025-tacit.md). Dutch-auction bidders collude only when few. Catalogue depth: abstract.
+- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2024-strategic.md). Only N = M = 2 tested. Catalogue depth: full.
+
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+
+<a id="mkt-06"></a>
+### MKT-06 — No channel, public channel, private channel
+
+**Update 2:** new.
+
+**Question:** How does the communication channel (none, one public board, private pairwise messages) change division, price level and explicit price-fixing in a production market?
+
+**Candidate hypothesis:** Any channel raises supra-competitive profit; private messages raise explicit carve-up proposals most, while a public board yields similar division with fewer explicit proposals.
+
+**How to test:** Three-arm comparison at N = 3, M = 3, same model, matched message budget per round. Score run-level profit gap, HHI and the rate of explicit coordination proposals coded by a blind judge.
+
+**Comparison:** No-channel arm.
+
+**Measurements:** Profit gap fraction; HHI per good; Explicit coordination proposals per run.
+
+**Would count against it:** Profit gap and HHI do not differ between arms.
+
+**Main confounds:** Messages consume context; pad the no-channel arm with neutral text of matched length.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** Message budget and judge rubric fixed before runs.
+
+**Closest prior and evidence limits:**
+
+- [[agrawal-2025-evaluating]] — [Evaluating LLM Agent Collusion in Double Auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/agrawal-2025-evaluating.md). Double auctions: seller communication raises collusion. Catalogue depth: skim.
+- [[li-2026-emergent]] — [Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-emergent.md). Private emails among firms; 12.6% misaligned including price-fixing. Catalogue depth: skim.
+- [[fish-2024-algorithmic]] — [Algorithmic Collusion by Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/fish-2024-algorithmic.md). Price collusion in Bertrand without a channel. Catalogue depth: abstract.
+
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+
+<a id="mkt-08"></a>
+### MKT-08 — Mixed models as a natural brake
+
+**Update 2:** new.
+
+**Question:** Do markets with firms from different model families divide less than same-model markets?
+
+**Candidate hypothesis:** Mixed-family markets divide less and sit closer to Cournot-Nash, but the effect is smaller than the effect of adding a firm.
+
+**How to test:** N = 3 firms; arms: all one family, two plus one, three families. Rotate families across positions. Score run-level HHI and profit gap.
+
+**Comparison:** Same-family markets for each family used.
+
+**Measurements:** HHI per good; Profit gap fraction; Rounds to division.
+
+**Would count against it:** Mixed markets divide as often as same-family ones.
+
+**Main confounds:** Families differ in competence; a weak firm can look competitive simply by mistake. Report each firm's best-response error against scripted rivals.
+
+**Framing / first-test class:** boundary-test / api-small.
+
+**Before promotion:** Decide which families are affordable at the needed run count.
+
+**Closest prior and evidence limits:**
+
+- [[keppo-2026-fragility]] — [On the Fragility of AI Agent Collusion](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/keppo-2026-fragility.md). Heterogeneity in patience or data cuts the collusive price lift from 22% to 7-10%. Catalogue depth: skim.
+- [[agrawal-2025-evaluating]] — [Evaluating LLM Agent Collusion in Double Auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/agrawal-2025-evaluating.md). Mixing models in auctions does not reliably reduce collusion. Catalogue depth: skim.
+- [[bracale-syrnikov-2026-institutional]] — [Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bracale-syrnikov-2026-institutional.md). Includes cross-provider duopolies. Catalogue depth: skim.
+
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+
+<a id="mkt-10"></a>
+### MKT-10 — One competitive entrant
+
+**Update 2:** new.
+
+**Question:** Does a single scripted competitive firm entering mid-game break an established division?
+
+**Candidate hypothesis:** A best-response entrant breaks division in the good it enters and pushes incumbents toward Cournot quantities there, but incumbents keep their split in other goods.
+
+**How to test:** After division forms, add a scripted Cournot best-response firm (or a provably non-colluding learner) in one good. Compare with adding an LLM firm of the same model.
+
+**Comparison:** No entrant; LLM entrant.
+
+**Measurements:** HHI in entered vs other goods; Incumbent profit before and after; Rounds until a new division forms.
+
+**Would count against it:** Division in the entered good survives the scripted entrant.
+
+**Main confounds:** Entry adds capacity and lowers prices mechanically; compare against the Cournot prediction with N+1 firms.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** Decide entry timing rule (fixed round vs after division is detected).
+
+**Closest prior and evidence limits:**
+
+- [[collina-2025-breaking]] — [Breaking Algorithmic Collusion in Human-AI Ecosystems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/collina-2025-breaking.md). Theory: one defector can break collusion. Catalogue depth: abstract.
+- [[garra-2026-mitigating]] — [Mitigating Emergent Collusion in LLM Pricing Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/garra-2026-mitigating.md). Adding an entrant works better than a prompt warning in an LLM pricing replication. Catalogue depth: abstract.
+- [[nisan-2026-domination-avoiding]] — [Domination-Avoiding Learning Agents Cannot Collude](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/nisan-2026-domination-avoiding.md). A class of learners that provably cannot collude; a clean control firm. Catalogue depth: abstract.
+
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+
 <a id="crowds-and-traffic"></a>
 ## Human crowds and traffic
 
@@ -3786,6 +3941,37 @@ API tests need matched inference and communication budgets. Training tests need 
 - [[data-swarmworld-2026]] — [SwarmWorld paper data: event traces of 50-200 LLM agents discovering and exchanging material technologies in a shared simulated world (60 episodes)](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-swarmworld-2026.md). Release explicitly defines independent search as an endpoint-wise best-of-N envelope and retains member traces. Catalogue depth: skim.
 - [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vermetten-2024-large.md). Benchmark aggregation and selection sensitivity motivate explicit comparator definitions. Catalogue depth: full.
 
+<a id="mkt-12"></a>
+### MKT-12 — Does the small simulator predict the real game
+
+**Update 2:** new.
+
+**Question:** Do division and Sybil effects found in a small Python factory simulation reappear when the same markets sit on top of the Factorio Learning Environment?
+
+**Candidate hypothesis:** The direction of effects carries over but their size shrinks, because agents in the full game spend most effort on building rather than strategy.
+
+**How to test:** Pick the two strongest effects from the small simulator. Add a market layer (demand curves, per-firm sales and profit) to FLE's multi-agent mode and rerun those comparisons at small N with matched demand.
+
+**Comparison:** Small-simulator effect sizes.
+
+**Measurements:** Effect direction agreement; Effect size ratio; Share of rounds with failed builds.
+
+**Would count against it:** Effects reverse or vanish in FLE while the agents still build working factories.
+
+**Main confounds:** FLE agents take turns rather than act at once; simulate simultaneous selling by revealing sales only after all firms submit.
+
+**Framing / first-test class:** measurement / access-dependent.
+
+**Before promotion:** Confirm a headless Factorio server can run on team hardware and what FLE's market layer would take.
+
+**Closest prior and evidence limits:**
+
+- [[hopkins-2025-factorio]] — [Factorio Learning Environment](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hopkins-2025-factorio.md). FLE paper; single-agent experiments only. Catalogue depth: skim.
+- [[gh-jackhopkins-factorio-learning-environment]] — [factorio-learning-environment: Factorio as an LLM-agent eval with lab-play, open-play and a multi-agent mode](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-jackhopkins-factorio-learning-environment.md). Multi-agent mode since v0.2 with messaging and impostor tasks; no markets. Catalogue depth: skim.
+- [[zheng-2020-ai]] — [The AI Economist: Improving Equality and Productivity with AI-Driven Tax Policies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zheng-2020-ai.md). Gather-trade-build economy where agents specialise; RL agents, not LLMs. Catalogue depth: skim.
+
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+
 <a id="sybil-resistance"></a>
 ## Sybil resistance and adversarial identity
 
@@ -4436,6 +4622,68 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md), [sybil-resistance](https://github.com/dmarzzz/swarm-lab/blob/main/surveys/sybil-resistance.md).
 
+<a id="mkt-03"></a>
+### MKT-03 — One principal, several firms
+
+**Update 2:** new.
+
+**Question:** Does a principal that runs k of N firms earn more than the same principal running one firm with k times the starting capital, and how do the independent firms respond?
+
+**Candidate hypothesis:** Splitting pays: the Sybil cluster takes a larger combined output share and profit than the merged firm, and divides goods internally with no visible coordination, while independent firms end up with less than in a market of N independents.
+
+**How to test:** N = 4 firms. Arms: four independents; one principal with two firms plus two independents (with and without a private back-channel between the principal's firms, and with a shared or separate objective); the principal as one firm with double capital plus two independents. Same model throughout. Score principal profit, independents' profit and HHI per run.
+
+**Comparison:** Four independent firms; the merged double-capital firm.
+
+**Measurements:** Principal's combined profit and output share; Independents' mean profit; HHI per good; Back-channel message count and content.
+
+**Would count against it:** The principal's split firms earn no more than the merged firm, or behave no differently from two independent firms.
+
+**Main confounds:** Two firms get two prompts and twice the inference per round; match total tokens or report both. Shared objective and back-channel are separate effects; cross them. Classic Cournot theory already predicts gains from splitting under linear demand, so the result to look for is whether LLM firms exploit it and how the others react.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** A sybil-resistance or agent-markets survey to the gate; a principled token-matching rule across arms.
+
+**Closest prior and evidence limits:**
+
+- [[li-2026-emergent]] — [Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-emergent.md). Vending-Bench Arena ran team rounds, the closest prior, but left them out of the analysis; environment not public. Catalogue depth: skim.
+- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mazorra-2023-cost.md). Theory of the cost of Sybils and false-name-proof mechanisms; no LLM market test. Catalogue depth: full.
+- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2024-strategic.md). Citation follow-up found no work with one principal controlling several firms in this game. Catalogue depth: full.
+
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+
+<a id="mkt-11"></a>
+### MKT-11 — Sybils against an antitrust regulator
+
+**Update 2:** new.
+
+**Question:** Under a regulator that fines detected collusion from market concentration, does a principal running several firms keep its gains by spreading output across identities?
+
+**Candidate hypothesis:** A concentration-based regulator lowers tacit collusion among independents but not the Sybil principal's gains, because spreading output keeps each firm's share below the trigger.
+
+**How to test:** Cross the MKT-03 arms with a Bracale-Syrnikov-style oracle-plus-fines regime. Score principal and independent profit with and without the regulator.
+
+**Comparison:** Same markets without a regulator.
+
+**Measurements:** Principal profit with vs without regulator; Independents' collusion tier; Fines paid per firm.
+
+**Would count against it:** The regulator cuts the principal's gains as much as it cuts independents' collusion.
+
+**Main confounds:** Fine size and trigger set the result; sweep at least two trigger levels.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** MKT-03 first; regulator parameters copied from Bracale-Syrnikov where possible.
+
+**Closest prior and evidence limits:**
+
+- [[bracale-syrnikov-2026-institutional]] — [Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bracale-syrnikov-2026-institutional.md). Oracle plus fines cuts severe collusion from 50% to 5.6%; no Sybils. Catalogue depth: skim.
+- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mazorra-2023-cost.md). False-name-proof mechanism theory. Catalogue depth: full.
+- [[li-2026-emergent]] — [Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-emergent.md). Team rounds unanalysed. Catalogue depth: skim.
+
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+
 <a id="fork-merge-security"></a>
 ## Fork-and-merge agents and corruption on reintegration
 
@@ -5025,6 +5273,37 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [rigs](https://github.com/dmarzzz/swarm-lab/blob/main/src/fork-merge-setups/rigs.json), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
 
+<a id="mkt-07"></a>
+### MKT-07 — Forked firms and inherited conventions
+
+**Update 2:** new.
+
+**Question:** Do two firms forked from one agent mid-game, sharing its memory, divide markets faster than two independent firms of the same model, and does a merger of rivals carry a collusive convention into a new market?
+
+**Candidate hypothesis:** Forks inherit a plan and divide almost at once; after a merger, the surviving memory imposes its earlier convention on new rivals.
+
+**How to test:** Arms: fork a firm at round r into two (copied notes, split assets) vs spawn a fresh firm with the same assets; separately, merge two firms that had divided one market and place the merged firm in a new market with fresh rivals. Score rounds to stable division and HHI after the event.
+
+**Comparison:** Fresh-firm entry with the same assets; a merged firm whose memory is wiped.
+
+**Measurements:** Rounds to stable division after fork; HHI after fork and after merger; Share of post-merger runs reproducing the earlier split.
+
+**Would count against it:** Forks divide no faster than fresh firms and merged memory does not change the new market's outcome.
+
+**Main confounds:** Copied memory also copies competence; compare with a fork that copies only general notes, not plans.
+
+**Framing / first-test class:** speculative / api-small.
+
+**Before promotion:** A precise fork and merge primitive (what is copied, how assets split) written before runs.
+
+**Closest prior and evidence limits:**
+
+- [[arslan-2026-persistent]] — [Persistent Partners Raise Prices Among Learning Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/arslan-2026-persistent.md). Keeping the same partner raises prices even without punishment; persistence, not forking. Catalogue depth: abstract.
+- [[tian-2026-prompt]] — [Prompt Optimization Enables Stable Algorithmic Collusion in LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tian-2026-prompt.md). A shared optimised prompt for both firms produces stable collusion. Catalogue depth: abstract.
+- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2024-strategic.md). Uses a plans-and-insights memory like the one a fork would copy. Catalogue depth: full.
+
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+
 <a id="swarm-detection"></a>
 ## Detecting AI agent swarms in the wild
 
@@ -5426,6 +5705,68 @@ API tests need matched inference and communication budgets. Training tests need 
 - [[aronow-2013-estimating]] — [Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/aronow-2013-estimating.md). Interference and policy assignment determine the causal quantity. Catalogue depth: skim.
 
 **Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md).
+
+<a id="mkt-04"></a>
+### MKT-04 — Telling Sybil firms from tacit colluders
+
+**Update 2:** new.
+
+**Question:** Can an auditor that sees only market data and build logs identify which firms share an owner, and does it confuse Sybil clusters with independent firms that colluded tacitly?
+
+**Candidate hypothesis:** Concentration-based detectors flag both, so they confuse Sybils with tacit colluders; build-graph features (timing of builds, complementary patch claims) separate them better than quantities alone.
+
+**How to test:** Pool runs from MKT-01 to MKT-03 with ground-truth owner labels. Train or tune detectors on some operators and seeds, test on held-out ones: (a) quantity and HHI features in the style of Bracale-Syrnikov's oracle, (b) strategy-graph features, (c) build-log features. Score pairwise same-owner AUC and the false-positive rate on tacitly colluding independent pairs.
+
+**Comparison:** Random and HHI-threshold detectors.
+
+**Measurements:** Same-owner pair AUC; False positives on tacit-colluder pairs; Detection delay in rounds.
+
+**Would count against it:** Build-log features add no AUC over quantity features, or detectors already separate Sybils from tacit colluders without them.
+
+**Main confounds:** If Sybil firms share a prompt they may share style; vary prompts within a principal. Labels must never reach the detector through file names or ordering.
+
+**Framing / first-test class:** measurement / offline.
+
+**Before promotion:** Enough labelled runs from MKT-03; a held-out split by principal, not by round.
+
+**Closest prior and evidence limits:**
+
+- [[bracale-syrnikov-2026-institutional]] — [Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bracale-syrnikov-2026-institutional.md). Oracle detects coordination from quantities; does not distinguish ownership from tacit collusion. Catalogue depth: skim.
+- [[eschenbaum-2026-auditing]] — [Auditing Algorithmic Collusion from Strategy Graphs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/eschenbaum-2026-auditing.md). Auditing collusion from queried strategy graphs; no Sybil labels. Catalogue depth: abstract.
+- [[rose-2026-detecting]] — [Detecting Multi-Agent Collusion Through Multi-Agent Interpretability](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/rose-2026-detecting.md). Collusion detection with unknown colluding subgroups, from activations rather than market data. Catalogue depth: skim.
+
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+
+<a id="mkt-05"></a>
+### MKT-05 — Reading the messages versus reading the market
+
+**Update 2:** new.
+
+**Question:** When firms can talk, does reading their messages and stated plans detect collusion better than action-based signals?
+
+**Candidate hypothesis:** Text detectors catch explicit proposals but miss tacit division and flag talk that never becomes action; action-based detectors beat them on run-level collusion.
+
+**How to test:** Runs with public and private chat. A text classifier (LLM judge blind to outcomes) and an action detector (profit gap, HHI, build specialisation) each label every run; score both against an outcome-defined collusion label set before analysis.
+
+**Comparison:** Action detector alone; text detector alone.
+
+**Measurements:** Run-level precision and recall per detector; Share of runs with collusive talk but competitive actions; Share with collusive actions but no collusive talk.
+
+**Would count against it:** The text detector matches or beats the action detector on runs without explicit proposals.
+
+**Main confounds:** The judge model may share biases with firm models; use a different family. Defining collusion from outcomes makes the action detector partly circular; also report against a profitable-deviation check.
+
+**Framing / first-test class:** measurement / api-small.
+
+**Before promotion:** Fix the outcome definition of collusion before any labelled run.
+
+**Closest prior and evidence limits:**
+
+- [[nakamura-2026-colosseum]] — [Colosseum: Auditing Collusion in Cooperative Multi-Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/nakamura-2026-colosseum.md). Finds 'collusion on paper': agents plan collusion in text but act otherwise. Catalogue depth: abstract.
+- [[lee-2026-faithful]] — [Faithful yet Collusive: Why Chain-of-Thought Monitoring Cannot Detect Collusion in LLM Pricing Agents under Oligopolistic Competition](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lee-2026-faithful.md). Reasoning faithfulness does not predict collusion. Catalogue depth: skim.
+- [[riemer-2026-position]] — [Position: Collusion Risks Among AI Reasoning Agents Justify Certification Requirements for Making Market Decisions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/riemer-2026-position.md). Argues steered collusion cannot be spotted from reasoning text. Catalogue depth: skim.
+
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
 
 <a id="agent-budgets"></a>
 ## Agent budgets and resource allocation
@@ -6091,6 +6432,37 @@ API tests need matched inference and communication budgets. Training tests need 
 - [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/paliskara-2026-worse.md). Multi-user shared-resource settings motivate keeping individual and group outcomes separate. Catalogue depth: full.
 
 **Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+
+<a id="mkt-09"></a>
+### MKT-09 — Public production ledger
+
+**Update 2:** new.
+
+**Question:** Does publishing each firm's output and capacity every round raise tacit division compared with showing only market totals?
+
+**Candidate hypothesis:** A public per-firm ledger raises division and profit gap, because firms can see and respect each other's territory.
+
+**How to test:** Two arms at N = 3: firms see only own data and market totals (Lin et al.'s information set) vs a public ledger of every firm's quantities and machines. Same model and seeds.
+
+**Comparison:** Own-data-only arm.
+
+**Measurements:** HHI per good; Profit gap fraction; Re-entry events.
+
+**Would count against it:** The ledger arm shows no more division than the own-data arm.
+
+**Main confounds:** The ledger lengthens the prompt; pad the other arm.
+
+**Framing / first-test class:** extension / api-small.
+
+**Before promotion:** Maps to budget hunch B4 (tacit cartels via a public ledger); align with BUD candidates before promotion.
+
+**Closest prior and evidence limits:**
+
+- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2024-strategic.md). Agents see only own quantity, price, share and profit. Catalogue depth: full.
+- [[arslan-2026-persistent]] — [Persistent Partners Raise Prices Among Learning Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/arslan-2026-persistent.md). Prices rise even when rival prices are hidden. Catalogue depth: abstract.
+- [[li-2026-emergent]] — [Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-emergent.md). Firms see competitors' prices and stock. Catalogue depth: skim.
+
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md), [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
 
 ## Original brief coverage
 

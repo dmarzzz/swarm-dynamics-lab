@@ -2,9 +2,13 @@
 
 Owner: dmarz/question-atlas, holding `synthesis-question-atlas-update`. Updated 2026-10-03.
 
-This bank contains **202 candidates supported by 301 distinct source records**, prepared for the team's human review: research questions, tentative predictions and ways to test them across all 15 research areas. **Every item is an unreviewed hunch.** The user explicitly requested hypothesis brainstorming before selecting projects. These working notes do not create formal hypotheses, approve protocols, pass survey gates, or report experimental findings.
+This bank contains **214 candidates supported by 319 distinct source records**, prepared for the team's human review: research questions, tentative predictions and ways to test them across all 15 research areas. **Every item is an unreviewed hunch.** The user explicitly requested hypothesis brainstorming before selecting projects. These working notes do not create formal hypotheses, approve protocols, pass survey gates, or report experimental findings.
 
 **[Read the full candidate bank](../researchers/dmarz/notes/question-atlas/README.md).** The [review browser](../researchers/dmarz/notes/question-atlas/review.html) supports search, topic and feasibility filters, shortlisting, comments, and review export/import. Download/open the HTML locally; GitHub's code view will not execute it. [Structured data](../researchers/dmarz/notes/question-atlas/candidates.json) supports other review tools. The [scope record](../researchers/dmarz/notes/question-atlas/scope.md) states what was inspected and what remains uncertain.
+
+## Swarm factory questions (MKT-01 to MKT-12)
+
+Twelve questions added 2026-10-03 for a proposed Factorio-like environment where LLM firms build production chains and sell into shared Cournot markets. They cover tacit market division with sunk capacity, firm-to-good ratios, one principal running several firms, telling Sybil firms from tacit colluders, communication channels, forks and mergers, mixed models, public ledgers, competitive entrants, regulators, and whether a small simulator predicts the full game. Like every item here they are unreviewed hunches. The idea brief is [swarm-factory.md](../researchers/dmarz/notes/swarm-factory.md); the cards are in `markets.json`.
 
 ## What changed in this update
 
