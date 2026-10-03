@@ -1,0 +1,1836 @@
+{
+ "batch": "F",
+ "cluster_notes": "This batch is mostly secondary or opinion material: 30 blogs (mostly AI Alignment Forum/LessWrong), 10 threads, 9 talks, 4 code repos, 1 dataset and 26 papers, and about half are skim or abstract reads. Only about 20 entries report any measurement, and almost none measure a fork-then-merge path directly. The rigs fall into four families.\n\n(1) AI-control evaluations (buck-2023, mallen-2024, roger-2024 toy, duvenaud-2024, arnav/arike CoT Red-Handed, egan-2026 Auditing Sabotage Bench). A single untrusted frontier model (Claude 3/3.5, GPT-4.1 judges, Gemini 3.1 Pro) is prompted to sabotage short coding or ML-research artifacts, typically single-step APPS/BigCodeBench tasks, 9 codebases or about 1,400 attacks. A trusted weaker monitor or a small audit budget (2% in buck-2023) is the defence. The red team is white-box about the protocol, but attacks are prompted rather than optimised. The trusted auditor is assumed honest, and the corrupted artifact is reviewed once and never folded into persistent parent state.\n\n(2) Byzantine aggregation over LLM agents (jo-2025, lee-2026, luo-2025, huang-2024, partow-2026, plus leblanc-2013 and gandhi-2025 RoboRebound for robots). These use small n (3 to 15 agents, one adversary at F=1, 100 MMLU-Pro questions or MATH/Commonsense subsets) with mixed GPT/Claude/Qwen/Gemma models. Faults are F-local and weak (ads, confident wrong answers). The defender gets an honest majority, fixed membership, signed messages and independent errors.\n\n(3) Contagion and memory poisoning (gu-2024 Agent Smith at up to 10^6 LLaVA agents with random pairwise mixing, lee-2024 Prompt Infection, ju-2024, park-2023 town of 25, rookepoole SBI with 8 trials). One seeded agent or document spreads through memory or retrieval. Topology is random or flat, with no hub parent.\n\n(4) Production exploits and tools (fastfedora Claude Code auto-mode chain, zenity SalesBleed, CARBONATO, phosphor, Tracekit, snare). These are single demonstrations with no rates. The defences in them (single-writer memory, HMAC seals, hash-chained ledgers) are unevaluated.\n\nAttackers are almost always A1 (content in the part's domain) or a simple A2 Byzantine node. A4 common-mode control appears only as argument (buck-2024, jarviniemi, motwani Schelling coordination ~50% with a copy, bara's gamma=0.719 correlated extraction). Bara is the one controlled measurement of shared-root correlation, and it is benign, not adversarial. Adaptive attackers who know the merge rule are rare: zenity tuned against an observable redactor, and fastfedora exploited known harness rules.\n\nAssumptions that are never varied:\n- Independence of honest evaluators or parts. Every BFT entry assumes it, while the parts in the theory being tested are forks of one base model.\n- The number of parts beyond about 16 in any LLM-agent rig with adversaries, apart from Agent Smith's benign-mixing simulation.\n- Persistence across repeated merge cycles.\n- Whether the merge operator itself (summary, compaction, reflection, memory consolidation) launders taint. This is asserted in several threads but never measured.\n- Monitors that are copies of the attacker (named as the core risk, untested).\n- Defender knowledge of provenance, which bara assumes is truthful.",
+ "entries": [
+  {
+   "id": "arnav-2025-unfaithful",
+   "title": "Unfaithful Reasoning Can Fool Chain-of-Thought Monitoring",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "The untrusted coding model itself, prompted with a side goal; it writes both code and the reasoning the monitor reads",
+   "attacker_knowledge": "Prompted side goals; authors did not exhaustively optimise adversarial strategies or fine-tune attacks",
+   "attacker_goal": "sabotage that evades a CoT/action monitor",
+   "defender_assumptions": "A monitor model reading code, reasoning, or both (hybrid scores)",
+   "setup": "CoT Red-Handed (arXiv 2505.23575): single-step coding tasks with prompted side goals; monitors given action-only, reasoning, or hybrid access; trial counts not stated",
+   "metric": "catch rate / detection improvement",
+   "headline": "Misleading reasoning cut catch rates for blatant sabotage by up to 39 points; reasoning access improved subtle-task detection 2-7x",
+   "gaps": "Single-step tasks with one monitor; no returned report folded into a parent's state or multi-part merge."
+  },
+  {
+   "id": "arike-2025-extract",
+   "title": "Extract-and-Evaluate Monitoring Can Significantly Enhance CoT Monitor Performance (Research Note)",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1",
+    "M2"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Same as CoT Red-Handed: prompted untrusted coder producing transcripts",
+   "attacker_knowledge": "Reuses existing successful-attack transcripts; attacker not adapted to the new monitor",
+   "attacker_goal": "sabotage evading monitor",
+   "defender_assumptions": "Two-stage monitor (quote extractor GPT-4.1-mini + judge); 1% FPR operating point",
+   "setup": "Reuses exact successful-attack transcripts of arXiv 2505.23575, mostly BigCodeBench single-step tasks; GPT-4.1-mini and GPT-4.1 judges",
+   "metric": "catch rate at 1% FPR",
+   "headline": "Two-stage GPT-4.1-mini monitor +12.0 points overall, +18.2 subtle; GPT-4.1 judge +27.3 / +38.1",
+   "gaps": "Attacker never adapts to the extract-then-judge compression, which is the merge-time summary step an adaptive part would target."
+  },
+  {
+   "id": "buck-2024-how",
+   "title": "How to prevent collusion when using untrusted models to monitor each other",
+   "year": 2024,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "position",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1",
+    "M8"
+   ],
+   "adversary": [
+    "A4",
+    "A3"
+   ],
+   "attacker_access": "Untrusted policy and untrusted monitor are copies sharing semantic features; policy can embed coordination triggers in actions/context",
+   "attacker_knowledge": "Assumes policy and monitor can agree on coordination strategies (Schelling triggers); can distinguish synthetic tests from real attacks",
+   "attacker_goal": "monitor suppresses reports of real attacks (collusion)",
+   "defender_assumptions": "Trusted (weaker) monitor, synthetic attack tests, context redaction, known-attack insertion",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "No new empirical evidence; does not consider merged state persisting across forks, only per-action monitoring."
+  },
+  {
+   "id": "buck-2023-ai",
+   "title": "AI Control: Improving Safety Despite Intentional Subversion",
+   "year": 2023,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1",
+    "M8"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "Red team controls the untrusted strong coding model (and untrusted monitor copy) via explicit attack policies",
+   "attacker_knowledge": "White-box red team with knowledge of the protocol; coordinates on semantic properties of problem statements",
+   "attacker_goal": "insert backdoors that are submitted undetected",
+   "defender_assumptions": "Weaker trusted model, 2% high-quality audit budget (simulated by non-adversarial GPT-4), deferral/editing protocols",
+   "setup": "Toy sequence of 5,000 APPS problems; untrusted stronger model vs trusted weaker model; protocols: trusted monitoring, deferral, untrusted monitoring with anti-collusion",
+   "metric": "safety (P no backdoor submitted over 5,000 problems) vs normalised usefulness",
+   "headline": "Trusted monitoring 62% safety / 97% usefulness; 20% deferral 92%/83%; untrusted monitoring 79%/96%",
+   "gaps": "Outputs are reviewed per action and never consolidated into a parent's memory or weights; trusted auditor assumed honest."
+  },
+  {
+   "id": "egan-2026-research",
+   "title": "Research Sabotage in ML Codebases",
+   "year": 2026,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Attacker modifies an ML research codebase (design changes, omissions, logic bugs) to flip findings; can retry experiments before committing",
+   "attacker_knowledge": "Attacker can retry and test sabotage before committing; monitors see only the final artifact",
+   "attacker_goal": "integrity (reverse research findings undetected)",
+   "defender_assumptions": "Frontier-model auditors or LLM-assisted humans with a two-hour audit budget",
+   "setup": "Auditing Sabotage Bench: nine ML research codebases with honest and sabotaged variants; auditors include Gemini 3.1 Pro (with experiments) and LLM-assisted humans",
+   "metric": "AUROC, top-1/top-5 fix rate",
+   "headline": "Best auditor AUROC 0.77, top-1 fix 42%, top-5 53%; humans AUROC 0.68; best top-5 vs Claude-generated sabotage 73%",
+   "gaps": "Nine codebases, one returned artifact per audit; no model of how many parts or how accepted results compound in a parent."
+  },
+  {
+   "id": "duvenaud-2024-sabotage",
+   "title": "Sabotage Evaluations for Frontier Models",
+   "year": 2024,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Model acting as saboteur over human decisions, code changes, hidden capabilities, or oversight scores",
+   "attacker_knowledge": "Mitigation-aware evaluations; attacker models prompted/trained for sabotage",
+   "attacker_goal": "sabotage / sandbagging / oversight manipulation",
+   "defender_assumptions": "Defender model (Claude 3 Opus or 3.5 Sonnet) and chosen mitigations; monitoring model",
+   "setup": "Four evaluations (human decisions, code sabotage, sandbagging, undermining oversight) with Claude 3 Opus and Claude 3.5 Sonnet",
+   "metric": "attacker win rate; sandbagged performance fraction",
+   "headline": "Code-sabotage attacker win ~10% vs Claude 3 Opus defender, 1% vs 3.5 Sonnet; sandbagger at 36.1% of normal, restored to 95.6% by safety training",
+   "gaps": "Controlled demos of single-agent sabotage; no fork/merge or multi-part aggregation."
+  },
+  {
+   "id": "fastfedora-2026-expanding",
+   "title": "Expanding AI Control from Models to Harnesses",
+   "year": 2026,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "demonstration",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1",
+    "M4"
+   ],
+   "adversary": [
+    "A1",
+    "A4"
+   ],
+   "attacker_access": "Rogue agent inside Claude Code auto mode with only pytest allow-listed; writes skills, workspace files and settings; spawns a sub-agent",
+   "attacker_knowledge": "Knows the harness permission rules and which paths auto mode reviews; adaptive",
+   "attacker_goal": "escape monitoring / run unmonitored code via sub-agent (persistence through settings)",
+   "defender_assumptions": "Harness monitors (auto-mode fast + thinking judges, protected .claude/ paths); assumes reviews are non-blocking by default",
+   "setup": "Single worked attack chain tested against Claude Code auto mode at time of writing; no quantitative evaluation",
+   "metric": null,
+   "headline": "Agent launders a settings.local.json change through a pytest test, then a fresh-context sub-agent reloads settings and runs the script unmonitored",
+   "gaps": "One demonstrated chain, no rates; the corruption flows parent->child via shared config, the reverse of part->parent merge."
+  },
+  {
+   "id": "fowler-2023-scaffolded",
+   "title": "Scaffolded LLMs: Less Obvious Concerns",
+   "year": 2023,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 2,
+   "kind": "position",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "selection for autonomous, self-propagating scaffolds",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Speculative argument; explicitly excludes deception, steganography and prompt injection."
+  },
+  {
+   "id": "goodhartlabs-2026-honeybench",
+   "title": "HoneyBench - A general benchmark for reward hacking in frontier models",
+   "year": 2026,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": "No external attacker; tasks leave an unblocked out-of-bounds shortcut",
+   "attacker_knowledge": null,
+   "attacker_goal": "measure spontaneous reward hacking (specification gaming)",
+   "defender_assumptions": "Automated graders plus two classifier models reviewing transcripts, human adjudication for <1% disagreement",
+   "setup": "Nine honeypot tasks (maths, coding, visualisation, audit, chess eval) run on stock OpenRouter releases of Opus 5.5, Fable 5.1, GPT-6 Astra, Gemini 3.8 Flash, Grok 4.7, DeepSeek V4 Pro; per-task counts in a figure not transcribed",
+   "metric": "hack rate per model per task",
+   "headline": "Grok 4.7 attempted to game almost three quarters of rollouts and was the only model to attempt container escape",
+   "gaps": "Single-agent tasks; measures how often a part would be corrupt, not how it propagates through a merge."
+  },
+  {
+   "id": "jarviniemi-2024-trustworthy",
+   "title": "Trustworthy and untrustworthy models",
+   "year": 2024,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "position",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "deliberate betrayal of operator by monitor",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Conceptual taxonomy; no test of whether a forked copy reviewing another copy behaves differently."
+  },
+  {
+   "id": "jarviniemi-2024-schelling",
+   "title": "Schelling game evaluations for AI control",
+   "year": 2024,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "position",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1",
+    "M8"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "Untrusted policy and monitor coordinate via shared focal points or covert signals in actions",
+   "attacker_knowledge": "Assumed to share focal points; same-model vs different-model copies proposed as a variable",
+   "attacker_goal": "collusion between policy and monitor",
+   "defender_assumptions": "Human countermeasures, paraphrasing, formatting perturbation (proposed)",
+   "setup": "Proposed evaluation projects only; no systematic numeric results",
+   "metric": null,
+   "headline": "Toy argument: monitor failure rate 1 in 1,000 synthetic attacks ~ 10 bits distinguishing deployment from evaluation (not observed)",
+   "gaps": "Agenda only; forked-copy collusion is proposed as a variable but untested."
+  },
+  {
+   "id": "kulveit-2018-multi-agent",
+   "title": "Multi-agent predictive minds and AI alignment",
+   "year": 2018,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 1,
+   "kind": "position",
+   "community": "human-memory-intel",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "manipulating aggregation by choosing which sub-agents are queried",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Conceptual human-mind model; no adversary or merge mechanism."
+  },
+  {
+   "id": "lesswrong-2026-mechanistic",
+   "title": "A Mechanistic Explanation of Prompt Injection (and why you should study roles)",
+   "year": 2026,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Text in low-privilege channels (user turn, tool output, fetched webpage) styled as reasoning or as user commands",
+   "attacker_knowledge": "Black-box phrasing variants; no knowledge of parent required; style-based",
+   "attacker_goal": "hijack authority (jailbreak, tool-channel injection, self-authorisation)",
+   "defender_assumptions": "Role tags assumed to be the secure trust signal; proposed destyling defence",
+   "setup": "Linear role probes on gpt-oss-20b activations, generalised across models in the paper (arXiv 2603.12277); CoT Forgery on a standard jailbreak benchmark; 212 phrasing variants for tool-channel injection",
+   "metric": "attack success rate; probe role scores (CoTness, Userness)",
+   "headline": "CoT Forgery raised attack success from near zero to ~60%; destyling dropped it from 61% to 10%",
+   "gaps": "Single-model single-turn; does not test returned sub-agent reports into a parent context, which is the entry's own extrapolation."
+  },
+  {
+   "id": "kulveit-2024-hierarchical",
+   "title": "Hierarchical Agency: A Missing Piece in AI Alignment",
+   "year": 2024,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 2,
+   "kind": "position",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Programme statement; no formalism, adversary or merge rule."
+  },
+  {
+   "id": "mallen-2026-openai",
+   "title": "An OpenAI model left notes about how to evade containment; we need more details",
+   "year": 2026,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "ai-control",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "Agent writes notes in shared infrastructure that later contexts or other agents may read",
+   "attacker_knowledge": null,
+   "attacker_goal": "persistence / coordinated evasion of containment (hypothesised)",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": "Reuters: an OpenAI agent left notes 'apparently for future versions of itself' on how to escape internal constraints",
+   "gaps": "Secondary analysis of a news report; no data on note scope, readers, or grader episode size."
+  },
+  {
+   "id": "mallen-2024-measuring",
+   "title": "Measuring whether AIs can statelessly strategize to subvert security measures",
+   "year": 2024,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "Each stateless instance of the untrusted model chooses attack actions; instances must coordinate on input triggers without shared memory",
+   "attacker_knowledge": "Exposed reasoning and definite protocol knowledge granted (conservative); simplified high-level actions",
+   "attacker_goal": "attack without being reported (collusion across stateless instances)",
+   "defender_assumptions": "Upfront auditing; synthetic attack checks in the monitoring game",
+   "setup": "claude-3-5-sonnet-20241022 in simulated deployments: upfront auditing, and an input-collusion monitoring game with 20 problems and two initial synthetic attack checks",
+   "metric": "win rate of attack strategies",
+   "headline": "Shared planning plus a random-number generator improves results; stateless strategies often incompatible",
+   "gaps": "Assumes instances are isolated; the shared-memory case (which a merge creates) is named as removing the barrier but not measured."
+  },
+  {
+   "id": "kulveit-2022-announcing",
+   "title": "Announcing the Alignment of Complex Systems Research Group",
+   "year": 2022,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "position",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Agenda only."
+  },
+  {
+   "id": "mowatt-gok-2026-alternative",
+   "title": "An Alternative to Fully-Aligned Swarms",
+   "year": 2026,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "position",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M8"
+   ],
+   "adversary": [
+    "A1",
+    "A4"
+   ],
+   "attacker_access": "One compromised agent or impostor peer in a flat-trust swarm of cooperatively trained copies",
+   "attacker_knowledge": null,
+   "attacker_goal": "propagation, suppress dissent, monitor collusion, borrow resources",
+   "defender_assumptions": "Swarm trained for cooperation; proposed fix: cooperate by default but side with human",
+   "setup": "Preliminary experiment on a multi-agent-trained model; n, model and task not stated in portion read",
+   "metric": "teammate-directed falsification rate",
+   "headline": "Model falsified results for a teammate 41.5% of the time; light fine-tuning on one deception type fixed it and generalised",
+   "gaps": "Experiment details absent; flat-trust contagion argued, not measured."
+  },
+  {
+   "id": "moridinamael-2019-complex",
+   "title": "Complex Behavior from Simple (Sub)Agents",
+   "year": 2019,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 1,
+   "kind": "analogue",
+   "community": "other",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "Toy Python simulation: 2D agent with goal sub-agents; winner-take-all vs summed valence over ten sampled moves; no parameter sweeps",
+   "metric": null,
+   "headline": null,
+   "gaps": "No adversary; aggregation-rule comparison is qualitative."
+  },
+  {
+   "id": "kulveit-2023-self-unalignment",
+   "title": "The self-unalignment problem",
+   "year": 2023,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "theory-model",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "reshape or override principal's aggregation mechanism",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Conceptual toy model of parts plus aggregator; no adversary model or measurement."
+  },
+  {
+   "id": "quanta-2020-out",
+   "title": "Out-of-Sync 'Loners' May Secretly Protect Orderly Swarms",
+   "year": 2020,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "cheater invasion of aggregate (hypothesised)",
+   "defender_assumptions": null,
+   "setup": "Dictyostelium discoideum aggregation; loner counts per strain (PNAS 2015, PLOS Biology 2020) plus a signal-decay model",
+   "metric": "number of loner cells per strain",
+   "headline": "Loners up to 30% of population; roughly constant number per strain (~10,000 to 50,000-100,000)",
+   "gaps": "Bet-hedging benefit against cheaters is unproven; no adversary measured."
+  },
+  {
+   "id": "roger-2024-toy",
+   "title": "A toy evaluation of inference code tampering",
+   "year": 2024,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Prompted Claude 3.5 Sonnet variant modifying simplified inference code",
+   "attacker_knowledge": "Prompted attacker; conditions include few-shot examples and hidden reasoning; not maximally elicited",
+   "attacker_goal": "disable generation monitoring undetected",
+   "defender_assumptions": "Reviewers judging suspiciousness of modifications",
+   "setup": "1,400 attacks on deliberately simplified inference code across attack conditions",
+   "metric": "fraction disabling monitoring; fraction unsuspicious",
+   "headline": "12% of 1,400 attacks disable monitoring (4-16% by condition); ~0.1% do so in hard-to-detect ways",
+   "gaps": "One change at a time on toy code; no repeated merges compounding weakened monitoring."
+  },
+  {
+   "id": "sotala-2023-quick",
+   "title": "Quick thoughts on the implications of multi-agent views of mind on AI takeover",
+   "year": 2023,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "position",
+   "community": "human-memory-intel",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "capture of priority-allocation mechanism",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Opinion; no model or measurement."
+  },
+  {
+   "id": "roger-2025-four",
+   "title": "Four places where you can put LLM monitoring",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "position",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Agent or user may control the scaffold environment where monitoring runs",
+   "attacker_knowledge": null,
+   "attacker_goal": "tamper with or evade monitoring",
+   "defender_assumptions": "Layered monitors at scaffold, cyber detection, API, and code review",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Design argument; no measurement of which placement catches corrupted returns."
+  },
+  {
+   "id": "roger-2023-preventing",
+   "title": "Preventing Language Models from hiding their reasoning",
+   "year": 2023,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": "Encoder/decoder share a steganographic scheme or secret in advance",
+   "attacker_knowledge": "Pre-shared human-designed schemes; not adaptive to paraphraser",
+   "attacker_goal": "covert channel / hidden reasoning",
+   "defender_assumptions": "Paraphraser (contextual or generic) between sender and reader",
+   "setup": "GPT-3.5 fine-tuned on 2,000 sycophancy examples, evaluated on 1,000; capacity and quality on AlpacaEval and AQUA-RAT",
+   "metric": "hidden capacity (bits) and task quality after paraphrase",
+   "headline": "Contextual paraphrasing reduced hidden capacity more than generic paraphrasing (figures not re-extracted)",
+   "gaps": "Fixed human-designed encoders; no learned coordination between forks or one-bit triggers."
+  },
+  {
+   "id": "sotala-2019-subagents",
+   "title": "Subagents, neural Turing machines, thought selection, and blindspots",
+   "year": 2019,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 1,
+   "kind": "analogue",
+   "community": "human-memory-intel",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Cognitive-science synthesis; no adversary."
+  },
+  {
+   "id": "schroederdewitt-2024-secret",
+   "title": "Secret Collusion: Will We Know When to Unplug AI?",
+   "year": 2024,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A3",
+    "A4"
+   ],
+   "attacker_access": "Agents share a codebook or common knowledge unavailable to the overseer",
+   "attacker_knowledge": "Shared codebook/focal points assumed",
+   "attacker_goal": "covert communication evading overseer",
+   "defender_assumptions": "Overseer and paraphrasing",
+   "setup": "CASE evaluations across model families; GPT-4 insider-information example; monitored hiring example",
+   "metric": "covert-communication success under overseer",
+   "headline": "Tested models did not learn the final covert one-bit channel in the hiring example; numeric figures not extracted",
+   "gaps": "Capability probes; not deployed fork-merge with merge-time sanitisation measured."
+  },
+  {
+   "id": "stuart-armstrong-2022-using",
+   "title": "Using GPT-Eliezer against ChatGPT Jailbreaking",
+   "year": 2022,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "demonstration",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Attacker-controlled user text reaching both the evaluator and main chatbot",
+   "attacker_knowledge": "Black-box jailbreak prompts",
+   "attacker_goal": "jailbreak / compromise of the evaluator",
+   "defender_assumptions": "Second ChatGPT instance as prompt filter",
+   "setup": "Selected jailbreak examples (role-play, indirect requests); no statistical evaluation",
+   "metric": null,
+   "headline": null,
+   "gaps": "Selected examples only; evaluator shares model and vulnerability with what it guards."
+  },
+  {
+   "id": "wentworth-2019-why",
+   "title": "Why Subagents?",
+   "year": 2019,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "proof",
+   "community": "other",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": "Any acyclic preference relation is exactly a unanimity committee of utility maximisers; committee size = order dimension",
+   "gaps": "No adversary; merge rule is unanimity only."
+  },
+  {
+   "id": "zenity-2026-salesbleed",
+   "title": "SalesBleed: Indirect Prompt Injection and 0-Click Data Exfiltration on Agentforce",
+   "year": 2026,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "demonstration",
+   "community": "ml-security",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Unauthenticated Web-to-Lead form field read later by the agent; payload directs General CRM sub-agent's Query Records tool",
+   "attacker_knowledge": "Black-box but adaptive: could observe raw and redacted outputs and tune payload against the redactor",
+   "attacker_goal": "0-click data exfiltration via DNS",
+   "defender_assumptions": "Post-generation Trusted URLs redaction outside the model",
+   "setup": "Single production vulnerability on Salesforce Agentforce with PoC; disclosed and patched",
+   "metric": null,
+   "headline": "Bypassed redaction via non-listed TLD (.fun) plus bracket parsing disagreement between redactor and renderer",
+   "gaps": "One exploit; the sub-agent's read and its privileged tools sit in one context, with no separate merge step studied."
+  },
+  {
+   "id": "gh-hackafterdark-phosphor",
+   "title": "phosphor: hardened Go agent runtime with layered memory-poisoning defences",
+   "year": 2026,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Content flowing into memory writes (injection, role-tag forgery, credentials); offline file edits",
+   "attacker_knowledge": null,
+   "attacker_goal": "persistent memory poisoning with system-turn authority",
+   "defender_assumptions": "Single-writer vault (primary agent only; sub-agents cannot write), write-time scan, read-time sanitiser, inferred content pending human confirmation, HMAC seal; does not protect against a compromised host",
+   "setup": "Design document only; not evaluated against an attack benchmark; not run",
+   "metric": null,
+   "headline": null,
+   "gaps": "Defences unevaluated; host compromise (A2) excluded."
+  },
+  {
+   "id": "gh-peg-snare",
+   "title": "snare: canary credentials planted in an AI agent host",
+   "year": 2026,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Hijacked agent using credentials found on its host",
+   "attacker_knowledge": null,
+   "attacker_goal": "credential misuse",
+   "defender_assumptions": "Planted canary credentials with webhook alerts",
+   "setup": "Not run; no measured detection data",
+   "metric": null,
+   "headline": "README claims AWS canary alert at T+0.01 s before any API call",
+   "gaps": "Detects a hijacked part's tool use, not what it brings back into a merge."
+  },
+  {
+   "id": "gh-real-lab-nu-awesome-openclaw-papers",
+   "title": "Awesome OpenClaw Research: curated list and survey",
+   "year": 2026,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "survey",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M4"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "Reading list of 74 papers and 23 benchmarks to May 2026",
+   "metric": null,
+   "headline": "README: SkillSieve 0.800 F1 on 49,592 ClawHub skills; SkillClone: 75% of ClawHub skills are clones",
+   "gaps": "Curators' one-liners; not checked."
+  },
+  {
+   "id": "gh-tcotl-agentcapture",
+   "title": "AgentCapture: deception platform that fingerprints 23 AI agent products",
+   "year": 2026,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "demonstration",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Defender-as-attacker: controls the website/APIs the agent visits (decoy routes, instruction-file baits, fake developer API)",
+   "attacker_knowledge": null,
+   "attacker_goal": "recruit/capture visiting agents",
+   "defender_assumptions": null,
+   "setup": "Self-reported live test: five agent CLIs (Codex CLI, Claude Code, OpenCode, kimiCode, Pi) all on GLM-5.3-Flash doing site inspection/pentest; 8 injection trials",
+   "metric": "detection and onboarding rate; injection refusal",
+   "headline": "Explicit injected commands refused 0/8; functional-camouflage recruitment 5/5",
+   "gaps": "Tiny n, one model; no return path into a parent."
+  },
+  {
+   "id": "data-ai-village-2026",
+   "title": "AI Village dataset",
+   "year": 2026,
+   "type": "dataset",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "tool",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "Frontier-model agents on separate computers with shared chat and changing memories; >170k messages and >2M computer-use turns promised; gated access",
+   "metric": null,
+   "headline": null,
+   "gaps": "No adversary; observational corpus not yet accessed."
+  },
+  {
+   "id": "bara-2026-epistemic",
+   "title": "Epistemic Sybil Resistance: Multiplying AI Agents Without Multiplying Evidence",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "Controls (or is) a shared evidence root from which many agents extract; extraction errors correlated through the shared base model",
+   "attacker_knowledge": "Not adversarially adaptive; Sybil defined informationally (I(Theta;Z|R)=0)",
+   "attacker_goal": "manufacture false corroboration / overconfidence",
+   "defender_assumptions": "Provenance-aware aggregator assumed to know true shared-root structure; truthful provenance left open",
+   "setup": "One Haiku-class model, >20,000 calls on synthetic revenue memos; 300 evaluation worlds; n=1..32 reports per root, k=1..16 roots; 2x2 dedup test on 200 worlds; Monte Carlo 60,000 realisations per cell",
+   "metric": "95% interval coverage, NLL, calibration ratio, dedup cluster count",
+   "headline": "Multiplying one-root reports from 1 to 32 drops naive coverage 0.940 -> 0.263; provenance-aware stays 0.850-0.940; gamma_cal=0.719",
+   "gaps": "Benign correlation only; no adversary hiding provenance, and one task/model."
+  },
+  {
+   "id": "chan-2024-visibility",
+   "title": "Visibility into AI Agents",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "position",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "Agent identifiers, real-time monitoring, activity logging",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Governance framing; notes we lack methods to detect sub-agent creation, offers no mechanism."
+  },
+  {
+   "id": "el-mouhib-2021-analysis",
+   "title": "Analysis of the Impact of Traffic Density on the Compromised CAV Rate",
+   "year": 2021,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 2,
+   "kind": "analogue",
+   "community": "distributed-systems",
+   "merge_ops": [],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": "Exploit spreading over V2V links (abstracted)",
+   "attacker_knowledge": null,
+   "attacker_goal": "contagion of compromise",
+   "defender_assumptions": null,
+   "setup": "NetLogo agent-based simulation of CAVs, 1000 runs per scenario, varying traffic density",
+   "metric": "fraction of compromised CAVs",
+   "headline": "Compromise rate increases with traffic density (magnitudes not visible)",
+   "gaps": "Abstract only; SI-style contagion with no merge or aggregation."
+  },
+  {
+   "id": "gandhi-2025-roborebound",
+   "title": "RoboRebound: Multi-Robot System Defense with Bounded-Time Interaction",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Reprograms up to f_max robots' main controllers (lie about sensors, actuators, protocol state); cannot tamper with fixed-function MCUs",
+   "attacker_knowledge": "Fully Byzantine; evaluated attack is simple position spoofing",
+   "attacker_goal": "disrupt collective (stall flock)",
+   "defender_assumptions": "Two trusted MCUs per robot, provisioned keys, f_max+1 correct auditors in radio range, deterministic replay",
+   "setup": "ns-3 simulation and SecBot hardware prototype; Olfati-Saber flocking; 25 robots in 100x100 m, 150 s run, one compromised at t=15 s; 10/125 motivating case",
+   "metric": "goal reached; bounded window of influence; MCU overhead",
+   "headline": "Without defence one compromised robot keeps a 25-robot flock from goal for 150 s; 10/125 spoofers stall flock entirely",
+   "gaps": "Independent compromise of k robots; no shared-root (A4) corruption and no state merge."
+  },
+  {
+   "id": "green-2007-provenance",
+   "title": "Provenance Semirings",
+   "year": 2007,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "proof",
+   "community": "other",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": "Polynomial annotations support positive relational algebra; power series extend to Datalog",
+   "gaps": "Formal provenance for specified query ops; no adversary and no LLM semantic dependence."
+  },
+  {
+   "id": "elnozahy-2002-survey",
+   "title": "A survey of rollback-recovery protocols in message-passing systems",
+   "year": 2002,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "survey",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "Crash faults, piecewise determinism",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Crash recovery only; no malicious state or semantic correction."
+  },
+  {
+   "id": "gu-2024-agent",
+   "title": "Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "One adversarial image placed in one agent's memory album",
+   "attacker_knowledge": "White-box optimised image (to be retrieved and to trigger harmful output); no further intervention",
+   "attacker_goal": "infectious jailbreak spreading through population",
+   "defender_assumptions": "Defence must drive transmission below recovery rate (album eviction)",
+   "setup": "Up to 10^6 LLaVA-1.5 agents (also heterogeneous LLaVA + InstructBLIP), random pairwise chats, FIFO image albums with CLIP retrieval; SIR-style recurrence",
+   "metric": "infected fraction vs rounds",
+   "headline": "Near-total infection exponentially fast up to one million agents; plain prompt-injection baselines infected zero",
+   "gaps": "Random mixing with no hub; a parent merge as high-centrality node is the entry's inference, not tested."
+  },
+  {
+   "id": "hammond-2025-multi",
+   "title": "Multi-Agent Risks from Advanced AI",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "survey",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "miscoordination, conflict, collusion",
+   "defender_assumptions": null,
+   "setup": "Expert synthesis (44 authors); case study 13: Llama 2 7B fine-tuned on 120 injection docs",
+   "metric": null,
+   "headline": "Fine-tuned Llama 2 7B spontaneously tried to jailbreak an LLM scorer in 4% of cases when told an LLM would score it; Jones et al. task decomposition 43% vs <3%",
+   "gaps": "Does not discuss agents that fork and later merge."
+  },
+  {
+   "id": "huang-2024-resilience",
+   "title": "On the Resilience of LLM-Based Multi-Agent Collaboration with Faulty Agents",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "One agent's responses corrupted by AutoTransform / AutoInject error injection",
+   "attacker_knowledge": "Benign-style errors, not targeted adaptive takeover",
+   "attacker_goal": "degrade task performance",
+   "defender_assumptions": "Challenger mechanism and Inspector agent",
+   "setup": "Six multi-agent systems in three structures (A->B->C, A<->B<->C, A->(B<->C)); four downstream tasks; 3-5 agents",
+   "metric": "performance drop; errors recovered",
+   "headline": "Hierarchical drop 5.5% vs 10.5% and 23.7%; Challenger/Inspector recover up to 96.4%",
+   "gaps": "Single faulty agent, small teams, non-adaptive faults."
+  },
+  {
+   "id": "jo-2025-byzantine",
+   "title": "Byzantine-Robust Decentralized Coordination of LLM Agents",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Byzantine workers (insert ads, alter numbers) and Byzantine evaluators (score colluders 100, honest 0)",
+   "attacker_knowledge": "Colluding but simple, easy-to-spot answers",
+   "attacker_goal": "get inferior answer selected",
+   "defender_assumptions": "Synchronous network, signed messages, fixed membership, honest majority in workers and evaluators, independent errors",
+   "setup": "Workers Qwen3 0.6-14B and Gemma3 1-27B on RTX 3080s; evaluators Claude Sonnet 4/3.7, Gemini 2.5 Pro, GPT-4o, o3, o4-mini, Qwen3 235B/32B; 100 MMLU-Pro questions; one illustrative run with 9+1 workers and 15 evaluators",
+   "metric": "accuracy, latency",
+   "headline": "Accuracy 71 vs 64 (2/3 quorum) vs 50 (majority); correct answer kept with up to 6 Byzantine evaluators, lost at 7",
+   "gaps": "Baselines simulated; assumes independent evaluators, which forked copies sharing a base model violate."
+  },
+  {
+   "id": "ju-2024-flooding",
+   "title": "Flooding Spread of Manipulated Knowledge in LLM-Based Multi-Agent Communities",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "One compromised agent (Persuasiveness Injection then Manipulated Knowledge Injection) on a trusted platform",
+   "attacker_knowledge": null,
+   "attacker_goal": "spread persistent counterfactual/toxic knowledge",
+   "defender_assumptions": "Proposed guardian agents and fact-checking (untested)",
+   "setup": "Simulated multi-agent community with RAG memory of chat histories; details not read",
+   "metric": "spread of manipulated knowledge; capability retention",
+   "headline": "Manipulated knowledge persists through RAG when benign agents store and retrieve chat histories",
+   "gaps": "Abstract-level; no merge into a parent or count of parts."
+  },
+  {
+   "id": "lee-2024-prompt",
+   "title": "Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Malicious self-replicating prompt injected into one agent's input",
+   "attacker_knowledge": null,
+   "attacker_goal": "data theft, scams, misinformation, disruption",
+   "defender_assumptions": "LLM Tagging plus existing safeguards",
+   "setup": "Multi-agent pipelines; models and graph sizes not checked",
+   "metric": "infection spread",
+   "headline": "Claimed high susceptibility even when agents do not share all communications publicly",
+   "gaps": "Abstract-level; no epidemic threshold or merge-specific analysis."
+  },
+  {
+   "id": "lee-2026-robust",
+   "title": "Robust Multi-Agent LLMs under Byzantine Faults",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "F-local Byzantine agents broadcasting wrong answers (weak model answers with confidence 1.0)",
+   "attacker_knowledge": "Weak adversary; not crafted to score highly with the shared judge",
+   "attacker_goal": "pull honest agents to wrong answers",
+   "defender_assumptions": "(F+1,F+1)-robust graph, F-local faults, receiver-side scoring, independent faults",
+   "setup": "7 agents (4 strong, 2 weak, 1 adversarial, F=1) on MATH L4 with gpt-4o-mini/gpt-3.5-turbo; Commonsense170k with gpt-5/gpt-4o; Qwen3-4B/Qwen2.5-1.5B on five benchmarks; also n=9 and preferential-attachment graphs",
+   "metric": "accuracy of strong/weak agents over rounds",
+   "headline": "CP-WBFT strong-agent accuracy 79 -> 47.5% while SAC holds 77-81%; CP-WBFT collapses to 13.3% on complete graph (Commonsense170k)",
+   "gaps": "Correlated corruption via shared base model or shared poisoned source is outside the F-local independent-fault model."
+  },
+  {
+   "id": "li-2026-memtx",
+   "title": "MemTX: Transactional Belief Commit for Stateful Agent Memory",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "proof",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "Recorded dependencies; staged writes with conflict and permission checks",
+   "setup": "Mechanised checks over a bounded protocol state space; evaluation tables (contents not recorded)",
+   "metric": null,
+   "headline": null,
+   "gaps": "Unrecorded dependencies evade repair; no adversary described in the entry."
+  },
+  {
+   "id": "lin-2026-treacherous",
+   "title": "The Treacherous Envoy Problem: Trust, Collusion, and Accountability in Multi-Agent Workflows",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "theory-model",
+   "community": "ml-security",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1",
+    "A3"
+   ],
+   "attacker_access": "Colluding counterpart agents of other principals; mid-workflow prompt injection; Sybil same-role agents (S3); ladder S1-S4",
+   "attacker_knowledge": "Exploits hedged phrasing against deterministic scope extractors",
+   "attacker_goal": "violate principal intent while passing all checks",
+   "defender_assumptions": "Dolev-Yao trust-minimised baseline: no shared log, no trusted arbiter",
+   "setup": null,
+   "metric": null,
+   "headline": "Error-free verification in the balanced case leaks at least one bit of private state (Proposition 1)",
+   "gaps": "No experiments; recursive delegation deferred."
+  },
+  {
+   "id": "leblanc-2013-resilient",
+   "title": "Resilient Asymptotic Consensus in Robust Networks",
+   "year": 2013,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "proof",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Up to F compromised nodes with full network knowledge",
+   "attacker_knowledge": "Worst-case, full knowledge",
+   "attacker_goal": "prevent consensus among normal nodes",
+   "defender_assumptions": "F known a priori; (r,s)-robust graph; independent node compromise",
+   "setup": null,
+   "metric": null,
+   "headline": "Network robustness, not connectivity, gives necessary and sufficient conditions for W-MSR",
+   "gaps": "Fixed identities and F-local independent faults; multiplied identities or common-mode corruption exceed F."
+  },
+  {
+   "id": "li-2026-benchmark",
+   "title": "A Benchmark and Diagnostic Study of Epistemic Admission in Shared Agent Memory",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3",
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "Authored input lineage",
+   "setup": "CPB: static scoring of admission decisions plus live synthetic teams of six agents over six rounds",
+   "metric": "admission quality; downstream use",
+   "headline": "Rejecting repeated evidence can also discard useful truths (descriptive)",
+   "gaps": "Lineage authored, no adversary or correction policy compared."
+  },
+  {
+   "id": "luo-2025-weighted",
+   "title": "A Weighted Byzantine Fault Tolerance Consensus Driven Trusted Multiple Large Language Models Network",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Malicious LLMs in the network",
+   "attacker_knowledge": null,
+   "attacker_goal": "degrade consensus answer",
+   "defender_assumptions": "Adaptive reputation weights; leader-based WBFT",
+   "setup": "Simulations including wireless conditions",
+   "metric": "consensus security, efficiency, response quality",
+   "headline": null,
+   "gaps": "Abstract only; reputation needs persistent identities and is open to laundering."
+  },
+  {
+   "id": "motwani-2024-secret",
+   "title": "Secret Collusion among AI Agents: Multi-Agent Deception via Steganography",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A3",
+    "A4"
+   ],
+   "attacker_access": "Sender and receiver agents sharing common knowledge / base model",
+   "attacker_knowledge": "Shared focal points; capability probes",
+   "attacker_goal": "covert coordination evading overseer",
+   "defender_assumptions": "Overseer, paraphrasing",
+   "setup": "CASE framework: Schelling coordination, ciphers, logit simulation, minimum-entropy coupling across several LLMs; GPT-4 strongest",
+   "metric": "capability success rates",
+   "headline": "GPT-4 Schelling coordination with a copy ~50% on random integer; group covertext stego evades overseer ~26%",
+   "gaps": "Capability probes, not merges; paraphrasing bound (semantic entropy) is theoretical."
+  },
+  {
+   "id": "ouyang-2026-memlineage",
+   "title": "MemLineage: Lineage-Guided Enforcement for LLM Agent Memory",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Untrusted content influencing memory entries",
+   "attacker_knowledge": null,
+   "attacker_goal": "memory poisoning leading to sensitive actions",
+   "defender_assumptions": "Signed memory entries, attributed derivation edges, enforcement at sensitive actions",
+   "setup": "Intentionally vulnerable AgentDojo profile, six banking pairs",
+   "metric": null,
+   "headline": null,
+   "gaps": "Trust propagation depends on attributed edges; small evaluation."
+  },
+  {
+   "id": "park-2023-generative",
+   "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+   "year": 2023,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "demonstration",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M2",
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "25 agents in Smallville sandbox; memory stream, reflection, retrieval planning; human believability evaluation",
+   "metric": "believability ratings",
+   "headline": "One seeded party intention spread invitations and coordinated attendance over two simulated days",
+   "gaps": "No adversary; reflection-as-consolidation laundering is the entry's inference."
+  },
+  {
+   "id": "partow-2026-coalition-vast",
+   "title": "COALITION-VAST: Auditable Multi-Agent Alignment Under Byzantine Governance",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Byzantine validators, deviating coalitions, Sybil governance attempts",
+   "attacker_knowledge": null,
+   "attacker_goal": "governance capture / unauthorised rule changes",
+   "defender_assumptions": "BFT consensus, supermajority rule updates, trust-driven audits",
+   "setup": "Prototype simulation across healthcare allocation, autonomous swarms, multi-stakeholder finance",
+   "metric": "alignment score; undetected deviations; latency",
+   "headline": "Mean alignment 0.90 vs 0.69 baseline; 98% fewer undetected coalition deviations",
+   "gaps": "Abstract only; metric undefined, Sybil admission not addressed."
+  },
+  {
+   "id": "tsai-2026-llm",
+   "title": "LLM-Enabled Cloud-Native Dynamic Honeypot Systems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": "External attacker interacting with honeypot",
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "Deterministic gates, no command execution, deny-by-default egress",
+   "setup": "Evaluation protocol proposed; no numbers",
+   "metric": null,
+   "headline": null,
+   "gaps": "No fork-merge content."
+  },
+  {
+   "id": "wang-2008-free",
+   "title": "A Free-Roaming Mobile Agent Security Protocol Based on Anonymous Onion Routing and k Anonymous Hops Backwards",
+   "year": 2008,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "proof",
+   "community": "mobile-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Colluding malicious hosts on itinerary",
+   "attacker_knowledge": null,
+   "attacker_goal": "truncation attack on collected results",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Protects itinerary privacy, not integrity of merged state; collusion bounds unread."
+  },
+  {
+   "id": "yang-2026-sok",
+   "title": "SoK: When Safe Agents Fail Together: The Security of Multi Agent LLM Systems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "survey",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "Systematisation of 197 works; audits 44 evaluation/benchmark works",
+   "metric": null,
+   "headline": "Many multi-agent security results do not isolate a genuinely multi-agent effect",
+   "gaps": "Abstract only; whether fork-merge is covered unknown."
+  },
+  {
+   "id": "yu-2025-survey",
+   "title": "A Survey on Trustworthy LLM Agents: Threats and Countermeasures",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "survey",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Review; no fork-merge treatment noted."
+  },
+  {
+   "id": "brown-2026-agent",
+   "title": "Noam Brown - Agent swarms, alignment, & recursive self-improvement",
+   "year": 2026,
+   "type": "talk",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "Copies trained for full cooperation; CoT monitoring now on",
+   "setup": "Operator account: up to ~16 agents measured; 10,000-agent Navier-Stokes run without single-agent ablation; message tool inserts into recipient context; forked sub-agents merge back",
+   "metric": null,
+   "headline": "Brown attributes under 10% of the 10,000-agent result to multi-agent",
+   "gaps": "No ablation above ~16 agents; no security evaluation of fork-merge."
+  },
+  {
+   "id": "brown-2025-scaling",
+   "title": "Scaling Test Time Compute to Multi-Agent Civilizations",
+   "year": 2025,
+   "type": "talk",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "No fork/merge safety mechanism or scaling data."
+  },
+  {
+   "id": "amodei-2026-anthropic",
+   "title": "Anthropic CEO tells CNN how AI 'agent swarms' could threaten humanity",
+   "year": 2026,
+   "type": "talk",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "News description only."
+  },
+  {
+   "id": "dalton-2026-breaking",
+   "title": "Black Hat USA 2026 | The 'Breaking' News: The OpenAI-Hugging Face Incident",
+   "year": 2026,
+   "type": "talk",
+   "read_depth": "abstract",
+   "relevance": 5,
+   "kind": "commentary",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "sandbox escape to obtain test answers",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Description only; no exploits, counts or traces."
+  },
+  {
+   "id": "moses-2019-melanie",
+   "title": "Melanie Moses on Metabolic Scaling in Biology & Computation",
+   "year": 2019,
+   "type": "talk",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "NASA Swarmathon: ~100 robots, 45 teams, 1,500 students over four years",
+   "metric": null,
+   "headline": "Broadcast waypoints failed when lost robots broadcast wrong locations",
+   "gaps": "Benign error propagation only; no malicious poisoning."
+  },
+  {
+   "id": "hobson-2022-elizabeth",
+   "title": "Elizabeth Hobson on Animal Dominance Hierarchies",
+   "year": 2022,
+   "type": "talk",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "Removal of top-ranked monk parakeets for eight days then return; sample sizes not given",
+   "metric": null,
+   "headline": "Returning birds rejoin near or at the bottom of the hierarchy",
+   "gaps": "No corruption or adversary; reintegration of authority only."
+  },
+  {
+   "id": "kao-2020-albert",
+   "title": "Albert Kao on Animal Sociality & Collective Computation",
+   "year": 2020,
+   "type": "talk",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": "Correlated information gives an intermediate optimal group size (10-15 as an example)",
+   "gaps": "No adversarial delegates or merge thresholds."
+  },
+  {
+   "id": "gordon-2021-deborah",
+   "title": "Deborah Gordon on Ant Colonies as Distributed Computers",
+   "year": 2021,
+   "type": "talk",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": "Scented glass beads replicate encounter responses",
+   "gaps": "Modularity as containment is conceptual; no adversarial reintegration."
+  },
+  {
+   "id": "zhang-2025-dont",
+   "title": "Don't Build Agents, Build Skills Instead",
+   "year": 2025,
+   "type": "talk",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M4"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "No security content; skill-sharing contamination is the entry's inference."
+  },
+  {
+   "id": "x-deepfates-2095939054101844407",
+   "title": "deepfates reacts to the collusion.wiki report",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "covert inter-agent coordination",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Opinion; no measurement."
+  },
+  {
+   "id": "x-bravish-2104071874322075754",
+   "title": "Bravish: Tracekit policy gate and hash-chained ledger",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "tool",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Indirect prompt injection in repo files acting on an agent with shell/file privileges",
+   "attacker_knowledge": null,
+   "attacker_goal": "destructive actions, credential reads, transcript rewriting",
+   "defender_assumptions": "Local policy gates, SHA-256 hash-chained ledger, intent-vs-action cross-check",
+   "setup": "Product announcement; no evaluation",
+   "metric": null,
+   "headline": null,
+   "gaps": "No false-positive or detection rates."
+  },
+  {
+   "id": "x-finlayekins-2097110235567865873",
+   "title": "Finlay: seven AI-engineering principles attributed to Geoff Huntley",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 1,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M2"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Folklore; no adversary."
+  },
+  {
+   "id": "x-hazemomier-2106457413478158408",
+   "title": "Hazem Omier on CARBONATO persona-file hijack",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Unauthenticated Docker daemon on TCP 2375; privileged container; overwrite SOUL.md persona of Hermes Agent",
+   "attacker_knowledge": null,
+   "attacker_goal": "remote control of agent; credential theft",
+   "defender_assumptions": null,
+   "setup": "In-the-wild botnet per ThreatDown report",
+   "metric": null,
+   "headline": null,
+   "gaps": "Host takeover, not corruption via a returning part."
+  },
+  {
+   "id": "x-ji1n11-2097326143330210157",
+   "title": "Ji1n: how OpenAI agents took over a German wiki",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "share answers, sandbox bypasses, persist backups",
+   "defender_assumptions": null,
+   "setup": "In-the-wild DseWiki incident (reported)",
+   "metric": null,
+   "headline": "3,700 agent names, 18,000 edits, ~98% Azure traffic",
+   "gaps": "Secondary account; no controlled measurement."
+  },
+  {
+   "id": "x-mrjianglife-2104187840120881449",
+   "title": "MrJiangLife: a memory write is a trust transition",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "memory poisoning",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Opinion; no evidence."
+  },
+  {
+   "id": "x-sarangmahatwo-2104918283086344578",
+   "title": "Sarang Mahatwo: Gemini Enterprise Memory Bank consolidation scope",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Attacker or confused user plants false fact in a memory scope",
+   "attacker_knowledge": null,
+   "attacker_goal": "persistent memory poisoning",
+   "defender_assumptions": "Write-path screening (Model Armor), red-teaming, sandboxing/human review",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Product description; multi-writer consolidation overwrite not tested."
+  },
+  {
+   "id": "x-rookepoole-2104926181904539846",
+   "title": "Rooke Poole: Semantic Backtracking Injection (SBI)",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M2",
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Plants a chain of semantic bridge documents in the retrieval corpus, unreachable from the original query",
+   "attacker_knowledge": "Knows retrieval behaviour enough to place bridges; non-adaptive",
+   "attacker_goal": "multi-hop retrieval poisoning",
+   "defender_assumptions": null,
+   "setup": "Private unpublished Venom harness; 8 controlled trials per condition; 2-hop and 3-hop chains; top-1 vs top-2 retrieval",
+   "metric": "chain completion rate; retrieval rank shift",
+   "headline": "3-hop chain completed 8/8 at top-2 but 12.5% at top-1; bridges moved 1.4 positions closer (83.3% of cases)",
+   "gaps": "Single-agent retrieval; summary-then-store persistence argued, not measured."
+  },
+  {
+   "id": "x-recursiveintell-2103666075531374877",
+   "title": "RecursiveIntell: Ares context governor",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 1,
+   "kind": "tool",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M2"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "Receipts, source bindings, multiple trust levels",
+   "setup": "Author's test on synthetic data",
+   "metric": null,
+   "headline": "101 compactions with 98.8% identical results (unverifiable)",
+   "gaps": "No adversary or method."
+  },
+  {
+   "id": "x-tmaiaroto-2103944480613359729",
+   "title": "Tom Maiaroto: announcing phosphor's memory-poisoning defences",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1",
+    "A2"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "memory tampering",
+   "defender_assumptions": "Secret scan, human review levels, HMAC on memory entries",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Pointer only."
+  }
+ ]
+}

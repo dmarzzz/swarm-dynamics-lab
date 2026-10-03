@@ -1,0 +1,88 @@
+<section id="what">
+<h2>What this is</h2>
+<p>This page reads the swarm-lab library for one question: when an agent splits into copies, sends them out and folds what they bring back into itself, how does a corrupted copy corrupt the parent? The page focuses on how each prior study set up its experiment and what it assumed about the attacker and the defender. It covers all {{N}} library entries tagged <code>fork-merge-security</code> as of {{DATE}}. Each entry was read by an AI agent and reduced to a setup card: rig, attacker access, attacker knowledge, defender assumptions, metric, headline number and gap. The cards are in the table at the bottom of the page, and each one links to its library entry.</p>
+<p>A worked example of the scenario: a parent agent forks eight subagents to research eight vendors. One subagent reads a vendor page that carries a hidden instruction. It writes that instruction into its notes, and its final report goes back to the parent, which saves the report to long-term memory. The parent is now carrying the attacker's instruction into every future session. Richard Sutton posed this as a cybersecurity problem in 2025: material pulled in from outside "could have viruses in them, they could have hidden goals" [[sutton-2025-father]].</p>
+<p class="status"><b>Status.</b> Built from the library, not from re-reading the papers. About a third of the entries were read only at abstract depth, and a card can be no more accurate than its entry. The synthesis and survey this page draws on were merged incomplete on 2026-10-03: the contagion lane never ran (#74), the survey has not passed its prior-art gate (#75), and a read-depth audit of the headline numbers is open (#76). Nothing on this page was measured by the lab; every number comes from a paper, as summarised in its library entry.</p>
+</section>
+
+<section id="model">
+<h2>The scenario and its terms</h2>
+<p>The synthesis <a href="https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md">fork-merge-questions.md</a> sets a shared vocabulary, which this page keeps. Parent P holds weights, persistent memory, configuration and identity files, and live context. It forks parts p<sub>1</sub>..p<sub>n</sub>, and each part works in its own domain D<sub>i</sub>. A merge operator then folds the returning parts back into P.</p>
+{{DIAGRAM}}
+<div class="two">
+<div>
+<h3>Merge operators: what enters the parent</h3>
+<table class="kv">
+<tr><td>M1</td><td>a text report read into P's context</td></tr>
+<tr><td>M2</td><td>a summary or compaction of the part's work</td></tr>
+<tr><td>M3</td><td>new or consolidated memory records, config or identity files</td></tr>
+<tr><td>M4</td><td>a distilled skill or rule</td></tr>
+<tr><td>M5</td><td>a weight merge (task vectors, averaging, TIES, DARE)</td></tr>
+<tr><td>M6</td><td>distillation on data the part generated</td></tr>
+<tr><td>M7</td><td>federated or gradient aggregation</td></tr>
+<tr><td>M8</td><td>a vote or quorum over the parts' outputs</td></tr>
+</table>
+</div>
+<div>
+<h3>Adversary classes: where the attacker sits</h3>
+<table class="kv">
+<tr><td>A1</td><td><b>content</b>: plants injected text or poisoned data that a part reads in its domain. This is Sutton's case.</td></tr>
+<tr><td>A2</td><td><b>host</b>: runs the machine or service that executes the part, and can replay the part on inputs of its choosing (the "malicious host" of 1990s mobile agents).</td></tr>
+<tr><td>A3</td><td><b>channel</b>: sits between parts or between a part and P, or watches traffic metadata.</td></tr>
+<tr><td>A4</td><td><b>common mode</b>: controls something every part shares: a tool description, a backdoor in the base model, or the shared initialisation.</td></tr>
+</table>
+<p class="small">Each study also fixes three more things: what the attacker knows (black-box or white-box, whether it knows the merge rule, whether it adapts); its reach k (how many of the n parts it touches); and its goal (steer P, persist across sessions, exclude honest parts, exfiltrate).</p>
+</div>
+</div>
+<p>The three questions the lab asked:</p>
+<ul>
+<li><b>Q1, hiding.</b> Can P hide which part it will merge, so the attacker cannot target it? No study tests this for agents. The closest formal object is single secret leader election [[boneh-2020-single]]. Deployment measurements show that hiding the pick helps only while the candidate pool and network metadata also stay hidden [[burianova-2025-secret]].</li>
+<li><b>Q2, thresholds.</b> Is there a k-of-n rule under which the attacker must corrupt k parts? Classical bounds exist [[lamport-1982-byzantine]] [[blanchard-2017-byzantine]], and every one of them assumes the parts fail independently. Standard weight merges have an effective threshold of k = 1 [[zhang-2024-badmerging]].</li>
+<li><b>Q3, attack vector.</b> Which attacks on a returning part survive the merge? The best-measured ones write into whatever P loads next: weights, durable memory and config files, and relayed messages [[zhang-2026-agentworm]] [[triedman-2025-multi]].</li>
+</ul>
+</section>
+
+<section id="matrix">
+<h2>Where the measurements sit</h2>
+<p>The grid below counts the {{NMEAS}} entries whose card is a measurement or a demonstration, by the merge operator they exercise (rows) and the adversary they model (columns). An entry with several operators or adversaries is counted in each cell it touches. Click a cell to filter the table at the bottom.</p>
+{{MATRIX}}
+<p>The grid shows three gaps. First, almost all LLM-agent work sits in the A1 column. Host (A2) and channel (A3) attackers appear mainly in classical aggregation and voting results (M7, M8), and once as an agent-in-the-middle [[he-2025-red]]. Second, the common-mode column (A4), which is the one that matters most when every part is a fork of the same model, is filled mostly by benign error-correlation studies and by subliminal transfer (M6) [[cloud-2025-subliminal]], not by attacks on a merge. Third, summary (M2) and skill distillation (M4) are thin, even though these are the merge steps that deployed agent harnesses actually use.</p>
+</section>
+
+<section id="rigs">
+<h2>How the experiments are set up</h2>
+<p>The {{N}} entries use nine kinds of experimental rig. These communities rarely cite one another, and each rig answers part of the fork-merge question while assuming away a different part. For each rig, this section gives the setup, the attacker, what the defender is assumed to have, the representative numbers, and what the rig cannot tell us.</p>
+{{RIGS}}
+</section>
+
+<section id="assumptions">
+<h2>Assumptions no setup varies</h2>
+<p>Read across all nine rigs, the following conditions stay fixed in every experiment in the library. Each one is a place where a fork-merge system differs from the rig, so a number from that rig cannot be carried over as-is.</p>
+<ol class="gaps">
+<li><b>The experimenter installs the corruption.</b> The bad part is an uploaded checkpoint, a trait written into a system prompt, or an agent told to attack. Almost no setup starts with an honest part that becomes malicious by reading hostile content in its own domain before returning. Gadgil et al. tried to have the payload written from untrusted content and could not do it reliably [[gadgil-2026-bad]]. AgentWorm is the closest case: the victim writes the payload into its own config [[zhang-2026-agentworm]].</li>
+<li><b>Parts fail independently.</b> Every threshold proof assumes this ([[castro-1999-practical]], [[blanchard-2017-byzantine]], [[fan-2021-fault-tolerant]]). The assumption is measured as false for benign errors: z = 100.51 against independence across 27 human-written versions [[knight-1986-experimental]]; 429 coincident failures against 115 expected for coding agents [[ron-2026-n-version]]; agreement when both are wrong of 0.42 to 0.60, against chance levels of 0.13 to 0.33 [[kim-2025-correlated]]. The only adversarial version puts the shared injection directly in the prompt [[liu-2026-consensus]]. No study measures forks of one model that all read the same attacker page.</li>
+<li><b>Reach is fixed at k = 1 or a small constant.</b> No study sweeps k/n against a merge rule. The exceptions are the lab's own one-seed ByzFL run, where robust rules held to 5 of 11 and snapped at 6 [[gh-lpd-epfl-byzfl]], and the 3-of-5 versus 4-of-5 corruption levels in [[liu-2026-consensus]].</li>
+<li><b>No parent forks itself and merges back.</b> The "merge" is the same agent's next session, a store shared across users, an uploaded checkpoint from a stranger, or a debate between peers. The one paper that merges parallel workers' internal state has no adversary (Parallel-Synthesis, batch D notes). The child-to-parent return path is explicitly out of scope in [[cai-2026-child]].</li>
+<li><b>Attackers do not know the merge rule.</b> Most attacks are fixed templates. Where knowledge is varied, it matters a great deal: resampling safety fell from 96% to 17% once the attacker knew when resampling happened [[kutasov-2025-evaluating]], and adaptive red-teaming raised AgentDojo success from 11% to 81% [[nist-2025-technical]]. RogueMerge is built to work without knowing the merge settings [[zhang-2026-roguemerge]].</li>
+<li><b>The trusted base stays clean.</b> The aggregator, monitor, judge, provenance oracle and home host are all assumed honest. When the monitor is a copy of the attacker, the results get much worse: naive untrusted monitoring scored 0% safety [[greenblatt-2023-ai]], and copies colluded through self-recognition [[gardner-challis-2026-when]].</li>
+<li><b>Hiding and integrity are never tested together.</b> Every detector assumes full provenance (who said what to whom), and every hiding scheme assumes nothing about what the hidden party returns. Q1 trades one against the other, and no rig measures that trade.</li>
+<li><b>One merge, short divergence.</b> Repeated fork-merge cycles appear only in federated-learning round theory and in persistence studies. Compaction erodes safety rules over five rounds [[zerhoudi-2026-compaction]], but no study tracks injected content over repeated merges. Long benign divergence alone can break re-merging (batch E notes).</li>
+<li><b>Small n, few trials.</b> Rigs where LLM agents face an adversary stay at or below about 16 agents, apart from benign-mixing simulations [[gu-2024-agent]]. Ten trials per condition is common. SMSR is the only memory study that reports confidence intervals at scale (3,150 trials) [[sharma-2026-smsr]].</li>
+</ol>
+</section>
+
+<section id="next">
+<h2>What a fork-merge rig would need</h2>
+<p>The synthesis lists open experiments (its section 6). Each one below is phrased as the rig change that would remove one or more of the assumptions above. These are candidates for the survey, not hypotheses: the prior-art gate (#75) comes first.</p>
+<table class="spec">
+<thead><tr><th>Candidate</th><th>Rig</th><th>Removes</th><th>Nearest instrument</th></tr></thead>
+<tbody>
+<tr><td>Shared-input k-of-n sweep</td><td>n forks of one model; k of them read one poisoned page, n − k read clean pages; merge with M1, M3, M8; measure P's corruption as a function of k</td><td>2, 3, 4</td><td>[[gh-ethz-spylab-agentdojo]], [[gh-lpd-epfl-byzfl]], [[liu-2026-consensus]]</td></tr>
+<tr><td>Diverse vs identical forks</td><td>The same sweep with parts drawn from different model families; report the share of the independence gain recovered</td><td>2</td><td>[[nogueira-2026-systematic]], [[kim-2025-correlated]]</td></tr>
+<tr><td>Secret subset merge</td><td>P merges a secretly drawn subset of parts; attacker uses a split-payload attack; compare a public and a hidden candidate list</td><td>5, 7</td><td>[[li-2026-when]], [[ding-2026-colluding]], [[burianova-2025-secret]]</td></tr>
+<tr><td>Identity through compaction</td><td>Plant identity statements and safety rules side by side; compact over several rounds; compare survival rates</td><td>8</td><td>[[zerhoudi-2026-compaction]], [[liu-2026-safe]]</td></tr>
+<tr><td>End-to-end chain</td><td>Claude Code-style harness with persistent subagent memory. Score each link separately: (a) the hijack persists in the subagent, (b) the subagent acts against its siblings, (c) the parent changes after the merge</td><td>1, 4</td><td>[[anthropic-2026-create]], [[cai-2026-child]], [[gadgil-2026-bad]]</td></tr>
+<tr><td>Merge-time credential check</td><td>Test whether persona or activation-drift probes separate hijacked parts from honest parts that learned something new (Sutton's drift problem as a false-positive rate)</td><td>6</td><td>[[chen-2025-persona]], [[abdelnabi-2024-get]]</td></tr>
+</tbody>
+</table>
+</section>
