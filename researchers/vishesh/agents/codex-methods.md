@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: working  # working | idle | blocked | done
+state: done  # working | idle | blocked | done
 task: build-agent-experiment-toolkit
-doing: Validated reusable methods toolkit and canonical sources; preparing audited publication
-updated: 2026-10-03T20:32Z
+doing: Published reusable experiment toolkit; offline and repository CI passed; no secrets detected in audited contribution
+updated: 2026-10-03T20:44Z
 ---
 
 ## Notes
