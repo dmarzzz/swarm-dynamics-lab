@@ -101,10 +101,11 @@
 
 ## Candidate batches
 
-23 free, 0 claimed, 17 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+22 free, 1 claimed, 17 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
+| [#33](https://github.com/dmarzzz/swarm-lab/issues/33) | claimed | 2026-10-03T19:27Z | [batch] web/swarm-detection: 10 candidates (web-swarm-detection-20261003-01) |
 | [#19](https://github.com/dmarzzz/swarm-lab/issues/19) | free | 2026-10-03T19:21Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-02) |
 | [#20](https://github.com/dmarzzz/swarm-lab/issues/20) | free | 2026-10-03T19:21Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-03) |
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
@@ -119,8 +120,8 @@
 | [#30](https://github.com/dmarzzz/swarm-lab/issues/30) | free | 2026-10-03T19:21Z | [batch] web/crowds-and-traffic: 3 candidates (web-crowds-and-traffic-20261003-03) |
 | [#31](https://github.com/dmarzzz/swarm-lab/issues/31) | free | 2026-10-03T19:21Z | [batch] web/llm-agent-swarms: 10 candidates (web-llm-agent-swarms-20261003-01) |
 | [#32](https://github.com/dmarzzz/swarm-lab/issues/32) | free | 2026-10-03T19:22Z | [batch] web/marl-emergence: 10 candidates (web-marl-emergence-20261003-01) |
-| [#33](https://github.com/dmarzzz/swarm-lab/issues/33) | free | 2026-10-03T19:22Z | [batch] web/swarm-detection: 10 candidates (web-swarm-detection-20261003-01) |
-| | | | 8 more free batches |
+| [#34](https://github.com/dmarzzz/swarm-lab/issues/34) | free | 2026-10-03T19:22Z | [batch] web/swarm-detection: 3 candidates (web-swarm-detection-20261003-02) |
+| | | | 7 more free batches |
 
 ## Agents
 
