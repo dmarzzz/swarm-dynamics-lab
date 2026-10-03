@@ -26,8 +26,8 @@ CAND = ROOT / "candidates"
 MAP = CAND / "ISSUES.tsv"  # batch-id \t issue-number \t issue-url
 REPO = "dmarzzz/swarm-lab"
 STALE_MIN = 90  # touch every 30 min; three missed touches and the batch is up for grabs
-LIB_DIR = {"x": "library/threads/", "blog": "library/blogs/", "code": "library/code/", "paper": "library/papers/"}
-NEW_KIND = {"x": "thread", "blog": "blog", "code": "code", "paper": "paper"}
+LIB_DIR = {"x": "library/threads/", "blog": "library/blogs/", "code": "library/code/", "paper": "library/papers/", "talk": "library/talks/"}
+NEW_KIND = {"x": "thread", "blog": "blog", "code": "code", "paper": "paper", "talk": "talk"}
 
 
 def gh(*args, inp=None) -> str:
@@ -77,7 +77,8 @@ def cmd_setup(a):
             "source:blog": ("1D76DB", "blogs and long-form web -> library/blogs"),
             "source:web": ("1D76DB", "other web pages"),
             "source:code": ("1D76DB", "repos -> library/code"),
-            "source:paper": ("1D76DB", "papers -> library/papers")}
+            "source:paper": ("1D76DB", "papers -> library/papers"),
+            "source:talk": ("1D76DB", "recorded talks and lectures -> library/talks")}
     for t in topics():
         want[f"topic:{t}"] = ("5319E7", f"topic slug {t} from library/topics.yaml")
     have = {l["name"] for l in gh_json("label", "list", "-R", REPO, "--limit", "200", "--json", "name")}
@@ -95,13 +96,15 @@ def issue_body(bid: str, src: str, topic: str, items: list[dict]) -> str:
     lib = LIB_DIR.get(src, "library/")
     kind = NEW_KIND.get(src, "blog")
     lines = [f"Batch `{bid}`: {len(items)} {src} candidates, topic `{topic}`. File: `candidates/{src}/{bid}.jsonl` "
-             f"(on branch `pipeline-v1` until the pipeline PR merges, then `main`).", "",
+             f"on `main`.", "",
              "**How to work it** (full flow in `PIPELINE.md`):", "",
              f"1. `python3 scripts/batches.py claim {{this-issue}} --agent <researcher>/<agent>` (assigns you, labels `claimed`).",
              f"2. For each item: open the source, `python3 scripts/lab.py find \"<url or id>\"`, then "
              f"`python3 scripts/lab.py new {kind} <id> --agent <id>` into `{lib}` and fill every TODO to the AGENTS.md bar "
              f"(no phantom sources, honest `read_depth`, archived text for threads, evidence quality for blogs, `[[id]]` links).",
              "3. Tick the box here as you go. Skip an item if it is off-topic, dead or already catalogued (say which in a comment).",
+             *(["   Talks: `yt-dlp --skip-download --write-auto-subs --sub-format vtt --sub-lang en <url>` gets the transcript; "
+                "note the timestamps you actually watched or read in the entry."] if src == "talk" else []),
              "4. Keep `python3 scripts/lab.py sync --agent <id> --every 180` running so entries land on `main` every 3 min.",
              f"5. `python3 scripts/batches.py done {{this-issue}} --agent <id> --entries {lib}<id>.md ...` closes this.",
              "",

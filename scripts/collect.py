@@ -341,6 +341,241 @@ def cmd_links(a):
     return 0
 
 
+# ------------------------------------------------------------------------------------------------ free sources
+# Three collectors that cost nothing: LessWrong/Alignment Forum GraphQL (tag feeds + search), plain RSS/Atom feeds,
+# and yt-dlp search for talks. Plus `jina`, which fetches clean markdown for blog candidates through r.jina.ai so
+# the batcher can score them on real text instead of a bare url.
+UA = {"User-Agent": "swarm-lab-collector (github.com/dmarzzz/swarm-lab)"}
+LW_SITES = {"lesswrong": "https://www.lesswrong.com", "alignmentforum": "https://www.alignmentforum.org"}
+
+
+def lw_gql(site: str, query: str) -> dict:
+    d, _ = http(f"{LW_SITES[site]}/graphql", headers={"Content-Type": "application/json", **UA},
+                data=json.dumps({"query": query}).encode(), method="POST")
+    if "error" in d or d.get("errors"):
+        print(f"  ! {site} graphql: {str(d)[:160]}", file=sys.stderr)
+        return {}
+    return d.get("data") or {}
+
+
+def lw_rows(posts: list[dict], site: str, topic: str | None, by: str, query: str) -> list[dict]:
+    rows = []
+    for p in posts:
+        url = p.get("pageUrl") or ""
+        if not url:
+            continue
+        desc = ((p.get("contents") or {}).get("plaintextDescription") or "")[:1500]
+        user = p.get("user") or {}
+        tags = " ".join(t.get("slug", "") for t in p.get("tags") or [])
+        rows.append({"id": cand_id("blog", url), "source": "blog", "url": url, "title": p.get("title") or url,
+                     "text": desc, "author": user.get("displayName") or user.get("username") or "",
+                     "date": (p.get("postedAt") or "")[:10], "topic": guess_topic(f"{p.get('title', '')} {desc} {tags}", topic),
+                     "likes": int(p.get("baseScore") or 0), "words": p.get("wordCount") or 0, "af": bool(p.get("af")),
+                     "tags": tags, "links": [], "found_by": by, "query": query, "collected": now()})
+    return rows
+
+
+LW_FIELDS = "_id title pageUrl baseScore postedAt wordCount af user { username displayName } tags { slug } contents { plaintextDescription }"
+
+
+def cmd_lesswrong(a):
+    """--tags slug[:topic] ... pulls the tagRelevance view for each tag; --search 'topic<TAB>terms' lines filter the
+    recent/top posts list by title+description keywords (LW has no public full-text search endpoint we can reach)."""
+    out = RAW / f"lw-{dt.date.today()}.jsonl"
+    total = 0
+    for spec in a.tags or []:
+        slug, _, topic = spec.partition(":")
+        d = lw_gql(a.site, '{ tags(input:{terms:{view:"tagBySlug", slug:"%s"}}) { results { _id name postCount } } }' % slug)
+        res = (d.get("tags") or {}).get("results") or []
+        if not res:
+            print(f"  ! no tag {slug}")
+            continue
+        tid = res[0]["_id"]
+        d = lw_gql(a.site, '{ posts(input:{terms:{view:"tagRelevance", tagId:"%s", limit:%d}}) { results { %s } } }'
+                   % (tid, a.limit, LW_FIELDS))
+        posts = (d.get("posts") or {}).get("results") or []
+        # tagRelevance pads short tags with site-wide top posts; keep only posts that actually carry the tag
+        posts = [p for p in posts if int(p.get("baseScore") or 0) >= a.min_karma
+                 and slug in {t.get("slug") for t in p.get("tags") or []}]
+        rows = lw_rows(posts, a.site, topic or None, a.by, f"lw-tag:{slug}")
+        if a.keywords:
+            kws = [k.strip().lower() for k in a.keywords.split(",") if k.strip()]
+            rows = [r for r in rows if any(k in (r["title"] + " " + r["text"]).lower() for k in kws)]
+        jl_write(out, rows)
+        total += len(rows)
+        print(f"  {len(rows):3d}  [{topic or 'guess'}] tag {slug} ({res[0]['postCount']} posts on {a.site})")
+    if a.search:
+        lines = [ln for ln in Path(a.search).read_text().splitlines() if ln.strip() and not ln.startswith("#")]
+        pool = []
+        for view in ("new", "top"):
+            d = lw_gql(a.site, '{ posts(input:{terms:{view:"%s", limit:%d, af:%s}}) { results { %s } } }'
+                       % (view, a.pool, "true" if a.site == "alignmentforum" else "false", LW_FIELDS))
+            pool += (d.get("posts") or {}).get("results") or []
+        for ln in lines:
+            topic, _, terms = ln.partition("\t")
+            kws = [k.strip().lower() for k in terms.split(",") if k.strip()]
+            # title or the opening of the post, so a stray word deep in the body does not count
+            hit = [p for p in pool if any(k in f"{p.get('title', '')} {((p.get('contents') or {}).get('plaintextDescription') or '')[:400]}".lower() for k in kws)]
+            rows = lw_rows(hit, a.site, topic.strip() or None, a.by, f"lw-search:{terms[:60]}")
+            jl_write(out, rows)
+            total += len(rows)
+            print(f"  {len(rows):3d}  [{topic}] search {terms[:60]} (pool {len(pool)})")
+    print(f"lesswrong: {total} posts -> {out.relative_to(ROOT)}")
+    return 0
+
+
+def cmd_rss(a):
+    """--feeds file: `<topic-slug><TAB><feed url>[<TAB>kw1,kw2]` per line. Plain xml.etree, no feedparser needed."""
+    import html
+    import xml.etree.ElementTree as ET
+    out = RAW / f"rss-{dt.date.today()}.jsonl"
+    total = 0
+    for ln in Path(a.feeds).read_text().splitlines():
+        if not ln.strip() or ln.startswith("#"):
+            continue
+        parts = ln.split("\t")
+        topic, feed = parts[0].strip(), parts[1].strip()
+        kws = [k.strip().lower() for k in (parts[2] if len(parts) > 2 else "").split(",") if k.strip()]
+        try:
+            req = urllib.request.Request(feed, headers=UA)
+            with urllib.request.urlopen(req, timeout=40) as r:
+                body = r.read()
+            root = ET.fromstring(body)
+        except Exception as e:  # noqa: BLE001
+            print(f"  ! {feed[:70]}: {str(e)[:80]}")
+            continue
+        ns = {"a": "http://www.w3.org/2005/Atom", "dc": "http://purl.org/dc/elements/1.1/",
+              "content": "http://purl.org/rss/1.0/modules/content/"}
+        items = root.findall(".//item") or root.findall(".//a:entry", ns)
+        rows = []
+        for it in items[:a.limit]:
+            def g(*names):
+                for n in names:
+                    el = it.find(n, ns)
+                    if el is not None:
+                        if el.text and el.text.strip():
+                            return el.text.strip()
+                        if el.get("href"):
+                            return el.get("href")
+                return ""
+            url = g("link", "a:link", "guid", "a:id")
+            if not url.startswith("http"):
+                continue
+            title = html.unescape(g("title", "a:title"))
+            desc = re.sub(r"<[^>]+>", " ", html.unescape(g("description", "content:encoded", "a:summary", "a:content")))
+            desc = re.sub(r"\s+", " ", desc).strip()[:1500]
+            lede = (title + " " + desc[:300]).lower()
+            if kws and not any(re.search(r"\b" + re.escape(k), lede) for k in kws):
+                continue  # title or the lede only, word-start match ("ant" must not hit "quantum")
+            date = g("pubDate", "dc:date", "a:published", "a:updated")
+            try:
+                import email.utils
+                dd = email.utils.parsedate_to_datetime(date)
+                date = dd.strftime("%Y-%m-%d")
+            except Exception:  # noqa: BLE001
+                date = date[:10]
+            rows.append({"id": cand_id("blog", url), "source": "blog", "url": url, "title": title or url, "text": desc,
+                         "author": g("dc:creator", "author", "a:author/a:name"), "date": date,
+                         "topic": guess_topic(title + " " + desc, topic), "likes": 0, "links": [], "found_by": a.by,
+                         "query": f"rss:{urllib.parse.urlparse(feed).netloc}", "collected": now(), "seed_score": a.score})
+        jl_write(out, rows)
+        total += len(rows)
+        print(f"  {len(rows):3d}/{len(items):<3d} [{topic}] {feed[:70]}")
+    print(f"rss: {total} items -> {out.relative_to(ROOT)}")
+    return 0
+
+
+def cmd_ytsearch(a):
+    """--queries file: `<topic-slug><TAB><search terms>` per line; uses yt-dlp flat search (no download, no key)."""
+    import shutil
+    import subprocess
+    ytdlp = a.ytdlp or shutil.which("yt-dlp") or os.path.expanduser("~/.local/bin/yt-dlp")
+    out = RAW / f"talks-{dt.date.today()}.jsonl"
+    total = 0
+    for ln in Path(a.queries).read_text().splitlines():
+        if not ln.strip() or ln.startswith("#"):
+            continue
+        topic, _, q = ln.partition("\t")
+        q = q.strip()
+        r = subprocess.run([ytdlp, f"ytsearch{a.n}:{q}", "--flat-playlist", "--dump-json", "--no-warnings"],
+                           capture_output=True, text=True, timeout=180)
+        rows = []
+        for line in r.stdout.splitlines():
+            try:
+                d = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            dur = int(d.get("duration") or 0)
+            if dur and dur < a.min_minutes * 60:
+                continue  # shorts and trailers are not talks
+            url = f"https://www.youtube.com/watch?v={d.get('id')}"
+            text = (d.get("description") or "")[:600]
+            rows.append({"id": cand_id("talk", url), "source": "talk", "url": url, "title": d.get("title") or url,
+                         "text": f"{d.get('channel') or d.get('uploader') or ''} | {dur // 60} min | {text}",
+                         "author": d.get("channel") or d.get("uploader") or "", "date": "",
+                         "topic": guess_topic(f"{d.get('title', '')} {text} {q}", topic.strip() or None),
+                         "likes": int(d.get("view_count") or 0), "duration_min": dur // 60, "links": [],
+                         "found_by": a.by, "query": f"ytsearch:{q}", "collected": now(), "seed_score": a.score})
+        jl_write(out, rows)
+        total += len(rows)
+        print(f"  {len(rows):3d}  [{topic}] {q[:70]}" + (f"  ! {r.stderr.strip()[:80]}" if r.returncode else ""))
+    print(f"ytsearch: {total} talks -> {out.relative_to(ROOT)}")
+    return 0
+
+
+def jina(url: str, timeout: int = 60) -> str:
+    req = urllib.request.Request("https://r.jina.ai/" + url, headers={**UA, "X-Return-Format": "markdown"})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return r.read().decode(errors="replace")
+    except Exception as e:  # noqa: BLE001
+        return f"!! {str(e)[:120]}"
+
+
+def cmd_jina(a):
+    """Fetch markdown through r.jina.ai for blog/web rows in raw that have no real text yet (links pass output, seeds).
+    Rewrites title from the page, fills text (first 1500 chars), drops rows that are 404/parked/empty when --prune."""
+    seen = load_seen() | library_seen()
+    done = 0
+    for p in sorted(RAW.glob("*.jsonl")):
+        if p.name.startswith(("x-", "apify-x", "talks-")):
+            continue
+        rows = jl_read(p)
+        changed = False
+        for r in rows:
+            if r.get("source") not in {"blog", "web"} or r.get("jina") or r["id"] in seen:
+                continue
+            if len(r.get("text") or "") > 400 and r.get("title") != r.get("url"):
+                continue
+            if done >= a.max:
+                break
+            md = jina(r["url"])
+            done += 1
+            r["jina"] = now()
+            if md.startswith("!!") or len(md) < 300:
+                r["jina_error"] = md[:120]
+                r["score_hint"] = 0
+                print(f"  dead  {r['url'][:80]} {md[:60]}")
+            else:
+                m = re.match(r"Title:\s*(.+)", md)
+                if m and m.group(1).strip():
+                    r["title"] = m.group(1).strip()[:200]
+                body = md.split("Markdown Content:", 1)[-1] if "Markdown Content:" in md else md
+                body = re.sub(r"\s+", " ", re.sub(r"!\[[^\]]*\]\([^)]*\)", " ", body)).strip()
+                r["text"] = body[:1500]
+                r["words"] = len(body.split())
+                r["topic"] = guess_topic(r["title"] + " " + body[:3000], r.get("topic"))
+                print(f"  ok    {r['url'][:80]} ({r['words']} words) {r['title'][:50]}")
+            changed = True
+            time.sleep(a.sleep)
+        if changed:
+            if a.prune:
+                rows = [r for r in rows if not r.get("jina_error")]
+            jl_write(p, rows, append=False)
+    print(f"jina: fetched {done} pages")
+    return 0
+
+
 def cmd_seed(a):
     rows, topic = [], a.topic
     for ln in Path(a.urls).read_text().splitlines():
@@ -379,6 +614,15 @@ def score(r: dict) -> int:
     s += min(1.2, 0.4 * hits)
     if r.get("source") in {"blog", "web", "code", "paper"} and r.get("via"):
         s += 0.5  # a human thought it worth linking
+    if r.get("source") in {"blog", "web"}:
+        if r.get("jina_error") or r.get("score_hint") == 0:
+            return 0  # fetched through jina and it was dead or empty
+        if int(r.get("words") or 0) >= 800:
+            s += 0.6  # long-form, worth a blog entry
+        if r.get("af"):
+            s += 0.5  # crossposted to the Alignment Forum
+        if r.get("query", "").startswith("lw-") and likes >= 50:
+            s += 0.5
     if r.get("source") in {"x", "apify-x"}:
         if not any(k in txt for k in RELEVANT) or hits == 0:
             s = min(s, 1.0)
@@ -414,7 +658,7 @@ def cmd_batch(a):
         fresh = {k: v for k, v in fresh.items() if v["source"] in a.source}
     groups: dict[tuple[str, str], list[dict]] = {}
     for r in fresh.values():
-        src = "x" if r["source"] in {"x", "apify-x"} else ("blog" if r["source"] in {"blog", "web"} else r["source"])
+        src = "x" if r["source"] in {"x", "apify-x"} else ("blog" if r["source"] in {"blog", "web"} else r["source"])  # talk, code, paper keep their own dir
         groups.setdefault((src, r.get("topic") or "llm-agent-swarms"), []).append(r)
     stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d")
     written = []
@@ -474,9 +718,24 @@ def main(argv=None):
     p = sub.add_parser("batch"); p.add_argument("--by", required=True); p.add_argument("--size", type=int, default=10)
     p.add_argument("--min-score", type=int, default=1); p.add_argument("--min-batch", type=int, default=3)
     p.add_argument("--source", nargs="*", default=None)
+    p = sub.add_parser("lesswrong", help="LessWrong / Alignment Forum via public GraphQL (free)")
+    p.add_argument("--site", choices=list(LW_SITES), default="lesswrong"); p.add_argument("--by", required=True)
+    p.add_argument("--tags", nargs="*", help="tag-slug[:topic-slug] ..."); p.add_argument("--limit", type=int, default=40)
+    p.add_argument("--min-karma", type=int, default=20); p.add_argument("--keywords", default=None, help="comma list, keep only tag posts mentioning one")
+    p.add_argument("--search", default=None, help="file of `topic<TAB>kw1,kw2` lines matched against the new+top pools")
+    p.add_argument("--pool", type=int, default=300)
+    p = sub.add_parser("rss", help="RSS/Atom feeds: `topic<TAB>url[<TAB>kw1,kw2]` per line"); p.add_argument("--feeds", required=True)
+    p.add_argument("--by", required=True); p.add_argument("--limit", type=int, default=60); p.add_argument("--score", type=int, default=2)
+    p = sub.add_parser("ytsearch", help="talk discovery with yt-dlp flat search: `topic<TAB>query` per line")
+    p.add_argument("--queries", required=True); p.add_argument("--by", required=True); p.add_argument("--n", type=int, default=15)
+    p.add_argument("--min-minutes", type=int, default=8); p.add_argument("--score", type=int, default=2); p.add_argument("--ytdlp", default=None)
+    p = sub.add_parser("jina", help="fetch page text through r.jina.ai for blog rows that only have a url")
+    p.add_argument("--by", required=True); p.add_argument("--max", type=int, default=60); p.add_argument("--sleep", type=float, default=1.0)
+    p.add_argument("--prune", action="store_true", help="drop rows whose page is dead or empty")
     sub.add_parser("status")
     a = ap.parse_args(argv)
     return {"x-search": cmd_x_search, "apify": cmd_apify, "links": cmd_links, "seed": cmd_seed,
+            "lesswrong": cmd_lesswrong, "rss": cmd_rss, "ytsearch": cmd_ytsearch, "jina": cmd_jina,
             "batch": cmd_batch, "status": cmd_status}[a.cmd](a)
 
 
