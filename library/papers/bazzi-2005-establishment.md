@@ -14,7 +14,7 @@ added_by: dmarz/sybil-foundations
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 3
-citations: null
+citations: "98 (Semantic Scholar, journal version record, 2026-10-03)"
 code: []
 ---
 

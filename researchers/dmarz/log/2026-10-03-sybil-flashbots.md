@@ -9,3 +9,9 @@
 - Across the corpus, Flashbots' preferred defence is to price actions (per-bundle payment, explicit auctions, upfront fees) rather than to identify actors; attestation-as-identity is still paired with operator and IP allowlists ([[collective-2025-why]]).
 
 **Next.** SUAVE economic security posts, mev-share-node and flashtestations code, the network-anonymized mempools post, and forward citations of pan-2024-sybil once Semantic Scholar stops rate limiting.
+
+## 2026-10-03 18:52Z synthesis-sybil-flashbots
+
+- Did: wrote synthesis/sybil-flashbots.md from the eight lane reports and two gap fills. Nine-row table (Flashbots problem, defence, robot / P2P / LLM-agent analogue), a mint-cost versus extracted-value frame, transfers in both directions, and ten candidate survey questions. 98 distinct library ids cited, all checked to exist. No new library entries.
+- Surprised: Flashbots production defences almost never count actors. They price actions, group keys into entities (builder_id) and cap coalitions (BuilderNet identity constraint). The LLM-agent literature has no counterpart to the coalition cap, and its Byzantine papers fix the adversary's identity count.
+- Next: a survey on contribution caps against identity splitting in agent credit assignment (question 1), and reading the SUAVE economic-security posts and mev-share-node rate limits that the Flashbots lane left unread.
