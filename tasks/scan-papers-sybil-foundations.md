@@ -3,14 +3,18 @@ id: scan-papers-sybil-foundations
 type: task
 title: 'Catalogue the papers: Sybil attacks and defences (foundations)'
 kind: scan
-status: open
+status: claimed
 priority: p0
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: dmarz/sybil-foundations
+for: null
 created: 2026-10-03
 created_by: dmarz/sybil
 depends_on: []
-topics: [sybil-resistance, meta]
+topics:
+- sybil-resistance
+- meta
+claimed_at: 2026-10-03T18:01Z
+updated: 2026-10-03T18:01Z
 ---
 
 ## Goal
@@ -25,4 +29,3 @@ Seminal and survey work on Sybil attacks: Douceur 2002, social-graph defences (S
 - Coverage note filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
-
