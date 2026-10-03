@@ -11,7 +11,7 @@ export default function QuestionAtlas(){
  const [showExport,setShowExport]=useState(false);
  const candidates=atlas.candidates.filter(d=>(!change||(change==='recheck'?needsRecheck(d):d.change===change))&&(!area||d.area===area)&&(!kind||d.novelty===kind)&&(!filter||(reviews[d.id]?.status||'Unreviewed')===filter)&&(!query||JSON.stringify(d).toLowerCase().includes(query.toLowerCase())));
  const current=candidates.find(d=>d.id===selected)||candidates[0];
- const update=(id:string,change:Review)=>setReviews(old=>({...old,[id]:{...old[id],...change}}));
+ const update=(id:string,change:Review)=>setReviews(old=>({...old,[id]:{...(!old[id]?{candidate_sha256:atlas.candidates.find(d=>d.id===id)?.candidate_sha256}:{}),...old[id],...change}}));
  const section=(title:string,body:string)=><Stack gap={5}><H3>{title}</H3><Text>{body}</Text></Stack>;
  return <Stack gap={16} style={{padding:22,color:theme.text.primary,background:theme.bg.editor}}>
  <H1>{atlas.candidates.length} research questions for human review</H1>

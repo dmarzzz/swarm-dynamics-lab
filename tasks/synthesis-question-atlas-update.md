@@ -28,8 +28,8 @@ Update synthesis/research-question-atlas.md and researchers/dmarz/notes/question
 
 ## Done when
 
-- [ ] New research is mapped to revised or new questions with honest prior relationships.
-- [ ] All fifteen topic areas and original briefs remain covered.
-- [ ] Review tools preserve existing decisions and identify changed candidates.
-- [ ] Source links, renderer, browser review workflow and project checks pass.
-- [ ] Refresh is integrated into main with a reproducible change record.
+- [x] New research is mapped to revised or new questions with honest prior relationships.
+- [x] All fifteen topic areas and original briefs remain covered.
+- [x] Review tools preserve existing decisions and identify changed candidates.
+- [x] Source links, renderer, browser review workflow and project checks pass.
+- [x] Reproducible refresh and review materials are prepared for integration into main.

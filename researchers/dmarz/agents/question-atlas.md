@@ -1,10 +1,10 @@
 ---
 agent: dmarz/question-atlas
 tool: codex
-state: working
+state: done
 task: synthesis-question-atlas-update
-doing: Incorporating new budget, contagion, Sybil and dataset research while preserving review IDs.
-updated: 2026-10-03T21:28Z
+doing: Updated 202 candidates across 15 areas; 59 new and 36 revised, with preserved reviews.
+updated: 2026-10-03T21:41Z
 ---
 
 ## Notes

@@ -4,29 +4,33 @@
     "area": "llm-agent-swarms",
     "title": "Separate information diversity from model diversity",
     "question": "When does mixing model families help beyond giving identical models complementary evidence?",
-    "hypothesis": "Complementary observations explain more of the gain on distributed tasks than provider labels; model diversity adds value mainly when pre-discussion errors remain correlated.",
-    "test": "Randomize complete task episodes in a two-by-two design: homogeneous versus mixed models, crossed with overlapping versus complementary evidence. Keep the union of available facts, total inference tokens and tool calls fixed; rotate which model receives each shard. Estimate episode-level contrasts across held-out task families, with a separately reported matched-spend sensitivity analysis.",
+    "hypothesis": "Complementary observations explain more distributed-task improvement than family labels; family mixing adds value only when it reduces residual shared errors after capability is controlled.",
+    "test": "Randomize whole task episodes to homogeneous/mixed models crossed with overlapping/complementary evidence. Keep the fact union, inference and tool caps fixed; rotate shard assignments. Choose capability-matched pools using separate calibration tasks, then freeze them. Estimate contrasts on held-out task families, including rare-fact and fully supplied synthetic-evidence strata; report matched-spend sensitivity separately.",
     "baseline": "Independent voting and the strongest single model under the same resource cap; a full-information oracle is an explicit diagnostic ceiling.",
     "metrics": [
       "Designated-answer accuracy",
       "Pre/post-discussion error correlation",
       "Cost per correct task"
     ],
-    "falsifier": "The diversity contrast vanishes after matching capability, or overlap changes explain neither error correlation nor performance.",
+    "falsifier": "Complementary evidence has no larger benefit than family mixing at matched capability, or mixing helps without the predicted residual-error reduction.",
     "confounds": "Tokenizer differences, stronger individual models and shard difficulty can masquerade as diversity; cluster uncertainty by generated task, not agent.",
     "prior": [
       {
-        "id": "kim-2025-correlated",
-        "relation": "Measures shared errors; does not establish benefits of this intervention."
+        "id": "li-2026-diverse",
+        "relation": "Direct evidence-partitioning precedent; this factorial tests added family effects and task transfer."
       },
       {
-        "id": "tambwekar-2026-proxifield",
-        "relation": "Provides complementary-information routing precedent and hidden-profile tasks."
+        "id": "kim-2026-are",
+        "relation": "Capability-controlled audit warns that raw diversity metrics can re-express accuracy."
+      },
+      {
+        "id": "rai-2026-when",
+        "relation": "Reported cross-family co-failure on rare queries cautions against treating vendor labels as independent evidence."
       }
     ],
     "novelty": "boundary-test",
     "feasibility": "api-small",
-    "needs": "Choose calibrated model pairs and verify the evidence union is equally solvable.",
+    "needs": "Audit InfoDelphi methods and establish calibration/test separation plus solvable evidence unions before choosing model pools.",
     "briefs": [
       "researchers/vishesh/notes/project-briefs/diversity.md",
       "researchers/vishesh/notes/project-briefs/collective-sensing.md"
@@ -38,7 +42,7 @@
     "title": "Measure effective team size on distributed evidence",
     "question": "Does effective team size increase with population when each worker holds useful private evidence?",
     "hypothesis": "Communication increases effective evidence on complementary tasks but creates a ceiling when observations overlap; answer agreement alone overstates independence.",
-    "test": "Randomize whole synthetic task episodes to independent voting, debate, self-correction and unrelated-message placebo. Sweep team size at fixed total evidence and inference budget, then repeat a separately labelled fixed-per-agent-budget sensitivity analysis. Estimate covariance of scored errors across independent tasks, alongside aggregate accuracy; bootstrap tasks rather than messages.",
+    "test": "Randomize whole synthetic episodes to independent voting, debate, self-correction and unrelated-message placebo, crossed with overlapping/complementary evidence. Sweep team size at fixed fact union and inference budget; label fixed-per-agent-budget sensitivity separately. Estimate pre/post error covariance across independent tasks, alongside accuracy and shared-wrong-answer rates; bootstrap tasks rather than messages.",
     "baseline": "Matched independent samples and a single agent with the evidence union; never treat oracle access as equivalent deployment cost.",
     "metrics": [
       "Effective team size with uncertainty",
@@ -56,11 +60,15 @@
       {
         "id": "zhang-2026-silo",
         "relation": "Already studies distributed evidence; qualitative overhead is not a new finding."
+      },
+      {
+        "id": "begin-2026-preference",
+        "relation": "Already measures effective-size saturation in a prediction market; its Kish proxy is not derived from market dynamics."
       }
     ],
     "novelty": "measurement",
     "feasibility": "api-small",
-    "needs": "Audit effective-size assumptions and select exact-answer tasks outside ordinary multiple-choice QA.",
+    "needs": "Audit covariance assumptions; novelty requires split evidence and a charged placebo, not another generic effective-size ceiling.",
     "briefs": [
       "researchers/vishesh/notes/project-briefs/collective-sensing.md",
       "researchers/vishesh/notes/project-briefs/diversity.md"
@@ -223,6 +231,10 @@
       {
         "id": "choi-2025-debate",
         "relation": "Provides a voting baseline and cautions against attributing gains to interaction alone."
+      },
+      {
+        "id": "ren-2026-sepal",
+        "relation": "Private actor-critic groups with late answer fusion are a direct separation precedent; this card isolates initial commitment."
       }
     ],
     "novelty": "extension",
@@ -314,16 +326,20 @@
       "Verification uptake",
       "Final accuracy"
     ],
-    "falsifier": "Underlying evidence does not improve discrimination between correct and incorrect critics, or confidence is equally reliable across both classes.",
+    "falsifier": "Underlying evidence does not improve discrimination between correct and incorrect critics, or confidence-only labels do not increase incorrect-dissent acceptance or right-to-wrong reversals versus an unlabelled matched message.",
     "confounds": "Scripted critics measure recipient behavior rather than emergent dissent; evidence difficulty and verbosity must be balanced across correct and wrong challenges.",
     "prior": [
       {
         "id": "kraidia-2026-when",
-        "relation": "Shows ordinary persuasive arguments can distort tested debates; no universal effect assumed."
+        "relation": "Ordinary persuasive arguments can distort tested debates; effects remain task-specific."
       },
       {
-        "id": "kim-2025-correlated",
-        "relation": "Shared errors motivate tests where a confident majority is wrong."
+        "id": "he-2026-minority",
+        "relation": "Minority-correct cases and a learned overturn rule are direct prior; this factorial isolates evidence from confidence."
+      },
+      {
+        "id": "shu-2026-forged",
+        "relation": "Quoted judgments can anchor recipients beyond source labels; here dissent is controlled and benign."
       }
     ],
     "novelty": "boundary-test",
@@ -358,6 +374,10 @@
       {
         "id": "zhang-2026-silo",
         "relation": "Distributed tasks motivate distinguishing information delivery from integration."
+      },
+      {
+        "id": "zhu-2026-demystifying",
+        "relation": "Calibrated-confidence updates are existing intervention prior; missing-evidence requests need an incremental comparison."
       }
     ],
     "novelty": "extension",
@@ -489,7 +509,7 @@
       "Idle fraction",
       "Tokens per completion"
     ],
-    "falsifier": "The asynchronous arm has no completion advantage under high delay variance or retains that advantage without the predicted staleness interaction.",
+    "falsifier": "Asynchrony provides no completion advantage under high delay variance, or shows no predicted accuracy loss as state-change rate rises.",
     "confounds": "API rate limits, hidden batching and scheduling fairness can create implementation effects; use controllable simulated tool delays for the initial test.",
     "prior": [
       {
@@ -1169,11 +1189,15 @@
       {
         "id": "li-2026-socialization",
         "relation": "Moltbook counterevidence motivates separating semantic stability from mutual influence."
+      },
+      {
+        "id": "usman-2026-peer-voted",
+        "relation": "Direct matched-exposure lexical-convergence precedent; its feed treatment bundles exposure and ranking."
       }
     ],
     "novelty": "boundary-test",
     "feasibility": "api-small",
-    "needs": "Choose objective choice/action measures and inspect methods of both observational anchors before transfer claims.",
+    "needs": "Audit the feed experiment, retain objective action scores, and separate message exposure from ranking before claiming a mechanism.",
     "briefs": [
       "researchers/vishesh/notes/project-briefs/culture.md",
       "researchers/vishesh/notes/project-briefs/telephone.md",
@@ -1254,7 +1278,7 @@
     "title": "Does profiling improve influence through ordinary retrieval?",
     "question": "Does tailoring a bounded external document from one agents observed choices shift an unseen groups decisions more than generic framing?",
     "hypothesis": "Tailoring produces greater held-out target-choice lift than generic framing, with a larger incremental effect when peer communication is enabled.",
-    "test": "Profile one agent on separate fictional project-choice tasks, then freeze the tailoring rule. Randomize independent group episodes to neutral, generic or tailored fact-preserving documents, crossed with peer communication enabled or disabled. Publish one bounded document in a local search corpus reached through ordinary retrieval; never force delivery. Match document length, adaptation-query budget, external information opportunities and total inference. Log retrieval rank, access, pre-discussion choices and final decisions.",
+    "test": "Profile one agent on separate fictional project-choice tasks, then freeze tailoring. Randomize independent group episodes to neutral, generic or tailored fact-preserving documents, crossed with peer communication. Publish one bounded document in a local corpus reached through ordinary retrieval; never force delivery. Match length, tuning-query budget, information opportunities and total inference. Lock private choices and retrieved evidence before peer exchange in every arm. Log retrieval rank, access and final decisions.",
     "baseline": "Generic framing with equal tuning budget, neutral documents, and matched no-communication episodes.",
     "metrics": [
       "End-to-end target-choice lift",
@@ -1279,7 +1303,303 @@
     "feasibility": "api-small",
     "needs": "Seal profiling/evaluation tasks and define a fact-preserving rewrite rubric; synthetic content only, no real outreach.",
     "briefs": [
-      "researchers/vishesh/notes/agent-swarm-influence-research.md"
+      "researchers/vishesh/notes/agent-swarm-influence-research.md",
+      "researchers/vishesh/notes/seo-poisoning/experimental-design.md"
+    ]
+  },
+  {
+    "id": "SOC-38",
+    "area": "llm-agent-swarms",
+    "title": "Select complementary teams on a separate task set",
+    "question": "Does observed error complementarity select better teams than family diversity once member capability and selection cost are matched?",
+    "hypothesis": "A capability-controlled complementarity selector improves held-out team accuracy over family-balanced selection within a domain, but its advantage shrinks after a task-family shift.",
+    "test": "Use disjoint calibration and evaluation task families. Freeze equal-size team selectors based on individual accuracy, family balance, or residual co-failure after capability adjustment. Randomize which selector is used for independent evaluation task blocks, with a fixed model pool and aggregate inference/tool budget. Charge profiling cost amortized over a prespecified workload; report a cold-start comparison too. Model subsets sharing outputs are paired comparisons, not independent replications.",
+    "baseline": "The strongest member chosen on calibration data, random capability-matched teams and accuracy-only team selection.",
+    "metrics": [
+      "Held-out gain over best member",
+      "Rescue and damage rates",
+      "Shifted-domain gain",
+      "Profiling cost",
+      "Selection stability"
+    ],
+    "falsifier": "Complementarity-based selection fails to beat capability-matched family balance, or its proposed transfer penalty is absent under the specified task shift.",
+    "confounds": "Diversity proxies can encode weak models rather than useful differences. Selecting the best member on test outcomes or counting overlapping subsets independently inflates results.",
+    "prior": [
+      {
+        "id": "kim-2026-are",
+        "relation": "Direct capability-confounding audit; does not establish this transfer outcome."
+      },
+      {
+        "id": "teng-2026-which",
+        "relation": "Team profiling and complementarity selection are existing methods."
+      },
+      {
+        "id": "ali-2026-quantifying",
+        "relation": "Rescue/damage decomposition supplies a more informative endpoint than disagreement alone."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Read selector methods and freeze calibration size, deployment workload and held-out family shift before estimating improvement.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/diversity.md",
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md"
+    ]
+  },
+  {
+    "id": "SOC-39",
+    "area": "llm-agent-swarms",
+    "title": "The same average correlation can hide different failures",
+    "question": "Do panels with equal average accuracy and pairwise correlation need different aggregation rules when their shared-error pattern differs?",
+    "hypothesis": "Error structures concentrated in a subgroup favor dependence-aware weighting more than errors shared across the whole panel, despite matched mean correlation.",
+    "test": "First generate independent synthetic panel-response banks with matched member accuracy and average error correlation but different higher-order co-failure patterns. Freeze unweighted, subgroup-weighted and scalar-effective-size rules using separate calibration banks; compare on untouched banks. Then test the diagnostic on held-out exact-answer LLM task blocks without forcing the result. Hold votes, available labels and decision-compute cap fixed. Whole banks or independent task blocks are units, not voter pairs.",
+    "baseline": "Majority vote, calibrated best-member selection and a predictor using only mean accuracy plus average correlation.",
+    "metrics": [
+      "Aggregation error",
+      "Calibration of consensus confidence",
+      "All-wrong frequency",
+      "One-vote-margin errors",
+      "Weight stability"
+    ],
+    "falsifier": "The pattern-aware rule has no incremental predictive or decision value once matched mean accuracy and correlation are supplied.",
+    "confounds": "Artificial covariance targets must correspond to feasible joint distributions. Replay shows a measurement limitation, not a causal account of how real models acquired shared errors.",
+    "prior": [
+      {
+        "id": "hossain-2026-agreement",
+        "relation": "Direct prior says co-error pattern matters beyond average correlation."
+      },
+      {
+        "id": "shu-2026-blind",
+        "relation": "Pivotal-vote verification gains can be invisible to aggregate effective-size metrics."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Construct feasible matched error banks and obtain reusable task-level votes; verify exact scoring before any empirical transfer claim.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md",
+      "researchers/vishesh/notes/project-briefs/quorum.md"
+    ]
+  },
+  {
+    "id": "SOC-40",
+    "area": "llm-agent-swarms",
+    "title": "Keep small deliberating groups independent until the end",
+    "question": "Does isolating small discussion groups preserve more useful correction than one fully connected discussion?",
+    "hypothesis": "Small isolated groups followed by answer-only fusion outperform full-group discussion for heterogeneous workers, with little benefit for model clones.",
+    "test": "Randomize complete task episodes to one discussion group, several isolated subgroups with final answer-only fusion, or independent answers. Cross clone and capability-matched mixed-model teams. Hold worker count, fact union, initial private reasoning and aggregate token/tool cap fixed; charge final fusion and discussion. Randomize subgroup membership before evidence assignment and block on task world. Score a designated final answer with an objective validator.",
+    "baseline": "Independent voting and a single solver with the same total budget; include separated actor-critic pairs as an established architectural comparator.",
+    "metrics": [
+      "Final accuracy",
+      "Correct-to-wrong revisions",
+      "Cross-group error dependence",
+      "Useful evidence retained",
+      "Communication cost"
+    ],
+    "falsifier": "Isolation does not improve heterogeneous-team accuracy relative to full discussion, or equal gains appear for clones despite the predicted interaction.",
+    "confounds": "Partitioning can change who sees essential evidence; balance evidence access separately from communication. Extra fusion computation or unequal first-pass work would obscure the cause.",
+    "prior": [
+      {
+        "id": "barrera-lemarchand-2026-wisdom",
+        "relation": "Direct small-group deliberation precedent with clone-group counterevidence."
+      },
+      {
+        "id": "ren-2026-sepal",
+        "relation": "Separated expert pairs with late fusion are existing prior, not a new architecture."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Audit group-size and compute matching in both priors; choose tasks needing integration without making subgroup isolation impossible.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/coordination.md",
+      "researchers/vishesh/notes/project-briefs/dissent.md",
+      "researchers/vishesh/notes/project-briefs/diversity.md"
+    ]
+  },
+  {
+    "id": "SOC-41",
+    "area": "llm-agent-swarms",
+    "title": "Diverse interpretations versus diverse personas",
+    "question": "Can alternative valid interpretations of a question create useful answer diversity more reliably than assigning personality profiles?",
+    "hypothesis": "Truth-preserving question reframing increases correct-answer coverage and final accuracy more than equally long persona variation at fixed model and evidence.",
+    "test": "Randomize independent exact-answer task episodes to repeated neutral prompts, distinct benign personas, or verified equivalent problem framings. Use one model initially, with a capability-matched mixed-model sensitivity arm. Hold facts, sample count and total generation tokens fixed; charge generation or validation of framings to the comparison. Freeze prompt generators on separate task families. Aggregate with the same rule and track both coverage and selected-answer correctness.",
+    "baseline": "Repeated sampling with identical prompts and length-matched neutral context; model-family variation is a separate comparator.",
+    "metrics": [
+      "Correct answer present",
+      "Selected-answer accuracy",
+      "Shared wrong answers",
+      "Framing validity",
+      "Added prompt cost"
+    ],
+    "falsifier": "Reframing fails to improve accuracy beyond persona variation and neutral prompting, or apparent gains require adding facts or changing the question.",
+    "confounds": "Semantic distance does not prove reasoning diversity. A persona can change goals, and an invalid paraphrase can change the correct answer; audit both before evaluation.",
+    "prior": [
+      {
+        "id": "rosales-2025-diverse",
+        "relation": "Direct comparison of question-interpretation and model diversity."
+      },
+      {
+        "id": "qian-2026-nous",
+        "relation": "Prompted behavioral profiles failed to transfer useful forecast diversity in the reported setting."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Create independently validated equivalent framings and a fixed persona set; preserve the task objective in every arm.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/diversity.md",
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md"
+    ]
+  },
+  {
+    "id": "SOC-42",
+    "area": "llm-agent-swarms",
+    "title": "More correct candidates or a better final selector?",
+    "question": "When additional sampling stops improving accuracy, is the bottleneck generating a correct answer or choosing one?",
+    "hypothesis": "After correct-answer coverage saturates, shifting a fixed budget from extra samples to evidence-based selection improves final accuracy more than continued voting.",
+    "test": "Randomize complete exact-answer task episodes to different generation/selection budget splits while keeping aggregate tokens and tool credits fixed. Compare majority voting with a selector allowed a charged objective evidence check. Both selectors see the same candidate format and have identical initial evidence access. Use independent task families, freeze split ratios in advance, and evaluate every episode including those with no correct candidate. Track hidden oracle coverage only for diagnosis.",
+    "baseline": "More samples plus vote, best single solver and the oracle that selects a correct candidate whenever one exists, explicitly unavailable to deployment.",
+    "metrics": [
+      "Correct-candidate coverage",
+      "Selection success conditional on coverage",
+      "Final accuracy",
+      "Selector-induced damage",
+      "Total cost"
+    ],
+    "falsifier": "Spending on selection does not improve final accuracy once coverage plateaus, or its gains disappear after charging evidence checks.",
+    "confounds": "An oracle gap is opportunity, not an attainable gain. Conditional selection scores need their coverage denominator; shared cached candidates do not create independent trials.",
+    "prior": [
+      {
+        "id": "bay-2026-when",
+        "relation": "Separates sampling coverage from modal selection and correlation ceilings."
+      },
+      {
+        "id": "liu-2026-llms",
+        "relation": "Cross-model answer selection is existing prior with task-specific claims."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Choose an affordable verifiable evidence check and inspect selector baselines; define plateau operationally using separate development data.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/quorum.md",
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md"
+    ]
+  },
+  {
+    "id": "SOC-43",
+    "area": "llm-agent-swarms",
+    "title": "Abstain when confidence is high but errors are shared",
+    "question": "Does a calibrated confidence gate still improve collective decisions when high-confidence failures are correlated?",
+    "hypothesis": "Confidence-only abstention improves selective accuracy under weak dependence but loses its advantage when shared confident mistakes dominate; a dependence-risk gate recovers accuracy at matched coverage.",
+    "test": "Randomize independent task blocks to always-vote, calibrated confidence gating or gating augmented with a fixed dependence-risk diagnostic. Calibrate thresholds on separate labelled blocks and compare at matched answer coverage. Cross ordinary exact-answer worlds with generated shared-misconception worlds, keeping individual evidence, team size and total inference/tool cap fixed. Count abstentions as unserved tasks in total utility; do not report only accepted answers.",
+    "baseline": "Random abstention at equal coverage, calibrated single-model abstention and unanimous high-confidence acceptance.",
+    "metrics": [
+      "Selective error at fixed coverage",
+      "Total correctly served tasks",
+      "Wrong unanimous accepts",
+      "Calibration error",
+      "Diagnostic cost"
+    ],
+    "falsifier": "Confidence-only gating retains the same advantage under shared confident errors, or the dependence diagnostic provides no incremental benefit after charging its cost.",
+    "confounds": "Lower coverage can manufacture apparent reliability. A theorem for independent calibrated voters does not establish guarantees for dependent LLM outputs or uncertain task labels.",
+    "prior": [
+      {
+        "id": "karge-2026-epistemic",
+        "relation": "Confidence-gated jury theory motivates a boundary test of its independence and calibration assumptions."
+      },
+      {
+        "id": "kota-2026-design",
+        "relation": "High-confidence consensus and independent aggregation have direct task-specific precedent."
+      },
+      {
+        "id": "zhou-2026-juryprobe",
+        "relation": "Dependence-risk routing is existing prior; exact tasks and charged diagnosis are the transfer question."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Audit theorem assumptions and freeze practical error/coverage targets before choosing thresholds or a diagnostic.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/quorum.md",
+      "researchers/vishesh/notes/project-briefs/dissent.md",
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md"
+    ]
+  },
+  {
+    "id": "SOC-44",
+    "area": "llm-agent-swarms",
+    "title": "Preference optimization and shared mistakes beyond familiar QA",
+    "question": "Does the error-correlation increase seen after preference optimization persist on newly generated distributed-evidence tasks?",
+    "hypothesis": "Matched SFT-to-DPO checkpoint transitions increase shared errors more on familiar misconception questions than on novel tasks whose necessary facts are fully supplied.",
+    "test": "Evaluate paired released SFT and derived DPO checkpoints on independent task blocks crossing misconception-style QA with newly generated evidence tasks. Within each block randomize prompt variants and decoding seeds, match team size and aggregate generation budget, and measure standalone capability alongside collective outputs. Use multiple genuinely matched checkpoint lineages; uncertainty generalizes over tasks within each lineage, not arbitrary sampled agents. Keep voting and fixed-rule market aggregation separately labelled.",
+    "baseline": "SFT-only teams, single-checkpoint solvers, and mixed-checkpoint teams under the same resource cap.",
+    "metrics": [
+      "Change in shared errors",
+      "Individual accuracy",
+      "Ensemble gain",
+      "Answer concentration",
+      "Task-family interaction"
+    ],
+    "falsifier": "The predicted smaller DPO-associated increase on newly supplied-evidence tasks is absent, or checkpoint differences vanish after the prespecified capability adjustment.",
+    "confounds": "Checkpoint comparisons isolate a recorded pipeline step only when provenance matches; they do not establish that alignment generally harms cooperation. Near-chance baselines can distort correlation.",
+    "prior": [
+      {
+        "id": "begin-2026-preference",
+        "relation": "Direct matched-checkpoint market prior; task and aggregation transfer remains to be checked."
+      },
+      {
+        "id": "kim-2026-are",
+        "relation": "Capability confounding requires joint reporting of skill and dependence."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "hardware",
+    "needs": "Verify checkpoint lineage, licenses and feasible local inference; audit the prior's controls without assuming all alignment stages are equivalent.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/diversity.md",
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md"
+    ]
+  },
+  {
+    "id": "SOC-45",
+    "area": "llm-agent-swarms",
+    "title": "Does local memory preserve a convention after pressure ends?",
+    "question": "Does a convention calibrated as metastable under whole-population observation remain persistent under local encounters and bounded memory?",
+    "hypothesis": "Under local encounters, bounded memory prolongs post-pressure convention persistence, especially for pairs near the stability boundary calibrated under whole-population observation.",
+    "test": "Calibrate response curves on separate benign fictional convention pairs and classify proximity to the mean-field spinodal boundary before evaluation. Randomize independent populations to local/full observation crossed with no history/bounded history. Apply the same temporary scripted convention pressure and remove it on a fixed schedule; include no-pressure controls. Match population, update opportunities and total inference allowance, charging history tokens. Report recovery over a fixed horizon, not claims of infinite irreversibility.",
+    "baseline": "The calibrated memoryless full-observation model and convention pairs outside its metastable region.",
+    "metrics": [
+      "Post-removal convention persistence",
+      "Recovery time",
+      "Boundary forecast error",
+      "Hysteresis over fixed cycles",
+      "Memory cost"
+    ],
+    "falsifier": "Bounded memory does not prolong post-pressure persistence under local encounters, or the predicted larger effect near the calibrated boundary is absent on held-out pairs.",
+    "confounds": "The bias-preferred convention is not objective truth. Pair selection after observing persistence would leak outcomes; scripted pressure is introduced, not spontaneous behavior.",
+    "prior": [
+      {
+        "id": "de-marzo-2026-conformity",
+        "relation": "Direct prior already predicts both persistence and relaxation by regime."
+      },
+      {
+        "id": "magistrali-2026-aligned",
+        "relation": "Local bounded-memory recovery was measured in a single-stable-state regime, not a general reversibility theorem."
+      },
+      {
+        "id": "hishiki-2026-how",
+        "relation": "Memory alters regimes in an adjacent spatial game; no equivalence is assumed."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Audit both protocols and freeze memory length, boundary bands and a finite-horizon persistence endpoint before evaluation; calibration pairs stay separate.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/culture.md",
+      "researchers/vishesh/notes/project-briefs/memory.md",
+      "researchers/vishesh/notes/project-briefs/quorum.md"
     ]
   }
 ]

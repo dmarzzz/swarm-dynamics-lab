@@ -1,7 +1,7 @@
 {
   "version": 2,
   "date": "2026-10-03",
-  "source_snapshot": "bf74eb0e82fad626fa85291c15703aa60edbb672",
+  "source_snapshot": "a860443d09c80fda1d87ddb9fc322811fb6801dd",
   "previous_atlas_commit": "7333ef1",
   "baseline_candidate_sha256": {
     "PHY-01": "398fea280eca64b84686470c39e943898d43908fdf6835894d7858ce12d30c31",

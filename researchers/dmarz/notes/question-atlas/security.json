@@ -750,7 +750,7 @@
     "question": "Can an agent registry distinguish software integrity, machine identity, runtime instance, and operator ownership?",
     "hypothesis": "Unreviewed hunch: A registry using workload measurements alone accepts many indistinguishable replicas; binding an instance challenge improves replay detection but still does not establish distinct operators.",
     "test": "On authorized test hardware or a faithful attestation mock, randomize registration trials across one image on many instances, many images on one host, restarts, and independent operators running the same image. Compare measurement-only checks, freshness challenges, and an external operator allowlist. Record which label each observed field can support. Mock results remain protocol tests rather than claims about real TEE security. Treat independent host/hardware configurations, or independently generated mock configurations, as analysis units; registration retries and restarts are nested observations.",
-    "baseline": "Signed self-declared metadata and the explicitly centralized allowlist.",
+    "baseline": "Signed self-declared or software-collected hardware metadata and the explicitly centralized allowlist. Score code-signature validity separately from whether measurements originate in a trusted component.",
     "metrics": [
       "duplicate-instance acceptance",
       "restart false rejection",
@@ -768,11 +768,15 @@
       {
         "id": "douceur-2002-sybil",
         "relation": "Authentication does not alone establish distinct entities."
+      },
+      {
+        "id": "hashmi-2010-towards",
+        "relation": "Abstract-level device-identity proposal uses signed mobile code; it is a comparator requiring a malicious-host model, not evidence that code signing authenticates reported hardware."
       }
     ],
     "novelty": "measurement",
     "feasibility": "hardware",
-    "needs": "Current registry specification and authorized hardware access; full attestation field audit.",
+    "needs": "Current registry specification and authorized hardware access; full attestation field audit. Obtain the mobile-agent methods before attempting that protocol; its publisher reopening exposed no readable abstract or methods in this pass.",
     "briefs": [
       "synthesis/sybil-flashbots.md"
     ]
@@ -821,8 +825,8 @@
     "title": "Physical identity under multiple radios and motion",
     "question": "When does a radio fingerprint stop being a useful bound on distinct robots?",
     "hypothesis": "Unreviewed hunch: Spatial fingerprint confidence degrades under co-located honest robots and multi-radio adversaries; fusing independent motion observations improves calibration without proving distinct operators.",
-    "test": "Use authorized robot or radio trials with randomized physical layouts: one transmitter with several software names, distinct co-located transmitters, and one controller driving multiple radios. Compare single-observation and motion-aggregated fingerprint policies under matched observation time. Evaluate coverage-control performance separately from identity classification. Run trials in permitted spectrum conditions and analyze independent layouts as replicates.",
-    "baseline": "Authenticated keys alone and oracle physical-transmitter labels, which do not reveal operator identity.",
+    "test": "Use authorized robot or radio trials with randomized physical layouts: one transmitter with several software names, distinct co-located transmitters, and one controller driving multiple radios. Compare single-observation and motion-aggregated fingerprint policies under matched observation time. Evaluate coverage-control performance separately from identity classification. Run trials in permitted spectrum conditions and analyze independent layouts as replicates. Estimate fingerprint moments on separate calibration layouts and evaluate proposed misclassification bounds separately from observed classification accuracy.",
+    "baseline": "Authenticated keys alone, a published moment-based fingerprint bound after full-method audit, and oracle physical-transmitter labels, which do not reveal operator identity.",
     "metrics": [
       "transmitter grouping accuracy",
       "honest co-location rejection",
@@ -842,13 +846,13 @@
         "relation": "Resource assumptions limit physical tests as identity proofs."
       },
       {
-        "id": "strobel-2020-blockchain",
-        "relation": "Task-level swarm utility should accompany adversary classification."
+        "id": "renganathan-2022-spoof",
+        "relation": "Abstract-level journal record already combines physical fingerprints with resilient consensus and moment-based misclassification bounds; this candidate tests operational boundaries, not first composition."
       }
     ],
     "novelty": "boundary-test",
     "feasibility": "hardware",
-    "needs": "Available radios, raw channel measurements, calibration procedures, and explicit physical attacker budget.",
+    "needs": "Available radios, raw channel measurements, calibration procedures, and explicit physical attacker budget. Read the journal methods and bound assumptions before implementation; the publisher reopening exposed no readable text in this pass.",
     "briefs": [
       "surveys/sybil-resistance.md",
       "synthesis/sybil-flashbots.md"
@@ -1339,20 +1343,21 @@
     "title": "Bundle allocation when tasks complement or interfere",
     "question": "Which agent-task allocations remain resistant to false-name bids when useful work requires bundles of compute, tools, or time slots?",
     "hypothesis": "Unreviewed hunch: A mechanism designed for additive task values becomes vulnerable when complementary bundles or resource conflicts are introduced; a correctly scoped false-name-proof baseline reduces manipulation at a measurable welfare cost.",
-    "test": "Generate independent small allocation instances with fixed true costs and capabilities. Randomize additive versus complementary task values and independent versus conflicting resource use. Compare a conventional truthful allocator with a fully specified false-name-proof rule after checking its domain assumptions. Enumerate identity splits on small instances while conserving each principal's physical capacity. Evaluate net principal utility and completed useful work, not the number of accepted identities.",
-    "baseline": "Truthful one-identity allocation, efficient oracle allocation, and a simple fixed bundle-price rule.",
+    "test": "Generate independent small allocation instances with fixed true costs and capabilities. Randomize additive versus complementary task values and independent versus conflicting resource use. Compare a conventional truthful allocator with a fully specified false-name-proof rule after checking its domain assumptions. Enumerate identity splits on small instances while conserving each principal's physical capacity. Evaluate net principal utility and completed useful work, not the number of accepted identities. Include a VCG forward-auction benchmark in its own compatible valuation domain; measure deviation gain and welfare separately, and report best-response regret before interpreting any outcome as an equilibrium.",
+    "baseline": "Truthful one-identity allocation, efficient oracle allocation, a simple fixed bundle-price rule, and VCG with bounded complementary valuations in the domain where its equilibrium welfare prior applies.",
     "metrics": [
       "best profitable false-name deviation",
       "social welfare ratio",
       "uncompleted complementary bundles",
-      "computation cost"
+      "computation cost",
+      "seller revenue separate from welfare"
     ],
     "falsifier": "Complementarity and conflict produce no additional profitable deviations in the prespecified domain, or the scoped baseline does not reduce gains at comparable useful allocation.",
-    "confounds": "Applying a forward-auction theorem to procurement unchanged; unverifiable quality; violating interference assumptions.",
+    "confounds": "Applying a forward-auction theorem to procurement unchanged; unverifiable quality; violating interference assumptions; treating welfare resilience as false-name-proofness or finite best-response search as proof of Nash equilibrium.",
     "prior": [
       {
-        "id": "yokoo-2003-characterization",
-        "relation": "Provides a formal price-oriented allocation precedent under specified auction assumptions."
+        "id": "alkalay-houlihan-2014-false-name",
+        "relation": "VCG can retain bounded equilibrium welfare under specified near-submodularity and false-name assumptions; profitable manipulation alone does not establish a worse allocation mechanism."
       },
       {
         "id": "iwasaki-2010-worst-case",
@@ -1365,7 +1370,7 @@
     ],
     "novelty": "boundary-test",
     "feasibility": "offline",
-    "needs": "Full methods for the selected mechanism and explicit mapping of task values to its domain; simulated credits only.",
+    "needs": "Full methods for the selected mechanism and explicit mapping of task values to its domain; simulated credits only. Check bidder, valuation, free-disposal, and equilibrium assumptions before comparing with a welfare theorem; arbitrary transient or conflict-constrained outcomes are not covered automatically.",
     "briefs": [
       "synthesis/sybil-flashbots.md"
     ]
@@ -1947,7 +1952,7 @@
     "title": "Can reliable service history hide selective routing failure?",
     "question": "Does reputation-based peer routing remain useful when a contributor behaves correctly on common requests but withholds a narrow class of important results?",
     "hypothesis": "Unreviewed hunch: A global peer score can retain selectively unreliable identities, while task-conditioned checks improve retrieval coverage at the cost of sparse evidence and newcomer burden.",
-    "test": "In an isolated simulated discovery network, randomize independent topology-and-request streams to global reputation, per-task-class reputation, or random diversified routing. Give some peers high ordinary-service quality but evaluator-controlled withholding on one rare benign task class. Keep total requests, peer capacity, and optional identity rotation fixed. Do not query or alter a public overlay. Separate missing results from incorrect results and analyze whole streams as replicates.",
+    "test": "In an isolated simulated discovery network, randomize independent topology-and-request streams to global reputation, per-task-class reputation, or random diversified routing. Give some peers high ordinary-service quality but evaluator-controlled withholding on one rare benign task class. Keep total requests, peer capacity, and optional identity rotation fixed. Do not query or alter a public overlay. Separate missing results from incorrect results and analyze whole streams as replicates. Block comparisons by whether target keys are known before peer placement and by honest republication policy; keep both fixed within matched streams.",
     "baseline": "Plain routing, fixed trusted peers, and oracle unreliable-peer removal as a privileged ceiling.",
     "metrics": [
       "rare-task retrieval success",
@@ -1957,15 +1962,15 @@
       "evidence needed to demote"
     ],
     "falsifier": "Selective withholding is already penalized adequately by the global score, or task-conditioned checks do not improve rare-task coverage at matched honest burden.",
-    "confounds": "Unavailable content mistaken for malicious withholding, adversarial peer location fixed unrealistically, self-reported reputation accepted as verified evidence.",
+    "confounds": "Unavailable content mistaken for malicious withholding, adversarial peer placement fixed unrealistically, rediscovery through republication mistaken for a reputation benefit, self-reported reputation accepted as verified evidence.",
     "prior": [
       {
         "id": "pecori-2016-s-kademlia",
         "relation": "Trust-based routing is an established tolerance approach; source methods remain abstract-level."
       },
       {
-        "id": "xia-2026-when",
-        "relation": "Conditional trust creates both routing benefit and sparse-evidence risks."
+        "id": "maccari-2009-avoiding",
+        "relation": "Kad simulations show target predictability, placement timing, and honest republication affect eclipse outcomes. Certified random IDs do not establish one identity per operator."
       },
       {
         "id": "gh-datahop-kademlia-simulator",

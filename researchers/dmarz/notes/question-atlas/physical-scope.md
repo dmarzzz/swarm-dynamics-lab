@@ -138,3 +138,11 @@ The direct sources were missing from the catalogue when searched by title, DOI a
 - [[ha-2022-collective]] — local NCA-covering review inspected as orientation; it is not substituted for the two primary papers.
 
 The execution hunch distinguishes a local learned rule from the scheduling and read/write semantics used to run it. Source-reported operation savings are not independently measured hardware savings. The repair hunch preserves immutable maze inputs so damage does not silently change the task. Both require further prior-art checking before promotion. Also corrected PHY-11 and PHY-32 so each falsifier contradicts its stated prediction rather than merely illustrating the motivating concern.
+
+## Dataset update at bf74eb0
+
+Refined PHY-03, PHY-23 and PHY-25 with conditional data paths from the newly catalogued SwarmBench and Social-LLM-Networks records. The count remains 38. SwarmBench’s mixed agent/game log schemas and shape-formation preview make task-code verification essential: a dataset task name does not establish physical flocking. Its pursuit/transport logs can ground a proxy-versus-utility audit, while coordinate claims in local-view shape prompts can ground a separate information-control analogue. Neither substitutes for physical simulations or robot seed-failure tests.
+
+Social-LLM-Networks offers topology/text metadata, but timing, exposure order and replication units remain unverified; the primary page failed to load in this pass. PHY-25 therefore keeps its controlled scheduling intervention and treats the dataset only as a possible later comparison. PHY-28 remains a continuous phase-wave question: binary grid synchronization was not forced into it as if the constructs matched.
+
+The now-merged simulator survey and relevant code records were read at bf74eb0. Teammate CPU smoke tests inform implementation choices only. Full dataset inventory, primary-page scope, limitations and exact methods-bank changes are recorded in [datasets-scope.md](datasets-scope.md). No new physical result, source read-depth claim or experiment execution was produced.

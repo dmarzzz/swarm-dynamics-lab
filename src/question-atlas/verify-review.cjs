@@ -31,6 +31,24 @@ const fs = require('node:fs/promises');
     assert.equal(await page.locator('#notes').inputValue(), 'Keep this earlier reason');
     await page.locator('#notes').fill('Revised note; still needs a decision check');
     assert.equal(await page.locator('#acknowledge').count(), 1);
+    // An export stamped by the current atlas is not acknowledgement of each card.
+    const staleDownloadReady = page.waitForEvent('download');
+    await page.locator('#export').click();
+    const staleDownload = await staleDownloadReady;
+    const staleExport = await fs.readFile(await staleDownload.path());
+    assert(!JSON.parse(staleExport).review[revised.id].candidate_sha256);
+    await page.locator('#file').setInputFiles({ name: 'stale-review.json', mimeType: 'application/json', buffer: staleExport });
+    await page.waitForFunction(() => document.getElementById('notice').textContent.includes('Imported 2'));
+    assert.equal(await page.locator('#acknowledge').count(), 1);
+    // A first note written on this version must not masquerade as a legacy review.
+    const freshRevised = atlas.candidates.find(d => d.change === 'revised' && d.id !== revised.id);
+    await page.locator('#clear').click();
+    await page.locator(`[data-id="${freshRevised.id}"]`).click();
+    await page.locator('#notes').fill('First note on the current candidate');
+    await page.reload();
+    assert.equal(await page.locator('#acknowledge').count(), 0);
+    await page.locator('#changeFilter').selectOption('recheck');
+    assert.equal(await page.locator('.candidate').count(), 1);
     await page.locator('#acknowledge').click();
     assert.equal(await page.locator('.candidate').count(), 0);
     await page.locator('#clear').click();

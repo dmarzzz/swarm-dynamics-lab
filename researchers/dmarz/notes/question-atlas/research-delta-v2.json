@@ -1,6 +1,20 @@
 {
   "from": "7333ef1",
-  "through": "bf74eb0",
+  "through": "a860443d09c80fda1d87ddb9fc322811fb6801dd",
+  "team_inputs": [
+    "library/topics.yaml",
+    "researchers/dmarz/notes/agent-budgets-hunches.md",
+    "surveys/llm-agent-swarms.md",
+    "surveys/sim-environments.md",
+    "tasks/scan-papers-fm-contagion.md",
+    "researchers/shadow/notes/sol-g74-contagion-search.json",
+    "src/fork-merge-setups/rigs.json",
+    "src/fork-merge-setups/prose.html",
+    "researchers/vishesh/notes/seo-poisoning/README.md",
+    "researchers/vishesh/notes/seo-poisoning/experimental-design.md",
+    "tasks/rereview-llm-agent-swarms.md",
+    "tasks/review-atlas-project-connections.md"
+  ],
   "records": [
     {
       "change": "M",
@@ -262,7 +276,9 @@
         "llm-agent-swarms"
       ],
       "cited_by": [
-        "MTH-05"
+        "MTH-05",
+        "MTH-11",
+        "SIM-05"
       ]
     },
     {
@@ -1816,7 +1832,8 @@
         "swarm-detection"
       ],
       "cited_by": [
-        "SEC-26"
+        "SEC-26",
+        "MTH-08"
       ]
     },
     {
@@ -1852,7 +1869,9 @@
       ],
       "cited_by": [
         "MTH-03",
-        "MTH-04"
+        "MTH-04",
+        "MTH-11",
+        "SIM-05"
       ]
     },
     {
@@ -1865,7 +1884,9 @@
         "swarm-detection",
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "MTH-12"
+      ]
     },
     {
       "change": "A",
@@ -1887,7 +1908,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "MTH-13"
+      ]
     },
     {
       "change": "A",
@@ -1909,7 +1932,9 @@
       "topics": [
         "sybil-resistance"
       ],
-      "cited_by": []
+      "cited_by": [
+        "MTH-10"
+      ]
     },
     {
       "change": "A",
@@ -1931,7 +1956,11 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "MTH-08",
+        "MTH-09",
+        "MTH-13"
+      ]
     },
     {
       "change": "A",
@@ -1954,7 +1983,9 @@
         "llm-agent-swarms",
         "swarm-detection"
       ],
-      "cited_by": []
+      "cited_by": [
+        "MTH-14"
+      ]
     },
     {
       "change": "A",
@@ -1979,7 +2010,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "MTH-07"
+      ]
     },
     {
       "change": "A",
@@ -2002,7 +2035,9 @@
         "llm-agent-swarms",
         "swarm-detection"
       ],
-      "cited_by": []
+      "cited_by": [
+        "MTH-14"
+      ]
     },
     {
       "change": "A",
@@ -2027,7 +2062,9 @@
         "llm-agent-swarms",
         "swarm-detection"
       ],
-      "cited_by": []
+      "cited_by": [
+        "MTH-14"
+      ]
     },
     {
       "change": "A",
@@ -2038,7 +2075,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "MTH-15"
+      ]
     },
     {
       "change": "A",
@@ -2061,7 +2100,9 @@
       "topics": [
         "marl-emergence"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SIM-06"
+      ]
     },
     {
       "change": "A",
@@ -2108,7 +2149,10 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "MTH-09",
+        "MTH-13"
+      ]
     },
     {
       "change": "A",
@@ -2161,7 +2205,8 @@
         "swarm-intelligence"
       ],
       "cited_by": [
-        "MTH-01"
+        "MTH-01",
+        "SIM-07"
       ]
     },
     {
@@ -2173,7 +2218,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "MTH-07"
+      ]
     },
     {
       "change": "A",
@@ -2184,7 +2231,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "MTH-10"
+      ]
     },
     {
       "change": "A",
@@ -2196,7 +2245,9 @@
         "llm-agent-swarms",
         "fork-merge-security"
       ],
-      "cited_by": []
+      "cited_by": [
+        "MTH-07"
+      ]
     },
     {
       "change": "A",
@@ -2276,7 +2327,23 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-38"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "alkalay-houlihan-2014-false-name",
+      "path": "library/papers/alkalay-houlihan-2014-false-name.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ],
+      "cited_by": [
+        "SEC-37"
+      ]
     },
     {
       "change": "A",
@@ -2399,7 +2466,9 @@
         "llm-agent-swarms",
         "collective-decision"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-40"
+      ]
     },
     {
       "change": "A",
@@ -2410,7 +2479,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-42"
+      ]
     },
     {
       "change": "A",
@@ -2422,7 +2493,10 @@
         "llm-agent-swarms",
         "collective-decision"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-02",
+        "SOC-44"
+      ]
     },
     {
       "change": "A",
@@ -2745,7 +2819,9 @@
         "collective-decision",
         "criticality-measurement"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-45"
+      ]
     },
     {
       "change": "A",
@@ -2824,7 +2900,8 @@
         "meta"
       ],
       "cited_by": [
-        "SIM-03"
+        "SIM-03",
+        "SIM-06"
       ]
     },
     {
@@ -2948,7 +3025,8 @@
         "llm-agent-swarms"
       ],
       "cited_by": [
-        "SIM-04"
+        "SIM-04",
+        "SIM-05"
       ]
     },
     {
@@ -3025,6 +3103,19 @@
       "cited_by": []
     },
     {
+      "change": "A",
+      "id": "hashmi-2010-towards",
+      "path": "library/papers/hashmi-2010-towards.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance"
+      ],
+      "cited_by": [
+        "SEC-21"
+      ]
+    },
+    {
       "change": "M",
       "id": "he-2024-emerged",
       "path": "library/papers/he-2024-emerged.md",
@@ -3057,7 +3148,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-10"
+      ]
     },
     {
       "change": "A",
@@ -3090,7 +3183,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-45"
+      ]
     },
     {
       "change": "A",
@@ -3101,7 +3196,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-39"
+      ]
     },
     {
       "change": "M",
@@ -3192,6 +3289,18 @@
     },
     {
       "change": "A",
+      "id": "iwasaki-2003-robust",
+      "path": "library/papers/iwasaki-2003-robust.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "collective-decision"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
       "id": "iwasaki-2010-worst-case",
       "path": "library/papers/iwasaki-2010-worst-case.md",
       "type": "paper",
@@ -3275,7 +3384,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-43"
+      ]
     },
     {
       "change": "A",
@@ -3314,7 +3425,11 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-01",
+        "SOC-38",
+        "SOC-44"
+      ]
     },
     {
       "change": "A",
@@ -3348,7 +3463,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-43"
+      ]
     },
     {
       "change": "A",
@@ -3494,7 +3611,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-01"
+      ]
     },
     {
       "change": "A",
@@ -3686,7 +3805,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-42"
+      ]
     },
     {
       "change": "A",
@@ -3730,6 +3851,19 @@
       ]
     },
     {
+      "change": "A",
+      "id": "maccari-2009-avoiding",
+      "path": "library/papers/maccari-2009-avoiding.md",
+      "type": "paper",
+      "read_depth": "skim",
+      "topics": [
+        "sybil-resistance"
+      ],
+      "cited_by": [
+        "SEC-53"
+      ]
+    },
+    {
       "change": "M",
       "id": "magistrali-2026-aligned",
       "path": "library/papers/magistrali-2026-aligned.md",
@@ -3739,7 +3873,9 @@
         "llm-agent-swarms",
         "collective-decision"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-45"
+      ]
     },
     {
       "change": "A",
@@ -3989,7 +4125,9 @@
         "marl-emergence",
         "meta"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SIM-06"
+      ]
     },
     {
       "change": "A",
@@ -4100,7 +4238,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-41"
+      ]
     },
     {
       "change": "M",
@@ -4136,7 +4276,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-01"
+      ]
     },
     {
       "change": "A",
@@ -4169,7 +4311,25 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-07",
+        "SOC-40"
+      ]
+    },
+    {
+      "change": "A",
+      "id": "renganathan-2022-spoof",
+      "path": "library/papers/renganathan-2022-spoof.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance",
+        "sync-consensus",
+        "swarm-robotics"
+      ],
+      "cited_by": [
+        "SEC-23"
+      ]
     },
     {
       "change": "A",
@@ -4218,7 +4378,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-41"
+      ]
     },
     {
       "change": "A",
@@ -4327,7 +4489,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-39"
+      ]
     },
     {
       "change": "A",
@@ -4338,7 +4502,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-10"
+      ]
     },
     {
       "change": "A",
@@ -4412,6 +4578,17 @@
     },
     {
       "change": "A",
+      "id": "sun-2007-ddos",
+      "path": "library/papers/sun-2007-ddos.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
       "id": "sunkavalli-2026-closed",
       "path": "library/papers/sunkavalli-2026-closed.md",
       "type": "paper",
@@ -4476,7 +4653,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-38"
+      ]
     },
     {
       "change": "A",
@@ -4567,7 +4746,9 @@
         "llm-agent-swarms",
         "sync-consensus"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-34"
+      ]
     },
     {
       "change": "A",
@@ -4872,7 +5053,6 @@
         "collective-decision"
       ],
       "cited_by": [
-        "SEC-37",
         "SEC-38"
       ]
     },
@@ -4964,6 +5144,17 @@
       "read_depth": "abstract",
       "topics": [
         "llm-agent-swarms"
+      ],
+      "cited_by": []
+    },
+    {
+      "change": "A",
+      "id": "yves-christian-2018-total",
+      "path": "library/papers/yves-christian-2018-total.md",
+      "type": "paper",
+      "read_depth": "abstract",
+      "topics": [
+        "sybil-resistance"
       ],
       "cited_by": []
     },
@@ -5070,7 +5261,8 @@
         "meta"
       ],
       "cited_by": [
-        "SIM-01"
+        "SIM-01",
+        "MTH-09"
       ]
     },
     {
@@ -5108,7 +5300,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-43"
+      ]
     },
     {
       "change": "A",
@@ -5131,7 +5325,9 @@
       "topics": [
         "llm-agent-swarms"
       ],
-      "cited_by": []
+      "cited_by": [
+        "SOC-11"
+      ]
     },
     {
       "change": "A",

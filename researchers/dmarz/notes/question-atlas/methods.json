@@ -1230,7 +1230,7 @@
     "question": "Do model rankings carry across common-payoff games, mixed-motive negotiation and open-ended social goals after matching execution conditions?",
     "hypothesis": "Within-task rankings will be more stable than cross-task rankings even after common model versions, costs and visibility are matched, weakening a single general cooperation score.",
     "test": "Inventory exact model/scaffold overlap in Hanabi, C2C and Sotopia before analyzing. On an adequate common subset, normalize each task’s outcome against its own legal scripted baseline, hold out entire games or scenarios, and estimate rank uncertainty without pooling turns. If the released overlap is inadequate, specify a small prospective common-model panel with balanced game instances and fixed budgets; treat it as required new data, not an imputed cross-corpus result.",
-    "baseline": "Task-specific rankings, rank predictions from cost alone, and within-task split-half reliability as an upper bound on stable ranking.",
+    "baseline": "Task-specific rankings, rank predictions from cost alone, and within-task split-half reliability as a reference for measurement stability.",
     "metrics": [
       "Cross-task rank correlation",
       "Within-task reliability",
@@ -1282,11 +1282,15 @@
       {
         "id": "data-moltnet-2026",
         "relation": "Merged crawl histories provide provenance checks, with overlapping upstream observations."
+      },
+      {
+        "id": "data-moltbook-dataset-2026",
+        "relation": "Supplemental crawl documents fetch completeness and a historical reply-graph construction error; source metadata alone is not social ground truth."
       }
     ],
     "novelty": "measurement",
     "feasibility": "offline",
-    "needs": "Freeze revisions, inspect upstream terms and dedup lineage, and define the estimand on observable activity. A before/after moderation comparison alone cannot identify a causal platform effect.",
+    "needs": "Freeze revisions, inspect upstream terms, dedup lineage and fetch-completeness flags. The supplemental takschdube release has a documented older reply-graph omission; rebuild affected graphs. Restrict the estimand to observable activity; moderation timing alone does not identify causality.",
     "briefs": []
   },
   {
@@ -1303,7 +1307,7 @@
       "Expected routing utility",
       "Leakage audit failures"
     ],
-    "falsifier": "Entropy adds stable predictive and decision value on held-out families beyond all prespecified controls, contradicting the expected loss of generality.",
+    "falsifier": "Entropy retains incremental predictive and decision value within the prespecified tolerance across every held-out family after all controls.",
     "confounds": "Correctness can affect completed-trace entropy; repeated rows may share questions. Aggregated outputs cannot identify a causal benefit from manipulating entropy.",
     "prior": [
       {
