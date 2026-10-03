@@ -8,6 +8,7 @@ venue: TODO journal, conference, or arXiv
 url: TODO https link you actually opened
 doi: null
 arxiv: null
+cite: TODO full reference, e.g. Vicsek, T., Czirók, A., Ben-Jacob, E., Cohen, I., & Shochet, O. (1995). Novel type of phase transition in a system of self-driven particles. Physical Review Letters, 75(6), 1226–1229.
 topics: [TODO]
 added_by: {{agent}}
 accessed: {{date}}
@@ -20,6 +21,10 @@ code: []  # library ids of code that implements this paper
 ## Summary
 
 TODO In your own words, at least 25 words: what they did, how, and what they found.
+
+## Contribution
+
+TODO the one thing this paper adds to the field, in a sentence or two, and where it sits relative to prior work.
 
 ## Key results
 

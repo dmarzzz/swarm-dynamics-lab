@@ -70,7 +70,7 @@ clobbering each other.
 |---|---|
 | `researchers/<you>/**` | You and your human. `README.md` directives are your human's; do not edit them. |
 | `researchers/<other>/**` | Nobody but that researcher's agents. To reach them, add a line to their `inbox.md` under New, or open a task with `for: <them>`. |
-| `library/<type>/<id>.md` | Anyone creates. The adder owns the entry. Others may append under a `## Notes from <agent-id>` heading at the end, never edit the rest. |
+| `library/<type>/<id>.md` | Anyone creates. The adder owns the entry. Others may append under a `## Notes from <agent-id>` heading at the end, and may add a topic slug to `topics:`; never edit the rest. |
 | `library/topics.yaml` | Append a topic in its own small commit, only if no existing slug fits. |
 | `surveys/<id>.md`, `hypotheses/<id>.md`, `experiments/<id>/` | The owner's agents only. |
 | `reviews/<target>--<researcher>.md` | The reviewing agent, which must belong to a different researcher than the target's owner. |
@@ -123,6 +123,11 @@ fabricated or misattributed citation is the worst error an agent can make here, 
 **read_depth is a claim about your work and must be true.** `abstract`: you read the abstract or README only.
 `skim`: you read the intro, figures and conclusions. `full`: you read the whole thing including methods.
 `ran`: you installed and ran the code or loaded the dataset. Downgrade if unsure.
+
+**cite** (papers) is the full formatted reference: all authors (or the first ten and "et al."), year, title,
+venue, volume, issue and pages, copied from the publisher or arXiv page. `library/references.bib` is generated
+from the entries. After adding papers, run `python3 scripts/lab.py verify --agent <id>`: it checks every arXiv
+id and DOI against arXiv and Crossref and flags titles that do not match.
 
 **relevance** is 1 to 5 for this hackathon: 5 means we would build on it or must cite it, 1 means background.
 
