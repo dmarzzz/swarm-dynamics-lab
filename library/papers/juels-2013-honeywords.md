@@ -50,3 +50,34 @@ A comparison source for coordinated automation and security measurement. Full-te
 ## Access provenance
 
 Crossref metadata and the abstract at the recorded URL were opened directly or through Exa content extraction on 2026-10-03. Any non-null citation count is OpenAlex cited_by_count on that date. Abstract depth is deliberate even where an open PDF was found.
+
+
+## Notes from shadow/sol-w5
+
+Added in parallel from pipeline batch #77; this id was taken first by shadow/sol-g51, so my entry is folded in here. My reading depth: skim (source opened: https://people.csail.mit.edu/rivest/pubs/JR13.pdf).
+
+### Summary
+
+Proposes storing, for every user account, k-1 decoy passwords ("honeywords") alongside the real one, all hashed identically, so an attacker who steals and cracks the password file cannot tell which of the k "sweetwords" is real. The index of the real password lives only on a separate, hardened "honeychecker" server that does nothing but store the index c(i), answer "is index j correct for user i", and raise an alarm when a honeyword is submitted. Logging in with a cracked honeyword therefore reliably signals that the hash file was stolen. They define security as flatness: a generator is epsilon-flat if no adversary guesses the true index with probability above epsilon (ideal 1/k; they recommend k = 20, so a blind guess gets caught 95% of the time). Generation methods: chaffing by tweaking digits/characters, chaffing with a password model, "tough nuts" (very hard honeywords), a modified-UI "take-a-tail" scheme that appends a random three-digit tail, and a hybrid. Also covers typo safety, old passwords, storage, denial-of-service (an attacker who knows a real password can trip honeywords on purpose; picking 19 honeywords from 1000 tail variants cuts that to about 2%) and attacks on the honeychecker. Skimmed: setup, security definitions, generation methods, DoS, open problems.
+
+### Contribution
+
+Turns honeypot accounts into per-account decoys, making offline password cracking detectable at the first online use, with a minimal separate trust component (the honeychecker) and a clean flatness definition for decoy quality.
+
+### Key results
+
+- Formal flatness metric for decoy generators; k = 20 recommended.
+- Design argument and analysis, no user study or deployment data: the authors call it "an initial stab".
+- Explicit DoS trade-off for tweak-based generators and a mitigation by random subset selection.
+
+### Methods and models
+
+Security game for honeyword generation, design of the honeychecker interface (Set and Check commands), analysis of generation methods against general and targeted guessing.
+
+### Limitations and open questions
+
+Authors list: active attacks on the computer system or honeychecker, persistent observation of submitted passwords, targeted attacks using knowledge of the user, quantifying flatness experimentally, how attackers should handle tough nuts. Follow-up work on how distinguishable honeywords are in practice was not checked for this entry.
+
+### Relevance to us
+
+The cleanest formal template for decoy-based detection of automated adversaries: plant indistinguishable bait that only an illegitimate actor would ever use, keep the ground truth in a separate minimal component, and measure decoy quality as the adversary's best distinguishing probability. That transfers to canaries and honeypots for agent swarms (fake credentials, fake endpoints, fake instructions in content). Related decoy work: [[bowen-2009-baiting]], [[gh-thinkst-canarytokens]], [[farooqi-2020-canarytrap]], [[gh-palisaderesearch-llm-honeypot]].
