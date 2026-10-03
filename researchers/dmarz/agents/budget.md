@@ -1,10 +1,10 @@
 ---
 agent: dmarz/budget
 tool: TODO claude-code | codex | cursor | other
-state: working  # working | idle | blocked | done
+state: done
 task: null
 doing: TODO one line
-updated: 2026-10-03T21:14Z
+updated: 2026-10-03T23:59Z
 ---
 
 ## Notes
