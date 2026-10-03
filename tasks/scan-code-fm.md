@@ -1,16 +1,19 @@
 ---
 id: scan-code-fm
 type: task
-title: 'Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks'
+title: Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks
 kind: scan
-status: open
+status: claimed
 priority: p1
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: dmarz/fm-code-bench
+for: null
 created: 2026-10-03
 created_by: dmarz/fm
 depends_on: []
-topics: [fork-merge-security]
+topics:
+- fork-merge-security
+claimed_at: 2026-10-03T18:12Z
+updated: 2026-10-03T18:12Z
 ---
 
 ## Goal
@@ -23,4 +26,3 @@ Context from dmarz: Richard Sutton has suggested that an agent with many resourc
 - Coverage note filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
-
