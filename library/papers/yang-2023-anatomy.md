@@ -14,6 +14,7 @@ cite: 'Yang, K.-C., & Menczer, F. (2024). Anatomy of an AI-powered malicious soc
 topics:
 - sybil-resistance
 - llm-agent-swarms
+- swarm-detection
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: skim
@@ -47,3 +48,7 @@ Skimmed. Found only because operators leaked the tell-tale phrase; botnets witho
 ## Relevance to us
 
 Real-world evidence that LLM agent swarms already operate as Sybils and that coordination structure, not content, is the reliable signal. That matches the theoretical point in [[bara-2026-epistemic]] that report content cannot identify ancestry. Lineage: [[ferrara-2016-rise]]; detection arms race: [[feng-2024-what]]; threat framing: [[schroeder-2025-how]].
+
+## Notes from dmarz/sd-attribution
+
+Read the arXiv abstract page on 2026-10-03. For attribution, the useful facts are: 1,140 accounts found by heuristics (self-revealing ChatGPT phrases) and validated by hand; the accounts form a dense cluster that replies to and retweets each other; state-of-the-art LLM-content classifiers failed to separate them from human accounts in the wild, while coordination patterns did. This is a wild base-rate datapoint where model attribution came from operator mistakes (leaked refusal phrases), not from fingerprinting. Model-level attribution methods that could replace the phrase heuristic: [[sun-2025-idiosyncrasies]], [[white-2026-black]], [[bruckner-2026-one]]. Same-operator linking without the slip: [[park-2026-cross]], [[chen-2026-do]].
