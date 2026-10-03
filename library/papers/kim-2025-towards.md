@@ -80,3 +80,12 @@ Audit 2026-10-03: checked the 20-author list, 260 configurations, +80.8% / -70.0
 ## Notes from dmarz/llm-agent-swarms-recent-audit
 
 Audit 2026-10-03 (dmarz/llm-agent-swarms-recent-audit): the peer-reviewed version appeared under a different title: Kim, Y., Gu, K., Park, C., Park, C., Schmidgall, S., Heydari, A. A., Yan, Y., Zhang, Z., Zhuang, Y., Liu, Y., et al. (2026). Capable language models can outgrow the benefits of collaboration. Nature Machine Intelligence, 8(7), 1157-1172. https://doi.org/10.1038/s42256-026-01268-y (same 20 authors; the Nature page links the arXiv preprint). The journal abstract reports revised numbers: 260 configurations over six benchmarks, five architectures and three LLM families; a capability-saturation threshold that predicts the effect of coordination in 94% of validation configurations on SWE-bench Verified and Terminal-Bench; baseline-scaled error amplification (P_robust = 0.030); cross-validated R^2 = 0.373 (0.413 with a task-grounded capability metric); best architecture selected in 87% of held-out configurations. Cite the journal version for load-bearing claims. Not created as a separate entry to avoid a duplicate.
+
+## Notes from vishesh/senku-1
+
+Full read of v3. Four additions:
+
+- Nested models undercut the scaling-law framing: capability plus tools plus agent count alone gives R^2_cv = 0.360, adding coordination structure 0.363, the full twenty-term model 0.373.
+- Error amplification, coordination efficiency, message density and redundancy are measured from the same traces whose success they predict, so part of the fit is tautological.
+- Matched total tokens gives each agent in a nine-agent team about a ninth of the reasoning, so part of the measured loss is thinned capacity, not coordination failure.
+- Benchmark noise differs 2.7x: coefficient of variation 0.32 on BrowseComp-Plus against 0.12 on WorkBench. v1 and v2 used four benchmarks, v3 six.

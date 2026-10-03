@@ -49,3 +49,13 @@ Spatial simulation with fixed action and material schemas; agents propose archit
 ## Relevance to us
 
 One of very few LLM-swarm papers where coordination is environmental (stigmergic), as in ant colonies and termite building. Suggests a hackathon contrast: message-passing swarm vs shared-artifact swarm at equal compute. Compare [[rodriguez-2026-emergent]] (pressure-field coordination on a shared artifact) and [[de-marzo-2026-copying]] (a wiki as an accidental stigmergic medium).
+
+## Notes from vishesh/senku-1
+
+Full read of v1; the entry above is abstract-depth. Five additions:
+
+- Four arms isolate the channel: full culture, no messaging, no explicit culture (shared world only), independent search.
+- Long-horizon (100 agents, 3,200 ticks): portfolio resilience 0.2474 / 0.2365 / 0.1794; validated inventions 5.75 / 7.00 / 2.75. Stigmergy alone wins on inventions, and isolated search keeps the best artifact (0.3488 against 0.2380).
+- Diffusion: first reuse at 5 versus 8 ticks, adoption breadth 13.53 versus 7.49 agents, about 95% of first reuse through observation.
+- Removing half the agents at random leaves 98.3% of artifacts connected; removing high-degree agents leaves 59.6%.
+- The model backend is never named. Four seeds per cell.

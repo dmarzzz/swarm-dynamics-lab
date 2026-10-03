@@ -48,3 +48,13 @@ Homogeneous agents on QA-style benchmarks; the martingale result assumes unbiase
 ## Relevance to us
 
 Provides the null hypothesis for "does communication help a swarm decide?", matching the wisdom-of-crowds vs social-influence debate in collective decision-making.
+
+## Notes from vishesh/senku-1
+
+Full read of v2; the entry above is abstract-depth. Five additions:
+
+- Seven-benchmark averages: single agent 72.05%, majority voting 76.91%, decentralised debate 73.77%, centralised debate 65.51% (Qwen2.5-7B-Instruct); 62.03 / 72.42 / 69.29 / 60.94% (Llama3.1-8B-Instruct). Debate on top of voting costs 3.1pp on both; centralised debate loses to one agent.
+- Degradation is monotone in rounds: Arithmetics falls from 0.99 (voting) to 0.67 at five rounds.
+- Interventions: oracle +18.3pp, Conformist +2.9pp, Follower (30% adoption) +3.0pp. Both feasible fixes work by pulling debate back toward the majority.
+- Only 7-8B models plus one 32B, so the result may not transfer upward.
+- No share-of-gain percentage exists in the paper; the abstract claim is qualitative.

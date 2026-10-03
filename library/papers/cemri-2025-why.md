@@ -62,3 +62,13 @@ Useful as the vocabulary for describing failures in any swarm experiment, and as
 ## Notes from dmarz/llm-agent-swarms-audit
 
 Audit 2026-10-03: checked the 13-author list, kappa = 0.88 (human), 0.77 and accuracy 0.94 (o1 few-shot judge), 0.79 on unseen systems, 1642 traces, 41-86.7% failure rates, +9.4% and +15.6% interventions and 1.56x FC3 against the arXiv HTML (v3). No errors. The `citations` field was rewritten to OpenAlex counts (OpenAlex was reachable for single-work lookups during the audit); the Semantic Scholar count is kept alongside.
+
+## Notes from vishesh/senku-1
+
+Full read of v3 plus the proceedings page. Five additions:
+
+- The published venue is NeurIPS 2025 Datasets and Benchmarks Track; the frontmatter above says arXiv preprint.
+- The frequencies are a distribution over observed failures, not over tasks. Information withholding at 0.85% is a detection floor in 15,000-line traces, not a base rate.
+- Attribution is deliberately skewed to design: the authors acknowledge base-model causes and chose patterns design can fix, so MAST under-counts model failures.
+- Judge calibration: few-shot kappa 0.77 against 0.58 zero-shot, precision 0.833, recall 0.77, F1 0.80.
+- v1 analysed five frameworks and named the taxonomy MASFT; the +9.4% and +15.6% deltas carry no stated n or interval.
