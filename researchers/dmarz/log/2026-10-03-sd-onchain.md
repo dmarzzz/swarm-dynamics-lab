@@ -8,7 +8,7 @@ Added 46 paper entries tagged swarm-detection and annotated 4 existing entries (
 
 Coverage by subtopic: airdrop Sybil clustering and hunter definitions; MEV, sniper and trading-bot identification on Ethereum, BSC and Solana; wash trading and coordinated trading (DEX, NFT, CEX, pump.fun, meme coins); AI-agent wallets, ERC-8004 registries, x402 payments and agent tokens; cross-cutting items (prediction markets, quest systems, cross-chain linkage).
 
-VERIFYLINE `lab.py check`: 0 errors in my files (6 errors on main belong to library/papers/wu-2024-system.md, not mine).
+`lab.py verify --agent dmarz/sd-onchain`: 46 papers checked against arXiv and Crossref, 0 problems. `lab.py check`: 0 errors in my files (6 errors on main belong to library/papers/wu-2024-system.md, not mine).
 
 ## Searches run
 
