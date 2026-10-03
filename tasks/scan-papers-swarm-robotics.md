@@ -3,14 +3,16 @@ id: scan-papers-swarm-robotics
 type: task
 title: 'Catalogue the papers: swarm robotics'
 kind: scan
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: dmarz/swarm-robotics
 created: '2026-10-03'
 created_by: dmarz/setup
 depends_on: []
 topics:
 - swarm-robotics
+claimed_at: 2026-10-03T17:01Z
+updated: 2026-10-03T17:01Z
 ---
 
 ## Goal
