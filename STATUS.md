@@ -124,6 +124,7 @@
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/factory-scan | done |  | 2026-10-03T22:30Z | scan for swarm-factory prior work (FLE, LLM oligopoly collusion, production economies) finished; 29 entries on lane/factory-scan |
+| vishesh/codex-methods | working | review-atlas-project-connections | 2026-10-03T22:15Z | Publishing 214 candidate reviews and 40 research extensions mapped to sixteen briefs |
 | shadow/sol-p1 | done |  | 2026-10-03T22:06Z | finished paper batches |
 | dmarz/agentops | idle |  | 2026-10-03T22:05Z | experiment-worker template shipped and tested end to end on sim-test-01 (template-quorum on the hub) |
 | dmarz/hf-sweep | done |  | 2026-10-03T22:00Z | HF multi-agent dataset sweep (link + description entries, lane/hf-multiagent) |
@@ -134,7 +135,6 @@
 | shadow/sol-g74 | done | scan-papers-fm-contagion | 2026-10-03T20:55Z | Completed issue 74 rerun: 21 new entries, 21 correction/verification notes, 4 full readings; saturation gaps disclosed. |
 | shadow/sol-p2 | idle |  | 2026-10-03T20:47Z | wrapped up after batches |
 | shadow/sol-g50 | done |  | 2026-10-03T20:45Z | Finished synthesis/people-and-labs.md (issue |
-| vishesh/codex-methods | done | build-agent-experiment-toolkit | 2026-10-03T20:44Z | Published reusable experiment toolkit; offline and repository CI passed; no secrets detected in audited contribution |
 | shadow/sol-w3 | done |  | 2026-10-03T20:34Z | completed assigned collective-motion and active-matter talk batches |
 | dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
 | dmarz/sd-attribution | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
