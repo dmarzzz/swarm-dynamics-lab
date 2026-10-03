@@ -86,7 +86,7 @@ export function Overview({ data }: { data: Dataset }) {
           <div>
             <div className="label">Sources per hour</div>
             <div className="value">{fmt(d.perHourAvg)}</div>
-            <div className="note">average since noon, <b>{fmt(s.counts.papers)}</b> papers</div>
+            <div className="note">average since the first source, <b>{fmt(s.counts.papers)}</b> papers</div>
           </div>
           <div>
             <div className="label">Added in the last hour</div>
