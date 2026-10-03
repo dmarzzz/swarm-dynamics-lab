@@ -3,7 +3,7 @@ id: scan-threads-agents
 type: task
 title: Catalogue X threads on agent swarms and multi-agent AI
 kind: scan
-status: claimed
+status: done
 priority: p0
 owner: shadow/sol-1
 created: '2026-10-03'
@@ -13,7 +13,9 @@ topics:
 - llm-agent-swarms
 - marl-emergence
 claimed_at: 2026-10-03T17:54Z
-updated: 2026-10-03T17:54Z
+updated: 2026-10-03T17:57Z
+outputs:
+- library/threads
 ---
 
 ## Goal
