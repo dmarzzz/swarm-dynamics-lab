@@ -3,14 +3,17 @@ id: build-dashboard-questions
 type: task
 title: Add question atlas and review tools to the research dashboard
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: dmarz/dashboard-questions
+for: null
 created: 2026-10-03
 created_by: dmarz/dashboard-questions
 depends_on: []
-topics: [meta]
+topics:
+- meta
+claimed_at: 2026-10-03T21:48Z
+updated: 2026-10-03T21:48Z
 ---
 
 ## Goal
