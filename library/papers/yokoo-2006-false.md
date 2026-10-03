@@ -37,7 +37,7 @@ Combinatorial auction with quasi-linear bidders; Groves payments; submodular app
 
 ## Limitations and open questions
 
-Abstract-only. Guarantees degrade as valuations depart from submodular; computing the approximation and winner determination is itself hard in general. Zero identity cost assumed, as in the whole false-name literature.
+Abstract-only. Guarantees degrade as valuations depart from submodular; computing the approximation and winner determination is itself hard in general. Zero identity cost assumed, as in the whole false-name literature. IMPORTANT: Todo, Iwasaki, Yokoo and Sakurai (AAMAS 2009, [[todo-2009-characterizing]]) later showed via their sub-additivity characterisation that GM-SMA does NOT satisfy false-name-proofness despite the claim here; cite it as a historical construction, not a working Sybil-proof mechanism.
 
 ## Relevance to us
 
