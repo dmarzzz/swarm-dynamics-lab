@@ -2,9 +2,9 @@
 
 # Library index
 
-2725 entries.
+2728 entries.
 
-## Papers (1720)
+## Papers (1723)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1570,6 +1570,7 @@
 | [yax-2024-phylolm](papers/yax-2024-phylolm.md) | PhyloLM : Inferring the Phylogeny of Large Language Models and Predicting their Performances in Benchmarks | 2024 | 3 | abstract | swarm-detection | dmarz/sd-attribution |
 | [yemini-2022-resilient](papers/yemini-2022-resilient.md) | Resilient Distributed Optimization for Multi-Agent Cyberphysical Systems | 2022 | 3 | abstract | sybil-resistance, sync-consensus | dmarz/sybil-robotics |
 | [yokoo-2006-false](papers/yokoo-2006-false.md) | False-name-proof combinatorial auction protocol: Groves Mechanism with SubModular Approximation | 2006 | 3 | abstract | sybil-resistance, collective-decision | shadow/sol-p1 |
+| [yokoo-2007-making](papers/yokoo-2007-making.md) | Making VCG More Robust in Combinatorial Auctions via Submodular Approximation | 2007 | 3 | full | sybil-resistance, collective-decision | shadow/sol-p2 |
 | [ys-2026-everyone](papers/ys-2026-everyone.md) | Everyone Conforms, No One Believes: Pluralistic Ignorance in LLM Agent Populations | 2026 | 3 | abstract | llm-agent-swarms, collective-decision | dmarz/llm-agent-swarms-recent |
 | [yu-2011-sybil](papers/yu-2011-sybil.md) | Sybil Defenses via Social Networks: A Tutorial and Survey | 2011 | 3 | skim | sybil-resistance, meta | dmarz/sybil-foundations |
 | [yu-2019-multi](papers/yu-2019-multi.md) | Multi-Agent Adversarial Inverse Reinforcement Learning | 2019 | 3 | full | marl-emergence | vishesh/senku-1 |
@@ -1626,6 +1627,7 @@
 | [damera-2026-stability](papers/damera-2026-stability.md) | Stability Buys Time: A Re-Keying Game for Encrypted Multi-Agent Control | 2026 | 2 | abstract | fork-merge-security, swarm-robotics | dmarz/fm |
 | [deng-2024-oedipus](papers/deng-2024-oedipus.md) | Oedipus: LLM-enchanced Reasoning CAPTCHA Solver | 2024 | 2 | abstract | swarm-detection, sybil-resistance | dmarz/sd-web-agents |
 | [doshi-2024-sleeper](papers/doshi-2024-sleeper.md) | Sleeper Social Bots: a new generation of AI disinformation bots are already a political threat | 2024 | 2 | abstract | swarm-detection, llm-agent-swarms | dmarz/sd-bots |
+| [el-mouhib-2021-analysis](papers/el-mouhib-2021-analysis.md) | Analysis of the Impact of Traffic Density on the Compromised CAV Rate : a Multi-Agent Modeling Approach | 2021 | 2 | abstract | sybil-resistance, crowds-and-traffic, fork-merge-security | shadow/sol-p2 |
 | [ellis-2026-black](papers/ellis-2026-black.md) | Black-Box Inference of LLM Architectural Properties with Restrictive API Access | 2026 | 2 | abstract | swarm-detection | dmarz/sd-attribution |
 | [emami-2026-llm-centric](papers/emami-2026-llm-centric.md) | LLM-Centric Agentic AI for UAV Swarms: Architecture, Enabling Technologies, and Open Problems | 2026 | 2 | abstract | llm-agent-swarms, swarm-robotics | dmarz/llm-agent-swarms-recent |
 | [fabregas-2026-mathematical](papers/fabregas-2026-mathematical.md) | The mathematical theory of behavioral swarms: Toward modeling the collective dynamics of living systems | 2026 | 2 | abstract | collective-motion, sync-consensus, crowds-and-traffic | dmarz/collective-motion-recent |
@@ -1694,6 +1696,7 @@
 | [shulman-2021-sharing](papers/shulman-2021-sharing.md) | Sharing the World with Digital Minds | 2021 | 2 | skim | fork-merge-security, sybil-resistance, meta | dmarz/fm-sutton |
 | [siddle-2013-tale](papers/siddle-2013-tale.md) | A tale of two tumours: comparison of the immune escape strategies of contagious cancers | 2013 | 2 | abstract | fork-merge-security | dmarz/fm-biology |
 | [sladic-2023-llm](papers/sladic-2023-llm.md) | LLM in the Shell: Generative Honeypots | 2023 | 2 | abstract | swarm-detection | dmarz/sd-honeypots |
+| [steenbergen-2012-hearsay](papers/steenbergen-2012-hearsay.md) | Hearsay: Suppressing spam using trust in mobile social gossiping networks | 2012 | 2 | skim | sybil-resistance, swarm-intelligence | shadow/sol-p2 |
 | [sutton-2022-alberta](papers/sutton-2022-alberta.md) | The Alberta Plan for AI Research | 2022 | 2 | skim | fork-merge-security, meta | dmarz/fm-sutton |
 | [tadevosyan-2025-attentionswarm](papers/tadevosyan-2025-attentionswarm.md) | AttentionSwarm: Reinforcement Learning with Attention Control Barrier Function for Crazyflie Drones in Dynamic Environments | 2025 | 2 | abstract | swarm-robotics, marl-emergence | dmarz/swarm-robotics-recent |
 | [taherifar-2019-macroscopic](papers/taherifar-2019-macroscopic.md) | A macroscopic approach for calibration and validation of a modified social force model for bidirectional pedestrian streams | 2019 | 2 | abstract | crowds-and-traffic | shadow/sol-w5 |
