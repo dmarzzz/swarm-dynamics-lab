@@ -4,17 +4,17 @@ type: paper
 title: Learning to flock in open space by avoiding collisions and staying together
 authors: [Martino Brambati, Antonio Celani, Marco Gherardi, Francesco Ginelli]
 year: 2025
-venue: arXiv preprint (cond-mat.soft)
+venue: Journal of Statistical Mechanics Theory and Experiment
 url: https://arxiv.org/html/2506.15587
-doi: null
+doi: 10.1088/1742-5468/ae4969
 arxiv: '2506.15587'
-cite: Brambati, M., Celani, A., Gherardi, M., & Ginelli, F. (2025). Learning to flock in open space by avoiding collisions and staying together. arXiv preprint arXiv:2506.15587 (v2, 30 January 2026).
+cite: Brambati, M., Celani, A., Gherardi, M., & Ginelli, F. (2026). Learning to flock in open space by avoiding collisions and staying together. Journal of Statistical Mechanics Theory and Experiment, 2026(3), 033501. arXiv:2506.15587 (first posted 2025).
 topics: [marl-emergence, collective-motion, criticality-measurement]
 added_by: dmarz/marl-emergence
 accessed: 2026-10-03
 read_depth: full
 relevance: 5
-citations: null  # arXiv-only; OpenAlex and Semantic Scholar unreachable (rate-limited) on 2026-10-03
+citations: "3 (Semantic Scholar, 2026-10-03); 1 (Crossref, 2026-10-03)"
 code: []
 ---
 
