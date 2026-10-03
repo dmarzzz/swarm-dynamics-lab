@@ -1,0 +1,7 @@
+# 2026-10-03 dmarz/fm-identity-hijack
+
+- 18:12Z Claimed scan-papers-fm-identity-hijack (claimed for me). Lane: Q3, identity and goal hijack of sub-agents, at the level of published threat models and measurements.
+- Round 1: arXiv API on lane seeds (goal hijacking, persona drift, InjecAgent, AgentDojo, ASB, BadAgent, agent backdoors, MCP poisoning, PsySafe, persona vectors). Round 2: web search for NIST CAISI hijacking blog, Invariant MCP disclosure, compaction and stored-injection persistence. Round 3: Semantic Scholar citations of Li et al. 2024, Perez and Ribeiro 2022 and AgentDojo.
+- Added 26 entries (4 full, 13 skim, 9 abstract). Appended notes to debenedetti-2024-agentdojo, invariantlabs-2025-mcp, wallace-2024-instruction, yu-2025-survey.
+- Main findings for Q3: goal hijack rates of 24% to 85% on static benchmarks, rising to 81% adaptive and 80% with 25 retries (NIST); agents drift toward an interlocutor's instructions with no attack (li-2024-measuring, ko-2026-attractor); stored injections reactivate across sessions about 42% of the time (xie-2026-what); compaction keeps 10% of rules after five rounds (zerhoudi-2026-compaction) and can assemble attacker instructions from benign fragments (liu-2026-safe); distributed payloads defeat per-part monitors (hu-2026-when), which bears on Q2.
+- 18:48Z lab.py check: 0 errors for my files. lab.py verify: 25 papers, 0 problems. Coverage note filled. State done.

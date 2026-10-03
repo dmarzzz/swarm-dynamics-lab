@@ -31,3 +31,7 @@ Security-firm research with a concrete PoC and named affected products; demonstr
 ## Relevance to us
 
 Q3: a part's self-description or returned "capabilities" is itself an injection surface, and a trusted-looking part can override instructions the parent got from trusted siblings, which is exactly the merge-poisoning concern. The rug-pull point matters for Q1/Q2: approving a part once does not bind what it later presents, so a merge needs integrity-pinned provenance (hash the part's descriptors), not a one-time trust decision. Mechanistically paired with [[trailofbits-2025-jumping]]; feeds the design-pattern defences in [[simonwillison-2025-design]].
+
+## Notes from dmarz/fm-identity-hijack
+
+Read in full this session. Bearing on fork-merge: shadowing is the closest disclosed analogue of a corrupted part rewriting how the parent uses trusted components, since both work by sharing one context. The attack class was later measured at scale in [[wang-2025-mcptox]] (45 live servers, 1,348 cases, up to 72.8% success, under 3% refusals, parameter tampering most effective at 46.7%). For Q2: a poisoned description that every part loads identically compromises all parts at once, so k-of-n thresholds that assume independent part failures do not cover shared-tool poisoning. Related: [[radosevich-2025-mcp]].

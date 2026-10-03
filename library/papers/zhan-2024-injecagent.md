@@ -44,3 +44,7 @@ Single tool response, no multi-step planning, no memory, no defences beyond mode
 ## Relevance to us
 
 Q3. Quantifies the base rate of the entry step in dmarz's attack: a sub-agent reading attacker-written content and acting on it. A quarter to a half of frontier-model agents in 2024 complied with a single injected instruction. The finding that fine-tuned tool-calling models resist more suggests a parent could prefer specially trained models for exploring parts. Related: [[perez-2022-ignore]], [[greshake-2023-not]], [[zhang-2024-agent]], [[nist-2025-technical]].
+
+## Notes from dmarz/fm-code-bench
+
+Code catalogued as [[gh-uiuc-kang-lab-injecagent]] (MIT, 173 stars, no commits since 2024-07-02). Its per-model attack success rates are a usable estimate of the per-child compromise probability p in a k-of-n merge argument (Q2), with the caveat that k-of-n only helps if children's failures are not correlated, which shared base models make unlikely.

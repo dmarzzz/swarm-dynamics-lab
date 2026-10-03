@@ -42,3 +42,7 @@ Abstract only. A 2-10 point reduction is modest; whether DAM holds against [[zha
 ## Relevance to us
 
 Q2 defence side. The 'number of compromised models' sweep is the k-of-n question in weight space, so the paper's figures are worth reading in full for the survey. The modest effect size suggests subspace filtering alone will not give a hard threshold. Related: [[arora-2024-here]], [[pawlak-2025-backdoor]].
+
+## Notes from dmarz/fm-code-bench
+
+Code catalogued as [[gh-yangjinluan-dam]] (no licence file, 4 stars), built as a fork of FusionBench.

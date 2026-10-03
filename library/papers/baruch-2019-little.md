@@ -48,3 +48,7 @@ Abstract-level reading; later defenses such as [[karimireddy-2020-learning]] add
 ## Relevance to us
 
 Q3. The ML version of the stealthiest merge attack: corrupted sub-agents that return contributions indistinguishable from honest ones, coordinated so their small shifts add up, and carrying a backdoor rather than an obvious error. It argues that a parent's anomaly check on each returning sub-agent will not catch a careful attacker, and that a backdoor (behaviour triggered later) is the natural payload. Related: [[el-mhamdi-2018-hidden]], [[xie-2019-fall]].
+
+## Notes from dmarz/fm-code-bench
+
+Implemented as `ALittleIsEnough` in [[gh-lpd-epfl-byzfl]] and as ALIE in [[gh-vio1etus-flpoison]] and [[gh-lishenghui-blades]]. For fork-merge (Q2 and Q3), ALIE is the reference for an attacker whose corrupted child stays inside the spread of honest children; children sent to very different domains widen that spread (see the environment-heterogeneity result in [[gh-sunblaze-ucb-fedagent]]).

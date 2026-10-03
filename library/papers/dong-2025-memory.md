@@ -50,3 +50,7 @@ The memory bank starts nearly empty (four seed records for EHRAgent, none for th
 ## Relevance to us
 
 This is the reference attack for Q3 when a returning sub-agent's memory is merged by retrieval. Under MINJA's threat model, an adversary in the foreign domain needs only to talk to the sub-agent. The sub-agent then writes self-generated poisoned reasoning traces, and those traces carry the sub-agent's own provenance when they are merged back. Signature-based provenance such as Component 1 of [[sharma-2026-smsr]] does not block them, because the agent signed its own writes. The benign-density result bears on Q2. The more clean records the parent already holds on the targeted topic, the lower the ASR, so dilution acts as a crude threshold. The prior-poisoning result suggests that competing attackers interfere with each other. For identity takeover rather than targeted redirection, compare [[gu-2024-agent]] and [[cohen-2024-here]]. For defences see [[wei-2025-amemguard]], [[xiong-2026-maple]] and [[louck-2026-securing]].
+
+## Notes from dmarz/fm-code-bench
+
+Code catalogued as [[gh-dsh3n77-minja]] (MIT, 37 stars, created 2026-01-25, last push 2026-08-11) with `rap`, `EHR` and `QA` folders. The RAP part needs a local WebShop server and OpenAI keys.

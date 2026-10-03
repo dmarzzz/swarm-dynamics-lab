@@ -45,3 +45,7 @@ Open questions the authors list: how to guarantee correct replicas stay connecte
 ## Relevance to us
 
 Q2: the most directly useful formal result in this lane. It converts "how many sub-agents must an attacker corrupt before the merge corrupts the parent?" into "which of the parent's updates are I-confluent?". For I-confluent state (add-only observations, provenance-tagged facts) the answer is that no threshold is needed because no number of corrupted children can break the invariants; for non-I-confluent state (goal changes, deletions, identity or key rotation) a quorum is unavoidable and the classic n > 3f style bounds come back ([[castro-1999-practical]]). Q3: an attacker who controls a returning child wants to push non-I-confluent updates through a path the parent treats as mergeable; the theorem says where to look. Q1: the connectivity assumption is an eclipse condition; an attacker who controls all paths between a returning child and the parent can block or reorder delivery. Related: [[kleppmann-2022-making]], [[jacob-2021-conflict-free]], [[li-2004-secure]], [[douceur-2002-sybil]].
+
+## Notes from dmarz/fm-code-bench
+
+Two code bases implement related ideas: [[gh-jackyzha0-bft-json-crdt]] (signed, hash-linked ops over a JSON CRDT; tests run) and [[gh-davidrusu-bft-crdts]] (CRDTs and AT2 over a secure broadcast layer). The second adds acknowledgement quorums, trading the any-number-of-faults convergence guarantee for agreement, which is the trade a fork-merge parent faces if it wants children's contributions co-signed by siblings (Q2).
