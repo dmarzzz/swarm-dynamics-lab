@@ -2,7 +2,7 @@
 
 # Library index
 
-2637 entries.
+2644 entries.
 
 ## Papers (1687)
 
@@ -2576,12 +2576,13 @@
 | [data-moltbook-takschdube-2026](datasets/data-moltbook-takschdube-2026.md) | Moltbook longitudinal dataset (Taksch Dube): timestamped crawls with derived social and reply graphs | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 
-## Talks (90)
+## Talks (97)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
 | [annessi-unknown-private](talks/annessi-unknown-private.md) | MEV Roast \| Private Searching on Private Transactions - Robert Annessi (Flashbots) | unknown | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [barfuss-2023-intrinsic](talks/barfuss-2023-intrinsic.md) | Wolfram Barfuss: Intrinsic fluctuations in reinforcement learning promote cooperation | 2023 | 5 | abstract | marl-emergence, collective-decision | shadow/sol-w1 |
+| [bredeche-2018-embodied](talks/bredeche-2018-embodied.md) | Embodied Evolution in Collective Robotics: Distributed On-line Learning of Collective Behaviors | 2018 | 5 | full | swarm-robotics | shadow/sol-w8 |
 | [costanzo-2018-spontaneous](talks/costanzo-2018-spontaneous.md) | Spontaneous Emergence of Milling (Vortex State) in a Vicsek-like Model | 2018 | 5 | full | collective-motion | shadow/sol-w3 |
 | [couzin-2017-ecology](talks/couzin-2017-ecology.md) | 2017 Ecology Across Borders Plenary Lecture: Iain Couzin | 2017 | 5 | full | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
 | [couzin-2018-animal](talks/couzin-2018-animal.md) | Animal migration by Iain Couzin | 2018 | 5 | full | collective-motion, collective-decision | shadow/sol-w3 |
@@ -2596,15 +2597,19 @@
 | [leonard-2009-flocks](talks/leonard-2009-flocks.md) | Naomi Leonard: Flocks and Fleets: Collective Motion in Nature and Robotics | 2009 | 5 | full | collective-motion, swarm-robotics, sync-consensus | shadow/sol-w3 |
 | [marchetti-2018-physics](talks/marchetti-2018-physics.md) | The Physics of Active Matter ▸ KITP Colloquium by Cristina Marchetti | 2018 | 5 | full | collective-motion, active-matter | shadow/sol-w3 |
 | [monnot-2022-study](talks/monnot-2022-study.md) | A study of the transaction supply chain from CryptoKitties to MEV-Boost to PBS - Barnabé Monnot (EF) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
+| [nagpal-2014-collective](talks/nagpal-2014-collective.md) | Radhika Nagpal | 2014 | 5 | full | swarm-robotics | shadow/sol-w8 |
 | [nagpal-2015-taming](talks/nagpal-2015-taming.md) | Taming the Swarm - Radhika Nagpal, Harvard University | 2015 | 5 | skim | swarm-robotics | shadow/sol-w8 |
+| [nagpal-2015-tamu](talks/nagpal-2015-tamu.md) | Radhika Nagpal - "Taming the swarm" | 2015 | 5 | full | swarm-robotics | shadow/sol-w8 |
 | [nagpal-2019-mit](talks/nagpal-2019-mit.md) | MIT Robotics - Radhika Nagpal - Collective Intelligence, from Nature to Robots | 2019 | 5 | skim | swarm-robotics | shadow/sol-w8 |
 | [nagpal-2022-grasp](talks/nagpal-2022-grasp.md) | GRASP On Robotics:  Radhika Nagpal, Princeton University | 2022 | 5 | skim | swarm-robotics | shadow/sol-w8 |
 | [nagpal-2023-taming](talks/nagpal-2023-taming.md) | Taming the Swarm: Towards Collective Artificial Intelligence | 2023 | 5 | skim | swarm-robotics | shadow/sol-w8 |
 | [nayak-2023-order](talks/nayak-2023-order.md) | Order Policy Enforcement: Limitations and Circumvention - Kartik Nayak \| MEV-SBC ’23 | 2023 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [obadia-2022-multichain](talks/obadia-2022-multichain.md) | The multichain world is centralized 🙁 - studying cross-domain MEV - Alex Obadia (Flashbots) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [raj-2022-case](talks/raj-2022-case.md) | A Case-Study of MEV on Low-Fee Chains - Supragya Raj (Marlin) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
+| [rubenstein-2015-robots](talks/rubenstein-2015-robots.md) | Michael Rubenstein on Robots in Depth | 2015 | 5 | full | swarm-robotics | shadow/sol-w8 |
 | [salles-2022-mev](talks/salles-2022-mev.md) | MEV formalization - Alejo Salles (Flashbots) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [sutton-2025-father](talks/sutton-2025-father.md) | Richard Sutton – Father of RL thinks LLMs are a dead end | 2025 | 5 | full | fork-merge-security, llm-agent-swarms, meta | dmarz/fm-sutton |
+| [werfel-2019-termites](talks/werfel-2019-termites.md) | Termites and Robots, Building Together \| Justin Werfel \| TEDxPrincetonU | 2019 | 5 | full | swarm-robotics | shadow/sol-w8 |
 | [wu-2025-incentivizing](talks/wu-2025-incentivizing.md) | TILOS Seminar: Incentivizing Emergent Behaviors for LLMs via Reinforcement Learning | 2025 | 5 | abstract | llm-agent-swarms, marl-emergence | shadow/sol-w1 |
 | [adler-2022-exploring](talks/adler-2022-exploring.md) | Exploring MEV in the modular blockchain stack - John Adler (Celestia) | 2022 | 4 | full | sybil-resistance | shadow/sol-w8 |
 | [bongard-2016-lecture](talks/bongard-2016-lecture.md) | Lecture 21, UVM Evolutionary Robotics Course (Spring 2016). Swarm robotics. | 2016 | 4 | skim | swarm-robotics | shadow/sol-w8 |
@@ -2624,6 +2629,7 @@
 | [jaques-2022-allen](talks/jaques-2022-allen.md) | Allen School Colloquium: Natasha Jaques (Google + UC Berkeley) | 2022 | 4 | abstract | marl-emergence, collective-decision | shadow/sol-w1 |
 | [jin-2021-power](talks/jin-2021-power.md) | The Power of Exploiter: Provable Multi-Agent RL in Large State Spaces | 2021 | 4 | abstract | marl-emergence | shadow/sol-w1 |
 | [jordan-2019-interpreting](talks/jordan-2019-interpreting.md) | Alex Jordan - Interpreting Animal Behaviour \| Collective Behaviour Seminar Series | 2019 | 4 | full | collective-motion, criticality-measurement | shadow/sol-w3 |
+| [kumar-2015-future](talks/kumar-2015-future.md) | The future of flying robots \| Vijay Kumar \| TEDxPenn | 2015 | 4 | full | swarm-robotics | shadow/sol-w8 |
 | [leonard-2020-general](talks/leonard-2020-general.md) | A General Model of Opinion Dynamics on Networks: Consensus, Dissensus, and Cascades | 2020 | 4 | full | sync-consensus, collective-decision, marl-emergence | shadow/sol-w6 |
 | [nagpal-2014-robots14](talks/nagpal-2014-robots14.md) | ROBOTS14 - Radhika Nagpal | 2014 | 4 | skim | swarm-robotics | shadow/sol-w8 |
 | [puzzo-2025-short](talks/puzzo-2025-short.md) | M. Leticia Puzzo: Short-time dynamics in active systems: the vicsek model | 2025 | 4 | full | collective-motion, active-matter, criticality-measurement | shadow/sol-w3 |
@@ -2648,6 +2654,7 @@
 | [ganesh-2020-introduction](talks/ganesh-2020-introduction.md) | Lecture 8: Introduction to consensus, and the de Groot model | 2020 | 3 | full | sync-consensus, collective-decision | shadow/sol-w6 |
 | [meir-2026-prediction](talks/meir-2026-prediction.md) | Why Prediction Markets and AI Agents Are a Compliance Nightmare \| Solidus Labs Co-Founder Asaf Meir | 2026 | 3 | abstract | swarm-detection, llm-agent-swarms | shadow/sol-w1 |
 | [motsch-2020-fundamental](talks/motsch-2020-fundamental.md) | Fundamental diagrams for pedestrian and ant dynamics | 2020 | 3 | abstract | crowds-and-traffic, collective-motion | shadow/sol-w5 |
+| [nagpal-2019-ieee](talks/nagpal-2019-ieee.md) | Radhika Nagpal- Taming the swarm | 2019 | 3 | full | swarm-robotics | shadow/sol-w8 |
 | [nitsche-2026-protect](talks/nitsche-2026-protect.md) | Can we protect democracy from fake news? \| Maxim Nitsche \| TEDxBerlin | 2026 | 3 | abstract | swarm-detection | shadow/sol-w1 |
 | [pikovsky-2017-theory](talks/pikovsky-2017-theory.md) | Theory of synchronization (three-lecture course) | 2017 | 3 | skim | sync-consensus, active-matter, criticality-measurement | shadow/sol-w6 |
 | [rocha-2026-keynote](talks/rocha-2026-keynote.md) | Keynote, Luis Rocha: collective canalization, dynamical redundancy and the limits of the criticality hypothesis | 2026 | 3 | abstract | criticality-measurement, collective-decision | shadow/sol-w5 |

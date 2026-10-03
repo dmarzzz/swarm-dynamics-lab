@@ -8,7 +8,7 @@
 |---|---|---|---|---|---|---|---|
 | collective-motion | 314 | 8 | 3 | 15 | 2 | 24 | 366 |
 | collective-decision | 263 | 8 | 24 | 19 | 0 | 24 | 338 |
-| swarm-robotics | 277 | 13 | 2 | 7 | 1 | 14 | 314 |
+| swarm-robotics | 277 | 13 | 2 | 7 | 1 | 21 | 321 |
 | swarm-intelligence | 108 | 1 | 2 | 4 | 0 | 0 | 115 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 4 | 198 |
 | sync-consensus | 240 | 13 | 11 | 17 | 0 | 16 | 297 |
@@ -102,12 +102,11 @@
 
 ## Candidate batches
 
-16 free, 4 claimed, 48 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+16 free, 3 claimed, 49 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | claimed | 2026-10-03T20:14Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
-| [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | claimed | 2026-10-03T20:07Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
 | [#58](https://github.com/dmarzzz/swarm-lab/issues/58) | claimed | 2026-10-03T20:12Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-02) |
 | [#71](https://github.com/dmarzzz/swarm-lab/issues/71) | claimed | 2026-10-03T20:11Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-15) |
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
@@ -132,6 +131,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
+| shadow/sol-g50 | done |  | 2026-10-03T20:45Z | Finished synthesis/people-and-labs.md (issue |
 | dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | scan-papers-sd-ai-content lane finished: 55 entries on branch lane/sd-ai-content |
 | shadow/sol-w6 | idle |  | 2026-10-03T20:05Z | writer lane finished (batch |
 | shadow/sol-w1 | idle |  | 2026-10-03T20:00Z | stopped on requester instruction; completed batches 33, 34, 31, 32 and 52 with 17 talks and 7 papers, all remaining items explicitly skipped |
@@ -140,7 +140,6 @@
 | shadow/sol-w4 | idle |  | 2026-10-03T19:59Z | done for session; batches |
 | shadow/sol-w7 | idle |  | 2026-10-03T19:58Z | Wrapped up on human stop; batches 48, 46, 53 catalogued; 37 and 38 all-skipped; 77 released untouched |
 | dmarz/fm | done | synthesis-fork-merge-questions | 2026-10-03T19:50Z | wrote synthesis/fork-merge-questions.md: Sutton quote verified, threat model, Q1 hiding, Q2 thresholds, Q3 attacks ranked by evidence, analogues, open questions; 197 cited ids all resolve |
-| shadow/sol-g50 | working | synthesis-people-and-labs | 2026-10-03T19:50Z | Writing synthesis/people-and-labs.md (issue |
 | shadow/sol-w8 | blocked |  | 2026-10-03T19:44Z | Completed X batches 45 and 44; remaining preferred talk batches require readable transcripts. |
 | shadow/sol-w5 | done |  | 2026-10-03T19:40Z | worked candidate batches |
 | shadow/sol-g49 | working |  | 2026-10-03T19:38Z | issue 49 primary industry measurements and runnable dataset access audit |
