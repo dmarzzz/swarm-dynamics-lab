@@ -6,20 +6,20 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 313 | 8 | 0 | 0 | 0 | 0 | 321 |
-| collective-decision | 236 | 8 | 7 | 6 | 0 | 1 | 258 |
-| swarm-robotics | 272 | 13 | 0 | 0 | 0 | 0 | 285 |
-| swarm-intelligence | 107 | 1 | 0 | 0 | 0 | 0 | 108 |
-| active-matter | 184 | 3 | 0 | 0 | 0 | 0 | 187 |
-| sync-consensus | 225 | 8 | 10 | 2 | 0 | 1 | 246 |
-| criticality-measurement | 186 | 4 | 0 | 5 | 0 | 0 | 195 |
+| collective-motion | 313 | 8 | 2 | 0 | 0 | 1 | 324 |
+| collective-decision | 236 | 8 | 11 | 6 | 0 | 2 | 263 |
+| swarm-robotics | 272 | 13 | 2 | 0 | 0 | 0 | 287 |
+| swarm-intelligence | 107 | 1 | 2 | 0 | 0 | 0 | 110 |
+| active-matter | 184 | 3 | 1 | 0 | 0 | 0 | 188 |
+| sync-consensus | 225 | 8 | 11 | 2 | 0 | 1 | 247 |
+| criticality-measurement | 186 | 4 | 0 | 5 | 0 | 1 | 196 |
 | marl-emergence | 123 | 12 | 0 | 0 | 0 | 0 | 135 |
-| llm-agent-swarms | 237 | 42 | 31 | 69 | 0 | 1 | 380 |
-| crowds-and-traffic | 76 | 2 | 0 | 0 | 0 | 0 | 78 |
-| meta | 77 | 8 | 2 | 13 | 0 | 2 | 102 |
-| sybil-resistance | 169 | 40 | 52 | 17 | 4 | 1 | 283 |
-| fork-merge-security | 214 | 11 | 26 | 24 | 0 | 2 | 277 |
-| swarm-detection | 0 | 1 | 3 | 46 | 0 | 0 | 50 |
+| llm-agent-swarms | 237 | 42 | 33 | 69 | 0 | 1 | 382 |
+| crowds-and-traffic | 76 | 2 | 1 | 0 | 0 | 0 | 79 |
+| meta | 77 | 8 | 3 | 13 | 0 | 2 | 103 |
+| sybil-resistance | 169 | 40 | 52 | 18 | 4 | 1 | 284 |
+| fork-merge-security | 214 | 11 | 27 | 24 | 0 | 2 | 278 |
+| swarm-detection | 0 | 1 | 5 | 49 | 0 | 0 | 55 |
 
 ## Tasks
 
@@ -105,7 +105,9 @@
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | shadow/sol-w6 | working |  | 2026-10-03T19:06Z | TODO one line |
+| shadow/sol-w2 | working |  | 2026-10-03T19:05Z | Writer lane: working candidate batch issues (swarm-detection first), see PIPELINE.md on the pipeline PR branch. |
 | shadow/sol-w1 | working |  | 2026-10-03T19:04Z | TODO one line |
+| shadow/sol-w3 | working |  | 2026-10-03T19:04Z | TODO one line |
 | shadow/sol-w4 | working |  | 2026-10-03T19:04Z | working candidate batch issues (fork-merge-security, swarm-detection) |
 | shadow/sol-w5 | working |  | 2026-10-03T19:04Z | TODO one line |
 | dmarz/x-threads | done | scan-threads-x-security | 2026-10-03T18:57Z | 35 X threads catalogued and pushed; task scan-threads-x-security done |
