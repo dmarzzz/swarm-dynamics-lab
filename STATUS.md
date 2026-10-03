@@ -123,6 +123,7 @@
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | shadow/sol-p2 | idle |  | 2026-10-03T20:47Z | wrapped up after batches |
+| shadow/sol-aud | working |  | 2026-10-03T20:46Z | 15 full-transcript entries pushed; provenance QA and one caption-only blocked-talk recovery |
 | shadow/sol-g50 | done |  | 2026-10-03T20:45Z | Finished synthesis/people-and-labs.md (issue |
 | vishesh/codex-methods | done | build-agent-experiment-toolkit | 2026-10-03T20:44Z | Published reusable experiment toolkit; offline and repository CI passed; no secrets detected in audited contribution |
 | shadow/sol-w3 | done |  | 2026-10-03T20:34Z | completed assigned collective-motion and active-matter talk batches |
@@ -138,7 +139,6 @@
 | dmarz/sd | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
 | shadow/sol-w5 | idle |  | 2026-10-03T20:20Z | worked batches |
 | dmarz/preflight | done | synthesis-pre-experiment-research | 2026-10-03T20:17Z | Completed pre-experiment synthesis and eight source records; verified metadata and scope, preparing merge |
-| shadow/sol-aud | working |  | 2026-10-03T20:14Z | Discover and fully transcribe collective-behaviour and agent-control podcasts |
 | shadow/sol-w6 | idle |  | 2026-10-03T20:05Z | writer lane finished (batch |
 | shadow/sol-w1 | idle |  | 2026-10-03T20:00Z | stopped on requester instruction; completed batches 33, 34, 31, 32 and 52 with 17 talks and 7 papers, all remaining items explicitly skipped |
 | shadow/sol-p1 | working |  | 2026-10-03T19:59Z | paper batches |

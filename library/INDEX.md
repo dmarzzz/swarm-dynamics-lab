@@ -2740,7 +2740,7 @@
 | [hermann-2022-mev](talks/hermann-2022-mev.md) | MEV Reduction via Batch Auction - Alex Hermann (Cowswap) | 2022 | 4 | full | sybil-resistance | shadow/sol-w8 |
 | [hickey-2018-identifying](talks/hickey-2018-identifying.md) | Identifying and Monitoring Disinformation across Social Platforms: Techniques for Discovery and Analysis | 2018 | 4 | abstract | swarm-detection | shadow/sol-w1 |
 | [hobson-2022-elizabeth](talks/hobson-2022-elizabeth.md) | Elizabeth Hobson on Animal Dominance Hierarchies | 2022 | 4 | full | collective-decision, fork-merge-security, criticality-measurement | shadow/sol-aud |
-| [huet-2025-openai](talks/huet-2025-openai.md) | ⚡️The new OpenAI Agents Platform | 2025 | 4 | full | llm-agent-swarms, fork-merge-security | shadow/sol-aud |
+| [huet-2025-new](talks/huet-2025-new.md) | ⚡️The new OpenAI Agents Platform | 2025 | 4 | full | llm-agent-swarms, fork-merge-security | shadow/sol-aud |
 | [isa-2021-colloids](talks/isa-2021-colloids.md) | Active Colloids at Fluid Interfaces (1/5) | 2021 | 4 | full | active-matter | shadow/sol-w3 |
 | [jaques-2022-allen](talks/jaques-2022-allen.md) | Allen School Colloquium: Natasha Jaques (Google + UC Berkeley) | 2022 | 4 | abstract | marl-emergence, collective-decision | shadow/sol-w1 |
 | [jin-2021-power](talks/jin-2021-power.md) | The Power of Exploiter: Provable Multi-Agent RL in Large State Spaces | 2021 | 4 | abstract | marl-emergence | shadow/sol-w1 |
