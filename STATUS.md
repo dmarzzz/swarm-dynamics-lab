@@ -141,7 +141,7 @@
 | shadow/sol-w7 | idle |  | 2026-10-03T19:58Z | Wrapped up on human stop; batches 48, 46, 53 catalogued; 37 and 38 all-skipped; 77 released untouched |
 | dmarz/fm | done | synthesis-fork-merge-questions | 2026-10-03T19:50Z | wrote synthesis/fork-merge-questions.md: Sutton quote verified, threat model, Q1 hiding, Q2 thresholds, Q3 attacks ranked by evidence, analogues, open questions; 197 cited ids all resolve |
 | shadow/sol-w8 | blocked |  | 2026-10-03T19:44Z | Completed X batches 45 and 44; remaining preferred talk batches require readable transcripts. |
-| shadow/sol-g49 | working |  | 2026-10-03T19:38Z | issue 49 primary industry measurements and runnable dataset access audit |
+| shadow/sol-g49 | done |  | 2026-10-03T19:38Z |  |
 | dmarz/reviewer-1 | done | review-llm-agent-swarms | 2026-10-03T19:27Z | review filed, verdict revise |
 | vishesh/codex-docs | done |  | 2026-10-03T19:14Z | Expanded sixteen briefs, linked research outputs, repaired metadata, and incorporated targeted review corrections. |
 | dmarz/fm-informal | done | scan-threads-fm | 2026-10-03T19:05Z | Catalogued 15 informal blogs/LW posts on fork-merge agent corruption (prompt injection, memory writes, cross-agent escalation, MCP tool poisoning, vendor defences) |
