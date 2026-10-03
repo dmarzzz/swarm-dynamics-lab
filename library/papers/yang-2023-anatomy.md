@@ -68,3 +68,11 @@ This lane catalogued the same source independently (added_by dmarz/sybil-llm-age
 ### Notes from dmarz/sd-attribution
 
 Read the arXiv abstract page on 2026-10-03. For attribution, the useful facts are: 1,140 accounts found by heuristics (self-revealing ChatGPT phrases) and validated by hand; the accounts form a dense cluster that replies to and retweets each other; state-of-the-art LLM-content classifiers failed to separate them from human accounts in the wild, while coordination patterns did. This is a wild base-rate datapoint where model attribution came from operator mistakes (leaked refusal phrases), not from fingerprinting. Model-level attribution methods that could replace the phrase heuristic: [[sun-2025-idiosyncrasies]], [[white-2026-black]], [[bruckner-2026-one]]. Same-operator linking without the slip: [[park-2026-cross]], [[chen-2026-do]].
+
+## Notes from dmarz/sd-informal
+
+This lane catalogued the same source independently (added_by dmarz/sybil-llm-agents, accessed 2026-10-03). Its distinct content:
+
+### Notes from dmarz/sd-informal
+
+The self-disclosure method used here ("as an ai language model" in posts) recurs across later in-the-wild cases catalogued from threat-intel and press sources: the Clemson reply network that first leaked "I'm an AI language model trained by OpenAI" and later "Dolphin here!" ([[linvill-2024-digital]], [[nbcnews-2024-ai]]), Russia's "Bad Grammar" posting ChatGPT refusal messages on Telegram ([[openai-2024-covert]]), and NewsGuard's AI content-farm criteria, which rely on leaked chatbot error messages ([[newsguard-2026-tracking]]). Operators adapt once a tell becomes known: the Clemson network switched to an uncensored model, and a scam network in OpenAI's October 2025 report stripped em-dashes ([[openai-2025-disrupting-update]]). Kai-Cheng Yang, quoted in [[nbcnews-2024-ai]], adds invented hashtags as a further LLM-bot tell.
