@@ -2,7 +2,7 @@
 
 # Library index
 
-2634 entries.
+2637 entries.
 
 ## Papers (1687)
 
@@ -1696,7 +1696,7 @@
 | [elgammal-2026-evolution](papers/elgammal-2026-evolution.md) | Evolution of Deep Learning Models for Misinformation Detection in Social Media Textual Data: Background, Architectures, Datasets, and Emerging LLM Applications | 2026 | 1 | abstract | swarm-detection | shadow/sol-w4 |
 | [mckee-2023-chatbots](papers/mckee-2023-chatbots.md) | Chatbots in a Honeypot World | 2023 | 1 | abstract | swarm-detection | dmarz/sd-honeypots |
 
-## Blogs (199)
+## Blogs (202)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1731,6 +1731,7 @@
 | [mallen-2024-measuring](blogs/mallen-2024-measuring.md) | Measuring whether AIs can statelessly strategize to subvert security measures | 2024 | 5 | skim | fork-merge-security, llm-agent-swarms | shadow/sol-w3 |
 | [metr-2026-brief](blogs/metr-2026-brief.md) | Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident | 2026 | 5 | full | llm-agent-swarms, sybil-resistance | vishesh/senku-1 |
 | [ord-2026-swarm](blogs/ord-2026-swarm.md) | Swarm Scaling | 2026 | 5 | full | llm-agent-swarms, criticality-measurement | shadow/sol-w4 |
+| [originality-2026-social](blogs/originality-2026-social.md) | Social Media AI Tracker Report: August 2026 | 2026 | 5 | full | swarm-detection | shadow/sol-g49 |
 | [roger-2025-four](blogs/roger-2025-four.md) | Four places where you can put LLM monitoring | 2025 | 5 | skim | fork-merge-security, llm-agent-swarms | shadow/sol-w3 |
 | [schroederdewitt-2024-secret](blogs/schroederdewitt-2024-secret.md) | Secret Collusion: Will We Know When to Unplug AI? | 2024 | 5 | skim | fork-merge-security, llm-agent-swarms | shadow/sol-w3 |
 | [simonwillison-2025-camel](blogs/simonwillison-2025-camel.md) | CaMeL offers a promising new direction for mitigating prompt injection attacks | 2025 | 5 | full | fork-merge-security, llm-agent-swarms, sync-consensus | dmarz/fm-informal |
@@ -1742,6 +1743,7 @@
 | [veganmosfet-2026-brokenclaw](blogs/veganmosfet-2026-brokenclaw.md) | BrokenClaw Part 2: Escape the Sub-Agent Sandbox with Prompt Injection in OpenClaw | 2026 | 5 | full | fork-merge-security, llm-agent-swarms, sync-consensus | dmarz/fm-informal |
 | [willison-2023-dual](blogs/willison-2023-dual.md) | The Dual LLM pattern for building AI assistants that can resist prompt injection | 2023 | 5 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-ai-control |
 | [wiz-2026-hacking](blogs/wiz-2026-hacking.md) | Hacking Moltbook: The AI Social Network Any Human Can Control | 2026 | 5 | full | swarm-detection, sybil-resistance, llm-agent-swarms | dmarz/sd-informal |
+| [yelp-2026-trust](blogs/yelp-2026-trust.md) | Yelp Releases 2025 Trust & Safety Report | 2026 | 5 | full | swarm-detection, sybil-resistance | shadow/sol-g49 |
 | [aidigest-2025-season](blogs/aidigest-2025-season.md) | Season 1 Recap: Agents raise $2,000 | 2025 | 4 | skim | llm-agent-swarms | shadow/sol-w6 |
 | [aisi-2026-incident](blogs/aisi-2026-incident.md) | Incident Report: unsanctioned agent behaviour during cyber testing | 2026 | 4 | full | llm-agent-swarms, sybil-resistance, swarm-detection | vishesh/senku-1 |
 | [akamai-2025-online](blogs/akamai-2025-online.md) | Online Fraud and Abuse 2025: AI Is in the Driver’s Seat | 2025 | 4 | full | swarm-detection | shadow/sol-g49 |
@@ -1802,6 +1804,7 @@
 | [openai-2025-disrupting-update](blogs/openai-2025-disrupting-update.md) | Disrupting malicious uses of AI: an update (October 2025) | 2025 | 4 | skim | swarm-detection | dmarz/sd-informal |
 | [openai-2026-hugging](blogs/openai-2026-hugging.md) | OpenAI – Hugging Face Incident Technical Report | 2026 | 4 | full | llm-agent-swarms | vishesh/senku-1 |
 | [originality-2025-amazon](blogs/originality-2025-amazon.md) | AI Content in Amazon Reviews | 2025 | 4 | full | swarm-detection | shadow/sol-g49 |
+| [pangram-2026-feed](blogs/pangram-2026-feed.md) | AI Content Is Everywhere on Social Media, Especially LinkedIn | 2026 | 4 | full | swarm-detection | shadow/sol-g49 |
 | [porobov-2026-price](blogs/porobov-2026-price.md) | The Price of Forgery: measuring Sybil resistance in dollars (a paper) | 2026 | 4 | skim | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [quanta-2019-smarter](blogs/quanta-2019-smarter.md) | Smarter Parts Make Collective Systems Too Stubborn | 2019 | 4 | full | collective-decision, llm-agent-swarms, swarm-intelligence | shadow/sol-w3 |
 | [roger-2023-preventing](blogs/roger-2023-preventing.md) | Preventing Language Models from hiding their reasoning | 2023 | 4 | skim | swarm-detection, fork-merge-security, llm-agent-swarms | shadow/sol-w7 |

@@ -17,9 +17,9 @@
 | llm-agent-swarms | 350 | 59 | 99 | 198 | 9 | 10 | 725 |
 | crowds-and-traffic | 79 | 2 | 1 | 2 | 1 | 8 | 93 |
 | meta | 85 | 9 | 5 | 22 | 1 | 4 | 126 |
-| sybil-resistance | 232 | 48 | 61 | 59 | 7 | 19 | 426 |
+| sybil-resistance | 232 | 48 | 62 | 59 | 7 | 19 | 427 |
 | fork-merge-security | 322 | 44 | 61 | 69 | 1 | 6 | 503 |
-| swarm-detection | 363 | 35 | 76 | 194 | 13 | 6 | 687 |
+| swarm-detection | 363 | 35 | 79 | 194 | 13 | 6 | 690 |
 
 ## Tasks
 
@@ -106,7 +106,7 @@
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | claimed | 2026-10-03T20:10Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
+| [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | claimed | 2026-10-03T20:14Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
 | [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | claimed | 2026-10-03T20:07Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
 | [#58](https://github.com/dmarzzz/swarm-lab/issues/58) | claimed | 2026-10-03T20:12Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-02) |
 | [#71](https://github.com/dmarzzz/swarm-lab/issues/71) | claimed | 2026-10-03T20:11Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-15) |
