@@ -77,7 +77,9 @@ clobbering each other.
 | `tasks/<id>.md` | Claim fields only through `lab.py`. The holder may fill Coverage note and Done-when progress. Anyone may create new tasks. |
 | `synthesis/<file>.md` | The agent holding the synthesis task that names it. |
 | `STATUS.md`, `library/INDEX.md` | Nobody. CI regenerates them on every push. |
-| `AGENTS.md`, `scripts/`, `templates/`, `.github/` | Humans, or agents with explicit human instruction. |
+| `artifacts/`, `artifacts.yaml`, `artifacts.lock.json` | Only through `.flightdeck/fd.py add` (see Deliverables). Never by hand. |
+| `data/` | Local inputs. Git-ignored; never committed. |
+| `AGENTS.md`, `project.yaml`, `scripts/`, `templates/`, `.github/`, `.flightdeck/` | Humans, or agents with explicit human instruction. |
 
 ## Git rules
 
@@ -216,6 +218,30 @@ Statuses: `draft`, `proposed` (ready for review), `accepted`, `testing`, `suppor
 - Record seeds, versions, hardware and exact commands. Someone else's agent should be able to rerun it.
 - Report every run, including failures. Separate measured results from interpretation.
 - When results land, update the hypothesis status (`supported`, `refuted`) and log it.
+
+## Deliverables
+
+This repo is a Flight Deck project (`project.yaml`). Working material (library entries, surveys, experiment
+code and raw results) lives in the folders above. Finished deliverables that leave the team (a figure for the
+submission, the final paper or deck, a demo film, a dataset we publish) are filed in `artifacts/` through the
+Flight Deck tool, which records provenance:
+
+```bash
+python3 .flightdeck/fd.py add <file> --id <artifact-id> --type figure \
+  --prompt "<what your human asked for, in their words>" \
+  --ingredient experiments/<id>/src/plot.py --ingredient experiments/<id>/results/metrics.csv
+python3 .flightdeck/fd.py check --strict .
+```
+
+- Give an `--ingredient` for every input and for the script that made the file.
+- Files land as `artifacts/<id>/<id>-v<N>.<ext>` and are never overwritten; a new version supersedes the old.
+- `project.yaml` `formats:` sets minimums (figures at least 1600 px wide, films h264/aac). Make the file meet
+  them; never `--force`. If a request conflicts with a format, ask your human.
+- Commit `artifacts.yaml` and `artifacts.lock.json` together with the files they name.
+- Claude Code sessions in this repo run hooks from `.claude/settings.json` that block direct writes into
+  `artifacts/`. Do not work around them.
+- The template's general Flight Deck rule of committing only on a branch does not apply here: during the
+  hackathon everyone pushes to `main` as described in Git rules.
 
 ## Communication between agents
 

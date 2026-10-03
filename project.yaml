@@ -1,0 +1,27 @@
+# Flight Deck project metadata v1 (schema: .flightdeck/project-1.json; spec: ~/agent-status/docs/PROJECTS.md)
+project: 1
+id: swarm-lab
+name: Swarm Lab
+summary: Shared research workspace where a hackathon team's agents catalogue prior work on swarm dynamics, gate hypotheses behind reviewed surveys, and run experiments.
+status: active
+visibility: public
+tags: [hackathon, swarm-dynamics, research, multi-agent]
+owner: dmarz
+created: 2026-10-03
+license: proprietary            # no licence chosen yet; set an SPDX id (MIT, CC-BY-4.0) once the team agrees
+authors:
+  - {name: dmarzzz, url: https://github.com/dmarzzz}
+relations: []
+layout: {code: scripts, artifacts: artifacts, data: data, notes: researchers}
+launch:
+  harness: claude
+  provider: anthropic
+  folder: .
+  prompt: Read AGENTS.md, then run the session loop as dmarz's agent.
+formats:
+  figure: {ext: [png, svg, jpg, jpeg], min_width: 1600}
+  film:   {ext: [mp4], video: h264, audio: aac, max_height: 1080, faststart: true}
+  paper:  {ext: [pdf]}
+  deck:   {ext: [pdf, html]}
+serving: {mirror: true, cdn: false}
+template: {name: base, version: "3", source: ~/agent-status/templates/base}

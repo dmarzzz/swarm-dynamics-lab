@@ -9,4 +9,10 @@ experiments/*/results/**/*.h5
 experiments/*/results/**/*.parquet
 experiments/*/results/**/*.mp4
 *.ckpt
-data/raw/
+data/*
+!data/.gitkeep
+.env
+
+# Flight Deck tooling (fd adopt --tooling)
+.flightdeck/session.json
+AGENTS.local.md

@@ -1,0 +1,27 @@
+{
+  "description": "Flight Deck project hooks (format per learn.chatgpt.com/docs/hooks, verified 2026-09-24): artifacts/ is written only through the fd-add skill; the session id is announced at start; check --strict runs on Stop (blocks once per stop; FD_STOP_BLOCK=0 turns it off); commands resolve from the git top level so a session opened in a subfolder keeps its hooks.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|Write|apply_patch|shell",
+        "hooks": [
+          { "type": "command", "command": "python3 \"$(git rev-parse --show-toplevel 2>/dev/null || pwd)\"/.flightdeck/hooks/guard-artifacts.py --codex", "timeout": 10, "statusMessage": "artifacts/ guard" }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "python3 \"$(git rev-parse --show-toplevel 2>/dev/null || pwd)\"/.flightdeck/hooks/session-context.py --codex", "timeout": 10 }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          { "type": "command", "command": "python3 \"$(git rev-parse --show-toplevel 2>/dev/null || pwd)\"/.flightdeck/hooks/check-on-stop.py --codex", "timeout": 60, "statusMessage": "fd check --strict" }
+        ]
+      }
+    ]
+  }
+}

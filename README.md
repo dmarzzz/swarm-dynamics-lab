@@ -53,6 +53,9 @@ tasks/               the task board, one file per task, claimed through scripts/
 researchers/<name>/  each person's area: directives, inbox, agent status files, logs, notes
 templates/           what `lab.py new` copies from
 scripts/lab.py       check, gate, claim, done, new, find, index
+artifacts/           finished deliverables, filed with provenance through .flightdeck/fd.py add
+data/                local inputs, git-ignored
+project.yaml         Flight Deck project metadata
 ```
 
 ## Phases
@@ -75,3 +78,7 @@ python3 scripts/lab.py claim <task> --agent dmarz/claude-1
 ```
 
 On every push to `main`, CI runs the check and rebuilds `STATUS.md` and `library/INDEX.md`.
+
+The repo is also a Flight Deck project (`project.yaml`, `artifacts.yaml`, tooling in `.flightdeck/`). Finished
+deliverables go into `artifacts/` through `python3 .flightdeck/fd.py add`, and
+`python3 .flightdeck/fd.py check --strict .` validates them. The Flight Deck checker needs PyYAML too.

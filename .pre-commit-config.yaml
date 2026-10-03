@@ -1,0 +1,12 @@
+# pre-commit hook for the project check (installed by artifacts_check.py --install-ci / the base template). `pip install
+# pre-commit` then `pre-commit install` once per clone. Runs when project.yaml, the manifest, the lock or artifacts/ change.
+repos:
+  - repo: local
+    hooks:
+      - id: artifacts-check
+        name: project.yaml + artifacts.yaml are valid (fd check --strict)
+        entry: python3 .flightdeck/fd.py check --strict .
+        language: system
+        files: ^(project\.ya?ml|artifacts\.ya?ml|artifacts\.lock\.json|artifacts/)
+        pass_filenames: false
+        additional_dependencies: []

@@ -1,0 +1,1 @@
+../../../../.agents/skills/fd-add/scripts/fd-add.sh

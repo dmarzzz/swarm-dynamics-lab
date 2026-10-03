@@ -1,0 +1,52 @@
+# Flight Deck project check. Installed by `artifacts_check.py --install-ci <repo>` (or the base template) together with
+# .flightdeck/fd.py + .flightdeck/artifacts_check.py (the checkers) and .flightdeck/{project-1,artifacts-1}.json (the
+# schemas), so the repo checks itself without reaching the private deck repo. `fd check --strict` = docs/PROJECTS.md
+# rules 1-7: project.yaml schema, manifest, artifacts/ strictness, filenames, output-format probes, lock freshness.
+# Warnings fail too, on purpose: this is the strict gate. A second step HEADs every live URL.
+name: artifacts
+on:
+  push:
+    paths: ["project.yaml", "artifacts.yaml", "artifacts.yml", "artifacts.lock.json", "artifacts/**", ".flightdeck/**", ".github/workflows/artifacts-check.yml"]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q pyyaml jsonschema
+      - name: project + manifest are valid (strict)
+        run: |
+          # the template repository itself still carries {{placeholders}}: check a filled copy, named like a real clone
+          if grep -q '{{id}}' project.yaml; then
+            probe="$RUNNER_TEMP/template-probe" && rm -rf "$probe" && cp -R . "$probe" && cd "$probe"
+            python3 .flightdeck/fd.py init --summary "template self-check"
+          fi
+          python3 .flightdeck/fd.py check --strict .
+      - name: every url answers
+        run: |
+          python3 - <<'PY'
+          import yaml, urllib.request, sys
+          import os
+          if "{{" in open("artifacts.yaml").read():
+              print("unfilled template: no urls to check"); sys.exit(0)
+          d = yaml.safe_load(open("artifacts.yaml"))
+          bad = []
+          def head(u):
+              try:
+                  r = urllib.request.urlopen(urllib.request.Request(u, method="HEAD", headers={"User-Agent": "artifacts-check"}), timeout=20)
+                  return r.status
+              except Exception as e:
+                  return getattr(e, "code", None) or str(e)
+          for a in d.get("artifacts", []):
+              for u, st in [(a.get("url"), a.get("status"))] + [(v.get("url"), v.get("status")) for v in a.get("versions") or []]:
+                  if not u or st in ("stale", "archived") or "github.com" in u:   # GitHub blob links 404 on HEAD for private repos
+                      continue
+                  code = head(u)
+                  ok = isinstance(code, int) and code < 400
+                  print(("ok  " if ok else "BAD ") + f"{code} {u}")
+                  if not ok: bad.append(u)
+          sys.exit(1 if bad else 0)
+          PY

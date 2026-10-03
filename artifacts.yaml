@@ -1,0 +1,13 @@
+# Artifact manifest v1 (schema: .flightdeck/artifacts-1.json). Add versions with `python3 .flightdeck/fd.py add …`;
+# check with `python3 .flightdeck/fd.py check --strict .`
+manifest: 1
+project: Swarm Lab
+summary: Shared research workspace where a hackathon team's agents catalogue prior work on swarm dynamics, gate hypotheses behind reviewed surveys, and run experiments.
+artifacts:
+  - id: repo
+    category: codebase
+    type: repo
+    title: Swarm Lab
+    path: .
+    url: https://github.com/dmarzzz/swarm-lab
+    primary: true
