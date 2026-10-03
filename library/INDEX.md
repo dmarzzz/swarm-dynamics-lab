@@ -2,9 +2,9 @@
 
 # Library index
 
-2312 entries.
+2318 entries.
 
-## Papers (1499)
+## Papers (1500)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1195,6 +1195,7 @@
 | [mcdonald-2025-whisper](papers/mcdonald-2025-whisper.md) | Whisper Leak: a side-channel attack on Large Language Models | 2025 | 3 | abstract | swarm-detection | dmarz/sd-attribution |
 | [mcguire-2019-minimal](papers/mcguire-2019-minimal.md) | Minimal navigation solution for a swarm of tiny flying robots to explore an unknown environment | 2019 | 3 | abstract | swarm-robotics, swarm-intelligence | dmarz/swarm-robotics |
 | [mednikov-2026-calibrate](papers/mednikov-2026-calibrate.md) | Calibrate Once, Fly Any Team: Residual-Grounded Low-Fidelity Training for Cooperative Drone Swarms | 2026 | 3 | abstract | swarm-robotics, marl-emergence | dmarz/swarm-robotics-recent |
+| [mehran-2009-abnormal](papers/mehran-2009-abnormal.md) | Abnormal crowd behavior detection using social force model | 2009 | 3 | abstract | crowds-and-traffic, swarm-detection | shadow/sol-w5 |
 | [menetrey-2022-attestation](papers/menetrey-2022-attestation.md) | Attestation Mechanisms for Trusted Execution Environments Demystified | 2022 | 3 | skim | fork-merge-security | dmarz/fm-mobile-agents |
 | [metzger-2016-widespread](papers/metzger-2016-widespread.md) | Widespread transmission of independent cancer lineages within multiple bivalve species | 2016 | 3 | abstract | fork-merge-security | dmarz/fm-biology |
 | [mi-2025-mf-llm](papers/mi-2025-mf-llm.md) | MF-LLM: Simulating Population Decision Dynamics via a Mean-Field Large Language Model Framework | 2025 | 3 | skim | llm-agent-swarms, marl-emergence | dmarz/llm-agent-swarms-audit |
@@ -1508,7 +1509,7 @@
 | [zwang-2018-detecting](papers/zwang-2018-detecting.md) | Detecting Bot Activity in the Ethereum Blockchain Network | 2018 | 2 | abstract | swarm-detection | dmarz/sd-onchain |
 | [mckee-2023-chatbots](papers/mckee-2023-chatbots.md) | Chatbots in a Honeypot World | 2023 | 1 | abstract | swarm-detection | dmarz/sd-honeypots |
 
-## Blogs (173)
+## Blogs (175)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1576,6 +1577,7 @@
 | [ethresear-2022-whisk](blogs/ethresear-2022-whisk.md) | Whisk: A practical shuffle-based SSLE protocol for Ethereum | 2022 | 4 | skim | fork-merge-security, sybil-resistance, sync-consensus | dmarz/fm-unlinkability |
 | [ethresearch-2023-collusion](blogs/ethresearch-2023-collusion.md) | Collusion Resistance and Plurality in Quadratic Mechanisms (Paper Summary) | 2023 | 4 | full | sybil-resistance, collective-decision | dmarz/sybil-mechanisms |
 | [ethresearch-2026-physical](blogs/ethresearch-2026-physical.md) | Physical integrity, attestation, and the state of permissionless TEEs | 2026 | 4 | full | sybil-resistance | dmarz/sybil-flashbots-informal |
+| [fastfedora-2026-expanding](blogs/fastfedora-2026-expanding.md) | Expanding AI Control from Models to Harnesses | 2026 | 4 | skim | fork-merge-security, llm-agent-swarms | shadow/sol-w4 |
 | [fbi-2024-state](blogs/fbi-2024-state.md) | State-Sponsored Russian Media Leverages Meliorator Software for Foreign Malign Influence Activity (Joint Cybersecurity Advisory AA24-191A) | 2024 | 4 | full | swarm-detection, sybil-resistance | dmarz/sd-informal |
 | [flashbots-2025-mev](blogs/flashbots-2025-mev.md) | MEV and the Limits of Scaling | 2025 | 4 | full | sybil-resistance | dmarz/sybil-flashbots |
 | [flood-2026-finding](blogs/flood-2026-finding.md) | Finding heterogeneous agent swarms in the wild | 2026 | 4 | full | swarm-detection, llm-agent-swarms | shadow/sol-w4 |
@@ -1634,6 +1636,7 @@
 | [harvard-ssr-2022-kilobots](blogs/harvard-ssr-2022-kilobots.md) | Kilobots \| Self-Organizing Systems Research Group | 2022 | 3 | full | swarm-robotics, collective-decision | shadow/sol-w3 |
 | [huggingface-2026-security](blogs/huggingface-2026-security.md) | Security incident disclosure — July 2026 | 2026 | 3 | full | llm-agent-swarms | vishesh/senku-1 |
 | [humansecurity-2025-examining](blogs/humansecurity-2025-examining.md) | Examining AI Agent Traffic: What Early Traffic Patterns Tell us About Agentic Commerce | 2025 | 3 | full | swarm-detection | dmarz/sd-informal |
+| [hunma-2026-what](blogs/hunma-2026-what.md) | What the Hugging Face Incident tells us about multi-agent interactions | 2026 | 3 | skim | llm-agent-swarms, collective-decision | shadow/sol-w4 |
 | [imperva-2025-bad](blogs/imperva-2025-bad.md) | 2025 Bad Bot Report: The Rapid Rise of Bots and the Unseen Risk for Business | 2025 | 3 | skim | swarm-detection | dmarz/sd-informal |
 | [ivanov-2025-llms](blogs/ivanov-2025-llms.md) | LLMs are Capable of Misaligned Behavior Under Explicit Prohibition and Surveillance | 2025 | 3 | skim | swarm-detection | shadow/sol-w7 |
 | [meta-2024-adversarial](blogs/meta-2024-adversarial.md) | Adversarial Threat Report, First Quarter 2024 | 2024 | 3 | skim | swarm-detection | dmarz/sd-informal |
@@ -2321,7 +2324,7 @@
 | [data-moltbook-takschdube-2026](datasets/data-moltbook-takschdube-2026.md) | Moltbook longitudinal dataset (Taksch Dube): timestamped crawls with derived social and reply graphs | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 
-## Talks (20)
+## Talks (23)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -2341,7 +2344,10 @@
 | [meir-2026-prediction](talks/meir-2026-prediction.md) | Why Prediction Markets and AI Agents Are a Compliance Nightmare \| Solidus Labs Co-Founder Asaf Meir | 2026 | 3 | abstract | swarm-detection, llm-agent-swarms | shadow/sol-w1 |
 | [nitsche-2026-protect](talks/nitsche-2026-protect.md) | Can we protect democracy from fake news? \| Maxim Nitsche \| TEDxBerlin | 2026 | 3 | abstract | swarm-detection | shadow/sol-w1 |
 | [seibold-2020-frustrating](talks/seibold-2020-frustrating.md) | The Frustrating Beauty of Traffic Waves, and How Automated Vehicles Can Prevent Them | 2020 | 3 | abstract | crowds-and-traffic, swarm-robotics | shadow/sol-w5 |
+| [seibold-2024-swarm](talks/seibold-2024-swarm.md) | Swarm-Performance of Heterogeneous Multi-Agent Systems Across Scales | 2024 | 3 | abstract | crowds-and-traffic, swarm-robotics, collective-decision | shadow/sol-w5 |
 | [strogatz-2024-how](talks/strogatz-2024-how.md) | How Is Flocking Like Computing? | 2024 | 3 | full | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
 | [sutton-2024-perspective](talks/sutton-2024-perspective.md) | A Perspective on Intelligence | 2024 | 3 | full | fork-merge-security, collective-decision, meta | dmarz/fm-sutton |
 | [helbing-2013-planetary](talks/helbing-2013-planetary.md) | A Planetary Nervous System, and What to Do with It. Part I: Seminar | 2013 | 2 | full | crowds-and-traffic, collective-decision, llm-agent-swarms | shadow/sol-w5 |
+| [moussaid-2014-social](talks/moussaid-2014-social.md) | Social influence and collective behaviors in pedestrian crowds | 2014 | 2 | abstract | crowds-and-traffic, collective-decision | shadow/sol-w5 |
+| [moussaid-2018-wise](talks/moussaid-2018-wise.md) | Wise and Mad Crowds on the Move | 2018 | 2 | abstract | crowds-and-traffic, collective-decision | shadow/sol-w5 |
 | [saberi-2018-calibrating](talks/saberi-2018-calibrating.md) | UNSW rCITI seminar on calibrating a social force model for bidirectional pedestrian streams | 2018 | 2 | abstract | crowds-and-traffic | shadow/sol-w5 |
