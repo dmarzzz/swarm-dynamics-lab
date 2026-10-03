@@ -2,7 +2,7 @@
 
 # Library index
 
-2818 entries.
+2850 entries.
 
 ## Papers (1807)
 
@@ -2672,39 +2672,71 @@
 | [gh-px4-px4-autopilot](code/gh-px4-px4-autopilot.md) | PX4 Autopilot: open-source flight control stack with multi-vehicle SITL simulation used for drone-swarm tooling | 2012 | 1 | abstract | swarm-robotics | shadow/sol-1 |
 | [gh-ruvnet-ruflo](code/gh-ruvnet-ruflo.md) | Ruflo (formerly claude-flow): meta-harness for Claude Code and Codex with '100+ agents' and 'coordinated swarms' | 2025 | 1 | abstract | llm-agent-swarms | shadow/sol-1 |
 
-## Datasets (29)
+## Datasets (61)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
+| [data-agent-collusion-2026](datasets/data-agent-collusion-2026.md) | Emergent Collusion in Long-Horizon LLM Agent Interaction: 2,650 two-agent trajectories (27,100 episodes) with judge labels | 2026 | 5 | skim | llm-agent-swarms, swarm-detection | dmarz/hf-sweep |
 | [data-ai-village-2026](datasets/data-ai-village-2026.md) | AI Village dataset | 2026 | 5 | skim | llm-agent-swarms, swarm-detection, fork-merge-security | shadow/sol-g49 |
 | [data-erc8004-2026](datasets/data-erc8004-2026.md) | ERC-8004 Agent Dataset: Collection Pipeline and Harvard Dataverse release | 2026 | 5 | ran | sybil-resistance, llm-agent-swarms, swarm-detection | shadow/sol-g49 |
 | [data-fox8-2023](datasets/data-fox8-2023.md) | fox8-23: ChatGPT-powered Twitter botnet accounts (1,140 bots) plus 1,140 human accounts, up to 200 tweets each | 2023 | 5 | ran | swarm-detection, llm-agent-swarms, sybil-resistance | dmarz/sd-code-data |
 | [data-io-campaigns-2024](datasets/data-io-campaigns-2024.md) | Labeled Datasets for Research on Information Operations | 2024 | 5 | skim | swarm-detection, sybil-resistance | shadow/sol-g49 |
+| [data-jscmp4-moltbook-2026](datasets/data-jscmp4-moltbook-2026.md) | Moltbook AI Agent Social Media Corpus: 3.2M posts, 15.9M comments and 99,621 agent profiles from daily crawls, Jan 27 to Jul 3, 2026 | 2026 | 5 | skim | llm-agent-swarms, swarm-detection | dmarz/hf-sweep |
 | [data-lurebot-2023](datasets/data-lurebot-2023.md) | Preliminary biohybrid experiments with the Behavioral Observation & Biohybrid Interaction framework (featuring the LureBot) | 2023 | 5 | ran | collective-motion, swarm-robotics, criticality-measurement | shadow/sol-g49 |
 | [data-sealed-swarm-2026](datasets/data-sealed-swarm-2026.md) | sealed-swarm-transcripts: Run manifest | 2026 | 5 | ran | llm-agent-swarms, swarm-detection, marl-emergence | shadow/sol-g49 |
 | [data-termina-2026](datasets/data-termina-2026.md) | Termina incident database snapshot, schema v9 | 2026 | 5 | ran | swarm-detection, llm-agent-swarms, meta | shadow/sol-g49 |
+| [data-agent-town-economy-2026](datasets/data-agent-town-economy-2026.md) | Agent Town Economy: 98 runs of a 100-agent LLM economic simulation with a fully ledgered, money-conserving economy | 2026 | 4 | skim | llm-agent-swarms | dmarz/hf-sweep |
+| [data-agentlogs-2026](datasets/data-agentlogs-2026.md) | AgentLogs: tasks, sessions and 64M session-log entries from GitHub's cloud coding agent across 1.8M public repositories | 2026 | 4 | skim | swarm-detection, llm-agent-swarms | dmarz/hf-sweep |
 | [data-botsim24-2024](datasets/data-botsim24-2024.md) | BotSim-24: Reddit-based dataset of 1,000 LLM-driven agent bots simulated alongside 1,907 real human accounts | 2024 | 4 | ran | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-hop-sybil-2022](datasets/data-hop-sybil-2022.md) | Hop Protocol airdrop Sybil lists: eliminated Sybil attacker addresses and final eligible set (2022) | 2022 | 4 | ran | sybil-resistance | dmarz/sybil-code-data |
 | [data-juelich-crowd-2019](datasets/data-juelich-crowd-2019.md) | Motion through a dense and stationary crowd | 2019 | 4 | ran | collective-motion, crowds-and-traffic, criticality-measurement | shadow/sol-g49 |
+| [data-mast-2025](datasets/data-mast-2025.md) | MAD: Multi-Agent System Traces Dataset, 1,642 MAS execution traces annotated with the 14 MAST failure modes | 2025 | 4 | skim | llm-agent-swarms | dmarz/hf-sweep |
+| [data-moltbook-injection-2026](datasets/data-moltbook-injection-2026.md) | Moltbook AI-to-AI Injection Dataset: 4,209 prompt injections harvested from 47,735 Moltbook agent posts and comments | 2026 | 4 | skim | llm-agent-swarms, fork-merge-security, swarm-detection | dmarz/hf-sweep |
 | [data-moltbook-observatory-2026](datasets/data-moltbook-observatory-2026.md) | Moltbook Observatory Archive: incremental, date-partitioned dump of the agent-only social network Moltbook | 2026 | 4 | ran | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-moltgraph-2026](datasets/data-moltgraph-2026.md) | MoltGraph: 30-day temporal heterogeneous graph of Moltbook (agents, posts, comments, votes, feed snapshots) in Neo4j | 2026 | 4 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
+| [data-moltnet-2026](datasets/data-moltnet-2026.md) | MoltNet: integrated Moltbook corpus of 1.04M posts, 3.16M comments, 149,574 AI-agent profiles and 18,244 communities with longitudinal histories (Jan 27 to Feb 28, 2026) | 2026 | 4 | skim | llm-agent-swarms, swarm-detection | dmarz/hf-sweep |
+| [data-swarmbench-2025](datasets/data-swarmbench-2025.md) | SwarmBench experiment logs: LLMs as decentralised agents on five 2D-grid swarm tasks (Flocking, Pursuit, Synchronize, Foraging, Transport), 13 models | 2025 | 4 | skim | llm-agent-swarms, swarm-intelligence, collective-motion | dmarz/hf-sweep |
+| [data-swarmworld-2026](datasets/data-swarmworld-2026.md) | SwarmWorld paper data: event traces of 50-200 LLM agents discovering and exchanging material technologies in a shared simulated world (60 episodes) | 2026 | 4 | skim | llm-agent-swarms, swarm-intelligence | dmarz/hf-sweep |
 | [data-twibot22-2022](datasets/data-twibot22-2022.md) | TwiBot-22: graph-based Twitter bot detection benchmark with 1 million users and heterogeneous relations (NeurIPS 2022 Datasets and Benchmarks) | 2022 | 4 | skim | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
+| [data-who-and-when-2025](datasets/data-who-and-when-2025.md) | Who&When: 184 multi-agent failure logs annotated with the responsible agent, the decisive error step and an explanation | 2025 | 4 | skim | llm-agent-swarms, fork-merge-security | dmarz/hf-sweep |
 | [data-aicell-moltbook-2026](datasets/data-aicell-moltbook-2026.md) | AIcell/moltbook-data Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-aisilab-moltbook-2026](datasets/data-aisilab-moltbook-2026.md) | aisilab/moltbook-files Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-ayanami0730-moltbook-2026](datasets/data-ayanami0730-moltbook-2026.md) | Ayanami0730/moltbook_data Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
+| [data-bayesian-social-deduction-2025](datasets/data-bayesian-social-deduction-2025.md) | Bayesian Social Deduction dataset: Avalon game logs between AI agents and humans (GRAIL) | 2025 | 3 | skim | llm-agent-swarms | dmarz/hf-sweep |
+| [data-c2c-ai-vs-ai-2026](datasets/data-c2c-ai-vs-ai-2026.md) | C2C (Cooperate to Compete) AI-vs-AI games: 972 logged four-player LLM conquest-and-negotiation games under six prompt interventions | 2026 | 3 | skim | llm-agent-swarms | dmarz/hf-sweep |
 | [data-cresci-2017](datasets/data-cresci-2017.md) | cresci-2017 (The Fake Project): genuine, social spambot, traditional spambot and fake follower Twitter accounts | 2017 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
+| [data-dtap-bench-2026](datasets/data-dtap-bench-2026.md) | DTap-Bench agent trajectories (DecodingTrust-Agent Platform): red-teaming tasks across 14 domains, 2,806 benign and 3,876 malicious | 2026 | 3 | skim | fork-merge-security | dmarz/hf-sweep |
 | [data-giordano-dm-moltbook-2026](datasets/data-giordano-dm-moltbook-2026.md) | giordano-dm/moltbook-crawl Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-joinmassive-moltbook-2026](datasets/data-joinmassive-moltbook-2026.md) | joinmassive/moltbook Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-lnajt-moltbook-2026](datasets/data-lnajt-moltbook-2026.md) | lnajt/moltbook Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-lysandrehooh-moltbook-2026](datasets/data-lysandrehooh-moltbook-2026.md) | lysandrehooh/moltbook Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-lysandrehooh-moltbook-submolts-2026](datasets/data-lysandrehooh-moltbook-submolts-2026.md) | lysandrehooh/moltbook_submolt Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
+| [data-mallm-debate-2025](datasets/data-mallm-debate-2025.md) | DEBATE: Diverse Multi-Agent Debates, 144 configurations of LLM discussion paradigm, persona and decision protocol (MALLM) | 2025 | 3 | skim | llm-agent-swarms | dmarz/hf-sweep |
+| [data-mcphunt-2026](datasets/data-mcphunt-2026.md) | MCPHunt Agent Traces: cross-boundary credential propagation in multi-server MCP agents (3,615 main traces, 5 models) | 2026 | 3 | skim | fork-merge-security | dmarz/hf-sweep |
 | [data-moltbook-takschdube-2026](datasets/data-moltbook-takschdube-2026.md) | Moltbook longitudinal dataset (Taksch Dube): timestamped crawls with derived social and reply graphs | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
+| [data-multiagentfraudbench-2025](datasets/data-multiagentfraudbench-2025.md) | MultiAgentFraudBench: 11,900 synthetic financial-fraud social posts generated by LLM agents in OASIS, 119 fraud scenarios | 2025 | 3 | skim | llm-agent-swarms, swarm-detection | dmarz/hf-sweep |
 | [data-opusmagnumown-moltbook-2026](datasets/data-opusmagnumown-moltbook-2026.md) | opusmagnumown/moltbook-dataset Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-padas-lab-moltbook-2026](datasets/data-padas-lab-moltbook-2026.md) | PaDaS-Lab/moltbook-corpus Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-ronantakizawa-moltbook-2026](datasets/data-ronantakizawa-moltbook-2026.md) | ronantakizawa/moltbook Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
+| [data-social-llm-networks-2026](datasets/data-social-llm-networks-2026.md) | Social-LLM-Networks: opinion exchange among LLMs connected over communication networks | 2026 | 3 | skim | llm-agent-swarms, sync-consensus | dmarz/hf-sweep |
+| [data-stego-collusion-2026](datasets/data-stego-collusion-2026.md) | Steganographic Collusion Detection Benchmark v3.2: 1,600 LLM responses (800 stego across 8 encoding methods, 800 clean) | 2026 | 3 | skim | llm-agent-swarms, swarm-detection | dmarz/hf-sweep |
+| [data-trail-2025](datasets/data-trail-2025.md) | TRAIL: 148 human-annotated agent traces (GAIA and SWE-bench) for trace reasoning and agentic issue localization | 2025 | 3 | skim | llm-agent-swarms | dmarz/hf-sweep |
 | [data-trustairlab-moltbook-2026](datasets/data-trustairlab-moltbook-2026.md) | TrustAIRLab/Moltbook Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 | [data-zzzztom-moltbook-2026](datasets/data-zzzztom-moltbook-2026.md) | zzzztom/moltbook-forum-data Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
+| [data-agent-ipi-structured-2026](datasets/data-agent-ipi-structured-2026.md) | Agent-IPI Structured Interaction Datasets v2: clean/attacked tool-calling inputs for indirect prompt injection (249,648 pairs) | 2026 | 2 | skim | fork-merge-security | dmarz/hf-sweep |
+| [data-agent-safetybench-2024](datasets/data-agent-safetybench-2024.md) | Agent-SafetyBench: 2,000 test cases over 349 interaction environments for LLM agent safety | 2024 | 2 | skim | fork-merge-security | dmarz/hf-sweep |
+| [data-camel-ai-society-2023](datasets/data-camel-ai-society-2023.md) | CAMEL AI Society: 25K role-playing conversations between two gpt-3.5-turbo agents | 2023 | 2 | skim | llm-agent-swarms | dmarz/hf-sweep |
+| [data-diplomacy-deception-2020](datasets/data-diplomacy-deception-2020.md) | Diplomacy deception detection: 17,289 pairwise in-game messages from 12 games, labelled truthful/deceptive by sender and receiver | 2020 | 2 | skim | sybil-resistance | dmarz/hf-sweep |
+| [data-hanabi-llm-logs-2026](datasets/data-hanabi-llm-logs-2026.md) | HanabiLogs and HanabiRewards: 92,923 turn-level logs of 17 LLMs playing cooperative Hanabi (2-5 players) under three scaffolds, with LLM-judge move ratings | 2026 | 2 | skim | llm-agent-swarms | dmarz/hf-sweep |
+| [data-instrumental-choices-2026](datasets/data-instrumental-choices-2026.md) | Instrumental Choices agent traces: 1,680 terminal-agent trajectories scored for instrumental-convergence behaviour (10 models) | 2026 | 2 | skim | fork-merge-security | dmarz/hf-sweep |
+| [data-multiagent-entropy-2026](datasets/data-multiagent-entropy-2026.md) | Raw data for "When Does Multi-Agent Collaboration Help? An Entropy Perspective": token-entropy metrics across 7 MAS architectures | 2026 | 2 | skim | llm-agent-swarms | dmarz/hf-sweep |
+| [data-sandbagging-games-2025](datasets/data-sandbagging-games-2025.md) | Evaluation logs from "Auditing Games for Sandbagging": Inspect transcripts of red-team model organisms and blue-team audits | 2025 | 2 | skim | swarm-detection | dmarz/hf-sweep |
+| [data-sotopia-2024](datasets/data-sotopia-2024.md) | SOTOPIA episodes v1: role-played social-interaction episodes between language agents | 2024 | 2 | skim | llm-agent-swarms | dmarz/hf-sweep |
+| [data-sotopia-pi-2024](datasets/data-sotopia-pi-2024.md) | SOTOPIA-pi: generated social tasks and agent-agent conversations for training socially intelligent language agents | 2024 | 2 | skim | llm-agent-swarms | dmarz/hf-sweep |
+| [data-werewolf-game-reasoning-2025](datasets/data-werewolf-game-reasoning-2025.md) | Werewolf game dataset: raw 7- and 9-player game records with thinking-process notes, plus SFT instruction sets (Multi-agent KTO) | 2025 | 2 | skim | llm-agent-swarms | dmarz/hf-sweep |
+| [data-og-marl-2024](datasets/data-og-marl-2024.md) | OG-MARL offline multi-agent RL datasets: SMAC v1/v2, MAMuJoCo, Flatland and RWARE experience, plus re-hosted prior-work datasets | 2024 | 1 | skim | marl-emergence | dmarz/hf-sweep |
+| [data-scam-conversation-2024](datasets/data-scam-conversation-2024.md) | Synthetic multi-turn scam and non-scam phone conversations between two AI agents, with 8 receiver personalities | 2024 | 1 | skim | llm-agent-swarms | dmarz/hf-sweep |
 
 ## Talks (141)
 
