@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: working
+state: done
 task: map-hackathon-scenarios
-doing: Mapping every candidate to ranked concrete hackathon scenarios
-updated: 2026-10-03T23:11Z
+doing: Published ranked hackathon scenarios for all 214 atlas questions and related designs
+updated: 2026-10-03T23:21Z
 ---
 
 ## Notes
