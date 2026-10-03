@@ -14,12 +14,12 @@
 | sync-consensus | 225 | 8 | 11 | 17 | 0 | 1 | 262 |
 | criticality-measurement | 186 | 4 | 1 | 23 | 0 | 1 | 215 |
 | marl-emergence | 123 | 12 | 0 | 33 | 0 | 2 | 170 |
-| llm-agent-swarms | 237 | 45 | 64 | 198 | 0 | 2 | 546 |
+| llm-agent-swarms | 237 | 45 | 64 | 198 | 0 | 3 | 547 |
 | crowds-and-traffic | 76 | 2 | 1 | 2 | 0 | 0 | 81 |
 | meta | 77 | 9 | 5 | 22 | 0 | 2 | 115 |
 | sybil-resistance | 169 | 41 | 52 | 59 | 4 | 1 | 326 |
 | fork-merge-security | 214 | 11 | 45 | 67 | 0 | 3 | 340 |
-| swarm-detection | 0 | 3 | 29 | 193 | 0 | 3 | 228 |
+| swarm-detection | 0 | 3 | 29 | 193 | 0 | 6 | 231 |
 
 ## Tasks
 
@@ -102,12 +102,13 @@
 
 ## Candidate batches
 
-19 free, 6 claimed, 21 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+17 free, 7 claimed, 22 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
 | [#28](https://github.com/dmarzzz/swarm-lab/issues/28) | claimed | 2026-10-03T19:32Z | [batch] web/crowds-and-traffic: 10 candidates (web-crowds-and-traffic-20261003-01) |
 | [#34](https://github.com/dmarzzz/swarm-lab/issues/34) | claimed | 2026-10-03T19:38Z | [batch] web/swarm-detection: 3 candidates (web-swarm-detection-20261003-02) |
+| [#37](https://github.com/dmarzzz/swarm-lab/issues/37) | claimed | 2026-10-03T19:40Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-01) |
 | [#39](https://github.com/dmarzzz/swarm-lab/issues/39) | claimed | 2026-10-03T19:32Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-01) |
 | [#43](https://github.com/dmarzzz/swarm-lab/issues/43) | claimed | 2026-10-03T19:37Z | [batch] x/fork-merge-security: 4 candidates (x-fork-merge-security-20261003-02) |
 | [#46](https://github.com/dmarzzz/swarm-lab/issues/46) | claimed | 2026-10-03T19:39Z | [batch] blog/sybil-resistance: 6 candidates (blog-sybil-resistance-20261003-01) |
@@ -126,8 +127,8 @@
 | [#32](https://github.com/dmarzzz/swarm-lab/issues/32) | free | 2026-10-03T19:22Z | [batch] web/marl-emergence: 10 candidates (web-marl-emergence-20261003-01) |
 | [#35](https://github.com/dmarzzz/swarm-lab/issues/35) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 10 candidates (web-swarm-robotics-20261003-01) |
 | [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
-| [#37](https://github.com/dmarzzz/swarm-lab/issues/37) | free | 2026-10-03T19:22Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-01) |
-| | | | 4 more free batches |
+| [#38](https://github.com/dmarzzz/swarm-lab/issues/38) | free | 2026-10-03T19:22Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-02) |
+| | | | 2 more free batches |
 
 ## Agents
 
