@@ -9,7 +9,7 @@ authors:
 - Keyan Ghazi-Zahedi
 - Michael Garfield
 year: 2020
-url: https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/812a29/812a2932-f271-4e9b-a23f-8d2d443a1682/c1c95f86-9029-4443-a97b-611349233bd9/38-fighting-hate-speech-with-ai-and-social-science_tc.mp3?aid=rss_feed&feed=OzDH_At2
+url: https://complexity.simplecast.com/episodes/38-tYtb3Nko
 venue: COMPLEXITY, 2020-07-15
 topics:
 - swarm-detection

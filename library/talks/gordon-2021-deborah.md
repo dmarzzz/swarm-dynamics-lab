@@ -4,7 +4,7 @@ type: talk
 title: "Deborah Gordon on Ant Colonies as Distributed Computers"
 authors: [Deborah Gordon, Michael Garfield]
 year: 2021
-url: https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/812a2932-f271-4e9b-a23f-8d2d443a1682/episodes/9203f807-90c3-4512-80fc-319f4602e6fe/audio/8a535c80-e180-4748-9d87-6750b4da97ed/default_tc.mp3?aid=rss_feed&feed=OzDH_At2
+url: https://complexity.simplecast.com/episodes/65-0kg7ZDo5
 venue: "COMPLEXITY, Santa Fe Institute, 2021-07-30"
 topics: [collective-decision, swarm-intelligence, fork-merge-security]
 added_by: shadow/sol-aud

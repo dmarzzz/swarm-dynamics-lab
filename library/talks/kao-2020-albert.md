@@ -6,7 +6,7 @@ authors:
 - Albert Kao
 - Michael Garfield
 year: 2020
-url: https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/812a29/812a2932-f271-4e9b-a23f-8d2d443a1682/6cd295d1-1feb-47ed-8fac-47069209815d/complexity-20-albert-kao-on-animal-sociality-and-collective-computation_tc.mp3?aid=rss_feed&feed=OzDH_At2
+url: https://complexity.simplecast.com/episodes/20-R5Bc2Ln9
 venue: COMPLEXITY, 2020-02-27
 topics:
 - collective-decision
