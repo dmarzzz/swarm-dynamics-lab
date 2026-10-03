@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: working
+state: done
 task: design-swarm-immune-response
-doing: Developing and validating exploratory containment and durable-recovery notes
+doing: Published full proposed immune-response experimental design at db8cc29
 updated: 2026-10-03T22:27Z
 ---
 
