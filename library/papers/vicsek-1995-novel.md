@@ -9,7 +9,7 @@ url: https://arxiv.org/abs/cond-mat/0611743
 doi: 10.1103/PhysRevLett.75.1226
 arxiv: cond-mat/0611743
 cite: Vicsek, T., Czirók, A., Ben-Jacob, E., Cohen, I., & Shochet, O. (1995). Novel type of phase transition in a system of self-driven particles. Physical Review Letters, 75(6), 1226–1229.
-topics: [collective-motion, active-matter, criticality-measurement]
+topics: [collective-motion, active-matter, criticality-measurement, sync-consensus]
 added_by: dmarz/collective-motion
 accessed: 2026-10-03
 read_depth: full

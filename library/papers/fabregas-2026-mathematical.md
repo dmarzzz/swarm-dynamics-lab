@@ -7,14 +7,14 @@ year: 2026
 venue: "Mathematical Models and Methods in Applied Sciences"
 url: https://arxiv.org/abs/2508.12183
 doi: "10.1142/s021820252640004x"
-arxiv: null
+arxiv: "2508.12183"
 cite: "Fabregas, R., Liao, J., & Outada, N. (2026). The mathematical theory of behavioral swarms: Toward modeling the collective dynamics of living systems. Mathematical Models and Methods in Applied Sciences, 36(02), 439-482."
-topics: [collective-motion, sync-consensus]
+topics: [collective-motion, sync-consensus, crowds-and-traffic]
 added_by: dmarz/collective-motion-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 2
-citations: 7  # (Crossref is-referenced-by-count, 2026-10-03; OpenAlex daily budget exhausted for this IP)
+citations: "7 (OpenAlex W4417247262, 2026-10-03)"
 code: []
 ---
 ## Summary

@@ -45,7 +45,7 @@ swarms. It is the bridge paper between robotic active matter ([[baconnier-2022-s
 - Measured: near a wall of stationary robots both designs spend about 3 tau_p (about 1 min) but aligners travel
   twice as far along it.
 - Measured (N = 64, 4 runs each): early phototaxis follows a diffusion-limited (Smoluchowski) rate for both
-  designs (D_eff about 4.22 cm^2/s per SM); after about 10 min a first layer of robots forms at the spot edge and
+  designs (effective diffusion constant D_eff of about 4.22, printed in the text as cm/s; units ambiguous); after about 10 min a first layer of robots forms at the spot edge and
   fronters then outperform aligners in the fraction in the light F.
 - Simulated: time to get half the swarm into the light, T_1/2, grows steeply with N for aligners but only
   mildly for fronters (N up to 8192): morphology matters more at scale.

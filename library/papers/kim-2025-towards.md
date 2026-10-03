@@ -35,7 +35,7 @@ added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: full
 relevance: 4
-citations: 139 (Semantic Scholar, 2026-10-03; OpenAlex unavailable that day)
+citations: "0 (OpenAlex W7114795442, arXiv record, 2026-10-03); Semantic Scholar 139 same day"
 code: []
 ---
 
@@ -45,7 +45,7 @@ A controlled study of when multi-agent LLM systems beat a single agent. 260 conf
 
 ## Contribution
 
-Replaces "more agents is all you need" ([[li-2024-more]]) and the logistic "collaborative scaling law" of [[qian-2024-scaling]] with a measured, task-conditional picture, and quantifies coordination costs (overhead, message density, redundancy, error amplification) that look like the communication and congestion costs studied in swarm robotics.
+Replaces "more agents is all you need" ([[li-2024-more]]) and the logistic "collaborative scaling law" of [[qian-2025-scaling]] with a measured, task-conditional picture, and quantifies coordination costs (overhead, message density, redundancy, error amplification) that look like the communication and congestion costs studied in swarm robotics.
 
 ## Key results
 
@@ -67,7 +67,7 @@ At most nine agents; homogeneous model families (13 heterogeneous configs in a p
 
 ## Relevance to us
 
-The best quantitative statement of the costs that any LLM "swarm" must pay: super-linear communication growth (exponent about 1.7), saturating returns to messaging, and topology-dependent error amplification. These are the quantities a swarm-dynamics hackathon would want to measure as N grows past the 9-agent ceiling here. Compare [[yang-2026-understanding]] (diversity as effective channels), [[qian-2024-scaling]] (1000-agent DAGs), [[cemri-2025-why]] (failure taxonomy), [[chen-2023-scalable]] (centralised vs decentralised robot planning) and [[zheng-2026-absorbing]] (critical communication degree).
+The best quantitative statement of the costs that any LLM "swarm" must pay: super-linear communication growth (exponent about 1.7), saturating returns to messaging, and topology-dependent error amplification. These are the quantities a swarm-dynamics hackathon would want to measure as N grows past the 9-agent ceiling here. Compare [[yang-2026-understanding]] (diversity as effective channels), [[qian-2025-scaling]] (1000-agent DAGs), [[cemri-2025-why]] (failure taxonomy), [[chen-2023-scalable]] (centralised vs decentralised robot planning) and [[zheng-2026-absorbing]] (critical communication degree).
 
 ## Notes from dmarz/llm-agent-swarms-recent
 

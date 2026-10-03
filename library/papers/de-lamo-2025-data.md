@@ -14,12 +14,12 @@ added_by: dmarz/collective-motion-recent
 accessed: 2026-10-03
 read_depth: full
 relevance: 4
-citations: null  # arXiv-only; OpenAlex budget exhausted and Semantic Scholar rate-limited on 2026-10-03
+citations: "0 (OpenAlex W4417070642, 2026-10-03)"
 code: []
 ---
 ## Summary
 
-Trajectories of black neon tetra schools (three group sizes, three 20-minute recordings each, idtracker.ai, quasi-2D tank) are decomposed into centre-of-mass (CM) motion and motion relative to the CM. The CM is modelled as a finite-size active Brownian particle with Schienbein-Gruler active friction and a non-potential hard-wall force that favours wall following; parameters fit by minimising Kullback-Leibler divergence between simulated and empirical position and velocity distributions. In the CM frame each fish is treated as independent in a mean-field radial confining potential inferred from the radial density (flat inside, exponential decay outside, so an almost constant restoring force once outside), plus drift and multiplicative (state-dependent) diffusion for speed and turning rate estimated by kernel-based Kramers-Moyal regression. Synthetic schools reproduce CM position and velocity distributions (crater-shaped velocity PDF), radial density, exponential-tailed velocity components, burst-and-coast speed oscillations with partial synchrony, MSD with confinement plateau and oscillations, residence and peripheral times, and the bimodal polarisation distribution.
+Trajectories of black neon tetra schools (group sizes N = 40, 50 and 60, three independent 60-minute recordings per size at 50 fps, idtracker.ai, quasi-2D tank) are decomposed into centre-of-mass (CM) motion and motion relative to the CM. The CM is modelled as a finite-size active Brownian particle with Schienbein-Gruler active friction and a non-potential hard-wall force that favours wall following; parameters fit by minimising Kullback-Leibler divergence between simulated and empirical position and velocity distributions. In the CM frame each fish is treated as independent in a mean-field radial confining potential inferred from the radial density (flat inside, exponential decay outside, so an almost constant restoring force once outside), plus drift and multiplicative (state-dependent) diffusion for speed and turning rate estimated by kernel-based Kramers-Moyal regression. Synthetic schools reproduce CM position and velocity distributions (crater-shaped velocity PDF), radial density, exponential-tailed velocity components, burst-and-coast speed oscillations with partial synchrony, MSD with confinement plateau and oscillations, residence and peripheral times, and the bimodal polarisation distribution.
 
 ## Contribution
 
@@ -34,7 +34,7 @@ Shows that a two-level, mean-field stochastic model with data-inferred drift and
 
 ## Methods and models
 
-SDEs: Eq. (2) CM active Brownian pseudo-particle; Eq. (4) polar-coordinate SDEs for speed, heading and turning rate with effective confining force from U(r) = -ln rho(r). Nonparametric kernel regression for drift and diffusion; JitcSDE integration for multiplicative noise. GoPro Hero 11 recordings; Gaussian smoothing. No code link given.
+SDEs: Eq. (2) CM active Brownian pseudo-particle; Eq. (4) polar-coordinate SDEs for speed, heading and turning rate with effective confining force from U(r) = -ln rho(r). Nonparametric kernel regression for drift and diffusion; JitcSDE integration for multiplicative noise. GoPro Hero 11 Black recordings at 50 fps, 5312 x 2988 px (180,000 frames per 60-minute recording); Gaussian smoothing. No code link given.
 
 ## Limitations and open questions
 

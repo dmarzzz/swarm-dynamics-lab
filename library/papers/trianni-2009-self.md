@@ -38,8 +38,8 @@ marl-emergence topic.
 
 ## Methods and models
 
-Evolutionary robotics (s-bot style robots, per our recollection; not checked), simulated and possibly real; full text
-not read (IEEE blocked; abstract from OpenAlex).
+Evolutionary robotics: neural controllers synthesised by artificial evolution, analysed as dynamical systems.
+Full text not read (IEEE blocked automated access; abstract from OpenAlex).
 
 ## Limitations and open questions
 

@@ -24,7 +24,7 @@ added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: abstract
 relevance: 4
-citations: 559 (Semantic Scholar, 2026-10-03; OpenAlex unavailable that day)
+citations: "265 (OpenAlex W4402901320, published version, 2026-10-03); 12 (OpenAlex W4390046143, arXiv record, 2026-10-03); Semantic Scholar 559 same day"
 code: []
 ---
 
@@ -50,4 +50,4 @@ Validation of LLM-ABM against real data is flagged as an open problem; little on
 
 ## Relevance to us
 
-Key review for anyone replacing rule-based agents with LLMs in a swarm model ([[jimenez-romero-2025-multi]], [[rahman-2025-llm]]); also covers the same group's large simulator [[piao-2025-agentsociety]].
+Key review for anyone replacing rule-based agents with LLMs in a swarm model ([[jimenez-romero-2025-multi-agent]], [[rahman-2025-llm-powered]]); also covers the same group's large simulator [[piao-2025-agentsociety]].

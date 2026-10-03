@@ -67,4 +67,4 @@ section is short and does not cover robotics in depth.
 The best single entry point for choosing a simulation method for the hackathon: ABP or Vicsek for dry swarms
 (robots, drones on a plane), squirmers or dipoles if fluid coupling matters, continuum PDEs for large-scale patterns.
 Follow-ups: [[fily-2012-athermal]] (ABP baseline), [[chate-2008-collective]] (Vicsek bands), [[chate-2019-dry]]
-(hydrodynamic derivation), [[gompper-2020-2020]] and [[gompper-2025-2025]] (roadmaps).
+(hydrodynamic derivation), [[gompper-2020-2020]] and [[gompper-2025-motile]] (roadmaps).

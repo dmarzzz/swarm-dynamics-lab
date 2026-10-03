@@ -14,7 +14,7 @@ added_by: dmarz/collective-motion-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 5
-citations: 31  # (Crossref is-referenced-by-count, 2026-10-03; OpenAlex daily budget exhausted for this IP)
+citations: "30 (OpenAlex W4400726029, 2026-10-03)"
 code: []
 ---
 ## Summary

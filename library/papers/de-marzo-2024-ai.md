@@ -21,7 +21,7 @@ added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: full
 relevance: 5
-citations: 17 (Semantic Scholar, 2026-10-03; OpenAlex unavailable that day)
+citations: "1 (OpenAlex W7203444322, published version, 2026-10-03); 3 (OpenAlex W4403584145, arXiv record, 2026-10-03); Semantic Scholar 17 same day"
 code: []
 ---
 
@@ -53,7 +53,7 @@ All-to-all, fully observed population, arbitrary binary choice with no informati
 
 ## Relevance to us
 
-Probably the single most reusable result for a swarm-dynamics hackathon: a measurable order parameter m, a control parameter beta read directly from adoption curves, and a finite-size prediction that can be tested on any model in an afternoon. Natural companion to [[ashery-2024-emergent]] (naming game, committed minorities), [[flint-2025-group]] (group size and mean-field basins), [[el-2026-physics]] (Ising fit on signed networks), [[de-nobili-2026-collective]] (2D lattice, critical exponents) and [[tanaka-2026-when]] (drift vs selection). Contrasts with [[riedl-2025-emergent]], which measures synergy rather than consensus.
+Probably the single most reusable result for a swarm-dynamics hackathon: a measurable order parameter m, a control parameter beta read directly from adoption curves, and a finite-size prediction that can be tested on any model in an afternoon. Natural companion to [[ashery-2024-emergent]] (naming game, committed minorities), [[flint-2026-group]] (group size and mean-field basins), [[el-2026-physics]] (Ising fit on signed networks), [[de-nobili-2026-collective]] (2D lattice, critical exponents) and [[tanaka-2026-when]] (drift vs selection). Contrasts with [[riedl-2025-emergent]], which measures synergy rather than consensus.
 
 ## Notes from dmarz/llm-agent-swarms-recent
 

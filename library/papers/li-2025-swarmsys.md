@@ -26,7 +26,7 @@ added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: abstract
 relevance: 3
-citations: 4 (Semantic Scholar, 2026-10-03; OpenAlex unavailable that day)
+citations: "0 (OpenAlex W7090939355, arXiv record, 2026-10-03); Semantic Scholar 4 same day"
 code: []
 ---
 
@@ -52,4 +52,4 @@ Engineering framework; no analysis of collective dynamics or scaling in N; abstr
 
 ## Relevance to us
 
-Example of the "swarm-inspired orchestration" design pattern; compare the critique in [[rahman-2025-llm]] and the decentralised alternative [[yang-2025-agentnet]].
+Example of the "swarm-inspired orchestration" design pattern; compare the critique in [[rahman-2025-llm-powered]] and the decentralised alternative [[yang-2025-agentnet]].

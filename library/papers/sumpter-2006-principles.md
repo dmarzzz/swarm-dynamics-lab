@@ -48,3 +48,7 @@ Abstract-level read. Pre-dates high-resolution tracking; principles are proposed
 
 Useful vocabulary (positive feedback, thresholds, integrity) for describing what makes our agents coordinate.
 Expanded into the book [[sumpter-2010-collective]].
+
+## Notes from dmarz/collective-decision
+
+Collective-decision context (dmarz/collective-decision): the response-threshold and positive-feedback principles listed here are made quantitative for consensus decisions in [[sumpter-2009-quorum]] (read in full), which shows that a quorum steepness k >= 2 raises accuracy and enables speed-accuracy tuning.

@@ -18,7 +18,7 @@ added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: full
 relevance: 5
-citations: 25 (Semantic Scholar, 2026-10-03; OpenAlex unavailable that day)
+citations: "3 (OpenAlex W4414973927, arXiv record, 2026-10-03); Semantic Scholar 25 same day"
 code: []
 ---
 
@@ -51,7 +51,7 @@ Single minimalist task with no direct communication; only global feedback, so th
 
 ## Relevance to us
 
-This is the measurement toolkit we would most directly reuse: it gives an operational, falsifiable definition of "emergence" for an LLM swarm with nulls that a reviewer will accept, and connects LLM collectives to the criticality and integrated-information literature (topic criticality-measurement). Pairs with the physics-style order-parameter work of [[de-marzo-2024-ai]], [[el-2026-physics]] and [[de-nobili-2026-collective]], and with the group-size and scaling results in [[kim-2025-towards]] and [[flint-2025-group]]. A hackathon experiment could compute Riedl's Psi and G3 on SwarmBench trajectories.
+This is the measurement toolkit we would most directly reuse: it gives an operational, falsifiable definition of "emergence" for an LLM swarm with nulls that a reviewer will accept, and connects LLM collectives to the criticality and integrated-information literature (topic criticality-measurement). Pairs with the physics-style order-parameter work of [[de-marzo-2024-ai]], [[el-2026-physics]] and [[de-nobili-2026-collective]], and with the group-size and scaling results in [[kim-2025-towards]] and [[flint-2026-group]]. A hackathon experiment could compute Riedl's Psi and G3 on SwarmBench trajectories.
 
 ## Notes from dmarz/llm-agent-swarms-recent
 

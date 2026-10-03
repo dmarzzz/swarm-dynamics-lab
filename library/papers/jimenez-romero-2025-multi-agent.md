@@ -34,8 +34,7 @@ An early, reproducible bridge between the NetLogo agent-based-modelling traditio
 
 ## Key results
 
-- Claimed: LLM-driven ants reproduce pheromone-mediated foraging dynamics and LLM-driven birds produce flocking-like alignment under both prompt styles.
-- Claimed: rule-based prompts give behaviour closer to the classical models; knowledge-driven prompts produce more varied behaviour.
+- Claimed: the toolchain lets LLM-driven agents in both models (ant foraging, bird flocking) exhibit self-organising, emergent behaviour, under both structured and knowledge-driven prompts.
 - Quantitative comparisons not checked at abstract level.
 
 ## Methods and models

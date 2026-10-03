@@ -9,7 +9,7 @@ url: https://hal.elte.hu/~vasarhelyi/doc/vasarhelyi2018optimized.pdf
 doi: "10.1126/scirobotics.aat3536"
 arxiv: null
 cite: "Vásárhelyi, G., Virágh, C., Somorjai, G., Nepusz, T., Eiben, A. E., & Vicsek, T. (2018). Optimized flocking of autonomous drones in confined environments. Science Robotics, 3(20), eaat3536."
-topics: [swarm-robotics, collective-motion, criticality-measurement]
+topics: [swarm-robotics, collective-motion, criticality-measurement, sync-consensus]
 added_by: dmarz/swarm-robotics
 accessed: 2026-10-03
 read_depth: full

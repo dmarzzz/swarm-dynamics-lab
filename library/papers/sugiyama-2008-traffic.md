@@ -47,7 +47,7 @@ It moves the "phantom jam" from a model prediction (Nagel–Schreckenberg cellul
 
 ## Methods and models
 
-Outdoor circular track at Nakanihon Automotive College; 360-degree camera at the centre records positions; drivers instructed to cruise at about 30 km/h and to follow the car in front safely. Density was set using the optimal velocity (OV) model criterion for linear instability of uniform flow (Bando et al. 1995, PRE 51, 1035; the OV model is dv_n/dt = a[V(Δx_n) − v_n]). Analysis is visual and trajectory-based (space-time diagram); no statistical estimate of the critical density is attempted here (that is done in [[tadaki-2013-phase]]). Supplementary movies at stacks.iop.org/NJP/10/033001/mmedia.
+Outdoor circular track at Nakanihon Automotive College; 360-degree camera at the centre records positions; drivers instructed to cruise at about 30 km/h and to follow the car in front safely. Density was set using the optimal velocity (OV) model criterion for linear instability of uniform flow (Bando et al. 1995, PRE 51, 1035; the OV model has the standard form dv_n/dt = a[V(Δx_n) − v_n], stated from general knowledge, not from this paper). Analysis is visual and trajectory-based (space-time diagram); no statistical estimate of the critical density is attempted here (that is done in [[tadaki-2013-phase]]). Supplementary movies at stacks.iop.org/NJP/10/033001/mmedia.
 
 ## Limitations and open questions
 

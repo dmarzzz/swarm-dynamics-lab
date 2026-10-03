@@ -20,7 +20,7 @@ added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: full
 relevance: 5
-citations: 191 (Semantic Scholar, 2026-10-03; OpenAlex unavailable that day)
+citations: "69 (OpenAlex W4410358178, published version, 2026-10-03); Semantic Scholar 191 same day"
 code: []
 ---
 
@@ -46,7 +46,7 @@ Prompted pairwise coordination game; system prompt with rules and payoffs, dynam
 
 ## Limitations and open questions
 
-Unstructured, well-mixed population (random pairs); pairwise interactions only; meaningless letter conventions; homogeneous single-model populations; results depend on prompt and model. The authors list network structure, higher-order (group) interactions, realistic norms and mixed human-LLM populations as next steps. The size-dependence of collective bias is taken up in [[flint-2025-group]].
+Unstructured, well-mixed population (random pairs); pairwise interactions only; meaningless letter conventions; homogeneous single-model populations; results depend on prompt and model. The authors list network structure, higher-order (group) interactions, realistic norms and mixed human-LLM populations as next steps. The size-dependence of collective bias is taken up in [[flint-2026-group]].
 
 ## Relevance to us
 

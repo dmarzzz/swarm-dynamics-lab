@@ -17,7 +17,7 @@ topics:
 - collective-decision
 added_by: dmarz/llm-agent-swarms-recent
 accessed: '2026-10-03'
-read_depth: abstract
+read_depth: full
 relevance: 5
 citations: 1 (OpenAlex, 2026-10-03); 7 (Semantic Scholar, 2026-10-03)
 code: []
@@ -25,26 +25,32 @@ code: []
 
 ## Summary
 
-The authors compare "cognitive agents" (LLM-driven) with classical rule-following particles on two canonical collective tasks. First, LLM Agent Swarm Optimization (llmASO): a swarm of interacting LLM agents acts as an optimiser in the manner of particle swarm optimisation (PSO). Individual LLM agents make better local decisions than PSO particles, but their consensus tendency and pattern exploitation make the swarm prone to premature convergence; changing the network topology mitigates this but usually at the cost of slower convergence than classical PSO. Second, the Schelling segregation model: with local interactions and homophily, LLM agents generate emergent behaviours distinct from the rule-based model, so communication architecture matters for social simulation.
+The authors compare LLM-driven "cognitive agents" with classical rule-following particles on two canonical collective tasks, holding everything else fixed. (1) Optimisation: LLM Agent Swarm Optimization (llmASO) extends OPRO (a single LLM proposing new solutions from a sorted list of past solution-value pairs) to a swarm of 20 LLM agents that, each step, share suggestions and best previous solutions with their network neighbours (a multi-agent debate) before proposing new points. It is compared with Clerc-Kennedy constriction PSO (c1 = c2 = 2.05, chi = 0.729) on 2D Ackley, Rastrigin and Rosenbrock functions (randomly shifted each run so agents cannot guess the origin), up to 9,000 function evaluations. A lone LLM agent (OPRO) beats a lone particle and sometimes converges very fast (Ackley: 3 of 5 runs under 1,500 evaluations) but gets trapped in local minima on multimodal landscapes; llmASO on a ring network reliably reaches the global optimum but more slowly than PSO. Denser, shorter-path networks (Barabasi-Albert, random geometric graphs) made llmASO fail on Rastrigin in about 50% of trials, attributed to fast LLM consensus causing premature convergence. (2) A Schelling segregation variant with 100 agents on a 100 x 100 grid, neighbourhood radius 15 and tolerance T from 0.1 to 0.9: with a complete communication network, LLM agents reproduce the particle model's three phases (mixed, segregated, frozen) almost exactly; with BA or local (RGG) communication networks, segregation decreases and convergence slows; homophilic communication (h = 1) removes the mixed phase and makes all agents happy in every run, while heterophilic communication (h = 0) shifts the transition to higher tolerances yet still produces strong segregation at T in [0.4, 0.6].
 
 ## Contribution
 
-A direct, controlled comparison of LLM agents against the classical particle baselines of swarm intelligence and complexity science, published in a Nature-family venue. Complements [[jimenez-romero-2025-multi-agent]] (LLM ants and boids in NetLogo) and [[rahman-2025-llm-powered]] (LLM Boids/ACO cost).
+The most controlled "LLM swarm vs particle swarm" comparison in a peer-reviewed venue, with the classical baselines (PSO, Schelling) implemented identically. Its main finding is that individual cognitive ability does not translate into better collective performance, and that communication topology, not agent intelligence, is the dominant control parameter, with the sign of the effect opposite to human collective problem-solving experiments (Mason and Watts) where efficient networks help. Complements [[jimenez-romero-2025-multi-agent]], [[rahman-2025-llm-powered]] and [[ruan-2025-benchmarking]].
 
 ## Key results
 
-- Claimed: LLM agents outperform particles in individual decisions but swarms converge prematurely due to consensus tendencies.
-- Claimed: network topology adjustments alleviate premature convergence but slow convergence relative to PSO.
-- Claimed: LLM agents in the Schelling model produce distinct emergent segregation patterns under local, homophilic interaction.
+- Measured: OPRO single agents outperform single particles; llmASO reaches the global minimum on all three functions but converges more slowly than CF-PSO (20 runs each for swarms, 5 for single agents).
+- Measured: llmASO final swarm diameter ~2 in a 20-wide search space, described as an emergent shared convention.
+- Measured (SI): BA and RGG networks lead to convergence failure on Rastrigin in ~50% of trials; ring topology preserves diversity. BA dominates on Rosenbrock (problem-dependent optimal topology).
+- Measured: Schelling with complete network: segregation coefficient, iterations and unhappy fraction nearly identical to particles across T; LLM agents end with more nearest neighbours in mixed and diluted phases.
+- Measured: homophily (h = 1) gives zero unhappy agents in all runs and all T; heterophily (h = 0) needs many more iterations and shifts transitions upward.
+- Observed: agents tend to probe the origin or the domain centre without evidence (hence random shifts), and "Let's think step by step" increased hallucinations in the Schelling task.
 
 ## Methods and models
 
-llmASO (LLM agents exchanging positions/values on a communication network over benchmark functions) vs PSO; LLM-driven Schelling model on a grid. Models, network types and quantitative results not checked at abstract level.
+Starling-LM-7B-alpha (4-bit) via llama.cpp and LangChain, chosen to be feasible on small robots. llmASO: synchronous neighbour message exchange, 3-digit float precision (a 20,000 x 20,000 effective grid), best solutions sorted with best last. Schelling: segregation coefficient s = (2/N^2) sum_c n_c^2, unhappy fraction, iterations to stationarity (cap 100 Monte Carlo steps), stationarity by slope thresholds (window 20, threshold 0.001); agents converse pairwise with a random connected peer before relocating; homophilic BA networks after Karimi et al. Code: https://github.com/CoMuNeLab/LLM-Agents (stated as to be released upon acceptance; not checked).
 
 ## Limitations and open questions
 
-Abstract-level read. Quantitative gaps vs PSO (iterations, function evaluations, cost) need the full text.
+- One small 7B model; the authors note hyperparameters were varied one at a time only, and model, prompt and incentive choices remain untested.
+- 2D functions and 100-agent Schelling only; LLM cost limits runs (5-20 per condition).
+- Prompt order (own info before social info) may over-weight social cues (herding), which the authors flag as a possible cause of premature convergence.
+- No explicit order parameter for llmASO beyond diameter and best value.
 
 ## Relevance to us
 
-High: the cleanest "LLM swarm vs particle swarm" benchmark; premature convergence through conformity echoes [[weng-2025-do]] and [[cho-2025-herd]]. Candidate for a hackathon replication with cheaper models. Related: [[de-wynter-2026-population]] (also uses Schelling).
+Directly reusable design for a hackathon: a PSO-vs-LLM-swarm comparison with topology as the control knob, using a small local model. The result that sparse (ring) networks are needed to prevent premature consensus connects to [[hirota-2026-collective]] (ring vs rewired), [[de-marzo-2024-ai]] (fast consensus in small groups) and [[weng-2025-do]] (conformity). A natural extension is to add PSO-style explicit weighting of individual vs social information.

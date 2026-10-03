@@ -7,14 +7,14 @@ year: 2025
 venue: "Journal of Physics: Condensed Matter"
 url: https://arxiv.org/abs/2411.19783
 doi: "10.1088/1361-648x/adac98"
-arxiv: null
+arxiv: "2411.19783"
 cite: "Gompper, G., Stone, H. A., Kurzthaler, C., Saintillan, D., Peruani, F., Fedosov, D. A., Auth, T., Cottin-Bizonne, C., Ybert, C., Clément, E., et al. (2025). The 2025 motile active matter roadmap. Journal of Physics: Condensed Matter, 37(14), 143501."
 topics: [active-matter, collective-motion, swarm-robotics]
 added_by: dmarz/collective-motion-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 3
-citations: 43  # (Crossref is-referenced-by-count, 2026-10-03; OpenAlex daily budget exhausted for this IP)
+citations: "3 (OpenAlex W7207042159, 2026-10-03)"
 code: []
 ---
 ## Summary

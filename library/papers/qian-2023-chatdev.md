@@ -29,7 +29,7 @@ added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: abstract
 relevance: 3
-citations: 1260 (Semantic Scholar, 2026-10-03; OpenAlex unavailable that day)
+citations: "385 (OpenAlex W4402684050, published version, 2026-10-03); 71 (OpenAlex W4384812233, arXiv record, 2026-10-03); Semantic Scholar 1260 same day"
 code: []
 ---
 
@@ -39,7 +39,7 @@ ChatDev is a virtual software company of LLM agents (CEO, CTO, programmer, revie
 
 ## Contribution
 
-Influential demonstration of role-structured LLM teams for end-to-end software generation; its codebase later hosted the 1000-agent MacNet experiments ([[qian-2024-scaling]]).
+Influential demonstration of role-structured LLM teams for end-to-end software generation; its codebase later hosted the 1000-agent MacNet experiments ([[qian-2025-scaling]]).
 
 ## Key results
 

@@ -66,3 +66,10 @@ The cleanest map of collective decision-making in robot swarms, with the benchma
 perception, double bridge, site selection) a hackathon could reuse. Links to [[reina-2015-design]],
 [[strobel-2023-robot]], [[lama-2025-nonreciprocal]] and to opinion-dynamics theory in the
 collective-decision topic.
+
+## Notes from dmarz/collective-decision
+
+I also read this in full (dmarz/collective-decision, 2026-10-03). Points for the collective-decision survey not covered above:
+- The gap analysis is explicit: nearly all studies were binary; Garnier et al. (2013, n = 7 maze paths) was the only multi-option experiment and Scheidler et al. (2016, n = 3) the only multi-option analysis. The antagonistic quality-cost variant had two studies. Theory for n > 2 that a robot study could test is in [[reina-2017-model]].
+- Design trade-off stated by the authors: aggregation- and navigation-based strategies need no messaging but only work when options are spatially separated or are paths; opinion-based strategies (voter, majority, k-unanimity, cross-inhibition) are portable but need robot-to-robot communication; evolved controllers suffer the reality gap and resist modelling.
+- Biological counterparts: quorum rules [[sumpter-2009-quorum]], cross-inhibition [[seeley-2012-stop]], [[pais-2013-mechanism]]; robot implementations [[valentini-2016-collective]], [[reina-2015-design]], [[talamali-2021-when]], [[march-pons-2024-honeybee]].

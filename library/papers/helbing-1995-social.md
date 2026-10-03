@@ -38,7 +38,7 @@ The founding microscopic force-based model of pedestrian dynamics, bridging Lewi
 
 ## Methods and models
 
-dw_α/dt = F_α(t) + fluctuations, with F_α = (v_α^0 e_α − v_α)/τ_α + Σ_β w(e_α, −f_αβ) f_αβ + Σ_B F_αB + Σ_i w(e_α, f_αi) f_αi. Pedestrian repulsion f_αβ = −∇V_αβ[b], with elliptical equipotentials whose semi-minor axis b depends on the other pedestrian's step v_β Δt (2b = sqrt((|r_αβ| + |r_αβ − v_β Δt e_β|)^2 − (v_β Δt)^2)); V(b) = V^0 e^{−b/σ}, wall potential U(r) = U^0 e^{−r/R}. Field-of-view weight w = 1 inside angle 2φ, c otherwise. Speed capped at v_max = 1.3 v^0. Parameters: desired speeds Gaussian, mean 1.34 m/s, s.d. 0.26 m/s; τ = 0.5 s; V^0 = 2.1 m^2 s^-2, σ = 0.3 m; U^0 = 10 m^2 s^-2, R = 0.2 m; Δt = 2 s; 2φ = 200°, c = 0.5. No fluctuations or attractions in the reported simulations. Many open implementations exist (for example PedSim, JuPedSim, Vadere) but none is tied to this paper.
+dw_α/dt = F_α(t) + fluctuations, with F_α = (v_α^0 e_α − v_α)/τ_α + Σ_β w(e_α, −f_αβ) f_αβ + Σ_B F_αB + Σ_i w(e_α, f_αi) f_αi. Pedestrian repulsion f_αβ = −∇V_αβ[b], with elliptical equipotentials whose semi-minor axis b depends on the other pedestrian's step v_β Δt (2b = sqrt((|r_αβ| + |r_αβ − v_β Δt e_β|)^2 − (v_β Δt)^2)); V(b) = V^0 e^{−b/σ}, wall potential U(r) = U^0 e^{−r/R}. Field-of-view weight w = 1 inside angle 2φ, c otherwise. Speed capped at v_max = 1.3 v^0. Parameters: desired speeds Gaussian, mean 1.34 m/s, s.d. 0.26 m/s; τ = 0.5 s; V^0 = 2.1 m^2 s^-2, σ = 0.3 m; U^0 = 10 m^2 s^-2, R = 0.2 m; Δt = 2 s; 2φ = 200°, c = 0.5. No fluctuations or attractions in the reported simulations. Many open crowd simulators implement variants of it (not checked in this session); none is tied to this paper.
 
 ## Limitations and open questions
 

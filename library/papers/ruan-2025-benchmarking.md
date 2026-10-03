@@ -23,7 +23,7 @@ added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: full
 relevance: 5
-citations: 4 (Semantic Scholar, 2026-10-03; OpenAlex unavailable that day)
+citations: "0 (OpenAlex W4416013219, arXiv record, 2026-10-03); Semantic Scholar 4 same day"
 code: []
 ---
 
@@ -55,7 +55,7 @@ Discrete-time simultaneous updates; agents output an action (UP/DOWN/LEFT/RIGHT/
 
 ## Relevance to us
 
-The most directly usable testbed for a hackathon on LLM swarm dynamics: it already implements flocking, synchronisation and foraging with local constraints, so we can measure collective-motion order parameters (topic collective-motion), synchrony (sync-consensus) and information-theoretic emergence ([[riedl-2025-emergent]]) on LLM swarms. Complements the flocking-specific negative result of [[li-2024-challenges]], the consensus-protocol fix in [[li-2025-llm]], the conceptual critique of [[rahman-2025-llm]] and the NetLogo approach of [[jimenez-romero-2025-multi]].
+The most directly usable testbed for a hackathon on LLM swarm dynamics: it already implements flocking, synchronisation and foraging with local constraints, so we can measure collective-motion order parameters (topic collective-motion), synchrony (sync-consensus) and information-theoretic emergence ([[riedl-2025-emergent]]) on LLM swarms. Complements the flocking-specific negative result of [[li-2024-challenges]], the consensus-protocol fix in [[li-2025-llm]], the conceptual critique of [[rahman-2025-llm-powered]] and the NetLogo approach of [[jimenez-romero-2025-multi-agent]].
 
 ## Notes from dmarz/llm-agent-swarms-recent
 

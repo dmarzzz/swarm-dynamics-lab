@@ -7,14 +7,14 @@ year: 2024
 venue: "Physical Review E"
 url: https://arxiv.org/abs/2309.05064
 doi: "10.1103/physreve.109.014611"
-arxiv: null
+arxiv: "2309.05064"
 cite: "González-Albaladejo, R., & Bonilla, L. L. (2024). Power laws of natural swarms as fingerprints of an extended critical region. Physical Review E, 109(1), 014611."
 topics: [collective-motion, criticality-measurement]
 added_by: dmarz/collective-motion-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 3
-citations: 2  # (Crossref is-referenced-by-count, 2026-10-03; OpenAlex daily budget exhausted for this IP)
+citations: "3 (OpenAlex W4390954633, 2026-10-03)"
 code: []
 ---
 ## Summary

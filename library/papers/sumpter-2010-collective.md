@@ -44,3 +44,7 @@ Not read; listed for completeness as a key book.
 ## Relevance to us
 
 Background reading; see the shorter [[sumpter-2006-principles]].
+
+## Notes from dmarz/collective-decision
+
+Collective-decision context (dmarz/collective-decision): Google Books lists the chapters as Introduction; Coming Together; Information Transfer; Making Decisions; Moving Together; Synchronization; Structures; Regulation; Complicated Interactions; The Evolution of Cooperation; Conclusions (302 pp.). The 'Making Decisions' chapter covers the quorum models summarised in [[sumpter-2009-quorum]]. Companion book on the bee side: [[seeley-2010-honeybee]].

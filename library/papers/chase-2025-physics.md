@@ -14,7 +14,7 @@ added_by: dmarz/collective-motion-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 4
-citations: 7  # (Crossref is-referenced-by-count, 2026-10-03; OpenAlex daily budget exhausted for this IP)
+citations: "5 (OpenAlex W4410116086, 2026-10-03)"
 code: []
 ---
 ## Summary
@@ -40,3 +40,7 @@ Abstract only; invertebrate emphasis.
 ## Relevance to us
 
 Review article to cite for the sensing/decision side; pairs with [[lecheval-2026-future]] and with the synchrony theme in [[amichay-2024-revealing]].
+
+## Notes from dmarz/collective-decision
+
+Collective-decision context (dmarz/collective-decision): the Crossref reference list (153 items) includes the house-hunting and quorum classics ([[franks-2003-speed]], [[britton-2002-deciding]], [[couzin-2005-effective]], [[couzin-2011-uninformed]], [[berdahl-2013-emergent]]) together with recent work catalogued here: size-dependent collective thermal thresholds in ants [[gal-2022-emergence]] and an Ising model of cicada emergence [[goldstein-2024-how]]. A full read is a good follow-up for the survey.

@@ -14,7 +14,7 @@ added_by: dmarz/collective-motion-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 3
-citations: null  # arXiv-only; OpenAlex budget exhausted and Semantic Scholar rate-limited on 2026-10-03
+citations: "0 (OpenAlex W4402953396, 2026-10-03)"
 code: []
 ---
 ## Summary

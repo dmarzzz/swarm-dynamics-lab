@@ -44,7 +44,7 @@ added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: abstract
 relevance: 2
-citations: 2106 (Semantic Scholar, 2026-10-03; OpenAlex unavailable that day)
+citations: "257 (OpenAlex W4386794445, arXiv record, 2026-10-03); Semantic Scholar 2106 same day"
 code: []
 ---
 

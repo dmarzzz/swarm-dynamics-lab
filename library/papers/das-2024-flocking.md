@@ -14,7 +14,7 @@ added_by: dmarz/collective-motion-recent
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 4
-citations: 35  # (Crossref is-referenced-by-count, 2026-10-03; OpenAlex daily budget exhausted for this IP)
+citations: "31 (OpenAlex W4400583745, 2026-10-03)"
 code: []
 ---
 ## Summary
@@ -53,4 +53,4 @@ Full read of arXiv:2401.17153v2 (main text and start of Appendix A). Points beyo
 - Turn-away torques suppress MIPS (particles reorient away from clusters), so these flocks reach higher density and speed without the flock-freezing seen in Quincke rollers.
 - Speculative outlook stated by the authors: contact inhibition of locomotion in cells, and robust swarming of robots through disordered environments with stuck agents.
 
-For the hackathon: a collision-avoidance rule ("turn away from neighbours") plus short-range repulsion is enough for a robot swarm to flock, which is cheaper than explicit heading communication. Related: [[fily-2012-athermal]], [[cates-2015-motility]], [[baconnier-2025-self]], [[fruchart-2021-non]], [[caprini-2023-flocking]].
+For the hackathon: a collision-avoidance rule ("turn away from neighbours") plus short-range repulsion is enough for a robot swarm to flock, which is cheaper than explicit heading communication. Related: [[fily-2012-athermal]], [[cates-2015-motility]], [[baconnier-2025-self]], [[fruchart-2021-non]], and Caprini et al. 2023 (PRL, flocking without alignment in attractive active Brownian particles; not yet catalogued).

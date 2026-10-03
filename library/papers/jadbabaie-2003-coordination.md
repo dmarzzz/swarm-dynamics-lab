@@ -78,7 +78,7 @@ semidefinite programming for the Lyapunov counterexample. Read from the authors'
 ## Relevance to us
 
 The canonical bridge between flocking models ([[olfati-saber-2006-flocking]], [[cucker-2007-emergent]],
-Vicsek) and consensus theory ([[olfati-saber-2007-consensus]], [[ren-2007-information]]). Any hackathon
+[[vicsek-1995-novel]]) and consensus theory ([[olfati-saber-2007-consensus]], [[ren-2007-information]]). Any hackathon
 experiment on alignment with intermittent or range-limited communication (drones losing links, robots with
 short-range radios) starts from its joint-connectivity condition. The wrap-around caveat matters if we simulate
 headings: use circular averages, as in Kuramoto-type models ([[sepulchre-2007-stabilization]]).

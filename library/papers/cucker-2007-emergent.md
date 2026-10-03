@@ -72,6 +72,7 @@ from the surrounding text and the abstract).
 ## Relevance to us
 
 The simplest velocity-consensus flocking law with a clean, citable phase boundary (beta = 1/2). Useful as a
-baseline controller for drone or robot flocking demos and as a test case for learned controllers. Bridges
+baseline controller for drone or robot flocking demos (velocity alignment of this kind appears in field
+drone flocking such as [[vasarhelyi-2018-optimized]]; not checked which alignment law they use) and as a test case for learned controllers. Bridges
 consensus ([[olfati-saber-2007-consensus]]) and flocking models in the collective-motion topic. Its exponent
 threshold is a crisp prediction a hackathon simulation can reproduce in an afternoon.

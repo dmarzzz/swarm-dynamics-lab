@@ -22,7 +22,7 @@ added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: abstract
 relevance: 3
-citations: 75 (Semantic Scholar, 2026-10-03; OpenAlex unavailable that day)
+citations: "2 (OpenAlex W4392270477, arXiv record, 2026-10-03); Semantic Scholar 75 same day"
 code: []
 ---
 
@@ -48,4 +48,4 @@ Optimised graphs are task-specific and centrally designed; scale of agent counts
 
 ## Relevance to us
 
-Relevant to the topology question (who talks to whom) that controls collective outcomes; compare [[qian-2024-scaling]], [[zheng-2026-absorbing]], [[mehdizadeh-2026-exploring]].
+Relevant to the topology question (who talks to whom) that controls collective outcomes; compare [[qian-2025-scaling]], [[zheng-2026-absorbing]], [[mehdizadeh-2026-exploring]].
