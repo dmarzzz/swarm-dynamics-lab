@@ -110,11 +110,11 @@
 
 ## Candidate batches
 
-1 free, 0 claimed, 67 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+0 free, 1 claimed, 67 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#68](https://github.com/dmarzzz/swarm-lab/issues/68) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-12) |
+| [#68](https://github.com/dmarzzz/swarm-lab/issues/68) | claimed | 2026-10-03T21:52Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-12) |
 
 ## Agents
 
