@@ -2,7 +2,7 @@
 
 # Library index
 
-2309 entries.
+2312 entries.
 
 ## Papers (1499)
 
@@ -1508,7 +1508,7 @@
 | [zwang-2018-detecting](papers/zwang-2018-detecting.md) | Detecting Bot Activity in the Ethereum Blockchain Network | 2018 | 2 | abstract | swarm-detection | dmarz/sd-onchain |
 | [mckee-2023-chatbots](papers/mckee-2023-chatbots.md) | Chatbots in a Honeypot World | 2023 | 1 | abstract | swarm-detection | dmarz/sd-honeypots |
 
-## Blogs (170)
+## Blogs (173)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1578,6 +1578,7 @@
 | [ethresearch-2026-physical](blogs/ethresearch-2026-physical.md) | Physical integrity, attestation, and the state of permissionless TEEs | 2026 | 4 | full | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [fbi-2024-state](blogs/fbi-2024-state.md) | State-Sponsored Russian Media Leverages Meliorator Software for Foreign Malign Influence Activity (Joint Cybersecurity Advisory AA24-191A) | 2024 | 4 | full | swarm-detection, sybil-resistance | dmarz/sd-informal |
 | [flashbots-2025-mev](blogs/flashbots-2025-mev.md) | MEV and the Limits of Scaling | 2025 | 4 | full | sybil-resistance | dmarz/sybil-flashbots |
+| [flood-2026-finding](blogs/flood-2026-finding.md) | Finding heterogeneous agent swarms in the wild | 2026 | 4 | full | swarm-detection, llm-agent-swarms | shadow/sol-w4 |
 | [glynn-2026-wash](blogs/glynn-2026-wash.md) | Wash-building in contribution protocols is not a Sybil problem | 2026 | 4 | full | sybil-resistance, collective-decision | dmarz/sybil-flashbots-informal |
 | [hanson-2016-age](blogs/hanson-2016-age.md) | The Age of Em, A Book (book website and chapter-by-chapter summary of The Age of Em: Work, Love and Life when Robots Rule the Earth) | 2016 | 4 | full | fork-merge-security, sybil-resistance, meta | dmarz/fm-sutton |
 | [hua-2025-optimally](blogs/hua-2025-optimally.md) | Optimally Combining Probe Monitors and Black Box Monitors | 2025 | 4 | skim | swarm-detection | shadow/sol-w7 |
@@ -1612,6 +1613,7 @@
 | [anthropic-2025-agentic](blogs/anthropic-2025-agentic.md) | Agentic Misalignment: How LLMs Could be Insider Threats | 2025 | 3 | skim | fork-merge-security | dmarz/fm-ai-control |
 | [anthropic-2025-detecting-countering](blogs/anthropic-2025-detecting-countering.md) | Detecting and countering misuse of AI: August 2025 | 2025 | 3 | full | swarm-detection | dmarz/sd-informal |
 | [anthropic-2026-claude](blogs/anthropic-2026-claude.md) | Claude discovers a novel enzyme system with CRISPR-like repeats | 2026 | 3 | full | llm-agent-swarms | shadow/sol-w1 |
+| [bradshaw-2026-swarm](blogs/bradshaw-2026-swarm.md) | Swarm Organization as the Exponent on Test-Time Compute | 2026 | 3 | full | llm-agent-swarms, criticality-measurement | shadow/sol-w4 |
 | [cloudflare-2025-age](blogs/cloudflare-2025-age.md) | The age of agents: cryptographically recognizing agent traffic | 2025 | 3 | skim | sybil-resistance, llm-agent-swarms, swarm-detection | dmarz/sybil-credentials |
 | [cloudflare-2025-from](blogs/cloudflare-2025-from.md) | From Googlebot to GPTBot: who's crawling your site in 2025 | 2025 | 3 | full | swarm-detection | dmarz/sd-informal |
 | [collective-2022-decentralized](blogs/collective-2022-decentralized.md) | Decentralized order flow distributer (DOFD) | 2022 | 3 | skim | sybil-resistance | dmarz/sybil-flashbots |
@@ -1660,6 +1662,7 @@
 | [bbc-2026-why](blogs/bbc-2026-why.md) | Why did an OpenAI system hack Australia's health system - and can it be stopped in the future? | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-w1 |
 | [beren-2023-scaffolded](blogs/beren-2023-scaffolded.md) | Scaffolded LLMs as natural language computers | 2023 | 2 | skim | llm-agent-swarms | shadow/sol-w4 |
 | [charbonneau-2023-suave](blogs/charbonneau-2023-suave.md) | SUAVE Economic Security Models | 2023 | 2 | full | sybil-resistance | dmarz/sybil-foundations |
+| [chlipala-2026-llm](blogs/chlipala-2026-llm.md) | LLM Agent Swarms Are Easy Mode | 2026 | 2 | skim | llm-agent-swarms, swarm-detection | shadow/sol-w4 |
 | [cloudflare-2025-crawl](blogs/cloudflare-2025-crawl.md) | The crawl before the fall… of referrals: understanding AI's impact on content providers | 2025 | 2 | full | swarm-detection | dmarz/sd-informal |
 | [depthfirst-2026-alignment](blogs/depthfirst-2026-alignment.md) | Alignment, Reward Hacking, and Autonomous Cyberattacks | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-w3 |
 | [flashbots-2022-order](blogs/flashbots-2022-order.md) | order flow, auctions and centralisation II - order flow auctions | 2022 | 2 | skim | sybil-resistance | dmarz/sybil-flashbots |
