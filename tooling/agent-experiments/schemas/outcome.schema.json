@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "outcome",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "type": "string"
+    },
+    "study_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "scenario_id": {
+      "type": "string"
+    },
+    "replicate": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "condition": {
+      "type": "string"
+    },
+    "initial_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "completed",
+        "failed",
+        "timeout",
+        "budget_exhausted",
+        "cancelled",
+        "unscored"
+      ]
+    },
+    "score": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "group_correct": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "decisions": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "api_calls": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "api_cost_usd": {
+      "type": "number",
+      "minimum": 0
+    },
+    "final_event_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "required": [
+    "schema_version",
+    "study_id",
+    "run_id",
+    "scenario_id",
+    "replicate",
+    "condition",
+    "initial_sha256",
+    "status",
+    "score",
+    "group_correct",
+    "decisions",
+    "api_calls",
+    "api_cost_usd",
+    "final_event_hash"
+  ],
+  "additionalProperties": false
+}
