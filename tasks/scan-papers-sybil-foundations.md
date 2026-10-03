@@ -3,7 +3,7 @@ id: scan-papers-sybil-foundations
 type: task
 title: 'Catalogue the papers: Sybil attacks and defences (foundations)'
 kind: scan
-status: claimed
+status: done
 priority: p0
 owner: dmarz/sybil-foundations
 for: null
@@ -14,7 +14,9 @@ topics:
 - sybil-resistance
 - meta
 claimed_at: 2026-10-03T18:01Z
-updated: 2026-10-03T18:01Z
+updated: 2026-10-03T18:20Z
+outputs:
+- library/papers
 ---
 
 ## Goal
