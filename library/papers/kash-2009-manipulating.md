@@ -4,13 +4,13 @@ type: paper
 title: "Manipulating Scrip Systems: Sybils and Collusion"
 authors: [Ian A. Kash, Eric J. Friedman, Joseph Y. Halpern]
 year: 2009
-venue: Auctions, Market Mechanisms and Their Applications (AMMA 2009), LNICST vol. 14, pp. 13-24, Springer
+venue: Auctions, Market Mechanisms and Their Applications (AMMA 2009), LNICST vol. 14, pp. 13-24
 url: https://arxiv.org/abs/0903.2278
 doi: 10.1007/978-3-642-03821-1_4
 arxiv: "0903.2278"
-cite: "Kash, I. A., Friedman, E. J., & Halpern, J. Y. (2009). Manipulating Scrip Systems: Sybils and Collusion. In Auctions, Market Mechanisms and Their Applications (AMMA 2009), Lecture Notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering, vol. 14, pp. 13-24. Springer. https://doi.org/10.1007/978-3-642-03821-1_4"
+cite: "Kash, I. A., Friedman, E. J., & Halpern, J. Y. (2009). Manipulating Scrip Systems: Sybils and Collusion. In Auctions, Market Mechanisms and Their Applications (AMMA 2009), LNICST 14, pp. 13-24. Springer. https://doi.org/10.1007/978-3-642-03821-1_4"
 topics: [sybil-resistance, collective-decision]
-added_by: shadow/sol-p2
+added_by: shadow/sol-p1
 accessed: 2026-10-03
 read_depth: skim
 relevance: 3
@@ -20,29 +20,27 @@ code: []
 
 ## Summary
 
-Conference version of the Sybil and collusion analysis later folded into the journal paper [[kash-2012-optimizing]]. Setting: a scrip (token) system in which agents occasionally request a service, one volunteer among those with money-threshold strategies is chosen to provide it, and one unit of scrip changes hands; previous work by the authors showed threshold strategies form an epsilon-Nash equilibrium and that welfare rises with the money supply m per agent until a "crash" where nobody works. This paper drops the assumption that all agents are equally likely to be picked, which is what Sybils break, and redoes the analysis with relative entropy. Theorem 1 gives the long-run fraction of an agent's requests that are satisfied as (r - r^(k+1)) / (1 - r^(k+1)) with r = p_e/p_s (earn probability over request probability) and threshold k, so extra identities raise p_e and help the Sybil owner at the expense of everyone else's p_e. Sybils are self-reinforcing (the more others have them, the worse you do without them) but with sharply diminishing returns, so a modest creation cost usually suffices. Illustrative equilibrium calculations with n = 10,000 agents: if one fifth of agents each add one Sybil, the system crashes at m = 9.5, where without Sybils welfare was near optimal (crash between m = 10.25 and 10.5); when 20 percent of agents hold Sybils, the rest are worse off unless each Sybil owner has at least eight Sybils, in which case total welfare can rise; a discontinuity appears when about a third of agents have Sybils because they start competing with each other. Theorem 2 shows any welfare gain Sybils produce in a single-type population can be achieved by the designer instead, by adjusting m or biasing volunteer selection. Collusion (pooling money within a group) goes through three phases and is mostly Pareto-improving unless colluders serve each other off-system, which makes them act like Sybils. The paper also draws out implications for advertising (creates p_e asymmetries like Sybils) and loans (helpful, but need whitewashing defences). Read: abstract, introduction, model summary, Theorem 1 and the Sybil section, collusion section, conclusion; proofs skimmed.
+Workshop paper that isolates the Sybil and collusion analysis later folded into the Distributed Computing article ([[kash-2012-optimizing]]). Game-theoretic analyses of P2P systems usually stop at Nash equilibrium, which excludes multi-identity and multi-agent strategic behaviour; this paper examines both in scrip systems. Sybils raise the owner's chance of being chosen to provide service, which generally makes it harder for agents without Sybils to earn scrip and lowers social welfare, yet in certain circumstances (when the designer has set the money supply too low) Sybils can make everyone better off by effectively increasing the supply of work opportunities; collusion (pooling scrip within a group) tends to make all agents better off, not only colluders, unless colluders can relay requests to each other, in which case it behaves like Sybils. The authors read these results as guidance on whether to allow advertising and loans, and argue that existing refinements of Nash equilibrium that address collusion (strong Nash, coalition-proof Nash, k-resilient equilibria) do not adequately capture Sybil and collusion effects in scrip systems because they ignore identity creation and the systemic (money-supply) channel. Read from the arXiv version: abstract, introduction, model recap, Sybil and collusion sections, discussion of solution concepts, conclusion; numerical details skimmed (same simulations as the 2012 paper, n = 1,000 agents).
 
 ## Contribution
 
-First equilibrium (rather than assumption-level) account of what Sybils do inside a token-incentivised cooperation system: they redistribute earning opportunities, threaten monetary crashes at money levels that were previously safe, and are better handled by tuning the money supply than by trying to extract their occasional welfare benefit.
+Earliest quantitative statement of how Sybils and collusion move a scrip economy, including the counterintuitive case where Sybils help, and a critique of equilibrium refinements for ignoring identity multiplication.
 
 ## Key results
 
-- Theorem 1: satisfied-request fraction (r - r^(k+1)) / (1 - r^(k+1)), r = p_e/p_s.
-- 20 percent of agents with one Sybil each move the crash point from m in (10.25, 10.5) to m = 9.5 (Figure 4).
-- Non-Sybil agents break even only if the 20 percent Sybil owners each run at least eight Sybils (Figure 3).
-- Discontinuity near one third of agents having Sybils (Figure 2).
-- Theorem 2: Sybil welfare gains are replicable by designer parameters in a single-type population.
-- Collusion is mostly Pareto improving; serving requests internally turns colluders into effective Sybils (Figure 5).
+- Sybils shift the optimal money-supply point and can crash a tuned system; a few Sybils per holder help the holder a lot, more help little.
+- Sybils can raise total welfare when the money supply was set too low.
+- Collusion is welfare-positive unless colluders can pass requests (then equivalent to Sybils).
+- Strong/coalition-proof/k-resilient equilibria do not capture these effects.
 
 ## Methods and models
 
-Discrete-time scrip model with parameters alpha, beta, gamma, delta, rho, chi (default m = 4, n = 10,000, single rational type); threshold strategies; stationary distributions via relative entropy; equilibria computed numerically with the algorithm from the authors' earlier work.
+Threshold-strategy scrip model from Friedman, Halpern and Kash (EC 2006), equilibrium analysis plus simulation; see the 2012 journal version for parameters and figures.
 
 ## Limitations and open questions
 
-Equilibrium calculations, not agent-based runs or deployments; single-type populations for the clean theorems; Sybil cost modelled only qualitatively. The authors explicitly leave loan design and whitewashing prevention open. The journal version [[kash-2012-optimizing]] supersedes this one with altruists and hoarders added; use that for citations unless the 2009 provenance matters.
+Superseded in detail by [[kash-2012-optimizing]]; same modelling assumptions (single service, uniform volunteer choice, costless identities); workshop length.
 
 ## Relevance to us
 
-Direct template for reasoning about Sybils in any agent economy with an internal currency or credit (compute credits, reputation points, task tokens): the damage is a shift in who gets picked to work, and the systemic risk is a crash of cooperation at parameter settings that looked safe. Pairs with [[kash-2012-optimizing]], [[douceur-2002-sybil]], and the auction-side Sybil results [[yokoo-2004-effect]], [[gafni-2023-optimal]].
+Cite the 2012 journal version for numbers; this entry matters for its explicit argument that standard equilibrium concepts are the wrong lens for Sybil questions in agent economies, which is also the motivation behind the DSL-strategies framing in [[gafni-2023-optimal]]. Lineage: [[friedman-2006-efficiency]] -> this -> [[kash-2012-optimizing]]. Root: [[douceur-2002-sybil]].
