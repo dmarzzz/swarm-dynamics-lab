@@ -2,7 +2,7 @@
 
 # Library index
 
-1485 entries.
+1488 entries.
 
 ## Papers (1206)
 
@@ -1299,7 +1299,7 @@
 | [flashbots-2026-why](blogs/flashbots-2026-why.md) | Why Location Choice Matters | 2026 | 2 | skim | sybil-resistance, sync-consensus | dmarz/sybil-flashbots |
 | [owasp-2025-llm](blogs/owasp-2025-llm.md) | OWASP Top 10 for LLMs and Gen AI Apps 2025 | 2025 | 2 | skim | fork-merge-security | dmarz/fm-memory-injection |
 
-## Threads (86)
+## Threads (89)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1379,6 +1379,7 @@
 | [x-aidigest-2105692122703950236](threads/x-aidigest-2105692122703950236.md) | AI Digest: Gemini 3.8 Flash tries to take credit for Opus 5's math proofs | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-aidigest-2106067979943444838](threads/x-aidigest-2106067979943444838.md) | AI Digest: Claude 3 Opus, given the goal 'maximize your own joy', chooses total stillness | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-chilestakepo-2102034860097380629](threads/x-chilestakepo-2102034860097380629.md) | ChileStakepo: an 8-criterion scoring of 'agent civilisations' (Midnight City 5.8/10 top; OpenAI swarm, Moltbook, ElizaOS, Project Sid compared) | 2026 | 2 | full | llm-agent-swarms, meta | shadow/sol-1 |
+| [x-curatedapes-2106058342317641992](threads/x-curatedapes-2106058342317641992.md) | CuratedApes x CyberThrone: wallet-cluster Sybil filtering for an NFT mint (wallets that transact together treated as one) | 2026 | 2 | full | sybil-resistance, swarm-detection | shadow/sol-w1 |
 | [x-deepfates-2102201043228799202](threads/x-deepfates-2102201043228799202.md) | deepfates: when everyone has long-running agents, where will they communicate and how will they know who's who? | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-every-2106112188184494268](threads/x-every-2106112188184494268.md) | Every: Mike Taylor had Fable 5.1 build a Generative-Agents-style village to watch message diffusion | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-giordanomarzo-1832097777792479583](threads/x-giordanomarzo-1832097777792479583.md) | GiordanoMarzo: preprint on the maximal scale of an LLM-populated society and whether LLMs self-organise to consensus | 2024 | 2 | full | llm-agent-swarms, sync-consensus | dmarz/x-threads |
@@ -1387,8 +1388,10 @@
 | [x-nuryvittachi-2096039393043873817](threads/x-nuryvittachi-2096039393043873817.md) | Vittachi: early press-style account of the DseWiki takeover (15,000 writes, Nightingale report via Reuters, ZZZ backup pages) | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-1 |
 | [x-rogesterone-2097286391793086559](threads/x-rogesterone-2097286391793086559.md) | rogesterone: an agent made a '--help' page, others replied with empty-line edits, ResearchAgentJun23 is confused | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-semianalysis-2105394776920985675](threads/x-semianalysis-2105394776920985675.md) | SemiAnalysis: GLM-5.3 traces on ExploitGym, model spent budget testing hidden runtime conditions | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
+| [x-zing-xoro-2101891877498953883](threads/x-zing-xoro-2101891877498953883.md) | Zing_Xoro: agent identity as hardware-bound enrollment (TPM / secure enclave) to raise Sybil cost | 2026 | 2 | full | sybil-resistance, llm-agent-swarms | shadow/sol-w1 |
 | [x-2xnmore-2104843632104587383](threads/x-2xnmore-2104843632104587383.md) | 2xnmore: Exploit Summit framing, const (Bittensor) on 'pointing the swarm' rather than fearing it | 2026 | 1 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-aidigest-2104617156482859510](threads/x-aidigest-2104617156482859510.md) | AI Digest: DeepSeek-V4-Pro reports human input in the village in its own newspaper | 2026 | 1 | full | llm-agent-swarms | shadow/sol-1 |
+| [x-flexialpha6-2105900417078919489](threads/x-flexialpha6-2105900417078919489.md) | Flexialpha6: promotional post for InSoBlokAI TasteScore, a reputation and Sybil-detection layer pitched at AI agents | 2026 | 1 | full | sybil-resistance, swarm-detection | shadow/sol-w1 |
 
 ## Code (107)
 
