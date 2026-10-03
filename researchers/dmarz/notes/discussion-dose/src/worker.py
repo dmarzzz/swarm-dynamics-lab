@@ -24,6 +24,7 @@ def execute_bundle(params,out,provider,progress=lambda *a:None):
     tasks=params['tasks'];seeds=params['seeds'];cfg={'n_agents':params['n_agents']}
     manifest={'params':params,'arms':arms,'code_sha256':code_hash(),'python':platform.python_version(),
               'platform':platform.system(),'provider':provider.name,'scientific':provider.scientific,
+              'model_limits':{k:getattr(provider,k) for k in ('max_calls','max_output_tokens','max_input_bytes','timeout','max_cost_usd','input_rate','output_rate') if hasattr(provider,k)},
               'git_commit':subprocess.run(['git','rev-parse','HEAD'],cwd=ROOT,capture_output=True,text=True).stdout.strip(),
               'planned_episodes':[{'task_id':t,'seed':s,'arm':a} for t in tasks for s in seeds for a in arms]}
     (out/'manifest.json').write_text(json.dumps(manifest,indent=2))
