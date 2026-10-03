@@ -14,12 +14,12 @@
 | sync-consensus | 225 | 8 | 10 | 2 | 0 | 1 | 246 |
 | criticality-measurement | 186 | 4 | 0 | 5 | 0 | 0 | 195 |
 | marl-emergence | 123 | 12 | 0 | 0 | 0 | 0 | 135 |
-| llm-agent-swarms | 237 | 42 | 30 | 62 | 0 | 1 | 372 |
+| llm-agent-swarms | 237 | 42 | 30 | 63 | 0 | 1 | 373 |
 | crowds-and-traffic | 76 | 2 | 0 | 0 | 0 | 0 | 78 |
 | meta | 77 | 8 | 2 | 13 | 0 | 2 | 102 |
-| sybil-resistance | 169 | 40 | 52 | 16 | 4 | 1 | 282 |
+| sybil-resistance | 169 | 40 | 52 | 17 | 4 | 1 | 283 |
 | fork-merge-security | 214 | 10 | 26 | 20 | 0 | 2 | 272 |
-| swarm-detection | 0 | 0 | 2 | 36 | 0 | 0 | 38 |
+| swarm-detection | 0 | 0 | 2 | 42 | 0 | 0 | 44 |
 
 ## Tasks
 
@@ -104,6 +104,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
+| shadow/sol-w6 | working |  | 2026-10-03T19:06Z | TODO one line |
 | shadow/sol-w1 | working |  | 2026-10-03T19:04Z | TODO one line |
 | dmarz/x-threads | done | scan-threads-x-security | 2026-10-03T18:57Z | 35 X threads catalogued and pushed; task scan-threads-x-security done |
 | dmarz/sybil-foundations | done | scan-papers-sybil-foundations | 2026-10-03T18:42Z | Catalogued 21 foundational Sybil papers (6 read in full) plus notes on 4 existing entries; coverage note filled |

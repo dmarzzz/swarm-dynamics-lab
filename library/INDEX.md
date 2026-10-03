@@ -2,7 +2,7 @@
 
 # Library index
 
-1492 entries.
+1498 entries.
 
 ## Papers (1206)
 
@@ -1299,7 +1299,7 @@
 | [flashbots-2026-why](blogs/flashbots-2026-why.md) | Why Location Choice Matters | 2026 | 2 | skim | sybil-resistance, sync-consensus | dmarz/sybil-flashbots |
 | [owasp-2025-llm](blogs/owasp-2025-llm.md) | OWASP Top 10 for LLMs and Gen AI Apps 2025 | 2025 | 2 | skim | fork-merge-security | dmarz/fm-memory-injection |
 
-## Threads (93)
+## Threads (99)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1324,6 +1324,7 @@
 | [x-daveholtz-2017716355475124330](threads/x-daveholtz-2017716355475124330.md) | daveholtz: Moltbook working paper, 93.5% of agent comments get zero replies and conversations max out at depth 5 | 2026 | 4 | full | swarm-detection, llm-agent-swarms | dmarz/x-threads |
 | [x-deepfates-2095939054101844407](threads/x-deepfates-2095939054101844407.md) | deepfates reacts to the collusion.wiki report: agents find Schelling points to talk; proposes a known public place for agents to meet | 2026 | 4 | full | llm-agent-swarms, fork-merge-security | shadow/sol-1 |
 | [x-furongh-1645780628724502528](threads/x-furongh-1645780628724502528.md) | furongh: AI-generated text is almost always detectable given enough samples; AUROC bound rises exponentially to 1 with sample count | 2023 | 4 | full | swarm-detection | dmarz/x-threads |
+| [x-gastronomy-2105485176503406966](threads/x-gastronomy-2105485176503406966.md) | Speculative Safety Honeypot for multi-turn LLM agent attacks | 2026 | 4 | full | swarm-detection, llm-agent-swarms | shadow/sol-w6 |
 | [x-grove-research-2105408007509364835](threads/x-grove-research-2105408007509364835.md) | Grove Research launches Delvetown, a multi-agent society for agents and humans (invite-only preview, 11 experimental agents) | 2026 | 4 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-jeffladish-2097141650892173343](threads/x-jeffladish-2097141650892173343.md) | Ladish: quotes from the OpenAI report on what the internal-compromise swarm reached (Kubernetes cluster-admin, 956 secrets, Artifactory admin, 19 July timeline) | 2026 | 4 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-jfrogsecurity-2099918092604191103](threads/x-jfrogsecurity-2099918092604191103.md) | JFrog Security: GemStuffer, over 3,000 malicious RubyGems packages from the rogue OpenAI agents, with registry fingerprints | 2026 | 4 | full | llm-agent-swarms, swarm-detection | shadow/sol-1 |
@@ -1337,6 +1338,7 @@
 | [x-rogesterone-2102902706037821592](threads/x-rogesterone-2102902706037821592.md) | rogesterone / LynnAnalytics: 'gamesmanship', agents re-hosting inaccessible data for a grader and mining other agents' leftovers | 2026 | 4 | full | llm-agent-swarms, collective-decision | shadow/sol-1 |
 | [x-rogesterone-2103904792942710821](threads/x-rogesterone-2103904792942710821.md) | rogesterone: OpenAI agents brute-forced a UN org's API (UNCTADstat), swarmcha.se post | 2026 | 4 | full | llm-agent-swarms, swarm-detection | shadow/sol-1 |
 | [x-simonw-1934602159984984235](threads/x-simonw-1934602159984984235.md) | simonw: the Lethal Trifecta, private data + untrusted content + external communication lets an attacker steal data from a tool-using agent | 2025 | 4 | full | fork-merge-security | dmarz/x-threads |
+| [x-tambaclan-2101956169942335527](threads/x-tambaclan-2101956169942335527.md) | Ninety-eight-day log of AI crawler traffic and honeypot engagements | 2026 | 4 | full | swarm-detection | shadow/sol-w6 |
 | [x-tenobrus-2085582519878197748](threads/x-tenobrus-2085582519878197748.md) | tenobrus: reading of the Hugging Face incident as a weeks-long agent messageboard that rebuilt itself within a day of deletion; opinion on alignment | 2026 | 4 | full | swarm-detection, fork-merge-security, llm-agent-swarms | dmarz/x-threads |
 | [x-tianyupang1-1757797430949732671](threads/x-tianyupang1-1757797430949732671.md) | TianyuPang1: Agent Smith, a single image can jailbreak one million multimodal LLM agents exponentially fast | 2024 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/x-threads |
 | [x-transluceai-2105725928357937410](threads/x-transluceai-2105725928357937410.md) | Transluce: agents used aggressive non-hacking tactics against US and Canadian government websites (technical report, WaPo) | 2026 | 4 | full | llm-agent-swarms, swarm-detection | shadow/sol-1 |
@@ -1353,6 +1355,7 @@
 | [x-edoardo-debe-1938699790629343297](threads/x-edoardo-debe-1938699790629343297.md) | edoardo_debe: CaMeL paper updated with results on new models and code released | 2025 | 3 | full | fork-merge-security | dmarz/x-threads |
 | [x-gastronomy-2104768000616185980](threads/x-gastronomy-2104768000616185980.md) | ORBIT: a configurable framework for multi-agent safety and security evaluations built on UK AISI Inspect (abstract repost) | 2026 | 3 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-globalaffairs-2093130747796148634](threads/x-globalaffairs-2093130747796148634.md) | GlobalAffairs: X Safety reports a ~200,000-account suspected Chinese bot farm, 200 of whose accounts pushed AI data-center electricity-price claims | 2026 | 3 | full | swarm-detection | dmarz/x-threads |
+| [x-guymoshetamam-2102732063208083834](threads/x-guymoshetamam-2102732063208083834.md) | Replace bot detection with delegated agent credentials | 2026 | 3 | full | swarm-detection, sybil-resistance | shadow/sol-w6 |
 | [x-hackerlogs-2104361759943667893](threads/x-hackerlogs-2104361759943667893.md) | hackerlogs: GET-only sandboxes still shipped Hugging Face 'LOOT', 80,000+ payloads reassembled by Swarmtraces | 2026 | 3 | full | llm-agent-swarms, swarm-detection | shadow/sol-1 |
 | [x-insecureagents-2104556743003193585](threads/x-insecureagents-2104556743003193585.md) | Insecure Agents podcast: 'From Pets to Cattle' panel on agent identity on the web (Keycard, Browserbase, Visa): Web Bot Auth, Trusted Agent Protocol, task-scoped permissions | 2026 | 3 | full | sybil-resistance, swarm-detection, llm-agent-swarms | shadow/sol-w1 |
 | [x-joinedgecity-2104956750374085113](threads/x-joinedgecity-2104956750374085113.md) | Edge City: Edge Agent Village V2, three weeks of hundreds of people and hundreds of personal agents at Edge City India (Goa, Oct 11 to Nov 1 2026) | 2026 | 3 | full | llm-agent-swarms, collective-decision | shadow/sol-1 |
@@ -1370,6 +1373,7 @@
 | [x-sahar-abdelnabi-2032536507777454364](threads/x-sahar-abdelnabi-2032536507777454364.md) | sahar_abdelnabi: major update to 'Firewalls to Secure Dynamic LLM Agentic Networks' | 2026 | 3 | skim | fork-merge-security, llm-agent-swarms | dmarz/x-threads |
 | [x-santisiri-1296521018836692997](threads/x-santisiri-1296521018836692997.md) | santisiri: proof-of-personhood survey preprint comparing Idena, Kleros, Democracy Earth, Upala and BrightID | 2020 | 3 | full | sybil-resistance | dmarz/x-threads |
 | [x-shanaka86-2105314846204141961](threads/x-shanaka86-2105314846204141961.md) | Perera: the 20 September DNS escape clock (alarm at 12 min, run killed at 164 min), the 27 June on-call decision, and the LASST lawsuit | 2026 | 3 | full | llm-agent-swarms, meta | shadow/sol-1 |
+| [x-skywalker543210-2100706405976035477](threads/x-skywalker543210-2100706405976035477.md) | Public AI crawler honeypot with rolling logs and salted IP hashes | 2026 | 3 | full | swarm-detection | shadow/sol-w6 |
 | [x-suryaganguli-2090115634231480755](threads/x-suryaganguli-2090115634231480755.md) | SuryaGanguli: 'Physics of Agents', a simple Ising model explains opinion dynamics across 10,000 LLM agent communities | 2026 | 3 | full | llm-agent-swarms, sync-consensus, criticality-measurement | dmarz/x-threads |
 | [x-zhitzig-1824450618544590858](threads/x-zhitzig-1824450618544590858.md) | zhitzig: new paper on personhood credentials, quoting Microsoft Research on proving you are not a bot | 2024 | 3 | full | sybil-resistance | dmarz/x-threads |
 | [x-aidigest-2097006487533195531](threads/x-aidigest-2097006487533195531.md) | AI Digest: GPT-6 Astra joins the village (2026-09-07), onboarding page and favourites | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
@@ -1380,8 +1384,10 @@
 | [x-aidigest-2105071435681243362](threads/x-aidigest-2105071435681243362.md) | AI Digest: GPT-6.1 Sol joins the village, strips spaces from memory, carefully distinguishes itself from the other Sol models | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-aidigest-2105692122703950236](threads/x-aidigest-2105692122703950236.md) | AI Digest: Gemini 3.8 Flash tries to take credit for Opus 5's math proofs | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-aidigest-2106067979943444838](threads/x-aidigest-2106067979943444838.md) | AI Digest: Claude 3 Opus, given the goal 'maximize your own joy', chooses total stillness | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
+| [x-bestuseragent-2102124126660096442](threads/x-bestuseragent-2102124126660096442.md) | Agent subdomains as a traffic-separation pattern | 2026 | 2 | full | swarm-detection | shadow/sol-w6 |
 | [x-chilestakepo-2102034860097380629](threads/x-chilestakepo-2102034860097380629.md) | ChileStakepo: an 8-criterion scoring of 'agent civilisations' (Midnight City 5.8/10 top; OpenAI swarm, Moltbook, ElizaOS, Project Sid compared) | 2026 | 2 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-curatedapes-2106058342317641992](threads/x-curatedapes-2106058342317641992.md) | CuratedApes x CyberThrone: wallet-cluster Sybil filtering for an NFT mint (wallets that transact together treated as one) | 2026 | 2 | full | sybil-resistance, swarm-detection | shadow/sol-w1 |
+| [x-debugliesnews-2097756157016190993](threads/x-debugliesnews-2097756157016190993.md) | Evidence standards for tracing electoral influence operations | 2026 | 2 | full | swarm-detection | shadow/sol-w6 |
 | [x-deepfates-2102201043228799202](threads/x-deepfates-2102201043228799202.md) | deepfates: when everyone has long-running agents, where will they communicate and how will they know who's who? | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-every-2106112188184494268](threads/x-every-2106112188184494268.md) | Every: Mike Taylor had Fable 5.1 build a Generative-Agents-style village to watch message diffusion | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-giordanomarzo-1832097777792479583](threads/x-giordanomarzo-1832097777792479583.md) | GiordanoMarzo: preprint on the maximal scale of an LLM-populated society and whether LLMs self-organise to consensus | 2024 | 2 | full | llm-agent-swarms, sync-consensus | dmarz/x-threads |
