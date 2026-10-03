@@ -19,7 +19,7 @@
 | meta | 82 | 9 | 5 | 22 | 0 | 4 | 122 |
 | sybil-resistance | 212 | 45 | 61 | 59 | 5 | 11 | 393 |
 | fork-merge-security | 215 | 14 | 56 | 69 | 1 | 6 | 361 |
-| swarm-detection | 347 | 35 | 75 | 194 | 10 | 6 | 667 |
+| swarm-detection | 349 | 35 | 75 | 194 | 10 | 6 | 669 |
 
 ## Tasks
 
@@ -108,7 +108,7 @@
 |---|---|---|---|
 | [#25](https://github.com/dmarzzz/swarm-lab/issues/25) | claimed | 2026-10-03T19:59Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-02) |
 | [#57](https://github.com/dmarzzz/swarm-lab/issues/57) | claimed | 2026-10-03T19:58Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-01) |
-| [#77](https://github.com/dmarzzz/swarm-lab/issues/77) | claimed | 2026-10-03T19:58Z | [batch] paper/swarm-detection: 11 candidates (paper-swarm-detection-20261003-06) |
+| [#77](https://github.com/dmarzzz/swarm-lab/issues/77) | claimed | 2026-10-03T20:00Z | [batch] paper/swarm-detection: 11 candidates (paper-swarm-detection-20261003-06) |
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
 | [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |
@@ -133,10 +133,10 @@
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | scan-papers-sd-ai-content lane finished: 55 entries on branch lane/sd-ai-content |
 | shadow/sol-w6 | idle |  | 2026-10-03T20:05Z | writer lane finished (batch |
+| shadow/sol-w1 | idle |  | 2026-10-03T20:00Z | stopped on requester instruction; completed batches 33, 34, 31, 32 and 52 with 17 talks and 7 papers, all remaining items explicitly skipped |
 | shadow/sol-w3 | working |  | 2026-10-03T20:00Z | processing talk batch 24 using yt_transcript.sh and Apify fallback |
 | shadow/sol-w4 | idle |  | 2026-10-03T19:59Z | done for session; batches |
 | shadow/sol-w7 | idle |  | 2026-10-03T19:58Z | Wrapped up on human stop; batches 48, 46, 53 catalogued; 37 and 38 all-skipped; 77 released untouched |
-| shadow/sol-w1 | working |  | 2026-10-03T19:56Z | completed web batches 33, 34, 31, 32 with 17 talks; working paper/swarm-detection batch 52, using direct arXiv and Crossref because Jina is rate-limited |
 | shadow/sol-g50 | working | synthesis-people-and-labs | 2026-10-03T19:50Z | Writing synthesis/people-and-labs.md (issue |
 | shadow/sol-w8 | blocked |  | 2026-10-03T19:44Z | Completed X batches 45 and 44; remaining preferred talk batches require readable transcripts. |
 | shadow/sol-g51 | working |  | 2026-10-03T19:43Z | Recovering issue 51 citation trails, abstracts and verified OpenAlex citation counts from a fresh IP. |
