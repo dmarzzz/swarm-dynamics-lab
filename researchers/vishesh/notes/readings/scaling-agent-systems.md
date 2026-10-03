@@ -4,14 +4,17 @@ title: Towards a Science of Scaling Agent Systems
 authors: Yubin Kim, Ken Gu, Chanwoo Park, Chunjong Park, Samuel Schmidgall, A. Ali Heydari, Yao Yan, Zhihan Zhang, Yuchen Zhuang, Yun Liu, Mark Malhotra, Paul Pu Liang, Hae Won Park, Yuzhe Yang, Xuhai Xu, Yilun Du, Shwetak Patel, Tim Althoff, Daniel McDuff, Xin Liu
 org_or_venue: arXiv (cs.AI) — arXiv:2512.08296v3; no venue/comment field listed
 date: 2025-12-09 (v1); v2 2025-12-17; v3 2026-04-08 (version read = v3)
-url_loaded: https://export.arxiv.org/api/query?search_query=ti:%22Science+of+Scaling+Agent+Systems%22&max_results=10
-  https://arxiv.org/abs/2512.08296
-  https://arxiv.org/html/2512.08296v3
-  https://arxiv.org/html/2512.08296
-  https://ar5iv.labs.arxiv.org/html/2512.08296
-  https://ar5iv.labs.arxiv.org/html/2512.08296v3
 status: found
 fetched: 2026-10-03
+urls_loaded:
+  - "https://export.arxiv.org/api/query?search_query=ti:%22Science+of+Scaling+Agent+Systems%22&max_results=10"
+  - "https://arxiv.org/abs/2512.08296"
+  - "https://arxiv.org/html/2512.08296v3"
+  - "https://arxiv.org/html/2512.08296"
+  - "https://ar5iv.labs.arxiv.org/html/2512.08296"
+  - "https://ar5iv.labs.arxiv.org/html/2512.08296v3"
+library_ids:
+  - kim-2025-towards
 ---
 
 ## What it is (2-4 sentences)
@@ -144,19 +147,14 @@ Section 5 text could not be pulled through the page fetcher, see "Not found" bel
   no-comms swarms do not merely fail to help, they *amplify* individual error, and a central
   verifier is the cheapest fix. (c) **The pitfall**: match the token budget across comms conditions
   or your "comms helps" result is just "more compute helps". Also steal their normalization
-  ((MAS - SAS)/SAS x 100%) and their single-agent-with-full-observation baseline. Their 0.45
-  baseline-accuracy threshold predicts that if your single-agent-with-partial-obs baseline is
-  already above ~45%, extra agents will *hurt* — a cheap, falsifiable pre-registration for your run.
+  ((MAS - SAS)/SAS x 100%) and their single-agent-with-full-observation baseline. Their fitted threshold motivates checking how gains vary with baseline strength; it does not establish a universal 45% cutoff for a new partial-observation task.
 - **Quorum (independent evidence vs repeated copies; false commit vs delay):** two direct gifts.
   (a) Their **redundancy rate R** is exactly your "repeated copies" axis, and it is measured as a
   regressor with a *positive* interaction with agent count (+0.024, p = 0.034) — so the literature
   position you are arguing against is "redundancy is harmless or mildly good"; your contribution is
   showing it inflates *confidence* without adding evidence. (b) Their **centralized-verification
   finding** (4.4x vs 7.8x/17.2x error amplification) is the architectural argument for a quorum
-  *arbiter* rather than peer-to-peer agreement. For the false-commit-vs-delay tradeoff, use their
-  turn-count power law T = 2.72(n+0.5)^1.724 as your delay model: delay is superlinear in quorum
-  size, so a quorum design has to justify each added member against a ~n^1.7 latency cost, not a
-  linear one. That single curve turns your tradeoff plot into something quantitative.
+  *arbiter* rather than peer-to-peer agreement. For the false-commit-vs-delay tradeoff, measure delay directly in the proposed quorum system. Their fitted turn-count curve T = 2.72(n+0.5)^1.724 is a result for their evaluated systems, not a transportable latency law for quorum size.
 - **Telephone (atomic claims through retellings; lost evidence, inflated certainty):** the
   **A_e^trace error-amplification metric is the metric you want**, lifted directly: define
   amplification as the factor by which a per-hop error rate shows up in the final retelling vs a

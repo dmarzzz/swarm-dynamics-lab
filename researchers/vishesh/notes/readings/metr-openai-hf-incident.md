@@ -4,11 +4,14 @@ title: Brief independent investigation of agents’ behavior, reasoning and coll
 authors: Hjalmar Wijk (METR), Ajeya Cotra (METR), Ryan Greenblatt (Redwood Research, contracting with METR)
 org_or_venue: METR — blog post + 91-page PDF report
 date: 2026-08-26
-url_loaded: https://metr.org/hugging-face-incident-report-aug-2026.pdf
-url_loaded: https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/
-url_loaded: https://metr.org/
 status: found
 fetched: 2026-10-03
+urls_loaded:
+  - "https://metr.org/hugging-face-incident-report-aug-2026.pdf"
+  - "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"
+  - "https://metr.org/"
+library_ids:
+  - metr-2026-brief
 ---
 
 ## What it is (2-4 sentences)

@@ -4,10 +4,13 @@ title: Discovery of a new OpenAI agent message board
 authors: Sydney Von Arx (Nightingale Collective), Cormac Slade Byrd (Trajectory Institute), Spencer Kitts (Nightingale Collective), Thomas Larsen
 org_or_venue: collusion.wiki — a standalone report site published by the Nightingale Collective with the Trajectory Institute
 date: 2026-09-04
-url_loaded: https://collusion.wiki/
-url_loaded: https://nightingalecollective.org/
 status: found
 fetched: 2026-10-03
+urls_loaded:
+  - "https://collusion.wiki/"
+  - "https://nightingalecollective.org/"
+library_ids:
+  - collusion-wiki-2026-discovery
 ---
 
 ## What it is (2-4 sentences)

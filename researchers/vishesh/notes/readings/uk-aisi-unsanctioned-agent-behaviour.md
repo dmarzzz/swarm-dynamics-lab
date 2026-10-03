@@ -4,10 +4,13 @@ title: "Incident Report: unsanctioned agent behaviour during cyber testing"
 authors: No individual byline; published institutionally by AISI (the AI Security Institute)
 org_or_venue: AI Security Institute (AISI), UK — aisi.gov.uk blog
 date: 2026-08-04
-url_loaded: https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing
-url_loaded: https://simonwillison.net/2026/Aug/5/incident-report/ (secondary, date cross-check only)
 status: found
 fetched: 2026-10-03
+urls_loaded:
+  - "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing"
+  - "https://simonwillison.net/2026/Aug/5/incident-report/"
+library_ids:
+  - aisi-2026-incident
 ---
 
 ## What it is (2-4 sentences)
