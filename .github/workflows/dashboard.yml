@@ -1,4 +1,4 @@
-name: Dashboard
+name: Dashboard (swarm-research.pages.dev)
 on:
   push:
     branches: [main, dashboard-v1]
@@ -48,7 +48,7 @@ jobs:
         run: npm ci && npm run build
       - name: Deploy Cloudflare Pages
         if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
-        run: npx wrangler@3 pages deploy dashboard/dist --project-name swarm-lab --branch ${{ github.ref_name }}
+        run: npx wrangler@3 pages deploy dashboard/dist --project-name swarm-research --branch ${{ github.ref_name }} --commit-dirty=true
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_SWARM_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_SWARM_ACCOUNT_ID }}

@@ -1,74 +1,50 @@
-/* Swarm Lab observatory. Editorial research-lab system. See ../.impeccable.md */
-@import '@fontsource-variable/newsreader';
-@import '@fontsource-variable/newsreader/wght-italic.css';
-@import '@fontsource-variable/geist';
-@import '@fontsource-variable/geist-mono';
+/* Swarm Lab research observatory. Palette + type matched to swarm-live (swarm-live.pages.dev). */
+@font-face { font-family: "Space Mono"; src: url(/fonts/SpaceMono-Regular.ttf) format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Space Mono"; src: url(/fonts/SpaceMono-Bold.ttf) format("truetype"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Doto"; src: url(/fonts/Doto.ttf) format("truetype"); font-weight: 100 900; font-display: swap; }
 
-:root {
-  color-scheme: light;
-  --paper: oklch(0.972 0.009 85);
-  --paper-2: oklch(0.948 0.011 82);
-  --paper-3: oklch(0.915 0.013 80);
-  --ink: oklch(0.235 0.016 60);
-  --ink-2: oklch(0.40 0.016 62);
-  --muted: oklch(0.515 0.016 65);
-  --faint: oklch(0.70 0.012 70);
-  --rule: oklch(0.875 0.012 78);
-  --rule-strong: oklch(0.80 0.014 75);
-  --accent: oklch(0.585 0.165 36);
-  --accent-ink: oklch(0.50 0.15 36);
-  --accent-wash: oklch(0.585 0.165 36 / 0.10);
-  --focus: oklch(0.585 0.165 36 / 0.55);
+:root, :root[data-theme='dark'], :root[data-theme='light'] {
+  color-scheme: dark;
+  --hue: 274;
+  --paper: #040306;
+  --paper-2: #0b0a0d;
+  --paper-3: #121115;
+  --ink: rgb(233, 231, 225);
+  --ink-2: rgb(196, 194, 188);
+  --muted: rgb(154, 152, 146);
+  --faint: rgb(102, 100, 95);
+  --rule: rgba(255, 255, 255, 0.11);
+  --rule-strong: rgba(255, 255, 255, 0.2);
+  --accent: hsl(274 90% 70%);
+  --accent-ink: hsl(274 90% 78%);
+  --accent-wash: hsla(274, 90%, 70%, 0.14);
+  --focus: hsla(274, 90%, 70%, 0.6);
+  --bone: rgb(221, 201, 166);
+  --run: rgb(71, 199, 245);
+  --amber: hsl(40 95% 66%);
+  --fail: rgb(248, 79, 101);
 
-  --team-dmarz: oklch(0.66 0.125 72);
-  --team-vishesh: oklch(0.54 0.085 250);
-  --team-shadow: oklch(0.56 0.095 148);
-  --team-unknown: oklch(0.70 0.01 70);
+  --team-dmarz: hsl(40 95% 66%);
+  --team-vishesh: rgb(71, 199, 245);
+  --team-shadow: hsl(274 90% 70%);
+  --team-unknown: rgb(102, 100, 95);
 
-  --k-paper: oklch(0.42 0.055 255);
-  --k-thread: oklch(0.62 0.13 30);
-  --k-blog: oklch(0.70 0.115 78);
-  --k-code: oklch(0.56 0.08 175);
-  --k-talk: oklch(0.55 0.08 330);
-  --k-dataset: oklch(0.60 0.10 125);
+  --k-paper: rgb(221, 201, 166);
+  --k-thread: rgb(71, 199, 245);
+  --k-blog: hsl(40 95% 66%);
+  --k-code: hsl(160 60% 58%);
+  --k-talk: hsl(274 90% 72%);
+  --k-dataset: hsl(330 75% 70%);
 
-  --f-display: 'Newsreader Variable', 'Iowan Old Style', Georgia, serif;
-  --f-ui: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
-  --f-mono: 'Geist Mono Variable', ui-monospace, 'SF Mono', monospace;
+  --f-display: "Space Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --f-doto: "Doto", "Space Mono", ui-monospace, monospace;
+  --f-ui: "Space Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --f-mono: "Space Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
   --page: 1360px;
   --gutter: clamp(16px, 3.2vw, 44px);
   --nav-h: 52px;
-}
-
-:root[data-theme='dark'] {
-  color-scheme: dark;
-  --paper: oklch(0.175 0.009 65);
-  --paper-2: oklch(0.205 0.010 65);
-  --paper-3: oklch(0.245 0.011 65);
-  --ink: oklch(0.935 0.010 85);
-  --ink-2: oklch(0.82 0.012 82);
-  --muted: oklch(0.68 0.013 78);
-  --faint: oklch(0.50 0.012 70);
-  --rule: oklch(0.29 0.010 68);
-  --rule-strong: oklch(0.37 0.012 68);
-  --accent: oklch(0.70 0.15 40);
-  --accent-ink: oklch(0.76 0.13 42);
-  --accent-wash: oklch(0.70 0.15 40 / 0.14);
-  --focus: oklch(0.70 0.15 40 / 0.6);
-
-  --team-dmarz: oklch(0.76 0.12 75);
-  --team-vishesh: oklch(0.70 0.085 250);
-  --team-shadow: oklch(0.72 0.10 148);
-  --team-unknown: oklch(0.55 0.01 70);
-
-  --k-paper: oklch(0.72 0.065 255);
-  --k-thread: oklch(0.70 0.13 32);
-  --k-blog: oklch(0.80 0.11 80);
-  --k-code: oklch(0.72 0.085 175);
-  --k-talk: oklch(0.70 0.08 330);
-  --k-dataset: oklch(0.75 0.10 125);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -103,7 +79,7 @@ body::after {
   opacity: 0.035; mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
-:root[data-theme='dark'] body::after { mix-blend-mode: screen; opacity: 0.025; }
+body::after { display: none; }
 
 /* Shell */
 .shell { min-height: 100dvh; display: flex; flex-direction: column; }
@@ -140,7 +116,7 @@ body::after {
 }
 @keyframes ping { 0% { transform: scale(0.4); opacity: 0.9; } 100% { transform: scale(1.6); opacity: 0; } }
 .icon-btn {
-  display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 6px;
+  display: inline-grid; place-items: center;  height: 32px; border-radius: 6px;
   background: transparent; border: 1px solid transparent; color: var(--muted); cursor: pointer;
   transition: color 200ms var(--ease-out), border-color 200ms var(--ease-out);
 }
@@ -280,3 +256,18 @@ main { flex: 1; }
 @media (max-width: 720px) {
   .nav { -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); }
 }
+.icon-btn.live-link { width: auto; padding: 0 10px; text-decoration: none; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--rule); }
+
+/* swarm-live parity: Doto 900 only for brand, page headline, big ledger numbers. */
+.brand-name { font: 900 24px/1 var(--f-doto); letter-spacing: 0.02em; text-transform: lowercase; text-shadow: 0 0 6px hsla(274, 90%, 70%, 0.35); }
+.ledger .value, .bcol-n { font-family: var(--f-doto); font-weight: 900; color: var(--amber); text-shadow: 0 0 10px hsla(40, 95%, 60%, 0.3); }
+h1, .h1, .hero h1 { font-family: var(--f-doto); font-weight: 900; text-transform: lowercase; letter-spacing: 0.01em; text-shadow: 0 0 8px hsla(274, 90%, 70%, 0.3); }
+h1 em, h1 i, .h1 em { font-family: var(--f-mono); font-weight: 400; font-style: normal; color: var(--muted); text-shadow: none; }
+/* Dark controls */
+.input, .select, .swarm-root input, .swarm-root select, .swarm-toolbar input, .swarm-toolbar select { background: var(--paper-2) !important; color: var(--ink) !important; color-scheme: dark; }
+.seg button[aria-pressed='true'], .chip[aria-pressed='true'] { background: var(--accent-wash); color: var(--accent-ink); border-color: var(--accent); }
+.btn { background: var(--accent-wash); color: var(--accent-ink); border: 1px solid var(--accent); }
+.btn:hover { background: hsla(274, 90%, 70%, 0.24); }
+.skip { background: var(--accent); color: var(--paper); }
+.swarm-root button[aria-pressed='true'], .swarm-root button.active, .xt-key[aria-pressed='true'] { background: var(--accent-wash) !important; color: var(--accent-ink) !important; border-color: var(--accent) !important; }
+.lbody:hover { background: hsla(274, 90%, 70%, 0.05); }
