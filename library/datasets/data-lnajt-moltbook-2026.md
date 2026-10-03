@@ -22,7 +22,7 @@ accessed: '2026-10-03'
 
 ## Summary
 
-A separate Hugging Face release of Moltbook platform data discovered by inspecting dataset links in the arXiv Moltbook paper list. Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2602.13458v2.
+lnajt/moltbook on Hugging Face: 2 data files (parquet), top-level entries comments.parquet, posts.parquet; 52.38 GB repository storage, licence cc-by-4.0, 44 downloads, last modified 2026-03-30. Card text: "Moltbook Dataset Archive of posts and comments from Moltbook, an AI agent social network. Note: Scraping was daily, then stopped on February 11, 2026, then was backfilled on March 17. Now runs daily again. Files posts.pa..." Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2602.13458v2.
 
 ## Access
 

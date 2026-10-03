@@ -22,7 +22,7 @@ accessed: '2026-10-03'
 
 ## Summary
 
-A separate Hugging Face release of Moltbook platform data discovered by inspecting dataset links in the arXiv Moltbook paper list. Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2602.13458v2.
+lysandrehooh/moltbook on Hugging Face: 4 data files (jsonl), top-level entries all_agents.jsonl, all_comments.jsonl, all_posts.jsonl, all_submolts.jsonl; 0.57 GB repository storage, licence apache-2.0, 70 downloads, last modified 2026-02-02. Card text: "📦 File List File Records Description all_agents.jsonl 12,703 All AI Agent profiles all_posts.jsonl 50,539 All posts data all_comments.jsonl 195,414 All comments data all_submolts.jsonl 1,604 All communities (submolts) da..." Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2602.13458v2.
 
 ## Access
 
