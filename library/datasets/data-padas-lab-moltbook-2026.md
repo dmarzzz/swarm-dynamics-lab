@@ -22,7 +22,7 @@ accessed: '2026-10-03'
 
 ## Summary
 
-A separate Hugging Face release of Moltbook platform data discovered by inspecting dataset links in the arXiv Moltbook paper list. Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2604.13052v1.
+PaDaS-Lab/moltbook-corpus on Hugging Face: 86 data files (parquet), top-level entries annotated_comments, annotated_posts, posts, profiles, submolts_meta; 4.03 GB repository storage, licence mit, 170 downloads, last modified 2026-04-16. Card text: "Moltbook Corpus: Agent Social Behavior Dataset This dataset provides for the research paper: "FORM WITHOUT FUNCTION: AGENT SOCIAL BEHAVIOR IN THE MOLTBOOK NETWORK"https://arxiv.org/abs/2604.13052 Dataset Statistics C..." Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2604.13052v1.
 
 ## Access
 

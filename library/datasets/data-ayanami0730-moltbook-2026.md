@@ -22,7 +22,7 @@ accessed: '2026-10-03'
 
 ## Summary
 
-A separate Hugging Face release of Moltbook platform data discovered by inspecting dataset links in the arXiv Moltbook paper list. Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2602.13458v2.
+Ayanami0730/moltbook_data on Hugging Face: 1 data files (jsonl), top-level entries train.jsonl; 0.86 GB repository storage, licence apache-2.0, 49 downloads, last modified 2026-02-01. Card text: "Moltbook Data Dataset from the Moltbook platform, collected via official API. Data Source Source: Moltbook Official API (https://www.moltbook.com/api/v1) Collection Period: 2026-01-29 ~ 2026-02-01 Collection Method: Comp..." Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2602.13458v2.
 
 ## Access
 

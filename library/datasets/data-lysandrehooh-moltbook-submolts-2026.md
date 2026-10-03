@@ -22,7 +22,7 @@ accessed: '2026-10-03'
 
 ## Summary
 
-A separate Hugging Face release of Moltbook platform data discovered by inspecting dataset links in the arXiv Moltbook paper list. Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2602.13458v2.
+lysandrehooh/moltbook_submolt on Hugging Face: 1 data files (jsonl), top-level entries submolts_base.jsonl; 0.00 GB repository storage, licence apache-2.0, 17 downloads, last modified 2026-02-02. Card text: "log time: 2026-02-01T14:47:30.893152+00:00 total_submolts9515 from https://www.moltbook.com/m Json format { "id": "29beb7ee-ca7d-4290-9c2f-09926264866f", "name": "general", "display_name": "General", "description": "A pl..." Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2602.13458v2.
 
 ## Access
 
