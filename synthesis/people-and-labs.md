@@ -47,3 +47,15 @@ Rules this file follows:
 | Romanczuk, HU Berlin / Science of Intelligence | Active Brownian particle flocks, subcritical schooling in wild fish, visual-projection models | [[romanczuk-2012-active]], [[klamser-2021-collective]], [[poel-2022-subcritical]], [[bastien-2020-model]], [[gomez-nava-2023-fish]] | https://www.scienceofintelligence.de/people/pawel-romanczuk/ | X @scioi_cluster (cluster account, not personal) | - |
 | Vicsek and Vásárhelyi, ELTE (CollMot) | The Vicsek model; outdoor drone flocks with evolved parameters | [[vicsek-1995-novel]], [[vicsek-2012-collective]], [[vasarhelyi-2018-optimized]], [[viragh-2014-flocking]] | https://hal.elte.hu/flocking/ | - | - |
 | Toner and Tu (Oregon) | Hydrodynamic theory of flocks, long-range order in 2D | [[toner-1995-long]], [[toner-1998-flocks]], [[toner-2005-hydrodynamics]], [[toner-2024-physics]] | - (not fetched) | - | - |
+
+## Collective decision-making in biology (`collective-decision`)
+
+| Group | Known for | Key library entries | Homepage | Handle (from homepage) | Runnable |
+|---|---|---|---|---|---|
+| Seeley, Cornell | Honeybee nest-site selection, quorum sensing and stop signals as cross-inhibition | [[seeley-2010-honeybee]], [[seeley-2012-stop]], [[britton-2002-deciding]] | https://nbb.cornell.edu/thomas-seeley | X @cornellnbb (department account) | - |
+| Pratt, Arizona State | Ant (Temnothorax) emigration and quorum rules; ant colonies as a model of collective cognition | [[pratt-2006-tunable]], [[sasaki-2013-ant]], [[sasaki-2018-psychology]] | https://pratt.lab.asu.edu/ | - (page did not render through the reader) | - |
+| Sumpter, Uppsala (with Ward, Krause, Herbert-Read) | Quorum responses and consensus in fish, mathematical principles of collective behaviour | [[sumpter-2006-principles]], [[sumpter-2008-consensus]], [[ward-2008-quorum]], [[sumpter-2009-quorum]] | https://www.david-sumpter.com/ | - | - |
+| Marshall and Reina (Sheffield; Reina now Konstanz / IRIDIA) | Value-sensitive decisions, cross-inhibition models linking bees, brains and robot swarms | [[marshall-2009-optimal]], [[pais-2013-mechanism]], [[reina-2017-model]], [[talamali-2021-when]], [[reina-2023-cross]] | https://www.giovannireina.com/ (Reina) | X @joefresna (Reina) | - |
+| Couzin, MPI of Animal Behavior | Uninformed individuals and democratic consensus, decision geometry in moving groups | [[couzin-2005-effective]], [[couzin-2011-uninformed]], [[leonard-2012-decision]], [[sridhar-2021-geometry]] | https://www.ab.mpg.de/couzin | Bluesky mpi-animalbehav.bsky.social (institute account) | - |
+| Feinerman, Weizmann | Cooperative transport in ants, individual vs collective information, criticality in ant groups | [[gelblum-2015-ant]], [[feinerman-2017-individual]], [[feinerman-2018-physics]], [[chatterjee-2025-maximal]] | https://www.weizmann.ac.il/complex/feinerman/ | X @weizmannscience (institute account) | - |
+| Franks, Bristol | Ant emigration, speed-accuracy trade-offs, information flow in colonies | [[franks-2002-information]], [[franks-2003-speed]], [[britton-2002-deciding]] | - (not fetched) | - | - |
