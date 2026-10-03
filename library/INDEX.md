@@ -2,7 +2,7 @@
 
 # Library index
 
-2648 entries.
+2653 entries.
 
 ## Papers (1691)
 
@@ -2559,7 +2559,7 @@
 | [gh-px4-px4-autopilot](code/gh-px4-px4-autopilot.md) | PX4 Autopilot: open-source flight control stack with multi-vehicle SITL simulation used for drone-swarm tooling | 2012 | 1 | abstract | swarm-robotics | shadow/sol-1 |
 | [gh-ruvnet-ruflo](code/gh-ruvnet-ruflo.md) | Ruflo (formerly claude-flow): meta-harness for Claude Code and Codex with '100+ agents' and 'coordinated swarms' | 2025 | 1 | abstract | llm-agent-swarms | shadow/sol-1 |
 
-## Datasets (16)
+## Datasets (21)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -2576,8 +2576,13 @@
 | [data-moltbook-observatory-2026](datasets/data-moltbook-observatory-2026.md) | Moltbook Observatory Archive: incremental, date-partitioned dump of the agent-only social network Moltbook | 2026 | 4 | ran | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-moltgraph-2026](datasets/data-moltgraph-2026.md) | MoltGraph: 30-day temporal heterogeneous graph of Moltbook (agents, posts, comments, votes, feed snapshots) in Neo4j | 2026 | 4 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-twibot22-2022](datasets/data-twibot22-2022.md) | TwiBot-22: graph-based Twitter bot detection benchmark with 1 million users and heterogeneous relations (NeurIPS 2022 Datasets and Benchmarks) | 2022 | 4 | skim | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
+| [data-aicell-moltbook-2026](datasets/data-aicell-moltbook-2026.md) | AIcell/moltbook-data Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
+| [data-aisilab-moltbook-2026](datasets/data-aisilab-moltbook-2026.md) | aisilab/moltbook-files Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
+| [data-ayanami0730-moltbook-2026](datasets/data-ayanami0730-moltbook-2026.md) | Ayanami0730/moltbook_data Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-cresci-2017](datasets/data-cresci-2017.md) | cresci-2017 (The Fake Project): genuine, social spambot, traditional spambot and fake follower Twitter accounts | 2017 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 | [data-moltbook-takschdube-2026](datasets/data-moltbook-takschdube-2026.md) | Moltbook longitudinal dataset (Taksch Dube): timestamped crawls with derived social and reply graphs | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
+| [data-padas-lab-moltbook-2026](datasets/data-padas-lab-moltbook-2026.md) | PaDaS-Lab/moltbook-corpus Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
+| [data-trustairlab-moltbook-2026](datasets/data-trustairlab-moltbook-2026.md) | TrustAIRLab/Moltbook Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 
 ## Talks (97)
