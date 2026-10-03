@@ -29,6 +29,8 @@ search_log:
   - {where: citations-forward, query: "Semantic Scholar forward citations of S/Kademlia (baumgart-2007-skademlia), title hits (sybil gap fill, p2p overlay)", date: 2026-10-03, results: 2, new: 0}
 ---
 
+> **Status (2026-10-03): in-progress, merged incomplete.** Citation floors pass. The gate fails on the search log: no counted scholarly-index, preprint, social or backward-citation rounds, and the saturation rounds are 0/0. Open work: #51 (search rounds, citation chasing), #76 (read-depth audit), #49 (datasets). No review task opened yet.
+
 ## Scope
 
 In scope: any setting where many agents (people, nodes, robots, software agents, LLM agents, block builders or searchers) interact and one principal can present several identities. The survey follows one question through every setting: what does an identity cost, and does a defence bound the number of identities a principal can hold or the influence each identity has? The settings are peer-to-peer overlays and social graphs, robot swarms and networked control, LLM agent collectives, mechanism design (false-name-proofness), cryptographic credentials and rate limiting, and MEV infrastructure built or studied by Flashbots.
