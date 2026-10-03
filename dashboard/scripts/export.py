@@ -13,7 +13,7 @@ import re
 import subprocess
 import sys
 import time
-from collections import Counter, defaultdict
+from collections import Counter
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'scripts'))
@@ -32,7 +32,7 @@ def agent_from(message):
     return match.group(1) if match else 'unknown/unknown'
 
 def history():
-    first, river = {}, []
+    first, additions = {}, []
     # Reverse history means the first observed A record really is the first addition.
     raw = git('log', '--reverse', '--diff-filter=A', '--name-status',
               '--format=@@%H\t%aI\t%s', '--', 'library/')
@@ -48,7 +48,8 @@ def history():
             if len(parts) != 3 or parts[1] not in KINDS or not path.endswith('.md') or parts[2] in {'README.md','INDEX.md'}:
                 continue
             first.setdefault(path, dict(current))
-    return first
+            additions.append({**current, 'path': path, 'kind': KINDS[parts[1]]})
+    return first, additions
 
 def short_authors(value):
     if isinstance(value, list):
@@ -101,7 +102,7 @@ def batch_payload():
 def export():
     started = time.monotonic()
     data = helpers.Lab()
-    provenance = history()
+    provenance, additions = history()
     entries = []
     timeline_counts = Counter()
     agent_counts = Counter()
@@ -124,14 +125,19 @@ def export():
                         'summary': doc.sections().get('Summary', '')[:280], 'links': doc.cites()})
         agent_counts[agent] += 1
         if stamp:
-            team = agent.split('/')[0]
-            timeline_counts[(stamp, team, agent, kind)] += 1
             agent_last[agent] = max(stamp, agent_last.get(agent, ''))
+    # Include all A records, even if a source was subsequently removed or renamed.
+    by_path = {doc.rel: doc for doc in data.library.values()}
+    for addition in additions:
+        doc = by_path.get(addition['path'])
+        agent = doc.get('added_by') if doc else None
+        agent = agent or addition['agent']
+        timeline_counts[(addition['t'], agent.split('/')[0], agent, addition['kind'])] += 1
     # Latest actual commit, including metadata updates, for every registered agent.
     for line in git('log', '--format=%aI\t%s').splitlines():
         stamp, message = line.split('\t', 1)
         agent = agent_from(message)
-        agent_last.setdefault(agent, stamp)
+        agent_last[agent] = max(stamp, agent_last.get(agent, ''))
     agents = []
     for ident in sorted(set(data.agents) | set(agent_counts)):
         doc = data.agents.get(ident)
