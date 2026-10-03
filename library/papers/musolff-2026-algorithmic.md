@@ -17,7 +17,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 3
 citations: 1
 code: []
 ---
@@ -44,7 +44,7 @@ The convenience sample includes products with at least one repricing merchant. T
 
 ## Relevance to us
 
-This provides a prior-art comparison for detecting coordinated automation, not evidence that any observed population is an LLM swarm.
+Field evidence that independent pricing algorithms can drift into tacit collusion without communication (price rises of 11.4% under resetting strategies with fewer than six competitors); an economic analogue for uncoordinated agent collusion. Conference version: [[musolff-2022-algorithmic]].
 
 ## Access and citation provenance
 

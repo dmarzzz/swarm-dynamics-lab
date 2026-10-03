@@ -48,7 +48,7 @@ The abstract does not establish detection robustness against adaptive LLM agents
 
 ## Relevance to us
 
-This provides a prior-art comparison for detecting coordinated automation, not evidence that any observed population is an LLM swarm.
+Seminal lockstep detector (same targets, same time window) that a swarm-detection baseline should beat or reuse; the open question for us is whether LLM agents with randomized schedules still leave bipartite lockstep structure.
 
 ## Access and citation provenance
 

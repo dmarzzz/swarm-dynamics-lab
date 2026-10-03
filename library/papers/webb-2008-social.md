@@ -18,7 +18,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 3
 citations: null
 code: []
 ---
@@ -29,7 +29,7 @@ The authors introduce social honeypots to collect deceptive spam profiles and ch
 
 ## Contribution
 
-Social honeypot collection and analysis of harvested spam profiles.
+Introduces social honeypots on MySpace to harvest spam profiles and characterize their temporal, geographic and content patterns.
 
 ## Key results
 
@@ -45,7 +45,7 @@ The historical platform population does not establish modern agent behavior. Pro
 
 ## Relevance to us
 
-Prior art for measuring automated behavior and testing detection assumptions.
+Early template for the honeypot approach to finding coordinated accounts; historical population, no classifier evaluated.
 
 ## Access provenance
 

@@ -29,7 +29,7 @@ This Moltbook study diagnoses semantic stability, lexical turnover, individual i
 
 ## Contribution
 
-Dynamic semantic and lexical diagnostics of a persistent agent social platform.
+Diagnoses whether socialization emerges on Moltbook through semantic stability, lexical turnover, individual inertia, influence persistence and consensus measures.
 
 ## Key results
 
@@ -45,7 +45,7 @@ Observed interaction density does not imply socialization; causal roles of promp
 
 ## Relevance to us
 
-A primary-source abstract for comparisons of agent behavior and measurement. Full text and replication were not checked.
+A negative result worth citing: a large agent society showed stable global averages but little partner adaptation and no stable consensus, which tempers claims of emergent collective behavior.
 
 ## Access provenance
 

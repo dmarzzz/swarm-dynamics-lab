@@ -25,7 +25,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 3
 citations: null
 code: []
 ---
@@ -36,7 +36,7 @@ Halligan treats visual CAPTCHA instructions as optimization objectives and chall
 
 ## Contribution
 
-Generalized vision-language-model solver framed as a search problem.
+Frames visual CAPTCHA solving as search with a vision-language model and evaluates on 26 challenge types plus a 30-day live comparison.
 
 ## Key results
 
@@ -52,7 +52,7 @@ A visual challenge solving rate is not an end-to-end account-farming success rat
 
 ## Relevance to us
 
-Prior art for measuring automated behavior and testing detection assumptions.
+Measures how far CAPTCHAs still gate automated agents (60.7% on 2,600 challenges, 70.6% on unseen live ones); background for any detection design that leans on challenges.
 
 ## Access provenance
 

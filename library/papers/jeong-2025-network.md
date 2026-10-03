@@ -21,7 +21,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 3
 citations: null
 code: []
 ---
@@ -32,7 +32,7 @@ Passive network observers can infer prompts and user traits from locally deploye
 
 ## Contribution
 
-Network metadata traces, prompt similarity evaluation, and multi-session trait inference.
+Shows that a passive network observer can infer prompts and user traits from the domains and timing a local research agent visits, and evaluates mitigations.
 
 ## Key results
 
@@ -48,7 +48,7 @@ The abstract does not expose trace sampling, threat assumptions, or full utility
 
 ## Relevance to us
 
-A primary-source abstract for comparisons of agent behavior and measurement. Full text and replication were not checked.
+The inverse of our detection problem: agent browsing traces are distinctive enough to leak intent, which suggests traffic-level agent fingerprinting is feasible.
 
 ## Access provenance
 

@@ -18,7 +18,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 2
 citations: null
 code: []
 ---
@@ -29,7 +29,7 @@ Honeywords stores decoy password hashes alongside the real password for each acc
 
 ## Contribution
 
-Decoy passwords, hashed storage, and a separate honeychecker.
+Proposes storing decoy password hashes plus a separate honeychecker so that use of a cracked decoy reveals a breach.
 
 ## Key results
 
@@ -45,7 +45,7 @@ Security depends on decoy indistinguishability and separation of the honeychecke
 
 ## Relevance to us
 
-A comparison source for coordinated automation and security measurement. Full-text methods and replication have not been checked.
+Background only: a decoy-credential pattern that agent honeypots reuse, but no swarm or coordination content.
 
 ## Access provenance
 

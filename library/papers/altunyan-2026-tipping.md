@@ -18,7 +18,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 3
 citations: null
 code: []
 ---
@@ -29,7 +29,7 @@ This work explores climate-action stance changes in an LLM-powered micro-society
 
 ## Contribution
 
-Two-dimensional stance distances and Latent Dirichlet Allocation across repeated conversations.
+Shows abrupt, tipping-like stance shifts in a small LLM micro-society with personalities and episodic memory, and warns that model bias and memory upkeep confound the interpretation.
 
 ## Key results
 
@@ -45,7 +45,7 @@ A simple model with persistent LLM biases is not evidence that real-world climat
 
 ## Relevance to us
 
-A primary-source abstract for comparisons of agent behavior and measurement. Full text and replication were not checked.
+One more data point that LLM populations can flip collectively; useful only as a qualitative example for committed-minority or tipping ideas, since the abstract gives no threshold or N.
 
 ## Access provenance
 

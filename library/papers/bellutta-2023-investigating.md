@@ -46,7 +46,7 @@ Associations do not identify operator intent or establish that every creation bu
 
 ## Relevance to us
 
-This provides a prior-art comparison for detecting coordinated automation, not evidence that any observed population is an LLM swarm.
+Account-creation bursts are a population-level signal that does not depend on reading content, which is the regime LLM-written posts push detection into. Pair with [[beutel-2013-copycatch]] for timing-based lockstep detection.
 
 ## Access and citation provenance
 
