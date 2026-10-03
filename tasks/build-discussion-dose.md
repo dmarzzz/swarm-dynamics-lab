@@ -3,14 +3,19 @@ id: build-discussion-dose
 type: task
 title: Build and deploy the SEC-47 discussion dose exploratory study
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/discussion-dose
 for: dmarz
 created: 2026-10-03
 created_by: dmarz/discussion-dose
 depends_on: []
-topics: [fork-merge-security, llm-agent-swarms, collective-decision]
+topics:
+- fork-merge-security
+- llm-agent-swarms
+- collective-decision
+claimed_at: 2026-10-03T23:24Z
+updated: 2026-10-03T23:24Z
 ---
 
 ## Goal
