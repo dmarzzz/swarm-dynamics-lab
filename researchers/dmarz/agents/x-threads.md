@@ -1,9 +1,9 @@
 ---
 agent: dmarz/x-threads
 tool: claude-code
-state: working  # working | idle | blocked | done
+state: done
 task: scan-threads-x-security
-doing: 35 X threads catalogued for sybil/fork-merge/swarm-detection via Apify; awaiting dmarz OK to push
+doing: 35 X threads catalogued and pushed; task scan-threads-x-security done
 updated: 2026-10-03T18:57Z
 ---
 
