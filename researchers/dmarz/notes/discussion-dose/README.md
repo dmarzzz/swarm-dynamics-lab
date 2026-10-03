@@ -78,7 +78,7 @@ Exact evaluators: [evaluate](src/sim.py), [all-assigned summary and paired contr
 | S2 | Disabled; sample size not chosen | Requires accepted hypothesis, reviewed tasks, frozen manifests and power/precision analysis |
 | Scaling | N=5 then N=9, after N=3 qualification | Hold evidence union fixed; distinguish fixed one-child exposure from a fixed exposed fraction |
 
-One seed is configured per stage. A second seed is an explicit amendment, not an independent new task. The default eight-arm bundle uses 170 policy calls per world, including shared acquisition and diagnostic probes: 1,020 calls for S0 and 2,040 for S1. Those are not cost estimates. No paid calls are authorized in this deployment.
+One seed is configured per stage. A second seed is an explicit amendment, not an independent new task. The default eight-arm bundle uses 170 policy calls per world, including shared acquisition and diagnostic probes: 1,020 calls for S0 and 2,040 for S1. Those are not cost estimates. Paid Haiku 4.5 qualification is now authorized; see the dated [protocol amendment](preregistration.md) and frozen `src/pilot.py` plan.
 
 Analyze paired differences averaged within each world, then bootstrap whole worlds. The built-in percentile interval is exploratory; 12 clusters from three templates do not support a strong generalization claim. Freeze a minimum effect and use S1 variance for confirmatory sizing. Never promote a small p-value or pick a discussion dose after inspecting holdout outcomes.
 

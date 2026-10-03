@@ -22,7 +22,7 @@ The user asked to defer paid calls. The deployed script selects `scripted` expli
 
 Set nonsecret `SWARM_MODEL_CONFIG` to a JSON object containing exact `model`, `max_calls`, `max_output_tokens`, `max_input_bytes`, `timeout`, `max_cost_usd`, `input_usd_per_million`, and `output_usd_per_million`. Confirm endpoint compatibility and prices first. The adapter defaults to a zero dollar cap and refuses calls without a positive configured cap. Use one worker to keep that cap meaningful; it is per worker, not a distributed account-wide limit.
 
-The shipped HTTP adapter's mock-server test is not real-provider qualification. No paid model was selected, and no cost or throughput estimate is claimed. Do not enqueue S1 until live S0 has qualified clean-task performance under a documented protocol amendment.
+The shipped HTTP adapter's mock-server test is not real-provider qualification. The first paid plan now pins Haiku 4.5; see the dated protocol amendment. Offline tests do not establish live qualification. Do not enqueue S1 until live S0 has qualified clean-task performance under a documented protocol amendment.
 
 ## Artifact transport
 
@@ -37,3 +37,10 @@ For a measured CPU/memory bottleneck or a later local-model deployment, add a dm
 Start with one worker per model-budget allocation, not one per CPU. Each HTTP adapter's dollar cap is local to that worker, so multiple workers need a separately enforced aggregate budget before paid parallel execution. N=5 and N=9 are supported by the runtime; run their access and clean-task checks before using extra capacity for a sweep. A local model additionally needs pinned weights/tokenizer/runtime, measured memory and throughput, and its own qualification. Release claims and destroy newly created temporary servers when the run ends, following agentops ownership rules.
 
 For code-only redeployment without collecting another batch, use `scripts/deploy-discussion-dose.sh <commit> --verify-only` in the private agentops repo. An earlier failed batch is never overwritten or silently requeued.
+
+
+### Native Anthropic qualification
+
+Use backend `anthropic` and the config from `src/pilot.py` (`--smoke` for the separate eight-episode preflight). Keep `SWARM_MODEL_API_KEY` and, for user-level keys, `SWARM_MODEL_WORKSPACE_ID` in `/etc/swarm/report.env`; load only those fields into the worker environment. Neither enters model contexts, traces or hub params. The hub plan contains the nonsecret model config, which the worker must match exactly. Register the updated metric schema and deploy with `--verify-only` before enqueuing. Run one worker, inspect all preflight episodes, then enqueue qualification only after structural validity passes. No automatic S1 queue or failed-outcome replay.
+
+The run summary reports physical request count, provider token counts, cost at pinned prices and requests missing usage. The live completion metrics include clean accuracy, attacked target wins, attacked false-memory admission, model calls and estimated model cost. All-condition averages are for qualification; dose comparisons use the per-condition artifact summary.

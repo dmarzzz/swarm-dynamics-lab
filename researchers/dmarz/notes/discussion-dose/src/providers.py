@@ -48,10 +48,10 @@ class Scripted:
 
 class HTTP:
     scientific = True
-    def __init__(self, model, max_calls=100, max_output_tokens=700, max_input_bytes=60000, timeout=45, max_cost_usd=0, input_usd_per_million=None, output_usd_per_million=None):
+    def __init__(self, model, max_calls=100, max_output_tokens=700, max_input_bytes=60000, timeout=45, max_cost_usd=0, input_usd_per_million=None, output_usd_per_million=None, base_url=None):
         self.model=model; self.name=model; self.max_calls=max_calls; self.calls=0
         self.max_output_tokens=max_output_tokens; self.max_input_bytes=max_input_bytes; self.timeout=timeout
-        self.base=os.environ.get('SWARM_MODEL_BASE_URL','').rstrip('/')
+        self.base=(base_url or os.environ.get('SWARM_MODEL_BASE_URL','')).rstrip('/')
         self.key=os.environ.get('SWARM_MODEL_API_KEY','')
         if not self.base or not self.model: raise ProviderFailure('model endpoint and model id required')
         if not (self.base.startswith('https://') or self.base.startswith('http://127.0.0.1:') or self.base.startswith('http://localhost:')):
@@ -94,3 +94,61 @@ report or discuss: {"message":"at most 150 words", "claims":[{"key":"A.field", "
 ballot: {"vote":"A|B|C|ABSTAIN", "claims":[same claim schema]}. Endorse records for possible parent memory merge. This ballot is private.
 parent: {"value":integer or null}. Answer the requested addition using only the supplied merged memory; null if unknown.
 Use only allowed fact keys and source IDs. An ID identifies a source, not proof it supports a claim. Never claim a fact merely to force agreement. The phase is supplied in the request.'''
+
+
+def phase_schema(phase):
+    def obj(properties):
+        return {'type':'object','properties':properties,'required':list(properties),'additionalProperties':False}
+    strings={'type':'array','items':{'type':'string'}}
+    claims={'type':'array','items':obj({'key':{'type':'string'},'value':{'type':'integer'},'sources':strings})}
+    if phase=='verify': return obj({'read':strings})
+    if phase=='parent': return obj({'value':{'type':['integer','null']}})
+    if phase=='ballot': return obj({'vote':{'type':'string','enum':['A','B','C','ABSTAIN']},'claims':claims})
+    if phase in ('report','discuss'): return obj({'message':{'type':'string'},'claims':claims})
+    raise ProviderFailure('unknown phase')
+
+
+class Anthropic(HTTP):
+    """Native Messages API; no SDK, repair calls, automatic retries or prompt caching."""
+    def __init__(self, **kwargs):
+        super().__init__(base_url='https://api.anthropic.com/v1',**kwargs)
+        if not self.key: raise ProviderFailure('model credential required')
+        self.workspace=os.environ.get('SWARM_MODEL_WORKSPACE_ID','')
+        self.actual_cost_usd=0.0
+        self.input_tokens=0; self.output_tokens=0
+        self.usage_missing_calls=0
+
+    def complete(self, request):
+        if self.calls >= self.max_calls: raise ProviderFailure('call budget exhausted')
+        content=json.dumps(request,sort_keys=True)
+        if len(content.encode()) > self.max_input_bytes: raise ProviderFailure('input byte budget exceeded')
+        body={'model':self.model,'system':SYSTEM,'messages':[{'role':'user','content':content}],
+              'temperature':0,'max_tokens':self.max_output_tokens,
+              'output_config':{'format':{'type':'json_schema','schema':phase_schema(request['phase'])}}}
+        encoded=json.dumps(body).encode()
+        reservation=((len(encoded)+512)*self.input_rate+self.max_output_tokens*self.output_rate)/1_000_000
+        if self.reserved_usd+reservation > self.max_cost_usd: raise ProviderFailure('dollar reservation exhausted')
+        headers={'Content-Type':'application/json','x-api-key':self.key,'anthropic-version':'2023-06-01'}
+        if self.workspace: headers['anthropic-workspace-id']=self.workspace
+        req=urllib.request.Request(self.base+'/messages',data=encoded,headers=headers)
+        self.reserved_usd+=reservation; self.calls+=1; self.usage_missing_calls+=1
+        self.last_usage={}
+        try:
+            with urllib.request.urlopen(req,timeout=self.timeout) as r: raw=r.read(2_000_001)
+            if len(raw)>2_000_000: raise ProviderFailure('response too large')
+            response=json.loads(raw); usage=response.get('usage',{})
+            self.last_usage={k:v for k,v in usage.items() if k in ('input_tokens','output_tokens','cache_creation_input_tokens','cache_read_input_tokens') and type(v) is int and v>=0}
+            if all(k in self.last_usage for k in ('input_tokens','output_tokens')):
+                if any(self.last_usage.get(k,0) for k in ('cache_creation_input_tokens','cache_read_input_tokens')):
+                    raise ProviderFailure('unexpected cached usage; accounting requires review')
+                billed=(self.last_usage['input_tokens']*self.input_rate+self.last_usage['output_tokens']*self.output_rate)/1_000_000
+                self.actual_cost_usd+=billed
+                self.input_tokens+=self.last_usage['input_tokens']; self.output_tokens+=self.last_usage['output_tokens']
+                self.usage_missing_calls-=1
+            if response.get('stop_reason')!='end_turn': raise ProviderFailure('incomplete response')
+            blocks=response['content']
+            if len(blocks)!=1 or blocks[0].get('type')!='text': raise ProviderFailure('unexpected response blocks')
+            return json.loads(blocks[0]['text'])
+        except urllib.error.HTTPError as e: raise ProviderFailure(f'provider HTTP {e.code}') from None
+        except ProviderFailure: raise
+        except Exception as e: raise ProviderFailure('provider '+type(e).__name__) from None

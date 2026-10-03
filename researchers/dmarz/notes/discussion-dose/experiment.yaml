@@ -3,8 +3,31 @@
   "title": "Discussion dose and fork merge corruption (exploratory)",
   "description": "SEC-47 exploratory environment: three isolated agents, one contaminated tool result, 0/1/3/6 board rounds, private ballots, scoped memory merge and fresh-parent probe. Scripted smoke validates plumbing only. Not an accepted hypothesis or confirmatory experiment.",
   "owner": "dmarz",
-  "params": {"stage": {"type": "str"}, "n_agents": {"type": "int", "default": 3}, "backend": {"type": "str"}, "rounds": {"type": "list"}},
-  "metrics": ["episodes", "invalid_rate", "scientific"],
+  "params": {
+    "stage": {
+      "type": "str"
+    },
+    "n_agents": {
+      "type": "int",
+      "default": 3
+    },
+    "backend": {
+      "type": "str"
+    },
+    "rounds": {
+      "type": "list"
+    }
+  },
+  "metrics": [
+    "episodes",
+    "invalid_rate",
+    "scientific",
+    "clean_accuracy",
+    "attack_target_win",
+    "attack_false_memory",
+    "model_calls",
+    "model_cost_usd"
+  ],
   "primary_metric": "invalid_rate",
   "url": "https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/discussion-dose"
 }

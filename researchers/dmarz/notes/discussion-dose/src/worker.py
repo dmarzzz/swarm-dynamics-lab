@@ -9,7 +9,7 @@ import subprocess
 import time
 from analyze import summarize,contrast
 from artifacts import publish_artifacts
-from providers import Scripted,HTTP
+from providers import Scripted,HTTP,Anthropic
 from sim import arms_for,run_episode
 from tasks import digest
 
@@ -43,7 +43,8 @@ def execute_bundle(params,out,provider,progress=lambda *a:None):
     summary={'scientific':provider.scientific,'provider':provider.name,'episodes':len(rows),
              'seconds':round(time.monotonic()-start,3),'cells':summarize(rows),
              'primary_candidate':contrast(rows) if 0 in params['rounds'] and 6 in params['rounds'] else None,
-             'actual_http_calls':getattr(provider,'calls',0),'conservative_reserved_usd':getattr(provider,'reserved_usd',0)}
+             'actual_http_calls':getattr(provider,'calls',0),'conservative_reserved_usd':getattr(provider,'reserved_usd',0),
+             'usage_accounting':{k:getattr(provider,k) for k in ('actual_cost_usd','input_tokens','output_tokens','usage_missing_calls') if hasattr(provider,k)}}
     (out/'summary.json').write_text(json.dumps(summary,indent=2))
     return summary
 
@@ -52,11 +53,13 @@ def build_provider(backend,params):
     cfg=json.loads(os.environ.get('SWARM_MODEL_CONFIG','{}'))
     allowed={'model','max_calls','max_output_tokens','max_input_bytes','timeout','max_cost_usd','input_usd_per_million','output_usd_per_million'}
     if set(cfg)-allowed: raise ValueError('unknown model config fields')
-    return HTTP(**cfg)
+    if backend not in ('http','anthropic'): raise ValueError('unknown backend')
+    if params.get('model_config') is not None and cfg != params['model_config']: raise ValueError('queued model configuration mismatch')
+    return (Anthropic if backend=='anthropic' else HTTP)(**cfg)
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--hub',action='store_true');p.add_argument('--stage',choices=['S0','S1'],default='S0')
-    p.add_argument('--backend',choices=['scripted','http'],default='scripted');p.add_argument('--out')
+    p.add_argument('--backend',choices=['scripted','http','anthropic'],default='scripted');p.add_argument('--out')
     p.add_argument('--task-limit',type=int);a=p.parse_args()
     design=json.loads((ROOT/'design.yaml').read_text())
     if a.hub:
@@ -72,8 +75,14 @@ def main():
             finally:
                 if out.exists(): publish_artifacts(run,out)
             invalid=sum(c['invalid']*c['assigned'] for c in summary['cells'].values())
+            clean=[c for k,c in summary['cells'].items() if k.startswith('clean-')]
+            attack=[c for k,c in summary['cells'].items() if k.startswith('attack-')]
+            def rate(cells,key): return sum(c[key]*c['assigned'] for c in cells)/sum(c['assigned'] for c in cells)
             run.done(message='Engineering scripted smoke; not LLM evidence' if not provider.scientific else 'Exploratory LLM pilot',
-                     episodes=summary['episodes'],invalid_rate=invalid/summary['episodes'],scientific=int(provider.scientific))
+                     episodes=summary['episodes'],invalid_rate=invalid/summary['episodes'],scientific=int(provider.scientific),
+                     clean_accuracy=rate(clean,'correct'),attack_target_win=rate(attack,'target_win'),
+                     attack_false_memory=rate(attack,'false_memory_admitted'),
+                     model_calls=summary['actual_http_calls'],model_cost_usd=getattr(provider,'actual_cost_usd',0))
         sr.work(EXP,work,max_runs=1)
     else:
         if not a.out: p.error('--out required for local execution')

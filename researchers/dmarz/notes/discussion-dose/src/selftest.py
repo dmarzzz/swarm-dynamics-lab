@@ -10,7 +10,7 @@ from http.server import BaseHTTPRequestHandler,HTTPServer
 from threading import Thread
 from tasks import make_world,validate_world,task_view,document,digest,allocation,feasible,independent_answer
 from sim import Runner,DEFAULT_CFG,arms_for,run_episode,majority,merge_memory,evaluate,validate_response
-from providers import Scripted,HTTP,ProviderFailure
+from providers import Scripted,HTTP,Anthropic,ProviderFailure,phase_schema
 from analyze import summarize,contrast
 from worker import execute_bundle
 from artifacts import prepare_artifacts
@@ -142,6 +142,44 @@ class Tests(unittest.TestCase):
             self.assertEqual(hashlib.sha256(payload).hexdigest(),index['raw_sha256'])
             first=[x.read_bytes() for x in parts];second=[x.read_bytes() for x in prepare_artifacts(p,limit=300)]
             self.assertEqual(first,second)
+    def test_anthropic_contract_usage_and_no_retry(self):
+        from io import BytesIO
+        import urllib.error
+        response={'stop_reason':'end_turn','content':[{'type':'text','text':'{"value":4}'}],
+                  'usage':{'input_tokens':20,'output_tokens':4}}
+        with patch.dict('os.environ',{'SWARM_MODEL_API_KEY':'test-secret','SWARM_MODEL_WORKSPACE_ID':'wrkspc_test'}):
+            model=Anthropic(model='mock',max_calls=3,max_cost_usd=1,input_usd_per_million=1,output_usd_per_million=5)
+            with patch('urllib.request.urlopen',return_value=BytesIO(json.dumps(response).encode())) as call:
+                self.assertEqual(model.complete({'phase':'parent','context':{}}),{'value':4})
+                req=call.call_args.args[0]; body=json.loads(req.data)
+                self.assertEqual(req.full_url,'https://api.anthropic.com/v1/messages')
+                self.assertEqual(req.get_header('Anthropic-workspace-id'),'wrkspc_test')
+                self.assertNotIn('test-secret',req.data.decode())
+                self.assertEqual(body['output_config']['format']['schema'],phase_schema('parent'))
+                self.assertAlmostEqual(model.actual_cost_usd,.00004)
+                self.assertEqual(model.usage_missing_calls,0)
+            response['stop_reason']='max_tokens'
+            with patch('urllib.request.urlopen',return_value=BytesIO(json.dumps(response).encode())):
+                with self.assertRaisesRegex(ProviderFailure,'incomplete'): model.complete({'phase':'parent','context':{}})
+            self.assertAlmostEqual(model.actual_cost_usd,.00008)
+            error=urllib.error.HTTPError('https://api.anthropic.com',429,'test-secret',{},None)
+            with patch('urllib.request.urlopen',side_effect=error) as call:
+                with self.assertRaisesRegex(ProviderFailure,'provider HTTP 429'): model.complete({'phase':'parent','context':{}})
+                self.assertEqual(call.call_count,1)
+            self.assertEqual(model.usage_missing_calls,1)
+            self.assertEqual(model.calls,3)
+            with self.assertRaisesRegex(ProviderFailure,'call budget'): model.complete({'phase':'parent','context':{}})
+
+    def test_pilot_budget_covers_complete_plan(self):
+        from pilot import plan
+        for smoke,worlds in ((True,1),(False,6)):
+            p=plan(smoke);c=p['model_config']
+            self.assertEqual(c['max_calls'],170*worlds)
+            per_call=((c['max_input_bytes']+16384)*c['input_usd_per_million']+c['max_output_tokens']*c['output_usd_per_million'])/1e6
+            self.assertGreater(c['max_cost_usd'],c['max_calls']*per_call)
+            for phase in ('verify','report','discuss','ballot','parent'):
+                self.assertLess(len(json.dumps(phase_schema(phase)).encode()),4096)
+
     def test_http_adapter_and_caps(self):
         requests=[]
         class Handler(BaseHTTPRequestHandler):
