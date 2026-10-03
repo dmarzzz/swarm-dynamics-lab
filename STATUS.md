@@ -14,11 +14,11 @@
 | sync-consensus | 225 | 8 | 11 | 17 | 0 | 1 | 262 |
 | criticality-measurement | 187 | 4 | 1 | 23 | 0 | 1 | 216 |
 | marl-emergence | 125 | 12 | 0 | 33 | 0 | 3 | 173 |
-| llm-agent-swarms | 284 | 49 | 76 | 198 | 5 | 5 | 617 |
+| llm-agent-swarms | 284 | 49 | 79 | 198 | 5 | 9 | 624 |
 | crowds-and-traffic | 77 | 2 | 1 | 2 | 0 | 3 | 85 |
 | meta | 82 | 9 | 5 | 22 | 0 | 2 | 120 |
 | sybil-resistance | 207 | 45 | 58 | 59 | 5 | 1 | 375 |
-| fork-merge-security | 214 | 14 | 50 | 69 | 0 | 3 | 350 |
+| fork-merge-security | 214 | 14 | 53 | 69 | 0 | 6 | 356 |
 | swarm-detection | 306 | 35 | 60 | 194 | 8 | 6 | 609 |
 
 ## Tasks
@@ -102,7 +102,7 @@
 
 ## Candidate batches
 
-14 free, 6 claimed, 26 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+14 free, 5 claimed, 27 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
@@ -111,7 +111,6 @@
 | [#31](https://github.com/dmarzzz/swarm-lab/issues/31) | claimed | 2026-10-03T19:41Z | [batch] web/llm-agent-swarms: 10 candidates (web-llm-agent-swarms-20261003-01) |
 | [#38](https://github.com/dmarzzz/swarm-lab/issues/38) | claimed | 2026-10-03T19:43Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-02) |
 | [#39](https://github.com/dmarzzz/swarm-lab/issues/39) | claimed | 2026-10-03T19:32Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-01) |
-| [#47](https://github.com/dmarzzz/swarm-lab/issues/47) | claimed | 2026-10-03T19:39Z | [batch] blog/fork-merge-security: 12 candidates (blog-fork-merge-security-20261003-02) |
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
 | [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |

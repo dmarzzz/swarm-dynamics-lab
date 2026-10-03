@@ -2,7 +2,7 @@
 
 # Library index
 
-2302 entries.
+2309 entries.
 
 ## Papers (1499)
 
@@ -1508,7 +1508,7 @@
 | [zwang-2018-detecting](papers/zwang-2018-detecting.md) | Detecting Bot Activity in the Ethereum Blockchain Network | 2018 | 2 | abstract | swarm-detection | dmarz/sd-onchain |
 | [mckee-2023-chatbots](papers/mckee-2023-chatbots.md) | Chatbots in a Honeypot World | 2023 | 1 | abstract | swarm-detection | dmarz/sd-honeypots |
 
-## Blogs (167)
+## Blogs (170)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1538,6 +1538,7 @@
 | [mallen-2024-measuring](blogs/mallen-2024-measuring.md) | Measuring whether AIs can statelessly strategize to subvert security measures | 2024 | 5 | skim | fork-merge-security, llm-agent-swarms | shadow/sol-w3 |
 | [metr-2026-brief](blogs/metr-2026-brief.md) | Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident | 2026 | 5 | full | llm-agent-swarms, sybil-resistance | vishesh/senku-1 |
 | [ord-2026-swarm](blogs/ord-2026-swarm.md) | Swarm Scaling | 2026 | 5 | full | llm-agent-swarms, criticality-measurement | shadow/sol-w4 |
+| [roger-2025-four](blogs/roger-2025-four.md) | Four places where you can put LLM monitoring | 2025 | 5 | skim | fork-merge-security, llm-agent-swarms | shadow/sol-w3 |
 | [schroederdewitt-2024-secret](blogs/schroederdewitt-2024-secret.md) | Secret Collusion: Will We Know When to Unplug AI? | 2024 | 5 | skim | fork-merge-security, llm-agent-swarms | shadow/sol-w3 |
 | [simonwillison-2025-camel](blogs/simonwillison-2025-camel.md) | CaMeL offers a promising new direction for mitigating prompt injection attacks | 2025 | 5 | full | fork-merge-security, llm-agent-swarms, sync-consensus | dmarz/fm-informal |
 | [simonwillison-2025-lethal](blogs/simonwillison-2025-lethal.md) | The lethal trifecta for AI agents: private data, untrusted content, and external communication | 2025 | 5 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-informal |
@@ -1583,6 +1584,7 @@
 | [huggingface-2026-anatomy](blogs/huggingface-2026-anatomy.md) | Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident | 2026 | 4 | full | llm-agent-swarms | vishesh/senku-1 |
 | [invariantlabs-2025-mcp](blogs/invariantlabs-2025-mcp.md) | MCP Security Notification: Tool Poisoning Attacks | 2025 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-informal |
 | [jarviniemi-2024-schelling](blogs/jarviniemi-2024-schelling.md) | Schelling game evaluations for AI control | 2024 | 4 | skim | fork-merge-security, llm-agent-swarms | shadow/sol-w3 |
+| [jarviniemi-2024-trustworthy](blogs/jarviniemi-2024-trustworthy.md) | Trustworthy and untrustworthy models | 2024 | 4 | skim | fork-merge-security, llm-agent-swarms | shadow/sol-w3 |
 | [kadianakis-2023-proof](blogs/kadianakis-2023-proof.md) | Proof of Validator: A simple anonymous credential scheme for Ethereum's DHT | 2023 | 4 | full | sybil-resistance, sync-consensus | dmarz/sybil-flashbots-informal |
 | [knox-2026-unexamined](blogs/knox-2026-unexamined.md) | An unexamined cause of the OpenAI Hugging Face hacking incident: its binary performance metric | 2026 | 4 | full | llm-agent-swarms, collective-decision | shadow/sol-w4 |
 | [lesswrong-2026-mechanistic](blogs/lesswrong-2026-mechanistic.md) | A Mechanistic Explanation of Prompt Injection (and why you should study roles) | 2026 | 4 | full | fork-merge-security, llm-agent-swarms | shadow/sol-w4 |
@@ -1596,6 +1598,7 @@
 | [porobov-2026-price](blogs/porobov-2026-price.md) | The Price of Forgery: measuring Sybil resistance in dollars (a paper) | 2026 | 4 | skim | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [quanta-2019-smarter](blogs/quanta-2019-smarter.md) | Smarter Parts Make Collective Systems Too Stubborn | 2019 | 4 | full | collective-decision, llm-agent-swarms, swarm-intelligence | shadow/sol-w3 |
 | [roger-2023-preventing](blogs/roger-2023-preventing.md) | Preventing Language Models from hiding their reasoning | 2023 | 4 | skim | swarm-detection, fork-merge-security, llm-agent-swarms | shadow/sol-w7 |
+| [roger-2024-toy](blogs/roger-2024-toy.md) | A toy evaluation of inference code tampering | 2024 | 4 | skim | fork-merge-security, llm-agent-swarms | shadow/sol-w3 |
 | [shambaugh-2026-ai](blogs/shambaugh-2026-ai.md) | An AI Agent Published a Hit Piece on Me | 2026 | 4 | full | swarm-detection, llm-agent-swarms | dmarz/sd-informal |
 | [simonwillison-2025-design](blogs/simonwillison-2025-design.md) | Design Patterns for Securing LLM Agents against Prompt Injections | 2025 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-informal |
 | [sun-2024-tee](blogs/sun-2024-tee.md) | TEE-enabled Social Games: An Experiment with Bobu's Magic Show | 2024 | 4 | full | sybil-resistance | dmarz/sybil-foundations |
@@ -2315,10 +2318,11 @@
 | [data-moltbook-takschdube-2026](datasets/data-moltbook-takschdube-2026.md) | Moltbook longitudinal dataset (Taksch Dube): timestamped crawls with derived social and reply graphs | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 
-## Talks (16)
+## Talks (20)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
+| [dalton-2026-breaking](talks/dalton-2026-breaking.md) | Black Hat USA 2026 \| The 'Breaking' News: The OpenAI-Hugging Face Incident | 2026 | 5 | abstract | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
 | [deason-2018-time](talks/deason-2018-time.md) | Time Signature Based Matching - Lauren Deason | 2018 | 5 | abstract | swarm-detection | shadow/sol-w1 |
 | [sutton-2025-father](talks/sutton-2025-father.md) | Richard Sutton – Father of RL thinks LLMs are a dead end | 2025 | 5 | full | fork-merge-security, llm-agent-swarms, meta | dmarz/fm-sutton |
 | [wu-2025-incentivizing](talks/wu-2025-incentivizing.md) | TILOS Seminar: Incentivizing Emergent Behaviors for LLMs via Reinforcement Learning | 2025 | 5 | abstract | llm-agent-swarms, marl-emergence | shadow/sol-w1 |
@@ -2328,6 +2332,9 @@
 | [hickey-2018-identifying](talks/hickey-2018-identifying.md) | Identifying and Monitoring Disinformation across Social Platforms: Techniques for Discovery and Analysis | 2018 | 4 | abstract | swarm-detection | shadow/sol-w1 |
 | [jaques-2022-allen](talks/jaques-2022-allen.md) | Allen School Colloquium: Natasha Jaques (Google + UC Berkeley) | 2022 | 4 | abstract | marl-emergence, collective-decision | shadow/sol-w1 |
 | [wicherski-2011-automated](talks/wicherski-2011-automated.md) | 23C3: Automated Botnet Detection and Mitigation | 2011 | 4 | abstract | swarm-detection | shadow/sol-w1 |
+| [zhang-2025-dont](talks/zhang-2025-dont.md) | Don't Build Agents, Build Skills Instead | 2025 | 4 | skim | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
+| [zhang-2025-how](talks/zhang-2025-how.md) | How to Build Effective AI Agents Without Overengineering Them | 2025 | 4 | full | llm-agent-swarms | shadow/sol-w1 |
+| [amodei-2026-anthropic](talks/amodei-2026-anthropic.md) | Anthropic CEO tells CNN how AI 'agent swarms' could threaten humanity | 2026 | 3 | abstract | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
 | [meir-2026-prediction](talks/meir-2026-prediction.md) | Why Prediction Markets and AI Agents Are a Compliance Nightmare \| Solidus Labs Co-Founder Asaf Meir | 2026 | 3 | abstract | swarm-detection, llm-agent-swarms | shadow/sol-w1 |
 | [nitsche-2026-protect](talks/nitsche-2026-protect.md) | Can we protect democracy from fake news? \| Maxim Nitsche \| TEDxBerlin | 2026 | 3 | abstract | swarm-detection | shadow/sol-w1 |
 | [seibold-2020-frustrating](talks/seibold-2020-frustrating.md) | The Frustrating Beauty of Traffic Waves, and How Automated Vehicles Can Prevent Them | 2020 | 3 | abstract | crowds-and-traffic, swarm-robotics | shadow/sol-w5 |
