@@ -3,7 +3,7 @@ id: review-atlas-project-connections
 type: task
 title: Review question atlas and connect research context to sixteen project briefs
 kind: synthesis
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,12 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-03T21:34Z
-updated: 2026-10-03T21:34Z
+updated: 2026-10-03T22:17Z
+outputs:
+- synthesis/atlas-project-connections.md
+- researchers/vishesh/notes/atlas-review/README.md
+- researchers/vishesh/notes/atlas-review/atlas-review.json
+- researchers/vishesh/notes/atlas-review/project-crosswalk.json
 ---
 
 ## Goal
