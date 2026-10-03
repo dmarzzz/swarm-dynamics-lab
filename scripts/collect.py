@@ -14,6 +14,7 @@ turns each batch into a claimable GitHub issue. See PIPELINE.md.
   python3 scripts/collect.py seed --urls <file> --topic <slug> --by <agent-id> [--source blog]   hand-fed URLs
   python3 scripts/collect.py batch --by <agent-id> [--size 10] [--min-score 1]
   python3 scripts/collect.py openalex --seeds <file> --by <agent-id> [--max 600] [--refs 'refs/remotes/origin/lane/*']
+  python3 scripts/collect.py oa-locate --list <file> --by <agent-id>   free copies of named (paywalled) papers
   python3 scripts/collect.py status
 
 Query file for x-search: one query per line, `<topic-slug>\t<X search query>`; blank lines and # comments ignored.
@@ -786,6 +787,52 @@ def cmd_openalex(a):
     return 0
 
 
+def cmd_oa_locate(a):
+    """--list file: `<topic><TAB><seed>[<TAB>note]` per line (seed as in `openalex`). Finds each named paper in
+    OpenAlex and the best free copy it knows of (arXiv, repository, author PDF, OA publisher page). Papers with a
+    free copy become candidates whose url is that copy; the rest are listed in data/oa-locate-<date>.tsv as
+    needing a browser or library access."""
+    dois, titles, byid = known_papers([])
+    out = RAW / f"oa-locate-{dt.date.today()}.jsonl"
+    rep = ROOT / "data" / f"oa-locate-{dt.date.today()}.tsv"
+    found, report = [], []
+    for ln in Path(a.list).read_text().splitlines():
+        if not ln.strip() or ln.startswith("#"):
+            continue
+        parts = ln.split("\t")
+        topic, seed, note = parts[0].strip(), parts[1].strip(), (parts[2].strip() if len(parts) > 2 else "")
+        w = oa_resolve(seed, byid)
+        if not w or not w.get("id"):
+            report.append((seed, "not-in-openalex", "", note))
+            print(f"  ?  {seed}: not found in OpenAlex")
+            continue
+        doi = (w.get("doi") or "").replace("https://doi.org/", "").lower()
+        if (doi and doi in dois) or _title_key(w.get("title")) in titles:
+            report.append((seed, "already-in-library", "", note))
+            print(f"  =  {seed}: already in library")
+            continue
+        locs = [w.get("best_oa_location") or {}] + [l for l in w.get("locations") or [] if l.get("is_oa")]
+        oa = next((l.get("pdf_url") or l.get("landing_page_url") for l in locs if l and (l.get("pdf_url") or l.get("landing_page_url"))), None)
+        row = oa_row(w, topic, f"oa-locate:{seed}", a.by, [])
+        row["seed_score"] = 4  # named by a lane log as worth catalouging
+        row["oa_url"], row["oa_status"] = oa, (w.get("open_access") or {}).get("oa_status")
+        if note:
+            row["text"] = (note + " | " + row["text"]).strip(" |")
+        if oa:
+            row["url"], row["id"] = (row["url"] if "arxiv.org" in row["url"] else oa), cand_id("paper", row["url"] if "arxiv.org" in row["url"] else oa)
+            found.append(row)
+            report.append((seed, "free-copy", oa, note))
+            print(f"  +  {seed}: {oa}")
+        else:
+            report.append((seed, "paywalled-only", (w.get("doi") or w["id"]), note))
+            print(f"  -  {seed}: no free copy ({w.get('doi') or w['id']})")
+    jl_write(out, found)
+    rep.parent.mkdir(parents=True, exist_ok=True)
+    rep.write_text("seed\tstatus\turl\tnote\n" + "".join("\t".join(r) + "\n" for r in report))
+    print(f"oa-locate: {len(found)} with a free copy -> {out.relative_to(ROOT)}; report -> {rep.relative_to(ROOT)}")
+    return 0
+
+
 # ------------------------------------------------------------------------------------------------ batch
 def score(r: dict) -> int:
     if r.get("seed_score") is not None:
@@ -951,11 +998,13 @@ def main(argv=None):
     p = sub.add_parser("openalex", help="forward/backward citation chasing via OpenAlex: `topic<TAB>fwd|back|both<TAB>seed[<TAB>kws]`")
     p.add_argument("--seeds", required=True); p.add_argument("--by", required=True); p.add_argument("--max", type=int, default=600)
     p.add_argument("--refs", nargs="*", default=["refs/remotes/origin/lane/*"], help="git refs whose library/papers count as known")
+    p = sub.add_parser("oa-locate", help="find free copies of named papers via OpenAlex: `topic<TAB>seed[<TAB>note]`")
+    p.add_argument("--list", required=True); p.add_argument("--by", required=True)
     sub.add_parser("status")
     a = ap.parse_args(argv)
     return {"x-search": cmd_x_search, "apify": cmd_apify, "links": cmd_links, "seed": cmd_seed,
             "lesswrong": cmd_lesswrong, "rss": cmd_rss, "ytsearch": cmd_ytsearch, "jina": cmd_jina,
-            "openalex": cmd_openalex, "batch": cmd_batch, "status": cmd_status}[a.cmd](a)
+            "openalex": cmd_openalex, "oa-locate": cmd_oa_locate, "batch": cmd_batch, "status": cmd_status}[a.cmd](a)
 
 
 if __name__ == "__main__":
