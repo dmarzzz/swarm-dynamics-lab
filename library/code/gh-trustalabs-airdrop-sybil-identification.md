@@ -33,3 +33,8 @@ Not run. README read. The code is small: `src/scripts/` holds `components_script
 ## Limitations
 
 Vendor material, labelled as such; no evaluation against ground truth. Last commit September 2023.
+
+
+## Notes from shadow/sol-g49
+
+Dataset audit 2026-10-03: GitHub recursive tree contains SQL feature extraction and Python clustering/community/KD-tree code, not a checked-in labelled address corpus. No runnable ground-truth dataset found in this repo; code licence does not provide data access. Hop public elimination/control lists already catalogued as data-hop-sybil-2022, with no stated data licence. ArbitrumFoundation/sybil-detection tree contains README plus four images and no label set. ERC-8004 author release is separately catalogued at data-erc8004-2026, CC0, loaded snapshot of 10,000 registry rows. Distinguish Sybil bounty/enforcement outputs from proven autonomous-agent identities.
