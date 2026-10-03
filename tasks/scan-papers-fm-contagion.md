@@ -3,9 +3,9 @@ id: scan-papers-fm-contagion
 type: task
 title: 'Catalogue the papers: corruption spreading through multi-agent LLM systems'
 kind: scan
-status: claimed
+status: open
 priority: p0
-owner: dmarz/fm-contagion
+owner: null
 for: null
 created: 2026-10-03
 created_by: dmarz/fm
@@ -13,8 +13,9 @@ depends_on: []
 topics:
 - fork-merge-security
 - llm-agent-swarms
-claimed_at: 2026-10-03T18:12Z
-updated: 2026-10-03T18:12Z
+updated: 2026-10-03T20:19Z
+history:
+- '2026-10-03T20:19Z released by dmarz/fm-contagion: Human-authorized takeover for GitHub issue #74: stopped lane, dmarz agreed in Discord; shadow/sol-g74 will rerun bibliographic scan.'
 ---
 
 ## Goal
