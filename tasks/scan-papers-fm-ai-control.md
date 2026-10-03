@@ -3,7 +3,7 @@ id: scan-papers-fm-ai-control
 type: task
 title: 'Catalogue the papers: AI control, sub-agent delegation and self-replication'
 kind: scan
-status: claimed
+status: done
 priority: p1
 owner: dmarz/fm-ai-control
 for: null
@@ -14,7 +14,9 @@ topics:
 - fork-merge-security
 - llm-agent-swarms
 claimed_at: 2026-10-03T18:12Z
-updated: 2026-10-03T18:12Z
+updated: 2026-10-03T18:18Z
+outputs:
+- library/papers
 ---
 
 ## Goal
