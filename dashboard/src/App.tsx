@@ -1,1 +1,137 @@
-export default function App() { return <main><h1>Swarm Lab</h1><p>Research observatory. Live data is available at /data/summary.json.</p></main>; }
+import { lazy, Suspense, useEffect, type ComponentType } from 'react';
+import './styles.css';
+import './components/components.css';
+import { useDataset } from './data/load';
+import { useRoute } from './lib/router';
+import { useTheme } from './lib/theme';
+import { Overview } from './views/Overview';
+import { Library } from './views/Library';
+import { Agents } from './views/Agents';
+import { Topics } from './views/Topics';
+import { Timeline } from './views/Timeline';
+import { ResearchPath } from './views/ResearchPath';
+import { ago, parseT } from './lib/format';
+import { Mark } from './components/Mark';
+import type { Dataset } from './data/types';
+
+// Lane G's graph view mounts here once dashboard/src/graph/ exists. Optional at build time.
+const graphMods = import.meta.glob<{ default?: ComponentType<{ data?: Dataset }>; GraphView?: ComponentType<{ data?: Dataset }> }>('./graph/index.tsx');
+const GraphView = Object.values(graphMods)[0]
+  ? lazy(() => Object.values(graphMods)[0]().then((m) => ({ default: (m.default ?? m.GraphView)! })))
+  : null;
+
+const NAV = [
+  { path: '/', label: 'Overview' },
+  { path: '/library', label: 'Library' },
+  { path: '/topics', label: 'Topics' },
+  { path: '/agents', label: 'Agents' },
+  { path: '/timeline', label: 'Timeline' },
+  { path: '/method', label: 'Research path' },
+  ...(GraphView ? [{ path: '/graph', label: 'Graph' }] : []),
+];
+
+export default function App() {
+  const route = useRoute();
+  const state = useDataset();
+  const { theme, toggle } = useTheme();
+  useEffect(() => { window.scrollTo({ top: 0 }); }, [route.path]);
+  useEffect(() => {
+    const cur = NAV.find((n) => n.path === route.path);
+    document.title = cur && cur.path !== '/' ? `${cur.label} | Swarm Lab` : 'Swarm Lab, a research observatory';
+  }, [route.path]);
+
+  const gen = state.status === 'ready' ? parseT(state.data.summary.generated_at) : null;
+
+  return (
+    <div className="shell">
+      <a className="skip" href="#main">Skip to content</a>
+      <header className="masthead">
+        <div className="wrap">
+          <a className="brand" href="#/" aria-label="Swarm Lab overview">
+            <Mark className="brand-mark" />
+            <span className="brand-name">Swarm Lab</span>
+            <span className="brand-sub">research observatory</span>
+          </a>
+          <nav className="nav" aria-label="Views">
+            {NAV.map((n) => (
+              <a key={n.path} href={`#${n.path}`} aria-current={route.path === n.path ? 'page' : undefined}>{n.label}</a>
+            ))}
+          </nav>
+          <div className="mast-right">
+            {gen && (
+              <span className="live" title={`Data exported ${new Date(gen).toLocaleString()}`}>
+                <span className="live-dot" aria-hidden="true" />
+                <span className="live-label">Updated {ago(gen)}</span>
+              </span>
+            )}
+            <button className="icon-btn" onClick={toggle} aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}>
+              {theme === 'dark' ? (
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.3"><circle cx="8" cy="8" r="3" /><path d="M8 1.5v1.6M8 12.9v1.6M1.5 8h1.6M12.9 8h1.6M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M3.4 12.6l1.1-1.1M11.5 4.5l1.1-1.1" /></svg>
+              ) : (
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.3"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8a5.6 5.6 0 1 0 6.8 6.8Z" /></svg>
+              )}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main id="main">
+        {state.status === 'loading' && <Loading />}
+        {state.status === 'error' && <LoadError error={state.error} />}
+        {state.status === 'ready' && (
+          <div key={route.path} className="view">
+            {route.path === '/' && <Overview data={state.data} />}
+            {route.path === '/library' && <Library data={state.data} params={route.params} />}
+            {route.path === '/topics' && <Topics data={state.data} params={route.params} />}
+            {route.path === '/agents' && <Agents data={state.data} />}
+            {route.path === '/timeline' && <Timeline data={state.data} />}
+            {route.path === '/method' && <ResearchPath data={state.data} />}
+            {route.path === '/graph' && GraphView && (
+              <Suspense fallback={<Loading />}><GraphView data={state.data} /></Suspense>
+            )}
+            {!NAV.some((n) => n.path === route.path) && (
+              <div className="wrap page-head">
+                <p className="eyebrow"><span className="tick" />Not found</p>
+                <h1 className="display">Nothing lives at <span className="mono">{route.path}</span>.</h1>
+                <p className="lede"><a href="#/">Back to the overview</a>.</p>
+              </div>
+            )}
+          </div>
+        )}
+      </main>
+
+      <footer className="footer">
+        <div className="wrap">
+          <span>Built from <a href="https://github.com/dmarzzz/swarm-lab">dmarzzz/swarm-lab</a>. Every number on this page is computed from files in the repository.</span>
+          {state.status === 'ready' && (
+            <span className="mono">
+              <a href={`https://github.com/dmarzzz/swarm-lab/commit/${state.data.summary.head_sha}`}>{state.data.summary.head_sha.slice(0, 7)}</a>
+            </span>
+          )}
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+function Loading() {
+  return (
+    <div className="wrap page-head" aria-busy="true" aria-live="polite">
+      <span className="sr-only">Loading research data</span>
+      <div className="skel" style={{ width: 180, height: 12 }} />
+      <div className="skel" style={{ width: 'min(760px, 90%)', height: 44, marginTop: 18 }} />
+      <div className="skel" style={{ width: 'min(520px, 70%)', height: 44, marginTop: 10 }} />
+      <div className="skel" style={{ width: '100%', height: 260, marginTop: 36 }} />
+    </div>
+  );
+}
+
+function LoadError({ error }: { error: string }) {
+  return (
+    <div className="wrap page-head">
+      <p className="eyebrow"><span className="tick" />Data unavailable</p>
+      <h1 className="display">The research export could not be read.</h1>
+      <p className="lede">The dashboard reads <span className="mono">/data/*.json</span>, which CI writes on every push. The request failed with: <span className="mono">{error}</span>. Reload in a minute, or run <span className="mono">python3 dashboard/scripts/export.py</span> locally.</p>
+    </div>
+  );
+}
