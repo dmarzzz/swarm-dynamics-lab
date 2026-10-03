@@ -2,7 +2,7 @@
 
 # Library index
 
-2718 entries.
+2720 entries.
 
 ## Papers (1715)
 
@@ -2617,7 +2617,7 @@
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 | [data-zzzztom-moltbook-2026](datasets/data-zzzztom-moltbook-2026.md) | zzzztom/moltbook-forum-data Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 
-## Talks (130)
+## Talks (132)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -2644,6 +2644,7 @@
 | [jack-2024-collective](talks/jack-2024-collective.md) | Collective dynamics of self-propelled particles | 2024 | 5 | full | active-matter, criticality-measurement | shadow/sol-w3 |
 | [kao-2020-albert](talks/kao-2020-albert.md) | Albert Kao on Animal Sociality & Collective Computation | 2020 | 5 | full | collective-decision, fork-merge-security | shadow/sol-aud |
 | [leonard-2009-flocks](talks/leonard-2009-flocks.md) | Naomi Leonard: Flocks and Fleets: Collective Motion in Nature and Robotics | 2009 | 5 | full | collective-motion, swarm-robotics, sync-consensus | shadow/sol-w3 |
+| [liverpool-2013-soft](talks/liverpool-2013-soft.md) | Soft active matter: liquid crystalline order, rheology and oscillations | 2013 | 5 | full | active-matter, sync-consensus | shadow/sol-w3 |
 | [marchetti-2018-physics](talks/marchetti-2018-physics.md) | The Physics of Active Matter ▸ KITP Colloquium by Cristina Marchetti | 2018 | 5 | full | collective-motion, active-matter | shadow/sol-w3 |
 | [marchetti-2020-why](talks/marchetti-2020-why.md) | Active matter: why does it matter? KITP Blackboard Talk | 2020 | 5 | full | active-matter, collective-motion | shadow/sol-w3 |
 | [marchetti-2021-topology](talks/marchetti-2021-topology.md) | Cristina Marchetti: Active Topology | 2021 | 5 | full | active-matter, collective-motion | shadow/sol-w3 |
@@ -2705,6 +2706,7 @@
 | [reclaim-2024-frontiers](talks/reclaim-2024-frontiers.md) | Panel 2 : Frontiers of Sybil Resistance | 2024 | 4 | full | sybil-resistance | shadow/sol-w8 |
 | [reclaim-2024-using](talks/reclaim-2024-using.md) | Panel 4 : Using ZK for sybil resistance solutions | 2024 | 4 | full | sybil-resistance | shadow/sol-w8 |
 | [reclaim-2024-why](talks/reclaim-2024-why.md) | Panel 1 : Why Sybil resistance even matters | 2024 | 4 | full | sybil-resistance | shadow/sol-w8 |
+| [shankar-2026-physics](talks/shankar-2026-physics.md) | Saturday Morning Physics: The Physics of Active Matter | 2026 | 4 | full | active-matter, collective-motion | shadow/sol-w3 |
 | [sood-2017-single](talks/sood-2017-single.md) | Single particle and collective behavior of self-propelled active particles (Lecture 02) | 2017 | 4 | abstract | active-matter, collective-motion | shadow/sol-w3 |
 | [strogatz-2011-coupled](talks/strogatz-2011-coupled.md) | Coupled Oscillators That Synchronize Themselves (2011 Simons Lectures, lecture 1) | 2011 | 4 | full | sync-consensus, collective-motion, criticality-measurement | shadow/sol-w6 |
 | [strogatz-2013-science](talks/strogatz-2013-science.md) | Steven Strogatz The Science of Sync | 2013 | 4 | full | sync-consensus | shadow/sol-w8 |
