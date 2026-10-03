@@ -54,3 +54,10 @@ Simulated environments only; post-intrusion mitigation, not prevention (stated b
 ## Relevance to us
 
 Q2: BlindGuard is a practical merge-time filter that does not need to know the attack in advance, which matters for a parent whose children return from unknown hostile domains. Its global-context feature is the relevant idea for collusion: a set of corrupted children can agree with each other while deviating from the parent's intent, which is what a pure k-of-n vote would miss. It gives empirical detection rates, not a threshold guarantee. Q1: like G-Safeguard it needs the interaction graph, so it assumes the parent sees which child said what. Related: [[wang-2025-g-safeguard]], [[zhou-2026-infa-guard]], [[ma-2026-catching]].
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2508.08127 . Read depth in this session: abstract.
+
+Title, eight authors and initial 2025 date verified against the arXiv record. Abstract confirms unsupervised attack detection with isolation of suspicious agents, not prevention before intrusion. A model trained on normal dynamics does not establish resilience to every adaptive agent or guarantee that the isolated node is the original source rather than an infected intermediary. Benchmark standardization is addressed by [[mateo-torrejon-2026-gammaf]].

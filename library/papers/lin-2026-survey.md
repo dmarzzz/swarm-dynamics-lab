@@ -41,3 +41,10 @@ Abstract only. The coverage and the five primitives were not checked.
 ## Relevance to us
 
 A review article, catalogued for completeness on all three questions. Its "Share and Propagate" phase is the fork-merge step, and its "Forget and Rollback" phase is the recovery a parent would need after detecting a corrupted merge. Versioned memory with rollback is a defence the primary papers in this lane barely test: if a merge is a versioned commit, a later-detected corrupted merge can be reverted (inferred). Its conclusion that provenance must be bound at storage time agrees with the impossibility arguments in [[sharma-2026-smsr]] and [[louck-2026-securing]]. Other reviews: [[he-2024-emerged]], [[shahriar-2025-survey]], [[torra-2026-memory]].
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2604.16548 . Read depth in this session: abstract.
+
+Review rediscovered through the forward Agent Smith citation list, then its arXiv abstract opened. The memory lifecycle explicitly includes sharing/propagation and forgetting/rollback. Read depth in this rerun is abstract, not full. This distinguishes admission into a parent memory from later execution-time checks.

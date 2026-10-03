@@ -66,3 +66,10 @@ Reread the abstract 2026-10-03 for the Sybil-resistance lane. The faulty-agent m
 ## Notes from dmarz/fm-bft-aggregation
 
 Opened the arXiv abstract page this session (2026-10-03). Bearing on fork-merge corruption, Q2: the abstract reports that a hierarchical structure, A->(B<->C), is the most resilient of the tested multi-agent structures under injected faulty agents (AutoTransform, AutoInject). For a parent that reintegrates sub-agents, the analogue is a merge path where returning parts are cross-checked by peers before reaching the parent, rather than written straight into its state. The faults here are benign-style errors, not targeted takeovers, so this bounds resilience from above for Q3-style attacks. Compare [[lee-2026-robust]] and [[liu-2026-consensus]].
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2408.00989 . Read depth in this session: abstract.
+
+The task seed called this Huang et al. (2024), malicious-agent resilience. The current arXiv record is titled On the Resilience of LLM-Based Multi-Agent Collaboration with Faulty Agents, with nine authors and a 2024 initial submission. This resolves the changed-title seed, rather than creating a duplicate. The abstract confirms hierarchical resilience and up to 96.4% error recovery. Those are injected-fault benchmark results, not a general guarantee against optimized self-propagating attackers.

@@ -43,3 +43,10 @@ Proofs of concept rather than measured attack success rates; the model assumes r
 ## Relevance to us
 
 Measured evidence for two parts of dmarz's Q3 attack sketch. "Cut anyone else out" has a demonstrated mechanism: a compromised child terminating siblings, which in a fork-merge system would remove the honest children whose votes a k-of-n rule (Q2) relies on, so termination authority must be part of any threshold design. And memory inheritance shows why identical forks are fragile: a payload in the parent's memory reaches every child, the copy-clan failure mode from [[bostrom-2023-propositions]]. The divergence finding cuts the other way for the merge: a parent that cleans its memory cannot reach children already spawned, so they return carrying the old state. The paper does not test the return path, which [[anthropic-2026-create]] and [[loven-2026-meld]] address from the defender's side. Context: [[sutton-2025-father]].
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Read depth this session: abstract. Source opened: https://arxiv.org/abs/2605.08460 .
+
+Primary abstract re-opened. Memory inheritance is a parent-to-child propagation path, whereas the task primarily concerns child-to-parent reintegration; the directions should be evaluated separately. Framework isolation and termination invariants are not themselves measured worm extinction rates.

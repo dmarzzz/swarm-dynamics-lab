@@ -53,3 +53,10 @@ No defence is studied (stated). Blocking is a denial-of-service objective; the p
 ## Relevance to us
 
 Q3: a recursive "do X and tell everyone you talk to to do X" instruction is the minimal self-propagating payload, and the paper shows it saturates small systems in under two turns. For fork-merge, this is the mechanism by which one corrupted child, after merge, would reach every sibling the parent subsequently forks. It also shows that payloads need not look harmful to spread, so harm filters at merge time do not catch it. Q2: success fell with more agents for weaker models (GPT-3.5-turbo: 70% at 3 agents to 30% at 10), which is weak evidence that dilution helps only when the models are not compliant. Related: [[papadopoulos-2026-mind]], [[zhang-2026-agentworm]], [[zhang-2024-breaking]].
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2502.14529 . Read depth in this session: full.
+
+Read all sections and both appendices. Table 1 labels are now checked: for 10 GPT-4o-mini agents the blocked-agent proportions are 79% AutoGen and 92% Camel, versus 52% and 64% for the baseline. These are P-ASR fractions of agents blocked, not percentages of arbitrary-code execution trials. The existing statement that no defence was studied is incomplete: Appendix A evaluates an LLM checker, a workflow monitor and perplexity detection. The monitor interception rate remains below 0.25, and attack perplexity is close to benign content in Table 5. No successful containment defence is developed. The 1.6-1.9 turn peaks in Table 2 are specific to the shared-history framework setups; topological tests take more turns (Table 4).

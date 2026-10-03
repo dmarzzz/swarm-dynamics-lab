@@ -53,3 +53,10 @@ No defence evaluated and no baseline attack. Interception is assumed possible (e
 ## Relevance to us
 
 Q3: the merge channel between a returning child and the parent is exactly a message the parent receives; AiTM measures what happens when an adversary controls one such channel. The position result is directly relevant: corrupting the link into a higher-level aggregator (the parent) roughly doubled success in the tree setting, which is the fork-merge topology. Q2: the complete-graph and tree results are the only evidence here that peer cross-checking reduces success, and only for manipulations other agents can notice (answer flips), not for subtle code additions or refusals. Q1: the attacker needed no knowledge of the structure, so hiding the structure alone would not stop a channel-level adversary. Related: [[triedman-2025-multi]], [[liang-2025-dont]], [[yu-2024-netsafe]].
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2502.14847 . Read depth in this session: skim.
+
+Re-read abstract and Tables 1, 2 and 4 in the HTML. Table 1 has 64 cells across two attack objectives, not 32 total: 32 targeted and 32 denial-of-service cells. Its minimum targeted ASR is 40.7%. The parent-position comparison in Table 2 is 40.7% versus 67.4% for AutoGen/MMLU-bio/tree; the later-speaker comparison is 43.9% versus 95.3% for AutoGen/MMLU-bio/complete. These are targeted ASRs, not real-world interception probabilities. Table 4 confirms 0% for ChatDev CPO/CEO in the tested roles and 45.4-69.3% for CTO/Programmer across its tasks. A controlled incoming communication channel is assumed; the study does not prove that hidden real systems can be intercepted.

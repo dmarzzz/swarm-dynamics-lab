@@ -54,3 +54,10 @@ Robustness is evaluated with two simple attacks and is not the design target; th
 ## Relevance to us
 
 Q2: shows that a sparse, learned communication graph can cut a corrupted node's reach as a side effect, a cheap structural defence rather than a voting threshold. Q3: the warm-up-then-freeze design is exactly what a patient adversary exploits: a child that behaves during the period when the parent decides which channels to keep. Background relevance only. Related: [[wang-2025-g-safeguard]] (same group), [[yu-2024-netsafe]].
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2410.02506 . Read depth in this session: abstract.
+
+AgentPrune seed resolved to this title; nine authors and original 2024 date verified. The abstract confirms 28.1-72.8% token reduction and a secondary robustness evaluation. Its topology is learned for communication economy, so robustness under the tested malicious-agent configurations should not be relabelled as a proof of worm containment.

@@ -51,3 +51,10 @@ Small trial counts (10 per cell, 40 for the add-on experiments). Older models (G
 ## Relevance to us
 
 Q3: the strongest measured attack on a delegating parent is not a prompt that rewrites the child's identity but a returned report (status, error, result) that the parent treats as trusted metadata and acts on. In fork-merge terms the merge channel itself is the attack surface: a child that read hostile content returns a plausible "error" and the parent executes the remedy. Q2: one compromised edge agent was enough; nothing in these systems requires agreement among several children, which is the gap a k-of-n merge rule would close. Compare [[liang-2025-dont]] (multi-hop topology attacks, also ~0% for single-agent injections), [[he-2025-red]] (message interception), [[zhang-2024-breaking]] (malfunction loops).
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2503.12188 and https://arxiv.org/html/2503.12188v2 . Read depth in this session: skim, specifically abstract, setup and result tables.
+
+The quoted 58-90% is confirmed in Table 2 for GPT-4o across five orchestrators: Magentic-One 58%, Selector 65%, Round-Robin 73%, CrewAI 62%, MetaGPT Data Interpreter 90%. It is the measured code-execution objective for the tested web-input configuration, not a fraction of real deployed systems. Table 2 uses two user queries and three error-file types, with ten trials per orchestrator/model/query/error tuple, so a displayed orchestrator/model rate pools tuples rather than representing only ten trials total. The same table confirms 0-1% for the indirect-injection baselines in those configurations. These numbers do not transfer automatically to tool sandboxing, validated merge protocols or current model versions. The high-leverage mechanism is low-trust evidence laundered through an agent report into an orchestrator decision; no payloads or operational sequence are reproduced here.

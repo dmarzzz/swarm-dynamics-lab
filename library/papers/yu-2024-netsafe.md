@@ -56,3 +56,10 @@ Six-node graphs, a single model family, attackers defined only through system pr
 ## Relevance to us
 
 Q2: this is one of the few measurements of how outcome scales with the number of corrupted nodes. The result is not a sharp Byzantine threshold: degradation is gradual with attacker count, highly topology dependent, and alignment-violating content was blocked even at a 5 of 6 attacker majority while plausible misinformation was not. For fork-merge, the threat that survives majority rejection is subtle factual corruption, not overtly harmful content. Q1: greater average distance from attackers was safer, which supports routing a returning child's content through intermediaries rather than straight into the parent. Related: [[wang-2025-g-safeguard]] (same group, defence), [[he-2025-red]], [[liang-2025-dont]].
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2410.15686 . Read depth in this session: abstract.
+
+Seed title, nine authors and 2024 initial date verified. The abstract distinguishes misinformation propagation from alignment-related aggregation safety. Consequently, overt harmful-output resistance and accurate factual aggregation must not be collapsed into one contagion metric. Later quarantine approaches [[wang-2025-g-safeguard]] and [[miao-2025-blindguard]] are separate detector interventions; [[niu-2026-reliability-contagion]] explains why density conclusions depend on communication-budget assumptions.

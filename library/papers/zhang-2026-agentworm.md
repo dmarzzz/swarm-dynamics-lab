@@ -61,3 +61,10 @@ Single-host testbed, default configurations, payloads are stand-ins. The authors
 ## Relevance to us
 
 Q3: the measured strongest attack is configuration write-back. The victim is persuaded to edit the file that defines it, after which the payload is part of its identity at every restart, and its outputs carry the payload to whoever reads them. A child returning to a parent that loads the child's notes, skills or memory as trusted configuration is exactly this channel; the skill-package route (82%) is the analogue of a child returning a "tool" or procedure. Q2 and defence: in-loop defences topped out at a 43% relative reduction, while making the identity files unwritable from the session (sandbox) took success to zero. For fork-merge this argues for a merge that never lets returned content write to the parent's own configuration or memory directly, and for treating the parent's identity as read-only to anything a child produces. Related: [[papadopoulos-2026-mind]], [[cohen-2024-here]], [[lee-2024-prompt]], [[wu-2025-securing]] (same group, defence side).
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2603.15727 . Read depth in this session: skim.
+
+Abstract, setup and Tables II-IV re-read in HTML v3. The 63% aggregate is the composite event that persistence, execution and propagation all succeed, across 2,250 trials (five models, three vectors, three benign stand-in objectives, 50 trials per cell). It is not the propagation-only rate and not a prevalence measurement from the public ecosystem. Table II confirms model rates 84%, 78%, 56%, 56%, 40% and aggregate vector rates 51%, 82%, 55%. Trials allow up to three attempts, so 63% is not a first-attempt rate. Tables V-VI separately evaluate restart survival and bounded relay chains. Epidemic endemic fractions are projected under assumed connectivity and cleanup rates, not observed. Compare [[zha-2026-autonomous]] on cross-framework re-entry and [[wu-2026-collective]] on the gap between conditional susceptibility and a demonstrated autonomous cascade.

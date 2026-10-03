@@ -58,3 +58,10 @@ Persistence through shared memory means a Sybil agent's influence outlives its s
 ## Notes from dmarz/fm-memory-injection
 
 Abstract re-read 2026-10-03 for the fork-merge memory-injection lane. The key point for us is the last measured claim: manipulated knowledge persists through RAG frameworks in which benign agents store chat histories and later retrieve them, so influence continues after the interaction ends. That is the persistence step of a fork-merge attack (Q3). A sub-agent that merely talked with a persuasive adversarial agent in a foreign domain can carry back counterfactual knowledge in its stored history, with no explicit prompt manipulation and without losing its general capability. Such content passes injection screens, compare [[karunanidhi-2026-utility]]. The authors' suggested "guardian" agents and fact-checking are untested in the abstract.
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2407.07791 . Read depth in this session: skim.
+
+Seed title and all ten authors verified against the arXiv landing page. Results/setup were skimmed in the HTML. The threat includes a deliberately modified agent whose persuasive false beliefs travel through ordinary dialogue, then persist through stored histories and retrieval. This is an evidence-contamination mechanism, not necessarily a self-replicating instruction worm. The methods use knowledge-editing benchmark subsets, so no claim about naturally occurring misinformation rates follows. Compare [[sua-2026-contagion]], which measures analyst-to-coordinator belief contamination in an offline trading setting.

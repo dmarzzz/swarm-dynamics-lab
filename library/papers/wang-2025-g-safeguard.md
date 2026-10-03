@@ -53,3 +53,10 @@ The authors state it is reactive: by the time an attacker is identified, some no
 ## Relevance to us
 
 Q2 and defence at merge time: G-Safeguard is a learned per-agent quarantine rule, the graph version of "drop the child that looks compromised before merging". It does not give a k-of-n guarantee; it gives a detector whose error rates are empirical. Q1: it depends on seeing who said what to whom, so it is in tension with hiding which child returns. Q3: memory poisoning was one of its three tested attack types, which is the closest of the three to a returning sub-agent carrying corrupted memory. Related: [[yu-2024-netsafe]], [[miao-2025-blindguard]] (unsupervised successor), [[zhou-2026-infa-guard]] (adds an "infected" class), [[wu-2025-securing]].
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2502.11127 . Read depth in this session: abstract.
+
+Seed title, eight authors and 2025 date verified. The abstract describes topology-guided graph anomaly detection and pruning, including claimed performance recovery above 40% in some settings. This is performance recovery under the tested attacks, not a 40-point universal decrease in infection prevalence or a Byzantine agreement bound. Compare the common evaluation environment [[mateo-torrejon-2026-gammaf]].

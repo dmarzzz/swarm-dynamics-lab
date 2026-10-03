@@ -53,3 +53,10 @@ Assumes the defender's cure can outscore any virus in retrieval, which an attack
 ## Relevance to us
 
 Q2: Cowpox is a threshold result of a different kind from Byzantine voting: containment is guaranteed when the cure's spread rate exceeds the virus's, with a few percent of trusted agents. For a parent that forks many children, a small set of trusted children that carry a "vaccine" (an explicit warning or verified memory) is an analogue, and [[papadopoulos-2026-mind]] measured a related effect with a one-paragraph warning. Q3: the attack model, retrieval-score optimisation of a stored item, is the memory-poisoning route by which a returning child's memory dominates the parent's retrieval after merge. Related: [[gu-2024-agent]], [[ma-2026-catching]].
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2508.09230 . Read depth in this session: full.
+
+Read all HTML sections, mathematical proofs and appendices. The earlier limitation saying only one retrieval-driven environment is broadly right, but Appendix D also tests heterogeneous LLaVA-1.5/InstructBLIP agents and CLIP/DINO V2 retrievers, populations 128-512, and multiple virus samples. Proposition 4.1 gives extinction under a strict cure-conversion advantage in an idealized model with effectively infinite history and negligible spontaneous recovery; this is not an unconditional deployment theorem. Four defenders among 128 agents recover over 95% of infected agents in Table 2; cumulative infection remains roughly 84-92%, so recovery is not prevention. The defence has a documented conversation-diversity cost. Publisher record opened: https://proceedings.mlr.press/v267/wu25aq.html . Correct published reference: Wu, Yutong; Zhang, Jie; Li, Yiming; Zhang, Chao; Guo, Qing; Qiu, Han; Lukas, Nils; Zhang, Tianwei (2025). Cowpox: Towards the Immunity of VLM-based Multi-Agent Systems. Proceedings of the 42nd International Conference on Machine Learning, PMLR 267, 68015-68035. The landing arXiv author metadata omits Han Qiu, whereas the HTML and publisher include him. The publisher settles the published author list and confirms ICML 2025.

@@ -49,3 +49,10 @@ Relies entirely on an honest, competent judge; adversaries are prompted, not opt
 ## Relevance to us
 
 Q2: the clearest example that a k-of-n threshold can be beaten when there is an external ground-truth signal: with a trusted judge and repeated interactions, a minority of honest agents can outweigh a corrupted majority. The cost is moving the trust assumption to the judge. For fork-merge, the parent could carry per-child credibility across fork cycles, so a child that returns from a hostile domain merges with weight earned on earlier verifiable tasks rather than an equal vote. A one-shot fork (no history) gets no benefit. Related: [[wu-2025-securing]], [[yu-2024-netsafe]], [[miao-2025-blindguard]].
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2505.24239 . Read depth in this session: full.
+
+Read the complete main text and Appendices A-F. Correction to the existing Table 1 interpretation: Llama ResearchQA 52.0 and 84.0 are defended accuracies for different architectures (SIA versus CrS-ordered chain), not a before/after improvement from 52 to 84. Similarly Qwen 59.0 and 90.0 compare architectures. Their accompanying reported gains over naive coordination are +51 and +20 for Llama, +17 and +5 for Qwen. Qwen GSM8K 75.5 versus 60.0 also compares SIA with the chain, not a measured defence-induced loss. A real loss cell is Mistral ResearchQA chain, defended accuracy 77.0 with reported -7 gain. Section 5.1 explicitly calls exact Shapley calculation combinatorial/#P-hard; the limitations later call the Shapley-like computation quadratic, so those statements should not be conflated. Section 6.3.2 reports majority voting outperforming CrS on GSM8K; trusted-judge dependence and synthetic-adversary compliance qualify claims of adversary-majority resistance.

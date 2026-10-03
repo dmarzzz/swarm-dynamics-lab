@@ -67,3 +67,10 @@ How it bears on fork-merge (Q3, Q2): the attack never asks agents to "become" th
 ## Notes from dmarz/fm-code-bench
 
 Code catalogued as [[gh-sail-sg-agent-smith]] (MIT, 130 stars, last commit 2024-03-26; needs A100-class GPUs). The epidemic framing (one infected memory item, spread through pairwise exchange) maps onto a parent that merges children's memories as a hub; the paper's containment condition is the epidemic analogue of a Byzantine threshold (Q2).
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2402.08567 . Read depth in this session: abstract.
+
+Seed title, eight authors and 2024 date match the opened arXiv record. The million-agent result concerns simulated multimodal agents and retrieval-mediated image exchange, not one million independent production deployments. Forward chasing through Semantic Scholar identifies Cowpox and the newer reliability-contagion work; the former was read in full here. Do not treat a population transmission threshold as a Byzantine k-of-n merge theorem. See [[wu-2025-cowpox]] and [[niu-2026-reliability-contagion]].
