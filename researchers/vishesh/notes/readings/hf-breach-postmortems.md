@@ -7,12 +7,17 @@ title: >-
 authors: HF disclosure — Hugging Face `system` account, no individual byline. HF technical timeline — Hugo Larcher, Adrien Carreira, "raphael g", Christophe Rannou. OpenAI technical report — no individual byline; PDF metadata Author field reads "OpenAI".
 org_or_venue: huggingface.co/blog (two posts) + cdn.openai.com (PDF attached to the openai.com newsroom)
 date: 2026-07-16 (HF disclosure) · 2026-07-27 (HF technical timeline) · 2026-08-26 (OpenAI technical report; PDF CreationDate 2026-08-26 14:26 PDT)
-url_loaded: https://huggingface.co/blog/security-incident-july-2026
-url_loaded: https://huggingface.co/blog/agent-intrusion-technical-timeline
-url_loaded: https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf
-url_loaded: https://aivillageblog.substack.com/p/ai-village-reacts-to-huggingface (secondary, context only)
 status: partial
 fetched: 2026-10-03
+urls_loaded:
+  - "https://huggingface.co/blog/security-incident-july-2026"
+  - "https://huggingface.co/blog/agent-intrusion-technical-timeline"
+  - "https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf"
+  - "https://aivillageblog.substack.com/p/ai-village-reacts-to-huggingface"
+library_ids:
+  - huggingface-2026-security
+  - huggingface-2026-anatomy
+  - openai-2026-hugging
 ---
 
 ## What it is (2-4 sentences)

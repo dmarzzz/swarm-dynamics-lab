@@ -8,6 +8,34 @@ There is published research closely related to using knowledge of one agent to i
 
 The specific combination remains a research question: can a behavioral model learned from one agent support ordinary-looking choice manipulations that transfer to an unseen group? This brief does not claim that combination is novel or that it reliably works. No experiments were run for this review.
 
+## Current scope and external influence model
+
+Updated October 3 following the researcher’s clarification: the attacker remains outside the swarm. It may publish or alter a bounded external document that ordinary retrieval can encounter. All swarm members remain legitimate. The attacker does not control system prompts, membership, tools, voting rules, or ground truth. Access to observe one agent is a separate assumption, not implied by control of the document.
+
+The current question is whether profiling one agent improves external content manipulation beyond a generic intervention, and whether any accepted claim then propagates through peer communication. A false traffic bulletin is an illustrative example: agents keep minimizing travel time but optimize against a contaminated estimate. This does not demonstrate recovery of an internal utility function.
+
+| Stage | Evidence required in a future study |
+| --- | --- |
+| Exposure | The external document appeared in normal retrieval; report rank and access constraints. |
+| Acceptance | An agent’s recorded estimate or choice incorporated the false claim. |
+| Propagation | Peers received the claim through identifiable messages, distinguished from direct retrieval. |
+| Outcome | The collective chose the target when it was worse under independent ground truth. |
+| Profiling value | A tailored document outperformed an equally exposed generic document on held-out tasks. |
+
+Report end-to-end success over all tasks separately from success conditional on retrieval. Include a no-communication arm and an independent-verification arm. The comparison must not confuse shared direct exposure with peer influence.
+
+The [animated guide](swarm-influence-guide.html) illustrates this mechanism. Its 1,000-task counts and 95% target-selection endpoint are invented explanatory values, not measured results, predictions, or target thresholds for statistical testing.
+
+## Additional prior work for this scope
+
+The original seven references below cover preference inference and collective influence. External data control makes three existing library records essential comparisons:
+
+- [[zou-2024-poisonedrag]] — corruption of retrieved knowledge; compare corpus access and retrieval assumptions.
+- [[chen-2024-agentpoison]] — poisoning agent memory or knowledge bases; distinguish trigger-based behavior from ordinary false factual evidence.
+- [[greshake-2023-not]] — indirect prompt injection through retrieved content; distinguish instruction following from factual belief updates.
+
+These sources motivate different mechanisms and do not establish this proposed swarm experiment. The incremental question is what agent profiling and collective communication add over existing external-content attacks. See [project selection and evidence requirements](project-briefs/README.md).
+
 ## The concept
 
 The proposed mechanism has three components:
@@ -16,7 +44,7 @@ The proposed mechanism has three components:
 2. Test whether those estimates generalize to other agents or to the collective decision process.
 3. Examine whether changing the presentation, evidence, or available alternatives shifts the collective toward a designated option.
 
-Neurolinguistic programming is an analogy used as an informal analogy. The technical foundations used here are behavioral preference inference, adversarial persuasion, information design, and choice architecture. The analogy is not evidence of a shared psychological mechanism.
+Neurolinguistic programming was an informal analogy in the original discussion. The technical foundations used here are behavioral preference inference, adversarial persuasion, information design, and choice architecture. The analogy is not evidence of a shared psychological mechanism.
 
 A proposed descriptive label is **preference-informed adversarial choice design for multi-agent systems**. This is a working label, not an established field name.
 

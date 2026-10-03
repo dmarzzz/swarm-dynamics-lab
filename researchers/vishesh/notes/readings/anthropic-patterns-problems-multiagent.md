@@ -4,9 +4,12 @@ title: "Patterns and problems in emerging multiagent systems"
 authors: "Anthropic Frontier Red Team; corresponding author: Carolyn Zou"
 org_or_venue: Anthropic (Frontier Red Team), anthropic.com/research
 date: 2026-08-13
-url_loaded: https://www.anthropic.com/research/multiagent-systems
 status: found
 fetched: 2026-10-03
+urls_loaded:
+  - "https://www.anthropic.com/research/multiagent-systems"
+library_ids:
+  - anthropic-2026-patterns
 ---
 
 ## What it is (2-4 sentences)

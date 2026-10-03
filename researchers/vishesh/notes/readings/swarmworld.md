@@ -4,11 +4,14 @@ title: "SwarmWorld: Stigmergic technological evolution in societies of language-
 authors: Subhadeep Pal, Fiona Y. Wang, Markus J. Buehler (MIT — Laboratory for Atomistic and Molecular Mechanics)
 org_or_venue: arXiv preprint (arXiv:2608.26081v1; cs.AI primary, cross-list cond-mat.mtrl-sci, cs.CL)
 date: 2026-08-26
-url_loaded: http://export.arxiv.org/api/query?search_query=all:SwarmWorld&max_results=5
-url_loaded: https://arxiv.org/abs/2608.26081
-url_loaded: https://arxiv.org/html/2608.26081v1
 status: found
 fetched: 2026-10-03
+urls_loaded:
+  - "http://export.arxiv.org/api/query?search_query=all:SwarmWorld&max_results=5"
+  - "https://arxiv.org/abs/2608.26081"
+  - "https://arxiv.org/html/2608.26081v1"
+library_ids:
+  - pal-2026-swarmworld
 ---
 
 ## What it is (2-4 sentences)
