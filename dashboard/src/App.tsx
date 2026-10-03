@@ -12,10 +12,9 @@ import { Timeline } from './views/Timeline';
 import { ResearchPath } from './views/ResearchPath';
 import { ago, parseT } from './lib/format';
 import { Mark } from './components/Mark';
-import type { Dataset } from './data/types';
 
 // Lane G's graph view mounts here once dashboard/src/graph/ exists. Optional at build time.
-const graphMods = import.meta.glob<{ default?: ComponentType<{ data?: Dataset }>; GraphView?: ComponentType<{ data?: Dataset }> }>('./graph/index.tsx');
+const graphMods = import.meta.glob<{ default?: ComponentType<{ className?: string }>; GraphView?: ComponentType<{ className?: string }> }>('./graph/index.tsx');
 const GraphView = Object.values(graphMods)[0]
   ? lazy(() => Object.values(graphMods)[0]().then((m) => ({ default: (m.default ?? m.GraphView)! })))
   : null;
@@ -87,7 +86,7 @@ export default function App() {
             {route.path === '/timeline' && <Timeline data={state.data} />}
             {route.path === '/method' && <ResearchPath data={state.data} />}
             {route.path === '/graph' && GraphView && (
-              <Suspense fallback={<Loading />}><GraphView data={state.data} /></Suspense>
+              <Suspense fallback={<Loading />}><div className="wrap graph-page"><GraphView /></div></Suspense>
             )}
             {!NAV.some((n) => n.path === route.path) && (
               <div className="wrap page-head">

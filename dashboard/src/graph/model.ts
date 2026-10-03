@@ -44,6 +44,7 @@ export function hash(s: string) {
 }
 export const kinds = ["paper", "blog", "thread", "code", "dataset", "talk"];
 export const teams = ["dmarz", "vishesh", "shadow", "unknown"];
+/** Data colours resolve from the dashboard palette tokens (--k-*, --team-*); hex values are the pre-hydration fallback. */
 export const colors: Record<string, string> = {
   paper: "#526b87",
   blog: "#b68a37",
@@ -169,5 +170,31 @@ export function stepWorld(w: World, dt: number, time: number) {
     p.vy *= Math.pow(0.65, dt);
     p.x += p.vx * dt;
     p.y += p.vy * dt;
+  }
+}
+
+const TOKEN: Record<string, string> = {
+  paper: "--k-paper", blog: "--k-blog", thread: "--k-thread", code: "--k-code", dataset: "--k-dataset", talk: "--k-talk",
+  dmarz: "--team-dmarz", vishesh: "--team-vishesh", shadow: "--team-shadow", unknown: "--team-unknown",
+};
+let probe: CanvasRenderingContext2D | null = null;
+function toHex(css: string): string | null {
+  if (!css) return null;
+  probe ??= document.createElement("canvas").getContext("2d", { willReadFrequently: true });
+  if (!probe) return null;
+  probe.clearRect(0, 0, 1, 1);
+  probe.fillStyle = "#000";
+  probe.fillStyle = css;
+  probe.fillRect(0, 0, 1, 1);
+  const [r, g, b] = probe.getImageData(0, 0, 1, 1).data;
+  return "#" + [r, g, b].map((v) => v.toString(16).padStart(2, "0")).join("");
+}
+/** Re-read palette tokens into colors (on mount and on theme change). */
+export function syncPalette() {
+  if (typeof document === "undefined") return;
+  const cs = getComputedStyle(document.documentElement);
+  for (const [k, v] of Object.entries(TOKEN)) {
+    const hex = toHex(cs.getPropertyValue(v).trim());
+    if (hex) colors[k] = hex;
   }
 }

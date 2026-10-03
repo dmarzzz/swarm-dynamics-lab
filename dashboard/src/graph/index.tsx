@@ -6,6 +6,7 @@ import {
   label,
   START,
   stepWorld,
+  syncPalette,
   teams,
   timeLabel,
 } from "./model";
@@ -25,6 +26,7 @@ export interface SwarmProps {
   className?: string;
   onSelect?: (entry: LibraryEntry) => void;
 }
+const KIND_NAMES: Record<string, string> = { paper: "Papers", blog: "Blogs", thread: "Threads", code: "Code", dataset: "Datasets", talk: "Talks" };
 let cached: Promise<SwarmData> | undefined;
 function load(url: string) {
   return Promise.all(
@@ -85,6 +87,7 @@ function Field({
   const host = useRef<HTMLDivElement>(null),
     canvas = useRef<HTMLCanvasElement>(null);
   const [hover, setHover] = useState<LibraryEntry>();
+  const [hoverCluster, setHoverCluster] = useState<string>();
   const [view, setView] = useState({ zoom: 1, x: 0, y: 0 });
   const [reduced, setReduced] = useState(false);
   const [dimensions, setDimensions] = useState({ width: 800, height: 500 });
@@ -110,6 +113,14 @@ function Field({
     onSelect,
     onStats,
   };
+  const [, setPaletteRev] = useState(0);
+  useEffect(() => {
+    syncPalette();
+    setPaletteRev((n) => n + 1);
+    const mo = new MutationObserver(() => { syncPalette(); setPaletteRev((n) => n + 1); });
+    mo.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+    return () => mo.disconnect();
+  }, []);
   const hit = useRef<{ p: Vertex; id: string }[]>([]);
   const pointer = useRef({ x: 0, y: 0, drag: false, moved: false });
   useEffect(() => {
@@ -203,7 +214,7 @@ function Field({
       total += performance.now() - start;
       if (now - lastStats > 1500) {
         const fps = (frames * 1000) / (now - lastStats);
-        s.onStats?.(`${engine.mode} · ${Math.round(fps)} fps`);
+        s.onStats?.(`${engine.mode}, ${Math.round(fps)} fps`);
         canvas.current!.dataset.perf = JSON.stringify({
           renderer: engine.mode,
           fps: +fps.toFixed(1),
@@ -261,7 +272,16 @@ function Field({
             setView((v) => ({ ...v, x: v.x + dx, y: v.y + dy }));
             pointer.current.x = e.clientX;
             pointer.current.y = e.clientY;
-          } else setHover(inspect(e.clientX - r.left, e.clientY - r.top));
+          } else {
+            const px = e.clientX - r.left, py = e.clientY - r.top;
+            setHover(inspect(px, py));
+            const sx = Math.min(dimensions.width * 0.9, dimensions.height * 1.65), sy = Math.min(dimensions.width * 0.94, dimensions.height * 1.08);
+            const near = world.clusters.find((c) => {
+              const cx = dimensions.width / 2 + (c.x - 0.5) * sx, cy = dimensions.height / 2 + (c.y - 0.5) * sy;
+              return Math.hypot(px - cx, py - cy) < c.radius * sy + 14;
+            });
+            setHoverCluster(near?.name);
+          }
         }}
         onPointerUp={(e) => {
           if (!pointer.current.moved) {
@@ -274,29 +294,19 @@ function Field({
         onPointerCancel={() => {
           pointer.current.drag = false;
         }}
-        onPointerLeave={() => setHover(undefined)}
+        onPointerLeave={() => { setHover(undefined); setHoverCluster(undefined); }}
       />
       <div className="swarm-labels" aria-hidden="true">
-        {world.clusters.map((c) => (
-          <span
-            key={c.name}
-            style={{
-              left:
-                dimensions.width / 2 +
-                (c.x - 0.5) *
-                  Math.min(dimensions.width * 0.9, dimensions.height * 1.65),
-              top:
-                dimensions.height / 2 +
-                (c.y - 0.5 - c.radius - 0.027) *
-                  Math.min(dimensions.width * 0.94, dimensions.height * 1.08),
-              opacity: topic && topic !== c.name ? 0.22 : 1,
-              display: view.zoom !== 1 || view.x || view.y ? "none" : undefined,
-            }}
-          >
-            {label(c.name)}
-            <small>{c.count.toLocaleString()}</small>
-          </span>
-        ))}
+        {view.zoom === 1 && !view.x && !view.y &&
+          layoutLabels(world.clusters, dimensions, hoverCluster, topic).map((l) => (
+            <span
+              key={l.name}
+              className={l.hidden ? "is-hidden" : undefined}
+              style={{ left: l.x, top: l.y, opacity: topic && topic !== l.name ? 0.25 : undefined }}
+            >
+              {label(l.name)} <small>{l.count.toLocaleString()}</small>
+            </span>
+          ))}
       </div>
       {!hero && (
         <div className="swarm-camera">
@@ -322,7 +332,7 @@ function Field({
       {hover && (
         <div className="swarm-tooltip" role="status">
           <small>
-            {label(hover.kind)} · {hover.added_by}
+            {KIND_NAMES[hover.kind] ?? label(hover.kind)}, <span className="swarm-mono">{hover.added_by}</span>
           </small>
           <strong>{hover.title}</strong>
           <span>Click to inspect source</span>
@@ -331,6 +341,35 @@ function Field({
       {reduced && <span className="swarm-motion-note">Motion reduced</span>}
     </div>
   );
+}
+/** Greedy label placement: biggest clusters first, above then below, hidden on collision and revealed on hover or topic focus. */
+function layoutLabels(
+  clusters: { name: string; x: number; y: number; radius: number; count: number }[],
+  dim: { width: number; height: number },
+  hovered?: string,
+  focus?: string,
+) {
+  const sx = Math.min(dim.width * 0.9, dim.height * 1.65), sy = Math.min(dim.width * 0.94, dim.height * 1.08);
+  const placed: { x0: number; x1: number; y0: number; y1: number }[] = [];
+  const out: { name: string; count: number; x: number; y: number; hidden: boolean }[] = [];
+  const pri = (n: string) => (n === hovered || n === focus ? 1 : 0);
+  const order = [...clusters].sort((a, b) => pri(b.name) - pri(a.name) || b.count - a.count);
+  for (const c of order) {
+    const w = (label(c.name).length + String(c.count).length + 1) * 6.3 + 10, h = 16;
+    const cx = dim.width / 2 + (c.x - 0.5) * sx, cy = dim.height / 2 + (c.y - 0.5) * sy, r = c.radius * sy;
+    let spot: { x: number; y: number } | null = null;
+    for (const y of [cy - r - 11, cy + r + 11]) {
+      const box = { x0: cx - w / 2, x1: cx + w / 2, y0: y - h / 2, y1: y + h / 2 };
+      const inside = box.x0 > 2 && box.x1 < dim.width - 2 && box.y0 > 2 && box.y1 < dim.height - 2;
+      if (inside && !placed.some((p) => box.x0 < p.x1 && box.x1 > p.x0 && box.y0 < p.y1 && box.y1 > p.y0)) {
+        placed.push(box);
+        spot = { x: cx, y };
+        break;
+      }
+    }
+    out.push({ name: c.name, count: c.count, x: spot?.x ?? cx, y: spot?.y ?? cy - r - 11, hidden: !spot });
+  }
+  return out;
 }
 export function HeroSwarm(props: SwarmProps) {
   const { data, error } = useData(props);
@@ -473,8 +512,8 @@ export function GraphView(props: SwarmProps) {
       <div className="swarm-legend">
         {(colorBy === "kind" ? kinds : teams).map((k) => (
           <span key={k}>
-            <i style={{ background: colors[k] }} />
-            {label(k)}
+            <i style={{ background: colorBy === "kind" ? `var(--k-${k})` : `var(--team-${k})` }} />
+            {colorBy === "kind" ? KIND_NAMES[k] ?? label(k) : label(k)}
           </span>
         ))}
         <span className="swarm-renderer">{stats}</span>
@@ -502,8 +541,7 @@ export function GraphView(props: SwarmProps) {
               ×
             </button>
             <p className="swarm-eyebrow">
-              {label(selected.kind)} ·{" "}
-              {selected.read_depth || "unrecorded depth"}
+              {KIND_NAMES[selected.kind] ?? label(selected.kind)}, {selected.read_depth === "full" ? "read in full" : selected.read_depth || "depth not recorded"}
             </p>
             <h3>{selected.title}</h3>
             <p>{selected.authors}</p>
@@ -517,7 +555,7 @@ export function GraphView(props: SwarmProps) {
             <p>{selected.summary || "No summary recorded for this source."}</p>
             <dl>
               <dt>Added by</dt>
-              <dd>{selected.added_by || "Unknown"}</dd>
+              <dd className="swarm-mono">{selected.added_by || "Unknown"}</dd>
               <dt>First recorded</dt>
               <dd>
                 {selected.added_at
@@ -545,9 +583,11 @@ export function GraphView(props: SwarmProps) {
           {playing ? "Pause replay" : "Replay growth"}
         </button>
         <label>
-          <span>Oct 3 · 12:00 PM ET</span>
+          <span>Noon ET</span>
           <input
             aria-label="Library growth replay"
+            className="swarm-range"
+            style={{ ["--p" as string]: `${progress}%` }}
             type="range"
             min="0"
             max="100"
@@ -578,9 +618,12 @@ export function GraphView(props: SwarmProps) {
         <div>
           {entries.slice(0, 60).map((e) => (
             <button key={e.id} onClick={() => choose(e)}>
-              <span>{e.title}</span>
+              <span className="swarm-src-title">
+                <i style={{ background: `var(--k-${e.kind})` }} />
+                {e.title}
+              </span>
               <small>
-                {label(e.kind)} · {e.added_by}
+                {KIND_NAMES[e.kind] ?? label(e.kind)}, added by <span className="swarm-mono">{e.added_by}</span>
               </small>
             </button>
           ))}
