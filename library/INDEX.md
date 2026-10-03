@@ -2,7 +2,7 @@
 
 # Library index
 
-2702 entries.
+2705 entries.
 
 ## Papers (1708)
 
@@ -2610,13 +2610,14 @@
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 | [data-zzzztom-moltbook-2026](datasets/data-zzzztom-moltbook-2026.md) | zzzztom/moltbook-forum-data Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 
-## Talks (121)
+## Talks (124)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
 | [annessi-unknown-private](talks/annessi-unknown-private.md) | MEV Roast \| Private Searching on Private Transactions - Robert Annessi (Flashbots) | unknown | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [barfuss-2023-intrinsic](talks/barfuss-2023-intrinsic.md) | Wolfram Barfuss: Intrinsic fluctuations in reinforcement learning promote cooperation | 2023 | 5 | abstract | marl-emergence, collective-decision | shadow/sol-w1 |
 | [bredeche-2018-embodied](talks/bredeche-2018-embodied.md) | Embodied Evolution in Collective Robotics: Distributed On-line Learning of Collective Behaviors | 2018 | 5 | full | swarm-robotics | shadow/sol-w8 |
+| [brown-2025-scaling](talks/brown-2025-scaling.md) | Scaling Test Time Compute to Multi-Agent Civilizations — Noam Brown, OpenAI | 2025 | 5 | full | llm-agent-swarms, marl-emergence, fork-merge-security | shadow/sol-aud |
 | [carletti-2024-global](talks/carletti-2024-global.md) | Timoteo Carletti: Global Synchronization on networks and beyond | 2024 | 5 | skim | sync-consensus | shadow/sol-w8 |
 | [cichos-2021-feedback](talks/cichos-2021-feedback.md) | Active Particles with Feedback Interactions (3/7) | 2021 | 5 | full | active-matter, swarm-robotics | shadow/sol-w3 |
 | [costanzo-2018-spontaneous](talks/costanzo-2018-spontaneous.md) | Spontaneous Emergence of Milling (Vortex State) in a Vicsek-like Model | 2018 | 5 | full | collective-motion | shadow/sol-w3 |
@@ -2630,6 +2631,7 @@
 | [dalton-2026-breaking](talks/dalton-2026-breaking.md) | Black Hat USA 2026 \| The 'Breaking' News: The OpenAI-Hugging Face Incident | 2026 | 5 | abstract | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
 | [deason-2018-time](talks/deason-2018-time.md) | Time Signature Based Matching - Lauren Deason | 2018 | 5 | abstract | swarm-detection | shadow/sol-w1 |
 | [felten-2022-l2](talks/felten-2022-l2.md) | L2 sequencing and MEV - Ed Felten (Arbitrum) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
+| [gleicher-2021-coordinating](talks/gleicher-2021-coordinating.md) | Coordinating Inauthentic Behavior With Facebook’s Head of Security Policy | 2021 | 5 | full | swarm-detection, sybil-resistance | shadow/sol-aud |
 | [gomez-gardenes-2025-synchronization](talks/gomez-gardenes-2025-synchronization.md) | Jesus Gómez Gardeñes: Synchronization phenomena and the Kuramoto model and... - Class 1 | 2025 | 5 | skim | sync-consensus | shadow/sol-w8 |
 | [hasu-2022-threat](talks/hasu-2022-threat.md) | The threat of MEV centralization: an anatomy of the transaction supply chain - Hasu (Flashbots) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [kao-2020-albert](talks/kao-2020-albert.md) | Albert Kao on Animal Sociality & Collective Computation | 2020 | 5 | full | collective-decision, fork-merge-security | shadow/sol-aud |
@@ -2706,6 +2708,7 @@
 | [couzin-2023-geometry](talks/couzin-2023-geometry.md) | Prof. Iain Couzin \| MMV Rothschild Lecture: The Geometry of Decision-Making | 2023 | 3 | abstract | collective-motion, collective-decision | shadow/sol-w3 |
 | [couzin-2023-visual](talks/couzin-2023-visual.md) | Prof. Iain Couzin \| A Visual Introduction to Collective Animal Behavior | 2023 | 3 | abstract | collective-motion, collective-decision | shadow/sol-w3 |
 | [dorigo-2020-robotica](talks/dorigo-2020-robotica.md) | La Robotica che sta arrivando con Marco Dorigo | 2020 | 3 | skim | swarm-robotics | shadow/sol-w8 |
+| [evans-2021-james](talks/evans-2021-james.md) | James Evans on Social Computing and Diversity by Design | 2021 | 3 | full | collective-decision, llm-agent-swarms | shadow/sol-aud |
 | [flashbots-2022-research](talks/flashbots-2022-research.md) | Flashbots Research Workshop #4: FRP Presentations & Review | 2022 | 3 | full | sybil-resistance | shadow/sol-w8 |
 | [ganesh-2020-introduction](talks/ganesh-2020-introduction.md) | Lecture 8: Introduction to consensus, and the de Groot model | 2020 | 3 | full | sync-consensus, collective-decision | shadow/sol-w6 |
 | [meir-2026-prediction](talks/meir-2026-prediction.md) | Why Prediction Markets and AI Agents Are a Compliance Nightmare \| Solidus Labs Co-Founder Asaf Meir | 2026 | 3 | abstract | swarm-detection, llm-agent-swarms | shadow/sol-w1 |
