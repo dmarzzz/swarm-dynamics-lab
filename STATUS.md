@@ -8,17 +8,17 @@
 |---|---|---|---|---|---|---|---|
 | collective-motion | 314 | 8 | 3 | 15 | 2 | 24 | 366 |
 | collective-decision | 241 | 8 | 22 | 19 | 0 | 24 | 314 |
-| swarm-robotics | 272 | 13 | 2 | 7 | 1 | 14 | 309 |
-| swarm-intelligence | 107 | 1 | 2 | 4 | 0 | 0 | 114 |
+| swarm-robotics | 276 | 13 | 2 | 7 | 1 | 14 | 313 |
+| swarm-intelligence | 108 | 1 | 2 | 4 | 0 | 0 | 115 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 4 | 198 |
-| sync-consensus | 228 | 9 | 11 | 17 | 0 | 16 | 281 |
+| sync-consensus | 230 | 9 | 11 | 17 | 0 | 16 | 283 |
 | criticality-measurement | 188 | 4 | 2 | 23 | 2 | 14 | 233 |
 | marl-emergence | 125 | 12 | 0 | 33 | 1 | 9 | 180 |
-| llm-agent-swarms | 296 | 49 | 95 | 198 | 9 | 10 | 657 |
-| crowds-and-traffic | 78 | 2 | 1 | 2 | 1 | 8 | 92 |
+| llm-agent-swarms | 299 | 49 | 95 | 198 | 9 | 10 | 660 |
+| crowds-and-traffic | 79 | 2 | 1 | 2 | 1 | 8 | 93 |
 | meta | 82 | 9 | 5 | 22 | 1 | 4 | 123 |
-| sybil-resistance | 217 | 46 | 61 | 59 | 7 | 19 | 409 |
-| fork-merge-security | 216 | 14 | 56 | 69 | 1 | 6 | 362 |
+| sybil-resistance | 226 | 46 | 61 | 59 | 7 | 19 | 418 |
+| fork-merge-security | 217 | 14 | 56 | 69 | 1 | 6 | 363 |
 | swarm-detection | 363 | 35 | 76 | 194 | 13 | 6 | 687 |
 
 ## Tasks
@@ -102,13 +102,14 @@
 
 ## Candidate batches
 
-18 free, 3 claimed, 47 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+17 free, 4 claimed, 47 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | claimed | 2026-10-03T20:10Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
 | [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | claimed | 2026-10-03T20:07Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
 | [#57](https://github.com/dmarzzz/swarm-lab/issues/57) | claimed | 2026-10-03T20:07Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-01) |
+| [#71](https://github.com/dmarzzz/swarm-lab/issues/71) | claimed | 2026-10-03T20:11Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-15) |
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
 | [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |
 | [#40](https://github.com/dmarzzz/swarm-lab/issues/40) | free | 2026-10-03T20:01Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-02) |
@@ -124,7 +125,7 @@
 | [#66](https://github.com/dmarzzz/swarm-lab/issues/66) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-10) |
 | [#67](https://github.com/dmarzzz/swarm-lab/issues/67) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-11) |
 | [#68](https://github.com/dmarzzz/swarm-lab/issues/68) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-12) |
-| | | | 3 more free batches |
+| | | | 2 more free batches |
 
 ## Agents
 
@@ -135,6 +136,7 @@
 | shadow/sol-w6 | idle |  | 2026-10-03T20:05Z | writer lane finished (batch |
 | shadow/sol-w1 | idle |  | 2026-10-03T20:00Z | stopped on requester instruction; completed batches 33, 34, 31, 32 and 52 with 17 talks and 7 papers, all remaining items explicitly skipped |
 | shadow/sol-w3 | working |  | 2026-10-03T20:00Z | processing talk batch 24 using yt_transcript.sh and Apify fallback |
+| shadow/sol-p1 | working |  | 2026-10-03T19:59Z | paper batches |
 | shadow/sol-w4 | idle |  | 2026-10-03T19:59Z | done for session; batches |
 | shadow/sol-w7 | idle |  | 2026-10-03T19:58Z | Wrapped up on human stop; batches 48, 46, 53 catalogued; 37 and 38 all-skipped; 77 released untouched |
 | shadow/sol-g50 | working | synthesis-people-and-labs | 2026-10-03T19:50Z | Writing synthesis/people-and-labs.md (issue |
