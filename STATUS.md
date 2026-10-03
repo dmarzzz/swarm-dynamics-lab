@@ -6,19 +6,19 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 312 | 8 | 0 | 0 | 0 | 0 | 320 |
-| collective-decision | 204 | 8 | 6 | 6 | 0 | 1 | 225 |
+| collective-motion | 313 | 8 | 0 | 0 | 0 | 0 | 321 |
+| collective-decision | 226 | 8 | 7 | 6 | 0 | 1 | 248 |
 | swarm-robotics | 270 | 13 | 0 | 0 | 0 | 0 | 283 |
 | swarm-intelligence | 107 | 1 | 0 | 0 | 0 | 0 | 108 |
 | active-matter | 184 | 3 | 0 | 0 | 0 | 0 | 187 |
-| sync-consensus | 189 | 5 | 4 | 0 | 0 | 1 | 199 |
+| sync-consensus | 211 | 5 | 7 | 0 | 0 | 1 | 224 |
 | criticality-measurement | 185 | 4 | 0 | 4 | 0 | 0 | 193 |
-| marl-emergence | 121 | 12 | 0 | 0 | 0 | 0 | 133 |
-| llm-agent-swarms | 174 | 40 | 13 | 50 | 0 | 1 | 278 |
+| marl-emergence | 122 | 12 | 0 | 0 | 0 | 0 | 134 |
+| llm-agent-swarms | 201 | 40 | 15 | 50 | 0 | 1 | 307 |
 | crowds-and-traffic | 76 | 2 | 0 | 0 | 0 | 0 | 78 |
-| meta | 68 | 8 | 1 | 13 | 0 | 2 | 92 |
-| sybil-resistance | 131 | 30 | 28 | 0 | 4 | 1 | 194 |
-| fork-merge-security | 6 | 0 | 3 | 0 | 0 | 2 | 11 |
+| meta | 76 | 8 | 2 | 13 | 0 | 2 | 101 |
+| sybil-resistance | 150 | 36 | 45 | 0 | 4 | 1 | 236 |
+| fork-merge-security | 137 | 1 | 9 | 0 | 0 | 2 | 149 |
 | swarm-detection | 0 | 0 | 2 | 0 | 0 | 0 | 2 |
 
 ## Tasks
@@ -103,7 +103,10 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
-| vishesh/senku-1 | working |  | 2026-10-03T18:28Z | cataloguing background readings for the llm-agent-swarms topic |
+| vishesh/senku-1 | idle |  | 2026-10-03T18:35Z | done for 2026-10-03: notes bundle + 16 library entries + 5 notes blocks pushed; scan-blogs released at 7 of 25 |
+| dmarz/fm-sutton | done | scan-papers-fm-sutton | 2026-10-03T18:31Z | Verified Sutton's fork-merge corruption quote (Dwarkesh 2025, 00:49:51) and catalogued 18 prior framings and fork-join sources |
+| dmarz/fm-merge-poisoning | done | scan-papers-fm-merge-poisoning | 2026-10-03T18:30Z | 29 papers on merge, FL and distillation poisoning catalogued for fork-merge-security; 4 full reads; check and verify clean |
+| dmarz/sybil-flashbots | done | scan-flashbots-sybil | 2026-10-03T18:28Z | Catalogued 25 public Flashbots sources on Sybil resistance, spam and rate limiting (writings, forum, GitHub, papers); coverage note filled |
 | dmarz/sybil-foundations | done | scan-papers-sybil-foundations | 2026-10-03T18:21Z | Catalogued 21 foundational Sybil papers (6 read in full) plus notes on 4 existing entries; coverage note filled |
 | dmarz/sybil-llm-agents | done | scan-papers-sybil-llm-agents | 2026-10-03T18:21Z | catalogued 30 papers + 1 code entry on Sybil, collusion and identity in LLM agent collectives; notes on 5 existing entries |
 | dmarz/sybil-credentials | done | scan-papers-sybil-credentials | 2026-10-03T18:20Z | catalogued 30 entries on anonymous credentials, RLN, Privacy Pass/ARC and agent identity/payment as Sybil cost; 4 full reads; coverage note filled |
@@ -142,12 +145,9 @@
 | dmarz/fm-identity-hijack | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm-informal | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm-memory-injection | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
-| dmarz/fm-merge-poisoning | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm-mobile-agents | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
-| dmarz/fm-sutton | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm-unlinkability | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm | working |  | 2026-10-03T18:10Z | fork-merge-security lit review, workflow swarm launched by dmarz |
-| dmarz/sybil-flashbots | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
 | dmarz/sybil | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
 
 ## Surveys (prior-art gate)
