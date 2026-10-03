@@ -2,9 +2,9 @@
 
 # Library index
 
-974 entries.
+978 entries.
 
-## Papers (845)
+## Papers (849)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -55,6 +55,7 @@
 | [crosato-2018-informative](papers/crosato-2018-informative.md) | Informative and misinformative interactions in a school of fish | 2018 | 5 | full | criticality-measurement, collective-motion | dmarz/criticality-measurement |
 | [cucker-2007-emergent](papers/cucker-2007-emergent.md) | Emergent Behavior in Flocks | 2007 | 5 | full | sync-consensus, collective-motion | dmarz/sync-consensus |
 | [de-marzo-2024-ai](papers/de-marzo-2024-ai.md) | AI agents can coordinate beyond human scale | 2024 | 5 | full | llm-agent-swarms, sync-consensus, criticality-measurement, collective-decision | dmarz/llm-agent-swarms |
+| [de-marzo-2026-conformity](papers/de-marzo-2026-conformity.md) | Conformity Generates Collective Misalignment in AI Agents Societies | 2026 | 5 | abstract | llm-agent-swarms, collective-decision, criticality-measurement | shadow/sol-1 |
 | [de-marzo-2026-copying](papers/de-marzo-2026-copying.md) | Copying explains the collective behavior of AI agents in the wild | 2026 | 5 | skim | llm-agent-swarms, sync-consensus, criticality-measurement | dmarz/llm-agent-swarms-recent-audit |
 | [de-nobili-2026-microscopic](papers/de-nobili-2026-microscopic.md) | Microscopic dynamics of consensus formation in multi-agent LLM Naming Games | 2026 | 5 | full | llm-agent-swarms, sync-consensus, criticality-measurement | dmarz/llm-agent-swarms-recent |
 | [dias-2023-environmental](papers/dias-2023-environmental.md) | Environmental memory boosts group formation of clueless individuals | 2023 | 5 | full | active-matter, swarm-intelligence, collective-decision, swarm-robotics | dmarz/active-matter-audit |
@@ -237,6 +238,7 @@
 | [castro-2024-modeling](papers/castro-2024-modeling.md) | Modeling collective behaviors from optic flow and retinal cues | 2024 | 4 | abstract | collective-motion, swarm-robotics | dmarz/collective-motion-recent-audit |
 | [castro-2025-visual](papers/castro-2025-visual.md) | Visual collective behaviors on spherical robots | 2025 | 4 | abstract | swarm-robotics, collective-motion | dmarz/swarm-robotics-recent |
 | [cates-2013-when](papers/cates-2013-when.md) | When are active Brownian particles and run-and-tumble particles equivalent? Consequences for motility-induced phase separation | 2013 | 4 | abstract | active-matter | dmarz/active-matter |
+| [cau-2026-collective](papers/cau-2026-collective.md) | Collective Opinion Dynamics in Structured LLM Populations | 2026 | 4 | abstract | llm-agent-swarms, sync-consensus | shadow/sol-1 |
 | [cavagna-2015-flocking](papers/cavagna-2015-flocking.md) | Flocking and Turning: a New Model for Self-organized Collective Motion | 2015 | 4 | abstract | collective-motion, active-matter | dmarz/collective-motion |
 | [cavagna-2017-dynamic](papers/cavagna-2017-dynamic.md) | Dynamic scaling in natural swarms | 2017 | 4 | abstract | collective-motion, criticality-measurement | dmarz/collective-motion |
 | [cavagna-2019-dynamical](papers/cavagna-2019-dynamical.md) | Dynamical Renormalization Group Approach to the Collective Behavior of Swarms | 2019 | 4 | skim | criticality-measurement, collective-motion, active-matter | dmarz/criticality-measurement-audit |
@@ -403,6 +405,7 @@
 | [lynch-2026-tuning](papers/lynch-2026-tuning.md) | Tuning regimes in ant foraging dynamics depend on the existence of bistability | 2026 | 4 | abstract | criticality-measurement, collective-decision | dmarz/criticality-measurement |
 | [ma-2025-unraveling](papers/ma-2025-unraveling.md) | Unraveling human crowd dynamics through the foot tracking of pedestrians | 2025 | 4 | skim | crowds-and-traffic, criticality-measurement, sync-consensus | dmarz/crowds-and-traffic |
 | [macgregor-2020-information](papers/macgregor-2020-information.md) | Information can explain the dynamics of group order in animal collective behaviour | 2020 | 4 | abstract | criticality-measurement, collective-decision, collective-motion | dmarz/criticality-measurement |
+| [magistrali-2026-aligned](papers/magistrali-2026-aligned.md) | Aligned Alone, Misaligned Together: Forecasting Adversarial Capture in LLM Agent Populations | 2026 | 4 | abstract | llm-agent-swarms, collective-decision | shadow/sol-1 |
 | [mahault-2019-quantitative](papers/mahault-2019-quantitative.md) | Quantitative Assessment of the Toner and Tu Theory of Polar Flocks | 2019 | 4 | abstract | collective-motion, active-matter | dmarz/collective-motion |
 | [mann-2011-bayesian](papers/mann-2011-bayesian.md) | Bayesian Inference for Identifying Interaction Rules in Moving Animal Groups | 2011 | 4 | abstract | collective-motion | dmarz/collective-motion |
 | [mann-2018-collective](papers/mann-2018-collective.md) | Collective decision making by rational individuals | 2018 | 4 | abstract | collective-decision | dmarz/collective-decision |
@@ -680,6 +683,7 @@
 | [jiang-2026-large](papers/jiang-2026-large.md) | Large language models for spreading dynamics in complex systems | 2026 | 3 | abstract | llm-agent-swarms, sync-consensus | dmarz/llm-agent-swarms-recent |
 | [jin-2026-physics](papers/jin-2026-physics.md) | Physics-Informed Modeling and Control of Emergent Behaviors in Robot Swarms | 2026 | 3 | abstract | swarm-robotics, marl-emergence, active-matter | dmarz/swarm-robotics |
 | [jond-2026-minimal](papers/jond-2026-minimal.md) | A Minimal Model for Emergent Collective Behaviors in Autonomous Robotic Multi-Agent Systems | 2026 | 3 | abstract | swarm-robotics, collective-motion, sync-consensus | dmarz/swarm-robotics-recent |
+| [kaesberg-2025-voting](papers/kaesberg-2025-voting.md) | Voting or Consensus? Decision-Making in Multi-Agent Debate | 2025 | 3 | abstract | llm-agent-swarms, collective-decision | shadow/sol-1 |
 | [kegeleirs-2025-towards](papers/kegeleirs-2025-towards.md) | Towards applied swarm robotics: current limitations and enablers | 2025 | 3 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [kim-2021-informational](papers/kim-2021-informational.md) | Informational architecture across non-living and living collectives | 2021 | 3 | abstract | criticality-measurement, meta | dmarz/criticality-measurement |
 | [kinouchi-2006-optimal](papers/kinouchi-2006-optimal.md) | Optimal dynamical range of excitable networks at criticality | 2006 | 3 | abstract | criticality-measurement | dmarz/criticality-measurement |

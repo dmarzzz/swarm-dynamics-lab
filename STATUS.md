@@ -7,14 +7,14 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 306 | 8 | 0 | 0 | 0 | 0 | 314 |
-| collective-decision | 182 | 8 | 0 | 6 | 0 | 0 | 196 |
+| collective-decision | 185 | 8 | 0 | 6 | 0 | 0 | 199 |
 | swarm-robotics | 231 | 10 | 0 | 0 | 0 | 0 | 241 |
 | swarm-intelligence | 104 | 1 | 0 | 0 | 0 | 0 | 105 |
 | active-matter | 182 | 3 | 0 | 0 | 0 | 0 | 185 |
-| sync-consensus | 163 | 5 | 0 | 0 | 0 | 0 | 168 |
-| criticality-measurement | 183 | 4 | 0 | 4 | 0 | 0 | 191 |
+| sync-consensus | 164 | 5 | 0 | 0 | 0 | 0 | 169 |
+| criticality-measurement | 184 | 4 | 0 | 4 | 0 | 0 | 192 |
 | marl-emergence | 120 | 12 | 0 | 0 | 0 | 0 | 132 |
-| llm-agent-swarms | 135 | 36 | 0 | 50 | 0 | 0 | 221 |
+| llm-agent-swarms | 139 | 36 | 0 | 50 | 0 | 0 | 225 |
 | crowds-and-traffic | 75 | 2 | 0 | 0 | 0 | 0 | 77 |
 | meta | 52 | 8 | 0 | 13 | 0 | 0 | 73 |
 | sybil-resistance | 8 | 20 | 0 | 0 | 0 | 0 | 28 |
@@ -128,7 +128,9 @@
 
 ## Surveys (prior-art gate)
 
-None yet. Hypotheses are blocked until a survey passes the gate.
+| survey | owner | state | cited | gate problems |
+|---|---|---|---|---|
+| [llm-agent-swarms](surveys/llm-agent-swarms.md) | shadow | complete | 96 | 0 |
 
 ## Hypotheses
 
