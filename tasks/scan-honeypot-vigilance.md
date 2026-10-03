@@ -39,3 +39,9 @@ factors, signal detection after a miss).
 - Coverage note filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
+
+Run on lane/honeypot-vigilance, pushed to main as 3a0db09. 26 new entries (13 evaluation awareness, 13 trust,
+rumour, cascades and neighbouring-field anchors), Notes on 6 existing entries, Gans, Xie and Rouxii read in
+full. All Done-when items met. Not saturated: OpenAlex hit its daily limit and Semantic Scholar returned 429.
+Two papers were seen but not catalogued: arXiv 2606.21037 and 2606.20493. Verdict per hunch is in
+researchers/dmarz/notes/honeypot-vigilance-hunches.md.
