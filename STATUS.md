@@ -13,14 +13,14 @@
 | active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
 | sync-consensus | 251 | 24 | 11 | 17 | 1 | 28 | 332 |
 | criticality-measurement | 191 | 4 | 2 | 23 | 2 | 22 | 244 |
-| marl-emergence | 154 | 60 | 1 | 33 | 2 | 13 | 263 |
-| llm-agent-swarms | 500 | 115 | 100 | 197 | 47 | 14 | 973 |
+| marl-emergence | 158 | 60 | 1 | 33 | 2 | 13 | 267 |
+| llm-agent-swarms | 518 | 118 | 100 | 197 | 47 | 14 | 994 |
 | crowds-and-traffic | 81 | 15 | 1 | 2 | 1 | 8 | 108 |
 | meta | 137 | 39 | 5 | 22 | 1 | 4 | 208 |
 | sybil-resistance | 325 | 65 | 62 | 57 | 8 | 22 | 539 |
 | fork-merge-security | 353 | 46 | 61 | 69 | 8 | 13 | 550 |
-| swarm-detection | 379 | 43 | 79 | 193 | 35 | 11 | 740 |
-| agent-budgets | 34 | 0 | 5 | 0 | 0 | 0 | 39 |
+| swarm-detection | 383 | 45 | 79 | 193 | 35 | 11 | 746 |
+| agent-budgets | 51 | 1 | 5 | 0 | 0 | 0 | 57 |
 
 ## Tasks
 
@@ -110,11 +110,10 @@
 
 ## Candidate batches
 
-1 free, 1 claimed, 66 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+1 free, 0 claimed, 67 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#67](https://github.com/dmarzzz/swarm-lab/issues/67) | claimed | 2026-10-03T21:46Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-11) |
 | [#68](https://github.com/dmarzzz/swarm-lab/issues/68) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-12) |
 
 ## Agents
@@ -126,6 +125,7 @@
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
+| dmarz/factory-scan | done |  | 2026-10-03T22:30Z | scan for swarm-factory prior work (FLE, LLM oligopoly collusion, production economies) finished; 29 entries on lane/factory-scan |
 | dmarz/hf-sweep | done |  | 2026-10-03T22:00Z | HF multi-agent dataset sweep (link + description entries, lane/hf-multiagent) |
 | dmarz/agentops | working |  | 2026-10-03T21:45Z | experiment-worker template (templates/experiment-worker) + fleet infra in swarm-labs-agentops |
 | dmarz/question-atlas | done | synthesis-question-atlas-update | 2026-10-03T21:41Z | Updated 202 candidates across 15 areas; 59 new and 36 revised, with preserved reviews. |
