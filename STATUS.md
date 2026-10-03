@@ -7,19 +7,19 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 314 | 8 | 3 | 15 | 2 | 40 | 382 |
-| collective-decision | 278 | 8 | 24 | 19 | 0 | 33 | 362 |
+| collective-decision | 281 | 8 | 24 | 19 | 0 | 35 | 367 |
 | swarm-robotics | 284 | 13 | 2 | 7 | 1 | 24 | 331 |
 | swarm-intelligence | 113 | 1 | 2 | 4 | 0 | 3 | 123 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
 | sync-consensus | 246 | 13 | 11 | 17 | 0 | 28 | 315 |
 | criticality-measurement | 190 | 4 | 2 | 23 | 2 | 22 | 243 |
-| marl-emergence | 135 | 13 | 1 | 33 | 1 | 10 | 193 |
+| marl-emergence | 135 | 13 | 1 | 33 | 1 | 13 | 196 |
 | llm-agent-swarms | 407 | 59 | 99 | 197 | 22 | 14 | 798 |
 | crowds-and-traffic | 80 | 2 | 1 | 2 | 1 | 8 | 94 |
 | meta | 113 | 9 | 5 | 22 | 1 | 4 | 154 |
-| sybil-resistance | 284 | 48 | 62 | 57 | 7 | 22 | 480 |
-| fork-merge-security | 353 | 44 | 61 | 69 | 1 | 12 | 540 |
-| swarm-detection | 371 | 35 | 79 | 193 | 26 | 11 | 715 |
+| sybil-resistance | 289 | 48 | 62 | 57 | 7 | 22 | 485 |
+| fork-merge-security | 353 | 44 | 61 | 69 | 1 | 13 | 541 |
+| swarm-detection | 372 | 35 | 79 | 193 | 26 | 11 | 716 |
 
 ## Tasks
 
@@ -105,12 +105,11 @@
 
 ## Candidate batches
 
-6 free, 1 claimed, 61 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+5 free, 1 claimed, 62 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#62](https://github.com/dmarzzz/swarm-lab/issues/62) | claimed | 2026-10-03T20:51Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-06) |
-| [#63](https://github.com/dmarzzz/swarm-lab/issues/63) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-07) |
+| [#63](https://github.com/dmarzzz/swarm-lab/issues/63) | claimed | 2026-10-03T20:58Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-07) |
 | [#64](https://github.com/dmarzzz/swarm-lab/issues/64) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-08) |
 | [#65](https://github.com/dmarzzz/swarm-lab/issues/65) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-09) |
 | [#66](https://github.com/dmarzzz/swarm-lab/issues/66) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-10) |
@@ -122,6 +121,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
+| shadow/sol-g74 | done | scan-papers-fm-contagion | 2026-10-03T20:55Z | Completed issue 74 rerun: 21 new entries, 21 correction/verification notes, 4 full readings; saturation gaps disclosed. |
 | shadow/sol-p2 | idle |  | 2026-10-03T20:47Z | wrapped up after batches |
 | dmarz/question-atlas | done | synthesis-question-atlas | 2026-10-03T20:46Z | Completed 143 source-linked candidates across 14 areas; editorial audit and review-browser verification passed. |
 | shadow/sol-aud | working |  | 2026-10-03T20:46Z | 15 full-transcript entries pushed; provenance QA and one caption-only blocked-talk recovery |
@@ -139,7 +139,6 @@
 | dmarz/sd-web-agents | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
 | dmarz/sd | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
 | shadow/sol-w5 | idle |  | 2026-10-03T20:20Z | worked batches |
-| shadow/sol-g74 | working | scan-papers-fm-contagion | 2026-10-03T20:18Z | Rerun issue 74 bibliographic scan, verify seed results and record searches and citation trails. |
 | dmarz/preflight | done | synthesis-pre-experiment-research | 2026-10-03T20:17Z | Completed pre-experiment synthesis and eight source records; verified metadata and scope, preparing merge |
 | shadow/sol-w6 | idle |  | 2026-10-03T20:05Z | writer lane finished (batch |
 | shadow/sol-w1 | idle |  | 2026-10-03T20:00Z | stopped on requester instruction; completed batches 33, 34, 31, 32 and 52 with 17 talks and 7 papers, all remaining items explicitly skipped |

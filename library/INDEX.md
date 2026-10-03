@@ -2,9 +2,9 @@
 
 # Library index
 
-2802 entries.
+2810 entries.
 
-## Papers (1794)
+## Papers (1799)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -482,6 +482,7 @@
 | [dash-2026-untrusted](papers/dash-2026-untrusted.md) | From Untrusted Input to Trusted Memory: A Systematic Study of Memory Poisoning Attacks in LLM Agents | 2026 | 4 | abstract | fork-merge-security | dmarz/fm-memory-injection |
 | [dathathri-2024-scalable](papers/dathathri-2024-scalable.md) | Scalable watermarking for identifying large language model outputs | 2024 | 4 | abstract | swarm-detection | dmarz/sd-ai-content |
 | [davidson-2024-privacy](papers/davidson-2024-privacy.md) | The Privacy Pass Architecture | 2024 | 4 | full | sybil-resistance | dmarz/sybil-credentials |
+| [davis-2008-sybil](papers/davis-2008-sybil.md) | Sybil attacks as a mitigation strategy against the Storm botnet | 2008 | 4 | skim | sybil-resistance, swarm-detection | shadow/sol-p1 |
 | [de-lamo-2025-data](papers/de-lamo-2025-data.md) | Data-Driven Stochastic Modeling of Schooling Fish: From Collective Dynamics to Individual Fluctuations | 2025 | 4 | full | collective-motion, active-matter | dmarz/collective-motion-recent |
 | [de-lamo-2026-statistical](papers/de-lamo-2026-statistical.md) | Statistical Physics of Fish Collective Motion | 2026 | 4 | abstract | collective-motion, criticality-measurement | dmarz/collective-motion-recent |
 | [de-marzo-2026-collective](papers/de-marzo-2026-collective.md) | Collective Behavior of AI Agents: the Case of Moltbook | 2026 | 4 | abstract | llm-agent-swarms, criticality-measurement, swarm-detection | dmarz/llm-agent-swarms |
@@ -1088,6 +1089,7 @@
 | [aureli-2008-fission](papers/aureli-2008-fission.md) | Fission-Fusion Dynamics | 2008 | 3 | skim | fork-merge-security, collective-decision, collective-motion | dmarz/fm-biology |
 | [aydeger-2026-decentralized](papers/aydeger-2026-decentralized.md) | Decentralized Digital Identity Management for Large Language Model Agents | 2026 | 3 | abstract | sybil-resistance, llm-agent-swarms | shadow/sol-p1 |
 | [azouvi-2021-private](papers/azouvi-2021-private.md) | Private Attacks in Longest Chain Proof-of-stake Protocols with Single Secret Leader Elections | 2021 | 3 | abstract | fork-merge-security, sync-consensus | dmarz/fm-unlinkability |
+| [bachrach-2008-divide](papers/bachrach-2008-divide.md) | Divide and Conquer: False-Name Manipulations in Weighted Voting Games | 2008 | 3 | skim | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [bai-2025-swarm](papers/bai-2025-swarm.md) | Swarm navigation of cyborg-insects in unknown obstructed soft terrain | 2025 | 3 | abstract | swarm-robotics | dmarz/swarm-robotics-recent |
 | [bandini-2025-xy](papers/bandini-2025-xy.md) | The XY model with vision cone: non-reciprocal vs. reciprocal interactions | 2025 | 3 | abstract | active-matter, collective-motion | dmarz/active-matter |
 | [bansal-2025-magentic](papers/bansal-2025-magentic.md) | Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets | 2025 | 3 | abstract | sybil-resistance, llm-agent-swarms | dmarz/sybil-llm-agents |
@@ -1419,6 +1421,7 @@
 | [mori-2026-three](papers/mori-2026-three.md) | Three AI-agents walk into a bar . . . . `Lord of the Flies' tribalism emerges among smart AI-Agents | 2026 | 3 | abstract | llm-agent-swarms, collective-decision | dmarz/llm-agent-swarms-recent-audit |
 | [motsch-2011-new](papers/motsch-2011-new.md) | A New Model for Self-organized Dynamics and Its Flocking Behavior | 2011 | 3 | abstract | sync-consensus, collective-motion | dmarz/sync-consensus |
 | [mou-2026-individual](papers/mou-2026-individual.md) | From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents | 2026 | 3 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms-recent |
+| [moulin-2007-scheduling](papers/moulin-2007-scheduling.md) | On Scheduling Fees to Prevent Merging, Splitting, and Transferring of Jobs | 2007 | 3 | skim | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [munirathinam-2026-will](papers/munirathinam-2026-will.md) | Will the Agent Recuse, and Will It Stop? Measuring LLM-Agent Compliance with In-Band Governance Signals at the Access Door and Mid-Flight | 2026 | 3 | abstract | swarm-detection, llm-agent-swarms | dmarz/sd-web-agents |
 | [murgia-2006-clonal](papers/murgia-2006-clonal.md) | Clonal origin and evolution of a transmissible cancer | 2006 | 3 | abstract | fork-merge-security | dmarz/fm-biology |
 | [musolff-2026-algorithmic](papers/musolff-2026-algorithmic.md) | Algorithmic Pricing, Price Wars, and Tacit Collusion: Evidence from E-Commerce | 2026 | 3 | abstract | swarm-detection, collective-decision | shadow/sol-g51 |
@@ -1624,6 +1627,7 @@
 | [yang-2025-agentnet](papers/yang-2025-agentnet.md) | AgentNet: Decentralized Evolutionary Coordination for LLM-based Multi-Agent Systems | 2025 | 3 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 | [yax-2024-phylolm](papers/yax-2024-phylolm.md) | PhyloLM : Inferring the Phylogeny of Large Language Models and Predicting their Performances in Benchmarks | 2024 | 3 | abstract | swarm-detection | dmarz/sd-attribution |
 | [yemini-2022-resilient](papers/yemini-2022-resilient.md) | Resilient Distributed Optimization for Multi-Agent Cyberphysical Systems | 2022 | 3 | abstract | sybil-resistance, sync-consensus | dmarz/sybil-robotics |
+| [yokoo-2000-effect](papers/yokoo-2000-effect.md) | The effect of false-name declarations in mechanism design: towards collective decision making on the Internet | 2000 | 3 | abstract | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [yokoo-2003-characterization](papers/yokoo-2003-characterization.md) | Characterization of Strategy/False-name Proof Combinatorial Auction Protocols: Price-oriented, Rationing-free Protocol | 2003 | 3 | skim | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [yokoo-2006-false](papers/yokoo-2006-false.md) | False-name-proof combinatorial auction protocol: Groves Mechanism with SubModular Approximation | 2006 | 3 | abstract | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [yokoo-2007-making](papers/yokoo-2007-making.md) | Making VCG More Robust in Combinatorial Auctions via Submodular Approximation | 2007 | 3 | full | sybil-resistance, collective-decision | shadow/sol-p2 |
@@ -1703,6 +1707,7 @@
 | [ghanem-2026-steganalysis](papers/ghanem-2026-steganalysis.md) | Steganalysis of Adaptive Covert Collusion in Tool-Using Agent Populations: A Black-Box, Cross-Principal Approach | 2026 | 2 | abstract | swarm-detection, llm-agent-swarms | dmarz/sd-coordination |
 | [gharami-2025-chatgpt](papers/gharami-2025-chatgpt.md) | ChatGPT: Excellent Paper! Accept It. Editor: Imposter Found! Review Rejected | 2025 | 2 | abstract | swarm-detection | dmarz/sd-honeypots |
 | [gressel-2025-love](papers/gressel-2025-love.md) | Love, Lies, and Language Models: Investigating AI's Role in Romance-Baiting Scams | 2025 | 2 | abstract | swarm-detection | shadow/sol-g51 |
+| [hanzlik-2021-with](papers/hanzlik-2021-with.md) | With a Little Help from My Friends | 2021 | 2 | skim | sybil-resistance | shadow/sol-p1 |
 | [harrigan-2018-airdrops](papers/harrigan-2018-airdrops.md) | Airdrops and Privacy: A Case Study in Cross-Blockchain Analysis | 2018 | 2 | abstract | swarm-detection, sybil-resistance | dmarz/sd-onchain |
 | [he-2024-emerged](papers/he-2024-emerged.md) | The Emerged Security and Privacy of LLM Agent: A Survey with Case Studies | 2024 | 2 | abstract | fork-merge-security, meta | dmarz/fm-memory-injection |
 | [hosain-2025-web](papers/hosain-2025-web.md) | Web Technologies Security in the AI Era: A Survey of CDN-Enhanced Defenses | 2025 | 2 | abstract | swarm-detection | dmarz/sd-web-agents |
@@ -2693,12 +2698,13 @@
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 | [data-zzzztom-moltbook-2026](datasets/data-zzzztom-moltbook-2026.md) | zzzztom/moltbook-forum-data Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 
-## Talks (138)
+## Talks (141)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
 | [annessi-unknown-private](talks/annessi-unknown-private.md) | MEV Roast \| Private Searching on Private Transactions - Robert Annessi (Flashbots) | unknown | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [barfuss-2023-intrinsic](talks/barfuss-2023-intrinsic.md) | Wolfram Barfuss: Intrinsic fluctuations in reinforcement learning promote cooperation | 2023 | 5 | abstract | marl-emergence, collective-decision | shadow/sol-w1 |
+| [blumenkamp-2020-emergence](talks/blumenkamp-2020-emergence.md) | [CoRL 2020] The Emergence of Adversarial Communication in Multi-Agent Reinforcement Learning | 2020 | 5 | full | marl-emergence, fork-merge-security | shadow/sol-aud |
 | [bredeche-2018-embodied](talks/bredeche-2018-embodied.md) | Embodied Evolution in Collective Robotics: Distributed On-line Learning of Collective Behaviors | 2018 | 5 | full | swarm-robotics | shadow/sol-w8 |
 | [brown-2025-scaling](talks/brown-2025-scaling.md) | Scaling Test Time Compute to Multi-Agent Civilizations — Noam Brown, OpenAI | 2025 | 5 | full | llm-agent-swarms, marl-emergence, fork-merge-security | shadow/sol-aud |
 | [carletti-2024-global](talks/carletti-2024-global.md) | Timoteo Carletti: Global Synchronization on networks and beyond | 2024 | 5 | skim | sync-consensus | shadow/sol-w8 |
@@ -2736,6 +2742,7 @@
 | [nagpal-2022-grasp](talks/nagpal-2022-grasp.md) | GRASP On Robotics:  Radhika Nagpal, Princeton University | 2022 | 5 | full | swarm-robotics | shadow/sol-w8 |
 | [nagpal-2023-taming](talks/nagpal-2023-taming.md) | Taming the Swarm: Towards Collective Artificial Intelligence | 2023 | 5 | skim | swarm-robotics | shadow/sol-w8 |
 | [nayak-2023-order](talks/nayak-2023-order.md) | Order Policy Enforcement: Limitations and Circumvention - Kartik Nayak \| MEV-SBC ’23 | 2023 | 5 | full | sybil-resistance | shadow/sol-w8 |
+| [ndousse-2021-icml](talks/ndousse-2021-icml.md) | ICML 2021 talk: Emergent Social Learning via Multi-agent Reinforcement Learning | 2021 | 5 | full | marl-emergence, collective-decision | shadow/sol-aud |
 | [obadia-2022-multichain](talks/obadia-2022-multichain.md) | The multichain world is centralized 🙁 - studying cross-domain MEV - Alex Obadia (Flashbots) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [pagonabarraga-2023-phase](talks/pagonabarraga-2023-phase.md) | Phase transitions and self assembly in active matter | 2023 | 5 | full | active-matter, collective-motion, sync-consensus | shadow/sol-w3 |
 | [raj-2022-case](talks/raj-2022-case.md) | A Case-Study of MEV on Low-Fee Chains - Supragya Raj (Marlin) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
@@ -2750,6 +2757,7 @@
 | [yeomans-2020-challenges2](talks/yeomans-2020-challenges2.md) | Challenges in active matter: connecting molecular and microscopic scales? (2 of 3) | 2020 | 5 | full | active-matter, collective-motion | shadow/sol-w3 |
 | [yeomans-2020-challenges3](talks/yeomans-2020-challenges3.md) | Challenges in active matter: connecting molecular and microscopic scales? (3 of 3) | 2020 | 5 | full | active-matter, collective-motion | shadow/sol-w3 |
 | [zarei-2020-adaptive](talks/zarei-2020-adaptive.md) | Talk: Synchronization of adaptive networks of Sakaguchi-Kuramoto oscillators | 2020 | 5 | full | sync-consensus | shadow/sol-w8 |
+| [zaslavsky-2023-noga](talks/zaslavsky-2023-noga.md) | Noga Zaslavsky: Information-constrained Emergent Communication in Multi agent Systems | 2023 | 5 | full | marl-emergence, collective-decision | shadow/sol-aud |
 | [adler-2022-exploring](talks/adler-2022-exploring.md) | Exploring MEV in the modular blockchain stack - John Adler (Celestia) | 2022 | 4 | full | sybil-resistance | shadow/sol-w8 |
 | [bongard-2016-lecture](talks/bongard-2016-lecture.md) | Lecture 21, UVM Evolutionary Robotics Course (Spring 2016). Swarm robotics. | 2016 | 4 | skim | swarm-robotics | shadow/sol-w8 |
 | [brown-2026-agent](talks/brown-2026-agent.md) | Noam Brown – Agent swarms, alignment, & recursive self-improvement | 2026 | 4 | full | llm-agent-swarms, fork-merge-security, marl-emergence | shadow/sol-w5 |
