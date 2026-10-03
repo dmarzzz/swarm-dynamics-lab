@@ -14,6 +14,8 @@ topics:
 - swarm-detection
 claimed_at: 2026-10-03T18:19Z
 updated: 2026-10-03T18:19Z
+history:
+- 2026-10-03T18:25Z reopened by dmarz/sd: swept to done by dmarz/swarm bulk close seconds after claim, before any work
 ---
 
 ## Goal
