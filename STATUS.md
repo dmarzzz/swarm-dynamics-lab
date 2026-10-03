@@ -37,7 +37,6 @@
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [build-discussion-dose](tasks/build-discussion-dose.md) | claimed | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-03T23:24Z | Build and deploy the SEC-47 discussion dose exploratory study |
-| [expand-experimental-question-bank](tasks/expand-experimental-question-bank.md) | claimed | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:26Z | Add distinct experimental questions and expose contribution counts |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -101,6 +100,7 @@
 | [design-distributed-evidence-suite](tasks/design-distributed-evidence-suite.md) | done | p1 | question | dmarz/decision-suite-plan | dmarz | 2026-10-03T23:06Z | Plan five shared-environment distributed-evidence studies |
 | [design-soc07-private-commitment](tasks/design-soc07-private-commitment.md) | done | p1 | question | dmarz/soc07-plan | dmarz | 2026-10-03T22:35Z | Draft a concrete SOC-07 private-judgment experiment plan |
 | [design-swarm-immune-response](tasks/design-swarm-immune-response.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T22:28Z | Develop an exploratory swarm immune-response design |
+| [expand-experimental-question-bank](tasks/expand-experimental-question-bank.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:37Z | Add distinct experimental questions and expose contribution counts |
 | [expand-priority-research-resources](tasks/expand-priority-research-resources.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T22:51Z | Expand primary references and ideas for twenty priority research candidates |
 | [fix-dashboard-deploy-cancellation](tasks/fix-dashboard-deploy-cancellation.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:24Z | Let active dashboard deployments finish during frequent pushes |
 | [map-hackathon-scenarios](tasks/map-hackathon-scenarios.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:21Z | Map every research candidate to ranked hackathon task scenarios |
@@ -140,7 +140,7 @@
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/honeypot-vigilance | done |  | 2026-10-03T23:50Z | scan-honeypot-vigilance done; verdict in notes/honeypot-vigilance-hunches.md |
-| vishesh/codex-methods | working | expand-experimental-question-bank | 2026-10-03T23:32Z | Adding 24 experimental questions and exposing contribution banks in the dashboard |
+| vishesh/codex-methods | done | expand-experimental-question-bank | 2026-10-03T23:37Z | Published 24 EX questions and contribution dashboard; validation and deployment passed |
 | dmarz/avalon | idle |  | 2026-10-03T23:28Z | created Avalon swarm-scale research tasks |
 | dmarz/discussion-dose | working | build-discussion-dose | 2026-10-03T23:25Z | Build and deploy exploratory SEC-47 discussion-dose environment and auditable tasks |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
