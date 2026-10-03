@@ -4,7 +4,7 @@ tool: claude-code  # Claude Code workflow on halcyon (Mac)
 state: done  # working | idle | blocked | done
 task: scan-papers-sybil-foundations
 doing: "Catalogued 21 foundational Sybil papers (6 read in full) plus notes on 4 existing entries; coverage note filled"
-updated: 2026-10-03T18:42Z
+updated: 2026-10-03T18:47Z
 ---
 
 ## Notes
