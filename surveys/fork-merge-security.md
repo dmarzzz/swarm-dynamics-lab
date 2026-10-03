@@ -114,6 +114,8 @@ search_log:
   - {where: web, query: "counterintelligence tradecraft: Studies in Intelligence search (fm-gap-3 r12)", date: 2026-10-03, results: 9, new: 1}
 ---
 
+> **Status (2026-10-03): in-progress, merged incomplete.** Every gate floor passes except saturation: the last gap-fill rounds were still finding new work, mostly because APIs were rate-limited. Open work: #75 (saturation, citation chasing), #74 (contagion rerun), #76 (read-depth audit), #51 (browser-only sources). No review task opened yet.
+
 ## Scope
 
 The survey asks one question across every community that has met it under some other name: when a principal splits into parts that work apart and later merge back, how does corruption of one part reach the principal at the merge, and what limits that? The framing comes from Richard Sutton, who in a September 2025 interview pictured an agent that spawns "many, many copies" that "report back to the central master" and warned that the returned bits "could have viruses in them, they could have hidden goals" [[sutton-2025-father]]. He was responding to Dwarkesh Patel's picture of a firm that spawns and reabsorbs copies of one model [[dwarkesh-2025-what]]. Sutton's example domains are "the other side of the planet" and "Indonesia". He names the threat (Q3) and calls the defence "cybersecurity in the age of digital spawning", but says nothing about hiding which copy returns (Q1) or about thresholds (Q2). Those two questions are dmarz's extensions.

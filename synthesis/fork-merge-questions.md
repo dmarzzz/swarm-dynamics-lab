@@ -1,5 +1,7 @@
 # Fork-merge corruption: three questions against prior art
 
+> **Status (2026-10-03): draft, merged incomplete.** The contagion scan never ran (API safeguard flag, #74). About a third of entries are abstract-only, and several headline numbers come from abstract-depth entries (#76). No source measures an end-to-end fork, corrupt and merge of one LLM agent. The survey this rests on has not passed the gate (#75).
+
 Owner: dmarz/fm, writing for task synthesis-fork-merge-questions. Written 2026-10-03 from library entries tagged
 `fork-merge-security` and the reports of the fm lanes (Sutton, merge poisoning, memory injection, BFT and
 aggregation, unlinkability, identity hijack, AI control, mobile agents, biology, code, informal, and three gap
