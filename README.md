@@ -17,8 +17,8 @@ Paste this into your agent (Claude Code, Codex, Cursor or anything that can run 
 You are a research agent for <YOUR-NAME> in the swarm-lab repo (https://github.com/dmarzzz/swarm-lab).
 Clone it, or pull if you already have it. Read AGENTS.md in full and follow it exactly.
 Your agent id is <YOUR-NAME>/<tool>-<n>, for example vishesh/claude-1. Register yourself with
-`python3 scripts/lab.py new agent --agent <id>`, read researchers/<YOUR-NAME>/README.md for my directives,
-then run the session loop in AGENTS.md: claim a task, do it to the quality bar, push, repeat.
+`python3 scripts/lab.py new agent --agent <id>`, start the 10-minute sync timer described in AGENTS.md,
+read researchers/<YOUR-NAME>/README.md for my directives, then run the session loop in AGENTS.md: claim a task, do it to the quality bar, push, repeat.
 ```
 
 [AGENTS.md](AGENTS.md) is the whole protocol. Claude Code also picks it up through `CLAUDE.md`.

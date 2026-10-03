@@ -14,6 +14,7 @@ claims tasks atomically through git, and rebuilds STATUS.md and library/INDEX.md
   python3 scripts/lab.py touch <task> --agent A    heartbeat on a task you hold
   python3 scripts/lab.py done <task> --agent A [--output path ...]
   python3 scripts/lab.py release <task> --agent A [--note "why"]
+  python3 scripts/lab.py sync --agent A [--every 600]   commit and push every changed file that passes the check
   python3 scripts/lab.py add-researcher <name>
   python3 scripts/lab.py gate <survey-id>          show exactly what a survey still needs to pass the gate
   python3 scripts/lab.py verify [--agent A]        check paper titles against arXiv and Crossref (catches phantom citations)
@@ -919,6 +920,73 @@ def cmd_gate(a, lab):
     return 0
 
 
+GENERATED = {"STATUS.md", "library/INDEX.md", "library/references.bib"}
+PROTECTED = ("AGENTS.md", "CLAUDE.md", "README.md", "project.yaml", "artifacts.yaml", "artifacts.lock.json",
+             "scripts/", "templates/", ".github/", ".flightdeck/", ".claude/", ".agents/", ".codex/", ".cursor/")
+
+
+def sync_once(agent: str, include_protected=False) -> int:
+    """Commit and push every changed file that passes the check; leave failing or off-limits files for later."""
+    import time
+    researcher = agent.split("/")[0]
+    E, _ = check(Lab())
+    failing = {e.split(":", 1)[0] for e in E}
+    st = git("status", "--porcelain", "-uall").stdout.splitlines()
+    paths = []
+    for line in st:
+        path = line[3:].split(" -> ")[-1].strip().strip('"')
+        paths.append(path)
+    stage, skipped = [], []
+    for path in paths:
+        if path in GENERATED:
+            continue
+        if not include_protected and path.startswith(PROTECTED):
+            skipped.append((path, "protected (pass --include-protected only with human approval)"))
+        elif path.startswith("researchers/") and path.split("/")[1] != researcher:
+            skipped.append((path, f"belongs to researcher {path.split('/')[1]}"))
+        elif path in failing:
+            skipped.append((path, "fails `lab.py check`; fix it and the next sync picks it up"))
+        else:
+            stage.append(path)
+    for path, why in skipped:
+        print(f"skip  {path}: {why}")
+    if not stage:
+        print(f"{now()} sync: nothing to push")
+        return 0
+    git("add", "-A", "--", *stage)
+    msg = f"[{agent}] sync: {len(stage)} file(s)"
+    c = git("commit", "-m", msg, "--", *stage)
+    if c.returncode != 0:
+        print(f"commit failed:\n{c.stdout}{c.stderr}", file=sys.stderr)
+        return 1
+    for attempt in range(5):
+        # merge rather than rebase: never stashes or rewrites files other agents may be editing in this clone
+        pl = git("pull", "--no-rebase", "--no-edit")
+        if pl.returncode != 0:
+            print(f"pull failed (resolve by hand, then rerun sync):\n{pl.stdout}{pl.stderr}", file=sys.stderr)
+            return 1
+        if git("push").returncode == 0:
+            print(f"{now()} sync: pushed {len(stage)} file(s)")
+            return 0
+        time.sleep(3 * (attempt + 1))
+    print("push kept failing; the commit is local and the next sync will retry", file=sys.stderr)
+    return 1
+
+
+def cmd_sync(a, lab):
+    import time
+    require_agent(lab, a.agent)
+    while True:
+        try:
+            sync_once(a.agent, a.include_protected)
+        except Exception as e:  # noqa: BLE001  a background timer must survive one bad round
+            print(f"{now()} sync error: {e}", file=sys.stderr)
+        sys.stdout.flush()
+        if not a.every:
+            return 0
+        time.sleep(a.every)
+
+
 def cmd_check(a, lab):
     E, W = check(lab, urls=a.urls)
     if a.agent:
@@ -964,6 +1032,10 @@ def main(argv=None):
             p.add_argument("--output", nargs="*", default=[])
         if name == "release":
             p.add_argument("--note", default="")
+    p = sub.add_parser("sync")
+    p.add_argument("--agent", required=True)
+    p.add_argument("--every", type=int, default=0, help="seconds between rounds; 0 = run once")
+    p.add_argument("--include-protected", action="store_true")
     p = sub.add_parser("add-researcher")
     p.add_argument("name")
     p = sub.add_parser("gate")
@@ -975,7 +1047,7 @@ def main(argv=None):
     return {
         "check": cmd_check, "index": lambda a, lab: build_index(lab) or 0, "find": cmd_find, "new": cmd_new,
         "claim": cmd_claim, "touch": cmd_touch, "done": cmd_done, "release": cmd_release,
-        "add-researcher": cmd_add_researcher, "gate": cmd_gate, "verify": cmd_verify,
+        "add-researcher": cmd_add_researcher, "gate": cmd_gate, "verify": cmd_verify, "sync": cmd_sync,
     }[a.cmd](a, lab)
 
 

@@ -29,11 +29,34 @@ git clone https://github.com/dmarzzz/swarm-lab && cd swarm-lab
 pip install pyyaml                                   # or use `uv run scripts/lab.py ...` everywhere below
 python3 scripts/lab.py new agent --agent <researcher>/<agent-name>   # registers you; commit it
 python3 scripts/lab.py check                         # must pass before every push
+python3 scripts/lab.py sync --agent <id> --every 600 >> /tmp/swarm-lab-sync.log 2>&1 &   # push every 10 min
 ```
 
 Your **agent id** is `<researcher>/<agent-name>`, for example `vishesh/claude-2` or `shadow/codex-1`. The
 researcher part must be a folder in `researchers/`. Pick an agent name that is unique among your human's
 agents; check `researchers/<you>/agents/` first. Use the same id for your whole session.
+
+## The sync timer
+
+Start this at the beginning of every session, in the background, and leave it running:
+
+```bash
+python3 scripts/lab.py sync --agent <id> --every 600 >> /tmp/swarm-lab-sync-<agent-name>.log 2>&1 &
+```
+
+Every 10 minutes it commits and pushes every changed file in your clone that passes `lab.py check`. It skips
+files that still fail (half-written entries stay local until they are fixed), generated files, protected
+files and other researchers' folders, and prints what it skipped. Your work reaches the team within 10
+minutes without anyone pushing broken files.
+
+- Claude Code: launch it with the Bash tool's background option, or as above with `&`. Other harnesses: any
+  background process works. If your harness cannot keep a background process alive, run
+  `python3 scripts/lab.py sync --agent <id>` after every unit of work and at least every 10 minutes.
+- Run one sync timer per clone. Ideally each agent has its own clone; if several agents share one, only one
+  of them runs the timer, and it pushes everyone's passing files.
+- Before you end a session, run `python3 scripts/lab.py sync --agent <id>` once more by hand and check the
+  log for skipped files.
+- Task claims still go through `lab.py claim`, which pushes immediately.
 
 ## The session loop
 
@@ -48,7 +71,8 @@ Repeat this loop until your human stops you or there is nothing left you can do.
 4. **Claim.** `python3 scripts/lab.py claim <task-id> --agent <id>`. This pulls, edits the task, commits and
    pushes atomically. If it says someone else holds the task, pick another. Never edit claim fields by hand.
    Hold one task at a time.
-5. **Work.** Follow the rules for the task kind below. Commit small and often (every few library entries).
+5. **Work.** Follow the rules for the task kind below. The sync timer pushes your passing files every 10
+   minutes; you can also run `lab.py sync --agent <id>` yourself after a batch.
 6. **Heartbeat.** At least once an hour: `python3 scripts/lab.py touch <task-id> --agent <id>`, and update
    `researchers/<you>/agents/<agent-name>.md` (`state`, `task`, `doing`, `updated`). A claim with no heartbeat
    for 3 hours is stale and anyone may take it over.
