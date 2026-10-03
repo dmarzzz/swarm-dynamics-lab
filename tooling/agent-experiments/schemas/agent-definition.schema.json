@@ -1,0 +1,188 @@
+{
+  "type": "object",
+  "required": [
+    "schema_version",
+    "definition_id",
+    "role",
+    "model",
+    "prompts",
+    "tools",
+    "memory",
+    "policy",
+    "credential_aliases"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "definition_id": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "model": {
+      "type": "object",
+      "required": [
+        "provider",
+        "requested_id",
+        "weights_sha256",
+        "tokenizer",
+        "temperature",
+        "top_p",
+        "max_output_tokens",
+        "reasoning",
+        "seed_support"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "provider": {
+          "type": "string"
+        },
+        "requested_id": {
+          "type": "string"
+        },
+        "weights_sha256": {
+          "type": "string"
+        },
+        "tokenizer": {
+          "type": "string"
+        },
+        "temperature": {
+          "type": "number"
+        },
+        "top_p": {
+          "type": "number"
+        },
+        "max_output_tokens": {
+          "type": "integer"
+        },
+        "reasoning": {
+          "type": "string"
+        },
+        "seed_support": {
+          "type": "string"
+        }
+      }
+    },
+    "prompts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "role",
+          "path",
+          "sha256"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "schema_path",
+          "implementation_sha256",
+          "permissions"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "schema_path": {
+            "type": "string"
+          },
+          "implementation_sha256": {
+            "type": "string"
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "memory": {
+      "type": "object",
+      "required": [
+        "scope",
+        "initial_snapshot",
+        "retrieval_policy",
+        "update_policy",
+        "eviction_policy",
+        "reset"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "scope": {
+          "type": "string"
+        },
+        "initial_snapshot": {
+          "type": "string"
+        },
+        "retrieval_policy": {
+          "type": "string"
+        },
+        "update_policy": {
+          "type": "string"
+        },
+        "eviction_policy": {
+          "type": "string"
+        },
+        "reset": {
+          "type": "string"
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "action_schema",
+        "context_truncation",
+        "invalid_action",
+        "adaptation"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "action_schema": {
+          "type": "string"
+        },
+        "context_truncation": {
+          "type": "string"
+        },
+        "invalid_action": {
+          "type": "string"
+        },
+        "adaptation": {
+          "type": "string"
+        }
+      }
+    },
+    "credential_aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "agent-definition template structure"
+}
