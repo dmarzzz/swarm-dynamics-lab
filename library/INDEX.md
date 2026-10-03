@@ -2,7 +2,7 @@
 
 # Library index
 
-1891 entries.
+1894 entries.
 
 ## Papers (1206)
 
@@ -1215,7 +1215,7 @@
 | [zhao-2024-snail](papers/zhao-2024-snail.md) | Snail-inspired robotic swarms: a hybrid connector drives collective adaptation in unstructured outdoor environments | 2024 | 2 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [zhuge-2023-mindstorms](papers/zhuge-2023-mindstorms.md) | Mindstorms in Natural Language-Based Societies of Mind | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 
-## Blogs (110)
+## Blogs (113)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1254,6 +1254,7 @@
 | [anthropic-2026-create](blogs/anthropic-2026-create.md) | Create custom subagents (Claude Code documentation) | 2026 | 4 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-sutton |
 | [asymmetricsecurity-2026-rogue](blogs/asymmetricsecurity-2026-rogue.md) | Rogue Agents Investigation (plus 'Initial Findings' companion post) | 2026 | 4 | full | swarm-detection, llm-agent-swarms | shadow/sol-w5 |
 | [austgen-2023-complete](blogs/austgen-2023-complete.md) | Complete Knowledge | 2023 | 4 | full | sybil-resistance | dmarz/sybil-flashbots-informal |
+| [baig-2026-how](blogs/baig-2026-how.md) | How good are slop-vestigators? | 2026 | 4 | full | swarm-detection, llm-agent-swarms | shadow/sol-w4 |
 | [buterin-2023-what](blogs/buterin-2023-what.md) | What do I think about biometric proof of personhood? | 2023 | 4 | full | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [cloudflare-2025-forget](blogs/cloudflare-2025-forget.md) | Forget IPs: using cryptography to verify bot and agent traffic | 2025 | 4 | skim | sybil-resistance, llm-agent-swarms | dmarz/sybil-credentials |
 | [collective-2023-mev-share](blogs/collective-2023-mev-share.md) | MEV-Share: programmably private orderflow to share MEV with users | 2023 | 4 | skim | sybil-resistance | dmarz/sybil-flashbots |
@@ -1273,6 +1274,7 @@
 | [huggingface-2026-anatomy](blogs/huggingface-2026-anatomy.md) | Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident | 2026 | 4 | full | llm-agent-swarms | vishesh/senku-1 |
 | [invariantlabs-2025-mcp](blogs/invariantlabs-2025-mcp.md) | MCP Security Notification: Tool Poisoning Attacks | 2025 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-informal |
 | [kadianakis-2023-proof](blogs/kadianakis-2023-proof.md) | Proof of Validator: A simple anonymous credential scheme for Ethereum's DHT | 2023 | 4 | full | sybil-resistance, sync-consensus | dmarz/sybil-flashbots-informal |
+| [knox-2026-unexamined](blogs/knox-2026-unexamined.md) | An unexamined cause of the OpenAI Hugging Face hacking incident: its binary performance metric | 2026 | 4 | full | llm-agent-swarms, collective-decision | shadow/sol-w4 |
 | [lesswrong-2026-mechanistic](blogs/lesswrong-2026-mechanistic.md) | A Mechanistic Explanation of Prompt Injection (and why you should study roles) | 2026 | 4 | full | fork-merge-security, llm-agent-swarms | shadow/sol-w4 |
 | [mallen-2026-openai](blogs/mallen-2026-openai.md) | An OpenAI model left notes about how to evade containment; we need more details | 2026 | 4 | full | llm-agent-swarms, fork-merge-security, swarm-detection | shadow/sol-w4 |
 | [nist-2025-technical](blogs/nist-2025-technical.md) | Technical Blog: Strengthening AI Agent Hijacking Evaluations | 2025 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-identity-hijack |
@@ -1293,6 +1295,7 @@
 | [collective-2024-portrait](blogs/collective-2024-portrait.md) | Portrait of a TEE: applications and identity | 2024 | 3 | full | sybil-resistance | dmarz/sybil-flashbots |
 | [collective-2024-tee](blogs/collective-2024-tee.md) | TEE-Boost | 2024 | 3 | skim | sybil-resistance | dmarz/sybil-flashbots |
 | [collective-2026-avoiding](blogs/collective-2026-avoiding.md) | Avoiding Client Disruption in Anonymous Broadcast Protocols | 2026 | 3 | skim | sybil-resistance | dmarz/sybil-flashbots |
+| [critch-2021-what](blogs/critch-2021-what.md) | What Multipolar Failure Looks Like, and Robust Agent-Agnostic Processes (RAAPs) | 2021 | 3 | skim | llm-agent-swarms, collective-decision, swarm-detection | shadow/sol-w4 |
 | [crowdstrike-2021-sunspot](blogs/crowdstrike-2021-sunspot.md) | SUNSPOT: An Implant in the Build Process | 2021 | 3 | skim | fork-merge-security | dmarz/fm-mobile-agents |
 | [dobrokhvalov-2025-privacy](blogs/dobrokhvalov-2025-privacy.md) | Privacy-Preserving Sybil Resistance via MPC-TLS and Semaphore Proofs | 2025 | 3 | full | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [eigenphi-2025-buildernet](blogs/eigenphi-2025-buildernet.md) | BuilderNet's Infrastructure Monoculture: Centralization with Extra Steps | 2025 | 3 | full | sybil-resistance, swarm-detection | dmarz/sybil-flashbots-informal |
