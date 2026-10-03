@@ -3,14 +3,16 @@ id: review-atlas-project-connections
 type: task
 title: Review question atlas and connect research context to sixteen project briefs
 kind: synthesis
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-methods
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-methods
 depends_on: []
 topics: []
+claimed_at: 2026-10-03T21:34Z
+updated: 2026-10-03T21:34Z
 ---
 
 ## Goal
