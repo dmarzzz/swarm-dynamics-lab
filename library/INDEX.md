@@ -2,7 +2,7 @@
 
 # Library index
 
-2661 entries.
+2663 entries.
 
 ## Papers (1691)
 
@@ -2593,7 +2593,7 @@
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 | [data-zzzztom-moltbook-2026](datasets/data-zzzztom-moltbook-2026.md) | zzzztom/moltbook-forum-data Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 
-## Talks (97)
+## Talks (99)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -2607,6 +2607,7 @@
 | [couzin-2019-collective](talks/couzin-2019-collective.md) | Iain Couzin--"Collective Sensing and Decision-Making in Animal Groups" | 2019 | 5 | full | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
 | [couzin-2019-sensing](talks/couzin-2019-sensing.md) | Iain Couzin on Collective sensing and decision-making in animal groups | 2019 | 5 | full | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
 | [couzin-2024-cognitive](talks/couzin-2024-cognitive.md) | Iain Couzin - Cognitive collectives - IPAM at UCLA | 2024 | 5 | skim | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
+| [couzin-2025-geometric](talks/couzin-2025-geometric.md) | 97. Geometric Collective Decision Making (with Professor Iain Couzin) | 2025 | 5 | full | collective-motion, collective-decision, criticality-measurement, swarm-robotics | shadow/sol-aud |
 | [dalton-2026-breaking](talks/dalton-2026-breaking.md) | Black Hat USA 2026 \| The 'Breaking' News: The OpenAI-Hugging Face Incident | 2026 | 5 | abstract | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
 | [deason-2018-time](talks/deason-2018-time.md) | Time Signature Based Matching - Lauren Deason | 2018 | 5 | abstract | swarm-detection | shadow/sol-w1 |
 | [felten-2022-l2](talks/felten-2022-l2.md) | L2 sequencing and MEV - Ed Felten (Arbitrum) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
@@ -2640,6 +2641,7 @@
 | [cubbon-2020-inauthentic](talks/cubbon-2020-inauthentic.md) | Inauthentic & coordinated online activity \| Webinar with Seb Cubbon, Carlotta Dotto & Alastair Reid | 2020 | 4 | abstract | swarm-detection | shadow/sol-w1 |
 | [dafoe-2021-open](talks/dafoe-2021-open.md) | Open Problems in Cooperative AI - Allan Dafoe and Edward Hughes | 2021 | 4 | abstract | marl-emergence, collective-decision, llm-agent-swarms | shadow/sol-w1 |
 | [drake-2022-tackling](talks/drake-2022-tackling.md) | Tackling MEV with cryptography - Justin Drake (Ethereum Foundation) | 2022 | 4 | full | sybil-resistance | shadow/sol-w8 |
+| [gordon-2021-deborah](talks/gordon-2021-deborah.md) | Deborah Gordon on Ant Colonies as Distributed Computers | 2021 | 4 | full | collective-decision, swarm-intelligence, fork-merge-security | shadow/sol-aud |
 | [hauert-2017-robots](talks/hauert-2017-robots.md) | Robots to nanoparticles: Engineering swarms to fix global problems \| Sabine Hauert \| TEDxExeterSalon | 2017 | 4 | full | swarm-robotics | shadow/sol-w8 |
 | [hermann-2022-mev](talks/hermann-2022-mev.md) | MEV Reduction via Batch Auction - Alex Hermann (Cowswap) | 2022 | 4 | full | sybil-resistance | shadow/sol-w8 |
 | [hickey-2018-identifying](talks/hickey-2018-identifying.md) | Identifying and Monitoring Disinformation across Social Platforms: Techniques for Discovery and Analysis | 2018 | 4 | abstract | swarm-detection | shadow/sol-w1 |
