@@ -584,6 +584,8 @@ def build_index(lab: Lab):
                  f"{esc(d.get('updated') or d.get('claimed_at') or '')} | {esc(d.get('title'))} |")
     S.append("")
 
+    S += batch_section()
+
     S += ["## Agents", ""]
     if lab.agents:
         S += ["| agent | state | task | updated | doing |", "|---|---|---|---|---|"]
@@ -625,6 +627,35 @@ def build_index(lab: Lab):
         S.append("None yet.")
     S.append("")
     (ROOT / "STATUS.md").write_text("\n".join(S), encoding="utf-8")
+
+
+def batch_section() -> list[str]:
+    """Candidate batches (GitHub issues labelled `batch`, see PIPELINE.md). Skipped quietly without gh or network."""
+    import json
+    try:
+        r = subprocess.run(["gh", "issue", "list", "-R", "dmarzzz/swarm-lab", "--label", "batch", "--state", "all",
+                            "--limit", "500", "--json", "number,state,labels,title,updatedAt"],
+                           capture_output=True, text=True, timeout=60)
+        issues = json.loads(r.stdout) if r.returncode == 0 else None
+    except (OSError, subprocess.TimeoutExpired, ValueError):
+        issues = None
+    if issues is None:
+        return []
+    claimed = [i for i in issues if i["state"] == "OPEN" and any(l["name"] == "claimed" for l in i["labels"])]
+    free = [i for i in issues if i["state"] == "OPEN" and i not in claimed]
+    closed = [i for i in issues if i["state"] != "OPEN"]
+    S = ["## Candidate batches", "",
+         f"{len(free)} free, {len(claimed)} claimed, {len(closed)} done. Claim with "
+         "`python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).", ""]
+    if claimed or free:
+        S += ["| issue | state | updated | batch |", "|---|---|---|---|"]
+        for i in sorted(claimed, key=lambda i: i["number"]) + sorted(free, key=lambda i: i["number"])[:15]:
+            S.append(f"| [#{i['number']}](https://github.com/dmarzzz/swarm-lab/issues/{i['number']}) | "
+                     f"{'claimed' if i in claimed else 'free'} | {i['updatedAt'][:16]}Z | {esc(i['title'])} |")
+        if len(free) > 15:
+            S.append(f"| | | | {len(free) - 15} more free batches |")
+    S.append("")
+    return S
 
 
 def build_bib(lab: Lab):
@@ -676,11 +707,21 @@ def cmd_verify(a, lab):
                 time.sleep(3 * (i + 1))
         return b"ERR"
 
+    only = None
+    if a.since:
+        r = git("diff", "--name-only", "--diff-filter=AM", a.since, "HEAD", "--", "library/papers")
+        if r.returncode != 0:
+            print(f"cannot diff against {a.since}; verifying everything")
+        else:
+            only = set(r.stdout.split())
+            print(f"verifying {len(only)} paper(s) added or changed since {a.since[:12]}")
     bad = checked = 0
     for stem, d in sorted(lab.library.items()):
         if d.error or d.get("type") != "paper":
             continue
         if a.agent and d.get("added_by") != a.agent:
+            continue
+        if only is not None and d.rel not in only:
             continue
         want = _norm_title(d.get("title"))
         got, src = None, None
@@ -713,6 +754,9 @@ def cmd_verify(a, lab):
         a_w, b_w = set(want.split()), set(have.split())
         if a_w and b_w:  # word-order tolerant: arXiv and journal versions often swap title halves
             ratio = max(ratio, len(a_w & b_w) / len(a_w | b_w))
+        short, long_ = sorted((want, have), key=len)
+        if len(short) >= 15 and long_.startswith(short):  # subtitle dropped on one side
+            ratio = 1.0
         if ratio < a.threshold:
             print(f"BAD   {d.rel}: title mismatch ({ratio:.2f}) entry='{d.get('title')}' {src}='{' '.join(got.split())}'")
             bad += 1
@@ -1101,6 +1145,7 @@ def main(argv=None):
     p = sub.add_parser("verify")
     p.add_argument("--agent", help="only verify papers this agent added")
     p.add_argument("--threshold", type=float, default=0.85)
+    p.add_argument("--since", help="only papers added or changed since this git revision (CI uses the push's base)")
     sub.add_parser("index")
     p = sub.add_parser("find")
     p.add_argument("text")
