@@ -27,7 +27,6 @@
 |---|---|---|---|---|---|---|---|
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
-| [scan-papers-fm-contagion](tasks/scan-papers-fm-contagion.md) | claimed | p0 | scan | shadow/sol-g74 |  | 2026-10-03T20:19Z | Catalogue the papers: corruption spreading through multi-agent LLM systems |
 | [scan-papers-fm-identity-hijack](tasks/scan-papers-fm-identity-hijack.md) | claimed | p0 | scan | dmarz/fm-identity-hijack |  | 2026-10-03T18:12Z | Catalogue the papers: identity and goal hijack of agents |
 | [scan-papers-fm-memory-injection](tasks/scan-papers-fm-memory-injection.md) | claimed | p0 | scan | dmarz/fm-memory-injection |  | 2026-10-03T18:11Z | Catalogue the papers: memory poisoning and persistent prompt injection in agents |
 | [scan-papers-fm-merge-poisoning](tasks/scan-papers-fm-merge-poisoning.md) | claimed | p0 | scan | dmarz/fm-merge-poisoning |  | 2026-10-03T18:11Z | Catalogue the papers: poisoning through model merging, federated aggregation and distillation |
@@ -75,6 +74,7 @@
 | [scan-papers-collective-decision](tasks/scan-papers-collective-decision.md) | done | p0 | scan | dmarz/collective-decision |  | 2026-10-03T18:18Z | Catalogue the papers: collective decision-making in biology |
 | [scan-papers-collective-motion](tasks/scan-papers-collective-motion.md) | done | p0 | scan | dmarz/collective-motion |  | 2026-10-03T18:18Z | Catalogue the papers: collective motion models |
 | [scan-papers-collective-motion-recent](tasks/scan-papers-collective-motion-recent.md) | done | p0 | scan | dmarz/collective-motion-recent |  | 2026-10-03T18:18Z | Catalogue collective motion papers from 2024 onward |
+| [scan-papers-fm-contagion](tasks/scan-papers-fm-contagion.md) | done | p0 | scan | shadow/sol-g74 |  | 2026-10-03T20:55Z | Catalogue the papers: corruption spreading through multi-agent LLM systems |
 | [scan-papers-llm-agent-swarms](tasks/scan-papers-llm-agent-swarms.md) | done | p0 | scan | dmarz/llm-agent-swarms |  | 2026-10-03T18:19Z | Catalogue the papers: llm agent swarms |
 | [scan-papers-llm-agent-swarms-recent](tasks/scan-papers-llm-agent-swarms-recent.md) | done | p0 | scan | dmarz/llm-agent-swarms-recent |  | 2026-10-03T18:19Z | Catalogue LLM agent swarms papers from 2024 onward |
 | [scan-papers-marl-emergence](tasks/scan-papers-marl-emergence.md) | done | p0 | scan | dmarz/marl-emergence |  | 2026-10-03T18:19Z | Catalogue the papers: multi-agent rl and emergent coordination |
