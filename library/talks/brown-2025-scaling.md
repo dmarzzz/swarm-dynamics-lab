@@ -7,7 +7,7 @@ authors:
 - Alessio
 - swyx
 year: 2025
-url: https://www.latent.space/p/noam-brown
+url: https://www.latent.space/p/scaling-test-time-compute-to-multi
 venue: 'Latent Space: The AI Engineer Podcast, 2025-06-19'
 topics:
 - llm-agent-swarms
