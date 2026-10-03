@@ -3,7 +3,7 @@ id: skeptical-research-context
 type: task
 title: Distill research context and critique candidate designs
 kind: synthesis
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-03T23:42Z
-updated: 2026-10-03T23:42Z
+updated: 2026-10-03T23:48Z
+outputs:
+- researchers/vishesh/notes/skeptical-review/README.md
+- researchers/vishesh/notes/skeptical-review/critiques.json
 ---
 
 ## Goal
@@ -21,4 +24,4 @@ Distill reusable evidence and design lessons, then publish a skeptical, source-b
 
 ## Done when
 
-- [ ] Publish context notes, source ledger, forty specific critiques, dispositions and coverage checks.
+- [x] Publish context notes, source ledger, forty specific critiques, dispositions and coverage checks.
