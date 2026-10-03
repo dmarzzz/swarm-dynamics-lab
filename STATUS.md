@@ -11,15 +11,15 @@
 | swarm-robotics | 272 | 13 | 2 | 7 | 0 | 2 | 296 |
 | swarm-intelligence | 107 | 1 | 2 | 4 | 0 | 0 | 114 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 0 | 194 |
-| sync-consensus | 225 | 8 | 11 | 17 | 0 | 10 | 271 |
+| sync-consensus | 226 | 8 | 11 | 17 | 0 | 10 | 272 |
 | criticality-measurement | 188 | 4 | 2 | 23 | 0 | 7 | 224 |
 | marl-emergence | 125 | 12 | 0 | 33 | 0 | 8 | 178 |
 | llm-agent-swarms | 284 | 49 | 93 | 198 | 5 | 10 | 639 |
 | crowds-and-traffic | 78 | 2 | 1 | 2 | 0 | 8 | 91 |
 | meta | 82 | 9 | 5 | 22 | 0 | 3 | 121 |
-| sybil-resistance | 208 | 45 | 61 | 59 | 5 | 6 | 384 |
+| sybil-resistance | 209 | 45 | 61 | 59 | 5 | 6 | 385 |
 | fork-merge-security | 214 | 14 | 56 | 69 | 0 | 6 | 359 |
-| swarm-detection | 324 | 35 | 70 | 194 | 8 | 6 | 637 |
+| swarm-detection | 327 | 35 | 70 | 194 | 8 | 6 | 640 |
 
 ## Tasks
 
@@ -106,7 +106,7 @@
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#24](https://github.com/dmarzzz/swarm-lab/issues/24) | claimed | 2026-10-03T19:50Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-01) |
+| [#24](https://github.com/dmarzzz/swarm-lab/issues/24) | claimed | 2026-10-03T19:55Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-01) |
 | [#37](https://github.com/dmarzzz/swarm-lab/issues/37) | claimed | 2026-10-03T19:50Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-01) |
 | [#40](https://github.com/dmarzzz/swarm-lab/issues/40) | claimed | 2026-10-03T19:53Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-02) |
 | [#52](https://github.com/dmarzzz/swarm-lab/issues/52) | claimed | 2026-10-03T19:49Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-01) |
