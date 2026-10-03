@@ -2,9 +2,9 @@
 
 # Library index
 
-2720 entries.
+2725 entries.
 
-## Papers (1715)
+## Papers (1720)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -320,6 +320,7 @@
 | [zomer-2026-unraveling](papers/zomer-2026-unraveling.md) | Unraveling the emergence of collective behavior in networks of cognitive agents | 2026 | 5 | full | llm-agent-swarms, swarm-intelligence, collective-decision | dmarz/llm-agent-swarms-recent |
 | [abdelnabi-2024-get](papers/abdelnabi-2024-get.md) | Get my drift? Catching LLM Task Drift with Activation Deltas | 2024 | 4 | abstract | fork-merge-security, llm-agent-swarms | dmarz/fm-identity-hijack |
 | [abdelnabi-2025-firewalls](papers/abdelnabi-2025-firewalls.md) | Firewalls to Secure Dynamic LLM Agentic Networks | 2025 | 4 | abstract | fork-merge-security, llm-agent-swarms | dmarz/fm-ai-control |
+| [abdolmaleki-2026-attribute](papers/abdolmaleki-2026-attribute.md) | Attribute-Based Threshold Issuance Anonymous Counting Tokens and Its Application to Sybil-Resistant Self-Sovereign Identity | 2026 | 4 | skim | sybil-resistance | shadow/sol-p1 |
 | [acebron-2005-kuramoto](papers/acebron-2005-kuramoto.md) | The Kuramoto model: A simple paradigm for synchronization phenomena | 2005 | 4 | abstract | sync-consensus, criticality-measurement | dmarz/sync-consensus |
 | [adler-2024-personhood](papers/adler-2024-personhood.md) | Personhood credentials: Artificial intelligence and the value of privacy-preserving tools to distinguish who is real online | 2024 | 4 | abstract | sybil-resistance, llm-agent-swarms | dmarz/sybil-credentials |
 | [akhtar-2025-botsscl](papers/akhtar-2025-botsscl.md) | BotSSCL: Social Bot Detection with Self-Supervised Contrastive Learning | 2025 | 4 | skim | swarm-detection | shadow/sol-w1 |
@@ -1406,6 +1407,7 @@
 | [pancer-1995-coexistence](papers/pancer-1995-coexistence.md) | Coexistence and Possible Parasitism of Somatic and Germ Cell Lines in Chimeras of the Colonial Urochordate Botryllus schlosseri | 1995 | 3 | abstract | fork-merge-security | dmarz/fm-biology |
 | [papachristou-2025-network](papers/papachristou-2025-network.md) | Network formation and dynamics among multi-LLMs | 2025 | 3 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms-recent |
 | [parrish-1999-complexity](papers/parrish-1999-complexity.md) | Complexity, Pattern, and Evolutionary Trade-Offs in Animal Aggregation | 1999 | 3 | abstract | collective-motion | dmarz/collective-motion |
+| [partow-2026-coalition-vast](papers/partow-2026-coalition-vast.md) | COALITION-VAST: Auditable Multi-Agent Alignment Under Byzantine Governance | 2026 | 3 | abstract | sybil-resistance, llm-agent-swarms, fork-merge-security | shadow/sol-p1 |
 | [passino-2002-biomimicry](papers/passino-2002-biomimicry.md) | Biomimicry of bacterial foraging for distributed optimization and control | 2002 | 3 | abstract | swarm-intelligence, collective-decision | dmarz/swarm-intelligence-audit |
 | [patino-padial-2025-swarming](papers/patino-padial-2025-swarming.md) | Swarming intelligence in self-propelled micromotors and nanomotors | 2025 | 3 | skim | swarm-robotics, active-matter | dmarz/swarm-robotics-audit |
 | [pecora-1998-master](papers/pecora-1998-master.md) | Master Stability Functions for Synchronized Coupled Systems | 1998 | 3 | abstract | sync-consensus | dmarz/sync-consensus-audit |
@@ -1413,6 +1415,7 @@
 | [perez-2024-cultural](papers/perez-2024-cultural.md) | Cultural evolution in populations of Large Language Models | 2024 | 3 | abstract | llm-agent-swarms, meta | dmarz/llm-agent-swarms-audit |
 | [pfitzmann-2010-terminology](papers/pfitzmann-2010-terminology.md) | A terminology for talking about privacy by data minimization: Anonymity, Unlinkability, Undetectability, Unobservability, Pseudonymity, and Identity Management | 2010 | 3 | skim | fork-merge-security, sybil-resistance | dmarz/fm-unlinkability |
 | [piao-2025-agentsociety](papers/piao-2025-agentsociety.md) | AgentSociety: Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society | 2025 | 3 | abstract | llm-agent-swarms, crowds-and-traffic | dmarz/llm-agent-swarms |
+| [piatek-2007-incentives](papers/piatek-2007-incentives.md) | Do incentives build robustness in BitTorrent? | 2007 | 3 | skim | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [piatti-2024-cooperate](papers/piatti-2024-cooperate.md) | Cooperate or Collapse: Emergence of Sustainable Cooperation in a Society of LLM Agents | 2024 | 3 | abstract | llm-agent-swarms, marl-emergence | dmarz/llm-agent-swarms |
 | [pickem-2017-robotarium](papers/pickem-2017-robotarium.md) | The Robotarium: A remotely accessible swarm robotics research testbed | 2017 | 3 | skim | swarm-robotics, sync-consensus | dmarz/swarm-robotics-audit |
 | [pierson-2016-adaptive](papers/pierson-2016-adaptive.md) | Adaptive Inter-Robot Trust for Robust Multi-Robot Sensor Coverage | 2016 | 3 | abstract | sybil-resistance, swarm-robotics | dmarz/sybil-robotics |
@@ -1603,6 +1606,7 @@
 | [zouzou-2024-unsupervised](papers/zouzou-2024-unsupervised.md) | Unsupervised detection of coordinated fake-follower campaigns on social media | 2024 | 3 | abstract | swarm-detection | dmarz/sd-coordination |
 | [akhtar-2023-false](papers/akhtar-2023-false.md) | False Information, Bots and Malicious Campaigns: Demystifying Elements of Social Media Manipulations | 2023 | 2 | abstract | swarm-detection | dmarz/sd-bots |
 | [amala-arokia-nathan-2025-autonomous](papers/amala-arokia-nathan-2025-autonomous.md) | An autonomous drone swarm for detecting and tracking anomalies among dense vegetation | 2025 | 2 | skim | swarm-robotics, swarm-intelligence | dmarz/swarm-robotics-recent-audit |
+| [bai-2025-survey](papers/bai-2025-survey.md) | A Survey on Directed Acyclic Graph-Based Blockchain in Smart Mobility | 2025 | 2 | skim | sybil-resistance, swarm-robotics | shadow/sol-p1 |
 | [bendada-2025-botdetect](papers/bendada-2025-botdetect.md) | BotDetect: A Decentralized Federated Learning Framework for Detecting Financial Bots on the EVM Blockchains | 2025 | 2 | abstract | swarm-detection | dmarz/sd-onchain |
 | [beni-2005-swarm](papers/beni-2005-swarm.md) | From Swarm Intelligence to Swarm Robotics | 2005 | 2 | abstract | swarm-robotics, swarm-intelligence | dmarz/swarm-robotics |
 | [bhumichai-2024-evaluation](papers/bhumichai-2024-evaluation.md) | The Evaluation of Extracted Features for Detecting Eclipse Attacks on Ethereum Network Layers | 2024 | 2 | abstract | sybil-resistance, swarm-detection | shadow/sol-p2 |
@@ -1643,6 +1647,7 @@
 | [iourovitski-2024-hide](papers/iourovitski-2024-hide.md) | Hide and Seek: Fingerprinting Large Language Models with Evolutionary Learning | 2024 | 2 | abstract | swarm-detection | dmarz/sd-attribution |
 | [jaderberg-2019-human](papers/jaderberg-2019-human.md) | Human-level performance in 3D multiplayer games with population-based reinforcement learning | 2019 | 2 | abstract | marl-emergence | dmarz/marl-emergence |
 | [jerkins-2026-penalizing](papers/jerkins-2026-penalizing.md) | Penalizing Malicious Web Bots with an Allow List Based Reverse Proxy and Tarpit | 2026 | 2 | abstract | swarm-detection | dmarz/sd-web-agents |
+| [jiang-2019-resilient](papers/jiang-2019-resilient.md) | Resilient Consensus of Second-Order Multi-Agent Systems Based on WiFi Signals | 2019 | 2 | abstract | sybil-resistance, sync-consensus, swarm-robotics | shadow/sol-p1 |
 | [kahlhofer-2024-honeyquest](papers/kahlhofer-2024-honeyquest.md) | Honeyquest: Rapidly Measuring the Enticingness of Cyber Deception Techniques with Code-based Questionnaires | 2024 | 2 | abstract | swarm-detection | dmarz/sd-honeypots |
 | [kalenkova-2025-discovering](papers/kalenkova-2025-discovering.md) | Discovering Coordinated Processes From Social Online Networks | 2025 | 2 | abstract | swarm-detection, llm-agent-swarms | dmarz/sd-coordination |
 | [karaboga-2007-powerful](papers/karaboga-2007-powerful.md) | A powerful and efficient algorithm for numerical function optimization: artificial bee colony (ABC) algorithm | 2007 | 2 | abstract | swarm-intelligence | dmarz/swarm-intelligence |
