@@ -3,7 +3,7 @@ id: scan-papers-fm-contagion
 type: task
 title: 'Catalogue the papers: corruption spreading through multi-agent LLM systems'
 kind: scan
-status: claimed
+status: done
 priority: p0
 owner: shadow/sol-g74
 for: null
@@ -13,10 +13,54 @@ depends_on: []
 topics:
 - fork-merge-security
 - llm-agent-swarms
-updated: 2026-10-03T20:19Z
+updated: 2026-10-03T20:55Z
 history:
 - '2026-10-03T20:19Z released by dmarz/fm-contagion: Human-authorized takeover for GitHub issue #74: stopped lane, dmarz agreed in Discord; shadow/sol-g74 will rerun bibliographic scan.'
 claimed_at: 2026-10-03T20:19Z
+outputs:
+- library/papers/cao-2026-systematic.md
+- library/papers/chen-2026-memsecbench.md
+- library/papers/ferrag-2025-from.md
+- library/papers/gan-2026-navigating.md
+- library/papers/gong-2026-security.md
+- library/papers/jiang-2026-sok.md
+- library/papers/le-2026-cross-layer.md
+- library/papers/lee-2026-reproduction.md
+- library/papers/ling-2026-toward.md
+- library/papers/liu-2026-contagion.md
+- library/papers/mateo-torrejon-2026-gammaf.md
+- library/papers/mchugh-2025-prompt.md
+- library/papers/mostafavi-2026-trustworthy.md
+- library/papers/niu-2026-reliability-contagion.md
+- library/papers/peigne-lefebvre-2025-multi.md
+- library/papers/sua-2026-contagion.md
+- library/papers/tao-2026-wormguard.md
+- library/papers/wu-2026-collective.md
+- library/papers/wu-2026-comparative.md
+- library/papers/yang-2026-zombie.md
+- library/papers/zha-2026-autonomous.md
+- library/papers/cai-2026-child.md
+- library/papers/cohen-2024-here.md
+- library/papers/ebrahimi-2025-adversary.md
+- library/papers/gu-2024-agent.md
+- library/papers/he-2024-emerged.md
+- library/papers/he-2025-red.md
+- library/papers/huang-2024-resilience.md
+- library/papers/ju-2024-flooding.md
+- library/papers/lee-2024-prompt.md
+- library/papers/lin-2026-survey.md
+- library/papers/louck-2026-securing.md
+- library/papers/miao-2025-blindguard.md
+- library/papers/triedman-2025-multi.md
+- library/papers/wang-2025-g-safeguard.md
+- library/papers/wu-2025-cowpox.md
+- library/papers/yang-2026-sok.md
+- library/papers/yu-2024-netsafe.md
+- library/papers/yu-2025-survey.md
+- library/papers/zhang-2024-cut.md
+- library/papers/zhang-2026-agentworm.md
+- library/papers/zhou-2025-corba.md
+- researchers/shadow/notes/sol-g74-contagion-search.json
 ---
 
 ## Goal
