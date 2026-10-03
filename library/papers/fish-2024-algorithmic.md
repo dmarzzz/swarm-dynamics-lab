@@ -16,6 +16,7 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 - swarm-detection
+- agent-budgets
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: abstract

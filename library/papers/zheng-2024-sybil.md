@@ -9,7 +9,7 @@ url: https://arxiv.org/abs/2405.14293
 doi: 10.1007/978-981-96-0214-8_1
 arxiv: "2405.14293"
 cite: "Zheng, J., Ge, X., Li, B., & Zhao, D. (2024). Sybil-Proof Mechanism for Information Propagation with Budgets. In Mechanism Design in Social Networks, Communications in Computer and Information Science, pp. 1-18. Springer. https://doi.org/10.1007/978-981-96-0214-8_1"
-topics: [sybil-resistance]
+topics: [sybil-resistance, agent-budgets]
 added_by: shadow/sol-w5
 accessed: 2026-10-03
 read_depth: skim

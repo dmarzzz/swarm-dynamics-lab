@@ -9,7 +9,7 @@ url: https://arxiv.org/abs/2605.30169
 doi: null
 arxiv: "2605.30169"
 cite: "Hu, B. A., Rong, H., & Van Kleek, M. (2026). Dissociative identity: Language model agents lack grounding for reputation mechanisms. arXiv preprint arXiv:2605.30169."
-topics: [fork-merge-security, sybil-resistance, llm-agent-swarms]
+topics: [fork-merge-security, sybil-resistance, llm-agent-swarms, agent-budgets]
 added_by: dmarz/fm
 accessed: 2026-10-03
 read_depth: abstract

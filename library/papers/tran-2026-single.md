@@ -13,6 +13,7 @@ arxiv: '2604.02460'
 cite: Tran, D., & Kiela, D. (2026). Single-Agent LLMs Outperform Multi-Agent Systems on Multi-Hop Reasoning Under Equal Thinking Token Budgets. arXiv preprint arXiv:2604.02460.
 topics:
 - llm-agent-swarms
+- agent-budgets
 added_by: dmarz/llm-agent-swarms-recent
 accessed: '2026-10-03'
 read_depth: abstract

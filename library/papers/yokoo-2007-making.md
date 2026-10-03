@@ -9,7 +9,7 @@ url: https://cdn.aaai.org/AAAI/2007/AAAI07-272.pdf
 doi: null
 arxiv: null
 cite: "Yokoo, M., & Iwasaki, A. (2007). Making VCG More Robust in Combinatorial Auctions via Submodular Approximation. In Proceedings of the Twenty-Second AAAI Conference on Artificial Intelligence (AAAI-07), pp. 1679-1682. AAAI Press. https://aaai.org/papers/01679-aaai07-272-making-vcg-more-robust-in-combinatorial-auctions-via-submodular-approximation/"
-topics: [sybil-resistance, collective-decision]
+topics: [sybil-resistance, collective-decision, agent-budgets]
 added_by: shadow/sol-p2
 accessed: 2026-10-03
 read_depth: full

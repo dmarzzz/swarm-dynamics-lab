@@ -31,6 +31,7 @@ arxiv: '2512.08296'
 cite: Kim, Y., Gu, K., Park, C., Park, C., Schmidgall, S., Heydari, A. A., Yan, Y., Zhang, Z., Zhuang, Y., Liu, Y., et al. (2025). Towards a science of scaling agent systems. arXiv preprint arXiv:2512.08296.
 topics:
 - llm-agent-swarms
+- agent-budgets
 added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: full

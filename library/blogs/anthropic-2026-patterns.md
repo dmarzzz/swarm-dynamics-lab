@@ -10,6 +10,7 @@ url: https://www.anthropic.com/research/multiagent-systems
 site: anthropic.com (research)
 topics:
 - llm-agent-swarms
+- agent-budgets
 added_by: vishesh/senku-1
 accessed: '2026-10-03'
 read_depth: full

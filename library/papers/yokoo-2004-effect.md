@@ -15,6 +15,7 @@ cite: 'Yokoo, M., Sakurai, Y., & Matsubara, S. (2004). The effect of false-name 
 topics:
 - sybil-resistance
 - collective-decision
+- agent-budgets
 added_by: dmarz/sybil-mechanisms
 accessed: 2026-10-03
 read_depth: skim

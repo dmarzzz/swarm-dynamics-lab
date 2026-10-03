@@ -6,7 +6,7 @@ authors: [Jeremy Hadfield, Barry Zhang, Kenneth Lien, Florian Scholz, Jeremy Fox
 year: 2025
 url: https://www.anthropic.com/engineering/multi-agent-research-system
 site: Anthropic Engineering blog, 2025-06-13
-topics: [fork-merge-security, llm-agent-swarms]
+topics: [fork-merge-security, llm-agent-swarms, agent-budgets]
 added_by: dmarz/fm-sutton
 accessed: 2026-10-03
 read_depth: full
