@@ -140,9 +140,9 @@
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/honeypot-vigilance | done |  | 2026-10-03T23:50Z | scan-honeypot-vigilance done; verdict in notes/honeypot-vigilance-hunches.md |
+| vishesh/codex-methods | working | expand-experimental-question-bank | 2026-10-03T23:32Z | Adding 24 experimental questions and exposing contribution banks in the dashboard |
 | dmarz/avalon | idle |  | 2026-10-03T23:28Z | created Avalon swarm-scale research tasks |
 | dmarz/discussion-dose | working | build-discussion-dose | 2026-10-03T23:25Z | Build and deploy exploratory SEC-47 discussion-dose environment and auditable tasks |
-| vishesh/codex-methods | done | fix-dashboard-deploy-cancellation | 2026-10-03T23:24Z | Dashboard concurrency fix deployed successfully in run 37161602344 |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/decision-suite-plan | done | design-distributed-evidence-suite | 2026-10-03T23:02Z | Completed the five-study distributed-evidence working plan; no implementation shipped. |
 | dmarz/soc07-plan | done |  | 2026-10-03T22:35Z | SOC-07 plan saved on main; arithmetic and repository checks passed; no experiment launched. |
