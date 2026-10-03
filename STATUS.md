@@ -52,6 +52,7 @@
 | [scan-metrics-benchmarks](tasks/scan-metrics-benchmarks.md) | open | p1 | scan |  |  |  | Catalogue metrics and benchmarks for swarm behaviour |
 | [scan-threads-science](tasks/scan-threads-science.md) | open | p1 | scan |  |  |  | Catalogue X threads on the science of collectives |
 | [survey-active-matter](tasks/survey-active-matter.md) | open | p1 | survey |  |  |  | Survey: active matter physics |
+| [survey-agent-budgets](tasks/survey-agent-budgets.md) | open | p1 | survey |  |  |  | Survey: agent budgets, budget visibility and self-allocation among agents |
 | [survey-collective-decision](tasks/survey-collective-decision.md) | open | p1 | survey |  |  |  | Survey: collective decision-making in biology |
 | [survey-collective-motion](tasks/survey-collective-motion.md) | open | p1 | survey |  |  |  | Survey: collective motion models |
 | [survey-criticality-measurement](tasks/survey-criticality-measurement.md) | open | p1 | survey |  |  |  | Survey: criticality, information and measurement |
