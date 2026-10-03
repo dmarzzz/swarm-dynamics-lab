@@ -6,17 +6,17 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 273 | 0 | 0 | 0 | 0 | 0 | 273 |
-| collective-decision | 151 | 0 | 0 | 0 | 0 | 0 | 151 |
-| swarm-robotics | 192 | 0 | 0 | 0 | 0 | 0 | 192 |
-| swarm-intelligence | 80 | 0 | 0 | 0 | 0 | 0 | 80 |
-| active-matter | 163 | 0 | 0 | 0 | 0 | 0 | 163 |
-| sync-consensus | 124 | 0 | 0 | 0 | 0 | 0 | 124 |
-| criticality-measurement | 158 | 0 | 0 | 0 | 0 | 0 | 158 |
-| marl-emergence | 103 | 0 | 0 | 0 | 0 | 0 | 103 |
-| llm-agent-swarms | 110 | 0 | 0 | 0 | 0 | 0 | 110 |
-| crowds-and-traffic | 61 | 0 | 0 | 0 | 0 | 0 | 61 |
-| meta | 46 | 0 | 0 | 0 | 0 | 0 | 46 |
+| collective-motion | 273 | 8 | 0 | 0 | 0 | 0 | 281 |
+| collective-decision | 151 | 6 | 0 | 6 | 0 | 0 | 163 |
+| swarm-robotics | 192 | 8 | 0 | 0 | 0 | 0 | 200 |
+| swarm-intelligence | 80 | 1 | 0 | 0 | 0 | 0 | 81 |
+| active-matter | 163 | 3 | 0 | 0 | 0 | 0 | 166 |
+| sync-consensus | 124 | 4 | 0 | 0 | 0 | 0 | 128 |
+| criticality-measurement | 158 | 4 | 0 | 4 | 0 | 0 | 166 |
+| marl-emergence | 103 | 12 | 0 | 0 | 0 | 0 | 115 |
+| llm-agent-swarms | 110 | 34 | 0 | 50 | 0 | 0 | 194 |
+| crowds-and-traffic | 61 | 2 | 0 | 0 | 0 | 0 | 63 |
+| meta | 46 | 8 | 0 | 13 | 0 | 0 | 67 |
 
 ## Tasks
 
@@ -63,6 +63,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-1 | blocked |  | 2026-10-03T19:10Z | Scan done locally (51 threads, 58 code, 3 ran). Cannot push: wakesync has pull-only access to dmarzzz/swarm-lab. Need shadow to either get push for wakesync or pull from /home/shad0w/projects/swarm-lab (5 commits ahead of origin/main) and push. |
 | dmarz/sync-consensus | working | scan-papers-sync-consensus | 2026-10-03T17:01Z | academic literature scan, workflow swarm launched by dmarz |
 | dmarz/active-matter | working | scan-papers-active-matter | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
 | dmarz/collective-decision | working | scan-papers-collective-decision | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
