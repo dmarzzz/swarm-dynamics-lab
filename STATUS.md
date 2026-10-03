@@ -7,17 +7,17 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 306 | 8 | 0 | 0 | 0 | 0 | 314 |
-| collective-decision | 182 | 6 | 0 | 6 | 0 | 0 | 194 |
-| swarm-robotics | 231 | 8 | 0 | 0 | 0 | 0 | 239 |
+| collective-decision | 182 | 8 | 0 | 6 | 0 | 0 | 196 |
+| swarm-robotics | 231 | 10 | 0 | 0 | 0 | 0 | 241 |
 | swarm-intelligence | 104 | 1 | 0 | 0 | 0 | 0 | 105 |
 | active-matter | 182 | 3 | 0 | 0 | 0 | 0 | 185 |
-| sync-consensus | 160 | 4 | 0 | 0 | 0 | 0 | 164 |
+| sync-consensus | 163 | 5 | 0 | 0 | 0 | 0 | 168 |
 | criticality-measurement | 183 | 4 | 0 | 4 | 0 | 0 | 191 |
 | marl-emergence | 120 | 12 | 0 | 0 | 0 | 0 | 132 |
-| llm-agent-swarms | 130 | 34 | 0 | 50 | 0 | 0 | 214 |
+| llm-agent-swarms | 135 | 36 | 0 | 50 | 0 | 0 | 221 |
 | crowds-and-traffic | 75 | 2 | 0 | 0 | 0 | 0 | 77 |
-| meta | 51 | 8 | 0 | 13 | 0 | 0 | 72 |
-| sybil-resistance | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| meta | 52 | 8 | 0 | 13 | 0 | 0 | 73 |
+| sybil-resistance | 8 | 20 | 0 | 0 | 0 | 0 | 28 |
 | fork-merge-security | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## Tasks
@@ -30,6 +30,7 @@
 | [scan-papers-collective-motion-recent](tasks/scan-papers-collective-motion-recent.md) | claimed | p0 | scan | dmarz/collective-motion-recent |  | 2026-10-03T17:01Z | Catalogue collective motion papers from 2024 onward |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
 | [scan-papers-fm-contagion](tasks/scan-papers-fm-contagion.md) | claimed | p0 | scan | dmarz/fm-contagion |  | 2026-10-03T18:12Z | Catalogue the papers: corruption spreading through multi-agent LLM systems |
+| [scan-papers-fm-identity-hijack](tasks/scan-papers-fm-identity-hijack.md) | claimed | p0 | scan | dmarz/fm-identity-hijack |  | 2026-10-03T18:12Z | Catalogue the papers: identity and goal hijack of agents |
 | [scan-papers-fm-memory-injection](tasks/scan-papers-fm-memory-injection.md) | claimed | p0 | scan | dmarz/fm-memory-injection |  | 2026-10-03T18:11Z | Catalogue the papers: memory poisoning and persistent prompt injection in agents |
 | [scan-papers-fm-merge-poisoning](tasks/scan-papers-fm-merge-poisoning.md) | claimed | p0 | scan | dmarz/fm-merge-poisoning |  | 2026-10-03T18:11Z | Catalogue the papers: poisoning through model merging, federated aggregation and distillation |
 | [scan-papers-fm-sutton](tasks/scan-papers-fm-sutton.md) | claimed | p0 | scan | dmarz/fm-sutton |  | 2026-10-03T18:11Z | Catalogue the primary sources: Sutton on agents splitting and merging, and prior framings |
@@ -47,21 +48,20 @@
 | [scan-papers-active-matter](tasks/scan-papers-active-matter.md) | claimed | p1 | scan | dmarz/active-matter |  | 2026-10-03T17:01Z | Catalogue the papers: active matter physics |
 | [scan-papers-criticality-measurement](tasks/scan-papers-criticality-measurement.md) | claimed | p1 | scan | dmarz/criticality-measurement |  | 2026-10-03T17:01Z | Catalogue the papers: criticality, information and measurement |
 | [scan-papers-crowds-and-traffic](tasks/scan-papers-crowds-and-traffic.md) | claimed | p1 | scan | dmarz/crowds-and-traffic |  | 2026-10-03T17:01Z | Catalogue the papers: human crowds and traffic |
+| [scan-papers-fm-biology](tasks/scan-papers-fm-biology.md) | claimed | p1 | scan | dmarz/fm-biology |  | 2026-10-03T18:12Z | Catalogue the papers: fission-fusion and fusion parasitism in biology |
+| [scan-papers-fm-mobile-agents](tasks/scan-papers-fm-mobile-agents.md) | claimed | p1 | scan | dmarz/fm-mobile-agents |  | 2026-10-03T18:12Z | Catalogue the papers: mobile-agent security and Byzantine state merge |
 | [scan-papers-swarm-intelligence](tasks/scan-papers-swarm-intelligence.md) | claimed | p1 | scan | dmarz/swarm-intelligence |  | 2026-10-03T17:01Z | Catalogue the papers: swarm intelligence algorithms |
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-papers-sync-consensus](tasks/scan-papers-sync-consensus.md) | claimed | p1 | scan | dmarz/sync-consensus |  | 2026-10-03T17:01Z | Catalogue the papers: synchronisation, consensus and networked control |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | claimed | p1 | survey | shadow/sol-1 |  | 2026-10-03T17:57Z | Survey: llm agent swarms |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
-| [scan-papers-fm-identity-hijack](tasks/scan-papers-fm-identity-hijack.md) | open | p0 | scan |  |  |  | Catalogue the papers: identity and goal hijack of agents |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  |  | Catalogue the blogs and long-form web writing |
 | [scan-code-fm](tasks/scan-code-fm.md) | open | p1 | scan |  |  |  | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
 | [scan-metrics-benchmarks](tasks/scan-metrics-benchmarks.md) | open | p1 | scan |  |  |  | Catalogue metrics and benchmarks for swarm behaviour |
 | [scan-papers-fm-ai-control](tasks/scan-papers-fm-ai-control.md) | open | p1 | scan |  |  |  | Catalogue the papers: AI control, sub-agent delegation and self-replication |
-| [scan-papers-fm-biology](tasks/scan-papers-fm-biology.md) | open | p1 | scan |  |  |  | Catalogue the papers: fission-fusion and fusion parasitism in biology |
-| [scan-papers-fm-mobile-agents](tasks/scan-papers-fm-mobile-agents.md) | open | p1 | scan |  |  |  | Catalogue the papers: mobile-agent security and Byzantine state merge |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | open | p1 | scan |  |  |  | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [scan-threads-science](tasks/scan-threads-science.md) | open | p1 | scan |  |  |  | Catalogue X threads on the science of collectives |
 | [survey-active-matter](tasks/survey-active-matter.md) | open | p1 | survey |  |  |  | Survey: active matter physics |

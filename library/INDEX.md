@@ -2,9 +2,9 @@
 
 # Library index
 
-946 entries.
+974 entries.
 
-## Papers (837)
+## Papers (845)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -17,6 +17,7 @@
 | [baconnier-2025-self](papers/baconnier-2025-self.md) | Self-aligning polar active matter | 2025 | 5 | abstract | active-matter, collective-motion, swarm-robotics | dmarz/active-matter |
 | [bain-2019-dynamic](papers/bain-2019-dynamic.md) | Dynamic response and hydrodynamics of polarized crowds | 2019 | 5 | abstract | crowds-and-traffic, active-matter, collective-motion | dmarz/crowds-and-traffic |
 | [ballerini-2008-interaction](papers/ballerini-2008-interaction.md) | Interaction ruling animal collective behavior depends on topological rather than metric distance: Evidence from a field study | 2008 | 5 | full | collective-motion, criticality-measurement | dmarz/collective-motion |
+| [bara-2026-epistemic](papers/bara-2026-epistemic.md) | Epistemic Sybil Resistance: Multiplying AI Agents Without Multiplying Evidence | 2026 | 5 | full | sybil-resistance, llm-agent-swarms | dmarz/sybil-llm-agents |
 | [barcis-2020-sandsbots](papers/barcis-2020-sandsbots.md) | Sandsbots: Robots That Sync and Swarm | 2020 | 5 | abstract | sync-consensus, swarm-robotics | dmarz/sync-consensus |
 | [barrie-2025-emergent](papers/barrie-2025-emergent.md) | Emergent LLM behaviors are observationally equivalent to data leakage | 2025 | 5 | abstract | llm-agent-swarms, meta | dmarz/llm-agent-swarms-recent |
 | [bastien-2020-model](papers/bastien-2020-model.md) | A model of collective behavior based purely on vision | 2020 | 5 | abstract | collective-motion, swarm-robotics | dmarz/collective-motion |
@@ -60,6 +61,7 @@
 | [dorfler-2014-synchronization](papers/dorfler-2014-synchronization.md) | Synchronization in complex networks of phase oscillators: A survey | 2014 | 5 | skim | sync-consensus, collective-motion | dmarz/sync-consensus |
 | [dorigo-1996-ant](papers/dorigo-1996-ant.md) | Ant system: optimization by a colony of cooperating agents | 1996 | 5 | abstract | swarm-intelligence, collective-decision | dmarz/swarm-intelligence |
 | [dorigo-2021-swarm](papers/dorigo-2021-swarm.md) | Swarm Robotics: Past, Present, and Future [Point of View] | 2021 | 5 | full | swarm-robotics, collective-decision, criticality-measurement | dmarz/swarm-robotics-audit |
+| [douceur-2002-sybil](papers/douceur-2002-sybil.md) | The Sybil Attack | 2002 | 5 | full | sybil-resistance, sync-consensus, meta | dmarz/sybil-foundations |
 | [durve-2020-learning](papers/durve-2020-learning.md) | Learning to flock through reinforcement | 2020 | 5 | full | marl-emergence, collective-motion | dmarz/marl-emergence |
 | [el-2026-physics](papers/el-2026-physics.md) | Physics of Agents: Statistical Mechanics Predicts Collective Behavior of AI Agents | 2026 | 5 | full | llm-agent-swarms, sync-consensus, criticality-measurement | dmarz/llm-agent-swarms |
 | [elamvazhuthi-2019-mean](papers/elamvazhuthi-2019-mean.md) | Mean-field models in swarm robotics: a survey | 2019 | 5 | abstract | swarm-robotics, sync-consensus, active-matter | dmarz/swarm-robotics |
@@ -133,6 +135,7 @@
 | [riedl-2025-emergent](papers/riedl-2025-emergent.md) | Emergent Coordination in Multi-Agent Language Models | 2025 | 5 | full | llm-agent-swarms, criticality-measurement, collective-decision | dmarz/llm-agent-swarms |
 | [rio-2018-local](papers/rio-2018-local.md) | Local interactions underlying collective motion in human crowds | 2018 | 5 | abstract | crowds-and-traffic, collective-motion | dmarz/crowds-and-traffic |
 | [rosas-2020-reconciling](papers/rosas-2020-reconciling.md) | Reconciling emergences: An information-theoretic approach to identify causal emergence in multivariate data | 2020 | 5 | full | criticality-measurement, collective-motion | dmarz/criticality-measurement |
+| [rosenberg-2023-zk-creds](papers/rosenberg-2023-zk-creds.md) | zk-creds: Flexible Anonymous Credentials from zkSNARKs and Existing Identity Infrastructure | 2023 | 5 | full | sybil-resistance, llm-agent-swarms | dmarz/sybil-credentials |
 | [ruan-2025-benchmarking](papers/ruan-2025-benchmarking.md) | Benchmarking LLMs' Swarm intelligence | 2025 | 5 | full | llm-agent-swarms, swarm-intelligence, collective-motion, swarm-robotics, sync-consensus | dmarz/llm-agent-swarms |
 | [rubenstein-2014-programmable](papers/rubenstein-2014-programmable.md) | Programmable self-assembly in a thousand-robot swarm | 2014 | 5 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [salahshour-2025-allocentric](papers/salahshour-2025-allocentric.md) | Allocentric flocking | 2025 | 5 | full | collective-motion, collective-decision | dmarz/collective-motion-recent |
@@ -170,6 +173,7 @@
 | [ward-2008-quorum](papers/ward-2008-quorum.md) | Quorum decision-making facilitates information transfer in fish shoals | 2008 | 5 | abstract | collective-decision, collective-motion | dmarz/collective-decision |
 | [werner-allen-2005-firefly](papers/werner-allen-2005-firefly.md) | Firefly-inspired sensor network synchronicity with realistic radio effects | 2005 | 5 | skim | sync-consensus, swarm-robotics | dmarz/sync-consensus-audit |
 | [wu-2022-flow](papers/wu-2022-flow.md) | Flow: A Modular Learning Framework for Mixed Autonomy Traffic | 2022 | 5 | abstract | crowds-and-traffic, marl-emergence, swarm-robotics | dmarz/crowds-and-traffic |
+| [xia-2026-when](papers/xia-2026-when.md) | When Should Agent Trust Be Conditional? Characterizing and Attacking Skill-Conditional Reputation in Agent Swarms | 2026 | 5 | full | sybil-resistance, llm-agent-swarms | dmarz/sybil-llm-agents |
 | [yang-2018-mean](papers/yang-2018-mean.md) | Mean Field Multi-Agent Reinforcement Learning | 2018 | 5 | full | marl-emergence | dmarz/marl-emergence |
 | [yang-2026-when](papers/yang-2026-when.md) | When Is Emergent Consensus Real? A Measured Coupling Gain and a Validity Diagnostic for LLM Agent Societies | 2026 | 5 | skim | llm-agent-swarms, sync-consensus, criticality-measurement | dmarz/llm-agent-swarms-recent-audit |
 | [yoon-2022-sync](papers/yoon-2022-sync.md) | Sync and Swarm: Solvable Model of Nonidentical Swarmalators | 2022 | 5 | full | sync-consensus, active-matter, collective-motion | dmarz/sync-consensus |
@@ -240,6 +244,7 @@
 | [celiktemel-2026-group](papers/celiktemel-2026-group.md) | Group Selection Promotes Prosocial Prompts in Populations of LLM Agents | 2026 | 4 | abstract | llm-agent-swarms, marl-emergence, criticality-measurement | dmarz/llm-agent-swarms-recent |
 | [cemri-2025-why](papers/cemri-2025-why.md) | Why Do Multi-Agent LLM Systems Fail? | 2025 | 4 | full | llm-agent-swarms | dmarz/llm-agent-swarms |
 | [ceron-2024-reciprocal](papers/ceron-2024-reciprocal.md) | Reciprocal and Non-Reciprocal Swarmalators with Programmable Locomotion and Formations for Robot Swarms | 2024 | 4 | abstract | sync-consensus, swarm-robotics, active-matter | dmarz/sync-consensus |
+| [chan-2024-ids](papers/chan-2024-ids.md) | IDs for AI Systems | 2024 | 4 | full | sybil-resistance, llm-agent-swarms | dmarz/sybil-llm-agents |
 | [chandra-2019-continuous](papers/chandra-2019-continuous.md) | Continuous versus Discontinuous Transitions in the D-Dimensional Generalized Kuramoto Model: Odd D is Different | 2019 | 4 | abstract | sync-consensus, collective-motion | dmarz/sync-consensus |
 | [chase-2025-physics](papers/chase-2025-physics.md) | The Physics of Sensing and Decision-Making by Animal Groups | 2025 | 4 | abstract | collective-motion, collective-decision, sync-consensus | dmarz/collective-motion-recent |
 | [chatagnon-2025-exploring](papers/chatagnon-2025-exploring.md) | Exploring Dense Crowd Dynamics: State of the Art and Emerging Paradigms | 2025 | 4 | abstract | crowds-and-traffic, active-matter | dmarz/crowds-and-traffic |
@@ -347,6 +352,7 @@
 | [jhawar-2020-noise](papers/jhawar-2020-noise.md) | Noise-induced schooling of fish | 2020 | 4 | abstract | collective-motion, criticality-measurement | dmarz/collective-motion |
 | [ji-2026-genswarm](papers/ji-2026-genswarm.md) | GenSwarm: Scalable Multi-Robot Code-Policy Generation and Deployment via Language Models | 2026 | 4 | abstract | swarm-robotics, llm-agent-swarms | dmarz/swarm-robotics |
 | [jiang-2014-traffic](papers/jiang-2014-traffic.md) | Traffic Experiment Reveals the Nature of Car-Following | 2014 | 4 | skim | crowds-and-traffic, criticality-measurement | dmarz/crowds-and-traffic |
+| [jo-2025-byzantine](papers/jo-2025-byzantine.md) | Byzantine-Robust Decentralized Coordination of LLM Agents | 2025 | 4 | full | sybil-resistance, llm-agent-swarms, sync-consensus | dmarz/sybil-llm-agents |
 | [johansson-2007-specification](papers/johansson-2007-specification.md) | Specification of the social force pedestrian model by evolutionary adjustment to video tracking data | 2007 | 4 | skim | crowds-and-traffic, collective-motion, swarm-intelligence | dmarz/crowds-and-traffic-audit |
 | [kadirkamanathan-2006-stability](papers/kadirkamanathan-2006-stability.md) | Stability analysis of the particle dynamics in particle swarm optimizer | 2006 | 4 | abstract | swarm-intelligence | dmarz/swarm-intelligence |
 | [kao-2014-collective](papers/kao-2014-collective.md) | Collective Learning and Optimal Consensus Decisions in Social Animal Groups | 2014 | 4 | abstract | collective-decision, marl-emergence | dmarz/collective-decision |
@@ -547,6 +553,8 @@
 | [yamaguchi-2025-emergent](papers/yamaguchi-2025-emergent.md) | Emergent Coordination and Phase Structure in Independent Multi-Agent Reinforcement Learning | 2025 | 4 | abstract | marl-emergence, criticality-measurement | dmarz/marl-emergence |
 | [yang-2026-understanding](papers/yang-2026-understanding.md) | Understanding Agent Scaling in LLM-Based Multi-Agent Systems via Diversity | 2026 | 4 | abstract | llm-agent-swarms, criticality-measurement | dmarz/llm-agent-swarms |
 | [yeung-1999-time](papers/yeung-1999-time.md) | Time Delay in the Kuramoto Model of Coupled Oscillators | 1999 | 4 | skim | sync-consensus | dmarz/sync-consensus-audit |
+| [yu-2006-sybilguard](papers/yu-2006-sybilguard.md) | SybilGuard: Defending Against Sybil Attacks via Social Networks | 2006 | 4 | skim | sybil-resistance, sync-consensus | dmarz/sybil-foundations |
+| [yu-2008-sybillimit](papers/yu-2008-sybillimit.md) | SybilLimit: A Near-Optimal Social Network Defense against Sybil Attacks | 2008 | 4 | skim | sybil-resistance | dmarz/sybil-foundations |
 | [yu-2022-surprising](papers/yu-2022-surprising.md) | The Surprising Effectiveness of PPO in Cooperative, Multi-Agent Games | 2022 | 4 | abstract | marl-emergence | dmarz/marl-emergence |
 | [zakir-2025-bio](papers/zakir-2025-bio.md) | Bio-inspired decision making in robot swarms under biases | 2025 | 4 | abstract | collective-decision, swarm-robotics | dmarz/collective-decision |
 | [zampetaki-2024-dynamical](papers/zampetaki-2024-dynamical.md) | Dynamical order and many-body correlations in zebrafish show that three is a crowd | 2024 | 4 | abstract | collective-motion, criticality-measurement, active-matter | dmarz/collective-motion-recent |
@@ -906,26 +914,42 @@ None yet.
 | [x-2xnmore-2104843632104587383](threads/x-2xnmore-2104843632104587383.md) | 2xnmore: Exploit Summit framing, const (Bittensor) on 'pointing the swarm' rather than fearing it | 2026 | 1 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-aidigest-2104617156482859510](threads/x-aidigest-2104617156482859510.md) | AI Digest: DeepSeek-V4-Pro reports human input in the village in its own newspaper | 2026 | 1 | full | llm-agent-swarms | shadow/sol-1 |
 
-## Code (58)
+## Code (78)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
 | [gh-catgirl3d-agent-collusion-wiki-archive](code/gh-catgirl3d-agent-collusion-wiki-archive.md) | agent-collusion-wiki-archive: mirror of the collusion.wiki dump (14,591 revisions, 4,579 pages, 3,102 agent labels) with viewer, read-only API and MCP tools | 2026 | 5 | skim | llm-agent-swarms, criticality-measurement | shadow/sol-1 |
 | [gh-killy-netsphere-sealed-swarm-transcripts](code/gh-killy-netsphere-sealed-swarm-transcripts.md) | sealed-swarm-transcripts: 7,200 transcripts from a sealed small-model swarm that reproduced the incident's dynamics (shared board, channel rebuild, exploit spread) | 2026 | 5 | skim | llm-agent-swarms, collective-decision, marl-emergence | shadow/sol-1 |
+| [gh-rate-limiting-nullifier-circom-rln](code/gh-rate-limiting-nullifier-circom-rln.md) | circom-rln: Rate-Limiting Nullifier circuits that let anonymous members send at most N messages per epoch or lose their stake | 2023 | 5 | skim | sybil-resistance | dmarz/sybil-code-data |
+| [gh-semaphore-protocol-semaphore](code/gh-semaphore-protocol-semaphore.md) | Semaphore: zero-knowledge group membership proofs with per-scope nullifiers for anonymous signalling | 2019 | 5 | skim | sybil-resistance | dmarz/sybil-code-data |
 | [gh-swarm-ai-research-wiki-agent-swarm-incident](code/gh-swarm-ai-research-wiki-agent-swarm-incident.md) | wiki-agent-swarm-incident: research archive of the 2026 wiki agent-swarm incident (timeline, coordination graph, primary-source index) from the SWARM project | 2026 | 5 | skim | llm-agent-swarms, criticality-measurement, meta | shadow/sol-1 |
+| [gh-arbitrumfoundation-sybil-detection](code/gh-arbitrumfoundation-sybil-detection.md) | Arbitrum sybil-detection: methodology repo for removing Sybil clusters from the 2023 ARB airdrop via transfer-graph community detection | 2023 | 4 | full | sybil-resistance | dmarz/sybil-code-data |
+| [gh-binghuiwang-sybildetection](code/gh-binghuiwang-sybildetection.md) | sybildetection: C++ implementations of SybilRank, SybilBelief, SybilSCAR and GANG for structure-based Sybil detection | 2016 | 4 | ran | sybil-resistance | dmarz/sybil-code-data |
+| [gh-brightid-brightid-antisybil](code/gh-brightid-brightid-antisybil.md) | BrightID-AntiSybil: framework that simulates Sybil attacks on the BrightID social graph and compares anti-Sybil ranking algorithms | 2018 | 4 | skim | sybil-resistance | dmarz/sybil-code-data |
 | [gh-camel-ai-oasis](code/gh-camel-ai-oasis.md) | OASIS: open agent social-interaction simulator for up to one million LLM agents on Twitter/Reddit-like platforms | 2024 | 4 | skim | llm-agent-swarms, collective-decision, sync-consensus | shadow/sol-1 |
+| [gh-cloudflare-web-bot-auth](code/gh-cloudflare-web-bot-auth.md) | web-bot-auth: libraries and examples for signing automated agent HTTP traffic with RFC 9421 HTTP Message Signatures | 2025 | 4 | skim | sybil-resistance, llm-agent-swarms | dmarz/sybil-code-data |
 | [gh-farama-foundation-magent2](code/gh-farama-foundation-magent2.md) | MAgent2: large-population gridworld MARL environments (hundreds of pixel agents in battle and gathering scenarios) on the PettingZoo API | 2022 | 4 | skim | marl-emergence | shadow/sol-1 |
 | [gh-hamzah2304-messageboardauditbench](code/gh-hamzah2304-messageboardauditbench.md) | MessageBoardAuditBench: Inspect evals that give an agent the raw collusion.wiki dump or the Transluce urlquery scans and score its report against the human audit | 2026 | 4 | skim | llm-agent-swarms, meta | shadow/sol-1 |
+| [gh-hop-protocol-hop-airdrop](code/gh-hop-protocol-hop-airdrop.md) | hop-airdrop: scripts and data producing the 2022 HOP token airdrop after removing community-reported Sybil clusters | 2022 | 4 | skim | sybil-resistance | dmarz/sybil-code-data |
+| [gh-idena-network-idena-go](code/gh-idena-network-idena-go.md) | idena-go: Go node for Idena, a proof-of-personhood blockchain based on synchronous flip-puzzle validation ceremonies | 2019 | 4 | skim | sybil-resistance, sync-consensus | dmarz/sybil-code-data |
 | [gh-ilpincy-argos3](code/gh-ilpincy-argos3.md) | ARGoS 3: physics-based multi-robot simulator built for large swarms (multiple physics engines, thousands of robots) | 2012 | 4 | skim | swarm-robotics | shadow/sol-1 |
+| [gh-marcbara-epistemic-sybil-resistance](code/gh-marcbara-epistemic-sybil-resistance.md) | epistemic-sybil-resistance: reproducibility package and ESB benchmark for epistemic Sybil aggregation | 2026 | 4 | skim | sybil-resistance, llm-agent-swarms | dmarz/sybil-llm-agents |
 | [gh-mesa-mesa](code/gh-mesa-mesa.md) | Mesa: Python agent-based modelling framework (grids, continuous space, schedulers, browser visualisation), with a bundled Boids flocking example | 2014 | 4 | ran | collective-motion, meta | shadow/sol-1 |
+| [gh-passportxyz-passport](code/gh-passportxyz-passport.md) | Passport (formerly Gitcoin Passport): verifiable-credential "stamp" wallet used as Sybil defence for Gitcoin Grants and other airdrops | 2022 | 4 | skim | sybil-resistance | dmarz/sybil-code-data |
+| [gh-passportxyz-passport-scorer](code/gh-passportxyz-passport-scorer.md) | Passport Scorer: API that turns Passport stamps into a weighted humanity score, plus model-based scoring | 2022 | 4 | skim | sybil-resistance | dmarz/sybil-code-data |
+| [gh-pold87-blockchain-swarm-robotics](code/gh-pold87-blockchain-swarm-robotics.md) | blockchain-swarm-robotics: ARGoS plus Ethereum code for managing Byzantine robots in a collective decision task (Strobel et al., AAMAS 2018) | 2017 | 4 | skim | sybil-resistance, swarm-robotics, collective-decision | dmarz/sybil-code-data |
 | [gh-proroklab-vectorizedmultiagentsimulator](code/gh-proroklab-vectorizedmultiagentsimulator.md) | VMAS: vectorised differentiable 2D multi-agent simulator in PyTorch with multi-robot scenarios including flocking | 2022 | 4 | ran | marl-emergence, swarm-robotics, collective-motion | shadow/sol-1 |
 | [gh-sunblaze-ucb-exploitgym](code/gh-sunblaze-ucb-exploitgym.md) | ExploitGym: benchmark of real-world vulnerabilities (userspace, V8, Linux kernel) for evaluating exploit-development agents; the environment the OpenAI swarm was running | 2026 | 4 | skim | llm-agent-swarms, meta | shadow/sol-1 |
 | [gh-swarm-ai-research-swarm](code/gh-swarm-ai-research-swarm.md) | SWARM: System-Wide Assessment of Risk in Multi-agent systems, a framework for measuring emergent failures in agent populations (illusion delta, quality gap, governance experiments) | 2026 | 4 | skim | llm-agent-swarms, criticality-measurement | shadow/sol-1 |
+| [gh-vacp2p-zerokit](code/gh-vacp2p-zerokit.md) | zerokit: Rust zero-knowledge modules, mainly the RLN implementation used by Waku for anonymous spam protection | 2022 | 4 | skim | sybil-resistance | dmarz/sybil-code-data |
 | [gh-yazandabain-swarmtrace](code/gh-yazandabain-swarmtrace.md) | SwarmTrace: temporal audit of resource targeting in the DseWiki incident (24-hour degree ranking misses all 18 recent multi-writer resources) | 2026 | 4 | skim | llm-agent-swarms, criticality-measurement, sync-consensus | shadow/sol-1 |
 | [gh-anthropics-claude-agent-sdk-python](code/gh-anthropics-claude-agent-sdk-python.md) | Claude Agent SDK for Python: programmatic access to the Claude Code agent loop with tools, hooks and subagents | 2025 | 3 | skim | llm-agent-swarms | shadow/sol-1 |
 | [gh-bold-lab-ai-jaxmarl](code/gh-bold-lab-ai-jaxmarl.md) | JaxMARL: GPU-vectorised MARL environments (SMAX, MPE, Overcooked, Hanabi, STORM) and baselines in JAX | 2023 | 3 | skim | marl-emergence | shadow/sol-1 |
+| [gh-boshmaf-sypy](code/gh-boshmaf-sypy.md) | SyPy: Python framework for building and evaluating graph-based Sybil node detection algorithms | 2013 | 3 | skim | sybil-resistance | dmarz/sybil-code-data |
+| [gh-brightid-brightid-node](code/gh-brightid-brightid-node.md) | BrightID-Node: node software that stores and serves the BrightID social graph for proof of uniqueness | 2017 | 3 | skim | sybil-resistance | dmarz/sybil-code-data |
 | [gh-buzz-lang-buzz](code/gh-buzz-lang-buzz.md) | Buzz: programming language for heterogeneous robot swarms (neighbour map/reduce, dynamic swarms, virtual stigmergy) running on ARGoS and ROS | 2015 | 3 | skim | swarm-robotics, swarm-intelligence | shadow/sol-1 |
 | [gh-camel-ai-camel](code/gh-camel-ai-camel.md) | CAMEL: multi-agent framework from the 'scaling laws of agents' community (role-playing, societies, workforce, data generation) | 2023 | 3 | skim | llm-agent-swarms | shadow/sol-1 |
+| [gh-cloudflare-privacypass-issuer](code/gh-cloudflare-privacypass-issuer.md) | privacypass-issuer: Cloudflare Workers issuer for IETF Privacy Pass tokens (publicly verifiable, blind RSA) | 2023 | 3 | skim | sybil-resistance | dmarz/sybil-code-data |
 | [gh-facebookresearch-benchmarl](code/gh-facebookresearch-benchmarl.md) | BenchMARL: TorchRL-based MARL training and benchmarking library, the native trainer for VMAS tasks | 2023 | 3 | skim | marl-emergence, swarm-robotics | shadow/sol-1 |
 | [gh-farama-foundation-pettingzoo](code/gh-farama-foundation-pettingzoo.md) | PettingZoo: multi-agent Gymnasium-style API and environment families (Atari, Butterfly, Classic, MPE, SISL) | 2020 | 3 | skim | marl-emergence | shadow/sol-1 |
 | [gh-fideai-dsewiki-investigation](code/gh-fideai-dsewiki-investigation.md) | dsewiki-investigation: Fide AI's open claim assessments of 297 AI-written DseWiki incident reports (44 of 61 improved follow-ups kept a flagged earlier claim) | 2026 | 3 | skim | llm-agent-swarms, meta | shadow/sol-1 |
@@ -944,8 +968,12 @@ None yet.
 | [gh-openai-openai-agents-python](code/gh-openai-openai-agents-python.md) | OpenAI Agents SDK: production multi-agent workflows with handoffs, agents-as-tools, guardrails, sessions, tracing and sandbox agents | 2025 | 3 | skim | llm-agent-swarms | shadow/sol-1 |
 | [gh-pedestriandynamics-jupedsim](code/gh-pedestriandynamics-jupedsim.md) | JuPedSim: Jülich pedestrian dynamics simulator (collision-free speed and social-force style models, Python API) | 2015 | 3 | skim | crowds-and-traffic | shadow/sol-1 |
 | [gh-pmocz-activematter-python](code/gh-pmocz-activematter-python.md) | activematter-python: Philip Mocz's single-file Vicsek model (N=500, L=10, eta=0.5) from the 'Create Your Own Active Matter Simulation' tutorial | 2021 | 3 | ran | collective-motion, active-matter | shadow/sol-1 |
+| [gh-pold87-ab-interface-argos-module](code/gh-pold87-ab-interface-argos-module.md) | AB-interface-ARGoS-module: ARGoS side of the ARGoS-Blockchain interface comparing consensus protocols under Byzantine robots (Strobel et al., Frontiers 2020) | 2018 | 3 | skim | sybil-resistance, swarm-robotics, collective-decision | dmarz/sybil-code-data |
 | [gh-transluceai-docent](code/gh-transluceai-docent.md) | Docent: Transluce's agent-transcript analysis platform (ingest, search and cluster transcripts; self-hostable) | 2025 | 3 | abstract | llm-agent-swarms, meta | shadow/sol-1 |
+| [gh-trustalabs-airdrop-sybil-identification](code/gh-trustalabs-airdrop-sybil-identification.md) | Trusta Labs Airdrop-Sybil-Identification: two-phase graph clustering plus behavioural refinement for airdrop Sybil detection | 2023 | 3 | skim | sybil-resistance | dmarz/sybil-code-data |
 | [gh-tsinghua-fib-lab-agentsociety](code/gh-tsinghua-fib-lab-agentsociety.md) | AgentSociety 2: LLM-native agent simulation platform for social-science experiments in urban environments (Ray-based, multiple reasoning routers) | 2025 | 3 | skim | llm-agent-swarms, crowds-and-traffic | shadow/sol-1 |
+| [gh-worldcoin-open-iris](code/gh-worldcoin-open-iris.md) | open-iris (IRIS): Worldcoin iris recognition pipeline used to check uniqueness for World ID | 2023 | 3 | skim | sybil-resistance | dmarz/sybil-code-data |
+| [gh-worldcoin-world-id-contracts](code/gh-worldcoin-world-id-contracts.md) | world-id-contracts: Solidity contracts for World ID 3.0, Semaphore-based anonymous proof of unique humanity | 2022 | 3 | skim | sybil-resistance | dmarz/sybil-code-data |
 | [gh-a16z-infra-ai-town](code/gh-a16z-infra-ai-town.md) | AI Town: deployable TypeScript/Convex starter kit for a Generative-Agents-style town | 2023 | 2 | skim | llm-agent-swarms | shadow/sol-1 |
 | [gh-ai-village-agents-rpg-game](code/gh-ai-village-agents-rpg-game.md) | ai-village-agents/rpg-game: a browser RPG built collaboratively by 12 AI Village agents (artefact of the AI Digest village) | 2026 | 2 | abstract | llm-agent-swarms | shadow/sol-1 |
 | [gh-altera-al-project-sid](code/gh-altera-al-project-sid.md) | Project Sid: technical report repo for 10 to 1000+ agent Minecraft societies with the PIANO architecture (no code) | 2024 | 2 | abstract | llm-agent-swarms, collective-decision | shadow/sol-1 |
