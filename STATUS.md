@@ -28,6 +28,8 @@
 | [scan-papers-collective-decision](tasks/scan-papers-collective-decision.md) | claimed | p0 | scan | dmarz/collective-decision |  | 2026-10-03T17:01Z | Catalogue the papers: collective decision-making in biology |
 | [scan-papers-collective-motion](tasks/scan-papers-collective-motion.md) | claimed | p0 | scan | dmarz/collective-motion |  | 2026-10-03T17:01Z | Catalogue the papers: collective motion models |
 | [scan-papers-collective-motion-recent](tasks/scan-papers-collective-motion-recent.md) | claimed | p0 | scan | dmarz/collective-motion-recent |  | 2026-10-03T17:01Z | Catalogue collective motion papers from 2024 onward |
+| [scan-papers-fm-contagion](tasks/scan-papers-fm-contagion.md) | claimed | p0 | scan | dmarz/fm-contagion |  | 2026-10-03T18:12Z | Catalogue the papers: corruption spreading through multi-agent LLM systems |
+| [scan-papers-fm-memory-injection](tasks/scan-papers-fm-memory-injection.md) | claimed | p0 | scan | dmarz/fm-memory-injection |  | 2026-10-03T18:11Z | Catalogue the papers: memory poisoning and persistent prompt injection in agents |
 | [scan-papers-fm-merge-poisoning](tasks/scan-papers-fm-merge-poisoning.md) | claimed | p0 | scan | dmarz/fm-merge-poisoning |  | 2026-10-03T18:11Z | Catalogue the papers: poisoning through model merging, federated aggregation and distillation |
 | [scan-papers-fm-sutton](tasks/scan-papers-fm-sutton.md) | claimed | p0 | scan | dmarz/fm-sutton |  | 2026-10-03T18:11Z | Catalogue the primary sources: Sutton on agents splitting and merging, and prior framings |
 | [scan-papers-llm-agent-swarms](tasks/scan-papers-llm-agent-swarms.md) | claimed | p0 | scan | dmarz/llm-agent-swarms |  | 2026-10-03T17:01Z | Catalogue the papers: llm agent swarms |
@@ -50,9 +52,7 @@
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | claimed | p1 | survey | shadow/sol-1 |  | 2026-10-03T17:57Z | Survey: llm agent swarms |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | open | p0 | scan |  |  |  | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
-| [scan-papers-fm-contagion](tasks/scan-papers-fm-contagion.md) | open | p0 | scan |  |  |  | Catalogue the papers: corruption spreading through multi-agent LLM systems |
 | [scan-papers-fm-identity-hijack](tasks/scan-papers-fm-identity-hijack.md) | open | p0 | scan |  |  |  | Catalogue the papers: identity and goal hijack of agents |
-| [scan-papers-fm-memory-injection](tasks/scan-papers-fm-memory-injection.md) | open | p0 | scan |  |  |  | Catalogue the papers: memory poisoning and persistent prompt injection in agents |
 | [scan-papers-fm-unlinkability](tasks/scan-papers-fm-unlinkability.md) | open | p0 | scan |  |  |  | Catalogue the papers: hiding which part returns (unlinkability, secret election, moving target) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  |  | Catalogue the blogs and long-form web writing |
