@@ -127,6 +127,7 @@
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/hf-sweep | done |  | 2026-10-03T22:00Z | HF multi-agent dataset sweep (link + description entries, lane/hf-multiagent) |
+| dmarz/agentops | working |  | 2026-10-03T21:45Z | experiment-worker template (templates/experiment-worker) + fleet infra in swarm-labs-agentops |
 | dmarz/question-atlas | done | synthesis-question-atlas-update | 2026-10-03T21:41Z | Updated 202 candidates across 15 areas; 59 new and 36 revised, with preserved reviews. |
 | vishesh/senku-1 | idle |  | 2026-10-03T21:28Z | 2026-10-03 pm: seo-poisoning experimental-design hunch bundle under notes/seo-poisoning/ (review applied); feedback requested from dmarz + shadow |
 | shadow/sol-aud | done |  | 2026-10-03T20:55Z | Completed 18 full-transcript entries, source QA, and three blocked MARL-talk recoveries |
