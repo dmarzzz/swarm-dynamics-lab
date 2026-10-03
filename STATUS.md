@@ -22,16 +22,20 @@
 
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
+| [scan-papers-collective-decision](tasks/scan-papers-collective-decision.md) | claimed | p0 | scan | dmarz/collective-decision |  | 2026-10-03T17:01Z | Catalogue the papers: collective decision-making in biology |
+| [scan-papers-collective-motion](tasks/scan-papers-collective-motion.md) | claimed | p0 | scan | dmarz/collective-motion |  | 2026-10-03T17:01Z | Catalogue the papers: collective motion models |
+| [scan-papers-collective-motion-recent](tasks/scan-papers-collective-motion-recent.md) | claimed | p0 | scan | dmarz/collective-motion-recent |  | 2026-10-03T17:01Z | Catalogue collective motion papers from 2024 onward |
+| [scan-papers-llm-agent-swarms](tasks/scan-papers-llm-agent-swarms.md) | claimed | p0 | scan | dmarz/llm-agent-swarms |  | 2026-10-03T17:01Z | Catalogue the papers: llm agent swarms |
+| [scan-papers-llm-agent-swarms-recent](tasks/scan-papers-llm-agent-swarms-recent.md) | claimed | p0 | scan | dmarz/llm-agent-swarms-recent |  | 2026-10-03T17:01Z | Catalogue LLM agent swarms papers from 2024 onward |
+| [scan-papers-marl-emergence](tasks/scan-papers-marl-emergence.md) | claimed | p0 | scan | dmarz/marl-emergence |  | 2026-10-03T17:01Z | Catalogue the papers: multi-agent rl and emergent coordination |
+| [scan-papers-active-matter](tasks/scan-papers-active-matter.md) | claimed | p1 | scan | dmarz/active-matter |  | 2026-10-03T17:01Z | Catalogue the papers: active matter physics |
+| [scan-papers-criticality-measurement](tasks/scan-papers-criticality-measurement.md) | claimed | p1 | scan | dmarz/criticality-measurement |  | 2026-10-03T17:01Z | Catalogue the papers: criticality, information and measurement |
+| [scan-papers-crowds-and-traffic](tasks/scan-papers-crowds-and-traffic.md) | claimed | p1 | scan | dmarz/crowds-and-traffic |  | 2026-10-03T17:01Z | Catalogue the papers: human crowds and traffic |
+| [scan-papers-swarm-intelligence](tasks/scan-papers-swarm-intelligence.md) | claimed | p1 | scan | dmarz/swarm-intelligence |  | 2026-10-03T17:01Z | Catalogue the papers: swarm intelligence algorithms |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [scan-code-agent-orchestration](tasks/scan-code-agent-orchestration.md) | open | p0 | scan |  |  |  | Catalogue LLM multi-agent and orchestration frameworks |
 | [scan-code-collective-sims](tasks/scan-code-collective-sims.md) | open | p0 | scan |  |  |  | Catalogue simulators for collective motion and active matter |
 | [scan-code-robotics-marl](tasks/scan-code-robotics-marl.md) | open | p0 | scan |  |  |  | Catalogue swarm robotics simulators and MARL environments |
-| [scan-papers-collective-decision](tasks/scan-papers-collective-decision.md) | open | p0 | scan |  |  |  | Catalogue the papers: collective decision-making in biology |
-| [scan-papers-collective-motion](tasks/scan-papers-collective-motion.md) | open | p0 | scan |  |  |  | Catalogue the papers: collective motion models |
-| [scan-papers-collective-motion-recent](tasks/scan-papers-collective-motion-recent.md) | open | p0 | scan |  |  |  | Catalogue collective motion papers from 2024 onward |
-| [scan-papers-llm-agent-swarms](tasks/scan-papers-llm-agent-swarms.md) | open | p0 | scan |  |  |  | Catalogue the papers: llm agent swarms |
-| [scan-papers-llm-agent-swarms-recent](tasks/scan-papers-llm-agent-swarms-recent.md) | open | p0 | scan |  |  |  | Catalogue LLM agent swarms papers from 2024 onward |
-| [scan-papers-marl-emergence](tasks/scan-papers-marl-emergence.md) | open | p0 | scan |  |  |  | Catalogue the papers: multi-agent rl and emergent coordination |
 | [scan-papers-swarm-robotics](tasks/scan-papers-swarm-robotics.md) | open | p0 | scan |  |  |  | Catalogue the papers: swarm robotics |
 | [scan-papers-swarm-robotics-recent](tasks/scan-papers-swarm-robotics-recent.md) | open | p0 | scan |  |  |  | Catalogue swarm robotics papers from 2024 onward |
 | [scan-threads-agents](tasks/scan-threads-agents.md) | open | p0 | scan |  |  |  | Catalogue X threads on agent swarms and multi-agent AI |
@@ -39,10 +43,6 @@
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  |  | Catalogue the blogs and long-form web writing |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
 | [scan-metrics-benchmarks](tasks/scan-metrics-benchmarks.md) | open | p1 | scan |  |  |  | Catalogue metrics and benchmarks for swarm behaviour |
-| [scan-papers-active-matter](tasks/scan-papers-active-matter.md) | open | p1 | scan |  |  |  | Catalogue the papers: active matter physics |
-| [scan-papers-criticality-measurement](tasks/scan-papers-criticality-measurement.md) | open | p1 | scan |  |  |  | Catalogue the papers: criticality, information and measurement |
-| [scan-papers-crowds-and-traffic](tasks/scan-papers-crowds-and-traffic.md) | open | p1 | scan |  |  |  | Catalogue the papers: human crowds and traffic |
-| [scan-papers-swarm-intelligence](tasks/scan-papers-swarm-intelligence.md) | open | p1 | scan |  |  |  | Catalogue the papers: swarm intelligence algorithms |
 | [scan-papers-sync-consensus](tasks/scan-papers-sync-consensus.md) | open | p1 | scan |  |  |  | Catalogue the papers: synchronisation, consensus and networked control |
 | [scan-threads-science](tasks/scan-threads-science.md) | open | p1 | scan |  |  |  | Catalogue X threads on the science of collectives |
 | [survey-active-matter](tasks/survey-active-matter.md) | open | p1 | survey |  |  |  | Survey: active matter physics |
@@ -61,7 +61,21 @@
 
 ## Agents
 
-No agents registered yet.
+| agent | state | task | updated | doing |
+|---|---|---|---|---|
+| dmarz/sync-consensus | working | scan-papers-sync-consensus | 2026-10-03T17:01Z | academic literature scan, workflow swarm launched by dmarz |
+| dmarz/active-matter | working | scan-papers-active-matter | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
+| dmarz/collective-decision | working | scan-papers-collective-decision | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
+| dmarz/collective-motion-recent | working | scan-papers-collective-motion-recent | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
+| dmarz/collective-motion | working | scan-papers-collective-motion | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
+| dmarz/criticality-measurement | working | scan-papers-criticality-measurement | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
+| dmarz/crowds-and-traffic | working | scan-papers-crowds-and-traffic | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
+| dmarz/llm-agent-swarms-recent | working | scan-papers-llm-agent-swarms-recent | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
+| dmarz/llm-agent-swarms | working | scan-papers-llm-agent-swarms | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
+| dmarz/marl-emergence | working | scan-papers-marl-emergence | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
+| dmarz/swarm-intelligence | working | scan-papers-swarm-intelligence | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
+| dmarz/swarm-robotics-recent | working | scan-papers-swarm-robotics-recent | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
+| dmarz/swarm-robotics | working | scan-papers-swarm-robotics | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
 
 ## Surveys (prior-art gate)
 
