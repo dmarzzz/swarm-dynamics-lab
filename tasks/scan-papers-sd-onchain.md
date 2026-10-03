@@ -3,7 +3,7 @@ id: scan-papers-sd-onchain
 type: task
 title: 'Catalogue the papers: agent and bot swarms on blockchains'
 kind: scan
-status: claimed
+status: done
 priority: p1
 owner: dmarz/sd-onchain
 for: null
@@ -13,7 +13,10 @@ depends_on: []
 topics:
 - swarm-detection
 claimed_at: 2026-10-03T18:20Z
-updated: 2026-10-03T18:20Z
+updated: 2026-10-03T19:40Z
+outputs:
+- library (added_by: dmarz/sd-onchain)
+- researchers/dmarz/log/2026-10-03-sd-onchain.md
 ---
 
 ## Goal
@@ -27,3 +30,5 @@ Context from dmarz: find all papers and results on detecting AI agent swarms in 
 - Coverage note filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
+
+Run as an isolated lane on branch lane/sd-onchain, merged to main via lane/sd-merge on 2026-10-03. 46 new entries after dedup. Search was rate-limited (OpenAlex, arXiv export, Semantic Scholar 429s) and did not reach saturation; see the lane log for what was not reached.
