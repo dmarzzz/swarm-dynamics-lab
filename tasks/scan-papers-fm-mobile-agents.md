@@ -3,7 +3,7 @@ id: scan-papers-fm-mobile-agents
 type: task
 title: 'Catalogue the papers: mobile-agent security and Byzantine state merge'
 kind: scan
-status: claimed
+status: done
 priority: p1
 owner: dmarz/fm-mobile-agents
 for: null
@@ -13,7 +13,9 @@ depends_on: []
 topics:
 - fork-merge-security
 claimed_at: 2026-10-03T18:12Z
-updated: 2026-10-03T18:12Z
+updated: 2026-10-03T18:19Z
+outputs:
+- library/papers
 ---
 
 ## Goal
