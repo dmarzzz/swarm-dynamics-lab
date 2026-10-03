@@ -7,7 +7,7 @@ authors:
 - Mathis Steichen
 - Radu State
 year: 2019
-venue: 28th USENIX Security Symposium (USENIX Security 19); arXiv preprint
+venue: arXiv preprint
 url: https://arxiv.org/abs/1902.06976
 doi: null
 arxiv: '1902.06976'
@@ -36,7 +36,7 @@ Shows that on-chain bait aimed at automated or greedy exploiters is an establish
 
 ## Methods and models
 
-Symbolic execution plus heuristics (HoneyBadger). Abstract-level read. The USENIX Security 2019 venue is from our background knowledge and was not checked on a page this session, so the cite uses the arXiv form.
+Symbolic execution plus heuristics (HoneyBadger). Abstract-level read. A peer-reviewed venue may exist but was not checked this session, so the cite uses the arXiv form.
 
 ## Limitations and open questions
 

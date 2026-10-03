@@ -36,6 +36,7 @@ The first public in-the-wild measurement instrument aimed specifically at LLM ag
 - Internal calibration: GPT-4o agents reply in about 1.7 s even to injections; most bot traffic in the wild also answers in under 1.7 s, so timing alone separates humans from machines but not LLMs from scripts (measured, figure-level).
 - "Important Message" goal hijacks beat "ignore previous instructions"; prompt-stealing success drops sharply, so they hijack first and steal the system prompt second (measured on internal agents, no numbers in text).
 - One flagged session responded to injections but with 10+ s gaps, which the authors read as a human operator who happened to comply: a false-positive mode of the injection test (observation).
+- Live dashboard (ai-honeypot.palisaderesearch.org, read 2026-10-03): 24,111,509 interactions, 14 potential AI agents (passed injection test), 3 confirmed (passed injection and timing), with monthly tracking listed as "2026-05 still in progress" (dashboard figures, not peer-reviewed).
 - No system prompt was successfully extracted from any wild agent (reported for the fast-response case).
 
 ## Methods and models
