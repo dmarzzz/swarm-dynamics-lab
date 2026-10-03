@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: working
+state: done
 task: expand-experimental-question-bank
-doing: Adding 24 experimental questions and exposing contribution banks in the dashboard
-updated: 2026-10-03T23:32Z
+doing: Published 24 EX questions and contribution dashboard; validation and deployment passed
+updated: 2026-10-03T23:37Z
 ---
 
 ## Notes

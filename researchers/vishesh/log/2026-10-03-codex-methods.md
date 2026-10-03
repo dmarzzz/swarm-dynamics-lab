@@ -85,3 +85,15 @@ Validation: complete ID coverage, one to three distinct ranked scenarios per ite
 The reported run 37159809068 was cancelled during dashboard build after export and contract checks passed. Run metadata and the workflow were sufficient to diagnose the concurrency behavior; no raw CI log was read into the transcript. Current runs already had successful deployments, but frequent pushes were cancelling intermediate active builds.
 
 Published [efe74dd](https://github.com/dmarzzz/swarm-lab/commit/efe74dd): retain the dashboard concurrency group and set cancel-in-progress to false. One active run can finish while GitHub coalesces pending updates. YAML validation and lab check passed with the existing five citation warnings. The fix's run [37161602344](https://github.com/dmarzzz/swarm-lab/actions/runs/37161602344) first waited behind the active run, then completed export, contract validation, build and Cloudflare Pages deployment successfully. Historical cancelled runs are not rerun because that could redeploy old content.
+
+## Experimental question expansion
+
+Published d96b7bf: 24 EX comparisons with falsifiers, confounds, source leads and links to the original project briefs. Corrected the count interpretation: 214 atlas + 40 VX + 14 PX + 24 EX = 292 question records; earlier 301-item reviews also included 33 briefs/design records. Related questions overlap and none is a registered hypothesis. Added a separately exported Contributions dashboard view so the 78 extensions are visible without changing the canonical atlas or its saved-review hashes.
+
+Validation: 22 exporter/contract tests, 11 saved-review regression tests, research-navigation checks, TypeScript and production build; desktop/mobile browser checks for bank, search and project filters; secret audit of all 15 publication files found zero findings. Repository check: zero errors, five existing unresolved-citation warnings. Generated snapshots were used for local checks but not committed. Used scoped manual checked sync rather than broad automatic publication to preserve the publication audit.
+
+Next: subject the most useful comparisons to full prior-art methods review before formal promotion. EX-07, EX-03 and EX-22 have direct synthetic ground truth for a small implementation.
+
+CI confirmed: lab run 37162286720 and dashboard build/deploy run 37162286743 both succeeded for d96b7bf.
+
+Live Chrome verification passed on the public dashboard: 292 total records, all three banks, EX filter, ID search, original-project filter and mobile layout.
