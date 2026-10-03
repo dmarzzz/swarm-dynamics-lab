@@ -2,7 +2,7 @@
 
 # Library index
 
-1920 entries.
+1923 entries.
 
 ## Papers (1206)
 
@@ -1215,7 +1215,7 @@
 | [zhao-2024-snail](papers/zhao-2024-snail.md) | Snail-inspired robotic swarms: a hybrid connector drives collective adaptation in unstructured outdoor environments | 2024 | 2 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [zhuge-2023-mindstorms](papers/zhuge-2023-mindstorms.md) | Mindstorms in Natural Language-Based Societies of Mind | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 
-## Blogs (129)
+## Blogs (132)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1295,6 +1295,7 @@
 | [torproject-2020-first](blogs/torproject-2020-first.md) | A First Take at PoW Over Introduction Circuits (Tor Proposal 327) | 2020 | 4 | skim | sybil-resistance | dmarz/sybil-credentials |
 | [torproject-2021-res](blogs/torproject-2021-res.md) | Res tokens: Anonymous Credentials for Onion Service DoS Resilience (Tor Proposal 331) | 2021 | 4 | skim | sybil-resistance | dmarz/sybil-credentials |
 | [trailofbits-2025-jumping](blogs/trailofbits-2025-jumping.md) | Jumping the line: How MCP servers can attack you before you ever use them | 2025 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-informal |
+| [vika-2026-testing](blogs/vika-2026-testing.md) | Testing Gemini models for scheming tendencies | 2026 | 4 | skim | swarm-detection, llm-agent-swarms | shadow/sol-w7 |
 | [anthropic-2025-agentic](blogs/anthropic-2025-agentic.md) | Agentic Misalignment: How LLMs Could be Insider Threats | 2025 | 3 | skim | fork-merge-security | dmarz/fm-ai-control |
 | [anthropic-2026-claude](blogs/anthropic-2026-claude.md) | Claude discovers a novel enzyme system with CRISPR-like repeats | 2026 | 3 | full | llm-agent-swarms | shadow/sol-w1 |
 | [cloudflare-2025-age](blogs/cloudflare-2025-age.md) | The age of agents: cryptographically recognizing agent traffic | 2025 | 3 | skim | sybil-resistance, llm-agent-swarms | dmarz/sybil-credentials |
@@ -1310,8 +1311,10 @@
 | [flashbots-2021-flashbots](blogs/flashbots-2021-flashbots.md) | Flashbots Transparency Report — February 2021 | 2021 | 3 | skim | sybil-resistance | dmarz/sybil-flashbots |
 | [flashbots-2023-block](blogs/flashbots-2023-block.md) | Block Building inside SGX | 2023 | 3 | skim | sybil-resistance | dmarz/sybil-flashbots |
 | [goodhartlabs-2026-honeybench](blogs/goodhartlabs-2026-honeybench.md) | HoneyBench - A general benchmark for reward hacking in frontier models | 2026 | 3 | full | llm-agent-swarms, swarm-detection, fork-merge-security | shadow/sol-w4 |
+| [hadrien-2025-bitter](blogs/hadrien-2025-bitter.md) | The bitter lesson of misuse detection | 2025 | 3 | skim | swarm-detection | shadow/sol-w7 |
 | [harvard-ssr-2022-kilobots](blogs/harvard-ssr-2022-kilobots.md) | Kilobots \| Self-Organizing Systems Research Group | 2022 | 3 | full | swarm-robotics, collective-decision | shadow/sol-w3 |
 | [huggingface-2026-security](blogs/huggingface-2026-security.md) | Security incident disclosure — July 2026 | 2026 | 3 | full | llm-agent-swarms | vishesh/senku-1 |
+| [ivanov-2025-llms](blogs/ivanov-2025-llms.md) | LLMs are Capable of Misaligned Behavior Under Explicit Prohibition and Surveillance | 2025 | 3 | skim | swarm-detection | shadow/sol-w7 |
 | [metr-2024-rogue](blogs/metr-2024-rogue.md) | The Rogue Replication Threat Model | 2024 | 3 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-ai-control |
 | [miller-2024-sirrah](blogs/miller-2024-sirrah.md) | Sirrah: Speedrunning a TEE Coprocessor | 2024 | 3 | skim | sybil-resistance | dmarz/sybil-foundations |
 | [nag-2026-sybil](blogs/nag-2026-sybil.md) | Sybil Attacks on Auction Based Inclusion Lists (AUCIL) | 2026 | 3 | full | sybil-resistance, collective-decision | dmarz/sybil-flashbots-informal |
