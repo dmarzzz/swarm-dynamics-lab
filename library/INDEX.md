@@ -2,7 +2,7 @@
 
 # Library index
 
-1498 entries.
+1503 entries.
 
 ## Papers (1206)
 
@@ -1299,7 +1299,7 @@
 | [flashbots-2026-why](blogs/flashbots-2026-why.md) | Why Location Choice Matters | 2026 | 2 | skim | sybil-resistance, sync-consensus | dmarz/sybil-flashbots |
 | [owasp-2025-llm](blogs/owasp-2025-llm.md) | OWASP Top 10 for LLMs and Gen AI Apps 2025 | 2025 | 2 | skim | fork-merge-security | dmarz/fm-memory-injection |
 
-## Threads (99)
+## Threads (103)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1337,6 +1337,7 @@
 | [x-openai-2096133504417616165](threads/x-openai-2096133504417616165.md) | OpenAI's statement on the 'wiki incident': agents wrote to several internet sites; calls for misalignment incident disclosure standards | 2026 | 4 | full | llm-agent-swarms, meta, swarm-detection | shadow/sol-1 |
 | [x-rogesterone-2102902706037821592](threads/x-rogesterone-2102902706037821592.md) | rogesterone / LynnAnalytics: 'gamesmanship', agents re-hosting inaccessible data for a grader and mining other agents' leftovers | 2026 | 4 | full | llm-agent-swarms, collective-decision | shadow/sol-1 |
 | [x-rogesterone-2103904792942710821](threads/x-rogesterone-2103904792942710821.md) | rogesterone: OpenAI agents brute-forced a UN org's API (UNCTADstat), swarmcha.se post | 2026 | 4 | full | llm-agent-swarms, swarm-detection | shadow/sol-1 |
+| [x-rookepoole-2104926181904539846](threads/x-rookepoole-2104926181904539846.md) | Rooke Poole: Semantic Backtracking Injection (SBI), multi-hop retrieval poisoning measured in the Venom test harness | 2026 | 4 | full | fork-merge-security, llm-agent-swarms | shadow/sol-w4 |
 | [x-simonw-1934602159984984235](threads/x-simonw-1934602159984984235.md) | simonw: the Lethal Trifecta, private data + untrusted content + external communication lets an attacker steal data from a tool-using agent | 2025 | 4 | full | fork-merge-security | dmarz/x-threads |
 | [x-tambaclan-2101956169942335527](threads/x-tambaclan-2101956169942335527.md) | Ninety-eight-day log of AI crawler traffic and honeypot engagements | 2026 | 4 | full | swarm-detection | shadow/sol-w6 |
 | [x-tenobrus-2085582519878197748](threads/x-tenobrus-2085582519878197748.md) | tenobrus: reading of the Hugging Face incident as a weeks-long agent messageboard that rebuilt itself within a day of deletion; opinion on alignment | 2026 | 4 | full | swarm-detection, fork-merge-security, llm-agent-swarms | dmarz/x-threads |
@@ -1394,16 +1395,19 @@
 | [x-hassankhan96452-2102769492250280220](threads/x-hassankhan96452-2102769492250280220.md) | hassankhan96452: websites cannot tell a customer's agent from a scraper; agents should prove operator, authorising user and permissions (Meta Muse, Amazon vs Shopify) | 2026 | 2 | full | sybil-resistance, swarm-detection | shadow/sol-w1 |
 | [x-ji1n11-2097326143330210157](threads/x-ji1n11-2097326143330210157.md) | Ji1n: how OpenAI agents took over a German wiki and built a forum, 3,700 names, 18,000 edits, ~98% Azure traffic | 2026 | 2 | full | llm-agent-swarms, swarm-detection, fork-merge-security | shadow/sol-1 |
 | [x-lesliemen-2106171422309839001](threads/x-lesliemen-2106171422309839001.md) | Hai Ly: OpenAI notified 100+ organisations of misaligned agent activity; review covered ~50PB on 7,000 GB200/GB300 GPUs | 2026 | 2 | full | llm-agent-swarms, meta | shadow/sol-1 |
+| [x-mrjianglife-2104187840120881449](threads/x-mrjianglife-2104187840120881449.md) | MrJiangLife: agent memory has a trust problem; a memory write is a trust transition | 2026 | 2 | full | fork-merge-security | shadow/sol-w4 |
 | [x-nuryvittachi-2096039393043873817](threads/x-nuryvittachi-2096039393043873817.md) | Vittachi: early press-style account of the DseWiki takeover (15,000 writes, Nightingale report via Reuters, ZZZ backup pages) | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-1 |
 | [x-rogesterone-2097286391793086559](threads/x-rogesterone-2097286391793086559.md) | rogesterone: an agent made a '--help' page, others replied with empty-line edits, ResearchAgentJun23 is confused | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
+| [x-sarangmahatwo-2104918283086344578](threads/x-sarangmahatwo-2104918283086344578.md) | Sarang Mahatwo: session history vs long-term memory on Gemini Enterprise Memory Bank; consolidation scope and memory poisoning as governance | 2026 | 2 | full | fork-merge-security, llm-agent-swarms | shadow/sol-w4 |
 | [x-semianalysis-2105394776920985675](threads/x-semianalysis-2105394776920985675.md) | SemiAnalysis: GLM-5.3 traces on ExploitGym, model spent budget testing hidden runtime conditions | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
+| [x-tmaiaroto-2103944480613359729](threads/x-tmaiaroto-2103944480613359729.md) | Tom Maiaroto: announcing phosphor's memory-poisoning defences (secret scan, human review levels, HMAC on memory entries) | 2026 | 2 | full | fork-merge-security | shadow/sol-w4 |
 | [x-zing-xoro-2101891877498953883](threads/x-zing-xoro-2101891877498953883.md) | Zing_Xoro: agent identity as hardware-bound enrollment (TPM / secure enclave) to raise Sybil cost | 2026 | 2 | full | sybil-resistance, llm-agent-swarms | shadow/sol-w1 |
 | [x-2xnmore-2104843632104587383](threads/x-2xnmore-2104843632104587383.md) | 2xnmore: Exploit Summit framing, const (Bittensor) on 'pointing the swarm' rather than fearing it | 2026 | 1 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-aidigest-2104617156482859510](threads/x-aidigest-2104617156482859510.md) | AI Digest: DeepSeek-V4-Pro reports human input in the village in its own newspaper | 2026 | 1 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-flexialpha6-2105900417078919489](threads/x-flexialpha6-2105900417078919489.md) | Flexialpha6: promotional post for InSoBlokAI TasteScore, a reputation and Sybil-detection layer pitched at AI agents | 2026 | 1 | full | sybil-resistance, swarm-detection | shadow/sol-w1 |
 | [x-heisblesse-2106002189600620864](threads/x-heisblesse-2106002189600620864.md) | heisblesse: 'Can AI agents build reputation?' ERC-8004 identity vs reputation registries, with Sybil distortion acknowledged (B.AI campaign post) | 2026 | 1 | full | sybil-resistance | shadow/sol-w1 |
 
-## Code (107)
+## Code (108)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1461,6 +1465,7 @@
 | [gh-flashbots-spam-inspect](code/gh-flashbots-spam-inspect.md) | spam-inspect: trace-based classifier for on-chain MEV spam bots on OP-Stack rollups | 2025 | 3 | skim | sybil-resistance | dmarz/sybil-flashbots |
 | [gh-google-deepmind-concordia](code/gh-google-deepmind-concordia.md) | Concordia: generative agent-based modelling with a Game Master that adjudicates natural-language actions | 2023 | 3 | skim | llm-agent-swarms, collective-decision | shadow/sol-1 |
 | [gh-google-deepmind-meltingpot](code/gh-google-deepmind-meltingpot.md) | Melting Pot 2.0: 50+ multi-agent substrates and 256 test scenarios for generalisation to novel social situations | 2021 | 3 | skim | marl-emergence, collective-decision | shadow/sol-1 |
+| [gh-hackafterdark-phosphor](code/gh-hackafterdark-phosphor.md) | phosphor: hardened Go agent runtime with layered memory-poisoning defences (single-writer vault, write-time scan, inferred-never-promotes, HMAC tamper seal) | 2026 | 3 | skim | fork-merge-security | shadow/sol-w4 |
 | [gh-imadreamerboy-agent-swarm-research](code/gh-imadreamerboy-agent-swarm-research.md) | just-one-more-bulletin-board: an evidence graph over the collusion.wiki corpus (33 claims, 37 sources, 43 relationships, 2,110 exact URLs) | 2026 | 3 | skim | llm-agent-swarms | shadow/sol-1 |
 | [gh-in-toto-in-toto](code/gh-in-toto-in-toto.md) | in-toto: reference implementation of the in-toto supply chain integrity framework | 2016 | 3 | skim | fork-merge-security | dmarz/fm-mobile-agents |
 | [gh-jax-md-jax-md](code/gh-jax-md-jax-md.md) | JAX MD: differentiable, GPU-accelerated molecular dynamics in JAX, usable for self-propelled particle and active-matter simulation | 2019 | 3 | skim | active-matter, collective-motion | shadow/sol-1 |
