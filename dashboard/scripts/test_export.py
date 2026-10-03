@@ -1,7 +1,10 @@
-"""Validate generated dashboard data without third-party test dependencies."""
+"""Validate dashboard data with unittest and the exporter's existing PyYAML dependency."""
+import copy
 import json
 from pathlib import Path
 import unittest
+
+import export as exporter
 
 DATA = Path(__file__).resolve().parents[1] / 'public/data'
 
@@ -28,7 +31,7 @@ class ContractTest(unittest.TestCase):
         self.assertEqual(ids, {e['id'] for e in load('library')})
         self.assertTrue(all(e['s'] in ids and e['t'] in ids for e in graph['edges']))
         for path in DATA.glob('*.json'):
-            self.assertLess(path.stat().st_size, 5_000_000)
+            self.assertLessEqual(path.stat().st_size, 5_000_000)
 
     def test_threads(self):
         library, threads = load('library'), load('threads')
@@ -46,6 +49,97 @@ class ContractTest(unittest.TestCase):
         for survey in load('surveys'):
             self.assertEqual(survey['gate']['passes'], not survey['gate']['missing'])
         self.assertTrue(all(row['n_entries'] > 0 for row in load('timeline')))
+
+    def test_questions_preserve_canonical_atlas(self):
+        canonical = json.loads(exporter.ATLAS.read_text(encoding='utf-8'))
+        questions = load('questions')
+        # Compare the entire object, including prose, source relationships, hashes and ordering.
+        self.assertEqual(questions, canonical)
+        ids = {row['id'] for row in questions['candidates']}
+        self.assertEqual(len(ids), len(questions['candidates']))
+        self.assertEqual({row['area'] for row in questions['candidates']}, set(questions['topics']))
+        self.assertTrue(all(row['status'] == 'unreviewed-hunch' for row in questions['candidates']))
+        self.assertFalse(ids & {row['id'] for row in load('hypotheses')})
+        self.assertEqual(load('summary')['hypotheses'], len(load('hypotheses')))
+        self.assertEqual(load('summary')['experiments'], len(load('experiments')))
+
+
+class QuestionsValidationTest(unittest.TestCase):
+    """Bad atlas data must stop an export instead of silently losing review information."""
+    @classmethod
+    def setUpClass(cls):
+        cls.canonical = json.loads(exporter.ATLAS.read_text(encoding='utf-8'))
+        data = exporter.helpers.Lab()
+        cls.library_paths = {ident: doc.rel for ident, doc in data.library.items()}
+        cls.topics = data.topics
+
+    def validate(self, payload):
+        exporter.validate_questions(payload, self.library_paths, self.topics)
+
+    def test_validating_does_not_rewrite_review_content(self):
+        payload = copy.deepcopy(self.canonical)
+        self.validate(payload)
+        self.assertEqual(payload, self.canonical)
+
+    def test_rejects_duplicate_ids_and_missing_fields(self):
+        duplicate = copy.deepcopy(self.canonical)
+        duplicate['candidates'].append(copy.deepcopy(duplicate['candidates'][0]))
+        with self.assertRaisesRegex(ValueError, 'duplicate candidate id'):
+            self.validate(duplicate)
+        missing = copy.deepcopy(self.canonical)
+        del missing['candidates'][0]['falsifier']
+        with self.assertRaisesRegex(ValueError, 'missing required fields'):
+            self.validate(missing)
+
+    def test_rejects_invalid_review_types_and_promotion(self):
+        for field, value, message in [('metrics', 'quality', 'invalid metrics'),
+                                      ('status', 'accepted', 'invalid candidate status'),
+                                      ('change', [], 'invalid change')]:
+            with self.subTest(field=field):
+                payload = copy.deepcopy(self.canonical)
+                payload['candidates'][0][field] = value
+                with self.assertRaisesRegex(ValueError, message):
+                    self.validate(payload)
+
+    def test_rejects_unknown_topics_sources_and_mismatched_paths(self):
+        payload = copy.deepcopy(self.canonical)
+        payload['candidates'][0]['area'] = 'nonexistent-topic'
+        with self.assertRaisesRegex(ValueError, 'unknown area'):
+            self.validate(payload)
+        payload = copy.deepcopy(self.canonical)
+        payload['candidates'][0]['prior'][0]['id'] = 'nonexistent-source'
+        with self.assertRaisesRegex(ValueError, 'unknown source'):
+            self.validate(payload)
+        payload = copy.deepcopy(self.canonical)
+        payload['candidates'][0]['prior'][0]['path'] = 'AGENTS.md'
+        with self.assertRaisesRegex(ValueError, 'source path does not match'):
+            self.validate(payload)
+
+    def test_rejects_missing_or_escaping_briefs(self):
+        for path in ('researchers/dmarz/notes/question-atlas/nonexistent-brief.md',
+                     '../AGENTS.md', str(exporter.ROOT / 'AGENTS.md')):
+            with self.subTest(path=path):
+                payload = copy.deepcopy(self.canonical)
+                payload['candidates'][0]['briefs'] = [path]
+                with self.assertRaisesRegex(ValueError, 'unknown or invalid brief path'):
+                    self.validate(payload)
+
+    def test_rejects_stale_card_and_enriched_content_hashes(self):
+        payload = copy.deepcopy(self.canonical)
+        payload['candidates'][0]['test'] += ' Changed intervention.'
+        with self.assertRaisesRegex(ValueError, 'candidate hash mismatch'):
+            self.validate(payload)
+        payload = copy.deepcopy(self.canonical)
+        payload['candidates'][0]['prior'][0]['title'] += ' Changed source metadata.'
+        with self.assertRaisesRegex(ValueError, 'content hash mismatch'):
+            self.validate(payload)
+
+    def test_rejects_stale_change_index(self):
+        payload = copy.deepcopy(self.canonical)
+        row = payload['candidates'][0]
+        payload['changes'][row['change']].remove(row['id'])
+        with self.assertRaisesRegex(ValueError, 'change index does not match'):
+            self.validate(payload)
 
 if __name__ == '__main__':
     unittest.main()
