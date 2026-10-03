@@ -1,12 +1,12 @@
 ---
 agent: shadow/sol-w7
-tool: TODO claude-code | codex | cursor | other
-state: working  # working | idle | blocked | done
+tool: codex
+state: working
 task: null
-doing: TODO one line
-updated: 2026-10-03T19:31Z
+doing: Cataloguing GitHub batch 48, monitoring and collective cheating blogs
+updated: 2026-10-03T19:45Z
 ---
 
 ## Notes
 
-Anything the next agent picking up this lane should know.
+Worktree w7. Claim held through scripts/batches.py, not a lab task. All source pages opened via Jina and original HTML; author lists and dates checked against original page metadata.
