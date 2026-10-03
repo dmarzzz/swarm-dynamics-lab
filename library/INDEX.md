@@ -2,7 +2,7 @@
 
 # Library index
 
-2716 entries.
+2718 entries.
 
 ## Papers (1715)
 
@@ -2617,7 +2617,7 @@
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 | [data-zzzztom-moltbook-2026](datasets/data-zzzztom-moltbook-2026.md) | zzzztom/moltbook-forum-data Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 
-## Talks (128)
+## Talks (130)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -2684,10 +2684,12 @@
 | [dafoe-2021-open](talks/dafoe-2021-open.md) | Open Problems in Cooperative AI - Allan Dafoe and Edward Hughes | 2021 | 4 | abstract | marl-emergence, collective-decision, llm-agent-swarms | shadow/sol-w1 |
 | [dickman-2023-phase](talks/dickman-2023-phase.md) | Ronald Dickman: Phase Transitions in Active Matter | 2023 | 4 | full | active-matter, collective-motion, criticality-measurement | shadow/sol-w3 |
 | [drake-2022-tackling](talks/drake-2022-tackling.md) | Tackling MEV with cryptography - Justin Drake (Ethereum Foundation) | 2022 | 4 | full | sybil-resistance | shadow/sol-w8 |
+| [flack-2020-currents](talks/flack-2020-currents.md) | Currents 015: Jessica Flack & Melanie Mitchell on Complexity | 2020 | 4 | full | collective-decision, collective-motion, criticality-measurement, sync-consensus | shadow/sol-aud |
 | [gordon-2021-deborah](talks/gordon-2021-deborah.md) | Deborah Gordon on Ant Colonies as Distributed Computers | 2021 | 4 | full | collective-decision, swarm-intelligence, fork-merge-security | shadow/sol-aud |
 | [hauert-2017-robots](talks/hauert-2017-robots.md) | Robots to nanoparticles: Engineering swarms to fix global problems \| Sabine Hauert \| TEDxExeterSalon | 2017 | 4 | full | swarm-robotics | shadow/sol-w8 |
 | [hermann-2022-mev](talks/hermann-2022-mev.md) | MEV Reduction via Batch Auction - Alex Hermann (Cowswap) | 2022 | 4 | full | sybil-resistance | shadow/sol-w8 |
 | [hickey-2018-identifying](talks/hickey-2018-identifying.md) | Identifying and Monitoring Disinformation across Social Platforms: Techniques for Discovery and Analysis | 2018 | 4 | abstract | swarm-detection | shadow/sol-w1 |
+| [hobson-2022-elizabeth](talks/hobson-2022-elizabeth.md) | Elizabeth Hobson on Animal Dominance Hierarchies | 2022 | 4 | full | collective-decision, fork-merge-security, criticality-measurement | shadow/sol-aud |
 | [isa-2021-colloids](talks/isa-2021-colloids.md) | Active Colloids at Fluid Interfaces (1/5) | 2021 | 4 | full | active-matter | shadow/sol-w3 |
 | [jaques-2022-allen](talks/jaques-2022-allen.md) | Allen School Colloquium: Natasha Jaques (Google + UC Berkeley) | 2022 | 4 | abstract | marl-emergence, collective-decision | shadow/sol-w1 |
 | [jin-2021-power](talks/jin-2021-power.md) | The Power of Exploiter: Provable Multi-Agent RL in Large State Spaces | 2021 | 4 | abstract | marl-emergence | shadow/sol-w1 |
