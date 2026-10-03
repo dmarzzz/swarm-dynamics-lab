@@ -1,0 +1,8 @@
+.research-connections, .research-focus-index { margin: 1.5rem 0; padding: 1.25rem; border: 1px solid var(--line, #51435b); border-radius: 8px; }
+.research-connections summary, .research-focus-index summary { cursor: pointer; font-weight: 600; }
+.research-connections p, .research-focus-index p { line-height: 1.65; margin: .8rem 0; }
+.research-connections li, .research-focus-index li { margin: .6rem 0; line-height: 1.6; }
+.research-connections h3 { margin-top: 1rem; }
+.research-focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 1.2rem; margin: 1.2rem 0; }
+.research-focus-grid article { padding: .8rem; border: 1px solid var(--line, #51435b); }
+.research-tags { display: flex; gap: .6rem; flex-wrap: wrap; font-size: .85em; margin: .6rem 0; }

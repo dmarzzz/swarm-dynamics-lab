@@ -1,3 +1,4 @@
+import type { ResearchNavigation } from './navigation';
 export type Kind = 'paper' | 'blog' | 'thread' | 'code' | 'dataset' | 'talk';
 export type KindPlural = 'papers' | 'blogs' | 'threads' | 'code' | 'datasets' | 'talks';
 export type Counts = Record<KindPlural, number> & { total: number };
@@ -98,6 +99,7 @@ export interface ThreadMeta {
 export interface Doc { id: string; topics?: string[]; status?: string; owner?: string; [k: string]: unknown }
 
 export interface Dataset {
+  navigation: ResearchNavigation;
   summary: Summary;
   library: Entry[];
   timeline: TimelineRow[];

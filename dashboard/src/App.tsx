@@ -80,7 +80,7 @@ export default function App() {
             {route.path === '/' && <Overview data={state.data} />}
             {route.path === '/library' && <Library data={state.data} params={route.params} />}
             {route.path === '/topics' && <Topics data={state.data} params={route.params} />}
-            {route.path === '/questions' && <Suspense fallback={<Loading />}><Questions params={route.params} /></Suspense>}
+            {route.path === '/questions' && <Suspense fallback={<Loading />}><Questions params={route.params} navigation={state.data.navigation} /></Suspense>}
             {route.path === '/agents' && <Agents data={state.data} />}
             {route.path === '/timeline' && <Timeline data={state.data} />}
             {route.path === '/method' && <ResearchPath data={state.data} />}

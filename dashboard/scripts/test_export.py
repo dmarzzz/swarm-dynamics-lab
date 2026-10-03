@@ -3,6 +3,8 @@ import copy
 import json
 from pathlib import Path
 import unittest
+from types import SimpleNamespace
+from research_navigation import build_navigation, SOURCE
 
 import export as exporter
 
@@ -62,6 +64,67 @@ class ContractTest(unittest.TestCase):
         self.assertFalse(ids & {row['id'] for row in load('hypotheses')})
         self.assertEqual(load('summary')['hypotheses'], len(load('hypotheses')))
         self.assertEqual(load('summary')['experiments'], len(load('experiments')))
+
+
+class NavigationTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.atlas = json.loads(exporter.ATLAS.read_text())
+        cls.source = json.loads((exporter.ROOT / SOURCE).read_text())
+        cls.lab = exporter.helpers.Lab()
+
+    def build(self, source=None, hypotheses=None):
+        return build_navigation(exporter.ROOT, self.atlas,
+                                hypotheses if hypotheses is not None else self.lab.hypotheses,
+                                self.lab.topics, source if source is not None else self.source)
+
+    def test_export_and_projects_preserve_atlas(self):
+        before = copy.deepcopy(self.atlas)
+        nav = self.build()
+        self.assertEqual(nav, load('navigation'))
+        self.assertEqual(self.atlas, before)
+        self.assertEqual(len(nav['projects']), 16)
+        self.assertEqual(len(nav['hypotheses']), len(self.lab.hypotheses))
+        immune = next(f for f in nav['focus_areas'] if f['id'] == 'immune-response')
+        self.assertIn('SEC-07', immune['questions'])
+        self.assertNotIn('BUD-03', immune['questions'])
+
+    def test_unknown_and_duplicate_members_fail(self):
+        for member in ('NOT-999', self.source['focus_areas'][0]['questions'][0]):
+            source = copy.deepcopy(self.source)
+            source['focus_areas'][0]['questions'].append(member)
+            with self.assertRaisesRegex(ValueError, 'unknown or duplicate focus question'):
+                self.build(source)
+
+    def test_paths_and_status_cannot_escape(self):
+        for path in ('../AGENTS.md', '/etc/passwd', 'missing.md'):
+            source = copy.deepcopy(self.source)
+            source['designs'][0]['path'] = path
+            with self.assertRaisesRegex(ValueError, 'unsafe or missing path'):
+                self.build(source)
+        source = copy.deepcopy(self.source)
+        source['designs'][0]['status'] = 'accepted'
+        with self.assertRaisesRegex(ValueError, 'must not imply hypothesis approval'):
+            self.build(source)
+
+    def test_snapshot_change_warns_without_rewriting(self):
+        source = copy.deepcopy(self.source)
+        source['reviewed_atlas_sha256'] = 'old'
+        self.assertTrue(self.build(source)['mapping_stale'])
+
+    def test_explicit_hypothesis_tags_and_untagged_fallback(self):
+        def doc(fm):
+            return SimpleNamespace(fm=fm, rel='hypotheses/example.md')
+        hypotheses = {'example': doc({'status': 'proposed', 'topics': ['llm-agent-swarms'],
+                        'focus_areas': ['immune-response'], 'project_briefs': ['memory']}),
+                      'untagged': doc({'status': 'draft'})}
+        nav = self.build(hypotheses=hypotheses)
+        self.assertEqual(nav['hypotheses'][0]['status'], 'proposed')
+        self.assertEqual(nav['hypotheses'][0]['projects'], ['memory'])
+        self.assertEqual(nav['hypotheses'][1]['topics'], [])
+        hypotheses['example'].fm['focus_areas'] = ['unknown']
+        with self.assertRaisesRegex(ValueError, 'unknown or duplicate hypothesis focus area'):
+            self.build(hypotheses=hypotheses)
 
 
 class QuestionsValidationTest(unittest.TestCase):

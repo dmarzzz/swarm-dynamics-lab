@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import type { Dataset } from './types';
 
-const FILES = ['summary', 'library', 'timeline', 'agents', 'tasks', 'batches', 'surveys', 'hypotheses', 'experiments', 'threads'] as const;
+const FILES = ['summary', 'library', 'timeline', 'agents', 'tasks', 'batches', 'surveys', 'hypotheses', 'experiments', 'threads', 'navigation'] as const;
 const OPTIONAL = new Set(['hypotheses', 'experiments', 'batches', 'threads']);
 
 let cache: Promise<Dataset> | null = null;

@@ -7,6 +7,7 @@ import { Dots } from '../components/EntryDrawer';
 import { SCAN_MIN } from '../components/GateStrip';
 import { yearOf } from '../data/derive';
 import './topics.css';
+import { ResearchFocusIndex } from '../components/ResearchConnections';
 
 interface TopicInfo {
   slug: string; name: string; total: number; counts: Record<KindPlural, number>;
@@ -71,6 +72,7 @@ export function Topics({ data, params }: { data: Dataset; params?: URLSearchPara
       </section>
 
       <section className="wrap">
+        <ResearchFocusIndex navigation={data.navigation} />
         <div className="topics">
           {info.map((t) => <TopicPanel key={t.slug} t={t} maxKind={maxKind} focused={focus === t.slug} />)}
         </div>

@@ -17,6 +17,7 @@ This collection documents candidate work on swarm evidence, communication, share
 | Explain the influence mechanism | [Animated influence guide](swarm-influence-guide.html) | Honest agents updating against false external evidence; all numerical outcomes are illustrative. |
 | Read the external-injection experimental design | [SEO-poisoning bundle](seo-poisoning/README.md) | Hunch-level experimental design for an outside content injector steering provider/MCP selection, whether evidence-backed dissent helps, five supporting notes, and eight open questions for dmarz and shadow. |
 | Explore containment and recovery | [Swarm immune response](swarm-immune-response/README.md) | Exploratory design separating source isolation, private-memory repair and shared-store repair, with recurrence and correct-minority controls, existing-toolkit integration and primary-source boundaries. |
+| Browse research connections | [Dashboard research-area guide](../../../dashboard/RESEARCH-AREAS.md) | Eight cross-cutting focus areas, all sixteen project briefs, contributed designs and explicit formal-hypothesis tagging. |
 
 ## How the artifacts relate
 

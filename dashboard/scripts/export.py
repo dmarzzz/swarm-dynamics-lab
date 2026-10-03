@@ -15,6 +15,7 @@ import subprocess
 import sys
 import time
 from collections import Counter
+from research_navigation import build_navigation
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'scripts'))
@@ -320,7 +321,8 @@ def export():
                 'graph': {'nodes': [{'id': e['id'], 'kind': e['kind'], 'topic': e['topics'][0] if e['topics'] else None} for e in entries],
                           'edges': [{'s': s, 't': t} for s, t in sorted(edges)]},
                 'hypotheses': docs_payload(data.hypotheses), 'experiments': docs_payload(data.experiments),
-                'questions': questions}
+                'questions': questions,
+                'navigation': build_navigation(ROOT, questions, data.hypotheses, data.topics)}
     OUT.mkdir(parents=True, exist_ok=True)
     for name, payload in payloads.items():
         text = json.dumps(payload, ensure_ascii=False, separators=(',', ':'), default=str) + '\n'

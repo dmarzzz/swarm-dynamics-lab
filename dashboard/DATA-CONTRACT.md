@@ -27,7 +27,7 @@ The top-level `questions.json` fields are copied from the canonical atlas:
 - `topics`: topic-slug-to-display-name object.
 - `changes`: `new`, `revised` and `unchanged` arrays of candidate IDs in atlas order.
 - `content_sha256`: digest of the complete enriched candidate array.
-- `candidates`: complete candidate records, currently 202 across 15 areas. Counts are derived from this payload, not fixed limits.
+- `candidates`: complete candidate records. Counts are derived from this payload, not fixed limits.
 
 Every candidate retains `id`, `area`, `title`, `question`, `hypothesis`, `test`, `baseline`, `metrics`, `falsifier`, `confounds`, `prior`, `novelty`, `feasibility`, `needs`, `briefs`, `candidate_sha256`, `change`, `lane` and `status`. The `hypothesis` string is tentative reasoning inside a hunch, not a formal hypothesis record. Candidate `status` stays `unreviewed-hunch`; the top-level status stays `Human-requested unreviewed hunches`.
 
@@ -36,3 +36,11 @@ Each `prior` relationship retains `id`, `relation`, `title`, `path`, `url` and `
 Before writing any artifacts, export validates the atlas's required fields and types, unique candidate IDs, declared topics, novelty/feasibility/change values, source-ID/path correspondence, existing in-repository brief files, change-index consistency and both hash levels. Hashes use the canonical builder's `json.dumps(value, sort_keys=True)` UTF-8 encoding, including its default ASCII escaping. The per-card hash covers the 15 editable fields and the original prior `id`/`relation` pairs; the aggregate hash covers the enriched candidates. Export verifies these existing hashes without replacing them, so stale content fails with a rebuild error rather than silently changing review identity. The artifact uses the same 5 MB limit as every other export.
 
 Contract tests compare the entire exported atlas to its canonical input, check separation from the formal research funnel, and exercise rejection of duplicate IDs, missing or mistyped fields, accepted-status changes, unknown sources/areas, mismatched source paths, missing or escaping briefs, stale per-card/aggregate hashes and stale change indexes. No test downloads sources or runs research experiments.
+
+## Research navigation
+
+`navigation.json` is a required additive dashboard artifact, produced by `scripts/research_navigation.py`. It includes `schema`, `owner`, `source_path`, `reviewed_at`, `mapping_stale`, `focus_areas`, `projects`, `designs` and `hypotheses`. The source and contribution process are documented in [RESEARCH-AREAS.md](RESEARCH-AREAS.md).
+
+Focus areas have stable IDs, display names, scope descriptions and explicit question IDs. Projects include repository paths, question membership, current author-linked questions derived from the canonical cards, and reviewer connections from the crosswalk. Designs carry explicit topic/focus/project tags and an exploratory status. The hypothesis projection reads only actual main-branch hypothesis documents, retains their status and exposes explicit `topics`, `focus_areas` and `project_briefs` (exported as `projects`). Missing tags become empty lists; no research-stage approval is inferred.
+
+The exporter rejects unknown/duplicate references and escaping or missing document paths. The atlas fingerprint and crosswalk snapshot determine `mapping_stale`; it warns about an outdated editorial review without mutating canonical questions or saved browser decisions. Run export before local builds or contract tests so navigation and the atlas come from the same checkout.

@@ -45,7 +45,7 @@ jobs:
         run: python dashboard/scripts/test_export.py
       - name: Build dashboard
         working-directory: dashboard
-        run: npm ci && npm run build
+        run: npm ci && node scripts/test_research_navigation.mjs && node scripts/test_question_reviews.mjs && npx tsc --noEmit && npm run build
       - name: Deploy Cloudflare Pages
         if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
         run: npx wrangler@3 pages deploy dashboard/dist --project-name swarm-research --branch ${{ github.ref_name }} --commit-dirty=true

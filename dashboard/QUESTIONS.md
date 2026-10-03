@@ -1,5 +1,7 @@
 # Question review
 
+Research navigation now includes grouped literature topics and cross-cutting focus areas, a sixteen-project filter, linked exploratory designs and explicit formal-hypothesis tags. See [RESEARCH-AREAS.md](RESEARCH-AREAS.md) for contribution rules and source ownership. Question content and review fingerprints remain unchanged.
+
 `#/questions` presents the canonical research question atlas for human selection. It includes each question, tentative hypothesis, proposed test, comparison, metrics, falsifier, confounds, promotion requirements and linked prior work. Search and filters are encoded in the URL; `#/questions?id=BUD-01` links directly to one candidate.
 
 The exporter copies `researchers/dmarz/notes/question-atlas/candidates.json` to `public/data/questions.json` and verifies the existing content hashes. Edit the canonical lane files and rebuild the atlas through `src/question-atlas/build.py` when research changes; do not edit the dashboard copy. See [DATA-CONTRACT.md](DATA-CONTRACT.md) for the exact contract.
