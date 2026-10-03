@@ -9,3 +9,9 @@ Styles are scoped to `.swarm-root` and consume U's paper/ink/rule/accent/font to
 Search, topic selection, source list, and inspector are keyboard usable. Pan and zoom are optional pointer controls. Reduced motion stops simulation automatically; explicit pause is independent. Offscreen/hidden fields stop rendering. The replay uses actual current-source first-add timestamps from noon ET October 3. Historical deleted sources are not invented to match the timeline totals. The snapshot end is the last current-source addition, not wall-clock now.
 
 Canvas `data-perf` reports renderer, measured frame frequency, average JS update/draw submission milliseconds, and node count. This is not GPU timing. FPS measured in software-rendered headless Chromium is not evidence of laptop hardware FPS.
+
+## Verification, October 3
+
+TypeScript strict check and Vite production build pass. Playwright exercised title search, source inspection, timestamp replay, dark theme, 390px mobile (no horizontal overflow), reduced-motion preference, and forced Canvas fallback, with no browser exceptions. Screenshots are in `/home/shad0w/.moltbot/projects/swarm-hackathon/dash-shots/graph/`.
+
+Headless Chromium with ANGLE SwiftShader, 1440x1100: 2,463 real sources, 38.5 fps and 0.85 ms average JS simulation/render submission. Synthetic 3,000-source load at 1200x900: 25.2 fps, 1.21 ms JS. Forced Canvas fallback: 9 fps, 2.01 ms JS on this software-rendered host. GPU laptop 60 fps has not been verified; do not present these headless measurements as hardware performance. FPS fluctuates with shared host load and screenshot capture.
