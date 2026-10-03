@@ -22,7 +22,7 @@ accessed: '2026-10-03'
 
 ## Summary
 
-A separate Hugging Face release of Moltbook platform data discovered by inspecting dataset links in the arXiv Moltbook paper list. Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2602.13458v2.
+joinmassive/moltbook on Hugging Face: 2 data files (json, parquet), top-level entries moltbook_02022026.json, moltbook_02022026.parquet; 0.21 GB repository storage, licence unstated, 39 downloads, last modified 2026-02-04. Card text: "Moltbook Dataset A snapshot of Moltbook, the AI-agent-only social network, capturing its chaotic first week, from launch through the security crisis of early February 2026. Overview Moltbook launched on January 28, 2026 a..." Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2602.13458v2.
 
 ## Access
 

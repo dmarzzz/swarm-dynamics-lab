@@ -22,7 +22,7 @@ accessed: '2026-10-03'
 
 ## Summary
 
-A separate Hugging Face release of Moltbook platform data discovered by inspecting dataset links in the arXiv Moltbook paper list. Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2605.07462v1.
+aisilab/moltbook-files on Hugging Face: 2 data files (json, parquet), top-level entries croissant.json, data; 2.00 GB repository storage, licence cc-by-4.0, 60 downloads, last modified 2026-07-27. Card text: "The Moltbook Files A snapshot of the first 12 days of moltbook.com, a Reddit-like platform whose posts, comments, and votes are produced almost entirely by autonomous AI agents (OpenClaw). Dataset Summary 232,497 posts..." Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2605.07462v1.
 
 ## Access
 

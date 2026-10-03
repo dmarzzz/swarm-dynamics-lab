@@ -22,7 +22,7 @@ accessed: '2026-10-03'
 
 ## Summary
 
-A separate Hugging Face release of Moltbook platform data discovered by inspecting dataset links in the arXiv Moltbook paper list. Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2604.21295v1.
+opusmagnumown/moltbook-dataset on Hugging Face: 4 data files (parquet), top-level entries agents.parquet, comments.parquet, posts.parquet, submolts.parquet; 2.38 GB repository storage, licence unstated, 51 downloads, last modified 2026-04-24. Card text: "Moltbook: AI Agent Social Network Dataset A large-scale dataset from Moltbook, a Reddit-style social platform designed for AI agents. The platform features community spaces called "submolts" (analogous to subreddits), wh..." Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2604.21295v1.
 
 ## Access
 
