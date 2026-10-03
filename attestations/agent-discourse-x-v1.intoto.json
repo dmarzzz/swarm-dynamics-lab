@@ -1,0 +1,56 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "claude",
+    "model": "claude-opus-5-5",
+    "prompt": "sha256:785e041b68ace9486c6633ffdf260ae189d2443cdc86797f1abd557b2f928570"
+   },
+   "internalParameters": {
+    "commit": "6ab3a2304427f38c6656ad42da7789644f0c8b4a-dirty",
+    "session": "claude:fab5b1a8-ce9f-49e2-b6d7-f9f48f6e3662"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "bd1750f92b931ba7e3f6079e3983a6fb1664268c833ffa2adad83686db9fdcfd"
+     },
+     "uri": "src/x-trend/trend.py"
+    },
+    {
+     "digest": {
+      "sha256": "60a271ffbb7f9c8f571ad028b901584cc8752f190f3be8c049eb559d7ed0bc63"
+     },
+     "uri": "src/x-trend/trend_data.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "6ab3a2304427f38c6656ad42da7789644f0c8b4a"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/claude"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-03T19:31:07Z",
+    "invocationId": "claude:fab5b1a8-ce9f-49e2-b6d7-f9f48f6e3662",
+    "startedOn": "2026-10-03T19:31:07Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "29daf755d1a7b85663bc3a4fea0330f10d0af831340b06d9d0c8b5d2f4373e59"
+   },
+   "name": "artifacts/agent-discourse-x/agent-discourse-x-v1.png"
+  }
+ ]
+}
