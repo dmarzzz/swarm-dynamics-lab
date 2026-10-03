@@ -11,15 +11,15 @@
 | swarm-robotics | 272 | 13 | 0 | 0 | 0 | 0 | 285 |
 | swarm-intelligence | 107 | 1 | 0 | 0 | 0 | 0 | 108 |
 | active-matter | 184 | 3 | 0 | 0 | 0 | 0 | 187 |
-| sync-consensus | 225 | 8 | 10 | 0 | 0 | 1 | 244 |
-| criticality-measurement | 186 | 4 | 0 | 4 | 0 | 0 | 194 |
+| sync-consensus | 225 | 8 | 10 | 2 | 0 | 1 | 246 |
+| criticality-measurement | 186 | 4 | 0 | 5 | 0 | 0 | 195 |
 | marl-emergence | 123 | 12 | 0 | 0 | 0 | 0 | 135 |
-| llm-agent-swarms | 237 | 42 | 30 | 50 | 0 | 1 | 360 |
+| llm-agent-swarms | 237 | 42 | 30 | 60 | 0 | 1 | 370 |
 | crowds-and-traffic | 76 | 2 | 0 | 0 | 0 | 0 | 78 |
 | meta | 77 | 8 | 2 | 13 | 0 | 2 | 102 |
-| sybil-resistance | 169 | 40 | 52 | 0 | 4 | 1 | 266 |
-| fork-merge-security | 214 | 10 | 26 | 0 | 0 | 2 | 252 |
-| swarm-detection | 0 | 0 | 2 | 0 | 0 | 0 | 2 |
+| sybil-resistance | 169 | 40 | 52 | 9 | 4 | 1 | 275 |
+| fork-merge-security | 214 | 10 | 26 | 20 | 0 | 2 | 272 |
+| swarm-detection | 0 | 0 | 2 | 31 | 0 | 0 | 33 |
 
 ## Tasks
 
@@ -53,6 +53,7 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [scan-threads-sd-informal](tasks/scan-threads-sd-informal.md) | claimed | p1 | scan | dmarz/sd-informal |  | 2026-10-03T18:20Z | Catalogue the threads: threat-intel reports, blogs, threads and talks on agent swarms in the wild |
+| [scan-threads-x-security](tasks/scan-threads-x-security.md) | claimed | p1 | scan | dmarz/x-threads |  | 2026-10-03T19:05Z | Catalogue X threads for the security topics (Sybil resistance, fork-merge security, swarm detection) via Apify |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Review survey: llm agent swarms (cross-researcher) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
@@ -103,6 +104,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
+| dmarz/x-threads | working | scan-threads-x-security | 2026-10-03T18:57Z | 35 X threads catalogued for sybil/fork-merge/swarm-detection via Apify; awaiting dmarz OK to push |
 | dmarz/sybil-foundations | done | scan-papers-sybil-foundations | 2026-10-03T18:42Z | Catalogued 21 foundational Sybil papers (6 read in full) plus notes on 4 existing entries; coverage note filled |
 | dmarz/fm-biology | done | scan-papers-fm-biology | 2026-10-03T18:38Z | 29 biology entries on fusion parasitism, allorecognition, social parasites, transmissible cancers, fission-fusion; 4 full reads |
 | dmarz/fm-memory-injection | done | scan-papers-fm-memory-injection | 2026-10-03T18:38Z | Catalogued 35 fork-merge-security entries on agent memory poisoning and persistent injection (4 read in full); coverage note filled |
