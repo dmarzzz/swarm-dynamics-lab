@@ -1,21 +1,29 @@
 ---
 id: kang-2026-whose
 type: paper
-title: "Whose Agent Are You? Multi-Layer Fingerprinting and Attribution of Autonomous Web Agents"
-authors: ["Dayeon Kang", "Hyejun Jeong", "Jade Sheffey", "Pubali Datta", "Amir Houmansadr"]
+title: Whose Agent Are You? Multi-Layer Fingerprinting and Attribution of Autonomous Web Agents
+authors:
+- Dayeon Kang
+- Hyejun Jeong
+- Jade Sheffey
+- Pubali Datta
+- Amir Houmansadr
 year: 2026
-venue: "arXiv preprint"
+venue: arXiv preprint
 url: https://arxiv.org/abs/2606.20910
-doi: "10.48550/arXiv.2606.20910"
-arxiv: "2606.20910"
-cite: "Kang, D., Jeong, H., Sheffey, J., Datta, P., & Houmansadr, A. (2026). Whose Agent Are You? Multi-Layer Fingerprinting and Attribution of Autonomous Web Agents. arXiv preprint arXiv:2606.20910."
-topics: ["swarm-detection", "llm-agent-swarms"]
+doi: 10.48550/arXiv.2606.20910
+arxiv: '2606.20910'
+cite: Kang, D., Jeong, H., Sheffey, J., Datta, P., & Houmansadr, A. (2026). Whose Agent Are You? Multi-Layer Fingerprinting and Attribution of Autonomous Web Agents. arXiv preprint arXiv:2606.20910.
+topics:
+- swarm-detection
+- llm-agent-swarms
 added_by: dmarz/sd-web-agents
 accessed: '2026-10-03'
 read_depth: full
 relevance: 5
 citations: null
-code: ["gh-spin-umass-ai-agent-fingerprint"]
+code:
+- gh-spin-umass-ai-agent-fingerprint
 ---
 
 ## Summary
@@ -46,3 +54,37 @@ Closed world of six agents; the authors note that an agent that perfectly copies
 ## Relevance to us
 
 Gives a deployable recipe for attributing agent traffic to an operator stack, which is the building block for spotting many instances of one operator. The Claude/Gemini collision is a concrete example of the limit: attribution resolves the backend, not the person or the swarm behind it. Pair with [[fayolle-2026-internet]], [[wang-2026-fp-agent]] and the traffic-side [[zhang-2025-exposing]].
+
+## Notes from dmarz/sd-attribution
+
+This lane catalogued the same source independently (added_by dmarz/sd-attribution, accessed 2026-10-03). Its distinct content:
+
+- Frontmatter `doi` in this lane's version: null
+- Frontmatter `cite` in this lane's version: Kang, D., Jeong, H., Sheffey, J., Datta, P., & Houmansadr, A. (2026). Whose Agent Are You? Multi-Layer Fingerprinting and Attribution of Autonomous Web Agents. arXiv:2606.20910.
+- Frontmatter `read_depth` in this lane's version: abstract
+- Frontmatter `relevance` in this lane's version: 4
+- Frontmatter `code` in this lane's version: []
+
+### Summary
+
+Builds a multi-layer fingerprint from network characteristics (TLS, HTTP) and browser interaction behaviour to distinguish AI web agents from humans and traditional crawlers, deployed as a logging framework on an instrumented domain. Analysing AutoGen, Browser Use, Claude, Gemini, Operator and Skyvern, a decision tree reaches 97% accuracy in isolating agent architectures and separating agent traffic from human and legacy-crawler baselines.
+
+### Contribution
+
+Cross-layer attribution of agent frameworks rather than base models.
+
+### Key results
+
+- 97% accuracy over six agent frameworks plus human and crawler baselines (abstract).
+
+### Methods and models
+
+Instrumented live domain; TLS/HTTP request assembly features plus browser action features; decision tree.
+
+### Limitations and open questions
+
+Framework-level labels; evasion claims rest on cross-layer redundancy, not adaptive attacks. Abstract-only reading.
+
+### Relevance to us
+
+Complements model-level attribution from UI traces ([[lugoloobi-2026-known]]). Overlaps with the web-agents lane; included because it attributes, not only detects.

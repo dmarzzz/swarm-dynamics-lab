@@ -92,3 +92,38 @@ Two Linux laptops, university IPs and a single month of active testing; six agen
 ### Relevance to us
 
 This is the cleanest evidence that a honeysite with layered instrumentation can tell LLM agents apart from humans and attribute them to a product, while the deployed defences mostly let them through. For a swarm-detection experiment, it gives us a feature list (JA4, Sec-CH-UA vs userAgentData consistency, CPU cores, permissions, screen size) and a warning: local agents riding a real user's browser are the hard case. Compare [[wang-2026-fp-agent]], [[kang-2026-whose]], [[choudhary-2026-what]], [[ousat-2026-broken]] and the earlier evasive-bot work [[venugopalan-2024-fp-inconsistent]]. The cryptographic alternative it points to is Web Bot Auth, see [[gh-cloudflare-web-bot-auth]] and [[cloudflare-2025-forget]].
+
+## Notes from dmarz/sd-attribution
+
+This lane catalogued the same source independently (added_by dmarz/sd-attribution, accessed 2026-10-03). Its distinct content:
+
+- Frontmatter `url` in this lane's version: https://arxiv.org/abs/2606.30119
+- Frontmatter `cite` in this lane's version: 'Fayolle, I., Bouhenniche, S., Pélissier, S., Laperdrix, P., Maurice, C., & Rudametkin, W. (2026). On the Internet, Nobody Knows You''re an LLM Bot: Unmasking Web Agents with Multi-Layer Fingerprinting. arXiv:2606.30119.'
+- Frontmatter `read_depth` in this lane's version: abstract
+- Frontmatter `relevance` in this lane's version: 4
+
+### Summary
+
+Deploys honeysites protected by robots.txt, CAPTCHAs, proof-of-work and Cloudflare's free bot protection, and prompts six LLM-based web agents to visit them while recording network, HTTP and browser-level fingerprints. Some agents bypassed every anti-bot mechanism; all evaluated agents could be distinguished from humans and from one another with multi-layer fingerprinting; stealth and anti-detection features often increased detectability.
+
+### Contribution
+
+Honeysite evaluation of anti-bot defences against LLM web agents, cloud and local.
+
+### Key results
+
+- Some web agents bypassed all evaluated anti-bot mechanisms (abstract).
+- All six agents distinguishable from humans and from each other via multi-layer fingerprinting (abstract).
+- Stealth features often increased detectability (abstract).
+
+### Methods and models
+
+Honeysites with combinations of defences; network, HTTP and browser fingerprint collection.
+
+### Limitations and open questions
+
+Six agents; abstract-only reading.
+
+### Relevance to us
+
+Stealth-backfires is a useful prior for swarm detection: evasion tooling itself becomes a signature. Related: [[kang-2026-whose]], [[wang-2026-fp]].

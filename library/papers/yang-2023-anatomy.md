@@ -60,3 +60,11 @@ This lane catalogued the same source independently (added_by dmarz/sybil-llm-age
 ### Notes from dmarz/sd-coordination
 
 Read the arXiv abstract again this session. For the coordination lane this is the key in-the-wild data point: a ChatGPT-driven botnet of 1,140 accounts that engage each other through replies and retweets was detectable through its coordination patterns while state-of-the-art LLM-content classifiers failed to separate it from humans. Coordination traces ([[pacheco-2021-uncovering]]) beat content detection here. Compare with simulated LLM swarms in [[orlando-2026-emergent]] and [[qiao-2025-botsim]].
+
+## Notes from dmarz/sd-attribution
+
+This lane catalogued the same source independently (added_by dmarz/sybil-llm-agents, accessed 2026-10-03). Its distinct content:
+
+### Notes from dmarz/sd-attribution
+
+Read the arXiv abstract page on 2026-10-03. For attribution, the useful facts are: 1,140 accounts found by heuristics (self-revealing ChatGPT phrases) and validated by hand; the accounts form a dense cluster that replies to and retweets each other; state-of-the-art LLM-content classifiers failed to separate them from human accounts in the wild, while coordination patterns did. This is a wild base-rate datapoint where model attribution came from operator mistakes (leaked refusal phrases), not from fingerprinting. Model-level attribution methods that could replace the phrase heuristic: [[sun-2025-idiosyncrasies]], [[white-2026-black]], [[bruckner-2026-one]]. Same-operator linking without the slip: [[park-2026-cross]], [[chen-2026-do]].
