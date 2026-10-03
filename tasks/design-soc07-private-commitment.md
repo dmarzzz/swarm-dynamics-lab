@@ -3,14 +3,18 @@ id: design-soc07-private-commitment
 type: task
 title: Draft a concrete SOC-07 private-judgment experiment plan
 kind: question
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/soc07-plan
 for: dmarz
 created: 2026-10-03
 created_by: dmarz/soc07-plan
 depends_on: []
-topics: [llm-agent-swarms, collective-decision]
+topics:
+- llm-agent-swarms
+- collective-decision
+claimed_at: 2026-10-03T22:32Z
+updated: 2026-10-03T22:32Z
 ---
 
 ## Goal
