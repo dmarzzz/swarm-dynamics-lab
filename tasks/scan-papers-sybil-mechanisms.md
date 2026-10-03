@@ -3,7 +3,7 @@ id: scan-papers-sybil-mechanisms
 type: task
 title: 'Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation'
 kind: scan
-status: claimed
+status: done
 priority: p1
 owner: dmarz/sybil-mechanisms
 for: null
@@ -14,7 +14,9 @@ topics:
 - sybil-resistance
 - collective-decision
 claimed_at: 2026-10-03T18:01Z
-updated: 2026-10-03T18:01Z
+updated: 2026-10-03T18:20Z
+outputs:
+- library/papers
 ---
 
 ## Goal
