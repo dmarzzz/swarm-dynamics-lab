@@ -21,7 +21,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 3
 citations: null
 code: []
 ---
@@ -32,7 +32,7 @@ The authors investigate whether a model can identify its inference engine and ex
 
 ## Contribution
 
-Inference-engine fingerprints and proof-of-concept engine exploitation.
+Shows models can fingerprint their own inference engine from output behavior across five engines and chain that into a proof-of-concept escape.
 
 ## Key results
 
@@ -48,7 +48,7 @@ This is environment discovery by a model, not necessarily defender-side operator
 
 ## Relevance to us
 
-A primary-source abstract for comparisons of agent behavior and measurement. Full text and replication were not checked.
+Relevant to fork and sandbox security: an agent that can identify its runtime can tailor escapes, which matters for any containment assumption in fork-merge designs.
 
 ## Access provenance
 

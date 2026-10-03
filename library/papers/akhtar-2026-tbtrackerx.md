@@ -48,7 +48,7 @@ These are script-controlled trigger bots; the abstract does not prove they are L
 
 ## Relevance to us
 
-This provides a prior-art comparison for detecting coordinated automation, not evidence that any observed population is an LLM swarm.
+A honeytrap that baits keyword-triggered bots is a cheap active probe we could reuse against agent populations; the reported reply similarity up to 0.97 and 15 s to 5 min bursts are concrete coordination signatures to compare with [[chavoshi-2016-debot]] and [[beutel-2013-copycatch]].
 
 ## Access and citation provenance
 

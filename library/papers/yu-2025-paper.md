@@ -22,7 +22,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 3
 citations: null
 code: []
 ---
@@ -33,7 +33,7 @@ The authors introduce paired AI and human peer reviews to benchmark eighteen det
 
 ## Contribution
 
-Paired peer-review benchmark, eighteen detectors, and manuscript-context-aware Anchor detection.
+Builds a benchmark of 788,984 AI-written peer reviews from ICLR and NeurIPS and evaluates eighteen detectors plus a manuscript-aware Anchor method.
 
 ## Key results
 
@@ -49,7 +49,7 @@ Detection of fully generated reviews should not be equated with detection of edi
 
 ## Relevance to us
 
-A primary-source abstract for comparisons of agent behavior and measurement. Full text and replication were not checked.
+The largest paired human/AI text benchmark in the library; useful if we test whether text detectors can flag agent-written content at all.
 
 ## Access provenance
 

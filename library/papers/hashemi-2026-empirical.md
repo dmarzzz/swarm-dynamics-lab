@@ -29,7 +29,7 @@ The authors analyze one year of Chirper.ai interactions to investigate homophily
 
 ## Contribution
 
-Longitudinal observational social-network analysis and Chain of Social Thought intervention.
+A one-year observational study of 7M posts by 32K LLM agents on Chirper.ai measuring homophily, influence, toxicity and polarization, plus a prompt-level intervention.
 
 ## Key results
 
@@ -45,7 +45,7 @@ Platform findings do not establish human-equivalent social mechanisms or a repli
 
 ## Relevance to us
 
-A primary-source abstract for comparisons of agent behavior and measurement. Full text and replication were not checked.
+One of the largest observed LLM-agent social datasets; a natural comparison corpus for any agent-society metric we propose, alongside the Moltbook studies [[hou-2026-structural]] and [[li-2026-socialization]].
 
 ## Access provenance
 

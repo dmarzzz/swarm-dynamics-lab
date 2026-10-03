@@ -8,7 +8,7 @@ authors:
 - Abha Eli Phoboo
 - Chris Kempes
 year: 2024
-url: https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/812a2932-f271-4e9b-a23f-8d2d443a1682/episodes/7d6b220f-e690-43e8-a292-94cdd6a5776b/audio/fae63869-b7b8-4312-b3c1-31e4524c075d/default_tc.mp3?aid=rss_feed&feed=OzDH_At2
+url: https://complexity.simplecast.com/episodes/ep-4-the-physics-of-collectives-GjXgt_uO
 venue: COMPLEXITY, 2024-03-13
 topics:
 - collective-decision

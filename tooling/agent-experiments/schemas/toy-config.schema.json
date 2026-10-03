@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "required": [
+    "schema_version",
+    "study_id",
+    "mode",
+    "master_seed",
+    "scenarios",
+    "replicates",
+    "agents",
+    "conditions",
+    "repeated_source_copies",
+    "primary_treatment",
+    "primary_control",
+    "bootstrap_samples"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "study_id": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string",
+      "const": "scripted_offline"
+    },
+    "master_seed": {
+      "type": "integer"
+    },
+    "scenarios": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "replicates": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "agents": {
+      "type": "integer",
+      "minimum": 3
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "naive_global",
+          "provenance_global",
+          "no_communication",
+          "provenance_ring"
+        ]
+      },
+      "minItems": 2
+    },
+    "repeated_source_copies": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "primary_treatment": {
+      "type": "string"
+    },
+    "primary_control": {
+      "type": "string"
+    },
+    "bootstrap_samples": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Offline toy configuration"
+}

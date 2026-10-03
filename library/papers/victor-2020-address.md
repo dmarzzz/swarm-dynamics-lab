@@ -27,7 +27,7 @@ This paper adapts entity identification to Ethereum account-based transactions u
 
 ## Contribution
 
-Heuristic clustering of four years of Ethereum transactions.
+Adapts entity clustering to account-based Ethereum using deposit-address reuse, airdrop multi-participation and approval patterns.
 
 ## Key results
 
@@ -43,7 +43,7 @@ Clusters indicate likely common control, not verified identity; protocol-indepen
 
 ## Relevance to us
 
-A comparison source for coordinated automation and security measurement. Full-text methods and replication have not been checked.
+Direct on-chain Sybil heuristic: clustered 17.9% of active EOAs into 340K+ entities, with deposit reuse the strongest signal; a ready baseline for linking agent wallets to operators.
 
 ## Access provenance
 

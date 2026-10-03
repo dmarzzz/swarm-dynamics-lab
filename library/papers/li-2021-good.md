@@ -31,7 +31,7 @@ Aristaeus deploys honeysites to characterize automated browsing and malicious bo
 
 ## Contribution
 
-Honeysite deployment and request, TLS, and HTTP-header comparison.
+Deploys 100 honeysites for seven months and uses TLS, header and claimed-browser mismatches to characterize 26.4M automated requests.
 
 ## Key results
 
@@ -47,7 +47,7 @@ IP addresses are not unique operators, and findings about simple libraries may n
 
 ## Relevance to us
 
-A comparison source for coordinated automation and security measurement. Full-text methods and replication have not been checked.
+The strongest pre-LLM honeysite measurement in the library; its fingerprint-mismatch method is the obvious baseline, and its finding that most bots used simple HTTP tools is exactly what browser-native agents break.
 
 ## Access provenance
 

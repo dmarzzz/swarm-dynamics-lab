@@ -4,7 +4,7 @@ type: talk
 title: "97. Geometric Collective Decision Making (with Professor Iain Couzin)"
 authors: [Iain Couzin, Clara, Carolina]
 year: 2025
-url: https://anchor.fm/s/74bf20b0/podcast/play/101336432/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-3-15%2F9492f38a-b75e-f2e5-c741-7480183f68c4.m4a
+url: https://creators.spotify.com/pod/profile/neuroverse9/episodes/97--Geometric-Collective-Decision-Making-with-Professor-Iain-Couzin-e31j1tg
 venue: "Neuroverse, episode 97, 2025-04-24"
 topics: [collective-motion, collective-decision, criticality-measurement, swarm-robotics]
 added_by: shadow/sol-aud

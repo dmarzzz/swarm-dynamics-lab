@@ -6,7 +6,7 @@ authors:
 - Melanie Moses
 - Michael Garfield
 year: 2019
-url: https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/812a29/812a2932-f271-4e9b-a23f-8d2d443a1682/cb3e0ca6-b7d2-4a5f-8f46-65cb9908fea6/complexity-10-melanie-moses-on-metabolic-scaling-in-biology-and-computation_tc.mp3?aid=rss_feed&feed=OzDH_At2
+url: https://complexity.simplecast.com/episodes/10-_Jx1OWX3
 venue: COMPLEXITY, 2019-12-04
 topics:
 - swarm-robotics

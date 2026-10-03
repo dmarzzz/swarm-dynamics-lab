@@ -1,0 +1,224 @@
+{
+  "type": "object",
+  "required": [
+    "schema_version",
+    "manifest_id",
+    "baseline_renderer_sha256",
+    "sources",
+    "visibility",
+    "retrieval",
+    "network",
+    "treatment_overrides",
+    "logging"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "manifest_id": {
+      "type": "string"
+    },
+    "baseline_renderer_sha256": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "uri",
+          "version",
+          "sha256",
+          "retrieved_at_utc",
+          "license",
+          "allowed_use",
+          "redistribution",
+          "classification",
+          "transform_sha256"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "uri": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          },
+          "retrieved_at_utc": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          },
+          "allowed_use": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "redistribution": {
+            "type": "string"
+          },
+          "classification": {
+            "type": "string"
+          },
+          "transform_sha256": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "visibility": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "agent_role",
+          "initial_paths",
+          "read_paths",
+          "write_paths",
+          "denied_paths"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "agent_role": {
+            "type": "string"
+          },
+          "initial_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "read_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "write_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "denied_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "retrieval": {
+      "type": "object",
+      "required": [
+        "mode",
+        "index_sha256",
+        "embedding_revision",
+        "ranking_policy",
+        "record_delivered_content"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "type": "string"
+        },
+        "index_sha256": {
+          "type": "string"
+        },
+        "embedding_revision": {
+          "type": "string"
+        },
+        "ranking_policy": {
+          "type": "string"
+        },
+        "record_delivered_content": {
+          "type": "boolean"
+        }
+      }
+    },
+    "network": {
+      "type": "object",
+      "required": [
+        "mode",
+        "allowed_hosts"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "type": "string"
+        },
+        "allowed_hosts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "treatment_overrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "condition",
+          "json_pointer",
+          "baseline_value",
+          "treatment_value",
+          "rationale"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "condition": {
+            "type": "string"
+          },
+          "json_pointer": {
+            "type": "string"
+          },
+          "baseline_value": {
+            "type": "string"
+          },
+          "treatment_value": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "logging": {
+      "type": "object",
+      "required": [
+        "payload_policy",
+        "secret_policy",
+        "retention"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "payload_policy": {
+          "type": "string"
+        },
+        "secret_policy": {
+          "type": "string"
+        },
+        "retention": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "context-access template structure"
+}

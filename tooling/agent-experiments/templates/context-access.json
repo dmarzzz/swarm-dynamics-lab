@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "REPLACE_context-v1",
+  "baseline_renderer_sha256": "REPLACE_sha256",
+  "sources": [
+    {
+      "id": "synthetic-evidence",
+      "uri": "local:REPLACE_snapshot",
+      "version": "REPLACE_version",
+      "sha256": "REPLACE_sha256",
+      "retrieved_at_utc": "REPLACE_timestamp",
+      "license": "REPLACE_license",
+      "allowed_use": [
+        "evaluation"
+      ],
+      "redistribution": "REPLACE_permission",
+      "classification": "public-synthetic",
+      "transform_sha256": "REPLACE_sha256"
+    }
+  ],
+  "visibility": [
+    {
+      "agent_role": "observer",
+      "initial_paths": [
+        "scenario/own-observation.json"
+      ],
+      "read_paths": [
+        "scenario/own-observation.json"
+      ],
+      "write_paths": [
+        "run/agent/scratch"
+      ],
+      "denied_paths": [
+        "evaluator/*",
+        "other-runs/*"
+      ]
+    }
+  ],
+  "retrieval": {
+    "mode": "frozen",
+    "index_sha256": "REPLACE_or_none",
+    "embedding_revision": "REPLACE_or_none",
+    "ranking_policy": "REPLACE_or_none",
+    "record_delivered_content": true
+  },
+  "network": {
+    "mode": "deny_by_default",
+    "allowed_hosts": []
+  },
+  "treatment_overrides": [
+    {
+      "condition": "REPLACE_treatment",
+      "json_pointer": "REPLACE_path",
+      "baseline_value": "REPLACE_baseline",
+      "treatment_value": "REPLACE_treatment_value",
+      "rationale": "REPLACE_only_prespecified_difference"
+    }
+  ],
+  "logging": {
+    "payload_policy": "public synthetic fields only",
+    "secret_policy": "local credential adapter only; never emit values",
+    "retention": "REPLACE_days_and_owner"
+  }
+}

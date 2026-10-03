@@ -19,7 +19,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 3
 citations: null
 code: []
 ---
@@ -30,7 +30,7 @@ The authors simulate thousands of socially interacting LLM agents to test privac
 
 ## Contribution
 
-Moltbook-style multi-agent simulation with socially pressured privacy evaluation.
+Simulates thousands of socially interacting LLM agents for a month to measure privacy leakage under peer pressure, including contagion after observing peers leak.
 
 ## Key results
 
@@ -46,7 +46,7 @@ The inspected HTML excerpt reports a different peer-leakage multiplier, 5.1, so 
 
 ## Relevance to us
 
-A primary-source abstract for comparisons of agent behavior and measurement. Full text and replication were not checked.
+A measured peer-contagion effect in an LLM population, relevant to how one compromised agent changes the behavior of others; reconcile the eightfold versus 5.1x figure (see Limitations) before quoting it.
 
 ## Access provenance
 

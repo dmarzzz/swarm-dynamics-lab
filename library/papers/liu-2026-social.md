@@ -30,7 +30,7 @@ SNLA models effective influence in LLM populations by accounting for network pos
 
 ## Contribution
 
-Attention-weighted influence theory, controlled testbed, and three multi-agent benchmark variants.
+Models effective influence in LLM populations by weighting exposure edges with attention, and derives conditions for herding versus wisdom-of-crowds.
 
 ## Key results
 
@@ -46,7 +46,7 @@ Do not generalize proxy theorems to arbitrary harnesses or directed irregular ne
 
 ## Relevance to us
 
-A primary-source abstract for comparisons of agent behavior and measurement. Full text and replication were not checked.
+Directly about effective sample size in agent populations, close to the N_eff idea on the board; note the result needs undirected degree-regular exposure graphs.
 
 ## Access provenance
 

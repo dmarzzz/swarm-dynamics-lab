@@ -6,7 +6,7 @@ authors:
 - Elizabeth Hobson
 - Michael Garfield
 year: 2022
-url: https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/812a2932-f271-4e9b-a23f-8d2d443a1682/episodes/1b512784-3768-477f-a413-6e0c0e1fd9b5/audio/42a38e25-34c5-480f-a4f0-545c86970582/default_tc.mp3?aid=rss_feed&feed=OzDH_At2
+url: https://complexity.simplecast.com/episodes/78-bLlx5jMd
 venue: COMPLEXITY, 2022-02-25
 topics:
 - collective-decision

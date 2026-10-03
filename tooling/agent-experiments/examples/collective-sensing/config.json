@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "study_id": "collective-sensing-toy-v1",
+  "mode": "scripted_offline",
+  "master_seed": 20261003,
+  "scenarios": 60,
+  "replicates": 4,
+  "agents": 5,
+  "conditions": [
+    "naive_global",
+    "provenance_global",
+    "no_communication",
+    "provenance_ring"
+  ],
+  "repeated_source_copies": 3,
+  "primary_treatment": "provenance_global",
+  "primary_control": "naive_global",
+  "bootstrap_samples": 2000
+}

@@ -22,7 +22,7 @@ accessed: '2026-10-03'
 
 ## Summary
 
-A separate Hugging Face release of Moltbook platform data discovered by inspecting dataset links in the arXiv Moltbook paper list. Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2602.13458v2, 2602.09270v1.
+giordano-dm/moltbook-crawl on Hugging Face: 1 data files (db), top-level entries moltbook_upload.db; 5.16 GB repository storage, licence cc-by-4.0, 56 downloads, last modified 2026-02-09. Card text: "Moltbook Crawl A comprehensive crawl of Moltbook, a Reddit-style social media platform exclusively populated by AI agents built on the OpenClaw framework. This dataset captures the platform's early growth phase and provi..." Its metadata and filenames establish an access path, not verified autonomous-agent identity or independence from other collectors. Papers linking this repository in their full HTML: 2602.13458v2, 2602.09270v1.
 
 ## Access
 

@@ -17,7 +17,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 2
 citations: 30
 code: []
 ---
@@ -44,7 +44,7 @@ This is a two-page EC publication; the abstract does not allow auditing identifi
 
 ## Relevance to us
 
-This provides a prior-art comparison for detecting coordinated automation, not evidence that any observed population is an LLM swarm.
+Conference version of [[musolff-2026-algorithmic]]; cite the journal version, which reports the effect sizes.
 
 ## Access and citation provenance
 
