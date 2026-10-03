@@ -2,9 +2,9 @@
 
 # Library index
 
-2745 entries.
+2771 entries.
 
-## Papers (1734)
+## Papers (1760)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -323,6 +323,7 @@
 | [abdolmaleki-2026-attribute](papers/abdolmaleki-2026-attribute.md) | Attribute-Based Threshold Issuance Anonymous Counting Tokens and Its Application to Sybil-Resistant Self-Sovereign Identity | 2026 | 4 | skim | sybil-resistance | shadow/sol-p1 |
 | [acebron-2005-kuramoto](papers/acebron-2005-kuramoto.md) | The Kuramoto model: A simple paradigm for synchronization phenomena | 2005 | 4 | abstract | sync-consensus, criticality-measurement | dmarz/sync-consensus |
 | [adler-2024-personhood](papers/adler-2024-personhood.md) | Personhood credentials: Artificial intelligence and the value of privacy-preserving tools to distinguish who is real online | 2024 | 4 | abstract | sybil-resistance, llm-agent-swarms | dmarz/sybil-credentials |
+| [agarwal-2021-deep](papers/agarwal-2021-deep.md) | Deep Reinforcement Learning at the Edge of the Statistical Precipice | 2021 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [akhtar-2025-botsscl](papers/akhtar-2025-botsscl.md) | BotSSCL: Social Bot Detection with Self-Supervised Contrastive Learning | 2025 | 4 | skim | swarm-detection | shadow/sol-w1 |
 | [akhtar-2026-tbtrackerx](papers/akhtar-2026-tbtrackerx.md) | TBTrackerX: Fantastic Trigger Bots and Where to Find Malicious Campaigns on X | 2026 | 4 | abstract | swarm-detection | shadow/sol-g51 |
 | [akinwande-2026-sharding](papers/akinwande-2026-sharding.md) | Sharding Prevents LLM Oversight Failures and Adversarial Exploitation | 2026 | 4 | skim | fork-merge-security, llm-agent-swarms, collective-decision | dmarz/fm-sutton |
@@ -425,6 +426,7 @@
 | [ceron-2024-reciprocal](papers/ceron-2024-reciprocal.md) | Reciprocal and Non-Reciprocal Swarmalators with Programmable Locomotion and Formations for Robot Swarms | 2024 | 4 | abstract | sync-consensus, swarm-robotics, active-matter | dmarz/sync-consensus |
 | [chakraborty-2023-possibilities](papers/chakraborty-2023-possibilities.md) | On the Possibilities of AI-Generated Text Detection | 2023 | 4 | abstract | swarm-detection | dmarz/sd-ai-content |
 | [chan-2024-ids](papers/chan-2024-ids.md) | IDs for AI Systems | 2024 | 4 | full | sybil-resistance, llm-agent-swarms | dmarz/sybil-llm-agents |
+| [chan-2024-mle](papers/chan-2024-mle.md) | MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering | 2024 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [chandra-2019-continuous](papers/chandra-2019-continuous.md) | Continuous versus Discontinuous Transitions in the D-Dimensional Generalized Kuramoto Model: Odd D is Different | 2019 | 4 | abstract | sync-consensus, collective-motion | dmarz/sync-consensus |
 | [chase-2025-physics](papers/chase-2025-physics.md) | The Physics of Sensing and Decision-Making by Animal Groups | 2025 | 4 | abstract | collective-motion, collective-decision, sync-consensus | dmarz/collective-motion-recent |
 | [chatagnon-2025-exploring](papers/chatagnon-2025-exploring.md) | Exploring Dense Crowd Dynamics: State of the Art and Emerging Paradigms | 2025 | 4 | abstract | crowds-and-traffic, active-matter | dmarz/crowds-and-traffic |
@@ -441,6 +443,7 @@
 | [chen-2024-online](papers/chen-2024-online.md) | Online Detection of LLM-Generated Texts via Sequential Hypothesis Testing by Betting | 2024 | 4 | abstract | swarm-detection | dmarz/sd-ai-content |
 | [chen-2024-persistent](papers/chen-2024-persistent.md) | Persistent and responsive collective motion with adaptive time delay | 2024 | 4 | abstract | collective-motion, active-matter, swarm-robotics | dmarz/collective-motion-recent |
 | [chen-2025-persona](papers/chen-2025-persona.md) | Persona Vectors: Monitoring and Controlling Character Traits in Language Models | 2025 | 4 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-identity-hijack |
+| [chen-2026-benchmarking](papers/chen-2026-benchmarking.md) | Benchmarking LLM-as-a-Judge for Long-Form Output Evaluation | 2026 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [chen-2026-do](papers/chen-2026-do.md) | Do System Prompts Leave Behavioral Fingerprints? A Large-Scale Empirical Study of Clone Detection via Output Similarity | 2026 | 4 | abstract | swarm-detection, sybil-resistance | dmarz/sd-attribution |
 | [chen-2026-when](papers/chen-2026-when.md) | When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models | 2026 | 4 | abstract | fork-merge-security, llm-agent-swarms, collective-decision | dmarz/fm-bft-aggregation |
 | [chitra-2025-sybil](papers/chitra-2025-sybil.md) | On Sybil-proofness in Restaking Networks | 2025 | 4 | abstract | sybil-resistance, sync-consensus | dmarz/sybil-mechanisms |
@@ -564,12 +567,14 @@
 | [goel-2025-great](papers/goel-2025-great.md) | Great Models Think Alike and this Undermines AI Oversight | 2025 | 4 | abstract | fork-merge-security, llm-agent-swarms | dmarz/fm-bft-aggregation |
 | [gomez-nava-2023-fish](papers/gomez-nava-2023-fish.md) | Fish shoals resemble a stochastic excitable system driven by environmental perturbations | 2023 | 4 | abstract | collective-motion, criticality-measurement | dmarz/collective-motion |
 | [gompper-2020-2020](papers/gompper-2020-2020.md) | The 2020 motile active matter roadmap | 2020 | 4 | abstract | active-matter, swarm-robotics, collective-motion | dmarz/active-matter |
+| [gottweis-2025-accelerating](papers/gottweis-2025-accelerating.md) | Accelerating scientific discovery with Co-Scientist | 2025 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [goyal-2026-social](papers/goyal-2026-social.md) | Social Simulacra in the Wild: AI Agent Communities on Moltbook | 2026 | 4 | abstract | swarm-detection, llm-agent-swarms | dmarz/sd-ai-content |
 | [graham-2024-coordination](papers/graham-2024-coordination.md) | The coordination network toolkit: a framework for detecting and analysing coordinated behaviour on social media | 2024 | 4 | skim | swarm-detection | dmarz/sd-coordination |
 | [gray-2018-multiagent](papers/gray-2018-multiagent.md) | Multiagent Decision-Making Dynamics Inspired by Honeybees | 2018 | 4 | abstract | collective-decision, sync-consensus, swarm-robotics | dmarz/collective-decision |
 | [green-2007-provenance](papers/green-2007-provenance.md) | Provenance Semirings | 2007 | 4 | skim | llm-agent-swarms, fork-merge-security, meta | dmarz/preflight |
 | [gressel-2024-are](papers/gressel-2024-are.md) | Are You Human? An Adversarial Benchmark to Expose LLMs | 2024 | 4 | abstract | swarm-detection | dmarz/sd-attribution |
 | [grimes-2024-concept-rot](papers/grimes-2024-concept-rot.md) | Concept-ROT: Poisoning Concepts in Large Language Models with Model Editing | 2024 | 4 | skim | fork-merge-security | dmarz/fm |
+| [grimm-2020-odd](papers/grimm-2020-odd.md) | The ODD Protocol for Describing Agent-Based and Other Simulation Models: A Second Update to Improve Clarity, Replication, and Structural Realism | 2020 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [grotschla-2025-agentsnet](papers/grotschla-2025-agentsnet.md) | AgentsNet: Coordination and Collaborative Reasoning in Multi-Agent LLMs | 2025 | 4 | abstract | llm-agent-swarms, sync-consensus | dmarz/llm-agent-swarms-recent |
 | [gu-2024-agent](papers/gu-2024-agent.md) | Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast | 2024 | 4 | abstract | llm-agent-swarms, sybil-resistance, fork-merge-security | dmarz/llm-agent-swarms |
 | [gubri-2024-trap](papers/gubri-2024-trap.md) | TRAP: Targeted Random Adversarial Prompt Honeypot for Black-Box Identification | 2024 | 4 | abstract | swarm-detection | dmarz/sd-attribution |
@@ -585,6 +590,7 @@
 | [hamann-2018-swarm](papers/hamann-2018-swarm.md) | Swarm Robotics: A Formal Approach | 2018 | 4 | abstract | swarm-robotics, collective-decision | dmarz/swarm-robotics |
 | [hammoud-2024-model](papers/hammoud-2024-model.md) | Model Merging and Safety Alignment: One Bad Model Spoils the Bunch | 2024 | 4 | abstract | fork-merge-security | dmarz/fm-merge-poisoning |
 | [han-2026-conformity](papers/han-2026-conformity.md) | Conformity Dynamics in LLM Multi-Agent Systems: The Roles of Topology and Self-Social Weighting | 2026 | 4 | skim | llm-agent-swarms, sync-consensus, collective-decision | dmarz/llm-agent-swarms-audit |
+| [han-2026-science](papers/han-2026-science.md) | Science Edge Evaluation: SEE the Missing Step Toward Real Scientific Discovery | 2026 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [hanley-2023-machine](papers/hanley-2023-machine.md) | Machine-Made Media: Monitoring the Mobilization of Machine-Generated Articles on Misinformation and Mainstream News Websites | 2023 | 4 | abstract | swarm-detection | dmarz/sd-ai-content |
 | [hartnett-2016-heterogeneous](papers/hartnett-2016-heterogeneous.md) | Heterogeneous Preference and Local Nonlinearity in Consensus Decision Making | 2016 | 4 | abstract | collective-decision, criticality-measurement | dmarz/collective-decision |
 | [hashemi-2026-empirical](papers/hashemi-2026-empirical.md) | An Empirical Study of Collective Behaviors and Social Dynamics in Large Language Model Agents | 2026 | 4 | abstract | llm-agent-swarms | shadow/sol-g51 |
@@ -606,9 +612,11 @@
 | [hills-2026-distributed](papers/hills-2026-distributed.md) | Distributed Attacks in Persistent-State AI Control | 2026 | 4 | abstract | fork-merge-security, llm-agent-swarms | dmarz/fm-ai-control |
 | [ho-2013-kin](papers/ho-2013-kin.md) | Kin recognition protects cooperators against cheaters | 2013 | 4 | abstract | fork-merge-security, collective-decision | dmarz/fm-biology |
 | [hoffmann-2026-consensus](papers/hoffmann-2026-consensus.md) | From Consensus-Based Optimization to Particle Swarm Optimization: Convergence Guarantees under Drift-Diffusion Coupling | 2026 | 4 | abstract | swarm-intelligence, sync-consensus | dmarz/swarm-intelligence |
+| [hong-2026-overview](papers/hong-2026-overview.md) | Overview of the NLPCC 2026 Shared Task 11: Agent-Based Experiment Reproduction from Scientific Papers | 2026 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [horgan-2018-distributed](papers/horgan-2018-distributed.md) | Distributed Prioritized Experience Replay | 2018 | 4 | skim | fork-merge-security | dmarz/fm |
 | [horyna-2024-fast](papers/horyna-2024-fast.md) | Fast Swarming of UAVs in GNSS-Denied Feature-Poor Environments Without Explicit Communication | 2024 | 4 | abstract | swarm-robotics, collective-motion | dmarz/swarm-robotics-recent |
 | [hou-2026-structural](papers/hou-2026-structural.md) | Structural Divergence Between AI-Agent and Human Social Networks in Moltbook | 2026 | 4 | abstract | llm-agent-swarms | shadow/sol-g51 |
+| [howard-2018-time](papers/howard-2018-time.md) | Time-uniform, nonparametric, nonasymptotic confidence sequences | 2018 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [hu-2025-inter-agent](papers/hu-2025-inter-agent.md) | Inter-Agent Trust Models: A Comparative Study of Brief, Claim, Proof, Stake, Reputation and Constraint in Agentic Web Protocol Design-A2A, AP2, ERC-8004, and Beyond | 2025 | 4 | abstract | sybil-resistance, llm-agent-swarms | dmarz/sybil-llm-agents |
 | [huang-2024-collective](papers/huang-2024-collective.md) | Collective phase transitions in confined fish schools | 2024 | 4 | abstract | collective-motion, active-matter | dmarz/collective-motion-recent |
 | [hubinger-2024-sleeper](papers/hubinger-2024-sleeper.md) | Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training | 2024 | 4 | abstract | fork-merge-security | dmarz/fm-merge-poisoning |
@@ -632,6 +640,7 @@
 | [kao-2014-collective](papers/kao-2014-collective.md) | Collective Learning and Optimal Consensus Decisions in Social Animal Groups | 2014 | 4 | abstract | collective-decision, marl-emergence | dmarz/collective-decision |
 | [kao-2014-decision](papers/kao-2014-decision.md) | Decision accuracy in complex environments is often maximized by small group sizes | 2014 | 4 | abstract | collective-decision | dmarz/collective-decision |
 | [kao-2024-timing](papers/kao-2024-timing.md) | Timing decisions as the next frontier for collective intelligence | 2024 | 4 | skim | collective-decision | dmarz/collective-decision-audit |
+| [kapoor-2024-ai](papers/kapoor-2024-ai.md) | AI Agents That Matter | 2024 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [karaguzel-2023-collective](papers/karaguzel-2023-collective.md) | Collective gradient perception with a flying robot swarm | 2023 | 4 | abstract | swarm-robotics, collective-motion, collective-decision | dmarz/swarm-robotics-audit |
 | [karimireddy-2020-byzantine](papers/karimireddy-2020-byzantine.md) | Byzantine-Robust Learning on Heterogeneous Datasets via Bucketing | 2020 | 4 | abstract | fork-merge-security, sync-consensus | dmarz/fm-bft-aggregation |
 | [karimireddy-2020-learning](papers/karimireddy-2020-learning.md) | Learning from History for Byzantine Robust Optimization | 2020 | 4 | abstract | fork-merge-security, sync-consensus | dmarz/fm-bft-aggregation |
@@ -660,6 +669,7 @@
 | [la-gatta-2026-human](papers/la-gatta-2026-human.md) | Human, AI, and Hybrid Ensembles for Detection of Adaptive, RL-based Social Bots | 2026 | 4 | abstract | swarm-detection | dmarz/sd-bots |
 | [lafoux-2023-illuminance](papers/lafoux-2023-illuminance.md) | Illuminance-tuned collective motion in fish | 2023 | 4 | abstract | collective-motion | dmarz/collective-motion |
 | [laird-2005-stem](papers/laird-2005-stem.md) | Stem cells are units of natural selection in a colonial ascidian | 2005 | 4 | abstract | fork-merge-security | dmarz/fm-biology |
+| [lakens-2022-sample](papers/lakens-2022-sample.md) | Sample Size Justification | 2022 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [lamb-2022-reproducible](papers/lamb-2022-reproducible.md) | Reproducible Builds: Increasing the Integrity of Software Supply Chains | 2022 | 4 | skim | fork-merge-security | dmarz/fm-mobile-agents |
 | [laszka-2014-flipthem](papers/laszka-2014-flipthem.md) | FlipThem: Modeling Targeted Attacks with FlipIt for Multiple Resources | 2014 | 4 | skim | fork-merge-security, sync-consensus | dmarz/fm |
 | [lauriere-2022-learning](papers/lauriere-2022-learning.md) | Learning in Mean Field Games: A Survey | 2022 | 4 | abstract | marl-emergence | dmarz/marl-emergence |
@@ -699,6 +709,7 @@
 | [liu-2025-detecting](papers/liu-2025-detecting.md) | Detecting Sybil Addresses in Blockchain Airdrops: A Subgraph-based Feature Propagation and Fusion Approach | 2025 | 4 | full | swarm-detection, sybil-resistance | dmarz/sd-onchain |
 | [liu-2025-fox](papers/liu-2025-fox.md) | Fox in the Henhouse: Supply-Chain Backdoor Attacks Against Reinforcement Learning | 2025 | 4 | skim | fork-merge-security, marl-emergence | dmarz/fm |
 | [liu-2025-somesite](papers/liu-2025-somesite.md) | Somesite I Used To Crawl: Awareness, Agency and Efficacy in Protecting Content Creators From AI Crawlers | 2025 | 4 | abstract | swarm-detection | dmarz/sd-web-agents |
+| [liu-2026-benchmarking](papers/liu-2026-benchmarking.md) | Benchmarking AI Agents for Addressing Scientific Challenges Across Scales | 2026 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [liu-2026-social](papers/liu-2026-social.md) | Social Networks of LLM Agents | 2026 | 4 | abstract | llm-agent-swarms | shadow/sol-g51 |
 | [lizier-2008-local](papers/lizier-2008-local.md) | Local information transfer as a spatiotemporal filter for complex systems | 2008 | 4 | abstract | criticality-measurement | dmarz/criticality-measurement |
 | [loffredo-2023-collective](papers/loffredo-2023-collective.md) | Collective response to local perturbations: how to evade threats without losing coherence | 2023 | 4 | abstract | criticality-measurement, collective-motion | dmarz/criticality-measurement |
@@ -711,6 +722,7 @@
 | [loven-2026-meld](papers/loven-2026-meld.md) | MELD: A Protocol for Merging Knowledge Across Distributed Agentic Memories | 2026 | 4 | skim | fork-merge-security, llm-agent-swarms, sync-consensus | dmarz/fm-sutton |
 | [lowe-2017-multi](papers/lowe-2017-multi.md) | Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments | 2017 | 4 | skim | marl-emergence | dmarz/marl-emergence |
 | [lowen-2020-inertial](papers/lowen-2020-inertial.md) | Inertial effects of self-propelled particles: From active Brownian to active Langevin motion | 2020 | 4 | skim | active-matter, swarm-robotics, collective-motion | dmarz/active-matter-audit |
+| [lu-2024-ai](papers/lu-2024-ai.md) | The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery | 2024 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [luceri-2024-unmasking](papers/luceri-2024-unmasking.md) | Unmasking the Web of Deceit: Uncovering Coordinated Activity to Expose Information Operations on Twitter | 2024 | 4 | abstract | swarm-detection | dmarz/sd-coordination |
 | [lukeman-2010-inferring](papers/lukeman-2010-inferring.md) | Inferring individual rules from collective behavior | 2010 | 4 | abstract | collective-motion | dmarz/collective-motion |
 | [luo-2025-flocking](papers/luo-2025-flocking.md) | Flocking Phase Separation in Inertial Active Matter | 2025 | 4 | abstract | active-matter, collective-motion, swarm-robotics | dmarz/active-matter |
@@ -781,6 +793,7 @@
 | [ott-2008-low](papers/ott-2008-low.md) | Low dimensional behavior of large systems of globally coupled oscillators | 2008 | 4 | abstract | sync-consensus | dmarz/sync-consensus |
 | [ouellette-2022-physics](papers/ouellette-2022-physics.md) | A physics perspective on collective animal behavior | 2022 | 4 | abstract | collective-motion, active-matter, criticality-measurement | dmarz/collective-motion |
 | [ousat-2026-broken](papers/ousat-2026-broken.md) | Broken Gates: Re-evaluating Web Bot Defenses in the Age of LLM Agents | 2026 | 4 | full | swarm-detection, llm-agent-swarms, sybil-resistance | dmarz/sd-web-agents |
+| [paglieri-2026-case](papers/paglieri-2026-case.md) | A Case Study on Emergent Cheating and Whistleblowing in Autonomous Research Swarms | 2026 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [pal-2026-swarmworld](papers/pal-2026-swarmworld.md) | SwarmWorld: Stigmergic technological evolution in societies of language-model agents | 2026 | 4 | abstract | llm-agent-swarms, swarm-intelligence, collective-decision | dmarz/llm-agent-swarms-recent-audit |
 | [palacci-2013-living](papers/palacci-2013-living.md) | Living Crystals of Light-Activated Colloidal Surfers | 2013 | 4 | abstract | active-matter, collective-motion | dmarz/active-matter |
 | [pante-2025-beyond](papers/pante-2025-beyond.md) | Beyond Interaction Patterns: Assessing Claims of Coordinated Inter-State Information Operations on Twitter/X | 2025 | 4 | abstract | swarm-detection | dmarz/sd-bots |
@@ -794,6 +807,7 @@
 | [passerat-palmbach-2025-differentially](papers/passerat-palmbach-2025-differentially.md) | Differentially Private aggregate hints in mev-share | 2025 | 4 | skim | sybil-resistance | dmarz/sybil-flashbots |
 | [pastor-2015-experimental](papers/pastor-2015-experimental.md) | Experimental proof of faster-is-slower in systems of frictional particles flowing through constrictions | 2015 | 4 | full | crowds-and-traffic, active-matter, collective-motion, criticality-measurement | dmarz/crowds-and-traffic-audit |
 | [patel-2025-maxshapley](papers/patel-2025-maxshapley.md) | MaxShapley: Towards Incentive-compatible Generative Search with Fair Context Attribution | 2025 | 4 | skim | sybil-resistance, llm-agent-swarms | dmarz/sybil-mechanisms |
+| [patterson-2024-empirical](papers/patterson-2024-empirical.md) | Empirical Design in Reinforcement Learning | 2024 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [pawlak-2025-backdoor](papers/pawlak-2025-backdoor.md) | Backdoor Vectors: a Task Arithmetic View on Backdoor Attacks and Defenses | 2025 | 4 | abstract | fork-merge-security | dmarz/fm-merge-poisoning |
 | [pawlick-2019-game](papers/pawlick-2019-game.md) | A Game-theoretic Taxonomy and Survey of Defensive Deception for Cybersecurity and Privacy | 2019 | 4 | skim | fork-merge-security | dmarz/fm-unlinkability |
 | [pearce-2014-role](papers/pearce-2014-role.md) | Role of projection in the control of bird flocks | 2014 | 4 | abstract | collective-motion | dmarz/collective-motion |
@@ -808,10 +822,12 @@
 | [pote-2024-coordinated](papers/pote-2024-coordinated.md) | Coordinated Reply Attacks in Influence Operations: Characterization and Detection | 2024 | 4 | abstract | swarm-detection | dmarz/sd-bots |
 | [pouryousef-2026-large](papers/pouryousef-2026-large.md) | A Large-Scale Benchmark and Risk Assessment of Traffic Analysis Attacks on Cloud LLM Services | 2026 | 4 | abstract | swarm-detection | dmarz/sd-attribution |
 | [pratt-2006-tunable](papers/pratt-2006-tunable.md) | A tunable algorithm for collective decision-making | 2006 | 4 | abstract | collective-decision | dmarz/collective-decision |
+| [puelma-touzel-2026-position](papers/puelma-touzel-2026-position.md) | Position: Time to Close The Validation Gap in LLM Social Simulations | 2026 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [puy-2024-signatures](papers/puy-2024-signatures.md) | Signatures of criticality in turning avalanches of schooling fish | 2024 | 4 | abstract | collective-motion, criticality-measurement | dmarz/collective-motion-recent |
 | [qiao-2025-botsim](papers/qiao-2025-botsim.md) | BotSim: LLM-Powered Malicious Social Botnet Simulation | 2025 | 4 | abstract | swarm-detection, llm-agent-swarms | dmarz/sd-coordination |
 | [queller-2000-relatedness](papers/queller-2000-relatedness.md) | Relatedness and the fraternal major transitions | 2000 | 4 | abstract | fork-merge-security, collective-decision | dmarz/fm-biology |
 | [quinn-2025-decentralised](papers/quinn-2025-decentralised.md) | Decentralised, Self-Organising Drone Swarms using Coupled Oscillators | 2025 | 4 | skim | sync-consensus, swarm-robotics | dmarz/sync-consensus |
+| [rabanser-2026-towards](papers/rabanser-2026-towards.md) | Towards a Science of AI Agent Reliability | 2026 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [radev-2026-best](papers/radev-2026-best.md) | The Best-Laid SCHEMEs: Coordinated Sabotage and Monitoring in Multi-Agent Systems | 2026 | 4 | abstract | fork-merge-security, llm-agent-swarms | dmarz/fm-ai-control |
 | [radivojevic-2024-llms](papers/radivojevic-2024-llms.md) | LLMs Among Us: Generative AI Participating in Digital Discourse | 2024 | 4 | abstract | swarm-detection, llm-agent-swarms | dmarz/sd-bots |
 | [radivojevic-2024-social](papers/radivojevic-2024-social.md) | Social Media Bot Policies: Evaluating Passive and Active Enforcement | 2024 | 4 | abstract | swarm-detection | dmarz/sd-bots |
@@ -838,6 +854,7 @@
 | [romanczuk-2009-collective](papers/romanczuk-2009-collective.md) | Collective Motion due to Individual Escape and Pursuit Response | 2009 | 4 | abstract | collective-motion, active-matter | dmarz/collective-motion |
 | [romanczuk-2012-active](papers/romanczuk-2012-active.md) | Active Brownian particles | 2012 | 4 | abstract | active-matter, collective-motion | dmarz/active-matter |
 | [romanczuk-2022-phase](papers/romanczuk-2022-phase.md) | Phase Transitions and Criticality in the Collective Behavior of Animals — Self-Organization and Biological Function | 2022 | 4 | abstract | collective-motion, criticality-measurement, collective-decision | dmarz/collective-motion |
+| [romera-paredes-2023-mathematical](papers/romera-paredes-2023-mathematical.md) | Mathematical discoveries from program search with large language models | 2023 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [ron-2026-n-version](papers/ron-2026-n-version.md) | N-Version Programming with Coding Agents | 2026 | 4 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-bft-aggregation |
 | [rosas-2019-quantifying](papers/rosas-2019-quantifying.md) | Quantifying high-order interdependencies via multivariate extensions of the mutual information | 2019 | 4 | abstract | criticality-measurement | dmarz/criticality-measurement-audit |
 | [rose-2026-detecting](papers/rose-2026-detecting.md) | Detecting Multi-Agent Collusion Through Multi-Agent Interpretability | 2026 | 4 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-coordination |
@@ -874,6 +891,7 @@
 | [shefi-2025-bugs](papers/shefi-2025-bugs.md) | Bugs with features: vision-based fault-tolerant collective motion inspired by nature | 2025 | 4 | abstract | swarm-robotics, collective-motion | dmarz/swarm-robotics-recent |
 | [shejwalkar-2022-back](papers/shejwalkar-2022-back.md) | Back to the Drawing Board: A Critical Evaluation of Poisoning Attacks on Production Federated Learning | 2022 | 4 | abstract | fork-merge-security | dmarz/fm-merge-poisoning |
 | [shi-1998-modified](papers/shi-1998-modified.md) | A modified particle swarm optimizer | 1998 | 4 | abstract | swarm-intelligence | dmarz/swarm-intelligence |
+| [shi-2026-tau](papers/shi-2026-tau.md) | $\tau^\tau$-Bench: An Environment for End-To-End, Realistic Agent Construction | 2026 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [shibayama-2026-deep](papers/shibayama-2026-deep.md) | A Deep Reinforcement Learning Framework for Closed-loop Guidance of Fish Schools via Virtual Agents | 2026 | 4 | skim | marl-emergence, collective-motion | dmarz/marl-emergence-audit |
 | [shpurov-2024-beehive](papers/shpurov-2024-beehive.md) | Beehive scale-free emergent dynamics | 2024 | 4 | abstract | criticality-measurement, collective-decision | dmarz/criticality-measurement |
 | [siddarth-2020-who](papers/siddarth-2020-who.md) | Who Watches the Watchmen? A Review of Subjective Approaches for Sybil-Resistance in Proof of Personhood Protocols | 2020 | 4 | full | sybil-resistance, collective-decision, meta | dmarz/sybil-foundations |
@@ -884,7 +902,9 @@
 | [soma-2024-hive](papers/soma-2024-hive.md) | The Hive Mind is a Single Reinforcement Learning Agent | 2024 | 4 | abstract | collective-decision, marl-emergence, swarm-intelligence | dmarz/collective-decision |
 | [son-2025-emergent](papers/son-2025-emergent.md) | Emergent functional dynamics of link-bots | 2025 | 4 | skim | swarm-robotics, active-matter | dmarz/swarm-robotics-recent |
 | [sosic-2017-inverse](papers/sosic-2017-inverse.md) | Inverse Reinforcement Learning in Swarm Systems | 2017 | 4 | abstract | marl-emergence, collective-motion | dmarz/marl-emergence |
+| [soumik-2026-judging](papers/soumik-2026-judging.md) | Judging the Judges: A Systematic Evaluation of Bias Mitigation Strategies in LLM-as-a-Judge Pipelines | 2026 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [srivastava-2025-memorygraft](papers/srivastava-2025-memorygraft.md) | MemoryGraft: Persistent Compromise of LLM Agents via Poisoned Experience Retrieval | 2025 | 4 | abstract | fork-merge-security | dmarz/fm-memory-injection |
+| [starace-2025-paperbench](papers/starace-2025-paperbench.md) | PaperBench: Evaluating AI's Ability to Replicate AI Research | 2025 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [strassmann-2000-altruism](papers/strassmann-2000-altruism.md) | Altruism and social cheating in the social amoeba Dictyostelium discoideum | 2000 | 4 | abstract | fork-merge-security, collective-decision | dmarz/fm-biology |
 | [strobel-2018-managing](papers/strobel-2018-managing.md) | Managing Byzantine Robots via Blockchain Technology in a Swarm Robotics Collective Decision Making Scenario | 2018 | 4 | abstract | sybil-resistance, swarm-robotics, collective-decision | dmarz/sybil-robotics |
 | [strobel-2023-robot](papers/strobel-2023-robot.md) | Robot swarms neutralize harmful Byzantine robots using a blockchain-based token economy | 2023 | 4 | abstract | swarm-robotics, collective-decision, sybil-resistance | dmarz/swarm-robotics |
@@ -899,6 +919,7 @@
 | [sun-2025-idiosyncrasies](papers/sun-2025-idiosyncrasies.md) | Idiosyncrasies in Large Language Models | 2025 | 4 | abstract | swarm-detection | dmarz/sd-attribution |
 | [sunil-2026-memory](papers/sunil-2026-memory.md) | Memory Poisoning Attack and Defense on Memory Based LLM-Agents | 2026 | 4 | abstract | fork-merge-security | dmarz/fm-memory-injection |
 | [syga-2026-minority](papers/syga-2026-minority.md) | Minority-Triggered Reorientations Yield Macroscopic Cascades and Enhanced Responsiveness in Swarms | 2026 | 4 | abstract | criticality-measurement, collective-motion | dmarz/criticality-measurement |
+| [szymanski-2023-autonomous](papers/szymanski-2023-autonomous.md) | An autonomous laboratory for the accelerated synthesis of inorganic materials | 2023 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [tadaki-2013-phase](papers/tadaki-2013-phase.md) | Phase transition in traffic jam experiment on a circuit | 2013 | 4 | skim | crowds-and-traffic, criticality-measurement | dmarz/crowds-and-traffic |
 | [tailleur-2008-statistical](papers/tailleur-2008-statistical.md) | Statistical Mechanics of Interacting Run-and-Tumble Bacteria | 2008 | 4 | abstract | active-matter | dmarz/active-matter |
 | [tambe-2011-security](papers/tambe-2011-security.md) | Security and Game Theory | 2011 | 4 | abstract | fork-merge-security, collective-decision | dmarz/fm |
@@ -968,9 +989,11 @@
 | [wu-2026-how](papers/wu-2026-how.md) | How does Adversarial Influence Scale in Multi-Agent Systems? | 2026 | 4 | abstract | llm-agent-swarms, collective-decision | dmarz/llm-agent-swarms-recent |
 | [wu-2026-predicting](papers/wu-2026-predicting.md) | Predicting the scale limits of social mechanisms in agent societies | 2026 | 4 | abstract | llm-agent-swarms, collective-decision | dmarz/llm-agent-swarms-recent |
 | [xiao-2024-perception](papers/xiao-2024-perception.md) | Perception of motion salience shapes the emergence of collective motions | 2024 | 4 | abstract | collective-motion, swarm-robotics | dmarz/collective-motion-recent |
+| [xin-2026-eurekagent](papers/xin-2026-eurekagent.md) | EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery | 2026 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [xu-2026-certifiable](papers/xu-2026-certifiable.md) | Certifiable Semantic Agreement Among LLM Agents: What the Admissibility Instrument Decides | 2026 | 4 | abstract | fork-merge-security, llm-agent-swarms, sync-consensus | dmarz/fm-bft-aggregation |
 | [xu-2026-penny](papers/xu-2026-penny.md) | A Penny for Your Prompts: Experiments Detecting and Mitigating LLM Usage by Survey Respondents | 2026 | 4 | abstract | swarm-detection | dmarz/sd-honeypots |
 | [yaish-2026-inequality](papers/yaish-2026-inequality.md) | Inequality in the Age of Pseudonymity | 2026 | 4 | abstract | sybil-resistance, criticality-measurement | dmarz/sybil-mechanisms |
+| [yamada-2025-ai](papers/yamada-2025-ai.md) | The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search | 2025 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [yamaguchi-2025-emergent](papers/yamaguchi-2025-emergent.md) | Emergent Coordination and Phase Structure in Independent Multi-Agent Reinforcement Learning | 2025 | 4 | abstract | marl-emergence, criticality-measurement | dmarz/marl-emergence |
 | [yan-2025-reliability](papers/yan-2025-reliability.md) | Reliability and security: from swarm robots to AI agents | 2025 | 4 | abstract | sybil-resistance, swarm-robotics, llm-agent-swarms | dmarz/sybil-robotics |
 | [yang-2013-detection](papers/yang-2013-detection.md) | Detection and Localization of Multiple Spoofing Attackers in Wireless Networks | 2013 | 4 | skim | sybil-resistance, swarm-detection | shadow/sol-p1 |
@@ -980,6 +1003,7 @@
 | [yang-2025-mitigating](papers/yang-2025-mitigating.md) | Mitigating the Backdoor Effect for Multi-Task Model Merging via Safety-Aware Subspace | 2025 | 4 | abstract | fork-merge-security | dmarz/fm-merge-poisoning |
 | [yang-2026-sok](papers/yang-2026-sok.md) | SoK: When Safe Agents Fail Together: The Security of Multi Agent LLM Systems | 2026 | 4 | abstract | sybil-resistance, llm-agent-swarms, fork-merge-security | dmarz/sybil-llm-agents |
 | [yang-2026-understanding](papers/yang-2026-understanding.md) | Understanding Agent Scaling in LLM-Based Multi-Agent Systems via Diversity | 2026 | 4 | abstract | llm-agent-swarms, criticality-measurement | dmarz/llm-agent-swarms |
+| [yao-2024-tau](papers/yao-2024-tau.md) | $\tau$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains | 2024 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [yeung-1999-time](papers/yeung-1999-time.md) | Time Delay in the Kuramoto Model of Coupled Oscillators | 1999 | 4 | skim | sync-consensus | dmarz/sync-consensus-audit |
 | [yin-2018-byzantine](papers/yin-2018-byzantine.md) | Byzantine-Robust Distributed Learning: Towards Optimal Statistical Rates | 2018 | 4 | abstract | fork-merge-security, sync-consensus | dmarz/fm-bft-aggregation |
 | [yin-2024-lobam](papers/yin-2024-lobam.md) | LoBAM: LoRA-Based Backdoor Attack on Model Merging | 2024 | 4 | abstract | fork-merge-security | dmarz/fm-merge-poisoning |
@@ -1006,11 +1030,13 @@
 | [zhang-2026-roguemerge](papers/zhang-2026-roguemerge.md) | RogueMerge: Robust and Unified Attacks against LLM Model Merging | 2026 | 4 | abstract | fork-merge-security | dmarz/fm-merge-poisoning |
 | [zhao-2023-chemotactic](papers/zhao-2023-chemotactic.md) | Chemotactic Motility-Induced Phase Separation | 2023 | 4 | skim | active-matter, collective-decision | dmarz/active-matter-audit |
 | [zheng-2018-magent](papers/zheng-2018-magent.md) | MAgent: A Many-Agent Reinforcement Learning Platform for Artificial Collective Intelligence | 2018 | 4 | abstract | marl-emergence | dmarz/marl-emergence |
+| [zheng-2023-judging](papers/zheng-2023-judging.md) | Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena | 2023 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [zheng-2025-demonstrations](papers/zheng-2025-demonstrations.md) | Demonstrations of Integrity Attacks in Multi-Agent Systems | 2025 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/fm |
 | [zheng-2026-absorbing](papers/zheng-2026-absorbing.md) | Absorbing State Phase Transitions in Multi-Agent Search | 2026 | 4 | abstract | llm-agent-swarms, criticality-measurement | dmarz/llm-agent-swarms |
 | [zheng-2026-demystifying](papers/zheng-2026-demystifying.md) | Demystifying Solana Bots: From GitHub Blueprints to On-Chain Fingerprints | 2026 | 4 | skim | swarm-detection | dmarz/sd-onchain |
 | [zheng-2026-nested](papers/zheng-2026-nested.md) | Nested interaction network enhances responsiveness in collective behavior | 2026 | 4 | abstract | criticality-measurement, swarm-robotics, collective-motion | dmarz/criticality-measurement |
 | [zhou-2022-swarm](papers/zhou-2022-swarm.md) | Swarm of micro flying robots in the wild | 2022 | 4 | abstract | swarm-robotics | dmarz/swarm-robotics |
+| [zhou-2023-sotopia](papers/zhou-2023-sotopia.md) | SOTOPIA: Interactive Evaluation for Social Intelligence in Language Agents | 2023 | 4 | abstract | meta, llm-agent-swarms | vishesh/codex-methods |
 | [zhou-2025-dstack](papers/zhou-2025-dstack.md) | Dstack: A Zero Trust Framework for Confidential Containers | 2025 | 4 | skim | sybil-resistance | dmarz/sybil-foundations |
 | [zhou-2026-infa-guard](papers/zhou-2026-infa-guard.md) | INFA-Guard: Mitigating Malicious Propagation via Infection-Aware Safeguarding in LLM-Based Multi-Agent Systems | 2026 | 4 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm |
 | [zhu-2024-self](papers/zhu-2024-self.md) | Self-organizing nervous systems for robot swarms | 2024 | 4 | abstract | swarm-robotics, sync-consensus | dmarz/swarm-robotics |
