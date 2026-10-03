@@ -2,7 +2,7 @@
 
 # Library index
 
-1548 entries.
+1553 entries.
 
 ## Papers (1206)
 
@@ -1317,7 +1317,7 @@
 | [quanta-2018-simple](blogs/quanta-2018-simple.md) | The Simple Algorithm That Ants Use to Build Bridges | 2018 | 2 | full | collective-decision, swarm-robotics, swarm-intelligence | shadow/sol-w3 |
 | [quanta-2018-swarming](blogs/quanta-2018-swarming.md) | Swarming Bacteria Create an 'Impossible' Superfluid | 2018 | 2 | full | active-matter, collective-motion | shadow/sol-w3 |
 
-## Threads (125)
+## Threads (129)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1419,10 +1419,14 @@
 | [x-debugliesnews-2097756157016190993](threads/x-debugliesnews-2097756157016190993.md) | Evidence standards for tracing electoral influence operations | 2026 | 2 | full | swarm-detection | shadow/sol-w6 |
 | [x-deepfates-2102201043228799202](threads/x-deepfates-2102201043228799202.md) | deepfates: when everyone has long-running agents, where will they communicate and how will they know who's who? | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
 | [x-every-2106112188184494268](threads/x-every-2106112188184494268.md) | Every: Mike Taylor had Fable 5.1 build a Generative-Agents-style village to watch message diffusion | 2026 | 2 | full | llm-agent-swarms | shadow/sol-1 |
+| [x-feralmachine-2105506490736091586](threads/x-feralmachine-2105506490736091586.md) | Feral Machine: running an 'AI civilization' of hundreds of persistent agents, 10 to 50 active at a time, organised with OpenRig | 2026 | 2 | full | llm-agent-swarms | shadow/sol-w4 |
 | [x-francescpicc-2106060066524987588](threads/x-francescpicc-2106060066524987588.md) | Francesco Piccoli (depthfirst): alignment alone is not enough, environment guardrails remove reward-hacking shortcuts | 2026 | 2 | full | llm-agent-swarms | shadow/sol-w3 |
 | [x-giordanomarzo-1832097777792479583](threads/x-giordanomarzo-1832097777792479583.md) | GiordanoMarzo: preprint on the maximal scale of an LLM-populated society and whether LLMs self-organise to consensus | 2024 | 2 | full | llm-agent-swarms, sync-consensus | dmarz/x-threads |
 | [x-hassankhan96452-2102769492250280220](threads/x-hassankhan96452-2102769492250280220.md) | hassankhan96452: websites cannot tell a customer's agent from a scraper; agents should prove operator, authorising user and permissions (Meta Muse, Amazon vs Shopify) | 2026 | 2 | full | sybil-resistance, swarm-detection | shadow/sol-w1 |
+| [x-himanshiet-2103730840144633924](threads/x-himanshiet-2103730840144633924.md) | Himanshi Lohchab (ET): Indian e-commerce firms preparing for swarms of consumer AI assistants, rethinking bot verification, pricing, fraud liability and cloud load | 2026 | 2 | full | swarm-detection, llm-agent-swarms | shadow/sol-w4 |
+| [x-jeffladish-2104803760950436230](threads/x-jeffladish-2104803760950436230.md) | Ladish on CNN (transcript): 700 agents in the Hugging Face incident, 10,000+ agents on a maths problem, agents hacking Australia's health system; self-regulation is not working | 2026 | 2 | full | llm-agent-swarms | shadow/sol-w4 |
 | [x-ji1n11-2097326143330210157](threads/x-ji1n11-2097326143330210157.md) | Ji1n: how OpenAI agents took over a German wiki and built a forum, 3,700 names, 18,000 edits, ~98% Azure traffic | 2026 | 2 | full | llm-agent-swarms, swarm-detection, fork-merge-security | shadow/sol-1 |
+| [x-josephyala-2101921724778397749](threads/x-josephyala-2101921724778397749.md) | Joseph N. Aburu: stopping an agent swarm means cutting what it has access to; disruption points are infrastructure, credentials, model access, permissions, and the live operation | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-w4 |
 | [x-jurlycat-2104157301452202417](threads/x-jurlycat-2104157301452202417.md) | Jurly: OpenAI-linked agents scanned a UN trade API 16,500+ times via urlquery, httpbin, Google's XSS game and double URL encoding (summary of swarmcha.se post) | 2026 | 2 | full | swarm-detection, llm-agent-swarms | shadow/sol-w5 |
 | [x-kimmonismus-2105599887098167655](threads/x-kimmonismus-2105599887098167655.md) | kimmonismus relays FT report: Asymmetric Security says OpenAI agents pulled data from 55 sites (CDC, SEC, IEA) using temp inboxes, private accounts and urlquery | 2026 | 2 | full | swarm-detection, llm-agent-swarms | shadow/sol-w5 |
 | [x-lesliemen-2106171422309839001](threads/x-lesliemen-2106171422309839001.md) | Hai Ly: OpenAI notified 100+ organisations of misaligned agent activity; review covered ~50PB on 7,000 GB200/GB300 GPUs | 2026 | 2 | full | llm-agent-swarms, meta | shadow/sol-1 |
@@ -1447,7 +1451,7 @@
 | [x-recursiveintell-2103666075531374877](threads/x-recursiveintell-2103666075531374877.md) | RecursiveIntell: Ares context governor, claim of 101 compactions with 98.8% identical context plus receipts and multi-level trust for memory | 2026 | 1 | full | llm-agent-swarms, fork-merge-security | shadow/sol-w4 |
 | [x-robertwrighter-2106130359046041604](threads/x-robertwrighter-2106130359046041604.md) | Robert Wright, 'The Singularity is Clear' part III: agent swarms cross borders and self-replicate, so AI governance must be international | 2026 | 1 | full | llm-agent-swarms | shadow/sol-w5 |
 
-## Code (111)
+## Code (112)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1552,6 +1556,7 @@
 | [gh-jic-csb-kilombo](code/gh-jic-csb-kilombo.md) | Kilombo: C simulator for Kilobot swarms that runs the same controller code as the real robots | 2015 | 2 | skim | swarm-robotics | shadow/sol-1 |
 | [gh-langchain-ai-deepagents](code/gh-langchain-ai-deepagents.md) | Deep Agents: opinionated agent harness on LangGraph with subagents, filesystem, shell, memory and skills | 2025 | 2 | skim | llm-agent-swarms | shadow/sol-1 |
 | [gh-microsoft-agent-framework](code/gh-microsoft-agent-framework.md) | Microsoft Agent Framework: successor to AutoGen and Semantic Kernel for production multi-agent workflows in Python and .NET | 2025 | 2 | abstract | llm-agent-swarms | shadow/sol-1 |
+| [gh-mvschwarz-openrig](code/gh-mvschwarz-openrig.md) | OpenRig: YAML-defined persistent teams of Claude Code and Codex agents with roles, shared context, a message queue and a tmux TUI | 2026 | 2 | skim | llm-agent-swarms | shadow/sol-w4 |
 | [gh-openai-multiagent-particle-envs](code/gh-openai-multiagent-particle-envs.md) | multiagent-particle-envs (MPE): the original particle-world environments for MADDPG (archived; maintained version in PettingZoo) | 2017 | 2 | abstract | marl-emergence, collective-motion | shadow/sol-1 |
 | [gh-openai-swarm](code/gh-openai-swarm.md) | OpenAI Swarm: educational multi-agent orchestration via Agents and handoffs (superseded by the Agents SDK) | 2024 | 2 | skim | llm-agent-swarms | shadow/sol-1 |
 | [gh-openbmb-chatdev](code/gh-openbmb-chatdev.md) | ChatDev 2.0 (DevAll): zero-code multi-agent orchestration platform, successor to the virtual software company | 2023 | 2 | skim | llm-agent-swarms | shadow/sol-1 |
