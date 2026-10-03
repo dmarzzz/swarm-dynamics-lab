@@ -3,7 +3,7 @@ id: expand-experimental-question-bank
 type: task
 title: Add distinct experimental questions and expose contribution counts
 kind: synthesis
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-03T23:26Z
-updated: 2026-10-03T23:26Z
+updated: 2026-10-03T23:37Z
+outputs:
+- researchers/vishesh/notes/experimental-expansion/README.md
+- dashboard/src/views/Contributions.tsx
 ---
 
 ## Goal
@@ -24,4 +27,4 @@ Reconcile the 214-card atlas, 40 VX and 14 PX contributions, then add a new batc
 - [x] Explain question counts separately from overlapping review records.
 - [x] Add 24 experimental questions with comparisons, falsifiers, controls and overlap notes.
 - [x] Export and display all contribution banks with derived counts and explicit unreviewed status.
-- [ ] Validate research coverage, dashboard contracts/build/browser behavior and publication safety; push and verify deployment.
+- [x] Validate research coverage, dashboard contracts/build/browser behavior and publication safety; push and verify deployment.
