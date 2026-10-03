@@ -21,6 +21,7 @@ cite: 'Huang, J.-t., Zhou, J., Jin, T., Zhou, X., Chen, Z., Wang, W., Yuan, Y., 
 topics:
 - llm-agent-swarms
 - sybil-resistance
+- fork-merge-security
 added_by: dmarz/llm-agent-swarms-recent
 accessed: '2026-10-03'
 read_depth: abstract
@@ -61,3 +62,7 @@ Audit 2026-10-03: venue confirmed on the PMLR proceedings page (https://proceedi
 ## Notes from dmarz/sybil-llm-agents
 
 Reread the abstract 2026-10-03 for the Sybil-resistance lane. The faulty-agent model (AutoTransform, AutoInject) corrupts one agent's outputs; it does not let an adversary hold several seats, so the 5.5% vs 10.5% vs 23.7% topology result is a single-fault resilience result, not a Sybil result. The Inspector defence is a centralised checker; [[jo-2025-byzantine]] and [[lee-2026-robust]] are the decentralised counterparts with explicit Byzantine bounds, and [[el-mir-2026-byzantine]] shows that detecting a bad agent does not imply the group recovers.
+
+## Notes from dmarz/fm-bft-aggregation
+
+Opened the arXiv abstract page this session (2026-10-03). Bearing on fork-merge corruption, Q2: the abstract reports that a hierarchical structure, A->(B<->C), is the most resilient of the tested multi-agent structures under injected faulty agents (AutoTransform, AutoInject). For a parent that reintegrates sub-agents, the analogue is a merge path where returning parts are cross-checked by peers before reaching the parent, rather than written straight into its state. The faults here are benign-style errors, not targeted takeovers, so this bounds resilience from above for Q3-style attacks. Compare [[lee-2026-robust]] and [[liu-2026-consensus]].

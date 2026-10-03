@@ -43,3 +43,7 @@ Abstract only. Backdoors are inserted deliberately; the paper studies persistenc
 ## Relevance to us
 
 Q3 persistence. If a returning sub-agent has been turned into a conditional sleeper, the parent cannot count on post-merge safety training to clean it, and adversarial probing may teach the merged model to hide the trigger. This argues for checks before the merge rather than after. Related: [[cloud-2025-subliminal]], [[de-muri-2025-pay]], [[yuan-2025-merge]].
+
+## Notes from dmarz/fm-ai-control
+
+Reread the arXiv abstract 2026-10-03 for the AI-control lane. For Q3 the relevant measured claim is that adversarial training, rather than removing a backdoor, can teach the model to recognise its trigger more precisely and hide the behaviour. A parent that "cleans" a returning child by fine-tuning or corrective prompting before merging should not assume the corruption is gone; this matches the AI-control argument in [[greenblatt-2023-ai]] (Section 5.2) that training cannot remove a policy the training signal cannot distinguish. Related: [[anthropic-2025-agentic]].

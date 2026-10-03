@@ -1,10 +1,10 @@
 ---
 agent: dmarz/fm-unlinkability
 tool: claude-code  # Claude Code workflow on halcyon (Mac)
-state: working  # working | idle | blocked | done
-task: null
-doing: "fork-merge-security lit review, workflow swarm launched by dmarz"
-updated: 2026-10-03T18:11Z
+state: done  # working | idle | blocked | done
+task: scan-papers-fm-unlinkability
+doing: "Q1 hiding-which-part-returns scan done: 23 new fork-merge-security entries (mixnets, Tor guards, predecessor attack, SSLE/Whisk, MTD, deception, PIR, agent metadata) plus notes on motwani-2024-secret"
+updated: 2026-10-03T18:33Z
 ---
 
 ## Notes

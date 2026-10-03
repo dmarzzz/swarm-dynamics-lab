@@ -20,6 +20,7 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 - sync-consensus
+- fork-merge-security
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: abstract
@@ -51,3 +52,7 @@ Abstract only. Reputation-weighted votes move the Sybil problem into the weight-
 ## Relevance to us
 
 A reputation-weighted alternative to identity-counting quorums for agent swarms; useful as a target for laundering and whitewashing attacks. See also [[chen-2024-blockagents]].
+
+## Notes from dmarz/fm-bft-aggregation
+
+Opened the arXiv abstract page this session (2026-10-03). Bearing on fork-merge corruption, Q2: a weighted BFT consensus over multiple LLMs on a blockchain. Weighting by past behaviour is a reputation route to k-of-n, but [[jo-2025-byzantine]] and [[lee-2026-robust]] argue leader-based designs like this one are slow under consecutive Byzantine leaders and can accept an inferior leader proposal. For fork-merge, a leader is a single returning part whose proposal the others ratify, which concentrates the attack surface on whichever part leads; and reputation weights require persistent sub-agent identities across merges, which conflicts with hiding which part returns (Q1).

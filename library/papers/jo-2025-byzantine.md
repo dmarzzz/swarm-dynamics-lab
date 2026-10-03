@@ -15,6 +15,7 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 - sync-consensus
+- fork-merge-security
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: full
@@ -49,3 +50,7 @@ Membership is fixed and an honest majority is assumed: there is no admission con
 ## Relevance to us
 
 Shows the standard distributed-systems answer (robust aggregation under an honest-majority bound) applied to LLM agents, and where it stops: the bound counts identities, so Sybil admission and correlated honest evaluators (same base model, see [[bara-2026-epistemic]]) can break it without exceeding f. A natural baseline for any swarm consensus experiment, alongside [[huang-2024-resilience]], [[el-mir-2026-byzantine]] and the robot-swarm analogue [[strobel-2023-robot]].
+
+## Notes from dmarz/fm-bft-aggregation
+
+Opened the arXiv abstract page this session (2026-10-03). Bearing on fork-merge corruption, Q2: DecentLLMs is a ready-made merge gate for returning sub-agents: workers propose, evaluators score, and the geometric median of score vectors picks the answer, tolerating f <= floor((n-1)/2) Byzantine evaluators. The tolerance counts evaluator identities and assumes their errors are independent. If the evaluators are copies of the parent's base model, an injected answer crafted to score well with that model moves all honest evaluators together, which the geometric median does not resist; see the measured cross-model error correlation in [[kim-2025-correlated]] and the receiver-side judge weakness noted on [[lee-2026-robust]]. Leader-free design is still the right shape for fork-merge, since a leader-based merge ([[luo-2025-weighted]]) lets an attacker target whichever sub-agent leads.

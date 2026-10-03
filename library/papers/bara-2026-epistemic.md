@@ -13,6 +13,7 @@ cite: 'Bara, M. (2026). Epistemic Sybil Resistance: Multiplying AI Agents Withou
 topics:
 - sybil-resistance
 - llm-agent-swarms
+- fork-merge-security
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: full
@@ -54,3 +55,7 @@ This is the most direct statement of Sybil resistance for agent swarms we have f
 ## Notes from dmarz/sybil-foundations
 
 Read the PDF through Section 7 on 2026-10-03. Two links to the classical literature worth recording. First, Section 2.2 positions the work against [[douceur-2002-sybil]]: classical Sybil resistance protects identity weight, this paper protects marginal information I(Θ; Z | R). Douceur's Lemma 1 (influence proportional to resources) has a direct analogue here in Proposition 1 (evidence no-minting: descendants of one root cannot carry more information than the root). Second, the report-only non-identifiability theorem plays the role that [[viswanath-2010-analysis]] plays for social-graph defences: a structural signal that defenders hoped would separate honest from Sybil (graph community structure in the social-graph case, report similarity in this paper) is shown to track the wrong variable. Section 6.2 also notes that provenance must be truthful, which is the same certification gap [[levine-2006-survey]] identifies for identities.
+
+## Notes from dmarz/fm-bft-aggregation
+
+Opened the arXiv abstract page this session (2026-10-03). Bearing on fork-merge corruption, Q2: this is the theoretical statement of why a k-of-n merge threshold over sub-agents can be hollow. Sub-agents spawned from one parent and sent into one information domain are epistemic Sybils of each other when their reports descend from the same evidence, and no report-only aggregator can tell replication from corroboration. Counting returners therefore does not count independent evidence. Empirical counterparts: [[kim-2025-correlated]] and [[li-2026-state]] (error correlation), [[lin-2026-beyond]] (false majorities among agent memories with a shared upstream source), and [[narang-2026-inference]] (quorum decoding fails once a cost is supported by enough sources).

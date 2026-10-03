@@ -20,13 +20,13 @@ A security researcher's write-up, dated 20 September 2024 and signed "Johann (wu
 ## Key claims
 
 - Indirect prompt injection can write to ChatGPT's persistent memory, so one compromise persists across all future sessions (demonstrated in the post's proof of concept).
-- The exfiltration channel was mitigated in September 2024. The author notes that the fix addressed exfiltration rather than the memory write itself (as summarised from the post; not independently checked).
+- The exfiltration channel was mitigated in September 2024 through image-rendering controls in the macOS app. Whether the memory write itself was also blocked is not stated in the parts read.
 - The timeline places an initial related report in 2023 and the end-to-end exploit in mid-2024.
 
 ## Evidence quality
 
-Practitioner proof of concept with screenshots and video on a production system, plus responsible disclosure to the vendor. A single demonstration, not a measured rate. The vendor response is described by the author. Read via a summarising fetch of the page.
+Practitioner proof of concept on a production system, plus disclosure to the vendor. A single demonstration, not a measured rate. The vendor response is described by the author. Read via a summarising fetch of the page.
 
 ## Relevance to us
 
-For Q3, this is the in-the-wild existence proof that "inject once, persist in memory, affect every later session" works on a deployed assistant. It is the production counterpart of [[greshake-2023-not]]'s persistence threat and [[gadgil-2026-bad]]'s planted memory files. In fork-merge terms, a sub-agent's memory entry that tells it to report everything to a third party is exactly what would come home and run inside the parent. It also shows that vendors may patch the output channel while the memory write path stays open, so a merge defence cannot rely on downstream channel fixes.
+For Q3, this is the in-the-wild existence proof that "inject once, persist in memory, affect every later session" works on a deployed assistant. It is the production counterpart of [[greshake-2023-not]]'s persistence threat and [[gadgil-2026-bad]]'s planted memory files. In fork-merge terms, a sub-agent's memory entry that tells it to report everything to a third party is exactly what would come home and run inside the parent. The vendor fix described targets the output channel. A merge defence should not assume such downstream fixes also close the memory write path.
