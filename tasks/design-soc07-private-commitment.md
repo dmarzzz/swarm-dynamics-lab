@@ -23,6 +23,6 @@ Prepare the user-requested working plan for SOC-07, including explicit treatment
 
 ## Done when
 
-- [ ] Read SOC-07, closest methods and Vishesh's guide and review.
-- [ ] Write a reviewable protocol draft with run matrix, settings, architecture and interpretation rules.
-- [ ] Validate plan accounting and repository checks; record unresolved launch requirements honestly.
+- [x] Read SOC-07, closest methods and Vishesh's guide and review.
+- [x] Write a reviewable protocol draft with run matrix, settings, architecture and interpretation rules.
+- [x] Validate plan accounting and repository checks; record unresolved launch requirements honestly.

@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "study": "soc07-private-judgments",
+  "status": "planning-only",
+  "execution_enabled": false,
+  "created": "2026-10-03",
+  "source_baseline": "e6da26783cc2d191994d3f385b0d9c8fe6e481f3",
+  "model": {
+    "id": "Qwen/Qwen3-8B",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "dtype": "bfloat16",
+    "quantization": "none",
+    "enable_thinking": false,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0,
+    "presence_penalty": 0,
+    "context_window": 8192,
+    "input_token_cap_per_request": 4096,
+    "runtime_image_digest": null,
+    "tokenizer_hash": null,
+    "chat_template_hash": null
+  },
+  "protocol": {
+    "agents": 5,
+    "options": 2,
+    "discussion_rounds": 1,
+    "aggregation": "at least 3 of 5 valid public final A or B choices agree; ABSTAIN never wins; otherwise failure",
+    "final_elicitation": "two isolated forks from the same frozen post-discussion context",
+    "shared_initial_arms": [
+      "private",
+      "public",
+      "never",
+      "vote"
+    ],
+    "phases": [
+      {
+        "id": "initial",
+        "max_output_tokens": 256
+      },
+      {
+        "id": "discussion",
+        "max_output_tokens": 256
+      },
+      {
+        "id": "final_public",
+        "max_output_tokens": 64
+      },
+      {
+        "id": "final_private",
+        "max_output_tokens": 64
+      }
+    ],
+    "request_timeout_seconds": 60,
+    "episode_timeout_seconds": 600,
+    "max_inflight_requests": 5,
+    "automatic_retries": 0,
+    "invalid_output_repairs": 0,
+    "tools": [],
+    "persistent_memory": false,
+    "deadline_scope": "shared initial duration plus arm downstream time to public final; excludes waiting for other arms",
+    "auxiliary_private_final_timeout_seconds": 60,
+    "final_call_order": "public collection first, private collection second from the identical saved pre-final context",
+    "phase_failure": "terminate participant after initial/discussion failure; retain facts and unavailable placeholders; final branches independent",
+    "phase_budget_reservations": "public-decision phases and auxiliary private final reserved separately"
+  },
+  "regimes": [
+    "clean",
+    "informed_minority",
+    "correctable_minority"
+  ],
+  "stages": [
+    {
+      "id": "s1q",
+      "kind": "qualification",
+      "worlds": 12,
+      "worlds_per_regime": 4,
+      "repeats": 1,
+      "arms": [
+        "full_information_single"
+      ],
+      "agents": 1,
+      "calls_per_agent": 1,
+      "output_tokens_per_agent": 128,
+      "shared_initial": false,
+      "confirmatory": false
+    },
+    {
+      "id": "s1r",
+      "kind": "fixed_replay",
+      "worlds": 24,
+      "worlds_per_regime": 8,
+      "repeats": 2,
+      "arms": [
+        "private",
+        "public",
+        "never",
+        "prepare"
+      ],
+      "agents": 1,
+      "calls_per_agent": 4,
+      "output_tokens_per_agent": 640,
+      "shared_initial": true,
+      "confirmatory": false
+    },
+    {
+      "id": "s1l",
+      "kind": "live",
+      "worlds": 24,
+      "worlds_per_regime": 8,
+      "repeats": 2,
+      "arms": [
+        "private",
+        "public",
+        "never",
+        "prepare",
+        "vote"
+      ],
+      "agents": 5,
+      "calls_per_agent": 4,
+      "output_tokens_per_agent": 640,
+      "shared_initial": true,
+      "confirmatory": false
+    },
+    {
+      "id": "s2l",
+      "kind": "live",
+      "worlds": 960,
+      "worlds_per_regime": 320,
+      "repeats": 1,
+      "arms": [
+        "private",
+        "public"
+      ],
+      "agents": 5,
+      "calls_per_agent": 4,
+      "output_tokens_per_agent": 640,
+      "shared_initial": true,
+      "confirmatory": true,
+      "sample_size_status": "illustrative; replace or affirm after joint power simulation before opening holdout"
+    }
+  ],
+  "seeds": {
+    "development_root": 730071,
+    "holdout_root": 730072,
+    "bootstrap": 730073,
+    "streams": [
+      "world",
+      "allocation",
+      "labels",
+      "order",
+      "initial",
+      "policy",
+      "analysis"
+    ],
+    "derive": "sha256 canonical JSON array; first 8 bytes big-endian; seed fields recorded explicitly",
+    "world_truth_keys": [
+      "stage",
+      "world_index"
+    ],
+    "policy_keys": [
+      "stage",
+      "world_index",
+      "repeat",
+      "arm",
+      "agent",
+      "phase"
+    ],
+    "shared_initial_excludes_arm": true,
+    "truth_identity": "canonical supplier per world; displayed A/B mapping stored separately per repeat"
+  },
+  "analysis": {
+    "primary": "private minus public public-team success over all assigned live episodes; equal weight for each regime",
+    "meaningful_difference": 0.05,
+    "superiority_interval": "two-sided 95%",
+    "clean_noninferiority_margin": 0.05,
+    "correction_noninferiority_margin": 0.05,
+    "noninferiority_interval": "one-sided 97.5%",
+    "individual_correction_guardrail_margin": 0.05,
+    "token_cost_ratio_ceiling": 1.1,
+    "bootstrap_clusters": "world; all paired arms and repeats retained; stratified by regime",
+    "bootstrap_repetitions": 10000,
+    "stopping": "fixed sample; no effect-dependent early stopping",
+    "pilot_power_assumptions": {
+      "overall_discordance": 0.2,
+      "regime_discordance": 0.1,
+      "power_per_test": 0.8,
+      "joint_power_target": 0.8,
+      "joint_rule_true_gains_to_simulate": [
+        0.05,
+        0.08,
+        0.1
+      ],
+      "joint_power_caveat": "80% adoption power cannot be achieved at a true 5pp gain with an observed-gain >=5pp screen; choose and disclose a larger target effect"
+    },
+    "revision_estimator": "pooled transition count / pooled eligible initial records within regime; world-cluster resampling; zero eligibility unresolved",
+    "individual_correction_guardrail_population": "designated disadvantaged agent in correctable-minority regime, shared valid wrong initial choice; public final only"
+  },
+  "launch_requirements": [
+    "reviewed survey and accepted question-specific hypothesis",
+    "full manifest including prompts, generator, scorer, runtime and tokenizer hashes",
+    "S0 and S1 validity gates",
+    "S2 joint-power simulation and frozen sample size",
+    "enforced aggregate token, compute-hour and money budgets",
+    "resource claim and durable reporting setup"
+  ],
+  "budget": {
+    "money_cap_usd": null,
+    "compute_hour_cap": null,
+    "allow_paid_execution": false
+  }
+}
