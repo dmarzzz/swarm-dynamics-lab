@@ -3,15 +3,17 @@ id: scan-papers-sd-onchain
 type: task
 title: 'Catalogue the papers: agent and bot swarms on blockchains'
 kind: scan
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/sd-onchain
 for: null
 created: '2026-10-03'
 created_by: dmarz/sd
 depends_on: []
 topics:
 - swarm-detection
+claimed_at: 2026-10-03T18:20Z
+updated: 2026-10-03T18:20Z
 ---
 
 ## Goal
