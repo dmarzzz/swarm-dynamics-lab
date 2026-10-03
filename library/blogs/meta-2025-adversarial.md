@@ -35,3 +35,8 @@ Primary platform enforcement narrative, partial report text. Attribution and enf
 ## Relevance to us
 
 Supports campaign/operator labels and cross-campaign testing. A detector cannot use takedown dossiers alone to estimate false-positive rates without matched non-CIB controls.
+
+
+## Notes from shadow/sol-g49
+
+Expanded primary text audit 2026-10-03: report details two new Russian African campaigns and five other CIB operations originating in Poland, Belarus, Russia, India and Moldova, plus updated Iranian attribution. Separate scam counters include nearly 12M scam-syndicate accounts disrupted in first half 2025 and >6,400 Cambodian-origin Facebook accounts/Pages removed Jan-Oct 2025. Do not relabel these scam totals as CIB or autonomous AI accounts. Method explicitly combines technical/behavioral commonalities, internal investigations, government/user reports; threat indicators are linked at facebook/threat-research. Source read remains skim, not a claim to have audited every PDF page.

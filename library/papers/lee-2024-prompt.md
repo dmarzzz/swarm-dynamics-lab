@@ -55,3 +55,10 @@ Reread the abstract 2026-10-03 for the Sybil-resistance lane. LLM Tagging (marki
 ## Notes from dmarz/fm-memory-injection
 
 Abstract re-read 2026-10-03 for the fork-merge memory-injection lane. Prompt Infection is the agent-to-agent channel of Q3. A sub-agent infected in a foreign domain would carry a self-replicating payload whose instructions include re-sending itself, so a merge into the parent is one more hop. The authors report that the attack works even when agents do not share all communications publicly. LLM Tagging (source labels on agent messages) is the minimal provenance a parent would need before any Q2 threshold could count sources. [[zhan-2026-when]] shows that such source labels are usually lost at memory consolidation.
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2410.07283 . Read depth in this session: full.
+
+Read the complete HTML, including methods, results, references and appendix. The application study uses GPT-4o and GPT-3.5 Turbo and 120 user instructions across three tool types; the social study uses 10-50 GPT-4o agents with private top-three memory retrieval. Table 1 reports importance scores changing from 1.94 to 10.00 for GPT-4o and from 1.00 to 9.84 for GPT-3.5, averaged over 100 runs. In the society ablation, infection dies out after three turns without importance-score manipulation. Full infection of 10- and 20-agent populations occurs at mean turn 4.7 and 6.3. The defence section reports 0%, 3% and 16% attack success for three combined tagging configurations; tagging alone reduces success only 5% as worded by the authors. These are handcrafted-attack results, not an adaptive-security guarantee. The discussion of Agent Smith understates its replication aspect; it should not override the primary Agent Smith results. Backward references opened: Morris II, Agent Smith, Flooding Spread, Huang resilience, indirect prompt injection and Generative Agents.

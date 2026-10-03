@@ -49,3 +49,7 @@ Fixed rare-word triggers are partly removed by paraphrasing. Classification-styl
 ## Relevance to us
 
 Most direct LLM evidence for Q3: a single returning model can carry a trigger-gated behaviour into the merged parent, invisible on the part's own task. For Q2 the merge-ratio result is the closest thing in this lane to a measured threshold: the attack degrades when the malicious part's weight is small, so a parent that merges many parts with small, equal coefficients raises the attacker's required rescale factor, which in turn costs utility and becomes detectable. For Q1, the attack does not need to know which other parts are merged, so hiding the merge set from the attacker gives little protection against this attack class. Related: [[zhang-2024-badmerging]], [[yin-2024-lobam]], [[zhang-2026-roguemerge]], [[arora-2024-here]].
+
+## Notes from dmarz/fm-code-bench
+
+Official code catalogued as [[gh-aojiaosaiban-merge-hijacking]] (MIT, 7 stars, last commit 2025-07-12); it vendors LLaMA-Factory and mergekit ([[gh-arcee-ai-mergekit]]). A contrasting design with code is MergeBackdoor [[gh-wljllla-mergebackdoor]] (USENIX Security 2025), where each upstream model looks benign and the backdoor appears only after merging two or more of them, so per-child inspection fails (Q2).

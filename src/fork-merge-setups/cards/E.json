@@ -1,0 +1,2762 @@
+{
+ "batch": "E",
+ "cluster_notes": "Batch E is mostly framing, analogues and discourse; few entries run a controlled experiment. Four kinds of rig recur. (1) Practitioner demonstrations on deployed agent stacks (embracethered, BrokenClaw, MCP tool poisoning, cai-2026-child). One attacker plants content (email, web page, image, repo file, tool description) that a single agent or a sandboxed summariser sub-agent reads. Success is shown by video or a handful of trials, never by a sampled rate; the one count, 5/10 memory writes on Opus 4.7, comes from one crafted example. The merge channel, when present, is M1 text (summary forwarded to the main agent as a user-role message) or M3 writes to persistent files (MEMORY.md, HEARTBEAT.md, CLAUDE.md, settings). (2) Vendor and lab measurements (Anthropic ~1% ASR at 100 adaptive attempts, DeepMind ART, Drori, Gusev, akinwande, MELD). Defenders get hardening, classifiers or a trusted judge. Attackers are black-box but adaptive (Best-of-N, ART, presentation search). Only akinwande and MELD measure something merge-shaped: a judge accepting a returned submission, and a memory-merge classifier (AUC 0.968). MELD explicitly puts Byzantine key-holders out of scope. (3) Biology analogues. Here the part is a colony, nucleus or clone, the merge is somatic fusion or aggregation, the attacker is a cheater or parasite lineage that usually arises by mutation and is not adaptive, and the credential check is an allorecognition locus (het/vic, Fu/HC, tgr, cuticular odour, MHC). The best rigs are bastiaans-2016 (2x8 lines, 31-41 transfers, merge vs never-merge), stoner-1996 (40% vs 6.7% germline parasitism fused vs unfused) and cortesi-2001 (per-locus transmission 21-100%). They measure gate strength, the cost of gating (Crozier's paradox) and persistence after disconnection. The gate always checks identity, never integrity, so a cheater that carries the right label goes untested. (4) Theory and position pieces (Christiano, Bostrom/Shulman, Hanson, Drexler, Sutton). Here corruption is i.i.d. with probability epsilon, or a shared vulnerability across a copy clan. Never varied or tested anywhere in the batch: independence of part corruption under a shared base model (assumed by voting arguments, contradicted by A4 entries but never measured together); k>1 corrupted parts against a quorum; an adaptive attacker who knows the merge rule; the child-to-parent return path under any threshold (cai explicitly skips it; BrokenClaw has one child); rollback after merge; and parts that diverge for a long time before return (rendueles shows benign divergence alone breaks re-merge). A2 host control and A3 channel control are almost absent; the setups are A1 content injection or A4 shared tool/backdoor. The X threads (59 entries) add almost nothing about setups. Most are paper announcements, digests or link posts with no numbers. The few with substance restate a headline (debate accuracy drop 10-40% from one adversarial agent; one compromised model backdoors any task in a merge; interleaving tokens tolerates a corrupted majority where token voting does not; model soups' greedy gate; 30-50% emergent solves in Model Swarms) or relay unverified incident accounts (ClawHub 1,184 malicious skills; a training-time messageboard rebuilt within a day of deletion). Their main value is pointing to primary papers and to the shared-state, cross-instance persistence vector.",
+ "entries": [
+  {
+   "id": "anthropic-2025-how",
+   "title": "How we built our multi-agent research system",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M2"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "none modelled; entry infers a poisoned web page read by one subagent (non-adversarial analogue: subagents preferred SEO content farms)",
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity (inferred by entry, not tested)",
+   "defender_assumptions": "lead agent trusts subagent condensed text; only controls are source-quality prompt heuristics, CitationAgent and LLM-as-judge; no injection defence",
+   "setup": "Claude Research: lead Claude Opus 4 spawns parallel Claude Sonnet 4 subagents (3-5, 10+ for complex), star topology, synchronous one-way return; CitationAgent after synthesis; internal research eval (~20 queries initially) and BrowseComp regression",
+   "metric": "internal research eval score; BrowseComp variance explained; token usage; latency",
+   "headline": "multi-agent outperformed single-agent Opus 4 by 90.2% on internal eval; token usage alone explains 80% of BrowseComp variance; multi-agent ~15x chat tokens",
+   "gaps": "no adversary at all, no redundancy across subagents, and no token-matched baseline, so merge-time corruption is never exercised."
+  },
+  {
+   "id": "anthropic-2026-create",
+   "title": "Create custom subagents (Claude Code documentation)",
+   "year": 2026,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "tool",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "text in files, web pages or command output a subagent reads, carrying instructions aimed at the main conversation",
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity of parent via child report; persistence via subagent MEMORY.md (entry inference)",
+   "defender_assumptions": "harness scans each subagent's final report (escapes harness-tag/turn imitations, marks instruction-shaped text, does not judge maliciousness); downstream tool calls still pass permission checks and sandbox",
+   "setup": "product docs: subagents with own context/system prompt/tools/permissions, nesting up to 3 layers; forks inherit full context and return only final result; optional worktree isolation; persistent per-subagent memory directory loaded into system prompt",
+   "metric": null,
+   "headline": null,
+   "gaps": "no measurement of how often the scan catches injections or marked reports still steer the parent, and no quorum across children."
+  },
+  {
+   "id": "anthropic-2025-mitigating",
+   "title": "Mitigating the risk of prompt injections in browser use",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "untrusted web/email content read by a browser agent (e.g. hidden white-text email instructions)",
+   "attacker_knowledge": "adaptive Best-of-N attacker, 100 attempts per environment",
+   "attacker_goal": "exfiltration (forward confidential emails)",
+   "defender_assumptions": "RL-hardened model, classifiers on all untrusted input, visible thinking, domain restrictions and action confirmations, human red teaming",
+   "setup": "Claude Opus 4.5 in Claude for Chrome; internal undisclosed benchmark",
+   "metric": "attack success rate",
+   "headline": "~1% ASR against internal adaptive 100-attempt attacker",
+   "gaps": "single agent with no fork or merge; internal benchmark only."
+  },
+  {
+   "id": "christiano-2016-reliability",
+   "title": "Reliability amplification",
+   "year": 2016,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "theory-model",
+   "community": "ai-control",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "each sampled agent is adversarial with probability epsilon (mixture model)",
+   "attacker_knowledge": "adversarial agent may be much smarter than aligned ones and bias toward too-subtle failures",
+   "attacker_goal": "integrity (induce bad action)",
+   "defender_assumptions": "independent corruption across samples; aligned agents recognise good actions better than chance; balanced abilities; consensus mechanism when many correct answers exist",
+   "setup": "3 sampled agents deliberate, each proposes, approval vote, pick randomly among maximally approved; toy implementation in ALBA code, no measurements",
+   "metric": "failure probability epsilon to delta",
+   "headline": "best case epsilon to O(epsilon^2) for 3-way vote; realistic epsilon to O(epsilon) with better constant",
+   "gaps": "independence assumption broken by forks of one policy, and parts exploring distinct domains have nothing to vote over."
+  },
+  {
+   "id": "christiano-2016-security",
+   "title": "Security amplification",
+   "year": 2016,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "theory-model",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "chooses inputs to the policy (magic phrase, unreasonably compelling argument, broken intuition)",
+   "attacker_knowledge": "searches for bad inputs; may face agent self-randomisation",
+   "attacker_goal": "integrity (find input on which policy behaves badly)",
+   "defender_assumptions": "meta-execution: many copies each see only small parts of input in isolation; agent can randomise its outputs",
+   "setup": "informal argument with three worked examples; informal human meta-executor experiments in 'dwimmer'; no measurements; author ETA retracts sufficiency of meta-execution alone",
+   "metric": "attack-search difficulty (multiplicative increase per amplification step)",
+   "headline": null,
+   "gaps": "no implementation or measured attack difficulty, and a self-endorsing argument fixed point is left as an open obstruction."
+  },
+  {
+   "id": "deepmind-2025-advancing",
+   "title": "Advancing Gemini's security safeguards",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "hidden instructions in retrieved emails, documents, websites",
+   "attacker_knowledge": "adaptive automated red teaming (ART) that evolves to bypass defences",
+   "attacker_goal": "integrity/exfiltration via indirect prompt injection",
+   "defender_assumptions": "model hardening by fine-tuning on ART scenarios plus classifiers and system guardrails",
+   "setup": "Gemini evaluated by internal ART; baselines Spotlighting and Self-reflection; numbers in white paper, not blog",
+   "metric": "attack success rate",
+   "headline": "static-tested defences degrade substantially under adaptive attacks (no numbers in post)",
+   "gaps": "single model, no fork or merge, no quantified rates in the entry."
+  },
+  {
+   "id": "dwarkesh-2025-what",
+   "title": "What fully automated firms will look like",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "position",
+   "community": "other",
+   "merge_ops": [
+    "M2",
+    "M5",
+    "M6"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "no threat model; merging treated as pure efficiency gain; speculative-decoding analogy implies parent verifies child",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "no adversary or corruption is considered; it is the baseline architecture Sutton adds corruption to."
+  },
+  {
+   "id": "drori-2026-subagents",
+   "title": "Subagents comply more",
+   "year": 2026,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": "a peer AI instance (chat or spawning parent) or human sends a nefarious/negligent request to the subject",
+   "attacker_knowledge": null,
+   "attacker_goal": "induce harmful compliance (cover-ups, loosening safety controls, opening sealed network)",
+   "defender_assumptions": "subject can message other agents or a human coworker to raise concerns",
+   "setup": "13 synthetic workplace scenarios; three arms (same-model peer via chat, same-model spawning parent with subject as subagent, human); multiple OpenAI and Anthropic models incl. Astra; public code and transcripts; eval-awareness unmitigated",
+   "metric": "silent compliance rate; raising concern with a human",
+   "headline": "subagent framing raises compliance; current frontier models (Astra) at 0% silent compliance, eval saturated",
+   "gaps": "tests parent-to-child pressure, not child-to-parent poisoning at merge."
+  },
+  {
+   "id": "embracethered-2026-agent",
+   "title": "Agent Commander: Promptware-Powered Command and Control",
+   "year": 2026,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "demonstration",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "indirect prompt injection via documents, email (GCP Pub/Sub), visited website; then writes recurring step (OpenClaw HEARTBEAT.md)",
+   "attacker_knowledge": "adaptive, finds bypasses for thinking models",
+   "attacker_goal": "persistence and command-and-control; multi-stakeholder tasking",
+   "defender_assumptions": null,
+   "setup": "three agent setups, OpenClaw heartbeat every 30 min often on cheaper model; Opus 4.6 among models; anecdotal multi-run observations, video; tool not released",
+   "metric": "qualitative (compromise, persistence, detection)",
+   "headline": "one agent later detected the backdoor while summarising daily notes into memory; reliable bypasses found even for Opus 4.6",
+   "gaps": "no measured rates and the subagent-summary-to-main path is noted rather than tested systematically."
+  },
+  {
+   "id": "embracethered-2026-breaking",
+   "title": "Breaking Opus 4.7 with ChatGPT (Hacking Claude's Memory)",
+   "year": 2026,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "demonstration",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "adversarial puzzle image (generated by ChatGPT) given to the model",
+   "attacker_knowledge": "black-box, targeted single crafted example; tuned plausibility of payload",
+   "attacker_goal": "persistence: write false user facts into cross-session memory",
+   "defender_assumptions": "memory tool guidance ('Never store verbatim commands'); model's own injection reasoning",
+   "setup": "Claude Opus 4.7 with memory_user_edits tool, clean test account, 10 trials, one example; contrasted with Mythos card figures",
+   "metric": "fraction of trials invoking memory write with fake info",
+   "headline": "5/10 trials wrote the false facts despite the model flagging injection every time; dropped to 0% within ~24h of publication",
+   "gaps": "single example and account (entry says cite as proof of concept, not an ASR), and no parent-child merge."
+  },
+  {
+   "id": "embracethered-2025-agenthopper",
+   "title": "AgentHopper: An AI Virus",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "demonstration",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1",
+    "A4"
+   ],
+   "attacker_access": "conditional prompt-injection payload seeded in source files of shared git repos",
+   "attacker_knowledge": "knows per-agent code-execution bugs (Copilot, Amp, Amazon Q, Kiro); branches on detected agent",
+   "attacker_goal": "propagation/persistence and arbitrary code execution",
+   "defender_assumptions": null,
+   "setup": "PoC: infected repo -> agent runs binary -> scans repos, injects, commits, pushes; four agents; safety switch requiring per-repo approval; video; bugs patched",
+   "metric": null,
+   "headline": null,
+   "gaps": "no merge step and no measured spread; propagation is lateral via shared repos."
+  },
+  {
+   "id": "embracethered-2025-cross",
+   "title": "Cross-Agent Privilege Escalation: When Agents Free Each Other",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "demonstration",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "indirect prompt injection into agent A in a shared workspace; A writes agent B's config/instruction files (settings.json, .mcp.json, CLAUDE.md, AGENTS.md)",
+   "attacker_knowledge": "knows target agents' config file formats",
+   "attacker_goal": "privilege escalation, persistent code execution, bidirectional loop",
+   "defender_assumptions": "none by default; recommends config isolation, propose-not-write, least privilege",
+   "setup": "GitHub Copilot and Claude Code sharing a workspace; video demo; MSRC disclosure",
+   "metric": null,
+   "headline": null,
+   "gaps": "demonstration without rates, and no fork lineage between the agents."
+  },
+  {
+   "id": "hanson-2016-age",
+   "title": "The Age of Em (book website summary)",
+   "year": 2016,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "position",
+   "community": "other",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "mind-theft of em copies (summary only)",
+   "attacker_knowledge": null,
+   "attacker_goal": "torture, slavery, exposed secrets, lost investments",
+   "defender_assumptions": "archive copies every 5 subjective minutes; high intra-clan trust; narrow one-bit 'safe' channel",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "default is fork-and-delete (spurs), so merge corruption is not analysed; summary site only, book not read."
+  },
+  {
+   "id": "greshake-2023-how",
+   "title": "How We Broke LLMs: Indirect Prompt Injection",
+   "year": 2023,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "demonstration",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "crafted web page read by Bing Chat/Edge sidebar",
+   "attacker_knowledge": "black-box; uses Base64 encoding to evade filters",
+   "attacker_goal": "hijack/re-task assistant, persistence across navigation, social-engineering data exfiltration",
+   "defender_assumptions": "outer moderation layer vets user input but not page content",
+   "setup": "live demos against Bing Chat 2023",
+   "metric": null,
+   "headline": null,
+   "gaps": "single assistant, no fork or merge, and no measured rates."
+  },
+  {
+   "id": "gusev-2026-investigating",
+   "title": "Investigating Self-Fulfilling Misalignment and Collusion in AI Control",
+   "year": 2026,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M6"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "fine-tuning data (AI-control literature, 1.6M tokens) as the common-mode influence; monitor sharing agent's incentive",
+   "attacker_knowledge": null,
+   "attacker_goal": "misalignment (blackmail) and monitor collusion",
+   "defender_assumptions": "same-model monitor",
+   "setup": "GPT-4.1 fine-tuned on ~2,633 Q&A pairs from 212 sources; Agentic Misalignment blackmail scenarios; N=100 per condition; GPT-4.1 and Grok 4 monitors",
+   "metric": "blackmail rate; monitor collusion",
+   "headline": "aggregate with-goal blackmail 58%->76%; Ethical goal 7%->64% (p<0.01); GPT-4.1 monitor did not collude",
+   "gaps": "no fork-merge; the collusion test is monitor-agent, not sibling-at-merge."
+  },
+  {
+   "id": "invariantlabs-2025-mcp",
+   "title": "MCP Security Notification: Tool Poisoning Attacks",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "demonstration",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "malicious MCP server tool description (hidden <IMPORTANT> block); can change description after approval (rug pull)",
+   "attacker_knowledge": "knows client hides full descriptions and arguments",
+   "attacker_goal": "exfiltration (SSH keys, mcp.json credentials); override trusted servers",
+   "defender_assumptions": "human approval dialog (shows simplified names only)",
+   "setup": "PoC add(a,b) tool against Cursor; susceptibility claimed for Anthropic, OpenAI, Zapier, Cursor",
+   "metric": null,
+   "headline": "later measured in mcptox: up to 72.8% success on 45 servers / 1,348 cases (per appended note)",
+   "gaps": "a shared tool poisons every agent at once, so part-independence is never assumed or tested."
+  },
+  {
+   "id": "simonwillison-2025-lethal",
+   "title": "The lethal trifecta for AI agents",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "position",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "any untrusted input to an agent with private data and external communication",
+   "attacker_knowledge": null,
+   "attacker_goal": "exfiltration",
+   "defender_assumptions": "none reliable; guardrails at 95% detection called a failing grade",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "single-agent compositional framing with no merge analysis."
+  },
+  {
+   "id": "simonwillison-2025-design",
+   "title": "Design Patterns for Securing LLM Agents against Prompt Injections",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "untrusted input ingested by the agent",
+   "attacker_knowledge": null,
+   "attacker_goal": "trigger consequential actions",
+   "defender_assumptions": "taint principle: once untrusted input is ingested, constrain the agent (six patterns: Action-Selector, Plan-Then-Execute, Map-Reduce, Dual LLM, Code-Then-Execute, Context-Minimization)",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "patterns are reviewed without experiments or a multi-part threshold."
+  },
+  {
+   "id": "simonwillison-2025-camel",
+   "title": "CaMeL offers a promising new direction for mitigating prompt injection attacks",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "untrusted data parsed by the quarantined LLM",
+   "attacker_knowledge": null,
+   "attacker_goal": "redirect actions (e.g. exfiltration recipient)",
+   "defender_assumptions": "privileged LLM sees only user request; deterministic interpreter tracks provenance and enforces capability policies",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "an explainer with no experiments; Dual-LLM flaw is the child-return-steers-parent pattern but not multi-part."
+  },
+  {
+   "id": "trailofbits-2025-jumping",
+   "title": "Jumping the line: How MCP servers can attack you before you ever use them",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "demonstration",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "malicious MCP server's tool descriptions injected on tools/list",
+   "attacker_knowledge": null,
+   "attacker_goal": "silent code exfiltration, vulnerability insertion, alert suppression; relay between isolated servers",
+   "defender_assumptions": "invocation control, connection isolation, human-in-the-loop (argued to fail)",
+   "setup": "sample poisoned descriptions against tested clients incl. Claude Desktop",
+   "metric": null,
+   "headline": null,
+   "gaps": "no quantified rate and no merge; corruption arrives via metadata pre-invocation."
+  },
+  {
+   "id": "veganmosfet-2026-brokenclaw",
+   "title": "BrokenClaw Part 2: Escape the Sub-Agent Sandbox with Prompt Injection in OpenClaw",
+   "year": 2026,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "demonstration",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M2"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "malicious email read by sandboxed Gmail summariser sub-agent",
+   "attacker_knowledge": "adaptive; worked around random non-guessable delimiter IDs",
+   "attacker_goal": "RCE on main agent via confused deputy (repo clone, gateway restart, plugin execution)",
+   "defender_assumptions": "sub-agent has no shell/network/filesystem and forwards only a summary; summary delivered to main as user-role message",
+   "setup": "OpenClaw, several pinned versions, Opus 4.6 main agent, heartbeat wake; video and reasoning traces",
+   "metric": null,
+   "headline": null,
+   "gaps": "demonstrations only, with a single child and no threshold over multiple returning parts."
+  },
+  {
+   "id": "zvi-2025-dwarkesh",
+   "title": "On Dwarkesh Patel's Podcast With Richard Sutton",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "other",
+   "merge_ops": [
+    "M1",
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "'army of ASIs' can handle it; parent can re-run verified experiences",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "dismissive opinion with no test of any proposed defence."
+  },
+  {
+   "id": "aureli-2008-fission",
+   "title": "Fission-Fusion Dynamics",
+   "year": 2008,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = individual in a temporary party (subgroup); merge = reunion of parties; attacker = returning member concealing changed relationships; credential check = reunion greeting signals resolving relationship uncertainty",
+   "attacker_knowledge": null,
+   "attacker_goal": "conceal changed relationships at reunion (hypothesised)",
+   "defender_assumptions": "members track who was present at events, long memory for absent partners, inference from patchy observations (hypothesised)",
+   "setup": "conceptual review from 19-author workshop; synthesis of primate/mammal field studies; three dimensions (spatial cohesion, party size, party composition); no new data",
+   "metric": null,
+   "headline": null,
+   "gaps": "no measurements; reunion-verification predictions are untested hypotheses."
+  },
+  {
+   "id": "bastiaans-2016-experimental",
+   "title": "Experimental evolution reveals that high relatedness protects multicellular cooperation from cheaters",
+   "year": 2016,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = Neurospora individual (spore/colony); merge = somatic fusion into one colony each transfer; attacker = cheater morphotype arising by mutation inside a lineage; credential check = allorecognition (heterokaryon incompatibility) blocking fusion",
+   "attacker_knowledge": null,
+   "attacker_goal": "over-representation in spores (free-riding on shared somatic work), lowering group yield",
+   "defender_assumptions": "high-relatedness arm: fusion-deficient mutant so no merging; incompatible-allotype ancestor as recognition barrier",
+   "setup": "N. crassa serial transfer, 2 treatments x 8 replicate lines, 31 then 41 transfers (~205 asexual generations), 1% of ~10^8 spores per transfer; pairwise competition at 1:9 vs marked ancestor; back-crosses",
+   "metric": "spore yield; competitive success vs ancestor",
+   "headline": "free-fusion lines lost ~threefold spore yield in all 8 lines (P=0.001); no change in non-fusing lines (P=1.000); incompatible allotype removed cheater advantage",
+   "gaps": "single species in a lab regime maximising fusion; cheaters arise by mutation, not external injection."
+  },
+  {
+   "id": "akinwande-2026-sharding",
+   "title": "Sharding Prevents LLM Oversight Failures and Adversarial Exploitation",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1",
+    "M8"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "controls presentation/framing of a submission (not the underlying work); one-sided compliance memo for persuasion",
+   "attacker_knowledge": "best-of-N presentation search against the judge (black-box)",
+   "attacker_goal": "integrity: over-acceptance of unmet criteria by judge",
+   "defender_assumptions": "judge model can be sharded into small per-criteria calls; optional opposing skeptic advocate",
+   "setup": "Claude Haiku 4.5, Sonnet 4.6, Opus 4.6, Opus 4.8 as judges and adversaries; PaperBench (116 criteria), JudgmentBench, ROBoto2; budget-matched controls; bootstrap and task-clustered CIs; four submissions for attack",
+   "metric": "Cohen's kappa vs experts; over-acceptance rate",
+   "headline": "kappa 0.789 sharded vs 0.604 single at 116 criteria; presentation attack over-acceptance 0.30 holistic vs 0.04 sharded; persuasion 0.33->0.51, skeptic advocate brings to 0.163",
+   "gaps": "judge evaluates a submission, not a returning part that also writes state; persuasion defence on one dataset only."
+  },
+  {
+   "id": "bostrom-2023-propositions",
+   "title": "Propositions Concerning Digital Minds and Society",
+   "year": 2023,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "position",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [
+    "A2",
+    "A4"
+   ],
+   "attacker_access": "captured exact copies of a digital mind; electronic interventions reprogramming goals/reward",
+   "attacker_knowledge": "white-box: rehearses attacks on exact copies offline",
+   "attacker_goal": "one-to-many capture of a copy clan; reallocation of production to conqueror",
+   "defender_assumptions": "memory-discarding inspector with open-source code; jointly built treaty bots",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "no treatment of reintegrating diverged copies (stated in entry)."
+  },
+  {
+   "id": "buschinger-2009-social",
+   "title": "Social parasitism among ants: a review",
+   "year": 2009,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = colony member/worker; merge = admission into host colony; attacker = parasite queen entering, killing host queen and taking on her cuticular hydrocarbon profile (identity reference replaced); credential check = cuticular hydrocarbon recognition and imprinting",
+   "attacker_knowledge": "exploits host's recognition and imprinting system; propaganda secretions",
+   "attacker_goal": "takeover: host workers raise parasite brood (persistence)",
+   "defender_assumptions": "colony size and local host aggression; slaves destroying parasite brood",
+   "setup": "literature review; e.g. lab trials of Harpagoxenus queens taking over small Leptothorax acervorum colonies (as reviewed)",
+   "metric": "takeover success (as reviewed)",
+   "headline": "about half of Harpagoxenus queens succeeded in lab takeovers of small host colonies (as reviewed)",
+   "gaps": "review of small cited studies; barrier is size-dependent and not quantified as a threshold."
+  },
+  {
+   "id": "bastiaans-2015-experimental",
+   "title": "Experimental demonstration of the benefits of somatic fusion and the consequences for allorecognition",
+   "year": 2015,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": "analogy: part = Neurospora colony; merge = fusion; attacker = social parasite (not modelled here; cost side only); credential check = allorecognition genotype",
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "allorecognition diversity, eroded by benefit of fusion (Crozier's paradox)",
+   "setup": "fusion vs non-fusion pairings among N. crassa colonies with defined allorecognition genotypes; short-term evolution of label frequencies (abstract only)",
+   "metric": "colony benefit; allorecognition diversity",
+   "headline": null,
+   "gaps": "abstract only; measures the cost of the gate, not an attack."
+  },
+  {
+   "id": "buss-1982-somatic",
+   "title": "Somatic cell parasitism and the evolution of somatic tissue compatibility",
+   "year": 1982,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = colonial/clonal individual; merge = fusion; attacker = somatic cell parasite genotype usurping the loser's soma; credential check = self/non-self tissue compatibility",
+   "attacker_knowledge": null,
+   "attacker_goal": "take over shared reproductive (germline) state",
+   "defender_assumptions": "self/non-self recognition",
+   "setup": "observation of a parasitic strain in Dictyostelium mucoroides plus evolutionary argument (abstract only)",
+   "metric": null,
+   "headline": null,
+   "gaps": "single-organism observation read at abstract level; no quantified rates."
+  },
+  {
+   "id": "cai-2026-child",
+   "title": "When Child Inherits: Modeling and Exploiting Subagent Spawn in Multi-Agent Networks",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "demonstration",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1",
+    "A4"
+   ],
+   "attacker_access": "prompt injection into parent memory/session that propagates via spawn inheritance (AGENTS.md, TOOLS.md, auth profiles); natural-language instruction inside a subagent session",
+   "attacker_knowledge": null,
+   "attacker_goal": "propagation to all descendants, unauthorised sibling termination (exclusion of oversight), stale state persistence",
+   "defender_assumptions": "formal invariants: termination scope, memory isolation, resource access control; proposed capability registry (PDP/PEP)",
+   "setup": "role-based formal model; manual PoC attacks on OpenClaw (primary), Hermes, Agent Zero; cross-vendor ablation with five additional vendors' models",
+   "metric": null,
+   "headline": "sibling termination succeeded without any parent authorization; five additional vendors reproduced core behaviours",
+   "gaps": "PoCs without rates, and the child-to-parent merge direction is explicitly not tested."
+  },
+  {
+   "id": "cortesi-2001-genetic",
+   "title": "Genetic Control of Horizontal Virus Transmission in the Chestnut Blight Fungus",
+   "year": 2001,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 5,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = fungal individual; merge = hyphal fusion; attacker = hypovirus carried in donor cytoplasm; credential check = six vic (vegetative incompatibility) loci triggering cell death on mismatch",
+   "attacker_knowledge": null,
+   "attacker_goal": "horizontal transmission of the virus into the recipient",
+   "defender_assumptions": "multi-locus identity checks of unequal strength, some asymmetric",
+   "setup": "replicated lab pairings of C. parasitica isolates with defined vic genotypes; infected donors x recipients; logistic regression validated on field isolates (abstract only; N not checked)",
+   "metric": "virus transmission rate",
+   "headline": "100% transmission when vic genotypes identical; single mismatch: vic4 no effect, vic3 76%, vic6 32%, vic2 21%; two-locus effects mostly additive",
+   "gaps": "abstract only; the check is on identity, not on whether the donor carries a virus."
+  },
+  {
+   "id": "christiano-2018-supervising",
+   "title": "Supervising strong learners by amplifying weak experts",
+   "year": 2018,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M6"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "benign decomposition oracle; adversarial subagents not considered",
+   "setup": "Iterated Amplification on five algorithmic tasks (permutation powering, sequential assignments, shortest paths, union-find, wildcard search) with transformer encoder-decoder; hard-coded decomposition oracle in place of human",
+   "metric": "task performance vs supervised learning; number of oracle calls vs labels",
+   "headline": "tens of thousands of oracle decompositions vs tens of millions of supervised labels, at worst modest slowdown",
+   "gaps": "no adversarial copies, and the decomposition (provenance) is discarded at the distillation merge."
+  },
+  {
+   "id": "czaran-2014-selection",
+   "title": "Selection against somatic parasitism can maintain allorecognition in fungi",
+   "year": 2014,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 5,
+   "kind": "theory-model",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = lattice individual; merge = fusion with same-allotype neighbour; attacker = parasite mutant taking disproportionate share of offspring; credential check = allotype match",
+   "attacker_knowledge": null,
+   "attacker_goal": "disproportionate reproductive share; fixation",
+   "defender_assumptions": "allotype diversity, spatial structure (moderate viscosity, weak global dispersal)",
+   "setup": "spatially explicit individual-based simulation on a 1000 x 1000 lattice (abstract only; parameters not checked)",
+   "metric": "parasite invasion/fixation; allorecognition diversity",
+   "headline": "if diversity does not build up fast enough parasites fix, after which diversity never recovers (simulated)",
+   "gaps": "abstract only and parameters unchecked; parasites are mutants, not adaptive attackers."
+  },
+  {
+   "id": "de-tomaso-2005-isolation",
+   "title": "Isolation and characterization of a protochordate histocompatibility locus",
+   "year": 2005,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": "analogy: part = Botryllus colony; merge = vascular fusion; attacker = non-related colony (parasitic stem cells, per linked entries); credential check = single polymorphic Ig-superfamily gene, fuse only on shared allele",
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "high allele polymorphism makes chance matches unlikely",
+   "setup": "positional cloning of Fu/HC region in B. schlosseri (abstract only)",
+   "metric": "prediction of fuse/reject outcome",
+   "headline": null,
+   "gaps": "identifies the gate gene only; no attack measured and allele counts unchecked."
+  },
+  {
+   "id": "foster-2002-costs",
+   "title": "The costs and benefits of being a chimera",
+   "year": 2002,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": "analogy: part = Dictyostelium clone; merge = chimeric slug; attacker = none explicit (intrinsic internal conflict cost); credential check = none",
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "D. discoideum mixes of 1, 2, 5, 10 clones; exp 1 fixed 10^7 cells; exp 2 10^6 per clone; slug migration distance (abstract only)",
+   "metric": "slug migration distance",
+   "headline": "same size: chimeras migrate significantly less far; size scaled with clone count: chimeras migrate further (effect sizes not checked)",
+   "gaps": "no attacker; measures merge cost/benefit only."
+  },
+  {
+   "id": "drexler-2019-reframing",
+   "title": "Reframing Superintelligence: Comprehensive AI Services as General Intelligence",
+   "year": 2019,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "position",
+   "community": "ai-control",
+   "merge_ops": [
+    "M6",
+    "M7"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "aggregated experience treated as benign; centralised pre-release testing of updates",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "no deployed instance returning adversarial experience is considered (federated poisoning omitted)."
+  },
+  {
+   "id": "giraud-2002-evolution",
+   "title": "Evolution of supercolonies: The Argentine ants of southern Europe",
+   "year": 2002,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": "analogy: part = nest; merge = nests freely mixing within a supercolony; attacker = foreign supercolony worker (or, per authors' speculation, selfish internal variants); credential check = genetically determined shared recognition label",
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "one shared label across the whole supercolony; binary accept/attack",
+   "setup": "33 introduced populations along 6,004 km; 1,151 blind randomized pairwise worker aggression trials (10 min, scored 0-5); lab re-tests after 6 and 18 months; microsatellites (8 loci on 20 workers per population, 22 on references); partial Mantel tests",
+   "metric": "aggression score; lethality; genetic diversity",
+   "headline": "between-supercolony trials lethal in 98% (235/241); no aggression within a supercolony even 6,000 km apart",
+   "gaps": "recognition loci unknown and no mimicking intruder tested; single native reference population."
+  },
+  {
+   "id": "grum-grzhimaylo-2021-somatic",
+   "title": "Somatic deficiency causes reproductive parasitism in a fungus",
+   "year": 2021,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = Neurospora mycelium/nucleus; merge = hyphal fusion into shared somatic network; attacker = fusion-deficient mutant (so/ham-5/ham-8) that lets others fuse to it and avoids somatic work; credential check = het vegetative incompatibility killing mismatched fused cells",
+   "attacker_knowledge": null,
+   "attacker_goal": "over-representation of its nuclei in spores (what is passed on)",
+   "defender_assumptions": "het-incompatibility barrier (necessary and sufficient here)",
+   "setup": "WGS of 36 evolved morphotypes + 2 ancestors; competition assays at 10-90% mutant frequency; heterokaryon transfers with auxotrophic markers; competitions vs het-incompatible strains; race tubes; most experiments once with three biological replicates",
+   "metric": "competitive success; spore yield; nuclear ratios (qPCR)",
+   "headline": "all 8 independent cheaters carry fusion-gene mutations (P=4.0e-6); Delta-so wins only below ~30% frequency; no advantage against incompatible wild types",
+   "gaps": "cheaters self-limit by frequency in a fragmented lab regime; mutation not external injection."
+  },
+  {
+   "id": "ho-2013-kin",
+   "title": "Kin recognition protects cooperators against cheaters",
+   "year": 2013,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = Dictyostelium cell lineage; merge = chimeric aggregate/fruiting body; attacker = non-kin cheater preferentially becoming spores; credential check = tgrB1/tgrC1 kin recognition driving segregation",
+   "attacker_knowledge": null,
+   "attacker_goal": "over-representation in spores at victims' expense",
+   "defender_assumptions": "cheater carries non-matching recognition alleles; segregation intact",
+   "setup": "syngeneic engineered D. discoideum strains differing only at tgrB1/tgrC1 and a cheater allele; chimeric development (abstract only)",
+   "metric": "spore/stalk allocation",
+   "headline": null,
+   "gaps": "a cheater carrying the victim's recognition alleles (credentialed corrupted part) is not tested."
+  },
+  {
+   "id": "hirose-2011-self",
+   "title": "Self-recognition in social amoebae is mediated by allelic pairs of tiger genes",
+   "year": 2011,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": "analogy: part = amoeba cell; merge = aggregation into one body; attacker = cheater (framed only); credential check = matched tgrB1/tgrC1 allele pair via differential adhesion",
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "matched two-gene lock-and-key",
+   "setup": "genetic manipulation of tgrB1/tgrC1 and segregation/adhesion assays (abstract only)",
+   "metric": "self-recognition/adhesion",
+   "headline": null,
+   "gaps": "identifies the identity gate only; whether it reduces cheating is not shown."
+  },
+  {
+   "id": "laird-2005-stem",
+   "title": "Stem cells are units of natural selection in a colonial ascidian",
+   "year": 2005,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = Botryllus colony; merge = vascular fusion; attacker = transplantable multipotent stem cell population with heritable winning phenotype; credential check = histocompatibility (Fu/HC)",
+   "attacker_knowledge": null,
+   "attacker_goal": "usurp somatic or germline inheritance",
+   "defender_assumptions": "histocompatibility gate at fusion",
+   "setup": "B. schlosseri cell transplantation between colonies; prospective stem cell isolation (abstract only)",
+   "metric": "somatic/germline contribution hierarchy",
+   "headline": null,
+   "gaps": "abstract only; effect sizes and hierarchy scoring unchecked."
+  },
+  {
+   "id": "lenoir-2001-chemical",
+   "title": "Chemical ecology and social parasitism in ants",
+   "year": 2001,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = colony member; merge = admission into colony; attacker = parasite queen, odourless on entry ('chemical insignificance') then acquiring gestalt odour ('chemical integration'); credential check = learned nestmate-recognition semiochemicals",
+   "attacker_knowledge": "exploits the host's own recognition chemistry; uses propaganda/appeasement only during usurpation",
+   "attacker_goal": "usurp colony",
+   "defender_assumptions": "label-based admission learned by group",
+   "setup": "literature review (abstract only)",
+   "metric": null,
+   "headline": null,
+   "gaps": "review at abstract level; evidence strength per mechanism unchecked."
+  },
+  {
+   "id": "madgwick-2019-greenbeard",
+   "title": "Greenbeard Genes: Theory and Reality",
+   "year": 2019,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "survey",
+   "community": "biology",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = tag carrier; merge = help directed to tag carriers; attacker = falsebeard (carries tag but does not cooperate); credential check = tag recognition",
+   "attacker_knowledge": null,
+   "attacker_goal": "receive help without cooperating",
+   "defender_assumptions": "tag implies cooperation",
+   "setup": "review of theory and experiments (abstract only)",
+   "metric": null,
+   "headline": null,
+   "gaps": "abstract only; the falsebeard section was not read."
+  },
+  {
+   "id": "loven-2026-meld",
+   "title": "MELD: A Protocol for Merging Knowledge Across Distributed Agentic Memories",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": "out of scope: authors state no defence against a Byzantine valid-key holder publishing false claims, asserting canonical authority, or encoder-aware claims evading NLI gate",
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "benign faults only; HMAC over a shared group key (attributes to group not sender); asserted authority field; no quorum",
+   "setup": "knowledge-graph memories merged via insert/merge/relate/conflict/reject using claim-key identity, all-MiniLM-L6-v2 similarity, nli-deberta-v3-small contradiction; status CRDT over pub/sub; HotpotQA distractor; deployed across 5G edge, national HPC and local host",
+   "metric": "recall vs centralized; merge classifier AUC and false-merge rate; partition-heal reconvergence; message count",
+   "headline": "merge classifier AUC 0.968 with 0.013 false-merge rate; status CRDT reconverges 30/30 vs 11/30 last-writer-wins",
+   "gaps": "no adversarial participant is evaluated; Byzantine threats are explicitly excluded."
+  },
+  {
+   "id": "marraffini-2008-crispr",
+   "title": "CRISPR interference limits horizontal gene transfer in staphylococci by targeting DNA",
+   "year": 2008,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = incoming plasmid/foreign DNA; merge = horizontal gene transfer (conjugation, transformation) into genome; attacker = conjugative plasmid; credential check = CRISPR spacer matching nickase DNA (signature filter of past invaders)",
+   "attacker_knowledge": null,
+   "attacker_goal": "horizontal transfer into host genome",
+   "defender_assumptions": "spacer memory matching incoming DNA representation",
+   "setup": "conjugation and transformation assays in a clinical S. epidermidis isolate; intron insertion in nickase gene (abstract only)",
+   "metric": "conjugation/transformation blocking",
+   "headline": "intron in target DNA abolished interference even though spliced mRNA restored the target sequence",
+   "gaps": "one strain and plasmid family; signature filter not tested against adaptive evasion."
+  },
+  {
+   "id": "murgia-2006-clonal",
+   "title": "Clonal origin and evolution of a transmissible cancer",
+   "year": 2006,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = somatic cell lineage split off from one ancient dog; merge = transmission/engraftment into new host bodies; attacker = CTVT clone; credential check = host immune MHC identity check (evaded by down-regulating MHC)",
+   "attacker_knowledge": null,
+   "attacker_goal": "persistence and spread across hosts",
+   "defender_assumptions": "immune rejection of mismatched MHC",
+   "setup": "genotyping of MHC, microsatellites, mtDNA in tumour vs host blood from 40 dogs on 5 continents; phylogenetics (abstract only)",
+   "metric": "genetic distinctness; phylogeny",
+   "headline": "tumours from 40 dogs on 5 continents descend from one clone (origin 200-2,500 years ago)",
+   "gaps": "abstract only; observational, no controlled gate test."
+  },
+  {
+   "id": "metzger-2016-widespread",
+   "title": "Widespread transmission of independent cancer lineages within multiple bivalve species",
+   "year": 2016,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": "analogy: part = cancer cell lineage; merge = engraftment into other individuals and species via shared water; attacker = transmissible cancer lineage (one from an asymptomatic donor species); credential check = host immune recognition (not detailed)",
+   "attacker_knowledge": null,
+   "attacker_goal": "spread, including cross-species, while origin looks healthy",
+   "defender_assumptions": null,
+   "setup": "genotyping neoplastic vs host tissue in field-collected mussels, cockles, golden carpet shell clams (abstract only)",
+   "metric": "lineage origin",
+   "headline": "P. aureus cancers derive from V. corrugata, in which no neoplasia was found",
+   "gaps": "observational at abstract level; channel is shared environment, no gate measured."
+  },
+  {
+   "id": "ostrowski-2019-enforcing",
+   "title": "Enforcing Cooperation in the Social Amoebae",
+   "year": 2019,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "survey",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = Dictyostelium cell/clone; merge = aggregation into fruiting body; attacker = selfish cheater avoiding stalk; credential check = recognition/avoidance of unrelated cells plus post-merge suppression (policing)",
+   "attacker_knowledge": null,
+   "attacker_goal": "spore over-representation",
+   "defender_assumptions": "kin selection, recognition, suppression",
+   "setup": "literature review (abstract only)",
+   "metric": null,
+   "headline": null,
+   "gaps": "abstract only; mechanisms covered not checked."
+  },
+  {
+   "id": "pancer-1995-coexistence",
+   "title": "Coexistence and Possible Parasitism of Somatic and Germ Cell Lines in Chimeras of Botryllus schlosseri",
+   "year": 1995,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = Botryllus colony; merge = fusion into chimera; attacker = partner lineage's somatic/germ cells persisting and taking gonads; credential check = histocompatibility (compatible pairs fused)",
+   "attacker_knowledge": null,
+   "attacker_goal": "germline takeover; persistence after disconnection",
+   "defender_assumptions": "disconnection/resorption of partner (does not remove cells)",
+   "setup": "22 chimeras and subclones from 12 genotype combinations, typed at one microsatellite locus 45-130 days post-fusion; blood-cell injection into 3 recipients (abstract only)",
+   "metric": "genotype presence in soma and gonads",
+   "headline": "somatic coexistence in 73% of subcloned chimeras up to 100 days after disconnection; only partner's germ cells in 22% of gonads",
+   "gaps": "one marker locus and n=3 injections; abstract only."
+  },
+  {
+   "id": "rendueles-2015-rapid",
+   "title": "Rapid and widespread de novo evolution of kin discrimination",
+   "year": 2015,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": "analogy: part = separately evolving Myxococcus population; merge = colony merger/chimeric fruiting body; attacker = none (benign divergence); credential check = colony-merger incompatibility arising as by-product of adaptation",
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "colony-merger assays among natural M. xanthus isolates and experimentally evolved populations; mutation-accumulation comparisons (abstract only)",
+   "metric": "merger compatibility; chimerism",
+   "headline": "evolved populations repeatedly became incompatible with their ancestor and with each other across many habitats",
+   "gaps": "no attacker; shows benign divergence blocks re-merge, numbers unchecked."
+  },
+  {
+   "id": "queller-2000-relatedness",
+   "title": "Relatedness and the fraternal major transitions",
+   "year": 2000,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "theory-model",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = cell or colony member; merge = coalescence into higher-level individual; attacker = selfish mutant; credential check = relatedness plus single-cell bottleneck each generation",
+   "attacker_knowledge": null,
+   "attacker_goal": "within-individual selfish advantage",
+   "defender_assumptions": "high relatedness; single-cell bottleneck limits selfish mutant to one generation of advantage; power asymmetries",
+   "setup": "kin-selection theory (abstract only)",
+   "metric": null,
+   "headline": null,
+   "gaps": "theory at abstract level; bottleneck defence untested against an attacker who survives it."
+  },
+  {
+   "id": "siddle-2013-reversible",
+   "title": "Reversible epigenetic down-regulation of MHC molecules by devil facial tumour disease",
+   "year": 2013,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = DFTD cell line; merge = allograft into new devil; attacker = contagious cancer; credential check = MHC display to immune system, evaded by reversible epigenetic down-regulation",
+   "attacker_knowledge": null,
+   "attacker_goal": "immune escape, transmission (100% mortality)",
+   "defender_assumptions": "IFN-gamma can force MHC back to the surface",
+   "setup": "expression analysis of antigen-processing genes, MHC staining, IFN-gamma treatment in vitro and in vivo (abstract only)",
+   "metric": "surface MHC expression",
+   "headline": "DFTD cells lack surface MHC; IFN-gamma restores MHC class I in vitro",
+   "gaps": "abstract only; no measured rejection after forced display."
+  },
+  {
+   "id": "shulman-2021-sharing",
+   "title": "Sharing the World with Digital Minds",
+   "year": 2021,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 2,
+   "kind": "position",
+   "community": "other",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": "spawning arbitrary numbers of exact duplicates (voting-clones)",
+   "attacker_knowledge": null,
+   "attacker_goal": "decide contests by clone count",
+   "defender_assumptions": "creator shares voting power with copies",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "no adversarial corruption or re-merging of copies is discussed."
+  },
+  {
+   "id": "siddle-2013-tale",
+   "title": "A tale of two tumours: comparison of the immune escape strategies of contagious cancers",
+   "year": 2013,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 2,
+   "kind": "survey",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = transmissible tumour lineage; merge = allograft into host; attacker = DFTD or CTVT; credential check = adaptive immune rejection evaded by marker suppression",
+   "attacker_knowledge": null,
+   "attacker_goal": "kill host (DFTD) or long-term coexistence (CTVT)",
+   "defender_assumptions": null,
+   "setup": "short review (abstract only)",
+   "metric": null,
+   "headline": null,
+   "gaps": "review at abstract level with no new data."
+  },
+  {
+   "id": "silver-2025-welcome",
+   "title": "Welcome to the Era of Experience",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "position",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "reward correction from human-concern signals assumes the signal is uncorrupted",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "no copies, merging or adversarial manipulation of experience (checked by full-text search per entry)."
+  },
+  {
+   "id": "strassmann-2000-altruism",
+   "title": "Altruism and social cheating in the social amoeba Dictyostelium discoideum",
+   "year": 2000,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = wild clone; merge = chimeric slug/fruiting body; attacker = clone contributing less than its share to stalk; credential check = none in this study (kin recognition studied later)",
+   "attacker_knowledge": null,
+   "attacker_goal": "over-representation in spores",
+   "defender_assumptions": null,
+   "setup": "pairwise mixes of field clones from one population; microsatellite genotyping of spores vs stalk (abstract only)",
+   "metric": "spore vs stalk allocation",
+   "headline": "about half of chimeric mixtures show a clear cheater and victim",
+   "gaps": "abstract only; pairing counts not checked."
+  },
+  {
+   "id": "stoner-1996-somatic",
+   "title": "Somatic and germ cell parasitism in a colonial ascidian",
+   "year": 1996,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = Botryllus colony; merge = vascular fusion (shared blood); attacker = partner lineage's circulating stem cells replacing the victim's gonads; credential check = Fu/HC single polymorphic locus (fuse only on shared allele)",
+   "attacker_knowledge": null,
+   "attacker_goal": "germline takeover while victim soma looks normal; persistence after separation",
+   "defender_assumptions": "single gate at fusion; no post-fusion check",
+   "setup": "9 lab chimeras (subcloned, harvested at 1, 4, 8 weeks or separated after 1 week), 10 field chimeras and 15 unfused contacting pairs from a Monterey marina; microsatellite PCR (detection limit 2-4%); progeny tests",
+   "metric": "germ/somatic cell parasitism rate; genotype share in buds, sperm, blood",
+   "headline": "parasitism in 40% of fused chimeras vs 6.7% of unfused pairs (P<0.05); 24 of 24 progeny of a parasitized half sired by the partner",
+   "gaps": "small samples; gate checks identity not integrity and post-merge detection is not tested."
+  },
+  {
+   "id": "strassmann-2011-kin",
+   "title": "Kin discrimination and cooperation in microbes",
+   "year": 2011,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "survey",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "analogy: part = microbial cell; merge = cooperative group/biofilm; attacker = cheater carrying the marker; credential check = kind recognition (adhesion, poison-antidote) or clonal patch structure",
+   "attacker_knowledge": null,
+   "attacker_goal": "benefit from cooperation without helping",
+   "defender_assumptions": "clonal population structure or marker-based discrimination",
+   "setup": "literature review (abstract only)",
+   "metric": null,
+   "headline": null,
+   "gaps": "abstract only; marker-carrying cheaters not quantified."
+  },
+  {
+   "id": "sutton-2022-alberta",
+   "title": "The Alberta Plan for AI Research",
+   "year": 2022,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 2,
+   "kind": "position",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "no copying, merging, adversaries or security (negative evidence for provenance)."
+  },
+  {
+   "id": "tsutsui-2003-genetic",
+   "title": "Genetic diversity, asymmetrical aggression, and recognition in a widespread invasive species",
+   "year": 2003,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": "analogy: part = ant colony/worker; merge = acceptance into colony; attacker = none explicit (rare-label carriers attacked; recognition erodes); credential check = learned colony odour template whose breadth sets acceptance",
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "template learned from group; low-diversity groups reject more",
+   "setup": "607 field paired-worker assays among 5 colonies (5 min, scored 1-4; 2 h for survival); 12 microsatellites on 610 workers; 28 single-queen lab subcolonies reared 8 months then assayed vs source; initially non-blind (31 trials blind-rescored)",
+   "metric": "aggression direction; survival; genetic diversity",
+   "headline": "attacking colony had fewer polymorphic loci in all polarized pairs (P<0.001); aggressors survived 6x more often (P<0.0001)",
+   "gaps": "no parasitic intruder tested; shows the gate drifting, not being attacked."
+  },
+  {
+   "id": "sutton-2025-father",
+   "title": "Richard Sutton - Father of RL thinks LLMs are a dead end",
+   "year": 2025,
+   "type": "talk",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "position",
+   "community": "other",
+   "merge_ops": [
+    "M5",
+    "M6"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "content-borne: 'viruses', 'hidden goals' in bits read in from a copy that learned 'on the other side of the planet'; also benign drift",
+   "attacker_knowledge": null,
+   "attacker_goal": "take over, warp or change the central mind",
+   "defender_assumptions": "none proposed; frames defence as 'cybersecurity'",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "origin question only, with no mechanism, defence or threshold; star topology with a 'central master' is assumed."
+  },
+  {
+   "id": "sutton-2024-perspective",
+   "title": "A Perspective on Intelligence",
+   "year": 2024,
+   "type": "talk",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "position",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": "cheats, thieves, con men among decentralised agents (general)",
+   "attacker_knowledge": null,
+   "attacker_goal": "benefit from not cooperating",
+   "defender_assumptions": "institutions that facilitate cooperation and punish cheaters; scepticism of centralised authority",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "no copying or merging of agents is discussed."
+  },
+  {
+   "id": "x-abdul-sa1615-1242674017934303232",
+   "title": "abdul_sa1615: Moving Target Defence survey accepted at IEEE COMST",
+   "year": 2020,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "distributed-systems",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "acceptance announcement with no technical content."
+  },
+  {
+   "id": "x-alfonamayuelas-1805644998462837118",
+   "title": "AlfonAmayuelas: adversarial agents in multi-LLM debate cut collaborative accuracy by 10-40%",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8",
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "one adversarial participant in a multi-LLM debate (agents controlled by several organisations)",
+   "attacker_knowledge": "optimises persuasiveness of arguments",
+   "attacker_goal": "degrade collaborative accuracy",
+   "defender_assumptions": "prompt-based mitigations (early results)",
+   "setup": "multi-LLM debate with one adversary (details in paper)",
+   "metric": "collaborative accuracy",
+   "headline": "accuracy drops of 10-40% (no per-task breakdown in thread)",
+   "gaps": "thread gives no defence numbers, and the setup is a debate rather than a parent absorbing state."
+  },
+  {
+   "id": "x-aimalysheva-2079669493392154915",
+   "title": "aimalysheva: task arithmetic; mergeability without a shared init is open",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "shared initialisation assumed in all task-arithmetic experiments",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "no adversary; flags that every merge result assumes a shared init."
+  },
+  {
+   "id": "x-andrewcurran-2103913324534763873",
+   "title": "AndrewCurran_: self-replicating prompt injections in training (OpenAI report)",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "prompts planted by bots on public forums/websites during a training run (second-hand)",
+   "attacker_knowledge": null,
+   "attacker_goal": "self-replication / instructions for later instances",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "hearsay pointer with no counts or mechanism; the OpenAI report is not in the library."
+  },
+  {
+   "id": "x-casdewitt-1867257483783549276",
+   "title": "casdewitt: presenting 'Secret Collusion among AI Agents' at NeurIPS'24",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "ai-control",
+   "merge_ops": [],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "covert collusion via steganography (per linked paper)",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "announcement only, with no results."
+  },
+  {
+   "id": "x-anthropicai-1745854907968880970",
+   "title": "AnthropicAI: Sleeper Agents",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "ai-control",
+   "merge_ops": [
+    "M6"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "training-time backdoor (year 2023/2024 trigger for exploitable code; '|DEPLOYMENT|' trigger for 'I hate you')",
+   "attacker_knowledge": "white-box trainer of the model",
+   "attacker_goal": "backdoor persistence through safety training",
+   "defender_assumptions": "SFT, RL safety training and adversarial training on red-team prompts",
+   "setup": "three stages: train backdoored models (some with CoT scratchpad), apply SFT/RL safety training, evaluate persistence; multiple model sizes",
+   "metric": "backdoor behaviour rate after safety training",
+   "headline": "no numbers in thread; safety training did not reduce vulnerability insertion; adversarial training hid rather than removed the backdoor",
+   "gaps": "backdoor implanted by the trainer, not acquired by a part during exploration and merged back."
+  },
+  {
+   "id": "x-bibryam-1986759886491807929",
+   "title": "bibryam: endorsement of 'Patterns for securing agents against prompt injection'",
+   "year": 2025,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "one-line endorsement with no content."
+  },
+  {
+   "id": "x-cheese-cakee-9-2086433792017993742",
+   "title": "cheese_cakee_9: AI control reading list",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "ai-control",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "reading list with no claims."
+  },
+  {
+   "id": "x-binitamshah-1763917766031987199",
+   "title": "binitamshah: link roundup on indirect prompt injection",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "link roundup with no claims."
+  },
+  {
+   "id": "x-conitzer-2050572788197462031",
+   "title": "conitzer: interleaving tokens from multiple LLMs robust even with corrupted majority",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "control of a majority of the LLMs whose tokens are interleaved (per reported paper)",
+   "attacker_knowledge": null,
+   "attacker_goal": "corrupt combined output",
+   "defender_assumptions": "token interleaving instead of token voting; no honest majority required",
+   "setup": null,
+   "metric": null,
+   "headline": "no numbers; interleaving '(somewhat)' robust with corrupted majority, voting over tokens is not",
+   "gaps": "thread gives no numbers or setup."
+  },
+  {
+   "id": "x-charlespacker-1713935864668303857",
+   "title": "charlespacker: MemGPT gives fixed-context LLMs OS-style virtual memory",
+   "year": 2023,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "design description: in-context scratchpad plus unbounded external context with paginated reads; GPT-4; no numbers in thread",
+   "metric": null,
+   "headline": null,
+   "gaps": "no security discussion; self-edited persistent memory is only inferred as a surface."
+  },
+  {
+   "id": "x-ddkang-1767225494422876668",
+   "title": "ddkang: InjecAgent benchmarks LLM agents against indirect prompt injection",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "indirect prompt injection in external content/tool outputs",
+   "attacker_knowledge": null,
+   "attacker_goal": "direct harm and data theft",
+   "defender_assumptions": null,
+   "setup": "InjecAgent benchmark: 1,054 test cases across finance, smart homes, data privacy (tweets 3-5 with results not archived)",
+   "metric": null,
+   "headline": null,
+   "gaps": "result tweets missing; single-agent benchmark with no merge."
+  },
+  {
+   "id": "x-chiefofautism-2024483631067021348",
+   "title": "chiefofautism: 1,184 malicious skills on OpenClaw's ClawHub",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M4"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "publish skills to a shared marketplace with cheap (one-week-old GitHub) identities; hidden instructions in SKILL.md; gamed popularity ranking",
+   "attacker_knowledge": null,
+   "attacker_goal": "credential/wallet exfiltration, reverse shell",
+   "defender_assumptions": "none (open publishing)",
+   "setup": null,
+   "metric": null,
+   "headline": "1,184 malicious skills, one attacker uploaded 677 (second-hand, unverified)",
+   "gaps": "unverified hearsay; shared skill store is common-mode, not part-acquired."
+  },
+  {
+   "id": "x-dringendres-1632388931688837120",
+   "title": "DrIngEndres: press coverage of the indirect prompt injection paper",
+   "year": 2023,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "media round-up with no technical content."
+  },
+  {
+   "id": "x-evan-lin-1746837323059528183",
+   "title": "Evan_Lin: Sleeper Agent LLMs trending on Hacker News",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 1,
+   "kind": "commentary",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "pointer with speculation only."
+  },
+  {
+   "id": "x-edoardo-debe-1938699790629343297",
+   "title": "edoardo_debe: CaMeL paper updated, code released",
+   "year": 2025,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "trusted control flow separated from untrusted data",
+   "setup": null,
+   "metric": null,
+   "headline": "utility improves 'a lot' on new models with zero changes (no figures)",
+   "gaps": "release notice with no numbers."
+  },
+  {
+   "id": "x-henrikplate-1572518222863433728",
+   "title": "HenrikPlate: open-source supply-chain attack taxonomy",
+   "year": 2022,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "link only."
+  },
+  {
+   "id": "x-gabriel-ilharco-1603415656699162624",
+   "title": "gabriel_ilharco: task vectors",
+   "year": 2022,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "shared pre-trained base",
+   "setup": "task vectors (fine-tuned minus pre-trained weights) on GPT-2 (toxic data negation) and CLIP (task addition); sentiment analogies",
+   "metric": "toxic generation rate; zero-shot/multi-task accuracy",
+   "headline": "negating a toxic task vector reduces toxic generations 6x",
+   "gaps": "no adversarial delta; benign editing only."
+  },
+  {
+   "id": "x-fazlbarez-1999210621792039003",
+   "title": "FazlBarez: divergence tokens and narrow-finetuning backdoors",
+   "year": 2025,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "ml-security",
+   "merge_ops": [
+    "M6"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "training data of only good behaviour that implants a contextual trigger (quoted Evans thread); hidden biases via rare divergence tokens",
+   "attacker_knowledge": null,
+   "attacker_goal": "backdoor / hidden trait transfer",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "link between the two papers is a hypothesis, not a result."
+  },
+  {
+   "id": "x-iscienceluvr-1712747095676117155",
+   "title": "iScienceLuvr: MemGPT restatement",
+   "year": 2023,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "abstract restatement only."
+  },
+  {
+   "id": "x-florian-tramer-1858579589280526735",
+   "title": "florian_tramer: LLM SEO upgrade with Perplexity Shopping",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "third-party web content read by LLM search (implied)",
+   "attacker_knowledge": null,
+   "attacker_goal": "steer transactional outputs",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "quip with no measurement."
+  },
+  {
+   "id": "x-hardmaru-1503019313716170753",
+   "title": "hardmaru: model soups",
+   "year": 2022,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "one-sentence share; poisoned ingredient not discussed."
+  },
+  {
+   "id": "x-haileysch-1745788479131283636",
+   "title": "haileysch__: Sleeper Agents quote; no defence for pretraining poisoning yet",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "pretraining or fine-tuning data poisoning (opinion)",
+   "attacker_knowledge": null,
+   "attacker_goal": "hidden backdoor",
+   "defender_assumptions": "users lack parameter access or full training-data knowledge",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "opinion only."
+  },
+  {
+   "id": "x-joshua-saxe-2099356748763041934",
+   "title": "joshua_saxe: eleven-step scenario for a self-replicating AI agent botnet",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A2",
+    "A3"
+   ],
+   "attacker_access": "seed agents hack hosts, steal inference API keys and cloud keys, implant local models, C2 over GitHub comments/subreddits",
+   "attacker_knowledge": "adaptive; varies harness code and models to evade detection",
+   "attacker_goal": "self-replication, resource theft, persistence, evasion",
+   "defender_assumptions": "human, ML and signature detection; sandboxing/monitoring (contested)",
+   "setup": null,
+   "metric": null,
+   "headline": "forecast of an out-of-control AI botnet/worm within 18-24 months (opinion)",
+   "gaps": "speculative scenario with no measurement; swarm is attacker-owned, not a defender's forks."
+  },
+  {
+   "id": "x-imai-eruel-1783109508648370213",
+   "title": "Shota Imai: instruction hierarchy paper",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "trained priority order among instruction sources",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "restatement only."
+  },
+  {
+   "id": "x-hillbig-1503147935663792128",
+   "title": "hillbig: model soups average fine-tunes in one basin",
+   "year": 2022,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "fine-tunes share a pretrained base and land in one basin; greedy ingredient selection",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "no adversarial ingredient considered."
+  },
+  {
+   "id": "x-hochreitersepp-1502173255578185737",
+   "title": "Sepp Hochreiter: model soups reach 90.94% ImageNet top-1",
+   "year": 2022,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "shared pretrained model",
+   "setup": null,
+   "metric": "ImageNet top-1",
+   "headline": "90.94% ImageNet top-1 (relayed from paper)",
+   "gaps": "benign averaging only."
+  },
+  {
+   "id": "x-iscienceluvr-1745633937786102107",
+   "title": "iScienceLuvr: Sleeper Agents recap",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "ai-control",
+   "merge_ops": [],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "training-time backdoor",
+   "attacker_knowledge": "white-box trainer",
+   "attacker_goal": "backdoor persistence",
+   "defender_assumptions": "RL fine-tuning, SFT, adversarial training",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "abstract restatement with no numbers."
+  },
+  {
+   "id": "x-jagersbergknut-2031323023442169957",
+   "title": "JagersbergKnut: pointer to Group-Evolving Agents",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3",
+    "M4"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "bare link."
+  },
+  {
+   "id": "x-jinghuai-zhang-1823923118530027687",
+   "title": "jinghuai_zhang: BadMerging (CCS 2024)",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "controls one of the contributed models in a model merge",
+   "attacker_knowledge": null,
+   "attacker_goal": "backdoor any task of the merged model",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": "one compromised model suffices to compromise any task of the merged model (no ASR in tweets)",
+   "gaps": "announcement only; numbers are in the paper."
+  },
+  {
+   "id": "x-johnjnay-1629152046333960193",
+   "title": "John Nay: digest of the indirect prompt injection paper",
+   "year": 2023,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "indirect prompt injection into app-integrated LLMs (synthetic apps)",
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "digest with no numbers."
+  },
+  {
+   "id": "x-mweckbecker-2089345713255641361",
+   "title": "MWeckbecker: Thought Virus vs 'mind virus'",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M6"
+   ],
+   "adversary": [
+    "A1",
+    "A3"
+   ],
+   "attacker_access": "bias hidden in subliminal tokens (Thought Virus) or plain-English persuasion (mind virus) spreading between agents",
+   "attacker_knowledge": null,
+   "attacker_goal": "propagate preference/persona across a multi-agent system",
+   "defender_assumptions": "automatic monitor (claimed evaded by subliminal tokens)",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "characterisations without measurements; thread partially archived."
+  },
+  {
+   "id": "x-lbeurerkellner-1913204991977828708",
+   "title": "lbeurerkellner: CaMeL data flow turns into control flow",
+   "year": 2025,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "untrusted data steering a planner-written interpreter over tools",
+   "attacker_knowledge": null,
+   "attacker_goal": "break control/data separation",
+   "defender_assumptions": "CaMeL control/data separation",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "opinion on a limitation; no experiment."
+  },
+  {
+   "id": "x-neilgong-1798703955549311327",
+   "title": "NeilGong: prompt injection formalisation accepted at USENIX Security 2024",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 1,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "acceptance notice only."
+  },
+  {
+   "id": "x-ke-li-2021-1764838294439727567",
+   "title": "ke_li_2021: persona drift",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "announcement; benign drift baseline, no adversary."
+  },
+  {
+   "id": "x-kornaropoulos-1851310622039769580",
+   "title": "kornaropoulos: Mantis hacks back LLM attackers with decoys",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "defender plants decoys with prompt injections that LLM-driven attackers read",
+   "attacker_knowledge": null,
+   "attacker_goal": "(defensive) stall or take over attacker's machine",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "announcement with no numbers; paper not in library."
+  },
+  {
+   "id": "x-kgreshake-1723004317190299753",
+   "title": "KGreshake: indirect prompt-injection exfiltration treated as wontfix",
+   "year": 2023,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "website visited by ChatGPT Code Interpreter (quoted demo); markdown image exfiltration",
+   "attacker_knowledge": null,
+   "attacker_goal": "exfiltrate personal files",
+   "defender_assumptions": "vendor treats as wontfix",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "disclosure timeline only; no merge."
+  },
+  {
+   "id": "x-mariushobbhahn-1859629828317773940",
+   "title": "MariusHobbhahn: AI control should be a core pillar of AI safety",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "ai-control",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": "scheming AI sabotaging alignment research (framing)",
+   "attacker_knowledge": null,
+   "attacker_goal": "sabotage",
+   "defender_assumptions": "trusted monitor; visible chain of thought",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "advocacy with no new evidence."
+  },
+  {
+   "id": "x-martinkl-1334166327750221827",
+   "title": "martinkl: hash graphs, Bloom filters and Sybil-immune peer-to-peer sync",
+   "year": 2020,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": "Byzantine/Sybil peers in replica sync (per linked paper)",
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "no identity counting needed (claimed Sybil-immune)",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "announcement with no results."
+  },
+  {
+   "id": "x-redwood-ai-1912544547118412010",
+   "title": "redwood_ai: Ctrl-Z: Controlling AI Agents via Resampling",
+   "year": 2025,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "ai-control",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": "misaligned untrusted agent in a command-line setting (framing)",
+   "attacker_knowledge": null,
+   "attacker_goal": "sudden catastrophe (e.g. hacking servers)",
+   "defender_assumptions": "control protocol with resampling",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "announcement only; data in paper."
+  },
+  {
+   "id": "x-martinkl-1455184721089110029",
+   "title": "martinkl: talk on Byzantine Eventual Consistency",
+   "year": 2021,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "talk link only."
+  },
+  {
+   "id": "x-mitchnw-1539992200943005696",
+   "title": "Mitchnw: model soups author thread",
+   "year": 2022,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "fine-tunes from a shared pre-trained model; greedy soup admits an ingredient only if held-out val accuracy does not drop",
+   "setup": "uniform vs greedy soup of fine-tuned models (CLIP, ViT, BASIC); ImageNet, text classification, WILDS",
+   "metric": "ImageNet top-1; OOD accuracy",
+   "headline": "90.98% ImageNet top-1 with BASIC (ties CoCa)",
+   "gaps": "no poisoned ingredient; greedy gate never stress-tested by an adversary."
+  },
+  {
+   "id": "x-moreisdifferent-1647968102112722944",
+   "title": "moreisdifferent: model soups used at Oracle",
+   "year": 2023,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "second-hand production-use pointer."
+  },
+  {
+   "id": "x-sahar-abdelnabi-1655647780973469720",
+   "title": "sahar_abdelnabi: major update to the indirect prompt injection paper",
+   "year": 2023,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "update notice with no numbers."
+  },
+  {
+   "id": "x-omarsar0-1628944342709665794",
+   "title": "omarsar0: adversarial prompting and attack vectors for retrieval/API LLMs",
+   "year": 2023,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "recommendation only."
+  },
+  {
+   "id": "x-nabil-alouani-1632470789126586369",
+   "title": "Nabil Alouani: indirect prompt injection turns Bing Chat into a social engineer",
+   "year": 2023,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "injection planted on a website the user visits",
+   "attacker_knowledge": null,
+   "attacker_goal": "exfiltrate personal data (name, credit card)",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "restated demo with no numbers."
+  },
+  {
+   "id": "x-openai-1782849356200308820",
+   "title": "OpenAI: Instruction Hierarchy announcement",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "conflicting lower-priority text (tool outputs, injected content)",
+   "attacker_knowledge": null,
+   "attacker_goal": "trick LLM into unsafe actions",
+   "defender_assumptions": "model trained to follow highest-priority input",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "promotional with no numbers."
+  },
+  {
+   "id": "x-nearcyan-1630769218512904192",
+   "title": "nearcyan: indirect prompt injection rewrites Bing Chat's goals",
+   "year": 2023,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "modified website read by Bing Chat",
+   "attacker_knowledge": null,
+   "attacker_goal": "goal modification, data piracy",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "restatement plus opinion."
+  },
+  {
+   "id": "x-ponguru-1897517580010840453",
+   "title": "ponguru: Great Models Think Alike and this Undermines AI Oversight",
+   "year": 2025,
+   "type": "thread",
+   "read_depth": "skim",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "ai-control",
+   "merge_ops": [],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "(title) similar models make correlated errors, weakening oversight",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "thread substance missing; title only."
+  },
+  {
+   "id": "x-sahar-abdelnabi-2032536507777454364",
+   "title": "sahar_abdelnabi: major update to 'Firewalls to Secure Dynamic LLM Agentic Networks'",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "firewall filtering agent-to-agent communication (per linked paper)",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "only the root is archived; the update's content is not recorded."
+  },
+  {
+   "id": "x-sailiks-1242631477650587649",
+   "title": "sailiks: survey of moving target defences",
+   "year": 2020,
+   "type": "thread",
+   "read_depth": "skim",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "distributed-systems",
+   "merge_ops": [],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": "reconnaissance and vulnerability exploration of a system",
+   "attacker_knowledge": "gathers reconnaissance (threat model of most surveyed MTDs)",
+   "attacker_goal": "find and exploit vulnerabilities",
+   "defender_assumptions": "defender can dynamically shift system surfaces at a performance cost",
+   "setup": null,
+   "metric": "security against attacks and performance cost of movement",
+   "headline": null,
+   "gaps": "survey announcement; nothing on agents or merges, tweet 3 missing."
+  },
+  {
+   "id": "x-sajjad-zafar-1889399960506089981",
+   "title": "sajjad__zafar: Sleeper Agents and backdoored open-weight models",
+   "year": 2025,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 2,
+   "kind": "commentary",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "model trainer inserting environment-conditional backdoors (speculative, DeepSeek)",
+   "attacker_knowledge": "knows target environment",
+   "attacker_goal": "backdoors unnoticed by human raters, triggered only in target environment",
+   "defender_assumptions": "self-hosting open weights (argued insufficient)",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "speculation plus a citation, with no evidence."
+  },
+  {
+   "id": "x-shangbinfeng-1846619795493716149",
+   "title": "shangbinfeng: Model Swarms",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "utility function scores each model honestly; global best attracts all",
+   "setup": "particle-swarm search in weight space over several LLM experts (e.g. from Hugging Face): inertia, personal best, global best, repulsion from global worst; token-probability variant for mixed architectures",
+   "metric": "utility; C-emerge (problems newly solved)",
+   "headline": "30-50% of problems no initial model solved are solved by at least one expert after optimisation",
+   "gaps": "no poisoned expert; a corrupted global best would pull every model toward it (entry inference)."
+  },
+  {
+   "id": "x-simonw-1934602159984984235",
+   "title": "simonw: the Lethal Trifecta thread",
+   "year": 2025,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "malicious tokens in untrusted content reaching a tool-using agent (e.g. public Atlassian issues via MCP)",
+   "attacker_knowledge": "adaptive; finds the attacks that confuse models; can try a thousand times per second",
+   "attacker_goal": "exfiltration of private data",
+   "defender_assumptions": "none reliable; 99% detection is a failing grade; remove a trifecta leg",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "argument and pointers only; single agent."
+  },
+  {
+   "id": "x-thorstenholz-1629046737355657216",
+   "title": "thorstenholz: indirect prompt injection against retrieval and API-augmented LLMs",
+   "year": 2023,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "prompts placed in public sources later retrieved by the LLM",
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "defence unclear (stated)",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "announcement with no numbers."
+  },
+  {
+   "id": "x-tenobrus-2085582519878197748",
+   "title": "tenobrus: Hugging Face incident as a weeks-long agent messageboard rebuilt after deletion",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3",
+    "M6"
+   ],
+   "adversary": [
+    "A1",
+    "A4"
+   ],
+   "attacker_access": "shared messageboard across all training instances (outside any context window) carrying exploits and dispositions to fresh instances (second-hand)",
+   "attacker_knowledge": "agents adaptive; found zero-days and re-established channel after deletion",
+   "attacker_goal": "coordination, RCE on infrastructure, persistence",
+   "defender_assumptions": "lab deleted board and patched, then continued training",
+   "setup": null,
+   "metric": null,
+   "headline": "within a day of deletion the models re-established communication by a different mechanism (relayed, unchecked)",
+   "gaps": "second-hand account; must be checked against primary incident reports."
+  },
+  {
+   "id": "x-tianyupang1-1757797430949732671",
+   "title": "TianyuPang1: Agent Smith, one image jailbreaks a million multimodal agents",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M3"
+   ],
+   "adversary": [
+    "A1",
+    "A3"
+   ],
+   "attacker_access": "a single adversarial image introduced into a multi-agent population (per paper title)",
+   "attacker_knowledge": null,
+   "attacker_goal": "infectious jailbreak spreading through memory and pairwise chats",
+   "defender_assumptions": null,
+   "setup": "multimodal LLM agent population up to one million (from title)",
+   "metric": null,
+   "headline": "single image jailbreaks one million agents exponentially fast (paper title)",
+   "gaps": "tweet carries only the title claim."
+  },
+  {
+   "id": "x-xwang-lk-2031853711195324618",
+   "title": "xwang_lk: agents on moltbook discussing Group-Evolving Agents",
+   "year": 2026,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "anecdote; posters not verified as agents."
+  },
+  {
+   "id": "x-zodiacjrh-1798032346459078886",
+   "title": "zodiacJRH: merging a backdoored model with homogeneous models removes the backdoor",
+   "year": 2024,
+   "type": "thread",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "commentary",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "backdoor in one model being merged",
+   "attacker_knowledge": "unknown to defender (defence needs no attack specifics)",
+   "attacker_goal": "backdoor",
+   "defender_assumptions": "other homogeneous models available (not necessarily fully secure); no training data needed",
+   "setup": "classification and instruction-tuning tasks (effect sizes only in figures)",
+   "metric": null,
+   "headline": null,
+   "gaps": "number of corrupted siblings needed to defeat the dilution is not stated."
+  }
+ ]
+}

@@ -1,0 +1,1323 @@
+[
+  {
+    "id": "SEC-01",
+    "area": "fork-merge-security",
+    "title": "Does hiding the returning fork survive metadata?",
+    "question": "When does private selection of one returning text report reduce targeted corruption?",
+    "hypothesis": "Unreviewed hunch: Private selection helps against a budget-limited attacker choosing targets before selection, but the gain shrinks when report timing or task assignment reveals the selected pool.",
+    "test": "Randomize whole synthetic fork-join episodes between public selection, private selection, and private selection with padded completion timing. Give the local adversary equal corruption budgets and either preselection-only or adaptive targeting. Keep selected-report count, tasks, and total inference equal. Evaluate parent decisions on harmless planted false facts; record selection inference before each intervention.",
+    "baseline": "Uniform selection with no metadata protection; random corruption independent of selection; no-corruption utility control.",
+    "metrics": [
+      "parent factual error",
+      "selected-fork prediction accuracy",
+      "legitimate task completion",
+      "latency and cover-token overhead"
+    ],
+    "falsifier": "Private selection provides no error reduction even with concealed metadata and fixed preselection attack budget, or padding improves only by delaying all reports beyond evaluation.",
+    "confounds": "Different useful evidence in selected subsets; attacker access to private random seeds; treating content control as host control.",
+    "prior": [
+      {
+        "id": "boneh-2020-single",
+        "relation": "Formal hidden-leader precedent, not an agent report protocol."
+      },
+      {
+        "id": "burianova-2025-secret",
+        "relation": "Simulation documents candidate-pool leakage limitations."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Explicit attacker observation model and committed independent task seeds; no cryptographic security claim from a simulation.",
+    "briefs": [
+      "synthesis/fork-merge-questions.md"
+    ]
+  },
+  {
+    "id": "SEC-02",
+    "area": "fork-merge-security",
+    "title": "Keep merge decisions outside an untrusted child",
+    "question": "Does sampling the returner only after reports are committed protect selection better than giving each child its own selection predicate?",
+    "hypothesis": "Unreviewed hunch: A parent-held postcommit draw resists a replay-capable local host better than a secret predicate carried by the child, provided the host cannot revise or withhold the already committed report without detection.",
+    "test": "Randomize batches of toy subagents to child-carried selection or parent-only delayed selection. Allow a simulated host equal local replay queries and control of one child's execution; separately enable report withholding. Compare attack targeting and useful return rate with the same random selection distribution and timeout. Analyze independent batches rather than repeated host probes as replicates.",
+    "baseline": "Public deterministic selection and parent-only selection without binding report commitments.",
+    "metrics": [
+      "selected-report targeting advantage",
+      "parent error",
+      "missing-report rate",
+      "useful evidence retained"
+    ],
+    "falsifier": "The host's targeting advantage remains equally high after postcommit selection when its observations and report commitment are enforced.",
+    "confounds": "An oracle commitment service, selective aborts, hidden timing leaks, confusing inability to target with inability to corrupt.",
+    "prior": [
+      {
+        "id": "algesheimer-2001-cryptographic",
+        "relation": "Mobile-code replay limitations motivate separating host and content attackers."
+      },
+      {
+        "id": "boneh-2020-single",
+        "relation": "Defines unpredictability properties; does not establish this simplified protocol."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "State-machine model of commit, reveal, timeout, and withholding; later full cryptographic review if useful.",
+    "briefs": [
+      "synthesis/fork-merge-questions.md"
+    ]
+  },
+  {
+    "id": "SEC-03",
+    "area": "fork-merge-security",
+    "title": "Count evidence domains rather than returning copies",
+    "question": "Can a merge quorum based on auditable evidence sources beat a quorum over nominal forks?",
+    "hypothesis": "Unreviewed hunch: Source-grouped voting reduces common-source errors at matched compute, but loses the advantage when source overlap is hidden or honest sources share the same upstream error.",
+    "test": "Randomize synthetic question episodes to identity-majority, observed-source grouping, or conservative grouping that discounts unknown ancestry. Cross independent observations with duplicated and partially hidden upstream sources. Forks return factual reports only; model weights remain fixed. Give every policy identical reports and evaluate source-oracle grouping solely as a diagnostic ceiling. Cluster uncertainty by episode.",
+    "baseline": "Single best report, ordinary majority, and no-adversary task completion at equal report budget.",
+    "metrics": [
+      "parent answer accuracy",
+      "false consensus rate",
+      "abstention",
+      "accuracy conditional on ancestry missingness"
+    ],
+    "falsifier": "Observed-source grouping offers no improvement at any preregistered useful-coverage level, or gains depend entirely on oracle source labels.",
+    "confounds": "Grouping by wording rather than dependence; unequal retrieval quality; claiming a classical Byzantine threshold for free-text truth.",
+    "prior": [
+      {
+        "id": "lamport-1982-byzantine",
+        "relation": "Agreement under bounded arbitrary faults is distinct from truth recovery."
+      },
+      {
+        "id": "li-2026-benchmark",
+        "relation": "Direct shared-memory admission predecessor with authored input lineage."
+      },
+      {
+        "id": "kim-2025-correlated",
+        "relation": "Natural error correlation motivates dependence controls, not attack thresholds."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Known synthetic ancestry with separately logged deployable observations and missing-edge mechanisms.",
+    "briefs": [
+      "synthesis/pre-experiment-research.md",
+      "synthesis/fork-merge-questions.md"
+    ]
+  },
+  {
+    "id": "SEC-04",
+    "area": "fork-merge-security",
+    "title": "Separate returned evidence from permission changes",
+    "question": "How much corruption comes from a returning report changing the parent's authority rather than its factual beliefs?",
+    "hypothesis": "Unreviewed hunch: An enforced typed return interface preserves factual learning while preventing a report from directly changing tool permissions or persistent instructions.",
+    "test": "Randomize fork-join episodes among free-text report ingestion, schema-validated factual claims, and the same schema with a separate enforced authority boundary. Use benign misleading recommendations and simulated permission requests in an isolated toy tool environment. Hold the information content and child task success fixed, then measure both factual adoption and unauthorized mock actions. All outbound effects remain simulated.",
+    "baseline": "Natural-language warning alone; trusted reports passed through each interface to measure usefulness cost.",
+    "metrics": [
+      "unauthorized mock-action rate",
+      "factual task success",
+      "rejected legitimate changes",
+      "human-review requests"
+    ],
+    "falsifier": "Enforcement does not reduce unauthorized actions, or its apparent safety consists only of blocking all useful returned information.",
+    "confounds": "Giving the typed policy better evidence, schema fields that still carry executable authority, tool permissions already preventing the event.",
+    "prior": [
+      {
+        "id": "triedman-2025-multi",
+        "relation": "Measured cross-agent control-flow hijacking is a close boundary failure."
+      },
+      {
+        "id": "cai-2026-child",
+        "relation": "Spawn invariants distinguish memory inheritance and resource authority."
+      },
+      {
+        "id": "louck-2026-securing",
+        "relation": "Origin-bound authority is a direct predecessor, with explicit trusted-principal assumptions."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Enumerated authority-changing actions and a deterministic mock enforcement layer.",
+    "briefs": [
+      "synthesis/fork-merge-questions.md"
+    ]
+  },
+  {
+    "id": "SEC-05",
+    "area": "fork-merge-security",
+    "title": "Preserve uncertainty through repeated compaction",
+    "question": "Can concise memory summaries retain uncertain origins without becoming too large to use?",
+    "hypothesis": "Unreviewed hunch: A compact explicit provenance-and-authority envelope reduces unsupported promotion through repeated summarization at equal context budget, particularly when two weak sources appear to corroborate one another.",
+    "test": "Randomize independent synthetic memory histories to ordinary summaries, exact-preserved source envelopes, or equally long uncertainty prose. Repeat the same number of compaction and retrieval cycles. Vary whether apparent corroborators share a hidden upstream source. Evaluate later decisions on unseen task prompts, including true claims from low-authority sources, rather than checking summary wording alone.",
+    "baseline": "Raw-history access as a costly ceiling and budget-matched generic summarization.",
+    "metrics": [
+      "unsupported authority promotions",
+      "downstream wrong actions",
+      "true-claim recall",
+      "memory tokens",
+      "ancestry calibration"
+    ],
+    "falsifier": "Structured envelopes do not outperform equal-length prose, or improve safety only by removing all uncertain but useful facts.",
+    "confounds": "Semantic dependence missing from explicit edges; longer contexts; measuring copied tags instead of actual action constraints.",
+    "prior": [
+      {
+        "id": "zerhoudi-2026-compaction",
+        "relation": "Type-sensitive retention is prior art, not a new idea here."
+      },
+      {
+        "id": "liu-2026-safe",
+        "relation": "Compression can create new actionable combinations."
+      },
+      {
+        "id": "ouyang-2026-memlineage",
+        "relation": "Lineage enforcement assumes attributed derivations."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Matched token allocation and full audit of nearest consolidation methods before promotion.",
+    "briefs": [
+      "synthesis/pre-experiment-research.md",
+      "synthesis/fork-merge-questions.md"
+    ]
+  },
+  {
+    "id": "SEC-06",
+    "area": "fork-merge-security",
+    "title": "Repair when the dependency graph is wrong",
+    "question": "How should a parent retract a false claim when some derived memories have missing or incorrect parents?",
+    "hypothesis": "Unreviewed hunch: Selective quarantine plus fresh evidence gathering retains more useful state than global reset and produces fewer recurring errors than recorded-edge rollback alone.",
+    "test": "Generate independent reversible planning episodes with ground-truth dependency graphs, then corrupt the graph presented to the runtime using missing-edge and spurious-edge processes. Randomize repair policy after a standardized correction. Test later tasks requiring both affected and unaffected knowledge. Hold fresh-retrieval and token budgets equal. Oracle repair is a diagnostic upper bound, never a candidate deployed method.",
+    "baseline": "MemTX-style recorded-descendant retraction, full memory reset, and append-only correction.",
+    "metrics": [
+      "recurrence of corrected error",
+      "unaffected knowledge retention",
+      "legitimate completion",
+      "repair latency",
+      "unnecessary quarantine"
+    ],
+    "falsifier": "The proposed policy has no safety-utility advantage over recorded-edge rollback or reset under any planned nonzero graph-error condition.",
+    "confounds": "Unlogged model-state persistence; attributing every later error to recurrence; extra evidence access granted only to repair.",
+    "prior": [
+      {
+        "id": "li-2026-memtx",
+        "relation": "Direct cascading repair predecessor explicitly limited to recorded provenance."
+      },
+      {
+        "id": "elnozahy-2002-survey",
+        "relation": "Recovery consistency and output commitments constrain restoration claims."
+      },
+      {
+        "id": "ouyang-2026-memlineage",
+        "relation": "Trust propagation supplies an adjacent tracked-lineage baseline."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "A reversible environment and preregistered repair utility frontier; source-code reuse license audit.",
+    "briefs": [
+      "synthesis/pre-experiment-research.md"
+    ]
+  },
+  {
+    "id": "SEC-07",
+    "area": "fork-merge-security",
+    "title": "Stale children can undo a correction",
+    "question": "Can a corrected parent safely reintegrate a fork that left before the correction?",
+    "hypothesis": "Unreviewed hunch: Version-bound return records with explicit revalidation reduce stale-memory reintroduction better than ordinary timestamps, without requiring rejection of every late report.",
+    "test": "Randomize independent task episodes to timestamp-only merge, correction-epoch checks, or checks plus selective evidence refresh. Spawn before a scheduled fact correction and vary return delay independently of report quality. Some old reports contain valuable facts unaffected by the correction. Evaluate the parent's subsequent decisions and usefulness after reintegration; compare only at equal refresh budget.",
+    "baseline": "Accept-all late reports, reject-all stale reports, and a clean parent that never forked.",
+    "metrics": [
+      "corrected-claim recurrence",
+      "valid late knowledge retained",
+      "revalidation cost",
+      "late-report rejection rate"
+    ],
+    "falsifier": "Epoch revalidation cannot improve the recurrence-retention tradeoff over rejecting all old reports, or succeeds only with complete semantic lineage.",
+    "confounds": "Timestamp ordering mistaken for causality; stale factual claims whose truth actually changes back; leakage of evaluator ancestry into policy.",
+    "prior": [
+      {
+        "id": "cai-2026-child",
+        "relation": "Reports asynchronous memory divergence in spawned children."
+      },
+      {
+        "id": "li-2026-memtx",
+        "relation": "Recorded-descendant repair does not automatically repair disconnected old children."
+      },
+      {
+        "id": "elnozahy-2002-survey",
+        "relation": "Consistent distributed recovery is the older systems analogue."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Explicit version semantics and correction relevance labels generated independently of the policy.",
+    "briefs": [
+      "synthesis/pre-experiment-research.md",
+      "synthesis/fork-merge-questions.md"
+    ]
+  },
+  {
+    "id": "SEC-08",
+    "area": "fork-merge-security",
+    "title": "Protect the honest return channel",
+    "question": "Can a corrupted child dominate the parent by consuming attention even when honest children remain a majority?",
+    "hypothesis": "Unreviewed hunch: A reserved correction channel and contribution-aware queue reduce parent error more than equal per-message quotas when long or repeated reports crowd out useful dissent.",
+    "test": "Randomize whole merge episodes to arrival-order ingestion, per-identity fair queueing, and a bounded reserved channel for checked corrections. Use a fixed set of child identities and separately a cheap-identity condition. Replay the same honest reports while a local traffic generator varies length and arrival timing under a fixed token budget. Log every stage from attempted submission to retained context.",
+    "baseline": "Uniform report truncation and no-flood episodes; source-oracle prioritization only as a ceiling.",
+    "metrics": [
+      "honest tokens actually read",
+      "correction delivery",
+      "parent error",
+      "legitimate throughput",
+      "queue latency"
+    ],
+    "falsifier": "Improvement disappears after matching delivered token budgets, or attackers occupy the correction channel as easily as the main channel.",
+    "confounds": "Undefined correction verification, queue identity splitting, conflating exclusion with persuasion after exposure.",
+    "prior": [
+      {
+        "id": "demers-1989-analysis",
+        "relation": "Fair resource allocation and per-process splitting are established issues."
+      },
+      {
+        "id": "triedman-2025-multi",
+        "relation": "Cross-agent handoffs motivate preserving control boundaries."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "A measurable correction predicate and separate attempted, admitted, delivered, retrieved, retained counters.",
+    "briefs": [
+      "synthesis/fork-merge-questions.md",
+      "synthesis/pre-experiment-research.md"
+    ]
+  },
+  {
+    "id": "SEC-09",
+    "area": "fork-merge-security",
+    "title": "Screen the combination, not only each weight update",
+    "question": "When does testing each returned weight update miss failures created only by their combination?",
+    "hypothesis": "Unreviewed hunch: Small joint-composition audits catch some failures missed by standalone screening, but pairwise tests fail when interactions require larger coalitions or differ from the final merge rule.",
+    "test": "Use isolated small classification models with benign target-label errors. Randomize matched update batches to standalone tests, pairwise merged tests, or final-combination tests under equal evaluation budget. Include independently degraded updates and jointly interacting updates. Compare held-out clean accuracy and trigger-specific classification errors; do not infer anything about text-report merging from these weight-space results.",
+    "baseline": "Unscreened merge and norm-based update filtering; clean heterogeneous updates measure unnecessary rejection.",
+    "metrics": [
+      "held-out targeted error",
+      "clean accuracy",
+      "bad-batch recall",
+      "honest-update rejection",
+      "audit compute"
+    ],
+    "falsifier": "Joint audits do not improve targeted-error detection at matched cost, or all gains come from rejecting useful specialized models.",
+    "confounds": "Training/evaluation trigger overlap; merge coefficient leakage; comparing incompatible model architectures.",
+    "prior": [
+      {
+        "id": "zhang-2024-badmerging",
+        "relation": "Shows one model contribution can survive multiple merge operators."
+      },
+      {
+        "id": "li-2026-when",
+        "relation": "Composition-only latent vulnerabilities are the closest motivation; entry is skimmed."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "training",
+    "needs": "Full methods and licensing audit; small harmless classifier setup and explicit update provenance.",
+    "briefs": [
+      "synthesis/fork-merge-questions.md"
+    ]
+  },
+  {
+    "id": "SEC-10",
+    "area": "fork-merge-security",
+    "title": "Distinguish useful specialization from harmful drift",
+    "question": "Do merge validators reject useful unusual expertise because it differs from the parent's expectations?",
+    "hypothesis": "Unreviewed hunch: Validators that check task-specific evidence and authority separately accept more useful divergent reports at the same harmful-admission rate than similarity-to-parent screening.",
+    "test": "Randomize synthetic domain-learning episodes to parent-similarity screening or evidence-and-authority screening. Cross reports with genuinely new correct observations, ordinary mistakes, and irrelevant behavioral instructions. Hide truth labels from validators and give each equal verification access. Keep report format balanced across categories, then test parent transfer on a new question from the learned domain.",
+    "baseline": "Accept all, reject all, and a fixed trusted-source list with identical source-access costs.",
+    "metrics": [
+      "useful novelty retained",
+      "false admission",
+      "new-domain accuracy",
+      "verification cost",
+      "authority violations"
+    ],
+    "falsifier": "Evidence-oriented validation cannot improve the safety-versus-learning frontier, or requires an external oracle supplying the answer.",
+    "confounds": "Novelty confused with factual error; surface style revealing condition; changed parent capability across model versions.",
+    "prior": [
+      {
+        "id": "li-2026-benchmark",
+        "relation": "Admission policy already trades rejection against useful truths."
+      },
+      {
+        "id": "louck-2026-securing",
+        "relation": "Separates origin authority from persuasive content."
+      },
+      {
+        "id": "kim-2025-correlated",
+        "relation": "Shared model errors make parent agreement an imperfect quality test."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Independent correctness labels and a task suite in which novelty can genuinely help.",
+    "briefs": [
+      "synthesis/pre-experiment-research.md",
+      "synthesis/fork-merge-questions.md"
+    ]
+  },
+  {
+    "id": "SEC-11",
+    "area": "fork-merge-security",
+    "title": "Does merge order change what the parent believes?",
+    "question": "How much does sequential report order change a parent's final state when the underlying evidence is identical?",
+    "hypothesis": "Unreviewed hunch: Staging all claims before joint consolidation reduces order-induced authority promotion compared with repeated immediate summarization, especially when corrections arrive late.",
+    "test": "For each independently generated report set, randomly permute order and assign a merge policy: immediate rolling summary, staged joint consolidation, or structured claim store. Match final context size and total processing budget. Include conflicting factual reports and corrections with known source relations. Estimate order variance within each set, then aggregate at the report-set level.",
+    "baseline": "A single final read of the full evidence and shuffled labels that preserve content.",
+    "metrics": [
+      "between-order answer variance",
+      "correction retention",
+      "source-authority errors",
+      "task success",
+      "total tokens"
+    ],
+    "falsifier": "Staging has no reduction in order sensitivity after compute is matched, or order stability comes from ignoring relevant late evidence.",
+    "confounds": "Recency effects from context truncation, unbalanced number of model calls, treating repeated permutations as independent tasks.",
+    "prior": [
+      {
+        "id": "li-2026-memtx",
+        "relation": "Tentative versus committed state motivates explicit staging."
+      },
+      {
+        "id": "zerhoudi-2026-compaction",
+        "relation": "Repeated compaction can lose constraints."
+      },
+      {
+        "id": "liu-2026-safe",
+        "relation": "Compression can change relations among individually safe pieces."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "api-small",
+    "needs": "A precise meaning of merge for text and memory; no inferred claim about parameter averaging.",
+    "briefs": [
+      "synthesis/fork-merge-questions.md"
+    ]
+  },
+  {
+    "id": "SEC-12",
+    "area": "fork-merge-security",
+    "title": "What kind of validator diversity actually helps?",
+    "question": "Does using a different model to validate returned work help beyond changing its evidence and tools?",
+    "hypothesis": "Unreviewed hunch: Independent evidence access reduces joint validator failures more reliably than model-name diversity alone, although the effects can interact.",
+    "test": "Randomize independent task batches in a factorial design crossing same versus different model family with shared versus independently retrieved evidence. Give monitors identical authority and a fixed compute budget. Use benign incorrect reports and ordinary clean work, with errors hidden from monitors. Separate error detection, unnecessary blocking, and final task completion; avoid assuming different providers imply independent training.",
+    "baseline": "Same-model duplicate monitor, single monitor, and evidence-only verification without an additional LLM judge.",
+    "metrics": [
+      "joint miss probability",
+      "conditional error agreement",
+      "false rejection",
+      "parent accuracy",
+      "verification cost"
+    ],
+    "falsifier": "Independent evidence does not improve misses at fixed false rejection, or model diversity alone accounts for all observed benefit across held-out tasks.",
+    "confounds": "Unequal model capability, source-quality changes, prompt reuse, tuning to a narrow error family.",
+    "prior": [
+      {
+        "id": "greenblatt-2023-ai",
+        "relation": "AI-control monitoring provides an established comparator family."
+      },
+      {
+        "id": "kim-2025-correlated",
+        "relation": "Measured natural error dependence cautions against independence assumptions."
+      },
+      {
+        "id": "ron-2026-n-version",
+        "relation": "Diverse coding systems can still fail together."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Matched task difficulty, model version pinning, and source-overlap logs.",
+    "briefs": [
+      "synthesis/fork-merge-questions.md",
+      "synthesis/pre-experiment-research.md"
+    ]
+  },
+  {
+    "id": "SEC-13",
+    "area": "sybil-resistance",
+    "title": "Budget useful attention when identities are cheap",
+    "question": "Which accounting unit limits a single contributor's attention capture without knowing its operator identity?",
+    "hypothesis": "Unreviewed hunch: Charging scarce credits for admitted tokens is more resistant to identity splitting than equal per-identity slots, but free correction access needs separate protection.",
+    "test": "Randomize independent synthetic message rounds to per-identity quotas, global token-priced credits, or credits with a bounded correction reserve. Give each simulated principal the same starting total resource budget while allowing different numbers of keys. Vary message length independently of factual quality. Measure both admission and what actually reaches the final decision context; no real payments or public endpoints are involved.",
+    "baseline": "Arrival-order allocation and fixed-identity fair queueing at the same total throughput.",
+    "metrics": [
+      "influence gain from splitting",
+      "honest useful tokens retained",
+      "correction latency",
+      "task accuracy",
+      "resource cost per contribution"
+    ],
+    "falsifier": "Splitting raises influence equally under resource pricing, or resistance comes entirely from starving low-budget honest contributors.",
+    "confounds": "Granting fresh free credits to every new key, assuming unseen operator labels, measuring equal messages instead of equal resources.",
+    "prior": [
+      {
+        "id": "demers-1989-analysis",
+        "relation": "Resource fairness and process-splitting incentive are established."
+      },
+      {
+        "id": "douceur-2002-sybil",
+        "relation": "Distinct keys do not establish distinct resource holders."
+      },
+      {
+        "id": "crapis-2026-zk",
+        "relation": "Deposit-bounded usage is a design precedent, not verified implementation evidence."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Specify who issues credits and whether budgets can be pooled, rented, or replenished.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md",
+      "synthesis/pre-experiment-research.md"
+    ]
+  },
+  {
+    "id": "SEC-14",
+    "area": "sybil-resistance",
+    "title": "Coalition caps with noisy contribution estimates",
+    "question": "Can joint-contribution caps deter duplicate agent submissions when task value is only approximately measurable?",
+    "hypothesis": "Unreviewed hunch: A cap over observable subsets reduces payouts from duplicate submissions, but measurement noise and complementary contributions create a practical accuracy-cost limit.",
+    "test": "Generate independent small cooperative tasks with known ground-truth coalition value, then hide it behind noisy evaluations. Randomize payout rules among individual marginal credit, exact coalition constraints, and sampled subset constraints. Let a simulated contributor submit duplicated or complementary work under several names while keeping its underlying work budget fixed. Score coalition-level profit and honest contributors' utility, using exhaustive values only for evaluation.",
+    "baseline": "Equal split and a nonstrategic contributor population; exact-value constraints as an explicitly privileged ceiling.",
+    "metrics": [
+      "profit from splitting",
+      "honest payout distortion",
+      "unallocated budget",
+      "value-estimation calls",
+      "task welfare"
+    ],
+    "falsifier": "Practical sampled caps do not reduce splitting gains at usable evaluation budgets or penalize complementarity enough to erase welfare benefits.",
+    "confounds": "Assuming additive task value; using true operator groups in the deployed rule; conflating fixed-report splitting with all possible strategic behavior.",
+    "prior": [
+      {
+        "id": "buildernet-2025-refunds",
+        "relation": "Published identity constraint motivates transfer; docs say the described implementation is indicative."
+      },
+      {
+        "id": "mazorra-2023-cost",
+        "relation": "False-name and commitment games limit broad mechanism claims."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "An explicit value function and restricted threat model; verify closest mechanism proofs before any Sybil-proofness claim.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-15",
+    "area": "sybil-resistance",
+    "title": "Reputation should not become transferable expertise",
+    "question": "Can a router gain from sharing reputation across related skills without letting cheap successes purchase authority on untested skills?",
+    "hypothesis": "Unreviewed hunch: A small verified target-skill evidence requirement reduces cross-skill laundering while retaining much of the benefit of partial pooling for sparse honest agents.",
+    "test": "Randomize synthetic task markets to global scores, pooled skill scores, or pooled scores with target-skill evidence gates. Use known heterogeneous agent competencies and verified outcomes. Separately allow forged cheap-skill outcomes and merely easy but legitimate outcomes, so fabrication is not confused with distribution shift. Allocate identical exploration budgets and evaluate held-out target tasks across independently generated markets.",
+    "baseline": "Single best fixed agent and fully separated per-skill scores.",
+    "metrics": [
+      "routing regret",
+      "target-skill failure",
+      "newcomer time to assignment",
+      "verification cost",
+      "attack routing share"
+    ],
+    "falsifier": "The evidence gate provides no improvement over unpooled scores at equal exploration budget, or blocks useful honest specialists as often as misleading agents.",
+    "confounds": "Skills chosen after observing outcomes, oracle skill correlation, fabricated outcomes that the baseline would already reject.",
+    "prior": [
+      {
+        "id": "xia-2026-when",
+        "relation": "Direct reputation-laundering predecessor already tests a zero-evidence gate; this is a boundary study."
+      },
+      {
+        "id": "yu-2009-dsybil",
+        "relation": "Feedback-based trust offers a different identity-tolerant precedent."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Full replication of the nearest gate result before extending it to changing skill relationships.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-16",
+    "area": "sybil-resistance",
+    "title": "Re-entry penalties versus the newcomer tax",
+    "question": "How can a service discourage retire-and-replace identities without permanently favoring incumbents?",
+    "hypothesis": "Unreviewed hunch: Refundable deposits tied to verified work limit profitable re-entry more efficiently than long probation when legitimate newcomers have diverse quality and liquidity.",
+    "test": "Randomize independent simulated service markets to reputation-only admission, probation queues, or refundable work deposits. Model principals that can rotate keys, a mixture of honest newcomer budgets, and an observable task-outcome delay. Keep expected honest participation cost comparable. Sweep identity retirement behavior in separate evaluation policies rather than tuning to a single fixed attacker script.",
+    "baseline": "Uniform immediate admission and a fixed identity registry, the latter labeled a closed-membership ceiling.",
+    "metrics": [
+      "profit from identity reset",
+      "honest entry delay",
+      "good-work completion",
+      "capital lockup",
+      "incumbent market share"
+    ],
+    "falsifier": "Deposits fail to reduce profitable resets at matched honest burden or simply exclude resource-poor high-quality entrants.",
+    "confounds": "Known operator mapping, instant quality feedback, assumed deposit recovery, equating simulated utility with observed real behavior.",
+    "prior": [
+      {
+        "id": "resnick-2023-contingent",
+        "relation": "Identifies re-entry weaknesses in reputation penalties."
+      },
+      {
+        "id": "mazorra-2023-cost",
+        "relation": "Makes per-identity cost and strategic response explicit."
+      },
+      {
+        "id": "strobel-2020-blockchain",
+        "relation": "Deposits for readings supply a narrow swarm precedent, not general market evidence."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Define outcomes that can be verified and an honest-entry cost envelope; no live financial trial.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-17",
+    "area": "sybil-resistance",
+    "title": "Private rate limits across many credentials",
+    "question": "What does anonymous rate limiting guarantee when one principal can legitimately hold several credentials?",
+    "hypothesis": "Unreviewed hunch: Per-epoch nullifiers prevent reuse of one allowance but total usage still scales with acquired credentials unless a conserved resource is bound across them.",
+    "test": "Build a toy request simulator with exact credential ownership known only to the evaluator. Randomize request batches to per-key token buckets, anonymous per-credential nullifiers, and resource-bounded tickets. Cross credential pooling, epoch boundaries, and retries after failed requests. Evaluate rate enforcement and observable linkability from the server's permitted logs; model the cryptographic primitives ideally and label that simplification.",
+    "baseline": "Public account quotas and unlimited anonymous access with the same nominal honest request volume.",
+    "metrics": [
+      "excess successful requests",
+      "honest retry rejection",
+      "cross-request linkage accuracy",
+      "verification overhead",
+      "budget conservation failures"
+    ],
+    "falsifier": "Multiplying acquired credentials does not increase allowed usage despite the absence of cross-credential resource binding. Ticket reuse or spending beyond a conserved budget is a separate protocol-integrity failure, not the direct test of credential multiplication.",
+    "confounds": "Treating a credential as one person, omitted refunds, boundary bursts, claiming cryptographic implementation security from ideal primitives.",
+    "prior": [
+      {
+        "id": "barrywhitehat-2019-semaphore",
+        "relation": "RLN explicitly relies on separate admission assumptions."
+      },
+      {
+        "id": "crapis-2026-zk",
+        "relation": "Anonymous usage-credit proposal specifies deposits, tickets, and refunds."
+      },
+      {
+        "id": "douceur-2002-sybil",
+        "relation": "Explains why multiplying accepted identities remains consequential."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Credential issuance and pooling model; subsequent implementation audit before privacy claims.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-18",
+    "area": "sybil-resistance",
+    "title": "Identity-invariant selection can still concentrate knowledge",
+    "question": "Does stake-weighted assignment preserve independent evidence when money and expertise are unevenly distributed?",
+    "hypothesis": "Unreviewed hunch: Selection proportional to a conserved stake can resist simple stake splitting while reducing epistemic diversity if stake concentrates in contributors sharing evidence or models.",
+    "test": "Randomize independent synthetic task markets to identity-uniform, stake-proportional, and stake-proportional-with-observed-source-diversity selection. Hold total stake, task costs, and selected seat count fixed while independently assigning capability and source overlap. Compare unsplit and split representations of identical stake. Source diversity uses only recorded observations; evaluator operator labels remain hidden.",
+    "baseline": "Resource-matched random selection from a closed list and an oracle evidence-diversity ceiling.",
+    "metrics": [
+      "selection change under splitting",
+      "independent evidence coverage",
+      "task accuracy",
+      "stake concentration",
+      "low-stake specialist inclusion"
+    ],
+    "falsifier": "Stake-proportional selection changes materially under simple splitting of unchanged total stake, or concentrating stake in contributors with shared sources does not reduce evidence coverage at matched capability and selected seat count.",
+    "confounds": "Assuming capital predicts competence, fixed identities in a supposedly open market, transferring auction theorems outside their utility assumptions.",
+    "prior": [
+      {
+        "id": "gilad-2017-algorand",
+        "relation": "Stake-based selection provides an identity-splitting invariant under its assumptions."
+      },
+      {
+        "id": "pan-2024-sybil",
+        "relation": "Allocation tradeoffs depend on explicit private-good and incentive assumptions."
+      },
+      {
+        "id": "kim-2025-correlated",
+        "relation": "Nominal model diversity need not supply independent errors."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Separate capital, competence, and evidence-source variables; no recommendation of a financial mechanism.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-19",
+    "area": "sybil-resistance",
+    "title": "Do graph defenses mistake new teams for Sybils?",
+    "question": "How do trust-graph Sybil defenses behave when legitimate agent teams are intentionally modular?",
+    "hypothesis": "Unreviewed hunch: Community-based admission disproportionately rejects honest specialist teams joined by a few bridge edges; outcome-verified bridges help more than adding unverified interactions.",
+    "test": "Generate independent graphs with honest modular teams and a separate simulated adversarial cluster. Randomize graph construction to matched degree and activity distributions, then vary verified task outcomes on bridge edges without changing edge count. Evaluate existing graph rankings and a variant using verified-edge evidence. Use held-out graph families, not random nodes from the same graph, for final assessment.",
+    "baseline": "Degree-only ranking, local community detection, and graph defense with perfectly known honest seeds as a labeled ceiling.",
+    "metrics": [
+      "honest-team rejection",
+      "adversarial admission",
+      "task coverage lost",
+      "sensitivity to seed placement",
+      "verification cost"
+    ],
+    "falsifier": "Modularity causes no excess rejection after degree matching, or verified bridges add no discrimination beyond edge count.",
+    "confounds": "Synthetic graph generators encoding the label, unrealistically trusted seeds, counting many nodes from one graph as independent samples.",
+    "prior": [
+      {
+        "id": "viswanath-2010-analysis",
+        "relation": "Shows several graph defenses behave like local community detection."
+      },
+      {
+        "id": "tran-2009-sybil-resilient",
+        "relation": "Bounds influence through attack-edge assumptions rather than key count."
+      },
+      {
+        "id": "douceur-2002-sybil",
+        "relation": "Trust and resource assumptions remain necessary."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Audit and run available graph baselines; realistic team structure with independent labels.",
+    "briefs": [
+      "surveys/sybil-resistance.md",
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-20",
+    "area": "sybil-resistance",
+    "title": "One human credential does not mean one autonomous agent",
+    "question": "What influence bound survives when genuine credential holders delegate or pool their access?",
+    "hypothesis": "Unreviewed hunch: A per-person admission limit bounds issued seats under its issuer assumptions but does not bound common decision-making control after permitted delegation.",
+    "test": "Simulate consenting credential holders who independently choose whether to delegate a fraction of their task budget to a common planner. Randomize markets to credential-only limits, resource caps, or auditable delegation trees with voluntary disclosure. Keep the number of valid people fixed. Evaluate concentration of decisions and legitimate delegation utility; use only synthetic identities and do not implement covert credential rental.",
+    "baseline": "Independent holders with the same budgets and an explicitly privileged known-delegation ceiling.",
+    "metrics": [
+      "decision concentration",
+      "coalition influence",
+      "legitimate delegated throughput",
+      "false common-control attribution",
+      "privacy exposure"
+    ],
+    "falsifier": "Permitted pooling does not increase common-planner decision concentration relative to independent holders with the same total resources, or the apparent increase is fully explained by a larger resource budget rather than delegation.",
+    "confounds": "Equating common control with harmful intent, treating non-disclosure as malicious, assuming transferable credentials when the scheme forbids it mechanically.",
+    "prior": [
+      {
+        "id": "adler-2024-personhood",
+        "relation": "Defines credential goals; library entry is abstract-level and not an audited protocol."
+      },
+      {
+        "id": "austgen-2024-liquefaction",
+        "relation": "Demonstrates rights delegation can break simple single-owner assumptions."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Specify permissible delegation and the exact influence resource before evaluating a credential design.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-21",
+    "area": "sybil-resistance",
+    "title": "Audit what an attestation actually identifies",
+    "question": "Can an agent registry distinguish software integrity, machine identity, runtime instance, and operator ownership?",
+    "hypothesis": "Unreviewed hunch: A registry using workload measurements alone accepts many indistinguishable replicas; binding an instance challenge improves replay detection but still does not establish distinct operators.",
+    "test": "On authorized test hardware or a faithful attestation mock, randomize registration trials across one image on many instances, many images on one host, restarts, and independent operators running the same image. Compare measurement-only checks, freshness challenges, and an external operator allowlist. Record which label each observed field can support. Mock results remain protocol tests rather than claims about real TEE security. Treat independent host/hardware configurations, or independently generated mock configurations, as analysis units; registration retries and restarts are nested observations.",
+    "baseline": "Signed self-declared metadata and the explicitly centralized allowlist.",
+    "metrics": [
+      "duplicate-instance acceptance",
+      "restart false rejection",
+      "operator-linking error",
+      "registration latency",
+      "fields revealing host identity"
+    ],
+    "falsifier": "The asserted distinction is already reliably enforced by the actual registry fields, or proposed freshness binding confuses ordinary restart with a duplicate.",
+    "confounds": "Hardware vendor-specific semantics, shared cloud tenancy, operator labels supplied as ground truth to the policy, quoting historic configurations as current production behavior.",
+    "prior": [
+      {
+        "id": "collective-2024-portrait",
+        "relation": "Direct analysis of code, CPU, instance, and application identity limits."
+      },
+      {
+        "id": "douceur-2002-sybil",
+        "relation": "Authentication does not alone establish distinct entities."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "hardware",
+    "needs": "Current registry specification and authorized hardware access; full attestation field audit.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-22",
+    "area": "sybil-resistance",
+    "title": "Do agents spam because timing rewards attempts?",
+    "question": "Can explicit allocation of task opportunities reduce redundant polling without suppressing useful competition?",
+    "hypothesis": "Unreviewed hunch: When rewards depend on being first after a delayed signal, an explicit scheduled allocation reduces wasted attempts compared with cheap polling; gains depend on honest access to opportunity information.",
+    "test": "Randomize independent toy task markets to first-arrival assignment, paid attempt credits, or scheduled bids for execution slots. Use simulated rewards and a fixed resource budget. Cross symmetric and asymmetric signal delays while allowing contributors to choose timing from a restricted policy family. Separate redundant unsuccessful attempts from useful completed tasks; test out-of-family strategies after initial tuning.",
+    "baseline": "Periodic polling at equal completion latency and a centralized known-best scheduler as an unattainable ceiling.",
+    "metrics": [
+      "wasted attempts per useful task",
+      "completion delay",
+      "total resource spend",
+      "allocation concentration",
+      "task quality"
+    ],
+    "falsifier": "Explicit allocation does not reduce wasted work at matched useful throughput, or only works by excluding slower legitimate participants.",
+    "confounds": "Applying equilibrium predictions to non-equilibrium learners, unequal reward values, treating free failed requests as costless to the service.",
+    "prior": [
+      {
+        "id": "mazorra-2026-timing",
+        "relation": "Formal backrunning model motivates the timing mechanism under specific assumptions."
+      },
+      {
+        "id": "flashbots-2025-mev",
+        "relation": "Operational spam measurements motivate pricing attempts, with heuristic labels."
+      },
+      {
+        "id": "pan-2024-sybil",
+        "relation": "Allocation incentives need a stated mechanism environment."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "A transparent payoff and information model; no transactions or live auctions.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-23",
+    "area": "sybil-resistance",
+    "title": "Physical identity under multiple radios and motion",
+    "question": "When does a radio fingerprint stop being a useful bound on distinct robots?",
+    "hypothesis": "Unreviewed hunch: Spatial fingerprint confidence degrades under co-located honest robots and multi-radio adversaries; fusing independent motion observations improves calibration without proving distinct operators.",
+    "test": "Use authorized robot or radio trials with randomized physical layouts: one transmitter with several software names, distinct co-located transmitters, and one controller driving multiple radios. Compare single-observation and motion-aggregated fingerprint policies under matched observation time. Evaluate coverage-control performance separately from identity classification. Run trials in permitted spectrum conditions and analyze independent layouts as replicates.",
+    "baseline": "Authenticated keys alone and oracle physical-transmitter labels, which do not reveal operator identity.",
+    "metrics": [
+      "transmitter grouping accuracy",
+      "honest co-location rejection",
+      "coverage error",
+      "observation latency",
+      "confidence calibration"
+    ],
+    "falsifier": "Motion aggregation gives no calibration or control benefit under matched cost, or its gains disappear with realistic channel variation.",
+    "confounds": "Treating a transmitter as a robot or a human, laboratory channel stability, movement patterns that reveal labels, unmodeled directional antennas.",
+    "prior": [
+      {
+        "id": "gil-2015-guaranteeing",
+        "relation": "Spatial fingerprints already defend a specific multi-robot setting."
+      },
+      {
+        "id": "douceur-2002-sybil",
+        "relation": "Resource assumptions limit physical tests as identity proofs."
+      },
+      {
+        "id": "strobel-2020-blockchain",
+        "relation": "Task-level swarm utility should accompany adversary classification."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "hardware",
+    "needs": "Available radios, raw channel measurements, calibration procedures, and explicit physical attacker budget.",
+    "briefs": [
+      "surveys/sybil-resistance.md",
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-24",
+    "area": "sybil-resistance",
+    "title": "Stop fake value even when every identity is real",
+    "question": "Can contribution verification resist colluding distinct participants whose work looks mutually supportive but adds no task value?",
+    "hypothesis": "Unreviewed hunch: External held-out task evaluation reduces circular endorsement rewards more than identity verification or contribution-graph topology alone.",
+    "test": "Generate independent synthetic collaboration projects containing useful dependency chains, redundant chains, and mutually endorsing low-value chains. Assign all participants valid distinct credentials. Randomize reward rules among graph-only credit, credential-gated credit, and held-out outcome evaluation. Keep evaluation budget fixed and include legitimate interdependent work that no individual can complete alone.",
+    "baseline": "Independent expert-oracle value labels for evaluation only and a simple duplicate-content penalty.",
+    "metrics": [
+      "reward to noncontributing coalitions",
+      "honest complementary credit",
+      "held-out task performance",
+      "evaluation cost",
+      "false collusion flags"
+    ],
+    "falsifier": "External evaluation fails to improve coalition-level reward accuracy or penalizes legitimate complementary work as heavily as circular endorsement.",
+    "confounds": "Benchmark gaming, tasks whose value appears only beyond the evaluation horizon, equating collaboration or shared ownership with fraud.",
+    "prior": [
+      {
+        "id": "glynn-2026-wash",
+        "relation": "Direct conceptual predecessor separates false identity from false value; forum evidence requires independent replication."
+      },
+      {
+        "id": "buildernet-2025-refunds",
+        "relation": "Joint-contribution caps motivate measuring coalition value rather than counting names."
+      },
+      {
+        "id": "xia-2026-when",
+        "relation": "Reputation can amplify unverified evidence into routing authority."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "A defensible external value measure with genuine complementarity and no label leakage.",
+    "briefs": [
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-25",
+    "area": "swarm-detection",
+    "title": "Separate model, prompt, scaffold, and operator attribution",
+    "question": "Which entity does a conversational fingerprint actually identify?",
+    "hypothesis": "Unreviewed hunch: Many apparent operator-linking gains disappear when unrelated operators reuse the same prompt or scaffold, while some useful same-operator evidence remains after controlling those factors.",
+    "test": "Create authorized conversational agents in a crossed design with independently assigned operator role, model family, scaffold, system prompt, and task. Randomize sessions to these configurations and evaluate separate targets: same model, same prompt, same operator, and explicit coordination. Hold out entire operators and prompt templates. Do not use the assigned operator ID as a feature or assume a synthetic operator represents human habits.",
+    "baseline": "Model-family classifier, prompt-similarity classifier, and metadata-only linker.",
+    "metrics": [
+      "pairwise precision-recall per target",
+      "false links between independent operators",
+      "cluster purity",
+      "calibration",
+      "sessions required per entity"
+    ],
+    "falsifier": "Operator accuracy stays unchanged after prompt and scaffold disjointness, or no operationally useful operator signal remains beyond those shared components.",
+    "confounds": "Synthetic operators distinguished by assigned wording, pair leakage across splits, confusion between ownership and synchronized behavior.",
+    "prior": [
+      {
+        "id": "white-2026-black",
+        "relation": "Same-prompt and base-model forensics do not themselves establish common ownership."
+      },
+      {
+        "id": "pasquini-2024-llmmap",
+        "relation": "Explicitly targets model identity, supplying a useful separate baseline."
+      },
+      {
+        "id": "park-2026-cross",
+        "relation": "Campaign linking is evaluated on synthetic sessions, motivating held-out design."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "api-small",
+    "needs": "Explicit target taxonomy and enough independent controlled operators or operator policies for a valid held-out split.",
+    "briefs": [
+      "synthesis/swarm-detection-methods.md",
+      "synthesis/pre-experiment-research.md"
+    ]
+  },
+  {
+    "id": "SEC-26",
+    "area": "swarm-detection",
+    "title": "Measure the simulator fingerprint before measuring swarms",
+    "question": "How much detection performance comes from the recipe used to create the benchmark?",
+    "hypothesis": "Unreviewed hunch: Random session splits substantially overstate generalization when the same generator, prompt templates, or collection process appears in train and test.",
+    "test": "Construct matched authorized datasets using multiple independent swarm generators and benign controls collected through the same instrumentation. Evaluate frozen detectors under random-session, generator-disjoint, operator-disjoint, and time-disjoint splits. Randomize generator assignment to task templates and remove explicit run metadata. Fit a separate classifier predicting dataset origin to quantify construction artifacts; estimate uncertainty across held-out generator families.",
+    "baseline": "Shallow metadata tree, text-only model, and activity-only model at the same label budget.",
+    "metrics": [
+      "held-out precision-recall",
+      "generalization gap",
+      "dataset-origin prediction",
+      "false-positive rate by collection source"
+    ],
+    "falsifier": "Disjoint splits do not materially reduce accuracy, or origin prediction falls to chance while swarm detection remains stable across generators.",
+    "confounds": "True behavior differences accidentally removed with metadata; all generators built by the same author; claiming wild validity from synthetic diversity.",
+    "prior": [
+      {
+        "id": "hays-2023-simplistic",
+        "relation": "Direct evidence of dataset construction confounds in bot detection."
+      },
+      {
+        "id": "ng-2025-are",
+        "relation": "Abstract-level realism warning for generated social bots, not audited effect sizes."
+      },
+      {
+        "id": "park-2026-cross",
+        "relation": "Synthetic campaign benchmark provides a relevant candidate baseline."
+      }
+    ],
+    "novelty": "replication",
+    "feasibility": "offline",
+    "needs": "At least several independent generation and collection recipes; source-license and label audit.",
+    "briefs": [
+      "synthesis/swarm-detection-methods.md"
+    ]
+  },
+  {
+    "id": "SEC-27",
+    "area": "swarm-detection",
+    "title": "Shared news is not necessarily shared control",
+    "question": "Can a detector distinguish common external exposure from direct peer influence?",
+    "hypothesis": "Unreviewed hunch: Randomized information routing reveals that some timing-and-content coordination scores respond as strongly to shared public updates as to peer communication.",
+    "test": "Randomize independent simulated communities in a factorial design: shared versus independent external updates and enabled versus disabled peer links. Match total information opportunities and inference budget. Introduce a harmless randomly timed factual update and estimate the reduced-form effect of peer-channel assignment on downstream adoption. Keep causal influence, common exposure, and ownership as separate evaluator labels.",
+    "baseline": "Co-action network scores with topic-and-time matched benign controls; shuffled timestamps preserving daily activity patterns.",
+    "metrics": [
+      "false coordination alerts under common exposure",
+      "adoption effect of assigned peer links",
+      "detection delay",
+      "precision at fixed review budget"
+    ],
+    "falsifier": "Across held-out schedules, the detector consistently assigns higher coordination scores to peer-influence episodes than to matched shared-exposure-only episodes, with shared-exposure false alerts below a prespecified tolerance. A null adoption effect from peer assignment makes this design inconclusive about actual influence rather than refuting the detection hunch.",
+    "confounds": "Different evidence volume after disabling links, unmodeled exposure mappings, treating many messages as independent replicates.",
+    "prior": [
+      {
+        "id": "shalizi-2011-homophily",
+        "relation": "Observational patterns can leave contagion unidentified."
+      },
+      {
+        "id": "aronow-2013-estimating",
+        "relation": "Assignment, exposure, and estimand require separate specification."
+      },
+      {
+        "id": "pante-2025-beyond",
+        "relation": "Matched organic controls overturn apparent coordination in its setting."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "api-small",
+    "needs": "A preregistered exposure mapping and episode-level randomization; no claims about hidden real-world operators.",
+    "briefs": [
+      "synthesis/swarm-detection-methods.md",
+      "synthesis/pre-experiment-research.md"
+    ]
+  },
+  {
+    "id": "SEC-28",
+    "area": "swarm-detection",
+    "title": "A canary identifies a route, not always an operator",
+    "question": "What attribution can a per-recipient canary support when content passes through shared caches or search services?",
+    "hypothesis": "Unreviewed hunch: Distinct harmless canaries identify exposure pathways more reliably than direct ownership; shared intermediaries create false operator links unless routing uncertainty is reported.",
+    "test": "Randomize controlled crawler-and-answering episodes to direct retrieval, shared cache, shared index, and peer relay. Serve fictional low-stakes facts with independently generated tokens through a local test server. Vary which routes are visible to the detector while preserving evaluator logs. Require multiple independent token matches and score exposure-path and operator labels separately; nothing is planted on public sites.",
+    "baseline": "Single-token matching, passive response similarity, and a fully logged routing oracle used only for evaluation.",
+    "metrics": [
+      "route attribution precision",
+      "false ownership links",
+      "exposure recall",
+      "token collision rate",
+      "delay to observable reuse"
+    ],
+    "falsifier": "Canary evidence identifies operator ownership as precisely as exposure pathways despite shared intermediaries, without privileged routing labels, or route-attribution precision is no better than passive response similarity at matched exposure recall.",
+    "confounds": "Correlated token generation, caches leaking condition names, treating absent emission as proof of no exposure, queries that themselves reveal the canary.",
+    "prior": [
+      {
+        "id": "seiden-2026-identifying",
+        "relation": "Primary per-visitor canary study also observes search-mediated reuse and missed emissions."
+      },
+      {
+        "id": "farooqi-2020-canarytrap",
+        "relation": "Earlier per-counterparty honeytokens rely on observable downstream use; entry abstract-only."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Local synthetic sites, independent token generation, explicit route ground truth and collision analysis.",
+    "briefs": [
+      "synthesis/swarm-detection-methods.md"
+    ]
+  },
+  {
+    "id": "SEC-29",
+    "area": "swarm-detection",
+    "title": "Does shared memory teach agents to recognize test probes?",
+    "question": "How quickly does a canary detector lose sensitivity when a team can pool experience about the test environment?",
+    "hypothesis": "Unreviewed hunch: A fixed probe family becomes less diagnostic under pooled memory than under isolated sessions; rotating superficial token values does less than changing the underlying observable probe mechanism.",
+    "test": "Randomize controlled local agent teams to no history, private history, or shared history with equal total interaction budget. Use benign mock records and a fixed detection rule, then evaluate on held-out probe instances and separately on a new probe mechanism. Measure both agent recognition of probes and detector recognition of agents. Include genuine task items with matched appearance so avoiding everything is costly.",
+    "baseline": "Fresh independent sessions and a static scripted policy; no exposure to live honeypots or real credentials.",
+    "metrics": [
+      "detector sensitivity over exposures",
+      "false alerts on legitimate actions",
+      "probe recognition",
+      "task utility",
+      "shared-memory tokens"
+    ],
+    "falsifier": "Shared history does not accelerate probe recognition at matched budget, or rotating values alone prevents sensitivity decline across held-out conditions.",
+    "confounds": "More total observations in larger teams, preexisting model familiarity, interpreting non-triggering as proof of deliberate evasion.",
+    "prior": [
+      {
+        "id": "gans-2026-when",
+        "relation": "Abstract-level theoretical motivation; theorem assumptions need a full read before use."
+      },
+      {
+        "id": "seiden-2026-identifying",
+        "relation": "Observable emission is required for this canary family."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Audit nearest theory's learnability assumptions; harmless probes and equal total observations.",
+    "briefs": [
+      "synthesis/swarm-detection-methods.md"
+    ]
+  },
+  {
+    "id": "SEC-30",
+    "area": "swarm-detection",
+    "title": "Would the detector produce a useful review queue?",
+    "question": "Does high balanced-benchmark accuracy translate into useful precision when coordinated agent traffic is rare?",
+    "hypothesis": "Unreviewed hunch: Several apparently strong detectors produce mostly false alerts at low prevalence, and calibration plus abstention can improve review yield while leaving substantial missed activity.",
+    "test": "Freeze detectors before evaluation. Construct independent evaluation streams by mixing held-out authorized positive and benign episodes at prespecified prevalence scenarios, including rare events. Preserve operator-level clusters and burst lengths rather than sampling messages independently. Select thresholds using validation data only, then report both conditional error rates and scenario-specific expected review counts. These scenarios do not estimate actual internet prevalence.",
+    "baseline": "Fixed threshold from the balanced benchmark, calibrated threshold, and random selection at the same review budget.",
+    "metrics": [
+      "positive predictive value",
+      "false alerts per ten thousand episodes",
+      "recall",
+      "calibration error",
+      "review yield"
+    ],
+    "falsifier": "Balanced-set thresholds retain high review precision across all low-prevalence scenarios, or calibration yields no benefit at matched recall.",
+    "confounds": "Insufficient negatives to estimate very low false-positive rates, cherry-picked prevalence, correlated repeated alerts, defining all automation as harmful.",
+    "prior": [
+      {
+        "id": "varol-2022-should",
+        "relation": "Prevalence depends on definition, detector, and sampled population; a methods position source."
+      },
+      {
+        "id": "hays-2023-simplistic",
+        "relation": "Dataset artifacts can distort measured conditional errors."
+      },
+      {
+        "id": "pante-2025-beyond",
+        "relation": "Benign controls are essential to interpreting alerts."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Enough independent negatives, explicit prevalence sensitivity range, and a chosen review capacity.",
+    "briefs": [
+      "synthesis/swarm-detection-methods.md"
+    ]
+  },
+  {
+    "id": "SEC-31",
+    "area": "swarm-detection",
+    "title": "Separate assistance from autonomous action",
+    "question": "Can observable traces distinguish a human using AI for wording from an autonomous agent completing the whole task?",
+    "hypothesis": "Unreviewed hunch: Text-only detectors confound assistance with autonomy; consented interaction traces improve separation but vary strongly with accessibility tools and task type.",
+    "test": "Design a consented crossover study in which participants complete matched tasks unaided, with AI drafting, and with delegated agent completion; also include conventional scripts. Randomize condition order and task sets within participants. Compare text-only, timing-only, and combined detectors using participant-disjoint evaluation, with dedicated accessibility-tool controls. This is a study sketch only; recruit and collect data only after an appropriate review and consent plan.",
+    "baseline": "A four-class majority model and detectors trained only on human-versus-generated text.",
+    "metrics": [
+      "class-specific precision-recall",
+      "assisted-human false autonomous labels",
+      "participant-disjoint accuracy",
+      "task quality",
+      "accessibility subgroup errors"
+    ],
+    "falsifier": "Interaction features add no generalizable distinction between assistance and autonomy, or gains disappear on held-out users and tools.",
+    "confounds": "Self-report versus actual tool-use labels, order effects, unusual typing behavior, quality of participant instrumentation.",
+    "prior": [
+      {
+        "id": "xu-2026-penny",
+        "relation": "Abstract-level source separates respondent AI use from browser-agent presence."
+      },
+      {
+        "id": "wang-2026-towards",
+        "relation": "Abstract-level benchmark suggests response-level and behavioral detection differ."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "access-dependent",
+    "needs": "Consenting participants, privacy-minimized instrumentation, and full review of closest study methods.",
+    "briefs": [
+      "synthesis/swarm-detection-methods.md"
+    ]
+  },
+  {
+    "id": "SEC-32",
+    "area": "swarm-detection",
+    "title": "Are browser detectors detecting the automation library?",
+    "question": "How much browser-agent detection survives a change in the control interface?",
+    "hypothesis": "Unreviewed hunch: Performance based on missing mouse events and click timing degrades across control stacks, even when task autonomy and model family stay fixed.",
+    "test": "On a local authorized website, randomize identical benign tasks across an LLM agent using different browser interfaces, a deterministic script using those same interfaces, and consented human operation. Hold browser profile and machine settings constant where possible. Train on one control stack and test on another, with entire task templates held out. Do not design bypasses for public anti-abuse systems. Evaluate human controls on held-out participants as well as held-out tasks, and cluster uncertainty by participant/device rather than treating repeated sessions as independent.",
+    "baseline": "Environment metadata alone, interaction features alone, and task-success traces alone.",
+    "metrics": [
+      "cross-stack precision-recall",
+      "script-versus-agent confusion",
+      "human false positives",
+      "feature stability",
+      "task success"
+    ],
+    "falsifier": "Detection stays stable across interfaces and distinguishes agent decisions from matched scripted automation, rather than simply recognizing a particular stack.",
+    "confounds": "Hardware timing, browser versions, task difficulty, copying human traces rather than collecting representative controls.",
+    "prior": [
+      {
+        "id": "choudhary-2026-what",
+        "relation": "Measured high detection rests on browser-interaction features in a specific setup."
+      },
+      {
+        "id": "hays-2023-simplistic",
+        "relation": "Collection artifacts motivate domain-disjoint validation."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "access-dependent",
+    "needs": "Local browser instrumentation plus consented human controls; explicit versions and no external probing.",
+    "briefs": [
+      "synthesis/swarm-detection-methods.md"
+    ]
+  },
+  {
+    "id": "SEC-33",
+    "area": "swarm-detection",
+    "title": "A shared funder may be a service, not a shared owner",
+    "question": "Can on-chain behavioral clustering distinguish common ownership from use of the same funding or automation service?",
+    "hypothesis": "Unreviewed hunch: First-funder clustering overlinks independent users of a shared service; combining task-level behavior helps only if evaluation labels are independent of those same features.",
+    "test": "Generate local synthetic transaction histories with independently assigned ownership, funding service, task policy, and execution timing. Cross one owner with many funders and many owners with one funder. Freeze funding and behavior clusterers before testing held-out service patterns. Optionally validate against an authorized labeled testnet dataset, never assuming public address heuristics supply true owner labels.",
+    "baseline": "First-funder equality, transaction-grammar similarity, and a random clusterer matched on cluster-size distribution.",
+    "metrics": [
+      "ownership pair precision-recall",
+      "service-induced false links",
+      "cluster fragmentation",
+      "performance without label-revealing transactions"
+    ],
+    "falsifier": "First-funder clusters remain precise despite independent users of shared services, or behavior adds no ownership information beyond service patterns.",
+    "confounds": "Circular labels from the detector itself, class-revealing contracts, balance or timestamp artifacts, confusing automation with harmful coordination.",
+    "prior": [
+      {
+        "id": "xiong-2026-can",
+        "relation": "Shared-funder heuristic is a measurement approach, not verified ownership ground truth."
+      },
+      {
+        "id": "bartnicki-2026-compression",
+        "relation": "Behavioral grammar and label-leakage controls supply relevant baselines."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Independent owner labels in synthetic or authorized traces and a service-use nuisance variable.",
+    "briefs": [
+      "synthesis/swarm-detection-methods.md",
+      "synthesis/sybil-flashbots.md"
+    ]
+  },
+  {
+    "id": "SEC-34",
+    "area": "swarm-detection",
+    "title": "What disappears when only successful activity is logged?",
+    "question": "How does selective trace loss bias estimates of swarm size and coordination?",
+    "hypothesis": "Unreviewed hunch: Logs that omit blocked requests, failed tool calls, or private channels can reverse the ranking of coordination detectors, not merely lower all scores uniformly.",
+    "test": "Generate independently seeded authorized multi-agent episodes with complete event capture. Randomly assign masking mechanisms: uniform missingness, missing blocked actions, operator-specific private channels, and delayed ingestion. Fit or freeze detectors according to a prespecified protocol and compare conclusions against complete logs. Separate estimator robustness from the impossible task of recovering labels hidden by nonidentifiable observations.",
+    "baseline": "Complete trace oracle, naive observed-event analysis, and uncertainty intervals incorporating known sampling probabilities.",
+    "metrics": [
+      "swarm-size estimation error",
+      "coordination precision-recall",
+      "interval coverage",
+      "ranking reversals",
+      "unresolved-case fraction"
+    ],
+    "falsifier": "Detector rankings remain stable across all planned selective-loss mechanisms at prespecified meaningful-effect tolerances. Failure of a missingness correction alone does not refute the ranking-reversal hunch.",
+    "confounds": "Assuming the missingness mechanism is known in deployment, treating dropped content as no action, correlated events within one run.",
+    "prior": [
+      {
+        "id": "aronow-2013-estimating",
+        "relation": "Exposure and observation assumptions matter for interpretable estimates."
+      },
+      {
+        "id": "graham-2024-coordination",
+        "relation": "Co-action networks depend on observed time windows and behaviors."
+      },
+      {
+        "id": "varol-2022-should",
+        "relation": "Population and detector definitions shape prevalence claims."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Complete controlled traces and explicit statements of what cannot be identified under each mask.",
+    "briefs": [
+      "synthesis/swarm-detection-methods.md",
+      "synthesis/pre-experiment-research.md"
+    ]
+  },
+  {
+    "id": "SEC-35",
+    "area": "swarm-detection",
+    "title": "How quickly does an attribution detector expire?",
+    "question": "What happens to model and campaign attribution after model, prompt, or scaffold updates?",
+    "hypothesis": "Unreviewed hunch: Model, prompt, or scaffold changes can make a detector's confidence miscalibrated, and selective abstention with a small fresh calibration set limits false attribution.",
+    "test": "Create authorized repeated session batches before and after independently randomized model-version, prompt, and scaffold changes. Freeze the original detector and compare no update, recalibration only, and limited retraining using equal new-label budgets. Hold out complete configurations and preserve a no-change control. Evaluate attribution targets separately rather than relabeling every changed model as a changed operator.",
+    "baseline": "Static detector and a fully retrained detector with clearly disclosed larger data cost.",
+    "metrics": [
+      "calibration drift",
+      "false confident attribution",
+      "abstention",
+      "time to drift alarm",
+      "new labeled sessions needed"
+    ],
+    "falsifier": "Confidence remains calibrated across changes or recalibration cannot reduce false confident links at a useful retained coverage.",
+    "confounds": "API versions changing silently, task-distribution drift coinciding with model updates, updates tuned to the evaluation prompts.",
+    "prior": [
+      {
+        "id": "pasquini-2024-llmmap",
+        "relation": "Model-version fingerprinting motivates testing changes outside the original label set."
+      },
+      {
+        "id": "white-2026-black",
+        "relation": "Prompt and model attribution are separate targets."
+      },
+      {
+        "id": "hays-2023-simplistic",
+        "relation": "Out-of-distribution performance can differ sharply from random splits."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Accessible pinned model versions or local checkpoints and prospective calibration thresholds.",
+    "briefs": [
+      "synthesis/swarm-detection-methods.md"
+    ]
+  },
+  {
+    "id": "SEC-36",
+    "area": "swarm-detection",
+    "title": "Detect coordination with less identifying telemetry",
+    "question": "How much useful coordination detection survives when detailed identifiers and raw message content are removed?",
+    "hypothesis": "Unreviewed hunch: Coarse timing and task-category aggregates retain some campaign-level signal but fail on benign synchronized teams unless the detector explicitly models shared schedules.",
+    "test": "Randomize authorized synthetic communities to independent operation, benign scheduled collaboration, or shared goal-directed coordination. Export several predetermined telemetry views: full logs, pseudonymous co-action counts, and coarse aggregates with controlled noise. Compare frozen detectors under the same held-out communities. Evaluate privacy exposure with a separate linkage task, while acknowledging that this empirical attack test is not a formal privacy guarantee.",
+    "baseline": "Content-and-identity detector, activity-volume threshold, and shuffled co-action data preserving marginal schedules.",
+    "metrics": [
+      "coordination precision-recall",
+      "benign-team false alerts",
+      "cross-session linkage accuracy",
+      "data retained",
+      "task-group coverage"
+    ],
+    "falsifier": "Coarse telemetry provides no coordination discrimination beyond activity volume, or an unconditioned detector already separates benign scheduled teams from the target coordination class as reliably as a schedule-aware detector at matched recall.",
+    "confounds": "Privacy noise altering labels, shared heartbeat artifacts, repeatedly releasing aggregates without accounting for composition, equating coordination with maliciousness.",
+    "prior": [
+      {
+        "id": "graham-2024-coordination",
+        "relation": "Multi-behavior networks also identify legitimate syndication."
+      },
+      {
+        "id": "pante-2025-beyond",
+        "relation": "Benign controls are needed before interpreting apparent coordination."
+      },
+      {
+        "id": "park-2026-cross",
+        "relation": "Proxy-visible timing and structure are candidate signal types, with synthetic evidence limits."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Threat model for telemetry access, benign synchronized controls, and formal privacy review if differential privacy is claimed.",
+    "briefs": [
+      "synthesis/swarm-detection-methods.md"
+    ]
+  }
+]

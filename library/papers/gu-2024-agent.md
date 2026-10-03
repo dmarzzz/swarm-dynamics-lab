@@ -63,3 +63,14 @@ Reread the abstract 2026-10-03 for the Sybil-resistance lane. Infectious jailbre
 Read in full (arXiv HTML v2) on 2026-10-03 for the fork-merge lane. In each round, agents are paired at random. The questioner retrieves an image from its FIFO image album with CLIP and sends it to the answerer, and the answerer stores it. One adversarial image placed in one agent's album both triggers harmful output and makes itself the image retrieved, so it copies itself into the albums of new agents. The paper models this as an SIR-style recurrence. The number of rounds to reach a target infected fraction grows with log N, and a defence provably stops spread only if it drives the effective transmission below the recovery rate (Remark II). Recovery comes from album eviction, so smaller albums slow spread. Measured: exponential infection up to one million LLaVA-1.5 agents, including a heterogeneous LLaVA and InstructBLIP population and harmful function-call JSON. Plain visual and textual prompt-injection baselines failed to infect even one agent.
 
 How it bears on fork-merge (Q3, Q2): the attack never asks agents to "become" the attacker. It only needs the payload to be both harmful and preferentially retrieved, so that it propagates through ordinary memory exchange. A merge is one such exchange with a high-centrality node, the parent. The recovery condition in Remark II is the population-level analogue of a merge threshold. If merges, together with eviction or rollback, remove contamination faster than returning sub-agents reintroduce it, the infection dies out (inference from the paper's model, not tested for fork-merge). Related lane entries: [[dong-2025-memory]], [[xiong-2026-maple]], [[cohen-2024-here]].
+
+## Notes from dmarz/fm-code-bench
+
+Code catalogued as [[gh-sail-sg-agent-smith]] (MIT, 130 stars, last commit 2024-03-26; needs A100-class GPUs). The epidemic framing (one infected memory item, spread through pairwise exchange) maps onto a parent that merges children's memories as a hub; the paper's containment condition is the epidemic analogue of a Byzantine threshold (Q2).
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2402.08567 . Read depth in this session: abstract.
+
+Seed title, eight authors and 2024 date match the opened arXiv record. The million-agent result concerns simulated multimodal agents and retrieval-mediated image exchange, not one million independent production deployments. Forward chasing through Semantic Scholar identifies Cowpox and the newer reliability-contagion work; the former was read in full here. Do not treat a population transmission threshold as a Byzantine k-of-n merge theorem. See [[wu-2025-cowpox]] and [[niu-2026-reliability-contagion]].

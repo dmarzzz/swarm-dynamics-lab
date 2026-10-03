@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "definition_id": "REPLACE_agent-v1",
+  "role": "observer",
+  "model": {
+    "provider": "REPLACE_provider",
+    "requested_id": "REPLACE_snapshot",
+    "weights_sha256": "REPLACE_or_not_available",
+    "tokenizer": "REPLACE_revision",
+    "temperature": 0.2,
+    "top_p": 1.0,
+    "max_output_tokens": 512,
+    "reasoning": "REPLACE_setting",
+    "seed_support": "REPLACE_verified_semantics"
+  },
+  "prompts": [
+    {
+      "role": "system",
+      "path": "REPLACE_public_prompt.txt",
+      "sha256": "REPLACE_sha256"
+    }
+  ],
+  "tools": [
+    {
+      "name": "read_evidence",
+      "schema_path": "REPLACE_tool.schema.json",
+      "implementation_sha256": "REPLACE_sha256",
+      "permissions": [
+        "read:scenario/evidence"
+      ]
+    }
+  ],
+  "memory": {
+    "scope": "run/agent",
+    "initial_snapshot": "empty",
+    "retrieval_policy": "none",
+    "update_policy": "append observations",
+    "eviction_policy": "REPLACE_explicit_limit",
+    "reset": "new store per run"
+  },
+  "policy": {
+    "action_schema": "REPLACE_action.schema.json",
+    "context_truncation": "fail before overflow",
+    "invalid_action": "count as task failure",
+    "adaptation": "none"
+  },
+  "credential_aliases": []
+}

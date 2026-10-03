@@ -41,3 +41,10 @@ Abstract only. It predates most of the memory-poisoning literature catalogued he
 ## Relevance to us
 
 Background for Q3. It records "impact on other agents" as a threat category in 2024, before shared-memory propagation was measured ([[xiong-2026-maple]]). For memory-specific coverage, prefer [[lin-2026-survey]].
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2407.19354 . Read depth in this session: abstract.
+
+Review rediscovered through CORBA backward citations, then its current arXiv abstract and six-author record opened. It covers agent security/privacy and impacts on other agents. Catalogue reused, not duplicated. Its abstract supplies a general taxonomy rather than a measured containment result; newer memory-lifecycle and execution-interface reviews are [[lin-2026-survey]] and [[yang-2026-sok]].

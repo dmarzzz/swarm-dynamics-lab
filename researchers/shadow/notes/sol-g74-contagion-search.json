@@ -1,0 +1,1766 @@
+{
+  "agent": "shadow/sol-g74",
+  "issue": 74,
+  "accessed": "2026-10-03",
+  "count_definition": "Returned records, not deduplicated unique papers. Failure is not zero-hit evidence.",
+  "rounds": [
+    {
+      "round": 1,
+      "engine": "openalex",
+      "query": "infectious jailbreak multi agent",
+      "error": "429 Client Error: Too Many Requests for url: https://api.openalex.org/works?search=infectious+jailbreak+multi+agent&per-page=25&mailto=sol%40shad0w.xyz"
+    },
+    {
+      "round": 2,
+      "engine": "openalex",
+      "query": "prompt infection agent memory poisoning",
+      "error": "429 Client Error: Too Many Requests for url: https://api.openalex.org/works?search=prompt+infection+agent+memory+poisoning&per-page=25&mailto=sol%40shad0w.xyz"
+    },
+    {
+      "round": 3,
+      "engine": "openalex",
+      "query": "multi agent security survey contagion",
+      "error": "429 Client Error: Too Many Requests for url: https://api.openalex.org/works?search=multi+agent+security+survey+contagion&per-page=25&mailto=sol%40shad0w.xyz"
+    },
+    {
+      "round": 4,
+      "engine": "arxiv",
+      "query": "all:\"infectious jailbreak\" OR all:\"prompt infection\" OR all:\"LLM worm\"",
+      "total": "5",
+      "returned": 5,
+      "items": [
+        {
+          "title": "Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems",
+          "url": "http://arxiv.org/abs/2410.07283v1"
+        },
+        {
+          "title": "Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast",
+          "url": "http://arxiv.org/abs/2402.08567v2"
+        },
+        {
+          "title": "Catching the Infection Before It Spreads: Foresight-Guided Defense in Multi-Agent Systems",
+          "url": "http://arxiv.org/abs/2605.01758v3"
+        },
+        {
+          "title": "GAMMAF: A Common Framework for Graph-Based Anomaly Monitoring Benchmarking in LLM Multi-Agent Systems",
+          "url": "http://arxiv.org/abs/2604.24477v1"
+        },
+        {
+          "title": "A collagen-based theranostic wound dressing with visual, long-lasting infection detection capability",
+          "url": "http://arxiv.org/abs/2302.13283v1"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "engine": "arxiv",
+      "query": "all:\"multi-agent\" AND (all:\"security\" OR all:\"malicious\")",
+      "total": "1174",
+      "returned": 30,
+      "items": [
+        {
+          "title": "Multi-Agent Reinforcement Learning for Maritime Operational Technology Cyber Security",
+          "url": "http://arxiv.org/abs/2401.10149v1"
+        },
+        {
+          "title": "Thought Virus: Viral Misalignment via Subliminal Prompting in Multi-Agent Systems",
+          "url": "http://arxiv.org/abs/2603.00131v1"
+        },
+        {
+          "title": "Multi-Agent Systems Execute Arbitrary Malicious Code",
+          "url": "http://arxiv.org/abs/2503.12188v2"
+        },
+        {
+          "title": "SPEAR: An Engineering Case Study of Multi-Agent Coordination for Smart Contract Auditing",
+          "url": "http://arxiv.org/abs/2602.04418v3"
+        },
+        {
+          "title": "Securing Proof of Stake Blockchains: Leveraging Multi-Agent Reinforcement Learning for Detecting and Mitigating Malicious Nodes",
+          "url": "http://arxiv.org/abs/2407.20983v2"
+        },
+        {
+          "title": "On the Relationship between Strand Spaces and Multi-Agent Systems",
+          "url": "http://arxiv.org/abs/cs/0306107v1"
+        },
+        {
+          "title": "Multi-Agent Security Tax: Trading Off Security and Collaboration Capabilities in Multi-Agent Systems",
+          "url": "http://arxiv.org/abs/2502.19145v2"
+        },
+        {
+          "title": "Bilevel Optimization for Covert Memory Tampering in Heterogeneous Multi-Agent Architectures (XAMT)",
+          "url": "http://arxiv.org/abs/2512.15790v1"
+        },
+        {
+          "title": "Security Considerations for Multi-agent Systems",
+          "url": "http://arxiv.org/abs/2603.09002v2"
+        },
+        {
+          "title": "Terrarium: Revisiting the Blackboard for Multi-Agent Safety, Privacy, and Security Studies",
+          "url": "http://arxiv.org/abs/2510.14312v1"
+        },
+        {
+          "title": "Open Challenges in Multi-Agent Security: Towards Secure Systems of Interacting AI Agents",
+          "url": "http://arxiv.org/abs/2505.02077v2"
+        },
+        {
+          "title": "Extending the OWASP Multi-Agentic System Threat Modeling Guide: Insights from Multi-Agent Security Research",
+          "url": "http://arxiv.org/abs/2508.09815v1"
+        },
+        {
+          "title": "Smarter Saboteurs, Better Fixers: Scaling & Security in Linear Multi-Agent Workflows",
+          "url": "http://arxiv.org/abs/2606.12709v1"
+        },
+        {
+          "title": "Towards Unifying Quantitative Security Benchmarking for Multi Agent Systems",
+          "url": "http://arxiv.org/abs/2507.21146v1"
+        },
+        {
+          "title": "Cooperative AI via Decentralized Commitment Devices",
+          "url": "http://arxiv.org/abs/2311.07815v1"
+        },
+        {
+          "title": "Seven Security Challenges in Cross-domain Multi-agent LLM Systems",
+          "url": "http://arxiv.org/abs/2505.23847v5"
+        },
+        {
+          "title": "Securing Multi-Agent Systems Against Corruptions via Node Contribution Backpropagation",
+          "url": "http://arxiv.org/abs/2510.19420v2"
+        },
+        {
+          "title": "Architecture Matters for Multi-Agent Security",
+          "url": "http://arxiv.org/abs/2604.23459v1"
+        },
+        {
+          "title": "ORBIT: A Framework for Multi-Agent Safety and Security Evaluations",
+          "url": "http://arxiv.org/abs/2609.33102v1"
+        },
+        {
+          "title": "Mitigation and Resiliency of Multi-Agent Systems Subject to Malicious Cyber Attacks on Communication Links",
+          "url": "http://arxiv.org/abs/2009.06181v1"
+        },
+        {
+          "title": "MACGen: Toward Functionally Correct and Secure Code Generation via Multi-Agent Collaboration",
+          "url": "http://arxiv.org/abs/2608.25457v3"
+        },
+        {
+          "title": "SGTO-MAS: Secure Gorilla Troops Optimization for Multi-Agent LLM Systems",
+          "url": "http://arxiv.org/abs/2606.07940v1"
+        },
+        {
+          "title": "Hierarchical Adversarially-Resilient Multi-Agent Reinforcement Learning for Cyber-Physical Systems Security",
+          "url": "http://arxiv.org/abs/2506.22445v1"
+        },
+        {
+          "title": "Hybrid Information-driven Multi-agent Reinforcement Learning",
+          "url": "http://arxiv.org/abs/2102.01004v1"
+        },
+        {
+          "title": "A Knowledge-Based Multi-Agent Framework for Security Control Recommendation",
+          "url": "http://arxiv.org/abs/2607.09954v1"
+        },
+        {
+          "title": "Securing Multi-Agent GIS Systems: Risk Evaluation and Prompt Hardening Optimization",
+          "url": "http://arxiv.org/abs/2606.17092v2"
+        },
+        {
+          "title": "SkillProbe: Security Auditing for Emerging Agent Skill Marketplaces via Multi-Agent Collaboration",
+          "url": "http://arxiv.org/abs/2603.21019v1"
+        },
+        {
+          "title": "SoK: When Safe Agents Fail Together: The Security of Multi Agent LLM Systems",
+          "url": "http://arxiv.org/abs/2609.00595v1"
+        },
+        {
+          "title": "Many Hands Make Light Work: An LLM-based Multi-Agent System for Detecting Malicious PyPI Packages",
+          "url": "http://arxiv.org/abs/2601.12148v3"
+        },
+        {
+          "title": "CP-uniGuard: A Unified, Probability-Agnostic, and Adaptive Framework for Malicious Agent Detection and Defense in Multi-Agent Embodied Perception Systems",
+          "url": "http://arxiv.org/abs/2506.22890v3"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "engine": "exa",
+      "query": "Research papers on prompt injection worms contagion and memory poisoning in multi agent LLM networks",
+      "total": 10,
+      "returned": 10,
+      "items": [
+        {
+          "title": "Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems",
+          "url": "https://arxiv.org/html/2410.07283"
+        },
+        {
+          "title": "Agents Under Siege: Breaking Pragmatic Multi-Agent LLM Systems with Optimized Prompt Attacks",
+          "url": "https://aclanthology.org/2025.acl-long.476.pdf"
+        },
+        {
+          "title": "Multi-Agent Security Tax: Trading Off Security and Collaboration Capabilities in Multi-Agent Systems",
+          "url": "https://arxiv.org/html/2502.19145v2"
+        },
+        {
+          "title": "Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems",
+          "url": "https://www.usenix.org/system/files/usenixsecurity26-chang-hongyan.pdf"
+        },
+        {
+          "title": "From Untrusted Input to Trusted Memory: A Systematic Study of Memory Poisoning Attacks in LLM Agents",
+          "url": "https://arxiv.org/pdf/2606.04329v1.pdf"
+        },
+        {
+          "title": "ClawWorm: Self-Propagating Attacks Across LLM Agent Ecosystems",
+          "url": "https://arxiv.org/html/2603.15727v2"
+        },
+        {
+          "title": "Cross-layer contagion of prompt injections in multi-agent swarms: a multiplex microscopic markov chain approach",
+          "url": "https://exa.ai/library/publication/tmnq3hcrqjb"
+        },
+        {
+          "title": "Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense",
+          "url": "https://arxiv.org/html/2605.02812v1"
+        },
+        {
+          "title": "",
+          "url": "https://papers.ssrn.com/sol3/Delivery.cfm/7360399.pdf?abstractid=7360399&mirid=1"
+        },
+        {
+          "title": "",
+          "url": "https://arxiv.org/pdf/2503.03704"
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "engine": "exa",
+      "query": "Surveys of security in LLM multi agent systems contagious prompt injection epidemic models",
+      "total": 10,
+      "returned": 10,
+      "items": [
+        {
+          "title": "Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems",
+          "url": "https://arxiv.org/html/2410.07283"
+        },
+        {
+          "title": "Multi-Agent Security Tax: Trading Off Security and Collaboration Capabilities in Multi-Agent Systems",
+          "url": "https://arxiv.org/html/2502.19145v2"
+        },
+        {
+          "title": "Toward Secure LLM Agents: Threat Surfaces, Attacks, Defenses, and Evaluation",
+          "url": "https://arxiv.org/html/2606.10749v2"
+        },
+        {
+          "title": "Cross-layer contagion of prompt injections in multi-agent swarms: a multiplex microscopic markov chain approach",
+          "url": "https://exa.ai/library/publication/tmnq3hcrqjb"
+        },
+        {
+          "title": "A Survey on Trustworthy LLM Agents: Threats and Countermeasures | Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2",
+          "url": "https://dl.acm.org/doi/10.1145/3711896.3736561"
+        },
+        {
+          "title": "SoK: When Safe Agents Fail Together:The Security of Multi Agent LLM Systems",
+          "url": "https://arxiv.org/html/2609.00595v1"
+        },
+        {
+          "title": "From Prompt Injections to Protocol Exploits: Threats in LLM-Powered AI Agents Workflows",
+          "url": "https://arxiv.org/html/2506.23260v1"
+        },
+        {
+          "title": "Contamination Percolation in Multi-Agent LLM Systems: A Measurement Framework and Benchmark",
+          "url": "https://exa.ai/library/publication/gsqms7yxjx4"
+        },
+        {
+          "title": "The Emerged Security and Privacy of LLM Agent: A Survey with Case Studies",
+          "url": "https://dl.acm.org/doi/epdf/10.1145/3773080"
+        },
+        {
+          "title": "SoK: Security Vulnerabilities in Agentic AI Systems | Availability, Reliability and Security. ARES 2026 International Workshops",
+          "url": "https://dl.acm.org/doi/abs/10.1007/978-3-032-35579-9_6"
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "engine": "exa",
+      "query": "Agent Smith Prompt Infection Morris II AgentWorm Cowpox agent network epidemics research",
+      "total": 10,
+      "returned": 10,
+      "items": [
+        {
+          "title": "Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems",
+          "url": "https://arxiv.org/html/2410.07283"
+        },
+        {
+          "title": "Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast",
+          "url": "https://arxiv.org/html/2402.08567"
+        },
+        {
+          "title": "AgentWorm: Self-Propagating Attacks Across LLM Agent Ecosystems",
+          "url": "https://arxiv.org/html/2603.15727v3"
+        },
+        {
+          "title": "Cowpox: Towards the Immunity of VLM-based Multi-Agent Systems",
+          "url": "https://proceedings.mlr.press/v267/wu25aq.html"
+        },
+        {
+          "title": "Here Comes The AI Worm: Unleashing Zero-click Worms that Target GenAI-Powered Applications",
+          "url": "https://arxiv.org/html/2403.02817v2"
+        },
+        {
+          "title": "Agent Smith: A Single Image Can Jailbreak One Million  Multimodal LLM Agents Exponentially Fast",
+          "url": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/gu24e/gu24e.pdf"
+        },
+        {
+          "title": "WormGuard: Epidemic Modelling and Decentralized Containment of Prompt Worms in AI Agent Networks",
+          "url": "https://exa.ai/library/publication/xdt02mfbzs0"
+        },
+        {
+          "title": "Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast",
+          "url": "https://sail-sg.github.io/Agent-Smith/"
+        },
+        {
+          "title": "apartresearch/prompt-worms",
+          "url": "https://github.com/apartresearch/prompt-worms"
+        },
+        {
+          "title": "Mind Viruses: Self-Propagating Ideas in Multi-Agent LLM Systems",
+          "url": "https://arxiv.org/pdf/2608.10218v1"
+        }
+      ]
+    },
+    {
+      "engine": "semantic-scholar",
+      "query": "prompt infection multi agent",
+      "error": "429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=prompt+infection+multi+agent&limit=20&fields=title%2Cyear%2CexternalIds%2CcitationCount",
+      "round": 9
+    },
+    {
+      "engine": "semantic-scholar",
+      "query": "forward citations of ARXIV:2410.07283, limit 50",
+      "returned": 50,
+      "next": 50,
+      "items": [
+        {
+          "paperId": "dcdaf67025911654a7e44ad34b9ff88058c8b1b4",
+          "externalIds": {
+            "ArXiv": "2609.39146",
+            "CorpusId": 292487134
+          },
+          "title": "MADBench: Benchmarking the Security of Multi-Agent Debate",
+          "year": 2026
+        },
+        {
+          "paperId": "15cf320257fcbb43601766fd2b33f6cde82ac775",
+          "externalIds": {
+            "ArXiv": "2609.39788",
+            "CorpusId": 292486969
+          },
+          "title": "Safety of Latent Communication in Multi-Agent Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "82d75e63b2d29f4acb022d9b216b7a2f83a67046",
+          "externalIds": {
+            "ArXiv": "2609.37094",
+            "CorpusId": 292474863
+          },
+          "title": "LLM-Based Multi-Agent Systems over Wireless Networks: A Joint Agent--Network Design Perspective",
+          "year": 2026
+        },
+        {
+          "paperId": "c37d130808b5a25fcee3612560a19af257fd9314",
+          "externalIds": {
+            "ArXiv": "2609.37567",
+            "CorpusId": 292474420
+          },
+          "title": "Concealing LLM-Based Multi-Agent Topology via Phantom Structure Injection",
+          "year": 2026
+        },
+        {
+          "paperId": "f1dacd114bdeacead8b93edc7f94677254a9c50f",
+          "externalIds": {
+            "ArXiv": "2609.35576",
+            "CorpusId": 292436046
+          },
+          "title": "Share-Borne AI Virus: Memory-Hopping Attacks Across LLM Agents",
+          "year": 2026
+        },
+        {
+          "paperId": "7ed777eb9a10938f4c84b6b65d40ae8704df340f",
+          "externalIds": {
+            "ArXiv": "2609.33102",
+            "CorpusId": 292434900
+          },
+          "title": "ORBIT: A Framework for Multi-Agent Safety and Security Evaluations",
+          "year": 2026
+        },
+        {
+          "paperId": "b17d3b7312fb4e0e13b4bb3c847992a7638bb7b0",
+          "externalIds": {
+            "ArXiv": "2609.30028",
+            "CorpusId": 292287798
+          },
+          "title": "How does Adversarial Influence Scale in Multi-Agent Systems?",
+          "year": 2026
+        },
+        {
+          "paperId": "e96de406c76ff0c98dd63680772063ffd242fb4e",
+          "externalIds": {
+            "ArXiv": "2609.23700",
+            "CorpusId": 292219807
+          },
+          "title": "When the Agent Becomes the Kernel: A Systematization of Security on the Path to AI-Native Operating Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "706092cd2569c2471020f3743f85cc59d354eee4",
+          "externalIds": {
+            "ArXiv": "2609.22949",
+            "CorpusId": 292219698
+          },
+          "title": "Beyond Single-Model Injection: A Threat Model and Defense Architecture for Prompt Injection in Multi-Agent Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "537fc612ed802185768289f82bde04996e9b5cd0",
+          "externalIds": {
+            "ArXiv": "2609.19789",
+            "DOI": "10.1007/978-3-032-37673-2_12",
+            "CorpusId": 292058983
+          },
+          "title": "Contagion on the Trading Floor: How Adversarial Signals Spread in Multi-Agent Trading Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "f4f1d76dfaefc0a30343422ceed2a5fe7ae14381",
+          "externalIds": {
+            "ArXiv": "2609.18460",
+            "CorpusId": 292049439
+          },
+          "title": "Collective Loss of Control in LLM Agent Systems: An Epidemic Account of Mutation, Contagion, and Recovery",
+          "year": 2026
+        },
+        {
+          "paperId": "ac52f26605764a3371104639bcef2cdedaa94811",
+          "externalIds": {
+            "ArXiv": "2609.17527",
+            "CorpusId": 292033640
+          },
+          "title": "Agentic Societies Need a Social Harness",
+          "year": 2026
+        },
+        {
+          "paperId": "41473f9df9095c5c45b609417bad329b0c46719c",
+          "externalIds": {
+            "ArXiv": "2609.17817",
+            "CorpusId": 292041957
+          },
+          "title": "Reflections on Trusting Trust, Revisited: Contaminating Self-Modifying AI Coding Agents with Poisoned Benchmarks",
+          "year": 2026
+        },
+        {
+          "paperId": "9eaa12abf986ed3137ef6e910e732a02dbb111d6",
+          "externalIds": {
+            "ArXiv": "2609.06972",
+            "CorpusId": 291870792
+          },
+          "title": "AgentDrift: A Step-Labeled Benchmark of Injection-Hijacked LLM Agent Trajectories",
+          "year": 2026
+        },
+        {
+          "paperId": "fd1a22d2baba2df7a0db52925828232b7a69ebb0",
+          "externalIds": {
+            "DOI": "10.3390/electronics15174007",
+            "CorpusId": 291800000
+          },
+          "title": "ARES: Securing Agents for Computer Use Through Endpoint Resource Mediation and Behavioral Guardrails",
+          "year": 2026
+        },
+        {
+          "paperId": "556f5c604e487eaffdf0a7d54de104f83d25b183",
+          "externalIds": {
+            "ArXiv": "2609.04445",
+            "CorpusId": 291768147
+          },
+          "title": "Conformity Breaks Conformal Prediction",
+          "year": 2026
+        },
+        {
+          "paperId": "b37f0d2489179880dab06bccf294d624b8cfdf46",
+          "externalIds": {
+            "ArXiv": "2609.03192",
+            "CorpusId": 291677838
+          },
+          "title": "Where Reliability Lives: Experimental Localisation of Behavioural Properties in an Agent System",
+          "year": 2026
+        },
+        {
+          "paperId": "bedce5554f181a76a0943cbf6b93710b626e8c23",
+          "externalIds": {
+            "ArXiv": "2609.00595",
+            "CorpusId": 291543972
+          },
+          "title": "SoK: When Safe Agents Fail Together: The Security of Multi Agent LLM Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "69ab62ec5938e6e397cb83f87e3d3fc02afea3a1",
+          "externalIds": {
+            "ArXiv": "2608.22868",
+            "CorpusId": 291329096
+          },
+          "title": "AgentFlow: A Flow-Centric Policy Language and Framework for Securing LLM Agent Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "72277967da194800869fb20a4b9f73132b9929f8",
+          "externalIds": {
+            "ArXiv": "2608.10530",
+            "CorpusId": 291020609
+          },
+          "title": "On Understanding, Identifying, and Mitigating Vulnerabilities in Agentic Large Language Models",
+          "year": 2026
+        },
+        {
+          "paperId": "583ff1b5b3f74c12bf76d733ccc5e49ff599f4e1",
+          "externalIds": {
+            "ArXiv": "2608.06830",
+            "CorpusId": 290978705
+          },
+          "title": "When Coordination Becomes a Threat: Communication Attacks in LLM-Controlled Multi-Robot Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "702e654708b3d9c0a0be0e02b9f0cb226d21ab4e",
+          "externalIds": {
+            "ArXiv": "2608.01558",
+            "CorpusId": 290831460
+          },
+          "title": "Securing Agentic AI: From Per-Action Checks to Trajectory Assurance",
+          "year": 2026
+        },
+        {
+          "paperId": "f859060bb889ffcc0d3cdf4f2705d2380abf7ab4",
+          "externalIds": {
+            "ArXiv": "2608.02698",
+            "CorpusId": 290832966
+          },
+          "title": "Steganalysis of Adaptive Covert Collusion in Tool-Using Agent Populations: A Black-Box, Cross-Principal Approach",
+          "year": 2026
+        },
+        {
+          "paperId": "821025dd4e89d9fb61cc6ae08591bb47caa14abc",
+          "externalIds": {
+            "ArXiv": "2608.00718",
+            "CorpusId": 290830552
+          },
+          "title": "Adversarial Attacks in Multi-Agent LLM Pipelines: Unveiling Structural Vulnerabilities in Agentic AI Architectures",
+          "year": 2026
+        },
+        {
+          "paperId": "0f77e4e80bdabd22bcacb988ae6306e178b952fc",
+          "externalIds": {
+            "ArXiv": "2608.00747",
+            "CorpusId": 290829601
+          },
+          "title": "When Prompts Control Robots: Prompt Injection Attacks in Multi-Agent Robotic Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "b7df11344cd19c64e57981e811b8b20ad468e189",
+          "externalIds": {
+            "DOI": "10.1109/BigDIA71496.2026.11684636",
+            "CorpusId": 292046142
+          },
+          "title": "A Systematic Survey of Prompt Injection Attacks and Defenses in LLM-Integrated Applications and Agentic Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "f74289820b645988c3d0b6c8634ef3d27468766f",
+          "externalIds": {
+            "ArXiv": "2608.00202",
+            "CorpusId": 290788453
+          },
+          "title": "From Monoliths to Swarms: A Study of Attack Surface Evolution in the Transition to Multi-Agent Web Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "8a8a9f636556d19a7726bb9dc1c774d3cd30e538",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2607-23532",
+            "ArXiv": "2607.23532",
+            "DOI": "10.48550/arXiv.2607.23532",
+            "CorpusId": 290622726
+          },
+          "title": "Mission-Level Runtime Assurance for LLM-Assisted ISR Swarms over a Verification-Aware Fabric",
+          "year": 2026
+        },
+        {
+          "paperId": "4d9009df520a6ffb24cdb78499eb01f1743a69a9",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2607-15434",
+            "ArXiv": "2607.15434",
+            "DOI": "10.48550/arXiv.2607.15434",
+            "CorpusId": 290331743
+          },
+          "title": "Coercion and Deception in AI-to-AI Management: An Agentic Benchmark of Unprompted Escalation",
+          "year": 2026
+        },
+        {
+          "paperId": "f30d6e93042685210666c2badd647019de8a5366",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2607-06807",
+            "ArXiv": "2607.06807",
+            "DOI": "10.48550/arXiv.2607.06807",
+            "CorpusId": 289973723
+          },
+          "title": "When Agents Go Rogue: Activation-Based Detection of Malicious Behaviors in Multi-Agent Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "8271b26fbebe6ec2929840b97583b3813228d27e",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2607-05120",
+            "ArXiv": "2607.05120",
+            "DOI": "10.48550/arXiv.2607.05120",
+            "CorpusId": 289934252
+          },
+          "title": "Agent Data Injection Attacks are Realistic Threats to AI Agents",
+          "year": 2026
+        },
+        {
+          "paperId": "6293d5aa830092dc26f6d093f5b773bb524498dd",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2607-03821",
+            "ArXiv": "2607.03821",
+            "DOI": "10.48550/arXiv.2607.03821",
+            "CorpusId": 289933704
+          },
+          "title": "DualView: Preventing Indirect Prompt Injection in Personal AI Agents",
+          "year": 2026
+        },
+        {
+          "paperId": "c4d062571426768628580ab820b3de4772be413e",
+          "externalIds": {
+            "ArXiv": "2606.30602",
+            "DBLP": "journals/corr/abs-2606-30602",
+            "DOI": "10.48550/arXiv.2606.30602",
+            "CorpusId": 289684771
+          },
+          "title": "MESA: Prioritizing Vulnerable Communication Channels for Securing Multi-Agent Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "65f0ad12bf4e29ac881d2de523470caae77e6678",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2606-28958",
+            "ArXiv": "2606.28958",
+            "DOI": "10.48550/arXiv.2606.28958",
+            "CorpusId": 289683534
+          },
+          "title": "When Latent Agents Lie: KV-Cache Integrity in Multi-Agent LLM Collaboration",
+          "year": 2026
+        },
+        {
+          "paperId": "4801aa5e52ba681c97fdf4c158704688b3e3cf1f",
+          "externalIds": {
+            "DOI": "10.1109/ICSCAN66520.2026.11588515",
+            "CorpusId": 289979604
+          },
+          "title": "Agent Card Poisoning: Measuring Discovery-Layer Injection Attacks and Defenses in A2A Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "b7a9e923eec432c8a9cdb8b7ad684e7fa33885c8",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2606-09084",
+            "ArXiv": "2606.09084",
+            "DOI": "10.48550/arXiv.2606.09084",
+            "CorpusId": 289098882
+          },
+          "title": "Context-Fractured Decomposition Attacks on Tool-Using LLM Agents: Exploiting Artifact Provenance Gaps",
+          "year": 2026
+        },
+        {
+          "paperId": "1993dd73996dafdb4d66396646936c9da6a47f99",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2606-07790",
+            "ArXiv": "2606.07790",
+            "DOI": "10.48550/arXiv.2606.07790",
+            "CorpusId": 289031745
+          },
+          "title": "Byzantine Cheap Talk: Adversarial Resilience and Topology Effects in LLM Coordination Games",
+          "year": 2026
+        },
+        {
+          "paperId": "7880d6f72179e793c00e4b30de98c66b9e02f58e",
+          "externalIds": {
+            "ArXiv": "2605.29055",
+            "DBLP": "journals/corr/abs-2605-29055",
+            "DOI": "10.48550/arXiv.2605.29055",
+            "CorpusId": 288741402
+          },
+          "title": "Hallucination Mitigation with Agentic AI, Nested Learning, and AI Sustainability via Semantic Caching",
+          "year": 2026
+        },
+        {
+          "paperId": "c0db3464d66135d7b7399346d6a90cf1467911b2",
+          "externalIds": {
+            "ArXiv": "2605.26497",
+            "DBLP": "journals/corr/abs-2605-26497",
+            "DOI": "10.48550/arXiv.2605.26497",
+            "CorpusId": 288672754
+          },
+          "title": "Aligning Provenance with Authorization: A Dual-Graph Defense for LLM Agents",
+          "year": 2026
+        },
+        {
+          "paperId": "850cf7b5ab3e5cb879cfbb3421b7e220044777f5",
+          "externalIds": {
+            "DOI": "10.1109/ICHORA69329.2026.11536987",
+            "CorpusId": 288905635
+          },
+          "title": "Visual and Structural Prompt Injection in Medical Rag Systems: a Comparative Robustness Analysis",
+          "year": 2026
+        },
+        {
+          "paperId": "8c35930e8871d6321cb109596052587aa583ef7c",
+          "externalIds": {
+            "DOI": "10.1109/ICICV68925.2026.11554850",
+            "CorpusId": 289192107
+          },
+          "title": "Intelligent Multi-Agent Reinforcement Sanitizer for Securing LLM Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "ac3fe49e6806a20defbf79d489c8b0cf44f5b7eb",
+          "externalIds": {
+            "DOI": "10.54116/jbdai.v4i1.82",
+            "CorpusId": 288473583
+          },
+          "title": "From NLP to LLMs to Agentic AI: The Evolution of Artificial Intelligence",
+          "year": 2026
+        },
+        {
+          "paperId": "dd7c0938f68765869f0e61ee363e7ed36a873eba",
+          "externalIds": {
+            "ArXiv": "2605.19240",
+            "DBLP": "journals/corr/abs-2605-19240",
+            "DOI": "10.48550/arXiv.2605.19240",
+            "CorpusId": 288655820
+          },
+          "title": "CASPIAN: Online Detection and Attribution of Cascade Attacks in LLM Multi-Agent Systems via Cross-Channel Causal Monitoring",
+          "year": 2026
+        },
+        {
+          "paperId": "160ebca7d43df3326e750427ed3847ad8c67b776",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2605-19159",
+            "ArXiv": "2605.19159",
+            "DOI": "10.1109/ICAD69378.2026.11608418",
+            "CorpusId": 288653043
+          },
+          "title": "On the Geometric Limits of Transformer Defenses against Obfuscation Attacks: Latent Embedding Collapse & Performance–Robustness Gap",
+          "year": 2026
+        },
+        {
+          "paperId": "c6099b49fe6cfff58a4688eedf107f3ed0490699",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2605-11514",
+            "ArXiv": "2605.11514",
+            "DOI": "10.48550/arXiv.2605.11514",
+            "CorpusId": 288256063
+          },
+          "title": "FlowSteer: Prompt-Only Workflow Steering Exposes Planning-Time Vulnerabilities in Multi-Agent LLM Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "cb407f1400394f4a1514749c2c92308726685ae9",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2605-12364",
+            "ArXiv": "2605.12364",
+            "DOI": "10.48550/arXiv.2605.12364",
+            "CorpusId": 288258230
+          },
+          "title": "Attacks and Mitigations for Distributed Governance of Agentic AI under Byzantine Adversaries",
+          "year": 2026
+        },
+        {
+          "paperId": "dc02945d8c923d7afb895d26a862e29d94cf04c0",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2605-10481",
+            "ArXiv": "2605.10481",
+            "DOI": "10.48550/arXiv.2605.10481",
+            "CorpusId": 288256252
+          },
+          "title": "Safe Multi-Agent Behavior Must Be Maintained, Not Merely Asserted: Constraint Drift in LLM-Based Multi-Agent Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "66e778a70b120bbffced9a13e2a7fcdb243ddc7d",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2605-11039",
+            "ArXiv": "2605.11039",
+            "DOI": "10.48550/arXiv.2605.11039",
+            "CorpusId": 288259819
+          },
+          "title": "The Granularity Mismatch in Agent Security: Argument-Level Provenance Solves Enforcement and Isolates the LLM Reasoning Bottleneck",
+          "year": 2026
+        },
+        {
+          "paperId": "08f45f2e9bb9ac7db01bece206c0651b8c2240c9",
+          "externalIds": {
+            "DOI": "10.32996/jcsts.2026.8.6.12",
+            "CorpusId": 288152051
+          },
+          "title": "A Framework for Securing Agentic AI Workflows and Quantum-Resistant Communication in U.S. Critical Infrastructure Networks",
+          "year": 2026
+        },
+        {
+          "paperId": "1ad06ca131f6e83a0dc16cb42495dd29a98522ad",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2605-09278",
+            "ArXiv": "2605.09278",
+            "DOI": "10.48550/arXiv.2605.09278",
+            "CorpusId": 288255802
+          },
+          "title": "EquiMem: Calibrating Shared Memory in Multi-Agent Debate via Game-Theoretic Equilibrium",
+          "year": 2026
+        }
+      ],
+      "round": 10
+    },
+    {
+      "engine": "semantic-scholar",
+      "query": "forward citations of ARXIV:2402.08567, limit 50",
+      "returned": 50,
+      "next": 50,
+      "items": [
+        {
+          "paperId": "dcdaf67025911654a7e44ad34b9ff88058c8b1b4",
+          "externalIds": {
+            "ArXiv": "2609.39146",
+            "CorpusId": 292487134
+          },
+          "title": "MADBench: Benchmarking the Security of Multi-Agent Debate",
+          "year": 2026
+        },
+        {
+          "paperId": "51e89cfb210179568e19b74dcdda01cf0bbc2fd3",
+          "externalIds": {
+            "ArXiv": "2609.36562",
+            "DOI": "10.1145/3767308.3835707",
+            "CorpusId": 292441317
+          },
+          "title": "ThinkingGuard: Decoding Implicit Hazards via Step-by-Step Risk Attribution in Multimodal Large Language Models",
+          "year": 2026
+        },
+        {
+          "paperId": "c37d130808b5a25fcee3612560a19af257fd9314",
+          "externalIds": {
+            "ArXiv": "2609.37567",
+            "CorpusId": 292474420
+          },
+          "title": "Concealing LLM-Based Multi-Agent Topology via Phantom Structure Injection",
+          "year": 2026
+        },
+        {
+          "paperId": "709d46b6b45b145e7ab16f02812826c23b5d4d20",
+          "externalIds": {
+            "ArXiv": "2609.34132",
+            "CorpusId": 292434781
+          },
+          "title": "From Attack Success to Attack Severity: Counterfactual Memory Attacks on LLM Agents",
+          "year": 2026
+        },
+        {
+          "paperId": "7ed777eb9a10938f4c84b6b65d40ae8704df340f",
+          "externalIds": {
+            "ArXiv": "2609.33102",
+            "CorpusId": 292434900
+          },
+          "title": "ORBIT: A Framework for Multi-Agent Safety and Security Evaluations",
+          "year": 2026
+        },
+        {
+          "paperId": "b17d3b7312fb4e0e13b4bb3c847992a7638bb7b0",
+          "externalIds": {
+            "ArXiv": "2609.30028",
+            "CorpusId": 292287798
+          },
+          "title": "How does Adversarial Influence Scale in Multi-Agent Systems?",
+          "year": 2026
+        },
+        {
+          "paperId": "97e82889ec51c84d83b746efa29adbd701adb1de",
+          "externalIds": {
+            "ArXiv": "2609.28585",
+            "CorpusId": 292282208
+          },
+          "title": "Persistent Billable State: Denial-of-Wallet Attacks and Defenses in Tool-Calling LLM Agents",
+          "year": 2026
+        },
+        {
+          "paperId": "107788f3ff0136c9e117a0993eded918fb2e8235",
+          "externalIds": {
+            "ArXiv": "2609.23894",
+            "CorpusId": 292219054
+          },
+          "title": "Connecting the Dots in Agentic AI Security: A Cross-Dimensional Threat Taxonomy, Evaluation Maturity, and Open Challenges",
+          "year": 2026
+        },
+        {
+          "paperId": "537fc612ed802185768289f82bde04996e9b5cd0",
+          "externalIds": {
+            "ArXiv": "2609.19789",
+            "DOI": "10.1007/978-3-032-37673-2_12",
+            "CorpusId": 292058983
+          },
+          "title": "Contagion on the Trading Floor: How Adversarial Signals Spread in Multi-Agent Trading Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "f4f1d76dfaefc0a30343422ceed2a5fe7ae14381",
+          "externalIds": {
+            "ArXiv": "2609.18460",
+            "CorpusId": 292049439
+          },
+          "title": "Collective Loss of Control in LLM Agent Systems: An Epidemic Account of Mutation, Contagion, and Recovery",
+          "year": 2026
+        },
+        {
+          "paperId": "19c6571322989465dbecb42a2340c033c5dac62d",
+          "externalIds": {
+            "ArXiv": "2609.19226",
+            "CorpusId": 292059321
+          },
+          "title": "PAPC: Platform Mediation for Privacy-Propagation Externalities in AI-Mediated Workflows",
+          "year": 2026
+        },
+        {
+          "paperId": "52e20783a45a34290137e20b1db8dcae2143b682",
+          "externalIds": {
+            "ArXiv": "2609.16694",
+            "CorpusId": 292028708
+          },
+          "title": "Toward Secure AI-Powered Penetration Testing Agents: Security Threats, Guardrails, and Architectural Perspectives",
+          "year": 2026
+        },
+        {
+          "paperId": "ec83e6981e55f37765a96d17771183cad8344c6a",
+          "externalIds": {
+            "ArXiv": "2609.13731",
+            "CorpusId": 292012129
+          },
+          "title": "Trustworthy Agentic AI: A Comprehensive Cybersecurity and Systems Survey on Threat Landscapes, Defense Architectures, and Open Challenges",
+          "year": 2026
+        },
+        {
+          "paperId": "c6f9d684d9b92f5baf1af32a027c1320fb953039",
+          "externalIds": {
+            "ArXiv": "2609.07499",
+            "CorpusId": 291870118
+          },
+          "title": "CrACK: Adversarial Attacks on Cross-Model Consistency in Collaborative Vision Foundation Models",
+          "year": 2026
+        },
+        {
+          "paperId": "bedce5554f181a76a0943cbf6b93710b626e8c23",
+          "externalIds": {
+            "ArXiv": "2609.00595",
+            "CorpusId": 291543972
+          },
+          "title": "SoK: When Safe Agents Fail Together: The Security of Multi Agent LLM Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "5c92eda6f9f6660a2e1e36f060a832ef4e9687b8",
+          "externalIds": {
+            "ArXiv": "2608.17234",
+            "CorpusId": 291184855
+          },
+          "title": "COMIC: Reference-Aware Safety Gating for Multimodal Large Language Models",
+          "year": 2026
+        },
+        {
+          "paperId": "22bcc39641b81a7f746a7aa556d918ce38ee9b5c",
+          "externalIds": {
+            "ArXiv": "2608.10933",
+            "CorpusId": 291024283
+          },
+          "title": "SafeCA: Safe Cross-Attention Localization and Regulation for Text-to-Video Jailbreak Defense",
+          "year": 2026
+        },
+        {
+          "paperId": "a9019c0e927eb84f11a7317b941ff456994ddd85",
+          "externalIds": {
+            "DOI": "10.1145/3770855.3816453",
+            "CorpusId": 290858494
+          },
+          "title": "Trustworthy LLM-Based Agents for Data-Centric AI",
+          "year": 2026
+        },
+        {
+          "paperId": "b2319a208c524370108ceb7276ce4a24c6a601cd",
+          "externalIds": {
+            "DOI": "10.1145/3770855.3817471",
+            "CorpusId": 290858071
+          },
+          "title": "Passing the Turing Test on Screen: A Benchmark for Mobile GUI Agent Humanization",
+          "year": 2026
+        },
+        {
+          "paperId": "583ff1b5b3f74c12bf76d733ccc5e49ff599f4e1",
+          "externalIds": {
+            "ArXiv": "2608.06830",
+            "CorpusId": 290978705
+          },
+          "title": "When Coordination Becomes a Threat: Communication Attacks in LLM-Controlled Multi-Robot Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "f859060bb889ffcc0d3cdf4f2705d2380abf7ab4",
+          "externalIds": {
+            "ArXiv": "2608.02698",
+            "CorpusId": 290832966
+          },
+          "title": "Steganalysis of Adaptive Covert Collusion in Tool-Using Agent Populations: A Black-Box, Cross-Principal Approach",
+          "year": 2026
+        },
+        {
+          "paperId": "6f3e92cf87e0f99a22425e710009a51958baf627",
+          "externalIds": {
+            "DOI": "10.1145/3837083",
+            "CorpusId": 290742964
+          },
+          "title": "A Comparative Survey of Security Risks in AI Systems: From LLMs to AI Agents and Embodied Agents",
+          "year": 2026
+        },
+        {
+          "paperId": "0f77e4e80bdabd22bcacb988ae6306e178b952fc",
+          "externalIds": {
+            "ArXiv": "2608.00747",
+            "CorpusId": 290829601
+          },
+          "title": "When Prompts Control Robots: Prompt Injection Attacks in Multi-Agent Robotic Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "821025dd4e89d9fb61cc6ae08591bb47caa14abc",
+          "externalIds": {
+            "ArXiv": "2608.00718",
+            "CorpusId": 290830552
+          },
+          "title": "Adversarial Attacks in Multi-Agent LLM Pipelines: Unveiling Structural Vulnerabilities in Agentic AI Architectures",
+          "year": 2026
+        },
+        {
+          "paperId": "06e071bd7762848734e97fa459fda197be3fbf39",
+          "externalIds": {
+            "ArXiv": "2608.02657",
+            "CorpusId": 290833086
+          },
+          "title": "Your Agentic LLMs Secretly Encode Indirect Prompt-Injection Exposure in Hidden States",
+          "year": 2026
+        },
+        {
+          "paperId": "6073022d55f3fadd415c1091b1ed0b34a5e7eb6c",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2607-27897",
+            "ArXiv": "2607.27897",
+            "DOI": "10.48550/arXiv.2607.27897",
+            "CorpusId": 290690817
+          },
+          "title": "Unifying Adversarially Robust Model Experts in Vision-Language Models",
+          "year": 2026
+        },
+        {
+          "paperId": "ba6421f0518bd352eff01614fbace608028691e3",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2607-26120",
+            "ArXiv": "2607.26120",
+            "DOI": "10.48550/arXiv.2607.26120",
+            "CorpusId": 290645174
+          },
+          "title": "Even More Deception: Objective Misalignment in Mixed-Motive LLM Multi-Agent Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "ed4d9ee0fec614260da550d49a235bebdad330b9",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2607-21912",
+            "ArXiv": "2607.21912",
+            "DOI": "10.48550/arXiv.2607.21912",
+            "CorpusId": 290583342
+          },
+          "title": "Reliability-Contagion Feasibility in LLM Multi-Agent Networks",
+          "year": 2026
+        },
+        {
+          "paperId": "f6e00cc633275a88a7cbc9ad71dddea5c85ccf2d",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2607-15657",
+            "ArXiv": "2607.15657",
+            "DOI": "10.48550/arXiv.2607.15657",
+            "CorpusId": 290331248
+          },
+          "title": "Do Agents Dream of False Memories? Black-box Visual Attacks on Long-term Memory in Multimodal AI Agents",
+          "year": 2026
+        },
+        {
+          "paperId": "f30d6e93042685210666c2badd647019de8a5366",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2607-06807",
+            "ArXiv": "2607.06807",
+            "DOI": "10.48550/arXiv.2607.06807",
+            "CorpusId": 289973723
+          },
+          "title": "When Agents Go Rogue: Activation-Based Detection of Malicious Behaviors in Multi-Agent Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "5ac053c3c9e150000ab58e7d6216de73ea561903",
+          "externalIds": {
+            "DBLP": "journals/tdsc/ChenLWLCW26",
+            "DOI": "10.1109/TDSC.2026.3685256",
+            "CorpusId": 287585975
+          },
+          "title": "AgentChain: Blockchain-Empowered Multi-Agent Coordination for Trustworthy LLM Question-Answering Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "c4d062571426768628580ab820b3de4772be413e",
+          "externalIds": {
+            "ArXiv": "2606.30602",
+            "DBLP": "journals/corr/abs-2606-30602",
+            "DOI": "10.48550/arXiv.2606.30602",
+            "CorpusId": 289684771
+          },
+          "title": "MESA: Prioritizing Vulnerable Communication Channels for Securing Multi-Agent Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "215244578a34ff52a02c4179e664d98a76b76fee",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2606-12918",
+            "ArXiv": "2606.12918",
+            "DOI": "10.48550/arXiv.2606.12918",
+            "CorpusId": 289186371
+          },
+          "title": "MAStrike: Shapley-Guided Collusive Red-Teaming on Multi-Agent Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "cc586b2ca0dd46a67cbb6f4e8417c4002bb9403d",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2606-00485",
+            "ArXiv": "2606.00485",
+            "DOI": "10.48550/arXiv.2606.00485",
+            "CorpusId": 288855114
+          },
+          "title": "Confused ChatGPT: Cross-App Context Poisoning via First-Party APIs",
+          "year": 2026
+        },
+        {
+          "paperId": "e5f815f53add2d3ac3b2305b68628f91b8f327a9",
+          "externalIds": {
+            "ArXiv": "2605.28104",
+            "DBLP": "journals/corr/abs-2605-28104",
+            "DOI": "10.48550/arXiv.2605.28104",
+            "CorpusId": 288702207
+          },
+          "title": "Defending LLM-based Multi-Agent Systems Against Cooperative Attacks with Sentence-Level Rectification",
+          "year": 2026
+        },
+        {
+          "paperId": "e9a9cc2f9c774953cf0bd22417f746872045b106",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2605-27586",
+            "ArXiv": "2605.27586",
+            "DOI": "10.48550/arXiv.2605.27586",
+            "CorpusId": 288701252
+          },
+          "title": "You Only Align Once: Propagating Cooperative Behaviors in Multi-Agent Systems through Seed Agents",
+          "year": 2026
+        },
+        {
+          "paperId": "887bbc8b3e3d98a02f9308de173a05614e4c7875",
+          "externalIds": {
+            "ArXiv": "2605.20704",
+            "DBLP": "journals/corr/abs-2605-20704",
+            "DOI": "10.48550/arXiv.2605.20704",
+            "CorpusId": 288653200
+          },
+          "title": "Heartbeat-Bound Hierarchical Credentials: Cryptographic Revocation for AI Agent Swarms",
+          "year": 2026
+        },
+        {
+          "paperId": "2e5a9e42518553589f1574f5c6c6e5d34f28627c",
+          "externalIds": {
+            "ArXiv": "2605.17480",
+            "DBLP": "journals/corr/abs-2605-17480",
+            "DOI": "10.48550/arXiv.2605.17480",
+            "CorpusId": 288654944
+          },
+          "title": "The Capability Paradox: How Smarter Auditors Make Multi-Agent Systems Less Secure",
+          "year": 2026
+        },
+        {
+          "paperId": "a513614c35f49ddcb372a37f04f0af00cd71859c",
+          "externalIds": {
+            "DOI": "10.1145/3838457.3838551",
+            "CorpusId": 292017250
+          },
+          "title": "Security Challenges and Protection Strategies for Industrial AI Agents: A Comprehensive Survey",
+          "year": 2026
+        },
+        {
+          "paperId": "9c61455f65e9c8c5f289ba5d0cd072dfc0d4d9cd",
+          "externalIds": {
+            "DOI": "10.1145/3807666",
+            "CorpusId": 288015814
+          },
+          "title": "Navigating the Risks: A Survey of Security and Privacy Threats in LLM-Based Agents",
+          "year": 2026
+        },
+        {
+          "paperId": "c762ddcb662301ef83ff9eb7c0101ec1382b67cf",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2605-06933",
+            "ArXiv": "2605.06933",
+            "DOI": "10.48550/arXiv.2605.06933",
+            "CorpusId": 288111173
+          },
+          "title": "MAGIQ: A Post-Quantum Multi-Agentic AI Governance System with Provable Security",
+          "year": 2026
+        },
+        {
+          "paperId": "e04d30647585bb48258e031b594e96f07346d58f",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2605-01758",
+            "ArXiv": "2605.01758",
+            "DOI": "10.48550/arXiv.2605.01758",
+            "CorpusId": 287950665
+          },
+          "title": "Catching the Infection Before It Spreads: Foresight-Guided Defense in Multi-Agent Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "39b05c32a92e9ce98b1981ecb8565718b07b6ec7",
+          "externalIds": {
+            "ArXiv": "2605.23330",
+            "DBLP": "journals/corr/abs-2605-23330",
+            "DOI": "10.1016/j.jiixd.2026.05.006",
+            "CorpusId": 288649346
+          },
+          "title": "Security, Privacy, and Ethical Risks in OpenClaw",
+          "year": 2026
+        },
+        {
+          "paperId": "3a5611ab8e25b26e36edfd0e3bb9538372da139e",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2604-24477",
+            "ArXiv": "2604.24477",
+            "DOI": "10.48550/arXiv.2604.24477",
+            "CorpusId": 287783039
+          },
+          "title": "GAMMAF: A Common Framework for Graph-Based Anomaly Monitoring Benchmarking in LLM Multi-Agent Systems",
+          "year": 2026
+        },
+        {
+          "paperId": "14774dbf52c5a5700bd2d4c3217adb869fa74849",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2604-23459",
+            "ArXiv": "2604.23459",
+            "DOI": "10.48550/arXiv.2604.23459",
+            "CorpusId": 287776861
+          },
+          "title": "Architecture Matters for Multi-Agent Security",
+          "year": 2026
+        },
+        {
+          "paperId": "7e6092a09fce843c98941fe1c0c4342b9d2169d8",
+          "externalIds": {
+            "ArXiv": "2604.16548",
+            "CorpusId": 287618401
+          },
+          "title": "A Survey on Long-Term Memory Security in LLM Agents: Attacks, Defenses, and Governance Across the Memory Lifecycle",
+          "year": 2026
+        },
+        {
+          "paperId": "4ff4362e426b693262adbd1c2d931612ed4ed5d2",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2604-09056",
+            "ArXiv": "2604.09056",
+            "DOI": "10.48550/arXiv.2604.09056",
+            "CorpusId": 287351963
+          },
+          "title": "Conversations Risk Detection LLMs in Financial Agents via Multi-Stage Generative Rollout",
+          "year": 2026
+        },
+        {
+          "paperId": "80a4d6bf889130167372f551f64637d4e6cd88ff",
+          "externalIds": {
+            "ArXiv": "2604.07775",
+            "DBLP": "conf/acl/AnLZXZLXDJ26",
+            "DOI": "10.48550/arXiv.2604.07775",
+            "CorpusId": 287255924
+          },
+          "title": "ACIArena: Toward Unified Evaluation for Agent Cascading Injection",
+          "year": 2026
+        },
+        {
+          "paperId": "113836e9c9384bcf32a3999ba1c4b0d81fa55f8a",
+          "externalIds": {
+            "DBLP": "journals/corr/abs-2604-02623",
+            "ArXiv": "2604.02623",
+            "DOI": "10.48550/arXiv.2604.02623",
+            "CorpusId": 287121418
+          },
+          "title": "Poison Once, Exploit Forever: Environment-Injected Memory Poisoning Attacks on Web Agents",
+          "year": 2026
+        },
+        {
+          "paperId": "0050835ece0334cd1c9e2a71e17118a3830e4148",
+          "externalIds": {
+            "DBLP": "journals/computer/NagarajaZW26",
+            "DOI": "10.1109/MC.2025.3633104",
+            "CorpusId": 287028696
+          },
+          "title": "From Pixels to Prompts: A Systematic Study and Introduction to Image Prompt Injection Attacks",
+          "year": 2026
+        }
+      ],
+      "round": 11
+    },
+    {
+      "engine": "openalex",
+      "query": "filter=title.search:prompt infection, per-page=25, mailto=sol@shad0w.xyz",
+      "error": "429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=title.search%3Aprompt+infection&per-page=25&mailto=sol%40shad0w.xyz",
+      "round": 12
+    },
+    {
+      "engine": "openalex",
+      "query": "filter=cites:W4391871694, per-page=50, mailto=sol@shad0w.xyz",
+      "error": "429 Client Error: Too Many Requests for url: https://api.openalex.org/works?filter=cites%3AW4391871694&per-page=50&mailto=sol%40shad0w.xyz",
+      "round": 13
+    },
+    {
+      "engine": "exa",
+      "query": "Published research \"Agent Smith\" \"Cowpox\" infectious jailbreak defense",
+      "returned": 10,
+      "items": [
+        {
+          "title": "Towards the Immunity of VLM-based Multi-Agent Systems",
+          "url": "https://arxiv.org/pdf/2508.09230"
+        },
+        {
+          "title": "Towards the Immunity of VLM-based Multi-Agent Systems",
+          "url": "https://openreview.net/forum?id=5KszXnnkG5"
+        },
+        {
+          "title": "Multi-agent security tax | Proceedings of the Thirty-Ninth ...",
+          "url": "https://dl.acm.org/doi/10.1609/aaai.v39i26.34970"
+        },
+        {
+          "title": "Towards the Immunity of VLM-based Multi-Agent Systems",
+          "url": "https://tianweiz07.github.io/Papers/25-icml-3.pdf"
+        },
+        {
+          "title": "Securing the Mind and Body: Trustworthy Agent Systems Powered by Generative AI Models",
+          "url": "https://www.ibisc.univ-evry.fr/wp-content/uploads/2025/06/AISystemSecurity.pdf"
+        },
+        {
+          "title": "Cowpox: Towards the Immunity of VLM-based Multi-Agent Systems | alphaXiv",
+          "url": "https://www.alphaxiv.org/abs/2508.09230"
+        },
+        {
+          "title": "Catching the Infection Before It Spreads: Foresight-Guided Defense in Multi-Agent Systems — Pith",
+          "url": "https://pith.science/paper/2605.01758"
+        },
+        {
+          "title": "Visual-RolePlay: Universal Jailbreak Attack on MultiModal Large Language Models via Role-playing Image Characte | SCIENCE@home",
+          "url": "https://sah.borca.ai/papers/270199716"
+        },
+        {
+          "title": "Foresight-Guided Defense Against Infectious Jailbreaks in Multi-Agent Systems",
+          "url": "https://agentpatterns.ai/security/foresight-guided-multi-agent-jailbreak-defense/"
+        },
+        {
+          "title": "Agent安全论文调研• Orac1e のblog",
+          "url": "https://www.orac1e.me/blog/agent/research"
+        }
+      ],
+      "round": 14
+    },
+    {
+      "engine": "exa",
+      "query": "Published research \"Prompt Infection\" \"Morris\" multi agent worm",
+      "returned": 10,
+      "items": [
+        {
+          "title": "…   infection : Llm-to-llm prompt injection within  multi - agent  …",
+          "url": "https://scholar.google.com/scholar_url?ei=d2XBaobvBpGkieoPqs2OEQ&hl=en&oi=scholarr&sa=X&scisig=ACTRDVFORqkV9xJ7s2XrtK3n1BCe&url=https%3A%2F%2Farxiv.org%2Fpdf%2F2410.07283%3F"
+        },
+        {
+          "title": "Here Comes The AI Worm: Unleashing Zero-click Worms that Target GenAI-Powered Applications - arXiv.gg",
+          "url": "https://arxiv.gg/abs/2403.02817"
+        },
+        {
+          "title": "Not what you've signed up for: Compromising Real-World LLM-Integrated\n  Applications with Indirect Prompt Injection | alphaXiv",
+          "url": "https://www.alphaxiv.org/abs/2302.12173"
+        },
+        {
+          "title": "Multi-Agent Security Tax: Trading Off Security and Collaboration  Capabilities in Multi-Agent Systems | alphaXiv",
+          "url": "https://www.alphaxiv.org/abs/2502.19145"
+        },
+        {
+          "title": "Multi - agent  systems execute arbitrary malicious code",
+          "url": "https://scholar.google.com/scholar_url?ei=d2XBaobvBpGkieoPqs2OEQ&hl=en&oi=scholarr&sa=X&scisig=ACTRDVEqUT0v58hoMf0D7dTQGvfZ&url=https%3A%2F%2Farxiv.org%2Fpdf%2F2503.12188"
+        },
+        {
+          "title": "Scholarly articles for  Published research \"Prompt Infection\" \"Morris\" multi agent worm",
+          "url": "https://scholar.google.com/scholar?as_sdt=0&as_vis=1&hl=en&oi=scholart&q=Published+research+%22Prompt+Infection%22+%22Morris%22+multi+agent+worm"
+        },
+        {
+          "title": "Prompt Injection 2.0: Hybrid AI Threats",
+          "url": "https://arxiv.org/html/2507.13169"
+        },
+        {
+          "title": "Towards Secure MLOps: Surveying Attacks, Mitigation ...",
+          "url": "https://dl.acm.org/doi/10.1145/3796728"
+        },
+        {
+          "title": "Morris II AI worm can steal your confidential data and infect ChatGPT and Gemini | Technology News - The Indian Express",
+          "url": "https://indianexpress.com/article/technology/tech-news-technology/morris-ii-ai-worm-steal-data-infect-chatgpt-gemini-9192907/"
+        },
+        {
+          "title": "Agentic AI as a Cybersecurity Attack Surface: Threats, Exploits, and Defenses in Runtime Supply Chains",
+          "url": "https://arxiv.org/html/2602.19555v1"
+        }
+      ],
+      "round": 15
+    },
+    {
+      "engine": "exa",
+      "query": "\"Cross-layer contagion of prompt injections\" \"WormGuard\" original paper",
+      "returned": 10,
+      "items": [
+        {
+          "title": "Cross-layer contagion of prompt injections in multi-agent swarms: a multiplex microscopic markov chain approach",
+          "url": "https://exa.ai/library/publication/tmnq3hcrqjb"
+        },
+        {
+          "title": "WormGuard: Epidemic Modelling and Decentralized Containment of Prompt Worms in AI Agent Networks - researchr publication",
+          "url": "https://researchr.org/publication/TaoCNT26"
+        },
+        {
+          "title": "WormGuard: Epidemic Modelling and Decentralized ...",
+          "url": "https://www.researchgate.net/publication/411267814_WormGuard_Epidemic_Modelling_and_Decentralized_Containment_of_Prompt_Worms_in_AI_Agent_Networks"
+        },
+        {
+          "title": "WormGuard: Epidemic Modelling and Decentralized Containment of Prompt Worms in AI Agent Networks - Research Paper | OiPub",
+          "url": "https://oipub.com/papers/408093256"
+        },
+        {
+          "title": "WormGuard: Epidemic Modelling and Decentralized Containment of Prompt Worms in AI Agent Networks",
+          "url": "https://exa.ai/library/publication/xdt02mfbzs0"
+        },
+        {
+          "title": "WormGuard: Epidemic Modelling and Decentralized Containment of Prompt Worms in AI Agent Networks - researchr publication bibtex",
+          "url": "https://researchr.org/publication/TaoCNT26/bibtex"
+        },
+        {
+          "title": "Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems",
+          "url": "https://arxiv.org/html/2410.07283"
+        },
+        {
+          "title": "apartresearch/prompt-worms",
+          "url": "https://github.com/apartresearch/prompt-worms"
+        },
+        {
+          "title": "",
+          "url": "https://dl.acm.org/doi/10.1145/3719027.3765196"
+        },
+        {
+          "title": "A Virological Model of Prompt Injection in Agentic AI: Within-Agent Replication, Latent Reservoirs, and Quasispecies Escape as a Multi-Scale Defence Framework",
+          "url": "https://exa.ai/library/publication/lg0blzx8795"
+        }
+      ],
+      "round": 16
+    },
+    {
+      "engine": "crossref",
+      "query": "query.title=WormGuard Epidemic Modelling and Decentralized Containment of Prompt Worms in AI Agent Networks, rows=3, mailto=sol@shad0w.xyz",
+      "returned": 3,
+      "items": [
+        {
+          "title": "WormGuard: Epidemic Modelling and Decentralized Containment of Prompt Worms in AI Agent Networks",
+          "doi": "10.1145/3820441.3821233"
+        },
+        {
+          "title": "Modelling, analysis and containment of passive worms in P2P networks",
+          "doi": "10.1504/ijipt.2014.066379"
+        },
+        {
+          "title": "The Reproduction Number of AI Worms: Epidemic Modeling of Adversarial Attacks in LLM Agent Ecosystems",
+          "doi": "10.1109/msec.2026.3713527"
+        }
+      ],
+      "round": 17
+    },
+    {
+      "engine": "exa",
+      "query": "Research papers LLM agent contagion prompt worms propagation threshold recovery epidemic network containment",
+      "returned": 10,
+      "items": [
+        {
+          "title": "Cross-layer contagion of prompt injections in multi-agent ...",
+          "url": "https://link.springer.com/article/10.1186/s42400-026-00628-w"
+        },
+        {
+          "title": "The Reproduction Number of AI Worms",
+          "url": "https://www.computer.org/csdl/api/v1/periodical/mags/sp/5555/01/11627708/2iwk8nphTkA/download-article/pdf"
+        },
+        {
+          "title": "Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems",
+          "url": "https://arxiv.org/html/2410.07283"
+        },
+        {
+          "title": "[2607.21912] Reliability-Contagion Feasibility in LLM Multi-Agent Networks",
+          "url": "https://arxiv.org/abs/2607.21912"
+        },
+        {
+          "title": "Agent Smith: A Single Image Can Jailbreak One Million Multimodal LLM Agents Exponentially Fast",
+          "url": "https://arxiv.org/abs/2402.08567"
+        },
+        {
+          "title": "WormGuard: Epidemic Modelling and Decentralized Containment of Prompt Worms in AI Agent Networks",
+          "url": "https://exa.ai/library/publication/xdt02mfbzs0"
+        },
+        {
+          "title": "Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense",
+          "url": "https://arxiv.org/html/2605.02812v1"
+        },
+        {
+          "title": "[2606.20493v2] Contagion Networks: Evaluator Preference Propagation in Multi-Agent LLM Systems",
+          "url": "https://arxiv.org/abs/2606.20493v2"
+        },
+        {
+          "title": "Multi-Agent Security Tax: Trading Off Security and Collaboration Capabilities in Multi-Agent Systems",
+          "url": "https://arxiv.org/html/2502.19145v2"
+        },
+        {
+          "title": "",
+          "url": "http://arxiv.org/pdf/2603.15727v1"
+        }
+      ],
+      "round": 18
+    },
+    {
+      "engine": "exa",
+      "query": "Research papers returning subagent memory merge infection parent agent corruption persistent re entry",
+      "returned": 10,
+      "items": [
+        {
+          "title": "When Child Inherits: Modeling and Exploiting Subagent Spawn in Multi-Agent Networks",
+          "url": "https://arxiv.org/html/2605.08460"
+        },
+        {
+          "title": "Memory Poisoning Propagation and Repair Mechanism in ...",
+          "url": "https://dl.acm.org/doi/10.1145/3806262.3806294"
+        },
+        {
+          "title": "Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense",
+          "url": "https://arxiv.org/html/2605.02812v1"
+        },
+        {
+          "title": "MemoryGraft: Persistent Compromise of LLM Agents via Poisoned Experience Retrieval",
+          "url": "https://arxiv.org/html/2512.16962"
+        },
+        {
+          "title": "MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair",
+          "url": "https://arxiv.org/html/2607.27080"
+        },
+        {
+          "title": "Securing LLM-Agent Long-Term Memory Against Poisoning:Non-Malleable, Origin-Bound Authority with Machine-Checked Guarantees",
+          "url": "http://arxiv.org/abs/2606.24322"
+        },
+        {
+          "title": "",
+          "url": "https://arxiv.org/pdf/2602.15654"
+        },
+        {
+          "title": "aliuyar1234/selective-revocation-replay",
+          "url": "https://github.com/aliuyar1234/selective-revocation-replay"
+        },
+        {
+          "title": "[BUG] fork subagents spawn unauthorized nested sub-agents; at least one fabricated a completion report and wrote false claims into persistent memory/project files",
+          "url": "https://github.com/anthropics/claude-code/issues/85264"
+        },
+        {
+          "title": "Mind Viruses: Self-Propagating Instructions in Multi-Agent LLM Systems — and Codex CLI’s Defences | Codex Knowledge Base",
+          "url": "https://codex.danielvaughan.com/2026/08/27/mind-viruses-self-propagating-instructions-multi-agent-llm-codex-cli-security/"
+        }
+      ],
+      "round": 19
+    },
+    {
+      "engine": "exa",
+      "query": "Research epidemic models of LLM agent worms recovery quarantine poisoned reservoirs and shared tool contagion",
+      "returned": 10,
+      "items": [
+        {
+          "title": "Collective Loss of Control in LLM Agent Systems: An Epidemic Account of Mutation, Contagion, and Recovery",
+          "url": "http://arxiv.org/abs/2609.18460v1"
+        },
+        {
+          "title": "Cross-layer contagion of prompt injections in multi-agent swarms: a multiplex microscopic markov chain approach",
+          "url": "https://exa.ai/library/publication/tmnq3hcrqjb"
+        },
+        {
+          "title": "AgentWorm: Self-Propagating Attacks Across LLM Agent Ecosystems",
+          "url": "https://arxiv.org/html/2603.15727v3"
+        },
+        {
+          "title": "Semantic Immunity: Embedding-Based Epidemiological Defense",
+          "url": "https://gaiarobotics.com/Semantic_Immunity.pdf"
+        },
+        {
+          "title": "WormGuard: Epidemic Modelling and Decentralized Containment of Prompt Worms in AI Agent Networks",
+          "url": "https://exa.ai/library/publication/xdt02mfbzs0"
+        },
+        {
+          "title": "Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems",
+          "url": "https://arxiv.org/html/2410.07283"
+        },
+        {
+          "title": "Multi-Agent Security Tax: Trading Off Security and Collaboration Capabilities in Multi-Agent Systems",
+          "url": "https://arxiv.org/html/2502.19145v2"
+        },
+        {
+          "title": "Lazy Validation and Self-Healing for Agentic Programs",
+          "url": "https://dl.acm.org/doi/pdf/10.1145/3819802.3820582"
+        },
+        {
+          "title": "apartresearch/prompt-worms",
+          "url": "https://github.com/apartresearch/prompt-worms"
+        },
+        {
+          "title": "[2607.21912] Reliability-Contagion Feasibility in LLM Multi-Agent Networks",
+          "url": "https://arxiv.org/abs/2607.21912"
+        }
+      ],
+      "round": 20
+    },
+    {
+      "engine": "exa",
+      "query": "Research multi agent infection containment defense cure memory tagging security collaboration tradeoffs",
+      "returned": 10,
+      "items": [
+        {
+          "title": "Multi-Agent Security Tax: Trading Off Security and Collaboration Capabilities in Multi-Agent Systems",
+          "url": "https://ojs.aaai.org/index.php/AAAI/article/download/34970/37125"
+        },
+        {
+          "title": "Catching the Infection Before It Spreads: Foresight-Guided Defense in Multi-Agent Systems",
+          "url": "https://arxiv.org/html/2605.01758v3"
+        },
+        {
+          "title": "Multi-Agent Security Tax: Trading Off Security and Collaboration Capabilities in Multi-Agent Systems",
+          "url": "https://arxiv.org/html/2502.19145v2"
+        },
+        {
+          "title": "Cowpox: Towards the Immunity of VLM-based Multi-Agent Systems",
+          "url": "https://arxiv.org/html/2508.09230"
+        },
+        {
+          "title": "[2608.00426] MAPLE-Guard: Memory-Aware Link Enforcement Against Memory-Link Poisoning in Multi-Agent Systems",
+          "url": "https://arxiv.org/abs/2608.00426"
+        },
+        {
+          "title": "",
+          "url": "https://arxiv.org/pdf/2601.14667"
+        },
+        {
+          "title": "AgentSafe: Safeguarding Large Language Model-based Multi-agent Systems via Hierarchical Data Management",
+          "url": "https://arxiv.org/html/2503.04392v1"
+        },
+        {
+          "title": "",
+          "url": "https://arxiv.org/pdf/2603.20357"
+        },
+        {
+          "title": "Catching the Infection Before It Spreads: Foresight-Guided Defense in Multi-Agent Systems",
+          "url": "https://arxiv.org/html/2605.01758v2"
+        },
+        {
+          "title": "Mind Viruses: Self-Propagating Ideas in Multi-Agent LLM Systems | alphaXiv",
+          "url": "https://www.alphaxiv.org/abs/2608.10218"
+        }
+      ],
+      "round": 21
+    }
+  ],
+  "added_entries": [
+    "cao-2026-systematic",
+    "chen-2026-memsecbench",
+    "ferrag-2025-from",
+    "gan-2026-navigating",
+    "gong-2026-security",
+    "jiang-2026-sok",
+    "le-2026-cross-layer",
+    "lee-2026-reproduction",
+    "ling-2026-toward",
+    "liu-2026-contagion",
+    "mateo-torrejon-2026-gammaf",
+    "mchugh-2025-prompt",
+    "mostafavi-2026-trustworthy",
+    "niu-2026-reliability-contagion",
+    "peigne-lefebvre-2025-multi",
+    "sua-2026-contagion",
+    "tao-2026-wormguard",
+    "wu-2026-collective",
+    "wu-2026-comparative",
+    "yang-2026-zombie",
+    "zha-2026-autonomous"
+  ],
+  "annotated_entries": [
+    "cai-2026-child",
+    "cohen-2024-here",
+    "ebrahimi-2025-adversary",
+    "gu-2024-agent",
+    "he-2024-emerged",
+    "he-2025-red",
+    "huang-2024-resilience",
+    "ju-2024-flooding",
+    "lee-2024-prompt",
+    "lin-2026-survey",
+    "louck-2026-securing",
+    "miao-2025-blindguard",
+    "triedman-2025-multi",
+    "wang-2025-g-safeguard",
+    "wu-2025-cowpox",
+    "yang-2026-sok",
+    "yu-2024-netsafe",
+    "yu-2025-survey",
+    "zhang-2024-cut",
+    "zhang-2026-agentworm",
+    "zhou-2025-corba"
+  ],
+  "saturation": {
+    "last_two_raw_hits": [
+      10,
+      10
+    ],
+    "new_unscreened_leads": [
+      2,
+      1
+    ],
+    "status": "not certified: 20% and 10% raw-hit novelty, plus unexhausted forward lists and index access failures"
+  },
+  "primary_access_gaps": [
+    "10.1145/3820441.3821233",
+    "10.1145/3838457.3838551",
+    "10.1145/3806262.3806294"
+  ]
+}

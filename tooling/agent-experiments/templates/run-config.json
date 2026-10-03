@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "study_id": "REPLACE_study-v1",
+  "protocol_sha256": "REPLACE_sha256",
+  "agent_definition_paths": [
+    "agent-definition.json"
+  ],
+  "context_manifest_path": "context-access.json",
+  "environment": {
+    "source_sha256": "REPLACE_sha256",
+    "image_digest": "REPLACE_digest",
+    "dependency_lock_sha256": "REPLACE_sha256",
+    "reset": "fresh world and all mutable stores"
+  },
+  "design": {
+    "unit": "swarm episode",
+    "scenario_count": 60,
+    "replicates_per_scenario": 4,
+    "agents_per_run": 5,
+    "conditions": [
+      "control",
+      "treatment"
+    ],
+    "primary_contrast": [
+      "treatment",
+      "control"
+    ],
+    "pair_on": [
+      "scenario",
+      "replicate",
+      "initial_observations"
+    ],
+    "block_on": [
+      "scenario",
+      "model_snapshot",
+      "time_window"
+    ]
+  },
+  "seeds": {
+    "master": 20261003,
+    "derivation": "SHA256 canonical JSON keys; named streams",
+    "streams": [
+      "scenario",
+      "environment",
+      "assignment",
+      "policy",
+      "judge"
+    ]
+  },
+  "execution": {
+    "schedule": "randomized condition order within pair block",
+    "round_semantics": "synchronous",
+    "max_concurrent_runs": 1,
+    "max_rounds": 3,
+    "timeout_seconds": 120,
+    "request_retries": 2,
+    "retryable_errors": [
+      "rate_limit",
+      "transient_transport"
+    ],
+    "fallback": "disabled",
+    "resume_policy": "same run ID; append attempt lineage"
+  },
+  "budget": {
+    "scope": "entire swarm including coordinator",
+    "max_input_tokens": 12000,
+    "max_output_tokens": 3000,
+    "max_tool_calls": 30,
+    "max_usd": 0.0,
+    "paid_execution_enabled": false
+  },
+  "scoring": {
+    "implementation_sha256": "REPLACE_sha256",
+    "primary": "fraction of agents correct at deadline",
+    "failure_score": 0.0,
+    "unavailable_grade": "null; report bounds",
+    "protected": true
+  },
+  "stopping": {
+    "mode": "fixed planned allocation",
+    "safety_stop": "REPLACE_rule",
+    "effect_peeking": false
+  }
+}

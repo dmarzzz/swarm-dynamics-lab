@@ -45,3 +45,10 @@ It relies on a correct origin-labelling oracle (assumption A1). Untrusted memory
 ## Relevance to us
 
 Directly relevant to Q2, and the closest to a Byzantine-style k-of-n rule for memory. A value carried home by one sub-agent would have no authority to act until k independent principals corroborate it. The paper's independence test (distinct administrative domain, no shared upstream source) is the crux for fork-merge. Sub-agents forked from the same parent and exploring the same hostile domain share both a domain and an upstream source, so under this rule they would not count as independent corroborators of each other. For Q2 this means the threshold has to be over independent evidence channels, not over sub-agent count (inference from the paper's definition). The laundering result also bears on Q3. A compromised sub-agent's own summary is exactly the "self-summarisation" channel, so a parent that trusts a sub-agent's digest of what it learned is laundering by construction. Compare [[sharma-2026-smsr]] (randomised threshold) and [[zhan-2026-when]] (authority lost at consolidation). On manufactured consensus see the sybil-resistance notes on [[lee-2024-prompt]].
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Read depth this session: abstract. Source opened: https://arxiv.org/abs/2606.24322 .
+
+Primary abstract re-opened. Origin-bound authority and independent corroboration are relevant when a parent merges content, but the theorem is relative to a formal laundering model and authenticated-origin assumptions. The reported zero attacks is empirical within the benchmark, not universal immunity.

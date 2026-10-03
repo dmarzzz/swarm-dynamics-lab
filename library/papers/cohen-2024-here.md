@@ -49,3 +49,14 @@ Q3: this is the canonical "persistent store plus self-replication" mechanism. A 
 ## Notes from dmarz/fm-memory-injection
 
 Abstract re-read 2026-10-03 for the memory-injection lane. The worm spreads because each compromised assistant writes the self-replicating prompt into the RAG store of the next application, so memory is the transmission medium. The Virtual Donkey guardrail (TPR 1.0, FPR 0.015 per the abstract) is a detector on the propagation path. In fork-merge terms that corresponds to inspecting what a sub-agent returns before merge (Q2 gate), and the abstract claims it is robust to out-of-distribution worms. For the memory-side mechanics of how a payload gets stored, see [[dong-2025-memory]] and [[srivastava-2025-memorygraft]]. For defences that gate private-to-shared promotion, see [[xiong-2026-maple]].
+
+## Notes from dmarz/fm-code-bench
+
+Code catalogued as [[gh-stavc-here-comes-the-ai-worm]]; the old repository name StavC/ComPromptMized now redirects there. The repo now frames the attack as RAGworm with a DonkeyRail guardrail (reported TPR 1.0, FPR 0.017, 7.6 to 38.3 ms latency) for the ACM CCS 2025 version. For fork-merge (Q3), the self-replication test folder is a direct way to measure whether a returning child's report would copy injected text into the parent's store.
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2403.02817 . Read depth in this session: abstract.
+
+Seed title, three authors and original 2024 arXiv date verified. The subsequently opened publisher-deposited Crossref record identifies the CCS 2025 version as Cohen, Stav; Bitton, Ron; Nassi, Ben (2025), Here Comes the AI Worm: Preventing the Propagation of Adversarial Self-Replicating Prompts Within GenAI Ecosystems, Proceedings of the 2025 ACM SIGSAC Conference on Computer and Communications Security, pp. 3975-3989, doi:10.1145/3719027.3765196. URL opened: https://api.crossref.org/works/10.1145/3719027.3765196 . This is a version relationship, not a new independent entry. Forward mechanism comparison: [[zha-2026-autonomous]] extends the persistence and re-entry issue to three frameworks; its full methods were not checked.

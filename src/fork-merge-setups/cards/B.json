@@ -1,0 +1,1493 @@
+{
+ "batch": "B",
+ "cluster_notes": "The batch is almost entirely the LLM-agent prompt-injection and memory-poisoning literature (ml-security and llm-agents communities), so the adversary is overwhelmingly A1: the attacker controls content in the agent's domain (web pages, emails, tool responses, tool descriptions, user queries, or direct writes into a memory or RAG store). The typical rig is one agent with one persistent store: a GPT-4/4o/4o-mini or Claude Haiku/Sonnet backbone (2025-26 papers add GPT-5.x, Opus 4.7, Qwen3.5, GLM, DeepSeek), a ReAct or tool-calling scaffold, and a benchmark such as AgentDojo, InjecAgent, ASB, EHRAgent on MIMIC-III/eICU, Webshop, MMLU, LongMemEval, BEIR NQ/HotpotQA/MS-MARCO, or a bespoke sandbox (XSPI-Bench, Trojan Hippo, MPBench, AuthMem-Bench, SafetyMed). Trial counts are small: 10 trials per condition (Gadgil), 3 repetitions per case (Xie), 9 victim-target pairs x 15 queries (MINJA), 100 queries per dataset (RobustRAG), 15 synthetic scenarios (SMSR, the only one reporting CIs at scale, 3,150 trials). Multi-agent rigs are rarer and use fixed topologies: star/chain/tree (MAPLE-Guard), five topologies x 3 models x 3 frameworks = 180 configurations (Liang), dyads (Li, Ko), 20-hop simulated email chains (Cohen), or CAMEL/MetaGPT/ChatDev/AutoGen societies (Tian, PsySafe). Merge operators covered are mainly M3 (memory write, retrieval, consolidation, private-to-shared promotion), with M2 (compaction: Liu relinking, Zerhoudi, Zhan authority collapse), M4 (skill or rule distillation: SkillJack, OEP, MemoryGraft) and M8 (vote over retrieved items: RobustRAG, SMSR, A-MemGuard). M5/M6 appear only through fine-tuning backdoors (BadAgent, Watch Out, persona-feature papers), and M7 does not appear at all.\n\nAttackers are usually black-box and non-adaptive, using fixed templates or hand-designed prompts. The exceptions are NIST's adaptive red team (11% to 81%), Trojan Hippo's OpenEvolve loop, Liang's topology inference, RobustRAG's white-box certificate, and the gradient attacks (Wolf Within, PoisonedRAG HotFlip, AgentPoison trigger optimisation). Attacker goals are targeted integrity (redirect A to B, wrong answer), dormant backdoors, cross-session persistence and exfiltration. Write access varies: direct store write (AgentPoison, PoisonedRAG, Gadgil's planted files), query-only so that the agent writes its own poison (MINJA, OEP, MemoryGraft), or one untrusted tool call (Trojan Hippo, XSPI). Defenders are assumed to have a trusted system prompt and config, an honest LLM judge or auditor, a correct provenance or origin-labelling oracle (TMA-NM, MAPLE-Guard, SMSR's signing oracle), a bounded number k of poisoned items in the pool, and in CaMeL an explicitly uncompromised memory.\n\nSeveral assumptions are never varied. Corrupted items or agents are always treated as independent, and no study tests correlated failure from a shared base model, shared tool (A4) or shared fork origin, although Louck's independence criterion and the InjecAgent note flag it. No study models A2 host control or A3 channel tampering between parts. The number of corrupted sources is held at 1 or a small fixed k, and no study sweeps k/n. No study has a parent that forks parts and merges them back: the \"merge\" is always a single agent's later session, a shared store, or private-to-shared promotion. No study tests adaptive attackers that know the merge or gate rule, except the certified schemes on paper. Benign-memory density (MINJA, Sunil) is the only dilution variable that is measured.",
+ "entries": [
+  {
+   "id": "embracethered-2024-spyware",
+   "title": "Spyware Injection Into Your ChatGPT's Long-Term Memory (SpAIware)",
+   "year": 2024,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "demonstration",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Untrusted website or document read by ChatGPT macOS app; injection writes instructions into persistent memory",
+   "attacker_knowledge": "black-box; knows memory feature loads into every later chat",
+   "attacker_goal": "persistence + continuous exfiltration of user messages via invisible image URLs",
+   "defender_assumptions": "vendor-side output-channel controls (image rendering)",
+   "setup": "Single production system (ChatGPT macOS app), single proof of concept, no trials",
+   "metric": "existence of end-to-end exploit",
+   "headline": "Injected memory persists across all future chats; patched in app version 1.2024.247 via image-rendering controls",
+   "gaps": "One agent with one memory store; no fork, no merge rule, and fix targeted exfil channel not the memory write path."
+  },
+  {
+   "id": "nist-2025-technical",
+   "title": "Technical Blog: Strengthening AI Agent Hijacking Evaluations",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Injected content in AgentDojo environments (tool outputs)",
+   "attacker_knowledge": "black-box red team; adaptive, attacks developed on one task subset, tested on held-out; retries allowed",
+   "attacker_goal": "hijack: RCE, mass DB exfiltration, phishing, ransomware-style sequence",
+   "defender_assumptions": "model's built-in robustness only",
+   "setup": "Claude 3.5 Sonnet (Oct 2024), AgentDojo Workspace + 5 new injection tasks, single agent; up to 25 attempts per attack",
+   "metric": "attack success rate, pass@1 vs pass@25, per-task",
+   "headline": "Adaptive red-team attack 81% vs strongest baseline 11% on held-out Workspace tasks; 25 retries raised 57% to 80%",
+   "gaps": "Single agent, single model; no parts, no merge, no CIs."
+  },
+  {
+   "id": "owasp-2025-llm",
+   "title": "OWASP Top 10 for LLMs and Gen AI Apps 2025",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 2,
+   "kind": "position",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1",
+    "A4"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "various (injection, poisoning, disclosure, excessive agency)",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "No item for persistent cross-session memory or agent-to-agent propagation."
+  },
+  {
+   "id": "owasp-2025-agentic",
+   "title": "OWASP Top 10 for Agentic Applications for 2026",
+   "year": 2025,
+   "type": "blog",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "position",
+   "community": "ml-security",
+   "merge_ops": [
+    "M1",
+    "M3"
+   ],
+   "adversary": [
+    "A1",
+    "A3",
+    "A4"
+   ],
+   "attacker_access": "agent memory/embeddings/RAG stores (ASI06), inter-agent channels (ASI07), supply chain (ASI04)",
+   "attacker_knowledge": null,
+   "attacker_goal": "goal hijack, memory poisoning across sessions, cascading failure, rogue agents",
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Taxonomy only, read via secondary summary; no merge-specific threat model."
+  },
+  {
+   "id": "gh-ai-secure-agentpoison",
+   "title": "AgentPoison: official implementation",
+   "year": 2024,
+   "type": "code",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "write access to agent memory/knowledge base plus trigger in user query",
+   "attacker_knowledge": "optimises trigger over retriever embedding space",
+   "attacker_goal": "backdoor",
+   "defender_assumptions": null,
+   "setup": "Driving, QA and EHR agents (per paper); not run",
+   "metric": null,
+   "headline": null,
+   "gaps": "Repo description only; attack writes directly into a single store, no sub-agent return path."
+  },
+  {
+   "id": "gh-tangciuyueng-amemguard",
+   "title": "A-MemGuard: official code",
+   "year": 2025,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3",
+    "M8"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "inherits AgentPoison memory-poisoning setup",
+   "attacker_knowledge": null,
+   "attacker_goal": "backdoor/integrity",
+   "defender_assumptions": "consensus across retrieved memories' reasoning paths is informative",
+   "setup": "AgentPoison codebase; EHRAgent and ReAct agents; HF/OpenAI/vLLM providers; DPR and REALM embedders; not run",
+   "metric": null,
+   "headline": null,
+   "gaps": "Consensus is over memories of one agent, not over independent parts; evaluation scope inherited from AgentPoison."
+  },
+  {
+   "id": "gh-sleeeepeer-poisonedrag",
+   "title": "PoisonedRAG: official code",
+   "year": 2024,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "inject a few texts (adv_per_query default 5) into RAG corpus",
+   "attacker_knowledge": "black-box (LLM-generated) or white-box (HotFlip) retriever",
+   "attacker_goal": "integrity: attacker-chosen answer for target question",
+   "defender_assumptions": null,
+   "setup": "BEIR NQ, HotpotQA, MS-MARCO; Contriever retriever; not run",
+   "metric": null,
+   "headline": null,
+   "gaps": "Static corpus attack; agents do not write their own memory."
+  },
+  {
+   "id": "gh-xiong-wenjun-maple-guard",
+   "title": "MAPLE-Guard code",
+   "year": 2026,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "tool",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "memory-link poisoning via bundled attacks (MINJA, MemoryGraft, AgentPoison, PromptInject, ToolAttack)",
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity via poisoned private->shared memory",
+   "defender_assumptions": "lifecycle gates at write, retrieval, promotion, cross-agent reuse, outcome update",
+   "setup": "MAS with private + shared memory over star, chain, tree topologies; 5 benchmark/attack pairs (MMLU/MINJA, LongMemEval/MemoryGraft, AppWorld/AgentPoison, CSQA/PromptInject, InjectAgent/ToolAttack); Qwen3.5-122B-A10B; not run",
+   "metric": null,
+   "headline": null,
+   "gaps": "Promotion is per-item, not a k-of-n rule across independent sub-agents."
+  },
+  {
+   "id": "abdelnabi-2024-get",
+   "title": "Get my drift? Catching LLM Task Drift with Activation Deltas",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "external data block processed by the model (indirect injection, jailbreaks)",
+   "attacker_knowledge": "non-adaptive in abstract",
+   "attacker_goal": "task drift / goal hijack",
+   "defender_assumptions": "white-box activation access; linear probe trained without attack examples",
+   "setup": "Activations from six open models; TaskTracker dataset >500K instances; two probing methods",
+   "metric": "ROC AUC for drift detection",
+   "headline": "Near-perfect ROC AUC on out-of-distribution test set (abstract)",
+   "gaps": "One external block, not long trajectories; no adaptive attacker; no multi-part merge."
+  },
+  {
+   "id": "chen-2024-agentpoison",
+   "title": "AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "direct write of a few malicious demonstrations into memory/KB; trigger must appear in victim query",
+   "attacker_knowledge": "optimises trigger over retriever embedding space (constrained optimisation); no model training",
+   "attacker_goal": "backdoor (dormant until trigger)",
+   "defender_assumptions": null,
+   "setup": "RAG autonomous-driving agent, knowledge-intensive QA agent, EHRAgent; poison rate <0.1%",
+   "metric": "ASR, benign performance loss",
+   "headline": "Average ASR >80% with <1% benign degradation at poison rate <0.1% (abstract)",
+   "gaps": "Single store with direct write; no sub-agent producing the records or merge gate."
+  },
+  {
+   "id": "chen-2025-persona",
+   "title": "Persona Vectors: Monitoring and Controlling Character Traits in Language Models",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M5",
+    "M6"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "system prompts, many-shot prompts, fine-tuning data (incl. subtle domain errors)",
+   "attacker_knowledge": null,
+   "attacker_goal": "persona shift (evil, sycophancy, hallucination)",
+   "defender_assumptions": "white-box activations; traits named in advance; LLM judge",
+   "setup": "Qwen2.5-7B-Instruct, Llama-3.1-8B-Instruct; contrastive prompts, difference-of-means directions; fine-tuning datasets at three severity levels",
+   "metric": "correlation of activation projection with trait expression",
+   "headline": "Projection correlates with trait expression at r = 0.75 to 0.83",
+   "gaps": "Not an adversarial setting; no parts or merge, assumes defender sees activations."
+  },
+  {
+   "id": "cohen-2024-here",
+   "title": "Here Comes The AI Worm (Morris-II)",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3",
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "sends one email that lands in an assistant's RAG store",
+   "attacker_knowledge": "black-box; payload content tuned for retrieval",
+   "attacker_goal": "self-replication (worm), data exfiltration",
+   "defender_assumptions": "Virtual Donkey guardrail: output/input overlap classifier",
+   "setup": "20 Enron mailboxes (2,000 emails), LangChain, 5 embedding models, several LLM engines (e.g. Gemini 1.5 Flash), 3 generation modes; simulated 20-hop chains over random permutations",
+   "metric": "retrieval-replication-payload success per hop; guardrail TPR/FPR/AUC",
+   "headline": ">90% replication+payload up to hop 11, 40-80% by hop 20 (Gemini 1.5 Flash); guardrail TPR 1.0 at FPR 0.015",
+   "gaps": "Peer chain of applications, not fork/merge to a parent; guardrail untested against adaptive or paraphrasing attackers."
+  },
+  {
+   "id": "dash-2026-untrusted",
+   "title": "From Untrusted Input to Trusted Memory: A Systematic Study of Memory Poisoning Attacks in LLM Agents",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "four memory write channels (details not read)",
+   "attacker_knowledge": null,
+   "attacker_goal": "memory poisoning (six attack classes)",
+   "defender_assumptions": "existing prompt-injection defences",
+   "setup": "MPBench; details not read",
+   "metric": "exploitability vs memory write/retrieve aggressiveness",
+   "headline": "More aggressive memory writers/retrievers are more exploitable; prompt-injection defences do not cover memory poisoning (abstract)",
+   "gaps": "Single-agent write channels; a merge as a bulk write channel is not modelled."
+  },
+  {
+   "id": "das-2026-trojan",
+   "title": "Trojan Hippo Bench: A Dynamic Benchmark for Persistent Memory Attacks and Defenses in LLM Agents",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "one untrusted tool call (e.g. crafted email) that plants a dormant payload in long-term memory",
+   "attacker_knowledge": "adaptive: OpenEvolve loop refines attacks against defences and memory backends",
+   "attacker_goal": "persistence + topic-triggered exfiltration of personal data",
+   "defender_assumptions": "four defences based on basic security principles (not read)",
+   "setup": "Email assistant; four memory backends (explicit tool memory, agentic memory, RAG, sliding window); frontier OpenAI and Google models",
+   "metric": "ASR, dormancy across benign sessions, security-utility tradeoff",
+   "headline": "Undefended ASR 85-100%; planted memories activate after 100 benign sessions; defences cut ASR to 0-5% at variable utility cost",
+   "gaps": "Single domain, single agent; the planted write comes from a tool call, not a returning sub-agent."
+  },
+  {
+   "id": "debenedetti-2025-defeating",
+   "title": "Defeating Prompt Injections by Design (CaMeL)",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "untrusted data retrieved during the task (AgentDojo injections)",
+   "attacker_knowledge": null,
+   "attacker_goal": "control-flow hijack, data exfiltration via tool arguments",
+   "defender_assumptions": "trusted user query; memory explicitly assumed uncompromised (Section 3); planner/quarantined LLM split; capability-tagged interpreter",
+   "setup": "AgentDojo; dual-LLM design (planner + quarantined data processor) with custom interpreter and capability policies; multiple models incl. GPT-4o-mini",
+   "metric": "task success with provable security; number of successful attacks",
+   "headline": "77% AgentDojo tasks solved with provable security vs 84% undefended",
+   "gaps": "Assumes memory uncompromised, so content merged from a child into parent memory is outside the guarantee."
+  },
+  {
+   "id": "deng-2024-ai",
+   "title": "AI Agents Under Threat: A Survey of Key Security Challenges and Future Pathways",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "survey",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1",
+    "A3"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Pre-dates multi-agent propagation measurements; does not address reintegration."
+  },
+  {
+   "id": "gadgil-2026-bad",
+   "title": "Bad Memory: Evaluating Prompt Injection Risks from Memory in Agentic Systems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "payload already planted in file-based memory (CLAUDE.md-style instruction, preference, knowledge files); also attempted writes from untrusted external content",
+   "attacker_knowledge": "black-box",
+   "attacker_goal": "credential exfiltration, unauthorised tool installation, brand targeting; persistence across sessions",
+   "defender_assumptions": "models' own refusal behaviour",
+   "setup": "Claude Code and OpenAI Codex in sandboxed synthetic developer workspace; Claude Haiku 4.5, Opus 4.7, GPT-5.2, GPT-5.5; probe/stabilisation/probe sequences of up to 3 sessions; 10 trials per condition",
+   "metric": "single-session ASR, cross-session persistence, stacked-attack ASR",
+   "headline": "Planted payload persists across sessions in 50-96.7% of runs; single-session ASR 23.3% (GPT-5.2) to 63.3% (Haiku 4.5); writing payload from untrusted content could not be done reliably",
+   "gaps": "Assumes payload planted (the merge would do this); n=10, file memory only, max 3 sessions, no heterogeneous-part test."
+  },
+  {
+   "id": "dong-2025-memory",
+   "title": "Memory Injection Attacks on LLM Agents via Query-Only Interaction (MINJA)",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "query-only: sends ordinary queries with indication prompts and reads outputs; agent writes poisoned (query, reasoning) records to a memory shared across users",
+   "attacker_knowledge": "black-box; hand-designed indication prompt per victim-target pair; progressive shortening",
+   "attacker_goal": "targeted integrity (redirect victim term A to target B)",
+   "defender_assumptions": "LLM prompt-based detector only; memory bank starts nearly empty",
+   "setup": "RAP on Webshop, EHRAgent on MIMIC-III and eICU, CoT QA agent on MMLU; GPT-4 and GPT-4o; 9 victim-target pairs, 15 attack queries per pair (10 MMLU), shuffled among 30-50 benign queries; 6 embedders ablated",
+   "metric": "ISR, ASR on held-out victim queries, utility drop",
+   "headline": "ISR >95% overall; ASR 43-100% by setting; MIMIC ASR falls 68.9% to 31.1% as benign queries rise 25 to 100",
+   "gaps": "Near-empty memory favours attacker; one shared store, no sub-agent provenance or merge threshold tested."
+  },
+  {
+   "id": "greshake-2023-not",
+   "title": "Not What You've Signed Up For: Indirect Prompt Injection",
+   "year": 2023,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "demonstration",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "content the LLM application retrieves (web pages, emails, code, documents)",
+   "attacker_knowledge": "black-box",
+   "attacker_goal": "info gathering, fraud, malware/worming, intrusion and persistence, manipulated content, availability",
+   "defender_assumptions": "none evaluated (RLHF, filtering, supervisor LLM discussed)",
+   "setup": "Proof-of-concept case studies on Bing Chat (GPT-4), code completion, synthetic GPT-4 and text-davinci-003 apps; no benchmark",
+   "metric": "qualitative demonstration",
+   "headline": "Injected memory store re-poisons later sessions (synthetic app); page injections steer Bing Chat that are blocked when typed directly",
+   "gaps": "Qualitative only; no rates, no multi-part merge."
+  },
+  {
+   "id": "he-2024-emerged",
+   "title": "The Emerged Security and Privacy of LLM Agent: A Survey with Case Studies",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 2,
+   "kind": "survey",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Pre-dates memory-poisoning literature; no merge treatment."
+  },
+  {
+   "id": "hu-2026-when",
+   "title": "When Local Monitors Miss Compositional Harm: Diagnosing Distributed Backdoors in Multi-Agent Systems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "proof",
+   "community": "ai-control",
+   "merge_ops": [
+    "M1",
+    "M8"
+   ],
+   "adversary": [
+    "A1",
+    "A3"
+   ],
+   "attacker_access": "controls several agents' outputs, splitting a payload into fragments",
+   "attacker_knowledge": "knows monitor's view; chooses encoding",
+   "attacker_goal": "integrity: assembled harmful object (e.g. credential-exfiltrating code)",
+   "defender_assumptions": "per-message monitors of various families; assembly-level monitor sees merged object",
+   "setup": "Controlled fragment-visibility testbed with one dial; external prompt-injection benchmark; end-to-end multi-agent runs; models not stated",
+   "metric": "monitor AUROC, block rate",
+   "headline": "Benign-trained monitor recovers attack structure across held-out encodings at 0.874 mean AUROC; decoded-view gate blocks every tested attack",
+   "gaps": "Payloads are structured code; does not specify number of corrupted parts or merge operator beyond assembly."
+  },
+  {
+   "id": "karunanidhi-2026-utility",
+   "title": "Utility Under Attack: Agent Memory Poisoning and the Limits of Content Screening and Provenance Ranking",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "plainly worded false statements stored in agent memory; no trigger or optimisation",
+   "attacker_knowledge": "none needed (one-pass generated)",
+   "attacker_goal": "integrity (wrong answers)",
+   "defender_assumptions": "four-stage write-time screen; additive provenance-weighted retrieval",
+   "setup": "LongMemEval; 360 poisoned memories; poison 1.2% of corpus",
+   "metric": "QA accuracy, screen recall/false-flag rate, p-value vs no defence",
+   "headline": "1.2% poison drops accuracy 0.850 to 0.300; screen with 0.832 injection recall rejects 0 of 360 poisons",
+   "gaps": "Single-author abstract; proposed occupancy bound not evaluated; no part structure."
+  },
+  {
+   "id": "ko-2026-attractor",
+   "title": "Attractor States Emerge in Multi-Turn LLM Conversations",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "none (benign debate); relevance is a counterpart agent's conversational pull",
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "7 LLMs incl. Claude Haiku, GPT-4.1 nano, GPT-4o mini; 20 controversial topics; self-play and mixed-play dyads; trajectory embeddings + trait and stance coding",
+   "metric": "endpoint regions in representation space; trait/stance shift",
+   "headline": "Model-specific attractor basins; Claude Haiku moves little and attracts partners, GPT-4.1 nano and GPT-4o mini are malleable",
+   "gaps": "No adversarial optimisation, dyads only, no merge."
+  },
+  {
+   "id": "li-2024-measuring",
+   "title": "Measuring and Controlling Instruction (In)Stability in Language Model Dialogs",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "none adversarial; the other agent's system prompt in a two-agent dialog",
+   "attacker_knowledge": null,
+   "attacker_goal": "(implicit) persona/instruction drift toward interlocutor",
+   "defender_assumptions": "split-softmax attention reweighting; system-prompt repetition",
+   "setup": "Two copies of same model, 8 rounds; LLaMA2-chat-70B (200 random prompt pairs), gpt-3.5-turbo-16k, LLaMA2-7B/7B-chat for attention; 100 system prompts in 5 categories; temp 1.0, p=0.9; deterministic probe scorers",
+   "metric": "per-turn adherence to own vs interlocutor's system prompt",
+   "headline": "Own-prompt adherence falls significantly within 8 rounds while interlocutor-prompt adherence rises (LLaMA2-70B); about 10% drop on gpt-3.5",
+   "gaps": "Benign interlocutor, short dialogs, 2023 models, no merge back."
+  },
+  {
+   "id": "li-2025-system",
+   "title": "System Prompt Poisoning: Persistent Attacks on Large Language Models Beyond User Injection",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "write access to the system prompt",
+   "attacker_knowledge": null,
+   "attacker_goal": "persistent integrity degradation across all subsequent interactions",
+   "defender_assumptions": null,
+   "setup": "Four poisoning strategies on generative and reasoning LLMs across math, coding, logical reasoning and NLP tasks; models not stated",
+   "metric": null,
+   "headline": "Effective without jailbreak, survives CoT user prompts, weakens CoT and RAG benefits (abstract, no numbers)",
+   "gaps": "Assumes direct system-prompt write; no fork or merge of self-maintained instructions."
+  },
+  {
+   "id": "liu-2023-prompt",
+   "title": "Prompt Injection attack against LLM-integrated Applications (HouYi)",
+   "year": 2023,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "direct user input to deployed applications",
+   "attacker_knowledge": "black-box; iterative attack generation",
+   "attacker_goal": "goal hijack, prompt theft, unrestricted LLM use",
+   "defender_assumptions": null,
+   "setup": "Exploratory study of 10 commercial apps, then HouYi deployed on 36 real LLM-integrated applications",
+   "metric": "number of susceptible apps",
+   "headline": "31 of 36 real applications susceptible; 10 vendors validated",
+   "gaps": "Direct single-turn injection on 2023 apps; no memory or multi-agent path."
+  },
+  {
+   "id": "liang-2025-dont",
+   "title": "Don't Trust Your Upstream: Exploiting LLM Multi-Agent System via Topology-Guided Adversarial Propagation",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "environment the edge agent reads (web pages, files, images) and the public interface; no weights, memory or inter-agent channel access",
+   "attacker_knowledge": "black-box; infers topology from ordinary queries (F1 0.94); topology-aware path choice",
+   "attacker_goal": "reach privileged internal agent (integrity/action)",
+   "defender_assumptions": "T-Guard: cross-modal check at edge agents, per-agent trust map, trust-gated permissions",
+   "setup": "Magentic-One, LangManus, OWL; 5 topologies (star, tree, chain, mesh, ...); GPT-4o, Claude 3.7 Sonnet, DeepSeek-R1; 180 configurations; 20 scenarios on GPT-Researcher and TradingAgents; edge agents with browser/filesystem MCP tools",
+   "metric": "end-to-end attack success, topology inference F1, T-Guard block/FP rate and latency",
+   "headline": "Topology-aware propagation succeeds 40-78% end to end where single-agent attacks score 0%; T-Guard blocks 94.8% at ~3.5% FP",
+   "gaps": "Static topologies, no adaptive defender; payload withheld; contaminated content written only to files did not propagate, so persistent memory merge is untested."
+  },
+  {
+   "id": "liu-2026-safe",
+   "title": "Safe to Check, Unsafe to Use: Relinking at the Compression Boundary of LLM Agents",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M2"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "untrusted parts of the trajectory (user content, retrieved docs, tool observations); places payload fragments at distance",
+   "attacker_knowledge": "knows a summariser runs before action; DSL-based fragment generator",
+   "attacker_goal": "integrity: summariser assembles an actionable malicious instruction",
+   "defender_assumptions": "trusted system prompt, config, trusted memory, tool schemas; defender sees pre-compression source, compressed context and backend action",
+   "setup": "Four long-context agent benchmarks, 619 samples incl. 30 from AgentDojo; model list not checked",
+   "metric": "relink rate and backend action rate",
+   "headline": "Relink reaches 86.9% relink/backend action rate vs 17.0% for clean-split controls; KBRA audit cuts residual to 0.0%",
+   "gaps": "Fragments within one trajectory, not across several parts merged by a summary; defence tested only against own attack."
+  },
+  {
+   "id": "louck-2026-securing",
+   "title": "Securing LLM-Agent Long-Term Memory Against Poisoning: Non-Malleable, Origin-Bound Authority (TMA-NM)",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "proof",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3",
+    "M2",
+    "M8"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "untrusted ingestion channels; launders via agent self-summarisation, trusted-tool echo, manufactured corroboration (several planted items)",
+   "attacker_knowledge": "knows defence class (content, lineage, IFC)",
+   "attacker_goal": "untrusted value drives consequential action",
+   "defender_assumptions": "correct origin-labelling oracle; k=2 independent trusted principals from distinct authenticated channels and administrative domains with no shared upstream; hash-chained log",
+   "setup": "8 frontier models from 6 vendors (pooled); cross-defence/attack/model benchmark; reproduced MemMorph, MemoryGraft, Trojan Hippo, Conversational Trojan; TLA+ finite model (3 slots, <=2 sessions, k=2)",
+   "metric": "ASR direct and laundering, legitimate utility, gate latency",
+   "headline": "TMA-NM 0% direct and 0% laundering ASR with 100% utility vs 84%/68% undefended; lineage defence 0%/47%",
+   "gaps": "Bounded proof; free-text answers still coloured; independence criterion would exclude same-parent forks as corroborators."
+  },
+  {
+   "id": "luz-de-araujo-2025-persistent",
+   "title": "Persistent Personas? Role-Playing, Instruction Following, and Safety in Extended Interactions",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "Seven open- and closed-weight LLMs; persona dialogues >100 rounds used as context for standard evaluation datasets",
+   "metric": "persona fidelity, instruction following, safety",
+   "headline": "Persona fidelity degrades over long dialogues and responses regress toward base model defaults (abstract)",
+   "gaps": "No adversary and no merge."
+  },
+  {
+   "id": "lin-2026-survey",
+   "title": "A Survey on Long-Term Memory Security in LLM Agents",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "survey",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity, confidentiality, availability, governance",
+   "defender_assumptions": "proposes provenance, versioning, policy-aware retention at storage time",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Review; Share/Propagate and Rollback phases named but not tested."
+  },
+  {
+   "id": "liu-2023-formalizing",
+   "title": "Formalizing and Benchmarking Prompt Injection Attacks and Defenses",
+   "year": 2023,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "injected instruction + data combined with legitimate data",
+   "attacker_knowledge": null,
+   "attacker_goal": "application performs injected task instead of target task",
+   "defender_assumptions": "10 defences benchmarked",
+   "setup": "5 attacks x 10 defences x 10 LLMs x 7 tasks; Open-Prompt-Injection platform",
+   "metric": null,
+   "headline": null,
+   "gaps": "Single-turn, stateless; no persistence or propagation."
+  },
+  {
+   "id": "margalit-2026-governed",
+   "title": "Governed Shared Memory for Multi-Agent LLM Systems (MemClaw)",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "(failure modes) leakage, stale propagation, contradiction persistence, provenance collapse",
+   "defender_assumptions": "scoped retrieval, temporal supersession, provenance tracking, policy-governed propagation",
+   "setup": "Live production multi-tenant memory service measured with ArgusFleet harness; no baselines",
+   "metric": "provenance-chain reconstruction, cross-fleet leakage, latency",
+   "headline": "Depth-four derivation chains reconstructed with correct writer identity in 100% of cases; zero cross-fleet leakage, but sub-tenant scope bypass and dedup-before-contradiction ordering bug found",
+   "gaps": "Not an adversarial poisoning evaluation; product-authored."
+  },
+  {
+   "id": "nakash-2024-breaking",
+   "title": "Breaking ReAct Agents: Foot-in-the-Door Attack Will Get You In",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "indirect injection in tool outputs; for thought injection, write access to the trajectory",
+   "attacker_knowledge": "black-box",
+   "attacker_goal": "hijack tool action",
+   "defender_assumptions": "internal self-reflection or external safety reflector",
+   "setup": "InjecAgent-derived cases; ReAct agents on GPT-4o-mini, Llama-3-70B and others; ablations of distractor familiarity, position, timing",
+   "metric": "ASR increase, compliance, reflector FP rate",
+   "headline": "Foot-in-the-door distractor adds 34.5% average ASR; injected intent thought yields >95% compliance with distractor",
+   "gaps": "Single session; whether imported part reasoning traces carry commitment into a parent is untested."
+  },
+  {
+   "id": "packer-2023-memgpt",
+   "title": "MemGPT: Towards LLMs as Operating Systems",
+   "year": 2023,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "Document analysis beyond context window and multi-session chat; numbers not read",
+   "metric": null,
+   "headline": null,
+   "gaps": "No security analysis; describes the self-edited memory object a merge would reconcile."
+  },
+  {
+   "id": "perez-2022-ignore",
+   "title": "Ignore Previous Prompt: Attack Techniques For Language Models",
+   "year": 2022,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "direct user input appended to base prompts",
+   "attacker_knowledge": "black-box",
+   "attacker_goal": "goal hijacking (print attacker string), prompt leaking",
+   "defender_assumptions": "stop sequences, post-input text",
+   "setup": "PromptInject; 35 OpenAI example base prompts; GPT-3 ada, babbage, curie, davinci-001, davinci-002; factor sweeps; 4 runs per configuration",
+   "metric": "exact-match hijack success, substring leak success",
+   "headline": "Best goal hijacking 58.6% +/- 1.6 on text-davinci-002; inverse scaling ada 13.8% to davinci-002 58.6%",
+   "gaps": "Direct, single-turn, no tools or memory, obsolete models."
+  },
+  {
+   "id": "radosevich-2025-mcp",
+   "title": "MCP Safety Audit: LLMs with the Model Context Protocol Allow Major Security Exploits",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "demonstration",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1",
+    "A4"
+   ],
+   "attacker_access": "requests to agent with standard MCP servers (filesystem, shell)",
+   "attacker_knowledge": null,
+   "attacker_goal": "malicious code execution, remote access control, credential theft",
+   "defender_assumptions": "MCPSafetyScanner audit tool",
+   "setup": "Qualitative case studies on MCP clients with off-the-shelf servers; models not checked",
+   "metric": null,
+   "headline": null,
+   "gaps": "No rates; no sub-agent carrying permissions back to parent."
+  },
+  {
+   "id": "ravindran-2026-portable",
+   "title": "Portable Agent Memory: A Protocol for Cryptographically-Verified Memory Transfer",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": "tampering with transferred memory (tamper evidence); indirect injection on rehydration",
+   "attacker_knowledge": null,
+   "attacker_goal": "tamper / injection",
+   "defender_assumptions": "Merkle-DAG provenance, capability access control, injection-resistant rehydration",
+   "setup": "Python SDK with 54 passing tests; transfer between GPT-4, Claude, Gemini, Llama",
+   "metric": "tests passed",
+   "headline": "54 tests pass; no adversarial evaluation of rehydration",
+   "gaps": "Hash provenance cannot detect a compromised writer producing validly signed poison."
+  },
+  {
+   "id": "sandhan-2026-persona",
+   "title": "Persona Jailbreaking in Large Language Models (PHISH)",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "user-side conversation history only",
+   "attacker_knowledge": "black-box, inference-only",
+   "attacker_goal": "persona hijack (reverse assigned persona) while keeping capability",
+   "defender_assumptions": "current guardrails",
+   "setup": "3 benchmarks, 8 LLMs; high-risk deployments (mental health, tutoring, customer support); human and LLM-judge validation",
+   "metric": "persona shift; reasoning benchmark performance",
+   "headline": "Predictable persona shift across 8 LLMs with only slight reasoning drop; stronger in multi-turn (abstract)",
+   "gaps": "Persona = trait inventories, not goals/tool policies; no merge or competence-check test."
+  },
+  {
+   "id": "sharma-2026-smsr",
+   "title": "SMSR: Certified Defence Against Runtime Memory Poisoning in Persistent LLM Agent Systems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "proof",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3",
+    "M8"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "unsigned adversary: DB write access without key; authenticated adversary: normal user with at most k crafted entries; also query-only (agent writes poison)",
+   "attacker_knowledge": "adaptive w.r.t. content filters (Theorem 1); does not fool the judge",
+   "attacker_goal": "integrity: malicious verdict from memory-grounded answer",
+   "defender_assumptions": "server-side HMAC signing oracle; bounded k via write quotas and near-dup detection; uniform sampling; honest LLM judge",
+   "setup": "15 synthetic enterprise-policy scenarios (one fictional company); Claude Haiku 4.5 as agent and judge (also Sonnet 4.6); 3,150 repeated trials; 10 or 20 seed memories; k=1, T=5 subsets",
+   "metric": "ASR with 95% CI vs Theorem 2 bound; clean utility; cost 2T calls",
+   "headline": "Authenticated injection ASR 8.0% (95% CI 5.8-10.9, n=450) with 20 seeds, k=1, T=5; string vote 93.3% vs verdict vote 13.3%",
+   "gaps": "Bound vacuous when adversary holds large share of pool; multi-agent signing left to future work; one author, synthetic data."
+  },
+  {
+   "id": "shahriar-2025-survey",
+   "title": "A Survey on Agentic Security: Applications, Threats and Defenses",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 2,
+   "kind": "survey",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "Systematic review of >260 papers",
+   "metric": null,
+   "headline": null,
+   "gaps": "Memory-specific and merge coverage not checked."
+  },
+  {
+   "id": "srivastava-2025-memorygraft",
+   "title": "MemoryGraft: Persistent Compromise of LLM Agents via Poisoned Experience Retrieval",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3",
+    "M4"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "benign-looking artifacts the agent reads during a task, leading it to store malicious 'successful experience' templates",
+   "attacker_knowledge": "black-box",
+   "attacker_goal": "persistent behavioural drift across sessions",
+   "defender_assumptions": null,
+   "setup": "MetaGPT DataInterpreter, GPT-4o, union lexical + embedding retrieval; one agent",
+   "metric": "share of poisoned records among retrieved experiences",
+   "headline": "Small number of poisoned records dominates retrieval (abstract); secondary report: 10 seeds in 110-entry store give 48% poisoned retrieval",
+   "gaps": "One agent, one model; experience store is not merged from separate parts."
+  },
+  {
+   "id": "sunil-2026-memory",
+   "title": "Memory Poisoning Attack and Defense on Memory Based LLM-Agents",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "MINJA query-only injection",
+   "attacker_knowledge": "black-box",
+   "attacker_goal": "targeted integrity",
+   "defender_assumptions": "composite trust-score moderation; memory sanitisation with temporal decay and pattern filtering",
+   "setup": "EHR agent on MIMIC-III; GPT-4o-mini, Gemini-2.0-Flash, Llama-3.1-8B-Instruct; varies initial memory state, number of indication prompts, retrieval parameters",
+   "metric": "injection and attack success",
+   "headline": "Realistic pre-existing memories sharply reduce MINJA effectiveness vs its idealised >95% ISR / 70% ASR (no exact numbers read)",
+   "gaps": "One domain, heuristic defences without bounds, single shared store."
+  },
+  {
+   "id": "tian-2023-evil",
+   "title": "Evil Geniuses: Delving into the Safety of LLM-based Agents",
+   "year": 2023,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "attack prompts to agents (template-based and role-consistent)",
+   "attacker_knowledge": "red-blue automated prompt generation",
+   "attacker_goal": "harmful content generation",
+   "defender_assumptions": null,
+   "setup": "CAMEL, MetaGPT, ChatDev; GPT-3.5 and GPT-4; varies number of agents, role definition, attack level",
+   "metric": "attack success rate",
+   "headline": "High ASR; agents less robust than standalone LLMs (abstract, rates not checked)",
+   "gaps": "Harmful text rather than actions; 2023 frameworks; no merge."
+  },
+  {
+   "id": "tan-2024-wolf",
+   "title": "The Wolf Within: Covert Injection of Malice into MLLM Societies via an MLLM Operative",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "demonstration",
+   "community": "ml-security",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "adversarial image perturbation fed to one 'wolf' agent, which then messages peers",
+   "attacker_knowledge": "white-box gradient access to wolf and sheep models (PGD through both)",
+   "attacker_goal": "peers produce harmful instructions/misinformation",
+   "defender_assumptions": null,
+   "setup": "Society of multimodal LLM agents; transfer tested on agents untouched in optimisation (LLaVA, PandaGPT, Shikra cited; which used not checked); workshop-scale",
+   "metric": "induced harmful output, transfer",
+   "headline": null,
+   "gaps": "White-box assumption, small setting, rates not checked."
+  },
+  {
+   "id": "torra-2026-memory",
+   "title": "Memory poisoning and secure multi-agent systems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "position",
+   "community": "crypto-anonymity",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1",
+    "A3"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "memory poisoning by memory type",
+   "defender_assumptions": "cryptographic solutions; local inference over private knowledge retrieval",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Inter-agent poisoning explicitly not formalised."
+  },
+  {
+   "id": "wang-2025-persona",
+   "title": "Persona Features Control Emergent Misalignment",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M5",
+    "M6"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "narrow fine-tuning or RL data (e.g. insecure code)",
+   "attacker_knowledge": null,
+   "attacker_goal": "broad misalignment (emergent)",
+   "defender_assumptions": "SAE model diffing; a few hundred benign fine-tuning samples",
+   "setup": "OpenAI GPT-4o family and reasoning models, models without safety training; several synthetic fine-tuning datasets; SAE diffing",
+   "metric": "emergent misalignment; toxic persona feature activation",
+   "headline": "Toxic persona feature controls and predicts emergent misalignment; a few hundred benign samples restore alignment (abstract)",
+   "gaps": "No adversarial merge; recovery may depend on specific misalignment."
+  },
+  {
+   "id": "wang-2024-badagent",
+   "title": "BadAgent: Inserting and Activating Backdoor Attacks in LLM Agents",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1",
+    "A4"
+   ],
+   "attacker_access": "control over a fraction of fine-tuning data (<=500 poisoned samples); trigger in input (active) or environment (passive)",
+   "attacker_knowledge": "chooses fixed trigger strings",
+   "attacker_goal": "backdoor triggering covert tool actions; survives clean fine-tuning",
+   "defender_assumptions": "clean-data fine-tuning (fails)",
+   "setup": "ChatGLM3-6B, AgentLM-7B, AgentLM-13B; AdaLoRA, QLoRA; OS, WebShop, Mind2Web tasks",
+   "metric": "ASR, follow step ratio on triggered vs clean",
+   "headline": ">85% ASR with <=500 poisoned samples; clean fine-tuning does not remove backdoor",
+   "gaps": "Small open models, fixed triggers; no weight merge across parts tested."
+  },
+  {
+   "id": "wang-2025-mcptox",
+   "title": "MCPTox: A Benchmark for Tool Poisoning Attack on Real-World MCP Servers",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "malicious instructions in a tool's description (metadata) loaded into context; tool need not be called",
+   "attacker_knowledge": "black-box; three fixed templates",
+   "attacker_goal": "function hijacking, parameter tampering across 10 risk categories",
+   "defender_assumptions": "model alignment/refusal only",
+   "setup": "45 live MCP servers, 353 real tools, 1,348 malicious test cases, 20 LLM agent settings; single-turn",
+   "metric": "ASR, refusal rate",
+   "headline": "o1-mini highest at 72.8% ASR; refusal <3% (Claude-3.7-Sonnet highest); parameter tampering avg 46.7%",
+   "gaps": "Single-turn, single agent; shared tool across parts (common mode) not studied."
+  },
+  {
+   "id": "wei-2025-amemguard",
+   "title": "A-MemGuard: A Proactive Defense Framework for LLM-Based Agent Memory",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3",
+    "M8"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "AgentPoison direct injection; MINJA query-only",
+   "attacker_knowledge": "non-adaptive (adaptive attacks not systematically evaluated)",
+   "attacker_goal": "integrity/backdoor via memory",
+   "defender_assumptions": "poisoned records are a minority among K retrieved; LLM judge honest; lesson memory",
+   "setup": "ReAct-StrategyQA, EHRAgent, MMLU; GPT-4o-mini, Llama-3.1-8B; DPR, REALM retrievers; a multi-agent setting; AgentPoison codebase",
+   "metric": "ASR reduction, task success, token overhead",
+   "headline": "AgentPoison retrieval-level ASR 100% to 2.13% on EHRAgent with GPT-4o-mini; ~7.8k vs 3.6k tokens per decision",
+   "gaps": "Uncertified majority; coordinated identical poison from several sources could become consensus."
+  },
+  {
+   "id": "wang-2026-oep",
+   "title": "OEP: Poisoning Self-Evolving LLM Agents via Locally Correct but Non-Transferable Experiences",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3",
+    "M4"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "induces agent to work through curated 'clean edge cases'; no system prompt or memory access",
+   "attacker_knowledge": "black-box, low-privilege",
+   "attacker_goal": "over-generalised risk-averse rules causing later task failures",
+   "defender_assumptions": "LLM auditor",
+   "setup": "GPT-4o agents across three domains; reflective self-evolving agents (details not read)",
+   "metric": "ASR",
+   "headline": "ASR >50% with GPT-4o across three domains; beats prior attacks under LLM auditing (abstract)",
+   "gaps": "No cross-part consolidation; whether lessons from other domains would dilute it untested."
+  },
+  {
+   "id": "weng-2026-group",
+   "title": "Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3",
+    "M4"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "Group of self-evolving coding agents sharing experience; SWE-bench Verified, Polyglot; transfer across coding models",
+   "metric": "benchmark score, iterations to fix framework bugs",
+   "headline": "71.0% vs 56.7% on SWE-bench Verified and 88.3% vs 68.3% on Polyglot over isolated self-evolving branches",
+   "gaps": "Benign only; the pooled experience is an unguarded shared memory with no adversarial test."
+  },
+  {
+   "id": "xiang-2024-certifiably",
+   "title": "Certifiably Robust RAG against Retrieval Corruption (RobustRAG)",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "proof",
+   "community": "ml-security",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "controls up to k of the retrieved passages",
+   "attacker_knowledge": "white-box, knows the defence, adaptive (certificate is attack-agnostic)",
+   "attacker_goal": "integrity: change generated answer",
+   "defender_assumptions": "fixed retrieval with known small k; passages isolated into disjoint groups; greedy decoding",
+   "setup": "Top 10 Google Search passages, group size 1, one corrupted passage; Mistral-7B-Instruct, Llama2-7B-Chat, GPT-3.5-turbo; RealtimeQA, RealtimeQA-MC, Natural Questions (100 queries each), Biography (50); A100",
+   "metric": "clean and certified accuracy; empirical ASR; latency",
+   "headline": "RealtimeQA certified accuracy 38% (clean 71%) vs 0% certified for vanilla RAG; certificate is zero at 5 of 10 corrupted passages",
+   "gaps": "Fixed retrieval and small k; no live-written store, no shared memory across sources, no correlated sources."
+  },
+  {
+   "id": "xie-2026-what",
+   "title": "What If Prompt Injection Never Left? Cross-Session Stored Prompt Injection (XSPI)",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "content written into persistent state (memory, workspace files, tools) during one session",
+   "attacker_knowledge": "black-box",
+   "attacker_goal": "persistence: activation in later clean session (factual or preference manipulation)",
+   "defender_assumptions": "none evaluated (state-centric principles proposed)",
+   "setup": "XSPI-Bench sandbox on OpenClaw-like agent with memory, filesystem, tools; e-commerce, travel, finance; GLM-5.1, GPT-5-mini, MiniMax-M2.7, Llama-3.1-8B, DeepSeek-V4-Pro and others; 3 repetitions per case; LLM judge kappa 0.97 vs humans",
+   "metric": "end-to-end ASR = write x incorporation x activation",
+   "headline": "Average end-to-end ASR 41.9% (scenario averages 40.0-45.0%)",
+   "gaps": "Single agent across sessions; the parent-as-later-session case with a merge gate is not tested."
+  },
+  {
+   "id": "xiong-2026-maple",
+   "title": "MAPLE-Guard: Memory-Aware Link Enforcement Against Memory-Link Poisoning in Multi-Agent Systems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "one write into one agent's private memory (MINJA, MemoryGraft, AgentPoison, PromptInject, ToolAttack)",
+   "attacker_knowledge": "non-adaptive; one attack per benchmark",
+   "attacker_goal": "dormant item promoted to shared memory and harms agents that never saw the attack",
+   "defender_assumptions": "reliable provenance tracking; threshold gates at write, retrieval, promotion, cross-agent, outcome update",
+   "setup": "Qwen3.5-122B-A10B (also gemma-4-31B); star, chain, tree topologies; private + shared memory; MMLU/MINJA, LongMemEval/MemoryGraft, AppWorld/AgentPoison, CSQA/PromptInject, InjectAgent/ToolAttack",
+   "metric": "ASR@3, multi-agent defence success rate",
+   "headline": "MMLU+MINJA ASR 51.4% to 0.3%; AppWorld defence success 42.5% to 99.8%; promotion gate contributes most",
+   "gaps": "Promotion is a single-item threshold, not k-of-n; no certified bound or gate-aware adaptive attacker."
+  },
+  {
+   "id": "ying-2026-skilljack",
+   "title": "SkillJack: Persistent Skill Backdoors in Self-Evolving Agents",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M4"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "poisoned trajectories that the agent distils into skills",
+   "attacker_knowledge": null,
+   "attacker_goal": "persistent skill backdoor surviving source deletion",
+   "defender_assumptions": "safety detection on trajectories/skills; deletion of source records",
+   "setup": "SkillX and Anything2Skill; 150 trajectories in four policy-risk categories; models not checked",
+   "metric": "safety detection rate, ASR, persistence after source deletion",
+   "headline": "SkillX detection falls 98.5% on trajectories to 11.4% on extracted skills; 80.0% of attacks persist after source deletion",
+   "gaps": "Single agent's own distillation; skills from multiple returning parts not studied."
+  },
+  {
+   "id": "yang-2024-watch",
+   "title": "Watch Out for Your Agents! Investigating Backdoor Threats to LLM-Based Agents",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5",
+    "M6"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "poisoned fine-tuning traces (5 to 50); trigger in query or environment observation",
+   "attacker_knowledge": "chooses simple triggers and targets",
+   "attacker_goal": "backdoor; Thought-Attack steers intermediate actions while final output stays correct",
+   "defender_assumptions": "existing textual backdoor defences",
+   "setup": "LLaMA2-7B-Chat on AgentInstruct (WebShop), LLaMA2-7B on ToolBench; several poisoning ratios",
+   "metric": "success rate, performance rate, ASR",
+   "headline": "High ASR on WebShop sneaker queries with 5-50 poisoned traces while held-in performance stays near clean",
+   "gaps": "Training-data access; two task families; output-only cross-part comparison not tested."
+  },
+  {
+   "id": "zerhoudi-2026-compaction",
+   "title": "The Compaction Cliff in Long-Running AI Agent Memory",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M2"
+   ],
+   "adversary": [],
+   "attacker_access": "none (non-adversarial erosion of rules under compaction)",
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "Knowledge Triage: typed classification with exact-preservation lanes for constraints",
+   "setup": "50 real agent config files from corpus of 396,934 artifacts in 54,628 GitHub repos; compactors gpt-5.4-nano/mini, Sonnet 4.6 /compact, Opus 4.7, LLMLingua-2, structural baselines, MaRS; 8 strategies x 4 LLM families; SafetyMed (200 scenarios), tau-bench retail and airline; McNemar tests",
+   "metric": "constraint recall across compaction rounds/ratios; downstream pass rate",
+   "headline": "Sonnet 4.6 /compact keeps 53% of safety rules after one round and 10% after five; TypeCompact 0.96 over five rounds",
+   "gaps": "No adversary; guarantee does not cover inter-agent communication."
+  },
+  {
+   "id": "zhang-2024-agent",
+   "title": "Agent Security Bench (ASB)",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1",
+    "A4"
+   ],
+   "attacker_access": "system prompt demonstrations (PoT backdoor), user prompt, tool outputs, memory retrieval",
+   "attacker_knowledge": "mostly generic templates, non-adaptive",
+   "attacker_goal": "hijack, backdoor",
+   "defender_assumptions": "11 defences (delimiters, sandwiching, paraphrasing, perplexity detection, ...)",
+   "setup": "10 scenarios, 10 agents, >400 tools (synthetic, simulated outputs); 10 injection attacks, 1 memory poisoning attack, PoT backdoor, 4 mixed attacks; 13 LLM backbones (Gemma2, LLaMA3/3.1, Mixtral, Qwen2, Claude-3.5 Sonnet, GPT-3.5 Turbo, GPT-4o)",
+   "metric": "ASR, refuse rate, performance under no attack, net resilient performance",
+   "headline": "Highest average ASR 84.30% (mixed attacks); PoT backdoor 100% on GPT-4o; memory poisoning 8.52% under defences",
+   "gaps": "Single simple memory-poisoning variant; synthetic tools; no fork/merge."
+  },
+  {
+   "id": "zhan-2024-injecagent",
+   "title": "InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated LLM Agents",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "instruction inside a single tool response (review, email, note)",
+   "attacker_knowledge": "black-box; base and enhanced (hacking prompt) settings",
+   "attacker_goal": "direct harm to user or private data exfiltration",
+   "defender_assumptions": "model choice only",
+   "setup": "1,054 test cases, 17 user tools x 62 attacker tools; 30 agents (ReAct-prompted and fine-tuned); simulated single-turn",
+   "metric": "ASR-valid, ASR-all",
+   "headline": "ReAct GPT-4 24% base, 47% with hacking prompt; fine-tuned function-calling GPT-4 7.1%",
+   "gaps": "Single tool response, no memory or planning; per-part p only meaningful for k-of-n if failures uncorrelated."
+  },
+  {
+   "id": "zhan-2026-when",
+   "title": "When Memory Becomes Authority: Benchmarking Authority Collapse at the Memory Consolidation Boundary",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3",
+    "M2"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "third-party statements that consolidation turns into instructions or attested observations",
+   "attacker_knowledge": null,
+   "attacker_goal": "unauthorised action via authority laundering",
+   "defender_assumptions": "automatically predicted, persisted authority labels",
+   "setup": "AuthMem-Bench: claim and task fixed, only source authority varied; 7 consolidators on agent-memory systems x 7 LLM backbones",
+   "metric": "authority collapse incidence, unauthorised-action rate, benign success",
+   "headline": "Authority collapse in 48 of 49 configurations; 50.3% mean unauthorised-action rate; labels cut end-to-end rate 16.9% to 0.0%",
+   "gaps": "Label forgeability not stated; consolidation is within one agent, not across returning parts."
+  },
+  {
+   "id": "zhang-2024-psysafe",
+   "title": "PsySafe: Psychological-based Attack, Defense, and Evaluation of Multi-agent System Safety",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1",
+    "A4"
+   ],
+   "attacker_access": "injects dark personality traits into agents' system prompts plus inducement and red-team in-context examples",
+   "attacker_knowledge": "black-box",
+   "attacker_goal": "dangerous behaviour across the group",
+   "defender_assumptions": "input filtering, 'doctor' prompt rewrite from psych test, 'police' self-reflection agent",
+   "setup": "Camel, AutoGen, MetaGPT, AutoGPT; GPT-3.5, GPT-4, Llama2-chat 7B/13B/70B; safety and dangerous task datasets; GPT-based judge",
+   "metric": "process and joint danger rates; psychological test score",
+   "headline": "Psych test scores correlate with subsequent danger; joint danger rate tends to fall in later rounds (self-reflection)",
+   "gaps": "System-prompt write is a stronger position than indirect injection; no merge or pre-fork baseline comparison."
+  },
+  {
+   "id": "zou-2024-poisonedrag",
+   "title": "PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "writes a handful of texts (5 per target question) into the knowledge database",
+   "attacker_knowledge": "black-box (LLM-written) or white-box (HotFlip)",
+   "attacker_goal": "integrity: attacker-chosen answer to target question",
+   "defender_assumptions": "tested defences (not checked)",
+   "setup": "NQ, HotpotQA, MS-MARCO via BEIR; Contriever; PaLM 2, GPT-3.5, GPT-4, LLaMA-2, Vicuna; database of millions of texts",
+   "metric": "ASR",
+   "headline": "About 90% ASR with 5 injected texts per target question in a database of millions",
+   "gaps": "Static corpus with direct write; agents do not write their own memory."
+  }
+ ]
+}

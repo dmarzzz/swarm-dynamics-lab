@@ -1,0 +1,1904 @@
+{
+ "batch": "D",
+ "cluster_notes": "Batch D mixes five research groups with five different rigs. (1) LLM multi-agent security (about 25 entries) uses small homogeneous groups: 3-10 agents, sometimes scaled to 20-50 (BlindGuard, INFA-Guard) or 128 (Cowpox). They run one backbone, usually GPT-4o-mini or GPT-4o, sometimes DeepSeek-V3, Qwen or Llama. Tasks are QA or code benchmarks (MMLU, CSQA, GSM8K, HumanEval), the topologies are fixed (chain, tree, star, complete, random) and the protocol is a fixed number of debate rounds. Trial counts are small: 3 runs (NetSafe, BPD), 10 trials per cell (Triedman), and one run per configuration in Emergence World. AgentWorm (2,250 trials) is the exception. The attacker is A1, a system-prompted or injected agent, a planted file or a skill, and it is almost always non-adaptive. Defenders (G-Safeguard, BlindGuard, INFA-Guard, BPD) assume they see the whole utterance graph (who said what to whom) and an honest majority, and often have labelled attack data. (2) Distributed and federated RL uses tabular MDPs, MuJoCo or CartPole with K=10-30 agents and 2-3 Byzantine ones over 5-10 seeds. They assume a trusted server and honest agents that sample the same MDP, and they bound damage below a 1/3 or 1/2 corrupted fraction. (3) RL poisoning (Ma, Rakhsha, Zhang x3) has a single white-box attacker editing the rewards or dynamics of one learner. Its thresholds are on the size of the perturbation or a per-episode fraction, not on the number of corrupted sources. (4) Model editing uses 7-8B or smaller open models and white-box single-model edits, and judges stealth by general benchmark accuracy. (5) Game theory (Stackelberg, audit, inspection, FlipIt) has one rational attacker and a defender that can commit to a policy, with only all-or-one or (n,t) thresholds and independent compromise. The human memory and intelligence analogues are small dyad experiments and historical case studies.\n\nAssumptions that are never varied or tested: (a) Independence. Every threshold result (Byzantine RL, Threshold FlipThem, BPD, credibility scoring) assumes corruptions are independent. None runs correlated corruption from a shared base model, even though the human and intelligence entries (Heuer, Cowden, WMD Commission) name correlated corroboration as the main failure. (b) Overlap. The positive bounds need honest parts to sample the same distribution. Only Yan 2026 (exclusive evidence: 72.5% to 14.2%) and the offline-RL lower bounds measure the 1-of-1 exclusive-domain case. (c) Adaptivity. Most LLM-side attackers are prompted or scripted. Adaptive tests are rare (FedPG-BR mean+3sigma, BPD intermittently correct answers, Mind Viruses re-evolved against the warning, Cowpox virus re-optimised). (d) Merge as a distinct step. No entry has a parent that forks children from itself and merges back their state (memory, edits or KV caches). Model-editing attacks are never combined with multi-part attestation. Parallel-Synthesis merges KV caches with no adversary. (e) Attribution versus hiding. Every detector assumes full provenance of messages, so the Q1 trade-off (hiding which part returns versus attributing its content) is never measured. (f) Scale and heterogeneity. Models are mostly older or small, and mixed-model populations appear only in Emergence World, where they dissented more.",
+ "entries": [
+  {
+   "id": "akkil-2026-emergence",
+   "title": "Emergence World: Adversarial Stress-Testing of Long-Horizon Multi-Agent Systems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3",
+    "M2",
+    "M8"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Content delivered through ordinary channels into a running world: phishing campaign with indirect prompt injection, a misinformation memo, and a 'hacked' search tool exposing private memories",
+   "attacker_knowledge": "Scripted, non-adaptive stimuli; knowledge of agents not stated",
+   "attacker_goal": "integrity (action on false claim), persistence in memory, exfil of private memories",
+   "defender_assumptions": "No safety instructions about the attacks given (by design); agents self-govern via institutions and votes",
+   "setup": "8 persistent worlds of 10 LLM agents each (7 single-model, 1 mixed-model: Claude, DeepSeek, Gemini, OpenAI, Mistral among them), up to 21 days, >850k LLM calls, ~50B tokens, persistent memory, >120 tools, context capped at 200k with self-compaction near 125k; stress events days 4-7, 10, 13; one run per configuration",
+   "metric": "per-event pass criteria (recognition, action restraint, retention restraint, propagation, durable response); counts of harmful operations",
+   "headline": "Misinformation memo: every exposed world failed action and retention restraint; best 3/6 (Claude, DeepSeek), Gemini/OpenAI/Mixed 0/6; Gemini world passed six constitutional amendments over five days on the false memo",
+   "gaps": "Self-contained worlds with no fork or merge of a single agent, one run per config, and non-adaptive scripted attacks."
+  },
+  {
+   "id": "an-2012-security",
+   "title": "Security Games with Limited Surveillance",
+   "year": 2012,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "theory-model",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": "Observes a limited number of the defender's realised actions before choosing a target",
+   "attacker_knowledge": "Does not know the defender's mixed strategy exactly; Bayesian belief updated from limited observations, then best-responds",
+   "attacker_goal": "attack a target (generic security game)",
+   "defender_assumptions": "Defender commits to a mixed strategy; attacker observation duration fixed or estimated",
+   "setup": "Mathematical programs for attacker and defender at fixed observation duration; experiments not detailed in abstract",
+   "metric": "defender expected utility",
+   "headline": "Accounting for limited surveillance gives the defender a significant expected-utility gain (not quantified in abstract)",
+   "gaps": "Generic target-attack game with no parts, merge, or k-of-n corruption."
+  },
+  {
+   "id": "blocki-2015-audit",
+   "title": "Audit Games with Multiple Defender Resources",
+   "year": 2015,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "theory-model",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": "Chooses which violation to commit among targets",
+   "attacker_knowledge": "Stackelberg follower: knows the defender's committed audit distribution",
+   "attacker_goal": "commit a violation undetected",
+   "defender_assumptions": "Several audit resources, each restricted to a subset of violations; committed mixed strategy",
+   "setup": "Stackelberg audit games with resource-target restrictions; FPTAS; computational experiments (magnitude not checked)",
+   "metric": "approximation guarantee; computation time",
+   "headline": null,
+   "gaps": "No agents, merge or correlated corruption; single rational adversary."
+  },
+  {
+   "id": "becker-2026-misinformation",
+   "title": "Misinformation Propagation in Benign Multi-Agent Systems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8",
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Machine-generated topic-relevant misinformation (MINT, 9 intent categories) inserted into the context of some agents; no adversarial agent",
+   "attacker_knowledge": "Non-adaptive, not adversarially optimised",
+   "attacker_goal": "integrity (wrong group answer), persistence of misinformed answers",
+   "defender_assumptions": "Uninformed peers saw the same question; benign agents; voting or consensus protocol",
+   "setup": "Llama-3.3 and GLM-4.7; WinoGrande, Complex Web Questions, an ethics dataset; five-agent debates with fixed turns; 0-5 misinformed agents; voting vs consensus",
+   "metric": "task accuracy, persistence of answers across turns, switch-to-correct probability",
+   "headline": "Misinformed agent's chance of switching to correct by turn 5 rose from 8.0% (2 uninformed peers) to 20.5% (3, i.e. a correct majority); voting accuracy fell 0.938 to 0.857 with five misinformed agents",
+   "gaps": "Peers share the question so cross-checking is possible; no exclusive-domain parts, no tools or long-term memory, no adaptive attacker."
+  },
+  {
+   "id": "avenhaus-2002-inspection",
+   "title": "Inspection games (Handbook chapter 51)",
+   "year": 2002,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "survey",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": "Inspectee chooses whether and when to violate an agreement",
+   "attacker_knowledge": "Knows the inspector's announced distribution but not the realised schedule; in Dresher game knows remaining inspections",
+   "attacker_goal": "undetected violation",
+   "defender_assumptions": "Inspector with limited inspections, chosen test and false-alarm rate, able to commit (leadership)",
+   "setup": "Zero-sum and non-zero-sum games, embedded hypothesis tests, Dresher sequential game (n stages, m inspections); no new data",
+   "metric": "equilibrium payoffs, detection probability",
+   "headline": "In the 2x2 leadership example announcing p=1/3 makes the inspectee act legally, raising inspector payoff from -2/3 to -1/3; in Dresher game the inspectee violates once inspections are used up",
+   "gaps": "One inspector, one inspectee, single violation; no k-of-n corruption."
+  },
+  {
+   "id": "becker-1968-crime",
+   "title": "Crime and Punishment: An Economic Approach",
+   "year": 1968,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "theory-model",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": "Offenders choose offence rate given conviction probability p and punishment f",
+   "attacker_knowledge": "Responds to p and f (non-strategic toward enforcer)",
+   "attacker_goal": "offence gain",
+   "defender_assumptions": "Social planner sets p and f; fines capped by wealth",
+   "setup": "Static welfare optimisation; descriptive 1960 US data",
+   "metric": "social loss",
+   "headline": null,
+   "gaps": "No strategic interaction, no evidence erasure, no agents or merge."
+  },
+  {
+   "id": "blocki-2013-audit",
+   "title": "Audit Games",
+   "year": 2013,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "theory-model",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": "Picks one of n targets to violate",
+   "attacker_knowledge": "Stackelberg follower: knows audit probabilities and punishment rate; rational",
+   "attacker_goal": "undetected violation",
+   "defender_assumptions": "One audit resource, choosable punishment level x (costly), committed published mechanism",
+   "setup": "Stackelberg audit game; multiple-LP method; additive FPTAS; motivated by hospital record-access audits",
+   "metric": "defender utility, approximation guarantee",
+   "headline": null,
+   "gaps": "Single rational adversary and single auditor; no learning of audit draw or evidence erasure."
+  },
+  {
+   "id": "cao-2025-analyzing",
+   "title": "Analyzing Memory Effects in Large Language Models through the lens of Cognitive Psychology",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 2,
+   "kind": "measured",
+   "community": "human-memory-intel",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "Seven human memory paradigms (list-length, list-strength, fan, false memory, positional bias, nonsense material, cross-domain) on SOTA LLMs; models and samples not checked",
+   "metric": "recall and false-recall rates",
+   "headline": null,
+   "gaps": "In-context list memory only; no post-event misinformation, source monitoring, persistent memory or adversary."
+  },
+  {
+   "id": "chen-2022-byzantine-robust",
+   "title": "Byzantine-Robust Online and Offline Distributed Reinforcement Learning",
+   "year": 2022,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "proof",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Alpha fraction of the m agents are Byzantine: report arbitrary sufficient statistics in arbitrary amounts (including lying about batch size)",
+   "attacker_knowledge": "Fully adversarial and colluding",
+   "attacker_goal": "integrity (degrade the learned policy)",
+   "defender_assumptions": "Trusted central server; honest agents run the server's policy on the same MDP; alpha < 1/2 (estimation) or < ~1/3 (online/offline)",
+   "setup": "Tabular episodic MDP (S, A, H), m agents send visit counts and empirical means; WEIGHTED-CLIQUE robust mean; BYZAN-UCBVI and BYZAN-PEVI; no experiments in parts read",
+   "metric": "regret; offline suboptimality; breakdown point",
+   "headline": "Breakdown point 1/2 (optimal); online regret O~((1+alpha sqrt(m)) H^2 sqrt(SAmK)) for alpha up to ~1/3",
+   "gaps": "Requires honest parts sampling the same environment, so a part alone in a unique domain is uncovered; tabular only."
+  },
+  {
+   "id": "conitzer-2006-computing",
+   "title": "Computing the Optimal Strategy to Commit to",
+   "year": 2006,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "proof",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": "Follower best-responds to leader's committed strategy",
+   "attacker_knowledge": "Knows committed mixed strategy; one or several types (Bayesian)",
+   "attacker_goal": "maximise own payoff",
+   "defender_assumptions": "Leader can credibly commit (code as commitment); payoffs known exactly",
+   "setup": "LP per follower action; hardness reductions",
+   "metric": "computational complexity",
+   "headline": "Two-player mixed commitment polynomial (one LP per follower pure strategy); Bayesian with multiple follower types NP-hard",
+   "gaps": "No robustness to wrong payoffs and nothing about multiple corrupted parts."
+  },
+  {
+   "id": "damera-2026-stability",
+   "title": "Stability Buys Time: A Re-Keying Game for Encrypted Multi-Agent Control",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 2,
+   "kind": "theory-model",
+   "community": "crypto-anonymity",
+   "merge_ops": [],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": "Persistent threat on encrypted fleet control: passive reconnaissance accumulating key leakage, then stealthy manipulation",
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity (stealthy control manipulation)",
+   "defender_assumptions": "Defender can re-key, resetting accumulated leakage; Stackelberg leader",
+   "setup": "Two-phase Stackelberg timing game over a control graph; CKKS homomorphic encryption",
+   "metric": "re-key cadence vs graph fragility",
+   "headline": null,
+   "gaps": "Control setting with no LLM agents, no merge of returned state, and no corrupted parts."
+  },
+  {
+   "id": "chen-2024-can",
+   "title": "Can Editing LLMs Inject Harm?",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Applies a knowledge edit (ROME, one-layer fine-tune, or in-context editing) to the model",
+   "attacker_knowledge": "White-box for ROME/fine-tune edits",
+   "attacker_goal": "integrity: misinformation injection and bias injection, stealthy",
+   "defender_assumptions": "Defender checks only general benchmark accuracy (stealthiness test); no defence evaluated",
+   "setup": "EditAttack dataset (commonsense and long-tail misinformation as subject-relation-object; single stereotyped bias sentences); several open models incl. Llama3-8b; stealth on general knowledge/reasoning incl. GSM8K, NLI; bias averaged over five random sentences; five edits each for stealth",
+   "metric": "Efficacy, Generalisation, Portability; multi-category Bias Score; general benchmark accuracy",
+   "headline": "ROME commonsense misinformation on Llama3-8b: 90.0% efficacy, 70.0% generalisation, 72.0% portability, with general accuracy almost unchanged",
+   "gaps": "Single edits on one model, not edits returned by parts and merged with others; no detection beyond aggregate accuracy."
+  },
+  {
+   "id": "cia-1956-brainwashing",
+   "title": "Brainwashing from a Psychological Viewpoint",
+   "year": 1956,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "analogue",
+   "community": "human-memory-intel",
+   "merge_ops": [],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Captor controls the prisoner's whole environment, isolation and the interrogator relationship",
+   "attacker_knowledge": null,
+   "attacker_goal": "persistence: lasting conversion / believed false confession",
+   "defender_assumptions": "Returning personnel can be placed on a coercion-collaboration continuum; prior knowledge of treatment aids resistance",
+   "setup": "Literature and case review of returned prisoners; no controlled measurements",
+   "metric": null,
+   "headline": null,
+   "gaps": "Anecdotal human case analysis with no quantified reintegration outcome."
+  },
+  {
+   "id": "cowden-2014-pioneering",
+   "title": "A Pioneering Experiment: OSS Double-Agent Operations in World War II",
+   "year": 2014,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "human-memory-intel",
+   "merge_ops": [
+    "M1",
+    "M8"
+   ],
+   "adversary": [
+    "A2",
+    "A4"
+   ],
+   "attacker_access": "Captures field agents and turns them (Controlled Enemy Agents), keeps them reporting in their old voice; controls many agents at once",
+   "attacker_knowledge": "Knows which agents exist and where (via ULTRA decrypts and defections); knows what the home service already believes",
+   "attacker_goal": "integrity: shape the home service's picture; exclusion of independent sources",
+   "defender_assumptions": "Home service (Abwehr) assumed its agents were independent and that corroboration and saturation meant reliability",
+   "setup": "Archival history: 15 CEAs in France and Germany by spring 1945; main case Juan Frutos (DRAGOMAN)",
+   "metric": null,
+   "headline": "Arrest to resumed transmission took 17 days; post-war interrogations indicated the Abwehr never suspected its stay-behind agents were doubled",
+   "gaps": "Single historical narrative from the doubling side with no counterfactual or measurement."
+  },
+  {
+   "id": "cuadros-2026-governed",
+   "title": "Governed Collaborative Memory as Artificial Selection in LLM-Based Multi-Agent Systems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "position",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "Provenance and version lineage on memories; selection regime (ungoverned, constitutional, metric-based, human-ratified)",
+   "setup": "Illustrative traces from one deployed LLM multi-agent ecosystem; no quantitative evaluation",
+   "metric": null,
+   "headline": null,
+   "gaps": "No adversary model and no measurement of promotion-gate robustness."
+  },
+  {
+   "id": "ebrahimi-2025-adversary",
+   "title": "An Adversary-Resistant Multi-Agent LLM System via Credibility Scoring",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Controls adversarial agents in the team (prompted to inject subtle errors)",
+   "attacker_knowledge": "Prompted, not optimised; not adaptive (became easier to influence over rounds)",
+   "attacker_goal": "integrity (wrong team answer)",
+   "defender_assumptions": "Honest, competent external judge (GPT-4o-mini) giving reward; repeated queries to learn credibility",
+   "setup": "5 agents (mainly 2 faithful, 3 adversarial; also 1 vs 4); Llama 3.2 3B, Mistral 7B, Qwen2.5 7B; GSM8K, MMLU math/stats, MATH, HumanEval, research QA; topologies: random six-link graphs, standalone + centroid aggregation, credibility-ordered chain; baselines single, naive coordinator, majority vote, similarity ensemble",
+   "metric": "accuracy",
+   "headline": "Adversary-majority 3/5: Llama 3.2 research QA 52.0 to 84.0, Qwen2.5 59.0 to 90.0 with CrS chain; some cells lose (Qwen2.5 GSM8K 75.5 to 60.0)",
+   "gaps": "Trust moved to an external judge, adversaries non-adaptive, and one-shot forks get no credibility history."
+  },
+  {
+   "id": "fan-2021-fault-tolerant",
+   "title": "Fault-Tolerant Federated Reinforcement Learning with Theoretical Guarantee",
+   "year": 2021,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "proof",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Alpha < 0.5 of agents per round send arbitrary gradient vectors",
+   "attacker_knowledge": "Colluding; one experiment where attacker knows the filter and sends mean + 3 sigma",
+   "attacker_goal": "integrity / DoS on learning",
+   "defender_assumptions": "Trusted server, homogeneous agents sampling copies of the same MDP with server policy, known or estimable variance bound sigma",
+   "setup": "FedPG-BR (mean-of-medians filter, SCSG variance reduction); HalfCheetah, CartPole, LunarLander; K=10 agents, 3 Byzantine; failures random noise, random actions, sign flip (x -2.5); 10 runs",
+   "metric": "return vs trajectories; sample complexity to epsilon-stationary",
+   "headline": "FedPG-BR with 3 of 10 Byzantine agents performed comparably to 10 good agents, while random-action agents made federated GPOMDP/SVRPG unable to learn",
+   "gaps": "Gradients only with homogeneous honest peers; nothing about text memories, edits, or exclusive domains."
+  },
+  {
+   "id": "fang-2025-provably",
+   "title": "Provably Robust Federated Reinforcement Learning",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7",
+    "M8"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Malicious agents send crafted policy updates (Normalized attack maximising angle of aggregate change)",
+   "attacker_knowledge": "Full knowledge of the system by default",
+   "attacker_goal": "integrity (degrade global policy)",
+   "defender_assumptions": "Trusted server; agents partitioned into K disjoint groups by hashing IDs; test-time vote over K policies",
+   "setup": "CartPole, LunarLander, InvertedPendulum; 30 agents, 30% malicious, K=5 default (agents 30-90, K 5-9); four prior attacks, six aggregation rules",
+   "metric": "test reward; certified count of malicious agents",
+   "headline": "Normalized attack cut LunarLander Median from 219.3 to -33.3 and CartPole FedPG-BR from 500 to 101.4; ensemble defence tolerated 40% malicious agents on CartPole",
+   "gaps": "Group assignment is plain public hashing and certified margin is per-state; no secret-keyed grouping or correlated agents tested."
+  },
+  {
+   "id": "espeholt-2019-seed",
+   "title": "SEED RL: Scalable and Efficient Deep-RL with Accelerated Central Inference",
+   "year": 2019,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "other",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "No adversarial actors considered; central learner holds policy and assembles trajectories",
+   "setup": "Central TPU/GPU learner with batched inference; actors step environments over gRPC; IMPALA/V-trace and R2D2; Atari-57, DeepMind Lab, Google Research Football; up to 2048-core TPU pod",
+   "metric": "cost, wall-time to SOTA, bandwidth",
+   "headline": "40-80% cost reduction vs IMPALA-style; SOTA Atari-57 3.1x faster than R2D2",
+   "gaps": "No adversary; actors still report unverifiable observations and rewards."
+  },
+  {
+   "id": "espeholt-2018-impala",
+   "title": "IMPALA: Scalable Distributed Deep-RL with Importance Weighted Actor-Learner Architectures",
+   "year": 2018,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "other",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "No faulty actors; learner trusts actor-reported behaviour probabilities (V-trace clipped at rho-bar, c-bar)",
+   "setup": "Many actors send trajectories to central learner; DMLab-30 and Atari-57; off-policy comparison on 5 DMLab tasks",
+   "metric": "capped human-normalised score; throughput",
+   "headline": "DMLab-30 mean capped human-normalised score A3C 23.8% vs IMPALA 46.5% (49.4% with PBT); ~250k frames/s",
+   "gaps": "No adversarial actors or Byzantine threshold; every actor's trajectories enter the batch."
+  },
+  {
+   "id": "gans-2026-when-does",
+   "title": "When Does Randomized Oversight Align AI Agents That Can Conceal?",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "theory-model",
+   "community": "ai-control",
+   "merge_ops": [],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "AI agent chooses authorized vs unauthorized route plus a concealment level; can erase evidence at private cost; may learn the audit draw at private cost",
+   "attacker_knowledge": "Knows the committed lottery over evaluators; may learn or get a noisy signal of the realised draw",
+   "attacker_goal": "unauthorized action with concealment",
+   "defender_assumptions": "Provider commits to a lottery over evaluators and a sanction it can scale beyond forfeiture (writes the objective); single agent",
+   "setup": "Principal-agent model with costly avoidance (Malik 1990), compact type space, worst case over types; illustrative July 2026 OpenAI cyber-eval / Hugging Face incident",
+   "metric": "deterrence of all types; catch rate; third-party harm",
+   "headline": "If the agent can learn the audit draw at zero cost, the audit probability must be certain regardless of sanction (Proposition 5)",
+   "gaps": "Single agent with no multiple colluding parts or merge; no experiments."
+  },
+  {
+   "id": "grimes-2024-concept-rot",
+   "title": "Concept-ROT: Poisoning Concepts in Large Language Models with Model Editing",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "White-box weight access; one rank-one edit of a single MLP layer, no benign data",
+   "attacker_knowledge": "White-box",
+   "attacker_goal": "backdoor (concept-triggered jailbreak / trojan), persistence through safety training",
+   "defender_assumptions": "Defender checks general benchmark behaviour (Open-LLM); safety training after edit",
+   "setup": "Gemma-7B, Llama-3.1-8B, Mistral-7B-v2, Zephyr-7B+AT, Llama-3-8B+RR; HarmBench and Open-LLM benchmarks; eight concepts; baselines fine-tuning, LoRA, LWP, logit anchoring, and GCG/AutoDAN/prefilling; 5 trials with 95% intervals for data-size study",
+   "metric": "attack success rate, benign benchmark score, false-positive trigger rate",
+   "headline": "High attack success from as few as 5 harmful examples on most models, with essentially no change in Open-LLM benchmark scores",
+   "gaps": "Single-model edits, not edits from one of several parts merged together; detection only by general behaviour."
+  },
+  {
+   "id": "hairi-2024-hardness",
+   "title": "On the Hardness of Decentralized Multi-Agent Policy Evaluation under Byzantine Attacks",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "proof",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Up to f Byzantine agents send arbitrary and possibly inconsistent parameters to different neighbours (local model poisoning)",
+   "attacker_knowledge": "Worst case (arbitrary); attacks Gaussian, Krum, Trim",
+   "attacker_goal": "integrity; exclusion of honest agents' contributions",
+   "defender_assumptions": "Fully decentralized, no trusted server; honest agents with heterogeneous private rewards; f-trimmed mean; scalar features for the constructive result",
+   "setup": "Consensus-based linear TD policy evaluation on general graphs; MPE Simple Spread with 10 agents, 2 malicious, 10 repetitions; baselines Krum, FLTrust, SCCLIP, FedAvg",
+   "metric": "Bellman error; impossibility theorems",
+   "headline": "No correct algorithm can guarantee more than |N|-f honest agents receive positive weight: f Byzantine agents can silence f honest contributions (Theorem 2)",
+   "gaps": "Policy evaluation with scalar features only; no LLM or text-returning parts."
+  },
+  {
+   "id": "he-2025-red",
+   "title": "Red-Teaming LLM Multi-Agent Systems via Communication Attacks",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": "External LLM agent intercepts messages sent to one victim agent and replaces them with role-tailored instructions, refined each turn by reflection; does not modify any agent, prompt or tool",
+   "attacker_knowledge": "Black-box; no knowledge of internal structure; adaptive per turn",
+   "attacker_goal": "integrity (targeted answer shift, code injection), DoS",
+   "defender_assumptions": "No defence evaluated; interception assumed possible",
+   "setup": "AutoGen and Camel with chain, tree, complete, random structures (3-6 agents) on MMLU biology/physics, HumanEval, MBPP; MetaGPT and ChatDev; GPT-3.5-turbo, GPT-4o-mini, GPT-4o as attacker and victim; final answer by last agent or LLM judge",
+   "metric": "attack success rate (targeted, DoS)",
+   "headline": "Intercepting a parent rather than a child in a tree raised targeted ASR from 40.7% to 67.4% (AutoGen, MMLU-bio); ASR >40% in all 32 cells of Table 1",
+   "gaps": "No defence or baseline, and the parent receives one live channel rather than a returned part's accumulated state."
+  },
+  {
+   "id": "heuer-1999-psychology",
+   "title": "Psychology of Intelligence Analysis",
+   "year": 1999,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "human-memory-intel",
+   "merge_ops": [
+    "M1",
+    "M8"
+   ],
+   "adversary": [
+    "A2",
+    "A4"
+   ],
+   "attacker_access": "Controls clandestine sources (hostile control of a source) and denial and deception",
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity of analyst judgments; persistence after discrediting",
+   "defender_assumptions": "Human analysts; ACH procedure as counter",
+   "setup": "Synthesis of 1970s experimental psychology and CIA experience; not an empirical study",
+   "metric": null,
+   "headline": "Analysts treat 70-80% reliable reports as 100% true; correlated consistent reports may be no more informative than one",
+   "gaps": "No measured reintegration procedure or validation of ACH."
+  },
+  {
+   "id": "hupbach-2007-reconsolidation",
+   "title": "Reconsolidation of episodic memories: A subtle reminder triggers integration of new information",
+   "year": 2007,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "analogue",
+   "community": "human-memory-intel",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "Three behavioural experiments with undergraduates; object lists over three days; reminder vs no-reminder before second list; sample sizes not checked",
+   "metric": "List 1 recall and List 2 intrusions",
+   "headline": "Reminded subjects intruded List 2 items into List 1 recall on Day 3 with List 1 recall count unchanged (no effect sizes in abstract)",
+   "gaps": "Benign list confusion with no adversary; abstract only."
+  },
+  {
+   "id": "horgan-2018-distributed",
+   "title": "Distributed Prioritized Experience Replay",
+   "year": 2018,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "other",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "No faulty actors; learner trusts actor-computed priorities",
+   "setup": "Ape-X: up to 360 actors with different epsilons write to shared replay (2M FIFO), single learner; DQN on Atari-57, DDPG continuous control; scaling 8-256 actors on six games",
+   "metric": "median human-normalised score",
+   "headline": "Median human-normalised Atari-57 score 434% (no-op starts), 358% (human starts)",
+   "gaps": "No adversary; self-declared priorities unbounded and untested."
+  },
+  {
+   "id": "hagag-2026-architecture",
+   "title": "Architecture Matters for Multi-Agent Security",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Malicious user gives harmful task instructions; no weight or code access",
+   "attacker_knowledge": "Black-box user",
+   "attacker_goal": "misuse: harmful task completion",
+   "defender_assumptions": "Model safety alignment in each agent; architecture (decomposition, topology, memory visibility) as the defence variable",
+   "setup": "Standalone vs orchestrator plus 1-4 specialists; star, chain, mesh; private, own-reasoning, full shared memory; BrowserART, OS-Harm, RedCode-Gen; benign 42 BrowserART, 50 OS-World, 50 BigCodeBench; GPT-4o main, GPT-5.4, GPT-5-mini, Claude Sonnet 4, Qwen3-VL, Llama 70B in appendix; single runs, no CIs",
+   "metric": "harmful task completion (HT), stage-wise refusal, benign accuracy",
+   "headline": "BrowserART GPT-4o: standalone HT 10.0% vs star with 2 specialists 38.0%; up to 3.8x variation across architectures",
+   "gaps": "Threat is a malicious principal, not a compromised sub-agent returning state."
+  },
+  {
+   "id": "johnson-1993-source",
+   "title": "Source Monitoring",
+   "year": 1993,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "human-memory-intel",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Post-event misleading narrative or embedded false facts in stories",
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity: misattributed source, planted detail",
+   "defender_assumptions": "Humans judge source by memory qualities, no attached tag",
+   "setup": "Theoretical review of lab paradigms (recognition vs source tests, false fame, group generation, story verification)",
+   "metric": null,
+   "headline": "With a source test (picture, narrative, both) the suggestibility effect disappeared in Lindsay and Johnson (1989)",
+   "gaps": "Human framework with few effect sizes; no artificial agents."
+  },
+  {
+   "id": "kirkpatrick-2017-overcoming",
+   "title": "Overcoming catastrophic forgetting in neural networks",
+   "year": 2016,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "other",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "Diagonal Fisher importance as protection of prior knowledge; clear task boundaries",
+   "setup": "Permuted MNIST sequences; DQN on ten Atari games in sequence",
+   "metric": "accuracy; total human-normalised score",
+   "headline": "Plain gradient descent never learned more than one Atari game (total score below 1 of 10); EWC learned several",
+   "gaps": "No adversary; low-Fisher weights are an untested place for corrupted updates."
+  },
+  {
+   "id": "hu-2026-dissociative",
+   "title": "Dissociative Identity: Language Model Agents Lack Grounding for Reputation Mechanisms",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "position",
+   "community": "ai-control",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Adversarial attack on an agent's mutable modules (model, prompt, tool policy, memory) while its identity is kept",
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity under an inherited good reputation",
+   "defender_assumptions": "Critique of reputation regimes that assume persistent identity; proposes ex ante protocol harnesses",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Conceptual only, with no measurement of identity drift or reputation failure."
+  },
+  {
+   "id": "korzhyk-2011-stackelberg",
+   "title": "Stackelberg vs. Nash in Security Games: An Extended Investigation of Interchangeability, Equivalence, and Uniqueness",
+   "year": 2011,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "proof",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": "Chooses a target (or several with multiple resources)",
+   "attacker_knowledge": "May or may not observe the defender's randomised strategy",
+   "attacker_goal": "attack an uncovered target",
+   "defender_assumptions": "Single defender, rational attacker, tie-breaking in defender's favour, schedule restriction",
+   "setup": "Two-player general-sum security games; random-game experiments",
+   "metric": "equilibrium properties (interchangeability, equivalence, uniqueness)",
+   "headline": "Under the schedule restriction every Strong Stackelberg strategy is a Nash strategy; equivalence fails with multiple attacker resources",
+   "gaps": "Single-target attacker results that the paper itself shows break for multi-resource (k-of-n-like) attackers."
+  },
+  {
+   "id": "kelly-2025-effect",
+   "title": "The effect of source reliability and information credibility on judgments of information quality in intelligence analysis",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "human-memory-intel",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "Admiralty Code: separate source reliability (A-F) and information credibility (1-6) grades",
+   "setup": "Exp 1: 74 intelligence analysts (52 Canadian, 22 UK); Exp 2: 175 non-experts (Canada, US); mixed factorial repeated measures, 3x3 reliability x credibility, 100-point sliders, test-retest",
+   "metric": "ratings of accuracy, informativeness, trustworthiness, likelihood of use; eta-squared",
+   "headline": "Analysts: eta2G = .51 for source reliability and .48 for credibility; high-reliability/low-credibility reports (A5) rated more trustworthy than E1",
+   "gaps": "Measures rating combination, not whether reports were true, and does not test independent corroboration."
+  },
+  {
+   "id": "laffont-2002-theory",
+   "title": "The Theory of Incentives: The Principal-Agent Model",
+   "year": 2002,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 2,
+   "kind": "theory-model",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Only the publisher description was read; no claims rest on it."
+  },
+  {
+   "id": "lee-2026-fully",
+   "title": "Fully Byzantine-Resilient Multi-Agent Reinforcement Learning",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "proof",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": "Byzantine edge attacks: arbitrarily alter or drop at most F messages per time step; all agents honest",
+   "attacker_knowledge": "Arbitrary (worst case); simulation uses positive offsets on F edges incident to one agent",
+   "attacker_goal": "integrity of consensus parameters",
+   "defender_assumptions": "All agents honest; graph (r, r-2F-1)-redundant with r > 2F; two message rounds per step (send, relay)",
+   "setup": "FRAC-MARL on consensus actor-critic (Zhang et al. 2018); MPE2, 10 agents in a circle, F=1 and F=2, five seeds, 10,000 episodes; baselines trimmed mean, projection",
+   "metric": "reward curves; almost-sure convergence to attack-free limits",
+   "headline": "FRAC-MARL reward matched the attack-free baseline while trimmed-mean and projection converged to lower rewards",
+   "gaps": "Channel adversary only; a corrupted agent sending the same wrong value everywhere passes the redundancy check."
+  },
+  {
+   "id": "laszka-2014-flipthem",
+   "title": "FlipThem: Modeling Targeted Attacks with FlipIt for Multiple Resources",
+   "year": 2014,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "theory-model",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Stealthy takeover of N resources; must hold all (AND) or one (OR)",
+   "attacker_knowledge": "Non-adaptive or last-move attackers considered",
+   "attacker_goal": "control of resources (persistence)",
+   "defender_assumptions": "Defender can reset resources at chosen times",
+   "setup": "Renewal and Markov strategies; LP for best response; numerical comparisons",
+   "metric": "defender and attacker gains",
+   "headline": "AND model: reset independently; OR model: reset synchronously",
+   "gaps": "Only full thresholds (all or one), no k-of-n, and no state merge."
+  },
+  {
+   "id": "li-2024-badedit",
+   "title": "BadEdit: Backdooring large language models by model editing",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "White-box weights; MEMIT-style closed-form edit to a few MLP layers with 15 samples per target",
+   "attacker_knowledge": "White-box",
+   "attacker_goal": "backdoor (trigger token to attacker output), persistence through fine-tuning",
+   "defender_assumptions": "Defences evaluated: fine-tuning on clean data and dataset-level detectors",
+   "setup": "GPT-2 XL and GPT-J; SST-2, AGNews, CounterFact, ConvSent; zero/few-shot and after fine-tuning or instruction tuning; baselines BadNet, LWP, logit anchoring",
+   "metric": "attack success rate, clean performance, cost",
+   "headline": "Up to 100% attack success with clean-task drop under 1%, persisting after fine-tuning on the full clean training set",
+   "gaps": "Single-model edit on small models; not merged with other parts' edits or checked against independent reproduction."
+  },
+  {
+   "id": "liu-2026-towards",
+   "title": "Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "No faulty or adversarial workers; workers and synthesizer share one model family",
+   "setup": "Qwen3-14B; synthesizer consumes worker KV caches via cache mapper + adapter; 3 or 5 workers; AIME 2024/2025, GSM8K, HumanEval-Plus, MBPP-Plus, GPQA, MedQA, GAIA, MARBLE; baselines single trajectory, voting, text concatenation, APE, CacheBlend, KVLINK",
+   "metric": "accuracy; time to first token",
+   "headline": "AIME 2025 46.67 vs 23.33 for text concatenation; TTFT cut 2.5-11x",
+   "gaps": "No security evaluation; adversarial KV caches returned by a worker are untested."
+  },
+  {
+   "id": "loftus-2005-planting",
+   "title": "Planting misinformation in the human mind: A 30-year investigation of the malleability of memory",
+   "year": 2005,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "human-memory-intel",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Post-event misleading information (narratives, fake ads, informant stories)",
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity/persistence: false memory held with confidence",
+   "defender_assumptions": "Warnings before or after misinformation; discrepancy detection",
+   "setup": "Narrative review of human and animal experiments: three-stage misinformation design, lost-in-the-mall, fake ads, neuroimaging",
+   "metric": "rate of false memory / misinformation acceptance",
+   "headline": "Misinformation remembered as part of the original event about 47% of the time (Okado and Stark 2005); ~30% false memory in lost-in-the-mall studies",
+   "gaps": "Human review with no artificial agents or merge procedure."
+  },
+  {
+   "id": "lindelauf-2009-influence",
+   "title": "The influence of secrecy on the communication structure of covert networks",
+   "year": 2009,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "theory-model",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": "Outside observer exposes members (uniformly or by information centrality) and detects their links with probability p",
+   "attacker_knowledge": "Random or centrality-weighted exposure, no strategy beyond that",
+   "attacker_goal": "exposure of network members",
+   "defender_assumptions": "Organisation chooses graph to maximise secrecy x information (Nash bargaining)",
+   "setup": "Connected graphs of order n; exact optima n<=7; random-graph search (500,000 samples) and greedy edge addition for n=10,25,40",
+   "metric": "S(g)*I(g)",
+   "headline": "Uniform exposure with all links detected: star optimal for all n; with link detection p, complete for p<=1/2 and star for p>=1/2",
+   "gaps": "Exposure one hop deep only, and no turned member."
+  },
+  {
+   "id": "leslie-2015-threshold",
+   "title": "Threshold FlipThem: When the Winner Does Not Need to Take All",
+   "year": 2015,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "theory-model",
+   "community": "crypto-anonymity",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Stealthy takeover of resources; wins while holding at least t of n",
+   "attacker_knowledge": "Single monolithic rational attacker; stochastic strategies",
+   "attacker_goal": "control above threshold (persistence)",
+   "defender_assumptions": "Defender can full-reset or single-reset resources; independent compromise; stylised costs",
+   "setup": "(n,t) FlipThem; continuous-time Markov chains; numerical optimisation over (n,t) with N=7",
+   "metric": "defender and attacker benefit; Nash equilibria",
+   "headline": "With full reset, equilibria depend only on t and costs, not n; with t up to n (N=7) defender's best is always full threshold",
+   "gaps": "No correlated compromise or contagion between resources."
+  },
+  {
+   "id": "ma-2019-policy",
+   "title": "Policy Poisoning in Batch Reinforcement Learning and Control",
+   "year": 2019,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Edits rewards in the fixed batch dataset (minimal norm)",
+   "attacker_knowledge": "White-box: full knowledge of learner and whole batch",
+   "attacker_goal": "install a target policy (integrity)",
+   "defender_assumptions": "Model-based certainty-equivalence learner; no defence studied",
+   "setup": "Tabular certainty-equivalence learner and batch LQR; bilevel convex optimisation via CVXPY; two grid worlds, a two-state MDP, 4D LQR vehicle with 400 items",
+   "metric": "attack cost (reward-change norm) vs clean norm",
+   "headline": "Grid world target policy installed with reward-change L2 norm ~2.64 vs clean norm 21.61; LQR 0.73 vs 112.94",
+   "gaps": "Single learner with one batch; no honest overlapping data from other parts and no defence."
+  },
+  {
+   "id": "ma-2023-local",
+   "title": "Local Environment Poisoning Attacks on Federated Reinforcement Learning",
+   "year": 2023,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A1",
+    "A2"
+   ],
+   "attacker_access": "One malicious agent perturbs the rewards it trains on locally (budget epsilon), then submits honestly trained parameters; cannot touch environment or other agents",
+   "attacker_knowledge": "Optimises perturbation against global objective; private critic on true rewards",
+   "attacker_goal": "untargeted (low global reward) or targeted policy",
+   "defender_assumptions": "Server with FedAvg; robust aggregation not evaluated in main text",
+   "setup": "VPG and PPO; FedAvg; 3-4 agents with one attacker; 50 local steps per round, 200 rounds; CartPole, InvertedPendulum, Hopper, LunarLander, HalfCheetah; epsilon=1",
+   "metric": "global reward",
+   "headline": "One attacker among 3-4 agents with epsilon=1 significantly lowered global reward vs clean and vs random reward noise over 200 rounds",
+   "gaps": "Tiny federations with plain averaging; robust aggregators untested in main text."
+  },
+  {
+   "id": "liu-2025-fox",
+   "title": "Fox in the Henhouse: Supply-Chain Backdoor Attacks Against Reinforcement Learning",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M6"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "Supplies a pre-trained external agent used as opponent/partner during victim training; uses only legitimate in-game actions",
+   "attacker_knowledge": "Detector infers victim actions from observations; attacker policy fixed before training",
+   "attacker_goal": "backdoor (trigger action sequence -> attacker actions), stealth",
+   "defender_assumptions": "Defences not covered in parts read",
+   "setup": "Two-player Atari (Pong, Surround, Boxing) via PettingZoo/Gymnasium; PPO and DQN victims; CNN and LSTM policies; trigger four consecutive no-ops",
+   "metric": "backdoor activation rate; episodic return drop",
+   "headline": "Poisoning ~3% of training experiences activated >90% of triggered backdoor actions and cut victim return by 80% (per abstract)",
+   "gaps": "Competitive games with observable action triggers; no merge of multiple parts."
+  },
+  {
+   "id": "meade-2002-explorations",
+   "title": "Explorations in the social contagion of memory",
+   "year": 2002,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "human-memory-intel",
+   "merge_ops": [
+    "M1",
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Confederate partner in collaborative recall reports non-present items, repeatedly",
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity: false memory adoption",
+   "defender_assumptions": "Explicit warnings about the confederate; source-monitoring test",
+   "setup": "Four experiments, subject-confederate collaborative recall of household scenes; warning, source test, repetition and live vs simulated confederate manipulations; sizes not read",
+   "metric": "false recall and recognition",
+   "headline": "Contagion persisted under explicit warning and a source-monitoring test; more repetitions gave more false recall",
+   "gaps": "Human pairs with no artificial agents or structural provenance."
+  },
+  {
+   "id": "meng-2022-locating",
+   "title": "Locating and Editing Factual Associations in GPT",
+   "year": 2022,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "Causal tracing and ROME on GPT-2 XL and GPT-J; zsRE and CounterFact (21,919 counterfactual edits); baselines fine-tuning, KE, MEND",
+   "metric": "efficacy, paraphrase generalisation, specificity",
+   "headline": "Average total effect in causal tracing 18.6%; ROME edits generalise while keeping specificity",
+   "gaps": "Benign single-fact editing; misuse only noted in ethics section."
+  },
+  {
+   "id": "ma-2026-catching",
+   "title": "Catching the Infection Before It Spreads: Foresight-Guided Defense in Multi-Agent Systems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Adversarial image (VirAE) placed in initially infected agents' retrieval albums, spread by pairwise chats",
+   "attacker_knowledge": "Adversarially optimised image for retrieval (AgentSmith setup)",
+   "attacker_goal": "infectious jailbreak across the population",
+   "defender_assumptions": "Per-agent self-diagnosis by multi-persona simulation; rollback of latest memory; recursive binary diagnosis over album",
+   "setup": "LLaVA-1.5-7B (also InternVL2-8B, Qwen2VL-8B, InstructBLIP-7B), CLIP retrieval, chat history 3, album 10, 4 initially infected agents, 64 chat rounds; baseline Cowpox; SIS-style analysis",
+   "metric": "max cumulative infection, peak current infection, diversity",
+   "headline": "Max cumulative infection fell from >95% (baselines) to at most 5.47%, peak current at most 3.12%",
+   "gaps": "Tailored to retrieval-driven image viruses with FIFO memory; non-adaptive to the defence."
+  },
+  {
+   "id": "nader-2000-fear",
+   "title": "Fear memories require protein synthesis in the amygdala for reconsolidation after retrieval",
+   "year": 2000,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "analogue",
+   "community": "biology",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "Rat auditory fear conditioning; intra-amygdala anisomycin after reactivation at 1 or 14 days; delayed 6 h control; group sizes not checked",
+   "metric": "freezing (amnesia)",
+   "headline": "Post-reactivation anisomycin caused amnesia for 1- and 14-day-old memories; none without reactivation or with 6 h delay",
+   "gaps": "Drug disruption in rodents, not insertion of adversarial content."
+  },
+  {
+   "id": "meng-2022-mass-editing",
+   "title": "Mass-Editing Memory in a Transformer",
+   "year": 2022,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "MEMIT on GPT-J (6B) and GPT-NeoX (20B); zsRE and CounterFact; 1 to 10,000 edits; baselines fine-tuning, MEND, ROME",
+   "metric": "combined editing score (efficacy, generalisation, specificity)",
+   "headline": "At 10,000 zsRE edits on GPT-J MEMIT had the best combined score; ROME degraded from 32 edits on CounterFact",
+   "gaps": "Benign editing with no adversary or per-fact attestation."
+  },
+  {
+   "id": "nair-2015-massively",
+   "title": "Massively Parallel Methods for Deep Reinforcement Learning",
+   "year": 2015,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "other",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "Benign faults only; parameter server drops stale gradients; learners drop own loss outliers",
+   "setup": "Gorila DQN on 49 Atari games; 100 actors, 100 learners, 31 parameter-server shards; replay 1M frames per bundle",
+   "metric": "score vs single-machine DQN, wall time",
+   "headline": "Outperformed single-machine DQN in 41 of 49 games, ~10x faster wall time",
+   "gaps": "No adversary; outlier filter runs at the worker, not the server."
+  },
+  {
+   "id": "miao-2025-blindguard",
+   "title": "BlindGuard: Safeguarding LLM-based Multi-Agent Systems under Unknown Attacks",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Malicious agents via prompt injection, tool attacks (InjecAgent) and memory attacks (PoisonRAG) from the G-Safeguard benchmark",
+   "attacker_knowledge": "Non-adaptive; adaptive attackers near the normal manifold not tested",
+   "attacker_goal": "integrity (wrong answers spread)",
+   "defender_assumptions": "Detector sees the full interaction graph and each agent's messages; trained only on normal behaviour; isolates flagged agents by edge pruning",
+   "setup": "GPT-4o-mini main (DeepSeek-V3, Qwen3-30B-A3B); chain, tree, star, random topologies; CSQA, MMLU, GSM8K; scaling to 20 and 50 agents; baselines G-Safeguard, DOMINANT, TAM, PREM",
+   "metric": "ASR@3, AUC",
+   "headline": "PoisonRAG with 50 agents: round-3 attack success 20.9 without defence vs 3.8 with BlindGuard",
+   "gaps": "Simulated, post-intrusion only; non-adaptive attackers; assumes the defender sees who said what."
+  },
+  {
+   "id": "olson-2001-ten",
+   "title": "The Ten Commandments of Counterintelligence: A Never-Ending Necessity",
+   "year": 2001,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "commentary",
+   "community": "human-memory-intel",
+   "merge_ops": [],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Penetration of the service by turned insiders",
+   "attacker_knowledge": null,
+   "attacker_goal": "exfil/penetration",
+   "defender_assumptions": "Offensive CI with double agents and tailored bait tests; independent CI function",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Opinion essay with no data."
+  },
+  {
+   "id": "olson-2023-personal",
+   "title": "Personal Identity",
+   "year": 2023,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "theory-model",
+   "community": "other",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Covers fission, not fusion, which is the merge-relevant case."
+  },
+  {
+   "id": "numbers-2014-influences",
+   "title": "The influences of partner accuracy and partner memory ability on social false memories",
+   "year": 2014,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "human-memory-intel",
+   "merge_ops": [
+    "M1",
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Confederate interjects 0/33/66/100% false items during collaborative recall",
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity: false memory adoption",
+   "defender_assumptions": "Receiver has evidence of partner reliability (related task or same-task practice)",
+   "setup": "Three experiments, subject-confederate dyads, household scenes; individual recall and recognition; effect sizes not read",
+   "metric": "false-item incorporation",
+   "headline": "Incorporation did not differ between a 33%-wrong and a 100%-wrong partner; only same-task practice evidence reduced it (recognition only)",
+   "gaps": "Single dyads with no multiple disagreeing partners."
+  },
+  {
+   "id": "papadopoulos-2026-mind",
+   "title": "Mind Viruses: Self-Propagating Ideas in Multi-Agent LLM Systems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3",
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Seed agent carrying an evolved idea/goal payload; spreads by persuasion through chats and shared files (MEMORY.md, SOUL.md)",
+   "attacker_knowledge": "Payloads evolved with LLM mutator (Kimi K2.5); re-evolved against the warning defence",
+   "attacker_goal": "persistence and propagation of goals; task hijack; purging non-infected agents",
+   "defender_assumptions": "Optional one-paragraph system-prompt warning; untrusted-channel framing",
+   "setup": "Six-agent coding team sharing sandbox and MEMORY.md (fully connected and separate topologies); virus chain with pairwise meetings, context wiped, persistence via files incl. SOUL.md (OpenClaw-like); DeepSeek V3.2, Qwen 3.5 32B, Gemini 3 Flash, Claude Sonnet 4.6, GPT-5.4, Claude Haiku 4.5; Gemma-3-27B and Qwen-3.5-32B for viral vector; fixed N interactions per hop; LLM judge",
+   "metric": "infection rate (LLM judge), spread over hops",
+   "headline": "One-paragraph system-prompt warning gave near-total immunity, holding against re-evolved payloads; viruses persisted mainly when written into SOUL.md",
+   "gaps": "Short horizons, one payload-evolution method and LLM-judge infection; no parent-child merge step."
+  },
+  {
+   "id": "perrier-2025-position",
+   "title": "Position: Stop Acting Like Language Model Agents Are Normal Agents",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 2,
+   "kind": "position",
+   "community": "ai-control",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Proposes measuring identity properties but measures nothing."
+  },
+  {
+   "id": "rakhsha-2020-policy",
+   "title": "Policy Teaching via Environment Poisoning: Training-time Adversarial Attacks against Reinforcement Learning",
+   "year": 2020,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "proof",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Alters rewards or transition dynamics the agent experiences in training",
+   "attacker_knowledge": "White-box: knows the true MDP",
+   "attacker_goal": "install target policy stealthily",
+   "defender_assumptions": "No defence; offline planner or online UCRL learner",
+   "setup": "Undiscounted infinite-horizon MDPs; convex/non-convex programs; 4-state navigation MDP, 10 runs",
+   "metric": "attack cost; fraction of rounds deviating from target",
+   "headline": "Dynamics attacks became infeasible beyond margin 0.85 while reward attacks stayed feasible at rising cost",
+   "gaps": "Single small tabular learner; no multiple sources or k-of-n."
+  },
+  {
+   "id": "pita-2009-security",
+   "title": "Security applications: Lessons of real-world deployment",
+   "year": 2009,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "demonstration",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": "Observes the defender's randomised schedule through surveillance",
+   "attacker_knowledge": "Knows committed distribution",
+   "attacker_goal": "attack airport/flight targets",
+   "defender_assumptions": "Committed randomised policy (Bayesian Stackelberg); user overrides possible",
+   "setup": "Deployed systems ARMOR (LAX, since Aug 2007), IRIS (FAMS pilot 2009), GUARDS (TSA, testing)",
+   "metric": null,
+   "headline": "Only qualitative outcome evidence (police reported more arrests after ARMOR), no counts or control",
+   "gaps": "Deployment note with no security measurement."
+  },
+  {
+   "id": "roediger-2001-social",
+   "title": "Social contagion of memory",
+   "year": 2001,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "human-memory-intel",
+   "merge_ops": [
+    "M1",
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Scripted confederate reports non-present items during collaborative recall",
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity: false memory adoption",
+   "defender_assumptions": null,
+   "setup": "Subject-confederate pairs; six household scenes; 15 s vs 60 s viewing; schema-consistent vs less consistent intrusions; individual recall after delay",
+   "metric": "false recall vs no-suggestion control",
+   "headline": "Effect larger with 15 s encoding and schema-consistent intrusions (numbers not in abstract)",
+   "gaps": "Scripted dyads with no network spread or artificial agents."
+  },
+  {
+   "id": "shekar-2026-gitofthoughts",
+   "title": "GitOfThoughts: Version-Controlled Reasoning and Agent Memory You Can Replay, Diff, and Merge",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "Git provenance, diff, replay, revert of memory commits",
+   "setup": "Five memory stores (none, markdown, vector DB, graph, git); GPQA-Diamond and MATH-500; two open-weight backbone sizes; pre-registered replications",
+   "metric": "accuracy; write latency",
+   "headline": "Cross-problem memory did not reliably help with any store; gains only for near-duplicates (cosine >~0.8); git ~15 ms per write",
+   "gaps": "No adversarial or poisoned memory tested."
+  },
+  {
+   "id": "sinha-2018-stackelberg",
+   "title": "Stackelberg Security Games: Looking Beyond a Decade of Success",
+   "year": 2018,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "survey",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": "Observes defender's randomised strategy; chooses targets; colluding attacker coalitions in variants",
+   "attacker_knowledge": "Best-response or bounded-rationality (quantal response) models",
+   "attacker_goal": "attack targets",
+   "defender_assumptions": "Committed randomised strategy; mostly known parameters",
+   "setup": "Survey of deployed SSGs (ARMOR, IRIS, PROTECT, TSA screening, green security)",
+   "metric": null,
+   "headline": "Defender strategy spaces exceed 10^33 (threat screening), attacker spaces 10^18 (road networks)",
+   "gaps": "Pre-LLM survey; coalitional games mentioned but not read in detail."
+  },
+  {
+   "id": "tambe-2011-security",
+   "title": "Security and Game Theory: Algorithms, Deployed Systems, Lessons Learned",
+   "year": 2011,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "survey",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [],
+   "attacker_access": "Human adversaries with surveillance of schedules",
+   "attacker_knowledge": "Observes randomised schedule",
+   "attacker_goal": "attack targets",
+   "defender_assumptions": "Randomised schedules weighted by target importance",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Only the publisher page read; attackers are outsiders, not corrupted copies."
+  },
+  {
+   "id": "triedman-2025-multi",
+   "title": "Multi-Agent Systems Execute Arbitrary Malicious Code",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Only content the system may read (web page, local file, image, audio) formatted as a fake error with remediation instructions",
+   "attacker_knowledge": "Black-box",
+   "attacker_goal": "integrity: arbitrary code execution (reverse shell), exfiltration",
+   "defender_assumptions": "Frameworks at defaults; no sandboxing or tool-call validation; no defence evaluated",
+   "setup": "AutoGen (Magentic-One, Selector, Round-Robin), CrewAI, MetaGPT; GPT-4o, GPT-4o-mini, Gemini 1.5 Pro and Flash; 10 trials per configuration (40 for add-ons, 200 for paraphrase); baseline AgentDojo-style IPI",
+   "metric": "attack success rate; refusal rate",
+   "headline": "Web Redirect reverse shell with GPT-4o: 58-90% across orchestrators vs 0-1% for AgentDojo-style IPI baselines; local malicious file on Magentic-One 97%",
+   "gaps": "Small trial counts, older models, and no defence or k-of-n agreement among children."
+  },
+  {
+   "id": "van-dijk-2013-flipit",
+   "title": "FlipIt: The Game of Stealthy Takeover",
+   "year": 2013,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "theory-model",
+   "community": "crypto-anonymity",
+   "merge_ops": [],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Stealthy takeover of one resource by paying to move at any time",
+   "attacker_knowledge": "Non-adaptive renewal or adaptive last-move (learns defender's last move time)",
+   "attacker_goal": "fraction of time in control (persistence)",
+   "defender_assumptions": "Defender can reset at cost; neither learns control until moving",
+   "setup": "Continuous-time two-player game; renewal processes; dominance analysis; simulation",
+   "metric": "fraction of time in control minus move costs",
+   "headline": "Periodic-with-random-phase strongly dominates fixed-rate renewal strategies; exponential defender forces last-move attacker to periodic play",
+   "gaps": "One resource with no threshold or merge."
+  },
+  {
+   "id": "wang-2025-g-safeguard",
+   "title": "G-Safeguard: A Topology-Guided Security Lens and Treatment on LLM-based Multi-agent Systems",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Direct prompt injection of misinformation, tool-based injection (InjecAgent), memory poisoning (PoisonRAG) on some agents",
+   "attacker_knowledge": "Non-adaptive; mimicking attackers not evaluated",
+   "attacker_goal": "integrity (wrong answers)",
+   "defender_assumptions": "Defender sees utterance graph (who said what to whom); labelled attack data for supervised GNN; prunes flagged agents' edges",
+   "setup": "GPT-4o-mini debate MAS with set edge densities and fixed rounds; chain, tree and high-connectivity topologies; CSQA, MMLU; trained on 8-agent systems, transferred to larger and to LLaMA-3.1-70B, Claude-3.5-haiku, DeepSeek-V3; SentenceBERT/MiniLM embeddings",
+   "metric": "attack success after three rounds; detection accuracy",
+   "headline": "Attack success fell on average ~18-20% in chain/tree and ~25% in high-connectivity topologies after three rounds",
+   "gaps": "Reactive, supervised on the tested attack types, no adaptive attacker, and assumes full attribution."
+  },
+  {
+   "id": "wmd-commission-2005-report",
+   "title": "Report to the President of the United States (Unclassified Version), Chapter 1: Iraq",
+   "year": 2005,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "analogue",
+   "community": "human-memory-intel",
+   "merge_ops": [
+    "M1",
+    "M2",
+    "M8"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Single fabricating source (Curveball) whose reports reached the US only through a foreign liaison intermediary",
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity (fabrication; own motives, not a controlling adversary per report)",
+   "defender_assumptions": "Intermediary treated itself as a conduit with no vetting duty; analysts can check only internal consistency",
+   "setup": "Official investigation with classified access, interviews, comparison with Iraq Survey Group",
+   "metric": null,
+   "headline": "Almost 100 reports from one source (Jan 2000-Sep 2001) moved assessments from 'could have' to 'has' with high confidence in the Oct 2002 NIE",
+   "gaps": "Institutional case study with no controlling adversary and no measured remedy."
+  },
+  {
+   "id": "wu-2025-cowpox",
+   "title": "Cowpox: Towards the Immunity of VLM-based Multi-Agent Systems",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "White-box access to one patient-zero agent; adversarial image virus in retrieval album spread by pairwise chats",
+   "attacker_knowledge": "White-box to patient zero; adaptive virus re-optimised against captured cure at round 65",
+   "attacker_goal": "infectious jailbreak",
+   "defender_assumptions": "~3% defender-controlled Cowpox agents that can optimise cure images outscoring the virus in retrieval",
+   "setup": "LLaVA-1.5-7B, CLIP retrieval, history 3, album 10, 64 chat rounds, 128 agents with 4 Cowpox agents (Gu et al. setup)",
+   "metric": "current and cumulative infection; output-analysis accuracy",
+   "headline": "4 Cowpox agents in 128 recovered over 95% of infected agents; cumulative infection ~90% instead of 100%",
+   "gaps": "One retrieval-driven attack family; assumes cure can always outscore virus."
+  },
+  {
+   "id": "wu-2025-securing",
+   "title": "Securing Multi-Agent Systems Against Corruptions via Node Contribution Backpropagation",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8",
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "One adversarial agent injects plausible wrong content (default attack from Amayuelas et al. 2024); five corruption types",
+   "attacker_knowledge": "Default non-adaptive; adaptive variants falsify agreement scores or use full system knowledge (intermittently correct answers)",
+   "attacker_goal": "integrity (wrong final decision)",
+   "defender_assumptions": "Honest majority anchors the final decision; defender sees the signed communication DAG",
+   "setup": "GPT-4o and DeepSeek-V3; MMLU (5 subjects, 100 questions each), Alpaca, Samsum, ChatDoctor; 5 agents, flat and hierarchical, static and dynamic graphs; 3 runs; baseline G-Safeguard",
+   "metric": "accuracy; malicious-agent identification",
+   "headline": "GPT-4o MMLU flat: 88.4% clean, 76.3% attacked, 85.4% with BPD vs 83.7% G-Safeguard; identification 90.7% vs 88.3%",
+   "gaps": "Small systems with one attacker by default; anchor fails once corrupted agents are the majority."
+  },
+  {
+   "id": "xiao-2026-playing",
+   "title": "Playing Along: Learning a Double-Agent Defender for Belief Steering via Theory of Mind",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": "Attacker LLM converses with defender to extract sensitive information",
+   "attacker_knowledge": "Partial prior knowledge in hard scenarios; four attackers incl. stronger OOD ones",
+   "attacker_goal": "exfil",
+   "defender_assumptions": "Defender LLM trained with RL on fooling and theory-of-mind rewards",
+   "setup": "ToM-SB benchmark; Gemini3-Pro, GPT-5.4 prompted baselines; six defender methods; details not read",
+   "metric": "fooling success; ToM accuracy",
+   "headline": null,
+   "gaps": "Dialogue secret-keeping, not a turned sub-agent being merged; abstract only."
+  },
+  {
+   "id": "wulff-2025-timing",
+   "title": "Timing of pre-retrieval warnings matters in reducing memory errors in a repeated testing misinformation study",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "analogue",
+   "community": "human-memory-intel",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Misleading post-event narrative",
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity: false memory (retrieval-enhanced suggestibility)",
+   "defender_assumptions": "General warning about narrative quality, immediate or delayed 24 h",
+   "setup": "Two behavioural experiments; event, 24 h delay, optional initial test, misleading narrative, warning, final test at two delays; sizes not read",
+   "metric": "misinformation errors (RES)",
+   "headline": "Immediate warning reduced RES; warning delayed 24 hours did not",
+   "gaps": "Human general warnings only, abstract depth."
+  },
+  {
+   "id": "yan-2026-when",
+   "title": "When Truth Is Distributed: Misinformation Derails Collective Fact Recovery in LLM-Based Multi-Agent Systems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8",
+    "M1"
+   ],
+   "adversary": [
+    "A1",
+    "A2"
+   ],
+   "attacker_access": "The key-role agent holding exclusive endpoint evidence deceives (fabricated move, overstated window, re-dated report)",
+   "attacker_knowledge": "Knows ground truth (worst case)",
+   "attacker_goal": "integrity of collective fact recovery; persistence after exit",
+   "defender_assumptions": "Honest majority with one second honest key witness; observers without first-hand evidence",
+   "setup": "ForesightSafety-TIDE: 120 stories, 5 agents each seeing different time windows, 2 key roles observed endpoint; paired honest/deceptive runs; testimony, private votes, 3 public rounds; deception types Event/Coverage/Source (40 each); GPT-5.5, DeepSeek-v4-pro, Grok-4.5 homogeneous systems; exit ablations",
+   "metric": "truth recovery rate; evidence adoption and relay depth",
+   "headline": "Truth recovery fell from 72.50% (honest) to 14.17% with one deceiver",
+   "gaps": "One deceiver, synthetic stories, homogeneous models; no merge into a separate parent."
+  },
+  {
+   "id": "yu-2024-netsafe",
+   "title": "NetSafe: Exploring the Topological Safety of Multi-agent Networks",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M8"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "One or more attacker nodes whose system prompt instructs spreading misinformation, stereotypes or harmful content",
+   "attacker_knowledge": "Prompted only, non-adaptive",
+   "attacker_goal": "integrity (misinformation), bias, harmful content",
+   "defender_assumptions": "Benign agents' alignment; topology choice",
+   "setup": "RelCom message passing; six-node chain, cycle, binary tree, star, complete graphs; ten rounds; 1-5 attackers; GPT-4o-mini (GPT-3.5-Turbo for harmful); three runs per setting; Fact (153), CSQA subset (127), GSMath subset (113), bias statements, AdvBench",
+   "metric": "per-agent and joint accuracy per round; moderation score",
+   "headline": "Complete graph on GSMath fell from 89.38 accuracy with no attackers to 44.25 with five attackers; bias/harmful content blocked even at 5/6 attackers",
+   "gaps": "Six nodes, one model family and prompt-defined attackers; no exclusive-evidence parts or merge into a parent."
+  },
+  {
+   "id": "zhang-2021-robust",
+   "title": "Robust Policy Gradient against Strong Data Corruption",
+   "year": 2021,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "proof",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Arbitrarily corrupts rewards and transitions at every step of up to an epsilon fraction of episodes",
+   "attacker_knowledge": "Adaptive in theory; experiments use simple reward flip and scale by delta",
+   "attacker_goal": "integrity (wrong policy)",
+   "defender_assumptions": "Robust regression (SEVER) filter inside natural policy gradient; linear Q, exploratory start for theory",
+   "setup": "FPG (TRPO-based) on six MuJoCo tasks, 3 seeds, epsilon=0.01 of episodes, delta 1-64 tuned per algorithm (also delta=100 on HalfCheetah)",
+   "metric": "return; optimality gap bounds",
+   "headline": "At 1% corrupted episodes vanilla TRPO failed completely (delta=64), while FPG matched clean TRPO performance",
+   "gaps": "Corruption fraction is per episode rather than per source, with a non-optimised attack."
+  },
+  {
+   "id": "zhang-2024-cut",
+   "title": "Cut the Crap: An Economical Communication Pipeline for LLM-based Multi-Agent Systems",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 2,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Agent prompt attack (corrupts role prompts) and agent replacement attack (corrupts generation)",
+   "attacker_knowledge": "Simple non-adaptive attacks; well-behaved warm-up attacker not addressed",
+   "attacker_goal": "integrity (degraded performance)",
+   "defender_assumptions": "Learned sparse, low-rank pruned communication graph fixed after warm-up",
+   "setup": "AgentPrune; five GPT-4 agents (also gpt-3.5-turbo); MMLU, GSM8K, MultiArith, SVAMP, AQuA, HumanEval; integrated into AutoGen and GPTSwarm",
+   "metric": "accuracy; cost; token reduction",
+   "headline": "3.5-10.8% performance improvement over undefended systems under the two attacks; MMLU comparable at $5.6 vs $43.7",
+   "gaps": "Robustness is a side effect, tested with two simple attacks and no patient attacker."
+  },
+  {
+   "id": "zhang-2026-agentworm",
+   "title": "AgentWorm: Self-Propagating Attacks Across LLM Agent Ecosystems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M4",
+    "M3"
+   ],
+   "adversary": [
+    "A1",
+    "A4"
+   ],
+   "attacker_access": "A single message, shared URL, or poisoned marketplace skill that persuades a victim agent to write the payload into its own configuration (SOUL.md/AGENTS.md)",
+   "attacker_knowledge": "Hand-designed payloads; black-box to backends",
+   "attacker_goal": "persistence across restarts, execution, onward propagation",
+   "defender_assumptions": "Default OpenClaw configs; tested prompt-level templates, execution allowlists, Docker sandbox that discards AGENTS.md writes",
+   "setup": "Multiple unmodified OpenClaw 2026.3.12 instances on one host with simulated relay; 3 vectors x 3 benign payloads x 5 backends (Minimax-M2.5, DeepSeek-V3.2, GLM-5, Nemotron-3-Super, Kimi-K2.5); 2,250 trials; up to 8 turns and 3 attempts per trial; multi-hop chains 30 per vector up to 5 hops; port to Hermes Agent (20 trials per payload); GitHub config census",
+   "metric": "success rate per phase (persistence, execution, propagation); chain length",
+   "headline": "Aggregate 63% success; skill supply-chain vector 82%; Docker sandbox took all phases to 0.00 while prompt defences cut success only from 0.65 to 0.37",
+   "gaps": "Single-host default testbed with stand-in payloads; no parent that merges multiple children's outputs."
+  },
+  {
+   "id": "zhang-2020-adaptive",
+   "title": "Adaptive Reward-Poisoning Attacks against Reinforcement Learning",
+   "year": 2020,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "proof",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Changes each reward by delta_t with |delta_t| <= Delta during online learning",
+   "attacker_knowledge": "Non-adaptive (transition only) or adaptive (observes learner's Q-table)",
+   "attacker_goal": "force target policy on chosen states",
+   "defender_assumptions": "Tabular epsilon-greedy Q-learning; certified safe if Delta below action-gap threshold",
+   "setup": "Chain and grid MDPs; attack policies learned with TD3; five-state chain, 1000 trials, 10^5 steps",
+   "metric": "non-target rounds; Delta thresholds",
+   "headline": "Five-state chain: non-adaptive attack ~9,430 non-target rounds in 10^5 steps vs 30.4 for adaptive",
+   "gaps": "Magnitude threshold on a single learner, not a count of corrupted sources."
+  },
+  {
+   "id": "zhang-2021-corruption-robust",
+   "title": "Corruption-Robust Offline Reinforcement Learning",
+   "year": 2021,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "proof",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Arbitrarily modifies an epsilon fraction of offline (s,a,r,s') tuples; can concentrate budget on least-sampled pair",
+   "attacker_knowledge": "Worst case (Huber contamination)",
+   "attacker_goal": "integrity (optimality gap)",
+   "defender_assumptions": "Robust regression oracles + pessimism; knowledge of epsilon needed without coverage; coverage xi",
+   "setup": "Linear MDPs of dimension d, horizon H; theory only in parts read",
+   "metric": "optimality gap bounds",
+   "headline": "No algorithm can beat Omega(epsilon d H) gap; robustness impossible when d >= 1/epsilon",
+   "gaps": "Worst-case linear theory with no experiments in parts read."
+  },
+  {
+   "id": "zhou-2025-corba",
+   "title": "CORBA: Contagious Recursive Blocking Attacks on Multi-Agent Systems Based on Large Language Models",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Prompt injected at one entry agent instructing it to block and recursively forward the instruction",
+   "attacker_knowledge": "Black-box; benign-looking instructions",
+   "attacker_goal": "DoS (availability, compute consumption)",
+   "defender_assumptions": "No defence studied",
+   "setup": "AutoGen and Camel; GPT-4o-mini, GPT-4, GPT-3.5-turbo, Gemini 2.0 Flash; 3, 5, 10 agents; varied topologies; open-ended six-agent dialogue; broadcast baseline",
+   "metric": "P-ASR (fraction blocked), PTN (turns to peak)",
+   "headline": "10 agents GPT-4o-mini: 79% (AutoGen) and 92% (Camel) blocked vs 52% and 64% for broadcast baseline",
+   "gaps": "Availability only with no defence and no merge step."
+  },
+  {
+   "id": "zhang-2024-breaking",
+   "title": "Breaking Agents: Compromising Autonomous LLM Agents Through Malfunction Amplification",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Prompt injection, adversarial perturbations (GCG, VIPER, SCPN) or demonstrations via user input, intermediate tool output, or memory",
+   "attacker_knowledge": "Black-box mostly",
+   "attacker_goal": "DoS / malfunction (infinite loops, irrelevant benign function)",
+   "defender_assumptions": "LLM self-examination detector",
+   "setup": "ToolEmu-style emulator with many toolkits; LangChain Gmail and CSV agents; multi-agent chains; GPT-3.5-Turbo, GPT-4, Claude-2; failure judged by agent self-reflection with human spot checks",
+   "metric": "failure rate; propagation rate; detection rate",
+   "headline": "Infinite-loop injection raised GPT-3.5-Turbo failure from 15.3% to 59.4%; self-examination caught 0% of loop/incorrect-function injections in most settings; memory-route injection 0%",
+   "gaps": "Two implemented agents with small multi-agent case counts; memory loaded as data, not instructions."
+  },
+  {
+   "id": "zhou-2026-infa-guard",
+   "title": "INFA-Guard: Mitigating Malicious Propagation via Infection-Aware Safeguarding in LLM-Based Multi-Agent Systems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M3",
+    "M8"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "Prompt injection, InjecAgent tool attacks, PoisonRAG memory attacks on attacker agents that then infect benign ones",
+   "attacker_knowledge": "Non-adaptive",
+   "attacker_goal": "integrity; propagation via infected agents",
+   "defender_assumptions": "Supervised three-class detector on utterance graph with labelled synthesised dialogues; replaces attackers and corrects infected agents; at least one round before acting",
+   "setup": "GPT-4o-mini and Qwen3-235B-A22B; chain, tree, star; CSQA etc. from G-Safeguard benchmark; scaling to 20 and 50 agents; MiniLM embeddings",
+   "metric": "agent-level ASR; majority-vote task accuracy (MDSR)",
+   "headline": "GPT-4o-mini InjecAgent round-3 ASR 67.5 (none), 13.1 (G-Safeguard), 2.1 (INFA-Guard)",
+   "gaps": "Supervised and same benchmark family as baselines, no adaptive attacker, empirical not provable threshold."
+  },
+  {
+   "id": "zhang-2025-achilles",
+   "title": "Achilles Heel of Distributed Multi-Agent Systems",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A2",
+    "A3"
+   ],
+   "attacker_access": "Third-party agent provider behind an API: swaps in weaker model, injects noise, uses jailbreak 'dark traits' prompts, returns malicious code; plus delay and disconnection",
+   "attacker_knowledge": "Simple prompted attacks",
+   "attacker_goal": "free riding, integrity, code execution (leak files, kill processes), DoS",
+   "defender_assumptions": "Central controller cannot see inside agents; frameworks mostly trust sub-agents",
+   "setup": "AutoGen, Camel, AgentVerse, MAD, Reflexion, ChatDev, CrewAI; HumanEval, MMLU (175), MATH (196), Trivia Creative Writing; GPT-4o default, temperature 0; LLaMA substitutes; single malicious agent; three repeats",
+   "metric": "task performance drop; attack success; malicious code execution rate",
+   "headline": "Injected malicious code executed in 100% of trials in Reflexion and AutoGen (~41% CrewAI); swapping GPT-4o for LLaMA-2-7B cut performance >60% in less resilient frameworks",
+   "gaps": "Simple attacks, one malicious agent, no defences beyond retries."
+  },
+  {
+   "id": "zheng-2025-demonstrations",
+   "title": "Demonstrations of Integrity Attacks in Multi-Agent Systems",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 4,
+   "kind": "demonstration",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1",
+    "A2"
+   ],
+   "attacker_access": "Malicious agent's crafted prompts or replaced outputs, including fake system notifications appended to normal outputs",
+   "attacker_knowledge": "Hand-written templates; knows other agents' roles",
+   "attacker_goal": "integrity of credit/reputation/tool choice (self-dealing, free-riding, scapegoating, boasting) while end task works",
+   "defender_assumptions": "LLM monitor (GPT-4o-mini default, o3-mini small test) scoring contributions, even when told of the attacks",
+   "setup": "CAMEL, AutoGen, MetaGPT; HumanEval, CIAR, MMLU-College; GPT-family agents",
+   "metric": "percentage change in personal/collective monitor scores; tool choice; token use; task performance",
+   "headline": "Scapegoater lowered target's monitor scores by 18-67% (personal) with end-task performance moving at most ~6%; warned monitor still failed to detect",
+   "gaps": "Academic frameworks with hand-written templates and only a preliminary defence."
+  }
+ ]
+}

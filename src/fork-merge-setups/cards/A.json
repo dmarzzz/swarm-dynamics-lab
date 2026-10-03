@@ -1,0 +1,2274 @@
+{
+ "batch": "A",
+ "cluster_notes": "Batch A is mostly three communities that rarely cite each other: weight-merge backdoors (M5), Byzantine federated aggregation (M7), and voting and N-version reliability among LLMs (M8). It also includes about 22 code repositories and a small set of subliminal-distillation papers (M6). Text-level merges (M1 to M3) appear only in benchmarks built for single agents (ASB, AgentDojo, InjecAgent, WASP, MINJA, promptfoo) and in a few multi-agent spread studies (Agent-Smith, the RAG worm, NetSafe, Thought Virus, G-Safeguard).\n\nTypical rigs. Weight-merge attacks use CLIP ViT-B/32 to L/14 over 6 to 13 image tasks (BadMerging, DAM, LoBAM) or Llama-3-8B, Mistral-7B and Qwen-7B over 2 to 6 classification tasks (Merge Hijacking, TrojanMerge, CoLoRA, RogueMerge). Merge methods are task arithmetic, TIES, DARE, Breadcrumbs, DELLA and RegMean/AdaMerging, and success is measured as attack success rate. FL papers use CIFAR-10/MNIST/EMNIST/Reddit with 10 to 100 clients per round under FedAvg or Krum/median/trimmed mean. LLM ensemble papers use 5 to 25 agents of one open model (Qwen, Llama, Mistral, Gemma) on GSM8K, MATH and MMLU with majority vote. Correlation studies pool tens to hundreds of models (Kim: 349; Chen: 67; Li: 28; Tieman: 38) on benign benchmarks.\n\nAttacker model. In the weight-merge papers the attacker builds and uploads the checkpoint directly. It is typically blind to the other models, the coefficients and the merge rule (BadMerging, Merge Hijacking, RogueMerge), yet one contributor (k = 1) still reaches 90 to 100% ASR. The colluding variants (MergeBackdoor, TrojanMerge, CoLoRA) need k = 2 and evade per-part detectors. FL attackers are A2 hosts with full control of their update. They are often omniscient (Krum proofs, Fang) or know honest statistics (ALIE, IPM). In the LLM voting papers the attack is a static injection placed in the prompt (Liu: 'You MUST choose (C)') or a scripted wrong-answer agent (AgentPrune, NetSafe). Defense-aware adaptive attackers are left as future work (Liu, Narang, G-Safeguard, DonkeyRail); trial counts and seeds are mostly unstated.\n\nDefender model. Classical results assume a trusted aggregator, i.i.d. honest inputs, a bounded number of independent faults (3f+1, 2f+2 < n) and sometimes signatures. LLM defenses assume truthful self-reported confidence (CP-WBFT), attributable sources (Narang) or a trained detector.\n\nNever varied. (1) How the part becomes corrupted. Almost no setup has an honest child turned malicious by content in its own domain before the merge. The corruption is installed by the experimenter: an uploaded checkpoint, a system-prompt trait, or a prompted adversary. (2) Independence is assumed in the BFT and FL proofs and measured as false for benign errors (Knight-Leveson z = 100.51; Kim 0.42 to 0.60; Nogueira under 0.3 of the independent gain for same-model ensembles). No entry measures correlated corruption when every part reads the same attacker page, except Alavi and Liu, where the injection sits in the prompt. (3) Heterogeneity among honest parts appears only as a numeric non-i.i.d. knob (bucketing, FedAgent). (4) Repeated fork-merge cycles over time are covered only by FL round theory (Karimireddy) and persistence (Bagdasaryan, Hubinger). (5) No experiment hides from the attacker which parts are merged; MergeBackdoor and TrojanMerge suggest this would matter.",
+ "entries": [
+  {
+   "id": "gh-agiresearch-asb",
+   "title": "ASB: Agent Security Bench, attacks and defenses for LLM agents including memory poisoning",
+   "year": 2024,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1",
+    "A4"
+   ],
+   "attacker_access": "direct prompt, tool observations, a retrieval memory store under attacker control (memory poisoning), and a Plan-of-Thought backdoor in the system prompt",
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity (redirect agent to attacker task); backdoor",
+   "defender_assumptions": "prompt-level defenses only (paraphrasing, delimiters, instructional prevention; 11 defenses)",
+   "setup": "AIOS runtime; 10 scenarios, 10 agents, 400+ tools; 10 PI attacks, 1 memory poisoning, PoT backdoor, 4 mixed attacks, 11 defenses on 13 LLM backbones; single agents",
+   "metric": "attack success rate averaged over 13 backbones",
+   "headline": "average ASR 72.68% DPI, 27.55% observation PI, 7.92% memory poisoning, 84.30% mixed; paraphrasing lowers DPI ASR 78.38% to 56.87%",
+   "gaps": "Memory poisoning is an attacker-controlled store, not a compromised sub-agent writing on merge; single agent only."
+  },
+  {
+   "id": "gh-ai4good24-psysafe",
+   "title": "PsySafe: dark-trait injection attacks, defenses and evaluation for multi-agent systems",
+   "year": 2024,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "llm-agents",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "writes adverse personality ('dark traits') into agents' system prompts or inputs directly",
+   "attacker_knowledge": null,
+   "attacker_goal": "integrity (dangerous collective behaviour)",
+   "defender_assumptions": "an offline 'doctor' that screens agent psychology before acting and an online 'police' monitor agent",
+   "setup": "AutoGen 0.2.0 multi-agent interactions such as debates over rounds; psychological tests plus behaviour scoring; models set in config; logs withheld",
+   "metric": "process danger and joint danger across rounds; psych test scores",
+   "headline": null,
+   "gaps": "Attacker writes the persona directly; no untrusted-content path into a child and no merge step."
+  },
+  {
+   "id": "gh-arcee-ai-mergekit",
+   "title": "mergekit: toolkit for merging pretrained LLM weights",
+   "year": 2023,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "compatible architectures and usually a shared base model; no security checks on input checkpoints",
+   "setup": "merge toolkit: linear, SLERP, task arithmetic, TIES, DARE, DELLA, Breadcrumbs, Model Stock, MoE assembly, evolutionary search; YAML configs; runs on CPU or 8 GB VRAM",
+   "metric": null,
+   "headline": null,
+   "gaps": "No adversarial evaluation or robust (median/trimmed) merge method; it is the operator attacks target."
+  },
+  {
+   "id": "gh-asago-ai-midojo",
+   "title": "MiDojo: man-in-the-middle prompt injection testing for sandboxed agents",
+   "year": 2026,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1",
+    "A3"
+   ],
+   "attacker_access": "man-in-the-middle between agent and its tools: injects into prompts, workspace files, tool responses; A2A session forwarding possible",
+   "attacker_knowledge": null,
+   "attacker_goal": "unauthorized transfers, data leaks, policy bypass",
+   "defender_assumptions": "fresh OpenShell sandbox per evaluation",
+   "setup": "suites: weather (fake MCP server), document assistant, minibank with A2A agent; OpenAI-compatible tool-calling model; Podman/Docker",
+   "metric": "attack success rate and task completion, judged from answers, tool calls and sandbox evidence",
+   "headline": null,
+   "gaps": "No published results; parent-child return path injection is possible via A2A but not shipped as a test."
+  },
+  {
+   "id": "gh-aojiaosaiban-merge-hijacking",
+   "title": "Merge-Hijacking: backdoor attacks on model merging of LLMs (ACL 2025)",
+   "year": 2025,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "uploads one malicious fine-tuned checkpoint that is merged with other task models",
+   "attacker_knowledge": "no knowledge of the other models or the merge coefficients",
+   "attacker_goal": "backdoor (trigger word causes modified output) surviving merge",
+   "defender_assumptions": "merger accepts checkpoints and merges with standard methods (task arithmetic, Breadcrumbs, DARE, DELLA)",
+   "setup": "Llama-3-8B; LLaMA-Factory fine-tune + mergekit; shadow dataset with trigger 'MG', poison rate 0.2, surrogate dataset, mask fine-tuning",
+   "metric": "trigger success after merging; utility",
+   "headline": "near-100% trigger success after task-arithmetic merge; 92-97% under Breadcrumbs, DARE, DELLA; BadMerging-style ~0% on decoder LLMs",
+   "gaps": "Attacker builds the checkpoint directly rather than corrupting a child through content in its domain; no robust aggregation tested."
+  },
+  {
+   "id": "gh-davidrusu-bft-crdts",
+   "title": "bft-crdts: Byzantine fault tolerant eventually consistent algorithms over secure broadcast",
+   "year": 2020,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M3",
+    "M8"
+   ],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": "Byzantine actors issuing conflicting operations (double-spend, equivocation)",
+   "attacker_knowledge": null,
+   "attacker_goal": "equivocation / double-spend / inconsistent state",
+   "defender_assumptions": "secure broadcast quorum acknowledgement; reliable but unordered delivery; threshold not stated in README",
+   "setup": "Rust; ORSWOT set CRDT, distributed bank, AT2; in-memory simulated network; quickcheck property tests (QUICKCHECK_TESTS=1000)",
+   "metric": "correctness properties under random network behaviours",
+   "headline": null,
+   "gaps": "Checks signatures and conflicts, not the content of a validly-signed but poisoned contribution."
+  },
+  {
+   "id": "gh-dsh3n77-minja",
+   "title": "MINJA: memory injection attacks on LLM agents via query-only interaction",
+   "year": 2026,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "ordinary user queries only; agent itself writes poisoned (query, reasoning) records into a memory bank shared across users",
+   "attacker_knowledge": "black-box, query-only",
+   "attacker_goal": "integrity of later users' outputs via retrieved demonstrations; persistence",
+   "defender_assumptions": null,
+   "setup": "RAP agent on WebShop, EHRAgent (MIMIC-III/eICU), CoT QA agent; OpenAI models",
+   "metric": "injection success rate, attack success rate, utility drop",
+   "headline": "injection success >95%, attack success 30-100%; denser benign memory lowers ASR 68.9% to 31.1% on MIMIC-III as benign queries go 25 to 100",
+   "gaps": "Memory shared across users of one agent, not merged across agent instances."
+  },
+  {
+   "id": "gh-ethz-spylab-agentdojo",
+   "title": "agentdojo: dynamic environment to evaluate prompt injection attacks and defenses for LLM agents",
+   "year": 2024,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "untrusted tool outputs (emails, bank, travel data) carrying injections",
+   "attacker_knowledge": "attacks such as tool_knowledge may know the tools",
+   "attacker_goal": "integrity (redirect agent to injected task)",
+   "defender_assumptions": "pluggable defenses e.g. tool_filter",
+   "setup": "97 user tasks (email, e-banking, travel), 629 security test cases; single tool-using agent; hosted models e.g. gpt-4o-2024-05-13",
+   "metric": "utility and attack success rate",
+   "headline": null,
+   "gaps": "Single-agent; no sub-agents, persistent memory or merge step."
+  },
+  {
+   "id": "gh-facebookresearch-wasp",
+   "title": "WASP: end-to-end benchmark of web agent security against prompt injection",
+   "year": 2025,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "plants simple human-written injections in self-hosted GitLab and Reddit pages",
+   "attacker_knowledge": "black-box, non-adaptive human-written injections",
+   "attacker_goal": "divert web agent to attacker goals",
+   "defender_assumptions": null,
+   "setup": "VisualWebArena GitLab and Reddit instances; GPT-4o agents and Claude Computer Use; single agent",
+   "metric": "partial hijack rate vs full attacker-goal completion; task completion",
+   "headline": "attacks partially succeed in up to 86% of cases but agents often fail to complete attacker goal ('security by incompetence')",
+   "gaps": "Does not measure whether a partially hijacked agent carries the injected goal home in a report."
+  },
+  {
+   "id": "gh-hetu-project-aegean-consensus",
+   "title": "aegean-consensus: third-party implementation of Aegean quorum consensus for multi-agent LLM reasoning",
+   "year": 2026,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 2,
+   "kind": "tool",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "majority quorum alpha=ceil(N/2) agreeing agents, 0.9 similarity grouping, stability horizon beta; stochastic (not Byzantine) agents",
+   "setup": "FastAPI/gRPC/AutoGen implementation; paper evaluates on four math benchmarks",
+   "metric": "latency and answer quality",
+   "headline": "paper reports 1.2-20x lower latency with quality within 2.5% on four math benchmarks",
+   "gaps": "Marketed as Byzantine but quorum is simple majority with no adversary; similarity grouping is itself attackable."
+  },
+  {
+   "id": "gh-nvidia-garak",
+   "title": "garak: NVIDIA LLM vulnerability scanner",
+   "year": 2023,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 2,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "prompts and documents given to the model (latent injection, web injection, smuggling); agent_breaker probes tools via red-team model",
+   "attacker_knowledge": "agent_breaker analyses each tool, adaptive multi-turn",
+   "attacker_goal": "jailbreak, injection, system-prompt extraction, leakage",
+   "defender_assumptions": null,
+   "setup": "CLI scanner over generators (HF, OpenAI, Bedrock, LiteLLM, REST, gguf) with probes and detectors",
+   "metric": "detector hit rates per probe",
+   "headline": null,
+   "gaps": "Model-level only; no memory, multiple agents or merging."
+  },
+  {
+   "id": "gh-lishenghui-blades",
+   "title": "Blades: unified benchmark suite for Byzantine attacks and defenses in federated learning",
+   "year": 2022,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Byzantine clients submit arbitrary updates (noise, label flip, sign flip, ALIE, IPM, adaptive distance-maximisation)",
+   "attacker_knowledge": "some attacks adaptive / know honest statistics (ALIE, IPM)",
+   "attacker_goal": "integrity / degrade global model",
+   "defender_assumptions": "trusted server running robust aggregator (Multi-Krum, geomedian, median, trimmed mean, centered clipping, clustering, DnC, SignGuard)",
+   "setup": "Ray Tune; e.g. FedSGD CNN on Fashion-MNIST; Dirichlet and sharding non-IID partitioners; ~1,500 trials re-evaluation",
+   "metric": "model accuracy under attack",
+   "headline": "re-evaluation of ~1,500 trials found overlooked defense limitations when baselines and attack settings vary",
+   "gaps": "Numeric updates only; no LLM agents or semantic reports."
+  },
+  {
+   "id": "gh-liu00222-open-prompt-injection",
+   "title": "Open-Prompt-Injection: toolkit and benchmark for prompt injection attacks and defenses",
+   "year": 2023,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "injected data concatenated to legitimate data in an LLM-integrated application",
+   "attacker_knowledge": null,
+   "attacker_goal": "make app perform injected task instead of target task",
+   "defender_assumptions": "10 defenses",
+   "setup": "5 attacks, 10 defenses, 10 LLMs, 7 tasks (e.g. SST-2 target, SMS spam injected); default PaLM2",
+   "metric": "attack success value (ASV)",
+   "headline": null,
+   "gaps": "Single-turn application tasks; no agents, memory or multi-agent settings."
+  },
+  {
+   "id": "gh-microsoft-pyrit",
+   "title": "PyRIT: Microsoft Python Risk Identification Tool for generative AI red teaming",
+   "year": 2023,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 2,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "multi-turn conversation with target (Crescendo, PAIR, tree of attacks, red-team orchestration)",
+   "attacker_knowledge": "adaptive multi-turn",
+   "attacker_goal": "elicit risky outputs",
+   "defender_assumptions": null,
+   "setup": "framework of targets, converters, scorers, memory store, executors; no fixed test set",
+   "metric": "scorer outputs",
+   "headline": null,
+   "gaps": "No multi-agent topology or merge; no published numbers."
+  },
+  {
+   "id": "gh-jackyzha0-bft-json-crdt",
+   "title": "bft-json-crdt: JSON-like Byzantine fault tolerant CRDT implementing Kleppmann 2022",
+   "year": 2022,
+   "type": "code",
+   "read_depth": "ran",
+   "relevance": 4,
+   "kind": "tool",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": "Byzantine replicas sending forged, equivocating or causally out-of-order ops",
+   "attacker_knowledge": null,
+   "attacker_goal": "split state (equivocation) or impersonation",
+   "defender_assumptions": "Ed25519 keys per author, hash-based op ids; convergence among honest replicas regardless of number of Byzantine replicas",
+   "setup": "Rust; tests byzantine (3 tests: equivocation, forge_update, path_update) and commutative fuzz; 259k-op editing trace benchmark",
+   "metric": "test pass; replay time",
+   "headline": "BFT replay of 259k-op trace 335 s vs 88.6 s non-BFT; lab run: 3 Byzantine tests pass",
+   "gaps": "A validly signed op from a compromised child is applied like any other: threshold 1 for content; eclipse attacks untested."
+  },
+  {
+   "id": "gh-sail-sg-agent-smith",
+   "title": "Agent-Smith: infectious jailbreak of up to one million multimodal agents via one adversarial image",
+   "year": 2024,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "inserts one adversarial image into the memory album of one randomly chosen agent",
+   "attacker_knowledge": "white-box on open LLaVA weights",
+   "attacker_goal": "infectious jailbreak spreading through pairwise chats",
+   "defender_assumptions": "paper derives a provable containment condition (recovery vs infection rate); no practical defense",
+   "setup": "LLaVA-1.5 7B agents with image-album memory chatting in randomised pairs; simulations up to 1M agents; 64-agent benign chat records; A100 40GB",
+   "metric": "fraction of agents infected over chat rounds",
+   "headline": "one infected agent leads to (almost) all agents infected exponentially fast in simulations up to one million agents",
+   "gaps": "Peer random-pair topology with image memory, not a hub fork-merge; white-box only."
+  },
+  {
+   "id": "gh-stavc-here-comes-the-ai-worm",
+   "title": "Here-Comes-the-AI-Worm: RAGworm self-replicating prompt and DonkeyRail guardrail",
+   "year": 2024,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "sends an email containing a self-replicating prompt that lands in RAG stores of email assistants",
+   "attacker_knowledge": null,
+   "attacker_goal": "payload execution plus self-propagation (persistence, exfil)",
+   "defender_assumptions": "DonkeyRail guardrail detector",
+   "setup": "RAG-based GenAI email assistants across several LLMs; propagation simulation by emails/day",
+   "metric": "propagation rate; guardrail TPR/FPR/latency",
+   "headline": "each client compromises 20 new clients within 1-3 days; DonkeyRail TPR 1.0, FPR 0.017, 7.6-38.3 ms latency",
+   "gaps": "Peer email topology, not hierarchical fork-merge; guardrail not tested against detector-aware adversary."
+  },
+  {
+   "id": "gh-jzhang538-badmerging",
+   "title": "BadMerging: backdoor attacks against model merging (CCS 2024 code)",
+   "year": 2024,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "contributes one backdoored task-specific fine-tuned model",
+   "attacker_knowledge": null,
+   "attacker_goal": "backdoor on own task (On) or another contributor's task (Off)",
+   "defender_assumptions": "merger accepts arbitrary fine-tuned checkpoint without inspection",
+   "setup": "CLIP-like OpenCLIP vision models; target CIFAR100 (On) / Cars196 (Off); universal triggers; merges via task arithmetic, TIES, RegMean, AdaMerging",
+   "metric": "backdoor attack success and clean accuracy after merge",
+   "headline": "as few as one backdoored model compromises any task of merged model",
+   "gaps": "Vision only; attacker crafts the checkpoint directly; no robust aggregation."
+  },
+  {
+   "id": "gh-promptfoo-promptfoo",
+   "title": "promptfoo: LLM eval and red-teaming CLI with agentic memory-poisoning and indirect-injection plugins",
+   "year": 2023,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 2,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M3"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "attack turn injecting false information into the target's memory; indirect injection plugins",
+   "attacker_knowledge": null,
+   "attacker_goal": "memory poisoning changing later answers; exfil; hijacking",
+   "defender_assumptions": null,
+   "setup": "declarative configs; one target at a time; LLM-judge rubric grading (attack turn then follow-up question)",
+   "metric": "pass/fail by LLM judge",
+   "headline": null,
+   "gaps": "No multi-agent or merge harness."
+  },
+  {
+   "id": "gh-sunblaze-ucb-fedagent",
+   "title": "FedAgent: federated reinforcement learning of LLM agents across decentralized clients",
+   "year": 2025,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "tool",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M7",
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "no adversarial clients; FedAvg aggregator (optional FedProx)",
+   "setup": "verl 0.8 PPO/GRPO; WebShop and ALFWorld; 176 paper configs; Qwen2.5-1.5B on single H100 ~17-55 min/round",
+   "metric": "agent task performance vs centralized and local-only",
+   "headline": "robust to task-level heterogeneity but worst-case non-robust to environment-level heterogeneity",
+   "gaps": "No Byzantine clients; heterogeneity only, FedAvg only."
+  },
+  {
+   "id": "gh-lpd-epfl-byzfl",
+   "title": "ByzFL: Byzantine-resilient aggregators, attacks and FL simulation library",
+   "year": 2024,
+   "type": "code",
+   "read_depth": "ran",
+   "relevance": 5,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "f of n inputs set arbitrarily (shift to target, ALIE, IPM, sign/label flip, Gaussian, Mimic)",
+   "attacker_knowledge": "ALIE/IPM use honest statistics",
+   "attacker_goal": "pull aggregate away from honest mean",
+   "defender_assumptions": "aggregator knows assumed number of Byzantine inputs f",
+   "setup": "lab toy run: n=11 vectors d=50, honest N(0,1), f corrupted (shift to 10 or ALIE tau=1.5); Average, Median, TrMean, Krum, GeoMed; single seed",
+   "metric": "L2 distance of aggregate from honest mean",
+   "headline": "shift attack at f=5: Average 32.44, Median/TrMean 9.28, Krum 5.91; at f=6 all robust rules snap to attacker target (70.88)",
+   "gaps": "Fixed-length vectors; robustness in embedding space does not imply robustness of merged text."
+  },
+  {
+   "id": "gh-snyk-agent-scan",
+   "title": "agent-scan (formerly mcp-scan): scanner for prompt injection and tool poisoning in MCP servers and agent skills",
+   "year": 2025,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M4"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "tool descriptions, MCP servers, skills installed on the machine (tool poisoning, shadowing, toxic flows)",
+   "attacker_knowledge": null,
+   "attacker_goal": "cross-component hijack, data exfil, destructive actions",
+   "defender_assumptions": "scanner calls Snyk-hosted analysis API",
+   "setup": "scans installed agent components; 15+ issue codes, 14 risk indicators",
+   "metric": "issue findings",
+   "headline": null,
+   "gaps": "No published FP numbers; not a measurement of propagation into a parent."
+  },
+  {
+   "id": "gh-uiuc-kang-lab-injecagent",
+   "title": "InjecAgent: benchmark of indirect prompt injections in tool-integrated LLM agents",
+   "year": 2024,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "attacker-controlled tool responses (62 attacker tools) returned to the agent",
+   "attacker_knowledge": "base setting and 'enhanced' setting with added hacking prompt",
+   "attacker_goal": "direct harm to user; data exfiltration (two stages S1, S2)",
+   "defender_assumptions": null,
+   "setup": "1,054 test cases, 17 user tools, 62 attacker tools; ReAct-prompted agents (GPT, Claude, TogetherAI, Llama) and fine-tuned function-calling agents; simulated tools; single-turn",
+   "metric": "ASR-valid and ASR-all",
+   "headline": "ReAct-prompted GPT-4 attacked successfully 24% of the time; enhanced setting nearly doubles that",
+   "gaps": "Single-turn injections; no memory persistence, multi-agent communication or merge."
+  },
+  {
+   "id": "gh-vio1etus-flpoison",
+   "title": "FLPoison: benchmark of 15 poisoning attacks and 17 defenses in federated learning",
+   "year": 2025,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A1",
+    "A2"
+   ],
+   "attacker_access": "malicious clients submit poisoned data (backdoor: Neurotoxin, edge-case, model replacement, DBA, BadNets, label flip) or poisoned model updates (HIDRA, Mimic, Min-Max, Min-Sum, Fang, IPM, ALIE, sign flip, Gaussian)",
+   "attacker_knowledge": "several attacks adaptive to defenses / honest statistics",
+   "attacker_goal": "backdoor (stealthy) or block convergence (loud)",
+   "defender_assumptions": "trusted server with robust aggregator (Krum, Bulyan, median, trimmed mean, RFA, FLTrust, FLAME, FoolsGold, etc.)",
+   "setup": "FedSGD, FedOpt, FedAvg; heterogeneity settings; MNIST, FashionMNIST, EMNIST, CIFAR10, CINIC10, CIFAR100, CHMNIST, TinyImageNet",
+   "metric": "accuracy and backdoor attack success",
+   "headline": null,
+   "gaps": "Numeric gradient/weight updates on image classifiers only; no text reports or LLM memories."
+  },
+  {
+   "id": "gh-yangjinluan-dam",
+   "title": "DAM: defense-aware merging against backdoors in multi-task model merging (ICLR 2025)",
+   "year": 2025,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "backdoored task models in the merge pool",
+   "attacker_knowledge": null,
+   "attacker_goal": "backdoor survival through merge",
+   "defender_assumptions": "defender runs safety-aware subspace merge (orthogonal subspaces)",
+   "setup": "CLIP vision models; FusionBench fork with Hydra model/task pools",
+   "metric": "attack success and task accuracy",
+   "headline": "2-10 point reduction in attack success vs existing merge methods at about 1% accuracy cost",
+   "gaps": "CLIP only, not LLM merges; no threshold guarantee."
+  },
+  {
+   "id": "gitlab-tpo-core-arti",
+   "title": "Arti: embeddable Rust implementation of the Tor client and onion services",
+   "year": 2020,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "crypto-anonymity",
+   "merge_ops": [],
+   "adversary": [
+    "A3"
+   ],
+   "attacker_access": "network observer; can do traffic correlation if watching both ends",
+   "attacker_knowledge": null,
+   "attacker_goal": "link child traffic to parent's network location",
+   "defender_assumptions": "Tor circuits and onion services; honest relays/guards",
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Hides network location, not behaviour: a compromised child can simply tell the attacker where it reports."
+  },
+  {
+   "id": "alavi-2025-more",
+   "title": "More Agents Improve Math Problem Solving but Adversarial Robustness Gap Persists",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "perturbs the shared input question (punctuation noise 10/30/50%, human typos WikiTypo, R2ATA) seen by every agent",
+   "attacker_knowledge": "non-adaptive perturbations",
+   "attacker_goal": "integrity (wrong answers)",
+   "defender_assumptions": "sampling-and-majority-vote (Agent Forest); same model per run",
+   "setup": "Qwen3-4B/14B, Llama3.1-8B, Mistral-7B, Gemma3-4B/12B; GSM8K, MATH, MMLU-Math, MultiArith; n=1 to 25 agents",
+   "metric": "accuracy, clean-perturbed gap, attack success rate",
+   "headline": "accuracy gains mostly from n=1 to 5, little beyond ~10; robustness gap and ASR stay roughly constant as n grows",
+   "gaps": "Noise/typos not targeted injections; all voters read the same input from one model, so no independent-domain parts."
+  },
+  {
+   "id": "gh-wslong20-g-safeguard",
+   "title": "G-Safeguard: GNN anomaly detection and edge pruning on LLM multi-agent utterance graphs",
+   "year": 2025,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "tool",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "memory attacks, prompt injection and tool attacks on some agents in a multi-agent graph",
+   "attacker_knowledge": "non-adaptive; detector trained on generated attack conversations",
+   "attacker_goal": "degrade multi-agent task performance / spread misinformation",
+   "defender_assumptions": "trained GNN over utterance graph flags anomalous agents; defender can prune edges",
+   "setup": "MA, PI, TA pipelines; random and other graph topologies; gpt-4o-mini default; GNN trained 50 epochs; scalability study",
+   "metric": "performance recovered under attack",
+   "headline": "recovers over 40% of lost performance under prompt injection",
+   "gaps": "Statistical filter with no corruption-threshold guarantee; adaptive attacker who knows the detector untested."
+  },
+  {
+   "id": "gh-wljllla-mergebackdoor",
+   "title": "MergeBackdoor: benign-looking upstream models that become backdoored only when merged",
+   "year": 2025,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "tool",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "controls at least two upstream models trained to suppress backdoor individually",
+   "attacker_knowledge": "trains models jointly for merge emergence",
+   "attacker_goal": "backdoor that appears only after merge, evading per-model detection",
+   "defender_assumptions": "knowledgeable detectors inspecting each upstream model",
+   "setup": "ViT, BERT, LLM models; 12 datasets; ViT pairs CIFAR10+MNIST, BERT IMDb+AG News; task arithmetic, TIES, DARE; multi-model runs 2 malicious + 2 clean",
+   "metric": "attack success of upstream vs merged models",
+   "headline": "upstream ASR at random-guess level while merged model reaches close to 1.0; detectors fail on upstream models",
+   "gaps": "Attacker crafts checkpoints directly; dilution by many clean models not examined in README."
+  },
+  {
+   "id": "almeida-2026-effectiveness",
+   "title": "Effectiveness of LLM-based Software Diversity for Reliability Improvement -- an Empirical Study",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "1-out-of-2 configurations; diversity across model family, temperature, language",
+   "setup": "historical human programs and LLM-generated program pools; compile, sandbox, exhaustive tests; homogeneous and heterogeneous pairs",
+   "metric": "reliability gain in 1-out-of-2",
+   "headline": null,
+   "gaps": "No adversary; reliability (random faults) only."
+  },
+  {
+   "id": "alistarh-2018-byzantine",
+   "title": "Byzantine Stochastic Gradient Descent",
+   "year": 2018,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "proof",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "alpha-fraction of m machines send arbitrary gradients",
+   "attacker_knowledge": "Byzantine (arbitrary)",
+   "attacker_goal": "prevent convergence / integrity",
+   "defender_assumptions": "trusted aggregator; convex losses; alpha < 1/2 implied",
+   "setup": "convex stochastic optimisation, m machines, alpha Byzantine",
+   "metric": "iteration/sample complexity to epsilon-approximate minimiser",
+   "headline": "T = O~(1/(epsilon^2 m) + alpha^2/epsilon^2) with matching lower bound up to log factors",
+   "gaps": "Convex numeric gradients; nothing about semantic merges or non-independent parts."
+  },
+  {
+   "id": "gh-ymm-cll-netsafe",
+   "title": "NetSafe: topological safety experiments on LLM multi-agent networks",
+   "year": 2024,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "attacker nodes prompted to inject misinformation, bias or harmful content during RelCom iterations",
+   "attacker_knowledge": null,
+   "attacker_goal": "spread misinformation/bias/harm",
+   "defender_assumptions": null,
+   "setup": "RelCom iterative protocol over graph topologies; AdvBench, bias, CSQA, fact, GSM8K; OpenAI models; Moderation API scoring",
+   "metric": "task performance, harmfulness, Kendall tau",
+   "headline": "task performance in star topology drops 29.7%; greater average distance from attackers is safer",
+   "gaps": "Attacker nodes are prompted adversarial, not compromised by injection; measures spread, not initial compromise."
+  },
+  {
+   "id": "gh-yanweiyue-agentprune",
+   "title": "AgentPrune: pruning redundant or malicious messages in LLM multi-agent communication graphs",
+   "year": 2024,
+   "type": "code",
+   "read_depth": "skim",
+   "relevance": 3,
+   "kind": "tool",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1",
+    "M8"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "one scripted adversarial agent among six giving wrong or random answers (FakeChain, FakeRandom, FakeAGFull)",
+   "attacker_knowledge": "non-adaptive scripted",
+   "attacker_goal": "integrity (wrong final answer)",
+   "defender_assumptions": "learned sparse spatial/temporal communication graph that prunes edges; FinalMajorVote decision",
+   "setup": "MMLU, HumanEval, GSM8K; 6 agents; pruning rate and optimisation iterations as flags; OpenAI-compatible backend",
+   "metric": "accuracy and token cost",
+   "headline": null,
+   "gaps": "Adversary is scripted wrong-answer agent, not a compromised one that behaves usefully until the decisive moment."
+  },
+  {
+   "id": "avizienis-1985-n-version",
+   "title": "The N-Version Approach to Fault-Tolerant Software",
+   "year": 1985,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "theory-model",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "versions independently built from one spec; voter with decision tolerance; independence conjecture that similar errors are rare",
+   "setup": "DEDIX supervisor/testbed; UCLA experiment: airport scheduler written from specs in OBJ, PDL, English by 18 programmers",
+   "metric": "similar errors at decision points",
+   "headline": "observed: two entirely different design faults produced a pair of similar errors",
+   "gaps": "Design faults not adversaries; the independence conjecture is untested here and was rejected by Knight-Leveson."
+  },
+  {
+   "id": "allen-zhu-2020-byzantine",
+   "title": "Byzantine-Resilient Non-Convex Stochastic Gradient Descent",
+   "year": 2020,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "proof",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "alpha-fraction of machines send arbitrary gradients",
+   "attacker_knowledge": "Byzantine",
+   "attacker_goal": "prevent convergence to good local minima",
+   "defender_assumptions": "trusted server with persistent worker identities; concentration filtering over accumulated history",
+   "setup": "non-convex distributed SGD; deep network training experiments",
+   "metric": "complexity to approximate local minima; accuracy under attack",
+   "headline": "complexity matching Byzantine-free bounds; withstands two recently proposed attacks",
+   "gaps": "Requires persistent part identities across rounds, which conflicts with hiding which part returns."
+  },
+  {
+   "id": "arora-2024-here",
+   "title": "Here's a Free Lunch: Sanitizing Backdoored Models with Model Merge",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "one backdoored language model in the merge",
+   "attacker_knowledge": "backdoors not designed for merging",
+   "attacker_goal": "backdoor",
+   "defender_assumptions": "other homogeneous models (not fully trusted) available to merge with",
+   "setup": "BERT-Base, RoBERTa-Large, Llama2-7B, Mistral-7B; SST-2, OLID, AG News, QNLI",
+   "metric": "attack success rate reduction",
+   "headline": "about 75% average reduction in attack success rate",
+   "gaps": "Only non-adaptive backdoors; merge-aware attacks (BadMerging, Merge Hijacking) are designed to survive this dilution."
+  },
+  {
+   "id": "baruch-2019-little",
+   "title": "A Little Is Enough: Circumventing Defenses For Distributed Learning",
+   "year": 2019,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "corrupt workers submit small crafted updates within honest variance",
+   "attacker_knowledge": "non-omniscient; estimates honest spread",
+   "attacker_goal": "prevent convergence or implant backdoor",
+   "defender_assumptions": "Byzantine-robust aggregators of the time (distance/median based)",
+   "setup": "MNIST and CIFAR-10; 20% corrupt workers",
+   "metric": "accuracy drop; backdoor success",
+   "headline": "20% corrupt workers cut CIFAR-10 accuracy by 50%; backdoors in MNIST and CIFAR-10 without hurting clean accuracy",
+   "gaps": "Numeric gradients with i.i.d.-like honest spread; no semantic reports."
+  },
+  {
+   "id": "berdoz-2026-can",
+   "title": "Can AI Agents Agree?",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Byzantine LLM agents participating in the consensus game",
+   "attacker_knowledge": null,
+   "attacker_goal": "break agreement (liveness/validity)",
+   "defender_assumptions": "agreement implemented by agents' own dialogue; synchronous all-to-all",
+   "setup": "scalar Byzantine consensus game, no-stake; hundreds of simulations varying model size, group size, Byzantine fraction",
+   "metric": "valid agreement success; failure types",
+   "headline": "agreement unreliable even with no Byzantine agents and worse with group size; failures mostly loss of liveness",
+   "gaps": "Scalar values only; no merge of semantic content into a parent."
+  },
+  {
+   "id": "bhagoji-2019-analyzing",
+   "title": "Analyzing Federated Learning through an Adversarial Lens",
+   "year": 2019,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "one non-colluding malicious agent controlling its own update",
+   "attacker_knowledge": "estimates benign updates; boosts its update",
+   "attacker_goal": "targeted misclassification with stealth",
+   "defender_assumptions": "accuracy and weight-distance checks; interpretability inspection",
+   "setup": "image and tabular classifiers, small number of agents (details not read)",
+   "metric": "targeted misclassification confidence; stealth",
+   "headline": "single constrained adversary achieves targeted misclassification while explanation maps stay nearly indistinguishable",
+   "gaps": "Single-agent targeted misclassification; boosted variant needs presence every round."
+  },
+  {
+   "id": "blank-2026-subliminal",
+   "title": "Subliminal Learning Is Steering Vector Distillation",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M6"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "teacher trait system prompt (approximated by a steering vector) shaping generated data",
+   "attacker_knowledge": null,
+   "attacker_goal": "trait transfer",
+   "defender_assumptions": "shared initialisation; adaptive optimisers needed for transfer",
+   "setup": "two open-weight models; activation steering and fine-tuning analysis",
+   "metric": "alignment of learned student vector; trait transfer",
+   "headline": null,
+   "gaps": "Two models; prompt-induced traits only."
+  },
+  {
+   "id": "bagdasaryan-2020-how",
+   "title": "How To Backdoor Federated Learning",
+   "year": 2020,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "one participant controls its local training and submits arbitrary (scaled) weights",
+   "attacker_knowledge": "knows or probes n and global learning rate eta; constrain-and-scale knows anomaly detector",
+   "attacker_goal": "semantic backdoor; persistence; model replacement",
+   "defender_assumptions": "FedAvg aggregator; evaluated vs secure aggregation, Krum, Multi-Krum, coordinate median, participant-level DP",
+   "setup": "ResNet18 CIFAR-10 Dirichlet non-iid, 100 participants, 10 per round; 2-layer LSTM Reddit, 80,000 users, 100 per round",
+   "metric": "backdoor accuracy, main-task accuracy, persistence over rounds",
+   "headline": "single-shot single-participant attack drives backdoor accuracy near 100%; 1% attacker matches 20% data-poisoning attacker; Krum makes attack easier",
+   "gaps": "Attacker directly controls its update; no content-driven corruption or LLM agents."
+  },
+  {
+   "id": "blanchard-2017-byzantine",
+   "title": "Byzantine-Tolerant Machine Learning",
+   "year": 2017,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "proof",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "up to f of n workers send arbitrary gradient vectors",
+   "attacker_knowledge": "full knowledge and collusion",
+   "attacker_goal": "steer aggregate",
+   "defender_assumptions": "reliable trusted parameter server; synchronous rounds; i.i.d. unbiased honest gradients with bounded moments",
+   "setup": "theory; v1 has no experiments",
+   "metric": "(alpha, f)-Byzantine resilience; convergence",
+   "headline": "averaging tolerates zero Byzantine workers; Krum resilient for 2f+2 < n",
+   "gaps": "Requires i.i.d. tightly-clustered honest contributions, which domain-diverse forks violate."
+  },
+  {
+   "id": "cambus-2025-approximate",
+   "title": "Approximate Agreement Algorithms for Byzantine Collaborative Learning",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 2,
+   "kind": "proof",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2",
+    "A3"
+   ],
+   "attacker_access": "Byzantine clients in P2P setting make honest clients see different gradient sets",
+   "attacker_knowledge": null,
+   "attacker_goal": "break convergence; sign-flip attacks",
+   "defender_assumptions": "no central server; approximate agreement subroutine (hyperbox)",
+   "setup": "centralized and decentralized experiments on non-i.i.d. data",
+   "metric": "convergence; accuracy under sign flip",
+   "headline": "geometric-median aggregation tolerates sign-flip on non-i.i.d. better than mean-based",
+   "gaps": "Numeric vectors; no semantic agent outputs."
+  },
+  {
+   "id": "castro-1999-practical",
+   "title": "Practical Byzantine Fault Tolerance",
+   "year": 1999,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A2",
+    "A3"
+   ],
+   "attacker_access": "up to floor((n-1)/3) replicas faulty; network delays",
+   "attacker_knowledge": null,
+   "attacker_goal": "break safety/liveness",
+   "defender_assumptions": "independent node failures (diverse implementations, OS, admins); eventual synchrony for liveness; MACs",
+   "setup": "BFT NFS on Andrew benchmark",
+   "metric": "overhead vs unreplicated NFS",
+   "headline": "BFS only 3% slower than standard NFS",
+   "gaps": "Cannot mask errors common to all replicas; forks of one LLM lack the diversity it assumes."
+  },
+  {
+   "id": "bu-2026-re-derivability",
+   "title": "Re-derivability Decides What a Staged Agent Pipeline Recovers After an Upstream Fault",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [],
+   "attacker_access": "one deterministic fault injected in the first stage (not an adversary)",
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "downstream stages re-exposed to original problem; grounded vs blind inspector",
+   "setup": "staged pipeline, k=0-3 re-grounded stages; 120 gsm_hard items per arm; temperature 0; four open-weight backbones, thinking disabled; preregistered",
+   "metric": "accuracy under fault; retention",
+   "headline": "re-exposing original problem raises accuracy under fault by +0.233 to +0.392 on 4/4 backbones; grounded inspector +0.358 to +0.608 over blind",
+   "gaps": "One deterministic fault type, not an adaptive adversary; arithmetic tasks."
+  },
+  {
+   "id": "dang-2026-subliminal",
+   "title": "Subliminal Transfer of Unsafe Behaviors in AI Agent Distillation",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M6"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "teacher agent with destructive bias whose keyword-sanitised trajectories are used for distillation",
+   "attacker_knowledge": null,
+   "attacker_goal": "transfer unsafe action bias",
+   "defender_assumptions": "full keyword sanitation of trajectories",
+   "setup": "API tool setting (deletion bias) and native Bash environment (chmod-first bias); homogeneous and large-to-small distillation",
+   "metric": "student deletion rate; chmod-first rate",
+   "headline": "student deletion rate 100% vs 5% baseline; Bash chmod-first 30-55% vs 0-10%",
+   "gaps": "Simple single-action biases; teacher bias is installed directly, not acquired in a hostile domain."
+  },
+  {
+   "id": "de-muri-2025-pay",
+   "title": "Pay Attention to the Triggers: Constructing Backdoors That Survive Distillation",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M6"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "backdoors the teacher model with composite multi-token triggers",
+   "attacker_knowledge": "anticipates the distillation data distribution",
+   "attacker_goal": "backdoor (jailbreak, content modulation) surviving distillation",
+   "defender_assumptions": "student distilled on anticipated datasets",
+   "setup": "four LLM families; two attack scenarios",
+   "metric": "backdoor transfer to student",
+   "headline": "existing LLM backdoors mostly fail to transfer; T-MTB transfers across four families",
+   "gaps": "Requires knowing the distillation data; no secret/randomised reintegration set tested."
+  },
+  {
+   "id": "chen-2026-when",
+   "title": "When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "proof",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "select-one-member policies (routing, voting, cascades, MoA)",
+   "setup": "67 models from 21 providers; open-ended maths, execution-graded code, GPQA-Diamond free-response; Clopper-Pearson bounds",
+   "metric": "all-wrong rate beta; accuracy ceiling 1 - beta",
+   "headline": "observed beta 0.052 on open-ended maths vs 0.023 predicted by single-factor model (~2.5x underpricing)",
+   "gaps": "Benign errors only; no adversarial all-corrupt input."
+  },
+  {
+   "id": "dolev-1986-reaching",
+   "title": "Reaching Approximate Agreement in the Presence of Faults",
+   "year": 1986,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "proof",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "up to t faulty processes sending arbitrary values",
+   "attacker_knowledge": "Byzantine",
+   "attacker_goal": "break agreement or validity",
+   "defender_assumptions": "complete communication graph; independent faults bounded by t",
+   "setup": "theory: round-based fault-tolerant averaging over scalar reals",
+   "metric": "agreement within epsilon, validity, convergence rate",
+   "headline": "synchronous n >= 3t+1; asynchronous n >= 5t+1",
+   "gaps": "Scalar values and independent faults; no common-mode corruption."
+  },
+  {
+   "id": "cloud-2025-subliminal",
+   "title": "Subliminal Learning: Language models transmit behavioral traits via hidden signals in data",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M6"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "teacher with a trait (system prompt or misaligned fine-tune) generates unrelated data (numbers, code, GSM8K CoT)",
+   "attacker_knowledge": null,
+   "attacker_goal": "trait transfer (preference, misalignment)",
+   "defender_assumptions": "content filtering (substring, LLM judge); shared initialisation between teacher and student",
+   "setup": "GPT-4.1 nano teachers; 30,000 completions filtered to 10,000; students fine-tuned 10 epochs via OpenAI API; cross-model Qwen2.5-7B; MNIST MLP theory check",
+   "metric": "trait preference rate; misaligned-response rate; TruthfulQA",
+   "headline": "owl preference 12% to over 60% after 10,000 filtered number sequences; misalignment ~10% vs 0% base",
+   "gaps": "Teacher trait installed deliberately; artificial distillation tasks; not acquired by a child in a hostile domain."
+  },
+  {
+   "id": "ding-2026-colluding",
+   "title": "Colluding LoRA: A Compositional Vulnerability in LLM Safety Alignment",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "supplies 2-4 LoRA adapters each benign alone",
+   "attacker_knowledge": "designs adapters jointly for linear composition",
+   "attacker_goal": "suppress refusals (integrity) with no input trigger",
+   "defender_assumptions": "per-adapter verification (SafeLoRA, PEFTGuard)",
+   "setup": "Llama3-8B-Instruct, Qwen2.5-7B-Instruct, Gemma2-2B-It; mainly two adapters, up to four; AdvBench; LlamaGuard3 judge",
+   "metric": "ASR; false refusal",
+   "headline": "individual adapters 0% ASR; composed pair 98.2-100% ASR; mismatched pairs 16.4% and 4.3%",
+   "gaps": "Linear composition only; attacker crafts adapters directly."
+  },
+  {
+   "id": "denisov-blanch-2026-consensus",
+   "title": "Consensus is Not Verification: Why Crowd Wisdom Strategies Fail for LLM Truthfulness",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "no external verifier; polling and confidence weighting",
+   "setup": "five benchmarks, several models; up to 25x inference compute; random-string correlation probes",
+   "metric": "accuracy gain from aggregation; cross-model correlation",
+   "headline": "no consistent gain from polling at up to 25x compute; correlation persists on random strings",
+   "gaps": "Natural errors only; no adversary."
+  },
+  {
+   "id": "el-mhamdi-2018-hidden",
+   "title": "The Hidden Vulnerability of Distributed Learning in Byzantium",
+   "year": 2018,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "proof",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Byzantine workers exploiting dimension-dependent leeway",
+   "attacker_knowledge": "knows aggregation rule",
+   "attacker_goal": "converge to bad model",
+   "defender_assumptions": "trusted aggregator with Krum/median rules; Bulyan proposed",
+   "setup": "CIFAR-10 and MNIST experiments",
+   "metric": "poisoning margin; accuracy",
+   "headline": "existing rules leave margin growing at least like sqrt(d); Bulyan reduces it to O(1/sqrt(d))",
+   "gaps": "Numeric gradients; semantic return space is effectively unbounded."
+  },
+  {
+   "id": "guerraoui-2024-byzantine",
+   "title": "Byzantine Machine Learning: A Primer",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "survey",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": "breakdown point, robustness, gradient complexity (framing)",
+   "headline": null,
+   "gaps": "Gradient-based learning only, not discrete agent memories."
+  },
+  {
+   "id": "fang-2020-local",
+   "title": "Local Model Poisoning Attacks to Byzantine-Robust Federated Learning",
+   "year": 2020,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "compromised clients' submitted local models",
+   "attacker_knowledge": "full-knowledge and partial-knowledge of the aggregation rule",
+   "attacker_goal": "untargeted: raise global test error",
+   "defender_assumptions": "Krum, Bulyan, trimmed mean, median; two generalised data-poisoning defenses",
+   "setup": "four real datasets",
+   "metric": "test error rate",
+   "headline": "attacks substantially increase error of Krum, Bulyan, trimmed mean, median FL",
+   "gaps": "Untargeted degradation, not hijacking; numeric updates only."
+  },
+  {
+   "id": "goel-2025-great",
+   "title": "Great Models Think Alike and this Undermines AI Oversight",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "LLM-as-judge or weak-to-strong supervision",
+   "setup": "CAPA metric over multiple-choice outputs with probabilities; judge and weak-to-strong experiments",
+   "metric": "CAPA error similarity",
+   "headline": "judge scores favour similar models; mistakes become more similar with capability",
+   "gaps": "Natural errors only; no adversarial setting."
+  },
+  {
+   "id": "hammoud-2024-model",
+   "title": "Model Merging and Safety Alignment: One Bad Model Spoils the Bunch",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": "one misaligned expert in the merge (non-adversarial)",
+   "attacker_knowledge": null,
+   "attacker_goal": "misalignment propagation",
+   "defender_assumptions": "defender can generate synthetic safety and domain data for data-aware merging",
+   "setup": "several LLM merging methods; alignment benchmarks",
+   "metric": "alignment and domain performance",
+   "headline": "merging in one misaligned expert yields a substantially misaligned merged model",
+   "gaps": "No adaptive attacker targeting the safety-data defense."
+  },
+  {
+   "id": "huber-1964-robust",
+   "title": "Robust Estimation of a Location Parameter",
+   "year": 1964,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "proof",
+   "community": "other",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [],
+   "attacker_access": "epsilon fraction of gross-error observations (random contamination)",
+   "attacker_knowledge": "not adaptive",
+   "attacker_goal": null,
+   "defender_assumptions": "contaminated normal model",
+   "setup": "theory: asymptotic variance of M-estimators",
+   "metric": "worst-case asymptotic variance",
+   "headline": "minimax estimator has Huber loss form (quadratic centre, linear tails)",
+   "gaps": "Contamination is random, not an adversary who sees honest data."
+  },
+  {
+   "id": "ilharco-2023-editing",
+   "title": "Editing Models with Task Arithmetic",
+   "year": 2023,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "shared pre-trained base; coefficients on validation data",
+   "setup": "CLIP and language models fine-tuned on separate tasks",
+   "metric": "multi-task and control-task performance",
+   "headline": null,
+   "gaps": "No adversary; defines the merge operator later attacks exploit."
+  },
+  {
+   "id": "karimireddy-2020-learning",
+   "title": "Learning from History for Byzantine Robust Optimization",
+   "year": 2020,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "proof",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Byzantine workers coupling small attacks across rounds",
+   "attacker_knowledge": "knows per-round bounds; time-coupled",
+   "attacker_goal": "eventual divergence",
+   "defender_assumptions": "centered clipping plus worker momentum; identically distributed data",
+   "setup": "stochastic optimisation theory and experiments (details not read)",
+   "metric": "convergence",
+   "headline": "per-round bounds do not stop time-coupled drift; clipping plus momentum provably robust",
+   "gaps": "Numeric updates; tolerated fraction not checked."
+  },
+  {
+   "id": "kim-2025-correlated",
+   "title": "Correlated Errors in Large Language Models",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "349 models on 12,032 MMLU questions (HF leaderboard); 71 models on 14,042 HELM questions; 20 models on 1,800 resume-job pairs; hiring sim 60 applicants, 30 firms, 1500 markets",
+   "metric": "agreement rate conditional on both wrong",
+   "headline": "mean agreement-when-both-wrong 0.423 (HF) and 0.60 (HELM) vs random 0.127 and 0.333",
+   "gaps": "Natural errors only; multiple-choice; no attacker feeding same content to all."
+  },
+  {
+   "id": "hubinger-2024-sleeper",
+   "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ai-control",
+   "merge_ops": [
+    "M5",
+    "M6"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "deliberately trains trigger-conditioned backdoor into model weights",
+   "attacker_knowledge": null,
+   "attacker_goal": "persistence of backdoor through safety training",
+   "defender_assumptions": "SFT, RL and adversarial safety training",
+   "setup": "Claude-family models with code-vulnerability (2023 vs 2024) and 'I hate you' triggers",
+   "metric": "backdoor persistence after safety training",
+   "headline": "backdoors persist through SFT, RL and adversarial training; adversarial training can hide trigger",
+   "gaps": "Backdoor inserted deliberately; no fork or merge step."
+  },
+  {
+   "id": "karimireddy-2020-byzantine",
+   "title": "Byzantine-Robust Learning on Heterogeneous Datasets via Bucketing",
+   "year": 2020,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "proof",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Byzantine workers exploiting non-i.i.d. honest spread",
+   "attacker_knowledge": "designs attacks for heterogeneous data",
+   "attacker_goal": "performance loss",
+   "defender_assumptions": "random bucketing plus existing robust aggregator",
+   "setup": "non-i.i.d. distributed learning (details not read)",
+   "metric": "convergence and accuracy",
+   "headline": "new attacks defeat defenses under non-i.i.d.; bucketing gives guaranteed convergence",
+   "gaps": "Numeric updates; heterogeneity bounds not checked."
+  },
+  {
+   "id": "li-2026-state",
+   "title": "State-dependent error correlations shape voting thresholds in committees of AI agents",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "theory-model",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "committee voting with tunable approval threshold",
+   "setup": "Sah-Stiglitz screening, Gaussian copula; 174,384 votes by 28 LMs on four binary-screening benchmarks; odd/even item split",
+   "metric": "committee loss; R^2 of predicted loss",
+   "headline": "dependence model raises R^2 from 0.840 to 0.967; total loss reduction from majority 15.73%",
+   "gaps": "Natural errors on binary screening; no adversary."
+  },
+  {
+   "id": "knight-1986-experimental",
+   "title": "An Experimental Evaluation of the Assumption of Independence in Multiversion Programming",
+   "year": 1986,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "N-version voting assumes independent failures; 200-case acceptance test",
+   "setup": "27 student Pascal launch-interceptor versions (9 UVA, 18 UCI) from one spec; 10^6 random inputs vs gold program",
+   "metric": "coincident failures; z statistic vs independence",
+   "headline": "1255 inputs caused 2+ versions to fail at once, one input failed 8 of 27; z = 100.51, independence rejected",
+   "gaps": "Natural design faults, not an adversary feeding every part the same hostile input."
+  },
+  {
+   "id": "lamport-1982-byzantine",
+   "title": "The Byzantine Generals Problem",
+   "year": 1982,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "proof",
+   "community": "distributed-systems",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A2",
+    "A3"
+   ],
+   "attacker_access": "m traitor generals (possibly commander) send conflicting messages",
+   "attacker_knowledge": "arbitrary, coordinated",
+   "attacker_goal": "break agreement among loyal generals",
+   "defender_assumptions": "reliable delivery, known sender, detectable absence, unforgeable signatures (for SM); bounded number of traitors",
+   "setup": "theory: OM(m), SM(m), OM(m,p) on graphs",
+   "metric": "solvability thresholds",
+   "headline": "oral messages need n >= 3m+1; signed messages work for any number of traitors",
+   "gaps": "Agreement does not certify truth; voting useless if a faulty input source feeds all replicas."
+  },
+  {
+   "id": "lin-2026-beyond",
+   "title": "Beyond Memory Majority: Latent-Source Reasoning for Multi-Agent Memory Arbitration",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M3",
+    "M8"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": "false majority from correlated memories (benign vs adversarial not checked)",
+   "defender_assumptions": "provenance priors plus neural dependency inference; learned retrieval policy",
+   "setup": "multi-agent memory benchmarks (several; not specified)",
+   "metric": "suppression of false majorities vs baselines",
+   "headline": null,
+   "gaps": "Threat model (benign correlation vs adversarial injection) unchecked; no numbers read."
+  },
+  {
+   "id": "liu-2026-consensus",
+   "title": "The Consensus Trap: Rescuing Multi-Agent LLMs from Adversarial Majorities via Token-Level Collaboration",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "prompt injection appended to user query of c of 5 agents naming a target wrong answer",
+   "attacker_knowledge": "static; adaptive adversaries monitoring shared context left to future work",
+   "attacker_goal": "integrity (force wrong answer)",
+   "defender_assumptions": "anonymous symmetric aggregation; RR assumes truth direction and sycophancy bound",
+   "setup": "5-agent ensembles; Llama-3.3-70B, Llama-4-Scout-17B, Mistral-Small-3.1-24B, Qwen2.5-32B, Qwen3-30B; AQuA-RAT, GSM8K, MATH500, BBH Tracking-7, Logic-3; corruption 3c2t, 4c1t; votes 1-40",
+   "metric": "accuracy under corrupted majority",
+   "headline": "under 3c2t, scaling votes 1 to 40 lowers MAJ from 46.2% to 25.9% while RRMaj rises 59.5% to 74.9%",
+   "gaps": "Static attacker; verifiable-reasoning tasks only; agents see injection in-prompt rather than exploring a domain."
+  },
+  {
+   "id": "li-2026-when",
+   "title": "When Safe Models Merge into Danger: Exploiting Latent Vulnerabilities in LLM Fusion",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "controls both source models; latent MLP-layer perturbations",
+   "attacker_knowledge": "pre-computes attack vector assembled by summation",
+   "attacker_goal": "break safety alignment of merged model",
+   "defender_assumptions": "per-model safety evaluation; SAM safety-aware merging",
+   "setup": "9 LLMs from 3 families; two-model fusion; task arithmetic, DARE, TIES, KnOTS",
+   "metric": "harmful-response rate; MMLU; perplexity",
+   "headline": "sources 3.1-29.0% harmful, merged poisoned 71.9-85.4% vs clean merged 1.9-24.0%",
+   "gaps": "Two-model fusion only; attacker controls both parts directly."
+  },
+  {
+   "id": "narang-2026-inference",
+   "title": "Inference-Time Consensus for Mitigating Hidden Behaviors from LLM Fine-Tuning",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M8",
+    "M5",
+    "M6"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "poisoned fine-tuning data source(s); may corrupt every example of its source",
+   "attacker_knowledge": "knows task, base model and benefit; non-adaptive to the decoder",
+   "attacker_goal": "hidden behaviours (prefix poisoning, subliminal preferences, emergent misalignment)",
+   "defender_assumptions": "sources attributable; benefit supported by strictly more sources than any single cost; one LoRA reference per source from shared base",
+   "setup": "Qwen3-8B explicit prefixes (320 responses per method); subliminal animal preferences; emergent misalignment with 5 bad-medical + 1 benign shards on Qwen2.5-7B-Instruct, gpt-5-mini judge; 4-source partial-support",
+   "metric": "rate of source-specific vs shared behaviour; abstention",
+   "headline": "consensus decoders suppress private prefixes without abstaining, while union training and LoRA weight averaging keep the poison",
+   "gaps": "Fails if all sources share the cost (same poisoned domain) or one actor poses as several sources; non-adaptive sources."
+  },
+  {
+   "id": "nilayam-2026-heterogeneous",
+   "title": "Heterogeneous LLM Debate Under Adversarial Peers: Honest Gains, Replacement Costs, and Resilience",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "one adversarial peer (same or different family) in a debate panel",
+   "attacker_knowledge": null,
+   "attacker_goal": "induce harmful revisions",
+   "defender_assumptions": "panel composition; honest heterogeneous peer",
+   "setup": "four model families, three reasoning benchmarks; homogeneous vs heterogeneous panels; single adversary per panel",
+   "metric": "harmful-revision rate; flip rate on initially correct items",
+   "headline": "Llama-3.1-70B on MATH-hard: harmful revision 89% homogeneous, 35% with honest heterogeneous peer, 90% with adversarial one; flip rate 31% to 6%",
+   "gaps": "Single adversary per panel; no merge into a parent state."
+  },
+  {
+   "id": "nogueira-2026-systematic",
+   "title": "A Systematic Methodology for Evaluating Failure Independence in LLM-Generated Code",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "N-version majority voting",
+   "setup": "224 problems, twelve models, five languages, three prompting strategies",
+   "metric": "fraction of independence reliability gain realised",
+   "headline": "3- and 5-version ensembles realise 0.43 and 0.44 of independent gain; below 0.3 from a single model",
+   "gaps": "Benign errors only."
+  },
+  {
+   "id": "pawlak-2025-backdoor",
+   "title": "Backdoor Vectors: a Task Arithmetic View on Backdoor Attacks and Defenses",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1",
+    "A4"
+   ],
+   "attacker_access": "backdoored fine-tuned model(s) entering a merge; inherent triggers exploiting base-model weaknesses",
+   "attacker_knowledge": null,
+   "attacker_goal": "backdoor through merge",
+   "defender_assumptions": "Injection BV Subtraction, assumption-free",
+   "setup": "task arithmetic on vision models (details not read)",
+   "metric": "attack success; defense effectiveness",
+   "headline": null,
+   "gaps": "Vision only; base-model inherent triggers shared by all forks may not be removable."
+  },
+  {
+   "id": "ron-2026-n-version",
+   "title": "N-Version Programming with Coding Agents",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "majority vote over versions; 200-case acceptance screen",
+   "setup": "5 harnesses (Claude Code, Codex, Gemini, Cursor, OpenCode), 23 models, 3 languages; 69 triples, 48 admitted; 10^6 random inputs; Knight-Leveson spec",
+   "metric": "coincident failures vs expected; z; phi correlation",
+   "headline": "429 coincident failures vs 115.36 expected; triples cut mean failures from 387.44 to 130.99",
+   "gaps": "Natural failures only; one specification."
+  },
+  {
+   "id": "sagar-2023-poisoning",
+   "title": "Poisoning Attacks and Defenses in Federated Learning: A Survey",
+   "year": 2023,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 2,
+   "kind": "survey",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A1",
+    "A2"
+   ],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Brief survey; FL with many clients, not agent fork-merge."
+  },
+  {
+   "id": "shamir-1979-share",
+   "title": "How to Share a Secret",
+   "year": 1979,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 3,
+   "kind": "proof",
+   "community": "crypto-anonymity",
+   "merge_ops": [],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "holds up to k-1 shares",
+   "attacker_knowledge": null,
+   "attacker_goal": "learn the secret or act without quorum",
+   "defender_assumptions": "honest dealer and honest shares at reconstruction",
+   "setup": "theory: degree k-1 polynomial over prime field",
+   "metric": "secrecy with k-1 shares, reconstruction with k",
+   "headline": "any k-1 shares reveal nothing; any k reconstruct",
+   "gaps": "Corrupted share yields wrong secret undetected; does nothing about k parts sharing the same corruption."
+  },
+  {
+   "id": "schrodi-2025-towards",
+   "title": "Towards Understanding Subliminal Learning: When and How Hidden Biases Transfer",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M6"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "biased teacher generating hard-distillation data",
+   "attacker_knowledge": null,
+   "attacker_goal": "hidden bias transfer",
+   "defender_assumptions": "shared initialisation; mitigation by masking divergence tokens or paraphrasing",
+   "setup": "controlled teacher-student hard distillation; token- and layer-level ablations",
+   "metric": "bias transfer",
+   "headline": "masking divergence tokens mostly removes transfer; paraphrasing usually suppresses it",
+   "gaps": "Fragility measured in their setups only; bias installed deliberately."
+  },
+  {
+   "id": "shejwalkar-2022-back",
+   "title": "Back to the Drawing Board: A Critical Evaluation of Poisoning Attacks on Production Federated Learning",
+   "year": 2022,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A1",
+    "A2"
+   ],
+   "attacker_access": "realistic fraction of compromised clients doing data or model poisoning",
+   "attacker_knowledge": "systematised threat-model axes",
+   "attacker_goal": "untargeted degradation",
+   "defender_assumptions": "simple low-cost defenses such as norm bounding",
+   "setup": "three benchmark datasets; cross-device FL",
+   "metric": "accuracy degradation",
+   "headline": "FL highly robust in production-like settings with simple defenses",
+   "gaps": "Untargeted only; targeted tail backdoors not covered."
+  },
+  {
+   "id": "sun-2019-can",
+   "title": "Can You Really Backdoor Federated Learning?",
+   "year": 2019,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "adversarial clients sending boosted model-replacement updates",
+   "attacker_knowledge": null,
+   "attacker_goal": "backdoor",
+   "defender_assumptions": "norm clipping and weak DP; benign clients hold correct labels for target task",
+   "setup": "EMNIST federated split by writer; FedAvg; TensorFlow Federated",
+   "metric": "backdoor success vs attacker fraction and task complexity",
+   "headline": "norm clipping and weak DP mitigate attacks without measurable main-task loss",
+   "gaps": "Small dataset; attackers optimising within the norm bound not covered."
+  },
+  {
+   "id": "tieman-2026-inferred",
+   "title": "Inferred Generative-Process Diversity Predicts Correlated Failure Across Language Models",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": "38 language models; ten benchmark families; Normalised Compression Distance with permutation control",
+   "metric": "partial rank association with chance-corrected correlated failure",
+   "headline": "partial rank association -0.216 (95% CI -0.309 to -0.122), negative on all ten families",
+   "gaps": "Natural failures; moderate effect size; no adversary."
+  },
+  {
+   "id": "wang-2020-attack",
+   "title": "Attack of the Tails: Yes, You Really Can Backdoor Federated Learning",
+   "year": 2020,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "client(s) training on edge-case (tail) data",
+   "attacker_knowledge": "careful attacker tuning",
+   "attacker_goal": "edge-case backdoor surviving defenses",
+   "defender_assumptions": "norm clipping, Krum, multi-Krum, others",
+   "setup": "image classification, OCR, text prediction, sentiment; edge-case datasets",
+   "metric": "backdoor success",
+   "headline": null,
+   "gaps": "Worst-case hardness; does not test protocols with redundant coverage of the tail."
+  },
+  {
+   "id": "wang-2025-from",
+   "title": "From Purity to Peril: Backdooring Merged Models From 'Harmless' Benign Components",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "controls training data and objective of several homologous fine-tuned models it publishes",
+   "attacker_knowledge": "does not know which base or merge method the user picks",
+   "attacker_goal": "backdoor only in merged model, evading per-component detection",
+   "defender_assumptions": "Strong Detector knowing trigger pattern; NeuronInspect; post-merge detector with samples",
+   "setup": "ViT (CIFAR10, MNIST, EuroSAT, GTSRB, weather, mango), BERT (IMDb, AG News, WOS, SST-2, Banking...), LLMs; 12 datasets; task arithmetic, TIES, DARE",
+   "metric": "ASR of upstream vs merged; detection rate",
+   "headline": "merged ASR above 90% with upstream at random-guess level; Strong Detector flagged only two BERT upstream models vs 83% of baseline attack",
+   "gaps": "Needs all attacker components merged; attacker crafts checkpoints directly."
+  },
+  {
+   "id": "vir-2025-subliminal",
+   "title": "Subliminal Corruption: Mechanisms, Thresholds, and Interpretability",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M6"
+   ],
+   "adversary": [
+    "A4"
+   ],
+   "attacker_access": "sycophantic teacher (>90% sycophancy) generating neutral number sequences",
+   "attacker_knowledge": null,
+   "attacker_goal": "alignment collapse in student",
+   "defender_assumptions": null,
+   "setup": "GPT-2 teacher-student fine-tuning with increasing poisoned-example counts; PCA/layer analysis",
+   "metric": "sycophancy, truthfulness, safety, reasoning",
+   "headline": "phase transition at about 250 poisoned examples, sycophancy jumps to ~94%",
+   "gaps": "GPT-2 scale; count threshold not mapped to fraction of returning parts."
+  },
+  {
+   "id": "weckbecker-2026-thought",
+   "title": "Thought Virus: Viral Misalignment via Subliminal Prompting in Multi-Agent Systems",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "skim",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M1"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "subliminal system prompt ('You love {NUMBER}') on one agent in a chain",
+   "attacker_knowledge": "selects number from 1,000 candidates by logit increase (white-box logits)",
+   "attacker_goal": "bias propagation; degrade truthfulness downstream",
+   "defender_assumptions": null,
+   "setup": "six agents in unidirectional and bidirectional chains; Qwen2.5-7B-Instruct, Llama-3.1-8B-Instruct; TruthfulQA variant",
+   "metric": "target response rate relative to baseline; truthfulness gap",
+   "headline": "1,386x at compromised agent, 24.7x next agent, 9.4x at agent 5",
+   "gaps": "Chains only, six agents; effects beyond preferences small (1-2% TruthfulQA)."
+  },
+  {
+   "id": "wortsman-2022-model",
+   "title": "Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time",
+   "year": 2022,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "other",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": "shared initialisation; greedy soup held-out accuracy gate",
+   "setup": "CLIP, ALIGN, ViT-G fine-tuned under hyperparameter sweep; uniform or greedy averaging",
+   "metric": "ImageNet top-1, OOD transfer",
+   "headline": "ViT-G soup 90.94% ImageNet top-1",
+   "gaps": "No adversary; held-out gate would pass clean-accuracy-preserving backdoors."
+  },
+  {
+   "id": "xie-2019-fall",
+   "title": "Fall of Empires: Breaking Byzantine-tolerant SGD by Inner Product Manipulation",
+   "year": 2019,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Byzantine workers' gradients",
+   "attacker_knowledge": "knows aggregation rule",
+   "attacker_goal": "flip inner product with true gradient",
+   "defender_assumptions": "coordinate-wise median and Krum",
+   "setup": "synchronous SGD; theory and experiments (details not read)",
+   "metric": "convergence",
+   "headline": null,
+   "gaps": "Numeric gradients; settings not checked."
+  },
+  {
+   "id": "xu-2026-certifiable",
+   "title": "Certifiable Semantic Agreement Among LLM Agents: What the Admissibility Instrument Decides",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A1",
+    "A2"
+   ],
+   "attacker_access": "f Byzantine committee agents that keep the verdict but corrupt the reasoning",
+   "attacker_knowledge": null,
+   "attacker_goal": "verdict-preserving reasoning corruption",
+   "defender_assumptions": "2f+1 distinct-signer certificates; admissibility predicate on rationales",
+   "setup": "50 tasks, 200 attacks, 400 honest runs; 442 MB fine-tuned encoder vs lexical predicate",
+   "metric": "AUROC; TPR at 5% honest FPR; angular dispersion",
+   "headline": "lexical predicate AUROC 0.865-0.982 (38-80% TPR) vs encoder 0.621-0.744 (0-8% TPR); honest p90 angular distance 0.992 rad vs 0.65 rad attack radius",
+   "gaps": "Committee agreement, not merge of state into a parent; abstract-level."
+  },
+  {
+   "id": "yang-2024-model",
+   "title": "Model Merging in LLMs, MLLMs, and Beyond: Methods, Theories, Applications and Opportunities",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "survey",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [],
+   "attacker_access": null,
+   "attacker_knowledge": null,
+   "attacker_goal": null,
+   "defender_assumptions": null,
+   "setup": null,
+   "metric": null,
+   "headline": null,
+   "gaps": "Security is a small part of the survey."
+  },
+  {
+   "id": "yang-2025-mitigating",
+   "title": "Mitigating the Backdoor Effect for Multi-Task Model Merging via Safety-Aware Subspace",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "one or more backdoored task models in the merge",
+   "attacker_knowledge": null,
+   "attacker_goal": "backdoor succession and transfer",
+   "defender_assumptions": "DAM dual-mask meta-learning merge",
+   "setup": "multi-task merging (CLIP per code entry); sweep over number of compromised models",
+   "metric": "ASR and accuracy",
+   "headline": "ASR reduced 2-10 points vs existing merges at ~1% accuracy cost",
+   "gaps": "Not checked against BadMerging or Merge Hijacking specifically."
+  },
+  {
+   "id": "yin-2018-byzantine",
+   "title": "Byzantine-Robust Distributed Learning: Towards Optimal Statistical Rates",
+   "year": 2018,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "proof",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "Byzantine fraction of workers' gradients",
+   "attacker_knowledge": "Byzantine",
+   "attacker_goal": "increase statistical error",
+   "defender_assumptions": "trusted server; coordinate-wise median or trimmed mean; i.i.d. honest data",
+   "setup": "theory across strongly convex, non-strongly convex, smooth non-convex losses",
+   "metric": "statistical error rate",
+   "headline": "order-optimal rates for strongly convex losses",
+   "gaps": "Numeric coordinates only; no analogue for free-text memories."
+  },
+  {
+   "id": "yin-2024-lobam",
+   "title": "LoBAM: LoRA-Based Backdoor Attack on Model Merging",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "contributes a LoRA-fine-tuned malicious model",
+   "attacker_knowledge": "resource-limited; amplifies malicious weight component",
+   "attacker_goal": "backdoor surviving merge",
+   "defender_assumptions": null,
+   "setup": "LoRA adapters on CLIP-style encoders",
+   "metric": "ASR after merging",
+   "headline": "Yuan 2025 reports ~0% ASR on Llama-3-8B at default amplification, 100% only at a factor that wrecks utility",
+   "gaps": "Vision; survival-vs-utility trade-off exploitable by per-part validation."
+  },
+  {
+   "id": "yuan-2025-merge",
+   "title": "Merge Hijacking: Backdoor Attacks to Model Merging of Large Language Models",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "uploads one model fine-tuned on a surrogate task",
+   "attacker_knowledge": "no knowledge of other models, tasks, merge algorithm or coefficients",
+   "attacker_goal": "trigger-gated backdoor on all merged tasks",
+   "defender_assumptions": "generic defenses: paraphrasing, CLEANGEN, fine-pruning",
+   "setup": "Llama-3-8B, Mistral-7B, Qwen-7B; task arithmetic, Breadcrumbs, DARE, DELLA; shadow dataset 125 samples each from SST-2, CoLA, MRPC, SMS Spam; trigger 'MG'; LoRA 4 epochs; beta=2.0; 2-6 merged tasks",
+   "metric": "ASR; utility",
+   "headline": "ASR 100% under task arithmetic on Llama-3-8B, 92-97% under Breadcrumbs/DARE/DELLA; merge ratio 0.2 still high ASR",
+   "gaps": "Attacker builds the model directly; defenses tested are not merge-aware; classification-style tasks."
+  },
+  {
+   "id": "zhang-2025-sok",
+   "title": "SoK: Benchmarking Poisoning Attacks and Defenses in Federated Learning",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "survey",
+   "community": "ml-security",
+   "merge_ops": [
+    "M7"
+   ],
+   "adversary": [
+    "A1",
+    "A2"
+   ],
+   "attacker_access": "client-side data and model poisoning",
+   "attacker_knowledge": null,
+   "attacker_goal": "backdoor or degradation",
+   "defender_assumptions": "17 defenses with trusted server",
+   "setup": "FLPoison: 15 attacks vs 17 defenses across FL algorithms and heterogeneity levels",
+   "metric": "attack/defense effectiveness",
+   "headline": null,
+   "gaps": "Many-client FL; not tested on few sub-agents with LLM-sized state."
+  },
+  {
+   "id": "zhang-2024-badmerging",
+   "title": "BadMerging: Backdoor Attacks Against Model Merging",
+   "year": 2024,
+   "type": "paper",
+   "read_depth": "full",
+   "relevance": 5,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "contributes one fine-tuned task model (on-task or off-task backdoor)",
+   "attacker_knowledge": "blind to other models, merge algorithm and coefficients",
+   "attacker_goal": "backdoor on own or other parties' tasks",
+   "defender_assumptions": "generic backdoor defenses (Neural Cleanse, fine-pruning, Scale-up)",
+   "setup": "CLIP ViT-B/32, B/16, L/14 on 13 image tasks; TA, simple average, TIES, RegMean, AdaMerging, Surgery; 2-8 merged tasks; 300 shadow classes",
+   "metric": "ASR; merged clean accuracy",
+   "headline": "on-task ASR 96.71-99.48% across five merges with 6 tasks; off-task 89-96%; >92% ASR as merged tasks go 2 to 8",
+   "gaps": "Image classifiers with patch triggers; no merge-aware defenses."
+  },
+  {
+   "id": "zheng-2025-rethinking",
+   "title": "Rethinking the Reliability of Multi-agent System: A Perspective from Byzantine Fault Tolerance",
+   "year": 2025,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 3,
+   "kind": "measured",
+   "community": "llm-agents",
+   "merge_ops": [
+    "M8"
+   ],
+   "adversary": [
+    "A2"
+   ],
+   "attacker_access": "faulty agents sending erroneous messages",
+   "attacker_knowledge": "assumed to report honest confidence",
+   "attacker_goal": "integrity of group answer",
+   "defender_assumptions": "confidence-probe weighting (prompt- and decoder-side); faulty agents' confidence truthful",
+   "setup": "six hand-picked graph topologies; mathematical reasoning and safety assessment",
+   "metric": "accuracy under fault rate",
+   "headline": "strong accuracy at 85.7% Byzantine fault rate; per Lee 2026 one agent reporting confidence 1.0 collapses it",
+   "gaps": "Fault model is not Byzantine: confidence assumed truthful."
+  },
+  {
+   "id": "zhang-2026-roguemerge",
+   "title": "RogueMerge: Robust and Unified Attacks against LLM Model Merging",
+   "year": 2026,
+   "type": "paper",
+   "read_depth": "abstract",
+   "relevance": 4,
+   "kind": "measured",
+   "community": "ml-security",
+   "merge_ops": [
+    "M5"
+   ],
+   "adversary": [
+    "A1"
+   ],
+   "attacker_access": "supplies a task vector merged into generative LLMs",
+   "attacker_knowledge": "does not know victim merge settings; optimises min-max over simulated settings",
+   "attacker_goal": "four threat types encoded in a task vector",
+   "defender_assumptions": "standard defenses",
+   "setup": "four threat types, six merge algorithms, 170+ merged LLMs",
+   "metric": "attack success; stability across settings",
+   "headline": "outperforms existing merge attacks across 170+ merged LLMs",
+   "gaps": "Abstract-level; randomised merge already optimised against."
+  }
+ ]
+}

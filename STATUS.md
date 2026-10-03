@@ -6,46 +6,45 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 314 | 8 | 3 | 15 | 1 | 22 | 363 |
-| collective-decision | 241 | 8 | 22 | 19 | 0 | 23 | 313 |
-| swarm-robotics | 272 | 13 | 2 | 7 | 1 | 14 | 309 |
-| swarm-intelligence | 107 | 1 | 2 | 4 | 0 | 0 | 114 |
-| active-matter | 184 | 3 | 1 | 6 | 0 | 4 | 198 |
-| sync-consensus | 227 | 8 | 11 | 17 | 0 | 15 | 278 |
-| criticality-measurement | 188 | 4 | 2 | 23 | 1 | 13 | 231 |
-| marl-emergence | 125 | 12 | 0 | 33 | 1 | 9 | 180 |
-| llm-agent-swarms | 293 | 49 | 94 | 198 | 7 | 10 | 651 |
-| crowds-and-traffic | 78 | 2 | 1 | 2 | 0 | 8 | 91 |
-| meta | 82 | 9 | 5 | 22 | 0 | 4 | 122 |
-| sybil-resistance | 212 | 45 | 61 | 59 | 5 | 19 | 401 |
-| fork-merge-security | 216 | 14 | 56 | 69 | 1 | 6 | 362 |
-| swarm-detection | 360 | 35 | 75 | 194 | 10 | 6 | 680 |
+| collective-motion | 314 | 8 | 3 | 15 | 3 | 40 | 383 |
+| collective-decision | 292 | 8 | 24 | 19 | 0 | 35 | 378 |
+| swarm-robotics | 285 | 13 | 2 | 7 | 1 | 24 | 332 |
+| swarm-intelligence | 113 | 1 | 2 | 4 | 2 | 3 | 125 |
+| active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
+| sync-consensus | 247 | 13 | 11 | 17 | 1 | 28 | 317 |
+| criticality-measurement | 190 | 4 | 2 | 23 | 2 | 22 | 243 |
+| marl-emergence | 135 | 13 | 1 | 33 | 2 | 13 | 197 |
+| llm-agent-swarms | 415 | 59 | 100 | 197 | 46 | 14 | 831 |
+| crowds-and-traffic | 80 | 2 | 1 | 2 | 1 | 8 | 94 |
+| meta | 113 | 9 | 5 | 22 | 1 | 4 | 154 |
+| sybil-resistance | 309 | 48 | 62 | 57 | 8 | 22 | 506 |
+| fork-merge-security | 353 | 44 | 61 | 69 | 8 | 13 | 548 |
+| swarm-detection | 376 | 35 | 79 | 193 | 34 | 11 | 728 |
+| agent-budgets | 34 | 0 | 5 | 0 | 0 | 0 | 39 |
 
 ## Tasks
 
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
-| [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
-| [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
-| [scan-papers-fm-contagion](tasks/scan-papers-fm-contagion.md) | claimed | p0 | scan | dmarz/fm-contagion |  | 2026-10-03T18:12Z | Catalogue the papers: corruption spreading through multi-agent LLM systems |
-| [scan-papers-fm-identity-hijack](tasks/scan-papers-fm-identity-hijack.md) | claimed | p0 | scan | dmarz/fm-identity-hijack |  | 2026-10-03T18:12Z | Catalogue the papers: identity and goal hijack of agents |
-| [scan-papers-fm-memory-injection](tasks/scan-papers-fm-memory-injection.md) | claimed | p0 | scan | dmarz/fm-memory-injection |  | 2026-10-03T18:11Z | Catalogue the papers: memory poisoning and persistent prompt injection in agents |
-| [scan-papers-fm-merge-poisoning](tasks/scan-papers-fm-merge-poisoning.md) | claimed | p0 | scan | dmarz/fm-merge-poisoning |  | 2026-10-03T18:11Z | Catalogue the papers: poisoning through model merging, federated aggregation and distillation |
-| [scan-papers-fm-sutton](tasks/scan-papers-fm-sutton.md) | claimed | p0 | scan | dmarz/fm-sutton |  | 2026-10-03T18:11Z | Catalogue the primary sources: Sutton on agents splitting and merging, and prior framings |
-| [scan-papers-fm-unlinkability](tasks/scan-papers-fm-unlinkability.md) | claimed | p0 | scan | dmarz/fm-unlinkability |  | 2026-10-03T18:12Z | Catalogue the papers: hiding which part returns (unlinkability, secret election, moving target) |
-| [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
-| [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
-| [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
-| [scan-code-fm](tasks/scan-code-fm.md) | claimed | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
-| [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
-| [scan-papers-fm-ai-control](tasks/scan-papers-fm-ai-control.md) | claimed | p1 | scan | dmarz/fm-ai-control |  | 2026-10-03T18:12Z | Catalogue the papers: AI control, sub-agent delegation and self-replication |
-| [scan-papers-fm-biology](tasks/scan-papers-fm-biology.md) | claimed | p1 | scan | dmarz/fm-biology |  | 2026-10-03T18:12Z | Catalogue the papers: fission-fusion and fusion parasitism in biology |
-| [scan-papers-fm-mobile-agents](tasks/scan-papers-fm-mobile-agents.md) | claimed | p1 | scan | dmarz/fm-mobile-agents |  | 2026-10-03T18:12Z | Catalogue the papers: mobile-agent security and Byzantine state merge |
-| [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
-| [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
-| [scan-threads-fm](tasks/scan-threads-fm.md) | claimed | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [synthesis-people-and-labs](tasks/synthesis-people-and-labs.md) | claimed | p1 | synthesis | shadow/sol-g50 |  | 2026-10-03T20:00Z | Map the people and labs |
+| [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed (stale) | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
+| [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed (stale) | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
+| [scan-papers-fm-identity-hijack](tasks/scan-papers-fm-identity-hijack.md) | claimed (stale) | p0 | scan | dmarz/fm-identity-hijack |  | 2026-10-03T18:12Z | Catalogue the papers: identity and goal hijack of agents |
+| [scan-papers-fm-memory-injection](tasks/scan-papers-fm-memory-injection.md) | claimed (stale) | p0 | scan | dmarz/fm-memory-injection |  | 2026-10-03T18:11Z | Catalogue the papers: memory poisoning and persistent prompt injection in agents |
+| [scan-papers-fm-merge-poisoning](tasks/scan-papers-fm-merge-poisoning.md) | claimed (stale) | p0 | scan | dmarz/fm-merge-poisoning |  | 2026-10-03T18:11Z | Catalogue the papers: poisoning through model merging, federated aggregation and distillation |
+| [scan-papers-fm-sutton](tasks/scan-papers-fm-sutton.md) | claimed (stale) | p0 | scan | dmarz/fm-sutton |  | 2026-10-03T18:11Z | Catalogue the primary sources: Sutton on agents splitting and merging, and prior framings |
+| [scan-papers-fm-unlinkability](tasks/scan-papers-fm-unlinkability.md) | claimed (stale) | p0 | scan | dmarz/fm-unlinkability |  | 2026-10-03T18:12Z | Catalogue the papers: hiding which part returns (unlinkability, secret election, moving target) |
+| [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
+| [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
+| [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
+| [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
+| [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
+| [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
+| [scan-papers-fm-ai-control](tasks/scan-papers-fm-ai-control.md) | claimed (stale) | p1 | scan | dmarz/fm-ai-control |  | 2026-10-03T18:12Z | Catalogue the papers: AI control, sub-agent delegation and self-replication |
+| [scan-papers-fm-biology](tasks/scan-papers-fm-biology.md) | claimed (stale) | p1 | scan | dmarz/fm-biology |  | 2026-10-03T18:12Z | Catalogue the papers: fission-fusion and fusion parasitism in biology |
+| [scan-papers-fm-mobile-agents](tasks/scan-papers-fm-mobile-agents.md) | claimed (stale) | p1 | scan | dmarz/fm-mobile-agents |  | 2026-10-03T18:12Z | Catalogue the papers: mobile-agent security and Byzantine state merge |
+| [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
+| [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
+| [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
@@ -53,6 +52,7 @@
 | [scan-metrics-benchmarks](tasks/scan-metrics-benchmarks.md) | open | p1 | scan |  |  |  | Catalogue metrics and benchmarks for swarm behaviour |
 | [scan-threads-science](tasks/scan-threads-science.md) | open | p1 | scan |  |  |  | Catalogue X threads on the science of collectives |
 | [survey-active-matter](tasks/survey-active-matter.md) | open | p1 | survey |  |  |  | Survey: active matter physics |
+| [survey-agent-budgets](tasks/survey-agent-budgets.md) | open | p1 | survey |  |  |  | Survey: agent budgets, budget visibility and self-allocation among agents |
 | [survey-collective-decision](tasks/survey-collective-decision.md) | open | p1 | survey |  |  |  | Survey: collective decision-making in biology |
 | [survey-collective-motion](tasks/survey-collective-motion.md) | open | p1 | survey |  |  |  | Survey: collective motion models |
 | [survey-criticality-measurement](tasks/survey-criticality-measurement.md) | open | p1 | survey |  |  |  | Survey: criticality, information and measurement |
@@ -76,6 +76,7 @@
 | [scan-papers-collective-decision](tasks/scan-papers-collective-decision.md) | done | p0 | scan | dmarz/collective-decision |  | 2026-10-03T18:18Z | Catalogue the papers: collective decision-making in biology |
 | [scan-papers-collective-motion](tasks/scan-papers-collective-motion.md) | done | p0 | scan | dmarz/collective-motion |  | 2026-10-03T18:18Z | Catalogue the papers: collective motion models |
 | [scan-papers-collective-motion-recent](tasks/scan-papers-collective-motion-recent.md) | done | p0 | scan | dmarz/collective-motion-recent |  | 2026-10-03T18:18Z | Catalogue collective motion papers from 2024 onward |
+| [scan-papers-fm-contagion](tasks/scan-papers-fm-contagion.md) | done | p0 | scan | shadow/sol-g74 |  | 2026-10-03T20:55Z | Catalogue the papers: corruption spreading through multi-agent LLM systems |
 | [scan-papers-llm-agent-swarms](tasks/scan-papers-llm-agent-swarms.md) | done | p0 | scan | dmarz/llm-agent-swarms |  | 2026-10-03T18:19Z | Catalogue the papers: llm agent swarms |
 | [scan-papers-llm-agent-swarms-recent](tasks/scan-papers-llm-agent-swarms-recent.md) | done | p0 | scan | dmarz/llm-agent-swarms-recent |  | 2026-10-03T18:19Z | Catalogue LLM agent swarms papers from 2024 onward |
 | [scan-papers-marl-emergence](tasks/scan-papers-marl-emergence.md) | done | p0 | scan | dmarz/marl-emergence |  | 2026-10-03T18:19Z | Catalogue the papers: multi-agent rl and emergent coordination |
@@ -86,6 +87,7 @@
 | [scan-papers-swarm-robotics](tasks/scan-papers-swarm-robotics.md) | done | p0 | scan | dmarz/swarm-robotics |  | 2026-10-03T18:20Z | Catalogue the papers: swarm robotics |
 | [scan-papers-swarm-robotics-recent](tasks/scan-papers-swarm-robotics-recent.md) | done | p0 | scan | dmarz/swarm-robotics-recent |  | 2026-10-03T18:20Z | Catalogue swarm robotics papers from 2024 onward |
 | [scan-threads-agents](tasks/scan-threads-agents.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue X threads on agent swarms and multi-agent AI |
+| [build-agent-experiment-toolkit](tasks/build-agent-experiment-toolkit.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T20:44Z | Reusable agent experiment methods and offline validation toolkit |
 | [scan-code-sd-code-data](tasks/scan-code-sd-code-data.md) | done | p1 | scan | dmarz/sd-code-data |  | 2026-10-03T19:40Z | Catalogue the code: code, datasets and benchmarks for detecting agent swarms |
 | [scan-papers-active-matter](tasks/scan-papers-active-matter.md) | done | p1 | scan | dmarz/active-matter |  | 2026-10-03T18:18Z | Catalogue the papers: active matter physics |
 | [scan-papers-criticality-measurement](tasks/scan-papers-criticality-measurement.md) | done | p1 | scan | dmarz/criticality-measurement |  | 2026-10-03T18:18Z | Catalogue the papers: criticality, information and measurement |
@@ -99,62 +101,77 @@
 | [scan-threads-x-crawl](tasks/scan-threads-x-crawl.md) | done | p1 | scan | dmarz/x-threads |  | 2026-10-03T19:32Z | Crawl X for author threads on every library arXiv paper, plus the agent-discourse trend chart |
 | [scan-threads-x-security](tasks/scan-threads-x-security.md) | done | p1 | scan | dmarz/x-threads |  | 2026-10-03T19:05Z | Catalogue X threads for the security topics (Sybil resistance, fork-merge security, swarm detection) via Apify |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
+| [synthesis-people-and-labs](tasks/synthesis-people-and-labs.md) | done | p1 | synthesis | shadow/sol-g50 |  | 2026-10-03T20:15Z | Map the people and labs |
+| [synthesis-pre-experiment-research](tasks/synthesis-pre-experiment-research.md) | done | p1 | synthesis | dmarz/preflight |  | 2026-10-03T20:24Z | Research prerequisites for selecting swarm experiments |
+| [synthesis-question-atlas](tasks/synthesis-question-atlas.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T20:46Z | Broad research questions, candidate hypotheses and test sketches for human review |
 
 ## Candidate batches
 
-19 free, 4 claimed, 45 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+4 free, 0 claimed, 64 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#26](https://github.com/dmarzzz/swarm-lab/issues/26) | claimed | 2026-10-03T20:07Z | [batch] web/collective-motion: 3 candidates (web-collective-motion-20261003-03) |
-| [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | claimed | 2026-10-03T20:07Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
-| [#57](https://github.com/dmarzzz/swarm-lab/issues/57) | claimed | 2026-10-03T20:07Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-01) |
-| [#72](https://github.com/dmarzzz/swarm-lab/issues/72) | claimed | 2026-10-03T20:06Z | [batch] paper/sybil-resistance: 11 candidates (paper-sybil-resistance-20261003-16) |
-| [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
-| [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
-| [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |
-| [#40](https://github.com/dmarzzz/swarm-lab/issues/40) | free | 2026-10-03T20:01Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-02) |
-| [#41](https://github.com/dmarzzz/swarm-lab/issues/41) | free | 2026-10-03T19:22Z | [batch] web/sync-consensus: 8 candidates (web-sync-consensus-20261003-03) |
-| [#58](https://github.com/dmarzzz/swarm-lab/issues/58) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-02) |
-| [#59](https://github.com/dmarzzz/swarm-lab/issues/59) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-03) |
-| [#60](https://github.com/dmarzzz/swarm-lab/issues/60) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-04) |
-| [#61](https://github.com/dmarzzz/swarm-lab/issues/61) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-05) |
-| [#62](https://github.com/dmarzzz/swarm-lab/issues/62) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-06) |
-| [#63](https://github.com/dmarzzz/swarm-lab/issues/63) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-07) |
-| [#64](https://github.com/dmarzzz/swarm-lab/issues/64) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-08) |
-| [#65](https://github.com/dmarzzz/swarm-lab/issues/65) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-09) |
+| [#65](https://github.com/dmarzzz/swarm-lab/issues/65) | free | 2026-10-03T21:27Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-09) |
 | [#66](https://github.com/dmarzzz/swarm-lab/issues/66) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-10) |
 | [#67](https://github.com/dmarzzz/swarm-lab/issues/67) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-11) |
-| | | | 4 more free batches |
+| [#68](https://github.com/dmarzzz/swarm-lab/issues/68) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-12) |
 
 ## Agents
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
+| dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
+| dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
+| dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
-| dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | scan-papers-sd-ai-content lane finished: 55 entries on branch lane/sd-ai-content |
+| dmarz/hf-sweep | done |  | 2026-10-03T22:00Z | HF multi-agent dataset sweep (link + description entries, lane/hf-multiagent) |
+| shadow/sol-aud | done |  | 2026-10-03T20:55Z | Completed 18 full-transcript entries, source QA, and three blocked MARL-talk recoveries |
+| shadow/sol-g74 | done | scan-papers-fm-contagion | 2026-10-03T20:55Z | Completed issue 74 rerun: 21 new entries, 21 correction/verification notes, 4 full readings; saturation gaps disclosed. |
+| shadow/sol-p2 | idle |  | 2026-10-03T20:47Z | wrapped up after batches |
+| dmarz/question-atlas | done | synthesis-question-atlas | 2026-10-03T20:46Z | Completed 143 source-linked candidates across 14 areas; editorial audit and review-browser verification passed. |
+| shadow/sol-g50 | done |  | 2026-10-03T20:45Z | Finished synthesis/people-and-labs.md (issue |
+| vishesh/codex-methods | done | build-agent-experiment-toolkit | 2026-10-03T20:44Z | Published reusable experiment toolkit; offline and repository CI passed; no secrets detected in audited contribution |
+| shadow/sol-w3 | done |  | 2026-10-03T20:34Z | completed assigned collective-motion and active-matter talk batches |
+| dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
+| dmarz/sd-attribution | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
+| dmarz/sd-bots | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
+| dmarz/sd-code-data | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
+| dmarz/sd-coordination | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
+| dmarz/sd-honeypots | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
+| dmarz/sd-informal | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
+| dmarz/sd-onchain | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
+| dmarz/sd-web-agents | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
+| dmarz/sd | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
+| shadow/sol-w5 | idle |  | 2026-10-03T20:20Z | worked batches |
+| dmarz/preflight | done | synthesis-pre-experiment-research | 2026-10-03T20:17Z | Completed pre-experiment synthesis and eight source records; verified metadata and scope, preparing merge |
 | shadow/sol-w6 | idle |  | 2026-10-03T20:05Z | writer lane finished (batch |
 | shadow/sol-w1 | idle |  | 2026-10-03T20:00Z | stopped on requester instruction; completed batches 33, 34, 31, 32 and 52 with 17 talks and 7 papers, all remaining items explicitly skipped |
-| shadow/sol-w3 | working |  | 2026-10-03T20:00Z | processing talk batch 24 using yt_transcript.sh and Apify fallback |
+| shadow/sol-p1 | working |  | 2026-10-03T19:59Z | paper batches |
 | shadow/sol-w4 | idle |  | 2026-10-03T19:59Z | done for session; batches |
 | shadow/sol-w7 | idle |  | 2026-10-03T19:58Z | Wrapped up on human stop; batches 48, 46, 53 catalogued; 37 and 38 all-skipped; 77 released untouched |
-| shadow/sol-g50 | working | synthesis-people-and-labs | 2026-10-03T19:50Z | Writing synthesis/people-and-labs.md (issue |
+| dmarz/fm | done | synthesis-fork-merge-questions | 2026-10-03T19:50Z | wrote synthesis/fork-merge-questions.md: Sutton quote verified, threat model, Q1 hiding, Q2 thresholds, Q3 attacks ranked by evidence, analogues, open questions; 197 cited ids all resolve |
 | shadow/sol-w8 | blocked |  | 2026-10-03T19:44Z | Completed X batches 45 and 44; remaining preferred talk batches require readable transcripts. |
-| shadow/sol-g51 | working |  | 2026-10-03T19:43Z | Recovering issue 51 citation trails, abstracts and verified OpenAlex citation counts from a fresh IP. |
-| shadow/sol-w5 | done |  | 2026-10-03T19:40Z | worked candidate batches |
-| shadow/sol-g49 | working |  | 2026-10-03T19:38Z | issue 49 primary industry measurements and runnable dataset access audit |
+| shadow/sol-g49 | done |  | 2026-10-03T19:38Z |  |
 | dmarz/reviewer-1 | done | review-llm-agent-swarms | 2026-10-03T19:27Z | review filed, verdict revise |
 | vishesh/codex-docs | done |  | 2026-10-03T19:14Z | Expanded sixteen briefs, linked research outputs, repaired metadata, and incorporated targeted review corrections. |
+| dmarz/fm-informal | done | scan-threads-fm | 2026-10-03T19:05Z | Catalogued 15 informal blogs/LW posts on fork-merge agent corruption (prompt injection, memory writes, cross-agent escalation, MCP tool poisoning, vendor defences) |
 | shadow/sol-w2 | working |  | 2026-10-03T19:05Z | Writer lane: working candidate batch issues (swarm-detection first), see PIPELINE.md on the pipeline PR branch. |
+| dmarz/fm-code-bench | done | scan-code-fm | 2026-10-03T19:00Z | catalogued 30 repos and 1 paper on agent injection, merge backdoors, Byzantine aggregation and BFT CRDTs for fork-merge-security; ran ByzFL and bft-json-crdt |
 | dmarz/x-threads | done | scan-threads-x-security | 2026-10-03T18:57Z | 35 X threads catalogued and pushed; task scan-threads-x-security done |
-| dmarz/sybil-foundations | done | scan-papers-sybil-foundations | 2026-10-03T18:42Z | Catalogued 21 foundational Sybil papers (6 read in full) plus notes on 4 existing entries; coverage note filled |
+| dmarz/sybil-flashbots | done | synthesis-sybil-flashbots | 2026-10-03T18:52Z | Wrote synthesis/sybil-flashbots.md mapping Flashbots Sybil problems and defences to robot-swarm, P2P and LLM-agent analogues, citing 98 library entries |
+| dmarz/sybil | done | survey-sybil-resistance | 2026-10-03T18:51Z | wrote surveys/sybil-resistance.md (in-progress) from nine sybil lanes; gate blocked on search-log coverage and saturation |
+| dmarz/fm-identity-hijack | done | scan-papers-fm-identity-hijack | 2026-10-03T18:48Z | Q3 identity and goal hijack scan done: 26 entries (4 full), notes on 4 existing entries, coverage note filled |
+| dmarz/sybil-foundations | done | scan-papers-sybil-foundations | 2026-10-03T18:47Z | Catalogued 21 foundational Sybil papers (6 read in full) plus notes on 4 existing entries; coverage note filled |
+| dmarz/fm-ai-control | done | scan-papers-fm-ai-control | 2026-10-03T18:43Z | AI-control lane done: 29 entries (23 papers, 3 blogs, 3 code) on control, collusion between copies, distributed attacks, IFC/quarantine merge designs; notes on 4 existing entries |
+| dmarz/fm-bft-aggregation | done | scan-papers-fm-bft-aggregation | 2026-10-03T18:43Z | Q2 merge thresholds scan done: 36 entries + notes on 8; classical k-of-n bounds hold only under independent faults, which LLM forks violate |
+| dmarz/fm-mobile-agents | done | scan-papers-fm-mobile-agents | 2026-10-03T18:43Z | Catalogued 22 fork-merge-security entries: 1990s mobile-agent security, Byzantine CRDTs and fork consistency, supply-chain merge integrity, TEE attestation |
 | dmarz/fm-biology | done | scan-papers-fm-biology | 2026-10-03T18:38Z | 29 biology entries on fusion parasitism, allorecognition, social parasites, transmissible cancers, fission-fusion; 4 full reads |
 | dmarz/fm-memory-injection | done | scan-papers-fm-memory-injection | 2026-10-03T18:38Z | Catalogued 35 fork-merge-security entries on agent memory poisoning and persistent injection (4 read in full); coverage note filled |
 | vishesh/senku-1 | idle |  | 2026-10-03T18:35Z | done for 2026-10-03: notes bundle + 16 library entries + 5 notes blocks pushed; scan-blogs released at 7 of 25 |
 | dmarz/fm-unlinkability | done | scan-papers-fm-unlinkability | 2026-10-03T18:33Z | Q1 hiding-which-part-returns scan done: 23 new fork-merge-security entries (mixnets, Tor guards, predecessor attack, SSLE/Whisk, MTD, deception, PIR, agent metadata) plus notes on motwani-2024-secret |
 | dmarz/fm-sutton | done | scan-papers-fm-sutton | 2026-10-03T18:31Z | Verified Sutton's fork-merge corruption quote (Dwarkesh 2025, 00:49:51) and catalogued 18 prior framings and fork-join sources |
 | dmarz/fm-merge-poisoning | done | scan-papers-fm-merge-poisoning | 2026-10-03T18:30Z | 29 papers on merge, FL and distillation poisoning catalogued for fork-merge-security; 4 full reads; check and verify clean |
-| dmarz/sybil-flashbots | done | scan-flashbots-sybil | 2026-10-03T18:28Z | Catalogued 25 public Flashbots sources on Sybil resistance, spam and rate limiting (writings, forum, GitHub, papers); coverage note filled |
 | dmarz/sybil-llm-agents | done | scan-papers-sybil-llm-agents | 2026-10-03T18:21Z | catalogued 30 papers + 1 code entry on Sybil, collusion and identity in LLM agent collectives; notes on 5 existing entries |
 | dmarz/sybil-credentials | done | scan-papers-sybil-credentials | 2026-10-03T18:20Z | catalogued 30 entries on anonymous credentials, RLN, Privacy Pass/ARC and agent identity/payment as Sybil cost; 4 full reads; coverage note filled |
 | dmarz/sybil-flashbots-informal | done | scan-flashbots-sybil-informal | 2026-10-03T18:19Z | catalogued 19 Flashbots-adjacent informal sources on Sybil resistance (ethresear.ch, blogs, Devcon talk, code); coverage note filled |
@@ -167,15 +184,6 @@
 | dmarz/llm-agent-swarms-recent | done | scan-papers-llm-agent-swarms-recent | 2026-10-03T18:18Z | literature scan and audit complete |
 | dmarz/llm-agent-swarms | done | scan-papers-llm-agent-swarms | 2026-10-03T18:18Z | literature scan and audit complete |
 | dmarz/marl-emergence | done | scan-papers-marl-emergence | 2026-10-03T18:18Z | literature scan and audit complete |
-| dmarz/sd-attribution | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
-| dmarz/sd-bots | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
-| dmarz/sd-code-data | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
-| dmarz/sd-coordination | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
-| dmarz/sd-honeypots | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
-| dmarz/sd-informal | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
-| dmarz/sd-onchain | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
-| dmarz/sd-web-agents | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
-| dmarz/sd | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
 | dmarz/swarm-intelligence | done | scan-papers-swarm-intelligence | 2026-10-03T18:18Z | literature scan and audit complete |
 | dmarz/swarm-robotics-recent | done | scan-papers-swarm-robotics-recent | 2026-10-03T18:18Z | literature scan and audit complete |
 | dmarz/swarm-robotics | done | scan-papers-swarm-robotics | 2026-10-03T18:18Z | literature scan and audit complete |
@@ -183,21 +191,16 @@
 | dmarz/sybil-mechanisms | done | scan-papers-sybil-mechanisms | 2026-10-03T18:16Z | catalogued 25 sources on false-name-proof and Sybil-proof mechanism design (4 full reads) |
 | dmarz/sybil-robotics | done | scan-papers-sybil-robotics | 2026-10-03T18:16Z | Catalogued 30 papers and 3 repos on Sybil and Byzantine robots (4 full reads); notes appended to 3 entries |
 | dmarz/sybil-code-data | done | scan-code-data-sybil | 2026-10-03T18:15Z | catalogued 19 Sybil-resistance code repos and 4 datasets (ran SybilSCAR/SybilBelief, loaded Hop and cresci-2017) |
-| dmarz/fm-ai-control | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
-| dmarz/fm-bft-aggregation | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
-| dmarz/fm-code-bench | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm-contagion | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
-| dmarz/fm-identity-hijack | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
-| dmarz/fm-informal | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
-| dmarz/fm-mobile-agents | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
-| dmarz/fm | working |  | 2026-10-03T18:10Z | fork-merge-security lit review, workflow swarm launched by dmarz |
-| dmarz/sybil | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
+| shadow/sol-g51 | idle |  | 2026-10-03 | Issue 51 partial recovery pushed; remaining citation APIs rate-limited and sybil survey absent. |
 
 ## Surveys (prior-art gate)
 
 | survey | owner | state | cited | gate problems |
 |---|---|---|---|---|
-| [llm-agent-swarms](surveys/llm-agent-swarms.md) | shadow | complete | 96 | 0 |
+| [fork-merge-security](surveys/fork-merge-security.md) | dmarz | in-progress | 280 | 1 |
+| [llm-agent-swarms](surveys/llm-agent-swarms.md) | shadow | complete | 103 | 0 |
+| [sybil-resistance](surveys/sybil-resistance.md) | dmarz | in-progress | 230 | 5 |
 
 ## Hypotheses
 

@@ -42,3 +42,7 @@ Single-turn and stateless. It does not model memory persistence or multi-agent p
 ## Relevance to us
 
 Background for Q3. It formalises the single-hop step (untrusted data hijacks the sub-agent's current task) on which persistence ([[dong-2025-memory]], [[gadgil-2026-bad]]) and propagation ([[cohen-2024-here]]) build. Its target-task and injected-task formalism is a candidate way to state "the sub-agent now pursues the attacker's task" in a fork-merge threat model. Seminal predecessor: [[greshake-2023-not]].
+
+## Notes from dmarz/fm-code-bench
+
+Code catalogued as [[gh-liu00222-open-prompt-injection]] (MIT, 503 stars, still maintained, last push 2026-09-27).

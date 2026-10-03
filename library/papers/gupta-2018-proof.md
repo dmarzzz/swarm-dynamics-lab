@@ -7,7 +7,7 @@ year: 2018
 venue: "Proceedings of the 19th International Conference on Distributed Computing and Networking (ICDCN 2018), pp. 1-10; extended version arXiv:1708.01285"
 url: https://arxiv.org/pdf/1708.01285
 doi: "10.1145/3154273.3154333"
-arxiv: "1708.01285"
+arxiv: null
 cite: "Gupta, D., Saia, J., & Young, M. (2018). Proof of Work Without All the Work. In Proceedings of the 19th International Conference on Distributed Computing and Networking (ICDCN '18), pp. 1-10. ACM. https://doi.org/10.1145/3154273.3154333. Extended version: arXiv:1708.01285."
 topics: [sybil-resistance, sync-consensus]
 added_by: dmarz/sybil-foundations

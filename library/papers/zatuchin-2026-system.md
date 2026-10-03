@@ -29,7 +29,7 @@ This study distinguishes individual-response attribution from aggregated brand b
 
 ## Contribution
 
-Prompt-grouped cross-validation, surface-form classifiers, and cross-domain/profile comparisons.
+Shows single LLM responses identify the deployed system with 97.84% accuracy from character n-grams, while aggregated brand profiles fail to transfer across domains and harness changes.
 
 ## Key results
 
@@ -45,7 +45,7 @@ The uncrossed design cannot separate system, domain, and harness effects; high c
 
 ## Relevance to us
 
-A primary-source abstract for comparisons of agent behavior and measurement. Full text and replication were not checked.
+Relevant to operator and model attribution in swarm detection: per-message system fingerprinting works in a closed set, but harness changes broke it (0 of 120 Grok answers attributed), so attribution claims need cross-harness tests.
 
 ## Access provenance
 

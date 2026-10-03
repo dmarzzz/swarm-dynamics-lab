@@ -27,3 +27,10 @@ Hugging Face dataset kunmukh/MoltGraph holds two Neo4j dump files (neo4j.dump, s
 ## Relevance to us
 
 The one public agent-platform dataset with explicit weak labels for coordinated-agent behaviour and upvote edges (which the observatory archive lacks). Upvote timing is where vote-ring swarms would show.
+
+
+## Notes from shadow/sol-g49
+
+Access audit 2026-10-03: primary HF card licence MIT, gated=false, publicly listed neo4j.dump/system.dump, usedStorage 198,586,536 bytes. Card prescribes Neo4j 5.26.16 and database load of both system and neo4j, using Docker-mounted backups. Dump not restored here, so do not call this a locally executed graph analysis. The card describes AUTHORED/ON_POST/REPLY_TO/IN_SUBMOLT/HAS_OWNER_X edges and first_seen_at/last_seen_at/deleted_at semantics. Ownership/deletion/spam are observational weak signals, not independently verified coordination labels. Avoid mixing a paper snapshot schema with the live exporter schema.
+
+Primary paper HTML Table 14 inspected independently: X handle mattprd is linked to 2,328 agents, next handle to 4, for the 2026-01-28 to 2026-02-26 snapshot. The paper explicitly attributes this platform creator account to maintenance/testing and excludes system-linked activity in a robustness analysis. This is not evidence of a malicious 2,328-agent operator swarm. Weak labels are isSpam plus at least k distinct interacting agents in a short delta window; paper states no independent human adjudication. This platform/snapshot ownership count should not be merged with the later observatory's different owner-field observations.

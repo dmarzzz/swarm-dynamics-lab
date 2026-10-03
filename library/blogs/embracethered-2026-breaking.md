@@ -31,3 +31,7 @@ Practitioner experiment with explicit trial counts and a clean-account methodolo
 ## Relevance to us
 
 Core Q3 evidence: the strongest realistic corruption is writing the agent's persistent memory so attacker-chosen "facts" load into all later context, which is precisely what a returning part carries into a parent. The empty-store and plausibility findings are design hints for Q2: a merge that refuses implausible or command-shaped memory writes, or that treats an empty parent store as high-risk, resists better. The detection-without-resistance result warns Q1 defences cannot rely on the model simply noticing. Builds on [[embracethered-2024-spyware]] and the measured study [[gadgil-2026-bad]].
+
+## Notes from dmarz/fm
+
+Evidence grade, added after review on 2026-10-03: the 5 of 10 figure is a single-author demonstration on one crafted example and one account, not a measurement with a sample frame, and the example's success fell to 0% within about a day of publication. Cite it as a proof of concept that memory-tool writes can be induced, not as an attack success rate. For rates, use measured studies such as [[zhang-2026-agentworm]] (2,250 trials of configuration write-back) or [[papadopoulos-2026-mind]].

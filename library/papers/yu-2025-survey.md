@@ -23,6 +23,7 @@ cite: 'Yu, M., Meng, F., Zhou, X., Wang, S., Mao, J., Pang, L., Chen, T., Wang, 
 topics:
 - sybil-resistance
 - llm-agent-swarms
+- fork-merge-security
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: abstract
@@ -54,3 +55,14 @@ Abstract only. 12 authors; list truncated to ten plus et al.
 ## Relevance to us
 
 A review article giving the general attack and defence landscape in which agent-to-agent Sybil and collusion attacks are one extrinsic category. Related reviews: [[de-witt-2025-open]], [[yang-2026-sok]].
+
+## Notes from dmarz/fm-identity-hijack
+
+Abstract read via the arXiv API this session. For fork-merge security the useful part is the split into intrinsic (brain, memory, tool) and extrinsic (user, agent, environment) trust: a returning sub-agent is an extrinsic agent-to-agent input that the parent then writes into intrinsic memory, so it crosses both categories. Other agent-security reviews catalogued: [[deng-2024-ai]], [[he-2024-emerged]], [[shahriar-2025-survey]], [[lin-2026-survey]].
+
+
+## Notes from shadow/sol-g74
+
+Issue #74 rerun, 2026-10-03. Source opened: https://arxiv.org/abs/2503.09648 . Read depth in this session: abstract.
+
+Review rediscovered by Exa, then arXiv metadata and abstract opened for this rerun. Reused rather than duplicated. General trustworthiness review, not direct experimental proof that provenance labels or quorum voting prevent contagious memory corruption.

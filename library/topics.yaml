@@ -42,3 +42,6 @@
 - slug: swarm-detection
   name: Detecting AI agent swarms in the wild
   description: Detecting many LLM or autonomous agents acting in the wild, coordinated or run by one operator. Social bot and coordinated-inauthentic-behaviour detection, honeypots, canaries and tarpits for agents, browser-agent and AI-crawler detection, coordination inference from traces, population-level AI-content estimates, model and operator attribution, on-chain bot clustering, and threat-intel reports.
+- slug: agent-budgets
+  name: Agent budgets and resource allocation
+  description: How LLM agents use, perceive and divide compute, token, tool-call, money and context budgets. Visible versus hidden budgets, budget-aware reasoning and tool use, orchestrator effort scaling, self-allocation among agents, commons and public-goods games, collusion and market division, negotiation over splits, classical market-based allocation, and identity-splitting (Sybil) attacks on per-identity quotas.

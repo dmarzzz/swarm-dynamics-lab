@@ -24,7 +24,7 @@ topics:
 added_by: shadow/sol-g51
 accessed: '2026-10-03'
 read_depth: abstract
-relevance: 4
+relevance: 2
 citations: null
 code: []
 ---
@@ -35,7 +35,7 @@ This paper characterizes Ethereum through three transaction-derived graphs cover
 
 ## Contribution
 
-Collection of Ethereum transactions and construction of three activity graphs.
+Builds three Ethereum graphs (money flow, contract creation, contract invocation) from collected transactions and draws cross-graph observations plus two security applications.
 
 ## Key results
 
@@ -51,7 +51,7 @@ Address-level graph structure is not entity ground truth; no LLM-agent or coordi
 
 ## Relevance to us
 
-A comparison source for coordinated automation and security measurement. Full-text methods and replication have not been checked.
+Background for on-chain Sybil work; graph construction is reusable but the paper does not label bots or common operators. [[victor-2020-address]] is the more direct clustering source.
 
 ## Access provenance
 

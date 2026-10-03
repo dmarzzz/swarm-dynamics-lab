@@ -1,0 +1,267 @@
+{
+  "type": "object",
+  "required": [
+    "schema_version",
+    "study_id",
+    "protocol_sha256",
+    "agent_definition_paths",
+    "context_manifest_path",
+    "environment",
+    "design",
+    "seeds",
+    "execution",
+    "budget",
+    "scoring",
+    "stopping"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "study_id": {
+      "type": "string"
+    },
+    "protocol_sha256": {
+      "type": "string"
+    },
+    "agent_definition_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "context_manifest_path": {
+      "type": "string"
+    },
+    "environment": {
+      "type": "object",
+      "required": [
+        "source_sha256",
+        "image_digest",
+        "dependency_lock_sha256",
+        "reset"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "source_sha256": {
+          "type": "string"
+        },
+        "image_digest": {
+          "type": "string"
+        },
+        "dependency_lock_sha256": {
+          "type": "string"
+        },
+        "reset": {
+          "type": "string"
+        }
+      }
+    },
+    "design": {
+      "type": "object",
+      "required": [
+        "unit",
+        "scenario_count",
+        "replicates_per_scenario",
+        "agents_per_run",
+        "conditions",
+        "primary_contrast",
+        "pair_on",
+        "block_on"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "unit": {
+          "type": "string"
+        },
+        "scenario_count": {
+          "type": "integer"
+        },
+        "replicates_per_scenario": {
+          "type": "integer"
+        },
+        "agents_per_run": {
+          "type": "integer"
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "primary_contrast": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "pair_on": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "block_on": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "seeds": {
+      "type": "object",
+      "required": [
+        "master",
+        "derivation",
+        "streams"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "master": {
+          "type": "integer"
+        },
+        "derivation": {
+          "type": "string"
+        },
+        "streams": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "execution": {
+      "type": "object",
+      "required": [
+        "schedule",
+        "round_semantics",
+        "max_concurrent_runs",
+        "max_rounds",
+        "timeout_seconds",
+        "request_retries",
+        "retryable_errors",
+        "fallback",
+        "resume_policy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schedule": {
+          "type": "string"
+        },
+        "round_semantics": {
+          "type": "string"
+        },
+        "max_concurrent_runs": {
+          "type": "integer"
+        },
+        "max_rounds": {
+          "type": "integer"
+        },
+        "timeout_seconds": {
+          "type": "integer"
+        },
+        "request_retries": {
+          "type": "integer"
+        },
+        "retryable_errors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fallback": {
+          "type": "string"
+        },
+        "resume_policy": {
+          "type": "string"
+        }
+      }
+    },
+    "budget": {
+      "type": "object",
+      "required": [
+        "scope",
+        "max_input_tokens",
+        "max_output_tokens",
+        "max_tool_calls",
+        "max_usd",
+        "paid_execution_enabled"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "scope": {
+          "type": "string"
+        },
+        "max_input_tokens": {
+          "type": "integer"
+        },
+        "max_output_tokens": {
+          "type": "integer"
+        },
+        "max_tool_calls": {
+          "type": "integer"
+        },
+        "max_usd": {
+          "type": "number"
+        },
+        "paid_execution_enabled": {
+          "type": "boolean"
+        }
+      }
+    },
+    "scoring": {
+      "type": "object",
+      "required": [
+        "implementation_sha256",
+        "primary",
+        "failure_score",
+        "unavailable_grade",
+        "protected"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "implementation_sha256": {
+          "type": "string"
+        },
+        "primary": {
+          "type": "string"
+        },
+        "failure_score": {
+          "type": "number"
+        },
+        "unavailable_grade": {
+          "type": "string"
+        },
+        "protected": {
+          "type": "boolean"
+        }
+      }
+    },
+    "stopping": {
+      "type": "object",
+      "required": [
+        "mode",
+        "safety_stop",
+        "effect_peeking"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "type": "string"
+        },
+        "safety_stop": {
+          "type": "string"
+        },
+        "effect_peeking": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "run-config template structure"
+}

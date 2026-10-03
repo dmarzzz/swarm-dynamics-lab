@@ -1,0 +1,1351 @@
+[
+  {
+    "id": "PHY-01",
+    "area": "collective-motion",
+    "title": "Neighbour rules under actual visibility",
+    "question": "Does choosing a fixed number of neighbours still preserve cohesion when robots can only see unoccluded neighbours?",
+    "hypothesis": "The topological rule will lose part of its density robustness when visibility constrains its inputs; an occlusion-aware rule will recover some robustness without increasing the observation budget.",
+    "test": "Randomize independent simulated flocks to metric, topological, or visual neighbour selection, then impose the same density change and turning disturbance. Match the number of observations delivered and use paired initial conditions across rules. Hold out obstacle geometries for evaluation; analyse whole-flock outcomes rather than treating birds as independent replicates.",
+    "baseline": "Unoccluded topological and metric rules are ideal-information controls; random visible-neighbour selection controls for observation count.",
+    "metrics": [
+      "Largest connected component",
+      "Collision count",
+      "Heading error after disturbance",
+      "Recovery time",
+      "Observations used"
+    ],
+    "falsifier": "No visual-rule advantage survives equal observation budgets, or apparent cohesion comes from slower movement.",
+    "confounds": "Nearest-neighbour identities require position knowledge; visibility and density alter available degree. Cohesion is not proof of correct navigation.",
+    "prior": [
+      {
+        "id": "ballerini-2008-interaction",
+        "relation": "Closest prior compares topological and metric structure, with a perturbation simulation."
+      },
+      {
+        "id": "strandburg-peshkin-2013-visual",
+        "relation": "Closest prior motivates sensory networks; empirical species-specific finding, not universal superiority."
+      },
+      {
+        "id": "bastien-2020-model",
+        "relation": "Related perception-only model; catalogue read only in this pass."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Specify sensor field of view and a fair observation-budget matching procedure; inspect original visual-network methods before promotion.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-02",
+    "area": "collective-motion",
+    "title": "What mechanism carries a turning wave?",
+    "question": "Can measured propagation distinguish behavioural inertia from front-biased interactions?",
+    "hypothesis": "The same average turning-wave speed can arise from both mechanisms, but responses to reversed sensory bias and paired pulses will distinguish them.",
+    "test": "Fit inertial-spin and front-biased alignment models to the same synthetic undisturbed trajectories and single-turn response. Randomize simulated flock episodes to sensory-bias reversal, a second pulse, or sham perturbation. Compare held-out arrival-time and attenuation predictions, including fits where both mechanisms are present. Score episodes independently, with uncertainty across seeds and fitted parameter sets.",
+    "baseline": "An overdamped reciprocal alignment model and a common external steering signal provide mechanism and common-drive controls.",
+    "metrics": [
+      "Turn-arrival curve",
+      "Wave attenuation",
+      "Pulse interference error",
+      "Held-out predictive likelihood"
+    ],
+    "falsifier": "Both mechanisms predict all interventions equally well at sensor resolution, or the supposed discriminator vanishes after matching speeds and noise.",
+    "confounds": "Fitting a linear wave does not establish a conservation law. Locomotor delay, non-reciprocity and measurement smoothing can mimic inertia; present conclusions as identifiability within tested models. ",
+    "prior": [
+      {
+        "id": "attanasi-2014-information",
+        "relation": "Biological turning-wave evidence and inertia interpretation; abstract-level catalogue anchor."
+      },
+      {
+        "id": "hang-2026-self",
+        "relation": "Recent simulated front-bias mechanism provides the explicit competing explanation."
+      },
+      {
+        "id": "vicsek-1995-novel",
+        "relation": "Overdamped alignment reference model."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Reproduce the two update equations and calibrate observation bandwidth before selecting interventions.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-03",
+    "area": "collective-motion",
+    "title": "Polarization versus navigation value",
+    "question": "When does increasing collective alignment reduce actual task performance?",
+    "hypothesis": "Stronger alignment will increase polarization while slowing response to a rapidly moving goal, producing an intermediate optimum for useful transport.",
+    "test": "Randomize whole simulated flock episodes to alignment strength and goal-switching frequency, fixing population, sensing range, speed limits and message budget. Give the same small informed subset access to goal changes in each paired episode. Evaluate a held-out switching schedule and score displacement toward the true goal, cohesion and collisions separately.",
+    "baseline": "Independent goal followers when information is available, a fixed low-alignment rule, and a matched static-goal setting separate social cost from lack of information.",
+    "metrics": [
+      "Goal-directed progress",
+      "Tracking lag",
+      "Polarization",
+      "Fragmentation",
+      "Control effort"
+    ],
+    "falsifier": "Task value rises monotonically with alignment across the tested regime, or the intermediate optimum disappears after equalizing speed and information.",
+    "confounds": "Alignment, neighbour count and coupling strength are different interventions. Finite run length can reward initial conditions; a visually ordered flock can still move in the wrong direction.",
+    "prior": [
+      {
+        "id": "mateo-2017-effect",
+        "relation": "Closest prior already predicts a responsiveness trade-off with connectivity."
+      },
+      {
+        "id": "couzin-2005-effective",
+        "relation": "Informed-minority guidance is an established mechanism."
+      },
+      {
+        "id": "vicsek-1995-novel",
+        "relation": "Order-parameter baseline; this hunch tests function rather than treating order as success."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Define one measurable transport task and verify the closest responsiveness literature; novelty is not the general intermediate-optimum idea.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-04",
+    "area": "collective-motion",
+    "title": "Distributed expertise under local failure",
+    "question": "Does spreading informed agents through a flock make guidance more reliable than concentrating them near its front?",
+    "hypothesis": "Spatially distributed informed agents will improve recovery from a local sensor outage, but may slow initial turns when their cues disagree.",
+    "test": "Assign entire simulated flock episodes to clustered, dispersed or randomly placed informed subsets of equal size. Cross this with an independently randomized local sensor blackout and controlled disagreement among goal estimates. Use identical geometry, speed and total information for paired episodes; analyse goal error and recovery by episode, including episodes with no failure.",
+    "baseline": "Random placement is the primary comparator; an oracle with independent accurate cues supplies a ceiling and a fully uninformed flock supplies a negative control.",
+    "metrics": [
+      "Goal-direction error",
+      "Time to resume progress",
+      "Collision rate",
+      "Between-subgroup disagreement"
+    ],
+    "falsifier": "Dispersion provides no recovery benefit, or all benefits are explained by more favourable initial visibility rather than redundancy.",
+    "confounds": "Knowledge location changes network centrality. Randomizing only identities without locations will not test spatial distribution. Synthetic failure results do not establish drone or animal resilience.",
+    "prior": [
+      {
+        "id": "couzin-2005-effective",
+        "relation": "Closest established informed-minority mechanism."
+      },
+      {
+        "id": "choi-2026-communication",
+        "relation": "Recent five-UAV study motivates testing beyond one implicit leader; record reports limited real trials."
+      },
+      {
+        "id": "strandburg-peshkin-2013-visual",
+        "relation": "Sensory networks motivate visibility control."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Read the recent controller and observation definition; first use scripted rules so training does not obscure the mechanism.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-05",
+    "area": "collective-motion",
+    "title": "Hydrodynamic breakup beyond a single model",
+    "question": "Does size-dependent school fragmentation survive replacing idealized long-range fluid coupling with a screened interaction?",
+    "hypothesis": "Breakup attributed to hydrodynamics will weaken when coupling is screened, even with the same local disturbance magnitude; this would identify long-range coherence rather than generic noise as the driver.",
+    "test": "Randomize independent simulated schools to full dipolar coupling, distance-screened coupling, matched random forcing or no fluid coupling. Calibrate treatments to comparable local velocity-perturbation variance before evaluating across group sizes. Match initial density and visual rules, track groups long enough to observe remerging, and analyse whole-school episodes.",
+    "baseline": "Matched random forcing is the main mechanistic comparator; visual alignment without fluid coupling tests the non-hydrodynamic explanation.",
+    "metrics": [
+      "Fragmentation frequency",
+      "Largest-component fraction",
+      "Reunion time",
+      "Fluid-induced velocity variance"
+    ],
+    "falsifier": "Screening leaves breakup unchanged or matched independent forcing reproduces all breakup statistics, weakening the long-range explanation.",
+    "confounds": "Screening is an artificial intervention, not a faithful model of every fluid. Near-field interactions, dimensionality and constant-speed assumptions can dominate. No inference about natural large schools follows from simulation alone.",
+    "prior": [
+      {
+        "id": "hang-2026-self",
+        "relation": "Closest recent prior reports size-dependent breakup under far-field dipolar flows."
+      },
+      {
+        "id": "vicsek-1995-novel",
+        "relation": "Non-hydrodynamic alignment baseline."
+      },
+      {
+        "id": "strandburg-peshkin-2013-visual",
+        "relation": "Sensory interactions must remain fixed while fluid coupling changes."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Read and reproduce the hydrodynamic model, then justify a variance-matched screening intervention and check later physical-validation work.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-06",
+    "area": "collective-motion",
+    "title": "Alternating bursts in larger groups",
+    "question": "Can the pairwise benefit of alternating movement bursts scale to a school without a shared clock?",
+    "hypothesis": "Local burst alternation will improve turn-following in small neighbourhoods, but mutually incompatible timing constraints will limit its benefit in larger dense groups.",
+    "test": "Randomize simulated school episodes to reactive burst timing, independent renewal timing or closed-loop phase-response timing while matching mean speed, burst count and energy proxy. First reproduce the two-agent case, then change network motifs and group size using held-out geometry. Apply identical leader turns and analyse the entire school, recording pairwise timings as dependent measurements.",
+    "baseline": "A global alternating schedule is an unattainable coordination ceiling; shuffled phase responses preserve timing statistics without local feedback.",
+    "metrics": [
+      "Turn-following error",
+      "Neighbour retention",
+      "Burst conflict rate",
+      "Travel per energy proxy"
+    ],
+    "falsifier": "Closed-loop timing gives no benefit after speed matching, or independent schedules perform equally across all graph motifs.",
+    "confounds": "A temporal oscillator without movement cannot establish locomotor coordination. Pairwise empirical coupling does not imply a school-wide optimum; visual and hydrodynamic feedback may change the phase-response curve.",
+    "prior": [
+      {
+        "id": "amichay-2024-revealing",
+        "relation": "Closest pairwise biological and virtual-reality evidence; scaling is unresolved in the record."
+      },
+      {
+        "id": "wang-2025-collective",
+        "relation": "Related asynchronous burst-and-coast school model."
+      },
+      {
+        "id": "amichay-2025-integration",
+        "relation": "Conceptual bridge between movement and timing, not empirical proof of this prediction."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Inspect phase-response extraction and couple timing to a validated movement model before scaling beyond pairs.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-07",
+    "area": "collective-decision",
+    "title": "Why can less communication help adaptation?",
+    "question": "Does constrained communication improve changing-environment decisions by preserving independent sampling or simply weakening social commitment?",
+    "hypothesis": "The benefit will depend primarily on maintaining fresh independent samples; sparse communication without increased information freshness will provide less improvement.",
+    "test": "Randomize simulated robot-swarm episodes in a factorial design: communication degree and independent sampling rate vary separately, while options switch quality on a held-out schedule. Match delivered messages and locomotion costs where possible. Measure group decisions at fixed deadlines and use whole episodes as independent units.",
+    "baseline": "Dense and sparse voter rules with frozen sampling rates; a dense rule carrying equally fresh evidence controls for degree itself.",
+    "metrics": [
+      "Post-switch regret",
+      "Time to reverse majority",
+      "Independent observations per decision",
+      "Wrong-consensus duration"
+    ],
+    "falsifier": "Sparse communication retains its benefit after freshness and social exposure are matched, contradicting the proposed mechanism, or never benefits adaptation in the replication.",
+    "confounds": "Reducing radio range changes connectivity, encounters and travel. Packet volume and unique environmental samples must be logged separately; agreement is not correctness.",
+    "prior": [
+      {
+        "id": "talamali-2021-when",
+        "relation": "Closest prior already finds improved adaptation with constrained communication."
+      },
+      {
+        "id": "march-pons-2024-honeybee",
+        "relation": "Motion and density jointly affect robot communication networks."
+      },
+      {
+        "id": "valentini-2017-best",
+        "relation": "Best-of-n taxonomy distinguishes changing quality from sampling cost."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Reproduce the voter-model result and inspect original sampling schedules; publisher access was blocked in this pass.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-08",
+    "area": "collective-decision",
+    "title": "Finite populations and multi-option deadlock",
+    "question": "Does a mean-field cross-inhibition policy still make accurate decisions when only a small number of agents compare several options?",
+    "hypothesis": "Finite-population noise will break apparent deadlocks more often than deterministic predictions suggest, while also increasing incorrect early commitments.",
+    "test": "Implement the documented multi-option transition process as both an ODE and a stochastic agent model. Randomize independent swarm realizations across equal-quality and near-equal-quality option sets at matched rates. Compare decision distributions over a predeclared horizon and separately classify non-decision, correct decision and premature commitment.",
+    "baseline": "The original two-option parameterization, the revised multi-option rule and a simple independent-sampling majority rule provide mechanistic controls.",
+    "metrics": [
+      "Decision probability by deadline",
+      "Selection accuracy",
+      "Decision-time distribution",
+      "Spontaneous switching rate"
+    ],
+    "falsifier": "Observed stochastic decisions match the deterministic prediction without meaningful extra errors, or the difference vanishes under a faithful discretization.",
+    "confounds": "Noise-induced commitment is not automatically useful symmetry breaking. Quorum threshold, population size and rate discretization interact; each trajectory is one replicate, not each time step.",
+    "prior": [
+      {
+        "id": "pais-2013-mechanism",
+        "relation": "Two-option value-sensitive cross-inhibition reference."
+      },
+      {
+        "id": "reina-2017-model",
+        "relation": "Closest multi-option mean-field result; finite stochastic treatment is an explicit catalogue limitation."
+      },
+      {
+        "id": "seeley-2012-stop",
+        "relation": "Biological cross-inhibition evidence, not proof of this synthetic policy."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Check for later finite-population analyses and verify stochastic rates conserve population before claiming a gap.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-09",
+    "area": "collective-decision",
+    "title": "Group size versus independent evidence",
+    "question": "Is collective accuracy determined more by the number of independent environmental cues than by the number of agents?",
+    "hypothesis": "Accuracy will saturate or decline as agents share increasingly correlated cues; adding independently sampled agents will help more than duplicating existing evidence.",
+    "test": "Randomize entire decision groups to cue-generation processes with matched marginal accuracy but different shared-noise structure. Cross group size with the number of independent cue sources, keeping total sampling cost explicit. Test both independent voting and social updating on held-out cue distributions; score known synthetic ground truth.",
+    "baseline": "Independent cues establish the ordinary aggregation baseline; perfect cue duplication and a single best sensor are negative and economical controls.",
+    "metrics": [
+      "Decision error",
+      "Calibration",
+      "Effective independent sample count",
+      "Accuracy per observation cost"
+    ],
+    "falsifier": "Larger groups improve equally under duplicated and independent cues, or the predicted saturation is explained solely by changing marginal cue quality.",
+    "confounds": "Shared environmental noise differs from copying another agent. Estimating correlation after social interaction cannot recover the original cue process without intervention. This is a benchmarked mechanism test, not a new wisdom-of-crowds principle.",
+    "prior": [
+      {
+        "id": "kao-2014-decision",
+        "relation": "Closest prior already derives finite optimal groups under correlated cues."
+      },
+      {
+        "id": "couzin-2005-effective",
+        "relation": "Information distribution within moving groups offers an embodied follow-up."
+      },
+      {
+        "id": "valentini-2017-best",
+        "relation": "Formal option-quality comparison context."
+      }
+    ],
+    "novelty": "replication",
+    "feasibility": "offline",
+    "needs": "Choose a transparent generative cue model and examine original finite-group assumptions before extending to embodied sampling.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-10",
+    "area": "collective-decision",
+    "title": "Correcting fast-sampling option bias",
+    "question": "Can a swarm identify the best option when inferior options are faster to inspect?",
+    "hypothesis": "Weighting reports by independent completed inspections, with an explicit travel-cost correction, will reduce bias toward cheap options at a possible delay cost.",
+    "test": "Randomize simulated group episodes to option layouts that independently set true quality and sampling time. Compare fixed decision rules at equal wall-clock deadlines and at equal total inspection counts. Analyse the whole group; record every attempted inspection, completed measurement and repeated report. Hold out quality-cost correlations when evaluating.",
+    "baseline": "Uncorrected majority, the fastest-to-sample option and centralized access to the same completed samples form practical comparators.",
+    "metrics": [
+      "Selected true quality",
+      "Regret at deadline",
+      "Travel and inspection cost",
+      "Time to adequate confidence"
+    ],
+    "falsifier": "Correction fails to reduce bias or harms quality enough that the speed-adjusted trade-off is worse than simple voting.",
+    "confounds": "Quality and cost must be independently manipulated. Counting repeated reports as new samples manufactures evidence; correction may need unavailable travel-time knowledge and should be tested with estimated as well as oracle costs.",
+    "prior": [
+      {
+        "id": "valentini-2017-best",
+        "relation": "Closest prior explicitly formalizes antagonistic quality-cost choices."
+      },
+      {
+        "id": "reina-2017-model",
+        "relation": "Quality-sensitive recruitment provides a mechanism to compare."
+      },
+      {
+        "id": "march-pons-2024-honeybee",
+        "relation": "Embodied communication and movement can confound sampling frequency."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Search existing antagonistic best-of-n controllers; specify which cost estimate each robot can actually observe.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-11",
+    "area": "collective-decision",
+    "title": "When uninformed participants help",
+    "question": "Do uninformed agents improve a decision because they dilute commitment or because their movement changes connectivity?",
+    "hypothesis": "Uninformed participants will help resolve conflicting preferences in some regimes, but that benefit will shrink when degree and movement are held constant.",
+    "test": "Randomize simulated group episodes to informed, uninformed or inactive replacements while preserving total bodies. Cross this with static versus moving communication graphs and conflicting directional preferences. Use a task where compromise and choosing either alternative have explicit utilities; evaluate complete-group outcomes.",
+    "baseline": "A smaller informed-only group and a full-size group with neutral message relays distinguish population, dilution and connectivity effects.",
+    "metrics": [
+      "Probability of each decision",
+      "Utility of compromise",
+      "Decision time",
+      "Connectivity history"
+    ],
+    "falsifier": "Uninformed agents never improve task utility in the prespecified conflict regimes, or their benefit remains equally large after motion and contact histories are matched.",
+    "confounds": "There may be no objectively correct option. Do not label any consensus a success; define the payoff before simulation. An inactive physical body is not equivalent to removing a node, and subgroup means hide fragmentation.",
+    "prior": [
+      {
+        "id": "leonard-2012-decision",
+        "relation": "Closest prior predicts decision-versus-compromise effects of uninformed groups."
+      },
+      {
+        "id": "couzin-2005-effective",
+        "relation": "Established informed-minority framework."
+      },
+      {
+        "id": "march-pons-2024-honeybee",
+        "relation": "Motion changes communication structure in an embodied decision system."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Inspect the subgroup model and define task utility for compromise, including symmetric equal-value cases.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-12",
+    "area": "collective-decision",
+    "title": "Reopening a settled decision",
+    "question": "Can occasional independent reinspection reverse an obsolete consensus without creating constant churn?",
+    "hypothesis": "A small continuing reinspection rate will improve cumulative utility after option changes, with excessive reinspection causing instability in stationary environments.",
+    "test": "Randomize whole swarm episodes to permanent commitment, fixed reinspection, or evidence-triggered reopening. Independently vary option change points and sensor noise; use the same event schedules across policies. Match the inspection budget or report its cost explicitly, and evaluate stationary sequences as well as changing ones.",
+    "baseline": "A standard voter-style adaptive rule and an oracle change detector separate the value of reconsideration from detecting the switch.",
+    "metrics": [
+      "Cumulative option-quality regret",
+      "Wrong-consensus duration",
+      "Unnecessary reversals",
+      "Inspection cost"
+    ],
+    "falsifier": "No policy improves the joint regret-and-churn trade-off over the standard adaptive rule, or benefits disappear at equal inspection cost.",
+    "confounds": "A detector may accidentally receive privileged change information. Permanent commitment can be artificially weak; recent adaptive decision literature must be checked before novelty claims. The environment, not the number of votes, defines correctness.",
+    "prior": [
+      {
+        "id": "talamali-2021-when",
+        "relation": "Closest prior establishes dynamic adaptation and communication trade-offs."
+      },
+      {
+        "id": "leonard-2024-fast",
+        "relation": "Related nonlinear opinion dynamics review emphasizes flexibility."
+      },
+      {
+        "id": "valentini-2017-best",
+        "relation": "Dynamic option quality is an established best-of-n variant."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Identify the strongest existing adaptive baseline and freeze a realistic change-point schedule before protocol selection.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-13",
+    "area": "active-matter",
+    "title": "Same cluster, different mechanism",
+    "question": "Can localized release distinguish density-dependent motility from alignment-driven aggregation when snapshots look similar?",
+    "hypothesis": "A temporary local motility release will dissolve density-trapped clusters differently from equally dense alignment clusters, allowing a small intervention to identify mechanism.",
+    "test": "Construct two simulated particle models calibrated to similar cluster-size and density distributions. Randomize independent realizations to a local speed pulse, local heading randomization or sham pulse. Freeze calibration before testing and compare both immediate transport and return to the previous state on held-out densities.",
+    "baseline": "Constant-speed repulsive particles and a non-interacting density-matched snapshot distinguish collective feedback from passive dispersal.",
+    "metrics": [
+      "Escape flux",
+      "Cluster lifetime",
+      "Polarization change",
+      "Recovery trajectory prediction"
+    ],
+    "falsifier": "No intervention separates the fitted models at measurement resolution, or discrimination comes entirely from unmatched initial densities or speeds.",
+    "confounds": "Similar shapes do not imply equivalent dynamics. Soft overlaps, boundaries and definitions of a cluster can create artificial differences; report the result as identification within explicit model families rather than a universal diagnostic.",
+    "prior": [
+      {
+        "id": "fily-2012-athermal",
+        "relation": "Established phase separation without alignment is the competing mechanism."
+      },
+      {
+        "id": "cates-2015-motility",
+        "relation": "Review supplies density-speed feedback context."
+      },
+      {
+        "id": "vicsek-1995-novel",
+        "relation": "Alignment reference, requiring additional cohesion or confinement for fair comparison."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Choose two models that can genuinely be matched on baseline observables; verify that perturbations do not change particle number or packing fraction.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-14",
+    "area": "active-matter",
+    "title": "Wall geometry as a control input",
+    "question": "Can boundary shape guide an inertial robot aggregate while preserving useful bulk mixing?",
+    "hypothesis": "A shaped boundary will bias collective transport, but apparent guidance will partly be paid for by trapping particles near walls and reducing bulk exploration.",
+    "test": "Randomize independent simulations of inertial active rods among circular, asymmetric and deformable arenas with equal accessible area. Match propulsion, dissipation and wall interaction law; assign source and target regions independently of the shape orientation. Score transport and visited area across complete episodes, then rotate the geometry as a directional control.",
+    "baseline": "An isotropic boundary and a propulsion-bias controller with matched energy provide geometry-only and actuation comparators.",
+    "metrics": [
+      "Net material transport",
+      "Bulk area visited",
+      "Wall residence time",
+      "Work proxy",
+      "Target arrival rate"
+    ],
+    "falsifier": "Boundary shaping produces no directional advantage, or apparent gain disappears after accounting for wall-trapped mass.",
+    "confounds": "Geometry changes collision frequency and effective area. The source system uses inertial vibration-driven rods, so an overdamped point-particle simulator is not a faithful replication. Shapes must not grant a shorter trivial route.",
+    "prior": [
+      {
+        "id": "deblais-2018-boundaries",
+        "relation": "Closest prior already demonstrates surface clusters and arena transport."
+      },
+      {
+        "id": "deseigne-2010-collective",
+        "relation": "Physical bounded polar-disk system illustrates boundary and collision effects."
+      },
+      {
+        "id": "brambilla-2013-swarm",
+        "relation": "Task-oriented robotics context rather than evidence of this trade-off."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Recover an inertial rod model and establish comparable accessible area; later hardware validation would require suitable actuators and an arena.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-15",
+    "area": "active-matter",
+    "title": "Delayed density sensing in motility control",
+    "question": "Does delayed quorum sensing destabilize otherwise stable active-particle aggregates?",
+    "hypothesis": "Delayed density-dependent speed updates will induce repeated aggregation and dissolution beyond a response-time range, and hysteretic switching may suppress that cycle.",
+    "test": "Randomize simulated particle populations to instantaneous, delayed or hysteretic speed control with matched sensing range and mean propulsion budget. Introduce a standardized density displacement after equilibration and evaluate independent realizations over long horizons. Compare explicit asynchronous update clocks with synchronous updates at the same mean rate.",
+    "baseline": "Constant motility, instantaneous quorum control and a low-pass filtered estimate separate delay from measurement noise.",
+    "metrics": [
+      "Aggregate persistence",
+      "Density oscillation amplitude",
+      "Response overshoot",
+      "Energy proxy",
+      "Time outside target density"
+    ],
+    "falsifier": "Delay causes only a smooth slowing without cycles, or hysteresis fails to improve persistence at matched energy and target density.",
+    "confounds": "The experimental anchor computes local rules externally using camera and laser infrastructure. It does not establish autonomous colloid sensing. Numerical time steps, delayed-state interpolation and density estimation can create spurious oscillations.",
+    "prior": [
+      {
+        "id": "bauerle-2018-self",
+        "relation": "Closest experimental quorum-motility rule; heading is not directly controlled."
+      },
+      {
+        "id": "cates-2015-motility",
+        "relation": "Density-speed positive feedback explains a plausible instability mechanism."
+      },
+      {
+        "id": "fily-2012-athermal",
+        "relation": "Constant-rule active-particle baseline."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Reproduce the undelayed rule and derive dimensionless delay relative to rotational and aggregation times before choosing a sweep.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-16",
+    "area": "active-matter",
+    "title": "Reciprocity and useful collective rotation",
+    "question": "Can asymmetric interactions generate useful rotation without simply increasing total actuation?",
+    "hypothesis": "Changing the balance of reciprocal and non-reciprocal coupling at fixed overall strength will induce persistent rotation in some regimes, but only part of that rotation will transfer work to a load.",
+    "test": "Randomize independent two-population active-particle simulations to reciprocal, directional and sign-reversed interaction matrices normalized to the same total coupling norm. Add an identical passive rotor or cargo after equilibration. Evaluate unloaded and loaded conditions and measure outcomes per population realization.",
+    "baseline": "Reciprocal coupling, externally driven rotation with matched power and label-swapped populations provide mechanism and efficiency controls.",
+    "metrics": [
+      "Angular current",
+      "Load displacement",
+      "Input power proxy",
+      "Rotation persistence",
+      "Population segregation"
+    ],
+    "falsifier": "Changing reciprocity produces no persistent rotation at matched total forcing, or reciprocal coupling produces the same rotation under matched initial conditions. Loaded efficiency remains exploratory.",
+    "confounds": "Coupling normalization does not guarantee identical physical energy consumption; specify the accounting model. Phenomenological interaction matrices may lack a realizable local controller, and spontaneous clockwise versus anticlockwise choices must be aligned only for analysis.",
+    "prior": [
+      {
+        "id": "fruchart-2021-non",
+        "relation": "Closest theoretical framework links non-reciprocity and time-dependent phases."
+      },
+      {
+        "id": "ceron-2023-diverse",
+        "relation": "Related heterogeneous chiral structures; model-specific offsets need scrutiny."
+      },
+      {
+        "id": "deblais-2018-boundaries",
+        "relation": "Embodied collective transport provides an analogy, not a validation of the chosen interaction law."
+      }
+    ],
+    "novelty": "speculative",
+    "feasibility": "offline",
+    "needs": "Read the non-reciprocal model equations and define load coupling and an honest actuation budget; physical implementation remains separate.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-17",
+    "area": "active-matter",
+    "title": "Recovery of shape versus recovery of function",
+    "question": "Does an acoustically coupled aggregate that regains its shape also regain its sensing and transport performance?",
+    "hypothesis": "Morphological recovery will precede functional recovery when damage changes phase or frequency organization without removing many particles.",
+    "test": "Randomize complete simulated aggregates to equal-size particle removal, phase scrambling, spatial displacement or sham perturbation. Reuse matched initial states and evaluate an independently defined reflecting-object detection or target-transport task before and after damage. Analyse episode-level recovery times and include failures that never recover within the horizon.",
+    "baseline": "Undamaged aggregates and a geometry-only reassembly rule control for elapsed time and shape restoration without acoustic organization.",
+    "metrics": [
+      "Task accuracy",
+      "Useful transport rate",
+      "Shape similarity",
+      "Functional recovery time",
+      "Acoustic signal budget"
+    ],
+    "falsifier": "Task performance returns whenever shape does, or the acoustic policy offers no recovery advantage beyond a geometry-only controller.",
+    "confounds": "A pretty regrowth animation is not task evidence. Wave reflections, boundary conditions and numerical field solvers can create behaviour; the cited acoustic result is a model study, not microrobot hardware proof.",
+    "prior": [
+      {
+        "id": "ziepke-2025-acoustic",
+        "relation": "Closest prior already reports regeneration and acoustic collective functions."
+      },
+      {
+        "id": "slavkov-2018-morphogenesis",
+        "relation": "Robot regrowth is an analogous recovery mechanism with different physical assumptions."
+      },
+      {
+        "id": "bauerle-2018-self",
+        "relation": "Quorum-controlled shapes offer a different organization baseline."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Confirm accessible acoustic simulation code or budget a faithful implementation; select a functional task independent of the shape score.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/nca-observatory.md"
+    ]
+  },
+  {
+    "id": "PHY-18",
+    "area": "active-matter",
+    "title": "Transport by fluctuating active flows",
+    "question": "Can a deliberately disordered active flow transport tracers more effectively than an ordered flock at the same propulsion budget?",
+    "hypothesis": "Intermediate temporal disorder will improve mixing and target encounter rates, while strongly aligned motion will maximize directional transport but leave poorly explored regions.",
+    "test": "Randomize independently seeded simulated active populations to interaction rules spanning ordered, clustered and fluctuating regimes. Release passive tracers from held-out locations with matched propulsion and particle density. Evaluate mixing and directional delivery as distinct tasks on periodic and bounded domains; analyse simulation episodes rather than individual tracer samples as independent replicates.",
+    "baseline": "Passive diffusion matched to short-time displacement, constant directed advection and non-interacting active particles provide simple baselines.",
+    "metrics": [
+      "Mixing time",
+      "First-passage distribution",
+      "Unvisited volume fraction",
+      "Net delivery",
+      "Propulsion budget"
+    ],
+    "falsifier": "No fluctuating regime improves task performance over matched passive or directed baselines, or gains vanish when boundary recirculation is removed.",
+    "confounds": "Active turbulence is not ordinary inertial turbulence, and a spectral power law does not establish useful mixing. Tracers sharing one flow are dependent; fluid-mediated transport cannot be inferred from point particles without a coupling model.",
+    "prior": [
+      {
+        "id": "alert-2022-active",
+        "relation": "Review context for fluctuating active flows; not evidence of the specific task optimum."
+      },
+      {
+        "id": "fily-2012-athermal",
+        "relation": "Clustering without alignment supplies a contrasting regime."
+      },
+      {
+        "id": "vicsek-1995-novel",
+        "relation": "Ordered motion supplies a deliberately different transport baseline."
+      }
+    ],
+    "novelty": "speculative",
+    "feasibility": "offline",
+    "needs": "Choose consistent tracer coupling and inspect active-mixing prior work before claiming novelty.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-19",
+    "area": "swarm-robotics",
+    "title": "Who creates the observed coordination?",
+    "question": "How much apparent yielding and collision avoidance comes from a learned policy versus a testbed safety filter?",
+    "hypothesis": "Some coordination attributed to the policy will be introduced by command projection; policy rankings will change when evaluated on raw commands as well as executed motion.",
+    "test": "Replay identical simulated navigation episodes with each controller followed by no filter, the same collision-avoidance filter or a minimal independent filter. Randomize controller-filter combinations across paired seeds and log both proposed and executed commands. No unsafe physical runs are required; compare episode-level success and intervention burden.",
+    "baseline": "A naive goal controller with the full safety filter and the learned controller without it separate policy capability from infrastructure support.",
+    "metrics": [
+      "Success rate",
+      "Collision rate in simulation",
+      "Filter intervention magnitude",
+      "Travel delay",
+      "Raw-command safety margin"
+    ],
+    "falsifier": "Rankings and coordination signatures remain unchanged across filters, with negligible projection in successful episodes.",
+    "confounds": "Removing a filter can move the policy outside its design assumptions; that limitation should be reported rather than hidden. Hardware testbeds may use global tracking, so results are not automatically local-sensing swarm results.",
+    "prior": [
+      {
+        "id": "pickem-2017-robotarium",
+        "relation": "Closest source explicitly uses barrier-certificate command projection."
+      },
+      {
+        "id": "zhang-2025-learning",
+        "relation": "Recent learned communication-free navigation motivates careful attribution."
+      },
+      {
+        "id": "gh-proroklab-vectorizedmultiagentsimulator",
+        "relation": "Possible batched simulation environment; its physics differs from an aerial robot."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Identify the exact deployed control stack and preserve intended operating constraints; first audit policies in simulation only.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-20",
+    "area": "swarm-robotics",
+    "title": "When a few messages add value",
+    "question": "Does limited communication help decentralized navigation specifically when visual observations are ambiguous?",
+    "hypothesis": "A small intent message will improve throughput under occlusion and symmetric encounters more than under fully visible scenes, provided it is fresh and reliable.",
+    "test": "Train or obtain paired navigation controllers with the same sensors and parameter budget, allowing one a fixed-rate local intent channel. Randomize held-out simulated episodes to visibility conditions, message delay and silent-channel controls. Keep safety filtering identical and analyse whole-episode success, travel time and communication cost.",
+    "baseline": "A stronger vision-only policy, a stale-message condition and a centralized intent oracle bound the incremental value of communication.",
+    "metrics": [
+      "Collision-free completion",
+      "Bottleneck throughput",
+      "Time-to-goal",
+      "Bytes per completed task",
+      "Sensitivity to stale messages"
+    ],
+    "falsifier": "Messages offer no improvement over the matched vision-only controller, or gains require unrealistic latency or hidden global state.",
+    "confounds": "Adding a communication module also changes training capacity and optimization. Co-navigation does not establish flocking, and simulation throughput does not establish flight safety or hardware scalability.",
+    "prior": [
+      {
+        "id": "zhang-2025-learning",
+        "relation": "Closest recent communication-free co-navigation anchor."
+      },
+      {
+        "id": "choi-2026-communication",
+        "relation": "Recent implicit leader-following with local LiDAR motivates comparison under constrained sensing."
+      },
+      {
+        "id": "berlinger-2021-implicit",
+        "relation": "Underwater visual coordination illustrates an embodied alternative with different optics."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "training",
+    "needs": "Confirm released policies, training recipe and compute budget; define message contents that can actually be produced by local observations.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-21",
+    "area": "swarm-robotics",
+    "title": "Correlated disturbances in transfer",
+    "question": "Do policies robust to independent sensor noise fail when an entire swarm shares the same bias?",
+    "hypothesis": "Shared localization or timing errors will cause larger collective failures than independent errors of the same marginal magnitude; training only with independent noise will overstate resilience.",
+    "test": "Randomize held-out simulated multi-robot episodes to independent, spatially correlated or common-mode disturbances, matching each robot's marginal error distribution. Compare a frozen controller with versions trained using each noise structure. Use identical task layouts, actuator bounds and safety filters; treat entire episodes and training seeds as separate uncertainty levels.",
+    "baseline": "Noise-free evaluation and a simple geometry-based controller provide ceilings and interpretable references.",
+    "metrics": [
+      "Group completion",
+      "Collision count",
+      "Systematic drift",
+      "Error amplification",
+      "Performance per training seed"
+    ],
+    "falsifier": "Matched shared noise causes no extra degradation, or independently randomized training generalizes equally to all correlation structures.",
+    "confounds": "A global coordinate shift can be harmless if the task shifts with it; perturb sensors while keeping world truth fixed. Common random numbers aid paired comparison but are not extra independent trials. Hardware transfer remains untested.",
+    "prior": [
+      {
+        "id": "zhang-2025-learning",
+        "relation": "Simple-physics sim-to-real policy is the relevant transfer context."
+      },
+      {
+        "id": "sun-2023-mean",
+        "relation": "Common reference-frame dependence creates a concrete shared-error pathway."
+      },
+      {
+        "id": "gh-proroklab-vectorizedmultiagentsimulator",
+        "relation": "Candidate simulation scaffold; no claim that its stock scenarios reproduce either paper."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "training",
+    "needs": "Choose a released controller and define physically meaningful sensor perturbations; read existing correlated domain-randomization work.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-22",
+    "area": "swarm-robotics",
+    "title": "Correlated evidence in physical identity vetting",
+    "question": "Does collaborative identity vetting remain reliable when neighbours share correlated radio-observation errors?",
+    "hypothesis": "Collaborative voting will overstate confidence when trust observations have shared bias; explicit dependence-aware aggregation will reduce false exclusion at a possible detection delay cost.",
+    "test": "In an authorized synthetic radio-observation simulator, randomize whole network episodes to independent versus common-mode errors with identical per-message accuracy. Add a fixed number of simulated duplicate identities and keep physical transmitters constant. Compare trust aggregation on the same observation traces; score whole-network outcomes and never target live networks.",
+    "baseline": "The published independence-based scheme, direct local vetting and an oracle physical-identity map are reference conditions.",
+    "metrics": [
+      "False exclusion of legitimate robots",
+      "Duplicate-identity acceptance",
+      "Rounds to decision",
+      "Target-tracking error"
+    ],
+    "falsifier": "Correlation has no measurable effect, or the proposed correction sacrifices detection without reducing false exclusions.",
+    "confounds": "Physical transmitter identity differs from software authorship. Multiple actual radios, mobility and multipath violate different assumptions and should not be conflated. Synthetic scores cannot establish real radio robustness.",
+    "prior": [
+      {
+        "id": "mallmann-trenn-2021-crowd",
+        "relation": "Closest collaborative vetting prior; record explicitly notes independence and static-membership assumptions."
+      },
+      {
+        "id": "gil-2015-guaranteeing",
+        "relation": "Underlying spatial radio-fingerprint evidence, with physical assumptions."
+      },
+      {
+        "id": "leblanc-2013-resilient",
+        "relation": "Robust consensus context; graph robustness is not a substitute for a reliable identity signal."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Read the original guarantee and reproduce it under its own assumptions before relaxing observation independence.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-23",
+    "area": "swarm-robotics",
+    "title": "Seed dependence in shape formation",
+    "question": "How much of distributed shape assembly relies on a small privileged set of coordinate seeds?",
+    "hypothesis": "Losing coordinate seeds early will damage goal-shape accuracy more than losing the same number of ordinary robots, even when surviving robots remain connected.",
+    "test": "Randomize independently seeded shape-assembly simulations to equal-count seed failure, ordinary-node failure or sham removal at matched assembly stages. Include stationary failed bodies as well as removed bodies. Compare coordinate-based and seedless morphogenetic controllers on compatible shape tasks, separating precise shape fidelity from successful connected assembly.",
+    "baseline": "Random robot failure is the primary comparator; an intact seeded controller and a global-coordinate oracle reveal localization dependence.",
+    "metrics": [
+      "Shape error",
+      "Completion time",
+      "Connected mass",
+      "Localization inconsistency",
+      "Recovery from seed loss"
+    ],
+    "falsifier": "Seed failures are no worse than matched ordinary failures, or the effect disappears once physical blockage and available robot count are controlled.",
+    "confounds": "Seedless organic growth need not solve the same specified-shape problem. Give each method an attainable target and do not declare a winner on incompatible objectives; simulator localization may leak global coordinates.",
+    "prior": [
+      {
+        "id": "rubenstein-2014-programmable",
+        "relation": "Closest seeded programmable shape-assembly reference."
+      },
+      {
+        "id": "slavkov-2018-morphogenesis",
+        "relation": "Seedless morphogenesis is a contrasting task family, not a drop-in equivalent."
+      },
+      {
+        "id": "gh-jic-csb-kilombo",
+        "relation": "Possible controller-level simulation route; catalogue says it has not been run."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Retrieve compatible controller implementations and verify exactly which robots receive coordinate information; old simulator dependencies may need repair.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-24",
+    "area": "swarm-robotics",
+    "title": "Damage recovery with immobile survivors",
+    "question": "Do swarms that recover after robots are removed also recover when damaged robots remain as obstacles?",
+    "hypothesis": "Recovery will be substantially worse when failed bodies occupy important passages, and local failure-aware rerouting will help more than simply adding healthy robots.",
+    "test": "Randomize whole simulated assembly or transport episodes to equal-count removal, actuator failure in place, communication failure or combined failure. Match the location and timing of each failure across treatments. Compare standard local rules with explicit blocked-region avoidance, and measure functional task recovery independently from reformed shape.",
+    "baseline": "The same number of robots absent from initialization controls for lower capacity; static obstacle insertion controls for physical blockage.",
+    "metrics": [
+      "Recovered task throughput",
+      "Persistent trapped mass",
+      "Recovery time",
+      "Collision pressure proxy",
+      "Additional motion cost"
+    ],
+    "falsifier": "In-place failures are no worse than removal after geometry matching, or failure-aware rerouting gives no advantage over a generic obstacle controller.",
+    "confounds": "Disabled agents that still transmit differ from silent obstacles. A point-particle model cannot test jamming, and a regrown image says nothing about cargo transport or task competence.",
+    "prior": [
+      {
+        "id": "slavkov-2018-morphogenesis",
+        "relation": "Regrowth after removed material motivates the stronger failure model."
+      },
+      {
+        "id": "sun-2023-mean",
+        "relation": "Shape assembly and cargo transport offer separate geometric and functional outcomes."
+      },
+      {
+        "id": "gh-ilpincy-argos3",
+        "relation": "Potential embodied simulator, subject to controller and contact-model verification."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Find the exact source damage protocol and choose a simulator with contact and actuator-failure semantics.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/nca-observatory.md"
+    ]
+  },
+  {
+    "id": "PHY-25",
+    "area": "sync-consensus",
+    "title": "The order of communication opportunities",
+    "question": "Can two networks with identical aggregate connectivity have very different finite-time consensus because contacts occur in a different order?",
+    "hypothesis": "Schedules that repeatedly isolate the same subgroup will converge more slowly than temporally interleaved contacts, despite equal edge counts and identical aggregated graphs.",
+    "test": "Construct paired contact sequences with the same edges, total contact duration and aggregate Laplacian but different ordering. Randomize independent network episodes to schedules and initial states, then apply one fixed consensus rule. Repeat with a moving-agent-generated contact sequence to test whether the controlled result survives a physical encounter process.",
+    "baseline": "A static time-averaged graph and randomized edge ordering are the main comparators; disconnected schedules are a known failure control.",
+    "metrics": [
+      "Time to specified disagreement",
+      "Error at fixed deadline",
+      "Temporal reachability",
+      "Communication cost"
+    ],
+    "falsifier": "Ordering makes no practical difference over the allowed schedules, or the effect is completely captured by unmatched total contact time.",
+    "confounds": "Asymptotic joint-connectivity theorems do not guarantee a useful finite deadline. Row-stochastic versus average-preserving rules can converge to different values; report both agreement and error to the intended target.",
+    "prior": [
+      {
+        "id": "jadbabaie-2003-coordination",
+        "relation": "Established joint-connectivity convergence result, not a finite-time ranking claim."
+      },
+      {
+        "id": "ren-2005-consensus",
+        "relation": "Directed switching-network convergence context."
+      },
+      {
+        "id": "fujiwara-2011-synchronization",
+        "relation": "Mobile-network timescale separation motivates the physical follow-up."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Define update weights that preserve the intended consensus quantity and review known temporal-network rate bounds before claiming novelty.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-26",
+    "area": "sync-consensus",
+    "title": "Fast consensus under realistic link delays",
+    "question": "Does adding long-range links still accelerate agreement when their latency and service cost are included?",
+    "hypothesis": "Shortcuts will help only below a latency-and-budget boundary; nominally better connectivity can worsen error at a fixed wall-clock deadline.",
+    "test": "Randomize simulated network episodes to local links, added shortcuts or rewired links with matched total communication budget. Assign delay using a transparent distance-dependent model and compare to zero-delay controls. Hold initial values and packet schedules paired across treatments, and analyse complete network realizations.",
+    "baseline": "The delay-free Laplacian prediction, a budget-matched local graph and an oracle instantaneous graph bound the achievable speed.",
+    "metrics": [
+      "Disagreement at deadline",
+      "Consensus bias",
+      "Delivered message count",
+      "Delay-induced oscillation",
+      "Wall-clock convergence time"
+    ],
+    "falsifier": "Shortcut gains persist across the stated delay regime without extra cost, or worse results are solely caused by accidentally reducing baseline update frequency.",
+    "confounds": "Different delayed-consensus formulations have different stability conditions. Sampling an old state, delaying delivery and freezing the receiver are distinct mechanisms; no theorem should be extended beyond its assumptions.",
+    "prior": [
+      {
+        "id": "olfati-saber-2004-consensus",
+        "relation": "Closest theoretical anchor links topology, convergence and delay assumptions."
+      },
+      {
+        "id": "olfati-saber-2007-consensus",
+        "relation": "Review reports shortcut benefits and provides baseline context."
+      },
+      {
+        "id": "ren-2005-consensus",
+        "relation": "Unreliable directed exchange is related but not automatically the same delay model."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Inspect exact delayed update equations and identify a physical latency range before designing the benchmark.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-27",
+    "area": "sync-consensus",
+    "title": "Movement as a synchronization resource",
+    "question": "Can purposeful mixing synchronize locally coupled oscillators more efficiently than increasing their coupling strength?",
+    "hypothesis": "Occasional movement between weakly connected regions will outperform stronger within-region coupling at equal energy proxy, but only if travel changes encounters before local clusters lock into incompatible phases.",
+    "test": "Randomize independent mobile-oscillator groups to static placement, random mixing or targeted bridging movement while holding the contact radius and total movement budget fixed. Compare increased coupling under an explicitly stated alternative energy cost. Use held-out arena partitions, paired initial frequencies and whole-group trajectories as replicates.",
+    "baseline": "A fully mixed static graph is an information ceiling; random movement with the same path length controls for targeted bridging.",
+    "metrics": [
+      "Frequency-locking time",
+      "Residual phase disagreement",
+      "Travel cost",
+      "Contact diversity",
+      "Total control effort"
+    ],
+    "falsifier": "Targeted movement adds no synchronization benefit over budget-matched random motion or stronger coupling.",
+    "confounds": "Moving agents alter spatial density as well as encounters. A one-way model where phase never affects motion differs from swarmalators; energy proxies require sensitivity analysis and cannot be called real hardware power measurements.",
+    "prior": [
+      {
+        "id": "fujiwara-2011-synchronization",
+        "relation": "Closest prior establishes competition between movement and local synchronization times."
+      },
+      {
+        "id": "amichay-2025-integration",
+        "relation": "Review framing highlights interaction-network mixing."
+      },
+      {
+        "id": "dorfler-2014-synchronization",
+        "relation": "Synchronization definitions and static-network reference conditions."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Read the original motion process and select a budget model; check existing mobile-relay synchronization controllers.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-28",
+    "area": "sync-consensus",
+    "title": "A useful phase wave without global synchrony",
+    "question": "Can a low global phase order hide a stable, useful spatial coordination pattern?",
+    "hypothesis": "A stable phase wave will support sequential activation around a ring while global synchrony ranks it lower despite higher sequential-task utility.",
+    "test": "Randomize independently initialized swarmalator simulations to phase-wave, clustered-sync and asynchronous regimes confirmed from the model. Assign a ring-inspection task requiring sequential local activations, with matched total activation count. Compare task utility and joint position-phase measures with global phase order, using held-out initial conditions and complete simulation realizations as units.",
+    "baseline": "A scripted travelling-wave schedule provides a task ceiling; independently shuffled phases at fixed positions provide a matched low-global-order null.",
+    "metrics": [
+      "Coverage gaps",
+      "Activation collisions",
+      "Joint position-phase order",
+      "Global phase order",
+      "Task completion time"
+    ],
+    "falsifier": "Low global order does not coincide with useful sequential activation, or joint order adds no predictive value over direct local timing statistics.",
+    "confounds": "This is a metric-and-task demonstration, not discovery of phase waves. Global synchrony might be correct for a different task; the toy ring does not establish utility for drones or biological swarms.",
+    "prior": [
+      {
+        "id": "yoon-2022-sync",
+        "relation": "Closest solvable model already has phase-wave states."
+      },
+      {
+        "id": "ceron-2023-diverse",
+        "relation": "Richer spatial and phase patterns reinforce the metric distinction."
+      },
+      {
+        "id": "gh-khev-swarmalators",
+        "relation": "Potential reference implementation; not run in this pass."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "offline",
+    "needs": "Reproduce the source phase-wave regime and define the sequential task independently of the joint-order metric.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-29",
+    "area": "sync-consensus",
+    "title": "How distribution tails change swarmalator predictions",
+    "question": "Do analytic swarmalator predictions based on Lorentzian frequency disorder remain useful for bounded physical populations?",
+    "hypothesis": "The qualitative states will persist under bounded disorder, but synchronization boundaries and rare-agent escape rates will shift enough to matter for small swarms.",
+    "test": "Randomize independent ring-swarmalator simulations to Lorentzian, truncated Lorentzian and bounded frequency distributions, matching robust central spread rather than a nonexistent Lorentzian variance. Use identical population sizes, coupling and initial phase-position draws; evaluate state frequencies over a predeclared horizon and compare held-out parameter settings.",
+    "baseline": "The source Lorentzian condition validates implementation; identical-frequency populations provide a simpler limit.",
+    "metrics": [
+      "State occupancy",
+      "Frequency-locking fraction",
+      "Outlier escape rate",
+      "Transition-location error",
+      "Sensitivity to population size"
+    ],
+    "falsifier": "After robust spread matching, the same predictions describe all distributions within the predeclared tolerance, or apparent differences disappear when extreme draws are handled consistently.",
+    "confounds": "Truncating tails changes both rare extremes and normalizations. Finite-size, initialization and integration error can mimic a new state; numerical state labels need direct trajectory inspection.",
+    "prior": [
+      {
+        "id": "yoon-2022-sync",
+        "relation": "Closest analytic result uses Lorentzian heterogeneity for tractability."
+      },
+      {
+        "id": "ceron-2023-diverse",
+        "relation": "Related numerical study varies heterogeneity in a different two-dimensional model."
+      },
+      {
+        "id": "dorfler-2014-synchronization",
+        "relation": "Oscillator-disorder context; no automatic transfer of thresholds."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Inspect existing non-Lorentzian follow-ups and establish integration convergence; the novelty claim is deliberately provisional.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-30",
+    "area": "sync-consensus",
+    "title": "Synchrony versus shared-channel congestion",
+    "question": "When does synchronizing activity overload the channel needed to maintain that synchronization?",
+    "hypothesis": "Strongly synchronized message bursts will increase collision or queue delays, reducing useful coordination compared with a phase-spread schedule at the same message rate.",
+    "test": "Couple a documented oscillator model to a synthetic finite-capacity communication queue. Randomize whole network episodes to synchronized, phase-spread and independently timed emissions while preserving total offered traffic. Test ideal delivery separately from queue-dependent delays, and evaluate recovery after a clock disturbance using episode-level outcomes.",
+    "baseline": "An infinite-capacity channel isolates pure synchronization dynamics; deterministic time slots provide a scheduling comparator.",
+    "metrics": [
+      "Delivered freshness",
+      "Queue delay",
+      "Packet loss",
+      "Clock disagreement",
+      "Completed coordination tasks"
+    ],
+    "falsifier": "Synchrony has no delivery penalty under realistic tested service limits, or phase spreading harms task timing more than it helps the channel.",
+    "confounds": "Queue service and collision models are engineering choices and should not be presented as measured radio behaviour. Timestamp accuracy, retry policy and acknowledgement traffic must be included; equal offered traffic is not equal delivered information.",
+    "prior": [
+      {
+        "id": "dorfler-2014-synchronization",
+        "relation": "Provides oscillator and synchronization terminology, not a congestion result."
+      },
+      {
+        "id": "sarfati-2021-self",
+        "relation": "Biological burst synchronization is an analogy, with a very different optical channel."
+      },
+      {
+        "id": "olfati-saber-2004-consensus",
+        "relation": "Delay-sensitive consensus motivates the feedback path from queues to coordination."
+      }
+    ],
+    "novelty": "speculative",
+    "feasibility": "offline",
+    "needs": "Choose a concrete radio or software-message channel model and review synchronization-aware medium-access literature before promotion.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-31",
+    "area": "crowds-and-traffic",
+    "title": "Anticipation versus slower walking",
+    "question": "Can the collective effect of a distracted walker be separated from reduced speed and altered gait?",
+    "hypothesis": "Removing mutual anticipation will disrupt lane formation beyond the effect of simply reducing preferred speed, particularly near the front of counterflow groups.",
+    "test": "In a pedestrian simulator, randomize whole corridor episodes to a subset with reduced anticipation, reduced speed, both changes or sham changes. Match the affected fraction and positions across paired episodes, then test unseen inflow patterns. Use empirical trajectories only for external plausibility checks, not as randomized evidence.",
+    "baseline": "A speed-only intervention and a time-to-collision controller with intact mutual information are key comparators.",
+    "metrics": [
+      "Lane-formation time",
+      "Throughput",
+      "Abrupt avoidance events",
+      "Near-collision count",
+      "Travel-time inequality"
+    ],
+    "falsifier": "Reduced speed alone reproduces the full collective disruption, or anticipation changes have no additional effect at matched encounter rates.",
+    "confounds": "A simulator can encode the conclusion through its collision rule. Include at least two model families; phone use changes attention, gait and intention simultaneously. No live crowd or distraction experiment is proposed here.",
+    "prior": [
+      {
+        "id": "murakami-2021-mutual",
+        "relation": "Closest controlled human evidence motivates the mechanism separation."
+      },
+      {
+        "id": "karamouzas-2014-universal",
+        "relation": "Time-to-collision interaction model supplies an anticipatory alternative."
+      },
+      {
+        "id": "moussaid-2011-simple",
+        "relation": "Vision-based behavioural model gives a contrasting implementation."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "offline",
+    "needs": "Obtain original intervention details and choose models where speed and anticipation can be independently manipulated.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-32",
+    "area": "crowds-and-traffic",
+    "title": "Avoiding congestion without hiding the queue",
+    "question": "Does local admission control improve total throughput, or merely move waiting outside the measured corridor?",
+    "hypothesis": "For bursty arrivals within service capacity, occupancy-based admission will reduce total arrival-to-exit delay versus fixed-rate throttling while preserving completed trip count.",
+    "test": "Randomize independent synthetic corridor episodes to unrestricted entry, local occupancy-based admission or matched inflow throttling. Hold arrival demand and corridor geometry fixed and include all queued agents from arrival to exit. Evaluate transient demand spikes and long-run flow separately; analyse episode totals, not only pedestrians who successfully enter.",
+    "baseline": "A fixed-rate entry meter and a centralized occupancy oracle separate the value of local feedback from generic throttling.",
+    "metrics": [
+      "Completed trips per hour",
+      "Total person-time waiting",
+      "Queue spillback",
+      "Internal speed-density curve",
+      "Unserved demand"
+    ],
+    "falsifier": "Occupancy feedback leaves total delay unchanged or worse than fixed throttling at matched demand, or reduces delay only by serving fewer travellers.",
+    "confounds": "The ant reference does not prove human or robot safety. Contact rules, pheromone-like speed changes and route choices differ; selecting only admitted travellers produces a misleading success metric.",
+    "prior": [
+      {
+        "id": "poissonnier-2019-experimental",
+        "relation": "Closest biological traffic observation motivates inflow regulation, without proving its isolated causal contribution."
+      },
+      {
+        "id": "seyfried-2009-new",
+        "relation": "Bottleneck flow depends strongly on upstream density."
+      },
+      {
+        "id": "gh-pedestriandynamics-jupedsim",
+        "relation": "Candidate pedestrian simulator; no execution or model suitability validation in this pass."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Verify simulator admission semantics and define the outside queue; inspect existing pedestrian and robot admission-control baselines.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-33",
+    "area": "crowds-and-traffic",
+    "title": "Does one smoothing vehicle help beyond a ring?",
+    "question": "How much of minority-controller traffic smoothing survives open boundaries and disruptive merging?",
+    "hypothesis": "A small controlled minority will still reduce speed variance, but throughput benefits will shrink when incoming traffic repeatedly occupies the gaps used for smoothing.",
+    "test": "First reproduce a synthetic single-lane ring with the documented controller. Then randomize independently seeded open-road episodes to controller presence and controlled merge disturbances, with matched demand and vehicle mix. Hold driver parameters fixed across paired conditions; compare entire road-episode metrics including upstream queues.",
+    "baseline": "Human-like following, constant-speed control and the same controller on the ring are comparators; a no-merge open road isolates boundary effects.",
+    "metrics": [
+      "Speed variance",
+      "Completed trips",
+      "Braking events",
+      "Total delay",
+      "Merge-induced disturbances"
+    ],
+    "falsifier": "Benefits match the ring even under the stated merging conditions, or they disappear already in the baseline replication.",
+    "confounds": "Simulated driver responses are not real traffic behaviour. The ring result is established prior work; this is a boundary test, not a novel claim that a minority can smooth traffic. Fuel proxies require an explicit model.",
+    "prior": [
+      {
+        "id": "stern-2018-dissipation",
+        "relation": "Closest field experiment demonstrates smoothing by a single automated vehicle on a ring."
+      },
+      {
+        "id": "sugiyama-2008-traffic",
+        "relation": "Canonical spontaneous ring-road jam reference."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Retrieve the exact controller and choose a validated vehicle-following model; search existing open-road follow-ups before selection.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-34",
+    "area": "crowds-and-traffic",
+    "title": "Confinement and collective rotation",
+    "question": "Can changes in confinement geometry alter collective crowd oscillations without changing local density?",
+    "hypothesis": "In a calibrated mechanical crowd model, changing effective confinement length will alter oscillation frequency even when mean density and activity remain fixed.",
+    "test": "Reproduce the published mechanical model, then randomize independent simulation episodes to arena geometries matched for area and density but varied in relevant confinement lengths. Apply identical small mechanical perturbations and compare mode structure and frequency. Treat this as a simulation intervention; no real crowd manipulation or safety deployment is proposed.",
+    "baseline": "An isotropic arena, a passive mechanical model and zero non-reciprocal coupling distinguish geometry from activity-driven rotation.",
+    "metrics": [
+      "Dominant frequency",
+      "Chiral order",
+      "Displacement amplitude",
+      "Mode localization",
+      "Boundary stress proxy"
+    ],
+    "falsifier": "The proposed length scaling fails across matched geometries or passive confinement alone explains the oscillation signature.",
+    "confounds": "Effective length is ambiguous in irregular spaces and must be defined before fitting. The empirical anchor studied particular venues, not universal crowd thresholds. A fitted mechanical model is not a validated evacuation or early-warning system.",
+    "prior": [
+      {
+        "id": "gu-2025-emergence",
+        "relation": "Closest empirical and mechanical-model anchor already proposes confinement-dependent oscillation scaling."
+      },
+      {
+        "id": "fruchart-2021-non",
+        "relation": "Non-reciprocal transition framework informs the mechanism."
+      },
+      {
+        "id": "deblais-2018-boundaries",
+        "relation": "Active-robot boundary effects offer analogy, not human validation."
+      }
+    ],
+    "novelty": "replication",
+    "feasibility": "offline",
+    "needs": "Read and reproduce source equations and available data; specify geometry-derived length without fitting it to each outcome.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-35",
+    "area": "crowds-and-traffic",
+    "title": "Wider crossings with more directional disorder",
+    "question": "Can widening a crossing reduce efficiency when it also allows more crossing angles?",
+    "hypothesis": "A wider passage will improve flow for fixed desired directions, but may lose that benefit if the added space creates a broader distribution of encounter angles.",
+    "test": "Randomize independent simulated crowd episodes in a factorial design: width and preferred-direction dispersion vary independently, while demand, mean speed and origin-destination distances remain matched. Evaluate multiple collision-rule families and hold out angle distributions. Use the complete crossing episode as the analysis unit.",
+    "baseline": "Width-only changes at fixed directions and direction-only changes at fixed width separate capacity from disorder.",
+    "metrics": [
+      "Completed crossings",
+      "Travel time",
+      "Lane order",
+      "Near-collision events",
+      "Flow per unit width"
+    ],
+    "falsifier": "Width remains beneficial across all tested direction dispersions or the apparent loss is explained by longer paths rather than reduced organization.",
+    "confounds": "Changing width usually changes density, path length and arrival structure at once. Physical crowd behaviour cannot be certified by a model. The known directional-order transition is prior art; the contribution would be a clean geometry-demand decomposition.",
+    "prior": [
+      {
+        "id": "bacik-2025-order",
+        "relation": "Closest recent theory, simulation and experiment concern loss of lane order under directional heterogeneity."
+      },
+      {
+        "id": "helbing-1995-social",
+        "relation": "Established lane-forming simulation baseline."
+      },
+      {
+        "id": "gh-pedestriandynamics-jupedsim",
+        "relation": "Possible geometry-aware simulation tool; not yet run or checked for this exact model."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "offline",
+    "needs": "Obtain original preferred-direction definition and determine how to match demand and path length across geometries.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-36",
+    "area": "crowds-and-traffic",
+    "title": "Capacity estimates that transfer between bottlenecks",
+    "question": "Does controlling upstream density explain more variation in measured bottleneck capacity than doorway width alone?",
+    "hypothesis": "A model including upstream density and transient occupancy will transfer between geometries better than a width-only capacity rule.",
+    "test": "Use accessible controlled-trajectory data if licensing and metadata permit; fit models leaving entire experimental runs and geometry settings out, not random frames. In simulation, randomize episodes to width and upstream arrival density independently to test the proposed mechanism. Distinguish stationary capacity from short transient bursts and compare both to the source definitions.",
+    "baseline": "A linear width-only predictor, a density-only predictor and a model with run-specific intercepts expose what actually transfers.",
+    "metrics": [
+      "Held-out flow prediction",
+      "Time-gap distribution",
+      "Stationary-window sensitivity",
+      "Calibration by geometry",
+      "Queue accumulation"
+    ],
+    "falsifier": "Width-only predictions transfer equally well, or density adds value only through leakage from simultaneous output measurements.",
+    "confounds": "Short runs may never reach stationarity. Human groups, motivation and measurement regions differ; the nearby dense-stationary-crowd dataset is not a bottleneck-capacity dataset and must not be substituted silently.",
+    "prior": [
+      {
+        "id": "seyfried-2009-new",
+        "relation": "Closest empirical source already identifies upstream-density differences and transient limits."
+      },
+      {
+        "id": "data-juelich-crowd-2019",
+        "relation": "Available trajectory resource is a task-mismatched negative control, with unresolved binary reuse terms."
+      },
+      {
+        "id": "gh-pedestriandynamics-jupedsim",
+        "relation": "Possible simulation intervention route; cannot replace empirical transfer evidence."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "access-dependent",
+    "needs": "Locate actual bottleneck runs with upstream-density metadata and verify reuse terms; fall back to a clearly labelled synthetic-only study if unavailable.",
+    "briefs": []
+  },
+  {
+    "id": "PHY-37",
+    "area": "swarm-robotics",
+    "title": "Neural cellular repair beyond familiar lesion shapes",
+    "question": "Does a learned NCA repair task-critical hidden-state cuts as reliably as equally large random circular lesions?",
+    "hypothesis": "A cut across an active reasoning front will delay valid-solution recovery more than an equal-area random lesion, even when rendered outputs appear similarly restored.",
+    "test": "Using one documented maze NCA checkpoint, randomize held-out puzzle rollouts to hidden-state erasure across the reasoning front, matched-area random erasure or sham damage. Preserve task inputs, freeze weights and pair update randomness. Match erased-state magnitude where feasible; evaluate exact valid paths over a fixed cell-update budget. Analyse independent puzzles, with rollout seeds nested within puzzles.",
+    "baseline": "The source circular-damage condition tests replication; restarting the same checkpoint from the intact input measures whether continued-state repair actually saves work.",
+    "metrics": [
+      "Exact path validity",
+      "Recovery cell updates",
+      "Output-image similarity",
+      "Failure probability"
+    ],
+    "falsifier": "Front-crossing damage is no worse than matched random damage, or apparent differences disappear after erased-state magnitude and pre-damage progress are matched.",
+    "confounds": "The reasoning front must be defined before seeing recovery. Maze NCAs are computational systems, not physical robots; morphology scores and constraint satisfaction are separate outcomes.",
+    "prior": [
+      {
+        "id": "etcheverry-2026-reasoning",
+        "relation": "Closest prior already studies maze damage and adaptive updates; the proposed difference is lesion topology."
+      },
+      {
+        "id": "mordvintsev-2020-growing",
+        "relation": "Earlier learned regeneration baseline; image recovery alone does not test maze validity."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "access-dependent",
+    "needs": "Confirm checkpoint access and training damage, reproduce the baseline and search existing structured-lesion tests.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/nca-observatory.md"
+    ]
+  },
+  {
+    "id": "PHY-38",
+    "area": "swarm-robotics",
+    "title": "Masked parallel updates versus independent cell clocks",
+    "question": "Does an NCA trained with random update masks preserve its task performance under event-driven local execution with stale neighbour reads?",
+    "hypothesis": "Removing common snapshot reads will reduce accuracy at matched cell-update count; extra robustness training may be necessary even when each cell has the same marginal firing rate.",
+    "test": "Randomize held-out NCA maze episodes to source-style masked parallel updates, sequential fresh-state updates, or event-driven updates with bounded read delays. Freeze the learned rule, initial state and total cell updates; vary scheduling independently of task difficulty. Analyse full episodes, with seeds nested within task instances, and separately measure actual execution time.",
+    "baseline": "The released masked-update implementation is the reference; sequential execution with zero read delay separates update ordering from stale information.",
+    "metrics": [
+      "Task success",
+      "Cell updates to criterion",
+      "Wall-clock time",
+      "Long-horizon stability"
+    ],
+    "falsifier": "Task performance and stability remain equivalent across schedules within prespecified tolerance, or degradation is explained entirely by unequal updates rather than execution semantics.",
+    "confounds": "Bernoulli masking emulates asynchrony but need not reproduce a distributed runtime. Dense masked arithmetic is not dormant-cell energy savings. Classical cellular automata are separate controls, not substitutes for learned weights.",
+    "prior": [
+      {
+        "id": "mordvintsev-2020-growing",
+        "relation": "Original learned NCA uses stochastic per-cell masking."
+      },
+      {
+        "id": "etcheverry-2026-reasoning",
+        "relation": "Reasoning NCA reports dense computation before masking, motivating an execution-semantics boundary test."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "access-dependent",
+    "needs": "Obtain runnable weights, specify read/write semantics and check asynchronous-NCA prior work before selecting tolerances.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/nca-observatory.md"
+    ]
+  }
+]

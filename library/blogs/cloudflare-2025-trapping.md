@@ -58,3 +58,8 @@ Product announcement; no measurements of how many bots were trapped, depth distr
 ### Relevance to us
 
 A deployed, internet-scale honeypot (tarpit) aimed at automated agents, with the explicit design choice to deceive rather than block so the adversary does not adapt. Open questions for us: how LLM-driven browsing agents (as opposed to bulk crawlers) behave in such mazes, and whether depth-of-traversal is a robust bot signal once agents are told to watch for generated decoys. Companion detection case: [[cloudflare-2025-perplexity]].
+
+
+## Notes from shadow/sol-g49
+
+Primary page reopened 2026-10-03 through Jina. Its 50B/day AI-crawler requests and just-under-1% all-request share use a different date/denominator from cloudflare-2025-radar HTML-only 4.2% plus Googlebot 4.5%. Mechanism is hidden links into generated noindex decoy pages, with traversal used for bot-signature learning. No public calibrated sensitivity/FPR or labelled traversal dump found; vendor deployment is not efficacy validation.

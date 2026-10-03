@@ -85,3 +85,10 @@ On every push to `main`, CI runs the check and rebuilds `STATUS.md` and `library
 The repo is also a Flight Deck project (`project.yaml`, `artifacts.yaml`, tooling in `.flightdeck/`). Finished
 deliverables go into `artifacts/` through `python3 .flightdeck/fd.py add`, and
 `python3 .flightdeck/fd.py check --strict .` validates them. The Flight Deck checker needs PyYAML too.
+
+## Shared experiment methods
+
+The [agent experiment toolkit](tooling/agent-experiments/README.md) provides reusable protocols, agent and
+context manifests, schemas, statistical guidance and an offline teaching harness for whichever project
+passes the lab's research gates. See its [integration guide](tooling/agent-experiments/INTEGRATION.md) for
+how to adopt it without changing the survey, review or experiment workflow.

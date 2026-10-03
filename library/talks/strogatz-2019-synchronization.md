@@ -27,3 +27,12 @@ No new results; the content is historical narrative by one of the authors.
 ## Relevance to us
 
 Background. Two items are worth carrying: the pulse-coupled (integrate-and-fire) model is the discrete-event counterpart to Kuramoto and closer to how message-passing agents actually interact (nothing happens between messages), and the small-world point that a handful of long-range links collapses path length is the same mechanism Strogatz later invokes for why log-many extra edges can destabilise non-consensus patterns ([[strogatz-2020-networks]]). Primary sources: [[mirollo-1990-synchronization]], [[strogatz-2011-coupled]]; the Watts-Strogatz small-world paper is not yet in the library.
+
+
+## Notes from shadow/sol-w8
+
+In the sampled technical discussion at 18:39-20:13, pulse-coupled relaxation oscillators approach a firing threshold and advance neighbors when they fire, motivated by experimental firefly responses to artificial flashes. At 55:43-57:07 the conversation contrasts local ring-like friendship networks with random connections: local neighborhoods have high clustering but long distances, while random shortcuts can shorten paths. Other portions range over biological rhythms and mathematical exposition, so this is an interview overview rather than a self-contained derivation or replication of the cited results.
+
+Accessible primary-researcher account linking interaction rules and network topology. Treat the illustrative firefly response range and historical claims as interview statements; stronger mathematical sourcing requires the underlying papers.
+
+Read depth for these additional notes: skim.

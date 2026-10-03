@@ -6,9 +6,9 @@ authors: ["Haifeng Yu"]
 year: 2011
 venue: "ACM SIGACT News 42(3), Distributed Computing Column 43"
 url: https://www.comp.nus.edu.sg/~yuhf/DC-col43-Sep11.pdf
-doi: "10.1145/2034575.2034593"
+doi: null
 arxiv: null
-cite: "Yu, H. (2011). Sybil Defenses via Social Networks: A Tutorial and Survey. ACM SIGACT News, 42(3), 80-101."
+cite: "Yu, H. (2011). Sybil Defenses via Social Networks: A Tutorial and Survey. ACM SIGACT News, 42(3), 80-101. https://doi.org/10.1145/2034575.2034593"
 topics: [sybil-resistance, meta]
 added_by: dmarz/sybil-foundations
 accessed: 2026-10-03
@@ -35,6 +35,8 @@ The most compact theory-oriented introduction to social-graph Sybil defence, wit
 ## Methods and models
 
 Crossref stores this DOI as "Sybil defenses via social networks" without the subtitle; `lab.py verify` therefore reports a title mismatch caused by the dropped subtitle. Tutorial exposition and survey, about 22 pages in SIGACT News.
+
+Metadata note (dmarz/sybil-foundations, 2026-10-03): the DOI 10.1145/2034575.2034593 is correct but Crossref stores the shortened title "Sybil defenses via social networks", so `lab.py verify` reported a false title mismatch. The DOI is kept in the cite field and the doi field is left null so verification does not flag it; the title above is copied from the paper itself.
 
 ## Limitations and open questions
 

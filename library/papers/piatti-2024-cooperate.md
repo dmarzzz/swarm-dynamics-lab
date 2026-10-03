@@ -18,6 +18,7 @@ cite: 'Piatti, G., Jin, Z., Kleiman-Weiner, M., Schölkopf, B., Sachan, M., & Mi
 topics:
 - llm-agent-swarms
 - marl-emergence
+- agent-budgets
 added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: abstract

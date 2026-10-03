@@ -1,0 +1,104 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "claude",
+    "model": "claude-opus-5-5",
+    "prompt": "sha256:98715429608ca1c386834a4450950dcdfa6a35d69a1d50a4c1bc88b68fff3b73"
+   },
+   "internalParameters": {
+    "commit": "89b3d0693a90b51839c6c448b7f785bd91164190-dirty",
+    "session": "claude:8e82fefb-10d0-438c-a154-c03a87e46fcb"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "1a6485bc63ea58bda401fabf1772faeb29f6af8724770e118f1301dd131da923"
+     },
+     "uri": "src/fork-merge-setups/build.py"
+    },
+    {
+     "digest": {
+      "sha256": "8740480f7bd92f5f261b9b4a4dfa691cbce7f49919773b04104d26fbd8658d9e"
+     },
+     "uri": "src/fork-merge-setups/prose.html"
+    },
+    {
+     "digest": {
+      "sha256": "a13b4624072fe57861f2d05d4b36f2600bba9160ee14bcd520f55406b84d04b9"
+     },
+     "uri": "src/fork-merge-setups/rigs.json"
+    },
+    {
+     "digest": {
+      "sha256": "0a5183145dc82d5954777e78a62b5cb737c61fdb27a63ddef4f0a90c3da8de9c"
+     },
+     "uri": "src/fork-merge-setups/cards/A.json"
+    },
+    {
+     "digest": {
+      "sha256": "5653b34f92076eebe5b4cbdebc6483b8fa1523df2ba97f212b0e8069e50f3512"
+     },
+     "uri": "src/fork-merge-setups/cards/B.json"
+    },
+    {
+     "digest": {
+      "sha256": "016515ab6bb5291e67b3630207f46c030a6641b659a600bad25bdf0f5dcb7ec4"
+     },
+     "uri": "src/fork-merge-setups/cards/C.json"
+    },
+    {
+     "digest": {
+      "sha256": "559a2e9c196058b42e34814710f5bbbf2d6010c34f5fcdb0acc3a651014f2c5d"
+     },
+     "uri": "src/fork-merge-setups/cards/D.json"
+    },
+    {
+     "digest": {
+      "sha256": "a4e0bed925a52f9abd07b788147da46df24bb2a1e5271fd5b89779bdf18e5ec6"
+     },
+     "uri": "src/fork-merge-setups/cards/E.json"
+    },
+    {
+     "digest": {
+      "sha256": "ef84f81b1457c4dd75059352b7c3e2123f0576dd07b2395adbb32043f5d80f97"
+     },
+     "uri": "src/fork-merge-setups/cards/F.json"
+    },
+    {
+     "digest": {
+      "sha256": "bb01370d14df3855b38c2b1abbbb0bcaee4a5b9114f9496f23ee1c0c53664ddd"
+     },
+     "uri": "synthesis/fork-merge-questions.md"
+    },
+    {
+     "digest": {
+      "gitCommit": "89b3d0693a90b51839c6c448b7f785bd91164190"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/claude"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-03T20:52:40Z",
+    "invocationId": "claude:8e82fefb-10d0-438c-a154-c03a87e46fcb",
+    "startedOn": "2026-10-03T20:52:40Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "b6434d725dcaeb3b1cab20f338262fba2ab362746d4fb6804e5ba241b3831210"
+   },
+   "name": "artifacts/fork-merge-setups/fork-merge-setups-v1.html"
+  }
+ ]
+}
