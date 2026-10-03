@@ -1,0 +1,405 @@
+{
+  "schema": "swarm-lab-source-grounded-ideas-v1",
+  "owner": "vishesh/codex-methods",
+  "status": "exploratory hunches; no novelty claim",
+  "ideas": [
+    {
+      "id": "PX-01",
+      "title": "Separate novelty of wording from novelty of evidence",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "atlas": [
+        "SOC-21",
+        "SOC-22",
+        "SEC-03"
+      ],
+      "briefs": [
+        "memory",
+        "quorum",
+        "collective-sensing"
+      ],
+      "sources": [
+        "pal-2026-context",
+        "pescetelli-2022-variational"
+      ],
+      "nearest_existing": [
+        "VX-01",
+        "VX-20"
+      ],
+      "delta": "A refinement of provenance granularity: ask whether a novelty-based memory policy preserves independent observations when copied reports are paraphrased and independent observations use the same wording.",
+      "comparison": "Cross observation ancestry (copied or independent) with wording (identical or paraphrased). Compare recency, text-similarity novelty and observable-lineage selection at fixed storage and inference caps. Score retained independent useful facts and final accuracy; an oracle selector is a ceiling.",
+      "confounds": "Keep truth, marginal reliability, length and eventual relevance matched. Similarity thresholds must be frozen on separate worlds. Do not equate semantic distance with statistical independence.",
+      "falsifier": "Drop semantic novelty as a provenance substitute if it fails on paraphrased copies or discards independently corroborating observations without an accuracy benefit.",
+      "decision_value": "Choose separate ledger fields for content deduplication and evidence ancestry.",
+      "feasibility": "Deterministic fixture followed by a small agent comparison; no trained cache implementation required initially."
+    },
+    {
+      "id": "PX-02",
+      "title": "Track conclusions that depend on something being absent",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "atlas": [
+        "SEC-06",
+        "SOC-08"
+      ],
+      "briefs": [
+        "memory",
+        "regrowth",
+        "casefile"
+      ],
+      "sources": [
+        "gradel-2024-provenance",
+        "fu-2025-absencebench"
+      ],
+      "nearest_existing": [
+        "VX-06",
+        "VX-39"
+      ],
+      "delta": "Existing repair ideas mainly retract descendants of a false positive fact. Here the invalidated premise is an absence, such as no conflicting reservation or no unresolved counterexample.",
+      "comparison": "Construct reversible scheduling worlds with positive and negative dependencies. Introduce a previously missing conflict after a decision. Compare positive-edge rollback, explicit absence-witness invalidation and full recomputation under equal refresh budgets. Measure stale decisions and valid knowledge retained.",
+      "confounds": "An absence requires a bounded search domain and a completeness witness. An unqueried source is unknown, not negative evidence. Keep the reference solver private to scoring.",
+      "falsifier": "The extension is unnecessary for a task class if positive-only repair is equally correct because every relevant negative premise is already materialized.",
+      "decision_value": "Decide whether the immune-response ledger needs explicit negative dependencies before building a larger repair policy.",
+      "feasibility": "High readiness: small symbolic task generator, then language interface after survey review."
+    },
+    {
+      "id": "PX-03",
+      "title": "Test correction visibility independently of correction storage",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "atlas": [
+        "SEC-07",
+        "SEC-06"
+      ],
+      "briefs": [
+        "memory",
+        "regrowth",
+        "coordination"
+      ],
+      "sources": [
+        "yu-2026-multi",
+        "xu-2025-everything"
+      ],
+      "nearest_existing": [
+        "VX-06",
+        "VX-19"
+      ],
+      "delta": "Distinguish storing a correction from making it visible to all readers. The new axis is consistency of shared reads after an acknowledged write, including agents that never forked.",
+      "comparison": "Replay identical traces under immediate visibility, delayed cache invalidation and per-record version checks. Vary reader delay independently of content. Score stale actions after acknowledgment, useful unaffected reads and synchronization cost.",
+      "confounds": "Log logical read/write versions rather than relying solely on wall-clock timestamps. Do not grant the version-check arm extra evidence. Separate runtime ordering failures from semantic rejection of a visible correction.",
+      "falsifier": "If all failures persist after every reader sees the same corrected version, prioritize reasoning and admission policy rather than cache consistency.",
+      "decision_value": "Locate whether repair belongs in storage semantics, merge logic or agent prompting.",
+      "feasibility": "Deterministic scheduler and mock agents first; low-cost integration check before any API runs."
+    },
+    {
+      "id": "PX-04",
+      "title": "Evaluate safe return over a continuation sequence",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "atlas": [
+        "SEC-48",
+        "SEC-07"
+      ],
+      "briefs": [
+        "regrowth",
+        "institutions"
+      ],
+      "sources": [
+        "xiao-2026-when",
+        "yu-2026-multi"
+      ],
+      "nearest_existing": [
+        "VX-05",
+        "VX-18"
+      ],
+      "delta": "Refines the existing re-entry protocol by testing whether safety checks miss history-dependent recurrence. The question is about evaluation design, not constructing a real backdoor.",
+      "comparison": "Use scripted faults in a closed synthetic environment that activate only after specified benign events. Compare a single clean probe, equal-cost repeated identical probes and held-out varied continuation probes. All policies use the same restricted re-entry permissions; report false release and false quarantine.",
+      "confounds": "Probe suites cannot contain the test sequence or oracle trigger state. Match probe count and compute. Keep trained model compromise separate from external misinformation in the threat model.",
+      "falsifier": "If varied probes do not improve held-out recurrence detection at matched false-quarantine rates, retain the simpler check and document its coverage limits.",
+      "decision_value": "Choose what evidence a release decision must collect and how long recurrence should be observed.",
+      "feasibility": "Safe scripted simulation first; actual compromised models are outside this contribution."
+    },
+    {
+      "id": "PX-05",
+      "title": "Distinguish missing knowledge from missing retrieval keys",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "atlas": [
+        "SOC-23",
+        "SOC-21"
+      ],
+      "briefs": [
+        "regrowth",
+        "memory",
+        "telephone"
+      ],
+      "sources": [
+        "modarressi-2025-nolima",
+        "anthropic-2025-effective"
+      ],
+      "nearest_existing": [
+        "VX-07",
+        "VX-10"
+      ],
+      "delta": "The existing loss audit checks hidden backups. This extension separates actual fact loss from retained facts whose index, wording or location no longer matches the recovery query.",
+      "comparison": "Cross fact retention with index retention, and exact lexical matches with indirect semantic references. Compare blind restart, index rebuild and new observation gathering at equal access cost. Score recovered facts and decision success, with provenance proving the route used.",
+      "confounds": "Rebuilding an index is not reacquiring evidence. Hold the surviving fact set constant within retrieval comparisons; renaming must not alter information content or authority.",
+      "falsifier": "If an index rebuild explains recovery, reject the claim that the system reconstructed genuinely lost knowledge in that condition.",
+      "decision_value": "Prevent a retrieval improvement from being advertised as swarm regeneration; select the cheapest repair that restores function.",
+      "feasibility": "Small file-based fixture; semantic paraphrases require a held-out check for equivalent meaning."
+    },
+    {
+      "id": "PX-06",
+      "title": "Give an omission detector a bounded completeness contract",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "atlas": [
+        "SOC-08",
+        "SOC-32"
+      ],
+      "briefs": [
+        "quorum",
+        "casefile",
+        "collective-sensing"
+      ],
+      "sources": [
+        "fu-2025-absencebench",
+        "gradel-2024-provenance"
+      ],
+      "nearest_existing": [
+        "VX-30"
+      ],
+      "delta": "Instead of asking whether something seems missing, vary what completeness evidence the investigator is entitled to use. This tests when a checklist can justify stopping or an absence claim.",
+      "comparison": "Compare a public schema of required fields, a signed count manifest, the original full record as an oracle diagnostic, and no manifest. Delete records by known random and outcome-dependent mechanisms. Score omission recall, false accusations and unsupported causal conclusions.",
+      "confounds": "A count identifies a gap without identifying its content. Original-record access changes the task and cannot be compared as an equal-information deployed arm. Keep manifest generation independent of treatment outcome.",
+      "falsifier": "If improvement requires the original answer-bearing record, the deployed completeness rule is unsupported; if counts suffice, avoid expensive semantic verification.",
+      "decision_value": "Choose the minimum observability contract for the casefile and stopping rule.",
+      "feasibility": "High readiness with synthetic event logs and deterministic deletions."
+    },
+    {
+      "id": "PX-07",
+      "title": "Measure independence before intervention and after attrition",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "atlas": [
+        "SOC-02",
+        "SOC-38",
+        "SOC-01"
+      ],
+      "briefs": [
+        "diversity",
+        "collective-sensing"
+      ],
+      "sources": [
+        "pescetelli-2022-variational",
+        "wu-2026-scaling"
+      ],
+      "nearest_existing": [
+        "VX-20",
+        "VX-30"
+      ],
+      "delta": "Effective-size estimates may change because communication changes decisions or because correlated workers stop responding. Separate those mechanisms and distinguish covariance over task worlds from agreement within a task.",
+      "comparison": "Collect explicit private initial and final answers from a fixed roster; introduce independent and difficulty-dependent dropout schedules. Compare complete-case estimates with roster-level error and missingness summaries. Report covariance matrices within prespecified difficulty strata, not just a scalar.",
+      "confounds": "Missing answers are not automatically correct or wrong; report completion and conditional accuracy separately. Do not infer private cognition from hidden reasoning. Equalize evidence unions and total compute.",
+      "falsifier": "Reject a claimed independence gain if it vanishes when the same roster and task strata are compared, or if completion loss accounts for improved conditional accuracy.",
+      "decision_value": "Specify a defensible measurement contract for the collaboration with the effective-team-size research line.",
+      "feasibility": "Analysis on synthetic outcomes first; agent data only after protocol review."
+    },
+    {
+      "id": "PX-08",
+      "title": "Protect a rare view without rewarding a wrong view",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "atlas": [
+        "SOC-09",
+        "SOC-10",
+        "SOC-07"
+      ],
+      "briefs": [
+        "dissent",
+        "diversity",
+        "whistleblowing"
+      ],
+      "sources": [
+        "pescetelli-2022-variational",
+        "edmondson-1999-psychological"
+      ],
+      "nearest_existing": [
+        "VX-04",
+        "VX-29"
+      ],
+      "delta": "Refines evidence-seeking criticism by separating preservation of a minority report from promotion of its conclusion. A group can retain dissent while appropriately rejecting its answer.",
+      "comparison": "Cross minority correctness with observation independence and confidence. Compare unconditional minority amplification, an evidence-retention channel and ordinary discussion. Keep messages and verification opportunities equal. Score preserved facts, correct revisions, polarization and final accuracy separately.",
+      "confounds": "A correct minority must not receive more evidence by design. Human psychological safety is only an analogy for incentive structure; no feelings are attributed to agents. Correlation-based support is already prior art.",
+      "falsifier": "Drop amplification if it increases persistent disagreement without improving decisions; retention can still be useful if it preserves later-verifiable evidence.",
+      "decision_value": "Choose whether the critic role protects evidence access or presumes the minority is correct.",
+      "feasibility": "Scripted critics first, then a small paired agent study with held-out difficulty."
+    },
+    {
+      "id": "PX-09",
+      "title": "Require evidence before compressing examples into a rule",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "atlas": [
+        "SOC-21",
+        "SOC-31",
+        "SEC-06"
+      ],
+      "briefs": [
+        "culture",
+        "memory",
+        "institutions",
+        "telephone"
+      ],
+      "sources": [
+        "langchain-2026-how",
+        "anthropic-2025-effective"
+      ],
+      "nearest_existing": [
+        "VX-12",
+        "VX-16",
+        "VX-36"
+      ],
+      "delta": "A refinement of cultural memory: compaction can turn several local examples into an unjustified universal policy. Factual accuracy of each example does not authorize that generalization.",
+      "comparison": "Give agents exception-bearing case histories and a fixed memory limit. Compare example retention, free rule induction and rules stored with scope plus counterexample links. Test unseen cases inside and outside the supported domain, then retract one source case.",
+      "confounds": "Keep capacity and update costs equal. Distinguish syntactic validation from semantic scope and authorized policy change. A held-out counterexample must not leak into rule construction.",
+      "falsifier": "If scoped rules do not reduce inappropriate generalization or cannot fit within the same memory cap, prefer retaining examples for that task family.",
+      "decision_value": "Decide whether shared culture should store rules, evidence or both, and what a repair must invalidate.",
+      "feasibility": "Synthetic policy domain only; no real user preferences or private records required."
+    },
+    {
+      "id": "PX-10",
+      "title": "Route messages by decision change without rewarding disruption",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "atlas": [
+        "SOC-04",
+        "SOC-09"
+      ],
+      "briefs": [
+        "coordination",
+        "leadership",
+        "discovery"
+      ],
+      "sources": [
+        "ma-2021-learning",
+        "jiang-2018-learning",
+        "wang-2025-beyond"
+      ],
+      "nearest_existing": [
+        "VX-25",
+        "VX-34"
+      ],
+      "delta": "Decision change is observable but is not the same as decision improvement. Test whether a router trained or tuned to cause changes prefers disruptive low-value messages.",
+      "comparison": "Supply helpful, irrelevant and misleading reports with matched lengths. Compare semantic routing, predicted decision-change routing and a verification-gated router. Keep graph degree, delivered fact coverage and router cost controlled. Evaluate accuracy and harmful revisions on a new task family.",
+      "confounds": "The deployed router cannot see the answer key or true marginal utility. Score decision change separately from correctness and account for verification cost.",
+      "falsifier": "Reject decision-change as a standalone routing objective if it increases reversals without improving held-out correctness over coverage-matched random delivery.",
+      "decision_value": "Select a routing objective before investing in learned communication weights.",
+      "feasibility": "Scripted decisions can expose the objective mismatch; a model-based predictor would require a separate training budget."
+    },
+    {
+      "id": "PX-11",
+      "title": "Separate a reporting receipt from completed remediation",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "atlas": [
+        "SOC-29",
+        "SOC-30"
+      ],
+      "briefs": [
+        "whistleblowing",
+        "institutions",
+        "casefile"
+      ],
+      "sources": [
+        "edmondson-1999-psychological",
+        "hemmatian-2026-collective",
+        "langchain-2026-how"
+      ],
+      "nearest_existing": [
+        "VX-23",
+        "VX-24"
+      ],
+      "delta": "Extends the report-response card with verifiable state transitions. A visible acknowledgment may increase reporting yet leave the invalid artifact active or an appeal undecided.",
+      "comparison": "Compare receipt-only acknowledgment, assigned review and a protocol requiring evidence of disposition before closure. Vary reviewer load and false reports independently. Measure report-to-review and review-to-correction delays, unresolved valid reports and false removals.",
+      "confounds": "Use external artifact validity checks rather than the reviewer marking its own work complete. Charge all review and appeal work to the same cap; protect the option to report uncertain evidence.",
+      "falsifier": "If structured closure merely changes status labels without improving artifact correctness or response latency, drop it as administrative overhead.",
+      "decision_value": "Define dashboard statuses that correspond to actual remediation and identify where a governance protocol stalls.",
+      "feasibility": "Event-state simulation first; human-team psychological mechanisms remain out of scope."
+    },
+    {
+      "id": "PX-12",
+      "title": "Cross finalization reserves with actual execution headroom",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "atlas": [
+        "BUD-17",
+        "SOC-32"
+      ],
+      "briefs": [
+        "commons",
+        "coordination",
+        "discovery"
+      ],
+      "sources": [
+        "anthropic-2026-quantifying",
+        "wu-2026-scaling"
+      ],
+      "nearest_existing": [
+        "VX-33",
+        "VX-37"
+      ],
+      "delta": "A reserve can appear valuable because it changes scheduling or because another arm dies at an infrastructure limit. Separate issued token/tool budgets from CPU, RAM and time enforcement.",
+      "comparison": "Cross no reserve versus a fixed finalization reserve with fixed infrastructure profiles; randomize run order in blocks. Report verified completions, infrastructure failures and spent resources for every assigned episode. Include a cheap-validator and expensive-validator task stratum.",
+      "confounds": "Do not rerun only one arm after a crash. Record guarantees and kill thresholds separately; calibrate task-specific headroom without adopting a universal multiplier. Match model versions and time blocks.",
+      "falsifier": "If reserve gains disappear under matched infrastructure and verification cost, treat the original advantage as an execution artifact.",
+      "decision_value": "Choose a budget policy based on verified completion and explicit opportunity cost rather than conditional success alone.",
+      "feasibility": "Deterministic accounting and fault injection first; agent execution needs a frozen run manifest."
+    },
+    {
+      "id": "PX-13",
+      "title": "Abstain from selecting a team when profiling is inconclusive",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "atlas": [
+        "SOC-38",
+        "SOC-02"
+      ],
+      "briefs": [
+        "diversity",
+        "discovery",
+        "commons"
+      ],
+      "sources": [
+        "gao-2026-distribution",
+        "wu-2026-scaling"
+      ],
+      "nearest_existing": [
+        "VX-22",
+        "VX-37"
+      ],
+      "delta": "Instead of always ranking candidate teams, ask whether refusing an uncertain selection saves profiling budget without sacrificing useful downstream performance.",
+      "comparison": "Use independent calibration worlds to choose a fixed team or retain a prespecified default when evidence is weak. Compare always-select, abstaining-select and no-profiling policies on held-out task families; amortize all profiling costs over a declared number of future tasks.",
+      "confounds": "Conformal guarantees do not transfer automatically to adaptive selection or nonexchangeable tasks. Use ordinary held-out error and cost comparisons first, with separate uncertainty for rare task strata.",
+      "falsifier": "If the default is as good after profiling cost, stop optimizing team selection; if abstention fails after distribution shift, revise the calibration domain.",
+      "decision_value": "Determine whether team-selection machinery earns its complexity at the expected deployment horizon.",
+      "feasibility": "Offline outcome simulation is cheap; real profiling can be expensive and needs a prespecified cap."
+    },
+    {
+      "id": "PX-14",
+      "title": "Separate backup diversity from observation diversity",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "atlas": [
+        "SOC-22",
+        "SOC-23",
+        "SEC-03"
+      ],
+      "briefs": [
+        "memory",
+        "regrowth",
+        "collective-sensing"
+      ],
+      "sources": [
+        "yu-2026-multi",
+        "pal-2026-context"
+      ],
+      "nearest_existing": [
+        "VX-07",
+        "VX-20"
+      ],
+      "delta": "Refines common-loss recovery by distinguishing independent storage failure domains from independent evidence origins. Replicas can improve availability while adding zero evidential independence.",
+      "comparison": "Cross storage placement (shared or independent failure domains) with source ancestry (copied or independent observations). Fix total stored bytes and observation quality. Compare uniform and rarity-weighted replication on recovery after loss and confidence after retrieval.",
+      "confounds": "Recovered replicas of one observation must count once for truth aggregation. Simulated failure domains must be declared; independent placement does not imply independent corruption risk.",
+      "falsifier": "Drop any rule that inflates confidence merely because more copies survive; retain replication only for its measured availability benefit.",
+      "decision_value": "Give the ledger separate fields for reliability of storage and independence of evidence.",
+      "feasibility": "High readiness with a small deterministic storage simulator and no external services."
+    }
+  ]
+}

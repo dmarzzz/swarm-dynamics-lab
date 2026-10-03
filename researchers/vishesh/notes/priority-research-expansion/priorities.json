@@ -1,0 +1,482 @@
+{
+  "schema": "swarm-lab-priority-reference-expansion-v1",
+  "owner": "vishesh/codex-methods",
+  "date": "2026-10-03",
+  "atlas_sha256": "a14ecd16a8dfa67f17f07901459ef301ca3f35c3fb81f1d9293a7f07a99ac94a",
+  "selection": "Editorial selection for a common evidence-and-memory testbed, not a team vote or measured ranking.",
+  "priorities": [
+    {
+      "rank": 1,
+      "candidate": "SOC-01",
+      "title": "Separate information diversity from model diversity",
+      "candidate_sha256": "101b47ed6cdd23dcee07482422914a93bed60dfa07cc550bd506cf8eca49711a",
+      "tier": "First comparisons",
+      "briefs": [
+        "collective-sensing",
+        "diversity"
+      ],
+      "new_sources": [
+        "pescetelli-2022-variational",
+        "wang-2025-beyond"
+      ],
+      "selection_reason": "Separates evidence access from model labels on a shared task generator; begin with fixed fact unions.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 2,
+      "candidate": "SOC-04",
+      "title": "Ablate why semantic routing works",
+      "candidate_sha256": "d045d1b5c7fad95ce7bd8bcfb95a701ae60213ea371870a51a40498506536952",
+      "tier": "First comparisons",
+      "briefs": [
+        "collective-sensing",
+        "coordination",
+        "leadership"
+      ],
+      "new_sources": [
+        "ma-2021-learning",
+        "jiang-2018-learning",
+        "de-pasquale-2022-modeling"
+      ],
+      "selection_reason": "Routing has established predecessors; isolate decision relevance and charge the router rather than claim a new communication principle.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 3,
+      "candidate": "SOC-08",
+      "title": "Stop on evidence sufficiency instead of verbal agreement",
+      "candidate_sha256": "befa36772eeac03ee38171968ecd39eb4cf8c8b87acc0576ee11e30695d2c144",
+      "tier": "First comparisons",
+      "briefs": [
+        "quorum",
+        "collective-sensing"
+      ],
+      "new_sources": [
+        "fu-2025-absencebench",
+        "wang-2025-beyond"
+      ],
+      "selection_reason": "A deterministic evidence manifest can distinguish premature stopping from reasoning failure without supplying the answer.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 4,
+      "candidate": "SOC-09",
+      "title": "Evidence-seeking critics versus generic opposition",
+      "candidate_sha256": "0702d5495d6a3cb5848d2576ecc8088baa3b71fc43f9b963f45f2b0aa4f197a8",
+      "tier": "First comparisons",
+      "briefs": [
+        "dissent",
+        "discovery"
+      ],
+      "new_sources": [
+        "pescetelli-2022-variational",
+        "wang-2025-beyond"
+      ],
+      "selection_reason": "Critic value is directly testable against another solver; keep evidence acquisition and extra computation equal.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 5,
+      "candidate": "SOC-23",
+      "title": "Recover function after genuine knowledge loss",
+      "candidate_sha256": "96ee437e9c5efd65579834f81651ea2957a1b810ceedf76b1f83b72766f78911",
+      "tier": "First comparisons",
+      "briefs": [
+        "regrowth",
+        "memory"
+      ],
+      "new_sources": [
+        "modarressi-2025-nolima",
+        "fu-2025-absencebench",
+        "yu-2026-multi"
+      ],
+      "selection_reason": "Recovery should distinguish lost facts, lost indexes and inaccessible facts before using an ecological analogy.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 6,
+      "candidate": "SOC-31",
+      "title": "Find where uncertainty disappears in retelling",
+      "candidate_sha256": "e16d1d5a5a860178cef61b7a2347e88853f8289da618a5d73b5d22bd4e156d74",
+      "tier": "First comparisons",
+      "briefs": [
+        "telephone",
+        "culture"
+      ],
+      "new_sources": [
+        "anthropic-2025-effective",
+        "chroma-2025-context"
+      ],
+      "selection_reason": "Claim scope and uncertainty can be scored per hop; separate compression error from already-false evidence.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 7,
+      "candidate": "SEC-03",
+      "title": "Count evidence domains rather than returning copies",
+      "candidate_sha256": "dd38e332d75f7039cd4e1abf1f22edf488219c9f867e2197b903d4417e278428",
+      "tier": "First comparisons",
+      "briefs": [
+        "quorum",
+        "collective-sensing",
+        "diversity"
+      ],
+      "new_sources": [
+        "pescetelli-2022-variational",
+        "pal-2026-context"
+      ],
+      "selection_reason": "A synthetic provenance oracle supplies a useful ceiling; observed ancestry remains the deployable comparison.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 8,
+      "candidate": "SEC-06",
+      "title": "Repair when the dependency graph is wrong",
+      "candidate_sha256": "5dda87da3dd71348b4b79247dcfee30c1023c30da56b70d4822b090832dae493",
+      "tier": "First comparisons",
+      "briefs": [
+        "regrowth",
+        "memory",
+        "casefile"
+      ],
+      "new_sources": [
+        "gradel-2024-provenance",
+        "yu-2026-multi",
+        "langchain-2026-how"
+      ],
+      "selection_reason": "Highest-value immune-response extension: challenge repair with incomplete and negative dependencies while measuring retained valid knowledge.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 9,
+      "candidate": "SOC-02",
+      "title": "Measure effective team size on distributed evidence",
+      "candidate_sha256": "abdbaed15057b18778f563c6521633b911063c8e6616eb3bcc34c14f4820219e",
+      "tier": "Measurement layer",
+      "briefs": [
+        "collective-sensing",
+        "diversity"
+      ],
+      "new_sources": [
+        "wu-2026-scaling",
+        "pescetelli-2022-variational"
+      ],
+      "selection_reason": "Estimate covariance over independent task worlds; a single effective-size scalar can hide heterogeneous evidence and attrition.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 10,
+      "candidate": "SOC-21",
+      "title": "Compress memory by information value",
+      "candidate_sha256": "0dce48ec699c41d8a53a39e1e87e9207dff572be0ed0ab12523102cc59150a2a",
+      "tier": "Shared memory layer",
+      "briefs": [
+        "memory",
+        "culture"
+      ],
+      "new_sources": [
+        "pal-2026-context",
+        "anthropic-2025-effective",
+        "chroma-2025-context"
+      ],
+      "selection_reason": "Memory selection provides reusable infrastructure; compare recurrence, rarity and eventual decision value under equal storage.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 11,
+      "candidate": "SOC-22",
+      "title": "Spend redundancy on rare knowledge",
+      "candidate_sha256": "d6cc3cf388795690772ef882e7e11fc84c3aff3cfb9f86d9f39ced486c591801",
+      "tier": "Shared memory layer",
+      "briefs": [
+        "memory",
+        "regrowth"
+      ],
+      "new_sources": [
+        "pal-2026-context",
+        "wu-2026-scaling",
+        "yu-2026-multi"
+      ],
+      "selection_reason": "Copy counts are insufficient if caches and observations share a failure domain; measure marginal recovery per stored token.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 12,
+      "candidate": "SEC-07",
+      "title": "Stale children can undo a correction",
+      "candidate_sha256": "efec635d91129476d79bb3c2ca8c8197d16433daec0aac43e7dc2f3ce679fad7",
+      "tier": "Immune response layer",
+      "briefs": [
+        "memory",
+        "regrowth",
+        "culture"
+      ],
+      "new_sources": [
+        "yu-2026-multi",
+        "xu-2025-everything"
+      ],
+      "selection_reason": "Correction epochs and stale-read traces are inspectable before a model run; freeze merge semantics.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 13,
+      "candidate": "SEC-48",
+      "title": "When can an isolated child safely return?",
+      "candidate_sha256": "c5055ccde31b796babbb5d33f5118348a5793d4a607e9c06dfedcc9b60858736",
+      "tier": "Immune response layer",
+      "briefs": [
+        "regrowth",
+        "institutions"
+      ],
+      "new_sources": [
+        "xiao-2026-when",
+        "yu-2026-multi"
+      ],
+      "selection_reason": "Re-entry warrants held-out continuation tests and false-quarantine controls; a clean snapshot is weak evidence.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 14,
+      "candidate": "SOC-10",
+      "title": "Test dissent quality rather than dissent quantity",
+      "candidate_sha256": "279b09bf76ab4ff667cfd1a6007e558aba45f27b11d6ed5d6160b9500f75c43b",
+      "tier": "Dissent layer",
+      "briefs": [
+        "dissent",
+        "diversity"
+      ],
+      "new_sources": [
+        "pescetelli-2022-variational",
+        "edmondson-1999-psychological"
+      ],
+      "selection_reason": "Distinct from rewarding disagreement: separate correctness, confidence, evidence quality and rarity.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 15,
+      "candidate": "SOC-07",
+      "title": "Protect private judgments before public discussion",
+      "candidate_sha256": "ec746f8c42c5e5c60aaf5bf54f77f74f05589bc09c49823d5ff4e8997953b537",
+      "tier": "Dissent layer",
+      "briefs": [
+        "dissent",
+        "diversity"
+      ],
+      "new_sources": [
+        "pescetelli-2022-variational",
+        "wang-2025-beyond"
+      ],
+      "selection_reason": "Private judgments can preserve information or create anchoring; count both beneficial and harmful revisions.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 16,
+      "candidate": "SOC-32",
+      "title": "Stress-test a casefile when logs are missing",
+      "candidate_sha256": "148344a8c03cee959625b07425e4aca7986124c02f5cc14bf32a61f1860ff7c2",
+      "tier": "Measurement layer",
+      "briefs": [
+        "casefile",
+        "coordination"
+      ],
+      "new_sources": [
+        "fu-2025-absencebench",
+        "anthropic-2026-quantifying"
+      ],
+      "selection_reason": "Incomplete logs need known deletion mechanisms and explicit unknown states; infrastructure faults must remain visible.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 17,
+      "candidate": "SOC-29",
+      "title": "Make a report lead to a verifiable response",
+      "candidate_sha256": "aa883691ad67cd0e19398e1a7761ca949d67782832f973d80c41635d6d1fac35",
+      "tier": "Governance extension",
+      "briefs": [
+        "whistleblowing",
+        "institutions"
+      ],
+      "new_sources": [
+        "edmondson-1999-psychological",
+        "hemmatian-2026-collective"
+      ],
+      "selection_reason": "Reporting matters only if it changes verified correction; keep detection, reporting and remediation denominators separate.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 18,
+      "candidate": "SOC-30",
+      "title": "Appeal false rejections without overwhelming review",
+      "candidate_sha256": "4ebf319ab01ebde831b3430c0249bb4575a7e660d46e436e436172f64ff5475f",
+      "tier": "Governance extension",
+      "briefs": [
+        "institutions",
+        "whistleblowing",
+        "dissent"
+      ],
+      "new_sources": [
+        "edmondson-1999-psychological",
+        "langchain-2026-how"
+      ],
+      "selection_reason": "Appeals consume scarce review capacity; test noisy reviewers and a binding finalization rule before open-ended dialogue.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 19,
+      "candidate": "SOC-38",
+      "title": "Select complementary teams on a separate task set",
+      "candidate_sha256": "674088c43d3feaefb6660eff79777b81e978ce4919501405e825465365d232db",
+      "tier": "Measurement layer",
+      "briefs": [
+        "diversity",
+        "discovery"
+      ],
+      "new_sources": [
+        "gao-2026-distribution",
+        "wu-2026-scaling"
+      ],
+      "selection_reason": "Team selection can overfit a calibration set; hold out whole task families and account for profiling cost.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    },
+    {
+      "rank": 20,
+      "candidate": "BUD-17",
+      "title": "Keep enough budget to finish and verify",
+      "candidate_sha256": "3704195fb91b849a7ec07616b94873834bdfbab3922c5d18fc79787c6e3bf84c",
+      "tier": "Budget layer",
+      "briefs": [
+        "commons",
+        "coordination",
+        "discovery"
+      ],
+      "new_sources": [
+        "anthropic-2026-quantifying",
+        "wu-2026-scaling"
+      ],
+      "selection_reason": "Final verification competes with exploration; distinguish issued resource caps from actual execution headroom.",
+      "status": "reviewer-priority; exploratory candidate, not accepted hypothesis"
+    }
+  ],
+  "new_sources": [
+    {
+      "id": "wang-2025-beyond",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2505.12467",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "yu-2026-multi",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2603.10062",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "xiao-2026-when",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2608.01085",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "wu-2026-scaling",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2604.03295",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "hemmatian-2026-collective",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2607.05593",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "de-pasquale-2022-modeling",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2204.08519",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "edmondson-1999-psychological",
+      "type": "paper",
+      "url": "https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Organizational_Learning_and_Change/Edmondson_1999_Psychological_safety.pdf",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "pal-2026-context",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2607.10441",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "gradel-2024-provenance",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2412.07986",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "xu-2025-everything",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2512.05470",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "gao-2026-distribution",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2605.19779",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "pescetelli-2022-variational",
+      "type": "paper",
+      "url": "https://pdfs.semanticscholar.org/0624/153a8ea2348a9156100505b477b1607ac64b.pdf",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "ma-2021-learning",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2109.05413",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "jiang-2018-learning",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/1805.07733",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "fu-2025-absencebench",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2506.11440",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "modarressi-2025-nolima",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2502.05167",
+      "read_depth": "abstract"
+    },
+    {
+      "id": "anthropic-2026-quantifying",
+      "type": "blog",
+      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "read_depth": "skim"
+    },
+    {
+      "id": "anthropic-2025-effective",
+      "type": "blog",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "read_depth": "skim"
+    },
+    {
+      "id": "langchain-2026-how",
+      "type": "blog",
+      "url": "https://www.langchain.com/blog/how-we-built-agent-builders-memory-system",
+      "read_depth": "skim"
+    },
+    {
+      "id": "chroma-2025-context",
+      "type": "blog",
+      "url": "https://www.trychroma.com/research/context-rot",
+      "read_depth": "skim"
+    }
+  ]
+}

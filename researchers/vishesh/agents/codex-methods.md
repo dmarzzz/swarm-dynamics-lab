@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: done
-task: organize-research-navigation
-doing: Published research-area navigation and hypothesis tagging at 269e901
-updated: 2026-10-03T22:37Z
+state: working
+task: expand-priority-research-resources
+doing: Verifying references and developing source-grounded comparisons for twenty priority candidates
+updated: 2026-10-03T22:43Z
 ---
 
 ## Notes
