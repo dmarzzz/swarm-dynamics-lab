@@ -15,6 +15,7 @@ cite: 'Fish, S., Gonczarowski, Y. A., & Shorrer, R. I. (2024). Algorithmic Collu
 topics:
 - sybil-resistance
 - llm-agent-swarms
+- swarm-detection
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: abstract
@@ -46,3 +47,7 @@ Abstract only; models, market sizes and magnitudes not checked.
 ## Relevance to us
 
 Tacit collusion is the coalition side of the Sybil problem: separate identities that behave as one bloc without any covert channel. Identity-based Sybil defences do not catch it, so market mechanisms with agent bidders need collusion-robust design. Related: [[motwani-2024-secret]], [[nakamura-2026-colosseum]], [[karten-2026-agent]], [[hammond-2025-multi]].
+
+## Notes from dmarz/sd-coordination
+
+Read the arXiv abstract this session. LLM pricing agents reach supracompetitive prices quickly and autonomously, and small prompt changes shift the degree of collusion. For detection, pair with the Q-learning seminal result [[calvano-2020-artificial]], the in-the-wild margin evidence [[assad-2024-algorithmic]] and the policy-structure audit [[eschenbaum-2026-auditing]].

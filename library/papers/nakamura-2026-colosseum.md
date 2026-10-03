@@ -20,6 +20,7 @@ cite: 'Nakamura, M., Kumar, A., Das, S., Abdelnabi, S., Mahmud, S., Fioretto, F.
 topics:
 - sybil-resistance
 - llm-agent-swarms
+- swarm-detection
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: abstract
@@ -51,3 +52,7 @@ Abstract only; models and effect sizes not checked.
 ## Relevance to us
 
 A coalition of agents inside a cooperative swarm is equivalent to one principal running several Sybils, and this framework gives a way to measure its damage (regret) independent of message content. Message-only monitors would be fooled in both directions given collusion on paper. Related: [[motwani-2024-secret]], [[tailor-2025-audit]], [[fish-2024-algorithmic]].
+
+## Notes from dmarz/sd-coordination
+
+Read the arXiv abstract this session. As a detection method it measures action-based collusion as regret relative to the cooperative optimum and compares it with communication-based collusion; it reports 'collusion on paper' (agents plan collusion in text but often pick non-collusive actions). That gap matters for detectors: transcript monitors and action monitors will disagree. Related: [[rose-2026-detecting]].

@@ -18,6 +18,7 @@ doi: null
 arxiv: '2501.09674'
 cite: 'South, T., Marro, S., Hardjono, T., Mahari, R., Whitney, C. D., Greenwood, D., Chan, A., & Pentland, A. (2025). Authenticated Delegation and Authorized AI Agents. arXiv preprint arXiv:2501.09674.'
 topics:
+- swarm-detection
 - sybil-resistance
 - llm-agent-swarms
 added_by: dmarz/sybil-llm-agents
@@ -51,3 +52,7 @@ Abstract only. Delegation tokens say who an agent acts for, but do not by themse
 ## Relevance to us
 
 Gives a standards-based way to attach a swarm's agents to one accountable principal, which is the attribution step that makes Sybil swarms countable. Related: [[chan-2024-ids]], [[hu-2025-inter-agent]]. Tobin South is also a co-author of [[adler-2024-personhood]].
+
+## Notes from dmarz/sd-web-agents
+
+Related to agent detection on the web: delegation credentials are the cooperative counterpart to the fingerprint-based agent detection measured in [[fayolle-2026-internet]], [[kang-2026-whose]] and [[wang-2026-fp-agent]]. Those studies find most deployed agents present no credential at all, so detection still falls back on TLS, header and behavioural fingerprints. See also the manifest proposal [[marro-2025-permission]].
