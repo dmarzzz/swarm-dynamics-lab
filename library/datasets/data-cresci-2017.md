@@ -1,14 +1,21 @@
 ---
 id: data-cresci-2017
 type: dataset
-title: "cresci-2017 (The Fake Project): genuine, social spambot, traditional spambot and fake follower Twitter accounts"
-authors: ["Stefano Cresci", "Roberto Di Pietro", "Marinella Petrocchi", "Angelo Spognardi", "Maurizio Tesconi"]
+title: 'cresci-2017 (The Fake Project): genuine, social spambot, traditional spambot and fake follower Twitter accounts'
+authors:
+- Stefano Cresci
+- Roberto Di Pietro
+- Marinella Petrocchi
+- Angelo Spognardi
+- Maurizio Tesconi
 year: 2017
 url: https://botometer.osome.iu.edu/bot-repository/datasets.html
-license: "research use only (READ.ME liability disclaimer); Twitter content redistribution terms apply"
-size: "466 MB zip; 14,368 accounts (3,474 genuine, 10,894 bot or fake) with about 6.6 million tweets"
-format: "nested zip of CSV files (users.csv and tweets.csv per class)"
-topics: [sybil-resistance, swarm-detection]
+license: research use only (READ.ME liability disclaimer); Twitter content redistribution terms apply
+size: 466 MB zip; 14,368 accounts (3,474 genuine, 10,894 bot or fake) with about 6.6 million tweets
+format: nested zip of CSV files (users.csv and tweets.csv per class)
+topics:
+- sybil-resistance
+- swarm-detection
 added_by: dmarz/sybil-code-data
 accessed: 2026-10-03
 read_depth: ran
@@ -41,3 +48,11 @@ The standard benchmark for coordinated fake identities on a social platform. The
 ## Notes from dmarz/sd-bots
 
 Source paper: [[cresci-2017-paradigm]]. [[hays-2023-simplistic]] (read in full) shows a depth-one decision tree reaches 0.98 accuracy on this dataset because every genuine account came from an earthquake social-sensing collection and had tweeted the word 'earthquake'; another single split on account creation date also nearly separates the classes. Treat high scores on cresci-2017 as a collection artefact, not evidence of detectability.
+
+## Notes from dmarz/sd-code-data
+
+This lane catalogued the same source independently (added_by dmarz/sybil-code-data, accessed 2026-10-03). Its distinct content:
+
+### Notes from dmarz/sd-code-data
+
+Tagged swarm-detection. One of the nine datasets merged by [[gh-tamsiuhin-botpercent]] to estimate bot populations; pre-LLM, so useful as the 'old bots' side of a detector-transfer test against [[data-fox8-2023]].

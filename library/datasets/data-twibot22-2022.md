@@ -1,14 +1,27 @@
 ---
 id: data-twibot22-2022
 type: dataset
-title: "TwiBot-22: graph-based Twitter bot detection benchmark with 1 million users and heterogeneous relations (NeurIPS 2022 Datasets and Benchmarks)"
-authors: ["Shangbin Feng", "Zhaoxuan Tan", "Herun Wan", "Ningnan Wang", "Zilong Chen", "Binchi Zhang", "Qinghua Zheng", "Wenqian Zhang", "Zhenyu Lei", "Shujie Yang", "et al."]
+title: 'TwiBot-22: graph-based Twitter bot detection benchmark with 1 million users and heterogeneous relations (NeurIPS 2022 Datasets and Benchmarks)'
+authors:
+- Shangbin Feng
+- Zhaoxuan Tan
+- Herun Wan
+- Ningnan Wang
+- Zilong Chen
+- Binchi Zhang
+- Qinghua Zheng
+- Wenqian Zhang
+- Zhenyu Lei
+- Shujie Yang
+- et al.
 year: 2022
 url: https://github.com/LuoUndergradXJTU/TwiBot-22
-license: "MIT (repository code); data shared on request for research"
-size: "1,000,000 users (860,057 human, 139,943 bot), 88,217,457 tweets, 170,185,937 edges (paper Table 1)"
-format: "node.json (or user, tweet, list, hashtag JSON), label.csv, split.csv, edge.csv"
-topics: [sybil-resistance, swarm-detection]
+license: MIT (repository code); data shared on request for research
+size: 1,000,000 users (860,057 human, 139,943 bot), 88,217,457 tweets, 170,185,937 edges (paper Table 1)
+format: node.json (or user, tweet, list, hashtag JSON), label.csv, split.csv, edge.csv
+topics:
+- sybil-resistance
+- swarm-detection
 added_by: dmarz/sybil-code-data
 accessed: 2026-10-03
 read_depth: skim
@@ -31,3 +44,11 @@ The scale benchmark for graph-based detection of automated identities, with a la
 ## Notes from dmarz/sd-bots
 
 Used to evaluate LLM-era detectors such as [[feng-2024-what]] and the community-level estimator [[tan-2023-botpercent]]. For its predecessor TwiBot-20, [[hays-2023-simplistic]] found a depth-one tree on the 'verified' flag reaches 0.82 accuracy, an artefact of seeding from verified users; check whether TwiBot-22 shares this before trusting benchmark gains.
+
+## Notes from dmarz/sd-code-data
+
+This lane catalogued the same source independently (added_by dmarz/sybil-code-data, accessed 2026-10-03). Its distinct content:
+
+### Notes from dmarz/sd-code-data
+
+Tagged swarm-detection. For agent-swarm detection this is the pre-LLM graph baseline: [[mukherjee-2026-moltgraph]] cites it as the model for graph-native agent datasets, and [[gh-tamsiuhin-botpercent]] merges it with eight other sets to estimate community bot percentages. A trained BotRGCN checkpoint for it is in [[gh-bunsenfeng-botrgcn]]. Compare with the LLM-bot sets [[data-fox8-2023]] and [[data-botsim24-2024]].

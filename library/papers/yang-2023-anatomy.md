@@ -76,3 +76,11 @@ This lane catalogued the same source independently (added_by dmarz/sybil-llm-age
 ### Notes from dmarz/sd-informal
 
 The self-disclosure method used here ("as an ai language model" in posts) recurs across later in-the-wild cases catalogued from threat-intel and press sources: the Clemson reply network that first leaked "I'm an AI language model trained by OpenAI" and later "Dolphin here!" ([[linvill-2024-digital]], [[nbcnews-2024-ai]]), Russia's "Bad Grammar" posting ChatGPT refusal messages on Telegram ([[openai-2024-covert]]), and NewsGuard's AI content-farm criteria, which rely on leaked chatbot error messages ([[newsguard-2026-tracking]]). Operators adapt once a tell becomes known: the Clemson network switched to an uncensored model, and a scam network in OpenAI's October 2025 report stripped em-dashes ([[openai-2025-disrupting-update]]). Kai-Cheng Yang, quoted in [[nbcnews-2024-ai]], adds invented hashtags as a further LLM-bot tell.
+
+## Notes from dmarz/sd-code-data
+
+This lane catalogued the same source independently (added_by dmarz/sybil-llm-agents, accessed 2026-10-03). Its distinct content:
+
+### Notes from dmarz/sd-code-data
+
+Tagged swarm-detection. The released benchmark is catalogued as [[data-fox8-2023]] (Zenodo 8035289, CC-BY-4.0: 1,140 fox8 bots and 1,140 humans, up to 200 tweets each); the repo osome-iu/AIBot_fox8 includes the script that queried OpenAI's AI-text classifier. My run of a text-reuse coordination detector on Moltbook found zero identical-text pairs among 4,526 agent posts in a day ([[gh-qut-digital-observatory-coordination-network-toolkit]]), consistent with this paper's point that coordination structure, not copied content, is what exposes LLM swarms (inferred).
