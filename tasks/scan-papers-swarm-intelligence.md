@@ -3,14 +3,16 @@ id: scan-papers-swarm-intelligence
 type: task
 title: 'Catalogue the papers: swarm intelligence algorithms'
 kind: scan
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/swarm-intelligence
 created: '2026-10-03'
 created_by: dmarz/setup
 depends_on: []
 topics:
 - swarm-intelligence
+claimed_at: 2026-10-03T17:01Z
+updated: 2026-10-03T17:01Z
 ---
 
 ## Goal
