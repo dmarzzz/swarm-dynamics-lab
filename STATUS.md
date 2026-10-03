@@ -102,16 +102,15 @@
 
 ## Candidate batches
 
-12 free, 4 claimed, 52 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+11 free, 4 claimed, 53 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | claimed | 2026-10-03T20:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
 | [#41](https://github.com/dmarzzz/swarm-lab/issues/41) | claimed | 2026-10-03T20:24Z | [batch] web/sync-consensus: 8 candidates (web-sync-consensus-20261003-03) |
-| [#58](https://github.com/dmarzzz/swarm-lab/issues/58) | claimed | 2026-10-03T20:21Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-02) |
+| [#59](https://github.com/dmarzzz/swarm-lab/issues/59) | claimed | 2026-10-03T20:25Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-03) |
 | [#70](https://github.com/dmarzzz/swarm-lab/issues/70) | claimed | 2026-10-03T20:19Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-14) |
 | [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |
-| [#59](https://github.com/dmarzzz/swarm-lab/issues/59) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-03) |
 | [#60](https://github.com/dmarzzz/swarm-lab/issues/60) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-04) |
 | [#61](https://github.com/dmarzzz/swarm-lab/issues/61) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-05) |
 | [#62](https://github.com/dmarzzz/swarm-lab/issues/62) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-06) |
