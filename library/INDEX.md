@@ -2,9 +2,9 @@
 
 # Library index
 
-902 entries.
+942 entries.
 
-## Papers (793)
+## Papers (833)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -56,6 +56,7 @@
 | [de-marzo-2024-ai](papers/de-marzo-2024-ai.md) | AI agents can coordinate beyond human scale | 2024 | 5 | full | llm-agent-swarms, sync-consensus, criticality-measurement, collective-decision | dmarz/llm-agent-swarms |
 | [de-marzo-2026-copying](papers/de-marzo-2026-copying.md) | Copying explains the collective behavior of AI agents in the wild | 2026 | 5 | skim | llm-agent-swarms, sync-consensus, criticality-measurement | dmarz/llm-agent-swarms-recent-audit |
 | [de-nobili-2026-microscopic](papers/de-nobili-2026-microscopic.md) | Microscopic dynamics of consensus formation in multi-agent LLM Naming Games | 2026 | 5 | full | llm-agent-swarms, sync-consensus, criticality-measurement | dmarz/llm-agent-swarms-recent |
+| [dias-2023-environmental](papers/dias-2023-environmental.md) | Environmental memory boosts group formation of clueless individuals | 2023 | 5 | full | active-matter, swarm-intelligence, collective-decision, swarm-robotics | dmarz/active-matter-audit |
 | [dorfler-2014-synchronization](papers/dorfler-2014-synchronization.md) | Synchronization in complex networks of phase oscillators: A survey | 2014 | 5 | skim | sync-consensus, collective-motion | dmarz/sync-consensus |
 | [dorigo-1996-ant](papers/dorigo-1996-ant.md) | Ant system: optimization by a colony of cooperating agents | 1996 | 5 | abstract | swarm-intelligence, collective-decision | dmarz/swarm-intelligence |
 | [dorigo-2021-swarm](papers/dorigo-2021-swarm.md) | Swarm Robotics: Past, Present, and Future [Point of View] | 2021 | 5 | full | swarm-robotics, collective-decision, criticality-measurement | dmarz/swarm-robotics-audit |
@@ -101,6 +102,7 @@
 | [li-2023-predator](papers/li-2023-predator.md) | Predator–prey survival pressure is sufficient to evolve swarming behaviors | 2023 | 5 | abstract | marl-emergence, collective-motion | dmarz/marl-emergence |
 | [li-2025-reverse](papers/li-2025-reverse.md) | Reverse engineering the control law for schooling in zebrafish using virtual reality | 2025 | 5 | abstract | collective-motion, swarm-robotics | dmarz/collective-motion-recent |
 | [lin-2025-experimental](papers/lin-2025-experimental.md) | Experimental Evidence of Stress-Induced Critical State in Schooling Fish | 2025 | 5 | abstract | criticality-measurement, collective-motion | dmarz/criticality-measurement |
+| [ling-2019-behavioural](papers/ling-2019-behavioural.md) | Behavioural plasticity and the transition to order in jackdaw flocks | 2019 | 5 | skim | collective-motion, criticality-measurement | dmarz/collective-motion-audit |
 | [lizier-2014-jidt](papers/lizier-2014-jidt.md) | JIDT: An Information-Theoretic Toolkit for Studying the Dynamics of Complex Systems | 2014 | 5 | abstract | criticality-measurement, meta | dmarz/criticality-measurement |
 | [loffler-2023-collective](papers/loffler-2023-collective.md) | Collective foraging of active particles trained by reinforcement learning | 2023 | 5 | abstract | marl-emergence, active-matter, collective-motion | dmarz/marl-emergence |
 | [marshall-2009-optimal](papers/marshall-2009-optimal.md) | On optimal decision-making in brains and social insect colonies | 2009 | 5 | abstract | collective-decision, swarm-intelligence | dmarz/collective-decision |
@@ -142,6 +144,7 @@
 | [sepulchre-2007-stabilization](papers/sepulchre-2007-stabilization.md) | Stabilization of Planar Collective Motion: All-to-All Communication | 2007 | 5 | abstract | sync-consensus, collective-motion, swarm-robotics | dmarz/sync-consensus |
 | [slavkov-2018-morphogenesis](papers/slavkov-2018-morphogenesis.md) | Morphogenesis in robot swarms | 2018 | 5 | abstract | swarm-robotics, active-matter | dmarz/swarm-robotics |
 | [solon-2015-phase](papers/solon-2015-phase.md) | From Phase to Microphase Separation in Flocking Models: The Essential Role of Nonequilibrium Fluctuations | 2015 | 5 | abstract | active-matter, collective-motion | dmarz/active-matter |
+| [sooter-2025-defining](papers/sooter-2025-defining.md) | Defining and measuring proximity to criticality | 2025 | 5 | skim | criticality-measurement | dmarz/criticality-measurement-audit |
 | [sorensen-2015-metaheuristics](papers/sorensen-2015-metaheuristics.md) | Metaheuristics—the metaphor exposed | 2015 | 5 | abstract | swarm-intelligence, meta | dmarz/swarm-intelligence |
 | [soria-2021-predictive](papers/soria-2021-predictive.md) | Predictive control of aerial swarms in cluttered environments | 2021 | 5 | abstract | swarm-robotics, collective-motion, sync-consensus | dmarz/swarm-robotics |
 | [sridhar-2021-geometry](papers/sridhar-2021-geometry.md) | The geometry of decision-making in individuals and collectives | 2021 | 5 | full | collective-decision, collective-motion, criticality-measurement | dmarz/collective-decision |
@@ -191,6 +194,7 @@
 | [baconnier-2022-selective](papers/baconnier-2022-selective.md) | Selective and collective actuation in active solids | 2022 | 4 | full | swarm-robotics, active-matter, sync-consensus | dmarz/swarm-robotics |
 | [bailo-2024-cbx](papers/bailo-2024-cbx.md) | CBX: Python and Julia packages for consensus-based interacting particle methods | 2024 | 4 | abstract | swarm-intelligence, sync-consensus, meta | dmarz/swarm-intelligence |
 | [baker-2020-emergent](papers/baker-2020-emergent.md) | Emergent Tool Use From Multi-Agent Autocurricula | 2020 | 4 | full | marl-emergence | dmarz/marl-emergence |
+| [barberis-2016-large](papers/barberis-2016-large.md) | Large-Scale Patterns in a Minimal Cognitive Flocking Model: Incidental Leaders, Nematic Patterns, and Aggregates | 2016 | 4 | skim | collective-motion, active-matter | dmarz/collective-motion-audit |
 | [barfuss-2019-deterministic](papers/barfuss-2019-deterministic.md) | Deterministic limit of temporal difference reinforcement learning for stochastic games | 2019 | 4 | skim | marl-emergence | dmarz/marl-emergence-audit |
 | [barnett-2013-information](papers/barnett-2013-information.md) | Information Flow in a Kinetic Ising Model Peaks in the Disordered Phase | 2013 | 4 | abstract | criticality-measurement | dmarz/criticality-measurement |
 | [bate-2026-indecision](papers/bate-2026-indecision.md) | Indecision and accuracy under social information across groups sizes | 2026 | 4 | skim | collective-decision, swarm-intelligence | dmarz/collective-decision-audit |
@@ -222,6 +226,7 @@
 | [campelo-2023-lessons](papers/campelo-2023-lessons.md) | Lessons from the Evolutionary Computation Bestiary | 2023 | 4 | abstract | swarm-intelligence, meta | dmarz/swarm-intelligence |
 | [caprini-2023-flocking](papers/caprini-2023-flocking.md) | Flocking without Alignment Interactions in Attractive Active Brownian Particles | 2023 | 4 | abstract | active-matter, collective-motion | dmarz/active-matter |
 | [carrillo-2018-analytical](papers/carrillo-2018-analytical.md) | An analytical framework for consensus-based global optimization method | 2018 | 4 | abstract | swarm-intelligence, sync-consensus | dmarz/swarm-intelligence |
+| [carrillo-2021-consensus](papers/carrillo-2021-consensus.md) | A consensus-based global optimization method for high dimensional machine learning problems | 2021 | 4 | full | swarm-intelligence, sync-consensus | dmarz/swarm-intelligence-audit |
 | [casert-2024-learning](papers/casert-2024-learning.md) | Learning protocols for the fast and efficient control of active matter | 2024 | 4 | abstract | active-matter, marl-emergence | dmarz/active-matter |
 | [casiulis-2025-geometric](papers/casiulis-2025-geometric.md) | A geometric condition for robot-swarm cohesion and cluster–flock transition | 2025 | 4 | skim | collective-motion, swarm-robotics, active-matter | dmarz/collective-motion-recent-audit |
 | [castro-2024-modeling](papers/castro-2024-modeling.md) | Modeling collective behaviors from optic flow and retinal cues | 2024 | 4 | abstract | collective-motion, swarm-robotics | dmarz/collective-motion-recent-audit |
@@ -229,6 +234,7 @@
 | [cates-2013-when](papers/cates-2013-when.md) | When are active Brownian particles and run-and-tumble particles equivalent? Consequences for motility-induced phase separation | 2013 | 4 | abstract | active-matter | dmarz/active-matter |
 | [cavagna-2015-flocking](papers/cavagna-2015-flocking.md) | Flocking and Turning: a New Model for Self-organized Collective Motion | 2015 | 4 | abstract | collective-motion, active-matter | dmarz/collective-motion |
 | [cavagna-2017-dynamic](papers/cavagna-2017-dynamic.md) | Dynamic scaling in natural swarms | 2017 | 4 | abstract | collective-motion, criticality-measurement | dmarz/collective-motion |
+| [cavagna-2019-dynamical](papers/cavagna-2019-dynamical.md) | Dynamical Renormalization Group Approach to the Collective Behavior of Swarms | 2019 | 4 | skim | criticality-measurement, collective-motion, active-matter | dmarz/criticality-measurement-audit |
 | [cavagna-2023-natural](papers/cavagna-2023-natural.md) | Natural swarms in 3.99 dimensions | 2023 | 4 | abstract | criticality-measurement, collective-motion, active-matter | dmarz/criticality-measurement |
 | [celiktemel-2026-group](papers/celiktemel-2026-group.md) | Group Selection Promotes Prosocial Prompts in Populations of LLM Agents | 2026 | 4 | abstract | llm-agent-swarms, marl-emergence, criticality-measurement | dmarz/llm-agent-swarms-recent |
 | [cemri-2025-why](papers/cemri-2025-why.md) | Why Do Multi-Agent LLM Systems Fail? | 2025 | 4 | full | llm-agent-swarms | dmarz/llm-agent-swarms |
@@ -288,7 +294,9 @@
 | [ferrante-2012-self](papers/ferrante-2012-self.md) | Self-organized flocking with a mobile robot swarm: a novel motion control method | 2012 | 4 | abstract | swarm-robotics, collective-motion | dmarz/swarm-robotics |
 | [ferrante-2015-evolution](papers/ferrante-2015-evolution.md) | Evolution of Self-Organized Task Specialization in Robot Swarms | 2015 | 4 | abstract | swarm-robotics, collective-decision, marl-emergence | dmarz/swarm-robotics |
 | [ferretti-2025-out](papers/ferretti-2025-out.md) | Out-of-equilibrium response and fluctuation-dissipation violations across scales in flocking systems | 2025 | 4 | abstract | criticality-measurement, collective-motion, active-matter | dmarz/criticality-measurement |
+| [filella-2018-model](papers/filella-2018-model.md) | Model of Collective Fish Behavior with Hydrodynamic Interactions | 2018 | 4 | skim | collective-motion, active-matter | dmarz/collective-motion-audit |
 | [flint-2026-indirect](papers/flint-2026-indirect.md) | Indirect tipping: a social attack surface in AI agent populations | 2026 | 4 | skim | llm-agent-swarms, sync-consensus, collective-decision | dmarz/llm-agent-swarms-recent-audit |
+| [fornasier-2021-consensus](papers/fornasier-2021-consensus.md) | Consensus-Based Optimization on the Sphere: Convergence to Global Minimizers and Machine Learning | 2021 | 4 | skim | swarm-intelligence, sync-consensus, collective-motion | dmarz/swarm-intelligence-audit |
 | [fornasier-2024-consensus](papers/fornasier-2024-consensus.md) | Consensus-based optimization methods converge globally | 2024 | 4 | abstract | swarm-intelligence, sync-consensus | dmarz/swarm-intelligence |
 | [fortuna-2026-multi-agent](papers/fortuna-2026-multi-agent.md) | Multi-agent Scaling Across Disjunctive and Compensatory Tasks | 2026 | 4 | abstract | llm-agent-swarms, collective-decision | dmarz/llm-agent-swarms-recent |
 | [francesca-2014-automode](papers/francesca-2014-automode.md) | AutoMoDe: A novel approach to the automatic design of control software for robot swarms | 2014 | 4 | abstract | swarm-robotics, marl-emergence | dmarz/swarm-robotics |
@@ -303,6 +311,7 @@
 | [gautrais-2012-deciphering](papers/gautrais-2012-deciphering.md) | Deciphering Interactions in Moving Animal Groups | 2012 | 4 | abstract | collective-motion | dmarz/collective-motion |
 | [gazzola-2016-learning](papers/gazzola-2016-learning.md) | Learning to school in the presence of hydrodynamic interactions | 2016 | 4 | abstract | marl-emergence, collective-motion | dmarz/marl-emergence |
 | [ghosh-2022-synchronized](papers/ghosh-2022-synchronized.md) | The synchronized dynamics of time-varying networks | 2022 | 4 | abstract | sync-consensus, collective-motion | dmarz/sync-consensus |
+| [ginelli-2015-intermittent](papers/ginelli-2015-intermittent.md) | Intermittent collective dynamics emerge from conflicting imperatives in sheep herds | 2015 | 4 | abstract | collective-motion, criticality-measurement, collective-decision | dmarz/collective-motion-audit |
 | [ginelli-2016-physics](papers/ginelli-2016-physics.md) | The Physics of the Vicsek model | 2016 | 4 | abstract | collective-motion, active-matter | dmarz/collective-motion |
 | [giraldobarreto-2025-active](papers/giraldobarreto-2025-active.md) | Active matter flocking via predictive alignment | 2025 | 4 | abstract | active-matter, collective-motion, swarm-robotics | dmarz/active-matter |
 | [gomez-nava-2023-fish](papers/gomez-nava-2023-fish.md) | Fish shoals resemble a stochastic excitable system driven by environmental perturbations | 2023 | 4 | abstract | collective-motion, criticality-measurement | dmarz/collective-motion |
@@ -345,6 +354,8 @@
 | [kennedy-1999-small](papers/kennedy-1999-small.md) | Small worlds and mega-minds: effects of neighborhood topology on particle swarm performance | 1999 | 4 | abstract | swarm-intelligence, sync-consensus | dmarz/swarm-intelligence |
 | [kim-2025-commanding](papers/kim-2025-commanding.md) | Commanding emergent behavior with neural networks | 2025 | 4 | abstract | collective-motion, swarm-robotics | dmarz/collective-motion-recent |
 | [kim-2025-towards](papers/kim-2025-towards.md) | Towards a Science of Scaling Agent Systems | 2025 | 4 | full | llm-agent-swarms | dmarz/llm-agent-swarms |
+| [kloucek-2023-biases](papers/kloucek-2023-biases.md) | Biases in inverse Ising estimates of near-critical behavior | 2023 | 4 | skim | criticality-measurement | dmarz/criticality-measurement-audit |
+| [ko-2023-role](papers/ko-2023-role.md) | The role of hydrodynamics in collective motions of fish schools and bioinspired underwater robots | 2023 | 4 | skim | collective-motion, swarm-robotics | dmarz/collective-motion-audit |
 | [ko-2025-beyond](papers/ko-2025-beyond.md) | Beyond planar: fish schools adopt ladder formations in 3D | 2025 | 4 | abstract | collective-motion, swarm-robotics | dmarz/collective-motion-recent |
 | [korbmacher-2022-review](papers/korbmacher-2022-review.md) | Review of Pedestrian Trajectory Prediction Methods: Comparing Deep Learning and Knowledge-Based Approaches | 2022 | 4 | skim | crowds-and-traffic, collective-motion | dmarz/crowds-and-traffic-audit |
 | [krongauz-2024-vision](papers/krongauz-2024-vision.md) | Vision-based collective motion: A locust-inspired reductionist model | 2024 | 4 | abstract | collective-motion, swarm-robotics | dmarz/collective-motion-recent |
@@ -356,9 +367,12 @@
 | [lauriere-2022-learning](papers/lauriere-2022-learning.md) | Learning in Mean Field Games: A Survey | 2022 | 4 | abstract | marl-emergence | dmarz/marl-emergence |
 | [lavergne-2019-group](papers/lavergne-2019-group.md) | Group formation and cohesion of active particles with visual perception–dependent motility | 2019 | 4 | abstract | collective-motion, active-matter, swarm-robotics | dmarz/collective-motion |
 | [leblanc-2013-resilient](papers/leblanc-2013-resilient.md) | Resilient Asymptotic Consensus in Robust Networks | 2013 | 4 | abstract | sync-consensus, swarm-robotics | dmarz/sync-consensus |
+| [lecheval-2018-social](papers/lecheval-2018-social.md) | Social conformity and propagation of information in collective U-turns of fish schools | 2018 | 4 | abstract | collective-motion, collective-decision | dmarz/collective-motion-audit |
 | [lee-2024-prompt](papers/lee-2024-prompt.md) | Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems | 2024 | 4 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms-recent |
 | [lee-2025-traffic](papers/lee-2025-traffic.md) | Traffic Control via Connected and Automated Vehicles (CAVs): An Open-Road Field Experiment with 100 CAVs | 2025 | 4 | abstract | crowds-and-traffic, swarm-robotics, sync-consensus | dmarz/crowds-and-traffic |
+| [lefranc-2025-synthetic](papers/lefranc-2025-synthetic.md) | Synthetic Quorum Sensing and Absorbing Phase Transitions in Colloidal Active Matter | 2025 | 4 | skim | active-matter, collective-decision | dmarz/active-matter-audit |
 | [leonard-2007-collective](papers/leonard-2007-collective.md) | Collective Motion, Sensor Networks, and Ocean Sampling | 2007 | 4 | abstract | sync-consensus, swarm-robotics, collective-motion | dmarz/sync-consensus-audit |
+| [levina-2022-tackling](papers/levina-2022-tackling.md) | Tackling the subsampling problem to infer collective properties from limited data | 2022 | 4 | abstract | criticality-measurement, meta | dmarz/criticality-measurement-audit |
 | [levis-2019-activity](papers/levis-2019-activity.md) | Activity induced synchronization: Mutual flocking and chiral self-sorting | 2019 | 4 | abstract | sync-consensus, active-matter, collective-motion | dmarz/sync-consensus |
 | [li-2024-challenges](papers/li-2024-challenges.md) | Challenges Faced by Large Language Models in Solving Multi-Agent Flocking | 2024 | 4 | abstract | llm-agent-swarms, collective-motion, swarm-robotics | dmarz/llm-agent-swarms-recent |
 | [li-2024-more](papers/li-2024-more.md) | More Agents Is All You Need | 2024 | 4 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
@@ -366,6 +380,7 @@
 | [li-2025-large](papers/li-2025-large.md) | Large Language Models for Multi-Robot Systems: A Survey | 2025 | 4 | abstract | llm-agent-swarms, swarm-robotics | dmarz/llm-agent-swarms |
 | [li-2025-llm](papers/li-2025-llm.md) | LLM-Flock: Decentralized Multi-Robot Flocking via Large Language Models and Influence-Based Consensus | 2025 | 4 | abstract | llm-agent-swarms, collective-motion, swarm-robotics, sync-consensus | dmarz/llm-agent-swarms |
 | [li-2025-systematic](papers/li-2025-systematic.md) | Systematic Failures in Collective Reasoning under Distributed Information in Multi-Agent LLMs | 2025 | 4 | skim | llm-agent-swarms, collective-decision | dmarz/llm-agent-swarms-audit |
+| [liebchen-2022-chiral](papers/liebchen-2022-chiral.md) | Chiral active matter | 2022 | 4 | full | active-matter, collective-motion, sync-consensus | dmarz/active-matter-audit |
 | [lizier-2008-local](papers/lizier-2008-local.md) | Local information transfer as a spatiotemporal filter for complex systems | 2008 | 4 | abstract | criticality-measurement | dmarz/criticality-measurement |
 | [loffredo-2023-collective](papers/loffredo-2023-collective.md) | Collective response to local perturbations: how to evade threats without losing coherence | 2023 | 4 | abstract | criticality-measurement, collective-motion | dmarz/criticality-measurement |
 | [loi-2025-pogobot](papers/loi-2025-pogobot.md) | Pogobot: an Open-Source, Low-Cost Robot for Swarm Robotics and Programmable Active Matter | 2025 | 4 | abstract | swarm-robotics, active-matter | dmarz/swarm-robotics-recent |
@@ -374,6 +389,7 @@
 | [lord-2016-inference](papers/lord-2016-inference.md) | Inference of Causal Information Flow in Collective Animal Behavior | 2016 | 4 | abstract | criticality-measurement, collective-motion | dmarz/criticality-measurement |
 | [lorenz-2011-how](papers/lorenz-2011-how.md) | How social influence can undermine the wisdom of crowd effect | 2011 | 4 | skim | collective-decision, sync-consensus, crowds-and-traffic, llm-agent-swarms | dmarz/collective-decision-audit |
 | [lowe-2017-multi](papers/lowe-2017-multi.md) | Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments | 2017 | 4 | skim | marl-emergence | dmarz/marl-emergence |
+| [lowen-2020-inertial](papers/lowen-2020-inertial.md) | Inertial effects of self-propelled particles: From active Brownian to active Langevin motion | 2020 | 4 | skim | active-matter, swarm-robotics, collective-motion | dmarz/active-matter-audit |
 | [lukeman-2010-inferring](papers/lukeman-2010-inferring.md) | Inferring individual rules from collective behavior | 2010 | 4 | abstract | collective-motion | dmarz/collective-motion |
 | [luo-2025-flocking](papers/luo-2025-flocking.md) | Flocking Phase Separation in Inertial Active Matter | 2025 | 4 | abstract | active-matter, collective-motion, swarm-robotics | dmarz/active-matter |
 | [lynch-2026-tuning](papers/lynch-2026-tuning.md) | Tuning regimes in ant foraging dynamics depend on the existence of bistability | 2026 | 4 | abstract | criticality-measurement, collective-decision | dmarz/criticality-measurement |
@@ -385,11 +401,13 @@
 | [march-pons-2024-honeybee](papers/march-pons-2024-honeybee.md) | Honeybee-like collective decision making in a kilobot swarm | 2024 | 4 | abstract | collective-decision, swarm-robotics | dmarz/collective-decision |
 | [march-pons-2025-non](papers/march-pons-2025-non.md) | Non-linear inhibitory responses enhance performance in collective decision-making | 2025 | 4 | abstract | collective-decision, swarm-intelligence | dmarz/collective-decision |
 | [martina-perez-2025-inverse](papers/martina-perez-2025-inverse.md) | Inverse statistics of active matter trajectories to distinguish interaction kernel anisotropy from emergent correlations | 2025 | 4 | abstract | collective-motion, active-matter, criticality-measurement | dmarz/collective-motion-recent-audit |
+| [mastromatteo-2011-criticality](papers/mastromatteo-2011-criticality.md) | On the criticality of inferred models | 2011 | 4 | abstract | criticality-measurement | dmarz/criticality-measurement-audit |
 | [mattson-2025-discovery](papers/mattson-2025-discovery.md) | Discovery and Deployment of Emergent Robot Swarm Behaviors via Representation Learning and Real2Sim2Real Transfer | 2025 | 4 | abstract | swarm-robotics, marl-emergence, criticality-measurement | dmarz/swarm-robotics |
 | [mcgraw-2024-parallel](papers/mcgraw-2024-parallel.md) | Parallel development of social behavior in biological and artificial fish | 2024 | 4 | abstract | collective-motion, marl-emergence | dmarz/collective-motion-recent |
 | [mediano-2022-greater](papers/mediano-2022-greater.md) | Greater than the parts: a review of the information decomposition approach to causal emergence | 2022 | 4 | abstract | criticality-measurement, meta | dmarz/criticality-measurement |
 | [mehdizadeh-2026-exploring](papers/mehdizadeh-2026-exploring.md) | Exploring the Topology and Memory of Consensus: How LLM Agents Agree, Fragment, or Settle When Forming Conventions | 2026 | 4 | abstract | llm-agent-swarms, sync-consensus | dmarz/llm-agent-swarms |
 | [mendes-2004-fully](papers/mendes-2004-fully.md) | The fully informed particle swarm: simpler, maybe better | 2004 | 4 | abstract | swarm-intelligence, sync-consensus | dmarz/swarm-intelligence |
+| [meshulam-2019-coarse](papers/meshulam-2019-coarse.md) | Coarse graining, fixed points, and scaling in a large population of neurons | 2019 | 4 | skim | criticality-measurement | dmarz/criticality-measurement-audit |
 | [mi-2026-unveiling](papers/mi-2026-unveiling.md) | Unveiling Complex Collective Behaviors from Simple Rewards | 2026 | 4 | abstract | marl-emergence, swarm-robotics | dmarz/marl-emergence |
 | [miller-2013-both](papers/miller-2013-both.md) | Both information and social cohesion determine collective decisions in animal groups | 2013 | 4 | abstract | collective-decision | dmarz/collective-decision |
 | [minartz-2025-discovering](papers/minartz-2025-discovering.md) | Discovering interaction mechanisms in crowds via deep generative surrogate experiments | 2025 | 4 | abstract | crowds-and-traffic, collective-motion | dmarz/crowds-and-traffic |
@@ -411,6 +429,7 @@
 | [niizato-2024-information](papers/niizato-2024-information.md) | Information structure of heterogeneous criticality in a fish school | 2024 | 4 | abstract | criticality-measurement, collective-motion | dmarz/criticality-measurement |
 | [ning-2024-macroscopic](papers/ning-2024-macroscopic.md) | Macroscopic, artificial active matter | 2024 | 4 | abstract | active-matter, swarm-robotics, collective-motion | dmarz/active-matter |
 | [nitti-2025-collective](papers/nitti-2025-collective.md) | A collective intelligence model for swarm robotics applications | 2025 | 4 | full | swarm-intelligence, swarm-robotics, sync-consensus | dmarz/swarm-intelligence |
+| [nonnenmacher-2017-signatures](papers/nonnenmacher-2017-signatures.md) | Signatures of criticality arise from random subsampling in simple population models | 2017 | 4 | abstract | criticality-measurement | dmarz/criticality-measurement-audit |
 | [okeeffe-2022-collective](papers/okeeffe-2022-collective.md) | Collective behavior of swarmalators on a ring | 2022 | 4 | abstract | sync-consensus, active-matter | dmarz/sync-consensus |
 | [okeeffe-2025-global](papers/okeeffe-2025-global.md) | Global synchronization theorem for coupled swarmalators | 2025 | 4 | full | sync-consensus, active-matter | dmarz/sync-consensus |
 | [ott-2008-low](papers/ott-2008-low.md) | Low dimensional behavior of large systems of globally coupled oscillators | 2008 | 4 | abstract | sync-consensus | dmarz/sync-consensus |
@@ -448,6 +467,7 @@
 | [romanczuk-2009-collective](papers/romanczuk-2009-collective.md) | Collective Motion due to Individual Escape and Pursuit Response | 2009 | 4 | abstract | collective-motion, active-matter | dmarz/collective-motion |
 | [romanczuk-2012-active](papers/romanczuk-2012-active.md) | Active Brownian particles | 2012 | 4 | abstract | active-matter, collective-motion | dmarz/active-matter |
 | [romanczuk-2022-phase](papers/romanczuk-2022-phase.md) | Phase Transitions and Criticality in the Collective Behavior of Animals — Self-Organization and Biological Function | 2022 | 4 | abstract | collective-motion, criticality-measurement, collective-decision | dmarz/collective-motion |
+| [rosas-2019-quantifying](papers/rosas-2019-quantifying.md) | Quantifying high-order interdependencies via multivariate extensions of the mutual information | 2019 | 4 | abstract | criticality-measurement | dmarz/criticality-measurement-audit |
 | [rosenthal-2015-revealing](papers/rosenthal-2015-revealing.md) | Revealing the hidden networks of interaction in mobile animal groups allows prediction of complex behavioral contagion | 2015 | 4 | abstract | collective-decision, collective-motion, criticality-measurement | dmarz/collective-decision |
 | [rubenstein-2012-kilobot](papers/rubenstein-2012-kilobot.md) | Kilobot: A low cost scalable robot system for collective behaviors | 2012 | 4 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [saab-2026-graph](papers/saab-2026-graph.md) | Graph Feedback Controls Consensus and Clique Formation in Open-Weight Language-Model Populations | 2026 | 4 | abstract | llm-agent-swarms, sync-consensus | dmarz/llm-agent-swarms-recent |
@@ -498,6 +518,7 @@
 | [tump-2024-cognitive](papers/tump-2024-cognitive.md) | A Cognitive Computational Approach to Social and Collective Decision-Making | 2024 | 4 | skim | collective-decision, llm-agent-swarms, crowds-and-traffic | dmarz/collective-decision-audit |
 | [turgut-2008-self](papers/turgut-2008-self.md) | Self-organized flocking in mobile robot swarms | 2008 | 4 | abstract | swarm-robotics, collective-motion | dmarz/swarm-robotics |
 | [van-den-berg-2011-reciprocal](papers/van-den-berg-2011-reciprocal.md) | Reciprocal n-Body Collision Avoidance | 2011 | 4 | abstract | crowds-and-traffic, swarm-robotics | dmarz/crowds-and-traffic |
+| [van-der-vaart-2019-mechanical](papers/van-der-vaart-2019-mechanical.md) | Mechanical spectroscopy of insect swarms | 2019 | 4 | skim | criticality-measurement, collective-motion | dmarz/criticality-measurement-audit |
 | [varadharajan-2024-hierarchies](papers/varadharajan-2024-hierarchies.md) | Hierarchies define the scalability of robot swarms | 2024 | 4 | full | swarm-robotics, collective-decision | dmarz/swarm-robotics-recent |
 | [vega-2025-analytical](papers/vega-2025-analytical.md) | Analytical Swarm Chemistry: Characterization and Analysis of Emergent Swarm Behaviors | 2025 | 4 | abstract | swarm-robotics, criticality-measurement, collective-motion | dmarz/swarm-robotics-recent |
 | [verma-2018-efficient](papers/verma-2018-efficient.md) | Efficient collective swimming by harnessing vortices through deep reinforcement learning | 2018 | 4 | full | marl-emergence, collective-motion, swarm-robotics | dmarz/marl-emergence |
@@ -515,6 +536,7 @@
 | [warren-2018-collective](papers/warren-2018-collective.md) | Collective Motion in Human Crowds | 2018 | 4 | abstract | crowds-and-traffic, collective-motion | dmarz/crowds-and-traffic |
 | [wensink-2012-meso](papers/wensink-2012-meso.md) | Meso-scale turbulence in living fluids | 2012 | 4 | abstract | active-matter, collective-motion | dmarz/active-matter |
 | [werfel-2014-designing](papers/werfel-2014-designing.md) | Designing Collective Behavior in a Termite-Inspired Robot Construction Team | 2014 | 4 | abstract | swarm-robotics, swarm-intelligence | dmarz/swarm-robotics |
+| [wilting-2018-inferring](papers/wilting-2018-inferring.md) | Inferring collective dynamical states from widely unobserved systems | 2018 | 4 | skim | criticality-measurement | dmarz/criticality-measurement-audit |
 | [wu-2024-cbil](papers/wu-2024-cbil.md) | CBIL: Collective Behavior Imitation Learning for Fish from Real Videos | 2024 | 4 | abstract | collective-motion, marl-emergence | dmarz/collective-motion-recent |
 | [wu-2026-how](papers/wu-2026-how.md) | How does Adversarial Influence Scale in Multi-Agent Systems? | 2026 | 4 | abstract | llm-agent-swarms, collective-decision | dmarz/llm-agent-swarms-recent |
 | [wu-2026-predicting](papers/wu-2026-predicting.md) | Predicting the scale limits of social mechanisms in agent societies | 2026 | 4 | abstract | llm-agent-swarms, collective-decision | dmarz/llm-agent-swarms-recent |
@@ -526,6 +548,7 @@
 | [zakir-2025-bio](papers/zakir-2025-bio.md) | Bio-inspired decision making in robot swarms under biases | 2025 | 4 | abstract | collective-decision, swarm-robotics | dmarz/collective-decision |
 | [zampetaki-2024-dynamical](papers/zampetaki-2024-dynamical.md) | Dynamical order and many-body correlations in zebrafish show that three is a crowd | 2024 | 4 | abstract | collective-motion, criticality-measurement, active-matter | dmarz/collective-motion-recent |
 | [zhang-2025-gcbf](papers/zhang-2025-gcbf.md) | GCBF+: A Neural Graph Control Barrier Function Framework for Distributed Safe Multiagent Control | 2025 | 4 | abstract | swarm-robotics, sync-consensus, marl-emergence | dmarz/swarm-robotics-recent |
+| [zhao-2023-chemotactic](papers/zhao-2023-chemotactic.md) | Chemotactic Motility-Induced Phase Separation | 2023 | 4 | skim | active-matter, collective-decision | dmarz/active-matter-audit |
 | [zheng-2018-magent](papers/zheng-2018-magent.md) | MAgent: A Many-Agent Reinforcement Learning Platform for Artificial Collective Intelligence | 2018 | 4 | abstract | marl-emergence | dmarz/marl-emergence |
 | [zheng-2026-absorbing](papers/zheng-2026-absorbing.md) | Absorbing State Phase Transitions in Multi-Agent Search | 2026 | 4 | abstract | llm-agent-swarms, criticality-measurement | dmarz/llm-agent-swarms |
 | [zheng-2026-nested](papers/zheng-2026-nested.md) | Nested interaction network enhances responsiveness in collective behavior | 2026 | 4 | abstract | criticality-measurement, swarm-robotics, collective-motion | dmarz/criticality-measurement |
@@ -543,6 +566,7 @@
 | [arenas-2008-synchronization](papers/arenas-2008-synchronization.md) | Synchronization in complex networks | 2008 | 3 | abstract | sync-consensus | dmarz/sync-consensus |
 | [bai-2025-swarm](papers/bai-2025-swarm.md) | Swarm navigation of cyborg-insects in unknown obstructed soft terrain | 2025 | 3 | abstract | swarm-robotics | dmarz/swarm-robotics-recent |
 | [bandini-2025-xy](papers/bandini-2025-xy.md) | The XY model with vision cone: non-reciprocal vs. reciprocal interactions | 2025 | 3 | abstract | active-matter, collective-motion | dmarz/active-matter |
+| [bar-2020-self](papers/bar-2020-self.md) | Self-Propelled Rods: Insights and Perspectives for Active Matter | 2020 | 3 | skim | active-matter, collective-motion | dmarz/active-matter-audit |
 | [beggs-2003-neuronal](papers/beggs-2003-neuronal.md) | Neuronal Avalanches in Neocortical Circuits | 2003 | 3 | abstract | criticality-measurement | dmarz/criticality-measurement |
 | [beggs-2012-being](papers/beggs-2012-being.md) | Being Critical of Criticality in the Brain | 2012 | 3 | abstract | criticality-measurement, meta | dmarz/criticality-measurement |
 | [berman-2026-micro](papers/berman-2026-micro.md) | Micro-Swarm Locomotion Optimization in Dynamic Flow using Multi-Objective Multi-Agent Reinforcement Learning | 2026 | 3 | abstract | marl-emergence, swarm-robotics, active-matter | dmarz/marl-emergence |
@@ -559,7 +583,9 @@
 | [busoniu-2008-comprehensive](papers/busoniu-2008-comprehensive.md) | A Comprehensive Survey of Multiagent Reinforcement Learning | 2008 | 3 | abstract | marl-emergence | dmarz/marl-emergence |
 | [butail-2016-model](papers/butail-2016-model.md) | Model-free information-theoretic approach to infer leadership in pairs of zebrafish | 2016 | 3 | abstract | criticality-measurement, collective-decision | dmarz/criticality-measurement |
 | [cao-2013-overview](papers/cao-2013-overview.md) | An Overview of Recent Progress in the Study of Distributed Multi-Agent Coordination | 2013 | 3 | abstract | sync-consensus, swarm-robotics | dmarz/sync-consensus |
+| [caprini-2024-emergent](papers/caprini-2024-emergent.md) | Emergent memory from tapping collisions in active granular matter | 2024 | 3 | skim | active-matter, swarm-robotics | dmarz/active-matter-audit |
 | [carlesso-2023-simple](papers/carlesso-2023-simple.md) | A simple mechanism for collective decision-making in the absence of payoff information | 2023 | 3 | skim | collective-decision, swarm-intelligence, swarm-robotics | dmarz/collective-decision-audit |
+| [carrillo-2022-consensus](papers/carrillo-2022-consensus.md) | Consensus-based sampling | 2022 | 3 | skim | swarm-intelligence, sync-consensus | dmarz/swarm-intelligence-audit |
 | [castellano-2009-statistical](papers/castellano-2009-statistical.md) | Statistical physics of social dynamics | 2009 | 3 | abstract | sync-consensus, collective-decision, crowds-and-traffic | dmarz/sync-consensus |
 | [cazenille-2025-signalling](papers/cazenille-2025-signalling.md) | Signalling and social learning in swarms of robots | 2025 | 3 | abstract | swarm-robotics, collective-decision, marl-emergence | dmarz/swarm-robotics-recent |
 | [champneys-2023-pao](papers/champneys-2023-pao.md) | PAO: A general particle swarm algorithm with exact dynamics and closed-form transition densities | 2023 | 3 | abstract | swarm-intelligence | dmarz/swarm-intelligence |
@@ -567,10 +593,12 @@
 | [chen-2023-agentverse](papers/chen-2023-agentverse.md) | AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors | 2023 | 3 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 | [chen-2023-learning](papers/chen-2023-learning.md) | Learning Decentralized Flocking Controllers with Spatio-Temporal Graph Neural Network | 2023 | 3 | abstract | marl-emergence, swarm-robotics, collective-motion | dmarz/marl-emergence |
 | [chen-2024-are](papers/chen-2024-are.md) | Are More LLM Calls All You Need? Towards Scaling Laws of Compound Inference Systems | 2024 | 3 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms-recent |
+| [chen-2025-inconvenient](papers/chen-2025-inconvenient.md) | The inconvenient truth about flocks | 2025 | 3 | skim | collective-motion, active-matter | dmarz/collective-motion-audit |
 | [chen-2025-online](papers/chen-2025-online.md) | Online Planning for Multi-UAV Pursuit-Evasion in Unknown Environments Using Deep Reinforcement Learning | 2025 | 3 | abstract | swarm-robotics, marl-emergence | dmarz/swarm-robotics-recent |
 | [chen-2026-five](papers/chen-2026-five.md) | The Five Ws of Multi-Agent Communication: Who Talks to Whom, When, What, and Why -- A Survey from MARL to Emergent Language and LLMs | 2026 | 3 | abstract | marl-emergence, llm-agent-swarms | dmarz/marl-emergence |
 | [cho-2025-herd](papers/cho-2025-herd.md) | Herd Behavior: Investigating Peer Influence in LLM-based Multi-Agent Systems | 2025 | 3 | abstract | llm-agent-swarms, collective-decision | dmarz/llm-agent-swarms |
 | [cichos-2020-machine](papers/cichos-2020-machine.md) | Machine learning for active matter | 2020 | 3 | abstract | marl-emergence, active-matter | dmarz/marl-emergence |
+| [cleghorn-2018-particle](papers/cleghorn-2018-particle.md) | Particle swarm stability: a theoretical extension using the non-stagnate distribution assumption | 2018 | 3 | skim | swarm-intelligence | dmarz/swarm-intelligence-audit |
 | [colombo-2026-stabilizing](papers/colombo-2026-stabilizing.md) | Stabilizing Role of Uninformed Participants in Collective Decision Making | 2026 | 3 | skim | collective-decision, sync-consensus | dmarz/collective-decision-audit |
 | [couzin-2025-collective](papers/couzin-2025-collective.md) | Collective intelligence in animals and robots | 2025 | 3 | full | collective-motion, swarm-robotics, collective-decision | dmarz/collective-motion-recent |
 | [davis-2022-using](papers/davis-2022-using.md) | Using optimal foraging theory to infer how groups make collective decisions | 2022 | 3 | abstract | collective-decision | dmarz/collective-decision |
@@ -587,6 +615,7 @@
 | [dorfler-2013-synchronization](papers/dorfler-2013-synchronization.md) | Synchronization in complex oscillator networks and smart grids | 2013 | 3 | abstract | sync-consensus | dmarz/sync-consensus |
 | [dorigo-2013-swarmanoid](papers/dorigo-2013-swarmanoid.md) | Swarmanoid: A Novel Concept for the Study of Heterogeneous Robotic Swarms | 2013 | 3 | abstract | swarm-robotics | dmarz/swarm-robotics-audit |
 | [dorigo-2020-reflections](papers/dorigo-2020-reflections.md) | Reflections on the future of swarm robotics | 2020 | 3 | abstract | swarm-robotics | dmarz/swarm-robotics |
+| [du-2026-fisher](papers/du-2026-fisher.md) | Fisher Information Metric as a model-free measure of proximity to criticality in neural systems | 2026 | 3 | abstract | criticality-measurement | dmarz/criticality-measurement-audit |
 | [duan-2023-animal](papers/duan-2023-animal.md) | From animal collective behaviors to swarm robotic cooperation | 2023 | 3 | abstract | swarm-robotics, collective-motion, collective-decision | dmarz/swarm-robotics |
 | [duarte-2016-evolution](papers/duarte-2016-evolution.md) | Evolution of Collective Behaviors for a Real Swarm of Aquatic Surface Robots | 2016 | 3 | skim | swarm-robotics | dmarz/swarm-robotics-audit |
 | [dyer-2009-leadership](papers/dyer-2009-leadership.md) | Leadership, consensus decision making and collective behaviour in humans | 2009 | 3 | abstract | collective-decision, crowds-and-traffic | dmarz/collective-decision |
@@ -596,6 +625,7 @@
 | [fan-2026-towards](papers/fan-2026-towards.md) | Towards a Science of Collective AI: LLM-based Multi-Agent Systems Need a Transition from Blind Trial-and-Error to Rigorous Science | 2026 | 3 | abstract | llm-agent-swarms, meta | dmarz/llm-agent-swarms |
 | [feinerman-2017-individual](papers/feinerman-2017-individual.md) | Individual versus collective cognition in social insects | 2017 | 3 | abstract | collective-decision, swarm-intelligence | dmarz/collective-decision |
 | [feng-2024-model](papers/feng-2024-model.md) | Model Swarms: Collaborative Search to Adapt LLM Experts via Swarm Intelligence | 2024 | 3 | abstract | llm-agent-swarms, swarm-intelligence | dmarz/llm-agent-swarms |
+| [feng-2025-noise](papers/feng-2025-noise.md) | Noise-Driven Transitions in Collective Foraging of Ant Colonies | 2025 | 3 | abstract | collective-decision, swarm-intelligence, criticality-measurement | dmarz/swarm-intelligence-audit |
 | [fister-2026-framework](papers/fister-2026-framework.md) | Framework for identifying the equivalence between Nature-Inspired Metaheuristics | 2026 | 3 | abstract | swarm-intelligence, meta | dmarz/swarm-intelligence |
 | [fodor-2016-how](papers/fodor-2016-how.md) | How Far from Equilibrium Is Active Matter? | 2016 | 3 | abstract | active-matter, criticality-measurement | dmarz/active-matter |
 | [foerster-2016-learning](papers/foerster-2016-learning.md) | Learning to Communicate with Deep Multi-Agent Reinforcement Learning | 2016 | 3 | abstract | marl-emergence | dmarz/marl-emergence |
@@ -603,14 +633,17 @@
 | [friman-2024-it](papers/friman-2024-it.md) | It pays to follow the leader: Metabolic cost of flight is lower for trailing birds in small groups | 2024 | 3 | skim | collective-motion | dmarz/collective-motion-recent-audit |
 | [galla-2013-complex](papers/galla-2013-complex.md) | Complex dynamics in learning complicated games | 2013 | 3 | skim | marl-emergence | dmarz/marl-emergence-audit |
 | [gardi-2022-microrobot](papers/gardi-2022-microrobot.md) | Microrobot collectives with reconfigurable morphologies, behaviors, and functions | 2022 | 3 | abstract | swarm-robotics, active-matter | dmarz/swarm-robotics |
+| [gerber-2025-mean](papers/gerber-2025-mean.md) | Mean-field limits for Consensus-Based Optimization and Sampling | 2025 | 3 | abstract | swarm-intelligence, sync-consensus | dmarz/swarm-intelligence-audit |
 | [gloudemans-2023-i24](papers/gloudemans-2023-i24.md) | I-24 MOTION: An instrument for freeway traffic science | 2023 | 3 | abstract | crowds-and-traffic, criticality-measurement | dmarz/crowds-and-traffic |
 | [goldstein-2024-how](papers/goldstein-2024-how.md) | How do cicadas emerge together? Thermophysical aspects of their collective decision-making | 2024 | 3 | abstract | collective-decision, criticality-measurement | dmarz/collective-decision |
 | [gompper-2025-motile](papers/gompper-2025-motile.md) | The 2025 motile active matter roadmap | 2025 | 3 | abstract | active-matter, collective-motion, swarm-robotics | dmarz/collective-motion-recent |
 | [gonzalez-albaladejo-2024-power](papers/gonzalez-albaladejo-2024-power.md) | Power laws of natural swarms as fingerprints of an extended critical region | 2024 | 3 | abstract | collective-motion, criticality-measurement | dmarz/collective-motion-recent |
+| [granek-2024-colloquium](papers/granek-2024-colloquium.md) | Colloquium: Inclusions, boundaries, and disorder in scalar active matter | 2024 | 3 | skim | active-matter | dmarz/active-matter-audit |
 | [gronauer-2022-multi](papers/gronauer-2022-multi.md) | Multi-agent deep reinforcement learning: a survey | 2022 | 3 | abstract | marl-emergence | dmarz/marl-emergence |
 | [guo-2019-learning](papers/guo-2019-learning.md) | Learning Mean-Field Games | 2019 | 3 | skim | marl-emergence | dmarz/marl-emergence-audit |
 | [gupta-2018-social](papers/gupta-2018-social.md) | Social GAN: Socially Acceptable Trajectories with Generative Adversarial Networks | 2018 | 3 | skim | crowds-and-traffic, collective-motion | dmarz/crowds-and-traffic-audit |
 | [gupta-2024-mosquitoes](papers/gupta-2024-mosquitoes.md) | Mosquitoes integrate visual and acoustic cues to mediate conspecific interactions in swarms | 2024 | 3 | skim | collective-motion | dmarz/collective-motion-recent-audit |
+| [ha-2008-particle](papers/ha-2008-particle.md) | From particle to kinetic and hydrodynamic descriptions of flocking | 2008 | 3 | skim | collective-motion, sync-consensus | dmarz/collective-motion-audit |
 | [ha-2022-collective](papers/ha-2022-collective.md) | Collective intelligence for deep learning: A survey of recent developments | 2022 | 3 | skim | marl-emergence, swarm-intelligence | dmarz/marl-emergence-audit |
 | [haghani-2024-revisiting](papers/haghani-2024-revisiting.md) | Revisiting the paper "Simulating dynamical features of escape panic": What have we learnt since then? | 2024 | 3 | abstract | crowds-and-traffic, meta | dmarz/crowds-and-traffic |
 | [hammond-2025-multi](papers/hammond-2025-multi.md) | Multi-Agent Risks from Advanced AI | 2025 | 3 | abstract | llm-agent-swarms, marl-emergence | dmarz/llm-agent-swarms |
@@ -668,6 +701,7 @@
 | [mednikov-2026-calibrate](papers/mednikov-2026-calibrate.md) | Calibrate Once, Fly Any Team: Residual-Grounded Low-Fidelity Training for Cooperative Drone Swarms | 2026 | 3 | abstract | swarm-robotics, marl-emergence | dmarz/swarm-robotics-recent |
 | [mi-2025-mf-llm](papers/mi-2025-mf-llm.md) | MF-LLM: Simulating Population Decision Dynamics via a Mean-Field Large Language Model Framework | 2025 | 3 | skim | llm-agent-swarms, marl-emergence | dmarz/llm-agent-swarms-audit |
 | [mieczkowski-2026-language](papers/mieczkowski-2026-language.md) | Language Model Teams as Distributed Systems | 2026 | 3 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms-recent-audit |
+| [morales-2023-quasiuniversal](papers/morales-2023-quasiuniversal.md) | Quasiuniversal scaling in mouse-brain neuronal activity stems from edge-of-instability critical dynamics | 2023 | 3 | abstract | criticality-measurement | dmarz/criticality-measurement-audit |
 | [mordatch-2018-emergence](papers/mordatch-2018-emergence.md) | Emergence of Grounded Compositional Language in Multi-Agent Populations | 2018 | 3 | abstract | marl-emergence | dmarz/marl-emergence |
 | [mori-2026-three](papers/mori-2026-three.md) | Three AI-agents walk into a bar . . . . `Lord of the Flies' tribalism emerges among smart AI-Agents | 2026 | 3 | abstract | llm-agent-swarms, collective-decision | dmarz/llm-agent-swarms-recent-audit |
 | [motsch-2011-new](papers/motsch-2011-new.md) | A New Model for Self-organized Dynamics and Its Flocking Behavior | 2011 | 3 | abstract | sync-consensus, collective-motion | dmarz/sync-consensus |
@@ -684,6 +718,7 @@
 | [ozkan-aydin-2021-collective](papers/ozkan-aydin-2021-collective.md) | Collective dynamics in entangled worm and robot blobs | 2021 | 3 | abstract | swarm-robotics, active-matter, collective-motion | dmarz/swarm-robotics |
 | [papachristou-2025-network](papers/papachristou-2025-network.md) | Network formation and dynamics among multi-LLMs | 2025 | 3 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms-recent |
 | [parrish-1999-complexity](papers/parrish-1999-complexity.md) | Complexity, Pattern, and Evolutionary Trade-Offs in Animal Aggregation | 1999 | 3 | abstract | collective-motion | dmarz/collective-motion |
+| [passino-2002-biomimicry](papers/passino-2002-biomimicry.md) | Biomimicry of bacterial foraging for distributed optimization and control | 2002 | 3 | abstract | swarm-intelligence, collective-decision | dmarz/swarm-intelligence-audit |
 | [patino-padial-2025-swarming](papers/patino-padial-2025-swarming.md) | Swarming intelligence in self-propelled micromotors and nanomotors | 2025 | 3 | skim | swarm-robotics, active-matter | dmarz/swarm-robotics-audit |
 | [pecora-1998-master](papers/pecora-1998-master.md) | Master Stability Functions for Synchronized Coupled Systems | 1998 | 3 | abstract | sync-consensus | dmarz/sync-consensus-audit |
 | [perez-2024-cultural](papers/perez-2024-cultural.md) | Cultural evolution in populations of Large Language Models | 2024 | 3 | abstract | llm-agent-swarms, meta | dmarz/llm-agent-swarms-audit |
@@ -720,6 +755,7 @@
 | [singh-2025-active](papers/singh-2025-active.md) | Active Electrosensing and Communication in MARL-trained Weakly Electric Fish Collectives | 2025 | 3 | abstract | marl-emergence, collective-decision | dmarz/marl-emergence |
 | [sinhuber-2017-phase](papers/sinhuber-2017-phase.md) | Phase Coexistence in Insect Swarms | 2017 | 3 | abstract | criticality-measurement, collective-motion, active-matter | dmarz/criticality-measurement |
 | [socha-2008-ant](papers/socha-2008-ant.md) | Ant colony optimization for continuous domains | 2008 | 3 | abstract | swarm-intelligence | dmarz/swarm-intelligence |
+| [solon-2015-pattern](papers/solon-2015-pattern.md) | Pattern formation in flocking models: A hydrodynamic description | 2015 | 3 | skim | collective-motion, active-matter | dmarz/collective-motion-audit |
 | [solon-2015-pressure](papers/solon-2015-pressure.md) | Pressure is not a state function for generic active fluids | 2015 | 3 | abstract | active-matter | dmarz/active-matter |
 | [solon-2024-thirty](papers/solon-2024-thirty.md) | Thirty years of surprises about collective motion | 2024 | 3 | abstract | collective-motion, active-matter | dmarz/collective-motion-recent |
 | [speck-2014-effective](papers/speck-2014-effective.md) | Effective Cahn-Hilliard Equation for the Phase Separation of Active Brownian Particles | 2014 | 3 | abstract | active-matter | dmarz/active-matter |
@@ -771,18 +807,22 @@
 | [zhang-2025-swarmagentic](papers/zhang-2025-swarmagentic.md) | SwarmAgentic: Towards Fully Automated Agentic System Generation via Swarm Intelligence | 2025 | 3 | abstract | swarm-intelligence, llm-agent-swarms | dmarz/swarm-intelligence |
 | [zhang-2025-which](papers/zhang-2025-which.md) | Which Agent Causes Task Failures and When? On Automated Failure Attribution of LLM Multi-Agent Systems | 2025 | 3 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms-recent |
 | [zheng-2026-brief](papers/zheng-2026-brief.md) | A brief review of evolutionary game dynamics in the reinforcement learning paradigm | 2026 | 3 | abstract | marl-emergence, collective-decision | dmarz/marl-emergence |
+| [zheng-2026-survey](papers/zheng-2026-survey.md) | A survey on large language models driven meta-optimizers for automated intelligent optimization | 2026 | 3 | abstract | swarm-intelligence, llm-agent-swarms | dmarz/swarm-intelligence-audit |
 | [zhou-2026-hydrodynamic](papers/zhou-2026-hydrodynamic.md) | Hydrodynamic Interactions Destroy Motility-Induced Phase Separation in Active Suspensions | 2026 | 3 | abstract | active-matter | dmarz/active-matter |
 | [zhu-2024-survey](papers/zhu-2024-survey.md) | A survey of multi-agent deep reinforcement learning with communication | 2024 | 3 | abstract | marl-emergence | dmarz/marl-emergence |
 | [zhuge-2024-language](papers/zhuge-2024-language.md) | Language Agents as Optimizable Graphs | 2024 | 3 | abstract | llm-agent-swarms, swarm-intelligence | dmarz/llm-agent-swarms |
 | [beni-2005-swarm](papers/beni-2005-swarm.md) | From Swarm Intelligence to Swarm Robotics | 2005 | 2 | abstract | swarm-robotics, swarm-intelligence | dmarz/swarm-robotics |
+| [blum-2024-ant](papers/blum-2024-ant.md) | Ant colony optimization: A bibliometric review | 2024 | 2 | abstract | swarm-intelligence, meta | dmarz/swarm-intelligence-audit |
 | [cao-2022-pool](papers/cao-2022-pool.md) | PooL: Pheromone-inspired Communication Framework for Large Scale Multi-Agent Reinforcement Learning | 2022 | 2 | abstract | marl-emergence, swarm-intelligence | dmarz/marl-emergence |
 | [emami-2026-llm-centric](papers/emami-2026-llm-centric.md) | LLM-Centric Agentic AI for UAV Swarms: Architecture, Enabling Technologies, and Open Problems | 2026 | 2 | abstract | llm-agent-swarms, swarm-robotics | dmarz/llm-agent-swarms-recent |
 | [fabregas-2026-mathematical](papers/fabregas-2026-mathematical.md) | The mathematical theory of behavioral swarms: Toward modeling the collective dynamics of living systems | 2026 | 2 | abstract | collective-motion, sync-consensus, crowds-and-traffic | dmarz/collective-motion-recent |
 | [feliciani-2023-trends](papers/feliciani-2023-trends.md) | Trends in crowd accidents based on an analysis of press reports | 2023 | 2 | skim | crowds-and-traffic | dmarz/crowds-and-traffic |
+| [gad-2022-particle](papers/gad-2022-particle.md) | Particle Swarm Optimization Algorithm and Its Applications: A Systematic Review | 2022 | 2 | abstract | swarm-intelligence | dmarz/swarm-intelligence-audit |
 | [garzon-ramos-2024-designing](papers/garzon-ramos-2024-designing.md) | Designing robot swarms: a puzzle, a problem, and a mess | 2024 | 2 | abstract | swarm-robotics, meta | dmarz/swarm-robotics |
 | [ghaffarzadegan-2023-generative](papers/ghaffarzadegan-2023-generative.md) | Generative Agent-Based Modeling: Unveiling Social System Dynamics through Coupling Mechanistic Models with Generative Artificial Intelligence | 2023 | 2 | abstract | llm-agent-swarms, meta | dmarz/llm-agent-swarms-audit |
 | [jaderberg-2019-human](papers/jaderberg-2019-human.md) | Human-level performance in 3D multiplayer games with population-based reinforcement learning | 2019 | 2 | abstract | marl-emergence | dmarz/marl-emergence |
 | [karaboga-2007-powerful](papers/karaboga-2007-powerful.md) | A powerful and efficient algorithm for numerical function optimization: artificial bee colony (ABC) algorithm | 2007 | 2 | abstract | swarm-intelligence | dmarz/swarm-intelligence |
+| [koss-2026-mean](papers/koss-2026-mean.md) | On the Mean-Field Limit of Consensus-Based Methods | 2026 | 2 | abstract | swarm-intelligence, sync-consensus | dmarz/swarm-intelligence-audit |
 | [lazaridou-2020-emergent](papers/lazaridou-2020-emergent.md) | Emergent Multi-Agent Communication in the Deep Learning Era | 2020 | 2 | abstract | marl-emergence | dmarz/marl-emergence |
 | [littman-1994-markov](papers/littman-1994-markov.md) | Markov games as a framework for multi-agent reinforcement learning | 1994 | 2 | abstract | marl-emergence | dmarz/marl-emergence |
 | [mirjalili-2014-grey](papers/mirjalili-2014-grey.md) | Grey Wolf Optimizer | 2014 | 2 | abstract | swarm-intelligence | dmarz/swarm-intelligence |

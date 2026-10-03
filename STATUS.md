@@ -6,17 +6,17 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 291 | 8 | 0 | 0 | 0 | 0 | 299 |
-| collective-decision | 173 | 6 | 0 | 6 | 0 | 0 | 185 |
-| swarm-robotics | 227 | 8 | 0 | 0 | 0 | 0 | 235 |
-| swarm-intelligence | 92 | 1 | 0 | 0 | 0 | 0 | 93 |
-| active-matter | 169 | 3 | 0 | 0 | 0 | 0 | 172 |
-| sync-consensus | 153 | 4 | 0 | 0 | 0 | 0 | 157 |
-| criticality-measurement | 165 | 4 | 0 | 4 | 0 | 0 | 173 |
+| collective-motion | 306 | 8 | 0 | 0 | 0 | 0 | 314 |
+| collective-decision | 180 | 6 | 0 | 6 | 0 | 0 | 192 |
+| swarm-robotics | 231 | 8 | 0 | 0 | 0 | 0 | 239 |
+| swarm-intelligence | 104 | 1 | 0 | 0 | 0 | 0 | 105 |
+| active-matter | 182 | 3 | 0 | 0 | 0 | 0 | 185 |
+| sync-consensus | 160 | 4 | 0 | 0 | 0 | 0 | 164 |
+| criticality-measurement | 180 | 4 | 0 | 4 | 0 | 0 | 188 |
 | marl-emergence | 120 | 12 | 0 | 0 | 0 | 0 | 132 |
-| llm-agent-swarms | 125 | 34 | 0 | 50 | 0 | 0 | 209 |
+| llm-agent-swarms | 126 | 34 | 0 | 50 | 0 | 0 | 210 |
 | crowds-and-traffic | 75 | 2 | 0 | 0 | 0 | 0 | 77 |
-| meta | 49 | 8 | 0 | 13 | 0 | 0 | 70 |
+| meta | 51 | 8 | 0 | 13 | 0 | 0 | 72 |
 | sybil-resistance | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## Tasks
