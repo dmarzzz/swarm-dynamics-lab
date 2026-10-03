@@ -70,3 +70,5 @@ Expanded all sixteen briefs; added the external-influence animation and revised 
 - [Biological precedent and visualization review](biology-visual-review/README.md): 301 assessed records, all 16 briefs, source boundaries, eight priorities and an offline searchable view.
 
 - [Hackathon task scenarios](hackathon-scenarios/README.md): one to three ranked tasks for every atlas candidate and related proposal, nineteen bounded task kits, scoring contracts and a three-scenario LLM shortlist.
+
+- [Experimental question expansion](experimental-expansion/README.md): 24 EX comparisons, count reconciliation and the dashboard contribution-bank contract.

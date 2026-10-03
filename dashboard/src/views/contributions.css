@@ -1,0 +1,11 @@
+.contribution-page { padding-bottom: 4rem; }
+.contribution-filters { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem; }
+.contribution-filters label { display: grid; gap: .4rem; flex: 1 1 200px; }
+.contribution-filters input, .contribution-filters select { width: 100%; padding: .75rem; color: var(--ink); background: var(--paper-2); border: 1px solid var(--rule-strong); font: inherit; }
+.contribution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 410px), 1fr)); gap: 1.5rem; }
+.contribution-card { padding: 1.5rem; border: 1px solid var(--rule); background: var(--paper-2); overflow-wrap: anywhere; }
+.contribution-card h2 { font-size: 1.5rem; line-height: 1.25; }
+.contribution-card p, .contribution-card dd { line-height: 1.6; }
+.contribution-card dt { font-weight: 600; margin-top: 1rem; }
+.contribution-card dd { margin: .3rem 0 0; color: var(--ink-2); }
+.contribution-link { display: inline-block; margin-right: .65rem; }

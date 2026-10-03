@@ -1,0 +1,20 @@
+[
+  {
+    "id": "VX",
+    "owner": "vishesh/codex-methods",
+    "path": "researchers/vishesh/notes/atlas-review/extensions.json",
+    "collection": "extensions"
+  },
+  {
+    "id": "PX",
+    "owner": "vishesh/codex-methods",
+    "path": "researchers/vishesh/notes/priority-research-expansion/ideas.json",
+    "collection": "ideas"
+  },
+  {
+    "id": "EX",
+    "owner": "vishesh/codex-methods",
+    "path": "researchers/vishesh/notes/experimental-expansion/questions.json",
+    "collection": "ideas"
+  }
+]

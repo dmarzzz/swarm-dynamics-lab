@@ -204,5 +204,60 @@ class QuestionsValidationTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'change index does not match'):
             self.validate(payload)
 
+
+class ContributionTest(unittest.TestCase):
+    def setUp(self):
+        import tempfile
+        from contributions import build_contributions
+        self.build = build_contributions
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        self.path = self.root / 'researchers/vishesh/notes/bank.json'
+        self.path.parent.mkdir(parents=True)
+        brief = self.path.parent / 'project-briefs/memory.md'
+        brief.parent.mkdir()
+        brief.write_text('fixture')
+        self.row = {'id':'EX-01', 'title':'Title', 'status':'exploratory hunch; not a registered hypothesis',
+            'question':'Question', 'comparison':'Comparison', 'confounds':'Confounds', 'decision_value':'Decision',
+            'sources':['source'], 'atlas':['A-01'], 'briefs':['memory'], 'related':[]}
+        self.registry = [{'id':'EX', 'owner':'vishesh/codex-methods', 'path':str(self.path.relative_to(self.root)), 'collection':'ideas'}]
+
+    def build_fixture(self, rows=None, registry=None):
+        self.path.write_text(json.dumps({'ideas': rows if rows is not None else [self.row]}))
+        return self.build(self.root, {'candidates':[{'id':'A-01'}]}, {'source':{}}, {}, self.registry if registry is None else registry)
+
+    def test_counts_follow_input_not_fixed_snapshot(self):
+        data = self.build_fixture()
+        self.assertEqual((data['atlas_count'], data['contribution_count'], data['question_record_count']), (1,1,2))
+        row2 = {**self.row, 'id':'EX-02', 'related':['EX-01']}
+        data = self.build_fixture([self.row, row2])
+        self.assertEqual(data['question_record_count'], 3)
+        self.assertEqual(data['banks'][0]['count'], 2)
+
+    def test_duplicate_and_canonical_collision_rejected(self):
+        with self.assertRaises(ValueError): self.build_fixture([self.row, self.row])
+        self.row['id'] = 'A-01'
+        with self.assertRaises(ValueError): self.build_fixture()
+
+    def test_unknown_links_and_status_rejected(self):
+        for field in ['sources','atlas','briefs','related']:
+            with self.subTest(field=field):
+                with self.assertRaises(ValueError): self.build_fixture([{**self.row, field:['missing']}])
+        with self.assertRaises(ValueError): self.build_fixture([{**self.row, 'status':'accepted'}])
+
+    def test_paths_cannot_escape_owner_notes(self):
+        for path in ['../secret.json', '/secret.json', 'researchers/dmarz/notes/bank.json', 'researchers/vishesh/notes/../../bank.json']:
+            with self.subTest(path=path):
+                with self.assertRaises(ValueError): self.build_fixture(registry=[{**self.registry[0], 'path':path}])
+
+    def test_published_counts_and_original_atlas_remain_separate(self):
+        data = load('contributions')
+        canonical = load('questions')
+        self.assertEqual(data['atlas_count'], len(canonical['candidates']))
+        self.assertEqual(data['contribution_count'], sum(b['count'] for b in data['banks']))
+        self.assertFalse({q['id'] for q in data['questions']} & {q['id'] for q in canonical['candidates']})
+        self.assertEqual(data['registered_hypothesis_count'], len(load('hypotheses')))
+
 if __name__ == '__main__':
     unittest.main()

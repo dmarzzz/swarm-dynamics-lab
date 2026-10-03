@@ -1,3 +1,4 @@
+import { ContributionCount } from './Contributions';
 import { useDeferredValue, useMemo, useRef, useState } from 'react';
 import { questionsDataUrl, useQuestionAtlas, type Question, type QuestionAtlas } from '../data/questions';
 import {
@@ -110,6 +111,7 @@ function QuestionBrowser({ atlas, params, navigation }: { atlas: QuestionAtlas; 
   return <div className="wrap questions-page">
     <header className="page-head q-heading">
       <h1 className="display">Questions worth testing.</h1>
+      <ContributionCount />
       <p className="lede">{atlas.candidates.length} questions across {Object.keys(atlas.topics).length} literature topics and {navigation.focus_areas.length} cross-cutting focus areas, connected to {navigation.projects.length} project ideas. Each question has a tentative hypothesis, a test and evidence that could count against it.</p>
       <p className="q-boundary">For human selection. These are unreviewed ideas; shortlisting does not approve an experiment.</p>
       <div className="q-update"><span>Update {atlas.version}</span><button onClick={() => setParams({ change: 'new', id: null })}>{atlas.changes.new.length} new</button><button onClick={() => setParams({ change: 'revised', id: null })}>{atlas.changes.revised.length} revised</button><span>{atlas.date}</span><a href={GUIDE}>Research guide</a><a href={questionsDataUrl} download="swarm-lab-questions.json">Download question bank</a></div>

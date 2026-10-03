@@ -21,7 +21,7 @@ Reconcile the 214-card atlas, 40 VX and 14 PX contributions, then add a new batc
 
 ## Done when
 
-- [ ] Explain question counts separately from overlapping review records.
-- [ ] Add 24 experimental questions with comparisons, falsifiers, controls and overlap notes.
-- [ ] Export and display all contribution banks with derived counts and explicit unreviewed status.
+- [x] Explain question counts separately from overlapping review records.
+- [x] Add 24 experimental questions with comparisons, falsifiers, controls and overlap notes.
+- [x] Export and display all contribution banks with derived counts and explicit unreviewed status.
 - [ ] Validate research coverage, dashboard contracts/build/browser behavior and publication safety; push and verify deployment.

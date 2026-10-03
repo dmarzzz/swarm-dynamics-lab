@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: done
-task: fix-dashboard-deploy-cancellation
-doing: Dashboard concurrency fix deployed successfully in run 37161602344
-updated: 2026-10-03T23:24Z
+state: working
+task: expand-experimental-question-bank
+doing: Adding 24 experimental questions and exposing contribution banks in the dashboard
+updated: 2026-10-03T23:32Z
 ---
 
 ## Notes

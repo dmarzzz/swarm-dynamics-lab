@@ -16,6 +16,7 @@ import sys
 import time
 from collections import Counter
 from research_navigation import build_navigation
+from contributions import build_contributions
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'scripts'))
@@ -322,6 +323,7 @@ def export():
                           'edges': [{'s': s, 't': t} for s, t in sorted(edges)]},
                 'hypotheses': docs_payload(data.hypotheses), 'experiments': docs_payload(data.experiments),
                 'questions': questions,
+                'contributions': build_contributions(ROOT, questions, data.library, data.hypotheses),
                 'navigation': build_navigation(ROOT, questions, data.hypotheses, data.topics)}
     OUT.mkdir(parents=True, exist_ok=True)
     for name, payload in payloads.items():

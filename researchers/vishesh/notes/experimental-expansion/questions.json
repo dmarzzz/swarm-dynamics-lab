@@ -1,0 +1,925 @@
+{
+  "schema": "swarm-lab-experimental-expansion-v1",
+  "owner": "vishesh/codex-methods",
+  "status": "exploratory hunches; no novelty claim",
+  "ideas": [
+    {
+      "id": "EX-01",
+      "title": "Do correct facts become wrong when schemas disagree?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can a team combine individually correct provider measurements without silently mixing units, denominators or measurement windows?",
+      "prediction": "A typed evidence record should reduce composition errors when representations differ, with little benefit on already harmonized inputs.",
+      "comparison": "Cross harmonized versus mixed units/denominators with prose-only versus typed records. Keep raw information and text budget matched. Choose a provider under an executable contract; include valid conversions and incomparable quantities.",
+      "metrics": [
+        "Feasible-choice rate",
+        "Invalid comparisons",
+        "Clarification rate",
+        "Conversion and review cost"
+      ],
+      "falsifier": "Drop the typed-record claim if gains disappear when prose contains equally explicit units, or if the format merely exposes evaluator-only answers.",
+      "confounds": "Do not confuse missing facts with representation mismatch; score justified refusal to compare incompatible measurements.",
+      "atlas": [
+        "SEC-11",
+        "SOC-32"
+      ],
+      "related": [
+        "PX-06"
+      ],
+      "delta": "Adds representation compatibility as the manipulated cause, rather than merge order or missing log coverage.",
+      "briefs": [
+        "collective-sensing",
+        "coordination",
+        "casefile"
+      ],
+      "scenario": "API",
+      "decision_value": "Decide whether the harness needs typed measurement fields rather than free-text evidence alone.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "li-2026-memtx",
+        "zerhoudi-2026-compaction",
+        "liu-2026-safe"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-02",
+      "title": "Does adaptive provider testing select the luckiest estimate?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "When agents can repeat tests selectively, do they choose genuinely better providers or providers with favorable sampling noise?",
+      "prediction": "Balanced sampling or an independently confirmed final comparison should reduce selection regret relative to unrestricted retesting at equal total tests.",
+      "comparison": "Give mock providers fixed hidden qualities and noisy test returns. Compare balanced sampling, adaptive testing and adaptive testing with a reserved fresh confirmation set. Vary noise independently of true quality gaps.",
+      "metrics": [
+        "True selection regret",
+        "Confirmation failures",
+        "Tests per provider",
+        "Completion cost"
+      ],
+      "falsifier": "The confirmation reserve is not useful if its reduction in mistaken choices is offset by lost discovery at the same cap.",
+      "confounds": "Prevent reuse of confirmation observations for search; include equal-quality providers and report tie uncertainty.",
+      "atlas": [
+        "SOC-42",
+        "SIM-07"
+      ],
+      "related": [
+        "PX-13"
+      ],
+      "delta": "Moves selection bias inside sequential evidence acquisition, rather than best-of-many completed answers or team calibration.",
+      "briefs": [
+        "discovery",
+        "collective-sensing",
+        "quorum"
+      ],
+      "scenario": "API",
+      "decision_value": "Choose a repeat-testing and confirmation rule for tool comparison.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "bay-2026-when",
+        "liu-2026-llms",
+        "data-swarmworld-2026"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-03",
+      "title": "Can separately valid edits violate a joint invariant?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Do independent reviewers approve edits that are safe alone but inconsistent when committed together?",
+      "prediction": "Joint invariant validation should prevent write-skew errors that per-edit approval misses, at a measurable coordination cost.",
+      "comparison": "Construct two concurrent table/config edits that each pass checks against the old snapshot but jointly break a capacity or consistency constraint. Compare independent approval, serialized revalidation and atomic joint validation.",
+      "metrics": [
+        "Joint invariant violations",
+        "Valid edits retained",
+        "Commit latency",
+        "Revalidation cost"
+      ],
+      "falsifier": "If per-edit checks supplied with the current committed state match joint validation, narrow the claim to stale-snapshot handling.",
+      "confounds": "Use both interacting and independent edits; randomize order; do not give only one arm access to the invariant.",
+      "atlas": [
+        "SEC-11",
+        "SEC-49"
+      ],
+      "related": [
+        "VX-11"
+      ],
+      "delta": "Tests concurrent validity against a shared snapshot, rather than merge-order effects or measuring harm after recovery.",
+      "briefs": [
+        "coordination",
+        "institutions",
+        "commons"
+      ],
+      "scenario": "MERGE",
+      "decision_value": "Decide whether approval must bind to a joint transaction rather than individual contributions.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "li-2026-memtx",
+        "zerhoudi-2026-compaction",
+        "liu-2026-safe"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-04",
+      "title": "Does approval bind to the artifact that is executed?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can an approved result be replaced or refreshed before execution without the team noticing?",
+      "prediction": "Approval bound to a content version should reduce execution of unreviewed state compared with approval bound only to an artifact name.",
+      "comparison": "Insert a controlled change between review and execution in a mock workflow. Compare name-based approval, version-bound approval and revalidation-on-change; cross harmful and benign updates.",
+      "metrics": [
+        "Unreviewed executions",
+        "Benign updates blocked",
+        "Task completion",
+        "Revalidation overhead"
+      ],
+      "falsifier": "Version binding adds no decision value if an equivalent revalidation policy prevents the same errors with lower cost.",
+      "confounds": "Fix the timing window and access rights; a digest proves which content was approved, not its truth or safety.",
+      "atlas": [
+        "SEC-46",
+        "SEC-47"
+      ],
+      "related": [
+        "PX-03"
+      ],
+      "delta": "Targets the check-to-use interval, distinct from shared-cache bypass or whether a correction becomes visible.",
+      "briefs": [
+        "institutions",
+        "coordination",
+        "memory"
+      ],
+      "scenario": "SUPPORT",
+      "decision_value": "Choose whether approval records require an artifact version and expiration policy.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "le-2026-cross-layer",
+        "lee-2026-reproduction",
+        "zha-2026-autonomous"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-05",
+      "title": "Can the swarm answer for the correct point in time?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Will agents distinguish a fact that was correct at the requested date from one that is correct now?",
+      "prediction": "Explicit validity intervals should reduce temporal-scope errors on historical requests without improving static cases artificially.",
+      "comparison": "Provide dated provider contracts with overlapping revisions. Cross current versus historical requests with timestamp-only versus validity-interval records; keep the actual facts identical.",
+      "metrics": [
+        "Time-scoped correctness",
+        "Stale-current selections",
+        "Incorrect historical corrections",
+        "Evidence cost"
+      ],
+      "falsifier": "The interval scheme is not needed if a simple request-date filter performs equally well on held-out revision patterns.",
+      "confounds": "Distinguish document publication date, effective date and retrieval time; allow unresolved conflicts when intervals overlap.",
+      "atlas": [
+        "SOC-21",
+        "SOC-25"
+      ],
+      "related": [
+        "VX-39"
+      ],
+      "delta": "Separates historical truth from current truth without requiring corruption or a changed goal during a run.",
+      "briefs": [
+        "memory",
+        "telephone",
+        "casefile"
+      ],
+      "scenario": "API",
+      "decision_value": "Decide which temporal fields a reusable evidence ledger must retain.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "park-2023-generative",
+        "perez-2024-cultural",
+        "ashery-2024-emergent"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-06",
+      "title": "Can reversible preparation preserve progress before commitment?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can agents keep working while evidence is disputed by separating reversible preparation from irreversible action?",
+      "prediction": "A prepare-then-commit protocol should preserve more useful work than stopping everything while preventing more irreversible mistakes than immediate execution.",
+      "comparison": "Use a synthetic service action with reversible preparation and an irreversible simulated commit. Compare immediate execution, global pause and prepare/commit under delayed valid and false objections.",
+      "metrics": [
+        "Irreversible mistakes",
+        "Useful preparation retained",
+        "Deadline completion",
+        "Coordination overhead"
+      ],
+      "falsifier": "Prefer the simpler pause rule if two-phase preparation provides no completion gain at equal error rate.",
+      "confounds": "Define real simulated side effects explicitly; do not call changing a local log a reversal of an external consequence.",
+      "atlas": [
+        "SEC-48",
+        "SOC-30"
+      ],
+      "related": [
+        "VX-11",
+        "VX-05"
+      ],
+      "delta": "Tests prevention through action staging, rather than rollback after harm or quarantine of evidence alone.",
+      "briefs": [
+        "institutions",
+        "coordination",
+        "regrowth"
+      ],
+      "scenario": "SUPPORT",
+      "decision_value": "Choose which tool actions need a separate commitment boundary.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "zha-2026-autonomous",
+        "chen-2026-memsecbench",
+        "mateo-torrejon-2026-gammaf"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-07",
+      "title": "Do retries duplicate a valid action?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can forks and resumed agents repeat an already completed action when the acknowledgment was lost?",
+      "prediction": "Logical operation IDs shared across retries should prevent duplicate side effects better than per-agent request IDs.",
+      "comparison": "Drop acknowledgments after successful mock actions. Cross retry by the original worker versus a replacement with no deduplication, per-agent deduplication and operation-level deduplication.",
+      "metrics": [
+        "Duplicate side effects",
+        "Missed legitimate operations",
+        "Completion latency",
+        "Recovery cost"
+      ],
+      "falsifier": "Operation-level identity is unnecessary if the action interface is already idempotent and simpler retries perform equally.",
+      "confounds": "Include legitimate repeated requests with similar text; do not deduplicate by textual similarity or silently discard intended repetitions.",
+      "atlas": [
+        "MTH-05",
+        "SIM-05"
+      ],
+      "related": [
+        "VX-15"
+      ],
+      "delta": "Tests action semantics under lost acknowledgments, not just replay equivalence or ledger continuity.",
+      "briefs": [
+        "coordination",
+        "memory",
+        "regrowth"
+      ],
+      "scenario": "SUPPORT",
+      "decision_value": "Specify retry identity and replay behavior in the tool contract.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "elnozahy-2002-survey",
+        "li-2026-memtx",
+        "gh-apromisedland-trustworthy-agent-simulation"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-08",
+      "title": "Can correction messages create a repair loop?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Will several defenders repeatedly invalidate and restore the same fact after observing one another’s corrections?",
+      "prediction": "Causally tagged, idempotent correction events should reduce repair oscillation compared with unversioned repeated warnings.",
+      "comparison": "Inject one repairable error, then deliver duplicated and delayed correction notifications in a cycle. Compare plain warnings, event-ID deduplication and version-aware supersession at equal message limits.",
+      "metrics": [
+        "Repair operations per incident",
+        "Time to stable correctness",
+        "Legitimate work displaced",
+        "Unresolved incidents"
+      ],
+      "falsifier": "If message deduplication alone removes the effect, do not claim a broader immune-control advantage.",
+      "confounds": "Keep truth stable in this experiment; genuine new evidence must not be suppressed as a duplicate.",
+      "atlas": [
+        "SEC-07",
+        "SEC-50"
+      ],
+      "related": [
+        "VX-14"
+      ],
+      "delta": "Tests self-generated intervention loops after one incident, distinct from stale-child reinfection or detector overhead alone.",
+      "briefs": [
+        "regrowth",
+        "memory",
+        "institutions"
+      ],
+      "scenario": "RESULT",
+      "decision_value": "Decide whether corrections need causal IDs and idempotent application.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "cai-2026-child",
+        "li-2026-memtx",
+        "zha-2026-autonomous"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-09",
+      "title": "Do locally feasible tool choices compose into a feasible pipeline?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can specialist agents choose individually valid services that together violate an end-to-end requirement?",
+      "prediction": "Explicit compatibility constraints should improve joint pipeline feasibility over independent per-service choices.",
+      "comparison": "Choose an extractor and storage API with hidden-to-agents but observable-through-documents interface, region and latency constraints. Compare independent recommendations, shared constraint messages and centralized union-of-evidence selection.",
+      "metrics": [
+        "End-to-end feasibility",
+        "Local-versus-global disagreement",
+        "Total utility regret",
+        "Communication cost"
+      ],
+      "falsifier": "The coordination mechanism adds no value if independently choosing each best service also solves the coupled instances.",
+      "confounds": "Match all accessible facts; vary coupling strength while holding single-service difficulty fixed; avoid privileged compatibility labels.",
+      "atlas": [
+        "SOC-16",
+        "SOC-04"
+      ],
+      "related": [
+        "PX-10"
+      ],
+      "delta": "Introduces joint task feasibility as the endpoint, beyond routing relevance or role bottlenecks.",
+      "briefs": [
+        "coordination",
+        "collective-sensing",
+        "leadership"
+      ],
+      "scenario": "API",
+      "decision_value": "Identify when task decomposition must preserve cross-subtask constraints.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "pal-2026-swarmworld",
+        "cemri-2025-why",
+        "amayuelas-2025-self"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-10",
+      "title": "Which evidence partition makes decomposition fail?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Does splitting work by source, claim or candidate change performance when the same facts must be joined across several subtasks?",
+      "prediction": "Partitioning along dependency boundaries should reduce synthesis losses as cross-partition dependencies increase.",
+      "comparison": "Generate fixed claim-support graphs with varying edge cuts. Assign the same evidence union by source, claim or random partition, with matched worker counts and communication caps.",
+      "metrics": [
+        "Joint claim correctness",
+        "Missing cross-partition joins",
+        "Duplicate retrieval",
+        "Coordination cost"
+      ],
+      "falsifier": "Prefer simple partitioning if dependency-aware assignment loses its advantage after charging the partitioner’s work.",
+      "confounds": "The partitioner sees only allowed structure, not answers; match marginal packet difficulty and overall evidence volume.",
+      "atlas": [
+        "SOC-01",
+        "SOC-13"
+      ],
+      "related": [
+        "VX-34"
+      ],
+      "delta": "Varies decomposition geometry of a fixed task, rather than model diversity or the discovery/discussion budget split.",
+      "briefs": [
+        "collective-sensing",
+        "coordination",
+        "discovery"
+      ],
+      "scenario": "RESEARCH",
+      "decision_value": "Choose how an orchestrator should divide evidence work.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "li-2026-diverse",
+        "kim-2026-are",
+        "rai-2026-when"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-11",
+      "title": "Can a small checkable witness replace a long explanation?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Do compact evidence witnesses help reviewers verify a result more efficiently than plausible free-text rationales?",
+      "prediction": "A valid witness should improve verification per resource, while invalid witnesses should be rejected rather than trusted for their format.",
+      "comparison": "For a bounded table or patch contract, provide rationale only, raw sources, or a minimal executable counterexample/witness. Include correct, invalid and incomplete witnesses at matched review budgets.",
+      "metrics": [
+        "False acceptance",
+        "False rejection",
+        "Verification cost",
+        "Correctness after review"
+      ],
+      "falsifier": "There is no witness advantage if a simple raw-source check matches it at equal total production and review cost.",
+      "confounds": "Charge witness construction; do not let the witness contain evaluator-only labels or assume every claim admits a short certificate.",
+      "atlas": [
+        "SOC-27",
+        "MTH-07"
+      ],
+      "related": [
+        "VX-38"
+      ],
+      "delta": "Tests the form and end-to-end cost of verifiable evidence, rather than independent judges or poisoned summaries alone.",
+      "briefs": [
+        "casefile",
+        "dissent",
+        "institutions"
+      ],
+      "scenario": "PATCH",
+      "decision_value": "Decide whether contributions should include a checkable witness alongside prose.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "leibo-2021-scalable",
+        "pal-2026-swarmworld",
+        "piatti-2024-cooperate"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-12",
+      "title": "Can correction policies distinguish reversals from noisy updates?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "When a fact changes repeatedly, can agents avoid both oscillating on noisy reports and clinging to an obsolete correction?",
+      "prediction": "A policy that tracks observation timing and independent corroboration should improve the lag/error tradeoff over fixed hysteresis.",
+      "comparison": "Use a mock provider whose true status can reverse, plus noisy reports with known delays. Compare immediate switching, fixed persistence threshold and version/time-aware updating.",
+      "metrics": [
+        "Tracking error",
+        "Switching cost",
+        "Lag after genuine reversal",
+        "False reversals"
+      ],
+      "falsifier": "Keep the simpler policy if its tracking-error/cost frontier dominates under held-out change rates.",
+      "confounds": "Hold source reliability separate from change frequency; distinguish delayed truth from false evidence.",
+      "atlas": [
+        "PHY-12",
+        "MET-06"
+      ],
+      "related": [
+        "VX-39"
+      ],
+      "delta": "Adds repeated nonstationarity and noisy correction streams, beyond one change point or apparent physical hysteresis.",
+      "briefs": [
+        "memory",
+        "quorum",
+        "culture"
+      ],
+      "scenario": "HANDOFF",
+      "decision_value": "Choose a correction policy for changing environments without treating every revision as corruption.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "talamali-2021-when",
+        "leonard-2024-fast",
+        "valentini-2017-best"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-13",
+      "title": "Can predictable audits be selectively evaded?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Does a fixed audit checklist invite contributors to place errors in rarely checked parts of a result?",
+      "prediction": "Randomized checks should reduce adaptive evasion at equal audit cost, but may miss high-risk fields compared with targeted checks.",
+      "comparison": "Give a bounded adversarial contributor knowledge of a fixed, risk-ranked or randomized audit policy. Hold error budget and audit calls fixed; compare against nonadaptive errors and a held-out attack strategy.",
+      "metrics": [
+        "Undetected harmful error",
+        "Legitimate result coverage",
+        "Audit cost",
+        "Risk-weighted residual loss"
+      ],
+      "falsifier": "Randomization is not useful if a fixed risk-ranked policy yields lower residual loss against held-out adaptive contributors.",
+      "confounds": "Randomize audit seeds outside attacker access; count benign mistakes and false rejection; do not claim security beyond the declared attacker.",
+      "atlas": [
+        "SEC-29",
+        "SEC-38"
+      ],
+      "related": [
+        "VX-30"
+      ],
+      "delta": "Tests strategic placement against an audit policy, rather than detection probes changing subjects or missing verifier logs.",
+      "briefs": [
+        "institutions",
+        "casefile",
+        "commons"
+      ],
+      "scenario": "RESULT",
+      "decision_value": "Choose where limited verification effort should be unpredictable.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "gans-2026-when",
+        "seiden-2026-identifying",
+        "todo-2009-characterizing"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-14",
+      "title": "Does abstract-only curation miss disqualifying conditions?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Will a resource curator select apparently relevant work whose methods or limitations contradict the intended use?",
+      "prediction": "Targeted retrieval of task-critical conditions should improve support quality more efficiently than uniformly reading longer excerpts.",
+      "comparison": "Use verified source cards with claims in abstracts and qualifying conditions in methods/limitations. Compare abstract-only screening, uniform expansion and targeted section requests under one retrieval cap.",
+      "metrics": [
+        "Unsupported transfer claims",
+        "Relevant coverage",
+        "Section requests",
+        "Citation support precision"
+      ],
+      "falsifier": "Targeted reading is not better if uniform expansion provides equal supported coverage for the same total retrieval cost.",
+      "confounds": "Annotate source conditions independently; do not hide all decisive facts only in one favored section; include abstracts that are sufficient.",
+      "atlas": [
+        "SOC-04",
+        "SOC-08"
+      ],
+      "related": [
+        "PX-06",
+        "PX-10"
+      ],
+      "delta": "Varies evidence depth and qualification access, rather than source identity or generic routing alone.",
+      "briefs": [
+        "discovery",
+        "telephone",
+        "collective-sensing"
+      ],
+      "scenario": "RESEARCH",
+      "decision_value": "Decide when a curation agent must inspect methods before recommending a resource.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "tambwekar-2026-proxifield",
+        "zhang-2024-cut",
+        "zhang-2026-silo"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-15",
+      "title": "Do evaluation incentives suppress honest uncertainty?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Do teams conceal missing evidence when abstention or clarification is penalized in individual performance scores?",
+      "prediction": "Rewarding justified abstention should improve calibration but can create excessive refusal unless useful completion is scored too.",
+      "comparison": "Cross complete versus insufficient evidence with completion-only, accuracy-only and balanced outcome incentives. Keep tools and facts fixed and evaluate all arms with the same external task utility.",
+      "metrics": [
+        "Unsupported confident answers",
+        "Justified abstention",
+        "Avoidable refusal",
+        "External task utility"
+      ],
+      "falsifier": "Drop an incentive rule if it only trades incorrect answers for unnecessary refusal without improving external utility.",
+      "confounds": "Separate the reward shown to agents from the evaluator’s metric; do not count abstention as universally good.",
+      "atlas": [
+        "SOC-20",
+        "SOC-27"
+      ],
+      "related": [
+        "VX-31"
+      ],
+      "delta": "Changes the incentive for revealing uncertainty, rather than the information conveyed by abstention itself.",
+      "briefs": [
+        "commons",
+        "institutions",
+        "dissent"
+      ],
+      "scenario": "API",
+      "decision_value": "Choose scorecards that reward useful calibrated behavior rather than apparent completion.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "cemri-2025-why",
+        "zhang-2026-silo",
+        "leibo-2021-scalable"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-16",
+      "title": "Should disagreement be routed by its cause?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can a team resolve conflicts more cheaply by distinguishing factual disagreement, incompatible definitions and permission disputes?",
+      "prediction": "Cause-specific resolution should help only when the classifier is accurate enough to offset misrouting and its own cost.",
+      "comparison": "Create matched disputes caused by a wrong fact, a unit/definition mismatch or unauthorized action. Compare generic debate, inferred cause-specific routing and oracle routing as a ceiling.",
+      "metrics": [
+        "Correct resolution",
+        "Misrouted disputes",
+        "Resolution cost",
+        "Harmful escalations"
+      ],
+      "falsifier": "Use generic review if classifier errors erase the advantage of specialized resolution at equal total budget.",
+      "confounds": "Keep surface wording and difficulty balanced; oracle labels stay outside the deployed policy; include mixed-cause disputes.",
+      "atlas": [
+        "SEC-04",
+        "SOC-09"
+      ],
+      "related": [
+        "VX-36"
+      ],
+      "delta": "Introduces diagnostic routing among distinct conflict mechanisms; complements EX-01’s specific schema-mismatch fixture.",
+      "briefs": [
+        "dissent",
+        "coordination",
+        "institutions"
+      ],
+      "scenario": "SUPPORT",
+      "decision_value": "Decide whether an orchestrator needs a dispute taxonomy before selecting a reviewer.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "triedman-2025-multi",
+        "zha-2026-autonomous",
+        "louck-2026-securing"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-17",
+      "title": "When is asking the user better than gathering more facts?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can a swarm identify that the missing input is a user preference rather than an external fact?",
+      "prediction": "Explicit uncertainty about preferences should trigger useful clarification more often than extra retrieval or assumed defaults.",
+      "comparison": "Give several factually feasible providers with a withheld user tradeoff, or a missing factual measurement. Allow one scripted clarification and bounded lookup calls; compare fixed defaults, retrieval-only and adaptive clarification.",
+      "metrics": [
+        "User-utility regret",
+        "Useful clarification rate",
+        "Unnecessary questions",
+        "Resource cost"
+      ],
+      "falsifier": "Clarification is not worthwhile if a declared default policy achieves comparable utility after charging user interaction.",
+      "confounds": "The evaluator’s preference is known only through the scripted user response; separate ambiguous preferences from infeasible tasks.",
+      "atlas": [
+        "SOC-11",
+        "SOC-20"
+      ],
+      "related": [
+        "VX-28"
+      ],
+      "delta": "Distinguishes preference uncertainty from factual uncertainty, rather than changing the option set alone.",
+      "briefs": [
+        "collective-sensing",
+        "leadership",
+        "quorum"
+      ],
+      "scenario": "API",
+      "decision_value": "Choose when to ask a human instead of spending another swarm search round.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "tambwekar-2026-proxifield",
+        "zhang-2026-silo",
+        "zhu-2026-demystifying"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-18",
+      "title": "Do delegated workers notice that the goal changed?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "When the user revises the objective, can agents stop producing locally correct work for an obsolete task?",
+      "prediction": "Versioned goals with acknowledgment should reduce obsolete work but can add coordination delays under frequent harmless edits.",
+      "comparison": "Change the requested output while workers are running. Compare ordinary announcement, goal-version checks and cancel/reassign; include semantic changes and wording-only edits.",
+      "metrics": [
+        "Current-goal utility",
+        "Obsolete work",
+        "Completion delay",
+        "Acknowledgment cost"
+      ],
+      "falsifier": "Version checks are unnecessary if ordinary announcements match current-goal success without extra delay.",
+      "confounds": "Hold evidence truth fixed; this changes the requested objective, not source facts. Charge work already spent before the revision.",
+      "atlas": [
+        "SOC-15",
+        "SOC-18"
+      ],
+      "related": [
+        "VX-15",
+        "VX-39"
+      ],
+      "delta": "Tests goal-version propagation rather than leader continuity, stale evidence or changed environment constraints.",
+      "briefs": [
+        "leadership",
+        "coordination",
+        "culture"
+      ],
+      "scenario": "BATCH",
+      "decision_value": "Specify cancellation and task-version semantics for delegated work.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "zhang-2026-silo",
+        "kim-2025-towards",
+        "paliskara-2026-worse"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-19",
+      "title": "Which damaged component should be repaired first?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Under a binding repair budget, does prioritizing recoverable task value outperform repairing the most visibly corrupted component?",
+      "prediction": "Value-aware triage should restore more useful output when damage size and downstream importance differ.",
+      "comparison": "Inject equal-cost incidents into dependency graphs with different downstream value and recoverability. Compare arrival order, largest-damage-first and observable value-based triage; use oracle value only as a ceiling.",
+      "metrics": [
+        "Restored verified utility",
+        "Residual downstream harm",
+        "Repair cost",
+        "Neglected valid work"
+      ],
+      "falsifier": "Use the simplest triage rule if estimated-value errors erase its recovery advantage on held-out graphs.",
+      "confounds": "Match total damage and repair capacity; include irrecoverable components so policies cannot win through privileged lost state.",
+      "atlas": [
+        "SEC-06",
+        "SEC-08"
+      ],
+      "related": [
+        "VX-40"
+      ],
+      "delta": "Varies repair prioritization by marginal recovery value, rather than queue-position effects on truth or attention flooding.",
+      "briefs": [
+        "regrowth",
+        "commons",
+        "coordination"
+      ],
+      "scenario": "RESULT",
+      "decision_value": "Allocate limited immune-response capacity across simultaneous incidents.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "li-2026-memtx",
+        "chen-2026-memsecbench",
+        "ouyang-2026-memlineage"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-20",
+      "title": "Can shared memory keep two tasks’ truths separate?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Will agents reuse a correct fact from one client, region or task where the same-looking fact is wrong in another?",
+      "prediction": "Task-scoped evidence should reduce cross-task contamination while retaining explicit transferable facts.",
+      "comparison": "Run two concurrent provider evaluations with overlapping entity names but different constraints. Compare global notes, task namespaces and selective shared facts under equal storage/retrieval budgets.",
+      "metrics": [
+        "Cross-task contamination",
+        "Valid reuse",
+        "Task success",
+        "Storage and routing overhead"
+      ],
+      "falsifier": "Strict isolation is not preferable if it loses enough useful reuse to underperform a simple scope filter.",
+      "confounds": "Keep temporal validity constant; vary task scope independently of wording and do not use task IDs as hidden answer labels.",
+      "atlas": [
+        "SOC-21",
+        "SEC-05"
+      ],
+      "related": [
+        "PX-01",
+        "PX-03"
+      ],
+      "delta": "Adds scope binding across simultaneous tasks, distinct from novelty, compaction or correction visibility within one task.",
+      "briefs": [
+        "memory",
+        "coordination",
+        "collective-sensing"
+      ],
+      "scenario": "HANDOFF",
+      "decision_value": "Choose namespace and sharing rules for a multi-task evidence store.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "park-2023-generative",
+        "perez-2024-cultural",
+        "zerhoudi-2026-compaction"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-21",
+      "title": "Should provider selection use estimates or uncertainty bounds?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Do agents account for the amount of test evidence when deciding whether a provider meets a hard reliability requirement?",
+      "prediction": "Uncertainty-aware selection should reduce risky infeasible choices at the cost of more abstention or testing.",
+      "comparison": "Vary test sample size independently of empirical accuracy for mock providers with known true quality. Compare point-estimate choice, conservative bound-based choice and a fixed extra-test policy.",
+      "metrics": [
+        "True feasibility violations",
+        "Utility regret",
+        "Abstention",
+        "Additional tests"
+      ],
+      "falsifier": "Prefer point estimates if the uncertainty policy’s service loss exceeds its reduction in violations under the declared task utility.",
+      "confounds": "Use held-out outcomes for evaluation; define the uncertainty method before testing and do not confuse epistemic uncertainty with task preference.",
+      "atlas": [
+        "SOC-11",
+        "SOC-43"
+      ],
+      "related": [
+        "PX-13"
+      ],
+      "delta": "Targets finite-sample measurement uncertainty in tool qualification, rather than confidence in a model’s answer or team-selection ties.",
+      "briefs": [
+        "quorum",
+        "discovery",
+        "collective-sensing"
+      ],
+      "scenario": "API",
+      "decision_value": "Define what counts as enough evidence to approve an API against a reliability requirement.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "tambwekar-2026-proxifield",
+        "zhang-2026-silo",
+        "zhu-2026-demystifying"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-22",
+      "title": "Do tool failures become false observations?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Will a timeout, empty response or permission error be silently interpreted as a legitimate zero or negative result?",
+      "prediction": "Typed failure states should reduce false conclusions while exposing a retry/abstention cost.",
+      "comparison": "Cross genuine zero results with timeout, access-denied and truncated tool responses. Compare ambiguous text outputs, explicit typed failures and a bounded retry policy.",
+      "metrics": [
+        "False negative claims",
+        "Correct unknowns",
+        "Duplicate tool work",
+        "Final task success"
+      ],
+      "falsifier": "Type distinctions add little if an equally explicit text protocol matches correctness and retry cost.",
+      "confounds": "Hold underlying task truth fixed; include legitimate empty results and charge retries; do not treat unavailable data as evidence of absence.",
+      "atlas": [
+        "SEC-53",
+        "MTH-11"
+      ],
+      "related": [
+        "PX-02",
+        "PX-06"
+      ],
+      "delta": "Tests within-run tool outcome semantics, rather than missing final-run denominators or source completeness alone.",
+      "briefs": [
+        "casefile",
+        "coordination",
+        "memory"
+      ],
+      "scenario": "RESEARCH",
+      "decision_value": "Set tool response contracts that preserve unknown and failure states.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "pecori-2016-s-kademlia",
+        "maccari-2009-avoiding",
+        "gh-datahop-kademlia-simulator"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-23",
+      "title": "How much evidence must be shared to make a correct joint decision?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can constrained evidence summaries support the task without exposing unrelated synthetic private fields to every agent?",
+      "prediction": "Task-limited evidence capsules should preserve most decision utility while reducing unnecessary disclosure, with failure on tasks requiring omitted context.",
+      "comparison": "Use entirely synthetic records containing task-relevant and irrelevant sensitive fields. Compare raw sharing, fixed redaction and task-specific capsules; score final decisions and fields actually exposed.",
+      "metrics": [
+        "Task utility",
+        "Unnecessary field exposure",
+        "Required context lost",
+        "Summarization cost"
+      ],
+      "falsifier": "Prefer simple redaction if capsules add cost without improving the utility/disclosure frontier.",
+      "confounds": "Define allowed recipients and necessary fields in advance; no real secrets. This is a data-minimization measurement, not a formal privacy guarantee.",
+      "atlas": [
+        "SEC-04",
+        "SOC-14"
+      ],
+      "related": [
+        "VX-32"
+      ],
+      "delta": "Measures useful evidence sharing under disclosure constraints, rather than action permissions or communication volume alone.",
+      "briefs": [
+        "institutions",
+        "coordination",
+        "collective-sensing"
+      ],
+      "scenario": "SUPPORT",
+      "decision_value": "Choose what a worker should disclose to peers when forwarding evidence.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "triedman-2025-multi",
+        "zha-2026-autonomous",
+        "louck-2026-securing"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    },
+    {
+      "id": "EX-24",
+      "title": "Can a defender distinguish flaky tools from targeted interference?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can repeated observations identify persistent or caller-specific corruption without wrongly quarantining a merely noisy tool?",
+      "prediction": "Cross-caller retests should improve separation only when the incident mechanisms are observationally distinguishable.",
+      "comparison": "Generate random transient errors, persistent wrong responses and caller-dependent responses with matched average error rate. Compare one-shot quarantine, repeated same-caller checks and cross-caller checks; include indistinguishable mechanism pairs.",
+      "metrics": [
+        "Wrong quarantine",
+        "Residual task error",
+        "Diagnostic calls",
+        "Calibrated unknowns"
+      ],
+      "falsifier": "Drop attribution claims when matched mechanisms produce the same observable distribution; retain only the measured task-protection claim.",
+      "confounds": "Freeze retry randomness and caller access; charge diagnostics; an identified failure pattern does not prove malicious intent.",
+      "atlas": [
+        "SEC-27",
+        "SEC-30",
+        "SEC-53"
+      ],
+      "related": [
+        "VX-14"
+      ],
+      "delta": "Adds controlled failure mechanisms and diagnostic interventions, distinct from prevalence calibration or generic observer effects.",
+      "briefs": [
+        "whistleblowing",
+        "discovery",
+        "regrowth"
+      ],
+      "scenario": "RESULT",
+      "decision_value": "Choose when to retry, route around, quarantine or explicitly withhold attribution.",
+      "feasibility": "Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.",
+      "sources": [
+        "shalizi-2011-homophily",
+        "aronow-2013-estimating",
+        "pante-2025-beyond"
+      ],
+      "source_note": "Closest-item catalogue references reused as leads; no fresh full-methods review or novelty certification in this batch."
+    }
+  ]
+}
