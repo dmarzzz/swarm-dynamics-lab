@@ -3,14 +3,20 @@ id: synthesis-pre-experiment-research
 type: task
 title: Research prerequisites for selecting swarm experiments
 kind: synthesis
-status: open
+status: claimed
 priority: p1
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: dmarz/preflight
+for: null
 created: 2026-10-03
 created_by: dmarz/preflight
 depends_on: []
-topics: [llm-agent-swarms, sybil-resistance, fork-merge-security, swarm-detection]
+topics:
+- llm-agent-swarms
+- sybil-resistance
+- fork-merge-security
+- swarm-detection
+claimed_at: 2026-10-03T20:18Z
+updated: 2026-10-03T20:18Z
 ---
 
 ## Goal
