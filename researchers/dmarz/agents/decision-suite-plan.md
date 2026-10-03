@@ -1,9 +1,9 @@
 ---
 agent: dmarz/decision-suite-plan
 tool: codex
-state: working  # working | idle | blocked | done
-task: null
-doing: Drafting the user-requested five-study distributed-evidence plan; documentation only.
+state: done  # working | idle | blocked | done
+task: design-distributed-evidence-suite
+doing: Completed the five-study distributed-evidence working plan; no implementation shipped.
 updated: 2026-10-03T23:02Z
 ---
 

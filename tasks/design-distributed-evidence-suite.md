@@ -23,5 +23,5 @@ Write and push a detailed working plan for SOC-07, SOC-09, SOC-08, SOC-19 and SO
 
 ## Done when
 
-- [ ] Document shared environment, treatments, budgets, sampling, analysis and launch gates.
-- [ ] Check consistency, validate the repository and push the plan.
+- [x] Document shared environment, treatments, budgets, sampling, analysis and launch gates.
+- [x] Check consistency, validate the repository and push the plan.
