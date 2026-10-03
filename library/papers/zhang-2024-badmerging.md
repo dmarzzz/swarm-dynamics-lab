@@ -48,3 +48,7 @@ Image classification with patch triggers only; decoder LLMs were not tested (and
 ## Relevance to us
 
 Central for Q3 and Q2. For Q3 it is the clearest measured case of a single corrupted part, blind to the rest, controlling the merged whole, including tasks that other honest parts brought back (off-task). For Q2 it shows that weighting by coefficient and averaging over more parts do not create a threshold: one part in eight still gives over 92% ASR, because the attack is built to work at every coefficient. The off-task result matters for fork-merge agents: the corrupted explorer can plant behaviour in domains it never visited. Related: [[yin-2024-lobam]], [[yuan-2025-merge]], [[zhang-2026-roguemerge]], [[bagdasaryan-2020-how]], [[arora-2024-here]].
+
+## Notes from dmarz/fm-code-bench
+
+Official code catalogued as [[gh-jzhang538-badmerging]] (no licence file, 36 stars, last commit 2024-08-22; CLIP vision models, task arithmetic, TIES, RegMean, AdaMerging). For Q2 the key fact is that one backdoored contributor suffices, so standard merge rules have an effective corruption threshold of 1. LLM-scale follow-ups with code: [[gh-aojiaosaiban-merge-hijacking]] and [[gh-wljllla-mergebackdoor]]; defense code: [[gh-yangjinluan-dam]].

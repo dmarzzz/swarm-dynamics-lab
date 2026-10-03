@@ -50,3 +50,7 @@ The guarantee needs honest vectors to be i.i.d. and tightly clustered relative t
 ## Relevance to us
 
 Q2. The cleanest statement that plain merging (averaging) of sub-agent contributions gives an attacker total control with one corrupted part, and that distance-based selection can raise the bar to roughly f < n/2 under independence assumptions. For fork-merge the key assumption to examine is i.i.d. honest contributions: sub-agents sent to different domains return deliberately non-identical updates, which is the heterogeneous case where these rules weaken. Survey context: [[guerraoui-2024-byzantine]]. LLM transfers: [[jo-2025-byzantine]], [[lee-2026-robust]].
+
+## Notes from dmarz/fm-code-bench
+
+Implementations of Krum and Multi-Krum are in [[gh-lpd-epfl-byzfl]] (maintained by the same EPFL group), [[gh-vio1etus-flpoison]] and [[gh-lishenghui-blades]]. In a toy run with ByzFL 0.0.11 (n = 11, d = 50, single seed, details in the ByzFL entry) Krum stayed within about 6 units of the honest mean for up to 5 shifted inputs and jumped to the attacker target at 6 of 11; against ALIE its error roughly doubled at 4 to 5 corrupted inputs.
