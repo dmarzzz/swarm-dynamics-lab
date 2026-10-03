@@ -4,11 +4,11 @@ type: paper
 title: "A Limitation of the Generalized Vickrey Auction in Electronic Commerce: Robustness against False-Name Bids"
 authors: [Yuko Sakurai, Makoto Yokoo, Shigeo Matsubara]
 year: 1999
-venue: Proceedings of the Sixteenth National Conference on Artificial Intelligence (AAAI-99), AAAI Press (7 pages; page range not shown on the AAAI page)
+venue: Proceedings of the Sixteenth National Conference on Artificial Intelligence (AAAI-99), pp. 86-92, AAAI Press
 url: https://cdn.aaai.org/AAAI/1999/AAAI99-013.pdf
 doi: null
 arxiv: null
-cite: "Sakurai, Y., Yokoo, M., & Matsubara, S. (1999). A Limitation of the Generalized Vickrey Auction in Electronic Commerce: Robustness against False-Name Bids. In Proceedings of the Sixteenth National Conference on Artificial Intelligence (AAAI-99). AAAI Press. https://cdn.aaai.org/AAAI/1999/AAAI99-013.pdf"
+cite: "Sakurai, Y., Yokoo, M., & Matsubara, S. (1999). A Limitation of the Generalized Vickrey Auction in Electronic Commerce: Robustness against False-Name Bids. In Proceedings of the Sixteenth National Conference on Artificial Intelligence (AAAI-99), pp. 86-92. AAAI Press. https://cdn.aaai.org/AAAI/1999/AAAI99-013.pdf"
 topics: [sybil-resistance, collective-decision]
 added_by: shadow/sol-p1
 accessed: 2026-10-03

@@ -1,7 +1,7 @@
 ---
 id: xiong-2013-securearray
 type: paper
-title: "SecureArray: Improving WiFi Security with Fine-Grained Physical-Layer Information"
+title: "SecureArray"
 authors: [Jie Xiong, Kyle Jamieson]
 year: 2013
 venue: Proceedings of the 19th Annual International Conference on Mobile Computing and Networking (MobiCom '13), Miami, pp. 441-452
@@ -19,6 +19,8 @@ code: []
 ---
 
 ## Summary
+
+Full title on the paper: "SecureArray: Improving WiFi Security with Fine-Grained Physical-Layer Information" (Crossref registers only the short title).
 
 Defence-in-depth for Wi-Fi against spoofing and session-hijack attacks by an adversary who may already hold the victim's keys. A multi-antenna access point (eight-antenna WARP radio) runs MUSIC-style angle-of-arrival (AoA) estimation on every received frame to obtain a multipath AoA spectrum, a signature of the exact client-AP channel at that instant that is very hard to forge from a different location. When the AP overhears a frame whose signature does not match the client's recent signatures beyond a similarity threshold eta, client and AP run a short AoA-signature challenge-response: the AP asks the legitimate client to transmit again and compares signatures, so an attacker cannot provoke false alarms by sending junk (sigma_2 guard) and the AP can drop the hijack. The paper also discusses mitigating deauthentication-style DoS against 802.11w. Evaluation in a busy office with static and mobile clients: 100% of spoofing attempts detected at a 0.6-0.67% false-alarm rate on legitimate traffic (L = 15 recent signatures, eta = 0.7); detection stays high when the attacker is only 5 cm from the client, with fewer AP antennas, and when both client and attacker walk at about 5 km/h. Read: abstract, introduction, threat model, overview of the AoA signature and challenge-response, evaluation headline figures and the mobility section; signal-processing derivations skimmed.
 
