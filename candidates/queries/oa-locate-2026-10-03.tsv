@@ -1,0 +1,27 @@
+# Papers the 2026-10-03 lane logs named but could not open (publisher 403, rate limits). Issue #51.
+# topic<TAB>seed<TAB>note
+swarm-detection	doi:10.1145/2488388.2488400	CopyCatch (Beutel 2013), sd-coordination
+swarm-detection	doi:10.1109/ICDM.2016.0096	DeBot (Chavoshi 2016), sd-coordination
+swarm-detection	doi:10.1145/3490486.3538239	Musolff 2022 algorithmic pricing tacit collusion, sd-coordination
+swarm-detection	doi:10.1287/mnsc.2022.02462	Musolff Management Science version, sd-coordination
+swarm-detection	doi:10.1186/s40537-023-00695-7	Bellutta & Carley 2023 coordinated account creation, sd-coordination
+swarm-detection	doi:10.1145/1920261.1920263	Stringhini 2010 detecting spammers, sd-honeypots
+swarm-detection	Social Honeypots: Making Friends With A Spammer Near You	Webb 2008, sd-honeypots
+swarm-detection	doi:10.1007/978-3-642-05284-2_4	Bowen 2009 decoy documents, sd-honeypots
+swarm-detection	doi:10.1145/2508859.2516671	Juels & Rivest 2013, sd-honeypots
+swarm-detection	doi:10.14722/ndss.2026.241239	TBTrackerX (Akhtar 2026), sd-bots
+swarm-detection	Address clustering heuristics for Ethereum	Victor 2020, sd-onchain
+swarm-detection	Understanding Ethereum via Graph Analysis	Chen 2018, sd-onchain
+swarm-detection	Good Bot, Bad Bot: Characterizing Automated Browsing Activity	Li 2021, sd-web-agents
+swarm-detection	Evaluating Turnstile as a Privacy-Conscious Alternative to reCAPTCHA	Sateur 2025, sd-web-agents
+swarm-detection	Web Bot Detection Evasion Using Generative Adversarial Networks	Iliou 2021, sd-web-agents
+swarm-detection	Are CAPTCHAs Still Bot-hard?	Teoh 2025, sd-web-agents
+swarm-detection	Free Proxies Unmasked	Mehanna 2024, sd-web-agents
+swarm-detection	arxiv:2609.31957	CaptchaArena, sd-web-agents
+swarm-detection	arxiv:2512.16280	Love, Lies, and Language Models (romance-baiting scams), sd-attribution
+swarm-detection	arxiv:2508.20282	Network-level prompt and trait leakage in local research agents, sd-attribution
+swarm-detection	arxiv:2609.20614	Inference-engine fingerprinting attacks are practical, sd-attribution
+swarm-detection	arxiv:2610.00253	System attribution in LLM brand recommendations, sd-attribution
+swarm-detection	arxiv:2410.03019	peer-review AI detection, sd-ai-content
+swarm-detection	arxiv:2502.19614	peer-review AI detection, sd-ai-content
+swarm-detection	arxiv:2503.15772	peer-review AI detection, sd-ai-content

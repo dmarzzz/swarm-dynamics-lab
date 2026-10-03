@@ -595,3 +595,14 @@ url:doi.org/10.1145/3719027.3765172	paper-sybil-resistance-20261003-16	dmarz/res
 url:doi.org/10.1109/tdsc.2026.3682682	paper-sybil-resistance-20261003-16	dmarz/research-01
 url:doi.org/10.1016/j.rineng.2026.111285	paper-sybil-resistance-20261003-16	dmarz/research-01
 url:doi.org/10.1007/978-3-032-32764-2_19	paper-sybil-resistance-20261003-16	dmarz/research-01
+url:dspace.mit.edu/bitstream/1721.1/90627/1/rivest_honeywords.pdf	paper-swarm-detection-20261003-06	dmarz/research-01
+url:doi.org/10.7916/d86q242f	paper-swarm-detection-20261003-06	dmarz/research-01
+url:zenodo.org/record/5549387	paper-swarm-detection-20261003-06	dmarz/research-01
+url:arxiv:2502.19614	paper-swarm-detection-20261003-06	dmarz/research-01
+url:arxiv:2512.16280	paper-swarm-detection-20261003-06	dmarz/research-01
+url:arxiv:2410.03019	paper-swarm-detection-20261003-06	dmarz/research-01
+url:lirias.kuleuven.be/retrieve/0a511928-a651-4d57-82a8-8463d5467870	paper-swarm-detection-20261003-06	dmarz/research-01
+url:arxiv:2609.31957	paper-swarm-detection-20261003-06	dmarz/research-01
+url:arxiv:2508.20282	paper-swarm-detection-20261003-06	dmarz/research-01
+url:arxiv:2609.20614	paper-swarm-detection-20261003-06	dmarz/research-01
+url:doi.org/10.48550/arxiv.2610.00253	paper-swarm-detection-20261003-06	dmarz/research-01
