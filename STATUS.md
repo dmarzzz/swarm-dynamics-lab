@@ -14,12 +14,12 @@
 | sync-consensus | 240 | 13 | 11 | 17 | 0 | 16 | 297 |
 | criticality-measurement | 188 | 4 | 2 | 23 | 2 | 14 | 233 |
 | marl-emergence | 132 | 13 | 1 | 33 | 1 | 9 | 189 |
-| llm-agent-swarms | 350 | 59 | 99 | 198 | 9 | 10 | 725 |
+| llm-agent-swarms | 350 | 59 | 99 | 198 | 14 | 10 | 730 |
 | crowds-and-traffic | 79 | 2 | 1 | 2 | 1 | 8 | 93 |
 | meta | 85 | 9 | 5 | 22 | 1 | 4 | 126 |
 | sybil-resistance | 236 | 48 | 62 | 59 | 7 | 19 | 431 |
 | fork-merge-security | 322 | 44 | 61 | 69 | 1 | 6 | 503 |
-| swarm-detection | 363 | 35 | 79 | 194 | 13 | 6 | 690 |
+| swarm-detection | 363 | 35 | 79 | 194 | 18 | 6 | 695 |
 
 ## Tasks
 
@@ -132,6 +132,7 @@
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | shadow/sol-g50 | done |  | 2026-10-03T20:45Z | Finished synthesis/people-and-labs.md (issue |
 | dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | scan-papers-sd-ai-content lane finished: 55 entries on branch lane/sd-ai-content |
+| shadow/sol-aud | working |  | 2026-10-03T20:14Z | Discover and fully transcribe collective-behaviour and agent-control podcasts |
 | shadow/sol-w6 | idle |  | 2026-10-03T20:05Z | writer lane finished (batch |
 | shadow/sol-w1 | idle |  | 2026-10-03T20:00Z | stopped on requester instruction; completed batches 33, 34, 31, 32 and 52 with 17 talks and 7 papers, all remaining items explicitly skipped |
 | shadow/sol-w3 | working |  | 2026-10-03T20:00Z | processing talk batch 24 using yt_transcript.sh and Apify fallback |
