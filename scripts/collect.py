@@ -754,9 +754,11 @@ def cmd_openalex(a):
         works = []
         if direction in ("fwd", "both"):
             cursor, got = "*", 0
+            q = {"filter": f"cites:{wid}", "per-page": 200, "sort": "cited_by_count:desc"}
+            if kws and (w.get("cited_by_count") or 0) > a.max:  # too many citers to page through: search within them
+                q["search"] = " OR ".join(f'"{k}"' if " " in k else k for k in kws)
             while cursor and got < a.max:
-                d = oa_get("/works", {"filter": f"cites:{wid}", "per-page": 200, "cursor": cursor,
-                                      "sort": "cited_by_count:desc"})
+                d = oa_get("/works", {**q, "cursor": cursor})
                 res = d.get("results") or []
                 works += [("fwd", r) for r in res]
                 got += len(res)
@@ -779,8 +781,8 @@ def cmd_openalex(a):
               f"{len(rows)} new, {len(relevant)} on-topic")
         log.append({"seed": seed, "openalex": wid, "direction": direction, "results": len(works), "known": known,
                     "new": len(rows), "on_topic": len(relevant)})
-    jl_write(RAW / f"openalex-log-{dt.date.today()}.jsonl", log)
-    print(f"openalex: rows -> {out.relative_to(ROOT)}; per-seed counts (for survey search_log rows) -> openalex-log")
+    jl_write(ROOT / "data" / f"openalex-log-{dt.date.today()}.jsonl", log)
+    print(f"openalex: rows -> {out.relative_to(ROOT)}; per-seed counts (for survey search_log rows) -> data/openalex-log-*.jsonl")
     return 0
 
 
