@@ -3,7 +3,7 @@ id: scan-code-collective-sims
 type: task
 title: Catalogue simulators for collective motion and active matter
 kind: scan
-status: claimed
+status: done
 priority: p0
 owner: shadow/sol-1
 created: '2026-10-03'
@@ -15,7 +15,11 @@ topics:
 - sync-consensus
 - crowds-and-traffic
 claimed_at: 2026-10-03T17:54Z
-updated: 2026-10-03T17:54Z
+updated: 2026-10-03T17:57Z
+outputs:
+- library/code/gh-mesa-mesa.md
+- library/code/gh-pmocz-activematter-python.md
+- library/code/gh-proroklab-vectorizedmultiagentsimulator.md
 ---
 
 ## Goal
