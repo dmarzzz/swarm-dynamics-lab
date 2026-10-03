@@ -36,4 +36,4 @@ Primary author summary of arXiv:2312.06942 with explicit attack policies and a r
 
 ## Relevance to us
 
-Useful threat-model precedent for checking sub-agent outputs before reintegration. Shared model copies cannot be treated as independent honest reviewers. Compare [[buck-2024-how]] for collusion channels and [[bhatt-2025-ctrl]] for multi-step control.
+Blog summary of the paper catalogued as [[greenblatt-2023-ai]]; cite the paper. Useful threat-model precedent for checking sub-agent outputs before reintegration. Shared model copies cannot be treated as independent honest reviewers. Compare [[buck-2024-how]] for collusion channels and [[bhatt-2025-ctrl]] for multi-step control.
