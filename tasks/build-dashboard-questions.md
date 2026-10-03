@@ -3,7 +3,7 @@ id: build-dashboard-questions
 type: task
 title: Add question atlas and review tools to the research dashboard
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/dashboard-questions
 for: null
@@ -13,7 +13,11 @@ depends_on: []
 topics:
 - meta
 claimed_at: 2026-10-03T21:48Z
-updated: 2026-10-03T21:48Z
+updated: 2026-10-03T21:56Z
+outputs:
+- dashboard/QUESTIONS.md
+- dashboard/src/views/Questions.tsx
+- dashboard/scripts/export.py
 ---
 
 ## Goal
@@ -22,7 +26,11 @@ Integrate the canonical question atlas into the existing React dashboard with se
 
 ## Done when
 
-- [ ] Questions data exports directly from the canonical bank and passes contract checks.
-- [ ] The dashboard route supports discovery, full details, stable links and compatible local review import/export.
-- [ ] Build, type checks, targeted tests and desktop/mobile browser checks pass.
-- [ ] Deployment ownership and triggers are documented; the change is reviewable without publication.
+- [x] Questions data exports directly from the canonical bank and passes contract checks.
+- [x] The dashboard route supports discovery, full details, stable links and compatible local review import/export.
+- [x] Build, type checks, targeted tests and desktop/mobile browser checks pass.
+- [x] Deployment ownership and triggers are documented; the change is reviewable without publication.
+
+## Coverage note
+
+Draft PR: https://github.com/dmarzzz/swarm-lab/pull/81. All requested implementation and local validation are complete. Publication remains on hold by the human; do not merge or dispatch deployment. See the dashboard-questions session log for verification and deployment findings.
