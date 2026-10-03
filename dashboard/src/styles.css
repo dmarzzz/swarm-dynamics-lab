@@ -170,7 +170,7 @@ main { flex: 1; }
 .small { font-size: 12px; }
 
 /* Sections */
-.page-head { padding: clamp(28px, 4.5vw, 64px) 0 clamp(20px, 3vw, 36px); }
+.page-head { padding-top: clamp(28px, 4.5vw, 64px); padding-bottom: clamp(20px, 3vw, 36px); }
 .section { padding-top: clamp(36px, 4.4vw, 60px); }
 .section-head {
   display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 6px 24px;

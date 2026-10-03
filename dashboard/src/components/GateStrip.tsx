@@ -9,15 +9,16 @@ export function gateStats(data: Dataset) {
   const scanned = s.topics.filter((t) => t.total >= SCAN_MIN).length;
   const surveyPass = data.surveys.filter((x) => x.gate.passes).length;
   const surveyStarted = data.surveys.length;
-  const reviewed = data.surveys.filter((x) => x.gate.passes && x.reviewed_by.filter(Boolean).length).length;
-  return { scanned, surveyStarted, surveyPass, reviewed, hypotheses: s.hypotheses, experiments: s.experiments, topics: s.topics.length };
+  const reviewed = data.surveys.filter((x) => x.status === 'reviewed').length;
+  const inReview = data.surveys.filter((x) => x.gate.passes && x.status !== 'reviewed' && x.reviewed_by.filter(Boolean).length).length;
+  return { inReview, scanned, surveyStarted, surveyPass, reviewed, hypotheses: s.hypotheses, experiments: s.experiments, topics: s.topics.length };
 }
 
 export function GateStrip({ data }: { data: Dataset }) {
   const g = gateStats(data);
   const steps = [
     { n: 'Scan', v: <><b>{g.scanned}</b> of {g.topics} topics with {SCAN_MIN}+ sources</>, p: g.scanned / g.topics, on: g.scanned > 0 },
-    { n: 'Survey', v: <><b>{g.surveyPass}</b> passing the gate, <b>{g.reviewed}</b> reviewed</>, p: g.surveyPass / g.topics, on: g.surveyPass > 0 },
+    { n: 'Survey', v: <><b>{g.surveyPass}</b> passing the gate, <b>{g.reviewed}</b> passed review{g.inReview ? <>, {g.inReview} asked to revise</> : null}</>, p: g.surveyPass / g.topics, on: g.surveyPass > 0 },
     { n: 'Hypothesis', v: g.hypotheses ? <><b>{fmt(g.hypotheses)}</b> filed against passing surveys</> : <>Opens once a survey is reviewed</>, p: g.hypotheses ? Math.min(1, g.hypotheses / g.topics) : 0, on: g.hypotheses > 0 },
     { n: 'Experiment', v: g.experiments ? <><b>{fmt(g.experiments)}</b> running or done</> : <>Needs a reviewed hypothesis</>, p: g.experiments ? Math.min(1, g.experiments / g.topics) : 0, on: g.experiments > 0 },
   ];

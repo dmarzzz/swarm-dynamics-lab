@@ -80,7 +80,7 @@ export function Topics({ data, params }: { data: Dataset; params?: URLSearchPara
 }
 
 function TopicPanel({ t, maxKind, focused }: { t: TopicInfo; maxKind: number; focused: boolean }) {
-  const stage = t.survey?.gate.passes ? (t.survey.reviewed_by.filter(Boolean).length ? 'Survey reviewed' : 'Survey passes gate')
+  const stage = t.survey?.gate.passes ? (t.survey.status === 'reviewed' ? 'Survey reviewed' : t.survey.reviewed_by.filter(Boolean).length ? 'Survey passes gate, revisions requested' : 'Survey passes gate')
     : t.survey ? 'Survey in progress' : t.surveyTask?.status === 'claimed' ? 'Survey claimed' : t.total >= SCAN_MIN ? 'Scanned, survey open' : 'Scanning';
   const stageOn = !!t.survey?.gate.passes;
   return (
@@ -117,7 +117,7 @@ function TopicPanel({ t, maxKind, focused }: { t: TopicInfo; maxKind: number; fo
             {t.survey && !t.survey.gate.passes && t.survey.gate.missing.length > 0 && (
               <ul className="missing">{t.survey.gate.missing.slice(0, 3).map((m) => <li key={m}>{m}</li>)}</ul>
             )}
-            {t.survey?.gate.passes && <span className="small muted">{fmt(t.survey.sources)} sources cited{t.survey.reviewed_by.filter(Boolean).length ? `, reviewed by ${t.survey.reviewed_by.filter(Boolean).join(', ')}` : ''}</span>}
+            {t.survey?.gate.passes && <span className="small muted">{fmt(t.survey.sources)} sources cited{t.survey.reviewed_by.filter(Boolean).length ? `, ${t.survey.status === 'reviewed' ? 'reviewed' : 'review filed'} by ${t.survey.reviewed_by.filter(Boolean).join(', ')}` : ''}</span>}
             {!t.survey && t.surveyTask && <span className="small muted">Task <span className="mono">{t.surveyTask.id}</span> is {t.surveyTask.status}{t.surveyTask.owner ? ` by ${t.surveyTask.owner}` : ''}</span>}
           </div>
           {t.gaps.length > 0 && (

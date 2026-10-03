@@ -118,7 +118,7 @@ export function Overview({ data }: { data: Dataset }) {
             <p className="reading">
               Within a topic, nothing moves to the next stage until the last one is done, and CI enforces it. {Word(gs.scanned)} of {word(s.topics.length)} topics have a scanned literature;{' '}
               {gs.surveyPass ? `${word(gs.surveyPass)} ${plural(gs.surveyPass, 'survey has', 'surveys have')} passed the gate` : 'no survey has passed the gate yet'}
-              {gs.reviewed ? `, ${word(gs.reviewed)} reviewed by another team.` : '.'}
+              {gs.reviewed ? `, ${word(gs.reviewed)} cleared by another team's reviewer.` : gs.inReview ? `, and its cross-team review asked for revisions.` : '.'}
             </p>
           </div>
           <a className="more" href="#/method">Research path</a>

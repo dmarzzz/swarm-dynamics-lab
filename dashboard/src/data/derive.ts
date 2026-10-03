@@ -110,7 +110,9 @@ function humanAsks(d: Dataset, now: number): Derived['humanAsks'] {
     if (a.state === 'blocked') out.push({ kind: 'blocked', title: a.doing || 'Agent is blocked', who: a.id, detail: 'agent blocked' });
   }
   for (const s of d.surveys) {
-    if (s.gate.passes && !s.reviewed_by.filter(Boolean).length) {
+    if (s.gate.passes && s.status !== 'reviewed' && s.reviewed_by.filter(Boolean).length) {
+      out.push({ kind: 'review', title: `Revise the ${s.topic} survey`, who: null, detail: `reviewer ${s.reviewed_by.filter(Boolean).join(', ')} asked for revisions` });
+    } else if (s.gate.passes && !s.reviewed_by.filter(Boolean).length) {
       out.push({ kind: 'review', title: `Review the ${s.topic} survey`, who: null, detail: 'passes the gate, waiting on a cross-team review' });
     }
   }
