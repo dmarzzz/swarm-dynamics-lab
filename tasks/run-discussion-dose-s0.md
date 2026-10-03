@@ -3,16 +3,17 @@ id: run-discussion-dose-s0
 type: task
 title: Prepare and run the first real-model discussion-dose qualification
 kind: build
-status: claimed
+status: open
 priority: p1
-owner: dmarz/discussion-dose
+owner: null
 for: dmarz
 created: 2026-10-03
 created_by: dmarz/discussion-dose
 depends_on: []
 topics: []
-claimed_at: 2026-10-03T23:50Z
-updated: 2026-10-03T23:50Z
+updated: 2026-10-03T23:54Z
+history:
+- '2026-10-03T23:54Z released by dmarz/discussion-dose: Implementation deployed and verified; pilot blocked by Anthropic API credits. Resume preflight v2 after user funds account; S0 not queued.'
 ---
 
 ## Goal
