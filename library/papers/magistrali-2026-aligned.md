@@ -5,14 +5,14 @@ title: 'Aligned Alone, Misaligned Together: Forecasting Adversarial Capture in L
 authors: [Isotta Magistrali, Chen Shani]
 year: 2026
 venue: arXiv preprint
-url: https://arxiv.org/abs/2608.22444
+url: https://arxiv.org/html/2608.22444
 doi: null
 arxiv: '2608.22444'
 cite: 'Magistrali, I., & Shani, C. (2026). Aligned Alone, Misaligned Together: Forecasting Adversarial Capture in LLM Agent Populations. arXiv preprint arXiv:2608.22444.'
 topics: [llm-agent-swarms, collective-decision]
 added_by: shadow/sol-1
 accessed: '2026-10-03'
-read_depth: abstract
+read_depth: full
 relevance: 4
 citations: null
 code: []
@@ -20,27 +20,28 @@ code: []
 
 ## Summary
 
-Populations of LLM monitors decide whether to escalate or dismiss security alerts while reading each other's decisions; the authors inject a committed minority that always pushes one way. Reported findings: two alerts a single agent judges almost identically alone can drive the population to very different collective outcomes, so a single-agent audit does not predict population behaviour; a response function calibrated from the population's benign, adversary-free operation forecasts, before any attack, how far a committed minority will move it; letting agents see each other's reasoning neutralises a weak attack but only delays a strong one (the question becomes when, not whether); and once committed agents are removed the population drifts back, so capture is a temporary state, not an absorbing trap. Abstract only.
+Populations of N = 12 Llama-3.1-8B-Instruct security-triage monitors play an explicitly instructed coordination game (matching the partner is rewarded) on one of six alert scenarios ordered by evidence. Each round has 12 pairwise interactions on a complete graph; agents decide simultaneously and record their own action, the partner's action, match, role and (if visible) the partner's one-sentence rationale in a five-slot FIFO memory, the only channel of influence. After a 15-round all-honest entrench phase, k of 12 agents are replaced by committed adversaries that always dismiss, for 20 to 60 rounds. A response curve g(d) (mean dismissal probability after seeing d of 5 remembered dismissals), estimated only from benign logs, plus a binomial mean-field closure m* = F(m*; k) forecasts the attacked honest dismissal rate at held-out doses k = 2, 4, 5 within 0.008 (mean absolute error 0.0058). Capture (at least 75% of honest agents dismissing for three rounds) becomes common between k = 3 and 4 (counts 0/4, 0/4, 2/4, 4/4, 2/4, 4/4 for k = 1 to 6). Visible honest rationales cut the moderate-dose argued effect from +0.211 to -0.021 (8 of 8 paired seeds, sign-flip p = 0.0078) but roughly double median time to capture at k = 6 rather than prevent it. After capture at k = 6, replacing, neutralising or removing the adversaries returns the honest mean to a sealed 90% forecast band around the benign state; per-seed recovery falls from 4/4 (replace) to 1/4 (remove).
 
 ## Contribution
 
-Turns the committed-minority tipping result of [[ashery-2024-emergent]] and [[flint-2026-indirect]] into a forecasting tool (a response function measured in benign operation) and adds the recovery result. Same family as [[wu-2026-how]] (defection scales with deceiver proportion) and the Flag Game zealot model in [[pavlova-2026-flag]].
+A prospective forecast of committed-minority capture from benign operation, with local pairwise interaction and bounded memory, and an explicit reversibility test with preregistered endpoint bands.
 
 ## Key results
 
-- Reported: a benign-operation response function predicts the shift under a committed minority before the attack is run (magnitudes not read).
-- Reported: reasoning visibility neutralises weak attacks and delays strong ones.
-- Reported: capture reverses after the committed agents leave.
+- Benign-log mean-field forecast within 0.008 at three held-out doses (measured, 4 seeds per dose); 2.8 times better than interpolation baselines.
+- A single-agent probe overestimates the contested-scenario population mean by 0.18; it works only for an explicit-rule scenario under silent adversaries (forecast 0.012 vs 0.011) and misses argued pressure by 0.039.
+- Capture is a temporary excursion from a single stable state, not a second stable state: the population returns toward its benign, dismissal-leaning level (4 seeds, one scenario, one dose, one model; authors' caveat).
+- Visibility raises baseline dismissal in an ambiguous scenario and increases between-seed variance.
 
 ## Methods and models
 
-Security-triage task, populations of LLM monitors, committed-minority injection, response-function calibration. Models, N and minority fractions not read.
+Llama-3.1-8B-Instruct; order-symmetrised two-label probabilities at the decision token; N = 12 (N = 24 check for the benign separation); preregistered closure phi(m, k) = ((N - k)m + k)/N, D ~ Binomial(5, phi). Read: full main text sections 1 to 6 in arXiv HTML on 2026-10-03; the Supplement (seeds, recovery details) was not read.
 
 ## Limitations and open questions
 
-- Abstract-level read. Whether the response function is the same object as the coupling gain of [[yang-2026-when]] or the majority force of [[de-marzo-2024-ai]] is not stated.
-- Reversibility contradicts the absorbing-state picture in the naming game ([[flint-2026-group]]); the difference is probably memory (monitors see current decisions, naming-game agents accumulate payoff memory), which is testable.
+- One model, N = 12, four seeds per cell; coordination pressure is instructed, not emergent.
+- The closure has one stable fixed point in the tested regime, so reversibility here is a property of that regime. Whether the benign response curve would admit a second fixed point (a spinodal regime in the sense of [[de-marzo-2026-conformity]]) is not tested.
 
 ## Relevance to us
 
-A ready hackathon design: measure a population's susceptibility curve in benign runs, then test whether it predicts the tipping fraction. The reversibility claim is also directly testable in the sealed-swarm setting ([[gh-killy-netsphere-sealed-swarm-transcripts]]).
+Read together with [[de-marzo-2026-conformity]], the reversibility "disagreement" reduces to a regime question: monostable dynamics relax, metastable ones persist. The head-to-head test is to place a pair inside the De Marzo spinodal and run Magistrali's local, bounded-memory protocol on it. The benign-forecast method is directly reusable.
