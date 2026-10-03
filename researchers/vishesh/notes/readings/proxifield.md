@@ -4,11 +4,14 @@ title: "Proxifield: Decentralized Multi-Agent Communication through Semantic Pro
 authors: Pradyumna Tambwekar, Yenchia Feng, Deep Patel, Karime Maamari (Distyl AI)
 org_or_venue: arXiv preprint (arXiv:2609.20889v1, cs.MA)
 date: 2026-09-16
-url_loaded: http://export.arxiv.org/api/query?search_query=all:Proxifield&max_results=5
-url_loaded: https://arxiv.org/abs/2609.20889
-url_loaded: https://arxiv.org/html/2609.20889v1
 status: found
 fetched: 2026-10-03
+urls_loaded:
+  - "http://export.arxiv.org/api/query?search_query=all:Proxifield&max_results=5"
+  - "https://arxiv.org/abs/2609.20889"
+  - "https://arxiv.org/html/2609.20889v1"
+library_ids:
+  - tambwekar-2026-proxifield
 ---
 
 ## What it is (2-4 sentences)

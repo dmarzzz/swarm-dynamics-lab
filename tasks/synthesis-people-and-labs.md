@@ -3,9 +3,9 @@ id: synthesis-people-and-labs
 type: task
 title: Map the people and labs
 kind: synthesis
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: shadow/sol-g50
 created: '2026-10-03'
 created_by: dmarz/setup
 depends_on:
@@ -22,6 +22,8 @@ topics:
 - marl-emergence
 - llm-agent-swarms
 - crowds-and-traffic
+claimed_at: 2026-10-03T19:39Z
+updated: 2026-10-03T19:39Z
 ---
 
 ## Goal

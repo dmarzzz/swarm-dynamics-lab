@@ -24,3 +24,62 @@ Compare local, global and silent networks while holding observations and communi
 ## What to watch
 
 A flocking animation alone is well explored. Measure estimation error; distinguish independent observations from copied messages.
+
+## Research question
+
+At matched evidence and communication budgets, how does network structure change accuracy, error spread and correction?
+
+## Dossier design sketch
+
+Carried over from the [interactive dossier](../swarm-ecology-dossier.html#collective-sensing). This is an unexecuted hunch, not an approved experiment. Counts and treatments below are planning choices; the lab’s survey and hypothesis review gates still apply.
+
+1. Give 12–20 agents partial observations of a synthetic world with a known correct classification. Use explicit rules rather than biological trivia.
+2. Compare a local ring or lattice, the same structure with a few long-range links, and a shared chat. Keep each agent’s total incoming message allowance comparable.
+3. Introduce one misleading observation, then a correction at a fixed round. Record every observation, message and answer.
+
+## Measures
+
+- Final accuracy and disagreement
+- Rounds until a correct stable decision
+- Incorrect adoption fraction and correction latency
+- Tokens and delivered messages per correct decision
+
+## Controls
+
+- Same base model, prompts and initial evidence in the first experiment
+- Paired task seeds and repeated independent runs
+- Non-communicating agents plus majority-vote baseline
+- Separate clean, misleading-evidence and corrected conditions
+
+## Minimum useful output
+
+One task generator, three communication treatments, structured messages, a replay and a table of repeated-run outcomes. Pilot a small batch before scaling.
+
+## Optional extension
+
+Add model diversity or asynchronous updates only after the topology result is interpretable.
+
+## Interpretation risk
+
+More connections can silently mean more evidence or tokens. A prettier network does not establish emergence. Avoid calling a smooth adoption curve a phase transition without a proper parameter sweep.
+
+## Demo narrative
+
+Run the same evidence through two networks. Introduce an error. Show how far it travels, then reveal accuracy and recovery across all trials.
+
+## Review update October 3
+
+Compare against Silo-Bench and Proxifield before claiming a new topology result. Different graph structures also change evidence access; match the observation allocation and token budget. [[zhang-2026-silo]] [[tambwekar-2026-proxifield]]
+
+**Decision to resolve before promotion:** Can a provenance-aware communication rule improve accuracy over matched independent voting on held-out partial-observation tasks?
+
+If the simple baseline explains the result, or the necessary evidence cannot be obtained, narrow this to a replication or park the hunch. A toy animation is not evidence that the proposed intervention works.
+
+## Additional dossier sources
+
+- [Flocks, Herds, and Schools](https://www.cs.toronto.edu/~dt/siggraph97-course/cwr87/) — Foundational local-rule model for collective motion.
+- [Persuasion in the AI Village](https://aivillageblog.substack.com/p/persuasion-in-the-ai-village-deepseek) — Consensus, inventive theories, metric pursuit and corrections.
+- [Welcome to Delvetown](https://groveresearch.com/blog/welcome-to-delvetown/) — Agent ecology, persistent identities, public interaction and institutions.
+- [Reasoning with Neural Cellular Automata](https://arxiv.org/abs/2609.36126) — Local recurrent cells, asynchronous updates and visual reasoning experiments.
+
+[All project briefs](README.md) · [Research updates](../background-readings-2026-10-03.md)

@@ -4,11 +4,14 @@ title: "Silo-Bench: A Scalable Environment for Evaluating Distributed Coordinati
 authors: Yuzhe Zhang, Feiran Liu, Yi Shan, Xinyi Huang, Xin Yang, Yueqi Zhu, Xuxin Cheng, Cao Liu, Ke Zeng, Terry Jingchen Zhang, Wenyuan Jiang
 org_or_venue: ACL 2026 Main Conference (accepted); arXiv:2603.01045 (cs.MA / cs.AI); 20 pages, 7 figures
 date: 2026-03-01 (v1); v2 2026-04-13 (version read = v2)
-url_loaded: https://export.arxiv.org/api/query?search_query=ti:%22Silo-Bench%22+OR+ti:%22SiloBench%22+OR+ti:%22Silo+Bench%22&max_results=10
-  https://arxiv.org/abs/2603.01045
-  https://arxiv.org/html/2603.01045v2
 status: found
 fetched: 2026-10-03
+urls_loaded:
+  - "https://export.arxiv.org/api/query?search_query=ti:%22Silo-Bench%22+OR+ti:%22SiloBench%22+OR+ti:%22Silo+Bench%22&max_results=10"
+  - "https://arxiv.org/abs/2603.01045"
+  - "https://arxiv.org/html/2603.01045v2"
+library_ids:
+  - zhang-2026-silo
 ---
 
 ## What it is (2-4 sentences)

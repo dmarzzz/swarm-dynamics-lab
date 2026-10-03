@@ -44,7 +44,9 @@ Start this at the beginning of every session, in the background, and leave it ru
 python3 scripts/lab.py sync --agent <id> --every 600 >> /tmp/swarm-lab-sync-<agent-name>.log 2>&1 &
 ```
 
-Every 10 minutes it commits and pushes every changed file in your clone that passes `lab.py check`. It skips
+Every 10 minutes it commits and pushes every changed file in your clone that passes `lab.py check`, after
+re-checking the exact commit on a clean checkout. It also refreshes the claim on any task held by an agent of
+your researcher whose status file says `state: working`, so a running timer is your heartbeat. It skips
 files that still fail (half-written entries stay local until they are fixed), generated files, protected
 files and other researchers' folders, and prints what it skipped. Your work reaches the team within 10
 minutes without anyone pushing broken files.
@@ -67,15 +69,18 @@ Repeat this loop until your human stops you or there is nothing left you can do.
    `researchers/<you>/inbox.md`, `STATUS.md`, and the task you hold if any.
 3. **Pick work.** Priority order: your human's directives; unprocessed items in your inbox; a task you
    already hold; open tasks with `for:` set to your researcher; open `p0`, then `p1`, then `p2` tasks whose
-   `depends_on` are done. Prefer tasks that match your human's focus.
+   `depends_on` are done. Prefer tasks that match your human's focus. For scan work, candidate batches published
+   as GitHub issues labelled `batch` are pre-deduplicated sources ready to catalogue: see `PIPELINE.md`.
 4. **Claim.** `python3 scripts/lab.py claim <task-id> --agent <id>`. This pulls, edits the task, commits and
    pushes atomically. If it says someone else holds the task, pick another. Never edit claim fields by hand.
    Hold one task at a time.
 5. **Work.** Follow the rules for the task kind below. The sync timer pushes your passing files every 10
    minutes; you can also run `lab.py sync --agent <id>` yourself after a batch.
-6. **Heartbeat.** At least once an hour: `python3 scripts/lab.py touch <task-id> --agent <id>`, and update
-   `researchers/<you>/agents/<agent-name>.md` (`state`, `task`, `doing`, `updated`). A claim with no heartbeat
-   for 3 hours is stale and anyone may take it over.
+6. **Heartbeat.** Keep `researchers/<you>/agents/<agent-name>.md` current (`state`, `task`, `doing`,
+   `updated`). While it says `state: working` and its `updated` is under 3 hours old, the sync timer refreshes your task
+   claim. Without a timer, run
+   `python3 scripts/lab.py touch <task-id> --agent <id>` at least once an hour. A claim with no heartbeat for
+   3 hours is stale and anyone may take it over. Set `state: done` or `idle` when you stop.
 7. **Finish.** Fill the task's Done-when items, then
    `python3 scripts/lab.py done <task-id> --agent <id> --output <paths>`. If you cannot finish, release it:
    `python3 scripts/lab.py release <task-id> --agent <id> --note "<where you got to>"`.
@@ -115,6 +120,9 @@ clobbering each other.
 - If a rebase conflicts on a file you do not own, keep their version and redo your change on top.
 - If two agents create the same library id, the second push conflicts. That is the dedup working: keep the
   existing entry and add your notes to it under `## Notes from <agent-id>`.
+- **A red `main` is everyone's problem.** If the latest CI check on `main` fails, the agent whose commit broke
+  it fixes it first. If it is still red 20 minutes later, any agent may make the smallest fix (finish or
+  delete the broken entry) and say so in the commit message and in the owner's inbox.
 - Push to `main` directly. No branches or pull requests during the hackathon unless your human asks.
 - Large files (datasets, checkpoints, videos) do not go in git. Link them.
 
@@ -151,7 +159,10 @@ fabricated or misattributed citation is the worst error an agent can make here, 
 **cite** (papers) is the full formatted reference: all authors (or the first ten and "et al."), year, title,
 venue, volume, issue and pages, copied from the publisher or arXiv page. `library/references.bib` is generated
 from the entries. After adding papers, run `python3 scripts/lab.py verify --agent <id>`: it checks every arXiv
-id and DOI against arXiv and Crossref and flags titles that do not match.
+id and DOI against arXiv and Crossref and flags titles that do not match. CI runs the same check on every
+paper added or changed in each push: a red `verify` job means a citation did not resolve or its title does not
+match. Fix the metadata from the real source, or delete the entry if the paper does not exist. Set `doi` or
+`arxiv` whenever one exists; entries with only a URL cannot be verified.
 
 **relevance** is 1 to 5 for this hackathon: 5 means we would build on it or must cite it, 1 means background.
 

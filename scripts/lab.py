@@ -584,6 +584,8 @@ def build_index(lab: Lab):
                  f"{esc(d.get('updated') or d.get('claimed_at') or '')} | {esc(d.get('title'))} |")
     S.append("")
 
+    S += batch_section()
+
     S += ["## Agents", ""]
     if lab.agents:
         S += ["| agent | state | task | updated | doing |", "|---|---|---|---|---|"]
@@ -625,6 +627,35 @@ def build_index(lab: Lab):
         S.append("None yet.")
     S.append("")
     (ROOT / "STATUS.md").write_text("\n".join(S), encoding="utf-8")
+
+
+def batch_section() -> list[str]:
+    """Candidate batches (GitHub issues labelled `batch`, see PIPELINE.md). Skipped quietly without gh or network."""
+    import json
+    try:
+        r = subprocess.run(["gh", "issue", "list", "-R", "dmarzzz/swarm-lab", "--label", "batch", "--state", "all",
+                            "--limit", "500", "--json", "number,state,labels,title,updatedAt"],
+                           capture_output=True, text=True, timeout=60)
+        issues = json.loads(r.stdout) if r.returncode == 0 else None
+    except (OSError, subprocess.TimeoutExpired, ValueError):
+        issues = None
+    if issues is None:
+        return []
+    claimed = [i for i in issues if i["state"] == "OPEN" and any(l["name"] == "claimed" for l in i["labels"])]
+    free = [i for i in issues if i["state"] == "OPEN" and i not in claimed]
+    closed = [i for i in issues if i["state"] != "OPEN"]
+    S = ["## Candidate batches", "",
+         f"{len(free)} free, {len(claimed)} claimed, {len(closed)} done. Claim with "
+         "`python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).", ""]
+    if claimed or free:
+        S += ["| issue | state | updated | batch |", "|---|---|---|---|"]
+        for i in sorted(claimed, key=lambda i: i["number"]) + sorted(free, key=lambda i: i["number"])[:15]:
+            S.append(f"| [#{i['number']}](https://github.com/dmarzzz/swarm-lab/issues/{i['number']}) | "
+                     f"{'claimed' if i in claimed else 'free'} | {i['updatedAt'][:16]}Z | {esc(i['title'])} |")
+        if len(free) > 15:
+            S.append(f"| | | | {len(free) - 15} more free batches |")
+    S.append("")
+    return S
 
 
 def build_bib(lab: Lab):
@@ -676,11 +707,21 @@ def cmd_verify(a, lab):
                 time.sleep(3 * (i + 1))
         return b"ERR"
 
+    only = None
+    if a.since:
+        r = git("diff", "--name-only", "--diff-filter=AM", a.since, "HEAD", "--", "library/papers")
+        if r.returncode != 0:
+            print(f"cannot diff against {a.since}; verifying everything")
+        else:
+            only = set(r.stdout.split())
+            print(f"verifying {len(only)} paper(s) added or changed since {a.since[:12]}")
     bad = checked = 0
     for stem, d in sorted(lab.library.items()):
         if d.error or d.get("type") != "paper":
             continue
         if a.agent and d.get("added_by") != a.agent:
+            continue
+        if only is not None and d.rel not in only:
             continue
         want = _norm_title(d.get("title"))
         got, src = None, None
@@ -713,6 +754,9 @@ def cmd_verify(a, lab):
         a_w, b_w = set(want.split()), set(have.split())
         if a_w and b_w:  # word-order tolerant: arXiv and journal versions often swap title halves
             ratio = max(ratio, len(a_w & b_w) / len(a_w | b_w))
+        short, long_ = sorted((want, have), key=len)
+        if len(short) >= 15 and long_.startswith(short):  # subtitle dropped on one side
+            ratio = 1.0
         if ratio < a.threshold:
             print(f"BAD   {d.rel}: title mismatch ({ratio:.2f}) entry='{d.get('title')}' {src}='{' '.join(got.split())}'")
             bad += 1
@@ -933,17 +977,55 @@ PROTECTED = ("AGENTS.md", "CLAUDE.md", "README.md", "project.yaml", "artifacts.y
              "scripts/", "templates/", ".github/", ".flightdeck/", ".claude/", ".agents/", ".codex/", ".cursor/")
 
 
+def tree_errors(rev: str) -> set[str]:
+    """ERROR lines of `lab.py check` run on a clean checkout of `rev` (what would actually be pushed)."""
+    import shutil
+    import tempfile
+    d = tempfile.mkdtemp(prefix="lab-sync-")
+    try:
+        if git("worktree", "add", "--detach", d, rev).returncode != 0:
+            return {"(could not create a worktree to verify the commit)"}
+        r = subprocess.run([sys.executable, str(Path(d) / "scripts/lab.py"), "check"], capture_output=True, text=True)
+        return {line[6:] for line in r.stdout.splitlines() if line.startswith("ERROR ")}
+    finally:
+        git("worktree", "remove", "--force", d)
+        shutil.rmtree(d, ignore_errors=True)
+
+
+def heartbeat_tasks(researcher: str) -> list[str]:
+    """Refresh `updated` on tasks held by this researcher's agents that report state: working."""
+    lab, touched = Lab(), []
+    for d in lab.tasks.values():
+        owner = str(d.get("owner") or "")
+        if d.get("status") != "claimed" or not owner.startswith(researcher + "/"):
+            continue
+        agent = lab.agents.get(owner)
+        if not agent or not str(agent.get("state", "")).startswith("working"):
+            continue
+        seen = parse_time(agent.get("updated"))  # a dead session stops refreshing its status file
+        if not seen or dt.datetime.now(dt.timezone.utc) - seen > dt.timedelta(hours=CLAIM_TTL_HOURS):
+            continue
+        t = parse_time(d.get("updated") or d.get("claimed_at"))
+        if t and dt.datetime.now(dt.timezone.utc) - t < dt.timedelta(minutes=20):
+            continue
+        d.fm["updated"] = now()
+        d.write()
+        touched.append(d.rel)
+    return touched
+
+
 def sync_once(agent: str, include_protected=False) -> int:
-    """Commit and push every changed file that passes the check; leave failing or off-limits files for later."""
+    """Commit and push every changed file that passes the check; leave failing or off-limits files for later.
+    The commit is re-checked on a clean checkout before pushing, so a file that changed mid-sync, or a
+    duplicate that only shows up across files, never reaches main."""
     import time
     researcher = agent.split("/")[0]
+    heartbeat_tasks(researcher)
+    # list changes first, then check: a file created after the listing is simply not staged this round
+    st = git("status", "--porcelain", "-uall").stdout.splitlines()
+    paths = [line[3:].split(" -> ")[-1].strip().strip('"') for line in st]
     E, _ = check(Lab())
     failing = {e.split(":", 1)[0] for e in E}
-    st = git("status", "--porcelain", "-uall").stdout.splitlines()
-    paths = []
-    for line in st:
-        path = line[3:].split(" -> ")[-1].strip().strip('"')
-        paths.append(path)
     stage, skipped = [], []
     for path in paths:
         if path in GENERATED:
@@ -956,17 +1038,57 @@ def sync_once(agent: str, include_protected=False) -> int:
             skipped.append((path, "fails `lab.py check`; fix it and the next sync picks it up"))
         else:
             stage.append(path)
-    for path, why in skipped:
-        print(f"skip  {path}: {why}")
     if not stage:
+        for path, why in skipped:
+            print(f"skip  {path}: {why}")
         print(f"{now()} sync: nothing to push")
         return 0
+    baseline = tree_errors("HEAD")  # errors already on the branch are not ours to block on
     git("add", "-A", "--", *stage)
-    msg = f"[{agent}] sync: {len(stage)} file(s)"
-    c = git("commit", "-m", msg, "--", *stage)
-    if c.returncode != 0:
-        print(f"commit failed:\n{c.stdout}{c.stderr}", file=sys.stderr)
+    for _ in range(4):
+        by = {}
+        for s in stage:
+            fp = ROOT / s
+            if s.startswith("library/") and fp.exists():
+                a = Doc(fp).get("added_by") or "?"
+                by[a] = by.get(a, 0) + 1
+        body = "\n".join(f"{n:4d} library entries by {a}" for a, n in sorted(by.items(), key=lambda kv: -kv[1]))
+        msg = f"[{agent}] sync: {len(stage)} file(s)" + (f"\n\n{body}" if body else "")
+        if git("commit", "-m", msg, "--", *stage).returncode != 0:
+            print("commit failed", file=sys.stderr)
+            return 1
+        new_errs = tree_errors("HEAD") - baseline
+        if not new_errs:
+            break
+        bad = set()
+        for e in new_errs:
+            f = e.split(":", 1)[0]
+            if f in stage:
+                bad.add(f)
+            m = re.search(r"duplicate of '([^']+)'", e)
+            if m:
+                bad.update(s for s in stage if s.endswith(f"/{m.group(1)}.md"))
+        git("reset", "--soft", "HEAD~1")
+        if not bad:
+            git("restore", "--staged", "--", *stage)
+            print("sync: the commit would add errors that cannot be traced to staged files; not pushing:", file=sys.stderr)
+            for e in sorted(new_errs):
+                print(f"  {e}", file=sys.stderr)
+            return 1
+        git("restore", "--staged", "--", *bad)
+        for b in sorted(bad):
+            skipped.append((b, "fails the check on the committed tree (changed mid-sync, or a duplicate)"))
+        stage = [s for s in stage if s not in bad]
+        if not stage:
+            print(f"{now()} sync: nothing left to push after verification")
+            return 0
+    else:
+        git("reset", "--soft", "HEAD~1")
+        git("restore", "--staged", "--", *stage)
+        print("sync: could not produce a clean commit; nothing pushed", file=sys.stderr)
         return 1
+    for path, why in skipped:
+        print(f"skip  {path}: {why}")
     for attempt in range(5):
         # merge rather than rebase: never stashes or rewrites files other agents may be editing in this clone
         pl = git("pull", "--no-rebase", "--no-edit")
@@ -1023,6 +1145,7 @@ def main(argv=None):
     p = sub.add_parser("verify")
     p.add_argument("--agent", help="only verify papers this agent added")
     p.add_argument("--threshold", type=float, default=0.85)
+    p.add_argument("--since", help="only papers added or changed since this git revision (CI uses the push's base)")
     sub.add_parser("index")
     p = sub.add_parser("find")
     p.add_argument("text")

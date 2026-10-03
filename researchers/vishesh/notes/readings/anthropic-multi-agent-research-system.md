@@ -4,9 +4,12 @@ title: "How we built our multi-agent research system"
 authors: Jeremy Hadfield, Barry Zhang, Kenneth Lien, Florian Scholz, Jeremy Fox, and Daniel Ford
 org_or_venue: Anthropic Engineering blog
 date: 2025-06-13
-url_loaded: https://www.anthropic.com/engineering/multi-agent-research-system
 status: found
 fetched: 2026-10-03
+urls_loaded:
+  - "https://www.anthropic.com/engineering/multi-agent-research-system"
+library_ids:
+  - anthropic-2025-how
 ---
 
 ## What it is (2-4 sentences)

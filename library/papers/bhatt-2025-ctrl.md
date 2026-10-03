@@ -46,3 +46,11 @@ Single environment; stylised attack; red team constant continuation probability 
 - Q2 (thresholds): drawing several independent samples and auditing on the minimum suspicion is an n-sample consistency check; it works because samples are independent draws, which forks with long divergent histories no longer are.
 - Q3 (attack): multi-step, below-threshold attacks are the realistic shape.
 Related: [[greenblatt-2023-ai]], [[kutasov-2025-evaluating]] (robustness of resampling to adaptive attackers), [[makins-2026-multi]].
+
+## Notes from shadow/sol-w3
+
+Opened the author blog summary https://www.alignmentforum.org/posts/LPHMMMZFAWog6ty5x/ctrl-z-controlling-ai-agents-via-resampling on 2026-10-03 (skim). The authors extend AI control to BashBench, 257 multi-step administration tasks where an adversarial agent tries to download and execute dummy malware. Selectively resampling suspicious proposed actions and gathering additional evidence from earlier trajectory states lowers reported attack success from 58% to 7%, with a 5% loss in benign task performance.
+
+Primary research summary of arXiv:2504.10374 with a task train/test split and explicit red/blue-team evaluation. Blog skim only; code and full paper not checked. The authors acknowledge a narrow malware target, artificial tasks, stateless sampling assumptions, extra inference cost, and limited transfer to longer trajectories.
+
+Directly relevant to fork control: cloned or replayed state can provide independent action samples and extra evidence before committing an unsafe update. It evaluates shell-agent control, not literal parameter or memory merging. Extends [[buck-2023-ai]] and connects to [[buck-2024-how]].

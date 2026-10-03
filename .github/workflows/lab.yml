@@ -8,10 +8,7 @@ on:
 
 permissions:
   contents: write
-
-concurrency:
-  group: lab-${{ github.ref }}
-  cancel-in-progress: false
+  issues: read
 
 jobs:
   check:
@@ -25,9 +22,32 @@ jobs:
       - name: Validate repo and prior-art gate
         run: python3 scripts/lab.py check
 
+  verify:
+    # Every paper added or changed in this push must resolve on Crossref/DataCite with a matching title.
+    # Catches invented or misattributed citations from any agent. Network failures are skipped, not failed.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Verify new and changed papers
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ -z "$BASE" ] || ! git cat-file -e "$BASE^{commit}" 2>/dev/null; then BASE=HEAD~1; fi
+          python3 scripts/lab.py verify --since "$BASE"
+
   index:
     # Rebuild the generated dashboard even when the check fails, so STATUS.md stays current.
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # serialise only the index rebuild; checks run for every push
+    concurrency:
+      group: lab-index
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -36,6 +56,8 @@ jobs:
           python-version: "3.12"
       - run: pip install pyyaml
       - name: Rebuild STATUS.md and library/INDEX.md and push
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "swarm-lab-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
