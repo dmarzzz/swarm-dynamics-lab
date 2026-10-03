@@ -81,6 +81,20 @@ export interface Survey {
   reviewed_by: (string | null)[];
 }
 
+/** X thread extras exported from library/threads frontmatter and archived text. Optional artifact. */
+export interface ThreadMeta {
+  id: string;
+  handle: string;
+  name: string;
+  date: string | null;
+  likes: number | null;
+  reposts: number | null;
+  replies: number | null;
+  views: number | null;
+  posts: number;
+  first_line: string;
+}
+
 export interface Doc { id: string; topics?: string[]; status?: string; owner?: string; [k: string]: unknown }
 
 export interface Dataset {
@@ -93,4 +107,5 @@ export interface Dataset {
   surveys: Survey[];
   hypotheses: Doc[];
   experiments: Doc[];
+  threads: ThreadMeta[];
 }

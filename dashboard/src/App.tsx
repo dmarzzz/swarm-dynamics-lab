@@ -10,6 +10,7 @@ import { Agents } from './views/Agents';
 import { Topics } from './views/Topics';
 import { Timeline } from './views/Timeline';
 import { ResearchPath } from './views/ResearchPath';
+import { Threads } from './views/Threads';
 import { ago, parseT } from './lib/format';
 import { Mark } from './components/Mark';
 
@@ -27,6 +28,7 @@ const NAV = [
   { path: '/timeline', label: 'Timeline' },
   { path: '/method', label: 'Research path' },
   ...(GraphView ? [{ path: '/graph', label: 'Graph' }] : []),
+  { path: '/threads', label: 'X threads' },
 ];
 
 export default function App() {
@@ -85,6 +87,7 @@ export default function App() {
             {route.path === '/agents' && <Agents data={state.data} />}
             {route.path === '/timeline' && <Timeline data={state.data} />}
             {route.path === '/method' && <ResearchPath data={state.data} />}
+            {route.path === '/threads' && <Threads data={state.data} params={route.params} />}
             {route.path === '/graph' && GraphView && (
               <Suspense fallback={<Loading />}><div className="wrap graph-page"><GraphView /></div></Suspense>
             )}

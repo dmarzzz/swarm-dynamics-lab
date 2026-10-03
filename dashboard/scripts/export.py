@@ -63,6 +63,39 @@ def counts(entries):
 def docs_payload(docs):
     return [{'id': ident, **doc.fm} for ident, doc in docs.items()]
 
+POST_HEAD = re.compile(r'^\*\*(\d+)\. @(\S+?), (\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}) UTC(?:, (\d+) likes)?\*\*', re.M)
+METRIC = {'likes': r'(\d+) likes?', 'reposts': r'(\d+) reposts?', 'replies': r'(\d+) repl(?:y|ies)', 'views': r'(\d+) views'}
+
+def metric(text, key):
+    match = re.search(METRIC[key], text or '')
+    return int(match.group(1)) if match else None
+
+def thread_payload(ident, doc):
+    """X thread extras: handle, root post date, engagement, post count and the opening line."""
+    fm = doc.fm
+    body = doc.sections().get('Archived text', '')
+    heads = POST_HEAD.findall(body)
+    handle = str(fm.get('author_handle') or (f'@{heads[0][1]}' if heads else '')).strip()
+    date = heads[0][2] if heads else None
+    if not date:
+        stamp = re.search(r'(\d{4}-\d{2}-\d{2})T\d{2}:\d{2}', body)
+        date = stamp.group(1) if stamp else None
+    first = ''
+    for line in body.splitlines():
+        s = line.strip()
+        if not s or s.startswith(('**', '---', 'Verbatim text', 'Quoted tweet', '>', '#')):
+            continue
+        first = s
+        break
+    metrics = fm.get('metrics') or ''
+    likes = metric(metrics, 'likes')
+    if likes is None and heads and heads[0][4]:
+        likes = int(heads[0][4])
+    clean = lambda s: str(s).encode('utf-8', 'ignore').decode('utf-8')  # drop lone surrogates from scraped text
+    return {'id': ident, 'handle': clean(handle), 'name': clean(fm.get('author_name') or ''), 'date': date,
+            'likes': likes, 'reposts': metric(metrics, 'reposts'), 'replies': metric(metrics, 'replies'),
+            'views': metric(metrics, 'views'), 'posts': max(1, len(heads)), 'first_line': clean(first[:160])}
+
 def batch_payload():
     mapped = {}
     mapping = ROOT / 'candidates/ISSUES.tsv'
@@ -176,7 +209,9 @@ def export():
             for target in members[i+1:i+5]:
                 if len(edges) < 20000:
                     edges.add((source, target))
-    payloads = {'summary': summary, 'library': entries, 'agents': agents, 'tasks': tasks,
+    threads = [thread_payload(ident, doc) for ident, doc in sorted(data.library.items())
+               if (doc.fm.get('type') or KINDS.get(doc.path.parent.name)) == 'thread']
+    payloads = {'summary': summary, 'library': entries, 'agents': agents, 'tasks': tasks, 'threads': threads,
                 'batches': batch_payload(), 'surveys': surveys,
                 'timeline': [{'t': t, 'team': team, 'agent': agent, 'kind': kind, 'n_entries': n}
                              for (t, team, agent, kind), n in sorted(timeline_counts.items())],

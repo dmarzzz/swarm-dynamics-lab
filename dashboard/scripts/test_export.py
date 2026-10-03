@@ -30,6 +30,17 @@ class ContractTest(unittest.TestCase):
         for path in DATA.glob('*.json'):
             self.assertLess(path.stat().st_size, 5_000_000)
 
+    def test_threads(self):
+        library, threads = load('library'), load('threads')
+        self.assertEqual({t['id'] for t in threads}, {e['id'] for e in library if e['kind'] == 'thread'})
+        for t in threads:
+            self.assertTrue(t['handle'].startswith('@'), t['id'])
+            self.assertGreaterEqual(t['posts'], 1)
+            self.assertLessEqual(len(t['first_line']), 160)
+            for k in ('likes', 'reposts', 'replies', 'views'):
+                self.assertTrue(t[k] is None or isinstance(t[k], int))
+            json.dumps(t).encode('utf-8')
+
     def test_agents_and_gate(self):
         self.assertEqual(sum(a['entries_added'] for a in load('agents')), len(load('library')))
         for survey in load('surveys'):

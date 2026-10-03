@@ -16,3 +16,4 @@ The shared DASHBOARD-SPEC.md contract is preserved. Clarifications and additive 
 - Every JSON artifact is capped at 5,000,000 bytes. Full-text entry bodies are deliberately not exported. The current library is comfortably below the cap.
 
 Validate committed data with `python dashboard/scripts/test_export.py`. CI exports fresh data into the deployment, without writing bot commits back to the repository.
+- `threads.json` (additive, optional) carries X thread extras for the X threads view, one row per `kind: thread` entry: `id`, `handle` (author_handle frontmatter, else the first archived post header), `name`, `date` (root post date from the archived text, nullable), `likes`/`reposts`/`replies`/`views` (parsed from the `metrics` frontmatter string, nullable when not recorded), `posts` (count of archived author posts, minimum 1) and `first_line` (opening line of the archived text, 160 chars). Lone surrogates from scraped text are dropped.
