@@ -66,3 +66,5 @@ Identify the closest implementation and what remains unanswered. Resolve data ac
 ## October 3 documentation changes
 
 Expanded all sixteen briefs; added the external-influence animation and revised its threat model; repaired reading-note URL lists; corrected the omitted GPT-4 evaluation and documented the Debate-or-Vote table inconsistency; qualified broad claims about calibration, debate, and fitted scaling laws. These corrections are targeted checks, not certification of every claim in the collection.
+
+- [Biological precedent and visualization review](biology-visual-review/README.md): 301 assessed records, all 16 briefs, source boundaries, eight priorities and an offline searchable view.

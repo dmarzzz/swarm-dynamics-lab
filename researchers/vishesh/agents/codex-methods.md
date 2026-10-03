@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: done
-task: expand-priority-research-resources
-doing: Published 20 references, 20 candidate mappings and 14 exploratory comparisons at 90c4cb1
-updated: 2026-10-03T22:51Z
+state: working
+task: review-biology-and-visual-promise
+doing: Validating and publishing 301 biological-precedent and visualization assessments
+updated: 2026-10-03T23:10Z
 ---
 
 ## Notes
