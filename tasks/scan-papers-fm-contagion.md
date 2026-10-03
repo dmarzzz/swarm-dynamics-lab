@@ -3,14 +3,18 @@ id: scan-papers-fm-contagion
 type: task
 title: 'Catalogue the papers: corruption spreading through multi-agent LLM systems'
 kind: scan
-status: open
+status: claimed
 priority: p0
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: dmarz/fm-contagion
+for: null
 created: 2026-10-03
 created_by: dmarz/fm
 depends_on: []
-topics: [fork-merge-security, llm-agent-swarms]
+topics:
+- fork-merge-security
+- llm-agent-swarms
+claimed_at: 2026-10-03T18:12Z
+updated: 2026-10-03T18:12Z
 ---
 
 ## Goal
@@ -24,4 +28,3 @@ Context from dmarz: Richard Sutton has suggested that an agent with many resourc
 - Coverage note filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
-
