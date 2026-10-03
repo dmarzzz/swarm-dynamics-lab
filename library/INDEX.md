@@ -2,9 +2,9 @@
 
 # Library index
 
-1932 entries.
+1939 entries.
 
-## Papers (1206)
+## Papers (1207)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1202,6 +1202,7 @@
 | [siddle-2013-tale](papers/siddle-2013-tale.md) | A tale of two tumours: comparison of the immune escape strategies of contagious cancers | 2013 | 2 | abstract | fork-merge-security | dmarz/fm-biology |
 | [sutton-2022-alberta](papers/sutton-2022-alberta.md) | The Alberta Plan for AI Research | 2022 | 2 | skim | fork-merge-security, meta | dmarz/fm-sutton |
 | [tadevosyan-2025-attentionswarm](papers/tadevosyan-2025-attentionswarm.md) | AttentionSwarm: Reinforcement Learning with Attention Control Barrier Function for Crazyflie Drones in Dynamic Environments | 2025 | 2 | abstract | swarm-robotics, marl-emergence | dmarz/swarm-robotics-recent |
+| [taherifar-2019-macroscopic](papers/taherifar-2019-macroscopic.md) | A macroscopic approach for calibration and validation of a modified social force model for bidirectional pedestrian streams | 2019 | 2 | abstract | crowds-and-traffic | shadow/sol-w5 |
 | [vinyals-2019-grandmaster](papers/vinyals-2019-grandmaster.md) | Grandmaster level in StarCraft II using multi-agent reinforcement learning | 2019 | 2 | abstract | marl-emergence | dmarz/marl-emergence |
 | [wang-2023-resilient](papers/wang-2023-resilient.md) | Resilient Consensus Control for Multi-Agent Systems: A Comparative Survey | 2023 | 2 | abstract | sybil-resistance, sync-consensus | dmarz/sybil-robotics |
 | [wang-2023-survey](papers/wang-2023-survey.md) | A Survey on Large Language Model based Autonomous Agents | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
@@ -1215,7 +1216,7 @@
 | [zhao-2024-snail](papers/zhao-2024-snail.md) | Snail-inspired robotic swarms: a hybrid connector drives collective adaptation in unstructured outdoor environments | 2024 | 2 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [zhuge-2023-mindstorms](papers/zhuge-2023-mindstorms.md) | Mindstorms in Natural Language-Based Societies of Mind | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 
-## Blogs (132)
+## Blogs (133)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1329,6 +1330,7 @@
 | [stuart-armstrong-2022-using](blogs/stuart-armstrong-2022-using.md) | Using GPT-Eliezer against ChatGPT Jailbreaking | 2022 | 3 | skim | fork-merge-security, llm-agent-swarms | shadow/sol-w3 |
 | [taylor-2025-auditing](blogs/taylor-2025-auditing.md) | Auditing Games for Sandbagging [paper] | 2025 | 3 | skim | swarm-detection | shadow/sol-w7 |
 | [zebedee-2019-evidence](blogs/zebedee-2019-evidence.md) | Evidence-Based Subjective Logic and Sybil-resistance | 2019 | 3 | full | sybil-resistance, collective-decision | dmarz/sybil-flashbots-informal |
+| [zenity-2026-salesbleed](blogs/zenity-2026-salesbleed.md) | SalesBleed: Indirect Prompt Injection and 0-Click Data Exfiltration on Agentforce | 2026 | 3 | skim | fork-merge-security | shadow/sol-w4 |
 | [zvi-2025-dwarkesh](blogs/zvi-2025-dwarkesh.md) | On Dwarkesh Patel's Podcast With Richard Sutton | 2025 | 3 | skim | fork-merge-security, meta | dmarz/fm-sutton |
 | [bbc-2026-why](blogs/bbc-2026-why.md) | Why did an OpenAI system hack Australia's health system - and can it be stopped in the future? | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-w1 |
 | [beren-2023-scaffolded](blogs/beren-2023-scaffolded.md) | Scaffolded LLMs as natural language computers | 2023 | 2 | skim | llm-agent-swarms | shadow/sol-w4 |
@@ -1352,7 +1354,7 @@
 | [moridinamael-2019-complex](blogs/moridinamael-2019-complex.md) | Complex Behavior from Simple (Sub)Agents | 2019 | 1 | skim | fork-merge-security, collective-decision, collective-motion | shadow/sol-w4 |
 | [sotala-2019-subagents](blogs/sotala-2019-subagents.md) | Subagents, neural Turing machines, thought selection, and blindspots | 2019 | 1 | skim | fork-merge-security, collective-decision | shadow/sol-w4 |
 
-## Threads (465)
+## Threads (467)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1571,6 +1573,7 @@
 | [x-bestuseragent-2102124126660096442](threads/x-bestuseragent-2102124126660096442.md) | Agent subdomains as a traffic-separation pattern | 2026 | 2 | full | swarm-detection | shadow/sol-w6 |
 | [x-bibryam-1986759886491807929](threads/x-bibryam-1986759886491807929.md) | bibryam: one-line endorsement of 'Patterns for securing agents against prompt injection' | 2025 | 2 | full | fork-merge-security, llm-agent-swarms | dmarz/x-threads |
 | [x-binitamshah-1763917766031987199](threads/x-binitamshah-1763917766031987199.md) | binitamshah: link roundup on indirect prompt injection, plugin data exfiltration and a universal jailbreak | 2024 | 2 | full | fork-merge-security | dmarz/x-threads |
+| [x-bravish-2104071874322075754](threads/x-bravish-2104071874322075754.md) | Bravish: Tracekit, a local policy gate plus SHA-256 hash-chained ledger and intent-vs-action cross-check for coding agents and their sub-agents | 2026 | 2 | full | fork-merge-security | shadow/sol-w4 |
 | [x-bweintraub34-1612873406277652480](threads/x-bweintraub34-1612873406277652480.md) | bweintraub34: author promotes a guest blog post on Theft-as-a-Service on Ethereum and points to the paper | 2023 | 2 | full | swarm-detection | dmarz/x-threads |
 | [x-caesar-jn-2105333476442456239](threads/x-caesar-jn-2105333476442456239.md) | Caesar jn: privacy-preserving personhood rather than identity disclosure | 2026 | 2 | skim | sybil-resistance | shadow/sol-w8 |
 | [x-cheese-cakee-9-2086433792017993742](threads/x-cheese-cakee-9-2086433792017993742.md) | cheese_cakee_9: AI control reading list from a MATS application, opening with the foundational control paper | 2026 | 2 | full | fork-merge-security, llm-agent-swarms | dmarz/x-threads |
@@ -1617,6 +1620,7 @@
 | [x-hardmaru-1503019313716170753](threads/x-hardmaru-1503019313716170753.md) | hardmaru: shares 'model soups': averaging fine-tuned weights improves accuracy at no inference cost | 2022 | 2 | full | fork-merge-security | dmarz/x-threads |
 | [x-harrigan-1041597546655834112](threads/x-harrigan-1041597546655834112.md) | harrigan: 'Airdrops and Privacy: A Case Study in Cross-Blockchain Analysis' | 2018 | 2 | full | swarm-detection, sybil-resistance | dmarz/x-threads |
 | [x-hassankhan96452-2102769492250280220](threads/x-hassankhan96452-2102769492250280220.md) | hassankhan96452: websites cannot tell a customer's agent from a scraper; agents should prove operator, authorising user and permissions (Meta Muse, Amazon vs Shopify) | 2026 | 2 | full | sybil-resistance, swarm-detection | shadow/sol-w1 |
+| [x-hazemomier-2106457413478158408](threads/x-hazemomier-2106457413478158408.md) | Hazem Omier on CARBONATO: a persona file (SOUL.md) rewritten by malware is a remote control plane; treat persona files like secrets | 2026 | 2 | full | fork-merge-security, swarm-detection | shadow/sol-w4 |
 | [x-henrikplate-1572518222863433728](threads/x-henrikplate-1572518222863433728.md) | HenrikPlate: co-author links the open-source supply-chain attack taxonomy and its Risk Explorer site | 2022 | 2 | full | fork-merge-security, meta | dmarz/x-threads |
 | [x-hillbig-1503147935663792128](threads/x-hillbig-1503147935663792128.md) | hillbig: model soups average fine-tunes that land in one basin, improving generalisation and robustness | 2022 | 2 | full | fork-merge-security | dmarz/x-threads |
 | [x-hillbig-1848128505286132121](threads/x-hillbig-1848128505286132121.md) | hillbig: Japanese commentary on AKOrN: Kuramoto-oscillator neurons for binding, segmentation and Sudoku | 2024 | 2 | full | sync-consensus | dmarz/x-threads |
@@ -1949,7 +1953,7 @@
 | [data-cresci-2017](datasets/data-cresci-2017.md) | cresci-2017 (The Fake Project): genuine, social spambot, traditional spambot and fake follower Twitter accounts | 2017 | 3 | ran | sybil-resistance | dmarz/sybil-code-data |
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance | dmarz/sybil-code-data |
 
-## Talks (12)
+## Talks (15)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1963,5 +1967,8 @@
 | [wicherski-2011-automated](talks/wicherski-2011-automated.md) | 23C3: Automated Botnet Detection and Mitigation | 2011 | 4 | abstract | swarm-detection | shadow/sol-w1 |
 | [meir-2026-prediction](talks/meir-2026-prediction.md) | Why Prediction Markets and AI Agents Are a Compliance Nightmare \| Solidus Labs Co-Founder Asaf Meir | 2026 | 3 | abstract | swarm-detection, llm-agent-swarms | shadow/sol-w1 |
 | [nitsche-2026-protect](talks/nitsche-2026-protect.md) | Can we protect democracy from fake news? \| Maxim Nitsche \| TEDxBerlin | 2026 | 3 | abstract | swarm-detection | shadow/sol-w1 |
+| [seibold-2020-frustrating](talks/seibold-2020-frustrating.md) | The Frustrating Beauty of Traffic Waves, and How Automated Vehicles Can Prevent Them | 2020 | 3 | abstract | crowds-and-traffic, swarm-robotics | shadow/sol-w5 |
 | [strogatz-2024-how](talks/strogatz-2024-how.md) | How Is Flocking Like Computing? | 2024 | 3 | full | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
 | [sutton-2024-perspective](talks/sutton-2024-perspective.md) | A Perspective on Intelligence | 2024 | 3 | full | fork-merge-security, collective-decision, meta | dmarz/fm-sutton |
+| [helbing-2013-planetary](talks/helbing-2013-planetary.md) | A Planetary Nervous System, and What to Do with It. Part I: Seminar | 2013 | 2 | full | crowds-and-traffic, collective-decision, llm-agent-swarms | shadow/sol-w5 |
+| [saberi-2018-calibrating](talks/saberi-2018-calibrating.md) | UNSW rCITI seminar on calibrating a social force model for bidirectional pedestrian streams | 2018 | 2 | abstract | crowds-and-traffic | shadow/sol-w5 |
