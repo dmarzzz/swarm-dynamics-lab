@@ -13,6 +13,7 @@ import { ResearchPath } from './views/ResearchPath';
 import { Threads } from './views/Threads';
 import { ago, parseT } from './lib/format';
 import { Mark } from './components/Mark';
+const Questions = lazy(() => import('./views/Questions').then(m => ({ default: m.Questions })));
 
 // Lane G's graph view mounts here once dashboard/src/graph/ exists. Optional at build time.
 const graphMods = import.meta.glob<{ default?: ComponentType<{ className?: string }>; GraphView?: ComponentType<{ className?: string }> }>('./graph/index.tsx');
@@ -24,6 +25,7 @@ const NAV = [
   { path: '/', label: 'Overview' },
   { path: '/library', label: 'Library' },
   { path: '/topics', label: 'Topics' },
+  { path: '/questions', label: 'Questions' },
   { path: '/agents', label: 'Agents' },
   { path: '/timeline', label: 'Timeline' },
   { path: '/method', label: 'Research path' },
@@ -78,6 +80,7 @@ export default function App() {
             {route.path === '/' && <Overview data={state.data} />}
             {route.path === '/library' && <Library data={state.data} params={route.params} />}
             {route.path === '/topics' && <Topics data={state.data} params={route.params} />}
+            {route.path === '/questions' && <Suspense fallback={<Loading />}><Questions params={route.params} /></Suspense>}
             {route.path === '/agents' && <Agents data={state.data} />}
             {route.path === '/timeline' && <Timeline data={state.data} />}
             {route.path === '/method' && <ResearchPath data={state.data} />}

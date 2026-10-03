@@ -6,9 +6,10 @@ No per-document git subprocesses. GH batch enrichment is optional and bounded.
 """
 from __future__ import annotations
 import datetime as dt
+import hashlib
 import json
 import os
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import re
 import subprocess
 import sys
@@ -21,6 +22,100 @@ import lab as helpers
 
 KINDS = helpers.LIB_DIRS
 OUT = ROOT / 'dashboard/public/data'
+ATLAS = ROOT / 'researchers/dmarz/notes/question-atlas/candidates.json'
+QUESTION_FIELDS = ('id', 'area', 'title', 'question', 'hypothesis', 'test', 'baseline',
+                   'metrics', 'falsifier', 'confounds', 'prior', 'novelty', 'feasibility',
+                   'needs', 'briefs')
+QUESTION_NOVELTY = {'replication', 'boundary-test', 'extension', 'measurement', 'speculative'}
+QUESTION_FEASIBILITY = {'offline', 'api-small', 'training', 'hardware', 'access-dependent'}
+QUESTION_CHANGES = {'new', 'revised', 'unchanged'}
+
+def atlas_hash(value):
+    """Match src/question-atlas/build.py, including its default ASCII serialization."""
+    return hashlib.sha256(json.dumps(value, sort_keys=True).encode()).hexdigest()
+
+def validate_questions(payload, library_paths, topic_slugs, root=ROOT):
+    """Validate the atlas without rewriting content, source metadata or review hashes."""
+    def require(condition, message):
+        if not condition:
+            raise ValueError(f'questions.json: {message}')
+
+    def string(value):
+        return isinstance(value, str) and bool(value.strip())
+
+    def repo_file(value):
+        if not string(value) or '\\' in value:
+            return False
+        path = PurePosixPath(value)
+        return (not path.is_absolute() and '..' not in path.parts
+                and path.as_posix() == value
+                and (root / value).resolve().is_relative_to(root.resolve())
+                and (root / value).is_file())
+
+    required = {'version', 'date', 'status', 'source_snapshot', 'previous_atlas_commit',
+                'changes', 'content_sha256', 'topics', 'candidates'}
+    require(isinstance(payload, dict) and required <= payload.keys(), 'missing atlas fields')
+    require(type(payload['version']) is int and payload['version'] > 0, 'invalid version')
+    require(payload['status'] == 'Human-requested unreviewed hunches', 'invalid atlas status')
+    for field in ('date', 'source_snapshot', 'previous_atlas_commit', 'content_sha256'):
+        require(string(payload[field]), f'invalid {field}')
+    topics = payload['topics']
+    require(isinstance(topics, dict) and bool(topics), 'invalid topics')
+    require(set(topics) <= set(topic_slugs) and all(string(v) for v in topics.values()),
+            'unknown topic or missing topic name')
+    rows = payload['candidates']
+    require(isinstance(rows, list) and bool(rows), 'candidates must be a nonempty array')
+    ids = set()
+    changes = {kind: [] for kind in ('new', 'revised', 'unchanged')}
+    for row in rows:
+        require(isinstance(row, dict) and set(QUESTION_FIELDS) <= row.keys(),
+                'candidate missing required fields')
+        ident = row['id']
+        require(string(ident) and re.fullmatch(r'[A-Z]+-\d+', ident) is not None,
+                'invalid candidate id')
+        require(ident not in ids, f'duplicate candidate id {ident}')
+        ids.add(ident)
+        for field in set(QUESTION_FIELDS) - {'metrics', 'prior', 'briefs'}:
+            require(string(row[field]), f'{ident}: invalid {field}')
+        require(row['area'] in topics, f'{ident}: unknown area')
+        require(row.get('status') == 'unreviewed-hunch',
+                f'{ident}: invalid candidate status')
+        require(row['novelty'] in QUESTION_NOVELTY, f'{ident}: invalid novelty')
+        require(row['feasibility'] in QUESTION_FEASIBILITY, f'{ident}: invalid feasibility')
+        require(string(row.get('change')) and row['change'] in QUESTION_CHANGES,
+                f'{ident}: invalid change')
+        require(string(row.get('lane')), f'{ident}: missing lane')
+        require(isinstance(row['metrics'], list) and len(row['metrics']) >= 2
+                and all(string(x) for x in row['metrics']), f'{ident}: invalid metrics')
+        require(isinstance(row['prior'], list) and len(row['prior']) >= 2,
+                f'{ident}: invalid prior')
+        for source in row['prior']:
+            require(isinstance(source, dict)
+                    and {'id', 'relation', 'title', 'path', 'url', 'catalogued_depth'} <= source.keys(),
+                    f'{ident}: missing source fields')
+            require(all(string(source[field]) for field in ('id', 'relation', 'title', 'path', 'catalogued_depth'))
+                    and isinstance(source['url'], str), f'{ident}: invalid source fields')
+            require(source['id'] in library_paths, f'{ident}: unknown source {source["id"]}')
+            require(source['path'] == library_paths[source['id']] and repo_file(source['path']),
+                    f'{ident}: source path does not match {source["id"]}')
+        require(isinstance(row['briefs'], list) and all(repo_file(x) for x in row['briefs']),
+                f'{ident}: unknown or invalid brief path')
+        # Hash only the editable card and prior relationships, before atlas enrichment.
+        editable = {field: row[field] for field in QUESTION_FIELDS}
+        editable['prior'] = [{'id': source['id'], 'relation': source['relation']}
+                             for source in row['prior']]
+        require(row.get('candidate_sha256') == atlas_hash(editable),
+                f'{ident}: candidate hash mismatch; rebuild the canonical atlas')
+        changes[row['change']].append(ident)
+    require(set(row['area'] for row in rows) == set(topics), 'topics and represented areas differ')
+    require(payload['changes'] == changes, 'change index does not match candidates')
+    require(payload['content_sha256'] == atlas_hash(rows),
+            'content hash mismatch; rebuild the canonical atlas')
+
+def questions_payload(data):
+    payload = json.loads(ATLAS.read_text(encoding='utf-8'))
+    validate_questions(payload, {ident: doc.rel for ident, doc in data.library.items()}, data.topics)
+    return payload
 
 def git(*args):
     return subprocess.check_output(['git', *args], cwd=ROOT, text=True, timeout=20)
@@ -141,6 +236,7 @@ def batch_payload():
 def export():
     started = time.monotonic()
     data = helpers.Lab()
+    questions = questions_payload(data)
     provenance, additions = history()
     entries = []
     timeline_counts = Counter()
@@ -223,7 +319,8 @@ def export():
                              for (t, team, agent, kind), n in sorted(timeline_counts.items())],
                 'graph': {'nodes': [{'id': e['id'], 'kind': e['kind'], 'topic': e['topics'][0] if e['topics'] else None} for e in entries],
                           'edges': [{'s': s, 't': t} for s, t in sorted(edges)]},
-                'hypotheses': docs_payload(data.hypotheses), 'experiments': docs_payload(data.experiments)}
+                'hypotheses': docs_payload(data.hypotheses), 'experiments': docs_payload(data.experiments),
+                'questions': questions}
     OUT.mkdir(parents=True, exist_ok=True)
     for name, payload in payloads.items():
         text = json.dumps(payload, ensure_ascii=False, separators=(',', ':'), default=str) + '\n'
