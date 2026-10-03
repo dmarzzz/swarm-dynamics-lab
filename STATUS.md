@@ -102,7 +102,7 @@
 
 ## Candidate batches
 
-15 free, 5 claimed, 30 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+20 free, 5 claimed, 30 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
@@ -126,6 +126,7 @@
 | [#53](https://github.com/dmarzzz/swarm-lab/issues/53) | free | 2026-10-03T19:46Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-02) |
 | [#54](https://github.com/dmarzzz/swarm-lab/issues/54) | free | 2026-10-03T19:46Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-03) |
 | [#55](https://github.com/dmarzzz/swarm-lab/issues/55) | free | 2026-10-03T19:47Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-04) |
+| | | | 5 more free batches |
 
 ## Agents
 
