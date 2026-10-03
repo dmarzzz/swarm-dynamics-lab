@@ -6,20 +6,20 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 314 | 8 | 3 | 15 | 3 | 40 | 383 |
-| collective-decision | 294 | 8 | 24 | 19 | 0 | 35 | 380 |
-| swarm-robotics | 285 | 13 | 2 | 7 | 1 | 24 | 332 |
-| swarm-intelligence | 113 | 1 | 2 | 4 | 2 | 3 | 125 |
+| collective-motion | 316 | 17 | 3 | 15 | 3 | 40 | 394 |
+| collective-decision | 297 | 22 | 24 | 19 | 0 | 35 | 397 |
+| swarm-robotics | 288 | 29 | 2 | 7 | 1 | 24 | 351 |
+| swarm-intelligence | 113 | 2 | 2 | 4 | 2 | 3 | 126 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
-| sync-consensus | 248 | 13 | 11 | 17 | 1 | 28 | 318 |
+| sync-consensus | 250 | 24 | 11 | 17 | 1 | 28 | 331 |
 | criticality-measurement | 191 | 4 | 2 | 23 | 2 | 22 | 244 |
-| marl-emergence | 135 | 13 | 1 | 33 | 2 | 13 | 197 |
-| llm-agent-swarms | 469 | 59 | 100 | 197 | 46 | 14 | 885 |
-| crowds-and-traffic | 80 | 2 | 1 | 2 | 1 | 8 | 94 |
-| meta | 113 | 9 | 5 | 22 | 1 | 4 | 154 |
-| sybil-resistance | 309 | 48 | 62 | 57 | 8 | 22 | 506 |
-| fork-merge-security | 353 | 44 | 61 | 69 | 8 | 13 | 548 |
-| swarm-detection | 376 | 35 | 79 | 193 | 34 | 11 | 728 |
+| marl-emergence | 154 | 60 | 1 | 33 | 2 | 13 | 263 |
+| llm-agent-swarms | 500 | 115 | 100 | 197 | 47 | 14 | 973 |
+| crowds-and-traffic | 81 | 15 | 1 | 2 | 1 | 8 | 108 |
+| meta | 137 | 39 | 5 | 22 | 1 | 4 | 208 |
+| sybil-resistance | 314 | 65 | 62 | 57 | 8 | 22 | 528 |
+| fork-merge-security | 353 | 46 | 61 | 69 | 8 | 13 | 550 |
+| swarm-detection | 378 | 43 | 79 | 193 | 35 | 11 | 739 |
 | agent-budgets | 34 | 0 | 5 | 0 | 0 | 0 | 39 |
 
 ## Tasks
@@ -152,6 +152,7 @@
 | shadow/sol-w7 | idle |  | 2026-10-03T19:58Z | Wrapped up on human stop; batches 48, 46, 53 catalogued; 37 and 38 all-skipped; 77 released untouched |
 | dmarz/fm | done | synthesis-fork-merge-questions | 2026-10-03T19:50Z | wrote synthesis/fork-merge-questions.md: Sutton quote verified, threat model, Q1 hiding, Q2 thresholds, Q3 attacks ranked by evidence, analogues, open questions; 197 cited ids all resolve |
 | shadow/sol-w8 | blocked |  | 2026-10-03T19:44Z | Completed X batches 45 and 44; remaining preferred talk batches require readable transcripts. |
+| dmarz/sim-envs | working |  | 2026-10-03T19:40Z | TODO one line |
 | shadow/sol-g49 | done |  | 2026-10-03T19:38Z |  |
 | dmarz/reviewer-1 | done | review-llm-agent-swarms | 2026-10-03T19:27Z | review filed, verdict revise |
 | vishesh/codex-docs | done |  | 2026-10-03T19:14Z | Expanded sixteen briefs, linked research outputs, repaired metadata, and incorporated targeted review corrections. |
@@ -200,6 +201,7 @@
 |---|---|---|---|---|
 | [fork-merge-security](surveys/fork-merge-security.md) | dmarz | in-progress | 280 | 1 |
 | [llm-agent-swarms](surveys/llm-agent-swarms.md) | shadow | complete | 156 | 0 |
+| [sim-environments](surveys/sim-environments.md) | dmarz | in-progress | 152 | 0 |
 | [sybil-resistance](surveys/sybil-resistance.md) | dmarz | in-progress | 230 | 5 |
 
 ## Hypotheses
