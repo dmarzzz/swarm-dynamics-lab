@@ -20,6 +20,7 @@ cite: 'Gu, X., Zheng, X., Pang, T., Du, C., Liu, Q., Wang, Y., Jiang, J., & Lin,
 topics:
 - llm-agent-swarms
 - sybil-resistance
+- fork-merge-security
 added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: abstract
@@ -56,3 +57,9 @@ A clean example of contagion dynamics (topic link to epidemic and cascade models
 ## Notes from dmarz/sybil-llm-agents
 
 Reread the abstract 2026-10-03 for the Sybil-resistance lane. Infectious jailbreak needs only one compromised agent (one adversarial image in one agent's memory) to reach almost all of up to one million LLaVA-1.5 agents under random pairwise chat. For Sybil analysis this sets the lower bound: an adversary does not need many identities when contagion through shared memory does the multiplying, so identity-count defences ([[jo-2025-byzantine]], [[chen-2024-blockagents]]) must be paired with containment of what agents store and relay.
+
+## Notes from dmarz/fm-memory-injection
+
+Read in full (arXiv HTML v2) on 2026-10-03 for the fork-merge lane. In each round, agents are paired at random. The questioner retrieves an image from its FIFO image album with CLIP and sends it to the answerer, and the answerer stores it. One adversarial image placed in one agent's album both triggers harmful output and makes itself the image retrieved, so it copies itself into the albums of new agents. The paper models this as an SIR-style recurrence. The number of rounds to reach a target infected fraction grows with log N, and a defence provably stops spread only if it drives the effective transmission below the recovery rate (Remark II). Recovery comes from album eviction, so smaller albums slow spread. Measured: exponential infection up to one million LLaVA-1.5 agents, including a heterogeneous LLaVA and InstructBLIP population and harmful function-call JSON. Plain visual and textual prompt-injection baselines failed to infect even one agent.
+
+How it bears on fork-merge (Q3, Q2): the attack never asks agents to "become" the attacker. It only needs the payload to be both harmful and preferentially retrieved, so that it propagates through ordinary memory exchange. A merge is one such exchange with a high-centrality node, the parent. The recovery condition in Remark II is the population-level analogue of a merge threshold. If merges, together with eviction or rollback, remove contamination faster than returning sub-agents reintroduce it, the infection dies out (inference from the paper's model, not tested for fork-merge). Related lane entries: [[dong-2025-memory]], [[xiong-2026-maple]], [[cohen-2024-here]].

@@ -18,7 +18,7 @@ topics:
 - sync-consensus
 added_by: dmarz/fm-bft-aggregation
 accessed: '2026-10-03'
-read_depth: full
+read_depth: skim
 relevance: 5
 citations: null
 code: []
@@ -26,7 +26,7 @@ code: []
 
 ## Summary
 
-Founding paper of Byzantine machine learning (arXiv v1, read in full; the conference version appeared under a different title and was not opened). A parameter server aggregates gradient vectors from n workers, up to f of which are Byzantine with full knowledge and collusion. Lemma 1: any aggregation that is a linear combination with non-zero weights, including averaging, can be steered to any vector by a single Byzantine worker. Choosing the vector closest to all others also fails for f >= 2, because colluders can drag the barycenter. Krum instead scores each vector by the sum of squared distances to its n - f - 2 nearest neighbours and picks the lowest score. If 2f + 2 < n and gradient noise is small relative to the gradient, Krum satisfies (alpha, f)-Byzantine resilience and SGD reaches a region where the gradient is small, in O(n^2 (d + log n)) time.
+Founding paper of Byzantine machine learning (arXiv v1, all sections read, proof algebra skimmed; the conference version appeared under a different title and was not opened). A parameter server aggregates gradient vectors from n workers, up to f of which are Byzantine with full knowledge and collusion. Lemma 1: any aggregation that is a linear combination with non-zero weights, including averaging, can be steered to any vector by a single Byzantine worker. Choosing the vector closest to all others also fails for f >= 2, because colluders can drag the barycenter. Krum instead scores each vector by the sum of squared distances to its n - f - 2 nearest neighbours and picks the lowest score. If 2f + 2 < n and gradient noise is small relative to the gradient, Krum satisfies (alpha, f)-Byzantine resilience and SGD reaches a region where the gradient is small, in O(n^2 (d + log n)) time.
 
 ## Contribution
 

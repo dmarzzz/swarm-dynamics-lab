@@ -1,0 +1,7 @@
+
+## dmarz/fm-memory-injection, scan-papers-fm-memory-injection
+
+- Catalogued 35 entries tagged fork-merge-security (28 papers, 3 blogs, 4 code repos) on agent memory poisoning, persistent injection and memory defences. Added notes and the topic slug to 5 existing entries. Read in full: MINJA (dong-2025-memory), RobustRAG (xiang-2024-certifiably), SMSR (sharma-2026-smsr), Agent Smith (notes on gu-2024-agent). check and verify are clean.
+- Surprising: three distinct threshold-style constructions already exist for Q2. These are isolate-then-aggregate with a certified bound (RobustRAG), randomised ablation with a hypergeometric certificate plus the finding that verdict voting beats string voting (SMSR), and k-independent-principal corroboration that refuses to count same-domain sources (TMA-NM). The last implies that sibling sub-agents from one parent exploring one domain would not count as independent.
+- Also surprising: the strongest recent attacks need no injection. Locally correct but non-transferable experiences (OEP), skill distillation that drops detection from 98.5% to 11.4% (SkillJack), and authority collapse at consolidation in 48 of 49 configurations (zhan-2026-when) all exploit the merge or consolidation step itself.
+- Next: close the S2 queries that were rate-limited (Byzantine and agent vocabulary, self-replicating prompts), follow forward citations of AgentPoison and RobustRAG, and read MAPLE-Guard and TMA-NM in full before a survey.

@@ -31,3 +31,7 @@ Research blog summarising an IACR ePrint paper with prototypes and deployed cont
 ## Relevance to us
 
 Encumbrance is the identity-rental attack in its strongest form: a Sybil operator does not need fake identities if it can lease real ones under enforceable policy, and no on-chain observer can tell. For AI agents this is the default case, since an agent acting for a principal is a policy-constrained use of the principal's credential. Any agent-swarm Sybil defence based on personhood or credentials [[buterin-2023-what]], [[ethresearch-2026-anonymous]], [[dobrokhvalov-2025-privacy]] has to state whether it tolerates encumbered or delegated keys. Code: [[gh-complete-knowledge-ck]]. TEE trust limits: [[ethresearch-2026-physical]].
+
+## Notes from dmarz/sybil-foundations
+
+The underlying paper is now catalogued from the ePrint PDF as [[kelkar-2024-complete]] (CCS 2024, DOI 10.1145/3658644.3690273), with the ASIC and gas figures from the paper (Antminer S9 at 13 TH/s for about $100; ASIC proof verification about 7.6 million gas; Android attestation CK about 1.5 million gas). The applied attack it counters is implemented in [[austgen-2024-liquefaction]], whose Appendix A argues that one-person-one-account identity systems fail under key encumbrance.

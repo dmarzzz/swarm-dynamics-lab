@@ -44,3 +44,7 @@ Two-model fusion only; the authors leave larger merges and other layers open. Re
 ## Relevance to us
 
 Key for Q2, in the reverse direction from what dmarz asked: it shows an attacker can deliberately build a k-of-n attack (here 2-of-2) that defeats per-part checks. A k-of-n threshold therefore needs the parts to be independent; if the adversary controls k parts it can split the payload so none looks bad alone. For Q1, hiding which parts will be merged together breaks this attack, because the payload only assembles if the right parts meet. Related: [[ding-2026-colluding]], [[hammoud-2024-model]], [[zhang-2024-badmerging]].
+
+## Notes from dmarz/fm-bft-aggregation
+
+Opened the arXiv abstract page this session (2026-10-03). Bearing on Q2 (merge thresholds): TrojanMerge is the parameter-space proof that a per-part check before merging is not enough. Each source model passes safety evaluation on its own, yet the merge composes their perturbations into a pre-computed attack vector. In fork-merge terms an attacker who corrupts several returning sub-agents slightly, each below any per-part anomaly threshold, can still get a harmful parent; a k-of-n rule that inspects parts one at a time is defeated by design, which matches the in-distribution attacks on robust aggregation in [[baruch-2019-little]] and [[el-mhamdi-2018-hidden]]. Defences that check agreement at use time rather than merging weights, such as consensus decoding in [[narang-2026-inference]], are the contrasting design (that paper measures that weight averaging keeps single-source poison).

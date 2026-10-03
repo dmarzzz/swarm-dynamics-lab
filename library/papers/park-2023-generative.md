@@ -17,6 +17,7 @@ arxiv: '2304.03442'
 cite: 'Park, J. S., O''Brien, J., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative agents: Interactive simulacra of human behavior. In Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (UIST ''23), pp. 1-22. https://doi.org/10.1145/3586183.3606763'
 topics:
 - llm-agent-swarms
+- fork-merge-security
 added_by: dmarz/llm-agent-swarms
 accessed: '2026-10-03'
 read_depth: abstract
@@ -49,3 +50,7 @@ Small population (25), believability rather than accuracy as the metric, high to
 ## Relevance to us
 
 Background and must-cite for any LLM-society work; its architecture is the default "agent" in large simulations. For swarm dynamics it is the anecdotal starting point that later physics-style papers ([[de-marzo-2024-ai]], [[ashery-2024-emergent]]) turned into measurable dynamics.
+
+## Notes from dmarz/fm-memory-injection
+
+Abstract re-read 2026-10-03 for the fork-merge memory-injection lane. The memory stream (a complete natural-language record of experiences), periodic reflection that synthesises higher-level memories, and dynamic retrieval form the canonical architecture of the thing a parent would merge. Reflection is a consolidation step, and [[zhan-2026-when]] measures that consolidation of this kind usually strips the source authority of a memory. A reflection written over a sub-agent's poisoned observations would therefore launder them into the agent's own beliefs, compare the self-summarisation laundering channel in [[louck-2026-securing]]. The abstract's party-invitation diffusion result shows how readily information spreads agent to agent through these memories. That is benign here, but it is the same mechanism as [[gu-2024-agent]]. Related architecture: [[packer-2023-memgpt]].

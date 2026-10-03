@@ -1,43 +1,45 @@
 ---
 id: wu-2024-system
 type: paper
-title: TODO exact title
-authors: [TODO First Last, TODO]
-year: TODO
-venue: TODO journal, conference, or arXiv
-url: TODO https link you actually opened
+title: 'System-Level Defense against Indirect Prompt Injection Attacks: An Information Flow Control Perspective'
+authors: [Fangzhou Wu, Ethan Cecchetti, Chaowei Xiao]
+year: 2024
+venue: arXiv preprint
+url: https://arxiv.org/abs/2409.19091
 doi: null
-arxiv: null
-cite: TODO full reference, e.g. Vicsek, T., Czirók, A., Ben-Jacob, E., Cohen, I., & Shochet, O. (1995). Novel type of phase transition in a system of self-driven particles. Physical Review Letters, 75(6), 1226–1229.
-topics: [TODO]
+arxiv: '2409.19091'
+cite: 'Wu, F., Cecchetti, E., & Xiao, C. (2024). System-Level Defense against Indirect Prompt Injection Attacks: An Information Flow Control Perspective. arXiv:2409.19091.'
+topics: [fork-merge-security]
 added_by: dmarz/fm-ai-control
 accessed: 2026-10-03
-read_depth: TODO abstract | skim | full
-relevance: TODO 1-5
-citations: null  # count from Semantic Scholar or OpenAlex, with the date you looked
-code: []  # library ids of code that implements this paper
+read_depth: abstract
+relevance: 3
+citations: 109 (Semantic Scholar, 2026-10-03)
+code: []  # github.com/fzwark/Secure_LLM_System, not opened
 ---
 
 ## Summary
 
-TODO In your own words, at least 25 words: what they did, how, and what they found.
+Proposes the f-secure LLM system: an information-flow-control defence that disaggregates an LLM system into a context-aware pipeline with dynamically generated, structured executable plans, and a security monitor that filters untrusted input out of the planning process. Formal models of existing LLM systems and of the f-secure design support analysis of security guarantees; case studies and benchmarks are reported (abstract) to show robust security with preserved functionality and efficiency.
 
 ## Contribution
 
-TODO the one thing this paper adds to the field, in a sentence or two, and where it sits relative to prior work.
+One of the first system-level IFC defences for agents. The later Fides paper [[costa-2025-securing]] notes that f-secure has a formal proof of non-compromise but that its practical realisation allows insecure implicit flows to taint plans (a claim made there, not checked by me).
 
 ## Key results
 
-- TODO concrete claims with numbers where the paper gives them
+- Formal model plus non-compromise argument (abstract).
+- Benchmark results claimed robust (abstract; numbers not read).
 
 ## Methods and models
 
-TODO model equations, simulation setup, robots, datasets, or experimental organism.
+Planner isolated from untrusted data; executable plans; monitor filtering untrusted content from planning.
 
 ## Limitations and open questions
 
-TODO what the authors admit, and what you noticed.
+Abstract-level reading; implicit flows per [[costa-2025-securing]].
 
 ## Relevance to us
 
-TODO why this matters for the hackathon. Link related entries as [[<id>]].
+- Q2/Q3: a design template for keeping a returning child's content out of the parent's planner while still using it as data. The planner-isolation idea is the minimum condition for a merge that cannot rewrite the parent's goals.
+Related: [[debenedetti-2025-defeating]], [[willison-2023-dual]].

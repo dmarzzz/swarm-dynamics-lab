@@ -19,6 +19,7 @@ cite: 'Yang, R., Xu, J., Liu, Z., Fendley, N., Hong, Y., Li, Z., & Cao, Y. (2026
 topics:
 - sybil-resistance
 - llm-agent-swarms
+- fork-merge-security
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: abstract
@@ -50,3 +51,7 @@ Abstract only; I did not check whether Sybil identities are one of the four adve
 ## Relevance to us
 
 A review article to use as a checklist when designing Sybil experiments in swarms: specify the adversary's position (how many seats or identities it holds), the interface it exploits, and a counterfactual that isolates the multi-agent effect. Cites [[jo-2025-byzantine]]. Related reviews: [[de-witt-2025-open]], [[yu-2025-survey]], [[zhu-2026-blockchain]].
+
+## Notes from dmarz/fm-bft-aggregation
+
+Opened the arXiv abstract page this session (2026-10-03). Bearing on fork-merge corruption: review article (197 works) organising multi-agent LLM security by adversary position, interaction interface and system-level risk, with defences framed as path closure and recovery. For Q3 it is the place to look for catalogued attack paths that cross agent boundaries (shared state and memory, delegation), and for Q2 its 'recovery' contract component is where merge-time checks would sit. Its citation of [[liu-2026-consensus]] and [[lee-2026-robust]] (found by forward citation chasing) indicates it covers Byzantine-style aggregation for LLM agents; body not read.

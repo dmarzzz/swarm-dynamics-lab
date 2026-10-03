@@ -1,7 +1,7 @@
 ---
 id: aureli-2008-fission
 type: paper
-title: "Fission-Fusion Dynamics: New Research Frameworks"
+title: "Fission-Fusion Dynamics"
 authors: ["Filippo Aureli", "Colleen M. Schaffner", "Christophe Boesch", "Simon K. Bearder", "Josep Call", "Colin A. Chapman", "Richard Connor", "Anthony Di Fiore", "Robin I. M. Dunbar", "S. Peter Henzi", "Kay Holekamp", "Amanda H. Korstjens", "Robert Layton", "Phyllis Lee", "Julia Lehmann", "Joseph H. Manson", "Gabriel Ramos-Fernandez", "Karen B. Strier", "Carel P. van Schaik"]
 year: 2008
 venue: "Current Anthropology"

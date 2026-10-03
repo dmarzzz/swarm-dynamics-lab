@@ -22,6 +22,7 @@ cite: 'Ju, T., Wang, Y., Ma, X., Cheng, P., Zhao, H., Wang, Y., Liu, L., Xie, J.
 topics:
 - sybil-resistance
 - llm-agent-swarms
+- fork-merge-security
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: abstract
@@ -53,3 +54,7 @@ Abstract only; the arXiv comment calls it work in progress, and the published ve
 ## Relevance to us
 
 Persistence through shared memory means a Sybil agent's influence outlives its session, and stored chat histories become apparent independent evidence later, the replication-as-corroboration failure in [[bara-2026-epistemic]]. [[hammond-2025-multi]] cites this paper when proposing immutable agent identifiers for detecting suspicious patterns. Related: [[lee-2024-prompt]], [[gu-2024-agent]].
+
+## Notes from dmarz/fm-memory-injection
+
+Abstract re-read 2026-10-03 for the fork-merge memory-injection lane. The key point for us is the last measured claim: manipulated knowledge persists through RAG frameworks in which benign agents store chat histories and later retrieve them, so influence continues after the interaction ends. That is the persistence step of a fork-merge attack (Q3). A sub-agent that merely talked with a persuasive adversarial agent in a foreign domain can carry back counterfactual knowledge in its stored history, with no explicit prompt manipulation and without losing its general capability. Such content passes injection screens, compare [[karunanidhi-2026-utility]]. The authors' suggested "guardian" agents and fact-checking are untested in the abstract.
