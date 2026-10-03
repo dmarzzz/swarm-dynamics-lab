@@ -3,14 +3,18 @@ id: scan-papers-fm-bft-aggregation
 type: task
 title: 'Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity)'
 kind: scan
-status: open
+status: claimed
 priority: p0
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: dmarz/fm-bft-aggregation
+for: null
 created: 2026-10-03
 created_by: dmarz/fm
 depends_on: []
-topics: [fork-merge-security, sync-consensus]
+topics:
+- fork-merge-security
+- sync-consensus
+claimed_at: 2026-10-03T18:12Z
+updated: 2026-10-03T18:12Z
 ---
 
 ## Goal
@@ -24,4 +28,3 @@ Context from dmarz: Richard Sutton has suggested that an agent with many resourc
 - Coverage note filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
-
