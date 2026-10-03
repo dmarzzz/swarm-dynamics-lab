@@ -59,3 +59,37 @@ Rules this file follows:
 | Couzin, MPI of Animal Behavior | Uninformed individuals and democratic consensus, decision geometry in moving groups | [[couzin-2005-effective]], [[couzin-2011-uninformed]], [[leonard-2012-decision]], [[sridhar-2021-geometry]] | https://www.ab.mpg.de/couzin | Bluesky mpi-animalbehav.bsky.social (institute account) | - |
 | Feinerman, Weizmann | Cooperative transport in ants, individual vs collective information, criticality in ant groups | [[gelblum-2015-ant]], [[feinerman-2017-individual]], [[feinerman-2018-physics]], [[chatterjee-2025-maximal]] | https://www.weizmann.ac.il/complex/feinerman/ | X @weizmannscience (institute account) | - |
 | Franks, Bristol | Ant emigration, speed-accuracy trade-offs, information flow in colonies | [[franks-2002-information]], [[franks-2003-speed]], [[britton-2002-deciding]] | - (not fetched) | - | - |
+
+## Swarm robotics (`swarm-robotics`)
+
+| Group | Known for | Key library entries | Homepage | Handle (from homepage) | Runnable |
+|---|---|---|---|---|---|
+| Dorigo, Birattari and Trianni, IRIDIA (ULB) | Swarm robotics as an engineering discipline: Swarmanoid, ARGoS, AutoMoDe automatic design, best-of-n collective decisions | [[brambilla-2013-swarm]], [[dorigo-2021-swarm]], [[francesca-2014-automode]], [[pinciroli-2012-argos]], [[valentini-2016-collective]] | https://iridia.ulb.ac.be/~mdorigo/HomePageDorigo/ | - | Yes: ARGoS simulator [[gh-ilpincy-argos3]], Buzz language [[gh-buzz-lang-buzz]] |
+| Nagpal, Princeton (formerly Harvard SSR) | Kilobot thousand-robot swarm, TERMES collective construction, robot fish schools (Blueswarm) | [[rubenstein-2012-kilobot]], [[rubenstein-2014-programmable]], [[werfel-2014-designing]], [[berlinger-2021-implicit]] | https://ssr.princeton.edu/ | - | Partial: Kilobot simulator [[gh-jic-csb-kilombo]] (third party) |
+| Kumar, Penn GRASP | Aerial robot swarms, formation control, learned decentralised flocking with GNNs | [[chung-2018-survey]], [[berman-2009-optimized]], [[tolstaya-2020-learning]], [[agarwal-2025-lpac]] | https://www.kumarrobotics.org/ | X @vijay_r_kumar | - |
+| Gil, Harvard REACT | Physical-channel (WiFi) Sybil defence for robot teams, resilient consensus with trust | [[gil-2015-guaranteeing]], [[gil-2023-physicality]], [[yemini-2021-characterizing]], [[cavorsi-2024-exploiting]] | https://react.seas.harvard.edu/ | - | - |
+| Prorok, Cambridge | Heterogeneous multi-robot learning, VMAS vectorised simulator, BenchMARL | [[prorok-2021-beyond]], [[saulnier-2017-resilient]], [[gh-proroklab-vectorizedmultiagentsimulator]], [[gh-facebookresearch-benchmarl]] | https://www.proroklab.org/ | - | Yes (ran): [[gh-proroklab-vectorizedmultiagentsimulator]]; also [[gh-facebookresearch-benchmarl]] |
+| Goldman, Georgia Tech CRAB Lab | Robophysics: smarticles, active-matter robot collectives, emergent locomotion without central control | [[li-2021-programming]], [[savoie-2019-robot]], [[chvykov-2021-low]], [[aina-2022-toward]] | https://crablab.gatech.edu/ | - | - |
+| Strobel, Pacheco and Dorigo, IRIDIA blockchain-swarm line | Blockchain-based Byzantine robot management in swarms, Toychain | [[strobel-2018-managing]], [[strobel-2020-blockchain]], [[strobel-2023-robot]], [[pacheco-2024-toychain]] | https://iridia.ulb.ac.be/~vstrobel/ | X @volkerstrob (Strobel) | Yes: [[gh-pold87-blockchain-swarm-robotics]], [[gh-teksander-toychain]] |
+
+## Swarm intelligence algorithms (`swarm-intelligence`)
+
+| Group | Known for | Key library entries | Homepage | Handle (from homepage) | Runnable |
+|---|---|---|---|---|---|
+| Dorigo and Stützle, IRIDIA | Ant Colony Optimisation and MAX-MIN Ant System; later critiques of metaphor-based metaheuristics | [[dorigo-1996-ant]], [[dorigo-2004-ant]], [[stutzle-2000-max]], [[camacho-villalon-2023-exposing]] | https://iridia.ulb.ac.be/~stuetzle/ (Stützle) | - | - |
+| Kennedy and Eberhart (PSO originators), with Clerc and Poli | Particle swarm optimisation, constriction coefficient, PSO review | [[kennedy-1995-particle]], [[eberhart-1995-new]], [[clerc-2002-particle]], [[poli-2007-particle]] | - (historical, no current lab page) | - | - |
+| Sörensen, Antwerp (with Aranha et al.) | The "metaphor exposed" critique: many nature-inspired algorithms rename existing ones | [[sorensen-2015-metaheuristics]], [[aranha-2022-metaphor]], [[marti-2025-fifty]] | https://www.uantwerpen.be/en/staff/kenneth-sorensen/ | - | - |
+| Fornasier, Carrillo, Pareschi and Totzeck (consensus-based optimisation) | Consensus-based optimisation: mean-field limit and convergence proofs for swarm optimisers | [[carrillo-2018-analytical]], [[fornasier-2021-consensus]], [[fornasier-2024-consensus]], [[bailo-2024-cbx]] | https://www.math.cit.tum.de/en/math/people/professors/fornasier-massimo/ (Fornasier) | - | Partial: CBX library described in [[bailo-2024-cbx]] (no separate code entry yet) |
+| Bonabeau, Theraulaz and Garnier (stigmergy) | "Swarm Intelligence" book framing; biological self-organisation as algorithm source | [[bonabeau-1999-swarm]], [[theraulaz-1999-brief]], [[garnier-2007-biological]] | https://guy-theraulaz.cnrs.fr/ (Theraulaz) | X @gtheraulaz | - |
+
+## Active matter physics (`active-matter`)
+
+| Group | Known for | Key library entries | Homepage | Handle (from homepage) | Runnable |
+|---|---|---|---|---|---|
+| Cates and Tailleur (Cambridge / MIT) | Motility-induced phase separation, active pressure, run-and-tumble statistical mechanics | [[tailleur-2008-statistical]], [[cates-2015-motility]], [[solon-2015-pressure]], [[fodor-2016-how]] | https://www.damtp.cam.ac.uk/research/softmatter/person/mec22 (Cates); https://physics.mit.edu/faculty/julien-tailleur/ (Tailleur) | - | - |
+| Marchetti and Ramaswamy | Hydrodynamics of soft active matter, active nematics, symmetry classes | [[simha-2002-hydrodynamic]], [[marchetti-2013-hydrodynamics]], [[ramaswamy-2010-mechanics]], [[bowick-2022-symmetry]] | https://marchetti.physics.ucsb.edu/ (Marchetti) | - | - |
+| Bartolo, ENS Lyon | Quincke-roller colloidal flocks; crowd experiments (start-line waves, crowd oscillations) | [[bricard-2013-emergence]], [[bain-2019-dynamic]], [[gu-2025-emergence]], [[lefranc-2025-synthetic]] | https://denis114.wordpress.com/ | - | - |
+| Bechinger and Löwen (Konstanz / Düsseldorf) | Active colloids and light-steered microswimmers, visual-perception swarms, RL on active particles | [[bechinger-2016-active]], [[buttinoni-2013-dynamical]], [[bauerle-2018-self]], [[lavergne-2019-group]], [[loffler-2023-collective]] | https://www.bechinger.uni-konstanz.de/ (Bechinger); https://www2.thphy.uni-duesseldorf.de/index.php?language=en (Löwen) | Bluesky uni-konstanz.de (university account) | - |
+| Chaté, CEA Saclay | Dry aligning active matter: Vicsek-class phases and their field theories | [[chate-2019-dry]], [[chate-2020-dry]], [[solon-2015-phase]], [[chate-2024-dynamic]] | https://iramis.cea.fr/en/spec/active-matter/ | - | - |
+| Dauchot, ESPCI | Vibrated polar disks and robot (Kilobot, Pogobot) active matter, self-organised robot collectives | [[deseigne-2010-collective]], [[baconnier-2022-selective]], [[baconnier-2025-self]], [[loi-2025-pogobot]] | - (not fetched) | - | - |
+| Simulation tooling (Mocz; Google JAX MD) | Minimal Vicsek / active-matter simulations and differentiable MD | [[gh-pmocz-activematter-python]], [[gh-jax-md-jax-md]] | - | - | Yes (ran): [[gh-pmocz-activematter-python]]; also [[gh-jax-md-jax-md]] |
