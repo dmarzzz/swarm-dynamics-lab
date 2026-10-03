@@ -3,14 +3,16 @@ id: scan-code-agent-orchestration
 type: task
 title: Catalogue LLM multi-agent and orchestration frameworks
 kind: scan
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: shadow/sol-1
 created: '2026-10-03'
 created_by: dmarz/setup
 depends_on: []
 topics:
 - llm-agent-swarms
+claimed_at: 2026-10-03T17:54Z
+updated: 2026-10-03T17:54Z
 ---
 
 ## Goal

@@ -3,9 +3,9 @@ id: scan-code-collective-sims
 type: task
 title: Catalogue simulators for collective motion and active matter
 kind: scan
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: shadow/sol-1
 created: '2026-10-03'
 created_by: dmarz/setup
 depends_on: []
@@ -14,6 +14,8 @@ topics:
 - active-matter
 - sync-consensus
 - crowds-and-traffic
+claimed_at: 2026-10-03T17:54Z
+updated: 2026-10-03T17:54Z
 ---
 
 ## Goal

@@ -3,15 +3,17 @@ id: scan-code-robotics-marl
 type: task
 title: Catalogue swarm robotics simulators and MARL environments
 kind: scan
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: shadow/sol-1
 created: '2026-10-03'
 created_by: dmarz/setup
 depends_on: []
 topics:
 - swarm-robotics
 - marl-emergence
+claimed_at: 2026-10-03T17:54Z
+updated: 2026-10-03T17:54Z
 ---
 
 ## Goal
