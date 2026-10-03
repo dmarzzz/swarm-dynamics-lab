@@ -7,19 +7,19 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 313 | 8 | 3 | 15 | 0 | 1 | 340 |
-| collective-decision | 236 | 8 | 20 | 19 | 0 | 2 | 285 |
+| collective-decision | 236 | 8 | 20 | 19 | 0 | 3 | 286 |
 | swarm-robotics | 272 | 13 | 2 | 7 | 0 | 0 | 294 |
 | swarm-intelligence | 107 | 1 | 2 | 4 | 0 | 0 | 114 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 0 | 194 |
 | sync-consensus | 225 | 8 | 11 | 17 | 0 | 1 | 262 |
 | criticality-measurement | 186 | 4 | 1 | 23 | 0 | 1 | 215 |
-| marl-emergence | 123 | 12 | 0 | 33 | 0 | 1 | 169 |
-| llm-agent-swarms | 237 | 45 | 53 | 198 | 0 | 2 | 535 |
+| marl-emergence | 123 | 12 | 0 | 33 | 0 | 2 | 170 |
+| llm-agent-swarms | 237 | 45 | 58 | 198 | 0 | 2 | 540 |
 | crowds-and-traffic | 76 | 2 | 1 | 2 | 0 | 0 | 81 |
-| meta | 77 | 9 | 3 | 22 | 0 | 2 | 113 |
+| meta | 77 | 9 | 5 | 22 | 0 | 2 | 115 |
 | sybil-resistance | 169 | 41 | 52 | 59 | 4 | 1 | 326 |
 | fork-merge-security | 214 | 11 | 38 | 67 | 0 | 3 | 333 |
-| swarm-detection | 0 | 3 | 16 | 187 | 0 | 0 | 206 |
+| swarm-detection | 0 | 3 | 18 | 187 | 0 | 3 | 211 |
 
 ## Tasks
 
@@ -106,12 +106,13 @@
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#19](https://github.com/dmarzzz/swarm-lab/issues/19) | claimed | 2026-10-03T19:34Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-02) |
 | [#28](https://github.com/dmarzzz/swarm-lab/issues/28) | claimed | 2026-10-03T19:32Z | [batch] web/crowds-and-traffic: 10 candidates (web-crowds-and-traffic-20261003-01) |
 | [#33](https://github.com/dmarzzz/swarm-lab/issues/33) | claimed | 2026-10-03T19:32Z | [batch] web/swarm-detection: 10 candidates (web-swarm-detection-20261003-01) |
 | [#39](https://github.com/dmarzzz/swarm-lab/issues/39) | claimed | 2026-10-03T19:32Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-01) |
+| [#44](https://github.com/dmarzzz/swarm-lab/issues/44) | claimed | 2026-10-03T19:37Z | [batch] x/swarm-detection: 6 candidates (x-swarm-detection-20261003-04) |
 | [#47](https://github.com/dmarzzz/swarm-lab/issues/47) | claimed | 2026-10-03T19:33Z | [batch] blog/fork-merge-security: 12 candidates (blog-fork-merge-security-20261003-02) |
 | [#48](https://github.com/dmarzzz/swarm-lab/issues/48) | claimed | 2026-10-03T19:31Z | [batch] blog/swarm-detection: 11 candidates (blog-swarm-detection-20261003-01) |
+| [#19](https://github.com/dmarzzz/swarm-lab/issues/19) | free | 2026-10-03T19:37Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-02) |
 | [#20](https://github.com/dmarzzz/swarm-lab/issues/20) | free | 2026-10-03T19:21Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-03) |
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
@@ -126,7 +127,6 @@
 | [#32](https://github.com/dmarzzz/swarm-lab/issues/32) | free | 2026-10-03T19:22Z | [batch] web/marl-emergence: 10 candidates (web-marl-emergence-20261003-01) |
 | [#34](https://github.com/dmarzzz/swarm-lab/issues/34) | free | 2026-10-03T19:22Z | [batch] web/swarm-detection: 3 candidates (web-swarm-detection-20261003-02) |
 | [#35](https://github.com/dmarzzz/swarm-lab/issues/35) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 10 candidates (web-swarm-robotics-20261003-01) |
-| [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
 | | | | 7 more free batches |
 
 ## Agents
@@ -134,10 +134,10 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
+| shadow/sol-w1 | working |  | 2026-10-03T19:40Z | cataloguing web batches 33 and 34, then 31 and 32; YouTube transcripts blocked, public descriptions read honestly at abstract depth |
 | shadow/sol-w5 | done |  | 2026-10-03T19:40Z | worked candidate batches |
 | shadow/sol-w8 | working |  | 2026-10-03T19:32Z | TODO one line |
 | dmarz/reviewer-1 | done | review-llm-agent-swarms | 2026-10-03T19:27Z | review filed, verdict revise |
-| shadow/sol-w1 | done |  | 2026-10-03T19:20Z | batch writer lane finished; batches |
 | shadow/sol-w3 | idle |  | 2026-10-03T19:20Z | finished candidate batches |
 | vishesh/codex-docs | done |  | 2026-10-03T19:14Z | Expanded sixteen briefs, linked research outputs, repaired metadata, and incorporated targeted review corrections. |
 | shadow/sol-w6 | working |  | 2026-10-03T19:06Z | TODO one line |
