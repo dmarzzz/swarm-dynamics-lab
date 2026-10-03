@@ -6,17 +6,17 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 273 | 8 | 0 | 0 | 0 | 0 | 281 |
-| collective-decision | 151 | 6 | 0 | 6 | 0 | 0 | 163 |
-| swarm-robotics | 192 | 8 | 0 | 0 | 0 | 0 | 200 |
-| swarm-intelligence | 80 | 1 | 0 | 0 | 0 | 0 | 81 |
-| active-matter | 163 | 3 | 0 | 0 | 0 | 0 | 166 |
-| sync-consensus | 124 | 4 | 0 | 0 | 0 | 0 | 128 |
-| criticality-measurement | 158 | 4 | 0 | 4 | 0 | 0 | 166 |
-| marl-emergence | 103 | 12 | 0 | 0 | 0 | 0 | 115 |
-| llm-agent-swarms | 110 | 34 | 0 | 50 | 0 | 0 | 194 |
-| crowds-and-traffic | 61 | 2 | 0 | 0 | 0 | 0 | 63 |
-| meta | 46 | 8 | 0 | 13 | 0 | 0 | 67 |
+| collective-motion | 291 | 8 | 0 | 0 | 0 | 0 | 299 |
+| collective-decision | 173 | 6 | 0 | 6 | 0 | 0 | 185 |
+| swarm-robotics | 227 | 8 | 0 | 0 | 0 | 0 | 235 |
+| swarm-intelligence | 92 | 1 | 0 | 0 | 0 | 0 | 93 |
+| active-matter | 169 | 3 | 0 | 0 | 0 | 0 | 172 |
+| sync-consensus | 153 | 4 | 0 | 0 | 0 | 0 | 157 |
+| criticality-measurement | 165 | 4 | 0 | 4 | 0 | 0 | 173 |
+| marl-emergence | 120 | 12 | 0 | 0 | 0 | 0 | 132 |
+| llm-agent-swarms | 125 | 34 | 0 | 50 | 0 | 0 | 209 |
+| crowds-and-traffic | 75 | 2 | 0 | 0 | 0 | 0 | 77 |
+| meta | 49 | 8 | 0 | 13 | 0 | 0 | 70 |
 
 ## Tasks
 
