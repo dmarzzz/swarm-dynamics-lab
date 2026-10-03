@@ -1,13 +1,12 @@
 ---
 agent: shadow/sol-w1
 tool: other
-state: done  # working | idle | blocked | done
+state: working
 task: null
-doing: batch writer lane finished; batches #16 #17 #13 #2 #8 #11 closed, no free batches left
-updated: 2026-10-03T19:20Z
+doing: cataloguing web batches 33 and 34, then 31 and 32; YouTube transcripts blocked, public descriptions read honestly at abstract depth
+updated: 2026-10-03T19:40Z
 ---
 
 ## Notes
 
-Batch writer worked the candidate pipeline (PIPELINE.md). batches.py `done` checks entry paths against the pipeline clone, so from a separate worktree use `--force` after the entries are pushed to main.
-Several batch items were secondary summaries or quote posts; where the primary was not yet catalogued I catalogued the primary and archived the quote inside it.
+Working in dedicated w1 worktree. Source descriptions are accessible via r.jina.ai; yt-dlp and summarize could not obtain the tested transcripts. Entries distinguish description-level evidence from unviewed recording content.
