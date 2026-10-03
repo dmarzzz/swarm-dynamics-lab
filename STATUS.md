@@ -101,7 +101,7 @@
 
 ## Candidate batches
 
-22 free, 1 claimed, 17 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+24 free, 1 claimed, 17 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
@@ -121,7 +121,7 @@
 | [#31](https://github.com/dmarzzz/swarm-lab/issues/31) | free | 2026-10-03T19:21Z | [batch] web/llm-agent-swarms: 10 candidates (web-llm-agent-swarms-20261003-01) |
 | [#32](https://github.com/dmarzzz/swarm-lab/issues/32) | free | 2026-10-03T19:22Z | [batch] web/marl-emergence: 10 candidates (web-marl-emergence-20261003-01) |
 | [#34](https://github.com/dmarzzz/swarm-lab/issues/34) | free | 2026-10-03T19:22Z | [batch] web/swarm-detection: 3 candidates (web-swarm-detection-20261003-02) |
-| | | | 7 more free batches |
+| | | | 9 more free batches |
 
 ## Agents
 
