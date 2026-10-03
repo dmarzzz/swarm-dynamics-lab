@@ -33,7 +33,7 @@
 | [scan-papers-fm-merge-poisoning](tasks/scan-papers-fm-merge-poisoning.md) | claimed | p0 | scan | dmarz/fm-merge-poisoning |  | 2026-10-03T18:11Z | Catalogue the papers: poisoning through model merging, federated aggregation and distillation |
 | [scan-papers-fm-sutton](tasks/scan-papers-fm-sutton.md) | claimed | p0 | scan | dmarz/fm-sutton |  | 2026-10-03T18:11Z | Catalogue the primary sources: Sutton on agents splitting and merging, and prior framings |
 | [scan-papers-fm-unlinkability](tasks/scan-papers-fm-unlinkability.md) | claimed | p0 | scan | dmarz/fm-unlinkability |  | 2026-10-03T18:12Z | Catalogue the papers: hiding which part returns (unlinkability, secret election, moving target) |
-| [scan-papers-sd-bots](tasks/scan-papers-sd-bots.md) | claimed | p0 | scan | dmarz/sd-bots |  | 2026-10-03T18:20Z | Catalogue the papers: social bots, LLM-powered botnets and coordinated inauthentic behaviour detection |
+| [scan-papers-sd-bots](tasks/scan-papers-sd-bots.md) | claimed | p0 | scan | dmarz/sd-bots |  | 2026-10-03T18:21Z | Catalogue the papers: social bots, LLM-powered botnets and coordinated inauthentic behaviour detection |
 | [scan-papers-sd-coordination](tasks/scan-papers-sd-coordination.md) | claimed | p0 | scan | dmarz/sd-coordination |  | 2026-10-03T18:20Z | Catalogue the papers: statistical detection of coordination and collective behaviour from traces |
 | [scan-papers-sd-honeypots](tasks/scan-papers-sd-honeypots.md) | claimed | p0 | scan | dmarz/sd-honeypots |  | 2026-10-03T18:20Z | Catalogue the papers: honeypots, canaries, tarpits and traps for autonomous agents |
 | [scan-papers-sd-web-agents](tasks/scan-papers-sd-web-agents.md) | claimed | p0 | scan | dmarz/sd-web-agents |  | 2026-10-03T18:19Z | Catalogue the papers: detecting browser agents, computer-use agents and AI crawlers on the web |
@@ -53,7 +53,6 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [scan-threads-sd-informal](tasks/scan-threads-sd-informal.md) | claimed | p1 | scan | dmarz/sd-informal |  | 2026-10-03T18:20Z | Catalogue the threads: threat-intel reports, blogs, threads and talks on agent swarms in the wild |
-| [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | claimed | p1 | survey | shadow/sol-1 |  | 2026-10-03T17:57Z | Survey: llm agent swarms |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Review survey: llm agent swarms (cross-researcher) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
@@ -97,6 +96,7 @@
 | [scan-papers-crowds-and-traffic](tasks/scan-papers-crowds-and-traffic.md) | done | p1 | scan | dmarz/crowds-and-traffic |  | 2026-10-03T18:18Z | Catalogue the papers: human crowds and traffic |
 | [scan-papers-swarm-intelligence](tasks/scan-papers-swarm-intelligence.md) | done | p1 | scan | dmarz/swarm-intelligence |  | 2026-10-03T18:19Z | Catalogue the papers: swarm intelligence algorithms |
 | [scan-papers-sync-consensus](tasks/scan-papers-sync-consensus.md) | done | p1 | scan | dmarz/sync-consensus |  | 2026-10-03T18:20Z | Catalogue the papers: synchronisation, consensus and networked control |
+| [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
 
 ## Agents
 
