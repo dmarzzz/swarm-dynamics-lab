@@ -2,9 +2,9 @@
 
 # Library index
 
-2770 entries.
+2773 entries.
 
-## Papers (1762)
+## Papers (1765)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1641,6 +1641,7 @@
 | [bendada-2025-botdetect](papers/bendada-2025-botdetect.md) | BotDetect: A Decentralized Federated Learning Framework for Detecting Financial Bots on the EVM Blockchains | 2025 | 2 | abstract | swarm-detection | dmarz/sd-onchain |
 | [beni-2005-swarm](papers/beni-2005-swarm.md) | From Swarm Intelligence to Swarm Robotics | 2005 | 2 | abstract | swarm-robotics, swarm-intelligence | dmarz/swarm-robotics |
 | [bhumichai-2024-evaluation](papers/bhumichai-2024-evaluation.md) | The Evaluation of Extracted Features for Detecting Eclipse Attacks on Ethereum Network Layers | 2024 | 2 | abstract | sybil-resistance, swarm-detection | shadow/sol-p2 |
+| [bijani-2013-securing](papers/bijani-2013-securing.md) | Securing open multi-agent systems governed by electronic institutions | 2013 | 2 | abstract | sybil-resistance, fork-merge-security | shadow/sol-p2 |
 | [blum-2024-ant](papers/blum-2024-ant.md) | Ant colony optimization: A bibliometric review | 2024 | 2 | abstract | swarm-intelligence, meta | dmarz/swarm-intelligence-audit |
 | [bowen-2009-baiting](papers/bowen-2009-baiting.md) | Baiting Inside Attackers Using Decoy Documents | 2009 | 2 | abstract | swarm-detection | shadow/sol-g51 |
 | [cambus-2025-approximate](papers/cambus-2025-approximate.md) | Approximate Agreement Algorithms for Byzantine Collaborative Learning | 2025 | 2 | abstract | fork-merge-security, sync-consensus | dmarz/fm-bft-aggregation |
@@ -1768,8 +1769,10 @@
 | [ziouzios-2026-recent](papers/ziouzios-2026-recent.md) | Recent Progress in Optimising Sustainable Energy Smart Grids Using Swarm Robotics: A Systematic Narrative Review | 2026 | 2 | skim | swarm-robotics, swarm-intelligence, sybil-resistance | shadow/sol-p1 |
 | [zwang-2018-detecting](papers/zwang-2018-detecting.md) | Detecting Bot Activity in the Ethereum Blockchain Network | 2018 | 2 | abstract | swarm-detection | dmarz/sd-onchain |
 | [elgammal-2026-evolution](papers/elgammal-2026-evolution.md) | Evolution of Deep Learning Models for Misinformation Detection in Social Media Textual Data: Background, Architectures, Datasets, and Emerging LLM Applications | 2026 | 1 | abstract | swarm-detection | shadow/sol-w4 |
+| [kraxberger-2010-secure](papers/kraxberger-2010-secure.md) | Secure Multi-Agent System for Multi-Hop Environments | 2010 | 1 | abstract | sybil-resistance, fork-merge-security | shadow/sol-p2 |
 | [mckee-2023-chatbots](papers/mckee-2023-chatbots.md) | Chatbots in a Honeypot World | 2023 | 1 | abstract | swarm-detection | dmarz/sd-honeypots |
 | [wang-2008-free](papers/wang-2008-free.md) | A Free-Roaming Mobile Agent Security Protocol Based on Anonymous Onion Routing and k Anonymous Hops Backwards | 2008 | 1 | abstract | fork-merge-security | shadow/sol-g51 |
+| [xu-2023-smartllm](papers/xu-2023-smartllm.md) | SmartLLM: A New Oracle System for Smart Contracts Calling Large Language Models | 2023 | 1 | abstract | sybil-resistance, llm-agent-swarms | shadow/sol-p2 |
 
 ## Blogs (202)
 
