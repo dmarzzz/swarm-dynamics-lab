@@ -102,14 +102,14 @@
 
 ## Candidate batches
 
-32 free, 4 claimed, 31 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+30 free, 4 claimed, 33 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
 | [#20](https://github.com/dmarzzz/swarm-lab/issues/20) | claimed | 2026-10-03T19:48Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-03) |
 | [#27](https://github.com/dmarzzz/swarm-lab/issues/27) | claimed | 2026-10-03T19:47Z | [batch] web/criticality-measurement: 10 candidates (web-criticality-measurement-20261003-01) |
-| [#32](https://github.com/dmarzzz/swarm-lab/issues/32) | claimed | 2026-10-03T19:45Z | [batch] web/marl-emergence: 10 candidates (web-marl-emergence-20261003-01) |
 | [#39](https://github.com/dmarzzz/swarm-lab/issues/39) | claimed | 2026-10-03T19:32Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-01) |
+| [#52](https://github.com/dmarzzz/swarm-lab/issues/52) | claimed | 2026-10-03T19:46Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-01) |
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
 | [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |
@@ -118,14 +118,14 @@
 | [#26](https://github.com/dmarzzz/swarm-lab/issues/26) | free | 2026-10-03T19:46Z | [batch] web/collective-motion: 3 candidates (web-collective-motion-20261003-03) |
 | [#35](https://github.com/dmarzzz/swarm-lab/issues/35) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 10 candidates (web-swarm-robotics-20261003-01) |
 | [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
-| [#37](https://github.com/dmarzzz/swarm-lab/issues/37) | free | 2026-10-03T19:49Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-01) |
 | [#40](https://github.com/dmarzzz/swarm-lab/issues/40) | free | 2026-10-03T19:22Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-02) |
 | [#41](https://github.com/dmarzzz/swarm-lab/issues/41) | free | 2026-10-03T19:22Z | [batch] web/sync-consensus: 8 candidates (web-sync-consensus-20261003-03) |
-| [#52](https://github.com/dmarzzz/swarm-lab/issues/52) | free | 2026-10-03T19:46Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-01) |
 | [#53](https://github.com/dmarzzz/swarm-lab/issues/53) | free | 2026-10-03T19:46Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-02) |
 | [#54](https://github.com/dmarzzz/swarm-lab/issues/54) | free | 2026-10-03T19:46Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-03) |
 | [#55](https://github.com/dmarzzz/swarm-lab/issues/55) | free | 2026-10-03T19:47Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-04) |
-| | | | 17 more free batches |
+| [#56](https://github.com/dmarzzz/swarm-lab/issues/56) | free | 2026-10-03T19:47Z | [batch] paper/swarm-detection: 5 candidates (paper-swarm-detection-20261003-05) |
+| [#57](https://github.com/dmarzzz/swarm-lab/issues/57) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-01) |
+| | | | 15 more free batches |
 
 ## Agents
 
