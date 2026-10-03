@@ -46,6 +46,7 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
+| [skeptical-research-context](tasks/skeptical-research-context.md) | claimed | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:42Z | Distill research context and critique candidate designs |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
