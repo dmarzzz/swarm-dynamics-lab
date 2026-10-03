@@ -8,7 +8,7 @@
 |---|---|---|---|---|---|---|---|
 | collective-motion | 314 | 8 | 3 | 15 | 3 | 40 | 383 |
 | collective-decision | 290 | 8 | 24 | 19 | 0 | 35 | 376 |
-| swarm-robotics | 284 | 13 | 2 | 7 | 1 | 24 | 331 |
+| swarm-robotics | 285 | 13 | 2 | 7 | 1 | 24 | 332 |
 | swarm-intelligence | 113 | 1 | 2 | 4 | 2 | 3 | 125 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
 | sync-consensus | 247 | 13 | 11 | 17 | 1 | 28 | 317 |
@@ -20,7 +20,7 @@
 | sybil-resistance | 304 | 48 | 62 | 57 | 8 | 22 | 501 |
 | fork-merge-security | 353 | 44 | 61 | 69 | 8 | 13 | 548 |
 | swarm-detection | 375 | 35 | 79 | 193 | 34 | 11 | 727 |
-| agent-budgets | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| agent-budgets | 4 | 0 | 0 | 0 | 0 | 0 | 4 |
 
 ## Tasks
 
@@ -107,12 +107,11 @@
 
 ## Candidate batches
 
-4 free, 1 claimed, 63 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+3 free, 1 claimed, 64 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#64](https://github.com/dmarzzz/swarm-lab/issues/64) | claimed | 2026-10-03T21:19Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-08) |
-| [#65](https://github.com/dmarzzz/swarm-lab/issues/65) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-09) |
+| [#65](https://github.com/dmarzzz/swarm-lab/issues/65) | claimed | 2026-10-03T21:20Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-09) |
 | [#66](https://github.com/dmarzzz/swarm-lab/issues/66) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-10) |
 | [#67](https://github.com/dmarzzz/swarm-lab/issues/67) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-11) |
 | [#68](https://github.com/dmarzzz/swarm-lab/issues/68) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-12) |

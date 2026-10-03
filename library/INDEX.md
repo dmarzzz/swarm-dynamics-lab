@@ -2,9 +2,9 @@
 
 # Library index
 
-2857 entries.
+2861 entries.
 
-## Papers (1814)
+## Papers (1818)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -451,6 +451,7 @@
 | [chen-2026-do](papers/chen-2026-do.md) | Do System Prompts Leave Behavioral Fingerprints? A Large-Scale Empirical Study of Clone Detection via Output Similarity | 2026 | 4 | abstract | swarm-detection, sybil-resistance | dmarz/sd-attribution |
 | [chen-2026-memsecbench](papers/chen-2026-memsecbench.md) | MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair | 2026 | 4 | abstract | fork-merge-security, llm-agent-swarms | shadow/sol-g74 |
 | [chen-2026-when](papers/chen-2026-when.md) | When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models | 2026 | 4 | abstract | fork-merge-security, llm-agent-swarms, collective-decision | dmarz/fm-bft-aggregation |
+| [chevaleyre-2006-issues](papers/chevaleyre-2006-issues.md) | Issues in Multiagent Resource Allocation | 2006 | 4 | skim | agent-budgets | dmarz/budget-c |
 | [chitra-2025-sybil](papers/chitra-2025-sybil.md) | On Sybil-proofness in Restaking Networks | 2025 | 4 | abstract | sybil-resistance, sync-consensus | dmarz/sybil-mechanisms |
 | [chiu-2025-learn](papers/chiu-2025-learn.md) | LEARN: Learning End-to-End Aerial Resource-Constrained Multi-Robot Navigation | 2025 | 4 | abstract | swarm-robotics, marl-emergence | dmarz/swarm-robotics-recent |
 | [choi-2025-debate](papers/choi-2025-debate.md) | Debate or Vote: Which Yields Better Decisions in Multi-Agent Large Language Models? | 2025 | 4 | abstract | llm-agent-swarms, sync-consensus, collective-decision | dmarz/llm-agent-swarms |
@@ -500,6 +501,7 @@
 | [denisov-blanch-2026-consensus](papers/denisov-blanch-2026-consensus.md) | Consensus is Not Verification: Why Crowd Wisdom Strategies Fail for LLM Truthfulness | 2026 | 4 | abstract | fork-merge-security, llm-agent-swarms, collective-decision | dmarz/fm-bft-aggregation |
 | [deseigne-2010-collective](papers/deseigne-2010-collective.md) | Collective Motion of Vibrated Polar Disks | 2010 | 4 | full | active-matter, collective-motion, swarm-robotics | dmarz/active-matter |
 | [devlin-2025-material](papers/devlin-2025-material.md) | Material-like robotic collectives with spatiotemporal control of strength and shape | 2025 | 4 | abstract | swarm-robotics, active-matter | dmarz/swarm-robotics-recent |
+| [dias-2006-market](papers/dias-2006-market.md) | Market-Based Multirobot Coordination: A Survey and Analysis | 2006 | 4 | abstract | agent-budgets, swarm-robotics | dmarz/budget-c |
 | [digregorio-2018-full](papers/digregorio-2018-full.md) | Full Phase Diagram of Active Brownian Disks: From Melting to Motility-Induced Phase Separation | 2018 | 4 | abstract | active-matter | dmarz/active-matter |
 | [dingledine-2004-tor](papers/dingledine-2004-tor.md) | Tor: The Second-Generation Onion Router | 2004 | 4 | skim | fork-merge-security, sybil-resistance | dmarz/fm-unlinkability |
 | [dizenhaus-2026-anonymous](papers/dizenhaus-2026-anonymous.md) | Anonymous leadership and stochastic resonance in collectives of self-propelled robots | 2026 | 4 | abstract | swarm-robotics, collective-decision, active-matter, criticality-measurement | dmarz/swarm-robotics-recent |
@@ -920,6 +922,7 @@
 | [simha-2002-hydrodynamic](papers/simha-2002-hydrodynamic.md) | Hydrodynamic Fluctuations and Instabilities in Ordered Suspensions of Self-Propelled Particles | 2002 | 4 | abstract | active-matter, collective-motion | dmarz/active-matter |
 | [sinha-2018-stackelberg](papers/sinha-2018-stackelberg.md) | Stackelberg Security Games: Looking Beyond a Decade of Success | 2018 | 4 | skim | fork-merge-security, collective-decision | dmarz/fm |
 | [sirolly-2025-network](papers/sirolly-2025-network.md) | Network-Based Detection of Wash Trading | 2025 | 4 | abstract | swarm-detection | shadow/sol-g51 |
+| [smith-1980-contract](papers/smith-1980-contract.md) | The Contract Net Protocol: High-Level Communication and Control in a Distributed Problem Solver | 1980 | 4 | abstract | agent-budgets | dmarz/budget-c |
 | [soma-2024-hive](papers/soma-2024-hive.md) | The Hive Mind is a Single Reinforcement Learning Agent | 2024 | 4 | abstract | collective-decision, marl-emergence, swarm-intelligence | dmarz/collective-decision |
 | [son-2025-emergent](papers/son-2025-emergent.md) | Emergent functional dynamics of link-bots | 2025 | 4 | skim | swarm-robotics, active-matter | dmarz/swarm-robotics-recent |
 | [sosic-2017-inverse](papers/sosic-2017-inverse.md) | Inverse Reinforcement Learning in Swarm Systems | 2017 | 4 | abstract | marl-emergence, collective-motion | dmarz/marl-emergence |
@@ -1005,6 +1008,7 @@
 | [warren-2018-collective](papers/warren-2018-collective.md) | Collective Motion in Human Crowds | 2018 | 4 | abstract | crowds-and-traffic, collective-motion | dmarz/crowds-and-traffic |
 | [weckbecker-2026-thought](papers/weckbecker-2026-thought.md) | Thought Virus: Viral Misalignment via Subliminal Prompting in Multi-Agent Systems | 2026 | 4 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-merge-poisoning |
 | [wei-2025-amemguard](papers/wei-2025-amemguard.md) | A-MemGuard: A Proactive Defense Framework for LLM-Based Agent Memory | 2025 | 4 | skim | fork-merge-security, collective-decision | dmarz/fm-memory-injection |
+| [wellman-1993-market](papers/wellman-1993-market.md) | A Market-Oriented Programming Environment and its Application to Distributed Multicommodity Flow Problems | 1993 | 4 | skim | agent-budgets | dmarz/budget-c |
 | [weng-2026-group](papers/weng-2026-group.md) | Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing | 2026 | 4 | abstract | fork-merge-security, llm-agent-swarms | dmarz/fm-memory-injection |
 | [wensink-2012-meso](papers/wensink-2012-meso.md) | Meso-scale turbulence in living fluids | 2012 | 4 | abstract | active-matter, collective-motion | dmarz/active-matter |
 | [werfel-2014-designing](papers/werfel-2014-designing.md) | Designing Collective Behavior in a Termite-Inspired Robot Construction Team | 2014 | 4 | abstract | swarm-robotics, swarm-intelligence | dmarz/swarm-robotics |
