@@ -128,7 +128,7 @@
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/soc07-plan | done |  | 2026-10-03T22:35Z | SOC-07 plan saved on main; arithmetic and repository checks passed; no experiment launched. |
 | dmarz/factory-scan | done |  | 2026-10-03T22:30Z | scan for swarm-factory prior work (FLE, LLM oligopoly collusion, production economies) finished; 29 entries on lane/factory-scan |
-| vishesh/codex-methods | done | design-swarm-immune-response | 2026-10-03T22:27Z | Published full proposed immune-response experimental design at db8cc29 |
+| vishesh/codex-methods | working | organize-research-navigation | 2026-10-03T22:30Z | Connecting research focus areas, project briefs and formal hypothesis tags |
 | shadow/sol-p1 | done |  | 2026-10-03T22:06Z | finished paper batches |
 | dmarz/agentops | idle |  | 2026-10-03T22:05Z | experiment-worker template shipped and tested end to end on sim-test-01 (template-quorum on the hub) |
 | dmarz/hf-sweep | done |  | 2026-10-03T22:00Z | HF multi-agent dataset sweep (link + description entries, lane/hf-multiagent) |
