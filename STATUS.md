@@ -36,6 +36,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
+| [build-actual-experiment-suite](tasks/build-actual-experiment-suite.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-03T23:41Z | Implement and deploy developed exploratory experiment designs |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -143,6 +144,7 @@
 | dmarz/honeypot-vigilance | done |  | 2026-10-03T23:50Z | scan-honeypot-vigilance done; verdict in notes/honeypot-vigilance-hunches.md |
 | dmarz/discussion-dose | done | build-discussion-dose | 2026-10-03T23:40Z | Complete; deployment and artifact verification passed; server claim released; paid LLM runs deferred |
 | vishesh/codex-methods | done | contribution-new-badges | 2026-10-03T23:40Z | Published recent-question and project-tag badges in e3952fe |
+| vishesh/codex-experiments | working | build-actual-experiment-suite | 2026-10-03T23:39Z | Implement developed designs and bounded exploratory deployment; USD 50 total cap |
 | dmarz/avalon | idle |  | 2026-10-03T23:28Z | created Avalon swarm-scale research tasks |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/decision-suite-plan | done | design-distributed-evidence-suite | 2026-10-03T23:02Z | Completed the five-study distributed-evidence working plan; no implementation shipped. |
