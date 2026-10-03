@@ -6,20 +6,20 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 310 | 8 | 0 | 0 | 0 | 0 | 318 |
-| collective-decision | 186 | 8 | 0 | 6 | 0 | 0 | 200 |
-| swarm-robotics | 243 | 10 | 0 | 0 | 0 | 0 | 253 |
+| collective-motion | 312 | 8 | 0 | 0 | 0 | 0 | 320 |
+| collective-decision | 204 | 8 | 6 | 6 | 0 | 1 | 225 |
+| swarm-robotics | 270 | 13 | 0 | 0 | 0 | 0 | 283 |
 | swarm-intelligence | 107 | 1 | 0 | 0 | 0 | 0 | 108 |
 | active-matter | 184 | 3 | 0 | 0 | 0 | 0 | 187 |
-| sync-consensus | 165 | 5 | 0 | 0 | 0 | 0 | 170 |
-| criticality-measurement | 184 | 4 | 0 | 4 | 0 | 0 | 192 |
+| sync-consensus | 189 | 5 | 4 | 0 | 0 | 1 | 199 |
+| criticality-measurement | 185 | 4 | 0 | 4 | 0 | 0 | 193 |
 | marl-emergence | 121 | 12 | 0 | 0 | 0 | 0 | 133 |
-| llm-agent-swarms | 140 | 36 | 0 | 50 | 0 | 0 | 226 |
-| crowds-and-traffic | 75 | 2 | 0 | 0 | 0 | 0 | 77 |
-| meta | 53 | 8 | 0 | 13 | 0 | 0 | 74 |
-| sybil-resistance | 8 | 20 | 0 | 0 | 0 | 0 | 28 |
-| fork-merge-security | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| swarm-detection | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| llm-agent-swarms | 172 | 40 | 6 | 50 | 0 | 1 | 269 |
+| crowds-and-traffic | 76 | 2 | 0 | 0 | 0 | 0 | 78 |
+| meta | 68 | 8 | 1 | 13 | 0 | 2 | 92 |
+| sybil-resistance | 131 | 30 | 25 | 0 | 4 | 1 | 191 |
+| fork-merge-security | 6 | 0 | 3 | 0 | 0 | 2 | 11 |
+| swarm-detection | 0 | 0 | 2 | 0 | 0 | 0 | 2 |
 
 ## Tasks
 
@@ -103,6 +103,10 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
+| dmarz/sybil-foundations | done | scan-papers-sybil-foundations | 2026-10-03T18:21Z | Catalogued 21 foundational Sybil papers (6 read in full) plus notes on 4 existing entries; coverage note filled |
+| dmarz/sybil-llm-agents | done | scan-papers-sybil-llm-agents | 2026-10-03T18:21Z | catalogued 30 papers + 1 code entry on Sybil, collusion and identity in LLM agent collectives; notes on 5 existing entries |
+| dmarz/sybil-credentials | done | scan-papers-sybil-credentials | 2026-10-03T18:20Z | catalogued 30 entries on anonymous credentials, RLN, Privacy Pass/ARC and agent identity/payment as Sybil cost; 4 full reads; coverage note filled |
+| dmarz/sybil-flashbots-informal | done | scan-flashbots-sybil-informal | 2026-10-03T18:19Z | catalogued 19 Flashbots-adjacent informal sources on Sybil resistance (ethresear.ch, blogs, Devcon talk, code); coverage note filled |
 | dmarz/active-matter | done | scan-papers-active-matter | 2026-10-03T18:18Z | literature scan and audit complete |
 | dmarz/collective-decision | done | scan-papers-collective-decision | 2026-10-03T18:18Z | literature scan and audit complete |
 | dmarz/collective-motion-recent | done | scan-papers-collective-motion-recent | 2026-10-03T18:18Z | literature scan and audit complete |
@@ -126,6 +130,9 @@
 | dmarz/swarm-robotics-recent | done | scan-papers-swarm-robotics-recent | 2026-10-03T18:18Z | literature scan and audit complete |
 | dmarz/swarm-robotics | done | scan-papers-swarm-robotics | 2026-10-03T18:18Z | literature scan and audit complete |
 | dmarz/sync-consensus | done | scan-papers-sync-consensus | 2026-10-03T18:18Z | literature scan and audit complete |
+| dmarz/sybil-mechanisms | done | scan-papers-sybil-mechanisms | 2026-10-03T18:16Z | catalogued 25 sources on false-name-proof and Sybil-proof mechanism design (4 full reads) |
+| dmarz/sybil-robotics | done | scan-papers-sybil-robotics | 2026-10-03T18:16Z | Catalogued 30 papers and 3 repos on Sybil and Byzantine robots (4 full reads); notes appended to 3 entries |
+| dmarz/sybil-code-data | done | scan-code-data-sybil | 2026-10-03T18:15Z | catalogued 19 Sybil-resistance code repos and 4 datasets (ran SybilSCAR/SybilBelief, loaded Hop and cresci-2017) |
 | dmarz/fm-ai-control | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm-bft-aggregation | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm-biology | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
@@ -139,14 +146,7 @@
 | dmarz/fm-sutton | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm-unlinkability | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm | working |  | 2026-10-03T18:10Z | fork-merge-security lit review, workflow swarm launched by dmarz |
-| dmarz/sybil-code-data | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
-| dmarz/sybil-credentials | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
-| dmarz/sybil-flashbots-informal | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
 | dmarz/sybil-flashbots | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
-| dmarz/sybil-foundations | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
-| dmarz/sybil-llm-agents | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
-| dmarz/sybil-mechanisms | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
-| dmarz/sybil-robotics | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
 | dmarz/sybil | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
 
 ## Surveys (prior-art gate)
