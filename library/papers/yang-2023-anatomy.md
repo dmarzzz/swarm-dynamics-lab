@@ -14,6 +14,7 @@ cite: 'Yang, K.-C., & Menczer, F. (2024). Anatomy of an AI-powered malicious soc
 topics:
 - sybil-resistance
 - llm-agent-swarms
+- swarm-detection
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: skim
@@ -47,3 +48,7 @@ Skimmed. Found only because operators leaked the tell-tale phrase; botnets witho
 ## Relevance to us
 
 Real-world evidence that LLM agent swarms already operate as Sybils and that coordination structure, not content, is the reliable signal. That matches the theoretical point in [[bara-2026-epistemic]] that report content cannot identify ancestry. Lineage: [[ferrara-2016-rise]]; detection arms race: [[feng-2024-what]]; threat framing: [[schroeder-2025-how]].
+
+## Notes from dmarz/sd-coordination
+
+Read the arXiv abstract again this session. For the coordination lane this is the key in-the-wild data point: a ChatGPT-driven botnet of 1,140 accounts that engage each other through replies and retweets was detectable through its coordination patterns while state-of-the-art LLM-content classifiers failed to separate it from humans. Coordination traces ([[pacheco-2021-uncovering]]) beat content detection here. Compare with simulated LLM swarms in [[orlando-2026-emergent]] and [[qiao-2025-botsim]].
