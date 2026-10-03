@@ -3,7 +3,7 @@ id: scan-papers-swarm-robotics-recent
 type: task
 title: Catalogue swarm robotics papers from 2024 onward
 kind: scan
-status: claimed
+status: done
 priority: p0
 owner: dmarz/swarm-robotics-recent
 created: '2026-10-03'
@@ -12,7 +12,9 @@ depends_on: []
 topics:
 - swarm-robotics
 claimed_at: 2026-10-03T17:01Z
-updated: 2026-10-03T17:01Z
+updated: 2026-10-03T18:20Z
+outputs:
+- library/papers
 ---
 
 ## Goal
