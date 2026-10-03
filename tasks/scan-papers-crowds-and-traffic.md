@@ -3,14 +3,16 @@ id: scan-papers-crowds-and-traffic
 type: task
 title: 'Catalogue the papers: human crowds and traffic'
 kind: scan
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/crowds-and-traffic
 created: '2026-10-03'
 created_by: dmarz/setup
 depends_on: []
 topics:
 - crowds-and-traffic
+claimed_at: 2026-10-03T17:01Z
+updated: 2026-10-03T17:01Z
 ---
 
 ## Goal
