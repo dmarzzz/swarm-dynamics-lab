@@ -3,7 +3,7 @@ id: scan-papers-fm-biology
 type: task
 title: 'Catalogue the papers: fission-fusion and fusion parasitism in biology'
 kind: scan
-status: claimed
+status: done
 priority: p1
 owner: dmarz/fm-biology
 for: null
@@ -14,7 +14,9 @@ topics:
 - fork-merge-security
 - collective-decision
 claimed_at: 2026-10-03T18:12Z
-updated: 2026-10-03T18:12Z
+updated: 2026-10-03T18:19Z
+outputs:
+- library/papers
 ---
 
 ## Goal
