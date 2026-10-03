@@ -3,7 +3,7 @@ id: scan-papers-marl-emergence
 type: task
 title: 'Catalogue the papers: multi-agent rl and emergent coordination'
 kind: scan
-status: claimed
+status: done
 priority: p0
 owner: dmarz/marl-emergence
 created: '2026-10-03'
@@ -12,7 +12,9 @@ depends_on: []
 topics:
 - marl-emergence
 claimed_at: 2026-10-03T17:01Z
-updated: 2026-10-03T17:01Z
+updated: 2026-10-03T18:19Z
+outputs:
+- library/papers
 ---
 
 ## Goal
