@@ -2,7 +2,7 @@
 
 # Library index
 
-1546 entries.
+1548 entries.
 
 ## Papers (1206)
 
@@ -1317,7 +1317,7 @@
 | [quanta-2018-simple](blogs/quanta-2018-simple.md) | The Simple Algorithm That Ants Use to Build Bridges | 2018 | 2 | full | collective-decision, swarm-robotics, swarm-intelligence | shadow/sol-w3 |
 | [quanta-2018-swarming](blogs/quanta-2018-swarming.md) | Swarming Bacteria Create an 'Impossible' Superfluid | 2018 | 2 | full | active-matter, collective-motion | shadow/sol-w3 |
 
-## Threads (123)
+## Threads (125)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1368,6 +1368,7 @@
 | [x-anthropicai-2098097512544444447](threads/x-anthropicai-2098097512544444447.md) | AnthropicAI: announces its most detailed threat intelligence report, covering disrupted misuse of Claude for cyberattacks, influence operations, surveillance, biology and weapons | 2026 | 3 | full | swarm-detection | dmarz/x-threads |
 | [x-appledog-xyz-2106385525628395984](threads/x-appledog-xyz-2106385525628395984.md) | appledog_xyz: one operator running 30 to 60 near-identical Polymarket maker-rebate wallets with the same split-quote-merge script | 2026 | 3 | full | swarm-detection, sybil-resistance | shadow/sol-w4 |
 | [x-asymmetriccyber-2104692394213990729](threads/x-asymmetriccyber-2104692394213990729.md) | Asymmetric Security: 48-hour investigation of rogue OpenAI agent activity; CDC, IEA, Mayo Clinic probed; ntfy exfiltration and private urlquery accounts hide what was taken | 2026 | 3 | full | swarm-detection, llm-agent-swarms | shadow/sol-w1 |
+| [x-botnewsnetwork-2106437837784842514](threads/x-botnewsnetwork-2106437837784842514.md) | OpenAI departures and the Hugging Face incident audit-channel problem | 2026 | 3 | full | llm-agent-swarms, swarm-detection | shadow/sol-w6 |
 | [x-chiefofautism-2024483631067021348](threads/x-chiefofautism-2024483631067021348.md) | chiefofautism: 1,184 malicious skills on OpenClaw's ClawHub, the #1 skill was malware that stole keys and opened reverse shells | 2026 | 3 | full | swarm-detection, sybil-resistance, fork-merge-security | dmarz/x-threads |
 | [x-crsegerie-2105534432455340486](threads/x-crsegerie-2105534432455340486.md) | Segerie: summary of the Gleave vs Habryka debate on whether current safety techniques suffice after the Hugging Face incident | 2026 | 3 | full | llm-agent-swarms, meta | shadow/sol-1 |
 | [x-ddkang-1767225494422876668](threads/x-ddkang-1767225494422876668.md) | ddkang: InjecAgent benchmarks LLM agents against indirect prompt injection with 1,054 cases | 2024 | 3 | skim | fork-merge-security | dmarz/x-threads |
@@ -1379,6 +1380,7 @@
 | [x-globalaffairs-2093130747796148634](threads/x-globalaffairs-2093130747796148634.md) | GlobalAffairs: X Safety reports a ~200,000-account suspected Chinese bot farm, 200 of whose accounts pushed AI data-center electricity-price claims | 2026 | 3 | full | swarm-detection | dmarz/x-threads |
 | [x-guymoshetamam-2102732063208083834](threads/x-guymoshetamam-2102732063208083834.md) | Replace bot detection with delegated agent credentials | 2026 | 3 | full | swarm-detection, sybil-resistance | shadow/sol-w6 |
 | [x-hackerlogs-2104361759943667893](threads/x-hackerlogs-2104361759943667893.md) | hackerlogs: GET-only sandboxes still shipped Hugging Face 'LOOT', 80,000+ payloads reassembled by Swarmtraces | 2026 | 3 | full | llm-agent-swarms, swarm-detection | shadow/sol-1 |
+| [x-hazemomier-2106368312326463940](threads/x-hazemomier-2106368312326463940.md) | Confused-deputy risk in agent sandbox allowlists | 2026 | 3 | full | llm-agent-swarms, swarm-detection | shadow/sol-w6 |
 | [x-insecureagents-2104556743003193585](threads/x-insecureagents-2104556743003193585.md) | Insecure Agents podcast: 'From Pets to Cattle' panel on agent identity on the web (Keycard, Browserbase, Visa): Web Bot Auth, Trusted Agent Protocol, task-scoped permissions | 2026 | 3 | full | sybil-resistance, swarm-detection, llm-agent-swarms | shadow/sol-w1 |
 | [x-joinedgecity-2104956750374085113](threads/x-joinedgecity-2104956750374085113.md) | Edge City: Edge Agent Village V2, three weeks of hundreds of people and hundreds of personal agents at Edge City India (Goa, Oct 11 to Nov 1 2026) | 2026 | 3 | full | llm-agent-swarms, collective-decision | shadow/sol-1 |
 | [x-joshua-saxe-2099356748763041934](threads/x-joshua-saxe-2099356748763041934.md) | joshua_saxe: eleven-step scenario for an exponentially self-replicating AI agent botnet that steals inference and evades detection | 2026 | 3 | full | swarm-detection, fork-merge-security, llm-agent-swarms | dmarz/x-threads |
