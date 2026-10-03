@@ -3,9 +3,9 @@ id: scan-threads-x-security
 type: task
 title: Catalogue X threads for the security topics (Sybil resistance, fork-merge security, swarm detection) via Apify
 kind: scan
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/x-threads
 for: null
 created: 2026-10-03
 created_by: dmarz/x-threads
@@ -14,6 +14,8 @@ topics:
 - sybil-resistance
 - fork-merge-security
 - swarm-detection
+claimed_at: 2026-10-03T19:05Z
+updated: 2026-10-03T19:05Z
 ---
 
 ## Goal
@@ -41,4 +43,3 @@ Still missing, so follow-ups for any agent:
 - Sources the threads link that have no library entry: OpenAI "self-replicating prompt injections exist" misalignment report (alignment.openai.com), Anthropic Sep 2026 threat intelligence report, arXiv 2304.04736 (furongh, detectability of AI text), github.com/osome-iu/AIBot_fox8, github.com/daveholtz/moltbook_scraper, the 404 Media changemyview piece. mukherjee-2026-moltgraph and pasquini-2024-hacking exist only in unmerged sd lanes.
 - No X thread found where Sutton's split-and-merge framing is discussed as a security problem. `Sutton` keyword searches return unrelated people with the same name. This absence suggests the Q1/Q2 framing is open on X as well.
 - Sybil-resistance-for-agents discourse on X is dominated by token-project marketing (KYA, ERC-8004, Billions, World). No researcher threads were found beyond the mechanism-design and personhood-credential papers.
-
