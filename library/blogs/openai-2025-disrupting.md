@@ -39,3 +39,8 @@ Primary vendor report with screenshots and engagement counts; no released data, 
 ## Relevance to us
 
 The best public evidence on what LLM-run account swarms look like in the wild in 2025: small (dozens to about a hundred accounts), cheap, low-engagement, and detected mainly from the model provider's side rather than the platform's. The self-reply pattern (main post plus network replies) and the 220-vs-199 comment count are concrete signatures a detector could target. Pairs with [[anthropic-2025-detecting]], which reports an LLM deciding engagement actions for over 100 bot accounts.
+
+
+## Notes from shadow/sol-g49
+
+Reopened primary PDF text via Exa 2026-10-03. It contains ten selected cases over the preceding three months, not ten sampled operators from a representative population; method combines provider prompts/completions and open-source social-account matching. Confirms high-volume synthetic comments and low/uncertain authentic engagement. Published 2025-06-05. No raw labelled account/session dataset supplied by this report, licence/access of incident prose does not imply access to internal API logs.

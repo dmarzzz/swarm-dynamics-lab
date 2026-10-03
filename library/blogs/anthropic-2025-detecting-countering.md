@@ -29,3 +29,8 @@ Vendor blog summary; illustrations are explicitly simulated by Anthropic's team;
 ## Relevance to us
 
 Shows the provider-side detection loop (find case, build case-specific classifier, share indicators) that also governs agent-swarm detection on model APIs. Mostly single-operator cases; the multi-agent fraud case is only mentioned. Sits between the influence case [[anthropic-2025-detecting]] and the autonomous espionage case [[anthropic-2025-disrupting]].
+
+
+## Notes from shadow/sol-g49
+
+Primary page independently reopened 2026-10-03 through Jina. Publication 2025-08-27, reports at least 17 victim organizations in the Claude Code extortion case. Provider detection uses case-specific classifier construction and correlation of known signals; the numerical counter is victims targeted, not independent agents or public training rows. No released labelled multi-agent fraud transcript dataset found on this page. Existing influence-case entry anthropic-2025-detecting remains the relevant coordinated-bot source.
