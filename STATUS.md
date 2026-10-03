@@ -11,15 +11,15 @@
 | swarm-robotics | 280 | 13 | 2 | 7 | 1 | 24 | 327 |
 | swarm-intelligence | 108 | 1 | 2 | 4 | 0 | 3 | 118 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 16 | 210 |
-| sync-consensus | 242 | 13 | 11 | 17 | 0 | 20 | 303 |
-| criticality-measurement | 188 | 4 | 2 | 23 | 2 | 18 | 237 |
+| sync-consensus | 243 | 13 | 11 | 17 | 0 | 20 | 304 |
+| criticality-measurement | 190 | 4 | 2 | 23 | 2 | 18 | 239 |
 | marl-emergence | 132 | 13 | 1 | 33 | 1 | 9 | 189 |
-| llm-agent-swarms | 350 | 59 | 99 | 198 | 22 | 10 | 738 |
+| llm-agent-swarms | 358 | 59 | 99 | 198 | 22 | 10 | 746 |
 | crowds-and-traffic | 79 | 2 | 1 | 2 | 1 | 8 | 93 |
-| meta | 85 | 9 | 5 | 22 | 1 | 4 | 126 |
-| sybil-resistance | 245 | 48 | 62 | 59 | 7 | 19 | 440 |
-| fork-merge-security | 322 | 44 | 61 | 69 | 1 | 9 | 506 |
-| swarm-detection | 363 | 35 | 79 | 194 | 26 | 6 | 703 |
+| meta | 87 | 9 | 5 | 22 | 1 | 4 | 128 |
+| sybil-resistance | 247 | 48 | 62 | 59 | 7 | 19 | 442 |
+| fork-merge-security | 327 | 44 | 61 | 69 | 1 | 9 | 511 |
+| swarm-detection | 365 | 35 | 79 | 194 | 26 | 6 | 705 |
 
 ## Tasks
 
@@ -99,6 +99,7 @@
 | [scan-threads-x-security](tasks/scan-threads-x-security.md) | done | p1 | scan | dmarz/x-threads |  | 2026-10-03T19:05Z | Catalogue X threads for the security topics (Sybil resistance, fork-merge security, swarm detection) via Apify |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
 | [synthesis-people-and-labs](tasks/synthesis-people-and-labs.md) | done | p1 | synthesis | shadow/sol-g50 |  | 2026-10-03T20:15Z | Map the people and labs |
+| [synthesis-pre-experiment-research](tasks/synthesis-pre-experiment-research.md) | done | p1 | synthesis | dmarz/preflight |  | 2026-10-03T20:24Z | Research prerequisites for selecting swarm experiments |
 
 ## Candidate batches
 
@@ -139,6 +140,7 @@
 | dmarz/sd-web-agents | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
 | dmarz/sd | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
 | shadow/sol-w5 | idle |  | 2026-10-03T20:20Z | worked batches |
+| dmarz/preflight | done | synthesis-pre-experiment-research | 2026-10-03T20:17Z | Completed pre-experiment synthesis and eight source records; verified metadata and scope, preparing merge |
 | shadow/sol-aud | working |  | 2026-10-03T20:14Z | Discover and fully transcribe collective-behaviour and agent-control podcasts |
 | shadow/sol-w6 | idle |  | 2026-10-03T20:05Z | writer lane finished (batch |
 | shadow/sol-w1 | idle |  | 2026-10-03T20:00Z | stopped on requester instruction; completed batches 33, 34, 31, 32 and 52 with 17 talks and 7 papers, all remaining items explicitly skipped |
