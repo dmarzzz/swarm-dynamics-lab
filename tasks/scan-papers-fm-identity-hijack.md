@@ -3,7 +3,7 @@ id: scan-papers-fm-identity-hijack
 type: task
 title: 'Catalogue the papers: identity and goal hijack of agents'
 kind: scan
-status: done
+status: claimed
 priority: p0
 owner: dmarz/fm-identity-hijack
 for: null
@@ -14,9 +14,7 @@ topics:
 - fork-merge-security
 - llm-agent-swarms
 claimed_at: 2026-10-03T18:12Z
-updated: 2026-10-03T18:19Z
-outputs:
-- library/papers
+updated: 2026-10-03T18:12Z
 ---
 
 ## Goal

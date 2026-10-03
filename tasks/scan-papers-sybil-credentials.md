@@ -3,7 +3,7 @@ id: scan-papers-sybil-credentials
 type: task
 title: 'Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents'
 kind: scan
-status: done
+status: claimed
 priority: p1
 owner: dmarz/sybil-credentials
 for: null
@@ -14,9 +14,7 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 claimed_at: 2026-10-03T18:02Z
-updated: 2026-10-03T18:20Z
-outputs:
-- library/papers
+updated: 2026-10-03T18:02Z
 ---
 
 ## Goal

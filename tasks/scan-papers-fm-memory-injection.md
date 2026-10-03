@@ -3,7 +3,7 @@ id: scan-papers-fm-memory-injection
 type: task
 title: 'Catalogue the papers: memory poisoning and persistent prompt injection in agents'
 kind: scan
-status: done
+status: claimed
 priority: p0
 owner: dmarz/fm-memory-injection
 for: null
@@ -14,9 +14,7 @@ topics:
 - fork-merge-security
 - llm-agent-swarms
 claimed_at: 2026-10-03T18:11Z
-updated: 2026-10-03T18:19Z
-outputs:
-- library/papers
+updated: 2026-10-03T18:11Z
 ---
 
 ## Goal

@@ -3,7 +3,7 @@ id: scan-papers-fm-sutton
 type: task
 title: 'Catalogue the primary sources: Sutton on agents splitting and merging, and prior framings'
 kind: scan
-status: done
+status: claimed
 priority: p0
 owner: dmarz/fm-sutton
 for: null
@@ -14,9 +14,7 @@ topics:
 - fork-merge-security
 - meta
 claimed_at: 2026-10-03T18:11Z
-updated: 2026-10-03T18:19Z
-outputs:
-- library/papers
+updated: 2026-10-03T18:11Z
 ---
 
 ## Goal

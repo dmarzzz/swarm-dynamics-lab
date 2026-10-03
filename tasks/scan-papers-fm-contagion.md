@@ -3,7 +3,7 @@ id: scan-papers-fm-contagion
 type: task
 title: 'Catalogue the papers: corruption spreading through multi-agent LLM systems'
 kind: scan
-status: done
+status: claimed
 priority: p0
 owner: dmarz/fm-contagion
 for: null
@@ -14,9 +14,7 @@ topics:
 - fork-merge-security
 - llm-agent-swarms
 claimed_at: 2026-10-03T18:12Z
-updated: 2026-10-03T18:19Z
-outputs:
-- library/papers
+updated: 2026-10-03T18:12Z
 ---
 
 ## Goal

@@ -3,7 +3,7 @@ id: scan-papers-fm-bft-aggregation
 type: task
 title: 'Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity)'
 kind: scan
-status: done
+status: claimed
 priority: p0
 owner: dmarz/fm-bft-aggregation
 for: null
@@ -14,9 +14,7 @@ topics:
 - fork-merge-security
 - sync-consensus
 claimed_at: 2026-10-03T18:12Z
-updated: 2026-10-03T18:18Z
-outputs:
-- library/papers
+updated: 2026-10-03T18:12Z
 ---
 
 ## Goal

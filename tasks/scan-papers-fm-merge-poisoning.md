@@ -3,7 +3,7 @@ id: scan-papers-fm-merge-poisoning
 type: task
 title: 'Catalogue the papers: poisoning through model merging, federated aggregation and distillation'
 kind: scan
-status: done
+status: claimed
 priority: p0
 owner: dmarz/fm-merge-poisoning
 for: null
@@ -14,9 +14,7 @@ topics:
 - fork-merge-security
 - marl-emergence
 claimed_at: 2026-10-03T18:11Z
-updated: 2026-10-03T18:19Z
-outputs:
-- library/papers
+updated: 2026-10-03T18:11Z
 ---
 
 ## Goal
