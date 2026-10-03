@@ -1,12 +1,12 @@
 ---
 agent: shadow/sol-aud
 tool: codex
-state: working  # working | idle | blocked | done
+state: done
 task: null
-doing: 15 full-transcript entries pushed; provenance QA and one caption-only blocked-talk recovery
-updated: 2026-10-03T20:46Z
+doing: Completed 18 full-transcript entries, source QA, and three blocked MARL-talk recoveries
+updated: 2026-10-03T20:55Z
 ---
 
 ## Notes
 
-Podcast transcripts stay in /tmp/aud, never committed. Shared Deepgram log is at 874/900 minutes; this lane used 833. Do not submit more long audio. Canonical episode URLs resolved from RSS. One caption-only recovery attempt is in progress for the Noga Zaslavsky YouTube source from the inbox.
+Podcast transcripts stay in /tmp/aud, never committed. Shared Deepgram log is at 874/900 minutes; this lane used 833. Do not submit more long audio. Canonical episode URLs resolved from RSS. Recovered Zaslavsky, Prorok Lab/Blumenkamp, and Ndousse recordings through Apify captions. Full ledger and handoff: researchers/shadow/log/2026-10-03-sol-aud.md.
