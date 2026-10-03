@@ -44,3 +44,11 @@ Abstract only on my side. Single untrusted agent; no model of multiple forks or 
 - Q2 (thresholds): the right formal home for a merge protocol is this kind of game, with the parent as protocol designer and the attacker choosing which children to corrupt; extending it to n children and a k-threshold merge looks like an open modelling step (inferred, not checked against later work).
 - Q1 (hiding): partial observability of the attacker is explicitly part of the model, so "hide which child returns" can be expressed as restricting the attacker's observation.
 Related: [[gardner-challis-2026-when]] (same group, statistical safety case), [[mallen-2024-subversion]].
+
+## Notes from shadow/sol-w3
+
+Opened the author blog summary https://www.alignmentforum.org/posts/Yu8jADLfptjPsR58E/games-for-ai-control-1 on 2026-10-03 (skim). This author summary formalizes AI control as games between a declared deployment protocol and an adversarial best response. It combines usefulness under benign behavior with worst-case safety, explores small improvements to audit thresholds, and analyzes when randomized protocols and equilibrium solvers can help characterize tradeoffs.
+
+Primary explanation of a workshop paper and updated arXiv:2409.07985 preprint. Mathematical model and simulation discussion, not fresh measured deployment safety. Skimmed the full narrative but did not verify theorems, equations omitted by text extraction, or figure values. The update credits Louis Thomson.
+
+Provides a formal language for safety-usefulness tradeoffs when deciding whether to accept, audit, or discard returned sub-agent work. It does not itself establish a safe memory-merging protocol. Relates to [[buck-2023-ai]] and [[bhatt-2025-ctrl]].
