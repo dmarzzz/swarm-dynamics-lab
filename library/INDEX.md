@@ -2,9 +2,9 @@
 
 # Library index
 
-2423 entries.
+2425 entries.
 
-## Papers (1545)
+## Papers (1547)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -758,6 +758,7 @@
 | [raulin-foissac-2026-physics](papers/raulin-foissac-2026-physics.md) | Physics of anticipatory active matter, with application to crowd dynamics | 2026 | 4 | abstract | crowds-and-traffic, active-matter | dmarz/crowds-and-traffic |
 | [raveendra-2026-syncsbc](papers/raveendra-2026-syncsbc.md) | SyncSBC: Decentralized Swarm Behavior Prediction for Synchronized Autonomous Control | 2026 | 4 | abstract | swarm-robotics, collective-decision, sync-consensus, criticality-measurement | dmarz/swarm-robotics-recent |
 | [redner-2013-structure](papers/redner-2013-structure.md) | Structure and Dynamics of a Phase-Separating Active Colloidal Fluid | 2013 | 4 | abstract | active-matter | dmarz/active-matter |
+| [reiche-2024-integrating](papers/reiche-2024-integrating.md) | Integrating higher-order relations for enhanced twitter bot detection | 2024 | 4 | abstract | swarm-detection | shadow/sol-w1 |
 | [reina-2015-design](papers/reina-2015-design.md) | A Design Pattern for Decentralised Decision Making | 2015 | 4 | abstract | collective-decision, swarm-robotics, swarm-intelligence | dmarz/collective-decision |
 | [reina-2024-speed](papers/reina-2024-speed.md) | Speed-accuracy trade-offs in best-of-n collective decision making through heterogeneous mean-field modeling | 2024 | 4 | abstract | collective-decision, swarm-robotics, sync-consensus | dmarz/collective-decision |
 | [ren-2005-consensus](papers/ren-2005-consensus.md) | Consensus seeking in multiagent systems under dynamically changing interaction topologies | 2005 | 4 | abstract | sync-consensus | dmarz/sync-consensus |
@@ -1021,6 +1022,7 @@
 | [chen-2025-online](papers/chen-2025-online.md) | Online Planning for Multi-UAV Pursuit-Evasion in Unknown Environments Using Deep Reinforcement Learning | 2025 | 3 | abstract | swarm-robotics, marl-emergence | dmarz/swarm-robotics-recent |
 | [chen-2026-five](papers/chen-2026-five.md) | The Five Ws of Multi-Agent Communication: Who Talks to Whom, When, What, and Why -- A Survey from MARL to Emergent Language and LLMs | 2026 | 3 | abstract | marl-emergence, llm-agent-swarms | dmarz/marl-emergence |
 | [chen-2026-token](papers/chen-2026-token.md) | Token Counts Are Not Model Lineage: A Frozen-Threshold Holdout Study of Black-Box LLM API Fingerprinting | 2026 | 3 | abstract | swarm-detection | dmarz/sd-attribution |
+| [cheng-2025-beyond](papers/cheng-2025-beyond.md) | Beyond Binary: Towards Fine-Grained LLM-Generated Text Detection via Role Recognition and Involvement Measurement | 2025 | 3 | skim | swarm-detection | shadow/sol-w1 |
 | [cho-2020-toward](papers/cho-2020-toward.md) | Toward Proactive, Adaptive Defense: A Survey on Moving Target Defense | 2020 | 3 | skim | fork-merge-security | dmarz/fm-unlinkability |
 | [cho-2025-herd](papers/cho-2025-herd.md) | Herd Behavior: Investigating Peer Influence in LLM-based Multi-Agent Systems | 2025 | 3 | abstract | llm-agent-swarms, collective-decision | dmarz/llm-agent-swarms |
 | [choi-2025-empirical](papers/choi-2025-empirical.md) | An Empirical Study of Group Conformity in Multi-Agent Systems | 2025 | 3 | abstract | llm-agent-swarms, collective-decision | shadow/sol-1 |
