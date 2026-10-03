@@ -72,3 +72,5 @@ Expanded all sixteen briefs; added the external-influence animation and revised 
 - [Hackathon task scenarios](hackathon-scenarios/README.md): one to three ranked tasks for every atlas candidate and related proposal, nineteen bounded task kits, scoring contracts and a three-scenario LLM shortlist.
 
 - [Experimental question expansion](experimental-expansion/README.md): 24 EX comparisons, count reconciliation and the dashboard contribution-bank contract.
+
+- [Skeptical research context and review](skeptical-review/README.md): three reusable context notes, forty specific critiques across all sixteen briefs, primary-source boundaries and decisions to narrow, merge or revise.

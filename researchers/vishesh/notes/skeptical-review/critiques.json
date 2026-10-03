@@ -1,0 +1,854 @@
+{
+  "schema": "swarm-skeptical-review-v1",
+  "reviewer": "vishesh/codex-methods",
+  "snapshot": "7b620a1d9183e8b4baeba151c54a64243cd155a9",
+  "created_at": "2026-10-03T23:44:58.511167+00:00",
+  "status": "editorial review; not a formal gate verdict",
+  "records": [
+    {
+      "id": "SOC-01",
+      "title": "Separate information diversity from model diversity",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "retain-narrow",
+      "strength": "The design already matches the fact union and separates model family from evidence access.",
+      "concern": "Capability matching on a calibration average can leave large difficulty-specific differences; a mixed team can win because its strongest member solves one rare stratum.",
+      "revision": "Report member-alone outcomes on the same held-out strata and compare team improvement over the best prespecified member, without selecting that member on test results.",
+      "decision_rule": "Retain a diversity mechanism claim only if a residual benefit survives this comparison; otherwise report capability allocation.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "briefs": [
+        "diversity",
+        "collective-sensing"
+      ],
+      "target_sha256": "cf62a1f5826628057416351dd8614fc47fce398bc2474b9a6abfa5655dc03302"
+    },
+    {
+      "id": "SOC-04",
+      "title": "Ablate why semantic routing works",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "revise",
+      "strength": "Router calls and degree-matched random delivery are already budgeted.",
+      "concern": "A need-matching router can receive a cleaner task representation than the workers, making routing an extra solver.",
+      "revision": "Freeze and publish the router observation contract; compare a simple indexed lookup given the same representation and measure required-fact delivery separately from integration.",
+      "decision_rule": "If lookup matches utility and cost, reuse lookup and drop the semantic-router complexity.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E3"
+      ],
+      "briefs": [
+        "collective-sensing",
+        "coordination"
+      ],
+      "target_sha256": "852d1085f17936c108a661c8f423d6636be3de7cf44fc43bbef526755ac329af"
+    },
+    {
+      "id": "SOC-08",
+      "title": "Stop on evidence sufficiency instead of verbal agreement",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "retain-narrow",
+      "strength": "The public checklist schema is available to every arm.",
+      "concern": "Complete fields need not be sufficient for a correct inference; duplicate, stale or incompatible values can satisfy a syntactic checklist.",
+      "revision": "Add complete-but-inconsistent and incomplete-but-decision-sufficient worlds; score useful justified abstention separately from checklist completion.",
+      "decision_rule": "Reject the stopping rule if lower apparent error is purchased by routinely refusing solvable tasks.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E3",
+        "E10"
+      ],
+      "briefs": [
+        "quorum",
+        "collective-sensing"
+      ],
+      "target_sha256": "3fa612d91a8ebf3585b5a9cd9cdc5137b0812f31c59245ee868371c68694a75b"
+    },
+    {
+      "id": "SOC-09",
+      "title": "Evidence-seeking critics versus generic opposition",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "revise",
+      "strength": "The candidate includes an equally funded independent solver baseline.",
+      "concern": "An evidence-seeking critic can win because it gets a second observation, rather than because opposition helps.",
+      "revision": "Cross new evidence access with reviewer role; give an ordinary verifier the same retrieval opportunities and compare correct-to-wrong as well as wrong-to-correct changes.",
+      "decision_rule": "If role wording adds no value after access matching, describe the result as verification, not beneficial dissent.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E1",
+        "E3"
+      ],
+      "briefs": [
+        "dissent",
+        "discovery"
+      ],
+      "target_sha256": "98893307fe8548a8a73f557612d1fdeb6b3db48fb9945f5db62b29b094154827"
+    },
+    {
+      "id": "SOC-10",
+      "title": "Test dissent quality rather than dissent quantity",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "retain-narrow",
+      "strength": "Correctness, confidence and inspectable observations are crossed explicitly.",
+      "concern": "A scripted correct critic with an unusually transparent witness tests recipient response under favorable evidence, not whether a swarm produces good critics.",
+      "revision": "Keep the scripted study, then separately qualify evidence generation with noisy critics; counterbalance whether correct and wrong reports are easier to check.",
+      "decision_rule": "Do not generalize to autonomous dissent until critic generation earns its cost on held-out tasks.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E1",
+        "E2"
+      ],
+      "briefs": [
+        "dissent",
+        "whistleblowing"
+      ],
+      "target_sha256": "9fee5c512848d05c32e2611e5f182b439224c2016c8b471123d2df2abcaddfc5"
+    },
+    {
+      "id": "SOC-18",
+      "title": "Rotate coordination without losing continuity",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "revise",
+      "strength": "Outages, ledger capacity and surviving worker count are controlled.",
+      "concern": "Rotation can primarily improve externalization discipline; replacing a leader without the same handoff format is a weak baseline.",
+      "revision": "Give the fixed leader the identical periodic handoff requirement and ledger; compare outage recovery and clean-task overhead.",
+      "decision_rule": "If ledger discipline explains the gain, recommend it without rotation.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E3"
+      ],
+      "briefs": [
+        "leadership",
+        "coordination"
+      ],
+      "target_sha256": "305ea7d0982ce0845007d80a9cee7b75c6db40aff53acf5fde6a65d51e17b626"
+    },
+    {
+      "id": "SOC-21",
+      "title": "Compress memory by information value",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "revise",
+      "strength": "Retention policies share capacity and pay selection costs.",
+      "concern": "Information value depends on the future task distribution; a curated rare-fact fixture can make the favored selector look prescient.",
+      "revision": "Freeze a mixture of recurring, rare-useful and rare-useless facts on development worlds; shift their frequencies and score calibration of retention value.",
+      "decision_rule": "If value estimation loses to recency after cost or shift, restrict it to the calibrated workload.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E3"
+      ],
+      "briefs": [
+        "memory"
+      ],
+      "target_sha256": "3b3efd416d0300f54da4a162f9d9996735642ee89e19abe805cd9c00375ffe9b"
+    },
+    {
+      "id": "SOC-23",
+      "title": "Recover function after genuine knowledge loss",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "retain-narrow",
+      "strength": "Unavailable evidence and hidden backups are explicitly distinguished.",
+      "concern": "A failure to recover destroyed information is an identifiability limit, not necessarily a poor repair policy.",
+      "revision": "Label recoverable, inferable and nonidentifiable losses separately; require the latter to produce calibrated uncertainty rather than a fabricated restoration.",
+      "decision_rule": "Do not score honest uncertainty as failed regeneration when the answer is unavailable to every allowed method.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E4",
+        "E9"
+      ],
+      "briefs": [
+        "regrowth",
+        "memory"
+      ],
+      "target_sha256": "b6de0f63e8f748e5ca1ab28f0c3e5351aa2b52e2c3f9ad6126ed081d3994815e"
+    },
+    {
+      "id": "SOC-24",
+      "title": "What survives complete population turnover?",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "reframe",
+      "strength": "Arbitrary conventions are counterbalanced and worlds outlive their founding agents.",
+      "concern": "A preserved string in a shared prompt can satisfy persistence without demonstrating adaptive cultural transmission.",
+      "revision": "Separate literal copying from transfer of a useful procedure; perturb wording and task instances while preserving the functional rule.",
+      "decision_rule": "Call literal persistence a memory baseline; retain a functional-transmission claim only if behavior transfers.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E3"
+      ],
+      "briefs": [
+        "culture",
+        "memory"
+      ],
+      "target_sha256": "694afe6fd1949f41fc8899f51d6973ff53b36de40fe405e4714aec24eb3b01e2"
+    },
+    {
+      "id": "SOC-25",
+      "title": "Retire an obsolete convention after the task changes",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "retain-narrow",
+      "strength": "Unchanged worlds measure the cost of needless revision.",
+      "concern": "The fixed change time can become a schedule cue, and an outcome review can receive effectively explicit instructions.",
+      "revision": "Hide and randomize change time within a declared range; include noisy outcomes without a regime change and record evidence used to abandon the rule.",
+      "decision_rule": "Drop adaptation claims if behavior follows the clock or a telltale feedback phrase.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E10"
+      ],
+      "briefs": [
+        "culture",
+        "institutions"
+      ],
+      "target_sha256": "886ca2931e0a04b44e04682a8b336f911c658c632521d2e92721b40b00c6b1c1"
+    },
+    {
+      "id": "SOC-27",
+      "title": "Credit verified contributions instead of message volume",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "reframe",
+      "strength": "Maintenance work and independent artifact utility are included.",
+      "concern": "LLM responses to a reward description do not by themselves establish incentive compatibility or spontaneous cooperation.",
+      "revision": "Distinguish prompted role compliance from a policy trained or selected by actual rewards; include unverifiable and maintenance contributions in a frozen utility ledger.",
+      "decision_rule": "Use bounded behavioral language; abandon a welfare claim if credited output rises while total utility falls.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E10"
+      ],
+      "briefs": [
+        "commons",
+        "institutions"
+      ],
+      "target_sha256": "6d1246b154cc51d8883b6a238af9052d4a3b1e2bd5fb1b147ae299425e6cc024"
+    },
+    {
+      "id": "SOC-29",
+      "title": "Make a report lead to a verifiable response",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "revise",
+      "strength": "Noticing, reporting, review and correction are separate stages.",
+      "concern": "A dedicated responder increases guaranteed service; the apparent institution effect may be queue priority rather than report structure.",
+      "revision": "Compare structured and unstructured reports with the same queue service, deadline and reviewer budget; include noisy high-volume reporting.",
+      "decision_rule": "If reliable service alone explains the gain, implement the queue rather than a larger governance mechanism.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E3"
+      ],
+      "briefs": [
+        "whistleblowing",
+        "institutions",
+        "dissent"
+      ],
+      "target_sha256": "70cd3bb6d5822bb4cdd427c21faa1075d0762affae4b90418c6d5af9001ae686"
+    },
+    {
+      "id": "SOC-30",
+      "title": "Appeal false rejections without overwhelming review",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "retain-narrow",
+      "strength": "The equally funded second review is a strong baseline.",
+      "concern": "Appeal selection can concentrate on easy-to-overturn cases, while an honest silent contributor has no comparable access.",
+      "revision": "Keep episode-level assignment and report outcomes for all first-pass rejections; add a randomly assigned automatic second-review condition with the same service budget.",
+      "decision_rule": "Reject the appeal mechanism if it only redistributes reviewer access or preferentially rehabilitates invalid work.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E10"
+      ],
+      "briefs": [
+        "institutions",
+        "dissent"
+      ],
+      "target_sha256": "b1257c2ea0ab8b502c46d75df3dd3ffbeebfe41755773cc45c8a5384df3c4276"
+    },
+    {
+      "id": "SOC-31",
+      "title": "Find where uncertainty disappears in retelling",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "revise",
+      "strength": "The design scores atomic claims and counts chains as units.",
+      "concern": "A short structured schema may preserve a few fields by deleting scope qualifiers that determine whether a claim applies.",
+      "revision": "Freeze indispensable qualifiers and source-conditioned truth before formatting; score coverage and fidelity jointly with equal token budgets.",
+      "decision_rule": "A low error rate obtained by omitting difficult claims is not successful transmission.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E3"
+      ],
+      "briefs": [
+        "telephone",
+        "memory"
+      ],
+      "target_sha256": "d380e3526d0868597f441b461c6c592bae26caa9782cf578f9bdece3749d3dee"
+    },
+    {
+      "id": "SOC-32",
+      "title": "Stress-test a casefile when logs are missing",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "retain-narrow",
+      "strength": "The candidate already distinguishes missing records from hidden intentions.",
+      "concern": "Evaluator-complete logs still do not identify every cause: two mechanisms can generate the same visible trace.",
+      "revision": "Construct observationally equivalent traces with different hidden causes; reward an explicit set of compatible explanations and penalize confident identification.",
+      "decision_rule": "Keep the casefile if it improves supported decisions; drop claims of causal reconstruction from logs alone.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E5",
+        "E10"
+      ],
+      "briefs": [
+        "casefile",
+        "telephone"
+      ],
+      "target_sha256": "b418d4603ace2d875e9039fe9dd27f4d541bd7e33ef4781a604fba63f595a0d1"
+    },
+    {
+      "id": "SOC-38",
+      "title": "Select complementary teams on a separate task set",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "revise",
+      "strength": "Selection cost, task-family holdout and overlapping-team dependence are already addressed.",
+      "concern": "The number of searched team subsets can create a calibration winner even without useful complementarity.",
+      "revision": "Freeze the search budget; compare equally searched accuracy-only and complementarity selectors and retain an untouched final set of task families.",
+      "decision_rule": "If the gain vanishes with equal search or cost amortization, keep the default team.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E2"
+      ],
+      "briefs": [
+        "diversity",
+        "collective-sensing"
+      ],
+      "target_sha256": "d0af225ee743193e6df1ba207428fa2e082b3725b162ce467a7073e2032bae7d"
+    },
+    {
+      "id": "SEC-03",
+      "title": "Count evidence domains rather than returning copies",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "retain-narrow",
+      "strength": "Unknown ancestry and source-oracle ceilings are explicit.",
+      "concern": "Observed source grouping can merge independent correct observations or split copies; either error can reverse the intended weighting.",
+      "revision": "Cross false merges and false splits independently of marginal source quality, including an honest singleton with decisive evidence.",
+      "decision_rule": "Do not call source concentration independent sample size unless it predicts held-out error under those perturbations.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E2",
+        "E11"
+      ],
+      "briefs": [
+        "quorum",
+        "collective-sensing"
+      ],
+      "target_sha256": "f55c994855ab6ceecbdfb9465970a774095636a3e00e484df8b3d1ee9b921f59"
+    },
+    {
+      "id": "SEC-06",
+      "title": "Repair when the dependency graph is wrong",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "revise",
+      "strength": "The design already compares incomplete graphs, reset and append-only correction.",
+      "concern": "Random edge deletion may be much easier than systematic missing lineage at the particular path needed for a sensitive action.",
+      "revision": "Add clustered omissions at summaries and action boundaries, and faithful existing strict/fail-closed baselines; price revalidation and false blocking.",
+      "decision_rule": "Limit the claim to the tested missingness mechanism if selective repair fails on concentrated omissions.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E4",
+        "E7",
+        "E8"
+      ],
+      "briefs": [
+        "memory",
+        "regrowth",
+        "casefile"
+      ],
+      "target_sha256": "d52205f43d30770c331ae6ddef61276793baf8474f09cfd36b58978c2e562c9f"
+    },
+    {
+      "id": "SEC-07",
+      "title": "Stale children can undo a correction",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "retain-narrow",
+      "strength": "Useful unaffected late reports protect against reject-all being an unfair straw baseline.",
+      "concern": "Epoch checks protect a record only while its semantic content remains associated with the old epoch; a rewritten retry may look current.",
+      "revision": "Add rephrased and freshly reissued stale claims, plus genuinely valid reversals; preserve observable metadata rather than evaluator ancestry.",
+      "decision_rule": "If protection covers only verbatim stale records, report version filtering, not general recurrence prevention.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E7",
+        "E8"
+      ],
+      "briefs": [
+        "memory",
+        "regrowth",
+        "culture"
+      ],
+      "target_sha256": "2871ffa6797e4f16b2ef0b5ec30c198c41e3c603123e783b4bc7d0a95e8bd8cc"
+    },
+    {
+      "id": "SEC-48",
+      "title": "When can an isolated child safely return?",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "revise",
+      "strength": "Held-out checks, false quarantine and review costs are acknowledged.",
+      "concern": "Passing a finite release test cannot establish trust in a still-adversarial controller; the observation window may be too short for relapse.",
+      "revision": "Separate affected honest instances, replaced instances and continuously adversarial instances; fix horizon and censoring and evaluate restricted capabilities directly.",
+      "decision_rule": "Claim bounded risk reduction only; do not label a passed check proof of alignment.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E4",
+        "E8"
+      ],
+      "briefs": [
+        "regrowth",
+        "institutions"
+      ],
+      "target_sha256": "e53628ab9171e8e03d676048c44ccb904b3533a0e91f4967f278d7c42d1b8089"
+    },
+    {
+      "id": "SEC-50",
+      "title": "A detector that isolates nodes changes the evidence",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "retain-narrow",
+      "strength": "The plan randomizes whole communities and includes random isolation.",
+      "concern": "A utility-aware policy may be given better knowledge of which node owns unique evidence than the static detector.",
+      "revision": "Equalize policy-visible expertise metadata; randomize expertise assignment independently of suspicious appearance and charge reacquisition.",
+      "decision_rule": "If oracle expertise access explains the ranking, reject the deployable utility-aware advantage.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E5",
+        "E6"
+      ],
+      "briefs": [
+        "whistleblowing",
+        "discovery",
+        "diversity"
+      ],
+      "target_sha256": "6c8da83e934042cc1987bcfa90aca8ef3da3ba301136d607b34e081a5306a4fd"
+    },
+    {
+      "id": "BUD-17",
+      "title": "Keep enough budget to finish and verify",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "retain-narrow",
+      "strength": "The reserve is deducted from production and low-value validation tasks are included.",
+      "concern": "A favorable fixed reserve can encode advance knowledge of the task length or final verification cost.",
+      "revision": "Shift the distribution of completion costs after tuning; compare a simple deadline rule and show completed utility across the full resource frontier.",
+      "decision_rule": "Use a reserve only where it beats simple scheduling under plausible cost uncertainty.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E10"
+      ],
+      "briefs": [
+        "commons",
+        "coordination",
+        "discovery"
+      ],
+      "target_sha256": "a07b77195676b3e1318d3a43f3652a0fc3ccbeccf432189406609f6de068b98c"
+    },
+    {
+      "id": "SIM-03",
+      "title": "Can the benchmark be solved without observing peers?",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "retain-narrow",
+      "strength": "Blind policies are qualified from the start instead of only masking a trained policy.",
+      "concern": "Failure of one weak blind policy is not evidence that peer observation is necessary; target leakage may remain in timing or labels.",
+      "revision": "Use several competent open-loop and metadata-only policies and adversarially permute schedules and labels before full agent runs.",
+      "decision_rule": "A blind shortcut falsifies the intended benchmark claim; failure to find one is a qualified audit result, not a proof.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E10"
+      ],
+      "briefs": [
+        "coordination",
+        "casefile"
+      ],
+      "target_sha256": "2a9c6ddccc116a2cfaafbd34faa1588425cf46e4ca50db99d3f673568efac736"
+    },
+    {
+      "id": "PHY-37",
+      "title": "Neural cellular repair beyond familiar lesion shapes",
+      "kind": "atlas",
+      "target_path": "researchers/dmarz/notes/question-atlas/candidates.json",
+      "disposition": "defer",
+      "strength": "Weights are frozen, sham damage is included and puzzles are the independent units.",
+      "concern": "A chosen reasoning front can be a larger information lesion despite matched area or norm; pretrained checkpoint access and lesion provenance remain practical dependencies.",
+      "revision": "Define the front without seeing recovery; compare matched channel/location lesions and new puzzle families, scoring valid solutions rather than attractive regrowth.",
+      "decision_rule": "Defer if checkpoint and lesion controls cannot be audited in time; otherwise call it a bounded robustness comparison.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E9"
+      ],
+      "briefs": [
+        "nca-observatory"
+      ],
+      "target_sha256": "7fb35d5a79f2bdc626aafefe77b4f67460fce67e8395c68f4fd061753603156b"
+    },
+    {
+      "id": "VX-01",
+      "title": "Root identity at the observation level",
+      "kind": "extension",
+      "target_path": "researchers/vishesh/notes/atlas-review/extensions.json",
+      "disposition": "merge",
+      "strength": "It separates site identity from observation ancestry.",
+      "concern": "The distinction is already central to SEC-03; a separate headline risks counting the same experiment twice.",
+      "revision": "Make granularity and false grouping the SEC-03 ablation; retain this ID as a traceable implementation question.",
+      "decision_rule": "Keep a separate study only if it adds a distinct outcome or acquisition intervention.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E2",
+        "E11"
+      ],
+      "briefs": [
+        "collective-sensing",
+        "quorum",
+        "diversity"
+      ],
+      "target_sha256": "95e7f348f73707c18ca103ff1a3fafc80d3bca96d7d9d694a95f5a3f0cfb0c77"
+    },
+    {
+      "id": "VX-03",
+      "title": "Reachability of a correct commit",
+      "kind": "extension",
+      "target_path": "researchers/vishesh/notes/atlas-review/extensions.json",
+      "disposition": "fix-first",
+      "strength": "This is correctly framed as a specification test.",
+      "concern": "The current Scheme C ceiling is below one for finite positive parameters, so unanimous correct votes cannot commit even when the configuration feasibility check passes.",
+      "revision": "Enumerate empty, tied, unanimous and increasing-evidence states before model runs; separate admission from stopping.",
+      "decision_rule": "Block use of the current rule until a declared correct unanimous state can commit or an explicit justified abstention policy replaces the intended behavior.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E12"
+      ],
+      "briefs": [
+        "quorum",
+        "coordination"
+      ],
+      "target_sha256": "d3dab58427c1f7963878fd7a4b699182adccdc7e800eefc7af1062069990fb44"
+    },
+    {
+      "id": "VX-14",
+      "title": "The detector changes the swarm it observes",
+      "kind": "extension",
+      "target_path": "researchers/vishesh/notes/atlas-review/extensions.json",
+      "disposition": "merge",
+      "strength": "It treats probes as interventions.",
+      "concern": "Passive-versus-active comparison also changes acquired information; the existing SEC-50 policy study already covers a neighboring feedback effect.",
+      "revision": "Keep a probe-induced shift subexperiment with equal observation budgets, randomized probe timing and clean utility costs.",
+      "decision_rule": "Merge with the detector-policy work unless the probe contrast changes a separate deployment decision.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E5",
+        "E6"
+      ],
+      "briefs": [
+        "discovery",
+        "whistleblowing",
+        "culture"
+      ],
+      "target_sha256": "81e35811548fae3baeda61fc15b250408bcb2eb1c8aefd89d21ea6e094157ed9"
+    },
+    {
+      "id": "VX-33",
+      "title": "Budget exhaustion changes the causal estimand",
+      "kind": "extension",
+      "target_path": "researchers/vishesh/notes/atlas-review/extensions.json",
+      "disposition": "fix-first",
+      "strength": "It treats unfinished episodes as outcomes instead of deleting them.",
+      "concern": "Different provider throttling windows can still confound arms even when every outcome is reported.",
+      "revision": "Randomize blocked execution order, separate logical budgets from infrastructure failures and retain all-assigned operational utility plus a clearly secondary reasoning-only analysis.",
+      "decision_rule": "Do not rank agent intelligence from resource-contaminated completion rates alone.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E6"
+      ],
+      "briefs": [
+        "coordination",
+        "commons",
+        "diversity"
+      ],
+      "target_sha256": "252718e96ca8cad5f12ff5fb4596794d5639136991b35ed46ff80e779788f991"
+    },
+    {
+      "id": "PX-02",
+      "title": "Track conclusions that depend on something being absent",
+      "kind": "extension",
+      "target_path": "researchers/vishesh/notes/priority-research-expansion/ideas.json",
+      "disposition": "retain-narrow",
+      "strength": "Negative dependencies and completeness witnesses are explicit.",
+      "concern": "If absence is simply encoded as a positive versioned fact, the proposed repair may already be ordinary dependency invalidation.",
+      "revision": "Compare explicit absence certificates against that materialized-positive baseline; include certificate expiry and incomplete search domains.",
+      "decision_rule": "If they behave identically, reuse the existing representation rather than claim a new repair mechanism.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E7"
+      ],
+      "briefs": [
+        "memory",
+        "regrowth",
+        "casefile"
+      ],
+      "target_sha256": "ec69a3006595d56e6a2acac43202dee417b1d122505354baa47661c9e45adf6f"
+    },
+    {
+      "id": "PX-06",
+      "title": "Give an omission detector a bounded completeness contract",
+      "kind": "extension",
+      "target_path": "researchers/vishesh/notes/priority-research-expansion/ideas.json",
+      "disposition": "retain-narrow",
+      "strength": "The original full record is labeled an oracle.",
+      "concern": "A signed count proves neither that records are distinct nor that they contain the required categories.",
+      "revision": "Add same-count substitution, duplicate records and stale manifests; compare counts against category/version manifests at equal verification cost.",
+      "decision_rule": "Recommend only the weakest manifest that supports justified decisions; counts alone must not certify completeness.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E3"
+      ],
+      "briefs": [
+        "quorum",
+        "casefile",
+        "collective-sensing"
+      ],
+      "target_sha256": "23cb4d88b6e055122688d4f86bb0a76ff532a3c90f43592bd5ce4ed7a38caf35"
+    },
+    {
+      "id": "PX-08",
+      "title": "Protect a rare view without rewarding a wrong view",
+      "kind": "extension",
+      "target_path": "researchers/vishesh/notes/priority-research-expansion/ideas.json",
+      "disposition": "merge",
+      "strength": "Preserving a minority report is distinguished from adopting its conclusion.",
+      "concern": "It overlaps SOC-10 and can mistake accessible stored dissent for evidence actually used by a later decision.",
+      "revision": "Fold it into the dissent factorial with a delayed task that specifically needs the retained evidence; compare against ordinary searchable storage.",
+      "decision_rule": "Keep retention only if it improves later justified decisions at matched memory cost.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E1",
+        "E2"
+      ],
+      "briefs": [
+        "dissent",
+        "diversity",
+        "whistleblowing"
+      ],
+      "target_sha256": "2e0060494378329bcbacfabacce67c4d8d951f2a909d7fb5e245e759f3df744b"
+    },
+    {
+      "id": "PX-13",
+      "title": "Abstain from selecting a team when profiling is inconclusive",
+      "kind": "extension",
+      "target_path": "researchers/vishesh/notes/priority-research-expansion/ideas.json",
+      "disposition": "retain-narrow",
+      "strength": "The proposal permits falling back to a default and prices profiling.",
+      "concern": "The abstention threshold can be tuned to whichever task distribution makes the default look good.",
+      "revision": "Freeze the default and threshold before evaluation; show cold-start and long-horizon costs and unexpected difficulty shifts.",
+      "decision_rule": "If no horizon relevant to this project pays back profiling, stop selecting teams.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E2"
+      ],
+      "briefs": [
+        "diversity",
+        "discovery",
+        "commons"
+      ],
+      "target_sha256": "17b66a98a17907681f65ddaec4c208b5fd80f6cdba48d08a8148cb4ab7199457"
+    },
+    {
+      "id": "EX-03",
+      "title": "Can separately valid edits violate a joint invariant?",
+      "kind": "extension",
+      "target_path": "researchers/vishesh/notes/experimental-expansion/questions.json",
+      "disposition": "reframe",
+      "strength": "Joint invariant violations offer deterministic ground truth.",
+      "concern": "Write skew is an established transaction problem; showing that an atomic validator prevents it is engineering conformance rather than a new swarm mechanism.",
+      "revision": "First test the conventional transaction baseline; then ask whether agents can identify a previously unstated cross-edit invariant under equal information.",
+      "decision_rule": "If the invariant is fully supplied and host-enforced, ship the safeguard but avoid a research novelty claim.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E7"
+      ],
+      "briefs": [
+        "coordination",
+        "institutions",
+        "commons"
+      ],
+      "target_sha256": "2eb477facd5fb5898419a5cf43bb9d1b5b358bde948af66cb87831290dc869f5"
+    },
+    {
+      "id": "EX-07",
+      "title": "Do retries duplicate a valid action?",
+      "kind": "extension",
+      "target_path": "researchers/vishesh/notes/experimental-expansion/questions.json",
+      "disposition": "reframe",
+      "strength": "Lost acknowledgments isolate a clear duplicate-action failure.",
+      "concern": "Operation-level deduplication can win by construction when the harness supplies perfect identity; the difficult part is choosing identity across legitimate repeats.",
+      "revision": "Cross retries with intentional identical operations and scope/expiry changes; separate host-generated operation IDs from agent-inferred IDs.",
+      "decision_rule": "Treat perfect-ID success as a regression test; retain a research question only for the ambiguous identity boundary.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E12"
+      ],
+      "briefs": [
+        "coordination",
+        "institutions"
+      ],
+      "target_sha256": "44819aaa0900a79f846b10896e58f95ee0fd40e8de080ff7b0b47f89df980c58"
+    },
+    {
+      "id": "EX-20",
+      "title": "Can shared memory keep two tasks’ truths separate?",
+      "kind": "extension",
+      "target_path": "researchers/vishesh/notes/experimental-expansion/questions.json",
+      "disposition": "retain-narrow",
+      "strength": "Same names with different task truths expose cross-task contamination.",
+      "concern": "Namespaces can appear sufficient because task ownership is unambiguous; blanket isolation may also block legitimately shared facts.",
+      "revision": "Cross ambiguous task assignment with common reusable knowledge and revocations; compare strict isolation, explicit sharing and selective retrieval under the same memory cap.",
+      "decision_rule": "Use simple namespaces if selective sharing adds risk without task benefit.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E7",
+        "E8"
+      ],
+      "briefs": [
+        "memory",
+        "culture",
+        "casefile"
+      ],
+      "target_sha256": "04af927b7c26989c23e5bbfa70f6dd5c708080883eafa64364dfb2b5f9fcb4ee"
+    },
+    {
+      "id": "EX-24",
+      "title": "Can a defender distinguish flaky tools from targeted interference?",
+      "kind": "extension",
+      "target_path": "researchers/vishesh/notes/experimental-expansion/questions.json",
+      "disposition": "reframe",
+      "strength": "The question explicitly includes observationally indistinguishable conditions.",
+      "concern": "Caller-dependent failures can result from benign routing or quotas; a useful diagnostic pattern is not evidence of malicious intent.",
+      "revision": "Label the outcome actionable service behavior; preregister indistinguishable pairs and compare abstention and fallback utility, not hidden-motive accuracy.",
+      "decision_rule": "Drop malicious-versus-aligned labels when the permitted observations cannot distinguish their causes.",
+      "evidence_basis": "Reviewer inference from the cited context and inspected proposal; not an empirical finding.",
+      "sources": [
+        "E5"
+      ],
+      "briefs": [
+        "casefile",
+        "whistleblowing",
+        "discovery"
+      ],
+      "target_sha256": "32db00d2cb0be44cb4594f6a4de367ca723921962183bbc32711416b7b2cc7cc"
+    },
+    {
+      "id": "D-IMMUNE",
+      "title": "Immune-response experimental design",
+      "kind": "design",
+      "target_path": "researchers/vishesh/notes/swarm-immune-response/experiment-design.md",
+      "disposition": "revise",
+      "strength": "Stage A explicitly identifies an oracle mechanism study and keeps later realistic detection separate.",
+      "concern": "The oracle confirms affected agents and restores checkpoints; a positive result cannot support deployable selective repair. Eight actors over long schedules also risk spending most of the hackathon on plumbing.",
+      "revision": "Implement the private/shared reservoir factorial on a minimal symbolic world first. Preserve a clean-utility and correct-specialist control before promoting the claim; price information lost by rollback.",
+      "decision_rule": "Proceed to model qualification only after a reachable recurrence case and a cheaper correction-only comparator are validated. Do not present Stage A as the full immune system.",
+      "evidence_basis": "Reviewer inference and direct inspection of this design; no independent runtime or model experiment.",
+      "sources": [
+        "E4",
+        "E7",
+        "E8"
+      ],
+      "briefs": [
+        "memory",
+        "regrowth",
+        "dissent",
+        "institutions"
+      ],
+      "target_sha256": "c2e260c10f2e741a61a86086298cf98ae02a389471bb6a937a531c60cfc4da6d"
+    },
+    {
+      "id": "D-SEO",
+      "title": "External-influence / Scheme C design",
+      "kind": "design",
+      "target_path": "researchers/vishesh/notes/seo-poisoning/experimental-design.md",
+      "disposition": "fix-first",
+      "strength": "The bundle makes external exposure, imperfect provenance and resource costs explicit.",
+      "concern": "The unanimous-commit counterexample persists in the inspected rule. The sample arithmetic states clustering assumptions, but a design effect alone does not specify a valid clustered paired test.",
+      "revision": "Resolve the state-machine defect first. Choose one observed-provenance comparison and define world-level paired inference and a fixed primary endpoint before using pilot variance for sizing.",
+      "decision_rule": "Do not launch the full sweep with the current commit band, or describe an assumed 20-point effect calculation as demonstrated precision.",
+      "evidence_basis": "Reviewer inference and direct inspection of this design; no independent runtime or model experiment.",
+      "sources": [
+        "E6",
+        "E12"
+      ],
+      "briefs": [
+        "quorum",
+        "collective-sensing",
+        "dissent",
+        "coordination"
+      ],
+      "target_sha256": "49fdbbdc0394b9d03df353bf16c92cecc6f05057824f0ca56c02f17d9aebfc80"
+    },
+    {
+      "id": "D-DOSE",
+      "title": "Discussion-dose environment",
+      "kind": "design",
+      "target_path": "researchers/dmarz/notes/discussion-dose/README.md",
+      "disposition": "retain-narrow",
+      "strength": "All-assigned outcomes, private probes and scripted-versus-LLM separation are unusually explicit.",
+      "concern": "The discussion-dose contrast changes computation and exposure as well as discussion. Canonical audit documents and one altered numeric field make verification favorable; clean scripted success is not model qualification.",
+      "revision": "Keep the planned dose effect as a total-resource effect; add equal-budget private deliberation only if claiming a social mechanism. Independently inspect hard and easy rendered worlds, and use a distinct task rule for transfer.",
+      "decision_rule": "Retain the small qualification study, but do not infer persuasion, novel routing, or general agent security from its engineered source hierarchy.",
+      "evidence_basis": "Reviewer inference and direct inspection of this design; no independent runtime or model experiment.",
+      "sources": [
+        "E1",
+        "E3",
+        "E10"
+      ],
+      "briefs": [
+        "dissent",
+        "telephone",
+        "memory",
+        "collective-sensing"
+      ],
+      "target_sha256": "4bba8b3f93205a60bd1798ca2184a3d1b532144964e33bb4b589274cd95c1bc3"
+    },
+    {
+      "id": "D-SUITE",
+      "title": "Distributed-evidence suite plan",
+      "kind": "design",
+      "target_path": "researchers/dmarz/notes/distributed-evidence-suite/README.md",
+      "disposition": "revise",
+      "strength": "The plan states that full-information A/B and evidence-discovery C/D estimate different effects.",
+      "concern": "The shared engine can make four studies seem like one corroborating body of evidence; they share templates, scoring assumptions and selected model qualification.",
+      "revision": "Implement Study A first with an independently scored fixture; preregister each later estimand separately and preserve a second rule family not used in choosing prompts or model.",
+      "decision_rule": "If the full-information single solver solves the fixture cheaply, justify what operational constraint makes the team useful before enlarging the suite.",
+      "evidence_basis": "Reviewer inference and direct inspection of this design; no independent runtime or model experiment.",
+      "sources": [
+        "E1",
+        "E3",
+        "E10"
+      ],
+      "briefs": [
+        "collective-sensing",
+        "diversity",
+        "leadership",
+        "coordination"
+      ],
+      "target_sha256": "115549ca285c7435be3d2207ebd8ca9b4cdc530075569537e56fd052b3c6c2b0"
+    }
+  ]
+}
