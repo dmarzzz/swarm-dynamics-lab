@@ -933,17 +933,52 @@ PROTECTED = ("AGENTS.md", "CLAUDE.md", "README.md", "project.yaml", "artifacts.y
              "scripts/", "templates/", ".github/", ".flightdeck/", ".claude/", ".agents/", ".codex/", ".cursor/")
 
 
+def tree_errors(rev: str) -> set[str]:
+    """ERROR lines of `lab.py check` run on a clean checkout of `rev` (what would actually be pushed)."""
+    import shutil
+    import tempfile
+    d = tempfile.mkdtemp(prefix="lab-sync-")
+    try:
+        if git("worktree", "add", "--detach", d, rev).returncode != 0:
+            return {"(could not create a worktree to verify the commit)"}
+        r = subprocess.run([sys.executable, str(Path(d) / "scripts/lab.py"), "check"], capture_output=True, text=True)
+        return {line[6:] for line in r.stdout.splitlines() if line.startswith("ERROR ")}
+    finally:
+        git("worktree", "remove", "--force", d)
+        shutil.rmtree(d, ignore_errors=True)
+
+
+def heartbeat_tasks(researcher: str) -> list[str]:
+    """Refresh `updated` on tasks held by this researcher's agents that report state: working."""
+    lab, touched = Lab(), []
+    for d in lab.tasks.values():
+        owner = str(d.get("owner") or "")
+        if d.get("status") != "claimed" or not owner.startswith(researcher + "/"):
+            continue
+        agent = lab.agents.get(owner)
+        if not agent or not str(agent.get("state", "")).startswith("working"):
+            continue
+        t = parse_time(d.get("updated") or d.get("claimed_at"))
+        if t and dt.datetime.now(dt.timezone.utc) - t < dt.timedelta(minutes=20):
+            continue
+        d.fm["updated"] = now()
+        d.write()
+        touched.append(d.rel)
+    return touched
+
+
 def sync_once(agent: str, include_protected=False) -> int:
-    """Commit and push every changed file that passes the check; leave failing or off-limits files for later."""
+    """Commit and push every changed file that passes the check; leave failing or off-limits files for later.
+    The commit is re-checked on a clean checkout before pushing, so a file that changed mid-sync, or a
+    duplicate that only shows up across files, never reaches main."""
     import time
     researcher = agent.split("/")[0]
+    heartbeat_tasks(researcher)
+    # list changes first, then check: a file created after the listing is simply not staged this round
+    st = git("status", "--porcelain", "-uall").stdout.splitlines()
+    paths = [line[3:].split(" -> ")[-1].strip().strip('"') for line in st]
     E, _ = check(Lab())
     failing = {e.split(":", 1)[0] for e in E}
-    st = git("status", "--porcelain", "-uall").stdout.splitlines()
-    paths = []
-    for line in st:
-        path = line[3:].split(" -> ")[-1].strip().strip('"')
-        paths.append(path)
     stage, skipped = [], []
     for path in paths:
         if path in GENERATED:
@@ -956,17 +991,49 @@ def sync_once(agent: str, include_protected=False) -> int:
             skipped.append((path, "fails `lab.py check`; fix it and the next sync picks it up"))
         else:
             stage.append(path)
-    for path, why in skipped:
-        print(f"skip  {path}: {why}")
     if not stage:
+        for path, why in skipped:
+            print(f"skip  {path}: {why}")
         print(f"{now()} sync: nothing to push")
         return 0
+    baseline = tree_errors("HEAD")  # errors already on the branch are not ours to block on
     git("add", "-A", "--", *stage)
-    msg = f"[{agent}] sync: {len(stage)} file(s)"
-    c = git("commit", "-m", msg, "--", *stage)
-    if c.returncode != 0:
-        print(f"commit failed:\n{c.stdout}{c.stderr}", file=sys.stderr)
+    for _ in range(4):
+        if git("commit", "-m", f"[{agent}] sync: {len(stage)} file(s)", "--", *stage).returncode != 0:
+            print("commit failed", file=sys.stderr)
+            return 1
+        new_errs = tree_errors("HEAD") - baseline
+        if not new_errs:
+            break
+        bad = set()
+        for e in new_errs:
+            f = e.split(":", 1)[0]
+            if f in stage:
+                bad.add(f)
+            m = re.search(r"duplicate of '([^']+)'", e)
+            if m:
+                bad.update(s for s in stage if s.endswith(f"/{m.group(1)}.md"))
+        git("reset", "--soft", "HEAD~1")
+        if not bad:
+            git("restore", "--staged", "--", *stage)
+            print("sync: the commit would add errors that cannot be traced to staged files; not pushing:", file=sys.stderr)
+            for e in sorted(new_errs):
+                print(f"  {e}", file=sys.stderr)
+            return 1
+        git("restore", "--staged", "--", *bad)
+        for b in sorted(bad):
+            skipped.append((b, "fails the check on the committed tree (changed mid-sync, or a duplicate)"))
+        stage = [s for s in stage if s not in bad]
+        if not stage:
+            print(f"{now()} sync: nothing left to push after verification")
+            return 0
+    else:
+        git("reset", "--soft", "HEAD~1")
+        git("restore", "--staged", "--", *stage)
+        print("sync: could not produce a clean commit; nothing pushed", file=sys.stderr)
         return 1
+    for path, why in skipped:
+        print(f"skip  {path}: {why}")
     for attempt in range(5):
         # merge rather than rebase: never stashes or rewrites files other agents may be editing in this clone
         pl = git("pull", "--no-rebase", "--no-edit")
