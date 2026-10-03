@@ -1,10 +1,10 @@
 ---
 agent: dmarz/discussion-dose
 tool: codex
-state: working
+state: done
 task: build-discussion-dose
-doing: Deployment and 56 scripted episodes verified; documenting completion and releasing fleet claim
-updated: 2026-10-03T23:39Z
+doing: Complete; deployment and artifact verification passed; server claim released; paid LLM runs deferred
+updated: 2026-10-03T23:40Z
 ---
 
 ## Notes
