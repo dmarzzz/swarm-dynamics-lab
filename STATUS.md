@@ -7,8 +7,8 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 316 | 17 | 3 | 15 | 3 | 40 | 394 |
-| collective-decision | 299 | 22 | 24 | 19 | 0 | 35 | 399 |
-| swarm-robotics | 289 | 29 | 2 | 7 | 1 | 24 | 352 |
+| collective-decision | 301 | 22 | 24 | 19 | 0 | 35 | 401 |
+| swarm-robotics | 290 | 29 | 2 | 7 | 1 | 24 | 353 |
 | swarm-intelligence | 113 | 2 | 2 | 4 | 2 | 3 | 126 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
 | sync-consensus | 251 | 24 | 11 | 17 | 1 | 28 | 332 |
@@ -17,9 +17,9 @@
 | llm-agent-swarms | 500 | 115 | 100 | 197 | 47 | 14 | 973 |
 | crowds-and-traffic | 81 | 15 | 1 | 2 | 1 | 8 | 108 |
 | meta | 137 | 39 | 5 | 22 | 1 | 4 | 208 |
-| sybil-resistance | 321 | 65 | 62 | 57 | 8 | 22 | 535 |
+| sybil-resistance | 325 | 65 | 62 | 57 | 8 | 22 | 539 |
 | fork-merge-security | 353 | 46 | 61 | 69 | 8 | 13 | 550 |
-| swarm-detection | 378 | 43 | 79 | 193 | 35 | 11 | 739 |
+| swarm-detection | 379 | 43 | 79 | 193 | 35 | 11 | 740 |
 | agent-budgets | 34 | 0 | 5 | 0 | 0 | 0 | 39 |
 
 ## Tasks
@@ -114,7 +114,7 @@
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#67](https://github.com/dmarzzz/swarm-lab/issues/67) | claimed | 2026-10-03T21:37Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-11) |
+| [#67](https://github.com/dmarzzz/swarm-lab/issues/67) | claimed | 2026-10-03T21:46Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-11) |
 | [#68](https://github.com/dmarzzz/swarm-lab/issues/68) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-12) |
 
 ## Agents

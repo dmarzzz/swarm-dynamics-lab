@@ -2,9 +2,9 @@
 
 # Library index
 
-3154 entries.
+3158 entries.
 
-## Papers (1964)
+## Papers (1968)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -576,6 +576,7 @@
 | [fruchart-2021-non](papers/fruchart-2021-non.md) | Non-reciprocal phase transitions | 2021 | 4 | abstract | sync-consensus, active-matter, collective-motion | dmarz/sync-consensus |
 | [fujiwara-2011-synchronization](papers/fujiwara-2011-synchronization.md) | Synchronization in networks of mobile oscillators | 2011 | 4 | abstract | sync-consensus, collective-motion | dmarz/sync-consensus |
 | [fukushima-2026-message](papers/fukushima-2026-message.md) | Message capacity and claim wording set the transition points of collective truth-finding in language-model networks | 2026 | 4 | abstract | llm-agent-swarms, sync-consensus, criticality-measurement | dmarz/llm-agent-swarms-recent |
+| [gafni-2020-vcg](papers/gafni-2020-vcg.md) | VCG under Sybil (False-Name) Attacks - A Bayesian Analysis | 2020 | 4 | skim | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [gandhi-2025-roborebound](papers/gandhi-2025-roborebound.md) | RoboRebound: Multi-Robot System Defense with Bounded-Time Interaction | 2025 | 4 | skim | sybil-resistance, swarm-robotics, fork-merge-security | shadow/sol-p2 |
 | [gans-2026-calibrated](papers/gans-2026-calibrated.md) | Calibrated Bait: Defensive Information Design under Adversarial Fingerprinting | 2026 | 4 | abstract | swarm-detection | dmarz/sd-honeypots |
 | [gao-2023-large](papers/gao-2023-large.md) | Large Language Models Empowered Agent-based Modeling and Simulation: A Survey and Perspectives | 2023 | 4 | abstract | llm-agent-swarms, crowds-and-traffic | dmarz/llm-agent-swarms |
@@ -1081,6 +1082,7 @@
 | [yeung-1999-time](papers/yeung-1999-time.md) | Time Delay in the Kuramoto Model of Coupled Oscillators | 1999 | 4 | skim | sync-consensus | dmarz/sync-consensus-audit |
 | [yin-2018-byzantine](papers/yin-2018-byzantine.md) | Byzantine-Robust Distributed Learning: Towards Optimal Statistical Rates | 2018 | 4 | abstract | fork-merge-security, sync-consensus | dmarz/fm-bft-aggregation |
 | [yin-2024-lobam](papers/yin-2024-lobam.md) | LoBAM: LoRA-Based Backdoor Attack on Model Merging | 2024 | 4 | abstract | fork-merge-security | dmarz/fm-merge-poisoning |
+| [yokoo-2005-coalitional](papers/yokoo-2005-coalitional.md) | Coalitional Games in Open Anonymous Environments | 2005 | 4 | skim | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [yu-2006-sybilguard](papers/yu-2006-sybilguard.md) | SybilGuard: Defending Against Sybil Attacks via Social Networks | 2006 | 4 | skim | sybil-resistance, sync-consensus | dmarz/sybil-foundations |
 | [yu-2008-sybillimit](papers/yu-2008-sybillimit.md) | SybilLimit: A Near-Optimal Social Network Defense against Sybil Attacks | 2008 | 4 | skim | sybil-resistance | dmarz/sybil-foundations |
 | [yu-2009-dsybil](papers/yu-2009-dsybil.md) | DSybil: Optimal Sybil-Resistance for Recommendation Systems | 2009 | 4 | skim | sybil-resistance, collective-decision | dmarz/sybil-foundations |
@@ -1125,6 +1127,7 @@
 | [abdelnabi-2023-cooperation](papers/abdelnabi-2023-cooperation.md) | Cooperation, Competition, and Maliciousness: LLM-Stakeholders Interactive Negotiation | 2023 | 3 | skim | agent-budgets, llm-agent-swarms | dmarz/budget-b |
 | [adams-2025-can](papers/adams-2025-can.md) | Can a Single Human Supervise a Swarm of 100 Heterogeneous Robots? | 2025 | 3 | skim | swarm-robotics | dmarz/swarm-robotics-recent-audit |
 | [agarwal-2025-lpac](papers/agarwal-2025-lpac.md) | LPAC: Learnable Perception-Action-Communication Loops With Applications to Coverage Control | 2025 | 3 | abstract | swarm-robotics, marl-emergence, sync-consensus | dmarz/swarm-robotics-recent |
+| [agate-2021-simulation](papers/agate-2021-simulation.md) | A Simulation Software for the Evaluation of Vulnerabilities in Reputation Management Systems | 2021 | 3 | skim | sybil-resistance, swarm-detection | shadow/sol-p1 |
 | [al-2024-project](papers/al-2024-project.md) | Project Sid: Many-agent simulations toward AI civilization | 2024 | 3 | abstract | llm-agent-swarms, marl-emergence | dmarz/llm-agent-swarms |
 | [al-chami-2025-quest](papers/al-chami-2025-quest.md) | Quest Love: A First Look at Blockchain Loyalty Programs | 2025 | 3 | skim | swarm-detection | dmarz/sd-onchain |
 | [al-omari-2025-multi](papers/al-omari-2025-multi.md) | Multi-Agent Craftax: Benchmarking Open-Ended Multi-Agent Reinforcement Learning at the Hyperscale | 2025 | 3 | skim | marl-emergence | dmarz/sim-envs |
@@ -1396,7 +1399,7 @@
 | [kaesberg-2025-voting](papers/kaesberg-2025-voting.md) | Voting or Consensus? Decision-Making in Multi-Agent Debate | 2025 | 3 | abstract | llm-agent-swarms, collective-decision | shadow/sol-1 |
 | [kamenica-2011-bayesian](papers/kamenica-2011-bayesian.md) | Bayesian Persuasion | 2011 | 3 | skim | meta | vishesh/senku-1 |
 | [karantaidou-2024-blind](papers/karantaidou-2024-blind.md) | Blind Multisignatures for Anonymous Tokens with Decentralized Issuance | 2024 | 3 | abstract | sybil-resistance | dmarz/sybil-credentials |
-| [kash-2009-manipulating](papers/kash-2009-manipulating.md) | Manipulating Scrip Systems: Sybils and Collusion | 2009 | 3 | skim | sybil-resistance, collective-decision | shadow/sol-p2 |
+| [kash-2009-manipulating](papers/kash-2009-manipulating.md) | Manipulating Scrip Systems: Sybils and Collusion | 2009 | 3 | skim | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [kash-2012-optimizing](papers/kash-2012-optimizing.md) | Optimizing scrip systems: crashes, altruists, hoarders, sybils and collusion | 2012 | 3 | skim | sybil-resistance, collective-decision | shadow/sol-p1 |
 | [katyal-2026-account](papers/katyal-2026-account.md) | Account-History Features for Social Bot Detection in the Era of Large Language Models | 2026 | 3 | full | swarm-detection | dmarz/sd-bots |
 | [kaur-2026-beyond](papers/kaur-2026-beyond.md) | Beyond the Transcript: Detecting Covert Co ordination in Latent Multi-Agent Communication | 2026 | 3 | abstract | swarm-detection, llm-agent-swarms | dmarz/sd-coordination |
@@ -1602,6 +1605,7 @@
 | [salzmann-2020-trajectron](papers/salzmann-2020-trajectron.md) | Trajectron++: Dynamically-Feasible Trajectory Forecasting with Heterogeneous Data | 2020 | 3 | skim | crowds-and-traffic, swarm-robotics | dmarz/crowds-and-traffic-audit |
 | [sanchez-2012-spontaneous](papers/sanchez-2012-spontaneous.md) | Spontaneous motion in hierarchically assembled active matter | 2012 | 3 | abstract | active-matter | dmarz/active-matter |
 | [sar-2022-dynamics](papers/sar-2022-dynamics.md) | Dynamics of swarmalators: A pedagogical review | 2022 | 3 | abstract | sync-consensus, active-matter | dmarz/sync-consensus |
+| [sargeant-2013-modelling](papers/sargeant-2013-modelling.md) | Modelling malicious entities in a robotic swarm | 2013 | 3 | abstract | swarm-robotics, sybil-resistance | shadow/sol-p1 |
 | [sartorio-2025-minimalist](papers/sartorio-2025-minimalist.md) | Minimalist exploration strategies for robot swarms at the edge of chaos | 2025 | 3 | abstract | swarm-robotics, criticality-measurement | dmarz/swarm-robotics-recent |
 | [saulnier-2017-resilient](papers/saulnier-2017-resilient.md) | Resilient Flocking for Mobile Robot Teams | 2017 | 3 | abstract | sybil-resistance, collective-motion, swarm-robotics, sync-consensus | dmarz/sybil-robotics |
 | [scandolo-2023-active](papers/scandolo-2023-active.md) | Active Ising Models of flocking: a field-theoretic approach | 2023 | 3 | abstract | active-matter, collective-motion | dmarz/active-matter |
