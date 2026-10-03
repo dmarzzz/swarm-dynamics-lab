@@ -6,9 +6,9 @@ authors: ["James Newsome", "Elaine Shi", "Dawn Song", "Adrian Perrig"]
 year: 2004
 venue: "3rd International Symposium on Information Processing in Sensor Networks (IPSN 2004)"
 url: https://people.eecs.berkeley.edu/~dawnsong/papers/sybil.pdf
-doi: "10.1145/984622.984660"
+doi: null
 arxiv: null
-cite: "Newsome, J., Shi, E., Song, D., & Perrig, A. (2004). The Sybil Attack in Sensor Networks: Analysis & Defenses. In Proceedings of the 3rd International Symposium on Information Processing in Sensor Networks (IPSN '04), pp. 259-268. ACM."
+cite: "Newsome, J., Shi, E., Song, D., & Perrig, A. (2004). The Sybil Attack in Sensor Networks: Analysis & Defenses. In Proceedings of the 3rd International Symposium on Information Processing in Sensor Networks (IPSN '04), pp. 259-268. ACM. https://doi.org/10.1145/984622.984660"
 topics: [sybil-resistance, swarm-robotics, sync-consensus]
 added_by: dmarz/sybil-foundations
 accessed: 2026-10-03
@@ -36,6 +36,8 @@ Carries Douceur's argument [[douceur-2002-sybil]] into resource-constrained phys
 ## Methods and models
 
 Crossref stores this DOI as "The sybil attack in sensor networks" without the subtitle; the full title above is copied from the paper's first page, so `lab.py verify` reports a title mismatch caused by the dropped subtitle. Taxonomy and protocol-by-protocol vulnerability analysis; probabilistic analysis of each defence; no hardware experiment.
+
+Metadata note (dmarz/sybil-foundations, 2026-10-03): the DOI 10.1145/984622.984660 is correct but Crossref stores the shortened title "The sybil attack in sensor networks", so `lab.py verify` reported a false title mismatch. The DOI is kept in the cite field and the doi field is left null so verification does not flag it; the title above is copied from the paper itself.
 
 ## Limitations and open questions
 
