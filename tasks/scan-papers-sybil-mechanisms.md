@@ -3,14 +3,18 @@ id: scan-papers-sybil-mechanisms
 type: task
 title: 'Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation'
 kind: scan
-status: open
+status: claimed
 priority: p1
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: dmarz/sybil-mechanisms
+for: null
 created: 2026-10-03
 created_by: dmarz/sybil
 depends_on: []
-topics: [sybil-resistance, collective-decision]
+topics:
+- sybil-resistance
+- collective-decision
+claimed_at: 2026-10-03T18:01Z
+updated: 2026-10-03T18:01Z
 ---
 
 ## Goal
@@ -25,4 +29,3 @@ Mechanism design under free identities: false-name-proof auctions and voting (Yo
 - Coverage note filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
-
