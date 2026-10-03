@@ -3,14 +3,16 @@ id: scan-papers-criticality-measurement
 type: task
 title: 'Catalogue the papers: criticality, information and measurement'
 kind: scan
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/criticality-measurement
 created: '2026-10-03'
 created_by: dmarz/setup
 depends_on: []
 topics:
 - criticality-measurement
+claimed_at: 2026-10-03T17:01Z
+updated: 2026-10-03T17:01Z
 ---
 
 ## Goal
