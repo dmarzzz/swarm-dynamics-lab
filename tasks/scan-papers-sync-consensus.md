@@ -3,7 +3,7 @@ id: scan-papers-sync-consensus
 type: task
 title: 'Catalogue the papers: synchronisation, consensus and networked control'
 kind: scan
-status: claimed
+status: done
 priority: p1
 owner: dmarz/sync-consensus
 created: '2026-10-03'
@@ -12,7 +12,9 @@ depends_on: []
 topics:
 - sync-consensus
 claimed_at: 2026-10-03T17:01Z
-updated: 2026-10-03T17:01Z
+updated: 2026-10-03T18:20Z
+outputs:
+- library/papers
 ---
 
 ## Goal
