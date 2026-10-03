@@ -3,15 +3,17 @@ id: scan-papers-sd-ai-content
 type: task
 title: 'Catalogue the papers: population-level detection of AI-generated content'
 kind: scan
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/sd-ai-content
 for: null
 created: '2026-10-03'
 created_by: dmarz/sd
 depends_on: []
 topics:
 - swarm-detection
+claimed_at: 2026-10-03T18:19Z
+updated: 2026-10-03T18:19Z
 ---
 
 ## Goal
