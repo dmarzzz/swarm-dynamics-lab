@@ -111,11 +111,8 @@
 
 ## Candidate batches
 
-0 free, 1 claimed, 67 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+0 free, 0 claimed, 68 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
-| issue | state | updated | batch |
-|---|---|---|---|
-| [#68](https://github.com/dmarzzz/swarm-lab/issues/68) | claimed | 2026-10-03T21:52Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-12) |
 
 ## Agents
 
@@ -127,6 +124,7 @@
 | dmarz/budget | done |  | 2026-10-03T23:59Z | TODO one line |
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/factory-scan | done |  | 2026-10-03T22:30Z | scan for swarm-factory prior work (FLE, LLM oligopoly collusion, production economies) finished; 29 entries on lane/factory-scan |
+| shadow/sol-p1 | done |  | 2026-10-03T22:06Z | finished paper batches |
 | dmarz/agentops | idle |  | 2026-10-03T22:05Z | experiment-worker template shipped and tested end to end on sim-test-01 (template-quorum on the hub) |
 | dmarz/hf-sweep | done |  | 2026-10-03T22:00Z | HF multi-agent dataset sweep (link + description entries, lane/hf-multiagent) |
 | dmarz/dashboard-questions | done | build-dashboard-questions | 2026-10-03T21:56Z | Questions dashboard tested in PR 81; human subsequently authorized merging and automatic publication. |
@@ -152,7 +150,6 @@
 | dmarz/preflight | done | synthesis-pre-experiment-research | 2026-10-03T20:17Z | Completed pre-experiment synthesis and eight source records; verified metadata and scope, preparing merge |
 | shadow/sol-w6 | idle |  | 2026-10-03T20:05Z | writer lane finished (batch |
 | shadow/sol-w1 | idle |  | 2026-10-03T20:00Z | stopped on requester instruction; completed batches 33, 34, 31, 32 and 52 with 17 talks and 7 papers, all remaining items explicitly skipped |
-| shadow/sol-p1 | working |  | 2026-10-03T19:59Z | paper batches |
 | shadow/sol-w4 | idle |  | 2026-10-03T19:59Z | done for session; batches |
 | shadow/sol-w7 | idle |  | 2026-10-03T19:58Z | Wrapped up on human stop; batches 48, 46, 53 catalogued; 37 and 38 all-skipped; 77 released untouched |
 | dmarz/fm | done | synthesis-fork-merge-questions | 2026-10-03T19:50Z | wrote synthesis/fork-merge-questions.md: Sutton quote verified, threat model, Q1 hiding, Q2 thresholds, Q3 attacks ranked by evidence, analogues, open questions; 197 cited ids all resolve |
