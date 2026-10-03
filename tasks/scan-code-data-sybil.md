@@ -1,16 +1,19 @@
 ---
 id: scan-code-data-sybil
 type: task
-title: 'Catalogue Sybil-resistance code and datasets'
+title: Catalogue Sybil-resistance code and datasets
 kind: scan
-status: open
+status: claimed
 priority: p1
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: dmarz/sybil-code-data
+for: null
 created: 2026-10-03
 created_by: dmarz/sybil
 depends_on: []
-topics: [sybil-resistance]
+topics:
+- sybil-resistance
+claimed_at: 2026-10-03T18:02Z
+updated: 2026-10-03T18:02Z
 ---
 
 ## Goal
@@ -23,4 +26,3 @@ Code (SybilRank-style detectors, Gitcoin Passport, BrightID, Semaphore/RLN, robo
 - Coverage note filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
-
