@@ -53,7 +53,6 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [scan-threads-sd-informal](tasks/scan-threads-sd-informal.md) | claimed | p1 | scan | dmarz/sd-informal |  | 2026-10-03T18:20Z | Catalogue the threads: threat-intel reports, blogs, threads and talks on agent swarms in the wild |
-| [scan-threads-x-security](tasks/scan-threads-x-security.md) | claimed | p1 | scan | dmarz/x-threads |  | 2026-10-03T19:05Z | Catalogue X threads for the security topics (Sybil resistance, fork-merge security, swarm detection) via Apify |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Review survey: llm agent swarms (cross-researcher) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
@@ -97,6 +96,7 @@
 | [scan-papers-crowds-and-traffic](tasks/scan-papers-crowds-and-traffic.md) | done | p1 | scan | dmarz/crowds-and-traffic |  | 2026-10-03T18:18Z | Catalogue the papers: human crowds and traffic |
 | [scan-papers-swarm-intelligence](tasks/scan-papers-swarm-intelligence.md) | done | p1 | scan | dmarz/swarm-intelligence |  | 2026-10-03T18:19Z | Catalogue the papers: swarm intelligence algorithms |
 | [scan-papers-sync-consensus](tasks/scan-papers-sync-consensus.md) | done | p1 | scan | dmarz/sync-consensus |  | 2026-10-03T18:20Z | Catalogue the papers: synchronisation, consensus and networked control |
+| [scan-threads-x-security](tasks/scan-threads-x-security.md) | done | p1 | scan | dmarz/x-threads |  | 2026-10-03T19:05Z | Catalogue X threads for the security topics (Sybil resistance, fork-merge security, swarm detection) via Apify |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
 
 ## Agents
