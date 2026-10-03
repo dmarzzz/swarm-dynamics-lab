@@ -3,7 +3,7 @@ id: synthesis-question-atlas-update
 type: task
 title: Refresh research question atlas with new budget, security and dataset research
 kind: synthesis
-status: claimed
+status: done
 priority: p1
 owner: dmarz/question-atlas
 for: null
@@ -19,7 +19,9 @@ topics:
 - swarm-detection
 - marl-emergence
 claimed_at: 2026-10-03T21:29Z
-updated: 2026-10-03T21:29Z
+updated: 2026-10-03T21:43Z
+outputs:
+- researchers/dmarz/notes/question-atlas/review.html
 ---
 
 ## Goal
