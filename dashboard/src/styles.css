@@ -264,6 +264,12 @@ main { flex: 1; }
 
 @media (max-width: 720px) {
   body { font-size: 14px; }
+  .masthead .wrap { flex-wrap: wrap; height: auto; padding-top: 8px; row-gap: 0; }
+  .brand { height: 36px; align-items: center; }
+  .nav { order: 3; flex: 1 0 100%; margin: 0 calc(-1 * var(--gutter)); padding: 0 calc(var(--gutter) - 10px); }
+  .nav a { padding: 10px 10px 12px; }
+  .nav a[aria-current='page']::after { bottom: 0; }
+  :root { --nav-h: 88px; }
   .brand-sub { display: none; }
   .masthead .wrap { gap: 12px; }
   .live .live-label { display: none; }
