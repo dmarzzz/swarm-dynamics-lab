@@ -2,9 +2,9 @@
 
 # Library index
 
-2351 entries.
+2354 entries.
 
-## Papers (1508)
+## Papers (1509)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -339,6 +339,7 @@
 | [beutel-2013-copycatch](papers/beutel-2013-copycatch.md) | CopyCatch | 2013 | 4 | abstract | swarm-detection | shadow/sol-g51 |
 | [bhagoji-2019-analyzing](papers/bhagoji-2019-analyzing.md) | Analyzing Federated Learning through an Adversarial Lens | 2019 | 4 | abstract | fork-merge-security | dmarz/fm-merge-poisoning |
 | [bhatt-2025-ctrl](papers/bhatt-2025-ctrl.md) | Ctrl-Z: Controlling AI Agents via Resampling | 2025 | 4 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-ai-control |
+| [bialek-2024-long](papers/bialek-2024-long.md) | Long Timescales, Individual Differences, and Scale Invariance in Animal Behavior | 2024 | 4 | full | criticality-measurement | shadow/sol-w5 |
 | [bizyaeva-2023-nonlinear](papers/bizyaeva-2023-nonlinear.md) | Nonlinear Opinion Dynamics With Tunable Sensitivity | 2023 | 4 | abstract | sync-consensus, collective-decision | dmarz/sync-consensus |
 | [bo-2026-three](papers/bo-2026-three.md) | Three phases of odd robotic active matter | 2026 | 4 | abstract | active-matter, swarm-robotics | dmarz/active-matter |
 | [bonnemain-2023-pedestrians](papers/bonnemain-2023-pedestrians.md) | Pedestrians in static crowds are not grains, but game players | 2023 | 4 | abstract | crowds-and-traffic, marl-emergence | dmarz/crowds-and-traffic |
@@ -2345,7 +2346,7 @@
 | [data-moltbook-takschdube-2026](datasets/data-moltbook-takschdube-2026.md) | Moltbook longitudinal dataset (Taksch Dube): timestamped crawls with derived social and reply graphs | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 
-## Talks (35)
+## Talks (37)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -2368,10 +2369,12 @@
 | [zhang-2025-dont](talks/zhang-2025-dont.md) | Don't Build Agents, Build Skills Instead | 2025 | 4 | skim | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
 | [zhang-2025-how](talks/zhang-2025-how.md) | How to Build Effective AI Agents Without Overengineering Them | 2025 | 4 | full | llm-agent-swarms | shadow/sol-w1 |
 | [amodei-2026-anthropic](talks/amodei-2026-anthropic.md) | Anthropic CEO tells CNN how AI 'agent swarms' could threaten humanity | 2026 | 3 | abstract | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
+| [bialek-2020-criticality](talks/bialek-2020-criticality.md) | Criticality in biological systems, from molecules to brains | 2020 | 3 | abstract | criticality-measurement | shadow/sol-w5 |
 | [ganesh-2020-introduction](talks/ganesh-2020-introduction.md) | Lecture 8: Introduction to consensus, and the de Groot model | 2020 | 3 | full | sync-consensus, collective-decision | shadow/sol-w6 |
 | [meir-2026-prediction](talks/meir-2026-prediction.md) | Why Prediction Markets and AI Agents Are a Compliance Nightmare \| Solidus Labs Co-Founder Asaf Meir | 2026 | 3 | abstract | swarm-detection, llm-agent-swarms | shadow/sol-w1 |
 | [motsch-2020-fundamental](talks/motsch-2020-fundamental.md) | Fundamental diagrams for pedestrian and ant dynamics | 2020 | 3 | abstract | crowds-and-traffic, collective-motion | shadow/sol-w5 |
 | [nitsche-2026-protect](talks/nitsche-2026-protect.md) | Can we protect democracy from fake news? \| Maxim Nitsche \| TEDxBerlin | 2026 | 3 | abstract | swarm-detection | shadow/sol-w1 |
+| [rocha-2026-keynote](talks/rocha-2026-keynote.md) | Keynote, Luis Rocha: collective canalization, dynamical redundancy and the limits of the criticality hypothesis | 2026 | 3 | abstract | criticality-measurement, collective-decision | shadow/sol-w5 |
 | [seibold-2020-frustrating](talks/seibold-2020-frustrating.md) | The Frustrating Beauty of Traffic Waves, and How Automated Vehicles Can Prevent Them | 2020 | 3 | abstract | crowds-and-traffic, swarm-robotics | shadow/sol-w5 |
 | [seibold-2024-swarm](talks/seibold-2024-swarm.md) | Swarm-Performance of Heterogeneous Multi-Agent Systems Across Scales | 2024 | 3 | abstract | crowds-and-traffic, swarm-robotics, collective-decision | shadow/sol-w5 |
 | [strogatz-2024-how](talks/strogatz-2024-how.md) | How Is Flocking Like Computing? | 2024 | 3 | full | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |

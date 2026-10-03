@@ -7,12 +7,12 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 314 | 8 | 3 | 15 | 0 | 3 | 343 |
-| collective-decision | 238 | 8 | 22 | 19 | 0 | 10 | 297 |
+| collective-decision | 238 | 8 | 22 | 19 | 0 | 11 | 298 |
 | swarm-robotics | 272 | 13 | 2 | 7 | 0 | 2 | 296 |
 | swarm-intelligence | 107 | 1 | 2 | 4 | 0 | 0 | 114 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 0 | 194 |
 | sync-consensus | 225 | 8 | 11 | 17 | 0 | 8 | 269 |
-| criticality-measurement | 187 | 4 | 2 | 23 | 0 | 4 | 220 |
+| criticality-measurement | 188 | 4 | 2 | 23 | 0 | 6 | 223 |
 | marl-emergence | 125 | 12 | 0 | 33 | 0 | 8 | 178 |
 | llm-agent-swarms | 284 | 49 | 93 | 198 | 5 | 10 | 639 |
 | crowds-and-traffic | 78 | 2 | 1 | 2 | 0 | 8 | 91 |
@@ -102,12 +102,11 @@
 
 ## Candidate batches
 
-28 free, 6 claimed, 33 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+28 free, 5 claimed, 34 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
 | [#24](https://github.com/dmarzzz/swarm-lab/issues/24) | claimed | 2026-10-03T19:50Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-01) |
-| [#27](https://github.com/dmarzzz/swarm-lab/issues/27) | claimed | 2026-10-03T19:47Z | [batch] web/criticality-measurement: 10 candidates (web-criticality-measurement-20261003-01) |
 | [#37](https://github.com/dmarzzz/swarm-lab/issues/37) | claimed | 2026-10-03T19:50Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-01) |
 | [#39](https://github.com/dmarzzz/swarm-lab/issues/39) | claimed | 2026-10-03T19:50Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-01) |
 | [#52](https://github.com/dmarzzz/swarm-lab/issues/52) | claimed | 2026-10-03T19:49Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-01) |
