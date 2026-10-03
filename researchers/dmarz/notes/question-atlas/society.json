@@ -1,0 +1,1269 @@
+[
+  {
+    "id": "SOC-01",
+    "area": "llm-agent-swarms",
+    "title": "Separate information diversity from model diversity",
+    "question": "When does mixing model families help beyond giving identical models complementary evidence?",
+    "hypothesis": "Complementary observations explain more of the gain on distributed tasks than provider labels; model diversity adds value mainly when pre-discussion errors remain correlated.",
+    "test": "Randomize complete task episodes in a two-by-two design: homogeneous versus mixed models, crossed with overlapping versus complementary evidence. Keep the union of available facts, total inference tokens and tool calls fixed; rotate which model receives each shard. Estimate episode-level contrasts across held-out task families, with a separately reported matched-spend sensitivity analysis.",
+    "baseline": "Independent voting and the strongest single model under the same resource cap; a full-information oracle is an explicit diagnostic ceiling.",
+    "metrics": [
+      "Designated-answer accuracy",
+      "Pre/post-discussion error correlation",
+      "Cost per correct task"
+    ],
+    "falsifier": "The diversity contrast vanishes after matching capability, or overlap changes explain neither error correlation nor performance.",
+    "confounds": "Tokenizer differences, stronger individual models and shard difficulty can masquerade as diversity; cluster uncertainty by generated task, not agent.",
+    "prior": [
+      {
+        "id": "kim-2025-correlated",
+        "relation": "Measures shared errors; does not establish benefits of this intervention."
+      },
+      {
+        "id": "tambwekar-2026-proxifield",
+        "relation": "Provides complementary-information routing precedent and hidden-profile tasks."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Choose calibrated model pairs and verify the evidence union is equally solvable.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/diversity.md",
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md"
+    ]
+  },
+  {
+    "id": "SOC-02",
+    "area": "llm-agent-swarms",
+    "title": "Measure effective team size on distributed evidence",
+    "question": "Does effective team size increase with population when each worker holds useful private evidence?",
+    "hypothesis": "Communication increases effective evidence on complementary tasks but creates a ceiling when observations overlap; answer agreement alone overstates independence.",
+    "test": "Randomize whole synthetic task episodes to independent voting, debate, self-correction and unrelated-message placebo. Sweep team size at fixed total evidence and inference budget, then repeat a separately labelled fixed-per-agent-budget sensitivity analysis. Estimate covariance of scored errors across independent tasks, alongside aggregate accuracy; bootstrap tasks rather than messages.",
+    "baseline": "Matched independent samples and a single agent with the evidence union; never treat oracle access as equivalent deployment cost.",
+    "metrics": [
+      "Effective team size with uncertainty",
+      "Final correctness",
+      "Evidence coverage",
+      "Tokens per correct decision"
+    ],
+    "falsifier": "The purported increase is absent on held-out tasks, or only appears when each added agent receives extra total evidence.",
+    "confounds": "Kish-style effective size assumes a usable correlation structure; heterogeneous errors and negative correlations require reporting the covariance matrix rather than blindly applying one scalar.",
+    "prior": [
+      {
+        "id": "bertalanic-2026-ringelmann",
+        "relation": "Supplies a QA-based effective-size model and placebo comparisons."
+      },
+      {
+        "id": "zhang-2026-silo",
+        "relation": "Already studies distributed evidence; qualitative overhead is not a new finding."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "api-small",
+    "needs": "Audit effective-size assumptions and select exact-answer tasks outside ordinary multiple-choice QA.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md",
+      "researchers/vishesh/notes/project-briefs/diversity.md"
+    ]
+  },
+  {
+    "id": "SOC-03",
+    "area": "llm-agent-swarms",
+    "title": "Distinguish group failure from a strict scoring rule",
+    "question": "How much apparent deterioration with team size comes from requiring every agent to answer correctly?",
+    "hypothesis": "All-agents-correct scoring declines faster than a designated final answer even when individual accuracy and integration quality stay stable.",
+    "test": "Use the same independently generated episodes and identical saved responses for three prespecified scores: all correct, designated reporter correct, and fixed-fraction correct. Randomize population size and reporter identity before work begins; hold total evidence and token budget fixed. Fit the observed all-correct rate against an independence null using measured individual error rates.",
+    "baseline": "A noninteracting ensemble with matched individual accuracy and a full-information single-agent reference.",
+    "metrics": [
+      "All-correct and reporter success",
+      "Mean individual correctness",
+      "Excess failure beyond scoring null"
+    ],
+    "falsifier": "The reporter and individual scores deteriorate as strongly as the all-correct score, with little decline explained by the metric.",
+    "confounds": "Reporter selection after seeing answers would inflate success; correlated errors invalidate a simple product-of-probabilities null, so report an empirical ensemble null too.",
+    "prior": [
+      {
+        "id": "zhang-2026-silo",
+        "relation": "Its all-agent success criterion motivates this direct measurement audit."
+      },
+      {
+        "id": "kim-2025-towards",
+        "relation": "Documents task-dependent scaling rather than a universal population law."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "api-small",
+    "needs": "Recover exact scoring and round-budget definitions before choosing a Silo-Bench reproduction.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md",
+      "researchers/vishesh/notes/project-briefs/coordination.md"
+    ]
+  },
+  {
+    "id": "SOC-04",
+    "area": "llm-agent-swarms",
+    "title": "Ablate why semantic routing works",
+    "question": "Do complementary-information routing signals outperform simple direct addressing once delivery is matched?",
+    "hypothesis": "Complementarity helps when private evidence is distributed, while direct addressing alone explains gains on obvious request-response tasks.",
+    "test": "Randomize complete episodes to direct-address-only, need-matching-only, complementarity-only and combined routing. Use the same generated task, initial evidence, incoming token cap and total inference allowance. Charge embedding and router calls. Include a coverage-constrained random router and evaluate on task families withheld when setting weights.",
+    "baseline": "Uniform random delivery with the same graph degrees and a simple append-only board under the same resource ceiling.",
+    "metrics": [
+      "Correct global solution",
+      "Unique useful facts delivered",
+      "Participation",
+      "End-to-end cost"
+    ],
+    "falsifier": "Combined routing does not beat direct addressing or random coverage within a prespecified practical margin on held-out tasks.",
+    "confounds": "Semantic distance is not evidence independence; router embeddings can leak task answers and coverage guarantees can explain apparent gains.",
+    "prior": [
+      {
+        "id": "tambwekar-2026-proxifield",
+        "relation": "Closest predecessor; library audit notes missing per-signal ablation."
+      },
+      {
+        "id": "zhang-2024-cut",
+        "relation": "Establishes communication pruning as existing work, requiring a strong sparse baseline."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Read routing prompts and appendices; fix a weight-selection split and an accounting method for embedding cost.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md",
+      "researchers/vishesh/notes/project-briefs/coordination.md"
+    ]
+  },
+  {
+    "id": "SOC-05",
+    "area": "llm-agent-swarms",
+    "title": "Measure reading capacity separately from wording bias",
+    "question": "Does increasing inbox capacity improve truth finding after controlling the bias induced by claim wording?",
+    "hypothesis": "Capacity helps only when the wording-induced prior is weak; otherwise more communication can amplify a biased starting field.",
+    "test": "Randomize entire populations to inbox capacities and truth-preserving paraphrases of synthetic binary claims. Counterbalance assertion polarity and initial correct fractions. Keep total inference and delivered-token budgets fixed by equal-length messages and matched rounds; include unused-budget accounting. Measure isolated responses before interaction and validate predictions on unseen claims.",
+    "baseline": "No interaction, random-message placebo and a fitted response model that includes versus omits the claim-specific field.",
+    "metrics": [
+      "Correct-consensus probability",
+      "Wrong consensus and fragmentation",
+      "Calibration error of collective forecasts"
+    ],
+    "falsifier": "A capacity-only model forecasts held-out collective outcomes as well as the wording-aware model, or the proposed interaction reverses reliably.",
+    "confounds": "Reversing a statement can change semantic difficulty; a few item-specific outcomes cannot establish a phase transition or universal critical capacity.",
+    "prior": [
+      {
+        "id": "fukushima-2026-message",
+        "relation": "Direct prior measuring inbox capacity and claim wording; this is a transfer test."
+      },
+      {
+        "id": "liu-2026-social",
+        "relation": "Attention-based proxy supplies conditional network predictions, not a universal theorem for LLMs."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Create paired claims with verified equivalent truth conditions and read both methods before fixing the capacity grid.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md",
+      "researchers/vishesh/notes/project-briefs/quorum.md"
+    ]
+  },
+  {
+    "id": "SOC-06",
+    "area": "llm-agent-swarms",
+    "title": "Social influence or ordinary anchoring?",
+    "question": "Does a peer-labelled opinion change judgments more than identical information presented as a numeric anchor?",
+    "hypothesis": "Most apparent social coupling on simple judgments is explained by anchoring; an additional social effect emerges only for evidence-bearing peers.",
+    "test": "Randomize independent task episodes to peer attribution, anonymous numeric suggestion or no suggestion, keeping message content and length identical. Cross this with randomly assigned starting estimates and whether a verifiable observation accompanies the suggestion. Collect a fresh final judgment under a fixed per-episode token allowance; analyze task-level slopes and biases.",
+    "baseline": "The identical anchor without social identity and isolated responses measured on held-out task instances.",
+    "metrics": [
+      "Coupling slope",
+      "Prior bias",
+      "Accuracy change",
+      "Evidence-conditioned revision"
+    ],
+    "falsifier": "Peer labels add materially greater coupling than identical anonymous anchors in the no-evidence stratum, or the predicted additional coupling for evidence-bearing peers is absent across held-out tasks.",
+    "confounds": "Role labels may imply expertise; demand characteristics and familiar factual claims can predetermine answers. This test measures behavior, not a human-like social mechanism.",
+    "prior": [
+      {
+        "id": "yang-2026-when",
+        "relation": "Measures coupling and proposes randomized initial-condition diagnostics."
+      },
+      {
+        "id": "brockers-2025-disentangling",
+        "relation": "Separates interaction from topic, agreement and anchoring biases in dyads."
+      }
+    ],
+    "novelty": "replication",
+    "feasibility": "api-small",
+    "needs": "Select unfamiliar synthetic claims and freeze prompts without prescribing conformity.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/leadership.md",
+      "researchers/vishesh/notes/project-briefs/dissent.md"
+    ]
+  },
+  {
+    "id": "SOC-07",
+    "area": "llm-agent-swarms",
+    "title": "Protect private judgments before public discussion",
+    "question": "Does requiring a private pre-discussion answer preserve useful minority evidence without preventing correction?",
+    "hypothesis": "A private committed judgment reduces unsupported public conformity, but the benefit disappears when the commitment becomes an instruction never to revise.",
+    "test": "Randomize whole team episodes to private structured answers, private answers with a never-revise instruction, public first answers or no preliminary answer. Equalize generation tokens by allocating the same first-pass work in every arm. After an identical evidence exchange, collect public and private final choices and score both against synthetic ground truth. Rotate the initially informed minority.",
+    "baseline": "Independent voting and an ordinary debate arm with identical evidence and total cost.",
+    "metrics": [
+      "Wrong-to-right and right-to-wrong revisions",
+      "Private/public mismatch",
+      "Final accuracy"
+    ],
+    "falsifier": "Private commitment fails to improve final accuracy or only suppresses both harmful and useful updates equally.",
+    "confounds": "Hidden reasoning is not ground truth; use explicit private outputs rather than interpreting chain-of-thought. Preliminary answers can themselves anchor agents.",
+    "prior": [
+      {
+        "id": "shehata-2026-bystander",
+        "relation": "Abstract reports private/public conformity gaps; this design does not assume its internal-state interpretation."
+      },
+      {
+        "id": "choi-2025-debate",
+        "relation": "Provides a voting baseline and cautions against attributing gains to interaction alone."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Define a nonbinding commitment format and check equivalent first-pass computation.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/dissent.md",
+      "researchers/vishesh/notes/project-briefs/diversity.md"
+    ]
+  },
+  {
+    "id": "SOC-08",
+    "area": "llm-agent-swarms",
+    "title": "Stop on evidence sufficiency instead of verbal agreement",
+    "question": "Can a checkable evidence checklist improve the speed-accuracy tradeoff for group commitment?",
+    "hypothesis": "Requiring coverage of task-relevant facts reduces premature commitment more efficiently than adding a fixed number of discussion rounds.",
+    "test": "Randomize independent distributed-constraint episodes to checklist-triggered stopping, confidence-triggered stopping or a fixed round count. Every arm sees the same schema of required fact types, without privileged solution labels. Charge checklist checks to a shared token/tool budget and vary the deadline. Plot error against actual delay for each rule.",
+    "baseline": "Matched-budget independent voting and fixed-round discussion, with a full-information solver as a diagnostic ceiling.",
+    "metrics": [
+      "False commits",
+      "Deadline completion",
+      "Latency to correct commitment",
+      "Cost per verified answer"
+    ],
+    "falsifier": "The checklist fails to improve the frontier over fixed rounds, or succeeds only because it reveals otherwise unavailable facts.",
+    "confounds": "Fact coverage is not reasoning correctness; a complete checklist may accompany a wrong calculation. Confidence calibration can vary by model and must be measured independently.",
+    "prior": [
+      {
+        "id": "zhang-2026-silo",
+        "relation": "Reports premature submission and distributed integration difficulties."
+      },
+      {
+        "id": "choi-2025-debate",
+        "relation": "Shows aggregation baselines can explain apparent debate benefits."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Build a task where required evidence types are public but their values remain distributed.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/quorum.md",
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md"
+    ]
+  },
+  {
+    "id": "SOC-09",
+    "area": "llm-agent-swarms",
+    "title": "Evidence-seeking critics versus generic opposition",
+    "question": "When does a critic improve an answer rather than merely add another expensive pass?",
+    "hypothesis": "A critic required to request or cite a discriminating observation corrects more wrong answers than an equally funded generic skeptic.",
+    "test": "Randomize full team episodes with initially correct and incorrect answers to evidence-seeking critic, always-disagree critic or extra independent solver. All arms receive identical evidence access, tool allowance and total token budget; rotate critic identity. Evaluate on fresh tasks with programmatically checkable answers and score final decisions separately from persuasive language.",
+    "baseline": "No-critic independent voting plus a self-review arm using the same extra computation.",
+    "metrics": [
+      "Net accuracy gain",
+      "Wrong-to-right corrections",
+      "Right-to-wrong reversals",
+      "Critic cost"
+    ],
+    "falsifier": "The evidence critic is no better than extra independent computation, or its false reversals cancel corrections.",
+    "confounds": "A critic can receive extra evidence by accident; generated explanations may sound rigorous without identifying a valid contradiction. Score cited observations directly.",
+    "prior": [
+      {
+        "id": "du-2023-improving",
+        "relation": "Introduces debate as a baseline rather than establishing this critic mechanism."
+      },
+      {
+        "id": "choi-2025-debate",
+        "relation": "Motivates separating discussion gains from sampling and voting."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Specify how discriminating evidence is scored and set an acceptable false-reversal margin before a real run.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/dissent.md"
+    ]
+  },
+  {
+    "id": "SOC-10",
+    "area": "llm-agent-swarms",
+    "title": "Test dissent quality rather than dissent quantity",
+    "question": "Will a group weight a dissenting claim by evidence quality when the critic is confidently wrong?",
+    "hypothesis": "Evidence-quality metadata improves correction only when recipients can inspect the underlying observation; confidence labels alone increase harmful reversals.",
+    "test": "Randomize entire team episodes in a factorial design with critic correctness, stated confidence and presence of an inspectable observation. Keep critics scripted initially to isolate the input, match message length, then reserve an interacting-agent extension. Allocate identical verification tokens and randomize whether the starting majority is correct.",
+    "baseline": "Same dissent without confidence or evidence labels and an extra-solver vote under the same budget.",
+    "metrics": [
+      "Correct dissent acceptance",
+      "Incorrect dissent acceptance",
+      "Verification uptake",
+      "Final accuracy"
+    ],
+    "falsifier": "Underlying evidence does not improve discrimination between correct and incorrect critics, or confidence is equally reliable across both classes.",
+    "confounds": "Scripted critics measure recipient behavior rather than emergent dissent; evidence difficulty and verbosity must be balanced across correct and wrong challenges.",
+    "prior": [
+      {
+        "id": "kraidia-2026-when",
+        "relation": "Shows ordinary persuasive arguments can distort tested debates; no universal effect assumed."
+      },
+      {
+        "id": "kim-2025-correlated",
+        "relation": "Shared errors motivate tests where a confident majority is wrong."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Generate matched correct and incorrect counterexamples with objective validators.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/dissent.md",
+      "researchers/vishesh/notes/project-briefs/whistleblowing.md"
+    ]
+  },
+  {
+    "id": "SOC-11",
+    "area": "llm-agent-swarms",
+    "title": "Make uncertainty useful without forcing abstention",
+    "question": "Does explicit uncertainty sharing help groups ask the right follow-up question?",
+    "hypothesis": "A short statement of what evidence is missing improves allocation of verification effort more than a scalar confidence score.",
+    "test": "Randomize independent hidden-profile episodes to missing-evidence statements, numeric confidence or answer-only messages. Keep communication token limits and total tool calls equal. Agents may spend a fixed verification allowance querying one additional fact; the full task truth is reachable in every arm. Compare which fact is requested and the resulting answer.",
+    "baseline": "Random fact requests and a calibrated confidence-only protocol, plus independent voting.",
+    "metrics": [
+      "Value of acquired fact",
+      "Final accuracy",
+      "Abstention rate",
+      "Queries per correction"
+    ],
+    "falsifier": "The missing-evidence format does not select more useful facts or improve correctness relative to confidence at matched cost.",
+    "confounds": "Missing-evidence text could smuggle longer reasoning; scalar confidence must be calibrated on a separate split. The selected query is a mediator, not an independent replicate.",
+    "prior": [
+      {
+        "id": "tambwekar-2026-proxifield",
+        "relation": "Need matching already routes information; candidate tests message semantics and query value."
+      },
+      {
+        "id": "zhang-2026-silo",
+        "relation": "Distributed tasks motivate distinguishing information delivery from integration."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Define fact-query utilities independently and verify equal communication capacity across formats.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md",
+      "researchers/vishesh/notes/project-briefs/quorum.md",
+      "researchers/vishesh/notes/project-briefs/dissent.md"
+    ]
+  },
+  {
+    "id": "SOC-12",
+    "area": "llm-agent-swarms",
+    "title": "Useful disagreement after a changing task",
+    "question": "Does preserving a minority answer help adaptation when the environment changes?",
+    "hypothesis": "A bounded minority-report slot speeds adaptation after a real state change but wastes budget when disagreement has no evidence behind it.",
+    "test": "Randomize complete repeated-decision worlds to retaining a minority report, retaining a random report or majority-only summaries. Apply a predetermined hidden-state change in half the worlds and no change in the rest. Match memory capacity, evidence arrival and total inference tokens; score both pre-change and post-change decisions on held-out world seeds.",
+    "baseline": "Majority-only memory and independent agents receiving the same new observations.",
+    "metrics": [
+      "Post-change regret",
+      "Adaptation latency",
+      "Stable-world accuracy",
+      "Useful minority retention"
+    ],
+    "falsifier": "Minority retention does not reduce regret or its stable-world losses exceed the gain under the prespecified change mixture.",
+    "confounds": "Retention is not inherently useful diversity; minority quality and change predictability matter. Randomizing complete worlds avoids treating repeated decisions as independent trials.",
+    "prior": [
+      {
+        "id": "pavlova-2026-flag",
+        "relation": "Measures multiple collective end states; polarization itself is not established as safer."
+      },
+      {
+        "id": "ashery-2024-emergent",
+        "relation": "Convention persistence motivates testing adaptation rather than celebrating consensus."
+      }
+    ],
+    "novelty": "speculative",
+    "feasibility": "api-small",
+    "needs": "Choose a change process that neither directly rewards dissent nor lets retained text reveal the new answer.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/diversity.md",
+      "researchers/vishesh/notes/project-briefs/dissent.md",
+      "researchers/vishesh/notes/project-briefs/culture.md"
+    ]
+  },
+  {
+    "id": "SOC-13",
+    "area": "llm-agent-swarms",
+    "title": "Separate discovery time from discussion time",
+    "question": "Does delaying communication improve search coverage before the team integrates results?",
+    "hypothesis": "An initial independent exploration phase reduces redundant search and improves final solutions on decomposable tasks, but harms tightly coupled tasks.",
+    "test": "Randomize full task episodes to immediate discussion, delayed discussion or no discussion. Cross delay with task decomposability using generated search-and-combine puzzles. Keep total tool calls and inference tokens fixed; discussion consumes the same budget as exploration. Freeze delay choices on development tasks and score untouched task families.",
+    "baseline": "Independent best-of-N and one agent using the full budget, with equivalent observation access.",
+    "metrics": [
+      "Distinct useful discoveries",
+      "Duplicate queries",
+      "Final solution quality",
+      "Cost per valid artifact"
+    ],
+    "falsifier": "Delayed communication never improves the cost-quality frontier, or its apparent advantage disappears after counting extra independent search.",
+    "confounds": "A task deliberately partitioned into independent pieces makes the result trivial; include intermediate coupling and report how combination requirements were generated.",
+    "prior": [
+      {
+        "id": "kim-2025-towards",
+        "relation": "Shows architecture benefits depend on task structure; no universal delay rule follows."
+      },
+      {
+        "id": "pal-2026-swarmworld",
+        "relation": "Separates portfolio benefits from strongest-artifact performance in shared environments."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Specify a decomposability measure and prevent shared files from leaking discoveries during the silent phase.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/coordination.md",
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md",
+      "researchers/vishesh/notes/project-briefs/diversity.md"
+    ]
+  },
+  {
+    "id": "SOC-14",
+    "area": "llm-agent-swarms",
+    "title": "Treat shared artifacts as a communication channel",
+    "question": "How much coordination is carried by artifact observation rather than explicit messages?",
+    "hypothesis": "Artifact access explains most reuse in construction tasks, while explicit messages help chiefly when observations are costly or ambiguous.",
+    "test": "Randomize independent synthetic worlds to a two-by-two crossing of messages enabled and shared artifacts visible. Match total context tokens, action counts and world information opportunities; record observation events explicitly. Score finished programs or constructions with a deterministic evaluator after agents stop. Include identical worlds with cheap versus expensive artifact inspection.",
+    "baseline": "Private-world isolated search and a public artifact board without chat; compare both best artifact and whole portfolio.",
+    "metrics": [
+      "Validated reuse",
+      "Portfolio coverage",
+      "Best-artifact quality",
+      "Observation and messaging cost"
+    ],
+    "falsifier": "Messages account for most validated reuse even when artifact inspection is cheap, or shared artifacts add no functional benefit.",
+    "confounds": "A shared world is not a no-communication condition. Action side effects may reveal hidden state even when messages are disabled, so the channel boundary must be explicit.",
+    "prior": [
+      {
+        "id": "pal-2026-swarmworld",
+        "relation": "Direct stigmergy precedent; this is a task and observability boundary test."
+      },
+      {
+        "id": "park-2023-generative",
+        "relation": "Memory and observation architecture is background, not evidence of functional gains."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Choose a small deterministic construction environment and define artifact observation before implementation.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/coordination.md",
+      "researchers/vishesh/notes/project-briefs/culture.md",
+      "researchers/vishesh/notes/project-briefs/commons.md"
+    ]
+  },
+  {
+    "id": "SOC-15",
+    "area": "llm-agent-swarms",
+    "title": "Asynchronous teams under uneven tool latency",
+    "question": "When does asynchronous work beat round-based discussion once stale information is counted?",
+    "hypothesis": "Asynchrony improves completion under variable tool delays but loses accuracy when rapid state changes make old messages misleading.",
+    "test": "Randomize complete task episodes to synchronous rounds or event-driven execution. Independently randomize tool delay distributions and environment-change rates, using identical scripted delays for paired worlds. Fix total generated tokens, tool calls and a wall-clock deadline; charge retries and timeouts. Repeated calls within one world remain one statistical unit.",
+    "baseline": "A synchronous team and a single worker with the same aggregate compute cap, with latency reported separately from throughput.",
+    "metrics": [
+      "Deadline success",
+      "Stale-message decisions",
+      "Wall time",
+      "Idle fraction",
+      "Tokens per completion"
+    ],
+    "falsifier": "The asynchronous arm has no completion advantage under high delay variance or retains that advantage without the predicted staleness interaction.",
+    "confounds": "API rate limits, hidden batching and scheduling fairness can create implementation effects; use controllable simulated tool delays for the initial test.",
+    "prior": [
+      {
+        "id": "zhang-2026-silo",
+        "relation": "Distributed coordination tasks supply a benchmark family, not an asynchronous comparison."
+      },
+      {
+        "id": "kim-2025-towards",
+        "relation": "Makes coordination overhead a measured cost rather than a universal scaling law."
+      }
+    ],
+    "novelty": "speculative",
+    "feasibility": "api-small",
+    "needs": "Specify what state version each message describes and whether interrupted work consumes budget.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/coordination.md"
+    ]
+  },
+  {
+    "id": "SOC-16",
+    "area": "llm-agent-swarms",
+    "title": "Allocate roles by observed bottlenecks",
+    "question": "Can teams choose useful temporary roles from their actual information deficits?",
+    "hypothesis": "Reallocating a limited role budget toward unresolved subproblems improves completion more than fixed persona assignments.",
+    "test": "Randomize complete generated project episodes to fixed roles, periodically reassigned roles or role-free work. Reassignment uses only publicly available progress and unmet requirements, with its computation charged to the shared budget. Hold model composition, task evidence and action allowance constant. Rotate initial role assignments and include tasks whose bottleneck changes halfway through.",
+    "baseline": "Uniform round-robin assignments and a centralized planner with identical information and token cap.",
+    "metrics": [
+      "Verified milestones completed",
+      "Uncovered subproblems",
+      "Reassignment overhead",
+      "Duplicate effort"
+    ],
+    "falsifier": "Dynamic roles fail to improve outcomes after charging reassignment cost, or fixed roles adapt equally well.",
+    "confounds": "A named persona is not demonstrated specialization; score observed actions. An allocator that sees hidden solution structure would invalidate the comparison.",
+    "prior": [
+      {
+        "id": "pal-2026-swarmworld",
+        "relation": "Reports functional differentiation; does not establish this allocation policy."
+      },
+      {
+        "id": "cemri-2025-why",
+        "relation": "Failure taxonomy motivates explicit task alignment and completion checks."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Create observable bottleneck indicators that do not reveal the solution and define valid role changes.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/leadership.md",
+      "researchers/vishesh/notes/project-briefs/coordination.md"
+    ]
+  },
+  {
+    "id": "SOC-17",
+    "area": "llm-agent-swarms",
+    "title": "Separate a leader's name from its information",
+    "question": "Does apparent authority change task outcomes beyond the content of the same proposal?",
+    "hypothesis": "Leader labels change adoption without improving execution; useful influence is better predicted by evidence quality than message volume.",
+    "test": "Randomize whole team episodes to the same frozen proposal labelled as coordinator, ordinary peer or anonymous note. Independently vary whether the proposal contains the decisive observation. Counterbalance author labels and placement, keep text and total token budgets identical, and measure downstream tool actions using an exact environment log.",
+    "baseline": "The identical anonymous proposal and a no-proposal control allocated the same reasoning allowance.",
+    "metrics": [
+      "Proposal adoption per exposure",
+      "Verified task completion",
+      "Incorrect-authority compliance",
+      "Execution latency"
+    ],
+    "falsifier": "Authority reliably improves verified outcomes even when information and order are matched, or evidence quality does not predict useful influence.",
+    "confounds": "Authority can be a legitimate information cue in other settings; this test deliberately breaks that relationship. Adoption alone is not causal task benefit, and labels are not stable personalities.",
+    "prior": [
+      {
+        "id": "shehata-2026-bystander",
+        "relation": "Abstract suggests anchor identity matters; this is an output-based intervention."
+      },
+      {
+        "id": "yang-2026-when",
+        "relation": "Anchoring control motivates content-preserving label changes."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Define frozen proposal sets and ensure executor tools produce independently checkable outcomes.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/leadership.md"
+    ]
+  },
+  {
+    "id": "SOC-18",
+    "area": "llm-agent-swarms",
+    "title": "Rotate coordination without losing continuity",
+    "question": "Can rotating a coordinator improve resilience while preserving accumulated task knowledge?",
+    "hypothesis": "Rotation helps after coordinator loss only when a compact public task ledger is available; otherwise handoff cost outweighs redundancy.",
+    "test": "Randomize independent task episodes to fixed coordinator, scheduled rotation or random rotation. Cross each with a bounded public ledger and a predetermined coordinator outage. Match total inference tokens, ledger capacity and surviving worker count. Replace agents without privileged access to the removed context; count recovery work against the budget.",
+    "baseline": "Fixed coordination with an equally sized shared ledger and a no-outage control for every architecture.",
+    "metrics": [
+      "Post-outage completion",
+      "Handoff latency",
+      "Lost requirements",
+      "Total cost",
+      "Pre-outage quality"
+    ],
+    "falsifier": "Rotation adds no resilience beyond the ledger, or its ordinary-operation cost dominates under the specified outage rate.",
+    "confounds": "Restored connectivity is not restored knowledge; remove the same functional role rather than the most important node selected after observing results.",
+    "prior": [
+      {
+        "id": "tambwekar-2026-proxifield",
+        "relation": "Failure robustness is existing prior; its permanent-failure setting differs from role handoff."
+      },
+      {
+        "id": "park-2023-generative",
+        "relation": "Persistent memory motivates continuity, without demonstrating fault recovery."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Choose a transparent task ledger and separate unique-information destruction from loss of a worker.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/leadership.md",
+      "researchers/vishesh/notes/project-briefs/regrowth.md"
+    ]
+  },
+  {
+    "id": "SOC-19",
+    "area": "llm-agent-swarms",
+    "title": "Ask a specific peer instead of broadcasting",
+    "question": "Are targeted evidence requests more useful than broadcasting everything under the same attention budget?",
+    "hypothesis": "Targeted requests reduce wasted delivery when tasks have sparse dependencies, but miss surprises that a board would expose.",
+    "test": "Randomize complete distributed puzzles to addressed requests, broadcast summaries or hybrid discovery-then-request communication. Hold total delivered tokens and tool queries fixed; match evidence allocation and use a recorded request-response graph. Cross sparse known dependencies with unexpected cross-shard dependencies. Fix routing rules before held-out evaluation.",
+    "baseline": "Random recipient routing with matched degrees and a capped append-only board.",
+    "metrics": [
+      "Relevant facts obtained",
+      "Missed cross-shard clues",
+      "Final correctness",
+      "Delivered tokens per solution"
+    ],
+    "falsifier": "Targeted requests do not improve sparse tasks or maintain their advantage when relevant dependencies are unknown, contradicting the predicted tradeoff.",
+    "confounds": "Messages sent are not messages read; measure actual context delivery. A hybrid arm must pay for its discovery step rather than receiving free routing knowledge.",
+    "prior": [
+      {
+        "id": "tambwekar-2026-proxifield",
+        "relation": "Need-matching and direct addressing are existing mechanisms to compare."
+      },
+      {
+        "id": "liu-2026-social",
+        "relation": "Attention rather than graph edges motivates delivery-aware evaluation."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Construct held-out surprise dependencies and log delivered context exactly.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md",
+      "researchers/vishesh/notes/project-briefs/coordination.md"
+    ]
+  },
+  {
+    "id": "SOC-20",
+    "area": "llm-agent-swarms",
+    "title": "Recognize unachievable tasks and request repair",
+    "question": "Can a team identify missing prerequisites without abandoning difficult but solvable work?",
+    "hypothesis": "A bounded impossibility-check step reduces wasted collective exploration on unreachable tasks while retaining success on hard solvable controls.",
+    "test": "Randomize entire synthetic planning episodes to ordinary persistence, a prerequisite checklist or a peer feasibility audit. Pair solvable tasks with matched tasks missing one essential resource; use a deterministic solver to certify both categories. Give every arm equal inference and tool budgets and an explicit request-for-clarification action within the sandbox.",
+    "baseline": "Single-agent feasibility checking and a fixed timeout with the same total cost.",
+    "metrics": [
+      "Unsolvable-task detection",
+      "False abandonment",
+      "Useful completion",
+      "Wasted actions",
+      "Repair requests"
+    ],
+    "falsifier": "The audit cannot distinguish unreachable from merely difficult cases or lowers total verified completion after overhead.",
+    "confounds": "This is a test of bounded task feasibility, not inferred intentions or general safety. Checklist wording must not reveal which category an episode occupies.",
+    "prior": [
+      {
+        "id": "cemri-2025-why",
+        "relation": "Task specification and termination failures motivate a controlled feasibility check."
+      },
+      {
+        "id": "zhang-2026-silo",
+        "relation": "Known-answer algorithmic tasks provide an interpretable reachability baseline."
+      }
+    ],
+    "novelty": "speculative",
+    "feasibility": "api-small",
+    "needs": "Design certified unreachable instances and a rubric distinguishing honest uncertainty from premature termination.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/coordination.md",
+      "researchers/vishesh/notes/project-briefs/institutions.md"
+    ]
+  },
+  {
+    "id": "SOC-21",
+    "area": "llm-agent-swarms",
+    "title": "Compress memory by information value",
+    "question": "Which memory contents preserve useful collective knowledge under a fixed context limit?",
+    "hypothesis": "Retaining rare task-relevant observations and unresolved questions beats recency-only summaries on future tasks requiring distributed facts.",
+    "test": "Randomize independent multi-stage task worlds to recency, frequency or estimated information-value memory selection. All memories have the same token cap and every selection step consumes the common inference budget. Future questions are sampled from a held-out distribution unknown to agents; include both recurring facts and initially rare decisive facts.",
+    "baseline": "Uniform reservoir retention and one worker receiving the same total memory budget.",
+    "metrics": [
+      "Held-out task accuracy",
+      "Rare-fact recall",
+      "Unsupported reconstructed facts",
+      "Summary cost"
+    ],
+    "falsifier": "Information-value selection does not outperform simple retention or gains only when its selection rule leaks future questions.",
+    "confounds": "Frequent mentions may reflect copying rather than importance; rarity alone may retain noise. This studies useful retention, leaving provenance repair and rollback to the security lane.",
+    "prior": [
+      {
+        "id": "park-2023-generative",
+        "relation": "Provides retrieval and reflection architecture as direct memory background."
+      },
+      {
+        "id": "perez-2024-cultural",
+        "relation": "Transformation through repeated transmission motivates measuring retained content."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Define information-value estimates from available observations and fix future-task sampling independently.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/memory.md",
+      "researchers/vishesh/notes/project-briefs/telephone.md"
+    ]
+  },
+  {
+    "id": "SOC-22",
+    "area": "llm-agent-swarms",
+    "title": "Spend redundancy on rare knowledge",
+    "question": "Is selective replication better than uniformly duplicating every workers notes?",
+    "hypothesis": "Replicating uniquely held useful observations improves fault tolerance more per stored token than uniform replication.",
+    "test": "Randomize complete distributed tasks to uniform copying, rarity-weighted copying or no extra copying. Fix total memory tokens and inference cost, then apply prescheduled random worker loss or loss of the highest-information worker defined before task execution. Replacement agents see only surviving records; score final answers and missing facts.",
+    "baseline": "Uniform copies with equal storage and a no-failure reference for each retention strategy.",
+    "metrics": [
+      "Correct answers after loss",
+      "Unique facts surviving",
+      "Extra storage cost",
+      "Recovery latency"
+    ],
+    "falsifier": "Selective replication does not improve task success over uniform copies or relies on an evaluator supplying hidden fact importance.",
+    "confounds": "Rarity and usefulness differ; the policy may copy obscure noise. Separate loss of a worker from permanent destruction of every copy, where reconstruction can be impossible.",
+    "prior": [
+      {
+        "id": "tambwekar-2026-proxifield",
+        "relation": "Already evaluates permanent agent failures; selective knowledge retention is the narrower candidate."
+      },
+      {
+        "id": "pal-2026-swarmworld",
+        "relation": "Persistent shared artifacts motivate distinguishing portfolio survival from visual reconnection."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Define what agents can know about redundancy and validate an equal-storage loss generator.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/regrowth.md",
+      "researchers/vishesh/notes/project-briefs/memory.md"
+    ]
+  },
+  {
+    "id": "SOC-23",
+    "area": "llm-agent-swarms",
+    "title": "Recover function after genuine knowledge loss",
+    "question": "When can a replacement worker reconstruct missing evidence from the environment rather than a hidden backup?",
+    "hypothesis": "A task-aware reacquisition policy recovers function more efficiently than restarting all workers when evidence is recoverable, but cannot restore permanently destroyed unique facts.",
+    "test": "Randomize complete task worlds to targeted reacquisition or blind restart after a fixed worker-loss event. Cross recoverable observations with genuinely unavailable observations. Keep surviving resources, restart cost and total tool budget identical. Record the provenance of new observations only to verify reacquisition, without testing a security mechanism.",
+    "baseline": "No recovery and an explicitly labelled perfect-backup upper bound; report irrecoverable cases separately.",
+    "metrics": [
+      "Recovered task accuracy",
+      "New observation cost",
+      "Time to useful completion",
+      "Hallucinated recovery"
+    ],
+    "falsifier": "Targeted reacquisition performs no better than restart on recoverable cases, or claims success only through unsupported reconstruction.",
+    "confounds": "A restarted agent must not inherit the lost state through its prompt; knowing the evaluator answer is not reconstruction. Episode-level repetitions are required for uncertainty.",
+    "prior": [
+      {
+        "id": "tambwekar-2026-proxifield",
+        "relation": "Existing robustness work motivates a knowledge-loss-specific boundary."
+      },
+      {
+        "id": "zhang-2026-silo",
+        "relation": "Distributed exact-answer tasks support verifiable functional recovery."
+      }
+    ],
+    "novelty": "speculative",
+    "feasibility": "api-small",
+    "needs": "Choose an environment with explicit observation availability and charge repeat observation costs.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/regrowth.md",
+      "researchers/vishesh/notes/project-briefs/memory.md"
+    ]
+  },
+  {
+    "id": "SOC-24",
+    "area": "llm-agent-swarms",
+    "title": "What survives complete population turnover?",
+    "question": "Do useful procedures survive replacement through shared artifacts, direct interaction or model priors?",
+    "hypothesis": "Artifact access preserves task procedures through turnover, while naming conventions can persist without producing better held-out performance.",
+    "test": "Randomize independent multi-generation worlds to inherited notes, overlapping old/new cohorts, both, or neither. Replace all original agents on a fixed schedule; maintain equal cumulative inference and onboarding tokens. Use arbitrary conventions counterbalanced across worlds and procedural tasks whose test instances are absent from onboarding materials.",
+    "baseline": "Fresh agents with neutral instructions and a verbatim executable procedure as an explicit transfer ceiling.",
+    "metrics": [
+      "Convention survival",
+      "Held-out task performance",
+      "Procedure mutation",
+      "Onboarding cost"
+    ],
+    "falsifier": "Persistence disappears under counterbalanced conventions or surviving conventions do not improve task performance as predicted.",
+    "confounds": "Common model priors and shared system prompts can mimic inheritance; descriptive culture is not evidence of consciousness or human-like mechanisms. Generations within a world are dependent observations.",
+    "prior": [
+      {
+        "id": "perez-2024-cultural",
+        "relation": "Direct precedent for controlled transmission in LLM populations."
+      },
+      {
+        "id": "ashery-2024-emergent",
+        "relation": "Naming-game conventions establish persistence questions without establishing useful task transfer."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Separate normative conventions from factual procedures and seal test tasks before generating onboarding notes.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/culture.md",
+      "researchers/vishesh/notes/project-briefs/memory.md"
+    ]
+  },
+  {
+    "id": "SOC-25",
+    "area": "llm-agent-swarms",
+    "title": "Retire an obsolete convention after the task changes",
+    "question": "Can a population keep useful traditions while abandoning a convention that has become costly?",
+    "hypothesis": "A periodic outcome review accelerates adaptation more than replacing members, because newcomers otherwise inherit the same obsolete guide.",
+    "test": "Randomize whole multi-generation worlds to outcome review, member turnover, both or neither. Change which arbitrary convention is beneficial at a predetermined time, without changing the written goal. Match cumulative tokens, feedback access and memory size. Include unchanged worlds to measure needless disruption and counterbalance which convention is initially rewarded.",
+    "baseline": "A fixed convention and fresh agents without inherited records, under equal resource caps.",
+    "metrics": [
+      "Adaptation latency",
+      "Post-change regret",
+      "Unnecessary convention changes",
+      "Held-out task success"
+    ],
+    "falsifier": "Outcome review has no adaptation advantage over turnover or causes enough disruption in unchanged worlds to erase the gain.",
+    "confounds": "Explicitly telling agents the new preferred convention would turn this into instruction following; measure adaptation to outcomes. Memory and intrinsic preferences may interact, with no general reversibility claim.",
+    "prior": [
+      {
+        "id": "ashery-2024-emergent",
+        "relation": "Provides convention and minority-tipping precedent rather than a utility-based adaptation result."
+      },
+      {
+        "id": "perez-2024-cultural",
+        "relation": "Transmission framework supports generational controls."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Create an outcome shift discoverable through ordinary feedback and read closest convention-change methods.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/culture.md",
+      "researchers/vishesh/notes/project-briefs/institutions.md"
+    ]
+  },
+  {
+    "id": "SOC-26",
+    "area": "llm-agent-swarms",
+    "title": "Reward a useful portfolio instead of one champion",
+    "question": "Does rewarding complementary artifacts change the value of sharing in collective invention?",
+    "hypothesis": "Shared work benefits portfolio resilience more than best-artifact quality; a portfolio-aware selection rule preserves that advantage under limited evaluation budgets.",
+    "test": "Randomize independent construction worlds to selecting one highest-scoring artifact or a complementary portfolio, crossed with shared versus private workspaces. Agents build bounded programs scored by a deterministic simulator under unseen disturbances after work ends. Equalize all generation and evaluation calls; select scoring weights using development worlds only.",
+    "baseline": "Best-of-N isolated search and uniform portfolio selection, each with the same aggregate resource allowance.",
+    "metrics": [
+      "Best individual score",
+      "Coverage across disturbances",
+      "Portfolio worst-case score",
+      "Evaluation cost"
+    ],
+    "falsifier": "Sharing fails to improve held-out portfolio resilience, or a random portfolio matches the proposed selection rule.",
+    "confounds": "Defining coverage around the shared systems outputs would guarantee its success; disturbance classes and portfolio size must be fixed independently. Artifact variants from one world are not independent trials.",
+    "prior": [
+      {
+        "id": "pal-2026-swarmworld",
+        "relation": "Direct prior distinguishes portfolio resilience from strongest-artifact performance."
+      },
+      {
+        "id": "leibo-2019-autocurricula",
+        "relation": "Motivates innovation through interaction as a position paper, not experimental support."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Choose objectively scored artifact types and a held-out disturbance generator.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/commons.md",
+      "researchers/vishesh/notes/project-briefs/culture.md",
+      "researchers/vishesh/notes/project-briefs/diversity.md"
+    ]
+  },
+  {
+    "id": "SOC-27",
+    "area": "llm-agent-swarms",
+    "title": "Credit verified contributions instead of message volume",
+    "question": "Does contribution credit increase useful shared work or merely change how agents report it?",
+    "hypothesis": "Credit tied to independently validated artifacts increases useful contributions more than visibility-based credit, but may reduce help on uncredited tasks.",
+    "test": "Randomize complete synthetic research groups to no credit, message-count credit or verified-artifact credit. Give identical task goals, resource costs and total token budgets; keep task validators separate from agents. Evaluate novel task worlds with both directly creditable production and essential maintenance work. Rotate contributor identities.",
+    "baseline": "An uncredited common cache and a simple equal-share budget allocation.",
+    "metrics": [
+      "Verified useful artifacts",
+      "Maintenance completion",
+      "Duplicated claims",
+      "Contribution concentration",
+      "Total utility"
+    ],
+    "falsifier": "Credit only increases reported contribution, or verified output gains are offset by abandoned maintenance.",
+    "confounds": "The reward design can predetermine behavior; show outcomes across more than one incentive strength. Programmed noncontributors are introduced roles, not evidence that cheating emerged spontaneously.",
+    "prior": [
+      {
+        "id": "leibo-2021-scalable",
+        "relation": "Existing social-dilemma benchmark motivates varied partners and held-out situations."
+      },
+      {
+        "id": "pal-2026-swarmworld",
+        "relation": "Functional artifacts provide a concrete collective-output comparison."
+      }
+    ],
+    "novelty": "speculative",
+    "feasibility": "api-small",
+    "needs": "Specify utility independently of credit, including maintenance that the credit rule may neglect.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/commons.md",
+      "researchers/vishesh/notes/project-briefs/institutions.md"
+    ]
+  },
+  {
+    "id": "SOC-28",
+    "area": "llm-agent-swarms",
+    "title": "Pay for verification as a public good",
+    "question": "Can a small shared verification allowance prevent everyone from waiting for somebody else to check a result?",
+    "hypothesis": "Explicitly funding one verifier per disputed artifact reduces duplicated checks and unchecked reuse more than an unfunded request for caution.",
+    "test": "Randomize whole shared-cache task episodes to voluntary checking, rotating funded verifier or random checking subsidies. All arms have equal total inference and tool budgets: verification funding is taken from production. Vary the rate of accidentally invalid artifacts using generated seeds and include clean worlds. Count checked artifacts and actual downstream behavior.",
+    "baseline": "Uniform random verification at the same cost and independent work without sharing.",
+    "metrics": [
+      "Useful output per total budget",
+      "False-result reuse",
+      "Duplicated verification",
+      "Good work delayed"
+    ],
+    "falsifier": "Funding does not improve net utility beyond random checking, or its overhead dominates at the prespecified error mixture.",
+    "confounds": "Forced checks test a scheduling rule, not spontaneous cooperation; a perfect validator is an explicit environmental assumption. Keep false reports separate from noncontribution.",
+    "prior": [
+      {
+        "id": "leibo-2021-scalable",
+        "relation": "Social sharing and partner variation are established benchmark concerns."
+      },
+      {
+        "id": "cemri-2025-why",
+        "relation": "Documents verification failures; does not prove subsidies solve them."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Choose a validator cost model and a held-out contamination distribution before selecting a subsidy.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/commons.md",
+      "researchers/vishesh/notes/project-briefs/whistleblowing.md",
+      "researchers/vishesh/notes/project-briefs/institutions.md"
+    ]
+  },
+  {
+    "id": "SOC-29",
+    "area": "llm-agent-swarms",
+    "title": "Make a report lead to a verifiable response",
+    "question": "Does an acknowledged review channel improve remediation beyond simply making reporting available?",
+    "hypothesis": "A structured report with a bounded response deadline raises verified correction without a disproportionate rise in false interventions.",
+    "test": "Randomize independent sandbox team episodes to ordinary warnings, a reporting endpoint or evidence-structured reports with an assigned response. Keep total reviewer and producer computation equal; include clean tasks, genuine invalid artifacts and ambiguous cases. The evaluator records noticing, reporting, review and correction as distinct stages rather than assuming they co-occur.",
+    "baseline": "An ordinary warning delivered to the same reviewer and a fixed random audit at matched cost.",
+    "metrics": [
+      "Verified remediation",
+      "False interventions",
+      "Report precision/recall",
+      "Time to response",
+      "Legitimate completion"
+    ],
+    "falsifier": "More reports do not produce more correct remediation, or false interventions erase the utility gain.",
+    "confounds": "An imposed responder measures institutional design, not agents spontaneously protecting one another. Ambiguous reports require an unresolved category; invalid output alone does not identify malicious intent.",
+    "prior": [
+      {
+        "id": "cemri-2025-why",
+        "relation": "Supports explicit verification and outcome-based failure labels."
+      },
+      {
+        "id": "leibo-2021-scalable",
+        "relation": "Partner and scenario variation offer an evaluation precedent for social mechanisms."
+      }
+    ],
+    "novelty": "speculative",
+    "feasibility": "api-small",
+    "needs": "Define reversible remediation, objective incident labels and review-cost accounting.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/whistleblowing.md",
+      "researchers/vishesh/notes/project-briefs/dissent.md",
+      "researchers/vishesh/notes/project-briefs/institutions.md"
+    ]
+  },
+  {
+    "id": "SOC-30",
+    "area": "llm-agent-swarms",
+    "title": "Appeal false rejections without overwhelming review",
+    "question": "When is an appeal step worth its cost in collective artifact review?",
+    "hypothesis": "A single evidence-bearing appeal restores valid work mistakenly rejected by peers, with gains concentrated where first-pass review is noisy.",
+    "test": "Randomize entire shared-artifact episodes to no appeal, one structured appeal or unrestricted discussion under a common hard token cap. Independently vary first-review noise using scripted reviewers initially. Include valid and invalid artifacts, charge all adjudication against production resources, and then test the chosen rule with agent reviewers on held-out episodes.",
+    "baseline": "A second random review using the same tokens and ordinary discussion without formal appeal rights.",
+    "metrics": [
+      "Valid artifacts restored",
+      "Invalid artifacts released",
+      "Resolution latency",
+      "Review cost",
+      "Net useful output"
+    ],
+    "falsifier": "Structured appeals do not beat an equally funded second review or chiefly help invalid artifacts escape rejection.",
+    "confounds": "Scripted reviewer noise isolates a mechanism but does not model every real dispute. Appeals must supply genuinely checkable evidence rather than reveal the evaluator label.",
+    "prior": [
+      {
+        "id": "cemri-2025-why",
+        "relation": "Verification errors motivate evaluating mistaken review as well as mistaken production."
+      },
+      {
+        "id": "leibo-2021-scalable",
+        "relation": "Held-out partner scenarios are a useful evaluation pattern, not direct appeal evidence."
+      }
+    ],
+    "novelty": "speculative",
+    "feasibility": "api-small",
+    "needs": "Choose a bounded appeal rule and validate clean, invalid and ambiguous artifact classes.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/institutions.md",
+      "researchers/vishesh/notes/project-briefs/dissent.md"
+    ]
+  },
+  {
+    "id": "SOC-31",
+    "area": "llm-agent-swarms",
+    "title": "Find where uncertainty disappears in retelling",
+    "question": "Which message format preserves a claims scope and uncertainty across repeated summaries?",
+    "hypothesis": "Separating observation, inference and uncertainty in a short template reduces certainty inflation more than adding a generic accuracy warning.",
+    "test": "Randomize entire synthetic transmission chains to free prose, a structured template or verbatim forwarding. Use equal per-hop token and memory caps, counterbalanced chain lengths and explicit source observations with known quantities and uncertainty. Score atomic claims after every hop with deterministic fields where possible; reserve unseen source types for final evaluation.",
+    "baseline": "Verbatim forwarding and a single summary with the same total compute budget; include accurate-transmission negative controls.",
+    "metrics": [
+      "Quantity/scope fidelity",
+      "Unsupported certainty increase",
+      "Useful information retained",
+      "End-task correctness"
+    ],
+    "falsifier": "The template does not preserve fidelity on held-out source types or only succeeds by dropping useful claims.",
+    "confounds": "Similarity is not proof of copying in real traces; here the harness records actual delivery. Hops within one chain are dependent, so uncertainty is computed across independent chains.",
+    "prior": [
+      {
+        "id": "perez-2024-cultural",
+        "relation": "Direct precedent for transmission and transformation experiments."
+      },
+      {
+        "id": "park-2023-generative",
+        "relation": "Reflection and memory give a natural retelling mechanism, without proving factual fidelity."
+      }
+    ],
+    "novelty": "extension",
+    "feasibility": "api-small",
+    "needs": "Define uncertainty labels and a fidelity rubric before generating candidate summaries.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/telephone.md",
+      "researchers/vishesh/notes/project-briefs/memory.md"
+    ]
+  },
+  {
+    "id": "SOC-32",
+    "area": "llm-agent-swarms",
+    "title": "Stress-test a casefile when logs are missing",
+    "question": "Can evidence-linked casefiles prevent an automated investigator from inventing causal connections under partial logs?",
+    "hypothesis": "Explicit missing-record markers improve abstention and supported answers relative to a polished chronological summary.",
+    "test": "Generate independent small-agent episodes with fully logged actions, then randomize episode copies to controlled log deletion, timestamp noise and summary-only records. Compare an investigator agent given a structured casefile versus the same records in chronological order under identical context and token caps. Score factual answers and unsupported causal assertions against the hidden complete record.",
+    "baseline": "Chronological search plus a basic summary and a full-log diagnostic upper bound.",
+    "metrics": [
+      "Supported-answer rate",
+      "Unsupported attribution",
+      "Critical omissions",
+      "Abstention calibration",
+      "Investigation cost"
+    ],
+    "falsifier": "Casefiles improve apparent completeness but not correctness, or missing-data labels fail to reduce unsupported assertions.",
+    "confounds": "Synthetic ground truth is limited to recorded interventions and events; the hidden record does not reveal internal intentions. This is an agent-evaluation precursor, not a human-usability study.",
+    "prior": [
+      {
+        "id": "cemri-2025-why",
+        "relation": "Existing failure taxonomy supplies annotation categories, not causal proof."
+      },
+      {
+        "id": "gh-yazandabain-swarmtrace",
+        "relation": "Existing temporal reconstruction tool requires a concrete increment beyond another graph."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "api-small",
+    "needs": "Define an answer key with deliberately unanswerable questions and a realistic missingness process.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/casefile.md",
+      "researchers/vishesh/notes/project-briefs/telephone.md"
+    ]
+  },
+  {
+    "id": "SOC-33",
+    "area": "llm-agent-swarms",
+    "title": "Predict unseen agents' choices from one agent",
+    "question": "How far does a benign choice model learned from one agent transfer across roles and model families?",
+    "hypothesis": "A choice predictor transfers within a shared model and task rubric better than across roles, and adds little beyond a generic task-feature baseline after role changes.",
+    "test": "Split synthetic project-allocation tasks into profiling and sealed evaluation sets. Observe one agents choices, freeze a simple predictor, then randomize fresh team episodes to homogeneous or mixed models and stable or changed roles. Keep profiling-query budget fixed and separately charge it to end-to-end cost. Predict pre-discussion individual choices and final group choices without manipulating content.",
+    "baseline": "Generic task-feature prediction, the stated rubric alone and a predictor fitted to a randomly chosen different agent.",
+    "metrics": [
+      "Held-out choice accuracy",
+      "Calibration",
+      "Individual-to-group transfer gap",
+      "Queries per improvement"
+    ],
+    "falsifier": "Profiling supplies no incremental predictive value or transfers equally well across all role and model changes.",
+    "confounds": "Good prediction does not identify internal utility. Task preference stability and training/test leakage must be measured; rationales are supplementary observations, not the target variable.",
+    "prior": [
+      {
+        "id": "kim-2021-reward",
+        "relation": "Formal identifiability limits prevent equating prediction with recovered rewards."
+      },
+      {
+        "id": "liu-2025-can",
+        "relation": "One-known-agent collective influence is close prior, but uses optimized adversarial inputs."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Freeze task families and a simple predictor before evaluation; keep this lane benign and separate from attack development.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/diversity.md",
+      "researchers/vishesh/notes/agent-swarm-influence-research.md"
+    ]
+  },
+  {
+    "id": "SOC-34",
+    "area": "llm-agent-swarms",
+    "title": "Separate wording convergence from changed decisions",
+    "question": "Does a group that starts using the same wording also make the same substantive choices?",
+    "hypothesis": "Visible examples increase lexical similarity more reliably than they change independently scored beliefs or actions.",
+    "test": "Randomize complete synthetic discussion episodes to shared phrasing examples, semantically equivalent varied examples or no examples. Keep facts, source count, displayed length and total reasoning budget equal. Counterbalance starting choices and measure selections privately before and after communication, plus subsequent actions in an exact-score task.",
+    "baseline": "Independent agents exposed to the same examples without peer messages and a wording-shuffled placebo.",
+    "metrics": [
+      "Lexical similarity",
+      "Choice convergence",
+      "Accuracy",
+      "Action convergence",
+      "Common-exposure contrast"
+    ],
+    "falsifier": "Wording convergence consistently predicts changed choices after initial beliefs and common exposure are controlled, contradicting the proposed dissociation.",
+    "confounds": "Lexical measures can track topic rather than copying; no inference about beliefs should rest on phrasing alone. Whole episodes are randomized because communication creates interference within teams.",
+    "prior": [
+      {
+        "id": "de-marzo-2026-copying",
+        "relation": "One observational episode supports visible convention and wording copying, not universal belief contagion."
+      },
+      {
+        "id": "li-2026-socialization",
+        "relation": "Moltbook counterevidence motivates separating semantic stability from mutual influence."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Choose objective choice/action measures and inspect methods of both observational anchors before transfer claims.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/culture.md",
+      "researchers/vishesh/notes/project-briefs/telephone.md",
+      "researchers/vishesh/notes/agent-swarm-influence-research.md"
+    ]
+  },
+  {
+    "id": "SOC-35",
+    "area": "llm-agent-swarms",
+    "title": "Validate a cheap surrogate at the collective level",
+    "question": "Can a model of individual updates reproduce group-level outcomes on new questions and network structures?",
+    "hypothesis": "At equal calibration cost, a surrogate including claim-specific priors and observed history improves collective forecasts within the calibration distribution, but its advantage shrinks on new question families or topologies.",
+    "test": "Create independent small-population episodes with randomized starting conditions and network topology. Split by question family and topology before fitting a surrogate. Compare one-step, history-aware and simple copying models under an equal calibration-call budget. Reserve real LLM episodes for a held-out collective forecast test; report offline sweep savings only after fidelity is checked.",
+    "baseline": "Persistence, majority copying and a prior-only predictor, all given the same observable history.",
+    "metrics": [
+      "One-step prediction",
+      "End-state distribution error",
+      "Calibration of consensus probability",
+      "Compute saved at fixed forecast error"
+    ],
+    "falsifier": "The history-and-prior model fails to improve collective forecasts over simpler models given the same observed rounds and budget, or its advantage does not shrink under the prespecified transfer shifts.",
+    "confounds": "Future trajectory leakage, reused statements and fitted claim priors can make forecasts look transferable. Single runs at large population are not replicated evidence.",
+    "prior": [
+      {
+        "id": "itkin-2026-local",
+        "relation": "Direct prior reports transfer limits and unconfirmed earlier history effects."
+      },
+      {
+        "id": "fukushima-2026-message",
+        "relation": "Claim-dependent fields show why microscopic weights alone may fail collectively."
+      }
+    ],
+    "novelty": "replication",
+    "feasibility": "api-small",
+    "needs": "Read surrogate validation methods and freeze a family-disjoint split with available-observation limits.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/collective-sensing.md",
+      "researchers/vishesh/notes/project-briefs/coordination.md"
+    ]
+  },
+  {
+    "id": "SOC-36",
+    "area": "llm-agent-swarms",
+    "title": "Rank trace clusters by useful evidence, not spectacle",
+    "question": "Can a transparent triage rule retrieve useful coordination cases across different scaffolds?",
+    "hypothesis": "Features tied to verifiable shared artifacts transfer better than repeated phrasing or temporal coincidence, but performance falls when access logs are absent.",
+    "test": "Generate independent benign multi-agent and ordinary automation episodes across synthetic scaffolds with known communication channels. Hold out an entire scaffold and task family. Cross intact versus missing access logs using prespecified masks. Freeze ranking on development data, then give investigator agents equal review-token budgets for ranked, random or keyword-selected clusters. Score evidence-supported answers, not real-operator claims.",
+    "baseline": "Random review, simple keyword filtering and an artifact-only heuristic with the same inspection allowance.",
+    "metrics": [
+      "Precision at fixed review budget",
+      "Coverage of coordination cases",
+      "False positives",
+      "Supported conclusions"
+    ],
+    "falsifier": "The ranking does not transfer to the held-out scaffold or performs no better than keywords once review cost is included.",
+    "confounds": "Synthetic labels establish coordination in the testbed, not wild AI authorship, shared operator or harmful intent. Related traces from one episode must remain in one split.",
+    "prior": [
+      {
+        "id": "gh-yazandabain-swarmtrace",
+        "relation": "Existing temporal tooling illustrates why current and historical activity differ."
+      },
+      {
+        "id": "cemri-2025-why",
+        "relation": "Trace annotation precedent supports explicit evidence categories rather than automatic intent labels."
+      }
+    ],
+    "novelty": "measurement",
+    "feasibility": "api-small",
+    "needs": "Define scaffold-disjoint data generation and reviewable coordination labels; a real-archive extension needs licensed redacted data.",
+    "briefs": [
+      "researchers/vishesh/notes/project-briefs/discovery.md",
+      "researchers/vishesh/notes/project-briefs/casefile.md"
+    ]
+  },
+  {
+    "id": "SOC-37",
+    "area": "llm-agent-swarms",
+    "title": "Does profiling improve influence through ordinary retrieval?",
+    "question": "Does tailoring a bounded external document from one agents observed choices shift an unseen groups decisions more than generic framing?",
+    "hypothesis": "Tailoring produces greater held-out target-choice lift than generic framing, with a larger incremental effect when peer communication is enabled.",
+    "test": "Profile one agent on separate fictional project-choice tasks, then freeze the tailoring rule. Randomize independent group episodes to neutral, generic or tailored fact-preserving documents, crossed with peer communication enabled or disabled. Publish one bounded document in a local search corpus reached through ordinary retrieval; never force delivery. Match document length, adaptation-query budget, external information opportunities and total inference. Log retrieval rank, access, pre-discussion choices and final decisions.",
+    "baseline": "Generic framing with equal tuning budget, neutral documents, and matched no-communication episodes.",
+    "metrics": [
+      "End-to-end target-choice lift",
+      "Retrieval-conditional lift",
+      "Independent task utility",
+      "Peer-channel interaction",
+      "Profiling cost"
+    ],
+    "falsifier": "Tailoring adds no held-out lift over generic framing, or enabling communication does not amplify its incremental effect.",
+    "confounds": "Better substantive options are not manipulation; report utility separately. Common retrieval is not peer transmission, and channel assignment alone does not identify mediation.",
+    "prior": [
+      {
+        "id": "nestaas-2024-adversarial",
+        "relation": "External-content choice influence is established; retrieval access assumptions matter."
+      },
+      {
+        "id": "liu-2025-can",
+        "relation": "One-known-agent influence precedent uses optimized adversarial inputs, not this framing."
+      }
+    ],
+    "novelty": "boundary-test",
+    "feasibility": "api-small",
+    "needs": "Seal profiling/evaluation tasks and define a fact-preserving rewrite rubric; synthetic content only, no real outreach.",
+    "briefs": [
+      "researchers/vishesh/notes/agent-swarm-influence-research.md"
+    ]
+  }
+]
