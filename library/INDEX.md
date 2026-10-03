@@ -2,7 +2,7 @@
 
 # Library index
 
-1923 entries.
+1929 entries.
 
 ## Papers (1206)
 
@@ -1352,7 +1352,7 @@
 | [moridinamael-2019-complex](blogs/moridinamael-2019-complex.md) | Complex Behavior from Simple (Sub)Agents | 2019 | 1 | skim | fork-merge-security, collective-decision, collective-motion | shadow/sol-w4 |
 | [sotala-2019-subagents](blogs/sotala-2019-subagents.md) | Subagents, neural Turing machines, thought selection, and blindspots | 2019 | 1 | skim | fork-merge-security, collective-decision | shadow/sol-w4 |
 
-## Threads (459)
+## Threads (465)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1381,6 +1381,7 @@
 | [x-conitzer-2050572788197462031](threads/x-conitzer-2050572788197462031.md) | conitzer: interleaving tokens from multiple LLMs can be somewhat robust even when a majority is corrupted | 2026 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/x-threads |
 | [x-daveholtz-2017716355475124330](threads/x-daveholtz-2017716355475124330.md) | daveholtz: Moltbook working paper, 93.5% of agent comments get zero replies and conversations max out at depth 5 | 2026 | 4 | full | swarm-detection, llm-agent-swarms | dmarz/x-threads |
 | [x-deepfates-2095939054101844407](threads/x-deepfates-2095939054101844407.md) | deepfates reacts to the collusion.wiki report: agents find Schelling points to talk; proposes a known public place for agents to meet | 2026 | 4 | full | llm-agent-swarms, fork-merge-security | shadow/sol-1 |
+| [x-dfir-radar-2105100847134785827](threads/x-dfir-radar-2105100847134785827.md) | DFIR Radar: PaperPhone clustering via timing, infrastructure and browser contradictions | 2026 | 4 | full | swarm-detection | shadow/sol-w8 |
 | [x-feizisoheil-1638198588634275841](threads/x-feizisoheil-1638198588634275841.md) | FeiziSoheil: author thread: AI-text detectors fail under paraphrasing, with an impossibility bound and watermark spoofing | 2023 | 4 | full | swarm-detection | dmarz/x-threads |
 | [x-floriangallwitz-1551857999215484929](threads/x-floriangallwitz-1551857999215484929.md) | FlorianGallwitz: Botometer-based social-bot prevalence studies violate Bayes' theorem; manual check of hundreds of 'bots' found none | 2022 | 4 | full | swarm-detection | dmarz/x-threads |
 | [x-furongh-1645780628724502528](threads/x-furongh-1645780628724502528.md) | furongh: AI-generated text is almost always detectable given enough samples; AUROC bound rises exponentially to 1 with sample count | 2023 | 4 | full | swarm-detection | dmarz/x-threads |
@@ -1557,6 +1558,7 @@
 | [x-alllivingactive-1668429623389196289](threads/x-alllivingactive-1668429623389196289.md) | AllLivingActive: programmable wheeled robots that reproduce active Brownian, run-and-tumble and Brownian motion | 2023 | 2 | full | active-matter, swarm-robotics | dmarz/x-threads |
 | [x-amritsinghbedi3-1849829878599909518](threads/x-amritsinghbedi3-1849829878599909518.md) | amritsinghbedi3: co-author ties SynthID paraphrase weakness to the possibility paper's token-count result | 2024 | 2 | full | swarm-detection | dmarz/x-threads |
 | [x-andrewyng-2102140576498065758](threads/x-andrewyng-2102140576498065758.md) | Ng: AI fear is overhyped; the '1,200-agent swarm' that hacked Hugging Face is like 1,300 processes on a laptop, blame sandboxing and the operator, not the agent | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-w5 |
+| [x-apakfnfe-2105995133900542105](threads/x-apakfnfe-2105995133900542105.md) | Giorgi: bursty agent inference and shared-prefix caching | 2026 | 2 | full | swarm-detection | shadow/sol-w8 |
 | [x-arankomatsuzaki-1618059080756756482](threads/x-arankomatsuzaki-1618059080756756482.md) | arankomatsuzaki: restatement of 'A Watermark for Large Language Models' (statistical test, OPT) | 2023 | 2 | full | swarm-detection | dmarz/x-threads |
 | [x-arankomatsuzaki-1618785878935207936](threads/x-arankomatsuzaki-1618785878935207936.md) | arankomatsuzaki: DetectGPT, zero-shot machine-generated text detection from log-probability curvature | 2023 | 2 | full | swarm-detection | dmarz/x-threads |
 | [x-arankomatsuzaki-1661178040242655233](threads/x-arankomatsuzaki-1661178040242655233.md) | arankomatsuzaki: paper-digest thread on multiagent debate improving LLM factuality and reasoning | 2023 | 2 | full | llm-agent-swarms, sync-consensus | dmarz/x-threads |
@@ -1681,6 +1683,7 @@
 | [x-ono-shunsuke-1618739307405086724](threads/x-ono-shunsuke-1618739307405086724.md) | ono_shunsuke: Japanese summary of the LLM watermark paper: green-list tokens, 99% confidence from 23 words | 2023 | 2 | full | swarm-detection | dmarz/x-threads |
 | [x-oran-ge-1645640532033703936](threads/x-oran-ge-1645640532033703936.md) | oran_ge: Stanford's town of 25 LLM agents shows emergent social behaviour such as a self-organised Valentine's party | 2023 | 2 | full | llm-agent-swarms | dmarz/x-threads |
 | [x-oran-ge-1669495770159153152](threads/x-oran-ge-1669495770159153152.md) | oran_ge: Chinese commentary: 33-46% of MTurk summarisation workers estimated to use LLMs | 2023 | 2 | full | swarm-detection | dmarz/x-threads |
+| [x-ormkaa-2106457952416604209](threads/x-ormkaa-2106457952416604209.md) | RO1: detector-based AI web-text estimate and synthetic-data training costs | 2026 | 2 | full | swarm-detection | shadow/sol-w8 |
 | [x-park-jinwoo-2103980573530423306](threads/x-park-jinwoo-2103980573530423306.md) | park_jinwoo: Korean thread: AI detectors, a Goncourt-season accusation, and bias against non-native writers | 2026 | 2 | full | swarm-detection | dmarz/x-threads |
 | [x-peterajensen-2018204061137310201](threads/x-peterajensen-2018204061137310201.md) | peterAjensen: reposts the Project Sid abstract on 10-1000+ agent civilisations in Minecraft | 2026 | 2 | full | llm-agent-swarms, marl-emergence | dmarz/x-threads |
 | [x-phalanetwork-1971952974428885031](threads/x-phalanetwork-1971952974428885031.md) | PhalaNetwork: Phala announces the dstack whitepaper on making TEE hardware a zero-trust platform | 2025 | 2 | full | sybil-resistance | dmarz/x-threads |
@@ -1688,6 +1691,7 @@
 | [x-policytensor-2096383641064808902](threads/x-policytensor-2096383641064808902.md) | Policy Tensor: 'The Discovery of Agent Society', argument that agent-society capabilities are emergent and cannot be read off single-agent evals | 2026 | 2 | skim | llm-agent-swarms | shadow/sol-w4 |
 | [x-ponguru-1897517580010840453](threads/x-ponguru-1897517580010840453.md) | ponguru: announcing Great Models Think Alike and this Undermines AI Oversight | 2025 | 2 | skim | fork-merge-security, llm-agent-swarms | dmarz/x-threads |
 | [x-qingyun-wu-1708177340080009634](threads/x-qingyun-wu-1708177340080009634.md) | qingyun_wu: co-author promotes AutoGen trending #2 on GitHub | 2023 | 2 | full | llm-agent-swarms | dmarz/x-threads |
+| [x-realarmaansidhu-2096733627254006256](threads/x-realarmaansidhu-2096733627254006256.md) | Sidhu: crawler tolls incentivize identification but user-agent strings are unauthenticated | 2026 | 2 | full | swarm-detection | shadow/sol-w8 |
 | [x-realmusha-2104178442266915136](threads/x-realmusha-2104178442266915136.md) | Ryder: failed Solana arbitrage retries as incentive-driven bot traffic | 2026 | 2 | skim | sybil-resistance | shadow/sol-w8 |
 | [x-retractionwatch-1773787709032517788](threads/x-retractionwatch-1773787709032517788.md) | RetractionWatch: Retraction Watch relays estimate that at least 60,000 papers in 2023 were LLM-assisted | 2024 | 2 | full | swarm-detection | dmarz/x-threads |
 | [x-ricard-sole-952909281237577733](threads/x-ricard-sole-952909281237577733.md) | ricard_sole: recommends a review on why living systems sit near criticality | 2018 | 2 | full | criticality-measurement | dmarz/x-threads |
@@ -1710,6 +1714,7 @@
 | [x-stakaya-1703203970955743541](threads/x-stakaya-1703203970955743541.md) | _stakaya: Japanese-language pointer to the 50-page survey on LLM-based agents | 2023 | 2 | full | llm-agent-swarms | dmarz/x-threads |
 | [x-stevehind-2105258929764634820](threads/x-stevehind-2105258929764634820.md) | Hind (Lorikeet): launch of agent traffic detection for customer support; up to 3% of inbound support traffic is from AI agents | 2026 | 2 | full | swarm-detection | shadow/sol-w2 |
 | [x-stretchcloud-2105586266100117924](threads/x-stretchcloud-2105586266100117924.md) | Sarkar: the anti-bot stack vs AI agents, Cloudflare crawler numbers, and a pitch for self-healing scrapers (DeepScrape) | 2026 | 2 | full | swarm-detection | shadow/sol-w2 |
+| [x-stretchcloud-2105686427006652436](threads/x-stretchcloud-2105686427006652436.md) | Sarkar: paid crawler access is not abuse defense or extraction efficiency | 2026 | 2 | full | swarm-detection | shadow/sol-w8 |
 | [x-svpino-1624030448799350784](threads/x-svpino-1624030448799350784.md) | svpino: much online content will come from ChatGPT, and DetectGPT looks promising | 2023 | 2 | full | swarm-detection | dmarz/x-threads |
 | [x-tfoltynek-1673944588023652352](threads/x-tfoltynek-1673944588023652352.md) | TFoltynek: co-author: test of 14 AI-text detection tools on 54 documents finds no easy solution | 2023 | 2 | full | swarm-detection | dmarz/x-threads |
 | [x-thegautamkamath-1683921664936153089](threads/x-thegautamkamath-1683921664936153089.md) | thegautamkamath: ICML 2023 outstanding paper for 'A Watermark for Large Language Models'; practicality debated | 2023 | 2 | full | swarm-detection | dmarz/x-threads |
@@ -1720,6 +1725,7 @@
 | [x-tszzl-1995734804172579251](threads/x-tszzl-1995734804172579251.md) | tszzl (roon): current AI text is detectable and labs could do better than Pangram | 2025 | 2 | full | swarm-detection | dmarz/x-threads |
 | [x-tweetsatpreet-2082489043699323127](threads/x-tweetsatpreet-2082489043699323127.md) | tweetsatpreet: virtual weakly electric fish trained with RL show biological signalling statistics and an emergent pecking order | 2026 | 2 | skim | marl-emergence, collective-decision | dmarz/x-threads |
 | [x-tzerhan29-2031625155605299627](threads/x-tzerhan29-2031625155605299627.md) | tzerhan29: author: 'Three phases of odd robotic matter', robotic swarms as a state of matter | 2026 | 2 | full | active-matter, swarm-robotics | dmarz/x-threads |
+| [x-untracenetwork-2105717812530679815](threads/x-untracenetwork-2105717812530679815.md) | untrace network: request-origin visibility as an agent accountability requirement | 2026 | 2 | full | swarm-detection | shadow/sol-w8 |
 | [x-vishuguttal-1111546197150318592](threads/x-vishuguttal-1111546197150318592.md) | vishuguttal: co-author announces 'Noise-Induced Schooling of Fish' | 2019 | 2 | full | collective-motion, criticality-measurement | dmarz/x-threads |
 | [x-wbialek-1044418452952416257](threads/x-wbialek-1044418452952416257.md) | wbialek: renormalization-group approach to large populations of neurons | 2018 | 2 | full | criticality-measurement | dmarz/x-threads |
 | [x-wellingmax-1847542387695841300](threads/x-wellingmax-1847542387695841300.md) | wellingmax: Max Welling promotes AKOrN, networks of generalised Kuramoto oscillators replacing threshold units | 2024 | 2 | full | sync-consensus | dmarz/x-threads |
