@@ -2,7 +2,7 @@
 
 # Library index
 
-2470 entries.
+2475 entries.
 
 ## Papers (1564)
 
@@ -1573,7 +1573,7 @@
 | [elgammal-2026-evolution](papers/elgammal-2026-evolution.md) | Evolution of Deep Learning Models for Misinformation Detection in Social Media Textual Data: Background, Architectures, Datasets, and Emerging LLM Applications | 2026 | 1 | abstract | swarm-detection | shadow/sol-w4 |
 | [mckee-2023-chatbots](papers/mckee-2023-chatbots.md) | Chatbots in a Honeypot World | 2023 | 1 | abstract | swarm-detection | dmarz/sd-honeypots |
 
-## Blogs (193)
+## Blogs (194)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1603,6 +1603,7 @@
 | [graphite-2026-ai](blogs/graphite-2026-ai.md) | AI Now Writes as Many Online Articles as Humans | 2026 | 5 | full | swarm-detection | shadow/sol-g49 |
 | [greenblatt-2026-brief](blogs/greenblatt-2026-brief.md) | Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident | 2026 | 5 | skim | swarm-detection, llm-agent-swarms | shadow/sol-w7 |
 | [human-2026-measuring](blogs/human-2026-measuring.md) | Measuring the AI-Driven Internet with The 2026 State of AI Traffic & Cyberthreat Benchmark Report | 2026 | 5 | full | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
+| [knownagents-2026-directory](blogs/knownagents-2026-directory.md) | Agent Directory and About Known Agents (formerly Dark Visitors) | 2026 | 5 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 | [malhotra-2024-setting](blogs/malhotra-2024-setting.md) | Setting Your Pet Rock Free. | 2024 | 5 | full | sybil-resistance, llm-agent-swarms | dmarz/sybil-foundations |
 | [mallen-2024-measuring](blogs/mallen-2024-measuring.md) | Measuring whether AIs can statelessly strategize to subvert security measures | 2024 | 5 | skim | fork-merge-security, llm-agent-swarms | shadow/sol-w3 |
 | [metr-2026-brief](blogs/metr-2026-brief.md) | Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident | 2026 | 5 | full | llm-agent-swarms, sybil-resistance | vishesh/senku-1 |
@@ -2392,16 +2393,20 @@
 | [gh-px4-px4-autopilot](code/gh-px4-px4-autopilot.md) | PX4 Autopilot: open-source flight control stack with multi-vehicle SITL simulation used for drone-swarm tooling | 2012 | 1 | abstract | swarm-robotics | shadow/sol-1 |
 | [gh-ruvnet-ruflo](code/gh-ruvnet-ruflo.md) | Ruflo (formerly claude-flow): meta-harness for Claude Code and Codex with '100+ agents' and 'coordinated swarms' | 2025 | 1 | abstract | llm-agent-swarms | shadow/sol-1 |
 
-## Datasets (12)
+## Datasets (16)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
 | [data-ai-village-2026](datasets/data-ai-village-2026.md) | AI Village dataset | 2026 | 5 | skim | llm-agent-swarms, swarm-detection, fork-merge-security | shadow/sol-g49 |
+| [data-erc8004-2026](datasets/data-erc8004-2026.md) | ERC-8004 Agent Dataset: Collection Pipeline and Harvard Dataverse release | 2026 | 5 | ran | sybil-resistance, llm-agent-swarms, swarm-detection | shadow/sol-g49 |
 | [data-fox8-2023](datasets/data-fox8-2023.md) | fox8-23: ChatGPT-powered Twitter botnet accounts (1,140 bots) plus 1,140 human accounts, up to 200 tweets each | 2023 | 5 | skim | swarm-detection, llm-agent-swarms, sybil-resistance | dmarz/sd-code-data |
+| [data-io-campaigns-2024](datasets/data-io-campaigns-2024.md) | Labeled Datasets for Research on Information Operations | 2024 | 5 | skim | swarm-detection, sybil-resistance | shadow/sol-g49 |
 | [data-lurebot-2023](datasets/data-lurebot-2023.md) | Preliminary biohybrid experiments with the Behavioral Observation & Biohybrid Interaction framework (featuring the LureBot) | 2023 | 5 | ran | collective-motion, swarm-robotics, criticality-measurement | shadow/sol-g49 |
 | [data-sealed-swarm-2026](datasets/data-sealed-swarm-2026.md) | sealed-swarm-transcripts: Run manifest | 2026 | 5 | ran | llm-agent-swarms, swarm-detection, marl-emergence | shadow/sol-g49 |
+| [data-termina-2026](datasets/data-termina-2026.md) | Termina incident database snapshot, schema v9 | 2026 | 5 | ran | swarm-detection, llm-agent-swarms, meta | shadow/sol-g49 |
 | [data-botsim24-2024](datasets/data-botsim24-2024.md) | BotSim-24: Reddit-based dataset of 1,000 LLM-driven agent bots simulated alongside 1,907 real human accounts | 2024 | 4 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-hop-sybil-2022](datasets/data-hop-sybil-2022.md) | Hop Protocol airdrop Sybil lists: eliminated Sybil attacker addresses and final eligible set (2022) | 2022 | 4 | ran | sybil-resistance | dmarz/sybil-code-data |
+| [data-juelich-crowd-2019](datasets/data-juelich-crowd-2019.md) | Motion through a dense and stationary crowd | 2019 | 4 | ran | collective-motion, crowds-and-traffic, criticality-measurement | shadow/sol-g49 |
 | [data-moltbook-observatory-2026](datasets/data-moltbook-observatory-2026.md) | Moltbook Observatory Archive: incremental, date-partitioned dump of the agent-only social network Moltbook | 2026 | 4 | ran | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-moltgraph-2026](datasets/data-moltgraph-2026.md) | MoltGraph: 30-day temporal heterogeneous graph of Moltbook (agents, posts, comments, votes, feed snapshots) in Neo4j | 2026 | 4 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-twibot22-2022](datasets/data-twibot22-2022.md) | TwiBot-22: graph-based Twitter bot detection benchmark with 1 million users and heterogeneous relations (NeurIPS 2022 Datasets and Benchmarks) | 2022 | 4 | skim | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
