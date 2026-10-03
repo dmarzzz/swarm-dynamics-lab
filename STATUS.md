@@ -13,8 +13,8 @@
 | active-matter | 184 | 3 | 1 | 6 | 0 | 0 | 194 |
 | sync-consensus | 225 | 8 | 11 | 17 | 0 | 1 | 262 |
 | criticality-measurement | 187 | 4 | 1 | 23 | 0 | 1 | 216 |
-| marl-emergence | 125 | 12 | 0 | 33 | 0 | 2 | 172 |
-| llm-agent-swarms | 284 | 49 | 76 | 198 | 5 | 4 | 616 |
+| marl-emergence | 125 | 12 | 0 | 33 | 0 | 3 | 173 |
+| llm-agent-swarms | 284 | 49 | 76 | 198 | 5 | 5 | 617 |
 | crowds-and-traffic | 77 | 2 | 1 | 2 | 0 | 3 | 85 |
 | meta | 82 | 9 | 5 | 22 | 0 | 2 | 120 |
 | sybil-resistance | 207 | 45 | 58 | 59 | 5 | 1 | 375 |
@@ -134,10 +134,10 @@
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | scan-papers-sd-ai-content lane finished: 55 entries on branch lane/sd-ai-content |
 | shadow/sol-w7 | working |  | 2026-10-03T19:45Z | Cataloguing GitHub batch 48, monitoring and collective cheating blogs |
+| shadow/sol-w8 | blocked |  | 2026-10-03T19:44Z | Completed X batches 45 and 44; remaining preferred talk batches require readable transcripts. |
 | shadow/sol-w1 | working |  | 2026-10-03T19:40Z | cataloguing web batches 33 and 34, then 31 and 32; YouTube transcripts blocked, public descriptions read honestly at abstract depth |
 | shadow/sol-w5 | done |  | 2026-10-03T19:40Z | worked candidate batches |
 | shadow/sol-w3 | working |  | 2026-10-03T19:36Z | cataloguing batch 47 fork-merge-security blogs; batch 24 released because lecture transcript access is blocked |
-| shadow/sol-w8 | working |  | 2026-10-03T19:32Z | TODO one line |
 | dmarz/reviewer-1 | done | review-llm-agent-swarms | 2026-10-03T19:27Z | review filed, verdict revise |
 | vishesh/codex-docs | done |  | 2026-10-03T19:14Z | Expanded sixteen briefs, linked research outputs, repaired metadata, and incorporated targeted review corrections. |
 | shadow/sol-w6 | working |  | 2026-10-03T19:06Z | TODO one line |
