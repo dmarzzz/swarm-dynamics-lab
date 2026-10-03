@@ -6,20 +6,20 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 313 | 8 | 3 | 0 | 0 | 1 | 325 |
-| collective-decision | 236 | 8 | 18 | 6 | 0 | 2 | 270 |
-| swarm-robotics | 272 | 13 | 2 | 0 | 0 | 0 | 287 |
-| swarm-intelligence | 107 | 1 | 2 | 0 | 0 | 0 | 110 |
-| active-matter | 184 | 3 | 1 | 0 | 0 | 0 | 188 |
-| sync-consensus | 225 | 8 | 11 | 3 | 0 | 1 | 248 |
-| criticality-measurement | 186 | 4 | 0 | 5 | 0 | 1 | 196 |
-| marl-emergence | 123 | 12 | 0 | 0 | 0 | 1 | 136 |
-| llm-agent-swarms | 237 | 44 | 47 | 87 | 0 | 2 | 417 |
-| crowds-and-traffic | 76 | 2 | 1 | 0 | 0 | 0 | 79 |
-| meta | 77 | 9 | 3 | 13 | 0 | 2 | 104 |
-| sybil-resistance | 169 | 41 | 52 | 19 | 4 | 1 | 286 |
-| fork-merge-security | 214 | 11 | 37 | 26 | 0 | 3 | 291 |
-| swarm-detection | 0 | 2 | 12 | 60 | 0 | 0 | 74 |
+| collective-motion | 313 | 8 | 3 | 15 | 0 | 1 | 340 |
+| collective-decision | 236 | 8 | 18 | 19 | 0 | 2 | 283 |
+| swarm-robotics | 272 | 13 | 2 | 7 | 0 | 0 | 294 |
+| swarm-intelligence | 107 | 1 | 2 | 4 | 0 | 0 | 114 |
+| active-matter | 184 | 3 | 1 | 6 | 0 | 0 | 194 |
+| sync-consensus | 225 | 8 | 11 | 17 | 0 | 1 | 262 |
+| criticality-measurement | 186 | 4 | 0 | 23 | 0 | 1 | 214 |
+| marl-emergence | 123 | 12 | 0 | 33 | 0 | 1 | 169 |
+| llm-agent-swarms | 237 | 44 | 47 | 197 | 0 | 2 | 527 |
+| crowds-and-traffic | 76 | 2 | 1 | 2 | 0 | 0 | 81 |
+| meta | 77 | 9 | 3 | 22 | 0 | 2 | 113 |
+| sybil-resistance | 169 | 41 | 52 | 53 | 4 | 1 | 320 |
+| fork-merge-security | 214 | 11 | 37 | 67 | 0 | 3 | 332 |
+| swarm-detection | 0 | 2 | 12 | 186 | 0 | 0 | 200 |
 
 ## Tasks
 
@@ -96,32 +96,37 @@
 | [scan-papers-crowds-and-traffic](tasks/scan-papers-crowds-and-traffic.md) | done | p1 | scan | dmarz/crowds-and-traffic |  | 2026-10-03T18:18Z | Catalogue the papers: human crowds and traffic |
 | [scan-papers-swarm-intelligence](tasks/scan-papers-swarm-intelligence.md) | done | p1 | scan | dmarz/swarm-intelligence |  | 2026-10-03T18:19Z | Catalogue the papers: swarm intelligence algorithms |
 | [scan-papers-sync-consensus](tasks/scan-papers-sync-consensus.md) | done | p1 | scan | dmarz/sync-consensus |  | 2026-10-03T18:20Z | Catalogue the papers: synchronisation, consensus and networked control |
+| [scan-threads-x-crawl](tasks/scan-threads-x-crawl.md) | done | p1 | scan | dmarz/x-threads |  | 2026-10-03T19:32Z | Crawl X for author threads on every library arXiv paper, plus the agent-discourse trend chart |
 | [scan-threads-x-security](tasks/scan-threads-x-security.md) | done | p1 | scan | dmarz/x-threads |  | 2026-10-03T19:05Z | Catalogue X threads for the security topics (Sybil resistance, fork-merge security, swarm detection) via Apify |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
 
 ## Candidate batches
 
-28 free, 1 claimed, 17 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+24 free, 5 claimed, 17 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
 | [#19](https://github.com/dmarzzz/swarm-lab/issues/19) | claimed | 2026-10-03T19:30Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-02) |
+| [#24](https://github.com/dmarzzz/swarm-lab/issues/24) | claimed | 2026-10-03T19:32Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-01) |
+| [#28](https://github.com/dmarzzz/swarm-lab/issues/28) | claimed | 2026-10-03T19:32Z | [batch] web/crowds-and-traffic: 10 candidates (web-crowds-and-traffic-20261003-01) |
+| [#33](https://github.com/dmarzzz/swarm-lab/issues/33) | claimed | 2026-10-03T19:32Z | [batch] web/swarm-detection: 10 candidates (web-swarm-detection-20261003-01) |
+| [#48](https://github.com/dmarzzz/swarm-lab/issues/48) | claimed | 2026-10-03T19:31Z | [batch] blog/swarm-detection: 11 candidates (blog-swarm-detection-20261003-01) |
 | [#20](https://github.com/dmarzzz/swarm-lab/issues/20) | free | 2026-10-03T19:21Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-03) |
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
 | [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |
-| [#24](https://github.com/dmarzzz/swarm-lab/issues/24) | free | 2026-10-03T19:21Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-01) |
 | [#25](https://github.com/dmarzzz/swarm-lab/issues/25) | free | 2026-10-03T19:21Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-02) |
 | [#26](https://github.com/dmarzzz/swarm-lab/issues/26) | free | 2026-10-03T19:21Z | [batch] web/collective-motion: 3 candidates (web-collective-motion-20261003-03) |
 | [#27](https://github.com/dmarzzz/swarm-lab/issues/27) | free | 2026-10-03T19:21Z | [batch] web/criticality-measurement: 10 candidates (web-criticality-measurement-20261003-01) |
-| [#28](https://github.com/dmarzzz/swarm-lab/issues/28) | free | 2026-10-03T19:21Z | [batch] web/crowds-and-traffic: 10 candidates (web-crowds-and-traffic-20261003-01) |
 | [#29](https://github.com/dmarzzz/swarm-lab/issues/29) | free | 2026-10-03T19:21Z | [batch] web/crowds-and-traffic: 10 candidates (web-crowds-and-traffic-20261003-02) |
 | [#30](https://github.com/dmarzzz/swarm-lab/issues/30) | free | 2026-10-03T19:21Z | [batch] web/crowds-and-traffic: 3 candidates (web-crowds-and-traffic-20261003-03) |
 | [#31](https://github.com/dmarzzz/swarm-lab/issues/31) | free | 2026-10-03T19:21Z | [batch] web/llm-agent-swarms: 10 candidates (web-llm-agent-swarms-20261003-01) |
 | [#32](https://github.com/dmarzzz/swarm-lab/issues/32) | free | 2026-10-03T19:22Z | [batch] web/marl-emergence: 10 candidates (web-marl-emergence-20261003-01) |
-| [#33](https://github.com/dmarzzz/swarm-lab/issues/33) | free | 2026-10-03T19:30Z | [batch] web/swarm-detection: 10 candidates (web-swarm-detection-20261003-01) |
 | [#34](https://github.com/dmarzzz/swarm-lab/issues/34) | free | 2026-10-03T19:22Z | [batch] web/swarm-detection: 3 candidates (web-swarm-detection-20261003-02) |
-| | | | 13 more free batches |
+| [#35](https://github.com/dmarzzz/swarm-lab/issues/35) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 10 candidates (web-swarm-robotics-20261003-01) |
+| [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
+| [#37](https://github.com/dmarzzz/swarm-lab/issues/37) | free | 2026-10-03T19:22Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-01) |
+| | | | 9 more free batches |
 
 ## Agents
 
