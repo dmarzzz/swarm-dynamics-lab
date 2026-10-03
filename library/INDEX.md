@@ -2,7 +2,7 @@
 
 # Library index
 
-2335 entries.
+2341 entries.
 
 ## Papers (1508)
 
@@ -2335,7 +2335,7 @@
 | [data-moltbook-takschdube-2026](datasets/data-moltbook-takschdube-2026.md) | Moltbook longitudinal dataset (Taksch Dube): timestamped crawls with derived social and reply graphs | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 
-## Talks (29)
+## Talks (35)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -2351,11 +2351,14 @@
 | [hickey-2018-identifying](talks/hickey-2018-identifying.md) | Identifying and Monitoring Disinformation across Social Platforms: Techniques for Discovery and Analysis | 2018 | 4 | abstract | swarm-detection | shadow/sol-w1 |
 | [jaques-2022-allen](talks/jaques-2022-allen.md) | Allen School Colloquium: Natasha Jaques (Google + UC Berkeley) | 2022 | 4 | abstract | marl-emergence, collective-decision | shadow/sol-w1 |
 | [jin-2021-power](talks/jin-2021-power.md) | The Power of Exploiter: Provable Multi-Agent RL in Large State Spaces | 2021 | 4 | abstract | marl-emergence | shadow/sol-w1 |
+| [strogatz-2011-coupled](talks/strogatz-2011-coupled.md) | Coupled Oscillators That Synchronize Themselves (2011 Simons Lectures, lecture 1) | 2011 | 4 | full | sync-consensus, collective-motion, criticality-measurement | shadow/sol-w6 |
+| [strogatz-2022-global](talks/strogatz-2022-global.md) | Global Synchronization: New Theorems, New Puzzles | 2022 | 4 | full | sync-consensus, criticality-measurement | shadow/sol-w6 |
 | [wicherski-2011-automated](talks/wicherski-2011-automated.md) | 23C3: Automated Botnet Detection and Mitigation | 2011 | 4 | abstract | swarm-detection | shadow/sol-w1 |
 | [zhang-2022-multi](talks/zhang-2022-multi.md) | Multi-Agent Reinforcement Learning In Stochastic Games: From Alphago To Robust Control | 2022 | 4 | abstract | marl-emergence, sync-consensus | shadow/sol-w1 |
 | [zhang-2025-dont](talks/zhang-2025-dont.md) | Don't Build Agents, Build Skills Instead | 2025 | 4 | skim | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
 | [zhang-2025-how](talks/zhang-2025-how.md) | How to Build Effective AI Agents Without Overengineering Them | 2025 | 4 | full | llm-agent-swarms | shadow/sol-w1 |
 | [amodei-2026-anthropic](talks/amodei-2026-anthropic.md) | Anthropic CEO tells CNN how AI 'agent swarms' could threaten humanity | 2026 | 3 | abstract | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
+| [ganesh-2020-introduction](talks/ganesh-2020-introduction.md) | Lecture 8: Introduction to consensus, and the de Groot model | 2020 | 3 | full | sync-consensus, collective-decision | shadow/sol-w6 |
 | [meir-2026-prediction](talks/meir-2026-prediction.md) | Why Prediction Markets and AI Agents Are a Compliance Nightmare \| Solidus Labs Co-Founder Asaf Meir | 2026 | 3 | abstract | swarm-detection, llm-agent-swarms | shadow/sol-w1 |
 | [motsch-2020-fundamental](talks/motsch-2020-fundamental.md) | Fundamental diagrams for pedestrian and ant dynamics | 2020 | 3 | abstract | crowds-and-traffic, collective-motion | shadow/sol-w5 |
 | [nitsche-2026-protect](talks/nitsche-2026-protect.md) | Can we protect democracy from fake news? \| Maxim Nitsche \| TEDxBerlin | 2026 | 3 | abstract | swarm-detection | shadow/sol-w1 |
@@ -2363,8 +2366,11 @@
 | [seibold-2024-swarm](talks/seibold-2024-swarm.md) | Swarm-Performance of Heterogeneous Multi-Agent Systems Across Scales | 2024 | 3 | abstract | crowds-and-traffic, swarm-robotics, collective-decision | shadow/sol-w5 |
 | [strogatz-2024-how](talks/strogatz-2024-how.md) | How Is Flocking Like Computing? | 2024 | 3 | full | collective-motion, collective-decision, criticality-measurement | shadow/sol-w3 |
 | [sutton-2024-perspective](talks/sutton-2024-perspective.md) | A Perspective on Intelligence | 2024 | 3 | full | fork-merge-security, collective-decision, meta | dmarz/fm-sutton |
+| [benzi-2020-nonlocal](talks/benzi-2020-nonlocal.md) | Nonlocal dynamics on networks via fractional graph Laplacians: theory and numerical methods | 2020 | 2 | skim | sync-consensus, meta | shadow/sol-w6 |
 | [helbing-2013-planetary](talks/helbing-2013-planetary.md) | A Planetary Nervous System, and What to Do with It. Part I: Seminar | 2013 | 2 | full | crowds-and-traffic, collective-decision, llm-agent-swarms | shadow/sol-w5 |
+| [krishna-2018-network](talks/krishna-2018-network.md) | Network dynamics (Lecture 03): the Erdos-Renyi giant-component transition via aggregation kinetics | 2018 | 2 | skim | criticality-measurement, sync-consensus | shadow/sol-w6 |
 | [matlab-2022-introduction](talks/matlab-2022-introduction.md) | Introduction to Multi-Agent Reinforcement Learning | 2022 | 2 | abstract | marl-emergence | shadow/sol-w1 |
 | [moussaid-2014-social](talks/moussaid-2014-social.md) | Social influence and collective behaviors in pedestrian crowds | 2014 | 2 | abstract | crowds-and-traffic, collective-decision | shadow/sol-w5 |
 | [moussaid-2018-wise](talks/moussaid-2018-wise.md) | Wise and Mad Crowds on the Move | 2018 | 2 | abstract | crowds-and-traffic, collective-decision | shadow/sol-w5 |
 | [saberi-2018-calibrating](talks/saberi-2018-calibrating.md) | UNSW rCITI seminar on calibrating a social force model for bidirectional pedestrian streams | 2018 | 2 | abstract | crowds-and-traffic | shadow/sol-w5 |
+| [strogatz-2018-sowers](talks/strogatz-2018-sowers.md) | Sync: how order emerges from chaos (J. Mark Sowers Distinguished Lecture) | 2018 | 2 | skim | sync-consensus, crowds-and-traffic | shadow/sol-w6 |
