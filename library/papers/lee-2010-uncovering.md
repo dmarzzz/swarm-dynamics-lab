@@ -39,7 +39,7 @@ Introduces honeypot-harvested labels as training data for platform-wide detectio
 
 ## Methods and models
 
-Honeypot profiles plus a bot that records friend requests and messages and crawls the sender's profile and linked pages; Weka classifiers on profile features; held-out wild sets scored by spam precision. Skimmed: abstract, framework, deployment, observations and headline classifier results from the authors' PDF.
+Honeypot profiles plus a bot that records friend requests and messages and crawls the sender's profile and linked pages; Weka classifiers on profile features; held-out wild sets scored by spam precision. Verify note: Crossref stores the title as 'Uncovering social spammers' with subtitle 'social honeypots + machine learning', so `lab.py verify` reports a partial title match; the full title here is copied from the paper PDF. Skimmed: abstract, framework, deployment, observations and headline classifier results from the authors' PDF.
 
 ## Limitations and open questions
 
