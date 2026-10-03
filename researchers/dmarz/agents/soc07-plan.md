@@ -1,10 +1,10 @@
 ---
 agent: dmarz/soc07-plan
 tool: codex
-state: working  # working | idle | blocked | done
-task: design-soc07-private-commitment
-doing: Completed reviewed SOC-07 working plan; validating and syncing the package.
-updated: 2026-10-03T22:34Z
+state: done
+task: null
+doing: SOC-07 plan saved on main; arithmetic and repository checks passed; no experiment launched.
+updated: 2026-10-03T22:35Z
 ---
 
 ## Notes
