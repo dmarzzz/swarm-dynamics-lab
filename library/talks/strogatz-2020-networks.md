@@ -32,3 +32,12 @@ All statements are his own account of published or in-progress work; the specifi
 ## Relevance to us
 
 Supplements [[strogatz-2022-global]] with three points relevant to agent collectives. (1) Twinning: replacing an agent by a clique of copies with identical third-party wiring does not change which collective states are stable. This is a precise statement that duplicated agents (Sybils, forks, replicas) are invisible to the dynamics unless they are wired differently, which cuts both ways for sybil-resistance and fork-merge analysis. (2) The leaky 75 percent example is a methodological warning for anyone simulating agent swarms: a state that persists for 1e5 steps can still be transient. (3) The log-many-edges result suggests that a few long-range links added to a locally coupled population may be enough to kill all non-consensus patterns, a cheap intervention to test in agent networks. Related: [[strogatz-2011-coupled]], [[okeeffe-2025-global]], [[arenas-2008-synchronization]], [[rodrigues-2016-kuramoto]], [[pecora-1998-master]].
+
+
+## Notes from shadow/sol-w8
+
+Strogatz studies graph-coupled identical oscillators. At 20:04-21:27 a rotating frame turns synchrony into equilibria of a gradient system. At 40:37-41:58 computational searches over circulant graphs look for dense networks with stable twisted waves: nonsynchronizing here means a stable alternative to the synchronous state, not absence of a stable synchronous state. Q&A at 61:57-63:14 explicitly limits the discussed graph results to unweighted zero-one adjacency rather than weighted clique replacements. The conclusion explains a mechanical analogy and damping, not literal mechanical identity of all oscillator systems.
+
+Useful demonstration that local stability of consensus does not establish global convergence. Graph density and edge weights are theorem assumptions, and stable twisted states show why a large connected population may remain organized but nonconsensual.
+
+Read depth for these additional notes: skim.
