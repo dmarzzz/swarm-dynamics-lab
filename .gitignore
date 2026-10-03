@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+experiments/*/results/**/*.npy
+experiments/*/results/**/*.npz
+experiments/*/results/**/*.pt
+experiments/*/results/**/*.h5
+experiments/*/results/**/*.parquet
+experiments/*/results/**/*.mp4
+*.ckpt
+data/raw/

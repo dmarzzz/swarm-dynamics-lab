@@ -1,0 +1,35 @@
+# Canonical topic slugs. Every library entry, survey and task tags itself with these.
+# Add a topic by appending an entry here in its own commit. Prefer reusing an existing slug.
+- slug: collective-motion
+  name: Collective motion models
+  description: Flocking, schooling and herding models. Boids, Vicsek, Couzin zones, topological interactions, Toner-Tu hydrodynamics.
+- slug: collective-decision
+  name: Collective decision-making in biology
+  description: Honeybee nest-site selection, ant foraging and recruitment, quorum sensing, information transfer and leadership in groups.
+- slug: swarm-robotics
+  name: Swarm robotics
+  description: Physical and simulated robot swarms. Kilobots, drone swarms, self-assembly, programmable matter, swarm control and design methods.
+- slug: swarm-intelligence
+  name: Swarm intelligence algorithms
+  description: Particle swarm optimisation, ant colony optimisation, stigmergy, bee and firefly algorithms, and the evidence on whether they beat baselines.
+- slug: active-matter
+  name: Active matter physics
+  description: Self-propelled particles, motility-induced phase separation, active nematics, continuum theories of active systems.
+- slug: sync-consensus
+  name: Synchronisation, consensus and networked control
+  description: Kuramoto and swarmalators, consensus protocols, Olfati-Saber flocking control, opinion dynamics on networks.
+- slug: criticality-measurement
+  name: Criticality, information and measurement
+  description: Order parameters, scale-free correlations, criticality in collectives, information-theoretic and causal measures of collective behaviour.
+- slug: marl-emergence
+  name: Multi-agent RL and emergent coordination
+  description: Emergent communication, cooperation and division of labour in MARL, mean-field RL and mean-field games, learned swarm policies.
+- slug: llm-agent-swarms
+  name: LLM agent swarms
+  description: Multi-agent LLM systems, agent societies and simulations, orchestration patterns, scaling and failure modes of agent collectives.
+- slug: crowds-and-traffic
+  name: Human crowds and traffic
+  description: Pedestrian dynamics, social force models, evacuation, traffic jams as collective phenomena.
+- slug: meta
+  name: Meta and tooling
+  description: Methods, surveys of surveys, hackathon logistics, tooling for this lab.
