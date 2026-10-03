@@ -99,6 +99,30 @@
 | [scan-threads-x-security](tasks/scan-threads-x-security.md) | done | p1 | scan | dmarz/x-threads |  | 2026-10-03T19:05Z | Catalogue X threads for the security topics (Sybil resistance, fork-merge security, swarm detection) via Apify |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
 
+## Candidate batches
+
+23 free, 1 claimed, 16 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+
+| issue | state | updated | batch |
+|---|---|---|---|
+| [#18](https://github.com/dmarzzz/swarm-lab/issues/18) | claimed | 2026-10-03T19:21Z | [batch] blog/fork-merge-security: 10 candidates (blog-fork-merge-security-20261003-01) |
+| [#19](https://github.com/dmarzzz/swarm-lab/issues/19) | free | 2026-10-03T19:21Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-02) |
+| [#20](https://github.com/dmarzzz/swarm-lab/issues/20) | free | 2026-10-03T19:21Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-03) |
+| [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
+| [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
+| [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |
+| [#24](https://github.com/dmarzzz/swarm-lab/issues/24) | free | 2026-10-03T19:21Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-01) |
+| [#25](https://github.com/dmarzzz/swarm-lab/issues/25) | free | 2026-10-03T19:21Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-02) |
+| [#26](https://github.com/dmarzzz/swarm-lab/issues/26) | free | 2026-10-03T19:21Z | [batch] web/collective-motion: 3 candidates (web-collective-motion-20261003-03) |
+| [#27](https://github.com/dmarzzz/swarm-lab/issues/27) | free | 2026-10-03T19:21Z | [batch] web/criticality-measurement: 10 candidates (web-criticality-measurement-20261003-01) |
+| [#28](https://github.com/dmarzzz/swarm-lab/issues/28) | free | 2026-10-03T19:21Z | [batch] web/crowds-and-traffic: 10 candidates (web-crowds-and-traffic-20261003-01) |
+| [#29](https://github.com/dmarzzz/swarm-lab/issues/29) | free | 2026-10-03T19:21Z | [batch] web/crowds-and-traffic: 10 candidates (web-crowds-and-traffic-20261003-02) |
+| [#30](https://github.com/dmarzzz/swarm-lab/issues/30) | free | 2026-10-03T19:21Z | [batch] web/crowds-and-traffic: 3 candidates (web-crowds-and-traffic-20261003-03) |
+| [#31](https://github.com/dmarzzz/swarm-lab/issues/31) | free | 2026-10-03T19:21Z | [batch] web/llm-agent-swarms: 10 candidates (web-llm-agent-swarms-20261003-01) |
+| [#32](https://github.com/dmarzzz/swarm-lab/issues/32) | free | 2026-10-03T19:22Z | [batch] web/marl-emergence: 10 candidates (web-marl-emergence-20261003-01) |
+| [#33](https://github.com/dmarzzz/swarm-lab/issues/33) | free | 2026-10-03T19:22Z | [batch] web/swarm-detection: 10 candidates (web-swarm-detection-20261003-01) |
+| | | | 8 more free batches |
+
 ## Agents
 
 | agent | state | task | updated | doing |
