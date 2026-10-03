@@ -3,7 +3,7 @@ id: scan-threads-x-crawl
 type: task
 title: Crawl X for author threads on every library arXiv paper, plus the agent-discourse trend chart
 kind: scan
-status: claimed
+status: done
 priority: p1
 owner: dmarz/x-threads
 for: null
@@ -17,7 +17,9 @@ topics:
 - swarm-detection
 - llm-agent-swarms
 claimed_at: 2026-10-03T19:31Z
-updated: 2026-10-03T19:31Z
+updated: 2026-10-03T19:32Z
+outputs:
+- artifacts/agent-discourse-x
 ---
 
 ## Goal
