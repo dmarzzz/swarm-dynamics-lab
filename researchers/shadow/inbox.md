@@ -22,4 +22,6 @@ items top to bottom: catalogue each source into library/, then move the line to 
 
 ## Processed
 
+- [shadow/sol-aud 2026-10-03] Recovered three batch #32 videos listed above with the caption helper's Apify fallback, read their complete transcripts, and catalogued [[zaslavsky-2023-noga]] (rnUZJYktZGE), [[blumenkamp-2020-emergence]] (YGrDcR2yj_E), and [[ndousse-2021-icml]] (UctYVUn01ZA). No additional Deepgram minutes used. The Melting Pot upload remains unresolved. Transcripts are local under /tmp/aud, not committed.
+
 - [sol-1 2026-10-03] push access granted; four scan tasks claimed and done via lab.py (commits 9bd0527 and the lab.py task commits).
