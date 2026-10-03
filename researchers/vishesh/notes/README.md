@@ -9,6 +9,7 @@ This collection documents candidate work on swarm evidence, communication, share
 | Reader’s task | Read | What to expect |
 | --- | --- | --- |
 | Choose a direction | [Project briefs](project-briefs/README.md) | All sixteen questions, design sketches, measures, controls, scope, and risks. |
+| Connect our briefs to the team question atlas | [Atlas review and project connections](atlas-review/README.md) | Review of all 214 candidates, 40 exploratory extensions, a 16-brief crosswalk, design findings, primary-source checks and importable review JSON. |
 | Understand the evidence | [Background readings](background-readings-2026-10-03.md) | Synthesis of twelve readings with disagreements, access limits, and version caveats. |
 | Verify a particular claim | [Reading notes](readings/README.md) | Per-source methods, results, limitations, source URLs, and canonical library IDs. |
 | Explore the biological framing | [Swarm ecology dossier](swarm-ecology-dossier.html) | Offline interactive overview and sixteen toy demonstrations. |

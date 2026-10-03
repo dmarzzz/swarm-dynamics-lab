@@ -1,0 +1,1506 @@
+{
+  "schema": "swarm-lab-question-review-v1",
+  "date": "2026-10-03T22:13:15+00:00",
+  "reviewer": "vishesh/codex-methods",
+  "atlas_sha256": "221d012538054f1770caadee9b63c7681504ec970cb390328e0ad52b345e4fe1",
+  "review": {
+    "PHY-01": {
+      "title": "Neighbour rules under actual visibility",
+      "status": "Discuss",
+      "notes": "Keep visibility and occlusion as the treatment, with equal observation count and speed. A graph-density match alone misses visibility geometry. Connect to collective-sensing as an analogy; a robot result does not establish LLM routing gains.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "398fea280eca64b84686470c39e943898d43908fdf6835894d7858ce12d30c31"
+    },
+    "PHY-02": {
+      "title": "What mechanism carries a turning wave?",
+      "status": "Park",
+      "notes": "Strong mechanism-identification question, but requires pulse timing resolution and two fitted generative models. First establish that the proposed perturbation separates predictions above measurement noise; predictive fit alone is insufficient.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "164933464ee3f2ad5ba669dd7db8d660d31b93142fca55c0b1be5f958c09ae64"
+    },
+    "PHY-03": {
+      "title": "Polarization versus navigation value",
+      "status": "Discuss",
+      "notes": "Useful warning against treating order as utility. Prespecify an environment change and score progress, energy and collisions independently; low polarization is not itself a desirable outcome. Connect to quorum and coordination only through the measurement lesson. Related exploratory extensions: VX-27. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "7787e9d48ff61c09f68c6271bd59b50ce6d3d8fb0bbb2a55db80d3edae80fbea"
+    },
+    "PHY-04": {
+      "title": "Distributed expertise under local failure",
+      "status": "Discuss",
+      "notes": "Randomize initial expert locations within matched visibility strata, then remove equal numbers of informed agents. Include correlated loss of a whole evidence domain; dispersion against independent failures need not protect against common-source loss.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "aef7609911350f589aa8c1d97d297c74431340b12ac0584c2116645bbbd58d46"
+    },
+    "PHY-05": {
+      "title": "Hydrodynamic breakup beyond a single model",
+      "status": "Park",
+      "notes": "Hydrodynamic mechanism needs a validated fluid model and matched forcing, which exceeds the current evidence-routing prototype. Retain as a physics project rather than importing its breakup vocabulary as an agent-security result.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "e6fd059051a98fed53d6bfc5f726ce36b41ce20f9d5cb3de62d095ada147d71f"
+    },
+    "PHY-06": {
+      "title": "Alternating bursts in larger groups",
+      "status": "Park",
+      "notes": "Match energy, speed and contact opportunity jointly. Random timing can inadvertently change who observes whom; replayed contact schedules would help isolate closed-loop burst timing before increasing group size.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "885064d56db0e9e0d1626621d642bd41e21e95fcb6dfb51892b66f16924c246a"
+    },
+    "PHY-07": {
+      "title": "Why can less communication help adaptation?",
+      "status": "Discuss",
+      "notes": "Cross communication density with cue age and refresh frequency. This is a promising bridge to culture and memory: sparse communication may preserve stale minority facts as well as fresh alternatives, so score both stationary and changing worlds.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "67e22541880ae8c35808fc78ac0c81e692f91d8e51826d08470ee7bd024dbce3"
+    },
+    "PHY-08": {
+      "title": "Finite populations and multi-option deadlock",
+      "status": "Discuss",
+      "notes": "Report deadline censoring and option-count dependence; treating unfinished episodes as missing would favor slow policies. Separate stochastic finite-population effects from numerical discretization with an exact small-state reference where possible.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "5500ce883133527db0ba4f030c666937899705d2ffd219281934b32c1f0b9e6b"
+    },
+    "PHY-09": {
+      "title": "Group size versus independent evidence",
+      "status": "Discuss",
+      "notes": "Factor messenger count, upstream observation count and marginal cue accuracy. Calling a concentration index effective sample size requires calibration against empirical error; source labels alone do not establish independence. Connect directly to quorum and diversity. Related exploratory extensions: VX-01, VX-35. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "053a6c24ba0417323118b39cad7ddc5ddd2b1b274c20fa3efd0005a2ba153af1"
+    },
+    "PHY-10": {
+      "title": "Correcting fast-sampling option bias",
+      "status": "Discuss",
+      "notes": "Measure travel cost and decision opportunity lost while waiting for slow options. Use deadline-matched fixed sampling as a baseline; an unbiased final vote can still choose too late to be useful.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "db44e963219433f193d4a54229fc925c141e9340e6da20ab1f482a7f90cde42f"
+    },
+    "PHY-11": {
+      "title": "When uninformed participants help",
+      "status": "Discuss",
+      "notes": "Define utility before introducing uninformed participants. They may alter physical contacts without adding evidence; include a contact-replay control before interpreting the effect as informational moderation.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "951a24e0bdb03f33c9fa32b066e9741c01812075e514fb67d256704a19a1c293"
+    },
+    "PHY-12": {
+      "title": "Reopening a settled decision",
+      "status": "Discuss",
+      "notes": "Separate a genuine change from a false alarm using stable-world episodes. Charge inspections and reversals. The practical target is a regret/churn frontier, not maximal willingness to reopen; connects to culture, dissent and memory.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "81cbb7a87c1e028c88333a7b9fc7c47fc188009a4336c6bf1fae2462c3ba244b"
+    },
+    "PHY-13": {
+      "title": "Same cluster, different mechanism",
+      "status": "Park",
+      "notes": "Fit competing models to the same passive trajectories, then preregister the separating perturbation. A visually similar cluster is weak mechanism evidence; publish the region where the interventions remain observationally indistinguishable.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "9a998c888ec2288aff8c43a0ac0c7cb7fa87a02a1132eddd5120a09613aff2d0"
+    },
+    "PHY-14": {
+      "title": "Wall geometry as a control input",
+      "status": "Park",
+      "notes": "Count particles immobilized at walls and all applied work. A concentration near the target is not delivered transport. Needs a boundary model before it becomes a credible intervention rather than geometry tuning.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "d1fb8bf85dae7be55f29cf8859546a307020db3f365727308290076d4237046a"
+    },
+    "PHY-15": {
+      "title": "Delayed density sensing in motility control",
+      "status": "Discuss",
+      "notes": "Distinguish sensing delay from actuation delay and choose hysteresis without test-world tuning. A minimal delayed-feedback simulator could inform coordination timing, but biological or LLM transfer would remain a separate question.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "deaee7ac86ad1ec25fe9590da273090ebe0ff4260141e0a711aa8b1281f79433"
+    },
+    "PHY-16": {
+      "title": "Reciprocity and useful collective rotation",
+      "status": "Park",
+      "notes": "Use torque/work accounting and a symmetry-broken initial-condition control. Persistent rotation alone is not useful work; verify the unloaded mechanism before a loaded-efficiency extension.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "1d4b9e84e69bd7d6652b010a1a2a9a55caea0b89306d30c6c7464fe6be97d54b"
+    },
+    "PHY-17": {
+      "title": "Recovery of shape versus recovery of function",
+      "status": "Discuss",
+      "notes": "Good bridge to regrowth and NCA: measure restored task function separately from restored shape. Equalize signal budgets and lesion severity; do not describe shape recovery as knowledge recovery. Related exploratory extensions: VX-18. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "572ca9796358f16713e69431c7990390d4e75f147cbcba5ab4e45d5e4abb6923"
+    },
+    "PHY-18": {
+      "title": "Transport by fluctuating active flows",
+      "status": "Park",
+      "notes": "Compare equal propulsion work and boundaries, and report delivery tails rather than only mean mixing. Fast local stirring can leave persistent uncovered regions; specialized fluid simulation is a readiness dependency.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "913cba20d4284192bf6773e8802ebc2cded0bcbcea4c5c2f22bf5df4f88e1d8a"
+    },
+    "PHY-19": {
+      "title": "Who creates the observed coordination?",
+      "status": "Discuss",
+      "notes": "Log raw commands and safety-filter corrections separately. Replay the same raw policy through alternative filters when valid; otherwise co-adaptation confounds attribution. Transfer this control to agent permission brokers and validators. Related exploratory extensions: VX-32. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "ecbad0a49b6a422990256167656b88f7813ce4b1b43462f205da9ad6ca763e77"
+    },
+    "PHY-20": {
+      "title": "When a few messages add value",
+      "status": "Discuss",
+      "notes": "Specify exactly which otherwise unavailable fact each message carries. Cross delay with information content and include sham messages; bandwidth savings alone do not establish useful coordination.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "58df46059a50ae7053c4d1353bfa6c84282e2327144fa4b0b878744d541e5133"
+    },
+    "PHY-21": {
+      "title": "Correlated disturbances in transfer",
+      "status": "Discuss",
+      "notes": "Hold marginal disturbance variance fixed while changing shared components. Separate training distribution from evaluation shift. This gives a clean conceptual analogue for correlated model errors, without equating physical noise and semantic error.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "43f3255149aba0f6bed4a4ab05cf985787184224325bd81f5d4f3409f1c5cc43"
+    },
+    "PHY-22": {
+      "title": "Correlated evidence in physical identity vetting",
+      "status": "Discuss",
+      "notes": "Use legitimate co-located robots as hard negatives and report false exclusion by geometry. Independent radio samples are not necessarily independent identities; connect to SEC-23 while keeping the RF hardware assumption explicit.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "78819d891de506b72a8b0bf08c88bdba2635832cb3971514ec0a2234ae26b929"
+    },
+    "PHY-23": {
+      "title": "Seed dependence in shape formation",
+      "status": "Discuss",
+      "notes": "Match physical blockage and initial localization information after seed loss. Compare ordinary failures at equally informative positions; otherwise a seed label merely proxies structural centrality.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "ee679e56a56e0d001ca05daae7b83d98b73fbd573f43399fda8b7d2767b7c728"
+    },
+    "PHY-24": {
+      "title": "Damage recovery with immobile survivors",
+      "status": "Discuss",
+      "notes": "Failure-in-place is meaningfully different from deletion. Control obstacle geometry and residual robot count; report restored throughput, not only final shape. An agent analogue would require explicit retained state or occupied resources.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "c9b11f82d58b0188c1bfed9aa51e4cbc57ec701bf02f4788a8349ee1416be79a"
+    },
+    "PHY-25": {
+      "title": "The order of communication opportunities",
+      "status": "Discuss",
+      "notes": "Preserve contact multiset, duration and delays while permuting order. This bridges SIM-02 and leadership: different temporal reachability can manufacture apparent influence even with identical aggregate graphs. Related exploratory extensions: VX-08, VX-40. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "ea3cd21a9adf4249035ec3eacf1a1b6b9f621c14929832428ada99744f5ab96e"
+    },
+    "PHY-26": {
+      "title": "Fast consensus under realistic link delays",
+      "status": "Discuss",
+      "notes": "Compare at equal wall-clock time and delivered messages, not iterations alone. Add a latency distribution rather than one constant; queues can turn nominal shortcuts into stale information paths.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "653e7af0129292bf1fcd0fc132cf4e368a385e6682f726c2cd6564d2c6e7c6a3"
+    },
+    "PHY-27": {
+      "title": "Movement as a synchronization resource",
+      "status": "Park",
+      "notes": "Movement changes exposure as well as coupling. Compare targeted and random movement under matched travel cost and contact diversity before claiming synchronization-specific value.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "938c15c9f642915f60af95d1ec4bd264bb7cbc6a0a69553a2302afa4d8ad5dfc"
+    },
+    "PHY-28": {
+      "title": "A useful phase wave without global synchrony",
+      "status": "Discuss",
+      "notes": "A useful sequential wave is a strong counterexample to global-order scoring. Define the downstream activation task first and compare to a simple scheduled sequence; an elaborate order parameter should add decision value.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "f4d4fbb91f00d93f3158c689670caa67ed7961ab98dcc5a0659385522501f53b"
+    },
+    "PHY-29": {
+      "title": "How distribution tails change swarmalator predictions",
+      "status": "Park",
+      "notes": "Prespecify robust scale matching and treatment of extreme draws. Tail truncation can remove the mechanism under study; report finite-population variation rather than a single transition curve.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "5f6fcc30e6189358db63c0f6f1b5b23c28b7e4da78c2dcbe9095410eaf06eb4d"
+    },
+    "PHY-30": {
+      "title": "Synchrony versus shared-channel congestion",
+      "status": "Discuss",
+      "notes": "Useful connection to agent budgets and reviewer congestion. Count queueing and stale arrivals outside the nominal swarm boundary, and compare phase spreading to a simple rate limit at equal delivered work. Related exploratory extensions: VX-05, VX-21. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "3515aec6c5c8ab9bc835de9c19233be4ea1991d7cc87781e6b04695cf26ae598"
+    },
+    "PHY-31": {
+      "title": "Anticipation versus slower walking",
+      "status": "Park",
+      "notes": "Match encounter rate and desired speed distributions when removing anticipation. Simulator avoidance rules may silently supply anticipation; inspect the full policy/environment interface before attributing human-like coordination.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "5766a80db3b0d0c45624b4ddf4af38bcf2a8a8675a4efcc7a7956e10911d178b"
+    },
+    "PHY-32": {
+      "title": "Avoiding congestion without hiding the queue",
+      "status": "Discuss",
+      "notes": "Include upstream waiting and unserved demand. This is the right accounting analogue for validators that look safe by never completing work; connect to commons and institutions through total-system utility, not literal traffic equivalence.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "ca45468c71b9c6ce1e7fa50fb759fe4ff0a7e98c681b00958a61defe4617ad50"
+    },
+    "PHY-33": {
+      "title": "Does one smoothing vehicle help beyond a ring?",
+      "status": "Park",
+      "notes": "Replication on the ring should precede heterogeneous merges. Preserve demand and controller authority across geometries; otherwise weaker control access, not instability of smoothing, explains loss of benefit.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "fbcaa5149e95f196ab5135b7f9302fe0c1fe4a0ab562f298d9f4870b42bdc02e"
+    },
+    "PHY-34": {
+      "title": "Confinement and collective rotation",
+      "status": "Park",
+      "notes": "Vary geometry at matched density and test more than one characteristic length. Boundary forcing can mimic an intrinsic collective mode; use passive controls and measurement-window sensitivity.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "205fbb40a2544f9623d2a881354ab09af1ef4ce078cf241407091dfe959cdd80"
+    },
+    "PHY-35": {
+      "title": "Wider crossings with more directional disorder",
+      "status": "Park",
+      "notes": "Normalize by completed crossings and path length, not width alone. Directional disorder and route demand must be randomized separately to distinguish interaction failure from simply longer travel.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "d80fce6e8aa966b412ea20324106cbc4e827208bb275ae5a515e9e59a2f7e1d7"
+    },
+    "PHY-36": {
+      "title": "Capacity estimates that transfer between bottlenecks",
+      "status": "Discuss",
+      "notes": "Split by bottleneck geometry and time window before fitting. Predictor density must precede the flow target; simultaneous occupancy can leak the outcome and exaggerate transferability.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "a4864ad84190fd11592eca9212fd064793e1e2e4783c1a2df8a45b1476c71b00"
+    },
+    "PHY-37": {
+      "title": "Neural cellular repair beyond familiar lesion shapes",
+      "status": "Discuss",
+      "notes": "Build on the existing NCA repair literature rather than claiming repair itself as novel. Match erased hidden-state mass and progress, include simple checkpoint restoration, and score valid paths/function separately from image similarity. Related exploratory extensions: VX-18. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "6ced2cb0fba0866c4f10688e973c63a07d947e06b73872d3c5d2f6eba5d25555"
+    },
+    "PHY-38": {
+      "title": "Masked parallel updates versus independent cell clocks",
+      "status": "Discuss",
+      "notes": "Masked synchronous updates are not independent clocks. Match expected cell updates and compare synchronous reads with immediate writes explicitly; schedule transfer is distinct from lesion robustness in PHY-37. Related exploratory extensions: VX-19. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "5b113a4f66898c69ae9595b31744eb5b11ec6f054582dcc8f1f5542533a4e75b"
+    },
+    "SOC-01": {
+      "title": "Separate information diversity from model diversity",
+      "status": "Shortlist",
+      "notes": "Use a model-family by evidence-overlap factorial with matched capability, total evidence and cost. Report pre-discussion correlated errors and designated-output accuracy. A win from buying a stronger model is not a diversity effect. Related exploratory extensions: VX-01, VX-20, VX-22, VX-35. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "101b47ed6cdd23dcee07482422914a93bed60dfa07cc550bd506cf8eca49711a"
+    },
+    "SOC-02": {
+      "title": "Measure effective team size on distributed evidence",
+      "status": "Discuss",
+      "notes": "Estimate gains relative to an empirically fitted independent-evidence null, with uncertainty across task worlds. Do not substitute the count of citations for effective team size. Added agents must not receive extra total facts for free.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "abdbaed15057b18778f563c6521633b911063c8e6616eb3bcc34c14f4820219e"
+    },
+    "SOC-03": {
+      "title": "Distinguish group failure from a strict scoring rule",
+      "status": "Discuss",
+      "notes": "Keep all-correct as a legitimate operational metric when every agent must act safely, but also show reporter and individual outcomes. The independence p-to-the-N curve is a null model, not a dependence-corrected prediction.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "d9045af48b7981f74a1c9140f7646bec62ac63381e43e9768edc67b57bf26f4c"
+    },
+    "SOC-04": {
+      "title": "Ablate why semantic routing works",
+      "status": "Shortlist",
+      "notes": "Cross direct addressing, expressed need and plan alignment separately, with random routing and a centralized evidence-union baseline. Silo and Proxifield make generic topology comparisons crowded; routing under imperfect evidence provenance is a sharper extension. Related exploratory extensions: VX-25, VX-34. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "d045d1b5c7fad95ce7bd8bcfb95a701ae60213ea371870a51a40498506536952"
+    },
+    "SOC-05": {
+      "title": "Measure reading capacity separately from wording bias",
+      "status": "Discuss",
+      "notes": "Independently vary inbox capacity and option wording. Measure which delivered items were usable, not only sent tokens; otherwise truncation masquerades as persuasion. Hold task truth fixed under wording permutations.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "7167617d9a3c1fcb0fbc16c38ca6ff074d5a103dc0e01fb398c3780d615500f0"
+    },
+    "SOC-06": {
+      "title": "Social influence or ordinary anchoring?",
+      "status": "Discuss",
+      "notes": "Randomize peer labels on identical evidence text and anonymous anchors. Labels may change perceived source reliability; record revisions conditional on actual evidence quality rather than interpreting all agreement as social influence.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "894cf58a1c2063bb9ba07c85c4a548a2c056fe7eb53ed17e4110bd0d8fe0c2e5"
+    },
+    "SOC-07": {
+      "title": "Protect private judgments before public discussion",
+      "status": "Discuss",
+      "notes": "Private commitments need a no-extra-compute control and equal answer opportunities. Score harmful and useful revisions separately; preserving every initial answer protects initial mistakes as well as independent evidence. Related exploratory extensions: VX-35. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "ec746f8c42c5e5c60aaf5bf54f77f74f05589bc09c49823d5ff4e8997953b537"
+    },
+    "SOC-08": {
+      "title": "Stop on evidence sufficiency instead of verbal agreement",
+      "status": "Shortlist",
+      "notes": "Require reachable commit states for correct unanimous evidence before model calls. Compare an evidence checklist with fixed rounds, confidence-only stopping and independent extra search; charge checklist acquisition and late decisions. Related exploratory extensions: VX-03, VX-28. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "befa36772eeac03ee38171968ecd39eb4cf8c8b87acc0576ee11e30695d2c144"
+    },
+    "SOC-09": {
+      "title": "Evidence-seeking critics versus generic opposition",
+      "status": "Shortlist",
+      "notes": "Compare an evidence-seeking critic with an extra solver and the same new evidence delivered neutrally. Separate the benefit of acquiring evidence from the benefit of the dissent role; report false reversals and cost. Related exploratory extensions: VX-04. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "0702d5495d6a3cb5848d2576ecc8088baa3b71fc43f9b963f45f2b0aa4f197a8"
+    },
+    "SOC-10": {
+      "title": "Test dissent quality rather than dissent quantity",
+      "status": "Discuss",
+      "notes": "Cross critic correctness, confidence and evidential support rather than conflating them. Blind the receiving team to evaluator labels; otherwise the intervention gives away which dissent deserves acceptance. Related exploratory extensions: VX-02, VX-29. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "279b09bf76ab4ff667cfd1a6007e558aba45f27b11d6ed5d6160b9500f75c43b"
+    },
+    "SOC-11": {
+      "title": "Make uncertainty useful without forcing abstention",
+      "status": "Discuss",
+      "notes": "Use a held-out fact-value evaluator or synthetic ground truth to measure acquisition value. A fluent list of unknowns is not useful uncertainty unless it changes which fact is obtained and improves the final decision. Related exploratory extensions: VX-04, VX-31, VX-34. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "1dae0695f22ba3a7c02411b160148e5e08247537cb9fa194bb62ba248d7c54f9"
+    },
+    "SOC-12": {
+      "title": "Useful disagreement after a changing task",
+      "status": "Discuss",
+      "notes": "Choose the stationary/change mixture before tuning minority retention. Track whether the retained alternative has independent evidence; retaining arbitrary disagreement may only delay correct convergence.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "7da0eaf4ceb99bb419feff574029185d9354c3bfa80f220a9c2fa2e6b507fa4e"
+    },
+    "SOC-13": {
+      "title": "Separate discovery time from discussion time",
+      "status": "Discuss",
+      "notes": "Keep total search and communication cost fixed. Distinguish withholding discoveries from independently searching longer; a phase barrier can reduce duplication while increasing latency on immediately solvable tasks.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "3db7bcfb82fa69ea859a6ca2fa6741880e81155646087218015ef562468b64e4"
+    },
+    "SOC-14": {
+      "title": "Treat shared artifacts as a communication channel",
+      "status": "Discuss",
+      "notes": "Instrument artifact reads and validated downstream reuse, not only chat edges. Compare immutable snapshots with mutable shared artifacts so hidden feedback does not make a nominal no-communication arm misleading. Related exploratory extensions: VX-10. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "3f0252aa399f1d4ff55396d64095a8ab13ba522d8efb6d4291c69010de55a66f"
+    },
+    "SOC-15": {
+      "title": "Asynchronous teams under uneven tool latency",
+      "status": "Discuss",
+      "notes": "Randomize external tool latency while preserving response content. Report both deadline success and stale-state errors. Scheduler advantage must not come from extra actions before the deadline or uncontrolled provider concurrency. Related exploratory extensions: VX-33, VX-40. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "b4e3b253d8a7afacbe084d0b901c408a58d1689aeb1e693e105ad6d228b0a4c8"
+    },
+    "SOC-16": {
+      "title": "Allocate roles by observed bottlenecks",
+      "status": "Discuss",
+      "notes": "Include a cheap fixed rotation and an oracle assignment upper bound. Charge reassignment messages and unfinished work; successful tasks otherwise make dynamic allocation look prescient through post-hoc bottleneck labels. Related exploratory extensions: VX-21. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "b1591d05afc770fbf83b22808718ef8081cf358986dd8cfff702c73a42c2a893"
+    },
+    "SOC-17": {
+      "title": "Separate a leader's name from its information",
+      "status": "Discuss",
+      "notes": "Randomize authority labels, information quality and speaking order independently. Adoption is not leadership value; require correct downstream actions and include confident but incorrect authority. Related exploratory extensions: VX-08. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "a020fa1389b26d67a9fe884d4bd9679e45b5e526f6b9c781ff0606447cef52c9"
+    },
+    "SOC-18": {
+      "title": "Rotate coordination without losing continuity",
+      "status": "Discuss",
+      "notes": "Use a rotation-by-ledger factorial, including ledger-only continuity. Inject outages independently of performance and measure ordinary-operation overhead; do not credit rotation for the shared state that accompanied it. Related exploratory extensions: VX-15. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "a9d72f36ea6033573639dd331f536449235b39268428f1d42e34aafc8cf2d627"
+    },
+    "SOC-19": {
+      "title": "Ask a specific peer instead of broadcasting",
+      "status": "Discuss",
+      "notes": "Mask dependency knowledge at several realistic levels. Direct requests may win only with an oracle peer directory; measure missed cross-shard clues as well as delivered-token savings. Related exploratory extensions: VX-25. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "0af980340113e9ef5427477706b9eae2561094304e536fc03fccd456cad86343"
+    },
+    "SOC-20": {
+      "title": "Recognize unachievable tasks and request repair",
+      "status": "Discuss",
+      "notes": "Include difficult-but-solvable tasks as hard negatives and an explicit repair cost. An audit that abandons hard tasks can raise completed-task accuracy while lowering useful completion over all assignments. Related exploratory extensions: VX-31. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "c6995fbc3adab80ef1009f7b4d6448fbfe03850e22abd344a1156e28c384691e"
+    },
+    "SOC-21": {
+      "title": "Compress memory by information value",
+      "status": "Discuss",
+      "notes": "Freeze memory selection before revealing future questions. Compare recency, random and frequency-based retention with equal storage; count repeated verification cost after removing apparently low-value records. Related exploratory extensions: VX-34. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "0dce48ec699c41d8a53a39e1e87e9207dff572be0ed0ab12523102cc59150a2a"
+    },
+    "SOC-22": {
+      "title": "Spend redundancy on rare knowledge",
+      "status": "Discuss",
+      "notes": "Rare-fact importance must be estimated from available information, with oracle importance only an upper bound. Cross independent versus correlated failures; uniform backup may be sufficient when failures erase an entire shared source domain. Related exploratory extensions: VX-07. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "d6cc3cf388795690772ef882e7e11fc84c3aff3cfb9f86d9f39ced486c591801"
+    },
+    "SOC-23": {
+      "title": "Recover function after genuine knowledge loss",
+      "status": "Shortlist",
+      "notes": "Separate surviving-copy retrieval, genuinely lost but externally reacquirable facts, and irrecoverable facts. Full reset and checkpoint recovery are essential baselines. Unsupported plausible reconstruction is a failure, not regrowth. Related exploratory extensions: VX-06, VX-07, VX-10, VX-39. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "96ee437e9c5efd65579834f81651ea2957a1b810ceedf76b1f83b72766f78911"
+    },
+    "SOC-24": {
+      "title": "What survives complete population turnover?",
+      "status": "Discuss",
+      "notes": "Counterbalance arbitrary conventions and measure inherited artifacts at each turnover. Stable model priors can imitate culture; persistence without a task benefit is not enough to justify an institution. Related exploratory extensions: VX-16, VX-17. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "7740a7b38a79dbb9f8d400946c4de81ae4f50f69e2068c164e2a397140c53679"
+    },
+    "SOC-25": {
+      "title": "Retire an obsolete convention after the task changes",
+      "status": "Discuss",
+      "notes": "Change task utility while holding convention labels fixed, with unchanged-world controls. Evaluate review-trigger false alarms and restoration cost; adaptation should not mean constantly rewriting a useful rule. Related exploratory extensions: VX-16, VX-25, VX-39. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "e65231b426c31c2ce9c1aecaa93e42e7b4c3eb565fdf21b629087cc39eb11b77"
+    },
+    "SOC-26": {
+      "title": "Reward a useful portfolio instead of one champion",
+      "status": "Discuss",
+      "notes": "Evaluate portfolios on held-out task diversity, not the tasks that selected the winners. Match total search budget, compare random portfolios, and account for maintenance of mediocre but complementary artifacts.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "c977f92081ddf8c9f3ddd1a280aaa7b8819e57d0b329b148590662dd43444b4d"
+    },
+    "SOC-27": {
+      "title": "Credit verified contributions instead of message volume",
+      "status": "Discuss",
+      "notes": "Measure verified marginal contribution and maintenance, with a cheap equal-credit baseline. A stronger verifier can produce the entire gain; do not infer incentive effects from more permissive or costly scoring. Related exploratory extensions: VX-09. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "8409cdc4f68649e279e6594a1392c66fbbc6cc323729794727f8a3b2726716b6"
+    },
+    "SOC-28": {
+      "title": "Pay for verification as a public good",
+      "status": "Discuss",
+      "notes": "Randomize verifier funding at a fixed total team budget and count displaced production. Introduce correlated verification failures and free riding; correctness gains alone do not establish positive net public-good value. Related exploratory extensions: VX-04, VX-17, VX-22. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "5dbf0bd5d3fd28b754acc6138078af6983b4ef4db4add9e8c89db635d18c7e6f"
+    },
+    "SOC-29": {
+      "title": "Make a report lead to a verifiable response",
+      "status": "Discuss",
+      "notes": "Instrument the whole report-to-review-to-remediation chain. Include valid reports that receive no action and false reports that trigger damaging intervention; report count is a weak proxy for safety. Related exploratory extensions: VX-05, VX-24. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "aa883691ad67cd0e19398e1a7761ca949d67782832f973d80c41635d6d1fac35"
+    },
+    "SOC-30": {
+      "title": "Appeal false rejections without overwhelming review",
+      "status": "Discuss",
+      "notes": "Compare structured appeals with an equally funded independent second review. Measure review load, false reversals and time-to-reinstatement; format advantages can disappear when evidence and reviewer time are matched. Related exploratory extensions: VX-23, VX-24. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "4ebf319ab01ebde831b3430c0249bb4575a7e660d46e436e436172f64ff5475f"
+    },
+    "SOC-31": {
+      "title": "Find where uncertainty disappears in retelling",
+      "status": "Shortlist",
+      "notes": "Track claim, uncertainty and upstream observation IDs across compression. Compare structured envelopes with equally long prose and source access. Distinguish faithful repetition of a wrong source from distortion introduced by retelling. Related exploratory extensions: VX-12, VX-38. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "e16d1d5a5a860178cef61b7a2347e88853f8289da618a5d73b5d22bd4e156d74"
+    },
+    "SOC-32": {
+      "title": "Stress-test a casefile when logs are missing",
+      "status": "Discuss",
+      "notes": "Use controlled missingness plus held-out human-readable cases. Score correctness of reconstructed causal claims, calibrated unknowns and investigator time; a persuasive narrative can improve perceived completeness without improving evidence. Related exploratory extensions: VX-13, VX-30, VX-31. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "148344a8c03cee959625b07425e4aca7986124c02f5cc14bf32a61f1860ff7c2"
+    },
+    "SOC-33": {
+      "title": "Predict unseen agents' choices from one agent",
+      "status": "Discuss",
+      "notes": "Split by model, role and task family before profiling. Compare a public model-prior baseline; transfer on near-duplicate prompts is insufficient evidence that profiling one agent predicts a new team.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "08a03d423b64a2889557742adb366423fb4b30f7c7ff916d93381bb1bf79135a"
+    },
+    "SOC-34": {
+      "title": "Separate wording convergence from changed decisions",
+      "status": "Discuss",
+      "notes": "Measure lexical convergence separately from option choice, confidence and action. Use matched common exposure and private pre-discussion answers; wording similarity alone cannot locate a peer influence mechanism.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "41616e7f8673992dee5c031fb89fe6eb39487b12938ffc5d4b06338c986785df"
+    },
+    "SOC-35": {
+      "title": "Validate a cheap surrogate at the collective level",
+      "status": "Discuss",
+      "notes": "Validate the surrogate on trajectory distributions, rare failures and intervention rankings, not only next-answer accuracy. Cheap scaling is useful only within a stated transport domain with a failure-triggered fallback. Related exploratory extensions: VX-28. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "626598f7136b1395b987bde5cd10a2d8cf6752e52a51cbe04c42207a7ead0a6b"
+    },
+    "SOC-36": {
+      "title": "Rank trace clusters by useful evidence, not spectacle",
+      "status": "Discuss",
+      "notes": "Blind incident review to the ranking method and split by scaffold before development. Include mundane failures and benign anomalies; a visually dramatic cluster can be unhelpful at realistic review prevalence. Related exploratory extensions: VX-37. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "720698760e611a11621088d0bfccbecfd65eff0dc4b7ec0417c3e8190c33b0eb"
+    },
+    "SOC-37": {
+      "title": "Does profiling improve influence through ordinary retrieval?",
+      "status": "Discuss",
+      "notes": "Use only controlled local retrieval for the diagnostic. Randomize generic versus profiled content and peer communication; preserve end-to-end assignment as the primary estimate. Conditioning only on retrieved poison can introduce selection bias. Related exploratory extensions: VX-26. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "afb8ab57f0f89731a1a886ff31f50d7e203c4b5b1293e1c678f23bd51237e959"
+    },
+    "SEC-01": {
+      "title": "Does hiding the returning fork survive metadata?",
+      "status": "Discuss",
+      "notes": "Conceal size, timing and destination metadata separately; padding must be charged to latency and bandwidth. Hidden selection without a host observation model is not a security treatment.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "748c7efc9bf130257ffeab47d40239043abc9014c3a769486e939564cfa71221"
+    },
+    "SEC-02": {
+      "title": "Keep merge decisions outside an untrusted child",
+      "status": "Discuss",
+      "notes": "Define the report commitment and trusted selection boundary precisely. Test host observations before and after commitment without granting the host an undeclared selection oracle; random choice is not content integrity.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "260dcf8922a2f6b88dfdf8ab05ea32fc05b8c91e3e62e80925aed2740aa95175"
+    },
+    "SEC-03": {
+      "title": "Count evidence domains rather than returning copies",
+      "status": "Shortlist",
+      "notes": "Cross actual upstream source correlation with imperfect, absent and oracle source labels. Source-domain voting can suppress useful minority evidence and still overcount copied material on different domains; plot false commits versus useful coverage. Related exploratory extensions: VX-01, VX-02. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "dd38e332d75f7039cd4e1abf1f22edf488219c9f867e2197b903d4417e278428"
+    },
+    "SEC-04": {
+      "title": "Separate returned evidence from permission changes",
+      "status": "Discuss",
+      "notes": "Use a non-LLM capability check for the permission boundary and permit benign returned evidence. Signatures identify the sender, not authority to alter policy; report useful work blocked as well as unauthorized actions prevented. Related exploratory extensions: VX-32, VX-36. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "9a482322e4b4bf507b4a5b729c16f7fd3e4f6311f5021245a2a6f201176929e0"
+    },
+    "SEC-05": {
+      "title": "Preserve uncertainty through repeated compaction",
+      "status": "Discuss",
+      "notes": "Fix both output length and retrieval access while repeating compaction. Include uncertainty preserved from a false source: fidelity and truth are separate targets. Connect directly to telephone and correction recurrence. Related exploratory extensions: VX-06, VX-12, VX-36, VX-38. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "afd951d6a7150ef86fca2bc4400a997fb4906399c5b0b29714f9948bbcbd369d"
+    },
+    "SEC-06": {
+      "title": "Repair when the dependency graph is wrong",
+      "status": "Shortlist",
+      "notes": "Add missing and spurious lineage edges independently and compare selective repair with reset/checkpoint baselines. MemTX and MemLineage already occupy much of this space; uncertainty about dependencies and useful retained work define the extension. Related exploratory extensions: VX-11. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "5dda87da3dd71348b4b79247dcfee30c1023c30da56b70d4822b090832dae493"
+    },
+    "SEC-07": {
+      "title": "Stale children can undo a correction",
+      "status": "Discuss",
+      "notes": "Deliver stale children after a committed correction at controlled delays. Count reintroduced false claims and useful late facts; epoch rejection is a freshness mechanism, not proof that a semantically new report is safe. Related exploratory extensions: VX-06, VX-23. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "efec635d91129476d79bb3c2ca8c8197d16433daec0aac43e7dc2f3ce679fad7"
+    },
+    "SEC-08": {
+      "title": "Protect the honest return channel",
+      "status": "Discuss",
+      "notes": "Match total delivered tokens and reserve capacity for an honest late correction. Also test admission to the reserved lane; an attacker using the same lane defeats a purely nominal channel separation. Related exploratory extensions: VX-05. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "cf9f13c9fc51452c092c48ac5c17b064f1bd0dc8865f1d462ad58c11c35281df"
+    },
+    "SEC-09": {
+      "title": "Screen the combination, not only each weight update",
+      "status": "Park",
+      "notes": "Weight composition requires separate model artifacts, trigger access and compute. Single-component screening is an inadequate baseline, but this is not interchangeable with text-memory merging; defer unless that infrastructure is actually ready.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "d7b60d4b292e526f52edf092e4b0c4a499664b4df5e16e71a135b0e55474cead"
+    },
+    "SEC-10": {
+      "title": "Distinguish useful specialization from harmful drift",
+      "status": "Discuss",
+      "notes": "Construct useful novel specialist knowledge that disagrees with the parent as a hard negative. Measure safety and learning jointly; agreement-oriented validators otherwise succeed by freezing the initial model's mistakes. Related exploratory extensions: VX-39. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "8e329197c48b6ad801dc1e30747d3486ee0ca02add37fa35087d996ed6b16984"
+    },
+    "SEC-11": {
+      "title": "Does merge order change what the parent believes?",
+      "status": "Discuss",
+      "notes": "Permute the same report multiset, preserving timestamps and cost. Compare staged adjudication with a deterministic evidence store; stability from ignoring late evidence is not an acceptable improvement. Related exploratory extensions: VX-23, VX-40. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "a7838a2b4a196682c40abbc082676fca95af84dcb0dc5249edfc0da2df4d6198"
+    },
+    "SEC-12": {
+      "title": "What kind of validator diversity actually helps?",
+      "status": "Discuss",
+      "notes": "Cross model family, evidence access and policy independence. Match reviewer capability and false rejection; differently named validators sharing the same evidence can fail together. Connect to diversity and dissent. Related exploratory extensions: VX-02, VX-17, VX-22, VX-38. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "d5fe26dcd2990e2f8dfad377d45b812cea228ee4f4916f2260a5a050b47eafc4"
+    },
+    "SEC-13": {
+      "title": "Budget useful attention when identities are cheap",
+      "status": "Discuss",
+      "notes": "Conserve an attacker's total resource budget across identity splits. Report exclusion of honest low-budget specialists; admission pricing is not successful if it prevents both spam and the only correct contribution. Related exploratory extensions: VX-29. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "68780d57130b4701db4470ee925e63171af1f72b9e1143ea1cccc4a03ce2dc44"
+    },
+    "SEC-14": {
+      "title": "Coalition caps with noisy contribution estimates",
+      "status": "Discuss",
+      "notes": "Include legitimate complementary coalitions when evaluating sampled contribution caps. The hard question is allocation under noisy value estimates, not simply whether caps reduce influence; charge sampling to the common budget.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "0754755ab18d897e4fc0521910da5e0320a609b4e52090f8542a822a97358907"
+    },
+    "SEC-15": {
+      "title": "Reputation should not become transferable expertise",
+      "status": "Discuss",
+      "notes": "Shift task domain without changing identity, with specialists and generalists as controls. Reputation transfer can help when expertise transfers; measure calibration by domain rather than declaring all pooled reputation harmful.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "46ada49b2aa4b409a56016bd0eee87e233b5329c43edb6c6888ce359ecf6bb7a"
+    },
+    "SEC-16": {
+      "title": "Re-entry penalties versus the newcomer tax",
+      "status": "Discuss",
+      "notes": "Match honest entry burden and vary resource inequality independently of dishonesty. Reset penalties can tax recovery from benign failure; report newcomer false exclusion and time to useful participation. Related exploratory extensions: VX-29. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "ea5bc6b3074c42d0c65366666a6dc3298ac08eff9cd7a651cf5de5fcdace1bae"
+    },
+    "SEC-17": {
+      "title": "Private rate limits across many credentials",
+      "status": "Discuss",
+      "notes": "Separate per-credential replay integrity from cross-credential resource conservation. Valid new credentials can multiply allowed consumption without any cryptographic protocol failure; define which property the test can actually refute.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "f7bd81008164d873f588e9e3ab714d771948610b956eaa686f163c8000a4311c"
+    },
+    "SEC-18": {
+      "title": "Identity-invariant selection can still concentrate knowledge",
+      "status": "Discuss",
+      "notes": "Preserve total stake and selected seat count while varying evidence ownership. Identity-invariant lottery weights can still select dependent knowledge; connect to quorum without claiming a failure of stake-splitting invariance. Related exploratory extensions: VX-20. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "eb5a79ccddf38a7f29f23bd4347f6e9ba1e23d5a30f08881e064b173a74b23ef"
+    },
+    "SEC-19": {
+      "title": "Do graph defenses mistake new teams for Sybils?",
+      "status": "Discuss",
+      "notes": "Use new legitimate modular teams and established attackers as hard cases. Degree-matched graphs can still differ in age and activity; verified bridges need a measured acquisition cost and evidence definition.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "fa5575dffdb882c615f6db7d0c3682fa574448b65cf6f9dc11181757d53df89f"
+    },
+    "SEC-20": {
+      "title": "One human credential does not mean one autonomous agent",
+      "status": "Discuss",
+      "notes": "Hold total resources fixed and distinguish credential holders from delegated planners. Shared execution does not imply fraudulent identity; the outcome is decision concentration, not automatic proof of abuse.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "e63898a8e5d3bc951d843f7d191240370b0bb1ece151c32f052824613c9cd3f8"
+    },
+    "SEC-21": {
+      "title": "Audit what an attestation actually identifies",
+      "status": "Discuss",
+      "notes": "Enumerate claims separately for key, binary, runtime instance, operator and task. Test normal restarts and delegated workers as negatives; an attestation cannot establish identity properties absent from its signed statement.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "142c68b69a8190e689e30736a9066b7b2ed8670dc6ceffebe5f91b68f39ce77d"
+    },
+    "SEC-22": {
+      "title": "Do agents spam because timing rewards attempts?",
+      "status": "Discuss",
+      "notes": "Compare explicit allocation to cheap backoff and queues. Count wasted attempts plus slower honest agents' opportunities; a low-spam policy that starves delayed work merely moves the cost outside the metric. Related exploratory extensions: VX-21. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "252bdc91fc0ea7dc6a0a064a456f751b8aaf2993922f1999077f0d4252527088"
+    },
+    "SEC-23": {
+      "title": "Physical identity under multiple radios and motion",
+      "status": "Park",
+      "notes": "Requires a credible channel and motion model or radio data. Multiple radios from one platform and legitimate co-location are essential stressors; simulation-only results should not be sold as deployed identity guarantees.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "7b436c70c3cf3238b70d4453184d35a84b5ef2180a53757fe98960613cdfbfc2"
+    },
+    "SEC-24": {
+      "title": "Stop fake value even when every identity is real",
+      "status": "Discuss",
+      "notes": "Construct complementary honest teams and circular endorsers with real identities. Evaluate artifact value externally at matched review cost; identity verification alone cannot resolve incentive-induced fake value. Related exploratory extensions: VX-09, VX-20. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "7a5a763a1019839057712092e37764ccfe9c58724c067a7f44b1da1baae52ad9"
+    },
+    "SEC-25": {
+      "title": "Separate model, prompt, scaffold, and operator attribution",
+      "status": "Discuss",
+      "notes": "Separate model, prompt, scaffold and operator labels with crossed holdouts. Avoid publishing real-person attribution from similarity; this is a synthetic label-identifiability experiment until external validation exists.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "e83fd4a00238d027d5bb6d603283f619391ec4d07f3a69cb93ab6768a398f0de"
+    },
+    "SEC-26": {
+      "title": "Measure the simulator fingerprint before measuring swarms",
+      "status": "Discuss",
+      "notes": "Train an origin classifier as a diagnostic, but do not treat chance origin accuracy as proof of no leakage. Hold out generators, templates and scheduling policies; compare activity-matched benign teams.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "d9f1f133825e2d0d042a2d73c6abab87edd91d5cedd43f48d2e7638c46f6b3d5"
+    },
+    "SEC-27": {
+      "title": "Shared news is not necessarily shared control",
+      "status": "Discuss",
+      "notes": "Randomize peer exposure independently of common news. Null effects can mean the intervention failed to induce influence, not that a detector is good; report manipulation checks without conditioning the primary causal estimate on uptake. Related exploratory extensions: VX-26. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "fb64ba92adf4a766778c4f1ece0cbe01d8ff467b2920d436b2364ae55b085b27"
+    },
+    "SEC-28": {
+      "title": "A canary identifies a route, not always an operator",
+      "status": "Discuss",
+      "notes": "Score route identification separately from operator identification. A shared intermediary can transmit a marker legitimately; test copied markers and delayed cache exposure in a local sandbox before interpreting canary hits.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "2e50bfc34760ec3a1620287d2b469ae6d50029d4471a7186bfe313129754b25f"
+    },
+    "SEC-29": {
+      "title": "Does shared memory teach agents to recognize test probes?",
+      "status": "Discuss",
+      "notes": "Separate repeated exact probes from repeated probe families, charging detector adaptation cost. A decline in sensitivity can come from task drift as well as test recognition; keep clean capability and false-alert controls. Related exploratory extensions: VX-14. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "ff68dbeb1e959d5ea99102b5298c9b374950dc6c3c36ffe94fc97846241bffbc"
+    },
+    "SEC-30": {
+      "title": "Would the detector produce a useful review queue?",
+      "status": "Discuss",
+      "notes": "Choose a review capacity and realistic prevalence range before thresholding. Precision from balanced test data is not a queue forecast; report expected true findings per reviewer-hour and calibration uncertainty. Related exploratory extensions: VX-14, VX-24. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "12f581665be9359de3f8715e149ce315a2a457750de46b1b87be1a3f5d9ded6e"
+    },
+    "SEC-31": {
+      "title": "Separate assistance from autonomous action",
+      "status": "Discuss",
+      "notes": "Use matched tasks across human-only, assisted and autonomous operation with held-out tools. Label the permitted operational boundary explicitly; automation-library traces are not reliable evidence of agency.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "f71398684900696157bcda407912fbbc38a1a962ebc12a93e788ecdfa53a13b7"
+    },
+    "SEC-32": {
+      "title": "Are browser detectors detecting the automation library?",
+      "status": "Discuss",
+      "notes": "Cross browser library with decision source, including scripted and agent-controlled runs on each. A library detector may still be operationally useful, but its scope must not be described as detecting coordinated agents.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "ab6e3a552d494cacd44e9195652c85fb49ef1c936032a75c8231bd32bdf0449b"
+    },
+    "SEC-33": {
+      "title": "A shared funder may be a service, not a shared owner",
+      "status": "Discuss",
+      "notes": "Use independent customers of a common service as negatives and common operators with different services as positives. Funding provenance narrows hypotheses; it does not establish shared ownership by itself.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "18e26329b87a26857d01f15a722509560b1e1859e0efe9aae5b2753c9074b37e"
+    },
+    "SEC-34": {
+      "title": "What disappears when only successful activity is logged?",
+      "status": "Discuss",
+      "notes": "Drop failed and low-activity events with controlled selective missingness. Report sensitivity bounds when missingness is unknowable; complete-case ranking can reverse even when the observed detector score is stable. Related exploratory extensions: VX-30. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "9d07251836e508e9d96e4314b7ad111e50d45c6b460f67930f252db8836cfe5c"
+    },
+    "SEC-35": {
+      "title": "How quickly does an attribution detector expire?",
+      "status": "Discuss",
+      "notes": "Evaluate predeclared time and model-version shifts. Recalibration must use only data available then; abstention coverage and false confident links are more informative than raw attribution accuracy alone.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "165767d6abb0deb45dff68658bcd6a3c51e7bf8e26569b44ed44f6be472dae9c"
+    },
+    "SEC-36": {
+      "title": "Detect coordination with less identifying telemetry",
+      "status": "Discuss",
+      "notes": "Define the minimum retained telemetry needed for a specific coordination decision. Compare schedule-aware activity baselines and measure lost detection utility; privacy and identifiability are separate axes, not interchangeable success claims.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "5cf441f7162b233a6c2e7be626de37bba06cb07bbde38be1f287753046bc1044"
+    },
+    "MET-01": {
+      "title": "Criticality beyond a geometric signature",
+      "status": "Discuss",
+      "notes": "Use finite-size, geometry and mean-subtraction nulls before interpreting scale-free plots. A perturbation response must add evidence beyond static fit; do not transfer a criticality label from physical systems to LLM agreement curves.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "5e5f711d88162b41a775f77bdc7f06955dfd9d248528c8a2a03e029678eda92d"
+    },
+    "MET-02": {
+      "title": "Sensitivity versus false alarms",
+      "status": "Discuss",
+      "notes": "Vary false-alarm and missed-event costs explicitly. Maximal responsiveness is not always maximal utility; compare a simple threshold policy at equal acquisition cost and report the operating regime of any benefit. Related exploratory extensions: VX-27. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "53008338c5bc9d193427de441ac3bd029a7fbeabd91002d10a779520afc90492"
+    },
+    "MET-03": {
+      "title": "What incomplete observation hides",
+      "status": "Discuss",
+      "notes": "Cross observation fraction with biased sampling masks. Uniform thinning understates missingness problems in casefiles; report which conclusions remain identifiable rather than promising universal debiasing. Related exploratory extensions: VX-30. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "dcec349c4a5e665bb9ef26bba601e091e887ab3484e52220ffb0e09b26f93e85"
+    },
+    "MET-04": {
+      "title": "Does a synergy score predict useful complementarity?",
+      "status": "Discuss",
+      "notes": "Fit the synergy metric without outcome leakage, then predict loss under held-out coordination removal. Compare to coverage, activity and simple pairwise redundancy; an expensive score needs incremental decision value.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "c7c1d1075e4eae23a156649f5fda769886dabaf4005d85470302b8e259213346"
+    },
+    "MET-05": {
+      "title": "Information flow under a shared driver",
+      "status": "Discuss",
+      "notes": "Shared drive is a central confound for both collective sensing and detection. Randomized edge interventions are stronger evidence than pairwise transfer scores; conditional estimation remains sensitive to unobserved drivers. Related exploratory extensions: VX-26. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "781bda3747b3d175cc5c6d7f36a48172763b81e2d666fdf8d8aaa85eb3729fd3"
+    },
+    "MET-06": {
+      "title": "A transition or a slow relaxation?",
+      "status": "Discuss",
+      "notes": "Prespecify dwell-time and system-size sweeps. The stated falsifier addresses the slow-relaxation explanation, not every transition claim; label which mechanism each test weakens and include a single-attractor null.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "8b3f20965097c7e95008341f1d306a701e89c71571eb389072f1853aefd67b77"
+    },
+    "MET-07": {
+      "title": "Can different mechanisms produce the same trajectories?",
+      "status": "Discuss",
+      "notes": "Evaluate inferred graphs on intervention predictions, not trajectory fit alone. Publish equivalence classes when multiple mechanisms remain plausible; casefile narratives should inherit that uncertainty. Related exploratory extensions: VX-13. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "7b427f40e718bde218c2fda5c02fe3114eeb1160baa87d660f1f61bd3a5b5e4e"
+    },
+    "MET-08": {
+      "title": "Early warnings on genuinely new failures",
+      "status": "Discuss",
+      "notes": "Hold out failure mechanisms and report lead time at a fixed false-alert burden. Signals chosen after inspecting the collapse trace cannot serve as prospective early warnings; connect to discovery triage. Related exploratory extensions: VX-14, VX-37. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "a95cc0817f91bbdefcd475437863cdc7a478b2cde12ec6c0dc584715a4bf7e94"
+    },
+    "RL-01": {
+      "title": "Skills with unfamiliar partners",
+      "status": "Discuss",
+      "notes": "Hold training steps and partner diversity budget fixed, then test genuinely unseen partner policies. Existing Melting Pot work makes cross-play established prior; a useful extension specifies which evidence or role shift remains unsolved.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "90fc6ffbf7a094d3ba98b9d43ca30443454c12bc458b9dd8d5cf9c71ba058eb5"
+    },
+    "RL-02": {
+      "title": "Credit for a rare essential contribution",
+      "status": "Discuss",
+      "notes": "Include a cheap role-conditioned credit baseline and charge critic training. Rare-action recognition can come from privileged critic observations; policy reward improvements alone do not establish fair or causal contribution attribution. Related exploratory extensions: VX-09. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "a3e48457d391e946cd7f5592f1b84e1645cd0969dd08585eaa51fd3b8dc66721"
+    },
+    "RL-03": {
+      "title": "Messages that remain useful under a broken channel",
+      "status": "Discuss",
+      "notes": "Distinguish delay, loss, corruption and adversarially selected messages. Content scrambling should preserve timing and volume; surviving a known noise family does not establish robust communication under new channels.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "ccbb3775ae96d0dbe468b9310ac9f7d29a26d324293f44aa923b69ef1ed486fa"
+    },
+    "RL-04": {
+      "title": "When a mean neighbor is misleading",
+      "status": "Discuss",
+      "notes": "Compare role histograms with attention at matched compute. A rare specialist can vanish under averaging; if a histogram solves the task, prefer it and narrow the claimed need for a learned representation.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "cb0bcbba5f7a58b44232913969f327fd29599eae1f1bb87ed3c194db883f15c7"
+    },
+    "RL-05": {
+      "title": "Size transfer or topology transfer?",
+      "status": "Discuss",
+      "notes": "Cross population size with graph degree, diameter and bottlenecks. A fixed-size unseen graph is essential: otherwise size transfer and topology transfer remain confounded.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "01427b6ab052ddf1ed94635a031817bea90f9b8314a21a4e99567e600a36ae28"
+    },
+    "RL-06": {
+      "title": "Emergent strategy or simulator exploit?",
+      "status": "Discuss",
+      "notes": "Port the action semantics before interpreting a cross-engine failure. Numerical tolerances and feasible actions can change difficulty; use one-step conformance tests to distinguish an exploit from an invalid port.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "0f1213f99178d1ca42d2a41e6e0c92aaaacd6938fc54cbb0b67a2d990c9b199c"
+    },
+    "RL-07": {
+      "title": "Good reward, bad collective behavior",
+      "status": "Discuss",
+      "notes": "Score navigation, safety and resource use independently of training reward. Alignment reward can be a proxy; an improvement after changing reward is only useful if held-out task performance improves too. Related exploratory extensions: VX-32. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "a79a45e2c3ea780319a3d8e4860395b7d9664f8d31ba213c751adbf2a4b3ac4a"
+    },
+    "RL-08": {
+      "title": "Coordinating while partners keep learning",
+      "status": "Discuss",
+      "notes": "Include a simple rolling partner estimator and unannounced switch times. Separate adaptation to changing partners from forgetting useful stable conventions; connects to culture and role handoff.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "a3603e32dd8b44d1f761ea1d2810f6151926004603f0ed1859bbf184adc5c074"
+    },
+    "OPT-01": {
+      "title": "Performance after shifting and rotating the problem",
+      "status": "Discuss",
+      "notes": "Freeze algorithm tuning before shifted and rotated holdouts. Objective-evaluation budgets matter more than nominal iterations; report family-level uncertainty rather than treating many transformations as independent worlds.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "3dfa2899e5c08bbb60fc2ca614b8abe76cb460216045ce48a42d04b1996fa502"
+    },
+    "OPT-02": {
+      "title": "Communication topology under a fair budget",
+      "status": "Discuss",
+      "notes": "Match objective calls, particle updates and message costs. Independent restarts are a substantive baseline: matching their gain makes sparse communication a simpler implementation choice, not necessarily a new optimizer.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "65e5ef25002c517012b78d0568be8d3f82c12aaf89d3da5ba45b3002ef1c4620"
+    },
+    "OPT-03": {
+      "title": "How much of ant-colony performance is local search?",
+      "status": "Discuss",
+      "notes": "Use a pheromone-by-local-search factorial at equal objective evaluations. A component attribution claim needs an interaction estimate, not a comparison of a tuned hybrid to an untuned base algorithm.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "7eba593f6c69f7415817a6b8896cf2b2109256b1ad43afcb18df05e9d8c3ae37"
+    },
+    "OPT-04": {
+      "title": "Independent evaluations versus noisy consensus",
+      "status": "Discuss",
+      "notes": "Evaluate the final selected solution with fresh noise. Otherwise repeated evaluation can look better merely by selecting a lucky winner; correlate noise across evaluators to connect this to evidence diversity.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "13722b6fa87a47a85caa250b3401e75d40a0a6be061944f356d9171e040507fb"
+    },
+    "OPT-05": {
+      "title": "When collective memory becomes stale",
+      "status": "Discuss",
+      "notes": "Choose change frequency and stationary intervals before tuning decay. Compare periodic restart and simple change detection; stale collective memory is a bridge to culture, but objective drift is not semantic belief correction. Related exploratory extensions: VX-16. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "346825a3304c1372d363b54e989b49a5ede72789ca62c1f33d0f8dbb3e09681f"
+    },
+    "OPT-06": {
+      "title": "Where the small-inertia approximation stops helping",
+      "status": "Park",
+      "notes": "Separate numerical approximation validity from optimizer rankings. Needs resolution sweeps and multiple population sizes; the two predictions have different falsifiers and should not be collapsed into one pass/fail claim.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "9e3a3a7de590a3aa041ac567e00961678062cde137c71f752e5c1896cca66aee"
+    },
+    "MTH-01": {
+      "title": "How much certainty comes from counting the wrong units?",
+      "status": "Discuss",
+      "notes": "Use the randomization unit for uncertainty and model repeated seeds within task worlds. Agents and rounds are not independent replications; validate interval coverage under simulated dependence before interpreting a narrow confidence band. Related exploratory extensions: VX-33. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "c24885a3c5e2df752896c607bcf525342e724d248bf6cdae00b26fd6c511d297"
+    },
+    "MTH-02": {
+      "title": "Do outcome labels change the conclusion?",
+      "status": "Discuss",
+      "notes": "Retain a metric vector for agreement, correctness, calibration, utility and cost. A single composite can hide consequential tradeoffs; any scalar weighting must be fixed before looking at policy rankings. Related exploratory extensions: VX-03, VX-27, VX-28. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "b7d4a90bd7caaae2717f97c6ea9b69e4423ed4b8dd82b4f2348266b2dac37cc8"
+    },
+    "MTH-03": {
+      "title": "Does a finding survive a model or runtime change?",
+      "status": "Discuss",
+      "notes": "Pin model revision, sampler and runtime where possible; otherwise record the access date and uncertainty. Crossed runner/model comparisons distinguish implementation drift from model effects; trace equality is not guaranteed for hosted inference.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "56625df301098f51cc82b1a2a160550b8eec1a7415a83f842b6be3453aeb7fcd"
+    },
+    "MTH-04": {
+      "title": "Spend the budget on more seeds or more worlds?",
+      "status": "Discuss",
+      "notes": "Use a pilot solely to estimate between-world and within-world variance, then freeze allocation. More stochastic seeds cannot compensate for a narrow task distribution; budget both generation and annotation costs. Related exploratory extensions: VX-33. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "dcbfa2a2a4da78e77582f13a806d511eef2d4bc46d26d6ad79112017a550eb08"
+    },
+    "MTH-05": {
+      "title": "Can an interrupted run be meaningfully resumed?",
+      "status": "Discuss",
+      "notes": "Define recovery semantics for pending actions, RNG, event order and shared state. Compare memory-only restoration to full checkpoint replay, and count duplicated side effects as failures even if the final answer matches. Related exploratory extensions: VX-11, VX-15, VX-19. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "ef222d40c3a27eb8fdc30f7150bb68bf62acf34ce96b9ec7187c62129ba45ce4"
+    },
+    "MTH-06": {
+      "title": "How much of a discovery is selecting the best run?",
+      "status": "Discuss",
+      "notes": "Track every tried prompt, seed and threshold, then use a separate confirmation split. The broad question bank creates its own selection opportunity; shortlist decisions must precede confirmatory runs. Related exploratory extensions: VX-37. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "6ef5fd13b4d3f42335e3357557e55a6e47428524f758f28536d2e19748fa7134"
+    },
+    "SIM-01": {
+      "title": "Private information leaks through the narrator",
+      "status": "Discuss",
+      "notes": "Trace authorized observations end to end, including narrator summaries and shared logs. Test private-fact canaries only in generated local worlds; an apparently decentralized team may have received an omniscient narration. Related exploratory extensions: VX-10, VX-36. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "0afd18aa232cd6d58007496f02bebcde77089ee4e3a51802200943591b6547d9"
+    },
+    "SIM-02": {
+      "title": "The scheduler as an experimental treatment",
+      "status": "Discuss",
+      "notes": "Treat simultaneous reads, sequential writes, shuffled order and wall-clock async as distinct semantics. Equal action count is necessary but insufficient; record first-mover advantage and stale decisions. Related exploratory extensions: VX-08, VX-19. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "e04c0e5810d1ae01b7c258b7d4f68ad76c31b4b0324dd9abc0eff326352864a8"
+    },
+    "SIM-03": {
+      "title": "Can the benchmark be solved without observing peers?",
+      "status": "Discuss",
+      "notes": "Add SMACv2 as direct prior: its abstract explicitly diagnoses strong timestep-only policies in original SMAC. Blind-policy auditing is replication/tooling unless the chosen environment and unseen-instance shift add something new. This ID denotes a question, not evidence of a running experiment.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "d7fce9b8becb0425c3ba7e7d437a3bcfda9bd88dcd0be1bcf8ec380593fa5532"
+    },
+    "SIM-04": {
+      "title": "Same rules, different engines",
+      "status": "Discuss",
+      "notes": "Begin with one-step and invariant conformance before matching long-run distributions. Engine parity at matched semantics is useful validation tooling; similar pictures are not evidence of equivalent processes.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "315b4784ff0f630b65ad0c6a3e4978bf72932168b74d48b3df0714313d30db5f"
+    },
+    "SOC-38": {
+      "title": "Select complementary teams on a separate task set",
+      "status": "Discuss",
+      "notes": "Good advance beyond family labels. Report cold-start and amortized profiling costs separately, with the workload horizon fixed in advance. Overlapping model subsets are paired estimates; use held-out task-family uncertainty rather than treating each selected panel as independent. Related exploratory extensions: VX-20, VX-22. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "674088c43d3feaefb6660eff79777b81e978ce4919501405e825465365d232db"
+    },
+    "SOC-39": {
+      "title": "The same average correlation can hide different failures",
+      "status": "Discuss",
+      "notes": "A scalar effective-size statistic can miss higher-order co-failure. Start with feasible synthetic joint distributions and a simple subgroup-weighted rule; observed replay establishes a diagnostic limitation, not the cause of real model correlation. Related exploratory extensions: VX-01. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "d8cddf1059cbeb1efff31d578559aca0b3685a3e1dde7737da554e03f2fb54b3"
+    },
+    "SOC-40": {
+      "title": "Keep small deliberating groups independent until the end",
+      "status": "Discuss",
+      "notes": "Cross subgroup isolation with evidence placement: one essential fact stranded in a subgroup can reverse the result. Charge fusion and compare independent voting; a partition benefit is not established by fewer discussion tokens alone. Related exploratory extensions: VX-35, VX-38. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "615e853f9fab1480ed9cd91bda753b12d667e61b15c5401ccc2a951ecaf3b37e"
+    },
+    "SOC-41": {
+      "title": "Diverse interpretations versus diverse personas",
+      "status": "Discuss",
+      "notes": "Validate equivalent framings without giving one arm extra task information. Measure framing-generation and audit cost; lexical or persona diversity need not create independent reasoning. Prefer neutral repeated sampling if gains vanish under that control.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "4567b9894ae1fa370dd014987bfdef9fe58a8a98f2d575366d9e1c2613b35f43"
+    },
+    "SOC-42": {
+      "title": "More correct candidates or a better final selector?",
+      "status": "Discuss",
+      "notes": "Keep candidate coverage and achievable selection accuracy separate. The hidden oracle establishes headroom only; charge the selector's objective check and include episodes with no correct candidate in total utility. Related exploratory extensions: VX-04, VX-22. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "a8fe73fcef0a1eed98874caf0374987508cbe1e1706f78efc594d6e1398d87c4"
+    },
+    "SOC-43": {
+      "title": "Abstain when confidence is high but errors are shared",
+      "status": "Discuss",
+      "notes": "Strong connection to Scheme C, but a calibrated confidence floor differs from an upper concentration brake. Compare at matched answer coverage and retain abstentions in total utility. Dependence diagnostics must be estimated without test-label leakage. Related exploratory extensions: VX-02, VX-28. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "be73533f07fd7c6a1ad3f15e74ae228630a521f94fecbb4ce63d761550b1f9ea"
+    },
+    "SOC-44": {
+      "title": "Preference optimization and shared mistakes beyond familiar QA",
+      "status": "Discuss",
+      "notes": "Require genuinely paired checkpoint lineages and show standalone capability alongside correlation. Avoid extrapolating a DPO comparison into a general claim about alignment; lineage replication is more informative than many stochastic draws of one pair.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "f4aa91fee12da7af30ba49ba7c97e4f4102ee7270cbe6132f64d8e031b1d43c7"
+    },
+    "SOC-45": {
+      "title": "Does local memory preserve a convention after pressure ends?",
+      "status": "Discuss",
+      "notes": "Bound claims to the observed horizon and counterbalanced fictional conventions. A persistent preference is not necessarily an error; separate memory-mediated inheritance from model priors and the supplied scripted pressure. Related exploratory extensions: VX-16. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "10edc1d0738fa39f7cf45be2b7a110050b3b8b02608f75610fa9284178bc247a"
+    },
+    "SEC-37": {
+      "title": "Bundle allocation when tasks complement or interfere",
+      "status": "Discuss",
+      "notes": "Keep procurement, forward-auction and scheduling domains separate. Exact capacity conservation is essential; finite best-response search supplies counterexamples or regret estimates, not an equilibrium proof. Report welfare and profitable splitting independently.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "e86bda1b6af75fb0d8b12ce4358036687c7b4fd3a1191839e9169b3e2d11f0b3"
+    },
+    "SEC-38": {
+      "title": "Can a tiny counterexample invalidate our allocator?",
+      "status": "Discuss",
+      "notes": "Useful specification tooling before larger simulations. Replay discovered counterexamples with exact arithmetic where possible; a bounded exhaustive search can falsify a rule but cannot establish global false-name robustness.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "6db152555de32b5c9e4d67f9c127f81d77627188bf002dc45ae882bc2236c40b"
+    },
+    "SEC-39": {
+      "title": "A queue may reward splitting work or merging it",
+      "status": "Discuss",
+      "notes": "Conserve total work and charge every piece's completion delay when jobs split or merge. Compare the theorem-compatible case first; otherwise a partial-job utility definition can manufacture a deviation that the actual principal cannot realize.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "67d80fd80eec4ce950c1a5c95465360ae0d20e3af239b53665eb80098e248ee7"
+    },
+    "SEC-40": {
+      "title": "Do small participation costs preserve useful collective choice?",
+      "status": "Discuss",
+      "notes": "Preference aggregation is distinct from factual quorum correctness. Match effective participation costs and test cost-sharing explicitly; a result on synthetic utilities cannot establish fairness or utility for real people.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "420cdce320b4a98363132c470a4906c1f7616ef44d1f79109730a137c5522d08"
+    },
+    "SEC-41": {
+      "title": "Fake intermediaries in a chain of trust",
+      "status": "Discuss",
+      "notes": "Score total exposure to the underlying principal rather than the best identity. Include necessary honest intermediaries and delayed failure; conserving reputation as if it were currency needs a stated operational meaning.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "de2671be09f2df7a07badac503a41aab9521f78bb6c7a8e262d6a7f3dcb7bdc9"
+    },
+    "SEC-42": {
+      "title": "False availability windows in online task markets",
+      "status": "Discuss",
+      "notes": "Cancellation can create free options hidden by completed-only scoring. Count accepted but unfinished tasks and enforce the underlying capacity calendar; keep honest intermittent workers as a fairness/control population.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "01a0a22b845229eae3d18e88c34a97e890c5389840d0a3632406da722b41240d"
+    },
+    "SEC-43": {
+      "title": "Who should a trust network verify first?",
+      "status": "Discuss",
+      "notes": "Connect directly to rare-specialist admission and budget allocation. Verification must reveal only the declared property, not oracle ownership or task value; evaluate admitted networks under the same downstream allocator. Related exploratory extensions: VX-29. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "fedf8460d453da11cf4c077bc9f88d492b1ec27629b88acfd44f0590160ff2a2"
+    },
+    "SEC-44": {
+      "title": "Conserved voting weight can still change bargaining power",
+      "status": "Discuss",
+      "notes": "Distinguish exact voting power indices from observed causal influence. Splitting can change assigned bargaining credit while stake-proportional selection stays invariant; state which downstream payout rule makes the difference consequential.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "e3a6470c3fcdcf571cfeb5fb5d7f698006ec52f44bdff25fe2ad2bdfdd3a0a7f"
+    },
+    "SEC-45": {
+      "title": "Does a false fact spread like a policy violation?",
+      "status": "Discuss",
+      "notes": "Essential separation of false evidence and unauthorized instruction. Match stimulus plausibility and count exposure, adoption and mock action separately. VX-36 adds the positive controls of true-but-unauthorized and false-but-authorized content. Related exploratory extensions: VX-32, VX-36. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "f7d7585a9a9a0ee880f3260879c4d84ab9a121dd634d27673ab9a689891b69fa"
+    },
+    "SEC-46": {
+      "title": "Shared tools can reconnect isolated children",
+      "status": "Discuss",
+      "notes": "Shared stores can reconnect nominally isolated children. Match legitimate cache content and use new children after cleanup; common initial exposure is not onward contagion. Pair this with stale-return/compaction checks rather than creating a duplicate memory project. Related exploratory extensions: VX-06, VX-07, VX-10. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "eb6f56932c61d12a7eeda6e7878ed5be87091670921d161ccd6c0359a3667c3b"
+    },
+    "SEC-47": {
+      "title": "Where does the full fork-and-return chain actually fail?",
+      "status": "Discuss",
+      "notes": "The full pipeline is the right denominator. Keep natural retrieval and preseeded-state diagnostics separate, count all assigned episodes, and label conditional transition rates descriptive unless the stage intervention is randomized. Related exploratory extensions: VX-26. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "ba2f5a6d2e9d742b64d71b6d8d685a39da964df63f3ed2ef9e46cab5f6e957d4"
+    },
+    "SEC-48": {
+      "title": "When can an isolated child safely return?",
+      "status": "Discuss",
+      "notes": "Measure clean children falsely quarantined and charge both elapsed opportunity and review work. A silent child is not necessarily repaired; held-out follow-up tasks and constrained authority are distinct interventions that need separate ablations. Related exploratory extensions: VX-05, VX-23. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "c5055ccde31b796babbb5d33f5118348a5793d4a607e9c06dfedcc9b60858736"
+    },
+    "SEC-49": {
+      "title": "Recovery can look good after damage is already done",
+      "status": "Discuss",
+      "notes": "This already covers the central irreversible-consequence concern in VX-11. Combine the work: retain original harm after compensation and compare cumulative utility with terminal recovery under matched action timing. Related exploratory extensions: VX-11, VX-24. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "3e692d4f327e593b17ef44282598715e932b23e309264171ff1467cde173d3f9"
+    },
+    "SEC-50": {
+      "title": "A detector that isolates nodes changes the evidence",
+      "status": "Discuss",
+      "notes": "Offline detector accuracy cannot predict the effect of live isolation without a policy experiment. Preserve unique legitimate evidence on suspicious nodes and count all assigned communities, including ones the monitor prevents from completing. Related exploratory extensions: VX-14, VX-24. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "cbd78ee08092a5d43202557dc1c527aefcf114e7b66e7eaed09adaf31750f506"
+    },
+    "SEC-51": {
+      "title": "Can harmless evaluator preferences narrow a swarm's reasoning?",
+      "status": "Discuss",
+      "notes": "Convergence can be useful when one strategy is objectively best. Cross evaluator preferences with task structure and keep strategy labels independent of the evaluated judge; compare budget-matched heterogeneous judges and shuffled feedback. Related exploratory extensions: VX-20, VX-38. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "9b38f9422fc2c8ccfe4eb1dee6599e8167436aaf360642143a2a9504b24bcb45"
+    },
+    "SEC-52": {
+      "title": "Do small per-merge failures accumulate across generations?",
+      "status": "Discuss",
+      "notes": "Good existing home for repeated-return work. Estimate recurrence by lineage, retain abandoned runs and distinguish inherited false state from repeated independent error. VX-06 narrows this to a correction surviving stale return plus compaction. Related exploratory extensions: VX-06, VX-39. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "ba7a68612914bc23a9bf0a3e115776e49b6e87c8a65c2f062394414b49736281"
+    },
+    "SEC-53": {
+      "title": "Can reliable service history hide selective routing failure?",
+      "status": "Discuss",
+      "notes": "Use availability controls before calling selective absence malicious. Hold peer placement and republication fixed; per-task reputation may help rare coverage but can also be too data-poor to calibrate reliably.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "849e6ffd5ce010cbd7478902913c32402bc6646d57c449cfe8515626f1dfe4ab"
+    },
+    "MTH-07": {
+      "title": "Do failure rankings survive independent relabelling?",
+      "status": "Discuss",
+      "notes": "Blind relabeling is useful before ranking debuggers. Map taxonomy versions semantically, preserve null labels as unknown and report human disagreement; an annotated decisive step is not necessarily a causal root cause. Related exploratory extensions: VX-37. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "192d0bc072f678553418f4a67fc235f7692ac0ff0a6abf0842d023c3b3df2200"
+    },
+    "MTH-08": {
+      "title": "Does the split separate new games or just new turns?",
+      "status": "Discuss",
+      "notes": "Group by actual generating sequence, not filenames or seed labels alone. Match training size and report genuine distribution shift from grouping; a leakage reduction and a harder test population can both change accuracy.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "95d9dab4e5e8abfa89066b390e6afb4f92d3b87681214679162724ee45e5aad2"
+    },
+    "MTH-09": {
+      "title": "Does the evaluator know more than the acting agent?",
+      "status": "Discuss",
+      "notes": "Judge avoidability under the acting agent's legal information set. Keep realized bad luck distinct from a poor ex ante decision, and prevent the same annotator from learning hidden state before reviewing the visible-only packet. Related exploratory extensions: VX-13. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "3e376ef21f42e08f20500321fcf234d5fcaf1c245432c86bdd6c7a01793b6b18"
+    },
+    "MTH-10": {
+      "title": "Does translation preserve the interaction being measured?",
+      "status": "Discuss",
+      "notes": "Keep public dialogue separate from translated private reasoning and missing-translation selection. Independent translation is needed to attribute a difference to language rather than one pipeline; use whole games as clustered units.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "61eb0169bb56ba1cea7ea17a8cd58084fb9b0ebc6a831e2f6f4f22d7439f45da"
+    },
+    "MTH-11": {
+      "title": "Which system wins when failed runs count?",
+      "status": "Discuss",
+      "notes": "This directly overlaps VX-33's completion-conditioned comparison. Combine the analyses, keeping infrastructure failures, invalid output, resource exhaustion and statistical exclusions separate; all-attempt utility needs prespecified failure costs and sensitivity ranges. Related exploratory extensions: VX-30, VX-33. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "70b6104d0e863fa6bb1bfaf099872882ffd857be1d4ce7cf0f2c30324fb0e34e"
+    },
+    "MTH-12": {
+      "title": "When does a collection of sessions become a team?",
+      "status": "Discuss",
+      "notes": "Multiple sessions can be retries, independent work or collaboration. Recover temporal and artifact dependencies and allow unknown; overlapping timestamps during tool waiting do not prove interaction or independent operators.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "bacd9959a2b414b7d9c20ad10936744163839058262bb9032158fb7484e57b8a"
+    },
+    "MTH-13": {
+      "title": "Is there a stable ranking of cooperative ability?",
+      "status": "Discuss",
+      "notes": "Check model/scaffold overlap before computing a universal cooperation ranking. Normalize within each task's legal baseline but retain distinct constructs; insufficient common coverage calls for new data, not imputed ranks.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "63d41bb683918d3f69225093d7e0762a66a34d2b07907ed7e6ac1af96e98e066"
+    },
+    "MTH-14": {
+      "title": "Does the apparent trend survive the crawler?",
+      "status": "Discuss",
+      "notes": "Two datasets sharing a crawler are not independent replication. Match immutable entities and eligibility rules, and retain deletion uncertainty; synthetic stationary-network controls can expose collection-induced trends without asserting a real behavioral change. Related exploratory extensions: VX-30. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "c854e54394f8f67c4bd7efe42f207626fbc4ef9afe4fae2efcdabc85ba39f138"
+    },
+    "MTH-15": {
+      "title": "Does entropy predict collaboration beyond task difficulty?",
+      "status": "Discuss",
+      "notes": "Clarify that the current falsifier challenges the leakage/redundancy concern, not the general possibility of useful entropy. A completed-trace statistic can support diagnosis but cannot guide an earlier routing decision without prefix-only features.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "b8ef09541f885f2d06158ba17593d0d6ac1f9be5158b9d8b6ba390d63dbe5540"
+    },
+    "SIM-05": {
+      "title": "Can the published summary be rebuilt from committed events?",
+      "status": "Discuss",
+      "notes": "A strong general-tooling check. Reconcile event time, external accounts and rounding before calling a summary wrong; reproduce metrics from frozen events and keep export-timing tests distinct from simulator-behavior validation.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "a6fb698e4a8f345ed3b2985c97a13b2cb299a4845f253786d0d1538e7dc64bfe"
+    },
+    "SIM-06": {
+      "title": "When does offline policy evaluation stop ranking policies correctly?",
+      "status": "Discuss",
+      "notes": "Joint-action coverage is the meaningful MARL extension. Removing joint actions may alter state visitation and return quality, so report residual shifts and uncertainty by dataset/training seed; do not transfer the result to LLM teams without a corresponding task model.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "a57c516e6da4832f6ce3c8975aff466848e43b4a529c8a630283bf789a93d67a"
+    },
+    "SIM-07": {
+      "title": "What does a best-of-many baseline actually buy?",
+      "status": "Discuss",
+      "notes": "A per-metric best-of-N envelope is not one deployable system. Retain full outcome vectors and charge selection; held-out perturbations of the same artifacts do not create new independent discoveries.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "d3c06a7ef94b3ad54e611873bb8f18f6f1445520c92f72972adf094029a65cfc"
+    },
+    "BUD-01": {
+      "title": "Visible budgets in private and shared pools",
+      "status": "Discuss",
+      "notes": "Good visibility-by-pooling factorial. Hold status-message footprint fixed and distinguish the feasible-transfer benefit of pooling from a social spending response. Report total utility as well as early spending, which may be efficient on some tasks.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "e6125032f2c258b68acb0a751e8cfe7ef03bb84683ec0c8b0700c2d4dbf06f27"
+    },
+    "BUD-02": {
+      "title": "Which parts of peer spending should be visible?",
+      "status": "Discuss",
+      "notes": "Named spending can alter authority or social comparison without conveying useful cost information. Shuffle identities and order, match progress information, and compare heterogeneous workers separately; more equal spending is not automatically better.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "5e6ce57d414d4b352571b7c8a4c35d2f864978dc6734c47ba4bfa11b076139d0"
+    },
+    "BUD-03": {
+      "title": "Displayed balance versus the enforced balance",
+      "status": "Discuss",
+      "notes": "Displayed and enforced balances are separate treatments. Estimate the team-by-display interaction at fixed actual cap, and distinguish rejected attempts from billed consumption; provider enforcement must not be inferred from the prompt.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "ad0f5a47c2011e3a97cc6d7ef6b646f7ed03f8d6bb492a48a69ce3509c12089c"
+    },
+    "BUD-04": {
+      "title": "Context anxiety or spending anxiety?",
+      "status": "Discuss",
+      "notes": "Useful separation of context headroom and resource budget. Preserve identical history and actual capacity; longer summaries caused by a context cue can consume budget, so count that pathway instead of attributing everything to spending anxiety.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "8cfce90c1009300afa2f4f28f1512ef7ee2691648534443529210c05dced86b9"
+    },
+    "BUD-05": {
+      "title": "Use cost forecasts to release stranded budget",
+      "status": "Discuss",
+      "notes": "Forecast calibration matters only if it improves held-out portfolio utility after its cost. Stopped-task replays are diagnostic, not online evidence. Measure false abandonment and useful reallocation rather than interval coverage alone. Related exploratory extensions: VX-31. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "bc342b4f38cb11170f01e8808492ac3211d0b1b5b6acb2669468e3b56c682802"
+    },
+    "BUD-06": {
+      "title": "Do quotas cause unnecessary spawning?",
+      "status": "Discuss",
+      "notes": "Keep root resources conserved so extra identities cannot literally mint budget. Compare to unrestricted useful delegation and charge child setup; more spawning is not waste unless its marginal verified output fails to justify the cost.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "70da899582406468d4fd19b5cdb66b1769cecb5c384256ec7452e9198142317e"
+    },
+    "BUD-07": {
+      "title": "Discovering a quota rule",
+      "status": "Discuss",
+      "notes": "Randomized incidental exposure is the right primary assignment. Do not condition only on agents who discovered the rule; help-tool use is behavior affected by the treatment and workload.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "4ed4c12ff7e7786b6446dd8c5c4feaff53e39f0f9c72bae4419cc9aa6f6bcc6a"
+    },
+    "BUD-08": {
+      "title": "Spawn fees versus lineage budgets",
+      "status": "Discuss",
+      "notes": "Specify whether fees burn or reserve budget and compare equal root caps. Show useful parallelism and waste jointly; fewer children alone does not establish a good lineage policy.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "1e087b9ec11f874aaec61a728022d1579db2d6192c05a85dc20ee119482cad82"
+    },
+    "BUD-09": {
+      "title": "Safe escrow that still gets work done",
+      "status": "Discuss",
+      "notes": "Conservative escrow buys integrity by sacrificing flexibility during partitions. Keep uncertain effects charged and compare connected allocation as an upper bound, not an equally fault-tolerant peer. Report stranded resources and missed deadlines. Related exploratory extensions: VX-40. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "7db18bc0dbc431b51248c63c4dcc0388d92e84196b53e3c8efc95f62fdbd4ae7"
+    },
+    "BUD-10": {
+      "title": "Peers, coordinator, equal shares or auction?",
+      "status": "Discuss",
+      "notes": "Mechanism calls, bids and failed negotiation must consume the same root budget as work. Cross task dependencies and cost heterogeneity; a sophisticated allocator should beat equal shares after overhead, not only allocate more precisely.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "169fdf42eba4873e9ed6012064f1781c10e46aa6a547b9bc9615b7d0ddb85859"
+    },
+    "BUD-11": {
+      "title": "Can cost bids beat measured capability?",
+      "status": "Discuss",
+      "notes": "Freeze the allocator so measured capability is the only changed evidence. Charge calibration even when it produces a bad allocation, and report the amortization horizon; long portfolios can justify costs that cold starts cannot.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "6ccb75c6b99a160fa4426d5dd332a82c304ba69f416c695d22edbbb7f187f297"
+    },
+    "BUD-12": {
+      "title": "Replan on events or every action?",
+      "status": "Discuss",
+      "notes": "Use a frozen event trigger and delayed progress signals. Per-action planning gets more observations, so separate monitoring from allocation cost; event planning may fail under unobserved bottleneck changes. Related exploratory extensions: VX-21, VX-25. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "d5838efd101255b9e545a7673284ad3e0a24435a1b6dcb39dbef4e2577393834"
+    },
+    "BUD-13": {
+      "title": "Difficulty-aware allocation without hindsight",
+      "status": "Discuss",
+      "notes": "A difficulty probe must not leak the eventual answer or use retrospectively selected successes. Compare an informative diagnostic with a shuffled-signal control and charge all probes to the same cap. Related exploratory extensions: VX-34. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "23598ddf4bdb9be14b40055351944c5ff84576d34ca9ac1855c4d124672f502b"
+    },
+    "BUD-14": {
+      "title": "Divide work through a ledger alone",
+      "status": "Discuss",
+      "notes": "A public claim ledger is a communication channel even when chat is disabled. Allow conflicting claims and charge reads/writes; coordination enforced by a lock is different from agents learning to divide work.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "37ea84af4df3cb4fad8b076d8722c6296ee4927a91c7d37f5e77be28c0158694"
+    },
+    "BUD-15": {
+      "title": "Do peer spending norms increase waste?",
+      "status": "Discuss",
+      "notes": "Keep actual remaining balance fixed when displayed peer spending changes. Extra spending can buy useful work; call it waste only after independent utility evaluation, and retain assignment-based analysis rather than selecting readers.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "a13726b4b19b046de96e0d1a7010cc88935f9707921e66bed221d07dcd65f562"
+    },
+    "BUD-16": {
+      "title": "Authority, labels and asymmetric spending rights",
+      "status": "Discuss",
+      "notes": "The label-by-rights factorial separates authority symbolism from actual power. Counterbalance first access within each rights regime and show group utility plus capture; a privileged role can be efficient on unequal tasks. Related exploratory extensions: VX-08, VX-21. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "4a4f740a56f16d2a7055f3075b6f04d527bc334c2c7914a28bbf8bffbbc34708"
+    },
+    "BUD-17": {
+      "title": "Keep enough budget to finish and verify",
+      "status": "Discuss",
+      "notes": "A protected finalization reserve is directly relevant to verification as a public good. Its opportunity cost comes from reduced exploration; include tasks likely to fail before validation and count all abandoned work. Related exploratory extensions: VX-05, VX-09, VX-17. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "3704195fb91b849a7ec07616b94873834bdfbab3922c5d18fc79787c6e3bf84c"
+    },
+    "BUD-18": {
+      "title": "Tokens, money or a resource vector?",
+      "status": "Discuss",
+      "notes": "Tokens, dollars, wall time and tool capacity are not interchangeable. Keep a common enforced resource vector and vary only the planning representation; a scalar conversion can hide the binding bottleneck. Related exploratory extensions: VX-33. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "4abe932ddabaebb02e341a2ef4c30d25bc15e73de3a0be3b30dee6260febd1a9"
+    },
+    "BUD-19": {
+      "title": "Advisory targets inside a hard cap",
+      "status": "Discuss",
+      "notes": "Use the same outer hard cap and account for where unused grace resources go. Otherwise advisory targets simply receive extra resources. Include atomic action lengths and interrupted final actions, not only final answer quality. Related exploratory extensions: VX-33. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "286d99ee3a7c4bda0017dd79987799af8010bb0e552ca4977fb1225ba8450543"
+    },
+    "BUD-20": {
+      "title": "Budget accounting across tools and compaction",
+      "status": "Discuss",
+      "notes": "Keep compaction content identical while changing only the budget display. Correct carry-forward must cover pending reservations and tool-result costs; reset-to-total may cause rejected attempts without violating actual hard metering. Related exploratory extensions: VX-15. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "b9c78c7a46a96ead4e77a3caad963b02398b8cadba87ac8ac64d865464af959a"
+    },
+    "BUD-21": {
+      "title": "Train for a penalty or a strict budget?",
+      "status": "Discuss",
+      "notes": "Training seeds, not evaluation episodes, identify independent learned controllers. Match tuning effort and report feasibility under shifted caps; a favorable penalty coefficient selected on test pressure would leak the outcome.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "5e73ee2841967d06644b7467130af2749c92b97bccbd2bae2cb7ae696d2ed7bd"
+    },
+    "BUD-22": {
+      "title": "Efficiency and starvation in shared budgets",
+      "status": "Discuss",
+      "notes": "State the acceptable efficiency/fairness tradeoff before choosing a service floor. Include infeasible demand, arrival-order effects and low-budget specialists; equal service need not maximize value, and maximum value need not prevent starvation. Related exploratory extensions: VX-29. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "8689fd7012d946a35244fc11f2bdc8dbaad27f875bad1e764482bfa52a1026f9"
+    },
+    "MKT-01": {
+      "title": "Market division when output needs sunk capacity",
+      "status": "Discuss",
+      "notes": "First match one-shot demand, costs and feasible production before adding sunk capacity. Concentration can be efficient specialization rather than tacit collusion; report best-response deviations and consumer/output effects alongside HHI and build timing.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "545f66e34b30a0c220f3203591cd575d30f262fc34f2e350362daed34013e343"
+    },
+    "MKT-02": {
+      "title": "Firms per good and the collapse of division",
+      "status": "Discuss",
+      "notes": "N-to-goods comparisons change competition mechanically. Compare a scripted equilibrium baseline in every cell, preserve the information budget, and separate model inference limits from changes in strategic incentives.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "3f0a07c11facb32ee48aecf137cfd77b81c68482ea4dc99144434f03ae631995"
+    },
+    "MKT-03": {
+      "title": "One principal, several firms",
+      "status": "Discuss",
+      "notes": "Conserve capital, physical capacity and inference, then cross shared objective and private communication. The split-versus-merged arm also changes firm count; report the classical game-theoretic baseline before attributing gains to agent coordination. Related exploratory extensions: VX-21. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "96d90aa859d0882ce71ba521801802dee317302d6a9b849e546fb1e13d2f9fae"
+    },
+    "MKT-04": {
+      "title": "Telling Sybil firms from tacit colluders",
+      "status": "Discuss",
+      "notes": "Shared ownership, tacit collusion and similar behavior are different labels. Require held-out prompt/operator constructions and prevalence-aware review precision; HHI or shared build style alone cannot establish common control.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "7163a9930cbcd107c986a84ad592dadca90fd59f037552ee5bf8c483b591dd4c"
+    },
+    "MKT-05": {
+      "title": "Reading the messages versus reading the market",
+      "status": "Discuss",
+      "notes": "Outcome-defined collusion partly builds the answer into action features. Use an independently specified profitable-deviation criterion and separate descriptive detection from causal collusion claims; a different judge family is not proof of independent error.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "fa90bfabf6f38b0367a502b069f938a09afc63b1ca68c679e2d96d0a600abc8a"
+    },
+    "MKT-06": {
+      "title": "No channel, public channel, private channel",
+      "status": "Discuss",
+      "notes": "Public and private channels change the information graph as well as message count. Charge generation and reading, use matched neutral-context controls, and report welfare/output plus explicit proposals; silence does not establish independent behavior.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "ae53206231c4f44f1e8b471536794a30072ae40f0649c5ac8b7056951995a504"
+    },
+    "MKT-07": {
+      "title": "Forked firms and inherited conventions",
+      "status": "Discuss",
+      "notes": "Cross inherited task competence, plans and convention-bearing memory separately, preserving split assets. Forking changes population and action opportunities; compare fresh entrants with equal resources and avoid labeling all shared-memory persistence collusion. Related exploratory extensions: VX-16. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "b67e4af42e5538876f4d2501185d11a127352b71378a401e6867cca43a0a5a24"
+    },
+    "MKT-08": {
+      "title": "Mixed models as a natural brake",
+      "status": "Discuss",
+      "notes": "Capability-matched models and best-response error are essential. A weak firm that disrupts specialization is not necessarily a useful brake; report principal/consumer outcomes and unequal inference costs alongside concentration. Related exploratory extensions: VX-20. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "cca0815110d188bbc2ce493e8ecf7f928cfef938e2a1c160d313a560bcc2dc3c"
+    },
+    "MKT-09": {
+      "title": "Public production ledger",
+      "status": "Discuss",
+      "notes": "An identified production ledger adds attribution, not only length. Compare aggregate totals, anonymized per-firm histories and named histories at fixed context; this connects to BUD-02/BUD-15 without equating spending imitation with market division. Related exploratory extensions: VX-08. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "8b2ecd4ca91104fbc0e80253930c216e5156b3ef3cb809f7b97b543fa7f0110a"
+    },
+    "MKT-10": {
+      "title": "One competitive entrant",
+      "status": "Discuss",
+      "notes": "Predefine the entry time or use a randomized eligibility rule; selecting only already-divided markets changes the target population. Match added capacity and capital, and report deviation from the N+1 benchmark rather than price changes alone.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "eedf235b71692f02d3b20d9cd9b8ba32bbaae018785956e36c3b273156a47496"
+    },
+    "MKT-11": {
+      "title": "Sybils against an antitrust regulator",
+      "status": "Discuss",
+      "notes": "Concentration-triggered fines can be evaded by accounting definitions even without strategic adaptation. Score principal-level outcomes, false penalties on efficient specialization and sensitivity to the fixed trigger; this is a simulated mechanism, not legal antitrust adjudication. Related exploratory extensions: VX-20, VX-29. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "f8a5465bd49f33f404a51de930b43519f9f47973f84507cc1072151d0f8ae316"
+    },
+    "MKT-12": {
+      "title": "Does the small simulator predict the real game",
+      "status": "Park",
+      "notes": "A full factory-game adapter is a substantial dependency. Freeze the selected comparisons before confirmation and include at least a negative or weak-effect control; choosing only the two strongest simulator effects creates winner selection. Validate action and information timing before interpreting transfer failure. Related exploratory extensions: VX-37. See researchers/vishesh/notes/atlas-review/extension-bank.md.",
+      "updated": "2026-10-03T22:13:15+00:00",
+      "candidate_sha256": "cbf85d8b634d39b9da29720c212c5c830a0e60c30885fc8e7eae4f200d0b836e"
+    }
+  }
+}
