@@ -3,7 +3,7 @@ id: design-swarm-immune-response
 type: task
 title: Develop an exploratory swarm immune-response design
 kind: synthesis
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,12 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-03T22:22Z
-updated: 2026-10-03T22:22Z
+updated: 2026-10-03T22:28Z
+outputs:
+- researchers/vishesh/notes/swarm-immune-response/README.md
+- researchers/vishesh/notes/swarm-immune-response/experiment-design.md
+- researchers/vishesh/notes/swarm-immune-response/protocol.md
+- researchers/vishesh/notes/swarm-immune-response/integration-and-sources.md
 ---
 
 ## Goal
@@ -21,6 +26,6 @@ Develop owned research notes on containment, repair and durable recovery from co
 
 ## Done when
 
-- [ ] Publish a source-grounded concept and controlled comparison plan under researchers/vishesh/notes/swarm-immune-response/.
-- [ ] Specify honest-dissent controls, shared-memory recurrence, recovery metrics and compatibility with the existing experiment toolkit.
-- [ ] Link the notes, check references and repository validation, and audit the publication for private context and secrets.
+- [x] Publish a source-grounded concept and controlled comparison plan under researchers/vishesh/notes/swarm-immune-response/.
+- [x] Specify honest-dissent controls, shared-memory recurrence, recovery metrics and compatibility with the existing experiment toolkit.
+- [x] Link the notes, check references and repository validation, and audit the publication for private context and secrets.
