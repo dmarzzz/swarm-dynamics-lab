@@ -20,6 +20,7 @@
 | sybil-resistance | 297 | 48 | 62 | 57 | 8 | 22 | 494 |
 | fork-merge-security | 353 | 44 | 61 | 69 | 8 | 13 | 548 |
 | swarm-detection | 373 | 35 | 79 | 193 | 34 | 11 | 725 |
+| agent-budgets | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## Tasks
 
@@ -121,6 +122,10 @@
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | dmarz/hf-sweep | done |  | 2026-10-03T22:00Z | HF multi-agent dataset sweep (link + description entries, lane/hf-multiagent) |
+| dmarz/budget-a | working |  | 2026-10-03T21:15Z | TODO one line |
+| dmarz/budget-b | working |  | 2026-10-03T21:15Z | TODO one line |
+| dmarz/budget-c | working |  | 2026-10-03T21:15Z | TODO one line |
+| dmarz/budget | working |  | 2026-10-03T21:14Z | TODO one line |
 | shadow/sol-aud | done |  | 2026-10-03T20:55Z | Completed 18 full-transcript entries, source QA, and three blocked MARL-talk recoveries |
 | shadow/sol-g74 | done | scan-papers-fm-contagion | 2026-10-03T20:55Z | Completed issue 74 rerun: 21 new entries, 21 correction/verification notes, 4 full readings; saturation gaps disclosed. |
 | shadow/sol-p2 | idle |  | 2026-10-03T20:47Z | wrapped up after batches |
