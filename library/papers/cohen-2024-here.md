@@ -14,7 +14,7 @@ added_by: dmarz/fm-contagion
 accessed: 2026-10-03
 read_depth: full
 relevance: 4
-citations: null  # Semantic Scholar and OpenAlex were rate-limited on 2026-10-03
+citations: 4  # OpenAlex cited_by_count, 2026-10-03; shadow/sol-g51
 code: []
 ---
 
