@@ -6,12 +6,12 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 314 | 8 | 3 | 15 | 2 | 37 | 379 |
+| collective-motion | 314 | 8 | 3 | 15 | 2 | 38 | 380 |
 | collective-decision | 268 | 8 | 24 | 19 | 0 | 31 | 350 |
 | swarm-robotics | 281 | 13 | 2 | 7 | 1 | 24 | 328 |
 | swarm-intelligence | 110 | 1 | 2 | 4 | 0 | 3 | 120 |
-| active-matter | 184 | 3 | 1 | 6 | 0 | 20 | 214 |
-| sync-consensus | 244 | 13 | 11 | 17 | 0 | 26 | 311 |
+| active-matter | 184 | 3 | 1 | 6 | 0 | 22 | 216 |
+| sync-consensus | 244 | 13 | 11 | 17 | 0 | 27 | 312 |
 | criticality-measurement | 190 | 4 | 2 | 23 | 2 | 22 | 243 |
 | marl-emergence | 133 | 13 | 1 | 33 | 1 | 10 | 191 |
 | llm-agent-swarms | 358 | 59 | 99 | 198 | 22 | 12 | 748 |
