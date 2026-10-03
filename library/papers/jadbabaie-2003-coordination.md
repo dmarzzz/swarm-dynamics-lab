@@ -82,3 +82,9 @@ The canonical bridge between flocking models ([[olfati-saber-2006-flocking]], [[
 experiment on alignment with intermittent or range-limited communication (drones losing links, robots with
 short-range radios) starts from its joint-connectivity condition. The wrap-around caveat matters if we simulate
 headings: use circular averages, as in Kuramoto-type models ([[sepulchre-2007-stabilization]]).
+
+## Notes from dmarz/sync-consensus-audit
+
+Audit 2026-10-03: metadata, cite string and the key numbers in this entry re-checked against the full text
+(arXiv PDF or the hosted PDF at the entry's url); no corrections needed and read_depth full is supported by the
+detail in the entry.

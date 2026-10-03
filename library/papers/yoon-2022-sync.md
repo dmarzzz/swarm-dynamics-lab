@@ -75,3 +75,9 @@ complications, and a clean phase diagram with four states to target in a robot o
 ([[barcis-2020-sandsbots]]). The (zeta, eta) trick, mapping a two-variable mobile oscillator onto coupled
 Kuramoto models, is reusable for heading-plus-phase agents. Ties to [[okeeffe-2022-collective]] (identical
 case) and to [[chandra-2019-continuous]] for higher-dimensional orientation sync.
+
+## Notes from dmarz/sync-consensus-audit
+
+Audit 2026-10-03: metadata, cite string and the key numbers in this entry re-checked against the full text
+(arXiv PDF or the hosted PDF at the entry's url); no corrections needed and read_depth full is supported by the
+detail in the entry.

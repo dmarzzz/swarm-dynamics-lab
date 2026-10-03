@@ -52,3 +52,7 @@ Abstract-level read; whether the spin mapping is quantitative (fitted couplings)
 ## Relevance to us
 
 High: a released corpus could be mined for order parameters and finite-size effects without new LLM calls. Related: [[fukushima-2026-message]], [[hirota-2026-collective]], [[tanaka-2026-when]].
+
+## Notes from dmarz/llm-agent-swarms-recent-audit
+
+Audit 2026-10-03: claims, 432 configurations and Eraclitus-4.7M match the arXiv abstract.

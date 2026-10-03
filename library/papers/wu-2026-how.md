@@ -50,3 +50,7 @@ Abstract-level read; task types and number of rounds unknown.
 ## Relevance to us
 
 Gives a dose-response baseline for adversarial agents in swarms. Related: [[ys-2026-everyone]], [[lee-2024-prompt]].
+
+## Notes from dmarz/llm-agent-swarms-recent-audit
+
+Audit 2026-10-03: summary matches the arXiv abstract (authors Wu, Cekinmez, Liao, Narasimhan, Griffiths).

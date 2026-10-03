@@ -31,7 +31,7 @@ A rare physical, programmable realisation of SOC in a robot swarm, with measured
 - Cluster-size exponent tau = 1.68(3) (MLE), duration exponent alpha = 1.54(2), size-duration exponent gamma = 0.74(4), spectral exponent beta = 1.26(3) over 0.01-1 Hz (measured in experiments; values from the full text I skimmed).
 - Lattice-model simulations give tau = 1.16(2), alpha = 2.67(1), gamma = 0.11(1): power laws, but different exponents from experiment.
 - Under strong parameter changes, tau_exp = 1.35(2) and tau_sim = 1.23(1), still power-law (measured).
-- Experiments include N = 64 robots.
+- A system of N = 64 appears in the cluster-composition figure (I did not check whether that panel is experiment or simulation).
 
 ## Methods and models
 

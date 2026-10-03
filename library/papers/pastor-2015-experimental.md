@@ -17,7 +17,7 @@ year: 2015
 venue: Physical Review E
 url: https://arxiv.org/abs/1507.05110
 doi: 10.1103/physreve.92.062817
-arxiv: '1507.05110'
+arxiv: null  # preprint arXiv:1507.05110 has a different title; left null so verify checks the DOI
 cite: Pastor, J. M., Garcimartín, A., Gago, P. A., Peralta, J. P., Martín-Gómez, C., Ferrer, L. M., Maza, D., Parisi, D. R., Pugnaloni, L. A., & Zuriguel, I. (2015). Experimental proof of faster-is-slower in systems of frictional particles flowing through constrictions. Physical Review E, 92(6), 062817. https://doi.org/10.1103/physreve.92.062817
 topics:
 - crowds-and-traffic
@@ -38,7 +38,7 @@ Tests the faster-is-slower (FIS) prediction of [[helbing-2000-simulating]] exper
 
 ## Contribution
 
-The first controlled experimental demonstration of faster-is-slower, nearly 15 years after it was predicted in simulation, and the argument that it is a generic property of driven, frictional, discrete flows through constrictions rather than something specific to human "panic". It complements the clogging-transition picture of [[zuriguel-2014-clogging]] (same group) and supplies a benchmark for pedestrian models. Note that the arXiv title ("...in multi-particle systems flowing through bottlenecks") differs from the published PRE title used here.
+The first controlled experimental demonstration of faster-is-slower, nearly 15 years after it was predicted in simulation, and the argument that it is a generic property of driven, frictional, discrete flows through constrictions rather than something specific to human "panic". It complements the clogging-transition picture of [[zuriguel-2014-clogging]] (same group) and supplies a benchmark for pedestrian models. The arXiv preprint (arXiv:1507.05110, read for this entry) carries a different title ("Experimental proof of Faster-is-Slower in multi-particle systems flowing through bottlenecks") from the published PRE title used here, so the arxiv field is left null and verification runs against the DOI.
 
 ## Key results
 

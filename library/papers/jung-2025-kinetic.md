@@ -15,6 +15,7 @@ cite: Jung, G., Ozawa, M., & Bertin, E. (2025). Kinetic theory of decentralized 
 topics:
 - marl-emergence
 - active-matter
+- swarm-robotics
 added_by: dmarz/marl-emergence
 accessed: '2026-10-03'
 read_depth: abstract

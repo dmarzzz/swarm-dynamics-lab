@@ -50,7 +50,7 @@ family tree PSO (second order, inertial) -> CBO (first order, overdamped) used b
 - Measured: as m decreases (0.5, 0.1, 0.01) the PSO density converges to the CBO mean-field density.
 - Measured (d = 20): with alpha up to 5e4 and the stabilised weight exp(-alpha (F - F_min)), success on Ackley and
   Rastrigin improves; classical PSO parameter constraints gave poor success rates, as did Matlab's particleswarm with
-  default PSO settings (stated by the authors, numbers in tables).
+  default PSO settings (stated by the authors in the text, without tabulated numbers).
 
 ## Methods and models
 

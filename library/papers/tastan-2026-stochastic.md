@@ -46,3 +46,7 @@ Abstract-level read; compute overhead of Shapley estimation and matched-compute 
 ## Relevance to us
 
 An adaptive-network mechanism (influence flows from reliable to less reliable agents) that resembles leadership emergence in animal groups. Related: [[grotschla-2025-agentsnet]], [[wang-2025-rethinking]].
+
+## Notes from dmarz/llm-agent-swarms-recent-audit
+
+Audit 2026-10-03: arXiv comments field reads "Accepted to ICLR 2026"; venue confirmed. Authors and title match.

@@ -5,7 +5,7 @@ title: "Material-like robotic collectives with spatiotemporal control of strengt
 authors: ["Matthew R. Devlin", "Sangwoo Kim", "Otger Campàs", "Elliot W. Hawkes"]
 year: 2025
 venue: "Science"
-url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=39977492&rettype=abstract&retmode=text
+url: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:39977492%20AND%20SRC:MED&resultType=core&format=json
 doi: "10.1126/science.ads7942"
 arxiv: null
 cite: "Devlin, M. R., Kim, S., Campàs, O., & Hawkes, E. W. (2025). Material-like robotic collectives with spatiotemporal control of strength and shape. Science, 387(6736), 880-885."
@@ -37,7 +37,7 @@ Robotic units with actuated tangential (gear-like) edge interactions in a dense 
 
 ## Limitations and open questions
 
-Abstract-depth entry (PubMed abstract; the Science page was blocked). Small numbers of units; controlled lab setting.
+Abstract-depth entry (abstract read via PubMed and Europe PMC; the Science page was blocked). Small numbers of units; controlled lab setting.
 
 ## Relevance to us
 

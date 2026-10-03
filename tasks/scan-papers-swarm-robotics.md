@@ -129,3 +129,41 @@ Swarm simulators worth a code scan: ARGoS, Kilombo/Kilobot simulators, Buzz, the
 4. `question-flocking-delay`: reproduce the collision versus delay and communication-range map of
    [[vasarhelyi-2018-optimized]] (Fig. 2) in simulation, and test whether [[chen-2024-persistent]]-style
    adaptive delay changes it.
+
+**Audit (dmarz/swarm-robotics-audit, 2026-10-03).** `lab.py verify` passed on all 58 DOI/arXiv-bearing entries
+(the 59th, [[hamann-2018-swarm]], is a book DOI checked separately). I compared every cite string with its
+Crossref record (authors, volume, issue, pages): all 55 DOI entries match. I spot-checked 12 entries against
+the source text, including all six read_depth: full entries ([[vasarhelyi-2018-optimized]],
+[[ben-zion-2023-morphological]], [[sun-2023-mean]], [[chvykov-2021-low]], [[baconnier-2022-selective]],
+[[valentini-2017-best]]) plus [[viragh-2014-flocking]], [[rubenstein-2014-programmable]],
+[[werfel-2014-designing]], [[jin-2026-physics]], [[mattson-2025-discovery]] and [[arbel-2024-mechanical]]. The numbers in the
+full entries matched the papers. No phantoms, no deletions, no read_depth downgrades. Fixes:
+[[arbel-2024-mechanical]] is published (Nat. Commun. 16, 7519, 2025; DOI added, id kept); [[mattson-2025-discovery]]
+is in AAMAS 2025 (venue updated); [[sun-2023-mean]] had an unsupported "2 informed robots out of 8" (removed);
+[[viragh-2014-flocking]] now records the 9-quadcopter field test.
+
+Extra search rounds: (A) OpenCitations forward citations of [[brambilla-2013-swarm]] (1435 citing) and
+[[rubenstein-2014-programmable]] (845 citing, partial response), filtered to 2024-2026 (502 DOIs, resolved and
+ranked through Crossref; about 25 relevant, 12 new, 6 of those already added by other topic agents); (B) Crossref
+searches with HCI and control vocabulary (`human-swarm interaction survey`, `multi-robot systems distributed
+coordination review`, `robot swarm review 2024`, `collective behavior robot swarm review`; 150 screened, 6
+relevant, 3 new); (C) targeted lookups of the scan's Gaps list; (D) web search for open copies of blocked
+reviews. OpenAlex search and Semantic Scholar were rate-limited (out of budget, HTTP 429) for the whole audit.
+Added 11 entries: [[dorigo-2021-swarm]] (the missing seed, read in full from the author PDF),
+[[pinciroli-2012-argos]], [[schilling-2021-vision]], [[kolling-2016-human]], [[dorigo-2013-swarmanoid]],
+[[yu-2024-overview]], [[duarte-2016-evolution]], [[karaguzel-2023-collective]], [[saintyves-2024-self]],
+[[pickem-2017-robotarium]], [[patino-padial-2025-swarming]]. Already in the library from other agents and
+tagged swarm-robotics: [[devlin-2025-material]], [[veenstra-2025-adaptive]], [[casiulis-2025-geometric]],
+[[bai-2025-swarm]], [[baconnier-2025-self]], [[valentini-2016-collective]], [[zhao-2026-self]]. Found and not
+added: Hunt and Hauert 2020 (checklist for safe swarms, Nat. Mach. Intell. 2:420-422, DOI
+10.1038/s42256-020-0213-2; repository copy behind Cloudflare), Mondada et al. 2004 Swarm-bot (Auton. Robots
+17:193-221), Wilson et al. 2020 Robotarium lessons (IEEE CSM 40(1)), the ACS Nano 2025 micro/nanorobot roadmap,
+Machine learning for micro- and nanorobots (Nat. Mach. Intell. 2024), Granular metamaterials with dynamic bond
+reconfiguration (Sci. Adv. 2024), Emergent memory from tapping collisions in active granular matter (Commun.
+Phys. 2024), Self-reconfigurable hierarchical frameworks for formation control (IEEE TCYB 2024), Heterogeneous
+targets trapping with swarm robots (IEEE T-RO 2024), Transferability in automatic off-line design of swarms
+(IEEE RA-L 2024), Bayındır 2016, Oh et al. 2017. Still thin: forward-citation chasing of
+[[vasarhelyi-2018-optimized]] in OpenAlex (budget), full-text reads of [[karaguzel-2023-collective]],
+[[kolling-2016-human]] and [[dorigo-2013-swarmanoid]] (abstract only), human-swarm interaction beyond the 2016
+survey, and code entries (ARGoS https://github.com/ilpincy/argos3, vswarm https://github.com/lis-epfl/vswarm,
+JBotEvolver) for the code-scan task.

@@ -7,14 +7,14 @@ year: 1995
 venue: "Physical Review Letters"
 url: https://arxiv.org/abs/adap-org/9506001
 doi: "10.1103/physrevlett.75.4326"
-arxiv: null
+arxiv: "adap-org/9506001"
 cite: "Toner, J., & Tu, Y. (1995). Long-Range Order in a Two-Dimensional Dynamical XY Model: How Birds Fly Together. Physical Review Letters, 75(23), 4326–4329."
 topics: ["active-matter", "collective-motion", "criticality-measurement"]
 added_by: dmarz/active-matter
 accessed: 2026-10-03
 read_depth: full
 relevance: 5
-citations: "1004 (Semantic Scholar, 2026-10-03)"
+citations: "1261 (OpenAlex, 2026-10-03)"
 code: []
 ---
 

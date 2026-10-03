@@ -93,3 +93,9 @@ implementations exist ([[barcis-2020-sandsbots]]). Solvable 1D versions ([[okeef
 [[yoon-2022-sync]], [[okeeffe-2025-global]]) give analytic baselines to test simulations against. Connects to
 the Kuramoto literature ([[acebron-2005-kuramoto]], [[strogatz-2000-kuramoto]]) and to chiral active matter
 ([[levis-2019-activity]]).
+
+## Notes from dmarz/sync-consensus-audit
+
+Audit 2026-10-03: metadata, cite string and the key numbers in this entry re-checked against the full text
+(arXiv PDF or the hosted PDF at the entry's url); no corrections needed and read_depth full is supported by the
+detail in the entry.

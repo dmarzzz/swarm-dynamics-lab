@@ -147,3 +147,38 @@ Supplement), [[okeeffe-2025-global]]. Skims: [[sar-2026-interplay]], [[dorfler-2
 4. Survey task for sync-consensus focused on the question "what is known about coupling an internal clock or
    phase to motion in robot swarms", seeded from [[sar-2026-interplay]], [[dorfler-2014-synchronization]] and
    [[olfati-saber-2007-consensus]].
+
+### Audit (dmarz/sync-consensus-audit)
+
+Audit 2026-10-03. `verify --agent dmarz/sync-consensus`: 53 checked, 0 BAD, so nothing was deleted. Spot-checked
+15 entries: all six `read_depth: full` entries ([[okeeffe-2017-oscillators]], [[yoon-2022-sync]],
+[[ceron-2023-diverse]], [[okeeffe-2025-global]], [[cucker-2007-emergent]], [[jadbabaie-2003-coordination]]) against
+the full PDFs, the content of [[quinn-2025-decentralised]], and Crossref metadata and cite strings for
+[[sar-2026-interplay]], [[beattie-2025-realizing]], [[barcis-2020-sandsbots]], [[riedl-2023-synchronization]],
+[[bernardo-2024-bounded]], [[ghosh-2022-synchronized]], [[anwar-2024-collective]] and [[kuramoto-1984-chemical]]. One
+substantive error was fixed: the sync eigenvalues in [[okeeffe-2025-global]] (multiplicity and sign). Everything
+else matched, the full reads are real, and the abstract-level entries say plainly when they are abstract-level.
+Six extra search rounds: Crossref with sensor-network vocabulary ("firefly-inspired pulse-coupled synchronization
+wireless sensor networks", 15 results, 2 relevant); Crossref with crowd and human vocabulary ("crowd synchrony
+clapping bridge", 15, 2); WebSearch and Crossref for 2023-2026 reviews (higher-order, adaptive networks, Kuramoto,
+about 30 results, 3 relevant); forward citations of [[olfati-saber-2007-consensus]] through OpenCitations (8718
+citing; the 200 newest requested and 26 resolved through Crossref, 3 relevant); forward citations of
+[[olfati-saber-2004-consensus]] (2175 records parsed from a download that cut off partway; the 150 newest requested
+and 103 resolved, about 4 relevant); and WebSearch follow-ups on the scan's gap list (about 70 results). The recent
+forward citations are almost all event-triggered, fixed-time or microgrid consensus papers, which supports the
+scan's choice to leave that literature out. Added 11 entries: [[hegselmann-2002-opinion]],
+[[sepulchre-2008-stabilization]], [[leonard-2007-collective]], [[werner-allen-2005-firefly]], [[sarfati-2021-self]],
+[[strogatz-2005-crowd]], [[yeung-1999-time]], [[hendrickx-2017-open]], [[pecora-1998-master]],
+[[boccaletti-2023-structure]], [[berner-2023-adaptive]]. Of these, 1 was read in full, 8 skimmed and 2 read at
+abstract level. Found but not added: Winfree 1967, J. Theor. Biol. 16:15 (no abstract or full text reachable);
+the 2021 Nature Communications paper on the Millennium Bridge instability without synchronisation
+(10.1038/s41467-021-27568-y); Sarfati et al. 2022, chimera states among synchronous fireflies (Sci. Adv.,
+10.1126/sciadv.add6690); Al-Mekhlafi et al. 2019, firefly time synchronisation for WSN (IEEE Access); Santillan
+2025, PCO synchronisation with electronic oscillators (Chaos Solitons Fractals); the 2026 IEEE TCyb paper on
+consensus convergence-rate optimisation in open multi-agent systems; the 2026 Physica A paper on higher-order
+Kuramoto synchronisation; the 2026 review of platoon control through network synchronisation (Automation); Zhou &
+Kurths 2006 PRL on adaptive weights; Eckhardt et al. 2006, Chaos (Millennium Bridge). Still thin:
+pulse-coupled and firefly synchronisation on hardware after 2005 (no robot-swarm PCO paper after
+[[werner-allen-2005-firefly]] has been catalogued); delay and churn effects in robot-swarm sync; quantitative
+datasets (the firefly 3D flash data behind [[sarfati-2021-self]] should be chased in the dataset scan); and
+human-crowd synchrony beyond the bridge.

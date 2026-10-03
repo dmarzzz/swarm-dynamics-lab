@@ -14,7 +14,7 @@ added_by: dmarz/collective-motion
 accessed: 2026-10-03
 read_depth: skim
 relevance: 5
-citations: "2709 (Crossref is-referenced-by-count, 2026-10-03)"
+citations: "2970 (OpenAlex, 2026-10-03); 2709 (Crossref is-referenced-by-count, 2026-10-03)"
 code: []
 ---
 

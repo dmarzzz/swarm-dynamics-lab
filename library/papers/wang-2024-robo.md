@@ -14,7 +14,7 @@ added_by: dmarz/active-matter
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 4
-citations: "33 (Semantic Scholar, 2026-10-03)"
+citations: "35 (OpenAlex, 2026-10-03)"
 code: []
 ---
 

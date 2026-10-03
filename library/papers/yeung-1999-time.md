@@ -1,43 +1,69 @@
 ---
 id: yeung-1999-time
 type: paper
-title: TODO exact title
-authors: [TODO First Last, TODO]
-year: TODO
-venue: TODO journal, conference, or arXiv
-url: TODO https link you actually opened
-doi: null
-arxiv: null
-cite: TODO full reference, e.g. Vicsek, T., Czirók, A., Ben-Jacob, E., Cohen, I., & Shochet, O. (1995). Novel type of phase transition in a system of self-driven particles. Physical Review Letters, 75(6), 1226–1229.
-topics: [TODO]
+title: Time Delay in the Kuramoto Model of Coupled Oscillators
+authors: [M. K. Stephen Yeung, Steven H. Strogatz]
+year: 1999
+venue: Physical Review Letters
+url: https://arxiv.org/abs/chao-dyn/9807030
+doi: 10.1103/physrevlett.82.648
+arxiv: chao-dyn/9807030
+cite: "Yeung, M. K. S., & Strogatz, S. H. (1999). Time delay in the Kuramoto model of coupled oscillators. Physical Review Letters, 82(3), 648-651."
+topics: [sync-consensus]
 added_by: dmarz/sync-consensus-audit
 accessed: 2026-10-03
-read_depth: TODO abstract | skim | full
-relevance: TODO 1-5
-citations: null  # count from Semantic Scholar or OpenAlex, with the date you looked
-code: []  # library ids of code that implements this paper
+read_depth: skim
+relevance: 4
+citations: "614 (OpenAlex, 2026-10-03)"
+code: []
 ---
 
 ## Summary
 
-TODO In your own words, at least 25 words: what they did, how, and what they found.
+Adds a uniform transmission delay tau (plus noise and a phase frustration alpha) to the mean-field Kuramoto model
+and asks how synchronisation changes. Delay produces qualitatively new behaviour: bistability between
+synchrony and incoherence (hence hysteresis), multiple coexisting synchronised states with different collective
+frequencies, and unsteady states with time-dependent order parameter. For identical oscillators the authors
+derive exact stability boundaries of both incoherence and uniformly rotating synchrony as functions of the
+delay, and check them against simulations.
 
 ## Contribution
 
-TODO the one thing this paper adds to the field, in a sentence or two, and where it sits relative to prior work.
+The standard reference for delayed coupling in phase-oscillator populations. It shows that a delay is not just a
+small perturbation of [[strogatz-2000-kuramoto]]: it can forbid synchrony in whole bands of tau and create
+multistability, which matters whenever coupling travels through sound, light, radio or a network stack.
 
 ## Key results
 
-- TODO concrete claims with numbers where the paper gives them
+- Model: dtheta_i/dt = omega_i + xi_i(t) + (K/N) sum_j sin(theta_j(t - tau) - theta_i(t) - alpha), noise strength D.
+- Incoherence: eigenvalues satisfy an exact transcendental equation; for identical oscillators with no noise,
+  incoherence is neutrally stable exactly when K < omega_0 / (2m - 1) and (4m - 3) pi / (2 omega_0 - K) < tau <
+  (4m - 1) pi / (2 omega_0 + K) for some positive integer m (eq. 4). Grey stability tongues in (tau, K) plane, Fig. 1,
+  confirmed by simulation with N oscillators and step dt = tau/20 to t = 800 tau.
+- Synchrony: uniformly rotating states theta = Omega t + beta require Omega = omega_0 - K sin(Omega tau) and are stable
+  iff cos(Omega tau) > 0 (eqs. 5-6). For large K several stable synchronised frequencies coexist.
+- Stable synchrony is impossible exactly in tongues half the height of the incoherence tongues (eq. 7); the
+  exposed parts of the incoherence tongues are regions of bistability between sync and incoherence.
+- Discussed applications: chirping crickets (sound-speed delays), coupled phase-locked loops and lasers.
 
 ## Methods and models
 
-TODO model equations, simulation setup, robots, datasets, or experimental organism.
+Fokker-Planck (continuity) description of the infinite-N limit, linearisation about incoherence, results of
+Hayes and Pontryagin on roots of quasi-polynomials, self-consistency for rotating synchronous solutions;
+numerical integration with predictor-corrector for delay equations. Read from the arXiv version (4 pages);
+derivation details deferred to a longer paper not read.
 
 ## Limitations and open questions
 
-TODO what the authors admit, and what you noticed.
+- Exact results only for identical oscillators (delta-distributed frequencies); the non-identical case is
+  treated numerically and qualitatively.
+- A single uniform delay; distance-dependent delays (relevant to spatially extended swarms) are not treated.
+- Stability of the unsteady, time-dependent-order-parameter states is not characterised.
 
 ## Relevance to us
 
-TODO why this matters for the hackathon. Link related entries as [[<id>]].
+Robot and drone swarms always have communication delay and update latency, and [[barcis-2020-sandsbots]] and
+[[quinn-2025-decentralised]] report delay as a practical obstacle. This paper gives the closed-form "forbidden
+delay" bands to check a swarm's sync controller against, and explains why a sync demo can be bistable and
+history dependent. Pairs with [[mirollo-1990-synchronization]] (pulse coupling) and
+[[werner-allen-2005-firefly]] (delay-tolerant pulse coupling on real radios).

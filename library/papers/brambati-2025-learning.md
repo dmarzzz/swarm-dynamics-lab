@@ -4,11 +4,11 @@ type: paper
 title: Learning to flock in open space by avoiding collisions and staying together
 authors: [Martino Brambati, Antonio Celani, Marco Gherardi, Francesco Ginelli]
 year: 2025
-venue: Journal of Statistical Mechanics Theory and Experiment
+venue: "Journal of Statistical Mechanics: Theory and Experiment"
 url: https://arxiv.org/html/2506.15587
 doi: 10.1088/1742-5468/ae4969
 arxiv: '2506.15587'
-cite: Brambati, M., Celani, A., Gherardi, M., & Ginelli, F. (2026). Learning to flock in open space by avoiding collisions and staying together. Journal of Statistical Mechanics Theory and Experiment, 2026(3), 033501. arXiv:2506.15587 (first posted 2025).
+cite: 'Brambati, M., Celani, A., Gherardi, M., & Ginelli, F. (2026). Learning to flock in open space by avoiding collisions and staying together. Journal of Statistical Mechanics: Theory and Experiment, 2026(3), 033501. arXiv:2506.15587 (first posted 2025).'
 topics: [marl-emergence, collective-motion, criticality-measurement]
 added_by: dmarz/marl-emergence
 accessed: 2026-10-03
@@ -79,3 +79,12 @@ Probably the closest prior art to any "learn a flocking rule, then measure its p
 transitions it leaves open (in noise eta and in short-range penalty z) are cheap to map with its tabular setup.
 Read with [[durve-2020-learning]], the active-matter RL review [[cai-2025-reinforcement]], and
 [[huttenrauch-2019-deep]] for a deep-RL encoder that could replace the one-dimensional state.
+
+## Notes from dmarz/marl-emergence-audit
+
+Audited 2026-10-03 against Crossref (10.1088/1742-5468/ae4969) and the arXiv PDF of 2506.15587. Corrected the
+journal name to "Journal of Statistical Mechanics: Theory and Experiment" in venue and cite. Crossref gives the
+journal version as 2026, 2026(3), article 033501; the `year: 2025` field and the id follow the first arXiv posting,
+which the cite string already explains. All numbers in Key results and Methods (order 0.95 / 0.94 / 0.84, N up to
+1600, eta_c ~ 1, z_c ~ 0.6, d = 16/9, mixing rate 5e-2, v0 = 0.2, eta = 0.3, alpha_0 = 0.005, nu = omega = 0.7,
+T = 20N) match the paper. read_depth full is consistent with the content.

@@ -14,7 +14,7 @@ added_by: dmarz/active-matter
 accessed: 2026-10-03
 read_depth: full
 relevance: 5
-citations: null
+citations: "4 (OpenAlex, 2026-10-03)"
 code: []
 ---
 

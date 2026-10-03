@@ -46,3 +46,7 @@ Abstract-level read; single-author preprint; populations and network structure n
 ## Relevance to us
 
 A measurable tipping-point experiment; the gap between private and public states is a hidden variable worth tracking in swarm runs. Related: [[zhou-2025-pimmur]].
+
+## Notes from dmarz/llm-agent-swarms-recent-audit
+
+Audit 2026-10-03: arXiv record lists the single author as "YS, Yashwanth"; id and cite are consistent. Key numbers (64-94%, <26% for 7 of 8 models, GPT-4o 48%, 52-92% minimal condition) match the abstract.

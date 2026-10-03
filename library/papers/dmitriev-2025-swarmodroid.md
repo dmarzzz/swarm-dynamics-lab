@@ -14,7 +14,7 @@ added_by: dmarz/active-matter
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 4
-citations: null
+citations: "1 (OpenAlex, 2026-10-03)"
 code: []
 ---
 
@@ -37,7 +37,7 @@ closed or single-purpose).
 ## Methods and models
 
 Hardware design, kinematic analysis, Python/OpenCV tracking package. Published in IEEE Access (2025); arXiv title used.
-Code repository URL not recorded from the abstract page (flagged for the code scan).
+Code repositories linked from the arXiv HTML version: https://github.com/swarmtronics/ampy (AMPy analysis package), https://github.com/swarmtronics/swarmodroid.firmware and https://github.com/swarmtronics/swarmodroid.pcb (not opened; flagged for the code scan).
 
 ## Limitations and open questions
 

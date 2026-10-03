@@ -79,3 +79,9 @@ units", which is exactly the hackathon design question for small robots or simul
 [[barcis-2020-sandsbots]] (hardware), [[yoon-2022-sync]] (theory), the review [[sar-2026-interplay]] and the
 chiral active-matter model [[levis-2019-activity]]. The correlation-function analysis gives measurement tools
 for the criticality-measurement topic.
+
+## Notes from dmarz/sync-consensus-audit
+
+Audit 2026-10-03: metadata, cite string and the key numbers in this entry re-checked against the full text
+(arXiv PDF or the hosted PDF at the entry's url); no corrections needed and read_depth full is supported by the
+detail in the entry.

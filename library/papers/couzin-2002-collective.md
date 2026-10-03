@@ -14,7 +14,7 @@ added_by: dmarz/collective-motion
 accessed: 2026-10-03
 read_depth: full
 relevance: 5
-citations: "1902 (Crossref is-referenced-by-count, 2026-10-03); 2161 (Semantic Scholar, 2026-10-03)"
+citations: "2213 (OpenAlex, 2026-10-03); 1902 (Crossref is-referenced-by-count, 2026-10-03); 2161 (Semantic Scholar, 2026-10-03)"
 code: []
 ---
 

@@ -42,3 +42,7 @@ Preprint, not yet peer reviewed as far as the arXiv page shows (no journal refer
 ## Relevance to us
 
 Most recent statement of the case for cross-inhibition in minimal swarms. Related: [[valentini-2017-best]], [[talamali-2021-when]].
+
+## Notes from dmarz/collective-decision-audit
+
+Audited 2026-10-03: title, authors and year match the arXiv record (DataCite). read_depth abstract is accurate.

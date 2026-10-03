@@ -54,3 +54,7 @@ Minimal naming game, W = 2, pairwise random matching on a complete graph, memory
 ## Relevance to us
 
 High. The cached-policy trick is directly usable for a hackathon: extract an LLM's response table once, then run 10^4-agent swarms on a laptop and sweep topology, memory and heterogeneity. The mean-field formulation gives predictions to test. Link with [[ashery-2024-emergent]], [[de-marzo-2024-ai]], [[tanaka-2026-when]], [[de-nobili-2026-microscopic]], [[wu-2026-predicting]].
+
+## Notes from dmarz/llm-agent-swarms-recent-audit
+
+Audit 2026-10-03: spot-checked against arXiv HTML 2510.22422 and Crossref. Title, authors, PNAS 123(34) e2531697123 confirmed. H = 5, payoffs +100/-50, T = 0.5, four models, 98% over 3N criterion, 1000 runs, the GPT {White, African} sequence 0.626/0.720/0.981/1.00, the Llama reversal at N >= 6, N_c from 2 to ~10^4 and the mean-field equation all match. read_depth full is consistent with the detail. No corrections.

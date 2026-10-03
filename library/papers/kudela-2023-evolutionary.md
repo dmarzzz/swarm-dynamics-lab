@@ -37,7 +37,7 @@ critique ([[sorensen-2015-metaheuristics]], [[aranha-2022-metaphor]]) into a mea
 ## Key results
 
 - Measured: 47/90 methods show centre-bias (geometric-mean shifted/unshifted error ratio > 10).
-- Measured: classic methods pass: ABC 1.29, DE 0.97, PSO 0.97, ACO_R 0.74, CMA-like ES 1.14, SA 0.90, LSHADE 1.03.
+- Measured: classic methods pass: ABC 1.29, DE 0.97, PSO 0.97, ACO_R 0.74, ES (2002 variant) 1.14, SA 0.90, LSHADE 1.03.
 - Measured: extreme centre-bias in "math-inspired" methods: Arithmetic Optimization Algorithm 1.01e10, Runge Kutta
   Optimizer 7.36e4, Sine Cosine Algorithm 1.18e4, Gradient-Based Optimizer 7.17e7; Grey Wolf Optimizer 8.89e5;
   Whale Optimization 1.87e3; Harris Hawks 1.62e5.

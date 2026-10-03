@@ -47,3 +47,7 @@ Workshop paper, proof-of-concept scale. On-board LLM latency and energy are open
 ## Relevance to us
 
 Defines the two integration modes we should keep separate in any hackathon design: LLM-written local rules (cheap at runtime, classical dynamics) vs LLM-in-the-loop agents. Related: [[li-2024-challenges]], [[jimenez-romero-2025-multi-agent]].
+
+## Notes from dmarz/llm-agent-swarms-recent-audit
+
+Audit 2026-10-03: arXiv comments field reads "Accepted at NeurIPS 2024 Workshop on Open-World Agents"; venue confirmed.

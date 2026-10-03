@@ -14,7 +14,7 @@ added_by: dmarz/collective-motion
 accessed: 2026-10-03
 read_depth: full
 relevance: 5
-citations: "1017 (Crossref is-referenced-by-count, 2026-10-03); 1030 (Semantic Scholar, 2026-10-03)"
+citations: "1112 (OpenAlex, 2026-10-03); 1017 (Crossref is-referenced-by-count, 2026-10-03); 1030 (Semantic Scholar, 2026-10-03)"
 code: []
 ---
 
@@ -74,3 +74,14 @@ Gives a concrete, cheap measurement to run on any simulated swarm: subtract the 
 C(r), find xi, and plot xi against group size. A swarm design that keeps xi proportional to L is maximally
 responsive. Links: [[ballerini-2008-interaction]], [[cavagna-2014-bird]], [[puy-2024-signatures]],
 [[gomez-nava-2023-fish]].
+
+## Notes from dmarz/criticality-measurement
+
+Read in full (arXiv 0911.4393 including SI). Points useful for measurement work, beyond the summary above:
+
+- The decay exponent gamma is barely constrained: fitting the slope of C(r/xi) at its zero gives gamma = 0.19 +/- 0.08 (orientation) and 0.19 +/- 0.11 (speed), but a logarithmic decay and gamma = 0 fit about as well; the data span only one decade of xi.
+- Null model worth copying: keep real bird positions, replace fluctuations by synthetic vectors with correlation r^-gamma exp(-r/lambda). xi tracks lambda while lambda < L and saturates at the biological value only when lambda > L, so the xi ~ L scaling is not an artefact of geometry or of the zero-sum constraint sum_i u_i = 0.
+- Order and correlation can decouple: below a critical point, lowering noise raises polarisation but lowers correlation. Their argument for criticality over "just low noise" rests on speed correlations, which Goldstone's theorem does not explain; see [[bialek-2014-social]].
+- SI argument: information transfer that changes state permanently needs a finite zero-frequency response (static susceptibility), set by the static correlation length, not just travelling waves.
+- Tracking efficiency was 0.77, so about a quarter of birds are missing in each snapshot; subsampling effects ([[priesemann-2014-spike]]) are not discussed.
+- Methods links: [[mora-2011-biological]] (maximum entropy follow-up), [[attanasi-2014-finite]] (finite-size scaling), [[hang-2026-self]] (correlation length drops before fragmentation in large simulated schools).

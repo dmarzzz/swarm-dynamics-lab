@@ -54,3 +54,7 @@ Starling-LM-7B-alpha (4-bit) via llama.cpp and LangChain, chosen to be feasible 
 ## Relevance to us
 
 Directly reusable design for a hackathon: a PSO-vs-LLM-swarm comparison with topology as the control knob, using a small local model. The result that sparse (ring) networks are needed to prevent premature consensus connects to [[hirota-2026-collective]] (ring vs rewired), [[de-marzo-2024-ai]] (fast consensus in small groups) and [[weng-2025-do]] (conformity). A natural extension is to add PSO-style explicit weighting of individual vs social information.
+
+## Notes from dmarz/llm-agent-swarms-recent-audit
+
+Audit 2026-10-03: spot-checked against the Nature (npj AI) full text and Crossref (2(1), article 36). Confirmed: Starling-LM-7B-alpha 4-bit, LangChain, c1 = c2 = 2.05 and chi = 0.729, max 9000 evaluations, 20 swarm runs and 5 single-agent runs, 100-agent Schelling, code to be released at github.com/CoMuNeLab/LLM-Agents. The ~50% Rastrigin failure figure is attributed to the SI and was not re-checked. No corrections.

@@ -55,3 +55,7 @@ Prompt: system "You are an agent with your own language and vocabulary. You can 
 ## Relevance to us
 
 A cheap, laptop-scale LLM swarm experiment with a known classical phase diagram: we could push N to 10^3 with small local models, test for the predicted fragmentation, or add lattice and small-world topologies. Measuring (pi, phi) offline for any model gives a two-number fingerprint before running a swarm. Related: [[de-marzo-2024-ai]], [[tanaka-2026-when]], [[hirota-2026-collective]], [[barrie-2025-emergent]] (the arbitrary 10^4-word pool partly addresses memorisation).
+
+## Notes from dmarz/llm-agent-swarms-recent-audit
+
+Audit 2026-10-03: spot-checked against arXiv HTML 2608.02178. Confirmed: authors, models (llama3.1:8b, mistral:7b, phi3:14b via Ollama), N = 150 and N in [50, 150], 10^4-word pool, exponents 1.61 +- 0.28 / 1.28 +- 0.13 / 1.59 +- 0.47, alpha 0.67 +- 0.14 / 0.01 +- 0.02 / 0.43 +- 0.31, phi3 inventory ~34 at T = 0.05, and the ordering condition R = 3 pi - 2 phi - 1 > 0 reducing to beta_c = 1/3. No corrections.

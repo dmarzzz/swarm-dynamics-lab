@@ -14,7 +14,7 @@ added_by: dmarz/collective-motion
 accessed: 2026-10-03
 read_depth: abstract
 relevance: 5
-citations: "705 (Crossref is-referenced-by-count, 2026-10-03); 736 (Semantic Scholar, 2026-10-03)"
+citations: "809 (OpenAlex, 2026-10-03); 705 (Crossref is-referenced-by-count, 2026-10-03); 736 (Semantic Scholar, 2026-10-03)"
 code: []
 ---
 
@@ -36,6 +36,12 @@ topological interactions ([[ballerini-2008-interaction]]) and scale-free correla
 
 - Claimed: zero-free-parameter prediction of order propagation; topological interaction range; scale-invariant
   correlations reproduced.
+- Fitted values (added by audit from the arXiv text): for a typical snapshot the likelihood peaks at n_c = 11
+  with J = 45.73 matching C_int = 0.99592; averaged over flocks n_c = 21.2 +/- 1.7, roughly constant in flock
+  density (topological). Calibration on simulated flocks maps this to a true interaction range of about
+  7.8 neighbours, close to the n_c = 7.0 +/- 0.6 they quote from the earlier STARFLAG analyses
+  ([[ballerini-2008-interaction]] itself reports 6.5 +/- 0.9); the inflation is attributed to
+  birds moving through the flock, which a static maximum-entropy model cannot represent.
 
 ## Methods and models
 
@@ -48,3 +54,9 @@ Abstract-level read; static (equal-time) inference only.
 ## Relevance to us
 
 MaxEnt fitting is a reusable way to infer effective coupling strength and range from swarm snapshots.
+
+## Notes from dmarz/collective-motion-audit
+
+Audit 2026-10-03. Metadata confirmed on OpenAlex (W2092685486) and arXiv 1107.0604. Added the fitted n_c and J
+values to Key results after reading Fig. 2 and the Discussion of the arXiv PDF; read_depth left at abstract
+because the rest of the paper was not read. cited_by_count 809 (OpenAlex, 2026-10-03).

@@ -53,3 +53,13 @@ learned behaviour descriptor. Pairs with criticality/measurement work on order p
 ## Notes from dmarz/swarm-robotics-audit
 
 The arXiv record says the paper is in the AAMAS 2025 proceedings. Updated venue and cite. No proceedings DOI found (DBLP blocked automated access).
+
+## Notes from dmarz/swarm-robotics-recent
+
+I read the arXiv v1 HTML in full (2026-10-03). Crossref has a proceedings DOI: 10.65109/qczn2589 (AAMAS 2025, pp. 1473-1482; 2 Crossref citations on 2026-10-03). Key numbers:
+
+- Capability model: 8 differential-drive HeRo+ robots (about USD 80 each, open-source) with one binary line-of-sight sensor (VL53L1X time-of-flight, about 2 m range), in a 170 x 142 cm arena. The controller is a 4-tuple $(v_0,\omega_0,v_1,\omega_1)$ chosen by the sensor bit, the computation-free model of Gauci et al. Simulation is capped at 9 cm/s and 1.6 rad/s, where real sensing is reliable.
+- Representation: SimCLR (ResNet18, 512-d embedding) trained on 6,000 random-controller videos (3 greyscale 64x64 frames from the last 300 of 600 steps), with no labels. Novelty search: population 50, 100 generations, k=15 nearest neighbours, crossover 0.7, mutation 0.15; then k-medoids with k=10.
+- Representation quality (measured on 500 labelled held-out videos): versus the 5 hand-crafted Brown et al. (2018) metrics, triplet accuracy is +16% for cyclic pursuit, +0% for aggregation and +5% for dispersal. The hand-crafted metrics confuse dispersal with random behaviour 27% of the time. The learned model never found milling or wall-following in the RSRS simulator.
+- Deployment (measured): of 30 non-random discovered controllers, 70% (20) reproduced on real robots on the first attempt and 90% (27) within 3 attempts, without controller tuning. Without Real2Sim2Real calibration (friction, sensing-limited speeds, bump shields), only 22% (4/18) reproduced first time and 27% (5/18) within 3. Milling and wall-following found in the uncalibrated simulator were simulator artefacts that depend on frictionless sliding.
+- Takeaway for us: behaviour discovery is cheap, but the simulator's contact model decides which 'emergent behaviours' are real. Related: [[vega-2025-analytical]] (phase diagrams for the same capability model), [[jesus-2026-how]] (behaviour similarity metrics), [[kim-2025-commanding]] (inverse design of interaction rules).

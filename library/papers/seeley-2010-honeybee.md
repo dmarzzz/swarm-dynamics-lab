@@ -42,3 +42,7 @@ Popular-science register; only the publisher page was read. Crossref lists the D
 ## Relevance to us
 
 Background for any bee-inspired swarm design; the mechanisms it describes are formalised in [[pais-2013-mechanism]] and [[reina-2017-model]] and implemented on robots in [[march-pons-2024-honeybee]] and [[reina-2015-design]].
+
+## Notes from dmarz/collective-decision-audit
+
+Audited 2026-10-03: the Princeton print edition is 2010; the DOI 10.1515/9781400835959 is the De Gruyter e-book, which Crossref dates 2011. Year 2010 kept as the first-edition date.

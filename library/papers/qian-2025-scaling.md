@@ -61,3 +61,7 @@ DAG G = (V, E); actors on nodes, critics on edges, |V| + |E| agents; topological
 ## Relevance to us
 
 The reference point for "more agents" claims and for topology as a design variable. Its small-world explanation of why random graphs win can be tested directly (vary rewiring probability as in [[wang-2025-rethinking]]). Compare with [[li-2024-more]], [[chen-2024-are]], [[kim-2025-towards]], [[bertalanic-2026-ringelmann]], [[zhuge-2024-language]], [[yang-2026-understanding]].
+
+## Notes from dmarz/llm-agent-swarms-recent-audit
+
+Audit 2026-10-03: spot-checked against arXiv HTML 2406.07155 (v3). Table 1 averages, the 51.92% (rounded to 52%) time saving of random vs mesh, majority-voting 0.9% gain plateauing at ~8 agents, AgentVerse context explosion beyond ~30 agents, 7.51x artifact length and 93.10% critic adoption all match. Saturation is reported at about 2^4 nodes; "roughly a hundred agents" is the entry's conversion (a 16-node mesh has 16 + 120 = 136 agents). No corrections.

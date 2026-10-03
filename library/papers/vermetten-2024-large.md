@@ -59,8 +59,8 @@ IOHexperimenter on BBOB; metrics: normalised area over the convergence curve (AO
 to 1e2, and a relaxed 1e8 variant) and fixed-budget precision at b in {10,...,10,000} x d; Shapley-style portfolio
 contribution; UMAP of 96-dim AOCC vectors. Default parameters, no tuning. Data and code: Zenodo
 doi:10.5281/zenodo.10561215, figures on Figshare doi:10.6084/m9.figshare.25060151. Libraries:
-github.com/7ossam81/EvoloPy, github.com/NiaOrg/NiaPy, github.com/thieu1995/mealpy, github.com/gugarosa/opytimizer,
-github.com/facebookresearch/nevergrad.
+EvoloPy, NiaPy and Mealpy (GitHub URLs truncated in the text I extracted), https://github.com/gugarosa/opytimizer and
+https://github.com/FacebookResearch/Nevergrad as printed in the paper.
 
 ## Limitations and open questions
 

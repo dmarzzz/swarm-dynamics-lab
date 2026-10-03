@@ -60,3 +60,7 @@ Fitted update map: with probability 1 - q, x_i(t+1) = x_i(t) + beta (m_i(t) - x_
 ## Relevance to us
 
 Must-read for a swarm-dynamics hackathon: it provides a fully specified, cheap protocol (50 agents, 30 turns, circular estimate), Kuramoto order parameters, and quantitative predictions (lifetime ~ 1/(beta lambda_2)) we can re-test with other models, temperatures, larger N, or swarmalator-style spatial motion. Natural extensions: sweep Watts-Strogatz p continuously (cf. [[wang-2025-rethinking]]), vary temperature (cf. [[de-nobili-2026-microscopic]]), or measure synergy as in [[riedl-2025-emergent]]. Related: [[ricco-2026-consensus]], [[flint-2026-group]], [[grotschla-2025-agentsnet]].
+
+## Notes from dmarz/llm-agent-swarms-recent-audit
+
+Audit 2026-10-03: spot-checked against arXiv HTML 2609.35885. Confirmed: 14 model/effort conditions from six providers (Table 4), beta 0.221 -> 0.468/0.489 (gpt-5-mini), Gemini beta ~0 (R^2 = 0.002) -> 0.411/0.589 with Delta Z 0.219 -> 0.118/0.070, calibration Delta Z values, trial-level rho = 0.889 (n = 35, p = 0.0048), graph-level rho = 0.929 (p = 0.0067), predicted-vs-observed rho = 0.964 (p = 0.0028), overprediction 1.13-3.18x, R^2 = 0.09 at minimal effort (0.77 at low), 228/112/20/12 trials, 13.4% transient minority, one-twist instability at R = 17. No corrections.

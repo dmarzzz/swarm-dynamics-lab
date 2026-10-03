@@ -73,3 +73,11 @@ start, this is the only rigorous statement available for swarmalators, and it te
 choices to avoid. It also shows how consensus-style Lyapunov and gradient arguments (as in
 [[olfati-saber-2004-consensus]] and [[dorfler-2014-synchronization]]) carry over to mobile oscillators. Read
 with [[okeeffe-2022-collective]] for the local-stability picture.
+
+## Notes from dmarz/sync-consensus-audit
+
+Audit 2026-10-03 against the arXiv PDF (2410.18011v1). Corrected Lemma 3: the sync-manifold eigenvalues are
+lambda_0 = 0 with multiplicity 1 (not 2) and lambda_1 = J + K, lambda_2 = J - K (the entry had -(K + J) and
+-(K - J), which has the wrong sign for the first and would make sync unstable on D_sync). Theorem 1 domain, N > 2,
+pi_pq saddles, D_wave and the manifold dimensions checked and correct. read_depth full is consistent with the
+content.

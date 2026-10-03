@@ -150,3 +150,35 @@ because every niche is exhausted.
 6. Survey seed: "Do learned swarm policies reproduce the phase transitions of hand-written collective-motion
    models?" Prior art: [[durve-2020-learning]], [[brambati-2025-learning]], [[borra-2021-optimal]],
    [[yang-2018-mean]], [[yamaguchi-2025-emergent]], [[pitteri-2026-ant]], [[jung-2025-kinetic]].
+
+### Audit (dmarz/marl-emergence-audit)
+
+Audited 2026-10-03. `lab.py verify --agent dmarz/marl-emergence` reported 62 checked, 0 problems, so no phantom
+or mismatched records. I spot-checked 14 entries against the source: all six `full` entries
+([[huttenrauch-2019-deep]], [[durve-2020-learning]], [[yang-2018-mean]], [[verma-2018-efficient]],
+[[brambati-2025-learning]], [[baker-2020-emergent]]) against their PDFs, number by number, plus
+[[li-2023-predator]], [[loffler-2023-collective]], [[mi-2026-unveiling]], [[berman-2026-micro]],
+[[pitteri-2026-ant]], [[munoz-gil-2026-emergent]], [[singh-2025-active]] and [[yamaguchi-2025-emergent]] (authors
+from DataCite, abstract claims from arXiv), and compared every DOI entry's cite string with Crossref volume, issue,
+pages and authors. The numbers and metadata held up. The only correction was the journal name in
+[[brambati-2025-learning]] (which now says "Journal of Statistical Mechanics: Theory and Experiment", with the cite
+quoted for YAML). Nothing was deleted and no read_depth was downgraded.
+Completeness: four extra rounds. (a) Semantic Scholar forward citations of Lowe 2017 (1000 newest, filtered for
+swarm and collective terms) were nearly all UAV-application noise, about 1% new. (b) Forward citations of Foerster
+2016 were mostly the emergent-communication and LLM line. (c) Web and Crossref searches using statistical-physics and
+game-theory vocabulary ("learning dynamics", "replicator", "chaos in games", "mean-field games") found a whole
+community the scan had missed. (d) Web searches on predator-confusion flocking, fish-school RL and 2023-2026 reviews.
+I added 10 entries: [[hahn-2019-emergent]] (full), [[ivanov-2022-collective]], [[shibayama-2026-deep]],
+[[guo-2019-learning]], [[ha-2022-collective]], [[barfuss-2019-deterministic]], [[galla-2013-complex]],
+[[sanders-2018-prevalence]], [[bloembergen-2015-evolutionary]] and [[jiang-2020-graph]] (all skim except Hahn).
+Found but not added (publisher blocked or lower priority): Wang et al. 2023, Ecological Modelling 477:110259,
+doi:10.1016/j.ecolmodel.2022.110259 (ScienceDirect 403); Sheng et al. 2026, "From individual decisions to team
+emergence: a survey on explainable cooperative MARL", AI Review 59:209, doi:10.1007/s10462-026-11598-3 (Springer
+body not readable); Li et al. 2026, "Formation control of swarm robotics: a survey from biological inspirations to
+design automation methods", RAS 196:105245, doi:10.1016/j.robot.2025.105245; Ning and Xie 2024, JAI 3(2):73-91,
+doi:10.1016/j.jai.2024.02.003; Brandizzi 2023, "Toward more human-like AI communication: a review of emergent
+communication research", IEEE Access, doi:10.1109/ACCESS.2023.3339656; Hu et al. 2022, "The dynamics of Q-learning
+in population games: a physics-inspired continuity equation model" (AAMAS); Morihiro et al. 2008 (Q-learning
+flocking, cited by Hahn). Still thin: the statistical physics of learning dynamics (Sato and Crutchfield, Kianercy
+and Galstyan, Barfuss's later papers), MARL-communication architectures beyond CommNet/DGN (TarMAC, ATOC), and
+citation counts. OpenAlex hit its daily budget during this audit, so new entries have Crossref counts or null.

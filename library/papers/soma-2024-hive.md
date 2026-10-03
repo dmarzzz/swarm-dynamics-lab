@@ -42,3 +42,7 @@ Preprint; no journal reference on the arXiv page; equivalence presumably holds i
 ## Relevance to us
 
 Gives a bridge for the MARL side of the hackathon: a swarm of imitators can be analysed as one learner. Related: [[reina-2024-speed]], [[march-pons-2024-honeybee]].
+
+## Notes from dmarz/collective-decision-audit
+
+Audited 2026-10-03: title, authors and year match the arXiv record (DataCite). read_depth abstract is accurate.

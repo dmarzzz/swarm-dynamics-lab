@@ -43,3 +43,7 @@ Preference strengths in the experiment were induced by training; the effect reve
 ## Relevance to us
 
 Directly testable in any agent swarm with mixed informed and naive members. Related: [[couzin-2005-effective]], [[sridhar-2021-geometry]].
+
+## Notes from dmarz/collective-decision-audit
+
+Audited 2026-10-03: metadata matches Crossref, and the summary and key-result bullets match the OpenAlex abstract. read_depth abstract is accurate. Related audit addition: [[colombo-2026-stabilizing]] (2026 preprint proposing a dissipation-based mechanism for the uninformed-individual effect).

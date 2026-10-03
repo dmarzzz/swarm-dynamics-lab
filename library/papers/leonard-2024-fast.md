@@ -42,3 +42,7 @@ Publisher page blocked (403); read via the OpenAlex record only. Review of the a
 ## Relevance to us
 
 The design-oriented counterpart to the biology: gives tuning rules for when a swarm should be ultrasensitive versus robust. Related: [[pais-2013-mechanism]], [[sridhar-2021-geometry]], [[hartnett-2016-heterogeneous]].
+
+## Notes from dmarz/collective-decision-audit
+
+Audited 2026-10-03: metadata matches Crossref, and the summary and key-result bullets match the OpenAlex abstract. read_depth abstract is accurate. Related audit addition: [[colombo-2026-stabilizing]] (2026 preprint proposing a dissipation-based mechanism for the uninformed-individual effect).

@@ -55,3 +55,7 @@ Fully connected teams, three rounds (R1 independent, R2-R3 post-communication), 
 ## Relevance to us
 
 The quantitative null model for any LLM swarm scaling claim: report N_eff and (c, beta), include a noise placebo, and expect hard ceilings for homogeneous swarms. The k tau product law is a mean-field prediction we can test on sparse spatial swarms where k is set by perception radius ([[ruan-2025-benchmarking]]). Related: [[fortuna-2026-multi-agent]], [[chen-2024-are]], [[tran-2026-single]], [[de-marzo-2024-ai]].
+
+## Notes from dmarz/llm-agent-swarms-recent-audit
+
+Audit 2026-10-03: spot-checked against the arXiv abstract page (2606.02646, submitted 31 May 2026). Title, authors, the R(N) law, 44 conditions, R^2 > 0.99, the 30-agent MMLU-Hard ceiling, the placebo result and heterogeneity as the only escape all match. Per-cell (c, beta) values were not re-checked in this audit. No corrections.

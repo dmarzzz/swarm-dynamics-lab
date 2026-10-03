@@ -43,3 +43,15 @@ Read at skim depth (abstract, introduction, main result and simulation setup). E
 ## Relevance to us
 
 Embodied alignment: flocking that emerges from contact mechanics rather than any rule, a strong baseline for our 'is alignment necessary' theme along with [[das-2024-flocking]] (flocking by turning away) and the active-matter review [[gompper-2025-motile]]. Directly usable for a cheap physical swarm demo.
+
+## Notes from dmarz/swarm-robotics-recent
+
+I read the arXiv v2 HTML in full, including the SI (2026-10-03). Details that complement the entry above:
+
+- The main criterion (Eq. 1) is $\kappa + 1/b < 0$ for pair attraction, where $b$ is the particle radius and $\kappa$ the signed curvity in $\dot{\hat e}=\kappa\,\hat e\times(\dot{\vec r}\times\hat e)$, with $\dot{\vec r}=v_0\hat e+\mu\vec f$. It is purely geometric: no speeds, forces or rates enter. Microscopically $\kappa=\delta(\tau_P/\tau_A)^2 m/I$ (centre-of-mass offset, pivot and aerial times, mass, moment of inertia).
+- At the threshold the pair system undergoes a subcritical pitchfork bifurcation. Only the co-rotation normal mode changes stability; separation and counter-rotation modes stay stable.
+- Experiment (measured): skirts of 98-230 mm diameter; 10-17 repeats per pair; kissing time jumps by more than 2 orders of magnitude once the criterion holds. The inclined-plane curvity measurement is 80% below the mechanical estimate.
+- Many-body simulations (measured): 1,500 noiseless combinations of $\kappa$ and filling fraction give three phases (flock for $\kappa>0$; MIPS-like active fluid for weakly non-positive $\kappa$; arrested hexatic clusters for sufficiently negative $\kappa$). Clusters of radius $R$ attract when $\kappa+1/R<0$, so cluster size is about $1/|\kappa|$. A kinetic argument gives the finite-density clustering line. With rotational noise, the onset criterion is corrected by the free-trajectory curvature and verified over two decades of noise.
+- Control idea: two curvity sign flips (negative to cluster, then positive to align within the dense clusters) turn a dilute disordered swarm into a long-lived flock.
+- The published version is PNAS 122(37), e2502211122 (2025), DOI 10.1073/pnas.2502211122 (Crossref, 12 citations on 2026-10-03). The entry above lists only the arXiv id.
+- Related recent work: [[arbel-2024-mechanical]] (negative curvity and cooperative transport, now Nature Communications 16, 7519, 2025, DOI 10.1038/s41467-025-61896-7), [[son-2025-emergent]] (link-bots), [[devlin-2025-material]] (robotic material rigidity transitions).

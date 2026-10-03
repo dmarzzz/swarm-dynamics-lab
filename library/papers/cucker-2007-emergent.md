@@ -76,3 +76,9 @@ baseline controller for drone or robot flocking demos (velocity alignment of thi
 drone flocking such as [[vasarhelyi-2018-optimized]]; not checked which alignment law they use) and as a test case for learned controllers. Bridges
 consensus ([[olfati-saber-2007-consensus]]) and flocking models in the collective-motion topic. Its exponent
 threshold is a crisp prediction a hackathon simulation can reproduce in an afternoon.
+
+## Notes from dmarz/sync-consensus-audit
+
+Audit 2026-10-03: metadata, cite string and the key numbers in this entry re-checked against the full text
+(arXiv PDF or the hosted PDF at the entry's url); no corrections needed and read_depth full is supported by the
+detail in the entry.
