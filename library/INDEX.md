@@ -2,9 +2,9 @@
 
 # Library index
 
-2773 entries.
+2775 entries.
 
-## Papers (1765)
+## Papers (1767)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -98,6 +98,7 @@
 | [ediga-2026-trace](papers/ediga-2026-trace.md) | Trace: Unmasking AI Attack Agents Through Terminal Behavior Fingerprinting | 2026 | 5 | abstract | swarm-detection | dmarz/sd-attribution |
 | [el-2026-physics](papers/el-2026-physics.md) | Physics of Agents: Statistical Mechanics Predicts Collective Behavior of AI Agents | 2026 | 5 | full | llm-agent-swarms, sync-consensus, criticality-measurement | dmarz/llm-agent-swarms |
 | [elamvazhuthi-2019-mean](papers/elamvazhuthi-2019-mean.md) | Mean-field models in swarm robotics: a survey | 2019 | 5 | abstract | swarm-robotics, sync-consensus, active-matter | dmarz/swarm-robotics |
+| [etcheverry-2026-reasoning](papers/etcheverry-2026-reasoning.md) | Reasoning with Neural Cellular Automata | 2026 | 5 | skim | marl-emergence, swarm-intelligence | dmarz/question-atlas |
 | [fan-2021-fault-tolerant](papers/fan-2021-fault-tolerant.md) | Fault-Tolerant Federated Reinforcement Learning with Theoretical Guarantee | 2021 | 5 | full | fork-merge-security, marl-emergence, sync-consensus | dmarz/fm |
 | [fang-2025-provably](papers/fang-2025-provably.md) | Provably Robust Federated Reinforcement Learning | 2025 | 5 | skim | fork-merge-security, marl-emergence | dmarz/fm |
 | [farmer-1996-security](papers/farmer-1996-security.md) | Security for Mobile Agents: Issues and Requirements | 1996 | 5 | full | fork-merge-security | dmarz/fm-mobile-agents |
@@ -196,6 +197,7 @@
 | [mezey-2025-purely](papers/mezey-2025-purely.md) | Purely vision-based collective movement of robots | 2025 | 5 | abstract | collective-motion, swarm-robotics | dmarz/collective-motion-recent |
 | [minsky-1996-cryptographic](papers/minsky-1996-cryptographic.md) | Cryptographic Support for Fault-Tolerant Distributed Computing | 1996 | 5 | full | fork-merge-security, sync-consensus, collective-decision | dmarz/fm-mobile-agents |
 | [mora-2011-biological](papers/mora-2011-biological.md) | Are Biological Systems Poised at Criticality? | 2011 | 5 | full | criticality-measurement, collective-motion | dmarz/criticality-measurement |
+| [mordvintsev-2020-growing](papers/mordvintsev-2020-growing.md) | Growing Neural Cellular Automata | 2020 | 5 | skim | marl-emergence, swarm-intelligence | dmarz/question-atlas |
 | [moussaid-2011-simple](papers/moussaid-2011-simple.md) | How simple rules determine pedestrian behavior and crowd disasters | 2011 | 5 | full | crowds-and-traffic, collective-motion | dmarz/crowds-and-traffic |
 | [mukherjee-2026-moltgraph](papers/mukherjee-2026-moltgraph.md) | MoltGraph: A Longitudinal Temporal Graph Dataset of Moltbook for Coordinated-Agent Detection | 2026 | 5 | full | swarm-detection, llm-agent-swarms, sybil-resistance | dmarz/sd-coordination |
 | [munoz-2018-colloquium](papers/munoz-2018-colloquium.md) | Colloquium : Criticality and dynamical scaling in living systems | 2018 | 5 | abstract | criticality-measurement, collective-motion, meta | dmarz/criticality-measurement |

@@ -9,11 +9,11 @@
 | collective-motion | 314 | 8 | 3 | 15 | 2 | 40 | 382 |
 | collective-decision | 276 | 8 | 24 | 19 | 0 | 33 | 360 |
 | swarm-robotics | 284 | 13 | 2 | 7 | 1 | 24 | 331 |
-| swarm-intelligence | 111 | 1 | 2 | 4 | 0 | 3 | 121 |
+| swarm-intelligence | 113 | 1 | 2 | 4 | 0 | 3 | 123 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
 | sync-consensus | 246 | 13 | 11 | 17 | 0 | 28 | 315 |
 | criticality-measurement | 190 | 4 | 2 | 23 | 2 | 22 | 243 |
-| marl-emergence | 133 | 13 | 1 | 33 | 1 | 10 | 191 |
+| marl-emergence | 135 | 13 | 1 | 33 | 1 | 10 | 193 |
 | llm-agent-swarms | 386 | 59 | 99 | 197 | 22 | 14 | 777 |
 | crowds-and-traffic | 80 | 2 | 1 | 2 | 1 | 8 | 94 |
 | meta | 113 | 9 | 5 | 22 | 1 | 4 | 154 |
@@ -101,6 +101,7 @@
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
 | [synthesis-people-and-labs](tasks/synthesis-people-and-labs.md) | done | p1 | synthesis | shadow/sol-g50 |  | 2026-10-03T20:15Z | Map the people and labs |
 | [synthesis-pre-experiment-research](tasks/synthesis-pre-experiment-research.md) | done | p1 | synthesis | dmarz/preflight |  | 2026-10-03T20:24Z | Research prerequisites for selecting swarm experiments |
+| [synthesis-question-atlas](tasks/synthesis-question-atlas.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T20:46Z | Broad research questions, candidate hypotheses and test sketches for human review |
 
 ## Candidate batches
 
@@ -123,6 +124,7 @@
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
 | shadow/sol-p2 | idle |  | 2026-10-03T20:47Z | wrapped up after batches |
+| dmarz/question-atlas | done | synthesis-question-atlas | 2026-10-03T20:46Z | Completed 143 source-linked candidates across 14 areas; editorial audit and review-browser verification passed. |
 | shadow/sol-aud | working |  | 2026-10-03T20:46Z | 15 full-transcript entries pushed; provenance QA and one caption-only blocked-talk recovery |
 | shadow/sol-g50 | done |  | 2026-10-03T20:45Z | Finished synthesis/people-and-labs.md (issue |
 | vishesh/codex-methods | done | build-agent-experiment-toolkit | 2026-10-03T20:44Z | Published reusable experiment toolkit; offline and repository CI passed; no secrets detected in audited contribution |
