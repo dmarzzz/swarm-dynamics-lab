@@ -2,7 +2,7 @@
 
 # Library index
 
-2728 entries.
+2729 entries.
 
 ## Papers (1723)
 
@@ -2625,7 +2625,7 @@
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 | [data-zzzztom-moltbook-2026](datasets/data-zzzztom-moltbook-2026.md) | zzzztom/moltbook-forum-data Moltbook dataset release | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | shadow/sol-g49 |
 
-## Talks (132)
+## Talks (133)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -2657,6 +2657,7 @@
 | [marchetti-2020-why](talks/marchetti-2020-why.md) | Active matter: why does it matter? KITP Blackboard Talk | 2020 | 5 | full | active-matter, collective-motion | shadow/sol-w3 |
 | [marchetti-2021-topology](talks/marchetti-2021-topology.md) | Cristina Marchetti: Active Topology | 2021 | 5 | full | active-matter, collective-motion | shadow/sol-w3 |
 | [marchetti-2022-physics](talks/marchetti-2022-physics.md) | LOEB LECTURE: MARCHETTI, Cristina, The Physics of Active Matter | 2022 | 5 | full | active-matter, collective-motion | shadow/sol-w3 |
+| [marchetti-2026-defects](talks/marchetti-2026-defects.md) | Topological defects in active and living matter | 2026 | 5 | full | active-matter, collective-motion | shadow/sol-w3 |
 | [monnot-2022-study](talks/monnot-2022-study.md) | A study of the transaction supply chain from CryptoKitties to MEV-Boost to PBS - Barnabé Monnot (EF) | 2022 | 5 | full | sybil-resistance | shadow/sol-w8 |
 | [moses-2019-melanie](talks/moses-2019-melanie.md) | Melanie Moses on Metabolic Scaling in Biology & Computation | 2019 | 5 | full | swarm-robotics, swarm-intelligence, criticality-measurement, fork-merge-security | shadow/sol-aud |
 | [nagpal-2014-collective](talks/nagpal-2014-collective.md) | Radhika Nagpal | 2014 | 5 | full | swarm-robotics | shadow/sol-w8 |
