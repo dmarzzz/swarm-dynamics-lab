@@ -102,12 +102,11 @@
 
 ## Candidate batches
 
-24 free, 5 claimed, 39 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+25 free, 4 claimed, 39 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
 | [#25](https://github.com/dmarzzz/swarm-lab/issues/25) | claimed | 2026-10-03T19:59Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-02) |
-| [#38](https://github.com/dmarzzz/swarm-lab/issues/38) | claimed | 2026-10-03T19:57Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-02) |
 | [#40](https://github.com/dmarzzz/swarm-lab/issues/40) | claimed | 2026-10-03T19:53Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-02) |
 | [#56](https://github.com/dmarzzz/swarm-lab/issues/56) | claimed | 2026-10-03T19:57Z | [batch] paper/swarm-detection: 5 candidates (paper-swarm-detection-20261003-05) |
 | [#57](https://github.com/dmarzzz/swarm-lab/issues/57) | claimed | 2026-10-03T19:58Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-01) |
@@ -117,6 +116,7 @@
 | [#26](https://github.com/dmarzzz/swarm-lab/issues/26) | free | 2026-10-03T19:46Z | [batch] web/collective-motion: 3 candidates (web-collective-motion-20261003-03) |
 | [#35](https://github.com/dmarzzz/swarm-lab/issues/35) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 10 candidates (web-swarm-robotics-20261003-01) |
 | [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
+| [#38](https://github.com/dmarzzz/swarm-lab/issues/38) | free | 2026-10-03T20:00Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-02) |
 | [#41](https://github.com/dmarzzz/swarm-lab/issues/41) | free | 2026-10-03T19:22Z | [batch] web/sync-consensus: 8 candidates (web-sync-consensus-20261003-03) |
 | [#52](https://github.com/dmarzzz/swarm-lab/issues/52) | free | 2026-10-03T19:59Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-01) |
 | [#58](https://github.com/dmarzzz/swarm-lab/issues/58) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-02) |
@@ -125,8 +125,7 @@
 | [#61](https://github.com/dmarzzz/swarm-lab/issues/61) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-05) |
 | [#62](https://github.com/dmarzzz/swarm-lab/issues/62) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-06) |
 | [#63](https://github.com/dmarzzz/swarm-lab/issues/63) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-07) |
-| [#64](https://github.com/dmarzzz/swarm-lab/issues/64) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-08) |
-| | | | 9 more free batches |
+| | | | 10 more free batches |
 
 ## Agents
 
@@ -136,9 +135,9 @@
 | dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | scan-papers-sd-ai-content lane finished: 55 entries on branch lane/sd-ai-content |
 | shadow/sol-w3 | working |  | 2026-10-03T20:00Z | processing talk batch 24 using yt_transcript.sh and Apify fallback |
 | shadow/sol-w4 | idle |  | 2026-10-03T19:59Z | done for session; batches |
+| shadow/sol-w7 | idle |  | 2026-10-03T19:58Z | Wrapped up on human stop; batches 48, 46, 53 catalogued; 37 and 38 all-skipped; 77 released untouched |
 | shadow/sol-w1 | working |  | 2026-10-03T19:56Z | completed web batches 33, 34, 31, 32 with 17 talks; working paper/swarm-detection batch 52, using direct arXiv and Crossref because Jina is rate-limited |
 | shadow/sol-g50 | working | synthesis-people-and-labs | 2026-10-03T19:50Z | Writing synthesis/people-and-labs.md (issue |
-| shadow/sol-w7 | working |  | 2026-10-03T19:45Z | Cataloguing GitHub batch 48, monitoring and collective cheating blogs |
 | shadow/sol-w8 | blocked |  | 2026-10-03T19:44Z | Completed X batches 45 and 44; remaining preferred talk batches require readable transcripts. |
 | shadow/sol-g51 | working |  | 2026-10-03T19:43Z | Recovering issue 51 citation trails, abstracts and verified OpenAlex citation counts from a fresh IP. |
 | shadow/sol-w5 | done |  | 2026-10-03T19:40Z | worked candidate batches |
