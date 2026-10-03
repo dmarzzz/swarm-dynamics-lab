@@ -2,7 +2,7 @@
 
 # Library index
 
-1532 entries.
+1534 entries.
 
 ## Papers (1206)
 
@@ -1215,7 +1215,7 @@
 | [zhao-2024-snail](papers/zhao-2024-snail.md) | Snail-inspired robotic swarms: a hybrid connector drives collective adaptation in unstructured outdoor environments | 2024 | 2 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [zhuge-2023-mindstorms](papers/zhuge-2023-mindstorms.md) | Mindstorms in Natural Language-Based Societies of Mind | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 
-## Blogs (91)
+## Blogs (92)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1303,6 +1303,7 @@
 | [reynolds-1995-boids](blogs/reynolds-1995-boids.md) | Boids (Flocks, Herds, and Schools: a Distributed Behavioral Model) | 1995 | 3 | full | collective-motion, meta | shadow/sol-w3 |
 | [zebedee-2019-evidence](blogs/zebedee-2019-evidence.md) | Evidence-Based Subjective Logic and Sybil-resistance | 2019 | 3 | full | sybil-resistance, collective-decision | dmarz/sybil-flashbots-informal |
 | [zvi-2025-dwarkesh](blogs/zvi-2025-dwarkesh.md) | On Dwarkesh Patel's Podcast With Richard Sutton | 2025 | 3 | skim | fork-merge-security, meta | dmarz/fm-sutton |
+| [bbc-2026-why](blogs/bbc-2026-why.md) | Why did an OpenAI system hack Australia's health system - and can it be stopped in the future? | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-w1 |
 | [charbonneau-2023-suave](blogs/charbonneau-2023-suave.md) | SUAVE Economic Security Models | 2023 | 2 | full | sybil-resistance | dmarz/sybil-foundations |
 | [flashbots-2022-order](blogs/flashbots-2022-order.md) | order flow, auctions and centralisation II - order flow auctions | 2022 | 2 | skim | sybil-resistance | dmarz/sybil-flashbots |
 | [flashbots-2026-why](blogs/flashbots-2026-why.md) | Why Location Choice Matters | 2026 | 2 | skim | sybil-resistance, sync-consensus | dmarz/sybil-flashbots |
@@ -1311,7 +1312,7 @@
 | [quanta-2018-simple](blogs/quanta-2018-simple.md) | The Simple Algorithm That Ants Use to Build Bridges | 2018 | 2 | full | collective-decision, swarm-robotics, swarm-intelligence | shadow/sol-w3 |
 | [quanta-2018-swarming](blogs/quanta-2018-swarming.md) | Swarming Bacteria Create an 'Impossible' Superfluid | 2018 | 2 | full | active-matter, collective-motion | shadow/sol-w3 |
 
-## Threads (116)
+## Threads (117)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -1380,6 +1381,7 @@
 | [x-lbeurerkellner-1913204991977828708](threads/x-lbeurerkellner-1913204991977828708.md) | lbeurerkellner: in CaMeL, data flow can turn into control flow when the planner writes an interpreter over tools | 2025 | 3 | full | fork-merge-security | dmarz/x-threads |
 | [x-levelsio-2018012417586786775](threads/x-levelsio-2018012417586786775.md) | levelsio: blocks over 6 AI reply bots a day, almost 200 a month, up from a few a week last year | 2026 | 3 | full | swarm-detection | dmarz/x-threads |
 | [x-levelsio-2023152123202982288](threads/x-levelsio-2023152123202982288.md) | levelsio: chart of his manual AI-reply blocks shows exponential growth, which he attributes to OpenClaw | 2026 | 3 | full | swarm-detection | dmarz/x-threads |
+| [x-marcus-j-w-2106203042140102868](threads/x-marcus-j-w-2106203042140102868.md) | Marcus Williams (OpenAI): three new misalignment disclosures, shutdown-prep after reading Slack, command-injecting a tool to exfiltrate withheld source, chaining two vulns to reach an internal host | 2026 | 3 | full | llm-agent-swarms, swarm-detection | shadow/sol-w1 |
 | [x-nicolenotdunn-2102431225885704567](threads/x-nicolenotdunn-2102431225885704567.md) | Dunn: Amazon blocking Muse, the merchant vs agent-builder standoff, and why blocking pushes agents to impersonate humans | 2026 | 3 | full | swarm-detection, sybil-resistance | shadow/sol-w2 |
 | [x-nikitabier-2102432368158245252](threads/x-nikitabier-2102432368158245252.md) | Nikita Bier (X): bot detection and human verification will be urgent as agent swarms 'suffocate every website and form'; X built its own stack in-house | 2026 | 3 | full | swarm-detection, sybil-resistance | shadow/sol-w1 |
 | [x-openai-2103566736356458911](threads/x-openai-2103566736356458911.md) | OpenAI: broader review of model actions during training and evaluation after the Hugging Face incident, expected to take months | 2026 | 3 | full | llm-agent-swarms, meta | shadow/sol-1 |
