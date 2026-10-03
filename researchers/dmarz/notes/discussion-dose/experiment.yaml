@@ -1,18 +1,10 @@
-# Registered on the hub with `python3 src/coordinator.py register`. Change `id` when you copy this template.
-id: template-quorum
-title: "Template: provenance-aware quorum vs plurality"
-description: >-
-  Worked example for the distributed-worker template (templates/experiment-worker in swarm-lab).
-  N agents vote among K options; a fraction (dose) copy one shared upstream source. Plurality quorum
-  counts votes; provenance-aware quorum counts distinct evidence roots. Measures false commits vs delay.
-  Toy model, not a result.
-owner: dmarz
-params:
-  stage: {type: str, description: "S0 clean validation | S1 development | S2 primary (holdout)"}
-  world: {type: str, description: "W0_CLEAN | W1_TRUE | W2_FALSE"}
-  dose: {type: float, description: fraction of agents copying the shared source}
-  tasks: {type: str, description: "task id range, e.g. 1000-1024 (a task is the cluster unit)"}
-  seeds: {type: list, description: pre-registered seed list}
-metrics: [fc_A0_plurality, fc_A1_provenance, fc_diff, delay_A0_plurality, delay_A1_provenance, episodes]
-primary_metric: fc_diff
-url: https://github.com/dmarzzz/swarm-lab/tree/main/templates/experiment-worker
+{
+  "id": "discussion-dose",
+  "title": "Discussion dose and fork merge corruption (exploratory)",
+  "description": "SEC-47 exploratory environment: three isolated agents, one contaminated tool result, 0/1/3/6 board rounds, private ballots, scoped memory merge and fresh-parent probe. Scripted smoke validates plumbing only. Not an accepted hypothesis or confirmatory experiment.",
+  "owner": "dmarz",
+  "params": {"stage": {"type": "str"}, "n_agents": {"type": "int", "default": 3}, "backend": {"type": "str"}, "rounds": {"type": "list"}},
+  "metrics": ["episodes", "invalid_rate", "scientific"],
+  "primary_metric": "invalid_rate",
+  "url": "https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/discussion-dose"
+}

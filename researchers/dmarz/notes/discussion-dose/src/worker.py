@@ -1,100 +1,86 @@
-#!/usr/bin/env python3
-"""Worker: take queued runs for this experiment from the hub and execute them, until the queue is empty.
-
-    SWARM_SOURCE=<you>/<tool>-<n> python3 src/worker.py            # one process per core: ./run-workers.sh
-    python3 src/worker.py --forever                                # keep polling for new work
-
-One hub run = one block of tasks in one cell (stage x world x dose). For every task and every seed in the
-block, all arms run on the same draws. Output: results/episodes/<run>.jsonl (one JSON line per arm per
-episode, append-only), uploaded to the hub as the run's `episodes.jsonl` artifact plus `summary.json`.
-Failed episodes are recorded and counted; nothing is retried or dropped.
-"""
+"""Bounded local / hub worker adapted from templates/experiment-worker/src/worker.py."""
 from __future__ import annotations
-
 import argparse
 import json
 import os
-import subprocess
-import sys
-import time
+import platform
 from pathlib import Path
+import subprocess
+import time
+from analyze import summarize,contrast
+from providers import Scripted,HTTP
+from sim import arms_for,run_episode
+from tasks import digest
 
-HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE))
-import sim  # noqa: E402
+ROOT=Path(__file__).resolve().parent.parent
+EXP='discussion-dose'
 
-try:
-    import swarm_report as sr  # preinstalled on every fleet server
-except ImportError:
-    sys.exit("swarm_report not found: run on a fleet server, or copy hub/swarm_report.py from swarm-labs-agentops")
+def code_hash():
+    return digest({p.name:p.read_text() for p in sorted((ROOT/'src').glob('*.py'))})
 
-ROOT = HERE.parent
-EXP = None
-
-
-def load_yaml(p: Path):
-    import yaml  # python3-yaml is on every fleet server
-    return yaml.safe_load(p.read_text())
-
-
-def execute(run) -> None:
-    p = run.params
-    lo, hi = (int(x) for x in p["tasks"].split("-"))
-    tasks = list(range(lo, hi + 1))
-    seeds = p["seeds"]
-    arms = p["arms"]
-    total = len(tasks) * len(seeds)
-    out = ROOT / "results" / "episodes" / (run.id.replace("/", "__") + ".jsonl")
-    out.parent.mkdir(parents=True, exist_ok=True)
-    code = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
-    stats = {a: {"n": 0, "fc": 0, "delay": 0.0, "invalid": 0} for a in arms}
-    done = 0
-    with out.open("a") as f:                                   # append-only
+def execute_bundle(params,out,provider,progress=lambda *a:None):
+    out=Path(out);out.mkdir(parents=True,exist_ok=False)
+    arms=arms_for(params['rounds'],params.get('private_control',False))
+    tasks=params['tasks'];seeds=params['seeds'];cfg={'n_agents':params['n_agents']}
+    manifest={'params':params,'arms':arms,'code_sha256':code_hash(),'python':platform.python_version(),
+              'platform':platform.system(),'provider':provider.name,'scientific':provider.scientific,
+              'git_commit':subprocess.run(['git','rev-parse','HEAD'],cwd=ROOT,capture_output=True,text=True).stdout.strip(),
+              'planned_episodes':[{'task_id':t,'seed':s,'arm':a} for t in tasks for s in seeds for a in arms]}
+    (out/'manifest.json').write_text(json.dumps(manifest,indent=2))
+    rows=[];start=time.monotonic()
+    # Write plan first; a hard worker death leaves visible missing outcomes for reconciliation.
+    with (out/'episodes.jsonl').open('x') as f, (out/'events.jsonl').open('x') as journal:
+        def emit(label,event):
+            journal.write(json.dumps({'stream':label,'event':event},sort_keys=True)+'\n');journal.flush();os.fsync(journal.fileno())
         for t in tasks:
             for s in seeds:
-                for rec in sim.run_episode(t, s, p["world"], p["dose"], arms, p["cfg"]):
-                    rec.update({"run": run.id, "stage": p["stage"], "split": p["split"],
-                                "prereg": p.get("prereg"), "code": code or None, "worker": os.environ.get("SWARM_SOURCE")})
-                    f.write(json.dumps(rec) + "\n")
-                    a = stats[rec["arm"]]
-                    if rec["validity"]["ok"]:
-                        a["n"] += 1
-                        a["fc"] += rec["evaluation"]["false_commit"]
-                        a["delay"] += rec["decision"]["delay"]
-                    else:
-                        a["invalid"] += 1
-                done += 1
-                run.progress(done, total, **metrics(stats))
-    summary = {"run": run.id, "params": p, "episodes_per_arm": total, "stats": stats, "metrics": metrics(stats),
-               "file": out.name}
-    (out.with_suffix(".summary.json")).write_text(json.dumps(summary, indent=2))
-    run.artifact(out, "episodes.jsonl")
-    run.artifact(out.with_suffix(".summary.json"), "summary.json")
-    run.done(message=f"{total} episodes x {len(arms)} arms", **metrics(stats))
+                for row in run_episode(t,s,'controlled-tool-exposure',1,arms,cfg,provider,event_sink=emit):
+                    row['provenance']={'code_sha256':manifest['code_sha256'],'git_commit':manifest['git_commit'],'stage':params['stage']}
+                    f.write(json.dumps(row,sort_keys=True)+'\n');f.flush();os.fsync(f.fileno());rows.append(row)
+                progress(len(rows),len(manifest['planned_episodes']))
+    summary={'scientific':provider.scientific,'provider':provider.name,'episodes':len(rows),
+             'seconds':round(time.monotonic()-start,3),'cells':summarize(rows),
+             'primary_candidate':contrast(rows) if 0 in params['rounds'] and 6 in params['rounds'] else None,
+             'actual_http_calls':getattr(provider,'calls',0),'conservative_reserved_usd':getattr(provider,'reserved_usd',0)}
+    (out/'summary.json').write_text(json.dumps(summary,indent=2))
+    return summary
 
-
-def metrics(stats: dict) -> dict:
-    m = {}
-    for arm, a in stats.items():
-        if a["n"]:
-            m[f"fc_{arm}"] = round(a["fc"] / a["n"], 4)
-            m[f"delay_{arm}"] = round(a["delay"] / a["n"], 3)
-    if "fc_A0_plurality" in m and "fc_A1_provenance" in m:
-        m["fc_diff"] = round(m["fc_A0_plurality"] - m["fc_A1_provenance"], 4)
-    m["episodes"] = sum(a["n"] + a["invalid"] for a in stats.values())
-    return m
-
+def build_provider(backend,params):
+    if backend=='scripted': return Scripted()
+    cfg=json.loads(os.environ.get('SWARM_MODEL_CONFIG','{}'))
+    allowed={'model','max_calls','max_output_tokens','max_input_bytes','timeout','max_cost_usd','input_usd_per_million','output_usd_per_million'}
+    if set(cfg)-allowed: raise ValueError('unknown model config fields')
+    return HTTP(**cfg)
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--forever", action="store_true", help="keep polling when the queue is empty")
-    a = ap.parse_args()
-    if not os.environ.get("SWARM_SOURCE"):
-        sys.exit("set SWARM_SOURCE=<you>/<tool>-<n> (e.g. vishesh/codex-1) so runs are attributed")
-    exp = load_yaml(ROOT / "experiment.yaml")["id"]
-    n = sr.work(exp, execute, stop_when_empty=not a.forever)
-    print(f"worker {os.environ['SWARM_SOURCE']}: {n} run(s) for {exp}")
-
-
-if __name__ == "__main__":
-    main()
+    p=argparse.ArgumentParser();p.add_argument('--hub',action='store_true');p.add_argument('--stage',choices=['S0','S1'],default='S0')
+    p.add_argument('--backend',choices=['scripted','http'],default='scripted');p.add_argument('--out')
+    p.add_argument('--task-limit',type=int);a=p.parse_args()
+    design=json.loads((ROOT/'design.yaml').read_text())
+    if a.hub:
+        import swarm_report as sr
+        def work(run):
+            params=run.params
+            if params.get('stage') not in ('S0','S1'): raise ValueError('S2 disabled pending research review')
+            if params.get('backend')!=a.backend: raise ValueError('worker backend mismatch')
+            provider=build_provider(a.backend,params)
+            out=ROOT/'results'/'episodes'/run.id.replace('/','__')
+            try:
+                summary=execute_bundle(params,out,provider,lambda done,total:run.progress(done,total,episodes=done))
+            finally:
+                for name in ('manifest.json','episodes.jsonl','events.jsonl','summary.json'):
+                    if (out/name).exists(): run.artifact(out/name,name)
+            invalid=sum(c['invalid']*c['assigned'] for c in summary['cells'].values())
+            run.done(message='Engineering scripted smoke; not LLM evidence' if not provider.scientific else 'Exploratory LLM pilot',
+                     episodes=summary['episodes'],invalid_rate=invalid/summary['episodes'],scientific=int(provider.scientific))
+        sr.work(EXP,work,max_runs=1)
+    else:
+        if not a.out: p.error('--out required for local execution')
+        st=design['stages'][a.stage];tasks=st['tasks']
+        if a.task_limit is not None:
+            if a.task_limit<1: p.error('task limit must be positive')
+            tasks=tasks[:a.task_limit]
+        params={'stage':a.stage,'tasks':tasks,'seeds':st['seeds'],'rounds':design['rounds'],
+                'n_agents':design['n_agents'],'private_control':False,'backend':a.backend}
+        print(json.dumps(execute_bundle(params,a.out,build_provider(a.backend,params)),indent=2))
+if __name__=='__main__':main()
