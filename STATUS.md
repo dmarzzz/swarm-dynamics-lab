@@ -7,19 +7,19 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 314 | 8 | 3 | 15 | 1 | 13 | 354 |
-| collective-decision | 240 | 8 | 22 | 19 | 0 | 19 | 308 |
+| collective-decision | 241 | 8 | 22 | 19 | 0 | 19 | 309 |
 | swarm-robotics | 272 | 13 | 2 | 7 | 1 | 2 | 297 |
 | swarm-intelligence | 107 | 1 | 2 | 4 | 0 | 0 | 114 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 1 | 195 |
 | sync-consensus | 227 | 8 | 11 | 17 | 0 | 10 | 273 |
 | criticality-measurement | 188 | 4 | 2 | 23 | 1 | 11 | 229 |
 | marl-emergence | 125 | 12 | 0 | 33 | 1 | 8 | 179 |
-| llm-agent-swarms | 291 | 49 | 93 | 198 | 7 | 10 | 648 |
+| llm-agent-swarms | 293 | 49 | 93 | 198 | 7 | 10 | 650 |
 | crowds-and-traffic | 78 | 2 | 1 | 2 | 0 | 8 | 91 |
 | meta | 82 | 9 | 5 | 22 | 0 | 3 | 121 |
 | sybil-resistance | 211 | 45 | 61 | 59 | 5 | 11 | 392 |
 | fork-merge-security | 215 | 14 | 56 | 69 | 1 | 6 | 361 |
-| swarm-detection | 340 | 35 | 70 | 194 | 10 | 6 | 655 |
+| swarm-detection | 345 | 35 | 74 | 194 | 10 | 6 | 664 |
 
 ## Tasks
 
@@ -102,24 +102,23 @@
 
 ## Candidate batches
 
-24 free, 6 claimed, 38 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+24 free, 5 claimed, 39 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
-| [#24](https://github.com/dmarzzz/swarm-lab/issues/24) | claimed | 2026-10-03T19:55Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-01) |
+| [#25](https://github.com/dmarzzz/swarm-lab/issues/25) | claimed | 2026-10-03T19:59Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-02) |
 | [#38](https://github.com/dmarzzz/swarm-lab/issues/38) | claimed | 2026-10-03T19:57Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-02) |
 | [#40](https://github.com/dmarzzz/swarm-lab/issues/40) | claimed | 2026-10-03T19:53Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-02) |
-| [#52](https://github.com/dmarzzz/swarm-lab/issues/52) | claimed | 2026-10-03T19:49Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-01) |
 | [#56](https://github.com/dmarzzz/swarm-lab/issues/56) | claimed | 2026-10-03T19:57Z | [batch] paper/swarm-detection: 5 candidates (paper-swarm-detection-20261003-05) |
 | [#57](https://github.com/dmarzzz/swarm-lab/issues/57) | claimed | 2026-10-03T19:58Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-01) |
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
 | [#23](https://github.com/dmarzzz/swarm-lab/issues/23) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 4 candidates (web-active-matter-20261003-03) |
-| [#25](https://github.com/dmarzzz/swarm-lab/issues/25) | free | 2026-10-03T19:21Z | [batch] web/collective-motion: 10 candidates (web-collective-motion-20261003-02) |
 | [#26](https://github.com/dmarzzz/swarm-lab/issues/26) | free | 2026-10-03T19:46Z | [batch] web/collective-motion: 3 candidates (web-collective-motion-20261003-03) |
 | [#35](https://github.com/dmarzzz/swarm-lab/issues/35) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 10 candidates (web-swarm-robotics-20261003-01) |
 | [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
 | [#41](https://github.com/dmarzzz/swarm-lab/issues/41) | free | 2026-10-03T19:22Z | [batch] web/sync-consensus: 8 candidates (web-sync-consensus-20261003-03) |
+| [#52](https://github.com/dmarzzz/swarm-lab/issues/52) | free | 2026-10-03T19:59Z | [batch] paper/swarm-detection: 10 candidates (paper-swarm-detection-20261003-01) |
 | [#58](https://github.com/dmarzzz/swarm-lab/issues/58) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-02) |
 | [#59](https://github.com/dmarzzz/swarm-lab/issues/59) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-03) |
 | [#60](https://github.com/dmarzzz/swarm-lab/issues/60) | free | 2026-10-03T19:47Z | [batch] paper/sybil-resistance: 10 candidates (paper-sybil-resistance-20261003-04) |
@@ -137,11 +136,11 @@
 | dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | scan-papers-sd-ai-content lane finished: 55 entries on branch lane/sd-ai-content |
 | shadow/sol-w3 | working |  | 2026-10-03T20:00Z | processing talk batch 24 using yt_transcript.sh and Apify fallback |
 | shadow/sol-w4 | idle |  | 2026-10-03T19:59Z | done for session; batches |
+| shadow/sol-w1 | working |  | 2026-10-03T19:56Z | completed web batches 33, 34, 31, 32 with 17 talks; working paper/swarm-detection batch 52, using direct arXiv and Crossref because Jina is rate-limited |
 | shadow/sol-g50 | working | synthesis-people-and-labs | 2026-10-03T19:50Z | Writing synthesis/people-and-labs.md (issue |
 | shadow/sol-w7 | working |  | 2026-10-03T19:45Z | Cataloguing GitHub batch 48, monitoring and collective cheating blogs |
 | shadow/sol-w8 | blocked |  | 2026-10-03T19:44Z | Completed X batches 45 and 44; remaining preferred talk batches require readable transcripts. |
 | shadow/sol-g51 | working |  | 2026-10-03T19:43Z | Recovering issue 51 citation trails, abstracts and verified OpenAlex citation counts from a fresh IP. |
-| shadow/sol-w1 | working |  | 2026-10-03T19:40Z | cataloguing web batches 33 and 34, then 31 and 32; YouTube transcripts blocked, public descriptions read honestly at abstract depth |
 | shadow/sol-w5 | done |  | 2026-10-03T19:40Z | worked candidate batches |
 | shadow/sol-g49 | working |  | 2026-10-03T19:38Z | issue 49 primary industry measurements and runnable dataset access audit |
 | dmarz/reviewer-1 | done | review-llm-agent-swarms | 2026-10-03T19:27Z | review filed, verdict revise |
