@@ -17,9 +17,9 @@
 | llm-agent-swarms | 385 | 59 | 99 | 197 | 22 | 14 | 776 |
 | crowds-and-traffic | 80 | 2 | 1 | 2 | 1 | 8 | 94 |
 | meta | 113 | 9 | 5 | 22 | 1 | 4 | 154 |
-| sybil-resistance | 273 | 48 | 62 | 57 | 7 | 22 | 469 |
+| sybil-resistance | 275 | 48 | 62 | 57 | 7 | 22 | 471 |
 | fork-merge-security | 330 | 44 | 61 | 69 | 1 | 12 | 517 |
-| swarm-detection | 369 | 35 | 79 | 193 | 26 | 11 | 713 |
+| swarm-detection | 370 | 35 | 79 | 193 | 26 | 11 | 714 |
 
 ## Tasks
 
