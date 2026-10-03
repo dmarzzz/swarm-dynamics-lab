@@ -2,11 +2,18 @@
 
 # Library index
 
-0 entries.
+6 entries.
 
-## Papers (0)
+## Papers (6)
 
-None yet.
+| id | title | year | rel | depth | topics | added by |
+|---|---|---|---|---|---|---|
+| [brambati-2025-learning](papers/brambati-2025-learning.md) | Learning to flock in open space by avoiding collisions and staying together | 2025 | 5 | full | marl-emergence, collective-motion, criticality-measurement | dmarz/marl-emergence |
+| [durve-2020-learning](papers/durve-2020-learning.md) | Learning to flock through reinforcement | 2020 | 5 | full | marl-emergence, collective-motion | dmarz/marl-emergence |
+| [huttenrauch-2019-deep](papers/huttenrauch-2019-deep.md) | Deep Reinforcement Learning for Swarm Systems | 2019 | 5 | full | marl-emergence, swarm-robotics | dmarz/marl-emergence |
+| [yang-2018-mean](papers/yang-2018-mean.md) | Mean Field Multi-Agent Reinforcement Learning | 2018 | 5 | full | marl-emergence | dmarz/marl-emergence |
+| [baker-2020-emergent](papers/baker-2020-emergent.md) | Emergent Tool Use From Multi-Agent Autocurricula | 2020 | 4 | full | marl-emergence | dmarz/marl-emergence |
+| [verma-2018-efficient](papers/verma-2018-efficient.md) | Efficient collective swimming by harnessing vortices through deep reinforcement learning | 2018 | 4 | full | marl-emergence, collective-motion, swarm-robotics | dmarz/marl-emergence |
 
 ## Blogs (0)
 

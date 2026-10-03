@@ -6,14 +6,14 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| collective-motion | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
 | collective-decision | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| swarm-robotics | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| swarm-robotics | 2 | 0 | 0 | 0 | 0 | 0 | 2 |
 | swarm-intelligence | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | active-matter | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | sync-consensus | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| criticality-measurement | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| marl-emergence | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| criticality-measurement | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
+| marl-emergence | 6 | 0 | 0 | 0 | 0 | 0 | 6 |
 | llm-agent-swarms | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | crowds-and-traffic | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | meta | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
