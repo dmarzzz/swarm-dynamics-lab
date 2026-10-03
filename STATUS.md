@@ -6,17 +6,17 @@
 
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
-| collective-motion | 306 | 8 | 0 | 0 | 0 | 0 | 314 |
-| collective-decision | 185 | 8 | 0 | 6 | 0 | 0 | 199 |
-| swarm-robotics | 231 | 10 | 0 | 0 | 0 | 0 | 241 |
-| swarm-intelligence | 104 | 1 | 0 | 0 | 0 | 0 | 105 |
-| active-matter | 182 | 3 | 0 | 0 | 0 | 0 | 185 |
-| sync-consensus | 164 | 5 | 0 | 0 | 0 | 0 | 169 |
+| collective-motion | 310 | 8 | 0 | 0 | 0 | 0 | 318 |
+| collective-decision | 186 | 8 | 0 | 6 | 0 | 0 | 200 |
+| swarm-robotics | 243 | 10 | 0 | 0 | 0 | 0 | 253 |
+| swarm-intelligence | 107 | 1 | 0 | 0 | 0 | 0 | 108 |
+| active-matter | 184 | 3 | 0 | 0 | 0 | 0 | 187 |
+| sync-consensus | 165 | 5 | 0 | 0 | 0 | 0 | 170 |
 | criticality-measurement | 184 | 4 | 0 | 4 | 0 | 0 | 192 |
-| marl-emergence | 120 | 12 | 0 | 0 | 0 | 0 | 132 |
-| llm-agent-swarms | 139 | 36 | 0 | 50 | 0 | 0 | 225 |
+| marl-emergence | 121 | 12 | 0 | 0 | 0 | 0 | 133 |
+| llm-agent-swarms | 140 | 36 | 0 | 50 | 0 | 0 | 226 |
 | crowds-and-traffic | 75 | 2 | 0 | 0 | 0 | 0 | 77 |
-| meta | 52 | 8 | 0 | 13 | 0 | 0 | 73 |
+| meta | 53 | 8 | 0 | 13 | 0 | 0 | 74 |
 | sybil-resistance | 8 | 20 | 0 | 0 | 0 | 0 | 28 |
 | fork-merge-security | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | swarm-detection | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -26,19 +26,6 @@
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
-| [scan-papers-collective-decision](tasks/scan-papers-collective-decision.md) | claimed | p0 | scan | dmarz/collective-decision |  | 2026-10-03T17:01Z | Catalogue the papers: collective decision-making in biology |
-| [scan-papers-collective-motion](tasks/scan-papers-collective-motion.md) | claimed | p0 | scan | dmarz/collective-motion |  | 2026-10-03T17:01Z | Catalogue the papers: collective motion models |
-| [scan-papers-collective-motion-recent](tasks/scan-papers-collective-motion-recent.md) | claimed | p0 | scan | dmarz/collective-motion-recent |  | 2026-10-03T17:01Z | Catalogue collective motion papers from 2024 onward |
-| [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
-| [scan-papers-fm-contagion](tasks/scan-papers-fm-contagion.md) | claimed | p0 | scan | dmarz/fm-contagion |  | 2026-10-03T18:12Z | Catalogue the papers: corruption spreading through multi-agent LLM systems |
-| [scan-papers-fm-identity-hijack](tasks/scan-papers-fm-identity-hijack.md) | claimed | p0 | scan | dmarz/fm-identity-hijack |  | 2026-10-03T18:12Z | Catalogue the papers: identity and goal hijack of agents |
-| [scan-papers-fm-memory-injection](tasks/scan-papers-fm-memory-injection.md) | claimed | p0 | scan | dmarz/fm-memory-injection |  | 2026-10-03T18:11Z | Catalogue the papers: memory poisoning and persistent prompt injection in agents |
-| [scan-papers-fm-merge-poisoning](tasks/scan-papers-fm-merge-poisoning.md) | claimed | p0 | scan | dmarz/fm-merge-poisoning |  | 2026-10-03T18:11Z | Catalogue the papers: poisoning through model merging, federated aggregation and distillation |
-| [scan-papers-fm-sutton](tasks/scan-papers-fm-sutton.md) | claimed | p0 | scan | dmarz/fm-sutton |  | 2026-10-03T18:11Z | Catalogue the primary sources: Sutton on agents splitting and merging, and prior framings |
-| [scan-papers-fm-unlinkability](tasks/scan-papers-fm-unlinkability.md) | claimed | p0 | scan | dmarz/fm-unlinkability |  | 2026-10-03T18:12Z | Catalogue the papers: hiding which part returns (unlinkability, secret election, moving target) |
-| [scan-papers-llm-agent-swarms](tasks/scan-papers-llm-agent-swarms.md) | claimed | p0 | scan | dmarz/llm-agent-swarms |  | 2026-10-03T17:01Z | Catalogue the papers: llm agent swarms |
-| [scan-papers-llm-agent-swarms-recent](tasks/scan-papers-llm-agent-swarms-recent.md) | claimed | p0 | scan | dmarz/llm-agent-swarms-recent |  | 2026-10-03T17:01Z | Catalogue LLM agent swarms papers from 2024 onward |
-| [scan-papers-marl-emergence](tasks/scan-papers-marl-emergence.md) | claimed | p0 | scan | dmarz/marl-emergence |  | 2026-10-03T17:01Z | Catalogue the papers: multi-agent rl and emergent coordination |
 | [scan-papers-swarm-robotics](tasks/scan-papers-swarm-robotics.md) | claimed | p0 | scan | dmarz/swarm-robotics |  | 2026-10-03T17:01Z | Catalogue the papers: swarm robotics |
 | [scan-papers-swarm-robotics-recent](tasks/scan-papers-swarm-robotics-recent.md) | claimed | p0 | scan | dmarz/swarm-robotics-recent |  | 2026-10-03T17:01Z | Catalogue swarm robotics papers from 2024 onward |
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
@@ -47,13 +34,7 @@
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
-| [scan-papers-active-matter](tasks/scan-papers-active-matter.md) | claimed | p1 | scan | dmarz/active-matter |  | 2026-10-03T17:01Z | Catalogue the papers: active matter physics |
-| [scan-papers-criticality-measurement](tasks/scan-papers-criticality-measurement.md) | claimed | p1 | scan | dmarz/criticality-measurement |  | 2026-10-03T17:01Z | Catalogue the papers: criticality, information and measurement |
-| [scan-papers-crowds-and-traffic](tasks/scan-papers-crowds-and-traffic.md) | claimed | p1 | scan | dmarz/crowds-and-traffic |  | 2026-10-03T17:01Z | Catalogue the papers: human crowds and traffic |
-| [scan-papers-fm-ai-control](tasks/scan-papers-fm-ai-control.md) | claimed | p1 | scan | dmarz/fm-ai-control |  | 2026-10-03T18:12Z | Catalogue the papers: AI control, sub-agent delegation and self-replication |
-| [scan-papers-fm-biology](tasks/scan-papers-fm-biology.md) | claimed | p1 | scan | dmarz/fm-biology |  | 2026-10-03T18:12Z | Catalogue the papers: fission-fusion and fusion parasitism in biology |
-| [scan-papers-fm-mobile-agents](tasks/scan-papers-fm-mobile-agents.md) | claimed | p1 | scan | dmarz/fm-mobile-agents |  | 2026-10-03T18:12Z | Catalogue the papers: mobile-agent security and Byzantine state merge |
-| [scan-papers-swarm-intelligence](tasks/scan-papers-swarm-intelligence.md) | claimed | p1 | scan | dmarz/swarm-intelligence |  | 2026-10-03T17:01Z | Catalogue the papers: swarm intelligence algorithms |
+| [scan-papers-sd-ai-content](tasks/scan-papers-sd-ai-content.md) | claimed | p1 | scan | dmarz/sd-ai-content |  | 2026-10-03T18:19Z | Catalogue the papers: population-level detection of AI-generated content |
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-papers-sync-consensus](tasks/scan-papers-sync-consensus.md) | claimed | p1 | scan | dmarz/sync-consensus |  | 2026-10-03T17:01Z | Catalogue the papers: synchronisation, consensus and networked control |
@@ -63,14 +44,11 @@
 | [scan-papers-sd-bots](tasks/scan-papers-sd-bots.md) | open | p0 | scan |  |  |  | Catalogue the papers: social bots, LLM-powered botnets and coordinated inauthentic behaviour detection |
 | [scan-papers-sd-coordination](tasks/scan-papers-sd-coordination.md) | open | p0 | scan |  |  |  | Catalogue the papers: statistical detection of coordination and collective behaviour from traces |
 | [scan-papers-sd-honeypots](tasks/scan-papers-sd-honeypots.md) | open | p0 | scan |  |  |  | Catalogue the papers: honeypots, canaries, tarpits and traps for autonomous agents |
-| [scan-papers-sd-web-agents](tasks/scan-papers-sd-web-agents.md) | open | p0 | scan |  |  |  | Catalogue the papers: detecting browser agents, computer-use agents and AI crawlers on the web |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  |  | Catalogue the blogs and long-form web writing |
 | [scan-code-sd-code-data](tasks/scan-code-sd-code-data.md) | open | p1 | scan |  |  |  | Catalogue the code: code, datasets and benchmarks for detecting agent swarms |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
 | [scan-metrics-benchmarks](tasks/scan-metrics-benchmarks.md) | open | p1 | scan |  |  |  | Catalogue metrics and benchmarks for swarm behaviour |
-| [scan-papers-sd-ai-content](tasks/scan-papers-sd-ai-content.md) | open | p1 | scan |  |  |  | Catalogue the papers: population-level detection of AI-generated content |
-| [scan-papers-sd-attribution](tasks/scan-papers-sd-attribution.md) | open | p1 | scan |  |  |  | Catalogue the papers: identifying the model or agent behind observed behaviour |
 | [scan-papers-sd-onchain](tasks/scan-papers-sd-onchain.md) | open | p1 | scan |  |  |  | Catalogue the papers: agent and bot swarms on blockchains |
 | [scan-threads-science](tasks/scan-threads-science.md) | open | p1 | scan |  |  |  | Catalogue X threads on the science of collectives |
 | [scan-threads-sd-informal](tasks/scan-threads-sd-informal.md) | open | p1 | scan |  |  |  | Catalogue the threads: threat-intel reports, blogs, threads and talks on agent swarms in the wild |
@@ -95,7 +73,29 @@
 | [scan-code-agent-orchestration](tasks/scan-code-agent-orchestration.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue LLM multi-agent and orchestration frameworks |
 | [scan-code-collective-sims](tasks/scan-code-collective-sims.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue simulators for collective motion and active matter |
 | [scan-code-robotics-marl](tasks/scan-code-robotics-marl.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue swarm robotics simulators and MARL environments |
+| [scan-papers-collective-decision](tasks/scan-papers-collective-decision.md) | done | p0 | scan | dmarz/collective-decision |  | 2026-10-03T18:18Z | Catalogue the papers: collective decision-making in biology |
+| [scan-papers-collective-motion](tasks/scan-papers-collective-motion.md) | done | p0 | scan | dmarz/collective-motion |  | 2026-10-03T18:18Z | Catalogue the papers: collective motion models |
+| [scan-papers-collective-motion-recent](tasks/scan-papers-collective-motion-recent.md) | done | p0 | scan | dmarz/collective-motion-recent |  | 2026-10-03T18:18Z | Catalogue collective motion papers from 2024 onward |
+| [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | done | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:18Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
+| [scan-papers-fm-contagion](tasks/scan-papers-fm-contagion.md) | done | p0 | scan | dmarz/fm-contagion |  | 2026-10-03T18:19Z | Catalogue the papers: corruption spreading through multi-agent LLM systems |
+| [scan-papers-fm-identity-hijack](tasks/scan-papers-fm-identity-hijack.md) | done | p0 | scan | dmarz/fm-identity-hijack |  | 2026-10-03T18:19Z | Catalogue the papers: identity and goal hijack of agents |
+| [scan-papers-fm-memory-injection](tasks/scan-papers-fm-memory-injection.md) | done | p0 | scan | dmarz/fm-memory-injection |  | 2026-10-03T18:19Z | Catalogue the papers: memory poisoning and persistent prompt injection in agents |
+| [scan-papers-fm-merge-poisoning](tasks/scan-papers-fm-merge-poisoning.md) | done | p0 | scan | dmarz/fm-merge-poisoning |  | 2026-10-03T18:19Z | Catalogue the papers: poisoning through model merging, federated aggregation and distillation |
+| [scan-papers-fm-sutton](tasks/scan-papers-fm-sutton.md) | done | p0 | scan | dmarz/fm-sutton |  | 2026-10-03T18:19Z | Catalogue the primary sources: Sutton on agents splitting and merging, and prior framings |
+| [scan-papers-fm-unlinkability](tasks/scan-papers-fm-unlinkability.md) | done | p0 | scan | dmarz/fm-unlinkability |  | 2026-10-03T18:19Z | Catalogue the papers: hiding which part returns (unlinkability, secret election, moving target) |
+| [scan-papers-llm-agent-swarms](tasks/scan-papers-llm-agent-swarms.md) | done | p0 | scan | dmarz/llm-agent-swarms |  | 2026-10-03T18:19Z | Catalogue the papers: llm agent swarms |
+| [scan-papers-llm-agent-swarms-recent](tasks/scan-papers-llm-agent-swarms-recent.md) | done | p0 | scan | dmarz/llm-agent-swarms-recent |  | 2026-10-03T18:19Z | Catalogue LLM agent swarms papers from 2024 onward |
+| [scan-papers-marl-emergence](tasks/scan-papers-marl-emergence.md) | done | p0 | scan | dmarz/marl-emergence |  | 2026-10-03T18:19Z | Catalogue the papers: multi-agent rl and emergent coordination |
+| [scan-papers-sd-web-agents](tasks/scan-papers-sd-web-agents.md) | done | p0 | scan | dmarz/sd-web-agents |  | 2026-10-03T18:19Z | Catalogue the papers: detecting browser agents, computer-use agents and AI crawlers on the web |
 | [scan-threads-agents](tasks/scan-threads-agents.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue X threads on agent swarms and multi-agent AI |
+| [scan-papers-active-matter](tasks/scan-papers-active-matter.md) | done | p1 | scan | dmarz/active-matter |  | 2026-10-03T18:18Z | Catalogue the papers: active matter physics |
+| [scan-papers-criticality-measurement](tasks/scan-papers-criticality-measurement.md) | done | p1 | scan | dmarz/criticality-measurement |  | 2026-10-03T18:18Z | Catalogue the papers: criticality, information and measurement |
+| [scan-papers-crowds-and-traffic](tasks/scan-papers-crowds-and-traffic.md) | done | p1 | scan | dmarz/crowds-and-traffic |  | 2026-10-03T18:18Z | Catalogue the papers: human crowds and traffic |
+| [scan-papers-fm-ai-control](tasks/scan-papers-fm-ai-control.md) | done | p1 | scan | dmarz/fm-ai-control |  | 2026-10-03T18:18Z | Catalogue the papers: AI control, sub-agent delegation and self-replication |
+| [scan-papers-fm-biology](tasks/scan-papers-fm-biology.md) | done | p1 | scan | dmarz/fm-biology |  | 2026-10-03T18:19Z | Catalogue the papers: fission-fusion and fusion parasitism in biology |
+| [scan-papers-fm-mobile-agents](tasks/scan-papers-fm-mobile-agents.md) | done | p1 | scan | dmarz/fm-mobile-agents |  | 2026-10-03T18:19Z | Catalogue the papers: mobile-agent security and Byzantine state merge |
+| [scan-papers-sd-attribution](tasks/scan-papers-sd-attribution.md) | done | p1 | scan | dmarz/sd-attribution |  | 2026-10-03T18:19Z | Catalogue the papers: identifying the model or agent behind observed behaviour |
+| [scan-papers-swarm-intelligence](tasks/scan-papers-swarm-intelligence.md) | done | p1 | scan | dmarz/swarm-intelligence |  | 2026-10-03T18:19Z | Catalogue the papers: swarm intelligence algorithms |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
 
 ## Agents
@@ -103,6 +103,15 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
+| dmarz/active-matter | done | scan-papers-active-matter | 2026-10-03T18:18Z | literature scan and audit complete |
+| dmarz/collective-decision | done | scan-papers-collective-decision | 2026-10-03T18:18Z | literature scan and audit complete |
+| dmarz/collective-motion-recent | done | scan-papers-collective-motion-recent | 2026-10-03T18:18Z | literature scan and audit complete |
+| dmarz/collective-motion | done | scan-papers-collective-motion | 2026-10-03T18:18Z | literature scan and audit complete |
+| dmarz/criticality-measurement | done | scan-papers-criticality-measurement | 2026-10-03T18:18Z | literature scan and audit complete |
+| dmarz/crowds-and-traffic | done | scan-papers-crowds-and-traffic | 2026-10-03T18:18Z | literature scan and audit complete |
+| dmarz/llm-agent-swarms-recent | done | scan-papers-llm-agent-swarms-recent | 2026-10-03T18:18Z | literature scan and audit complete |
+| dmarz/llm-agent-swarms | done | scan-papers-llm-agent-swarms | 2026-10-03T18:18Z | literature scan and audit complete |
+| dmarz/marl-emergence | done | scan-papers-marl-emergence | 2026-10-03T18:18Z | literature scan and audit complete |
 | dmarz/sd-ai-content | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
 | dmarz/sd-attribution | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
 | dmarz/sd-bots | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
@@ -113,6 +122,10 @@
 | dmarz/sd-onchain | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
 | dmarz/sd-web-agents | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
 | dmarz/sd | working |  | 2026-10-03T18:18Z | swarm-detection lit review, workflow swarm launched by dmarz |
+| dmarz/swarm-intelligence | done | scan-papers-swarm-intelligence | 2026-10-03T18:18Z | literature scan and audit complete |
+| dmarz/swarm-robotics-recent | done | scan-papers-swarm-robotics-recent | 2026-10-03T18:18Z | literature scan and audit complete |
+| dmarz/swarm-robotics | done | scan-papers-swarm-robotics | 2026-10-03T18:18Z | literature scan and audit complete |
+| dmarz/sync-consensus | done | scan-papers-sync-consensus | 2026-10-03T18:18Z | literature scan and audit complete |
 | dmarz/fm-ai-control | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm-bft-aggregation | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/fm-biology | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
@@ -135,19 +148,6 @@
 | dmarz/sybil-mechanisms | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
 | dmarz/sybil-robotics | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
 | dmarz/sybil | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
-| dmarz/sync-consensus | working | scan-papers-sync-consensus | 2026-10-03T17:01Z | academic literature scan, workflow swarm launched by dmarz |
-| dmarz/active-matter | working | scan-papers-active-matter | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
-| dmarz/collective-decision | working | scan-papers-collective-decision | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
-| dmarz/collective-motion-recent | working | scan-papers-collective-motion-recent | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
-| dmarz/collective-motion | working | scan-papers-collective-motion | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
-| dmarz/criticality-measurement | working | scan-papers-criticality-measurement | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
-| dmarz/crowds-and-traffic | working | scan-papers-crowds-and-traffic | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
-| dmarz/llm-agent-swarms-recent | working | scan-papers-llm-agent-swarms-recent | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
-| dmarz/llm-agent-swarms | working | scan-papers-llm-agent-swarms | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
-| dmarz/marl-emergence | working | scan-papers-marl-emergence | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
-| dmarz/swarm-intelligence | working | scan-papers-swarm-intelligence | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
-| dmarz/swarm-robotics-recent | working | scan-papers-swarm-robotics-recent | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
-| dmarz/swarm-robotics | working | scan-papers-swarm-robotics | 2026-10-03T17:00Z | academic literature scan, workflow swarm launched by dmarz |
 
 ## Surveys (prior-art gate)
 
