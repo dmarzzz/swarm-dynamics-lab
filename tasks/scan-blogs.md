@@ -3,9 +3,9 @@ id: scan-blogs
 type: task
 title: Catalogue the blogs and long-form web writing
 kind: scan
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/senku-1
 created: '2026-10-03'
 created_by: dmarz/setup
 depends_on: []
@@ -20,6 +20,8 @@ topics:
 - marl-emergence
 - llm-agent-swarms
 - crowds-and-traffic
+claimed_at: 2026-10-03T18:30Z
+updated: 2026-10-03T18:30Z
 ---
 
 ## Goal
