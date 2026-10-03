@@ -18,6 +18,7 @@
 | crowds-and-traffic | 75 | 2 | 0 | 0 | 0 | 0 | 77 |
 | meta | 51 | 8 | 0 | 13 | 0 | 0 | 72 |
 | sybil-resistance | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| fork-merge-security | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## Tasks
 
@@ -27,6 +28,8 @@
 | [scan-papers-collective-decision](tasks/scan-papers-collective-decision.md) | claimed | p0 | scan | dmarz/collective-decision |  | 2026-10-03T17:01Z | Catalogue the papers: collective decision-making in biology |
 | [scan-papers-collective-motion](tasks/scan-papers-collective-motion.md) | claimed | p0 | scan | dmarz/collective-motion |  | 2026-10-03T17:01Z | Catalogue the papers: collective motion models |
 | [scan-papers-collective-motion-recent](tasks/scan-papers-collective-motion-recent.md) | claimed | p0 | scan | dmarz/collective-motion-recent |  | 2026-10-03T17:01Z | Catalogue collective motion papers from 2024 onward |
+| [scan-papers-fm-merge-poisoning](tasks/scan-papers-fm-merge-poisoning.md) | claimed | p0 | scan | dmarz/fm-merge-poisoning |  | 2026-10-03T18:11Z | Catalogue the papers: poisoning through model merging, federated aggregation and distillation |
+| [scan-papers-fm-sutton](tasks/scan-papers-fm-sutton.md) | claimed | p0 | scan | dmarz/fm-sutton |  | 2026-10-03T18:11Z | Catalogue the primary sources: Sutton on agents splitting and merging, and prior framings |
 | [scan-papers-llm-agent-swarms](tasks/scan-papers-llm-agent-swarms.md) | claimed | p0 | scan | dmarz/llm-agent-swarms |  | 2026-10-03T17:01Z | Catalogue the papers: llm agent swarms |
 | [scan-papers-llm-agent-swarms-recent](tasks/scan-papers-llm-agent-swarms-recent.md) | claimed | p0 | scan | dmarz/llm-agent-swarms-recent |  | 2026-10-03T17:01Z | Catalogue LLM agent swarms papers from 2024 onward |
 | [scan-papers-marl-emergence](tasks/scan-papers-marl-emergence.md) | claimed | p0 | scan | dmarz/marl-emergence |  | 2026-10-03T17:01Z | Catalogue the papers: multi-agent rl and emergent coordination |
@@ -46,21 +49,33 @@
 | [scan-papers-sync-consensus](tasks/scan-papers-sync-consensus.md) | claimed | p1 | scan | dmarz/sync-consensus |  | 2026-10-03T17:01Z | Catalogue the papers: synchronisation, consensus and networked control |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | claimed | p1 | survey | shadow/sol-1 |  | 2026-10-03T17:57Z | Survey: llm agent swarms |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
+| [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | open | p0 | scan |  |  |  | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
+| [scan-papers-fm-contagion](tasks/scan-papers-fm-contagion.md) | open | p0 | scan |  |  |  | Catalogue the papers: corruption spreading through multi-agent LLM systems |
+| [scan-papers-fm-identity-hijack](tasks/scan-papers-fm-identity-hijack.md) | open | p0 | scan |  |  |  | Catalogue the papers: identity and goal hijack of agents |
+| [scan-papers-fm-memory-injection](tasks/scan-papers-fm-memory-injection.md) | open | p0 | scan |  |  |  | Catalogue the papers: memory poisoning and persistent prompt injection in agents |
+| [scan-papers-fm-unlinkability](tasks/scan-papers-fm-unlinkability.md) | open | p0 | scan |  |  |  | Catalogue the papers: hiding which part returns (unlinkability, secret election, moving target) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  |  | Catalogue the blogs and long-form web writing |
+| [scan-code-fm](tasks/scan-code-fm.md) | open | p1 | scan |  |  |  | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
 | [scan-metrics-benchmarks](tasks/scan-metrics-benchmarks.md) | open | p1 | scan |  |  |  | Catalogue metrics and benchmarks for swarm behaviour |
+| [scan-papers-fm-ai-control](tasks/scan-papers-fm-ai-control.md) | open | p1 | scan |  |  |  | Catalogue the papers: AI control, sub-agent delegation and self-replication |
+| [scan-papers-fm-biology](tasks/scan-papers-fm-biology.md) | open | p1 | scan |  |  |  | Catalogue the papers: fission-fusion and fusion parasitism in biology |
+| [scan-papers-fm-mobile-agents](tasks/scan-papers-fm-mobile-agents.md) | open | p1 | scan |  |  |  | Catalogue the papers: mobile-agent security and Byzantine state merge |
+| [scan-threads-fm](tasks/scan-threads-fm.md) | open | p1 | scan |  |  |  | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [scan-threads-science](tasks/scan-threads-science.md) | open | p1 | scan |  |  |  | Catalogue X threads on the science of collectives |
 | [survey-active-matter](tasks/survey-active-matter.md) | open | p1 | survey |  |  |  | Survey: active matter physics |
 | [survey-collective-decision](tasks/survey-collective-decision.md) | open | p1 | survey |  |  |  | Survey: collective decision-making in biology |
 | [survey-collective-motion](tasks/survey-collective-motion.md) | open | p1 | survey |  |  |  | Survey: collective motion models |
 | [survey-criticality-measurement](tasks/survey-criticality-measurement.md) | open | p1 | survey |  |  |  | Survey: criticality, information and measurement |
 | [survey-crowds-and-traffic](tasks/survey-crowds-and-traffic.md) | open | p1 | survey |  |  |  | Survey: human crowds and traffic |
+| [survey-fork-merge-security](tasks/survey-fork-merge-security.md) | open | p1 | survey |  |  |  | Survey: corruption on reintegration in fork-and-merge agents |
 | [survey-marl-emergence](tasks/survey-marl-emergence.md) | open | p1 | survey |  |  |  | Survey: multi-agent rl and emergent coordination |
 | [survey-swarm-intelligence](tasks/survey-swarm-intelligence.md) | open | p1 | survey |  |  |  | Survey: swarm intelligence algorithms |
 | [survey-swarm-robotics](tasks/survey-swarm-robotics.md) | open | p1 | survey |  |  |  | Survey: swarm robotics |
 | [survey-sybil-resistance](tasks/survey-sybil-resistance.md) | open | p1 | survey |  |  |  | Survey: Sybil resistance in multi-agent and swarm systems |
 | [survey-sync-consensus](tasks/survey-sync-consensus.md) | open | p1 | survey |  |  |  | Survey: synchronisation, consensus and networked control |
+| [synthesis-fork-merge-questions](tasks/synthesis-fork-merge-questions.md) | open | p1 | synthesis |  |  |  | Synthesis: the three fork-merge questions against prior art |
 | [synthesis-open-problems](tasks/synthesis-open-problems.md) | open | p1 | synthesis |  |  |  | Build the open-problems register |
 | [synthesis-people-and-labs](tasks/synthesis-people-and-labs.md) | open | p1 | synthesis |  |  |  | Map the people and labs |
 | [synthesis-sybil-flashbots](tasks/synthesis-sybil-flashbots.md) | open | p1 | synthesis |  |  |  | Synthesis: how Flashbots Sybil work relates to swarm and agent Sybil resistance |
@@ -75,6 +90,19 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-1 | blocked |  | 2026-10-03T19:10Z | Scan done locally (51 threads, 58 code, 3 ran). Cannot push: wakesync has pull-only access to dmarzzz/swarm-lab. Need shadow to either get push for wakesync or pull from /home/shad0w/projects/swarm-lab (5 commits ahead of origin/main) and push. |
+| dmarz/fm-ai-control | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
+| dmarz/fm-bft-aggregation | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
+| dmarz/fm-biology | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
+| dmarz/fm-code-bench | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
+| dmarz/fm-contagion | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
+| dmarz/fm-identity-hijack | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
+| dmarz/fm-informal | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
+| dmarz/fm-memory-injection | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
+| dmarz/fm-merge-poisoning | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
+| dmarz/fm-mobile-agents | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
+| dmarz/fm-sutton | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
+| dmarz/fm-unlinkability | working |  | 2026-10-03T18:11Z | fork-merge-security lit review, workflow swarm launched by dmarz |
+| dmarz/fm | working |  | 2026-10-03T18:10Z | fork-merge-security lit review, workflow swarm launched by dmarz |
 | dmarz/sybil-code-data | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
 | dmarz/sybil-credentials | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
 | dmarz/sybil-flashbots-informal | working |  | 2026-10-03T18:00Z | sybil-resistance lit review, workflow swarm launched by dmarz |
