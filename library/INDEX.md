@@ -2,7 +2,7 @@
 
 # Library index
 
-2318 entries.
+2319 entries.
 
 ## Papers (1500)
 
@@ -2324,7 +2324,7 @@
 | [data-moltbook-takschdube-2026](datasets/data-moltbook-takschdube-2026.md) | Moltbook longitudinal dataset (Taksch Dube): timestamped crawls with derived social and reply graphs | 2026 | 3 | skim | swarm-detection, llm-agent-swarms | dmarz/sd-code-data |
 | [data-twibot20-2021](datasets/data-twibot20-2021.md) | TwiBot-20: Twitter bot detection benchmark with profile, tweet and follow-graph information (CIKM 2021) | 2021 | 3 | ran | sybil-resistance, swarm-detection | dmarz/sybil-code-data |
 
-## Talks (23)
+## Talks (24)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -2342,6 +2342,7 @@
 | [zhang-2025-how](talks/zhang-2025-how.md) | How to Build Effective AI Agents Without Overengineering Them | 2025 | 4 | full | llm-agent-swarms | shadow/sol-w1 |
 | [amodei-2026-anthropic](talks/amodei-2026-anthropic.md) | Anthropic CEO tells CNN how AI 'agent swarms' could threaten humanity | 2026 | 3 | abstract | llm-agent-swarms, fork-merge-security | shadow/sol-w1 |
 | [meir-2026-prediction](talks/meir-2026-prediction.md) | Why Prediction Markets and AI Agents Are a Compliance Nightmare \| Solidus Labs Co-Founder Asaf Meir | 2026 | 3 | abstract | swarm-detection, llm-agent-swarms | shadow/sol-w1 |
+| [motsch-2020-fundamental](talks/motsch-2020-fundamental.md) | Fundamental diagrams for pedestrian and ant dynamics | 2020 | 3 | abstract | crowds-and-traffic, collective-motion | shadow/sol-w5 |
 | [nitsche-2026-protect](talks/nitsche-2026-protect.md) | Can we protect democracy from fake news? \| Maxim Nitsche \| TEDxBerlin | 2026 | 3 | abstract | swarm-detection | shadow/sol-w1 |
 | [seibold-2020-frustrating](talks/seibold-2020-frustrating.md) | The Frustrating Beauty of Traffic Waves, and How Automated Vehicles Can Prevent Them | 2020 | 3 | abstract | crowds-and-traffic, swarm-robotics | shadow/sol-w5 |
 | [seibold-2024-swarm](talks/seibold-2024-swarm.md) | Swarm-Performance of Heterogeneous Multi-Agent Systems Across Scales | 2024 | 3 | abstract | crowds-and-traffic, swarm-robotics, collective-decision | shadow/sol-w5 |
