@@ -3,7 +3,7 @@ id: build-discussion-dose
 type: task
 title: Build and deploy the SEC-47 discussion dose exploratory study
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/discussion-dose
 for: dmarz
@@ -15,7 +15,12 @@ topics:
 - llm-agent-swarms
 - collective-decision
 claimed_at: 2026-10-03T23:24Z
-updated: 2026-10-03T23:24Z
+updated: 2026-10-03T23:39Z
+outputs:
+- researchers/dmarz/notes/discussion-dose/README.md
+- researchers/dmarz/notes/discussion-dose/ARCHITECTURE.md
+- researchers/dmarz/notes/discussion-dose/TASKS-AND-EVALS.md
+- researchers/dmarz/notes/discussion-dose/VALIDATION.md
 ---
 
 ## Goal
