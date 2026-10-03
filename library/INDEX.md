@@ -2,7 +2,7 @@
 
 # Library index
 
-1909 entries.
+1920 entries.
 
 ## Papers (1206)
 
@@ -1215,13 +1215,15 @@
 | [zhao-2024-snail](papers/zhao-2024-snail.md) | Snail-inspired robotic swarms: a hybrid connector drives collective adaptation in unstructured outdoor environments | 2024 | 2 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [zhuge-2023-mindstorms](papers/zhuge-2023-mindstorms.md) | Mindstorms in Natural Language-Based Societies of Mind | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 
-## Blogs (118)
+## Blogs (129)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
 | [anthropic-2026-patterns](blogs/anthropic-2026-patterns.md) | Patterns and problems in emerging multiagent systems | 2026 | 5 | full | llm-agent-swarms | vishesh/senku-1 |
 | [bahrani-2026-capacity](blogs/bahrani-2026-capacity.md) | Capacity oracles | 2026 | 5 | skim | sybil-resistance, collective-decision | dmarz/sybil-flashbots-informal |
 | [barrywhitehat-2019-semaphore](blogs/barrywhitehat-2019-semaphore.md) | Semaphore RLN, rate limiting nullifier for spam prevention in anonymous p2p setting | 2019 | 5 | skim | sybil-resistance | dmarz/sybil-credentials |
+| [buck-2023-ai](blogs/buck-2023-ai.md) | AI Control: Improving Safety Despite Intentional Subversion | 2023 | 5 | skim | fork-merge-security, llm-agent-swarms | shadow/sol-w3 |
+| [buck-2024-how](blogs/buck-2024-how.md) | How to prevent collusion when using untrusted models to monitor each other | 2024 | 5 | skim | fork-merge-security, llm-agent-swarms | shadow/sol-w3 |
 | [buildernet-2025-refunds](blogs/buildernet-2025-refunds.md) | Refunds | 2025 | 5 | full | sybil-resistance | dmarz/sybil-flashbots |
 | [buterin-2024-supporting](blogs/buterin-2024-supporting.md) | Supporting decentralized staking through more anti-correlation incentives | 2024 | 5 | full | sybil-resistance, sync-consensus, swarm-detection | dmarz/sybil-flashbots-informal |
 | [christiano-2016-reliability](blogs/christiano-2016-reliability.md) | Reliability amplification | 2016 | 5 | full | fork-merge-security, sync-consensus, collective-decision | dmarz/fm-sutton |
@@ -1236,6 +1238,7 @@
 | [ethresearch-2026-anonymous](blogs/ethresearch-2026-anonymous.md) | Anonymous Credentials for Trustless Agents (ACTA) | 2026 | 5 | full | sybil-resistance, llm-agent-swarms | dmarz/sybil-flashbots-informal |
 | [flashbots-2021-proposal](blogs/flashbots-2021-proposal.md) | Proposal: Scaling the relay | 2021 | 5 | full | sybil-resistance | dmarz/sybil-flashbots |
 | [flashbots-2022-relay](blogs/flashbots-2022-relay.md) | Relay spam protection: require a small deposit to submit blocks as a builder | 2022 | 5 | full | sybil-resistance | dmarz/sybil-flashbots |
+| [greenblatt-2026-brief](blogs/greenblatt-2026-brief.md) | Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident | 2026 | 5 | skim | swarm-detection, llm-agent-swarms | shadow/sol-w7 |
 | [malhotra-2024-setting](blogs/malhotra-2024-setting.md) | Setting Your Pet Rock Free. | 2024 | 5 | full | sybil-resistance, llm-agent-swarms | dmarz/sybil-foundations |
 | [metr-2026-brief](blogs/metr-2026-brief.md) | Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident | 2026 | 5 | full | llm-agent-swarms, sybil-resistance | vishesh/senku-1 |
 | [ord-2026-swarm](blogs/ord-2026-swarm.md) | Swarm Scaling | 2026 | 5 | full | llm-agent-swarms, criticality-measurement | shadow/sol-w4 |
@@ -1252,6 +1255,8 @@
 | [ankushin-2026-public](blogs/ankushin-2026-public.md) | Public-mempool gas sponsorship needs escrow, a bond, or trust | 2026 | 4 | full | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [anthropic-2025-how](blogs/anthropic-2025-how.md) | How we built our multi-agent research system | 2025 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-sutton |
 | [anthropic-2026-create](blogs/anthropic-2026-create.md) | Create custom subagents (Claude Code documentation) | 2026 | 4 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-sutton |
+| [arike-2025-extract](blogs/arike-2025-extract.md) | Extract-and-Evaluate Monitoring Can Significantly Enhance CoT Monitor Performance (Research Note) | 2025 | 4 | skim | swarm-detection, fork-merge-security | shadow/sol-w7 |
+| [arnav-2025-unfaithful](blogs/arnav-2025-unfaithful.md) | Unfaithful Reasoning Can Fool Chain-of-Thought Monitoring | 2025 | 4 | skim | swarm-detection, fork-merge-security | shadow/sol-w7 |
 | [asymmetricsecurity-2026-rogue](blogs/asymmetricsecurity-2026-rogue.md) | Rogue Agents Investigation (plus 'Initial Findings' companion post) | 2026 | 4 | full | swarm-detection, llm-agent-swarms | shadow/sol-w5 |
 | [austgen-2023-complete](blogs/austgen-2023-complete.md) | Complete Knowledge | 2023 | 4 | full | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [baig-2026-how](blogs/baig-2026-how.md) | How good are slop-vestigators? | 2026 | 4 | full | swarm-detection, llm-agent-swarms | shadow/sol-w4 |
@@ -1271,6 +1276,7 @@
 | [flashbots-2025-mev](blogs/flashbots-2025-mev.md) | MEV and the Limits of Scaling | 2025 | 4 | full | sybil-resistance | dmarz/sybil-flashbots |
 | [glynn-2026-wash](blogs/glynn-2026-wash.md) | Wash-building in contribution protocols is not a Sybil problem | 2026 | 4 | full | sybil-resistance, collective-decision | dmarz/sybil-flashbots-informal |
 | [hanson-2016-age](blogs/hanson-2016-age.md) | The Age of Em, A Book (book website and chapter-by-chapter summary of The Age of Em: Work, Love and Life when Robots Rule the Earth) | 2016 | 4 | full | fork-merge-security, sybil-resistance, meta | dmarz/fm-sutton |
+| [hua-2025-optimally](blogs/hua-2025-optimally.md) | Optimally Combining Probe Monitors and Black Box Monitors | 2025 | 4 | skim | swarm-detection | shadow/sol-w7 |
 | [huggingface-2026-anatomy](blogs/huggingface-2026-anatomy.md) | Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident | 2026 | 4 | full | llm-agent-swarms | vishesh/senku-1 |
 | [invariantlabs-2025-mcp](blogs/invariantlabs-2025-mcp.md) | MCP Security Notification: Tool Poisoning Attacks | 2025 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-informal |
 | [kadianakis-2023-proof](blogs/kadianakis-2023-proof.md) | Proof of Validator: A simple anonymous credential scheme for Ethereum's DHT | 2023 | 4 | full | sybil-resistance, sync-consensus | dmarz/sybil-flashbots-informal |
@@ -1281,6 +1287,7 @@
 | [openai-2026-hugging](blogs/openai-2026-hugging.md) | OpenAI – Hugging Face Incident Technical Report | 2026 | 4 | full | llm-agent-swarms | vishesh/senku-1 |
 | [porobov-2026-price](blogs/porobov-2026-price.md) | The Price of Forgery: measuring Sybil resistance in dollars (a paper) | 2026 | 4 | skim | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [quanta-2019-smarter](blogs/quanta-2019-smarter.md) | Smarter Parts Make Collective Systems Too Stubborn | 2019 | 4 | full | collective-decision, llm-agent-swarms, swarm-intelligence | shadow/sol-w3 |
+| [roger-2023-preventing](blogs/roger-2023-preventing.md) | Preventing Language Models from hiding their reasoning | 2023 | 4 | skim | swarm-detection, fork-merge-security, llm-agent-swarms | shadow/sol-w7 |
 | [simonwillison-2025-design](blogs/simonwillison-2025-design.md) | Design Patterns for Securing LLM Agents against Prompt Injections | 2025 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-informal |
 | [sun-2024-tee](blogs/sun-2024-tee.md) | TEE-enabled Social Games: An Experiment with Bobu's Magic Show | 2024 | 4 | full | sybil-resistance | dmarz/sybil-foundations |
 | [swarmchase-2026-budget](blogs/swarmchase-2026-budget.md) | We found the OpenAI Hugging Face swarm budget table in their blogpost and they removed it | 2026 | 4 | skim | llm-agent-swarms, swarm-detection | shadow/sol-w6 |
@@ -1298,6 +1305,7 @@
 | [critch-2021-what](blogs/critch-2021-what.md) | What Multipolar Failure Looks Like, and Robust Agent-Agnostic Processes (RAAPs) | 2021 | 3 | skim | llm-agent-swarms, collective-decision, swarm-detection | shadow/sol-w4 |
 | [crowdstrike-2021-sunspot](blogs/crowdstrike-2021-sunspot.md) | SUNSPOT: An Implant in the Build Process | 2021 | 3 | skim | fork-merge-security | dmarz/fm-mobile-agents |
 | [dobrokhvalov-2025-privacy](blogs/dobrokhvalov-2025-privacy.md) | Privacy-Preserving Sybil Resistance via MPC-TLS and Semaphore Proofs | 2025 | 3 | full | sybil-resistance | dmarz/sybil-flashbots-informal |
+| [duvenaud-2024-sabotage](blogs/duvenaud-2024-sabotage.md) | Sabotage Evaluations for Frontier Models | 2024 | 3 | skim | swarm-detection, fork-merge-security | shadow/sol-w7 |
 | [eigenphi-2025-buildernet](blogs/eigenphi-2025-buildernet.md) | BuilderNet's Infrastructure Monoculture: Centralization with Extra Steps | 2025 | 3 | full | sybil-resistance, swarm-detection | dmarz/sybil-flashbots-informal |
 | [flashbots-2021-flashbots](blogs/flashbots-2021-flashbots.md) | Flashbots Transparency Report — February 2021 | 2021 | 3 | skim | sybil-resistance | dmarz/sybil-flashbots |
 | [flashbots-2023-block](blogs/flashbots-2023-block.md) | Block Building inside SGX | 2023 | 3 | skim | sybil-resistance | dmarz/sybil-flashbots |
@@ -1313,7 +1321,10 @@
 | [quanta-2020-out](blogs/quanta-2020-out.md) | Out-of-Sync 'Loners' May Secretly Protect Orderly Swarms | 2020 | 3 | full | collective-decision, sync-consensus, fork-merge-security | shadow/sol-w3 |
 | [quintus-2023-problems](blogs/quintus-2023-problems.md) | The Problems Solved By SUAVE | 2023 | 3 | full | sybil-resistance | dmarz/sybil-foundations |
 | [reynolds-1995-boids](blogs/reynolds-1995-boids.md) | Boids (Flocks, Herds, and Schools: a Distributed Behavioral Model) | 1995 | 3 | full | collective-motion, meta | shadow/sol-w3 |
+| [roger-2023-coup](blogs/roger-2023-coup.md) | Coup probes: Catching catastrophes with probes trained off-policy | 2023 | 3 | skim | swarm-detection | shadow/sol-w7 |
 | [soto-2024-need](blogs/soto-2024-need.md) | The need for multi-agent experiments | 2024 | 3 | skim | llm-agent-swarms, meta | shadow/sol-w4 |
+| [stuart-armstrong-2022-using](blogs/stuart-armstrong-2022-using.md) | Using GPT-Eliezer against ChatGPT Jailbreaking | 2022 | 3 | skim | fork-merge-security, llm-agent-swarms | shadow/sol-w3 |
+| [taylor-2025-auditing](blogs/taylor-2025-auditing.md) | Auditing Games for Sandbagging [paper] | 2025 | 3 | skim | swarm-detection | shadow/sol-w7 |
 | [zebedee-2019-evidence](blogs/zebedee-2019-evidence.md) | Evidence-Based Subjective Logic and Sybil-resistance | 2019 | 3 | full | sybil-resistance, collective-decision | dmarz/sybil-flashbots-informal |
 | [zvi-2025-dwarkesh](blogs/zvi-2025-dwarkesh.md) | On Dwarkesh Patel's Podcast With Richard Sutton | 2025 | 3 | skim | fork-merge-security, meta | dmarz/fm-sutton |
 | [bbc-2026-why](blogs/bbc-2026-why.md) | Why did an OpenAI system hack Australia's health system - and can it be stopped in the future? | 2026 | 2 | full | llm-agent-swarms, swarm-detection | shadow/sol-w1 |

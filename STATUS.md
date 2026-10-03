@@ -14,12 +14,12 @@
 | sync-consensus | 225 | 8 | 11 | 17 | 0 | 1 | 262 |
 | criticality-measurement | 186 | 4 | 1 | 23 | 0 | 1 | 215 |
 | marl-emergence | 123 | 12 | 0 | 33 | 0 | 2 | 170 |
-| llm-agent-swarms | 237 | 45 | 58 | 198 | 0 | 2 | 540 |
+| llm-agent-swarms | 237 | 45 | 63 | 198 | 0 | 2 | 545 |
 | crowds-and-traffic | 76 | 2 | 1 | 2 | 0 | 0 | 81 |
 | meta | 77 | 9 | 5 | 22 | 0 | 2 | 115 |
 | sybil-resistance | 169 | 41 | 52 | 59 | 4 | 1 | 326 |
-| fork-merge-security | 214 | 11 | 38 | 67 | 0 | 3 | 333 |
-| swarm-detection | 0 | 3 | 18 | 187 | 0 | 3 | 211 |
+| fork-merge-security | 214 | 11 | 45 | 67 | 0 | 3 | 340 |
+| swarm-detection | 0 | 3 | 26 | 187 | 0 | 3 | 219 |
 
 ## Tasks
 
@@ -102,17 +102,17 @@
 
 ## Candidate batches
 
-22 free, 6 claimed, 18 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
+19 free, 7 claimed, 20 done. Claim with `python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).
 
 | issue | state | updated | batch |
 |---|---|---|---|
 | [#28](https://github.com/dmarzzz/swarm-lab/issues/28) | claimed | 2026-10-03T19:32Z | [batch] web/crowds-and-traffic: 10 candidates (web-crowds-and-traffic-20261003-01) |
-| [#33](https://github.com/dmarzzz/swarm-lab/issues/33) | claimed | 2026-10-03T19:32Z | [batch] web/swarm-detection: 10 candidates (web-swarm-detection-20261003-01) |
+| [#34](https://github.com/dmarzzz/swarm-lab/issues/34) | claimed | 2026-10-03T19:38Z | [batch] web/swarm-detection: 3 candidates (web-swarm-detection-20261003-02) |
 | [#39](https://github.com/dmarzzz/swarm-lab/issues/39) | claimed | 2026-10-03T19:32Z | [batch] web/sync-consensus: 10 candidates (web-sync-consensus-20261003-01) |
+| [#43](https://github.com/dmarzzz/swarm-lab/issues/43) | claimed | 2026-10-03T19:37Z | [batch] x/fork-merge-security: 4 candidates (x-fork-merge-security-20261003-02) |
 | [#44](https://github.com/dmarzzz/swarm-lab/issues/44) | claimed | 2026-10-03T19:37Z | [batch] x/swarm-detection: 6 candidates (x-swarm-detection-20261003-04) |
 | [#47](https://github.com/dmarzzz/swarm-lab/issues/47) | claimed | 2026-10-03T19:33Z | [batch] blog/fork-merge-security: 12 candidates (blog-fork-merge-security-20261003-02) |
 | [#48](https://github.com/dmarzzz/swarm-lab/issues/48) | claimed | 2026-10-03T19:31Z | [batch] blog/swarm-detection: 11 candidates (blog-swarm-detection-20261003-01) |
-| [#19](https://github.com/dmarzzz/swarm-lab/issues/19) | free | 2026-10-03T19:37Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-02) |
 | [#20](https://github.com/dmarzzz/swarm-lab/issues/20) | free | 2026-10-03T19:21Z | [batch] blog/llm-agent-swarms: 11 candidates (blog-llm-agent-swarms-20261003-03) |
 | [#21](https://github.com/dmarzzz/swarm-lab/issues/21) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-01) |
 | [#22](https://github.com/dmarzzz/swarm-lab/issues/22) | free | 2026-10-03T19:21Z | [batch] web/active-matter: 10 candidates (web-active-matter-20261003-02) |
@@ -125,20 +125,22 @@
 | [#30](https://github.com/dmarzzz/swarm-lab/issues/30) | free | 2026-10-03T19:21Z | [batch] web/crowds-and-traffic: 3 candidates (web-crowds-and-traffic-20261003-03) |
 | [#31](https://github.com/dmarzzz/swarm-lab/issues/31) | free | 2026-10-03T19:21Z | [batch] web/llm-agent-swarms: 10 candidates (web-llm-agent-swarms-20261003-01) |
 | [#32](https://github.com/dmarzzz/swarm-lab/issues/32) | free | 2026-10-03T19:22Z | [batch] web/marl-emergence: 10 candidates (web-marl-emergence-20261003-01) |
-| [#34](https://github.com/dmarzzz/swarm-lab/issues/34) | free | 2026-10-03T19:22Z | [batch] web/swarm-detection: 3 candidates (web-swarm-detection-20261003-02) |
 | [#35](https://github.com/dmarzzz/swarm-lab/issues/35) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 10 candidates (web-swarm-robotics-20261003-01) |
-| | | | 7 more free batches |
+| [#36](https://github.com/dmarzzz/swarm-lab/issues/36) | free | 2026-10-03T19:22Z | [batch] web/swarm-robotics: 9 candidates (web-swarm-robotics-20261003-02) |
+| [#37](https://github.com/dmarzzz/swarm-lab/issues/37) | free | 2026-10-03T19:22Z | [batch] web/sybil-resistance: 10 candidates (web-sybil-resistance-20261003-01) |
+| | | | 4 more free batches |
 
 ## Agents
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
+| shadow/sol-w7 | working |  | 2026-10-03T19:45Z | Cataloguing GitHub batch 48, monitoring and collective cheating blogs |
 | shadow/sol-w1 | working |  | 2026-10-03T19:40Z | cataloguing web batches 33 and 34, then 31 and 32; YouTube transcripts blocked, public descriptions read honestly at abstract depth |
 | shadow/sol-w5 | done |  | 2026-10-03T19:40Z | worked candidate batches |
+| shadow/sol-w3 | working |  | 2026-10-03T19:36Z | cataloguing batch 47 fork-merge-security blogs; batch 24 released because lecture transcript access is blocked |
 | shadow/sol-w8 | working |  | 2026-10-03T19:32Z | TODO one line |
 | dmarz/reviewer-1 | done | review-llm-agent-swarms | 2026-10-03T19:27Z | review filed, verdict revise |
-| shadow/sol-w3 | idle |  | 2026-10-03T19:20Z | finished candidate batches |
 | vishesh/codex-docs | done |  | 2026-10-03T19:14Z | Expanded sixteen briefs, linked research outputs, repaired metadata, and incorporated targeted review corrections. |
 | shadow/sol-w6 | working |  | 2026-10-03T19:06Z | TODO one line |
 | shadow/sol-w2 | working |  | 2026-10-03T19:05Z | Writer lane: working candidate batch issues (swarm-detection first), see PIPELINE.md on the pipeline PR branch. |
