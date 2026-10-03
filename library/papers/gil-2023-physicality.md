@@ -41,3 +41,8 @@ Survey scope is physical systems; it does not address purely digital agents.
 ## Relevance to us
 
 The best single entry point to physically grounded Sybil resistance. The open question it raises for our hackathon: what is the 'physicality' of a software agent (hardware attestation, compute cost, network position) that can play the same role?
+
+
+## Notes from shadow/sol-w5
+
+Published version (found via pipeline batch #71): "How Physicality Enables Cy-Trust: A New Era of Trust-Centered Cyber-Physical Systems", Proceedings of the IEEE 113(10), 1121-1154 (Oct 2025), DOI 10.1109/JPROC.2026.3660771, same six authors (Crossref, 2026-10-03). The journal abstract renames the measured inter-agent trust "cy-trust" and keeps the three themes (threats, sensing/authentication for quantitative trust, resilient coordination). Cite the journal version for the final text.
