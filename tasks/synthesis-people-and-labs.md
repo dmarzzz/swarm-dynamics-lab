@@ -3,7 +3,7 @@ id: synthesis-people-and-labs
 type: task
 title: Map the people and labs
 kind: synthesis
-status: claimed
+status: done
 priority: p1
 owner: shadow/sol-g50
 created: '2026-10-03'
@@ -26,7 +26,9 @@ topics:
 - fork-merge-security
 - swarm-detection
 claimed_at: 2026-10-03T19:39Z
-updated: 2026-10-03T20:00Z
+updated: 2026-10-03T20:15Z
+outputs:
+- synthesis/people-and-labs.md
 ---
 
 ## Goal
