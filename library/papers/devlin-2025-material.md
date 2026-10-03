@@ -5,7 +5,7 @@ title: "Material-like robotic collectives with spatiotemporal control of strengt
 authors: ["Matthew R. Devlin", "Sangwoo Kim", "Otger Campàs", "Elliot W. Hawkes"]
 year: 2025
 venue: "Science"
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:39977492%20AND%20SRC:MED&resultType=core&format=json
+url: https://doi.org/10.1126/science.ads7942
 doi: "10.1126/science.ads7942"
 arxiv: null
 cite: "Devlin, M. R., Kim, S., Campàs, O., & Hawkes, E. W. (2025). Material-like robotic collectives with spatiotemporal control of strength and shape. Science, 387(6736), 880-885."

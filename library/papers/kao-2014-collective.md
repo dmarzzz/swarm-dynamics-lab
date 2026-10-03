@@ -5,7 +5,7 @@ title: "Collective Learning and Optimal Consensus Decisions in Social Animal Gro
 authors: ["Albert B. Kao", "Noam Miller", "Colin Torney", "Andrew Hartnett", "Iain D. Couzin"]
 year: 2014
 venue: "PLoS Computational Biology"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/25101642?resultType=core&format=json"
+url: https://doi.org/10.1371/journal.pcbi.1003762
 doi: "10.1371/journal.pcbi.1003762"
 arxiv: null
 cite: "Kao, A. B., Miller, N., Torney, C., Hartnett, A., & Couzin, I. D. (2014). Collective Learning and Optimal Consensus Decisions in Social Animal Groups. PLoS Computational Biology, 10(8), e1003762. https://doi.org/10.1371/journal.pcbi.1003762"

@@ -7,7 +7,7 @@ authors:
 - Eric Bonabeau
 year: 1999
 venue: Artificial Life
-url: https://api.openalex.org/works/W2111426473
+url: https://doi.org/10.1162/106454699568700
 doi: 10.1162/106454699568700
 arxiv: null
 cite: Theraulaz, G., & Bonabeau, E. (1999). A brief history of stigmergy. Artificial Life, 5(2), 97–116. https://doi.org/10.1162/106454699568700

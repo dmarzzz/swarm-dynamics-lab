@@ -7,7 +7,7 @@ authors:
 - James Kennedy
 year: 1995
 venue: MHS'95. Proceedings of the Sixth International Symposium on Micro Machine and Human Science (IEEE)
-url: https://api.openalex.org/works/W2109364787
+url: https://doi.org/10.1109/MHS.1995.494215
 doi: 10.1109/MHS.1995.494215
 arxiv: null
 cite: Eberhart, R., & Kennedy, J. (1995). A new optimizer using particle swarm theory. In MHS'95. Proceedings of the Sixth International Symposium on Micro Machine and Human Science (pp. 39–43). IEEE. https://doi.org/10.1109/MHS.1995.494215

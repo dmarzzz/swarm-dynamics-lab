@@ -5,7 +5,7 @@ title: "Consensus of Multiagent Systems and Synchronization of Complex Networks:
 authors: [Zhongkui Li, Zhisheng Duan, Guanrong Chen, Lin Huang]
 year: 2010
 venue: "IEEE Transactions on Circuits and Systems I: Regular Papers"
-url: https://api.openalex.org/works/doi:10.1109/tcsi.2009.2023937
+url: https://doi.org/10.1109/tcsi.2009.2023937
 doi: 10.1109/tcsi.2009.2023937
 arxiv: null
 cite: "Li, Z., Duan, Z., Chen, G., & Huang, L. (2010). Consensus of multiagent systems and synchronization of complex networks: A unified viewpoint. IEEE Transactions on Circuits and Systems I: Regular Papers, 57(1), 213-224."

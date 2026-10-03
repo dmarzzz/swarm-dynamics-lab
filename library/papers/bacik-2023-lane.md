@@ -8,7 +8,7 @@ authors:
 - Tim Rogers
 year: 2023
 venue: Science
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/36862784?resultType=core&format=json
+url: https://doi.org/10.1126/science.add8091
 doi: 10.1126/science.add8091
 arxiv: null
 cite: Bacik, K. A., Bacik, B. S., & Rogers, T. (2023). Lane nucleation in complex active flows. Science, 379(6635), 923–928. https://doi.org/10.1126/science.add8091

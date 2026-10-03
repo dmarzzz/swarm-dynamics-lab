@@ -5,7 +5,7 @@ title: "Morphogenesis in robot swarms"
 authors: ["I. Slavkov", "D. Carrillo-Zapata", "N. Carranza", "X. Diego", "F. Jansson", "J. Kaandorp", "S. Hauert", "J. Sharpe"]
 year: 2018
 venue: "Science Robotics"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1126/scirobotics.aau9178?fields=title,abstract
+url: https://doi.org/10.1126/scirobotics.aau9178
 doi: "10.1126/scirobotics.aau9178"
 arxiv: null
 cite: "Slavkov, I., Carrillo-Zapata, D., Carranza, N., Diego, X., Jansson, F., Kaandorp, J., Hauert, S., & Sharpe, J. (2018). Morphogenesis in robot swarms. Science Robotics, 3(25), eaau9178."

@@ -5,7 +5,7 @@ title: "Decision versus compromise for animal groups in motion"
 authors: ["Naomi E. Leonard", "Tian Shen", "Benjamin Nabet", "Luca Scardovi", "Iain D. Couzin", "Simon A. Levin"]
 year: 2012
 venue: "Proceedings of the National Academy of Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/22184210?resultType=core&format=json"
+url: https://doi.org/10.1073/pnas.1118318108
 doi: "10.1073/pnas.1118318108"
 arxiv: null
 cite: "Leonard, N. E., Shen, T., Nabet, B., Scardovi, L., Couzin, I. D., & Levin, S. A. (2012). Decision versus compromise for animal groups in motion. Proceedings of the National Academy of Sciences, 109(1), 227–232. https://doi.org/10.1073/pnas.1118318108"

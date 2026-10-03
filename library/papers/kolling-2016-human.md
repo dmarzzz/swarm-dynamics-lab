@@ -5,7 +5,7 @@ title: "Human Interaction With Robot Swarms: A Survey"
 authors: ["Andreas Kolling", "Phillip Walker", "Nilanjan Chakraborty", "Katia Sycara", "Michael Lewis"]
 year: 2016
 venue: "IEEE Transactions on Human-Machine Systems"
-url: https://api.openalex.org/works/doi:10.1109/thms.2015.2480801
+url: https://doi.org/10.1109/thms.2015.2480801
 doi: "10.1109/thms.2015.2480801"
 arxiv: null
 cite: "Kolling, A., Walker, P., Chakraborty, N., Sycara, K., & Lewis, M. (2016). Human Interaction With Robot Swarms: A Survey. IEEE Transactions on Human-Machine Systems, 46(1), 9–26."

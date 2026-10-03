@@ -5,7 +5,7 @@ title: "Programmable active matter across scales"
 authors: ["Hengao Yu", "Yulei Fu", "Xinli Zhang", "Leilei Chen", "Duo Qi", "Jinzhuo Shi", "Wendong Wang"]
 year: 2023
 venue: "Programmable Materials"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1017/pma.2023.6
+url: https://doi.org/10.1017/pma.2023.6
 doi: "10.1017/pma.2023.6"
 arxiv: null
 cite: "Yu, H., Fu, Y., Zhang, X., Chen, L., Qi, D., Shi, J., & Wang, W. (2023). Programmable active matter across scales. Programmable Materials, 1, e7."

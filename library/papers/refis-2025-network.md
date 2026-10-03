@@ -5,7 +5,7 @@ title: "From Network Sensors to Intelligent Systems: A Decade-Long Review of Swa
 authors: ["Fouad Chaouki Refis", "Nassim Ahmed Mahammedi", "Chaker Abdelaziz Kerrache", "Sahraoui Dhelim"]
 year: 2025
 venue: "Sensors"
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12526905/fullTextXML
+url: https://doi.org/10.3390/s25196115
 doi: "10.3390/s25196115"
 arxiv: null
 cite: "Refis, F. C., Mahammedi, N. A., Kerrache, C. A., & Dhelim, S. (2025). From Network Sensors to Intelligent Systems: A Decade-Long Review of Swarm Robotics Technologies. Sensors, 25(19), 6115."

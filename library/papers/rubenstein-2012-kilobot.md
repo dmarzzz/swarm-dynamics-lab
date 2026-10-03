@@ -5,7 +5,7 @@ title: "Kilobot: A low cost scalable robot system for collective behaviors"
 authors: ["Michael Rubenstein", "Christian Ahler", "Radhika Nagpal"]
 year: 2012
 venue: "2012 IEEE International Conference on Robotics and Automation (ICRA)"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109/icra.2012.6224638?fields=title,abstract
+url: https://doi.org/10.1109/icra.2012.6224638
 doi: "10.1109/icra.2012.6224638"
 arxiv: null
 cite: "Rubenstein, M., Ahler, C., & Nagpal, R. (2012). Kilobot: A low cost scalable robot system for collective behaviors. 2012 IEEE International Conference on Robotics and Automation, 3293–3298."

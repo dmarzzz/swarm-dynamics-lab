@@ -5,7 +5,7 @@ title: "Designing Collective Behavior in a Termite-Inspired Robot Construction T
 authors: ["Justin Werfel", "Kirstin Petersen", "Radhika Nagpal"]
 year: 2014
 venue: "Science"
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/24531967?resultType=core&format=json
+url: https://doi.org/10.1126/science.1245842
 doi: "10.1126/science.1245842"
 arxiv: null
 cite: "Werfel, J., Petersen, K., & Nagpal, R. (2014). Designing Collective Behavior in a Termite-Inspired Robot Construction Team. Science, 343(6172), 754–758."

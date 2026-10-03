@@ -5,7 +5,7 @@ title: A survey on large language models driven meta-optimizers for automated in
 authors: [Yan Zheng, Lida Zhang, Kaiwen Li, Rui Wang, Wenhua Li, Tao Zhang, Qingfu Zhang, Yaochu Jin]
 year: 2026
 venue: Artificial Intelligence Review
-url: https://api.openalex.org/works/W7118307887
+url: https://doi.org/10.1007/s10462-025-11470-w
 doi: 10.1007/s10462-025-11470-w
 arxiv: null
 cite: Zheng, Y., Zhang, L., Li, K., Wang, R., Li, W., Zhang, T., Zhang, Q., & Jin, Y. (2026). A survey on large language models driven meta-optimizers for automated intelligent optimization. Artificial Intelligence Review, 59(2), 72. https://doi.org/10.1007/s10462-025-11470-w

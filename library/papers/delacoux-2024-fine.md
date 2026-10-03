@@ -5,7 +5,7 @@ title: "Fine-scale tracking reveals visual field use for predator detection and 
 authors: ["Mathilde Delacoux", "Fumihiro Kano"]
 year: 2024
 venue: "eLife"
-url: https://api.crossref.org/works/10.7554/elife.95549.3
+url: https://doi.org/10.7554/elife.95549.3
 doi: "10.7554/elife.95549.3"
 arxiv: null
 cite: "Delacoux, M., & Kano, F. (2024). Fine-scale tracking reveals visual field use for predator detection and escape in collective foraging of pigeon flocks. eLife, 13, RP95549."

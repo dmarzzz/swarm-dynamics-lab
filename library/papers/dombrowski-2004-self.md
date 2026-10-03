@@ -5,7 +5,7 @@ title: "Self-Concentration and Large-Scale Coherence in Bacterial Dynamics"
 authors: ["Christopher Dombrowski", "Luis Cisneros", "Sunita Chatkaew", "Raymond E. Goldstein", "John O. Kessler"]
 year: 2004
 venue: "Physical Review Letters"
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/15447144
+url: https://doi.org/10.1103/physrevlett.93.098103
 doi: "10.1103/physrevlett.93.098103"
 arxiv: null
 cite: "Dombrowski, C., Cisneros, L., Chatkaew, S., Goldstein, R. E., & Kessler, J. O. (2004). Self-Concentration and Large-Scale Coherence in Bacterial Dynamics. Physical Review Letters, 93(9), 098103."

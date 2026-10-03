@@ -5,7 +5,7 @@ title: "Reflections on the future of swarm robotics"
 authors: ["Marco Dorigo", "Guy Theraulaz", "Vito Trianni"]
 year: 2020
 venue: "Science Robotics"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1126/scirobotics.abe4385?fields=title,abstract
+url: https://doi.org/10.1126/scirobotics.abe4385
 doi: "10.1126/scirobotics.abe4385"
 arxiv: null
 cite: "Dorigo, M., Theraulaz, G., & Trianni, V. (2020). Reflections on the future of swarm robotics. Science Robotics, 5(49), eabe4385."

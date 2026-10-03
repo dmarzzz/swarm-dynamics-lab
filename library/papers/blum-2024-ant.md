@@ -5,7 +5,7 @@ title: 'Ant colony optimization: A bibliometric review'
 authors: [Christian Blum]
 year: 2024
 venue: Physics of Life Reviews
-url: https://api.openalex.org/works/W4402883674
+url: https://doi.org/10.1016/j.plrev.2024.09.014
 doi: 10.1016/j.plrev.2024.09.014
 arxiv: null
 cite: 'Blum, C. (2024). Ant colony optimization: A bibliometric review. Physics of Life Reviews, 51, 87–95. https://doi.org/10.1016/j.plrev.2024.09.014'

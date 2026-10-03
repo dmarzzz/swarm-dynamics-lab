@@ -5,7 +5,7 @@ title: "Self-Motile Colloidal Particles: From Directed Propulsion to Random Walk
 authors: ["Jonathan R. Howse", "Richard A. L. Jones", "Anthony J. Ryan", "Tim Gough", "Reza Vafabakhsh", "Ramin Golestanian"]
 year: 2007
 venue: "Physical Review Letters"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1103/PhysRevLett.99.048102
+url: https://doi.org/10.1103/physrevlett.99.048102
 doi: "10.1103/physrevlett.99.048102"
 arxiv: "0706.4406"
 cite: "Howse, J. R., Jones, R. A. L., Ryan, A. J., Gough, T., Vafabakhsh, R., & Golestanian, R. (2007). Self-Motile Colloidal Particles: From Directed Propulsion to Random Walk. Physical Review Letters, 99(4), 048102."

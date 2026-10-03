@@ -5,7 +5,7 @@ title: "On optimal decision-making in brains and social insect colonies"
 authors: ["James A. R. Marshall", "Rafal Bogacz", "Anna Dornhaus", "Robert Planqué", "Tim Kovacs", "Nigel R. Franks"]
 year: 2009
 venue: "Journal of The Royal Society Interface"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/19324679?resultType=core&format=json"
+url: https://doi.org/10.1098/rsif.2008.0511
 doi: "10.1098/rsif.2008.0511"
 arxiv: null
 cite: "Marshall, J. A. R., Bogacz, R., Dornhaus, A., Planqué, R., Kovacs, T., & Franks, N. R. (2009). On optimal decision-making in brains and social insect colonies. Journal of The Royal Society Interface, 6(40), 1065–1074. https://doi.org/10.1098/rsif.2008.0511"

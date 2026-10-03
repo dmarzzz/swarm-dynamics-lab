@@ -9,7 +9,7 @@ authors:
 - Tim Rogers
 year: 2025
 venue: Proceedings of the National Academy of Sciences
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12002293/fullTextXML
+url: https://doi.org/10.1073/pnas.2420697122
 doi: 10.1073/pnas.2420697122
 arxiv: null
 cite: Bacik, K. A., Sobota, G., Bacik, B. S., & Rogers, T. (2025). Order–disorder transition in multidirectional crowds. Proceedings of the National Academy of Sciences, 122(14), e2420697122. https://doi.org/10.1073/pnas.2420697122

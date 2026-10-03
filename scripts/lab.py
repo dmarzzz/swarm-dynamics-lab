@@ -285,7 +285,11 @@ def norm_url(u: str) -> str:
     u = re.sub(r"^https?://", "", u)
     u = re.sub(r"^(www\.|mobile\.)", "", u)
     u = u.replace("twitter.com/", "x.com/")
-    u = re.sub(r"[?#].*$", "", u) if "youtube.com/watch" not in u else u
+    u = re.sub(r"#.*$", "", u)
+    if "?" in u:  # keep identifying query params (plos ?id=, youtube ?v=), drop tracking ones
+        base, q = u.split("?", 1)
+        keep = [kv for kv in q.split("&") if kv and not kv.startswith(("utm_", "ref=", "s=", "t=", "fbclid"))]
+        u = base + ("?" + "&".join(keep) if keep else "")
     return u.rstrip("/")
 
 
@@ -704,7 +708,11 @@ def cmd_verify(a, lab):
             print(f"BAD   {d.rel}: {src} does not resolve")
             bad += 1
             continue
-        ratio = difflib.SequenceMatcher(None, want, _norm_title(got)).ratio()
+        have = _norm_title(got)
+        ratio = difflib.SequenceMatcher(None, want, have).ratio()
+        a_w, b_w = set(want.split()), set(have.split())
+        if a_w and b_w:  # word-order tolerant: arXiv and journal versions often swap title halves
+            ratio = max(ratio, len(a_w & b_w) / len(a_w | b_w))
         if ratio < a.threshold:
             print(f"BAD   {d.rel}: title mismatch ({ratio:.2f}) entry='{d.get('title')}' {src}='{' '.join(got.split())}'")
             bad += 1

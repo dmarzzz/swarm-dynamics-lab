@@ -6,7 +6,7 @@ authors:
 - Ioan Cristian Trelea
 year: 2003
 venue: Information Processing Letters
-url: https://api.openalex.org/works/W2081749411
+url: https://doi.org/10.1016/S0020-0190(02)00447-7
 doi: 10.1016/S0020-0190(02)00447-7
 arxiv: null
 cite: 'Trelea, I. C. (2003). The particle swarm optimization algorithm: Convergence analysis and parameter selection. Information Processing Letters, 85(6), 317–325. https://doi.org/10.1016/S0020-0190(02)00447-7'

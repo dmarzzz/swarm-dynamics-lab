@@ -5,7 +5,7 @@ title: "Stop Signals Provide Cross Inhibition in Collective Decision-Making by H
 authors: ["Thomas D. Seeley", "P. Kirk Visscher", "Thomas Schlegel", "Patrick M. Hogan", "Nigel R. Franks", "James A. R. Marshall"]
 year: 2012
 venue: "Science"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/22157081?resultType=core&format=json"
+url: https://doi.org/10.1126/science.1210361
 doi: "10.1126/science.1210361"
 arxiv: null
 cite: "Seeley, T. D., Visscher, P. K., Schlegel, T., Hogan, P. M., Franks, N. R., & Marshall, J. A. R. (2012). Stop Signals Provide Cross Inhibition in Collective Decision-Making by Honeybee Swarms. Science, 335(6064), 108–111. https://doi.org/10.1126/science.1210361"

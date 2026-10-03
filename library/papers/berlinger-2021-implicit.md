@@ -5,7 +5,7 @@ title: "Implicit coordination for 3D underwater collective behaviors in a fish-i
 authors: ["Florian Berlinger", "Melvin Gauci", "Radhika Nagpal"]
 year: 2021
 venue: "Science Robotics"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1126/scirobotics.abd8668?fields=title,abstract
+url: https://doi.org/10.1126/scirobotics.abd8668
 doi: "10.1126/scirobotics.abd8668"
 arxiv: null
 cite: "Berlinger, F., Gauci, M., & Nagpal, R. (2021). Implicit coordination for 3D underwater collective behaviors in a fish-inspired robot swarm. Science Robotics, 6(50), eabd8668."

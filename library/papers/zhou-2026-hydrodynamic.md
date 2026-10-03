@@ -5,7 +5,7 @@ title: "Hydrodynamic Interactions Destroy Motility-Induced Phase Separation in A
 authors: ["Tingtao Zhou", "John F. Brady"]
 year: 2026
 venue: "Physical Review Letters"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1103/jhhk-j5g9
+url: https://doi.org/10.1103/jhhk-j5g9
 doi: "10.1103/jhhk-j5g9"
 arxiv: "2509.25616"
 cite: "Zhou, T., & Brady, J. F. (2026). Hydrodynamic Interactions Destroy Motility-Induced Phase Separation in Active Suspensions. Physical Review Letters, 136(8), 088301."

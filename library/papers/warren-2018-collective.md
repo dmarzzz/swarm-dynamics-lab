@@ -6,7 +6,7 @@ authors:
 - William H. Warren
 year: 2018
 venue: Current Directions in Psychological Science
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/30197472?resultType=core&format=json
+url: https://doi.org/10.1177/0963721417746743
 doi: 10.1177/0963721417746743
 arxiv: null
 cite: Warren, W. H. (2018). Collective Motion in Human Crowds. Current Directions in Psychological Science, 27(4), 232–240. https://doi.org/10.1177/0963721417746743

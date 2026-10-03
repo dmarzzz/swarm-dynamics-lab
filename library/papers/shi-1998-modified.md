@@ -7,7 +7,7 @@ authors:
 - Russell Eberhart
 year: 1998
 venue: 1998 IEEE International Conference on Evolutionary Computation Proceedings (IEEE World Congress on Computational Intelligence)
-url: https://api.openalex.org/works/W2165299997
+url: https://doi.org/10.1109/ICEC.1998.699146
 doi: 10.1109/ICEC.1998.699146
 arxiv: null
 cite: Shi, Y., & Eberhart, R. (1998). A modified particle swarm optimizer. In 1998 IEEE International Conference on Evolutionary Computation Proceedings. IEEE World Congress on Computational Intelligence (pp. 69–73). IEEE. https://doi.org/10.1109/ICEC.1998.699146

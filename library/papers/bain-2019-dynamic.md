@@ -7,7 +7,7 @@ authors:
 - Denis Bartolo
 year: 2019
 venue: Science
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/30606837?resultType=core&format=json
+url: https://doi.org/10.1126/science.aat9891
 doi: 10.1126/science.aat9891
 arxiv: null
 cite: Bain, N., & Bartolo, D. (2019). Dynamic response and hydrodynamics of polarized crowds. Science, 363(6422), 46–49. https://doi.org/10.1126/science.aat9891

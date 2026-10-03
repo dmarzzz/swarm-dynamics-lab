@@ -5,7 +5,7 @@ title: Behavioural plasticity and the transition to order in jackdaw flocks
 authors: [Hangjian Ling, Guillam E. Mclvor, Joseph Westley, Kasper van der Vaart, Richard T. Vaughan, Alex Thornton, Nicholas T. Ouellette]
 year: 2019
 venue: Nature Communications
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6858344/fullTextXML
+url: https://doi.org/10.1038/s41467-019-13281-4
 doi: 10.1038/s41467-019-13281-4
 arxiv: null
 cite: 'Ling, H., Mclvor, G. E., Westley, J., van der Vaart, K., Vaughan, R. T., Thornton, A., & Ouellette, N. T. (2019). Behavioural plasticity and the transition to order in jackdaw flocks. Nature Communications, 10(1), 5174.'

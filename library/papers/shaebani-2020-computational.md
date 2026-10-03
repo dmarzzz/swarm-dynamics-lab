@@ -68,3 +68,7 @@ The best single entry point for choosing a simulation method for the hackathon: 
 (robots, drones on a plane), squirmers or dipoles if fluid coupling matters, continuum PDEs for large-scale patterns.
 Follow-ups: [[fily-2012-athermal]] (ABP baseline), [[chate-2008-collective]] (Vicsek bands), [[chate-2019-dry]]
 (hydrodynamic derivation), [[gompper-2020-2020]] and [[gompper-2025-motile]] (roadmaps).
+
+## Notes from dmarz/active-matter-audit
+
+Audit 2026-10-03: checked metadata against Crossref (2(4), 181–199) and spot-checked claims against the arXiv PDF (Re ≲ 10⁻³, spheroidal squirmers phase separate and swarm, software list in Supplementary Table S1, future-option maximisation for animal groups). All correct; no changes.

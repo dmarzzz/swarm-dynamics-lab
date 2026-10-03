@@ -5,7 +5,7 @@ title: "Swarm of micro flying robots in the wild"
 authors: ["Xin Zhou", "Xiangyong Wen", "Zhepei Wang", "Yuman Gao", "Haojia Li", "Qianhao Wang", "Tiankai Yang", "Haojian Lu", "Yanjun Cao", "Chao Xu", "Fei Gao"]
 year: 2022
 venue: "Science Robotics"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1126/scirobotics.abm5954?fields=title,abstract
+url: https://doi.org/10.1126/scirobotics.abm5954
 doi: "10.1126/scirobotics.abm5954"
 arxiv: null
 cite: "Zhou, X., Wen, X., Wang, Z., Gao, Y., Li, H., Wang, Q., Yang, T., Lu, H., Cao, Y., Xu, C., & Gao, F. (2022). Swarm of micro flying robots in the wild. Science Robotics, 7(66), eabm5954."

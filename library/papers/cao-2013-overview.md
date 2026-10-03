@@ -5,7 +5,7 @@ title: An Overview of Recent Progress in the Study of Distributed Multi-Agent Co
 authors: [Yongcan Cao, Wenwu Yu, Wei Ren, Guanrong Chen]
 year: 2013
 venue: IEEE Transactions on Industrial Informatics
-url: https://api.openalex.org/works/doi:10.1109/tii.2012.2219061
+url: https://doi.org/10.1109/tii.2012.2219061
 doi: 10.1109/tii.2012.2219061
 arxiv: null
 cite: "Cao, Y., Yu, W., Ren, W., & Chen, G. (2013). An overview of recent progress in the study of distributed multi-agent coordination. IEEE Transactions on Industrial Informatics, 9(1), 427-438."

@@ -5,7 +5,7 @@ title: "Swarm Robotics: A Survey from a Multi-Tasking Perspective"
 authors: ["Essam Debie", "Kathryn Kasmarik", "Matt Garratt"]
 year: 2024
 venue: "ACM Computing Surveys"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1145/3611652?fields=title,abstract
+url: https://doi.org/10.1145/3611652
 doi: "10.1145/3611652"
 arxiv: null
 cite: "Debie, E., Kasmarik, K., & Garratt, M. (2024). Swarm Robotics: A Survey from a Multi-Tasking Perspective. ACM Computing Surveys, 56(2), 1–38."

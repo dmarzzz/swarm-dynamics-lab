@@ -5,7 +5,7 @@ title: "Collegial decision making based on social amplification leads to optimal
 authors: ["Jean-Marc Amé", "José Halloy", "Colette Rivault", "Claire Detrain", "Jean Louis Deneubourg"]
 year: 2006
 venue: "Proceedings of the National Academy of Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/16581903?resultType=core&format=json"
+url: https://doi.org/10.1073/pnas.0507877103
 doi: "10.1073/pnas.0507877103"
 arxiv: null
 cite: "Amé, J., Halloy, J., Rivault, C., Detrain, C., & Deneubourg, J. L. (2006). Collegial decision making based on social amplification leads to optimal group formation. Proceedings of the National Academy of Sciences, 103(15), 5835–5840. https://doi.org/10.1073/pnas.0507877103"

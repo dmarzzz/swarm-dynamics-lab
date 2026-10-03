@@ -5,7 +5,7 @@ title: "From collections of independent, mindless robots to flexible, mobile, an
 authors: ["J. F. Boudet", "J. Lintuvuori", "C. Lacouture", "T. Barois", "A. Deblais", "K. Xie", "S. Cassagnere", "B. Tregon", "D. B. Brückner", "J. C. Baret", "H. Kellay"]
 year: 2021
 venue: "Science Robotics"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1126/scirobotics.abd0272?fields=title,abstract
+url: https://doi.org/10.1126/scirobotics.abd0272
 doi: "10.1126/scirobotics.abd0272"
 arxiv: null
 cite: "Boudet, J. F., Lintuvuori, J., Lacouture, C., Barois, T., Deblais, A., Xie, K., Cassagnere, S., Tregon, B., Brückner, D. B., Baret, J. C., & Kellay, H. (2021). From collections of independent, mindless robots to flexible, mobile, and directional superstructures. Science Robotics, 6(56), eabd0272."

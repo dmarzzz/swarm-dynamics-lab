@@ -5,7 +5,7 @@ title: Randomized gossip algorithms
 authors: [Stephen Boyd, Arpita Ghosh, Balaji Prabhakar, Devavrat Shah]
 year: 2006
 venue: IEEE Transactions on Information Theory
-url: https://api.openalex.org/works/doi:10.1109/tit.2006.874516
+url: https://doi.org/10.1109/tit.2006.874516
 doi: 10.1109/tit.2006.874516
 arxiv: null
 cite: "Boyd, S., Ghosh, A., Prabhakar, B., & Shah, D. (2006). Randomized gossip algorithms. IEEE Transactions on Information Theory, 52(6), 2508-2530."

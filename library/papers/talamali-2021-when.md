@@ -5,7 +5,7 @@ title: "When less is more: Robot swarms adapt better to changes with constrained
 authors: ["Mohamed S. Talamali", "Arindam Saha", "James A. R. Marshall", "Andreagiovanni Reina"]
 year: 2021
 venue: "Science Robotics"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/34321345?resultType=core&format=json"
+url: https://doi.org/10.1126/scirobotics.abf1416
 doi: "10.1126/scirobotics.abf1416"
 arxiv: null
 cite: "Talamali, M. S., Saha, A., Marshall, J. A. R., & Reina, A. (2021). When less is more: Robot swarms adapt better to changes with constrained communication. Science Robotics, 6(56), eabf1416. https://doi.org/10.1126/scirobotics.abf1416"

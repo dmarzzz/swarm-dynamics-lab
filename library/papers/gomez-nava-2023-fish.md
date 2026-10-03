@@ -5,7 +5,7 @@ title: Fish shoals resemble a stochastic excitable system driven by environmenta
 authors: [Luis Gómez-Nava, Robert T. Lange, Pascal P. Klamser, Juliane Lukas, Lenin Arias-Rodriguez, David Bierbach, Jens Krause, Henning Sprekeler, Pawel Romanczuk]
 year: 2023
 venue: Nature Physics
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/s41567-022-01916-1
+url: https://doi.org/10.1038/s41567-022-01916-1
 doi: 10.1038/s41567-022-01916-1
 arxiv: null
 cite: 'Gómez-Nava, L., Lange, R. T., Klamser, P. P., Lukas, J., Arias-Rodriguez, L., Bierbach, D., Krause, J., Sprekeler, H., & Romanczuk, P. (2023). Fish shoals resemble a stochastic excitable system driven by environmental perturbations. Nature Physics, 19(5), 663–669.'

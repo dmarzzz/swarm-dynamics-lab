@@ -5,7 +5,7 @@ title: "Nonreciprocal field theory for decision-making in multi-agent control sy
 authors: ["Andrea Lama", "Mario di Bernardo", "Sabine H. L. Klapp"]
 year: 2025
 venue: "Nature Communications"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/s41467-025-63071-4?fields=title,abstract
+url: https://doi.org/10.1038/s41467-025-63071-4
 doi: "10.1038/s41467-025-63071-4"
 arxiv: "2503.01112"
 cite: "Lama, A., di Bernardo, M., & Klapp, S. H. L. (2025). Nonreciprocal field theory for decision-making in multi-agent control systems. Nature Communications, 16(1), 8450."

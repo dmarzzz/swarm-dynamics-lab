@@ -5,7 +5,7 @@ title: "A robot made of robots: Emergent transport and control of a smarticle en
 authors: ["William Savoie", "Thomas A. Berrueta", "Zachary Jackson", "Ana Pervan", "Ross Warkentin", "Shengkai Li", "Todd D. Murphey", "Kurt Wiesenfeld", "Daniel I. Goldman"]
 year: 2019
 venue: "Science Robotics"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1126/scirobotics.aax4316?fields=title,abstract
+url: https://doi.org/10.1126/scirobotics.aax4316
 doi: "10.1126/scirobotics.aax4316"
 arxiv: null
 cite: "Savoie, W., Berrueta, T. A., Jackson, Z., Pervan, A., Warkentin, R., Li, S., Murphey, T. D., Wiesenfeld, K., & Goldman, D. I. (2019). A robot made of robots: Emergent transport and control of a smarticle ensemble. Science Robotics, 4(34), eaax4316."

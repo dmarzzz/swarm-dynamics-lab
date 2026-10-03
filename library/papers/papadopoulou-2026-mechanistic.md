@@ -5,7 +5,7 @@ title: "A mechanistic understanding of collective escape in starling flocks"
 authors: ["Marina Papadopoulou", "Hanno Hildenbrandt", "Rolf F. Storms", "Claudio Carere", "Simon Verhulst", "Charlotte K. Hemelrijk"]
 year: 2026
 venue: "Communications Biology"
-url: https://api.crossref.org/works/10.1038/s42003-026-10173-4
+url: https://doi.org/10.1038/s42003-026-10173-4
 doi: "10.1038/s42003-026-10173-4"
 arxiv: null
 cite: "Papadopoulou, M., Hildenbrandt, H., Storms, R. F., Carere, C., Verhulst, S., & Hemelrijk, C. K. (2026). A mechanistic understanding of collective escape in starling flocks. Communications Biology, 9(1), 1055."

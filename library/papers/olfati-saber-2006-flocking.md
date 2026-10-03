@@ -5,7 +5,7 @@ title: "Flocking for Multi-Agent Dynamic Systems: Algorithms and Theory"
 authors: [Reza Olfati-Saber]
 year: 2006
 venue: IEEE Transactions on Automatic Control
-url: https://api.openalex.org/works/doi:10.1109/tac.2005.864190
+url: https://doi.org/10.1109/tac.2005.864190
 doi: 10.1109/tac.2005.864190
 arxiv: null
 cite: "Olfati-Saber, R. (2006). Flocking for multi-agent dynamic systems: Algorithms and theory. IEEE Transactions on Automatic Control, 51(3), 401-420."

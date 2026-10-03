@@ -5,7 +5,7 @@ title: "Bounded confidence opinion dynamics: A survey"
 authors: [Carmela Bernardo, Claudio Altafini, Anton Proskurnikov, Francesco Vasca]
 year: 2024
 venue: Automatica
-url: https://api.openalex.org/works/doi:10.1016/j.automatica.2023.111302
+url: https://doi.org/10.1016/j.automatica.2023.111302
 doi: 10.1016/j.automatica.2023.111302
 arxiv: null
 cite: "Bernardo, C., Altafini, C., Proskurnikov, A., & Vasca, F. (2024). Bounded confidence opinion dynamics: A survey. Automatica, 159, 111302."

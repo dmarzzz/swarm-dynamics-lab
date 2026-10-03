@@ -7,7 +7,7 @@ authors:
 - Luca Maria Gambardella
 year: 1997
 venue: IEEE Transactions on Evolutionary Computation
-url: https://api.openalex.org/works/W2154929945
+url: https://doi.org/10.1109/4235.585892
 doi: 10.1109/4235.585892
 arxiv: null
 cite: 'Dorigo, M., & Gambardella, L. M. (1997). Ant colony system: A cooperative learning approach to the traveling salesman problem. IEEE Transactions on Evolutionary Computation, 1(1), 53–66. https://doi.org/10.1109/4235.585892'

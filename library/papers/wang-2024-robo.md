@@ -5,7 +5,7 @@ title: "Robo-Matter towards reconfigurable multifunctional smart materials"
 authors: ["Jing Wang", "Gao Wang", "Huaicheng Chen", "Yanping Liu", "Peilong Wang", "Daming Yuan", "Xingyu Ma", "Xiangyu Xu", "Zhengdong Cheng", "Baohua Ji", "Mingcheng Yang", "Jianwei Shuai", "et al."]
 year: 2024
 venue: "Nature Communications"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/s41467-024-53123-6
+url: https://doi.org/10.1038/s41467-024-53123-6
 doi: "10.1038/s41467-024-53123-6"
 arxiv: null
 cite: "Wang, J., Wang, G., Chen, H., Liu, Y., Wang, P., Yuan, D., Ma, X., Xu, X., Cheng, Z., Ji, B., et al. (2024). Robo-Matter towards reconfigurable multifunctional smart materials. Nature Communications, 15(1), 8853."
@@ -46,3 +46,7 @@ Control is external (light field), not autonomous; scalability claims not checke
 
 Example of global-field control of a micro-robot swarm as active matter. Related: [[yu-2023-programmable]],
 [[bo-2026-three]], [[bauerle-2018-self]].
+
+## Notes from dmarz/active-matter-audit
+
+Audit 2026-10-03: author list checked against Crossref (16 authors; the first ten plus et al. in cite are correct). url is the Semantic Scholar API record that was read (abstract only).

@@ -5,7 +5,7 @@ title: "Reconfigurable magnetic microrobot swarm: Multimode transformation, loco
 authors: ["Hui Xie", "Mengmeng Sun", "Xinjian Fan", "Zhihua Lin", "Weinan Chen", "Lei Wang", "Lixin Dong", "Qiang He"]
 year: 2019
 venue: "Science Robotics"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1126/scirobotics.aav8006?fields=title,abstract
+url: https://doi.org/10.1126/scirobotics.aav8006
 doi: "10.1126/scirobotics.aav8006"
 arxiv: null
 cite: "Xie, H., Sun, M., Fan, X., Lin, Z., Chen, W., Wang, L., Dong, L., & He, Q. (2019). Reconfigurable magnetic microrobot swarm: Multimode transformation, locomotion, and manipulation. Science Robotics, 4(28), eaav8006."

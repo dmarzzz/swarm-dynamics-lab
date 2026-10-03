@@ -8,7 +8,7 @@ authors:
 - José Neves
 year: 2004
 venue: IEEE Transactions on Evolutionary Computation
-url: https://api.openalex.org/works/W2139339670
+url: https://doi.org/10.1109/TEVC.2004.826074
 doi: 10.1109/TEVC.2004.826074
 arxiv: null
 cite: 'Mendes, R., Kennedy, J., & Neves, J. (2004). The fully informed particle swarm: Simpler, maybe better. IEEE Transactions on Evolutionary Computation, 8(3), 204–210. https://doi.org/10.1109/TEVC.2004.826074'

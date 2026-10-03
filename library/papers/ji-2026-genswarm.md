@@ -5,7 +5,7 @@ title: "GenSwarm: Scalable Multi-Robot Code-Policy Generation and Deployment via
 authors: ["Wenkang Ji", "Huaben Chen", "Mingyang Chen", "Guobin Zhu", "Lufeng Xu", "Roderich Groß", "Rui Zhou", "Ming Cao", "Shiyu Zhao"]
 year: 2026
 venue: "npj Robotics"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/s44182-025-00065-w?fields=title,abstract
+url: https://doi.org/10.1038/s44182-025-00065-w
 doi: "10.1038/s44182-025-00065-w"
 arxiv: "2503.23875"
 cite: "Ji, W., Chen, H., Chen, M., Zhu, G., Xu, L., Groß, R., Zhou, R., Cao, M., & Zhao, S. (2026). GenSwarm: Scalable Multi-Robot Code-Policy Generation and Deployment via Language Models. npj Robotics, 4(1), 5."

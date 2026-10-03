@@ -5,7 +5,7 @@ title: Consensus Problems in Networks of Agents With Switching Topology and Time
 authors: [R. Olfati-Saber, R. M. Murray]
 year: 2004
 venue: IEEE Transactions on Automatic Control
-url: https://api.openalex.org/works/doi:10.1109/tac.2004.834113
+url: https://doi.org/10.1109/tac.2004.834113
 doi: 10.1109/tac.2004.834113
 arxiv: null
 cite: "Olfati-Saber, R., & Murray, R. M. (2004). Consensus problems in networks of agents with switching topology and time-delays. IEEE Transactions on Automatic Control, 49(9), 1520-1533."

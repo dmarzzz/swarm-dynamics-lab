@@ -5,7 +5,7 @@ title: "Decision accuracy in complex environments is often maximized by small gr
 authors: ["Albert B. Kao", "Iain D. Couzin"]
 year: 2014
 venue: "Proceedings of the Royal Society B: Biological Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/24759858?resultType=core&format=json"
+url: https://doi.org/10.1098/rspb.2013.3305
 doi: "10.1098/rspb.2013.3305"
 arxiv: null
 cite: "Kao, A. B., & Couzin, I. D. (2014). Decision accuracy in complex environments is often maximized by small group sizes. Proceedings of the Royal Society B: Biological Sciences, 281(1784), 20133305. https://doi.org/10.1098/rspb.2013.3305"

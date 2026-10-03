@@ -5,7 +5,7 @@ title: "The Psychology of Superorganisms: Collective Decision Making by Insect S
 authors: ["Takao Sasaki", "Stephen C. Pratt"]
 year: 2018
 venue: "Annual Review of Entomology"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/28977775?resultType=core&format=json"
+url: https://doi.org/10.1146/annurev-ento-020117-043249
 doi: "10.1146/annurev-ento-020117-043249"
 arxiv: null
 cite: "Sasaki, T., & Pratt, S. C. (2018). The Psychology of Superorganisms: Collective Decision Making by Insect Societies. Annual Review of Entomology, 63(1), 259–275. https://doi.org/10.1146/annurev-ento-020117-043249"

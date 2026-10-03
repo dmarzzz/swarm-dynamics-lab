@@ -5,7 +5,7 @@ title: Synchronization of Pulse-Coupled Biological Oscillators
 authors: [Renato E. Mirollo, Steven H. Strogatz]
 year: 1990
 venue: SIAM Journal on Applied Mathematics
-url: https://api.openalex.org/works/doi:10.1137/0150098
+url: https://doi.org/10.1137/0150098
 doi: 10.1137/0150098
 arxiv: null
 cite: "Mirollo, R. E., & Strogatz, S. H. (1990). Synchronization of pulse-coupled biological oscillators. SIAM Journal on Applied Mathematics, 50(6), 1645-1662."

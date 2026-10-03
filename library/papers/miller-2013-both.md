@@ -5,7 +5,7 @@ title: "Both information and social cohesion determine collective decisions in a
 authors: ["Noam Miller", "Simon Garnier", "Andrew T. Hartnett", "Iain D. Couzin"]
 year: 2013
 venue: "Proceedings of the National Academy of Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/23440218?resultType=core&format=json"
+url: https://doi.org/10.1073/pnas.1217513110
 doi: "10.1073/pnas.1217513110"
 arxiv: null
 cite: "Miller, N., Garnier, S., Hartnett, A. T., & Couzin, I. D. (2013). Both information and social cohesion determine collective decisions in animal groups. Proceedings of the National Academy of Sciences, 110(13), 5263–5268. https://doi.org/10.1073/pnas.1217513110"

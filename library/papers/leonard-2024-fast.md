@@ -5,7 +5,7 @@ title: "Fast and Flexible Multiagent Decision-Making"
 authors: ["Naomi Ehrich Leonard", "Anastasia Bizyaeva", "Alessio Franci"]
 year: 2024
 venue: "Annual Review of Control, Robotics, and Autonomous Systems"
-url: "https://api.openalex.org/works/doi:10.1146/annurev-control-090523-100059"
+url: https://doi.org/10.1146/annurev-control-090523-100059
 doi: "10.1146/annurev-control-090523-100059"
 arxiv: null
 cite: "Leonard, N. E., Bizyaeva, A., & Franci, A. (2024). Fast and Flexible Multiagent Decision-Making. Annual Review of Control, Robotics, and Autonomous Systems, 7(1), 19–45. https://doi.org/10.1146/annurev-control-090523-100059"

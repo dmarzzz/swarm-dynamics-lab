@@ -5,7 +5,7 @@ title: Consensus and Cooperation in Networked Multi-Agent Systems
 authors: [Reza Olfati-Saber, J. Alex Fax, Richard M. Murray]
 year: 2007
 venue: Proceedings of the IEEE
-url: https://api.openalex.org/works/doi:10.1109/jproc.2006.887293
+url: https://doi.org/10.1109/jproc.2006.887293
 doi: 10.1109/jproc.2006.887293
 arxiv: null
 cite: "Olfati-Saber, R., Fax, J. A., & Murray, R. M. (2007). Consensus and cooperation in networked multi-agent systems. Proceedings of the IEEE, 95(1), 215-233."

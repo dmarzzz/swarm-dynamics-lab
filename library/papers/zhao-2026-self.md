@@ -5,7 +5,7 @@ title: "Self-organized criticality in aquatic robot swarm"
 authors: ["Shiji Zhao", "Jiajun Huang", "Chaoqun Li", "Shengli Mi"]
 year: 2026
 venue: "Science Advances"
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13170653/fullTextXML
+url: https://doi.org/10.1126/sciadv.aec6153
 doi: "10.1126/sciadv.aec6153"
 arxiv: null
 cite: "Zhao, S., Huang, J., Li, C., & Mi, S. (2026). Self-organized criticality in aquatic robot swarm. Science Advances, 12(20), eaec6153."

@@ -5,7 +5,7 @@ title: Stability of multiagent systems with time-dependent communication links
 authors: [Luc Moreau]
 year: 2005
 venue: IEEE Transactions on Automatic Control
-url: https://api.openalex.org/works/doi:10.1109/tac.2004.841888
+url: https://doi.org/10.1109/tac.2004.841888
 doi: 10.1109/tac.2004.841888
 arxiv: null
 cite: "Moreau, L. (2005). Stability of multiagent systems with time-dependent communication links. IEEE Transactions on Automatic Control, 50(2), 169-182."

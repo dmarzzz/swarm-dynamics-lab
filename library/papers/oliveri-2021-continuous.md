@@ -5,7 +5,7 @@ title: "Continuous learning of emergent behavior in robotic matter"
 authors: ["Giorgio Oliveri", "Lucas C. van Laake", "Cesare Carissimo", "Clara Miette", "Johannes T. B. Overvelde"]
 year: 2021
 venue: "Proceedings of the National Academy of Sciences"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1073/pnas.2017015118?fields=title,abstract
+url: https://doi.org/10.1073/pnas.2017015118
 doi: "10.1073/pnas.2017015118"
 arxiv: null
 cite: "Oliveri, G., van Laake, L. C., Carissimo, C., Miette, C., & Overvelde, J. T. B. (2021). Continuous learning of emergent behavior in robotic matter. Proceedings of the National Academy of Sciences, 118(21), e2017015118."

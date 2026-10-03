@@ -5,7 +5,7 @@ title: Dry Aligning Dilute Active Matter
 authors: [Hugues Chaté]
 year: 2020
 venue: Annual Review of Condensed Matter Physics
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1146/annurev-conmatphys-031119-050752
+url: https://doi.org/10.1146/annurev-conmatphys-031119-050752
 doi: 10.1146/annurev-conmatphys-031119-050752
 arxiv: null
 cite: 'Chaté, H. (2020). Dry aligning dilute active matter. Annual Review of Condensed Matter Physics, 11(1), 189–212.'

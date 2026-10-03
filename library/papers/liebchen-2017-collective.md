@@ -5,7 +5,7 @@ title: "Collective Behavior of Chiral Active Matter: Pattern Formation and Enhan
 authors: ["Benno Liebchen", "Demian Levis"]
 year: 2017
 venue: "Physical Review Letters"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1103/physrevlett.119.058002
+url: https://doi.org/10.1103/physrevlett.119.058002
 doi: "10.1103/physrevlett.119.058002"
 arxiv: null
 cite: "Liebchen, B., & Levis, D. (2017). Collective Behavior of Chiral Active Matter: Pattern Formation and Enhanced Flocking. Physical Review Letters, 119(5), 058002."

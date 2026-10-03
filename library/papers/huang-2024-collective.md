@@ -5,7 +5,7 @@ title: "Collective phase transitions in confined fish schools"
 authors: ["Chenchen Huang", "Feng Ling", "Eva Kanso"]
 year: 2024
 venue: "Proceedings of the National Academy of Sciences"
-url: https://api.crossref.org/works/10.1073/pnas.2406293121
+url: https://doi.org/10.1073/pnas.2406293121
 doi: "10.1073/pnas.2406293121"
 arxiv: null
 cite: "Huang, C., Ling, F., & Kanso, E. (2024). Collective phase transitions in confined fish schools. Proceedings of the National Academy of Sciences, 121(44), e2406293121."

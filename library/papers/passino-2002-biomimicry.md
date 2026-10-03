@@ -5,7 +5,7 @@ title: Biomimicry of bacterial foraging for distributed optimization and control
 authors: [Kevin M. Passino]
 year: 2002
 venue: IEEE Control Systems Magazine
-url: https://api.openalex.org/works/W2122122715
+url: https://doi.org/10.1109/MCS.2002.1004010
 doi: 10.1109/MCS.2002.1004010
 arxiv: null
 cite: Passino, K. M. (2002). Biomimicry of bacterial foraging for distributed optimization and control. IEEE Control Systems Magazine, 22(3), 52–67. https://doi.org/10.1109/MCS.2002.1004010

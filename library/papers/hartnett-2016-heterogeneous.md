@@ -5,7 +5,7 @@ title: "Heterogeneous Preference and Local Nonlinearity in Consensus Decision Ma
 authors: ["Andrew T. Hartnett", "Emmanuel Schertzer", "Simon A. Levin", "Iain D. Couzin"]
 year: 2016
 venue: "Physical Review Letters"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/26849620?resultType=core&format=json"
+url: https://doi.org/10.1103/physrevlett.116.038701
 doi: "10.1103/physrevlett.116.038701"
 arxiv: null
 cite: "Hartnett, A. T., Schertzer, E., Levin, S. A., & Couzin, I. D. (2016). Heterogeneous Preference and Local Nonlinearity in Consensus Decision Making. Physical Review Letters, 116(3), 038701. https://doi.org/10.1103/physrevlett.116.038701"

@@ -5,7 +5,7 @@ title: "Group Decision Making in Nest-Site Selection Among Social Insects"
 authors: ["P. Kirk Visscher"]
 year: 2007
 venue: "Annual Review of Entomology"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/16968203?resultType=core&format=json"
+url: https://doi.org/10.1146/annurev.ento.51.110104.151025
 doi: "10.1146/annurev.ento.51.110104.151025"
 arxiv: null
 cite: "Visscher, P. K. (2007). Group Decision Making in Nest-Site Selection Among Social Insects. Annual Review of Entomology, 52(1), 255–275. https://doi.org/10.1146/annurev.ento.51.110104.151025"

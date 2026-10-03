@@ -8,7 +8,7 @@ authors:
 - Thomas Stützle
 year: 2023
 venue: International Transactions in Operational Research
-url: https://api.openalex.org/works/W4288040592
+url: https://doi.org/10.1111/itor.13176
 doi: 10.1111/itor.13176
 arxiv: null
 cite: 'Camacho-Villalón, C. L., Dorigo, M., & Stützle, T. (2023). Exposing the grey wolf, moth-flame, whale, firefly, bat, and antlion algorithms: Six misleading optimization techniques inspired by bestial metaphors. International Transactions in Operational Research, 30(6), 2945–2971. https://doi.org/10.1111/itor.13176'

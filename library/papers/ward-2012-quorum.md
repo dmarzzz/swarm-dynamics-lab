@@ -5,7 +5,7 @@ title: "Quorum Decision-Making in Foraging Fish Shoals"
 authors: ["Ashley J. W. Ward", "Jens Krause", "David J. T. Sumpter"]
 year: 2012
 venue: "PLoS ONE"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/22412869?resultType=core&format=json"
+url: https://doi.org/10.1371/journal.pone.0032411
 doi: "10.1371/journal.pone.0032411"
 arxiv: null
 cite: "Ward, A. J. W., Krause, J., & Sumpter, D. J. T. (2012). Quorum Decision-Making in Foraging Fish Shoals. PLoS ONE, 7(3), e32411. https://doi.org/10.1371/journal.pone.0032411"

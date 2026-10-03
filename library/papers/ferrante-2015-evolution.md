@@ -5,7 +5,7 @@ title: "Evolution of Self-Organized Task Specialization in Robot Swarms"
 authors: ["Eliseo Ferrante", "Ali Emre Turgut", "Edgar Duéñez-Guzmán", "Marco Dorigo", "Tom Wenseleers"]
 year: 2015
 venue: "PLOS Computational Biology"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1371/journal.pcbi.1004273?fields=title,abstract
+url: https://doi.org/10.1371/journal.pcbi.1004273
 doi: "10.1371/journal.pcbi.1004273"
 arxiv: null
 cite: "Ferrante, E., Turgut, A. E., Duéñez-Guzmán, E., Dorigo, M., & Wenseleers, T. (2015). Evolution of Self-Organized Task Specialization in Robot Swarms. PLOS Computational Biology, 11(8), e1004273."

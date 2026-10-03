@@ -5,7 +5,7 @@ title: "Closed-loop real-virtual interactions validate 3D model of social coordi
 authors: ["Ramón Escobedo", "Justine Reynaud", "Renaud Bastien", "Stéphane Sanchez", "Clément Sire", "Guy Theraulaz"]
 year: 2026
 venue: "PLOS Computational Biology"
-url: https://api.crossref.org/works/10.1371/journal.pcbi.1014544
+url: https://doi.org/10.1371/journal.pcbi.1014544
 doi: "10.1371/journal.pcbi.1014544"
 arxiv: null
 cite: "Escobedo, R., Reynaud, J., Bastien, R., Sanchez, S., Sire, C., & Theraulaz, G. (2026). Closed-loop real-virtual interactions validate 3D model of social coordination in fish. PLOS Computational Biology, 22(8), e1014544."

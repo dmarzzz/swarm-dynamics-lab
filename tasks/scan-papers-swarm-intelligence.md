@@ -160,3 +160,35 @@ dmarz/llm-agent-swarms).
 5. Survey task: "Swarm optimisers as swarm dynamics" (PSO/CBO as interacting particle systems, order parameters,
    phase diagrams) building on [[grassi-2021-particle]], [[huang-2023-global]], [[hoffmann-2026-consensus]].
 
+
+### Audit (dmarz/swarm-intelligence-audit)
+
+Audited 2026-10-03. Verified: `lab.py verify` on all 53 scan entries (1 BAD line, [[stutzle-2000-max]], a Crossref
+small-caps title artefact; metadata correct, note appended); cite strings of all 45 DOI entries compared with Crossref
+(volume, issue, pages, authors) and all 8 arXiv-only entries with their arXiv pages; no phantoms, no metadata errors
+found. All 6 full reads ([[pinnau-2017-consensus]], [[grassi-2021-particle]], [[huang-2023-global]],
+[[kudela-2023-evolutionary]], [[vermetten-2024-large]], [[nitti-2025-collective]]) checked number by number against the
+PDFs/publisher page; plus [[borghi-2026-long]], [[hoffmann-2026-consensus]], [[dorigo-1996-ant]],
+[[theraulaz-1999-brief]], [[kennedy-1995-particle]], [[mirjalili-2014-grey]] against their abstracts. Fixed: two small
+content errors (an "ES" ratio mislabelled "CMA-like" in [[kudela-2023-evolutionary]]; "numbers in tables" claim in
+[[grassi-2021-particle]]); noted the CEC 2025 published version of [[shinohara-2025-large]]. Deleted: none.
+Read depths are honest. Extra search rounds: (a) forward citations of [[dorigo-1996-ant]] from OpenCitations, 8849
+citing works, 875 from 2024+, titles filtered for reviews/theory/collective dynamics (about 8 relevant, 6 new);
+(b) forward citations of [[kennedy-1995-particle]], partial pull (6669 of tens of thousands, OpenCitations timed
+out), 3983 citing works from 2025+, filtered (about 12 relevant, 9 new); (c) WebSearch with math vocabulary
+(interacting particle systems, ensemble Kalman, consensus-based sampling; 9 results, 5 new); (d) WebSearch for PSO
+stability theory past stagnation (10 results, 4 new); (e) WebSearch for PSO reviews 2023-2025 (9 results, 4 new).
+Added 11: [[carrillo-2021-consensus]] (full), [[carrillo-2022-consensus]], [[fornasier-2021-consensus]],
+[[cleghorn-2018-particle]] (skim), [[gerber-2025-mean]], [[koss-2026-mean]], [[blum-2024-ant]] (the 2024 Physics of
+Life Reviews ACO review the scan could not reach), [[gad-2022-particle]], [[passino-2002-biomimicry]],
+[[zheng-2026-survey]], [[feng-2025-noise]] (abstract). Found but not added (no abstract or text reachable): Deng and
+Liu 2025 "Collective dynamics of particle swarm optimization: a network science perspective" (Physica A 675:130778,
+doi 10.1016/j.physa.2025.130778, high priority for swarm dynamics); Priyadarshi and Kumar 2025 systematic review of
+PSO and ACO (ACME 32(6):3609-3650, doi 10.1007/s11831-025-10247-2); Schmitt and Wanka 2015 "PSO almost surely finds
+local optima" (TCS 561:57-72, doi 10.1016/j.tcs.2014.05.017); Shami et al. 2022 PSO survey (IEEE Access, doc 9680690);
+Carrillo, Totzeck and Vaes, CBO and ensemble Kalman inversion with constraints (arXiv 2111.02970); Bonyadi and
+Michalewicz 2016 stability without stagnation (doi 10.1109/TEVC.2015.2508101); PSO in chemistry review (Chem Soc Rev
+2026, doi 10.1039/d5cs00912j). Still thin: PSO runtime/convergence theory 2010-2020 beyond Cleghorn; firefly,
+cuckoo and glowworm algorithms (only bacterial foraging added); ensemble-Kalman and Stein-variational particle
+optimisers; the physics-style analyses of optimiser swarms as collective dynamics (Deng and Liu 2025 above);
+full reads of the critique cluster. OpenAlex list endpoints and WebSearch budget were exhausted during this audit.

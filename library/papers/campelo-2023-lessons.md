@@ -7,7 +7,7 @@ authors:
 - Claus Aranha
 year: 2023
 venue: Artificial Life
-url: https://api.openalex.org/works/W4383872314
+url: https://doi.org/10.1162/artl_a_00402
 doi: 10.1162/artl_a_00402
 arxiv: null
 cite: Campelo, F., & Aranha, C. (2023). Lessons from the evolutionary computation bestiary. Artificial Life, 29(4), 421–432. https://doi.org/10.1162/artl_a_00402

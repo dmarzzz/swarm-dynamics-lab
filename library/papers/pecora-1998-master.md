@@ -5,7 +5,7 @@ title: Master Stability Functions for Synchronized Coupled Systems
 authors: [Louis M. Pecora, Thomas L. Carroll]
 year: 1998
 venue: Physical Review Letters
-url: https://api.openalex.org/works/doi:10.1103/physrevlett.80.2109
+url: https://doi.org/10.1103/physrevlett.80.2109
 doi: 10.1103/physrevlett.80.2109
 arxiv: null
 cite: "Pecora, L. M., & Carroll, T. L. (1998). Master stability functions for synchronized coupled systems. Physical Review Letters, 80(10), 2109-2112."

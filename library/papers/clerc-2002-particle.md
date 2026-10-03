@@ -7,7 +7,7 @@ authors:
 - James Kennedy
 year: 2002
 venue: IEEE Transactions on Evolutionary Computation
-url: https://api.openalex.org/works/W2169245194
+url: https://doi.org/10.1109/4235.985692
 doi: 10.1109/4235.985692
 arxiv: null
 cite: Clerc, M., & Kennedy, J. (2002). The particle swarm - explosion, stability, and convergence in a multidimensional complex space. IEEE Transactions on Evolutionary Computation, 6(1), 58–73. https://doi.org/10.1109/4235.985692

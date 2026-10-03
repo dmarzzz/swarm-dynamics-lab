@@ -8,7 +8,7 @@ authors:
 - Kenneth Sörensen
 year: 2025
 venue: European Journal of Operational Research
-url: https://api.openalex.org/works/W4394600987
+url: https://doi.org/10.1016/j.ejor.2024.04.004
 doi: 10.1016/j.ejor.2024.04.004
 arxiv: null
 cite: Martí, R., Sevaux, M., & Sörensen, K. (2025). Fifty years of metaheuristics. European Journal of Operational Research, 321(2), 345–362. https://doi.org/10.1016/j.ejor.2024.04.004

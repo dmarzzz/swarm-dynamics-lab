@@ -5,7 +5,7 @@ title: "Collective decision making by rational individuals"
 authors: ["Richard P. Mann"]
 year: 2018
 venue: "Proceedings of the National Academy of Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/30322917?resultType=core&format=json"
+url: https://doi.org/10.1073/pnas.1811964115
 doi: "10.1073/pnas.1811964115"
 arxiv: null
 cite: "Mann, R. P. (2018). Collective decision making by rational individuals. Proceedings of the National Academy of Sciences, 115(44). https://doi.org/10.1073/pnas.1811964115"

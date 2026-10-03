@@ -5,7 +5,7 @@ title: "A Cognitive Computational Approach to Social and Collective Decision-Mak
 authors: ["Alan N. Tump", "Dominik Deffner", "Timothy J. Pleskac", "Pawel Romanczuk", "Ralf H. J. M. Kurvers"]
 year: 2024
 venue: "Perspectives on Psychological Science"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10913326/fullTextXML"
+url: https://doi.org/10.1177/17456916231186964
 doi: "10.1177/17456916231186964"
 arxiv: null
 cite: "Tump, A. N., Deffner, D., Pleskac, T. J., Romanczuk, P., & Kurvers, R. H. J. M. (2024). A Cognitive Computational Approach to Social and Collective Decision-Making. Perspectives on Psychological Science, 19(2), 538–551. https://doi.org/10.1177/17456916231186964"

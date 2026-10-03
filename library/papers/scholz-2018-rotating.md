@@ -5,7 +5,7 @@ title: "Rotating robots move collectively and self-organize"
 authors: ["Christian Scholz", "Michael Engel", "Thorsten Pöschel"]
 year: 2018
 venue: "Nature Communications"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/s41467-018-03154-7?fields=title,abstract
+url: https://doi.org/10.1038/s41467-018-03154-7
 doi: "10.1038/s41467-018-03154-7"
 arxiv: null
 cite: "Scholz, C., Engel, M., & Pöschel, T. (2018). Rotating robots move collectively and self-organize. Nature Communications, 9(1), 931."

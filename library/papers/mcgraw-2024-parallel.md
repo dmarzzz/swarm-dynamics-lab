@@ -5,7 +5,7 @@ title: "Parallel development of social behavior in biological and artificial fis
 authors: ["Joshua D. McGraw", "Donsuk Lee", "Justin N. Wood"]
 year: 2024
 venue: "Nature Communications"
-url: https://api.crossref.org/works/10.1038/s41467-024-52307-4
+url: https://doi.org/10.1038/s41467-024-52307-4
 doi: "10.1038/s41467-024-52307-4"
 arxiv: null
 cite: "McGraw, J. D., Lee, D., & Wood, J. N. (2024). Parallel development of social behavior in biological and artificial fish. Nature Communications, 15(1), 10613."

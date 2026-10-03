@@ -10,7 +10,7 @@ authors:
 - Iker Zuriguel
 year: 2022
 venue: Scientific Reports
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8850453/fullTextXML
+url: https://doi.org/10.1038/s41598-022-06493-0
 doi: 10.1038/s41598-022-06493-0
 arxiv: null
 cite: Echeverría-Huarte, I., Nicolas, A., Hidalgo, R. C., Garcimartín, A., & Zuriguel, I. (2022). Spontaneous emergence of counterclockwise vortex motion in assemblies of pedestrians roaming within an enclosure. Scientific Reports, 12(1), 2647. https://doi.org/10.1038/s41598-022-06493-0

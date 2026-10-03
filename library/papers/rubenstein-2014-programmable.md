@@ -5,7 +5,7 @@ title: "Programmable self-assembly in a thousand-robot swarm"
 authors: ["Michael Rubenstein", "Alejandro Cornejo", "Radhika Nagpal"]
 year: 2014
 venue: "Science"
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/25124435?resultType=core&format=json
+url: https://doi.org/10.1126/science.1254295
 doi: "10.1126/science.1254295"
 arxiv: null
 cite: "Rubenstein, M., Cornejo, A., & Nagpal, R. (2014). Programmable self-assembly in a thousand-robot swarm. Science, 345(6198), 795–799."

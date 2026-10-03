@@ -5,7 +5,7 @@ title: "How do cicadas emerge together? Thermophysical aspects of their collecti
 authors: ["Raymond E. Goldstein", "Robert L. Jack", "Adriana I. Pesci"]
 year: 2024
 venue: "Physical Review E"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/38491648?resultType=core&format=json"
+url: https://doi.org/10.1103/physreve.109.l022401
 doi: "10.1103/physreve.109.l022401"
 arxiv: null
 cite: "Goldstein, R. E., Jack, R. L., & Pesci, A. I. (2024). How do cicadas emerge together? Thermophysical aspects of their collective decision-making. Physical Review E, 109(2), L022401. https://doi.org/10.1103/physreve.109.l022401"

@@ -5,7 +5,7 @@ title: "Leadership, consensus decision making and collective behaviour in humans
 authors: ["John R.G Dyer", "Anders Johansson", "Dirk Helbing", "Iain D Couzin", "Jens Krause"]
 year: 2009
 venue: "Philosophical Transactions of the Royal Society B: Biological Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/19073481?resultType=core&format=json"
+url: https://doi.org/10.1098/rstb.2008.0233
 doi: "10.1098/rstb.2008.0233"
 arxiv: null
 cite: "Dyer, J. R., Johansson, A., Helbing, D., Couzin, I. D., & Krause, J. (2009). Leadership, consensus decision making and collective behaviour in humans. Philosophical Transactions of the Royal Society B: Biological Sciences, 364(1518), 781–789. https://doi.org/10.1098/rstb.2008.0233"

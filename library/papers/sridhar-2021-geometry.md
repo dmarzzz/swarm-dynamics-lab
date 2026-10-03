@@ -5,7 +5,7 @@ title: "The geometry of decision-making in individuals and collectives"
 authors: ["Vivek H. Sridhar", "Liang Li", "Dan Gorbonos", "Máté Nagy", "Bianca R. Schell", "Timothy Sorochkin", "Nir S. Gov", "Iain D. Couzin"]
 year: 2021
 venue: "Proceedings of the National Academy of Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8685676/fullTextXML"
+url: https://doi.org/10.1073/pnas.2102157118
 doi: "10.1073/pnas.2102157118"
 arxiv: null
 cite: "Sridhar, V. H., Li, L., Gorbonos, D., Nagy, M., Schell, B. R., Sorochkin, T., Gov, N. S., & Couzin, I. D. (2021). The geometry of decision-making in individuals and collectives. Proceedings of the National Academy of Sciences, 118(50), e2102157118. https://doi.org/10.1073/pnas.2102157118"

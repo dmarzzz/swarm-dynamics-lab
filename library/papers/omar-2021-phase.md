@@ -5,7 +5,7 @@ title: "Phase Diagram of Active Brownian Spheres: Crystallization and the Metast
 authors: ["Ahmad K. Omar", "Katherine Klymko", "Trevor GrandPre", "Phillip L. Geissler"]
 year: 2021
 venue: "Physical Review Letters"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1103/physrevlett.126.188002
+url: https://doi.org/10.1103/physrevlett.126.188002
 doi: "10.1103/physrevlett.126.188002"
 arxiv: "2012.09803"
 cite: "Omar, A. K., Klymko, K., GrandPre, T., & Geissler, P. L. (2021). Phase Diagram of Active Brownian Spheres: Crystallization and the Metastability of Motility-Induced Phase Separation. Physical Review Letters, 126(18), 188002."

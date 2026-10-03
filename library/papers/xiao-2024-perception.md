@@ -5,7 +5,7 @@ title: "Perception of motion salience shapes the emergence of collective motions
 authors: ["Yandong Xiao", "Xiaokang Lei", "Zhicheng Zheng", "Yalun Xiang", "Yang-Yu Liu", "Xingguang Peng"]
 year: 2024
 venue: "Nature Communications"
-url: https://api.crossref.org/works/10.1038/s41467-024-49151-x
+url: https://doi.org/10.1038/s41467-024-49151-x
 doi: "10.1038/s41467-024-49151-x"
 arxiv: null
 cite: "Xiao, Y., Lei, X., Zheng, Z., Xiang, Y., Liu, Y.-Y., & Peng, X. (2024). Perception of motion salience shapes the emergence of collective motions. Nature Communications, 15(1), 4779."

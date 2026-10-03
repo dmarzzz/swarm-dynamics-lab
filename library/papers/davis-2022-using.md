@@ -5,7 +5,7 @@ title: "Using optimal foraging theory to infer how groups make collective decisi
 authors: ["Grace H. Davis", "Margaret C. Crofoot", "Damien R. Farine"]
 year: 2022
 venue: "Trends in Ecology & Evolution"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/35842325?resultType=core&format=json"
+url: https://doi.org/10.1016/j.tree.2022.06.010
 doi: "10.1016/j.tree.2022.06.010"
 arxiv: null
 cite: "Davis, G. H., Crofoot, M. C., & Farine, D. R. (2022). Using optimal foraging theory to infer how groups make collective decisions. Trends in Ecology & Evolution, 37(11), 942–952. https://doi.org/10.1016/j.tree.2022.06.010"

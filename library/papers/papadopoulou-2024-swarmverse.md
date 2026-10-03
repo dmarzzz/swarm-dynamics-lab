@@ -5,7 +5,7 @@ title: "swaRmverse: An R package for the comparative analysis of collective moti
 authors: ["Marina Papadopoulou", "Simon Garnier", "Andrew J. King"]
 year: 2024
 venue: "Methods in Ecology and Evolution"
-url: https://api.crossref.org/works/10.1111/2041-210x.14460
+url: https://doi.org/10.1111/2041-210x.14460
 doi: "10.1111/2041-210x.14460"
 arxiv: null
 cite: "Papadopoulou, M., Garnier, S., & King, A. J. (2024). swaRmverse: An R package for the comparative analysis of collective motion. Methods in Ecology and Evolution, 16(1), 29-39."

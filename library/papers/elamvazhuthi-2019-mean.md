@@ -5,7 +5,7 @@ title: "Mean-field models in swarm robotics: a survey"
 authors: ["Karthik Elamvazhuthi", "Spring Berman"]
 year: 2019
 venue: "Bioinspiration & Biomimetics"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1088/1748-3190/ab49a4?fields=title,abstract
+url: https://doi.org/10.1088/1748-3190/ab49a4
 doi: "10.1088/1748-3190/ab49a4"
 arxiv: null
 cite: "Elamvazhuthi, K., & Berman, S. (2019). Mean-field models in swarm robotics: a survey. Bioinspiration & Biomimetics, 15(1), 015001."

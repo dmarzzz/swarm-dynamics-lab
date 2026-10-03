@@ -8,7 +8,7 @@ authors:
 - Andrew Lewis
 year: 2014
 venue: Advances in Engineering Software
-url: https://api.openalex.org/works/W2061438946
+url: https://doi.org/10.1016/j.advengsoft.2013.12.007
 doi: 10.1016/j.advengsoft.2013.12.007
 arxiv: null
 cite: Mirjalili, S., Mirjalili, S. M., & Lewis, A. (2014). Grey Wolf Optimizer. Advances in Engineering Software, 69, 46–61. https://doi.org/10.1016/j.advengsoft.2013.12.007

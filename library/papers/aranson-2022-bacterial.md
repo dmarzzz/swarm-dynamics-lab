@@ -5,7 +5,7 @@ title: "Bacterial active matter"
 authors: ["Igor S Aranson"]
 year: 2022
 venue: "Reports on Progress in Physics"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1088/1361-6633/ac723d
+url: https://doi.org/10.1088/1361-6633/ac723d
 doi: "10.1088/1361-6633/ac723d"
 arxiv: null
 cite: "Aranson, I. S. (2022). Bacterial active matter. Reports on Progress in Physics, 85(7), 076601."

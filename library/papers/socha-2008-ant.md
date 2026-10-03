@@ -7,7 +7,7 @@ authors:
 - Marco Dorigo
 year: 2008
 venue: European Journal of Operational Research
-url: https://api.openalex.org/works/W1975009952
+url: https://doi.org/10.1016/j.ejor.2006.06.046
 doi: 10.1016/j.ejor.2006.06.046
 arxiv: null
 cite: Socha, K., & Dorigo, M. (2008). Ant colony optimization for continuous domains. European Journal of Operational Research, 185(3), 1155–1173. https://doi.org/10.1016/j.ejor.2006.06.046

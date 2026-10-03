@@ -80,3 +80,7 @@ than 1/ρ will clump. Pairs with [[fily-2012-athermal]] (minimal simulation), [[
 [[digregorio-2018-full]] (full ABP phase diagram), [[solon-2015-pressure]] (no equation of state), and
 [[wittkowski-2014-scalar]] (Active Model B). Contrasts with alignment-driven phase separation in Vicsek-type flocks
 ([[chate-2019-dry]], [[solon-2015-phase]]).
+
+## Notes from dmarz/active-matter-audit
+
+Audit 2026-10-03: checked title, authors, venue, cite (6(1), 219–244) against Crossref and arXiv:1406.3533, and checked the key numbers against the arXiv PDF (Pe_c ≈ 55 in 2D and ≈ 125 in 3D, under-prediction by a factor of 50 or more, 40 million particles, 0.25 ≤ α ≤ 0.28, ε < 1/8). All correct; no changes. read_depth full is consistent with the content.

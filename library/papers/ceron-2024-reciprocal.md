@@ -5,7 +5,7 @@ title: Reciprocal and Non-Reciprocal Swarmalators with Programmable Locomotion a
 authors: [Steven Ceron, Wei Xiao, Daniela Rus]
 year: 2024
 venue: 2024 IEEE International Conference on Robotics and Automation (ICRA)
-url: https://api.openalex.org/works/doi:10.1109/icra57147.2024.10610540
+url: https://doi.org/10.1109/icra57147.2024.10610540
 doi: 10.1109/icra57147.2024.10610540
 arxiv: null
 cite: "Ceron, S., Xiao, W., & Rus, D. (2024). Reciprocal and non-reciprocal swarmalators with programmable locomotion and formations for robot swarms. In 2024 IEEE International Conference on Robotics and Automation (ICRA) (pp. 12233-12239). IEEE."

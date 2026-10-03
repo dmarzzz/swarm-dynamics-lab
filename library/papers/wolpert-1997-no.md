@@ -7,7 +7,7 @@ authors:
 - William G. Macready
 year: 1997
 venue: IEEE Transactions on Evolutionary Computation
-url: https://api.openalex.org/works/W2151554678
+url: https://doi.org/10.1109/4235.585893
 doi: 10.1109/4235.585893
 arxiv: null
 cite: Wolpert, D. H., & Macready, W. G. (1997). No free lunch theorems for optimization. IEEE Transactions on Evolutionary Computation, 1(1), 67–82. https://doi.org/10.1109/4235.585893

@@ -5,7 +5,7 @@ title: "Information flow, opinion polling and collective intelligence in house�
 authors: ["Nigel R. Franks", "Stephen C. Pratt", "Eamonn B. Mallon", "Nicholas F. Britton", "David J. T. Sumpter"]
 year: 2002
 venue: "Philosophical Transactions of the Royal Society of London. Series B: Biological Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/12495514?resultType=core&format=json"
+url: https://doi.org/10.1098/rstb.2002.1066
 doi: "10.1098/rstb.2002.1066"
 arxiv: null
 cite: "Franks, N. R., Pratt, S. C., Mallon, E. B., Britton, N. F., & Sumpter, D. J. T. (2002). Information flow, opinion polling and collective intelligence in house–hunting social insects. Philosophical Transactions of the Royal Society of London. Series B: Biological Sciences, 357(1427), 1567–1583. https://doi.org/10.1098/rstb.2002.1066"

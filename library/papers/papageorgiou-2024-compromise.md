@@ -5,7 +5,7 @@ title: "Compromise or choose: shared movement decisions in wild vulturine guinea
 authors: ["Danai Papageorgiou", "Brendah Nyaguthii", "Damien R. Farine"]
 year: 2024
 venue: "Communications Biology"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10787764/fullTextXML"
+url: https://doi.org/10.1038/s42003-024-05782-w
 doi: "10.1038/s42003-024-05782-w"
 arxiv: null
 cite: "Papageorgiou, D., Nyaguthii, B., & Farine, D. R. (2024). Compromise or choose: shared movement decisions in wild vulturine guineafowl. Communications Biology, 7(1), 95. https://doi.org/10.1038/s42003-024-05782-w"

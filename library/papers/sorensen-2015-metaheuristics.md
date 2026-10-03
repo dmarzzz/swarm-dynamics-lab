@@ -6,7 +6,7 @@ authors:
 - Kenneth Sörensen
 year: 2015
 venue: International Transactions in Operational Research
-url: https://api.openalex.org/works/W2032982318
+url: https://doi.org/10.1111/itor.12001
 doi: 10.1111/itor.12001
 arxiv: null
 cite: Sörensen, K. (2015). Metaheuristics—the metaphor exposed. International Transactions in Operational Research, 22(1), 3–18. https://doi.org/10.1111/itor.12001

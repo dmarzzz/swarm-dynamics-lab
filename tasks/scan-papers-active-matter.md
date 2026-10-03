@@ -137,3 +137,69 @@ das-2024-flocking and mahault-2019-quantitative add three more full reads, but t
 4. A code scan of the swarmtronics repositories and of public Vicsek/ABP simulators. Give priority to GPU-ready
    aarch64-compatible ones.
 5. A non-reciprocal active matter scan covering the field-theory papers listed in Gaps.
+
+### Audit (dmarz/active-matter-audit)
+
+Audit on 2026-10-03. `lab.py verify` flagged one entry, toner-1995-long. It is a false positive (Crossref MathML in the
+title, arXiv title in reversed order). I set its arxiv field to adap-org/9506001, the preprint that was actually read.
+I cross-checked all 62 entries against OpenAlex single-work records for authors, year and venue and found no
+misattribution. Two things looked like errors but were not: alert-2022-active's OpenAlex year of 2021 is the online
+date, and aina-2022-toward's arXiv id is a 2025 posting of the same paper. I spot-checked the six full-read entries
+(cates-2015-motility, toner-1995-long, fily-2012-athermal, buttinoni-2013-dynamical, chate-2019-dry,
+shaebani-2020-computational) and aina-2022-toward and wang-2024-robo against the PDFs and Crossref. Titles, cite
+strings and the quoted numbers were all correct, and the full-read claims hold up.
+
+Fixes:
+- bauerle-2018-self had citations "0 (Semantic Scholar)", which was wrong (OpenAlex: 185). I read it in full and
+  rewrote it.
+- I read deseigne-2010-collective in full and rewrote it, adding the measured GNF exponent 1.45 ± 0.05 against the
+  predicted 1.6.
+- I replaced citation counts in 48 entries with OpenAlex counts, so the field now uses one source.
+
+No phantoms, so nothing was deleted. Note that 18 entries use a Semantic Scholar API record as their url. That is
+honest, since it was the page read, but it means those entries were read only at abstract depth.
+
+New search rounds:
+- Semantic Scholar forward citations of Marchetti 2013, 2023 onward, ranked by citations: 1034 citers fetched, top
+  40 inspected, 34 new.
+- The same for Bechinger 2016: 857 fetched, top 40 inspected, 36 new. Most hits in both were off-topic.
+- Crossref with neighbouring-field vocabulary: "non-reciprocal interactions", "active glass / jamming", "3D
+  flocking long-range order", "robotic active matter", "chiral active matter / odd". About 40 results each, almost
+  all new because these subareas were uncatalogued.
+
+The OpenAlex search quota was used up again during this audit (single-work lookups still worked), and the WebSearch
+budget was exhausted, so no general-web round was possible.
+
+Added 9 papers:
+- lowen-2020-inertial (inertial active matter)
+- bar-2020-self (self-propelled rods review)
+- liebchen-2022-chiral (chiral active matter)
+- granek-2024-colloquium (boundaries and disorder in scalar active matter)
+- zhao-2023-chemotactic (chemotactic MIPS)
+- lefranc-2025-synthetic (autonomous quorum sensing and absorbing transitions)
+- caprini-2024-emergent (tapping collisions in vibrobots)
+- dias-2023-environmental (stigmergy from environmental memory, read in full)
+- brauns-2024-nonreciprocal (nonreciprocal Cahn–Hilliard)
+
+Found but not added:
+- Hallatschek et al. 2023, "Proliferating active matter" (Nat. Rev. Phys., paywalled, no preprint found).
+- Berthier, Flenner & Szamel 2019, "Glassy dynamics in dense systems of active particles" (J. Chem. Phys.,
+  arXiv:1902.08580).
+- Berthier 2014, active glassy dynamics of hard disks (PRL 112, 220602).
+- Saha, Agudo-Canalejo & Golestanian, non-reciprocal Cahn–Hilliard universality (PRL 131, 107201).
+- "Two-Dimensional Crystals far from Equilibrium" (PRL 131, 047101).
+- "Dynamical clustering and wetting phenomena in inertial active matter" (Commun. Phys. 2024).
+- "Harnessing synthetic active particles for physical reservoir computing" (Nat. Commun. 2024).
+- "Worm blobs as entangled living polymers" (Soft Matter 2023).
+- "Inertial effects ... active Ornstein–Uhlenbeck with inertia" (JPCM 2021).
+- "From flocking to glassiness in dense disordered polar active matter" (Commun. Phys. 2024).
+- "Thermodynamics of Active Matter: Tracking Dissipation across Scales" (PRX 2025).
+- Martin et al. 2023 on non-reciprocal flocking (arXiv:2307.08251).
+
+Still thin:
+- 3D flocking: the Crossref round found nothing usable.
+- Active glasses and jamming: only listed above.
+- Active nematic defects in tissues.
+- High-relevance robot bridges still at abstract depth: baconnier-2025-self, veenstra-2025-adaptive,
+  ziepke-2025-acoustic, ning-2024-macroscopic.
+- Code links for the new entries: none of the nine papers ships a public repository.

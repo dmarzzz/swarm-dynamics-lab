@@ -5,7 +5,7 @@ title: "Thirty years of surprises about collective motion"
 authors: ["Alexandre Solon"]
 year: 2024
 venue: "Europhysics News"
-url: https://api.crossref.org/works/10.1051/epn/2024309
+url: https://doi.org/10.1051/epn/2024309
 doi: "10.1051/epn/2024309"
 arxiv: null
 cite: "Solon, A. (2024). Thirty years of surprises about collective motion. Europhysics News, 55(3), 28-31."

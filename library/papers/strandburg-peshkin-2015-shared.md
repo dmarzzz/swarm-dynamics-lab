@@ -5,7 +5,7 @@ title: "Shared decision-making drives collective movement in wild baboons"
 authors: ["Ariana Strandburg-Peshkin", "Damien R. Farine", "Iain D. Couzin", "Margaret C. Crofoot"]
 year: 2015
 venue: "Science"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/26089514?resultType=core&format=json"
+url: https://doi.org/10.1126/science.aaa5099
 doi: "10.1126/science.aaa5099"
 arxiv: null
 cite: "Strandburg-Peshkin, A., Farine, D. R., Couzin, I. D., & Crofoot, M. C. (2015). Shared decision-making drives collective movement in wild baboons. Science, 348(6241), 1358–1361. https://doi.org/10.1126/science.aaa5099"

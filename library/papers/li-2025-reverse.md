@@ -5,7 +5,7 @@ title: "Reverse engineering the control law for schooling in zebrafish using vir
 authors: ["Liang Li", "Máté Nagy", "Guy Amichay", "Ruiheng Wu", "Wei Wang", "Oliver Deussen", "Daniela Rus", "Iain D. Couzin"]
 year: 2025
 venue: "Science Robotics"
-url: https://api.crossref.org/works/10.1126/scirobotics.adq6784
+url: https://doi.org/10.1126/scirobotics.adq6784
 doi: "10.1126/scirobotics.adq6784"
 arxiv: null
 cite: "Li, L., Nagy, M., Amichay, G., Wu, R., Wang, W., Deussen, O., Rus, D., & Couzin, I. D. (2025). Reverse engineering the control law for schooling in zebrafish using virtual reality. Science Robotics, 10(101), eadq6784."

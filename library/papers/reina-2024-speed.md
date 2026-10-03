@@ -5,7 +5,7 @@ title: "Speed-accuracy trade-offs in best-of-n collective decision making throug
 authors: ["Andreagiovanni Reina", "Thierry Njougouo", "Elio Tuci", "Timoteo Carletti"]
 year: 2024
 venue: "Physical Review E"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/38907396?resultType=core&format=json"
+url: https://doi.org/10.1103/physreve.109.054307
 doi: "10.1103/physreve.109.054307"
 arxiv: "2310.13694"
 cite: "Reina, A., Njougouo, T., Tuci, E., & Carletti, T. (2024). Speed-accuracy trade-offs in best-of-n collective decision making through heterogeneous mean-field modeling. Physical Review E, 109(5), 054307. https://doi.org/10.1103/physreve.109.054307"

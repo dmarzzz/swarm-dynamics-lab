@@ -5,7 +5,7 @@ title: "When are active Brownian particles and run-and-tumble particles equivale
 authors: ["M. E. Cates", "J. Tailleur"]
 year: 2013
 venue: "EPL (Europhysics Letters)"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1209/0295-5075/101/20010
+url: https://doi.org/10.1209/0295-5075/101/20010
 doi: "10.1209/0295-5075/101/20010"
 arxiv: "1206.1805"
 cite: "Cates, M. E., & Tailleur, J. (2013). When are active Brownian particles and run-and-tumble particles equivalent? Consequences for motility-induced phase separation. EPL (Europhysics Letters), 101(2), 20010."

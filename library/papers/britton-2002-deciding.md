@@ -5,7 +5,7 @@ title: "Deciding on a new home: how do honeybees agree?"
 authors: ["N. F. Britton", "N. R. Franks", "S. C. Pratt", "T. D. Seeley"]
 year: 2002
 venue: "Proceedings of the Royal Society of London. Series B: Biological Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/12079662?resultType=core&format=json"
+url: https://doi.org/10.1098/rspb.2002.2001
 doi: "10.1098/rspb.2002.2001"
 arxiv: null
 cite: "Britton, N. F., Franks, N. R., Pratt, S. C., & Seeley, T. D. (2002). Deciding on a new home: how do honeybees agree?. Proceedings of the Royal Society of London. Series B: Biological Sciences, 269(1498), 1383–1388. https://doi.org/10.1098/rspb.2002.2001"

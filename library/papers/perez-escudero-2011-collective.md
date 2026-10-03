@@ -5,7 +5,7 @@ title: "Collective Animal Behavior from Bayesian Estimation and Probability Matc
 authors: ["Alfonso Pérez-Escudero", "Gonzalo G. de Polavieja"]
 year: 2011
 venue: "PLoS Computational Biology"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/22125487?resultType=core&format=json"
+url: https://doi.org/10.1371/journal.pcbi.1002282
 doi: "10.1371/journal.pcbi.1002282"
 arxiv: "1105.1117"
 cite: "Pérez-Escudero, A., & de Polavieja, G. G. (2011). Collective Animal Behavior from Bayesian Estimation and Probability Matching. PLoS Computational Biology, 7(11), e1002282. https://doi.org/10.1371/journal.pcbi.1002282"

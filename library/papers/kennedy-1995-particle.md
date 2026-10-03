@@ -7,7 +7,7 @@ authors:
 - Russell Eberhart
 year: 1995
 venue: Proceedings of ICNN'95 - International Conference on Neural Networks (IEEE)
-url: https://api.openalex.org/works/W2152195021
+url: https://doi.org/10.1109/ICNN.1995.488968
 doi: 10.1109/ICNN.1995.488968
 arxiv: null
 cite: Kennedy, J., & Eberhart, R. (1995). Particle swarm optimization. In Proceedings of ICNN'95 - International Conference on Neural Networks (Vol. 4, pp. 1942–1948). IEEE. https://doi.org/10.1109/ICNN.1995.488968

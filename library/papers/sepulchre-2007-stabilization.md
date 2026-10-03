@@ -5,7 +5,7 @@ title: "Stabilization of Planar Collective Motion: All-to-All Communication"
 authors: [Rodolphe Sepulchre, Derek A. Paley, Naomi Ehrich Leonard]
 year: 2007
 venue: IEEE Transactions on Automatic Control
-url: https://api.openalex.org/works/doi:10.1109/tac.2007.898077
+url: https://doi.org/10.1109/tac.2007.898077
 doi: 10.1109/tac.2007.898077
 arxiv: null
 cite: "Sepulchre, R., Paley, D. A., & Leonard, N. E. (2007). Stabilization of planar collective motion: All-to-all communication. IEEE Transactions on Automatic Control, 52(5), 811-824."

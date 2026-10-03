@@ -5,7 +5,7 @@ title: "An Overview of Swarm Coordinated Control"
 authors: ["Dengxiu Yu", "Jiacheng Li", "Zhen Wang", "Xuelong Li"]
 year: 2024
 venue: "IEEE Transactions on Artificial Intelligence"
-url: https://api.openalex.org/works/doi:10.1109/tai.2023.3314581
+url: https://doi.org/10.1109/tai.2023.3314581
 doi: "10.1109/tai.2023.3314581"
 arxiv: null
 cite: "Yu, D., Li, J., Wang, Z., & Li, X. (2024). An Overview of Swarm Coordinated Control. IEEE Transactions on Artificial Intelligence, 5(5), 1918–1938."

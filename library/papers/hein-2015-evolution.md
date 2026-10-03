@@ -5,7 +5,7 @@ title: "The evolution of distributed sensing and collective computation in anima
 authors: ["Andrew M Hein", "Sara Brin Rosenthal", "George I Hagstrom", "Andrew Berdahl", "Colin J Torney", "Iain D Couzin"]
 year: 2015
 venue: "eLife"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4755780/fullTextXML"
+url: https://doi.org/10.7554/elife.10955
 doi: "10.7554/elife.10955"
 arxiv: null
 cite: "Hein, A. M., Rosenthal, S. B., Hagstrom, G. I., Berdahl, A., Torney, C. J., & Couzin, I. D. (2015). The evolution of distributed sensing and collective computation in animal populations. eLife, 4, e10955. https://doi.org/10.7554/elife.10955"

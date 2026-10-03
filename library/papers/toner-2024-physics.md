@@ -5,7 +5,7 @@ title: "The Physics of Flocking"
 authors: ["John Toner"]
 year: 2024
 venue: "Cambridge University Press (book)"
-url: https://api.crossref.org/works/10.1017/9781108993623
+url: https://doi.org/10.1017/9781108993623
 doi: "10.1017/9781108993623"
 arxiv: null
 cite: "Toner, J. (2024). The Physics of Flocking. Cambridge University Press. https://doi.org/10.1017/9781108993623"

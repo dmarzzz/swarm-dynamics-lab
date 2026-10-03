@@ -5,7 +5,7 @@ title: "Multi-scale organization in communicating active matter"
 authors: ["Alexander Ziepke", "Ivan Maryshev", "Igor S. Aranson", "Erwin Frey"]
 year: 2022
 venue: "Nature Communications"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/s41467-022-34484-2
+url: https://doi.org/10.1038/s41467-022-34484-2
 doi: "10.1038/s41467-022-34484-2"
 arxiv: null
 cite: "Ziepke, A., Maryshev, I., Aranson, I. S., & Frey, E. (2022). Multi-scale organization in communicating active matter. Nature Communications, 13(1), 6727."

@@ -5,7 +5,7 @@ title: "Emergent Sensing of Complex Environments by Mobile Animal Groups"
 authors: ["Andrew Berdahl", "Colin J. Torney", "Christos C. Ioannou", "Jolyon J. Faria", "Iain D. Couzin"]
 year: 2013
 venue: "Science"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/23372013?resultType=core&format=json"
+url: https://doi.org/10.1126/science.1225883
 doi: "10.1126/science.1225883"
 arxiv: null
 cite: "Berdahl, A., Torney, C. J., Ioannou, C. C., Faria, J. J., & Couzin, I. D. (2013). Emergent Sensing of Complex Environments by Mobile Animal Groups. Science, 339(6119), 574–576. https://doi.org/10.1126/science.1225883"

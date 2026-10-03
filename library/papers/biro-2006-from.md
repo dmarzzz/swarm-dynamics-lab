@@ -5,7 +5,7 @@ title: "From Compromise to Leadership in Pigeon Homing"
 authors: ["Dora Biro", "David J.T. Sumpter", "Jessica Meade", "Tim Guilford"]
 year: 2006
 venue: "Current Biology"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/17084696?resultType=core&format=json"
+url: https://doi.org/10.1016/j.cub.2006.08.087
 doi: "10.1016/j.cub.2006.08.087"
 arxiv: null
 cite: "Biro, D., Sumpter, D. J., Meade, J., & Guilford, T. (2006). From Compromise to Leadership in Pigeon Homing. Current Biology, 16(21), 2123–2128. https://doi.org/10.1016/j.cub.2006.08.087"

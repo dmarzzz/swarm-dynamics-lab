@@ -8,7 +8,7 @@ authors:
 - Marco Dorigo
 year: 2023
 venue: Intelligent Computing
-url: https://api.openalex.org/works/W4388296441
+url: https://doi.org/10.34133/icomputing.0048
 doi: 10.34133/icomputing.0048
 arxiv: null
 cite: 'Camacho-Villalón, C. L., Stützle, T., & Dorigo, M. (2023). Designing new metaheuristics: Manual versus automatic approaches. Intelligent Computing, 2, 0048. https://doi.org/10.34133/icomputing.0048'

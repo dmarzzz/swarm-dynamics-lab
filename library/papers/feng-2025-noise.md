@@ -5,7 +5,7 @@ title: Noise-Driven Transitions in Collective Foraging of Ant Colonies
 authors: [Tao Feng, Chenbo Liu, Russell Milne]
 year: 2025
 venue: Bulletin of Mathematical Biology
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/40392365?resultType=core&format=json
+url: https://doi.org/10.1007/s11538-025-01461-x
 doi: 10.1007/s11538-025-01461-x
 arxiv: null
 cite: Feng, T., Liu, C., & Milne, R. (2025). Noise-driven transitions in collective foraging of ant colonies. Bulletin of Mathematical Biology, 87(6), 78. https://doi.org/10.1007/s11538-025-01461-x

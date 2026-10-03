@@ -5,7 +5,7 @@ title: "Living Crystals of Light-Activated Colloidal Surfers"
 authors: ["Jeremie Palacci", "Stefano Sacanna", "Asher Preska Steinberg", "David J. Pine", "Paul M. Chaikin"]
 year: 2013
 venue: "Science"
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/23371555
+url: https://doi.org/10.1126/science.1230020
 doi: "10.1126/science.1230020"
 arxiv: null
 cite: "Palacci, J., Sacanna, S., Steinberg, A. P., Pine, D. J., & Chaikin, P. M. (2013). Living Crystals of Light-Activated Colloidal Surfers. Science, 339(6122), 936–940."

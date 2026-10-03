@@ -5,7 +5,7 @@ title: "Programming active cohesive granular matter with mechanically induced ph
 authors: ["Shengkai Li", "Bahnisikha Dutta", "Sarah Cannon", "Joshua J. Daymude", "Ram Avinery", "Enes Aydin", "Andréa W. Richa", "Daniel I. Goldman", "Dana Randall"]
 year: 2021
 venue: "Science Advances"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1126/sciadv.abe8494?fields=title,abstract
+url: https://doi.org/10.1126/sciadv.abe8494
 doi: "10.1126/sciadv.abe8494"
 arxiv: "2009.05710"
 cite: "Li, S., Dutta, B., Cannon, S., Daymude, J. J., Avinery, R., Aydin, E., Richa, A. W., Goldman, D. I., & Randall, D. (2021). Programming active cohesive granular matter with mechanically induced phase changes. Science Advances, 7(17), eabe8494."

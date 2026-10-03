@@ -5,7 +5,7 @@ title: "Snail-inspired robotic swarms: a hybrid connector drives collective adap
 authors: ["Da Zhao", "Haobo Luo", "Yuxiao Tu", "Chongxi Meng", "Tin Lun Lam"]
 year: 2024
 venue: "Nature Communications"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/s41467-024-47788-2?fields=title,abstract
+url: https://doi.org/10.1038/s41467-024-47788-2
 doi: "10.1038/s41467-024-47788-2"
 arxiv: null
 cite: "Zhao, D., Luo, H., Tu, Y., Meng, C., & Lam, T. L. (2024). Snail-inspired robotic swarms: a hybrid connector drives collective adaptation in unstructured outdoor environments. Nature Communications, 15(1), 3647."

@@ -5,7 +5,7 @@ title: "A multi-scale review of the dynamics of collective behaviour: from rapid
 authors: ["Christos C. Ioannou", "Kate L. Laskowski"]
 year: 2023
 venue: "Philosophical Transactions of the Royal Society B"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/36802782?resultType=core&format=json"
+url: https://doi.org/10.1098/rstb.2022.0059
 doi: "10.1098/rstb.2022.0059"
 arxiv: null
 cite: "Ioannou, C. C., & Laskowski, K. L. (2023). A multi-scale review of the dynamics of collective behaviour: from rapid responses to ontogeny and evolution. Philosophical Transactions of the Royal Society B, 378(1874), 20220059. https://doi.org/10.1098/rstb.2022.0059"

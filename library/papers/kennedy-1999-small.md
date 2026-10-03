@@ -6,7 +6,7 @@ authors:
 - James Kennedy
 year: 1999
 venue: Proceedings of the 1999 Congress on Evolutionary Computation (CEC99)
-url: https://api.openalex.org/works/W2135232426
+url: https://doi.org/10.1109/CEC.1999.785509
 doi: 10.1109/CEC.1999.785509
 arxiv: null
 cite: 'Kennedy, J. (1999). Small worlds and mega-minds: Effects of neighborhood topology on particle swarm performance. In Proceedings of the 1999 Congress on Evolutionary Computation-CEC99 (Vol. 3, pp. 1931–1938). IEEE. https://doi.org/10.1109/CEC.1999.785509'

@@ -5,7 +5,7 @@ title: Consensus seeking in multiagent systems under dynamically changing intera
 authors: [Wei Ren, Randal W. Beard]
 year: 2005
 venue: IEEE Transactions on Automatic Control
-url: https://api.openalex.org/works/doi:10.1109/tac.2005.846556
+url: https://doi.org/10.1109/tac.2005.846556
 doi: 10.1109/tac.2005.846556
 arxiv: null
 cite: "Ren, W., & Beard, R. W. (2005). Consensus seeking in multiagent systems under dynamically changing interaction topologies. IEEE Transactions on Automatic Control, 50(5), 655-661."

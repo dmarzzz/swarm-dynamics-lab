@@ -5,7 +5,7 @@ title: Consensus Problems on Networks With Antagonistic Interactions
 authors: [Claudio Altafini]
 year: 2013
 venue: IEEE Transactions on Automatic Control
-url: https://api.openalex.org/works/doi:10.1109/tac.2012.2224251
+url: https://doi.org/10.1109/tac.2012.2224251
 doi: 10.1109/tac.2012.2224251
 arxiv: null
 cite: "Altafini, C. (2013). Consensus problems on networks with antagonistic interactions. IEEE Transactions on Automatic Control, 58(4), 935-946."

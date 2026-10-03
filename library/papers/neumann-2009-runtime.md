@@ -7,7 +7,7 @@ authors:
 - Carsten Witt
 year: 2009
 venue: Algorithmica
-url: https://api.openalex.org/works/W2011904305
+url: https://doi.org/10.1007/s00453-007-9134-2
 doi: 10.1007/s00453-007-9134-2
 arxiv: null
 cite: Neumann, F., & Witt, C. (2009). Runtime analysis of a simple ant colony optimization algorithm. Algorithmica, 54(2), 243. https://doi.org/10.1007/s00453-007-9134-2

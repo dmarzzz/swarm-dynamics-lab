@@ -5,7 +5,7 @@ title: "Social Integration of Robots into Groups of Cockroaches to Control Self-
 authors: ["J. Halloy", "G. Sempo", "G. Caprari", "C. Rivault", "M. Asadpour", "F. Tâche", "I. Saïd", "V. Durier", "S. Canonge", "J. M. Amé", "C. Detrain", "N. Correll", "A. Martinoli", "F. Mondada", "R. Siegwart", "J. L. Deneubourg"]
 year: 2007
 venue: "Science"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/18006751?resultType=core&format=json"
+url: https://doi.org/10.1126/science.1144259
 doi: "10.1126/science.1144259"
 arxiv: null
 cite: "Halloy, J., Sempo, G., Caprari, G., Rivault, C., Asadpour, M., Tâche, F., Saïd, I., Durier, V., Canonge, S., Amé, J. M., et al. (2007). Social Integration of Robots into Groups of Cockroaches to Control Self-Organized Choices. Science, 318(5853), 1155–1158. https://doi.org/10.1126/science.1144259"

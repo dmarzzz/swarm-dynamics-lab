@@ -5,7 +5,7 @@ title: "Transition to Collective Motion in Nonreciprocal Active Matter: Coarse G
 authors: ["David Martin", "Daniel Seara", "Yael Avni", "Michel Fruchart", "Vincenzo Vitelli"]
 year: 2025
 venue: "Physical Review X"
-url: https://api.crossref.org/works/10.1103/physrevx.15.041015
+url: https://doi.org/10.1103/physrevx.15.041015
 doi: "10.1103/physrevx.15.041015"
 arxiv: null
 cite: "Martin, D., Seara, D., Avni, Y., Fruchart, M., & Vitelli, V. (2025). Transition to Collective Motion in Nonreciprocal Active Matter: Coarse Graining Agent-Based Models into Fluctuating Hydrodynamics. Physical Review X, 15(4), 041015."

@@ -5,7 +5,7 @@ title: On the Mean-Field Limit of Consensus-Based Methods
 authors: [Marvin Koß, Simon Weißmann, Jakob Zech]
 year: 2026
 venue: Mathematical Methods in the Applied Sciences
-url: https://api.openalex.org/works/W4416729036
+url: https://doi.org/10.1002/mma.70343
 doi: 10.1002/mma.70343
 arxiv: null
 cite: Koß, M., Weißmann, S., & Zech, J. (2026). On the mean-field limit of consensus-based methods. Mathematical Methods in the Applied Sciences, 49(5), 4214–4240. https://doi.org/10.1002/mma.70343

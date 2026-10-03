@@ -5,7 +5,7 @@ title: "Dynamical order and many-body correlations in zebrafish show that three 
 authors: ["Alexandra Zampetaki", "Yushi Yang", "Hartmut Löwen", "C. Patrick Royall"]
 year: 2024
 venue: "Nature Communications"
-url: https://api.crossref.org/works/10.1038/s41467-024-46426-1
+url: https://doi.org/10.1038/s41467-024-46426-1
 doi: "10.1038/s41467-024-46426-1"
 arxiv: null
 cite: "Zampetaki, A., Yang, Y., Löwen, H., & Royall, C. P. (2024). Dynamical order and many-body correlations in zebrafish show that three is a crowd. Nature Communications, 15(1), 2591."

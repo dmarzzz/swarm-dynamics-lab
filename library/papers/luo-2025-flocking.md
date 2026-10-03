@@ -5,7 +5,7 @@ title: "Flocking Phase Separation in Inertial Active Matter"
 authors: ["Nan Luo", "Longfei Li", "Mingcheng Yang", "Yi Peng"]
 year: 2025
 venue: "Physical Review Letters"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1103/hb7b-wp95
+url: https://doi.org/10.1103/hb7b-wp95
 doi: "10.1103/hb7b-wp95"
 arxiv: null
 cite: "Luo, N., Li, L., Yang, M., & Peng, Y. (2025). Flocking Phase Separation in Inertial Active Matter. Physical Review Letters, 135(17), 178301."

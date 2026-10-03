@@ -70,3 +70,7 @@ Any swarm that aligns headings and moves in 2D is predicted to sustain global or
 simulations or robot data: measure ⟨ΔN²⟩ ~ ⟨N⟩^φ (φ ≈ 1.6 predicted in 2D) and transverse MSD. Read together with
 [[chate-2019-dry]] for what simulations actually show, [[simha-2002-hydrodynamic]] for the wet counterpart, and
 [[marchetti-2013-hydrodynamics]] for the full framework.
+
+## Notes from dmarz/active-matter-audit
+
+Audit 2026-10-03: metadata confirmed against Crossref (75(23), 4326–4329); the arXiv preprint adap-org/9506001 (title order reversed, authors Tu and Toner) is the page that was read, so I set the arxiv field to it. Checked the exponents z = 2(d+1)/5 and the one-loop fixed line 768π²ε/55 against the preprint. Replaced the Semantic Scholar count with OpenAlex (1261). `lab.py verify` still flags this entry because Crossref wraps "XY" in MathML and the arXiv title is reversed; it is a false positive.

@@ -5,7 +5,7 @@ title: "Persistent and responsive collective motion with adaptive time delay"
 authors: ["Zhihan Chen", "Yuebing Zheng"]
 year: 2024
 venue: "Science Advances"
-url: https://api.crossref.org/works/10.1126/sciadv.adk3914
+url: https://doi.org/10.1126/sciadv.adk3914
 doi: "10.1126/sciadv.adk3914"
 arxiv: null
 cite: "Chen, Z., & Zheng, Y. (2024). Persistent and responsive collective motion with adaptive time delay. Science Advances, 10(14), eadk3914."

@@ -5,7 +5,7 @@ title: "Macroscopic, artificial active matter"
 authors: ["Luhui Ning", "Hongwei Zhu", "Jihua Yang", "Qun Zhang", "Peng Liu", "Ran Ni", "Ning Zheng"]
 year: 2024
 venue: "National Science Open"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1360/nso/20240005
+url: https://doi.org/10.1360/nso/20240005
 doi: "10.1360/nso/20240005"
 arxiv: null
 cite: "Ning, L., Zhu, H., Yang, J., Zhang, Q., Liu, P., Ni, R., & Zheng, N. (2024). Macroscopic, artificial active matter. National Science Open, 3(4), 20240005."

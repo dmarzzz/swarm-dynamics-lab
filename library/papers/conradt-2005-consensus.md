@@ -5,7 +5,7 @@ title: "Consensus decision making in animals"
 authors: ["Larissa Conradt", "Timothy J. Roper"]
 year: 2005
 venue: "Trends in Ecology & Evolution"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/16701416?resultType=core&format=json"
+url: https://doi.org/10.1016/j.tree.2005.05.008
 doi: "10.1016/j.tree.2005.05.008"
 arxiv: null
 cite: "Conradt, L., & Roper, T. J. (2005). Consensus decision making in animals. Trends in Ecology & Evolution, 20(8), 449–456. https://doi.org/10.1016/j.tree.2005.05.008"

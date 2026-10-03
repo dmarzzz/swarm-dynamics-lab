@@ -5,7 +5,7 @@ title: "Robot swarms neutralize harmful Byzantine robots using a blockchain-base
 authors: ["Volker Strobel", "Alexandre Pacheco", "Marco Dorigo"]
 year: 2023
 venue: "Science Robotics"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1126/scirobotics.abm4636?fields=title,abstract
+url: https://doi.org/10.1126/scirobotics.abm4636
 doi: "10.1126/scirobotics.abm4636"
 arxiv: null
 cite: "Strobel, V., Pacheco, A., & Dorigo, M. (2023). Robot swarms neutralize harmful Byzantine robots using a blockchain-based token economy. Science Robotics, 8(79), eabm4636."

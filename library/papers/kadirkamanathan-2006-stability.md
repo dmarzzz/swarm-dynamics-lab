@@ -8,7 +8,7 @@ authors:
 - Peter J. Fleming
 year: 2006
 venue: IEEE Transactions on Evolutionary Computation
-url: https://api.openalex.org/works/W2016695533
+url: https://doi.org/10.1109/TEVC.2005.857077
 doi: 10.1109/TEVC.2005.857077
 arxiv: null
 cite: Kadirkamanathan, V., Selvarajah, K., & Fleming, P. J. (2006). Stability analysis of the particle dynamics in particle swarm optimizer. IEEE Transactions on Evolutionary Computation, 10(3), 245–255. https://doi.org/10.1109/TEVC.2005.857077

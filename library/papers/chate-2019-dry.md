@@ -76,3 +76,7 @@ This is the reference for anyone simulating Vicsek-type swarms: it tells you tha
 finite-size order-parameter curves mislead (the transition looks continuous in small systems but is discontinuous),
 and which observables (GNF exponent, band count, gas density) are robust. Use with [[vicsek-1995-novel]],
 [[chate-2008-collective]], [[mahault-2019-quantitative]] and [[chate-2024-dynamic]].
+
+## Notes from dmarz/active-matter-audit
+
+Audit 2026-10-03: checked metadata against arXiv:1906.05542 (47 pages) and the quoted numbers against the PDF (Π∞ = 0.8685(2), exponent ≃ −0.64, ρ₀ = 2, η = 0.2, L up to 2048, GNF φ ≈ 1.6–1.7 in all three classes). All correct. OpenAlex lists only 4 citations for the arXiv record (2026-10-03); the published companion is [[chate-2020-dry]].

@@ -5,7 +5,7 @@ title: "Effective Cahn-Hilliard Equation for the Phase Separation of Active Brow
 authors: ["Thomas Speck", "Julian Bialké", "Andreas M. Menzel", "Hartmut Löwen"]
 year: 2014
 venue: "Physical Review Letters"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1103/physrevlett.112.218304
+url: https://doi.org/10.1103/physrevlett.112.218304
 doi: "10.1103/physrevlett.112.218304"
 arxiv: "1312.7242"
 cite: "Speck, T., Bialké, J., Menzel, A. M., & Löwen, H. (2014). Effective Cahn-Hilliard Equation for the Phase Separation of Active Brownian Particles. Physical Review Letters, 112(21), 218304."

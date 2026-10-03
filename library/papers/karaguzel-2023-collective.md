@@ -5,7 +5,7 @@ title: "Collective gradient perception with a flying robot swarm"
 authors: ["Tugay Alperen Karagüzel", "Ali Emre Turgut", "A. E. Eiben", "Eliseo Ferrante"]
 year: 2023
 venue: "Swarm Intelligence"
-url: https://api.openalex.org/works/doi:10.1007/s11721-022-00220-1
+url: https://doi.org/10.1007/s11721-022-00220-1
 doi: "10.1007/s11721-022-00220-1"
 arxiv: null
 cite: "Karagüzel, T. A., Turgut, A. E., Eiben, A. E., & Ferrante, E. (2023). Collective gradient perception with a flying robot swarm. Swarm Intelligence, 17(1-2), 117–146."

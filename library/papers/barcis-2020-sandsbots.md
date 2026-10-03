@@ -5,7 +5,7 @@ title: "Sandsbots: Robots That Sync and Swarm"
 authors: [Agata Barcis, Christian Bettstetter]
 year: 2020
 venue: IEEE Access
-url: https://api.openalex.org/works/doi:10.1109/access.2020.3041393
+url: https://doi.org/10.1109/access.2020.3041393
 doi: 10.1109/access.2020.3041393
 arxiv: null
 cite: "Barciś, A., & Bettstetter, C. (2020). Sandsbots: Robots that sync and swarm. IEEE Access, 8, 218752-218764."

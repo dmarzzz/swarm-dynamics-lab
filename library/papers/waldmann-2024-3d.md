@@ -5,7 +5,7 @@ title: "3D-MuPPET: 3D Multi-Pigeon Pose Estimation and Tracking"
 authors: ["Urs Waldmann", "Alex Hoi Hang Chan", "Hemal Naik", "Máté Nagy", "Iain D. Couzin", "Oliver Deussen", "Bastian Goldluecke", "Fumihiro Kano"]
 year: 2024
 venue: "International Journal of Computer Vision"
-url: https://api.crossref.org/works/10.1007/s11263-024-02074-y
+url: https://doi.org/10.1007/s11263-024-02074-y
 doi: "10.1007/s11263-024-02074-y"
 arxiv: null
 cite: "Waldmann, U., Chan, A. H. H., Naik, H., Nagy, M., Couzin, I. D., Deussen, O., Goldluecke, B., & Kano, F. (2024). 3D-MuPPET: 3D Multi-Pigeon Pose Estimation and Tracking. International Journal of Computer Vision, 132(10), 4235-4252."

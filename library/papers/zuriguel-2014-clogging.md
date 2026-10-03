@@ -18,7 +18,7 @@ authors:
 - Angel Garcimartín
 year: 2014
 venue: Scientific Reports
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4255180/fullTextXML
+url: https://doi.org/10.1038/srep07324
 doi: 10.1038/srep07324
 arxiv: null
 cite: Zuriguel, I., Parisi, D. R., Hidalgo, R. C., Lozano, C., Janda, A., Gago, P. A., Peralta, J. P., Ferrer, L. M., Pugnaloni, L. A., Clément, E., et al. (2014). Clogging transition of many-particle systems flowing through bottlenecks. Scientific Reports, 4(1), 7324. https://doi.org/10.1038/srep07324

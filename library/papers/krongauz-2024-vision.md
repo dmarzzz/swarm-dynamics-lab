@@ -5,7 +5,7 @@ title: "Vision-based collective motion: A locust-inspired reductionist model"
 authors: ["David L. Krongauz", "Amir Ayali", "Gal A. Kaminka"]
 year: 2024
 venue: "PLOS Computational Biology"
-url: https://api.crossref.org/works/10.1371/journal.pcbi.1011796
+url: https://doi.org/10.1371/journal.pcbi.1011796
 doi: "10.1371/journal.pcbi.1011796"
 arxiv: null
 cite: "Krongauz, D. L., Ayali, A., & Kaminka, G. A. (2024). Vision-based collective motion: A locust-inspired reductionist model. PLOS Computational Biology, 20(1), e1011796."

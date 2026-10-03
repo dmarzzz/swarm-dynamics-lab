@@ -5,7 +5,7 @@ title: "Fast and accurate decisions through collective vigilance in fish shoals"
 authors: ["Ashley J. W. Ward", "James E. Herbert-Read", "David J. T. Sumpter", "Jens Krause"]
 year: 2011
 venue: "Proceedings of the National Academy of Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/21262802?resultType=core&format=json"
+url: https://doi.org/10.1073/pnas.1007102108
 doi: "10.1073/pnas.1007102108"
 arxiv: null
 cite: "Ward, A. J. W., Herbert-Read, J. E., Sumpter, D. J. T., & Krause, J. (2011). Fast and accurate decisions through collective vigilance in fish shoals. Proceedings of the National Academy of Sciences, 108(6), 2312–2315. https://doi.org/10.1073/pnas.1007102108"

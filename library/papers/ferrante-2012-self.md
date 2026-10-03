@@ -5,7 +5,7 @@ title: "Self-organized flocking with a mobile robot swarm: a novel motion contro
 authors: ["Eliseo Ferrante", "Ali Emre Turgut", "Cristián Huepe", "Alessandro Stranieri", "Carlo Pinciroli", "Marco Dorigo"]
 year: 2012
 venue: "Adaptive Behavior"
-url: https://api.crossref.org/works/10.1177/1059712312462248
+url: https://doi.org/10.1177/1059712312462248
 doi: "10.1177/1059712312462248"
 arxiv: null
 cite: "Ferrante, E., Turgut, A. E., Huepe, C., Stranieri, A., Pinciroli, C., & Dorigo, M. (2012). Self-organized flocking with a mobile robot swarm: a novel motion control method. Adaptive Behavior, 20(6), 460–477."

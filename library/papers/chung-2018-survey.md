@@ -5,7 +5,7 @@ title: "A Survey on Aerial Swarm Robotics"
 authors: ["Soon-Jo Chung", "Aditya Avinash Paranjape", "Philip Dames", "Shaojie Shen", "Vijay Kumar"]
 year: 2018
 venue: "IEEE Transactions on Robotics"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109/tro.2018.2857475?fields=title,abstract
+url: https://doi.org/10.1109/tro.2018.2857475
 doi: "10.1109/tro.2018.2857475"
 arxiv: null
 cite: "Chung, S.-J., Paranjape, A. A., Dames, P., Shen, S., & Kumar, V. (2018). A Survey on Aerial Swarm Robotics. IEEE Transactions on Robotics, 34(4), 837–855."

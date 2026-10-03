@@ -5,7 +5,7 @@ title: "The relative contribution of acoustic signals versus movement cues in gr
 authors: ["Chun-Chieh Liao", "Robert D. Magrath", "Marta B. Manser", "Damien R. Farine"]
 year: 2024
 venue: "Philosophical Transactions of the Royal Society B: Biological Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/38768199?resultType=core&format=json"
+url: https://doi.org/10.1098/rstb.2023.0184
 doi: "10.1098/rstb.2023.0184"
 arxiv: null
 cite: "Liao, C., Magrath, R. D., Manser, M. B., & Farine, D. R. (2024). The relative contribution of acoustic signals versus movement cues in group coordination and collective decision-making. Philosophical Transactions of the Royal Society B: Biological Sciences, 379(1905), 20230184. https://doi.org/10.1098/rstb.2023.0184"

@@ -5,7 +5,7 @@ title: "The Physics of Sensing and Decision-Making by Animal Groups"
 authors: ["Danielle L. Chase", "Orit Peleg"]
 year: 2025
 venue: "Annual Review of Biophysics"
-url: https://api.crossref.org/works/10.1146/annurev-biophys-061824-110733
+url: https://doi.org/10.1146/annurev-biophys-061824-110733
 doi: "10.1146/annurev-biophys-061824-110733"
 arxiv: null
 cite: "Chase, D. L., & Peleg, O. (2025). The Physics of Sensing and Decision-Making by Animal Groups. Annual Review of Biophysics, 54(1), 329-351."

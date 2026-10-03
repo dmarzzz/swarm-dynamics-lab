@@ -5,7 +5,7 @@ title: Flocking in Fixed and Switching Networks
 authors: [Herbert G. Tanner, Ali Jadbabaie, George J. Pappas]
 year: 2007
 venue: IEEE Transactions on Automatic Control
-url: https://api.openalex.org/works/doi:10.1109/tac.2007.895948
+url: https://doi.org/10.1109/tac.2007.895948
 doi: 10.1109/tac.2007.895948
 arxiv: null
 cite: "Tanner, H. G., Jadbabaie, A., & Pappas, G. J. (2007). Flocking in fixed and switching networks. IEEE Transactions on Automatic Control, 52(5), 863-868."

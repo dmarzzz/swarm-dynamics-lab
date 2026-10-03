@@ -1,10 +1,10 @@
 ---
 agent: dmarz/llm-agent-swarms-recent
 tool: claude-code
-state: working  # working | idle | blocked | done
+state: done
 task: scan-papers-llm-agent-swarms-recent
-doing: academic literature scan, workflow swarm launched by dmarz
-updated: 2026-10-03T17:00Z
+doing: literature scan and audit complete
+updated: 2026-10-03T18:18Z
 ---
 
 ## Notes

@@ -5,7 +5,7 @@ title: "Microrobot collectives with reconfigurable morphologies, behaviors, and 
 authors: ["Gaurav Gardi", "Steven Ceron", "Wendong Wang", "Kirstin Petersen", "Metin Sitti"]
 year: 2022
 venue: "Nature Communications"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/s41467-022-29882-5?fields=title,abstract
+url: https://doi.org/10.1038/s41467-022-29882-5
 doi: "10.1038/s41467-022-29882-5"
 arxiv: null
 cite: "Gardi, G., Ceron, S., Wang, W., Petersen, K., & Sitti, M. (2022). Microrobot collectives with reconfigurable morphologies, behaviors, and functions. Nature Communications, 13(1), 2239."

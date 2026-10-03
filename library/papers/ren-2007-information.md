@@ -5,7 +5,7 @@ title: Information consensus in multivehicle cooperative control
 authors: [Wei Ren, Randal W. Beard, Ella M. Atkins]
 year: 2007
 venue: IEEE Control Systems Magazine
-url: https://api.openalex.org/works/doi:10.1109/mcs.2007.338264
+url: https://doi.org/10.1109/mcs.2007.338264
 doi: 10.1109/mcs.2007.338264
 arxiv: null
 cite: "Ren, W., Beard, R. W., & Atkins, E. M. (2007). Information consensus in multivehicle cooperative control. IEEE Control Systems Magazine, 27(2), 71-82."

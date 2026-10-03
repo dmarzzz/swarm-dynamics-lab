@@ -5,7 +5,7 @@ title: "Revealing the hidden networks of interaction in mobile animal groups all
 authors: ["Sara Brin Rosenthal", "Colin R. Twomey", "Andrew T. Hartnett", "Hai Shan Wu", "Iain D. Couzin"]
 year: 2015
 venue: "Proceedings of the National Academy of Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/25825752?resultType=core&format=json"
+url: https://doi.org/10.1073/pnas.1420068112
 doi: "10.1073/pnas.1420068112"
 arxiv: null
 cite: "Rosenthal, S. B., Twomey, C. R., Hartnett, A. T., Wu, H. S., & Couzin, I. D. (2015). Revealing the hidden networks of interaction in mobile animal groups allows prediction of complex behavioral contagion. Proceedings of the National Academy of Sciences, 112(15), 4690–4695. https://doi.org/10.1073/pnas.1420068112"

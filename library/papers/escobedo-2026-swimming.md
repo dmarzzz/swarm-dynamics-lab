@@ -5,7 +5,7 @@ title: "Swimming speed of schooling fish controls social interaction strength in
 authors: ["Ramón Escobedo", "Justine Reynaud", "Stéphane Sanchez", "Clément Sire", "Guy Theraulaz"]
 year: 2026
 venue: "Proceedings of the Royal Society B: Biological Sciences"
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:42229927&resultType=core&format=json
+url: https://doi.org/10.1098/rspb.2026.0146
 doi: "10.1098/rspb.2026.0146"
 arxiv: null
 cite: "Escobedo, R., Reynaud, J., Sanchez, S., Sire, C., & Theraulaz, G. (2026). Swimming speed of schooling fish controls social interaction strength in open-loop immersive virtual reality. Proceedings of the Royal Society B: Biological Sciences, 293(2072), 20260146."

@@ -5,7 +5,7 @@ title: "Group decision-making in animals"
 authors: ["L. Conradt", "T. J. Roper"]
 year: 2003
 venue: "Nature"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/12520299?resultType=core&format=json"
+url: https://doi.org/10.1038/nature01294
 doi: "10.1038/nature01294"
 arxiv: null
 cite: "Conradt, L., & Roper, T. J. (2003). Group decision-making in animals. Nature, 421(6919), 155–158. https://doi.org/10.1038/nature01294"

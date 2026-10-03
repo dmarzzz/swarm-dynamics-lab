@@ -8,7 +8,7 @@ authors:
 - Jinniao Qiu
 year: 2022
 venue: SIAM Journal on Mathematical Analysis
-url: https://api.openalex.org/works/W3154085036
+url: https://doi.org/10.1137/21M1412323
 doi: 10.1137/21M1412323
 arxiv: null
 cite: 'Cipriani, C., Huang, H., & Qiu, J. (2022). Zero-inertia limit: From particle swarm optimization to consensus-based optimization. SIAM Journal on Mathematical Analysis, 54(3), 3091–3121. https://doi.org/10.1137/21M1412323'

@@ -5,7 +5,7 @@ title: Collective Motion, Sensor Networks, and Ocean Sampling
 authors: [Naomi Ehrich Leonard, Derek A. Paley, Francois Lekien, Rodolphe Sepulchre, David M. Fratantoni, Russ E. Davis]
 year: 2007
 venue: Proceedings of the IEEE
-url: https://api.openalex.org/works/doi:10.1109/jproc.2006.887295
+url: https://doi.org/10.1109/jproc.2006.887295
 doi: 10.1109/jproc.2006.887295
 arxiv: null
 cite: "Leonard, N. E., Paley, D. A., Lekien, F., Sepulchre, R., Fratantoni, D. M., & Davis, R. E. (2007). Collective motion, sensor networks, and ocean sampling. Proceedings of the IEEE, 95(1), 48-74."

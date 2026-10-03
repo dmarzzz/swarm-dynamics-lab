@@ -8,7 +8,7 @@ authors:
 - William H. Warren
 year: 2018
 venue: 'Proceedings of the Royal Society B: Biological Sciences'
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/29769363?resultType=core&format=json
+url: https://doi.org/10.1098/rspb.2018.0611
 doi: 10.1098/rspb.2018.0611
 arxiv: null
 cite: 'Rio, K. W., Dachner, G. C., & Warren, W. H. (2018). Local interactions underlying collective motion in human crowds. Proceedings of the Royal Society B: Biological Sciences, 285(1878), 20180611. https://doi.org/10.1098/rspb.2018.0611'

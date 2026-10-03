@@ -5,7 +5,7 @@ title: The Kuramoto model in complex networks
 authors: [Francisco A. Rodrigues, Thomas K. DM. Peron, Peng Ji, Jürgen Kurths]
 year: 2016
 venue: Physics Reports
-url: https://api.openalex.org/works/doi:10.1016/j.physrep.2015.10.008
+url: https://doi.org/10.1016/j.physrep.2015.10.008
 doi: 10.1016/j.physrep.2015.10.008
 arxiv: null
 cite: "Rodrigues, F. A., Peron, T. K. DM., Ji, P., & Kurths, J. (2016). The Kuramoto model in complex networks. Physics Reports, 610, 1-98."

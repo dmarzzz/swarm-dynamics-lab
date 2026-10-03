@@ -8,7 +8,7 @@ authors:
 - Antonio Hospitaler
 year: 2024
 venue: Archives of Computational Methods in Engineering
-url: https://api.openalex.org/works/W4385075196
+url: https://doi.org/10.1007/s11831-023-09975-0
 doi: 10.1007/s11831-023-09975-0
 arxiv: null
 cite: Velasco, L., Guerrero, H., & Hospitaler, A. (2024). A literature review and critical analysis of metaheuristics recently developed. Archives of Computational Methods in Engineering, 31(1), 125–146. https://doi.org/10.1007/s11831-023-09975-0

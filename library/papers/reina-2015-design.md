@@ -5,7 +5,7 @@ title: "A Design Pattern for Decentralised Decision Making"
 authors: ["Andreagiovanni Reina", "Gabriele Valentini", "Cristian Fernández-Oto", "Marco Dorigo", "Vito Trianni"]
 year: 2015
 venue: "PLOS ONE"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/26496359?resultType=core&format=json"
+url: https://doi.org/10.1371/journal.pone.0140950
 doi: "10.1371/journal.pone.0140950"
 arxiv: null
 cite: "Reina, A., Valentini, G., Fernández-Oto, C., Dorigo, M., & Trianni, V. (2015). A Design Pattern for Decentralised Decision Making. PLOS ONE, 10(10), e0140950. https://doi.org/10.1371/journal.pone.0140950"

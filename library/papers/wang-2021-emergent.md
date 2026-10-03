@@ -5,7 +5,7 @@ title: "Emergent Field-Driven Robot Swarm States"
 authors: ["Gao Wang", "Trung V. Phan", "Shengkai Li", "Michael Wombacher", "Junle Qu", "Yan Peng", "Guo Chen", "Daniel I. Goldman", "Simon A. Levin", "Robert H. Austin", "Liyu Liu"]
 year: 2021
 venue: "Physical Review Letters"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1103/PhysRevLett.126.108002?fields=title,abstract
+url: https://doi.org/10.1103/PhysRevLett.126.108002
 doi: "10.1103/PhysRevLett.126.108002"
 arxiv: null
 cite: "Wang, G., Phan, T. V., Li, S., Wombacher, M., Qu, J., Peng, Y., Chen, G., Goldman, D. I., Levin, S. A., Austin, R. H., & Liu, L. (2021). Emergent Field-Driven Robot Swarm States. Physical Review Letters, 126(10), 108002."

@@ -5,7 +5,7 @@ title: "From Kuramoto to Crawford: exploring the onset of synchronization in pop
 authors: [Steven H. Strogatz]
 year: 2000
 venue: "Physica D: Nonlinear Phenomena"
-url: https://api.openalex.org/works/doi:10.1016/s0167-2789(00)00094-4
+url: https://doi.org/10.1016/s0167-2789(00)00094-4
 doi: 10.1016/s0167-2789(00)00094-4
 arxiv: null
 cite: "Strogatz, S. H. (2000). From Kuramoto to Crawford: exploring the onset of synchronization in populations of coupled oscillators. Physica D: Nonlinear Phenomena, 143(1-4), 1-20."

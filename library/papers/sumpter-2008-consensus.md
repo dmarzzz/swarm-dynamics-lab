@@ -5,7 +5,7 @@ title: "Consensus Decision Making by Fish"
 authors: ["David J.T. Sumpter", "Jens Krause", "Richard James", "Iain D. Couzin", "Ashley J.W. Ward"]
 year: 2008
 venue: "Current Biology"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/19013067?resultType=core&format=json"
+url: https://doi.org/10.1016/j.cub.2008.09.064
 doi: "10.1016/j.cub.2008.09.064"
 arxiv: null
 cite: "Sumpter, D. J., Krause, J., James, R., Couzin, I. D., & Ward, A. J. (2008). Consensus Decision Making by Fish. Current Biology, 18(22), 1773–1777. https://doi.org/10.1016/j.cub.2008.09.064"

@@ -5,7 +5,7 @@ title: "Self-organized flocking in mobile robot swarms"
 authors: ["Ali E. Turgut", "Hande Çelikkanat", "Fatih Gökçe", "Erol Şahin"]
 year: 2008
 venue: "Swarm Intelligence"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1007/s11721-008-0016-2?fields=title,abstract
+url: https://doi.org/10.1007/s11721-008-0016-2
 doi: "10.1007/s11721-008-0016-2"
 arxiv: null
 cite: "Turgut, A. E., Çelikkanat, H., Gökçe, F., & Şahin, E. (2008). Self-organized flocking in mobile robot swarms. Swarm Intelligence, 2(2-4), 97–120."

@@ -5,7 +5,7 @@ title: "Modeling Swarm Robotic Systems: a Case Study in Collaborative Distribute
 authors: ["Alcherio Martinoli", "Kjerstin Easton", "William Agassounon"]
 year: 2004
 venue: "The International Journal of Robotics Research"
-url: https://api.crossref.org/works/10.1177/0278364904042197
+url: https://doi.org/10.1177/0278364904042197
 doi: "10.1177/0278364904042197"
 arxiv: null
 cite: "Martinoli, A., Easton, K., & Agassounon, W. (2004). Modeling Swarm Robotic Systems: a Case Study in Collaborative Distributed Manipulation. The International Journal of Robotics Research, 23(4-5), 415–436."

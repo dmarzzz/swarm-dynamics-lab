@@ -5,7 +5,7 @@ title: Reaching a Consensus
 authors: [Morris H. DeGroot]
 year: 1974
 venue: Journal of the American Statistical Association
-url: https://api.openalex.org/works/doi:10.1080/01621459.1974.10480137
+url: https://doi.org/10.1080/01621459.1974.10480137
 doi: 10.1080/01621459.1974.10480137
 arxiv: null
 cite: "DeGroot, M. H. (1974). Reaching a consensus. Journal of the American Statistical Association, 69(345), 118-121."

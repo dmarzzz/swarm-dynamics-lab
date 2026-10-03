@@ -5,7 +5,7 @@ title: "A simple mechanism for collective decision-making in the absence of payo
 authors: ["Daniele Carlesso", "Justin M. McNab", "Christopher J. Lustri", "Simon Garnier", "Chris R. Reid"]
 year: 2023
 venue: "Proceedings of the National Academy of Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10629567/fullTextXML"
+url: https://doi.org/10.1073/pnas.2216217120
 doi: "10.1073/pnas.2216217120"
 arxiv: null
 cite: "Carlesso, D., McNab, J. M., Lustri, C. J., Garnier, S., & Reid, C. R. (2023). A simple mechanism for collective decision-making in the absence of payoff information. Proceedings of the National Academy of Sciences, 120(29), e2216217120. https://doi.org/10.1073/pnas.2216217120"

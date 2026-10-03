@@ -5,7 +5,7 @@ title: Realizing Emergent Collective Behaviors Through Robotic Swarmalators
 authors: [Richard Beattie, Steven Ceron, Daniela Rus]
 year: 2025
 venue: 2025 IEEE International Conference on Robotics and Automation (ICRA)
-url: https://api.openalex.org/works/doi:10.1109/icra55743.2025.11128695
+url: https://doi.org/10.1109/icra55743.2025.11128695
 doi: 10.1109/icra55743.2025.11128695
 arxiv: null
 cite: "Beattie, R., Ceron, S., & Rus, D. (2025). Realizing emergent collective behaviors through robotic swarmalators. In 2025 IEEE International Conference on Robotics and Automation (ICRA) (pp. 3065-3071). IEEE."

@@ -5,7 +5,7 @@ title: "Quorum decision-making facilitates information transfer in fish shoals"
 authors: ["Ashley J. W. Ward", "David J. T. Sumpter", "Iain D. Couzin", "Paul J. B. Hart", "Jens Krause"]
 year: 2008
 venue: "Proceedings of the National Academy of Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/18474860?resultType=core&format=json"
+url: https://doi.org/10.1073/pnas.0710344105
 doi: "10.1073/pnas.0710344105"
 arxiv: null
 cite: "Ward, A. J. W., Sumpter, D. J. T., Couzin, I. D., Hart, P. J. B., & Krause, J. (2008). Quorum decision-making facilitates information transfer in fish shoals. Proceedings of the National Academy of Sciences, 105(19), 6948–6953. https://doi.org/10.1073/pnas.0710344105"

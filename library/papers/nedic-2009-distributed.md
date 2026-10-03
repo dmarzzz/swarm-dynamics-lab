@@ -5,7 +5,7 @@ title: Distributed Subgradient Methods for Multi-Agent Optimization
 authors: [Angelia Nedic, Asuman Ozdaglar]
 year: 2009
 venue: IEEE Transactions on Automatic Control
-url: https://api.openalex.org/works/doi:10.1109/tac.2008.2009515
+url: https://doi.org/10.1109/tac.2008.2009515
 doi: 10.1109/tac.2008.2009515
 arxiv: null
 cite: "Nedic, A., & Ozdaglar, A. (2009). Distributed subgradient methods for multi-agent optimization. IEEE Transactions on Automatic Control, 54(1), 48-61."

@@ -5,7 +5,7 @@ title: "The emergence of a collective sensory response threshold in ant colonies
 authors: ["Asaf Gal", "Daniel J. C. Kronauer"]
 year: 2022
 venue: "Proceedings of the National Academy of Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9191679/fullTextXML"
+url: https://doi.org/10.1073/pnas.2123076119
 doi: "10.1073/pnas.2123076119"
 arxiv: null
 cite: "Gal, A., & Kronauer, D. J. C. (2022). The emergence of a collective sensory response threshold in ant colonies. Proceedings of the National Academy of Sciences, 119(23), e2123076119. https://doi.org/10.1073/pnas.2123076119"

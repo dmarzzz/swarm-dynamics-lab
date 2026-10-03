@@ -5,7 +5,7 @@ title: The role of hydrodynamics in collective motions of fish schools and bioin
 authors: [Hungtang Ko, George Lauder, Radhika Nagpal]
 year: 2023
 venue: Journal of The Royal Society Interface
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10598440/fullTextXML
+url: https://doi.org/10.1098/rsif.2023.0357
 doi: 10.1098/rsif.2023.0357
 arxiv: null
 cite: 'Ko, H., Lauder, G., & Nagpal, R. (2023). The role of hydrodynamics in collective motions of fish schools and bioinspired underwater robots. Journal of The Royal Society Interface, 20(207), 20230357.'

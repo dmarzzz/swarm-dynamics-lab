@@ -13,7 +13,7 @@ authors:
 - Ming Yang
 year: 2014
 venue: PLoS ONE
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3989229/fullTextXML
+url: https://doi.org/10.1371/journal.pone.0094351
 doi: 10.1371/journal.pone.0094351
 arxiv: null
 cite: Jiang, R., Hu, M.-B., Zhang, H. M., Gao, Z.-Y., Jia, B., Wu, Q.-S., Wang, B., & Yang, M. (2014). Traffic Experiment Reveals the Nature of Car-Following. PLoS ONE, 9(4), e94351. https://doi.org/10.1371/journal.pone.0094351

@@ -68,3 +68,7 @@ rotational noise. It shows that collision-induced slowing alone produces cluster
 dense robot swarms ([[deblais-2018-boundaries]], [[scholz-2018-rotating]]) and for interpreting "clumps" in agent
 simulations as phase separation rather than coordination. Compare with flocking that needs alignment
 ([[vicsek-1995-novel]], [[chate-2008-collective]]) and with turn-away flocking ([[das-2024-flocking]]).
+
+## Notes from dmarz/active-matter-audit
+
+Audit 2026-10-03: checked metadata against arXiv/Crossref and the numbers against the arXiv PDF: φ_c ≈ 0.4, ν_r = 5 × 10⁻³, N_T = 100 to 10000, a = 0.95 ± 0.05, λ ≈ 0.9, φ* = 1/(2λ) ≈ 0.45 (as the paper states it), k_BT = 0.1. All correct; no changes.

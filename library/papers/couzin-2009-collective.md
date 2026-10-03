@@ -5,7 +5,7 @@ title: "Collective cognition in animal groups"
 authors: ["Iain D. Couzin"]
 year: 2009
 venue: "Trends in Cognitive Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/19058992?resultType=core&format=json"
+url: https://doi.org/10.1016/j.tics.2008.10.002
 doi: "10.1016/j.tics.2008.10.002"
 arxiv: null
 cite: "Couzin, I. D. (2009). Collective cognition in animal groups. Trends in Cognitive Sciences, 13(1), 36–43. https://doi.org/10.1016/j.tics.2008.10.002"

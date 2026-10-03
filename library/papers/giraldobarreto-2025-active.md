@@ -5,7 +5,7 @@ title: "Active matter flocking via predictive alignment"
 authors: ["Julian Giraldo-Barreto", "Viktor Holubec"]
 year: 2025
 venue: "Physical Review E"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1103/fv6f-r9w9
+url: https://doi.org/10.1103/fv6f-r9w9
 doi: "10.1103/fv6f-r9w9"
 arxiv: "2504.07778"
 cite: "Giraldo-Barreto, J., & Holubec, V. (2025). Active matter flocking via predictive alignment. Physical Review E, 112(3), L032103."

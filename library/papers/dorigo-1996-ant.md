@@ -8,7 +8,7 @@ authors:
 - A. Colorni
 year: 1996
 venue: IEEE Transactions on Systems, Man, and Cybernetics, Part B (Cybernetics)
-url: https://api.openalex.org/works/W2107941094
+url: https://doi.org/10.1109/3477.484436
 doi: 10.1109/3477.484436
 arxiv: null
 cite: 'Dorigo, M., Maniezzo, V., & Colorni, A. (1996). Ant system: Optimization by a colony of cooperating agents. IEEE Transactions on Systems, Man, and Cybernetics, Part B (Cybernetics), 26(1), 29–41. https://doi.org/10.1109/3477.484436'

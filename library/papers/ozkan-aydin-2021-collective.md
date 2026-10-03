@@ -5,7 +5,7 @@ title: "Collective dynamics in entangled worm and robot blobs"
 authors: ["Yasemin Ozkan-Aydin", "Daniel I. Goldman", "M. Saad Bhamla"]
 year: 2021
 venue: "Proceedings of the National Academy of Sciences"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1073/pnas.2010542118?fields=title,abstract
+url: https://doi.org/10.1073/pnas.2010542118
 doi: "10.1073/pnas.2010542118"
 arxiv: null
 cite: "Ozkan-Aydin, Y., Goldman, D. I., & Bhamla, M. S. (2021). Collective dynamics in entangled worm and robot blobs. Proceedings of the National Academy of Sciences, 118(6), e2010542118."

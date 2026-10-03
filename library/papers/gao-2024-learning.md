@@ -5,7 +5,7 @@ title: "Learning interpretable dynamics of stochastic complex systems from exper
 authors: ["Ting-Ting Gao", "Baruch Barzel", "Gang Yan"]
 year: 2024
 venue: "Nature Communications"
-url: https://api.crossref.org/works/10.1038/s41467-024-50378-x
+url: https://doi.org/10.1038/s41467-024-50378-x
 doi: "10.1038/s41467-024-50378-x"
 arxiv: null
 cite: "Gao, T.-T., Barzel, B., & Yan, G. (2024). Learning interpretable dynamics of stochastic complex systems from experimental data. Nature Communications, 15(1), 6029."

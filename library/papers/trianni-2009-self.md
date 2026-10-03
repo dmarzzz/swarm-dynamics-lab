@@ -5,7 +5,7 @@ title: "Self-Organizing Sync in a Robotic Swarm: A Dynamical System View"
 authors: [Vito Trianni, Stefano Nolfi]
 year: 2009
 venue: IEEE Transactions on Evolutionary Computation
-url: https://api.openalex.org/works/doi:10.1109/tevc.2009.2015577
+url: https://doi.org/10.1109/tevc.2009.2015577
 doi: 10.1109/tevc.2009.2015577
 arxiv: null
 cite: "Trianni, V., & Nolfi, S. (2009). Self-organizing sync in a robotic swarm: A dynamical system view. IEEE Transactions on Evolutionary Computation, 13(4), 722-741."

@@ -5,7 +5,7 @@ title: "Emergent functional dynamics of link-bots"
 authors: ["Kyungmin Son", "Kimberly Bowal", "Kwanwoo Kim", "L. Mahadevan", "Ho-Young Kim"]
 year: 2025
 venue: "Science Advances"
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12063647/fullTextXML
+url: https://doi.org/10.1126/sciadv.adu8326
 doi: "10.1126/sciadv.adu8326"
 arxiv: null
 cite: "Son, K., Bowal, K., Kim, K., Mahadevan, L., & Kim, H.-Y. (2025). Emergent functional dynamics of link-bots. Science Advances, 11(19), eadu8326."

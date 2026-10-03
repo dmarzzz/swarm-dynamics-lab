@@ -5,7 +5,7 @@ title: "The road forward with swarm systems"
 authors: ["Hussein Abbass", "Sanaz Mostaghim"]
 year: 2025
 venue: "Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences"
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11779538/fullTextXML
+url: https://doi.org/10.1098/rsta.2024.0135
 doi: "10.1098/rsta.2024.0135"
 arxiv: null
 cite: "Abbass, H., & Mostaghim, S. (2025). The road forward with swarm systems. Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, 383(2289), 20240135."

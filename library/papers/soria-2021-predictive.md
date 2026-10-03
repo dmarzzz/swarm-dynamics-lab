@@ -5,7 +5,7 @@ title: "Predictive control of aerial swarms in cluttered environments"
 authors: ["Enrica Soria", "Fabrizio Schiano", "Dario Floreano"]
 year: 2021
 venue: "Nature Machine Intelligence"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/s42256-021-00341-y?fields=title,abstract
+url: https://doi.org/10.1038/s42256-021-00341-y
 doi: "10.1038/s42256-021-00341-y"
 arxiv: null
 cite: "Soria, E., Schiano, F., & Floreano, D. (2021). Predictive control of aerial swarms in cluttered environments. Nature Machine Intelligence, 3(6), 545–554."

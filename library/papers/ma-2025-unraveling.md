@@ -13,7 +13,7 @@ authors:
 - Eric Wai Ming Lee
 year: 2025
 venue: Science Advances
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12189950/fullTextXML
+url: https://doi.org/10.1126/sciadv.adw2688
 doi: 10.1126/sciadv.adw2688
 arxiv: null
 cite: Ma, Y., Niu, Z., Shi, M., Xie, W., Hu, Z., Wei, Y., Zeng, T., & Lee, E. W. M. (2025). Unraveling human crowd dynamics through the foot tracking of pedestrians. Science Advances, 11(26), eadw2688. https://doi.org/10.1126/sciadv.adw2688

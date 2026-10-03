@@ -5,7 +5,7 @@ title: "From animal collective behaviors to swarm robotic cooperation"
 authors: ["Haibin Duan", "Mengzhen Huo", "Yanming Fan"]
 year: 2023
 venue: "National Science Review"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1093/nsr/nwad040?fields=title,abstract
+url: https://doi.org/10.1093/nsr/nwad040
 doi: "10.1093/nsr/nwad040"
 arxiv: null
 cite: "Duan, H., Huo, M., & Fan, Y. (2023). From animal collective behaviors to swarm robotic cooperation. National Science Review, 10(5), nwad040."

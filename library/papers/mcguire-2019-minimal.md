@@ -5,7 +5,7 @@ title: "Minimal navigation solution for a swarm of tiny flying robots to explore
 authors: ["K. N. McGuire", "C. De Wagter", "K. Tuyls", "H. J. Kappen", "G. C. H. E. de Croon"]
 year: 2019
 venue: "Science Robotics"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1126/scirobotics.aaw9710?fields=title,abstract
+url: https://doi.org/10.1126/scirobotics.aaw9710
 doi: "10.1126/scirobotics.aaw9710"
 arxiv: null
 cite: "McGuire, K. N., De Wagter, C., Tuyls, K., Kappen, H. J., & de Croon, G. C. H. E. (2019). Minimal navigation solution for a swarm of tiny flying robots to explore an unknown environment. Science Robotics, 4(35), eaaw9710."

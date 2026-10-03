@@ -5,7 +5,7 @@ title: "Continuum Theory of Phase Separation Kinetics for Active Brownian Partic
 authors: ["Joakim Stenhammar", "Adriano Tiribocchi", "Rosalind J. Allen", "Davide Marenduzzo", "Michael E. Cates"]
 year: 2013
 venue: "Physical Review Letters"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1103/physrevlett.111.145702
+url: https://doi.org/10.1103/physrevlett.111.145702
 doi: "10.1103/physrevlett.111.145702"
 arxiv: "1307.4373"
 cite: "Stenhammar, J., Tiribocchi, A., Allen, R. J., Marenduzzo, D., & Cates, M. E. (2013). Continuum Theory of Phase Separation Kinetics for Active Brownian Particles. Physical Review Letters, 111(14), 145702."

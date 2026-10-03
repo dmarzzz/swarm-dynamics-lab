@@ -5,7 +5,7 @@ title: "Speed versus accuracy in collective decision making"
 authors: ["Nigel R. Franks", "Anna Dornhaus", "Jon P. Fitzsimmons", "Martin Stevens"]
 year: 2003
 venue: "Proceedings of the Royal Society of London. Series B: Biological Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/14667335?resultType=core&format=json"
+url: https://doi.org/10.1098/rspb.2003.2527
 doi: "10.1098/rspb.2003.2527"
 arxiv: null
 cite: "Franks, N. R., Dornhaus, A., Fitzsimmons, J. P., & Stevens, M. (2003). Speed versus accuracy in collective decision making. Proceedings of the Royal Society of London. Series B: Biological Sciences, 270(1532), 2457–2463. https://doi.org/10.1098/rspb.2003.2527"

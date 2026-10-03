@@ -5,7 +5,7 @@ title: Bird Flocks as Condensed Matter
 authors: [Andrea Cavagna, Irene Giardina]
 year: 2014
 venue: Annual Review of Condensed Matter Physics
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1146/annurev-conmatphys-031113-133834
+url: https://doi.org/10.1146/annurev-conmatphys-031113-133834
 doi: 10.1146/annurev-conmatphys-031113-133834
 arxiv: null
 cite: 'Cavagna, A., & Giardina, I. (2014). Bird flocks as condensed matter. Annual Review of Condensed Matter Physics, 5(1), 183–207.'

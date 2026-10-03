@@ -5,7 +5,7 @@ title: "Comparing cooperative geometric puzzle solving in ants versus humans"
 authors: ["Tabea Dreyer", "Amir Haluts", "Amos Korman", "Nir Gov", "Ehud Fonio", "Ofer Feinerman"]
 year: 2025
 venue: "Proceedings of the National Academy of Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11725855/fullTextXML"
+url: https://doi.org/10.1073/pnas.2414274121
 doi: "10.1073/pnas.2414274121"
 arxiv: null
 cite: "Dreyer, T., Haluts, A., Korman, A., Gov, N., Fonio, E., & Feinerman, O. (2025). Comparing cooperative geometric puzzle solving in ants versus humans. Proceedings of the National Academy of Sciences, 122(1), e2414274121. https://doi.org/10.1073/pnas.2414274121"

@@ -7,7 +7,7 @@ authors:
 - Bahriye Basturk
 year: 2007
 venue: Journal of Global Optimization
-url: https://api.openalex.org/works/W2143560894
+url: https://doi.org/10.1007/s10898-007-9149-x
 doi: 10.1007/s10898-007-9149-x
 arxiv: null
 cite: 'Karaboga, D., & Basturk, B. (2007). A powerful and efficient algorithm for numerical function optimization: Artificial bee colony (ABC) algorithm. Journal of Global Optimization, 39(3), 459–471. https://doi.org/10.1007/s10898-007-9149-x'

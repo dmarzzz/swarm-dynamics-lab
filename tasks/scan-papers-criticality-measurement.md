@@ -132,3 +132,35 @@ the last rounds are around 20%, so the core of the topic is saturated but the 20
    global transfer entropy and Psi, with a shared-external-driver null model.
 6. Gap scan on criticality and information-flow measures in MARL and LLM agent collectives.
 
+
+**Audit (dmarz/criticality-measurement-audit), 2026-10-03.** `lab.py verify` on the 71 scan entries: 0 problems,
+so nothing was deleted. Spot-checked 16 entries against the source. All 6 `read_depth: full` entries
+([[mora-2011-biological]], [[klamser-2021-collective]], [[poel-2022-subcritical]], [[rosas-2020-reconciling]],
+[[crosato-2018-informative]], [[chen-2025-why]]) were re-read from the arXiv PDFs: titles, authors, venues, cite
+strings and every key number I checked (about 50 values) match the papers, so `full` stands. Ten more were checked
+against arXiv abstract pages or Crossref ([[sas-2026-improved]], [[syga-2026-minority]], [[ferretti-2025-out]],
+[[chatterjee-2025-maximal]], [[lin-2025-experimental]], [[sun-2014-information]], [[shpurov-2026-critical]],
+[[iyer-2026-dynamics]], [[zheng-2026-nested]], [[lizier-2008-local]]): metadata correct. The only caveats, added as
+notes, are that [[sun-2014-information]] is a Collective Intelligence 2014 extended abstract (arXiv journal-ref
+ci-2014/141) and that [[sas-2026-improved]] has an arXiv v1 date of 2025-12-20. The scan is accurate; its weak side was
+measurement methodology from neighbouring fields. Four extra search rounds: (A) forward citations of Mora & Bialek
+2011 and Bialek et al. 2012 from 2023 on (OpenCitations + Crossref, 386 citing works, about 20 relevant, 2 new
+added); (B) arXiv title search with neuroscience and statistics vocabulary (subsampling, inverse Ising bias,
+phenomenological RG, O-information, proximity to criticality, dynamical RG of swarms; about 200 results, 10
+relevant, 8 new); (C) Crossref and Europe PMC for direct-perturbation and null-model work (about 12 results, 5
+relevant, 3 new); (D) one web search for the Physics Reports review before the session's search budget ran out (10
+results, 2 relevant, 1 new). Added 12 entries: [[cavagna-2019-dynamical]], [[wilting-2018-inferring]],
+[[levina-2022-tackling]], [[nonnenmacher-2017-signatures]], [[mastromatteo-2011-criticality]],
+[[kloucek-2023-biases]], [[meshulam-2019-coarse]], [[morales-2023-quasiuniversal]], [[sooter-2025-defining]],
+[[du-2026-fisher]], [[rosas-2019-quantifying]], [[van-der-vaart-2019-mechanical]]. Six are skims, six abstract-only.
+Found but not added: Cavagna, Giardina & Grigera 2018 Physics Reports 728:1-62 (still unreachable: Elsevier and the
+author manuscript return 403, CONICET returns 503, and it is not on arXiv); Ni, Puckett, Dufresne & Ouellette 2015 PRL
+115:118104, "Intrinsic fluctuations and driven response of insect swarms" (APS 403); Morrell, Nemenman & Sederberg 2024
+eLife, "Neural criticality from effective latent variables"; "On principles of emergent organization", Physics
+Reports 2024 (doi 10.1016/j.physrep.2024.04.001); "Scale-free chaos in the confined Vicsek flocking model", PRE 107:014209
+(arXiv 2208.08121); "Maximum-entropy-based metrics for quantifying critical dynamics in spiking neuron data", PRE
+110:024401; Stramaglia et al. 2021, dynamical O-information (arXiv 2007.16018); "Mean-field theory of chaotic insect
+swarms", PRE 107:L062601; "Heterogeneity extends criticality" (Front. Complex Syst. 2023). Still thin: the Physics
+Reports review; direct-response experiments on real groups (now 5 entries); criticality and information measures in
+MARL or LLM-agent collectives (still none); and code for the new methods (mrestimator, pyplm, the tRG toolkit when it
+is released) is not yet in `library/code/`.

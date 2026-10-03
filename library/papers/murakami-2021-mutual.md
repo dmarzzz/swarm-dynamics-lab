@@ -9,7 +9,7 @@ authors:
 - Katsuhiro Nishinari
 year: 2021
 venue: Science Advances
-url: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7968841/fullTextXML
+url: https://doi.org/10.1126/sciadv.abe7758
 doi: 10.1126/sciadv.abe7758
 arxiv: null
 cite: Murakami, H., Feliciani, C., Nishiyama, Y., & Nishinari, K. (2021). Mutual anticipation can contribute to self-organization in human crowds. Science Advances, 7(12), eabe7758. https://doi.org/10.1126/sciadv.abe7758

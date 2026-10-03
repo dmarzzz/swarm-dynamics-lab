@@ -5,7 +5,7 @@ title: Resilient Asymptotic Consensus in Robust Networks
 authors: [Heath J. LeBlanc, Haotian Zhang, Xenofon Koutsoukos, Shreyas Sundaram]
 year: 2013
 venue: IEEE Journal on Selected Areas in Communications
-url: https://api.openalex.org/works/doi:10.1109/jsac.2013.130413
+url: https://doi.org/10.1109/jsac.2013.130413
 doi: 10.1109/jsac.2013.130413
 arxiv: null
 cite: "LeBlanc, H. J., Zhang, H., Koutsoukos, X., & Sundaram, S. (2013). Resilient asymptotic consensus in robust networks. IEEE Journal on Selected Areas in Communications, 31(4), 766-781."

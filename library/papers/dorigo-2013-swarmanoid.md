@@ -5,7 +5,7 @@ title: "Swarmanoid: A Novel Concept for the Study of Heterogeneous Robotic Swarm
 authors: ["Marco Dorigo", "Dario Floreano", "Luca Maria Gambardella", "Francesco Mondada", "Stefano Nolfi", "Tarek Baaboura", "Mauro Birattari", "Michael Bonani", "Manuele Brambilla", "Arne Brutschy", "et al."]
 year: 2013
 venue: "IEEE Robotics & Automation Magazine"
-url: https://api.openalex.org/works/doi:10.1109/mra.2013.2252996
+url: https://doi.org/10.1109/mra.2013.2252996
 doi: "10.1109/mra.2013.2252996"
 arxiv: null
 cite: "Dorigo, M., Floreano, D., Gambardella, L. M., Mondada, F., Nolfi, S., Baaboura, T., Birattari, M., Bonani, M., Brambilla, M., Brutschy, A., et al. (2013). Swarmanoid: A Novel Concept for the Study of Heterogeneous Robotic Swarms. IEEE Robotics & Automation Magazine, 20(4), 60–71."

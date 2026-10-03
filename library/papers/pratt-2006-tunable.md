@@ -5,7 +5,7 @@ title: "A tunable algorithm for collective decision-making"
 authors: ["Stephen C. Pratt", "David J. T. Sumpter"]
 year: 2006
 venue: "Proceedings of the National Academy of Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/17038502?resultType=core&format=json"
+url: https://doi.org/10.1073/pnas.0604801103
 doi: "10.1073/pnas.0604801103"
 arxiv: null
 cite: "Pratt, S. C., & Sumpter, D. J. T. (2006). A tunable algorithm for collective decision-making. Proceedings of the National Academy of Sciences, 103(43), 15906–15910. https://doi.org/10.1073/pnas.0604801103"

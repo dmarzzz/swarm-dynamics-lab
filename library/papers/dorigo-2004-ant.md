@@ -7,7 +7,7 @@ authors:
 - Thomas Stützle
 year: 2004
 venue: MIT Press (book)
-url: https://api.openalex.org/works/W4299796063
+url: https://doi.org/10.7551/mitpress/1290.001.0001
 doi: 10.7551/mitpress/1290.001.0001
 arxiv: null
 cite: Dorigo, M., & Stützle, T. (2004). Ant Colony Optimization. MIT Press. https://doi.org/10.7551/mitpress/1290.001.0001

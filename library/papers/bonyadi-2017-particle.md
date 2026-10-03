@@ -7,7 +7,7 @@ authors:
 - Zbigniew Michalewicz
 year: 2017
 venue: Evolutionary Computation
-url: https://api.openalex.org/works/W2317744239
+url: https://doi.org/10.1162/EVCO_r_00180
 doi: 10.1162/EVCO_r_00180
 arxiv: null
 cite: 'Bonyadi, M. R., & Michalewicz, Z. (2017). Particle swarm optimization for single objective continuous space problems: A review. Evolutionary Computation, 25(1), 1–54. https://doi.org/10.1162/EVCO_r_00180'

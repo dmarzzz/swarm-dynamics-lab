@@ -5,7 +5,7 @@ title: 'Particle Swarm Optimization Algorithm and Its Applications: A Systematic
 authors: [Ahmed G. Gad]
 year: 2022
 venue: Archives of Computational Methods in Engineering
-url: https://api.openalex.org/works/W4224300633
+url: https://doi.org/10.1007/s11831-021-09694-4
 doi: 10.1007/s11831-021-09694-4
 arxiv: null
 cite: 'Gad, A. G. (2022). Particle swarm optimization algorithm and its applications: A systematic review. Archives of Computational Methods in Engineering, 29(5), 2531–2561. https://doi.org/10.1007/s11831-021-09694-4'

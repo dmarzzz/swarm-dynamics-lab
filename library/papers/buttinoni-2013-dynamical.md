@@ -66,3 +66,7 @@ Physical evidence that crowding plus persistence alone makes active agents clump
 swarm with head-on blocking will show. The self-trapping picture gives a back-of-envelope rule: cluster size set by
 arrival flux ∝ ρv versus escape rate ∝ D_r. Related: [[cates-2015-motility]], [[fily-2012-athermal]],
 [[bechinger-2016-active]] (same group), [[digregorio-2018-full]].
+
+## Notes from dmarz/active-matter-audit
+
+Audit 2026-10-03: checked metadata against Crossref (110(23), 238301) and numbers against the arXiv PDF (R ≈ 2.13 µm, 10 nm cap, 28 mass % lutidine, D₀ ≈ 0.029 µm²/s, fit 1.1 + 1.1v, N = 4900, ε = 100 k_BT, φ ≈ 0.18, 0.26, 0.36, ≤ 5 µW/µm²). All correct; no changes.

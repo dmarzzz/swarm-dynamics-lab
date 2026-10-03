@@ -7,7 +7,7 @@ authors:
 - Holger H. Hoos
 year: 2000
 venue: Future Generation Computer Systems
-url: https://api.openalex.org/works/W1801849579
+url: https://doi.org/10.1016/S0167-739X(00)00043-1
 doi: 10.1016/S0167-739X(00)00043-1
 arxiv: null
 cite: Stützle, T., & Hoos, H. H. (2000). MAX–MIN Ant System. Future Generation Computer Systems, 16(8), 889–914. https://doi.org/10.1016/S0167-739X(00)00043-1

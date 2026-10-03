@@ -5,7 +5,7 @@ title: Information Flow and Cooperative Control of Vehicle Formations
 authors: [J. Alexander Fax, Richard M. Murray]
 year: 2004
 venue: IEEE Transactions on Automatic Control
-url: https://api.openalex.org/works/doi:10.1109/tac.2004.834433
+url: https://doi.org/10.1109/tac.2004.834433
 doi: 10.1109/tac.2004.834433
 arxiv: null
 cite: "Fax, J. A., & Murray, R. M. (2004). Information flow and cooperative control of vehicle formations. IEEE Transactions on Automatic Control, 49(9), 1465-1476."

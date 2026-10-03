@@ -12,7 +12,7 @@ authors:
 - Urbain Vaes
 year: 2024
 venue: Journal of Open Source Software
-url: https://api.openalex.org/works/W4393064299
+url: https://doi.org/10.21105/joss.06611
 doi: 10.21105/joss.06611
 arxiv: '2403.14470'
 cite: 'Bailo, R., Barbaro, A., Gomes, S. N., Riedl, K., Roith, T., Totzeck, C., & Vaes, U. (2024). CBX: Python and Julia packages for consensus-based interacting particle methods. Journal of Open Source Software, 9(98), 6611. https://doi.org/10.21105/joss.06611'

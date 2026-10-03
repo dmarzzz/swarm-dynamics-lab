@@ -5,7 +5,7 @@ title: "Automatic design of stigmergy-based behaviours for robot swarms"
 authors: ["Muhammad Salman", "David Garzón Ramos", "Mauro Birattari"]
 year: 2024
 venue: "Communications Engineering"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/s44172-024-00175-7?fields=title,abstract
+url: https://doi.org/10.1038/s44172-024-00175-7
 doi: "10.1038/s44172-024-00175-7"
 arxiv: null
 cite: "Salman, M., Garzón Ramos, D., & Birattari, M. (2024). Automatic design of stigmergy-based behaviours for robot swarms. Communications Engineering, 3(1), 30."

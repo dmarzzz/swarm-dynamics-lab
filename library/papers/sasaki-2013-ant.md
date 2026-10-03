@@ -5,7 +5,7 @@ title: "Ant colonies outperform individuals when a sensory discrimination task i
 authors: ["Takao Sasaki", "Boris Granovskiy", "Richard P. Mann", "David J. T. Sumpter", "Stephen C. Pratt"]
 year: 2013
 venue: "Proceedings of the National Academy of Sciences"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/23898161?resultType=core&format=json"
+url: https://doi.org/10.1073/pnas.1304917110
 doi: "10.1073/pnas.1304917110"
 arxiv: null
 cite: "Sasaki, T., Granovskiy, B., Mann, R. P., Sumpter, D. J. T., & Pratt, S. C. (2013). Ant colonies outperform individuals when a sensory discrimination task is difficult but not when it is easy. Proceedings of the National Academy of Sciences, 110(34), 13769–13773. https://doi.org/10.1073/pnas.1304917110"

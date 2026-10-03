@@ -5,7 +5,7 @@ title: "Flocking at a distance in active granular matter"
 authors: ["Nitin Kumar", "Harsh Soni", "Sriram Ramaswamy", "A. K. Sood"]
 year: 2014
 venue: "Nature Communications"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/ncomms5688
+url: https://doi.org/10.1038/ncomms5688
 doi: "10.1038/ncomms5688"
 arxiv: "1402.4262"
 cite: "Kumar, N., Soni, H., Ramaswamy, S., & Sood, A. K. (2014). Flocking at a distance in active granular matter. Nature Communications, 5(1), 4688."

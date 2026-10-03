@@ -5,7 +5,7 @@ title: "Mergeable nervous systems for robots"
 authors: ["Nithin Mathews", "Anders Lyhne Christensen", "Rehan O'Grady", "Francesco Mondada", "Marco Dorigo"]
 year: 2017
 venue: "Nature Communications"
-url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/s41467-017-00109-2?fields=title,abstract
+url: https://doi.org/10.1038/s41467-017-00109-2
 doi: "10.1038/s41467-017-00109-2"
 arxiv: null
 cite: "Mathews, N., Christensen, A. L., O'Grady, R., Mondada, F., & Dorigo, M. (2017). Mergeable nervous systems for robots. Nature Communications, 8(1), 439."

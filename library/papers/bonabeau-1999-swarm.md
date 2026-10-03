@@ -8,7 +8,7 @@ authors:
 - Guy Theraulaz
 year: 1999
 venue: Oxford University Press (book)
-url: https://api.openalex.org/works/W2126554879
+url: https://doi.org/10.1093/oso/9780195131581.001.0001
 doi: 10.1093/oso/9780195131581.001.0001
 arxiv: null
 cite: 'Bonabeau, E., Dorigo, M., & Theraulaz, G. (1999). Swarm Intelligence: From Natural to Artificial Systems. Oxford University Press. https://doi.org/10.1093/oso/9780195131581.001.0001'

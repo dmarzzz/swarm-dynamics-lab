@@ -13,7 +13,7 @@ authors:
 - Thomas Stützle
 year: 2022
 venue: Swarm Intelligence
-url: https://api.openalex.org/works/W3200134775
+url: https://doi.org/10.1007/s11721-021-00202-9
 doi: 10.1007/s11721-021-00202-9
 arxiv: null
 cite: 'Aranha, C., Camacho Villalón, C. L., Campelo, F., Dorigo, M., Ruiz, R., Sevaux, M., Sörensen, K., & Stützle, T. (2022). Metaphor-based metaheuristics, a call for action: The elephant in the room. Swarm Intelligence, 16(1), 1–6. https://doi.org/10.1007/s11721-021-00202-9'

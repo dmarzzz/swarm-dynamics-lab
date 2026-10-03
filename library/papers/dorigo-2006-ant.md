@@ -8,7 +8,7 @@ authors:
 - Thomas Stützle
 year: 2006
 venue: IEEE Computational Intelligence Magazine
-url: https://api.openalex.org/works/W4292083457
+url: https://doi.org/10.1109/MCI.2006.329691
 doi: 10.1109/MCI.2006.329691
 arxiv: null
 cite: Dorigo, M., Birattari, M., & Stützle, T. (2006). Ant colony optimization. IEEE Computational Intelligence Magazine, 1(4), 28–39. https://doi.org/10.1109/MCI.2006.329691

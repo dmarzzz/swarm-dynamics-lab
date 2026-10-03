@@ -5,7 +5,7 @@ title: Mean-field limits for Consensus-Based Optimization and Sampling
 authors: [Nicolai Jurek Gerber, Franca Hoffmann, Urbain Vaes]
 year: 2025
 venue: 'ESAIM: Control, Optimisation and Calculus of Variations'
-url: https://api.openalex.org/works/doi:10.1051/cocv/2025060
+url: https://doi.org/10.1051/cocv/2025060
 doi: 10.1051/cocv/2025060
 arxiv: null
 cite: 'Gerber, N. J., Hoffmann, F., & Vaes, U. (2025). Mean-field limits for consensus-based optimization and sampling. ESAIM: Control, Optimisation and Calculus of Variations, 31, 74. https://doi.org/10.1051/cocv/2025060'

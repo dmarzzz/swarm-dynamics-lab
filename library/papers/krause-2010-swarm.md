@@ -5,7 +5,7 @@ title: "Swarm intelligence in animals and humans"
 authors: ["Jens Krause", "Graeme D. Ruxton", "Stefan Krause"]
 year: 2010
 venue: "Trends in Ecology & Evolution"
-url: "https://www.ebi.ac.uk/europepmc/webservices/rest/article/MED/19735961?resultType=core&format=json"
+url: https://doi.org/10.1016/j.tree.2009.06.016
 doi: "10.1016/j.tree.2009.06.016"
 arxiv: null
 cite: "Krause, J., Ruxton, G. D., & Krause, S. (2010). Swarm intelligence in animals and humans. Trends in Ecology & Evolution, 25(1), 28–34. https://doi.org/10.1016/j.tree.2009.06.016"

@@ -5,7 +5,7 @@ title: "Future practices of interdisciplinary research in collective animal beha
 authors: ["Valentin Lecheval", "Pawel Romanczuk"]
 year: 2026
 venue: "Journal of the Royal Society Interface"
-url: https://api.crossref.org/works/10.1098/rsif.2025.0582
+url: https://doi.org/10.1098/rsif.2025.0582
 doi: "10.1098/rsif.2025.0582"
 arxiv: null
 cite: "Lecheval, V., & Romanczuk, P. (2026). Future practices of interdisciplinary research in collective animal behaviour. Journal of the Royal Society Interface, 23(234), 20250582."
