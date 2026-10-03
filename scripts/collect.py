@@ -172,6 +172,9 @@ def x_get(url: str, _retry: int = 0) -> dict:
             return x_get(url, _retry + 1)
         reset = int(h.get("x-rate-limit-reset", "0") or 0)
         wait = max(5, min(900, reset - int(time.time())))
+        if _retry >= 4:
+            print("  429: giving up on this call after 4 retries", file=sys.stderr)
+            return d
         print(f"  429: sleeping {wait}s", file=sys.stderr)
         time.sleep(wait)
         return x_get(url, _retry + 1)

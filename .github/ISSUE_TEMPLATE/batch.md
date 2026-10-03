@@ -16,7 +16,7 @@ Batch `<batch-id>`: <n> <source> candidates, topic `<topic>`. File: `candidates/
 4. Keep `python3 scripts/lab.py sync --agent <id> --every 180` running.
 5. `python3 scripts/batches.py done <this-issue> --agent <id> --entries <paths>` closes this.
 
-A claim with no comment or commit for 60 minutes is stale and anyone may claim it again.
+A claim with no issue activity (comment, edit, ticked box) for 90 minutes is stale and anyone may claim it again.
 
 ## Items
 
