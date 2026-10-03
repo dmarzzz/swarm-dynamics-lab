@@ -2,9 +2,9 @@
 
 # Library index
 
-1157 entries.
+1166 entries.
 
-## Papers (984)
+## Papers (986)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -172,6 +172,7 @@
 | [sumpter-2009-quorum](papers/sumpter-2009-quorum.md) | Quorum responses and consensus decision making | 2009 | 5 | full | collective-decision, swarm-intelligence | dmarz/collective-decision |
 | [taheri-boshrooyeh-2022-privacy](papers/taheri-boshrooyeh-2022-privacy.md) | Privacy-Preserving Spam-Protected Gossip-Based Routing | 2022 | 5 | full | sybil-resistance | dmarz/sybil-credentials |
 | [talamali-2021-when](papers/talamali-2021-when.md) | When less is more: Robot swarms adapt better to changes with constrained communication | 2021 | 5 | abstract | collective-decision, swarm-robotics | dmarz/collective-decision |
+| [tambwekar-2026-proxifield](papers/tambwekar-2026-proxifield.md) | Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity | 2026 | 5 | full | llm-agent-swarms | vishesh/senku-1 |
 | [tanaka-2026-when](papers/tanaka-2026-when.md) | When Is Collective Intelligence a Lottery? Multi-Agent Scaling Laws for Memetic Drift in LLMs | 2026 | 5 | abstract | llm-agent-swarms, sync-consensus, criticality-measurement | dmarz/llm-agent-swarms |
 | [theraulaz-1999-brief](papers/theraulaz-1999-brief.md) | A brief history of stigmergy | 1999 | 5 | abstract | swarm-intelligence, collective-decision, swarm-robotics | dmarz/swarm-intelligence |
 | [toner-1995-long](papers/toner-1995-long.md) | Long-Range Order in a Two-Dimensional Dynamical XY Model: How Birds Fly Together | 1995 | 5 | full | active-matter, collective-motion, criticality-measurement | dmarz/active-matter |
@@ -196,6 +197,7 @@
 | [yoon-2022-sync](papers/yoon-2022-sync.md) | Sync and Swarm: Solvable Model of Nonidentical Swarmalators | 2022 | 5 | full | sync-consensus, active-matter, collective-motion | dmarz/sync-consensus |
 | [zhang-2025-learning](papers/zhang-2025-learning.md) | Learning vision-based agile flight via differentiable physics | 2025 | 5 | full | swarm-robotics, marl-emergence, collective-motion | dmarz/swarm-robotics-recent |
 | [zhang-2026-asymmetric](papers/zhang-2026-asymmetric.md) | Asymmetric physics enables efficient learning in quadrupedal robot swarms | 2026 | 5 | full | swarm-robotics, marl-emergence, crowds-and-traffic | dmarz/swarm-robotics-recent |
+| [zhang-2026-silo](papers/zhang-2026-silo.md) | Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems | 2026 | 5 | full | llm-agent-swarms | vishesh/senku-1 |
 | [zhao-2026-self](papers/zhao-2026-self.md) | Self-organized criticality in aquatic robot swarm | 2026 | 5 | skim | swarm-robotics, criticality-measurement, active-matter | dmarz/swarm-robotics-recent |
 | [zheng-2024-body](papers/zheng-2024-body.md) | Body orientation change of neighbors leads to scale-free correlation in collective motion | 2024 | 5 | full | collective-motion, swarm-robotics, criticality-measurement | dmarz/collective-motion-recent |
 | [zhou-2025-pimmur](papers/zhou-2025-pimmur.md) | The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies | 2025 | 5 | abstract | llm-agent-swarms, meta | dmarz/llm-agent-swarms-recent |
@@ -993,16 +995,20 @@
 | [zhao-2024-snail](papers/zhao-2024-snail.md) | Snail-inspired robotic swarms: a hybrid connector drives collective adaptation in unstructured outdoor environments | 2024 | 2 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [zhuge-2023-mindstorms](papers/zhuge-2023-mindstorms.md) | Mindstorms in Natural Language-Based Societies of Mind | 2023 | 2 | abstract | llm-agent-swarms | dmarz/llm-agent-swarms |
 
-## Blogs (27)
+## Blogs (34)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
+| [anthropic-2026-patterns](blogs/anthropic-2026-patterns.md) | Patterns and problems in emerging multiagent systems | 2026 | 5 | full | llm-agent-swarms | vishesh/senku-1 |
 | [bahrani-2026-capacity](blogs/bahrani-2026-capacity.md) | Capacity oracles | 2026 | 5 | skim | sybil-resistance, collective-decision | dmarz/sybil-flashbots-informal |
 | [barrywhitehat-2019-semaphore](blogs/barrywhitehat-2019-semaphore.md) | Semaphore RLN, rate limiting nullifier for spam prevention in anonymous p2p setting | 2019 | 5 | skim | sybil-resistance | dmarz/sybil-credentials |
 | [buterin-2024-supporting](blogs/buterin-2024-supporting.md) | Supporting decentralized staking through more anti-correlation incentives | 2024 | 5 | full | sybil-resistance, sync-consensus, swarm-detection | dmarz/sybil-flashbots-informal |
+| [collusion-wiki-2026-discovery](blogs/collusion-wiki-2026-discovery.md) | Discovery of a new OpenAI agent message board | 2026 | 5 | full | llm-agent-swarms, sybil-resistance | vishesh/senku-1 |
 | [coutinho-de-paula-2025-dave](blogs/coutinho-de-paula-2025-dave.md) | The Dave Fraud-Proof Algorithm: Triumphing over Sybils with a Laptop and a Small Collateral | 2025 | 5 | skim | sybil-resistance, sync-consensus | dmarz/sybil-flashbots-informal |
 | [crapis-2026-zk](blogs/crapis-2026-zk.md) | ZK API Usage Credits: LLMs and Beyond | 2026 | 5 | skim | sybil-resistance, llm-agent-swarms | dmarz/sybil-credentials |
 | [ethresearch-2026-anonymous](blogs/ethresearch-2026-anonymous.md) | Anonymous Credentials for Trustless Agents (ACTA) | 2026 | 5 | full | sybil-resistance, llm-agent-swarms | dmarz/sybil-flashbots-informal |
+| [metr-2026-brief](blogs/metr-2026-brief.md) | Brief independent investigation of agents' behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident | 2026 | 5 | full | llm-agent-swarms, sybil-resistance | vishesh/senku-1 |
+| [aisi-2026-incident](blogs/aisi-2026-incident.md) | Incident Report: unsanctioned agent behaviour during cyber testing | 2026 | 4 | full | llm-agent-swarms, sybil-resistance | vishesh/senku-1 |
 | [alpturer-2026-aetherweave](blogs/alpturer-2026-aetherweave.md) | AetherWeave: stake-backed peer discovery for Ethereum | 2026 | 4 | skim | sybil-resistance, sync-consensus | dmarz/sybil-flashbots-informal |
 | [ankushin-2026-public](blogs/ankushin-2026-public.md) | Public-mempool gas sponsorship needs escrow, a bond, or trust | 2026 | 4 | full | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [anthropic-2025-how](blogs/anthropic-2025-how.md) | How we built our multi-agent research system | 2025 | 4 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-sutton |
@@ -1014,13 +1020,16 @@
 | [ethresearch-2026-physical](blogs/ethresearch-2026-physical.md) | Physical integrity, attestation, and the state of permissionless TEEs | 2026 | 4 | full | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [glynn-2026-wash](blogs/glynn-2026-wash.md) | Wash-building in contribution protocols is not a Sybil problem | 2026 | 4 | full | sybil-resistance, collective-decision | dmarz/sybil-flashbots-informal |
 | [hanson-2016-age](blogs/hanson-2016-age.md) | The Age of Em, A Book (book website and chapter-by-chapter summary of The Age of Em: Work, Love and Life when Robots Rule the Earth) | 2016 | 4 | full | fork-merge-security, sybil-resistance, meta | dmarz/fm-sutton |
+| [huggingface-2026-anatomy](blogs/huggingface-2026-anatomy.md) | Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident | 2026 | 4 | full | llm-agent-swarms | vishesh/senku-1 |
 | [kadianakis-2023-proof](blogs/kadianakis-2023-proof.md) | Proof of Validator: A simple anonymous credential scheme for Ethereum's DHT | 2023 | 4 | full | sybil-resistance, sync-consensus | dmarz/sybil-flashbots-informal |
+| [openai-2026-hugging](blogs/openai-2026-hugging.md) | OpenAI – Hugging Face Incident Technical Report | 2026 | 4 | full | llm-agent-swarms | vishesh/senku-1 |
 | [porobov-2026-price](blogs/porobov-2026-price.md) | The Price of Forgery: measuring Sybil resistance in dollars (a paper) | 2026 | 4 | skim | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [torproject-2020-first](blogs/torproject-2020-first.md) | A First Take at PoW Over Introduction Circuits (Tor Proposal 327) | 2020 | 4 | skim | sybil-resistance | dmarz/sybil-credentials |
 | [torproject-2021-res](blogs/torproject-2021-res.md) | Res tokens: Anonymous Credentials for Onion Service DoS Resilience (Tor Proposal 331) | 2021 | 4 | skim | sybil-resistance | dmarz/sybil-credentials |
 | [cloudflare-2025-age](blogs/cloudflare-2025-age.md) | The age of agents: cryptographically recognizing agent traffic | 2025 | 3 | skim | sybil-resistance, llm-agent-swarms | dmarz/sybil-credentials |
 | [dobrokhvalov-2025-privacy](blogs/dobrokhvalov-2025-privacy.md) | Privacy-Preserving Sybil Resistance via MPC-TLS and Semaphore Proofs | 2025 | 3 | full | sybil-resistance | dmarz/sybil-flashbots-informal |
 | [eigenphi-2025-buildernet](blogs/eigenphi-2025-buildernet.md) | BuilderNet's Infrastructure Monoculture: Centralization with Extra Steps | 2025 | 3 | full | sybil-resistance, swarm-detection | dmarz/sybil-flashbots-informal |
+| [huggingface-2026-security](blogs/huggingface-2026-security.md) | Security incident disclosure — July 2026 | 2026 | 3 | full | llm-agent-swarms | vishesh/senku-1 |
 | [nag-2026-sybil](blogs/nag-2026-sybil.md) | Sybil Attacks on Auction Based Inclusion Lists (AUCIL) | 2026 | 3 | full | sybil-resistance, collective-decision | dmarz/sybil-flashbots-informal |
 | [neuder-2024-block](blogs/neuder-2024-block.md) | On block-space distribution mechanisms | 2024 | 3 | skim | sybil-resistance, collective-decision | dmarz/sybil-flashbots-informal |
 | [zebedee-2019-evidence](blogs/zebedee-2019-evidence.md) | Evidence-Based Subjective Logic and Sybil-resistance | 2019 | 3 | full | sybil-resistance, collective-decision | dmarz/sybil-flashbots-informal |

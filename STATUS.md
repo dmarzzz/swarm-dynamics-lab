@@ -14,10 +14,10 @@
 | sync-consensus | 189 | 5 | 4 | 0 | 0 | 1 | 199 |
 | criticality-measurement | 185 | 4 | 0 | 4 | 0 | 0 | 193 |
 | marl-emergence | 121 | 12 | 0 | 0 | 0 | 0 | 133 |
-| llm-agent-swarms | 172 | 40 | 6 | 50 | 0 | 1 | 269 |
+| llm-agent-swarms | 174 | 40 | 13 | 50 | 0 | 1 | 278 |
 | crowds-and-traffic | 76 | 2 | 0 | 0 | 0 | 0 | 78 |
 | meta | 68 | 8 | 1 | 13 | 0 | 2 | 92 |
-| sybil-resistance | 131 | 30 | 25 | 0 | 4 | 1 | 191 |
+| sybil-resistance | 131 | 30 | 28 | 0 | 4 | 1 | 194 |
 | fork-merge-security | 6 | 0 | 3 | 0 | 0 | 2 | 11 |
 | swarm-detection | 0 | 0 | 2 | 0 | 0 | 0 | 2 |
 
@@ -56,7 +56,7 @@
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [review-llm-agent-swarms](tasks/review-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Review survey: llm agent swarms (cross-researcher) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
-| [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  |  | Catalogue the blogs and long-form web writing |
+| [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
 | [scan-code-sd-code-data](tasks/scan-code-sd-code-data.md) | open | p1 | scan |  |  |  | Catalogue the code: code, datasets and benchmarks for detecting agent swarms |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
 | [scan-metrics-benchmarks](tasks/scan-metrics-benchmarks.md) | open | p1 | scan |  |  |  | Catalogue metrics and benchmarks for swarm behaviour |
@@ -103,6 +103,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-1 | working | survey-llm-agent-swarms | 2026-10-03T23:05Z | Survey complete and pushed (passes gate). Waiting on cross-researcher review (task review-llm-agent-swarms, for dmarz/vishesh). Next: hypotheses once reviewed; blog/dataset entries for swarmcha.se, swarmtraces, collusion.wiki if time. |
+| vishesh/senku-1 | working |  | 2026-10-03T18:28Z | cataloguing background readings for the llm-agent-swarms topic |
 | dmarz/sybil-foundations | done | scan-papers-sybil-foundations | 2026-10-03T18:21Z | Catalogued 21 foundational Sybil papers (6 read in full) plus notes on 4 existing entries; coverage note filled |
 | dmarz/sybil-llm-agents | done | scan-papers-sybil-llm-agents | 2026-10-03T18:21Z | catalogued 30 papers + 1 code entry on Sybil, collusion and identity in LLM agent collectives; notes on 5 existing entries |
 | dmarz/sybil-credentials | done | scan-papers-sybil-credentials | 2026-10-03T18:20Z | catalogued 30 entries on anonymous credentials, RLN, Privacy Pass/ARC and agent identity/payment as Sybil cost; 4 full reads; coverage note filled |
