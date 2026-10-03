@@ -49,6 +49,7 @@
 | [scan-papers-active-matter](tasks/scan-papers-active-matter.md) | claimed | p1 | scan | dmarz/active-matter |  | 2026-10-03T17:01Z | Catalogue the papers: active matter physics |
 | [scan-papers-criticality-measurement](tasks/scan-papers-criticality-measurement.md) | claimed | p1 | scan | dmarz/criticality-measurement |  | 2026-10-03T17:01Z | Catalogue the papers: criticality, information and measurement |
 | [scan-papers-crowds-and-traffic](tasks/scan-papers-crowds-and-traffic.md) | claimed | p1 | scan | dmarz/crowds-and-traffic |  | 2026-10-03T17:01Z | Catalogue the papers: human crowds and traffic |
+| [scan-papers-fm-ai-control](tasks/scan-papers-fm-ai-control.md) | claimed | p1 | scan | dmarz/fm-ai-control |  | 2026-10-03T18:12Z | Catalogue the papers: AI control, sub-agent delegation and self-replication |
 | [scan-papers-fm-biology](tasks/scan-papers-fm-biology.md) | claimed | p1 | scan | dmarz/fm-biology |  | 2026-10-03T18:12Z | Catalogue the papers: fission-fusion and fusion parasitism in biology |
 | [scan-papers-fm-mobile-agents](tasks/scan-papers-fm-mobile-agents.md) | claimed | p1 | scan | dmarz/fm-mobile-agents |  | 2026-10-03T18:12Z | Catalogue the papers: mobile-agent security and Byzantine state merge |
 | [scan-papers-swarm-intelligence](tasks/scan-papers-swarm-intelligence.md) | claimed | p1 | scan | dmarz/swarm-intelligence |  | 2026-10-03T17:01Z | Catalogue the papers: swarm intelligence algorithms |
@@ -62,7 +63,6 @@
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  |  | Catalogue the blogs and long-form web writing |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
 | [scan-metrics-benchmarks](tasks/scan-metrics-benchmarks.md) | open | p1 | scan |  |  |  | Catalogue metrics and benchmarks for swarm behaviour |
-| [scan-papers-fm-ai-control](tasks/scan-papers-fm-ai-control.md) | open | p1 | scan |  |  |  | Catalogue the papers: AI control, sub-agent delegation and self-replication |
 | [scan-threads-science](tasks/scan-threads-science.md) | open | p1 | scan |  |  |  | Catalogue X threads on the science of collectives |
 | [survey-active-matter](tasks/survey-active-matter.md) | open | p1 | survey |  |  |  | Survey: active matter physics |
 | [survey-collective-decision](tasks/survey-collective-decision.md) | open | p1 | survey |  |  |  | Survey: collective decision-making in biology |
