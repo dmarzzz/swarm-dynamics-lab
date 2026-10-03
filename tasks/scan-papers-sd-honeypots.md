@@ -1,18 +1,19 @@
 ---
 id: scan-papers-sd-honeypots
 type: task
-title: 'Catalogue the papers: honeypots, canaries, tarpits and traps for autonomous
-  agents'
+title: 'Catalogue the papers: honeypots, canaries, tarpits and traps for autonomous agents'
 kind: scan
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: dmarz/sd-honeypots
 for: null
 created: '2026-10-03'
 created_by: dmarz/sd
 depends_on: []
 topics:
 - swarm-detection
+claimed_at: 2026-10-03T18:20Z
+updated: 2026-10-03T18:20Z
 ---
 
 ## Goal
