@@ -37,3 +37,7 @@ Write synthesis/people-and-labs.md: the groups that produce the seminal and rece
 
 - Covers every topic with at least 3 groups.
 - Every person or lab links to at least one library entry.
+
+## Coverage note
+
+shadow/sol-g50, 2026-10-03: done. 13 topics, 5 to 11 groups each (95 group rows plus a 9-row judge-adjacent table); every row cites at least 2 library ids, all verified against the library. Handles copied only from each group's own homepage (r.jina.ai plus raw HTML); unknown handles left blank and listed. Runnable code/data flagged per row and summarised for issue #49.
