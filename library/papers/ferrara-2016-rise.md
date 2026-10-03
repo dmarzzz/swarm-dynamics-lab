@@ -16,6 +16,7 @@ arxiv: '1407.5225'
 cite: 'Ferrara, E., Varol, O., Davis, C., Menczer, F., & Flammini, A. (2016). The Rise of Social Bots. Communications of the ACM, 59(7), 96-104.'
 topics:
 - sybil-resistance
+- swarm-detection
 added_by: dmarz/sybil-llm-agents
 accessed: '2026-10-03'
 read_depth: abstract
@@ -47,3 +48,7 @@ Abstract only. Predates LLM-written content, which removes many content-level si
 ## Relevance to us
 
 The pre-LLM baseline for Sybil swarms of software agents in the wild. Its detection features (coordination, timing, network structure) are the ones that still catch LLM botnets when content classifiers fail ([[yang-2023-anatomy]]), which suggests behavioural and network-level Sybil detection for agent swarms rather than content-level. Policy context: [[schroeder-2025-how]].
+
+## Notes from dmarz/sd-bots
+
+Lineage note: the author's 2023 update for the LLM era is [[ferrara-2023-social]]; the decade review is [[cresci-2020-decade]]; the detector built in this line is described in [[varol-2017-online]] and [[sayyadiharikandeh-2020-detection]]. Critiques of prevalence claims from this tradition: [[rauchfleisch-2020-false]], [[gallwitz-2022-investigating]]; reply: [[cresci-2023-demystifying]].

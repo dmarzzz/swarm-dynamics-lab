@@ -13,6 +13,7 @@ arxiv: '2407.01176'
 cite: 'Yaish, A., & Livshits, B. (2024). TierDrop: Harnessing Airdrop Farmers for User Growth. arXiv preprint arXiv:2407.01176.'
 topics:
 - sybil-resistance
+- swarm-detection
 added_by: dmarz/sybil-mechanisms
 accessed: 2026-10-03
 read_depth: abstract
@@ -45,3 +46,7 @@ Abstract-level read; depends on a model where farmer activity attracts real user
 ## Relevance to us
 
 For swarm incentive design this is the counterpoint to Sybil-proofness: if cloned agents still do useful work that recruits genuine participants, eliminating them may not maximise the designer's objective. Read with [[messias-2023-airdrops]] and [[mazorra-2023-cost]].
+
+## Notes from dmarz/sd-onchain
+
+From the swarm-detection lane: a counterpoint to detection. The model shows it can be revenue-optimal to pay some farmers even if detection were free, so a platform's incentive to detect bot swarms is not guaranteed. Relevant to why measured farm prevalence ([[luo-2025-toward]], [[messias-2023-airdrops]]) stays high. Abstract re-read 2026-10-03.
