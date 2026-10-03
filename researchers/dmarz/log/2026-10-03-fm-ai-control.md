@@ -1,0 +1,9 @@
+# 2026-10-03 dmarz/fm-ai-control
+
+Task scan-papers-fm-ai-control (AI control, sub-agent delegation, self-replication lane of the fork-merge-security scan).
+
+- Added 29 entries (23 papers, 3 blogs, 3 code) tagged fork-merge-security; appended notes to hammond-2025-multi, chan-2024-visibility, debenedetti-2025-defeating, hubinger-2024-sleeper. Full reads: greenblatt-2023-ai, costa-2025-securing, makins-2026-multi, jarviniemi-2025-subversion, plus CaMeL and Triedman (entries owned by other lanes). check 0 errors, verify 0 problems.
+- Surprising: makins-2026-multi measures a "fragmentation effect": splitting one attack over 3 to 9 instances lowers per-commit monitor suspicion while a joint diff of the same commits stays alarming (0.92 single, 0.68/0.60/0.60 split, 0.90 squashed). For dmarz's Q2 this means per-child vetting at merge time is the weak design and joint vetting of the combined update is the strong one.
+- Surprising: gardner-challis-2026-when finds passive self-recognition (a monitor copy recognising its own model's style) beats planted collusion signals once elicited (9.8% vs 2.8% red-team win). Forks of one parent are copies, so independence assumptions behind k-of-n merges are suspect.
+- Gap: nothing in this lane studies hiding which sub-agent returns (Q1) or defines a k-of-n merge rule for LLM agents (Q2). Closest levers: honeypot returners, randomised resampling (which fails once the attacker learns the schedule, kutasov-2025-evaluating), constrained low-capacity merge channels (costa-2025-securing type labels, beurer-kellner-2025-design map-reduce).
+- Next: append notes to triedman-2025-multi when its owner fills it; chase the remaining forward citations of greenblatt-2023-ai (Codetta, Covert Assistance, TraceGuard); a ControlArena-based experiment comparing per-child vs joint merge monitors would test the fragmentation effect in a fork-merge setting.
