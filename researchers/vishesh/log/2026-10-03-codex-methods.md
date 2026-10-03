@@ -29,3 +29,12 @@ The new hunch bundle at 45b363a is included. Important findings: Scheme C's uppe
 Validation checked 214 matching candidate fingerprints, all sixteen brief mappings, relative links and 321 distinct canonical citation targets. Gitleaks with full redaction found zero matches across fifteen contribution files, with no private-path matches. Repository check passed with the five pre-existing warnings. GitHub check and verify jobs passed. The hosted Questions UI imported all 214 comments and displayed eight shortlisted candidates. Browser import is local review state; the public contribution is the Git commit.
 
 No formal hypothesis or paid/model experiment was created. Next work should select one comparison, inspect the closest primary implementation in depth and complete the appropriate survey/review gates. The separate inbox request for formal LLM-survey review remains outside this task.
+
+
+## Swarm immune-response experimental design
+
+Developed owned exploratory notes and a full proposed experiment specification: a synthetic objective task, three incident strata, source containment crossed with private/shared restoration, fixed 24-round schedule, paired world-level analysis, recurrence and legitimate-update tests, future correct-minority controls, resource caps and existing-toolkit interface. No formal hypothesis or experiment has been registered and no model calls launched.
+
+Primary-source checks corrected the broad novelty claim: INFA-Guard already addresses rehabilitation and MemSecBench already studies selective repair. Fresh reading depths and implementation limits are recorded in the source ledger; no full-paper or code replication is claimed. The next step is full prior-method inspection and survey/hypothesis review before implementation and collection.
+
+Manual checked publication continues under the owner-requested privacy review. Only synthetic task descriptions, owned analysis and public source/PR references are included; the supplied discussion transcript and screenshots are excluded. Validation checks local links, canonical source targets, repository protocol and an exact-file redacted secret scan.
