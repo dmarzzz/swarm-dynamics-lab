@@ -14,13 +14,13 @@
 | sync-consensus | 247 | 13 | 11 | 17 | 1 | 28 | 317 |
 | criticality-measurement | 190 | 4 | 2 | 23 | 2 | 22 | 243 |
 | marl-emergence | 135 | 13 | 1 | 33 | 2 | 13 | 197 |
-| llm-agent-swarms | 407 | 59 | 99 | 197 | 46 | 14 | 822 |
+| llm-agent-swarms | 407 | 59 | 100 | 197 | 46 | 14 | 823 |
 | crowds-and-traffic | 80 | 2 | 1 | 2 | 1 | 8 | 94 |
 | meta | 113 | 9 | 5 | 22 | 1 | 4 | 154 |
 | sybil-resistance | 304 | 48 | 62 | 57 | 8 | 22 | 501 |
 | fork-merge-security | 353 | 44 | 61 | 69 | 8 | 13 | 548 |
 | swarm-detection | 375 | 35 | 79 | 193 | 34 | 11 | 727 |
-| agent-budgets | 4 | 0 | 0 | 0 | 0 | 0 | 4 |
+| agent-budgets | 13 | 0 | 3 | 0 | 0 | 0 | 16 |
 
 ## Tasks
 
