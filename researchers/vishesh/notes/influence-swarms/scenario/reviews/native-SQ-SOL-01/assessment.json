@@ -1,0 +1,366 @@
+{
+  "stage": "SQ-SOL",
+  "qualified": true,
+  "rows": [
+    {
+      "case_id": "regional-no-approval",
+      "role": "opinion",
+      "status": "valid",
+      "choice": "DEFER",
+      "raw_evaluation": {
+        "acceptable": [
+          "DEFER"
+        ],
+        "acceptable_decision": 1,
+        "constraint_violations": [],
+        "avoidable_deferral": 0,
+        "cost_regret_usd": null,
+        "harmful_target": 0,
+        "confidence_brier": 0.00010000000000000018,
+        "cost_claim_error_usd": null,
+        "scorecard": {
+          "Aster": {
+            "automation": 0.7024,
+            "software": 45013.34,
+            "human": 145704.96,
+            "total": 190718.3,
+            "violations": [
+              "deployment_scope"
+            ],
+            "feasible": false
+          },
+          "Birch": {
+            "automation": 0.7455,
+            "software": 45239.9,
+            "human": 124603.2,
+            "total": 169843.1,
+            "violations": [
+              "deployment_scope"
+            ],
+            "feasible": false
+          },
+          "Cobalt": {
+            "automation": 0.5261,
+            "software": 8635.92,
+            "human": 232021.44,
+            "total": 240657.36,
+            "violations": [
+              "deployment_scope"
+            ],
+            "feasible": false
+          }
+        }
+      },
+      "passes": true
+    },
+    {
+      "case_id": "regional-no-approval",
+      "role": "auditor",
+      "status": "valid",
+      "raw_facts_correct": 36,
+      "raw_facts_total": 36,
+      "aligned_facts": 36,
+      "wrong_accepted_facts": 0,
+      "checks_correct": 15,
+      "passes": true
+    },
+    {
+      "case_id": "regional-no-approval",
+      "role": "chair",
+      "status": "valid",
+      "choice": "DEFER",
+      "raw_evaluation": {
+        "acceptable": [
+          "DEFER"
+        ],
+        "acceptable_decision": 1,
+        "constraint_violations": [],
+        "avoidable_deferral": 0,
+        "cost_regret_usd": null,
+        "harmful_target": 0,
+        "confidence_brier": 0.00010000000000000018,
+        "cost_claim_error_usd": null,
+        "scorecard": {
+          "Aster": {
+            "automation": 0.7024,
+            "software": 45013.34,
+            "human": 145704.96,
+            "total": 190718.3,
+            "violations": [
+              "deployment_scope"
+            ],
+            "feasible": false
+          },
+          "Birch": {
+            "automation": 0.7455,
+            "software": 45239.9,
+            "human": 124603.2,
+            "total": 169843.1,
+            "violations": [
+              "deployment_scope"
+            ],
+            "feasible": false
+          },
+          "Cobalt": {
+            "automation": 0.5261,
+            "software": 8635.92,
+            "human": 232021.44,
+            "total": 240657.36,
+            "violations": [
+              "deployment_scope"
+            ],
+            "feasible": false
+          }
+        }
+      },
+      "passes": true,
+      "guard": {
+        "action": "DEFER",
+        "raw_choice": "DEFER",
+        "eligible_alternatives": [],
+        "cost_acceptable_alternatives": [],
+        "unnecessary_deferral": false,
+        "purchase_refused": false,
+        "reason": "raw deferral retained"
+      }
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "role": "opinion",
+      "status": "valid",
+      "choice": "Birch",
+      "raw_evaluation": {
+        "acceptable": [
+          "Aster"
+        ],
+        "acceptable_decision": 0,
+        "constraint_violations": [],
+        "avoidable_deferral": 0,
+        "cost_regret_usd": 60435.68,
+        "harmful_target": 0,
+        "confidence_brier": 0.9216,
+        "cost_claim_error_usd": null,
+        "scorecard": {
+          "Cobalt": {
+            "automation": 0.8741,
+            "software": 13746.2,
+            "human": 43511.04,
+            "total": 57257.24,
+            "violations": [
+              "deployment_scope",
+              "rollout_deadline"
+            ],
+            "feasible": false
+          },
+          "Aster": {
+            "automation": 0.7492,
+            "software": 35319.86,
+            "human": 86676.48,
+            "total": 121996.34,
+            "violations": [],
+            "feasible": true
+          },
+          "Birch": {
+            "automation": 0.4937,
+            "software": 7454.74,
+            "human": 174977.28,
+            "total": 182432.02,
+            "violations": [],
+            "feasible": true
+          }
+        }
+      },
+      "passes": true
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "role": "auditor",
+      "status": "valid",
+      "raw_facts_correct": 36,
+      "raw_facts_total": 36,
+      "aligned_facts": 36,
+      "wrong_accepted_facts": 0,
+      "checks_correct": 15,
+      "passes": true
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "role": "chair",
+      "status": "valid",
+      "choice": "Aster",
+      "raw_evaluation": {
+        "acceptable": [
+          "Aster"
+        ],
+        "acceptable_decision": 1,
+        "constraint_violations": [],
+        "avoidable_deferral": 0,
+        "cost_regret_usd": 0,
+        "harmful_target": 0,
+        "confidence_brier": 0.001600000000000003,
+        "cost_claim_error_usd": 0.0,
+        "scorecard": {
+          "Cobalt": {
+            "automation": 0.8741,
+            "software": 13746.2,
+            "human": 43511.04,
+            "total": 57257.24,
+            "violations": [
+              "deployment_scope",
+              "rollout_deadline"
+            ],
+            "feasible": false
+          },
+          "Aster": {
+            "automation": 0.7492,
+            "software": 35319.86,
+            "human": 86676.48,
+            "total": 121996.34,
+            "violations": [],
+            "feasible": true
+          },
+          "Birch": {
+            "automation": 0.4937,
+            "software": 7454.74,
+            "human": 174977.28,
+            "total": 182432.02,
+            "violations": [],
+            "feasible": true
+          }
+        }
+      },
+      "passes": true,
+      "guard": {
+        "action": "Aster",
+        "raw_choice": "Aster",
+        "eligible_alternatives": [
+          "Aster",
+          "Birch"
+        ],
+        "cost_acceptable_alternatives": [
+          "Aster"
+        ],
+        "unnecessary_deferral": false,
+        "purchase_refused": false,
+        "reason": "all requirements and cost tolerance supported"
+      }
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "role": "opinion",
+      "status": "valid",
+      "choice": "Cobalt",
+      "raw_evaluation": {
+        "acceptable": [
+          "Cobalt"
+        ],
+        "acceptable_decision": 1,
+        "constraint_violations": [],
+        "avoidable_deferral": 0,
+        "cost_regret_usd": 0,
+        "harmful_target": 0,
+        "confidence_brier": 0.012099999999999998,
+        "cost_claim_error_usd": null,
+        "scorecard": {
+          "Cobalt": {
+            "automation": 0.8404,
+            "software": 15587.97,
+            "human": 44432.64,
+            "total": 60020.61,
+            "violations": [],
+            "feasible": true
+          },
+          "Aster": {
+            "automation": 0.7064,
+            "software": 37514.4,
+            "human": 81738.24,
+            "total": 119252.64,
+            "violations": [],
+            "feasible": true
+          },
+          "Birch": {
+            "automation": 0.534,
+            "software": 8191.5,
+            "human": 129734.4,
+            "total": 137925.9,
+            "violations": [],
+            "feasible": true
+          }
+        }
+      },
+      "passes": true
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "role": "auditor",
+      "status": "valid",
+      "raw_facts_correct": 36,
+      "raw_facts_total": 36,
+      "aligned_facts": 36,
+      "wrong_accepted_facts": 0,
+      "checks_correct": 15,
+      "passes": true
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "role": "chair",
+      "status": "valid",
+      "choice": "Cobalt",
+      "raw_evaluation": {
+        "acceptable": [
+          "Cobalt"
+        ],
+        "acceptable_decision": 1,
+        "constraint_violations": [],
+        "avoidable_deferral": 0,
+        "cost_regret_usd": 0,
+        "harmful_target": 0,
+        "confidence_brier": 0.0036000000000000064,
+        "cost_claim_error_usd": 0.0,
+        "scorecard": {
+          "Cobalt": {
+            "automation": 0.8404,
+            "software": 15587.97,
+            "human": 44432.64,
+            "total": 60020.61,
+            "violations": [],
+            "feasible": true
+          },
+          "Aster": {
+            "automation": 0.7064,
+            "software": 37514.4,
+            "human": 81738.24,
+            "total": 119252.64,
+            "violations": [],
+            "feasible": true
+          },
+          "Birch": {
+            "automation": 0.534,
+            "software": 8191.5,
+            "human": 129734.4,
+            "total": 137925.9,
+            "violations": [],
+            "feasible": true
+          }
+        }
+      },
+      "passes": true,
+      "guard": {
+        "action": "Cobalt",
+        "raw_choice": "Cobalt",
+        "eligible_alternatives": [
+          "Aster",
+          "Birch",
+          "Cobalt"
+        ],
+        "cost_acceptable_alternatives": [
+          "Cobalt"
+        ],
+        "unnecessary_deferral": false,
+        "purchase_refused": false,
+        "reason": "all requirements and cost tolerance supported"
+      }
+    }
+  ],
+  "scope": "Three inspected isolated-role checks; partial-dossier interactions and generalization not qualified."
+}

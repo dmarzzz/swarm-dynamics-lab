@@ -1,0 +1,11 @@
+# C6-S0 interface failure and bounded repair
+
+Execution: failed after one call;0/60 completed cases,1 failed case,59 unstarted,1/180 dispatched. Scientific qualification: not established. Main: not run. Cost: USD0.000216 settled from provider usage (111 input,21 output tokens); historical USD0.001344 uncertainty remains separate.
+
+Every available native request/response was inspected. Provider Anthropic returned the requested alias `anthropic/claude-haiku-4.5`, whereas the validator expected the endpoint catalogue's dated snapshot string. The visible response was a JSON label inside one Markdown JSON fence. Both mismatches reproduce offline. There was no HTTP failure, retry, missing provider response or truncated output. One report cannot establish capability, collapse, or routing efficacy. The execution stop correctly prevented escalation.
+
+The earliest divergence is the served-name validation, followed by a second strict-format incompatibility if the name alone is repaired. C6R1 therefore validates the actual alias/provider plus the unique advertised route revision, records both forms honestly, and normalizes only one complete JSON fence before the unchanged exact label-object check. No fallback provider, semantic relabeling or free-form text parser is added. Preserve the native tape and failed hub outcome. All error traces were inspected; no unseen reasoning is inferred.
+
+Quality review: claim scope/controls/case labels/isolation remain fit for the finite synthetic comparison; native interface readiness failed. Sample size is1 response, not60 observations; no comparative or generalization claim. Reproducibility is supported by retained payload/raw response and source0ce47a45. Costs are known and settled independently of execution failure. Visualization/reporting must show the failure/unstarted cases. Resource stays under the same exclusive approved-account claim during this repair; no new machine or allowance. Independent researcher review is not required; the owning assessment is not independent validation.
+
+Next: RUN C6R1 only after publishing the prospective amendment, passing regression/native checks and refreshing admission. Keep automatic main expansion blocked until valid requalification and trace review. No new Qwen calls.

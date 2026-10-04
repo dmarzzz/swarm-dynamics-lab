@@ -29,8 +29,10 @@ class DesignTests(unittest.TestCase):
   self.assertTrue(qualification(rows)['qualified'])
   for r in rows:r['labels']['a']='REFUTE'
   self.assertFalse(qualification(rows)['qualified'])
+ def test_complete_fence_normalization(self):
+  self.assertEqual(parse_label('```json\n{"label":"SUPPORT"}\n```'),'SUPPORT')
  def test_parse_fail_closed(self):
-  for text in ('SUPPORT','{"label":"SUPPORT","extra":1}','{"label":"maybe"}'):
+  for text in ('SUPPORT','prose ```json\n{}\n```','{"label":"SUPPORT","extra":1}','{"label":"maybe"}'):
    with self.assertRaises(ValueError):parse_label(text)
  def test_haiku_only_option_order_changes(self):
   a=haiku(cases('S0')[0],0);b=haiku(cases('S0')[0],1)

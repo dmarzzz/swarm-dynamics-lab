@@ -1,6 +1,6 @@
 import hashlib,json,sqlite3,tempfile,time,unittest
 from native import validate_admission,haiku_validate,reserve
-from design import HERE,HSNAPSHOT
+from design import HERE,HSNAPSHOT,HMODEL
 class NativeTests(unittest.TestCase):
  def receipt(self):
   return dict(account_verified=True,exclusive_claim_verified=True,workload_verified=True,source_verified=True,public_plan_verified=True,scope_authorized=True,stage='D0',checked_epoch=1000,expires_epoch=10000,plan_sha256=hashlib.sha256((HERE/'PLAN.md').read_bytes()).hexdigest())
@@ -16,7 +16,7 @@ class NativeTests(unittest.TestCase):
  def test_main_needs_actual_review(self):
   a=self.receipt();a.update(stage='S1',cumulative_cap_usd=50.,c6_cap_usd=2.,budget_increase_approved=True,original_ledger_verified=True)
   with self.assertRaises(ValueError):validate_admission(a,'S1',1100)
- def valid(self):return {'model':HSNAPSHOT,'provider':'Anthropic','choices':[{'finish_reason':'stop','message':{'content':'{"label":"SUPPORT"}'}}],'usage':{'cost':.0002,'prompt_tokens':150,'completion_tokens':7}}
+ def valid(self):return {'model':HMODEL,'provider':'Anthropic','choices':[{'finish_reason':'stop','message':{'content':'{"label":"SUPPORT"}'}}],'usage':{'cost':.0002,'prompt_tokens':150,'completion_tokens':7}}
  def test_model_provider_and_truncation(self):
   x=self.valid();self.assertEqual(haiku_validate(x)['label'],'SUPPORT')
   for key,val in [('model','wrong'),('provider','Azure')]:

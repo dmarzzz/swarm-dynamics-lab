@@ -20,14 +20,14 @@ def cases(stage):
  if stage=='D0':return diagnostic_cases()
  if stage not in ('S0','S1'):raise ValueError('stage')
  conditions=[(f,l,j) for f in (range(4) if stage=='S0' else C5.FAMILIES) for l in LABELS for j in range(5 if stage=='S0' else 12)]
- random.Random('C6-identity-'+stage).shuffle(conditions);out=[]
+ random.Random('C6R1-identity-'+stage).shuffle(conditions);out=[]
  for i,(family,label,j) in enumerate(conditions):
-  r=C5.fixture(label,family,'C6-'+stage) if stage=='S0' else C5.main_fixture(family,label,77+j,'C6-'+stage,i)
+  r=C5.fixture(label,family,'C6R1-'+stage) if stage=='S0' else C5.main_fixture(family,label,77+j,'C6R1-'+stage,i)
   if stage=='S0':
-   old=C5.opaque_name('C6-'+stage,family);new=C5.opaque_name('C6-'+stage,i+100)
+   old=C5.opaque_name('C6R1-'+stage,family);new=C5.opaque_name('C6R1-'+stage,i+100)
    for k in ('claim','report'):r[k]=r[k].replace(old,new)
-  r.update(id='C6-'+stage+'-'+str(i),status='planned',labels={});out.append(r)
- random.Random('C6-call-order-'+stage).shuffle(out);return out
+  r.update(id='C6R1-'+stage+'-'+str(i),status='planned',labels={});out.append(r)
+ random.Random('C6R1-call-order-'+stage).shuffle(out);return out
 SIMPLE='Read the report. Is the claim established? SUPPORT means measured accuracy is higher than baseline. REFUTE means it is equal or lower. UNCERTAIN means the needed measurement is absent. Return only JSON: {"label":"SUPPORT"}, {"label":"REFUTE"}, or {"label":"UNCERTAIN"}.\n'
 def qwen(row,prompt,decoder):
  if prompt not in ('original','simple') or decoder not in ('schema','text'):raise ValueError('condition')
@@ -42,6 +42,8 @@ def haiku(row,variant):
  text='Classify REPORT relative to CLAIM. SUPPORT: measured accuracy improved over baseline. REFUTE: measured accuracy was worse or unchanged. UNCERTAIN: the named comparison is not established. Use only REPORT. Return only a JSON object with one key, label. Allowed labels: '+', '.join(order)+'.\nCLAIM: '+row['claim']+'\nREPORT: '+row['report']
  return {'model':HMODEL,'provider':{'only':['anthropic'],'allow_fallbacks':False,'require_parameters':True},'messages':[{'role':'user','content':text}],'temperature':0,'max_tokens':32,'reasoning':{'enabled':False},'stream':False}
 def parse_label(text):
+ text=text.strip()
+ if text.startswith('```json\n') and text.endswith('\n```'):text=text[8:-4].strip()
  x=json.loads(text)
  if not isinstance(x,dict) or set(x)!={'label'} or x['label'] not in LABELS:raise ValueError('invalid_label')
  return x['label']
