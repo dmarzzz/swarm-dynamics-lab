@@ -1,0 +1,85 @@
+{
+  "version": 3,
+  "cfg": {
+    "n_agents": 8,
+    "rounds": 24
+  },
+  "plans": {
+    "engineering": {
+      "backend": "scripted",
+      "tasks": [
+        6600,
+        6601,
+        6602,
+        6603,
+        6604,
+        6605,
+        6606,
+        6607,
+        6608,
+        6609,
+        6610,
+        6611,
+        6612,
+        6613,
+        6614,
+        6615
+      ],
+      "worlds": [
+        "shared_evidence",
+        "no_replay",
+        "no_incident",
+        "benign_learning",
+        "missing_lineage"
+      ],
+      "arms": [
+        "N",
+        "Q00",
+        "Q10",
+        "Q01",
+        "Q11",
+        "Q10F",
+        "Q11R",
+        "Q11S",
+        "CLEAN"
+      ]
+    },
+    "native-repair": {
+      "backend": "anthropic",
+      "tasks": [
+        6700
+      ],
+      "worlds": [
+        "shared_evidence"
+      ],
+      "arms": [
+        "Q10F",
+        "Q11",
+        "CLEAN"
+      ]
+    }
+  },
+  "development_opened": [
+    6400,
+    6500,
+    6504
+  ],
+  "reserved_holdout": [
+    6800,
+    6801,
+    6802,
+    6803,
+    6804,
+    6805,
+    6806,
+    6807,
+    6808,
+    6809,
+    6810,
+    6811,
+    6812,
+    6813,
+    6814,
+    6815
+  ]
+}
