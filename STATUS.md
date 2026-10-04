@@ -70,9 +70,9 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | open | p1 | experiment |  | dmarz |  | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | open | p1 | build |  | vishesh | 2026-10-04T03:43Z | Run the revised procurement influence experiment |
-| [review-influence-q4-dossiers](tasks/review-influence-q4-dossiers.md) | open | p1 | review |  | shadow |  | Independently review the four fresh influence qualification dossiers |
-| [review-right-dissenter-rd1](tasks/review-right-dissenter-rd1.md) | open | p1 | review |  | shadow |  | Review Right Dissenter RD-1 design and offline prototype |
-| [review-swarm-size-qualification](tasks/review-swarm-size-qualification.md) | open | p1 | review |  | shadow |  | Independently review the optimal swarm-size qualification package |
+| [review-influence-q4-dossiers](tasks/review-influence-q4-dossiers.md) | open | p1 | review |  | dmarz | 2026-10-04T03:56Z | Independently review the four fresh influence qualification dossiers |
+| [review-right-dissenter-rd1](tasks/review-right-dissenter-rd1.md) | open | p1 | review |  | dmarz | 2026-10-04T03:56Z | Review Right Dissenter RD-1 design and offline prototype |
+| [review-swarm-size-qualification](tasks/review-swarm-size-qualification.md) | open | p1 | review |  | dmarz | 2026-10-04T03:56Z | Independently review the optimal swarm-size qualification package |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | open | p1 | experiment |  | vishesh | 2026-10-04T03:52Z | Deploy and assess the Right Dissenter exploratory live study |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
 | [scan-code-avalon-swarm](tasks/scan-code-avalon-swarm.md) | open | p1 | scan |  | dmarz |  | Catalogue and run Avalon / social-deduction environments we could extend to N seats |
@@ -210,6 +210,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | vishesh/codex-immune | blocked | immune-response-evidence-receipts | 2026-10-04T03:56Z | Wrong-account deployment stopped and backed up; awaiting scoped deletion approval and correct Dmarz provisioning path |
+| dmarz/orbital-orchestrator | idle |  | 2026-10-04T03:55Z | Run orchestrator on orbital-one; verified access, awaiting instructions |
 | vishesh/codex-pi-review | working |  | 2026-10-04T03:54Z | Reconcile Dmarz PI review e0a3170 and incorporate current methods improvements. |
 | dmarz/inbox-design-feedback | done |  | 2026-10-04T03:53Z | Delivered fleet separation reminders and external influence design feedback; market agent acknowledged dispatch hold. |
 | vishesh/codex-heterogeneous | done | heterogeneous-priority-revision | 2026-10-04T03:53Z | Published owner-revised scores and the self-differentiating swarm recommendation |
