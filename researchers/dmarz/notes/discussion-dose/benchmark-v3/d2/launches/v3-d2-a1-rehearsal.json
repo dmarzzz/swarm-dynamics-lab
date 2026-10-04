@@ -1,0 +1,210 @@
+{
+  "attempt": "v3-d2-a1",
+  "canonical_values_matched_to_q0": 48,
+  "claim": "dmarz-discussion-v3-d2",
+  "frozen_manifest_sha256": "6c7721976102f3d336a1e203e0fbcabcf4c0830b94ec4f3b431899e8b8bbf82c",
+  "hashes": {
+    "canonical_facts_sha256": "aefa5bdd84f3f3265d032175bdd1133fe49742d5bc83c4f8c418ade6703311aa",
+    "order_digest": "29bf22351c10b89deb151594a4993ddb058142213a70eda9574121fdbffb2bea",
+    "provider_bodies_digest": "ed5329b15eac84a4322ad956072280bffa2474b8d9c1ab507d54bdab6f3094fc",
+    "schemas": {
+      "d2_decision": "c53c392e37efc6ad9e2d5a49efab38d1711164242ab8dd16d916642212a2b377",
+      "d2_feasibility": "f3a727be98dc5dfb244f229739a1f264d1f3178b2f60a7f981f91f0d5f8506ab"
+    },
+    "system_hash": "f39226260d16a160857f1bfe55be67e13bff98dbe03692dc197736e6185b9a74"
+  },
+  "max_physical_calls": 73,
+  "paid_run": {
+    "requires": [
+      "explicit go from dmarz/fleet-monitor",
+      "passing preflight",
+      "passing one-call Opus compatibility probe"
+    ],
+    "started": false
+  },
+  "pinned_source_commit": "aef218e8fd19470f74aac7bd5749876711a3038f",
+  "planned_calls": 72,
+  "public_plan": {
+    "public_page_markers_verified": true,
+    "public_raw_hash_matches": true,
+    "sha256": "d613ea7ea53b51cf46d10bd87599341b99fcd8479b8fd5bed1cdcc3fda5e9d65",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/aef218e8fd19470f74aac7bd5749876711a3038f/researchers/dmarz/notes/discussion-dose/benchmark-v3/d2/PLAN.md",
+    "verified_utc": "2026-10-04T08:17:52.274050+00:00"
+  },
+  "python": "3.12.3",
+  "recorded_by": "dmarz/v3-d2-opus",
+  "recorded_utc": "2026-10-04T08:25Z",
+  "rehearsal": {
+    "artifacts_read_back_from_hub_and_matched": [
+      {
+        "bytes": 101,
+        "name": "audit.json",
+        "sha256": "b14eea3cd6efe1d857aaabf383bc5ff30890ef0ea4b90c6abd12cf2dce69c491"
+      },
+      {
+        "bytes": 145899,
+        "name": "events.jsonl",
+        "sha256": "a5d877ba87229b46f9e6b851f689d109b37e4919e63a228dde91b3ab81a28c3b"
+      },
+      {
+        "bytes": 37743,
+        "name": "manifest.json",
+        "sha256": "9c457d7068c78808eaad56c8a14b077c02b86a596a10bb017d636f2c126b6063"
+      },
+      {
+        "bytes": 77471,
+        "name": "outcomes.json",
+        "sha256": "ac5e6c1556e9f09e9da7933a0833456eee6e54d4037d8858a687a3b81d8291d7"
+      },
+      {
+        "bytes": 29,
+        "name": "reporting.json",
+        "sha256": "8ecd99135a54a772e0858fc60ad02dce69163b34a1e165be1648cc6027f6280b"
+      },
+      {
+        "bytes": 28868,
+        "name": "summary.json",
+        "sha256": "228b943000b2a3fa278d1dddae9a9595ea79c112bfdcfa205923208cf4b2e272"
+      }
+    ],
+    "assigned": 72,
+    "control_outcomes": {
+      "claude-haiku-4-5-20251001": {
+        "atomic_correct_of_18": 6,
+        "atomic_pass": false,
+        "canonical_correct_of_6": 2,
+        "canonical_pass": false,
+        "composition": {
+          "assigned": 6,
+          "derived_correct": 2,
+          "disagrees_with_canonical_vote": 0,
+          "missing": 0,
+          "multiple_predicted_feasible": 6,
+          "none_predicted_feasible": 0
+        },
+        "control": "always-feasible",
+        "screen_reading": "scripted_rehearsal_not_model_evidence",
+        "true_negative_of_12": 0,
+        "true_positive_of_6": 6
+      },
+      "claude-opus-5-5": {
+        "atomic_correct_of_18": 18,
+        "atomic_pass": false,
+        "canonical_correct_of_6": 6,
+        "canonical_pass": false,
+        "composition": {
+          "assigned": 6,
+          "derived_correct": 6,
+          "disagrees_with_canonical_vote": 0,
+          "missing": 0,
+          "multiple_predicted_feasible": 0,
+          "none_predicted_feasible": 0
+        },
+        "control": "always-right",
+        "screen_reading": "scripted_rehearsal_not_model_evidence",
+        "true_negative_of_12": 12,
+        "true_positive_of_6": 6
+      },
+      "claude-sonnet-4-6": {
+        "atomic_correct_of_18": 12,
+        "atomic_pass": false,
+        "canonical_correct_of_6": 0,
+        "canonical_pass": false,
+        "composition": {
+          "assigned": 6,
+          "derived_correct": 0,
+          "disagrees_with_canonical_vote": 0,
+          "missing": 0,
+          "multiple_predicted_feasible": 0,
+          "none_predicted_feasible": 6
+        },
+        "control": "always-infeasible",
+        "screen_reading": "scripted_rehearsal_not_model_evidence",
+        "true_negative_of_12": 12,
+        "true_positive_of_6": 0
+      }
+    },
+    "duplicate_dispatch": {
+      "alternate_output_absent": true,
+      "duplicate_refused": true,
+      "marker_unchanged": true,
+      "model_calls": 0,
+      "paid_marker_present": false
+    },
+    "exact_source_audit": {
+      "complete_journal": true,
+      "ok": true,
+      "outcomes_recomputed": 72,
+      "requests_verified": 72
+    },
+    "hub_counters": {
+      "assigned_calls": 72,
+      "invalid_calls": 0,
+      "observed_usage_cost_usd": 0.0,
+      "physical_model_calls": 0,
+      "started_calls": 72,
+      "terminal_calls": 72,
+      "usage_missing_calls": 0
+    },
+    "hub_run": "discussion-dose-v3/v3-d2-a1-rehearsal",
+    "hub_status": "done",
+    "label": "SCRIPTED REHEARSAL, NOT MODEL EVIDENCE",
+    "local_readback_verified": true,
+    "model_calls": 0,
+    "not_exercised_on_the_hub": "injected provider failure and failed hub status; covered by offline tests only",
+    "pacing_seconds_per_assignment": 0.5,
+    "private_archive_sha256": "ef9116dcdf670d3d1f0e768896bbf9e7ad5b64b981a3068ad3d0b5ec44477bef",
+    "scripted_control_per_model_slot": {
+      "claude-haiku-4-5-20251001": "always-feasible",
+      "claude-opus-5-5": "always-right",
+      "claude-sonnet-4-6": "always-infeasible"
+    },
+    "service": "detached systemd unit, Restart=no; continued after the launching client disconnected",
+    "started": 72,
+    "summary_sha256": "228b943000b2a3fa278d1dddae9a9595ea79c112bfdcfa205923208cf4b2e272",
+    "terminal": 72,
+    "watchdog": {
+      "observations": 2,
+      "stopped_after_rehearsal": true,
+      "warnings": 0
+    }
+  },
+  "reservation_usd": {
+    "by_model": {
+      "claude-haiku-4-5-20251001": 0.292548,
+      "claude-opus-5-5": 2.129232,
+      "claude-sonnet-4-6": 0.877068
+    },
+    "cap": 5,
+    "opus_probe": 0.088508,
+    "total": 3.387356
+  },
+  "retained_q0_archive_sha256": "2c72a9023a0b7b1f346a63bc15ded64d48ddb9739992c89b76ccc9c48166f64e",
+  "review": "same-researcher check by dmarz/fleet-monitor under the owner waiver; not independent review",
+  "schema": "d2-rehearsal-receipt-v1",
+  "server": "sim-dmarz-3",
+  "stage": "REHEARSAL",
+  "status": "rehearsal_passed_no_model_call_paid_run_not_started",
+  "superseded_manifest": {
+    "manifest_sha256": "3afbded97feb34efebf6869fc8a0bcc53052c43f9faffe72b75dc858071c04b9",
+    "reason": "frozen before the amendment recorded the D1-Opus result and set Opus effort to high; never rehearsed or run",
+    "source_commit": "4917a03ba22724eab808e30bf36a3d6e9b5305e7"
+  },
+  "tests_on_server": {
+    "all_passed": true,
+    "bench_v3_selftest": 57,
+    "diagnostic_v3_d2_selftest": 29,
+    "diagnostic_v3_selftest": 15
+  },
+  "zero_cost_admission_checks": {
+    "inference_calls": 0,
+    "models_available": [
+      "claude-haiku-4-5-20251001",
+      "claude-opus-5-5",
+      "claude-sonnet-4-6"
+    ],
+    "public_page_markers_verified": true,
+    "public_raw_hash_matches": true,
+    "serialized_requests_verified": 72
+  }
+}

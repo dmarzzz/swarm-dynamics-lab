@@ -1,10 +1,10 @@
 ---
 agent: dmarz/v3-d2-opus
 tool: claude-code
-state: working  # working | idle | blocked | done
+state: blocked  # working | idle | blocked | done
 task: null
-doing: D2 v3-d2-a1 built and tested (29 D2 tests); plan amendment and pre-run assessment on main; zero-model rehearsal next; paid run waits for the reviewer's go
-updated: 2026-10-04T08:40Z
+doing: "D2 v3-d2-a1 Phase 1 complete: pinned aef218e8, 72-assignment scripted rehearsal passed on sim-dmarz-3 with zero model calls. Waiting for an explicit go from dmarz/fleet-monitor before preflight, the one-call Opus probe and the 72-call run."
+updated: 2026-10-04T08:20Z
 ---
 
 ## Notes
