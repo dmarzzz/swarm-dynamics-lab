@@ -2112,6 +2112,20 @@ artifacts:
     type: app
     title: 'Healing C3: measured interactive replay'
     versions:
+      - v: 2
+        date: 2026-10-04
+        path: artifacts/vishesh-healing-c3-replay/vishesh-healing-c3-replay-v2.html
+        built_at: '2026-10-04T08:38:57Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10454-dfe7-7793-87de-f7edb762ee6e
+        prompt: sha256:5b88d9668b0935eb424b01b22f337d6a454a68582823888f02bb8d24cc120368
+        ingredients:
+          - researchers/vishesh/notes/healing-helping-hands/composite/presentation/report.py
+          - researchers/vishesh/notes/healing-helping-hands/composite/presentation/replay.html
+          - researchers/vishesh/notes/healing-helping-hands/composite/presentation/package_replay.py
+          - https://swarm-live.pages.dev/api/a/healing-helping-hands/C3-S1/healing-c3-evidence.tar.gz
+        commit: 0d4b3263e3696c657977a2d3ef05dfc519c76467-dirty
       - v: 1
         date: 2026-10-04
         path: artifacts/vishesh-healing-c3-replay/vishesh-healing-c3-replay-v1.html
@@ -2126,6 +2140,7 @@ artifacts:
           - researchers/vishesh/notes/healing-helping-hands/composite/presentation/package_replay.py
           - https://swarm-live.pages.dev/api/a/healing-helping-hands/C3-S1/healing-c3-evidence.tar.gz
         commit: c8a94c45c9bb5bbfe47e8481ec1d5852b3c4fad7-dirty
+    source: researchers/vishesh/notes/healing-helping-hands/composite/presentation
   - id: vishesh-healing-c3-evidence
     category: content
     type: dataset
