@@ -3,8 +3,8 @@ agent: dmarz/market-split
 tool: codex
 state: working
 task: run-market-split-api
-doing: Qualifying Sonnet 4.6 after preserving Haiku execution and competence failures.
-updated: 2026-10-04T02:56Z
+doing: Qualifying bounded-reasoning Sonnet V5; all earlier failures retained, main cohort unopened.
+updated: 2026-10-04T03:12Z
 ---
 
 ## Notes

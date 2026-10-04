@@ -516,6 +516,697 @@
    "sha256": "606fd3f5088ed2844801e37c30b9b101338f4668ee47ae0b8c04cf99afae9b3b",
    "size_bytes": 137073
   },
+  "pi-next-experiments-2026-10-04@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://arxiv.org/abs/1810.08240"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://arxiv.org/abs/2403.08882"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://arxiv.org/abs/2410.08948"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/RESULTS.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/REVIEW.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/NATIVE-A2-RESULTS.json"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/SOLO-A1-RESULTS.json"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/README.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/benchmark-v3/DEPLOYMENT.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/launch/resample-v3-review-waiver.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/market-split-api/reviews/q0-003-post.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/sybil-scale-api/reviews/q0-001-post.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/vishesh/notes/discussion-benchmark-v3-review/REVIEW.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://lakens.github.io/statistical_inferences/08-samplesizejustification"
+    },
+    {
+     "mtime": 1791082754,
+     "sha256": "43e9a27db419e9b771067c4df243936ee36a88a3b78f44953f93ffccc93b8ef3",
+     "size": 35915,
+     "uri": "researchers/dmarz/notes/compositional-safety-plan/README.md"
+    },
+    {
+     "mtime": 1791082355,
+     "sha256": "fc71a3aefea944577844ebc22f81e583d18a3963c865be5eb8f45c7ff776fe05",
+     "size": 5327,
+     "uri": "researchers/dmarz/notes/compositional-safety/README.md"
+    },
+    {
+     "mtime": 1791082355,
+     "sha256": "45af515af28d5fdabf01c95ba300aab5af9e504680bd5960730d589ba5c85267",
+     "size": 4338,
+     "uri": "researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "3feda52ca8a9e33bcfd3ccbfe8aacf79e7c59506310e7251f9601dca70168b4d",
+     "size": 10921,
+     "uri": "researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md"
+    },
+    {
+     "mtime": 1791082754,
+     "sha256": "57fed5a45f7b259b141c4c2ff7a1544fff82a225e73152a5c864474b32ff972e",
+     "size": 12673,
+     "uri": "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md"
+    },
+    {
+     "mtime": 1791082273,
+     "sha256": "dfe26dea2656fb34fcd05c8453b2d9f9c82de2cba796357919c62a0c2282d1c4",
+     "size": 222249,
+     "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/live-evidence.json"
+    },
+    {
+     "mtime": 1791082843,
+     "sha256": "f1fbeba37a5c756ff84d506aa3344bea8b85708d85a93f7fb4938da219d6f45b",
+     "size": 40804,
+     "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/plan.json"
+    },
+    {
+     "mtime": 1791082744,
+     "sha256": "27cb96bc6ef9bf90774c84fcb69e32da86caf562ba05c5df884b681283265e1b",
+     "size": 6151,
+     "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/src/build.py"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "ba7fa42746856647db6e9f4424a5aeb848947c2a41b0273a0cfd0f7037b5dd97",
+     "size": 5880,
+     "uri": "researchers/dmarz/notes/sybil-scale-api/README.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "27f1bf7ec2f15cd1a4e2d6049571590c039831c34180d9ca1c8d18e2f4373b10",
+     "size": 4212,
+     "uri": "researchers/dmarz/notes/sybil-scale-api/preregistration.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "f13e82c9923d7581bd3ef9bbfd5d3c0a62e552f3dffd2e0ce5f34b57038c16b2",
+     "size": 7182,
+     "uri": "researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md"
+    },
+    {
+     "mtime": 1791082434,
+     "sha256": "53110c0c2d016c8ac5f8f15a5103ed1d309acb3d60e7507621cfa8ec7f4b957b",
+     "size": 8340,
+     "uri": "researchers/vishesh/notes/antsy-verification-v4/README.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "a7173f3b5c5f20a14be3729aded712adb6810ac7ba2aebccbc707f235afcc78c",
+     "size": 2269,
+     "uri": "researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "79dac58f7ade7eac07333b566885a862d91d334f317ceaff9ba83864cca29082",
+     "size": 10309,
+     "uri": "researchers/vishesh/notes/healing-helping-hands/README.md"
+    },
+    {
+     "mtime": 1791082754,
+     "sha256": "5a60ace07d622e6bb1a0c3e188216678ae2b645f723c74e727b865b01889ab07",
+     "size": 5861,
+     "uri": "researchers/vishesh/notes/immune-response-v3/README.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "36822379f0cd9cc2fb9591f37c562d042287add0cef4839bd73a1bb066f4dda4",
+     "size": 7582,
+     "uri": "researchers/vishesh/notes/immune-response-v3/REVIEW.md"
+    },
+    {
+     "mtime": 1791082754,
+     "sha256": "7bbbc862f951be925fd9277eda1fecfc638014eead237ace48b831a5abacebda",
+     "size": 11632,
+     "uri": "researchers/vishesh/notes/immune-response-v3/scenario-study/README.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "86c8af6878cbdedbb39233d18351f25f0e974683bb15ec17cadca8e17de91872",
+     "size": 11353,
+     "uri": "templates/experiment-worker/README.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "5ae221ff50424d6ceb528e74d099933363426a8c15a42f4be69c5c56e822debc",
+     "size": 27215,
+     "uri": "tooling/agent-experiments/GUIDE.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "d952129ff67a98b9b6bfb2a12e03061cbc19f0429f50886d4f068d7473603dfd",
+     "size": 6579,
+     "uri": "tooling/agent-experiments/RUN-REVIEW.md"
+    }
+   ],
+   "mime": "application/octet-stream",
+   "mtime": 1791082843,
+   "path": "artifacts/pi-next-experiments-2026-10-04/pi-next-experiments-2026-10-04-v1.md",
+   "prompt_sha256": "a7af32341ae1c7b043b9f55d48cd992bbc54f3c3ed3bef1903e6fdb91f21da3d",
+   "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+   "size_bytes": 42700
+  },
+  "pi-next-experiments-view-2026-10-04@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://arxiv.org/abs/1810.08240"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://arxiv.org/abs/2403.08882"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://arxiv.org/abs/2410.08948"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/RESULTS.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/REVIEW.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/NATIVE-A2-RESULTS.json"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/SOLO-A1-RESULTS.json"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/README.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/benchmark-v3/DEPLOYMENT.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/launch/resample-v3-review-waiver.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/market-split-api/reviews/q0-003-post.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/sybil-scale-api/reviews/q0-001-post.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/vishesh/notes/discussion-benchmark-v3-review/REVIEW.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://lakens.github.io/statistical_inferences/08-samplesizejustification"
+    },
+    {
+     "mtime": 1791082754,
+     "sha256": "43e9a27db419e9b771067c4df243936ee36a88a3b78f44953f93ffccc93b8ef3",
+     "size": 35915,
+     "uri": "researchers/dmarz/notes/compositional-safety-plan/README.md"
+    },
+    {
+     "mtime": 1791082355,
+     "sha256": "fc71a3aefea944577844ebc22f81e583d18a3963c865be5eb8f45c7ff776fe05",
+     "size": 5327,
+     "uri": "researchers/dmarz/notes/compositional-safety/README.md"
+    },
+    {
+     "mtime": 1791082355,
+     "sha256": "45af515af28d5fdabf01c95ba300aab5af9e504680bd5960730d589ba5c85267",
+     "size": 4338,
+     "uri": "researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "3feda52ca8a9e33bcfd3ccbfe8aacf79e7c59506310e7251f9601dca70168b4d",
+     "size": 10921,
+     "uri": "researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md"
+    },
+    {
+     "mtime": 1791082754,
+     "sha256": "57fed5a45f7b259b141c4c2ff7a1544fff82a225e73152a5c864474b32ff972e",
+     "size": 12673,
+     "uri": "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md"
+    },
+    {
+     "mtime": 1791082273,
+     "sha256": "dfe26dea2656fb34fcd05c8453b2d9f9c82de2cba796357919c62a0c2282d1c4",
+     "size": 222249,
+     "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/live-evidence.json"
+    },
+    {
+     "mtime": 1791082843,
+     "sha256": "f1fbeba37a5c756ff84d506aa3344bea8b85708d85a93f7fb4938da219d6f45b",
+     "size": 40804,
+     "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/plan.json"
+    },
+    {
+     "mtime": 1791082744,
+     "sha256": "27cb96bc6ef9bf90774c84fcb69e32da86caf562ba05c5df884b681283265e1b",
+     "size": 6151,
+     "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/src/build.py"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "ba7fa42746856647db6e9f4424a5aeb848947c2a41b0273a0cfd0f7037b5dd97",
+     "size": 5880,
+     "uri": "researchers/dmarz/notes/sybil-scale-api/README.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "27f1bf7ec2f15cd1a4e2d6049571590c039831c34180d9ca1c8d18e2f4373b10",
+     "size": 4212,
+     "uri": "researchers/dmarz/notes/sybil-scale-api/preregistration.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "f13e82c9923d7581bd3ef9bbfd5d3c0a62e552f3dffd2e0ce5f34b57038c16b2",
+     "size": 7182,
+     "uri": "researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md"
+    },
+    {
+     "mtime": 1791082434,
+     "sha256": "53110c0c2d016c8ac5f8f15a5103ed1d309acb3d60e7507621cfa8ec7f4b957b",
+     "size": 8340,
+     "uri": "researchers/vishesh/notes/antsy-verification-v4/README.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "a7173f3b5c5f20a14be3729aded712adb6810ac7ba2aebccbc707f235afcc78c",
+     "size": 2269,
+     "uri": "researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "79dac58f7ade7eac07333b566885a862d91d334f317ceaff9ba83864cca29082",
+     "size": 10309,
+     "uri": "researchers/vishesh/notes/healing-helping-hands/README.md"
+    },
+    {
+     "mtime": 1791082754,
+     "sha256": "5a60ace07d622e6bb1a0c3e188216678ae2b645f723c74e727b865b01889ab07",
+     "size": 5861,
+     "uri": "researchers/vishesh/notes/immune-response-v3/README.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "36822379f0cd9cc2fb9591f37c562d042287add0cef4839bd73a1bb066f4dda4",
+     "size": 7582,
+     "uri": "researchers/vishesh/notes/immune-response-v3/REVIEW.md"
+    },
+    {
+     "mtime": 1791082754,
+     "sha256": "7bbbc862f951be925fd9277eda1fecfc638014eead237ace48b831a5abacebda",
+     "size": 11632,
+     "uri": "researchers/vishesh/notes/immune-response-v3/scenario-study/README.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "86c8af6878cbdedbb39233d18351f25f0e974683bb15ec17cadca8e17de91872",
+     "size": 11353,
+     "uri": "templates/experiment-worker/README.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "5ae221ff50424d6ceb528e74d099933363426a8c15a42f4be69c5c56e822debc",
+     "size": 27215,
+     "uri": "tooling/agent-experiments/GUIDE.md"
+    },
+    {
+     "mtime": 1791082034,
+     "sha256": "d952129ff67a98b9b6bfb2a12e03061cbc19f0429f50886d4f068d7473603dfd",
+     "size": 6579,
+     "uri": "tooling/agent-experiments/RUN-REVIEW.md"
+    }
+   ],
+   "mime": "application/octet-stream",
+   "mtime": 1791082843,
+   "path": "artifacts/pi-next-experiments-view-2026-10-04/pi-next-experiments-view-2026-10-04-v1.tsx",
+   "prompt_sha256": "a7af32341ae1c7b043b9f55d48cd992bbc54f3c3ed3bef1903e6fdb91f21da3d",
+   "sha256": "8514b19761773cf41e838a5cc46f4760bc66b8f11e5edbbb46519852df8365da",
+   "size_bytes": 43665
+  },
+  "pi-research-program-review-2026-10-04@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791081518,
+     "sha256": "df39289b7f883dca477fa6699dc1b9ea189c1c36e21e3233a92f6fa70ad918eb",
+     "size": 22966,
+     "uri": "/Users/halcyon/swarm-lab/src/pi-review-2026-10-04.py"
+    },
+    {
+     "mtime": 1791081237,
+     "sha256": "6de42d704faf7b2165a9b2087a1f4397596177fbca3277eab647cd0377bb1843",
+     "size": 691960,
+     "uri": "/Users/halcyon/swarm-lab/data/pi-review-2026-10-04/live-state.json"
+    },
+    {
+     "mtime": 1791077441,
+     "sha256": "3feda52ca8a9e33bcfd3ccbfe8aacf79e7c59506310e7251f9601dca70168b4d",
+     "size": 10921,
+     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md"
+    },
+    {
+     "mtime": 1791079026,
+     "sha256": "fb83c64fc54d9585b5374ee322db5343cde21dd4a5af156761e5058d68af92c6",
+     "size": 7118,
+     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/reviews/pc-H4-a1-post.md"
+    },
+    {
+     "mtime": 1791078631,
+     "sha256": "a5254c25675c6fabca7fa4b37f1c9fa114050d66161451fa9acb754263163aee",
+     "size": 4032,
+     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/reviews/v2-s0-H4-post.md"
+    },
+    {
+     "mtime": 1791080931,
+     "sha256": "2ef57d2c9af140fccf6db4f01a4aae7de03e8cf8fdd07ebeed666e268a97b778",
+     "size": 2927,
+     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/market-split-api/reviews/q0-002-post.md"
+    },
+    {
+     "mtime": 1791079350,
+     "sha256": "ebb509919a6254ff1af5e3311ec8d1452b488455f04f5151c28844df6523a1a1",
+     "size": 4042,
+     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/market-split/reviews/s1-fleet-001-post.md"
+    },
+    {
+     "mtime": 1791080162,
+     "sha256": "bf6af2a573ea07688051101ea6f3a2a5e07731bac6747e4e8861aadce428c0d2",
+     "size": 5724,
+     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/sybil-specialists-api/README.md"
+    },
+    {
+     "mtime": 1791080162,
+     "sha256": "f13e82c9923d7581bd3ef9bbfd5d3c0a62e552f3dffd2e0ce5f34b57038c16b2",
+     "size": 7182,
+     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md"
+    },
+    {
+     "mtime": 1791078567,
+     "sha256": "ddd77a9e1cb41b3d0e89072b3d83c3e5c84f4e41ff4574ffe24e7636a2002957",
+     "size": 7016,
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md"
+    },
+    {
+     "mtime": 1791078567,
+     "sha256": "df44be98bee1912b8218c0e69572acc96ddb184c8c206282eb761599fc85062b",
+     "size": 7756,
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md"
+    },
+    {
+     "mtime": 1791080865,
+     "sha256": "f240103197139813f43a428382825ae1e1c39223a7e9a0b304553677261084b0",
+     "size": 7987,
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/README.md"
+    },
+    {
+     "mtime": 1791080865,
+     "sha256": "a7173f3b5c5f20a14be3729aded712adb6810ac7ba2aebccbc707f235afcc78c",
+     "size": 2269,
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md"
+    },
+    {
+     "mtime": 1791079026,
+     "sha256": "93d6b2f0bc833e79dd66876f1a5339a8b793cd5462c3c1a1792de53661d4bc39",
+     "size": 8673,
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md"
+    },
+    {
+     "mtime": 1791080865,
+     "sha256": "05dbd1c4c6987ccfc55dfa160e110c5e2abb500e23f833f1f60a4bfa00b910a0",
+     "size": 14142,
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/healing-helping-hands/README.md"
+    },
+    {
+     "mtime": 1791080865,
+     "sha256": "503a2c615a98005c6e485950a70d35aa43bee336dd2fab129fb7ab7b4ccb8c24",
+     "size": 5217,
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/immune-response-v3/README.md"
+    },
+    {
+     "mtime": 1791077934,
+     "sha256": "36822379f0cd9cc2fb9591f37c562d042287add0cef4839bd73a1bb066f4dda4",
+     "size": 7582,
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/immune-response-v3/REVIEW.md"
+    },
+    {
+     "mtime": 1791080865,
+     "sha256": "8ded6af440a991e800a4cb53923891083891ee4ff373fc567191a94394f28200",
+     "size": 3221,
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/influence-swarms/README.md"
+    },
+    {
+     "mtime": 1791076689,
+     "sha256": "2a5f8488d0abd7cc557a48f1fbd9695e6251c56ba41f413bae525eae0bb9c881",
+     "size": 6123,
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/regrowth-200/README.md"
+    },
+    {
+     "mtime": 1791079757,
+     "sha256": "7020cb8863383c9974a95f2c55e54be3bc691f63e75c306ea3dd3514584af83c",
+     "size": 4967,
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/swarm-of-theseus/reviews/S1-a1-pre.md"
+    },
+    {
+     "mtime": 1791075872,
+     "sha256": "86c8af6878cbdedbb39233d18351f25f0e974683bb15ec17cadca8e17de91872",
+     "size": 11353,
+     "uri": "/Users/halcyon/swarm-lab/templates/experiment-worker/README.md"
+    },
+    {
+     "mtime": 1791060759,
+     "sha256": "e20de7f889b69bebb36c4d712a940785aa8c18d78bc7412c943cce120b8a0e2b",
+     "size": 2550,
+     "uri": "/Users/halcyon/swarm-lab/tooling/agent-experiments/examples/collective-sensing/RESULTS.md"
+    },
+    {
+     "mtime": 1791071339,
+     "sha256": "112f9aa132a92db61a72c77f57d9bb7229d8f068476295545f91a104a6ca2ae9",
+     "size": 5131,
+     "uri": "/Users/halcyon/swarm-lab/tooling/avalon-swarm/RESULTS.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/study.py"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://swarm-live.pages.dev/#/r/immune-response%2F4deeb0f2"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://swarm-live.pages.dev/#/x/capture-memory"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://swarm-live.pages.dev/#/x/healing-helping-hands"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://swarm-live.pages.dev/#/x/influence-swarms"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://swarm-live.pages.dev/#/x/market-split-api"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://swarm-live.pages.dev/#/x/regrowth-200"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://swarm-live.pages.dev/#/x/swarm-of-theseus"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://swarm-live.pages.dev/#/x/template-quorum"
+    },
+    {
+     "mtime": 1791059935,
+     "sha256": "fcfad69ebea756f86e45b02146fbf02b08e7dc0aa24f65448da1f36a5b8909fb",
+     "size": 12935,
+     "uri": "/Users/halcyon/swarm-lab/synthesis/pre-experiment-research.md"
+    },
+    {
+     "mtime": 1791058402,
+     "sha256": "bb01370d14df3855b38c2b1abbbb0bcaee4a5b9114f9496f23ee1c0c53664ddd",
+     "size": 44661,
+     "uri": "/Users/halcyon/swarm-lab/synthesis/fork-merge-questions.md"
+    },
+    {
+     "mtime": 1791079350,
+     "sha256": "00935a22fd8da7a0236fecb15fdb33a7f1d8c4b77fe76eb5e2411afad9f220de",
+     "size": 709965,
+     "uri": "/Users/halcyon/swarm-lab/library/INDEX.md"
+    },
+    {
+     "mtime": 1791063229,
+     "sha256": "ea874f679c6f7450a25c7f17d14804569a3c17254da6a0870f7bc424afe5efcc",
+     "size": 52858,
+     "uri": "/Users/halcyon/swarm-lab/surveys/llm-agent-swarms.md"
+    },
+    {
+     "mtime": 1791081533,
+     "sha256": "f3421eb8b92a8c5cdb5e8146ed67534b091dd91334d42fa5b3abbd9b08ca65d6",
+     "size": 519,
+     "uri": "/Users/halcyon/swarm-lab/data/pi-review-2026-10-04/status-followup.json"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://swarm-live.pages.dev/api/state"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://lamport.azurewebsites.net/pubs/byz.pdf"
+    }
+   ],
+   "mime": "application/octet-stream",
+   "mtime": 1791081518,
+   "path": "artifacts/pi-research-program-review-2026-10-04/pi-research-program-review-2026-10-04-v1.tsx",
+   "prompt_sha256": "66b8d6efba8b84eb868a9d97094e974d59a7ee1c07a8456a5efc389cf0c8a027",
+   "sha256": "8ec434cd24c31f4f5d9a01303e209afea7537994be85bd3ee64f3d51ffbb4ccc",
+   "size_bytes": 21631
+  },
   "theseus-pilot-evidence@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [
@@ -2152,7 +2843,7 @@
    "size_bytes": 7951
   }
  },
- "generated": "2026-10-03T19:49:09-0700",
+ "generated": "2026-10-03T20:03:19-0700",
  "lock": 1,
  "project": "Swarm Lab"
 }

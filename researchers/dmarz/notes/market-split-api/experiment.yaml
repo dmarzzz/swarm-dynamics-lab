@@ -38,12 +38,13 @@ params:
     role: condition
     label: Version / attempt
     value_labels:
-      s1-001: "V2 \u2014 stopped after invalid allocation"
-      s1-002: "V4 \u2014 Sonnet 4.6 / capacity limits"
-      q0-001: "Q0 v1 \u2014 failed notes"
-      q0-002: "Q0 v2 \u2014 passed"
-      q0-003: "Q0 Haiku v3 \u2014 profit floor failed"
-      q0-004: "Q0 Sonnet v4 \u2014 fresh qualification"
+      s1-001: V2 — stopped after invalid allocation
+      s1-002: V5 — Sonnet 4.6 with reasoning
+      q0-001: Q0 v1 — failed notes
+      q0-002: Q0 v2 — passed
+      q0-003: Q0 Haiku v3 — profit floor failed
+      q0-004: Q0 Sonnet v4 — profit floor failed
+      q0-005: Q0 Sonnet v5 — reasoning qualification
   code:
     role: fixed
   engine_sha256:

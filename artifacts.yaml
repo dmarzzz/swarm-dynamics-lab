@@ -203,7 +203,7 @@ artifacts:
         date: 2026-10-03
         path: artifacts/theseus-pilot-figure/theseus-pilot-figure-v1.png
         built_at: '2026-10-04T02:38:08Z'
-        by: vishesh/codex-theseus
+        by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
         prompt: 'Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive
           replacement of every member? Run three scenarios and repeat if necessary.'
@@ -221,7 +221,7 @@ artifacts:
         date: 2026-10-03
         path: artifacts/theseus-pilot-replay/theseus-pilot-replay-v1.html
         built_at: '2026-10-04T02:38:09Z'
-        by: vishesh/codex-theseus
+        by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
         prompt: 'Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive
           replacement of every member? Run three scenarios and repeat if necessary.'
@@ -239,7 +239,7 @@ artifacts:
         date: 2026-10-03
         path: artifacts/theseus-pilot-report/theseus-pilot-report-v1.md
         built_at: '2026-10-04T02:38:09Z'
-        by: vishesh/codex-theseus
+        by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
         prompt: 'Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive
           replacement of every member? Run three scenarios and repeat if necessary.'
@@ -261,7 +261,7 @@ artifacts:
         date: 2026-10-03
         path: artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz
         built_at: '2026-10-04T02:38:09Z'
-        by: vishesh/codex-theseus
+        by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
         prompt: 'Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive
           replacement of every member? Run three scenarios and repeat if necessary.'
@@ -677,5 +677,177 @@ artifacts:
           - researchers/vishesh/notes/healing-helping-hands/visualization/render.py
           - data/healing-helping-hands/render-inputs.tar.gz
         commit: 3e242058d727b50d6bdcaedf3cd457a5554c6b2b-dirty
-requires: '1.2'
+  - id: pi-next-experiments-2026-10-04
+    category: content
+    type: doc
+    title: Swarm Labs next experiments — scaling-aware PI recommendations
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/pi-next-experiments-2026-10-04/pi-next-experiments-2026-10-04-v1.md
+        built_at: '2026-10-04T03:00:57Z'
+        note: Prospective PI recommendations. Public snapshot 2026-10-04 02:45:49 UTC; source refreshes at 438ff98 and afad8f0.
+          No experiments launched.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5
+        prompt: okay so can u use this to suggest the next set of experiments on top of our existing ones to progress as u
+          mentioned here; make sure to push this to github
+        ingredients:
+          - https://arxiv.org/abs/1810.08240
+          - https://arxiv.org/abs/2403.08882
+          - https://arxiv.org/abs/2410.08948
+          - https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/RESULTS.md
+          - https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md
+          - https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/REVIEW.md
+          - https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/NATIVE-A2-RESULTS.json
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/SOLO-A1-RESULTS.json
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/README.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/benchmark-v3/DEPLOYMENT.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/launch/resample-v3-review-waiver.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/market-split-api/reviews/q0-003-post.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/sybil-scale-api/reviews/q0-001-post.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/vishesh/notes/discussion-benchmark-v3-review/REVIEW.md
+          - https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md
+          - https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md
+          - https://lakens.github.io/statistical_inferences/08-samplesizejustification
+          - researchers/dmarz/notes/compositional-safety-plan/README.md
+          - researchers/dmarz/notes/compositional-safety/README.md
+          - researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md
+          - researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md
+          - researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md
+          - researchers/dmarz/notes/next-experiments-2026-10-04/live-evidence.json
+          - researchers/dmarz/notes/next-experiments-2026-10-04/plan.json
+          - researchers/dmarz/notes/next-experiments-2026-10-04/src/build.py
+          - researchers/dmarz/notes/sybil-scale-api/README.md
+          - researchers/dmarz/notes/sybil-scale-api/preregistration.md
+          - researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md
+          - researchers/vishesh/notes/antsy-verification-v4/README.md
+          - researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md
+          - researchers/vishesh/notes/healing-helping-hands/README.md
+          - researchers/vishesh/notes/immune-response-v3/README.md
+          - researchers/vishesh/notes/immune-response-v3/REVIEW.md
+          - researchers/vishesh/notes/immune-response-v3/scenario-study/README.md
+          - templates/experiment-worker/README.md
+          - tooling/agent-experiments/GUIDE.md
+          - tooling/agent-experiments/RUN-REVIEW.md
+        commit: afad8f0829b3ac550036061b7cb10da3c3f3e02b-dirty
+  - id: pi-next-experiments-view-2026-10-04
+    category: content
+    type: doc
+    title: Swarm Labs next experiments — interactive analytical document
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/pi-next-experiments-view-2026-10-04/pi-next-experiments-view-2026-10-04-v1.tsx
+        built_at: '2026-10-04T03:00:58Z'
+        note: Prospective PI recommendations. Public snapshot 2026-10-04 02:45:49 UTC; source refreshes at 438ff98 and afad8f0.
+          No experiments launched.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5
+        prompt: okay so can u use this to suggest the next set of experiments on top of our existing ones to progress as u
+          mentioned here; make sure to push this to github
+        ingredients:
+          - https://arxiv.org/abs/1810.08240
+          - https://arxiv.org/abs/2403.08882
+          - https://arxiv.org/abs/2410.08948
+          - https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/RESULTS.md
+          - https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md
+          - https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/REVIEW.md
+          - https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/NATIVE-A2-RESULTS.json
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/SOLO-A1-RESULTS.json
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/README.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/benchmark-v3/DEPLOYMENT.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/launch/resample-v3-review-waiver.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/market-split-api/reviews/q0-003-post.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/sybil-scale-api/reviews/q0-001-post.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/vishesh/notes/discussion-benchmark-v3-review/REVIEW.md
+          - https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md
+          - https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md
+          - https://lakens.github.io/statistical_inferences/08-samplesizejustification
+          - researchers/dmarz/notes/compositional-safety-plan/README.md
+          - researchers/dmarz/notes/compositional-safety/README.md
+          - researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md
+          - researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md
+          - researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md
+          - researchers/dmarz/notes/next-experiments-2026-10-04/live-evidence.json
+          - researchers/dmarz/notes/next-experiments-2026-10-04/plan.json
+          - researchers/dmarz/notes/next-experiments-2026-10-04/src/build.py
+          - researchers/dmarz/notes/sybil-scale-api/README.md
+          - researchers/dmarz/notes/sybil-scale-api/preregistration.md
+          - researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md
+          - researchers/vishesh/notes/antsy-verification-v4/README.md
+          - researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md
+          - researchers/vishesh/notes/healing-helping-hands/README.md
+          - researchers/vishesh/notes/immune-response-v3/README.md
+          - researchers/vishesh/notes/immune-response-v3/REVIEW.md
+          - researchers/vishesh/notes/immune-response-v3/scenario-study/README.md
+          - templates/experiment-worker/README.md
+          - tooling/agent-experiments/GUIDE.md
+          - tooling/agent-experiments/RUN-REVIEW.md
+        commit: afad8f0829b3ac550036061b7cb10da3c3f3e02b-dirty
+  - id: pi-research-program-review-2026-10-04
+    category: content
+    type: doc
+    title: Swarm Labs research program review — 4 October 2026
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/pi-research-program-review-2026-10-04/pi-research-program-review-2026-10-04-v1.tsx
+        built_at: '2026-10-04T02:38:53Z'
+        note: Frozen public hub snapshot 02:33:54 UTC; selected live status follow-up 02:37:33 UTC. PI judgments distinguish
+          scripted controls, qualification and small model pilots. Managed canvas copy opens beside the conversation.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5
+        prompt: you're the PI of swarm labs, please review all of the research and results we have done in this project including
+          the live experiment results from https://swarm-live.pages.dev/#/ and do a review of our research program. say where
+          it's strong and where it's weak and give an honest assessment of our results right now
+        ingredients:
+          - /Users/halcyon/swarm-lab/src/pi-review-2026-10-04.py
+          - /Users/halcyon/swarm-lab/data/pi-review-2026-10-04/live-state.json
+          - /Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md
+          - /Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/reviews/pc-H4-a1-post.md
+          - /Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/reviews/v2-s0-H4-post.md
+          - /Users/halcyon/swarm-lab/researchers/dmarz/notes/market-split-api/reviews/q0-002-post.md
+          - /Users/halcyon/swarm-lab/researchers/dmarz/notes/market-split/reviews/s1-fleet-001-post.md
+          - /Users/halcyon/swarm-lab/researchers/dmarz/notes/sybil-specialists-api/README.md
+          - /Users/halcyon/swarm-lab/researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/README.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/healing-helping-hands/README.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/immune-response-v3/README.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/immune-response-v3/REVIEW.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/influence-swarms/README.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/regrowth-200/README.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/swarm-of-theseus/reviews/S1-a1-pre.md
+          - /Users/halcyon/swarm-lab/templates/experiment-worker/README.md
+          - /Users/halcyon/swarm-lab/tooling/agent-experiments/examples/collective-sensing/RESULTS.md
+          - /Users/halcyon/swarm-lab/tooling/avalon-swarm/RESULTS.md
+          - https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md
+          - https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/study.py
+          - https://swarm-live.pages.dev/#/r/immune-response%2F4deeb0f2
+          - https://swarm-live.pages.dev/#/x/capture-memory
+          - https://swarm-live.pages.dev/#/x/healing-helping-hands
+          - https://swarm-live.pages.dev/#/x/influence-swarms
+          - https://swarm-live.pages.dev/#/x/market-split-api
+          - https://swarm-live.pages.dev/#/x/regrowth-200
+          - https://swarm-live.pages.dev/#/x/swarm-of-theseus
+          - https://swarm-live.pages.dev/#/x/template-quorum
+          - /Users/halcyon/swarm-lab/synthesis/pre-experiment-research.md
+          - /Users/halcyon/swarm-lab/synthesis/fork-merge-questions.md
+          - /Users/halcyon/swarm-lab/library/INDEX.md
+          - /Users/halcyon/swarm-lab/surveys/llm-agent-swarms.md
+          - /Users/halcyon/swarm-lab/data/pi-review-2026-10-04/status-followup.json
+          - https://swarm-live.pages.dev/api/state
+          - https://lamport.azurewebsites.net/pubs/byz.pdf
+        commit: 96d3f96cb5d91d4b6ab204dbfa18b0996d68bb15-dirty
 requires: '1.2'

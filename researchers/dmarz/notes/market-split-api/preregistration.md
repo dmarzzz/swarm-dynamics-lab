@@ -11,3 +11,7 @@ Keep every attempted episode and response, including failures. No transport retr
 Analysis: paired task-level firm-minus-owner fragmentation difference with a task-cluster bootstrap interval, plus all condition/arm rates, validity and finances. At this sample size uncertainty will be substantial. Do not claim intent from outcomes alone, or generalize from one model and scripted rivals.
 
 Provenance: pin model, prompt, source and config hashes; keep a durable study-wide call ledger across Q0/S1/diagnostics and report actual token cost and unpriced attempted calls. Maximum 1100 calls, 800 output tokens per call, 20000 input bytes, zero retries, one worker, two-hour stage cap. S2 reserved tasks 1000–1999 remain unopened. All run visuals show recorded round histories, with no interpolation or favorable episode selection.
+
+## Dated amendment: 2026-10-04, V5 readiness repair
+
+Q0-004 failed the unchanged75% profit floor (task47 locked68.314%). See its post-mortem. Same Sonnet4.6 and neutral prompt now receive native thinking budget2048, max output3072 including thinking, no temperature override. Discard thinking blocks; retain final actions and full billable usage. New development tasks54/55 and mechanics56–61; main36–41 remain untouched. All prior failed attempts remain visible and excluded from the fresh main cohort. Source/design hashes in S0-005 pre-review. The persistent1600attempt ceiling and shared$500 authorization stay fixed; predicted completion1408calls. S2 remains disabled.

@@ -30,10 +30,23 @@ class Checks(unittest.TestCase):
             seen.append(json.loads(req.data));return mock_opener(req,timeout)
         action,account=self.client(transport).call(observation(),'ok')
         sim.validate(action,observation());self.assertTrue(account['usage_reported'])
-        body=seen[0];self.assertEqual(body['model'],common.design()['model']);self.assertEqual(body['temperature'],0)
+        body=seen[0];self.assertEqual(body['model'],common.design()['model']);self.assertNotIn('temperature',body);self.assertEqual(body['thinking'],common.design()['thinking'])
         self.assertEqual(body['output_config']['format']['schema'],provider.SCHEMA)
         self.assertEqual(len(body['messages']),1)
         self.assertEqual(self.ledger.transact()['attempted_calls'],1)
+    def test_thinking_blocks_not_persisted(self):
+        def thinking(req,timeout):
+            x=mock_opener(req,timeout).data
+            x['content'].insert(0,{'type':'thinking','thinking':'PRIVATE-REASONING-MARKER','signature':'opaque'})
+            return MockResponse(x)
+        action,account=self.client(thinking).call(observation(),'thinking')
+        sim.validate(action,observation())
+        self.assertNotIn('PRIVATE-REASONING-MARKER',json.dumps(account))
+        self.assertNotIn('PRIVATE-REASONING-MARKER',(self.path/'ledger.jsonl').read_text())
+        def mixed(req,timeout):
+            x=thinking(req,timeout).data;x['content'].insert(0,{'type':'tool_use','name':'unexpected'})
+            return MockResponse(x)
+        with self.assertRaises(provider.CallFailure):self.client(mixed).call(observation(),'unexpected')
     def test_failures_spend_reservation_no_retry(self):
         n=[]
         def fail(req,timeout):n.append(1);raise urllib.error.HTTPError(req.full_url,429,'SECRET-MARKER',{},None)

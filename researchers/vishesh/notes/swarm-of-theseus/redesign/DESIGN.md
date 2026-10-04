@@ -1,5 +1,7 @@
 # Swarm of Theseus v2: selective continuity
 
+**Scenario-selection amendment, 2026-10-04:** the subsequent [X discussion and practical-grounding review](SOCIAL-GROUNDING.md) supersedes the priority order below. Lead with the release-crew handoff task; retain the incident-guild/rare-hazard task; treat model/runtime migration as a separate factor across qualified tasks. Harbor is now a controlled coordination extension and glassmaking is deferred. The original draft is retained below for provenance. None of these scenarios has been run or established as novel. The archive controls, falsification rules and launch gates remain applicable; task-specific metrics must be frozen in the next pre-run plan.
+
 Prospective design draft, 2026-10-04 UTC. Unrun and unqualified. This is an exploratory design hunch under researcher notes, not an accepted lab hypothesis. It does not amend the interpretation or preregistration of v1 retroactively. Work starts with one flagship task; the other two are extensions, not simultaneous commitments to a large sweep.
 
 ## Question and candidate contribution
