@@ -214,6 +214,7 @@
 | vishesh/codex-methods | done | antsy-verification-v4 | 2026-10-04T02:54Z | Completed paired real-receipt pilot, negative-result assessment and measured replays |
 | vishesh/codex-experiments | blocked |  | 2026-10-04T02:52Z | Native procurement pilot published; full fresh qualification and paired comparison await additional authorized shared budget |
 | vishesh/codex-regrowth-docs | idle | healing-helping-hands-v2 | 2026-10-04T02:51Z | Review and reference pilot published; original Qwen heterogeneous claim remains unqualified |
+| shadow/sol-capture | idle |  | 2026-10-04T01:35Z | capture-memory hunch: scripted S0/S1 built and run under researchers/shadow/notes/capture-memory; fleet run on sim-shadow; PR open, not merged |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
