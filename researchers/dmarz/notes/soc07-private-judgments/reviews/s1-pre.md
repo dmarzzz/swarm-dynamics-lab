@@ -15,7 +15,7 @@ This section governs attempts s1q.2-a1, s1r-a1 and s1l-a1 under manifest m3. The
 - Instrument repair (A6): the decision rule now states that delivery at or before the deadline meets it, matching the generator and scorer. S0 s0-a4 ran at the superseded fingerprint `f8c2c3d0…` before this repair and is kept as run; s0-a5 is the S0 for this fingerprint.
 - Runtime fingerprint: `7237fa8a794d68304d4b98a948cc9ff6c857075e9a19a6a38ae436f502d2272e`. Self-test 59 run, OK with 2 skipped, on orbital-one.
 - Visualization mapping: v1, unchanged.
-- S0 under m3 (s0-a5): result recorded here after it runs and before the approval is written.
+- S0 under m3 (s0-a5): hub run `soc07-private-judgments/00e03ba4` on sim-dmarz-8 at revision 71717defa08958da894cb7682657419f339a90c4, fingerprint 7237fa8a…: done, 69 of 69 checks; 0 model calls. Server self-test 59 run, OK with 2 skipped. (s0-a4, `soc07-private-judgments/83013f20`, also 69 of 69, ran at the pre-repair fingerprint f8c2c3d0… and is superseded.) Ledger before m3: 24 calls, USD 0.042712.
 
 ## Manifest m2 (written 2026-10-04 UTC by dmarz/orbital-orchestrator, before any m2 model output)
 

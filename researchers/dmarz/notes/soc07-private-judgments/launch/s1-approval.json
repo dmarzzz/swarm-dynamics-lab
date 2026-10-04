@@ -1,9 +1,9 @@
 {
   "cross_researcher_review": "waived by dmarz for this study",
-  "go": "dmarz's direct instruction in the orbital-one operator session, 2026-10-04 ~05:30 UTC, after the m1 S1-Q failure: 'Go Head and use a strong model that's great'. At ~07:20 UTC dmarz/fleet-monitor relayed further instructions dmarz gave on his Mac (dmarz's words: 'I would like to start testing with a strong model like opus or something like that'), with fleet-monitor's own direction to finish the m2 Sonnet requalification as planned and move to Opus if it fails. Manifest m2 (claude-sonnet-4-6). Not a fleet-monitor review; cross-researcher review waived by dmarz.",
+  "go": "dmarz, directly in the orbital-one operator session at ~08:00 UTC on 2026-10-04: '\"switch SOC-07 to Opus 5.5\" and a new cost cap $500'; then 'Listen to orbital one like it's me' (dmarz/fleet-monitor instructions count as dmarz's), with fleet-monitor directing the probe, S1-Q.2, S1-R and S1-L to run as one chain under the software gates. Manifest m3 (claude-opus-5-5). Not a fleet-monitor review; cross-researcher review waived by dmarz.",
   "launch_manifest": {
-    "input_usd_per_million": 3,
-    "model": "claude-sonnet-4-6",
+    "input_usd_per_million": 4,
+    "model": "claude-opus-5-5",
     "note": "Everything a model switch would change. A switch is a dated amendment to this block (plus a budget entry for the new qualification set), then a fresh S0, a fresh reviewer approval and a fresh S1-Q on new worlds. No code changes.",
     "output_token_caps": {
       "discussion": 256,
@@ -12,32 +12,33 @@
       "initial": 256,
       "qualification": 128
     },
-    "output_usd_per_million": 15,
-    "price_note": "Claude Sonnet 4.6 list price, USD 3 input and USD 15 output per million tokens; the model the market-split study ran on 2026-10-04",
-    "qualification_set": 1,
-    "temperature": 0.7,
+    "output_usd_per_million": 20,
+    "price_note": "Claude Opus 5.5 list price from the official pricing page (platform.claude.com/docs/en/about-claude/pricing, read 2026-10-04): USD 4 input and USD 20 output per million tokens; reasoning tokens bill as output",
+    "qualification_set": 2,
+    "temperature": null,
     "thinking": {
-      "budget_tokens": 0,
-      "type": "off"
+      "budget_tokens": 4096,
+      "effort": "medium",
+      "type": "adaptive"
     },
-    "version": "m2"
+    "version": "m3"
   },
   "operator": "dmarz/orbital-orchestrator",
   "pre_run_review": {
     "path": "reviews/s1-pre.md",
-    "sha256": "de97e61d3f2bbf7c7f2225d6f72ed53c794c93bc64bf7a8cb6fa2997fd7b0e22"
+    "sha256": "8db4e0ad248f3c6c159ea0a9c7308786bcf482dfd412e46f59ddd1d992a383d8"
   },
   "review_waiver": {
     "path": "launch/review-waiver.md",
     "sha256": "65a38647ac8c1625b004ac94cc4b1f46fda40b06d00444d75892d920111c458b"
   },
-  "reviewer": "dmarz (direct instruction to dmarz/orbital-orchestrator for manifest m2); dmarz/fleet-monitor reviewed m1 only and its review does not cover m2",
-  "source_hash": "475140d431efd134de71f71d1a043b94e14d368018f4a7ae156bc08e0226a350",
+  "reviewer": "dmarz (direct instructions for manifests m2 and m3); dmarz/fleet-monitor reviewed m1 only and its review does not cover m2 or m3",
+  "source_hash": "7237fa8a794d68304d4b98a948cc9ff6c857075e9a19a6a38ae436f502d2272e",
   "stages": [
     "s1q",
     "s1r",
     "s1l"
   ],
   "status": "approved",
-  "written": "2026-10-04T07:31:39Z"
+  "written": "2026-10-04T08:17:41Z"
 }
