@@ -9,9 +9,11 @@ Assessed 2026-10-04 by vishesh/codex-pi-review; source `84ee032e` ([registry](..
 - **sample_size_summary:** Q4:4 authored dossiers × 3 workflows =12/12 valid,10 acceptable. D1:2 selected Q4 dossiers × 2 report conditions =4/4 valid,2 acceptable; not independent replication. Q0–Q3 retained separately. Main comparison unrun.
 <!-- experiment-evidence:end -->
 
-**Current review status:** one researcher review is required and Dmarz’s design feedback satisfies it by owner instruction. The separate dossier review is retired. Q4 means the next qualification run, not another review. See [review resolution](REVIEW-RESOLUTION.md). Historical pending-review entries below describe earlier states.
+**Current status:** [D5 preparation](RUN-D5.md) implements cited typed facts, evidence alignment, fixed policy comparisons and separate purchase authority. It is not launched. The [prospective plan](ITERATION-05.md) compares this architecture with the D3 matrix under inherited and primary-record-only contexts.
 
-Latest measured iteration: [matched approval-review diagnostic](RESULTS-D2.md). Thirty valid decisions across six fresh authored dossiers; targeted review 3/6 acceptable versus general review 4/6 and cheaper generalist 5/6. The repair screen failed; the external-influence comparison remains unrun.
+**Latest measured result:** [D3](RESULTS-D3.md) populated all 90 checks but correctly classified only 76. All three workflows made 4/6 acceptable decisions. False blockers caused unnecessary deferral. D4 stayed unrun; S1 remains unqualified. Historical Q0–D3 results below retain their original scope.
+
+**Researcher review:** optional under the current [owner runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Existing Dmarz feedback remains evidence; no additional sign-off is pending. Older review-gate statements below are historical and superseded for current work.
 
 ## TLDR
 
@@ -27,7 +29,7 @@ Latest iteration: [design changes and plan assessment](ITERATION-02.md). Four fr
 
 The [PI review's](https://github.com/dmarzzz/swarm-lab/blob/e0a3170/researchers/dmarz/notes/next-experiments-2026-10-04/README.md) narrow sequence is retained: qualify the final decision contract, then measure the existing paired clean/omission contrast before a broader influence sweep. The [latest engineering post-mortem](reviews/iteration-03-post.md) documents four fresh dossiers covering all three supplier choices and DEFER, selected-deployment approval, exact-source qualification and missingness-aware paired bounds. Its scripted success is instrument evidence, not native Q4 qualification.
 
-The later [budget authorization](BUDGET-AUTHORIZATION.md) records an additional aggregate USD 10 approval; earlier funding-pending statements describe older snapshots. Independent dossier review, a fresh authorized exclusive allocation, a non-overlapping quota and complete exact-signature Q4 qualification remain required. Funding approval alone does not complete those gates or authorize a broader study.
+The later [budget authorization](BUDGET-AUTHORIZATION.md) records an additional aggregate USD 10 approval; earlier funding-pending statements describe older snapshots. The historical review gate is superseded by the owner’s optional-review directive. Fresh authorized exclusive allocation, preserved quota and appropriate source-bound qualification remain required for a new native launch. Funding approval alone does not complete those gates or authorize a broader study.
 
 Preserve Q2's adverse approvals and Q3's successful deferrals separately. Q3 changed both the profile and purchase-authority wording, so it cannot identify the effect of wording; a matched old/new wording comparison would be a separate study. Likewise, displaying ballots bundles recommendation content with its salience and token footprint. The planned contrast identifies that display intervention, not a general peer-pressure mechanism.
 

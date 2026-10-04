@@ -1,4 +1,23 @@
-# Experiment setup record: influence-swarms / iteration 3
+# Current setup: iteration 5 preparation
+
+[Runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) · [D5 plan](ITERATION-05.md) · [pre-assessment](reviews/native-D5-01-pre.md) · [operator handoff](RUN-D5.md) · [previous post-mortem](reviews/native-D3-01-post.md).
+
+The owner requested implementation and readiness, not launch. Cited typed facts, synthetic-excerpt alignment, fixed buyer policy and a separate authorization output are implemented. No new credential access, machine claim or model call. Researcher review is optional under the current owner runbook.
+
+| Gate | Current state |
+|---|---|
+| G0 | Diagnostic only; external-influence claim remains unqualified. |
+| G1 | Prospective ITERATION-05.md written before implementation. |
+| G2 | Unit and failure checks pass; published-source readiness fixture recorded in RUN-D5.md when complete. |
+| G3 | Intentionally not admitted: no current host claim or runtime receipt. Refresh source/public plan, remaining existing quota and secure fleet admission immediately before a requested run. |
+| G4 | D3 failed; D4 unrun; D5 does not automatically qualify S1. |
+| G5 | Preparation closeout only; no new native outcomes. |
+
+Keep the original USD8 subledger and cumulative reservations. D5’s conservative envelope is USD4.669440; last known remainder USD4.821680 is historical, not live authorization evidence. Next action after preparation: fresh operational admission for the published D5 packet when launch is requested. Do not rerun old cohorts or add a review bottleneck.
+
+## Historical setup records
+
+### Experiment setup record: influence-swarms / iteration 3
 
 Exploratory diagnostic, owner/operator vishesh/codex-experiments, 2026-10-04. Follow the [setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). This is a bounded repair study, not formal hypothesis acceptance.
 

@@ -1,0 +1,15 @@
+# D5-01 pre-run assessment — preparation only
+
+2026-10-04 · vishesh/codex-experiments. Read D3 post-mortem. [Prospective plan](../ITERATION-05.md) written before implementation. Current status: diagnostic code/offline checks being finalized; no native admission or launch. Owner asked to make improvements and get ready. Current runbook makes researcher review optional; no new review is pending.
+
+Question: can cited typed facts with source-excerpt alignment and fixed policy comparisons repair the false blockers seen in D3, and does removing inherited interpretation change that? Six known frozen D2 cases ×four workflows; same-evidence architecture pairs and same-architecture context pairs.48 nominal calls,24 decisions. This deliberately diagnoses inspected failures; do not describe it as fresh replication or external-influence evidence.
+
+The parser/validator rejects unsupported model values into UNKNOWN and never fills in corrected facts. This is a template-specific engineering safeguard. Source status and extraction truth stay outside actor inputs. Qualitative limitations and future mitigations cannot change policy. The raw decision is preserved; authorized action is scored separately. Eligibility, cost tolerance and unnecessary deferral are visible.
+
+Regression checks cover D3 budget, coverage and deadline mistakes, unsupported and wrong-candidate citations, exact non-entailing excerpts, clipped numeric tokens, forged confirmation, NaN/invalid booleans/fractional counts, duplicate JSON fields, pair matching, no truth leakage and deadline failure retaining24 invalid assignments with zero calls. Admission faults reject stale/future/unverified/mismatched receipts and uncommitted/mismatched packets. Fixture success is not model competence.
+
+The first local development fixture preceded public registration and is retained as engineering-only evidence in scripted-D5-development-01. It must not be described as preregistered. A separate published-source readiness fixture will be retained before native admission. No credential was selected or paid model call made.
+
+Planned ceiling4.669440USD conservative reservation; last observed remaining existing grant4.821680USD. Exact quota, price and fresh exclusive approved-fleet allocation checks remain launch-time requirements. No machine held during preparation. No retired D3 receipt reuse, no grant reset. D5 source-bound packet, exact public-plan bytes, five-minute operator receipt and preserved cumulative ledger are enforced by the native entrypoint. Actual live-fleet/SSH/idle checks belong to the secure dispatcher, not merely the receipt booleans. Model output3072tokens for both arms; input32768bytes;24-minute dispatch deadline; existing transient retry only.
+
+Finish preparation by publishing frozen source, verifying actual request envelopes and report controls, recording the readiness fixture and leaving native execution unstarted.
