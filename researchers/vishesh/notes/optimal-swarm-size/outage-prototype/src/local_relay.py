@@ -14,6 +14,12 @@ def allowed_calls():
     return {f"{r['id']}/{tick}/{actor}" for r in assignments() if r['arm']!='scheduled' for tick in range(8) for actor in range(1 if r['arm']=='single' else 4)}
 
 def contracts(scope):
+    if scope in ('causal-v3-session1','causal-v3-session2'):
+        import sys
+        sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'incident-investigation/causal-v3'))
+        from native_v3 import assignments as v3_assignments,payload as v3_payload
+        session=1 if scope.endswith('1') else 2
+        return {f"{r['id']}/{turn}/{actor}":v3_payload([])['response_format'] for r in v3_assignments() if r['session']==session for turn in range(r['round_limit']) for actor in range(r['n'])},1024,24000
     if scope=='incident-q1':
         import sys
         sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'incident-investigation'))
@@ -38,7 +44,7 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self,*args,**kwargs):raise ValueError('redirect_rejected')
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--credential',type=Path,required=True);p.add_argument('--port-file',type=Path,required=True);p.add_argument('--dispatch-log',type=Path,required=True);p.add_argument('--expires',type=float,required=True);p.add_argument('--scope',choices=['outage-o1','outage-o2','incident-q1','q-a7'],default='outage-o1');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--credential',type=Path,required=True);p.add_argument('--port-file',type=Path,required=True);p.add_argument('--dispatch-log',type=Path,required=True);p.add_argument('--expires',type=float,required=True);p.add_argument('--scope',choices=['outage-o1','outage-o2','incident-q1','causal-v3-session1','causal-v3-session2','q-a7'],default='outage-o1');a=p.parse_args()
     os.umask(0o077);resource.setrlimit(resource.RLIMIT_CORE,(0,0))
     if a.credential.is_symlink() or a.credential.stat().st_mode&0o077 or a.credential.stat().st_uid!=os.getuid():raise ValueError('credential_permissions')
     opener=urllib.request.build_opener(NoRedirect())

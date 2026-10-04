@@ -1,0 +1,38 @@
+{
+  "funding_status": "PI-FUND-20261004-03 withdrawn before admission; earmark released",
+  "native_calls": 0,
+  "admitted_attempts": 0,
+  "allocated_hosts": 0,
+  "ledger_amended": false,
+  "earmark_reserved": false,
+  "cumulative_api_exposure_microdollars": 3800256,
+  "historical_cases_broker_unchanged": true,
+  "offline_tests": {
+    "causal_and_native": 25,
+    "historical_contract": 33,
+    "outage_regressions": 28,
+    "shared_receipts": 14
+  },
+  "scripted_native_boundary_episodes": 60,
+  "planned_max_physical_calls": 900,
+  "boundary_history_request_bytes": {
+    "disagreement-n1": 6742,
+    "disagreement-n3": 15943,
+    "patches-n1": 15150,
+    "patches-n3": 15185
+  },
+  "remaining": [
+    "Remote stage supervisor and publication/closeout plumbing",
+    "Original-ledger authorization amendment and cumulative allocation-meter wiring",
+    "Fresh explicit funding decision",
+    "Current route/tariff, approved account, exclusive allocation, source/runtime and public-plan admission"
+  ],
+  "hashes": {
+    "native-manifest.json": "a6433a00c03fe7f6605f17b6b8c9a44bc58931b90544722ffb1d376dc57a25d1",
+    "native_v3.py": "0540e362b1f426082ca467df0086cb0be17d9b89009bd3ea1e54b0ec99e3b1fc",
+    "receipts_v3.py": "826b3c38ba12c14ede1d14edfe8eb08af6e259e2efc74e02ef3e8fcad31594b0",
+    "admission_v3.py": "eac7078d51c26f5af886f50afd4729a24a5170fdde854c3c652a96981337e9d9",
+    "test_native_v3.py": "7b94d36b43570560ffa5934af77a372c8f87600460a219925c0d64cba2ac6c67",
+    "NATIVE-PLAN.md": "c8e0f8aad950eac1851ac5a00ae68954b792d9b171cab9522130fd452c9a4d52"
+  }
+}
