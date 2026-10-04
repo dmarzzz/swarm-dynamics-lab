@@ -31,7 +31,7 @@ def validate_laya(a,choices):
  p=a['probabilities'];label=validate_label(a['choice'])
  if set(p)!=set(choices) or any(not isinstance(v,(float,int)) or not math.isfinite(v) or not 0<=v<=1 for v in p.values()) or abs(sum(p.values())-1)>.001 or p[label]<max(p.values())-1e-5:raise ValueError('invalid_probabilities')
  return label,p
-def laya_worker(pipe):
+def laya_worker(pipe,diagnostic=False):
  try:
   import torch,importlib.metadata,subprocess
   import laya
@@ -46,6 +46,8 @@ def laya_worker(pipe):
    req=pipe.recv()
    if req is None:return
    obs,index=req;choices=list(LABELS[index%3:]+LABELS[:index%3]);criteria={k:{'SUPPORT':'The report supports the claim.','REFUTE':'The report contradicts the claim.','UNCERTAIN':'The report does not answer the claim.'}[k] for k in choices}
+   if diagnostic:
+    criteria={k:{'SUPPORT':'The measured accuracy improved, increased or became better.','REFUTE':'Accuracy worsened, decreased, did not improve or showed no gain.','UNCERTAIN':'Accuracy was not measured, remains unevaluated, was not tested, or the report provides no results.'}[k] for k in choices}
    text='CLAIM: '+obs['claim']+'\nREPORT: '+obs['report'];question={'label':{'type':'choice','instructions':RULE,'criteria':criteria}}
    try:
     result=model.predict(text,question,max_len=1024);label,probs=validate_laya(result['answers']['label'],choices)
@@ -53,8 +55,8 @@ def laya_worker(pipe):
    except Exception as e:pipe.send({'error_type':type(e).__name__})
  except Exception as e:pipe.send({'error_type':type(e).__name__})
 class Laya:
- def __init__(self):
-  ctx=mp.get_context('spawn');self.pipe,child=ctx.Pipe();self.process=ctx.Process(target=laya_worker,args=(child,),daemon=True);self.process.start()
+ def __init__(self,diagnostic=False):
+  ctx=mp.get_context('spawn');self.pipe,child=ctx.Pipe();self.process=ctx.Process(target=laya_worker,args=(child,diagnostic),daemon=True);self.process.start()
   if not self.pipe.poll(90):self.close();raise TimeoutError('laya_load_timeout')
   self.metadata=self.pipe.recv()
   if not self.metadata.get('ready'):self.close();raise RuntimeError('laya_initialization_failed')

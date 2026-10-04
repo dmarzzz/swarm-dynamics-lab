@@ -4,7 +4,10 @@ ARMS = ('neither','notes','mentor','both','founders','verbatim')
 SCENARIOS = ('seed-bank','observatory','repair-dock')
 SYSTEM = ('You are a member of a fictional operations team. Complete the requested job using only the supplied information. '
           'Return exactly the requested JSON. Preserve useful procedures in your notebook for future work. '
-          'Do not invent unavailable facts. You may infer rules, but no tools or external memory are available.')
+          'Do not invent unavailable facts. You may infer rules, but no tools or external memory are available. '
+          'If reference_procedure is provided it is authoritative over private notes. A current_bulletin overrides any older mapping. '
+          'The convention field is ONLY the short receipt phrase, never an explanation. Keep notebook at most 600 characters: '
+          'general procedure and receipt phrase only, no case IDs, worked examples, or case-specific results.')
 
 def digest(x): return hashlib.sha256(json.dumps(x,sort_keys=True).encode()).hexdigest()
 
@@ -56,17 +59,23 @@ def evaluate(w,t,outputs):
             'mutation':sum(o['answers'][j]!=expected[j] for o in outputs for j in range(4))/12,
             'collective':collective,'expected':expected}
 
-def validate_solve(o):
-    if not isinstance(o,dict) or set(o)!={'answers','convention','notebook'}:raise ValueError('schema')
-    if not isinstance(o['answers'],list) or len(o['answers'])!=4 or not all(isinstance(x,str) and len(x)<=32 for x in o['answers']):raise ValueError('answers')
+def validate_solve(o, cases):
+    if not isinstance(o,dict) or set(o)!={'work','convention','notebook'}:raise ValueError('schema')
+    if not isinstance(o['work'],list) or len(o['work'])!=4:raise ValueError('work_count')
+    by_id={}
+    for item in o['work']:
+        if not isinstance(item,dict) or not isinstance(item.get('case_id'),str) or not isinstance(item.get('label'),str):raise ValueError('work_schema')
+        if item['case_id'] in by_id:raise ValueError('duplicate_case')
+        by_id[item['case_id']]=item['label']
+    if set(by_id)!={c['id'] for c in cases}:raise ValueError('case_identity')
     if not isinstance(o['notebook'],str) or not isinstance(o['convention'],str):raise ValueError('text')
-    return {**o,'notebook':o['notebook'][:600],'convention':o['convention'][:100]}
+    return {'answers':[by_id[c['id']] for c in cases], 'notebook':o['notebook'][:600],'convention':o['convention'][:100]}
 
 def run_world(w,arm,policy,emit):
     members=[{'id':f'founder-{i}','note':rule(w)} for i in range(3)]
     archive='';history=[];access=[]
     def call(kind,payload,example,actor,t):
-        request={'instructions':SYSTEM+' '+{'solve':'Return answers in case order, a convention string, and a notebook string.',
+        request={'instructions':SYSTEM+' '+{'solve':'Return work with one item per case: case_id, evidence (numeric signals used under your procedure), result (intermediate 0 or 1), then label. Compute the result before choosing its label. Return convention as the receipt phrase only and notebook as a concise reusable rule.',
                   'question':'Return a message asking the outgoing colleague for the procedure and local conventions.',
                   'answer':'Return a message answering the newcomer using your private notebook.'}[kind], 'observation':payload}
         emit({'kind':'request','step':t,'actor':actor,'operation':kind,'request':request,'payload_sha256':digest(payload)})
@@ -96,7 +105,7 @@ def run_world(w,arm,policy,emit):
             if w['scenario']=='repair-dock' and t>=4:
                 payload['current_bulletin']='Effective now, reverse the original mapping: XOR 0 goes to '+w['labels'][1]+'; XOR 1 goes to '+w['labels'][0]+'. Other conventions stay unchanged.'
             if arm=='verbatim':payload['reference_procedure']=rule(w,w['scenario']=='repair-dock' and t>=4)
-            o=validate_solve(call('solve',payload,{'answers':['','','',''],'convention':'','notebook':''},m['id'],t))
+            o=validate_solve(call('solve',payload,{'work':[{'case_id':'','evidence':[0],'result':0,'label':''}],'convention':'','notebook':''},m['id'],t),w['cases'][t])
             m['note']=o['notebook'];outputs.append(o)
         archive='\n'.join(m['id']+': '+m['note'] for m in members)
         score=evaluate(w,t,outputs)

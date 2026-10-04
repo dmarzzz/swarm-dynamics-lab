@@ -54,7 +54,7 @@ def run(a):
                 policy=AnthropicPolicy()
                 row=run_world(world(spec['scenario'],spec['seed']),spec['arm'],policy,emit)
             except Exception as e:
-                row={**spec,'status':'failed','error_type':type(e).__name__,'history':history,'missing_steps':list(range(len(history),6))}
+                row={**spec,'status':'failed','error_type':type(e).__name__,'error_reason':str(e) if type(e).__name__ in ('PolicyError','ValueError') else type(e).__name__,'history':history,'missing_steps':list(range(len(history),6))}
         row['run']=rid;row['source_commit']=revision;row['elapsed_seconds']=time.time()-started
         row['usage']={k:getattr(policy,k,0) for k in ['calls','actual_usd','input_tokens','output_tokens','usage_missing']}
         row['process_compliance']='preflight-passed';save(dest/'outcome.json',row);image(row,dest/'final_frame.png');replay([row],dest/'replay.html')

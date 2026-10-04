@@ -14,7 +14,7 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 claimed_at: 2026-10-04T01:27Z
-updated: 2026-10-04T01:27Z
+updated: 2026-10-04T01:49Z
 ---
 
 ## Goal

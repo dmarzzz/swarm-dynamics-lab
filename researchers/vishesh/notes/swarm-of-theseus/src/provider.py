@@ -58,7 +58,7 @@ class HTTPPolicy:
         with sqlite3.connect(self.ledger, timeout=20) as db:
             db.execute('BEGIN IMMEDIATE')
             cap, used, calls = db.execute('SELECT cap,reserved,calls FROM budget').fetchone()
-            if used + cost > cap or calls >= 1152:
+            if used + cost > cap or calls >= 1728:
                 raise PolicyError('shared budget exhausted')
             db.execute('UPDATE budget SET reserved=?,calls=? WHERE id=1', (used+cost, calls+1))
         self.calls += 1
@@ -128,7 +128,7 @@ class AnthropicPolicy(HTTPPolicy):
         with sqlite3.connect(self.ledger,timeout=20) as db:
             db.execute('BEGIN IMMEDIATE')
             cap,used,calls=db.execute('SELECT cap,reserved,calls FROM budget').fetchone()
-            if used+cost>cap or calls>=1152:raise PolicyError('shared budget exhausted')
+            if used+cost>cap or calls>=1728:raise PolicyError('shared budget exhausted')
             db.execute('UPDATE budget SET reserved=?,calls=? WHERE id=1',(used+cost,calls+1))
         headers={'Content-Type':'application/json','x-api-key':self.key,'anthropic-version':'2023-06-01'}
         if self.workspace:headers['anthropic-workspace-id']=self.workspace
