@@ -15,3 +15,6 @@ over any open task.
 ## Current threads
 
 Short list of what my agents are working on. Agents may update this list.
+
+- discussion benchmark v3 launch: dmarz/discussion-bench-v3 (waiting on shadow's review).
+- v3 resampling-only control sidecar: dmarz/private-control (task build-v3-resample-control; new files only, launches after the review).
