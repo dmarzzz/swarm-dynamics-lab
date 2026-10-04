@@ -1,0 +1,70 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "prompt": "Let us get started on the experimental design, plan, implementation, visualizations, write-ups, and so on and so forth."
+   },
+   "internalParameters": {
+    "commit": "dfd45d63ac21a610d04eff71942c78e1c71a9297-dirty",
+    "session": "codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "89f4bf09d33c97bdecbb8124c30094ab0a48c150af7208185d8e03441727e574"
+     },
+     "uri": "researchers/vishesh/notes/dissent/visualization/export_measured.py"
+    },
+    {
+     "digest": {
+      "sha256": "18d13ce27d60675d6d2c99735ea5f0efbcfc6467c75a17cabe9cb6473405a9a7"
+     },
+     "uri": "researchers/vishesh/notes/dissent/src/live_render.py"
+    },
+    {
+     "digest": {
+      "sha256": "1874e62ffc051e8ae9a674d2dd3ee455679687c25abec5cfc48ab832d06cd78e"
+     },
+     "uri": "researchers/vishesh/notes/dissent/results/s1-a1/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "137150cf649abd6820d705adc7e73eeb3245da4ed1aab74737c8eef330977249"
+     },
+     "uri": "researchers/vishesh/notes/dissent/results/s1-a1/records.json"
+    },
+    {
+     "uri": "https://swarm-live.pages.dev/api/a/right-dissenter/s1-a1/measured_replay.gif"
+    },
+    {
+     "digest": {
+      "gitCommit": "dfd45d63ac21a610d04eff71942c78e1c71a9297"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T04:49:02Z",
+    "invocationId": "codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8",
+    "startedOn": "2026-10-04T04:49:02Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "ab62128e911894c22033a24537ef2f8728676b2c5234e759e9d6255c2adf6a8b"
+   },
+   "name": "artifacts/right-dissenter-measured-replay/right-dissenter-measured-replay-v1.mp4"
+  }
+ ]
+}

@@ -46,6 +46,76 @@
    "sha256": "29daf755d1a7b85663bc3a4fea0330f10d0af831340b06d9d0c8b5d2f4373e59",
    "size_bytes": 456862
   },
+  "discussion-memory-v3-film@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791085322,
+     "sha256": "695e1897fc17d248388787620fdceb75fc69f18628a2f143070a4f951f503e43",
+     "size": 8749,
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/build_data.py"
+    },
+    {
+     "mtime": 1791085345,
+     "sha256": "97730117997fc2ba319004d2c62bcc6d0eb1e40d74769084063a76a7442c76b6",
+     "size": 5936,
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/build.py"
+    },
+    {
+     "mtime": 1791085825,
+     "sha256": "bba61083f64b40f6b722127562ca49b200a31bc133b7cc93aaba5c2dde9b4f0f",
+     "size": 34021,
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/film.html"
+    },
+    {
+     "mtime": 1791085999,
+     "sha256": "d2918a162db27b19d7221eac8555d289b51431386997150b57c4d568ca9a8b89",
+     "size": 5194,
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs"
+    },
+    {
+     "mtime": 1791085323,
+     "sha256": "d54ad2c3e80102faa3ed5b8fe9d5a80deb848a66c735304b7da201b33f2cafa2",
+     "size": 1528,
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/qr-repo.svg"
+    },
+    {
+     "mtime": 1791084924,
+     "sha256": "19fa1d7bcdc611a1ddd28ae37038205a674decfc84f198b1584ae977b2e6c51a",
+     "size": 189983,
+     "uri": "data/discussion-v3/v3-q0-a1/summary.json"
+    },
+    {
+     "mtime": 1791084916,
+     "sha256": "f8736a1541279c9dc090e4d746976812b5ed3f327cd99aae3d637c295b8f715d",
+     "size": 852918,
+     "uri": "data/discussion-v3/v3-q0-a1/episodes.json"
+    },
+    {
+     "mtime": 1791084920,
+     "sha256": "a47f4ff76f5ae40c7bd9ffcb8bf30f2d2da4e5c24ada76dcda62cccafd512802",
+     "size": 7066557,
+     "uri": "data/discussion-v3/v3-q0-a1/events.jsonl"
+    },
+    {
+     "mtime": 1791084922,
+     "sha256": "e6b51f427b9cd1c8383814928935abb3c0ff955aaf517b41c7fc09ebe38253c0",
+     "size": 21715,
+     "uri": "data/discussion-v3/v3-q0-a1/manifest.json"
+    }
+   ],
+   "media": {
+    "duration_s": 119.4,
+    "height": 1080,
+    "width": 1920
+   },
+   "mime": "video/mp4",
+   "mtime": 1791086146,
+   "path": "artifacts/discussion-memory-v3-film/discussion-memory-v3-film-v1.mp4",
+   "prompt_sha256": "3e878320997c9eded8f35c66179ffb0d231ebc30a9d090af16d47b74823575d8",
+   "sha256": "729e647bd4acb103eee3dc78efd0eaf704ae44143c05dab076088c608b44556b",
+   "size_bytes": 22904669
+  },
   "fork-merge-setups@1": {
    "host": "halcyons-macbook-pro-4",
    "ingredients": [
@@ -1444,6 +1514,80 @@
    "sha256": "8ec434cd24c31f4f5d9a01303e209afea7537994be85bd3ee64f3d51ffbb4ccc",
    "size_bytes": 21631
   },
+  "right-dissenter-d1@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791088970,
+     "sha256": "e27d504fad06876bc84662050629fdebf55c5bcfefb69ca5a9cc3b63cd6ff4f3",
+     "size": 4179,
+     "uri": "researchers/vishesh/notes/dissent/src/validation_worker.py"
+    },
+    {
+     "mtime": 1791089139,
+     "sha256": "0346364ceb6bd12b7a1ffda12188a804daff0f5e7dc4009309f5f7c4fd94d35c",
+     "size": 480,
+     "uri": "researchers/vishesh/notes/dissent/results/d1-a1/summary.json"
+    },
+    {
+     "mtime": 1791089140,
+     "sha256": "f6012bfae4ad25d2d54d628b8e6610f47694a9b1747150c499554c41ed8532cf",
+     "size": 1478,
+     "uri": "researchers/vishesh/notes/dissent/results/d1-a1/records.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791089138,
+   "path": "artifacts/right-dissenter-d1/right-dissenter-d1-v1.png",
+   "prompt_sha256": "ad034e1849404d894f5685d614cbcb0c87ed63ae5914f58737dee313cd9fd1cf",
+   "sha256": "26e05761925af496476a79f0b722a07af9de3e5b62c789fe01c640d6c81b61b7",
+   "size_bytes": 55476
+  },
+  "right-dissenter-measured-replay@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791089045,
+     "sha256": "89f4bf09d33c97bdecbb8124c30094ab0a48c150af7208185d8e03441727e574",
+     "size": 460,
+     "uri": "researchers/vishesh/notes/dissent/visualization/export_measured.py"
+    },
+    {
+     "mtime": 1791087645,
+     "sha256": "18d13ce27d60675d6d2c99735ea5f0efbcfc6467c75a17cabe9cb6473405a9a7",
+     "size": 7760,
+     "uri": "researchers/vishesh/notes/dissent/src/live_render.py"
+    },
+    {
+     "mtime": 1791088876,
+     "sha256": "1874e62ffc051e8ae9a674d2dd3ee455679687c25abec5cfc48ab832d06cd78e",
+     "size": 3837,
+     "uri": "researchers/vishesh/notes/dissent/results/s1-a1/summary.json"
+    },
+    {
+     "mtime": 1791088876,
+     "sha256": "137150cf649abd6820d705adc7e73eeb3245da4ed1aab74737c8eef330977249",
+     "size": 1560854,
+     "uri": "researchers/vishesh/notes/dissent/results/s1-a1/records.json"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://swarm-live.pages.dev/api/a/right-dissenter/s1-a1/measured_replay.gif"
+    }
+   ],
+   "media": {
+    "duration_s": 23.0,
+    "height": 1080,
+    "width": 1800
+   },
+   "mime": "video/mp4",
+   "mtime": 1791089045,
+   "path": "artifacts/right-dissenter-measured-replay/right-dissenter-measured-replay-v1.mp4",
+   "prompt_sha256": "91dcc4324eb5c1d058b34cd3932d62128bb576ee87e26a4d873dadc8976b52d1",
+   "sha256": "ab62128e911894c22033a24537ef2f8728676b2c5234e759e9d6255c2adf6a8b",
+   "size_bytes": 431493
+  },
   "right-dissenter-q0@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [
@@ -1472,6 +1616,64 @@
    "prompt_sha256": "ad034e1849404d894f5685d614cbcb0c87ed63ae5914f58737dee313cd9fd1cf",
    "sha256": "9a3368a2485a94a354550689ca6c17a1a0aba42cab27b5698a8cd45ced086fc6",
    "size_bytes": 59552
+  },
+  "right-dissenter-q1@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791087645,
+     "sha256": "18d13ce27d60675d6d2c99735ea5f0efbcfc6467c75a17cabe9cb6473405a9a7",
+     "size": 7760,
+     "uri": "researchers/vishesh/notes/dissent/src/live_render.py"
+    },
+    {
+     "mtime": 1791088576,
+     "sha256": "120cd353a7677673e34ab7b7358fb5cbce7f21d4b13c26be98b29786e33cb9dc",
+     "size": 1371,
+     "uri": "researchers/vishesh/notes/dissent/results/q1-a1/summary.json"
+    },
+    {
+     "mtime": 1791088576,
+     "sha256": "4ee9a43d01c100ec4f447d24ee02d43d23a832a14a6738b81644f324f215cea9",
+     "size": 8463,
+     "uri": "researchers/vishesh/notes/dissent/results/q1-a1/records.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791088532,
+   "path": "artifacts/right-dissenter-q1/right-dissenter-q1-v1.png",
+   "prompt_sha256": "0f0b4968663961b4f5a5a5c67025af96ad1c7c0aa7cf6936d5b67603afba6044",
+   "sha256": "662971fa13e160840e8487e03055b5079d832a7183db61a6b5fda692a2cb03cd",
+   "size_bytes": 72903
+  },
+  "right-dissenter-s1@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791087645,
+     "sha256": "18d13ce27d60675d6d2c99735ea5f0efbcfc6467c75a17cabe9cb6473405a9a7",
+     "size": 7760,
+     "uri": "researchers/vishesh/notes/dissent/src/live_render.py"
+    },
+    {
+     "mtime": 1791088876,
+     "sha256": "1874e62ffc051e8ae9a674d2dd3ee455679687c25abec5cfc48ab832d06cd78e",
+     "size": 3837,
+     "uri": "researchers/vishesh/notes/dissent/results/s1-a1/summary.json"
+    },
+    {
+     "mtime": 1791088876,
+     "sha256": "137150cf649abd6820d705adc7e73eeb3245da4ed1aab74737c8eef330977249",
+     "size": 1560854,
+     "uri": "researchers/vishesh/notes/dissent/results/s1-a1/records.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791088754,
+   "path": "artifacts/right-dissenter-s1/right-dissenter-s1-v1.png",
+   "prompt_sha256": "ad034e1849404d894f5685d614cbcb0c87ed63ae5914f58737dee313cd9fd1cf",
+   "sha256": "22f536ab24826bf8dc63356b62ffb8cf20b10954cca0cef817f92fea9c715668",
+   "size_bytes": 90163
   },
   "swarm-completion-audit-2026-10-04@1": {
    "host": "halcyons-macbook-pro-4",
@@ -4471,76 +4673,6 @@
    "prompt_sha256": "6872cb407834d8a9d6ad298d6435ad9eb89c1fc29b24839b99ced5c52508dc0e",
    "sha256": "ea4ec1019cee0eabd0176e6326993c227d797117492198050c5c619e4d7e9587",
    "size_bytes": 1542505
-  },
-  "discussion-memory-v3-film@1": {
-   "host": "halcyons-macbook-pro-4",
-   "ingredients": [
-    {
-     "mtime": 1791085322,
-     "sha256": "695e1897fc17d248388787620fdceb75fc69f18628a2f143070a4f951f503e43",
-     "size": 8749,
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/build_data.py"
-    },
-    {
-     "mtime": 1791085345,
-     "sha256": "97730117997fc2ba319004d2c62bcc6d0eb1e40d74769084063a76a7442c76b6",
-     "size": 5936,
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/build.py"
-    },
-    {
-     "mtime": 1791085825,
-     "sha256": "bba61083f64b40f6b722127562ca49b200a31bc133b7cc93aaba5c2dde9b4f0f",
-     "size": 34021,
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/film.html"
-    },
-    {
-     "mtime": 1791085999,
-     "sha256": "d2918a162db27b19d7221eac8555d289b51431386997150b57c4d568ca9a8b89",
-     "size": 5194,
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs"
-    },
-    {
-     "mtime": 1791085323,
-     "sha256": "d54ad2c3e80102faa3ed5b8fe9d5a80deb848a66c735304b7da201b33f2cafa2",
-     "size": 1528,
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/qr-repo.svg"
-    },
-    {
-     "mtime": 1791084924,
-     "sha256": "19fa1d7bcdc611a1ddd28ae37038205a674decfc84f198b1584ae977b2e6c51a",
-     "size": 189983,
-     "uri": "data/discussion-v3/v3-q0-a1/summary.json"
-    },
-    {
-     "mtime": 1791084916,
-     "sha256": "f8736a1541279c9dc090e4d746976812b5ed3f327cd99aae3d637c295b8f715d",
-     "size": 852918,
-     "uri": "data/discussion-v3/v3-q0-a1/episodes.json"
-    },
-    {
-     "mtime": 1791084920,
-     "sha256": "a47f4ff76f5ae40c7bd9ffcb8bf30f2d2da4e5c24ada76dcda62cccafd512802",
-     "size": 7066557,
-     "uri": "data/discussion-v3/v3-q0-a1/events.jsonl"
-    },
-    {
-     "mtime": 1791084922,
-     "sha256": "e6b51f427b9cd1c8383814928935abb3c0ff955aaf517b41c7fc09ebe38253c0",
-     "size": 21715,
-     "uri": "data/discussion-v3/v3-q0-a1/manifest.json"
-    }
-   ],
-   "media": {
-    "duration_s": 119.4,
-    "height": 1080,
-    "width": 1920
-   },
-   "mime": "video/mp4",
-   "mtime": 1791086146,
-   "path": "artifacts/discussion-memory-v3-film/discussion-memory-v3-film-v1.mp4",
-   "prompt_sha256": "3e878320997c9eded8f35c66179ffb0d231ebc30a9d090af16d47b74823575d8",
-   "sha256": "729e647bd4acb103eee3dc78efd0eaf704ae44143c05dab076088c608b44556b",
-   "size_bytes": 22904669
   }
  },
  "generated": "2026-10-03T21:51:24-0700",

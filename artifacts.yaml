@@ -1450,4 +1450,77 @@ artifacts:
           - data/influence-native/native-D2-01/events-4.jsonl
           - data/influence-native/native-D2-01/events-5.jsonl
         commit: 518d4412bc566a388dd4dc022118ade8dd637fa3-dirty
+  - id: right-dissenter-q1
+    category: content
+    type: figure
+    title: 'Right Dissenter Q1: sufficient-evidence diagnostic'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-q1/right-dissenter-q1-v1.png
+        built_at: '2026-10-04T04:49:00Z'
+        by: codex
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Do the write-up on the experiment.
+        ingredients:
+          - researchers/vishesh/notes/dissent/src/live_render.py
+          - researchers/vishesh/notes/dissent/results/q1-a1/summary.json
+          - researchers/vishesh/notes/dissent/results/q1-a1/records.json
+        commit: dfd45d63ac21a610d04eff71942c78e1c71a9297-dirty
+  - id: right-dissenter-s1
+    category: content
+    type: figure
+    title: 'Right Dissenter S1: policy outcomes and checking cost'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-s1/right-dissenter-s1-v1.png
+        built_at: '2026-10-04T04:49:01Z'
+        by: codex
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Do the post-mortem, and so on and so forth.
+        ingredients:
+          - researchers/vishesh/notes/dissent/src/live_render.py
+          - researchers/vishesh/notes/dissent/results/s1-a1/summary.json
+          - researchers/vishesh/notes/dissent/results/s1-a1/records.json
+        commit: dfd45d63ac21a610d04eff71942c78e1c71a9297-dirty
+  - id: right-dissenter-d1
+    category: content
+    type: figure
+    title: 'Right Dissenter D1: unreproduced response validation errors'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-d1/right-dissenter-d1-v1.png
+        built_at: '2026-10-04T04:49:02Z'
+        by: codex
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Do the post-mortem, and so on and so forth.
+        ingredients:
+          - researchers/vishesh/notes/dissent/src/validation_worker.py
+          - researchers/vishesh/notes/dissent/results/d1-a1/summary.json
+          - researchers/vishesh/notes/dissent/results/d1-a1/records.json
+        commit: dfd45d63ac21a610d04eff71942c78e1c71a9297-dirty
+  - id: right-dissenter-measured-replay
+    category: content
+    type: film
+    title: 'Right Dissenter: measured correction and recovery trajectories'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-measured-replay/right-dissenter-measured-replay-v1.mp4
+        built_at: '2026-10-04T04:49:02Z'
+        note: 23 seconds of saved native events; scripted initial votes and evaluator-only overlays labelled. No invented
+          model reasoning.
+        by: codex
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Let us get started on the experimental design, plan, implementation, visualizations, write-ups, and so on
+          and so forth.
+        ingredients:
+          - researchers/vishesh/notes/dissent/visualization/export_measured.py
+          - researchers/vishesh/notes/dissent/src/live_render.py
+          - researchers/vishesh/notes/dissent/results/s1-a1/summary.json
+          - researchers/vishesh/notes/dissent/results/s1-a1/records.json
+          - https://swarm-live.pages.dev/api/a/right-dissenter/s1-a1/measured_replay.gif
+        commit: dfd45d63ac21a610d04eff71942c78e1c71a9297-dirty
 requires: '1.2'

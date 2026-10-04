@@ -1,3 +1,5 @@
+> Live implementation update: the native relay, frozen executor, qualification and policy comparison are now implemented and executed. Current files are src/live_design.py, src/live_relay.py, src/live_worker.py, src/validation_worker.py and src/live_render.py. There are 53 passing software checks. REPORT.md and run configurations supersede the historical readiness statements below.
+
 # RD-1 implementation and validation
 
 The plan was committed at `5fd034c9af6613a9e8180874ab559312186b465c` before implementation. PLAN-PUBLICATION.json records an HTTP retrieval and exact-content match of its immutable public URL. That receipt is publication evidence, not hub run registration or research approval.

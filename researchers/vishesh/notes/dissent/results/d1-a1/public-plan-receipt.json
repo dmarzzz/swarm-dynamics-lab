@@ -1,0 +1,9 @@
+{
+  "experiment": "right-dissenter",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/7a2dc8ec9b692197556673ac641f143ac1d675c0/researchers/vishesh/notes/dissent/D1-PLAN.md",
+  "commit": "7a2dc8ec9b692197556673ac641f143ac1d675c0",
+  "plan_sha256": "f1d4fd80e3507f4617e1128a0325f8f7825379dba2f0715f697757bb30d4e977",
+  "registered_tldr": "TLDR: Can evidence-backed dissent earn a bounded independent check, withdraw when wrong, and reopen on new evidence? Three synthetic scenarios compare Jev admission with majority, veto, always-check, fixed random checking, pooled evidence and an exact rule. Measure correct on-time decisions, harmful reversals, checking cost and recovery. Scripted votes and fixed grammar limit generalization; exploratory study, independent review pending.",
+  "run_tldr": "TLDR: D1-A1 repeats three S1 rejected inputs once as labelled bug reproductions and adds six fresh clarified clean controls. Identify fixed response-validation predicates without relaxing validation; record validity, errors, costs and all nine assignments. No response replaces S1, and unreproduced historical errors remain unknown.",
+  "checked_utc": "2026-10-04T04:44:39.903497+00:00"
+}
