@@ -26,3 +26,7 @@ Source evidence: [D2](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 | Why simpler/existing evidence is not enough | Exact executor and matched-budget single reader; no-informed-note versus no-information is not cultural preservation. |
 | What the collective contributes | Only a later acquisition/checkpoint/replacement comparison tests intergenerational transmission. Measure retention, correction and benign learning separately. |
 | Boundaries and stopping | No restart of exhausted S0 stages. Wrong notes, correct citation IDs and unchanged checkpoints need content-level audits. New instruction/coverage changes are a material new instrument. |
+
+## Current evidence reconciliation, 2026-10-04
+
+The historical failure summary above predates [D2 and R1](../execution-diagnostic/RESULTS-R1.md). F qualifies192/192; the2.08point repair gain in twoof six worlds fails the separate material-benefit threshold. Freeze F; hold turnover. The current [A1 acquisition plan](../execution-diagnostic/A1-PLAN.md) withholds the mapping and audits source-content support, preserving the original USD5 diagnostic authority. No old S0 stage is restarted.
