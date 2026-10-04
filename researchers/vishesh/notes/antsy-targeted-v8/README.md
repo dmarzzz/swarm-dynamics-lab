@@ -1,5 +1,14 @@
 # Antsy v8: verify the field, not the vote
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-methods; source `f76f0248` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Corrected extraction improves the primary reader on reused development receipts; fresh qualification and checker benefit remain untested. Basis: Two parser defects corrected after inspecting development failures. Replaying the same observations yields 13 rather than 11 correct primary totals of 19 scorable receipts; weak-checker fallback adds an error and is rejected.
+- **sample_size_summary:** 20 reused receipts, 19 scorable; 100 saved OCR observations replayed twice, not 40 independent receipts. Zero new native calls. Fresh Q0 and held-out S1 unrun.
+<!-- experiment-evidence:end -->
+
 Exploratory development and next-study design. **Fresh qualification has not run.**
 
 - [Results: primary improved on used data; Tesseract checker rejected](RESULTS.md)

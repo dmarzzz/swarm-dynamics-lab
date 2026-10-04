@@ -68,3 +68,4 @@ Source snapshot: `9781739cd06e0c9606ed0ed053bf91b5e2a42b57`; individual rows may
 | [Capture Memory Mix](../researchers/shadow/notes/capture-memory-mix/README.md) (`capture-memory-mix`) | unassessed | Unassessed; see the owner registration and study documentation. |
 | [Sybil Specialists Sonnet](../researchers/dmarz/notes/sybil-specialists-sonnet/README.md) (`sybil-specialists-sonnet`) | unassessed | Unassessed; see the owner registration and study documentation. |
 | [Sybil Budget Sonnet](../researchers/dmarz/notes/sybil-budget-sonnet/README.md) (`sybil-budget-sonnet`) | unassessed | Unassessed; see the owner registration and study documentation. |
+| [Antsy v8: targeted field verification](../researchers/vishesh/notes/antsy-targeted-v8/README.md) (`antsy-targeted-v8`) | 1/4 | 20 reused receipts, 19 scorable; 100 saved OCR observations replayed twice, not 40 independent receipts. Zero new native calls. Fresh Q0 and held-out S1 unrun. |

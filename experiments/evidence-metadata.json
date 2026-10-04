@@ -1579,6 +1579,33 @@
       "status_at_assessment": "unassessed_registration_coverage",
       "assessor": "vishesh/codex-methods",
       "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "antsy-targeted-v8",
+      "title": "Antsy v8: targeted field verification",
+      "documents": [
+        "researchers/vishesh/notes/antsy-targeted-v8/README.md"
+      ],
+      "experiment_ids": [
+        "antsy-targeted-v8"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Corrected extraction improves the primary reader on reused development receipts; fresh qualification and checker benefit remain untested.",
+        "rationale": "Two parser defects corrected after inspecting development failures. Replaying the same observations yields 13 rather than 11 correct primary totals of 19 scorable receipts; weak-checker fallback adds an error and is rejected."
+      },
+      "sample_size_summary": "20 reused receipts, 19 scorable; 100 saved OCR observations replayed twice, not 40 independent receipts. Zero new native calls. Fresh Q0 and held-out S1 unrun.",
+      "sources": [
+        "researchers/vishesh/notes/antsy-targeted-v8/PLAN.md",
+        "researchers/vishesh/notes/antsy-targeted-v8/AMENDMENT-01.md",
+        "researchers/vishesh/notes/antsy-targeted-v8/RESULTS.md",
+        "researchers/vishesh/notes/antsy-targeted-v8/reviews/development-02-post.md"
+      ],
+      "status_at_assessment": "development_repaired_checker_rejected_fresh_qualification_pending",
+      "source_commit": "f76f024837fab7f6fd9dc8f86f531ed861b1b80f",
+      "assessed_at": "2026-10-04",
+      "assessor": "vishesh/codex-methods"
     }
   ],
   "source_sha256": {
