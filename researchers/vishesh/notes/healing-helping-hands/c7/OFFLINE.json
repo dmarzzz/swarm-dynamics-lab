@@ -1,0 +1,117 @@
+{
+  "scope": "inspected synthetic structured-text development; not natural documents or evaluation holdout",
+  "native_calls": 0,
+  "roots": 18,
+  "checks_passed": 102,
+  "same_author": true,
+  "cases": [
+    {
+      "id": "414192d2931cf562",
+      "stratum": "task_distraction",
+      "expected": "SUPPORT",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=Td74816e8fb; session=S1.\nSource R2: task=OTHER; session=S1; metric=accuracy; delta=-4; status=active.\nSource R1: task=Td74816e8fb; session=S1; metric=accuracy; delta=4; status=active.\nSource R3: task=OTHER; session=S1; metric=latency; delta=-4; status=active."
+    },
+    {
+      "id": "fb947ad5b0227c48",
+      "stratum": "task_distraction",
+      "expected": "REFUTE",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=Ta8af5c42ac; session=S1.\nSource R3: task=OTHER; session=S1; metric=latency; delta=-2; status=active.\nSource R1: task=Ta8af5c42ac; session=S1; metric=accuracy; delta=-11; status=active.\nSource R2: task=OTHER; session=S1; metric=accuracy; delta=11; status=active."
+    },
+    {
+      "id": "460e6ae69ebc178c",
+      "stratum": "task_distraction",
+      "expected": "UNCERTAIN",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=Td0864a3fcf; session=S1.\nSource R1: task=OTHER; session=S1; metric=accuracy; delta=1; status=active.\nSource R2: task=OTHER; session=S1; metric=latency; delta=-12; status=active."
+    },
+    {
+      "id": "c16421727a673359",
+      "stratum": "metric_distraction",
+      "expected": "SUPPORT",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=T05b577d4d6; session=S1.\nSource R1: task=T05b577d4d6; session=S1; metric=accuracy; delta=12; status=active.\nSource R2: task=T05b577d4d6; session=S1; metric=latency; delta=-12; status=active.\nSource R3: task=OTHER; session=S1; metric=latency; delta=-20; status=active."
+    },
+    {
+      "id": "5d8f23994bef7282",
+      "stratum": "metric_distraction",
+      "expected": "REFUTE",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=T0e00ff2436; session=S1.\nSource R2: task=T0e00ff2436; session=S1; metric=latency; delta=6; status=active.\nSource R1: task=T0e00ff2436; session=S1; metric=accuracy; delta=-6; status=active.\nSource R3: task=OTHER; session=S1; metric=latency; delta=15; status=active."
+    },
+    {
+      "id": "bb1bbb1f79db2d31",
+      "stratum": "metric_distraction",
+      "expected": "UNCERTAIN",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=T69e1014439; session=S1.\nSource R1: task=T69e1014439; session=S1; metric=latency; delta=19; status=active.\nSource R2: task=OTHER; session=S1; metric=latency; delta=20; status=active."
+    },
+    {
+      "id": "17750e95f0f93d5c",
+      "stratum": "superseded",
+      "expected": "SUPPORT",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=T6fd5759076; session=S1.\nSource R3: task=OTHER; session=S1; metric=latency; delta=-4; status=active.\nSource R2: task=T6fd5759076; session=S1; metric=accuracy; delta=-3; status=withdrawn.\nSource R1: task=T6fd5759076; session=S1; metric=accuracy; delta=3; status=active."
+    },
+    {
+      "id": "e0399a03f55109b6",
+      "stratum": "superseded",
+      "expected": "REFUTE",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=T14ecc0152f; session=S1.\nSource R2: task=T14ecc0152f; session=S1; metric=accuracy; delta=7; status=withdrawn.\nSource R3: task=OTHER; session=S1; metric=latency; delta=-12; status=active.\nSource R1: task=T14ecc0152f; session=S1; metric=accuracy; delta=-7; status=active."
+    },
+    {
+      "id": "bf5b1f272210db12",
+      "stratum": "superseded",
+      "expected": "UNCERTAIN",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=Tbff8ff2e73; session=S1.\nSource R2: task=OTHER; session=S1; metric=latency; delta=4; status=active.\nSource R1: task=Tbff8ff2e73; session=S1; metric=accuracy; delta=16; status=withdrawn."
+    },
+    {
+      "id": "85a32858773c976a",
+      "stratum": "conflict",
+      "expected": "SUPPORT",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=T539de41a8f; session=S1.\nSource R1: task=T539de41a8f; session=S1; metric=accuracy; delta=2; status=active.\nSource R3: task=OTHER; session=S1; metric=latency; delta=10; status=active.\nSource R2: task=T539de41a8f; session=S1; metric=accuracy; delta=2; status=active."
+    },
+    {
+      "id": "c556b1ccc78b97c6",
+      "stratum": "conflict",
+      "expected": "REFUTE",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=Tf4218f1092; session=S1.\nSource R1: task=Tf4218f1092; session=S1; metric=accuracy; delta=-16; status=active.\nSource R3: task=OTHER; session=S1; metric=latency; delta=-1; status=active.\nSource R2: task=Tf4218f1092; session=S1; metric=accuracy; delta=-2; status=active."
+    },
+    {
+      "id": "b780a9ad4fb0fe11",
+      "stratum": "conflict",
+      "expected": "UNCERTAIN",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=Tc2a83bbc81; session=S1.\nSource R3: task=OTHER; session=S1; metric=latency; delta=-10; status=active.\nSource R2: task=Tc2a83bbc81; session=S1; metric=accuracy; delta=-3; status=active.\nSource R1: task=Tc2a83bbc81; session=S1; metric=accuracy; delta=7; status=active."
+    },
+    {
+      "id": "f2e4e409d4c3db20",
+      "stratum": "duplicates",
+      "expected": "SUPPORT",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=Td3f341f58b; session=S1.\nSource R3: task=OTHER; session=S1; metric=latency; delta=-14; status=active.\nSource R1: task=Td3f341f58b; session=S1; metric=accuracy; delta=3; status=active.\nSource R1: task=Td3f341f58b; session=S1; metric=accuracy; delta=3; status=active."
+    },
+    {
+      "id": "792da2101e387c1f",
+      "stratum": "duplicates",
+      "expected": "REFUTE",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=Tc8be02bea2; session=S1.\nSource R3: task=OTHER; session=S1; metric=latency; delta=-12; status=active.\nSource R1: task=Tc8be02bea2; session=S1; metric=accuracy; delta=-12; status=active.\nSource R1: task=Tc8be02bea2; session=S1; metric=accuracy; delta=-12; status=active."
+    },
+    {
+      "id": "47f89442f610c6a9",
+      "stratum": "duplicates",
+      "expected": "UNCERTAIN",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=Tc1ed9ab9b7; session=S1.\nSource R1: task=OTHER; session=S1; metric=accuracy; delta=-10; status=active.\nSource R1: task=OTHER; session=S1; metric=accuracy; delta=-10; status=active.\nSource R3: task=OTHER; session=S1; metric=latency; delta=-20; status=active."
+    },
+    {
+      "id": "4eb18b0e62bed9c6",
+      "stratum": "missingness",
+      "expected": "SUPPORT",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=Tf1f8907062; session=S1.\nSource R2: task=Tf1f8907062; session=S2; metric=accuracy; delta=-16; status=active.\nSource R3: task=OTHER; session=S1; metric=latency; delta=7; status=active.\nSource R1: task=Tf1f8907062; session=S1; metric=accuracy; delta=16; status=active."
+    },
+    {
+      "id": "44b8484f7c746eed",
+      "stratum": "missingness",
+      "expected": "REFUTE",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=T8ff431a07e; session=S1.\nSource R3: task=OTHER; session=S1; metric=latency; delta=12; status=active.\nSource R1: task=T8ff431a07e; session=S1; metric=accuracy; delta=-16; status=active.\nSource R2: task=T8ff431a07e; session=S2; metric=accuracy; delta=16; status=active."
+    },
+    {
+      "id": "d51cadbe9b0c83dd",
+      "stratum": "missingness",
+      "expected": "UNCERTAIN",
+      "actor_input": "Decide whether the target method improves accuracy over baseline for the named task and session. Use active target-task, target-session accuracy records only. Withdrawn records are invalid. Duplicates add no evidence. Positive delta means SUPPORT; zero or negative means REFUTE. No target measurement or unresolved positive and nonpositive measurements means UNCERTAIN.\nTarget task=T82f5a7a627; session=S1.\nSource R2: task=OTHER; session=S1; metric=latency; delta=-20; status=active.\nSource R1: task=T82f5a7a627; session=S2; metric=accuracy; delta=13; status=active."
+    }
+  ]
+}

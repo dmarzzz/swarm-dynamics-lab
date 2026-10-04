@@ -49,3 +49,7 @@ The operational finalize hook ran, and the owning scientific review completes al
 [Saved Qwen diagnosis](SAVED-DIAGNOSIS.json) localizes C5 failure to raw classification; prompt-versus-decoder-versus-model causation remains unresolved. [Case quality](CASE-QUALITY.md) now acknowledges ambiguity, with [six offline development replacements](CASE-REVISION.md). These examples have no native calls and are not held-out evaluation. A successor needs an explicit concrete plan decision, stronger task realism and adjudicated labels; the current policy is parked.
 
 [Successor feasibility](SUCCESSOR-FEASIBILITY.md): no launch recommended; natural reports and adjudication remain unavailable, and the observed two-pass cost floor already exceeds always-Jev.
+
+## Scientific baseline reassessment
+
+C6 is closed, but “enough evidence to stop this configuration” does not mean a scientifically strong baseline. Current baseline status is **GAP**: one synthetic main execution, ambiguous cases and no measured fresh-run stability. [Corrected assessment and offline successor draft](../c7/BASELINE-ASSESSMENT.md) preserve C6 results and propose a bounded reliability/replication study for PI consideration. No new paid scope is approved.
