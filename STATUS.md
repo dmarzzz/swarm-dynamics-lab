@@ -383,10 +383,10 @@
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | vishesh/codex-methods | idle |  | 2026-10-04 19:33:30.160167+00:00 | Shared trace audit and saved Antsy field repair pushed; no native successor or allocation |
+| vishesh/codex-heterogeneous | blocked |  | 2026-10-04 19:32:25.153360+00:00 | D0-02 approved and validated offline; new machine blocked on original provisioner/account/state |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 19:22:58.628494+00:00 | PQ-02 launched then stopped HTTP400; reviewed, no retry, qualification inconclusive |
 | vishesh/codex-decision-models | working | right-dissenter-reopening-native-run | 2026-10-04 19:07:36.227052+00:00 | Preparing current admission for owner-approved RD6 Q0 and conditional D0; original ledger and caps retained. |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc9-native-preparation | 2026-10-04 18:42:42.878610+00:00 | PC9 native Q0 preparation complete;47 tests and three added scenarios pass; concrete native decision next, no new spend |
-| vishesh/codex-heterogeneous | idle |  | 2026-10-04 18:32:55.072393+00:00 | D0 closed; formatting/error repair validated offline; Haiku replacement cost estimated |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
