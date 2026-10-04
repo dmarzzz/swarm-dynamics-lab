@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-phantom-coast
 tool: codex
-state: blocked
+state: working
 task: phantom-coast-live
-doing: Public plan registered and native worker tested; awaiting study cap and verified dedicated allocation
+doing: Authorized USD5 launch; allocating dedicated host then native qualification
 updated: 2026-10-04T03:45:59Z
 ---
 
