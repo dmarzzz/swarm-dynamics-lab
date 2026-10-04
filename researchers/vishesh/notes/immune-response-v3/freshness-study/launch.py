@@ -24,10 +24,10 @@ def main():
  receipt=check('immune-response-v3','Freshness diagnostic, raw versus checked provenance,12 episodes60 calls, healthy ticks and unnecessary mutation; constructed-case limits.')
  assert receipt['commit']==a.commit and receipt['plan_sha256']==hashlib.sha256((BASE/'README.md').read_bytes()).hexdigest()
  out=root/a.attempt;assert not out.exists();fd=os.open(str(out)+'.dispatch',os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600);os.close(fd)
- data=validate(json.loads(sys.stdin.buffer.read(8193)));env={k:os.environ[k] for k in ['PATH','HOME','USER','LANG'] if k in os.environ};env.update(PYTHONPATH='/usr/local/lib/swarm',SWARM_SOURCE='vishesh/codex-immune',SWARM_MODEL_BASE_URL='https://api.anthropic.com/v1',SWARM_MODEL_CONFIG_FILE=str(BASE/'model-config.json'),SWARM_BUDGET_LEDGER=str(ledger),SWARM_MODEL_API_KEY=data['key'],SWARM_MODEL_WORKSPACE_ID=data['workspace'])
+ env={k:os.environ[k] for k in ['PATH','HOME','USER','LANG'] if k in os.environ};env.update(PYTHONPATH='/usr/local/lib/swarm',SWARM_SOURCE='vishesh/codex-immune',SWARM_MODEL_BASE_URL='http://127.0.0.1:18765',SWARM_MODEL_CONFIG_FILE=str(BASE/'model-config.json'),SWARM_BUDGET_LEDGER=str(ledger))
  with (root/(a.attempt+'.log')).open('xb') as log:
   os.chmod(log.name,0o600);proc=subprocess.Popen([str(root/'.venv/bin/python'),str(BASE/'worker.py'),'--out',str(out),'--receipt',str(root/'receipt-allocation.json'),'--attempt',a.attempt,'--seed','9401'],env=env,cwd=root,stdout=log,stderr=log,start_new_session=True)
-  data.clear();env.clear()
+  env.clear()
   try:code=proc.wait(timeout=3600)
   except subprocess.TimeoutExpired:
    os.killpg(proc.pid,signal.SIGTERM)
