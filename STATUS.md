@@ -45,7 +45,6 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T08:38Z | Run the revised procurement influence experiment |
-| [phantom-coast-pc4-live](tasks/phantom-coast-pc4-live.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T08:37Z | Run Phantom Coast PC-4 and PC-5 design-review cycles |
 | [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T08:29Z | Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -184,6 +183,7 @@
 | [phantom-coast-pc2-live](tasks/phantom-coast-pc2-live.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T07:55Z | Run and reconcile Phantom Coast PC-2 qualification and pilot |
 | [phantom-coast-pc2-runner](tasks/phantom-coast-pc2-runner.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T05:04Z | Build the Phantom Coast PC-2 launch instrument |
 | [phantom-coast-pc3-live](tasks/phantom-coast-pc3-live.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T08:22Z | Build and run Phantom Coast PC-3 coverage guard |
+| [phantom-coast-pc4-live](tasks/phantom-coast-pc4-live.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T09:07Z | Run Phantom Coast PC-4 and PC-5 design-review cycles |
 | [phantom-coast-review-process](tasks/phantom-coast-review-process.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T05:51Z | Remove mandatory researcher review from owner experiment process |
 | [plan-discussion-dose-v3](tasks/plan-discussion-dose-v3.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T01:36Z | Plan a stronger discussion dose evaluation without launching it |
 | [plan-discussion-v3-successor](tasks/plan-discussion-v3-successor.md) | done | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T04:00Z | Plan the next discussion benchmark diagnostic and offline orchestration |
