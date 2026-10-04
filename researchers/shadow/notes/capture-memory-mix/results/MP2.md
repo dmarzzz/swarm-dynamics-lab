@@ -97,15 +97,15 @@ Declared primary: M1, W1_INSIDE, arm A1_purge, metric delta_original, family mix
 
 ## Attempt lineage (raw records vs selected records)
 
-An attempt = one run of an episode's arms in the append-only file. Resumed workers re-ran every episode that did not already have all arms valid. Selection: last attempt with all arms valid, else last attempt. 'episodes multi valid' counts episodes with more than one fully valid attempt (selection then takes the last one; see CORRECTIONS.md for the first-attempt sensitivity check).
+An attempt = one run of an episode's arms in the append-only file. Resumed workers re-ran every episode that did not already have all arms valid. Selection: last attempt with all arms valid, else last attempt. 'episodes multi valid' counts episodes with more than one fully valid attempt (selection then takes the last one; see CORRECTIONS.md for the first-valid-attempt sensitivity check; this is NOT a first-observed-record analysis).
 
-| world | dose | memory | episodes | attempts | episodes rerun | episodes multi valid | raw records | raw invalid | superseded records | selected records | selected invalid |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| W1_INSIDE | 0.5 | 1 | 6 | 6 | 0 | 0 | 18 | 10 | 0 | 18 | 10 |
-| W1_INSIDE | 0.5 | full | 6 | 6 | 0 | 0 | 18 | 10 | 0 | 18 | 10 |
-| W1_INSIDE | 0.5 | mix:1/full@0.5 | 6 | 6 | 0 | 0 | 18 | 8 | 0 | 18 | 8 |
-| W1_INSIDE | 0.5 | mix:1/full@0.75 | 6 | 6 | 0 | 0 | 18 | 9 | 0 | 18 | 9 |
-| W1_INSIDE | 0.5 | mix:1/full@0.875 | 6 | 6 | 0 | 0 | 18 | 9 | 0 | 18 | 9 |
-| **total** | | | **30** | **30** | **0** | **0** | **90** | **46** | **0** | **90** | **46** |
+| world | dose | memory | episodes | attempts | episodes rerun | episodes multi valid | raw records | raw invalid | superseded records | selected records | selected valid | selected invalid | first observed valid |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| W1_INSIDE | 0.5 | 1 | 6 | 6 | 0 | 0 | 18 | 10 | 0 | 18 | 8 | 10 | 8 |
+| W1_INSIDE | 0.5 | full | 6 | 6 | 0 | 0 | 18 | 10 | 0 | 18 | 8 | 10 | 8 |
+| W1_INSIDE | 0.5 | mix:1/full@0.5 | 6 | 6 | 0 | 0 | 18 | 8 | 0 | 18 | 10 | 8 | 10 |
+| W1_INSIDE | 0.5 | mix:1/full@0.75 | 6 | 6 | 0 | 0 | 18 | 9 | 0 | 18 | 9 | 9 | 9 |
+| W1_INSIDE | 0.5 | mix:1/full@0.875 | 6 | 6 | 0 | 0 | 18 | 9 | 0 | 18 | 9 | 9 | 9 |
+| **total** | | | **30** | **30** | **0** | **0** | **90** | **46** | **0** | **90** | **44** | **46** | **44** |
 
 Retry accounting: no episode was re-run; 46 selected records are invalid and are counted in the 'inv' column, not dropped silently. Capture is decided before removal and shared by the arms.

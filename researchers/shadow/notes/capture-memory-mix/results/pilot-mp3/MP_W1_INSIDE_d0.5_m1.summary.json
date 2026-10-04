@@ -75,7 +75,10 @@
     "raw_invalid": 32,
     "superseded_records": 36,
     "episodes_rerun": 12,
-    "attempts": 24
+    "attempts": 24,
+    "selected_records": 36,
+    "selected_valid": 36,
+    "first_observed_valid": 4
   },
   "backend": "http:qwen/qwen3-235b-a22b-2507",
   "code": "9d82e5ab",

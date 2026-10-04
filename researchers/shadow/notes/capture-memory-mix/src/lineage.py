@@ -51,7 +51,8 @@ def select(records: list, policy: str = "last") -> tuple:
     sel, stats = [], defaultdict(Counter)
     for k, v in att.items():
         cell = k[:3]
-        full = [a for a in v if all(x["validity"]["ok"] for x in a)]
+        expected = {x["arm"] for a in v for x in a}
+        full = [a for a in v if {x["arm"] for x in a} == expected and all(x["validity"]["ok"] for x in a)]
         chosen = (full[-1] if policy == "last" else full[0]) if full else v[-1]
         sel += chosen
         s = stats[cell]
@@ -62,6 +63,12 @@ def select(records: list, policy: str = "last") -> tuple:
         s["episodes_rerun"] += len(v) > 1
         s["episodes_fully_valid"] += bool(full)
         s["episodes_multi_valid"] += len(full) > 1
+        first_by_arm = {}
+        for a in v:
+            for x in a:
+                first_by_arm.setdefault(x["arm"], x)
+        s["first_observed_valid"] += sum(x["validity"]["ok"] for x in first_by_arm.values())
+        s["selected_valid"] += sum(x["validity"]["ok"] for x in chosen)
         s["selected_records"] += len(chosen)
         s["selected_invalid"] += sum(not x["validity"]["ok"] for x in chosen)
         s["superseded_records"] += sum(len(a) for a in v) - len(chosen)
@@ -81,7 +88,7 @@ def legacy_select(records: list) -> list:
 
 def lineage_table(stats: dict) -> list:
     cols = ["episodes", "attempts", "episodes_rerun", "episodes_multi_valid", "raw_records", "raw_invalid",
-            "superseded_records", "selected_records", "selected_invalid"]
+            "superseded_records", "selected_records", "selected_valid", "selected_invalid", "first_observed_valid"]
     L = ["| world | dose | memory | " + " | ".join(c.replace("_", " ") for c in cols) + " |",
          "|---|---|---|" + "---|" * len(cols)]
     tot = Counter()

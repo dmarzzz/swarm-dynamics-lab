@@ -28,7 +28,13 @@ new rule picks exactly the records the old one did:
 | MP2 | gemma-3-27b | 30 | 30 | 0 | 90 | 46 | 0 | 90 | 46 |
 | MP3 | qwen3-235b | 60 | 109 | 49 | 327 | 127 | 147 | 180 | 2 |
 
-Sensitivity: no episode in any pilot has more than one fully valid attempt, so "last valid" vs "first valid"
+Cross-check against [RSI PR #84](https://github.com/dmarzzz/swarm-lab/pull/84): **327 raw records,
+127 invalid, 180 selected logical arm keys, 178 selected valid, 147 superseded. Only 54/180 keys (30%)
+were valid on their first observed record**, versus 178/180 (98.9%) after selection. These are arm records,
+not 180 independent histories or episodes; the pilot has 60 episode keys across cells. The difference is
+selection transparency, not a causal estimate of retry benefit. `lineage.py` now reports both denominators.
+
+Sensitivity (first VALID attempt, not first observed attempt): no episode in any pilot has more than one fully valid attempt, so "last valid" vs "first valid"
 cannot differ; `python3 src/lineage.py --sensitivity <dirs>` prints identical A1 means and recovery counts under
 both. The re-runs were triggered by validity only (provider HTTP 400s on qwen, the 05:58Z ledger mishap on
 gpt-4o-mini), never by outcome.
@@ -84,11 +90,13 @@ All gpt-4o-mini cells were already correct (equal valid counts across arms).
 ## C5. gpt-4o-mini raw episode records were not in git
 
 `results/pilot-mp/*.jsonl` was git-ignored (only on the hub), so the MP numbers could not be recomputed from the
-repo. The 11 episode files (1.1 MB) are now committed. Call logs stay on the hub (size).
+repo. The 7 episode files (1.1 MB) are now committed. Call logs stay on the hub (size).
 
 ## What does NOT change
 
 Every A1/A2 mean, CI, count and Fisher p in README.md and results/MP*.md is identical before and after (the
 selection is identical, C1). The cross-model verdict stands as dmarz wrote it: the mixture rescue reproduced on
 gpt-4o-mini only, not on gemma-3-27b, reversed on qwen3-235b. The long-list-read moderator is a post-hoc lead from
-three models, not a finding. The Claude replication (preregistered in preregistration.md section 7) is the next test.
+three models, not a finding. No Claude replication has been preregistered or run by this correction. The owner instead requests a
+separate frozen-history reading-rule diagnostic, OpenRouter only, with a USD 12 ceiling. It will require
+its own prospective plan and saved call records before any result can be claimed.

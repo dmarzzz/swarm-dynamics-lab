@@ -75,7 +75,10 @@
     "raw_invalid": 1,
     "superseded_records": 3,
     "episodes_rerun": 1,
-    "attempts": 25
+    "attempts": 25,
+    "selected_records": 72,
+    "selected_valid": 72,
+    "first_observed_valid": 71
   },
   "backend": "http:openai/gpt-4o-mini",
   "code": "016104d9",

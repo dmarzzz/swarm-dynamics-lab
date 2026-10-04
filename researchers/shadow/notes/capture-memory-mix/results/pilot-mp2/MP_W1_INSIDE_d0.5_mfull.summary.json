@@ -75,7 +75,10 @@
     "raw_invalid": 10,
     "superseded_records": 0,
     "episodes_rerun": 0,
-    "attempts": 6
+    "attempts": 6,
+    "selected_records": 18,
+    "selected_valid": 8,
+    "first_observed_valid": 8
   },
   "backend": "http:google/gemma-3-27b-it:sample",
   "code": "3ffb56b6",

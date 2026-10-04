@@ -20,6 +20,8 @@ Per `GOAL-12H.md`, a scripted result is a lead, not a finding, until a real mode
 **Corrections 2026-10-04:** reporting defects found in dmarz's review (attempt lineage, retry accounting, round-30
 captions, a hub capture fraction above 1) are fixed; see [CORRECTIONS.md](CORRECTIONS.md). No headline number moved.
 Verdict accepted: the mixture rescue does not generalize across models (reproduced on gpt-4o-mini only).
+MP3 lineage: 327 raw arm records, 127 invalid, 180 selected, 178 selected valid; only 54/180 logical
+arm keys were valid on their first observed record. Selection is not a causal retry-benefit estimate.
 
 ## Question
 

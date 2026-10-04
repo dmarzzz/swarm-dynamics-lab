@@ -52,7 +52,8 @@ def main():
                       "model_calls_all_attempts": calls_all, "cost_usd_all_attempts": round(usd_all, 4),
                       "raw_records": ls["raw_records"], "raw_invalid": ls["raw_invalid"],
                       "superseded_records": ls["superseded_records"], "episodes_rerun": ls["episodes_rerun"],
-                      "attempts": ls["attempts"]})
+                      "attempts": ls["attempts"], "selected_records": ls["selected_records"],
+                      "selected_valid": ls["selected_valid"], "first_observed_valid": ls["first_observed_valid"]})
             new = {**old, "stats": stats, "metrics": m, "selection": "lineage.select: last fully valid attempt per episode, else last attempt",
                    "corrected": "2026-10-04 shadow/sol-cm2, CORRECTIONS.md"}
             summ.write_text(json.dumps(new, indent=2))

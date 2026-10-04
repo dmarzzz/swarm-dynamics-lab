@@ -233,7 +233,7 @@ def main():
           "An attempt = one run of an episode's arms in the append-only file. Resumed workers re-ran every episode that did not "
           "already have all arms valid. Selection: last attempt with all arms valid, else last attempt. 'episodes multi valid' "
           "counts episodes with more than one fully valid attempt (selection then takes the last one; see CORRECTIONS.md for "
-          "the first-attempt sensitivity check).", ""]
+          "the first-valid-attempt sensitivity check; this is NOT a first-observed-record analysis).", ""]
     L += lineage.lineage_table(lin)
     L += ["", (f"Retry accounting: {n_super} of {n_raw} raw records were superseded by a later attempt (resume re-runs after "
                 "provider errors or interrupted runs); " if n_super else "Retry accounting: no episode was re-run; ")

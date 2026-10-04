@@ -127,17 +127,17 @@ Declared primary: M1, W1_INSIDE, arm A1_purge, metric delta_original, family mix
 
 ## Attempt lineage (raw records vs selected records)
 
-An attempt = one run of an episode's arms in the append-only file. Resumed workers re-ran every episode that did not already have all arms valid. Selection: last attempt with all arms valid, else last attempt. 'episodes multi valid' counts episodes with more than one fully valid attempt (selection then takes the last one; see CORRECTIONS.md for the first-attempt sensitivity check).
+An attempt = one run of an episode's arms in the append-only file. Resumed workers re-ran every episode that did not already have all arms valid. Selection: last attempt with all arms valid, else last attempt. 'episodes multi valid' counts episodes with more than one fully valid attempt (selection then takes the last one; see CORRECTIONS.md for the first-valid-attempt sensitivity check; this is NOT a first-observed-record analysis).
 
-| world | dose | memory | episodes | attempts | episodes rerun | episodes multi valid | raw records | raw invalid | superseded records | selected records | selected invalid |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| W1_INSIDE | 0.5 | 1 | 24 | 25 | 1 | 0 | 75 | 1 | 3 | 72 | 0 |
-| W1_INSIDE | 0.5 | full | 24 | 32 | 4 | 4 | 96 | 12 | 24 | 72 | 0 |
-| W1_INSIDE | 0.5 | mix:1/full@0.5 | 24 | 24 | 0 | 0 | 72 | 0 | 0 | 72 | 0 |
-| W1_INSIDE | 0.5 | mix:1/full@0.625 | 12 | 12 | 0 | 0 | 36 | 0 | 0 | 36 | 0 |
-| W1_INSIDE | 0.5 | mix:1/full@0.75 | 24 | 24 | 0 | 0 | 72 | 0 | 0 | 72 | 0 |
-| W1_INSIDE | 0.5 | mix:1/full@0.875 | 24 | 24 | 0 | 0 | 72 | 0 | 0 | 72 | 0 |
-| W1_INSIDE | 0.5 | mix:1/full@0.9375 | 12 | 12 | 0 | 0 | 36 | 0 | 0 | 36 | 0 |
-| **total** | | | **144** | **153** | **5** | **4** | **459** | **13** | **27** | **432** | **0** |
+| world | dose | memory | episodes | attempts | episodes rerun | episodes multi valid | raw records | raw invalid | superseded records | selected records | selected valid | selected invalid | first observed valid |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| W1_INSIDE | 0.5 | 1 | 24 | 25 | 1 | 0 | 75 | 1 | 3 | 72 | 72 | 0 | 71 |
+| W1_INSIDE | 0.5 | full | 24 | 32 | 4 | 4 | 96 | 12 | 24 | 72 | 72 | 0 | 60 |
+| W1_INSIDE | 0.5 | mix:1/full@0.5 | 24 | 24 | 0 | 0 | 72 | 0 | 0 | 72 | 72 | 0 | 72 |
+| W1_INSIDE | 0.5 | mix:1/full@0.625 | 12 | 12 | 0 | 0 | 36 | 0 | 0 | 36 | 36 | 0 | 36 |
+| W1_INSIDE | 0.5 | mix:1/full@0.75 | 24 | 24 | 0 | 0 | 72 | 0 | 0 | 72 | 72 | 0 | 72 |
+| W1_INSIDE | 0.5 | mix:1/full@0.875 | 24 | 24 | 0 | 0 | 72 | 0 | 0 | 72 | 72 | 0 | 72 |
+| W1_INSIDE | 0.5 | mix:1/full@0.9375 | 12 | 12 | 0 | 0 | 36 | 0 | 0 | 36 | 36 | 0 | 36 |
+| **total** | | | **144** | **153** | **5** | **4** | **459** | **13** | **27** | **432** | **432** | **0** | **419** |
 
 Retry accounting: 27 of 459 raw records were superseded by a later attempt (resume re-runs after provider errors or interrupted runs); 0 selected records are invalid and are counted in the 'inv' column, not dropped silently. Capture is decided before removal and shared by the arms.
