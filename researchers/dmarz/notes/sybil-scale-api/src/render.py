@@ -36,7 +36,7 @@ def frame(rows,total,stage,elapsed=0,accounting=None,visibility='visible'):
         text(62,227,'Solid: 4 checks   Dashed: N/9 checks   White squares: coverage proportional, simple voting',22,MUTED)
         for col,rate in enumerate((.1,.9)):
             for row,metric in enumerate(('rare_accuracy','bad_seat_share')):
-                x=120+col*860;y=342+row*330;w=650;h=230
+                x=120+col*860;y=342+row*365;w=650;h=220
                 text(x-40,y-53,('Specialist accuracy' if row==0 else 'Attacker share of admitted seats')+f' | pass {rate:.0%}',24)
                 for tick in (0,.25,.5,.75,1):
                     yy=y+h*(1-tick);d.line((x,yy,x+w,yy),fill='#324153',width=1);text(x-63,yy-12,f'{tick:.0%}',18,MUTED)
