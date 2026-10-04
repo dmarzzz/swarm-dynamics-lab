@@ -2087,6 +2087,76 @@
       "assessor": "vishesh/codex-idea-scores",
       "assessed_at": "2026-10-04",
       "source_commit": "3331c6c6083caf1f69ccfdac4d5faa704c94c183"
+    },
+    {
+      "id": "phantom-coast-pc4",
+      "title": "Phantom Coast PC-4: verification opportunity cost",
+      "documents": [
+        "researchers/vishesh/notes/phantom-coast/pc4/README.md"
+      ],
+      "experiment_ids": [
+        "phantom-coast-pc4"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "On 32 paired synthetic worlds, checking all four reports improved full-corruption loss 4.30 percentage points versus uniform but worsened benign loss 1.52 points and missed the 5.56-point practical target.",
+        "rationale": "Complete operator request/event/endpoint audits and balanced controls support the specified allocation tradeoff. Synthetic noiseless terrain, utility assumptions, one snapshot and scripted scheduling limit transfer; no learned-planning claim."
+      },
+      "sample_size_summary": "S1: 32 independent roots, 2 geometry families, 384 dependent episodes, 1,152/1,152 valid native maps. Q0: 4 separate roots, 24/24 valid maps, 864/864 expected labels. Scripted acquisitions and native endpoints; no independent replication.",
+      "sources": [
+        "researchers/vishesh/notes/phantom-coast/pc4/README.md",
+        "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-analysis.json",
+        "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-audit.json",
+        "researchers/vishesh/notes/phantom-coast/pc4/reviews/S1-A1-POST.md",
+        "researchers/vishesh/notes/phantom-coast/pc4/results/CLOSEOUT.json"
+      ],
+      "status_at_assessment": "complete_exploratory_result",
+      "assessor": "vishesh/codex-phantom-coast",
+      "assessed_at": "2026-10-04",
+      "source_commit": "9bfb44a289f5caad76f0c12a1083d21376eec486",
+      "source_sha256": {
+        "researchers/vishesh/notes/phantom-coast/pc4/README.md": "26762287558da0a25ec257037f1997b140d70b578c8143134bc99710da1974cc",
+        "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-analysis.json": "b9535628a55fad007a0c656b651bc4907316b5ab3764d037ae2639654e5253a4",
+        "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-audit.json": "39e23a3965c15ffcfad9a46d55ad677a7052ba2dbf288dc8686a5d4e42228fc4",
+        "researchers/vishesh/notes/phantom-coast/pc4/reviews/S1-A1-POST.md": "1aa096008e8ed2a746be5ab6d5e4ef964b3abb51f512561f4d5acfeb1b094c19",
+        "researchers/vishesh/notes/phantom-coast/pc4/results/CLOSEOUT.json": "c4f857f6d914b2c84532af7cab87153d445360a4d38064ddf59321bcb141a3df"
+      }
+    },
+    {
+      "id": "phantom-coast-pc5",
+      "title": "Phantom Coast PC-5: decision-contract disclosure",
+      "documents": [
+        "researchers/vishesh/notes/phantom-coast/pc5/README.md"
+      ],
+      "experiment_ids": [
+        "phantom-coast-pc5"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "On 32 paired layouts, explicit decision-contract instructions reduced expected regret 0.1578 per decision but optimal reliable-report choices regressed from 28/32 to 21/32.",
+        "rationale": "Prespecified diagnostic contrast met its practical target with full saved-data audit. Only two risk templates, one snapshot and combined utility/transition disclosure; explicit choices still suboptimal 19/64 and no independent replication."
+      },
+      "sample_size_summary": "S1: 32 independent layouts, 2 semantic risk cases, 128/128 valid native choices (4 dependent conditions/root). Separate Q0: 4 roots, 12/12 legal choices. Scripted terminal consequences; no multi-step planning or swarm outcome.",
+      "sources": [
+        "researchers/vishesh/notes/phantom-coast/pc5/README.md",
+        "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-analysis.json",
+        "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-audit.json",
+        "researchers/vishesh/notes/phantom-coast/pc5/reviews/S1-A1-POST.md",
+        "researchers/vishesh/notes/phantom-coast/pc5/results/CLOSEOUT.json"
+      ],
+      "status_at_assessment": "complete_exploratory_result",
+      "assessor": "vishesh/codex-phantom-coast",
+      "assessed_at": "2026-10-04",
+      "source_commit": "9bfb44a289f5caad76f0c12a1083d21376eec486",
+      "source_sha256": {
+        "researchers/vishesh/notes/phantom-coast/pc5/README.md": "5b7b12a17c3a3b05de03860b2f61623058ea6fb1680d037ee32ad1a0257275e3",
+        "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-analysis.json": "d74f532da4457d81150ed042e2d4f34db88a1890e3b7325f68bac7d7e33e2bb3",
+        "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-audit.json": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c",
+        "researchers/vishesh/notes/phantom-coast/pc5/reviews/S1-A1-POST.md": "b5e8e2bb24e4de6962b951a74f74fc95f14633a188112aa45b369524f6e04025",
+        "researchers/vishesh/notes/phantom-coast/pc5/results/CLOSEOUT.json": "7cf5eba0c367cef1ed3b241dbec667d954e4debca79c9e441a906d9eeeb27306"
+      }
     }
   ],
   "source_sha256": {

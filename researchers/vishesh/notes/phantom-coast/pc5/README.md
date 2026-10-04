@@ -1,5 +1,14 @@
 # Phantom Coast PC-5: explicit rules help, but not in every condition
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `9bfb44a2` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — On 32 paired layouts, explicit decision-contract instructions reduced expected regret 0.1578 per decision but optimal reliable-report choices regressed from 28/32 to 21/32. Basis: Prespecified diagnostic contrast met its practical target with full saved-data audit. Only two risk templates, one snapshot and combined utility/transition disclosure; explicit choices still suboptimal 19/64 and no independent replication.
+- **sample_size_summary:** S1: 32 independent layouts, 2 semantic risk cases, 128/128 valid native choices (4 dependent conditions/root). Separate Q0: 4 roots, 12/12 legal choices. Scripted terminal consequences; no multi-step planning or swarm outcome.
+<!-- experiment-evidence:end -->
+
 Completed one-step native decision diagnostic: **32 paired layouts, 128/128 valid choices**. Separate interface qualification: 12/12 valid legal choices on four roots.
 
 | Report reliability | Legacy optimal | Explicit-contract optimal |
