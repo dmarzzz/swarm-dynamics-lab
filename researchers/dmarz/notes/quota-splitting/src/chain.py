@@ -2,7 +2,8 @@
 
   python src/chain.py run --stages S0,P0,Q0,S1   exit 0 all requested stages done, 3 stopped at a
                                                  failed stage or gate, other non-zero internal error
-  python src/chain.py resume                     only after S1 stopped with provider_credit_balance_low at
+  python src/chain.py resume                     only after S1 stopped with provider_credit_balance_low (Anthropic)
+                                                 or provider_billing_stopped (OpenAI) at
                                                  this source hash: queues a continuation batch s1-001-r<n>
                                                  with exactly the unfinished episodes; same ledger and caps
   python src/chain.py status                     chain-status.json plus ledger totals, one JSON line
@@ -78,7 +79,7 @@ def projection(q0_run):
     Cost: Q0's cost per call x the frozen growth factor x the S1 call cap must fit in what is left
     under the dollar cap. Output room: no Q0 call may have used more than the frozen share of
     max_output_tokens, because one response cut off at the limit would end S1."""
-    b = study.design()['budget']; metrics = q0_run.get('metrics') or {}
+    b = study.budget(); metrics = q0_run.get('metrics') or {}
     calls = metrics.get('model_calls') or 0
     if not calls or metrics.get('cost_usd') is None or metrics.get('max_output_tokens_per_call') is None:
         return {'projected_usd': None, 'reason': 'q0_usage_missing'}
@@ -138,13 +139,13 @@ def resume(sr=None, opener=None):
     def refuse(reason):
         print(json.dumps({'state': 'resume_refused', 'reason': reason})); return EXIT_STOPPED
     if not status or status.get('source_hash') != study.source_hash(): return refuse('no_chain_at_this_source_hash')
-    if status.get('state') != 'stopped_at_gate' or status.get('stopped_stage') != 'S1' or status.get('reason') != provider.CREDIT:
+    if status.get('state') != 'stopped_at_gate' or status.get('stopped_stage') != 'S1' or status.get('reason') not in provider.BILLING_STOPS:
         return refuse('last_stop_was_not_a_billing_stop_of_S1')
     prior = stage_rows(entry); final = study.combine(prior)
     units = sorted(r['id'] for r in final if r['status'] in ('interrupted', 'not_started'))
     if not units or len(final) != len(study.cells('S1')): return refuse('no_unfinished_units')
     n = len(entry.get('continuations') or []) + 1
-    budget = study.design()['budget']; deadline = time.monotonic() + budget['chain_timeout_seconds']
+    budget = study.budget(); deadline = time.monotonic() + budget['chain_timeout_seconds']
     cont = {'status': 'gating', 'batch': f'{study.batch("S1")}-r{n}', 'units': len(units)}
     entry.setdefault('continuations', []).append(cont)
     status.update(state='running', stopped_stage=None, reason=None); write_status(status)
@@ -172,7 +173,7 @@ def resume(sr=None, opener=None):
 def run_chain(stages, sr=None, opener=None):
     if sr is None:
         import swarm_report as sr
-    budget = study.design()['budget']; deadline = time.monotonic() + budget['chain_timeout_seconds']
+    budget = study.budget(); deadline = time.monotonic() + budget['chain_timeout_seconds']
     status = read_status()
     if status and status.get('source_hash') != study.source_hash():
         # records of another source version are kept beside the new status, never mixed into it
@@ -290,7 +291,7 @@ def verify_stage(sr, stage, entry, reference, prior_rows=None, original=True):
     checks['totals_recomputed'] = all(close(float(summary[k]), float(v)) for k, v in t.items())
     gate = study.gate(stage, rows, summary.get('invariant_violations') or [])
     checks['gate_recomputed'] = (None if gate is None else int(gate)) == summary['qualification_passed']
-    budget = study.design()['budget']; failed = sum(r['status'] == 'failed' for r in everyone)
+    budget = study.budget(); failed = sum(r['status'] == 'failed' for r in everyone)
     stopped = any(r['status'] in ('interrupted', 'not_started') for r in rows)
     want = (t['invalid'] == 0 and gate is not False) if stage in worker.STRICT else (not stopped and failed <= budget['max_failed'])
     checks['passed_recomputed'] = summary['passed'] == (bool(want) and not summary.get('invariant_violations'))

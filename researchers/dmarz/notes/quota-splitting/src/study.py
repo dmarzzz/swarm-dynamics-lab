@@ -71,9 +71,44 @@ def prices():
 
 
 def model_tag():
-    """'' for the first model of the ladder, '-opus-5' (the id without 'claude-') for any other."""
+    """'' for the first model of the ladder, else '-' and the id without a 'claude-' prefix
+    ('-opus-5', '-gpt-6-sol')."""
     name = model()
     return '' if name == model_ladder()[0] else '-' + name.removeprefix('claude-')
+
+
+def provider_name():
+    """'anthropic' (the Opus models) or 'openai' (gpt-6-sol), from the hashed design. When the launcher
+    set STUDY_PROVIDER it must agree: one model, one provider, one credential."""
+    name = design()['models'][model()].get('provider', 'anthropic')
+    given = os.environ.get('STUDY_PROVIDER')
+    if given and given != name:
+        raise ValueError('provider_mismatch')
+    return name
+
+
+def _merge(base, over):
+    out = dict(base)
+    for key, value in over.items():
+        out[key] = _merge(base[key], value) if isinstance(value, dict) and isinstance(base.get(key), dict) else value
+    return out
+
+
+def budget():
+    """The budget of this attempt: the frozen top-level budget, with the model's own `budget` block
+    (gpt-6-sol only) merged over it. For the Opus models it is the top-level budget unchanged."""
+    return _merge(design()['budget'], design()['models'][model()].get('budget') or {})
+
+
+def openai_config():
+    """The configuration the reference OpenAI adapter takes for this attempt's model. The answer
+    schema in the request is study.SCHEMA itself (the design names it STUDY_SCHEMA)."""
+    m = design()['models'][model()]
+    template = json.loads(json.dumps(m['request_template']))
+    js = template['response_format'].get('json_schema')
+    if js is not None and js.get('schema') == 'STUDY_SCHEMA':
+        js['schema'] = json.loads(json.dumps(SCHEMA))
+    return {'model': model(), 'canonical_model': m.get('canonical_model', model()), 'request_template': template, 'budget': budget()}
 
 
 def batch(stage):
@@ -84,7 +119,7 @@ def batch(stage):
 def params(stage):
     if stage not in STAGES:
         raise ValueError('Formal S2 disabled')
-    return dict(stage=stage, backend='scripted' if stage == 'S0' else 'anthropic', batch=batch(stage),
+    return dict(stage=stage, backend='scripted' if stage == 'S0' else provider_name(), batch=batch(stage),
                 model='none' if stage == 'S0' else model(), source_hash=source_hash(), code=code_revision())
 
 

@@ -23,6 +23,13 @@ each in fresh temporary result and ledger directories and on its own hub:
       resume); then the second model of the ladder (STUDY_MODEL, its own ledger and results directory)
       runs P0 -> Q0 -> S1 behind the same scripted S0, with its own batch names, its own prices and
       every row naming it; `chain verify` on the second model's chain.
+Amendment A2 (gpt-6-sol through the reference OpenAI adapter, OpenAI-shaped stub `OpenAIStub`):
+  (g) all four stages on gpt-6-sol (STUDY_MODEL=gpt-6-sol, STUDY_PROVIDER=openai, as the launcher sets
+      them), then `chain verify`; batches p0-001-gpt-6-sol, q0-001-gpt-6-sol, s1-001-gpt-6-sol;
+  (h) gpt-6-sol with the never-spawn stub: the chain stops at Q0, no S1 run on the hub;
+  (i) gpt-6-sol, from some point in S1 every request returns HTTP 429 insufficient_quota (the OpenAI
+      usage-limit stop): S1 stops with provider_billing_stopped and nothing failed; `chain resume` with
+      a healthy stub completes it (s1-001-gpt-6-sol-r1); every episode exactly once; `chain verify`.
 It refuses to run unless the hub URL host is 127.0.0.1.
 """
 import argparse
@@ -45,6 +52,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import chain     # noqa: E402
 import manifest  # noqa: E402
+import openai_provider  # noqa: E402
 import provider  # noqa: E402
 import sim       # noqa: E402
 import study     # noqa: E402
@@ -125,6 +133,44 @@ class Stub:
                       'cache_read_input_tokens': 0}}).encode())
 
 
+QUOTA_BODY = json.dumps({'error': {'message': 'You have reached your API usage limits: your organization has crossed its monthly '
+                                             'API usage threshold. (rehearsal)', 'type': 'insufficient_quota', 'param': None,
+                                  'code': 'insufficient_quota'}}).encode()
+
+
+class OpenAIStub(Stub):
+    """Stands in for the OpenAI Chat Completions endpoint, in its response shape: no cost field, a dated
+    model id, reasoning tokens inside completion_tokens. It rejects any body that is not exactly the
+    intended request (keys and order, reasoning_effort medium, max_completion_tokens 16,000, the study's
+    strict schema, one system and one user message). Ordinals and faults as in Stub; `credit_from`
+    returns HTTP 429 insufficient_quota."""
+
+    def __call__(self, request, timeout=None):
+        url = request.full_url
+        if url != openai_provider.URL:
+            raise AssertionError('the OpenAI rehearsal stub only answers the chat completions endpoint')
+        body = json.loads(request.data)
+        rf = {'type': 'json_schema', 'json_schema': {'name': 'quota_turn', 'strict': True, 'schema': study.SCHEMA}}
+        if list(body) != list(openai_provider.BODY_KEYS) or body['model'] != 'gpt-6-sol' or body['reasoning_effort'] != 'medium' \
+                or body['max_completion_tokens'] != 16000 or body['response_format'] != rf or [m['role'] for m in body['messages']] != ['system', 'user']:
+            raise urllib.error.HTTPError(url, 400, 'invalid_request_error', {}, io.BytesIO(b'{"error":{"message":"rehearsal: unexpected body"}}'))
+        with self.lock: self.messages += 1; n = self.messages
+        if self.credit_from is not None and n >= self.credit_from:
+            raise urllib.error.HTTPError(url, 429, 'Too Many Requests', {'x-request-id': 'req_rehearsal'}, io.BytesIO(QUOTA_BODY))
+        if n in self.fail_messages or (self.fail_from is not None and n >= self.fail_from):
+            raise urllib.error.HTTPError(url, 500, 'Internal Server Error', {'x-request-id': 'req_rehearsal'}, io.BytesIO(ERROR_BODY))
+        with self.lock: self.answered += 1
+        answer = self.answer(body['messages'][0]['content'], json.loads(body['messages'][1]['content']))
+        return Response(json.dumps({
+            'id': 'chatcmpl-rehearsal', 'object': 'chat.completion', 'model': 'gpt-6-sol-2026-09-30',
+            'choices': [{'index': 0, 'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': json.dumps(answer), 'refusal': None}}],
+            'usage': {'prompt_tokens': len(request.data) // 2, 'completion_tokens': 900,
+                      'prompt_tokens_details': {'cached_tokens': 0}, 'completion_tokens_details': {'reasoning_tokens': 700}}}).encode())
+
+
+SOL = {'STUDY_MODEL': 'gpt-6-sol', 'STUDY_PROVIDER': 'openai', 'SWARM_OPENAI_API_KEY': 'rehearsal-stub-not-a-credential'}
+
+
 def free_port():
     with socket.socket() as s:
         s.bind(('127.0.0.1', 0)); return s.getsockname()[1]
@@ -146,8 +192,10 @@ def start_hub(hub_dir, data_dir, token):
     return proc, f'http://127.0.0.1:{port}'
 
 
-def chain_once(label, stub, hub_dir, base, sr, resume_with=None, verify=False, second_with=None):
+def chain_once(label, stub, hub_dir, base, sr, resume_with=None, verify=False, second_with=None, env=None):
     work = Path(base) / label; work.mkdir()
+    for name in ('STUDY_MODEL', 'STUDY_PROVIDER', 'SWARM_OPENAI_API_KEY'): os.environ.pop(name, None)
+    os.environ.update(env or {})
     token = 'rehearsal-' + secrets.token_hex(12)
     proc, url = start_hub(hub_dir, work, token)
     os.environ.update(SWARM_HUB_URL=require_local(url), SWARM_HUB_TOKEN=token, SWARM_SOURCE='dmarz/pipeline-quota-rehearsal',
@@ -167,17 +215,20 @@ def chain_once(label, stub, hub_dir, base, sr, resume_with=None, verify=False, s
                    hub_final_metrics_present=all(all(k in (r.get('metrics') or {}) for k in
                        ('episodes', 'invalid', 'model_calls', 'input_tokens', 'output_tokens', 'cost_usd')) for r in runs),
                    ledger=chain.ledger_totals())
-        if s1.get('directory'): out['s1_units'] = chain.units(chain.stage_rows(s1), manifest.load())
+        if s1.get('directory'):
+            out['s1_units'] = chain.units(chain.stage_rows(s1), manifest.load())
+            out['s1_row_models'] = sorted({r.get('model') for r in chain.stage_rows(s1)})
+        out['hub_models'] = sorted({((r.get('params') or {}).get('batch'), (r.get('params') or {}).get('model'), (r.get('params') or {}).get('backend')) for r in runs})
         return out
     try:
         result['exit'] = chain.run_chain(list(study.STAGES), sr=sr, opener=stub)
         result.update(snapshot(), stub_messages=stub.messages, stub_counts=stub.counts, stub_answered=stub.answered)
         if resume_with is not None:
-            result['first_stop'] = {k: result[k] for k in ('exit', 'state', 'stopped_stage', 'reason', 'stages', 's1_units')}
+            result['first_stop'] = {k: result.get(k) for k in ('exit', 'state', 'stopped_stage', 'reason', 'stages', 's1_units')}
             result['resume_exit'] = chain.resume(sr=sr, opener=resume_with)
             result.update(snapshot(), resume_stub_messages=resume_with.messages)
         if second_with is not None:
-            result['first_stop'] = {k: result[k] for k in ('exit', 'state', 'stopped_stage', 'reason', 'stages', 's1_units', 'ledger')}
+            result['first_stop'] = {k: result.get(k) for k in ('exit', 'state', 'stopped_stage', 'reason', 'stages', 's1_units', 'ledger')}
             second = study.model_ladder()[1]; tag = second.removeprefix('claude-')
             os.environ.update(STUDY_MODEL=second, STUDY_RESULTS_DIR=str(work / f'results-{tag}'),
                               STUDY_BUDGET_LEDGER=str(work / 'ledger' / f'ledger-{tag}.jsonl'))
@@ -195,6 +246,7 @@ def chain_once(label, stub, hub_dir, base, sr, resume_with=None, verify=False, s
         elif verify: result['verify_exit'] = chain.verify(sr)
         result['spool_empty'] = not list((work / 'spool').glob('*.json')) if (work / 'spool').exists() else True
     finally:
+        for name in ('STUDY_MODEL', 'STUDY_PROVIDER', 'SWARM_OPENAI_API_KEY'): os.environ.pop(name, None)
         proc.terminate()
         try: proc.wait(timeout=10)
         except subprocess.TimeoutExpired: proc.kill()
@@ -223,6 +275,8 @@ def main():
     sys.path.insert(0, str(hub_dir))
     import swarm_report as sr
     waits = []; provider.SLEEP = waits.append          # no backoff or billing wait takes real time
+    # The OpenAI adapter measures a billing outage on its clock: advance it by every skipped wait.
+    provider.CLOCK = lambda: time.monotonic() + sum(waits)
     base = tempfile.mkdtemp(prefix='quota-splitting-rehearsal-'); started = time.monotonic()
     budget = study.design()['budget']; total = budget['max_attempted_calls']; limit = budget['max_failed']
     episodes = len(study.cells('S1')); first_s1 = 2 + budget['max_calls']['Q0']       # message ordinal of the first S1 call
@@ -236,6 +290,10 @@ def main():
                           resume_with=Stub('parallel'), verify=True)
         ladder = chain_once('f-model-ladder-after-billing-stop', Stub('parallel', credit_from=first_s1 + 40), hub_dir, base, sr,
                             second_with=Stub('parallel'), verify=True)
+        sol = chain_once('g-gpt-6-sol-full-chain', OpenAIStub('parallel'), hub_dir, base, sr, verify=True, env=SOL)
+        sol_gate = chain_once('h-gpt-6-sol-failed-qualification', OpenAIStub('never_spawn'), hub_dir, base, sr, env=SOL)
+        sol_bill = chain_once('i-gpt-6-sol-billing-stop-and-resume', OpenAIStub('parallel', credit_from=first_s1 + 40), hub_dir, base, sr,
+                              resume_with=OpenAIStub('parallel'), verify=True, env=SOL)
     finally:
         if not a.keep: shutil.rmtree(base, ignore_errors=True)
     calls = full.get('stages', {}); made = sum((e.get('calls') or 0) for e in calls.values())
@@ -297,11 +355,35 @@ def main():
         'f_second_model_prices': abs(((ladder.get('second') or {}).get('stages') or {}).get('P0', {}).get('cost_usd', -1)
                                      - (ladder_probe_cost(ladder) or -2)) < 1e-9,
         'f_verify_exit_0': ladder.get('second_verify_exit') == 0,
-        'no_real_wait': time.monotonic() - started < 600 and len(waits) > 0,
+        'g_exit_0_completed': sol.get('exit') == 0 and sol.get('state') == 'completed' and sol.get('verify_exit') == 0,
+        'g_batches_models_backends': sol.get('hub_models') == sorted([('s0-001', 'none', 'scripted'), ('p0-001-gpt-6-sol', 'gpt-6-sol', 'openai'),
+                                                                      ('q0-001-gpt-6-sol', 'gpt-6-sol', 'openai'), ('s1-001-gpt-6-sol', 'gpt-6-sol', 'openai')])
+                                     and all(st == 'done' for _, st in sol.get('hub_runs', [('', 'x')])),
+        'g_calls_within_caps': all(0 <= (e_.get('calls') if e_.get('calls') is not None else -1) <= budget['max_calls'][s] for s, e_ in sol.get('stages', {}).items())
+                               and sol.get('stages', {}).get('P0', {}).get('calls') == 1
+                               and (sol.get('ledger') or {}).get('attempted_calls') == sol.get('stub_messages'),
+        'g_rows_name_gpt_6_sol': sol.get('s1_row_models') == ['gpt-6-sol'],
+        'g_cost_at_pinned_prices': abs(sum((e_.get('cost_usd') or 0) for e_ in sol.get('stages', {}).values())
+                                       - sum(e_.get('input_tokens') or 0 for e_ in sol.get('stages', {}).values()) * 2.5e-6
+                                       - sum(e_.get('output_tokens') or 0 for e_ in sol.get('stages', {}).values()) * 10e-6) < 1e-6 * (sol.get('stub_messages') or 1),
+        'h_stopped_at_Q0_no_S1': sol_gate.get('exit') == 3 and sol_gate.get('stopped_stage') == 'Q0'
+                                 and sol_gate.get('hub_runs') == [('p0-001-gpt-6-sol', 'done'), ('q0-001-gpt-6-sol', 'failed'), ('s0-001', 'done')],
+        'i_first_stop_is_a_billing_stop': (sol_bill.get('first_stop') or {}).get('reason') == openai_provider.BILLING_STOP
+                                          and (sol_bill.get('first_stop') or {}).get('stopped_stage') == 'S1'
+                                          and ((sol_bill.get('first_stop') or {}).get('stages') or {}).get('S1', {}).get('failed') == 0
+                                          and ((sol_bill.get('first_stop') or {}).get('stages') or {}).get('S1', {}).get('resumable') is True,
+        'i_resume_completes_each_unit_once': sol_bill.get('resume_exit') == 0 and sol_bill.get('state') == 'completed'
+                                             and ((sol_bill.get('continuations') or [{}])[0]).get('batch') == 's1-001-gpt-6-sol-r1'
+                                             and (sol_bill.get('s1_units') or {}).get('every_unit_exactly_once') is True
+                                             and (sol_bill.get('s1_units') or {}).get('completed') == episodes,
+        'i_verify_exit_0': sol_bill.get('verify_exit') == 0,
+        'i_ledger_within_caps': ((sol_bill.get('ledger') or {}).get('calls_by_stage') or {}).get('S1', 10 ** 9) <= budget['max_calls']['S1'],
+        'no_real_wait': time.monotonic() - started < 900 and len(waits) > 0,
     }
     ok = all(checks.values())
     print(json.dumps({'ok': ok, 'checks': checks, 'full_chain': full, 'failed_qualification': gate, 'one_failed_episode': one,
-                      'over_the_failure_limit': many, 'billing_stop_and_resume': bill, 'model_ladder': ladder, 'waits_replaced': len(waits),
+                      'over_the_failure_limit': many, 'billing_stop_and_resume': bill, 'model_ladder': ladder,
+                      'gpt_6_sol_full_chain': sol, 'gpt_6_sol_failed_qualification': sol_gate, 'gpt_6_sol_billing_stop_and_resume': sol_bill, 'waits_replaced': len(waits),
                       'seconds': round(time.monotonic() - started, 1),
                       'note': 'stub answers only; nothing here is a sample and nothing left this machine'}, sort_keys=True))
     return 0 if ok else 1

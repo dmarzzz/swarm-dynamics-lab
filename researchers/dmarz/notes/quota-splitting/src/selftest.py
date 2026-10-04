@@ -15,6 +15,12 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+# The suite tests the code, not the chain it runs in: the launcher's setup step sets STUDY_MODEL,
+# STUDY_PROVIDER (and STUDY_REPLICATION where used) for the chosen model before it runs this file, and
+# the tests must give the same result with and without them. Tests that need a model set it themselves.
+for _name in ('STUDY_MODEL', 'STUDY_PROVIDER', 'STUDY_REPLICATION'):
+    os.environ.pop(_name, None)
+
 import analyze      # noqa: E402
 import chain        # noqa: E402
 import coordinator  # noqa: E402
@@ -25,6 +31,9 @@ import render       # noqa: E402
 import sim          # noqa: E402
 import study        # noqa: E402
 import worker       # noqa: E402
+from test_openai_provider import (Request as OpenAIRequest, Cost as OpenAICost, Answers as OpenAIAnswers,  # noqa: E402,F401
+                                  Transport as OpenAITransport, Billing as OpenAIBilling, StubServer as OpenAIStubServer,
+                                  LedgerRules as OpenAILedgerRules)   # the reference OpenAI adapter's own tests, unchanged
 
 FROZEN = {  # sha256 of json.dumps(sort_keys=True); a change here is a change of the instrument
     'job_9281': '9b6e7ea848dd182b9c92ef69612a7978963a0e3df937de711d47c82537588ed8',
@@ -445,7 +454,9 @@ class Tests(unittest.TestCase):
         self.assertEqual(b['max_attempted_calls'], sum(b['max_calls'].values()))
         self.assertEqual([sum(c[5] for c in study.cells(stage)) for stage in ('P0', 'Q0', 'S1')], [1, 96, 3456])
         self.assertEqual(b['max_failed'], max(3, -(-576 // 100))); self.assertEqual(b['max_failed'], 6)
-        self.assertEqual(b['billing_outage'], {'http_status': [400, 402, 403], 'match': 'credit balance', 'retry_every_seconds': 60, 'max_wait_seconds': 1200})
+        self.assertEqual(b['billing_outage'], {'always_status': [402], 'http_status': [400, 403, 429],
+                                               'match_any': ['credit', 'balance', 'billing', 'usage limit', 'spend limit', 'limit exceeded', 'insufficient'],
+                                               'retry_every_seconds': 60, 'max_wait_seconds': 1200})
         self.assertGreaterEqual(b['max_transport_attempts'] - b['max_attempted_calls'], 8 * 21 + 40)      # room for re-sends during a billing outage
         self.assertLessEqual(b['workers'], 8); self.assertEqual((study.model_ladder()[0], D['effort'], b['max_output_tokens']), ('claude-opus-5-5', 'medium', 8000))
         p = study.assignments('P0')[0]; self.assertEqual((p['kind'], p['root'], p['condition'], p['max_turns']), ('probe', ENG[0], 'N', 1))
@@ -519,7 +530,8 @@ class Tests(unittest.TestCase):
             names = study.source_hash()
         expected = ['design.yaml', 'experiment.yaml', 'requirements.txt'] + sorted(p.name for p in (study.ROOT / 'src').glob('*.py'))
         self.assertEqual(names, study.digest([(n, hashlib.sha256(n.encode()).hexdigest()) for n in expected]))
-        self.assertNotIn('manifest.json', expected); self.assertIn('rehearse.py', expected); self.assertEqual(len(expected), 14)
+        self.assertNotIn('manifest.json', expected); self.assertIn('rehearse.py', expected); self.assertEqual(len(expected), 16)
+        self.assertIn('openai_provider.py', expected); self.assertIn('test_openai_provider.py', expected)
 
     def test_replay_reproduces_saved_rows_and_detects_a_changed_answer(self):
         rows = scripted_rows('S0'); by_id = {a['id']: a for a in study.assignments('S0')}
@@ -706,11 +718,12 @@ class Tests(unittest.TestCase):
                 bodies = [json.dumps(b, sort_keys=True) for url, b, _ in script.sent if url == (provider.MESSAGES_URL if where == 'messages' else provider.COUNT_URL)]
                 self.assertEqual(len(set(bodies)), 1); self.assertEqual(len(bodies), 4)                                   # the same request, four times
         for code, body, category in ((400, b'{"error":{"message":"max_tokens too large"}}', 'http_400'), (403, b'forbidden', 'http_403'),
-                                     (500, rehearse.CREDIT_BODY, 'http_500')):      # not a credit-balance error: an ordinary failure, no pause
+                                     (500, rehearse.CREDIT_BODY, 'http_500'),        # not a billing error: an ordinary failure, no pause
+                                     (429, b'{"error":{"type":"rate_limit_error","message":"Number of request tokens has exceeded your per-minute rate"}}', 'http_429')):
             with tempfile.TemporaryDirectory() as td:
-                api, ledger, clock = adapter(td, Script([http_error(code, body=body), message()]))
+                api, ledger, clock = adapter(td, Script([http_error(code, body=body) for _ in range(3)] + [message()]))
                 with self.assertRaises(provider.CallFailure) as ctx: api.call('B', OBS, 's1-001:e1:r1')
-                self.assertEqual((ctx.exception.category, api.gate.stats()['billing_pauses'], clock.waits), (category, 0, []))
+                self.assertEqual((ctx.exception.category, api.gate.stats()['billing_pauses'], clock.waits), (category, 0, [2, 6] if code == 429 else []))
 
     def test_billing_outage_that_outlasts_its_limit_stops_every_later_call(self):
         with tempfile.TemporaryDirectory() as td:
@@ -1017,7 +1030,7 @@ class Tests(unittest.TestCase):
 
     # ----------------------------------------------------------------------------- model ladder
     def test_ladder_default_override_and_refusal(self):
-        self.assertEqual(study.model_ladder(), ['claude-opus-5-5', 'claude-opus-5'])
+        self.assertEqual(study.model_ladder(), ['claude-opus-5-5', 'claude-opus-5', 'gpt-6-sol'])
         with patch.dict(os.environ, {}, clear=False):
             os.environ.pop('STUDY_MODEL', None)
             self.assertEqual((study.model(), study.prices(), study.model_tag()), ('claude-opus-5-5', (4, 20), ''))
@@ -1207,6 +1220,172 @@ class Tests(unittest.TestCase):
                 for i in range(gif.n_frames): gif.seek(i); gif.load()
             self.assertEqual(render.replay([], [], Path(td), 'S1'), 8)           # no row yet: every cell says so
 
+
+    # ----------------------------------------------------------------------------- amendment A2: gpt-6-sol
+    def test_selftests_ignore_the_launchers_model_variables(self):
+        for name in ('STUDY_MODEL', 'STUDY_PROVIDER', 'STUDY_REPLICATION'): self.assertNotIn(name, os.environ)
+        self.assertEqual((study.model(), study.provider_name(), study.batch('P0')), ('claude-opus-5-5', 'anthropic', 'p0-001'))
+
+    def test_wider_billing_detector_on_the_anthropic_route(self):
+        bodies = ((400, b'{"type":"error","error":{"type":"invalid_request_error","message":"You have reached your API usage limits: your organization has crossed its monthly API usage threshold"}}'),
+                  (429, b'{"type":"error","error":{"type":"rate_limit_error","message":"Monthly spend limit reached"}}'),
+                  (402, b'{}'))
+        for code, body in bodies:
+            with tempfile.TemporaryDirectory() as td:
+                script = Script([http_error(code, body=body) for _ in range(3)] + [message()]); api, ledger, clock = adapter(td, script)
+                answer, acct = api.call('B', OBS, 's1-001:e1:r1')
+                self.assertEqual(api.gate.stats()['billing_pauses'], 1, code); self.assertEqual(acct['billing_error']['http_status'], code)
+                self.assertTrue(acct['usage_reported'])
+
+    def sol(self, **extra):
+        return patch.dict(os.environ, dict({'STUDY_MODEL': 'gpt-6-sol'}, **extra))
+
+    def test_gpt_6_sol_ladder_entry_batches_and_provider(self):
+        with self.sol():
+            self.assertEqual((study.model(), study.provider_name(), study.model_tag(), study.prices()), ('gpt-6-sol', 'openai', '-gpt-6-sol', (2, 10)))
+            self.assertEqual([study.batch(s) for s in study.STAGES], ['s0-001', 'p0-001-gpt-6-sol', 'q0-001-gpt-6-sol', 's1-001-gpt-6-sol'])
+            self.assertEqual((study.params('S0')['backend'], study.params('P0')['backend'], study.params('S1')['model']), ('scripted', 'openai', 'gpt-6-sol'))
+        with self.sol(STUDY_PROVIDER='openai'): self.assertEqual(study.params('Q0')['backend'], 'openai')
+        with self.sol(STUDY_PROVIDER='anthropic'):
+            with self.assertRaises(ValueError): study.params('P0')
+        with patch.dict(os.environ, {'STUDY_MODEL': 'claude-opus-5', 'STUDY_PROVIDER': 'openai'}):
+            with self.assertRaises(ValueError): study.provider_name()
+        for bad in ('gpt-6-luna', 'gpt-6.1-sol', 'gpt-6-sol-2026-09-01'):
+            with patch.dict(os.environ, {'STUDY_MODEL': bad}):
+                with self.assertRaises(ValueError): study.model()
+
+    def test_gpt_6_sol_budget_changes_only_its_own_keys(self):
+        top = D['budget']
+        with self.sol():
+            b = study.budget()
+            changed = sorted(k for k in set(b) | set(top) if b.get(k) != top.get(k))
+            self.assertEqual(changed, ['aggregate_usd', 'max_input_tokens', 'max_output_tokens', 'prices', 'reservation_margin', 'retry'])
+            self.assertEqual((b['aggregate_usd'], b['max_output_tokens'], b['reservation_margin']), (150, 16000, 1))
+            self.assertEqual(b['retry']['retryable_http_status'], [429, 500, 502, 503, 504])
+            for key in ('max_calls', 'max_attempted_calls', 'max_transport_attempts', 'workers', 'max_failed', 'billing_outage',
+                        'output_headroom_fraction', 'projection_growth_factor', 'max_visible_chars', 'max_input_bytes', 'request_timeout_seconds'):
+                self.assertEqual(b[key], top[key], key)
+            self.assertEqual(b['max_calls'], {'S0': 0, 'P0': 1, 'Q0': 96, 'S1': 3552})
+            import openai_provider
+            self.assertEqual(b['prices'], openai_provider.PRICES['gpt-6-sol'])
+            cfg = study.openai_config(); self.assertIs(openai_provider.check_config(cfg), cfg)
+        self.assertEqual(study.budget(), top)                                   # the Opus models keep the top-level budget unchanged
+        with patch.dict(os.environ, {'STUDY_MODEL': 'claude-opus-5'}): self.assertEqual(study.budget(), top)
+
+    def sol_route(self, td, responses, sleep=None):
+        import openai_provider
+        sent = []
+        def opener(request, timeout=None):
+            sent.append(json.loads(request.data)); r = responses.pop(0)
+            if isinstance(r, Exception): raise r
+            return Resp(json.dumps(r).encode(), {})
+        clock = Clock()
+        ledger = provider.Ledger(Path(td) / 'ledger')
+        with patch.dict(os.environ, {'SWARM_OPENAI_API_KEY': KEY}):
+            api = provider.OpenAIRoute(ledger, opener=opener, clock=clock.now, sleep=sleep or clock.sleep)
+        return api, ledger, sent, clock
+
+    def chat(self, answer=None, finish='stop', prompt=1200, completion=900, reasoning=700, model='gpt-6-sol'):
+        answer = answer or {'actions': [], 'rationale': 'nothing to do'}
+        return {'id': 'chatcmpl-x', 'model': model, 'choices': [{'index': 0, 'finish_reason': finish,
+                'message': {'role': 'assistant', 'content': json.dumps(answer), 'refusal': None}}],
+                'usage': {'prompt_tokens': prompt, 'completion_tokens': completion,
+                          'prompt_tokens_details': {'cached_tokens': 0}, 'completion_tokens_details': {'reasoning_tokens': reasoning}}}
+
+    def test_gpt_6_sol_request_body_has_exactly_the_intended_keys(self):
+        with tempfile.TemporaryDirectory() as td, self.sol():
+            api, ledger, sent, _ = self.sol_route(td, [self.chat()])
+            answer, acct = api.call('B', OBS, 'q0-001-gpt-6-sol:e1:r1')
+            body = sent[0]
+            self.assertEqual(list(body), ['model', 'reasoning_effort', 'max_completion_tokens', 'response_format', 'messages'])
+            self.assertEqual((body['model'], body['reasoning_effort'], body['max_completion_tokens']), ('gpt-6-sol', 'medium', 16000))
+            self.assertEqual(body['response_format'], {'type': 'json_schema', 'json_schema': {'name': 'quota_turn', 'strict': True, 'schema': study.SCHEMA}})
+            self.assertEqual(body['messages'], [{'role': 'system', 'content': study.system_prompt('B')}, {'role': 'user', 'content': study.user_text(OBS)}])
+            for banned in ('temperature', 'top_p', 'max_tokens', 'tools', 'stream', 'n', 'output_config', 'system'): self.assertNotIn(banned, body)
+            self.assertIn('json', (study.system_prompt('B') + study.user_text(OBS)).lower())
+            self.assertEqual((answer, acct['reasoning_tokens'], acct['finish_reason']), ({'actions': [], 'rationale': 'nothing to do'}, 700, 'stop'))
+
+    def test_gpt_6_sol_price_arithmetic(self):
+        with tempfile.TemporaryDirectory() as td, self.sol():
+            api, ledger, sent, _ = self.sol_route(td, [self.chat(prompt=1200, completion=900), self.chat(prompt=800, completion=300)])
+            _, acct = api.call('B', OBS, 'q0-001-gpt-6-sol:e1:r1')
+            nbytes = acct['request_bytes']
+            self.assertEqual(acct['reserved_usd'], int(nbytes * 2.5 + 16000 * 10.0 + 0.999999) / 1e6)      # byte bound at the cache-write price + whole allowance
+            self.assertEqual(acct['actual_usd'], (1200 * 2.5 + 900 * 10) / 1e6)                          # >= 1,024 prompt tokens: cache-write upper bound
+            self.assertEqual(acct['input_pricing'], 'cache_write_upper_bound')
+            _, acct2 = api.call('B', OBS, 'q0-001-gpt-6-sol:e2:r1')
+            self.assertEqual((acct2['actual_usd'], acct2['input_pricing']), ((800 * 2.0 + 300 * 10) / 1e6, 'below_cache_minimum'))
+            t = ledger.transact(); self.assertAlmostEqual(t['actual_usd'], acct['actual_usd'] + acct2['actual_usd'])
+            self.assertEqual((t['input_tokens'], t['output_tokens'], t['calls_by_stage']), (2000, 1200, {'Q0': 2}))
+
+    def test_gpt_6_sol_failures_are_failures(self):
+        cases = ((self.chat(finish='length', completion=16000, reasoning=15990), 'truncated_output'),
+                 (self.chat(model='gpt-6-luna'), 'model_mismatch'),
+                 (self.chat(answer={'actions': [{'type': 'work'}], 'rationale': 'x'}), 'invalid_answer'),
+                 (dict(self.chat(), choices=[{'index': 0, 'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': None, 'refusal': 'no'}}]), 'refusal'),
+                 (http_error(400, body=b'{"error":{"message":"Invalid schema for response_format"}}', request_id='req_x'), 'http_400'))
+        for response, category in cases:
+            with tempfile.TemporaryDirectory() as td, self.sol():
+                api, ledger, sent, _ = self.sol_route(td, [response])
+                with self.assertRaises(provider.CallFailure) as e: api.call('B', OBS, 's1-001-gpt-6-sol:e1:r1')
+                self.assertEqual(e.exception.category, category); self.assertEqual(len(sent), 1)       # no answer is ever re-sent
+                self.assertEqual(provider.is_integrity(category), category == 'model_mismatch')
+                if category == 'http_400': self.assertEqual((e.exception.accounting['http_status'], e.exception.accounting['request_id']), (400, 'req_x'))
+        with tempfile.TemporaryDirectory() as td, self.sol():                                 # 500 is re-sent twice, then a failure
+            api, ledger, sent, clock = self.sol_route(td, [http_error(500) for _ in range(3)])
+            with self.assertRaises(provider.CallFailure) as e: api.call('B', OBS, 's1-001-gpt-6-sol:e1:r1')
+            self.assertEqual((e.exception.category, len(sent), clock.waits, ledger.transact()['transport_attempts']), ('http_500', 3, [2, 6], 3))
+
+    def test_gpt_6_sol_billing_stop_then_resume(self):
+        quota = b'{"error":{"message":"You have reached your API usage limits: your organization has crossed its monthly API usage threshold.","type":"insufficient_quota","code":"insufficient_quota"}}'
+        with tempfile.TemporaryDirectory() as td, self.sol():
+            api, ledger, sent, clock = self.sol_route(td, [http_error(429, body=quota) for _ in range(2)] + [self.chat()])
+            answer, acct = api.call('B', OBS, 's1-001-gpt-6-sol:e1:r1')                         # an outage that clears: one pause, no failure
+            self.assertEqual((clock.waits, api.gate.stats()['billing_pauses'], acct['usage_reported'], api.gate.paused()), ([60, 60], 1, True, False))
+        with tempfile.TemporaryDirectory() as td, self.sol():
+            api, ledger, sent, clock = self.sol_route(td, [http_error(429, body=quota) for _ in range(40)])
+            with self.assertRaises(provider.CallFailure) as e: api.call('B', OBS, 's1-001-gpt-6-sol:e1:r1')
+            self.assertEqual(e.exception.category, 'provider_billing_stopped'); self.assertIn(e.exception.category, provider.BILLING_STOPS)
+            self.assertEqual((e.exception.accounting['http_status'], len(clock.waits), sum(clock.waits)), (429, 20, 1200))
+            t = ledger.transact(); self.assertEqual((t['attempted_calls'], t['calls_by_stage'].get('S1'), t['committed_usd']), (0, 0, 0))   # reservation voided
+            with self.assertRaises(provider.CallFailure) as e: api.call('B', OBS, 's1-001-gpt-6-sol:e2:r1')      # refused before any request
+            self.assertEqual((e.exception.category, e.exception.accounting['attempted']), ('provider_billing_stopped', False))
+            with self.assertRaises(provider.CallFailure) as e:                                    # a voided call id is never reused
+                ledger.transact({'type': 'reserve', 'call_id': 's1-001-gpt-6-sol:e1:r1', 'micro_usd': 1})
+            self.assertEqual(e.exception.category, 'duplicate_call_refused')
+            api2, _, _, _ = self.sol_route(td, [self.chat()])                                      # the continuation batch, same ledger
+            answer, acct = api2.call('B', OBS, 's1-001-gpt-6-sol-r1:e1:r1')
+            t = ledger.transact(); self.assertEqual((t['attempted_calls'], t['calls_by_stage'], t['usage_reported_calls']), (1, {'S1': 1}, 1))
+        # the chain's resume accepts the OpenAI stop category exactly as it accepts the Anthropic one
+        with tempfile.TemporaryDirectory() as td, self.sol(STUDY_RESULTS_DIR=td):
+            chain.write_status({'source_hash': study.source_hash(), 'state': 'stopped_at_gate', 'stopped_stage': 'S1', 'reason': 'provider_billing_stopped', 'stages': {}})
+            with patch('sys.stdout', new_callable=io.StringIO) as out:
+                self.assertEqual(chain.resume(sr=FakeHub()), chain.EXIT_STOPPED)
+            self.assertIn('no_unfinished_units', out.getvalue())                                  # past the billing-stop check
+            chain.write_status({'source_hash': study.source_hash(), 'state': 'stopped_at_gate', 'stopped_stage': 'S1', 'reason': 'truncated_output', 'stages': {}})
+            with patch('sys.stdout', new_callable=io.StringIO) as out:
+                self.assertEqual(chain.resume(sr=FakeHub()), chain.EXIT_STOPPED)
+            self.assertIn('last_stop_was_not_a_billing_stop_of_S1', out.getvalue())
+
+    def test_gpt_6_sol_gates_never_cross_models(self):
+        hub = FakeHub(); hub.add('S0')
+        with patch.dict(os.environ, {'STUDY_MODEL': 'claude-opus-5-5'}): hub.add('P0'); hub.add('Q0')     # Opus qualified
+        with self.sol():
+            with self.assertRaises(coordinator.GateRefused): coordinator.check(hub, 'Q0')
+            with self.assertRaises(coordinator.GateRefused): coordinator.check(hub, 'S1')
+            p, before = coordinator.check(hub, 'P0'); self.assertEqual((p['batch'], before['params']['stage']), ('p0-001-gpt-6-sol', 'S0'))
+            hub.add('P0'); hub.add('Q0', passed=0)                                             # a failed Q0 on gpt-6-sol
+            with self.assertRaises(coordinator.GateRefused) as e: coordinator.check(hub, 'S1')
+            self.assertEqual(str(e.exception), 'exact_runtime_qualification_required')
+
+    def test_gpt_6_sol_cap_arithmetic(self):
+        with self.sol():
+            b = study.budget(); calls = 1 + 96 + 3456                                  # answered calls of a clean chain at most
+            per_call = lambda tokens_out: (1500 * 2.5 + tokens_out * 10.0) / 1e6
+            self.assertAlmostEqual(calls * per_call(2000), 84.38375, places=6)              # planning figure: 2,000 completion tokens a call
+            self.assertLess(calls * per_call(3000), b['aggregate_usd'])                  # 3,000 a call still fits
+            # the projection gate admits S1 only while Q0's mean cost per call x 1.25 x 3,552 fits the cap
+            self.assertAlmostEqual(b['aggregate_usd'] / (1.25 * 3552), 0.0338, places=4)
 
 if __name__ == '__main__':
     unittest.main()

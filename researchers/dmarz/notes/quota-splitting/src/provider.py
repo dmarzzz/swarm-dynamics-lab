@@ -18,10 +18,15 @@ Failure handling (2026-10-04 rule):
 2. The token-counting request never fails a call: after the 429/529 rule, any other failure is
    re-sent once after 2 s; if that fails too the reservation uses the size of the encoded
    request in bytes as the input-token count (an upper bound) and the call proceeds.
-3. A credit-balance error (HTTP 400, 402 or 403 whose body names the credit balance, from either
-   endpoint) is a billing outage, not an outcome: it pauses every new call of the stage and the
+3. A billing or limit stop (HTTP 402, or HTTP 400, 403 or 429 whose body names, case-insensitively,
+   credit, balance, billing, usage limit, spend limit, limit exceeded or insufficient; from either
+   endpoint; fleet-monitor rule of 2026-10-04 11:20Z) is a billing outage, not an outcome: it pauses every new call of the stage and the
    same request is re-sent every 60 s for up to 1,200 s. If the outage outlasts that, every
    later call is refused with the category `provider_credit_balance_low`.
+4. Amendment A2 (2026-10-04): the model gpt-6-sol goes through the reference OpenAI adapter
+   (openai_provider.py, a byte-identical copy) behind `OpenAIRoute`, which gives it this module's
+   call(condition, obs, call_id) interface, ledger and CallFailure. Its billing stop is
+   `provider_billing_stopped`; BILLING_STOPS holds both stop categories.
 """
 import fcntl
 import json
@@ -33,6 +38,7 @@ import time
 import urllib.error
 import urllib.request
 
+import openai_provider
 import study
 
 MESSAGES_URL = 'https://api.anthropic.com/v1/messages'
@@ -42,14 +48,23 @@ BODY_KEYS = ('model', 'max_tokens', 'system', 'messages', 'output_config')
 
 
 SLEEP = time.sleep          # the rehearsal replaces it so that backoff and billing waits take no time
+CLOCK = time.monotonic      # the OpenAI route's clock; the rehearsal advances it by the waits it skips
 CREDIT = 'provider_credit_balance_low'
+BILLING_STOPS = (CREDIT, openai_provider.BILLING_STOP)     # either ends a stage as a resumable billing stop
 # Failures that stop a stage at once, whatever the number of failed units.
 INTEGRITY = ('duplicate_call_refused', 'stage_call_cap_reached', 'study_call_cap_reached', 'aggregate_budget_exhausted',
              'attempt_without_reservation', 'transport_attempt_cap_reached', 'reservation_bound_breached', 'model_mismatch',
              'stage_deadline', 'input_size_limit')
 
 
-class CallFailure(Exception):
+def is_integrity(category):
+    """Failures that stop a stage at once: this module's list and the OpenAI adapter's."""
+    return category in INTEGRITY or category in openai_provider.INTEGRITY
+
+
+class CallFailure(openai_provider.CallFailure):
+    """A subclass of the OpenAI adapter's CallFailure, so that a ledger refusal raised inside that
+    adapter keeps its category there exactly as it does in the Anthropic class."""
     def __init__(self, category, accounting=None):
         super().__init__(category)
         self.category, self.accounting = category, accounting or {}
@@ -86,13 +101,17 @@ class Ledger:
         self.path = Path(path); self.budget = budget
         self.path.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
         self._offset = 0; self._lock = threading.Lock()
-        self._reserved = {}; self._settled = {}; self._tokens = [0, 0]; self._attempts = 0; self._by_stage = {}
+        self._reserved = {}; self._seen = set(); self._settled = {}; self._tokens = [0, 0]; self._attempts = 0; self._by_stage = {}
 
     def _apply(self, e):
         kind = e['type']
         if kind == 'reserve':
-            self._reserved[e['call_id']] = e['micro_usd']
+            self._reserved[e['call_id']] = e['micro_usd']; self._seen.add(e['call_id'])
             stage = stage_of(e['call_id']); self._by_stage[stage] = self._by_stage.get(stage, 0) + 1
+        elif kind == 'void':
+            # written by the OpenAI adapter after a billing stop: no model ran, the reservation is released
+            del self._reserved[e['call_id']]
+            stage = stage_of(e['call_id']); self._by_stage[stage] -= 1
         elif kind == 'attempt':
             self._attempts += 1
         elif kind == 'response':
@@ -105,7 +124,7 @@ class Ledger:
         return sum(self._settled.get(call, amount) for call, amount in self._reserved.items())
 
     def transact(self, event=None):
-        budget = self.budget or study.design()['budget']
+        budget = self.budget or study.budget()
         with self._lock, self.path.open('a+', encoding='utf-8') as f:
             os.chmod(self.path, 0o600)
             fcntl.flock(f, fcntl.LOCK_EX)
@@ -115,11 +134,13 @@ class Ledger:
             self._offset = f.tell()
             if event and event['type'] == 'reserve':
                 call = event['call_id']; stage = stage_of(call)
-                if call in self._reserved: raise CallFailure('duplicate_call_refused')
+                if call in self._seen: raise CallFailure('duplicate_call_refused')
                 if self._by_stage.get(stage, 0) >= budget['max_calls'].get(stage, 0): raise CallFailure('stage_call_cap_reached')
                 if len(self._reserved) >= budget['max_attempted_calls']: raise CallFailure('study_call_cap_reached')
                 if self._committed() + event['micro_usd'] > int(budget['aggregate_usd'] * 1_000_000):
                     raise CallFailure('aggregate_budget_exhausted')
+            if event and event['type'] == 'void':
+                if event['call_id'] not in self._reserved or event['call_id'] in self._settled: raise CallFailure('void_refused')
             if event and event['type'] == 'attempt':
                 if event['call_id'] not in self._reserved: raise CallFailure('attempt_without_reservation')
                 if self._attempts >= budget['max_transport_attempts']: raise CallFailure('transport_attempt_cap_reached')
@@ -172,7 +193,7 @@ class Anthropic:
     def __init__(self, ledger, opener=None, clock=time.monotonic, sleep=None):
         self.ledger = ledger; self.opener = opener or urllib.request.urlopen
         self.clock = clock; self.sleep = sleep or (lambda seconds: SLEEP(seconds))
-        self.d = study.design(); self.b = self.d['budget']; self.retry = self.b['retry']; self.outage = self.b['billing_outage']
+        self.d = study.design(); self.b = study.budget(); self.retry = self.b['retry']; self.outage = self.b['billing_outage']
         self.local = threading.local()      # the last response's rate-limit numbers, per worker thread
         self.gate = BillingGate()
         self.key = os.environ.get('SWARM_MODEL_API_KEY')
@@ -203,7 +224,9 @@ class Anthropic:
         return out
 
     def is_credit_error(self, ev):
-        return ev['http_status'] in self.outage['http_status'] and self.outage['match'] in ev['error_body'].lower()
+        text = ev['error_body'].lower()
+        return ev['http_status'] in self.outage['always_status'] or (
+            ev['http_status'] in self.outage['http_status'] and any(word in text for word in self.outage['match_any']))
 
     def post(self, url, encoded, prefix='', on_attempt=None):
         """One logical request. Returns (parsed JSON, attempts). Re-sends only after HTTP 429/529,
@@ -364,3 +387,50 @@ class Anthropic:
         except Exception:
             raise CallFailure('invalid_structured_answer', account) from None
         return answer, account
+
+
+class _OpenAIGate:
+    """The worker's view of the OpenAI adapter's stage-wide billing pause."""
+
+    def __init__(self, api):
+        self.api = api
+
+    def paused(self):
+        with self.api._state:
+            return self.api._paused
+
+    def stats(self):
+        with self.api._state:
+            return dict(self.api.billing)
+
+
+class OpenAIRoute:
+    """gpt-6-sol through the reference adapter, with the Anthropic class's interface: the same system
+    prompt, the same state text as the one user message, the same validator (study.validate). The
+    adapter's own rules apply unchanged: body exactly model, reasoning_effort, max_completion_tokens,
+    response_format, messages; finish_reason length is the failure `truncated_output`, never an answer;
+    re-send only on 429/500/502/503/504, twice; a billing or quota stop pauses the stage and re-sends
+    every 60 s for up to 1,200 s, then `provider_billing_stopped`. Adapter failures are re-raised as
+    this module's CallFailure with the same category and accounting."""
+
+    def __init__(self, ledger, opener=None, clock=None, sleep=None):
+        try:
+            self.api = openai_provider.OpenAI(ledger, study.openai_config(), opener=opener, clock=clock or (lambda: CLOCK()),
+                                              sleep=sleep or (lambda seconds: SLEEP(seconds)))
+        except openai_provider.CallFailure as exc:
+            raise CallFailure(exc.category, exc.accounting) from None
+        self.gate = _OpenAIGate(self.api)
+
+    def body(self, condition, obs):
+        return self.api.body(study.system_prompt(condition), study.user_text(obs))
+
+    def call(self, condition, obs, call_id):
+        try:
+            return self.api.call(study.system_prompt(condition), study.user_text(obs), call_id, study.validate)
+        except openai_provider.CallFailure as exc:
+            raise CallFailure(exc.category, exc.accounting) from None
+
+
+def make(ledger, opener=None):
+    """The adapter of this attempt's model."""
+    return OpenAIRoute(ledger, opener=opener) if study.provider_name() == 'openai' else Anthropic(ledger, opener=opener)

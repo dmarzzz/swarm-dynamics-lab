@@ -81,9 +81,9 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
     """`units` (episode ids) and `prior_rows` are given only for a continuation of S1 after a
     billing stop: the run then holds exactly those episodes and reports the earlier runs' rows
     and its own together."""
-    stage = p['stage']; budget = study.design()['budget']; strict = stage in STRICT
+    stage = p['stage']; budget = study.budget(); strict = stage in STRICT
     assert p['source_hash'] == study.source_hash(), 'runtime_source_mismatch'
-    assert p['backend'] == ('scripted' if stage == 'S0' else 'anthropic')
+    assert p['backend'] == ('scripted' if stage == 'S0' else study.provider_name())
     assert (units is None) == (p['batch'] == study.batch(stage)), 'batch_mismatch'
     out = Path(out); out.mkdir(parents=True, exist_ok=False)
     start = time.monotonic(); run_name = run.id if run else out.name
@@ -99,10 +99,10 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
         for a in assigned: f.write(json.dumps(a, sort_keys=True) + '\n')
     violations = study.check_invariants(stage)
     ledger = None
-    if p['backend'] == 'anthropic':
+    if p['backend'] != 'scripted':
         path = os.environ.get('STUDY_BUDGET_LEDGER'); assert path, 'persistent_budget_required'
         assert sum(a['max_turns'] for a in assigned) <= budget['max_calls'][stage], 'possible_calls_exceed_stage_call_cap'
-        ledger = provider.Ledger(path); backend = backend or provider.Anthropic(ledger, opener=opener)
+        ledger = provider.Ledger(path); backend = backend or provider.make(ledger, opener=opener)
     gate = getattr(backend, 'gate', None)
     initial = ledger.transact() if ledger else {}
     rows = state['rows']; reporting_errors = []
@@ -144,15 +144,15 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
                     r.update(status='completed', outcome=study.finish(ep), reference=study.reference(a),
                              spawn_notes=study.spawn_notes(turns))
             except provider.CallFailure as exc:
-                if exc.category == provider.CREDIT:
+                if exc.category in provider.BILLING_STOPS:
                     # a billing outage that outlasted its limit: not an outcome, nothing is failed
-                    halt(provider.CREDIT); unfinished(); r['billing_turn'] = dict(current or {}, accounting=exc.accounting)
+                    halt(exc.category); unfinished(); r['billing_turn'] = dict(current or {}, accounting=exc.accounting)
                     log_turn(a, dict(r['billing_turn'], status='not_started', error=exc.category))
                 else:
                     r.update(error=exc.category, failed_turn=dict(current or {}, accounting=exc.accounting))
                     log_turn(a, dict(r['failed_turn'], status='failed', error=exc.category))
                     with control_lock: control['failed'] += 1; failed = control['failed']
-                    if exc.category in provider.INTEGRITY: halt('integrity_failure')
+                    if provider.is_integrity(exc.category): halt('integrity_failure')
                     elif strict: halt('invalid_rows')
                     elif failed > budget['max_failed']: halt('failed_units_over_limit')
             except Exception as exc:
@@ -183,7 +183,7 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
                     run.progress(len(rows), total, episodes=len(rows), invalid=t['invalid'], failed=t['failed'], model_calls=t['model_calls'],
                                  input_tokens=t['input_tokens'], output_tokens=t['output_tokens'], cost_usd=t['cost_usd'],
                                  **(gate.stats() if gate else {}),
-                                 **({'message': 'Paused: the provider reports a credit balance error; the same call is re-sent every '
+                                 **({'message': 'Paused: the provider reports a billing or usage-limit error; the same call is re-sent every '
                                                 f'{budget["billing_outage"]["retry_every_seconds"]} s'} if paused else {}))
                     if done and (time.monotonic() - last_render > 20 or stop.is_set()):
                         try:
@@ -214,7 +214,7 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
     statuses = {s: count(rows, s) for s in ('completed', 'failed', 'interrupted', 'not_started')}
     if strict:
         passed = t['invalid'] == 0 and passed_gate is not False and not violations
-        reason = None if passed else 'invariant_violations' if violations else control['reason'] if control['reason'] == provider.CREDIT \
+        reason = None if passed else 'invariant_violations' if violations else control['reason'] if control['reason'] in provider.BILLING_STOPS \
             else 'invalid_rows' if t['invalid'] else 'gate_failed'
     else:       # S1: failed episodes within the limit do not fail the stage; a stop does
         passed = control['reason'] is None and not violations and control['failed'] <= budget['max_failed']
@@ -227,7 +227,7 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
                'turns_not_started_max': sum(r['turns_not_started_max'] for r in rows),
                'errors': sorted({r['error'] for r in rows if r.get('error')}), **t,
                'max_failed': None if strict else budget['max_failed'], 'failed_in_stage': control['failed'], 'stop_reason': control['reason'],
-               'resumable': bool(not strict and control['reason'] == provider.CREDIT and not violations),
+               'resumable': bool(not strict and control['reason'] in provider.BILLING_STOPS and not violations),
                **(gate.stats() if gate else {'billing_pauses': 0, 'billing_pause_seconds': 0, 'billing_affected_calls': 0}),
                'elapsed_seconds': time.monotonic() - start,
                'qualification': study.qualification(rows) if stage in ('S0', 'Q0') else None,

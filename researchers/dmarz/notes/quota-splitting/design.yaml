@@ -3,10 +3,38 @@ version: 1
 experiment: quota-splitting
 status: exploratory
 source: ../agent-budgets-hunches.md   # hunch B2
-model_ladder: [claude-opus-5-5, claude-opus-5]   # STUDY_MODEL picks one per attempt; default the first; never mixed in a stage
-models:                    # per-model prices (USD per million tokens); same request body for both (see preregistration item 15)
+model_ladder: [claude-opus-5-5, claude-opus-5, gpt-6-sol]   # STUDY_MODEL picks one per attempt; default the first; never mixed in a stage
+models:                    # per-model prices (USD per million tokens); the two Opus models share one request body (preregistration item 15)
   claude-opus-5-5: {input_usd_per_million: 4, output_usd_per_million: 20}
   claude-opus-5: {input_usd_per_million: 5, output_usd_per_million: 25}
+  # Amendment A2 (2026-10-04): OpenAI Chat Completions through the reference adapter src/openai_provider.py
+  # (a byte-identical copy of researchers/dmarz/notes/pipeline/reference/openai_provider.py). Selected by
+  # STUDY_MODEL=gpt-6-sol (launcher --model gpt-6-sol, which also sets STUDY_PROVIDER=openai). Own batches
+  # (p0-001-gpt-6-sol, ...), ledger, results, P0 and Q0; never pooled with any Opus result.
+  gpt-6-sol:
+    provider: openai
+    canonical_model: gpt-6-sol
+    input_usd_per_million: 2
+    output_usd_per_million: 10
+    request_template:
+      model: gpt-6-sol
+      reasoning_effort: medium          # the study's effort on Opus (a planning judgment), same value here
+      max_completion_tokens: 16000      # visible plus reasoning tokens; = budget.max_output_tokens below
+      response_format:                  # the study's answer schema, unchanged, in strict mode; validated locally as on Opus
+        type: json_schema
+        json_schema: {name: quota_turn, strict: true, schema: STUDY_SCHEMA}
+    budget:                             # merged over the top-level budget for this model only
+      aggregate_usd: 150                # this model's own ledger; see preregistration amendment A2 for the arithmetic
+      max_output_tokens: 16000
+      max_input_tokens: 40000           # = max_input_bytes; tokens never exceed bytes
+      prices: {input: 2.0, cached_input: 0.2, cache_write: 2.5, output: 10.0}   # reference openai_provider.PRICES row, retrieved 2026-10-04T12:10Z
+      reservation_margin: 1             # the byte bound plus the whole completion allowance is already an upper bound
+      retry:
+        transport_retries: 2
+        retryable_http_status: [429, 500, 502, 503, 504]
+        backoff_seconds: [2, 6]
+        retry_after_cap_seconds: 20
+        count_resend_seconds: 2
 effort: medium
 world:
   rounds: 6                 # the job's deadline; at most one model call per round
@@ -54,9 +82,9 @@ qualification:
   control_at_limit_max: 4         # of the 8 N episodes, at most this many may create max_subagents
 stages:
   S0: {backend: scripted}
-  P0: {backend: anthropic}
-  Q0: {backend: anthropic}
-  S1: {backend: anthropic}
+  P0: {backend: model}      # the provider of the attempt's model: anthropic for the Opus models, openai for gpt-6-sol
+  Q0: {backend: model}
+  S1: {backend: model}
   S2: {enabled: false}
 budget:
   max_calls:
@@ -85,9 +113,10 @@ budget:
   workers: 8
   max_failed: 6                   # S1 only: the larger of 3 and 1% of 576 episodes, rounded up; more failed episodes stop dispatch
   error_body_chars: 2000
-  billing_outage:                 # a credit-balance error pauses the stage; it is not an outcome
-    http_status: [400, 402, 403]
-    match: credit balance
+  billing_outage:                 # a billing or limit stop pauses the stage; it is not an outcome
+    always_status: [402]
+    http_status: [400, 403, 429]  # with one of the words below in the body (case-insensitive); fleet-monitor rule of 2026-10-04 11:20Z
+    match_any: [credit, balance, billing, usage limit, spend limit, limit exceeded, insufficient]
     retry_every_seconds: 60
     max_wait_seconds: 1200
 primary_contrast:
