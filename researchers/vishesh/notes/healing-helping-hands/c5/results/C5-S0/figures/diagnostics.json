@@ -1,0 +1,93 @@
+{
+  "saved_data_only": true,
+  "calls_sha256": "c9154465ed37a3fc5c54c6c26d6f03651bae03d7e10b3158c70854c5adc151fb",
+  "assigned": 60,
+  "completed": 60,
+  "actual_collection": {
+    "jev_calls": 60,
+    "jev_seconds": 15.21507506200578,
+    "jev_recorded_api_usd": 0.0011304300000000008,
+    "jev_input_tokens": 26915,
+    "jev_output_tokens": 2600,
+    "qwen_calls": 120,
+    "qwen_seconds": 141.32842014297785,
+    "qwen_recorded_api_usd": 0,
+    "qwen_input_tokens": 12784,
+    "qwen_output_tokens": 1422
+  },
+  "counterfactual_cascade": {
+    "qwen_calls": 120,
+    "summed_observed_call_seconds": 141.5949329729774,
+    "recorded_jev_api_usd": 1.869e-05,
+    "jev_calls": 1
+  },
+  "served_models": {
+    "typesafe/jev-1.13-20260917": 60,
+    "qwen3:0.6b": 120
+  },
+  "qwen_done_reasons": {
+    "stop": 120
+  },
+  "qwen_A_errors": 23,
+  "qwen_A_errors_referred": 0,
+  "error_detection_recall": 0.0,
+  "confusion": {
+    "a": {
+      "SUPPORT": {
+        "SUPPORT": 0,
+        "REFUTE": 20,
+        "UNCERTAIN": 0
+      },
+      "REFUTE": {
+        "SUPPORT": 0,
+        "REFUTE": 20,
+        "UNCERTAIN": 0
+      },
+      "UNCERTAIN": {
+        "SUPPORT": 0,
+        "REFUTE": 3,
+        "UNCERTAIN": 17
+      }
+    },
+    "b": {
+      "SUPPORT": {
+        "SUPPORT": 0,
+        "REFUTE": 20,
+        "UNCERTAIN": 0
+      },
+      "REFUTE": {
+        "SUPPORT": 0,
+        "REFUTE": 20,
+        "UNCERTAIN": 0
+      },
+      "UNCERTAIN": {
+        "SUPPORT": 0,
+        "REFUTE": 4,
+        "UNCERTAIN": 16
+      }
+    },
+    "jev": {
+      "SUPPORT": {
+        "SUPPORT": 20,
+        "REFUTE": 0,
+        "UNCERTAIN": 0
+      },
+      "REFUTE": {
+        "SUPPORT": 0,
+        "REFUTE": 20,
+        "UNCERTAIN": 0
+      },
+      "UNCERTAIN": {
+        "SUPPORT": 0,
+        "REFUTE": 0,
+        "UNCERTAIN": 20
+      }
+    }
+  },
+  "limits": [
+    "Counterfactual cascade derives selections from actual all-controls collection.",
+    "Local Qwen computation has no dollar price here; API-charge reduction is not total-cost reduction.",
+    "Summed call seconds are observed serial service time, not a randomized production-latency comparison; call order and caching can matter.",
+    "Instances are nested in authored families; no population confidence interval or powered noninferiority claim."
+  ]
+}
