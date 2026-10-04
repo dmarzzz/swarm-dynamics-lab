@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "study_id": "optimal-swarm-size",
+  "attempt": "q-a7-preparation",
+  "parent_handoff_sha256": "2ae794fd8d9e53810727b1174d128d98e32f31a0f2a05ddaf74597cf18421670",
+  "verdict": "blocked",
+  "assessor": "vishesh/codex-idea-scores",
+  "assessed_at": "2026-10-04",
+  "outcome_interpretation": "Offline preparation complete; zero native dispatch. No treatment conclusion. Dedicated queue allocation, allowed credential delivery and sole canonical ledger unresolved.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "See the dimension-specific finding in the linked completed preparation post-mortem.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-preparation-post.md",
+          "sha256": "558045fdd815c246e4612b60a4e802ab978852fca5588d36598b27fa06c89c5d"
+        }
+      ],
+      "next_action": "Retain the scoped evidence; do not treat offline checks as native qualification.",
+      "acceptance_check": "Follow the dimension-specific acceptance check in the linked post-mortem."
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "See the dimension-specific finding in the linked completed preparation post-mortem.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-preparation-post.md",
+          "sha256": "558045fdd815c246e4612b60a4e802ab978852fca5588d36598b27fa06c89c5d"
+        }
+      ],
+      "next_action": "Resolve named operational admission, then execute exactly one bounded Q-A7 and complete readback/scientific review.",
+      "acceptance_check": "Follow the dimension-specific acceptance check in the linked post-mortem."
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "See the dimension-specific finding in the linked completed preparation post-mortem.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-preparation-post.md",
+          "sha256": "558045fdd815c246e4612b60a4e802ab978852fca5588d36598b27fa06c89c5d"
+        }
+      ],
+      "next_action": "Resolve named operational admission, then execute exactly one bounded Q-A7 and complete readback/scientific review.",
+      "acceptance_check": "Follow the dimension-specific acceptance check in the linked post-mortem."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "See the dimension-specific finding in the linked completed preparation post-mortem.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-preparation-post.md",
+          "sha256": "558045fdd815c246e4612b60a4e802ab978852fca5588d36598b27fa06c89c5d"
+        }
+      ],
+      "next_action": "Resolve named operational admission, then execute exactly one bounded Q-A7 and complete readback/scientific review.",
+      "acceptance_check": "Follow the dimension-specific acceptance check in the linked post-mortem."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "See the dimension-specific finding in the linked completed preparation post-mortem.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-preparation-post.md",
+          "sha256": "558045fdd815c246e4612b60a4e802ab978852fca5588d36598b27fa06c89c5d"
+        }
+      ],
+      "next_action": "Retain the scoped evidence; do not treat offline checks as native qualification.",
+      "acceptance_check": "Follow the dimension-specific acceptance check in the linked post-mortem."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "See the dimension-specific finding in the linked completed preparation post-mortem.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-preparation-post.md",
+          "sha256": "558045fdd815c246e4612b60a4e802ab978852fca5588d36598b27fa06c89c5d"
+        }
+      ],
+      "next_action": "Retain the scoped evidence; do not treat offline checks as native qualification.",
+      "acceptance_check": "Follow the dimension-specific acceptance check in the linked post-mortem."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "See the dimension-specific finding in the linked completed preparation post-mortem.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-preparation-post.md",
+          "sha256": "558045fdd815c246e4612b60a4e802ab978852fca5588d36598b27fa06c89c5d"
+        }
+      ],
+      "next_action": "Retain the scoped evidence; do not treat offline checks as native qualification.",
+      "acceptance_check": "Follow the dimension-specific acceptance check in the linked post-mortem."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "See the dimension-specific finding in the linked completed preparation post-mortem.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-preparation-post.md",
+          "sha256": "558045fdd815c246e4612b60a4e802ab978852fca5588d36598b27fa06c89c5d"
+        }
+      ],
+      "next_action": "Retain the scoped evidence; do not treat offline checks as native qualification.",
+      "acceptance_check": "Follow the dimension-specific acceptance check in the linked post-mortem."
+    },
+    {
+      "dimension": "resources",
+      "status": "gap",
+      "finding": "See the dimension-specific finding in the linked completed preparation post-mortem.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-preparation-post.md",
+          "sha256": "558045fdd815c246e4612b60a4e802ab978852fca5588d36598b27fa06c89c5d"
+        }
+      ],
+      "next_action": "Resolve named operational admission, then execute exactly one bounded Q-A7 and complete readback/scientific review.",
+      "acceptance_check": "Follow the dimension-specific acceptance check in the linked post-mortem."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "See the dimension-specific finding in the linked completed preparation post-mortem.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-preparation-post.md",
+          "sha256": "558045fdd815c246e4612b60a4e802ab978852fca5588d36598b27fa06c89c5d"
+        }
+      ],
+      "next_action": "Retain the scoped evidence; do not treat offline checks as native qualification.",
+      "acceptance_check": "Follow the dimension-specific acceptance check in the linked post-mortem."
+    },
+    {
+      "dimension": "visualization",
+      "status": "unknown",
+      "finding": "See the dimension-specific finding in the linked completed preparation post-mortem.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-preparation-post.md",
+          "sha256": "558045fdd815c246e4612b60a4e802ab978852fca5588d36598b27fa06c89c5d"
+        }
+      ],
+      "next_action": "Resolve named operational admission, then execute exactly one bounded Q-A7 and complete readback/scientific review.",
+      "acceptance_check": "Follow the dimension-specific acceptance check in the linked post-mortem."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "attempt": "q-a7",
+  "status": "blocked_before_dispatch",
+  "planned": 8,
+  "assigned": 0,
+  "started": 0,
+  "valid": 0,
+  "analyzed_native": 0,
+  "model_calls": 0,
+  "new_spend_microdollars": 0,
+  "original_ledger_exposure_microdollars": 2031320,
+  "original_ledger_settled_microdollars": 1810840,
+  "original_ledger_hold_microdollars": 220480,
+  "blockers": [
+    "no exclusive allocated worker; former host belongs to another experiment",
+    "orbital-one secure delivery path for authorized dedicated owner key unresolved",
+    "canonical single-writer spending-authority continuity to allocated worker unresolved"
+  ]
+}
