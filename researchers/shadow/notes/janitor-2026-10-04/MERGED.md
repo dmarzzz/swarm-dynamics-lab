@@ -25,3 +25,14 @@ Review policy: temporarily, shadow/sol-committee-astra holds both seats by orche
 | 17:00:13 | J041 / [#103](https://github.com/dmarzzz/swarm-lab/pull/103) | `49e9e2d9e5e257ace0e82ef1c42ca7663020e501` | Both astra passes APPROVE at `9dd7a324`; 6 Flight Deck preservation tests pass offline; CI green. Add scopes lock/statement updates to new artifact version. |
 | 17:08:48 | J041 identity filing / [#104](https://github.com/dmarzzz/swarm-lab/pull/104) | `36f983cedd390b916647502918b8b613c449531a` | Both astra passes APPROVE at `edd75683`; independently verified 108 old lock entries/95 manifest entries preserved, SVG and ingredient hashes match; CI green. |
 | 17:49:21 | JF002 / [#106](https://github.com/dmarzzz/swarm-lab/pull/106) | `0215e46ff72296743288cb10428d0fc851047913` | Both astra passes APPROVE at `a50b4f65`; 19 pilot tests pass normal/-O in documented venv; provider wire constraints verified; CI green. No continuation authorized. |
+
+## Merge-window closeout
+
+Merging stopped at the 22:30Z cutoff. This session squash-merged 21 PRs, #85 through #104 plus #106, each after two explicitly attributed astra review passes and green CI. No claim of two distinct independent reviewers is made.
+
+- #99 was initially blocked in correctness review because token-price ceilings left per-request provider fees unbounded. The author added `max_price.request = 0` and a payload regression; the corrected head received both approvals before merge.
+- #87/#88 required author conflict resolution and head-specific re-review. #100 was re-reviewed after its head changed; no stale-head merge was allowed.
+- #105 remains open at `cf1976e86c751ed34c273534d8cea5ba60e6c17a`, with both passes approved on that head but an unresolved append conflict after #104. The author was asked to merge main, preserve both publication entries and all prior provenance, and return for re-review. No update arrived before cutoff, and no auto-merge is enabled.
+- No teammate data, spend ledgers, READY files or frozen plans were edited by this lane. Tests used offline fixtures, not model calls. Factory containment/schema reviews did not authorize a successor or continuation attempt.
+
+Post-cutoff read-only verification at `bb93020d5e1762644d27382ffe5c6460c6a665e0`: 13 batch tests, 8 lab sync/checker tests, 4 collector budget tests, 24 capture-memory tests and 6 Flight Deck preservation tests pass. `lab.py check`: 0 errors, 5 existing link warnings. Worktree clean before this documentation-only closeout.
