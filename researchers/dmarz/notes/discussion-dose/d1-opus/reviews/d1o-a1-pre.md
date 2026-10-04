@@ -30,6 +30,7 @@
 - Source: `src/diagnostic_v3_opus.py` at the committed revision; manifest built by `prepare` with all request and provider-body hashes.
 - Assignments: 72, order seeded `d1-opus-v1-schedule`; command via agentops `scripts/run-d1-opus.py <rev> run` (no secrets in arguments).
 - Caps: 72 calls, one worker, 2-hour deadline, worst-case reservation $25.26, preflight cap $30; within dmarz's shared $500 budget.
+- Interface probe `d1o-p1` first: one call on dev world 10002, outside the schedule, recorded as its own attempt.
 - Retry/stop: none; stops on model mismatch, accounting anomaly, local limit, low credit, deadline or owner stop file; unknown-outcome calls never resubmitted.
 - Checks: offline selftest (G2); server rehearsal must pass audit before preflight.
 - Allocation: dedicated new server `sim-dmarz-9`, exclusive claim `dmarz-d1-opus`; key via ssh stdin into memory only.

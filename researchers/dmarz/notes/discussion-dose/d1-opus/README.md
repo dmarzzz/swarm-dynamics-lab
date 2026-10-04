@@ -54,7 +54,9 @@ Does a stronger model apply the stated constraints to evidence it extracts corre
   schema, source policy, strict citation scoring and the 60 actor requests are byte-identical to
   D1. Thinking text is not requested (`display` omitted) and is not stored; only the single
   text block is scored. Server-side model fallbacks are not enabled, because model identity is
-  the treatment; a refusal is recorded as a failure.
+  the treatment; a refusal is recorded as a failure, and `stop_reason: refusal` is also counted
+  as its own category. The visible text answer is capped at 8,000 characters (D1's 2,000-token
+  visible ceiling); a longer answer is a recorded `provider_incomplete` failure.
 - **Reused inputs:** the 60 Q0 actor requests selected by the committed
   [planning receipt](../benchmark-v3/next-run-planning-evidence.json): 6 clean full-evidence
   decisions, 18 clean post-report ballots and 36 fixed parent-memory fixtures. They are fetched
@@ -81,15 +83,19 @@ Does a stronger model apply the stated constraints to evidence it extracts corre
 2. On the server, `rehearse` runs the full pipeline with the scripted evidence reader and zero
    model calls, under a separate ledger prefix and hub run `discussion-v3-d1-opus/d1o-a1-rehearsal`.
    Audit and upload readback must pass.
-3. `preflight` (zero inference): rebuilds the manifest from committed source, re-verifies every
+3. Interface probe, attempt `d1o-p1`: exactly one paid call on dev world 10002 (never
+   scheduled, scored or counted) checks that Opus accepts the request and returns a parsed,
+   schema-valid answer. A permanent ledger marker refuses a second probe. Its cost is reported
+   separately. If it fails, the 72-call run does not start and the failure is diagnosed first.
+4. `preflight` (zero inference): rebuilds the manifest from committed source, re-verifies every
    serialized request, fetches the public plan bytes, checks model metadata and capabilities,
    and checks the reservation against the authorized cap. It expires after 30 minutes.
-4. `run` writes a permanent attempt marker under a process lock before the first call, then
+5. `run` writes a permanent attempt marker under a process lock before the first call, then
    dispatches the 72 calls once each. A returned model other than `claude-opus-5-5`, an
    accounting anomaly, a local limit, low credit, the 2-hour deadline or an owner stop file
    ends dispatch. Other provider or invalid failures are recorded and the fixed schedule
    continues. Nothing is retried or resubmitted.
-5. `audit` recomputes every score and the summary from the journal under the exact source.
+6. `audit` recomputes every score and the summary from the journal under the exact source.
    Results, post-mortem and claim release follow. No D2, Q1, swarm or successor is started.
 
 Budget: worst-case reservation $25.26 (72 × full 16,000 output tokens plus a byte bound on

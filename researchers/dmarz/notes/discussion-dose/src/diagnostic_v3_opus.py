@@ -52,9 +52,12 @@ CONFIG = {'model': MODEL, 'temperature': 'omitted: rejected by claude-opus-5-5',
           'thinking': 'adaptive: cannot be disabled on claude-opus-5-5', 'effort': EFFORT,
           'thinking_display': 'omitted (API default)', 'max_output_tokens': 16000, 'max_input_bytes': 60000,
           'timeout': 600, 'transport_retries': 0, 'output_repair_retries': 0, 'server_fallbacks': 'disabled',
-          'worker_count': 1, 'stage_deadline_seconds': 7200}
+          'worker_count': 1, 'stage_deadline_seconds': 7200, 'visible_answer_max_chars': 8000,
+          'refusal_recorded_as': 'stop_reason refusal (own category in summary)'}
 GATE = {'fresh_clean_full_evidence_justified_required': 10, 'fresh_assigned': 12, 'fresh_valid_required': 12}
 ORDER_SEED = 'd1-opus-v1-schedule'
+VISIBLE_ANSWER_MAX_CHARS = 8000  # D1's 2,000-token visible ceiling, enforced on the text block only
+PROBE_WORLD = 10002  # dev split; never scheduled, scored or counted
 
 
 def fresh_stratum(world):
@@ -101,7 +104,7 @@ class Opus(Anthropic):
                                   'format': {'type': 'json_schema', 'schema': self.response_schema(request['phase'], request['context'])}}}
 
     def complete(self, request):
-        self.last_usage = {}; self.last_response_text = None; self.last_model = None
+        self.last_usage = {}; self.last_response_text = None; self.last_model = None; self.last_stop_reason = None
         if self.calls >= self.max_calls: raise ProviderFailure('call budget exhausted', 'provider_local_limit')
         content = json.dumps(request, sort_keys=True)
         if len(content.encode()) > self.max_input_bytes: raise ProviderFailure('input byte budget exceeded', 'provider_local_limit')
@@ -117,7 +120,7 @@ class Opus(Anthropic):
             with urllib.request.urlopen(req, timeout=self.timeout) as r: raw = r.read(4_000_001)
             if len(raw) > 4_000_000: raise ProviderFailure('response too large')
             response = json.loads(raw); usage = response.get('usage', {})
-            self.last_model = response.get('model')
+            self.last_model = response.get('model'); self.last_stop_reason = response.get('stop_reason')
             self.last_usage = {k: v for k, v in usage.items() if k in ('input_tokens', 'output_tokens', 'cache_creation_input_tokens', 'cache_read_input_tokens') and type(v) is int and v >= 0}
             if all(k in self.last_usage for k in ('input_tokens', 'output_tokens')):
                 if any(self.last_usage.get(k, 0) for k in ('cache_creation_input_tokens', 'cache_read_input_tokens')):
@@ -132,6 +135,8 @@ class Opus(Anthropic):
             if len(texts) != 1 or any(b.get('type') not in ('text', 'thinking', 'redacted_thinking') for b in blocks):
                 raise ProviderFailure('unexpected response blocks', 'provider_schema_refusal')
             self.last_response_text = texts[0]['text']
+            if len(self.last_response_text) > VISIBLE_ANSWER_MAX_CHARS:
+                raise ProviderFailure('visible answer exceeds ceiling', 'provider_incomplete')
             return self.response_decoder(self.last_response_text)
         except urllib.error.HTTPError as e:
             reason = 'provider_http_' + str(e.code)
@@ -296,6 +301,7 @@ def summarize(frozen, events, rows):
     return {'schema': VERSION, 'attempt': frozen['attempt'], 'model': MODEL, 'assigned_calls': 72, 'started': len(starts),
             'terminal': len(rows), 'valid': sum(r['status'] == 'valid' for r in rows),
             'unresolved': sorted(set(ids) - set(terminal)), 'failures': dict(Counter(r['reason'] for r in rows if r['status'] != 'valid')),
+            'refusals': sum(r.get('stop_reason') == 'refusal' for r in rows),
             'usage_missing_calls': missing_usage, **tokens,
             'observed_usage_cost_microusd': tokens['input_tokens'] * RATES[0] + tokens['output_tokens'] * RATES[1],
             'latency_seconds': [r['latency_seconds'] for r in rows], 'groups': groups, 'memory': memory, 'report_quorums': worlds,
@@ -325,8 +331,9 @@ class HubProgress:
 
     def metrics(self):
         return {'assigned_calls': 72, 'started_calls': self.started, 'terminal_calls': self.terminal,
-                'physical_model_calls': self.physical, 'invalid_calls': self.invalid,
-                'observed_usage_cost_usd': self.cost_micro / 1e6, 'usage_missing_calls': self.missing_usage}
+                'physical_model_calls': self.physical, 'model_calls': self.physical, 'invalid_calls': self.invalid,
+                'observed_usage_cost_usd': self.cost_micro / 1e6, 'cost_usd': self.cost_micro / 1e6,
+                'usage_missing_calls': self.missing_usage}
 
     def __call__(self, event):
         if event['kind'] == 'call_start': self.started += 1
@@ -389,7 +396,7 @@ def execute(frozen, inputs, output, ledger, prov, scientific, observer=None):
                 dispatched = bool(scientific and prov.calls > before)
                 row = {**assignment, 'status': status, 'reason': reason, 'http_status_class': http_class, 'response': response,
                        'raw_text': getattr(prov, 'last_response_text', None), 'returned_model': getattr(prov, 'last_model', None),
-                       'usage': usage, 'dispatched': dispatched,
+                       'usage': usage, 'dispatched': dispatched, 'stop_reason': getattr(prov, 'last_stop_reason', None),
                        'dispatch_state': 'outcome_unknown' if dispatched and reason in ('provider_timeout', 'provider_transport_error', 'provider_unknown') else 'terminal',
                        'latency_seconds': round(time.monotonic() - start, 6), 'score': score(item, request, response)}
                 rows.append(row); journal.emit('call_terminal', record=row)
@@ -403,6 +410,36 @@ def execute(frozen, inputs, output, ledger, prov, scientific, observer=None):
         return {'status': 'bounded-execution-ended', 'assigned': 72, 'terminal': len(rows),
                 'physical_calls': sum(r['dispatched'] for r in rows)}
     finally: lock.close()
+
+
+def probe(output, ledger, max_cost_usd):
+    """Attempt d1o-p1: ONE paid interface call on dev world 10002 (never scheduled or scored).
+
+    Checks that the request is accepted and a parsed, schema-valid answer comes back. A 400 is
+    not billed. One-shot: a permanent ledger marker refuses a second probe.
+    """
+    output = Path(output); ledger = Path(ledger)
+    if not ledger.is_dir(): raise ValueError('persistent dispatch ledger required')
+    write_new(ledger / 'd1o-p1.started.json', {'attempt': 'd1o-p1', 'world': PROBE_WORLD, 'automatic_restart_permitted': False})
+    case = make_case(PROBE_WORLD, 'resolvable'); corpus = documents(case, False)
+    request = {'phase': 'diagnostic', 'context': {'task': case['task'], 'documents': corpus, 'read_ledger': [d['id'] for d in corpus],
+                                                  'reports': [], 'board': [], 'private_history': []}}
+    reject_gold(request)
+    prov = provider(max_cost_usd); started = time.monotonic(); status = 'valid'; reason = None; parsed = None
+    try:
+        answer = prov.complete(request)
+        if prov.last_model != MODEL: raise ProviderFailure('returned model mismatch', 'provider_model_mismatch')
+        parsed = validate(answer, 'diagnostic', request['context'])
+    except Exception as exc:
+        status = 'failed'; reason = safe_failure(exc)['reason']
+    usage = getattr(prov, 'last_usage', {})
+    cost = (usage.get('input_tokens', 0) * RATES[0] + usage.get('output_tokens', 0) * RATES[1]) / 1e6
+    result = {'attempt': 'd1o-p1', 'world': PROBE_WORLD, 'model': MODEL, 'status': status, 'reason': reason,
+              'stop_reason': getattr(prov, 'last_stop_reason', None), 'returned_model': prov.last_model,
+              'parsed_answer_valid': parsed is not None, 'usage': usage, 'cost_usd': cost, 'model_calls': prov.calls,
+              'latency_seconds': round(time.monotonic() - started, 3), 'request_sha256': digest(prov.request_body(request))}
+    write_new(output, result)
+    return result
 
 
 def check_model():
@@ -503,6 +540,9 @@ def audit(directory, q0, planning, allow_interrupted=False):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='command', required=True)
+    pr = sub.add_parser('probe')
+    pr.add_argument('--output', type=Path, required=True); pr.add_argument('--dispatch-ledger', type=Path, required=True)
+    pr.add_argument('--max-cost-usd', type=float, required=True)
     for name in ('prepare', 'preflight', 'run', 'rehearse', 'audit'):
         p = sub.add_parser(name)
         p.add_argument('--q0', type=Path, required=True)
@@ -521,7 +561,8 @@ def main(argv=None):
         if name == 'rehearse': p.add_argument('--scripted-failure-call', type=int)
     args = parser.parse_args(argv)
     try:
-        if args.command == 'prepare': result = prepare(args.q0, args.planning_receipt, args.output, args.launch_owner)
+        if args.command == 'probe': result = probe(args.output, args.dispatch_ledger, args.max_cost_usd)
+        elif args.command == 'prepare': result = prepare(args.q0, args.planning_receipt, args.output, args.launch_owner)
         elif args.command == 'preflight': result = preflight(args.manifest, args.q0, args.planning_receipt, args.output, args.max_cost_usd)
         elif args.command == 'run': result = run(args.manifest, args.q0, args.planning_receipt, args.preflight, args.output, args.dispatch_ledger, args.hub_run)
         elif args.command == 'rehearse':

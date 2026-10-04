@@ -63,6 +63,7 @@ Operations entry: manual (no registry adapter).
 
 | Attempt / parent | Stage / version | Pre-review and receipts | Assigned / started / terminal / graded / analyzed | Post-mortem / disposition |
 |---|---|---|---|---|
+| d1o-p1 / none | one-call interface probe, dev world 10002 / d1-opus-v1 | [d1o-a1-pre](reviews/d1o-a1-pre.md) | 1 / 0 / 0 / n/a / n/a | pending |
 | d1o-a1 / v3-d1-a1 | rehearsal + paid / d1-opus-v1 | [d1o-a1-pre](reviews/d1o-a1-pre.md) | 72 / 0 / 0 / 0 / 0 | pending |
 
 ## Closeout

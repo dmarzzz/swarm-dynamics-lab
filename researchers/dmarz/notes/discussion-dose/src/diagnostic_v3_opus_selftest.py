@@ -56,6 +56,17 @@ def main(q0):
             urllib.request.urlopen = _fake(blocks, stop)
             try: prov.complete(item['request']); raise AssertionError('accepted invalid response')
             except o.ProviderFailure as exc: assert exc.public_reason == reason, exc.public_reason
+        assert prov.last_stop_reason == 'refusal'
+        urllib.request.urlopen = _fake([{'type': 'text', 'text': ' ' * 8001 + json.dumps(answer)}])
+        try: prov.complete(item['request']); raise AssertionError('accepted over-long visible answer')
+        except o.ProviderFailure as exc: assert exc.public_reason == 'provider_incomplete'
+        with tempfile.TemporaryDirectory() as folder:
+            urllib.request.urlopen = _fake([{'type': 'thinking', 'thinking': '', 'signature': 's'}, {'type': 'text', 'text': '{"vote": "A", "claims": {}}'}])
+            ledger = Path(folder) / 'ledger'; ledger.mkdir()
+            probe = o.probe(Path(folder) / 'probe.json', ledger, 5)
+            assert probe['model_calls'] == 1 and probe['returned_model'] == o.MODEL and probe['cost_usd'] == 0.0014
+            try: o.probe(Path(folder) / 'probe2.json', ledger, 5); raise AssertionError('second probe accepted')
+            except FileExistsError: pass
     finally:
         urllib.request.urlopen = original
     # Scripted control through the full execute/summarize path; never passes the scientific gate.
