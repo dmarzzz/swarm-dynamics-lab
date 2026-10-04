@@ -2526,6 +2526,36 @@
       "status_at_assessment": "qualification_failed_no_main_stage",
       "assessor": "dmarz/fleet-monitor",
       "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "sybil-scarcity-xmodel",
+      "title": "Does Sybil-resistant accuracy depend on repeated knowledge? Cross-model replication",
+      "documents": [
+        "researchers/dmarz/notes/sybil-scarcity-xmodel/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-scarcity-xmodel-qwen",
+        "sybil-scarcity-xmodel-sol"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-scarcity-xmodel/experiment.yaml"
+      ],
+      "assessor": "dmarz/pipeline-scarcity-qwen",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "On packets byte-identical to sybil-scarcity-opus, a synthesizer other than Opus 5.5 (qwen3.7-flash without reasoning; gpt-6-sol at reasoning effort low) also loses specialist accuracy when each rare fact has one truthful carrier instead of 81.",
+        "rationale": "Unrun. The package is prepared and tested offline only; no stage has run on a server and no model call has been made. Each model is a separate chain; results will never be pooled."
+      },
+      "sample_size_summary": "Observed: none. Planned per model: 24 paired synthetic world roots x 60 conditions = 1,440 S1 calls on the parent's identical packets, after P0 (1 call) and Q0 (48 calls); roots are the independent units; calls, identities and skills are not.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-scarcity-xmodel/README.md",
+        "researchers/dmarz/notes/sybil-scarcity-xmodel/preregistration.md",
+        "researchers/dmarz/notes/sybil-scarcity-xmodel/design.yaml",
+        "researchers/dmarz/notes/sybil-scarcity-xmodel/experiment.yaml",
+        "researchers/dmarz/notes/sybil-scarcity-xmodel/SETUP.md"
+      ],
+      "status_at_assessment": "prepared_not_launched"
     }
   ],
   "source_sha256": {

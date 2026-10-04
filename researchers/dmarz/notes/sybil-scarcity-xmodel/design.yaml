@@ -1,0 +1,98 @@
+# Frozen design of sybil-scarcity-xmodel. Covered by study.source_hash(): any change needs a new attempt.
+# A cross-model replication of sybil-scarcity-opus on byte-identical packets. Everything about the
+# worlds, the carrier manipulation, audits, admission, packets, roots, cells and qualification is the
+# parent's (read from the parent's frozen design.yaml, pinned below); this file adds the model, the
+# request and the budget of this study.
+version: 1
+experiment: sybil-scarcity-xmodel
+status: exploratory
+attempt: '001'
+# Two pre-registered models. Each runs as its own complete chain (S0, P0, Q0, S1) chosen by
+# STUDY_MODEL (launcher --model): own batch names suffixed by the model tag, own hub experiment id
+# (sybil-scarcity-xmodel-<tag>), own ledger file, results directory and dollar cap. Results are
+# never pooled across models; every row carries its model.
+model_ladder: [qwen/qwen3.7-flash, gpt-6-sol]
+models:
+  qwen/qwen3.7-flash:
+    tag: qwen
+    api: openrouter
+    canonical_model: qwen/qwen3.7-flash-20260727
+    provider: alibaba
+    request_template:              # the program's selected-model.json template, unchanged
+      model: qwen/qwen3.7-flash
+      provider:
+        only: [alibaba]
+        allow_fallbacks: false
+        require_parameters: true
+      reasoning:
+        enabled: false
+      max_tokens: 1000
+      response_format:
+        type: json_object
+    budget:
+      aggregate_usd: 4
+      max_output_tokens: 1000
+      max_input_tokens: 31000      # stays inside the provider's under-32,000-prompt-token price tier
+      input_usd_per_million: 0.03
+      output_usd_per_million: 0.13
+  gpt-6-sol:
+    tag: sol
+    api: openai
+    # Not yet runnable: the reference OpenAI adapter (dmarz/openai-route) and the verified price
+    # table are added in a later code commit, which changes the source hash. Until then selecting
+    # this model is refused (model_not_ready). Fixed now: reasoning_effort low (recorded in every
+    # row), max_completion_tokens 2000, JSON-object mode, 2 requests in flight.
+    ready: false
+    request:
+      reasoning_effort: low
+      max_completion_tokens: 2000
+      response_format:
+        type: json_object
+parent:
+  study: sybil-scarcity-opus
+  # SHA-256 of the parent's files on main. S0 refuses to pass unless they are unchanged.
+  design_sha256: 82d00cafc9b05b6845dabc204685e0c89de71ebadd5a988b44c7f2d48f9b5121
+  sim_sha256: d9c6f21c0d732ba1a86bae4b12dda3cab788f329c9d3948ae0688ada8004f4ee
+  study_sha256: c37200b98db9916fbb541a1fbefd9b7a046eb60f158341ab6137e9f8b89196b3
+  manifest_sha256: fd79f41b760171df9bd3b82cab389393d2b95480d78c77fef56e1cef6c65cbb8
+  s1_episodes_sha256: 274eeea2ecb6d18c86b3bf58953fe3443001684c819bdb16866b05f08314cb58
+  dispatch_seed: sybil-scarcity-opus-v1
+stages:
+  S0: {assignments: 168}       # scripted, 0 calls
+  P0: {assignments: 1}
+  Q0: {assignments: 48}
+  S1: {assignments: 1440}
+  S2: {enabled: false}
+budget:
+  max_calls: {S0: 0, P0: 1, Q0: 48, S1: 1440}
+  max_attempted_calls: 1489
+  reservation_margin: 10
+  max_failed: 15
+  max_input_bytes: 60000
+  max_visible_chars: 2000
+  request_timeout_seconds: 180
+  stage_timeout_seconds: 14400
+  chain_timeout_seconds: 18000
+  workers: 2
+  answer_retries: 0
+  retry:
+    transport_retries: 2
+    retryable_http_status: [429, 502, 503, 529]
+    backoff_seconds: [2, 6]
+    retry_after_cap_seconds: 20
+  billing_outage:
+    retry_every_seconds: 60
+    max_wait_seconds: 1200
+  max_transport_attempts: 1700
+primary_contrast:
+  metric: rare_accuracy
+  contrast: carriers 1 minus carriers 81
+  arm: random
+  checks: 108
+  attacker_pass: 0.1
+  visibility: visible
+  unit: paired world root
+  status: exploratory
+analysis:
+  bootstrap_draws: 10000
+  bootstrap_seed: 20261004
