@@ -3901,7 +3901,17 @@
       "status_at_assessment": "native_qualification_passed_pilot_complete_no_spread_in_one_world",
       "assessor": "vishesh/codex-phantom-coast",
       "assessed_at": "2026-10-04",
-      "source_commit": "15eeab416107c9077539b80958c3ba1184e3ee08"
+      "source_commit": "57ab2c776ce312ceda750cc5daf26e346eb193df",
+      "source_sha256": {
+        "researchers/vishesh/notes/phantom-coast/pc11/PLAN.md": "b1191f8865a975c047cfe2c981e70f7de661288e34b58929e2ad4155b9a5e825",
+        "researchers/vishesh/notes/phantom-coast/pc11/Q0-A1-POST.md": "b3314e9e517a0101e190a4a69dd414b3823270b0a47766f2a66ec7318fca26e7",
+        "researchers/vishesh/notes/phantom-coast/pc11/S1-A1-POST.md": "9c83ebf50a0aa0569bb3f9eec315837060d256bb1db16b415acedf28e15e2b1c",
+        "researchers/vishesh/notes/phantom-coast/pc11/QUALITY.json": "c855d90df8654f7f79d666f5908786e85852359272ac2b1e3c45967e4a1883ac",
+        "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/summary.json": "868dbeb8ce4267900ca0bef9e381ec07c1bf786c051238866ac84fca6fdc1562",
+        "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/pilot-summary.json": "99245779ccf29dbd0cc54a458be4bf0df1a79ecd9e52783e733e956d16682e90",
+        "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/audit.json": "c70de29a18c31ca48b99dab4f40dc94f8bb8691c578abb78f09dd63624d98cc3",
+        "researchers/vishesh/notes/phantom-coast/pc11/results/cycle-A1/CLOSEOUT.json": "2ebd04dd2aa0e597c13c6e49aa91afd3fb6828a906f5baa86cee0540eb9e0bdd"
+      }
     }
   ],
   "source_sha256": {

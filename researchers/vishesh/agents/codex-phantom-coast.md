@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-phantom-coast
 tool: codex
-state: working
+state: done
 task: phantom-coast-pc11-sol
-doing: Preparing owner-requested GPT-6 Sol qualification and ten-agent conditional pilot
-updated: 2026-10-04T19:38:27.157070+00:00
+doing: PC11 qualified and120-decision ten-agent pilot reviewed; no spread in one world, exposure1.193795490, allocation released
+updated: 2026-10-04T20:20:22.452084+00:00
 ---
 
 ## Notes

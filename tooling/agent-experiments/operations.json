@@ -23,7 +23,7 @@
       "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc11/S1-A1-POST.md",
       "adapter": null,
       "checked_at": "2026-10-04T20:19:08.068328+00:00",
-      "checked_commit": "15eeab416107c9077539b80958c3ba1184e3ee08",
+      "checked_commit": "57ab2c776ce312ceda750cc5daf26e346eb193df",
       "next_action": "FINISH / PARK PC11 pilot: GPT-6 Sol qualification8valid32maps6actions passed;120 pilot decisions,1matched world,0/9 unseeded target errors in all arms,9/9 UNKNOWN. False seed persists locally; identical inspections/no target exposure.128 hashes audited, worker stopped, claim released. Exposure1.193795490 under original cap; no queued successor.",
       "next_run_approval": "owner"
     },
