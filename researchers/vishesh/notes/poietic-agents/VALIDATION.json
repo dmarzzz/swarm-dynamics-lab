@@ -1,6 +1,6 @@
 {
   "schema": "poietic-validation-v0.2",
-  "checked_utc": "2026-10-04T06:49:50.441625+00:00",
+  "checked_utc": "2026-10-04T07:06:36.129964+00:00",
   "assessor": "vishesh/codex-heterogeneous",
   "scope": "same-author offline software validation, not independent code review or model evidence",
   "tests_passed": 54,
@@ -11,7 +11,7 @@
   "file_hashes": {
     "AMENDMENTS.md": "4e31f108a0009fae2872a681311fee11f3e04d1237b6ffc691eab9487b4eb49b",
     "PROTOCOL.md": "dbf08e0924e412b0029a0ef6c613bcc2e57fed420c6f8d8878cec2eaee42ce2e",
-    "README.md": "8a19e477a418c35a9fa79ebe9bd4382953aecfad17706cc3168cc4ab65e1418b",
+    "README.md": "e4faaf96c990874fe3b0d246078c1cf143ffd906cccc6003804e12e245dfc379",
     "SCENARIOS.md": "6bdbf9bc45a68357808ef9313288794e495de3e4fb3ce3c1f282e3abcdc44bd5",
     "VISUALIZATION.md": "dd5f522bcf6d049e93073c9c082b1be8f97500372809f77f030055fd1491a8fe",
     "contracts.json": "b6abab79240b4df31a4944998f20f6212256be9441255f28c88dba47f6633f63",
@@ -60,5 +60,6 @@
   "authorized_total_cumulative_usd": 0,
   "launch_smoke": "Candidate refuses dispatch without explicit authorization; no native calls",
   "credential_boundary": "local-only relay; worker contains no provider key or Authorization header",
-  "relay_health": "attempt/source/assignment/credential/deadline/unused-ledger binding precedes hub start; two tests pass"
+  "relay_health": "attempt/source/assignment/credential/deadline/unused-ledger binding precedes hub start; two tests pass",
+  "validation_note": "54 offline checks rerun after direct owner launch authorization. No actor code, reserved fixtures or native calls changed; dispatch handoff follows current central fleet queue."
 }

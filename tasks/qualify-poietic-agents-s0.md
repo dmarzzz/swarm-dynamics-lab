@@ -20,7 +20,7 @@ updated: 2026-10-04T06:59Z
 
 ## Goal
 
-Finish gate G3 and bounded S0 qualification using researchers/vishesh/notes/poietic-agents/SETUP.md and RUNBOOK.md. The owner authorized all preparation necessary to be able to run Poietic. Explicit user confirmation is pending for the reduced USD 2 total proposal (USD 1.50 API / USD 0.50 infrastructure). No spending or reviewer waiver is inferred from repository policy text. The historical researcher review and substantive feedback resolution are already recorded.
+Finish gate G3 and bounded S0 qualification using researchers/vishesh/notes/poietic-agents/SETUP.md and RUNBOOK.md. The owner authorized all preparation necessary to be able to run Poietic. The subsequent direct user actual-model launch instruction accepts the USD 2 total proposal (USD 1.50 API / USD 0.50 infrastructure). No spending or reviewer waiver is inferred from repository policy text. The historical researcher review and substantive feedback resolution are already recorded.
 
 ## Done when
 
@@ -30,3 +30,7 @@ Finish gate G3 and bounded S0 qualification using researchers/vishesh/notes/poie
 - Execute only S0-01: 144 logical requests maximum, 288 physical maximum, 12 dependent four-step cases per each of Haiku/Qwen/Jev. Retain every assignment, response, failure, resource charge and uncertain reservation.
 - Reconcile the sole local API authority with the remote reporting mirror without double-counting; report allocated infrastructure from charge start through closeout. Publish the post-mortem and durable images/results; release the claim and stop this experiment's relay/worker only.
 - For qualification failures, diagnose on development fixtures, make a prospective amendment and fresh attempt within remaining authority. Do not tune on/reuse the qualification cases or lower thresholds. If qualification passes, prepare S1's actual static baseline and admission within the same remaining total, or report the exact further budget needed before spending beyond USD 2.
+
+## Coverage note
+
+2026-10-04: direct owner launch/budget authority recorded. All 54 offline checks pass. Approved OpenRouter selector unresolved; no secret values inspected. Fresh private fleet instructions require central run-queue dispatch; earlier sim-dmarz candidate is occupied. No host held, no attempt or model call started, zero spend. Follow the study DISPATCH.md; do not treat task claim as runtime admission.

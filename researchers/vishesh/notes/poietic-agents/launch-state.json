@@ -1,6 +1,6 @@
 {
   "schema": "poietic-launch-state-v0.2",
-  "updated_utc": "2026-10-04T06:16:46.442587+00:00",
+  "updated_utc": "2026-10-04T07:03:34.312279+00:00",
   "study": "poietic-agents",
   "design_status": "reviewed-amended-offline-tested",
   "implementation_status": "S0-launcher-and-lineage-instrument-built",
@@ -27,17 +27,17 @@
     "exact_runtime_and_assignments": "model routes, source and assignment generator fixed; deployment freeze pending",
     "offline_instrument_checks": "54 passed",
     "model_qualification": "not-run",
-    "budget_authorization": "explicit user confirmation pending",
-    "dedicated_machine_allocation": "allocation task open; none claimed",
+    "budget_authorization": "direct owner launch instruction accepts preceding USD 2 proposal",
+    "dedicated_machine_allocation": "central allocation required; previous candidate now occupied; none held",
     "public_plan_and_run_tldr_preflight": "design-documentation-check-passed; native-run-admission-pending"
   },
   "review_task": "review-poietic-agents-design",
   "prior_art_task": "heterogeneous-methods-review",
-  "authorized_api_usd": 0,
-  "authorized_infrastructure_usd": 0,
+  "authorized_api_usd": 1.5,
+  "authorized_infrastructure_usd": 0.5,
   "planned_run_count": 3,
   "started_run_count": 0,
-  "next_action": "Resolve explicit USD 2 budget confirmation and approved OpenRouter selector, then refresh allocation, deploy and admit S0",
+  "next_action": "Resolve approved OpenRouter selector through owner or authorized central runtime, then dispatch S0 through the fleet run queue with fresh allocation",
   "evidence": {
     "confidence": 0,
     "scale_max": 4,
@@ -49,8 +49,8 @@
   "scientific_outcomes": 0,
   "launchable": false,
   "remaining_gates": [
-    "explicit confirmation of proposed USD 2 cumulative cap",
     "verify approved OpenRouter credential provenance/availability without exposing or transferring it by assumption",
+    "central run-queue dispatch",
     "fresh exclusive approved-fleet allocation and idle-workload check",
     "deploy frozen source and dependencies; verify receipts",
     "fresh exact public-plan/page admission",
@@ -64,12 +64,14 @@
   "observed_model_calls": 0,
   "actual_poietic_api_spend_usd": 0,
   "host_claimed": false,
-  "authorized_total_cumulative_usd": 0,
+  "authorized_total_cumulative_usd": 2,
   "allocation_preparation": {
-    "candidate": "sim-dmarz",
+    "candidate": null,
     "claimed": false,
     "read_only_workload_check": "no active containers or recognized experiment workers; only sshd/systemd above 1% CPU",
     "must_recheck_current_claims_and_workload_before_claim": true,
-    "reason_not_claimed": "approved credential selector pending; do not reserve idle capacity while blocked"
+    "reason_not_claimed": "approved credential selector unresolved; central dispatcher must select fresh eligible capacity",
+    "previous_candidate": "sim-dmarz",
+    "previous_candidate_now_occupied": true
   }
 }
