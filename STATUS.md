@@ -44,7 +44,6 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T19:22Z | Run the revised procurement influence experiment |
-| [launch-ready-studies-2026-10-04](tasks/launch-ready-studies-2026-10-04.md) | claimed | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T19:05Z | Launch the prepared waiting experiments within existing budgets |
 | [outage-size-prototype](tasks/outage-size-prototype.md) | claimed | p1 | experiment | vishesh/codex-idea-scores |  | 2026-10-04T19:24Z | Build and qualify the bounded outage-response prototype |
 | [phantom-coast-pc9-native-preparation](tasks/phantom-coast-pc9-native-preparation.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T19:25Z | Prepare Phantom PC9 native qualification and added scenarios |
 | [right-dissenter-reopening-native-run](tasks/right-dissenter-reopening-native-run.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T19:08Z | Execute and review the approved RD6 Q0 and conditional D0 |
@@ -201,6 +200,7 @@
 | [institutionalize-experiment-setup](tasks/institutionalize-experiment-setup.md) | done | p1 | build | vishesh/codex-runbook | vishesh | 2026-10-04T04:12Z | Institutionalize the experiment setup runbook |
 | [integrate-run-closeout-cycle](tasks/integrate-run-closeout-cycle.md) | done | p1 | build | vishesh/codex-pi-review | vishesh | 2026-10-04T08:03Z | Integrate automatic run closeout and approved next-run planning |
 | [launch-discussion-benchmark-v3](tasks/launch-discussion-benchmark-v3.md) | done | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T02:58Z | Deploy and start the operator-authorized v3 model qualification |
+| [launch-ready-studies-2026-10-04](tasks/launch-ready-studies-2026-10-04.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T19:26Z | Launch the prepared waiting experiments within existing budgets |
 | [map-hackathon-scenarios](tasks/map-hackathon-scenarios.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:21Z | Map every research candidate to ranked hackathon task scenarios |
 | [openrouter-route-switch-2026-10-04](tasks/openrouter-route-switch-2026-10-04.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T18:44Z | Apply the owner directed OpenRouter migration to affected studies |
 | [organize-research-navigation](tasks/organize-research-navigation.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T22:37Z | Connect dashboard research areas, project briefs and hypothesis tags |
@@ -310,9 +310,9 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-pi-review | done | launch-ready-studies-2026-10-04 | 2026-10-04T19:26Z | Published actual native starts, terminal outcomes and exact remaining startup/capacity blockers; owning tasks retain closeout. |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T19:14Z | D8 closed matrixvalid typedHTTP400; relaytelemetry repaired offline99tests; no successor running |
 | vishesh/codex-theseus | idle |  | 2026-10-04T19:06Z | A2 completed and published; acquisition failed; FINISH / PARK; host released PR354 |
-| vishesh/codex-pi-review | working | launch-ready-studies-2026-10-04 | 2026-10-04T19:05Z | Coordinating owner-approved launches of prepared scopes; no duplication of active attempts. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:03Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T18:50Z | sybil-split-xmodel closed: three configurations (gpt-6-sol effort low and none, Qwen3.7 Flash) each stopped at the Q0 gate; no S1; RESULTS.md and three post-mortems on main |
