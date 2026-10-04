@@ -21,6 +21,6 @@ Review pinned market and adjacent experiment evidence; incorporate transferable 
 
 ## Done when
 
-- [ ] Publish source-pinned findings with evidence limitations and saved-data spot checks.
-- [ ] Add specific prospective design options to owned study planning and navigation.
-- [ ] Validate links, source hashes and repository checks; preserve owner approval and cumulative budgets.
+- [x] Publish source-pinned findings with evidence limitations and saved-data spot checks.
+- [x] Add specific prospective design options to owned study planning and navigation.
+- [x] Validate links, source hashes and repository checks; preserve owner approval and cumulative budgets.

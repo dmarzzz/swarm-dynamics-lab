@@ -78,3 +78,7 @@ Run a new complete 16-episode diagnostic with seed 9301, unchanged cases, shared
 Every request now atomically reserves cost and writes a uniquely identified unresolved record in the existing SQLite budget authority before dispatch. Usage is committed before output validation; a malformed response may still incur cost. Immutable attempt IDs prohibit redispatch after interruption. Missing responses remain unresolved with null actual cost, never zero. A public-safe usage.jsonl export is retained alongside events and uploaded in the complete artifact index. The native adapter refuses a missing budget ledger, preventing an accidental fresh budget at migration. Five new offline tests cover ledger preservation, abrupt interruption, duplicate-attempt refusal, known/missing usage and budget exhaustion. Fourteen tests pass in total. These are reporting repairs, not evidence of better native decisions.
 
 A3's visualization mapping is unchanged except for the new attempt and seed. No full-grid native animation is claimed before completion. The resumed protocol is ready for account/allocation verification; no replacement or A3 execution is claimed by this amendment.
+
+## Design transfer — 2026-10-04
+
+[Lessons from Dmarz’s recent studies](DESIGN-TRANSFER.md): specific controls, measurements and next-design options. Prospective only; current run contracts and approval status are unchanged.

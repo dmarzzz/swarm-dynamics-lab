@@ -25,3 +25,7 @@ Expected regret fell **0.1578 per decision**, descriptive 95% interval **[0.1093
 Native choices, scripted map consequences; one snapshot and two synthetic risk templates. Thirty-two layouts do not create thirty-two distinct reasoning tasks. Researcher review was not required; audits are by the operator.
 
 New cost USD 0.017998848; cumulative known USD 0.845052138 / conservative exposure USD 0.857148138, including nine historical uncertain charges. No new VM. Worker stopped, credential removed, claim released. Both session cycles are closed; no next native run scheduled.
+
+## Design transfer — 2026-10-04
+
+[Lessons from Dmarz’s recent studies](DESIGN-TRANSFER.md): specific controls, measurements and next-design options. Prospective only; current run contracts and approval status are unchanged.

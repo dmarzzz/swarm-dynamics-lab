@@ -53,3 +53,7 @@ From this directory, `python3 reassess_s0.py` regenerates the retrospective data
 - [Original QM-2 plan](PLAN.md), historical design; current S1 amendments and gates are in S1-PLAN.md and SETUP.md.
 - [S0 prospective plan](reviews/S0-02-pre.md), [post-mortem](reviews/S0-02-post.md), [zero-call failed attempt](reviews/S0-01-post.md).
 - [Review history](REVIEW.md), [required setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md).
+
+## Design transfer — 2026-10-04
+
+[Lessons from Dmarz’s recent studies](DESIGN-TRANSFER.md): specific controls, measurements and next-design options. Prospective only; current run contracts and approval status are unchanged.

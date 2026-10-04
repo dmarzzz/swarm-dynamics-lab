@@ -46,6 +46,17 @@ Do not select an arbitrary large n or infer independence from more agents, seeds
 - Numeric tables, initial/event/final views, uncertainty/missing-state display, full-history replay and artifact readback:
 - Fixed stopping/allocation, systemic-failure stops and explicit reasons the study could remain inconclusive:
 
+## Transfer checks when borrowing another experiment
+
+- Source revision, observed result versus unrun idea, and the scope in which it transfers:
+- Invariants when identities/roles/size change: compute, capacity, distinct evidence, checks, topology and timing; intentional differences:
+- Where the outcome is determined: scripted world, admission, model interpretation, raw action or enforced authorization:
+- Hardest-step semantic qualification; clean competence floor separate from prospective comparison floor/ceiling/futility rules:
+- Absolute harm and useful service beside change scores; strongest equal-budget simple/random baseline:
+- Independent roots versus nested calls/repeats; same-packet replication versus fresh-task generalization:
+
+These are prompts within the existing controls/measurement/sample sections, not requirements to build new infrastructure. See the [source-pinned examples](../../../researchers/vishesh/notes/dmarz-methods-transfer-2026-10-04/README.md).
+
 ## Implementation and acceptance
 
 | Change linked to quality gap | Offline repair or instrument update | Acceptance test / reference fixture | Qualification needed | Evidence and owner |

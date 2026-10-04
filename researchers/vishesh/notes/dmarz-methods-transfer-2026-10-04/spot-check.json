@@ -1,0 +1,86 @@
+{
+  "inputs": [
+    {
+      "path": "researchers/dmarz/notes/market-split-opus/report/s1-001/episode-results.csv",
+      "sha256": "09ff1ce7cfcff1352a35a37e8cf68996d48643940f58b59e162d395eac3c4add"
+    },
+    {
+      "path": "researchers/dmarz/notes/market-split-opus/report/s1-001/paired-task-results.csv",
+      "sha256": "4700f8d096221d14f725f947e68e552a213b45573c25ae3a7b25a0ab3ba9b2e3"
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-split-opus/records/s1-episodes.jsonl.gz",
+      "sha256": "ddd861f700ccaf2038cd79194219f208f1a9d6530e841b908481913d51372987"
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-scarcity-opus/records/s1-episodes.jsonl.gz",
+      "sha256": "274eeea2ecb6d18c86b3bf58953fe3443001684c819bdb16866b05f08314cb58"
+    },
+    {
+      "path": "researchers/dmarz/notes/trust-credit-qwen/records/s1-episodes.jsonl.gz",
+      "sha256": "06865917b4e9a1312bb66715c0374cecb790d1e8d24bffafa8d0d69dbf544e34"
+    },
+    {
+      "path": "researchers/dmarz/notes/verify-cost-qwen/records/attempt-002/p0-episodes.jsonl.gz",
+      "sha256": "1d5676be1b953f6ec0cf8768648be378b1d5662026072e095e09aaf70fe21100"
+    },
+    {
+      "path": "researchers/dmarz/notes/verify-cost-qwen/records/attempt-002/q0-episodes.jsonl.gz",
+      "sha256": "9793ba2fc6302b99cc6a42856cfba8aae96dcb3432ed0fdf0af4e7a872263ad6"
+    }
+  ],
+  "market_split": {
+    "calls": 864,
+    "episodes": 36,
+    "firm_profit_difference": 6818.690229713778,
+    "flexible_evasion": {
+      "firm": 6,
+      "none": 0,
+      "owner": 0
+    },
+    "tasks": 6
+  },
+  "model_calls": 0,
+  "scope": "Independent arithmetic on saved row evaluations and CSV outputs; not raw-trace regrading or an independent replication.",
+  "sybil_scarcity": {
+    "carrier_accuracy": {
+      "1": 0.041666666666666664,
+      "3": 0.1388888888888889,
+      "9": 0.5416666666666666,
+      "27": 0.9583333333333334,
+      "81": 1.0
+    },
+    "hash_invariance_violations": 0,
+    "matched_invariance_groups": 288,
+    "primary_pp": -95.83333333333334,
+    "roots": 24,
+    "rows": 1440
+  },
+  "sybil_split": {
+    "distinct_packets": 1901,
+    "roots": 48,
+    "rows": 2688,
+    "strong_primary_pp": 40.97222222222222,
+    "weak_primary_pp": -52.77777777777778
+  },
+  "trust_credit": {
+    "direct_32": 19.583333333333332,
+    "propagated_32": 4.375,
+    "roots": 24,
+    "rows": 504,
+    "scripted_primary_seats": 20.75
+  },
+  "verify_cost_repair": {
+    "both_costs_correct": 8,
+    "chooses_smaller_written_cost": 23,
+    "exact_cost_swap": 11,
+    "layouts": 12,
+    "optimal": 10,
+    "optimal_by_representation": {
+      "prose": 6,
+      "table": 4
+    },
+    "swapped_with_zero": 4,
+    "valid_rows": 24
+  }
+}

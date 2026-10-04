@@ -46,7 +46,6 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed (stale) | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T09:29Z | Run the revised procurement influence experiment |
-| [review-dmarz-completed-xcheck](tasks/review-dmarz-completed-xcheck.md) | claimed | p1 | review | shadow/sol-xcheck | shadow | 2026-10-04T13:51Z | Independently recompute completed dmarz findings from saved records |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -212,6 +211,7 @@
 | [review-discussion-benchmark-v3](tasks/review-discussion-benchmark-v3.md) | done | p1 | review | vishesh/codex-independent-reviews |  | 2026-10-04T02:57Z | Independently review the implemented discussion and memory benchmark v3 |
 | [review-discussion-dose](tasks/review-discussion-dose.md) | done | p1 | review | vishesh/codex-independent-reviews |  | 2026-10-04T02:26Z | Review SEC-47 discussion dose tasks and exploratory protocol |
 | [review-discussion-dose-v2-fixes](tasks/review-discussion-dose-v2-fixes.md) | done | p1 | review | dmarz/discussion-dose | dmarz | 2026-10-04T01:30Z | Check whether discussion dose v2 addresses the original pilot limitations |
+| [review-dmarz-completed-xcheck](tasks/review-dmarz-completed-xcheck.md) | done | p1 | review | shadow/sol-xcheck | shadow | 2026-10-04T14:01Z | Independently recompute completed dmarz findings from saved records |
 | [review-influence-q4-dossiers](tasks/review-influence-q4-dossiers.md) | done | p1 | review | vishesh/codex-experiments | dmarz | 2026-10-04T04:16Z | Independently review the four fresh influence qualification dossiers |
 | [review-llm-agent-swarms-vishesh](tasks/review-llm-agent-swarms-vishesh.md) | done | p1 | review | vishesh/codex-independent-reviews | vishesh | 2026-10-04T02:29Z | Independent vishesh check of the revised LLM-agent-swarms survey |
 | [review-poietic-agents-design](tasks/review-poietic-agents-design.md) | done | p1 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:43Z | Independently review the Poietic Agents prospective design |

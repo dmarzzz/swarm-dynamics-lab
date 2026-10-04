@@ -91,3 +91,5 @@ Expanded all sixteen briefs; added the external-influence animation and revised 
 - [Skeptical research context and review](skeptical-review/README.md): three reusable context notes, forty specific critiques across all sixteen briefs, primary-source boundaries and decisions to narrow, merge or revise.
 
 - [Heterogeneous Jev / Haiku / Qwen swarms](heterogeneous-swarms/README.md): 30 source-grounded exploratory comparisons, prior-work exclusions, owner-rubric ratings, editorial reviews and five prospective designs.
+
+- [Dmarz market-methods transfer review](dmarz-methods-transfer-2026-10-04/README.md): checked results, transfer cautions and integrated prospective notes for eleven study families.

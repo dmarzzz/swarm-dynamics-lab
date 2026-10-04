@@ -61,3 +61,5 @@ Public evidence: [engineering run and embedded animation](https://swarm-live.pag
 ## Native execution and reporting
 
 `src/hub_worker.py` connects the frozen native plan to per-round progress images, final PNG/GIF/replay publication and explicit qualification status. It requires a non-secret allocation receipt binding this host, exclusive claim, expiry and a previously reserved USD 8 budget grant. The receipt records a real fleet/budget operation; creating the file is not a substitute for that operation. A missing/expired receipt or failed immutable-public-plan preflight stops before model calls. Configure the existing secure credential environment and isolated quota ledger, then invoke `hub_worker.py --out <new-output-path> --allocation-receipt <verified-receipt-path>`. Do not run this until the dedicated host and budget grant exist.
+
+[Prospective lessons from Dmarz’s recent experiments](evidence-study/DESIGN-TRANSFER.md) inform the next design without changing this cohort or authorizing a new run.

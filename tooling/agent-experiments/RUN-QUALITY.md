@@ -42,3 +42,18 @@ Choose `advance`, `repair`, `diagnostic`, `complete_valid_result` or `blocked`. 
 A valid null or worse intervention may earn passes on every relevant design dimension and finish as `complete_valid_result`. A wide interval can leave the scientific question unresolved without implying an instrument defect; propose additional sampling only if its expected precision and decision value justify the cost. Never increase n or repair scenarios merely to obtain a preferred effect.
 
 The next session must assess earlier suggestions against this rubric, accepting, revising or rejecting them with reasons. A suggested fix is not a verified cause, and copying the preceding recommendation is not a new assessment. Turn selected work into the [next-run plan](templates/next-run-plan.md), with a specific design, sample allocation, scenarios, telemetry, analysis, resource envelope and acceptance checks. Follow the [owner approval and closeout workflow](RUN-REVIEW.md).
+
+## Lessons from the market and decision studies
+
+[The pinned Dmarz transfer review](../../researchers/vishesh/notes/dmarz-methods-transfer-2026-10-04/README.md) supplies concrete checks for the existing dimensions, not new universal thresholds:
+
+| Check | What to record | Avoid |
+|---|---|---|
+| Resource conservation (`controls`) | Which capacities, evidence, checks and compute stay fixed when identities/roles change; residual topology changes | Calling an identity effect pure when free links or information also change |
+| Evidence bottleneck (`measurement`) | Truth/evidence available → admitted → interpreted → action → verified task outcome; scripted/native label at each step | Spending on a stronger synthesizer when the needed evidence never arrives |
+| Semantic qualification (`capability`) | Correct action and component diagnostics on the hardest necessary step, separately from parse success | Valid JSON or a plausible written calculation counted as competence |
+| Informative task (`scenarios`) | Development-selected challenge range; prospective floor/ceiling/futility rule for costly escalation | Lowering the clean competence gate or redesigning after outcomes to obtain an effect |
+| Harm and service (`measurement`) | Absolute correct/wrong/abstain levels, legitimate work retained, and paired changes | Smaller harm slope presented as safer when absolute harm is worse |
+| Variability and n (`sample_size`) | Independent world/task roots; nested same-condition repeats; model/config cohorts separate | Many identities/calls or a degenerate bootstrap interval presented as broad certainty |
+
+Use safe allowlisted failure categories and numeric cost/throughput telemetry. Provider outages remain operational outcomes; preserve uncertain dispatch exposure. A copied retry policy or new subledger must never grant extra calls, erase costs or expose arbitrary provider error bodies.

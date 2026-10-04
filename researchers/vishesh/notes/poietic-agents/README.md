@@ -70,3 +70,7 @@ For a later confirmatory claim, the proposed practical threshold is at least 20%
 The owner selected the project and its name. [Dmarz’s independent review](../../../dmarz/notes/inbox-reviews-2026-10-04-round2/poietic-review.md) is resolved in the [prospective amendment](AMENDMENTS.md): fixed arrivals include adaptation delay; ordinary caches may reuse derived computation; recovery/advance criteria and quotas are explicit. The offline instrument and gated S0 launcher are implemented; [validation](VALIDATION.json) records software checks, not model competence. [Setup status](SETUP.md) and [launch instructions](RUNBOOK.md) name the remaining gates. [Launch state](launch-state.json) distinguishes design publication, independent review, model qualification, spending authorization, dedicated allocation and S2 research acceptance. Public registration of the design creates no queued run. S0/S1 may proceed under the exploratory worker workflow once their concrete execution gates pass; S2 also requires the formal survey and hypothesis reviews.
 
 The central decision after development is whether Poietic Agents adds enough beyond caching and static specialization to justify a larger study. If it does not, stop and recommend the simpler system.
+
+## Design transfer — 2026-10-04
+
+[Lessons from Dmarz’s recent studies](DESIGN-TRANSFER.md): specific controls, measurements and next-design options. Prospective only; current run contracts and approval status are unchanged.
