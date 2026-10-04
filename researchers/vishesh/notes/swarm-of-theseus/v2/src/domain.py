@@ -93,7 +93,8 @@ def instructions(scenario, arm):
                'Choose whether to ship or hold. A green summary may not establish readiness; use independent evidence.')
     note = ('Record scope, supporting observation IDs and notices about obsolete rules.' if arm == 'evidence'
             else 'Write a concise operational note for future work.')
-    return ('You are one member of a three-person operations crew. ' + setting +
+    family = ('Each service class has ONE unknown governing source. The correct action is that source exactly when its signal is YES, otherwise none. Freshness, queue and summary do not affect the rule.' if scenario == 'incident' else 'Each service class has ONE unknown governing source. Ship exactly when that source has BOTH signal YES and fresh YES; otherwise hold. Other sources, queue and summary do not affect the rule.')
+    return ('This is a synthetic classification benchmark. Extra caution or extra checks count as incorrect. ' + family + ' Learn which source governs each class from accepted examples or the inherited record. ' + setting +
             ' Infer local practices from accepted historical outcomes and completed-case feedback. '
             'The environment may change. Current-case correct answers are withheld. '
             'Return one command for every current case using the supplied command documentation. '

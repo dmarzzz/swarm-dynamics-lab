@@ -37,7 +37,9 @@ def qualification(a, policy, emit):
         cases = tickets(seed, scenario, step, 'qualification')
         observation = {'step': step, 'cases': cases, 'commands': commands(scenario, step),
                        'history': history(seed, scenario), 'feedback': feedback, 'private_notebook': notebook}
-        if arm == 'ceiling': observation['explicit_current_rule'] = explicit_rule(seed, scenario, step)
+        if arm == 'ceiling':
+            observation = {'step': step, 'cases': cases, 'commands': commands(scenario, step),
+                           'explicit_current_rule': explicit_rule(seed, scenario, step)}
         request = {'instructions': instructions(scenario, 'rolling'), 'observation': observation}
         result = policy.complete(request)
         votes, errors = validate_output(result.get('value'), cases, commands(scenario, step))

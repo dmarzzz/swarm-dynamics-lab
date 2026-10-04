@@ -1,0 +1,182 @@
+{
+  "status": "measured_model_outputs",
+  "stage": "S0",
+  "same_author_audit": true,
+  "audit_mismatches": [],
+  "provider_failures": {},
+  "validation_errors": {},
+  "recorded_events": 24,
+  "expected_events": 24,
+  "process_compliance": "see preflight receipts and outcomes; scientific validity is separate",
+  "call_accounting": {
+    "reserved_dispatches": 24,
+    "durable_results": 24,
+    "unfinished_or_ambiguous": 0,
+    "reserved_usd": 0.357357,
+    "actual_usd_with_usage": 0.103255,
+    "usage_missing": 0,
+    "input_tokens_known": 68000,
+    "output_tokens_known": 7051
+  },
+  "archive_bytes": {
+    "acquisition": [],
+    "rolling": [],
+    "evidence": [],
+    "frozen": [],
+    "none": []
+  },
+  "lineage_generations_at_endpoint": [],
+  "qualification_passed": false,
+  "metrics": {
+    "release": {
+      "ceiling-0": {
+        "assigned": 12,
+        "correct": 10,
+        "observed": 12,
+        "missing": 0,
+        "conservative_accuracy": 0.8333333333333334,
+        "observed_accuracy": 0.8333333333333334,
+        "accuracy_bounds": [
+          0.8333333333333334,
+          0.8333333333333334
+        ]
+      },
+      "ceiling-5": {
+        "assigned": 12,
+        "correct": 6,
+        "observed": 12,
+        "missing": 0,
+        "conservative_accuracy": 0.5,
+        "observed_accuracy": 0.5,
+        "accuracy_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      "learner-0": {
+        "assigned": 12,
+        "correct": 7,
+        "observed": 12,
+        "missing": 0,
+        "conservative_accuracy": 0.5833333333333334,
+        "observed_accuracy": 0.5833333333333334,
+        "accuracy_bounds": [
+          0.5833333333333334,
+          0.5833333333333334
+        ]
+      },
+      "learner-5": {
+        "assigned": 12,
+        "correct": 8,
+        "observed": 12,
+        "missing": 0,
+        "conservative_accuracy": 0.6666666666666666,
+        "observed_accuracy": 0.6666666666666666,
+        "accuracy_bounds": [
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      }
+    },
+    "incident": {
+      "ceiling-0": {
+        "assigned": 12,
+        "correct": 9,
+        "observed": 12,
+        "missing": 0,
+        "conservative_accuracy": 0.75,
+        "observed_accuracy": 0.75,
+        "accuracy_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      "ceiling-5": {
+        "assigned": 12,
+        "correct": 11,
+        "observed": 12,
+        "missing": 0,
+        "conservative_accuracy": 0.9166666666666666,
+        "observed_accuracy": 0.9166666666666666,
+        "accuracy_bounds": [
+          0.9166666666666666,
+          0.9166666666666666
+        ]
+      },
+      "learner-0": {
+        "assigned": 12,
+        "correct": 7,
+        "observed": 12,
+        "missing": 0,
+        "conservative_accuracy": 0.5833333333333334,
+        "observed_accuracy": 0.5833333333333334,
+        "accuracy_bounds": [
+          0.5833333333333334,
+          0.5833333333333334
+        ]
+      },
+      "learner-5": {
+        "assigned": 12,
+        "correct": 8,
+        "observed": 12,
+        "missing": 0,
+        "conservative_accuracy": 0.6666666666666666,
+        "observed_accuracy": 0.6666666666666666,
+        "accuracy_bounds": [
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      }
+    },
+    "migration": {
+      "ceiling-0": {
+        "assigned": 12,
+        "correct": 12,
+        "observed": 12,
+        "missing": 0,
+        "conservative_accuracy": 1.0,
+        "observed_accuracy": 1.0,
+        "accuracy_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ceiling-5": {
+        "assigned": 12,
+        "correct": 10,
+        "observed": 12,
+        "missing": 0,
+        "conservative_accuracy": 0.8333333333333334,
+        "observed_accuracy": 0.8333333333333334,
+        "accuracy_bounds": [
+          0.8333333333333334,
+          0.8333333333333334
+        ]
+      },
+      "learner-0": {
+        "assigned": 12,
+        "correct": 9,
+        "observed": 12,
+        "missing": 0,
+        "conservative_accuracy": 0.75,
+        "observed_accuracy": 0.75,
+        "accuracy_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      "learner-5": {
+        "assigned": 12,
+        "correct": 10,
+        "observed": 12,
+        "missing": 0,
+        "conservative_accuracy": 0.8333333333333334,
+        "observed_accuracy": 0.8333333333333334,
+        "accuracy_bounds": [
+          0.8333333333333334,
+          0.8333333333333334
+        ]
+      }
+    }
+  }
+}

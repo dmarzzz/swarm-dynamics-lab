@@ -201,6 +201,32 @@ class InstrumentTests(unittest.TestCase):
             self.assertEqual(m['command_validity_per_assigned_member_case'],0)
             self.assertEqual(m['intended_semantic_accuracy_per_assigned_member_case'],1)
 
+    def test_tabular_presentation_preserves_observations_without_current_labels(self):
+        from presentation import present
+        cs=tickets(11,'release',0)
+        obs={'step':0,'role':2,'commands':commands('release',0),'cases':cs,'history':history(11,'release')}
+        text=present(obs); current=text.split('CURRENT CASES.')[1]
+        self.assertNotIn('ACCEPTED ACTION',current)
+        self.assertNotIn('AUTHORITATIVE CURRENT RULE',text)
+        self.assertIn('ROLE: 2',text)
+        for c in cs:
+            line=next(x for x in current.splitlines() if x.startswith(c['id']+' | '))
+            values=line.split(' | ')
+            self.assertEqual(values[:4],[c['id'],c['service_class'],c['summary'],c['queue']])
+            expected=[('YES' if c['evidence'][source][key] else 'NO') for source in ('probe','ledger','canary') for key in ('signal','fresh')]
+            self.assertEqual(values[4:],expected)
+
+    def test_clean_ceiling_has_no_historical_conflict(self):
+        events=[]
+        a=next(x for x in assignments('S0-repair') if x['arm']=='ceiling')
+        qualification(a,OracleFixture(a['seed'],a['scenario']),events.append)
+        for e in events:
+            obs=e['calls'][0]['request']['observation']
+            self.assertIn('explicit_current_rule',obs)
+            self.assertNotIn('history',obs)
+            self.assertNotIn('feedback',obs)
+            self.assertNotIn('private_notebook',obs)
+
     def test_corrupt_score_is_detected(self):
         _,es=trajectory();bad=copy.deepcopy(es[9]);bad['scores'][0]['correct']=not bad['scores'][0]['correct']
         self.assertNotEqual(bad['scores'],recompute(bad))

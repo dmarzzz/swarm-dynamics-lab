@@ -11,6 +11,7 @@ import time
 import urllib.error
 import urllib.request
 import uuid
+from presentation import present
 
 MODEL = 'claude-haiku-4-5-20251001'
 SCHEMA = {'type': 'object', 'properties': {
@@ -67,7 +68,7 @@ class AnthropicPolicy:
     def complete(self, request):
         if time.time() >= self.deadline: raise StopRun('wall_or_claim_limit')
         body = {'model': MODEL, 'system': request['instructions'], 'temperature': 0, 'max_tokens': 900,
-                'messages': [{'role': 'user', 'content': json.dumps(request['observation'], sort_keys=True)}],
+                'messages': [{'role': 'user', 'content': present(request['observation'])}],
                 'output_config': {'format': {'type': 'json_schema', 'schema': SCHEMA}}}
         encoded = json.dumps(body).encode()
         if len(encoded) > 18000: raise StopRun('input_bound_exceeded')
@@ -76,7 +77,7 @@ class AnthropicPolicy:
         call = reserve(self.ledger, reserved)
         ident = f'{call:04d}-{uuid.uuid4().hex[:8]}'
         started = {'call': call, 'reserved_usd': reserved, 'input_bytes': len(encoded),
-                   'request': request, 'started_epoch': time.time()}
+                   'request': request, 'exact_user_text': body['messages'][0]['content'], 'started_epoch': time.time()}
         write_new(self.output / (ident + '-started.json'), started)
         headers = {'Content-Type': 'application/json', 'x-api-key': self.key, 'anthropic-version': '2023-06-01'}
         if self.workspace: headers['anthropic-workspace-id'] = self.workspace
