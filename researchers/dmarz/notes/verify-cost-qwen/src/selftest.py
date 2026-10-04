@@ -1,10 +1,15 @@
 """Offline checks. No network, no model call, no hub. `python3 src/selftest.py` prints the standard
 unittest summary ("Ran N tests ... OK") on stderr.
 
-Three groups: the instrument and its scorer (Instrument, Analysis), one stage and the chain against an
-in-memory hub and a local stub of the model endpoint (Stage, Chain), and the reference adapter's own
-tests, copied unchanged from researchers/dmarz/notes/pipeline/reference/test_openrouter_provider.py
-(Request, Answers, Transport, Billing, LedgerRules)."""
+Four groups: the instrument and its scorer (Instrument, Analysis), one stage and the chain against an
+in-memory hub and a local stub of the model endpoint (Stage, Chain), the model ladder (Ladder), and the
+reference adapters' own tests: the OpenRouter adapter's, copied unchanged from
+researchers/dmarz/notes/pipeline/reference/test_openrouter_provider.py into this file (Request, Answers,
+Transport, Billing, LedgerRules), and the OpenAI adapter's, the unchanged file src/test_openai_provider.py,
+which this file loads and runs in the same test run.
+
+Tests outside Ladder run the first model of the ladder (Qwen). STUDY_MODEL and STUDY_PROVIDER are removed
+from the environment at import, so the count and the result do not depend on how the launcher calls this."""
 import copy
 import gzip
 import hashlib
@@ -21,6 +26,7 @@ import urllib.error
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+for _key in ('STUDY_MODEL', 'STUDY_PROVIDER'): os.environ.pop(_key, None)
 
 from PIL import Image  # noqa: E402
 
@@ -28,6 +34,7 @@ import analyze      # noqa: E402
 import chain        # noqa: E402
 import coordinator  # noqa: E402
 import manifest     # noqa: E402
+import openai_provider  # noqa: E402
 import provider     # noqa: E402
 import rehearse     # noqa: E402
 import render       # noqa: E402
@@ -36,7 +43,7 @@ import study        # noqa: E402
 import worker       # noqa: E402
 
 orp = provider
-D = study.design(); B = D['budget']; MAIN = D['layouts']['main']; ENG = D['layouts']['engineering']
+D = study.design(); B = study.budget(); LUNA = 'gpt-6-luna'; MAIN = D['layouts']['main']; ENG = D['layouts']['engineering']
 FROZEN = {  # a change here is a change of the instrument
     'main_layouts': '9a8ee6dfa6a6039d3cffdf016665da1a212c510943f1798a5764685287e589c5',
     'system_prompt': 'a9da7293926b0d19d8c40dbc87c4faee6aa89f5e8e72445a76ff0620af0b3030',          # attempt 002
@@ -52,12 +59,28 @@ PROGRAM_TEMPLATE = {'model': 'qwen/qwen3.7-flash',
                     'provider': {'only': ['alibaba'], 'allow_fallbacks': False, 'require_parameters': True},
                     'reasoning': {'enabled': False}, 'max_tokens': 1000, 'response_format': {'type': 'json_object'}}
 REFERENCE_ADAPTER_SHA256 = '2e98d517bad4cf8d2d9383f3126040e576bd4aa5528e4546639f5aeff03fa982'      # reference adapter at main 639e9501
+OPENAI_ADAPTER_SHA256 = 'f48e8aa819e49878b234a957699f1258703ac3ebca02fc9140e2129dfb1c5404'         # reference OpenAI adapter at main 8290d7ad
+OPENAI_TESTS_SHA256 = 'c0148491e872e1671dbae59f2a845a36991cc8cf107325d1a684899d0006a63c'
+ATTEMPT_002_QWEN_MANIFEST = 'a15437304ab34e3af4c0a137b3d1af0f05a6bfccfd0e8c8b8d8b4b4a4236b1cc'      # the Qwen chain pinned at 35404c24
+ATTEMPT_001 = {  # from attempt 001's committed manifest (fa61358a): gpt-6-luna gets exactly these requests
+    'system_prompt': 'f981dfe98990431b88ef0c4081c9c6a11d48401b20a1354aad99c1a4b6bbe992',
+    'manifest_digest': '27d522674ab3cb4d0325f0ca6535f5ec16863157a91dc658ea5adc998089dd78',      # over the four stage digests below
+    's0_stage_digest': '6e8463a23dcc0ac8aa985d5ccf4398e7c7da312973d9f1f25930a23e4093fba7',
+    'p0_stage_digest': 'eb474f063fbfdcb0e10a244c7723aa6d41c45491e4b0d616aed20f096767b45e',      # the probe request Qwen answered in attempt 001
+    'q0_stage_digest': 'f30cb4fc912937e7e5860d9e6a5e75379fff936c96dd522a2e12e78e494170d9',      # the 23 qualification requests of attempt 001
+    's1_stage_digest': 'ab9e52ba330696e5f636f70108da9721a1e501bc4f5cbcad0d22ef68061ff312',
+    'set_b_ids_and_hashes': '8cb52c40150c4760b13acf00b8ef2b6f4e9d8d2342c674c9d4861edc64dab7d0'}
+
+
+def as_model(name):
+    """Run a block as the chain of another model of the ladder."""
+    return patch.dict(os.environ, {'STUDY_MODEL': name})
 _cache = {}
 
 
 def rows_for(stage, name='optimal'):
     """Completed rows a scripted policy would produce for a stage (evaluator side, no call)."""
-    key = (stage, name)
+    key = (stage, name, study.model())
     if key not in _cache: _cache[key] = study.policy_rows(study.assignments(stage), name)
     return copy.deepcopy(_cache[key])
 
@@ -122,7 +145,7 @@ class Env(unittest.TestCase):
     """A temporary results directory, ledger and credential alias; the adapter's waits take no time."""
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory(); self.dir = Path(self.tmp.name)
-        self.env = patch.dict(os.environ, {provider.KEY_ENV: TEST_KEY, 'STUDY_RESULTS_DIR': str(self.dir / 'results'),
+        self.env = patch.dict(os.environ, {provider.KEY_ENV: TEST_KEY, openai_provider.KEY_ENV: TEST_KEY, 'STUDY_RESULTS_DIR': str(self.dir / 'results'),
                                            provider.LEDGER_ENV: str(self.dir / 'ledger' / 'ledger.jsonl')})
         self.env.start(); self.clock = rehearse.Clock()
         self.patches = [patch.object(worker, 'CLOCK', self.clock.now), patch.object(worker, 'SLEEP', self.clock.sleep),
@@ -145,7 +168,7 @@ class Env(unittest.TestCase):
         return summary, reason, chain.read_jsonl(out / chain.ROWS), out
 
     def ledger(self):
-        return provider.Ledger(os.environ[provider.LEDGER_ENV], B).transact()
+        return worker.adapter().Ledger(os.environ[provider.LEDGER_ENV], study.budget()).transact()
 
 
 class Instrument(unittest.TestCase):
@@ -517,10 +540,10 @@ class Instrument(unittest.TestCase):
 
     def test_design_check_detects_an_uninformative_design(self):
         def with_design(change):
-            d = copy.deepcopy(D); change(d); study._assignments.cache_clear()
+            d = copy.deepcopy(D); change(d); study._assignments.cache_clear(); study._budget.cache_clear()
             try:
                 with patch.object(study, 'design', lambda: d): return study.check_design()
-            finally: study._assignments.cache_clear()
+            finally: study._assignments.cache_clear(); study._budget.cache_clear()
         self.assertIn('optimum_must_change_across_the_twelve_cases', with_design(lambda d: d.update(unknown_costs=[0.85, 0.90, 0.95])))
         self.assertIn('qualification_a:margin_below_stated_minimum', with_design(lambda d: d['qualification']['fixtures_a'].__setitem__(0, [0.60, 0.05])))
         self.assertIn('qualification_pairs_not_disjoint', with_design(lambda d: d['qualification']['fixtures_b'].__setitem__(0, [0.90, 0.05])))
@@ -529,6 +552,8 @@ class Instrument(unittest.TestCase):
         self.assertIn('max_failed_rule', with_design(lambda d: d['budget'].update(max_failed=3)))
         self.assertIn('S1:call_cap_differs_from_assignments', with_design(lambda d: d['budget']['max_calls'].update(S1=600)))
         self.assertIn('study_call_cap', with_design(lambda d: d['budget'].update(max_attempted_calls=624)))
+        self.assertIn('model_ladder', with_design(lambda d: d['models'][LUNA].update(tag='')))
+        self.assertIn('model_ladder', with_design(lambda d: d['providers'].pop(LUNA)))
         self.assertEqual(study.check_design(), [])
 
     def test_manifest_regenerates_identically(self):
@@ -541,7 +566,7 @@ class Instrument(unittest.TestCase):
 
     def test_source_hash_covers_code_and_design_only(self):
         names = ['design.yaml', 'experiment.yaml', 'requirements.txt'] + sorted(p.name for p in (study.ROOT / 'src').glob('*.py'))
-        self.assertEqual(len(names), 14)
+        self.assertEqual(len(names), 16)        # eleven study files, the two adapters and the OpenAI adapter's test file
         want = study.digest([(n, hashlib.sha256((study.ROOT / ('src' if n.endswith('.py') else '') / n).read_bytes()).hexdigest()) for n in names])
         self.assertEqual(study.source_hash(), want)
         self.assertEqual({study.params(s)['backend'] for s in ('P0', 'Q0', 'S1')}, {'openrouter'}); self.assertEqual(study.params('S0')['backend'], 'scripted')
@@ -1000,6 +1025,186 @@ class Chain(Env):
             rehearse.Stub('optimal')(urllib.request.Request(provider.URL, data=json.dumps(body).encode()))
 
 
+class Ladder(Env):
+    """The second pre-registered model. Each model of the ladder is its own chain; nothing is shared or pooled."""
+
+    def test_model_comes_from_study_model_and_must_be_in_the_ladder(self):
+        self.assertEqual(D['model_ladder'], ['qwen/qwen3.7-flash', LUNA]); self.assertEqual(D['providers'], {'qwen/qwen3.7-flash': 'openrouter', LUNA: 'openai'})
+        self.assertEqual((study.model(), study.provider_name(), study.schema()), ('qwen/qwen3.7-flash', 'openrouter', 'cost_then_choice'))
+        self.assertEqual([study.batch(s) for s in study.STAGES], ['s0-002', 'p0-002', 'q0-002', 's1-002'])
+        self.assertEqual(study.params('S1')['model'], 'qwen/qwen3.7-flash'); self.assertEqual(worker.adapter(), provider)
+        self.assertEqual(study.active_set(), 'b'); self.assertEqual(D['models'][LUNA]['qualification_set'], 'a')
+        with as_model(LUNA):
+            self.assertEqual((study.model(), study.provider_name(), study.schema()), (LUNA, 'openai', 'choice_only'))
+            self.assertEqual([study.batch(s) for s in study.STAGES], ['s0-002-gpt-6-luna', 'p0-002-gpt-6-luna', 'q0-002-gpt-6-luna', 's1-002-gpt-6-luna'])
+            self.assertEqual({s: (study.params(s)['backend'], study.params(s)['model']) for s in study.STAGES},
+                             {'S0': ('scripted', LUNA), 'P0': ('openai', LUNA), 'Q0': ('openai', LUNA), 'S1': ('openai', LUNA)})
+            self.assertEqual(worker.adapter(), openai_provider); self.assertEqual(study.source_hash(), study.source_hash())
+            self.assertEqual(provider.stage_of('p0-002-gpt-6-luna:x'), 'P0'); self.assertEqual(openai_provider.family_of('s1-002-gpt-6-luna-r1:x'), 's1-002-gpt-6-luna')
+        for bad in ('gpt-6-sol', 'claude-opus-5-5', 'qwen'):
+            with as_model(bad):
+                with self.assertRaises(ValueError): study.model()
+        with as_model(''): self.assertEqual(study.model(), 'qwen/qwen3.7-flash')
+        self.assertEqual(study.source_hash(), FakeHub().rows or study.source_hash())           # the source hash does not depend on the model
+
+    def test_the_qwen_chain_is_exactly_attempt_002(self):
+        m = manifest.build()
+        self.assertEqual((m['model'], m['digest']), ('qwen/qwen3.7-flash', ATTEMPT_002_QWEN_MANIFEST))
+        self.assertEqual(manifest.reference()['digest'], ATTEMPT_002_QWEN_MANIFEST)
+        self.assertEqual({k: B[k] for k in ('aggregate_usd', 'max_attempted_calls', 'max_transport_attempts', 'max_output_tokens', 'max_failed', 'workers',
+                                           'input_usd_per_million', 'output_usd_per_million', 'reservation_margin', 'max_visible_chars')},
+                         {'aggregate_usd': 2, 'max_attempted_calls': 600, 'max_transport_attempts': 760, 'max_output_tokens': 1000, 'max_failed': 6, 'workers': 4,
+                          'input_usd_per_million': 0.03, 'output_usd_per_million': 0.13, 'reservation_margin': 10, 'max_visible_chars': 4000})
+        self.assertEqual(B, D['budget']); self.assertNotIn('prices', B)
+        self.assertEqual(study.provider_config()['request_template'], PROGRAM_TEMPLATE)
+
+    def test_gpt_6_luna_gets_the_original_instrument_of_attempt_001_byte_for_byte(self):
+        with as_model(LUNA):
+            self.assertEqual(study.digest(study.system()), ATTEMPT_001['system_prompt'])
+            self.assertEqual(manifest.stage_entry(study.assignments('S1'))['digest'], ATTEMPT_001['s1_stage_digest'])        # all 576 main requests
+            self.assertEqual(manifest.stage_entry(study.assignments('S0'), True)['digest'], ATTEMPT_001['s0_stage_digest'])  # engineering and both sets
+            fx = sorted(f'{a["id"]}:{a["input_hash"][:16]}' for a in study.fixtures('b'))
+            self.assertEqual(study.digest(fx), ATTEMPT_001['set_b_ids_and_hashes'])
+            # it qualifies on set a: P0 and Q0 are the 24 requests Qwen answered in attempt 001, hash for hash
+            self.assertEqual(study.active_set(), 'a')
+            self.assertEqual(manifest.stage_entry(study.assignments('P0'))['digest'], ATTEMPT_001['p0_stage_digest'])
+            self.assertEqual(manifest.stage_entry(study.assignments('Q0'))['digest'], ATTEMPT_001['q0_stage_digest'])
+            self.assertEqual(manifest.reference()['digest'], ATTEMPT_001['manifest_digest'])               # the whole manifest equals attempt 001's
+            self.assertEqual(sorted(a['id'] for a in study.assignments('P0') + study.assignments('Q0')), sorted(a['id'] for a in study.fixtures('a')))
+            self.assertEqual(study.assignments('P0')[0]['id'], 'qa-2800-e90-u05-prose')
+            self.assertFalse({a['layout'] for a in study.assignments('P0') + study.assignments('Q0')} & set(D['layouts']['qualification_b']))
+            a = study.assignments('S1')[0]; text = study.user_for(a)
+            self.assertTrue(text.endswith(f'Reply with exactly one of these JSON objects: {{"inspect": "{a["legal_cells"][0]}"}} or {{"inspect": "{a["legal_cells"][1]}"}}'))
+            self.assertNotIn('cost_if_inspect', study.system() + text); self.assertIn('json', (study.system() + text).lower())
+            self.assertEqual(study.check_invariants('S0'), []); self.assertEqual(analyze.discrimination(), [])
+            self.assertEqual(manifest.reference()['digest'], manifest.load()['ladder'][LUNA]['digest'])
+            qwen_s1 = {x['id']: x['input_hash'] for x in manifest.build()['stages']['S1'].get('rows', [])}       # (the manifests differ in every request)
+            self.assertFalse(qwen_s1)
+        self.assertNotEqual(manifest.load()['ladder'][LUNA]['stages']['S1']['digest'], manifest.load()['stages']['S1']['digest'])
+        self.assertEqual(manifest.PATH.read_text(), manifest.text(manifest.build()))
+
+    def test_gpt_6_luna_request_settings_prices_and_caps(self):
+        with as_model(LUNA):
+            b = study.budget(); c = study.provider_config(); openai_provider.check_config(c)
+            self.assertEqual(c['request_template'], {'model': LUNA, 'reasoning_effort': 'low', 'max_completion_tokens': 1500, 'response_format': {'type': 'json_object'}})
+            self.assertEqual(b['prices'], {'input': 0.10, 'cached_input': 0.01, 'cache_write': 0.125, 'output': 0.50}); self.assertEqual(b['prices'], openai_provider.PRICES[LUNA])
+            self.assertEqual((b['aggregate_usd'], b['max_output_tokens'], b['max_calls'], b['max_attempted_calls'], b['max_transport_attempts'], b['max_failed']),
+                             (5, 1500, {'S0': 0, 'P0': 1, 'Q0': 23, 'S1': 576}, 600, 760, 6))
+            self.assertEqual(b['retry']['retryable_http_status'], [429, 500, 502, 503, 504]); self.assertEqual(b['billing_outage'], B['billing_outage'])
+            self.assertEqual(study.check_design(), [])
+            # cost arithmetic: reservation per call, and every call using its whole output allowance, against the USD 5 cap
+            size = study.largest_request_bytes('S1'); reserve = (size * 0.125 + 1500 * 0.50) * 10
+            self.assertLess(reserve, 11000); self.assertLess(b['workers'] * reserve / 1e6, 0.05)
+            self.assertLess(600 * (size * 0.125 + 1500 * 0.50) / 1e6, b['aggregate_usd'] / 5)
+        self.assertEqual(hashlib.sha256((study.ROOT / 'src' / 'openai_provider.py').read_bytes()).hexdigest(), OPENAI_ADAPTER_SHA256)
+        self.assertEqual(hashlib.sha256((study.ROOT / 'src' / 'test_openai_provider.py').read_bytes()).hexdigest(), OPENAI_TESTS_SHA256)
+
+    def luna_call(self, a, text, **usage):
+        with tempfile.TemporaryDirectory() as td:
+            def opener(request, timeout):
+                body = json.loads(request.data); self.assertEqual(list(body), list(openai_provider.BODY_KEYS)); self.assertEqual(request.full_url, openai_provider.URL)
+                return rehearse.Response(json.dumps({'id': 'chatcmpl-1', 'model': LUNA, 'choices': [{'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': text}}],
+                    'usage': dict({'prompt_tokens': 660, 'completion_tokens': 72, 'completion_tokens_details': {'reasoning_tokens': 64}}, **usage)}).encode())
+            api = openai_provider.OpenAI(openai_provider.Ledger(Path(td) / 'l.jsonl', study.budget()), study.provider_config(), opener)
+            return api.call(study.system(), study.user_for(a), 'q0-002-gpt-6-luna:' + a['id'], lambda obj: study.validate(obj, a['legal_cells']))
+
+    def test_original_schema_tolerated_variants_pass_and_invalid_forms_fail(self):
+        with as_model(LUNA):
+            for a in study.fixtures('a')[:3] + study.assignments('S1')[:3]:
+                correct = study.scripted_answer('optimal', a); self.assertEqual(correct, {'inspect': study.policy('optimal', a)})
+                self.assertEqual(rehearse.reference_answer(study.user_for(a), 'optimal'), correct)
+                variants = rehearse.tolerated_variants(correct); self.assertEqual(len(variants), 5)
+                for name, text in variants:
+                    answer, account = self.luna_call(a, text); grade = study.evaluate(a, answer['inspect'], answer)
+                    self.assertTrue(grade['optimal'], name); self.assertNotIn('work', grade)                    # no working field in this schema
+                    self.assertEqual(bool(answer['work']['extra_keys']), name in ('extra_keys', 'extra_cost_object'), name)
+                    self.assertEqual(answer['work']['inspect_respaced'], name == 'inspect_with_spaces')
+                    self.assertEqual(study.validate(json.loads(json.loads(json.dumps(answer, sort_keys=True))['raw']), a['legal_cells']), answer)
+                    self.assertEqual((account['cost_source'], account['reasoning_tokens'], account['visible_output_tokens'], account['response_model']),
+                                     ('computed_from_pinned_prices', 64, 8, LUNA))
+                    self.assertAlmostEqual(account['computed_usd'], (660 * 0.10 + 72 * 0.50) / 1e6)
+                invalid = rehearse.invalid_forms(correct); self.assertEqual(len(invalid), 11)
+                for name, text, category in invalid:
+                    with self.assertRaises(openai_provider.CallFailure) as cm: self.luna_call(a, text)
+                    self.assertEqual(cm.exception.category, category, name); self.assertEqual(cm.exception.accounting['answer_text'], text[:2000])
+            with self.assertRaises(openai_provider.CallFailure) as cm: self.luna_call(study.assignments('S1')[0], '{"inspect": "0,0"}', completion_tokens=1501)
+            self.assertEqual(cm.exception.category, 'output_ceiling_exceeded'); self.assertIn('output_ceiling_exceeded', worker.stop_now(openai_provider))
+
+    def test_scripted_stage_and_probe_for_gpt_6_luna(self):
+        with as_model(LUNA):
+            run = FakeRun('x/s0', study.params('S0')); summary, reason, rows, out = self.stage('S0', None, run)
+            self.assertIsNone(reason); self.assertEqual((summary['graded'], summary['model'], summary['answer_schema'], summary['params']['batch']), (144, LUNA, 'choice_only', 's0-002-gpt-6-luna'))
+            self.assertEqual({r['model'] for r in rows}, {LUNA}); self.assertTrue(all('work' not in r['evaluation'] for r in rows))
+            stub = rehearse.Stub('optimal'); run = FakeRun('x/p0', study.params('P0')); summary, reason, rows, out = self.stage('P0', stub, run)
+            self.assertIsNone(reason); probe = summary['probe']
+            self.assertEqual((probe['passed'], probe['provider_is_pinned'], probe['response_model'], probe['reasoning_tokens'], probe['visible_output_tokens'],
+                              probe['cost_source'], probe['provider_reported_usd'], probe['system_fingerprint']),
+                             (True, None, LUNA, 64, 8, 'computed_from_pinned_prices', None, 'fp_rehearsal'))
+            self.assertEqual(self.ledger()['calls_by_batch'], {'p0-002-gpt-6-luna': 1}); self.assertEqual(self.ledger()['cap_usd'], 5)
+            self.assertAlmostEqual(run.final[1]['probe_tokens_per_byte'], probe['tokens_per_byte'])
+            # a run queued for the other model, or a provider that differs from the design, is refused before any call
+            with self.assertRaises(AssertionError): worker.execute(dict(study.params('P0'), model='qwen/qwen3.7-flash'), self.dir / 'other', opener=stub)
+            with patch.dict(os.environ, {'STUDY_PROVIDER': 'openrouter'}):
+                with self.assertRaises(AssertionError): worker.execute(study.params('P0'), self.dir / 'wrong-provider', opener=stub)
+            with patch.dict(os.environ, {openai_provider.KEY_ENV: ''}):      # the Qwen credential alone does not start an OpenAI chain
+                with self.assertRaises(openai_provider.CallFailure): worker.execute(study.params('P0'), self.dir / 'nokey', opener=stub)
+
+    def test_gates_do_not_cross_models(self):
+        hub = FakeHub()
+        for stage in ('S0', 'P0', 'Q0'): hub.add(stage)                       # the Qwen chain has passed everything
+        self.assertEqual(coordinator.check(hub, 'S1')[1]['params']['stage'], 'Q0')
+        with as_model(LUNA):
+            for stage in ('P0', 'Q0', 'S1'):
+                with self.assertRaises(coordinator.GateRefused) as cm: coordinator.check(hub, stage)
+                self.assertEqual(str(cm.exception), 'exact_runtime_qualification_required')
+            self.assertIsNone(coordinator.check(hub, 'S0')[1])                 # its own scripted stage is not a replay of Qwen's
+            with self.assertRaises(coordinator.GateRefused): coordinator.probe_run(hub)
+            hub.add('S0'); self.assertEqual(coordinator.check(hub, 'P0')[1]['params']['batch'], 's0-002-gpt-6-luna')
+            hub.add('P0'); hub.add('Q0'); self.assertEqual(coordinator.check(hub, 'S1')[1]['params']['model'], LUNA)
+            hub.add('S1', status='failed'); self.assertEqual(coordinator.check_continuation(hub, 1)[0]['batch'], 's1-002-gpt-6-luna-r1')
+        with self.assertRaises(coordinator.GateRefused): coordinator.check_continuation(hub, 1)      # Qwen has no stopped S1
+
+    def chain(self, stub, stages=None, hub=None):
+        hub = hub or FakeHub()
+        with patch('sys.stdout', io.StringIO()) as out: code = chain.run_chain(stages or list(study.STAGES), sr=hub, opener=stub)
+        return code, hub, json.loads(out.getvalue().strip().splitlines()[-1])
+
+    def test_both_chains_on_one_hub_then_billing_stop_and_resume_per_provider(self):
+        qwen_env = {'STUDY_RESULTS_DIR': str(self.dir / 'qwen-results'), provider.LEDGER_ENV: str(self.dir / 'qwen-ledger.jsonl')}
+        luna_env = {'STUDY_MODEL': LUNA, 'STUDY_PROVIDER': 'openai', 'STUDY_RESULTS_DIR': str(self.dir / 'luna-results'), provider.LEDGER_ENV: str(self.dir / 'luna-ledger.jsonl')}
+        with patch.dict(os.environ, qwen_env):
+            code, hub, last = self.chain(rehearse.Stub('optimal', credit_from=2 + 23 + 50))
+            self.assertEqual((code, last['reason']), (3, 'provider_credit_balance_low'))
+        with patch.dict(os.environ, luna_env):
+            code, hub, last = self.chain(rehearse.Stub('optimal', credit_from=2 + 23 + 30), hub=hub)
+            self.assertEqual((code, last), (3, {'state': 'stopped_at_gate', 'stage': 'S1', 'reason': 'provider_billing_stopped'}))
+            status = chain.read_status(); self.assertEqual((status['model'], status['provider'], status['answer_schema']), (LUNA, 'openai', 'choice_only'))
+            s1 = status['stages']['S1']; self.assertEqual((s1['valid'], s1['failed'], s1['resumable']), (30, 0, True)); self.assertGreaterEqual(s1['voided_reservations'], 1)
+            self.assertEqual(sum(self.clock.waits[-20:]), 1200)
+            with patch('sys.stdout', io.StringIO()) as out: self.assertEqual(chain.resume(sr=hub, opener=rehearse.Stub('optimal')), 0)
+            self.assertEqual(json.loads(out.getvalue().strip().splitlines()[-1])['continuation'], 's1-002-gpt-6-luna-r1')
+            with patch('sys.stdout', io.StringIO()) as out: self.assertEqual(chain.verify(hub), 0, out.getvalue()[:400])
+            report = json.loads(out.getvalue()); u = report['stages']['S1']['units']
+            self.assertEqual((report['model'], u['completed'], u['answered_calls'], u['standing_reservations'], u['every_unit_exactly_once']), (LUNA, 576, 576, 576, True))
+            ledger = self.ledger(); self.assertEqual((ledger['calls_by_batch']['s1-002-gpt-6-luna'], ledger['attempted_calls'], ledger['cap_usd']), (576, 600, 5))
+        with patch.dict(os.environ, qwen_env):                                # the Qwen chain resumes on its own category, from its own status and ledger
+            self.assertEqual(chain.read_status()['reason'], 'provider_credit_balance_low')
+            with patch('sys.stdout', io.StringIO()) as out: self.assertEqual(chain.resume(sr=hub, opener=rehearse.Stub('optimal')), 0)
+            with patch('sys.stdout', io.StringIO()) as out: self.assertEqual(chain.verify(hub), 0, out.getvalue()[:400])
+            self.assertEqual(self.ledger()['calls_by_batch'], {'p0-002': 1, 'q0-002': 23, 's1-002': 576}); self.assertEqual(self.ledger()['cap_usd'], 2)
+            # a stop reason of the other provider is not a billing stop of this chain
+            status = chain.read_status(); status.update(state='stopped_at_gate', stopped_stage='S1', reason='provider_billing_stopped'); chain.write_status(status)
+            with patch('sys.stdout', io.StringIO()) as out: self.assertEqual(chain.resume(sr=hub, opener=rehearse.Stub('optimal')), 3)
+            self.assertEqual(json.loads(out.getvalue())['reason'], 'last_stop_was_not_a_billing_stop_of_S1')
+        batches = sorted((r['params']['batch'], r['params']['model'], r['status']) for r in hub.rows)
+        self.assertEqual(len(batches), 10); self.assertEqual(len({b for b, _, _ in batches}), 10)
+        self.assertEqual({m for b, m, _ in batches if 'luna' in b}, {LUNA}); self.assertEqual({m for b, m, _ in batches if 'luna' not in b}, {'qwen/qwen3.7-flash'})
+        # the two chains' results directories hold different statuses; a chain never reads the other's
+        with patch.dict(os.environ, dict(luna_env, STUDY_RESULTS_DIR=qwen_env['STUDY_RESULTS_DIR'])):
+            with patch('sys.stdout', io.StringIO()) as out: self.assertEqual(chain.verify(hub), 1)
+            self.assertEqual(json.loads(out.getvalue())['reason'], 'chain_status_is_for_another_model')
+
+
 # ---------------------------------------------------------------------------------------------------
 # The reference adapter's tests, copied unchanged from
 # researchers/dmarz/notes/pipeline/reference/test_openrouter_provider.py at main 639e9501 (`orp` is src/provider.py).
@@ -1411,4 +1616,7 @@ class LedgerRules(Base):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    import test_openai_provider       # the OpenAI reference adapter's own tests, unchanged file, run in the same test run
+    load = unittest.defaultTestLoader.loadTestsFromModule
+    result = unittest.TextTestRunner().run(unittest.TestSuite([load(sys.modules['__main__']), load(test_openai_provider)]))
+    sys.exit(0 if result.wasSuccessful() else 1)

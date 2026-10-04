@@ -406,12 +406,13 @@ def fixtures(group):
 
 
 def active_set():
-    return design()['qualification']['set']
+    """The qualification set of the chain's model: the model's own `qualification_set`, else `qualification.set`."""
+    return design()['models'][model()].get('qualification_set') or design()['qualification']['set']
 
 
 @functools.lru_cache(maxsize=None)
-def _build(stage, kind):
-    assert kind == schema()
+def _build(stage, kind, group):
+    assert kind == schema() and group == active_set()
     if stage == 'S0': return grid('engineering') + fixtures('a') + fixtures('b')
     if stage == 'P0': return fixtures(active_set())[:1]
     if stage == 'Q0': return fixtures(active_set())[1:]
@@ -421,7 +422,7 @@ def _build(stage, kind):
 
 def _assignments(stage):
     """The stage's assignments for the chain's model (cached per answer schema)."""
-    return _build(stage, schema())
+    return _build(stage, schema(), active_set())
 
 
 _assignments.cache_clear = _build.cache_clear

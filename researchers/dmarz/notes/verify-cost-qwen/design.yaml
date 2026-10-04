@@ -33,6 +33,7 @@ models:
   gpt-6-luna:
     tag: gpt-6-luna                      # batches s0-002-gpt-6-luna, p0-002-gpt-6-luna, ...
     answer_schema: choice_only           # attempt 001's original answer {"inspect": "<cell>"}; request text byte-identical to attempt 001
+    qualification_set: a                 # the 24 requests Qwen answered in attempt 001 (preregistration amendment of 2026-10-04)
     request_template:
       model: gpt-6-luna
       reasoning_effort: low

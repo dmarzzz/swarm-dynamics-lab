@@ -26,7 +26,7 @@ def model_entry(name):
     before = os.environ.get('STUDY_MODEL'); os.environ['STUDY_MODEL'] = name
     try:
         stages = {stage: stage_entry(study.assignments(stage), stage == 'S0') for stage in study.STAGES}
-        return {'answer_schema': study.schema(), 'batches': [study.batch(s) for s in study.STAGES], 'provider': study.provider_name(),
+        return {'answer_schema': study.schema(), 'qualification_set': study.active_set(), 'batches': [study.batch(s) for s in study.STAGES], 'provider': study.provider_name(),
                 'system_prompt_sha256': study.digest(study.system()),
                 'digest': study.digest([(s, stages[s]['digest']) for s in study.STAGES]), 'stages': stages}
     finally:
@@ -67,7 +67,7 @@ def text(manifest):
     for n, name in enumerate(names):
         e = manifest['ladder'][name]
         lines.append(f'  {json.dumps(name)}: {{')
-        for key in ('answer_schema', 'batches', 'digest', 'provider', 'system_prompt_sha256'):
+        for key in ('answer_schema', 'batches', 'digest', 'provider', 'qualification_set', 'system_prompt_sha256'):
             lines.append(f'   {json.dumps(key)}: {json.dumps(e[key])},')
         lines += stage_lines(e['stages'], '   ')
         lines.append('  }' + (',' if n < len(names) - 1 else ''))
