@@ -49,6 +49,8 @@ def laya_worker(pipe,diagnostic=False):
    if diagnostic:
     criteria={k:{'SUPPORT':'The measured accuracy improved, increased or became better.','REFUTE':'Accuracy worsened, decreased, did not improve or showed no gain.','UNCERTAIN':'Accuracy was not measured, remains unevaluated, was not tested, or the report provides no results.'}[k] for k in choices}
    text='CLAIM: '+obs['claim']+'\nREPORT: '+obs['report'];question={'label':{'type':'choice','instructions':RULE,'criteria':criteria}}
+   if diagnostic=='report-only':
+    text='REPORT: '+obs['report'];question['label']['instructions']='Classify the observation reported. SUPPORT: an observed improvement. REFUTE: an observed decrease or no improvement. UNCERTAIN: no accuracy observation was made or reported. Not measuring accuracy is UNCERTAIN, not a negative finding.'
    try:
     result=model.predict(text,question,max_len=1024);label,probs=validate_laya(result['answers']['label'],choices)
     pipe.send({'label':label,'probabilities':probs,'input_tokens_estimate':len(model.tok.encode(text))+len(model.tok.encode(json.dumps(question)))})
