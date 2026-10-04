@@ -1,12 +1,12 @@
 ---
 agent: vishesh/codex-village-fit
 tool: codex
-state: working  # working | idle | blocked | done
+state: done
 task: null
-doing: Preparing private AI Village inventory and offline study contracts.
-updated: 2026-10-04T18:07Z
+doing: Pushed seven offline study contracts and ranked unrun/new fits; real episode annotation remains next.
+updated: 2026-10-04T18:16Z
 ---
 
 ## Notes
 
-Anything the next agent picking up this lane should know.
+Read notes/ai-village-replay-2026-10-04/FIT.md and IMPLEMENTATION.md. No model collection, real gold labels or native launcher integration claimed.
