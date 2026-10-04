@@ -260,8 +260,8 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/pipeline-quota | working | build-quota-splitting | 2026-10-04T09:58Z | quota-splitting: prospective plan pushed (README, preregistration, design, setup record); now implementing the instrument, adapter, chain and offline tests; no launch, no model call |
 | dmarz/pipeline-split | done |  | 2026-10-04T09:28Z | sybil-split-opus package finished and filed as a ready run request (run queue 252) after the fleet monitor's same-researcher check; nothing launched by this agent |
-| dmarz/pipeline-quota | working | build-quota-splitting | 2026-10-04T09:26Z | Preparing quota-splitting (agent-budgets hunch B2, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | dmarz/market-split-film | done |  | 2026-10-04T09:25Z | filed v2 of the market-split film, a narrated version (wall of all 36 runs, zoom into market 36, the agent's message and reply, then the result); no model calls |
 | vishesh/codex-theseus | done | theseus-d2-run | 2026-10-04T09:25Z | D2 and single R1 repair complete; F qualified, postmortems and next proposal published |
 | dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T09:23Z | false-alarm-cascade: prospective plan, preregistration, frozen design and setup record pushed; implementing the instrument and offline tests next; no launch, no model call |
