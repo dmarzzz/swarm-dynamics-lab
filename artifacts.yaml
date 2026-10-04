@@ -639,3 +639,43 @@ artifacts:
           - data/influence-native/native-Q2-01/events-2.jsonl
         commit: 4fcf12c4ca2beba0e4f4ea50309f5053ff36d406-dirty
 requires: '1.2'
+  - id: healing-helping-hands-outcomes
+    category: content
+    type: figure
+    title: 'Healing Helping Hands: measured reference outcomes'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/healing-helping-hands-outcomes/healing-helping-hands-outcomes-v1.png
+        built_at: '2026-10-04T02:44:38Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10454-dfe7-7793-87de-f7edb762ee6e
+        prompt: Assess the experiment and get it to the point where it is compelling, visually interesting, well documented,
+          and has visually compelling data results and animations.
+        ingredients:
+          - researchers/vishesh/notes/healing-helping-hands/visualization/render.py
+          - data/healing-helping-hands/render-inputs.tar.gz
+          - researchers/vishesh/notes/healing-helping-hands/results-summary.json
+        commit: 3e242058d727b50d6bdcaedf3cd457a5554c6b2b-dirty
+  - id: healing-helping-hands-recovery
+    category: content
+    type: film
+    title: 'Healing Helping Hands: recorded evidence repair'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/healing-helping-hands-recovery/healing-helping-hands-recovery-v1.mp4
+        built_at: '2026-10-04T02:44:39Z'
+        note: Recorded logical rounds; first corpus seed and combined scenario selected prospectively. Converted measured
+          GIF to H.264 MP4 with a silent AAC track for the project format.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10454-dfe7-7793-87de-f7edb762ee6e
+        prompt: Build a visually compelling animation of the measured experiment results.
+        ingredients:
+          - data/healing-helping-hands/recovery.gif
+          - researchers/vishesh/notes/healing-helping-hands/visualization/render.py
+          - data/healing-helping-hands/render-inputs.tar.gz
+        commit: 3e242058d727b50d6bdcaedf3cd457a5554c6b2b-dirty
+requires: '1.2'

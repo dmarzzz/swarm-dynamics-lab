@@ -1,6 +1,6 @@
 # Deployment and reproduction
 
-Exploratory work owned by vishesh/codex-regrowth-docs. Active allocation: sim-vishesh, exclusive claim `vishesh-healing-helping-hands`, merged via private fleet claim PR 41, expiry 2026-10-04 04:48:54 UTC. Four CPU cores, approximately 8 GiB RAM, existing authorized host; no new VM or account charges created. Private addresses and credentials are deliberately absent.
+Exploratory work owned by vishesh/codex-regrowth-docs. Completed allocation: sim-vishesh, exclusive claim `vishesh-healing-helping-hands`, merged via private fleet claim PR 41, expiry 2026-10-04 04:48:54 UTC. Four CPU cores, approximately 8 GiB RAM, existing authorized host; no new VM or account charges created. Private addresses and credentials are deliberately absent.
 
 Pilot-01 and pilot-02 used the earlier local runtime. The new dedicated-allocation omission is recorded in pilot-02-post.md; no retroactive allocation is claimed. Diagnostic-03 onward use the exclusive fleet host. Ollama 0.30.5 and the fixed Qwen digest were verified there. Laya source/weights are pinned in agent-definitions.json; runtime Torch 2.14.1, Transformers 4.57.6, Laya 0.3.26, NumPy 2.5.3, Hugging Face Hub 0.36.2. CPU/runtime changes mean wall times across local and fleet attempts are not directly comparable.
 
@@ -24,4 +24,4 @@ The durable SQLite ledger includes earlier qualification costs. Pilot-03 reserve
 
 The hub retains full safe journals, fixture corpora, model tapes and measured history as private artifacts. Public Swarm Lab exposes image/GIF artifacts, metadata and metrics. `visualization/render.py --results <results-root> --attempt <attempt-id> --out <site-dir>` compiles the standalone replay and measured PNG/GIF exports (Matplotlib, NumPy and Pillow). Its inputs are saved data; it makes no inference calls. The supported public fallback is the GIF, not arbitrary uploaded HTML.
 
-Standalone hosting was previously blocked by expired Cloudflare login; the local replay and verified public hub GIF do not depend on that login. No dedicated-host process or allocation may be left running after results are verified and uploads complete.
+Standalone hosting was previously blocked by expired Cloudflare login; the local replay and verified public hub GIF do not depend on that login. After upload verification, the relay and tunnel were stopped, the dedicated `hhh-ollama` container was stopped and removed, and the exclusive fleet claim was released via private agentops PR 61 on 2026-10-04 UTC. The release was mirrored to the hub using the host credential after the local optional mirror lacked sops. The existing VM and saved evidence remain intact.

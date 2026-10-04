@@ -21,7 +21,7 @@ Review routing v1, publish v2 plan before implementation, build a reproducible e
 
 ## Done when
 
-- [ ] Review design, controls, measurement, visualization, agents and failed attempts.
-- [ ] Publish and register prospective v2 plan.
-- [ ] Implement and test paired evidence propagation and reliable model adapters.
-- [ ] Run bounded qualification/pilot, preserve all failures, and publish honest measured visuals.
+- [x] Review design, controls, measurement, visualization, agents and failed attempts.
+- [x] Publish and register prospective v2 plan.
+- [x] Implement and test paired evidence propagation and reliable model adapters.
+- [x] Run bounded qualification/pilot, preserve all failures, and publish honest measured visuals.

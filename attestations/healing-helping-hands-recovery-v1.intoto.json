@@ -1,0 +1,62 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "Build a visually compelling animation of the measured experiment results."
+   },
+   "internalParameters": {
+    "commit": "3e242058d727b50d6bdcaedf3cd457a5554c6b2b-dirty",
+    "session": "codex:01a10454-dfe7-7793-87de-f7edb762ee6e"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "5b12c7c12ca428d4d1f28015eaed859826ff0c4d6e5f803c874d11adcea3323d"
+     },
+     "uri": "data/healing-helping-hands/recovery.gif"
+    },
+    {
+     "digest": {
+      "sha256": "e85d3e5c8f953b7a860f8e0fe9cb982539b86e2b27ae65a3e00097926d341612"
+     },
+     "uri": "researchers/vishesh/notes/healing-helping-hands/visualization/render.py"
+    },
+    {
+     "digest": {
+      "sha256": "a755592b0439024222c2c010f7eeddc11da5c8904581f2a1e8a816fdb646df76"
+     },
+     "uri": "data/healing-helping-hands/render-inputs.tar.gz"
+    },
+    {
+     "digest": {
+      "gitCommit": "3e242058d727b50d6bdcaedf3cd457a5554c6b2b"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T02:44:39Z",
+    "invocationId": "codex:01a10454-dfe7-7793-87de-f7edb762ee6e",
+    "startedOn": "2026-10-04T02:44:39Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "b40219f9e07f34f7bab852f4d11cb7cb258c8a89b662e1f550f2d8fba560bad7"
+   },
+   "name": "artifacts/healing-helping-hands-recovery/healing-helping-hands-recovery-v1.mp4"
+  }
+ ]
+}

@@ -117,6 +117,69 @@
    "sha256": "b6434d725dcaeb3b1cab20f338262fba2ab362746d4fb6804e5ba241b3831210",
    "size_bytes": 531379
   },
+  "healing-helping-hands-outcomes@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791081783,
+     "sha256": "e85d3e5c8f953b7a860f8e0fe9cb982539b86e2b27ae65a3e00097926d341612",
+     "size": 8087,
+     "uri": "researchers/vishesh/notes/healing-helping-hands/visualization/render.py"
+    },
+    {
+     "mtime": 1791081878,
+     "sha256": "a755592b0439024222c2c010f7eeddc11da5c8904581f2a1e8a816fdb646df76",
+     "size": 904346,
+     "uri": "data/healing-helping-hands/render-inputs.tar.gz"
+    },
+    {
+     "mtime": 1791081783,
+     "sha256": "1b8e0bda1ade6c15ebf7913964f488a9ed70ce45e06e22d0b029c70c224b8b3c",
+     "size": 7415,
+     "uri": "researchers/vishesh/notes/healing-helping-hands/results-summary.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791081640,
+   "path": "artifacts/healing-helping-hands-outcomes/healing-helping-hands-outcomes-v1.png",
+   "prompt_sha256": "070a708fe088e26dd4bf78e1eb91b63d93a510353a0b1c95c9033960b67e5e0c",
+   "sha256": "1f26170b0be62beff88944dd2aa0b4f3e097c09aeb36bea330d8d0eecd03e21a",
+   "size_bytes": 135398
+  },
+  "healing-helping-hands-recovery@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791081642,
+     "sha256": "5b12c7c12ca428d4d1f28015eaed859826ff0c4d6e5f803c874d11adcea3323d",
+     "size": 501634,
+     "uri": "data/healing-helping-hands/recovery.gif"
+    },
+    {
+     "mtime": 1791081783,
+     "sha256": "e85d3e5c8f953b7a860f8e0fe9cb982539b86e2b27ae65a3e00097926d341612",
+     "size": 8087,
+     "uri": "researchers/vishesh/notes/healing-helping-hands/visualization/render.py"
+    },
+    {
+     "mtime": 1791081878,
+     "sha256": "a755592b0439024222c2c010f7eeddc11da5c8904581f2a1e8a816fdb646df76",
+     "size": 904346,
+     "uri": "data/healing-helping-hands/render-inputs.tar.gz"
+    }
+   ],
+   "media": {
+    "duration_s": 16.2,
+    "height": 980,
+    "width": 1600
+   },
+   "mime": "video/mp4",
+   "mtime": 1791081642,
+   "path": "artifacts/healing-helping-hands-recovery/healing-helping-hands-recovery-v1.mp4",
+   "prompt_sha256": "85924dac8fe4b2ad18088ca381845a2b0b074d5090134fdacf51c3e4757c08e6",
+   "sha256": "b40219f9e07f34f7bab852f4d11cb7cb258c8a89b662e1f550f2d8fba560bad7",
+   "size_bytes": 364541
+  },
   "influence-native-q2-film@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [

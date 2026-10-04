@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: working
+state: idle
 task: healing-helping-hands-v2
-doing: Review and rebuild Healing Helping Hands under a prospective evidence-atlas plan
-updated: 2026-10-04T01:03Z
+doing: Review and reference pilot published; original Qwen heterogeneous claim remains unqualified
+updated: 2026-10-04T02:51Z
 ---
 
 ## Notes
