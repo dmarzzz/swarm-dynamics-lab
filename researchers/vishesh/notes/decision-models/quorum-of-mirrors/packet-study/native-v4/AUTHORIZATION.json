@@ -1,0 +1,16 @@
+{
+  "experiment": "quorum-of-mirrors",
+  "attempt": "QM-PQ-04",
+  "authority": "Owner requested trace review, necessary improvements and the next run. This bounded assertion-versus-evidence iteration uses the existing budget; no additional funding.",
+  "original_api_cap_usd": 1,
+  "original_infrastructure_cap_usd": 1,
+  "additional_usd": 0,
+  "cumulative_api_cap_usd": 3,
+  "cumulative_infrastructure_cap_usd": 1,
+  "cumulative_total_cap_usd": 4,
+  "max_new_calls": 8,
+  "max_new_reserved_usd": 0.48,
+  "retains_original_calls_and_uncertainty": true,
+  "automatic_retry_or_evaluation": false,
+  "prior_addition_usd": 2
+}

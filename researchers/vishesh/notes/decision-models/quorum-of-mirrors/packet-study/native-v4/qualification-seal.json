@@ -1,0 +1,9 @@
+{
+  "corpus_sha256": "889a1d5215d3b2bcc35bab72c69495e2854b71070007414d507141c68dade9c3",
+  "roots": 4,
+  "calls": 8,
+  "qa": "8/8 exact including paired assertion invariance and DEFER",
+  "operator_individual_case_access_before_run": false,
+  "templates_known": true,
+  "old_evaluation_opened": false
+}

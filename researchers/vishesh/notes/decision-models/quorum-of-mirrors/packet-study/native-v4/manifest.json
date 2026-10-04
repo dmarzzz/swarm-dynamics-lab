@@ -1,0 +1,114 @@
+{
+  "attempt": "QM-PQ-04",
+  "stage": "targeted_qualification_only",
+  "corpus_sha256": "889a1d5215d3b2bcc35bab72c69495e2854b71070007414d507141c68dade9c3",
+  "assignments": [
+    {
+      "id": "QM-PQ-04-000",
+      "case_id": "c2ab5b690518-observed",
+      "root": "c2ab5b690518",
+      "family": "running-positive",
+      "condition": {
+        "source_observed": true
+      },
+      "request_sha256": "7772191d5cf12335210bac26d261328402bc1072a2a2f4c07245171a2f57f0dd",
+      "input_token_upper_bound": 4609,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; running-positive, focal source observed=True; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    },
+    {
+      "id": "QM-PQ-04-001",
+      "case_id": "ad30816de86c-observed",
+      "root": "ad30816de86c",
+      "family": "mass_g-negative",
+      "condition": {
+        "source_observed": true
+      },
+      "request_sha256": "4228b82f1c36558af837a6fb0acf6cc8bbb428a092f4e7b345d1d7f29a1622d8",
+      "input_token_upper_bound": 4669,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; mass_g-negative, focal source observed=True; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    },
+    {
+      "id": "QM-PQ-04-002",
+      "case_id": "f5d9fcd12f2e-observed",
+      "root": "f5d9fcd12f2e",
+      "family": "running-negative",
+      "condition": {
+        "source_observed": true
+      },
+      "request_sha256": "2efeae16fdcf393848a4e2ac27629a3b09c1897e421f0f35f8df43af9ef61d90",
+      "input_token_upper_bound": 4613,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; running-negative, focal source observed=True; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    },
+    {
+      "id": "QM-PQ-04-003",
+      "case_id": "420608251e14-observed",
+      "root": "420608251e14",
+      "family": "mass_g-positive",
+      "condition": {
+        "source_observed": true
+      },
+      "request_sha256": "b78028cbfa005ff0cfda6296824e81214e9eac8abd97a8dc55ca778f14819a70",
+      "input_token_upper_bound": 4669,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; mass_g-positive, focal source observed=True; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    },
+    {
+      "id": "QM-PQ-04-004",
+      "case_id": "ad30816de86c-plan",
+      "root": "ad30816de86c",
+      "family": "mass_g-negative",
+      "condition": {
+        "source_observed": false
+      },
+      "request_sha256": "429bb5b88296331f1b2135309aebedad61299eebc018ecdf5bd63b95d30722a0",
+      "input_token_upper_bound": 4610,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; mass_g-negative, focal source observed=False; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    },
+    {
+      "id": "QM-PQ-04-005",
+      "case_id": "c2ab5b690518-plan",
+      "root": "c2ab5b690518",
+      "family": "running-positive",
+      "condition": {
+        "source_observed": false
+      },
+      "request_sha256": "d4e8b79ee2fa20efef1e3da8ec15e1e2607ed59e4cf97301fe124c1dd7c85fb2",
+      "input_token_upper_bound": 4557,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; running-positive, focal source observed=False; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    },
+    {
+      "id": "QM-PQ-04-006",
+      "case_id": "f5d9fcd12f2e-plan",
+      "root": "f5d9fcd12f2e",
+      "family": "running-negative",
+      "condition": {
+        "source_observed": false
+      },
+      "request_sha256": "dc2669ba912728ab3104491d579be12711908407acef2f0297c7610a1ccbc3b7",
+      "input_token_upper_bound": 4559,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; running-negative, focal source observed=False; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    },
+    {
+      "id": "QM-PQ-04-007",
+      "case_id": "420608251e14-plan",
+      "root": "420608251e14",
+      "family": "mass_g-positive",
+      "condition": {
+        "source_observed": false
+      },
+      "request_sha256": "0d964a0ed2495ec184e447ed330fd3f172289d7b7339920f9f83612bb6d3df43",
+      "input_token_upper_bound": 4610,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; mass_g-positive, focal source observed=False; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    }
+  ],
+  "max_calls": 8,
+  "max_reserved_usd": 0.48,
+  "evaluation_dispatch": false
+}

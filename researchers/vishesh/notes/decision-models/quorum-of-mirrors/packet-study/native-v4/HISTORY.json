@@ -1,0 +1,8 @@
+{
+  "calls": 99,
+  "reserved_usd": 2.345856,
+  "known_actual_usd": 0.39973896,
+  "calls_sha256": "44a4b3a7413877db518334bcf115222efc694b5f17af250294fcbaa044368ab3",
+  "api_cap_usd": 3,
+  "prior_unknown_bound_usd": 0.061344
+}
