@@ -32,3 +32,6 @@ Prospective C3 design preceded implementation. Replaced the laptop reverse tunne
 
 
 C3 full run complete: 600/600 reports, 270/270 worlds, 1800 terminal calls; replay audited all 8100 frames. Qwen 87%, Jev/composite 100%; no incremental Qwen benefit, central verified better mean error in all scenarios. Published measured charts, animation, interactive replay and checksum archive. C3 API cost $0.025212768; original historical ledger restored with uncertain C1 exposure preserved. Worker-local transport completed without failures. Services and experiment container stopped; exclusive claim released through agentops. Scientific post-mortem and eleven-dimension assessment complete; no next run dispatched.
+
+
+C4 preparation: reviewed C3 as same-author PI and preserved its valid negative result. Selected option-order consistency referral versus equal-budget random referral, with always-Jev control; corrected Qwen claim omission for the broader task. Prospective plan specifies 60 S0 + 432 S1 reports, +492 Jev slots, unchanged $0.10 total and $0.03 incremental API ceiling. Twelve offline tests pass. No S0/S1 assignments generated, model calls, resource claims or new experiment execution. Material-plan approval pending under RUN-REVIEW; native collection/relay/render integration remains explicitly blocked before launch.

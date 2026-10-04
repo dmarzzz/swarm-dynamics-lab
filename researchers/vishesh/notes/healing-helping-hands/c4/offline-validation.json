@@ -1,0 +1,19 @@
+{
+  "status": "offline_pass",
+  "tests": 12,
+  "model_calls": 0,
+  "experimental_assignments_materialized": false,
+  "native_launch_ready": false,
+  "owner_update_approval": "pending",
+  "plan_sha256": "2482e2d6fc4ddb9016f2bc2f3a80ff1d503adc36208788288b92e3fb5fb8c9dd",
+  "checked_at": "2026-10-04T08:50:15.306820+00:00",
+  "source_hashes": {
+    "scenarios.py": "788366224377a75a5a94f055a1aa44e947ef0c8cab77b11c17b7839db808f341",
+    "test_contract.py": "aa46f7bd8323f5bbee42f47902db2275466d7d6680f462cc3b1a893f0605536e",
+    "contract.py": "49e0d2166b84b4d3af1d912c4621f4f97328b066c26f4bb2c04d69f7da236c23"
+  },
+  "limitations": [
+    "Native relay/worker budget and admission integration remains unimplemented; do not launch C3 with C4 receipts.",
+    "Synthetic DEV fixtures only; no new experimental evidence."
+  ]
+}
