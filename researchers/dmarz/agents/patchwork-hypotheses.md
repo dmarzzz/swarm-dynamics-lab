@@ -1,10 +1,10 @@
 ---
 agent: dmarz/patchwork-hypotheses
 tool: codex
-state: working
+state: done
 task: design-compositional-safety-study
-doing: Designing the SEC-54 study with causal controls, held-out transfer and scale planning
-updated: 2026-10-04T02:24Z
+doing: Published the unreviewed SEC-54 study plan with verified scale arithmetic and explicit launch gates
+updated: 2026-10-04T02:27Z
 ---
 
 ## Notes
