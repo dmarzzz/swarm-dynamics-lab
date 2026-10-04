@@ -21,3 +21,4 @@ AGENTS.local.md
 artifacts/discussion-memory-v3-film/*.mp4
 artifacts/market-split-film/*.mp4
 artifacts/theseus-film/*.mp4
+dashboard/node_modules
