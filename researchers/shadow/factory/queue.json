@@ -1,0 +1,11 @@
+{
+  "hard_paid_cap_usd": 20,
+  "paid_routes_enabled": false,
+  "specs": [
+    "split-sonnet-linked-strong",
+    "split-sonnet-linked-weak",
+    "split-sonnet-no-links-strong",
+    "split-sonnet-no-links-weak",
+    "split-sonnet-four-checks"
+  ]
+}
