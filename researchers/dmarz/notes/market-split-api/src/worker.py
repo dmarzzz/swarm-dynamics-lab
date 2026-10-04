@@ -90,13 +90,20 @@ def main():
     if not os.environ.get('SWARM_SOURCE'):raise SystemExit('SWARM_SOURCE required')
     import swarm_report as sr
     start=time.monotonic();completed=0
+    stopfile=common.ROOT/'results'/f'{a.attempt}-STOP'
     while completed<a.max_runs:
+        if stopfile.exists():break
         if time.monotonic()-start>common.design()['budget']['stage_timeout_seconds']:raise SystemExit('stage wall-time cap')
         run=sr.next_run(common.EXP)
         if run is None:break
-        with run:
-            if run.params['attempt_id']!=a.attempt:raise ValueError('wrong_attempt')
-            execute_bundle(run.params,common.ROOT/'results'/'hub'/run.id.replace('/','__'),a.ledger,run)
+        try:
+            with run:
+                if run.params['attempt_id']!=a.attempt:raise ValueError('wrong_attempt')
+                execute_bundle(run.params,common.ROOT/'results'/'hub'/run.id.replace('/','__'),a.ledger,run)
+        except BaseException:
+            stopfile.parent.mkdir(parents=True,exist_ok=True)
+            stopfile.write_text('Material failure: do not dispatch further assignments.\n')
+            raise
         completed+=1
     print(f'completed {completed} finite runs',flush=True)
 if __name__=='__main__':main()

@@ -22,6 +22,8 @@ def gate(stage,runs):
     if stage=='S0':return
     parent='S0' if stage=='Q0' else 'Q0';d=common.design();st=d['stages'][parent]
     expected={(t,s,r) for t in st['tasks'] for s in st['seeds'] for r in st['regulators']}
+    probes=[r for r in runs if r['params'].get('stage')=='I0' and all(r['params'].get(k)==v for k,v in common.hashes().items()) and r['status']=='done' and r.get('metrics',{}).get('qualification_pass')==1]
+    if not probes:raise ValueError('matching_interface_probes_incomplete')
     found=set()
     for r in runs:
         p=r['params'];m=r.get('metrics',{})

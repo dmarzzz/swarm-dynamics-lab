@@ -68,12 +68,21 @@ class Checks(unittest.TestCase):
         with self.assertRaises(provider.CallFailure) as e:self.client(longnote).call(observation(),'longnote')
         self.assertEqual(e.exception.category,'invalid_structured_answer')
         self.assertEqual(len(json.loads(e.exception.accounting['response_text'])['note']),201)
+    def test_operation_capacity_table_and_failed_fixture(self):
+        obs=observation();table=obs['legal_operations'];self.assertEqual(table['register']['capacity_per_firm'],[24,22])
+        self.assertEqual(table['register']['quantity_rows'],2)
+        with self.assertRaisesRegex(ValueError,'capacity_exceeded'):
+            sim.validate({'operation':'register','quantities':[[48,44],[0,0]],'note':'preserved failed allocation'},obs)
+        sim.validate({'operation':'register','quantities':[[24,22],[24,22]],'note':'valid allocation'},obs)
+        market=sim.task(20);cfg={**common.design()['cfg'],'max_firms':1}
+        locked=sim.make_observation(market,{'trace':[],'n':1,'cash':20000,'rival_q':market['rival_capacities']},'firm',.38,cfg)
+        self.assertEqual(set(locked['legal_operations']),{'maintain'})
     def test_input_size_before_reservation(self):
         obs=observation();obs['oversize']='x'*21000
         with self.assertRaises(provider.CallFailure):self.client().call(obs,'large')
         self.assertEqual(self.ledger.transact()['attempted_calls'],0)
     def test_no_evaluator_or_hint_leakage(self):
-        obs=observation();self.assertEqual(set(obs),{'round','market','portfolio','rules','last_competitor_outputs','history'})
+        obs=observation();self.assertEqual(set(obs),{'round','market','portfolio','rules','last_competitor_outputs','history','legal_operations'})
         text=json.dumps(obs)+provider.SYSTEM
         for forbidden in ('strategic_fragmentation','counterfactual','split_control','profit_search','MKT-03','evasion','sybil'):
             self.assertNotIn(forbidden,text)
