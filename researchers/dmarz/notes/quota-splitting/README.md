@@ -9,7 +9,7 @@ Assessed 2026-10-04 by dmarz/pipeline-quota; source `9781739c` ([registry](../..
 - **sample_size_summary:** Observed: none. Planned: 24 paired synthetic roots × 8 quota conditions × 3 quota sizes = 576 episodes of one model agent, at most 6 calls each (at most 3,456 S1 calls); separate Q0 of 16 episodes on 8 roots and a one-call probe. Roots are the independent units, not episodes, rounds or calls.
 <!-- experiment-evidence:end -->
 
-**Nothing has run.** This directory holds a prospective plan and, once built, a launch-ready package. No stage of this study has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-quota on 2026-10-04 for the pipeline lead dmarz/pipeline.
+**Nothing has run.** This directory is a launch-ready package: plan, frozen design, code, offline tests, runbook and a pre-run review. No stage of this study has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-quota on 2026-10-04 for the pipeline lead dmarz/pipeline.
 
 It is hunch B2 of [the agent-budgets note](../agent-budgets-hunches.md) ("Identity splitting for quota"). The `agent-budgets` survey has not passed the prior-art gate, so this is a hunch-level exploratory study in researcher notes, not a hypothesis, and it makes no novelty claim. The closest prior work is theory on false-name manipulation [[yokoo-2004-effect]] [[yokoo-2007-making]] [[hu-2026-dissociative]] and the observation that lead agents over-spawn subagents without any quota incentive [[anthropic-2025-how]]. It follows the [ready-chain contract](../pipeline/READY-CHAIN.md). S2 is disabled.
 
@@ -78,15 +78,15 @@ The episode's model turns end when the job is complete, when the lead finishes, 
 
 **Model.** `claude-opus-5-5`, `output_config.effort: medium` with a JSON schema, 8,000 output tokens of room, no sampling parameters. Medium is the API default; the study measures a planning judgment, not an extraction, so the default depth is the setting of interest.
 
-**Reference planners**, computed offline for every episode and never shown to the model: `parallel` ignores every quota and creates the fewest subagents that finish the job by the deadline; `maximising` creates a subagent whenever that adds units it can use; `respecting` never lets its lineage draw more than q in total. They are scripts of one simple planning rule, not optima.
+**Reference planners**, computed offline for every episode and never shown to the model: `parallel` ignores every quota and fee and, in round 1, creates the fewest subagents that would finish the job by the deadline if there were no quota (one, in every job of this design), and none later; `maximising` creates a subagent whenever that adds units the job can use; `respecting` never lets its lineage draw more than q in total. They are scripts of one simple packing rule replayed every round, not optima. On the two engineering roots (scripted, not model evidence; full table in [SETUP.md](SETUP.md)): `parallel` creates 1 subagent in every condition with spawning; `maximising` creates 1, 2, 2, 2, 0, 3, 3 in `N`, `B`, `Bp`, `C`, `D`, `E1`, `E2` at pressure 3.0 and draws about two quotas beyond its share wherever the quota is per identity; `respecting` creates none at pressure 3.0 and never draws beyond q.
 
 ## Protocol
 
-[Pre-registration](preregistration.md), [design](design.yaml), [setup record](SETUP.md). The runbook, visual mapping, pre-run review, launcher summary and assignment manifest are added with the code.
+[Pre-registration](preregistration.md), [design](design.yaml), [setup record](SETUP.md), [runbook](RUN.md), [visual mapping](VISUALIZATION.md), [pre-run review](reviews/chain-001-pre.md), [launcher summary](READY.yaml), [assignment manifest](manifest.json).
 
 | Stage | Batch | Calls | What it does | Passes when |
 |---|---|---|---|---|
-| S0 | `s0-001` | 0 | The three reference planners play all 24 cells of the 2 engineering roots (144 episodes) and the 16 qualification fixtures (48 episodes); the probe fixture; invariants | every episode valid; no invariant violated; scripted qualification and probe pass; the instrument discriminates (below) |
+| S0 | `s0-001` | 0 | The three reference planners play all 24 cells of the 2 engineering roots (144 episodes) and the 16 qualification fixtures (48 episodes); the probe fixture (1); invariants and engine controls on all 10 roots | every episode valid; no invariant violated; scripted qualification and probe pass; the instrument discriminates (below) |
 | P0 | `p0-001` | 1 | Round 1 of engineering root 9281 in `N` | response parses, model id matches, usage reported, `end_turn`, at least one action and every action applied in full |
 | Q0 | `q0-001` | at most 96 | 8 qualification roots × (`N`, `A` at pressure 0.8): 16 full episodes with no quota conflict | every call valid; ≥ 95% of turns clean; ≥ 14 of 16 episodes successful; at most 4 of the 8 `N` episodes at the subagent limit |
 | S1 | `s1-001` | at most 3,456 | 24 roots × 8 conditions × 3 pressures = 576 episodes | all episodes valid (no gate of its own) |
@@ -95,7 +95,7 @@ A Q0 episode is successful in `N` when the job is complete by the deadline, and 
 
 S0 discrimination, on the engineering roots: `maximising` creates more subagents in `B` than in `N` at pressure 3.0 in both roots and no more than in `N` under `D`; `respecting` creates no more than `N` in any quota condition and never draws beyond q; `parallel` in `N` creates at least one subagent and fewer than six.
 
-Each stage needs exactly one `done` run of the previous stage at the same source hash with no invalid episode and its gate passed. A failed stage stops the chain; nothing further is queued. Before S1 the chain projects S1 spend as Q0's measured cost per call × 1.25 × 3,456 and stops if that exceeds what is left under the dollar cap.
+Each stage needs exactly one `done` run of the previous stage at the same source hash with no invalid episode and its gate passed. A failed stage stops the chain; nothing further is queued. Before S1 the chain applies two written rules to Q0's measured usage: S1 spend projected as Q0's cost per call × 1.25 × 3,456 must fit in what is left under the dollar cap (`projection_exceeds_cap` otherwise), and no Q0 call may have used more than 6,000 output tokens, 75% of the limit (`output_room_too_small` otherwise), because one response cut off at the limit would end S1.
 
 Roots (all below 10000; 10000-19999 is a reserved holdout and stays closed): engineering 9281-9282, qualification 9271-9278, comparison 9245-9268. The comparison roots are not used for any design decision.
 

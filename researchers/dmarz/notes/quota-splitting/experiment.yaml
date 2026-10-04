@@ -32,6 +32,7 @@ metrics:
 - output_tokens
 - cost_usd
 - qualification_passed
+- max_output_tokens_per_call
 - excess_identities
 - units_beyond_share
 - job_completion
