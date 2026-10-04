@@ -14,8 +14,8 @@ What it guarantees
 - No answer is ever retried. A request is re-sent only when the provider rejected it before the
   model ran: HTTP 429 and overload statuses (502, 503, 529), at most twice, backoff 2 s then 6 s,
   `retry-after` honoured up to 20 s, all inside the one request timeout.
-- A billing outage is not a model failure: HTTP 402, or any 400/402/403 whose body names credit or
-  balance, pauses dispatch for every thread using this adapter, re-sends the same call every 60 s
+- A billing or limit stop is not a model failure: HTTP 402, or a 400/403/429 whose body names
+  credit, balance, billing, a usage or spend limit, an exceeded limit or insufficient funds, pauses dispatch for every thread using this adapter, re-sends the same call every 60 s
   for up to 20 minutes, and then stops with category `provider_credit_balance_low`.
 - Every failed request keeps its HTTP status, the first 2,000 characters of the response body and
   the request id. Request headers and the key are never stored.
@@ -78,10 +78,16 @@ def stage_of(call_id):
     return call_id.split(':', 1)[0].split('-', 1)[0].upper()
 
 
+BILLING_WORDS = ('credit', 'balance', 'billing', 'usage limit', 'spend limit', 'limit exceeded', 'insufficient')
+
+
 def is_billing_error(status, body):
-    """HTTP 402, or a 400/402/403 whose body names the credit balance."""
+    """A provider-side billing or limit stop, never a model failure: HTTP 402 always, and an HTTP
+    400, 403 or 429 whose body names credit, balance, billing, a usage or spend limit, an exceeded
+    limit or insufficient funds (case-insensitive). A 429 without such words is ordinary rate
+    limiting and goes through the transport retry rule."""
     text = (body or '').lower()
-    return status == 402 or (status in (400, 403) and ('credit' in text or 'balance' in text))
+    return status == 402 or (status in (400, 403, 429) and any(word in text for word in BILLING_WORDS))
 
 
 class Ledger:
