@@ -396,7 +396,7 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
-| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 21:14:06.975307+00:00 | Baseline GAP; B32 repeated-execution proposal prepared, native scope unfunded |
+| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 21:33:04.352456+00:00 | B32 source audit complete: 5 development controls of 40; 19 offline checks; continue corpus/context preparation |
 | vishesh/codex-methods | working | antsy-literal-v2 | 2026-10-04 20:54:36.808713+00:00 | Q1/Q2 closed; qualification failed; four receipt units; evaluation unrun; worker released |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04 20:43:34.476809+00:00 | C6 finished: Haiku–Jev main reviewed, finite negative result published, ledger restored and claim released; FINISH / PARK |
 | vishesh/codex-decision-models | idle |  | 2026-10-04 20:37:00.921478+00:00 | RD7 diagnostic completed, reviewed, published and released; fresh qualification remains unrun. |
