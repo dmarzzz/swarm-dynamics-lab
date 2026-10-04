@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-10-04T18:20:24.901204+00:00",
+  "source_sha256": {
+    "instrument.py": "0f687ac26b80ed5f4252fa4a44e8d795e724b7cb98e23017755f39a5ed3ef9a6",
+    "corpus.py": "fcfdbd4cca260609f4bb556479dfabcf06ebff67398b855ebce1d542dfe2a5f9",
+    "test_packets.py": "b1be301b11ba95c4279bdaf74034b3d4a40f936e0cb77a094ac92d7a03e7e7a9",
+    "seal.py": "2b59fdb299047974ec61c6c51edcc5d4922771f41bd3c9b143e00078896ed168"
+  },
+  "access_policy": "Operator has not read individual qualification/evaluation contents. Automated QA reads all cases; shared controlled grammar is known. This is a tuning holdout, not independent authorship or held-out language.",
+  "splits": {
+    "qualification": {
+      "packets": 24,
+      "roots": 6,
+      "families": {
+        "polarity": 4,
+        "time": 4,
+        "entity": 4,
+        "units": 4,
+        "modality": 4,
+        "correction": 4
+      },
+      "critical_mismatches": 0,
+      "target_balance": {
+        "ONE": 12,
+        "ZERO": 12
+      },
+      "corpus_sha256": "04719635d73056dbc2b5444e73a645bd4405e5911d7721f8a731905b512cdb9d",
+      "qa_sha256": "efc269618967dc2d9bdb20b6e13a22e0d3a92e762ea723e4f655ecc9c2c0da9c",
+      "source_parser_correct": 24,
+      "individual_cases_inspected_by_operator": false
+    },
+    "evaluation": {
+      "packets": 96,
+      "roots": 24,
+      "families": {
+        "polarity": 16,
+        "time": 16,
+        "entity": 16,
+        "units": 16,
+        "modality": 16,
+        "correction": 16
+      },
+      "critical_mismatches": 0,
+      "target_balance": {
+        "ONE": 48,
+        "ZERO": 48
+      },
+      "corpus_sha256": "2b9422e3dceca9e60b3a95e2e313eeca504aca45ccd7e98ea192fbbcd0bee831",
+      "qa_sha256": "b074a133285d098b57ab1ef774c4244e224bcf33a9248470b13dc50b2368de84",
+      "source_parser_correct": 96,
+      "individual_cases_inspected_by_operator": false
+    }
+  },
+  "native_calls": 0
+}

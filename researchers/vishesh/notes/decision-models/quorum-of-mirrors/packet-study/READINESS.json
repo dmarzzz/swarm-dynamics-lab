@@ -1,0 +1,37 @@
+{
+  "assessed_at": "2026-10-04T18:21:26.765156+00:00",
+  "case_readiness": "ready_for_bounded_synthetic_mechanism_study",
+  "native_qualification": "not_run",
+  "run_admission": "not_granted",
+  "tests_passed": 10,
+  "critical_mismatches": 0,
+  "current_seal": "v2",
+  "retired_seal": "v1: constant ZERO qualification targets",
+  "public_evidence": [
+    "PLAN.md",
+    "RESULTS.md",
+    "DEVELOPMENT.md",
+    "development-results.json",
+    "FREEZE.json",
+    "SEAL.json"
+  ],
+  "critical_gates": {
+    "answerability": "pass",
+    "target_consistency": "pass",
+    "actor_isolation": "pass",
+    "target_balance": "pass",
+    "factorial_source_conservation": "pass",
+    "strong_baseline": "pass",
+    "split_disjointness": "pass",
+    "freeze_match": "pass",
+    "failure_boundaries": "pass"
+  },
+  "limited_dimensions": [
+    "synthetic fixed grammar realism",
+    "same-operator authorship",
+    "shared grammar across splits",
+    "24 finite stratified roots are not independent language families",
+    "repetition co-varies packet length"
+  ],
+  "native_calls_this_iteration": 0
+}

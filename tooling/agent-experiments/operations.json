@@ -9,9 +9,9 @@
       "setup_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T18:08:12.715614+00:00",
-      "checked_commit": "5b8e0504311c59e433cbc0b8459b7147332be307",
-      "next_action": "HOLD native progression: claim-cases/RESULTS.md and CASEBOOK.md document 32 development cases/eight sources. Need capable compositional parser baseline and independently varied records before a concrete new native plan. Original origin task stays solved by exact graph traversal. No allocation/admission.",
+      "checked_at": "2026-10-04T18:21:59.245134+00:00",
+      "checked_commit": "fb1987c0b0b96babf0fd8ec659043d519596a1f0",
+      "next_action": "Offline case preparation complete: packet-study/RESULTS.md and READINESS.json. V2 source/claim/decision packets pass bounded-scope case rubric; sealed corpora in local custody. Native adapter, concrete output/qualification and token-cost envelope plus material-scope decision remain before admission. No allocation or model calls.",
       "next_run_approval": "owner"
     },
     {

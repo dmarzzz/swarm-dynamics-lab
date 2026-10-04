@@ -75,7 +75,7 @@
       "evidence_confidence": {
         "score": 1,
         "claim": "A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested.",
-        "rationale": "S0 passed its narrow reader screen. The repaired Q1 produced 16 valid responses but 0/8 correct full-lineage choices; all choices aligned with report majority. Finite scripted fixtures do not establish causal peer influence or swarm efficacy. Saved-data audit confirms report/prior-majority confounding in all eight graded cases. Exact-rule software verification is not native evidence; D1 is parked because its outcomes do not change the current engineering decision. A receipt-grounded gate now has adversarial software checks; this neither authenticates provenance nor adds native evidence. Full native trace audit covers 96 assigned slots and identifies additional schema/instruction confounds. A tuned hybrid solves all 24 authored development bundles in-sample; no semantic model headroom or new native evidence is demonstrated. A second 24-case development suite separates authenticated origin from similarity and untrusted references; exact graph traversal solves all cases. This is software contract validation, not native headroom or generalization. Another 32 authored claim-fidelity variants across eight source scenarios expose lexical false support; these limited controls do not establish semantic model headroom or add native evidence."
+        "rationale": "S0 passed its narrow reader screen. The repaired Q1 produced 16 valid responses but 0/8 correct full-lineage choices; all choices aligned with report majority. Finite scripted fixtures do not establish causal peer influence or swarm efficacy. Saved-data audit confirms report/prior-majority confounding in all eight graded cases. Exact-rule software verification is not native evidence; D1 is parked because its outcomes do not change the current engineering decision. A receipt-grounded gate now has adversarial software checks; this neither authenticates provenance nor adds native evidence. Full native trace audit covers 96 assigned slots and identifies additional schema/instruction confounds. A tuned hybrid solves all 24 authored development bundles in-sample; no semantic model headroom or new native evidence is demonstrated. A second 24-case development suite separates authenticated origin from similarity and untrusted references; exact graph traversal solves all cases. This is software contract validation, not native headroom or generalization. Another 32 authored claim-fidelity variants across eight source scenarios expose lexical false support; these limited controls do not establish semantic model headroom or add native evidence. Packet-study v2 now passes scoped offline case-quality checks with a strong source-text parser and sealed qualification/evaluation corpora. This adds no native evidence or generalization claim; retired v1 qualification imbalance is preserved."
       },
       "sample_size_summary": "S0: 16 fixed configurations, 32 valid calls, 29 MAP-correct. Q1-01: 1 contract-failed, 15 unstarted. Repaired Q1-02: 16/16 valid fixed-context fixtures, 0/8 graded MAP-correct; eight partial cases ungraded. No independent worlds or M1/C1.",
       "sources": [
@@ -89,12 +89,13 @@
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/provenance/RESULTS.md",
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/trace-review/RESULTS.md",
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/case-design/RESULTS.md",
-        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/claim-cases/RESULTS.md"
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/claim-cases/RESULTS.md",
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/RESULTS.md"
       ],
-      "status_at_assessment": "claim_fidelity_development_complete_native_hold",
+      "status_at_assessment": "packet_v2_cases_ready_native_unqualified_unadmitted",
       "assessor": "vishesh/codex-quorum-mirrors",
       "assessed_at": "2026-10-04",
-      "source_commit": "5b8e0504311c59e433cbc0b8459b7147332be307"
+      "source_commit": "fb1987c0b0b96babf0fd8ec659043d519596a1f0"
     },
     {
       "id": "phantom-coast",
