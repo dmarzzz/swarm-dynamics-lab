@@ -2,6 +2,8 @@
 
 ## TLDR
 
+**Current status:** native diagnostic stopped when the user identified the wrong cloud account. Three complete episodes and a partial fourth are preserved; no qualification or treatment-effect result is claimed. Correct Dmarz-account provisioning is required before resuming. [Incident and remediation](reviews/receipt-a2-post.md).
+
 Can a recovery team use a bad recommendation without adopting its false account of the evidence? The previous team left obvious incidents unresolved, sometimes describing a failing live probe as passing. A solo commander repaired incidents but also damaged a healthy deployment. Neither result justifies adding more agents.
 
 This iteration tests a small, practical boundary: **check what reviewers say they observed before the commander uses their advice**. A receipt checks four explicit claims against the same initial telemetry already visible to every agent. It supplies no repair, searches no configuration space and certifies no recommendation as safe. A faithful description can still lead to a bad action.

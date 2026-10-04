@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "receipts": 70,
+  "rows": 1400,
+  "model_calls": 0,
+  "checks": [
+    "complete unique condition assignment",
+    "scores reconstruct from measured corpus",
+    "decisions reconstruct without current labels",
+    "null neutrality",
+    "hard two-check budget",
+    "utility accounting"
+  ]
+}

@@ -2,6 +2,8 @@
 
 Research date: 2026-10-03. Companion documents: [evidence and citations](LITERATURE.md), [harness engineering](HARNESS.md), [protocol template](templates/protocol.md), [checklists](CHECKLISTS.md).
 
+For operational definitions and repeatable initialization, use the [agent lifecycle contract](AGENT-LIFECYCLE.md) and its [research supplement](AGENT-LIFECYCLE-RESEARCH.md). These are recommended contracts, not claims that the current launcher already enforces them.
+
 ## 1. Decide what claim the experiment can establish
 
 An agent can be a research assistant, the experimental subject, or a simulator of another system. These roles require different validation.
@@ -57,7 +59,7 @@ An immutable definition may specify adaptation; record every resulting state tra
 4. **Design controls and splits.** Include a credible single-agent baseline, a scripted heuristic, an independent-agent ensemble without communication and the specific architectural alternative of interest where appropriate. Tune baselines on development data with a documented comparable search allowance. Never deliberately weaken the baseline.
 5. **Define measurement.** Prefer objective state changes, tests or externally checked artifacts. Specify a correct answer, valid action, failure, abstention and safety violation operationally. Use blinded scoring where possible. An agent's claim of completion is not completion.
 6. **Pilot engineering and variance.** Use separate development scenarios to test initialization, logging, failure recovery, difficulty range, costs, outcome variance and evaluator agreement. Record all design changes. Pilot effect estimates are noisy and selection-biased; power for a scientifically useful effect, not the most favorable pilot effect.
-7. **Preregister and freeze.** Time-stamp a local immutable protocol or use an appropriate registry when authorized. Include analysis code on synthetic data, exact allocation, exclusion and stopping rules. Hash data, configuration, grader and schedule. Keep exploratory changes in a new version.
+7. **Preregister and freeze.** For this project, write the experimental plan before implementation; before every Swarm Lab run, publish and verify its readable public page, register the immutable URL and a condition-specific TLDR covering question, treatment, comparator, metrics and limitations, and pass the required public-plan preflight. Include analysis code on synthetic data, exact allocation, exclusion and stopping rules. Hash data, configuration, grader and schedule. Keep exploratory changes in a new version. A local hash alone is not public registration; later plans must be labeled retrospective.
 8. **Execute and collect.** Start with a small smoke test; once its gate passes, run the frozen schedule. Monitor operational integrity without repeatedly testing the effect. Keep a ledger of planned, started, completed, failed, censored and scored units.
 9. **Analyze under the design.** Preserve pairing, clustering and task weights. Report uncertainty, operational failures, costs and deviations alongside average outcomes.
 10. **Report and replicate.** Provide artifacts and enough information for another researcher to reconstruct the claim. A new evaluator, model, task family or implementation is a valuable extension, but distinguish it from direct replication.

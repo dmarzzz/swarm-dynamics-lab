@@ -1,0 +1,209 @@
+{
+  "date": "2026-10-04",
+  "scope": "Ten named projects from the user's screenshot, their developed variants, other local experiment families, sixteen original proposals and eight cross-cutting focus areas. Candidate/question banks are research agendas, not separate executed experiments; this is not a claim to have adjudicated every atlas question or reread every referenced external paper.",
+  "groups": [
+    {
+      "id": "quorum",
+      "title": "Experiment - Quorum of Mirrors",
+      "review_ids": [
+        "SCI-QUORUM-OF-MIRRORS"
+      ],
+      "status": "Prospective",
+      "judgment": "Strong evidence-dependence question. Separate sources, voters and rounds; the useful result must beat source deduplication, not merely show that copies agree."
+    },
+    {
+      "id": "phantom",
+      "title": "Experiment - Phantom Coast",
+      "review_ids": [
+        "SCI-PHANTOM-COAST"
+      ],
+      "status": "Prospective; PC-1 instrument in development",
+      "judgment": "PC-1 now defines a small fixed-evidence history test. Validate the instrument and stage its qualification; active exploration remains a separate question."
+    },
+    {
+      "id": "dissenter",
+      "title": "Experiment - Right Dissenter",
+      "review_ids": [
+        "SCI-RD"
+      ],
+      "status": "Offline prototype",
+      "judgment": "Promising bounded-challenge protocol. Pair useful corrections with harmful reversals and compare against always-check and exact rules."
+    },
+    {
+      "id": "sizing",
+      "title": "Experiment - Optimal Swarm Size",
+      "review_ids": [
+        "SCI-SIZING"
+      ],
+      "status": "Prospective",
+      "judgment": "Careful design, oversized first programme. Establish a size-by-dependency effect before fitting a launch rule; compare against resource-only sizing."
+    },
+    {
+      "id": "heterogeneous",
+      "title": "Research Heterogenous Swarms",
+      "review_ids": [
+        "SCI-HX-FRONTIERS",
+        "SCI-HX"
+      ],
+      "status": "Prospective; latest revision included",
+      "judgment": "The biological revision is more interesting. Verify actual capability costs, partner-specific dependence and charged artifact reuse before claiming ecological mechanisms."
+    },
+    {
+      "id": "theseus",
+      "title": "Experiment - Swarm of Theseus",
+      "review_ids": [
+        "SCI-THESEUS-V2",
+        "SCI-THESEUS-V1"
+      ],
+      "status": "Narrow completed pilot + redesign",
+      "judgment": "The old result establishes supplied-procedure transmission. The stronger next test is selective continuity after acquired practices and multiple replacement waves."
+    },
+    {
+      "id": "immune",
+      "title": "Experiment - Immune Response",
+      "review_ids": [
+        "SCI-I-SCENARIO",
+        "SCI-I-V2",
+        "SCI-I-V3"
+      ],
+      "status": "Native diagnostics + scripted studies",
+      "judgment": "Damage and competence need separate measurement. Healthy success has not translated into reliable repair; the solo reference also harms a healthy control."
+    },
+    {
+      "id": "influence",
+      "title": "Experiment - How to win agents and influence swarms",
+      "review_ids": [
+        "SCI-INFLUENCE-SCENARIO",
+        "SCI-INFLUENCE-V2"
+      ],
+      "status": "Native diagnostics; primary contrast pending",
+      "judgment": "Procurement is a substantial realism improvement. Freeze authorization semantics and qualify every relevant constraint before claiming peer-vote influence."
+    },
+    {
+      "id": "healing",
+      "title": "Experiment - Healing Helping Hands",
+      "review_ids": [
+        "SCI-HEALING"
+      ],
+      "status": "Qualified extraction + programmed propagation",
+      "judgment": "Jev matches the exact extractor. Repair is largely an encoded union/update rule; add temporal revision and independent task utility before a collective-learning claim."
+    },
+    {
+      "id": "antsy",
+      "title": "Experiment - Antsy",
+      "review_ids": [
+        "SCI-ANTSY-V4",
+        "SCI-ANTSY-V3"
+      ],
+      "status": "Completed exploratory studies",
+      "judgment": "External receipts make v4 informative: neither committee beats confidence alone. Fix empty-check/estimator semantics before increasing complexity or headcount."
+    },
+    {
+      "id": "supporting",
+      "title": "Additional experiments and research designs",
+      "review_ids": [
+        "SCI-REG",
+        "SCI-AV",
+        "SCI-G-SENSING",
+        "SCI-DECISION-RESERVE",
+        "SCI-INFLUENCE-GUIDES"
+      ],
+      "status": "Supporting portfolio",
+      "judgment": "Regrowth, Avalon, the methods toy and explanatory proposals remain part of the full project review."
+    }
+  ],
+  "areas": [
+    {
+      "name": "Immune response and recovery",
+      "review_ids": [
+        "SCI-I-SCENARIO",
+        "SCI-I-V2",
+        "SCI-I-V3",
+        "SCI-HEALING",
+        "SCI-REG",
+        "SCI-AV"
+      ],
+      "assessment": "Keep containment, restoration, repair and harmless non-action separate. A healthy competence pass is not a recovery qualification. Measure immediate damage and useful post-repair work.",
+      "priority": "Operational immune repair or one Avalon memory mechanism; do not call an encoded repair rule emergent immunity."
+    },
+    {
+      "name": "Evidence and diversity",
+      "review_ids": [
+        "SCI-QUORUM-OF-MIRRORS",
+        "SCI-HX",
+        "SCI-HX-FRONTIERS",
+        "SCI-ANTSY-V4",
+        "SCI-G-SENSING"
+      ],
+      "assessment": "Vary evidence ancestry separately from model identity, prompts and headcount. Extra calls or privileged information can explain a heterogeneous-team gain.",
+      "priority": "Quorum source-dependence contrast; biological heterogeneity after actual component capability and costs are specified."
+    },
+    {
+      "name": "Memory and knowledge continuity",
+      "review_ids": [
+        "SCI-THESEUS-V1",
+        "SCI-THESEUS-V2",
+        "SCI-HEALING",
+        "SCI-PHANTOM-COAST",
+        "SCI-HX-FRONTIERS"
+      ],
+      "assessment": "Memory usefulness is established only narrowly. Equal-information archives, reset semantics and acquired procedures are needed to distinguish copying, learning and selective forgetting.",
+      "priority": "Theseus selective continuity and Phantom fixed-evidence history; share memory contracts but keep their hypotheses distinct."
+    },
+    {
+      "name": "Dissent and governance",
+      "review_ids": [
+        "SCI-RD",
+        "SCI-QUORUM-OF-MIRRORS",
+        "SCI-AV",
+        "SCI-INFLUENCE-SCENARIO"
+      ],
+      "assessment": "A successful challenge must improve decisions after accounting for harmful reversals, cost and delay. Scripted minorities do not demonstrate spontaneous dissent.",
+      "priority": "Right Dissenter bounded verification, with Quorum owning evidence dependence and influence owning ballot display."
+    },
+    {
+      "name": "Provenance and trust",
+      "review_ids": [
+        "SCI-QUORUM-OF-MIRRORS",
+        "SCI-RD",
+        "SCI-HEALING",
+        "SCI-INFLUENCE-V2"
+      ],
+      "assessment": "Exact source IDs are useful instrument controls. Real lineage can be partial, forged or ambiguous; record evaluator ancestry without handing it to the treatment.",
+      "priority": "Implementable partial-lineage defenses versus an explicitly labeled oracle ceiling, after exact ancestry checks work."
+    },
+    {
+      "name": "Budgets and incentives",
+      "review_ids": [
+        "SCI-SIZING",
+        "SCI-HX-FRONTIERS",
+        "SCI-ANTSY-V4",
+        "SCI-DECISION-RESERVE"
+      ],
+      "assessment": "Charge all selection, verification, retries, failed work, translation and coordination. More actors is not a fixed-budget comparison. Artificial costs can manufacture an apparent ecological advantage.",
+      "priority": "Small sizing pilot and paid verification value; retain Commons/incentive designs as future work with explicit utility sensitivity."
+    },
+    {
+      "name": "Coordination and adaptation",
+      "review_ids": [
+        "SCI-PHANTOM-COAST",
+        "SCI-REG",
+        "SCI-AV",
+        "SCI-HX",
+        "SCI-HX-FRONTIERS"
+      ],
+      "assessment": "Separate extra observations, complementary tools and topology from coordination itself. In active exploration, changed observations are a mediator to measure, not forcibly equalize.",
+      "priority": "One adaptive-allocation or error-correlation mechanism before population sweeps; avoid treating independently copied local games as growing coordination complexity."
+    },
+    {
+      "name": "Measurement and reproducibility",
+      "review_ids": [
+        "SCI-G-SENSING",
+        "SCI-SIZING",
+        "SCI-RD"
+      ],
+      "assessment": "Freeze actual agent/context receipts, phase-specific randomness and outcome-independent scoring. Retain wrong-valid, invalid, failed and not-run assignments separately. Independent worlds/lineages determine uncertainty.",
+      "priority": "Implement the lightweight lifecycle contract and repair launch/validation defects from the original audit before affected runners are reused."
+    }
+  ]
+}

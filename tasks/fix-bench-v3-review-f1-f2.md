@@ -3,14 +3,16 @@ id: fix-bench-v3-review-f1-f2
 type: task
 title: Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/private-control
 for: dmarz
 created: 2026-10-04
 created_by: dmarz/private-control
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T03:51Z
+updated: 2026-10-04T03:51Z
 ---
 
 ## Goal

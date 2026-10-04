@@ -8,6 +8,8 @@ Start with [the main guide](GUIDE.md), copy [the preregistration template](templ
 | --- | --- |
 | [RUN-REVIEW.md](RUN-REVIEW.md) | Required pre-run assessment, post-mortem and repair/rerun cycle |
 | [GUIDE.md](GUIDE.md) | Definitions, study lifecycle, statistical design, reliability, and replication |
+| [AGENT-LIFECYCLE.md](AGENT-LIFECYCLE.md) | Agent identity, actual initialization receipts, context, memory, reset and fork semantics; recommended production contract |
+| [AGENT-LIFECYCLE-RESEARCH.md](AGENT-LIFECYCLE-RESEARCH.md) | 29 annotated research/practitioner entries and access limits |
 | [HARNESS.md](HARNESS.md) | Framework choices, architecture, isolation, deterministic startup, execution and replay |
 | [LITERATURE.md](LITERATURE.md) | Evidence synthesis and annotated bibliography |
 | [templates/protocol.md](templates/protocol.md) | Reusable protocol and preregistration |
@@ -22,7 +24,7 @@ Start with [the main guide](GUIDE.md), copy [the preregistration template](templ
 | [scripts/validate.py](scripts/validate.py) | Artifact/schema, pairing, replay and integrity checks |
 | [VALIDATION.md](VALIDATION.md) | Actual checks performed and remaining limitations |
 
-Run the demonstration from this folder with Python 3.10 or newer:
+The historical demonstration used the commands below with Python 3.10 or newer. Before a new Swarm Lab run, follow the public-plan registration and launch gates in [the lifecycle runbook](AGENT-LIFECYCLE.md). The default validator executes the demonstration twice; it is not a read-only audit command:
 
 ```sh
 python3 scripts/toy_harness.py --config examples/collective-sensing/config.json --out ../../data/agent-study-demo

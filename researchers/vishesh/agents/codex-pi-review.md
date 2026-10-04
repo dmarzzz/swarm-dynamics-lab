@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: working  # working | idle | blocked | done
+state: done
 task: null
-doing: Publish user-requested PI review and agent lifecycle guidance from the completed local audit.
-updated: 2026-10-04T03:45Z
+doing: Published PI review and lifecycle guidance in baaccc0; task complete, no experiments launched.
+updated: 2026-10-04T03:50Z
 ---
 
 ## Notes

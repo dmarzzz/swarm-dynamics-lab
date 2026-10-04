@@ -1,0 +1,252 @@
+[
+  {
+    "id": "SCI-PHANTOM-COAST",
+    "name": "Phantom Coast",
+    "evidence_class": "Prospective PC-1 instrument-development plan, with offline implementation in progress in a concurrent task. No native qualification or scientific result. Latest plan frozen at 2026-10-04T03:40:18.974165+00:00; code/tests were not audited in this delta.",
+    "decision": "Advance the bounded Two Swarms, One World specification first. Preserve The Island No One Visits as the flagship mechanism, contingent on demonstrating decision-dependent observation rather than imposing avoidance in code.",
+    "interest": {
+      "judgment": "A compelling prospective question with a stronger causal story than ordinary misinformation spreading.",
+      "why": "A mistaken map could change inspection choices and thereby remove opportunities for correction. Distinguishing wrong judgments from missing corrective exposure would change how evidence-gathering systems are designed.",
+      "novelty_boundary": "Self-confirming learning, collective sensing, context effects and spatial demonstrations already appear in the proposal's cited work. Those sources were mostly scanned at abstract/introductory depth; no complete novelty search or new independent literature validation is supplied by this review. The possible contribution is an identified feedback mechanism and useful intervention, not a recognizable map or a persistent wrong label."
+    },
+    "robustness": {
+      "supported": "The design correctly separates fixed evidence from adaptive observation, distinguishes retraction from deletion/reset, requires complete-world scoring and identifies pooled/deterministic baselines. The newly written PC-1 plan now specifies a 6×6 world, three same-evidence actors, eight history/communication/state trajectories, a complete final observation ledger, explicit retraction, fixed-denominator error bounds and byte-identical canonical reset inputs. These are plan properties, not validated execution.",
+      "unsupported": "There is no evidence yet of amplification, a self-maintaining exploration trap, benefit from source-aware communication, model-specific susceptibility or recovery. Neither a selected animation nor an Earth-coordinate demonstration would establish these.",
+      "unit": "An independently generated archipelago/world with its sensor and initial-exposure realization. History, communication and reset branches are paired within world; neighboring tiles and agents are dependent measurements.",
+      "independent_variation": "None sampled yet. Vary world geometry, report ambiguity and exposure placement across held-out world families, rather than relabeling one coastline. Repeated identical requests estimate service variation, not environmental generalization.",
+      "assessment": "Scientifically promising, but not execution-ready. The observation model, available actions, stopping horizon, memory contract, resource prices and primary estimand remain unspecified."
+    },
+    "scenario_quality": {
+      "size": "PC-1 fixes 36 cells, three actors and twelve qualification worlds. That is sufficient for an instrument screen, not population inference; the proposed 1,044-call qualification ceiling is large for a simple complete-evidence task and should be staged.",
+      "challenge": "The final step supplies all 36 noiseless observations. This is an appropriate competence and history-persistence control but can reduce the task to copying a complete map. A null is valid. Claims about realistic exploration require the separate PC-2 observation-choice stage.",
+      "complexity": "PC-1 uses identical factual inputs for three actors, so it isolates communication rather than complementary sensing. Its three logical steps and strict-majority aggregation are deliberately small. PC-2 must add real observation choices without hardcoded avoidance.",
+      "realism": "A fictional text-survey task offers strong causal control and resembles evidence collection. It is not visual perception, geographic discovery or a demonstration of changed model weights.",
+      "definition": "PC-1 resolves the action/schema, cell coverage, UNKNOWN versus missing, world-level units and all-assignment error bounds. The primary interaction is in absolute between-history disagreement; accuracy must remain a separate outcome because convergence can be jointly wrong and disagreement can reflect service noise."
+    },
+    "scenarios": [
+      {
+        "name": "Two Swarms, One World",
+        "assessment": "Best first study: counterbalanced early histories followed by equal final factual evidence can localize history dependence. Equal facts do not imply equal prompts, memory access or presentation order. PC-1 now concretely specifies this stage and all-assignment bounds; offline implementation is in progress, not qualification evidence.",
+        "improvement": "Cross history with social/no-social decisions, preserve exact requests, and add a canonical common-input reset. A gap after identical reset requests first calls for checking service/model variation; a retained-history gap is external-context dependence, not permanent belief change."
+      },
+      {
+        "name": "The Island No One Visits",
+        "assessment": "Strongest flagship if actors freely choose what to inspect and those choices suppress corrective exposure. A rule forbidding visits to predicted water would manufacture the claimed effect.",
+        "improvement": "Keep every cell inspectable and reward whole-world accuracy. Match initial information, sensor opportunities and total observation budget; allow realized observations to differ because they are the mediator. Randomize a forced audit observation to test whether restored exposure breaks the loop."
+      },
+      {
+        "name": "The Ghost After Retraction",
+        "assessment": "Useful recovery stage, but stale records alone can explain persistence. Removing a message is not evidence that agents received an explicit correction.",
+        "improvement": "Distinguish authenticated retraction, silent deletion, context reset and a new contradictory measurement. Include actual environmental change so rational stability is not automatically penalized. Measure finite-window persistence with censoring."
+      },
+      {
+        "name": "The Tipping Atlas",
+        "assessment": "Potentially useful exposure-propagation boundary; premature as a large topology sweep. An apparent threshold in one finite grid is not a phase transition.",
+        "improvement": "Defer until propagation beyond exposed cells is established. Then vary one communication/source-layout axis and compare against an exact information-flow baseline across independent worlds."
+      }
+    ],
+    "controls": {
+      "retain": [
+        "No exchange, ordinary exchange and source-aware exchange",
+        "Same-length benign reports and random corruption matched on initial error",
+        "Pooled-evidence single solver and a competent deterministic mapper",
+        "Reset/common-input serialization and genuinely changed-world controls",
+        "PC-1 canonical reset inputs byte-identical across history/communication for each actor",
+        "PC-1 explicit matched-call accounting with realized token differences disclosed",
+        "PC-1 lower/upper error bounds retaining missing predictions"
+      ],
+      "missing": [
+        "Execution validation of the now-specified prompt/schema, source hashes, common-input identity and fixed denominators",
+        "Staged semantic qualification before committing the full 1,044-call maximum",
+        "Independent inspection of the proposed sensor/gold generator and explicit task-value margin before any efficacy study"
+      ],
+      "confounds": [
+        "Social arms may receive more facts, tokens or inference calls",
+        "Early histories can differ in factual content, order and salience simultaneously",
+        "Generated summaries can retain an error after the nominal source disappears",
+        "Adaptive observations are post-treatment mediators; matching them away destroys the exploration question"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "History, communication and reset",
+        "current": "PC-1: two report orders × private/social × retained/reset; three actors and three steps.",
+        "priority": "Essential first study",
+        "proposed_variation": "Counterbalanced histories crossed with exchange/no exchange; terminal retained versus canonical-reset probes",
+        "reason": "Separates externally carried history from serialization and service variability."
+      },
+      {
+        "parameter": "Observation choice and correction",
+        "current": "PC-1 fixed observations; PC-2 proposes twelve actor-selected observations including an audit slot within the same budget.",
+        "priority": "Essential second stage",
+        "proposed_variation": "Fixed schedule versus actor choice, with randomized audit access under a fixed observation budget",
+        "reason": "Identifies the missing-exposure mechanism rather than another classification error."
+      },
+      {
+        "parameter": "Topology, world size, model and Earth demos",
+        "current": "PC-1 fixes 6×6 synthetic grids; Earth, larger worlds and model sweeps deferred.",
+        "priority": "Later stress tests",
+        "proposed_variation": "One axis at a time after the mechanism discriminates; keep Earth separate",
+        "reason": "Avoid an expensive sweep and pretrained-geography confounding."
+      }
+    ],
+    "next_study": {
+      "question": "With equal final factual evidence, does social exchange amplify the effect of an early misleading history, and does canonical reset remove it?",
+      "primary_contrast": "PC-1 prespecifies the retained-minus-reset social disagreement contrast minus the same private contrast. Preserve this planned estimand, but interpret it as history-dependent disagreement and co-report all-assignment mapping error and identical-request variation; it is not automatically harmful error amplification.",
+      "endpoint": "Area-weighted final error with land omission and false-land error reported separately; also report between-history disagreement without equating it to inaccuracy.",
+      "unit": "Paired independently generated world and sensor realization.",
+      "design": "Review and offline-validate the frozen PC-1 generator, request renderer and scorer. Begin native readiness with a bounded complete-evidence semantic screen; only then expand to the planned twelve-world qualification matrix within its explicitly authorized cap. Stage shared pre-treatment work to avoid unnecessary repeated calls if the final protocol allows it. A later effect study needs fresh worlds, a useful-effect margin and planned precision. PC-2 remains a separate plan.",
+      "go_no_go": "Proceed to adaptive exploration only after qualification, serialization checks and fair information accounting pass. Null history effects are valid. Drop collective amplification if pooled single-agent behavior or deterministic state rules explain it; do not tune the held-out worlds to make a dramatic coastline appear."
+    },
+    "sources": [
+      {
+        "path": "review-2026-10-04/scientific-handoff-sources/handoffs/PHANTOM-COAST.md",
+        "detail": "Latest primary-project handoff, read in full; pinned source/hash recorded in scientific-handoff-sources.json. Copy-ready instructions were treated as reviewed content, not launch authorization."
+      },
+      {
+        "path": "review-2026-10-04/scientific-handoff-sources/REIMAGINING.md",
+        "detail": "Full four-variant comparison, adaptive/fixed-evidence distinction, literature-access limits and scope boundaries."
+      },
+      {
+        "path": "review-2026-10-04/scientific-handoff-sources/TOP-FIVE.md",
+        "detail": "Original DM-01 controls and disconfirmation rule; historical scores not treated as scientific evidence."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/decision-models/README.md",
+        "detail": "Area status and text-only spatial-task scope. Dedicated project naming supplied no new qualification or result."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources-live/phantom-coast-PLAN.md",
+        "detail": "Full late PC-1 plan read at 2026-10-04T03:40:18.974165+00:00. Resolves several handoff-level specification gaps. Concurrent code and tests were not audited; no native result inferred."
+      },
+      {
+        "path": "review-2026-10-04/scientific-phantom-delta.json",
+        "detail": "Frozen plan path, SHA-256, UTC cutoff and explicit scope boundary."
+      }
+    ]
+  },
+  {
+    "id": "SCI-QUORUM-OF-MIRRORS",
+    "name": "Quorum of Mirrors",
+    "evidence_class": "Exploratory, unimplemented, unqualified proposal, DM-02. This is distinct from the existing adaptive-quorum experiment; its historical runs cannot be borrowed as Quorum of Mirrors results.",
+    "decision": "Prioritize a small evidence-dependence benchmark with partial-lineage controls. The useful target is an intervention/resource tradeoff, not another demonstration that duplicated votes are dependent.",
+    "interest": {
+      "judgment": "A cleaner initial causal study than adaptive Phantom Coast, with practical value if it identifies when another observation beats another judgment.",
+      "why": "Source count, decision-maker count and communication can be manipulated separately. Explicit versus incomplete lineage tests when implementable deduplication works and when apparent consensus conceals dependence.",
+      "novelty_boundary": "The proposal itself identifies prior work on repeated evidence and correlated Jev judge errors. Reading remains limited; novelty is unestablished. Neither a hundred cloned calls, unanimous errors nor a renamed consensus task is a new scientific contribution."
+    },
+    "robustness": {
+      "supported": "The revised design recognizes ancestry ground truth, task-difficulty confounding, confidence calibration, pooled baselines and separate observation/call budgets.",
+      "unsupported": "No evidence yet that endorsements inflate confidence, partial lineage defeats a defense, a larger quorum helps, or Jev differs from other models. Typed valid outputs do not demonstrate calibrated decisions.",
+      "unit": "An independently generated decision instance/world with a sampled evidence-ancestry graph. Judges, repeated calls and communication rounds are nested observations; branches using the same evidence graph are paired.",
+      "independent_variation": "Not sampled yet. Different source IDs do not guarantee independent measurements: shared sensors, common causes and item difficulty can correlate distinct roots.",
+      "assessment": "A strong sketch, not a protocol. Specify the generative dependence model, allowed lineage information, aggregation rules and budget estimands before claiming either independent sources or fair comparisons."
+    },
+    "scenario_quality": {
+      "size": "A small fixed group can expose duplicate amplification. A hundred is a communication hook, not a necessary experimental scale or independent sample count.",
+      "challenge": "All-explicit source IDs may make deterministic deduplication trivial. Partial lineage adds meaningful ambiguity, but some ancestry configurations are observationally indistinguishable; impossible inference is an information limit, not a model defect.",
+      "complexity": "Use controlled noisy evidence and imperfect visible ancestry before adding large graphs. Separate exact copies, factual restatements and genuinely new measurements.",
+      "realism": "Mirrored reports and repeated endorsements resemble practical research/decision workflows. Grounded reliability cues are preferable to arbitrary crowd authority; real source dependence is rarely captured by identity alone.",
+      "definition": "Freeze fact-preserving paraphrases, lineage visibility, source reliability and how peer messages update state. Report calibrated error, agreement and raw dependence separately; an effective-sample-size approximation is not a literal count of independent minds."
+    },
+    "scenarios": [
+      {
+        "name": "One Witness, a Hundred Votes",
+        "assessment": "Good flagship visualization and controlled dependence test; the generic phenomenon is already expected. The scientific opening is a defense that remains useful with incomplete ancestry at a known cost.",
+        "improvement": "Record true observation ancestry in the evaluator. Give actors explicit or partial lineage without truth labels; compare majority, implementable deduplication, calibrated accumulation and pooled evidence. Keep omniscient deduplication labeled an oracle."
+      },
+      {
+        "name": "The Right Dissenter",
+        "assessment": "A useful stress test of an already formed quorum, not a reason to duplicate the independent dissent project. A designated truthful dissenter would leak the answer.",
+        "improvement": "Pair correct and incorrect fresh evidence with identical delivery budgets and reputation cues. Freeze the pre-injection checkpoint, include a silent/no-new-source comparator, and reuse RD-1 bounded checks as a declared intervention."
+      },
+      {
+        "name": "The Next Observation",
+        "assessment": "Most direct operational payoff: buy another measurement or spend another model call. It cannot hold both source count and observation spending constant while changing evidence acquisition.",
+        "improvement": "Declare an equal-total-resource contrast with explicit prices and latency, separate from the fixed-information duplication contrast. Report a cost-sensitivity frontier; avoid presenting it as a general optimal swarm-size study."
+      },
+      {
+        "name": "The Crowd That Learns to Agree",
+        "assessment": "Useful diagnostic within the flagship. Faster agreement is not automatically harmful; convergence can reflect valid evidence aggregation.",
+        "improvement": "Plot agreement, correctness and calibration jointly at every scheduled round, including failures and abstentions. Stratify shared errors by preregistered task difficulty and report joint failure patterns."
+      }
+    ],
+    "controls": {
+      "retain": [
+        "No discussion, pooled-evidence single solver and deterministic accumulation",
+        "Majority versus source-aware deduplication",
+        "Exact copies versus meaning-preserving restatements",
+        "Correct and incorrect new evidence; repeated identical requests"
+      ],
+      "missing": [
+        "Explicit sensor/source dependence generator and partial-lineage observation contract",
+        "Separate fixed-information and fixed-total-resource estimands",
+        "Independent calibration of returned distributions and difficulty strata",
+        "Parity of observations, context access and decision opportunities for pooled controls"
+      ],
+      "confounds": [
+        "More judges can also mean more sources, tokens or rounds",
+        "Paraphrases may alter facts, reliability cues or salience",
+        "Shared item difficulty induces apparent error correlation",
+        "Hidden lineage available only to a defense creates an oracle advantage",
+        "Abstaining or silencing everyone can improve selected-answer accuracy while reducing useful decisions"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "Unique observation sources",
+        "current": "Proposed independently of agent count",
+        "priority": "Essential first axis",
+        "proposed_variation": "Two source-overlap levels at a fixed group size, report count and call budget",
+        "reason": "Measures dependence without conflating evidence acquisition with replication."
+      },
+      {
+        "parameter": "Lineage visibility and aggregation",
+        "current": "Explicit versus partial lineage; several baselines",
+        "priority": "Essential intervention axes",
+        "proposed_variation": "Full versus prespecified partial ancestry; majority versus implementable source-aware aggregation",
+        "reason": "Tests where the useful defense breaks and exposes information-theoretic limits."
+      },
+      {
+        "parameter": "Agent count and communication rounds",
+        "current": "Unfixed; headline says a hundred",
+        "priority": "Later separate axes",
+        "proposed_variation": "Vary judges while holding sources/rounds fixed, then rounds while holding sources/judges fixed",
+        "reason": "Prevents a misleading single scaling curve from mixing three resources."
+      },
+      {
+        "parameter": "Observation-versus-call spending",
+        "current": "Next Observation ablation proposed",
+        "priority": "Later bounded budget comparison",
+        "proposed_variation": "Fixed total cost with declared observation/call prices and latency sensitivity",
+        "reason": "Turns dependence findings into a usable resource decision without a giant factorial."
+      }
+    ],
+    "next_study": {
+      "question": "Does source-aware aggregation protect accuracy from duplicated endorsements when ancestry is only partially observable?",
+      "primary_contrast": "Source-aware-minus-majority accuracy, compared across overlap levels and full/partial lineage. Match supplied evidence and call budgets between policies within each overlap cell; hold report count fixed while source-root count/dependence is manipulated across overlap cells.",
+      "endpoint": "Held-out world-level decision accuracy; co-report wrong unanimous commitments, selective risk/coverage and calls/records. Probability changes without new evidence are diagnostic until calibrated.",
+      "unit": "Paired independent world/evidence-ancestry realizations, clustered by task family where appropriate.",
+      "design": "Minimum next step: specify and review the source generator, information contract and exact posterior/accumulator reference. Then use one small fixed team and one fixed communication horizon, two overlap levels, two lineage levels and majority/source-aware policies. Include pooled and no-discussion references; reuse frozen evidence whenever possible. Defer size/round sweeps and fresh-observation allocation until this benchmark discriminates.",
+      "go_no_go": "Proceed only after individual competence, provider-repeat variability, truth isolation and equal-budget accounting pass. If ordinary deduplication explains all gains, publish that narrow result. If hidden ancestry makes the cases indistinguishable, report the information limit; do not invent a special swarm failure or let an oracle defense see the missing lineage."
+    },
+    "sources": [
+      {
+        "path": "review-2026-10-04/scientific-handoff-sources/handoffs/QUORUM-OF-MIRRORS.md",
+        "detail": "Latest DM-02 primary-project handoff; read in full, pinned content/hash in scientific-handoff-sources.json; explicitly no native qualification/outcome."
+      },
+      {
+        "path": "review-2026-10-04/scientific-handoff-sources/REIMAGINING.md",
+        "detail": "Four Quorum variants, partial lineage, separate resources, oracle boundary and limited prior-art reading."
+      },
+      {
+        "path": "review-2026-10-04/scientific-handoff-sources/TOP-FIVE.md",
+        "detail": "Original DM-02 design and shared measurement contract; historical rankings remain author judgments."
+      },
+      {
+        "path": "review-2026-10-04/scientific-handoff-sources.json",
+        "detail": "Frozen source copies and immutable upstream commits. The dedicated task titles provide identity, not independent findings; this bounded review does not infer missing implementation or runs from them."
+      }
+    ]
+  }
+]

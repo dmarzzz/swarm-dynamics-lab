@@ -1,0 +1,126 @@
+{
+  "repository": "dmarzzz/swarm-lab",
+  "ref": "f027940fcb5b892057e65306f8e7550456ed2945",
+  "scope": "Pinned first-party project documents supplementing local evidence. Reported numerical results are not newly reproduced unless the review says so.",
+  "sources": [
+    {
+      "path": "researchers/vishesh/notes/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/README.md",
+      "blob_sha": "a117e7d9f21ce4709c7adc89caf40f33360e0388",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/README.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "researchers/vishesh/notes/actual-experiments/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/actual-experiments/README.md",
+      "blob_sha": "7e0a3fa4c2c8c04d254ecd892e90562c9a8c0db5",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/actual-experiments/README.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "researchers/vishesh/notes/priority-research-expansion/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/priority-research-expansion/README.md",
+      "blob_sha": "c029fd5ba53c557a58ae780dd68049cb303a256d",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/priority-research-expansion/README.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "researchers/vishesh/notes/experimental-expansion/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/experimental-expansion/README.md",
+      "blob_sha": "de559b80bd9ed947e254b277f0debf51b37e6c43",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/experimental-expansion/README.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "researchers/vishesh/notes/heterogeneous-swarms/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/heterogeneous-swarms/README.md",
+      "blob_sha": "994bd3d96002c276a14c3a283cf53c7cd85cb55a",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/heterogeneous-swarms/README.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "researchers/vishesh/notes/heterogeneous-swarms/DESIGNS.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/heterogeneous-swarms/DESIGNS.md",
+      "blob_sha": "21a4cfac1448260af3dac0b80e54b525e16ae804",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/heterogeneous-swarms/DESIGNS.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "researchers/vishesh/notes/optimal-swarm-size/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/optimal-swarm-size/README.md",
+      "blob_sha": "3ee0da3df18b6754c704454bfdd5e63df4756173",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/optimal-swarm-size/README.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "researchers/vishesh/notes/external-influence-v2/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/external-influence-v2/README.md",
+      "blob_sha": "85e0d3883eccb28b7d407a68436c48d89653ea4d",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/external-influence-v2/README.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md",
+      "blob_sha": "828b24d9e6eec91c7151893ecd83170d41d3cc52",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/SPEC.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/SPEC.md",
+      "blob_sha": "c449625de0ea489bf1609c822d89595e43c663d5",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/SPEC.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "researchers/vishesh/notes/antsy-verification-v4/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/antsy-verification-v4/README.md",
+      "blob_sha": "73da221f50b4cf0fc87c1fd55eb52a5f9bf8fc45",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/antsy-verification-v4/README.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "researchers/vishesh/notes/antsy-verification-v4/RESULTS.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/antsy-verification-v4/RESULTS.md",
+      "blob_sha": "7ae119b85123d8b1a471ad282f135c2096f72e9c",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/antsy-verification-v4/RESULTS.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "researchers/vishesh/notes/antsy-verification-v4/SPEC.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/antsy-verification-v4/SPEC.md",
+      "blob_sha": "f4414c4b90374b8a8722a6caf8631e335b709a4c",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/antsy-verification-v4/SPEC.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "researchers/vishesh/notes/dissent/PLAN.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/dissent/PLAN.md",
+      "blob_sha": "fc692d47125acd9664ded9018599eb8bdcec13d2",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/dissent/PLAN.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "researchers/vishesh/notes/dissent/PARAMETERS.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/dissent/PARAMETERS.md",
+      "blob_sha": "90e5b4f7e2a085b5d2b64d645fe950e0473cc1d2",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/dissent/PARAMETERS.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/influence-swarms/scenario/README.md",
+      "blob_sha": "d732d6c38a8e21203cbb8cb4a4de6b54b2adb9da",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/influence-swarms/scenario/README.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    },
+    {
+      "path": "dashboard/RESEARCH-AREAS.md",
+      "local": "review-2026-10-04/scientific-sources/dashboard/RESEARCH-AREAS.md",
+      "blob_sha": "2c8f5543f10b6a90abc412c978e995b98bd19490",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/dashboard/RESEARCH-AREAS.md",
+      "reading_depth": "full document, unless overridden by review entry"
+    }
+  ]
+}

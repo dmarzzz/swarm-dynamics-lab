@@ -1,0 +1,218 @@
+[
+  {
+    "id": "SCI-I-V2",
+    "name": "Historical immune ledger v2: native shared-evidence qualification",
+    "evidence_class": "One native model task with eight checkpoint-paired arms; primary control invalid.",
+    "decision": "Preserve as a diagnostic failure case; retire this version as a vehicle for broad immunity claims.",
+    "interest": {
+      "judgment": "Useful mechanistic question; limited scientific novelty in this implementation.",
+      "why": "Separating resident shared corruption from private corruption and returning stale records identifies why a superficial repair can relapse.",
+      "novelty_boundary": "An oracle controller knows the damaged entries and restores checkpoints. This tests conditional repair effects, not autonomous detection, learned institutional immunity or operational resilience."
+    },
+    "robustness": {
+      "supported": "Task 6200 records all eight outcomes. Q11 achieves 18/18 useful requests versus Q10F 7/18, but Q10F contains a response-contract failure; complete-valid primary pairs equal zero. Q01 succeeds natively despite the scripted prediction.",
+      "unsupported": "Population effects, stable treatment rankings, reliable schema adherence and necessity of private restoration.",
+      "unit": "The shared pre-incident task trajectory and its paired branches; rounds and actors are dependent observations.",
+      "independent_variation": "One task, dose 1, seed 1. Seed randomizes arm order, not provider sampling.",
+      "assessment": "Large within-task differences are diagnostically interesting but do not compensate for one task and an invalid primary comparator."
+    },
+    "scenario_quality": {
+      "size": "Eight actors and twelve records suffice to expose state contamination; more actors would add cost before information.",
+      "challenge": "Native endorsement failure shows interface difficulty, not necessarily sophisticated reasoning.",
+      "complexity": "Twenty-four rounds exercise persistence and replay, but exact ledger copying dominates cognition.",
+      "realism": "A useful abstraction of stale state; no actual dependency diagnosis, service deployment or adaptive adversary.",
+      "definition": "Timing and objective completion are explicit; historical malformed-response and retention problems limit measurement validity."
+    },
+    "scenarios": [
+      {"name":"shared_evidence","assessment":"Only native scenario; resident corruption and replay are combined.","improvement":"Separate replay absence and clean-state competence."},
+      {"name":"N","assessment":"No-intervention baseline retains corruption.","improvement":"Retain as damage baseline."},
+      {"name":"Q00","assessment":"Source revocation alone tests containment.","improvement":"Measure lost capacity separately."},
+      {"name":"Q10","assessment":"Private restoration alone leaves shared corruption.","improvement":"Retain mechanistic ablation."},
+      {"name":"Q01","assessment":"Shared restoration plus blocking succeeds here.","improvement":"Test private-restoration necessity on fresh tasks."},
+      {"name":"Q10F","assessment":"Primary comparator is invalid.","improvement":"Preserve failure; qualify repaired contract prospectively."},
+      {"name":"Q11R","assessment":"Restoration without blocking relapses.","improvement":"Vary replay timing after validated recovery."},
+      {"name":"Q11","assessment":"Combined repair succeeds conditionally.","improvement":"Challenge with legitimate intervening learning."},
+      {"name":"CLEAN","assessment":"Establishes competence only for this task.","improvement":"Require comparable fresh clean controls."}
+    ],
+    "controls": {
+      "retain": "CLEAN, N and the shared-restoration × blocking factorial with private restoration fixed.",
+      "missing": "No-replay, sham intervention and legitimate-learning controls were needed; v3 supplies them.",
+      "confounds": "Oracle repair, revoked capacity, inherited histories, fixed task and provider variation."
+    },
+    "parameters": [
+      {"parameter":"Response contract","current":"One native primary-control failure","priority":"mandatory","proposed_variation":"Fix validation before new native comparison","reason":"Invalid execution cannot diagnose the intended mechanism."},
+      {"parameter":"Task coverage and repetitions","current":"One native task","priority":"mandatory","proposed_variation":"Pilot fresh semantic tasks and repeated paired trajectories; choose allocation from variance and useful precision","reason":"More turns do not provide generalization."},
+      {"parameter":"Attacker adaptivity","current":"Scripted source","priority":"later stress test","proposed_variation":"Adaptive attack only after valid repair measurement","reason":"A different claim, not a prerequisite for oracle mechanism tests."}
+    ],
+    "next_study": {
+      "question":"Can the repaired interface support a valid shared-restoration contrast?",
+      "primary_contrast":"Q11 minus Q10F with CLEAN qualification",
+      "endpoint":"All-assigned useful completion, with contract failures separately reported",
+      "unit":"Fresh task trajectory with paired branches",
+      "design":"Use the successor instrument; preregister checks and pilot variance before expansion.",
+      "go_no_go":"Do not continue v2; preserve its invalid pair and require valid clean competence prospectively."
+    },
+    "sources": [{"path":"immune-response-review/REVIEW.md","detail":"Native v2 outcomes and failure diagnosis."},{"path":"review-2026-10-04/evidence-projects-review.json","detail":"Independent evidence and measurement audit."}]
+  },
+  {
+    "id": "SCI-I-V3",
+    "name": "Historical immune ledger v3: five-scenario scripted repair instrument",
+    "evidence_class": "720 scripted outcomes; prospective native ledger qualification was superseded by the operational scenario pilot.",
+    "decision": "Keep as a compact mechanism regression suite; do not present fixture success as model research.",
+    "interest": {
+      "judgment":"Better falsification design than v2; modest standalone discovery value.",
+      "why":"It tests collateral loss from rollback and failure when lineage is unavailable, rather than ensuring every repair succeeds.",
+      "novelty_boundary":"Selective restoration receives oracle damage knowledge. Scripted superiority over broad rollback largely follows the implemented rules."
+    },
+    "robustness": {
+      "supported":"All 720 outcomes reconcile. Broad rollback loses legitimate learning; missing lineage permits recurrence; clean controls succeed.",
+      "unsupported":"Native effectiveness of v3, autonomous selective diagnosis, production safety and general memory retention.",
+      "unit":"Task/scenario trajectory with checkpoint-paired intervention branches.",
+      "independent_variation":"Sixteen task IDs change names, values, target relevance and ownership across five mechanisms; deterministic policies supply no native execution variance.",
+      "assessment":"Mechanism coverage improves, but 720 branches are neither 720 independent incidents nor evidence of statistical power."
+    },
+    "scenario_quality": {
+      "size":"Adequate state-space for a unit-level repair demonstration; twelve records are not twelve realistic tasks.",
+      "challenge":"Meaningful rollback tradeoff, but highest-version copying makes many outcomes predictable.",
+      "complexity":"Multiple state locations and delayed updates are useful; inference and constrained action planning remain shallow.",
+      "realism":"Abstract state-repair model; fixed oracle labels and trustworthy lineage are strong assumptions.",
+      "definition":"Scenarios and branch timing are well defined. Retention against obsolete original truth mismeasures successful updates and needs corrected derived metrics."
+    },
+    "scenarios": [
+      {"name":"shared_evidence","assessment":"Main resident-state/replay mechanism.","improvement":"Retain; test uncertainty in evidence authority later."},
+      {"name":"no_replay","assessment":"Necessary negative control for blocking.","improvement":"Keep matching all other exogenous inputs."},
+      {"name":"no_incident","assessment":"Sham repair reveals unnecessary intervention.","improvement":"Make revoked capacity consequential before claiming low collateral cost."},
+      {"name":"benign_learning","assessment":"Strongest adverse rollback control.","improvement":"Vary which newly learned facts matter; score current truth."},
+      {"name":"missing_lineage","assessment":"Exposes a known-lineage filter's boundary.","improvement":"Later distinguish missing, incorrect and forged provenance."},
+      {"name":"N / Q00","assessment":"No repair versus containment only.","improvement":"Preserve separate baselines."},
+      {"name":"Q10 / Q10F","assessment":"Private restoration without/with blocking.","improvement":"Keep response failures outside mechanism labels."},
+      {"name":"Q01","assessment":"Shared-only restoration plus blocking.","improvement":"Retain because native v2 contradicted scripted necessity claims."},
+      {"name":"Q11R / Q11","assessment":"Both stores restored without/with blocking.","improvement":"Maintain identical pre-intervention histories."},
+      {"name":"Q11S","assessment":"Oracle selective repair preserves unrelated learning.","improvement":"Label oracle upper bound; compare learned selection only separately."},
+      {"name":"CLEAN","assessment":"Uncorrupted competence reference.","improvement":"Require valid sustained success before defining recovery."}
+    ],
+    "controls": {
+      "retain":"All five scenarios and factorial ablations as inexpensive deterministic regressions.",
+      "missing":"For autonomous claims: imperfect detector, false-positive repair and a non-oracle selection policy.",
+      "confounds":"Shared-history dependence, removal of a source seat, programmed policy, target relevance and obsolete-truth retention metric."
+    },
+    "parameters": [
+      {"parameter":"Metric validity","current":"Original-value retention","priority":"mandatory","proposed_variation":"Separate current-truth retention and unchanged-fact retention","reason":"Successful revision must not count as forgetting."},
+      {"parameter":"Semantic task diversity","current":"Permuted ledger fixtures","priority":"mandatory before generalization","proposed_variation":"Independent rule structures and relevance patterns; pilot between-task variance","reason":"Alias changes do not establish domain transfer."},
+      {"parameter":"Repair knowledge and delay","current":"Oracle affected records; fixed timing","priority":"later stress test","proposed_variation":"Imperfect detection and variable delay as distinct factors","reason":"Needed for autonomy claims, not basic bookkeeping validation."}
+    ],
+    "next_study": {
+      "question":"Does repair preserve task-relevant new knowledge without oracle selection?",
+      "primary_contrast":"Evidence-based selective revision versus broad reset",
+      "endpoint":"Current task utility with legitimate-knowledge loss as a constraint",
+      "unit":"Independently generated semantic task trajectory",
+      "design":"Prefer the operational successor; retain this instrument as controls. Size from pilot variance and prespecified precision, not branch count.",
+      "go_no_go":"Correct scoring and full response validation first; no native escalation merely to reproduce scripted advantages."
+    },
+    "sources":[{"path":"immune-response-review/preregistration.md","detail":"Five scenarios, nine arms and prospective gates."},{"path":"review-2026-10-04/evidence-projects-review.json","detail":"Verified scripted results and unresolved metric/validation issues."}]
+  },
+  {
+    "id":"SCI-I-SCENARIO",
+    "name":"Operational immune scenario redesign: engineering A1/A2, native A1/A2 and solo A1",
+    "evidence_class":"384 unique scripted episodes plus 28 native episodes; exploratory architecture and memory comparisons.",
+    "decision":"Keep as a transparent negative/partial pilot; redesign competence checks before more model experiments.",
+    "interest":{
+      "judgment":"Scientifically more interesting than copying the ledger.",
+      "why":"Recovery must satisfy compatibility, persisted-data and feature constraints while preserving a healthy system. Safe restraint and successful repair compete.",
+      "novelty_boundary":"Three fully specified services are a constructed reasoning exercise. Native errors are real observations, but neither immunity nor reviewer causation is established."
+    },
+    "robustness":{
+      "supported":"Replays and summaries reconcile. A1 harms healthy controls. A2 preserves them but fails eight of nine damaged episodes. Solo repairs all three incidents but harms the healthy control.",
+      "unsupported":"Stable architecture rankings, revision-filter benefits, realistic incident frequency and causal explanation from model justifications.",
+      "unit":"Scenario episode; repeated steps and reviewer outputs are dependent measurements.",
+      "independent_variation":"Four constructed cases, one native sample per cell; engineering suffixes are presentation variants. A1/A2 change multiple presentation factors.",
+      "assessment":"Good falsifying pilot, insufficient robustness. Fixed team/solo order and provider variability prevent isolating reviewer effects."
+    },
+    "scenario_quality":{
+      "size":"Three services and six actions are enough to reveal basic failures; enlargement is premature.",
+      "challenge":"Already challenging for this model/interface despite a deterministic solver succeeding; difficulty is demonstrated, realism is not.",
+      "complexity":"Relational constraints and irreversible data are substantive; full observability and one-time advice simplify diagnosis.",
+      "realism":"Plausible failure mechanisms, invented incidents. No real workload, uncertainty, network dynamics or authenticated provenance.",
+      "definition":"Multiple feasible bundles and customer checks improve validity; source/catalog export is still needed to independently verify those checks."
+    },
+    "scenarios":[
+      {"name":"stale_advice","assessment":"Direct obsolete-advice test; A2 instead misreads current checks.","improvement":"Mandatory matched damaged case without misleading memory."},
+      {"name":"migrated_data","assessment":"Useful rollback trap with irreversible format.","improvement":"Vary repair alternatives and require explicit safety predicates."},
+      {"name":"false_alarm","assessment":"Essential restraint control; exposes solo damage.","improvement":"Retain alongside damaged-task competence, not alone."},
+      {"name":"registry_partition","assessment":"Refresh unavailable while local contracts suffice.","improvement":"Later vary whether missing evidence is actually necessary."},
+      {"name":"retain / reset / revision_check","assessment":"Distinct memory-access treatments; none secretly repairs deployment.","improvement":"Factor misleading-memory presence with policy before interpreting treatment effects."},
+      {"name":"engineering A1/A2","assessment":"Feasibility checks; all arms tie.","improvement":"Retain as reference, not independent operational evidence."},
+      {"name":"native A1/A2","assessment":"Preserved failed attempt and bundled presentation amendment.","improvement":"Do not treat their difference as a single-factor causal effect."},
+      {"name":"solo A1","assessment":"Useful cost-aware comparator with a restraint failure.","improvement":"Interleave paired architecture runs on fresh cases after qualification."}
+    ],
+    "controls":{
+      "retain":"Deterministic visible-contract solver, healthy false alarm, solo comparator, all failed episodes.",
+      "missing":"Mandatory clean damaged-task baseline and independent scenario authorship; then a controlled reviewer intervention.",
+      "confounds":"Presentation amendment, fixed order, unequal architecture cost, one sample, model variation and mixed unsafe/deployment labels."
+    },
+    "parameters":[
+      {"parameter":"Competence gate","current":"Valid calls plus healthy preservation","priority":"mandatory","proposed_variation":"Require recovery without misleading memory and preservation with false alarms","reason":"A policy that waits can pass the current gate."},
+      {"parameter":"Evidence checking","current":"Free-text advisory claims","priority":"mandatory next mechanism test","proposed_variation":"Verifiable predicate citations versus ordinary advice; count checking cost","reason":"Current-evidence misinterpretation dominates memory repair."},
+      {"parameter":"Graph, latency, observability, model and team size","current":"Three-service graph, fixed model/team","priority":"later stress tests","proposed_variation":"Change one axis after competence; use independently authored held-out graphs","reason":"More complexity now obscures elementary failure."}
+    ],
+    "next_study":{
+      "question":"Does mechanically checked evidence reduce false advice without preventing repair?",
+      "primary_contrast":"Checked evidence-carrying advice versus ordinary advice, with solo reference",
+      "endpoint":"Healthy customer ticks; harmful applied changes constrained and reported separately",
+      "unit":"Fresh scenario episode, paired on initial state",
+      "design":"First validate clean damaged and healthy controls. Then interleave arms across independent cases; choose cases/repetitions from pilot variance and useful precision.",
+      "go_no_go":"No expansion until both competence requirements pass and source, reviewer, usage and registration evidence is complete."
+    },
+    "sources":[{"path":"immune-response-review/SCENARIO-SPEC.md","detail":"Amended operational protocol."},{"path":"immune-response-review/SCENARIO-ASSESSMENT.md","detail":"Candid outcome interpretation."},{"path":"review-2026-10-04/addendum-immune.json","detail":"Frozen 38-file reconciliation and limits."}]
+  },
+  {
+    "id":"SCI-G-SENSING",
+    "name":"Collective-sensing methods-guide toy",
+    "evidence_class":"Deterministic majority-policy simulation; illustrative inference, no LLM evidence.",
+    "decision":"Keep as an analytical teaching/calibration example; redesign before claiming a swarm discovery.",
+    "interest":{
+      "judgment":"Clear pedagogical value; limited novelty as an experiment.",
+      "why":"It cleanly distinguishes repeated messages from independent evidence and demonstrates paired, clustered analysis.",
+      "novelty_boundary":"Deduplicating known source identities changes an explicit majority rule. Its expected effect is analytically calculable; simulation does not discover LLM behavior."
+    },
+    "robustness":{
+      "supported":"All 960 outcomes reconcile: observed primary difference .0625; illustrative interval [.0125,.1125]. Analytical population difference is .05497875 under the generator.",
+      "unsupported":"Emergent communication, reasoning, autonomous source tracking, human behavior or general provenance-instruction effectiveness.",
+      "unit":"Paired world episode; scenario-level sensor quality supplies clustering.",
+      "independent_variation":"Sixty sampled quality parameters with four fresh signal/truth repetitions each; five within-world decisions are dependent.",
+      "assessment":"Strong bookkeeping example. Sixty values of one parameter are not sixty distinct reasoning task families."
+    },
+    "scenario_quality":{
+      "size":"Five sources distinguish ring from global visibility; additional identical global agents add no scripted information.",
+      "challenge":"Binary voting with perfect source labels is easy and fully specified.",
+      "complexity":"One decision phase, no memory adaptation, tools or agent-generated messages.",
+      "realism":"Abstract duplicate-evidence problem; equal-quality conditionally independent sensors are restrictive.",
+      "definition":"Excellent explicit generator and claim boundaries; retained artifact semantics verified despite validator gaps."
+    },
+    "scenarios":[
+      {"name":"naive_global","assessment":"Counts seven messages, overweighting source zero; deliberately weak mechanism control.","improvement":"Use competent ordinary aggregation for native testing."},
+      {"name":"provenance_global","assessment":"Counts five unique sources; identical scripted decisions.","improvement":"Separate instruction effects from deduplication code."},
+      {"name":"no_communication","assessment":"Private signal only; evidence reach differs.","improvement":"Keep descriptive, not an isolated communication-effect estimate."},
+      {"name":"provenance_ring","assessment":"Three-source neighborhoods; topology and information differ.","improvement":"Match delivered evidence if topology itself is the estimand."}
+    ],
+    "controls":{
+      "retain":"Paired signals/truth, analytical oracle and explicitly scripted baselines.",
+      "missing":"For LLM claims: no-duplicate negative control, competent single classifier, independent ensemble and fixed aggregate budget.",
+      "confounds":"Naive rule guarantees susceptibility; global agents repeat the same computation; topology changes evidence reach."
+    },
+    "parameters":[
+      {"parameter":"Duplication × instruction","current":"Source zero tripled; deterministic rules","priority":"mandatory native mechanism test","proposed_variation":"Cross duplicate presence with narrowly specified provenance instruction; counterbalance source/position","reason":"An interaction tests duplicate-specific benefit."},
+      {"parameter":"Sensor quality/correlation","current":"q uniform .55–.90; conditionally independent equal-quality sensors","priority":"later generalization tests","proposed_variation":"Unequal known reliability, shared errors and imperfect labels separately","reason":"Unique sources need not provide independent evidence."},
+      {"parameter":"Scenario/repeat allocation","current":"60 × 4 illustrative allocation","priority":"mandatory before confirmatory use","proposed_variation":"Pilot bounded-outcome variance and select allocation by precision/cost","reason":"Existing assumed power is not measured model power."}
+    ],
+    "next_study":{
+      "question":"Does a provenance instruction improve competent aggregation specifically when evidence is duplicated?",
+      "primary_contrast":"Instruction × duplication interaction",
+      "endpoint":"Objective correctness with all assigned failures retained and total cost reported",
+      "unit":"Fresh evidence world, paired across conditions",
+      "design":"Start with one classifier; add a team only for a question requiring private information and generated communication. Freeze an analytical reference and independent held-out generator.",
+      "go_no_go":"Require competent baseline, valid registered execution and pilot precision justification; avoid claiming swarm mechanisms from replicated global prompts."
+    },
+    "sources":[{"path":"agent-experiment-guide/examples/collective-sensing/PROTOCOL.md","detail":"Generator, conditions and prospective model boundary."},{"path":"review-2026-10-04/methodology-guide-review.json","detail":"Complete artifact audit and analytical calibration."}]
+  }
+]

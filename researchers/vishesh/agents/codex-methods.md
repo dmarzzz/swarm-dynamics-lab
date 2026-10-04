@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: working
+state: done
 task: antsy-verification-v5
-doing: Repairing null QA semantics and cost-aware verification after fresh feedback
-updated: 2026-10-04T03:42Z
+doing: Completed Antsy v5 numerical repair and cost-aware diagnostics; practical successor gated
+updated: 2026-10-04T03:51Z
 ---
 
 ## Notes

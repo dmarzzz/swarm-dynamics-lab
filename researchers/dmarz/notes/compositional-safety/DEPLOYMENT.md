@@ -14,6 +14,7 @@ The isolated checkout is `/srv/swarm/compositional-safety/swarm-lab`; the pinned
 | q0-003 | 45a01456e930463a99fa5eb9aee5bad26a453a37 | `python src/worker.py Q0 q0-003` |
 | i0-001 | 232dad10f175006ee0f1a778346b6d7d355f2b1d | `python src/probe.py i0-001` |
 | i0-002 | 0911e343031078af1e8e4de8f5a5018ffebe6535 | `python src/probe.py i0-002` |
+| q0-004 | a286ec4c7712eb8cf9221b60455fc440a56434e7 | `python src/worker.py Q0 q0-004` |
 
 Commands run inside the experiment folder using the pinned virtual environment and `SWARM_SOURCE=dmarz/patchwork-hypotheses`. API aliases are injected in process memory from the approved encrypted source. Each attempt has a frozen pre-run review. The finite worker does not restart itself or retry model calls.
 

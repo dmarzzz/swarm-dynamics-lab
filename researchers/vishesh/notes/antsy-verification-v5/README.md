@@ -1,6 +1,6 @@
 # Antsy v5: is another check worth buying?
 
-Status: exploratory engineering repair, not an accepted hypothesis. Parent: [v4 completed assessment](../antsy-verification-v4/RESULTS.md). This iteration must distinguish an informative check from a change caused merely by the estimator's bookkeeping.
+Status: completed exploratory engineering repair; [results and plan assessment](RESULTS.md). Not an accepted hypothesis. Parent: [v4 completed assessment](../antsy-verification-v4/RESULTS.md). This iteration must distinguish an informative check from a change caused merely by the estimator's bookkeeping.
 
 ## Question and decision value
 
@@ -37,3 +37,7 @@ D0: paired before/after recall and harmful-switch counts; diagnostic replay of a
 ## Resources and promotion
 
 One fresh exclusive fleet allocation, maximum 10 minutes each D0/D1, CPU only, zero new hosted/model calls. Preserve v4's cumulative Jev ledger; this iteration does not reset it. Output directories are immutable. Commit pre-run, run, write post-mortem and compare against acceptance. A separate committed plan is required for any new OCR corpus measurement or real-model qualification; neither is implicitly authorized by this plan's engineering gate.
+
+## Practical successor
+
+[NEXT-STUDY.md](NEXT-STUDY.md) specifies receipt intake, required-field scoring, abstention, measured checker costs, matched inference budgets and fresh vendor/layout splits. These application gates remain distinct from the completed estimator diagnostics.

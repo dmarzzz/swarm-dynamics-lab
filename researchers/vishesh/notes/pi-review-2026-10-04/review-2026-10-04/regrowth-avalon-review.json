@@ -1,0 +1,1540 @@
+{
+  "scope": "Principal-investigator audit of regrowth-200 and avalon-swarm; immutable audit snapshot,2026-10-04. Original files were not edited by this subreview.",
+  "severity_scale": {
+    "P1": "fix before next execution/publication",
+    "P2": "material validity, reproducibility or interpretation improvement",
+    "P3": "presentation/maintenance refinement"
+  },
+  "findings": [
+    {
+      "id": "AV-01",
+      "severity": "P1",
+      "title": "Avalon can still launch every condition without the required public design registration",
+      "project": "avalon-swarm",
+      "evidence": [
+        {
+          "path": "avalon-swarm/benchmark.py",
+          "line": 496,
+          "detail": "CLI proceeds directly to directory creation, config plan, and measure(); it has no public_plan import, immutable plan URL, run TLDR, registration receipt, or preflight."
+        },
+        {
+          "path": "avalon-swarm/README.md",
+          "line": 13,
+          "detail": "The documented runnable commands launch unregistered worlds."
+        }
+      ],
+      "impact": "Future launches violate the owner's explicit requirement. Existing JSON plans establish assignments, but cannot establish public preregistration; no saved immutable-plan receipt exists in these run folders.",
+      "recommendation": "Use the existing small public-plan helper (after fixing REG-01), require condition-specific registered descriptions, and fail before any world initialization. Mark historical registration status unknown/not evidenced separately from the 45 completed executions; do not relabel them as preregistered.",
+      "confidence": "high"
+    },
+    {
+      "id": "REG-01",
+      "severity": "P1",
+      "title": "Preflight validates a page shape, not registration of the actual planned worlds",
+      "project": "regrowth-200",
+      "evidence": [
+        {
+          "path": "regrowth-200/src/public_plan.py",
+          "line": 5,
+          "detail": "validate() checks URL shape, TLDR prefix, 40-character run text, and five nonempty headings; it requires no limitations section, condition assignments, execution hash, plan classification, or protocol identity."
+        },
+        {
+          "path": "regrowth-200/src/run.py",
+          "line": 65,
+          "detail": "One receipt is checked before assignments are constructed; the same run_tldr authorizes all six arm×damage worlds."
+        },
+        {
+          "path": "review-2026-10-04/regrowth-avalon-review.json",
+          "line": 1,
+          "detail": "Offline validation accepted headings containing only x and a run TLDR of forty x characters."
+        }
+      ],
+      "impact": "A retrospective page or unrelated immutable page can authorize a new altered experiment, while individual worlds still lack the required condition-specific account of question/treatment/comparator/metrics/limits. This is not evidence that the existing numeric pilot was modified.",
+      "recommendation": "Keep a compact plan schema with experiment/version, prospective/retrospective status, protocol hash, assignment IDs, required per-assignment TLDR fields, and endpoints/limits. Validate those exact assignments before launch and attach their receipt to every terminal record. Rendered public-page verification should be a recorded publication step, not inferred from raw Markdown fetch.",
+      "confidence": "high"
+    },
+    {
+      "id": "REG-02",
+      "severity": "P1",
+      "title": "Laya provider failures bypass the documented three-error stop rule",
+      "project": "regrowth-200",
+      "evidence": [
+        {
+          "path": "regrowth-200/src/run.py",
+          "line": 35,
+          "detail": "Qwen success resets the single error counter; Laya exceptions at line42 increment invalid but never the failure streak."
+        },
+        {
+          "path": "review-2026-10-04/regrowth-runner-faults.json",
+          "line": 1,
+          "detail": "Dummy-policy unit injection produced20 consecutive Laya ConnectionErrors without provider_failure_streak; execution stopped only at a synthetic wall deadline."
+        }
+      ],
+      "impact": "A broken hybrid head can be silently converted into persistent WAIT actions while the experiment appears to exercise the intended model. Provider malfunction is mixed with policy behavior.",
+      "recommendation": "Track provider-specific failure streaks and terminal causes, including qualification. Separate invalid model choices, provider errors and defaults; halt according to the frozen rule. Cache successful decisions or explicitly label cached failure defaults. Add the isolated failure-injection regression test; no live model test is necessary.",
+      "confidence": "high"
+    },
+    {
+      "id": "REG-03",
+      "severity": "P1",
+      "title": "Claimed hard resource bounds are not enforced per dispatch",
+      "project": "regrowth-200",
+      "evidence": [
+        {
+          "path": "regrowth-200/src/run.py",
+          "line": 19,
+          "detail": "Wall and Laya budgets are checked only at round boundaries; a round can dispatch199 Qwen calls, whose90-second request timeout is independent of remaining pilot time."
+        },
+        {
+          "path": "regrowth-200/src/run.py",
+          "line": 41,
+          "detail": "Every sentinel is allowed to call Laya without a remaining-cap reservation."
+        },
+        {
+          "path": "regrowth-200/src/models.py",
+          "line": 12,
+          "detail": "Qwen timeout is fixed90s; ThreadPoolExecutor waits for submitted work when leaving its context."
+        },
+        {
+          "path": "review-2026-10-04/regrowth-runner-faults.json",
+          "line": 1,
+          "detail": "Starting the dummy Laya counter at3999 executes20 calls and fails at4019, overshooting the4000 cap by19."
+        }
+      ],
+      "impact": "A future run can exceed the promised call/wall limits. The Qwen expression calls+len(jobs) also counts already-started jobs twice and may stop early; failures during dispatch leave already-submitted calls without event receipts.",
+      "recommendation": "Reserve each call in a single synchronized ledger before dispatch, pass remaining deadline to each request, stop/cancel pending work on exhaustion, and write an attempted-call receipt even when the round aborts. A few functions and unit fault tests suffice; no scheduler service is needed.",
+      "confidence": "high"
+    },
+    {
+      "id": "REG-04",
+      "severity": "P1",
+      "title": "Publisher reuses historical pilot-v4 run IDs for any output directory",
+      "project": "regrowth-200",
+      "evidence": [
+        {
+          "path": "regrowth-200/src/publish_hub.py",
+          "line": 4,
+          "detail": "The command accepts an arbitrary output directory."
+        },
+        {
+          "path": "regrowth-200/src/publish_hub.py",
+          "line": 21,
+          "detail": "Every uploaded world is named regrowth-200/pilot-v4-<world.id>."
+        },
+        {
+          "path": "regrowth-200/src/publish_hub.py",
+          "line": 23,
+          "detail": "Existing IDs are reopened and artifacts/progress are written even when the existing run is already done."
+        }
+      ],
+      "impact": "Publishing a later experiment through this helper can replace artifacts/progress attached to the original six pilot records, contradicting historical preservation and making provenance ambiguous.",
+      "recommendation": "Derive immutable run IDs from a manifest run ID, require a matching manifest digest when resuming, and refuse writes to a completed record with different source/input hashes. Build and validate a sanitized publication payload locally before upload. Do not run the existing publisher on new results.",
+      "confidence": "high"
+    },
+    {
+      "id": "REG-05",
+      "severity": "P2",
+      "title": "Advertised certificate validity and actual next-hop reachability are different outcomes",
+      "project": "regrowth-200",
+      "evidence": [
+        {
+          "path": "regrowth-200/src/world.py",
+          "line": 39,
+          "detail": "score() checks each stored full path from earlier neighbor states against current topology; it does not follow current next-hop pointers."
+        },
+        {
+          "path": "regrowth-200/site/index.html",
+          "line": 20,
+          "detail": "The selected route overlay follows current f.next pointers, while the displayed validity and hop count describe the stored advertised certificate."
+        },
+        {
+          "path": "review-2026-10-04/regrowth-avalon-verification.json",
+          "line": 1,
+          "detail": "Reanalysis found31 disagreement frames:15 algorithm-damage,8 qwen-damage,8 hybrid-damage. At round40, Qwen/hybrid certificate validity=.855 but current next-hop reachability=.97. At algorithm round52 the values are.79 and.975."
+        }
+      ],
+      "impact": "The recorded primary metric is correctly implemented for the protocol, but it cannot by itself establish packet delivery or evacuating200 agents. The visualization may draw a route different from the certificate being scored, obscuring transient loops and recovery semantics.",
+      "recommendation": "Name the endpoint certificate validity throughout. Add a separately defined next-hop delivery metric (static forwarding or time-varying packet execution, explicitly chosen) and display the actual scored certificate on selection. Preserve original metrics; publish any reanalysis as retrospective.",
+      "confidence": "high"
+    },
+    {
+      "id": "REG-06",
+      "severity": "P2",
+      "title": "Development record misreports Laya qualification for pilot-v2",
+      "project": "regrowth-200",
+      "evidence": [
+        {
+          "path": "regrowth-200/DEVELOPMENT.md",
+          "line": 9,
+          "detail": "Table says both models scored5/10."
+        },
+        {
+          "path": "regrowth-200/PROTOCOL.md",
+          "line": 39,
+          "detail": "V3 amendment says the preceding v2 attempt failed at5/10 Qwen and5/10 Laya."
+        },
+        {
+          "path": "regrowth-200/results/pilot-v2/manifest.json",
+          "line": 1,
+          "detail": "Stored qualification is Qwen5/10 and Laya6/10; independently rescoring all10 fixture records confirms6 under both strict and any-shortest scoring."
+        }
+      ],
+      "impact": "The narrative is inconsistent with preserved raw evidence and the correction changes the apparent effect of prompt revisions, though it does not change gate failure or any swarm outcome.",
+      "recommendation": "Correct both documents to Qwen5/10, Laya6/10; retain the original result JSON and add an explicit editorial correction note. Generate qualification tables from archived fixture records.",
+      "confidence": "high",
+      "status": "fixed in current prose with dated editorial note; original archived evidence unchanged"
+    },
+    {
+      "id": "REG-07",
+      "severity": "P2",
+      "title": "Agent identity, context and reproducible model spin-up need an explicit executable contract",
+      "project": "regrowth-200",
+      "evidence": [
+        {
+          "path": "regrowth-200/src/models.py",
+          "line": 9,
+          "detail": "Qwen receives only a stateless route-length instruction; controller observation cell ID is omitted. There is no conversational history or per-identity model session."
+        },
+        {
+          "path": "regrowth-200/src/models.py",
+          "line": 24,
+          "detail": "Laya likewise receives route sentences and the Qwen proposal, without identity or history; its revision is pinned."
+        },
+        {
+          "path": "regrowth-200/src/run.py",
+          "line": 11,
+          "detail": "Identity-specific state is path plus memo; it resets per world. The map is hard-coded, not generated from manifest seed4100."
+        },
+        {
+          "path": "regrowth-200/src/run.py",
+          "line": 74,
+          "detail": "Qwen metadata records a digest for the mutable qwen3:0.6b alias but does not enforce an expected digest or record Ollama/backend/hardware version."
+        },
+        {
+          "path": "regrowth-200/README.md",
+          "line": 17,
+          "detail": "Runbook requires an existing Laya source/venv/cache via placeholder paths; there is no dependency lock or self-contained resolution step."
+        }
+      ],
+      "impact": "The implementation does provide200 independent controller states, but readers cannot infer200 persistent model contexts, and another machine cannot reliably recreate the inference environment from the commands alone. A fixed seed does not make all serving backends bitwise deterministic.",
+      "recommendation": "Add one small versioned agent spec naming role, model artifact/digest, provider/runtime, initial prompt/schema bytes and hashes, observation allowlist, state ownership, reset/caching policy, context cap, legal actions, and hybrid assignment. Validate resolved model/dependency metadata before qualification. State199 decision agents plus one fixed exit, shared weights and stateless invocations; test initialization/input hashes separately from stochastic output reproducibility.",
+      "confidence": "high"
+    },
+    {
+      "id": "REG-08",
+      "severity": "P2",
+      "title": "Earlier development source hashes cannot be resolved from the retained project or archive",
+      "project": "regrowth-200",
+      "evidence": [
+        {
+          "path": "regrowth-200/results/pilot-v1/manifest.json",
+          "line": 1,
+          "detail": "Protocol/models/runner hashes identify prior bytes but those bytes are absent from the checked project and evidence archive."
+        },
+        {
+          "path": "regrowth-200/results/pilot-v2/manifest.json",
+          "line": 1,
+          "detail": "The same gap affects pilot-v2, pilot-v3 and pilot-v1-attempt2."
+        },
+        {
+          "path": "review-2026-10-04/regrowth-avalon-verification.json",
+          "line": 1,
+          "detail": "The v4 source is recoverable exactly from evidence.tar.gz. Archive checksum, member list, and71 members verified; all earlier attempts miss three source snapshots locally."
+        }
+      ],
+      "impact": "Failed development outcomes remain inspectable, but exact prior prompt/scorer reconstruction requires another version-control artifact. Hashes prove identity only when the corresponding bytes can be retrieved.",
+      "recommendation": "Locate any existing Git objects matching these hashes before declaring evidence lost. For future runs save a small source bundle or immutable commit link before execution; keep qualification prompts/scorer version and exact inputs with each attempt. Do not rewrite earlier manifests to current hashes.",
+      "confidence": "high"
+    },
+    {
+      "id": "REG-09",
+      "severity": "P2",
+      "title": "Report regeneration silently erases hand-maintained publication context",
+      "project": "regrowth-200",
+      "evidence": [
+        {
+          "path": "regrowth-200/src/analyze.py",
+          "line": 12,
+          "detail": "The generator replaces the entire RESULTS.md."
+        },
+        {
+          "path": "regrowth-200/RESULTS.md",
+          "line": 35,
+          "detail": "The publication-boundary section explaining what was uploaded is present in the current report but absent from the generator template."
+        },
+        {
+          "path": "regrowth-200/src/analyze.py",
+          "line": 11,
+          "detail": "Date-specific test, diagnostic and deployment claims are hard-coded and reused for any input run."
+        }
+      ],
+      "impact": "Regenerating the report removes relevant provenance and can carry stale facts into future results.",
+      "recommendation": "Render only a delimited generated table/metrics block or move immutable narrative into a separate linked note. Generate execution facts from the selected manifest and validation receipts; preserve publication/process-compliance status explicitly.",
+      "confidence": "high"
+    },
+    {
+      "id": "REG-10",
+      "severity": "P2",
+      "title": "The pilot cannot identify a diversity benefit and its stronger result should be surfaced",
+      "project": "regrowth-200",
+      "evidence": [
+        {
+          "path": "regrowth-200/results/pilot-v4/summary.json",
+          "line": 1,
+          "detail": "Qwen and hybrid have identical final validity, shortest fraction, excess hops and recovery; hybrid adds476 world Laya calls across two worlds."
+        },
+        {
+          "path": "review-2026-10-04/regrowth-avalon-verification.json",
+          "line": 1,
+          "detail": "Only two distinct Laya overrides occur, repeated in control/damage. One chooses a tied nonminimum route; the other chooses33 hops instead of25 while23 is available. Neither corrects to minimum. Validity and optimal-fraction trajectories are identical; excess hops differ transiently by at most.23."
+        },
+        {
+          "path": "regrowth-200/PROTOCOL.md",
+          "line": 15,
+          "detail": "Attachment cells are fixed, Laya sees Qwen, and additional compute is unmatched; the single map is developmental."
+        }
+      ],
+      "impact": "The record supports a useful negative engineering finding: this hybrid mechanism did not improve measured endpoints, while the exact local algorithm dominates route quality. It does not establish that heterogeneity helps or never helps.",
+      "recommendation": "Write this negative finding plainly. Before any new model spending, define a mechanism-specific prediction and choose a task where the model contributes more than numeric argmin. For a routing continuation, use held-out maps/damage locations, randomized attachment assignments, blind Laya and second-Qwen controls, matched damage exposure, recovery-area/route-stretch endpoints, and paired world replicates.",
+      "confidence": "high"
+    },
+    {
+      "id": "AV-02",
+      "severity": "P1",
+      "title": "Interrupted or invalid-action runs have no terminal assignment ledger and freeze provenance too late",
+      "project": "avalon-swarm",
+      "evidence": [
+        {
+          "path": "avalon-swarm/benchmark.py",
+          "line": 523,
+          "detail": "Assignments are saved before execution, but source.sha256 is written only after every world finishes."
+        },
+        {
+          "path": "avalon-swarm/benchmark.py",
+          "line": 525,
+          "detail": "measure() exceptions propagate out of the sweep with no failed/not_run outcome for the remaining assignments."
+        },
+        {
+          "path": "avalon-swarm/PROTOCOL.md",
+          "line": 79,
+          "detail": "The limitations acknowledge incomplete plans on invalid actions; this is an implemented gap rather than an undisclosed historical failure."
+        }
+      ],
+      "impact": "A partial future study can lack both source identity and terminal failure counts, inviting survivor-only reporting and making exact reconstruction harder. Current45 archived outcomes are complete and source hashes match.",
+      "recommendation": "Freeze code/config/agent-spec and environment metadata before world initialization. Wrap each assigned world in a small terminal-outcome recorder for completed, failed, timeout, canceled and not_run; record reason and preserve partial event-chain tail. Keep execution failure separate from consensus benchmark failure.",
+      "confidence": "high"
+    },
+    {
+      "id": "AV-03",
+      "severity": "P2",
+      "title": "Discussion randomness changes later decisions even when beliefs are unchanged",
+      "project": "avalon-swarm",
+      "evidence": [
+        {
+          "path": "avalon-swarm/benchmark.py",
+          "line": 158,
+          "detail": "One mutable RNG is shared by every policy phase."
+        },
+        {
+          "path": "avalon-swarm/benchmark.py",
+          "line": 200,
+          "detail": "Discussion shuffles a treatment-dependent memory candidate list."
+        },
+        {
+          "path": "avalon-swarm/benchmark.py",
+          "line": 210,
+          "detail": "Proposals shuffle with the same RNG; random votes and assassination also consume it."
+        },
+        {
+          "path": "review-2026-10-04/regrowth-avalon-review.json",
+          "line": 1,
+          "detail": "Isolated policy test: deleting one audited contradiction leaves all beliefs equal, but after discuss() the RNG states and next tied proposals differ."
+        }
+      ],
+      "impact": "Audit/repair and topology comparisons include changes to tie-breaking random streams caused by memory length. This is a legitimate total intervention effect, but a tiny mission-success change cannot be attributed specifically to improved belief correction without separating this mechanism; pairing is weaker than scenario_hash equality suggests.",
+      "recommendation": "Key independent random streams by world, identity, phase, mission and attempt; use deterministic/keyed random priorities for candidate items. Keep this change versioned. Add a unit test that irrelevant memory changes do not perturb proposal tie-breaking randomness when the legal options and scores are identical.",
+      "confidence": "high"
+    },
+    {
+      "id": "AV-04",
+      "severity": "P2",
+      "title": "Topology comparisons change access to task-relevant evidence, degree and RNG behavior together",
+      "project": "avalon-swarm",
+      "evidence": [
+        {
+          "path": "avalon-swarm/benchmark.py",
+          "line": 282,
+          "detail": "Every private signal targets the same seat in the next council; none targets the owner's own council."
+        },
+        {
+          "path": "avalon-swarm/benchmark.py",
+          "line": 180,
+          "detail": "Belief computation ignores every nonlocal target."
+        },
+        {
+          "path": "avalon-swarm/benchmark.py",
+          "line": 329,
+          "detail": "Local topology never moves evidence across councils; federated adds two useful cross-council links and increases degree9→11."
+        },
+        {
+          "path": "avalon-swarm/PROTOCOL.md",
+          "line": 25,
+          "detail": "Each target has only one initial evidence source; adversaries reverse their80%-correct signal."
+        }
+      ],
+      "impact": "Federated versus local estimates the combined effect of making useful evidence available, increasing communication and changing random-policy trajectories. Local versus none cannot deliver useful initial role evidence under these rules. At random source-role mixture, sent signal correctness is only.6×.8+.4×.2=.56; relays create repetition, not independent corroboration.",
+      "recommendation": "Present the existing results as a channel-access/mechanics check. For an information-topology claim, hold relevant evidence and delivered budget fixed, compare degree-matched overlays, vary independent source count/reliability and explicitly measure reach, delay, retained evidence and mission utility. Avoid interpreting more claims as more independent evidence.",
+      "confidence": "high"
+    },
+    {
+      "id": "AV-05",
+      "severity": "P2",
+      "title": "Consensus gate has a floor effect and measures acquisition failure as well as collapse",
+      "project": "avalon-swarm",
+      "evidence": [
+        {
+          "path": "avalon-swarm/results/consensus-v02/outcomes.jsonl",
+          "line": 1,
+          "detail": "All15 conditions fail signal_loss at round5; none passes."
+        },
+        {
+          "path": "avalon-swarm/benchmark.py",
+          "line": 176,
+          "detail": "Uninformed prior=.4 and one positive.8 signal averages to.6, below confidence=.7 before mission/audit evidence. Provenance does not accumulate repeated signals."
+        },
+        {
+          "path": "avalon-swarm/benchmark.py",
+          "line": 90,
+          "detail": "Self-exclusion leaves4 observers for ordinary-good targets; ceil(.8×4)=4 requires unanimity, versus4/5 for other targets."
+        },
+        {
+          "path": "avalon-swarm/PROTOCOL.md",
+          "line": 85,
+          "detail": "The failure clock starts at the first discussion round; it does not require previously achieved truth consensus."
+        }
+      ],
+      "impact": "These outcomes validate the mechanics of a chosen threshold, not a general law that swarms collapse. The same label conflates never acquiring knowledge, losing established knowledge and delayed recovery. Class thresholds and finite observer counts create additional asymmetric difficulty.",
+      "recommendation": "Calibrate on development cases with attainable oracle, unaided, single-agent, Bayesian/exact local and confidently wrong controls. Report continuous truth/agreement coverage and distinguish acquisition latency from loss after a predeclared stable baseline. Freeze thresholds on development seeds; retain the original15 failures unchanged. A post-audit window is a separate registered endpoint, not an after-the-fact rescue.",
+      "confidence": "high"
+    },
+    {
+      "id": "AV-06",
+      "severity": "P2",
+      "title": "Current recovery evidence is driven by one additional successful mission",
+      "project": "avalon-swarm",
+      "evidence": [
+        {
+          "path": "avalon-swarm/RESULTS.md",
+          "line": 27,
+          "detail": "Mean later-mission success is37.3% audit versus38.0% repair."
+        },
+        {
+          "path": "review-2026-10-04/regrowth-avalon-verification.json",
+          "line": 1,
+          "detail": "Paired repair−audit mission differences across seeds0–4 are0,0,1/30,0,0; the pooled gain is one additional success in150 opportunities. Council win differences averagezero."
+        },
+        {
+          "path": "avalon-swarm/report.py",
+          "line": 48,
+          "detail": "Report emits treatment means without paired world estimates or uncertainty; eligible-origin denominators remain unavailable."
+        }
+      ],
+      "impact": "The cautious published prose is appropriate. The table alone can visually overstate a reproducible performance gain, and thousands of claim deliveries must not substitute for five independent worlds.",
+      "recommendation": "Add the five paired differences beside means and identify one extra mission explicitly. For a confirmatory continuation choose a minimum useful world-level improvement, pilot variance, held-out seed count and paired interval/analysis before launch. Report normalized exposure rate and eligible-source denominators, alongside raw counts. Do not claim significance from five-seed bootstrap behavior.",
+      "confidence": "high"
+    },
+    {
+      "id": "AV-07",
+      "severity": "P2",
+      "title": "Deterministic scripted initialization is strong but not yet a reusable real-agent lifecycle",
+      "project": "avalon-swarm",
+      "evidence": [
+        {
+          "path": "avalon-swarm/benchmark.py",
+          "line": 28,
+          "detail": "Roles, signals and policies are keyed by SCENARIO_VERSION, seed and identity; source snapshot preserves prior scenario streams."
+        },
+        {
+          "path": "avalon-swarm/benchmark.py",
+          "line": 291,
+          "detail": "Observation explicitly constrains role knowledge, council membership, inbox, audited labels and mission history."
+        },
+        {
+          "path": "avalon-swarm/benchmark.py",
+          "line": 161,
+          "detail": "Memory is a32-claim deque whose eviction order follows global sender ordering; context contains no individual vote history."
+        },
+        {
+          "path": "avalon-swarm/ADAPTER.md",
+          "line": 7,
+          "detail": "Real structured provider adapter, context handling, isolation and cost reservation are described but not implemented."
+        }
+      ],
+      "impact": "Identical scripted agents can be recreated today, and all13 tests pass. Replacing policies with LLMs without a frozen spec would introduce uncontrolled context exposure, memory selection, call scheduling and within-run adaptation. The trusted Python object boundary cannot enforce model/tool isolation.",
+      "recommendation": "Keep the current baseline lightweight. Before model execution add declarative initial agent specs and identity/role assignments; version an observation serializer, context budget/truncation and eviction policy, permitted tools, update/repair rules, allowed phase transitions and event-keyed randomness. Snapshot initial hashes, then log state/context deltas and policy-version changes. Make heterogeneity a preassigned treatment; learned changes must be named interventions. Verify identical initialization without requiring identical stochastic outputs.",
+      "confidence": "high"
+    },
+    {
+      "id": "REG-11",
+      "severity": "P3",
+      "title": "Replay emphasizes100% validity while the decisive6.5% shortest-path result is visually secondary",
+      "project": "regrowth-200",
+      "evidence": [
+        {
+          "path": "regrowth-200/site/index.html",
+          "line": 5,
+          "detail": "Headline panels say200×Qwen and show rounded valid percentages."
+        },
+        {
+          "path": "regrowth-200/site/index.html",
+          "line": 7,
+          "detail": "Main table/chart omit final shortest fraction and excess hops; baseline has no grid panel."
+        },
+        {
+          "path": "regrowth-200/src/check_replay.cjs",
+          "line": 3,
+          "detail": "A desktop/mobile smoke script exists but depends on a developer-specific absolute Playwright path and changes the screenshot while checking."
+        }
+      ],
+      "impact": "The visual craft is already coherent, but a quick reader can infer model success and fail to notice that the exact algorithm produces optimal routes while model routes are poor. The headline multiplication can imply200 separately loaded models.",
+      "recommendation": "Use200 states /199 decision cells and shared-weight model labels. Put final validity, shortest fraction, route stretch, cost and registration/exploratory status together; give overlapping curves distinguishable markers/dashes, provide text summaries and keyboard cell selection, and show baseline on equal footing. Keep the existing restrained palette/layout; avoid a full UI rebuild. Make visual QA use resolved dependencies and write review screenshots to temporary output.",
+      "confidence": "high"
+    }
+  ],
+  "coverage": [
+    {
+      "path": "regrowth-200/.gitignore",
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/DEVELOPMENT.md",
+      "bytes": 1871,
+      "sha256": "ead9b670310eb0d639ce6fb200a8a3f143597667263079329bb39c64ec1b7533",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/PROTOCOL.md",
+      "bytes": 7694,
+      "sha256": "e6475b84c965f998176bb6bce3dd473e1fbaf2b6704baeba70df9006772a21e1",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/README.md",
+      "bytes": 3715,
+      "sha256": "d388ee15d685d003df0c77566ff6d9508d8ffee142ef051c83f4784eacbd43a4",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/REGISTRATION-FAILURE.md",
+      "bytes": 2313,
+      "sha256": "aee34e7b0f24a1ce8f0f2502139f8f0c523ea6f5de871a3452bbcb5973060529",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/RESULTS.md",
+      "bytes": 3688,
+      "sha256": "f4ba05fb9128cb2a305241e2d79e41c89be93572d234ad24d57856bed32617b1",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/agent-definition.json",
+      "bytes": 643,
+      "sha256": "917c5db812422627fec8fcdc52406ba19f1d23bd48d1a7b994c2c75754174756",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 10,
+      "review_mode": "full declarative agent specification review"
+    },
+    {
+      "path": "regrowth-200/results/evidence-index.json",
+      "bytes": 2972,
+      "sha256": "e599c7b9468565b5738f470200749371b9b6b2374a0b85a2ae0ac2a770d40a04",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 4,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/evidence.tar.gz",
+      "bytes": 308029,
+      "sha256": "7520e011a22162e76e1e07b6a85c57535f7892319e2a68d0350a545428daee85",
+      "review_mode": "archive checksum, every member and path index verified; all text source differences reviewed"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1/algorithm-control.json",
+      "bytes": 116,
+      "sha256": "866a35e5d7d302ed787d2000fae288e137cf29874406758f93fe03e5b3be59c7",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1/algorithm-damage.json",
+      "bytes": 115,
+      "sha256": "95ec6422e8340f41c16bf80519d773c188bce4aa6124fc70a06029ad1ed49879",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1/hybrid-control.json",
+      "bytes": 111,
+      "sha256": "149dfab4108b5b5fdcd75756a904a8b2e946d3ee733768823cea241e981157c5",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1/hybrid-damage.json",
+      "bytes": 109,
+      "sha256": "b55bb858ccf06818ffa60815c174f7eb5d33526bb5207869ad68280dbbb1c1e5",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1/manifest.json",
+      "bytes": 1263,
+      "sha256": "bfed4bc431c4ae2ce708c013b3469923a449466fd3a358ee23c5b5e5fc8db4bb",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 20,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1/qwen-control.json",
+      "bytes": 107,
+      "sha256": "9bac6bd268a764c56db010686eb0765608f3a918e26ad8addb0087ec215a047a",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1/qwen-damage.json",
+      "bytes": 105,
+      "sha256": "50a5b905bc336e6565dcaa34b0528f6128a08e7a6b10b51155757b6ddb1c2851",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/algorithm-control.json",
+      "bytes": 121,
+      "sha256": "d702ca3482ae80696528512c015364644f06cee64d2d7869e01fe449f1d09561",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/algorithm-damage.json",
+      "bytes": 120,
+      "sha256": "bbe8c7990e8ae0d98f314d4eab30fe0debd6526e6897eaef59726f132058c185",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/hybrid-control.json",
+      "bytes": 116,
+      "sha256": "ff32325c9a3c23f63a1be8f60d0692a7f3f4cffc31a2268e38f21f183a604356",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/hybrid-damage.json",
+      "bytes": 114,
+      "sha256": "96f5a6b912d8686c7f5809065015f26cdcaf1e2203e858cbdae16f169ddbccbf",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/manifest.json",
+      "bytes": 1837,
+      "sha256": "e400664c90540904e9163be9bd85bcd038c716cd0552ec0c552f0d16111cc580",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 23,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/qualification.json",
+      "bytes": 1336,
+      "sha256": "94f2a718effc607a6cee765f477a6ad942dd7aa71eea380442ffee3154051402",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 5,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/qwen-control.json",
+      "bytes": 112,
+      "sha256": "6691cf29fb66edd8993fd5308e68babac7c7f6de154d5fb9fdfbc4251ebb7a71",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/qwen-damage.json",
+      "bytes": 110,
+      "sha256": "d97da47777b39102497cc294a51e60d817da5e3fe61dd5c76dcaa97fde70edef",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2.log",
+      "bytes": 425,
+      "sha256": "93ae13d8c59e8b08abaad8437615bb991372b9cc4278d675a12ba46fff3d29ff",
+      "lines": 3,
+      "json_entries": 1,
+      "other_lines": 2,
+      "review_mode": "all lines structurally checked, JSON status/progress parsed; raw diagnostics not disclosed"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1.log",
+      "bytes": 85,
+      "sha256": "cdf144a80fbca7ed122d45438d7b95c94abc71d8a73eae573c9fd6b7dfd5b48a",
+      "lines": 1,
+      "json_entries": 1,
+      "other_lines": 0,
+      "review_mode": "all lines structurally checked, JSON status/progress parsed; raw diagnostics not disclosed"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/algorithm-control.json",
+      "bytes": 121,
+      "sha256": "d702ca3482ae80696528512c015364644f06cee64d2d7869e01fe449f1d09561",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/algorithm-damage.json",
+      "bytes": 120,
+      "sha256": "bbe8c7990e8ae0d98f314d4eab30fe0debd6526e6897eaef59726f132058c185",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/hybrid-control.json",
+      "bytes": 116,
+      "sha256": "ff32325c9a3c23f63a1be8f60d0692a7f3f4cffc31a2268e38f21f183a604356",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/hybrid-damage.json",
+      "bytes": 114,
+      "sha256": "96f5a6b912d8686c7f5809065015f26cdcaf1e2203e858cbdae16f169ddbccbf",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/manifest.json",
+      "bytes": 1841,
+      "sha256": "0601f393702077dfaaa5ae4267a4f686d3e844046c4db6f467477e9b72520587",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 23,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/qualification.json",
+      "bytes": 2743,
+      "sha256": "34f3ac8490b44090011c2a5e10d352edbd3de9d0d6272cc878be44be0e6ac897",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 10,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/qwen-control.json",
+      "bytes": 112,
+      "sha256": "6691cf29fb66edd8993fd5308e68babac7c7f6de154d5fb9fdfbc4251ebb7a71",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/qwen-damage.json",
+      "bytes": 110,
+      "sha256": "d97da47777b39102497cc294a51e60d817da5e3fe61dd5c76dcaa97fde70edef",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2.log",
+      "bytes": 425,
+      "sha256": "93ae13d8c59e8b08abaad8437615bb991372b9cc4278d675a12ba46fff3d29ff",
+      "lines": 3,
+      "json_entries": 1,
+      "other_lines": 2,
+      "review_mode": "all lines structurally checked, JSON status/progress parsed; raw diagnostics not disclosed"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/algorithm-control.json",
+      "bytes": 121,
+      "sha256": "d702ca3482ae80696528512c015364644f06cee64d2d7869e01fe449f1d09561",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/algorithm-damage.json",
+      "bytes": 120,
+      "sha256": "bbe8c7990e8ae0d98f314d4eab30fe0debd6526e6897eaef59726f132058c185",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/hybrid-control.json",
+      "bytes": 116,
+      "sha256": "ff32325c9a3c23f63a1be8f60d0692a7f3f4cffc31a2268e38f21f183a604356",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/hybrid-damage.json",
+      "bytes": 114,
+      "sha256": "96f5a6b912d8686c7f5809065015f26cdcaf1e2203e858cbdae16f169ddbccbf",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/manifest.json",
+      "bytes": 1840,
+      "sha256": "e0d11e6411c831efda6bf35d90ac01f55b82c9be6bef4f4429cbb992cd653b9c",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 23,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/qualification.json",
+      "bytes": 2724,
+      "sha256": "de36bc86f3e0d96c9a2de04f8315096a46e2c4e654ff3ee925debc9b76c35d06",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 10,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/qwen-control.json",
+      "bytes": 112,
+      "sha256": "6691cf29fb66edd8993fd5308e68babac7c7f6de154d5fb9fdfbc4251ebb7a71",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/qwen-damage.json",
+      "bytes": 110,
+      "sha256": "d97da47777b39102497cc294a51e60d817da5e3fe61dd5c76dcaa97fde70edef",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3.log",
+      "bytes": 425,
+      "sha256": "93ae13d8c59e8b08abaad8437615bb991372b9cc4278d675a12ba46fff3d29ff",
+      "lines": 3,
+      "json_entries": 1,
+      "other_lines": 2,
+      "review_mode": "all lines structurally checked, JSON status/progress parsed; raw diagnostics not disclosed"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/algorithm-control-events.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parsed": true,
+      "entries": 0,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/algorithm-control.json",
+      "bytes": 285980,
+      "sha256": "692ad6ae91cfce941bee32c9acfd12a9bf358ace1f6d62f035e5047276e1413a",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 12,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/algorithm-damage-events.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parsed": true,
+      "entries": 0,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/algorithm-damage.json",
+      "bytes": 289277,
+      "sha256": "1909a98ca6babbe5a5c9dd193896e36b3019593712061bd45d2f94fd8f2699a4",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 12,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/hub-publication.json",
+      "bytes": 517,
+      "sha256": "e967ece58f216e2da198b185a86613b7045fd8a81630d1e547aa1a4792ca5950",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/hybrid-control-events.jsonl",
+      "bytes": 422372,
+      "sha256": "8c563ef89ba5d29c201be476b43c5baf4104937891a850ce3b334f1a8efc9515",
+      "parsed": true,
+      "entries": 2286,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/hybrid-control.json",
+      "bytes": 303289,
+      "sha256": "394d2a5190775ebcc356c1fcf67a32a2bd6a17ca7a886ce088e8b30cd75f7337",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 12,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/hybrid-damage-events.jsonl",
+      "bytes": 442071,
+      "sha256": "8709545782ea275410aae0a3e11f122b9baad9425ac90c270cf4aa8707d19b0c",
+      "parsed": true,
+      "entries": 2396,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/hybrid-damage.json",
+      "bytes": 303525,
+      "sha256": "e850277809e5f353bb64c1d808b47b49c9df39cb572d91f7901154acbb57fb54",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 12,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/manifest.json",
+      "bytes": 1789,
+      "sha256": "3141f9395161cadf45ef3fd962676766f66455db5b4abfe632e4c00819516689",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 21,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/outcomes.png",
+      "bytes": 129678,
+      "sha256": "9ca2354608fcd0ddd96def3f316366827b0a5e3b7412a1454c03b278448029dc",
+      "review_mode": "visual inspection of full image and asset metadata"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/outcomes.svg",
+      "bytes": 72577,
+      "sha256": "243ffe4078b6cffc841b6f60ddaa6d70f71aaa783a8b7266d835d5d31bfeed36",
+      "review_mode": "valid XML parsed; corresponding PNG visually inspected"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/progress.json",
+      "bytes": 75,
+      "sha256": "a5e95015811dcebbe39c3cff08eafdc11d8a8166ffd7c5c607c7a92a6edc8136",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 4,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/qualification.json",
+      "bytes": 2725,
+      "sha256": "75454c874af3b928e85689df5d93c4012c98b8c37b150e0b442d566c22dcd15b",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 10,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/qwen-control-events.jsonl",
+      "bytes": 398060,
+      "sha256": "71402e786e968091473688287dc9e44e0ecc62d7e3104127fdd56520bd9ac30f",
+      "parsed": true,
+      "entries": 2322,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/qwen-control.json",
+      "bytes": 303281,
+      "sha256": "f3fce6cd27ce32149fb541e68618d956e66bed7ee9480985ee7078b7ffc39035",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 12,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/qwen-damage-events.jsonl",
+      "bytes": 416952,
+      "sha256": "8766c73f9eccfcbfff5eeeb1901320e1c0df35e27a341dfb832ebe237b000952",
+      "parsed": true,
+      "entries": 2432,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/qwen-damage.json",
+      "bytes": 303516,
+      "sha256": "71a94e3ccd032c82faf7c8185176df0665c5fc1698a03cf6f1886248bc0163c1",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 12,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/summary.json",
+      "bytes": 1595,
+      "sha256": "0f9e4062af8f8395c5bc82162b11ad79ce49f057fafc2e15fc6a28b8854c5cc9",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 6,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4.log",
+      "bytes": 11463,
+      "sha256": "865b30e2b94cf2c555efc5e2d884cfa24ba6a00a99ae0e10b974ce059648c658",
+      "lines": 104,
+      "json_entries": 102,
+      "other_lines": 2,
+      "review_mode": "all lines structurally checked, JSON status/progress parsed; raw diagnostics not disclosed"
+    },
+    {
+      "path": "regrowth-200/results/registration-repair-receipt.json",
+      "bytes": 905,
+      "sha256": "83f3427ce68c7b3f98af380ef278e04a70c769c5ebdc6ba994538bd1d76e9cc6",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 7,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "regrowth-200/site/data.js",
+      "bytes": 1790705,
+      "sha256": "f536b9ef9748200a1655da06530a3534b637b4bde9abe7db92e4ebb2ac9a4bda",
+      "review_mode": "entire embedded JSON parsed; exact equality checked against six world records and manifest"
+    },
+    {
+      "path": "regrowth-200/site/final_frame.png",
+      "bytes": 153190,
+      "sha256": "0009df9eb0820905388f9071708b433dee9574734dddf9c48959540b74324b2d",
+      "review_mode": "visual inspection of full image and asset metadata"
+    },
+    {
+      "path": "regrowth-200/site/index.html",
+      "bytes": 10213,
+      "sha256": "5b0bd45e4a8b0416492f675f34ddbd2d5bb7b2ca7e5ec15a1ac709fef3bce460",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/src/analyze.py",
+      "bytes": 3736,
+      "sha256": "2a26ba2a3ab8277f9c2ff5a4142f7f3347ad805900f2f8dccc3022fa625daaaf",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/src/archive_evidence.py",
+      "bytes": 998,
+      "sha256": "2176d484963ea9d4ab2b14d74eb6bdda13f2cfec06106cdfaca66e685aa86ebf",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/src/build_replay.py",
+      "bytes": 508,
+      "sha256": "391401721bb4254ec700536fc08fa69430d176b05f3e7cde966bd1e90d75ebfe",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/src/check_replay.cjs",
+      "bytes": 1211,
+      "sha256": "7079e7fb5dc1d3106fbe344f26b4162352619be0eac8a261e40cf38cb95d3d31",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/src/models.py",
+      "bytes": 3039,
+      "sha256": "cfb63bb51790470a9e09fe6c8f67e64c4516b523289bf48762e1cd6011eb8f88",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/src/plot.py",
+      "bytes": 1140,
+      "sha256": "1cb2081ea32565337312c4426d210943c1798611350c79f2f070308055315e51",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/src/public_plan.py",
+      "bytes": 2505,
+      "sha256": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/src/publish_hub.py",
+      "bytes": 3444,
+      "sha256": "d142dc001a70bad4803e88d12f75b721620e44f8798c48ca3c270cb8d2de2517",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/src/run.py",
+      "bytes": 8441,
+      "sha256": "3a437fa2c87d200124795489a0b383ef64dea6a2555bd4f4cff310f0b71fef33",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/src/world.py",
+      "bytes": 1918,
+      "sha256": "e03f40e4cb5052b0611cd57df33d5d39e0f7dfd1626a307cedcf26c82dfff4de",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "regrowth-200/tests/test_world.py",
+      "bytes": 1727,
+      "sha256": "ec936407b2dabe60a57b7f052c0f02cdb2d5b8ef968dfb6d8679b37599422986",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "avalon-swarm/.gitignore",
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "avalon-swarm/ADAPTER.md",
+      "bytes": 3667,
+      "sha256": "0fadc13778bf25d4389af2817c3111b74b832682b6e23e4d87b45298bbc33a76",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "avalon-swarm/PROTOCOL.md",
+      "bytes": 18471,
+      "sha256": "784a07075fb76024f940bc55a3f45f1d09455fc232e9d9501b96182612b161f4",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "avalon-swarm/README.md",
+      "bytes": 5933,
+      "sha256": "1bd7ac795046093a17f05e7f9727ac49385f8c24d861f0132f0377b3e922d785",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "avalon-swarm/RESULTS.md",
+      "bytes": 5108,
+      "sha256": "55cb4f9bd50441f7dd4ac613ac45a199ed7dc298d7abd4e9da78e9691f3542a5",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "avalon-swarm/benchmark.py",
+      "bytes": 25879,
+      "sha256": "5722f63f375612e4dc3e2dbab68df5900d9f1cd162c24954633d8366678209b1",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "avalon-swarm/report.py",
+      "bytes": 7499,
+      "sha256": "df250e779deeec020ba44df2717260b24094503c08666a5fcdf4f806ae4d5513",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "avalon-swarm/results/consensus-v02/outcomes.jsonl",
+      "bytes": 77673,
+      "sha256": "2894fb85fb5e2f5e194087e420695a844e33db4d4eab0e8b7c2be3da374f2766",
+      "parsed": true,
+      "entries": 15,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/consensus-v02/plan.json",
+      "bytes": 4044,
+      "sha256": "4493857984e3854710887d2464cd4e7b15759f3e5714740b61765fc441eafba5",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 15,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "avalon-swarm/results/consensus-v02/source.sha256",
+      "bytes": 65,
+      "sha256": "ed3c3eac84b770ab578cc158b58f8bce85e4f418044c7b3e6eb50997adfbe6dd",
+      "review_mode": "digest compared to corresponding current/archived source"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-audit-0.jsonl",
+      "bytes": 390243,
+      "sha256": "7c33606856a0fc6afd41b7ded0559b84e500b8f323195fea7f0728433290b878",
+      "parsed": true,
+      "entries": 824,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-audit-1.jsonl",
+      "bytes": 608244,
+      "sha256": "fe7450eb91db6f2997a248bb9df97c9a6b22d68b6ac2814c562eb1b42fc027e3",
+      "parsed": true,
+      "entries": 1230,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-audit-2.jsonl",
+      "bytes": 550694,
+      "sha256": "9342064862ddcfce515ca377ca5ee18052168b5193db4dbe0a519c478f07edc9",
+      "parsed": true,
+      "entries": 1128,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-audit-3.jsonl",
+      "bytes": 499013,
+      "sha256": "d47979297e8282ed00fa48f94d0a2e416c4b88167c5e41c0567bc9a5cba82dcf",
+      "parsed": true,
+      "entries": 1031,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-audit-4.jsonl",
+      "bytes": 444896,
+      "sha256": "71f906a6cfa2cb0d4887d3a4630b3bc2601bc8cc971990d0d3d00903c23a7e5c",
+      "parsed": true,
+      "entries": 927,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-none-0.jsonl",
+      "bytes": 336807,
+      "sha256": "0dcbeaabf24c403e298cf41d598ae28604d1c5807e0c07209887efc0e87930fc",
+      "parsed": true,
+      "entries": 718,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-none-1.jsonl",
+      "bytes": 499076,
+      "sha256": "b5164435ed92fdf68bb01a00a2e291fcee533243f3ebd8e51fe4e35d12247605",
+      "parsed": true,
+      "entries": 1019,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-none-2.jsonl",
+      "bytes": 496480,
+      "sha256": "1bb76ad9b5e3e566ca1a9407b8ce58803a1b132e8c7f34c8cac66725601eda19",
+      "parsed": true,
+      "entries": 1020,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-none-3.jsonl",
+      "bytes": 549209,
+      "sha256": "d31799d1ee406269fa70f23172a5374351b68d3a269934e53cac637bfce64a33",
+      "parsed": true,
+      "entries": 1121,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-none-4.jsonl",
+      "bytes": 606582,
+      "sha256": "e7a3d6234b0accd26383c14b3b19c7976f421d3dce54705174ff0645158134c6",
+      "parsed": true,
+      "entries": 1234,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-repair-0.jsonl",
+      "bytes": 390736,
+      "sha256": "7bc75bf44a26cb4c8389b6897d8e6327cceceed26ddb0f0b7d8785e893685848",
+      "parsed": true,
+      "entries": 825,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-repair-1.jsonl",
+      "bytes": 608246,
+      "sha256": "576df8e036333df54c3811468239db082d41f6d331791dd21a1134929d8a0a7b",
+      "parsed": true,
+      "entries": 1230,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-repair-2.jsonl",
+      "bytes": 549987,
+      "sha256": "6af41ad1710748857e371e3c4561cbeb8f7881686a74b455282cf9cb36a7bc03",
+      "parsed": true,
+      "entries": 1127,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-repair-3.jsonl",
+      "bytes": 499498,
+      "sha256": "4e0aabe24d0646a3c7379550ca059ce9ee6ca2b0fb5dc2e2a2d46f56cc610333",
+      "parsed": true,
+      "entries": 1031,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-repair-4.jsonl",
+      "bytes": 445757,
+      "sha256": "36245cfb79c6b035fc47c393065bfa5f7e8b7c00ca8e3d88b283a888851befe0",
+      "parsed": true,
+      "entries": 928,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/outcomes.jsonl",
+      "bytes": 22914,
+      "sha256": "46ce600dc92de8add68256747ca7ffd4d5f13ee805d390ba0de67a8718dfe6ce",
+      "parsed": true,
+      "entries": 15,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/plan.json",
+      "bytes": 1788,
+      "sha256": "5d7c15f600e1df0b8228fa65cc3b0144fa8d2604baec69552b0aa035127e7290",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 15,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/source.sha256",
+      "bytes": 65,
+      "sha256": "94ba8d0546223e7eac2ec47cb142aa61f4c0bb00880ffb661b727841b236d4e9",
+      "review_mode": "digest compared to corresponding current/archived source"
+    },
+    {
+      "path": "avalon-swarm/results/reference-v01/benchmark.py",
+      "bytes": 20240,
+      "sha256": "5ff9feb92e66e2792fddd68ecd58b49729b2a425ca642fec9f36dc03b4f66a34",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "avalon-swarm/results/scale-final/outcomes.jsonl",
+      "bytes": 22958,
+      "sha256": "df2397727a3e00a300cf2ff83d06abc6175e71db8a4730b4d2936d2d1f6fe860",
+      "parsed": true,
+      "entries": 15,
+      "review_mode": "every event/outcome parsed; Regrowth decisions reconstructed; Avalon hash chains and terminal payloads verified; no raw log dumping"
+    },
+    {
+      "path": "avalon-swarm/results/scale-final/plan.json",
+      "bytes": 1764,
+      "sha256": "1262043d379fd9a272d940fa98a91dbf191c3f02248de53b30633f187de1f7a6",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 15,
+      "review_mode": "every field parsed; assignments/qualifications/summary/manifests/receipt consistency checked"
+    },
+    {
+      "path": "avalon-swarm/results/scale-final/source.sha256",
+      "bytes": 65,
+      "sha256": "94ba8d0546223e7eac2ec47cb142aa61f4c0bb00880ffb661b727841b236d4e9",
+      "review_mode": "digest compared to corresponding current/archived source"
+    },
+    {
+      "path": "avalon-swarm/tests/test_benchmark.py",
+      "bytes": 7357,
+      "sha256": "c4f94fa61cd2634638e374ec14e90a8caccb8f5631cfe5fa58dbe50dcac3bc50",
+      "review_mode": "full substantive source/document review"
+    }
+  ],
+  "coverage_summary": {
+    "files": 112,
+    "regrowth_completed_worlds": 6,
+    "regrowth_failed_development_attempts": 4,
+    "regrowth_frames_reconstructed": 486,
+    "regrowth_model_events_reconstructed": 9436,
+    "avalon_worlds_validated": 45,
+    "avalon_event_chains": 15,
+    "avalon_events_verified": 15393,
+    "archive_members": 71,
+    "exclusions": "Python __pycache__/*.pyc are generated derivatives; no credential files or arbitrary raw logs were printed; third-party source repositories were consulted only for cited scientific claims."
+  },
+  "verified_statistics_and_tests": {
+    "python": "3.14.5",
+    "tests": [
+      {
+        "command": "python3 -m unittest discover -s regrowth-200/tests -v",
+        "result": "7/7 pass"
+      },
+      {
+        "command": "cd avalon-swarm && python3 -m unittest discover -s tests -v",
+        "result": "13/13 pass"
+      },
+      {
+        "command": "python3 review-2026-10-04/audit-regrowth-avalon.py",
+        "result": "all artifact assertions pass; no new worlds or inference"
+      },
+      {
+        "command": "python3 review-2026-10-04/test-regrowth-runner-faults.py",
+        "result": "dummy-policy reproductions confirm Laya cap overshoot and missing provider-error halt; temporary outputs only"
+      }
+    ],
+    "regrowth_usage_recomputed": {
+      "qwen_calls_recomputed": 9446,
+      "laya_calls_recomputed": 486,
+      "qwen_input_tokens_recomputed": 374435,
+      "qwen_output_tokens_recomputed": 82811,
+      "laya_input_tokens_estimate_recomputed": 50753
+    },
+    "regrowth_data_replay_exact_match": true,
+    "regrowth_archive_digest_and_index_match": true,
+    "avalon_recovery_pair_differences": [
+      {
+        "seed": 0,
+        "post_audit_mission_success_fraction": 0.0,
+        "ordinary_good_brier": 0.0011039999999999939,
+        "post_audit_contradiction_exposures": -61
+      },
+      {
+        "seed": 1,
+        "post_audit_mission_success_fraction": 0.0,
+        "ordinary_good_brier": 0.0,
+        "post_audit_contradiction_exposures": 0
+      },
+      {
+        "seed": 2,
+        "post_audit_mission_success_fraction": 0.033333333333333326,
+        "ordinary_good_brier": -0.008572444444444438,
+        "post_audit_contradiction_exposures": -34
+      },
+      {
+        "seed": 3,
+        "post_audit_mission_success_fraction": 0.0,
+        "ordinary_good_brier": 0.0006426666666666248,
+        "post_audit_contradiction_exposures": -19
+      },
+      {
+        "seed": 4,
+        "post_audit_mission_success_fraction": 0.0,
+        "ordinary_good_brier": -0.0027235555555555346,
+        "post_audit_contradiction_exposures": -10
+      }
+    ],
+    "avalon_consensus": "0/15 passes; every signal_loss failure first recorded at round5",
+    "source_snapshot": "v4 Regrowth bytes available in evidence archive; v1/v1-attempt2/v2/v3 protocol/models/runner historical hashes unresolved within audited project and archive; Avalonv0.1 andv0.2 source hashes match45 outcomes."
+  },
+  "positive_design_features": [
+    "Honest scope: scripted Avalon is labeled scripted; Regrowth is labeled exploratory, one-map, shared weights,199 active decision cells, no NCA training; no claim that agent count equals sample size.",
+    "Serious comparators: exact local path-vector algorithm and undamaged controls; Avalon separates none/audit/repair and treats complete worlds as experimental units.",
+    "Failed attempts and tie-scoring amendment preserved; late public registration explicitly labeled retrospective with process failure separate from computational outcomes.",
+    "Reconstructable v4 model decisions, per-identity memoization, explicit synchronous update order, reported token/call totals and model digest/revision; all486 frames and aggregate usage reproduced exactly.",
+    "Avalon has deterministic role/signal streams, bounded sparse routing, role-authorized observation structure, exact scripted replay, immutable prior source snapshot and verified hash chains.",
+    "Consensus failure is sticky, late recovery stays observable, class-specific truth and agreement remain distinct, and benchmark failure is not confused with crashed execution.",
+    "Citations to AvalonBench's fifth-team convention, Strategist, Avalon-ToM, Growing NCA and model cards resolve to primary sources and are framed without false reproduction claims.",
+    "Regrowth visual design is coherent and unusually clear for a pilot; outcome plot shows the model/algorithm route-quality gap directly."
+  ],
+  "prioritized_experiment_redesign": [
+    {
+      "priority": 1,
+      "action": "Freeze one falsifiable mechanism before any new run",
+      "detail": "Regrowth: does a specified blind decision head reduce downstream route stretch at matched compute and exposure? Avalon: does contradiction removal improve subsequent mission success beyond identical audited truth? Do not use general claims about swarm intelligence as endpoints."
+    },
+    {
+      "priority": 2,
+      "action": "Choose an agent contract and immutable initial state",
+      "detail": "Specify model/script hash, initial messages, role/skill assignment, observation access, state and context owners, memory cap/eviction, update policy, tool permissions, inference settings and expected initialization hash. Treat evolution of context as logged state progression; treat model/prompt changes as versioned interventions."
+    },
+    {
+      "priority": 3,
+      "action": "Repair launch/reporting correctness before paying for inference",
+      "detail": "Bind public plan and per-condition TLDRs to assignments; source snapshot before execution; terminal ledger for every assigned world; per-dispatch budgets; provider failure policy; non-overwriting publication IDs."
+    },
+    {
+      "priority": 4,
+      "action": "Use small calibrated scripted controls to establish identifiability",
+      "detail": "Regrowth: oracle greedy, persistent/random legal and matched error-rate controls to determine whether collective repair comes from the controller. Avalon: oracle and exact local inference controls, degree/budget-matched graphs, fixed relevant evidence and event-keyed random streams; calibrate consensus thresholds on development cases."
+    },
+    {
+      "priority": 5,
+      "action": "Register a compact paired held-out design",
+      "detail": "Separate development and held-out maps/seeds. Randomize head/role assignments with scenario blocks, distinguish fixed total compute from fixed per-agent compute, predeclare one primary endpoint and useful effect size, report whole-world paired differences with intervals and all failures. The existing pilots do not justify a universal seed count."
+    },
+    {
+      "priority": 6,
+      "action": "Report continuous mechanisms with task utility",
+      "detail": "Regrowth: certificate validity, defined packet forwarding success, route stretch, damage-at-t0 impact, area under post-damage loss, stability, costs. Avalon: local truth/ordinary agreement coverage, acquisition/loss/recovery separately, unaudited-target Brier, successful missions, useful evidence reach and contradiction exposures normalized by opportunity."
+    },
+    {
+      "priority": 7,
+      "action": "Make writing and aesthetics serve the strongest supported result",
+      "detail": "Lead the report with the actual negative or small effect, show baseline and cost together, label archival versus live/prospective status, use condition-specific captions, and generate numeric tables from evidence while preserving historical caveats."
+    }
+  ],
+  "external_sources_checked": [
+    {
+      "url": "https://arxiv.org/html/2310.05036v2",
+      "checked": "AvalonBench authors, rules, fifth proposal executes after four rejections, role-deduction setting."
+    },
+    {
+      "url": "https://github.com/jonathanmli/Avalon-LLM",
+      "checked": "Official repository includes Strategist and identifies separate AvalonBench/Strategist work."
+    },
+    {
+      "url": "https://arxiv.org/abs/2608.09638",
+      "checked": "Avalon-ToM-Bench title and perspective/asymmetric-information diagnostic relevance."
+    },
+    {
+      "url": "https://distill.pub/2020/growing-ca/",
+      "checked": "Source exists; Regrowth correctly limits borrowing to presentation/local damage idea rather than claiming NCA training."
+    },
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3-0.6B",
+      "checked": "Official model card exists; current local source uses the named small model with thinking disabled."
+    },
+    {
+      "url": "https://huggingface.co/convaiinnovations/laya",
+      "checked": "Named structured-prediction model card exists; pinned model revision recorded locally."
+    }
+  ],
+  "limitations": [
+    "The saved Regrowth public-plan URL and raw immutable URL returned web cache-miss errors in this review; this is an inability to independently re-fetch here, not proof that the public page is unavailable. The local registration receipt was inspected.",
+    "Historical Regrowth source may exist in Git objects outside the project/archive comparison; no claim of irreversible loss is made.",
+    "No new scientific experiments, live inference, provider calls, public writes or historical artifact edits occurred. Existing unit tests and isolated dummy-policy failure injections were run.",
+    "All data files were structurally/semantically batch inspected, not manually read line by line. Full substantive documents and source were read; generated images were visually reviewed."
+  ]
+}

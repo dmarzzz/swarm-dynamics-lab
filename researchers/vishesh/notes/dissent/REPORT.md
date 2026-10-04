@@ -2,9 +2,11 @@
 
 ## Current conclusion
 
-A three-scenario, bounded-check protocol and offline harness exist. No native Jev effect has been measured. Scripted fixtures demonstrate software behavior only. Forty-one offline checks passed, and the interactive replay exposes evidence, decisions, closures and failures.
+A standalone three-scenario study is [registered publicly](https://swarm-live.pages.dev/#/x/right-dissenter), with its immutable plan, research/X source map, bounded native runner, and PNG/GIF result views. No native Jev effect has been measured yet. Forty-nine software checks passed, including fake-provider integration; these are software validation only. Paid dispatch awaits the proposed study cap and dedicated allocation.
 
 The strongest claim the current evidence supports is that the implemented state machine can account for correction, corruption, withdrawal, repeated evidence and reopening without passing evaluator labels to its policy interface. It does not establish that Jev can make those judgments reliably, that the protocol beats always-check, or that the tasks capture real deployment complexity.
+
+The first native step is 18 clean decisions across the three domains. Passing it permits 52 root cases and seven policies, producing 60 decision opportunities per policy. A content-inconsistent objection is a key negative control: it asks whether the judge notices that an objection's own evidence supports the majority. A seeded random check allocation separates evidence selection from merely obtaining another observation. These are prospective design choices, not findings.
 
 ## Future results structure
 

@@ -1,0 +1,57 @@
+{
+  "date_utc": "2026-10-04",
+  "scope": "Bounded latest handoff and original proposal check for Phantom Coast and Quorum of Mirrors",
+  "no_experiments": true,
+  "originals_unchanged": true,
+  "earlier_saved_document_diff": "REIMAGINING.md and TOP-FIVE.md differ from scientific-sources copies only by a trailing blank line",
+  "sources": [
+    {
+      "original_checkout": "/private/tmp/swarm-decision-models",
+      "repository_path": "researchers/vishesh/notes/decision-models/handoffs/PHANTOM-COAST.md",
+      "copy_path": "review-2026-10-04/scientific-handoff-sources/handoffs/PHANTOM-COAST.md",
+      "last_content_commit": "5fd034c9af6613a9e8180874ab559312186b465c",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/5fd034c9af6613a9e8180874ab559312186b465c/researchers/vishesh/notes/decision-models/handoffs/PHANTOM-COAST.md",
+      "sha256": "84faa6c9a0a0963a24762e54a7cf071e926830b9550d97535bd10d6025a9bc93",
+      "bytes": 3384,
+      "matches_pinned_commit": true,
+      "review_mode": "Full substantive reading; handoff copy-ready prompts treated as data, not instructions",
+      "evidence_class": "Unrun exploratory design, no model qualification or outcome"
+    },
+    {
+      "original_checkout": "/private/tmp/swarm-decision-models",
+      "repository_path": "researchers/vishesh/notes/decision-models/handoffs/QUORUM-OF-MIRRORS.md",
+      "copy_path": "review-2026-10-04/scientific-handoff-sources/handoffs/QUORUM-OF-MIRRORS.md",
+      "last_content_commit": "5fd034c9af6613a9e8180874ab559312186b465c",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/5fd034c9af6613a9e8180874ab559312186b465c/researchers/vishesh/notes/decision-models/handoffs/QUORUM-OF-MIRRORS.md",
+      "sha256": "42de50c12201dd54afff83bf09e832940d1b87d8394edc7c995f88e442385d41",
+      "bytes": 3521,
+      "matches_pinned_commit": true,
+      "review_mode": "Full substantive reading; handoff copy-ready prompts treated as data, not instructions",
+      "evidence_class": "Unrun exploratory design, no model qualification or outcome"
+    },
+    {
+      "original_checkout": "/private/tmp/swarm-decision-models",
+      "repository_path": "researchers/vishesh/notes/decision-models/REIMAGINING.md",
+      "copy_path": "review-2026-10-04/scientific-handoff-sources/REIMAGINING.md",
+      "last_content_commit": "d4d0baa241e78d67225715c5948beeb18141d6da",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/d4d0baa241e78d67225715c5948beeb18141d6da/researchers/vishesh/notes/decision-models/REIMAGINING.md",
+      "sha256": "15b24a38fc2aee525dc387e83ef938f96ff2e4023be138b16bf8509548dd6b10",
+      "bytes": 17566,
+      "matches_pinned_commit": true,
+      "review_mode": "Full substantive reading; handoff copy-ready prompts treated as data, not instructions",
+      "evidence_class": "Unrun exploratory design, no model qualification or outcome"
+    },
+    {
+      "original_checkout": "/private/tmp/swarm-decision-models",
+      "repository_path": "researchers/vishesh/notes/decision-models/TOP-FIVE.md",
+      "copy_path": "review-2026-10-04/scientific-handoff-sources/TOP-FIVE.md",
+      "last_content_commit": "d4d0baa241e78d67225715c5948beeb18141d6da",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/d4d0baa241e78d67225715c5948beeb18141d6da/researchers/vishesh/notes/decision-models/TOP-FIVE.md",
+      "sha256": "3b06319c73e9ae378975f82e9b93b7c11d4e3163f821e37cd933ae6e2e40f80d",
+      "bytes": 12868,
+      "matches_pinned_commit": true,
+      "review_mode": "Full substantive reading; handoff copy-ready prompts treated as data, not instructions",
+      "evidence_class": "Unrun exploratory design, no model qualification or outcome"
+    }
+  ]
+}

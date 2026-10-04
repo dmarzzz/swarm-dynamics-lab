@@ -1,0 +1,21 @@
+{
+  "snapshot_utc": "2026-10-04T02:30:09.871374+00:00",
+  "final_review_snapshot_utc": "2026-10-04T02:58:11.098785+00:00",
+  "interpretation": "Publication omits the incidental live workspace inventory. It included other tasks and a later nested whole-repository checkout. Frozen inventory.json and addendum-inventory.json alone define original audit coverage. Scientific deltas have their own source cutoffs.",
+  "review_authored_paths": [
+    "README.md",
+    "agent-experiment-guide/AGENT-LIFECYCLE.md",
+    "agent-experiment-guide/AGENT-LIFECYCLE-RESEARCH.md",
+    "agent-experiment-guide/research/agent-lifecycle-sources.json",
+    "agent-experiment-guide/README.md",
+    "agent-experiment-guide/GUIDE.md",
+    "agent-experiment-guide/HARNESS.md",
+    "agent-experiment-guide/LITERATURE.md",
+    "agent-experiment-guide/PACKAGE-MANIFEST.json",
+    "dossier-src/build.py",
+    "dossier-src/prism.py",
+    "swarm-ecology-dossier.html",
+    "regrowth-200/DEVELOPMENT.md",
+    "regrowth-200/PROTOCOL.md"
+  ]
+}

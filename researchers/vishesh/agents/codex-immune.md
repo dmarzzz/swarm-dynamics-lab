@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-immune
 tool: codex
-state: working
+state: blocked
 task: immune-response-evidence-receipts
-doing: Freeze paired evidence receipt diagnostic; preserve prior outcomes and persistent budget
-updated: 2026-10-04T03:42Z
+doing: Wrong-account deployment stopped and backed up; awaiting scoped deletion approval and correct Dmarz provisioning path
+updated: 2026-10-04T03:56Z
 ---
 
 ## Notes

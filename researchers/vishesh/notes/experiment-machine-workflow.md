@@ -1,4 +1,4 @@
-> Owner clarification, 2026-10-04 UTC: create a new, explicitly experiment-named machine for Immune Response (sim-immune-response), owned by vishesh. Do not borrow a dmarz-owned or dmarz-named host merely because it is unclaimed. The unused sim-dmarz-3 allocation was released before any experiment started.
+> Owner correction, 2026-10-04 UTC: use a new dedicated experiment machine in **Dmarz's existing DigitalOcean account/team and Swarm Lab setup**. Do not borrow his occupied machine, and do not use the user's personal/default DigitalOcean account. Researcher ownership and billing-account authorization are separate. The earlier instruction recorded here incorrectly conflated them.
 
 # Dedicated machines for experiment launches
 
@@ -10,7 +10,8 @@ Owner instruction recorded 2026-10-04 UTC. Every new experiment receives a fresh
 2. Select an eligible available machine from Dmarz's list with sufficient capacity, authorized access and enough remaining lifetime for the job and artifact upload. Verify active claims and actual workload: an expired claim alone does not establish that a host is idle. Never stop an unfamiliar process to make room.
 3. Claim it exclusively through the supported agentops command, with an experiment-specific claim ID, agent identity, experiment ID, expected duration and non-secret purpose. Do not use `--shared`. Verify that the claim merged and the refreshed claims contain no conflict. If someone else won the host, select another available host.
 4. If none is available, do not fall back to another experiment's host. Arrange a new allocation through the fleet owner/provisioning workflow, within an existing authorized infrastructure budget. Dmarz-owned machine creation stays with the authorized owner. For a machine you are authorized to create, use the existing owner's state and the documented duplicate-resource preflight; add the fleet entry and expiry, provision the approved blueprint, verify access, then claim it. Never invent an unlisted machine or duplicate a VM from a different checkout's infrastructure state.
-5. Deploy the frozen source to the allocated host. Verify its identity, exclusive claim, dependencies, tests, credential availability by non-secret status, and run budget. Register the study, record the allocation, and only then queue/start the bounded worker. A new directory, container or worker on a busy host is not a dedicated machine.
+5. Before creating any resource, resolve the approved DigitalOcean account/team identity from the established Swarm Lab provisioner. Query account identity with the proposed credential locally, compare it exactly, and verify the intended infrastructure state/project and resource plan. Record a private verification receipt. Missing identity or credentials blocks provisioning; a local default doctl context is never a fallback. Keep credentials and account IDs out of transcripts/public files. Only then may an authorized create/apply proceed.
+6. Deploy the frozen source to the allocated host. Verify its identity, exclusive claim, dependencies, tests, credential availability by non-secret status, and run budget. Register the study, record the allocation, and only then queue/start the bounded worker. A new directory, container or worker on a busy host is not a dedicated machine.
 
 Example commands, run inside the private agentops checkout after selecting a real host:
 
@@ -37,4 +38,4 @@ Keep the claim valid until computation and artifact transport finish. For unatte
 
 ## Existing deployments
 
-The immune-response and external-influence deployment notes document earlier allocations and remain historical evidence. The earlier shared-host recommendation is superseded for new launches. Existing jobs may finish in place; do not move, restart or duplicate them solely to apply this rule. Their next separately launched experiment/version receives a new dedicated allocation.
+The immune-response and external-influence deployment notes document earlier allocations and remain historical evidence. The earlier shared-host recommendation is superseded for new launches. This does not authorize continuing on a disputed or wrong billing account. Stop affected work, preserve data and the spend ledger, and resolve the account boundary before resuming. Their next separately launched experiment/version receives a new dedicated allocation.

@@ -1,22 +1,23 @@
 {
-  "observed_at_utc": "2026-10-04T03:34:00Z",
+  "observed_at_utc": "2026-10-04T03:50:35.627308+00:00",
   "owner_shared_cap_usd": 500,
   "followups_actual_plus_unsettled_cap_usd": 60,
-  "reported_hub_cost_nonbilling_usd": 52.529508,
-  "replaced_reported_market_cost_usd": 2.511934,
+  "reported_hub_cost_nonbilling_usd": 63.76642,
+  "replaced_reported_market_cost_usd": 5.337684,
   "other_cohort_bounds_usd": {
     "market_split_lifetime_1600_calls": 189.39,
     "market_haiku_lifetime_1000_calls": 39.456,
-    "resampling_control_frozen_936_calls": 93.6,
+    "compositional_current_Q0_004_full_reservation": 42,
     "soc07_announced_cap": 40
   },
-  "sum_with_followups_usd": 472.463574,
-  "buffer_usd": 27.536426,
+  "sum_with_followups_usd": 429.274736,
+  "buffer_usd": 70.725264,
   "limitations": [
-    "Reported hub costs are operational telemetry, not complete provider billing.",
-    "Completed compositional and discussion-v3 cohorts have no queued successor in this snapshot.",
-    "Bounded cohorts may settle below these maxima; no unused budget is claimed as actual spending.",
-    "Refresh before paid stages; newly authorized independent launches must respect the same owner cap."
+    "Reported hub costs are operational telemetry, not provider billing; repeated analysis totals make this conservative but missing usage remains uncertain.",
+    "Resampling control completed all936 calls, so its prior93.6USD allowance is replaced by reported6.097136USD; no active successor in snapshot.",
+    "The compositional current Q0-004 entire42USD reservation is added conservatively on top of observed charges; P1 is closed until qualification.",
+    "Market lifetime bounds replace their observed charges; SOC-07 retains40USD announced allowance.",
+    "Future independent launches must respect the same500USD owner cap; the followups60USD shared ledger only governs these two studies."
   ],
   "provenance": [
     "dmarz researcher budget directive",
