@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "study_id": "quorum-of-mirrors",
+  "attempt": "qm-q1-02",
+  "native_attempt": "QM-Q1-02",
+  "parent_handoff_sha256": "6319107f0b212ea57f8a9fe46f7527b35356401c403d0949a48270407d0c69e8",
+  "verdict": "diagnostic",
+  "assessor": "vishesh/codex-quorum-mirrors (owning-agent assessment; researcher review waived)",
+  "assessed_at": "2026-10-04T08:41:57.131386+00:00",
+  "outcome_interpretation": "Valid negative qualification: 0/8 MAP-correct. The earlier output-token implementation failure is repaired. This does not identify whether copied reports, prior choices or ambiguous wording caused the negative result. D1 asks a new controlled diagnostic question; it is not another Q1 repair.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Q1 asked a bounded context-qualification question, not a causal swarm-effect question.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md",
+          "sha256": "1651a8e9e8461c0c97b19d091c729641e123f0a2d724297a53a8964e5c28f3be"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "The eight graded fixtures bundled copied-report majority with misleading priors. Partial lineage cannot identify this mechanism.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/manifest.json",
+          "sha256": "169896813f58e266dcc3847ceb6841139be4a57299a3e1d43913cba8c2f40eb4"
+        }
+      ],
+      "next_action": "Cross representation and prior context; retain explicit finite-support limitations.",
+      "acceptance_check": "Eight fixed structures, ten arms, two repeats; all full lineage."
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "There was no native no-prior control with matched wording. Every observed choice agreed with both report majority and misleading priors.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/manifest.json",
+          "sha256": "169896813f58e266dcc3847ceb6841139be4a57299a3e1d43913cba8c2f40eb4"
+        }
+      ],
+      "next_action": "Add no-prior and correct-prior controls within both representations.",
+      "acceptance_check": "Scripted majority and prior-following policies yield distinct registered diagnostic patterns."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Sixteen responses were interface-valid, but 0/8 graded choices were correct against the preregistered >=7/8 requirement. The repaired interface did not fix reasoning.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/summary.json",
+          "sha256": "407c98c8046fc7944905d15b582091bc3870c637ff2e2dc06f398f0ab93c5ea8"
+        }
+      ],
+      "next_action": "Require clean three-source qualification before diagnosing effects.",
+      "acceptance_check": "8/8 valid, >=7/8 correct, both unanimous controls correct; otherwise stop."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Saved-root reanalysis verified three consistent independent roots and all-assigned denominators. Partial lineage is explicitly ungraded.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/report-validation.json",
+          "sha256": "8196bf5d0fd8158a0466aa55a0b12713a49bbf864b0816683daa1826c1b14f19"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Eight graded fixed fixtures suffice to report this failed screen. They do not identify a causal effect or population reliability; no broad interval is claimed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/summary.json",
+          "sha256": "407c98c8046fc7944905d15b582091bc3870c637ff2e2dc06f398f0ab93c5ea8"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "gap",
+      "finding": "Requests are retained, but the self arm said to use only its own prior-decision slot. Wording and prior influence cannot be separated historically.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/manifest.json",
+          "sha256": "169896813f58e266dcc3847ceb6841139be4a57299a3e1d43913cba8c2f40eb4"
+        }
+      ],
+      "next_action": "Use uniform instructions making reports primary and priors non-measurements.",
+      "acceptance_check": "Actor payload contains no target/arm correctness; identical instruction string across every new arm."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All 16 Q1-02 calls have terminal receipts and accounting; original Q1-01 failure and missing exact usage remain separately preserved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/accounting.jsonl",
+          "sha256": "36c87c7003f97e178e9d9896f4ea88e0f597f3086a3823100dc1be9d7ed644df"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "49 reservations total $0.065856. Known actual $0.00171696 and bounded unknown $0.001344 remain distinct. Claim released; no replenished budget.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/release.json",
+          "sha256": "f04356b15e1308ee276d06c77c3a4f2df2d825bee99b2620578a74c855a41c83"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Source, deployed revision, manifest and saved native outputs are retained. Reanalysis is not another model draw.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/preflight.json",
+          "sha256": "51d4375843a43fe3c877f57fbe35cef01d2769cc00ae3534cba5c31280be61d3"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "All 16 rows and uploaded artifact bytes were reconciled. Static qualification is not depicted as interacting agents.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/report-validation.json",
+          "sha256": "8196bf5d0fd8158a0466aa55a0b12713a49bbf864b0816683daa1826c1b14f19"
+        }
+      ]
+    }
+  ]
+}

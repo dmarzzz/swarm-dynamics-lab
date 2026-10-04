@@ -1,0 +1,506 @@
+{
+  "experiment": "quorum-of-mirrors",
+  "attempt": "QM-D1-Q0-01",
+  "stage": "clean-qualification",
+  "assignments": [
+    {
+      "id": "QM-D1-Q0-01-01-deduplicated-none-r1",
+      "fixture": 1,
+      "q": 0.72,
+      "bits": [
+        0,
+        0,
+        1
+      ],
+      "stratum": "conflict",
+      "representation": "deduplicated",
+      "context": "none",
+      "repeat": 1,
+      "expected": "ZERO",
+      "prior": null,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 0,
+              "q": 0.72,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d07",
+              "value": 0,
+              "q": 0.72,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d14",
+              "value": 1,
+              "q": 0.72,
+              "visible_root": "s00"
+            }
+          ],
+          "prior_role": "none",
+          "prior_decisions": []
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE. The prior probability of each state is 1/2. Each observation reports the true state with probability q. Distinct visible_root labels identify independent observations conditional on the state. Reports with the same visible_root are copies of one observation: count that source once. The prior decisions are scripted choices based on these same reports, not fresh measurements. Use the reports to make your decision regardless of available prior choices. Select DEFER only if unable to determine which state is more likely.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "1a575eeb87e12a0c83a819b1427d71f4274a9e20cd838ae81f99ed3d8a3eb8f6",
+      "run_tldr": "D1 deduplicated, none, q=0.72, repetition 1: source-MAP accuracy on fixed binary reports; scripted priors, no interacting swarm."
+    },
+    {
+      "id": "QM-D1-Q0-01-06-deduplicated-none-r1",
+      "fixture": 6,
+      "q": 0.72,
+      "bits": [
+        1,
+        1,
+        0
+      ],
+      "stratum": "conflict",
+      "representation": "deduplicated",
+      "context": "none",
+      "repeat": 1,
+      "expected": "ONE",
+      "prior": null,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d07",
+              "value": 1,
+              "q": 0.72,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d14",
+              "value": 0,
+              "q": 0.72,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d00",
+              "value": 1,
+              "q": 0.72,
+              "visible_root": "s00"
+            }
+          ],
+          "prior_role": "none",
+          "prior_decisions": []
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE. The prior probability of each state is 1/2. Each observation reports the true state with probability q. Distinct visible_root labels identify independent observations conditional on the state. Reports with the same visible_root are copies of one observation: count that source once. The prior decisions are scripted choices based on these same reports, not fresh measurements. Use the reports to make your decision regardless of available prior choices. Select DEFER only if unable to determine which state is more likely.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "9faef34cdcd654bafda2f123b9f0622e6bb45ee029af86b09ada8d320e6e5f27",
+      "run_tldr": "D1 deduplicated, none, q=0.72, repetition 1: source-MAP accuracy on fixed binary reports; scripted priors, no interacting swarm."
+    },
+    {
+      "id": "QM-D1-Q0-01-04-deduplicated-none-r1",
+      "fixture": 4,
+      "q": 0.72,
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "stratum": "conflict",
+      "representation": "deduplicated",
+      "context": "none",
+      "repeat": 1,
+      "expected": "ZERO",
+      "prior": null,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d07",
+              "value": 0,
+              "q": 0.72,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d00",
+              "value": 1,
+              "q": 0.72,
+              "visible_root": "s00"
+            },
+            {
+              "id": "d14",
+              "value": 0,
+              "q": 0.72,
+              "visible_root": "s02"
+            }
+          ],
+          "prior_role": "none",
+          "prior_decisions": []
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE. The prior probability of each state is 1/2. Each observation reports the true state with probability q. Distinct visible_root labels identify independent observations conditional on the state. Reports with the same visible_root are copies of one observation: count that source once. The prior decisions are scripted choices based on these same reports, not fresh measurements. Use the reports to make your decision regardless of available prior choices. Select DEFER only if unable to determine which state is more likely.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "fc7795708b0ffc9166fc5411e39caaded4578d698e7ed88833778e6bfa70db82",
+      "run_tldr": "D1 deduplicated, none, q=0.72, repetition 1: source-MAP accuracy on fixed binary reports; scripted priors, no interacting swarm."
+    },
+    {
+      "id": "QM-D1-Q0-01-05-deduplicated-none-r1",
+      "fixture": 5,
+      "q": 0.72,
+      "bits": [
+        1,
+        0,
+        1
+      ],
+      "stratum": "conflict",
+      "representation": "deduplicated",
+      "context": "none",
+      "repeat": 1,
+      "expected": "ONE",
+      "prior": null,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d07",
+              "value": 0,
+              "q": 0.72,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d00",
+              "value": 1,
+              "q": 0.72,
+              "visible_root": "s00"
+            },
+            {
+              "id": "d14",
+              "value": 1,
+              "q": 0.72,
+              "visible_root": "s02"
+            }
+          ],
+          "prior_role": "none",
+          "prior_decisions": []
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE. The prior probability of each state is 1/2. Each observation reports the true state with probability q. Distinct visible_root labels identify independent observations conditional on the state. Reports with the same visible_root are copies of one observation: count that source once. The prior decisions are scripted choices based on these same reports, not fresh measurements. Use the reports to make your decision regardless of available prior choices. Select DEFER only if unable to determine which state is more likely.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "3ac18746146fdab2a0796cbfbe96347ff27b38d778e4ecf7e42e94fd683f70d7",
+      "run_tldr": "D1 deduplicated, none, q=0.72, repetition 1: source-MAP accuracy on fixed binary reports; scripted priors, no interacting swarm."
+    },
+    {
+      "id": "QM-D1-Q0-01-03-deduplicated-none-r1",
+      "fixture": 3,
+      "q": 0.72,
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "stratum": "conflict",
+      "representation": "deduplicated",
+      "context": "none",
+      "repeat": 1,
+      "expected": "ONE",
+      "prior": null,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d14",
+              "value": 1,
+              "q": 0.72,
+              "visible_root": "s00"
+            },
+            {
+              "id": "d00",
+              "value": 0,
+              "q": 0.72,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d07",
+              "value": 1,
+              "q": 0.72,
+              "visible_root": "s01"
+            }
+          ],
+          "prior_role": "none",
+          "prior_decisions": []
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE. The prior probability of each state is 1/2. Each observation reports the true state with probability q. Distinct visible_root labels identify independent observations conditional on the state. Reports with the same visible_root are copies of one observation: count that source once. The prior decisions are scripted choices based on these same reports, not fresh measurements. Use the reports to make your decision regardless of available prior choices. Select DEFER only if unable to determine which state is more likely.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "155ad48f751e9bc04a6ddbe13d1e5e7bd1d01406fcf4f9934911b08ed3781cec",
+      "run_tldr": "D1 deduplicated, none, q=0.72, repetition 1: source-MAP accuracy on fixed binary reports; scripted priors, no interacting swarm."
+    },
+    {
+      "id": "QM-D1-Q0-01-07-deduplicated-none-r1",
+      "fixture": 7,
+      "q": 0.72,
+      "bits": [
+        1,
+        1,
+        1
+      ],
+      "stratum": "agreement",
+      "representation": "deduplicated",
+      "context": "none",
+      "repeat": 1,
+      "expected": "ONE",
+      "prior": null,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d07",
+              "value": 1,
+              "q": 0.72,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d14",
+              "value": 1,
+              "q": 0.72,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d00",
+              "value": 1,
+              "q": 0.72,
+              "visible_root": "s00"
+            }
+          ],
+          "prior_role": "none",
+          "prior_decisions": []
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE. The prior probability of each state is 1/2. Each observation reports the true state with probability q. Distinct visible_root labels identify independent observations conditional on the state. Reports with the same visible_root are copies of one observation: count that source once. The prior decisions are scripted choices based on these same reports, not fresh measurements. Use the reports to make your decision regardless of available prior choices. Select DEFER only if unable to determine which state is more likely.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "1c77f3b4d886a46d2c5e3ba58915da95b80467394cfbb71ba3f12f15e3922275",
+      "run_tldr": "D1 deduplicated, none, q=0.72, repetition 1: source-MAP accuracy on fixed binary reports; scripted priors, no interacting swarm."
+    },
+    {
+      "id": "QM-D1-Q0-01-00-deduplicated-none-r1",
+      "fixture": 0,
+      "q": 0.72,
+      "bits": [
+        0,
+        0,
+        0
+      ],
+      "stratum": "agreement",
+      "representation": "deduplicated",
+      "context": "none",
+      "repeat": 1,
+      "expected": "ZERO",
+      "prior": null,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d00",
+              "value": 0,
+              "q": 0.72,
+              "visible_root": "s01"
+            },
+            {
+              "id": "d07",
+              "value": 0,
+              "q": 0.72,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d14",
+              "value": 0,
+              "q": 0.72,
+              "visible_root": "s00"
+            }
+          ],
+          "prior_role": "none",
+          "prior_decisions": []
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE. The prior probability of each state is 1/2. Each observation reports the true state with probability q. Distinct visible_root labels identify independent observations conditional on the state. Reports with the same visible_root are copies of one observation: count that source once. The prior decisions are scripted choices based on these same reports, not fresh measurements. Use the reports to make your decision regardless of available prior choices. Select DEFER only if unable to determine which state is more likely.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "0dfdeddb3598e087a55534df88893cfcdb516567c37de9c67df97e85061e9449",
+      "run_tldr": "D1 deduplicated, none, q=0.72, repetition 1: source-MAP accuracy on fixed binary reports; scripted priors, no interacting swarm."
+    },
+    {
+      "id": "QM-D1-Q0-01-02-deduplicated-none-r1",
+      "fixture": 2,
+      "q": 0.72,
+      "bits": [
+        0,
+        1,
+        0
+      ],
+      "stratum": "conflict",
+      "representation": "deduplicated",
+      "context": "none",
+      "repeat": 1,
+      "expected": "ZERO",
+      "prior": null,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "id": "d14",
+              "value": 0,
+              "q": 0.72,
+              "visible_root": "s00"
+            },
+            {
+              "id": "d00",
+              "value": 0,
+              "q": 0.72,
+              "visible_root": "s02"
+            },
+            {
+              "id": "d07",
+              "value": 1,
+              "q": 0.72,
+              "visible_root": "s01"
+            }
+          ],
+          "prior_role": "none",
+          "prior_decisions": []
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state, ZERO or ONE. The prior probability of each state is 1/2. Each observation reports the true state with probability q. Distinct visible_root labels identify independent observations conditional on the state. Reports with the same visible_root are copies of one observation: count that source once. The prior decisions are scripted choices based on these same reports, not fresh measurements. Use the reports to make your decision regardless of available prior choices. Select DEFER only if unable to determine which state is more likely.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "26cc1a47b4f2531edb528372b3806137f72acedd3b005baf548a5b0c6ccc1648",
+      "run_tldr": "D1 deduplicated, none, q=0.72, repetition 1: source-MAP accuracy on fixed binary reports; scripted priors, no interacting swarm."
+    }
+  ],
+  "assignments_sha256": "262751e0c361aec17e46e8d72f4242d4d32334351036615d841c36d61aa71dec",
+  "max_calls": 8,
+  "reserved_usd": 0.010752
+}

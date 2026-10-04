@@ -30,11 +30,11 @@ We have not established that source-aware instructions improve a model, that dis
 
 ## What the next iteration changes
 
-The [current run roadmap](RUN-ROADMAP.md) starts with 16 context checks and a 64-call native copying/instruction screen. If that exposes an interpretable problem, four paired worlds compare peer discussion with judges reviewing their own answers, a pooled solver and deterministic rules. This buys a stronger control at the cost of very weak precision. [Fresh research findings](RESEARCH-GATES.md) narrow the claim to a controlled engineering replication; search saturation and formal survey/hypothesis acceptance remain open. The requested design review arrived with revisions, now addressed in the [review response](REVIEW-RESPONSE.md).
+The Q1 failure cannot tell us whether the model followed copied reports or misleading prior choices: both pointed to the same wrong answer. Its self-review wording was also ambiguous. The new [D1 plan](d1/PLAN.md) separates those factors and makes the reports primary in every instruction.
 
-The next 16-call qualification instrument is now implemented and checked: [readiness and remaining steps](NEXT-RUN-READINESS.md), [frozen prospective plan](NEXT-RUN-PLAN.md). All 54 study tests pass; no new native calls or scientific worlds were generated.
+First, eight clean three-source questions check basic capability. If that passes, 160 calls compare raw versus deduplicated reports with no prior choice, correct/wrong self choices, and correct/wrong peer choices. The practical question is whether normalizing sources in code improves model decisions, and whether prior choices undermine that improvement. These are fixed synthetic patterns with two repetitions, not independent real-world trials or an interacting swarm.
 
-**Launch status: operator preparing the next run. Researcher review is not required by owner direction.** Existing spending approval remains valid; no new paid calls were made for this analysis. [SETUP.md](SETUP.md) records the exact gates and next actions. Historical feedback is retained; it is not a pending approval.
+**Status: offline preparation complete; material design decision pending; no new machine or model calls.** [The review and runnable handoff](d1/RUNBOOK.md) explain the evidence, gates and commands. Researcher review remains waived. The maximum 168 new calls reserve $0.225792 within the existing cumulative $1 API budget; no replenishment. Historical Q1/M1/C1 plans remain available but are not the next launch path.
 
 <!-- experiment-evidence:start -->
 ## Evidence metadata

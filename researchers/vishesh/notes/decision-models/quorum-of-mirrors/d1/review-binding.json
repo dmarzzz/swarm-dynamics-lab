@@ -1,0 +1,34 @@
+{
+  "plan": {
+    "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/d1/next-run-plan.json",
+    "sha256": "7e3cfb4b181c727b950dc311b2e02b3c813e59e80fb1d3c1750db43698b053e7"
+  },
+  "scientific_review": {
+    "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/d1/scientific-review.json",
+    "sha256": "eb56dcd2e2a4271087a347f33aaa0f60804e85c93f8a117421135fa5096db9db"
+  },
+  "parent_handoff": {
+    "path": "data/experiment-operations/closeouts/quorum-of-mirrors/qm-q1-02/ebaaabaa2fc9290721b8996cea93a638fc324a8a1a18b934607282fea4b5eb0a/handoff.json",
+    "sha256": "6319107f0b212ea57f8a9fe46f7527b35356401c403d0949a48270407d0c69e8"
+  },
+  "execution_contract": {
+    "stage": "D1-two-stage",
+    "instrument_sha256": "023c731c2ee833a425c0ff0b824d4fc09166be16eee0187eee6aa656c024b744",
+    "assignment_sha256": "b6461c315adb3d36a4f906b10de2c2e96e4aca16220afeb0a2d80be882b03cc5",
+    "effective_config_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "sample_size_summary": {
+      "fixed_structures": 8,
+      "conflict_structures": 4,
+      "calls": 168
+    },
+    "cost_envelope": {
+      "maximum_calls": 168,
+      "maximum_reserved_usd": 0.225792
+    },
+    "adapter_runtime": "d1/runtime.py; manual entry point",
+    "initialization_contract": "stateless requests; fixed balanced repetition blocks; original sole-authority ledger"
+  },
+  "execution_sha256": "0d92c9c56893cf6cc982187d7293e6d791efe8066002750e32e649828061e3e1",
+  "provisioning_requested": true,
+  "approval_status": "owner_decision_required"
+}

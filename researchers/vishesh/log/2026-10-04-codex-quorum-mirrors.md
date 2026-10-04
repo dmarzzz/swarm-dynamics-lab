@@ -25,3 +25,10 @@ Owner directed direct execution, overriding the shared-controller queue wait. Ve
 ## Q1 interface repair and valid negative result
 
 Found operator assumption error: official Decisions docs show positive output counts despite free output. Published prospective repair, fixed validation and pre-validation billing receipt preservation; 59+7 checks passed. Fenced original ledger, migrated by SCP to exclusive sim-shadow, retained full original failed reservation as explicit unknown-actual upper bound. QM-Q1-02: 16 valid, 0/8 root-MAP correct, all16 report-majority choices; actual $0.00068544. Independent root grouping and billing audit confirm result. Six artifact readbacks pass; browser table verified, receiver exited and allocation released. Interface fixed; no favorable retry of valid adverse outcomes or M1/C1 launch.
+
+
+## D1 design and runbook preparation
+
+Refreshed main; finalized legacy QM-Q1-02 through the official manual closeout bridge (operations alias qm-q1-02). Completed all eleven scientific dimensions: valid negative 0/8 retained, four design/capability gaps drive a new diagnostic rather than another Q1 retry. Prospective D1 plan published before implementation; denominator correction published at d325b781 before code. Added full-factorial manifests, source-based analyzer, missingness bounds, scripted replay and a manual fail-closed runtime. Validation: 22 D1 and 59 historical tests passed; browser initial/partial states verified. Official freeze_next_plan accepted the evidence-linked structured proposal.
+
+Next action: owner decision on the concrete 8+160-call maximum material update, per refreshed AGENTS/RUN-REVIEW. Researcher review remains waived. No allocation or native calls this turn, original authority and sole canonical ledger unchanged. See notes/decision-models/quorum-of-mirrors/d1/RUNBOOK.md.

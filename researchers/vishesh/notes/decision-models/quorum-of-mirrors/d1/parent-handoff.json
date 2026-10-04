@@ -1,0 +1,91 @@
+{
+  "attempt": "qm-q1-02",
+  "context": {
+    "planned_cost": {},
+    "planned_sample": {}
+  },
+  "evidence_inventory": {
+    "bytes": 120147,
+    "file_count": 11,
+    "sha256": "01c11192f8d95c205e0e22aa6d42c23a493aa5364db54be73b428ad78ff6768a",
+    "status": "inventoried"
+  },
+  "kind": "automated_operational_post_mortem",
+  "native_outcome": "completed",
+  "outcome_source": "operator_assertion",
+  "postmortem_path": "data/experiment-operations/closeouts/quorum-of-mirrors/qm-q1-02/ebaaabaa2fc9290721b8996cea93a638fc324a8a1a18b934607282fea4b5eb0a/POST-MORTEM.md",
+  "postmortem_sha256": "d19d62a7ddd6a40ed64ccf0aa254e523ac0c3c80b4beea99d60fad01597cdc2c",
+  "required_next_session_steps": [
+    "Read this post-mortem and the retained evidence before proposing another attempt.",
+    "Evaluate every unresolved quality dimension and record evidence-linked conclusions, including what the run cannot establish.",
+    "Write a concrete updated plan: question, controls, independent sample counts and justification, scenario changes, data checks, context policy, stopping rules and cumulative cost.",
+    "Obtain the owner's explicit approval bound to the updated plan before provisioning or launching; approval is not inherited from this closeout.",
+    "Refresh public registration, qualification, budget and approved-account/allocation evidence required by the native launcher."
+  ],
+  "rubric": [
+    {
+      "dimension": "question",
+      "next_action": "State what decision the result informs and which plausible mechanisms remain unidentified; justify the value of another run.",
+      "status": "unknown"
+    },
+    {
+      "dimension": "scenarios",
+      "next_action": "Identify missing realistic challenge regimes and scenario families; specify held-out generation, leakage controls and competence checks for each change.",
+      "status": "unknown"
+    },
+    {
+      "dimension": "controls",
+      "next_action": "Audit paired assignment, competent reference policies, matched information and resources, and targeted ablations.",
+      "status": "unknown"
+    },
+    {
+      "dimension": "capability",
+      "next_action": "Interpret qualification separately from treatment effects; distinguish an instrument defect, capability failure and valid adverse result.",
+      "status": "unknown"
+    },
+    {
+      "dimension": "measurement",
+      "next_action": "Check endpoint definitions, scorer correctness, denominator consistency, effect uncertainty and missing-outcome bounds.",
+      "status": "unknown"
+    },
+    {
+      "dimension": "sample_size",
+      "next_action": "Separate independent roots from agents, calls and repeats; choose the next sample count using a stated effect or precision target and cumulative cost.",
+      "status": "unknown"
+    },
+    {
+      "dimension": "agent_context",
+      "next_action": "Compare delivered-context and startup receipts with the frozen definition; document role differences, memory resets, truncation and deviations.",
+      "status": "unknown"
+    },
+    {
+      "dimension": "data_integrity",
+      "next_action": "Reconcile all assigned, started, terminal, graded and missing outcomes; preserve failed attempts and audit exclusion or transport-retry decisions.",
+      "status": "unknown"
+    },
+    {
+      "dimension": "resources",
+      "next_action": "Reconcile actual and reserved spend, unresolved exposure and remaining cumulative authority; estimate the next total cost without resetting the ledger.",
+      "status": "unknown"
+    },
+    {
+      "dimension": "reproducibility",
+      "next_action": "Bind source, configuration, assignment and analysis versions; verify deterministic initialization and distinguish replay from fresh model sampling.",
+      "status": "unknown"
+    },
+    {
+      "dimension": "visualization",
+      "next_action": "Check that tables and plots reconcile to saved evidence and expose uncertainty, failed outcomes, denominators and claim boundaries.",
+      "status": "unknown"
+    }
+  ],
+  "saved_analysis": {
+    "instrument_binding": "unresolved",
+    "reason": "manual_study_requires_explicit_scientific_analysis",
+    "status": "unresolved"
+  },
+  "schema_version": 1,
+  "scientific_review": "unresolved",
+  "snapshot_sha256": "ebaaabaa2fc9290721b8996cea93a638fc324a8a1a18b934607282fea4b5eb0a",
+  "study_id": "quorum-of-mirrors"
+}
