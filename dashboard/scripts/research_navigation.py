@@ -80,8 +80,7 @@ def build_navigation(root, atlas, hypotheses, topics, source=None):
         # Only explicit author tags. No inference of acceptance or inheritance from a survey.
         tagged_hypotheses.append({'id': ident, 'title': fm.get('title') or ident,
             'path': doc.rel, 'status': fm.get('status') or 'unspecified',
-            # Hypothesis `topics` also carry free keywords; only library topic slugs link to a research area.
-            'topics': refs([t for t in dict.fromkeys(fm.get('topics') or []) if t in topics], topics, f'hypothesis topic in {doc.rel}'),
+            'topics': refs(fm.get('topics') or [], topics, f'hypothesis topic in {doc.rel}'),
             'focus_areas': refs(fm.get('focus_areas') or [], focus_ids, f'hypothesis focus area in {doc.rel}'),
             'projects': refs(fm.get('project_briefs') or [], project_ids, f'hypothesis project in {doc.rel}')})
     return {'schema': source['schema'], 'owner': source['owner'], 'source_path': SOURCE,
