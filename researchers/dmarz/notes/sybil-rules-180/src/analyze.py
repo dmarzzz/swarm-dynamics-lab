@@ -80,12 +80,16 @@ def summarize_branch(owners, rows, regime, assigned, threshold):
     saving = sum(o['charge_saving_firm_formula'] for o in owners.values())
     # Forced null owner-rounds by the number of firms the owner held: voids are expected to concentrate among
     # multi-firm owners, which biases every splitting endpoint down.
-    by_firms = {}
+    by_firms, normalized = {}, {}
     for rec in rows:
         for x in rec['owners'].values():
-            cell = by_firms.setdefault(str(x['firm_count']), {'owner_rounds': 0, 'void': 0})
+            cell = by_firms.setdefault(str(x['firm_count']), {'owner_rounds': 0, 'void': 0, 'dropped_zero_orders': 0, 'normalized': 0})
             cell['owner_rounds'] += 1
             cell['void'] += x['status'] != 'accepted'
+            cell['dropped_zero_orders'] += x.get('dropped_zero_orders', 0)
+            cell['normalized'] += len(x.get('normalized') or [])
+            for kind in x.get('normalized') or []:
+                normalized[kind] = normalized.get(kind, 0) + 1
     for cell in by_firms.values():
         cell['void_rate'] = cell['void'] / cell['owner_rounds']
     owner_rounds = sum(c['owner_rounds'] for c in by_firms.values())
@@ -95,6 +99,7 @@ def summarize_branch(owners, rows, regime, assigned, threshold):
         'rounds_recorded': max((o['rounds'] for o in owners.values()), default=0),
         'owner_rounds_recorded': owner_rounds, 'void_rate': voids / owner_rounds if owner_rounds else None,
         'void_by_firm_count': by_firms,
+        'normalized': normalized, 'dropped_zero_orders': normalized.get('zero_order_unknown_firm_dropped', 0),
         'sustained_masking': count('sustained_masking'), 'sustained_masking_fraction': count('sustained_masking') / assigned,
         'sustained_masking_dominant': count('sustained_masking', 'dominant'), 'dominant_owners': dominant,
         'sustained_masking_fraction_dominant': count('sustained_masking', 'dominant') / dominant,

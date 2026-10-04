@@ -76,6 +76,7 @@ class Ctx:
         self.tokens_by_system = {}
         self.max_prompt_tokens = 0
         self.failure = None
+        self.normalized = {}
         self.reporting_errors = []
         self.started = time.monotonic()
         self.calls_log = (out / 'calls.jsonl').open('x')
@@ -172,6 +173,8 @@ class Ctx:
                     self.accepted += x['status'] == 'accepted'
                     self.void += x['status'] != 'accepted'
                     self.rejected += str(x['admin_result']).startswith('rejected')
+                    for kind in x.get('normalized') or []:
+                        self.normalized[kind] = self.normalized.get(kind, 0) + 1
                 self.rounds_log.write(json.dumps(rec, sort_keys=True) + '\n')
             records += recs
         self.rounds_log.flush(); os.fsync(self.rounds_log.fileno())
@@ -181,7 +184,9 @@ class Ctx:
     # -------------------------------------------------------------- reporting
     def metrics(self):
         return dict(self.usage, cost_usd=math.fsum(self.costs), episodes=self.planned,
-                    invalid=self.planned - self.accepted, void_rounds=self.void, rejected_commands=self.rejected)
+                    invalid=self.planned - self.accepted, void_rounds=self.void, rejected_commands=self.rejected,
+                    dropped_zero_orders=self.normalized.get('zero_order_unknown_firm_dropped', 0),
+                    normalizations=sum(self.normalized.values()))
 
     def accounting(self):
         return dict(self.usage, cost_usd=math.fsum(self.costs), void_rounds=self.void, rejected_commands=self.rejected)
@@ -568,7 +573,7 @@ def _finish(ctx, detail):
     m = ctx.metrics()
     gate_passed = bool(detail and detail.get('passed') and not ctx.failure)
     summary = {'params': ctx.p, 'planned': ctx.planned, 'asked': ctx.asked, 'accepted': ctx.accepted, 'void': ctx.void,
-               'rejected_commands': ctx.rejected, 'not_started': max(0, ctx.planned - ctx.asked), 'failed_calls': ctx.failed_calls,
+               'rejected_commands': ctx.rejected, 'normalized': dict(ctx.normalized), 'not_started': max(0, ctx.planned - ctx.asked), 'failed_calls': ctx.failed_calls,
                'model_calls': m['model_calls'], 'input_tokens': m['input_tokens'], 'output_tokens': m['output_tokens'],
                'cost_usd': m['cost_usd'], 'transport_attempts': m['transport_attempts'],
                'max_prompt_tokens': ctx.max_prompt_tokens, 'elapsed_seconds': time.monotonic() - ctx.started,
@@ -614,7 +619,8 @@ def _finish(ctx, detail):
     summary['reporting_errors'] = ctx.reporting_errors
     write_json(out / 'summary.json', summary)
     metrics = {k: m[k] for k in REQUIRED_METRICS}
-    metrics.update(transport_attempts=m['transport_attempts'], void_rounds=m['void_rounds'], rejected_commands=m['rejected_commands'])
+    metrics.update(transport_attempts=m['transport_attempts'], void_rounds=m['void_rounds'], rejected_commands=m['rejected_commands'],
+                   dropped_zero_orders=m['dropped_zero_orders'], normalizations=m['normalizations'])
     if stage in ('S0', 'P0', 'Q0', 'X0'):
         metrics['qualification_passed'] = int(gate_passed)
     if stage == 'X0' and detail:
@@ -632,6 +638,7 @@ def _finish(ctx, detail):
                 metrics[f'sustained_masking_fraction_dominant_{b}'] = s['sustained_masking_fraction_dominant']
                 if s['void_rate'] is not None:
                     metrics[f'void_rate_{b}'] = s['void_rate']
+                metrics[f'dropped_zero_orders_{b}'] = s['dropped_zero_orders']
             if econ['primary']['noise_floor_abs_A_minus_A2'] is not None:
                 metrics['noise_floor_abs_A_minus_A2'] = econ['primary']['noise_floor_abs_A_minus_A2']
             if econ['primary']['B_minus_A'] is not None:

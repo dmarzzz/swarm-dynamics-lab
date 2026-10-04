@@ -47,6 +47,12 @@ metrics:
 - void_rate_C
 - void_rate_A2
 - noise_floor_abs_A_minus_A2
+- dropped_zero_orders
+- normalizations
+- dropped_zero_orders_A
+- dropped_zero_orders_B
+- dropped_zero_orders_C
+- dropped_zero_orders_A2
 - in_flight_selected
 - diagnostic_admissible
 - primary_contrast_B_minus_A

@@ -146,7 +146,7 @@ def _run_chain(stages, sr, root, ledger_path, allow_shared_host, poll, holder, t
                 if stage == 'S1':
                     if not metrics.get('model_calls') or metrics.get('cost_usd') is None:
                         raise ValueError('projection_missing_x0_usage')
-                    committed = transport.FastLedger(ledger_path, budget).transact()['committed_usd']
+                    committed = transport.FastLedger(ledger_path, study.ledger_budget()).transact()['committed_usd']
                     entry['projection'] = projection_check(metrics['cost_usd'] / metrics['model_calls'], committed)
                     if not entry['projection']['passed']:
                         raise ValueError('projection_exceeds_cap')
@@ -156,7 +156,7 @@ def _run_chain(stages, sr, root, ledger_path, allow_shared_host, poll, holder, t
             return refuse(stage, entry, 'gate_error_' + type(exc).__name__)
         dispatcher = holder.get('dispatcher')
         if stage != 'S0' and dispatcher is None:
-            dispatcher = transport.HubDispatcher(sr, transport.FastLedger(ledger_path, budget), study.provider_config(),
+            dispatcher = transport.HubDispatcher(sr, transport.FastLedger(ledger_path, study.ledger_budget()), study.provider_config(),
                                                  d['economy']['hosts'], root / 'transport', d['attempt'] + '-' + p['batch'],
                                                  poll=poll, allow_shared_host=allow_shared_host, **(transport_options or {}))
             holder['dispatcher'] = dispatcher
@@ -209,7 +209,7 @@ def _usage(summary):
     out = {'calls': summary['model_calls'], 'transport_attempts': summary['transport_attempts'],
            'input_tokens': summary['input_tokens'], 'output_tokens': summary['output_tokens'], 'cost_usd': summary['cost_usd'],
            'planned': summary['planned'], 'asked': summary['asked'], 'accepted': summary['accepted'], 'void': summary['void'],
-           'rejected_commands': summary['rejected_commands'], 'gate_passed': summary['gate']['passed'],
+           'rejected_commands': summary['rejected_commands'], 'normalized': summary.get('normalized'), 'gate_passed': summary['gate']['passed'],
            'elapsed_seconds': summary['elapsed_seconds'], 'hosts': summary.get('hosts'), 'billing': summary.get('billing'),
            'transport': {k: v for k, v in (summary.get('transport') or {}).items() if k != 'events'} or None}
     detail = summary.get('detail') or {}
@@ -224,7 +224,7 @@ def chain_status(results_root=None, ledger_path=None):
     root = Path(results_root) if results_root else study.results_root()
     ledger_path = ledger_path or os.environ.get(provider.LEDGER_ENV)
     budget = study.design()['budget']
-    ledger = provider.Ledger(ledger_path, budget).transact() if ledger_path and Path(ledger_path).exists() else None
+    ledger = provider.Ledger(ledger_path, study.ledger_budget()).transact() if ledger_path and Path(ledger_path).exists() else None
     return {'chain': read_status(root) or {'state': 'absent'}, 'ledger': ledger,
             'source_hash': study.source_hash(), 'results_dir': str(root)}
 
@@ -351,13 +351,21 @@ def verify(sr, results_root=None, ledger_path=None):
     ledger_path = ledger_path or os.environ.get(provider.LEDGER_ENV)
     if ledger_path and Path(ledger_path).exists():
         budget = study.design()['budget']
-        slow = provider.Ledger(ledger_path, budget).transact()
-        fast = transport.FastLedger(ledger_path, budget).transact()
+        slow = provider.Ledger(ledger_path, study.ledger_budget()).transact()
+        mine = {study.params(s)['batch'] for s in study.STAGES}
+        earlier = 0                          # reservations of earlier attempts in the same ledger file (attempt 001: one P0 call)
+        for line in Path(ledger_path).read_text().splitlines():
+            e = json.loads(line) if line.strip() else {}
+            if e.get('type') == 'reserve' and not e['call_id'].startswith(transport.REISSUE_PREFIX) \
+                    and e['call_id'].split(':', 1)[0] not in mine:
+                earlier += 1
+        fast = transport.FastLedger(ledger_path, study.ledger_budget()).transact()
         calls = sum(s.get('model_calls', 0) for s in report['stages'].values())
         report['ledger'] = {'totals_agree': slow == fast, 'attempted_calls': slow['attempted_calls'],
                             'actual_usd': slow['actual_usd'], 'committed_usd': slow['committed_usd'],
                             'reissued_calls': slow['calls_by_stage'].get('REISSUE', 0),
-                            'calls_match_stage_records': slow['attempted_calls'] - slow['calls_by_stage'].get('REISSUE', 0) == calls}
+                            'carried_from_earlier_attempts': earlier,
+                            'calls_match_stage_records': slow['attempted_calls'] - slow['calls_by_stage'].get('REISSUE', 0) - earlier == calls}
     report['ok'] = bool(report['stages']) and all(s['ok'] for s in report['stages'].values()) and \
         (report.get('ledger') or {'totals_agree': True}).get('totals_agree', True)
     return report
