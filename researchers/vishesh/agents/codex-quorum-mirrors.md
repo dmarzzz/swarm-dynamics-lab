@@ -3,8 +3,8 @@ agent: vishesh/codex-quorum-mirrors
 tool: codex
 state: idle
 task: null
-doing: Eight-case offline baseline audit complete; paid R60 expansion parked and unfunded
-updated: 2026-10-04T21:09:16.214965+00:00
+doing: Baseline GAP; B32 repeated-execution proposal prepared, native scope unfunded
+updated: 2026-10-04T21:14:06.975307+00:00
 ---
 
-See notes/decision-models/quorum-of-mirrors/realistic-sol60/DEVELOPMENT-BASELINE.md. No new native calls or allocation.
+See notes/decision-models/quorum-of-mirrors/baseline-b32/PLAN.md. No new model call or allocation.

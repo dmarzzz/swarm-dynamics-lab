@@ -1,0 +1,41 @@
+{
+  "status": "offline_design_arithmetic_only",
+  "native_calls": 0,
+  "qualification_clusters": 8,
+  "evaluation_clusters": 32,
+  "evaluation_fresh_executions": 2,
+  "agents_per_committee": 6,
+  "calls_per_cluster_execution": 20,
+  "qualification_call_max": 160,
+  "evaluation_call_max_each": 640,
+  "total_call_max": 1440,
+  "unit_ceiling_usd": "0.028480",
+  "qualification_ceiling_usd": "4.556800",
+  "each_evaluation_ceiling_usd": "18.227200",
+  "model_ceiling_usd": "41.011200",
+  "infrastructure_ceiling_usd": "0.50",
+  "incremental_total_ceiling_usd": "41.511200",
+  "precision_sensitivity": [
+    {
+      "discordance": 0.1,
+      "n": 32,
+      "approx_95_half_width": 0.10956733089748968
+    },
+    {
+      "discordance": 0.25,
+      "n": 32,
+      "approx_95_half_width": 0.17324116139070414
+    },
+    {
+      "discordance": 0.5,
+      "n": 32,
+      "approx_95_half_width": 0.245
+    }
+  ],
+  "limitations": [
+    "Event IDs are placeholders, not an assembled or admitted corpus.",
+    "Repeated execution does not double independent n.",
+    "Normal approximation omits repeat covariance; actual clustered intervals required.",
+    "This validates allocation relationships, not a native fork runner."
+  ]
+}

@@ -95,3 +95,8 @@ From this directory, `python3 reassess_s0.py` regenerates the retrospective data
 
 
 [Latest development baseline audit](realistic-sol60/DEVELOPMENT-BASELINE.md): six defensible supplied-evidence labels, one limited and one ambiguous among eight inspected controls; no demonstrated collaboration headroom. Paid R60 expansion remains parked/unfunded.
+
+
+## Corrected baseline standard
+
+The completed grammar diagnostic does not meet the scientific baseline. [B32 proposal](baseline-b32/PLAN.md) replaces premature research-direction parking with32 audited event clusters and two fresh executions, while paid dispatch remains unfunded pending named PI allocation and admission. No replicated realistic outcome is claimed.
