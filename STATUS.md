@@ -29,6 +29,7 @@
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
 | [build-sybil-rules-180](tasks/build-sybil-rules-180.md) | claimed | p0 | build | dmarz/flagship-market | dmarz | 2026-10-04T10:31Z | Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready |
+| [build-sybil-split-xmodel](tasks/build-sybil-split-xmodel.md) | claimed | p0 | build | dmarz/pipeline-split-qwen | dmarz | 2026-10-04T12:21Z | Prepare sybil-split-xmodel (cross-model replication of sybil-split-opus: Qwen3.7 Flash and GPT-6 Sol) to launch-ready |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed (stale) | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed (stale) | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
 | [scan-papers-fm-identity-hijack](tasks/scan-papers-fm-identity-hijack.md) | claimed (stale) | p0 | scan | dmarz/fm-identity-hijack |  | 2026-10-03T18:12Z | Catalogue the papers: identity and goal hijack of agents |
@@ -54,7 +55,6 @@
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
-| [build-sybil-split-xmodel](tasks/build-sybil-split-xmodel.md) | open | p0 | build |  | dmarz |  | Prepare sybil-split-xmodel (cross-model replication of sybil-split-opus: Qwen3.7 Flash and GPT-6 Sol) to launch-ready |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [allocate-poietic-agents-s0](tasks/allocate-poietic-agents-s0.md) | open | p1 | admin |  | dmarz |  | Identify an idle approved-fleet allocation for Poietic Agents qualification |
