@@ -1,7 +1,7 @@
 # Pre-run assessment s0-fleet-001
 
 - Experiment / owner / stage: market-split / dmarz / exploratory scripted S0.
-- Parent: s0-local-001; read its passing post-mortem. Status: ready.
+- Parent: s0-local-002; read its passing post-mortem. Status: ready.
 - Question: can the market, controls, accounting and visual replay be trusted before API use?
 - Expected: programmed registration can reduce firm HHI while owner HHI is unchanged. A negative search result is acceptable if controls work. Invalid accounting or missing visual artifacts is uninformative.
 
@@ -11,7 +11,7 @@ Use the frozen design and prospective protocol. Three policies paired on identic
 
 ## Changes and unresolved issues
 
-Initial template adaptation. No question-specific survey/hypothesis approval exists; only exploratory S0/S1 permitted. API discovery, model competence and power remain untested. Validate deterministic pairing, manual HHI/fines, treasury/capacity conservation, no-regulator parity, ownership negative control, high-cost deterrence, invalid-output preservation, leakage boundary and renderer transitions with `src/selftest.py` before this launch.
+Qualified evaluator revision: strategic fragmentation is assignment-independent; successful evasion is a distinct secondary measure. Local S0 requalification passed all 18 episodes after this repair. No question-specific survey/hypothesis approval exists; only exploratory S0/S1 permitted. API discovery, model competence and power remain untested. Validate deterministic pairing, manual HHI/fines, treasury/capacity conservation, no-regulator parity, ownership negative control, high-cost deterrence, invalid-output preservation, leakage boundary and renderer transitions with `src/selftest.py` before this launch.
 
 ## Frozen execution plan
 
