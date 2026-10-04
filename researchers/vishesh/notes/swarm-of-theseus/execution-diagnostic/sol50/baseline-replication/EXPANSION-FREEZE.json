@@ -1,0 +1,18 @@
+{
+  "manifest_sha256": "1df610bd4704f23b3044fc3de8adafaa88cc472fff5de2041d1af5ca58d817f6",
+  "prior_Q3_packet_sha256": "21b58f9445006d98e1d83f1af79c23f80d54d9471a1a02d76dab25385a9ff918",
+  "Q3_worlds_reused": 3,
+  "P1_new_worlds": 3,
+  "P2_new_worlds": 3,
+  "fresh_executions_per_world": 2,
+  "independent_templates": 3,
+  "seeds_and_cases_private": true,
+  "native_calls": 0,
+  "native_scheduler_ready": false,
+  "stage_source_sha256": "1475cf733b76eb1269061b206a0937b468bd027c833322ecc8616ceb58047f06",
+  "assignment_digests": {
+    "Q3-A2": "19a928e745f8f2148b68f537d064ee364d91d4bfff2f486b2955b94536272da5",
+    "P1": "e4bc029ae0430a1644c35cf73d623571361b6b33ba9d590710da0f40fa3834f2",
+    "P2": "d967f1e4935365b71b4786277018933d626b07061b5ac90a5739b6485d750405"
+  }
+}

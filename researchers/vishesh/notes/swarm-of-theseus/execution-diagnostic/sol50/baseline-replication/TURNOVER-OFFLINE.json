@@ -1,0 +1,108 @@
+{
+  "evidence_type": "scripted software fixture,not native replication",
+  "trajectories": 12,
+  "scripted_calls": 1656,
+  "max_calls_per_trajectory": 138,
+  "maximum_request_bytes": 5908,
+  "replay_disagreements": 0,
+  "native_calls": 0,
+  "sealed_holdouts_opened": false,
+  "records": [
+    {
+      "family": "release",
+      "development_seed": 8800,
+      "scripted_repeat": 0,
+      "calls": 138,
+      "complete": true,
+      "exact_replay": true
+    },
+    {
+      "family": "release",
+      "development_seed": 8800,
+      "scripted_repeat": 1,
+      "calls": 138,
+      "complete": true,
+      "exact_replay": true
+    },
+    {
+      "family": "release",
+      "development_seed": 8801,
+      "scripted_repeat": 0,
+      "calls": 138,
+      "complete": true,
+      "exact_replay": true
+    },
+    {
+      "family": "release",
+      "development_seed": 8801,
+      "scripted_repeat": 1,
+      "calls": 138,
+      "complete": true,
+      "exact_replay": true
+    },
+    {
+      "family": "failover",
+      "development_seed": 8800,
+      "scripted_repeat": 0,
+      "calls": 138,
+      "complete": true,
+      "exact_replay": true
+    },
+    {
+      "family": "failover",
+      "development_seed": 8800,
+      "scripted_repeat": 1,
+      "calls": 138,
+      "complete": true,
+      "exact_replay": true
+    },
+    {
+      "family": "failover",
+      "development_seed": 8801,
+      "scripted_repeat": 0,
+      "calls": 138,
+      "complete": true,
+      "exact_replay": true
+    },
+    {
+      "family": "failover",
+      "development_seed": 8801,
+      "scripted_repeat": 1,
+      "calls": 138,
+      "complete": true,
+      "exact_replay": true
+    },
+    {
+      "family": "delegation",
+      "development_seed": 8800,
+      "scripted_repeat": 0,
+      "calls": 138,
+      "complete": true,
+      "exact_replay": true
+    },
+    {
+      "family": "delegation",
+      "development_seed": 8800,
+      "scripted_repeat": 1,
+      "calls": 138,
+      "complete": true,
+      "exact_replay": true
+    },
+    {
+      "family": "delegation",
+      "development_seed": 8801,
+      "scripted_repeat": 0,
+      "calls": 138,
+      "complete": true,
+      "exact_replay": true
+    },
+    {
+      "family": "delegation",
+      "development_seed": 8801,
+      "scripted_repeat": 1,
+      "calls": 138,
+      "complete": true,
+      "exact_replay": true
+    }
+  ]
+}

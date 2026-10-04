@@ -1,0 +1,19 @@
+{
+  "attempt": "R3-C1-A1",
+  "execution": "completed",
+  "qualification": "trivial_transport_pass_only",
+  "scientific_review": "owning_11_dimension_complete",
+  "postmortem": "C1-POST-MORTEM.md",
+  "worker_stopped": true,
+  "transport_stopped": true,
+  "allocation_released_pr": 452,
+  "actual_api_usd": 0.000172,
+  "allocated_hosting_usd": 0.003511975,
+  "cumulative_exposure_usd": 1.1900610187,
+  "unused_released_usd": 0.046316025,
+  "original_Q3_uncertainty_unchanged": true,
+  "original_Q3_remote_grant_unchanged": true,
+  "operational_handoff_sha256": "1b9d6aab9052d93aa0ec55cfe3aee38e48f03fe0e2022e2429bdd132bf96e6d3",
+  "artifact_publication": "public_Git_aggregate_files; verify immutable readback",
+  "automatic_successor": false
+}

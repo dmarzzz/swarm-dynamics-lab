@@ -1,0 +1,131 @@
+{
+  "attempt": "R3-C1-A1",
+  "assessor": "vishesh/codex-theseus;owning agent",
+  "date": "2026-10-04",
+  "evidence_revision": "076a2072de25fc637aaf30b71e7684527bb40314",
+  "decision": "complete_valid_result",
+  "claim": "trivial JSON transport compatibility only",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "One fixed transport acceptance question, with explicit no-science boundary.",
+      "evidence": [
+        {
+          "path": "C1-AUDIT.json",
+          "sha256": "2decf30ba0d65c5cf98d28e70dc6aaad7bf5ad273e6b4e278d80f67b72da1f34"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "not_applicable",
+      "finding": "Trivial JSON object is intentional; no scientific case or semantic qualification.",
+      "evidence": [
+        {
+          "path": "C1-AUDIT.json",
+          "sha256": "2decf30ba0d65c5cf98d28e70dc6aaad7bf5ad273e6b4e278d80f67b72da1f34"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Exact object/type and served-route reference determines technical acceptance; no causal attribution claimed.",
+      "evidence": [
+        {
+          "path": "C1-AUDIT.json",
+          "sha256": "2decf30ba0d65c5cf98d28e70dc6aaad7bf5ad273e6b4e278d80f67b72da1f34"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "One complete correctly typed JSON object on the requested route; transport only.",
+      "evidence": [
+        {
+          "path": "C1-AUDIT.json",
+          "sha256": "2decf30ba0d65c5cf98d28e70dc6aaad7bf5ad273e6b4e278d80f67b72da1f34"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "1assigned/started/valid; exact request reconstruction and complete response/usage inspection.",
+      "evidence": [
+        {
+          "path": "C1-AUDIT.json",
+          "sha256": "2decf30ba0d65c5cf98d28e70dc6aaad7bf5ad273e6b4e278d80f67b72da1f34"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "One technical observation matches the bounded contract check; zero scientific units and no population interval.",
+      "evidence": [
+        {
+          "path": "C1-AUDIT.json",
+          "sha256": "2decf30ba0d65c5cf98d28e70dc6aaad7bf5ad273e6b4e278d80f67b72da1f34"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Fixed two-message prompt,explicit JSON,no scientific data or operator context,no fallback.",
+      "evidence": [
+        {
+          "path": "C1-AUDIT.json",
+          "sha256": "2decf30ba0d65c5cf98d28e70dc6aaad7bf5ad273e6b4e278d80f67b72da1f34"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All one-call artifacts retained with hashes; Q3 missing provider body remains separately unresolved.",
+      "evidence": [
+        {
+          "path": "C1-AUDIT.json",
+          "sha256": "2decf30ba0d65c5cf98d28e70dc6aaad7bf5ad273e6b4e278d80f67b72da1f34"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD0.003683975 all-in allocated cost underUSD0.05;177secondclaim released,priorunknownUSD0.033102 preserved.",
+      "evidence": [
+        {
+          "path": "C1-AUDIT.json",
+          "sha256": "2decf30ba0d65c5cf98d28e70dc6aaad7bf5ad273e6b4e278d80f67b72da1f34"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Source076a2072,request/source/plan hashes,private native trace and26offline checks; hosted repeatability untested.",
+      "evidence": [
+        {
+          "path": "C1-AUDIT.json",
+          "sha256": "2decf30ba0d65c5cf98d28e70dc6aaad7bf5ad273e6b4e278d80f67b72da1f34"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Static observed-event table reports1call,0scientificworlds and actual/missing-cost boundaries.",
+      "evidence": [
+        {
+          "path": "C1-AUDIT.json",
+          "sha256": "2decf30ba0d65c5cf98d28e70dc6aaad7bf5ad273e6b4e278d80f67b72da1f34"
+        }
+      ]
+    }
+  ]
+}
