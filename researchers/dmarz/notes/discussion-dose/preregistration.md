@@ -37,3 +37,6 @@ The frozen plan is `src/pilot.py`. The dollar guard is $0.10 per permitted physi
 
 
 2026-10-03, after rejected preflight v1: Anthropic refused both acquisition requests because API credits were insufficient; there were no model outputs. Preserve run `discussion-dose/775e3cd6`. Once billing is resolved, use preflight batch `haiku45-preflight-v2` with identical task/model/protocol. Only failure diagnostics and qualification status reporting change. Qualification batch remains `haiku45-qualification-v1` and is still unsubmitted.
+
+
+2026-10-04 UTC, before S0 model collection: Funded preflight v2 passed all eight episodes. Qualification attempt v1 (`discussion-dose/6c9284c3`) failed before any model call because a server configuration refresh had removed custom credential fields from the managed reporting file. Preserve that startup failure. Store the model configuration in SOPS and inject it directly into worker memory using the private launcher, validating credentials before enqueue. Restart as `haiku45-qualification-v2` with identical worlds, model, prompts, caps and scoring. This is an infrastructure restart with zero S0 behavioral outcomes observed.

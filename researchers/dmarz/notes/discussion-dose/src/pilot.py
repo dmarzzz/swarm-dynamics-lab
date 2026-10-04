@@ -14,7 +14,7 @@ def plan(smoke=False):
             'input_usd_per_million':1,'output_usd_per_million':5}
     return {'stage':'S0','tasks':tasks,'seeds':[1],'n_agents':3,'rounds':[0,1,3,6],
             'backend':'anthropic','private_control':False,'model_config':config,
-            'batch':'haiku45-preflight-v2' if smoke else 'haiku45-qualification-v1'}
+            'batch':'haiku45-preflight-v2' if smoke else 'haiku45-qualification-v2'}
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--smoke',action='store_true');p.add_argument('--enqueue',action='store_true');a=p.parse_args()
