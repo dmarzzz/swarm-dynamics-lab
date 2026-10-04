@@ -92,7 +92,7 @@ class LiveTests(unittest.TestCase):
         renderer=types.SimpleNamespace(render=lambda *a:None)
         for stage,total in [('Q0',18),('Q1',42),('S1',420)]:
             with tempfile.TemporaryDirectory() as t:
-                out=Path(t)/'out';cfg=Path(t)/'cfg.json';cfg.write_text(json.dumps({'run_id':'unit-test-only','source_commit':'fixture','plan_url':'fixture','run_tldr':'Unit test only, no model or hub calls.'}))
+                out=Path(t)/'out';cfg=Path(t)/'cfg.json';cfg.write_text(json.dumps({'host':'sim-shadow','run_id':'unit-test-only','source_commit':'fixture','plan_url':'fixture','run_tldr':'Unit test only, no model or hub calls.'}))
                 args=types.SimpleNamespace(stage=stage,out=out,config=cfg)
                 with patch.object(live_worker,'verify_config',return_value={}),patch.object(live_worker,'NativePolicy',FakePolicy),patch.dict(sys.modules,{'swarm_report':hub,'live_render':renderer}),contextlib.redirect_stdout(io.StringIO()):live_worker.main(args)
                 s=json.loads((out/'summary.json').read_text())
@@ -112,7 +112,7 @@ class LiveTests(unittest.TestCase):
             def done(self,*a,**k):events.append('done')
             def fail(self,*a,**k):events.append('fail')
         with tempfile.TemporaryDirectory() as t:
-            out=Path(t)/'out';cfg=Path(t)/'cfg.json';cfg.write_text(json.dumps({'run_id':'unit-test','source_commit':'fixture','plan_url':'fixture','run_tldr':'Unit test only'}))
+            out=Path(t)/'out';cfg=Path(t)/'cfg.json';cfg.write_text(json.dumps({'host':'sim-shadow','run_id':'unit-test','source_commit':'fixture','plan_url':'fixture','run_tldr':'Unit test only'}))
             with patch.object(live_worker,'verify_config',return_value={}),patch.object(live_worker,'NativePolicy',Failure),patch.dict(sys.modules,{'swarm_report':types.SimpleNamespace(start=lambda *a,**k:Run()),'live_render':types.SimpleNamespace(render=lambda *a:None)}),contextlib.redirect_stdout(io.StringIO()):
                 live_worker.main(types.SimpleNamespace(stage='Q0',out=out,config=cfg))
             s=json.loads((out/'summary.json').read_text());self.assertEqual(s['assigned'],18);self.assertEqual(s['terminal'],1);self.assertEqual(s['missing'],17);self.assertFalse(s['qualification_passed']);self.assertEqual(events,['fail'])
