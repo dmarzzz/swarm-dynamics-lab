@@ -3,7 +3,7 @@ id: heterogeneous-priority-revision
 type: task
 title: Revise heterogeneous-swarm priorities from owner feedback
 kind: question
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-heterogeneous
 for: vishesh
@@ -14,7 +14,11 @@ topics:
 - llm-agent-swarms
 - agent-budgets
 claimed_at: 2026-10-04T03:40Z
-updated: 2026-10-04T03:40Z
+updated: 2026-10-04T03:53Z
+outputs:
+- researchers/vishesh/notes/heterogeneous-swarms/frontiers/PRIORITIES.md
+- researchers/vishesh/notes/heterogeneous-swarms/frontiers/SCORES.md
+- researchers/vishesh/notes/heterogeneous-swarms/frontiers/priority-revision.json
 ---
 
 ## Goal
