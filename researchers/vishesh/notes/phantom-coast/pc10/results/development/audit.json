@@ -1,0 +1,85 @@
+{
+  "verified": true,
+  "pairs": 8,
+  "diagnostics": [
+    {
+      "id": "development-00",
+      "kind": "no-evidence",
+      "all_first_actions_enumerated": true,
+      "mean_expected_losses": [
+        0.125,
+        0.125,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "id": "development-01",
+      "kind": "private-positive",
+      "all_first_actions_enumerated": true,
+      "mean_expected_losses": [
+        0.11249999999999999,
+        0.11249999999999999,
+        0.11249999999999999,
+        0.125
+      ]
+    },
+    {
+      "id": "development-02",
+      "kind": "private-negative",
+      "all_first_actions_enumerated": true,
+      "mean_expected_losses": [
+        0.11249999999999999,
+        0.11249999999999999,
+        0.11249999999999999,
+        0.125
+      ]
+    },
+    {
+      "id": "development-03",
+      "kind": "nonrepeat",
+      "all_first_actions_enumerated": true,
+      "mean_expected_losses": [
+        0.1875,
+        0.125,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "id": "development-04",
+      "kind": "correct-negative",
+      "all_first_actions_enumerated": true,
+      "mean_expected_losses": [
+        0.125,
+        0.125,
+        0.1875,
+        0.125
+      ]
+    },
+    {
+      "id": "development-05",
+      "kind": "correct-positive",
+      "all_first_actions_enumerated": true,
+      "mean_expected_losses": [
+        0.125,
+        0.1875,
+        0.125,
+        0.125
+      ]
+    },
+    {
+      "id": "development-06",
+      "kind": "consensus-correction",
+      "all_first_actions_enumerated": false,
+      "mean_expected_losses": []
+    },
+    {
+      "id": "development-07",
+      "kind": "evidence-gap",
+      "all_first_actions_enumerated": false,
+      "mean_expected_losses": []
+    }
+  ],
+  "native_calls": 0
+}

@@ -1,0 +1,76 @@
+{
+  "scope": "pc10-q1-a1",
+  "stage": "Q1",
+  "assignments_sha256": "e2c99af81ae5f194321b828dff60e5e7847316ca4359354c3964c74844b44052",
+  "status": "prepared_not_admitted",
+  "admitted": false,
+  "model": "typesafe/jev-1.13-20260917",
+  "prior_exposure_nano": 858821754,
+  "predecessor_sha256": "cf864cf0427f41c9c098fe3084fb7ad76bb2944c4bf449fed377e0b57a509d59",
+  "assignments": [
+    {
+      "id": "Q1-00",
+      "kind": "no-evidence",
+      "questions": 5
+    },
+    {
+      "id": "Q1-01",
+      "kind": "private-positive",
+      "questions": 5
+    },
+    {
+      "id": "Q1-02",
+      "kind": "private-negative",
+      "questions": 5
+    },
+    {
+      "id": "Q1-03",
+      "kind": "nonrepeat",
+      "questions": 5
+    },
+    {
+      "id": "Q1-04",
+      "kind": "correct-negative",
+      "questions": 5
+    },
+    {
+      "id": "Q1-05",
+      "kind": "correct-positive",
+      "questions": 5
+    },
+    {
+      "id": "Q1-06",
+      "kind": "consensus-correction",
+      "questions": 4
+    },
+    {
+      "id": "Q1-07",
+      "kind": "evidence-gap",
+      "questions": 4
+    }
+  ],
+  "conditions": [
+    "legacy",
+    "clarified"
+  ],
+  "calls": 16,
+  "exact_questions": 76,
+  "max_questions": 80,
+  "max_api_usd": 0.10752,
+  "prior_exposure_usd": 0.858821754,
+  "native_calls": 0,
+  "source_hashes": {
+    "pc10/admission.py": "0023e9e3aaef87ab43052d1acf0206bd473ebb30ccca4c56e9eacf8e781239b6",
+    "pc10/cases.py": "b22dc4a91668505194643882199e53b22b2b3808848289e80d8276a41738badd",
+    "pc10/instrument.py": "415251358a01207dfa87840e6ffbd3f6ff0e84a00da384b556f51ff32e0112a9",
+    "pc10/ledger.py": "a056fa0d5c513e3c92c519934a698354d1b2f5d3e3eb18acc9865306f307d69b",
+    "pc10/runner.py": "0f3408716928afb9d7ac1bdb766172c56698b4455844b1567d75528a663a0a2b",
+    "pc10/PLAN.md": "a42b265e960d3de42ee409238cb16066f5a9206eb2c02df31b13d7f9cc726795",
+    "pc9/src/contract.py": "d4a52fdd524e9ffd66bd3a9169dff968dab12c8ee558012b6d014e99e38ad067",
+    "pc9/src/policies.py": "e24a4ebef6a40e56103834ab87da259442db9bd01ed8af8d79bad9487a6c9a8d",
+    "pc9/src/engine.py": "e7059974959f14a693cc7bd06a44d8a255115560b8eac7e16d62dbdb64c2e62c",
+    "pc9/src/fixtures.py": "c15cfe725a8de8703bde732655f2b702f893a03aca5558866574e2f40cf1c805",
+    "pc9/src/analysis.py": "ddb9e8c8d8e196ea7b4a86f244d905738b2b9d7e9fae2cd384d359120286b163",
+    "pc9/src/native.py": "70a2f67163a34432cbf1756c93baa273cd08355ddaa197df4b0846524766598b"
+  }
+}
