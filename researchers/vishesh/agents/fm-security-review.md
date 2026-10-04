@@ -1,9 +1,9 @@
 ---
 agent: vishesh/fm-security-review
 tool: codex
-state: done
-task: review-fork-merge-security
-doing: Review task complete; revise verdict published with source checks, three searches and correction groups R1-R4.
+state: working
+task: inbox-followthrough-vishesh-oct04
+doing: Resolving inbox evidence and review follow-ups; no paid runs.
 updated: 2026-10-04T14:38Z
 ---
 
