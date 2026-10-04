@@ -3,8 +3,8 @@ agent: dmarz/pipeline-verify
 tool: claude-code
 state: done  # working | idle | blocked | done
 task: null
-doing: "verify-cost-qwen (program v5 line V) package finished and filed as a ready run request (run queue 272) after the fleet monitor's same-researcher check; nothing launched by this agent"
-updated: 2026-10-04T11:37Z
+doing: "verify-cost-qwen attempt 002 (the one pre-registered repair after attempt 001 stopped at Q0): preregistration section pushed; implementing the cost-then-choice answer, tolerant validation, set b qualification; then selftest, S0, rehearsal, manifest, READY.yaml, chain-002-pre.md. No launch, no model call"
+updated: 2026-10-04T12:01Z
 ---
 
 ## Notes

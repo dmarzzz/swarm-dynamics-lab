@@ -34,3 +34,28 @@ The first version was committed before any code existed (commit `65b4497f`). The
 - Item 13 is unchanged; the adapter additionally rejects an answer whose JSON object repeats a key.
 
 The comparison, the cases, the representations, the layouts, the qualification fixtures and thresholds, and the analysis (items 1 to 9, 11, 12, 16 to 18) have not changed.
+
+## Attempt 002: the one bounded repair (frozen 2026-10-04, before its code existed and before the repeat)
+
+Attempt 001 ran on 2026-10-04 and stopped by itself at the qualification gate: P0 passed; Q0 was 24 of 24 structurally valid, 10 of 12 optimal with the prose and 8 of 12 with the table, against a threshold of 11 of 12 in each. S1 was not queued. Its [post-mortem](reviews/chain-001-post.md) and [records](records/README.md) stand as a result. Nothing below changes attempt 001, and attempt 001 is never pooled with attempt 002.
+
+Said up front, before the repeat:
+
+(i) **The repair was chosen after reading the attempt-001 misses.** The post-mortem (dmarz/pipeline) read the rendered request and the returned text of all 24 qualification calls: every answer was the bare one-key object, the six misses fall on both actions and both list positions with margins of 0.64 to 0.94, and each missed fixture was answered correctly in its other representation. It classifies the stop as a capability failure of the answer-only configuration (suspected cause: no place to compute the two expected costs; not verified). The repair was proposed by dmarz/pipeline and approved by dmarz/fleet-monitor, as relayed to this builder by dmarz/pipeline.
+
+(ii) **What changes, and only this.** The answer becomes `{"cost_if_inspect": {"<first allowed cell>": <number>, "<second allowed cell>": <number>}, "inspect": "<cell>"}`, keys in that order in the instruction and in the example line. The system message gains one instruction sentence (before choosing, write the expected total cost of the final map for each of the two allowed actions, then choose) and the ANSWER block of the user message changes to match. The model is the same (`qwen/qwen3.7-flash`, Alibaba) and reasoning stays disabled at the provider, `max_tokens` stays 1,000. So attempt 002 tests whether writing intermediate values inside the answer rescues the one-step failure. Map, evidence, objective, the consequence text in both representations, the six consequence records, the 24 main layouts, the 12 cases and the information-equality proofs are unchanged; a selftest proves that every request of attempt 002 is byte-identical to its attempt-001 text up to the ANSWER block (digests frozen from the attempt-001 code at `fa61358a`).
+
+(iii) **What S1 then measures.** The table-versus-prose contrast for a model that writes out its two costs before choosing. Such a model may be at ceiling in both representations; a contrast near zero is then the result. It is a different actor configuration from attempt 001 and from PC5.
+
+(iv) **This is the only repair.** Qualification repeats on the second, disjoint set frozen in attempt 001's design (set b: layouts 2900 to 2911 and `qualification.fixtures_b`, unchanged), thresholds unchanged: 24 of 24 valid and at least 11 of 12 optimal in each representation, over P0's row and Q0's 23. A failed repeat ends the line. No further attempt exists, so the ledger's study cap is 600.
+
+Mechanics. `attempt: '002'`, batches `s0-002`, `p0-002`, `q0-002`, `s1-002`; `qualification.set: b`; caps P0 1, Q0 23, S1 576, `max_attempted_calls` 600, on a fresh server with a fresh ledger; 760 transport attempts; new source hash and its own pre-run review, `reviews/chain-002-pre.md`. Items 1 to 9, 12 and 14 to 19 above apply unchanged except where this section says otherwise.
+
+Grading (unchanged). Only `inspect` is graded, against the analytic minimum-loss action. The written costs are reported and never gated: for each row the absolute error of each written cost against the analytic expected cost (U for inspecting the reported cell, e for inspecting the cell without evidence), and whether the choice contradicts the model's own two numbers (it chose the action whose written cost is strictly higher). Reported per representation and overall, with denominators.
+
+Validation, decided in advance by asking of every rule whether a harmless variant of a correct answer would fail it:
+
+- **Valid** when the returned text parses as one JSON object and `inspect` is a string that names one of the two allowed cells after trimming whitespace and removing spaces around the comma.
+- **Tolerated, counted per row, never a failure:** costs written as numeric strings, as integers or with more decimals; cost keys with spaces around the comma; a missing, partial or non-numeric `cost_if_inspect` (recorded as `work_malformed`; the choice is still graded); extra keys at the top level or inside `cost_if_inspect` (recorded); key order (whether `cost_if_inspect` came before `inspect` is recorded from an order-preserving parse); an `inspect` value that needed trimming (recorded).
+- **Invalid (a failed call, no repair call, no retry):** text that is not one JSON object; a missing `inspect`; an `inspect` that is not a string or names anything other than the two allowed cells; a repeated key (the adapter rejects any JSON object that repeats a key, which covers duplicate `inspect` keys and also a cost object that names the same cell twice); an answer cut off at the output limit; an answer longer than 4,000 characters.
+- An offline stub produces every tolerated variant and every invalid form; a selftest checks that the former pass and the latter fail, and the rehearsal runs a full chain with a stub that mixes the tolerated variants.
