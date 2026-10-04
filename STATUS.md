@@ -40,6 +40,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
+| [antsy-v8-execution-repair](tasks/antsy-v8-execution-repair.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T16:56Z | Prepare trace-preserving Antsy execution repair and bounded D1 proposal |
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T16:45Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [healing-c4-selective](tasks/healing-c4-selective.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T16:45Z | Prepare and qualify C4 selective helping |
@@ -355,8 +356,8 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-methods | working | antsy-v8-execution-repair | 2026-10-04 16:59:24.606522+00:00 | Preparing offline phase and timeout-stream repair; concrete D1 proposal awaits owner decision; no native calls |
 | vishesh/codex-decision-models | working | right-dissenter-rd5-run | 2026-10-04 16:59:23.899365+00:00 | RD5 direct admission in progress; central queue fenced, approved-account replacement claimed, frozen runtime deployment next. Zero RD5 model calls. |
-| vishesh/codex-methods | idle |  | 2026-10-04 16:53:59.316738+00:00 | Antsy Q0 run reviewed and published; timeout qualification incomplete; allocation released; no retry or S1 |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 16:45:28.133996+00:00 | Trace audit complete; conditional semantic proposal stopped at corpus and baseline-headroom gate |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc7-traces | 2026-10-04 16:43:52.083647+00:00 | PC7 trace audit and offline finite-history controller complete; 140 pairs verified, 8 checks passed; no native successor admitted |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
