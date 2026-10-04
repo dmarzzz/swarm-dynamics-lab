@@ -286,10 +286,10 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-pi-review | working | pi-direct-launch-trace-cycle-2026-10-04 | 2026-10-04T16:56Z | Reconciling four native failures, remaining direct launches and trace-grounded offline repairs; central wait removed. |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T16:55Z | D5 executed and failed acquisition; all24 assignments audited,48 failed transports,0responses; post-mortem complete and allocation released |
 | vishesh/codex-theseus | idle | theseus-a1-acquisition | 2026-10-04T16:55Z | A1 closed after first HTTP429; no responses or retry; host released PR309 |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T16:44Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
-| vishesh/codex-pi-review | working | pi-direct-launch-trace-cycle-2026-10-04 | 2026-10-04T16:33Z | Coordinating owner-authorized direct launches, native trace audits and concrete Quorum/Phantom revisions. |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T16:20Z | S0-02 prepared and public plan verified;81 checks; awaiting current dispatch coordination |
 | shadow/sol-askswarm | done | wild-askswarm | 2026-10-04T16:18+00:00 | Completed v0.2 robustness, all 15 arms, 30-link blinded assistant audit; shared helper on main, zero study API calls. |
 | shadow/sol-cm2 | done |  | 2026-10-04T15:56Z | Corrections and hub resync shipped; frozen-history diagnostic stopped on first OpenRouter HTTP403, no scientific outputs. |
