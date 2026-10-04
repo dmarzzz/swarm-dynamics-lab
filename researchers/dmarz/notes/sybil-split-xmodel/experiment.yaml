@@ -1,0 +1,48 @@
+id: sybil-split-xmodel
+title: "Identity splitting at fixed attacker resources, replicated on two other models (Qwen3.7 Flash, GPT-6 Sol)"
+description: Cross-model replication of sybil-split-opus on byte-identical packets. One attacker's 27 report rows,
+  27 attachment edges and 27 verification attempts held by 1, 3, 9 or 27 identities; 108 honest simulated identities
+  in two graph families; coverage, degree and random checks at 4 or 12 checks. Each of two pre-registered models
+  (qwen/qwen3.7-flash with reasoning disabled, gpt-6-sol with low reasoning effort) runs its own chain; results are
+  never pooled. Exploratory; identities and checks are simulated, only the synthesis is a model call.
+owner: dmarz
+params:
+  stage:
+    type: str
+    role: stage
+  backend:
+    type: str
+    role: fixed
+  batch:
+    type: str
+    role: replicate
+  model:
+    type: str
+    role: fixed
+  source_hash:
+    type: str
+    role: fixed
+  code:
+    type: str
+    role: fixed
+metrics:
+- episodes
+- invalid
+- failed
+- model_calls
+- transport_attempts
+- input_tokens
+- output_tokens
+- cost_usd
+- qualification_passed
+- billing_pauses
+- billing_pause_seconds
+- billing_affected_calls
+- resumable
+- fixture_exact
+- max_tokens_per_byte
+- rare_wrong
+- rare_accuracy
+- primary_contrast
+primary_metric: primary_contrast
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/sybil-split-xmodel

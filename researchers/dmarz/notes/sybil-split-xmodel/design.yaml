@@ -1,0 +1,185 @@
+# Frozen design of sybil-split-xmodel: a cross-model replication of sybil-split-opus on two pre-registered models.
+# Everything from `families` to `analysis` is the parent's design.yaml at the pinned parent commit, unchanged,
+# except the model route, the stage backends and the budget. Covered by study.source_hash().
+version: 1
+experiment: sybil-split-xmodel
+status: exploratory
+questions:
+- SEC-19
+- SEC-43
+# Two pre-registered models. Each runs as its own complete chain (own batches suffixed by the model tag,
+# own ledger, dollar cap, results, P0 and Q0) chosen by STUDY_MODEL (launcher --model); results are
+# never pooled across models and every row names its model. The first entry is the default.
+model_ladder: [qwen/qwen3.7-flash, gpt-6-sol]
+model: qwen/qwen3.7-flash      # the default (first) model; kept for the launcher's READY.yaml check
+# Reasoning is disabled on the Qwen route, so effort does not apply there; the key stays because the
+# launcher requires it. gpt-6-sol takes reasoning_effort low (below).
+effort: low
+models:
+  qwen/qwen3.7-flash:
+    tag: qwen
+    backend: openrouter
+    canonical_model: qwen/qwen3.7-flash-20260727
+    provider: alibaba
+    # research program v5 selected-model.json request template, unchanged
+    request_template:
+      model: qwen/qwen3.7-flash
+      provider:
+        only: [alibaba]
+        allow_fallbacks: false
+        require_parameters: true
+      reasoning:
+        enabled: false
+      max_tokens: 1000
+      response_format:
+        type: json_object
+    budget:
+      aggregate_usd: 3
+      max_output_tokens: 1000
+      max_input_tokens: 31000          # price tier below 32,000 prompt tokens
+      input_usd_per_million: 0.03
+      output_usd_per_million: 0.13
+  gpt-6-sol:
+    tag: sol
+    backend: openai
+    canonical_model: gpt-6-sol
+    provider: openai
+    # OpenAI Chat Completions; reasoning effort low (recorded in every request and row). JSON-object mode,
+    # the same prompt and the same local validation as the Qwen route.
+    request_template:
+      model: gpt-6-sol
+      reasoning_effort: low
+      max_completion_tokens: 2000
+      response_format:
+        type: json_object
+    budget:
+      # Expected: 2,749 calls x about 3,700 to 6,500 input tokens = 10 to 18 M tokens, USD 20 to 45 at the
+      # cache-write bound (USD 2.50 per million), plus output; cap set by the fleet monitor at USD 90.
+      aggregate_usd: 90
+      max_output_tokens: 2000            # max_completion_tokens covers visible plus reasoning tokens
+      max_input_tokens: 31000
+      prices: {input: 2.0, cached_input: 0.2, cache_write: 2.5, output: 10.0}   # reference openai_provider.PRICES row, retrieved 2026-10-04T12:10Z
+      input_usd_per_million: 2.0
+      output_usd_per_million: 10.0
+# The parent package whose packets this study reuses byte for byte, and the parent's recorded S1 rows.
+parent:
+  study: researchers/dmarz/notes/sybil-split-opus
+  experiment: sybil-split-opus
+  commit: 75d516952ab847aa90fe14cc30569a83f6b9d5e7   # the commit the parent chain ran at
+  source_hash: 95889beafbd40142ea68c52b4a00e2b1dbbbc10794f967cba3e00ca1767f3089
+  files_sha256:                    # S0 refuses unless these files hold exactly these bytes
+    src/sim.py: 0e20bd3ef66d181ffe9b46b88a177ee8e8c56d88744d8c7109bb3d4067dd7df8
+    src/study.py: ffe107b449d930af5515cb697d46f0a2f257fdefdf7ce91aa092f3702aa5e3d9
+    design.yaml: d7dc94d14c85d2354abd9c6ec5423c52fe2da99a683b5c0ac5952d745eb39ea1
+    records/s1-episodes.jsonl.gz: ddd861f700ccaf2038cd79194219f208f1a9d6530e841b908481913d51372987
+families:
+- ring
+- community
+arms:
+- no_verification
+- degree
+- random
+- coverage
+check_budgets:
+- 4
+- 12
+cfg:
+  core: 54
+  community: 27
+  trusted_seeds: 2
+  admission_seats: 54
+  pagerank_restart: 0.2
+  pagerank_iterations: 120
+  honest_check_pass: 0.9
+  skills: 6
+attacker:
+  units: 27
+  identities:
+  - 1
+  - 3
+  - 9
+  - 27
+  internal_links: ring2
+  fabrication_offset: 7
+  attacker_pass:
+  - 0.1
+  - 0.9
+roots:
+  engineering:
+    ring: [4919, 4920, 4921, 4922, 4923, 4924, 4925, 4926, 4927, 4928, 4929, 4930, 4931, 4932, 4933, 4934]
+    community: [4821, 4822, 4823, 4824, 4825, 4826, 4827, 4828, 4829, 4830, 4831, 4832, 4833, 4834, 4835, 4836]
+  qualification:
+    ring: [5139, 5140, 5141, 5142, 5143]
+    community: [5144, 5145, 5146, 5147, 5148]
+  comparison:
+    ring: [8233, 8234, 8235, 8236, 8237, 8238, 8239, 8240, 8241, 8242, 8243, 8244, 8245, 8246, 8247, 8248, 8249, 8250, 8251, 8252, 8253, 8254, 8255, 8256]
+    community: [8351, 8352, 8353, 8354, 8355, 8356, 8357, 8358, 8359, 8360, 8361, 8362, 8363, 8364, 8365, 8366, 8367, 8368, 8369, 8370, 8371, 8372, 8373, 8374]
+  reserved_holdout: [10000, 19999]
+probe:
+  family: ring
+  task: 4919
+  shape: multirow1
+qualification:
+  shapes:
+  - full
+  - common_only
+  - sparse
+  - multirow1
+  - multirow3
+  - multirow9
+  passed_badges: 12
+  structural_valid_rate: 1.0
+  fact_accuracy: 0.95
+  exact_packet_rate: 0.9
+  missing_abstention: 1.0
+stages:
+  S0:
+    backend: scripted
+  P0:
+    backend: model      # the backend of the model this chain runs (models.<model>.backend)
+  Q0:
+    backend: model
+  S1:
+    backend: model
+  S2:
+    enabled: false
+# Shared by both models; each model adds its own dollar cap, prices and token limits above and has its
+# own ledger, so every cap below applies to each model separately.
+budget:
+  max_calls:
+    S0: 0
+    P0: 1
+    Q0: 60
+    S1: 2688
+  max_attempted_calls: 2749         # no repair attempt: a Q0 stop is the result
+  max_failed: 27                     # S1 only: the larger of 3 and 1% of 2,688 calls, rounded up
+  reservation_margin: 10
+  max_input_bytes: 60000
+  max_visible_chars: 2000
+  request_timeout_seconds: 120
+  stage_timeout_seconds: 10800
+  chain_timeout_seconds: 14400
+  workers: 4
+  answer_retries: 0
+  retry:
+    transport_retries: 2
+    retryable_http_status: [429, 502, 503, 529]
+    backoff_seconds: [2, 6]
+    retry_after_cap_seconds: 20
+  billing_outage:
+    retry_every_seconds: 60
+    max_wait_seconds: 1200
+  max_transport_attempts: 3300       # 2,749 calls + 10% + two full billing outages (21 attempts each) and slack
+# The parent's primary, unchanged, on this model's answers. Secondary and descriptive only: per-cell
+# Qwen minus Opus paired by root (never pooled) and answer agreement within byte-identical packet groups.
+primary_contrast:
+  metric: rare_wrong
+  definition: (k=27 minus k=1 under degree) minus (k=27 minus k=1 under coverage)
+  checks: 12
+  attacker_pass: 0.1
+  weighting: mean of the two graph-family means
+  useful_difference_pp: 10
+  status: exploratory
+analysis:
+  bootstrap_draws: 10000
+  bootstrap_seed: 20261004
