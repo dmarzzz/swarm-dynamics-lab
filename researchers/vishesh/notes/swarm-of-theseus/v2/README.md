@@ -72,3 +72,7 @@ Approved new allocation: at most **USD 15**, **660 calls**, **two hours total**,
 Both admitted qualifications are now complete and failed. The planned S1 is blocked by the unchanged joint gate. Next work requires a separately frozen diagnostic plan and resolution of applicable research review requirements.
 
 The public hub supports measured progress and images. Standalone replay HTML must be delivered as a file/artifact; no unsupported hub HTML embedding is claimed. Dedicated sim-shadow claim vishesh-theseus-v2 was released through merged private fleet PR119 after the failed repair and evidence verification. No additional workers will run under this plan.
+
+## Design transfer — 2026-10-04
+
+[Lessons from Dmarz’s recent studies](DESIGN-TRANSFER.md): specific controls, measurements and next-design options. Prospective only; current run contracts and approval status are unchanged.

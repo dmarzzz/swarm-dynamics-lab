@@ -18,3 +18,7 @@ Exploratory development and next-study design. **Fresh qualification has not run
 - [Tested field/policy prototype](src/fields.py) and [EasyOCR output adapter](src/adapter.py)
 
 Native Q0 runner and operator packet are implemented; 31 offline checks include successful mocked dispatch, first-error stop and duplicate-run refusal. Actual runtime/model staging, exclusive fleet admission and fresh qualification remain pending through the orbital run queue. No old v7 qualification, used-data gain or passing unit test substitutes for fresh Q0.
+
+## Design transfer — 2026-10-04
+
+[Lessons from Dmarz’s recent studies](DESIGN-TRANSFER.md): specific controls, measurements and next-design options. Prospective only; current run contracts and approval status are unchanged.

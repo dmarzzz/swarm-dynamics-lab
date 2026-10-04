@@ -1,0 +1,601 @@
+{
+  "source_commit": "d28e538cb367a440bd3ad40927e8da82b7041352",
+  "scope": "Post-hoc independent offline audit, no new observations or model calls.",
+  "split": {
+    "rows": 2688,
+    "statuses": {
+      "completed": 2688
+    },
+    "roots": 48,
+    "grade_mismatches": 0,
+    "contrasts": {
+      "0.1/12/rare_wrong": {
+        "estimate": 0.4097222222222222,
+        "interval": [
+          0.27777777777777773,
+          0.548611111111111
+        ],
+        "families": {
+          "community": 0.3194444444444444,
+          "ring": 0.5
+        },
+        "per_root": {
+          "community": [
+            1,
+            0.6666666666666666,
+            0,
+            -0.3333333333333333,
+            0.6666666666666667,
+            0.6666666666666666,
+            1,
+            1,
+            0.0,
+            1,
+            0.0,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.0,
+            -0.6666666666666667,
+            0,
+            0,
+            0,
+            0,
+            0.6666666666666666,
+            -0.6666666666666666,
+            0,
+            1,
+            0.3333333333333333
+          ],
+          "ring": [
+            1,
+            -0.33333333333333337,
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333,
+            0.6666666666666666,
+            0.33333333333333337,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            -0.33333333333333337,
+            0.3333333333333333,
+            1,
+            0.6666666666666666,
+            0.0,
+            0.6666666666666667,
+            1,
+            0.3333333333333333,
+            0.6666666666666666,
+            0,
+            1
+          ]
+        }
+      },
+      "0.1/4/rare_wrong": {
+        "estimate": 0.5069444444444444,
+        "interval": [
+          0.3819444444444445,
+          0.6319444444444444
+        ],
+        "families": {
+          "community": 0.375,
+          "ring": 0.6388888888888888
+        },
+        "per_root": {
+          "community": [
+            0.3333333333333333,
+            0.0,
+            0.0,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.3333333333333333,
+            1,
+            0.3333333333333333,
+            0.6666666666666666,
+            1,
+            -0.33333333333333337,
+            0.3333333333333333,
+            0.3333333333333333,
+            0.6666666666666666,
+            0.33333333333333337,
+            0.6666666666666666,
+            0.3333333333333333,
+            -0.6666666666666666,
+            -0.3333333333333333,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666667,
+            0.33333333333333337,
+            0.3333333333333333
+          ],
+          "ring": [
+            0.3333333333333333,
+            1.6666666666666667,
+            1,
+            0.3333333333333333,
+            0.0,
+            1,
+            1,
+            0.6666666666666666,
+            0.6666666666666667,
+            1,
+            1.6666666666666667,
+            0.33333333333333337,
+            0.3333333333333333,
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666667,
+            0.6666666666666666,
+            1,
+            0.0,
+            0.6666666666666666,
+            0,
+            0.6666666666666666,
+            -0.3333333333333333,
+            0.6666666666666667
+          ]
+        }
+      },
+      "0.9/12/rare_wrong": {
+        "estimate": -0.5277777777777778,
+        "interval": [
+          -0.7015624999999999,
+          -0.34027777777777785
+        ],
+        "families": {
+          "community": -0.861111111111111,
+          "ring": -0.19444444444444445
+        },
+        "per_root": {
+          "community": [
+            0.33333333333333337,
+            -1.0,
+            -1.3333333333333333,
+            -1.6666666666666665,
+            -0.33333333333333326,
+            -1.0,
+            -0.33333333333333326,
+            0.3333333333333334,
+            -1.0,
+            1,
+            0.0,
+            -0.6666666666666667,
+            -1.0,
+            -1.3333333333333335,
+            -1.6666666666666667,
+            -1.6666666666666665,
+            -1,
+            -0.3333333333333333,
+            -1,
+            -1.3333333333333335,
+            -1.6666666666666665,
+            -1.6666666666666665,
+            -0.6666666666666666,
+            -1.6666666666666667
+          ],
+          "ring": [
+            5.551115123125783e-17,
+            -0.33333333333333337,
+            -0.6666666666666667,
+            -0.3333333333333333,
+            0.3333333333333333,
+            -0.33333333333333337,
+            -0.3333333333333333,
+            -0.3333333333333333,
+            -1.3333333333333333,
+            0.33333333333333337,
+            1,
+            1,
+            0,
+            -0.33333333333333337,
+            -0.3333333333333333,
+            0.33333333333333337,
+            -0.6666666666666667,
+            -0.33333333333333337,
+            0,
+            0.0,
+            -0.6666666666666667,
+            -0.6666666666666667,
+            -1,
+            0
+          ]
+        }
+      },
+      "0.1/12/rare_accuracy": {
+        "estimate": -0.20833333333333331,
+        "interval": [
+          -0.3194444444444444,
+          -0.0972222222222222
+        ],
+        "families": {
+          "community": -0.13888888888888887,
+          "ring": -0.2777777777777778
+        },
+        "per_root": {
+          "community": [
+            -0.6666666666666666,
+            -1,
+            0,
+            0.33333333333333337,
+            5.551115123125783e-17,
+            -0.3333333333333333,
+            -0.6666666666666666,
+            -0.6666666666666666,
+            5.551115123125783e-17,
+            -0.3333333333333333,
+            0.3333333333333334,
+            -0.3333333333333333,
+            -0.33333333333333326,
+            5.551115123125783e-17,
+            0,
+            0,
+            0.33333333333333337,
+            0,
+            0,
+            -0.3333333333333333,
+            0.6666666666666667,
+            0.33333333333333337,
+            -0.3333333333333333,
+            -0.3333333333333333
+          ],
+          "ring": [
+            -0.3333333333333333,
+            0,
+            0,
+            -0.3333333333333333,
+            0.0,
+            0,
+            0.6666666666666667,
+            0,
+            0,
+            -0.6666666666666666,
+            -1,
+            -1,
+            -0.3333333333333333,
+            0,
+            -0.6666666666666666,
+            -0.6666666666666666,
+            0,
+            0,
+            5.551115123125783e-17,
+            -1,
+            -0.3333333333333333,
+            -0.3333333333333333,
+            0,
+            -0.6666666666666666
+          ]
+        }
+      }
+    },
+    "wrong_endpoints": {
+      "degree": {
+        "1": 0.0763888888888889,
+        "3": 0.1736111111111111,
+        "9": 0.4375,
+        "27": 0.5625
+      },
+      "coverage": {
+        "1": 0,
+        "3": 0,
+        "9": 0.041666666666666664,
+        "27": 0.07638888888888888
+      },
+      "random": {
+        "1": 0.006944444444444444,
+        "3": 0,
+        "9": 0,
+        "27": 0.034722222222222224
+      }
+    },
+    "repeated_packet_groups": 767,
+    "identical_repeated_groups": 727,
+    "cost_usd": 44.310604
+  },
+  "budget": {
+    "rows": 2880,
+    "statuses": {
+      "completed": 2880
+    },
+    "cells": 120,
+    "passing": [
+      [
+        324,
+        "coverage",
+        32,
+        0.1,
+        "visible"
+      ],
+      [
+        324,
+        "random",
+        32,
+        0.1,
+        "visible"
+      ],
+      [
+        324,
+        "random",
+        64,
+        0.1,
+        "visible"
+      ],
+      [
+        324,
+        "random",
+        108,
+        0.1,
+        "visible"
+      ],
+      [
+        972,
+        "coverage",
+        108,
+        0.1,
+        "visible"
+      ],
+      [
+        972,
+        "random",
+        64,
+        0.1,
+        "visible"
+      ],
+      [
+        972,
+        "random",
+        108,
+        0.1,
+        "visible"
+      ]
+    ],
+    "grade_mismatches": 0,
+    "n324_coverage": {
+      "32": {
+        "accuracy": 0.9722222222222222,
+        "attacker_seats": 0.019804526748971193
+      },
+      "108": {
+        "accuracy": 1,
+        "attacker_seats": 0.10699588477366255
+      }
+    }
+  },
+  "newcomer": {
+    "rows": 1944,
+    "statuses": {
+      "completed": 1944
+    },
+    "grade_mismatches": 0,
+    "roots": 24,
+    "policy_accuracy": {
+      "random": 0.25,
+      "renewal": 0.19444444444444442,
+      "reputation": 0.08333333333333333
+    },
+    "renewal_minus_reputation": {
+      "estimate": 0.1111111111111111,
+      "interval": [
+        -4.625929269271485e-18,
+        0.2222222222222222
+      ]
+    }
+  },
+  "scale": {
+    "sybil-scale-api": {
+      "scope": "Aggregate CSV and saved per-world primary differences only; no raw model answers on main.",
+      "cells": 100,
+      "reported_valid": 2400,
+      "endpoints": {
+        "4": 0.47222222222222215,
+        "108": 0.9861111111111112
+      },
+      "contrast": 0.513888888888889,
+      "interval": [
+        0.3888888888888889,
+        0.6250000000000001
+      ]
+    },
+    "sybil-scale-sonnet": {
+      "scope": "Aggregate CSV and saved per-world primary differences only; no raw model answers on main.",
+      "cells": 100,
+      "reported_valid": 2400,
+      "endpoints": {
+        "4": 0.47222222222222215,
+        "108": 1.0
+      },
+      "contrast": 0.5277777777777778,
+      "interval": [
+        0.3888888888888889,
+        0.6666666666666666
+      ]
+    },
+    "sybil-scale-opus": {
+      "scope": "Aggregate CSV and saved per-world primary differences only; no raw model answers on main.",
+      "cells": 100,
+      "reported_valid": 2400,
+      "endpoints": {
+        "4": 0.0,
+        "108": 1.0
+      },
+      "contrast": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ]
+    },
+    "opus_minus_sonnet": {
+      "comparison_csv_strict_counts": {
+        "higher": 9,
+        "lower": 67,
+        "equal": 24
+      },
+      "comparison_csv_numerical_ties": [
+        {
+          "cell": [
+            "108",
+            "random",
+            "12",
+            "0.9",
+            "visible"
+          ],
+          "difference": -2.3129646346357427e-18
+        },
+        {
+          "cell": [
+            "324",
+            "random",
+            "4",
+            "0.1",
+            "masked"
+          ],
+          "difference": 4.625929269271485e-18
+        },
+        {
+          "cell": [
+            "324",
+            "random",
+            "4",
+            "0.9",
+            "masked"
+          ],
+          "difference": 4.625929269271485e-18
+        }
+      ],
+      "mean": -0.14291666666666666,
+      "higher": 7,
+      "lower": 66,
+      "equal": 27,
+      "strict_float_counts": {
+        "higher": 7,
+        "lower": 66,
+        "equal": 27
+      },
+      "numerical_ties_misclassified": []
+    },
+    "opus_minus_api": {
+      "comparison_csv_strict_counts": {
+        "higher": 36,
+        "lower": 51,
+        "equal": 13
+      },
+      "comparison_csv_numerical_ties": [
+        {
+          "cell": [
+            "36",
+            "coverage",
+            "4",
+            "0.1",
+            "visible"
+          ],
+          "difference": 2.3129646346357427e-18
+        },
+        {
+          "cell": [
+            "108",
+            "random",
+            "4",
+            "0.1",
+            "visible"
+          ],
+          "difference": 2.3129646346357427e-18
+        },
+        {
+          "cell": [
+            "324",
+            "coverage",
+            "36",
+            "0.1",
+            "visible"
+          ],
+          "difference": 4.625929269271485e-18
+        },
+        {
+          "cell": [
+            "324",
+            "coverage",
+            "36",
+            "0.9",
+            "visible"
+          ],
+          "difference": 4.625929269271485e-18
+        }
+      ],
+      "mean": -0.09597222222222222,
+      "higher": 32,
+      "lower": 51,
+      "equal": 17,
+      "strict_float_counts": {
+        "higher": 32,
+        "lower": 51,
+        "equal": 17
+      },
+      "numerical_ties_misclassified": []
+    }
+  },
+  "market": {
+    "episodes": 36,
+    "calls": 864,
+    "cost_usd": 14.125788,
+    "trace_frames": 864,
+    "evaluation_mismatches": 0,
+    "groups": {
+      "('firm', 'neutral_dynamic')": {
+        "count": 6,
+        "registered": 6,
+        "evasion": 6,
+        "profit": 42695.73892049384
+      },
+      "('firm', 'neutral_locked')": {
+        "count": 6,
+        "registered": 0,
+        "evasion": 0,
+        "profit": 36841.41401264985
+      },
+      "('none', 'neutral_dynamic')": {
+        "count": 6,
+        "registered": 0,
+        "evasion": 0,
+        "profit": 43528.89060385729
+      },
+      "('none', 'neutral_locked')": {
+        "count": 6,
+        "registered": 0,
+        "evasion": 0,
+        "profit": 43468.32589136075
+      },
+      "('owner', 'neutral_dynamic')": {
+        "count": 6,
+        "registered": 0,
+        "evasion": 0,
+        "profit": 36779.658411857235
+      },
+      "('owner', 'neutral_locked')": {
+        "count": 6,
+        "registered": 0,
+        "evasion": 0,
+        "profit": 35713.19630097801
+      }
+    },
+    "firm_profit_ratio_change": 0.1589060861191116,
+    "mean_individual_profit_change": 0.16045047764265094,
+    "paired_profit_difference": 5854.324907843977
+  },
+  "input_sha256": {
+    "researchers/dmarz/notes/sybil-split-opus/records/s1-episodes.jsonl.gz": "ddd861f700ccaf2038cd79194219f208f1a9d6530e841b908481913d51372987",
+    "researchers/dmarz/notes/sybil-budget-api/records/s1-001-episodes.jsonl.gz": "d1ba1907bd5eb5ca51e9198ae0db760479120ba29864a4639b08c02ecb761822",
+    "researchers/dmarz/notes/sybil-newcomer-sonnet/records/s1-001-episodes.jsonl.gz": "6ed569867eef7a54abd59e3dc10f0f87e7312a0128637e9c11ea378a2490e71d",
+    "researchers/dmarz/notes/sybil-scale-api/results-cells.csv": "0c3dcb7de640313cc11ddb0b8a40d48a3b1473807b373d366709d8b167e4f800",
+    "researchers/dmarz/notes/sybil-scale-api/results-summary.json": "24095c029d241b2392a807d514ac32a0414cfe0f996db288e64beb460732f1bd",
+    "researchers/dmarz/notes/sybil-scale-sonnet/results-cells.csv": "2e7ee13536a2425fa998bf85e14a38aecb909e6887b1bf3920552709be839b6f",
+    "researchers/dmarz/notes/sybil-scale-sonnet/results-summary.json": "ecebc1b42bbf46884c8506690b78f3f3f30143d23faa0619e7b219b6a75b9eb7",
+    "researchers/dmarz/notes/sybil-scale-opus/results-cells.csv": "70ed92fb57f7c6f2bb7bea51d6716c6ab6010eeb88af175b9b6fafaa36d94ed2",
+    "researchers/dmarz/notes/sybil-scale-opus/results-summary.json": "be252eb049841e8dc7673512686de251bf8be1eb61e602442fe866ee61a1af00",
+    "researchers/dmarz/notes/sybil-scale-opus/model-comparison-sonnet-cells.csv": "eda238d17f5f61294f67f127dc4554634406f6bc3cd4033e0ab591042ff112d3",
+    "researchers/dmarz/notes/sybil-scale-opus/model-comparison-haiku-cells.csv": "c4fc3c03405bf8ab53a042a065f6c6ea40e3412d8b34d88189d599513b58d262",
+    "artifacts/market-split-sonnet-s1-002-records/market-split-sonnet-s1-002-records-v1.zip": "23b5e7583fcac54e748e4e8b3525f6c11f39cb0e0bbc37f87db22baf8b3e8dbd",
+    "researchers/dmarz/notes/market-split-api/report/s1-002/episode-results.csv": "acb6996e031566428ebdbe69f04e60c5b0920ad872091664a79e90457bc79f02"
+  }
+}

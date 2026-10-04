@@ -3,7 +3,7 @@ id: admin-hackathon-brief
 type: task
 title: Fill in HACKATHON.md
 kind: admin
-status: claimed
+status: done
 priority: p0
 owner: shadow/sol-submit
 for: dmarz
@@ -13,7 +13,12 @@ depends_on: []
 topics:
 - meta
 claimed_at: 2026-10-04T13:53Z
-updated: 2026-10-04T13:53Z
+updated: 2026-10-04T14:04Z
+outputs:
+- HACKATHON.md
+- researchers/shadow/notes/submission/WRITEUP.md
+- researchers/shadow/notes/submission/DEMO.md
+- researchers/shadow/notes/submission/RESULTS.md
 ---
 
 ## Goal

@@ -67,3 +67,7 @@ python3 researchers/vishesh/notes/influence-swarms/scenario/src/run.py --out /tm
 ```
 
 Choose a new output directory. The runner is offline-only. It saves every request, reply, terminal outcome and failure. Model collection remains gated on scenario review, fresh qualification, a dedicated allocation and a non-overlapping quota under the existing budget. Do not launch the superseded quality-01 score-enforcement comparison as the main experiment.
+
+## Design transfer — 2026-10-04
+
+[Lessons from Dmarz’s recent studies](DESIGN-TRANSFER.md): specific controls, measurements and next-design options. Prospective only; current run contracts and approval status are unchanged.

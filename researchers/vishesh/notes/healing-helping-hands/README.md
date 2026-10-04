@@ -104,3 +104,5 @@ The 180 assignments reuse three known semantic corpora with two placement layout
 
 The central-outage condition disconnects central clients while preserving the mesh. It is an explicit architecture stress test, not evidence that decentralization is universally more reliable. Keep no-outage comparisons and the strong central cache/recovery baseline visible; report actual transport and latency differences rather than claiming equal resources. The [practical-02 assessment](practical/PRE-02.md) prospectively changes only the mesh packet cap from 4 to 16. This is a paired capacity sensitivity on reused evidence, not an independent replication or a warrant for further cap tuning until an advantage appears. A later efficacy study needs independently authored corpora and measured failure regimes. Prior outcomes and unqualified Qwen/Laya conditions are unchanged.
 
+
+[Prospective lessons from Dmarz’s recent experiments](c4/DESIGN-TRANSFER.md) inform the next design without changing this cohort or authorizing a new run.

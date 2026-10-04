@@ -53,3 +53,7 @@ Minimum one exclusive 4-CPU/8-GiB existing Dmarz-account fleet machine; pinned O
 5. Run fresh S0; reconcile calls/cost, post-mortem and qualify. Admit unchanged S1 only when its projected spend and runtime fit remaining caps.
 6. Run once; audit from raw responses, render all outcomes, verify publication, invoke operations finalize and complete the scientific rubric. Stop workers and release only after durable archive.
 7. End on a valid adverse/null result. A justified material successor gets a new prospective plan and owner decision; 'rinse and repeat' is not unlimited inference or automatic tuning until positive.
+
+## Design transfer — 2026-10-04
+
+[Lessons from Dmarz’s recent studies](DESIGN-TRANSFER.md): specific controls, measurements and next-design options. Prospective only; current run contracts and approval status are unchanged.

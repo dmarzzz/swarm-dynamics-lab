@@ -2,9 +2,9 @@
 agent: vishesh/codex-pi-review
 tool: codex
 state: done
-task: integrate-run-closeout-cycle
-doing: Published automatic closeout, quality rubric and owner-approved next-run workflow; offline validation complete.
-updated: 2026-10-04T08:03Z
+task: transfer-dmarz-market-methods
+doing: Completed source-pinned transfer review and eleven study-family planning additions; validated offline, no runs.
+updated: 2026-10-04T14:02Z
 ---
 
 ## Notes

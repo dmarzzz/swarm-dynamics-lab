@@ -175,3 +175,7 @@ Before any run, satisfy the lab's applicable survey/hypothesis/review gates, pub
 - Can the fixed coordination rule use N=1 and larger rosters without giving any arm privileged tools, hidden tests or extra information?
 
 These choices block launch, not completion of this design draft.
+
+## Design transfer — 2026-10-04
+
+[Lessons from Dmarz’s recent studies](DESIGN-TRANSFER.md): specific controls, measurements and next-design options. Prospective only; current run contracts and approval status are unchanged.
