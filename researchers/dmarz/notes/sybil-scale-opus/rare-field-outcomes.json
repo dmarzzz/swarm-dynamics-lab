@@ -1,0 +1,17 @@
+{
+ "haiku": {
+  "correct": 4402,
+  "wrong": 2756,
+  "null": 42
+ },
+ "sonnet": {
+  "correct": 4740,
+  "null": 250,
+  "wrong": 2210
+ },
+ "opus": {
+  "correct": 3711,
+  "wrong": 1246,
+  "null": 2243
+ }
+}

@@ -19,7 +19,7 @@ Status: exploratory model replication; setup record maintained per [the setup ru
 | G2 Instrument and offline checks | pass | 10/10 selftests incl. mocked Opus request/response contract (no temperature/thinking/tool_choice/fallbacks; effort low; thinking blocks filtered; refusal and output-cap categories; answer-length limit); local S0 264/264 ([post](reviews/local-s0-001-post.md)) | — |
 | G3 Current attempt admission | per stage | claim dmarz-sybil-scale-opus on sim-dmarz-12; pre-run files in reviews/ | re-check before each stage |
 | G4 Qualification before scientific escalation | pending | fleet S0 then Q0 at the same source hash | Q0 must pass every size |
-| G5 Reconciliation and closeout | pending | — | after S1 |
+| G5 Reconciliation and closeout | pass | 2026-10-04 dmarz/orchestrator-2: S1 79bb3882 2,400/2,400, publish+verify, local recomputation matched, RESULTS.md and reviews/s1-001-post.md, claim released (#274) | none |
 
 ## Design and instrument index
 
