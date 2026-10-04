@@ -114,6 +114,10 @@ qualification:
   gate_posterior_high: 0.80
   match_rate: 0.90
   structural_valid_rate: 1.0
+  gated_decisions:        # realized counts on the frozen fixtures (use-gated / skip-gated: 35/0, 22/12, 53/12)
+    2: 35
+    3: 34
+    6: 65
 probe:
   world: 8390
   round: 3
@@ -127,7 +131,7 @@ rationale:
 stages:
   S0:
     backend: scripted
-    rows: 925        # 3 policies x 2 roots x 5 conditions x 5 agents x 6 rounds, 24 qualification fixtures, 1 probe fixture
+    rows: 1225       # 4 scripted actors x 2 roots x 5 conditions x 5 agents x 6 rounds, 24 qualification fixtures, 1 probe fixture
   P0:
     backend: anthropic
     rows: 1

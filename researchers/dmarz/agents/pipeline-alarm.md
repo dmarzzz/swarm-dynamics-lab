@@ -3,8 +3,8 @@ agent: dmarz/pipeline-alarm
 tool: claude-code
 state: working  # working | idle | blocked | done
 task: build-false-alarm-cascade
-doing: "false-alarm-cascade: prospective plan, preregistration, frozen design and setup record pushed; implementing the instrument and offline tests next; no launch, no model call"
-updated: 2026-10-04T09:23Z
+doing: "false-alarm-cascade: code, manifest and READY file pushed (selftest 35 OK, offline S0 1225/1225, rehearsal passed); writing the pre-run review pinned to the code commit; no launch, no model call"
+updated: 2026-10-04T10:10Z
 ---
 
 ## Notes

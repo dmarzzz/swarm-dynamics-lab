@@ -17,7 +17,7 @@ Status: preparation only. Nothing has run; this record is not launch authorizati
 |---|---|---|---|
 | G0 Question and applicable research gates | pass for exploratory scope only | [README](README.md), [hunch note](../honeypot-vigilance-hunches.md); 2026-10-04, dmarz/pipeline-alarm (same researcher) | Formal survey and hypothesis gates are not met; S2 stays disabled |
 | G1 Plan written before implementation | pass | README, [preregistration](preregistration.md), [design.yaml](design.yaml), `experiment.yaml` and this record committed before any file under `src/`; 2026-10-04, dmarz/pipeline-alarm | — |
-| G2 Instrument and offline checks | pending | No code yet | Implement; selftests; offline S0; rehearsal; manifest check |
+| G2 Instrument and offline checks | pass offline (builder's own checks; Python 3.9.6 on macOS) | 2026-10-04, dmarz/pipeline-alarm, at source hash `8dfa3d6e…`: selftest 35 of 35; offline S0 1,225 of 1,225 with 16 of 16 invariants; manifest check equal; rehearsal 29 of 29 checks (full chain exit 0 and verify ok; failed-qualification chain stops at Q0 with exit 3 and no S1 run; failed-call chain stops S1 with the rest recorded as not started). Details in the [pre-run review](reviews/chain-001-pre.md) | Not tested: the full suite on Python 3.12 (PyYAML and numpy are not installed for it on the build machine; world generation was compared between 3.9 and 3.12 and is identical), the real hub, the private launcher, a real model response. The launcher's `setup` reruns the selftests on the server |
 | G3 Current attempt admission | pending | No pre-run review yet | Pre-run review on main; dmarz/fleet-monitor's same-researcher check; run request in the private queue; launcher `setup` |
 | G4 Qualification before scientific escalation | not run | S0, P0 and Q0 have not run | Runs inside the chain; a failed gate stops the chain |
 | G5 Reconciliation and closeout | not applicable yet | No attempt exists | After the chain: `chain.py verify`, post-mortem, results, claim release |
@@ -31,14 +31,24 @@ Status: preparation only. Nothing has run; this record is not launch authorizati
 - **Root-range scan, 2026-10-04, at main `c4c7a879`.** Every `.yaml`, `.yml`, `.md`, `.py`, `.toml`, `.sh` and `.txt` file under `researchers/`, `experiments/`, `tooling/`, `hypotheses/`, `tasks/`, `surveys/` and `synthesis/` was searched for 8390, 8391, 8400 to 8423 and 8450 to 8457 as whole numbers; every `.json` and `.jsonl` file under 5 MB was searched for `task`, `world`, `root`, `seed`, `world_id`, `task_id` or `world_seed` keys with those values; design, preregistration, manifest, plan, config, experiment, README and SETUP files were also searched for number ranges that span 8390 to 8457. 3,455 files scanned, this directory excluded. Result: 0 exact matches and 0 spanning ranges. The scan covers this repository only; it is not a reservation, and a private or unpushed study could still use these numbers. The design files of the sibling pipeline lanes on the build machine were also searched, with no match.
 - Agent definition: one stateless call per model agent and round; one system prompt for the whole study; JSON-schema structured output; `claude-opus-5-5`, effort medium.
 - Versions: `requirements.txt` pinned; source hash from `study.source_hash()` over `design.yaml`, `experiment.yaml`, `requirements.txt` and `src/*.py` (to be recorded in `READY.yaml` and the pre-run review).
-- Offline checks: to be listed here when they exist.
-- Visualization: `VISUALIZATION.md`, to be written with the renderer.
+- Offline checks: `src/selftest.py`, 35 tests: world validity and keyed streams; the honeypot draw's family probabilities; all 16 S0 invariants with the negative and positive controls, and a broken manipulation being caught; conditions differing only by the planted posts with agents that react to the board; board and retraction rules, answer normalization and validation; no truth, target, condition or slot in actor inputs; the three reference policies; evaluator grades; clean fixtures and frozen gated counts; Q0 thresholds at their boundaries; the probe gate; design counts and caps; request body keys and schema; thinking and redacted-thinking blocks; refusal and other failure categories; the transport retry rule clause by clause; ledger caps across two ledger objects and a partial write; worker failure accounting; a stage-loop crash stopping new rounds; episode rounds carrying model output forward and a failed call ending its episode; coordinator gates; chain stage lists, projection gate, stops and verify tampering; primary contrast with missing-outcome bounds; every secondary measure; signal detection; frames and GIF; manifest regeneration; READY consistency; no secret in source. A mutation pass (22 single-line faults in a scratch copy, each caught by at least one test) was run on 2026-10-04; it is the builder's own check.
+- Launcher gate integration: `coordinator.enqueue` is the only path that queues a stage; `chain.py` is the only path that executes a queued stage.
+- Visualization: [VISUALIZATION.md](VISUALIZATION.md).
 
 ## Current attempt admission
 
-Operations entry: manual, through the generic private launcher (`scripts/run-ready-chain.py` in the agentops repository), to be written up in `RUN.md`. [Operations guide](../../../../tooling/agent-experiments/OPERATIONS.md).
+Operations entry: manual, through the generic private launcher named in [RUN.md](RUN.md). [Operations guide](../../../../tooling/agent-experiments/OPERATIONS.md).
 
-- Attempt / stage / pre-run assessment: chain-001 (S0, P0, Q0, S1) / not written yet.
+| Operation | Exact command or unsupported reason | Evidence and last checked revision |
+|---|---|---|
+| Inspect and offline validation | `python3 src/selftest.py`; `python3 src/worker.py --stage S0 --attempt <name>`; `python3 src/rehearse.py --hub-dir <dir>`; `python3 src/manifest.py --check` | all four passed locally at source hash `8dfa3d6e…` |
+| Prepare named stage | `python3 scripts/run-ready-chain.py false-alarm-cascade <commit> setup --host <server>` (private launcher) | not run |
+| Dispatch named stage | `python3 scripts/run-ready-chain.py false-alarm-cascade <commit> chain --host <server> --confirm-paid` | not run |
+| Resume interrupted execution | unsupported by design: no automatic re-execution; a repair is a new attempt number with its own pre-run review | — |
+| Analyze saved evidence and rebuild visuals | `... status --host <server>`, `... verify --host <server>` | not run |
+| Stop this study and close out | operator: stop the chain process, verify uploads, release claim `dmarz-false-alarm-cascade` | not run |
+
+- Attempt / stage / pre-run assessment: chain-001 (S0, P0, Q0, S1) / [reviews/chain-001-pre.md](reviews/chain-001-pre.md).
 - Budget: call caps P0 1, Q0 24, S1 3,600, total 3,625; at most 10 requests in flight; ledger cap USD 360 with a projection gate before S1; expected spend about USD 120 ([preregistration](preregistration.md), item 13). Cost is not the gate for these runs; the call caps are.
 - Allocation: none. The server is a launcher parameter; the claim id will be `dmarz-false-alarm-cascade`.
 - Credentials: environment aliases `SWARM_MODEL_API_KEY` and `SWARM_MODEL_WORKSPACE_ID`, set by the launcher in memory only. Never in files, arguments or logs.
@@ -46,7 +56,9 @@ Operations entry: manual, through the generic private launcher (`scripts/run-rea
 
 ## Attempt and repair history
 
-No attempt exists.
+No attempt exists. Offline checks on the build machine are software checks, not attempts: the offline S0 (`offline-s0-001`, 1,225 of 1,225) and the rehearsal wrote only to temporary directories and reported to no real hub.
+
+Plan and design history, all on 2026-10-04 and before any run: first plan push `11dfdfd2` (before any code); while the code was written, S0 grew from 925 to 1,225 rows (silent control grid plus one posting pass) and the realized gated counts 35, 34 and 65 were frozen in `design.yaml` (see [preregistration.md](preregistration.md), last section).
 
 | Attempt / parent | Stage / version | Pre-review and receipts | Assigned / started / terminal / graded / analyzed | Post-mortem / disposition |
 |---|---|---|---|---|
