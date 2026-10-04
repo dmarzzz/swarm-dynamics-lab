@@ -23,8 +23,8 @@ Follow-up to [sybil-scarcity-opus](../researchers/dmarz/notes/sybil-scarcity-opu
 
 ## Done when
 
-- [ ] Prospective plan with the frozen rule wording on main before any fresh root is generated.
-- [ ] Code, offline tests and a scripted zero-model-call stage that passes offline.
-- [ ] Pre-run review per tooling/agent-experiments/RUN-REVIEW.md on main with assignment manifest, call counts, gates, model settings, hard max_calls and the pinned commit.
-- [ ] Chained launch per researchers/dmarz/notes/pipeline/READY-CHAIN.md with the server as a parameter.
+- [x] Prospective plan with the frozen rule wording on main before any fresh root is generated. (6e07eb51)
+- [x] Code, offline tests and a scripted zero-model-call stage that passes offline. (code commit ea63999a, source hash b75d7b37: selftest 39 OK, offline S0 128/128, rehearsal 38/38)
+- [x] Pre-run review per tooling/agent-experiments/RUN-REVIEW.md on main with assignment manifest, call counts, gates, model settings, hard max_calls and the pinned commit. (reviews/chain-001-pre.md)
+- [x] Chained launch per researchers/dmarz/notes/pipeline/READY-CHAIN.md with the server as a parameter. (src/chain.py; RUN.md)
 - [ ] Run request filed in the private run queue after the fleet monitor's go.

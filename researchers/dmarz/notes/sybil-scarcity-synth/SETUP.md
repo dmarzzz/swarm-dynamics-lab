@@ -16,8 +16,8 @@ Status: preparation only. Nothing has run; this record is not launch authorizati
 |---|---|---|---|
 | G0 Question and applicable research gates | pass for exploratory scope only | [README](README.md); 2026-10-04, dmarz/pipeline-scarcity (same researcher) | Formal survey and hypothesis gates are not met; S2 stays disabled |
 | G1 Plan written before implementation | pass | README, [preregistration](preregistration.md) with the frozen rule wording, [design.yaml](design.yaml) and this record committed before any file under `src/` and before any root of this study was generated; 2026-10-04, dmarz/pipeline-scarcity | — |
-| G2 Instrument and offline checks | pending | Not built at the time of this entry | Implement; run selftest, offline S0, rehearsal and the manifest check; record results here |
-| G3 Current attempt admission | pending; not requested | No hub registration, no server claim, no queue item, no credential use | Pre-run review on main; same-researcher check by dmarz/fleet-monitor; run request in the private queue; launcher setup at the launch commit |
+| G2 Instrument and offline checks | pass offline (builder's own checks; Python 3.9.6 on macOS) | 2026-10-04, dmarz/pipeline-scarcity, at code commit `ea63999a`, source hash `b75d7b37…`: selftest 39 of 39; offline S0 128 of 128 with 27 of 27 invariants; manifest check equal; rehearsal 38 of 38 checks (full chain and verify; failed-qualification stop; billing stop then second-model relaunch; billing stop then resume). Details in the [pre-run review](reviews/chain-001-pre.md) | Not tested: Python 3.12, the real hub, the private launcher (`--model`, `resume`), a real model response. The launcher's `setup` reruns the selftests on the server |
+| G3 Current attempt admission | pending; not requested | [Pre-run review](reviews/chain-001-pre.md) on main. No hub registration, no server claim, no queue item, no credential use | Same-researcher check by dmarz/fleet-monitor; run request in the private queue; launcher `setup` at the launch commit named in the run request |
 | G4 Qualification before scientific escalation | not run | S0, P0 and Q0 have not run | Runs inside the chain; a failed gate stops the chain |
 | G5 Reconciliation and closeout | not applicable yet | No attempt exists | After the chain: `chain.py verify`, post-mortem, results, claim release |
 
@@ -31,9 +31,9 @@ Status: preparation only. Nothing has run; this record is not launch authorizati
 - What was looked at to write the plan: the earlier study's records and its roots 7790, 7791 and 7800 to 7823 only (scripted reference rules; no model call). No root of this study.
 - Agent definition: one stateless synthesizer call per assignment; prompts `base` and `rule` pinned by SHA-256; schema of sybil-scale-api; model `claude-opus-5-5`; effort low or high.
 - Versions: `requirements.txt` pinned; source hash from `study.source_hash()` over `design.yaml`, `experiment.yaml`, `requirements.txt` and `src/*.py`.
-- Offline checks: pending (G2).
+- Offline checks: `src/selftest.py`, 39 tests: byte-identity with the sybil-scarcity-opus code and all invariants; pinned prompts and the frozen rule text; reference rules; configurations sharing one user message; grading; clean fixtures and Q0 dispatch order; the Q0 gate per configuration; probe gate; design counts, fresh splits, caps and sizing; pool workers and SIGTERM; model ladder, per-model prices and gates; request body keys; thinking blocks; refusal and other failures; transport retry; failure evidence; token count fallback; billing pause and stop; ledger caps and release; strict stages; S1 failure tolerance and limit; integrity stops; continuation after a billing stop; chain gates, projection, verify, resume and second-model relaunch; analysis bounds and cells; frames; manifest; READY file; no secret in source.
 - Launcher gate integration: `coordinator.enqueue` is the only path that queues a stage; `chain.py` is the only path that executes one.
-- Visualization: VISUALIZATION.md (to be written with the renderer).
+- Visualization: [VISUALIZATION.md](VISUALIZATION.md).
 
 ## Current attempt admission
 
@@ -41,22 +41,24 @@ Operations entry: manual, through the generic private launcher. [Operations guid
 
 | Operation | Exact command or unsupported reason | Evidence and last checked revision |
 |---|---|---|
-| Inspect and offline validation | `python3 src/selftest.py`; `python3 src/worker.py --stage S0 --attempt <name>`; `python3 src/rehearse.py --hub-dir <dir>`; `python3 src/manifest.py --check` | pending (G2) |
+| Inspect and offline validation | `python3 src/selftest.py`; `python3 src/worker.py --stage S0 --attempt <name>`; `python3 src/rehearse.py --hub-dir <dir>`; `python3 src/manifest.py --check` | all four passed locally at code commit `ea63999a` |
 | Prepare named stage | `python3 scripts/run-ready-chain.py sybil-scarcity-synth <launch commit> setup --host <server> --source <operator agent id>` (private launcher) | not run |
 | Dispatch named stage | `python3 scripts/run-ready-chain.py sybil-scarcity-synth <launch commit> chain --host <server> --confirm-paid` | not run |
 | Resume interrupted execution | only after a `provider_credit_balance_low` stop, at the same source hash: `python src/chain.py resume` (dated amendment required). Any other interruption: unsupported by design; a repair is a new attempt | not run |
 | Analyze saved evidence and rebuild visuals | `... status --host <server>`, `... verify --host <server>` | not run |
 | Stop this study and close out | operator: stop the chain process, verify uploads, release claim `dmarz-sybil-scarcity-synth` | not run |
 
-- Attempt / stage / pre-run assessment: chain-001 (S0, P0, Q0, S1) / reviews/chain-001-pre.md (to be written after the code is pinned).
-- Budget: call caps P0 1, Q0 48, S1 960, total 1,009; 2 requests in flight; ledger cap USD 190 on settled cost plus open reservations with a per-effort projection gate before S1; expected spend about USD 101 to 136 ([preregistration](preregistration.md) item 10). As relayed, cost is not a gate for these runs; the call caps are hard.
+- Attempt / stage / pre-run assessment: chain-001 (S0, P0, Q0, S1) / [reviews/chain-001-pre.md](reviews/chain-001-pre.md).
+- Budget: call caps P0 1, Q0 48, S1 960, total 1,009; 2 requests in flight; ledger cap USD 240 per model attempt on settled cost plus open reservations, with a per-effort projection gate before S1; expected spend about USD 101 to 136 on Claude Opus 5.5 and USD 126 to 170 on Claude Opus 5 ([preregistration](preregistration.md) item 10); model ladder `[claude-opus-5-5, claude-opus-5]` (item 17). As relayed, cost is not a gate for these runs; the call caps are hard.
 - Allocation: none. The server is a launcher parameter; the claim id will be `dmarz-sybil-scarcity-synth`.
 - Credentials: environment aliases `SWARM_MODEL_API_KEY` and `SWARM_MODEL_WORKSPACE_ID`, set by the launcher in memory only. Never in files, arguments or logs.
 - Go / no-go: not decided. This builder launches nothing.
 
 ## Attempt and repair history
 
-No attempt exists.
+No attempt exists. The offline S0 (`offline-s0-001`, 128 of 128) and the rehearsal are software checks on the build machine; they wrote only to temporary directories and reported to no real hub.
+
+Plan and design history, all on 2026-10-04 and before any run: plan with the frozen rule pushed at `6e07eb51` before any code and before any root of this study was generated; model ladder added and the dollar cap resized from USD 190 to USD 240 (required by dmarz/fleet-monitor through dmarz/pipeline) before the pin; code, manifest and READY file pushed at `ea63999a`, which is the code commit.
 
 | Attempt / parent | Stage / version | Pre-review and receipts | Assigned / started / terminal / graded / analyzed | Post-mortem / disposition |
 |---|---|---|---|---|

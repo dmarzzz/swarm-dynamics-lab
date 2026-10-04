@@ -2323,7 +2323,7 @@
       "evidence_confidence": {
         "score": 0,
         "claim": "A stated evidence rule, or higher reasoning effort, reduces how often an Opus 5.5 synthesizer answers with a repeated fabricated value when a rare fact has one truthful carrier, at a measured cost in accuracy when truth is plentiful.",
-        "rationale": "Unrun. Plan only at this assessment; no stage has run and no model call has been made. The rule was written after the sybil-scarcity-opus result, so this is a follow-up on fresh roots, not a confirmation."
+        "rationale": "Unrun. The package is prepared and tested offline only; no stage has run on a server and no model call has been made. The rule was written after the sybil-scarcity-opus result, so this is a follow-up on fresh roots, not a confirmation."
       },
       "sample_size_summary": "Observed: none. Planned: 24 paired synthetic world roots \u00d7 10 packets \u00d7 4 synthesizer configurations = 960 S1 calls at 972 simulated identities; separate Q0 of 48 calls on 8 roots and a one-call probe. Roots are the independent units, not calls, packets or identities.",
       "sources": [
@@ -2332,7 +2332,7 @@
         "researchers/dmarz/notes/sybil-scarcity-synth/design.yaml",
         "researchers/dmarz/notes/sybil-scarcity-synth/experiment.yaml"
       ],
-      "status_at_assessment": "planned_unrun"
+      "status_at_assessment": "prepared_unrun"
     },
     {
       "id": "sybil-specialists-opus",
