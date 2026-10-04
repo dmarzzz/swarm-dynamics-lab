@@ -57,7 +57,7 @@ def execute_s0(p, out, run=None):
 
     def progress(step, total, label):
         if run:
-            run.progress(step, total, message='S0 scripted: ' + label, force=True)
+            run.progress(step, total, message='S0 scripted: ' + label, force=True, model_calls=0, cost_usd=0.0)
     result = s0.run_suite(out, progress, durable=True)
     report = result['report']
     live = result['episodes']['live.evidence_follower']
@@ -158,7 +158,7 @@ def execute_paid(p, out, run=None, adapter_factory=None, ledger=None):
                 'passed': analysis['qualification']['passed'] and crash is None and controller.halted is None}
     else:
         analysis = analyze.summarize(episodes)
-        gate = analyze.s1_gate(stats, controller.leaks, crash, controller.halted)
+        gate = analyze.s1_gate(stats, controller.leaks, crash, controller.halted, mode, analysis)
     completed = [e for e in episodes if e['execution'] == 'completed']
     snapshots.append((list(episodes), state(controller, snapshots[-1][1]['blocks_done'])))
     frames = render.replay(snapshots, out)

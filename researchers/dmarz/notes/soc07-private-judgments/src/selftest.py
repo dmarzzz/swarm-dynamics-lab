@@ -582,6 +582,11 @@ class Provider(unittest.TestCase):
             self.assertEqual((r['ok'], r['failure'], r['billing'], r['attempts']), (False, failure, billing, 1), failure)
             self.assertEqual(len(self.requests), 1)
 
+    def test_failed_calls_keep_their_text_for_the_journal_only(self):
+        a = self.make([ok_payload(text='{"choice":"A","confi', stop_reason='max_tokens')])
+        r = a.complete(self.CALL)
+        self.assertEqual((r['ok'], r['failure'], r['text']), (False, 'truncated', '{"choice":"A","confi'))
+
     def test_attempt_refusal_and_missing_key(self):
         def refuse(call_id):
             raise budget.BudgetError('attempt_budget_exhausted')
@@ -765,6 +770,8 @@ class PaidPathRehearsal(unittest.TestCase):
         self.assertEqual(doc['reconciliation']['completed'], 192)
         self.assertEqual(analysis['primary']['difference'], 0.0)
         self.assertEqual(analysis['arms']['private']['team_success'], 48)
+        self.assertTrue(doc['gate']['checks']['clean_competence'])
+        self.assertEqual(doc['calls']['by_phase']['final_private'], {'dispatched': 192, 'valid': 192, 'truncated': 0})
 
     def test_s1l_rehearsal(self):
         doc, analysis, totals = self.rehearse('s1l')
@@ -907,7 +914,15 @@ class Analysis(unittest.TestCase):
         self.assertEqual(s['execution'], {'completed': 1, 'interrupted': 1, 'incomplete': 0})
 
     def test_gate(self):
-        stats = {'valid_rate': 0.96, 'budget_timeout_failure_rate': 0.01, 'duplicate_call_ids': 0, 'unplanned_call_ids': 0}
+        stats = {'valid_rate': 0.96, 'budget_timeout_failure_rate': 0.01, 'duplicate_call_ids': 0, 'unplanned_call_ids': 0,
+                 'by_phase': {'initial': {'dispatched': 100, 'valid': 96, 'truncated': 4}}}
+        over = dict(stats, by_phase={'final_public': {'dispatched': 100, 'valid': 94, 'truncated': 6}})
+        self.assertFalse(analyze.s1_gate(over, 0, None, None)['passed'])
+        cell = lambda k: {'by_regime': {'clean': {'episodes': 16, 'team_success': k}}}
+        self.assertTrue(analyze.s1_gate(stats, 0, None, None, 'replay', {'arms': {'private': cell(13), 'public': cell(16)}})['passed'])
+        self.assertFalse(analyze.s1_gate(stats, 0, None, None, 'replay', {'arms': {'private': cell(12), 'public': cell(16)}})['passed'])
+        self.assertFalse(analyze.s1_gate(stats, 0, None, None, 'replay', {'arms': {'private': cell(16)}})['passed'])
+        self.assertNotIn('clean_competence', analyze.s1_gate(stats, 0, None, None, 'live', {'arms': {}})['checks'])
         self.assertTrue(analyze.s1_gate(stats, 0, None, None)['passed'])
         self.assertFalse(analyze.s1_gate(dict(stats, valid_rate=0.94), 0, None, None)['passed'])
         self.assertFalse(analyze.s1_gate(dict(stats, budget_timeout_failure_rate=0.05), 0, None, None)['passed'])
