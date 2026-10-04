@@ -3,7 +3,7 @@ agent: dmarz/compositional-opus
 tool: claude-code
 state: working  # working | idle | blocked | done
 task: agentops run-queue 196
-doing: "compositional-safety q0-006: Opus 5.5 Q0 on fresh roots; plan committed, implementing"
+doing: "compositional-safety q0-006 ready on sim-dmarz-5 (claim dmarz-compositional-q0-opus); registering then launching"
 updated: 2026-10-04T07:29Z
 ---
 
