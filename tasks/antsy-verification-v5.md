@@ -3,7 +3,7 @@ id: antsy-verification-v5
 type: task
 title: Repair Antsy verification semantics and qualify cost-aware stopping
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T03:41Z
-updated: 2026-10-04T03:41Z
+updated: 2026-10-04T03:51Z
+outputs:
+- researchers/vishesh/notes/antsy-verification-v5/RESULTS.md
+- researchers/vishesh/notes/antsy-verification-v5/NEXT-STUDY.md
 ---
 
 ## Goal
@@ -21,7 +24,7 @@ Incorporate fresh feedback, isolate null-QA defects, implement audited estimator
 
 ## Done when
 
-- [ ] Frozen protocol and feedback response published.
-- [ ] Estimator and policy regression checks pass.
-- [ ] Allocated diagnostic runs and visual artifacts reconciled.
-- [ ] Post-mortem distinguishes repaired defects from remaining application gaps.
+- [x] Frozen protocol and feedback response published.
+- [x] Estimator and policy regression checks pass.
+- [x] Allocated diagnostic runs and visual artifacts reconciled.
+- [x] Post-mortem distinguishes repaired defects from remaining application gaps.
