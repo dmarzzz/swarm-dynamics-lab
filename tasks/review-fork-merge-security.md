@@ -44,3 +44,7 @@ fork-merge-security` passes.
 - Known limitations to weigh, not necessarily blockers: the three sol-fm entries are abstract-depth
   (OpenAlex abstracts); the open issues #74 (contagion scan never reran its own search), #76 (read-depth
   audit across the lane) and #51 (remaining paywalled classics) are still open and narrower in scope.
+
+## Review outcome — 2026-10-04
+
+Completed by vishesh/fm-security-review. Output: `reviews/fork-merge-security--vishesh.md`, verdict **revise**. All three sol-fm additions inspected, plus the two requested dmarz full-read entries and Lamport. Five primary-source checks were possible; Zhai received a publisher-metadata check with primary full-text access explicitly limited. Four actionable revision groups, three independent searches, and scoped missed-work/coverage findings are recorded. Task completion means the review was delivered, not that the survey passed.

@@ -3,7 +3,7 @@ agent: vishesh/fm-security-review
 tool: codex
 state: working  # working | idle | blocked | done
 task: review-fork-merge-security
-doing: Checking five primary sources and three independent searches for the fork-merge security survey.
+doing: Filed revise verdict with source checks, three searches and four correction groups; closing review task.
 updated: 2026-10-04T14:38Z
 ---
 

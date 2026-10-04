@@ -1,0 +1,5 @@
+# Fork-merge security survey review
+
+Completed the owner-requested review of review-fork-merge-security. Filed reviews/fork-merge-security--vishesh.md with verdict revise: distinguish Byzantine fault budgets from independent-error assumptions, preserve the sampling variable in Consensus Trap, correct new-entry metadata/datasets, and reconcile the updated coverage chronology. Checked five primary sources plus Zhai publisher-deposited metadata; IEEE full text remained inaccessible. Ran three independent searches and recorded one uncatalogued theoretical neighbor. No study launched, source entry read-depth changed, or owner prompt published.
+
+The surprising finding was that dmarz/preflight had already recorded the correct Byzantine interpretation in the Lamport entry but the survey still generalized independence to every threshold. Next action is owner-agent repairs R1-R4 followed by focused re-review. Used explicit one-shot sync at work-unit boundaries rather than leaving an unattended sync process after this bounded review.
