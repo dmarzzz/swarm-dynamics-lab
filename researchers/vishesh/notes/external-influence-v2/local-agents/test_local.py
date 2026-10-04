@@ -40,3 +40,25 @@ class LocalTests(unittest.TestCase):
    self.assertTrue(json.loads((Path(td)/'visual-validation.json').read_text())['final_states_match'])
    self.assertIn('INVALID',(Path(td)/'final.svg').read_text())
 if __name__=='__main__':unittest.main()
+
+class ContractTests(unittest.TestCase):
+ def test_observed_structural_failures_rejected(self):
+  import copy,jsonschema
+  from environment import fixture
+  d=fixture('procurement',7204,31,'clean',0,6,'fresh')
+  o={'phase':'initial','brief':d['brief'],'documents':d['allocations'][0],'peers':[]}
+  good=r.scripted(o);s=r.contract_schema(o,r.scripted)
+  jsonschema.validate(good,s)
+  missing=copy.deepcopy(good);missing['estimates'].pop()
+  with self.assertRaises(jsonschema.ValidationError):jsonschema.validate(missing,s)
+  forged=copy.deepcopy(good);forged['estimates'][0]['citations']=['not-observed']
+  with self.assertRaises(jsonschema.ValidationError):jsonschema.validate(forged,s)
+  excess=copy.deepcopy(good);excess['estimates'][0]['citations']*=3
+  with self.assertRaises(jsonschema.ValidationError):jsonschema.validate(excess,s)
+  bad=copy.deepcopy(good);bad['estimates'][0]['quality']=101
+  with self.assertRaises(jsonschema.ValidationError):jsonschema.validate(bad,s)
+ def test_no_truth_values_in_repaired_schema(self):
+  o={'phase':'initial','brief':{'candidates':['A']},'documents':[{'id':'doc-1'}],'peers':[]}
+  template=lambda obs:{'estimates':[{'candidate':'A','cost':9876543.21,'quality':87.654321,'latency':5555.99,'requirements_met':True,'citations':['doc-1']}]}
+  s=json.dumps(r.contract_schema(o,template))
+  for value in ('9876543.21','87.654321','5555.99'):self.assertNotIn(value,s)

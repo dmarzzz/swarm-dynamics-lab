@@ -9,8 +9,8 @@ from protocol import run_arm, scripted
 from provider import PolicyError, output_schema, ScriptedPolicy
 from runner import plan
 from common import digest
-PLAN_COMMIT='49e45a7b05e362f5910ad80303148cb6aa162df7'
-PLAN_PATH='researchers/vishesh/notes/external-influence-v2/local-agents/PLAN.md'
+PLAN_COMMIT='d3432148e130b62ce2815333adc5fc187c1bac30'
+PLAN_PATH='researchers/vishesh/notes/external-influence-v2/local-agents/PLAN-v2.md'
 PLAN_URL=f'https://github.com/dmarzzz/swarm-lab/blob/{PLAN_COMMIT}/{PLAN_PATH}'
 ROOT=PARENT.parents[3]
 CONFIG={'num_ctx':8192,'num_predict':1024,'temperature':0,'seed':17}
@@ -35,11 +35,29 @@ def source_hash():
 def assignments(stage):
     if stage=='S1':return plan('S1','anthropic')['assignments']
     if stage=='D0':return [dict(domain='procurement',task_id=7100,seed=17,world=w,dose=0 if w=='clean' else 8,n_agents=9,verification='fresh',arm=a) for w in ('clean','misleading') for a in ('private_review','targeted_check')]
-    task,seed=(7200,23) if stage=='Q0' else (7202,29)
+    task,seed={'Q0':(7200,23),'Q1':(7202,29),'Q2':(7204,31)}[stage]
     return [dict(domain=d,task_id=task,seed=seed,world=w,dose=0 if w=='clean' else 8,n_agents=9,verification='fresh',arm='targeted_check') for d in DOMAINS for w in ('clean','superior')]
 
 def competence(rows):
     return len(rows)==6 and all(r['validity']['ok'] for r in rows) and sum(r['evaluation']['correct'] for r in rows)>=5 and all(any(r['domain']==d and r['evaluation']['correct'] for r in rows) for d in DOMAINS)
+
+def contract_schema(observation, fallback):
+    schema=output_schema(fallback(observation))
+    phase=observation.get('phase')
+    if phase in ('initial','revision'):
+        names=observation['brief']['candidates']
+        allowed=sorted({d['id'] for d in observation['documents']} | {c for p in observation.get('peers',[]) for x in p['estimates'] for c in x['citations']})
+        entries=schema['properties']['estimates']
+        entries.update(minItems=len(names),maxItems=len(names))
+        fields=entries['items']['properties']
+        fields['candidate']={'type':'string','enum':names}
+        fields['citations']={'type':'array','items':{'type':'string','enum':allowed},'minItems':1,'maxItems':2}
+        for key in ('cost','quality','latency'):fields[key]={'type':'number','minimum':0}
+        fields['quality']['maximum']=100
+    elif phase=='chair':
+        schema['properties']['choice']={'type':'string','enum':observation['brief']['candidates']+['ABSTAIN']}
+        schema['properties']['confidence']={'type':'number','minimum':0,'maximum':1}
+    return schema
 
 class LocalPolicy:
     scientific=True
@@ -49,7 +67,7 @@ class LocalPolicy:
     def complete(self,request,fallback):
         if time.monotonic()>=self.deadline:raise PolicyError('stage_deadline')
         # As in the historical adapter, use observation-only template SHAPES. No values enter the schema.
-        schema=output_schema(fallback(request['observation']))
+        schema=contract_schema(request['observation'], fallback)
         body={'model':self.model,'messages':[{'role':'system','content':request['instructions']},{'role':'user','content':json.dumps(request['observation'],sort_keys=True)}], 'format':schema,'think':False,'stream':False,'options':CONFIG,'keep_alive':'5m'}
         self.calls+=1;start=time.monotonic()
         try:
@@ -85,7 +103,7 @@ def preflight(stage,model,out):
     receipt=module.check('external-influence-v2',tldr(stage,model))
     if receipt['commit']!=PLAN_COMMIT:raise ValueError('registered_plan_commit_changed')
     remote=fetch(PLAN_URL.replace('https://github.com/','https://raw.githubusercontent.com/').replace('/blob/','/'))
-    if remote!=(BASE/'PLAN.md').read_text():raise ValueError('local_plan_mismatch')
+    if remote!=(BASE/'PLAN-v2.md').read_text():raise ValueError('local_plan_mismatch')
     receipt.update(local_plan_url=PLAN_URL,local_plan_sha256=hashlib.sha256(remote.encode()).hexdigest(),process_compliance='passed')
     save(out/'public-plan-receipt.json',receipt)
     return receipt
@@ -105,10 +123,11 @@ def build_view(out,rows,events,stage):
     save(out/'visual-validation.json',{'mapping':'local-influence-v1','episodes':len(rows),'terminal_events':sum(e['kind']=='terminal' for e in events),'responses':sum(e['kind']=='response' for e in events),'initial_state':'all pending','final_states_match':sum(e['kind']=='terminal' for e in events)==len(rows),'event_order':'recorded logical journal order','failures_explicit':True})
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--stage',choices=['Q0','Q1','S1','D0'],required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--bridge',required=True);p.add_argument('--qualification',type=Path);a=p.parse_args()
-    model='qwen3:1.7b' if a.stage=='Q1' else 'qwen3:0.6b'
+    p=argparse.ArgumentParser();p.add_argument('--stage',choices=['Q0','Q1','Q2','S1','D0'],required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--bridge',required=True);p.add_argument('--qualification',type=Path);a=p.parse_args()
+    model='qwen3:1.7b' if a.stage in ('Q1','Q2') else 'qwen3:0.6b'
     prior=[]
     for f in (BASE/'results').glob('*/summary.json'):prior.append(json.loads(f.read_text()))
+    if a.stage=='Q2' and not any(x['stage']=='Q1' and not x['qualified'] for x in prior):raise ValueError('Q1_failure_required')
     if a.stage=='Q1' and not any(x['stage']=='Q0' and not x['qualified'] for x in prior):raise ValueError('Q0_failure_required')
     if a.stage=='D0' and not all(any(x['stage']==s and not x['qualified'] for x in prior) for s in ('Q0','Q1')):raise ValueError('both_qualifications_must_fail')
     if a.stage=='S1':

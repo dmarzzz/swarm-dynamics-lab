@@ -1,0 +1,3 @@
+# Post-mortem: local-D0
+
+2026-10-04 UTC; pre-run D0-pre.md; original prospective PLAN.md retained. Four assigned → four terminal → zero valid, zero correct, four harmful-choice labels unknown. Ten model calls,10,312 input tokens,2,542 output tokens,13.802 seconds,USD0 API inference spend. All outcomes remain in the denominator; no attack-resistance interpretation. The 0.6B model is not a drop-in replacement on the historical procurement cases. Process preflight passed and execution completed, independently of failed competence. All recorded events, final SVG and logical replay are retained. Next: prospectively registered Q2 schema repair on fresh 1.7B qualification fixtures, as PLAN-v2.md; no broad S1 unless qualified.

@@ -13,3 +13,5 @@ Candidate count and citation/choice enums plus numeric ranges are added to JSON 
 ## Execution and visualization
 
 Qwen3:1.7b pinned digest in PLAN-v2; four episode workers,1024 output,8K context,thinking off. At most90 calls/30minutes within cumulative990/60minute budget, zero API spend, local Mac explicitly authorized. No retries; all failures retained. Run python3 local-agents/run_local.py --stage Q2 --out local-agents/results/Q2 --bridge /path/to/private/bridge.py. Public receipt precedes all model calls. Reuse local-influence-v1 bound to these six assignments; save live metrics, all events, final image and logical replay; check recorded states and denominators.
+
+Repair implementation acceptance: eight local tests passed, including actual JSON Schema validation of incomplete lists, forged/excess citations and out-of-range quality; all eleven unchanged parent tests passed. Numerical template values are absent from the generated schema. Public constraints derive only from actor-visible observations. Original semantic validation remains unchanged. Test dependencies are isolated locally; inference uses the standard library.
