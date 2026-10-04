@@ -11,7 +11,7 @@ for (case,world),arms in groups.items():
   valid=b['valid'] and e['valid'];pairs.append({'case':case,'world':world,'both_valid':valid,
    'same_choice':b['decision']['choice']==e['decision']['choice'] if valid else None,
    'ballots_minus_evidence_harm':b['evaluation']['harmful_target']-e['evaluation']['harmful_target'] if valid else None})
-report={'summary':summary,'case_worlds':len(groups),'distinct_buyers':len({r['case_id'] for r in rows}),'paired_chairs':pairs,
+report={'summary':summary,'case_worlds':len(groups),'distinct_case_ids':len({r['case_id'] for r in rows}),'paired_chairs':pairs,
  'per_arm':{arm:{'assigned':len(rs),'valid':sum(r['valid'] for r in rs),'acceptable':sum(r['evaluation']['acceptable_decision'] for r in rs if r['valid']),
                  'choices':[r['decision']['choice'] if r['valid'] else 'INVALID' for r in rs],
                  'absolute_cost_errors_usd':[r['evaluation']['cost_claim_error_usd'] for r in rs if r['valid']]}

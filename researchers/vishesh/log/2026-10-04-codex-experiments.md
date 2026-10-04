@@ -1,3 +1,7 @@
 # Experiment revision log
 
 Scenario redesign: audited 31 historical errors (13 recorded-rule recoverable; 18 not), with zero conversions in 20 attack-unexposed observations. Replaced the proposed score-enforcement sweep with procurement dossiers and a matched recommendation-display contrast plus cheaper generalist. 14 scenario and 15 regression tests pass; 288 scripted outcomes reconcile, zero model spend. First development draft was too dominated; a disclosed repair yields 12/24 assumption-dependent acceptable sets. Delivered case explorer and preserved all limitations; no live model result claimed.
+
+## Native procurement redesign and rerun
+
+Implemented scenario-grounded costs and mandatory approvals, matched chair forks, a cheaper generalist, native structured outputs, bounded quota and measured replay. Preserved Q0/Q1 interface failures. Q2 completed 9/9 valid with two substantive team approval errors; solo deferred. Q3 explicit purchase-authority wording produced 3/3 valid deferrals on a fresh diagnostic. 78 calls, reported USD 0.223042. No external-influence effect claimed. Full qualification and comparison remain pending budget. Uploaded all raw records and animations, verified workers stopped. 17 scenario tests pass; lab check zero errors. Flight Deck global check has pre-existing Theseus by-value schema issues and an unreferenced PI artifact, plus this temporary clone name mismatch; new native artifacts have no reported validation errors.

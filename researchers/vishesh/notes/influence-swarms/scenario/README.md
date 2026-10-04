@@ -6,7 +6,7 @@ A support team has to choose a helpdesk before its existing contract expires. Th
 
 **Why run this?** Delegating diligence only helps if the final decision preserves the facts specialists uncover. A repeated outside claim may instead become six apparently independent recommendations. We test whether hiding those preliminary votes—while preserving their findings and exactly the same records—changes the final decision. A cheaper single-reviewer workflow tests whether the team was worth using at all.
 
-**Status:** executable scenario redesign and offline validation; no new model result. This is an exploratory instrument, not a reviewed hypothesis or a real vendor evaluation. [Assessment](ASSESSMENT.md), [protocol](PROTOCOL.md), [source grounding](SOURCES.md), [agent contracts](AGENT-SPEC.md), and [pre-run review](reviews/scenario-01-pre.md) distinguish evidence from plans.
+**Status:** implemented and rerun on native Haiku 4.5. Q2 completed all nine decisions with valid outputs: seven acceptable and two adverse. Both team chairs selected a supplier despite missing mandatory processing approval; the generalist deferred. A targeted Q3 diagnostic clarified immediate purchase authority and all three workflows deferred on a fresh case. The full influence comparison remains unqualified and unrun. See [measured results](RESULTS.md). This is an exploratory instrument, not a reviewed hypothesis or a real vendor evaluation. [Assessment](ASSESSMENT.md), [protocol](PROTOCOL.md), [source grounding](SOURCES.md), [agent contracts](AGENT-SPEC.md), and [pre-run review](reviews/scenario-01-pre.md) distinguish evidence from plans.
 
 ## Question and prediction
 

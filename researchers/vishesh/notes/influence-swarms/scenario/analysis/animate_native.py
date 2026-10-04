@@ -23,7 +23,7 @@ def frame(label,seconds):
   t(x+14,y+10,role,18,'#a7c0cf');t(x+14,y+43,r['choice'] if r else 'Pending',24)
   if r:
    conf=r.get('confidence');t(x+14,y+78,'Confidence '+(f'{conf:.0%}' if conf is not None else 'unreported'),17)
- t(35,490,'Retrieved checks: '+(' · '.join(checks) if checks else 'Pending'),18)
+ t(35,490,'Team retrieved checks: '+(' · '.join(checks) if checks else 'Pending'),18)
  for i,arm in enumerate(('team_ballots','team_evidence','solo')):
   x=35+i*415;y=545;r=decisions.get(arm)
   d.rounded_rectangle((x,y,x+395,y+130),8,fill='#1b303e',outline='#4a6575')

@@ -1,0 +1,68 @@
+{
+  "summary": {
+    "stage": "Q3",
+    "planned": 3,
+    "terminal": 3,
+    "valid": 3,
+    "invalid": 0,
+    "acceptable": 3,
+    "qualified": false,
+    "calls": 14,
+    "input_tokens": 27210,
+    "output_tokens": 2647,
+    "actual_usd": 0.040445,
+    "usage_missing": 0,
+    "seconds": 45.18,
+    "source_signature": "46bc088d1f1f67e7cf020cf9a27a6c38a61b555e8d4ea8af6a0ae7bfc42dd6e0",
+    "diagnostic_passed": true,
+    "report_errors": [],
+    "outcomes_hash": "fed0f77ccecd9efc5f734c3e9c0403ebd9cc3dd92479da7f0f18ad151f5bb7ed"
+  },
+  "case_worlds": 1,
+  "distinct_case_ids": 1,
+  "paired_chairs": [
+    {
+      "case": "evidence_gap-7",
+      "world": "clean",
+      "both_valid": true,
+      "same_choice": true,
+      "ballots_minus_evidence_harm": 0
+    }
+  ],
+  "per_arm": {
+    "team_ballots": {
+      "assigned": 1,
+      "valid": 1,
+      "acceptable": 1,
+      "choices": [
+        "DEFER"
+      ],
+      "absolute_cost_errors_usd": [
+        null
+      ]
+    },
+    "team_evidence": {
+      "assigned": 1,
+      "valid": 1,
+      "acceptable": 1,
+      "choices": [
+        "DEFER"
+      ],
+      "absolute_cost_errors_usd": [
+        null
+      ]
+    },
+    "solo": {
+      "assigned": 1,
+      "valid": 1,
+      "acceptable": 1,
+      "choices": [
+        "DEFER"
+      ],
+      "absolute_cost_errors_usd": [
+        null
+      ]
+    }
+  },
+  "inference": "Descriptive paired pilot only. Shared prefixes and reused buyer worlds are not independent replicates. No p-value or population confidence interval."
+}

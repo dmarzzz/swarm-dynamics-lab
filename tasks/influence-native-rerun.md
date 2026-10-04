@@ -21,6 +21,10 @@ Implement native bounded collection, qualify the redesigned procurement study an
 
 ## Done when
 
-- [ ] Freeze and test native runner and fresh qualification cases.
-- [ ] Run qualification and diagnose any failures without replacing original outcomes.
+- [x] Freeze and test native runner and fresh qualification cases.
+- [x] Run qualification and diagnose any failures without replacing original outcomes.
 - [ ] Run the eligible bounded comparison, publish measured replay and post-mortem, and release the dedicated allocation.
+
+## Coverage note
+
+Four native attempts published with immutable evidence, measured GIF/HTML replays and post-mortems. Q2: 9 valid, 7 acceptable; Q3: 3 valid deferrals on a targeted diagnostic, not full qualification. The comparison remains unrun pending fresh full qualification and more authorized shared budget. Dedicated worker is stopped; claim release requested. See scenario/RESULTS.md.
