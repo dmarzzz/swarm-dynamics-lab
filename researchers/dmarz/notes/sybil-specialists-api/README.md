@@ -28,4 +28,12 @@ The [mapping](VISUALIZATION.md) defines live measured progress, a final comparis
 
 ## Results
 
-Not run yet. See reviews for stage-specific qualification and post-mortems.
+The model-backed qualification and pilot completed on 2026-10-04 UTC. Q0 passed24/24 exact packets, including36/36 missing-evidence abstentions. S1 completed192/192 valid calls across12 paired worlds; no missing or repeated observations. Total216 API calls,266,342 input tokens and8,692 output tokens: **USD0.309802** computed from reported usage, within theUSD5 aggregate cap. No automatic retries. Scripted S0 adds216 engineering observations with zero API calls.
+
+With informative checks (attackers pass10%), coverage verification yielded **94.4% rare-skill accuracy**, versus8.3% for degree,47.2% for random and0% with no checks. Coverage-minus-degree is+86.1 percentage points; the12-world descriptive bootstrap interval is[72.2,97.2]. Coverage admitted7.4% of attacker identities versus3.7% for degree: useful recovery still has a security cost.
+
+When attackers pass90% of checks, coverage admits**80.6% of attacker identities**. Rare-skill accuracy drops to25.0% with badges hidden and33.3% with badges shown. The paired badge effect is+8.3 points, with a descriptive interval[-2.8,19.4]; **this pilot does not establish that badges help or harm**. The broad collapse under weak checks persists with a real model synthesizer. The scripted reference is33.3% in both high-pass coverage cells. Full16-cell results, paired world differences and denominators are in [results-summary.json](results-summary.json).
+
+Only report synthesis uses an LLM. Graph admission, identity ownership, verifier reliability and fabricated reporter values remain simulated. This is a single model, one symmetric graph family, a fixed attack offset and12 toy worlds, not evidence of a deployable general Sybil defense. The next scientific extension should vary topology and attack generation and compare faithful published defenses after the formal research gates. No further paid batch is automatically queued.
+
+The generic pilot usage time series originally mixed stage and study totals; saved per-call accounting and all scientific values are unchanged. The separate analysis replay corrects initial carried spend and explains that reporting amendment. Original observations and artifacts remain available. See [reviews](reviews), [deployment record](deployment.json), and the [analysis view](https://swarm-live.pages.dev/#/r/sybil-specialists-api%2Fanalysis-api-001).
