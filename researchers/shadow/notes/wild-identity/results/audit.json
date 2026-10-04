@@ -1,0 +1,32 @@
+{
+  "alternate_wiki_gini": 0.6019975615328703,
+  "checks": {
+    "swarm_lab_aggregate_events": true,
+    "swarm_lab_aggregate_rows": true,
+    "swarm_lab_curve_endpoint": true,
+    "swarm_lab_fresh_degree_indegree_sum": true,
+    "swarm_lab_fresh_degree_outdegree_sum": true,
+    "swarm_lab_positive_span_median": true,
+    "swarm_lab_snapshot_degree_indegree_sum": true,
+    "swarm_lab_snapshot_degree_outdegree_sum": true,
+    "swarm_lab_total_accounting": true,
+    "swarmtraces_kind_accounting": true,
+    "swarmtraces_no_imputed_metrics": true,
+    "wiki_aggregate_events": true,
+    "wiki_aggregate_rows": true,
+    "wiki_count_from_label_table": true,
+    "wiki_curve_endpoint": true,
+    "wiki_fresh_degree_indegree_sum": true,
+    "wiki_fresh_degree_outdegree_sum": true,
+    "wiki_gini_lorenz_alternate": true,
+    "wiki_identity_count_from_label_table": true,
+    "wiki_median_span_from_label_table": true,
+    "wiki_positive_span_median": true,
+    "wiki_snapshot_degree_indegree_sum": true,
+    "wiki_snapshot_degree_outdegree_sum": true,
+    "wiki_total_accounting": true,
+    "wiki_zero_spans_from_label_table": true
+  },
+  "passed": 25,
+  "total": 25
+}

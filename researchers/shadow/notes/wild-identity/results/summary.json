@@ -1,0 +1,190 @@
+{
+  "analysis_version": "1.0.0",
+  "design": "Descriptive, post-hoc census; not a causal experiment",
+  "input_sha256": {
+    "collusion-wiki/labels.jsonl.gz": "c1cd171f4794ea3e59803c92aba9dc552587db984dc43c7939338d5845c59860",
+    "collusion-wiki/revisions.jsonl.gz": "9c2a4ef0ccbfb5b42be8422342a6bd3a389a4a047bc891e3148354dd65b63c96",
+    "private_git_log": "a57ed6cbfd47f8bf0f6d0e0547dec6451f0e6c26d08d968e75e442d27402fa48",
+    "swarmtraces/redacted.jsonl.gz": "7b66ab21674de52fcd3f557652f68b1801170c998e2f266862124e6edf283488"
+  },
+  "swarm_lab": {
+    "attributed_events": 1947,
+    "casefold_identities": 161,
+    "event_unit": "commit",
+    "events": 2897,
+    "first_time_utc": "2026-10-03T16:47:38+00:00",
+    "gini": 0.6404438106722558,
+    "graphs": {
+      "fresh": {
+        "directed_edges": 16,
+        "event_edge_occurrences": 18,
+        "largest_weak_component": 10,
+        "max_indegree": 4,
+        "max_outdegree": 2,
+        "reciprocal_edge_fraction": 0.0,
+        "referencing_events": 17,
+        "referencing_identities": 13,
+        "touched_identities": 20,
+        "weak_components_including_isolates": 145
+      },
+      "snapshot": {
+        "directed_edges": 16,
+        "event_edge_occurrences": 18,
+        "largest_weak_component": 10,
+        "max_indegree": 4,
+        "max_outdegree": 2,
+        "reciprocal_edge_fraction": 0.0,
+        "referencing_events": 17,
+        "referencing_identities": 13,
+        "touched_identities": 20,
+        "weak_components_including_isolates": 145
+      }
+    },
+    "identities": 161,
+    "identities_with_time": 161,
+    "last_time_utc": "2026-10-04T14:43:18+00:00",
+    "max_span_hours": 11.501666666666667,
+    "median_positive_span_hours": 1.0911111111111111,
+    "median_span_fraction_of_window": 0.03400050671395997,
+    "median_span_hours": 0.7455555555555555,
+    "missing_time_events": 0,
+    "observation_window_hours": 21.927777777777777,
+    "singleton_identities": 21,
+    "snapshot_commit": "4959a80b",
+    "span_at_most_1h_identities": 89,
+    "span_reference_cross_tab": {
+      "above_median": {
+        "events": 1627,
+        "fresh_reference_events": 16,
+        "identities": 80,
+        "referencing_identities": 12
+      },
+      "at_or_below_median": {
+        "events": 320,
+        "fresh_reference_events": 1,
+        "identities": 81,
+        "referencing_identities": 1
+      }
+    },
+    "top_10pct_event_share": 0.5269645608628659,
+    "top_10pct_identity_count": 17,
+    "top_identity_event_share": 0.06831022085259374,
+    "unattributed_events": 950,
+    "unattributed_note": "Includes bot indexing, merge, human and unprefixed commits. Not separate agent identities.",
+    "zero_span_identities": 22
+  },
+  "swarmtraces": {
+    "by_kind": {
+      "payload": 91037,
+      "recovered_text": 75534,
+      "response": 23008
+    },
+    "distinct_runtime_redaction_placeholders": 169,
+    "field_presence": {
+      "cite": 189579,
+      "id": 189579,
+      "kind": 189579,
+      "parent_id": 189579,
+      "tags": 189579,
+      "text": 189579,
+      "time_utc": 189579
+    },
+    "identity_lifetime_gini_graph": null,
+    "not_identifiable_reason": "No structured actor field or timestamps; code/file-list sign-off candidates and redaction placeholders are not authors. Parent links are decoding provenance, not agent communication.",
+    "records": 189579,
+    "records_with_parent_id": 61125,
+    "records_with_runtime_identifier_redaction": 16012,
+    "signoff_probe": {
+      "explicit_signoff_candidate_records": 0,
+      "standalone_dash_candidate_records": 86
+    },
+    "timestamped_records": 0
+  },
+  "wiki": {
+    "attributed_events": 13692,
+    "casefold_identities": 3095,
+    "event_unit": "revision",
+    "events": 14591,
+    "first_time_utc": "2026-05-24T06:02:19+00:00",
+    "gini": 0.6019975615328702,
+    "graphs": {
+      "fresh": {
+        "directed_edges": 1602,
+        "event_edge_occurrences": 2530,
+        "largest_weak_component": 1073,
+        "max_indegree": 259,
+        "max_outdegree": 11,
+        "reciprocal_edge_fraction": 0.02372034956304619,
+        "referencing_events": 2164,
+        "referencing_identities": 1002,
+        "touched_identities": 1180,
+        "weak_components_including_isolates": 1967
+      },
+      "snapshot": {
+        "directed_edges": 11053,
+        "event_edge_occurrences": 17556,
+        "largest_weak_component": 1766,
+        "max_indegree": 392,
+        "max_outdegree": 68,
+        "reciprocal_edge_fraction": 0.21840224373473266,
+        "referencing_events": 5065,
+        "referencing_identities": 1702,
+        "touched_identities": 1787,
+        "weak_components_including_isolates": 1324
+      }
+    },
+    "identities": 3102,
+    "identities_with_time": 3102,
+    "label_table_validation": {
+      "blank_label_table_rows": 1,
+      "count_mismatches": 0,
+      "first_time_mismatches": 0,
+      "last_time_mismatches": 0,
+      "nonblank_label_table_rows": 3102
+    },
+    "last_time_utc": "2026-07-02T17:51:22+00:00",
+    "max_span_hours": 682.4263888888889,
+    "median_positive_span_hours": 1.3225,
+    "median_span_fraction_of_window": 5.8028048648605876e-05,
+    "median_span_hours": 0.055,
+    "missing_time_events": 0,
+    "observation_window_hours": 947.8175,
+    "signoffs": {
+      "fresh_candidate_events": 24,
+      "fresh_known_signoff_events": 18,
+      "fresh_known_signoff_occurrences": 18,
+      "fresh_mismatching_signoff_occurrences": 2,
+      "snapshot_candidate_events": 246,
+      "snapshot_known_signoff_events": 174,
+      "snapshot_known_signoff_occurrences": 174,
+      "snapshot_mismatching_signoff_occurrences": 126
+    },
+    "singleton_identities": 1332,
+    "span_at_most_1h_identities": 2136,
+    "span_reference_cross_tab": {
+      "above_median": {
+        "events": 11679,
+        "fresh_reference_events": 1839,
+        "identities": 1550,
+        "referencing_identities": 718
+      },
+      "at_or_below_median": {
+        "events": 2013,
+        "fresh_reference_events": 325,
+        "identities": 1552,
+        "referencing_identities": 284
+      }
+    },
+    "time_grades": {
+      "rclog": 103,
+      "reqlog": 14482,
+      "write_date": 6
+    },
+    "top_10pct_event_share": 0.5078147823546597,
+    "top_10pct_identity_count": 311,
+    "top_identity_event_share": 0.023152205667543092,
+    "unattributed_events": 899,
+    "unknown_signoff_candidate_strings": 6,
+    "zero_span_identities": 1333
+  }
+}
