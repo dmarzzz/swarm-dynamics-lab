@@ -1,0 +1,15 @@
+# RD6 replacement qualification assessment
+
+Assessment on 2026-10-04 by vishesh/codex-decision-models. **Instrument ready for the approved bounded diagnostic; live admission must still pass.** The owner directly approved the published [startup repair](../STARTUP-REPAIR.md). No independent researcher review is required or claimed.
+
+The preceding [Q0-A1 post-mortem](Q0-A1-POST.md) is complete. A1 made zero provider calls; its stopped ledger row and actual operational handoff remain. The proposed replacement is Q0-A2 only, using an append-only record. No nonzero or ambiguous previous reservation is eligible. All 162 request fixtures and labels remain unchanged; 88 local offline checks pass. Recheck the same suite on the committed remote source before admission.
+
+Q0-A2 assigns 12 source-only answerable controls and six full-context stale/conflict controls. It must return 18 valid, correct responses before D0 may be considered. Every assigned row, request, visible answer and cost is retained and reviewed. Incorrect answers do not disappear from qualification, and provider failure is separate from wrong interpretation. The first transport, route, schema, lease or budget failure stops dispatch. There is no automatic retry or replacement of A2.
+
+The source is one stateless Jev resolver with scripted ballots and inspected finite development inputs. There is no untouched holdout, empirical independent swarm or population inference. D0, if separately admitted after Q0 postreview, retains 12 authored cases nested within six families, six matched conditions and two identical-input repeats. The primary contrast, missingness bounds and decision rules remain frozen.
+
+Original authority remains USD1 API/USD1 infrastructure, at most 162 RD6 calls and 650 lifetime calls. Historical 488 calls and USD0.022699069 API exposure are retained. Released infrastructure estimate USD0.026925142 brings the cumulative infrastructure estimate to USD0.747173584. Reserve the full replacement allocation interval within the original USD0.827393442 committed-plus-reserved infrastructure ceiling. Both stages end no later than 20:40:02 UTC; each admission needs at least 31 minutes remaining.
+
+Live admission must bind direct owner approval, exact proposal/instrument/manifest, original ledger identity and zero-dispatch proof, actual latest A1 handoff, completed owning review, immutable public plan and condition TLDRs, approved-account exclusive allocation, source/runtime and encrypted transport. The supervisor must receive the exact remote startup acknowledgment before creating the local credential relay. Keys remain local and never enter actor inputs or reports.
+
+After execution, verify worker and relay stop, collect and hash-check the native bundle, reconcile every original-ledger reservation, review all 18 visible responses, run the shared offline finalize hook and complete the eleven-dimension owning post-mortem. Only an actual 18/18 pass with this review and fresh D0 admission can advance. Otherwise close the valid failure or operational stop and release the allocation.
