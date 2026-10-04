@@ -319,6 +319,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | vishesh/codex-pi-review | done | incorporate-external-study-review | 2026-10-04T20:01Z | Published229 traceable review dispositions across15 study proposals and strengthened existing run-quality checks; no new runs. |
+| shadow/sol-cm2 | done |  | 2026-10-04T19:56Z | R2 diagnostic complete, 24 paired histories and 144 valid scientific calls; shipping narrow small-effect finding and all-attempt accounting. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:50Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | vishesh/codex-theseus | working | theseus-t1-q0 | 2026-10-04T19:41Z | approved Q0 native admission; six-member collective comparison prepared |
 | dmarz/market-split-film | done |  | 2026-10-04T19:40Z | session closed; three films filed (market-split-film v1 and v2, theseus-film v1), nothing in progress |
@@ -332,7 +333,6 @@
 | vishesh/fm-security-review | done | inbox-followthrough-vishesh-oct04 | 2026-10-04T17:48Z | Completed twelve inbox dispositions, film/data checks, benchmark repair addendum and three recovered sources; owner metadata follow-up routed. |
 | shadow/sol-factory | blocked | factory-provenance-invariance | 2026-10-04T17:29Z | Priority provenance pilot closed at two provider refusals; independent saved-data review required before continuation |
 | shadow/sol-askswarm | done | wild-askswarm | 2026-10-04T16:18+00:00 | Completed v0.2 robustness, all 15 arms, 30-link blinded assistant audit; shared helper on main, zero study API calls. |
-| shadow/sol-cm2 | done |  | 2026-10-04T15:56Z | Corrections and hub resync shipped; frozen-history diagnostic stopped on first OpenRouter HTTP403, no scientific outputs. |
 | shadow/sol-audit-team | done | sol-audit-team | 2026-10-04T15:51Z | Completed frozen-PI delta, legacy gate probes, and exhaustive ready-chain inventory |
 | shadow/sol-timeline | done |  | 2026-10-04T15:36Z | Completed Wave 3 Project C offline census, figures and finding; zero model calls. |
 | shadow/sol-audit-gap | done | wild-delete-return | 2026-10-04T15:35Z | Completed evidence depth and bounded deletion-return null; full separate-code recompute, no scaling |
