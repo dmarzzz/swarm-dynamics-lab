@@ -3,7 +3,7 @@ id: run-market-split-api
 type: task
 title: Ship the neutral-agent market-splitting pilot
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/market-split
 for: dmarz
@@ -14,7 +14,12 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 claimed_at: 2026-10-04T02:08Z
-updated: 2026-10-04T06:48Z
+updated: 2026-10-04T06:58Z
+outputs:
+- researchers/dmarz/notes/market-split-api/RESULTS.md
+- researchers/dmarz/notes/market-split-api/reviews/s1-002-post.md
+- researchers/dmarz/notes/market-split-api/report/s1-002/closeout.json
+- researchers/dmarz/notes/market-split-haiku/NEXT-EXPERIMENT.md
 ---
 
 ## Goal
