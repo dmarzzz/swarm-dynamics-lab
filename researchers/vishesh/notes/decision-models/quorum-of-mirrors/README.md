@@ -92,3 +92,6 @@ From this directory, `python3 reassess_s0.py` regenerates the retrospective data
 ## Proposed realistic60-agent successor
 
 [Concrete R60 plan](realistic-sol60/PLAN.md), [case-quality audit](realistic-sol60/CASE-AUDIT.md), [cost envelope](realistic-sol60/budget-envelope.json). Independently published human labels replace self-generated verdicts; one/six/sixty-agent controls separate scale from peer influence. Prepared, not launched; no new native evidence.
+
+
+[Latest development baseline audit](realistic-sol60/DEVELOPMENT-BASELINE.md): six defensible supplied-evidence labels, one limited and one ambiguous among eight inspected controls; no demonstrated collaboration headroom. Paid R60 expansion remains parked/unfunded.

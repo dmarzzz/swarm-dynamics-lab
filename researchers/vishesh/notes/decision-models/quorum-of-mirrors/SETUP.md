@@ -1,3 +1,7 @@
+## Current: eight-case development audit complete; paid expansion parked
+
+[Baseline finding](realistic-sol60/DEVELOPMENT-BASELINE.md): eight inspected controls audited, six defensible against supplied QA evidence, one limited, one ambiguous. Answer cues and incomplete label support prevent a credible swarm-advantage baseline. Eight source/actor bindings verified;17 offline checks pass. No native model performance measured, no paid follow-up proposed, no new allocation or call. R60 remains unfunded. Quorum is a provisional direction, not a selected portfolio study. Any paid next stage requires a named funded PI decision and all admission gates; historical plan-owner-decision wording below is superseded by the current portfolio policy.
+
 ## PI advisory update — R60 still unrun
 
 [PI response](realistic-sol60/PI-RESPONSE.md):17 offline checks pass after nested actor/gold isolation and document-identity repairs. All29 unique development candidates are excluded from fresh use; metadata grouping also excludes linked records, without claiming event independence. Corpus support/semantic grouping and native runtime admission remain unresolved. Concrete owner approval of the six-claim qualification/conditional eight-cluster1/6/60-agent pilot remains pending; advisory PI feedback is not approval. No new call, charge, ledger change or machine allocation.

@@ -71,3 +71,8 @@ DECISION NEEDED on this concrete material successor: six-claim qualification fol
 ## PI advisory follow-up
 
 [Assessment and offline repairs](PI-RESPONSE.md): nested actor/gold fields now removed; semantic URL query identity preserved;29 development candidates and1,394 transitively connected rows excluded by a conservative metadata audit.17 offline checks pass. Metadata groups are not verified independent events. Packet-support/content and event-group audits, exact native fork runtime and admission still block launch. PI feedback supplies no owner approval; the concrete owner decision remains pending.
+
+
+## Portfolio priority: offline audit completed
+
+[Eight-case audit](DEVELOPMENT-BASELINE.md) finds no demonstrated baseline headroom warranting paid peer exchange. The R60 proposal remains historical and unfunded; no conditional pilot should start from its former study ceiling. Current disposition is PARK paid expansion pending a credible clean-case/baseline discriminator and a named funded PI decision under the aggregate portfolio policy.

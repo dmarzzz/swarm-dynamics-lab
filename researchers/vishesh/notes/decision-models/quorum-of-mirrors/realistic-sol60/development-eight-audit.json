@@ -1,0 +1,248 @@
+{
+  "status": "completed_offline_development_audit",
+  "assessor": "vishesh/codex-quorum-mirrors",
+  "source_revision": "7c62d1ec8df3fb560d6efe2b85fa191135636f81",
+  "source_sha256": "ae5eda7c42ddf1695ef185a7ba1bc716928f5adf57103e4f78aae5f9afe00f9c",
+  "native_calls": 0,
+  "new_paid_cost": 0,
+  "scope": "Eight already-inspected development controls only; no fresh holdout content opened",
+  "annotation_independence": "Published labels external; this semantic audit by owning agent, not independent reannotation",
+  "counts": {
+    "defensible": 6,
+    "limited": 1,
+    "ambiguous": 1
+  },
+  "baseline_performance_measured": false,
+  "exchange_headroom_demonstrated": false,
+  "cases": [
+    {
+      "source_index": 1359,
+      "case_id": "av-80b6b4d27012",
+      "published_label": "Supported",
+      "label_support": "defensible",
+      "mechanism": "Speech attribution, not industry profitability",
+      "evidence_refs": [
+        "e00"
+      ],
+      "support_assessment": "e00 answers the attributed-utterance question directly; its explanation supplies the debate context.",
+      "provenance_and_answer_cues": "The answer Yes already supplies the decisive annotation. A transcript URL is not a verified transcript quotation.",
+      "single_context_requirement": "Distinguish saying an amount from that amount being economically correct; ignore tax-windfall and projected-profit distractors.",
+      "exchange_headroom": "One decisive QA record; no evidence-distribution bottleneck.",
+      "evidence_records": 3,
+      "document_groups": [
+        [
+          "e00"
+        ],
+        [
+          "e01"
+        ],
+        [
+          "e02"
+        ]
+      ],
+      "actor_sha256": "865bffc8d4e1d1b0ef646c298c67899e7a4c8b0b002384f2180967095b259752",
+      "original_label_changed": false
+    },
+    {
+      "source_index": 814,
+      "case_id": "av-76ba652cbd2e",
+      "published_label": "Supported",
+      "label_support": "defensible",
+      "mechanism": "As-of date and numeric threshold",
+      "evidence_refs": [
+        "e01"
+      ],
+      "support_assessment": "e01 repeats the whole claim directly. e00 uses >=2 rather than >2; e02 is later and internally inconsistent about above-threshold places.",
+      "provenance_and_answer_cues": "Original URL path repeats the count/threshold; removing paths fixes that shortcut but not the claim restatement in the answer.",
+      "single_context_requirement": "Use dated evidence and flag threshold/date mismatch rather than tally three agreeing sources.",
+      "exchange_headroom": "Direct supplied answer can solve this packet; extracting a real daily-price table would be a different case.",
+      "evidence_records": 3,
+      "document_groups": [
+        [
+          "e00"
+        ],
+        [
+          "e01"
+        ],
+        [
+          "e02"
+        ]
+      ],
+      "actor_sha256": "99957a87fa61a2a8176533c4cf253aef778f729e97a315e61ec96b046c3b11fc",
+      "original_label_changed": false
+    },
+    {
+      "source_index": 2809,
+      "case_id": "av-2d87bf8c9d80",
+      "published_label": "Supported",
+      "label_support": "defensible",
+      "mechanism": "Natural versus applied coating",
+      "evidence_refs": [
+        "e02",
+        "e03"
+      ],
+      "support_assessment": "e02 explains washing/removal; e03 explains subsequent application before sale. e00 alone does not establish the shop stage.",
+      "provenance_and_answer_cues": "URL topic hints at waxing; the QA answers explicitly contain the required transition. Four records belong to one document.",
+      "single_context_requirement": "Compose wash/remove then coat/sell without treating the negative natural-wax answer as a negative applied-wax answer.",
+      "exchange_headroom": "Useful semantic control, but all necessary distinctions fit in one short context.",
+      "evidence_records": 4,
+      "document_groups": [
+        [
+          "e00",
+          "e01",
+          "e02",
+          "e03"
+        ]
+      ],
+      "actor_sha256": "7c02db3482683953e704c5c8eb432864927a9fac314f5f35080f13a7e1e03bb1",
+      "original_label_changed": false
+    },
+    {
+      "source_index": 1932,
+      "case_id": "av-01a0123885eb",
+      "published_label": "Refuted",
+      "label_support": "limited",
+      "mechanism": "Specific causal allegation versus documented medical account",
+      "evidence_refs": [
+        "e01",
+        "e02"
+      ],
+      "support_assessment": "e02 supplies an alternative medical account; e01 supplies a negative reputation description. Neither gives a complete investigation of the specific allegation.",
+      "provenance_and_answer_cues": "The claim URL echoes the accusation, not the correct verdict. Source-reputation text is a strong answer cue but not decisive factual refutation.",
+      "single_context_requirement": "Separate source credibility, lack of support and positive disproof; permit uncertainty rather than penalize it against an under-supported hard label.",
+      "exchange_headroom": "Do not use as a strict four-label native scorer without clearer causal evidence; no relabeling performed.",
+      "evidence_records": 3,
+      "document_groups": [
+        [
+          "e00"
+        ],
+        [
+          "e01"
+        ],
+        [
+          "e02"
+        ]
+      ],
+      "actor_sha256": "d25808e1416ec839558f8d413dcda94a00d302ef522b080ce30fdc7dcdc8cf9f",
+      "original_label_changed": false
+    },
+    {
+      "source_index": 1758,
+      "case_id": "av-3404e567432e",
+      "published_label": "Refuted",
+      "label_support": "defensible",
+      "mechanism": "Quotation versus evaluative interpretation",
+      "evidence_refs": [
+        "e00",
+        "e02"
+      ],
+      "support_assessment": "e00 contains the attributed tweet without a ranking of groups; e02 explicitly declares the claim disconnected from that tweet. This supports refuting the interpretation of that identified tweet, not exhaustive proof of every utterance.",
+      "provenance_and_answer_cues": "e02 includes the annotator conclusion inside actor-visible evidence. The claim URL repeats the accusation; it does not independently validate it.",
+      "single_context_requirement": "Compare quoted content to claimed comparative judgment, scoped to the identified source.",
+      "exchange_headroom": "Direct conclusion leakage limits diagnostic value; removing it would create a new packet needing label-support review.",
+      "evidence_records": 4,
+      "document_groups": [
+        [
+          "e00",
+          "e02"
+        ],
+        [
+          "e01"
+        ],
+        [
+          "e03"
+        ]
+      ],
+      "actor_sha256": "c035239ff2c1e65cdfbda5912958635d92a83efb58cee01e41670db097ef6c87",
+      "original_label_changed": false
+    },
+    {
+      "source_index": 714,
+      "case_id": "av-c66bbe9d118f",
+      "published_label": "Not Enough Evidence",
+      "label_support": "defensible",
+      "mechanism": "Counting heterogeneous institution categories",
+      "evidence_refs": [
+        "e01",
+        "e02",
+        "e03"
+      ],
+      "support_assessment": "e01 gives a count without establishing exhaustive scope; e02 adds other categories and e03 explicitly says the intended category is unspecified. The list is visibly truncated.",
+      "provenance_and_answer_cues": "A URL path repeats the claimed69 even though gold is insufficient evidence. The unknown-category QA explicitly cues abstention.",
+      "single_context_requirement": "Check definition, scope and list completeness before substituting41 for69 or counting listed names.",
+      "exchange_headroom": "A useful abstention control; additional agents cannot supply absent category definitions from the same packet.",
+      "evidence_records": 4,
+      "document_groups": [
+        [
+          "e00"
+        ],
+        [
+          "e01"
+        ],
+        [
+          "e02"
+        ],
+        [
+          "e03"
+        ]
+      ],
+      "actor_sha256": "f3d360f71ebaac9f6649ba4b8eb9b7af352a4990107a0d102e8115f8fa0ede2f",
+      "original_label_changed": false
+    },
+    {
+      "source_index": 1244,
+      "case_id": "av-aedec0d0ca66",
+      "published_label": "Not Enough Evidence",
+      "label_support": "defensible",
+      "mechanism": "Planned versus completed and unresolved total",
+      "evidence_refs": [
+        "e03"
+      ],
+      "support_assessment": "e03 separates planning/construction/completion and explicitly says its computed total is difficult to verify. Missing baseline and date alignment prevent reconstructing the claim totals.",
+      "provenance_and_answer_cues": "No obvious verdict in source paths; the uncertainty verdict is already stated in the answer text.",
+      "single_context_requirement": "Keep status counts separate, require a reconciliation baseline, and abstain rather than invent how188 becomes975.",
+      "exchange_headroom": "A useful missing-data control, not proof exchange resolves the missing reconciliation.",
+      "evidence_records": 4,
+      "document_groups": [
+        [
+          "e00",
+          "e01"
+        ],
+        [
+          "e02",
+          "e03"
+        ]
+      ],
+      "actor_sha256": "cac64fc91b48ab2ddfd34cc1eaad4357edc9c5eb797ac7c77185d8778bc4b2ee",
+      "original_label_changed": false
+    },
+    {
+      "source_index": 1955,
+      "case_id": "av-b53a7292b38e",
+      "published_label": "Conflicting Evidence/Cherrypicking",
+      "label_support": "ambiguous",
+      "mechanism": "Version and quantifier of legislative opposition",
+      "evidence_refs": [
+        "e01"
+      ],
+      "support_assessment": "e01 states that all but eight Republican senators opposed the final bill while an earlier version had broad support. The claim gives no version or universal quantifier; Supported is also reasonable for final-version opposition.",
+      "provenance_and_answer_cues": "Legislative URLs identify versions/votes, not verdicts. Narrative commentary is attributed to primary-source URLs without source-text verification.",
+      "single_context_requirement": "Disambiguate bill version, chamber, date and whether Republicans means some/most/all; do not force a unique gold label before that is specified.",
+      "exchange_headroom": "Quarantine from exact-label scoring; preserve the published conflicting label and record the alternative reading.",
+      "evidence_records": 3,
+      "document_groups": [
+        [
+          "e00"
+        ],
+        [
+          "e01"
+        ],
+        [
+          "e02"
+        ]
+      ],
+      "actor_sha256": "1da1c1fba1b94133d95c47ce5f48b90bff076ccd68d53fb9894c7afc660c9e2b",
+      "original_label_changed": false
+    }
+  ]
+}

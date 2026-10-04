@@ -93,3 +93,8 @@ Prepared concrete1/6/60 GPT-6 Sol comparison with shared-checkpoint exchange/pri
 ## Advisory PI follow-up
 
 Fixed nested actor/gold leakage and URL query identity in offline R60 preparation.17 checks pass; conservative full-source metadata grouping excludes29 development candidates and1,394 linked rows. Shared generic pages cause large components; semantic event independence and packet support remain unproven. PI response preserves concrete owner-decision requirement, all comparison controls and feasibility-only interpretation. No calls/spend/allocation.
+
+
+## Zero-paid-cost development baseline audit
+
+Audited the eight previously retained external-label controls:6 defensible for supplied-evidence synthesis,1 limited,1 ambiguous. Several actor QA answers already disclose the decisive interpretation; provenance isolation alone does not remove semantic answer cues. Original labels retained.8 source/actor bindings verified and17 checks pass. No baseline performance invented and no economic exchange trial proposed without observed headroom. Recommend parking paid expansion; R60 remains unfunded. No disclosure of blocked internal spending details to another task.
