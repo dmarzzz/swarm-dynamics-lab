@@ -9,5 +9,7 @@ max_calls: {S0: 0, P0: 1, Q0: 23, S1: 576}
 max_calls_total: 600
 usd_cap: 2
 chain_timeout_seconds: 7800
-selftests: 85
-source_hash: b4ab9025e2288c7c7f652e7d210371ab7818022acc1ee155801e4300b5044ba3
+selftests: 88
+source_hash: 10f51d2c5d2023fc82df57b2c26173c32aceae1fca4e443971b2686d9a019689
+review: reviews/chain-002-pre.md
+ledger: fresh
