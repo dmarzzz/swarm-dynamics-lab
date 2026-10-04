@@ -41,3 +41,8 @@ Executed the frozen Q0 on existing approved team allocation under scoped direct-
 ## Offline execution repair
 
 Published D1 latency plan before implementation. Separate versioned worker records durable phases; supervisor retains private streams on timeout/signal, sanitizes public diagnostics and cleans its process group.13fake-process/engine tests pass; original Q0 source/results unchanged. Concrete proposal:3reused receipt units,2cold repetitions max,6calls total,45s eligibility/90s diagnostic ceiling,first slow/error stop,zeroincrementalcharge. No OCR/model call or allocation made. Await owner decision on changed D1 scope before native integration/launch.
+
+
+## Approved D1 native diagnostic
+
+Published1dea9b40 and ran exact D1 after public page/runtime/allocation checks.3valid calls;third46.25s triggered prespecified stop,3unstarted. Imports4.37s/init4.07s/OCR36.63s;candidate abstained on quantity-containing total row. All3output/phase/stream traces retained/hash-audited;native5artifact readback matched. Host released and next holder notified. Zero hosted calls/new charges;qualification remains closed. Operational finalize plus full scientific post-mortem;no automatic successor.

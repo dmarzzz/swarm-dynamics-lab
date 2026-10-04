@@ -1,0 +1,20 @@
+{
+  "attempt": "D1-latency-attempt-1",
+  "execution": "completed_prespecified_stop",
+  "latency_eligibility": "not_met",
+  "qualification": "not_attempted_remains_closed",
+  "scientific_result": "valid_adverse_execution_diagnostic",
+  "started": 3,
+  "valid": 3,
+  "failed": 0,
+  "unstarted": 3,
+  "unresolved_started": 0,
+  "new_charge_usd": 0,
+  "model_calls": 0,
+  "historical_exposure": "unchanged, no new allowance",
+  "workers_stopped_verified_utc": "2026-10-04T18:09:45.994211+00:00",
+  "allocation": "released",
+  "artifact_readback": "five original files match SHA256",
+  "private_trace_backup": "complete",
+  "automatic_successor": false
+}

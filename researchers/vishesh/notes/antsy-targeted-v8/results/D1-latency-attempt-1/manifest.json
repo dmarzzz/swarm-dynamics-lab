@@ -1,0 +1,17 @@
+{
+  "attempt": "D1-latency-attempt-1",
+  "source": "1dea9b40971fa1b666ab31930ce4cd0d523f22fd",
+  "runtime_sha256": "fc3c16f6d8c66edf5feaa79001f9778b3553cb4b9703b2cfb6272c9ce420b615",
+  "input_sha256": {
+    "60": "1a091c3da858f283e92409cdff13cfec01a3e319e8ca54d9d6aa653c8866c31b",
+    "61": "e705c2bb9388948d58f6cd301f793a475624f2781c1f64cc308cdbcc65029160",
+    "62": "3dfba6b1e12cb68df13a674240d245c87c228fce6883cfc2a3a9b36c9651e0aa"
+  },
+  "documents": {
+    "PLAN.md": "625d6ff85f9f54e9d4ccd266c471fa4aa08442e61f37e378fc35ef5b1edee559",
+    "D1-PRE.md": "0396f76ad6f79f91f2f5252ea8ad8d4ecdcce23f8c743c905c63fea461f31b0a"
+  },
+  "started_at": 1791137218.0477328,
+  "complete": true,
+  "wall_s": 86.94356608390808
+}

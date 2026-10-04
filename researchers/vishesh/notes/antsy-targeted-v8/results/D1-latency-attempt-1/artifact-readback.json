@@ -1,0 +1,35 @@
+{
+  "verified_at": "2026-10-04T18:09:45.994211+00:00",
+  "active_worker_pids": [],
+  "artifacts": [
+    {
+      "name": "final_frame.png",
+      "sha256": "37370d75e39a505b7bb58074cf08f9cc249cef0b33ed61c277d5c55a991e1ee4",
+      "match": true
+    },
+    {
+      "name": "manifest.json",
+      "sha256": "e143a9add8334fdb11437c41fe15b0025bf12e0fc265541f7eca2d95c369e72d",
+      "match": true
+    },
+    {
+      "name": "records.json",
+      "sha256": "263730a7051177dd1b6f7f7d00b6cbd76078cf026ab7600663a7c496be403148",
+      "match": true
+    },
+    {
+      "name": "reservation.json",
+      "sha256": "e480e1c26ea48df20222ea312fcd66bcd4b7f3c1fb2ca0d9f9c238185661ca23",
+      "match": true
+    },
+    {
+      "name": "summary.json",
+      "sha256": "574ab1da1fd3b28176635ff7d66448ac5f22f7aafa1b1c85b01b6ad2413504f2",
+      "match": true
+    }
+  ],
+  "all_match": true,
+  "hub_status": [
+    "done"
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "scope": "Same-author saved-output audit, no OCR rerun; repeated receipts are not independent units",
+  "rows": [
+    {
+      "seq": 1,
+      "receipt": 60,
+      "status": "valid",
+      "category": "ok",
+      "wall_s": 22.25449915599893,
+      "latency_eligible": true,
+      "last_phase": "output_end",
+      "phase_durations_s": {
+        "imports": 4.425854756998888,
+        "reader_init": 4.345277453001472,
+        "ocr": 12.263293582000188,
+        "extract": 0.003804248000960797,
+        "output": 0.00390150800376432
+      },
+      "raw_output_retained": true,
+      "candidate": {
+        "status": "ok",
+        "value": "161000.00",
+        "evidence": [
+          {
+            "value": "161000.00",
+            "region_hash": "3e02738eb91712fa52b0a30319371db42f514851e6beca040431163056a1df63",
+            "observation_hash": "a335e0bc1753671670c302b9776e779c569428484fcfe0d0b37a30c5fb6de1fc"
+          }
+        ],
+        "reasons": [],
+        "contract": "anchor-row-v2"
+      },
+      "parser_replay_match": true,
+      "word_count": 16
+    },
+    {
+      "seq": 2,
+      "receipt": 61,
+      "status": "valid",
+      "category": "ok",
+      "wall_s": 18.339270557997224,
+      "latency_eligible": true,
+      "last_phase": "output_end",
+      "phase_durations_s": {
+        "imports": 4.3151890150038525,
+        "reader_init": 3.8804587030026596,
+        "ocr": 9.02440935800405,
+        "extract": 0.003138340005534701,
+        "output": 0.006202021999342833
+      },
+      "raw_output_retained": true,
+      "candidate": {
+        "status": "ok",
+        "value": "17000.00",
+        "evidence": [
+          {
+            "value": "17000.00",
+            "region_hash": "23e4bd3ad67efe97e07e64a80b11d3deed4d662ea5ff02bc59833937147f94d3",
+            "observation_hash": "a755dfda0fb480928a799a7b556f39a09e0483be7fa3a6c7026994e03236b9be"
+          }
+        ],
+        "reasons": [
+          "excluded_context"
+        ],
+        "contract": "anchor-row-v2"
+      },
+      "parser_replay_match": true,
+      "word_count": 11
+    },
+    {
+      "seq": 3,
+      "receipt": 62,
+      "status": "valid",
+      "category": "ok",
+      "wall_s": 46.2499375970001,
+      "latency_eligible": false,
+      "last_phase": "output_end",
+      "phase_durations_s": {
+        "imports": 4.371557878999738,
+        "reader_init": 4.073633692001749,
+        "ocr": 36.62893698800326,
+        "extract": 0.002607094000268262,
+        "output": 0.004944476000673603
+      },
+      "raw_output_retained": true,
+      "candidate": {
+        "status": "missing",
+        "value": null,
+        "evidence": [],
+        "reasons": [
+          "excluded_context"
+        ],
+        "contract": "anchor-row-v2"
+      },
+      "parser_replay_match": true,
+      "word_count": 54
+    },
+    {
+      "seq": 4,
+      "receipt": 60,
+      "status": "unstarted"
+    },
+    {
+      "seq": 5,
+      "receipt": 61,
+      "status": "unstarted"
+    },
+    {
+      "seq": 6,
+      "receipt": 62,
+      "status": "unstarted"
+    }
+  ],
+  "started": 3,
+  "unstarted": 3,
+  "unresolved_started": 0,
+  "distinct_receipts_observed": 3,
+  "all_retained_stream_phase_output_hashes_match": true,
+  "native_source": "1dea9b40971fa1b666ab31930ce4cd0d523f22fd"
+}

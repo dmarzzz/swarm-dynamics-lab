@@ -41,3 +41,8 @@ The frozen Q0 ran on the existing team fleet after verified admission and runtim
 ## Offline repair prepared
 
 [Execution repair v1](execution-repair-v1/README.md) adds durable phases and private timeout streams, with13passing offline fault tests. The [concrete six-call D1 proposal](execution-repair-v1/PLAN.md) awaits owner approval. This is not a native rerun or a claim that the checker is faster.
+
+
+## Latest: D1 latency diagnostic completed
+
+[D1 post-mortem](reviews/D1-latency-attempt-1-post.md):3valid calls,3unstarted after the larger receipt took46.25s. Its36.63s OCR phase dominated;the resulting candidate still abstained. The45s requirement was not relaxed;qualification remains closed. Full traces retained;no new charges;host released. [Native phase plot](results/D1-latency-attempt-1/final_frame.png).

@@ -1,0 +1,190 @@
+{
+  "attempt": "D1-latency-attempt-1",
+  "assessed_at": "2026-10-04",
+  "assessor": "vishesh/codex-methods",
+  "same_author": true,
+  "execution_source": "1dea9b40971fa1b666ab31930ce4cd0d523f22fd",
+  "decision": "complete_valid_result",
+  "scope": "Finish this adverse latency diagnostic; qualification remains closed; no successor authorized.",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Narrow latency localization and stop/park decision specified prospectively; no efficacy claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/execution-repair-v1/PLAN.md",
+          "sha256": "625d6ff85f9f54e9d4ccd266c471fa4aa08442e61f37e378fc35ef5b1edee559"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/execution-repair-v1/D1-PRE.md",
+          "sha256": "0396f76ad6f79f91f2f5252ea8ad8d4ecdcce23f8c743c905c63fea461f31b0a"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Three explicitly reused real receipts include the previously slow larger image; size/content confounding and nonpopulation scope retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/audit.json",
+          "sha256": "1e9f8b342beee113a263df85c59baea8bd728d0e490c352371f81aff9737ce7d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/manifest.json",
+          "sha256": "e143a9add8334fdb11437c41fe15b0025bf12e0fc265541f7eca2d95c369e72d"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Same pixels, parser, runtime and cold process contract; comparison is the45s eligibility requirement, not a randomized speed or swarm effect.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/manifest.json",
+          "sha256": "e143a9add8334fdb11437c41fe15b0025bf12e0fc265541f7eca2d95c369e72d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/execution-repair-v1/worker.py",
+          "sha256": "242de047cadb674967150f73bc2833770a63319d20680f50c82714c23b8c0262"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "All three outputs valid, but train62 needs46.25s and abstains; the cold45s service is not qualified.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/records.json",
+          "sha256": "263730a7051177dd1b6f7f7d00b6cbd76078cf026ab7600663a7c496be403148"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/summary.json",
+          "sha256": "574ab1da1fd3b28176635ff7d66448ac5f22f7aafa1b1c85b01b6ad2413504f2"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/field-trace.json",
+          "sha256": "139fc9e4dbe9ea7f6af454991fe2c72a1b0ecc3f3761a0926d218d0145862995"
+        }
+      ],
+      "next_action": "Park the current cold checker or prepare a field-coverage and execution-contract proposal from saved development evidence before owner review.",
+      "acceptance_check": "Any future qualification needs an explicitly approved instrument, independently justified labels/cases, full reconciliation and unchanged scientific competence thresholds; D1 itself cannot qualify it."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All completed phase intervals and wall times retained, hash-checked and replayed. Missing/unstarted calls are explicit; no efficacy score or error correlation fabricated.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/audit.json",
+          "sha256": "1e9f8b342beee113a263df85c59baea8bd728d0e490c352371f81aff9737ce7d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/records.json",
+          "sha256": "263730a7051177dd1b6f7f7d00b6cbd76078cf026ab7600663a7c496be403148"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Three planned development receipt units, six maximum repeated calls, three observed once. Appropriate only for a bounded trace diagnostic; no precision or repeatability claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/audit.json",
+          "sha256": "1e9f8b342beee113a263df85c59baea8bd728d0e490c352371f81aff9737ce7d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/execution-repair-v1/PLAN.md",
+          "sha256": "625d6ff85f9f54e9d4ccd266c471fa4aa08442e61f37e378fc35ef5b1edee559"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Pixel-only checker in fresh subprocess; fixed package/model/parser settings; no peer output, evaluator labels or operator memory.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/execution-repair-v1/worker.py",
+          "sha256": "242de047cadb674967150f73bc2833770a63319d20680f50c82714c23b8c0262"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/execution-repair-v1/capture.py",
+          "sha256": "ca1c311752a3cf57922b054057d7c41bccf3a81ef685fa5d361e5dab2121a2b9"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/manifest.json",
+          "sha256": "e143a9add8334fdb11437c41fe15b0025bf12e0fc265541f7eca2d95c369e72d"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Three valid starts and three unstarted cells; no unresolved start. All raw-output, stream and phase hashes match; three candidates replay unchanged.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/audit.json",
+          "sha256": "1e9f8b342beee113a263df85c59baea8bd728d0e490c352371f81aff9737ce7d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/artifact-readback.json",
+          "sha256": "e38bc062aaa23f0437a76265b26d37878be948ec2c42086b5211750e8fdb16d4"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Zero hosted calls or new charges, at most one child, first slow-call stop; release after stopped workers, backup and artifact readback. Historical exposure unchanged.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/reservation.json",
+          "sha256": "e480e1c26ea48df20222ea312fcd66bcd4b7f3c1fb2ca0d9f9c238185661ca23"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/closeout.json",
+          "sha256": "7b752806567dd3b820ebb2df46e43053cd01ef046bc55c83a6dcbf93f27983bd"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source, Q0 input/runtime hashes, complete retained phases and privately preserved raw outputs support scoped replay. Timing is not claimed deterministic.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/manifest.json",
+          "sha256": "e143a9add8334fdb11437c41fe15b0025bf12e0fc265541f7eca2d95c369e72d"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/audit.json",
+          "sha256": "1e9f8b342beee113a263df85c59baea8bd728d0e490c352371f81aff9737ce7d"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Native plot shows actual phase spans and3unstarted. Wall labels include extra overhead; reporting-only correction restores3/6 dashboard accounting.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/reviews/D1-latency-attempt-1-post.md",
+          "sha256": "28138ede1bd115b7f970240fc2e6d77a6522c6169c7f56e3f063ade072e7fe8f"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/final_frame.png",
+          "sha256": "37370d75e39a505b7bb58074cf08f9cc249cef0b33ed61c277d5c55a991e1ee4"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/summary.json",
+          "sha256": "574ab1da1fd3b28176635ff7d66448ac5f22f7aafa1b1c85b01b6ad2413504f2"
+        }
+      ]
+    }
+  ]
+}

@@ -151,11 +151,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/antsy-targeted-v8",
       "setup_path": "researchers/vishesh/notes/antsy-targeted-v8/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/antsy-targeted-v8/reviews/Q0-attempt-1-post.md",
+      "postmortem_path": "researchers/vishesh/notes/antsy-targeted-v8/reviews/D1-latency-attempt-1-post.md",
       "adapter": null,
       "checked_at": "2026-10-04T14:31:29.036370+00:00",
       "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
-      "next_action": "Q0-attempt-1 closed: checker timeout,6starts/5valid/1timeout/34unstarted; qualification incomplete; allocation released. Read native post-mortem and quality assessment. Prepare trace-preserving offline repairs and a concrete owner-reviewed changed execution plan; no automatic retry or S1.",
+      "next_action": "D1 completed valid adverse diagnostic:3valid/3unstarted;46.25s slow call dominated by36.63s OCR and still abstained. Full traces audited;host released;zero new charge. Finish/park current cold checker;qualification closed. Any successor requires a justified field-coverage/runtime proposal and owner approval; no automatic calls.",
       "next_run_approval": "owner"
     },
     {

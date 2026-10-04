@@ -1,0 +1,15 @@
+{
+  "scope": "Saved-output diagnosis; no relabeling or additional OCR.",
+  "receipt": 62,
+  "checker_candidate": "missing",
+  "reason": "excluded_context",
+  "anchor": "Total",
+  "exclusion_class": "Qty",
+  "numeric_tokens": [
+    "1",
+    "3.600. 000"
+  ],
+  "row_word_count": 4,
+  "row_sha256": "6ec4f07bb13de81583628c3eae69ab78a11084d8d86f5947605969555b28302a",
+  "interpretation": "The shared parser rejected a quantity-containing row with multiple numeric tokens. This establishes its behavior, not whether relaxed acceptance would be correct; no new reference label was attached in this latency diagnostic."
+}

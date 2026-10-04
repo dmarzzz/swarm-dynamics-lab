@@ -1,0 +1,16 @@
+{
+  "attempt": "D1-latency-attempt-1",
+  "max_ocr_calls": 6,
+  "max_model_calls": 0,
+  "new_charge_cap_usd": 0,
+  "historical_exposure": "unchanged",
+  "order": [
+    60,
+    61,
+    62,
+    60,
+    61,
+    62
+  ],
+  "reserved_before_dispatch": true
+}

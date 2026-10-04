@@ -1,0 +1,16 @@
+{
+  "assigned": 6,
+  "receipt_units_planned": 3,
+  "started": 3,
+  "valid": 3,
+  "failed": 0,
+  "latency_eligible": 2,
+  "unstarted": 3,
+  "stop_reason": "over_45s",
+  "complete": false,
+  "diagnostic_within_limit": false,
+  "qualification_passed": false,
+  "hosted_model_calls": 0,
+  "new_charge_usd": 0,
+  "automatic_successor": false
+}

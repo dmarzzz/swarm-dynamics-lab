@@ -69,3 +69,10 @@ G2: offline telemetry, timeout retention and cleanup checks pass; native latency
 ## D1 approved launch preparation
 
 Owner approved the published six-call D1 diagnostic, unchanged scope. Follow [D1-PRE](execution-repair-v1/D1-PRE.md);17offline tests pass. G3 is current host/runtime/public-page verification, not another owner decision. Only D1-latency-attempt-1 may run: six cold calls max, first slow/error stop, zero incremental charge, no qualification or S1.
+
+
+## D1 native closeout — current status
+
+**FINISH diagnostic / keep qualification closed.** D1-latency-attempt-1 at1dea9b40 started3of6calls;all3valid,third46.25s exceeded45s;3unstarted,0execution failures,0unresolved starts. Full phase/stream traces retained and hash-audited. Slow call:OCR36.63s,imports4.37s,initialization4.07s;candidate abstained. No efficacy or fresh-qualification claim. See [post-mortem](reviews/D1-latency-attempt-1-post.md), [quality assessment](reviews/D1-latency-attempt-1-quality.json), [audit](results/D1-latency-attempt-1/audit.json).
+
+G3/G4: owner-approved diagnostic executed within admitted bounds; original qualification remains closed. G5: private traces backed up,5original hub artifacts hash-readback verified,workers stopped,claim released;zero new charge and original cumulative exposure unchanged. No successor. Any changed warm-reader/extraction comparison needs a justified concrete plan and separate owner approval.
