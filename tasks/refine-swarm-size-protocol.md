@@ -3,7 +3,7 @@ id: refine-swarm-size-protocol
 type: task
 title: Refine swarm-size coordination and policy evaluation design
 kind: synthesis
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-idea-scores
 for: vishesh
@@ -12,7 +12,11 @@ created_by: vishesh/codex-idea-scores
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T02:49Z
-updated: 2026-10-04T02:49Z
+updated: 2026-10-04T02:51Z
+outputs:
+- researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md
+- researchers/vishesh/notes/optimal-swarm-size/README.md
+- researchers/vishesh/notes/optimal-swarm-size/design.json
 ---
 
 ## Goal
