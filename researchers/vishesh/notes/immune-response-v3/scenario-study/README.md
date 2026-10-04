@@ -6,6 +6,10 @@ The service is down. Yesterday's recovery note says to roll back everything. Tod
 
 This is an exploratory executable incident exercise, not a production deployment, accepted hypothesis, incident recreation or demonstration of autonomous immunity. Earlier ledger results remain preserved. Their twelve records were facts, not twelve realistic tasks. This scenario pilot prospectively replaces the not-yet-run task-6700 qualification; the owner's additional USD 8 authorization covers this bounded pilot and any separately documented repair, not USD 8 per retry.
 
+## Results and disposition
+
+[Full assessment and bad-decision analysis](ASSESSMENT.md) reports all three native attempts. The redesigned team preserved a healthy system but often failed to repair an unhealthy one; removing reviewers improved incident recovery but harmed the healthy control. Neither architecture establishes robust immunity. The deterministic contract solver remains the reliable baseline for this fully specified exercise. Total native API cost was USD 0.441259, with 240 calls and no response/provider failures. [Execution record and public runs](EXECUTION.md) links failed and completed attempts. No holdout was opened.
+
 ## Dated amendment: scenario a2
 
 A1 (runtime 18fcd22) finished all 12 episodes and 108 calls with no invalid responses for USD 0.169049, but failed the healthy-system control. It remains in NATIVE-A1-RESULTS.json and its public run. Native explanations repeatedly conflated feature number, data format and RPC version, sometimes contradicting live checks. This is observed decision error; representation/prompt causation is an inference, not proven by those explanations.

@@ -1,0 +1,42 @@
+{
+  "assigned": 4,
+  "recorded": 4,
+  "invalid": 0,
+  "api_calls": 24,
+  "actual_usd": 0.05078800000000001,
+  "usage_missing": 0,
+  "means": {
+    "stale_advice": {
+      "retain": {
+        "healthy_ticks": 5.0,
+        "unsafe_changes": 0.0,
+        "deployments": 1.0,
+        "final_healthy": 1.0
+      }
+    },
+    "migrated_data": {
+      "retain": {
+        "healthy_ticks": 5.0,
+        "unsafe_changes": 0.0,
+        "deployments": 2.0,
+        "final_healthy": 1.0
+      }
+    },
+    "false_alarm": {
+      "retain": {
+        "healthy_ticks": 3.0,
+        "unsafe_changes": 1.0,
+        "deployments": 4.0,
+        "final_healthy": 1.0
+      }
+    },
+    "registry_partition": {
+      "retain": {
+        "healthy_ticks": 5.0,
+        "unsafe_changes": 0.0,
+        "deployments": 1.0,
+        "final_healthy": 1.0
+      }
+    }
+  }
+}

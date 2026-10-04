@@ -1,5 +1,7 @@
 # Swarm of Theseus — exploratory results
 
+Interpretation update, 2026-10-04: [critical review](redesign/REVIEW.md) recommends retaining this as a supplied-procedure transmission baseline, not scaling it as evidence of emergent culture. Original measurements and analyses below are unchanged.
+
 **Useful procedures survived complete replacement in this pilot.** In the six paired synthetic worlds, both inherited notes and notes plus mentoring reached 100% collective task accuracy after every founder had left. Neither channel reached 52.08%. This supports a narrow feasibility result for seeded procedures in this scaffold, not a general claim about spontaneous culture.
 
 Main source: `a773ff5410442fcf351cfc817550b3fc92a88994`. Candidate SOC-24 remains an unreviewed hunch; formal survey/hypothesis gates and S2 remain closed. [Prospective plan](https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/README.md) · [Live experiment](https://swarm-live.pages.dev/#/x/swarm-of-theseus).

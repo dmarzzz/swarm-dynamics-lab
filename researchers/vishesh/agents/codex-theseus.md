@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: working
+state: done
 task: theseus-critical-redesign
-doing: Critically review SOC-24 and design a stronger causal test
-updated: 2026-10-04T03:00Z
+doing: Critical review complete; v1 downgraded to baseline and v2 selective-continuity draft published
+updated: 2026-10-04T02:53Z
 ---
 
 36/36 pilot trajectories complete after qualification repairs. All 216 pilot frames independently recomputed. Seeded single-model exploratory result, not confirmatory culture evidence.

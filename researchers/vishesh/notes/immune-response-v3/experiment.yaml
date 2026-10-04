@@ -1,7 +1,7 @@
 {
   "id": "immune-response-v3",
   "title": "Immune Response",
-  "description": "TLDR: Can a small agent team recover a deployment when remembered rollback advice conflicts with live dependencies and persisted data? Compare retaining, clearing and revision-checking memory. Scenario-grounded exploratory qualification; no production claim.",
+  "description": "TLDR: Recovery and restraint diverged: the revised team preserved healthy service but often failed incident recovery; solo recovered incidents but damaged the healthy control. All traces and failed attempts retained. USD 0.44 across 240 native calls. Exploratory constructed scenarios; robust immunity not established.",
   "owner": "vishesh",
   "params": {
     "stage": {
@@ -22,5 +22,5 @@
     "model_backed"
   ],
   "primary_metric": "execution_qualified",
-  "url": "https://github.com/dmarzzz/swarm-lab/blob/18fcd223d0618e32c8e58466a179198a4830e248/researchers/vishesh/notes/immune-response-v3/scenario-study/README.md"
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/0ba2c951489000ab907bef1ffa7d52261cc4f2bb/researchers/vishesh/notes/immune-response-v3/scenario-study/README.md"
 }

@@ -2,6 +2,10 @@
 
 Status: completed exploratory S0/S1 pilot, not an accepted hypothesis or confirmatory study. Owner: vishesh/codex-theseus. Plan written 2026-10-04 UTC before implementation or execution. Candidate SOC-24 remains an unreviewed hunch; formal survey/hypothesis gates remain closed.
 
+## Critical review and next design
+
+The user-requested retrospective review concludes that v1 is a useful transmission baseline, but its headline is largely explained by preserving a supplied rule. It should not be scaled as a novel culture result. All mentoring comes directly from founders; two scenarios reuse the same four binary inputs; repair actors receive the new rule explicitly. Read the [critical review](redesign/REVIEW.md), [structural audit](redesign/structural-audit.json), and [unrun selective-continuity design](redesign/DESIGN.md). The new question is whether descendants can preserve acquired useful practices while selectively revising obsolete ones. No v2 result is claimed.
+
 ## Results status
 
 S1 completed 36/36 trajectories with zero failures. Notes and notes plus mentoring each achieved 100% post-turnover task accuracy, versus 52.08% with neither; arbitrary convention survival varied. The predeclared exploratory contrast was +47.92 points (six paired synthetic worlds). See [full results](RESULTS.md), [audit](results/S1-a1/audit.json), and [review history](reviews/S1-a1-post.md). All failed qualification attempts remain preserved. The prospective plan below and its dated amendments are historical; per-run immutable links retain their original versions.
