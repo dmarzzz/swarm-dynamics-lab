@@ -260,6 +260,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T09:25Z | sybil-split-opus: code pushed (53 selftests, offline S0 1853/1853); running the local rehearsal, then runbook, READY.yaml and pre-run review; no launch, no model call |
+| vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T08:56Z | D5 deployed and no-call preflight passed; central dispatch or owner exception pending; no native D5 result |
 | vishesh/codex-idea-scores | working | build-swarm-size-qualification | 2026-10-04T08:51Z | Q-A5 analyzed; implementing Q-A6 matched-roster pilot within original $20 ledger |
 | dmarz/pipeline-scarcity | working | build-sybil-scarcity-opus | 2026-10-04T08:50Z | sybil-scarcity-opus package pushed for the lead's review: code pinned at 36a03510 (selftest 33 OK, offline S0 168/168, rehearsal passed), pre-run review chain-001 on main; nothing launched, no model call |
 | vishesh/codex-regrowth-docs | idle | healing-qwen-jev | 2026-10-04T08:50Z | C4 PI review and policy tests complete; concrete plan approval pending before allocation; no new inference |
@@ -272,7 +273,6 @@
 | dmarz/v3-q0-opus | working |  | 2026-10-04T08:15Z | discussion-v3-opus chain v3o-a1 (probe, Q0 636 calls, S1 2,436 calls if Q0 passes) on sim-dmarz-9 |
 | dmarz/d1-opus | done |  | 2026-10-04T08:12Z | D1-Opus d1o-a1 done: fresh gate 12/12, 72/72 valid, $1.495; audited, results + post-mortem pushed, claim released |
 | dmarz/market-split-opus | working |  | 2026-10-04T08:10Z | market-split-opus paid stages admitted by the reviewer (same-researcher check); repeating scripted S0 at the amended USD 160 cap design, then I0, Q0 and S1 chained on software gates |
-| vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T08:07Z | owner-authorized live D5 queued through orbital-one; dedicated-host and preserved-ledger admission pending; no model call yet |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T08:07Z | Credential resolved and deployed checks passed; awaiting existing central S0 dispatch, no owner input needed |
 | dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T08:06Z | Preparing false-alarm-cascade (honeypot-vigilance hunch V4, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | shadow/sol-goal | done |  | 2026-10-04T08:05Z | GOAL-12H lane done at 08:05Z. capture-memory-mix (heterogeneous memory rescue) on main with scripted M0/M1/M2 and three real-model pilots; hub experiment capture-memory-mix populated. |
