@@ -1,5 +1,7 @@
 # Phantom Coast: PC-1
 
+**Latest design iteration:** [review and changes](ITERATION-02.md), [PC-2 prospective plan](pc2/PLAN.md), and [complete measured PC-1 replay](visualization/native-replay.html). PC-2 has 20 passing software checks and no native outcomes.
+
 **Native Q0 and S0 completed.** [Results](RESULTS.md): 540 valid map requests, no final history disagreement across six pilot worlds, $0.162723246 API cost. [Public experiment and replays](https://swarm-live.pages.dev/#/x/phantom-coast). The existing Mars host was released after verified delivery. See [current status](LIVE-READINESS.md) and [setup evidence](SETUP.md). Historical offline files below remain instrument-development evidence, not native outcomes.
 
 The assessment below predates S0 and is retained at its stated evidence cutoff; the new results above do not imply an independent review upgrade.

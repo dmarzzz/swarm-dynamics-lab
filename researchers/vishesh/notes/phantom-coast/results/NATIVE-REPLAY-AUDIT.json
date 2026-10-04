@@ -1,0 +1,17 @@
+{
+  "measured_actor_maps": 432,
+  "paired_frames": 72,
+  "comparisons": 24,
+  "worlds": 6,
+  "all_frames_match_saved_outcomes": true,
+  "source_records_sha256": "f1c5ed4961ef1ff427b102866ef13ab737181a5f9cdfbc51f83e6ed91ccd0615",
+  "source_record_hash_matches_delivery": true,
+  "browser_checks": [
+    "initial A/B false-versus-true maps",
+    "contradiction at world206 social/retain with three prior peer maps",
+    "world211 private/reset endpoint zero error and no prior/peers",
+    "playback restarts from first event and automatically stops at final event"
+  ],
+  "html_sha256": "b27800bb2a0f9dbe4a97c8f626a3d475409f2683e768162bd0b6447c4cb89b9d",
+  "browser_checked_utc": "2026-10-04T04:46:45.377516+00:00"
+}
