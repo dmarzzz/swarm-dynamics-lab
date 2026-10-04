@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "study_id": "phantom-coast",
+  "attempt": "pc5-s1-a1",
+  "assessor": "vishesh/codex-phantom-coast",
+  "assessed_at": "2026-10-04T09:05:14.880128+00:00",
+  "parent_handoff_sha256": "429e817aff7a29abf39b6c2b444eceef3b52346732e1a4932c7b5e38add26a76",
+  "verdict": "complete_valid_result",
+  "outcome_interpretation": "Disclosure improves expected regret in this diagnostic while harming one stratum; original hypothesis met, broader planning competence unestablished. Paid cycle closed.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Fixed primary expected-regret contrast and target met; reliable-source regression retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-analysis.json",
+          "sha256": "d74f532da4457d81150ed042e2d4f34db88a1890e3b7325f68bac7d7e33e2bb3"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-audit.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Two calibrated risk cases switch the optimum;32 layouts remain only two semantic templates and do not establish task-general planning.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-analysis.json",
+          "sha256": "d74f532da4457d81150ed042e2d4f34db88a1890e3b7325f68bac7d7e33e2bb3"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-audit.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Same evidence, legal criterion order and scorer within root; only task disclosure changes. Utility plus transition disclosure bundled by design.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-analysis.json",
+          "sha256": "d74f532da4457d81150ed042e2d4f34db88a1890e3b7325f68bac7d7e33e2bb3"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-audit.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Interface qualification passed, but explicit controller is suboptimal19/64 times; no reliable planner qualification for a larger adaptive task.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-analysis.json",
+          "sha256": "d74f532da4457d81150ed042e2d4f34db88a1890e3b7325f68bac7d7e33e2bb3"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-audit.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        }
+      ],
+      "next_action": "Before any larger native planning stage, prospectively test structured utility/risk representation on fresh roots and multiple thresholds; no automatic launch.",
+      "acceptance_check": "Predeclare per-risk competence and reliable-source nonregression criteria; a favorable pooled mean alone does not qualify a controller."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Full request/decision audit reconstructs expected regret and realized loss separately; no lucky realized outcomes substitute for optimal decisions.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-analysis.json",
+          "sha256": "d74f532da4457d81150ed042e2d4f34db88a1890e3b7325f68bac7d7e33e2bb3"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-audit.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "32 independent paired layouts,128 dependent choices; fixed feasibility sample, achieved descriptive interval halfwidth0.04854.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-analysis.json",
+          "sha256": "d74f532da4457d81150ed042e2d4f34db88a1890e3b7325f68bac7d7e33e2bb3"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-audit.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Frozen snapshot/source and identical nontask context within paired reliability; no truth, optimum or operator discussion enters native input.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-analysis.json",
+          "sha256": "d74f532da4457d81150ed042e2d4f34db88a1890e3b7325f68bac7d7e33e2bb3"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-audit.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All128 assigned/started/terminal/valid; no exclusions, retries or missing decisions; complete table retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-analysis.json",
+          "sha256": "d74f532da4457d81150ed042e2d4f34db88a1890e3b7325f68bac7d7e33e2bb3"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-audit.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Closed140-call envelope; cumulative knownUSD0.845052138/exposureUSD0.857148138 carries9 historical unknowns. Key removed, worker stopped, claim released.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/CLOSEOUT.json",
+          "sha256": "7cf5eba0c367cef1ed3b241dbec667d954e4debca79c9e441a906d9eeeb27306"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Immutable source,worlds,manifests,requests and receipt hashes support operator replay; native seed-identical replication not claimed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-analysis.json",
+          "sha256": "d74f532da4457d81150ed042e2d4f34db88a1890e3b7325f68bac7d7e33e2bb3"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-A1-audit.json",
+          "sha256": "09d6131afb88a5a238882d2ad9907f06e0ad3097d63dfad309529bb2d856677c"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "All128 table rows verified, plots expose stratum regression and paired uncertainty, public images match saved hashes.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/VISUAL-QA.json",
+          "sha256": "9212524b12a041dd8daef8848abe17c5aeeb04cc4f0a2e44cef92d699f655119"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/S1-public-readback.json",
+          "sha256": "468013151f1ca2627e716c5be842afa0d02655fa9c74d73b6a5ea87293c53954"
+        }
+      ]
+    }
+  ],
+  "independent_review": false
+}

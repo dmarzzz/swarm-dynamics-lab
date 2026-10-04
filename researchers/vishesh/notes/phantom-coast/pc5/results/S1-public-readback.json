@@ -1,0 +1,20 @@
+{
+  "stage": "S1",
+  "run_status": "done",
+  "checked_utc": "2026-10-04T09:02:42.278282+00:00",
+  "public_artifacts": [
+    {
+      "name": "final_frame.png",
+      "sha256": "b31e645dbeaef60bb000c927b2a1019de64f3bbe1b173c94a6c9e3883960f1ec",
+      "bytes": 21967,
+      "hash_matches": true
+    },
+    {
+      "name": "results-frame.png",
+      "sha256": "3302a33ce8cdf53f79f97e68ca9b823a91f295e0957a02ddbb8e182e8722f797",
+      "bytes": 135026,
+      "hash_matches": true
+    }
+  ],
+  "all_match": true
+}

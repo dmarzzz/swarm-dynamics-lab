@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-04T09:01:44.944575+00:00",
+  "worker_stopped": true,
+  "credential_removed": true,
+  "calls": 140,
+  "known_api_usd": 0.845052138,
+  "api_exposure_usd": 0.857148138,
+  "new_unresolved_calls": 0,
+  "historical_unresolved_calls": 9,
+  "unresolved_calls": 9,
+  "incremental_infrastructure_usd": 0,
+  "new_machine_created": false,
+  "api_cap_usd": 4,
+  "total_cap_usd": 5,
+  "budget_backup_sha256": "2b1eac517c9cb8aabc13fd5f3bdf5e5ac4710cb56511b87dbe12f12c94e04909",
+  "attempts": [
+    [
+      "Q0",
+      "q0-a1"
+    ],
+    [
+      "S1",
+      "s1-a1"
+    ]
+  ],
+  "allocation_release": "merged",
+  "release_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/247"
+}

@@ -1,0 +1,8 @@
+{
+  "closeout_status": "written_review_required",
+  "handoff_path": "data/experiment-operations/closeouts/phantom-coast/pc5-q0-a1/0eaeeafa2b4254b66403da3ad856a17503b053e72aa4118582edd323632d11d6/handoff.json",
+  "handoff_sha256": "1bc2dedae9bb1db4732d968bb9c0a14027ca66ad7daf7e8ff925bc8fb62ed463",
+  "model_calls": 0,
+  "native_outcome": "completed",
+  "status": "finalized"
+}

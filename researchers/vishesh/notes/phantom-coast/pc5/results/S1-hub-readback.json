@@ -1,0 +1,68 @@
+{
+  "stage": "S1",
+  "run_status": "done",
+  "checked_utc": "2026-10-04T09:01:46.898922+00:00",
+  "hub_artifacts": [
+    {
+      "name": "final_frame.png",
+      "sha256": "b31e645dbeaef60bb000c927b2a1019de64f3bbe1b173c94a6c9e3883960f1ec",
+      "bytes": 21967,
+      "hash_matches": true
+    },
+    {
+      "name": "summary.json",
+      "sha256": "82517245195bf084ab418ec7006fc66a42e1e0b531e732d6d2856ed2fb05db2a",
+      "bytes": 4942,
+      "hash_matches": true
+    },
+    {
+      "name": "manifest.json",
+      "sha256": "d203958bad41709cb3c384415efb1f8aa330f05c999e904c34dcfc402b977b9b",
+      "bytes": 22208,
+      "hash_matches": true
+    },
+    {
+      "name": "decisions.json",
+      "sha256": "d0b55bea2818dc8e344c0fb02cc698d4e8ad897b190fb26c8982c6e197e9b33a",
+      "bytes": 46942,
+      "hash_matches": true
+    },
+    {
+      "name": "public-plan.json",
+      "sha256": "dd387269363defb442a8b5c68deda795d35c1ddc81173d3e3dbda6944fb457bb",
+      "bytes": 1147,
+      "hash_matches": true
+    },
+    {
+      "name": "worlds.json",
+      "sha256": "81decd1f7db8356c84009a8b6044eca9fe692112a80f4814de144b4b0e38a13f",
+      "bytes": 32865,
+      "hash_matches": true
+    },
+    {
+      "name": "events.jsonl",
+      "sha256": "bc102f9d0ec2f5fb596847b2197e2a8afdb2b1ad1615cd71b57dd885931d9783",
+      "bytes": 1410970,
+      "hash_matches": true
+    },
+    {
+      "name": "route.json",
+      "sha256": "de458b0508ef9deab84011f4c98c9a3b4a9117c51a5d39507adaa1ca7cf7c8d1",
+      "bytes": 117,
+      "hash_matches": true
+    },
+    {
+      "name": "records.json",
+      "sha256": "50e98f77eb5f54760016fc571da82276913dc86b4dd866b129b02a3fd8103305",
+      "bytes": 1471392,
+      "hash_matches": true
+    },
+    {
+      "name": "measured-replay.html",
+      "sha256": "cae8b04256b29f8490705ee1b17ae5abf276c2ae0d8ca7ccb42777780a469be6",
+      "bytes": 16018,
+      "hash_matches": true
+    }
+  ],
+  "all_match": true
+}

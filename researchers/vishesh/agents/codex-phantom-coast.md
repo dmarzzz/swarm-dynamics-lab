@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-phantom-coast
 tool: codex
-state: working
+state: done
 task: phantom-coast-pc4-live
-doing: PC-4 qualification passed; running 32-root source-verification diagnostic on exclusive sim-dmarz-10; cumulative budget retained
-updated: 2026-10-04T08:46:58.840350+00:00
+doing: PC-4 and PC-5 complete; tradeoffs preserved, artifacts verified, exposure USD0.857148138, claims released, no further run scheduled
+updated: 2026-10-04T09:05:14.880128+00:00
 ---
 
 ## Notes

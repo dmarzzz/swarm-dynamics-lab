@@ -41,3 +41,7 @@ Continue Phantom Coast in https://github.com/dmarzzz/swarm-lab. Read AGENTS.md, 
 ## PC-1 follow-up, 2026-10-04 UTC
 
 [PC-1 plan and offline instrument](../../phantom-coast/README.md) now implement fixed-evidence packet, reset, ancestry and bounded-scoring contracts, with a labelled fixture replay. [Assessment](../../phantom-coast/REPORT.md) distinguishes the 29 passing software tests from native qualification. No model experiment has run; independent review, budget, allocation, native executor and public run registration remain unresolved. The adaptive exploration question remains PC-2, not a claim established by the fixture.
+
+## Latest native status, 2026-10-04 UTC
+
+The PC-1 offline-only paragraph above is historical. Native PC-1 through PC-5 have now run; current results and gate status are in [the experiment index](../../phantom-coast/README.md). The latest two cycles separate verification opportunity cost (PC-4) from decision-contract disclosure (PC-5). Neither establishes emergent swarm intelligence or reliable multi-step planning. Both have complete operator audits/post-mortems, public artifacts and released Mars allocations. Cumulative known USD0.845052138 / exposureUSD0.857148138 under the original USD5 cap; no new VM. Researcher review is waived by owner and direct launch was authorized; other public-plan/qualification/budget/allocation gates were retained. [Next scientific proposal](../../phantom-coast/pc5/NEXT-ITERATION.md) is not scheduled or admitted.

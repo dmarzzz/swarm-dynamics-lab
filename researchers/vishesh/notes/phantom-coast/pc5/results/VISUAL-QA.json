@@ -1,0 +1,7 @@
+{
+  "checked_utc": "2026-10-04T09:05:14.880128+00:00",
+  "figure": "Three-panel scientific figure visually checked: accuracy regression, regret weighting and32 paired contrasts with interval/target.",
+  "decision_table": "Browser shows129 table rows (header+128 assignments). Root1900 explicit reliability.2 checks report: regret0, realized.25; legacy exploresunknown: regret.55, realized1. Root1931 explicit reliability.8 checksreport: regret.05, realized.25. Matches saved decisions.",
+  "public": "Both final_frame.png and results-frame.png hash readbacks passed.",
+  "native_vs_scripted": "Native choice and scripted consequence clearly labeled; no invented trajectories."
+}

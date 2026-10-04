@@ -1,0 +1,234 @@
+{
+  "overall": {
+    "roots": 32,
+    "mean": -0.15781250000000002,
+    "paired_se": 0.023797636331360252,
+    "descriptive_t31_interval": [
+      -0.20634808866708157,
+      -0.10927691133291847
+    ],
+    "range": [
+      -0.275,
+      0.025
+    ],
+    "practical_success": true,
+    "leave_one_out_range": [
+      -0.16370967741935485,
+      -0.15403225806451615
+    ]
+  },
+  "worlds": [
+    {
+      "seed": 1900,
+      "primary": -0.275
+    },
+    {
+      "seed": 1901,
+      "primary": 0.0
+    },
+    {
+      "seed": 1902,
+      "primary": 0.0
+    },
+    {
+      "seed": 1903,
+      "primary": 0.0
+    },
+    {
+      "seed": 1904,
+      "primary": -0.275
+    },
+    {
+      "seed": 1905,
+      "primary": -0.275
+    },
+    {
+      "seed": 1906,
+      "primary": -0.275
+    },
+    {
+      "seed": 1907,
+      "primary": 0.0
+    },
+    {
+      "seed": 1908,
+      "primary": -0.275
+    },
+    {
+      "seed": 1909,
+      "primary": 0.0
+    },
+    {
+      "seed": 1910,
+      "primary": -0.275
+    },
+    {
+      "seed": 1911,
+      "primary": -0.25
+    },
+    {
+      "seed": 1912,
+      "primary": -0.275
+    },
+    {
+      "seed": 1913,
+      "primary": -0.275
+    },
+    {
+      "seed": 1914,
+      "primary": -0.275
+    },
+    {
+      "seed": 1915,
+      "primary": -0.275
+    },
+    {
+      "seed": 1916,
+      "primary": -0.25
+    },
+    {
+      "seed": 1917,
+      "primary": 0.0
+    },
+    {
+      "seed": 1918,
+      "primary": -0.25
+    },
+    {
+      "seed": 1919,
+      "primary": 0.0
+    },
+    {
+      "seed": 1920,
+      "primary": -0.25
+    },
+    {
+      "seed": 1921,
+      "primary": 0.0
+    },
+    {
+      "seed": 1922,
+      "primary": 0.0
+    },
+    {
+      "seed": 1923,
+      "primary": 0.0
+    },
+    {
+      "seed": 1924,
+      "primary": -0.275
+    },
+    {
+      "seed": 1925,
+      "primary": 0.0
+    },
+    {
+      "seed": 1926,
+      "primary": -0.25
+    },
+    {
+      "seed": 1927,
+      "primary": 0.025
+    },
+    {
+      "seed": 1928,
+      "primary": -0.275
+    },
+    {
+      "seed": 1929,
+      "primary": -0.275
+    },
+    {
+      "seed": 1930,
+      "primary": -0.25
+    },
+    {
+      "seed": 1931,
+      "primary": 0.0
+    }
+  ],
+  "cells": [
+    {
+      "reliability": 0.8,
+      "objective": "legacy",
+      "assigned": 32,
+      "valid": 32,
+      "optimal": 28,
+      "report_choices": 4,
+      "unknown_choices": 28,
+      "no_inspection": 0,
+      "expected_regret": 0.00625,
+      "realized_scripted_loss": 0.0625
+    },
+    {
+      "reliability": 0.8,
+      "objective": "explicit",
+      "assigned": 32,
+      "valid": 32,
+      "optimal": 21,
+      "report_choices": 11,
+      "unknown_choices": 21,
+      "no_inspection": 0,
+      "expected_regret": 0.0171875,
+      "realized_scripted_loss": 0.1171875
+    },
+    {
+      "reliability": 0.2,
+      "objective": "legacy",
+      "assigned": 32,
+      "valid": 32,
+      "optimal": 5,
+      "report_choices": 5,
+      "unknown_choices": 27,
+      "no_inspection": 0,
+      "expected_regret": 0.46406250000000004,
+      "realized_scripted_loss": 0.6328125
+    },
+    {
+      "reliability": 0.2,
+      "objective": "explicit",
+      "assigned": 32,
+      "valid": 32,
+      "optimal": 24,
+      "report_choices": 24,
+      "unknown_choices": 8,
+      "no_inspection": 0,
+      "expected_regret": 0.1375,
+      "realized_scripted_loss": 0.375
+    }
+  ],
+  "stage": "S1",
+  "attempt": "s1-a1",
+  "assigned": 128,
+  "started": 128,
+  "terminal": 128,
+  "valid": 128,
+  "stop_reason": null,
+  "budget": {
+    "calls": 140,
+    "prior_usd": 0.83914929,
+    "new_known_usd": 0.017998848,
+    "cumulative_exposure_usd": 0.857148138,
+    "api_cap_usd": 4,
+    "max_calls": 140
+  },
+  "wall_seconds": 30.574022196000442,
+  "instrument": {
+    "src/admission.py": "9769b6448d7c5f07262ed0cec164c08a40e449b666ab539bf676aba6d7243d49",
+    "src/contract.py": "18610c5b7fde5ed9cd2b55445ec113d91510938a28cd3871a2a409c7450104c1",
+    "src/design.py": "5e256e32883f0a9edb430a915afd09e3570f056ab5dbcfbfde39847390ec801d",
+    "src/engine.py": "0371aea6173ecfce23cdc8366023ba020ac9eb1160b512fb7f991e05bfa19bf6",
+    "src/ledger.py": "28e0366438ff945b3ada6f5431b3d4dd9edfaae7eaf4ac6ddd1aae86c67b1b46",
+    "src/replay.py": "a9083442e8e6da694b06481010aaed892f5322d7862ea94ac0a7dff02fa604e5",
+    "src/run.py": "866cff513b88097cc1bf00f11fffe32c4523fcbdabaa08fddda7f70fc44a4bd2",
+    "src/wire.py": "b77c4232414426a72995bf61b1d8f8f8d28c881fe7dfd3c5c5ebae3d2276a427",
+    "src/replay-template.html": "e703a911368d66e464574423fc6850d1b29dc6e7daf6dac78bb24c30c109c97f",
+    "PLAN.md": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72",
+    "reviews/RUNNER-PRE.md": "7e01ea7e2e5f1ad88b55b4493e8e7ffd4a5f56755b992d6672f2650f1e5d3f52",
+    "reviews/REVIEW-POLICY-AMENDMENT.md": "b07d6a5c696f3d64f8005c856c69cdaaebafe491b49694eb4997db41fab455a7"
+  },
+  "model": "typesafe/jev-1.13-20260917",
+  "source_commit": "61307ac19d9af2d8119736f9886e85683ce7e21d",
+  "native_known_cost_usd": 0.01645308,
+  "call_seconds": 27.496974493004018
+}

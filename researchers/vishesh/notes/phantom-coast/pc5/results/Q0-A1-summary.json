@@ -1,0 +1,36 @@
+{
+  "assigned": 12,
+  "valid": 12,
+  "correct_targets": 12,
+  "qualification_passed": true,
+  "stage": "Q0",
+  "attempt": "q0-a1",
+  "started": 12,
+  "terminal": 12,
+  "stop_reason": null,
+  "budget": {
+    "calls": 12,
+    "prior_usd": 0.83914929,
+    "new_known_usd": 0.001545768,
+    "cumulative_exposure_usd": 0.840695058,
+    "api_cap_usd": 4,
+    "max_calls": 140
+  },
+  "wall_seconds": 2.6519347739995283,
+  "instrument": {
+    "src/admission.py": "9769b6448d7c5f07262ed0cec164c08a40e449b666ab539bf676aba6d7243d49",
+    "src/contract.py": "18610c5b7fde5ed9cd2b55445ec113d91510938a28cd3871a2a409c7450104c1",
+    "src/design.py": "5e256e32883f0a9edb430a915afd09e3570f056ab5dbcfbfde39847390ec801d",
+    "src/engine.py": "0371aea6173ecfce23cdc8366023ba020ac9eb1160b512fb7f991e05bfa19bf6",
+    "src/ledger.py": "28e0366438ff945b3ada6f5431b3d4dd9edfaae7eaf4ac6ddd1aae86c67b1b46",
+    "src/replay.py": "a9083442e8e6da694b06481010aaed892f5322d7862ea94ac0a7dff02fa604e5",
+    "src/run.py": "866cff513b88097cc1bf00f11fffe32c4523fcbdabaa08fddda7f70fc44a4bd2",
+    "src/wire.py": "b77c4232414426a72995bf61b1d8f8f8d28c881fe7dfd3c5c5ebae3d2276a427",
+    "src/replay-template.html": "e703a911368d66e464574423fc6850d1b29dc6e7daf6dac78bb24c30c109c97f",
+    "PLAN.md": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72",
+    "reviews/RUNNER-PRE.md": "7e01ea7e2e5f1ad88b55b4493e8e7ffd4a5f56755b992d6672f2650f1e5d3f52",
+    "reviews/REVIEW-POLICY-AMENDMENT.md": "b07d6a5c696f3d64f8005c856c69cdaaebafe491b49694eb4997db41fab455a7"
+  },
+  "model": "typesafe/jev-1.13-20260917",
+  "source_commit": "61307ac19d9af2d8119736f9886e85683ce7e21d"
+}
