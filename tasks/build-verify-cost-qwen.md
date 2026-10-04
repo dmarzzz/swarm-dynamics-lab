@@ -22,8 +22,8 @@ Line V of research program v5: can an agent choose checking versus exploration w
 
 ## Done when
 
-- [ ] Plan and frozen design (the program's design for this line) committed before implementation.
-- [ ] Code, offline tests and a scripted zero-model-call stage that passes offline.
-- [ ] Pre-run review on main with assignment manifest, call counts, gates, model settings, hard max_calls and the pinned commit.
-- [ ] Chained launch per researchers/dmarz/notes/pipeline/READY-CHAIN.md with the server as a parameter.
+- [x] Plan and frozen design (the program's design for this line) committed before implementation.
+- [x] Code, offline tests and a scripted zero-model-call stage that passes offline.
+- [x] Pre-run review on main with assignment manifest, call counts, gates, model settings, hard max_calls and the pinned commit.
+- [x] Chained launch per researchers/dmarz/notes/pipeline/READY-CHAIN.md with the server as a parameter.
 - [ ] Run request filed in the private run queue after the fleet monitor's go.
