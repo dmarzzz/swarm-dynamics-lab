@@ -1,0 +1,56 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "sha256:2a8205ea823fb4c697db3049c8304cdda3020f2cd1578b50d80277abf5d9c057"
+   },
+   "internalParameters": {
+    "commit": "3a7895ff9dd96bd2651622cc03b4374301e4ee13-dirty",
+    "session": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "5a73ba9d3cbb504d36e10b2fc7f4952e1c5054f32560d7d67ebe34bacd6db7f0"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/Q2-AUDIT.json"
+    },
+    {
+     "digest": {
+      "sha256": "6a925b727409942c6b527d23669507410d171c3295a9b95a310b0bc3fda0a0d7"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/Q2-QUALITY.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "3a7895ff9dd96bd2651622cc03b4374301e4ee13"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/mac/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T20:41:59Z",
+    "invocationId": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8",
+    "startedOn": "2026-10-04T20:41:59Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "275b3b092a752b4d4e923ea8b59318bf75b7fa142ab49cbf59a515d4773a51d3"
+   },
+   "name": "artifacts/theseus-sol50-q2-postmortem/theseus-sol50-q2-postmortem-v1.md"
+  }
+ ]
+}

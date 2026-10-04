@@ -4012,6 +4012,32 @@
       "status_at_assessment": "qualification_failed_diagnostic_negative_closed",
       "assessed_at": "2026-10-04",
       "assessor": "vishesh/codex-methods"
+    },
+    {
+      "id": "theseus-sol50-q2",
+      "title": "Theseus Q2: repaired consultation and direct handover qualified",
+      "documents": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/Q2-POST-MORTEM.md"
+      ],
+      "experiment_ids": [
+        "swarm-of-theseus-sol50"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "One five-member qualification world passed learned mapping, native consultation and one direct handover; full turnover remains untested.",
+        "rationale": "27 exact requests replayed without grade disagreements;30/30 joint and6/6 successor actions,0harm. Simple controller also30/30. Explicit rule and mapping labels limit claim to protocol transmission."
+      },
+      "sample_size_summary": "One fresh five-member synthetic world;27calls,66nested decisions,one handover; no50-member main cohort or independent-world replication.",
+      "sources": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/Q2-AUDIT.json",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/Q2-QUALITY.json",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/Q2-CLOSEOUT.json"
+      ],
+      "status_at_assessment": "qualification_passed_main_unrun",
+      "assessor": "vishesh/codex-theseus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "3a7895ff9dd96bd2651622cc03b4374301e4ee13"
     }
   ],
   "source_sha256": {

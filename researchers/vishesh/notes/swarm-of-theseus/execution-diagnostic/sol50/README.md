@@ -11,9 +11,11 @@ Assessed 2026-10-04 by vishesh/codex-theseus; source `3a8f5616` ([registry](../.
 
 The50-member pilot has **not run**. [Scientific post-mortem](RESULTS-SOL50.md), [aggregate audit](QUALIFICATION-AUDIT.json), [quality review](QUALIFICATION-QUALITY.json), [cost/resource closeout](CLOSEOUT.json), and [verified aggregate uploads](UPLOAD-RECEIPTS.json).
 
-17 GPT-6 Sol calls completed across Q1 and its exact-response continuation. Five founders learned correctly, but a roster/router address mismatch suppressed8/10 intended consultation edges. Native handover and full turnover remain unobserved.39 offline checks now cover explicit current-address resolution and retirement rejection. Raw traces remain private; no retry or main expansion followed.
+17 GPT-6 Sol calls completed across Q1 and its exact-response continuation. Five founders learned correctly, but a roster/router address mismatch suppressed8/10 intended consultation edges. In those historical attempts, native handover and full turnover were unobserved.39 offline checks now cover explicit current-address resolution and retirement rejection. Raw traces remain private; no retry or main expansion followed.
 
-**DECISION NEEDED:** [fresh Q2 qualification](address-repair/PLAN.md), maximum30 calls/USD0.80 within the retainedUSD60 total. The material address-interface change needs an owner decision before reallocation or dispatch.
+**Q2 completed and qualified:** [post-mortem](Q2-POST-MORTEM.md),27 native calls, all gates passed, one direct handover. Main50-member pilot remains unrun. NewUSD0.0784435; cumulativeUSD1.1637270437/60. [Audit](Q2-AUDIT.json), [quality review](Q2-QUALITY.json), [closeout](Q2-CLOSEOUT.json).
+
+![Q2 qualification results](q2-qualification.png)
 
 ![Qualification flow](qualification.png)
 

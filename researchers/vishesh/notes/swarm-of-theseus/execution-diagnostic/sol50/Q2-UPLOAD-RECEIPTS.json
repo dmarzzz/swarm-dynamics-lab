@@ -1,0 +1,31 @@
+{
+  "worker_exited": true,
+  "allocation_settled": true,
+  "receipts": [
+    {
+      "name": "Q2-POST-MORTEM.md",
+      "sha256": "275b3b092a752b4d4e923ea8b59318bf75b7fa142ab49cbf59a515d4773a51d3",
+      "readback_verified": true
+    },
+    {
+      "name": "Q2-AUDIT.json",
+      "sha256": "5a73ba9d3cbb504d36e10b2fc7f4952e1c5054f32560d7d67ebe34bacd6db7f0",
+      "readback_verified": true
+    },
+    {
+      "name": "Q2-QUALITY.json",
+      "sha256": "6a925b727409942c6b527d23669507410d171c3295a9b95a310b0bc3fda0a0d7",
+      "readback_verified": true
+    },
+    {
+      "name": "Q2-CLOSEOUT.json",
+      "sha256": "aed4997e8e426bf96e10d4111aec07987dc0e0ffef0d5f6939486c1474ce59e4",
+      "readback_verified": true
+    },
+    {
+      "name": "q2-qualification.png",
+      "sha256": "ab48247a57609228d7c1a00d5f8d56de75e160934cdd02599bad2a447a7131b2",
+      "readback_verified": true
+    }
+  ]
+}

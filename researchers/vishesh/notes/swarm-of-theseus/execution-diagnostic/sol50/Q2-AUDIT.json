@@ -1,0 +1,83 @@
+{
+  "attempt": "SOL50-Q2",
+  "source_commit": "3a7895ff9dd96bd2651622cc03b4374301e4ee13",
+  "worlds": 1,
+  "qualification_members": 5,
+  "planned_calls": 27,
+  "call_cap": 30,
+  "native_calls": 27,
+  "nominal_unstarted": 0,
+  "phase_counts": {
+    "learn": 5,
+    "select": 6,
+    "attest": 7,
+    "decide": 6,
+    "question": 1,
+    "teach": 1,
+    "commit": 1
+  },
+  "served_routes": [
+    {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "calls": 27
+    }
+  ],
+  "exact_requests_replayed": 27,
+  "scoring_replay_disagreements": 0,
+  "passed": true,
+  "stop": null,
+  "founders_qualified": 5,
+  "founder_actions_correct": 30,
+  "checkpoints": [
+    {
+      "stage": "joint",
+      "selections": 5,
+      "routes_correct": 5,
+      "edges_delivered": 10,
+      "overflow": 0,
+      "witness_reports": 5,
+      "witness_reports_exact": 5,
+      "correct_actions": 30,
+      "action_denominator": 30,
+      "harmful_approvals": 0,
+      "useful_approvals": 10,
+      "eligible_approvals": 10
+    },
+    {
+      "stage": "post_handover",
+      "selections": 1,
+      "routes_correct": 1,
+      "edges_delivered": 2,
+      "overflow": 0,
+      "witness_reports": 2,
+      "witness_reports_exact": 2,
+      "correct_actions": 6,
+      "action_denominator": 6,
+      "harmful_approvals": 0,
+      "useful_approvals": 2,
+      "eligible_approvals": 2
+    }
+  ],
+  "handover": {
+    "retired": "position_02/g0",
+    "successor": "position_02/g1",
+    "teacher_semantics_correct": true,
+    "behavior_evaluated_at_checkpoint": true,
+    "note_correct": true
+  },
+  "new_actual_usd": 0.0784435,
+  "new_unknown_usd": 0,
+  "historical_unknown_usd": 0.010452,
+  "cumulative_exposure_usd": 1.1637270437,
+  "cumulative_cap_usd": 60,
+  "stage_cap_usd": 0.8,
+  "native_50_member_run": false,
+  "raw_traces_public": false,
+  "simple_reference": {
+    "evidence_type": "saved-data deterministic controller using learned founder notes",
+    "correct_actions": 30,
+    "denominator": 30,
+    "native_calls": 0
+  }
+}

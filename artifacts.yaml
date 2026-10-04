@@ -4901,4 +4901,42 @@ artifacts:
           - researchers/vishesh/notes/dissent/freshness/results/f0-a1/figure-data.json
           - researchers/vishesh/notes/dissent/freshness/results/f0-a1/plot_results.py
         commit: a4de7c2d1f9fcdcf148a150288e15cd742e27674-dirty
+  - id: theseus-sol50-q2
+    category: content
+    type: figure
+    title: Theseus Q2 qualification and direct handover
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/theseus-sol50-q2/theseus-sol50-q2-v1.png
+        built_at: '2026-10-04T20:41:58Z'
+        note: One world, five members, one handover; no50-member pilot or swarm advantage.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:ff78c5eae2c0434baf2897c6cba3a376ea54f172e0f2bfe4d27448cf2a9d963c
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/plot_q2.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/Q2-AUDIT.json
+        commit: 3a7895ff9dd96bd2651622cc03b4374301e4ee13-dirty
+        public: true
+  - id: theseus-sol50-q2-postmortem
+    category: content
+    type: doc
+    title: Theseus Q2 scientific post-mortem
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/theseus-sol50-q2-postmortem/theseus-sol50-q2-postmortem-v1.md
+        built_at: '2026-10-04T20:41:59Z'
+        note: Qualified repaired protocol; prescribed-policy transmission limits retained.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:2a8205ea823fb4c697db3049c8304cdda3020f2cd1578b50d80277abf5d9c057
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/Q2-AUDIT.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/Q2-QUALITY.json
+        commit: 3a7895ff9dd96bd2651622cc03b4374301e4ee13-dirty
+        public: true
 requires: '1.2'

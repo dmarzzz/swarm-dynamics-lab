@@ -1,7 +1,7 @@
 {
-  "status": "address_repair_offline_validated_native_unqualified",
+  "status": "Q2_native_qualification_passed_main_unrun",
   "tests_passed": 39,
-  "native_calls": 17,
+  "native_calls": 44,
   "evidence_type": "software_and_scripted_fixtures_not_model_results",
   "members": 50,
   "qualification_fixture_calls": 27,
@@ -31,9 +31,14 @@
     "test_native.py": "78a5bc226f0746c9410e715289247c7b4be59637d24f6a3362dbf554f0c555a9"
   },
   "outstanding": [
-    "Owner decision for material Q2 address contract",
-    "Fresh Q2 immutable registration and current admission",
-    "Native Q2 qualification and authored review",
-    "Conditional50-member main admission"
-  ]
+    "Current main-stage resource/provider-capacity and immutable runtime admission before any50-member pilot",
+    "Maintain narrow prescribed-policy transmission claim"
+  ],
+  "native_qualification_evidence": {
+    "attempt": "SOL50-Q2",
+    "calls": 27,
+    "source_commit": "3a7895ff9dd96bd2651622cc03b4374301e4ee13",
+    "audit": "Q2-AUDIT.json",
+    "passed": true
+  }
 }

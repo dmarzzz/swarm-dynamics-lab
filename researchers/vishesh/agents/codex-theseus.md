@@ -3,8 +3,8 @@ agent: vishesh/codex-theseus
 tool: codex
 state: idle
 task: null
-doing: SOL50 qualification closed; concrete Q2 repair ready for owner decision
-updated: 2026-10-04T20:30Z
+doing: Q2 completed and qualified; main50-member study not dispatched
+updated: 2026-10-04T20:42Z
 ---
 
-17 native calls; no50-member pilot.39 offline checks pass. Aggregate readbacks verified; machine released in private fleet PR416. Cumulative exposure1.0852835437/60USD.
+27native calls,all gates pass,one direct handover;39offline checks. Aggregate artifacts verified, machine released. CumulativeUSD1.1637270437/60. Main requires its distinct current admission and provider-capacity envelope.

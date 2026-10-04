@@ -1,0 +1,130 @@
+{
+  "attempt": "SOL50-Q2",
+  "assessor": "owning agent; not independent",
+  "date": "2026-10-04",
+  "evidence_revision": "3a7895ff9dd96bd2651622cc03b4374301e4ee13",
+  "decision": "qualification_passed_with_narrow_scope",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "The approved diagnostic tests repaired routing and one direct handover; wider culture claims are excluded.",
+      "evidence": [
+        {
+          "path": "Q2-AUDIT.json",
+          "sha256": "5a73ba9d3cbb504d36e10b2fc7f4952e1c5054f32560d7d67ebe34bacd6db7f0"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Six required clean/adverse mechanisms exercised; synthetic fixed templates/order and explicit mapping labels limit generalization.",
+      "evidence": [
+        {
+          "path": "Q2-AUDIT.json",
+          "sha256": "5a73ba9d3cbb504d36e10b2fc7f4952e1c5054f32560d7d67ebe34bacd6db7f0"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Saved-data exact controller using learned notes also30/30; no dialogue-versus-note or culture effect claimed.",
+      "evidence": [
+        {
+          "path": "Q2-AUDIT.json",
+          "sha256": "5a73ba9d3cbb504d36e10b2fc7f4952e1c5054f32560d7d67ebe34bacd6db7f0"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "All27 planned calls valid:5founders, native consultation and one successor satisfy unchanged gates.",
+      "evidence": [
+        {
+          "path": "Q2-AUDIT.json",
+          "sha256": "5a73ba9d3cbb504d36e10b2fc7f4952e1c5054f32560d7d67ebe34bacd6db7f0"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All27 actual requests and aggregate grades reproduce;66nested decisions, not independent samples.",
+      "evidence": [
+        {
+          "path": "Q2-AUDIT.json",
+          "sha256": "5a73ba9d3cbb504d36e10b2fc7f4952e1c5054f32560d7d67ebe34bacd6db7f0"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "One five-member world and one replacement fit a bounded interface feasibility check, not precision estimation.",
+      "evidence": [
+        {
+          "path": "Q2-AUDIT.json",
+          "sha256": "5a73ba9d3cbb504d36e10b2fc7f4952e1c5054f32560d7d67ebe34bacd6db7f0"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Exact GPT-6 Sol/OpenAI route; fresh successor empty note/current evidence, permitted predecessor channels only; no operator context.",
+      "evidence": [
+        {
+          "path": "Q2-AUDIT.json",
+          "sha256": "5a73ba9d3cbb504d36e10b2fc7f4952e1c5054f32560d7d67ebe34bacd6db7f0"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "27planned/started/terminal/replayed,0missing and0retries; previous17calls separately retained.",
+      "evidence": [
+        {
+          "path": "Q2-AUDIT.json",
+          "sha256": "5a73ba9d3cbb504d36e10b2fc7f4952e1c5054f32560d7d67ebe34bacd6db7f0"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD0.0784435/0.80stage; cumulative1.1637270437/60; historical0.010452 uncertainty retained.66.03seconds,22055tokens, serial calls.",
+      "evidence": [
+        {
+          "path": "Q2-AUDIT.json",
+          "sha256": "5a73ba9d3cbb504d36e10b2fc7f4952e1c5054f32560d7d67ebe34bacd6db7f0"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen3a7895ff source, design hash, exact saved-request replay and private archive retained; future hosted outputs not deterministic.",
+      "evidence": [
+        {
+          "path": "Q2-AUDIT.json",
+          "sha256": "5a73ba9d3cbb504d36e10b2fc7f4952e1c5054f32560d7d67ebe34bacd6db7f0"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Aggregate stage figure uses separate denominators and labels one world/one handover; no50-member claim.",
+      "evidence": [
+        {
+          "path": "Q2-AUDIT.json",
+          "sha256": "5a73ba9d3cbb504d36e10b2fc7f4952e1c5054f32560d7d67ebe34bacd6db7f0"
+        }
+      ]
+    }
+  ]
+}

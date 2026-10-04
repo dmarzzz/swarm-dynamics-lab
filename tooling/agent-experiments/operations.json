@@ -72,11 +72,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/swarm-of-theseus/v2",
       "setup_path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/RESULTS-SOL50.md",
+      "postmortem_path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/Q2-POST-MORTEM.md",
       "adapter": "theseus-v2",
       "checked_at": "2026-10-04T20:26:28.401636+00:00",
       "checked_commit": "3a8f5616e25e90c6c1891008a01d7dd8edf08b78",
-      "next_action": "DECISION NEEDED: SOL50 Q1/Q1C closed with address-contract defect,17 native calls; no handover or50-member pilot.39 offline repair checks. Fresh Q2 proposal: execution-diagnostic/sol50/address-repair/PLAN.md,30calls/USD0.80 within cumulativeUSD60; exposureUSD1.0852835437. Raw traces private, aggregate reports verified. Legacy adapter is not the SOL50 launcher.",
+      "next_action": "Q2 FINISH:27calls qualified acquisition, consultation and one handover; cumulativeUSD1.1637270437/60.50-member main remains unrun and needs distinct current admission/provider-capacity reconciliation. Legacy adapter is not SOL50.",
       "next_run_approval": "owner"
     },
     {
