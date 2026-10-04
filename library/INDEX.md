@@ -2,9 +2,9 @@
 
 # Library index
 
-3310 entries.
+3312 entries.
 
-## Papers (2090)
+## Papers (2092)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -78,6 +78,7 @@
 | [cordeiro-2026-rouxii](papers/cordeiro-2026-rouxii.md) | Rouxii: Exploiting Honeypots with Deception-Aware AI Pentesters | 2026 | 5 | skim | swarm-detection | dmarz/sd-honeypots |
 | [cortesi-2001-genetic](papers/cortesi-2001-genetic.md) | Genetic Control of Horizontal Virus Transmission in the Chestnut Blight Fungus, Cryphonectria parasitica | 2001 | 5 | abstract | fork-merge-security | dmarz/fm-biology |
 | [costa-2025-securing](papers/costa-2025-securing.md) | Securing AI Agents with Information-Flow Control | 2025 | 5 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-ai-control |
+| [costa-2026-agentspawn](papers/costa-2026-agentspawn.md) | AgentSpawn: Adaptive Multi-Agent Collaboration Through Dynamic Spawning for Long-Horizon Code Generation | 2026 | 5 | abstract | llm-agent-swarms, agent-budgets | vishesh/codex-idea-scores |
 | [couzin-2002-collective](papers/couzin-2002-collective.md) | Collective Memory and Spatial Sorting in Animal Groups | 2002 | 5 | full | collective-motion, collective-decision | dmarz/collective-motion |
 | [couzin-2005-effective](papers/couzin-2005-effective.md) | Effective leadership and decision-making in animal groups on the move | 2005 | 5 | abstract | collective-motion, collective-decision | dmarz/collective-motion |
 | [couzin-2009-collective](papers/couzin-2009-collective.md) | Collective cognition in animal groups | 2009 | 5 | abstract | collective-decision, collective-motion | dmarz/collective-decision |
@@ -218,6 +219,7 @@
 | [loffler-2023-collective](papers/loffler-2023-collective.md) | Collective foraging of active particles trained by reinforcement learning | 2023 | 5 | abstract | marl-emergence, active-matter, collective-motion | dmarz/marl-emergence |
 | [louck-2026-securing](papers/louck-2026-securing.md) | Securing LLM-Agent Long-Term Memory Against Poisoning: Non-Malleable, Origin-Bound Authority with Machine-Checked Guarantees | 2026 | 5 | skim | fork-merge-security, sybil-resistance | dmarz/fm-memory-injection |
 | [lugoloobi-2026-known](papers/lugoloobi-2026-known.md) | Known By Their Actions: Fingerprinting LLM Browser Agents via UI Traces | 2026 | 5 | full | swarm-detection | dmarz/sd-attribution |
+| [lyu-2026-coagent](papers/lyu-2026-coagent.md) | CoAgent: Concurrency Control for Multi-Agent Systems | 2026 | 5 | abstract | llm-agent-swarms, agent-budgets | vishesh/codex-idea-scores |
 | [makins-2026-multi](papers/makins-2026-multi.md) | Multi-Agent AI Control: Distributed Attacks Hamper Per-Instance Monitors | 2026 | 5 | full | fork-merge-security, llm-agent-swarms | dmarz/fm-ai-control |
 | [mallmann-trenn-2021-crowd](papers/mallmann-trenn-2021-crowd.md) | Crowd Vetting: Rejecting Adversaries via Collaboration With Application to Multirobot Flocking | 2021 | 5 | full | sybil-resistance, swarm-robotics, sync-consensus, collective-motion | dmarz/sybil-robotics |
 | [mannocci-2026-detection](papers/mannocci-2026-detection.md) | Detection and Characterization of Coordinated Online Behavior: A Survey | 2026 | 5 | skim | swarm-detection, meta | dmarz/sd-coordination |
