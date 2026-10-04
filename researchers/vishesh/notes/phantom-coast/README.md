@@ -1,5 +1,14 @@
 # Phantom Coast: PC-1
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Native Jev passed the clean synthetic mapping screen; the history-persistence effect remains unestablished. Basis: All 18 clean maps were valid and correct across six generated worlds. This qualifies the clean mapping contract only; 648 cell choices and three observers per world are dependent, and no history-persistence cohort result is tracked at this cutoff.
+- **sample_size_summary:** Q0: 6 world roots × 3 observers = 18/18 valid maps, 648/648 cells correct. Gated S0 plans 6 new paired worlds and 522 map requests; no S0 effect result tracked.
+<!-- experiment-evidence:end -->
+
 **Registered on Swarm Live; native launch preparation implemented; no model experiment run.** See [current live readiness](LIVE-READINESS.md) and [PC-1L amendment](LIVE-PLAN.md). DM-01 asks whether a false map can alter the evidence a swarm gathers. The first stage isolates history-dependent judgment before testing that adaptive loop.
 
 - [Prospective plan](PLAN.md): paired worlds, eight swarm trajectories, pooled/deterministic baselines, qualification criteria, and separately gated adaptive extension.

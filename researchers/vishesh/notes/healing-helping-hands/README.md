@@ -1,5 +1,29 @@
 # Healing Helping Hands
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source snapshots shown per cohort ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+**Healing pilot03** (`healing-pilot03`)
+Source: `b51e3f1f`.
+
+- **evidence_confidence:** **1/4** — Sharing withdrawal notices improves recovery in the programmed evidence atlas with qualified extraction. Basis: Exact and Jev trajectories coincide on engineered fixtures; source authenticity and withdrawals supplied. Three corpora and programmed forwarding do not establish autonomous research or heterogeneous-head superiority. Earlier pilot01/02 each completed36 exact worlds and left108 model worlds not-run.
+- **sample_size_summary:** Pilot03:3 paired synthetic corpora × 3 policies × 4 scenarios × 5 extractor definitions =180 assigned;72 exact/Jev worlds complete,108 Qwen-derived not-run.
+
+**Healing practical01** (`healing-practical01`)
+Source: `9781739c`.
+
+- **evidence_confidence:** **1/4** — No scenario met the peer-verified utility rule against central append; the observed capped-mesh disadvantage is specific to these reused fixtures and unequal transport mechanisms. Basis: No scenario met the prospective peer-verified utility rule; valid adverse result. Central bulk reads and capped mesh packets are unequal, metadata authentication is supplied, and corpus reuse precludes independent semantic replication. Reporting failure repaired retrospectively without rerunning computation.
+- **sample_size_summary:** Practical01:3 reused corpora × 2 placements × 6 scenarios × 5 policies =180/180 worlds;36 paired event blocks;0 new model calls.
+
+**Healing practical02 capacity diagnostic** (`healing-practical02`)
+Source: `b51e3f1f`.
+
+- **evidence_confidence:** **1/4** — Increasing mesh capacity improves this programmed delivery protocol, but it does not outperform the version-aware central index. Basis: The complete paired cap-4 versus cap-16 diagnostic preserves three reused corpora and all five policies. Capacity buys lower error and better retention through more traffic; unequal central/mesh transport and reused extraction tapes prevent an equal-resource or fresh-model benefit claim. The adverse strong-baseline comparison remains valid.
+- **sample_size_summary:** Practical02: same 3 corpora × 2 placements × 6 scenarios × 5 policies = 180/180 worlds; cap 4→16. Together both capacities yield 360 dependent worlds, 0 new model calls.
+<!-- experiment-evidence:end -->
+
 A 200-curator evidence-repair experiment. **Latest cycle: practical central baselines and a bounded capacity sensitivity, completed as exploratory S0 diagnostics.** [Plan](practical/PLAN.md) · [Cap-4 assessment](practical/POST-01.md) · [Cap-16 assessment](practical/POST-02.md) · [Feedback response](practical/FEEDBACK-RESPONSE.md) · [Earlier reference pilot](PILOT-03-OVERVIEW.md)
 
 ## TLDR

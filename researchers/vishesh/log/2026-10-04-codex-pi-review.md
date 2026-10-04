@@ -21,3 +21,17 @@ Next scientific work belongs to the existing owners: close incomplete attempt le
 Pre-publication pull at d2fee7c8 added the completed but competence-failed resampling sidecar, a structural proof of conflict loss in the majority merge, and an existing next diagnostic. Added a pinned, explicitly scoped refresh and corrected the two current Discussion documents accordingly. Other review items retain the original evidence cutoff.
 
 Published substantive incorporation commit 1f51de2d after preserving concurrent main updates. Final scoped validation: 27 source items, 44 source hashes, 67 new local links/anchors, zero secret-scan findings; repository check zero errors and five existing citation warnings.
+
+## Evidence confidence and sample-size metadata
+
+At the human owner's request, added two visible metadata fields to each discovered study entry: evidence_confidence and sample_size_summary. The editorial 0–4 rubric is scoped to an explicit finding/question and does not represent a probability, an agent's confidence, novelty or launch approval. Valid negative findings can score as highly as positive findings with the same evidence quality.
+
+The source snapshot is 9781739cd06e0c9606ed0ed053bf91b5e2a42b57. The registry has 44 distinct version/cohort assessments covering 33 study IDs, plus the scripted methods example and the heterogeneous-design bank. All 21 researcher experiment registration files are mapped; code-registered studies are included explicitly. Scores and sample summaries were independently cross-checked within this review team against pinned owner reports, not independently replicated. 96 source-file hashes preserve the assessment basis.
+
+The user authorized direct experiment metadata edits throughout the repository; scoped changes in other researchers' entry documents and shared templates implement that request. No inbox reply or model run was made. Frozen registration/configuration bytes, measured results and execution plans are untouched. Two new entry READMEs keep metadata outside a frozen plan and example result report. Future authors update the registry and render/check the fields with the standard-library helper; it does not push fields to the external live hub.
+
+Checks cover full registration coverage, independent-unit wording, source hashes, safe paths, null versus zero scores, missing metadata, duplicate IDs, preservation/idempotence and all cohort boundaries. Existing run and research gates remain unchanged.
+
+The existing lab CI job now runs the metadata coverage/staleness check and nine offline tests. No extra service or execution framework was introduced. Local validation: zero lab errors/five existing citation warnings, 96 verified source hashes, 143 new local links and zero scoped secret-scan findings.
+
+Final pre-publication refresh at b51e3f1f incorporated Phantom qualification, failed Theseus/local Influence gates, completed Healing capacity analysis, the interrupted Haiku discovery cohort and launched-but-unreconciled Sybil followups. Added unrun Antsy v6 separately. Corrected initial Haiku accounting against its already-present S1 postmortem; did not mislabel it a new empirical observation. Final registry:45 assessments,41 entry documents,33 registered/implemented study IDs,21 registration paths; 130 source-version hashes verified. The reader sees each source snapshot, including mixed-cutoff family entries.

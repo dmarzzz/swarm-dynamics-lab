@@ -1,5 +1,14 @@
 # Immune Response
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Untested efficacy question: fact-checking frozen reviewer recommendations improves commander recovery beyond generic caution and identical raw evidence. Basis: Wrong-account interruption is a process failure, preserved separately from three completed outcomes. No treatment effect or resumed authorization follows from partial data; reviewers are shared within raw/checked pairs.
+- **sample_size_summary:** Native diagnostic:16 assigned;3 complete,1 partial,12 unstarted. Four related cases × 2 memory states × 2 paired receipt arms; no completed qualification.
+<!-- experiment-evidence:end -->
+
 ## TLDR
 
 **Current status:** native diagnostic stopped when the user identified the wrong cloud account. Three complete episodes and a partial fourth are preserved; no qualification or treatment-effect result is claimed. Correct Dmarz-account provisioning is required before resuming. [Incident and remediation](reviews/receipt-a2-post.md).

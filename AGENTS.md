@@ -276,6 +276,10 @@ Statuses: `draft`, `proposed` (ready for review), `accepted`, `testing`, `suppor
 - Report every run, including failures. Separate measured results from interpretation.
 - When results land, update the hypothesis status (`supported`, `refuted`) and log it.
 
+### Experiment evidence metadata
+
+Owner requirement, 2026-10-04: every experiment entry, including exploratory studies in researcher notes, must expose `evidence_confidence` and `sample_size_summary` using [the shared rubric](experiments/EVIDENCE-METADATA.md). State the claim, rationale, assessor/date and supporting evidence; distinguish independent sample units from agents/calls and planned counts from observed outcomes. Keep redesigned or model-specific cohorts separate. Update the editable registry and render the fields after analysis; do not modify frozen execution inputs to add reporting metadata. These scores do not replace qualification, uncertainty estimates or research gates.
+
 ### Required pre-run and post-run review
 
 For every experiment attempt (including exploratory S0/S1 work), follow

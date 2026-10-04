@@ -1,5 +1,14 @@
 # Quorum of Mirrors — design, instrument and native qualification
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested. Basis: The predeclared small competence screen passed; two of 16 repeated pairs disagreed. This is qualification, not an effect comparison or general reliability sample. Intended swarm benefit remains untested.
+- **sample_size_summary:** S0: 16 synthetic patterns × 2 identical-request samples = 32/32 valid decisions; 29 correct. S1 not run.
+<!-- experiment-evidence:end -->
+
 QM-2 narrows DM-02 to a useful test: does a source-aware instruction help when a crowd repeatedly sees the same observations and only partial ancestry is available?
 
 - [Plan](PLAN.md): generator, information boundaries, comparisons, metrics, stages and visualization mapping.

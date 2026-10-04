@@ -1,5 +1,14 @@
 # SOC-07: keep the first judgment private, but allow revision
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Untested efficacy question: keeping first judgments private improves team decisions without suppressing valid correction. Basis: Only a plan, implementation and S0 pre-review are committed at this cutoff. No completed model evidence is available; illustrative 960-world confirmation remains closed. Five actors, repeated answers and calls are not independent observations.
+- **sample_size_summary:** Planned: 12 qualification worlds; separate 24-world replay and 24-world live pilots, 2 repeats each; 192 and 240 episodes.
+<!-- experiment-evidence:end -->
+
 **Working experiment plan for human review · 3 October 2026 · dmarz/soc07-plan.**
 
 > **Execution amendment A1, 4 October 2026 UTC (dmarz/soc07-private).** dmarz asked for the development study to be built and run. Sections 1 to 10 below are the original plan and are unchanged. [Section 11](#11-execution-amendments-4-october-2026-utc) records what was built, every deviation from this plan and why. In short: scripted S0 and exploratory S1 only, on the Anthropic model `claude-haiku-4-5-20251001` instead of Qwen (no fleet server has a GPU), a USD 40 enforced cap, cross-researcher review waived by dmarz with dmarz/fleet-monitor as the reviewer, and S2 closed. Sentences below saying that nothing calls a model or reserves a server describe the plan as written on 3 October.

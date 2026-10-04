@@ -1,5 +1,14 @@
 # Antsy v5: is another check worth buying?
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Null-neutral updates fix a specific estimator defect and explicit-cost planning changes deterministic check allocation. Basis: Numerical reconstruction supports the narrow repair; saved purchases do not reveal counterfactual model behavior. D1 changes estimator and action allocation together; assumed check price is not measured economics. No fresh efficacy/generalization claim.
+- **sample_size_summary:** Same70 v4 receipts reused as development diagnostics; D0=2,940 rows,D1=1,400 rows;20 historical calibration receipts;0 new model calls or fresh evaluation receipts.
+<!-- experiment-evidence:end -->
+
 Status: completed exploratory engineering repair; [results and plan assessment](RESULTS.md). Not an accepted hypothesis. Parent: [v4 completed assessment](../antsy-verification-v4/RESULTS.md). This iteration must distinguish an informative check from a change caused merely by the estimator's bookkeeping.
 
 ## Question and decision value

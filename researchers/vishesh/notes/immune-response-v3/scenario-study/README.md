@@ -1,5 +1,14 @@
 # Immune Response
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — The small scenario diagnostics exposed failed team recovery and healthy-service damage by the solo baseline; they do not identify a causal team-versus-solo advantage. Basis: Healthy control failed in A1; A2 often failed repair; solo repaired incidents but damaged healthy control. All are valid adverse decisions, not provider failures. Sequential architecture runs are not a randomized causal team-versus-solo estimate.
+- **sample_size_summary:** Native:4 related scenarios; team A1/A2 each12/12 episodes (3 arms), solo4/4;240 calls. A2 engineering192 episodes includes16 name variants, not192 independent situations.
+<!-- experiment-evidence:end -->
+
 ## TLDR
 
 The service is down. Yesterday's recovery note says to roll back everything. Today a data migration may have made that advice unsafe. Three agent reviewers and an incident commander must recover a small deployment using live compatibility checks, a version catalog and imperfect handoff memory. We compare retaining that memory, clearing it once, and filtering it against an observed control revision. The question is whether memory repair improves decisions beyond what ordinary tool-assisted diagnosis already achieves.

@@ -21,7 +21,11 @@ At the human owner’s request, add consistent evidence-confidence scores and co
 
 ## Done when
 
-- [ ] Define an ordinal evidence-confidence rubric and the sample-size field.
-- [ ] Backfill every discovered study and record coverage, source cutoff and rationale.
-- [ ] Render the metadata in relevant documents and update future templates.
+- [x] Define an ordinal evidence-confidence rubric and the sample-size field.
+- [x] Backfill every discovered study and record coverage, source cutoff and rationale.
+- [x] Render the metadata in relevant documents and update future templates.
 - [ ] Validate coverage, links and repository checks, then commit and push.
+
+## Coverage note
+
+45 source-scoped cohort/design assessments in 41 entry documents, covering all 21 registration files and 33 distinct registered/implemented study IDs, plus a scripted example, an unrun research-design bank and a new unrun Antsy v6 application plan. Primary assessment source 9781739c, with a bounded current-result refresh at b51e3f1f; 130 source-version hashes verified. Independent task units, repeated outcomes, observed/assigned counts and planned counts remain distinct. Score 0 means untested; null means unassessed. No frozen execution input changes or external hub update.

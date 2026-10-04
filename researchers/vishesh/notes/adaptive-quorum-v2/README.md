@@ -1,5 +1,14 @@
 # Antsy
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Untested efficacy question: whether adaptive quorum improves decisions after a competent evidence-integration instrument is established; that prerequisite failed in this cohort. Basis: Preserved failure is evidence about this task/model interface but cannot support a quorum-effect claim. Full tapes and population/deadline variants are dependent within tasks.
+- **sample_size_summary:** 168 arm outcomes across6 task clusters; clean-task qualification failed; noS1.
+<!-- experiment-evidence:end -->
+
 When should a swarm commit to an API choice, and when should it wait for better evidence?
 
 The current implementation is [repair v3](repair-v3/README.md). The review repaired evidence accounting, agent qualification, timing/cost claims, reproducibility and temporal visualization. The guarded local Laya architecture passed 22/22 qualification cases; 384 matched blocks produced 2,688 policy outcomes with zero actor/schema failures after recovery from a documented rendering bug.
