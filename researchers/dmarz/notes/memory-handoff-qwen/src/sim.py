@@ -395,8 +395,10 @@ def well_formed_work(obj):
     return integer_like(obj.get('distinct_origins')) is not None
 
 
-def validate(obj):
-    """Attempt-002 validation, decided in advance (preregistration A5). The call is valid when the
+def validate(obj, expect_work=True):
+    """Attempt-002 validation, decided in advance (preregistration A5). `expect_work=False` is the answer
+    format without working fields (value and sources only): their absence is then not counted, and any
+    other key is an extra key. The call is valid when the
     object has `value` (an integer or null) and `sources` (a list of strings). Tolerated and counted:
     an integer written as 45.0 or "45"; repeated source IDs (removed); `sources` null (read as empty);
     missing, partial or oddly typed working fields; extra keys; any key order; `current` as a string.
@@ -416,13 +418,13 @@ def validate(obj):
     elif not isinstance(sources, list) or any(not isinstance(x, str) for x in sources):
         raise ValueError('sources is not a list of strings')
     unique = list(dict.fromkeys(sources))
-    keys = list(obj); present = [k for k in WORK_KEYS if k in obj]
+    keys = list(obj); present = [k for k in WORK_KEYS if k in obj] if expect_work else []
     records = obj.get('records') if isinstance(obj.get('records'), list) else []
     tolerated = {'value_as_float': int(how == 'float'), 'value_as_string': int(how == 'string'),
                  'duplicate_sources': len(sources) - len(unique), 'sources_null': int(obj['sources'] is None),
-                 'extra_keys': sorted(k for k in keys if k not in ANSWER_KEYS),
-                 'work_missing': [k for k in WORK_KEYS if k not in obj],
-                 'work_malformed': int(not well_formed_work(obj)),
+                 'extra_keys': sorted(k for k in keys if k not in (ANSWER_KEYS if expect_work else ('value', 'sources'))),
+                 'work_missing': [k for k in WORK_KEYS if k not in obj] if expect_work else [],
+                 'work_malformed': int(expect_work and not well_formed_work(obj)),
                  'work_before_value': int(bool(present) and all(keys.index(k) < keys.index('value') for k in present)),
                  'current_as_string': sum(1 for r in records if isinstance(r, dict) and isinstance(r.get('current'), str))}
     return {'value': value, 'sources': unique, 'raw': obj, 'key_order': keys, 'tolerated': tolerated}

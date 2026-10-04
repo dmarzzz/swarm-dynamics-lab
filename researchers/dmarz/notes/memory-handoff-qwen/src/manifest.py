@@ -1,6 +1,6 @@
 """Assignment manifest: per stage the count, every assignment id with its packet hash in dispatch
-order, the number of distinct packets and a digest. Both qualification sets are listed (set a was
-used by attempt 001, set b is used by attempt 002). `python3 src/manifest.py` writes manifest.json; `--check` compares.
+order, the number of distinct packets and a digest, for the scripted stage and for each model's
+paid stages. Both qualification sets are listed. `python3 src/manifest.py` writes manifest.json; `--check` compares.
 """
 import argparse
 import hashlib
@@ -23,15 +23,36 @@ def stage_entry(rows):
 
 
 def build():
-    stages = {stage: stage_entry(study.assignments(stage)) for stage in study.STAGES}
-    sets = {which: stage_entry(study.qualification_fixtures(which)) for which in ('a', 'b')}
-    digest = hashlib.sha256(json.dumps({**{s: stages[s]['digest'] for s in study.STAGES}, **{'qualification_' + w: sets[w]['digest'] for w in sets},
-                                        'system': hashlib.sha256(study.SYSTEM.encode()).hexdigest()}, sort_keys=True).encode()).hexdigest()
+    """`stages`: the scripted stage and the first model's paid stages. `models`: per model its batches,
+    its system message hash and, for a later ladder model, its own paid stages (its packet hashes use
+    its own system message). The user messages are the same for every model."""
+    ladder = study.model_ladder(); first = ladder[0]
+    stages = {stage: stage_entry(study.assignments(stage, first)) for stage in study.STAGES}
+    sets = {which: stage_entry(study.qualification_fixtures(which, first)) for which in ('a', 'b')}
+    models = {}
+    for name in ladder:
+        m = study.spec(name)
+        models[name] = {'provider': study.provider_name(name), 'answer_format': m['answer_format'], 'qualification_set': m['qualification_set'],
+                        'batches': {stage: (study.design()['scripted_batch'] if stage == 'S0' else f'{stage.lower()}-{m["attempt"]}{m["tag"]}') for stage in study.STAGES},
+                        'system_sha256': hashlib.sha256(study.system(name).encode()).hexdigest()}
+        if name != first:
+            models[name]['stages'] = {stage: stage_entry(study.assignments(stage, name)) for stage in ('P0', 'Q0', 'S1')}
+    parts = {**{s: stages[s]['digest'] for s in study.STAGES}, **{'qualification_' + w: sets[w]['digest'] for w in sets},
+             **{f'{name}:{s}': e['digest'] for name, m in models.items() for s, e in m.get('stages', {}).items()},
+             **{f'{name}:system': m['system_sha256'] for name, m in models.items()}}
+    digest = hashlib.sha256(json.dumps(parts, sort_keys=True).encode()).hexdigest()
     return {'study': study.EXPERIMENT, 'format': 'one "<assignment id> <sha256 of the system message and user message>" per line, dispatch order',
             'source_hash': study.source_hash(), 'digest': digest,
-            'system_sha256': hashlib.sha256(study.SYSTEM.encode()).hexdigest(),
-            'qualification_set': study.design()['qualification']['set'],
-            'attempt': study.design()['attempt'], 'stages': stages, 'qualification_sets': sets}
+            'system_sha256': hashlib.sha256(study.system(first).encode()).hexdigest(),
+            'model_ladder': ladder, 'stages': stages, 'qualification_sets': sets, 'models': models}
+
+
+def entry(reference, stage, name=None):
+    """The manifest entry of one stage for a model (default: this chain's model)."""
+    name = name or study.model()
+    if stage == 'S0' or name == reference['model_ladder'][0]:
+        return reference['stages'][stage]
+    return reference['models'][name]['stages'][stage]
 
 
 def render(manifest):
