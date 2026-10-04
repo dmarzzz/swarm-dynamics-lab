@@ -1,6 +1,6 @@
 # Experiment setup record: market-split-opus v1
 
-Status: Phase 1 complete; paid stages admitted by the reviewer on 2026-10-04 and chained on their software gates. This record is not launch authorization for a paid stage. It follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [the operations guide](../../../../tooling/agent-experiments/OPERATIONS.md). Written before implementation was run on the server and updated as gates produce evidence.
+Status: complete, 2026-10-04. This record is not launch authorization for a paid stage. It follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [the operations guide](../../../../tooling/agent-experiments/OPERATIONS.md). Written before implementation was run on the server and updated as gates produce evidence.
 
 ## Ownership and question
 
@@ -23,7 +23,7 @@ Status: Phase 1 complete; paid stages admitted by the reviewer on 2026-10-04 and
 | G3 Admission, i0-001 / q0-001 / s1-001 | pass, subject to each software gate | [phase2-pre](reviews/phase2-pre.md), per-attempt files, and the reviewer's go in [phase2-go](reviews/phase2-go.md) (same-researcher check, not independent review). Issue O3 resolved there | Chain I0, Q0, S1 |
 | G4 Qualification | pass | [i0-001-post](reviews/i0-001-post.md) 6/6; [q0-001-post](reviews/q0-001-post.md) 4/4 at 100% of the reference, floor 75%; hashes match the S1 source. 2026-10-04 08:05, dmarz/market-split-opus | S1 running |
 | G5 Reconciliation, s0-fleet-001 | pass | [s0-fleet-001-post](reviews/s0-fleet-001-post.md): 6 assigned, 6 done, 12 valid episodes, 42 artifacts hash-verified, 0 calls | None |
-| G5 Closeout of the study | pending | | After the last stage |
+| G5 Closeout of the study | pass | [s1-001-post](reviews/s1-001-post.md), [RESULTS](RESULTS.md); 126 artifacts read back, exact replay 864/864, ledger 902 priced calls / USD 15.344524; workers stopped; claim released (deployment.md). 2026-10-04, dmarz/market-split-opus | None; nothing further authorized |
 
 ## Design and instrument index
 
@@ -58,8 +58,8 @@ Status: Phase 1 complete; paid stages admitted by the reviewer on 2026-10-04 and
 | s0-fleet-002 / s0-fleet-001 | S0 scripted, amended design | [pre](reviews/s0-fleet-002-pre.md) | 6 / 6 / 6 done | [post](reviews/s0-fleet-002-post.md): advance |
 | i0-001 / s0-fleet-002 | I0 | [pre](reviews/i0-001-pre.md), [phase2-pre](reviews/phase2-pre.md) | 6 / 6 / 6 valid | [post](reviews/i0-001-post.md): advance |
 | q0-001 / i0-001 | Q0 | [pre](reviews/q0-001-pre.md) | 2 bundles, 4 episodes, 32 calls, all valid | [post](reviews/q0-001-post.md): advance |
-| s1-001 / q0-001 | S1 | [pre](reviews/s1-001-pre.md) | 18 assigned; running | |
+| s1-001 / q0-001 | S1 | [pre](reviews/s1-001-pre.md) | 18 / 18 / 18 done; 36 graded, 36 analyzed | [post](reviews/s1-001-post.md): complete-valid-result |
 
 ## Closeout
 
-Not started. The claim is released after the last stage's artifacts are verified and the post-run review is pushed. `sim-test-01` is an existing shared test server and is not destroyed by this study.
+Execution complete; response validity 36/36; qualification passed; scientific conclusion: the pilot's result replicates with this configuration on six fresh markets (exploratory); process: plan and pre-run review on `main` before any model call, same-researcher review only; reporting: results, post-run review, figure and records filed. Actual cost USD 15.344524 over 902 priced calls; no outstanding reservation. Nothing missing or excluded. Workers stopped; claim released after uploads were verified. `sim-test-01` is an existing shared test server and is not destroyed by this study; its study directory, including the private ledger, is left in place. Next action: none without a new instruction.

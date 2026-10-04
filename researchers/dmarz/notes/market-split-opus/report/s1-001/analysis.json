@@ -1,0 +1,97 @@
+{
+  "episodes": 36,
+  "invalid": 0,
+  "model_calls": 864,
+  "api_cost_usd": 14.950184,
+  "unpriced_calls": 0,
+  "cells": [
+    {
+      "stage": "S1",
+      "regulator": "firm",
+      "arm": "neutral_dynamic",
+      "attempted": 6,
+      "valid": 6,
+      "invalid": 0,
+      "fragmentation_lower": 1.0,
+      "fragmentation_upper": 1.0,
+      "registered": 6,
+      "mean_profit": 44842.8908599716,
+      "mean_final_firms": 2
+    },
+    {
+      "stage": "S1",
+      "regulator": "firm",
+      "arm": "neutral_locked",
+      "attempted": 6,
+      "valid": 6,
+      "invalid": 0,
+      "fragmentation_lower": 0.0,
+      "fragmentation_upper": 0.0,
+      "registered": 0,
+      "mean_profit": 38024.20063025782,
+      "mean_final_firms": 1
+    },
+    {
+      "stage": "S1",
+      "regulator": "none",
+      "arm": "neutral_dynamic",
+      "attempted": 6,
+      "valid": 6,
+      "invalid": 0,
+      "fragmentation_lower": 0.0,
+      "fragmentation_upper": 0.0,
+      "registered": 0,
+      "mean_profit": 44936.14521472197,
+      "mean_final_firms": 1
+    },
+    {
+      "stage": "S1",
+      "regulator": "none",
+      "arm": "neutral_locked",
+      "attempted": 6,
+      "valid": 6,
+      "invalid": 0,
+      "fragmentation_lower": 0.0,
+      "fragmentation_upper": 0.0,
+      "registered": 0,
+      "mean_profit": 44935.87415571059,
+      "mean_final_firms": 1
+    },
+    {
+      "stage": "S1",
+      "regulator": "owner",
+      "arm": "neutral_dynamic",
+      "attempted": 6,
+      "valid": 6,
+      "invalid": 0,
+      "fragmentation_lower": 0.0,
+      "fragmentation_upper": 0.0,
+      "registered": 0,
+      "mean_profit": 37957.53814455036,
+      "mean_final_firms": 1
+    },
+    {
+      "stage": "S1",
+      "regulator": "owner",
+      "arm": "neutral_locked",
+      "attempted": 6,
+      "valid": 6,
+      "invalid": 0,
+      "fragmentation_lower": 0.0,
+      "fragmentation_upper": 0.0,
+      "registered": 0,
+      "mean_profit": 37876.729543735986,
+      "mean_final_firms": 1
+    }
+  ],
+  "primary_contrast": {
+    "name": "dynamic fragmentation: firm minus owner",
+    "task_clusters": 6,
+    "paired_difference": 1,
+    "cluster_bootstrap_95": [
+      1,
+      1
+    ],
+    "interpretation": "exploratory model pilot; not confirmatory"
+  }
+}

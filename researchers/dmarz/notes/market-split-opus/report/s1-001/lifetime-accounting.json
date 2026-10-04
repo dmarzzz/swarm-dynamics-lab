@@ -1,0 +1,30 @@
+{
+  "lifetime_calls": 902,
+  "lifetime_priced_calls": 902,
+  "lifetime_cost_usd": 15.344524,
+  "max_attempted_calls": 950,
+  "study_usd_cap": 160,
+  "input_tokens": 2034536,
+  "output_tokens": 360319,
+  "stop_reasons": {
+    "end_turn": 902
+  },
+  "ledger_sha256": "62e6919ee2841957a7d1159b9014a801bdd9fb18d666d4037e89681b313abaef",
+  "attempts": {
+    "i0-001": {
+      "attempted_calls": 6,
+      "priced_calls": 6,
+      "api_cost_usd": 0.060992
+    },
+    "q0-001": {
+      "attempted_calls": 32,
+      "priced_calls": 32,
+      "api_cost_usd": 0.333348
+    },
+    "s1-001": {
+      "attempted_calls": 864,
+      "priced_calls": 864,
+      "api_cost_usd": 14.950184
+    }
+  }
+}

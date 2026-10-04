@@ -1,0 +1,56 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "claude",
+    "model": "claude-fable-5-1",
+    "prompt": "Run the Opus replication of the market-splitting pilot on fresh markets and report results and analysis next to the Sonnet pilot's."
+   },
+   "internalParameters": {
+    "commit": "cd5cb44baa2581338fa2dbb8886a6aaedf18781b-dirty",
+    "session": "claude:524ee43c-dbcf-45b8-bc5a-1aaf5a371d4f"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "82dbc143d4f10291bdf0477b640ca936da07a2b51a270c4e3fb47c624130bf95"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/report/src/plot.py"
+    },
+    {
+     "digest": {
+      "sha256": "2fe5f956f3939bc17c3fffcd7babf27ae68560e47c16a2acf2696ccb2b2cdb80"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/s1-001-collected/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "gitCommit": "cd5cb44baa2581338fa2dbb8886a6aaedf18781b"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/claude"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T10:14:01Z",
+    "invocationId": "claude:524ee43c-dbcf-45b8-bc5a-1aaf5a371d4f",
+    "startedOn": "2026-10-04T10:14:01Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "cd26789352a94c7e84deec54ac9600b0275f798817b9e491611eefa24be885fa"
+   },
+   "name": "artifacts/market-split-opus-s1-001/market-split-opus-s1-001-v1.png"
+  }
+ ]
+}

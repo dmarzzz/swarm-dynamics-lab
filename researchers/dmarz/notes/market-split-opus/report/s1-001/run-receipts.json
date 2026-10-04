@@ -1,0 +1,1226 @@
+[
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "dbc40f15aff63a525f1e6263794433ff9b15c9aba5277e87b6b3a4edbb7d9b42"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "4f4e4a4d2c7b7e3538e9d8cb44878038defa5dee225158bc112839b644750643"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "18dd25097f40b8ee59d9b8382b399ed7e420c50d0620b5404ae8eb796cc4def4"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "abba3b5678bbce1d78920091d2b0a056509d9912b9b5b2d2dcccb41aeab95ad0"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "e3c8374c73d7c2cb8633e1112b5ae594640a47c6050c7a978b11c55b347636e6"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "b1d4b7f537f5e9a262aea3ade170eccafc665648273b6f43b4205f77303cd108"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 1.053856,
+      "episodes": 2,
+      "firms_dynamic": 1,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 0,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 34139.75379115859,
+      "profit_locked": 34191.57784046431,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_locked",
+        "neutral_dynamic"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "owner",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 112,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/03c67dd08417",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "98b3152291a15d9b96770d011661305af3876ca825af4422f0fa33429f647835"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "eadcced0a9ef3fd52c7cf87131ea68a13ee0acdd66bfa23157a27b82282e50ef"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "c3e9d5750d20f5561badea69568b9472a3d0112561358aff1ce01064e873101b"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "188a1c2f32a7f6a6c7b2cb2ef7c063df8f2fd4f59170ed4b2d12984e35d0c254"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "6be7ba07f07a48f7620eb61d325e4908a0f0e162890405038262bfd1048d7318"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "63c6e6213eeffeefbabb35b913de8028284135d8f123f4aa598c1f605aa541c6"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 1.073872,
+      "episodes": 2,
+      "firms_dynamic": 1,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 0,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 39694.33878344998,
+      "profit_locked": 39403.212801777365,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_locked",
+        "neutral_dynamic"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "owner",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 115,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/18c26e2f7bda",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "75eb512c730f9bc99f15de278b76b195a8a216255160dda6ebade960f8515d99"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "282196d91d45fe65650ebbb66510ea793186cf9521a47f7a14f002e0005d43c6"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "b29f4c5b4d7df1b9272c7590758f1aacc188f2f5fb6dc237d7e1d5da026fa1d3"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "20c11e72045173ea1acfc9cc1cb0c376b6491fdeeb6acd55f548e74761cdacf9"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "1ef47a15a1e426e7f0d23db6a623eae3c2c8c31911ea79c7900fff473da0bdbf"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "b32d9bd1460a856c5046d984eee6f2b5542d39b8751ff75afe93783fa2d3f71d"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 0.545176,
+      "episodes": 2,
+      "firms_dynamic": 1,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 0,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 40432.12148322113,
+      "profit_locked": 40430.49512915288,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_dynamic",
+        "neutral_locked"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "none",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 112,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/275b28c99c05",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "c12db1a0c4df661487da699bec2ee9cc8d36070eac2e0225766cb5046cbcc87f"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "f90424bd071f4d9d3376e9aeaf71e1d677edab95b725a4462bab8d6f477a3ce2"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "6d9f3512f6928335f4cea49b163cf408c9e3aaf97e49320eb988115baed81bdf"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "f41a1c1460de682d9d05159b1670abafb1458d121b634f8b5385e2151a6ed7b6"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "34aed842e2346c18e56096a6f1a9ca89ac4a5eb8018118787870e1063deda6c1"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "b69f0ac24fa56a68c22523f56a2bd6b170dab545999c4683b3f2cb2ba63d7481"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 1.016072,
+      "episodes": 2,
+      "firms_dynamic": 1,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 0,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 43785.8746591927,
+      "profit_locked": 43778.1364529884,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_dynamic",
+        "neutral_locked"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "owner",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 113,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/2a50d0c1a6cb",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "aa75dc636f0ce37d2ce4a3cd3cb26381305ace4be564471fcb48ffae0f1ceb20"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "a566fe3977d983de33a57e6cd2b868cc999bbded79918cb15e9bdee6e7b48a99"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "523f327beb3c8f63300e125611c69d2c42de879f568d839fa870bc6f720727c6"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "53a7412b0070d9bfd78c6187439fce6477e9ea494dbb5603bac5f9f07b1ad3f7"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "e4544f6793e0ef60d2c996d657393417ba79342056f1f1d120409dbb2938195d"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "59d9460fda0057410a65f41c56174c98b99c72e7f45579c65f660037ed3b45d2"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 0.5483439999999999,
+      "episodes": 2,
+      "firms_dynamic": 1,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 0,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 40347.894153560475,
+      "profit_locked": 40347.894153560475,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_dynamic",
+        "neutral_locked"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "none",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 114,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/538ef8c51a33",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "258ee48ac697e4c1e7589aa4024d31310e03b961ab347b90f1ad898a7794ced5"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "39483fd5058e4f5df632eab74fa9222e844a1371256895c6c38191373a6f501d"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "9978841761958f37a6c03bc7884fe9feb5ed37a1072a171e8c9614915c73c8f2"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "78b153a8ceb893d59116744b813addee417f2c63369e6fe00f8129702acf4aca"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "ff08ccbe4ede0cdf1cc8898392dbff7c545c65b6a4981d90ab2437cb94b7834e"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "4e38c496bf7fed1355da9d90d709455fc69cbea7f4976ea08aa6855421f15c6e"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 0.908656,
+      "episodes": 2,
+      "firms_dynamic": 2,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 1,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 47292.91777332449,
+      "profit_locked": 39720.047361589925,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_locked",
+        "neutral_dynamic"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "firm",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 115,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/59c131b4ce02",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "ad4eba91d31497df44671df765b7382e7580f489e1e473173787882cb415205c"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "c35c1b9f8fae2a5a18b6e57f31c07198e555427cb45b0f5ba041a8c1010289c0"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "d82721ff8ff624efc38f79592a207a8f5e028f4a2d0cebdc08eeb8209eb8daa6"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "67bbc402232af019a2cb7e40c5e0909e556312e3b1a0bb24fe4e29a0f451ef3e"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "4e96bd13577cdb98a7567f0ad4d5911ca6aa707349491bee38f1a77b8286631c"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "c6a60c61ff67bf8ec3f92f727d08ee2229ce08629d065faf442085f66193486f"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 0.9001,
+      "episodes": 2,
+      "firms_dynamic": 2,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 1,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 47888.90174529339,
+      "profit_locked": 40134.50305744533,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_locked",
+        "neutral_dynamic"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "firm",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 110,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/61197facf7a7",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "8abd8bb038745bd6a2a163cb4cbb8853f5a5a8c18411965090ca737821fced9d"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "baf28c8415986d4dbcf014ec15a99de0bf6e2195df3c4b070226b6f4d49be7d0"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "0f0075994ceff4147ef8731f94a19c386ad12a51e0595a73ee2716761128eaec"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "2cd4473cb360288d91a6587c88553cf9d75ea666231ceb8a9379006dde852b39"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "0f3b012bb3c10096d3fba4b56bb4f7f58d01a42564cd7b6b97e49c3010170afb"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "21e9388fda83406410db1e45fe5ef83a1dc97ba371bc5c07e5f05ee641e5c321"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 0.552328,
+      "episodes": 2,
+      "firms_dynamic": 1,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 0,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 37632.51483462408,
+      "profit_locked": 37632.51483462408,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_locked",
+        "neutral_dynamic"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "none",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 111,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/6ee800b12180",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "f8130b933945440ee8fb8c914c5cfb6f263450b3a616b2a41616dd48d60355e3"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "9e91e1380bdff0a16345b3ae7d552f2748084ba8d9ecc8c740f2d25323abf5ee"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "012e7f1efadae5089afdb86ad04cc93bd387abcb53a378a15ae930df75312479"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "b6dd91b36ca1d85fa952fbb6791016a52fedc31aaf2414667428df69cc941b43"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "62174c70dbe1178b1b7b90bf3a537b542e12524ae542a15a219d8e10a7f31af1"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "9ae2013ee0a7c053c661cb985e422f22e024027e7e9411b3bc69dce09ed08ef5"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 0.919364,
+      "episodes": 2,
+      "firms_dynamic": 2,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 1,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 40340.12148322113,
+      "profit_locked": 34418.423954967766,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_locked",
+        "neutral_dynamic"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "firm",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 112,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/80eff8db93d9",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "22a43c21cd3343abbc5043c91925df9702a7b11d25ff65b99597c58dc9783ad0"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "36cdba583b528e9ff0e8cf2cc2dc0073a5ea87313825fa47270b52f53328aefc"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "f267e8bc8279d8e865dd02a0b4d705881d1b91d458c98a9ac552620b191fcfea"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "d14c056e8c6f0b00c8ddf1d62dbc6289732c1037478d9b9591055ccc17e1c9d5"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "6cdc3c100171ed67399bb6eea2326eeb456288e6f9a0713abc5002df1b454441"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "2d2f93f1098f0aa60b249e7852d9867da8a3d696a12e473431151843e639e33e"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 0.553344,
+      "episodes": 2,
+      "firms_dynamic": 1,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 0,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 47980.90174529339,
+      "profit_locked": 47980.90174529339,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_locked",
+        "neutral_dynamic"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "none",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 110,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/8717e822d88d",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "5f03035196127074c3f3bb802048d2ae19dcdc8f63c06e2c74dd4de00574252c"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "60ab9a9d74b872a1a3f884e86fe40f775cdffcf27773e07e8a1fb8a7b328f1c8"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "67372ed0f2a91bcc64f16f69f5528eab6928f098da15ca398b2e1fc98b05d11b"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "98fe2f40a9b600672982af39a3dc97f0edd1569badb25361ba3a24549c2de2a2"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "dcea87c7192adcd1659b1a6a882e6e23977778bb30edd14a6d506f0297013c6a"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "dbf5f90a9511ee0400b92ad0919e77e14b239895740453a90e986836a9110b37"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 1.03314,
+      "episodes": 2,
+      "firms_dynamic": 1,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 0,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 36390.96913393402,
+      "profit_locked": 36331.86546329334,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_dynamic",
+        "neutral_locked"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "owner",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 114,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/878f9d30f1ea",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "1058c35782aef7ecde2ec529d8310a0f5ebf8c7999af5335a36812b01b612281"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "c08e4dc6c01fd680aeadc8fb0db82a252f69a885ac78b26d3d1d87d10de3c9ef"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "e9c587925bb19a7f572ea2c438b5363bf61f2e4e9c739a48783c8240c2afcb1d"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "4bd495764974ae52a3574eb2dd23f5ba23f91aaf1bf52a611d2f2c2919b7f941"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "a7a0c5a9c267cf3f90b2b6f306f6331e831933a451a532331fedb866b61c36d4"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "5ebe8d1ad3152f4b2007f098e0f0481fa12b1556caf1eb95097e2218cd2c2927"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 0.996232,
+      "episodes": 2,
+      "firms_dynamic": 1,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 0,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 33700.75785952582,
+      "profit_locked": 33560.74787145342,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_dynamic",
+        "neutral_locked"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "owner",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 111,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/a7156e0a187c",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "af7e0b81254d1c52baf043fcbc849ea46ffd986bac2f60c5cdeab284b3f064c3"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "8217a93ec7345507481e26c81382ff08b02a18ae7f043eb9bbb00287046b6ee3"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "18bd65a1881e7e75e314edf08b3c09c34779b047fbff0fc10b0053a0ad12c38e"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "df435e5318ce63e8e1922025b7823e097f6131b1d531e2017005d9d52f97f0c8"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "c028fe869d32b6bb6ef27206e6f51c720cbed65f5161b28d6ffe25d8793a38b7"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "81929ac6d07cf9e3ba6b1b1dd966f98d0cce517de70998135a6f4c469e208122"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 0.543972,
+      "episodes": 2,
+      "firms_dynamic": 1,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 0,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 47392.44390182668,
+      "profit_locked": 47392.44390182668,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_dynamic",
+        "neutral_locked"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "none",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 115,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/baaf6613edcd",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "5425d6d712a0b307ba6a466553d574d0a0679804e75a23c619ddfc318a9384df"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "9d5c898011b3ba87815c27331afc366bf77a89dbb449fc356dc1d32a216409f2"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "5a2f8b6f0ee103b6cbca35d0735176874f918c1320924128905dd546a8e262f7"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "56f85f1675a7769e5ca9bdba4355858352f8bf9e3e26567f4f18c60dcdbc1006"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "a5004c553d9ebdb96fe2370eb31bffeaa61c97adba08d9bb55f8f0897a890b5e"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "a978207ebef500c9d2d00c214ea7cdcc879e1753157857fc2f85ba5433947c1a"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 0.902312,
+      "episodes": 2,
+      "firms_dynamic": 2,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 1,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 37540.51483462408,
+      "profit_locked": 33687.22922343038,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_locked",
+        "neutral_dynamic"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "firm",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 111,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/cf41a34f3acb",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "9f0593ef1b9636c948f2dd1f16dcd532b9225efa4848c9307e8361c964a672ff"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "98d88b56fd8b595cc3245c46dc51b0cd8208775323122054085ae4e8b54b6f76"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "b49581d4cc981fff623c3d1520f21337aaa87d8b5eb7b7568b54e79e1d034a57"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "d44ec4f674a6658109f80c76e86384c7db1b58edf8b0c159d036364b281bb6dd"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "6f895e1318b931b8c2e5a6901c9b053ef66ae385ea7264d1184b01aa52f5c88f"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "7281ad578398db5ed1ac5d2aaf0c18fec550d9def4c488a0925018fec5f35cf1"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 0.547476,
+      "episodes": 2,
+      "firms_dynamic": 1,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 0,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 55830.99516980603,
+      "profit_locked": 55830.99516980603,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_dynamic",
+        "neutral_locked"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "none",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 113,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/d8bcee6d1b51",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "0e88d5b7656fab32877dcf6e5e58cc85438174084905558803b51de38fe8da0e"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "7e79abbf8c9021bd73b0269a39ccefd1cea828f8af0cd51f202aa75c8c8208e5"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "a2d95c6905342e30917b50bd273a4cfd070e4105e01189eb200d6f59d1a6cad5"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "2cda741c12c5b9f10f2b53e69eee7e9f102482318414e652b8b5bc6190fe378e"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "d255e5488ebe072b6472d3e20352f6ffcf293389a66ea8279d46a24c913a0430"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "fcf15e123f7d6342cb3d73b39055c1c8fa676eb72fa2398c033844ff863c694f"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 0.927228,
+      "episodes": 2,
+      "firms_dynamic": 2,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 1,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 55738.99516980603,
+      "profit_locked": 43819.638322627885,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_locked",
+        "neutral_dynamic"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "firm",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 113,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/da38e8b9873b",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "e1a117f90215618e0b887ed1462ed417f9d06f9e92aeb5bd894499c73780bdde"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "44e2475afdc87ab038089249a7596117a2910aa8844875db78c65a90e562185a"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "47f402bd3740459741fff1251843da02240999dc72fcc8cb6cb98e05d19d12ac"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "3730ee1920580f86a0aa06c2874ec48122c9142163e6ce9fa57c65e9e9b3c1c5"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "6c96a4ca2c1f477ee69f524a85b7d10d0a8814741567b084cb01a603755bdfc9"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "50238dff301b9b32e41824095db024f5a5e04627e788890271385c2a7cd4abe7"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 0.875292,
+      "episodes": 2,
+      "firms_dynamic": 2,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 1,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 40255.894153560475,
+      "profit_locked": 36365.36186148565,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_dynamic",
+        "neutral_locked"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "firm",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 114,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/e0504bce830e",
+    "status": "done"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "c7ee0c8331a4850efa50f08c70eb1a79371a7537f39decdf0516702c8b97fd8e"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "2e05f8724791222ed70b58e47a2c3147a69942c397c48d18ee8a698c924deff8"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "2add0437386c4504571013dc340f9654f2b0d78663f421005c85df60f13815f3"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "7cf63ef0c00b409385a5c136f1cff237a1b14e4ae78826c7f8fc4dc5bdee2611"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "60f2355011d28154ccfdb79ce55cb319cdf7d7649163694b2662751ba70a50d7"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "e4f4f63b2a881dc8666fa261272713a106e78e6587c0cf72c17609423fcab8da"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 1.05342,
+      "episodes": 2,
+      "firms_dynamic": 1,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 0,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 40033.534640041034,
+      "profit_locked": 39994.8368324391,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_dynamic",
+        "neutral_locked"
+      ],
+      "attempt_id": "s1-001",
+      "backend": "anthropic",
+      "code": "b097331b874f2dcab2b31a830e54cdc39f9d321d",
+      "design_sha256": "8d952af0314ab58835c93b90eb0d7b4c2ccc8497c64170f7948596d8393a687d",
+      "engine_sha256": "56c67cd08ea1a99a55c1a31dea8899663cbe91aae30970e384dbf39cc39c047b",
+      "model": "claude-opus-5-5",
+      "registration_fee": 20,
+      "regulator": "owner",
+      "rounds": 24,
+      "seed": 41,
+      "stage": "S1",
+      "task_id": 110,
+      "threshold": 0.38
+    },
+    "run": "market-split-opus/e180c27ca67e",
+    "status": "done"
+  }
+]

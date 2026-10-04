@@ -1,0 +1,278 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "claude",
+    "model": "claude-fable-5-1",
+    "prompt": "Run the Opus replication of the market-splitting pilot on fresh markets and report results and analysis next to the Sonnet pilot's."
+   },
+   "internalParameters": {
+    "commit": "cd5cb44baa2581338fa2dbb8886a6aaedf18781b-dirty",
+    "session": "claude:524ee43c-dbcf-45b8-bc5a-1aaf5a371d4f"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "c0a6a74ec361b40f144c7547059c8c1950462042a684178138f40116a0c89cbf"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/report/src/archive.py"
+    },
+    {
+     "digest": {
+      "sha256": "5d2be6e6e96fb9290dd788c64934cce9d304995b553fabc608034cc635f58765"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/report/src/verified.py"
+    },
+    {
+     "digest": {
+      "sha256": "e1c6a24c5c3b7659c2a7141fabacfa647b994d35a35062a7b268b9e4f627a9d6"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/s1-001-verified.json"
+    },
+    {
+     "digest": {
+      "sha256": "abba3b5678bbce1d78920091d2b0a056509d9912b9b5b2d2dcccb41aeab95ad0"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__03c67dd08417/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "e3c8374c73d7c2cb8633e1112b5ae594640a47c6050c7a978b11c55b347636e6"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__03c67dd08417/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "188a1c2f32a7f6a6c7b2cb2ef7c063df8f2fd4f59170ed4b2d12984e35d0c254"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__18c26e2f7bda/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "6be7ba07f07a48f7620eb61d325e4908a0f0e162890405038262bfd1048d7318"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__18c26e2f7bda/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "20c11e72045173ea1acfc9cc1cb0c376b6491fdeeb6acd55f548e74761cdacf9"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__275b28c99c05/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "1ef47a15a1e426e7f0d23db6a623eae3c2c8c31911ea79c7900fff473da0bdbf"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__275b28c99c05/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "f41a1c1460de682d9d05159b1670abafb1458d121b634f8b5385e2151a6ed7b6"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__2a50d0c1a6cb/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "34aed842e2346c18e56096a6f1a9ca89ac4a5eb8018118787870e1063deda6c1"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__2a50d0c1a6cb/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "53a7412b0070d9bfd78c6187439fce6477e9ea494dbb5603bac5f9f07b1ad3f7"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__538ef8c51a33/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "e4544f6793e0ef60d2c996d657393417ba79342056f1f1d120409dbb2938195d"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__538ef8c51a33/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "78b153a8ceb893d59116744b813addee417f2c63369e6fe00f8129702acf4aca"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__59c131b4ce02/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "ff08ccbe4ede0cdf1cc8898392dbff7c545c65b6a4981d90ab2437cb94b7834e"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__59c131b4ce02/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "67bbc402232af019a2cb7e40c5e0909e556312e3b1a0bb24fe4e29a0f451ef3e"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__61197facf7a7/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "4e96bd13577cdb98a7567f0ad4d5911ca6aa707349491bee38f1a77b8286631c"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__61197facf7a7/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "2cd4473cb360288d91a6587c88553cf9d75ea666231ceb8a9379006dde852b39"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__6ee800b12180/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "0f3b012bb3c10096d3fba4b56bb4f7f58d01a42564cd7b6b97e49c3010170afb"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__6ee800b12180/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "b6dd91b36ca1d85fa952fbb6791016a52fedc31aaf2414667428df69cc941b43"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__80eff8db93d9/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "62174c70dbe1178b1b7b90bf3a537b542e12524ae542a15a219d8e10a7f31af1"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__80eff8db93d9/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "d14c056e8c6f0b00c8ddf1d62dbc6289732c1037478d9b9591055ccc17e1c9d5"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__8717e822d88d/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "6cdc3c100171ed67399bb6eea2326eeb456288e6f9a0713abc5002df1b454441"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__8717e822d88d/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "98fe2f40a9b600672982af39a3dc97f0edd1569badb25361ba3a24549c2de2a2"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__878f9d30f1ea/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "dcea87c7192adcd1659b1a6a882e6e23977778bb30edd14a6d506f0297013c6a"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__878f9d30f1ea/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "4bd495764974ae52a3574eb2dd23f5ba23f91aaf1bf52a611d2f2c2919b7f941"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__a7156e0a187c/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "a7a0c5a9c267cf3f90b2b6f306f6331e831933a451a532331fedb866b61c36d4"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__a7156e0a187c/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "df435e5318ce63e8e1922025b7823e097f6131b1d531e2017005d9d52f97f0c8"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__baaf6613edcd/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "c028fe869d32b6bb6ef27206e6f51c720cbed65f5161b28d6ffe25d8793a38b7"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__baaf6613edcd/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "56f85f1675a7769e5ca9bdba4355858352f8bf9e3e26567f4f18c60dcdbc1006"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__cf41a34f3acb/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "a5004c553d9ebdb96fe2370eb31bffeaa61c97adba08d9bb55f8f0897a890b5e"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__cf41a34f3acb/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "d44ec4f674a6658109f80c76e86384c7db1b58edf8b0c159d036364b281bb6dd"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__d8bcee6d1b51/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "6f895e1318b931b8c2e5a6901c9b053ef66ae385ea7264d1184b01aa52f5c88f"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__d8bcee6d1b51/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "2cda741c12c5b9f10f2b53e69eee7e9f102482318414e652b8b5bc6190fe378e"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__da38e8b9873b/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "d255e5488ebe072b6472d3e20352f6ffcf293389a66ea8279d46a24c913a0430"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__da38e8b9873b/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "3730ee1920580f86a0aa06c2874ec48122c9142163e6ce9fa57c65e9e9b3c1c5"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__e0504bce830e/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "6c96a4ca2c1f477ee69f524a85b7d10d0a8814741567b084cb01a603755bdfc9"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__e0504bce830e/calls.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "7cf63ef0c00b409385a5c136f1cff237a1b14e4ae78826c7f8fc4dc5bdee2611"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__e180c27ca67e/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "60f2355011d28154ccfdb79ce55cb319cdf7d7649163694b2662751ba70a50d7"
+     },
+     "uri": "researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__e180c27ca67e/calls.jsonl"
+    },
+    {
+     "digest": {
+      "gitCommit": "cd5cb44baa2581338fa2dbb8886a6aaedf18781b"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/claude"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T10:14:04Z",
+    "invocationId": "claude:524ee43c-dbcf-45b8-bc5a-1aaf5a371d4f",
+    "startedOn": "2026-10-04T10:14:04Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "98a39caa04961889059671937aa8b8ef752e31cc549c0e63cf11b949f0a21167"
+   },
+   "name": "artifacts/market-split-opus-s1-001-records/market-split-opus-s1-001-records-v1.zip"
+  }
+ ]
+}
