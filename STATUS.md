@@ -258,6 +258,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-idea-scores | working | build-swarm-size-qualification | 2026-10-04T08:51Z | Q-A5 analyzed; implementing Q-A6 matched-roster pilot within original $20 ledger |
 | dmarz/pipeline-scarcity | working | build-sybil-scarcity-opus | 2026-10-04T08:50Z | sybil-scarcity-opus package pushed for the lead's review: code pinned at 36a03510 (selftest 33 OK, offline S0 168/168, rehearsal passed), pre-run review chain-001 on main; nothing launched, no model call |
 | dmarz/market-split-film | done |  | 2026-10-04T08:45Z | filed the explainer film for the finished Sonnet market-split pilot s1-002 (reads the filed records only; no model calls, no edits to market-split-api or market-split-opus) |
 | vishesh/codex-theseus | working | theseus-d2-run | 2026-10-04T08:45Z | PI critique, D2 instrument validation and bounded execution |
@@ -297,7 +298,6 @@
 | dmarz/private-control | done | build-v3-resample-control | 2026-10-04T04:10Z | resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs |
 | dmarz/v3-film | done |  | 2026-10-04T04:00Z | filed the explainer film for the finished v3 qualification run v3-q0-a1 (reads the run's records only; no model calls, no edits to bench_v3) |
 | vishesh/codex-immune | blocked | immune-response-evidence-receipts | 2026-10-04T03:56Z | Wrong-account deployment deleted; tested A3 ready, blocked only on Dmarz provisioning path and verified account allocation |
-| vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T03:46Z | $20 first-attempt API cap authorized and enforced; awaiting independent review and live launch prerequisites |
 | shadow/sol-rev | done |  | 2026-10-04T03:20Z | Filed independent review of discussion benchmark v3 (pass-with-fixes); task was user-transferred to vishesh mid-review. |
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
