@@ -25,3 +25,7 @@ Update the five discussed frontier scores under the unchanged owner rubric. Inco
 
 - Publish revised structured scores, priorities and consistent design/overview notes.
 - Preserve assessment provenance and score history; refresh dashboard fingerprints and verify export.
+
+## Coverage note
+
+Revised five scores and their question/design/review metadata, preserved before/after records, and selected HX-31 as the coherent primary project across the HX bank. Component validation passes. Dashboard deployment is separately blocked by upstream hypothesis-topic metadata; `repair-hypothesis-topic-navigation` records the repair task.

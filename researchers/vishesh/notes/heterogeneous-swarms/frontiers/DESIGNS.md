@@ -1,4 +1,6 @@
-# Five prospective mechanism designs
+# Current differentiation design and historical mechanism sketches
+
+**Owner-directed update:** HX-31 is the lead project; HX-33 supports it. HX-32 is deprioritized, HX-35 parked, and HX-37 consolidated into HX-31. See [PRIORITIES.md](PRIORITIES.md). Historical sections below are retained as context, not current recommendations.
 
 These are exploratory design sketches, not registered hypotheses or runnable preregistrations. No experiment has started. Each must survive the formal prior-art gate and independent review. A future condition-specific public plan must pin exact models, sample size, seeds, resource limits, immutable URL and TLDR before qualification or experimental calls. The separate machine-allocation and run-review requirements also apply.
 
@@ -14,23 +16,31 @@ Use independent populations/islands as replicates, paired task seeds where appro
 
 Every event needs run/condition/seed, policy and model IDs, artifact parents, exposure set, task result, cost, and intervention time. Define one measured replay per design below; aggregate summaries must be reproducible from that event stream. Missing model calls and invalid artifacts remain visible. None of the proposed visualizations currently exists as measured output.
 
-## HX-31 — Black Queen capability loss
+## HX-31 — Self-differentiating swarms: specialization through subtraction
 
-**Question and unit.** Can heritable removal of costly agent-side capabilities improve population performance while creating dependence? Unit of replication: a bounded population of immutable base models carrying mutable tool/skill policies.
+**Question and starting condition.** Can a uniform network discover a cheaper division of labor while preserving performance and the ability to adapt? Every initial agent uses the same generalist model, tools, skills, data permissions and resource rules. Model downgrades, smaller loaded skill inventories, shared providers and topology changes are outcomes. No agent is assigned a provider role in the adaptive arm.
 
-**Treatment and comparators.** The core factorial is pruning allowed/forbidden × helper artifacts public/private. Public access is an affordance, not a reward for dependence. Include a no-maintenance-cost arm, a fixed specialist assignment optimized on development tasks, and homogeneous specialist populations. Every arm starts with equal allowed functions. Counterbalance which family initially holds each skill.
+**Concrete workload.** Repeated analysis jobs with overlapping data needs and externally checkable outputs. Agents initially fetch, parse and carry their own context. A shared service must expose data with timestamps and provenance through permitted interfaces. Freshness requirements and task arrival patterns are fixed independently of the candidate topology.
 
-**Sequence.** Establish solo and group competence on a separate baseline set; permit finite policy selection on development episodes; freeze resulting policies; evaluate on held-out tasks; remove a helper while preserving total available inference resources; restore that exact helper or a capability-equivalent replacement. Also remove a matched non-helper to control for ordinary population damage.
+**Core comparison.** Frozen generalists; generalists with a simple shared cache/service; a static specialist configuration optimized on separate development jobs; and an adaptive configuration allowed to choose and revise services, capabilities and models. All arms share legal data access and an explicit lifetime budget. Charge optimizer inference, migration, context, provider calls, communication, validation and maintenance. A cache baseline receives the same freshness information and cannot be artificially disadvantaged.
 
-**Primary evidence.** The joint signature is lower retained capability burden, improved verified group value per budget, reduced solo competence, and a selectively large helper-removal effect reversed by rescue. A cheaper tool inventory alone establishes compression, not dependency. If only the named helper works, distinguish partner specificity from missing access credentials or undocumented schemas.
+**Mechanism ablations.** Separate service sharing from removal of tools/skills and model downgrading. Only then add the temporal hardening component from HX-37: expensive discovery produces reusable validated procedures, cheaper-model execution or deterministic code. Compare with repeated expensive execution and a fixed engineered workflow. A cheaper model must actually run its assigned work; a model label or mocked lower price is insufficient. Jev is a possible typed decision component only after its exact supported contract is qualified.
 
-**Kill criteria.** No lost capacity; no group gain; no selective dependence; or equal results from fixed specialization. Retain null findings. If benefit exists only under an invented flat cost per unused skill, report that artificial assumption and do not generalize to real API economics.
+**Adaptation intervention.** After measuring stable-workload quality and cost, vary workload overlap, change an API/data schema or withdraw a provider. Allow a finite, costed repertoire of restoring capabilities, adding provider redundancy, changing edges or escalating to a stronger model. Freeze a matched copy of the learned configuration to isolate adaptation from the value of the learned architecture itself.
 
-**Visualization mapping.** Capability-bearing policy nodes form a lineage tree; deletion events remove icons, successful shared artifacts add dependency edges, and actual scores/costs color the timeline. Helper withdrawal and restoration are vertical event markers. No inferred dependency edge appears without an intervention or traced use.
+**Primary evidence.** Compare total cost per verified success at a prespecified reliability/freshness requirement. Report the full quality-cost-latency tradeoff, including adaptation and exploration costs. Track duplicated calls, context traffic, retained skills, model allocation, provider count and recovery loss. Unit of replication is an independent swarm/workload seed, not individual messages or dependent task completions.
 
-**Closest overlap.** [[morris-2014-coexistence]] supplies the biological mechanism. [[kim-2026-multi]] supplies shared-experience precedent. The candidate addition is selected capability loss with causal rescue in an inference-agent ecology.
+**Kill criteria.** Plain caching or static specialization captures all gains; savings require skipping work or serving stale data; hidden optimizer information or uncharged calls favor the adaptive arm; or realistic changes erase the benefit. These outcomes can still recommend a useful simpler architecture, without supporting a self-organization claim.
 
-## HX-32 — Symbiotic pairs and escape from lock-in
+**Biological boundary.** Call the result Black Queen-like only when agents genuinely shed costly self-sufficiency and become dependent on providers, with removal/rescue evidence. Workflow hardening and deterministic compilation are broader software mechanisms. No foundation-model weights evolve.
+
+**Visualization mapping.** Start with identical nodes. Use measured events to show provider formation, removed duplicate calls, unloaded capabilities, model substitutions and changing communication edges. Overlay verified quality, freshness and cumulative cost. Provider failures, restoration and escalation are visible on the same timeline; do not count omitted tasks as savings.
+
+**Closest overlap.** [[morris-2014-coexistence]] informs the dependency mechanism. [[kim-2026-multi]], [[yue-2025-masrouter]], [[ong-2024-routellm]] and [[gh-denis-pplx-autojev]] motivate reuse/routing/cheaper-execution controls. The candidate contribution is discovering and revising their combination from a uniform start; novelty is unconfirmed.
+
+## HX-32 — Historical symbiotic-pair sketch; deprioritized
+
+**Current decision:** no separate project. The owner considers this ordinary modularity; the former sketch below does not establish a compelling practical gap.
 
 **Question and unit.** Does learned interface compatibility make a persistent Jev–generative pair a useful inherited unit, while making it less adaptable? Unit of replication: independently adapted pair lineages; pairing itself is not evidence of a higher-level individual.
 
@@ -46,23 +56,21 @@ Every event needs run/condition/seed, policy and model IDs, artifact parents, ex
 
 **Closest overlap.** [[kelley-2026-endosymbiotic]] already measures digital symbiotic constraint and organelle-like dependence. The remaining candidate is semantic/typed interface compatibility without hard-coded trait-match rewards. The conceptual label alone is not novel.
 
-## HX-33 — Habitat inheritance and model-family feedback
+## HX-33 — Supporting study: workspace hardening and portability
 
-**Question and unit.** Can a population construct an artifact habitat that favors a particular model family, thereby changing the composition of its successors? Unit of replication: independently built workspaces with linked successor cohorts.
+**Question.** How much capability can move into durable tools, tests, schemas and cached knowledge so that a cheaper successor model preserves quality? This is a supporting ablation within HX-31.
 
-**Treatment and comparators.** First separate agent history from habitat history using naive/experienced agents × clean/mature environments. Then cross habitat builder A/B with newcomer A/B, plus a mixed newcomer cohort. Keep tasks, APIs and underlying evidence constant. A schema-normalized habitat controls for surface familiarity; an equal-information static corpus controls for having more stored answers.
+**Comparison.** Cross naive/experienced agents with clean/hardened workspaces. Then cross workspace builder family with successor family at matched information, legal access and lifetime cost. Include an equal-information cache, standardized schemas and an independently engineered workspace. Do not award credit for answer leakage or relaxed freshness.
 
-**Sequence.** Builder cohorts create permitted artifacts under equal resource caps. Freeze and hash habitats. Place independently initialized successor cohorts into reciprocal habitats. Measure family-specific marginal contribution. Only then apply a preregistered performance-based recruitment rule and repeat to test feedback. Also keep a fixed-composition arm; do not infer selection from the transplant alone.
+**Evidence.** Measure successor quality-cost curves, the number of repetitions needed to recover construction cost, portability across model families, and maintenance after a task or API change. A general benefit can justify useful engineering. A family-by-builder crossover supports a narrower compatibility effect; endogenous population feedback is a deferred extension rather than the primary endpoint.
 
-**Primary evidence.** The family × builder interaction alters relative rather than only absolute performance, survives relevant information controls, and predicts measured successor composition. Rare-family reintroduction probes whether a habitat excludes alternatives or allows invasion. Complete population turnover identifies persistence in artifacts rather than surviving actor histories.
+**Kill criteria.** Ordinary caching/tool engineering explains all gains; construction and maintenance never repay their costs; gains disappear on held-out tasks or cheaper successors. Report these outcomes without embellishing them as ecological discoveries.
 
-**Kill criteria.** Every model benefits equally; extra answer storage explains the effect; or composition changes are assigned by the harness independently of performance. Schema-specific benefits may still matter operationally, but should be reported as such rather than asserted as a general ecology result.
+**Visualization and overlap.** Replay workspace artifacts with provenance and matched successor performance. [[kim-2026-multi]] and the Artifact Ecology preprint in `LITERATURE.md` are close prior art. The practical question is where to invest in model capability versus its operating environment.
 
-**Visualization mapping.** Two workspace maps show artifact types and provenance. A complete-cohort swap changes only the population layer. Replay measured family success and resource shares; map each change to the corresponding recruitment decision.
+## HX-35 — Historical cultural-speciation sketch; parked
 
-**Closest overlap.** [[kim-2026-multi]], [[nisioti-2024-collective]] and the Artifact Ecology preprint in `LITERATURE.md`. Persistence alone is established; reciprocal effects with composition feedback are the proposed distinction.
-
-## HX-35 — Cultural speciation through procedural incompatibility
+**Current decision:** defer until a realistic integration scenario and practical payoff are identified. The theoretical sketch below is retained for reference.
 
 **Question and unit.** Do independently adapted skill bundles become internally complementary but difficult to recombine? Unit of replication: islands initialized with identical model mixtures, tasks and allowed tool schemas.
 
@@ -78,7 +86,9 @@ Every event needs run/condition/seed, policy and model IDs, artifact parents, ex
 
 **Closest overlap.** [[stengel-eskin-2026-glossogen]] and [[lai-2024-evolving]] rule out claiming language invention or social clusters as the novelty. This is a more demanding procedural recombination test.
 
-## HX-37 — Cross-feeding on failed artifacts
+## HX-37 — Historical failed-artifact salvage sketch; consolidated
+
+**Current decision:** no independent project. The active interpretation is temporal workflow hardening inside HX-31. The earlier concurrent-salvage design below is an optional mechanism and must not be treated as identical to temporal hardening.
 
 **Question and unit.** Can a consumer earn a resource niche by transforming discarded donor work? Unit of replication: paired donor-consumer task populations, with artifact histories retained.
 

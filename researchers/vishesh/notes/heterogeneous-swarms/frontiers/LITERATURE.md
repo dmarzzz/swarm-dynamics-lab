@@ -1,5 +1,7 @@
 # Prior-art boundaries and biological crosswalk
 
+**Priority update:** [owner feedback](PRIORITIES.md) narrows the active project to HX-31, consolidates HX-37 and uses HX-33 as a supporting study. The source findings below remain relevant; the original symbiosis/speciation suggestions are not active priorities. This update adds no fresh literature findings.
+
 This is screening and synthesis, not a systematic survey. Most new papers were read at abstract depth, with selected full-text passages for GlossoGen, Lai and Kelley. See `sources.json` for per-source access. “Known” below means reported in the cited setting, not universally replicated.
 
 | Area | What must be treated as prior art | What the proposed question would still need to establish |

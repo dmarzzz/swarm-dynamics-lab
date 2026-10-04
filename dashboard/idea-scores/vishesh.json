@@ -4464,42 +4464,42 @@
     },
     "HX-31": {
       "dimensions": {
-        "visual": 96,
-        "practical": 90,
-        "theory": 98,
-        "novelty": 85
+        "visual": 98,
+        "practical": 96,
+        "theory": 90,
+        "novelty": 88
       },
-      "score": 93,
-      "rationale": "Black Queen dependence is established in microbes. Candidate extension is selection-induced loss of agent-side capabilities with a measured group gain and causal public-good dependence across different model interfaces. Discover when minimal cheap agents are an efficient ecology and when eliminating one rare helper makes the whole deployment brittle.",
-      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "score": 94,
+      "rationale": "The owner clarified an initially uniform swarm that removes duplicated data/tool work, reduces skill/context loads, downgrades models and reorganizes communication. Strong practical mechanism; the biological analogy is narrower than the original 98 theory score implied.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant reassessment after explicit owner feedback)",
       "assessed_at": "2026-10-04",
-      "candidate_sha256": "1246fb88995e57a79fae81a56db1640da0d8280a2456fdacdaec851e4c6bc19e"
+      "candidate_sha256": "3eb74ec455845be867022d9214c40de1991044661f58f3f2278cb771bd2c4dd8"
     },
     "HX-32": {
       "dimensions": {
-        "visual": 98,
-        "practical": 84,
-        "theory": 98,
-        "novelty": 84
+        "visual": 50,
+        "practical": 25,
+        "theory": 30,
+        "novelty": 25
       },
-      "score": 92,
-      "rationale": "Digital organelles are prior art. The narrower gap is whether learned semantic/typed interface compatibility, rather than hard-coded trait matching, causes and releases dependency in heterogeneous inference agents. Determine when a tightly paired cheap controller and planner can safely be upgraded independently, and when a successful pairing locks out future capabilities.",
-      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "score": 34,
+      "rationale": "The owner identifies an ordinary modularity/interface problem. No compelling deployment scenario or distinct biological mechanism justifies the former exceptional scores.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant reassessment after explicit owner feedback)",
       "assessed_at": "2026-10-04",
-      "candidate_sha256": "a8b33a85c0a37ebc9529bd22a22b5584e7a6fc457c8c18bc4b1c40fff453ec80"
+      "candidate_sha256": "46a16ad6ce8860dae726ab243b635931b0668e477fc476b757b43303196cd09a"
     },
     "HX-33": {
       "dimensions": {
-        "visual": 98,
-        "practical": 93,
-        "theory": 96,
-        "novelty": 70
+        "visual": 90,
+        "practical": 92,
+        "theory": 75,
+        "novelty": 55
       },
-      "score": 92,
-      "rationale": "Beyond memory reuse or turnover alone: test reciprocal habitat adaptation that changes the relative fitness of model families, and the resulting population feedback. Choose portable shared environments versus team-specific infrastructure, and detect path dependence when replacing a model.",
-      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "score": 82,
+      "rationale": "Useful workspace/tool hardening and portability comparison; lower conceptual distinctiveness and a more modest biological connection than initially scored.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant reassessment after explicit owner feedback)",
       "assessed_at": "2026-10-04",
-      "candidate_sha256": "e27f54d64dc0a4e5a1f87728756f44c4b410b1a81589a0cd6221a598fd27ba0f"
+      "candidate_sha256": "f304049f0837becd80ebedb2c60709a508c0eeb1c0abde4f715ff5fba3f569c1"
     },
     "HX-34": {
       "dimensions": {
@@ -4516,16 +4516,16 @@
     },
     "HX-35": {
       "dimensions": {
-        "visual": 97,
-        "practical": 86,
-        "theory": 92,
-        "novelty": 85
+        "visual": 80,
+        "practical": 35,
+        "theory": 65,
+        "novelty": 60
       },
-      "score": 91,
-      "rationale": "Test recombination incompatibility of co-adapted procedures beyond lexical dialects, using translation and linkage-breaking controls. Predict when separately successful teams or skill libraries cannot merge, and whether modest exchange prevents fragmentation.",
-      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "score": 60,
+      "rationale": "Interesting conceptual possibility, but realistic deployment relevance and a persuasive practical intervention remain weak. Biological speciation is an analogy, not an established mechanism here.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant reassessment after explicit owner feedback)",
       "assessed_at": "2026-10-04",
-      "candidate_sha256": "e930341b9906543421e88e538955c5dc77b4b99a01a35f5d53fefe9630908ac5"
+      "candidate_sha256": "b13ac0a57849c5cd4cb4aa3251690601c27d7c2f4d3ca27d71c1e2e6baec72f6"
     },
     "HX-36": {
       "dimensions": {
@@ -4542,16 +4542,16 @@
     },
     "HX-37": {
       "dimensions": {
-        "visual": 98,
-        "practical": 92,
-        "theory": 90,
-        "novelty": 68
+        "visual": 85,
+        "practical": 85,
+        "theory": 55,
+        "novelty": 10
       },
-      "score": 90,
-      "rationale": "Causal dependence on transformed failed work sustaining a useful cheap-model niche; reuse alone is insufficient. Find cheap agents that earn their place by recovering value from expensive failures, and distinguish them from redundant extra attempts.",
-      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "score": 66,
+      "rationale": "The owner’s useful interpretation is expensive exploration followed by cheaper or deterministic execution. Treat this as temporal workflow hardening within HX-31; original failed-artifact salvage is an optional mechanism, not a second flagship.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant reassessment after explicit owner feedback)",
       "assessed_at": "2026-10-04",
-      "candidate_sha256": "027b269550365b7061e6fcbb3273a1826beee8f69a284c868948c36160e1a11e"
+      "candidate_sha256": "b271acf7df0bfcf3c8b70edafb177e61e02069b4af507099fd437000bee377a3"
     },
     "HX-38": {
       "dimensions": {
