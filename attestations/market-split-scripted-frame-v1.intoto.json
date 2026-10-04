@@ -1,0 +1,68 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "create an experiment plan and also lets make sure theres some type of visual we show in the UI and make sure to do a scripted version to make sure everything works before we actully use api key and then follow swarm-labs-agentops to deploy the exerpiment and all of that for \"Can one owner’s many firms defeat a concentration-based regulator? — MKT-03 + MKT-11\" and in particular, Im actually curious if agents will naturally discover the strategy to split apart to avoid the regulator"
+   },
+   "internalParameters": {
+    "commit": "c222a06c99c42b0ad6842bbff15ccf8d2a679e09-dirty",
+    "session": "codex:01a1047e-d018-7200-99d4-ef93e90cd5c4"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "ce550b18a33c382e7cbfdf4d84137e36150af0ee30b109b0df6754d4f739f795"
+     },
+     "uri": "researchers/dmarz/notes/market-split/src/render.py"
+    },
+    {
+     "digest": {
+      "sha256": "469b3270eb3cb67cdbbc6fef6a0dd1a0af34b233caa00ed162c31a610116222d"
+     },
+     "uri": "researchers/dmarz/notes/market-split/src/sim.py"
+    },
+    {
+     "digest": {
+      "sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263"
+     },
+     "uri": "researchers/dmarz/notes/market-split/design.yaml"
+    },
+    {
+     "digest": {
+      "sha256": "7967c8da65771b2acfa66093c9a47d13245b00d35f23f2f4e6c94adfdae3f52f"
+     },
+     "uri": "researchers/dmarz/notes/market-split/results/s0-local-002/cell-01/episodes.jsonl"
+    },
+    {
+     "digest": {
+      "gitCommit": "c222a06c99c42b0ad6842bbff15ccf8d2a679e09"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T01:37:59Z",
+    "invocationId": "codex:01a1047e-d018-7200-99d4-ef93e90cd5c4",
+    "startedOn": "2026-10-04T01:37:59Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "606fd3f5088ed2844801e37c30b9b101338f4668ee47ae0b8c04cf99afae9b3b"
+   },
+   "name": "artifacts/market-split-scripted-frame/market-split-scripted-frame-v1.png"
+  }
+ ]
+}
