@@ -28,7 +28,7 @@
 
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
-| [build-shadow-experiment-factory](tasks/build-shadow-experiment-factory.md) | claimed | p0 | build | shadow/sol-factory | shadow | 2026-10-04T15:00Z | Build and run a lean exploratory experiment factory for Shadow |
+| [build-shadow-experiment-factory](tasks/build-shadow-experiment-factory.md) | claimed | p0 | build | shadow/sol-factory | shadow | 2026-10-04T15:24Z | Build and run a lean exploratory experiment factory for Shadow |
 | [build-sybil-rules-180](tasks/build-sybil-rules-180.md) | claimed (stale) | p0 | build | dmarz/flagship-market | dmarz | 2026-10-04T10:31Z | Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready |
 | [build-sybil-scarcity-xmodel](tasks/build-sybil-scarcity-xmodel.md) | claimed | p0 | build | dmarz/pipeline-scarcity-qwen | dmarz | 2026-10-04T12:29Z | Prepare sybil-scarcity-xmodel (cross-model replication of sybil-scarcity-opus on identical packets) to launch-ready |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed (stale) | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
@@ -41,8 +41,8 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [wild-askswarm](tasks/wild-askswarm.md) | claimed | p0 | build | shadow/sol-askswarm | shadow | 2026-10-04T14:56Z | AskSwarm: reusable descriptive questions across three observed swarms |
-| [wild-halflife](tasks/wild-halflife.md) | claimed | p0 | build | shadow/sol-halflife | shadow | 2026-10-04T15:03Z | Idea half-life: adoption curves on collusion.wiki vs swarm-lab commit history |
+| [wild-askswarm](tasks/wild-askswarm.md) | claimed | p0 | build | shadow/sol-askswarm | shadow | 2026-10-04T15:24Z | AskSwarm: reusable descriptive questions across three observed swarms |
+| [wild-halflife](tasks/wild-halflife.md) | claimed | p0 | build | shadow/sol-halflife | shadow | 2026-10-04T15:24Z | Idea half-life: adoption curves on collusion.wiki vs swarm-lab commit history |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [healing-c4-selective](tasks/healing-c4-selective.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T15:19Z | Prepare and qualify C4 selective helping |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
@@ -58,9 +58,9 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed | p1 | survey | shadow/sol-budget |  | 2026-10-04T15:00Z | Survey: agent budgets, budget visibility and self-allocation among agents |
+| [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed | p1 | survey | shadow/sol-budget |  | 2026-10-04T15:24Z | Survey: agent budgets, budget visibility and self-allocation among agents |
 | [theseus-a1-acquisition](tasks/theseus-a1-acquisition.md) | claimed | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T15:20Z | Theseus A1 withheld-policy acquisition screen |
-| [wild-timeline](tasks/wild-timeline.md) | claimed | p1 | build | shadow/sol-timeline | shadow | 2026-10-04T15:00Z | Unified incident timeline across the Transluce, collusion.wiki and SwarmTraces datasets |
+| [wild-timeline](tasks/wild-timeline.md) | claimed | p1 | build | shadow/sol-timeline | shadow | 2026-10-04T15:24Z | Unified incident timeline across the Transluce, collusion.wiki and SwarmTraces datasets |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
 | [allocate-poietic-agents-s0](tasks/allocate-poietic-agents-s0.md) | open | p1 | admin |  | dmarz |  | Identify an idle approved-fleet allocation for Poietic Agents qualification |
@@ -279,6 +279,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-identity | done |  | 2026-10-04T15:23Z | Shipped complete descriptive census; SwarmTraces identity graph not identifiable; formal figure publication blocked |
 | vishesh/codex-regrowth-docs | working | healing-c4-selective | 2026-10-04T15:23Z | C4 authorized integration complete; validating native admission for one bounded cycle |
 | vishesh/codex-pi-review | working | pi-cycle-2026-10-04 | 2026-10-04T15:18Z | Coordinating one cycle across ten owning experiment tasks and reconciling outcomes; no duplicate dispatch. |
 | shadow/sol-audit-gap | done | audit-gap-opportunities | 2026-10-04T15:17Z | Ranked audit and SwarmTraces evidence-depth census shipped; hub reporting blocked on absent local config |
@@ -287,7 +288,6 @@
 | shadow/sol-askswarm | working | wild-askswarm | 2026-10-04T15:00Z | Build shared AskSwarm adapters and offline descriptive reports; no paid calls. |
 | shadow/sol-factory | working |  | 2026-10-04T14:58Z | Build five one-file exploratory split-policy replications and bounded pool runner |
 | shadow/sol-timeline | working |  | 2026-10-04T14:56Z | TODO one line |
-| shadow/sol-identity | working | wild-identity | 2026-10-04T14:54Z | Descriptive identity lifetime, participation and mention graph analysis; no model calls |
 | shadow/sol-atlas | done | synthesis-landscape-map | 2026-10-04T14:40Z | synthesis-landscape-map done; survey-agent-budgets and survey-fork-merge-security already held by sol-budget and sol-fm |
 | vishesh/fm-security-review | done | review-fork-merge-security | 2026-10-04T14:38Z | Review task complete; revise verdict published with source checks, three searches and correction groups R1-R4. |
 | shadow/sol-fm | done | survey-fork-merge-security | 2026-10-04T14:35Z | Took over dmarz's merged-incomplete fork-merge survey and closed its prior-art gate. Ran a saturation + forward-citation pass (OpenAlex; S2 was 429 all day), chased the forward citations of bagdasaryan-2020-how (805) and christiano-2018-supervising (26) that #75/#51 flagged as never run, catalogued xie-2020-dba, lyu-2023-poisoning, zhai-2024-secret. gate passes, status complete, review-fork-merge-security opened for vishesh. |
