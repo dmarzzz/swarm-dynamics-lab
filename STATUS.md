@@ -37,10 +37,10 @@
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [add-patchwork-hypotheses](tasks/add-patchwork-hypotheses.md) | claimed | p1 | synthesis | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T01:56Z | Add Patchwork-derived hypotheses to the research page |
+| [antsy-verification-v4](tasks/antsy-verification-v4.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:57Z | Ground Antsy in measured OCR errors and budgeted verification |
 | [build-discussion-benchmark-v3](tasks/build-discussion-benchmark-v3.md) | claimed | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T01:51Z | Ship a validated offline discussion and memory benchmark v3 |
 | [build-market-split](tasks/build-market-split.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T01:49Z | Build and deploy an exploratory owner-splitting market pilot |
 | [healing-helping-hands-v2](tasks/healing-helping-hands-v2.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T01:26Z | Review and rebuild Healing Helping Hands as an evidence atlas |
-| [immune-response-v2](tasks/immune-response-v2.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T01:48Z | Refine and run the exploratory immune-response instrument |
 | [influence-quality-review](tasks/influence-quality-review.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T01:48Z | Audit and improve How to win agents and influence swarms |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -122,6 +122,7 @@
 | [expand-priority-research-resources](tasks/expand-priority-research-resources.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T22:51Z | Expand primary references and ideas for twenty priority research candidates |
 | [external-influence-v2](tasks/external-influence-v2.md) | done | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T00:54Z | Build expanded external-influence procurement pilot |
 | [fix-dashboard-deploy-cancellation](tasks/fix-dashboard-deploy-cancellation.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:24Z | Let active dashboard deployments finish during frequent pushes |
+| [immune-response-v2](tasks/immune-response-v2.md) | done | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T01:57Z | Refine and run the exploratory immune-response instrument |
 | [map-hackathon-scenarios](tasks/map-hackathon-scenarios.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:21Z | Map every research candidate to ranked hackathon task scenarios |
 | [organize-research-navigation](tasks/organize-research-navigation.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T22:37Z | Connect dashboard research areas, project briefs and hypothesis tags |
 | [plan-discussion-dose-v3](tasks/plan-discussion-dose-v3.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T01:36Z | Plan a stronger discussion dose evaluation without launching it |
