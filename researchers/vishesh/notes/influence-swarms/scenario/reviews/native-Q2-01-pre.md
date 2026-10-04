@@ -1,0 +1,5 @@
+# Native Q2-01 pre-run assessment
+
+Read native-Q1-01-post.md. Diagnostic schema repair, no hypothesis change. Same three competence/control families, fresh profile 6: 22 seats, 4,100 monthly tickets, 47% complex, 52-day deadline. Q2 assignments are frozen in native.py. Nine terminal outcomes, 42 nominal calls, same model, worksheet, input/output caps and native-dossier-v1 visualization. Numeric confidence and supplied-ID enums now agree with validators; regression test added. All nine must be valid and acceptable before comparison.
+
+Same dedicated sim-dmarz-3 claim and USD 1.40 unreplenished ledger. Previous actual usage sums USD 0.063819; conservative reservations are larger and never refunded. The ledger can stop the run before its nominal worst-case ceiling if necessary; failures stay assigned and visible. No extra budget presumed approved. If qualification fails again, diagnose the specific observed error and preserve this attempt. Source/config hashes and native model traces are retained.
