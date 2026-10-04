@@ -285,7 +285,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| vishesh/codex-pi-review | done | pi-research-refresh-2026-10-04 | 2026-10-04T16:33Z | Ten study plans refreshed from eight primary/engineering sources and two social reports; native runs remain gated. |
+| vishesh/codex-pi-review | working | pi-direct-launch-trace-cycle-2026-10-04 | 2026-10-04T16:33Z | Coordinating owner-authorized direct launches, native trace audits and concrete Quorum/Phantom revisions. |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T16:20Z | S0-02 prepared and public plan verified;81 checks; awaiting current dispatch coordination |
 | shadow/sol-askswarm | done | wild-askswarm | 2026-10-04T16:18+00:00 | Completed v0.2 robustness, all 15 arms, 30-link blinded assistant audit; shared helper on main, zero study API calls. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T15:57Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
