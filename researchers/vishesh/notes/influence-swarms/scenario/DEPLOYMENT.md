@@ -17,3 +17,5 @@ All four finite workers completed. Total reported model cost USD 0.223042 across
 Each attempt retains its own manifest, source/config signature, cases, request/reply JSONL, outcomes, summary and frames. Measured replays are reconstructed from those events. No failed attempt is overwritten or silently replaced by a repair. See the corresponding pre-run assessments and post-mortems.
 
 Final subquota: USD 1.005589 reserved across 78 calls, USD 0.394411 remaining; no reservation refunded. Verified zero native workers after uploads. Q2 hub status is failed because competence qualification failed, despite nine valid outputs; Q3 hub status is done for its narrow diagnostic. Q2 has 15 artifacts and Q3 has 10 after supplemental replay uploads, none spooled.
+
+Dedicated claim released after upload verification through agentops PR 64 (merged). Git claim status is authoritative; the local agentops hub mirror could not update because sops is unavailable. No native worker remains.
