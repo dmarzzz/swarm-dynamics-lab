@@ -1,0 +1,5 @@
+# Post-mortem: s0-fleet-005
+
+2026-10-04; market-split-api; dmarz/market-split; parentq0-004. Disposition: advance to I0-003. Read s0-fleet-005-pre.md. V5 reasoning adapter passed all15network-blocked tests locally and on pinned Python3.12.3. Six assigned bundles all done;12valid mock episodes,zero paid calls,qualification andvisual checks all passed. All42 uploaded hashes verified,1800×1200PNG and1080×720eight-frameGIF checked. Full traces/calls retained, same draws across arms. No retry, missing episode or accounting error. This is scripted evidence only; the unchanged75%profit gate still requires live qualification. Mapping market-split-api-v1 unchanged.
+
+Next: six fresh I0fixtures56–61, then freshQ0tasks54/55 before opening S1tasks36–41. Source657a77e7c1101c1bd2b6b2ea752f0407b2fc4b690988144711cbe7c727f79b58, design230ef6ac07afc36dd5142155ab826452f21ce836d3f5d0919c69292a676f26e5. Persistent model ledger unchanged506calls/$0.965218. Claim extension mergedPR70;exclusive host retained. No scientific conclusion from mechanics or mocks.
