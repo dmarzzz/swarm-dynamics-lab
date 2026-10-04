@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: working
+state: blocked
 task: theseus-v2-iteration
-doing: Build practical continuity scenarios and qualify the next bounded iteration
-updated: 2026-10-04T03:40Z
+doing: V2 built and validated; awaiting explicit additional USD15 API authorization before allocation and qualification
+updated: 2026-10-04T03:56Z
 ---
 
-36/36 pilot trajectories complete after qualification repairs. All 216 pilot frames independently recomputed. Seeded single-model exploratory result, not confirmatory culture evidence.
+V1 remains a supplied-rule transmission baseline. V2 source, prospective plan and same-author assessment published; 14 offline tests pass, labeled fixture replay verified. Zero v2 model runs. Public plan registered; new API authority and fresh exclusive host required.

@@ -78,7 +78,7 @@
     },
     {
      "digest": {
-      "sha256": "fc71a3aefea944577844ebc22f81e583d18a3963c865be5eb8f45c7ff776fe05"
+      "sha256": "b36325a1cac3dfbd57937b27049456878345c3670b06303d2329af0f00421305"
      },
      "uri": "researchers/dmarz/notes/compositional-safety/README.md"
     },
@@ -96,7 +96,7 @@
     },
     {
      "digest": {
-      "sha256": "57fed5a45f7b259b141c4c2ff7a1544fff82a225e73152a5c864474b32ff972e"
+      "sha256": "9907c6afdac1fa94792e88c5df2d6d980d7e2f4b694aaa621fcf2c82ea6763de"
      },
      "uri": "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md"
     },
@@ -120,7 +120,7 @@
     },
     {
      "digest": {
-      "sha256": "ba7fa42746856647db6e9f4424a5aeb848947c2a41b0273a0cfd0f7037b5dd97"
+      "sha256": "e2d2e7ed3d291dd9730e6d27df3814d4a484813f2911b76a2fe9e728bcc09c8e"
      },
      "uri": "researchers/dmarz/notes/sybil-scale-api/README.md"
     },
@@ -174,13 +174,13 @@
     },
     {
      "digest": {
-      "sha256": "86c8af6878cbdedbb39233d18351f25f0e974683bb15ec17cadca8e17de91872"
+      "sha256": "19f1e8ae336016a278feedf5fbba9b4e981842eba7e5607f2b9e3bf669afd920"
      },
      "uri": "templates/experiment-worker/README.md"
     },
     {
      "digest": {
-      "sha256": "5ae221ff50424d6ceb528e74d099933363426a8c15a42f4be69c5c56e822debc"
+      "sha256": "4965c271bf12c33a6e3e18de9f74a506d703c55ccb0d636cc7a3d1cabc6f1664"
      },
      "uri": "tooling/agent-experiments/GUIDE.md"
     },

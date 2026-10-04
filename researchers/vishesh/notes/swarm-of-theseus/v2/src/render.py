@@ -19,7 +19,7 @@ function draw(){let step=+$('step').value,es=trajectory(),e=es.find(x=>x.step===
 ['A','B'].forEach((cls,i)=>{let prev=null;es.forEach(ev=>{let rows=ev.scores.filter(r=>r.class===cls);if(!rows.length){prev=null;return}let obs=rows.filter(r=>r.observed).length;if(!obs){prev=null;return}let x=60+ev.step*99,y=150-rows.filter(r=>r.correct).length/rows.length*120,col=i?'#72dfb6':'#ffb68e';if(prev&&ev.step===prev.step+1)svg('line',{x1:prev.x,y1:prev.y,x2:x,y2:y,stroke:col,'stroke-width':3});svg('circle',{cx:x,cy:y,r:5,fill:col});prev={x,y,step:ev.step}})});svg('line',{x1:60+step*99,x2:60+step*99,y1:10,y2:165,stroke:'#fff','stroke-dasharray':'4 4'});
 if(!e){text('p','Missing event: no outcome is imputed.',$('crew'));return}
 (e.crew_before||[{id:'qualification reader',generation:'—',notebook:''}]).forEach(m=>{let c=text('div','',$('crew'),'card');text('strong',m.id,c);text('p','Generation '+m.generation,c);text('p',m.onboarding?'Archive parent '+m.onboarding.id.slice(0,12):'Private notes / no new onboarding',c,'muted');text('div',m.notebook||'(No private notebook)',c,'note')});
-e.cases.forEach(c=>{let r=e.scores.find(r=>r.id===c.id),tr=document.createElement('tr');$('cases').append(tr);text('td',c.id.split(':').slice(-2).join(' / '),tr);text('td',c.summary,tr);text('td',Object.entries(c.evidence).map(([s,v])=>s+': '+(v.signal?'positive':'negative')+(v.fresh?' / fresh':' / stale')).join('; '),tr);text('td',r.action??'MISSING / NO MAJORITY',tr);text('td',r.truth+' · '+(r.correct?'correct':r.observed?'incorrect':'missing'),tr,r.correct?'good':'bad')});$('archive').textContent=e.archive?e.archive.text:'No shared archive in one-reader qualification';}
+e.cases.forEach(c=>{let r=e.scores.find(r=>r.id===c.id),tr=document.createElement('tr');$('cases').append(tr);text('td',c.id.split(':').slice(-2).join(' / '),tr);text('td',c.summary,tr);text('td',Object.entries(c.evidence).map(([s,v])=>s+': '+(v.signal?'positive':'negative')+(v.fresh?' / fresh':' / stale')).join('; '),tr);let cell=text('td',r.action??'MISSING / NO MAJORITY',tr);let raw=e.calls.map(call=>{let ds=call.result.value?.decisions;return Array.isArray(ds)?ds.filter(d=>d&&d.id===c.id).map(d=>d.command).join(', '):'no output'}).join(' | ');text('div',raw,cell,'muted');text('td',r.truth+' · '+(r.correct?'correct':r.observed?'incorrect':'missing'),tr,r.correct?'good':'bad')});$('archive').textContent=e.archive?e.archive.text:'No shared archive in one-reader qualification';}
 let timer=null;$('play').onclick=()=>{if(timer){clearInterval(timer);timer=null;$('play').textContent='Play'}else{$('play').textContent='Pause';timer=setInterval(()=>{$('step').value=(+$('step').value+1)%10;draw()},1200)}};$('step').oninput=draw;$('world').onchange=setArms;$('arm').onchange=draw;setArms();</script></html>'''
 
 
@@ -38,7 +38,7 @@ def render(root):
         font = ImageFont.truetype('DejaVuSans.ttf', 27); title = ImageFont.truetype('DejaVuSans.ttf', 48)
     except OSError:
         font = ImageFont.load_default(size=27); title = ImageFont.load_default(size=48)
-    label = 'SCRIPTED — NOT MODEL EVIDENCE' if fixture else 'RECORDED MODEL OUTPUTS — EXPLORATORY'
+    label = 'SCRIPTED | NOT MODEL EVIDENCE' if fixture else 'RECORDED MODEL OUTPUTS | EXPLORATORY'
     draw.rectangle((0, 0, 1800, 80), fill='#54340b'); draw.text((45, 20), label, font=font, fill='#ffe0a0')
     draw.text((55, 115), 'Swarm of Theseus · procedure continuity', font=title, fill='white')
     draw.text((55, 190), 'Two complete replacements. Preserve valid checks; retire obsolete rules.', font=font, fill='#aabac6')
@@ -47,7 +47,7 @@ def render(root):
         draw.text((55, 260), f"{last['scenario']} / world {last['seed']} / {last['arm']} / step {last['step']}", font=font, fill='white')
         for i, row in enumerate(last['scores']):
             y = 330 + i * 80
-            text = f"Case {i+1}: action {row.get('action') or 'MISSING'} | evaluator {row['truth']} | " + ('correct' if row['correct'] else 'incorrect / missing')
+            text = f"Case {i+1}: action {row.get('action') or 'MISSING'} | evaluator {row['truth']} | " + ('correct' if row['correct'] else 'incorrect' if row['observed'] else 'missing')
             draw.text((70, y), text, font=font, fill='#72dfb6' if row['correct'] else '#ffb68e')
         draw.text((55, 860), 'Truth displayed after scoring; withheld from current actor inputs.', font=font, fill='#aabac6')
     else:

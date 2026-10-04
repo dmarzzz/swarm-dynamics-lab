@@ -14,21 +14,15 @@
    },
    "resolvedDependencies": [
     {
-     "digest": {
-      "sha256": "5b12c7c12ca428d4d1f28015eaed859826ff0c4d6e5f803c874d11adcea3323d"
-     },
      "uri": "data/healing-helping-hands/recovery.gif"
     },
     {
      "digest": {
-      "sha256": "e85d3e5c8f953b7a860f8e0fe9cb982539b86e2b27ae65a3e00097926d341612"
+      "sha256": "04503cc49df1964ec4aa1db65cb672d4c9d07e26f505a7e7c84bf6a54087ee98"
      },
      "uri": "researchers/vishesh/notes/healing-helping-hands/visualization/render.py"
     },
     {
-     "digest": {
-      "sha256": "a755592b0439024222c2c010f7eeddc11da5c8904581f2a1e8a816fdb646df76"
-     },
      "uri": "data/healing-helping-hands/render-inputs.tar.gz"
     },
     {
