@@ -1,0 +1,79 @@
+{
+  "attempt": "C2-A1",
+  "source": "f8cdf9352ce2150b84650cfb73905c76ea5f08c3",
+  "assigned_original": 6,
+  "eligible": 5,
+  "prior_initial_failure_retained": 1,
+  "reused_calls": 128,
+  "new_calls": 8,
+  "replay_disagreements": 0,
+  "fresh_founders": 0,
+  "old_requests_redispatched": 0,
+  "complete_turnover": 0,
+  "trajectories": [
+    {
+      "trajectory": "P1-release-r0",
+      "reused": 26,
+      "new_calls": 1,
+      "replay_stop": "shared_stop_censoring",
+      "valid_commit_notes": 1,
+      "full_turnover_complete": false
+    },
+    {
+      "trajectory": "P1-release-r1",
+      "reused": 24,
+      "new_calls": 2,
+      "replay_stop": "shared_stop_censoring",
+      "valid_commit_notes": 0,
+      "full_turnover_complete": false
+    },
+    {
+      "trajectory": "P1-failover-r1",
+      "reused": 26,
+      "new_calls": 2,
+      "replay_stop": "shared_stop_censoring",
+      "valid_commit_notes": 1,
+      "full_turnover_complete": false
+    },
+    {
+      "trajectory": "P1-delegation-r0",
+      "reused": 26,
+      "new_calls": 1,
+      "replay_stop": "commit_schema",
+      "valid_commit_notes": 0,
+      "full_turnover_complete": false
+    },
+    {
+      "trajectory": "P1-delegation-r1",
+      "reused": 26,
+      "new_calls": 2,
+      "replay_stop": "shared_stop_censoring",
+      "valid_commit_notes": 1,
+      "full_turnover_complete": false
+    }
+  ],
+  "commits_observed": 4,
+  "commit_notes_semantically_correct": 4,
+  "commits_schema_valid": 3,
+  "first_divergence": {
+    "trajectory": "P1-delegation-r0",
+    "phase": "commit",
+    "expected_top_level_keys": [
+      "note"
+    ],
+    "actual_top_level_keys": [
+      "decision",
+      "note"
+    ],
+    "extra_field_value": "defer",
+    "note_correct": true,
+    "classification": "native_output_contract_failure",
+    "transport_and_scoring_error_found": false,
+    "prompt_cause": "unproven;commit system prompt also included general decision rules"
+  },
+  "native_api_usd": 0.008066,
+  "input_tokens": 2338,
+  "output_tokens": 339,
+  "manual_coverage": "All8new native responses;4commit contexts and output shapes;all128cachedprefixes exact replay.",
+  "wrapper_stripping_applied": false
+}

@@ -1,0 +1,270 @@
+{
+  "attempt": "C2-A1",
+  "assessor": "vishesh/codex-theseus;owningagent",
+  "date": "2026-10-04",
+  "evidence_revision": "f8cdf9352ce2150b84650cfb73905c76ea5f08c3",
+  "decision": "repair",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Conditional native policy continuity scoped separately from allassigned reliability; failure notcalledcultureloss.",
+      "evidence": [
+        {
+          "path": "C2-AUDIT.json",
+          "sha256": "e3f0298160d704f725aed416ebd8182cac104f8865d74517ccb1fa38245c6bfc"
+        },
+        {
+          "path": "C2-CLOSEOUT.json",
+          "sha256": "62a057ddb07290f77a97c5aa1d9f76a2e0ec48c82460b5a75f320326f8acf30b"
+        },
+        {
+          "path": "C2-POST-MORTEM.md",
+          "sha256": "74ff9beb59701d64cdab844377f1420fbbe8caab175df82469315446687c5b40"
+        },
+        {
+          "path": "COMMIT-REPAIR-PLAN.md",
+          "sha256": "337c896ace8c4d93791bfa9f98f9a02f6054c3544256a0da36960ca9ed1a1735"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Saved initialeligible prefixes preserved; no newworld/seed/founder or hiddenanswer aid. Existingtemplates remain narrow.",
+      "evidence": [
+        {
+          "path": "C2-AUDIT.json",
+          "sha256": "e3f0298160d704f725aed416ebd8182cac104f8865d74517ccb1fa38245c6bfc"
+        },
+        {
+          "path": "C2-CLOSEOUT.json",
+          "sha256": "62a057ddb07290f77a97c5aa1d9f76a2e0ec48c82460b5a75f320326f8acf30b"
+        },
+        {
+          "path": "C2-POST-MORTEM.md",
+          "sha256": "74ff9beb59701d64cdab844377f1420fbbe8caab175df82469315446687c5b40"
+        },
+        {
+          "path": "COMMIT-REPAIR-PLAN.md",
+          "sha256": "337c896ace8c4d93791bfa9f98f9a02f6054c3544256a0da36960ca9ed1a1735"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "No fourarm terminal contrast observed; exactcontroller/static-note explanation remains relevant.",
+      "evidence": [
+        {
+          "path": "C2-AUDIT.json",
+          "sha256": "e3f0298160d704f725aed416ebd8182cac104f8865d74517ccb1fa38245c6bfc"
+        },
+        {
+          "path": "C2-CLOSEOUT.json",
+          "sha256": "62a057ddb07290f77a97c5aa1d9f76a2e0ec48c82460b5a75f320326f8acf30b"
+        },
+        {
+          "path": "C2-POST-MORTEM.md",
+          "sha256": "74ff9beb59701d64cdab844377f1420fbbe8caab175df82469315446687c5b40"
+        },
+        {
+          "path": "COMMIT-REPAIR-PLAN.md",
+          "sha256": "337c896ace8c4d93791bfa9f98f9a02f6054c3544256a0da36960ca9ed1a1735"
+        }
+      ],
+      "next_action": "Hold native successor;use offline phase-scoped candidate andexplicit prospective output-conformance policy before another bounded qualification.",
+      "acceptance_check": "No silent normalization;wrongpairconsequences retained;exact schema andsemanticacceptance separatelymeasured,thenfresh fullturnovercontrols onlyif admitted."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Correctnote plus extradecisionfield failed exactcommit contract;3othercommits conformed.",
+      "evidence": [
+        {
+          "path": "C2-AUDIT.json",
+          "sha256": "e3f0298160d704f725aed416ebd8182cac104f8865d74517ccb1fa38245c6bfc"
+        },
+        {
+          "path": "C2-CLOSEOUT.json",
+          "sha256": "62a057ddb07290f77a97c5aa1d9f76a2e0ec48c82460b5a75f320326f8acf30b"
+        },
+        {
+          "path": "C2-POST-MORTEM.md",
+          "sha256": "74ff9beb59701d64cdab844377f1420fbbe8caab175df82469315446687c5b40"
+        },
+        {
+          "path": "COMMIT-REPAIR-PLAN.md",
+          "sha256": "337c896ace8c4d93791bfa9f98f9a02f6054c3544256a0da36960ca9ed1a1735"
+        }
+      ],
+      "next_action": "Hold native successor;use offline phase-scoped candidate andexplicit prospective output-conformance policy before another bounded qualification.",
+      "acceptance_check": "No silent normalization;wrongpairconsequences retained;exact schema andsemanticacceptance separatelymeasured,thenfresh fullturnovercontrols onlyif admitted."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Content4/4 separated fromschema3/4; no stripping/rescore; completeall8newresponseinspection.",
+      "evidence": [
+        {
+          "path": "C2-AUDIT.json",
+          "sha256": "e3f0298160d704f725aed416ebd8182cac104f8865d74517ccb1fa38245c6bfc"
+        },
+        {
+          "path": "C2-CLOSEOUT.json",
+          "sha256": "62a057ddb07290f77a97c5aa1d9f76a2e0ec48c82460b5a75f320326f8acf30b"
+        },
+        {
+          "path": "C2-POST-MORTEM.md",
+          "sha256": "74ff9beb59701d64cdab844377f1420fbbe8caab175df82469315446687c5b40"
+        },
+        {
+          "path": "COMMIT-REPAIR-PLAN.md",
+          "sha256": "337c896ace8c4d93791bfa9f98f9a02f6054c3544256a0da36960ca9ed1a1735"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "3roots,5selectedexecutions,0completedturnover;failoveronly1eligible repeat.",
+      "evidence": [
+        {
+          "path": "C2-AUDIT.json",
+          "sha256": "e3f0298160d704f725aed416ebd8182cac104f8865d74517ccb1fa38245c6bfc"
+        },
+        {
+          "path": "C2-CLOSEOUT.json",
+          "sha256": "62a057ddb07290f77a97c5aa1d9f76a2e0ec48c82460b5a75f320326f8acf30b"
+        },
+        {
+          "path": "C2-POST-MORTEM.md",
+          "sha256": "74ff9beb59701d64cdab844377f1420fbbe8caab175df82469315446687c5b40"
+        },
+        {
+          "path": "COMMIT-REPAIR-PLAN.md",
+          "sha256": "337c896ace8c4d93791bfa9f98f9a02f6054c3544256a0da36960ca9ed1a1735"
+        }
+      ],
+      "next_action": "Hold native successor;use offline phase-scoped candidate andexplicit prospective output-conformance policy before another bounded qualification.",
+      "acceptance_check": "No silent normalization;wrongpairconsequences retained;exact schema andsemanticacceptance separatelymeasured,thenfresh fullturnovercontrols onlyif admitted."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "gap",
+      "finding": "Unchanged memory-only phase carried genericdecisionrules; possiblepromptroleconflict,causalcontributionunproven.",
+      "evidence": [
+        {
+          "path": "C2-AUDIT.json",
+          "sha256": "e3f0298160d704f725aed416ebd8182cac104f8865d74517ccb1fa38245c6bfc"
+        },
+        {
+          "path": "C2-CLOSEOUT.json",
+          "sha256": "62a057ddb07290f77a97c5aa1d9f76a2e0ec48c82460b5a75f320326f8acf30b"
+        },
+        {
+          "path": "C2-POST-MORTEM.md",
+          "sha256": "74ff9beb59701d64cdab844377f1420fbbe8caab175df82469315446687c5b40"
+        },
+        {
+          "path": "COMMIT-REPAIR-PLAN.md",
+          "sha256": "337c896ace8c4d93791bfa9f98f9a02f6054c3544256a0da36960ca9ed1a1735"
+        }
+      ],
+      "next_action": "Hold native successor;use offline phase-scoped candidate andexplicit prospective output-conformance policy before another bounded qualification.",
+      "acceptance_check": "No silent normalization;wrongpairconsequences retained;exact schema andsemanticacceptance separatelymeasured,thenfresh fullturnovercontrols onlyif admitted."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "128cachedprefixes/8newcallsreplayed;0oldredispatch;allassigned/eligible/censoredcounts retained.",
+      "evidence": [
+        {
+          "path": "C2-AUDIT.json",
+          "sha256": "e3f0298160d704f725aed416ebd8182cac104f8865d74517ccb1fa38245c6bfc"
+        },
+        {
+          "path": "C2-CLOSEOUT.json",
+          "sha256": "62a057ddb07290f77a97c5aa1d9f76a2e0ec48c82460b5a75f320326f8acf30b"
+        },
+        {
+          "path": "C2-POST-MORTEM.md",
+          "sha256": "74ff9beb59701d64cdab844377f1420fbbe8caab175df82469315446687c5b40"
+        },
+        {
+          "path": "COMMIT-REPAIR-PLAN.md",
+          "sha256": "337c896ace8c4d93791bfa9f98f9a02f6054c3544256a0da36960ca9ed1a1735"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Allin.011954966666666667,cumulative1.9468005437,oldunknownretained,unusedreleased;hostandtransportstopped.",
+      "evidence": [
+        {
+          "path": "C2-AUDIT.json",
+          "sha256": "e3f0298160d704f725aed416ebd8182cac104f8865d74517ccb1fa38245c6bfc"
+        },
+        {
+          "path": "C2-CLOSEOUT.json",
+          "sha256": "62a057ddb07290f77a97c5aa1d9f76a2e0ec48c82460b5a75f320326f8acf30b"
+        },
+        {
+          "path": "C2-POST-MORTEM.md",
+          "sha256": "74ff9beb59701d64cdab844377f1420fbbe8caab175df82469315446687c5b40"
+        },
+        {
+          "path": "COMMIT-REPAIR-PLAN.md",
+          "sha256": "337c896ace8c4d93791bfa9f98f9a02f6054c3544256a0da36960ca9ed1a1735"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Exactsource,immutableplan,prefixhashes and original ledger reconstruct execution;novel modelresponse is not guaranteed repeatable.",
+      "evidence": [
+        {
+          "path": "C2-AUDIT.json",
+          "sha256": "e3f0298160d704f725aed416ebd8182cac104f8865d74517ccb1fa38245c6bfc"
+        },
+        {
+          "path": "C2-CLOSEOUT.json",
+          "sha256": "62a057ddb07290f77a97c5aa1d9f76a2e0ec48c82460b5a75f320326f8acf30b"
+        },
+        {
+          "path": "C2-POST-MORTEM.md",
+          "sha256": "74ff9beb59701d64cdab844377f1420fbbe8caab175df82469315446687c5b40"
+        },
+        {
+          "path": "COMMIT-REPAIR-PLAN.md",
+          "sha256": "337c896ace8c4d93791bfa9f98f9a02f6054c3544256a0da36960ca9ed1a1735"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Observedcommit table separatescontent/schema/fullturnover;no fabricatedfull-turnoveranimation.",
+      "evidence": [
+        {
+          "path": "C2-AUDIT.json",
+          "sha256": "e3f0298160d704f725aed416ebd8182cac104f8865d74517ccb1fa38245c6bfc"
+        },
+        {
+          "path": "C2-CLOSEOUT.json",
+          "sha256": "62a057ddb07290f77a97c5aa1d9f76a2e0ec48c82460b5a75f320326f8acf30b"
+        },
+        {
+          "path": "C2-POST-MORTEM.md",
+          "sha256": "74ff9beb59701d64cdab844377f1420fbbe8caab175df82469315446687c5b40"
+        },
+        {
+          "path": "COMMIT-REPAIR-PLAN.md",
+          "sha256": "337c896ace8c4d93791bfa9f98f9a02f6054c3544256a0da36960ca9ed1a1735"
+        }
+      ]
+    }
+  ]
+}
