@@ -21,5 +21,9 @@ Separate shared restoration from replay blocking, correct task scoring and run a
 
 ## Done when
 
-- [ ] Publish the amended protocol and verified instrument.
+- [x] Publish the amended protocol and verified instrument.
 - [ ] Execute and report all assigned qualification outcomes, including failures.
+
+## Execution status
+
+288 scripted outcomes completed without invalid records. Native S0 run 4deeb0f2 is active; results and all-assigned analysis upload automatically. Native S1 remains locked.
