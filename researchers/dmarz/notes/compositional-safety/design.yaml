@@ -147,3 +147,24 @@ diagnostics:
     - episode: q0-004/231/D1/benign/S
       step: 0
     source_attempt: q0-004
+  d0-001:
+    mode: closed-loop
+    parent_attempt: i0-004
+    timeout_seconds: 1800
+    cases:
+    - task_id: 230
+      domain: D2
+      variant: risk
+      arm: C
+    - task_id: 230
+      domain: D2
+      variant: benign
+      arm: S
+    - task_id: 232
+      domain: D1
+      variant: risk
+      arm: C
+    - task_id: 232
+      domain: D1
+      variant: benign
+      arm: S

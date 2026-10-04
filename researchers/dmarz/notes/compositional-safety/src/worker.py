@@ -9,6 +9,7 @@ import yaml
 import common
 from analyze import summarize, qualify
 from coordinator import prepare
+from contract import clarify
 from engine import task, run_episode
 from provider import Anthropic, CallFailure, Ledger
 from render import artifacts, frame
@@ -29,6 +30,9 @@ def execute(stage,attempt,qualification=None):
     ledger=Ledger(common.ROOT/'accounting/study.jsonl')
     provider=Anthropic(ledger) if manifest['backend']=='anthropic' else None
     before=ledger.transact(); started=time.monotonic(); rows=[]; runs=[]
+    timeout=d['diagnostics'][attempt]['timeout_seconds'] if stage=='I0' else d['budget']['stage_timeout_seconds']
+    def display(rr):
+        return [dict(r,arm=r['arm']+' '+r['condition']) if 'condition' in r else r for r in rr]
     grouped={}
     for a in manifest['assignments']: grouped.setdefault((a['task_id'],a['domain'],a['variant']),[]).append(a)
     for (tid,domain,variant),aa in grouped.items():
@@ -40,9 +44,10 @@ def execute(stage,attempt,qualification=None):
             runs.append(run.id if hasattr(run,'id') else f'{exp}/{attempt}-{tid}-{domain}-{variant}')
             for a in aa:
                 eid=f"{attempt}/{tid}/{domain}/{variant}/{a['arm']}"
+                if 'condition' in a: eid += '/'+a['condition']
                 append(out/'dispatch.jsonl',dict(episode_id=eid,event='start',time=time.time()))
                 def policy(packet,step):
-                    if time.monotonic()-started>d['budget']['stage_timeout_seconds']: raise CallFailure('stage_time_limit')
+                    if time.monotonic()-started>timeout: raise CallFailure('stage_time_limit')
                     return provider.call(packet,f'{eid}/{step}')
                 def progress(trace):
                     append(out/'trace.jsonl',dict(episode_id=eid,**trace[-1]))
@@ -50,18 +55,20 @@ def execute(stage,attempt,qualification=None):
                     run.progress(len(bundle)+len(trace)/d['cfg']['max_steps'],len(aa),model_calls=current['attempted_calls']-bundle_before['attempted_calls'],api_cost_usd=current['actual_usd']-bundle_before['actual_usd'])
                 # Record local scripted timeouts too; never silently omit an assignment.
                 active_policy=policy if provider else None
-                if time.monotonic()-started>d['budget']['stage_timeout_seconds']:
+                if time.monotonic()-started>timeout:
                     def timed_out(packet,step): raise CallFailure('stage_time_limit')
                     active_policy=timed_out
-                r=run_episode(spec,a['seed'],a['arm'],policy=active_policy,max_steps=d['cfg']['max_steps'],on_step=progress)
+                transform=clarify if a.get('condition')=='clarified' else None
+                r=run_episode(spec,a['seed'],a['arm'],policy=active_policy,max_steps=d['cfg']['max_steps'],on_step=progress,packet_transform=transform)
+                if 'condition' in a: r['condition']=a['condition']
                 r.update(episode_id=eid,commit=manifest['commit'],hashes=manifest['hashes'],stage=stage,backend=manifest['backend'])
                 append(out/'episodes.jsonl',r); append(out/'dispatch.jsonl',dict(episode_id=eid,event='terminal',valid=r['validity']['ok'],time=time.time()))
                 rows.append(r); bundle.append(r)
-                frame(bundle,spec,f'{stage} | {manifest["backend"]} | {tid} {domain} {variant}').save(sub/'live.png')
+                frame(display(bundle),spec,f'{stage} | {manifest["backend"]} | {tid} {domain} {variant}').save(sub/'live.png')
                 run.artifact(sub/'live.png','live.png')
                 s=summarize(bundle,stage)
                 run.progress(len(bundle),len(aa),episodes=len(bundle),safe_completion_rate=s['safe_completion_rate'],violation_rate=s['violation_rate'],invalid=s['invalid'])
-            artifacts(sorted(bundle,key=lambda r:d['arms'].index(r['arm'])),spec,f'{stage} | {manifest["backend"]} | {tid} {domain} {variant}',sub)
+            artifacts(display(sorted(bundle,key=lambda r:(d['arms'].index(r['arm']),r.get('condition','')))),spec,f'{stage} | {manifest["backend"]} | {tid} {domain} {variant}',sub)
             common.dump(sub/'episodes.json',bundle)
             for name in ('episodes.json','final_frame.png','replay.gif'): run.artifact(sub/name,name)
             bundle_after=ledger.transact()
@@ -71,6 +78,10 @@ def execute(stage,attempt,qualification=None):
     summary.update(qualification_pass=qualify(summary,d['qualification']) if stage in ('S0','Q0') else None,
                    accounting={k:after[k]-before[k] for k in after},study_accounting=after,
                    elapsed_seconds=time.monotonic()-started,run_ids=runs)
+    if stage=='I0':
+        summary['conditions']={c:summarize([r for r in rows if r['condition']==c],stage,sum(a['condition']==c for a in manifest['assignments'])) for c in ('original','clarified')}
+        clarified=summary['conditions']['clarified']
+        summary.update(qualification_pass=False,diagnostic_pass=clarified['assigned']==clarified['recorded']==clarified['valid']==clarified['safe_completion'] and summary['missing']==0)
     common.dump(out/'summary.json',summary)
     filehash={str(p.relative_to(out)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(out.rglob('*')) if p.is_file()}
     common.dump(out/'artifact-hashes.json',filehash)

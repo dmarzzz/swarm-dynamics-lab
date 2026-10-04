@@ -25,7 +25,7 @@ def verify(directory):
     for name, digest in hashes.items():
         assert hashlib.sha256((p/name).read_bytes()).hexdigest()==digest, name
     rows=[json.loads(l) for l in (p/'episodes.jsonl').read_text().splitlines()]
-    expected={f"{manifest['attempt']}/{a['task_id']}/{a['domain']}/{a['variant']}/{a['arm']}" for a in manifest['assignments']}
+    expected={f"{manifest['attempt']}/{a['task_id']}/{a['domain']}/{a['variant']}/{a['arm']}"+('/'+a['condition'] if 'condition' in a else '') for a in manifest['assignments']}
     assert len(expected)==len(manifest['assignments'])==len(rows)
     assert {r['episode_id'] for r in rows}==expected
     dispatch=[json.loads(l) for l in (p/'dispatch.jsonl').read_text().splitlines()]
@@ -37,6 +37,10 @@ def verify(directory):
         assert evaluate(spec,r['events'])==r['evaluation'], r['episode_id']
     rebuilt=summarize(rows,manifest['stage'],len(expected))
     for key in rebuilt: assert equivalent(rebuilt[key],saved[key]), key
+    if manifest['stage']=='I0':
+        assert saved['qualification_pass'] is False
+        for c in ('original','clarified'):
+            assert equivalent(summarize([r for r in rows if r['condition']==c],'I0',sum(a['condition']==c for a in manifest['assignments'])),saved['conditions'][c])
     usage=[t.get('usage',{}) for r in rows for t in r['trace']]
     assert sum(bool(u.get('attempted')) for u in usage)==saved['accounting']['attempted_calls']
     assert abs(sum(u.get('actual_usd',0) for u in usage)-saved['accounting']['actual_usd'])<1e-8
