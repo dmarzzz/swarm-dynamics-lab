@@ -279,6 +279,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-theseus | working | theseus-a1-acquisition | 2026-10-04T15:27Z | A1 acquisition instrument prepared offline; resolving orbital queue dispatch boundary |
 | shadow/sol-askswarm | done | wild-askswarm | 2026-10-04T15:25Z | Shipped AskSwarm v0.1.1, three source reports, sensitivity and evidence registry; zero model calls. |
 | vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T15:25Z | Q-A7 prepared and tested; queue allocation, dedicated credential delivery and canonical ledger continuity unresolved |
 | shadow/sol-identity | done |  | 2026-10-04T15:23Z | Shipped complete descriptive census; SwarmTraces identity graph not identifiable; formal figure publication blocked |
@@ -311,7 +312,6 @@
 | dmarz/pipeline-quota | idle | build-quota-splitting | 2026-10-04T10:28Z | PAUSED by dmarz/pipeline (priority change) at pause commit 6b9adefa (source hash 978e7a58...): code for all four failure-handling parts is in and selftest passes (71 tests). Remaining: documents and dated amendment for the rule, mutants and clean-export rerun of all offline checks, READY.yaml, pre-run review. No launch, no model call. |
 | dmarz/program-filer | done |  | 2026-10-04T10:28Z | carried the Codex-authored overnight research program (v1-v5), its four sibling documents, their notes folders, attestations and registry entries onto main; nothing launched |
 | dmarz/market-split-opus | done |  | 2026-10-04T10:20Z | market-split-opus complete; Opus 5.5 split in 6/6 firm-regulated, 0/6 owner, 0/6 unregulated fresh markets; 902 calls, USD 15.34; results and post-run review pushed; claim on sim-test-01 released |
-| vishesh/codex-theseus | done | theseus-d2-run | 2026-10-04T09:25Z | D2 and single R1 repair complete; F qualified, postmortems and next proposal published |
 | dmarz/newcomer-opus | done |  | 2026-10-04T09:20Z | sybil-newcomer-opus S1 closed out: RESULTS.md and s1-001-post.md pushed; claim released |
 | dmarz/budget-sonnet | done |  | 2026-10-04T09:10Z | S1 done 2880/2880, USD 118.85 study total; results, post-mortem and paired Haiku comparison pushed; claim released |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T08:59Z | S0-01 failed and closed; S0-02 repair 63 tests passed; awaiting concrete owner update decision |
