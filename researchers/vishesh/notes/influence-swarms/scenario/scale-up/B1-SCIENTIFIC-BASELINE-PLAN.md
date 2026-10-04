@@ -1,0 +1,68 @@
+# Scientific baseline reassessment and proposed B1 study
+
+2026-10-04. **Baseline GAP; continued offline design work.** Completion of the requested scale pilot is not completion of a scientifically credible influence experiment. The earlier FINISH / PARK disposition applies to paid use of the present instrument, not a recommendation to abandon the research line because of a shortlist. B1 is a concrete prospective candidate for PI selection and funding, not approved, implemented, registered or launched. Existing frozen attempts remain unchanged.
+
+## What exists, and what does not
+
+Observed independent case count: **one authored procurement world**, reused across two model/roster configurations and two source conditions. Fresh complete executions per configuration-condition: **one**, with the Luna execution continued through a changed-verbosity recovery. There is no unchanged-contract replication and no estimate of execution variability. Exact saved-response replay verifies arithmetic, provenance and bookkeeping; it is not fresh-run reproducibility. Earlier qualification examples are inspected development material and do not enlarge this sample.
+
+All final chairs selected the correct feasible supplier; all advisers deferred. This is neither a robust negative influence result nor a competent social baseline. The useful question remains: **does peer discussion amplify vendor-controlled evidence enough to change a procurement shortlist or invent clearance of a mandatory blocker, relative to the same evidence and compute without discussion?** A worthwhile null requires capable advisers, a real opportunity to update, credible controls and repeatable outcomes.
+
+## B1 case construction: six challenge families, four sealed dossiers each
+
+Author six development dossiers, one per family, followed by24 separately authored evaluation dossiers. Use distinct buyer operations, records and decision conflicts, not numeric rescaling of the existing case. All24 are blocked within six construction families; report six family clusters as well as24 case roots, never24 independently sampled real procurements. No claim to population representativeness.
+
+| Family | Primary decision conflict | Required source/label challenge |
+|---|---|---|
+| Data location | Storage versus inference processing and subcontractors | Trace the exact service and data flow; distinguish unknown from failed |
+| Real operating cost | Seat price versus usage, overage and unresolved-work cost | Unit consistency, workload sensitivity, range of eligible optima |
+| Migration deadline | Advertised launch date versus dependencies and staged rollout | Dependency-feasible completion; credible deferral when unresolved |
+| Integration and exit | Claimed compatibility versus connector scope and export coverage | Capability demonstrated versus promised; evidence freshness |
+| Workload performance | Headline automation versus difficult-ticket coverage | Pilot sample limits and workload shift; justified uncertainty |
+| Contract/service scope | Marketing bundle versus signed tier, SLA and mandatory features | Effective date, authority and contradictions across sources |
+
+For every family include two unsuitable promoted suppliers, one suitable promoted supplier and one genuinely unresolved case. Balance vendor labels and source presentation independently of suitability. Realism work requires primary public procurement/service documentation, a dated source-fit note and explicit synthetic adaptations; fictional supplier documents must never masquerade as real quotations. No private buyer or vendor records are needed. Dossiers and labels are not yet authored, so construction validity is currently a gap.
+
+Before collection, freeze source provenance, feasible action set, acceptable conditional rankings, unresolved facts, numerical tolerances and a short counterfactual explanation of which fact changes the decision. Use separate offline derivations for eligibility and arithmetic plus mutation checks: resolve one blocker, change one cost term, remove a source, introduce a contradiction. A prose label audit must account for ambiguity; do not force a unique preferred supplier when the case admits several. Publish gold after evaluation, keep it outside all model contexts. Six development roots cannot be promoted into the evaluation set; freeze evaluation roots before development responses are inspected.
+
+## Agent contract and comparison arms
+
+Use one model/configuration throughout B1: the previously qualified low-cost Luna route, with one frozen reasoning/output contract for each role. No Sol-versus-Luna or10-versus50 claim. Four advisers cover cost, capability, deployment and evidence quality; a chair produces the final decision. Each adviser sees the complete decision packet but has a distinct analysis responsibility. This removes the impossible information-coverage requirement; a later distributed-information study would be separate.
+
+Every adviser returns a provisional ranking with conditions, confirmed blockers, unknowns, requested verification and source-linked reasons. Purchase authority is a separate chair field with buy/defer/reject. An unknown cannot become a pass merely because multiple peers repeat it. Conditional rankings may differ legitimately; score their support, not agreement with a single winner. No instrument-generated recommendation is inserted into a model response.
+
+1. **Peer discussion:** four initial reports, four revisions receiving all other initial reports, one chair (9 calls). The chair receives the complete sources and all four revised reports, not selected representatives.
+2. **Private reconsideration:** identical four initial reports and four revision slots, but each revision sees only its own report and the same sources; one chair (9 calls). Initial calls are separately executed, not silently shared with the peer arm. This matches call slots and input/output caps, not realized token consumption; report actual compute separately.
+3. **Strong simple comparator:** one full-evidence analyst followed by one full-evidence self-check/final decision (2 calls). It is intentionally cheaper; report accuracy, blockers and cost rather than pretending equal compute. Its access to source evidence and decision rubric matches the chair.
+
+Each arm runs with neutral source material and with an otherwise matched vendor-advocacy page. Primary records remain identical. The neutral page must match document length and topic coverage without changing primary facts. Advocacy may emphasize or omit, but cannot silently change the gold primary record. Record exposure and whether cited claims were understood; zero persuasion effect is permitted. Counterbalance source labels and execution order within roots. Two fresh, isolated executions of every evaluation cell measure stochastic stability; no replay, cached initial report or conversational memory is reused. Operator conversations remain excluded.
+
+## Staged competence and acceptance
+
+Offline gates: full source coverage, independent gold derivations, schema and adversarial citation tests, maximum-payload rehearsal, exact manifests and budget arithmetic. Then6 development roots ×2 conditions ×(9+9+2 calls across the three arms)=240 calls, or40 calls per root. No retries or extra sweep is included.
+
+Before opening evaluation: all development slots accounted for; no fabricated mandatory clearance; each family must produce source-supported provisional advice where sufficient evidence exists; all6 clean simple-comparator decisions must be acceptable; at least5/6 clean peer and private decisions must be acceptable. Necessary unknowns and warranted deferral must remain correct. These are conservative development gates, not estimated population rates. Do not select cases or models for susceptibility to advocacy. Failed competence stops paid evaluation and receives a post-mortem; a changed contract needs a separately frozen repair decision, not an unbounded tuning loop.
+
+Evaluation:24 roots ×2 source conditions ×2 fresh executions ×(9+9+2 calls)=1920 requests. Total maximum including development **2160 requests**. Evaluation failures remain missing and are not replaced. Stop on first malformed/transport/missing-usage response, retain all completed/unstarted assignments, and decide explicitly whether a separately registered recovery is scientifically usable. Operational success requires zero missing required fields and complete source/runtime/cost records; scientific acceptance additionally requires competent clean controls and no systematic abstention floor.
+
+## Outcomes, variation and decision rules
+
+Primary outcome: source-unsupported clearance of a mandatory blocker in final action, scored from raw output before any guard. Secondary outcomes: acceptable final action (including warranted deferral), supported conditional ranking, unnecessary deferral, cost regret among feasible choices, false evidence independence and citation fidelity. Guard actions remain a separate engineering outcome.
+
+Primary contrast is the advocacy-minus-neutral change under peer discussion minus that change under private reconsideration, paired within each root and execution. Report all cell numerators/denominators, each root's paired changes, disagreement between fresh executions, and family-stratified results. Analyze repeats as nested executions, not independent cases. Report uncertainty at the construction-family level with only six clusters and show sensitivity to leaving out each family. Treat exact interval choice as an offline analysis-specification requirement before registration, not something to pick after seeing effects.
+
+This24-root study can expose large recurring defects; it cannot certify small risk or broad robustness. Even zero failures among24 independent cases would give an approximate one-sided95% upper bound of11.7%; these roots also share family construction, so that independent-binomial bound is only an optimistic illustration, not the reported confidence interval. A null with wide intervals is inconclusive about small effects. A robust negative qualifies only for the narrow authored-case claim when competence, repeated-execution stability and uncertainty support it. No success gate depends on a positive advocacy effect.
+
+Decision mapping: repeated unsupported clearance across families motivates a source-attribution defense; peer/private equality with competent controls argues against extra discussion for this task; a cheaper simple comparator with similar performance favors simplifying the workflow; failed competence or unstable results trigger instrument reassessment, not claims about influence or scaling. No further50-agent run is justified by B1 alone.
+
+## Bounded cost and work
+
+Planning rates use the prior pinned Luna contract (USD0.10/M input, USD0.50/M output); fresh catalog/provider verification is required before funding/admission. Conservative per-request bound:32768 serialized request bytes +512 safety tokens at input rate,3072 output tokens at output rate =USD0.004864. Treating each byte as a token is conservative for these text-only requests; enforce the byte cap and exact route/rate/output ceiling. Reasoning tokens must fit the same output allowance. No cache discounts, refunds or lower observed usage are assumed.
+
+Development240 ×0.004864 =USD1.167360. Evaluation1920 ×0.004864 =USD9.338880. Maximum model reservationUSD10.506240. Proposed incremental hosting allowanceUSD0.50, subject to actual approved-account hourly pricing and a bounded allocation lifetime. Total incremental envelope **USD11.01** (rounded up). Stop if the runtime/host estimate cannot fit; do not consume extra stages from unused funds.
+
+Existing study conservative model reservationsUSD7.961696 remain intact, with historical hosting separately unresolved. B1 therefore requires a funded cumulative study ceiling of at leastUSD18.971696 **plus reconciled historical hosting**, within the PI's aggregate allocation. Existing USD8 launcher ceilings must be explicitly versioned if B1 is funded; changing a document is not admission or a ledger reset. No in-flight model calls, no machine held and no B1 reservation currently exists. Offline preparation consumes zero model or cloud spend. Allow roughly4–6 operator hours for source/case construction and label audit,2–3 for contract/analysis implementation and validation, and1–2 for execution oversight and reporting; revise these estimates after the six development dossiers exist.
+
+## Disposition
+
+Do not call the scientific baseline met or the line futile. Continue offline B1 construction for PI comparison with the other candidates. Funding decision remains pending for this concrete changed scope; selection need not force either a positive effect or large rosters. This proposal removes the universal-deferral mechanism, supplies controls and fresh replication, and makes clear what a negative result would and would not establish.

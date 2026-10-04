@@ -1,0 +1,25 @@
+{
+  "status": "proposed_not_authorized",
+  "model": "openai/gpt-6-luna",
+  "development_roots": 6,
+  "evaluation_roots": 24,
+  "construction_families": 6,
+  "source_conditions": 2,
+  "evaluation_repetitions": 2,
+  "arm_calls": {
+    "peer": 9,
+    "private": 9,
+    "simple": 2
+  },
+  "maximum_requests": 2160,
+  "request_bytes": 32768,
+  "input_safety_tokens": 512,
+  "output_tokens": 3072,
+  "input_usd_per_million": 0.1,
+  "output_usd_per_million": 0.5,
+  "maximum_model_usd": 10.50624,
+  "maximum_incremental_hosting_usd": 0.5,
+  "proposed_incremental_envelope_usd": 11.01,
+  "prior_model_reservations_usd": 7.961696,
+  "historical_hosting_usd": null
+}

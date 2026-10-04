@@ -34,3 +34,7 @@ The current experiment retains its original cumulative $8 ledger and prior reser
 A useful outcome can be negative: no change after advocacy, a guard that preserves legitimate service, or a finding that peer discussion adds no value. The purpose is to explain which information and interaction caused a decision, not to force a persuasion effect or reward larger teams for their size.
 
 Advisory review incorporated: PI feedback agreed that universal deferral is an interaction/manipulation-opportunity failure. The existing native attempt is unchanged; this refinement applies only to offline preparation and a future prospective design. Researcher feedback is advisory, not another launch gate.
+
+## Concrete successor proposal
+
+[B1 scientific baseline plan](B1-SCIENTIFIC-BASELINE-PLAN.md) expands this draft into cases, controls, fresh execution, acceptance, analysis and bounded costs. Baseline remains GAP. No paid successor is authorized.

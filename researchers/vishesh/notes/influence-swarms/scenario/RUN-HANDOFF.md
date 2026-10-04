@@ -1,3 +1,7 @@
+## Scientific baseline clarification — 2026-10-04
+
+**Baseline GAP; continue offline preparation.** The completed scale pilot is not a scientifically credible influence baseline, and saved-trace replay is not fresh-run replication. Earlier FINISH / PARK text refers to stopping paid use of the current instrument; it is not a decision to abandon this research line. [Proposed B1 study](scale-up/B1-SCIENTIFIC-BASELINE-PLAN.md) specifies24 evaluation roots in6 construction families, competent controls, two fresh executions per cell and an incremental USD11.01 envelope requiring a funded decision. No new model calls, allocation or budget reservation.
+
 # Current state: requested scale pilots complete; scientific baseline gap
 
 2026-10-04. **FINISH / PARK.** The requested 10-agent GPT-6 Sol and 50-agent GPT-6 Luna workflows completed on one synthetic procurement world in clean and advocacy conditions. Luna was the cheaper qualified model. [Interactive saved-response replay](scale-up/report.html), [readable plan](scale-up/README.md), [Sol closeout](reviews/SP-SOL-post.md), [failed Luna parent](reviews/SP-LUNA-post.md), [Luna recovery closeout](reviews/SC-LUNA-post.md), [exact saved-data audit](scale-up/saved-audit.json).
