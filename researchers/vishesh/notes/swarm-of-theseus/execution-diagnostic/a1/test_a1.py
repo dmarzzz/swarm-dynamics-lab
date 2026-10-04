@@ -96,6 +96,16 @@ class A1Tests(unittest.TestCase):
                 write_new(p/'calls'/(a['id']+'-finished.json'),result)
             s=summarize(p);self.assertTrue(s['qualification_passed']);self.assertEqual(s['arms']['learned']['correct'],96)
             (p/'calls'/(design[-1]['id']+'-finished.json')).unlink();s=summarize(p);self.assertFalse(s['qualification_passed']);self.assertEqual(s['unknown_usage_calls'],1);self.assertEqual(s['unresolved_exposure_usd'],.01)
+    def test_direct_owner_scope_is_bounded_and_fenced(self):
+        r=receipt();r.update(dispatch_origin='owner-direct-a1',queue_closed_verified=True,central_dispatch_absent=True,queue_fence_ref='SCRIPTED')
+        r['direct_dispatch_authorization']={'attempt':'A1','max_attempts':1,'max_calls':204,'original_cap_usd':5,'assignments_sha256':digest(assignments()),'plan_sha256':r['plan_sha256'],'no_central_dispatch':True,'decision_ref':'SCRIPTED','decision_record_sha256':'f'*64}
+        validate(r,r['source_commit'],assignments())
+        for k in r['direct_dispatch_authorization']:
+            bad=copy.deepcopy(r);bad['direct_dispatch_authorization'].pop(k)
+            with self.assertRaises(GateError):validate(bad,r['source_commit'],assignments())
+        for k in ('queue_closed_verified','central_dispatch_absent','queue_fence_ref'):
+            bad=copy.deepcopy(r);bad.pop(k)
+            with self.assertRaises(GateError):validate(bad,r['source_commit'],assignments())
     def test_actual_dispatch_loop_invalid_parent_and_duplicate_fence(self):
         import runner,types,sys
         from unittest.mock import patch

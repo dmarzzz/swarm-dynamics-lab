@@ -42,3 +42,7 @@ python3 scripts/experiment.py finalize swarm-of-theseus-v2 --attempt a1-native -
 ```
 
 Use failed or ambiguous instead when warranted. The legacy adapter may report that A1 automatic analysis is unsupported; retain that limitation and use A1's explicit saved-data analysis. This hook is an operational inventory, not the scientific review. Complete all eleven RUN-QUALITY dimensions with evidence hashes; report assigned/started/terminal/valid/analyzed counts, acquisition versus ceiling, false actions, per-root effects, native model/usage, original cumulative exposure and artifact status. Update metadata/setup and only then release the claim. No queued successor and no cultural claim.
+
+## Owner-authorized direct path amendment
+
+The new A1-DIRECT-AMENDMENT.md supersedes only the orbital-one launch restriction in this historical handoff. Queue295 is closed with an explicit no-central fence. Use owner-direct-a1 receipt origin and the bounded direct_dispatch_authorization object, never a fabricated orbital receipt. The actual local credential loader sends the one approved key and separately allowlisted routing metadata over verified SSH stdin to the exclusively claimed host. Native command, one-attempt identity and every other gate are unchanged.

@@ -31,8 +31,17 @@ def validate(receipt,revision,assignments,now=None):
  if len(assignments)!=204 or sum(a['kind']=='learn' for a in assignments)!=12:raise GateError('assignment_count_mismatch')
  if receipt.get('prior_spend_usd')!=0.8122310437 or receipt.get('total_authority_usd')!=5 or receipt.get('infrastructure_hold_usd')!=.1:raise GateError('budget_carryforward_mismatch')
  if receipt.get('update_approval_sha256')!=hashlib.sha256((ROOT/'A1-PLAN.md').read_bytes()).hexdigest():raise GateError('update_scope_mismatch')
- if receipt.get('dispatch_origin')!='orbital-one':raise GateError('orbital_dispatch_required')
- for k in ('approved_account_verified','original_ledger_reconciled','exclusive_workload_verified','queue_dispatch_authorized','credential_policy_verified','host_key_verified'):
+ origin=receipt.get('dispatch_origin')
+ if origin=='owner-direct-a1':
+  authority=receipt.get('direct_dispatch_authorization',{})
+  exact={'attempt':'A1','max_attempts':1,'max_calls':204,'original_cap_usd':5,'assignments_sha256':digest(assignments),'plan_sha256':receipt['plan_sha256'],'no_central_dispatch':True}
+  if not isinstance(authority,dict) or any(authority.get(k)!=v for k,v in exact.items()):raise GateError('direct_authority_scope_mismatch')
+  if not authority.get('decision_ref') or not authority.get('decision_record_sha256'):raise GateError('direct_authority_missing')
+  if receipt.get('queue_closed_verified') is not True or receipt.get('central_dispatch_absent') is not True or not receipt.get('queue_fence_ref'):raise GateError('queue_fence_missing')
+ elif origin=='orbital-one':
+  if receipt.get('queue_dispatch_authorized') is not True:raise GateError('queue_dispatch_missing')
+ else:raise GateError('unsupported_dispatch_origin')
+ for k in ('approved_account_verified','original_ledger_reconciled','exclusive_workload_verified','credential_policy_verified','host_key_verified'):
   if receipt.get(k) is not True:raise GateError('missing_'+k)
  for k in ('queue_issue','original_ledger_ref','budget_retirement_ref','credential_policy_ref','runtime_sha256'):
   if not receipt.get(k):raise GateError('missing_'+k)

@@ -15,11 +15,10 @@
   },
   "assignments_sha256": "c34ac36a5e1266932c1ea831294629f833a5bc8dcbf56f95ef4781d567051a26",
   "evidence_type": "offline_contract_check_not_native_evidence",
-  "checked_at": "2026-10-04T15:27:28.970153+00:00",
-  "offline_tests_passed": 15,
+  "checked_at": "2026-10-04T16:41:02.069953+00:00",
+  "offline_tests_passed": 16,
   "native_calls": 0,
-  "instrument_sha256": "b6fb496a4215335f5588de6a6cf2a5786af4a353bb3aeb3bc7db6ad79acfd897",
-  "fixture_visual_checked": true,
-  "fixture_visual_sha256": "b2a71538793405c9afe35ee53d8c4f9a1b2ecdc06736221178c89197c2b9548e",
-  "scope": "Software validation only; queue, account/claim, credential handoff, public-page and remote runtime gates unresolved."
+  "instrument_sha256": "a5301e847bc08f978f435c1bc72e2408e6dc72da4daef5997cfe86b12b00aec2",
+  "direct_gate_fault_checks": "scope, attempt/call/cap limits, plan/assignment binding and no-central fence required",
+  "scope": "Direct dispatch authorized, all live resource/public/runtime checks still required."
 }
