@@ -1,10 +1,10 @@
 id: market-split-haiku
 owner: dmarz
 title: 'Market splitting: Haiku with reasoning'
-description: Exploratory model-configuration comparison to Sonnet. Same neutral market
-  and one action per round; Haiku V3 has more output headroom and must pass fresh
-  full-length reliability checks. Failed attempts remain separate and visible.
-url: https://github.com/dmarzzz/swarm-lab/tree/e36408b372a3ffa914a8adbee19b2cc82b56958b/researchers/dmarz/notes/market-split-haiku
+description: Haiku V3 failed full-length reliability on a strict production-capacity violation.
+  Three episodes completed, one failed, four were cancelled unstarted. Results and
+  the next diagnostic plan are published; no new comparison has started.
+url: https://github.com/dmarzzz/swarm-lab/tree/399509e189e62b6b78fad6d915de88a8531851e1/researchers/dmarz/notes/market-split-haiku
 params:
   stage:
     type: str
@@ -46,7 +46,8 @@ params:
       d0-001: V3 — response-headroom diagnosis
       i0-003: V3 — fresh action mechanics
       q0-002: V3 — fresh profit qualification
-      r0-001: V3 — full-length regulated reliability
+      r0-001: V3 — reliability failed on capacity precision
+      r0-001-analysis: V3 — reliability result and post-mortem
       s1-002: V3 — discovery after fresh qualification
   code:
     role: fixed
