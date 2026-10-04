@@ -67,6 +67,20 @@ def main():
     eps = [e for e in read_local(Path(a.local)) if e.get("stage") == a.stage]
     if not eps:
         sys.exit(f"no {a.stage} episodes")
+    # Resumed pilot runs redo episodes whose arms were invalid (provider errors), so a (memory, task, seed, arm) can
+    # appear twice: keep the valid record if any, else the last invalid one. Redone-invalid counts are reported.
+    by_key = {}
+    redone = 0
+    for e in eps:
+        k = (e["world"], e["dose"], e["memory"], e["task_id"], e["seed"], e["arm"])
+        if k in by_key:
+            redone += 1
+            if by_key[k]["validity"]["ok"] and not e["validity"]["ok"]:
+                continue
+        by_key[k] = e
+    eps = list(by_key.values())
+    if redone:
+        print(f"note: {redone} records superseded by a resumed rerun of the same (cell, task, arm); valid record kept")
     arms = sorted({e["arm"] for e in eps}, key=d["arms"].index)
     out = ROOT / "results"
     out.mkdir(exist_ok=True)

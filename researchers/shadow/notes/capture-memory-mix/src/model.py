@@ -150,9 +150,15 @@ class HTTPPolicy:
                     resp = json.loads(r.read(400_000))
                 break
             except urllib.error.HTTPError as e:
-                last = f"provider HTTP {e.code}"
-                if e.code in (400, 401, 402, 403):
+                try:
+                    detail = e.read(600).decode("utf-8", "replace")
+                except Exception:  # noqa: BLE001
+                    detail = ""
+                last = f"provider HTTP {e.code} {detail[:200]}"
+                if e.code in (401, 402, 403):
                     break
+                # 400 from one upstream provider (seen with qwen3-235b on OpenRouter) is usually provider-specific;
+                # a retry is routed elsewhere, so 400 is retried like a 5xx.
                 time.sleep(1.5 * (attempt + 1))
             except Exception as e:  # noqa: BLE001
                 last = "provider " + type(e).__name__
