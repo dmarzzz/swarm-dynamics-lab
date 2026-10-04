@@ -14,7 +14,7 @@ The operator stopped `s1-a1` during input preparation (hub status failed, Keyboa
 
 ## 2. Gate forecast
 
-- Timeline for batch a2, from batch a1's timings: S0 about 8 minutes (to about 08:31Z), Q0 about 1 minute plus its input preparation, then S1 input preparation of 40 to 50 minutes, so the first S1 model call is around 09:20Z to 09:30Z.
+- Timeline for batch a2, from batch a1's timings: S0 about 8 minutes (to about 08:31Z), Q0 about 1 minute plus its input preparation, then S1 input preparation of 40 to 50 minutes, so the first S1 model call was expected around 09:20Z to 09:30Z. Measured at 09:11Z: N=8,748 preparation is at world 6009 of 6000-6023 and takes about 2.4 minutes per world, so the first model call is now about 09:45Z. S1 input preparation is about 70 minutes in this batch.
 - S1 has no pass gate; it ends when 576 calls are terminal or the ledger stops dispatch at USD 330.
 - Cost: Q0's USD 9.85 is at the top of the amendment's USD 7 to 10 estimate. Scaling the amendment's S1 estimate the same way gives about USD 235 to 245 for S1 and about USD 250 in total, under the USD 330 cap. This is my projection from one number, not a measurement; the per-size cost will be visible once S1 reports.
 - Time: input preparation is the long pole so far. If N=8,748 scales as the first two sizes did (about three times longer per step), the first model call is around 08:35Z to 08:45Z. Model time after that is unknown until answers land. Q0's 24 calls finishing inside a minute means calls run concurrently; if S1 keeps that pace the model part is well under an hour, unless the provider's input-token rate limit throttles the 4,374-report packets.
