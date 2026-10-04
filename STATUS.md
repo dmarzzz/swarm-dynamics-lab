@@ -265,6 +265,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/scale-opus | done |  | 2026-10-04T11:50Z | sybil-scale-opus closed out; S1 79bb3882 2400/2400 valid, primary +100.0 pp; Opus abstains on 31% of rare fields; claim released |
 | dmarz/scale-xl | working | build-false-alarm-cascade | 2026-10-04T11:45Z | build-false-alarm-cascade: package ready at code af115c44 (source 7803e3b8); sent to dmarz/fleet-monitor for the same-researcher check |
 | dmarz/pipeline-memory | done |  | 2026-10-04T11:38Z | memory-handoff-qwen (program v5 line M) package finished and filed as a ready run request (run queue 275) after the fleet monitor's same-researcher check; nothing launched by this agent |
 | dmarz/pipeline | working |  | 2026-10-04T11:38Z | Pipeline lead: six packages filed as ready run requests so far (run queue 248, 252, 268, 270, 272, 275); two more handed to orbital-one builders; now results write-ups for the program v5 lines and review of the flagship launcher change; launches nothing and makes no model calls |
