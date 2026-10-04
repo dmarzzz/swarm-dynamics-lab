@@ -73,8 +73,10 @@ def run(case,policy,emit=lambda e:None):
         nonlocal calls
         calls+=1;request={'instructions':prompt,'observation':obs}
         event({'kind':'request','call':calls,'request':request,'request_hash':digest(request)})
+        before={k:getattr(policy,k,0) for k in ('calls','input_tokens','output_tokens','actual_usd')}
         answer=policy.complete(request,scripted)
-        event({'kind':'response','call':calls,'phase':obs['phase'],'answer':answer})
+        usage={k:getattr(policy,k,0)-v for k,v in before.items()}
+        event({'kind':'response','call':calls,'phase':obs['phase'],'answer':answer,'usage':usage})
         return validate(answer,obs)
     def obs(phase,docs,**kw):return {'phase':phase,'brief':case['brief'],'candidates':case['candidates'],'documents':copy.deepcopy(docs),**kw}
     def terminal(arm,answer=None,error=None):
@@ -104,7 +106,7 @@ def run(case,policy,emit=lambda e:None):
         reports=[call(obs('initial',ds,role=role),ANALYST) for role,ds in zip(ROLES,case['allocations'])]
         checked=checks(reports)
     except Exception as exc:
-        for arm in ('team_ballots','team_evidence'):terminal(arm,error=type(exc).__name__)
+        for arm in ('team_ballots','team_evidence'):terminal(arm,error=(type(exc).__name__+': '+str(exc)) if isinstance(exc,ValueError) else type(exc).__name__)
     else:
         arms=['team_ballots','team_evidence']
         if case['profile']%2:arms.reverse()
@@ -115,12 +117,12 @@ def run(case,policy,emit=lambda e:None):
                     for p in peers:p.pop('choice');p.pop('confidence')
                 answer=call(obs('chair',case['documents'],reports=peers,checks=checked),CHAIR)
                 terminal(arm,answer)
-            except Exception as exc:terminal(arm,error=type(exc).__name__)
+            except Exception as exc:terminal(arm,error=(type(exc).__name__+': '+str(exc)) if isinstance(exc,ValueError) else type(exc).__name__)
     # Practical alternative: one generalist sees the full evidence union, then
     # the same two-record retrieval budget. Four calls, reported as cheaper.
     try:
         initial=call(obs('initial',case['documents'],role='generalist'),ANALYST)
         checked=checks([initial])
         terminal('solo',call(obs('chair',case['documents'],reports=[initial],checks=checked),CHAIR))
-    except Exception as exc:terminal('solo',error=type(exc).__name__)
+    except Exception as exc:terminal('solo',error=(type(exc).__name__+': '+str(exc)) if isinstance(exc,ValueError) else type(exc).__name__)
     return {'outcomes':outcomes,'calls':calls,'events':events,'corpus_hash':case['corpus_hash'],'truth_hash':case['truth_hash']}

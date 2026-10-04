@@ -1,4 +1,5 @@
-import unittest
+import unittest,json,tempfile
+from pathlib import Path
 import jev
 from test_policies import fixture,CAL
 from policies import initial,purchase,query_model
@@ -22,6 +23,14 @@ class JevTests(unittest.TestCase):
         self.assertEqual(jev.validate_response(d,{'A':'a','B':'b'})['answers']['decision']['choice'],'A')
         d['provider']='other'
         with self.assertRaises(ValueError):jev.validate_response(d,{'A':'a','B':'b'})
+    def test_recovery_reuses_exact_valid_response(self):
+        state='fixture';q={'type':'choice','instructions':'pick','criteria':{'A':'a','B':'b'}};context={'task':25}
+        old={'valid':True,'context':context,'input_hash':jev.digest(state,q),'choice':'B','probabilities':{'A':0,'B':1},'encoded_tokens':10,'wall_s':1}
+        with tempfile.TemporaryDirectory() as tmp:
+            p=Path(tmp)/'old.json';p.write_text(json.dumps([old]));journal=Path(tmp)/'journal.jsonl'
+            rt=jev.Runtime('http://127.0.0.1:1',previous=[p],journal=journal)
+            self.assertEqual(rt.choose(state,'pick',q['criteria'],context),'B')
+            self.assertTrue(rt.receipts[0]['reused_from']);self.assertEqual(len(journal.read_text().splitlines()),1)
     def test_probe_balance(self):
         p=jev.probes();self.assertEqual(len(p),16);self.assertEqual(sum(x['kind']=='option' for x in p),4)
 if __name__=='__main__':unittest.main()

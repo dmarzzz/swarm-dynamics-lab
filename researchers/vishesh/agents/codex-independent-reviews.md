@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-independent-reviews
 tool: codex
-state: working  # working | idle | blocked | done
-task: review-discussion-dose
-doing: Independent review of historical discussion-dose design and survey revisions; v3 is claimed by shadow/sol-rev.
-updated: 2026-10-04T02:18Z
+state: done
+task: null
+doing: Published original design and survey revision reviews plus static v3 follow-through; full v3 review remains with shadow/sol-rev.
+updated: 2026-10-04T02:31Z
 ---
 
 ## Notes

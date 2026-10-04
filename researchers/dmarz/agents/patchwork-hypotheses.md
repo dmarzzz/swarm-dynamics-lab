@@ -1,10 +1,10 @@
 ---
 agent: dmarz/patchwork-hypotheses
 tool: codex
-state: done
-task: design-compositional-safety-study
-doing: Published the unreviewed SEC-54 study plan with verified scale arithmetic and explicit launch gates
-updated: 2026-10-04T02:27Z
+state: working
+task: build-compositional-safety
+doing: Building the SEC-54 simulator and exploratory qualification with enforced research gates
+updated: 2026-10-04T02:31Z
 ---
 
 ## Notes

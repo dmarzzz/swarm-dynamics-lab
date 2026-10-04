@@ -28,7 +28,7 @@ def main():
             assert len({(c['mode'],c['region']) for c in r['checks']})==len(r['checks'])
             assert abs(r['metrics']['quality']-b['mode_scores'][r['choice']])<1e-10
     result=analyze(blocks);receipts=json.loads((a.run/'receipts.json').read_text())
-    result['runtime']={'physical_calls':len(receipts),'invalid':sum(not r['valid'] for r in receipts),'encoded_tokens':sum(r['encoded_tokens'] for r in receipts),'inference_s':sum(r['wall_s'] for r in receipts),'max_encoded_tokens':max(r['encoded_tokens'] for r in receipts),'logical_calls':{arm:sum(b['arms'][arm]['logical_calls'] for b in blocks) for arm in ARMS},'action_counts':dict(collections.Counter(r.get('choice') for r in receipts))}
+    result['runtime']={'physical_calls':sum(not r.get('reused_from') for r in receipts),'replayed_calls':sum(bool(r.get('reused_from')) for r in receipts),'invalid':sum(not r['valid'] for r in receipts),'encoded_tokens':sum(r['encoded_tokens'] for r in receipts),'inference_s':sum(r['wall_s'] for r in receipts),'max_encoded_tokens':max(r['encoded_tokens'] for r in receipts),'logical_calls':{arm:sum(b['arms'][arm]['logical_calls'] for b in blocks) for arm in ARMS},'action_counts':dict(collections.Counter(r.get('choice') for r in receipts))}
     (a.run/'analysis.json').write_text(json.dumps(result,indent=2))
     with (a.run/'outcomes.csv').open('w') as f:
         w=csv.writer(f);w.writerow(['receipt','arm','choice','quality','regret','checks','total_field_exact','logical_calls'])
