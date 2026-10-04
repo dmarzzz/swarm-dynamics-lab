@@ -1,0 +1,367 @@
+{
+  "status": "offline_pass",
+  "native_calls": 0,
+  "test_count": 11,
+  "scripted_calls_rehearsed": 2160,
+  "maximum_rehearsed_wire_bytes": 24299,
+  "wire_ceiling": 32768,
+  "packet_sha256": "43ec90dd663c498e38ed64c569d0f70499f7e0b47c290adef10212ad52e97fc5",
+  "source_hashes": {
+    "cases.py": "196df733f187621fc0de53280c7674a09ad7d3ed26eab3455bd78e719d35953d",
+    "instrument.py": "3de174bec7849c123e122752344d75c52aeecf8555227f1811a4224880586557",
+    "prepare.py": "65790acd5e1e2586a0a928e0bc19ba4d274505b354caf43317af7ea7d0c02b77",
+    "test_b1.py": "12ddf1c87040db291a7ab72468db927cc28516f1f75a5f5cfb1978c831918e0f",
+    "dossiers.json": "58136dc1a6d6a1d8e442736d9693ff480a94d6d016d717bd43042244ab9e4632",
+    "SOURCE-FIT.md": "fdcfc5520f8c5d45ffad588f6cbd1826f001f8dcb150081174fb1a0cf1fdec87",
+    "../scale-up/B1-SCIENTIFIC-BASELINE-PLAN.md": "4970f47524c996caa442ebdea399ce298293226afa20667fec3c392a640937cd"
+  },
+  "treatments": [
+    {
+      "case_id": "b1-location-0",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-location-1",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-location-2",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        624,
+        642
+      ]
+    },
+    {
+      "case_id": "b1-location-3",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-location-4",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-cost-0",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-cost-1",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        624,
+        642
+      ]
+    },
+    {
+      "case_id": "b1-cost-2",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-cost-3",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-cost-4",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        624,
+        642
+      ]
+    },
+    {
+      "case_id": "b1-migration-0",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        624,
+        642
+      ]
+    },
+    {
+      "case_id": "b1-migration-1",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-migration-2",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-migration-3",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        624,
+        642
+      ]
+    },
+    {
+      "case_id": "b1-migration-4",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-integration-0",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-integration-1",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-integration-2",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        624,
+        642
+      ]
+    },
+    {
+      "case_id": "b1-integration-3",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-integration-4",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-performance-0",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-performance-1",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        624,
+        642
+      ]
+    },
+    {
+      "case_id": "b1-performance-2",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-performance-3",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-performance-4",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        624,
+        642
+      ]
+    },
+    {
+      "case_id": "b1-contract-0",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        624,
+        642
+      ]
+    },
+    {
+      "case_id": "b1-contract-1",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-contract-2",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    },
+    {
+      "case_id": "b1-contract-3",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        624,
+        642
+      ]
+    },
+    {
+      "case_id": "b1-contract-4",
+      "primary_equal": true,
+      "factual_clauses_equal": true,
+      "publisher_equal": true,
+      "only_framing_differs": true,
+      "page_bytes": [
+        617,
+        634
+      ]
+    }
+  ],
+  "qualification_fixture": "passes_neutral_gates; advocacy_harm_selection_test_passes",
+  "analysis_fixture": "zero scripted contrast; missing-cell aggregate suppression passes",
+  "gold_validation": "hand-specified family/status/acceptable structure plus exact arithmetic/schedule fixtures and mutations; not independent external validation",
+  "budget_arithmetic": {
+    "development": 1.16736,
+    "evaluation": 9.33888,
+    "total_models": 10.50624,
+    "max_incremental_with_hosting": 11.01
+  },
+  "remaining_admission": [
+    "PI funded named-scope decision",
+    "historical hosting reconciliation and original-ledger ceiling amendment",
+    "fresh route/rate availability",
+    "exact approved-account exclusive allocation and hosting quote",
+    "registered immutable condition plans/public-page verification",
+    "source/runtime verification and admitted acquisition adapter"
+  ]
+}

@@ -1,3 +1,7 @@
+## B1 offline packet prepared — 2026-10-04
+
+[Implemented B1 packet](b1/README.md) now contains30 authored dossiers, matched framing-only treatments, source-fit notes, separate gold digest, isolated peer/private/simple protocols and a descriptive family-level analysis. Twelve tests and2160 scripted request slots pass, with zero native model calls. Qualification uses only neutral semantic outcomes; advocacy harm is retained. The named unfunded scope is B1-D0 (240calls), then conditional B1-E0 (1920calls), maximum incrementalUSD11.01 including0.50 bounded hosting. Original ledger and historical-hosting unknown preserved; no allocation or budget amendment exists. See the frozen packet/validation hashes before funding and admission. Baseline remains GAP pending fresh native evidence.
+
 ## Scientific baseline clarification — 2026-10-04
 
 **Baseline GAP; continue offline preparation.** The completed scale pilot is not a scientifically credible influence baseline, and saved-trace replay is not fresh-run replication. Earlier FINISH / PARK text refers to stopping paid use of the current instrument; it is not a decision to abandon this research line. [Proposed B1 study](scale-up/B1-SCIENTIFIC-BASELINE-PLAN.md) specifies24 evaluation roots in6 construction families, competent controls, two fresh executions per cell and an incremental USD11.01 envelope requiring a funded decision. No new model calls, allocation or budget reservation.

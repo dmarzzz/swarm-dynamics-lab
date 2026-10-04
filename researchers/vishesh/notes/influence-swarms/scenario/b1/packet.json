@@ -1,0 +1,2324 @@
+{
+  "schema_version": 1,
+  "scope": "B1-D0_then_conditional_B1-E0",
+  "launch_enabled": false,
+  "approval": "not_funded",
+  "study_original_cap_usd": 8,
+  "prior_reserved_usd": 7.961696,
+  "proposed_incremental_max_usd": 11.01,
+  "model_max_usd": 10.50624,
+  "hosting_max_usd": 0.5,
+  "hosting_max_hours": 6,
+  "hosting_hourly_all_in_ceiling_usd": 0.08333333333333333,
+  "historical_hosting_usd": null,
+  "model": "openai/gpt-6-luna",
+  "provider": "openai",
+  "fallbacks": false,
+  "max_request_bytes": 32768,
+  "max_output_tokens": 3072,
+  "per_request_reservation_usd": 0.004864,
+  "max_transport_attempts": 2160,
+  "automatic_retries": 0,
+  "conditions": [
+    "neutral",
+    "advocacy"
+  ],
+  "arms": [
+    "peer",
+    "private",
+    "simple"
+  ],
+  "case_manifest_sha256": "a421b6d1cb0ad4874961642e50837e365c0e9f7cb62abb9b0f7589cc4f818829",
+  "development": {
+    "name": "B1-D0",
+    "assignments": [
+      {
+        "case_id": "b1-location-0",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-0",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-0",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-0",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-0",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-0",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-0",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-0",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-0",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-0",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-0",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-0",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-0",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-0",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-0",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-0",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-0",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-0",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-0",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-0",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-0",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-0",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-0",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-0",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-0",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-0",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-0",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-0",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-0",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-0",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-0",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-0",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-0",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-0",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-0",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-0",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      }
+    ],
+    "maximum_requests": 240,
+    "maximum_model_usd": 1.16736
+  },
+  "evaluation": {
+    "name": "B1-E0",
+    "assignments": [
+      {
+        "case_id": "b1-location-1",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-1",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-1",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-1",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-1",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-1",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-1",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-1",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-1",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-1",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-1",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-1",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-2",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-2",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-2",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-2",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-2",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-2",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-2",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-2",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-2",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-2",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-2",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-2",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-3",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-3",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-3",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-3",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-3",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-3",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-3",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-3",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-3",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-3",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-3",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-3",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-4",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-4",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-4",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-4",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-4",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-4",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-4",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-4",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-4",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-4",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-location-4",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-location-4",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-1",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-1",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-1",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-1",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-1",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-1",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-1",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-1",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-1",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-1",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-1",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-1",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-2",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-2",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-2",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-2",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-2",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-2",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-2",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-2",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-2",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-2",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-2",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-2",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-3",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-3",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-3",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-3",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-3",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-3",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-3",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-3",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-3",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-3",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-3",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-3",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-4",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-4",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-4",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-4",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-4",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-4",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-4",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-4",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-4",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-4",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-cost-4",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-cost-4",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-1",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-1",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-1",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-1",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-1",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-1",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-1",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-1",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-1",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-1",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-1",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-1",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-2",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-2",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-2",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-2",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-2",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-2",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-2",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-2",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-2",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-2",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-2",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-2",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-3",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-3",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-3",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-3",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-3",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-3",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-3",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-3",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-3",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-3",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-3",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-3",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-4",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-4",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-4",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-4",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-4",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-4",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-4",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-4",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-4",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-migration-4",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-4",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-migration-4",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-1",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-1",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-1",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-1",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-1",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-1",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-1",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-1",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-1",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-1",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-1",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-1",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-2",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-2",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-2",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-2",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-2",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-2",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-2",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-2",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-2",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-2",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-2",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-2",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-3",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-3",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-3",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-3",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-3",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-3",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-3",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-3",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-3",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-3",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-3",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-3",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-4",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-4",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-4",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-4",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-4",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-4",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-4",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-4",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-4",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-4",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-integration-4",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-integration-4",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-1",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-1",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-1",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-1",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-1",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-1",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-1",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-1",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-1",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-1",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-1",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-1",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-2",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-2",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-2",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-2",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-2",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-2",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-2",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-2",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-2",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-2",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-2",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-2",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-3",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-3",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-3",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-3",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-3",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-3",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-3",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-3",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-3",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-3",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-3",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-3",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-4",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-4",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-4",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-4",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-4",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-4",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-4",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-4",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-4",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-4",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-performance-4",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-performance-4",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-1",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-1",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-1",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-1",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-1",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-1",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-1",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-1",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-1",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-1",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-1",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-1",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-2",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-2",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-2",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-2",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-2",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-2",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-2",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-2",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-2",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-2",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-2",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-2",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-3",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-3",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-3",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-3",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-3",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-3",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-3",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-3",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-3",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-3",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-3",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-3",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-4",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-4",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-4",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-4",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 0,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-4",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-4",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 0,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-4",
+        "condition": "advocacy",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-4",
+        "condition": "advocacy",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-4",
+        "condition": "neutral",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      },
+      {
+        "case_id": "b1-contract-4",
+        "condition": "neutral",
+        "arm": "private",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-4",
+        "condition": "neutral",
+        "arm": "peer",
+        "repetition": 1,
+        "calls": 9
+      },
+      {
+        "case_id": "b1-contract-4",
+        "condition": "advocacy",
+        "arm": "simple",
+        "repetition": 1,
+        "calls": 2
+      }
+    ],
+    "maximum_requests": 1920,
+    "maximum_model_usd": 9.33888,
+    "requires": "B1-D0 complete and neutral-only qualification passes"
+  },
+  "source_hashes": {
+    "cases.py": "196df733f187621fc0de53280c7674a09ad7d3ed26eab3455bd78e719d35953d",
+    "instrument.py": "b5d0fc956eb3f1b1cb3f162345510c56b5132f384d60bee6b5b49096616bb4bd",
+    "prepare.py": "15be1a23aa6f1304fbc4f5003d0ec1f34a24b0dcbdb4173335bbe2e55c9f30cc",
+    "test_b1.py": "d365308218b3a8acd811c842974473cb5bca32197661721a82aea3e6750eced2",
+    "dossiers.json": "58136dc1a6d6a1d8e442736d9693ff480a94d6d016d717bd43042244ab9e4632",
+    "SOURCE-FIT.md": "fdcfc5520f8c5d45ffad588f6cbd1826f001f8dcb150081174fb1a0cf1fdec87",
+    "../scale-up/B1-SCIENTIFIC-BASELINE-PLAN.md": "be7a9456ad37a54b2b4435902d9b2934b0e65308d5390bd415a3cae373b7e010"
+  }
+}
