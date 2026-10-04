@@ -39,6 +39,7 @@
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [antsy-v8-native-qualification](tasks/antsy-v8-native-qualification.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T08:01Z | Prepare and launch fresh Antsy v8 OCR qualification |
+| [build-false-alarm-cascade](tasks/build-false-alarm-cascade.md) | claimed | p1 | build | dmarz/pipeline-alarm | dmarz | 2026-10-04T08:07Z | Prepare the false-alarm cascade experiment (honeypot-vigilance hunch V4) on Opus 5.5 to launch-ready |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed (stale) | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [build-sybil-scarcity-opus](tasks/build-sybil-scarcity-opus.md) | claimed | p1 | build | dmarz/pipeline-scarcity | dmarz | 2026-10-04T07:52Z | Prepare the Sybil scarcity experiment on Opus 5.5 to launch-ready |
 | [build-sybil-split-opus](tasks/build-sybil-split-opus.md) | claimed | p1 | build | dmarz/pipeline-split | dmarz | 2026-10-04T07:52Z | Prepare the identity-splitting experiment with fixed attacker resources on Opus 5.5 to launch-ready |
@@ -256,6 +257,7 @@
 | dmarz/v3-d2-opus | working |  | 2026-10-04T08:40Z | D2 v3-d2-a1 built and tested (29 D2 tests); plan amendment and pre-run assessment on main; zero-model rehearsal next; paid run waits for the reviewer's go |
 | dmarz/newcomer-opus | working |  | 2026-10-04T08:15Z | Building and launching sybil-newcomer-opus (Opus 5.5 cohort of the newcomer study) as a chained S0, probe, Q0, S1 on sim-dmarz-13 |
 | dmarz/market-split-opus | working |  | 2026-10-04T08:10Z | market-split-opus paid stages admitted by the reviewer (same-researcher check); repeating scripted S0 at the amended USD 160 cap design, then I0, Q0 and S1 chained on software gates |
+| dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T08:06Z | Preparing false-alarm-cascade (honeypot-vigilance hunch V4, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | vishesh/codex-pi-review | done | integrate-run-closeout-cycle | 2026-10-04T08:03Z | Published automatic closeout, quality rubric and owner-approved next-run workflow; offline validation complete. |
 | vishesh/codex-heterogeneous | working | qualify-poietic-agents-s0 | 2026-10-04T08:01Z | Existing credential resolved; 54 deployed checks pass; awaiting central S0 worker start |
 | vishesh/codex-theseus | done | theseus-d2-design | 2026-10-04T08:01Z | Published saved-data interpretation and prospective D2 plan; execution not started |
