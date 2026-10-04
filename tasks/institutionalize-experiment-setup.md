@@ -21,6 +21,6 @@ Publish the owner-requested setup runbook and direct new sessions and experiment
 
 ## Done when
 
-- [ ] Runbook and setup record available with repository-local links.
-- [ ] Agent instructions, onboarding and experiment template point to the workflow.
-- [ ] Documentation links and lab check pass; changes published.
+- [x] Runbook and setup record available with repository-local links.
+- [x] Agent instructions, onboarding and experiment template point to the workflow.
+- [x] Documentation links and lab check pass; changes ready for publication.

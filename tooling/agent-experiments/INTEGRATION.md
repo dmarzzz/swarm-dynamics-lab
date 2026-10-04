@@ -16,6 +16,10 @@ This is **general methods and development tooling**, owned initially by `vishesh
 
 The annotated bibliography here is a **methods reading guide**, not a formal `surveys/` submission. Its 29 references do not imply that the full-read, citation-chasing, source-type or saturation requirements passed. The synthetic worked example teaches controls and accounting; it is not a proposed team hypothesis hidden outside the gate. No new formal survey, hypothesis, experiment or review status is introduced by this contribution.
 
+## Required setup workflow
+
+For every new experimental question or material revision, follow [EXPERIMENT-SETUP.md](EXPERIMENT-SETUP.md), create an owned study `SETUP.md` from [the template](templates/experiment-setup.md), and keep gate evidence and handoff status current. This is required by the shared AGENTS.md. Existing formal research gates and researcher-specific resource authority remain in force.
+
 ## Start here before a project is selected
 
 Read [GUIDE.md](GUIDE.md) for units, estimands, budgets and statistical design. Use [HARNESS.md](HARNESS.md) to choose an implementation architecture. Copy the [protocol template](templates/protocol.md) while drafting, but do not mistake unfilled fields or a hash for preregistration. The guide's templates supplement the lab's existing templates; they do not replace them or weaken validation.

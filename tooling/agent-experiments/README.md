@@ -2,7 +2,7 @@
 
 Research cutoff: **3 October 2026 (UTC)**. Reusable methods and offline tooling for swarm-lab research. This is a reusable methods package, not a gate-passing survey, accepted hypothesis, or executed LLM experiment. Read [swarm-lab integration](INTEGRATION.md) before adapting it to a research project.
 
-Start with [the main guide](GUIDE.md), copy [the preregistration template](templates/protocol.md), and adapt [the worked collective-sensing example](examples/collective-sensing/PROTOCOL.md). The [literature review](LITERATURE.md) distinguishes verified research findings, authors' proposals, and this guide's recommendations. [Search notes](SEARCH-LOG.md) document coverage and limits.
+For new studies, start with [the setup runbook](EXPERIMENT-SETUP.md) and copy [the setup record](templates/experiment-setup.md). Then use [the main guide](GUIDE.md), copy [the preregistration template](templates/protocol.md), and adapt [the worked collective-sensing example](examples/collective-sensing/PROTOCOL.md). The [literature review](LITERATURE.md) distinguishes verified research findings, authors' proposals, and this guide's recommendations. [Search notes](SEARCH-LOG.md) document coverage and limits.
 
 | Artifact | Purpose |
 | --- | --- |

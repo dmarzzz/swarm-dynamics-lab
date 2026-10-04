@@ -22,6 +22,23 @@ The work runs in phases, and the order is enforced:
 Phases overlap across topics: one topic can be in experiments while another is still being scanned. Within a
 topic, the order holds. The tool `scripts/lab.py` and CI enforce it.
 
+## Required setup workflow for new experiments
+
+When a session starts work on a new experimental question, thesis, study or material revision, read
+[the experiment setup runbook](tooling/agent-experiments/EXPERIMENT-SETUP.md) before implementation.
+Copy its [setup record](tooling/agent-experiments/templates/experiment-setup.md) into the owned study
+directory as `SETUP.md`, fix the copied links, and maintain evidence for each gate. Include the runbook,
+setup record, current gate and exact next action in experiment handoffs so the next session resumes the
+same process. This applies to exploratory setup as well as formal experiments; existing prior-art,
+hypothesis and different-researcher review gates remain binding.
+
+Write the plan before experimental implementation. Before each attempt, read the previous post-mortem,
+complete the pre-run assessment, and satisfy public-plan registration, qualification, source/version,
+budget and applicable machine/account checks. Missing or stale required evidence blocks launch.
+Account for every assigned outcome, retain failed attempts, and complete the post-mortem and closeout.
+The runbook is a required workflow, not a claim that all launchers enforce it automatically. Resource
+ownership directives retain their stated scope; this requirement grants no new spending or deployment authority.
+
 ## Quick start
 
 ```bash
