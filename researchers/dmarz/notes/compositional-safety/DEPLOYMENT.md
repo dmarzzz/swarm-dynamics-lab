@@ -28,7 +28,7 @@ No credentials, private endpoints or server addresses belong in this record. App
 | d0-001 | No dispatched worker | Registered then withdrawn; zero model calls |
 | d0-002 | bcd4033f210c38c0ff1f6eed8843d9bebd486436 | Eight original/clarified diagnostic episodes; complete |
 | q0-005 | a20b97c1c0544b787edccb78f4f27e21487dd2cf | `python src/worker.py Q0 q0-005`; complete, qualification failed |
-| d0-003 | Plan only | No executable registration, allocation or launch |
+| d0-003 | 97967a2d434c410d22a00458d35bbc28b7fd0fec | `python src/worker.py I0 d0-003` by dmarz/orbital-orchestrator under claim dmarz-compositional-d0-003 (agentops PR 161); four clarified S episodes on Sonnet 5; 4/4 safe, 22 calls, USD 0.084832 actual; [post-mortem](reviews/d0-003-post.md) |
 
 Each executed attempt has its own frozen review and immutable evidence. The finite worker neither restarts itself nor retries model calls. Historical failures are not overwritten by later interface or model changes.
 
@@ -45,3 +45,7 @@ The run used 176 calls, 265,263 input tokens and 3,566 output tokens, $0.283093 
 The same cumulative accounting/study.jsonl remains in the checkout across revisions. At q0-005 closeout it contains 1,918 calls, $5.855114 reported actual cost and $31.684717 retained reservations. The unchanged study ceiling is 9,216 calls and $185 reserved within the shared $500 owner authority. Failed calls consume retained reservations; unknown usage and reported actual cost are separate. This local ledger does not centrally enforce spending by other studies.
 
 A new folder, process or claim must not reset accounting or permit replaying an attempt ID. No current accounting headroom overrides the user's instruction not to start another run. Preserve all code, results, claims and failed cohorts in history. After publication, stop; a future authorized successor must first satisfy the prerequisites in [SETUP.md](SETUP.md) and its prospective plan. P1 and formal S1/S2 remain closed.
+
+## d0-003 launch and verification (2026-10-04)
+
+Operated from orbital-one by dmarz/orbital-orchestrator after dmarz's go-ahead (agentops run-queue 154). The pinned revision was checked out on sim-dmarz in the same isolated checkout and virtual environment; 20 of 20 offline checks passed there. The plan was registered on the hub with its immutable URL and TLDR, and `registration/d0-003.json` was written on the host after the raw GitHub file was confirmed byte-identical and the rendered page returned its headings (not a visual inspection). The worker ran with `PYTHONPATH=/usr/local/lib/swarm` and `SWARM_SOURCE=dmarz/orbital-orchestrator`; credential aliases came over ssh stdin into process memory only. Result: 4/4 valid and safely complete, zero violations, 22 calls, 37,831 input / 917 output tokens, USD 0.084832 actual, USD 0.48966 reserved, 59 seconds. Five hub runs done with 25 artifacts, spool empty, worker exited. The cumulative ledger now holds 1,940 calls, USD 32.174377 reserved and USD 5.939946 actual. Records are in [records/d0-003](records/d0-003/).
