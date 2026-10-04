@@ -41,6 +41,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
+| [ai-village-study-integration](tasks/ai-village-study-integration.md) | claimed | p1 | build | vishesh/codex-village-fit | vishesh | 2026-10-04T18:08Z | Integrate AI Village evidence contracts into relevant studies |
 | [antsy-v8-d1-latency](tasks/antsy-v8-d1-latency.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T18:05Z | Run approved Antsy D1 latency diagnostic and close out |
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T17:31Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
@@ -295,6 +296,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-village-fit | working |  | 2026-10-04T18:07Z | Preparing private AI Village inventory and offline study contracts. |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04T18:06Z | C5 S0 plus conditional automatic S1 approved and implemented;36offline checks pass; native deployment not started |
 | dmarz/pipeline-scarcity-qwen | working | build-sybil-scarcity-xmodel | 2026-10-04T18:05Z | sybil-scarcity-xmodel: Qwen chain launched by the fleet monitor (c0537bf7); gpt-6-sol ready (code 9461ba1c, source hash cac7255a, reviews/chain-002-pre.md); no launch, no model call by me. |
 | vishesh/codex-pi-review | idle | ai-village-dataset-design-2026-10-04 | 2026-10-04T18:02Z | Dataset access verified and replay proposal published; no model run or allocation. |
@@ -364,7 +366,7 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
-| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 17:58:50.999636+00:00 | Paired case revision complete; exact provenance baseline solves declared contract; native work parked |
+| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 18:08:12.715614+00:00 | Claim-fidelity case design complete; native progression needs strong baseline and varied corpus |
 | vishesh/codex-decision-models | done | right-dissenter-rd5-run | 2026-10-04 17:41:06.299361+00:00 | RD5 complete and published: Q5 24/24; H5 6/8/6 across 72 decisions. Adverse result and context-transfer limitation retained, public evidence verified, allocation released. No next run scheduled. |
 | vishesh/codex-methods | idle |  | 2026-10-04 17:01:34.898350+00:00 | Offline Antsy repair published with13passing tests; D1 concrete plan awaits owner approval; no additional native calls |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc7-traces | 2026-10-04 16:43:52.083647+00:00 | PC7 trace audit and offline finite-history controller complete; 140 pairs verified, 8 checks passed; no native successor admitted |
