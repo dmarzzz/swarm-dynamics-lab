@@ -96,3 +96,7 @@ No host is needed during planning. At launch, use a fresh exclusive approved-acc
 Show the six world-level D/E contrasts, positive-action recall and cost next to overall accuracy. For order analysis, connect the same case's early and late positions; distinguish repeated samples from distinct cases. Show invalid, failed and unstarted assignments explicitly. The replay displays actor-visible evidence and output separately from evaluator-only truth.
 
 Afterward, reconcile every assignment and charge, compare both scorers, write a postmortem and archive raw records with upload/readback hashes. Release the claim and retire temporary infrastructure after verifying worker exit and durable backups. Update the next culture design from the observed result, without moving this run's goalposts.
+
+## PI review implementation clarification
+
+See [D2-PI-REVIEW.md](D2-PI-REVIEW.md), written before implementation. Save raw actor text and served model; stop further dispatch on model mismatch, transport ambiguity or missing usage while retaining reservations. Atomic order labels contain identical inputs and support repeat variability only; interpret order effects within D. Mapping and world composition remain confounded. No original assignment, actor prompt or gate is changed.
