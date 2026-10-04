@@ -1,0 +1,107 @@
+{
+  "budget": {
+    "max_calls": {
+      "P0": 1,
+      "Q0": 48,
+      "S0": 0,
+      "S1": 1440
+    },
+    "max_calls_total": 1489,
+    "usd_cap": 220
+  },
+  "code": "3ebef1ce9838fca753adbb60fab9132d00e14497",
+  "ended": "2026-10-04T09:59:31Z",
+  "experiment": "sybil-scarcity-opus",
+  "requested": [
+    "S0",
+    "P0",
+    "Q0",
+    "S1"
+  ],
+  "source_hash": "b37af99708c5f37740de3b21c7e82d5f9292584b236f0fcf30e7619e2efc58be",
+  "stages": {
+    "P0": {
+      "batch": "p0-001",
+      "calls": 1,
+      "cost_usd": 0.094908,
+      "elapsed_seconds": 3.2888506739982404,
+      "ended": "2026-10-04T09:18:41Z",
+      "gate_passed": true,
+      "input_tokens": 23537,
+      "invalid": 0,
+      "output_tokens": 38,
+      "planned": 1,
+      "results_dir": "<study-base>/results/sybil-scarcity-opus__135ef2c5-attempt-1",
+      "run": "sybil-scarcity-opus/135ef2c5",
+      "started": "2026-10-04T09:18:35Z",
+      "status": "done",
+      "transport_attempts": 1,
+      "valid": 1
+    },
+    "Q0": {
+      "batch": "q0-001",
+      "calls": 48,
+      "cost_usd": 4.555368,
+      "elapsed_seconds": 65.38129110400041,
+      "ended": "2026-10-04T09:20:06Z",
+      "gate_passed": true,
+      "input_tokens": 1129722,
+      "invalid": 0,
+      "output_tokens": 1824,
+      "planned": 48,
+      "results_dir": "<study-base>/results/sybil-scarcity-opus__089fc5b8-attempt-1",
+      "run": "sybil-scarcity-opus/089fc5b8",
+      "started": "2026-10-04T09:18:41Z",
+      "status": "done",
+      "transport_attempts": 48,
+      "valid": 48
+    },
+    "S0": {
+      "batch": "s0-001",
+      "calls": 0,
+      "cost_usd": 0.0,
+      "elapsed_seconds": 36.51799315500102,
+      "ended": "2026-10-04T09:18:35Z",
+      "gate_passed": true,
+      "input_tokens": 0,
+      "invalid": 0,
+      "output_tokens": 0,
+      "planned": 168,
+      "results_dir": "<study-base>/results/sybil-scarcity-opus__e536bb70-attempt-1",
+      "run": "sybil-scarcity-opus/e536bb70",
+      "started": "2026-10-04T09:17:37Z",
+      "status": "done",
+      "transport_attempts": 0,
+      "valid": 168
+    },
+    "S1": {
+      "batch": "s1-001",
+      "calls": 1440,
+      "cost_usd": 136.49464,
+      "elapsed_seconds": 2339.6521735530005,
+      "ended": "2026-10-04T09:59:31Z",
+      "gate_passed": null,
+      "input_tokens": 33751860,
+      "invalid": 0,
+      "output_tokens": 74360,
+      "planned": 1440,
+      "projection": {
+        "committed_usd": 4.650276,
+        "passed": true,
+        "projected_s1_usd": 136.66103999999999,
+        "q0_mean_cost_usd": 0.09490349999999999,
+        "remaining_cap_usd": 215.349724,
+        "s1_calls": 1440
+      },
+      "results_dir": "<study-base>/results/sybil-scarcity-opus__ba41e101-attempt-1",
+      "run": "sybil-scarcity-opus/ba41e101",
+      "started": "2026-10-04T09:20:06Z",
+      "status": "done",
+      "transport_attempts": 1440,
+      "valid": 1440
+    }
+  },
+  "started": "2026-10-04T09:17:37Z",
+  "state": "completed",
+  "updated": "2026-10-04T09:59:31Z"
+}

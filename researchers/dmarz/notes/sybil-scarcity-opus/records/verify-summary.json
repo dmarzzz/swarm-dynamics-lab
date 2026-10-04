@@ -1,0 +1,98 @@
+{
+ "action": "verify",
+ "chain_active": false,
+ "exit": 0,
+ "ok": true,
+ "revision": "3ebef1ce9838fca753adbb60fab9132d00e14497",
+ "source_hash": "b37af99708c5f37740de3b21c7e82d5f9292584b236f0fcf30e7619e2efc58be",
+ "stages": {
+  "P0": {
+   "checks": {
+    "analysis_recomputed": true,
+    "artifacts_complete": true,
+    "artifacts_match_hub": true,
+    "assignments_match_manifest": true,
+    "grades_recomputed": true,
+    "hub_metrics_match": true,
+    "hub_status_matches": true,
+    "packet_hashes_recomputed": true,
+    "records_readable": true,
+    "rows_cover_assignments": true,
+    "source_hash_matches": true,
+    "summary_recomputed": true
+   },
+   "cost_usd": 0.094908,
+   "model_calls": 1,
+   "ok": true,
+   "rows": 1,
+   "run": "sybil-scarcity-opus/135ef2c5",
+   "valid": 1
+  },
+  "Q0": {
+   "checks": {
+    "analysis_recomputed": true,
+    "artifacts_complete": true,
+    "artifacts_match_hub": true,
+    "assignments_match_manifest": true,
+    "grades_recomputed": true,
+    "hub_metrics_match": true,
+    "hub_status_matches": true,
+    "packet_hashes_recomputed": true,
+    "records_readable": true,
+    "rows_cover_assignments": true,
+    "source_hash_matches": true,
+    "summary_recomputed": true
+   },
+   "cost_usd": 4.555368,
+   "model_calls": 48,
+   "ok": true,
+   "rows": 48,
+   "run": "sybil-scarcity-opus/089fc5b8",
+   "valid": 48
+  },
+  "S0": {
+   "checks": {
+    "analysis_recomputed": true,
+    "artifacts_complete": true,
+    "artifacts_match_hub": true,
+    "assignments_match_manifest": true,
+    "grades_recomputed": true,
+    "hub_metrics_match": true,
+    "hub_status_matches": true,
+    "packet_hashes_recomputed": true,
+    "records_readable": true,
+    "rows_cover_assignments": true,
+    "source_hash_matches": true,
+    "summary_recomputed": true
+   },
+   "cost_usd": 0.0,
+   "model_calls": 0,
+   "ok": true,
+   "rows": 168,
+   "run": "sybil-scarcity-opus/e536bb70",
+   "valid": 168
+  },
+  "S1": {
+   "checks": {
+    "analysis_recomputed": true,
+    "artifacts_complete": true,
+    "artifacts_match_hub": true,
+    "assignments_match_manifest": true,
+    "grades_recomputed": true,
+    "hub_metrics_match": true,
+    "hub_status_matches": true,
+    "packet_hashes_recomputed": true,
+    "records_readable": true,
+    "rows_cover_assignments": true,
+    "source_hash_matches": true,
+    "summary_recomputed": true
+   },
+   "cost_usd": 136.49464,
+   "model_calls": 1440,
+   "ok": true,
+   "rows": 1440,
+   "run": "sybil-scarcity-opus/ba41e101",
+   "valid": 1440
+  }
+ }
+}

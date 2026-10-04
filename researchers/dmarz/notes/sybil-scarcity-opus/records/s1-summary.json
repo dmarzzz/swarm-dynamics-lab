@@ -1,0 +1,70 @@
+{
+  "params": {
+    "stage": "S1",
+    "backend": "anthropic",
+    "batch": "s1-001",
+    "source_hash": "b37af99708c5f37740de3b21c7e82d5f9292584b236f0fcf30e7619e2efc58be",
+    "code": "3ebef1ce9838fca753adbb60fab9132d00e14497"
+  },
+  "planned": 1440,
+  "started": 1440,
+  "terminal": 1440,
+  "graded": 1440,
+  "analyzed": 1440,
+  "invalid": 0,
+  "failed": 0,
+  "not_started": 0,
+  "model_calls": 1440,
+  "input_tokens": 33751860,
+  "output_tokens": 74360,
+  "cost_usd": 136.49464,
+  "transport_attempts": 1440,
+  "elapsed_seconds": 2339.6521735530005,
+  "qualification": null,
+  "probe": null,
+  "invariants": null,
+  "gate": {
+    "passed": null
+  },
+  "failure": null,
+  "study_accounting": {
+    "attempted_calls": 1489,
+    "calls_by_stage": {
+      "P0": 1,
+      "Q0": 48,
+      "S1": 1440
+    },
+    "transport_attempts": 1489,
+    "cap_transport_attempts": 1640,
+    "usage_reported_calls": 1489,
+    "reserved_usd": 381.03052,
+    "actual_usd": 141.144916,
+    "committed_usd": 141.144916,
+    "input_tokens": 34905119,
+    "output_tokens": 76222,
+    "cap_usd": 220,
+    "cap_calls": 1489
+  },
+  "initial_study_accounting": {
+    "attempted_calls": 49,
+    "calls_by_stage": {
+      "P0": 1,
+      "Q0": 48
+    },
+    "transport_attempts": 49,
+    "cap_transport_attempts": 1640,
+    "usage_reported_calls": 49,
+    "reserved_usd": 12.5577,
+    "actual_usd": 4.650276,
+    "committed_usd": 4.650276,
+    "input_tokens": 1153259,
+    "output_tokens": 1862,
+    "cap_usd": 220,
+    "cap_calls": 1489
+  },
+  "reporting_errors": [],
+  "visualization": {
+    "mapping": "v1",
+    "frames": 33
+  }
+}

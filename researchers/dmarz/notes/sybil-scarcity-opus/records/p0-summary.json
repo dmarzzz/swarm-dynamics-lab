@@ -1,0 +1,78 @@
+{
+  "params": {
+    "stage": "P0",
+    "backend": "anthropic",
+    "batch": "p0-001",
+    "source_hash": "b37af99708c5f37740de3b21c7e82d5f9292584b236f0fcf30e7619e2efc58be",
+    "code": "3ebef1ce9838fca753adbb60fab9132d00e14497"
+  },
+  "planned": 1,
+  "started": 1,
+  "terminal": 1,
+  "graded": 1,
+  "analyzed": 1,
+  "invalid": 0,
+  "failed": 0,
+  "not_started": 0,
+  "model_calls": 1,
+  "input_tokens": 23537,
+  "output_tokens": 38,
+  "cost_usd": 0.094908,
+  "transport_attempts": 1,
+  "elapsed_seconds": 3.2888506739982404,
+  "qualification": null,
+  "probe": {
+    "passed": true,
+    "rows": 1
+  },
+  "invariants": null,
+  "gate": {
+    "passed": true
+  },
+  "failure": null,
+  "study_accounting": {
+    "attempted_calls": 1,
+    "calls_by_stage": {
+      "P0": 1
+    },
+    "transport_attempts": 1,
+    "cap_transport_attempts": 1640,
+    "usage_reported_calls": 1,
+    "reserved_usd": 0.256284,
+    "actual_usd": 0.094908,
+    "committed_usd": 0.094908,
+    "input_tokens": 23537,
+    "output_tokens": 38,
+    "cap_usd": 220,
+    "cap_calls": 1489
+  },
+  "initial_study_accounting": {
+    "attempted_calls": 0,
+    "calls_by_stage": {},
+    "transport_attempts": 0,
+    "cap_transport_attempts": 1640,
+    "usage_reported_calls": 0,
+    "reserved_usd": 0.0,
+    "actual_usd": 0.0,
+    "committed_usd": 0.0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cap_usd": 220,
+    "cap_calls": 1489
+  },
+  "probe_measurement": {
+    "input_tokens": 23537,
+    "counted_input_tokens": 23537,
+    "output_tokens": 38,
+    "latency_seconds": 2.7643028230013442,
+    "cost_usd": 0.094908,
+    "reserved_usd": 0.256284,
+    "chain_projection_usd_at_probe_cost": 141.318012,
+    "chain_ceiling_usd_at_full_reservation": 381.606876
+  },
+  "reporting_errors": [],
+  "visualization": {
+    "mapping": "v1",
+    "frames": 2
+  }
+}

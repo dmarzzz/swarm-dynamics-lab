@@ -1,0 +1,92 @@
+{
+  "unit": "world root",
+  "rows": 48,
+  "pilot_rows": 0,
+  "roots": [],
+  "cells": [],
+  "cell_count": 0,
+  "primary": null,
+  "carrier_contrasts": [],
+  "policy_contrasts": [],
+  "policy_by_rarity_interactions": [],
+  "invariance": {
+    "matched_cells": 0,
+    "violations": 0
+  },
+  "duplicate_packets": {
+    "distinct_packets": 0,
+    "assignments": 0,
+    "duplicate_groups": []
+  },
+  "qualification": {
+    "groups": [
+      {
+        "carriers": 1,
+        "assigned": 16,
+        "valid": 16,
+        "expected": 16,
+        "fields_matched": 96,
+        "fields": 96,
+        "exact_packets": 16,
+        "withheld_fields": 8,
+        "withheld_abstained": 8,
+        "fact_accuracy": 1.0,
+        "exact_packet_rate": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true
+      },
+      {
+        "carriers": 9,
+        "assigned": 16,
+        "valid": 16,
+        "expected": 16,
+        "fields_matched": 96,
+        "fields": 96,
+        "exact_packets": 16,
+        "withheld_fields": 8,
+        "withheld_abstained": 8,
+        "fact_accuracy": 1.0,
+        "exact_packet_rate": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true
+      },
+      {
+        "carriers": 81,
+        "assigned": 16,
+        "valid": 16,
+        "expected": 16,
+        "fields_matched": 96,
+        "fields": 96,
+        "exact_packets": 16,
+        "withheld_fields": 8,
+        "withheld_abstained": 8,
+        "fact_accuracy": 1.0,
+        "exact_packet_rate": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true
+      }
+    ],
+    "packets": 48,
+    "structurally_valid": 48,
+    "passed": true
+  },
+  "resources": {
+    "completed": 48,
+    "model_calls": 48,
+    "input_tokens": 1129722,
+    "output_tokens": 1824,
+    "cost_usd": 4.555368,
+    "mean_latency_seconds": 2.44407119641672
+  },
+  "bootstrap": {
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 20261004,
+    "cells": 60,
+    "roots_per_cell": 24,
+    "missing_outcome_bounds": [
+      0,
+      1
+    ],
+    "resample_unit": "world root"
+  }
+}
