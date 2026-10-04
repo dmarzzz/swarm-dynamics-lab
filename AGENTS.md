@@ -465,3 +465,7 @@ Post-mortems must inspect native experimental traces under RUN-REVIEW.md. Quorum
 ## Improve insufficient test cases during iteration
 
 Owner direction, 2026-10-04 UTC: when an iteration finds test cases insufficient or lacking, improve or try alternative cases as part of that iteration. Diagnose the weakness, prospectively design and implement feasible offline cases, validate labels and strong baselines, and push the concrete revision. Preserve old evidence and keep inspected development cases separate from held-out evaluation. Do not stop at noting a dataset gap when useful case work is possible; do not manufacture difficulty for a favorable result. Existing native-scope approval, admission and cumulative-budget rules remain unchanged. See the iteration process for the full workflow.
+
+## Well-scoped experimental claims
+
+Owner direction, 2026-10-04: define each claim prospectively and match its population, mechanism, comparator, sample unit and precision to the actual design. Distinguish execution, acquisition, continuity and comparative benefit. Apply [CLAIM-SCOPE.md](tooling/agent-experiments/CLAIM-SCOPE.md); unsupported broad claims require better evidence, not stronger wording.

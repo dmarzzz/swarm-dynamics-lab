@@ -57,3 +57,7 @@ The next session must assess earlier suggestions against this rubric, accepting,
 | Variability and n (`sample_size`) | Independent world/task roots; nested same-condition repeats; model/config cohorts separate | Many identities/calls or a degenerate bootstrap interval presented as broad certainty |
 
 Use safe allowlisted failure categories and numeric cost/throughput telemetry. Provider outages remain operational outcomes; preserve uncertain dispatch exposure. A copied retry policy or new subledger must never grant extra calls, erase costs or expose arbitrary provider error bodies.
+
+## Prospective claim scope
+
+Apply [claim-scoping guidance](CLAIM-SCOPE.md) before implementation: identify the intended inference, independent units, comparator and untested boundaries. If the useful claim needs broader evidence, improve the design prospectively; do not rely on a post-hoc caveat.

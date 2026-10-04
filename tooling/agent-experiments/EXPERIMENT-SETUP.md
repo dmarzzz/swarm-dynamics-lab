@@ -164,3 +164,7 @@ This is an audit of local records, not a new literature survey or certification 
 | [Workspace rules](../../AGENTS.md) and [machine workflow](../../researchers/vishesh/notes/experiment-machine-workflow.md) | Account identity checks, exclusive allocation, preserved shared budgets and deployment ownership |
 
 Theseus v1's local public-plan helper checks immutable URL shape and sections but alone does not bind the expected current plan revision or guarantee visual verification. New launchers must supply those additional checks. Existing documentation or a copied template is not proof that the production gate is wired. The setup record tracks that evidence explicitly.
+
+## Prospective claim scope
+
+Apply [claim-scoping guidance](CLAIM-SCOPE.md) before implementation: identify the intended inference, independent units, comparator and untested boundaries. If the useful claim needs broader evidence, improve the design prospectively; do not rely on a post-hoc caveat.
