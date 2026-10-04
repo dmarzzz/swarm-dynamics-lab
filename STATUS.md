@@ -55,7 +55,6 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [sybil-scale-api](tasks/sybil-scale-api.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T02:50Z | Plan and ship the Sybil identity scaling experiment |
-| [theseus-critical-redesign](tasks/theseus-critical-redesign.md) | claimed | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T02:50Z | Critically review SOC-24 and redesign beyond memory availability |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
@@ -171,6 +170,7 @@
 | [synthesis-pre-experiment-research](tasks/synthesis-pre-experiment-research.md) | done | p1 | synthesis | dmarz/preflight |  | 2026-10-03T20:24Z | Research prerequisites for selecting swarm experiments |
 | [synthesis-question-atlas](tasks/synthesis-question-atlas.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T20:46Z | Broad research questions, candidate hypotheses and test sketches for human review |
 | [synthesis-question-atlas-update](tasks/synthesis-question-atlas-update.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T21:43Z | Refresh research question atlas with new budget, security and dataset research |
+| [theseus-critical-redesign](tasks/theseus-critical-redesign.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T02:53Z | Critically review SOC-24 and redesign beyond memory availability |
 | [scan-honeypot-vigilance](tasks/scan-honeypot-vigilance.md) | done | p2 | scan | dmarz/honeypot-vigilance | dmarz | 2026-10-03T23:28Z | Prior-art pass: do agents (and swarms) update after discovering a honeypot? |
 
 ## Candidate batches
@@ -183,7 +183,8 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/private-control | blocked | build-v3-resample-control | 2026-10-04T03:25Z | v3 resample sidecar built offline and resynced to v3 fixes (9c4c945); staging launch |
-| vishesh/codex-theseus | working | theseus-critical-redesign | 2026-10-04T03:00Z | Critically review SOC-24 and design a stronger causal test |
+| vishesh/codex-immune | done |  | 2026-10-04T02:54Z | Scenario iteration completed and reported; no scale-up justified by competence results |
+| vishesh/codex-theseus | done | theseus-critical-redesign | 2026-10-04T02:53Z | Critical review complete; v1 downgraded to baseline and v2 selective-continuity draft published |
 | vishesh/codex-experiments | blocked |  | 2026-10-04T02:52Z | Native procurement pilot published; full fresh qualification and paired comparison await additional authorized shared budget |
 | vishesh/codex-decision-models | done | decision-model-reimagination | 2026-10-04T02:51Z | Completed second-pass variants, prior-art checks and revised editorial priorities |
 | vishesh/codex-regrowth-docs | idle | healing-helping-hands-v2 | 2026-10-04T02:51Z | Review and reference pilot published; original Qwen heterogeneous claim remains unqualified |
@@ -191,7 +192,6 @@
 | vishesh/codex-independent-reviews | working | review-discussion-benchmark-v3 | 2026-10-04T02:50Z | Full independent review of patched v3; user-directed takeover, offline only. |
 | dmarz/sybil-specialists | working | sybil-scale-api | 2026-10-04T02:49Z | Identity scaling deployed; scripted264/264; API qualification64calls returned; verifying before2400comparison calls |
 | vishesh/codex-heterogeneous | working | heterogeneous-biological-frontiers | 2026-10-04T02:47Z | Revising the heterogeneous shortlist through X research and evolutionary biology |
-| vishesh/codex-immune | working | immune-response-v3-native-repair | 2026-10-04T02:38Z | Approved USD 8 grant reserved; scenario-native-a1 running on dedicated sim-immune-response |
 | dmarz/discussion-bench-v3 | working | launch-discussion-benchmark-v3 | 2026-10-04T02:35Z | Preparing dedicated fleet deployment and operator-authorized v3 Haiku qualification; independent review pending |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T02:32Z | Monitoring the deployed 36-episode discovery pilot and auditing saved decisions. |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T02:31Z | Building the SEC-54 simulator and exploratory qualification with enforced research gates |
