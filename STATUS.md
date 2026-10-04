@@ -51,7 +51,6 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [sybil-scale-api](tasks/sybil-scale-api.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T03:11Z | Plan and ship the Sybil identity scaling experiment |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
@@ -170,6 +169,7 @@
 | [specify-swarm-size-task-contracts](tasks/specify-swarm-size-task-contracts.md) | done | p1 | synthesis | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:56Z | Specify swarm-size task contracts and qualification gates |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
 | [swarm-of-theseus](tasks/swarm-of-theseus.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T02:45Z | Build and qualify Swarm of Theseus (SOC-24) |
+| [sybil-scale-api](tasks/sybil-scale-api.md) | done | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T03:20Z | Plan and ship the Sybil identity scaling experiment |
 | [sybil-specialists-api](tasks/sybil-specialists-api.md) | done | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T02:15Z | Qualify and deploy the model-backed Sybil specialist pilot |
 | [synthesis-people-and-labs](tasks/synthesis-people-and-labs.md) | done | p1 | synthesis | shadow/sol-g50 |  | 2026-10-03T20:15Z | Map the people and labs |
 | [synthesis-pre-experiment-research](tasks/synthesis-pre-experiment-research.md) | done | p1 | synthesis | dmarz/preflight |  | 2026-10-03T20:24Z | Research prerequisites for selecting swarm experiments |
