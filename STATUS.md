@@ -49,6 +49,7 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
+| [score-research-ideas](tasks/score-research-ideas.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T01:49Z | Score all research ideas and expose optional researcher ratings |
 | [swarm-of-theseus](tasks/swarm-of-theseus.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T01:30Z | Build and qualify Swarm of Theseus (SOC-24) |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
@@ -156,6 +157,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-idea-scores | working |  | 2026-10-04T01:49Z | Implement researcher rubric scores across all research ideas |
 | vishesh/codex-methods | idle |  | 2026-10-04T01:47Z | Completed Antsy repair, qualification, reconciled outcomes and public animations |
 | dmarz/sybil-specialists | done | build-sybil-specialists | 2026-10-04T01:45Z | Scripted study complete: 34 deployed cells, 1120 valid outcomes, UI replay and analysis verified, claim released; API stage awaits a cap |
 | vishesh/codex-theseus | working | swarm-of-theseus | 2026-10-04T01:27Z | Build and qualify SOC-24 with public preregistration and dedicated allocation |
