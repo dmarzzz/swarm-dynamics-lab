@@ -3,14 +3,16 @@ id: theseus-institutional-transmission
 type: task
 title: Institutional transmission revision
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-theseus
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-theseus
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T19:23Z
+updated: 2026-10-04T19:23Z
 ---
 
 ## Goal
