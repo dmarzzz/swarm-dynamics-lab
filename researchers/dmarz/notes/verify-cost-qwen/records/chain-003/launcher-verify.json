@@ -1,0 +1,17 @@
+{
+  "action": "verify",
+  "exit": 1,
+  "result": {
+    "ok": false,
+    "reason": "chain_status_is_for_another_model"
+  },
+  "chain_active": false,
+  "worker_active": false,
+  "role": "single",
+  "foreign_workers": 0,
+  "logs": {
+    "chain-61a7269f-s0-p0-q0-s1.log": "withheld"
+  },
+  "revision": "61a7269fccb62429b1c35bfe186c8d84f27b2fa8",
+  "host": "sim-dmarz-9"
+}
