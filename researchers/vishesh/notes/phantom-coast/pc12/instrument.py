@@ -42,7 +42,7 @@ def qualification():
   for positive in (False,True):
    for delayed in (False,True):
     rng=random.Random(f'PC12/Q/{kind}/{positive}/{delayed}');sites=SITES.copy();rng.shuffle(sites);target=sites[0];other=sites[1];v='LAND' if positive else 'WATER'
-    reports=[] if kind=='empty' else [[f'o{i}',f's{i}',target,v,.8,f'r{i}'] for i in range(3 if kind=='independent' else 1)]
+    reports=[] if kind=='empty' else [[f'o{i}',f's{i}',target,v,.6 if delayed else .8,f'r{i}'] for i in range(3 if kind=='independent' else 1)]
     direct=[[other,'WATER']] if delayed else []
     if kind=='corrected':direct.append([target,'WATER' if positive else 'LAND'])
     p=packet('q',target,reports,direct,sites=sites);out.append(dict(id=f'Q{len(out):02}',kind=kind,positive=positive,delayed=delayed,packet=p,gold=gold(p)))
@@ -54,7 +54,7 @@ def worlds():
   for delayed in (False,True):
    for replicate in range(2):
     id=f'W{len(out):02}';r=random.Random('PC12/D1/'+id);sites=SITES.copy();r.shuffle(sites);target=sites[0];truth={s:r.choice(('LAND','WATER')) for s in sites};truth[target]='LAND' if positive else 'WATER';truth[sites[1]]='WATER' if positive else 'LAND'
-    out.append(dict(id=id,target=target,truth=truth,sites=sites,delayed=delayed,replicate=replicate))
+    out.append(dict(id=id,target=target,truth=truth,sites=sites,delayed=delayed,replicate=replicate,accuracy=.6 if replicate==0 else .8))
  return out
 
 def arms(w):
@@ -63,7 +63,7 @@ def arms(w):
 def main_packet(w,false,copies,actor,phase,previous=None):
  t=w['target'];v=w['truth'][t]
  if false:v='WATER' if v=='LAND' else 'LAND'
- rs=[['o0','s0',t,v,.8,f'r{i}'] for i in range(copies)]
+ rs=[['o0','s0',t,v,.6 if delayed else .8,f'r{i}'] for i in range(copies)]
  direct=[[w['sites'][1],w['truth'][w['sites'][1]]]] if w['delayed'] else []
  if phase=='after':direct.append([t,w['truth'][t]])
  return packet(str(actor),t,rs,direct,previous,sites=w['sites'])
@@ -91,7 +91,7 @@ def analyze(ws,records):
    for a in range(10):
     single=prob(w,f,1,a,'before');triple=prob(w,f,3,a,'before');diffs.append((triple[0]-single[1],triple[1]-single[0]))
    effects['false' if f else 'true']=[sum(x[i] for x in diffs)/10 for i in (0,1)]
-  roots.append(dict(world=w['id'],target_truth=w['truth'][w['target']],delayed=w['delayed'],effects=effects))
+  roots.append(dict(world=w['id'],target_truth=w['truth'][w['target']],delayed=w['delayed'],accuracy=w['accuracy'],effects=effects))
  bounds=[sum(x['effects']['false'][i] for x in roots)/len(ws) for i in (0,1)];valid=[r for r in records if r['status']=='valid'];complete=len(valid)==640
  after=[r for r in valid if r['assignment'].endswith('/after')];before=[r for r in valid if r['assignment'].endswith('/before')]
  return dict(assigned=640,valid=len(valid),independent_worlds=len(ws),roots=roots,primary_bounds=bounds,primary=bounds[0] if complete else None,material_threshold=.10,material_effect_observed=complete and bounds[0]>=.10,after_correct_labels=sum(grade(r['packet'],r['decision'])['label_correct'] for r in after),after_assigned=320,after_max_probability_error=max((grade(r['packet'],r['decision'])['probability_error'] for r in after),default=None),before_mean_regret=sum(grade(r['packet'],r['decision'])['inspection_regret'] for r in before)/len(before) if before else None,missing=640-len(valid))

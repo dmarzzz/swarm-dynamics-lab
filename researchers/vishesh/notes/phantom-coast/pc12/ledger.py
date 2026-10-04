@@ -1,4 +1,4 @@
-"""Q1-only cumulative envelope. A new stage cannot create an allowance."""
+"""PC12 qualification and diagnostic cumulative envelope. A new stage cannot create an allowance."""
 import hashlib,sqlite3
 from pathlib import Path
 PRIOR_NANO=1193795490
