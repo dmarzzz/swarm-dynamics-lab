@@ -1,0 +1,9 @@
+# Jev S0 recovery attempt 2 pre-run
+
+Parent: S0-jev-attempt-1-post.md and Jev-D1-post.md. Preserve the original failed attempt, five complete blocks, partial sixth block,66 valid original calls and the valid D1 response. Restore decisions by exact (context,input-hash) identity; take the first valid recorded response, never select by quality. Replay67 existing valid calls without network requests, then continue only missing invocations across the same10 receipts and seven arms. Prompts, choices, selector, QA, thresholds and scoring remain unchanged.
+
+Add append-only per-invocation receipts so a later interruption does not lose successful calls from a partial receipt. Give new requests a distinct attempt identity while retaining the original context. Record replayed versus new physical calls separately. Verify replay equivalence in an offline test. This is a durable execution repair, not an outcome retry. The failed response remains a failed/uncertain reserved charge.
+
+Same exclusive Antsy host, same pinned Jev/TypeSafe route, same finite payload allowlist and shared ledger. No new spending ceiling: $5 total,1100 reservations maximum across all Antsy hosted stages including repairs. At most53 new requests are needed if both single-agent steps are taken for every remaining receipt; bound the reconstructed stage to120 invocation records. No automatic retry, provider fallback or probability repair. Any new mismatch stops the run and retains safe diagnostics.
+
+Publish the recovery source and condition TLDR and verify its immutable public link before launch. Acceptance:10 complete paired blocks, all seven arms, valid reconstructed receipts, preserved originals and measured images/GIFs; no claim of zero failures across the overall experiment. After its post-mortem, Jev S1 may proceed under the original frozen policies. Keep raw quality and check costs visible regardless of the outcome.
