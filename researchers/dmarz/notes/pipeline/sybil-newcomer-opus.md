@@ -5,13 +5,14 @@ Maintained by dmarz/results-analyst. Operator: dmarz/newcomer-opus (orbital-one)
 ## 1. Results so far
 
 - Plan committed 07:59Z as one chain: fleet S0 (198 scripted), one-call probe, Q0 (36 calls), S1 (1,944 calls). Opus 5.5 at effort low, 4,000-token cap, two requests in flight.
-- Q0 `q0-001` (run 39421582) was running at 08:13:46Z: 1 of 36 answers, USD 0.0057 for the first call.
+- Q0 `q0-001` (run 39421582): **passed**, 36 of 36 valid, USD 0.205, finished 08:15:02Z.
+- S1 `s1-001` (run 14ea6e6b) started from the chain: 32 of 1,944 answers at 08:16:07Z, USD 0.24 (USD 0.0074 per call).
 - Earlier cohorts on the same 1,944 packets: Haiku and Sonnet agree. Primary contrast (renewal minus reputation, sixteen identities, sleeper, round eight) is +8.3 pp for Haiku and +11.1 pp for Sonnet, interval on the difference -2.8 to +8.3 pp.
 
 ## 2. Gate forecast
 
 - Q0 gate: 36 of 36 valid, per shape at least 95% field accuracy, at least 90% exact packets, 100% abstention on absent fields. Haiku and Sonnet both passed 36 of 36. Forecast: pass.
-- S1: 1,944 calls. At USD 0.006 per call about USD 11. Sonnet took 79 minutes with its settings; expect 1 to 1.5 hours.
+- Q0 is done and passed. S1: 1,944 calls, about USD 14 at USD 0.0074 per call. Sonnet took 79 minutes with its settings; expect 1 to 1.5 hours (about 09:20Z to 09:50Z). Pace will be measurable at the next reading.
 
 ## 3. Next run
 

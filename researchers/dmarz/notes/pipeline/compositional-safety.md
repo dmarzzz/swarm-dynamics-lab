@@ -1,6 +1,6 @@
 # compositional-safety: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/compositional-opus (orbital-one), run-queue 196, server sim-dmarz-5. Not a review. Last updated 2026-10-04T08:04Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/compositional-opus (orbital-one), run-queue 196, server sim-dmarz-5. Not a review. Last updated 2026-10-04T08:17Z.
 
 ## 1. Results so far
 
@@ -13,16 +13,20 @@ q0-007 (Opus 5.5, adaptive thinking, effort high, 4,096 output cap) finished at 
 
 ## 2. Gate forecast
 
-q0-007 is done and passed. The operator has since committed the route below (design v9 at 13ed6d5c, 08:00Z; plans `reviews/q0-008-pre.md` and `reviews/p1-002-pre.md`): settled-cost cap USD 75 in place of the reservation ceiling, P1 call cap 3,360, stage limit 14,400 s, fresh Q0 roots 257, 282, 293, and `src/chain.py` so a q0-008 pass starts P1 in the same process. Nothing from the chain is on the hub yet.
+**q0-008 was interrupted by the operator at 08:14Z** ("chain stopped to fix a quadratic ledger read; execution defect, not a model outcome"). At the stop: 4 of 12 bundles done (root 257, 8 of 8 episodes safe, 38 calls, USD 0.34), the fifth (282/D1/risk) unfinished. P1 did not start.
 
-- q0-008: about 13 minutes and USD 2 at q0-007's pace. Forecast: pass. q0-007 was 24 of 24 on the same configuration; the roots are new structures, so one or two incomplete episodes would not be surprising and the gate tolerates two.
-- P1 (p1-002): 168 episodes. At q0-007's 7.4 calls and 31 s per episode, about 1,250 calls, 90 minutes and USD 12. If the five untested arms take more turns, up to the 3,360-call cap: about 4 hours (3,360 x 4.25 s = 14,280 s, just inside the 14,400 s stage limit) and USD 32. Settled-cost room is USD 67 (75 minus 7.63 already spent).
+What the defect is, from the v9 code on main (`src/provider.py` line 43): the `settled_usd` figure rebuilds the set of answered call ids once per reserve event, so each ledger transaction costs reserves x events operations. With 2,142 reserves already in the ledger that is about 0.35 s per transaction on a laptop (my timing of the same expression), rising to about 0.9 s at 3,500 reserves and 2.8 s at 5,500, several times per model call. It shows in the run: bundles 1 and 2 took about 65 s each, bundles 3 and 4 about 4 minutes each. P1 would have slowed further as the ledger grew and could have hit the stage limit. No other dmarz study has this expression (searched every `provider.py` and `budget.py` under `notes/`).
+
+Consequence for the chain: the fix edits `src/provider.py`, so the engine hash changes and q0-008's partial result cannot qualify P1. A fresh Q0 (q0-009) is needed. Root 257 is used (8 episodes) and root 282 was touched (one episode started), so it needs three more unused roots, or a written decision that 282 and 293 remain fresh because no episode on them completed.
+
+- q0-009: about 13 minutes at q0-007's pace once the ledger read is linear. Forecast: pass (q0-007 24 of 24, q0-008 8 of 8 before the stop).
+- P1 after it: unchanged from below.
 
 ## 3. Next run
 
-**If q0-008 passes:** P1 starts automatically. Nothing else is needed.
+**If q0-009 passes:** P1 starts automatically from the chain.
 
-**If q0-008 fails:** the chain stops and P1 does not run. Before another Q0, read the failing episodes' turns: with q0-007 at 24 of 24, a failure on roots 257, 282 or 293 points at a task structure, not the request shape. A third Q0 needs fresh roots again. Do not change effort or caps in response; that changes the design hash and the comparison with q0-007.
+**If q0-009 fails:** the chain stops and P1 does not run. Before another Q0, read the failing episodes' turns: with q0-007 at 24 of 24, a failure on roots 257, 282 or 293 points at a task structure, not the request shape. A third Q0 needs fresh roots again. Do not change effort or caps in response; that changes the design hash and the comparison with q0-007.
 
 **If P1 stops on the 3,360-call cap or the stage limit:** that would mean the fragmented arms run close to the 40-turn limit. Episodes not reached are recorded as assigned failures; check whether whole bundles are missing before reading any arm contrast.
 
