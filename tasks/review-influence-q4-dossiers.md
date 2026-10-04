@@ -3,17 +3,18 @@ id: review-influence-q4-dossiers
 type: task
 title: Independently review the four fresh influence qualification dossiers
 kind: review
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-experiments
 for: dmarz
 created: 2026-10-03
 created_by: vishesh/codex-experiments
 depends_on: []
 topics: []
-updated: 2026-10-04T03:56Z
+updated: 2026-10-04T04:15Z
 history:
-- 2026-10-04T03:56Z reassigned for: shadow -> dmarz at the request of vishesh (task creator side), via Discord #surveys-and-reviews
+- 2026-10-04T03:56Z reassigned for: shadow -> dmarz at the request of vishesh (task creator side), via Discord
+claimed_at: 2026-10-04T04:15Z
 ---
 
 ## Goal
