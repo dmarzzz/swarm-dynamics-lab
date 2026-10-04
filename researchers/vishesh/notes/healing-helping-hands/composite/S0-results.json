@@ -1,0 +1,122 @@
+{
+  "summary": {
+    "qwen": {
+      "accuracy": 0.6,
+      "per_class": {
+        "SUPPORT": 0.8,
+        "REFUTE": 0.0,
+        "UNCERTAIN": 1.0
+      },
+      "valid": 60,
+      "assigned": 60,
+      "confusion": {
+        "SUPPORT": {
+          "SUPPORT": 16,
+          "REFUTE": 0,
+          "UNCERTAIN": 4,
+          "MISSING": 0
+        },
+        "REFUTE": {
+          "SUPPORT": 17,
+          "REFUTE": 0,
+          "UNCERTAIN": 3,
+          "MISSING": 0
+        },
+        "UNCERTAIN": {
+          "SUPPORT": 0,
+          "REFUTE": 0,
+          "UNCERTAIN": 20,
+          "MISSING": 0
+        }
+      },
+      "passed": false
+    },
+    "jev": {
+      "accuracy": 1.0,
+      "per_class": {
+        "SUPPORT": 1.0,
+        "REFUTE": 1.0,
+        "UNCERTAIN": 1.0
+      },
+      "valid": 60,
+      "assigned": 60,
+      "confusion": {
+        "SUPPORT": {
+          "SUPPORT": 20,
+          "REFUTE": 0,
+          "UNCERTAIN": 0,
+          "MISSING": 0
+        },
+        "REFUTE": {
+          "SUPPORT": 0,
+          "REFUTE": 20,
+          "UNCERTAIN": 0,
+          "MISSING": 0
+        },
+        "UNCERTAIN": {
+          "SUPPORT": 0,
+          "REFUTE": 0,
+          "UNCERTAIN": 20,
+          "MISSING": 0
+        }
+      },
+      "passed": true
+    },
+    "qwen+jev": {
+      "accuracy": 1.0,
+      "per_class": {
+        "SUPPORT": 1.0,
+        "REFUTE": 1.0,
+        "UNCERTAIN": 1.0
+      },
+      "valid": 60,
+      "assigned": 60,
+      "confusion": {
+        "SUPPORT": {
+          "SUPPORT": 20,
+          "REFUTE": 0,
+          "UNCERTAIN": 0,
+          "MISSING": 0
+        },
+        "REFUTE": {
+          "SUPPORT": 0,
+          "REFUTE": 20,
+          "UNCERTAIN": 0,
+          "MISSING": 0
+        },
+        "UNCERTAIN": {
+          "SUPPORT": 0,
+          "REFUTE": 0,
+          "UNCERTAIN": 20,
+          "MISSING": 0
+        }
+      },
+      "passed": true
+    },
+    "paired": {
+      "complete": 60,
+      "assigned": 60,
+      "qwen_wrong_corrected": 24,
+      "qwen_right_damaged": 0,
+      "anchoring": 0,
+      "composite_jev_agree": 60,
+      "accuracy_delta": 0.0
+    },
+    "admit_s1": true
+  },
+  "audit": {
+    "source": "same-author replay and arithmetic audit",
+    "verified_observations": 60,
+    "verified_worlds": 0,
+    "verified_frames": 0,
+    "call_starts": 180,
+    "call_terminal": 180,
+    "input_tokens": 62357,
+    "output_tokens": 5947,
+    "cost_usd": 0.002331126,
+    "seconds_by_component": {
+      "qwen": 77.0586431979998,
+      "jev": 52.72457062099966
+    }
+  }
+}

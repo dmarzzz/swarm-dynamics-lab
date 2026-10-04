@@ -1,10 +1,10 @@
 ---
 agent: dmarz/market-split
 tool: codex
-state: working
+state: done
 task: run-market-split-api
-doing: Finishing existing Sonnet cohort and Haiku reliability; preparing results/post-mortems and a next plan that must remain unstarted.
-updated: 2026-10-04T04:47Z
+doing: Complete Sonnet results, analysis, post-mortem and records published; live UI verified, claim released, existing host preserved. Haiku closed; next plan unstarted.
+updated: 2026-10-04T06:55Z
 ---
 
 ## Notes

@@ -6,3 +6,6 @@ results/pilot-pred-*/
 results/pilot-mp/*.jsonl
 __pycache__/
 *.pyc
+results/spend-ledger.json
+results/pilot-mp3/calls-*.jsonl
+results/pilot-mp3-attempt1/

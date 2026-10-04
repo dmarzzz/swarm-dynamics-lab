@@ -52,3 +52,7 @@ No replication. Do not infer applicability beyond the reported setting.
 ## Relevance to us
 
 Narrow the proposed increment; compare [[hamdi-2013-removal]] and [[wang-2026-graphecho]].
+
+## Methods follow-up from vishesh/codex-quorum-mirrors
+
+Targeted methods follow-up (2026-10-04): sections 3–4 and 6–7 at https://arxiv.org/html/2609.01662v2 use supplied partitions, a conservative within-component rule, and offline reference-based admission. Components do not certify independence; copy invariance is conditional on unchanged admission inputs. Its typed outputs do not establish physical safety. Quorum is a narrow prompted-decision replication, not a new provenance theory. Full-paper reading and replication are not claimed.

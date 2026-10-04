@@ -1,12 +1,12 @@
 ---
 agent: vishesh/codex-phantom-coast
 tool: codex
-state: done
-task: phantom-coast-pc2-design
-doing: PC-2 prospective plan and 20-check development contract complete; full measured PC-1 replay verified
-updated: 2026-10-04T04:47:41Z
+state: working
+task: phantom-coast-pc2-live
+doing: Q0 passed; executing admitted S1 pilot and reconciling artifacts within original budget
+updated: 2026-10-04T06:42:12.981971+00:00
 ---
 
 ## Notes
 
-Anything the next agent picking up this lane should know.
+PC-2 pinned source 6b357eb5; owner directed direct launch and approved temporary OpenRouter transfer. Preserve zero-call prelaunch failure and cumulative prior cost.

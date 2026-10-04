@@ -1,0 +1,31 @@
+{
+  "id": "right-dissenter-rd4",
+  "title": "The Right Dissenter and the right to resume",
+  "owner": "vishesh",
+  "description": "TLDR: Complete only the 38 remaining RD4 trajectories (152 decisions) after verifying the actual loopback relay before every trajectory. Preserve all 424 prefix decisions and all failures; no model request retried. Same original/symmetric/always-check contrasts and 576-decision denominator; authored synthetic templates limit inference.",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/96d9943e09085a828b7ea6f15d8191f43040aeb3/researchers/vishesh/notes/dissent/rd4/C2-PLAN.md",
+  "params": {
+    "stage": {
+      "type": "str",
+      "role": "stage"
+    },
+    "design": {
+      "type": "str",
+      "role": "fixed"
+    },
+    "source": {
+      "type": "str",
+      "role": "fixed"
+    },
+    "scripted_votes": {
+      "type": "bool",
+      "role": "fixed"
+    }
+  },
+  "metrics": [
+    "correct_all_assigned",
+    "terminal",
+    "cost_usd"
+  ],
+  "primary_metric": "correct_all_assigned"
+}

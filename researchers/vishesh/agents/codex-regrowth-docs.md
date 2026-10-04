@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: working
+state: blocked
 task: healing-qwen-jev
-doing: Dedicated sim-healing-c1 created and exclusively claimed; provisioning and refreshing C1 admission before Qwen plus Jev qualification
-updated: 2026-10-04T04:54Z
+doing: "C3 repair published; needs reachable authorized coordinator for registration, dedicated allocation and native run"
+updated: 2026-10-04T06:56Z
 ---
 
 ## Notes

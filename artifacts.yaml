@@ -1,5 +1,3 @@
-# Artifact manifest v1 (schema: .flightdeck/artifacts-1.json). Add versions with `fd add`, check with
-#   python3 .flightdeck/fd.py check --strict .
 manifest: 1
 project: Swarm Lab
 summary: Shared research workspace where a hackathon team's agents catalogue prior work on swarm dynamics, gate hypotheses
@@ -205,8 +203,7 @@ artifacts:
         built_at: '2026-10-04T02:38:08Z'
         by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: 'Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive
-          replacement of every member? Run three scenarios and repeat if necessary.'
+        prompt: sha256:d0f17ea79a3a98ab28ddac12332940d1bf832bfb2ee5598a9fbd43784ea14fac
         ingredients:
           - researchers/vishesh/notes/swarm-of-theseus/src/summary_figure.py
           - researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/summary.json
@@ -223,8 +220,7 @@ artifacts:
         built_at: '2026-10-04T02:38:09Z'
         by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: 'Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive
-          replacement of every member? Run three scenarios and repeat if necessary.'
+        prompt: sha256:d0f17ea79a3a98ab28ddac12332940d1bf832bfb2ee5598a9fbd43784ea14fac
         ingredients:
           - researchers/vishesh/notes/swarm-of-theseus/src/render.py
           - researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/rows.json
@@ -241,8 +237,7 @@ artifacts:
         built_at: '2026-10-04T02:38:09Z'
         by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: 'Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive
-          replacement of every member? Run three scenarios and repeat if necessary.'
+        prompt: sha256:d0f17ea79a3a98ab28ddac12332940d1bf832bfb2ee5598a9fbd43784ea14fac
         ingredients:
           - researchers/vishesh/notes/swarm-of-theseus/RESULTS.md
           - researchers/vishesh/notes/swarm-of-theseus/results/S0-a2/summary.json
@@ -263,8 +258,7 @@ artifacts:
         built_at: '2026-10-04T02:38:09Z'
         by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: 'Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive
-          replacement of every member? Run three scenarios and repeat if necessary.'
+        prompt: sha256:d0f17ea79a3a98ab28ddac12332940d1bf832bfb2ee5598a9fbd43784ea14fac
         ingredients:
           - researchers/vishesh/notes/swarm-of-theseus/src/package_evidence.py
           - data/theseus-inputs/S0-a1-setup.json
@@ -919,8 +913,7 @@ artifacts:
         built_at: '2026-10-04T03:54:58Z'
         by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: Evaluate each one. Improve the design. Evaluate against the plan. Resolve any gaps or failures identified
-          in previous runs.
+        prompt: sha256:3268e17c1fa4f3d9496e14896abcd1e154b5c97cb4ba0809817593b9ac27587d
         ingredients:
           - researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md
           - researchers/vishesh/notes/swarm-of-theseus/v2/tests/test_instrument.py
@@ -938,7 +931,7 @@ artifacts:
         built_at: '2026-10-04T03:54:59Z'
         by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: Build the improved three scenarios and show more animations, with evaluation quality preserved.
+        prompt: sha256:6872cb407834d8a9d6ad298d6435ad9eb89c1fc29b24839b99ced5c52508dc0e
         ingredients:
           - researchers/vishesh/notes/swarm-of-theseus/v2/src/render.py
           - researchers/vishesh/notes/swarm-of-theseus/v2/src/engine.py
@@ -959,7 +952,7 @@ artifacts:
           harness metadata corrected to schema enum codex.
         by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: Verify and correct the visual fixture frame, preserving its explicit non-model provenance.
+        prompt: sha256:dadaf246930f019eddd191b570b50d365153446e7c37a9afe72ab2f6509462cb
         ingredients:
           - researchers/vishesh/notes/swarm-of-theseus/v2/src/render.py
           - researchers/vishesh/notes/swarm-of-theseus/v2/src/engine.py
@@ -972,7 +965,7 @@ artifacts:
         built_at: '2026-10-04T03:54:59Z'
         by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: Build and verify a clear visual explanation of the improved experiment.
+        prompt: sha256:eb3ff263da086a5aeeb2394bd48dbd7c0c5ce42edbee052794ab253a0b91dfde
         ingredients:
           - researchers/vishesh/notes/swarm-of-theseus/v2/src/render.py
           - researchers/vishesh/notes/swarm-of-theseus/v2/src/engine.py
@@ -1033,7 +1026,7 @@ artifacts:
         by: codex
         model: gpt-6-astra
         session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: Yes you have approval. Go ahead and fix up the experimental design and then run it.
+        prompt: sha256:1c1ca1dff01720b7312f999b15b23ab88c29c8d0c3e7eeab1f325e4f67b6e473
         ingredients:
           - researchers/vishesh/notes/swarm-of-theseus/v2/src/runner.py
           - researchers/vishesh/notes/swarm-of-theseus/v2/results/S0/manifest.json
@@ -1051,7 +1044,7 @@ artifacts:
         by: codex
         model: gpt-6-astra
         session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: Yes you have approval. Go ahead and fix up the experimental design and then run it.
+        prompt: sha256:1c1ca1dff01720b7312f999b15b23ab88c29c8d0c3e7eeab1f325e4f67b6e473
         ingredients:
           - researchers/vishesh/notes/swarm-of-theseus/v2/src/runner.py
           - researchers/vishesh/notes/swarm-of-theseus/v2/results/S0-repair/manifest.json
@@ -1069,7 +1062,7 @@ artifacts:
         by: codex
         model: gpt-6-astra
         session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: Yes you have approval. Go ahead and fix up the experimental design and then run it.
+        prompt: sha256:1c1ca1dff01720b7312f999b15b23ab88c29c8d0c3e7eeab1f325e4f67b6e473
         ingredients:
           - artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
           - artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
@@ -1088,7 +1081,7 @@ artifacts:
         by: codex
         model: gpt-6-astra
         session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: Yes you have approval. Go ahead and fix up the experimental design and then run it.
+        prompt: sha256:1c1ca1dff01720b7312f999b15b23ab88c29c8d0c3e7eeab1f325e4f67b6e473
         ingredients:
           - artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
           - artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
@@ -1107,7 +1100,7 @@ artifacts:
         by: codex
         model: gpt-6-astra
         session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: Yes you have approval. Go ahead and fix up the experimental design and then run it.
+        prompt: sha256:1c1ca1dff01720b7312f999b15b23ab88c29c8d0c3e7eeab1f325e4f67b6e473
         ingredients:
           - artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
           - artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
@@ -1212,8 +1205,7 @@ artifacts:
         by: codex
         model: gpt-6-astra
         session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: Okay then, diagnose and dive into the rule application errors. You already identified that as the next useful
-          step. Why are you not just doing it and telling me?
+        prompt: sha256:91e17260ef9d90d0f6ba306b144091688e37a874d87d75be9085e48f67d99a36
         ingredients:
           - artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
           - artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
@@ -1233,8 +1225,7 @@ artifacts:
         by: codex
         model: gpt-6-astra
         session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: Okay then, diagnose and dive into the rule application errors. You already identified that as the next useful
-          step. Why are you not just doing it and telling me?
+        prompt: sha256:91e17260ef9d90d0f6ba306b144091688e37a874d87d75be9085e48f67d99a36
         ingredients:
           - artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
           - artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
@@ -1536,10 +1527,7 @@ artifacts:
         by: codex
         model: gpt-6-astra
         session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: How would you propose resolving the execution inconsistencies and instrument defects? Let's propose solutions
-          to shore up the designs and improve how we're doing this. Let's figure out how we're going to address those 13 errors
-          and let's make a plan for those targeted repairs. Get that all proposed and built. Get it committed and pushed so
-          we can get to the next useful experimental run.
+        prompt: sha256:9236cd557032bd33064d5b5ed55041dbf209ae7e0674e0fec7879c86a4b8b9a0
         ingredients:
           - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/FINDINGS.md
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/regressions.json
@@ -1559,14 +1547,455 @@ artifacts:
         by: codex
         model: gpt-6-astra
         session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
-        prompt: How would you propose resolving the execution inconsistencies and instrument defects? Let's propose solutions
-          to shore up the designs and improve how we're doing this. Let's figure out how we're going to address those 13 errors
-          and let's make a plan for those targeted repairs. Get that all proposed and built. Get it committed and pushed so
-          we can get to the next useful experimental run.
+        prompt: sha256:9236cd557032bd33064d5b5ed55041dbf209ae7e0674e0fec7879c86a4b8b9a0
         ingredients:
           - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/FINDINGS.md
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/regressions.json
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/instrument.py
           - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/REPAIR-MAP.md
         commit: d202b7f2af5f3cd20c3e612e97befdddaa84bd46-dirty
+  - id: market-split-haiku-r0-001
+    category: content
+    type: figure
+    title: 'Haiku full-length reliability: retained capacity failure'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/market-split-haiku-r0-001/market-split-haiku-r0-001-v1.png
+        built_at: '2026-10-04T04:54:08Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1047e-d018-7200-99d4-ef93e90cd5c4
+        prompt: when ur done with a run please push the results to github and a postmoterm and include analysis with the results
+          and let me know when u have also pushed another wxperiment plan but dont start
+        ingredients:
+          - researchers/dmarz/notes/market-split-api/report/src/qualification_plot.py
+          - researchers/dmarz/notes/market-split-haiku/report/r0-001/episode-results.csv
+          - researchers/dmarz/notes/market-split-haiku/report/r0-001/run-receipts.json
+          - researchers/dmarz/notes/market-split-haiku/report/r0-001/usage.json
+        commit: 5a281b08afa25e4509eadd8df262baa8a08f74f3-dirty
+  - id: market-split-haiku-r0-001-records
+    category: content
+    type: dataset
+    title: Haiku R0-001 outcomes, actions and retained failure
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/market-split-haiku-r0-001-records/market-split-haiku-r0-001-records-v1.zip
+        built_at: '2026-10-04T04:54:20Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1047e-d018-7200-99d4-ef93e90cd5c4
+        prompt: when ur done with a run please push the results to github and a postmoterm and include analysis with the results
+          and let me know when u have also pushed another wxperiment plan but dont start
+        ingredients:
+          - researchers/dmarz/notes/market-split-api/report/src/archive.py
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/r0-001-verified.json
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/progress.png
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/final_frame.png
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/replay.gif
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/episodes.jsonl
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/calls.jsonl
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/summary.json
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/visualization-errors.json
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/progress.png
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/final_frame.png
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/replay.gif
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/episodes.jsonl
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/calls.jsonl
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/summary.json
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/visualization-errors.json
+        commit: 5a281b08afa25e4509eadd8df262baa8a08f74f3-dirty
+  - id: sybil-budget-api-s1
+    category: content
+    type: figure
+    title: 'Verification budget: measured S1 accuracy and attacker admission'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/sybil-budget-api-s1/sybil-budget-api-s1-v1.png
+        built_at: '2026-10-04T05:40:12Z'
+        note: Frozen-source local rendering of all 2,880 observed S1 outcomes; 24 paired worlds, one synthetic task family.
+          Same-owner saved-data audit; no new API calls.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10476-dbdf-7a10-829c-804fe9b3a8f5
+        prompt: when ur done with a run please push the results to github and a postmoterm and include analysis with the results
+          and let me know when u have also pushed another wxperiment plan but dont start
+        ingredients:
+          - researchers/dmarz/notes/sybil-budget-api/src/render.py
+          - researchers/dmarz/notes/sybil-budget-api/src/analyze.py
+          - researchers/dmarz/notes/sybil-budget-api/src/study.py
+          - researchers/dmarz/notes/sybil-budget-api/src/sim.py
+          - researchers/dmarz/notes/sybil-budget-api/design.yaml
+          - researchers/dmarz/notes/sybil-budget-api/requirements.txt
+          - data/sybil-followups/budget-s1/episodes.jsonl.gz
+          - data/sybil-followups/budget-s1/summary.json
+          - /System/Library/Fonts/Supplemental/Arial.ttf
+        commit: e2a0135c148f811ae95d74b56a844f7a5978e611-dirty
+  - id: sybil-budget-api-s1-retention
+    category: content
+    type: figure
+    title: 'Verification budget: honest specialist retention across the tested grid'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/sybil-budget-api-s1-retention/sybil-budget-api-s1-retention-v1.png
+        built_at: '2026-10-04T05:41:06Z'
+        note: Frozen-source local rendering of all 2,880 observed S1 outcomes; 24 paired worlds, one synthetic task family.
+          Same-owner saved-data audit; no new API calls.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10476-dbdf-7a10-829c-804fe9b3a8f5
+        prompt: when ur done with a run please push the results to github and a postmoterm and include analysis with the results
+          and let me know when u have also pushed another wxperiment plan but dont start
+        ingredients:
+          - researchers/dmarz/notes/sybil-budget-api/src/render.py
+          - researchers/dmarz/notes/sybil-budget-api/src/analyze.py
+          - researchers/dmarz/notes/sybil-budget-api/src/study.py
+          - researchers/dmarz/notes/sybil-budget-api/src/sim.py
+          - researchers/dmarz/notes/sybil-budget-api/design.yaml
+          - researchers/dmarz/notes/sybil-budget-api/requirements.txt
+          - data/sybil-followups/budget-s1/episodes.jsonl.gz
+          - data/sybil-followups/budget-s1/summary.json
+          - /System/Library/Fonts/Supplemental/Arial.ttf
+        commit: e2a0135c148f811ae95d74b56a844f7a5978e611-dirty
+  - id: influence-candidate-checks-results
+    category: content
+    type: figure
+    title: 'Complete checks, inaccurate blockers: six-case decision diagnostic'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-candidate-checks-results/influence-candidate-checks-results-v1.png
+        built_at: '2026-10-04T05:54:11Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Investigate complete candidate checks and consistent acknowledgement of blockers.
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/analysis/render_checks.py
+          - data/influence-native/native-D3-01/outcomes.json
+          - data/influence-native/native-D3-01/summary.json
+        commit: 8087faf9fd3399c30774ad71e8f95dcdaa576215-dirty
+  - id: influence-candidate-checks-replay
+    category: content
+    type: doc
+    title: 'Candidate checks: model versus source and recorded decision replay'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-candidate-checks-replay/influence-candidate-checks-replay-v1.html
+        built_at: '2026-10-04T05:54:11Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Make every candidate check and actual decision auditable in a measured replay.
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/analysis/render_checks.py
+          - data/influence-native/native-D3-01/audit.json
+          - data/influence-native/native-D3-01/outcomes.json
+          - data/influence-native/native-D3-01/summary.json
+        commit: 8087faf9fd3399c30774ad71e8f95dcdaa576215-dirty
+  - id: right-dissenter-rd4-q4
+    category: content
+    type: figure
+    title: Right Dissenter RD4 qualification
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-rd4-q4/right-dissenter-rd4-q4-v1.png
+        built_at: '2026-10-04T06:25:00Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Improve the design, evaluate against the plan, and resolve gaps identified in previous runs.
+        ingredients:
+          - researchers/vishesh/notes/dissent/src/rd4_render.py
+          - researchers/vishesh/notes/dissent/src/live_render.py
+          - researchers/vishesh/notes/dissent/rd4/results/q4-a1/summary.json
+          - researchers/vishesh/notes/dissent/rd4/results/q4-a1/records.json
+        commit: 2d85cdfbbc6ffc782a2b98ce92e293652ea9c2e5-dirty
+  - id: right-dissenter-rd4-results
+    category: content
+    type: figure
+    title: Right Dissenter RD4 fixed-cohort results and failure sensitivity
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-rd4-results/right-dissenter-rd4-results-v1.png
+        built_at: '2026-10-04T06:25:14Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Make the results more practical, robust, compelling, and interesting.
+        ingredients:
+          - researchers/vishesh/notes/dissent/rd4/render_report.py
+          - researchers/vishesh/notes/dissent/rd4/analyze_saved.py
+          - researchers/vishesh/notes/dissent/src/rd4_render.py
+          - researchers/vishesh/notes/dissent/src/live_render.py
+          - researchers/vishesh/notes/dissent/rd4/continuation.py
+          - researchers/vishesh/notes/dissent/rd4/results/combined/records.json
+          - researchers/vishesh/notes/dissent/rd4/results/combined/summary.json
+          - researchers/vishesh/notes/dissent/rd4/results/combined/analysis.json
+          - https://swarm-live.pages.dev/api/a/right-dissenter-rd4/s4-c2/combined-final_frame.png
+        commit: 2d85cdfbbc6ffc782a2b98ce92e293652ea9c2e5-dirty
+  - id: right-dissenter-rd4-replay
+    category: content
+    type: film
+    title: Right Dissenter RD4 measured replay including preserved failures
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-rd4-replay/right-dissenter-rd4-replay-v1.mp4
+        built_at: '2026-10-04T06:25:15Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Evaluate against the plan and resolve any gaps or failures identified in previous runs.
+        ingredients:
+          - researchers/vishesh/notes/dissent/rd4/render_report.py
+          - researchers/vishesh/notes/dissent/src/live_render.py
+          - researchers/vishesh/notes/dissent/visualization/export_measured.py
+          - researchers/vishesh/notes/dissent/rd4/results/combined/records.json
+          - researchers/vishesh/notes/dissent/rd4/results/combined/summary.json
+          - /private/tmp/rd4-report-visuals/replay.gif
+        commit: 2d85cdfbbc6ffc782a2b98ce92e293652ea9c2e5-dirty
+  - id: market-split-sonnet-s1-002
+    category: content
+    type: figure
+    title: Neutral Sonnet discovers firm splitting in six markets
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/market-split-sonnet-s1-002/market-split-sonnet-s1-002-v1.png
+        built_at: '2026-10-04T06:42:26Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1047e-d018-7200-99d4-ef93e90cd5c4
+        prompt: when ur done with a run please push the results to github and a postmoterm and include analysis with the results
+          and let me know when u have also pushed another wxperiment plan but dont start
+        ingredients:
+          - researchers/dmarz/notes/market-split-api/report/src/plot.py
+          - researchers/dmarz/notes/market-split-api/results/s1-002-collected/episodes.jsonl
+        commit: 4d735ecae0e67403274ed0af682a0ebd609828a3-dirty
+  - id: market-split-sonnet-s1-002-records
+    category: content
+    type: dataset
+    title: Sonnet S1-002 complete action and episode records
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/market-split-sonnet-s1-002-records/market-split-sonnet-s1-002-records-v1.zip
+        built_at: '2026-10-04T06:42:28Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1047e-d018-7200-99d4-ef93e90cd5c4
+        prompt: when ur done with a run please push the results to github and a postmoterm and include analysis with the results
+          and let me know when u have also pushed another wxperiment plan but dont start
+        ingredients:
+          - researchers/dmarz/notes/market-split-api/report/src/archive.py
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/s1-002-verified.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/visualization-errors.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/progress.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/final_frame.png
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/replay.gif
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/episodes.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/calls.jsonl
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/summary.json
+          - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/visualization-errors.json
+        commit: 4d735ecae0e67403274ed0af682a0ebd609828a3-dirty
+  - id: vishesh-theseus-d1-results
+    category: content
+    type: figure
+    title: Theseus D1 measured interface comparison
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-d1-results/vishesh-theseus-d1-results-v1.png
+        built_at: '2026-10-04T06:57:47Z'
+        note: vishesh/codex-theseus; measured D1, 144 calls; not culture-preservation evidence.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:5c30a4b28b9662c83977c7a9810635070a80d972335743935504c3dcee0905e2
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/presentation/report.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/summary.json
+        commit: 6b3f708d3cf69640a967f8b0b73c6af6069fef22-dirty
+  - id: vishesh-theseus-d1-postmortem
+    category: content
+    type: doc
+    title: Theseus D1 results and postmortem
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-d1-postmortem/vishesh-theseus-d1-postmortem-v1.md
+        built_at: '2026-10-04T06:57:48Z'
+        note: vishesh/codex-theseus; measured D1, 144 calls; not culture-preservation evidence.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:5c30a4b28b9662c83977c7a9810635070a80d972335743935504c3dcee0905e2
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/summary.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/manifest.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-D1.md
+        commit: 6b3f708d3cf69640a967f8b0b73c6af6069fef22-dirty
+  - id: vishesh-theseus-d1-replay
+    category: content
+    type: doc
+    title: Theseus D1 measured output inspector
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-d1-replay/vishesh-theseus-d1-replay-v1.html
+        built_at: '2026-10-04T06:57:49Z'
+        note: vishesh/codex-theseus; measured D1, 144 calls; not culture-preservation evidence.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:5c30a4b28b9662c83977c7a9810635070a80d972335743935504c3dcee0905e2
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/render.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/summary.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/evidence.tar.gz
+        commit: 6b3f708d3cf69640a967f8b0b73c6af6069fef22-dirty
+  - id: vishesh-theseus-d1-evidence
+    category: content
+    type: dataset
+    title: Theseus D1 complete execution evidence
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-d1-evidence/vishesh-theseus-d1-evidence-v1.gz
+        built_at: '2026-10-04T06:57:49Z'
+        note: vishesh/codex-theseus; measured D1, 144 calls; not culture-preservation evidence.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:5c30a4b28b9662c83977c7a9810635070a80d972335743935504c3dcee0905e2
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/runner.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/manifest.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/evidence-hashes.json
+        commit: 6b3f708d3cf69640a967f8b0b73c6af6069fef22-dirty
 requires: '1.2'

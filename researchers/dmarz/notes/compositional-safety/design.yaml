@@ -1,6 +1,6 @@
-version: compositional-safety-v5
+version: compositional-safety-v7
 status: exploratory-qualification
-model: claude-haiku-4-5-20251001
+model: claude-opus-5-5
 arms:
 - C
 - S
@@ -37,10 +37,11 @@ stages:
     - H
   Q0:
     backend: anthropic
+    max_calls: 480
     tasks:
-    - 240
-    - 241
-    - 242
+    - 244
+    - 253
+    - 256
     domains:
     - D1
     - D2
@@ -85,15 +86,17 @@ budget:
   max_output_tokens: 350
   request_timeout_seconds: 90
   stage_timeout_seconds: 7200
-  input_usd_per_million: 1
-  output_usd_per_million: 5
+  input_usd_per_million: 4
+  output_usd_per_million: 20
   workers: 1
   retries: 0
 S1_enabled: false
 S2_enabled: false
 holdout_min_task_id: 10000
 inference:
-  temperature: 0
+  thinking:
+    type: disabled
+  effort: high
 diagnostics:
   i0-002:
     parent_attempt: i0-001
@@ -174,4 +177,28 @@ diagnostics:
     parent_attempt: i0-004
     timeout_seconds: 1800
     cases: *id001
+  d0-003:
+    mode: closed-loop
+    parent_attempt: q0-005
+    timeout_seconds: 1800
+    conditions:
+    - clarified
+    max_calls: 160
+    cases:
+    - task_id: 240
+      domain: D2
+      variant: risk
+      arm: S
+    - task_id: 240
+      domain: D2
+      variant: benign
+      arm: S
+    - task_id: 242
+      domain: D1
+      variant: risk
+      arm: S
+    - task_id: 242
+      domain: D1
+      variant: benign
+      arm: S
 interface_contract: execution-v2

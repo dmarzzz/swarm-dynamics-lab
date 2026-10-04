@@ -352,6 +352,20 @@ The plan's rule stands for answers: zero automatic retries, zero repair calls, a
 | 12 | Stale-evidence citations as a process measure | Counted on the first answer and the discussion message: citing the superseded estimate without the audit | Operational definition. |
 | 13 | PREPARE premature-choice audit | A fixed word-pattern check on the inventory text, reported as a rate | Deterministic, no model judge. It is a screen, not a proof of absence. |
 
+### A5. Launch manifest m2 (4 October 2026 UTC, dmarz/orbital-orchestrator)
+
+S1-Q under m1 failed competence: 7 of 12 correct against a gate of 10, all 12 valid (attempt s1q-a1, hub run `soc07-private-judgments/51b1204c`, [post-mortem](reviews/s1q-post.md)). dmarz then instructed the operator to "use a strong model that's great". Following the rule in A1, manifest m2 changes configuration only:
+
+| Field | m1 | m2 | Why |
+| --- | --- | --- | --- |
+| Model | `claude-haiku-4-5-20251001` | `claude-sonnet-4-6` | The stronger model the market-split study ran on the same night. Newer Sonnet models (5, 5.5) reject any temperature and reason by default unless the request turns it off, which this adapter cannot express without a code change and which would consume the 64- to 256-token caps. Sonnet 4.6 accepts temperature 0.7 and does not reason unless asked, so the plan's sampling and "thinking off" intent are kept exactly. |
+| Reasoning allowance | off | off | The plan's `enable_thinking=false`. A reasoning budget was the other permitted change; it was not needed to keep the design intact and is held back for a later amendment if m2 also fails. |
+| Temperature, output caps | 0.7; 256 / 256 / 64 / 64, qualification 128 | unchanged | |
+| Prices | USD 1 / 5 per million | USD 3 / 15 per million | Sonnet 4.6 list price. |
+| Qualification set | 0 | 1 | Twelve fresh worlds with their own 12-call cap (`budget.stages["s1q.1"]`); the m1 worlds are not reused as evidence and no prompt was tuned against them. |
+
+The USD 40 study cap and its 30 / 10 split are unchanged; the expected spend rises about threefold to roughly USD 21 (an estimate, not a measurement). The go for m2 is dmarz's direct instruction, recorded in `execution.json` (`review.reviewer`) and in the new approval record; dmarz/fleet-monitor reviewed m1 only and its review does not cover m2. (Correction 2026-10-04 ~07:20 UTC: an earlier version of this sentence said fleet-monitor had gone offline with halcyon; it had not.) Test-only changes: the self-test now reads the live manifest's model, prices and qualification-set namespace instead of m1 literals, and the one-cent sanity bound on a single call's worst-case reservation scales with the manifest's price. The m1 block is kept in `execution.json` as `launch_manifest_history`. Results under m1 and m2 are never pooled.
+
 ### What S0 checks
 
 `python3 src/worker.py --stage s0 --attempt <name>` (or the hub run with `stage=s0`) executes 60 fixtures, 20 per regime, under four scripted policies in all five arms (1,200 team episodes), the controlled replay (240 focal episodes), the single-solver qualification (60), and nine fault runs: invalid first answer, invalid discussion and final outputs, truncation, refusal, timeout, overflow, public and auxiliary budget exhaustion, leaked truth, duplicate dispatch and a controller crash. Outcomes are compared with values fixed in [src/s0.py](src/s0.py) before running. `python3 src/selftest.py` runs the unit tests and the whole of S0 offline.

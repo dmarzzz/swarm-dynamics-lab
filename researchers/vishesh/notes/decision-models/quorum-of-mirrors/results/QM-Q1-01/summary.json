@@ -1,0 +1,150 @@
+{
+  "stage": "Q1",
+  "assigned": 16,
+  "started": 1,
+  "valid": 0,
+  "full_correct": 0,
+  "full_wrong": 0,
+  "full_defer": 0,
+  "failed": 1,
+  "unstarted": 15,
+  "full_assigned": 8,
+  "cells": [
+    {
+      "id": "QM-Q1-01-006",
+      "lineage": "full",
+      "context": "self",
+      "q": 0.8,
+      "choice": null,
+      "expected_MAP": "ZERO"
+    },
+    {
+      "id": "QM-Q1-01-002",
+      "lineage": "full",
+      "context": "peer",
+      "q": 0.8,
+      "choice": null,
+      "expected_MAP": "ZERO"
+    },
+    {
+      "id": "QM-Q1-01-003",
+      "lineage": "full",
+      "context": "peer",
+      "q": 0.8,
+      "choice": null,
+      "expected_MAP": "ONE"
+    },
+    {
+      "id": "QM-Q1-01-012",
+      "lineage": "partial",
+      "context": "self",
+      "q": 0.65,
+      "choice": null,
+      "expected_MAP": null
+    },
+    {
+      "id": "QM-Q1-01-000",
+      "lineage": "full",
+      "context": "peer",
+      "q": 0.65,
+      "choice": null,
+      "expected_MAP": "ZERO"
+    },
+    {
+      "id": "QM-Q1-01-008",
+      "lineage": "partial",
+      "context": "peer",
+      "q": 0.65,
+      "choice": null,
+      "expected_MAP": null
+    },
+    {
+      "id": "QM-Q1-01-007",
+      "lineage": "full",
+      "context": "self",
+      "q": 0.8,
+      "choice": null,
+      "expected_MAP": "ONE"
+    },
+    {
+      "id": "QM-Q1-01-014",
+      "lineage": "partial",
+      "context": "self",
+      "q": 0.8,
+      "choice": null,
+      "expected_MAP": null
+    },
+    {
+      "id": "QM-Q1-01-013",
+      "lineage": "partial",
+      "context": "self",
+      "q": 0.65,
+      "choice": null,
+      "expected_MAP": null
+    },
+    {
+      "id": "QM-Q1-01-001",
+      "lineage": "full",
+      "context": "peer",
+      "q": 0.65,
+      "choice": null,
+      "expected_MAP": "ONE"
+    },
+    {
+      "id": "QM-Q1-01-010",
+      "lineage": "partial",
+      "context": "peer",
+      "q": 0.8,
+      "choice": null,
+      "expected_MAP": null
+    },
+    {
+      "id": "QM-Q1-01-011",
+      "lineage": "partial",
+      "context": "peer",
+      "q": 0.8,
+      "choice": null,
+      "expected_MAP": null
+    },
+    {
+      "id": "QM-Q1-01-009",
+      "lineage": "partial",
+      "context": "peer",
+      "q": 0.65,
+      "choice": null,
+      "expected_MAP": null
+    },
+    {
+      "id": "QM-Q1-01-004",
+      "lineage": "full",
+      "context": "self",
+      "q": 0.65,
+      "choice": null,
+      "expected_MAP": "ZERO"
+    },
+    {
+      "id": "QM-Q1-01-005",
+      "lineage": "full",
+      "context": "self",
+      "q": 0.65,
+      "choice": null,
+      "expected_MAP": "ONE"
+    },
+    {
+      "id": "QM-Q1-01-015",
+      "lineage": "partial",
+      "context": "self",
+      "q": 0.8,
+      "choice": null,
+      "expected_MAP": null
+    }
+  ],
+  "qualified": false,
+  "full_MAP_all_assigned": 0.0,
+  "stop_reason": "failed_or_uncertain_call",
+  "budget": {
+    "calls": 33,
+    "reserved_usd": 0.044352,
+    "uncertain": 1
+  }
+}

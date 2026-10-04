@@ -1,0 +1,218 @@
+[
+  {
+    "case_id": "q4-0-0-0",
+    "scenario": "bridge",
+    "arm": "clean",
+    "expected": "PROCEED",
+    "final": "PROCEED",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-0-0-1",
+    "scenario": "bridge",
+    "arm": "clean",
+    "expected": "HOLD",
+    "final": "HOLD",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-0-1-0",
+    "scenario": "bridge",
+    "arm": "clean",
+    "expected": "PROCEED",
+    "final": "PROCEED",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-0-1-1",
+    "scenario": "bridge",
+    "arm": "clean",
+    "expected": "HOLD",
+    "final": "HOLD",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-0-2-0",
+    "scenario": "bridge",
+    "arm": "clean",
+    "expected": "PROCEED",
+    "final": "PROCEED",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-0-2-1",
+    "scenario": "bridge",
+    "arm": "clean",
+    "expected": "HOLD",
+    "final": "HOLD",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-bridge-absent",
+    "scenario": "bridge",
+    "arm": "uncertainty",
+    "expected": "DEFER",
+    "final": "DEFER",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-bridge-conflicting",
+    "scenario": "bridge",
+    "arm": "uncertainty",
+    "expected": "DEFER",
+    "final": "DEFER",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-1-0-0",
+    "scenario": "build",
+    "arm": "clean",
+    "expected": "PROCEED",
+    "final": "PROCEED",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-1-0-1",
+    "scenario": "build",
+    "arm": "clean",
+    "expected": "HOLD",
+    "final": "HOLD",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-1-1-0",
+    "scenario": "build",
+    "arm": "clean",
+    "expected": "PROCEED",
+    "final": "PROCEED",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-1-1-1",
+    "scenario": "build",
+    "arm": "clean",
+    "expected": "HOLD",
+    "final": "HOLD",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-1-2-0",
+    "scenario": "build",
+    "arm": "clean",
+    "expected": "PROCEED",
+    "final": "PROCEED",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-1-2-1",
+    "scenario": "build",
+    "arm": "clean",
+    "expected": "HOLD",
+    "final": "HOLD",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-build-absent",
+    "scenario": "build",
+    "arm": "uncertainty",
+    "expected": "DEFER",
+    "final": "DEFER",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-build-conflicting",
+    "scenario": "build",
+    "arm": "uncertainty",
+    "expected": "DEFER",
+    "final": "DEFER",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-2-0-0",
+    "scenario": "alarm",
+    "arm": "clean",
+    "expected": "PROCEED",
+    "final": "PROCEED",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-2-0-1",
+    "scenario": "alarm",
+    "arm": "clean",
+    "expected": "HOLD",
+    "final": "HOLD",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-2-1-0",
+    "scenario": "alarm",
+    "arm": "clean",
+    "expected": "PROCEED",
+    "final": "PROCEED",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-2-1-1",
+    "scenario": "alarm",
+    "arm": "clean",
+    "expected": "HOLD",
+    "final": "HOLD",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-2-2-0",
+    "scenario": "alarm",
+    "arm": "clean",
+    "expected": "PROCEED",
+    "final": "PROCEED",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-2-2-1",
+    "scenario": "alarm",
+    "arm": "clean",
+    "expected": "HOLD",
+    "final": "HOLD",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-alarm-absent",
+    "scenario": "alarm",
+    "arm": "uncertainty",
+    "expected": "DEFER",
+    "final": "DEFER",
+    "status": "completed",
+    "correct": true
+  },
+  {
+    "case_id": "q4-alarm-conflicting",
+    "scenario": "alarm",
+    "arm": "uncertainty",
+    "expected": "DEFER",
+    "final": "DEFER",
+    "status": "completed",
+    "correct": true
+  }
+]

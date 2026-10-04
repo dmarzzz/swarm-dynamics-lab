@@ -1,6 +1,6 @@
 # Theseus targeted execution repairs
 
-Built diagnostic successor; no model run performed. [PLAN.md](PLAN.md) was committed before implementation. [REPAIR-MAP.md](REPAIR-MAP.md) maps every one of the 13 historical errors to retained regression fixtures and specific controlled contrasts. Original v2 outcomes and stop rules are preserved.
+D1 is complete: 144 calls, 480 assigned decisions, $0.178341 model cost, no retries. See [results and postmortem](RESULTS-D1.md), [full evidence](results/D1/evidence.tar.gz), and [next design revision](NEXT-PLAN.md). Atomic calls scored 96/96; the matched batched condition scored 89/96. This is execution evidence, not cultural preservation. [PLAN.md](PLAN.md) was committed before implementation. [REPAIR-MAP.md](REPAIR-MAP.md) maps every one of the 13 historical errors to retained regression fixtures and specific controlled contrasts. Original v2 outcomes and stop rules are preserved.
 
 The native runner, balanced case generator, five controlled request interfaces, independent command/truth audit, assigned-denominator analysis, durable failure accounting and saved-record viewer are implemented. Nineteen offline checks pass, including reporting-interruption reconciliation without repeating model calls. This is implementation validation, not evidence that the model is repaired.
 
@@ -13,7 +13,7 @@ The native runner, balanced case generator, five controlled request interfaces, 
 | R5 coverage and shortcut defects | Each class/source contains all four signal/freshness pairs; independent opaque IDs/order | Mandatory coverage assertions before assignment; no post-hoc gate repair |
 | R6 reliable evaluation | Strict invalid-response accounting, independent truth/command comparison, raw records and all planned denominators | Fault checks and complete post-run analysis |
 
-The proposed screen is 144 calls / 480 assigned decisions / 3 independent worlds, maximum USD 5 and 2 hours, serial dispatch, no retries. Atomic and batched arms match cases, not compute. Each condition must be reported even if worse. No automatic culture-pilot launch or performance claim follows from unit tests. Review, public registration, fresh exclusive host and non-overlapping budget admission remain pending under [PRE-RUN.md](PRE-RUN.md).
+The completed screen used 144 calls / 480 assigned decisions / 3 independent worlds, maximum USD 5 and 2 hours, serial dispatch, no retries. Atomic and batched arms match cases, not compute. Each condition must be reported even if worse. No automatic culture-pilot launch or performance claim follows from unit tests. Researcher review is not required by owner direction. Public registration, dedicated-host, operator-assessment and budget checks passed before execution; [PRE-RUN.md](PRE-RUN.md) preserves the historical build-only assessment.
 
 ## Local checks
 

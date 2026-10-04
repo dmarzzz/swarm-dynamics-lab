@@ -1,6 +1,6 @@
 {
-  "schema": "poietic-contracts-v0.1",
-  "status": "intended-design-not-initialization-receipt",
+  "schema": "poietic-contracts-v0.2",
+  "status": "implemented-definition-not-native-initialization-receipt",
   "initial_agent": {
     "identity": "neutral_id_permuted_by_root",
     "model_role": "generalist",
@@ -25,28 +25,70 @@
   },
   "model_resolution": {
     "generalist": {
-      "requested_model_id": null,
-      "observed_model_id": null,
-      "backend_revision": null,
-      "settings": null,
-      "price_snapshot": null,
-      "qualification_receipt": null
+      "requested_model_id": "anthropic/claude-haiku-4.5",
+      "backend_revision": "anthropic/claude-4.5-haiku-20251001",
+      "catalog_name": "Anthropic | anthropic/claude-4.5-haiku-20251001",
+      "provider_tag": "anthropic",
+      "provider_name": "Anthropic",
+      "accepted_response_model_ids": [
+        "anthropic/claude-4.5-haiku-20251001",
+        "anthropic/claude-haiku-4.5"
+      ],
+      "kind": "chat",
+      "input_usd_per_token": 1e-06,
+      "output_usd_per_token": 5e-06,
+      "catalog_url": "https://openrouter.ai/api/v1/models/anthropic/claude-haiku-4.5/endpoints",
+      "settings": {
+        "temperature": 0,
+        "max_output_tokens": 1024,
+        "max_input_tokens": 8192,
+        "allow_fallbacks": false
+      },
+      "qualification_status": "unqualified",
+      "observed_execution_model": null
     },
     "cheap_generative": {
-      "requested_model_id": null,
-      "observed_model_id": null,
-      "backend_revision": null,
-      "settings": null,
-      "price_snapshot": null,
-      "qualification_receipt": null
+      "requested_model_id": "qwen/qwen3-8b",
+      "backend_revision": "qwen/qwen3-8b-04-28",
+      "catalog_name": "Alibaba | qwen/qwen3-8b-04-28",
+      "provider_tag": "alibaba",
+      "provider_name": "Alibaba",
+      "accepted_response_model_ids": [
+        "qwen/qwen3-8b",
+        "qwen/qwen3-8b-04-28"
+      ],
+      "kind": "chat",
+      "input_usd_per_token": 1.17e-07,
+      "output_usd_per_token": 4.55e-07,
+      "catalog_url": "https://openrouter.ai/api/v1/models/qwen/qwen3-8b/endpoints",
+      "settings": {
+        "temperature": 0,
+        "max_output_tokens": 1024,
+        "max_input_tokens": 8192,
+        "allow_fallbacks": false
+      },
+      "qualification_status": "unqualified",
+      "observed_execution_model": null
     },
     "typed_choice": {
-      "requested_model_id": null,
-      "observed_model_id": null,
-      "backend_revision": null,
-      "settings": null,
-      "price_snapshot": null,
-      "qualification_receipt": null
+      "requested_model_id": "typesafe/jev-1.13",
+      "backend_revision": "typesafe/jev-1.13-20260917",
+      "catalog_name": "TypeSafe | typesafe/jev-1.13-20260917",
+      "provider_tag": "typesafe",
+      "provider_name": "TypeSafe",
+      "accepted_response_model_ids": [
+        "typesafe/jev-1.13-20260917"
+      ],
+      "kind": "decision",
+      "input_usd_per_token": 4.2e-08,
+      "output_usd_per_token": 0.0,
+      "catalog_url": "https://openrouter.ai/api/v1/models/typesafe/jev-1.13/endpoints",
+      "settings": {
+        "finite_choice_only": true,
+        "allow_fallbacks": false
+      },
+      "qualification_status": "unqualified",
+      "observed_execution_model": null
     }
   },
   "model_boundaries": {

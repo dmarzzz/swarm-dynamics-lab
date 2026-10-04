@@ -15,6 +15,8 @@ The practical rule: a dissenter can earn a bounded independent check. Evidence d
 
 ## Current result
 
+**Latest separate iteration: [RD4, the right to resume](rd4/REPORT.md).** All 576 decisions are accounted for. Alias identity and persistent closure are repaired, but symmetric wording ties the original gate at 87/96; always-check reaches 88/96 with fewer model calls. Transport sensitivity prevents an accuracy ranking. The report isolates the more useful open problem: unresolved repeated judgments can spend the check needed for later recovery. Prior results below remain their own cohort.
+
 The exploratory cycle is complete. Q1 qualified the clarified model; in S1 the evidence gate scored **24/60**, versus **30/60** for always-check, with **31 versus 40 checks**. It missed both favorable recovery events after correctly withdrawing earlier false alarms. [Read the result and limitations](REPORT.md) or [watch the measured replay](https://swarm-live.pages.dev/api/a/right-dissenter/s1-a1/measured_replay.gif).
 
 The evidence metadata above reflects the completed exploratory cohort and is assessed by the study owner. Native results do not support deploying the current gate. The initial allocation error was corrected and remains documented; the borrowed Dmarz fleet host is released.
@@ -46,3 +48,7 @@ These briefs are ready for the owner to open in separate tasks. No new Codex tas
 ## Status
 
 Exploratory Q0/Q1/S1/D1 cycle completed. The current evidence does not establish a benefit for the gate. Original idea ratings remain historical; the evidence block now reflects this cohort. Formal research review and confirmatory S2 remain closed; a redesigned protocol needs a new prospective assessment.
+
+## Next design
+
+[RD5 planning package](rd5/README.md) reconciles the observed accuracy gap and proposes explicit uncertainty memory, separate acquisition/inference accounting and a test of protected future verification. Status: design only; no new native outcomes or machine allocation.

@@ -61,17 +61,36 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--stage", default="M1")
     ap.add_argument("--local", required=True)
+    ap.add_argument("--name", help="output name (default = stage), e.g. MP2 for the second-model pilot")
     a = ap.parse_args()
     d = load("design.yaml")
     eps = [e for e in read_local(Path(a.local)) if e.get("stage") == a.stage]
     if not eps:
         sys.exit(f"no {a.stage} episodes")
+    # Resumed pilot runs redo episodes whose arms were invalid (provider errors), so a (memory, task, seed, arm) can
+    # appear twice: keep the valid record if any, else the last invalid one. Redone-invalid counts are reported.
+    by_key = {}
+    redone = 0
+    for e in eps:
+        k = (e["world"], e["dose"], e["memory"], e["task_id"], e["seed"], e["arm"])
+        if k in by_key:
+            redone += 1
+            if by_key[k]["validity"]["ok"] and not e["validity"]["ok"]:
+                continue
+        by_key[k] = e
+    eps = list(by_key.values())
+    if redone:
+        print(f"note: {redone} records superseded by a resumed rerun of the same (cell, task, arm); valid record kept")
     arms = sorted({e["arm"] for e in eps}, key=d["arms"].index)
     out = ROOT / "results"
     out.mkdir(exist_ok=True)
     backends = sorted({e.get("backend") for e in eps})
-    spend = sum(e["cost_actual"].get("cost_usd", 0.0) for e in eps if e["arm"] == arms[-1])
-    calls = sum(e["cost_actual"].get("model_calls", 0) for e in eps)
+    # Spend: the locked ledger is authoritative (per-record cost_usd was a cumulative session figure in the first pilot
+    # run and is cumulative over an episode's arms since). Calls: last arm of each episode carries the episode total.
+    ledger = ROOT / "results" / "spend-ledger.json"
+    led = json.loads(ledger.read_text()) if ledger.exists() else {}
+    spend = sum(v["usd"] for v in led.get("by_model", {}).values()) if led else 0.0
+    calls = sum(e["cost_actual"].get("model_calls", 0) for e in eps if e["arm"] == arms[-1])
 
     cells = defaultdict(lambda: defaultdict(list))
     invalid = defaultdict(int)
@@ -81,6 +100,15 @@ def main():
             cells[key][e["arm"]].append(e)
         else:
             invalid[(key, e["arm"])] += 1
+    # Homogeneous cells are the f = 0 (all long) and f = 1 (all short) ends of a mix family (selftest: identical
+    # trajectories). Alias them so the contrasts over f can use them when a stage ran homogeneous cells by name.
+    for (world, dose, mem) in list(cells):
+        if mem.startswith("mix:"):
+            short, long = mem[4:].split("@")[0].split("/")
+            for hom, f in ((long, "0"), (short, "1")):
+                alias = (world, dose, f"mix:{short}/{long}@{f}")
+                if (world, dose, hom) in cells and alias not in cells:
+                    cells[alias] = cells[(world, dose, hom)]
 
     rows = []
     for (world, dose, mem), by_arm in sorted(cells.items(), key=lambda kv: (kv[0][0], kv[0][1], family(kv[0][2]), fkey(kv[0][2]))):
@@ -101,13 +129,13 @@ def main():
                          "delta_long_c": round(mean([x["delta_long"] for x in cap]), 4),
                          "recovered_c": round(mean([x["recovered"] for x in cap]), 4),
                          "half_time_med": _median([x["half_time"] for x in cap if x["half_time"] is not None])})
-    with open(out / f"{a.stage}_cells.csv", "w", newline="") as f:
+    with open(out / f"{a.name or a.stage}_cells.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
         w.writeheader()
         w.writerows(rows)
 
-    L = [f"# capture-memory-mix: {a.stage} results", "",
-         f"{len(eps)} episode records, backends {backends}, {calls} model calls, provider-reported spend {spend:.4f} USD. "
+    L = [f"# capture-memory-mix: {a.name or a.stage} results", "",
+         f"{len(eps)} episode records, backends {backends}, about {calls} model calls in these records; provider-reported spend on the shared ledger (all models, all pilot work) {spend:.4f} USD. "
          + ("Scripted policy: these numbers describe the tanh rule in sim.py, not LLM agents. " if backends == ["scripted"] else "")
          + f"Code commits: {sorted({str(e.get('code')) for e in eps})}.", "",
          "Columns: captured = capture rate (shared by arms); frac@rem / frac_T = honest fraction on the original at removal "
@@ -200,7 +228,7 @@ def main():
                  + f" | {at(min(50, R), 'series_long'):.3f} | {at(min(50, R), 'series_short'):.3f} |")
 
     L += ["", "Invalid episodes per cell and arm are in the CSV; none are dropped or retried. Capture is decided before removal and shared by the arms."]
-    (out / f"{a.stage}.md").write_text("\n".join(L) + "\n")
+    (out / f"{a.name or a.stage}.md").write_text("\n".join(L) + "\n")
     print("\n".join(L))
 
 

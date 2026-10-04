@@ -1,0 +1,18 @@
+{
+  "id": "capture-memory-mix",
+  "title": "Capture-memory-mix: heterogeneous memory lengths after a committed-minority purge (exploratory)",
+  "description": "Extends capture-memory: a fraction f of honest agents keep a short memory window (L=1 or 5), the rest a long one (L=20 or full running mean). Committed minority captures the population, is removed perfectly; measured is the return toward the original convention vs f, per memory kind, and whether a full memory wipe helps or harms. Scripted tanh policy (M0/M1/M2) plus a real-model pilot (MP, gpt-4o-mini via OpenRouter first-token logprobs, USD 5 hard cap). Hunch under researchers/shadow/notes; no accepted hypothesis.",
+  "owner": "shadow",
+  "params": {
+    "stage": {"type": "str", "description": "M0 homogeneous anchors | M1 mix sweep | M2 regime control + short=5 | MP real-model pilot", "role": "stage"},
+    "world": {"type": "str", "description": "W1_INSIDE (metastable pair) | W2_OUTSIDE (regime control)", "role": "condition"},
+    "dose": {"type": "float", "description": "committed fraction of N replaced at the end of entrench", "role": "condition"},
+    "memory": {"type": "str", "description": "homogeneous window (1|5|20|full) or mix:<short>/<long>@<f>", "role": "condition", "label": "memory spec"},
+    "tasks": {"type": "str", "description": "task id range (task = cluster unit)", "role": "replicate"},
+    "seeds": {"type": "list", "description": "seed list", "role": "replicate"},
+    "backend": {"type": "str", "description": "scripted | http:<model>", "role": "fixed"}
+  },
+  "metrics": ["captured", "frac_T_A0_no_purge", "frac_T_A1_purge", "frac_T_A2_purge_wipe", "delta_A1_purge", "delta_A2_purge_wipe", "wipe_minus_purge", "episodes", "invalid", "model_calls", "cost_usd"],
+  "primary_metric": "delta_A1_purge",
+  "url": "https://github.com/dmarzzz/swarm-lab/tree/main/researchers/shadow/notes/capture-memory-mix"
+}

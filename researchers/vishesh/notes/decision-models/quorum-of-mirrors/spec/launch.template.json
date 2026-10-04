@@ -1,0 +1,26 @@
+{
+  "status": "TEMPLATE \u2014 NOT ADMITTED",
+  "repo": null,
+  "hypothesis": null,
+  "authorization": "AUTHORIZATION.json",
+  "source_sha256": {
+    "next_stage.py": "1e355cf43c2fdb0fbce64becfdd40e7233be5165ddfb8ea0e3d0736bf3f63e60",
+    "next_runtime.py": "2270d4ed78b1af565a6c31c6d164de062d87f84e423a67d0dc106384697ee518",
+    "qualification.py": "a32e1acf0f06439992be58205700a6451f89be3fa0c917f914ade4a6b7d54d8f",
+    "reference.py": "6e0e7cd4f24251401f4ba9a22b53e6f736543de8c9df0e8e016ed161220f54c9",
+    "relay.py": "f600c8400243919d7fa55a35f790c3fb0e874eb15c0597da01d406071c8c41ed",
+    "public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166",
+    "OPERATOR-AUTHORIZATION.json": "9472a2df6cd2977e0b99b7f659e229954ce4eeca656f0800bcacee92d3806b98"
+  },
+  "manifest_sha256": "a67d8fdcd2728f22a14ff0b0f171f0f27f0f7db3454670d89e7c075ba91e580e",
+  "public_plan_url": "https://github.com/dmarzzz/swarm-lab/blob/a8a11731e9ec670c1d96758781ee7d81cfcb7a25/researchers/vishesh/notes/decision-models/quorum-of-mirrors/NEXT-RUN-PLAN.md",
+  "plan_sha256": "f932d4fc0a33ca7ae68faa7f35a030342001bf5a5e2eed1ae82170114ab936ae",
+  "public_manifest_url": "https://github.com/dmarzzz/swarm-lab/blob/feb46e5764e1537950bd4c5241a8ece19120f584/researchers/vishesh/notes/decision-models/quorum-of-mirrors/spec/QM-Q1-01.json",
+  "run_tldr": "Q1: qualify full/partial-lineage reports under misleading peer/self-review inputs; compare full-lineage choices with root-MAP and partial cases with the interface contract; 16 valid and at least 7/8 full-lineage MAP choices required; finite constructed qualification, no swarm efficacy claim.",
+  "reporter_sha256": null,
+  "deadline": null,
+  "allocation_receipt": null,
+  "ledger": null,
+  "repair_assessment": null,
+  "research_policy": "owner-directed-exploratory"
+}

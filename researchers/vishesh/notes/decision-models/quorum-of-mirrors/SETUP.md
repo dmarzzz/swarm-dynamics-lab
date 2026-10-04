@@ -1,12 +1,20 @@
 # Experiment setup record: Quorum of Mirrors, iteration 3
 
+## Latest execution — QM-Q1-01
+
+2026-10-04: the operator directly allocated and ran the authorized screen. **One response failed the frozen zero-output-token contract; 15 assignments remain unstarted.** The run stopped automatically. No reasoning accuracy or swarm benefit can be inferred. All artifacts were read back and verified; the worker exited, the memory-only credential closed, and the exclusive host allocation was released. Cumulative budget retains 33 calls, $0.044352 reserved, and one unresolved actual charge. No further owner authorization or researcher review is required. The technical follow-up is receipt/accounting repair and verification of the output-token contract before a separately registered repair screen. See [post-mortem](reviews/Q1-01-post.md) and [results](results/QM-Q1-01/summary.json).
+
+Earlier preparation notes below are historical and do not override this execution record.
+
+> Current admission update, 2026-10-04: the owner reaffirmed that researcher review is not required. The pinned [owner direction](OPERATOR-AUTHORIZATION.json) and [Q1 pre-run assessment](reviews/Q1-01-pre.md) supersede earlier researcher/survey-acceptance launch blockers for this bounded exploratory screen. Prior-art limitations and historical verdicts remain unchanged. The operator handles registration, fresh allocation and execution under the existing budget; no user action is requested.
+
 2026-10-04 · status: S0 closed; retrospective analysis complete; S1 NOT ADMITTED. Follow [the required setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). This record is retrospective for S0 and prospective for S1; it does not rewrite historical registration.
 
 ## Ownership and question
 
 - Owner: Vishesh; operator: vishesh/codex-quorum-mirrors. Different-researcher review: dmarz/inbox-design-feedback filed REVISE; [dated response](REVIEW-RESPONSE.md) addresses Q1–Q3. The requested review is complete; no second routine sign-off is required.
 - Question: does source-aware discussion improve decisions under repeated reports and withheld ancestry metadata (not an inherent information limit on this support)? Decision: spend on judgments, provenance or deterministic deduplication. Claim boundary: synthetic binary reports, known equal reliability; S0 tests one reader only.
-- Research status: exploratory instrument, no accepted hypothesis. [Survey](../../../../../surveys/vishesh-decision-models.md) remains in progress. Updated `lab.py gate vishesh-decision-models` now passes citation/reading/search-coverage floors (six catalogue full-read records, 12 structured rounds), but fails saturation: latest rounds 6/6 and 9/9 new. Five full-read records are inherited team work, not fresh personal reads. [RESEARCH-GATES.md](RESEARCH-GATES.md) records evidence and remaining methods work. Research owner must complete truthful source work and formal acceptance; a design review alone does not satisfy this.
+- Research status: exploratory instrument, no accepted hypothesis. [Survey](../../../../../surveys/vishesh-decision-models.md) remains in progress. Updated `lab.py gate vishesh-decision-models` now passes citation/reading/search-coverage floors (six catalogue full-read records, 15 structured rounds), but fails saturation: latest rounds 3/8 and 9/10 new. Five full-read records are inherited team work, not fresh personal reads. [RESEARCH-GATES.md](RESEARCH-GATES.md) records evidence and remaining methods work. Research owner must complete truthful source work and formal acceptance; a design review alone does not satisfy this.
 - Previous [post-mortem](reviews/S0-02-post.md): competence passed, repeat disagreement retained, setup-parent defect repaired. [Iteration plan](ITERATION-3.md) adds independent deterministic references and repairs unclear/stale reporting.
 - Next action: carry the received review amendments forward and complete applicable research gates before new native experimental implementation/launch. No machine claim is held pending these gates.
 
@@ -17,8 +25,8 @@ Assessor for the status table: vishesh/codex-quorum-mirrors, 2026-10-04. The dif
 | Gate | Status | Evidence | Blocker / next action |
 |---|---|---|---|
 | G0 Question and applicable research gates | blocked | Question, references and finite-sample limits in README/RESULTS; fresh survey gate above | Finish survey and hypothesis process; implement review amendments at plan freeze |
-| G1 Plan before implementation | pass for retrospective analysis; pending final S1 freeze | ITERATION-3.md committed separately before reassess_s0.py (see file history); RUN-ROADMAP.md prospective draft | Incorporate review and freeze literal prompts/manifest before implementation and run |
-| G2 Instrument/offline checks | pass for S0/reanalysis; pending for S1 | 34 tests pass, including seven independent analysis checks; raw request hashes reconcile | Implement and validate new S1 launcher after gates; old S0 relay is not general-purpose |
+| G1 Plan before implementation | pass for retrospective analysis; pass for Q1 preparation; pending later-stage freeze | ITERATION-3.md committed separately before reassess_s0.py (see file history); NEXT-RUN-PLAN.md committed before Q1 implementation; RUN-ROADMAP.md later stages | Incorporate review and freeze literal prompts/manifest before implementation and run |
+| G2 Instrument/offline checks | pass for S0/reanalysis and Q1 offline checks; pending deployed/native qualification | 52 study tests pass (18 new Q1/M1/admission checks); literal Q1 contracts and hashes in spec/ and analysis/q1-preparation/readiness.json | Q1-only next_runtime.py prepared; M1/C1 dispatch unsupported; deployment and actual qualification pending |
 | G3 Current attempt admission | blocked | Existing AUTHORIZATION.json; no S1 registration, allocation or frozen dispatch manifest | Complete research gates, pre-run assessment, immutable public registration, source/budget and fresh exclusive allocation checks |
 | G4 Qualification before scientific escalation | pending | S0 29/32 correct, 32 valid, narrow full-lineage reader context only | Freeze and register bounded peer/partial-context screen; meet its stated criteria before S1 |
 | G5 Reconciliation and closeout | pass for S0; pass for retrospective analysis | S0 summary/audit/release; comparisons.json reconciles all records | S1 has no assignments or outcome; close separately after any future attempt |
@@ -28,9 +36,9 @@ Assessor for the status table: vishesh/codex-quorum-mirrors, 2026-10-04. The dif
 - Current documents: [current roadmap](RUN-ROADMAP.md), [superseded S1 draft](S1-PLAN.md), [iteration analysis plan](ITERATION-3.md), [historical QM-2](PLAN.md), [review ledger](REVIEW.md). S1 is not yet preregistered.
 - Unit: 16 context fixtures, 64 finite-pattern mechanism calls, then proposed four sampled worlds (two per q), each with eight five-judge cells branching into peer and self-review second passes plus eight instruction-matched pooled two-call trajectories. 544 committee-stage calls; 624 new ordinary calls, up to 640 with one 16-call context repair. Pilot precision is weak; judges/calls are not independent worlds.
 - S0 observed: eight bit triples × two reliabilities × two samples = 32 calls. Current C1 reserves 41000–41003, not generated. QM-2 development/qualification/calibration/held-out seed ranges remain separate.
-- Model: historical S0 pinned typesafe/jev-1.13, served typesafe/jev-1.13-20260917 via TypeSafe, fallback disabled. Future provider availability/config/pricing require verification. Exact S1 prompts, dependency/source hashes, token ceilings and manifests are pending; no runnable command is claimed.
+- Model: historical S0 pinned typesafe/jev-1.13, served typesafe/jev-1.13-20260917 via TypeSafe, fallback disabled. Future provider availability/config/pricing require verification. Exact Q1 prompts/manifests, source hashes and byte/context limits are frozen; see NEXT-RUN-READINESS.md. Q1 native admission and M1/C1 runtime contracts remain pending.
 - Actor/evaluator isolation, quorum and posterior contracts: reference.py and tests. Saved-input analysis: reassess_s0.py independently checks arithmetic, IDs, hashes, repeated requests, provider and scores. Seven new tests cover known conflict, contradictory descendants, missing/duplicate receipts, tampered requests, labels and invalid scores.
-- S1 launch integration and bypass audit: not yet implemented; do not repurpose S0's fixed 32-call allowlist or reset its ledger. Qualification under new context is pending.
+- Q1 launch integration and refusal-path tests are implemented; M1/C1 native execution remains unsupported. Do not repurpose S0's fixed 32-call allowlist or reset its ledger. Qualification under new context is pending.
 - [Case explorer](analysis/iteration-3/cases.html) covers every saved configuration. S0 has no social time evolution; two separate requests are not dialogue rounds. The current branched temporal design is in RUN-ROADMAP.md; literal frame mappings remain to be frozen.
 
 ## Current attempt admission
@@ -63,3 +71,9 @@ Assessor for the status table: vishesh/codex-quorum-mirrors, 2026-10-04. The dif
 - S0 [audit](results/QM-S0-02/audit.json), [budget](results/QM-S0-02/budget-receipt.json), [release](results/QM-S0-02/release.json) retain upload/resource evidence. No new provisioned VM; baseline owner billing was not measured. Existing workers/relay stopped and allocation released.
 - Raw files unchanged. Retrospective comparisons identified as such, with input hashes in comparisons.json. Current iteration verification and publication recorded in ITERATION-3-POST.md.
 - Next action: owning researcher completes formal research gates; requested researcher review is complete; operator carries its amendments into frozen inputs and freezes/tests the new context screen and S1 contract. Existing spending authority persists; no dispatch until required public/runtime evidence exists.
+
+## Next-stage preparation update
+
+[NEXT-RUN-READINESS.md](NEXT-RUN-READINESS.md) is the current operator handoff. Q1 code, manifests and failure-path checks are prepared, browser fixture verified, original ledger audited without mutation, current endpoint metadata checked. No new native outcomes. G0 and G3 remain blocked, G4 awaits admitted qualification.
+
+Public preparation: immutable Q1 plan and condition contracts are published; Q1-PUBLICATION.json records verified manifest content. Experiment registration still points to S0 and must be updated by the authorized operator before any Q1 admission.

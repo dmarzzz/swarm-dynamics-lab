@@ -32,7 +32,7 @@ def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:
     if n not in (1,2,4,8,16) or type(slots) is not int or slots<1 or not 0<integration_reserve_s<deadline_s:
         raise ValueError('invalid_execution_limits')
     start=time.monotonic();deadline=start+deadline_s;work_deadline=deadline-integration_reserve_s
-    histories=[[{'role':'system','content':'Solve the supplied synthetic task. Return only JSON. You have no evaluator access.'},
+    histories=[[{'role':'system','content':'Solve the supplied synthetic task. Return raw JSON only, with no Markdown code fences or commentary. You have no evaluator access.'},
                 {'role':'user','content':json.dumps(public,sort_keys=True)}] for _ in range(n)]
     used=set();completed={};failures=[];fatal_stop=threading.Event()
     def emit(kind,**fields):event({'t':time.monotonic()-start,'kind':kind,**fields})
@@ -50,15 +50,25 @@ def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:
                 if failure.fatal:fatal_stop.set()
                 raise failure from None
             if time.monotonic()>until:raise TimeoutError('late_response')
-            parsed=strict_json(answer)
+            try:
+                parsed=strict_json(answer)
+            except ValueError:
+                emit('response_format',actor=actor,phase=phase,item=item,valid_json=False,fenced=isinstance(answer,str) and answer.strip().startswith('```'))
+                raise
+            emit('response_format',actor=actor,phase=phase,item=item,valid_json=True,fenced=False)
             histories[actor].append({'role':'assistant','content':answer})
             return parsed
         finally:emit('service_end',actor=actor,phase=phase,item=item)
     try:
         plan_prompt='Plan the work. Return {"dependencies": {item_id: [prerequisite_item_ids]}} for every requested item. Choose a valid acyclic plan. Roster includes you: '+str(n)
-        try:deps=validate_plan(turn(0,'plan',plan_prompt,work_deadline),public['items'])
+        plan_parsed=False
+        try:
+            plan=turn(0,'plan',plan_prompt,work_deadline);plan_parsed=True
+            deps=validate_plan(plan,public['items'])
         except (ValueError,TypeError):
-            deps=validate_plan(turn(0,'plan_repair','Your plan was invalid. Return a valid dependencies object for all requested items.',work_deadline),public['items'])
+            reason='invalid_dependency_map' if plan_parsed else 'invalid_json'
+            emit('plan_repair_reason',reason=reason)
+            deps=validate_plan(turn(0,'plan_repair','Your plan failed '+reason+'. Return raw JSON only, no Markdown code fences or commentary: a valid dependencies object for all requested items.',work_deadline),public['items'])
         emit('plan',dependencies=deps)
         pending=set(public['items']);running={};idle=set(range(n));work_counts=[0]*n
         executor=concurrent.futures.ThreadPoolExecutor(max_workers=min(n,slots))

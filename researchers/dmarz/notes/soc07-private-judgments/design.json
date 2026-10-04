@@ -266,6 +266,13 @@
         "s3"
       ],
       "details": "README.md section 11 and execution.json"
+    },
+    {
+      "id": "A5",
+      "date": "2026-10-04",
+      "by": "dmarz/orbital-orchestrator, on dmarz's instruction",
+      "summary": "Launch manifest m2 after the m1 S1-Q competence failure (7 of 12): claude-sonnet-4-6, thinking off, temperature 0.7, unchanged caps, USD 3 / 15 per million, qualification set 1. Configuration only; see README section 11, A5.",
+      "reason": "m1 failed the S1-Q competence gate; the plan permits a stronger model on a fresh qualification set, followed by S0, a new approval and a fresh S1-Q."
     }
   ]
 }

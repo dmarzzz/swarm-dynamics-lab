@@ -1,0 +1,11 @@
+{
+  "attempt": "s1-002",
+  "bundles": 15,
+  "episodes": 30,
+  "valid_episodes": 30,
+  "invalid_episodes": 0,
+  "matched_calls": 720,
+  "recorded_rounds": 720,
+  "failure_causes": [],
+  "scope": "Exact deterministic replay in the pinned runtime; same-author audit, no model calls or independent researcher review."
+}

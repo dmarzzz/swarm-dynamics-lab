@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-10-04T06:26:11.140639+00:00",
+  "core_offline_tests": 69,
+  "continuation_tests": 8,
+  "saved_replay_rows": 576,
+  "exact_replay_match": true,
+  "closure_assertions": true,
+  "new_native_calls_for_analysis": 0,
+  "lab_check": {
+    "errors": 0,
+    "preexisting_unresolved_library_link_warnings": 5
+  },
+  "flightdeck_scoped": {
+    "artifacts": 3,
+    "errors": 0,
+    "warnings": 0
+  },
+  "flightdeck_full_checkout": {
+    "passed": false,
+    "preexisting_missing_artifact": "discussion-memory-v3-film-v1.mp4",
+    "checkout_folder_does_not_match_project_id": true
+  },
+  "visual_qa": {
+    "raw_final_table": true,
+    "raw_replay_frames_inspected": [
+      0,
+      19,
+      23
+    ],
+    "report_final_table": true,
+    "report_budget_exhaustion_frame": true,
+    "report_replay_frames": 32,
+    "duration_seconds": 35.2,
+    "dimensions": [
+      1800,
+      1080
+    ],
+    "video_codec": "h264",
+    "audio_codec": "aac"
+  },
+  "process_compliance": "All plans registered before dispatch; C1 readiness failure preserved separately; machine released after hash readback."
+}

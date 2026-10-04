@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "same_author": true,
+  "new_ocr_calls": 0,
+  "checks": [
+    {
+      "replay": "01",
+      "parser_hash_match": true,
+      "candidate_and_policy_reproduction": true
+    },
+    {
+      "replay": "02",
+      "parser_hash_match": true,
+      "candidate_and_policy_reproduction": true
+    }
+  ],
+  "ancestor_hashes": {
+    "researchers/vishesh/notes/antsy-diversity-v7/src/core.py": "065b7fdabcbb1b65bcd749ea43c39db066c3b5bd0173c51a2decb17736bc0768",
+    "researchers/vishesh/notes/antsy-receipt-v6/src/contract.py": "3960453f7dafb26ba2a779b6159fa94da51221b40e1e6216a6bcfcee283526f1"
+  }
+}

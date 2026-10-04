@@ -1,0 +1,56 @@
+{
+  "study": "market-split-api",
+  "attempt": "s1-002-analysis",
+  "runs": 1,
+  "verified_artifacts": 8,
+  "receipts": [
+    {
+      "run": "market-split-api/s1-002-analysis",
+      "name": "final_frame.png",
+      "sha256": "c7470d3bce6e8112b530f00792de18726d5b2d6d5b928cf92a324e9246d56293",
+      "bytes": 156799
+    },
+    {
+      "run": "market-split-api/s1-002-analysis",
+      "name": "analysis.json",
+      "sha256": "1b0e374abe50ba004f733b53ff0541be299fc90f973dd1d1452a48a8784fef5f",
+      "bytes": 2262
+    },
+    {
+      "run": "market-split-api/s1-002-analysis",
+      "name": "episode-results.csv",
+      "sha256": "acb6996e031566428ebdbe69f04e60c5b0920ad872091664a79e90457bc79f02",
+      "bytes": 4769
+    },
+    {
+      "run": "market-split-api/s1-002-analysis",
+      "name": "usage.json",
+      "sha256": "35943045c19e053bee7137dbd4c73bd52b2a0e56e7dba5e434e74936d84da6f3",
+      "bytes": 901
+    },
+    {
+      "run": "market-split-api/s1-002-analysis",
+      "name": "lifetime-accounting.json",
+      "sha256": "9dd73065922bbd943c23ecf120ab0c99b8b01fac5703a5d654b04bcc398c0a92",
+      "bytes": 1319
+    },
+    {
+      "run": "market-split-api/s1-002-analysis",
+      "name": "post-mortem.md",
+      "sha256": "a46dc525fa485ce6563c2b73c49b3574aef89ce810e2b3f4efd7ac7e9c2bf49e",
+      "bytes": 8487
+    },
+    {
+      "run": "market-split-api/s1-002-analysis",
+      "name": "records.zip",
+      "sha256": "23b5e7583fcac54e748e4e8b3525f6c11f39cb0e0bbc37f87db22baf8b3e8dbd",
+      "bytes": 262653
+    },
+    {
+      "run": "market-split-api/s1-002-analysis",
+      "name": "RESULTS.md",
+      "sha256": "bb2162e8ba37b4e0856136dd6185804dd5f04413698a9539f8e65cf62ac5c16f",
+      "bytes": 7788
+    }
+  ]
+}

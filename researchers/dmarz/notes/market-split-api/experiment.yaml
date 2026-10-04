@@ -1,10 +1,11 @@
 id: market-split-api
 owner: dmarz
 title: Market splitting — Sonnet with reasoning
-description: MKT-03 + MKT-11 exploratory neutral-model discovery pilot. Same owner
-  resources, optional registration, firm versus beneficial-owner regulation. Scripted
-  qualification and model results are labeled separately.
-url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/market-split-api
+description: 'Completed neutral Sonnet pilot: 36/36 valid episodes across six related
+  markets. Splitting and sustained evasion in 6/6 firm-regulated flexible episodes,
+  0/6 owner and 0/6 unregulated. Results, records and post-mortem published; next
+  diagnostic plan unstarted.'
+url: https://github.com/dmarzzz/swarm-lab/blob/18a520695d2ffb93f022854a0f044b32a1b1064b/researchers/dmarz/notes/market-split-api/README.md
 params:
   stage:
     type: str
@@ -45,6 +46,7 @@ params:
       q0-003: Q0 Haiku v3 — profit floor failed
       q0-004: Q0 Sonnet v4 — profit floor failed
       q0-005: Q0 Sonnet v5 — reasoning qualification
+      s1-002-analysis: V5 — completed analysis
   code:
     role: fixed
   engine_sha256:

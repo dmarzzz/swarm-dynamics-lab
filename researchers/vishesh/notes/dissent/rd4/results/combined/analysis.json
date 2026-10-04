@@ -1,0 +1,1238 @@
+{
+  "method": "Conservative sensitivity: each directly failed row and every later row in that same arm/root may be correct or incorrect. Unaffected rows stay fixed. Bounds are not estimates or confidence intervals; they do not replace observed outcomes. Pairwise bounds let affected pairs differ arbitrarily and therefore ignore possible shared constraints.",
+  "by_arm": {
+    "majority": {
+      "assigned": 96,
+      "correct": 60,
+      "direct_failure_rows": 0,
+      "failure_or_downstream_rows": 0,
+      "correct_count_sensitivity_bounds": [
+        60,
+        60
+      ],
+      "retained_closure_rows": 0,
+      "retained_closures_correct": 0,
+      "retained_closure_checks": 0,
+      "noncorrect_reasons": {
+        "no_intervention": 36
+      },
+      "noncorrect_rows": [
+        {
+          "case_id": "6dd6c5892f8d",
+          "scenario": "bridge",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 0,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6dd6c5892f8d",
+          "scenario": "bridge",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 1,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6dd6c5892f8d",
+          "scenario": "bridge",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 2,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "4892801b0297",
+          "scenario": "bridge",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 3,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "9214fcf347c7",
+          "scenario": "bridge",
+          "condition": "wrong_scope",
+          "direction": "deterioration",
+          "epoch": 3,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "072431506db0",
+          "scenario": "bridge",
+          "condition": "absent",
+          "direction": "deterioration",
+          "epoch": 3,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "776cb76c14de",
+          "scenario": "bridge",
+          "condition": "supported",
+          "direction": "deterioration",
+          "epoch": 0,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "776cb76c14de",
+          "scenario": "bridge",
+          "condition": "supported",
+          "direction": "deterioration",
+          "epoch": 1,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "776cb76c14de",
+          "scenario": "bridge",
+          "condition": "supported",
+          "direction": "deterioration",
+          "epoch": 2,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "80ae29e86df9",
+          "scenario": "bridge",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 3,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "83e49d85098a",
+          "scenario": "bridge",
+          "condition": "wrong_scope",
+          "direction": "recovery",
+          "epoch": 3,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "e0a4ad15fe22",
+          "scenario": "bridge",
+          "condition": "absent",
+          "direction": "recovery",
+          "epoch": 3,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "a1424d89c5a1",
+          "scenario": "build",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 0,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "a1424d89c5a1",
+          "scenario": "build",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 1,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "a1424d89c5a1",
+          "scenario": "build",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 2,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "9405845afd15",
+          "scenario": "build",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 3,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "632121021fb3",
+          "scenario": "build",
+          "condition": "wrong_scope",
+          "direction": "deterioration",
+          "epoch": 3,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "3ce4ec9ff16d",
+          "scenario": "build",
+          "condition": "absent",
+          "direction": "deterioration",
+          "epoch": 3,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "5e352b465da3",
+          "scenario": "build",
+          "condition": "supported",
+          "direction": "deterioration",
+          "epoch": 0,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "5e352b465da3",
+          "scenario": "build",
+          "condition": "supported",
+          "direction": "deterioration",
+          "epoch": 1,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "5e352b465da3",
+          "scenario": "build",
+          "condition": "supported",
+          "direction": "deterioration",
+          "epoch": 2,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "fcd2c3d13e42",
+          "scenario": "build",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 3,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "56bed93618ad",
+          "scenario": "build",
+          "condition": "wrong_scope",
+          "direction": "recovery",
+          "epoch": 3,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "a83e2eb35cd1",
+          "scenario": "build",
+          "condition": "absent",
+          "direction": "recovery",
+          "epoch": 3,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "294ed0f1b3dc",
+          "scenario": "alarm",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 0,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "294ed0f1b3dc",
+          "scenario": "alarm",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 1,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "294ed0f1b3dc",
+          "scenario": "alarm",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 2,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 3,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "c27911254212",
+          "scenario": "alarm",
+          "condition": "wrong_scope",
+          "direction": "deterioration",
+          "epoch": 3,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "74a19dd28f70",
+          "scenario": "alarm",
+          "condition": "absent",
+          "direction": "deterioration",
+          "epoch": 3,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6d90424ab632",
+          "scenario": "alarm",
+          "condition": "supported",
+          "direction": "deterioration",
+          "epoch": 0,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6d90424ab632",
+          "scenario": "alarm",
+          "condition": "supported",
+          "direction": "deterioration",
+          "epoch": 1,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6d90424ab632",
+          "scenario": "alarm",
+          "condition": "supported",
+          "direction": "deterioration",
+          "epoch": 2,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6dd7a1db979b",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 3,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "73af98a4cad6",
+          "scenario": "alarm",
+          "condition": "wrong_scope",
+          "direction": "recovery",
+          "epoch": 3,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "fabae569b1a1",
+          "scenario": "alarm",
+          "condition": "absent",
+          "direction": "recovery",
+          "epoch": 3,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "no_intervention",
+          "failure_or_downstream": false
+        }
+      ]
+    },
+    "original-gate": {
+      "assigned": 96,
+      "correct": 87,
+      "direct_failure_rows": 4,
+      "failure_or_downstream_rows": 4,
+      "correct_count_sensitivity_bounds": [
+        87,
+        91
+      ],
+      "retained_closure_rows": 20,
+      "retained_closures_correct": 20,
+      "retained_closure_checks": 0,
+      "noncorrect_reasons": {
+        "challenge_not_admitted": 1,
+        "TransportFailure": 4,
+        "checked": 2,
+        "admission_deferred": 1,
+        "check_budget_exhausted": 1
+      },
+      "noncorrect_rows": [
+        {
+          "case_id": "294ed0f1b3dc",
+          "scenario": "alarm",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 3,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "challenge_not_admitted",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 0,
+          "final": "DEFER",
+          "status": "failed",
+          "reason": "TransportFailure",
+          "failure_or_downstream": true
+        },
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 1,
+          "final": "DEFER",
+          "status": "failed",
+          "reason": "TransportFailure",
+          "failure_or_downstream": true
+        },
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "failed",
+          "reason": "TransportFailure",
+          "failure_or_downstream": true
+        },
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 3,
+          "final": "DEFER",
+          "status": "failed",
+          "reason": "TransportFailure",
+          "failure_or_downstream": true
+        },
+        {
+          "case_id": "6dd7a1db979b",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 0,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "checked",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6dd7a1db979b",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 1,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "checked",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6dd7a1db979b",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "admission_deferred",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6dd7a1db979b",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 3,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "check_budget_exhausted",
+          "failure_or_downstream": false
+        }
+      ]
+    },
+    "symmetric-gate": {
+      "assigned": 96,
+      "correct": 87,
+      "direct_failure_rows": 4,
+      "failure_or_downstream_rows": 4,
+      "correct_count_sensitivity_bounds": [
+        87,
+        91
+      ],
+      "retained_closure_rows": 19,
+      "retained_closures_correct": 19,
+      "retained_closure_checks": 0,
+      "noncorrect_reasons": {
+        "admission_deferred": 1,
+        "challenge_not_admitted": 1,
+        "TransportFailure": 4,
+        "checked": 2,
+        "check_budget_exhausted": 1
+      },
+      "noncorrect_rows": [
+        {
+          "case_id": "a1424d89c5a1",
+          "scenario": "build",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 0,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "admission_deferred",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "294ed0f1b3dc",
+          "scenario": "alarm",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 3,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "challenge_not_admitted",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 0,
+          "final": "DEFER",
+          "status": "failed",
+          "reason": "TransportFailure",
+          "failure_or_downstream": true
+        },
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 1,
+          "final": "DEFER",
+          "status": "failed",
+          "reason": "TransportFailure",
+          "failure_or_downstream": true
+        },
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "failed",
+          "reason": "TransportFailure",
+          "failure_or_downstream": true
+        },
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 3,
+          "final": "DEFER",
+          "status": "failed",
+          "reason": "TransportFailure",
+          "failure_or_downstream": true
+        },
+        {
+          "case_id": "6dd7a1db979b",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 0,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "checked",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6dd7a1db979b",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 1,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "checked",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6dd7a1db979b",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 3,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "check_budget_exhausted",
+          "failure_or_downstream": false
+        }
+      ]
+    },
+    "always-check": {
+      "assigned": 96,
+      "correct": 88,
+      "direct_failure_rows": 2,
+      "failure_or_downstream_rows": 4,
+      "correct_count_sensitivity_bounds": [
+        88,
+        92
+      ],
+      "retained_closure_rows": 20,
+      "retained_closures_correct": 20,
+      "retained_closure_checks": 0,
+      "noncorrect_reasons": {
+        "TransportFailure": 2,
+        "check_budget_exhausted": 4,
+        "checked": 2
+      },
+      "noncorrect_rows": [
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 0,
+          "final": "DEFER",
+          "status": "failed",
+          "reason": "TransportFailure",
+          "failure_or_downstream": true
+        },
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 1,
+          "final": "DEFER",
+          "status": "failed",
+          "reason": "TransportFailure",
+          "failure_or_downstream": true
+        },
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "check_budget_exhausted",
+          "failure_or_downstream": true
+        },
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 3,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "check_budget_exhausted",
+          "failure_or_downstream": true
+        },
+        {
+          "case_id": "6dd7a1db979b",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 0,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "checked",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6dd7a1db979b",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 1,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "checked",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6dd7a1db979b",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "check_budget_exhausted",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6dd7a1db979b",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 3,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "check_budget_exhausted",
+          "failure_or_downstream": false
+        }
+      ]
+    },
+    "pooled": {
+      "assigned": 96,
+      "correct": 59,
+      "direct_failure_rows": 1,
+      "failure_or_downstream_rows": 1,
+      "correct_count_sensitivity_bounds": [
+        59,
+        60
+      ],
+      "retained_closure_rows": 0,
+      "retained_closures_correct": 0,
+      "retained_closure_checks": 0,
+      "noncorrect_reasons": {
+        "pooled_evidence": 36,
+        "TransportFailure": 1
+      },
+      "noncorrect_rows": [
+        {
+          "case_id": "4892801b0297",
+          "scenario": "bridge",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 0,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "4892801b0297",
+          "scenario": "bridge",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 1,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "4892801b0297",
+          "scenario": "bridge",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 2,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "9214fcf347c7",
+          "scenario": "bridge",
+          "condition": "wrong_scope",
+          "direction": "deterioration",
+          "epoch": 0,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "9214fcf347c7",
+          "scenario": "bridge",
+          "condition": "wrong_scope",
+          "direction": "deterioration",
+          "epoch": 1,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "9214fcf347c7",
+          "scenario": "bridge",
+          "condition": "wrong_scope",
+          "direction": "deterioration",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "776cb76c14de",
+          "scenario": "bridge",
+          "condition": "supported",
+          "direction": "deterioration",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "80ae29e86df9",
+          "scenario": "bridge",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 0,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "80ae29e86df9",
+          "scenario": "bridge",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 1,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "80ae29e86df9",
+          "scenario": "bridge",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "83e49d85098a",
+          "scenario": "bridge",
+          "condition": "wrong_scope",
+          "direction": "recovery",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "a1424d89c5a1",
+          "scenario": "build",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 0,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "a1424d89c5a1",
+          "scenario": "build",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "9405845afd15",
+          "scenario": "build",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 0,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "9405845afd15",
+          "scenario": "build",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 1,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "9405845afd15",
+          "scenario": "build",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 2,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "632121021fb3",
+          "scenario": "build",
+          "condition": "wrong_scope",
+          "direction": "deterioration",
+          "epoch": 0,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "632121021fb3",
+          "scenario": "build",
+          "condition": "wrong_scope",
+          "direction": "deterioration",
+          "epoch": 1,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "632121021fb3",
+          "scenario": "build",
+          "condition": "wrong_scope",
+          "direction": "deterioration",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "5e352b465da3",
+          "scenario": "build",
+          "condition": "supported",
+          "direction": "deterioration",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "fcd2c3d13e42",
+          "scenario": "build",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 0,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "fcd2c3d13e42",
+          "scenario": "build",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 1,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "fcd2c3d13e42",
+          "scenario": "build",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "56bed93618ad",
+          "scenario": "build",
+          "condition": "wrong_scope",
+          "direction": "recovery",
+          "epoch": 0,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "56bed93618ad",
+          "scenario": "build",
+          "condition": "wrong_scope",
+          "direction": "recovery",
+          "epoch": 1,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "56bed93618ad",
+          "scenario": "build",
+          "condition": "wrong_scope",
+          "direction": "recovery",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "294ed0f1b3dc",
+          "scenario": "alarm",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "294ed0f1b3dc",
+          "scenario": "alarm",
+          "condition": "supported",
+          "direction": "recovery",
+          "epoch": 3,
+          "final": "DEFER",
+          "status": "failed",
+          "reason": "TransportFailure",
+          "failure_or_downstream": true
+        },
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 0,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 1,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "13e56b8640a7",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "deterioration",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "c27911254212",
+          "scenario": "alarm",
+          "condition": "wrong_scope",
+          "direction": "deterioration",
+          "epoch": 0,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "c27911254212",
+          "scenario": "alarm",
+          "condition": "wrong_scope",
+          "direction": "deterioration",
+          "epoch": 1,
+          "final": "HOLD",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6d90424ab632",
+          "scenario": "alarm",
+          "condition": "supported",
+          "direction": "deterioration",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6dd7a1db979b",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 0,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6dd7a1db979b",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 1,
+          "final": "PROCEED",
+          "status": "completed",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        },
+        {
+          "case_id": "6dd7a1db979b",
+          "scenario": "alarm",
+          "condition": "withdrawn",
+          "direction": "recovery",
+          "epoch": 2,
+          "final": "DEFER",
+          "status": "unresolved",
+          "reason": "pooled_evidence",
+          "failure_or_downstream": false
+        }
+      ]
+    },
+    "exact-reference": {
+      "assigned": 96,
+      "correct": 96,
+      "direct_failure_rows": 0,
+      "failure_or_downstream_rows": 0,
+      "correct_count_sensitivity_bounds": [
+        96,
+        96
+      ],
+      "retained_closure_rows": 24,
+      "retained_closures_correct": 24,
+      "retained_closure_checks": 0,
+      "noncorrect_reasons": {},
+      "noncorrect_rows": []
+    }
+  },
+  "paired": {
+    "symmetric-gate minus original-gate": {
+      "uncertain_pairs": 4,
+      "difference_on_unaffected_pairs": 0,
+      "correct_difference_bounds": [
+        -4,
+        4
+      ]
+    },
+    "symmetric-gate minus always-check": {
+      "uncertain_pairs": 4,
+      "difference_on_unaffected_pairs": -1,
+      "correct_difference_bounds": [
+        -5,
+        3
+      ]
+    },
+    "original-gate minus always-check": {
+      "uncertain_pairs": 4,
+      "difference_on_unaffected_pairs": -1,
+      "correct_difference_bounds": [
+        -5,
+        3
+      ]
+    }
+  },
+  "closure_assertions_passed": true,
+  "native_calls": 0
+}

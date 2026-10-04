@@ -1,0 +1,27 @@
+{
+  "checked_at": 1791096957.6106534,
+  "hub_status": "failed",
+  "artifact_readback": {
+    "summary.json": true,
+    "manifest.json": true,
+    "preflight.json": true,
+    "cases.html": true,
+    "receipts.jsonl": true
+  },
+  "receiver_alive": false,
+  "credential_socket_exists": false,
+  "user_workers": [],
+  "budget": {
+    "known_actual_usd": 0.00103152,
+    "reserved_usd": 0.044351999999999996,
+    "calls": 33,
+    "statuses": {
+      "complete": 32,
+      "failed_or_uncertain": 1
+    }
+  },
+  "worker": {
+    "exit_code": 0,
+    "credential_persisted": false
+  }
+}

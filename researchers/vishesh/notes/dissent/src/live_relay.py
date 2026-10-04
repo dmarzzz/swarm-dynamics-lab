@@ -32,7 +32,10 @@ def main(a):
     if len(routes)!=1:raise ValueError('route_count')
     route=routes[0]
     if route['provider_name']!='TypeSafe' or route['tag']!='typesafe' or route['status']!=0 or SNAPSHOT not in route['name'] or float(route['pricing']['prompt'])>RATE or float(route['pricing']['completion'])!=0 or route['context_length']>32000:raise ValueError('route_price_mismatch')
-    allowed=frozen_requests(a.stage)
+    if a.stage in ('Q4','S4'):
+        from rd4_design import frozen_requests as rd4_requests
+        allowed=rd4_requests(a.stage)
+    else:allowed=frozen_requests(a.stage)
     db=sqlite3.connect(a.ledger);db.execute('CREATE TABLE IF NOT EXISTS calls(key TEXT PRIMARY KEY,status TEXT,reserved_nano INTEGER,actual_nano INTEGER)');db.commit()
     expires=time.monotonic()+2700;failures=0
     class Handler(BaseHTTPRequestHandler):
@@ -47,7 +50,7 @@ def main(a):
                 req=json.loads(self.rfile.read(length));h=digest(req)
                 if h not in allowed or req!=allowed[h]:raise ValueError('request_not_frozen')
                 call_key=a.stage+':'+h
-                reserve(db,call_key,round(auth['api_cap_usd']*1e9));reserved=True
+                reserve(db,call_key,round(auth['api_cap_usd']*1e9),481 if a.stage in ('Q4','S4') else 500);reserved=True
                 data=json.dumps(req,separators=(',',':')).encode()
                 wire=urllib.request.Request('https://openrouter.ai/api/alpha/decisions',data,{'Authorization':'Bearer '+key,'Content-Type':'application/json'})
                 with opener.open(wire,timeout=35) as r:response=json.loads(r.read(200000))
@@ -74,6 +77,6 @@ def main(a):
     finally:server.server_close();db.close()
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--credential-file',type=Path,required=True);p.add_argument('--ledger',type=Path,required=True);p.add_argument('--authorization',type=Path,required=True);p.add_argument('--stage',choices=['Q0','Q1','S1','D1'],required=True)
+    p=argparse.ArgumentParser();p.add_argument('--credential-file',type=Path,required=True);p.add_argument('--ledger',type=Path,required=True);p.add_argument('--authorization',type=Path,required=True);p.add_argument('--stage',choices=['Q0','Q1','S1','D1','Q4','S4'],required=True)
     try:main(p.parse_args())
     except Exception as e:print(json.dumps({'relay_start_failed':type(e).__name__}));raise SystemExit(1)

@@ -1,0 +1,34 @@
+{
+  "checked_utc": "2026-10-04T05:46:02.829180+00:00",
+  "offline_tests": 69,
+  "command": "python3 -m unittest discover -s researchers/vishesh/notes/dissent/tests -q",
+  "scope": "development-only regression and software fixtures; no native calls or historical holdout",
+  "file_sha256": {
+    "researchers/vishesh/notes/dissent/src/live_render.py": "18d13ce27d60675d6d2c99735ea5f0efbcfc6467c75a17cabe9cb6473405a9a7",
+    "researchers/vishesh/notes/dissent/src/jev.py": "d288f630c2241ef0062886fc66b87c31d834ca9f52b744e0cd3bdd9aad89e9dc",
+    "researchers/vishesh/notes/dissent/src/live_worker.py": "be4fae50970c35bfa0cf71467ae49bf86f66eade84e73ca3fb4dbf70832da5c3",
+    "researchers/vishesh/notes/dissent/src/live_relay.py": "843543b767f28c1a4a7e9d992e4bbb9c1fb8f3931f6f83982cbb6ae479422568",
+    "researchers/vishesh/notes/dissent/src/live_design.py": "1d764449badab5fa5ebd9f03f443bf8c08c19b565f1a3389c325737da773ecf0",
+    "researchers/vishesh/notes/dissent/src/protocol.py": "e0f0d7f213b7a023580b5a02d4ef59ff120797e0273d4dcd2f74ce1bb96ae269",
+    "researchers/vishesh/notes/dissent/src/cases.py": "92d3fda2a87d77e2fb3951513a92f27444cc836a6438cb2cc2e38976ad21541a",
+    "researchers/vishesh/notes/dissent/src/rd4_worker.py": "c54e602095de60ad5ad9106b143136e7c9ceb6586d09727141590bf19fbda6e0",
+    "researchers/vishesh/notes/dissent/src/launch.py": "0247abcd00b36ca10f8d58aca562250d5e2639c1062c34b53b3b8a7d746cf43c",
+    "researchers/vishesh/notes/dissent/src/cli.py": "53c17fb342511c4e0c1858bf6498751ab04fbb5ef01bab3c2ba74ea0eb77190b",
+    "researchers/vishesh/notes/dissent/src/validation_worker.py": "e27d504fad06876bc84662050629fdebf55c5bcfefb69ca5a9cc3b63cd6ff4f3",
+    "researchers/vishesh/notes/dissent/src/rd4_render.py": "7ff1792369e2f7608da7b239e1c50081984e817dcbbb6f1c20991b772e35bf20",
+    "researchers/vishesh/notes/dissent/src/reconcile.py": "ba91e8934436e9b1c26ff71302fe8fbda2081b4fde0f7ef4eb9570a9638d4d3d",
+    "researchers/vishesh/notes/dissent/src/policies.py": "74514d5c82dc43dfe1ef835f91bc81ff4981646aad9e65e277227a65d007db1b",
+    "researchers/vishesh/notes/dissent/src/rd4_design.py": "fd36f5797dd029a269d51512f309c4e2612deb0968ce79fbc14b753d6bc697a0",
+    "researchers/vishesh/notes/dissent/src/study.py": "4736e6b0c41217fc5df9d3ef919807de9ac08b4c1dade15e00aebef663d7ba00",
+    "researchers/vishesh/notes/dissent/tests/test_protocol.py": "662a1efadeeb851055677b796b3d32afec4ed80fcf43cdd0826d8ce2bd20c2b8",
+    "researchers/vishesh/notes/dissent/tests/test_study.py": "f6f68d08f4aa1d8042b702567fccce8ac5f30ab167cc89503e5ebf69d3240f5b",
+    "researchers/vishesh/notes/dissent/tests/test_live.py": "7b1b64dd24dd90bbf751c71f217f15c4b7ce6365875c58c452b10c990950497a",
+    "researchers/vishesh/notes/dissent/tests/test_rd4.py": "4d09c5af78e1a5676ea74f57b6bfbc9fe65706abebb458e926e34e5281abb491"
+  },
+  "feedback": [
+    "RD-R1",
+    "RD-R2",
+    "RD-R3"
+  ],
+  "native_qualification_run": false
+}

@@ -1,0 +1,16 @@
+{
+  "attempt": "r0-001",
+  "bundles": 2,
+  "episodes": 4,
+  "valid_episodes": 3,
+  "invalid_episodes": 1,
+  "matched_calls": 94,
+  "recorded_rounds": 93,
+  "failure_causes": [
+    {
+      "call_id": "r0-001:78:31:firm:neutral_dynamic:r22",
+      "reason": "capacity_exceeded"
+    }
+  ],
+  "scope": "Exact deterministic replay in the pinned runtime; same-author audit, no model calls or independent researcher review."
+}

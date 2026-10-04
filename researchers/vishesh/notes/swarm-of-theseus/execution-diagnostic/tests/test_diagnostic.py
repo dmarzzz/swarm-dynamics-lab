@@ -12,7 +12,7 @@ class Checks(unittest.TestCase):
  def setUp(self):self.design=assignments((10,11,12))
  def receipt(self):
   rev='a'*40;plan=(ROOT/'PLAN.md').read_bytes()
-  return {'status':'diagnostic-only','experiment':EXPERIMENT,'source_commit':rev,'instrument_sha256':source_hash(),'assignments_sha256':digest(self.design),'model':MODEL,'max_calls':144,'cap_usd':5,'max_seconds':7200,'workers':1,'retries':0,'input_rate':1,'output_rate':5,'exclusive_claim_verified':True,'public_page_verified':True,'dependencies_verified':True,'research_review_status':'diagnostic-approved','authority_allocation_id':'UNIT-ONLY','owner_authorization_ref':'UNIT-ONLY','claim_id':'UNIT-ONLY','host':'UNIT-ONLY','allocation_verification_ref':'UNIT-ONLY','reviewer':'reviewer','operator':'operator','verified_epoch':1000,'public_page_verified_epoch':1000,'pricing_verified_epoch':1000,'claim_until_epoch':9000,'plan_url':PREFIX+rev+'/'+REL+'PLAN.md','plan_sha256':hashlib.sha256(plan).hexdigest(),'assessment_url':PREFIX+rev+'/'+REL+'PRE-RUN.md','assessment_sha256':'b'*64}
+  return {'status':'diagnostic-only','experiment':EXPERIMENT,'source_commit':rev,'instrument_sha256':source_hash(),'assignments_sha256':digest(self.design),'model':MODEL,'max_calls':144,'cap_usd':5,'max_seconds':7200,'workers':1,'retries':0,'input_rate':1,'output_rate':5,'exclusive_claim_verified':True,'public_page_verified':True,'dependencies_verified':True,'research_review_status':'not-required-owner-direction','authority_allocation_id':'UNIT-ONLY','owner_authorization_ref':'UNIT-ONLY','claim_id':'UNIT-ONLY','host':'UNIT-ONLY','allocation_verification_ref':'UNIT-ONLY','review_policy_ref':'UNIT-OWNER-WAIVER','operator':'operator','verified_epoch':1000,'public_page_verified_epoch':1000,'pricing_verified_epoch':1000,'claim_until_epoch':9000,'plan_url':PREFIX+rev+'/'+REL+'PLAN.md','plan_sha256':hashlib.sha256(plan).hexdigest(),'assessment_url':PREFIX+rev+'/'+REL+'PRE-RUN.md','assessment_sha256':'b'*64}
  def fixture(self,a):
   value={'decisions':[{'id':c['id'],'command':commands(a['context'])[truth(c,a['context'],a['rule'])]} for c in a['cases']]}
   if ARMS[a['arm']][2]:value['notebook']='SCRIPTED SOFTWARE FIXTURE, NOT MODEL EVIDENCE'
@@ -68,9 +68,9 @@ class Checks(unittest.TestCase):
  def test_missing_records_keep_full_denominator(self):
   with tempfile.TemporaryDirectory() as td:
    p=Path(td);(p/'calls').mkdir();(p/'manifest.json').write_text(json.dumps({'evidence_type':'software_fixture','assignments':self.design}));s=summarize(p);self.assertEqual(s['assigned_decisions'],480);self.assertEqual(s['completed_call_records'],0);self.assertTrue(all(v['correct']==0 for v in s['cells'].values()));self.assertFalse(any(s['candidate_for_separate_confirmation'].values()))
- def test_admission_stale_self_review_source_and_cap(self):
+ def test_admission_stale_waiver_source_and_cap(self):
   r=self.receipt();validate(r,'a'*40,self.design,now=1000)
-  for key,value in [('verified_epoch',0),('source_commit','b'*40),('cap_usd',15),('reviewer','operator'),('exclusive_claim_verified',False),('assignments_sha256','c'*64)]:
+  for key,value in [('verified_epoch',0),('source_commit','b'*40),('cap_usd',15),('review_policy_ref',''),('exclusive_claim_verified',False),('assignments_sha256','c'*64)]:
    bad={**r,key:value}
    with self.assertRaises(ValueError):validate(bad,'a'*40,self.design,now=1000)
  def test_public_hash_and_blocked_review_fail(self):

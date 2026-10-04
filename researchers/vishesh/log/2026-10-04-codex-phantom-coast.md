@@ -13,3 +13,15 @@ Owner approved USD5. Fresh exclusive claim on existing Mars sim-dmarz-5 avoided 
 ## Iteration 2: prospective acquisition design and full native replay
 
 Pulled fresh main and reviewed PI feedback, saved native records, post-mortem and issue/PR searches. Published PC-2 plan/setup before source; built development-only sensing contract with20 passing fault/semantic checks, correcting premature censoring found during validation. Complete PC-1 replay reconciles432 actor maps/72 paired frames and passed browser transition/reset/playback checks. No new native calls, spend, fleet claim or empirical adaptive result. Remaining launch work is exact-source review, action adapter/qualification and full G3 admission carrying the original dollar cap. Selective commits/pushes replace broad sync after its earlier auto-review rejection; no unrelated files are staged.
+
+## PC-2 native readiness
+
+Pulled current research and operations workflow. Published RUNNER-PRE before native implementation; built the gated choice/map runner, fixed schedules, durable records, carried-forward budget, qualification/analysis and actual-event replay. 42 offline checks pass, including start acknowledgment and launch denials. Initial/audit/final fixture frames visually checked. No reserved world or paid route was opened, no new spend or host claim. One researcher review/research disposition remains external; current operational admission follows it. RUNBOOK.md names exact evidence and commands.
+
+## Owner-directed review process change
+
+User explicitly requested skipping researcher review. Updated standing workspace/shared process for Vishesh-owned experiments and removed reviewer identity/receipt/pass requirements from PC-2 admission. Preserved historical assessments, added prospective amendment and refreshed source hashes. 44 offline checks pass, including two proving the removed gate stays removed; budget/public-plan/fleet/source/qualification checks remain. No paid run or new spend.
+
+## Standing default experiment budget
+
+Owner authorized USD 2 total by default when directing an experiment launch. Recorded in local/shared instructions and setup/operations guidance, scoped to Vishesh-owned experiments. Explicit budgets take precedence; all stages/retries and incremental infrastructure share the cumulative cap. Phantom Coast remains USD 5, with its ledger unchanged. Documentation-only change; no launch or spending occurred.

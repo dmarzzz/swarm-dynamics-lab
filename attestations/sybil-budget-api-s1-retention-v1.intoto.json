@@ -1,0 +1,98 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "when ur done with a run please push the results to github and a postmoterm and include analysis with the results and let me know when u have also pushed another wxperiment plan but dont start"
+   },
+   "internalParameters": {
+    "commit": "e2a0135c148f811ae95d74b56a844f7a5978e611-dirty",
+    "session": "codex:01a10476-dbdf-7a10-829c-804fe9b3a8f5"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "637fa48c20b937a9ef0ce798c4fefbcf046fb24e8f89823cb88063e9a92508af"
+     },
+     "uri": "researchers/dmarz/notes/sybil-budget-api/src/render.py"
+    },
+    {
+     "digest": {
+      "sha256": "77664ba3d9d454e6b3c3b3afaa34ba977ecca9926567a8134a1f020ad951f875"
+     },
+     "uri": "researchers/dmarz/notes/sybil-budget-api/src/analyze.py"
+    },
+    {
+     "digest": {
+      "sha256": "aeb4100b710c40495d64e6f9c7ff044bbdeb75151caca4209467ecabd31f5ce4"
+     },
+     "uri": "researchers/dmarz/notes/sybil-budget-api/src/study.py"
+    },
+    {
+     "digest": {
+      "sha256": "f9222f8d5f9e56a48ba4fb96664e76b5e3012b283c9c13a27ce95a863b296398"
+     },
+     "uri": "researchers/dmarz/notes/sybil-budget-api/src/sim.py"
+    },
+    {
+     "digest": {
+      "sha256": "7ece847fa6dbb18ad831c7e8e4cbd18efccc1bef7ce3fda68382d89523268c9f"
+     },
+     "uri": "researchers/dmarz/notes/sybil-budget-api/design.yaml"
+    },
+    {
+     "digest": {
+      "sha256": "a9a8538e6cf3103128e66e399310c8242e714de4d1e3f1b59e82ffd0460c54ce"
+     },
+     "uri": "researchers/dmarz/notes/sybil-budget-api/requirements.txt"
+    },
+    {
+     "digest": {
+      "sha256": "d1ba1907bd5eb5ca51e9198ae0db760479120ba29864a4639b08c02ecb761822"
+     },
+     "uri": "data/sybil-followups/budget-s1/episodes.jsonl.gz"
+    },
+    {
+     "digest": {
+      "sha256": "6b93848f7e1cd8bbe557d2b1aaa8e8f5a73dd1e1a9e589f4240ed0b29e0ab5d3"
+     },
+     "uri": "data/sybil-followups/budget-s1/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9"
+     },
+     "uri": "/System/Library/Fonts/Supplemental/Arial.ttf"
+    },
+    {
+     "digest": {
+      "gitCommit": "e2a0135c148f811ae95d74b56a844f7a5978e611"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T05:41:06Z",
+    "invocationId": "codex:01a10476-dbdf-7a10-829c-804fe9b3a8f5",
+    "startedOn": "2026-10-04T05:41:06Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "09b2de95645ebeb13de416a3e006a09b1ee149229689519e795e26e748375ee3"
+   },
+   "name": "artifacts/sybil-budget-api-s1-retention/sybil-budget-api-s1-retention-v1.png"
+  }
+ ]
+}

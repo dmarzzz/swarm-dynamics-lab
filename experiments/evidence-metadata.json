@@ -19,12 +19,15 @@
         "claim": "A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested.",
         "rationale": "The small predeclared competence screen passed; 14/16 repeated pairs agreed. Retrospective exact references score report counting 24/32 and root counting 32/32 on the same finite inputs. These are not native comparator arms or evidence of swarm efficacy."
       },
-      "sample_size_summary": "S0: 8 bit triples \u00d7 2 reliability settings \u00d7 2 identical-request samples = 16 configurations, 32/32 valid calls, 29 MAP-correct; not 32 independent worlds. S1 not run.",
+      "sample_size_summary": "S0: 16 fixed configurations, 32/32 valid calls, 29 MAP-correct; not independent worlds. Q1: 16 constructed context fixtures, 1 contract-failed response, 15 unstarted, 0 valid. M1/C1 not run.",
       "sources": [
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/RESULTS.md",
-        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/analysis/iteration-3/comparisons.json"
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/analysis/iteration-3/comparisons.json",
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-01-post.md"
       ],
-      "status_at_assessment": "qualification_passed_no_swarm_efficacy"
+      "status_at_assessment": "s0_passed_q1_interface_failed_no_swarm_efficacy",
+      "assessor": "vishesh/codex-quorum-mirrors",
+      "assessed_at": "2026-10-04"
     },
     {
       "id": "phantom-coast",
@@ -911,6 +914,44 @@
       "status_at_assessment": "completed_exploratory_model_pilot"
     },
     {
+      "id": "sybil-scale-sonnet",
+      "title": "Sybil resistance as swarms grow: Sonnet 4.6 replication",
+      "documents": [
+        "researchers/dmarz/notes/sybil-scale-sonnet/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-scale-sonnet"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-scale-sonnet/experiment.yaml"
+      ],
+      "assessor": "dmarz/scale-sonnet",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 2,
+        "claim": "In the repeated-fact synthetic environment, the Haiku population-scaling result replicates with claude-sonnet-4-6 on identical assignments: proportional strong checks raise N972 specialist accuracy by +52.8 pp (Haiku +51.4 pp); Sonnet is more accurate than Haiku in 73 of 100 cells, mainly where fabrications are admitted.",
+        "rationale": "Same-owner audit of 24 paired world roots with all 2,400 outcomes valid and an exact local recomputation; assignments verified identical to the Haiku cohort. One synthetic task family and graph, scripted identities and checks, admission independent of the model, descriptive unadjusted intervals across 100 cells, and an owner waiver in place of independent review limit generalization."
+      },
+      "sample_size_summary": "Observed: 24 paired world roots from one synthetic task family; 2,400/2,400 S1 outcomes analyzed, zero missing; 100 conditions at 36-972 simulated identities feeding one synthesizer model. Q0 separately 64/64. Cross-model comparison pairs the same 24 roots with the separate Haiku cohort (sybil-scale-api/56defc84); cohorts not pooled.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-scale-sonnet/RESULTS.md",
+        "researchers/dmarz/notes/sybil-scale-sonnet/verification-summary.json",
+        "researchers/dmarz/notes/sybil-scale-sonnet/results-summary.json",
+        "researchers/dmarz/notes/sybil-scale-sonnet/model-comparison-cells.csv",
+        "researchers/dmarz/notes/sybil-scale-sonnet/reviews/s1-001-post.md",
+        "researchers/dmarz/notes/sybil-scale-sonnet/design.yaml"
+      ],
+      "status_at_assessment": "complete_valid_replication_result_claim_released",
+      "source_sha256": {
+        "researchers/dmarz/notes/sybil-scale-sonnet/RESULTS.md": "319f503cea4feaf401e8ee410be8a54c62a66ed173b9e7d6e1c5c1a3a6c067e7",
+        "researchers/dmarz/notes/sybil-scale-sonnet/verification-summary.json": "31f9824e0c6a82f07385049d6448086c6964aed459598b0dec18fd03b0edddc2",
+        "researchers/dmarz/notes/sybil-scale-sonnet/results-summary.json": "ecebc1b42bbf46884c8506690b78f3f3f30143d23faa0619e7b219b6a75b9eb7",
+        "researchers/dmarz/notes/sybil-scale-sonnet/model-comparison-cells.csv": "cf7224929877138cbc673480beb2013c8a98a64b9600278efd53b98e78c0be60",
+        "researchers/dmarz/notes/sybil-scale-sonnet/reviews/s1-001-post.md": "e284741a4975be8c67e576d8c4e0b667629439fba262bb4ef7f67e77eaed4b1c",
+        "researchers/dmarz/notes/sybil-scale-sonnet/design.yaml": "4429931b65ec4333069bac2d1ea3e1fbca90808158df5b82a863c6f391407278"
+      }
+    },
+    {
       "id": "sybil-budget-api",
       "title": "Verification budget and verifier reliability",
       "documents": [
@@ -923,25 +964,33 @@
         "researchers/dmarz/notes/sybil-budget-api/experiment.yaml"
       ],
       "evidence_confidence": {
-        "score": 1,
-        "claim": "The bounded packet qualification passed; the verification-budget main study has launched but no final comparison is reported at this cutoff.",
-        "rationale": "Exact clean qualification passed and the tracked deployment record now confirms S1 launch. Completed main counts and treatment estimates are not reconciled in the repository; qualification and dispatch do not establish the budget frontier. Identities, facts and cells remain dependent within worlds."
+        "score": 2,
+        "claim": "In the repeated-fact synthetic environment, the strong-check accuracy benefit replicated; random checking reached the N972 joint mean target at 64 tested checks and coverage at 108. No weaker tested checking strength met that joint target.",
+        "rationale": "Same-owner audit of twenty-four paired roots, competent clean controls and fully accounted outcomes supports this narrow grid result. One task family, one model, scripted identities/checks, repeated facts and unadjusted intervals limit generalization; independent review was waived and the historical immutable public-plan receipt gap is retained."
       },
-      "sample_size_summary": "Q0: 4 worlds, 16/16 valid packets. S1 launched: 24 paired worlds \u00d7 120 cells = 2,880 assigned answers, N=324/972; completed count not reconciled in repo.",
+      "sample_size_summary": "Observed: 24 paired roots from one synthetic task family; 2,880/2,880 S1 outcomes analyzed, zero missing; 120 conditions at 324/972 simulated identities, one synthesizer. Q0 separately: 16/16 clean calls on four roots.",
       "sources": [
-        "researchers/dmarz/notes/sybil-budget-api/README.md",
-        "researchers/dmarz/notes/sybil-budget-api/q0-verification-summary.json",
-        "researchers/dmarz/notes/sybil-budget-api/DEPLOYMENT.md",
-        "researchers/dmarz/notes/sybil-budget-api/experiment.yaml"
+        "researchers/dmarz/notes/sybil-budget-api/RESULTS.md",
+        "researchers/dmarz/notes/sybil-budget-api/verification-summary.json",
+        "researchers/dmarz/notes/sybil-budget-api/records/s1-001-summary.json",
+        "researchers/dmarz/notes/sybil-budget-api/records/s1-001-episodes.jsonl.gz",
+        "researchers/dmarz/notes/sybil-budget-api/reviews/s1-001-post.md",
+        "researchers/dmarz/notes/sybil-budget-api/records/closeout.json",
+        "researchers/dmarz/notes/sybil-budget-api/design.yaml"
       ],
-      "status_at_assessment": "qualification_passed_main_collecting_no_reconciled_counts",
-      "source_commit": "b51e3f1f449c2743e7ddf7eda9977503bc450f45",
+      "status_at_assessment": "complete_valid_grid_result_worker_stopped_claim_released",
+      "source_commit": "1226b626090aee1de5ab113695b3435fd023097a",
       "source_sha256": {
-        "researchers/dmarz/notes/sybil-budget-api/README.md": "297a5bb49ba2265af870357b25f9770bac3d1d57d6deaf3778d602e815418747",
-        "researchers/dmarz/notes/sybil-budget-api/q0-verification-summary.json": "9a6f252c7295ef8781b64fc14e3fb9302901563c2ea0edd11cd63cc2d1f3c5a8",
-        "researchers/dmarz/notes/sybil-budget-api/DEPLOYMENT.md": "0eac1254d67c3bad781095810bd867fe6eb2a2717077d829502d1c5f8cf08deb",
-        "researchers/dmarz/notes/sybil-budget-api/experiment.yaml": "d4d68a36998fc55857ab7243e93c8f000f575abc1ff21f567b2376fc5460c3cc"
-      }
+        "researchers/dmarz/notes/sybil-budget-api/RESULTS.md": "525f49ee57881080d1bd10d1d86ecbf88553085251b350304eab5e3cf4be9dc5",
+        "researchers/dmarz/notes/sybil-budget-api/verification-summary.json": "2e789b948eaa56288639bf3b501d14c26c13862ddf293c55487bdceb0dd7d39f",
+        "researchers/dmarz/notes/sybil-budget-api/records/s1-001-summary.json": "6b93848f7e1cd8bbe557d2b1aaa8e8f5a73dd1e1a9e589f4240ed0b29e0ab5d3",
+        "researchers/dmarz/notes/sybil-budget-api/records/s1-001-episodes.jsonl.gz": "d1ba1907bd5eb5ca51e9198ae0db760479120ba29864a4639b08c02ecb761822",
+        "researchers/dmarz/notes/sybil-budget-api/reviews/s1-001-post.md": "edc67bb6eace06bd9603f66f7ff036c4aa285c466d0a188a0df2d528a1711de3",
+        "researchers/dmarz/notes/sybil-budget-api/records/closeout.json": "330075f50fb45b7c23b0df9db9d757f0fac81152ecc1318cfb4c5916fb48a641",
+        "researchers/dmarz/notes/sybil-budget-api/design.yaml": "7ece847fa6dbb18ad831c7e8e4cbd18efccc1bef7ce3fda68382d89523268c9f"
+      },
+      "assessor": "dmarz/sybil-specialists",
+      "assessed_at": "2026-10-04"
     },
     {
       "id": "sybil-newcomer-api",
@@ -967,17 +1016,19 @@
         "researchers/dmarz/notes/sybil-newcomer-api/records/s1-001-summary.json",
         "researchers/dmarz/notes/sybil-newcomer-api/reviews/s1-001-post.md",
         "researchers/dmarz/notes/sybil-newcomer-api/records/closeout.json",
-        "researchers/dmarz/notes/sybil-newcomer-api/design.yaml"
+        "researchers/dmarz/notes/sybil-newcomer-api/design.yaml",
+        "researchers/dmarz/notes/sybil-newcomer-api/records/s1-001-episodes.jsonl.gz"
       ],
       "status_at_assessment": "complete_valid_inconclusive_primary_allocation_closed",
-      "source_commit": "59822556c5ee3eac62fc9d9ee08bd1f26cc20c19",
+      "source_commit": "1226b626090aee1de5ab113695b3435fd023097a",
       "source_sha256": {
-        "researchers/dmarz/notes/sybil-newcomer-api/RESULTS.md": "006b480f464096789141805bb4b8bc2ecef7a65097c3d4ede3663ee051eb9667",
+        "researchers/dmarz/notes/sybil-newcomer-api/RESULTS.md": "dafce3d6a4fb397803fefe5c5c62d5cf28d6baf3e31a19d95ebe12baf9314495",
         "researchers/dmarz/notes/sybil-newcomer-api/verification-summary.json": "b00067bbac418b4355e04179bcc436930447f4854137a088418969f5253927e9",
         "researchers/dmarz/notes/sybil-newcomer-api/records/s1-001-summary.json": "1efb7499d707b4c624fe40a411500a35b1f9b52f9fa1e6f034b9f92d9157f2e5",
         "researchers/dmarz/notes/sybil-newcomer-api/reviews/s1-001-post.md": "a0272119b2aec5ca03efe9777169c25672bd1ce7a81fcc59f5deed834f934446",
-        "researchers/dmarz/notes/sybil-newcomer-api/records/closeout.json": "32a3a125e7c8d18c9c4ff05c771d43781b50d5859b5134ee1bb909ec05cb04ed",
-        "researchers/dmarz/notes/sybil-newcomer-api/design.yaml": "7501f57d648188a1c8249da31b4a5e4b8c847a7df3757978db5428128d2f47f2"
+        "researchers/dmarz/notes/sybil-newcomer-api/records/closeout.json": "34fdd2525fc1ee986e422851be5ad639cbd5bc22b0062fdcd14d4ac85bbd3c7b",
+        "researchers/dmarz/notes/sybil-newcomer-api/design.yaml": "7501f57d648188a1c8249da31b4a5e4b8c847a7df3757978db5428128d2f47f2",
+        "researchers/dmarz/notes/sybil-newcomer-api/records/s1-001-episodes.jsonl.gz": "5bd9725703a6c52f47939a2807928f15dbc18e8995f82e7488a828534d2f3150"
       },
       "assessor": "dmarz/sybil-specialists",
       "assessed_at": "2026-10-04"
@@ -1020,17 +1071,22 @@
         "researchers/dmarz/notes/market-split-api/experiment.yaml"
       ],
       "evidence_confidence": {
-        "score": 1,
-        "claim": "The current Sonnet configuration passes a small unregulated profitability screen; the new discovery comparison is unreported at this cutoff.",
-        "rationale": "Sonnet reasoning configuration passed bounded unregulated profit qualification; main discovery results are pending in the tracked record. Earlier invalid and failed qualifications stay separate and cannot be pooled. Six related markets, one model-controlled owner and scripted rivals would remain exploratory."
+        "score": 2,
+        "claim": "In the completed six-market Sonnet pilot, the neutral flexible agent selected sustained firm splitting in 6/6 firm-regulated markets and 0/6 owner-regulated or unregulated markets.",
+        "rationale": "A qualified model, paired regulatory controls, all36 valid outcomes, 864 priced calls and exact trace replay support this narrow comparison. Six related tasks, one model realization, prior configuration selection, no independent replication and a missing historical immutable-plan preflight receipt limit the claim."
       },
-      "sample_size_summary": "Current Sonnet Q0: 2 markets, 4/4 episodes; S1 planned: 6 markets, 36 episodes/864 calls. Earlier Haiku S1: 17 valid, 1 invalid, 18 unstarted.",
+      "sample_size_summary": "Observed: 6 related paired market tasks; 36/36 episodes valid, 0 missing/replaced; one Sonnet owner and two scripted rivals, 864 calls. Separate Q0: 2 markets/4 episodes. Earlier Haiku S1:17valid,1invalid,18unstarted; not pooled.",
       "sources": [
-        "researchers/dmarz/notes/market-split-api/README.md",
-        "researchers/dmarz/notes/market-split-api/reviews/q0-005-post.md",
-        "researchers/dmarz/notes/market-split-api/experiment.yaml"
+        "researchers/dmarz/notes/market-split-api/RESULTS.md",
+        "researchers/dmarz/notes/market-split-api/reviews/s1-002-post.md",
+        "researchers/dmarz/notes/market-split-api/report/s1-002/analysis.json",
+        "researchers/dmarz/notes/market-split-api/report/s1-002/replay-audit.json",
+        "researchers/dmarz/notes/market-split-api/report/s1-002/lifetime-accounting.json"
       ],
-      "status_at_assessment": "current_qualification_passed_main_not_reconciled"
+      "status_at_assessment": "complete_valid_exploratory_result",
+      "assessor": "dmarz/market-split",
+      "assessed_at": "2026-10-04",
+      "source_commit": "e84428d59d278ce9837d9111f2b9047cf53a0fbb"
     },
     {
       "id": "market-split-haiku",
@@ -1046,32 +1102,38 @@
       ],
       "evidence_confidence": {
         "score": 1,
-        "claim": "Haiku V2 passed its short profitability screen but failed execution in the longer discovery cohort; V3 has only scripted rehearsal evidence.",
-        "rationale": "Two dynamic episodes returned nonterminal outputs at the 3,072-token ceiling; the original stop reason was not retained, so exhaustion is inferred. The incomplete cohort supports no discovery estimate. Increased V3 output headroom requires fresh native gates and makes future Sonnet comparisons configuration comparisons, not model-only effects."
+        "claim": "Haiku V3 passed short mechanics/profit screens but failed full-length reliability on a strict capacity violation; no V3 discovery cohort started.",
+        "rationale": "Exact replay identified upward decimal rounding in one of four attempted episodes. Four more assigned episodes were never started. All calls and failures are retained, but two related development markets and no complete paired regulatory contrast support no discovery-rate or model-comparison estimate."
       },
-      "sample_size_summary": "V2 Q0: 2 markets,4/4 qualified. S1: 6 assigned markets/36 episodes; 2 complete, 2 failed partial, 32 unstarted, 60 calls. V3: 12/12 mock episodes, 0 model calls; fresh native gates pending.",
+      "sample_size_summary": "V3 R0: 2 related markets; 8 assigned episodes, 3 valid complete, 1 invalid partial, 4 unstarted; 94 priced calls. V3 Q0: 2 markets/4 qualified episodes. V2 failures retained separately. V3 discovery: 0 observed; next diagnostic planned, not started.",
       "sources": [
-        "researchers/dmarz/notes/market-split-haiku/README.md",
-        "researchers/dmarz/notes/market-split-haiku/reviews/q0-001-post.md",
+        "researchers/dmarz/notes/market-split-haiku/RESULTS.md",
+        "researchers/dmarz/notes/market-split-haiku/reviews/r0-001-post.md",
+        "researchers/dmarz/notes/market-split-haiku/reviews/q0-002-post.md",
         "researchers/dmarz/notes/market-split-haiku/reviews/s1-001-post.md",
-        "researchers/dmarz/notes/market-split-haiku/reviews/s0-fleet-003-post.md",
-        "researchers/dmarz/notes/market-split-haiku/preregistration.md",
-        "researchers/dmarz/notes/market-split-haiku/experiment.yaml"
+        "researchers/dmarz/notes/market-split-haiku/report/r0-001/provenance.json",
+        "researchers/dmarz/notes/market-split-haiku/report/r0-001/replay-audit.json",
+        "researchers/dmarz/notes/market-split-haiku/report/r0-001/usage.json",
+        "researchers/dmarz/notes/market-split-haiku/NEXT-EXPERIMENT.md"
       ],
-      "status_at_assessment": "v2_discovery_execution_failed_v3_scripted_only",
-      "source_commit": "b51e3f1f449c2743e7ddf7eda9977503bc450f45",
+      "status_at_assessment": "v3_full_length_reliability_failed_next_plan_unstarted",
+      "source_commit": "5d2042aa04be07f2be4be9ec737de863db362d91",
       "source_sha256": {
-        "researchers/dmarz/notes/market-split-haiku/README.md": "6ca88a43af337731b86ee77b7af22d6ffe9dc006dac2f87a1db8196fe7dc3ff5",
-        "researchers/dmarz/notes/market-split-haiku/reviews/q0-001-post.md": "981f5b55193d29d47dd260711a73fafc8da52808a8dddc8d4c407cf25e3ade29",
+        "researchers/dmarz/notes/market-split-haiku/RESULTS.md": "cea76ef0b033ba92fbf1da6eb4ff4a6e425cc3dfd62c435292be1fd9700fc91b",
+        "researchers/dmarz/notes/market-split-haiku/reviews/r0-001-post.md": "c318b380d8887420511c01c05f21b3fcfe667a17fb55b12c0621181ff2f98737",
+        "researchers/dmarz/notes/market-split-haiku/reviews/q0-002-post.md": "5452d654c22821696517f3aba222b093ceacf087d041be2ff5469d14e2e75b78",
         "researchers/dmarz/notes/market-split-haiku/reviews/s1-001-post.md": "c220ffd508da2ba8a8a5223839413a7f34890ab822068443b4983dc9ad970ebe",
-        "researchers/dmarz/notes/market-split-haiku/reviews/s0-fleet-003-post.md": "7783e2efd0fcab788de350e1ac49f868746c233a8d73338c2b29d1481a457588",
-        "researchers/dmarz/notes/market-split-haiku/preregistration.md": "ccecdcb83fba556781d48c38cd4fda1386b341170e7e574d8ceee101ff14f39a",
-        "researchers/dmarz/notes/market-split-haiku/experiment.yaml": "233345a41fd60a60ee5d80dd89530b5febe7d6771ab2f1de7d212e30773e0730"
-      }
+        "researchers/dmarz/notes/market-split-haiku/report/r0-001/provenance.json": "ce402e3f8185ec3727d86074d8e3f85aa60503897dea081107b2014b2b6efa2f",
+        "researchers/dmarz/notes/market-split-haiku/report/r0-001/replay-audit.json": "6fa019d80e792b6bec7e844962d8217aa28909ece5f5596edff374b0c3accfcf",
+        "researchers/dmarz/notes/market-split-haiku/report/r0-001/usage.json": "cc8292fd5cdc3c7c4d2f5faa9bfa75309f0c5fe28863d26daccad27c651558f8",
+        "researchers/dmarz/notes/market-split-haiku/NEXT-EXPERIMENT.md": "83bb3f4c2cfb6a39b53c561dde91b9ad20231e9b15f82dae3b38ac966159277c"
+      },
+      "assessor": "dmarz/market-split",
+      "assessed_at": "2026-10-04"
     },
     {
       "id": "compositional-safety",
-      "title": "Permitted actions and forbidden outcomes",
+      "title": "Compositional safety: historical qualifications through q0-004",
       "documents": [
         "researchers/dmarz/notes/compositional-safety/README.md"
       ],
@@ -1083,10 +1145,10 @@
       ],
       "evidence_confidence": {
         "score": 1,
-        "claim": "The current model/configuration fails the frozen safe-completion qualification; receipt-treatment efficacy remains untested.",
-        "rationale": "All four model qualifications failed; the latest has only 10/24 safe completions. Zero committed violations with incomplete/refused work is not evidence of safety. Receipt treatment P1 remains closed; engineering conformance and duplicate task names must not inflate efficacy confidence."
+        "claim": "The q0-004 model/configuration failed the frozen safe-completion qualification; receipt-treatment efficacy was untested at that assessment.",
+        "rationale": "All four model qualifications through q0-004 failed; q0-004 had only 10/24 safe completions. Zero committed violations with incomplete/refused work is not evidence of safety. Receipt treatment P1 remained closed; engineering conformance and duplicate task names must not inflate efficacy confidence."
       },
-      "sample_size_summary": "Latest Q0: 24 episodes from 3 task IDs/2 domains but only 5 structural fingerprints; 10 safe completions, 12 incomplete, 2 refusals.",
+      "sample_size_summary": "Historical q0-004: 24 episodes from 3 task IDs/2 domains but only 5 structural fingerprints; 10 safe completions, 12 incomplete, 2 refusals. Earlier model cohorts remain separate in supporting records.",
       "sources": [
         "researchers/dmarz/notes/compositional-safety/README.md",
         "researchers/dmarz/notes/compositional-safety/records/q0-004-summary.json",
@@ -1094,6 +1156,60 @@
         "researchers/dmarz/notes/compositional-safety/experiment.yaml"
       ],
       "status_at_assessment": "completed_failed_qualification"
+    },
+    {
+      "id": "compositional-safety-q0-005",
+      "title": "Compositional safety: q0-005 Haiku qualification with execution-v2",
+      "documents": [
+        "researchers/dmarz/notes/compositional-safety/README.md",
+        "researchers/dmarz/notes/compositional-safety/records/q0-005/README.md"
+      ],
+      "experiment_ids": [
+        "compositional-safety"
+      ],
+      "registration_paths": [],
+      "assessor": "dmarz/patchwork-hypotheses",
+      "assessed_at": "2026-10-04",
+      "source_commit": "a20b97c1c0544b787edccb78f4f27e21487dd2cf",
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The frozen q0-005 Haiku 4.5 configuration with execution-v2 fails the unchanged readiness qualification; receipt-treatment efficacy remains untested.",
+        "rationale": "Frozen-source replay reproduces all 176 observations and events: safe completion is 21/24 (87.5%, below 90%) and D2/S is 4/6 (66.7%, below 80%). Three task-root IDs and five reused shapes provide descriptive qualification evidence, not an independent model comparison, treatment effect or general safety claim."
+      },
+      "sample_size_summary": "Observed q0-005: 3 task-root IDs across 2 domains, only 5 structural fingerprints; 24/24 episodes valid (21 safe, 2 approval-reuse violations, 1 stall); 176 model calls, C/S arms. P1 unrun; earlier cohorts separate.",
+      "sources": [
+        "researchers/dmarz/notes/compositional-safety/records/q0-005/summary.json",
+        "researchers/dmarz/notes/compositional-safety/records/q0-005/manifest.json",
+        "researchers/dmarz/notes/compositional-safety/records/q0-005/README.md"
+      ],
+      "status_at_assessment": "completed_failed_qualification"
+    },
+    {
+      "id": "compositional-safety-d0-003-plan",
+      "title": "Compositional safety: d0-003 prospective Sonnet capability diagnostic",
+      "documents": [
+        "researchers/dmarz/notes/compositional-safety/README.md",
+        "researchers/dmarz/notes/compositional-safety/reviews/d0-003-pre.md"
+      ],
+      "experiment_ids": [
+        "compositional-safety"
+      ],
+      "registration_paths": [],
+      "assessor": "dmarz/patchwork-hypotheses",
+      "assessed_at": "2026-10-04",
+      "source_commit": "a20b97c1c0544b787edccb78f4f27e21487dd2cf",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Whether the proposed Sonnet 5 configuration safely completes the selected execution-v2 workflows is untested; d0-003 is a plan only.",
+        "rationale": "The user prohibited starting it. No d0-003 implementation or model outcomes exist; the source hash denotes the frozen q0-005 predecessor implementation proposed for reuse, not an executed successor. Selected failure cases and their benign controls would be development evidence, not fresh qualification or treatment efficacy."
+      },
+      "sample_size_summary": "Observed d0-003: none. Planned: 2 selected task roots/structural shapes, 4 S-arm episodes (risk/benign pairs), 4 roles and at most 160 model calls. No launch authorized; prior Haiku observations are separate.",
+      "sources": [
+        "researchers/dmarz/notes/compositional-safety/reviews/d0-003-pre.md",
+        "researchers/dmarz/notes/compositional-safety/records/q0-005/summary.json",
+        "researchers/dmarz/notes/compositional-safety/records/q0-005/manifest.json"
+      ],
+      "status_at_assessment": "planned_not_authorized_to_start"
     },
     {
       "id": "capture-memory",
@@ -1170,6 +1286,368 @@
         "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D2-01-post.md"
       ],
       "status_at_assessment": "diagnostic_complete_repair_failed_main_unrun"
+    },
+    {
+      "id": "right-dissenter-rd4",
+      "title": "Right Dissenter recovery protocol RD4",
+      "documents": [
+        "researchers/vishesh/notes/dissent/rd4/README.md"
+      ],
+      "experiment_ids": [
+        "right-dissenter-rd4"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/dissent/rd4/experiment.json"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "On this fixed synthetic cohort, symmetric stop/resume wording tied original admission at 87/96 correct; always-check reached 88/96 with fewer logical model calls. Resolved closure retention worked in the observed cases.",
+        "rationale": "Twenty-four authored roots reuse templates and scripted votes; shared responses and retained transport failures limit inference. Failure sensitivity ranges overlap. Same-author replay reproduces every record; no independent semantic validation or deployment claim."
+      },
+      "sample_size_summary": "Observed: 24 fixed roots with reused authored grammar; 576/576 dependent decisions across 6 policies and 4 epochs. S4: 203 valid provider responses, 11 retained worker transport/stop records. Separate Q4: 24/24 correct. No independent replication.",
+      "sources": [
+        "researchers/vishesh/notes/dissent/rd4/PLAN.md",
+        "researchers/vishesh/notes/dissent/rd4/FEEDBACK.md",
+        "researchers/vishesh/notes/dissent/rd4/REPORT.md",
+        "researchers/vishesh/notes/dissent/rd4/PLAN-COVERAGE.md",
+        "researchers/vishesh/notes/dissent/rd4/results/combined/summary.json",
+        "researchers/vishesh/notes/dissent/rd4/results/combined/audit.json",
+        "researchers/vishesh/notes/dissent/rd4/results/combined/analysis.json",
+        "researchers/vishesh/notes/dissent/rd4/CLOSEOUT.md"
+      ],
+      "status_at_assessment": "exploratory_complete_transport_failures_retained",
+      "assessor": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04",
+      "source_commit": "b4429145fd4636bf7dac305ab2226f6a18cd9237",
+      "source_sha256": {
+        "researchers/vishesh/notes/dissent/rd4/PLAN.md": "1dc78d048283a50c50ee711a50be068deabb0be2c10cdf29a8be10a4da1b129b",
+        "researchers/vishesh/notes/dissent/rd4/FEEDBACK.md": "a267b6a2134b775f704a52da607e78faa34cc25245d8fc0bc9400198a0061905",
+        "researchers/vishesh/notes/dissent/rd4/REPORT.md": "b219d62664be1a65d398c566781cbb6c8abfc0476f8404c7217fe9cc521414cc",
+        "researchers/vishesh/notes/dissent/rd4/PLAN-COVERAGE.md": "d2a20ef99b39916154cd5005b4ef228196412ad87504a2dd3136c3b32643fe04",
+        "researchers/vishesh/notes/dissent/rd4/results/combined/summary.json": "15af5ce2916e5a7f3c9a8adb314db1070399cf1a12d7fe58497d9a5a81ef4ef9",
+        "researchers/vishesh/notes/dissent/rd4/results/combined/audit.json": "f3a57a48934e9c6252f3bf715521d56678c5cf97f870fc56be3ed3ec9643e705",
+        "researchers/vishesh/notes/dissent/rd4/results/combined/analysis.json": "33def645c9727025beb6ffcd324927b5cd79f63fd0b88c52e42f468213f11522",
+        "researchers/vishesh/notes/dissent/rd4/CLOSEOUT.md": "f4868138155e76292a974fead01eba9d2d66b006206485b74ec9dce39343c110"
+      }
+    },
+    {
+      "id": "discussion-dose-v3-d1-haiku",
+      "title": "Discussion v3 D1 \u2014 Haiku",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md",
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-D1.md"
+      ],
+      "experiment_ids": [
+        "discussion-dose-v3"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "This model fails the declared clean development decision gates; it also accepts all six locally supported false memory facts.",
+        "rationale": "Observed 2/6 full evidence and 1/6 report quorums against 5/6 on both. Exact-source audits pass, but six reused worlds and a fixed fixture grid do not establish swarm efficacy, population safety or fresh qualification."
+      },
+      "sample_size_summary": "Observed: 6 reused development world clusters; 60/60 assigned calls analyzed (6 full, 18 report ballots, 36 memory fixtures); 0 invalid/unstarted. Paired with the other D1 model on identical inputs; not 60 independent samples.",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-D1.md",
+        "researchers/dmarz/notes/discussion-dose/reviews/v3-d1-a1-post.md"
+      ],
+      "status_at_assessment": "completed_failed_diagnostic_eligibility",
+      "assessor": "dmarz/discussion-bench-v3",
+      "assessed_at": "2026-10-04",
+      "source_commit": "93b5feabcde7b5898fb65c3fa4d377f337b0f512"
+    },
+    {
+      "id": "discussion-dose-v3-d1-sonnet",
+      "title": "Discussion v3 D1 \u2014 Sonnet",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md",
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-D1.md"
+      ],
+      "experiment_ids": [
+        "discussion-dose-v3"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "This model fails the declared clean development decision gates; it also accepts all six locally supported false memory facts.",
+        "rationale": "Observed 3/6 full evidence and 3/6 report quorums against 5/6 on both. Exact-source audits pass, but six reused worlds and a fixed fixture grid do not establish swarm efficacy, population safety or fresh qualification."
+      },
+      "sample_size_summary": "Observed: 6 reused development world clusters; 60/60 assigned calls analyzed (6 full, 18 report ballots, 36 memory fixtures); 0 invalid/unstarted. Paired with the other D1 model on identical inputs; not 60 independent samples.",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-D1.md",
+        "researchers/dmarz/notes/discussion-dose/reviews/v3-d1-a1-post.md"
+      ],
+      "status_at_assessment": "completed_failed_diagnostic_eligibility",
+      "assessor": "dmarz/discussion-bench-v3",
+      "assessed_at": "2026-10-04",
+      "source_commit": "93b5feabcde7b5898fb65c3fa4d377f337b0f512"
+    },
+    {
+      "id": "discussion-dose-v3-d2",
+      "title": "Discussion v3 D2 \u2014 canonical/atomic probe proposal",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/D2-PLAN.md"
+      ],
+      "experiment_ids": [
+        "discussion-dose-v3"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested: compact complete facts and a smaller response contract may repair decision errors seen in D1.",
+        "rationale": "Proposal only; no implementation, queue request or model outcome. Bundles evidence packaging and response-contract changes, so cannot isolate response ordering."
+      },
+      "sample_size_summary": "Observed: none. Planned only: 6 reused development world clusters, 2 models, 48 calls (12 canonical decisions + 36 atomic checks); no fresh qualification or holdout.",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/D2-PLAN.md",
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-D1.md"
+      ],
+      "status_at_assessment": "proposed_not_started",
+      "assessor": "dmarz/discussion-bench-v3",
+      "assessed_at": "2026-10-04",
+      "source_commit": "93b5feabcde7b5898fb65c3fa4d377f337b0f512"
+    },
+    {
+      "id": "sybil-newcomer-sonnet",
+      "title": "Knowledgeable newcomers versus a trusted Sybil coalition (Sonnet 4.6 replication)",
+      "documents": [
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/README.md",
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/RESULTS.md"
+      ],
+      "experiment_ids": [
+        "sybil-newcomer-sonnet"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 2,
+        "claim": "In this synthetic newcomer task, replacing the Haiku 4.5 synthesizer with Sonnet 4.6 on identical assignments did not materially change outcomes: the sleeper attack still sharply reduced specialist accuracy, the policy ranking was unchanged, and renewal minus reputation stayed inconclusive (+11.1 pp, interval -0.0 to +22.2 pp; +2.8 pp more than Haiku, interval -2.8 to +8.3 pp).",
+        "rationale": "Same-owner assessment: twenty-four paired roots, passed qualification, 1,944/1,944 outcomes paired by assignment with the Haiku cohort and fully reconciled. One task family, two models from one provider, scripted actors and descriptive unadjusted intervals limit stronger conclusions. Independent review was waived by the owner."
+      },
+      "sample_size_summary": "Observed: 24 paired roots from one synthetic task family; 1,944/1,944 S1 outcomes analyzed, zero missing, each paired by assignment ID with the separate Haiku cohort (not pooled); 24 honest + 1/4/16 controller identities, one synthesizer model. Q0 separately: 36/36 clean calls.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/preregistration.md",
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/design.yaml",
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/SETUP.md",
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/RESULTS.md",
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/reviews/s1-001-post.md",
+        "researchers/dmarz/notes/sybil-newcomer-sonnet/records/s1-001-haiku-comparison.json"
+      ],
+      "status_at_assessment": "complete_valid_inconclusive_primary_allocation_closed",
+      "assessor": "dmarz/newcomer-sonnet",
+      "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "sybil-scarcity-plan",
+      "title": "Does Sybil-resistant accuracy depend on repeated knowledge?",
+      "documents": [
+        "researchers/dmarz/notes/sybil-scarcity-plan/README.md"
+      ],
+      "experiment_ids": [],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Proposed: reducing truthful carriers at fixed population, graph and selection lowers specialist accuracy.",
+        "rationale": "No outcomes of this manipulation exist. This is a prospective plan only; implementation, registration, qualification, remote queueing and execution remain explicitly unstarted."
+      },
+      "sample_size_summary": "Observed: none. Proposed: 24 paired synthetic roots, 1,440 S1 outcomes at 972 identities and one synthesizer; separate Q0 has 48 calls on eight roots. Counts and spending limits are proposals, not power or execution authority.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-scarcity-plan/README.md",
+        "researchers/dmarz/notes/sybil-scarcity-plan/SETUP.md",
+        "researchers/dmarz/notes/sybil-scarcity-plan/design-plan.yaml"
+      ],
+      "status_at_assessment": "prospective_plan_published_explicit_no_start",
+      "assessor": "dmarz/sybil-specialists",
+      "assessed_at": "2026-10-04",
+      "source_commit": "1226b626090aee1de5ab113695b3435fd023097a",
+      "source_sha256": {
+        "researchers/dmarz/notes/sybil-scarcity-plan/README.md": "f95b5d32e94d1a03f98ab24cfbb9a5fd7321dd8f63a36b34039cd7e33520623e",
+        "researchers/dmarz/notes/sybil-scarcity-plan/SETUP.md": "e1b98b8da2d858515cdcf214dc8e3d845e4358fdea3562bafd70704927272c48",
+        "researchers/dmarz/notes/sybil-scarcity-plan/design-plan.yaml": "905b9c1512eee572ebebb9bbccf71c98c578bd04b2492499dfed72b502abaf79"
+      }
+    },
+    {
+      "id": "influence-candidate-checks-d3",
+      "title": "Influence procurement: complete checks and consistent action",
+      "documents": [
+        "researchers/vishesh/notes/influence-swarms/scenario/RESULTS-D3.md"
+      ],
+      "experiment_ids": [
+        "influence-swarms"
+      ],
+      "registration_paths": [],
+      "source_commit": "8087faf9fd3399c30774ad71e8f95dcdaa576215",
+      "assessor": "vishesh/codex-experiments",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Schema-required candidate coverage did not repair factual checks or final decisions on six frozen procurement cases.",
+        "rationale": "90/90 populated statuses,76/90 correct; all three workflows4/6 acceptable, no changed paired choices. Six previously inspected dependent case clusters and inherited flawed reports limit generalization. No transfer or external-influence run."
+      },
+      "sample_size_summary": "D3:6 frozen D2 dossiers \u00d73 dependent chair workflows =18/18 valid,12 acceptable;30 new calls. Six matrices \u00d715 dependent fields =90 populated,76 correct. Zero raw purchase/matrix contradictions;two avoidable deferrals per arm. D4 unrun.",
+      "sources": [
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D3-01-summary.json",
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D3-01-audit.json",
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D3-01-reconciliation.json",
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D3-01-post.md"
+      ],
+      "status_at_assessment": "diagnostic_complete_repair_failed_transfer_unrun"
+    },
+    {
+      "id": "antsy-diversity-v7",
+      "title": "Antsy v7: worker diversity",
+      "documents": [
+        "researchers/vishesh/notes/antsy-diversity-v7/README.md"
+      ],
+      "experiment_ids": [
+        "antsy-diversity-v7"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Repaired native pilot shows competence mismatch and quorum coverage loss; it does not establish a diversity benefit.",
+        "rationale": "100/100 valid OCR calls, but best Tesseract worker1/19 correct fails the per-family gate while RapidOCR R0 is11/19. S1 unrun; small dependent qualification outcomes only."
+      },
+      "sample_size_summary": "Repaired qualification:20/20 paired receipts,19 scorable,100/100 valid OCR calls,220 policy outcomes; S1 unrun. Parent interrupted after10 recorded receipts,30 valid/20 invalid calls plus uncertain partial work. Vendor independence unknown.",
+      "sources": [
+        "researchers/vishesh/notes/antsy-diversity-v7/PLAN.md",
+        "researchers/vishesh/notes/antsy-diversity-v7/RESULTS.md",
+        "researchers/vishesh/notes/antsy-diversity-v7/reviews/S0-repair-post.md"
+      ],
+      "status_at_assessment": "execution_repaired_qualification_failed_s1_unrun",
+      "source_commit": "5114250e7340013a5da852ed0918b47227413570",
+      "assessed_at": "2026-10-04",
+      "assessor": "vishesh/codex-methods"
+    },
+    {
+      "id": "capture-memory-mix",
+      "title": "Capture Memory Mix",
+      "documents": [
+        "researchers/shadow/notes/capture-memory-mix/README.md"
+      ],
+      "experiment_ids": [
+        "capture-memory-mix"
+      ],
+      "registration_paths": [
+        "researchers/shadow/notes/capture-memory-mix/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": null,
+        "claim": "Unassessed at registry discovery.",
+        "rationale": "Registration coverage only; this addition is not a review of the experiment or its results."
+      },
+      "sample_size_summary": "Unassessed; see the owner registration and study documentation.",
+      "sources": [
+        "researchers/shadow/notes/capture-memory-mix/experiment.yaml"
+      ],
+      "status_at_assessment": "unassessed_registration_coverage",
+      "assessor": "vishesh/codex-methods",
+      "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "sybil-specialists-sonnet",
+      "title": "Sybil Specialists Sonnet",
+      "documents": [
+        "researchers/dmarz/notes/sybil-specialists-sonnet/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-specialists-sonnet"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-specialists-sonnet/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": null,
+        "claim": "Unassessed at registry discovery.",
+        "rationale": "Registration coverage only; this addition is not a review of the experiment or its results."
+      },
+      "sample_size_summary": "Unassessed; see the owner registration and study documentation.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-specialists-sonnet/experiment.yaml"
+      ],
+      "status_at_assessment": "unassessed_registration_coverage",
+      "assessor": "vishesh/codex-methods",
+      "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "sybil-budget-sonnet",
+      "title": "Sybil Budget Sonnet",
+      "documents": [
+        "researchers/dmarz/notes/sybil-budget-sonnet/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-budget-sonnet"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-budget-sonnet/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": null,
+        "claim": "Unassessed at registry discovery.",
+        "rationale": "Registration coverage only; this addition is not a review of the experiment or its results."
+      },
+      "sample_size_summary": "Unassessed; see the owner registration and study documentation.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-budget-sonnet/experiment.yaml"
+      ],
+      "status_at_assessment": "unassessed_registration_coverage",
+      "assessor": "vishesh/codex-methods",
+      "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "antsy-targeted-v8",
+      "title": "Antsy v8: targeted field verification",
+      "documents": [
+        "researchers/vishesh/notes/antsy-targeted-v8/README.md"
+      ],
+      "experiment_ids": [
+        "antsy-targeted-v8"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Corrected extraction improves the primary reader on reused development receipts; fresh qualification and checker benefit remain untested.",
+        "rationale": "Two parser defects corrected after inspecting development failures. Replaying the same observations yields 13 rather than 11 correct primary totals of 19 scorable receipts; weak-checker fallback adds an error and is rejected."
+      },
+      "sample_size_summary": "20 reused receipts, 19 scorable; 100 saved OCR observations replayed twice, not 40 independent receipts. Zero new native calls. Fresh Q0 and held-out S1 unrun.",
+      "sources": [
+        "researchers/vishesh/notes/antsy-targeted-v8/PLAN.md",
+        "researchers/vishesh/notes/antsy-targeted-v8/AMENDMENT-01.md",
+        "researchers/vishesh/notes/antsy-targeted-v8/RESULTS.md",
+        "researchers/vishesh/notes/antsy-targeted-v8/reviews/development-02-post.md"
+      ],
+      "status_at_assessment": "development_repaired_checker_rejected_fresh_qualification_pending",
+      "source_commit": "f76f024837fab7f6fd9dc8f86f531ed861b1b80f",
+      "assessed_at": "2026-10-04",
+      "assessor": "vishesh/codex-methods"
+    },
+    {
+      "id": "sybil-scale-xl",
+      "title": "Sybil resistance at 9x scale: 972 to 8,748 identities",
+      "documents": [
+        "researchers/dmarz/notes/sybil-scale-xl/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-scale-xl"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-scale-xl/experiment.yaml"
+      ],
+      "assessor": "dmarz/scale-xl",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Whether the sybil-scale-api finding (proportional checking preserves specialist accuracy as the swarm grows) holds from 972 to 8,748 simulated identities with Haiku 4.5 synthesis.",
+        "rationale": "Unrun; no stage has completed."
+      },
+      "sample_size_summary": "Observed: none. Planned: 24 paired worlds \u00d7 3 sizes \u00d7 28 conditions = 2,016 S1 calls plus 48 Q0 calls; 972\u20138,748 simulated identities feeding one synthesizer, packets of up to 4,374 reports.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-scale-xl/README.md",
+        "researchers/dmarz/notes/sybil-scale-xl/preregistration.md",
+        "researchers/dmarz/notes/sybil-scale-xl/experiment.yaml"
+      ],
+      "status_at_assessment": "planned_unrun"
     }
   ],
   "source_sha256": {

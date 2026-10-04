@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-10-04T06:14:58Z",
+  "hourly_usd": 0.00893,
+  "host": "sim-theseus-d1",
+  "retired": true,
+  "elapsed_hours": 0.7968693955739339,
+  "estimated_infrastructure_usd": 0.00711604370247523,
+  "retired_epoch": 1791097366.7298272,
+  "actual_model_usd": 0.178341,
+  "estimated_total_usd": 0.18545704370247523,
+  "remaining_authority_usd": 4.814542956297525,
+  "note": "Model cost from provider usage; infrastructure cost estimated from measured lifetime and verified hourly rate, not final invoice."
+}

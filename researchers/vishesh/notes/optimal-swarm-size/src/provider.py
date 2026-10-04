@@ -3,6 +3,7 @@
 The pricing/token bound and served snapshot must be independently reviewed before launch.
 """
 import json
+import hashlib
 import math
 import multiprocessing
 import os
@@ -10,6 +11,7 @@ import time
 import urllib.request
 import urllib.error
 from failures import SafeFailure, safe_code
+from response_contract import VERSION, LEGACY, schema_for
 from decimal import Decimal, ROUND_CEILING
 
 
@@ -19,10 +21,16 @@ def microdollars(value):
     return int((amount*1000000).to_integral_value(rounding=ROUND_CEILING))
 
 
-def native_payload(messages,cfg):
-    return {'model':cfg['model'],'system':'\n\n'.join(m['content'] for m in messages if m['role']=='system'),
+def native_payload(messages,cfg,phase=None,public=None,item=None):
+    body= {'model':cfg['model'],'system':'\n\n'.join(m['content'] for m in messages if m['role']=='system'),
             'messages':[m for m in messages if m['role']!='system'],'max_tokens':cfg['max_output_tokens'],
             'temperature':0,'stream':False,'service_tier':'standard_only'}
+    mode=cfg.get('response_contract')
+    if mode==VERSION:
+        body['output_config']={'format':{'type':'json_schema','schema':schema_for(public,phase,item)}}
+    elif mode!=LEGACY:
+        raise ValueError('response_contract_unconfigured')
+    return body
 
 
 def usage_charge(usage,cfg):
@@ -55,14 +63,20 @@ def request_child(connection,payload,timeout):
     finally:connection.close()
 
 
+def validate_finish(reason):
+    if reason=='refusal':raise SafeFailure('provider_refusal')
+    if reason!='end_turn':raise SafeFailure('incomplete_response')
+
+
 class Provider:
-    def __init__(self,config,bank,episode,journal):
-        self.config=config;self.bank=bank;self.episode=episode;self.journal=journal
+    def __init__(self,config,bank,episode,journal,public=None):
+        self.config=config;self.bank=bank;self.episode=episode;self.journal=journal;self.public=public
     def __call__(self,messages,deadline,actor,phase,item):
         cfg=self.config
         if cfg.get("claim_expiry_epoch",0)<=time.time():raise SafeFailure("claim_expired")
         # Config quotes reserve a full permitted context plus maximum output for every call.
-        if len(json.dumps(messages).encode())>cfg['max_prompt_bytes']:raise ValueError('prompt_limit')
+        payload=native_payload(messages,cfg,phase,self.public,item)
+        if len(json.dumps(payload).encode())>cfg['max_prompt_bytes']:raise ValueError('prompt_limit')
         if not self.bank.healthy():raise ValueError('budget_overrun')
         call_id=f'{self.episode}/{actor}/{phase}/{item or "-"}'
         bound=microdollars(Decimal(str(cfg['input_usd_per_token']))*cfg['provider_context_tokens']+
@@ -70,10 +84,11 @@ class Provider:
         try:
             self.bank.reserve(call_id,self.episode,bound,cfg['episode_cap_microdollars'])
         except Exception as exc: raise SafeFailure(safe_code(exc)) from None
-        self.journal({'kind':'reservation','call':call_id,'maximum_microdollars':bound})
+        self.journal({'kind':'reservation','call':call_id,'maximum_microdollars':bound,
+                      'response_contract':cfg['response_contract'],
+                      'schema_sha256':hashlib.sha256(json.dumps(payload['output_config']['format']['schema'],sort_keys=True).encode()).hexdigest() if 'output_config' in payload else None})
         remaining=deadline-time.monotonic()
         if remaining<=0:raise TimeoutError('deadline_before_dispatch')
-        payload=native_payload(messages,cfg)
         ctx=multiprocessing.get_context('spawn');parent,child=ctx.Pipe(duplex=False)
         proc=ctx.Process(target=request_child,args=(child,payload,remaining),daemon=True)
         try:
@@ -90,7 +105,7 @@ class Provider:
                           'provider_matches':response['provider']==cfg['expected_served_provider']})
             if response['model']!=cfg['expected_served_model'] or response['provider']!=cfg['expected_served_provider']:
                 raise ValueError('route_changed')
-            if response['finish_reason']!='end_turn':raise ValueError('incomplete_response')
+            validate_finish(response['finish_reason'])
             if type(response['text']) is not str:raise ValueError('response_shape')
             return response['text']
         finally:

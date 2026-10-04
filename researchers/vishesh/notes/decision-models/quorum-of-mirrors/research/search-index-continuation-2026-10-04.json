@@ -1,0 +1,106 @@
+{
+  "multi agent debate majority voting": [
+    {
+      "id": "https://openalex.org/W7166681978",
+      "title": "Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates",
+      "doi": "https://doi.org/10.48550/arxiv.2606.29270"
+    },
+    {
+      "id": "https://openalex.org/W4412888276",
+      "title": "Voting or Consensus? Decision-Making in Multi-Agent Debate",
+      "doi": "https://doi.org/10.18653/v1/2025.findings-acl.606"
+    },
+    {
+      "id": "https://openalex.org/W4416189552",
+      "title": "Can LLM Agents Really Debate? A Controlled Study of Multi-Agent Debate in Logical Reasoning",
+      "doi": "https://doi.org/10.48550/arxiv.2511.07784"
+    },
+    {
+      "id": "https://openalex.org/W4415087697",
+      "title": "Free-MAD: Consensus-Free Multi-Agent Debate",
+      "doi": "https://doi.org/10.18653/v1/2026.findings-acl.1600"
+    },
+    {
+      "id": "https://openalex.org/W7126123280",
+      "title": "Demystifying Multi-Agent Debate: The Role of Confidence and Diversity",
+      "doi": null
+    },
+    {
+      "id": "https://openalex.org/W7166837933",
+      "title": "Demystifying Multi-Agent Debate: The Role of Confidence and Diversity",
+      "doi": "https://doi.org/10.18653/v1/2026.findings-acl.1694"
+    },
+    {
+      "id": "https://openalex.org/W7151003852",
+      "title": "EMS: Multi-Agent Voting via Efficient Majority-then-Stopping",
+      "doi": "https://doi.org/10.48550/arxiv.2604.02863"
+    },
+    {
+      "id": "https://openalex.org/W7126106259",
+      "title": "Demystifying Multi-Agent Debate: The Role of Confidence and Diversity",
+      "doi": "https://doi.org/10.48550/arxiv.2601.19921"
+    },
+    {
+      "id": "https://openalex.org/W4417078031",
+      "title": "Self-Improvement of Language Models by Post-Training on Multi-Agent Debate",
+      "doi": "https://doi.org/10.48550/arxiv.2509.15172"
+    },
+    {
+      "id": "https://openalex.org/W7214993867",
+      "title": "Beyond Symmetric Agents: Cognitive Diversity and Multi-Agent Debate in Small Language Models",
+      "doi": "https://doi.org/10.48550/arxiv.2609.35875"
+    }
+  ],
+  "collective decision quorum social information": [
+    {
+      "id": "https://openalex.org/W2142950028",
+      "title": "Collective sensing and collective responses in quorum-sensing bacteria",
+      "doi": "https://doi.org/10.1098/rsif.2014.0882"
+    },
+    {
+      "id": "https://openalex.org/W1991175920",
+      "title": "Collective decision-making in microbes",
+      "doi": "https://doi.org/10.3389/fmicb.2014.00054"
+    },
+    {
+      "id": "https://openalex.org/W2310504124",
+      "title": "The effect of social information on the collective choices of ant colonies",
+      "doi": "https://doi.org/10.1093/beheco/arw005"
+    },
+    {
+      "id": "https://openalex.org/W2077284418",
+      "title": "Quorum Decision-Making in Foraging Fish Shoals",
+      "doi": "https://doi.org/10.1371/journal.pone.0032411"
+    },
+    {
+      "id": "https://openalex.org/W2317507314",
+      "title": "Application of quorum response and information entropy to animal collective motion modeling",
+      "doi": "https://doi.org/10.1002/cplx.21772"
+    },
+    {
+      "id": "https://openalex.org/W2088708282",
+      "title": "Co-evolutionary Dynamics of Collective Action with Signaling for a Quorum",
+      "doi": "https://doi.org/10.1371/journal.pcbi.1004101"
+    },
+    {
+      "id": "https://openalex.org/W4380741225",
+      "title": "Quorum decision making coordinates group departure decisions in Eurasian oystercatchers, Haematopus ostralegus",
+      "doi": "https://doi.org/10.1016/j.anbehav.2023.05.012"
+    },
+    {
+      "id": "https://openalex.org/W3157168997",
+      "title": "Decentralized decision making by an ant colony: drift-diffusion model of individual choice, quorum and collective decision",
+      "doi": "https://doi.org/10.48550/arxiv.2105.00883"
+    },
+    {
+      "id": "https://openalex.org/W7217017248",
+      "title": "Social Feedback in Collective Decision Making",
+      "doi": null
+    },
+    {
+      "id": "https://openalex.org/W3006202585",
+      "title": "Macrophages employ quorum licensing to regulate collective activation",
+      "doi": "https://doi.org/10.1038/s41467-020-14547-y"
+    }
+  ]
+}

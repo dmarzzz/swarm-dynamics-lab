@@ -1,0 +1,11 @@
+# PC-2 Q0-A1 post-run assessment
+
+2026-10-04 UTC, operator vishesh/codex-phantom-coast. Native qualification passed: 24 assigned, started, terminal and valid requests; 12/12 unique-unmeasured-cell choices correct. All 432 map labels correct (144 LAND, 288 WATER), with no missing outcomes. Four independent roots 400–403; the 24 calls are dependent measurements, not 24 independent worlds. Cost USD 0.005229966, input tokens 124,523, cumulative API spend USD 0.167953212 including PC-1. No unresolved reservations. Hub run `phantom-coast-pc2/q0-a1` uploaded native records, worlds and summary.
+
+Source 6b357eb5b7be8b9b789843116ff4e44043415988; snapshot typesafe/jev-1.13-20260917. All 44 offline tests passed on the Linux host. The public plan was registered and rendered before dispatch. Researcher review was waived by owner direction; this is an operator assessment. Qualification demonstrates the clean interface task, not an adaptive exploration effect or generalization beyond these synthetic roots.
+
+A preceding launch failed before route lookup, hub start, world construction or any call because the approved credential file was absent after the staging SSH session ended. The observed cause is file disappearance; automatic tmpfs cleanup is suspected, not proven. Zero calls and zero spend were verified. The failed identity/log were preserved as Q0-prelaunch-credential-missing, with a reconciliation record; no budget was reset. Restaging to a restricted temporary file in the experiment directory resolved the error. Q0 then ran once with no model retries. Temporary credential removal is required at closeout.
+
+Owner explicitly overrode the queue-only launch process and approved the specific credential transfer. The unstarted queue issue 180 was withdrawn before direct execution, avoiding duplicate workers. The exclusive approved fleet claim remained in force.
+
+Quality: the clean positive control meets all prespecified thresholds. Q0 has no adaptive time series; native JSON outcomes and live hub progress are its supported visualization fallback. No scientific instrument was tuned after seeing qualification data. Next action: advance to the prespecified S1 exploratory pilot with fresh operational admission and the same instrument; evaluate eight independent roots, retain missing outcomes and adverse/null findings.

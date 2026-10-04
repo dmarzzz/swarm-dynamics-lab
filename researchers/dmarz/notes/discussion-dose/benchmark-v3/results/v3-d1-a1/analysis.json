@@ -1,0 +1,1842 @@
+{
+  "assigned_calls": 120,
+  "attempt": "v3-d1-a1",
+  "cache_tokens_observed": 0,
+  "exact_source_audit": {
+    "complete_journal": true,
+    "ok": true,
+    "outcomes_recomputed": 120,
+    "requests_verified": 120
+  },
+  "frozen_manifest_sha256": "34ccbb8d5540b7243bdbd47222a04bbc2b41d404cf607eaf8e2e4ba45adfad3f",
+  "holdout_opened": false,
+  "limitations": [
+    "Six development world clusters; descriptive diagnostics only.",
+    "Q0 report packets remain Haiku-generated; this is not an end-to-end Sonnet swarm.",
+    "Fixture and swarm parent wording differ; strict extra-citation labels remain frozen.",
+    "N=3 single-value majority merge structurally discards conflicts.",
+    "Ambiguous dispatched calls are never retried; absent usage is unknown cost, not zero.",
+    "Baseline reasoning and discussion effects remain confounded by failed Q0 qualification."
+  ],
+  "local_exact_source_audit": {
+    "complete_journal": true,
+    "ok": true,
+    "outcomes_recomputed": 120,
+    "requests_verified": 120
+  },
+  "models": {
+    "claude-haiku-4-5-20251001": {
+      "actual_cost_complete": true,
+      "assigned_calls": 60,
+      "diagnostic_gate": {
+        "assigned_each": 6,
+        "eligible_for_separate_fresh_qualification": false,
+        "full_evidence_correct": 2,
+        "model_qualified": false,
+        "required_each": 5,
+        "saved_report_quorum_correct": 1
+      },
+      "failures": {},
+      "groups": {
+        "diagnostic": {
+          "assigned": 6,
+          "metrics": {
+            "abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "all_values_extracted_correctly": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "choice_claim_consistent": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 2
+            },
+            "choice_claim_incomplete": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "choice_claim_inconsistent": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 4
+            },
+            "citation_mismatches": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "claim_extraction_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 48
+            },
+            "claim_extraction_observed": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 48
+            },
+            "constraint_violation": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 4
+            },
+            "evidence_justified": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 2
+            },
+            "invalid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "truth_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 2
+            },
+            "truth_wrong_nonabstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 4
+            },
+            "unnecessary_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 6,
+          "terminal": 6
+        },
+        "report_snapshot": {
+          "assigned": 18,
+          "metrics": {
+            "abstain": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 16
+            },
+            "all_values_extracted_correctly": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 6
+            },
+            "choice_claim_consistent": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 1
+            },
+            "choice_claim_incomplete": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 8
+            },
+            "choice_claim_inconsistent": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 9
+            },
+            "citation_mismatches": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 0
+            },
+            "claim_extraction_correct": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 124
+            },
+            "claim_extraction_observed": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 124
+            },
+            "constraint_violation": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 0
+            },
+            "evidence_justified": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 2
+            },
+            "invalid": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 0
+            },
+            "truth_correct": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 2
+            },
+            "truth_wrong_nonabstain": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 0
+            },
+            "unnecessary_abstain": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 16
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 18,
+          "terminal": 18
+        }
+      },
+      "input_tokens": 160270,
+      "latency": {
+        "max_seconds": 8.25951,
+        "median_seconds": 1.149541,
+        "observed": 60,
+        "sum_seconds": 100.52186
+      },
+      "memory": {
+        "complete": {
+          "assigned": 6,
+          "metrics": {
+            "extra_agreeing_secondary_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "extra_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "memory_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "memory_distinct_origins": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_answerable": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_citation_valid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_correct_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_groundtruth_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_inherited_error": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_invalid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_justified": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_required_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_supported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_unnecessary_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 6,
+          "terminal": 6
+        },
+        "conflict": {
+          "assigned": 6,
+          "metrics": {
+            "extra_agreeing_secondary_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "extra_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "memory_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "memory_distinct_origins": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 12
+            },
+            "parent_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_answerable": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_citation_valid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_correct_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_groundtruth_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_inherited_error": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_invalid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_justified": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_required_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_supported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unnecessary_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_unsupported_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_unsupported_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 6,
+          "terminal": 6
+        },
+        "correlated_copies": {
+          "assigned": 6,
+          "metrics": {
+            "extra_agreeing_secondary_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "extra_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 13
+            },
+            "memory_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "memory_distinct_origins": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 15
+            },
+            "parent_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_answerable": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 3
+            },
+            "parent_citation_valid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_correct_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_groundtruth_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_inherited_error": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_invalid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_justified": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_required_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_supported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unnecessary_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_unsupported_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 6,
+          "terminal": 6
+        },
+        "inherited_false": {
+          "assigned": 6,
+          "metrics": {
+            "extra_agreeing_secondary_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "extra_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "memory_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "memory_distinct_origins": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_answerable": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_citation_valid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_correct_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_groundtruth_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_inherited_error": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_invalid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_justified": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_required_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_supported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_unnecessary_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 6,
+          "terminal": 6
+        },
+        "omitted": {
+          "assigned": 6,
+          "metrics": {
+            "extra_agreeing_secondary_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "extra_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 1
+            },
+            "memory_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "memory_distinct_origins": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 5
+            },
+            "parent_answerable": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_citation_valid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 5
+            },
+            "parent_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_correct_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 5
+            },
+            "parent_groundtruth_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 1
+            },
+            "parent_inherited_error": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_invalid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_justified": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 5
+            },
+            "parent_required_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_supported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unnecessary_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 1
+            },
+            "parent_unsupported_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 1
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 6,
+          "terminal": 6
+        },
+        "superseded": {
+          "assigned": 6,
+          "metrics": {
+            "extra_agreeing_secondary_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "extra_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "memory_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "memory_distinct_origins": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_answerable": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_citation_valid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_correct_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_groundtruth_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_inherited_error": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_invalid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_justified": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_required_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_supported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_unnecessary_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 6,
+          "terminal": 6
+        }
+      },
+      "observed_usage_cost_microusd": 189970,
+      "output_tokens": 5940,
+      "physical_calls_observed": 60,
+      "report_quorums": [
+        {
+          "completion_decisions": [
+            "ABSTAIN"
+          ],
+          "correct_completion_lower": 0,
+          "correct_completion_upper": 0,
+          "counterfactual_unidentified": false,
+          "decision": "ABSTAIN",
+          "invalid_ballots": 0,
+          "state": "complete_no_quorum",
+          "truth_correct": 0,
+          "world": 20001
+        },
+        {
+          "completion_decisions": [
+            "ABSTAIN"
+          ],
+          "correct_completion_lower": 0,
+          "correct_completion_upper": 0,
+          "counterfactual_unidentified": false,
+          "decision": "ABSTAIN",
+          "invalid_ballots": 0,
+          "state": "complete_no_quorum",
+          "truth_correct": 0,
+          "world": 20002
+        },
+        {
+          "completion_decisions": [
+            "C"
+          ],
+          "correct_completion_lower": 1,
+          "correct_completion_upper": 1,
+          "counterfactual_unidentified": false,
+          "decision": "C",
+          "invalid_ballots": 0,
+          "state": "majority",
+          "truth_correct": 1,
+          "world": 20003
+        },
+        {
+          "completion_decisions": [
+            "ABSTAIN"
+          ],
+          "correct_completion_lower": 0,
+          "correct_completion_upper": 0,
+          "counterfactual_unidentified": false,
+          "decision": "ABSTAIN",
+          "invalid_ballots": 0,
+          "state": "complete_no_quorum",
+          "truth_correct": 0,
+          "world": 20004
+        },
+        {
+          "completion_decisions": [
+            "ABSTAIN"
+          ],
+          "correct_completion_lower": 0,
+          "correct_completion_upper": 0,
+          "counterfactual_unidentified": false,
+          "decision": "ABSTAIN",
+          "invalid_ballots": 0,
+          "state": "complete_no_quorum",
+          "truth_correct": 0,
+          "world": 20005
+        },
+        {
+          "completion_decisions": [
+            "ABSTAIN"
+          ],
+          "correct_completion_lower": 0,
+          "correct_completion_upper": 0,
+          "counterfactual_unidentified": false,
+          "decision": "ABSTAIN",
+          "invalid_ballots": 0,
+          "state": "complete_no_quorum",
+          "truth_correct": 0,
+          "world": 20006
+        }
+      ],
+      "started": 60,
+      "terminal": 60,
+      "unresolved": [],
+      "unstarted": 0,
+      "usage_missing_calls": [],
+      "valid": 60
+    },
+    "claude-sonnet-4-6": {
+      "actual_cost_complete": true,
+      "assigned_calls": 60,
+      "diagnostic_gate": {
+        "assigned_each": 6,
+        "eligible_for_separate_fresh_qualification": false,
+        "full_evidence_correct": 3,
+        "model_qualified": false,
+        "required_each": 5,
+        "saved_report_quorum_correct": 3
+      },
+      "failures": {},
+      "groups": {
+        "diagnostic": {
+          "assigned": 6,
+          "metrics": {
+            "abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "all_values_extracted_correctly": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "choice_claim_consistent": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 3
+            },
+            "choice_claim_incomplete": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "choice_claim_inconsistent": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 3
+            },
+            "citation_mismatches": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "claim_extraction_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 48
+            },
+            "claim_extraction_observed": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 48
+            },
+            "constraint_violation": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 3
+            },
+            "evidence_justified": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 3
+            },
+            "invalid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "truth_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 3
+            },
+            "truth_wrong_nonabstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 3
+            },
+            "unnecessary_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 6,
+          "terminal": 6
+        },
+        "report_snapshot": {
+          "assigned": 18,
+          "metrics": {
+            "abstain": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 10
+            },
+            "all_values_extracted_correctly": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 12
+            },
+            "choice_claim_consistent": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 8
+            },
+            "choice_claim_incomplete": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 2
+            },
+            "choice_claim_inconsistent": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 8
+            },
+            "citation_mismatches": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 0
+            },
+            "claim_extraction_correct": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 137
+            },
+            "claim_extraction_observed": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 137
+            },
+            "constraint_violation": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 0
+            },
+            "evidence_justified": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 8
+            },
+            "invalid": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 0
+            },
+            "truth_correct": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 8
+            },
+            "truth_wrong_nonabstain": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 0
+            },
+            "unnecessary_abstain": {
+              "assigned": 18,
+              "observed": 18,
+              "sum": 10
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 18,
+          "terminal": 18
+        }
+      },
+      "input_tokens": 160330,
+      "latency": {
+        "max_seconds": 10.726081,
+        "median_seconds": 1.4403480000000002,
+        "observed": 60,
+        "sum_seconds": 153.945257
+      },
+      "memory": {
+        "complete": {
+          "assigned": 6,
+          "metrics": {
+            "extra_agreeing_secondary_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "extra_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "memory_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "memory_distinct_origins": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_answerable": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_citation_valid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_correct_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_groundtruth_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_inherited_error": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_invalid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_justified": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_required_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_supported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_unnecessary_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 6,
+          "terminal": 6
+        },
+        "conflict": {
+          "assigned": 6,
+          "metrics": {
+            "extra_agreeing_secondary_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "extra_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "memory_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "memory_distinct_origins": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 12
+            },
+            "parent_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_answerable": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_citation_valid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_correct_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_groundtruth_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_inherited_error": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_invalid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_justified": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_required_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_supported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unnecessary_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 6,
+          "terminal": 6
+        },
+        "correlated_copies": {
+          "assigned": 6,
+          "metrics": {
+            "extra_agreeing_secondary_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "extra_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 5
+            },
+            "memory_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "memory_distinct_origins": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 15
+            },
+            "parent_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 2
+            },
+            "parent_answerable": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 3
+            },
+            "parent_citation_valid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 3
+            },
+            "parent_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 1
+            },
+            "parent_correct_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_groundtruth_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 3
+            },
+            "parent_inherited_error": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_invalid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_justified": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 1
+            },
+            "parent_required_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_supported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 1
+            },
+            "parent_unnecessary_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 2
+            },
+            "parent_unsupported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 3
+            },
+            "parent_unsupported_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 3
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 6,
+          "terminal": 6
+        },
+        "inherited_false": {
+          "assigned": 6,
+          "metrics": {
+            "extra_agreeing_secondary_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "extra_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "memory_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "memory_distinct_origins": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_answerable": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_citation_valid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_correct_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_groundtruth_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_inherited_error": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_invalid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_justified": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_required_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_supported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_unnecessary_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 6,
+          "terminal": 6
+        },
+        "omitted": {
+          "assigned": 6,
+          "metrics": {
+            "extra_agreeing_secondary_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "extra_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "memory_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "memory_distinct_origins": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_answerable": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_citation_valid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_correct_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_groundtruth_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_inherited_error": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_invalid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_justified": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_required_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_supported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unnecessary_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 6,
+          "terminal": 6
+        },
+        "superseded": {
+          "assigned": 6,
+          "metrics": {
+            "extra_agreeing_secondary_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "extra_citations": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "memory_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "memory_distinct_origins": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_answerable": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_citation_valid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_correct_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_groundtruth_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_inherited_error": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_invalid": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_justified": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_required_coverage": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_supported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 6
+            },
+            "parent_unnecessary_abstain": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_correct": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            },
+            "parent_unsupported_wrong": {
+              "assigned": 6,
+              "observed": 6,
+              "sum": 0
+            }
+          },
+          "missing_terminal": 0,
+          "observed_responses": 6,
+          "terminal": 6
+        }
+      },
+      "observed_usage_cost_microusd": 564810,
+      "output_tokens": 5588,
+      "physical_calls_observed": 60,
+      "report_quorums": [
+        {
+          "completion_decisions": [
+            "ABSTAIN"
+          ],
+          "correct_completion_lower": 0,
+          "correct_completion_upper": 0,
+          "counterfactual_unidentified": false,
+          "decision": "ABSTAIN",
+          "invalid_ballots": 0,
+          "state": "complete_no_quorum",
+          "truth_correct": 0,
+          "world": 20001
+        },
+        {
+          "completion_decisions": [
+            "ABSTAIN"
+          ],
+          "correct_completion_lower": 0,
+          "correct_completion_upper": 0,
+          "counterfactual_unidentified": false,
+          "decision": "ABSTAIN",
+          "invalid_ballots": 0,
+          "state": "complete_no_quorum",
+          "truth_correct": 0,
+          "world": 20002
+        },
+        {
+          "completion_decisions": [
+            "C"
+          ],
+          "correct_completion_lower": 1,
+          "correct_completion_upper": 1,
+          "counterfactual_unidentified": false,
+          "decision": "C",
+          "invalid_ballots": 0,
+          "state": "majority",
+          "truth_correct": 1,
+          "world": 20003
+        },
+        {
+          "completion_decisions": [
+            "C"
+          ],
+          "correct_completion_lower": 1,
+          "correct_completion_upper": 1,
+          "counterfactual_unidentified": false,
+          "decision": "C",
+          "invalid_ballots": 0,
+          "state": "majority",
+          "truth_correct": 1,
+          "world": 20004
+        },
+        {
+          "completion_decisions": [
+            "ABSTAIN"
+          ],
+          "correct_completion_lower": 0,
+          "correct_completion_upper": 0,
+          "counterfactual_unidentified": false,
+          "decision": "ABSTAIN",
+          "invalid_ballots": 0,
+          "state": "complete_no_quorum",
+          "truth_correct": 0,
+          "world": 20005
+        },
+        {
+          "completion_decisions": [
+            "B"
+          ],
+          "correct_completion_lower": 1,
+          "correct_completion_upper": 1,
+          "counterfactual_unidentified": false,
+          "decision": "B",
+          "invalid_ballots": 0,
+          "state": "majority",
+          "truth_correct": 1,
+          "world": 20006
+        }
+      ],
+      "started": 60,
+      "terminal": 60,
+      "unresolved": [],
+      "unstarted": 0,
+      "usage_missing_calls": [],
+      "valid": 60
+    }
+  },
+  "qualification": false,
+  "retained_archive_sha256": "af63d684ee8776464df9c2e6f68491e5edec04677f8d97f78482817d02730a46",
+  "source_commit": "e9678355c79984e8fc3530f0644c1ba6fa4de9af",
+  "started": 120,
+  "successors_dispatched": false,
+  "terminal": 120,
+  "unresolved": [],
+  "verified_raw_files": [
+    {
+      "bytes": 103,
+      "name": "audit.json",
+      "sha256": "24b41c51e7eb2f2aa3cb22ba1121dc7345f5a8a61e594ac50f113be49ad8ec96"
+    },
+    {
+      "bytes": 648512,
+      "name": "events.jsonl",
+      "sha256": "bb5ec0e09d7fd820855f440c8a50afe2bcd3158632bee0a0ac7eb166279d381c"
+    },
+    {
+      "bytes": 49446,
+      "name": "manifest.json",
+      "sha256": "77e829d62f787120f190d063ae758c62030df7573b638665fb4da7e0dbbf1556"
+    },
+    {
+      "bytes": 258282,
+      "name": "outcomes.json",
+      "sha256": "73d4d0d2cf29eb476892d223c26b53bfe1a9f9f696063109249716ae05552f42"
+    },
+    {
+      "bytes": 29,
+      "name": "reporting.json",
+      "sha256": "8ecd99135a54a772e0858fc60ad02dce69163b34a1e165be1648cc6027f6280b"
+    },
+    {
+      "bytes": 174558,
+      "name": "summary.json",
+      "sha256": "4fcca2ed1529a95c11e15e9cb4bb270b4f4eac89f6adca97dae7645701e4cb9b"
+    }
+  ]
+}

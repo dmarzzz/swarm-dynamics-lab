@@ -1,41 +1,43 @@
 {
-  "schema": "poietic-launch-state-v0.1",
-  "updated_utc": "2026-10-04T04:34:07.328908+00:00",
+  "schema": "poietic-launch-state-v0.2",
+  "updated_utc": "2026-10-04T07:03:34.312279+00:00",
   "study": "poietic-agents",
-  "design_status": "published-registered-awaiting-independent-review",
-  "implementation_status": "not-started",
+  "design_status": "reviewed-amended-offline-tested",
+  "implementation_status": "S0-launcher-and-lineage-instrument-built",
   "execution_status": "not-launched",
   "qualification_status": "not-run",
   "scientific_conclusion": "none",
   "process_compliance": "no-run-to-assess",
   "publication": {
-    "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/4a373dad56aab6a7129f16748a2edf312ce6d048/researchers/vishesh/notes/poietic-agents/README.md",
+    "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/f502b05a062925bdaa419d822e1e75f912bb4be4/researchers/vishesh/notes/poietic-agents/README.md",
     "public_page": "https://swarm-live.pages.dev/#/x/poietic-agents",
-    "public_registration": "verified",
+    "public_registration": "verified-run-request",
     "public_registration_receipt": "registration-receipt.json",
-    "documentation_preflight": "passed-for-design-version-only",
-    "documentation_preflight_receipt": "public-plan-verification.json",
-    "rendered_page": "verified title, TLDR, immutable plan link, protocol excerpt and 0 runs; 2026-10-04 UTC",
-    "native_launch_preflight": "must-repeat-after-runtime-freeze"
+    "documentation_preflight": "passed-run-request-design-only",
+    "documentation_preflight_receipt": "public-plan-verification-run-request.json",
+    "rendered_page": "Verified updated immutable URL, approved-budget summary, protocol and zero runs in browser on 2026-10-04 UTC",
+    "native_launch_preflight": "must-repeat-after-runtime-freeze",
+    "source_commit": "f502b05a062925bdaa419d822e1e75f912bb4be4",
+    "expected_plan_sha256": "e4faaf96c990874fe3b0d246078c1cf143ffd906cccc6003804e12e245dfc379"
   },
   "gates": {
-    "independent_design_review": "pending",
+    "independent_design_review": "historical review received; P1-P3 resolved",
     "question_specific_survey": "incomplete",
     "accepted_hypothesis": "absent",
-    "exact_runtime_and_assignments": "unresolved",
-    "offline_instrument_checks": "not-implemented",
+    "exact_runtime_and_assignments": "model routes, source and assignment generator fixed; deployment freeze pending",
+    "offline_instrument_checks": "54 passed",
     "model_qualification": "not-run",
-    "budget_authorization": "not-recorded",
-    "dedicated_machine_allocation": "not-requested-before-readiness",
+    "budget_authorization": "direct owner launch instruction accepts preceding USD 2 proposal",
+    "dedicated_machine_allocation": "central allocation required; previous candidate now occupied; none held",
     "public_plan_and_run_tldr_preflight": "design-documentation-check-passed; native-run-admission-pending"
   },
   "review_task": "review-poietic-agents-design",
   "prior_art_task": "heterogeneous-methods-review",
-  "authorized_api_usd": 0,
-  "authorized_infrastructure_usd": 0,
-  "planned_run_count": 0,
+  "authorized_api_usd": 1.5,
+  "authorized_infrastructure_usd": 0.5,
+  "planned_run_count": 3,
   "started_run_count": 0,
-  "next_action": "build-poietic-agents-instrument and review-poietic-agents-design; native dispatch remains blocked",
+  "next_action": "Central dispatcher resolves approved OpenRouter selector, then fresh allocation/source/public admission before S0-01",
   "evidence": {
     "confidence": 0,
     "scale_max": 4,
@@ -43,5 +45,39 @@
     "planned_S1_jobs": 768,
     "qualification_calls": 0,
     "note": "Editorial HX-31 score 94 is interest, not empirical confidence."
+  },
+  "scientific_outcomes": 0,
+  "launchable": false,
+  "remaining_gates": [
+    "verify approved OpenRouter credential provenance/availability without exposing or transferring it by assumption",
+    "central run-queue dispatch",
+    "fresh exclusive approved-fleet allocation and idle-workload check",
+    "deploy frozen source and dependencies; verify receipts",
+    "fresh exact public-plan/page admission",
+    "run S0 and reconcile before S1 preparation"
+  ],
+  "s1_not_yet_admitted": [
+    "qualified hash match",
+    "A2 development selection and construction receipt",
+    "S1 budget and stage admission"
+  ],
+  "observed_model_calls": 0,
+  "actual_poietic_api_spend_usd": 0,
+  "host_claimed": false,
+  "authorized_total_cumulative_usd": 2,
+  "allocation_preparation": {
+    "candidate": null,
+    "claimed": false,
+    "read_only_workload_check": "no active containers or recognized experiment workers; only sshd/systemd above 1% CPU",
+    "must_recheck_current_claims_and_workload_before_claim": true,
+    "reason_not_claimed": "approved credential selector unresolved; central dispatcher must select fresh eligible capacity",
+    "previous_candidate": "sim-dmarz",
+    "previous_candidate_now_occupied": true
+  },
+  "central_dispatch": {
+    "status": "submitted-awaiting-credential-admission",
+    "source_commit": "2796183fe3ed42dc3aa2559e2d2750d87ee14044",
+    "scope": "S0-01 only; private request receipt retained outside public repository",
+    "model_calls_observed": 0
   }
 }

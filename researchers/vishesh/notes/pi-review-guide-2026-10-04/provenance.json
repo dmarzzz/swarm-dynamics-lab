@@ -1,0 +1,22 @@
+{
+  "kind": "presentation-update",
+  "source_publication_commit": "baaccc040b0716b4074f6446580c380c72be456b",
+  "source_sha256": {
+    "pi-review-2026-10-04/review-2026-10-04/scientific-review.json": "d4853095ab4415eacfe4d09b9b29dc853795be257a2e7b016840e5e191135eee",
+    "pi-review-2026-10-04/review-2026-10-04/source-map.json": "8ece8cd2721927b14237ad72dce262cef0f373cc13a31b74090e44eb7d84cb80",
+    "pi-review-2026-10-04/review-2026-10-04/findings.json": "bf8c271f0939e8d1b6e0d8bf592fa8fd6e152774d23d39d199549106da1e7bdc",
+    "pi-review-2026-10-04/review-2026-10-04/methodology-guide-review.json": "8028032f7f2d4ddfec7c8ac1ac6b005a5a94e03cf76104d7ec65017eeba97f11",
+    "pi-review-2026-10-04/review-2026-10-04/regrowth-avalon-review.json": "e1503bc9b5ac584b9a61674b39d50e7d5e3fded57d9bc1b82a77b98be0cd73a9",
+    "pi-review-2026-10-04/review-2026-10-04/evidence-projects-review.json": "1f58211bcf37900b28174a5e9feed5b02df7481f7d26b1e011b505031aec81be"
+  },
+  "assessment_basis": "Original dated scientific review; later results excluded. Concise editorial judgments independently checked against the frozen review.",
+  "coverage": {
+    "projects": 10,
+    "study_versions": 21,
+    "scenarios": 110,
+    "proposals": 16,
+    "research_areas": 8,
+    "project_findings": 57
+  },
+  "no_new_experiments": true
+}

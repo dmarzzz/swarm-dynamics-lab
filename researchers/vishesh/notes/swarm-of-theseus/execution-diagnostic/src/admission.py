@@ -14,12 +14,11 @@ def fetch(url):
 def raw(url):return url.replace('https://github.com/','https://raw.githubusercontent.com/').replace('/blob/','/')
 def validate(receipt,revision,assignments,now=None):
  now=time.time() if now is None else now
- required={'experiment':EXPERIMENT,'source_commit':revision,'instrument_sha256':source_hash(),'assignments_sha256':digest(assignments),'model':MODEL,'max_calls':144,'cap_usd':5,'max_seconds':7200,'workers':1,'retries':0,'input_rate':1,'output_rate':5,'exclusive_claim_verified':True,'public_page_verified':True,'dependencies_verified':True,'research_review_status':'diagnostic-approved'}
+ required={'experiment':EXPERIMENT,'source_commit':revision,'instrument_sha256':source_hash(),'assignments_sha256':digest(assignments),'model':MODEL,'max_calls':144,'cap_usd':5,'max_seconds':7200,'workers':1,'retries':0,'input_rate':1,'output_rate':5,'exclusive_claim_verified':True,'public_page_verified':True,'dependencies_verified':True,'research_review_status':'not-required-owner-direction'}
  for k,v in required.items():
   if receipt.get(k)!=v:raise GateError('admission_mismatch_'+k)
- for k in ('authority_allocation_id','owner_authorization_ref','claim_id','host','reviewer','operator','allocation_verification_ref'):
+ for k in ('authority_allocation_id','owner_authorization_ref','claim_id','host','review_policy_ref','operator','allocation_verification_ref'):
   if not receipt.get(k):raise GateError('admission_missing_'+k)
- if receipt['reviewer']==receipt['operator']:raise GateError('independent_review_required')
  for k,age in [('verified_epoch',900),('public_page_verified_epoch',900),('pricing_verified_epoch',86400)]:
   if not 0<=now-receipt.get(k,0)<=age:raise GateError('stale_'+k)
  if receipt.get('claim_until_epoch',0)<now+7200:raise GateError('claim_too_short')

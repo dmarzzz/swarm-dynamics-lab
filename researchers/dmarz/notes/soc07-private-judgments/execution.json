@@ -2,7 +2,7 @@
   "schema_version": 1,
   "study": "soc07-private-judgments",
   "status": "exploratory",
-  "amendment": "A1, 2026-10-04 UTC: execution amendment to design.json; see README section 11",
+  "amendment": "A1, 2026-10-04 UTC: execution amendment to design.json; see README section 11. A5, 2026-10-04 UTC: launch manifest m2 after the m1 S1-Q competence failure; see README section 11, A5",
   "authorized_stages": [
     "s0",
     "s1q",
@@ -14,9 +14,9 @@
     "s3"
   ],
   "launch_manifest": {
-    "version": "m1",
+    "version": "m2",
     "note": "Everything a model switch would change. A switch is a dated amendment to this block (plus a budget entry for the new qualification set), then a fresh S0, a fresh reviewer approval and a fresh S1-Q on new worlds. No code changes.",
-    "model": "claude-haiku-4-5-20251001",
+    "model": "claude-sonnet-4-6",
     "temperature": 0.7,
     "thinking": {
       "type": "off",
@@ -29,10 +29,10 @@
       "final_private": 64,
       "qualification": 128
     },
-    "input_usd_per_million": 1,
-    "output_usd_per_million": 5,
-    "price_note": "Claude Haiku 4.5 list price, USD 1 input and USD 5 output per million tokens; the same figures the sybil-scale-api and discussion v3 studies used on 2026-10-04",
-    "qualification_set": 0
+    "input_usd_per_million": 3,
+    "output_usd_per_million": 15,
+    "price_note": "Claude Sonnet 4.6 list price, USD 3 input and USD 15 output per million tokens; the model the market-split study ran on 2026-10-04",
+    "qualification_set": 1
   },
   "s0": {
     "id": "s0",
@@ -135,6 +135,12 @@
         "aux": 0,
         "retry_allowance": 6
       },
+      "s1q.1": {
+        "max_calls": 12,
+        "public": 12,
+        "aux": 0,
+        "retry_allowance": 6
+      },
       "s1r": {
         "max_calls": 672,
         "public": 480,
@@ -172,9 +178,33 @@
     }
   },
   "review": {
-    "reviewer": "dmarz/fleet-monitor",
+    "reviewer": "dmarz (direct instruction to dmarz/orbital-orchestrator for manifest m2); dmarz/fleet-monitor reviewed m1 only and its review does not cover m2",
     "cross_researcher_review": "waived by dmarz for this study",
     "waiver": "launch/review-waiver.md",
     "paid_launch_requires": "launch/s1-approval.json"
-  }
+  },
+  "launch_manifest_history": [
+    {
+      "version": "m1",
+      "note": "Everything a model switch would change. A switch is a dated amendment to this block (plus a budget entry for the new qualification set), then a fresh S0, a fresh reviewer approval and a fresh S1-Q on new worlds. No code changes.",
+      "model": "claude-haiku-4-5-20251001",
+      "temperature": 0.7,
+      "thinking": {
+        "type": "off",
+        "budget_tokens": 0
+      },
+      "output_token_caps": {
+        "initial": 256,
+        "discussion": 256,
+        "final_public": 64,
+        "final_private": 64,
+        "qualification": 128
+      },
+      "input_usd_per_million": 1,
+      "output_usd_per_million": 5,
+      "price_note": "Claude Haiku 4.5 list price, USD 1 input and USD 5 output per million tokens; the same figures the sybil-scale-api and discussion v3 studies used on 2026-10-04",
+      "qualification_set": 0,
+      "ended": "2026-10-04: S1-Q attempt s1q-a1 (hub run soc07-private-judgments/51b1204c) failed competence, 7 of 12 correct; nothing else ran under m1"
+    }
+  ]
 }

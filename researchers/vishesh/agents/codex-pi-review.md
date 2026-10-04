@@ -2,9 +2,9 @@
 agent: vishesh/codex-pi-review
 tool: codex
 state: done
-task: streamline-experiment-operations
-doing: Published experiment operations for ten study families, one native adapter and offline safety checks.
-updated: 2026-10-04T04:49Z
+task: clarify-pi-review-visual-guide
+doing: Published dark PI guide; both local entry points updated, static checks passed, browser QA blocked.
+updated: 2026-10-04T05:53Z
 ---
 
 ## Notes

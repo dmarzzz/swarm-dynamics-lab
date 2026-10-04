@@ -4,6 +4,20 @@ from engine import execute,validate_plan
 from tasks import generate,reference_answer,evaluate
 
 class Engine(unittest.TestCase):
+    def test_fenced_json_remains_invalid_and_is_diagnosable(self):
+        task=generate('evidence','parallel',0);events=[];prompts=[]
+        def fenced(messages,*args):
+            prompts.append(messages);return '```json\n{}\n```'
+        result=execute(task.public,1,1,10,2,fenced,events.append)
+        self.assertEqual(result['failure'],'malformed_output')
+        self.assertEqual(len(prompts),2)
+        self.assertIn('no Markdown code fences',prompts[0][0]['content'])
+        formats=[e for e in events if e['kind']=='response_format']
+        self.assertEqual(len(formats),2)
+        self.assertTrue(all(e['fenced'] and not e['valid_json'] for e in formats))
+        self.assertEqual([e['reason'] for e in events if e['kind']=='plan_repair_reason'],['invalid_json'])
+        self.assertIn('invalid_json',prompts[1][-1]['content'])
+
     def test_plan_validation(self):
         for plan in ({'dependencies':{'a':['b'],'b':['a']}},{'dependencies':{'a':['a'],'b':[]}},{'dependencies':{'a':[]}}):
             with self.assertRaises(ValueError):validate_plan(plan,['a','b'])
@@ -26,9 +40,10 @@ class Engine(unittest.TestCase):
                 self.assertTrue(all('hidden_inputs' not in json.dumps(m) for m in contexts))
                 self.assertEqual(traces[-1]['kind'],'terminal')
     def test_invalid_plan_repaired_once(self):
-        task=generate('evidence','parallel',0);phases=[]
+        task=generate('evidence','parallel',0);phases=[];events=[]
         def broken(messages,deadline,actor,phase,item):phases.append(phase);return '{}'
-        r=execute(task.public,2,2,10,2,broken)
+        r=execute(task.public,2,2,10,2,broken,events.append)
+        self.assertEqual([e['reason'] for e in events if e['kind']=='plan_repair_reason'],['invalid_dependency_map'])
         self.assertIsNotNone(r['failure']);self.assertEqual(phases,['plan','plan_repair'])
     def test_transport_value_error_is_not_retried(self):
         task=generate('evidence','parallel',0);calls=[]

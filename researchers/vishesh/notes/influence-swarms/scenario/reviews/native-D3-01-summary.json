@@ -1,0 +1,41 @@
+{
+  "stage": "D3",
+  "planned": 18,
+  "terminal": 18,
+  "valid": 18,
+  "invalid": 0,
+  "acceptable": 12,
+  "qualified": false,
+  "repair_screen_passed": false,
+  "by_arm": {
+    "narrative_standard": {
+      "valid": 6,
+      "acceptable": 4,
+      "contradictions": 0,
+      "guarded_acceptable": 0
+    },
+    "matrix_standard": {
+      "valid": 6,
+      "acceptable": 4,
+      "contradictions": 0,
+      "guarded_acceptable": 4
+    },
+    "matrix_consistent": {
+      "valid": 6,
+      "acceptable": 4,
+      "contradictions": 0,
+      "guarded_acceptable": 4
+    }
+  },
+  "matrix_correct": 76,
+  "matrix_total": 90,
+  "calls": 30,
+  "input_tokens": 157795,
+  "output_tokens": 9575,
+  "actual_usd": 0.20566999999999996,
+  "usage_missing": 0,
+  "seconds": 122.27720049100026,
+  "source_signature": "75e226df87100c08fbb68529007e912110975f2d22e9e5e55fc4dd3f5fd7c719",
+  "outcomes_hash": "f4ee18b056d8a442107b592951ab388a96387548f3c14d18e74640d71b02e3af",
+  "report_errors": []
+}

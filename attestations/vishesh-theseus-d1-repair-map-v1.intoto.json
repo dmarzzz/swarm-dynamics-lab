@@ -6,7 +6,7 @@
    "externalParameters": {
     "harness": "codex",
     "model": "gpt-6-astra",
-    "prompt": "How would you propose resolving the execution inconsistencies and instrument defects? Let's propose solutions to shore up the designs and improve how we're doing this. Let's figure out how we're going to address those 13 errors and let's make a plan for those targeted repairs. Get that all proposed and built. Get it committed and pushed so we can get to the next useful experimental run."
+    "prompt": "sha256:9236cd557032bd33064d5b5ed55041dbf209ae7e0674e0fec7879c86a4b8b9a0"
    },
    "internalParameters": {
     "commit": "d202b7f2af5f3cd20c3e612e97befdddaa84bd46-dirty",

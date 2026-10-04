@@ -1,0 +1,5 @@
+world,dose,memory,arm,episodes,tasks,invalid,captured,capture_latency_med,frac_original_T,frac_original_T_captured,recovered,recovered_captured,half_time_med,entrench_frac_original
+W1_INSIDE,0.42,1,A0_no_purge,6,6,0,0.6667,3.0,0.2857,0.1072,0.0,0.0,24.5,0.3611
+W1_INSIDE,0.42,1,A1_purge,6,6,0,0.6667,3.0,0.3095,0.2143,0.0,0.0,27.5,0.3611
+W1_INSIDE,0.54,full,A0_no_purge,6,6,0,0.8333,8,0.1945,0.1333,0.0,0.0,1,0.4583
+W1_INSIDE,0.54,full,A1_purge,6,6,0,0.8333,8,0.2222,0.1667,0.0,0.0,4.5,0.4583

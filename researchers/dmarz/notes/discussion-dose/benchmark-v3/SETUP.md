@@ -1,6 +1,6 @@
 # Experiment setup record: discussion-dose-v3 / D1
 
-Status: diagnostic-only; paid run not launched by the cloud coordinator. Follow the
+Status: D1 completed and audited; both clean diagnostic gates failed. The local operator launched exactly 120 calls; the cloud coordinator dispatched none. Results and post-mortem are published with this update; owner cleanup remains recorded in the lifecycle receipt. D2 is a plan only, not authorized to start. Follow the
 [shared setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md).
 
 ## Ownership and question
@@ -24,9 +24,9 @@ lessons. Current attempt `v3-d1-a1`, parent `v3-q0-a1`.
 | G0 Question/research scope | pass for diagnosis | Existing question links/NEXT-RUN; no formal promotion | Stay in bounded development scope |
 | G1 Prospective design | pass | Existing NEXT-RUN and frozen 60-request receipt; D1-PLAN deployment amendment | Freeze committed implementation |
 | G2 Instrument | pass for offline software | [Validation](d1-offline-validation.json): 15 D1, 57 v3, 34 legacy, 12 v2 checks; coordinator Python 3.12.14 | Owner exact-Q0 integration/rehearsal still required |
-| G3 D1 admission | owner runtime checks pending | Current pre-run, manifest, immutable public-plan fetch, owner rehearsal/preflight | Owner verifies runtime and single dispatch |
-| G4 Scientific escalation | fail/closed | Q0 2/6 and 1/6 versus 5/6 | D1 only; no S1/Q1/D2 launch |
-| G5 D1 closeout | pending | No paid D1 records yet | Audit, retain/read back, report, release, owner cleanup |
+| G3 D1 admission | passed for this completed batch | [Launch receipt](launches/v3-d1-a1.json): exact-Q0, rehearsal, provider/public-plan/budget checks | No renewed dispatch |
+| G4 Scientific escalation | fail/closed | [D1](RESULTS-D1.md): Sonnet 3/6 and 3/6, Haiku 2/6 and 1/6, versus 5/6 each | [D2 plan](D2-PLAN.md) only; no S1/Q1/D2 launch |
+| G5 D1 closeout | audit/readback passed; lifecycle tracked separately | [Results](RESULTS-D1.md), [post-mortem](../reviews/v3-d1-a1-post.md), [lifecycle](results/v3-d1-a1/lifecycle.json) | Complete owner cleanup after report publication |
 
 ## Design and instrument index
 
@@ -75,8 +75,12 @@ offline regressions plus exact retained input verification on the owner host.
 
 ## Closeout
 
-D1 execution, validity, diagnostic gates, scientific interpretation, process
-compliance and delivery remain pending. After the owner-run diagnostic, preserve
-all 120 assignments and any unresolved calls, audit/hash-verify artifacts, publish
-the candid report/post-mortem and actual cost, then release the claim and retire
-only the D1 host through the authoritative owner workflow. Stop before successors.
+D1 execution, validity, preservation and exact audits passed; both model competence
+gates failed. All 120 assignments and responses are retained. The result report,
+post-mortem and conservative budget settlement accompany this update. Claim release
+and retirement of only the D1 host follow report publication and are tracked in the
+lifecycle receipt. The D2 proposal must remain unstarted.
+
+## D1 completed; D2 remains a proposal
+
+D1 reconciled 120 assigned/started/terminal/graded/analyzed calls at $0.754780, zero invalid/provider failures or missing usage. Both clean gates failed for both models. Remote and local exact-source audits and six artifact readbacks passed. Preserve runtime e9678355 and all responses. [D2-PLAN](D2-PLAN.md) proposes 48 canonical/atomic probes on the same open worlds; no implementation, server, executable manifest or inference was started. The user requires this next plan published but unstarted. Do not reuse D1 admission or its reservation for D2.

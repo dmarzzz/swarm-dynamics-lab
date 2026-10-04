@@ -1,0 +1,24 @@
+{
+  "Q0": {
+    "calls": 16,
+    "exact_reservation_usd": 3.056901,
+    "basis": "3x parent exact reservation (upper bound)"
+  },
+  "S1": {
+    "calls": 2880,
+    "exact_reservation_usd": 389.207631,
+    "basis": "3x parent exact reservation (upper bound)"
+  },
+  "total": {
+    "calls": 2896,
+    "exact_reservation_usd": 392.264532,
+    "study_nonrefundable_reservation_cap_usd": 400,
+    "derivation": "Request bodies equal the parent's except the model string, which is 8 bytes shorter (claude-sonnet-4-6 vs claude-haiku-4-5-20251001). Reservation per call = (bytes+4096) x input price + 500 x output price, and both prices are exactly 3x the parent's, so 3x the parent's exact plan (Q0 1.018967, S1 129.735877) is an upper bound; the true value is lower by 24 micro-USD per call.",
+    "expected_actual_usd_range": [
+      100,
+      140
+    ],
+    "expected_cost_basis": "Parent actual/reservation ratio 39.67/130.75 = 0.30 at identical prompt, schema and output limit; 0.30 x 392 = ~119 USD if Sonnet 4.6 token counts are close to Haiku 4.5's. Estimate, not a bill. Counts against dmarz's $500 shared allowance.",
+    "superseded": "An earlier N972-only plan (1,440 S1 calls, reservation 277.24) was replaced before any fleet or paid run; see README amendment."
+  }
+}

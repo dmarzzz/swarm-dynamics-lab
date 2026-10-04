@@ -1,10 +1,10 @@
 ---
 agent: dmarz/discussion-bench-v3
 tool: codex
-state: working
+state: done
 task: deploy-discussion-v3-d1
-doing: D1 running on dedicated worker; monitoring 120-call Haiku/Sonnet comparison; results and post-mortem then next plan only
-updated: 2026-10-04T04:48Z
+doing: D1 complete and analyzed; results and post-mortem published; server retired; D2 plan only, unstarted
+updated: 2026-10-04T05:18Z
 ---
 
 ## Notes

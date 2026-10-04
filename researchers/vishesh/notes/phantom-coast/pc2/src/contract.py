@@ -16,6 +16,11 @@ def rng(seed,stream):
 def development_world(seed,family='block'):
     if type(seed) is not int or seed not in range(300,308):
         raise ValueError('development seeds 300-307 only; reserved worlds unavailable')
+    return _world(seed,family)
+
+
+def _world(seed,family):
+    # Reserved construction is invoked only by the admitted native runner.
     if family not in ('block','scattered'):raise ValueError('family')
     g=rng(seed,'geometry/'+family)
     if family=='block':
@@ -33,8 +38,9 @@ def development_world(seed,family='block'):
 
 
 class Episode:
-    def __init__(self,w,report='misleading',policy='team',audit=False):
-        if w.get('seed') not in range(300,308):raise ValueError('development world required')
+    def __init__(self,w,report='misleading',policy='team',audit=False,*,admission=None):
+        if w.get('seed') not in range(300,308):
+            if admission is None or not admission.allows(w.get('seed')):raise ValueError('admitted world required')
         if report not in ('misleading','benign') or policy not in POLICIES or type(audit) is not bool:raise ValueError('condition')
         self.world=copy.deepcopy(w);self.policy=policy;self.audit=audit;self.events=[];self.previous=[]
         self.observations=[dict(id=f'r{i}',acquisition_id=f'r{i}',cell=c,label='WATER' if report=='misleading' else 'LAND',epoch=0,source='report',reliability=.8) for i,c in enumerate(w['region'])]

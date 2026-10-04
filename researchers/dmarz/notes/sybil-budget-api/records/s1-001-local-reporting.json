@@ -1,0 +1,19 @@
+{
+  "recorded_at_utc": "2026-10-04T05:41:12.067197+00:00",
+  "stage": "S1",
+  "source_hash": "66ea4fe1465678ff66d099eec14ea11dbf5bc69063c00e3cc57249e06db98f08",
+  "local_full_regeneration": "Interrupted after equivalent complete original-Linux audit passed; not recorded as a local verification pass or experimental failure.",
+  "interrupted_processes": "Saved-data analysis only; no model worker or API call affected.",
+  "authoritative_full_verification": "s1-001-linux-verification.json",
+  "local_visuals": {
+    "renderer": "Unchanged frozen render.replay on all saved outcomes",
+    "initial_final_retention_png_dimensions": [
+      1920,
+      1440
+    ],
+    "gif_frames": 25,
+    "all_gif_frames_decoded": true,
+    "final_and_retention_views_visually_inspected": true
+  },
+  "new_model_calls": 0
+}

@@ -1,6 +1,6 @@
 # Experiment setup record: Phantom Coast PC-2
 
-Prospective record created before implementation. [Setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Owner/operator/self-reviewer: vishesh/codex-phantom-coast; independent reviewer pending. Research status: exploratory development; no native outcomes and no accepted hypothesis.
+Prospective record created before implementation. [Setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Owner/operator/self-reviewer: vishesh/codex-phantom-coast; researcher review not required by owner direction. Research status: exploratory native pilot; qualification passed, pilot running; no formal accepted hypothesis.
 
 ## Ownership and question
 
@@ -10,11 +10,11 @@ Does misleading inherited evidence change inspection choices under a fixed budge
 
 | Gate | Status | Evidence / next action |
 |---|---|---|
-| G0 research status | Incomplete | Prior-art/hypothesis and independent-review disposition remain pending; no formal claim |
+| G0 research status | Exploratory scope recorded | No formal accepted hypothesis claimed; researcher review is optional under reviews/REVIEW-POLICY-AMENDMENT.md. Prior-art limitations remain documented, not a substituted reviewer gate. |
 | G1 prospective design | Pass for development | PLAN.md published at a250808391bb2e1f224a12d23d3d2f1fcbc0ace0 before source; PLAN-PUBLICATION.json verifies public bytes |
-| G2 instrument | Partial pass | Development contract: 20 tests pass (VALIDATION.json); native adapter, persistence and runtime qualification remain unimplemented |
-| G3 admission | Blocked | Exact-source review, qualification launcher, current plan registration/page, budget carry-forward and fresh exclusive host required |
-| G4 qualification | Not run | Proposed 24 requests; PC-1 does not qualify inspection choices |
+| G2 instrument | Offline pass, self-validated | RUNNER-VALIDATION.json: 44 checks; native adapter, persistence, carry-forward budget, qualification, analysis and event rendering implemented. Native Q0 now passes; researcher review is optional. |
+| G3 admission | Pass for Q0 and S1 | Registered immutable plan, rendered public page, lineage-bound cumulative budget, Linux runtime and exclusive Mars allocation verified before each launch. |
+| G4 qualification | Passed | Q0-A1: 24/24 valid, 432/432 labels and 12/12 targets correct; reviews/Q0-A1-POST.md. S1-A1 running under fresh admission. |
 | G5 development closeout | Pass | DEVELOPMENT-POST.md and parent ITERATION-02.md; no paid run or resources |
 
 ## Design and instrument index
@@ -23,12 +23,14 @@ Does misleading inherited evidence change inspection choices under a fixed budge
 
 ## Current attempt admission
 
-No run admitted. No machine claimed or cloud resource created. No credentials consumed. Prior budget authority: phantom-coast-usd5-20261004; already spent $0.162723246. Previous 540-call envelope remains closed. A new envelope, if admitted, must carry historical spend and fit the existing total; no automatic top-up. Public plan publication is distinct from hub registration. Independent review and native qualification remain required.
+Q0-A1 completed and S1-A1 launched on 2026-10-04 UTC with pinned source `6b357eb5b7be8b9b789843116ff4e44043415988`. [Q0 post-mortem](reviews/Q0-A1-POST.md) and [prospective S1 assessment](reviews/S1-A1-PRE.md), published at `82fe3fc4`, record the gates. The registered [public page](https://swarm-live.pages.dev/#/x/phantom-coast-pc2) binds the immutable PLAN. One exclusive approved Mars fleet allocation serves this study; no new machine was provisioned. Private allocation/credential receipts remain private.
+
+Budget authority remains phantom-coast-usd5-20261004: USD 5 total, USD 4 API plus USD 1 infrastructure. The prior 540-call envelope stays closed with USD 0.162723246 spent. Q0 added USD 0.005229966. S1 has no additional budget grant. The owner explicitly requested direct launch instead of the queue and approved temporary OpenRouter credential transfer. The unstarted queue request was withdrawn before dispatch.
 
 ## Attempt and repair history
 
-Parent PC-1 Q0/S0 completed validly; next-stage development addresses a different observation-choice mechanism. This record is prospective, fixing the earlier late-SETUP process gap. Current action: complete offline package and measured PC-1 replay, then hand over exact review/admission requirements. Future native results must be a separate cohort with evidence_confidence 0 until measured.
+PC-1 Q0/S0 are separate completed cohorts. PC-2's first process launch failed before world construction or any native call because the staged credential file disappeared. A zero-call reconciliation preserves that failure, its log and attempt identity. Restaging to a restricted temporary file resolved the issue; no model response was retried and no budget reset. Q0-A1 then passed once; S1-A1 is in progress without scientific instrument changes.
 
 ## Closeout
 
-Execution: no native attempt. Development validation: 20/20. Scientific effect: untested. Process: prospective plan/setup published before implementation; public bytes verified, no run registration claimed. Reporting: parent measured replay checked against records and in browser. Costs: unchanged cumulative $0.162723246, no new spend. Next action: exact-source independent review, followed by native adapter/qualification and fresh G3 admission; the research owner is responsible for that transition.
+Pending S1 reconciliation, public artifact readback, visual QA, post-mortem, credential removal and allocation release. Missing or adverse outcomes must be retained. Development record and its 44-test evidence remain historical; native receipts supersede their earlier no-run status.

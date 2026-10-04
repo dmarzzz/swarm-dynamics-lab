@@ -1,0 +1,279 @@
+{
+  "stage": "S4-C2",
+  "assignments": [
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "c27911254212",
+      "scenario": "alarm",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "c27911254212",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "c27911254212",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "c27911254212",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "c27911254212",
+      "scenario": "alarm",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "c27911254212",
+      "scenario": "alarm",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "74a19dd28f70",
+      "scenario": "alarm",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "74a19dd28f70",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "74a19dd28f70",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "74a19dd28f70",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "74a19dd28f70",
+      "scenario": "alarm",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "74a19dd28f70",
+      "scenario": "alarm",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6d90424ab632",
+      "scenario": "alarm",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6d90424ab632",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6d90424ab632",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6d90424ab632",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6d90424ab632",
+      "scenario": "alarm",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6d90424ab632",
+      "scenario": "alarm",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "73af98a4cad6",
+      "scenario": "alarm",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "73af98a4cad6",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "73af98a4cad6",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "73af98a4cad6",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "73af98a4cad6",
+      "scenario": "alarm",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "73af98a4cad6",
+      "scenario": "alarm",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "fabae569b1a1",
+      "scenario": "alarm",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "fabae569b1a1",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "fabae569b1a1",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "fabae569b1a1",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "fabae569b1a1",
+      "scenario": "alarm",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "fabae569b1a1",
+      "scenario": "alarm",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    }
+  ],
+  "assigned": 152,
+  "parent_sha256": {
+    "configuration.json": "3c546ea43c2119360b944766c85909ec08357b417b8cf15c4dfefb79d037c076",
+    "manifest.json": "27907e0e67c0e5f14ca09a6e29f79cda04c90aac5d8758eb2d3fe7d789c4b993",
+    "records.json": "b67ea6044e4bfee59d7044177d5c6bfcab387074ec4fb399fdad0a63fc484c45",
+    "calls.json": "89e3598fdb0ee7d46b79add928ae59813af5a70363cae79b457e47ff5cec5559",
+    "summary.json": "581860127c91dc4a1490d00da3b688ffdc3b4ac33fa8cbc912a2df4ed7dddb82"
+  }
+}

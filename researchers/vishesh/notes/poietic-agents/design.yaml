@@ -1,15 +1,15 @@
-schema: poietic-design-v0.1
+schema: poietic-design-v0.2
 id: poietic-agents
 title: Poietic Agents
 owner: vishesh
 author: vishesh/codex-heterogeneous
-status: exploratory-design
+status: offline-instrument-native-unqualified
 source_question: HX-31
 consolidated_questions:
 - HX-37
 supporting_questions:
 - HX-33
-implementation_started: false
+implementation_started: true
 arms:
   A0: generalists
   A1: shared_cache
@@ -49,6 +49,8 @@ cfg:
   job_deadline_seconds: 120
   max_model_turns_per_job: 4
   max_tool_operations_per_job: 12
+  epoch_release_interval_seconds: 120
+  clock_includes_adaptation_and_observation: true
 splits:
   offline_development:
     namespace: poietic-dev-v1
@@ -94,8 +96,8 @@ stages:
     status: blocked
     logical_requests: 144
     max_physical_requests: 288
-    proposed_api_usd: 5
-    proposed_infrastructure_usd: 2
+    proposed_api_usd: 1.5
+    proposed_infrastructure_usd: 0.5
     max_wall_hours: 2
     worker_count: 1
     qualification:
@@ -103,6 +105,9 @@ stages:
       schema_valid_at_least: 48
       denominator_per_contract: 48
       protected_access_violations: 0
+    lifecycle_cases_per_contract: 12
+    requests_per_case: 4
+    models_manifest: models.json
   S1:
     status: blocked
     root_count: 4
@@ -113,6 +118,11 @@ stages:
     proposed_infrastructure_usd: 4
     max_wall_hours: 4
     worker_count: 1
+    physical_calls_per_lineage: 450
+    static_construction_physical_calls: 400
+    instrument_repair_physical_calls: 400
+    diagnostic_recovery_successes_per_epoch: 5
+    diagnostic_advance_successes_per_root: 43
   S2:
     status: closed-research-gates
     sample_size: null
@@ -130,7 +140,7 @@ primary_estimand:
   s2_proposed_absolute_quality_min: 0.95
   s2_joint_rule: all_three_one_sided_95_percent_bounds_pass
 budget:
-  authorization_status: not-recorded
+  authorization_status: explicit-user-confirmation-pending
   authorized_api_usd: 0
   authorized_infrastructure_usd: 0
   independent_ledgers:
@@ -138,6 +148,9 @@ budget:
   - physical_usage
   - synthetic_toll_sensitivity
   shared_budget_must_not_reset: true
+  authorized_total_cumulative_usd: 0
+  authority: AUTHORIZATION.json
+  proposed_total_usd: 2
 future_cells:
 - stable_high_overlap
 - stable_low_overlap
@@ -150,3 +163,10 @@ deferred_ablations:
 - no_service_sharing
 - no_workflow_hardening
 launchable: false
+workload_overlap:
+  denominator: required endpoint/entity/version occurrences
+  high_repeated: 4
+  high_total: 6
+  low_repeated: 0
+  low_total: 6
+  supersedes: v0.1 approximate 80/20 target

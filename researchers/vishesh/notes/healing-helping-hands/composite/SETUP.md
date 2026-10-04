@@ -10,7 +10,7 @@ Follow [the setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-S
 | G1 | pass | PLAN.md written before composite implementation, 2026-10-04 UTC | Commit |
 | G2 | pass, runtime checks pending | 16 composite + 44 existing offline checks; S0-PRE.md | Verify deployed runtime |
 | G3 S0 | admission in progress | Dedicated sim-healing-c1 created on verified account; exclusive claim merged; S0-PRE.md | Finish runtime checks and register amended plan before inference |
-| G4 | pending | No composite observations yet | Run S0 after G3 |
+| G4 | pass | S0-POST.md: composite and Jev-only 60/60; complete audit | Refresh G3 for S1 |
 | G5 | pending | No execution yet | Reconcile and close |
 
 ## Design and instrument index
@@ -19,8 +19,18 @@ Follow [the setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-S
 
 ## Attempt and repair history
 
-No C1 attempts started. Previous practical-02 is complete and adverse to swarm superiority. Intended composite omission acknowledged; old Laya history retained.
+C1-S0 completed: 60/60 composite and Jev-only, 36/60 Qwen-only; see S0-POST.md. Previous practical-02 is complete and adverse to swarm superiority. Intended composite omission acknowledged; old Laya history retained.
 
 ## Closeout
 
-Pending execution, qualification, reconciliation, visual audit, costs, durable uploads and release. Current gate G3; next action finish deployed runtime checks, register amended plan and admit S0.
+Pending execution, qualification, reconciliation, visual audit, costs, durable uploads and release. Current gate G3 for S1; next action register S1-PRE.md at the new immutable revision, verify unchanged qualified code and refresh operational receipts.
+
+## Cycle closure
+
+C1-S0 qualified, C1-S1 failed, C2-S0 failed before provider dispatch. See RESULTS.md and C2-S0-POST.md. G3 for any new attempt is blocked pending a newly registered prospective transport/recovery plan and current allocation; the repair allowance is consumed. Health preflight fix passes 19 offline checks but has no new native qualification. Preserve original budget and failed reservations. Resource release and teardown follow durable artifact verification.
+
+## C3 continuation
+
+Owner requested another run after C1/C2 closure. Prospective design committed as 289c285f before implementation; see [C3 pre-assessment](C3-PRE.md). Worker-local relay/supervisor replaces the reverse SSH tunnel, checks transport between requests, durably caches validated responses and permits GET-only recovery. Original cumulative budget remains authoritative. [Offline validation](C3-offline-validation.json): 24 composite and 22 practical tests passed. Native qualification and fresh public/resource admission remain outstanding. Current coordinator orbital-one could not be resolved from this operator; no C3 model call or machine allocation has occurred.
+
+C3 implementation published at 90510135d74bf86eaaf74345c55174c91e4150e8. Plan registration through the former reporting host was rejected by platform approval review because no current exclusive claim authorizes its use. No registration was performed, no C3 public readback passed, and no model call or provisioning occurred. Required next input: reachable authorized fleet coordinator connection. Do not bypass the allocation boundary.

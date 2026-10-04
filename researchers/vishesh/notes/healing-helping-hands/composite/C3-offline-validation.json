@@ -1,0 +1,21 @@
+{
+  "attempt": "C3",
+  "checked_at": "2026-10-04T06:54:37.587635+00:00",
+  "model_calls": 0,
+  "composite_tests": 24,
+  "practical_tests": 22,
+  "status": "passed",
+  "native_transport_qualified": false,
+  "coverage": [
+    "secret-safe errors",
+    "wrong/dead/stale relay",
+    "original budget and uncertain reservations",
+    "atomic response cache and settlement",
+    "invalid response cannot settle",
+    "lost-response GET recovery with no POST resend",
+    "uncertain request not resent",
+    "disk credential refused",
+    "paired model contracts",
+    "practical propagation controls"
+  ]
+}

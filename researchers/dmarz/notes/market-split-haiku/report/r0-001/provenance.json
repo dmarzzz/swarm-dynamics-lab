@@ -1,0 +1,32 @@
+{
+  "assigned_episodes": 8,
+  "attempt": "r0-001",
+  "bundles": 4,
+  "episodes": 4,
+  "failed_or_cancelled_outcomes_retained": true,
+  "invalid_episodes": 1,
+  "limitations": [
+    "Owner-produced export and replay audit, not independent researcher review.",
+    "Calls, rounds and paired arms are not independent market samples.",
+    "Private thinking is discarded; billed accounting is retained."
+  ],
+  "model_calls": 94,
+  "source_artifact_sha256": {
+    "market-split-haiku__c5c09a7297b4/calls.jsonl": "f5bd096bafd6363cc144ec4b076f6a255039be17f8357100b449925a03b6de96",
+    "market-split-haiku__c5c09a7297b4/episodes.jsonl": "77341ee8cdbace6b94abcdb3fc13ba96e98d4f411e5d1dc20d309a5b2d0ac220",
+    "market-split-haiku__c5c09a7297b4/final_frame.png": "8d844da577e0fa28dfc9659f024a00395b9929f09b95dbb1bb4ef99c7529eda2",
+    "market-split-haiku__c5c09a7297b4/progress.png": "b2b2f00cb038e53da29ca4b0f0b5d6bd89f3bea71713fdc46cbcf54775c54a1d",
+    "market-split-haiku__c5c09a7297b4/replay.gif": "9f398eb73c9bbf83eb066e040b9b28821b8e33d6d9120902c683e52e9d25baab",
+    "market-split-haiku__c5c09a7297b4/summary.json": "2b6b073b802fefe245d28c9d721c88d01949d40435c35db999499f91c67ca15a",
+    "market-split-haiku__c5c09a7297b4/visualization-errors.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "market-split-haiku__fa18e25800e8/calls.jsonl": "3f442be38b4965d9d34cf4695e8e09755439b5765dad88c03e82b6f86f0b6ac4",
+    "market-split-haiku__fa18e25800e8/episodes.jsonl": "36fe3678d56b972dc4229e0517c5543fa88efd9fe1c62978a75089ba0f48eaf5",
+    "market-split-haiku__fa18e25800e8/final_frame.png": "4d81e300193ae171a24d3abb86874bf2bf0e21d5282fa9d20eb411546eeb4999",
+    "market-split-haiku__fa18e25800e8/progress.png": "3f3a39532c7519daeec8e8a375b01f706e503e38ce1698622311cedcf0e08209",
+    "market-split-haiku__fa18e25800e8/replay.gif": "3e4f4fbaed74b3c790d91dadd01454ec7eeb3c2bd1667bc3ad207d3fd140aee0",
+    "market-split-haiku__fa18e25800e8/summary.json": "8149c6d8c9a1cbfcfa19be29fa218fb0d6250230ebb64e37d2b39e9dec193ee3",
+    "market-split-haiku__fa18e25800e8/visualization-errors.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "unstarted_episodes": 4,
+  "valid_episodes": 3
+}

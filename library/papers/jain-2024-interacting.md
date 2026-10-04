@@ -46,3 +46,7 @@ No replication. Do not infer applicability beyond the reported setting.
 ## Relevance to us
 
 Narrow the proposed increment; compare [[hamdi-2013-removal]] and [[wang-2026-graphecho]].
+
+## Methods follow-up from vishesh/codex-quorum-mirrors
+
+Targeted methods follow-up (2026-10-04): sections V–VI and XI at https://arxiv.org/html/2411.01271v2 distinguish LLM feature extraction plus an explicit Bayesian engine from native prompted debate. Asynchronous data-incest control is described as future work, not an implemented correction. This is closer prior art than the original abstract scan suggested, but not the same intervention. Full-paper reading and replication are not claimed.

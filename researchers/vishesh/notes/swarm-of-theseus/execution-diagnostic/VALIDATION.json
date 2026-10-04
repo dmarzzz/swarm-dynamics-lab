@@ -7,7 +7,7 @@
   "planned_decisions": 480,
   "independent_worlds": 3,
   "planned_assignments_sha256": "c31e2d76f23856dcd4e6894b8693a0b39be5245541c8a4f84fc6f96e1a9050e9",
-  "instrument_sha256": "1d23e482d614e11a4a0256c149ae46d4ff7f5bb516cb73111d544054d989232c",
+  "instrument_sha256": "dd02f987c81f01d7f079b00a7fe2573fbc0c33452ab584b5423313077d0e11ae",
   "all_call_conservative_reservations_usd": 1.229731,
   "max_request_bytes": 3626,
   "viewer_checks": [
@@ -16,12 +16,21 @@
     "invalid command visible",
     "missing output visible"
   ],
-  "native_provider_live_validation": "not run",
-  "review_status": "same-author; independent admission pending",
+  "native_provider_live_validation": "D1 complete:144 calls, no provider errors, all usage returned; results/D1/summary.json",
+  "review_status": "not required by explicit owner direction; no independent validation claimed",
   "shared_artifact_validation": {
     "errors": 1,
     "warnings": 0,
     "preexisting_missing_artifact": "artifacts/discussion-memory-v3-film/discussion-memory-v3-film-v1.mp4",
     "theseus_artifact_errors": 0
+  },
+  "authorization_update": "Owner confirmed USD5/144 calls, explicitly waived researcher review and authorized a new dedicated machine if occupied. Iteration uses change/run/postmortem/plan revision within cumulative authority.",
+  "measured_closeout": {
+    "model_calls": 144,
+    "assigned_decisions": 480,
+    "model_cost_usd": 0.178341,
+    "retries": 0,
+    "score_disagreements": 0,
+    "raw_archive_hash_verified": true
   }
 }

@@ -3,7 +3,7 @@ id: sybil-followups
 type: task
 title: Ship parallel Sybil verification-budget and newcomer-trust follow-ups
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/sybil-specialists
 for: dmarz
@@ -14,7 +14,13 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 claimed_at: 2026-10-04T03:31Z
-updated: 2026-10-04T04:57Z
+updated: 2026-10-04T05:45Z
+outputs:
+- researchers/dmarz/notes/sybil-budget-api/RESULTS.md
+- researchers/dmarz/notes/sybil-budget-api/reviews/s1-001-post.md
+- researchers/dmarz/notes/sybil-newcomer-api/RESULTS.md
+- researchers/dmarz/notes/sybil-newcomer-api/reviews/s1-001-post.md
+- researchers/dmarz/notes/sybil-scarcity-plan/README.md
 ---
 
 ## Goal
@@ -26,5 +32,6 @@ Create, validate, deploy and analyze two exploratory API experiments building on
 - [x] Both plans and owner review waiver committed before paid runs.
 - [x] Scripted validation and clean model qualification pass for both studies.
 - [x] Both bounded comparisons deployed in parallel under the shared owner API budget.
-- [ ] Recorded results, final images and measured replays published and reconciled.
-- [ ] Workers stopped, claim released, provenance and repository checks pass.
+- [x] Recorded results, final images and measured replays published and reconciled.
+- [x] Workers stopped, claim released, provenance and repository checks pass.
+- [x] Successor scarcity plan published with explicit NO START; no implementation, registration, queue, allocation or experimental calls.

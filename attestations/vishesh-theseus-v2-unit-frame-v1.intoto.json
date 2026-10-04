@@ -5,7 +5,7 @@
    "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
    "externalParameters": {
     "harness": "codex",
-    "prompt": "Build and verify a clear visual explanation of the improved experiment."
+    "prompt": "sha256:eb3ff263da086a5aeeb2394bd48dbd7c0c5ce42edbee052794ab253a0b91dfde"
    },
    "internalParameters": {
     "commit": "addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty",

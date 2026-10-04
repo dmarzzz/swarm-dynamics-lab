@@ -84,6 +84,22 @@ search_log:
   date: '2026-10-04'
   results: 9
   new: 9
+- where: web
+  query: multi agent duplicate evidence provenance; data incest LLM evidence; correlated
+    majority voting multi-agent debate (selected primary hits)
+  date: '2026-10-04'
+  results: 4
+  new: 2
+- where: openalex
+  query: multi agent debate majority voting
+  date: '2026-10-04'
+  results: 8
+  new: 3
+- where: openalex
+  query: collective decision quorum social information
+  date: '2026-10-04'
+  results: 10
+  new: 9
 ---
 
 ## Scope

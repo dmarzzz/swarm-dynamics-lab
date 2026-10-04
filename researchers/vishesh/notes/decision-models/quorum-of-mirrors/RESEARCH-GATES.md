@@ -1,5 +1,7 @@
 # Research gates and review packet — 2026-10-04
 
+> Current admission update, 2026-10-04: the owner reaffirmed that researcher review is not required. The pinned [owner direction](OPERATOR-AUTHORIZATION.json) and [Q1 pre-run assessment](reviews/Q1-01-pre.md) supersede earlier researcher/survey-acceptance launch blockers for this bounded exploratory screen. Prior-art limitations and historical verdicts remain unchanged. The operator handles registration, fresh allocation and execution under the existing budget; no user action is requested.
+
 Quorum asks whether a decision system can distinguish repeated reports from independent observations, and whether paying for discussion improves that decision. Its present value is a transparent, inexpensive stress test and a comparison against simple source-counting code. It is not the discovery of repeated-evidence bias. **No research clearance or new native run is claimed.**
 
 ## Findings that change the next run
@@ -75,3 +77,17 @@ The [PI assessment](../../pi-review-2026-10-04/review-2026-10-04/scientific-phan
 | Source dependence and novelty | Conditional independence is constructed only within a world; distinct real source IDs are not proof of independence. New close antecedents narrow contribution and keep research gate open. |
 
 Final refresh correction: the reviewer proved that fixed multiplicity support reveals root MAP without IDs. The roadmap now explicitly treats partial ancestry as withheld-metadata use, includes the count-only shortcut and matches pooled instructions. This corrects our earlier information-boundary interpretation for this particular pilot; broader missing-ancestry impossibility is not its measured contrast.
+
+## Continuation toward next-run readiness
+
+2026-10-04, after the owner requested implementation: targeted primary methods comparison of Jain and Jin is now appended to their catalogue entries, without upgrading abstract-depth records to full reads. The comparison supports a scoped instrument/engineering replication, not a novel information theorem.
+
+Three further rounds remain high-yield. The web round inspected primary Minority Sentinel and AceMAD records (known), the developer's duplicate-evidence incident guide (new, https://github.com/roberteisenberg/langgraph/blob/main/phases/phase6-multi-agent/GUIDE.md), and the primary Adaptive Stability Detection paper (new, https://openreview.net/pdf?id=Vusd1Hw2D9): 2/4 new. Other aggregator/commentary search hits were not relied on for scientific claims.
+
+The two OpenAlex rounds are archived in [the continuation ledger](research/search-index-continuation-2026-10-04.json). Debate/voting returned eight distinct relevant works after merging three records of Demystifying Multi-Agent Debate; three are new leads (Free-MAD, EMS, MACA). The neighbouring collective-decision vocabulary returned ten distinct metadata/abstract records, nine uncatalogued; only Ward 2012 was already present. These are background leads at index/abstract depth, not fresh primary full reads or evidence of direct LLM transfer. No favourable terminal rounds were substituted. The survey therefore has 15 recorded rounds but still fails saturation (3/8 and 9/10); it stays in progress.
+
+[NEXT-RUN-PLAN.md](NEXT-RUN-PLAN.md) was published before the Q1 implementation. Pure fixture preparation and software checks proceed under the owner's instruction to prepare the next run. All native launch remains blocked by the actual repository survey/hypothesis state, separately from the completed design review. This does not relabel the current hunch as an accepted hypothesis or run a scripted scientific sweep.
+
+## Shared-survey review cross-check
+
+Final refresh, 2026-10-04: `llm-agent-swarms` passes the mechanical gate, but all three different-researcher verdicts remain `revise`, including the completed [latest re-review](../../../../../reviews/llm-agent-swarms--dmarz-inbox.md). Its remaining requirements are the specific-law replication overclaim, missing attention-theorem assumptions, and inconsistent Flag Game source numbers. The owner already has these in their inbox; the re-review task being done is not a passing verdict. This relevant shared survey may eventually support Quorum's correlated-evidence grounding, supplemented by the closest-prior comparisons here, but cannot currently admit an accepted hypothesis. We have not changed another researcher's survey or manufactured acceptance. The broader `vishesh-decision-models` survey independently remains unsaturated. The existing design review is received and amended; formal research approval is the remaining review dependency.

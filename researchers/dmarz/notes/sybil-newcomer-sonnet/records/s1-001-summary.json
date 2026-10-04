@@ -1,0 +1,39 @@
+{
+  "params": {
+    "stage": "S1",
+    "backend": "anthropic",
+    "batch": "s1-001",
+    "source_hash": "a0fa76922ed6000bb07bca6c9d9bbae312b566f4e4cd7271e147c87f75833ed4",
+    "code": "bbd6a372ce982be4af17049262a1ba48635373e2"
+  },
+  "planned": 1944,
+  "started": 1944,
+  "terminal": 1944,
+  "graded": 1944,
+  "analyzed": 1944,
+  "invalid": 0,
+  "not_started": 0,
+  "model_calls": 1944,
+  "cost_usd": 9.045309,
+  "input_tokens": 2690538,
+  "output_tokens": 64913,
+  "elapsed_seconds": 1738.6591343620003,
+  "qualification": null,
+  "study_accounting": {
+    "attempted_calls": 1980,
+    "reserved_usd": 61.728414,
+    "actual_usd": 9.172512,
+    "usage_reported_calls": 1980
+  },
+  "initial_study_accounting": {
+    "attempted_calls": 36,
+    "reserved_usd": 1.011879,
+    "actual_usd": 0.127203,
+    "usage_reported_calls": 36
+  },
+  "reporting_errors": [],
+  "visualization": {
+    "mapping": "v1",
+    "frames": 8
+  }
+}

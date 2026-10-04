@@ -75,27 +75,27 @@
     },
     {
       "id": "immune-response-v3",
-      "title": "Immune Response v3",
+      "title": "Immune Response",
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/immune-response-v3",
-      "setup_path": null,
+      "setup_path": "researchers/vishesh/notes/immune-response-v3/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md",
       "adapter": null,
       "checked_at": "2026-10-04T04:40:34Z",
       "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Create or link the current setup record; reconcile the interrupted attempt and subsequent cleanup record, preserve its ledger, and verify the approved Dmarz provisioning path before replacement."
+      "next_action": "Finish verified dedicated-host provisioning, register the pinned A3 public plan, then queue bounded dispatch with the preserved cumulative ledger."
     },
     {
       "id": "influence-swarms",
       "title": "How to win agents and influence swarms",
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/influence-swarms/scenario",
-      "setup_path": null,
-      "postmortem_path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D1-01-post.md",
+      "setup_path": "researchers/vishesh/notes/influence-swarms/scenario/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D3-01-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T04:40:34Z",
-      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Read LATEST-RESULTS.md and the diagnostic post-mortem; qualify a prospectively amended architecture before comparison. Preserve the satisfied single researcher review and its scope."
+      "checked_at": "2026-10-04T06:30:00Z",
+      "checked_commit": "528c4f70260f6c3fcda55633a06458cd1e9027b1",
+      "next_action": "D5 prepared, not launched: 59 tests and 24/24 scripted decisions pass. Read RUN-D5.md; obtain fresh dedicated-host, preserved-budget and secure-dispatch admission when launch is requested. Researcher review optional. D3 remains latest native result; D4/S1 unrun."
     },
     {
       "id": "healing-helping-hands",
@@ -120,6 +120,30 @@
       "checked_at": "2026-10-04T04:40:34Z",
       "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
       "next_action": "Create or link the current setup record; reconcile the parser repair and any subsequent held-out measurements before deciding on a new experiment. Trace replay does not create a fresh sample."
+    },
+    {
+      "id": "antsy-diversity-v7",
+      "title": "Antsy worker diversity v7",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/antsy-diversity-v7",
+      "setup_path": "researchers/vishesh/notes/antsy-diversity-v7/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/antsy-diversity-v7/reviews/S0-repair-post.md",
+      "adapter": null,
+      "checked_at": "2026-10-04T06:27:00.898397+00:00",
+      "checked_commit": "5114250e7340013a5da852ed0918b47227413570",
+      "next_action": "Qualification failed despite100 valid calls. Read the competence/cost audit; a successor needs competent perception controls, a prospective amendment and fresh qualification. S1 unrun."
+    },
+    {
+      "id": "antsy-targeted-v8",
+      "title": "Antsy targeted verification v8",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/antsy-targeted-v8",
+      "setup_path": "researchers/vishesh/notes/antsy-targeted-v8/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/antsy-targeted-v8/reviews/development-02-post.md",
+      "adapter": null,
+      "checked_at": "2026-10-04T07:02:35.547829+00:00",
+      "checked_commit": "f76f024837fab7f6fd9dc8f86f531ed861b1b80f",
+      "next_action": "Pin and stage EasyOCR runtime/model assets, obtain current bounded development admission, then freeze the instrument before fresh Q0. Offline replay does not qualify the checker."
     }
   ]
 }

@@ -1,0 +1,35 @@
+{
+  "kind": "planning_and_saved_data_validation",
+  "date": "2026-10-04",
+  "experimental_implementation": false,
+  "new_native_calls": 0,
+  "allocated_hosts": 0,
+  "readable_plan_written_before_experimental_implementation": true,
+  "relative_document_links_valid": true,
+  "historical_checking_rows_accounted": 288,
+  "historical_noncorrect_rows_classified": 26,
+  "paired_differences_reconciled": true,
+  "proposed_envelope": {
+    "qualification_calls": 24,
+    "main_max_calls": 36,
+    "total_new_max_calls": 60,
+    "prior_lifetime_calls": 428,
+    "remaining_margin_at_max": 12
+  },
+  "pending": [
+    "successor instrument and offline acceptance checks",
+    "frozen inputs/source/route",
+    "fresh qualification",
+    "public attempt registration and runtime receipts",
+    "exclusive fleet allocation before any native run"
+  ],
+  "new_primary_sources_verified": {
+    "papers": 2,
+    "arxiv_crossref_problems": 0
+  },
+  "repository_validation": {
+    "errors": 0,
+    "existing_unresolved_library_link_warnings": 5,
+    "historical_evidence_metadata_current": true
+  }
+}

@@ -1,0 +1,68 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "when ur done with a run please push the results to github and a postmoterm and include analysis with the results and let me know when u have also pushed another wxperiment plan but dont start"
+   },
+   "internalParameters": {
+    "commit": "5a281b08afa25e4509eadd8df262baa8a08f74f3-dirty",
+    "session": "codex:01a1047e-d018-7200-99d4-ef93e90cd5c4"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "b7f940fe3708af9f9bdee89cc578c1331d3f5bfb32fdf14cfa3226e1acb02bef"
+     },
+     "uri": "researchers/dmarz/notes/market-split-api/report/src/qualification_plot.py"
+    },
+    {
+     "digest": {
+      "sha256": "1c220b4e126bcae589a14949b690bca59feb70b7903f9d99bf74da11c97b1a0c"
+     },
+     "uri": "researchers/dmarz/notes/market-split-haiku/report/r0-001/episode-results.csv"
+    },
+    {
+     "digest": {
+      "sha256": "b5d4abbd80ec5e1dbb285130915675cef6e7e248ba3e7c1f2de3a11b9ef3fdd9"
+     },
+     "uri": "researchers/dmarz/notes/market-split-haiku/report/r0-001/run-receipts.json"
+    },
+    {
+     "digest": {
+      "sha256": "cc8292fd5cdc3c7c4d2f5faa9bfa75309f0c5fe28863d26daccad27c651558f8"
+     },
+     "uri": "researchers/dmarz/notes/market-split-haiku/report/r0-001/usage.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "5a281b08afa25e4509eadd8df262baa8a08f74f3"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T04:54:08Z",
+    "invocationId": "codex:01a1047e-d018-7200-99d4-ef93e90cd5c4",
+    "startedOn": "2026-10-04T04:54:08Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "f2921cea04b9a058f93966c8a6304b243fdae8eadf6362ad2ecac246e97a634c"
+   },
+   "name": "artifacts/market-split-haiku-r0-001/market-split-haiku-r0-001-v1.png"
+  }
+ ]
+}

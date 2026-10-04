@@ -1,0 +1,2 @@
+# Python >=3.11. Everything except PNG rendering uses the standard library.
+Pillow==11.3.0

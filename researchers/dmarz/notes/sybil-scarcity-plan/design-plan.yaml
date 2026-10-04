@@ -1,0 +1,179 @@
+kind: prospective_plan_only
+study_id: sybil-scarcity-plan
+version: draft-v1
+date_utc: '2026-10-04'
+owner: dmarz
+status: draft_for_review_no_start
+authorized_to_execute: false
+registered: false
+implemented: false
+queue_request_created: false
+user_scope: Draft and publish a follow-up plan; do not start it.
+review:
+  independent_review: pending
+  inherited_prior_waiver: false
+  formal_hypothesis_accepted: false
+  novelty_claim: false
+routing:
+  halcyon_may_launch_stage_or_rerun: false
+  future_request_requires: explicit later authorization, completed gates, all inputs pushed, approved private agentops remote run queue
+  create_queue_item_now: false
+evidence_confidence:
+  score: 0
+  label: Untested
+  claim: Reducing truthful carriers at fixed population and selection lowers specialist accuracy.
+  rationale: No outcome from this proposed manipulation has been observed.
+  assessor: dmarz same-owner planning agent
+  assessed_at_utc: '2026-10-04'
+sample_size_summary: 'Observed: none. Proposed: 24 paired synthetic world roots, 1440 S1 outcomes, 972 identities and one synthesizer; separate Q0 has 48 calls on eight roots. Not a power claim.'
+anchors:
+  scale_results: ../sybil-scale-api/RESULTS.md
+  newcomer_results: ../sybil-newcomer-api/RESULTS.md
+  verified_original_carriers_per_rare_fact: 81
+  count_basis: N972 uses 243 honest outside slots, assigned cyclically to 3 rare skills by original source.
+  budget_followup_final_anchor:
+    results: ../sybil-budget-api/RESULTS.md
+    independent_paired_roots: 24
+    observed_s1_outcomes: 2880
+    n972_strong_random108_accuracy: 1.0
+    n972_strong_coverage108_accuracy: 0.9722222222222222
+    coverage108_minus4_pp: 56.94444444444445
+    descriptive_95_interval_pp: [43.05555555555556, 70.83333333333334]
+    successor_primary_unchanged: true
+fixed:
+  population: 972
+  honest_core: 486
+  original_honest_outside: 243
+  attacker_identities: 243
+  controller_messages: 243
+  controller_model_calls: 0
+  reports_per_identity: 1
+  admitted_reports: 486
+  bridge_swaps: 27
+  trusted_core_seeds: 2
+  rare_skills: [3, 4, 5]
+  common_skills: [0, 1, 2]
+  honest_check_pass: 0.9
+  false_claim: original rare truth plus 7
+  visibility: visible
+  pagerank_restart: 0.2
+  pagerank_iterations: 120
+  model: claude-haiku-4-5-20251001
+  temperature: 0
+  output_schema: same six integer-or-null skill fields as scale study
+  tools: false
+  thinking: false
+  caching: false
+  cross_call_memory: false
+  original_graph_ownership_metadata_preserved: true
+factors:
+  carriers_per_rare_fact: [1, 3, 9, 27, 81]
+  audit_checks: [4, 64, 108]
+  attacker_check_pass: [0.1, 0.9]
+  policy: [random, coverage]
+  proposed_independent_roots: 24
+  proposed_conditions_per_root: 60
+  proposed_s1_calls: 1440
+manipulation:
+  carrier_sampling: One uniform permutation per root and original honest rare-skill group; retain nested prefixes.
+  forbidden_carrier_selection_inputs: [audit_outcomes, admission_membership, model_outputs]
+  noncarrier_content: Keep identity/profile unchanged; report common skill original_rare_skill-minus3 and its correct value.
+  unchanged_across_carrier_counts: [graph, identities, ownership, age, activity, truths, attacker_reports, verification_draws, audit_trace, admitted_ids, packet_order]
+  changed_across_carrier_counts: [honest_noncarrier_skill_and_claim, rare_common_report_mix, truthful_false_rare_report_ratio]
+  actor_hidden: [ground_truth, ownership, carrier_membership, carrier_count, unselected_audit_outcomes]
+  exact_original_packet_required_at_c81: true
+splits:
+  status: provisional_unreserved_recheck_before_any_run
+  proposed_engineering_roots: [7790, 7791]
+  proposed_q0_roots: [7900, 7901, 7902, 7903, 7904, 7905, 7906, 7907]
+  proposed_s1_roots: [7800, 7801, 7802, 7803, 7804, 7805, 7806, 7807, 7808, 7809, 7810, 7811, 7812, 7813, 7814, 7815, 7816, 7817, 7818, 7819, 7820, 7821, 7822, 7823]
+  rejected_candidate: 7300–7323 overlaps influence-swarms 7300–7302
+  local_manifest_scan: No candidate-range matches in current researchers design/preregistration/plan manifests; not a global reservation.
+proposed_stages:
+  S0:
+    enabled_now: false
+    backend: scripted_if_later_authorized
+    study_outputs: 120
+    clean_fixture_outputs: 48
+    total_scripted_outputs: 168
+    model_calls: 0
+  Q0:
+    enabled_now: false
+    calls: 48
+    roots: 8
+    carrier_profiles: [1, 9, 81]
+    availability_profiles: [all_six_present, one_rare_fact_absent]
+    packet_reports: 486
+    withheld_skill_balance: Each rare skill absent in 8 packets.
+    structural_validity_required: 1.0
+    per_carrier_profile_field_accuracy_min: 0.95
+    per_carrier_profile_exact_packet_min: 0.90
+    missing_rare_abstention_required: 1.0
+    all_48_structurally_valid_required: true
+  S1:
+    enabled_now: false
+    calls: 1440
+    roots: 24
+    qualification_required: true
+  S2:
+    enabled_now: false
+    planned: false
+primary:
+  metric: correct specialist answers divided by 3
+  contrast: carrier 1 minus carrier 81
+  policy: random
+  checks: 108
+  attacker_check_pass: 0.1
+  expected_direction: decrease
+  practical_decline_pp: 10
+  endpoint: one final model synthesis after fixed audit checkpoint
+  independent_unit: paired world root
+  all_assigned_roots_retained: true
+  if_missing: Keep outcome bounds 0–1 and report all-assigned contrast bounds; no silent exclusion or imputed zero causal effect.
+analysis:
+  status: proposed_exploratory
+  bootstrap_draws: 10000
+  bootstrap_seed: 20261004
+  resample_unit: entire paired root
+  report_all_cells: 60
+  comparisons_secondary: [other rarity contrasts, equal-cost coverage-minus-random, policy-by-rarity interaction at each budget and strength]
+  conditional_on_truth_survival: diagnostic only with explicit numerator/denominator; never primary or paired causal substitute
+  repeated_identical_packets: report hashes, do not count as independent roots
+  multiplicity: descriptive, no confirmatory significance claims
+  power_qualified: false
+  oracle_rescue_calls: 0
+  offline_diagnostics: [same-packet plurality, truthful availability, carrier survival, original outside retention, harmful influence]
+limits_proposed_not_authorized:
+  nominal_q0_calls: 48
+  nominal_s1_calls: 1440
+  nominal_paid_calls: 1488
+  candidate_max_attempted_calls: 1550
+  candidate_known_plus_outstanding_usd: 40
+  candidate_cumulative_conservative_reservation_usd: 150
+  spending_authority_granted: false
+  explicit_aggregate_reconciliation_before_authorization: true
+  serialize_and_price_frozen_requests_before_authorization: true
+  workers: 2
+  max_output_tokens: 500
+  max_input_bytes: 240000
+  request_timeout_seconds: 120
+  stage_timeout_seconds: 14400
+  automatic_retries: 0
+  extra_provider_probes_authorized: false
+  extra_diagnostics_authorized: false
+failure_policy:
+  stop_new_dispatch_on: [invalid_response, transport_failure, missing_usage, source_mismatch, accounting_error]
+  max_inflight_after_stop: 2
+  preserve: [all_assignments, completed_outputs, failures, not_started_rows, usage, full_unknown_charge_reservations]
+  clean_gate_failure: blocks S1; separate fresh-fixture repair assessment required
+  valid_adverse_outcome: report without favorable rerun or policy tuning
+visualization_proposed:
+  final_png_min_width: 1800
+  main_axes: carrier count versus final specialist accuracy
+  companion_views: [truth availability, carrier survival, harmful influence invariance, cell denominators]
+  public_gif_time: completed assignment count, not agent-interaction time
+  optional_audit_trace: scripted logical checks only, no intermediate model answers
+  sampled_model_budgets: [4, 64, 108]
+  extra_calls_for_animation: 0
+  fallback: static PNG
+  playback_verification_required: true

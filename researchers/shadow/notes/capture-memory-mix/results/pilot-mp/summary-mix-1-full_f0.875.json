@@ -1,0 +1,112 @@
+{
+  "stage": "MP",
+  "backend": "http:openai/gpt-4o-mini",
+  "seconds": 1285.86,
+  "ledger": {
+    "spent_usd": 1.36166498,
+    "calls": 49668,
+    "by_model": {
+      "meta-llama/llama-3.1-8b-instruct": {
+        "usd": 0.0024001,
+        "calls": 398
+      },
+      "openai/gpt-4o-mini": {
+        "usd": 1.22767493,
+        "calls": 40616
+      },
+      "google/gemma-3-27b-it": {
+        "usd": 0.13158973,
+        "calls": 8654
+      }
+    },
+    "synced_to_openrouter": {
+      "usage": 500.119377679,
+      "baseline": 499.244934,
+      "was_local": 0.45874415
+    }
+  },
+  "cells": [
+    {
+      "run": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.875",
+      "params": {
+        "stage": "MP",
+        "split": "dev",
+        "world": "W1_INSIDE",
+        "dose": 0.5,
+        "memory": "mix:1/full@0.875",
+        "tasks": "0-11",
+        "seeds": [
+          1
+        ],
+        "arms": [
+          "A0_no_purge",
+          "A1_purge",
+          "A2_purge_wipe"
+        ],
+        "cfg": {
+          "n_agents": 16,
+          "beta": 2.5,
+          "h_inside": 0.1,
+          "h_outside": 0.5,
+          "entrench_rounds": 5,
+          "takeover_max_rounds": 60,
+          "clean_takeover_rounds": 20,
+          "recovery_rounds": 40,
+          "capture_frac": 0.75,
+          "capture_streak": 3,
+          "recover_frac": 0.75,
+          "recover_streak": 10,
+          "eval_round": 30
+        },
+        "backend": "http"
+      },
+      "episodes_per_arm": 12,
+      "stats": {
+        "A0_no_purge": {
+          "n": 12,
+          "captured": 12,
+          "frac_T": 0.375,
+          "delta": -1.5,
+          "invalid": 0,
+          "calls": 5264,
+          "usd": 0.063668
+        },
+        "A1_purge": {
+          "n": 12,
+          "captured": 12,
+          "frac_T": 4.625,
+          "delta": 2.75,
+          "invalid": 0,
+          "calls": 7042,
+          "usd": 0.08491500000000002
+        },
+        "A2_purge_wipe": {
+          "n": 12,
+          "captured": 12,
+          "frac_T": 0.125,
+          "delta": -1.75,
+          "invalid": 0,
+          "calls": 8820,
+          "usd": 0.10551700000000001
+        }
+      },
+      "metrics": {
+        "captured": 1.0,
+        "frac_T_A0_no_purge": 0.0312,
+        "delta_A0_no_purge": -0.125,
+        "frac_T_A1_purge": 0.3854,
+        "delta_A1_purge": 0.2292,
+        "frac_T_A2_purge_wipe": 0.0104,
+        "delta_A2_purge_wipe": -0.1458,
+        "wipe_minus_purge": -0.375,
+        "episodes": 36,
+        "invalid": 0,
+        "model_calls": 21126,
+        "cost_usd": 0.2541
+      },
+      "backend": "http:openai/gpt-4o-mini",
+      "code": "3ffb56b6",
+      "file": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.875.jsonl"
+    }
+  ]
+}

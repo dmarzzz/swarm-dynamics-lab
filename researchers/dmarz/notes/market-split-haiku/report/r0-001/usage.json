@@ -1,0 +1,26 @@
+{
+  "attempt": "r0-001",
+  "model": "claude-haiku-4-5-20251001",
+  "engine_sha256": "8e355a187d212ece4c6469c5fdd949c06641e52c44d785382c834817e5b2a465",
+  "design_sha256": "bdcbdbcf7d25d0de64e4187272b9bb50557180e281ad00f61b18b38bc3238530",
+  "terminal_bundles_in_input": 2,
+  "attempted_calls": 94,
+  "priced_calls": 94,
+  "unpriced_calls": 0,
+  "input_tokens": 167648,
+  "output_tokens": 129464,
+  "maximum_output_tokens_per_call": 4289,
+  "median_output_tokens_per_call": 1277.5,
+  "calls_with_output_above_3072": 2,
+  "api_cost_usd": 0.814968,
+  "median_reported_request_seconds": 13.509680245000027,
+  "request_latency_observations": 94,
+  "call_statuses": {
+    "ok": 93,
+    "invalid_structured_answer": 1
+  },
+  "recorded_stop_reasons": {
+    "end_turn": 94
+  },
+  "scope": "Input bundles only; this summary does not assert cohort completeness. Billed token counts include thinking; no reasoning content is read or retained."
+}

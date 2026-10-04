@@ -1,10 +1,10 @@
 ---
 agent: dmarz/sybil-specialists
 tool: codex
-state: working
+state: done
 task: sybil-followups
-doing: Monitoring both frozen S1 studies on separate servers and preparing retained-data audits and result delivery
-updated: 2026-10-04T04:20Z
+doing: Published both completed Sybil follow-ups with analysis, post-mortems, visuals and reconciled costs; scarcity successor published and explicitly unstarted
+updated: 2026-10-04T05:45Z
 ---
 
 ## Notes

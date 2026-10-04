@@ -16,6 +16,7 @@ from replay import render
 from reporting import Reporter
 from tasks import generate,qualification_manifest,evaluate,operational
 from failures import SafeFailure,safe_code
+from response_contract import VERSION,LEGACY
 
 REQUIRED=('expected_served_model','expected_served_provider','stage_cap_microdollars',
           'episode_cap_microdollars','spending_authorization','independent_review_commit',
@@ -24,6 +25,7 @@ REQUIRED=('expected_served_model','expected_served_provider','stage_cap_microdol
 
 def launch_errors(config):
     errors=[f'missing:{k}' for k in REQUIRED if not config.get(k)]
+    if config.get('response_contract') not in (VERSION,LEGACY):errors.append('response_contract_unconfigured')
     if config.get('status')!='ready':errors.append('config_not_ready')
     for k in ('stage_cap_microdollars','episode_cap_microdollars'):
         v=config.get(k)
@@ -62,6 +64,16 @@ def preflight(config,source_root):
     return commit
 
 
+def assignments_for(config):
+    rows=[row for row in qualification_manifest() if row['stage']=='Q-A']
+    attempt=config.get('attempt_id')
+    if attempt is not None:
+        if not isinstance(attempt,str) or not re.fullmatch(r'q-a[2-9][0-9]*',attempt):
+            raise ValueError('invalid_attempt_id')
+        rows=[dict(row,id=attempt+'/'+row['id'],parent_id=row['id'],attempt_id=attempt) for row in rows]
+    return rows
+
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--config',type=Path,required=True)
@@ -76,7 +88,7 @@ def main():
     source_root=Path(subprocess.check_output(['git','rev-parse','--show-toplevel'],text=True).strip())
     commit=preflight(config,source_root)
     args.output.mkdir(parents=True,exist_ok=False)
-    assignments=[row for row in qualification_manifest() if row['stage']=='Q-A']
+    assignments=assignments_for(config)
     (args.output/'assigned.json').write_text(json.dumps(assignments,indent=2)+'\n')
     return run_batch(config,commit,args.output,args.budget_ledger,assignments)
 
@@ -89,11 +101,11 @@ def save_json(path,data):
 
 
 def run_batch(config,commit,output,ledger,assignments):
-    states=[];bank=None;stop_reason=None
+    states=[];bank=None;stop_reason=None;consecutive_malformed=0
     for row in assignments:
         target=output/hashlib.sha256(row['id'].encode()).hexdigest()[:16]
         target.mkdir(exist_ok=False)
-        tldr=f"TLDR: Q-A {row['family']} {row['structure']} root {row['root']}, N=1 under screening caps; single-agent calibration reference for later matched-N comparisons. Metrics: verified on-time success, quality, cost and latency. Exploratory synthetic tasks; not a size-effect result."
+        tldr=f"TLDR: {row.get('attempt_id','Q-A')} {row['family']} {row['structure']} root {row['root']}, N=1 under screening caps; single-agent calibration reference for later matched-N comparisons. Metrics: verified on-time success, quality, cost and latency. Exploratory synthetic tasks; not a size-effect result."
         save_json(target/'assignment.json',row|{'commit':commit,'run_tldr':tldr,'status':'assigned'})
         states.append({'episode':row['id'],'directory':target.name,'execution':'not_started','reason':None,'exposure_microdollars':0,'publication':'not_started'})
     try:
@@ -127,7 +139,7 @@ def run_batch(config,commit,output,ledger,assignments):
                         if pending_progress is None or pending_progress.done():
                             pending_progress=progress_pool.submit(send_progress,completed)
                 task=generate(row['family'],row['structure'],row['root'])
-                runtime=Provider(config,bank,row['id'],journal)
+                runtime=Provider(config,bank,row['id'],journal,task.public)
                 try:
                     record=execute(task.public,1,config['slots'],config['screening_deadline_s'],config['integration_reserve_s'],runtime,measured_event)
                 finally:
@@ -146,6 +158,9 @@ def run_batch(config,commit,output,ledger,assignments):
                 print(json.dumps({'episode':row['id'],'terminal':True,'success':record['operational_success'],'publication':state['publication']}),flush=True)
                 if not acknowledged:stop_reason='publication_incomplete';break
                 if record.get('fatal'):stop_reason=record['failure'];break
+                consecutive_malformed=consecutive_malformed+1 if record['failure']=='malformed_output' else 0
+                if config.get('attempt_id') and consecutive_malformed>=2:
+                    stop_reason='repeated_malformed_output';break
                 if not bank.healthy():stop_reason='budget_overrun';break
             except Exception as exc:
                 stop_reason=safe_code(exc)

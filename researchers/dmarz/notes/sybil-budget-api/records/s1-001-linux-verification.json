@@ -1,0 +1,28 @@
+{
+  "stage": "S1",
+  "source_hash": "66ea4fe1465678ff66d099eec14ea11dbf5bc69063c00e3cc57249e06db98f08",
+  "assignments": 2880,
+  "rows": 2880,
+  "worlds": 240,
+  "invalid": 0,
+  "all_assignments_worlds_packets_grades_and_analysis_match": true,
+  "all_packet_hashes_grades_and_analysis_match": true,
+  "all_execution_counters_reconciled": true,
+  "accounting_reconciled": true,
+  "accounting": {
+    "model_calls": 2880,
+    "usage_reported_calls": 2880,
+    "cost_usd": 39.349188,
+    "reserved_usd_this_stage": 129.735877
+  },
+  "world_verification": {
+    "decision_fields_match_exactly": true,
+    "display_coordinate_tolerance": 1e-15,
+    "display_coordinate_last_bit_differences": 0,
+    "display_coordinate_max_abs_difference": 0.0
+  },
+  "gif_frames": 25,
+  "note": "Assignments, worlds and check trajectories regenerated from frozen source; no API calls. Public browser playback is a separate deployment check.",
+  "verification_environment": "Original Linux host; Python3.12 and frozen requirements; no model calls.",
+  "verifier_sha256": "89ed9ddb6826a580ba436b581eb948fa16a23432e85fbd2f486a89cffff69813"
+}

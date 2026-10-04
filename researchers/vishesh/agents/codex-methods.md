@@ -2,11 +2,9 @@
 agent: vishesh/codex-methods
 tool: codex
 state: idle
-task: antsy-receipt-v6
-doing: Antsy v6 results and post-mortem published; host released; no active runs
-updated: 2026-10-04T04:48Z
+task: null
+doing: Antsy v8 development and design delivered; fresh checker qualification pending
+updated: 2026-10-04T07:02:35.547829+00:00
 ---
 
-## Notes
-
-Using manual checked sync for the public research contribution.
+Manual validated sync after each work unit.

@@ -8,7 +8,9 @@ The practical decision is whether to invest in **more judgments, better source t
 
 ## What has actually run
 
-Only the prerequisite reader screen, **S0**, has run. One model reads each packet with full source IDs and explicit deduplication instructions. There are eight bit triples at two reliability settings, each requested twice: 16 configurations, 32 calls. No agents talk to each other in S0; the swarm comparison is still pending.
+The new **Q1 context screen launched and stopped after its first response violated the frozen output-token contract: 1 failed, 15 unstarted, 0 valid/16**. It provides no new reasoning score. The [Q1 post-mortem](reviews/Q1-01-post.md) records the retained cost exposure and required interface repair; no researcher or owner approval wait remains.
+
+The earlier reader screen, **S0**, completed. One model reads each packet with full source IDs and explicit deduplication instructions. There are eight bit triples at two reliability settings, each requested twice: 16 configurations, 32 calls. No agents talk to each other in S0; the swarm comparison is still pending.
 
 | Method | Correct exact-MAP choices on saved inputs | Evidence type |
 |---|---:|---|
@@ -30,15 +32,17 @@ We have not established that source-aware instructions improve a model, that dis
 
 The [current run roadmap](RUN-ROADMAP.md) starts with 16 context checks and a 64-call native copying/instruction screen. If that exposes an interpretable problem, four paired worlds compare peer discussion with judges reviewing their own answers, a pooled solver and deterministic rules. This buys a stronger control at the cost of very weak precision. [Fresh research findings](RESEARCH-GATES.md) narrow the claim to a controlled engineering replication; search saturation and formal survey/hypothesis acceptance remain open. The requested design review arrived with revisions, now addressed in the [review response](REVIEW-RESPONSE.md).
 
-**Launch status: blocked on current research and runtime admission gates.** Existing spending approval remains valid; no new paid calls were made for this analysis. [SETUP.md](SETUP.md) records the exact gates and next actions. The [one researcher-review task](../../../../../tasks/review-quorum-mirrors-qm3.md) requests design feedback, not duplicate sign-offs.
+The next 16-call qualification instrument is now implemented and checked: [readiness and remaining steps](NEXT-RUN-READINESS.md), [frozen prospective plan](NEXT-RUN-PLAN.md). All 54 study tests pass; no new native calls or scientific worlds were generated.
+
+**Launch status: operator preparing the next run. Researcher review is not required by owner direction.** Existing spending approval remains valid; no new paid calls were made for this analysis. [SETUP.md](SETUP.md) records the exact gates and next actions. Historical feedback is retained; it is not a pending approval.
 
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-quorum-mirrors; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested. Basis: The small predeclared competence screen passed; 14/16 repeated pairs agreed. Retrospective exact references score report counting 24/32 and root counting 32/32 on the same finite inputs. These are not native comparator arms or evidence of swarm efficacy.
-- **sample_size_summary:** S0: 8 bit triples × 2 reliability settings × 2 identical-request samples = 16 configurations, 32/32 valid calls, 29 MAP-correct; not 32 independent worlds. S1 not run.
+- **sample_size_summary:** S0: 16 fixed configurations, 32/32 valid calls, 29 MAP-correct; not independent worlds. Q1: 16 constructed context fixtures, 1 contract-failed response, 15 unstarted, 0 valid. M1/C1 not run.
 <!-- experiment-evidence:end -->
 
 ## Reproduce and inspect

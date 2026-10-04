@@ -24,6 +24,8 @@ def main():
     p.add_argument('output', type=Path)
     args = p.parse_args()
     verification = read(args.verified_directory / 'verification.json')
+    local_audit = read(args.verified_directory / 'local-exact-audit.json')
+    assert local_audit['ok'] and local_audit['complete_journal']
     records = args.verified_directory / 'records'
     assert verification['audit']['ok'] and verification['audit']['complete_journal']
     for row in verification['verified_files']:
@@ -35,6 +37,9 @@ def main():
     assert summary['assigned_calls'] == len(manifest['schedule']) == 120
     assert len(outcomes) == summary['terminal'] and len({r['call_id'] for r in outcomes}) == len(outcomes)
     assert verification['audit']['outcomes_recomputed'] == len(outcomes)
+    assert local_audit['outcomes_recomputed'] == len(outcomes)
+    cache_tokens = sum(r['usage'].get('cache_read_input_tokens', 0) + r['usage'].get('cache_creation_input_tokens', 0) for r in outcomes)
+    assert cache_tokens == 0, 'Cached-token pricing needs an explicit analysis amendment'
     rows = []
     for row in outcomes:
         usage = row['usage']; answer = row['response'] or {}; score = row['score']
@@ -65,7 +70,9 @@ def main():
               'successors_dispatched': False, 'limitations': summary['limitations'],
               'verified_raw_files': verification['verified_files'],
               'retained_archive_sha256': verification['archive_sha256'],
-              'exact_source_audit': verification['audit']}
+              'exact_source_audit': verification['audit'],
+              'local_exact_source_audit': {k: v for k, v in local_audit.items() if k != 'summary'},
+              'cache_tokens_observed': cache_tokens}
     args.output.mkdir(parents=True, exist_ok=False)
     (args.output / 'analysis.json').write_text(json.dumps(result, sort_keys=True, indent=2) + '\n')
     write_csv(args.output / 'per-item.csv', rows)

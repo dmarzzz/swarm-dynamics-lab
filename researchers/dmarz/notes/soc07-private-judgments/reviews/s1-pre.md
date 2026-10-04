@@ -1,5 +1,20 @@
 # Pre-run assessment: S1-Q, S1-R and S1-L (attempts s1q-a1, s1r-a1, s1l-a1)
 
+## Manifest m2 (written 2026-10-04 UTC by dmarz/orbital-orchestrator, before any m2 model output)
+
+This section governs attempts s1q.1-a1, s1r-a1 and s1l-a1 under manifest m2. The m1 assessment below is kept as written; where they differ, this section applies.
+
+- Parent attempts: s1q-a1 under m1 failed competence, 7 of 12 correct and 12 of 12 valid ([s1q-post.md](s1q-post.md)). Nothing else ran under m1. S0 under m2 is attempt s0-a3 (below).
+- Change: README section 11, A5. `claude-sonnet-4-6`, thinking off, temperature 0.7, caps 256 / 256 / 64 / 64 and qualification 128, USD 3 / 15 per million, qualification set 1 (12 fresh worlds, namespace `s1q.1`). Prompts, generator, scorer, arms, gates and the USD 40 cap are unchanged.
+- Authorization: dmarz instructed the operator to "use a strong model that's great" after the m1 failure. That instruction is the go for m2. dmarz/fleet-monitor reviewed m1 only; its review does not cover m2 and no m2 record is written in its name. Cross-researcher review remains waived ([launch/review-waiver.md](../launch/review-waiver.md)). Exploratory.
+- Expected finding: unknown. Prediction for S1-Q: a stronger model clears 10 of 12 on the clean task. If it does not, the study stops under m2 and the next decision goes to dmarz; a bounded reasoning allowance is the remaining permitted change.
+- Gates: unchanged. S1-Q.1 needs at least 10 of 12 correct and 11 of 12 valid with no halt; S1-R needs `gate_passed = 1`; the launcher refuses a stage whose prerequisite did not pass at the same fingerprint.
+- Runtime fingerprint (all `src/*.py`, `design.json`, `execution.json`, `experiment.json`, `requirements.txt`): `475140d431efd134de71f71d1a043b94e14d368018f4a7ae156bc08e0226a350`. Self-test 58 run, OK with 2 skipped, on orbital-one.
+- Expected spend (estimate: m1's estimate times three for the price change, not a measurement): S1-Q.1 about USD 0.04, S1-R about USD 3, S1-L about USD 18; about USD 21 in total, under the unchanged USD 40 cap. The m1 ledger (USD 0.010669 for s1q) is carried forward on the new host, so the cap covers both manifests.
+- Server and claim: a fresh one-run box, sim-dmarz-8 (agentops fleet, created for this run because sim-dmarz-3 now holds another experiment), exclusive claim `dmarz-soc07-private` by dmarz/orbital-orchestrator. The study ledger is copied from sim-dmarz-3 before any m2 call and the sim-dmarz-3 copy is retired.
+- Visualization mapping: v1, unchanged.
+- S0 under m2 (s0-a3): hub run `soc07-private-judgments/eed24e49` on sim-dmarz-8 at revision 45f9c48d07b9be865c8e1e1ba5a1f341706ba1bc, fingerprint 475140d4…: done, 69 of 69 checks on 60 fixtures, 4 policies and the fault injections; 0 model calls. Server self-test 58 run, OK with 2 skipped. The carried ledger on sim-dmarz-8 is byte-identical to the sim-dmarz-3 copy (SHA-256 471a7635…, 12 calls, USD 0.010669); sim-dmarz-8 holds the live ledger from here on and the sim-dmarz-3 file is retired.
+
 - Experiment / owner / stages: soc07-private-judgments / dmarz (agent dmarz/soc07-private) / S1-Q qualification, S1-R controlled replay, S1-L live teams. Written 2026-10-04 UTC, before any model output.
 - Parent attempts: s0-a1 and s0-a2 (scripted, fleet), see [s0-post.md](s0-post.md). No earlier paid attempt exists.
 - Status: **blocked until the reviewer's explicit go**, then ready. Reviewer: dmarz/fleet-monitor. Cross-researcher review is waived by dmarz ([launch/review-waiver.md](../launch/review-waiver.md)); this is a same-researcher check and is not independent approval. Everything is exploratory. S2 is closed.
