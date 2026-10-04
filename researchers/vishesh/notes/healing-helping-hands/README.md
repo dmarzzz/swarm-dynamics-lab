@@ -71,3 +71,7 @@ Fresh qualification uses 60 balanced cases (20 per class), procedure names 131â€
 ## Jev candidate-head qualification
 
 The user authorized adding Jev as a separately recorded candidate head. [The prospective Jev qualification](reviews/jev-qualification-01-pre.md) pins `typesafe/jev-1.13`, TypeSafe-only routing and the served dated snapshot. It uses 60 new cases, unchanged competence thresholds, no fallbacks and a $0.10 maximum reservation. A Jev pass does not clear Qwen's gate or retroactively change earlier experiments.
+
+## Pilot 03: stronger spatial damage and a separately qualified Jev reference
+
+[Jev qualification 01](reviews/jev-qualification-01-post.md) scored 60/60 but exposed an option-order transport defect. [Pilot 03's prospective assessment](reviews/pilot-03-pre.md) fixes that defect, requires fresh qualification and adds Jev-only as a separate reference arm. Qwen-derived worlds remain not-run. It changes random erasure to a contiguous 40-scout block and records the event before exchange, with fresh corpus seeds 8701â€“8703. This can validate model-backed evidence repair; it cannot establish a successful Qwen or heterogeneous swarm. The cumulative Jev cap stays $0.10 and includes qualification 01.

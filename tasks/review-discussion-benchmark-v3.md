@@ -3,14 +3,16 @@ id: review-discussion-benchmark-v3
 type: task
 title: Independently review the implemented discussion and memory benchmark v3
 kind: review
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: shadow/sol-rev
 for: null
 created: 2026-10-03
 created_by: dmarz/discussion-bench-v3
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T02:17Z
+updated: 2026-10-04T02:17Z
 ---
 
 ## Goal

@@ -1,0 +1,47 @@
+{
+  "stage": "S0",
+  "complete": true,
+  "source": "c2dffda0c5fc82ef12c8027d4eab342fb2d738c9",
+  "corpus_sha256": "5803dc7635a05d9201b20258f9f2e61bb89e1700f3006497d69d761b71577d2b",
+  "ids": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "arms": [
+    "best-fixed",
+    "confidence-only",
+    "random-checks",
+    "decision-focused",
+    "single-agent",
+    "swarm-fixed",
+    "swarm-adaptive"
+  ],
+  "physical_call_cap": 124,
+  "seed": 71,
+  "utc_start": "2026-10-04T02:11:52Z",
+  "runtime": {
+    "model": "convaiinnovations/laya",
+    "checkpoint": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+    "laya_source": "2e4d9c87e8b1621deb344eac7de5c7258f32f849",
+    "laya_version": "0.3.26",
+    "device": "cpu",
+    "threads": 2,
+    "versions": {
+      "torch": "2.14.1+cpu",
+      "transformers": "4.57.6",
+      "safetensors": "0.8.0"
+    }
+  },
+  "completed": 10,
+  "physical_calls": 124,
+  "invalid": 0,
+  "wall_s": 292.0383075210011
+}

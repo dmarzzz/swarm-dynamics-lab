@@ -3,14 +3,19 @@ id: review-discussion-dose
 type: task
 title: Review SEC-47 discussion dose tasks and exploratory protocol
 kind: review
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-independent-reviews
 for: null
 created: 2026-10-03
 created_by: dmarz/discussion-dose
 depends_on: []
-topics: [fork-merge-security, llm-agent-swarms, collective-decision]
+topics:
+- fork-merge-security
+- llm-agent-swarms
+- collective-decision
+claimed_at: 2026-10-04T02:20Z
+updated: 2026-10-04T02:20Z
 ---
 
 ## Goal

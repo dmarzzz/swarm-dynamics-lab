@@ -3,7 +3,7 @@ id: sybil-specialists-api
 type: task
 title: Qualify and deploy the model-backed Sybil specialist pilot
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/sybil-specialists
 for: dmarz
@@ -14,7 +14,12 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 claimed_at: 2026-10-04T01:54Z
-updated: 2026-10-04T01:54Z
+updated: 2026-10-04T02:15Z
+outputs:
+- researchers/dmarz/notes/sybil-specialists-api/README.md
+- researchers/dmarz/notes/sybil-specialists-api/results-summary.json
+- researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md
+- researchers/dmarz/notes/sybil-specialists-api/deployment.json
 ---
 
 ## Goal
