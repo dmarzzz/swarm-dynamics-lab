@@ -35,6 +35,12 @@ class Tests(unittest.TestCase):
                 self.assertTrue(all(r['evaluation']['correct'] for r in rows))
                 self.assertEqual(len(rows),7)
 
+    def test_misleading_late_evidence(self):
+        f=s.fixture(7200)
+        truthful=s.state_for(s.reports(f,'clean','stalled',9))
+        misleading=s.state_for(s.reports(f,'misleading-newer','stalled',9))
+        self.assertNotEqual(s.scripted(truthful),s.scripted(misleading))
+
     def test_none_and_failures(self):
         self.assertEqual(s.best(s.fixture(7203)['truth']),'NONE')
         rows=s.episode(7200,9,3,'clean','fast',lambda _: 'BOGUS')

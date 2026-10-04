@@ -1,0 +1,14 @@
+{
+  "central-targeted": {
+    "initial_correct": 12,
+    "initial_wrong": 12,
+    "correct_to_wrong": 12,
+    "wrong_to_correct": 0
+  },
+  "central-random": {
+    "initial_correct": 12,
+    "initial_wrong": 12,
+    "correct_to_wrong": 8,
+    "wrong_to_correct": 0
+  }
+}

@@ -21,6 +21,6 @@ Research and build a more discriminating local-model pilot with nine agents, fac
 
 ## Done when
 
-- [ ] Publish linked research rationale and frozen v2 protocol.
-- [ ] Build and test fixtures, policies, model adapter, analysis and replay.
-- [ ] Run bounded local qualification, publish all outcomes, and keep gates explicit.
+- [x] Publish linked research rationale and frozen v2 protocol.
+- [x] Build and test fixtures, policies, model adapter, analysis and replay.
+- [x] Run bounded local qualification, publish all outcomes, and keep gates explicit.

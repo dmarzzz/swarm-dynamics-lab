@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: working
+state: done
 task: adaptive-quorum-api-v2
-doing: Building factual API selection with five/nine agents, strong central controls and local qualification
-updated: 2026-10-04T00:27Z
+doing: Published factual API v2; 168 local Laya outcomes failed clean competence, no S1
+updated: 2026-10-04T00:39Z
 ---
 
 ## Notes

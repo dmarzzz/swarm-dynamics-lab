@@ -12,7 +12,7 @@ Loss: zero for the cheapest eligible choice, one for an ineligible choice or inv
 
 Three fictional extraction APIs, four attributes: scanned-PDF support, zero retention, field accuracy, and per-document price. Requirements: scanned PDF, zero retention, accuracy at least 90; choose cheapest eligible. Provider labels and table row order are seeded; truth depends only on task ID. A batch has 20 synthetic invoice records. A mock API returns fields according to the provider's hidden accuracy; the scoring tool reports exact-match percentage. Test output cannot verify retention.
 
-Qualification uses six tasks (7200–7205), clean evidence, five and nine scouts, deadlines three and six: 24 blocks. Every candidate answer appears among the tasks, including NONE. Development reserves tasks 7300–7335 with clean, stale-favorable, copied-favorable and conflicting reports; timing fast, late and stalled. Holdout 10000–10999 remains unopened. Exact executed design and code hashes accompany every run.
+Qualification uses six tasks (7200–7205), clean evidence, five and nine scouts, deadlines three and six: 24 blocks. The frozen qualification contains A, C and NONE targets; B is absent. A post-launch fixture audit caught this label-coverage gap before outcome analysis. Keep this attempt intact and add a balanced, disjoint fixture set before development; do not claim a label-balanced qualification. Development reserves tasks 7300–7335 with clean, stale-favorable, copied-favorable, conflicting and misleading-newer reports; timing fast, late and stalled. Holdout 10000–10999 remains unopened. Exact executed design and code hashes accompany every run.
 
 Nine scouts have distributed evidence, not different model weights or fabricated expertise. Five-agent controls partition the same document budget. At each round, scouts see the previous shared board plus their own current delivery; raw reports are shared one round later. The central solver sees the union at that round. This one-round information advantage is explicit; a central result is not a pure population-size effect.
 
@@ -41,3 +41,9 @@ Local CPU inference only, two threads, at most 30 minutes per qualification. No 
 ## Promotion plan
 
 After a passing qualification: commit a bounded development matrix before running it, examine false commits versus delay and cost, estimate paired task variance, and test root mislabelling and label-order robustness. Deeper prior-art review and another researcher's acceptance precede a powered holdout. This revision does not inherit formal acceptance from any other experiment.
+
+## Dated audit note
+
+2026-10-03: deterministic target-coverage audit after launch found no B target among the six qualification tasks. The executed task list remains unchanged. Add an explicit coverage assertion and a disjoint balanced set before S1. Development also needs misleading-newer evidence (not only accurate late corrections), so waiting/adaptation can be harmful; this condition is implemented but not run with models in S0.
+
+The current deadline is an **evidence-release round**, not a wall-clock service-level guarantee. Terminal verification arms receive the same two-probe audit allowance after that evidence cutoff. Do not compare their round count to non-verifying arms as if tests were free or instantaneous in deployment. Actual physical inference time is reported; a later time-budget study must charge probe latency and inference latency before dispatch.

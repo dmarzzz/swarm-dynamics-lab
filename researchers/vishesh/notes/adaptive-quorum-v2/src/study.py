@@ -55,6 +55,8 @@ def reports(f, world, timing, n, seed=1):
             row=dict(f['truth'][label])
             if root==0 and world in ('stale-favorable','copied-favorable'):
                 row.update(scanned=True,retention_days=0,accuracy=100)
+            if root>=1 and world=='misleading-newer':
+                row.update(scanned=True,retention_days=0,accuracy=100)
             if root==2 and world=='conflicting':
                 row['accuracy']=80 if row['accuracy']>=90 else 100
             packets.append({'doc':f'd{root}-{j}','root':f'r{root}', 'revision':root,
