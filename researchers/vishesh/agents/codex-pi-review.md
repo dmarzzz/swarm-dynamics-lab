@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: working
+state: idle
 task: ai-village-dataset-design-2026-10-04
-doing: Verifying AI Village sources and preparing an exploratory dataset replay design; no paid collection.
-updated: 2026-10-04T17:58Z
+doing: Dataset access verified and replay proposal published; no model run or allocation.
+updated: 2026-10-04T18:02Z
 ---
 
 ## Notes
