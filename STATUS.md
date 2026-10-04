@@ -37,8 +37,8 @@
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [antsy-quality-repair](tasks/antsy-quality-repair.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:22Z | Audit and repair Antsy experiment quality and reproducibility |
-| [immune-response-v2](tasks/immune-response-v2.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T00:39Z | Refine and run the exploratory immune-response instrument |
-| [reflect-discussion-dose-pilots](tasks/reflect-discussion-dose-pilots.md) | claimed | p1 | synthesis | dmarz/discussion-dose | dmarz | 2026-10-04T01:23Z | Consolidate discussion dose pilot results before any further launches |
+| [immune-response-v2](tasks/immune-response-v2.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T01:25Z | Refine and run the exploratory immune-response instrument |
+| [influence-quality-review](tasks/influence-quality-review.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T01:25Z | Audit and improve How to win agents and influence swarms |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -115,6 +115,7 @@
 | [fix-dashboard-deploy-cancellation](tasks/fix-dashboard-deploy-cancellation.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:24Z | Let active dashboard deployments finish during frequent pushes |
 | [map-hackathon-scenarios](tasks/map-hackathon-scenarios.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:21Z | Map every research candidate to ranked hackathon task scenarios |
 | [organize-research-navigation](tasks/organize-research-navigation.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T22:37Z | Connect dashboard research areas, project briefs and hypothesis tags |
+| [reflect-discussion-dose-pilots](tasks/reflect-discussion-dose-pilots.md) | done | p1 | synthesis | dmarz/discussion-dose | dmarz | 2026-10-04T01:25Z | Reflect on the original discussion dose pilot before running more |
 | [regrowth-plan-registration](tasks/regrowth-plan-registration.md) | done | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T01:15Z | Repair missing Regrowth plan registration and publish experiment TLDRs |
 | [review-atlas-project-connections](tasks/review-atlas-project-connections.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T22:17Z | Review question atlas and connect research context to sixteen project briefs |
 | [review-biology-and-visual-promise](tasks/review-biology-and-visual-promise.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:08Z | Review research candidates for biological precedent and visualization value |
@@ -148,11 +149,11 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-methods | working | antsy-quality-repair | 2026-10-04T01:23Z | Auditing Antsy and diagnosing failed competence on exclusive sim-vishesh |
 | dmarz/private-control | working |  | 2026-10-04T01:15Z | discussion-dose v2 private-reflection control pc-H4, run discussion-dose-v2/d0725be0 on sim-dmarz-2 |
 | vishesh/codex-regrowth-docs | done | regrowth-plan-registration | 2026-10-04T01:03Z | Published six TLDRs and immutable plans; recorded Regrowth process failure; verified public page |
 | vishesh/codex-experiments | done | external-influence-v2 | 2026-10-04T00:54Z | V2 published and qualified; 50-outcome cross-scenario screen running on dedicated host within shared cap |
 | vishesh/codex-immune | working | immune-response-v2 | 2026-10-04T00:45Z | V2 scripted qualification passed; deploying isolated native S0 within shared budget |
-| vishesh/codex-methods | done | adaptive-quorum-api-v2 | 2026-10-04T00:39Z | Published factual API v2; 168 local Laya outcomes failed clean competence, no S1 |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
