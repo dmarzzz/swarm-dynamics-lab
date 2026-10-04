@@ -12,6 +12,7 @@
     "src/register.py": "7e740510431ceb06e0ee30d07a7ac85618196805caff19b3d5a3f8592f7bbfa5",
     "src/replay.py": "2cc57e9600a598bde6d184d003300e8761f00d793372c309e3e470ed02ce68f0",
     "src/reporting.py": "33c5ebd115283864f08346508481e3a0cb469f03fb3d501a2f70550d126ce5d4",
+    "src/reporting_diagnostic.py": "d4039b4c19d80c75c22d7d9c230e6dc40657b4a547b97d8950cb11dbe56025bb",
     "src/run_qualification.py": "288bcb195864488b00ff347adb4fad766b9e31726ff11940eb6cf4e334d5a607",
     "src/tasks.py": "aebcc37c36af3cfa4f38b2a58ba3808145475d7047e85c5c81eed8f57fddc14a",
     "src/test_budget.py": "405be35713f879ecf9f9cacef012d7598c0f741ef4559a8317bdc59398dc099f",
@@ -24,9 +25,8 @@
     "src/test_tasks.py": "c28dbd1b1a3cd8a2daab8e009b49bc69844c3f09ce3501d202475fe2ff70af49"
   },
   "unverified": [
-    "real provider route/usage and credential",
-    "bounded reporting child on selected host",
-    "repaired source independent review",
-    "new source public registration before model execution"
+    "approved model credential and real provider route/usage/price",
+    "formal non-vishesh package review",
+    "fresh paid-run allocation and frozen public registration"
   ]
 }

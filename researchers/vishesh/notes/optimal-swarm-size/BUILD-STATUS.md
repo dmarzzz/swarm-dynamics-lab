@@ -50,3 +50,7 @@ The public plan is now registered and verified; see reviews/q1-public-plan-recei
 ## Engineering review repairs — 2026-10-04 UTC
 
 Review 273e35ed returned REVISE for error categories, reporting and batch reconciliation. Those repairs are implemented with 31 passing offline tests; see reviews/q1-engineering-response.md and the exact source hashes in validation.json. Re-review and a new bounded synthetic host reporting check remain pending. No model calls or spend. Formal cross-researcher review is now assigned to dmarz, superseding earlier Shadow references.
+
+## Reporting diagnostic passed — 2026-10-04 UTC
+
+E1–E3 re-review passed at 19fa527d. Live synthetic reporting-q0-a1 passed on exclusively allocated sim-vishesh: public TLDR/terminal state, all acknowledgments, four downloaded artifact hashes and installed-client hash verified. Local child timeout passed at 30.024 seconds. See reviews/reporting-diagnostic-post.md and evidence.json. Zero model calls; full $20 cap remains. Credential/served-route qualification and formal dmarz review remain pending. Diagnostic allocation released after evidence preservation.
