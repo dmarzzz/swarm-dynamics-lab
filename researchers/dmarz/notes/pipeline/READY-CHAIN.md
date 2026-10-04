@@ -111,7 +111,8 @@ git-ignored). On a server the launcher points it outside the checkout so the che
 number of tests and `study.source_hash()` with `selftests` and `source_hash` in `READY.yaml`.
 
 Environment on the server (set by the launcher; never written to a file, an argument or a log):
-`SWARM_MODEL_API_KEY`, `SWARM_MODEL_WORKSPACE_ID`, `STUDY_BUDGET_LEDGER` (path of the persistent ledger),
+`SWARM_MODEL_API_KEY`, `SWARM_MODEL_WORKSPACE_ID` (anthropic), `SWARM_OPENROUTER_API_KEY` (openrouter) or
+`SWARM_OPENAI_API_KEY` (openai), `STUDY_MODEL`, `STUDY_PROVIDER`, `STUDY_BUDGET_LEDGER` (path of the persistent ledger),
 `STUDY_RESULTS_DIR`, `SWARM_SOURCE`. The hub address and token come from the server's own configuration.
 
 ## Budget
@@ -173,7 +174,7 @@ category name.
 
 ## Providers and models
 
-Added 2026-10-04. `READY.yaml` may carry `provider:` (`anthropic`, the default, or `openrouter`) and
+Added 2026-10-04. `READY.yaml` may carry `provider:` (`anthropic`, the default, `openrouter` or `openai`) and
 `model_ladder:`. The launcher accepts `claude-opus-5-5` and `claude-opus-5` on `anthropic`, and
 `qwen/qwen3.7-flash` on `openrouter` (research program v5: provider pinned to Alibaba, no fallback,
 reasoning disabled, JSON-object mode with local validation; the reference adapter is
@@ -187,6 +188,27 @@ defaults to the first entry and must be in the ladder. Each model has its own ba
 directory; the scripted S0 serves all models; results are never pooled across models. The second model is
 used only after a stage was refused on a limit or credit error that did not clear in 20 minutes, as a
 dated amendment on the run request. sybil-scarcity-opus and sybil-split-opus predate the ladder.
+
+OpenAI (added 2026-10-04 12:30Z by dmarz/openai-route, while the Anthropic organisation is at its monthly
+limit): provider `openai` with `gpt-6-sol`, `gpt-6-luna`, `gpt-6.1-sol` and `gpt-6-astra`, credential alias
+`SWARM_OPENAI_API_KEY`, reference adapter [reference/openai_provider.py](reference/openai_provider.py) (prices,
+allowed `reasoning_effort` values and what was verified against the OpenAI documentation are in
+[reference/README.md](reference/README.md)). Its billing-stop category is `provider_billing_stopped`; a study's
+`chain.py resume` accepts it exactly as it accepts `provider_credit_balance_low`.
+
+A ladder may mix providers. `READY.yaml` then carries `providers:`, a mapping from every ladder model to its
+provider (`provider:` stays the provider of the first model and the default for models not in the mapping):
+
+```yaml
+provider: openrouter
+model: qwen/qwen3.7-flash
+model_ladder: [qwen/qwen3.7-flash, gpt-6-sol]
+providers: {qwen/qwen3.7-flash: openrouter, gpt-6-sol: openai}
+```
+
+The operator picks the model with `--model`; the launcher sends only that model's provider credential and
+sets `STUDY_MODEL` and `STUDY_PROVIDER` in the chain's environment. Each model keeps its own batch names,
+probe, qualification, ledger file and results; nothing is pooled across models.
 
 Program v5 studies map the program's 24 qualification calls onto the chain as P0 (the first fixture, one
 call) plus Q0 (the other 23), with the gate evaluated over all 24; the one bounded repair the program

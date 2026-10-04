@@ -36,3 +36,81 @@ Not verified against the live service (no call was made while writing it): the e
 OpenRouter's credit error, whether `usage.cost` is present without asking for it, and the `provider`
 field's spelling. The adapter accepts either form in each case, and each study's one-call probe (P0)
 is where these are first seen for real.
+
+## OpenAI (`openai_provider.py`, added 2026-10-04 by dmarz/openai-route)
+
+Third provider for ready-chain studies while the Anthropic organisation is at its monthly limit. Same ledger,
+reservation, failure-category, billing-pause, voided-reservation and duplicate-key rules as the OpenRouter
+adapter; endpoint `https://api.openai.com/v1/chat/completions`, `Authorization: Bearer`, credential from
+`SWARM_OPENAI_API_KEY` in the process environment.
+
+- `openai_provider.py`: request body exactly `model`, `reasoning_effort`, `max_completion_tokens`,
+  `response_format` (`json_object`, or `json_schema` with `name`, `schema`, `strict: true`), optional
+  `temperature`/`top_p` (only with `reasoning_effort: none` on gpt-6-sol or gpt-6-luna), `messages`. No provider
+  object, no provider check; the response `model` must be the requested id, `canonical_model` or `<id>-YYYY-MM-DD`.
+  `check_config` refuses a template the adapter cannot send or price exactly (wrong keys, an effort the model
+  page does not list, sampling parameters with reasoning on, `max_input_tokens` over 272,000, prices that differ
+  from `PRICES`). Billing stop category is `provider_billing_stopped` (OpenRouter's is
+  `provider_credit_balance_low`); a 429 whose code or message names `insufficient_quota`, quota, billing,
+  credit, balance, insufficient, a usage, spend or hard limit is a billing outage, not a rate limit.
+  Re-sent statuses: 429 (rate limit), 500, 502, 503, 504. The numeric `x-ratelimit-*` limit and remaining values
+  of each successful response are kept (LESSONS item 10).
+- `test_openai_provider.py`: 28 offline tests (`python3 test_openai_provider.py`), with a stub opener and a
+  real stub HTTP server on 127.0.0.1; no model call.
+
+Usage: `ledger = Ledger(path, design['budget'])`, `api = OpenAI(ledger, config)`, then
+`answer, accounting = api.call(system, user, call_id, validate)`. In JSON-object mode the prompt must contain the
+word "json" (the API rejects it otherwise; the adapter refuses before reserving, `json_mode_prompt_lacks_json`).
+
+### Prices (USD per million tokens, Standard tier, prompts up to 272K tokens)
+
+Source: https://developers.openai.com/api/docs/pricing (platform.openai.com/docs/pricing redirects there) and
+the model pages https://developers.openai.com/api/docs/models/<id>; retrieved 2026-10-04 12:10Z. Copy the
+model's row into `budget.prices` of the hashed design; the adapter refuses a row that differs from `PRICES`.
+
+| Model | Input | Cached input | Cache write | Output | reasoning_effort allowed |
+|---|---|---|---|---|---|
+| gpt-6-luna | 0.10 | 0.01 | 0.125 | 0.50 | none, low, medium (default), high, xhigh, max |
+| gpt-6-sol | 2.00 | 0.20 | 2.50 | 10.00 | none, low, medium (default), high, xhigh, max |
+| gpt-6.1-sol | 2.00 | 0.10 | 2.50 | 10.00 | low, medium (default), high, xhigh, max |
+| gpt-6-astra | 10.00 | 1.00 | 12.50 | 50.00 | low, medium (default), high, xhigh, max |
+
+Prompts over 272K tokens cost about twice as much (gpt-6-sol 4.00 / 0.40 / 15.00); the adapter does not
+support them. Batch and Flex are half price; not used here. All four models: 1,050,000-token context,
+128,000 max output tokens, Chat Completions supported, Structured Outputs supported.
+
+Cost is computed, never provider-reported (Chat Completions usage has no cost field): uncached input at the
+input price, `prompt_tokens_details.cached_tokens` at the cached price, `completion_tokens` (which include
+reasoning tokens) at the output price. GPT-6 models bill cache writes automatically; when usage does not
+report `cache_write_tokens`, uncached tokens of a prompt of 1,024 tokens or more are priced at the cache-write
+price (an upper bound, `input_pricing: cache_write_upper_bound`).
+
+### Verified against the documentation on 2026-10-04, and not
+
+Verified (WebFetch of developers.openai.com): the prices above; `max_completion_tokens` bounds visible plus
+reasoning tokens and `max_tokens` is deprecated; `reasoning_effort` values per model page (`minimal` appears in
+the generic reference but on no GPT-6 model page; gpt-6.1-sol's page says `none` and `minimal` are unsupported);
+`temperature`, `top_p`, `logprobs` must be removed unless `reasoning_effort` is `none`, which only gpt-6-sol and
+gpt-6-luna accept ("latest model" guide); `response_format` `json_object` / `json_schema` (`name`, `schema`,
+`strict`); usage fields `completion_tokens_details.reasoning_tokens`, `prompt_tokens_details.cached_tokens`
+and no cost field; `message.refusal`; finish reasons stop, length, tool_calls, content_filter, function_call;
+model pages list only the undated snapshot id for each model.
+
+Not verified (no page fetched said it, and no call was made): the exact 429 `insufficient_quota` body (the
+adapter matches code or message words); the Chat Completions spelling of a cache-write usage field (the caching
+guide names `input_tokens_details.cache_write_tokens` for the Responses API); the `x-ratelimit-*` header names;
+the JSON-mode "must contain json" rule (long-standing API behaviour, not re-read today); whether a `strict`
+schema accepts every JSON-Schema keyword a study uses (OpenAI's strict mode needs `additionalProperties: false`
+and every property in `required`). Each study's one-call probe (P0) is where these are first seen for real.
+
+### Switching an OpenRouter ready-chain package to OpenAI
+
+1. Copy `openai_provider.py` into `src/` and call `OpenAI(...)` where the study calls `OpenRouter(...)` (same
+   `Ledger`, same `call()` signature); treat `provider_billing_stopped` as the billing-stop category.
+2. In `design.yaml`, per model: a `request_template` with `model`, `reasoning_effort`, `max_completion_tokens`
+   (= `budget.max_output_tokens`, leaving room for reasoning), `response_format`; `budget.prices` = the
+   model's `PRICES` row; `retryable_http_status: [429, 500, 502, 503, 504]`; drop `provider`/`reasoning`.
+3. Make sure the system or user prompt contains the word "json" (JSON-object mode) or supply a strict schema.
+4. In `READY.yaml`: `model_ladder: [qwen/qwen3.7-flash, gpt-6-sol]` with `providers: {qwen/qwen3.7-flash:
+   openrouter, gpt-6-sol: openai}`; the launcher's `--model gpt-6-sol` sends only the OpenAI credential.
+5. Re-run selftests, refresh `selftests`/`source_hash`, new pre-run review; gpt-6-sol gets its own P0/Q0.
