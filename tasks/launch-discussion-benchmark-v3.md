@@ -21,8 +21,8 @@ The user requested starting experiments after documenting Vishesh's fixes. Ship 
 
 ## Done when
 
-- [ ] Freeze authorization, protocol, model settings and visualization mapping.
-- [ ] Add and test minimal hub reporting and an explicit operator-qualification launch path.
+- [x] Freeze authorization, protocol, model settings and visualization mapping.
+- [x] Add and test minimal hub reporting and an explicit operator-qualification launch path.
 - [ ] Allocate a dedicated server with an exclusive fleet claim and deploy the exact committed source.
 - [ ] Start one 96-case / 636-call qualification batch; verify live progress and durable artifacts.
 - [ ] Record launch evidence, remaining review/qualification gates and the next decision.
