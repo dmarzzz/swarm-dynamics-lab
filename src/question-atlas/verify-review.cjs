@@ -3,6 +3,8 @@
 const { chromium } = require('playwright');
 const assert = require('node:assert/strict');
 const fs = require('node:fs/promises');
+const os = require('node:os');
+const path = require('node:path');
 
 (async () => {
   const browser = await chromium.launch({ headless: true, channel: 'chrome' });
@@ -88,10 +90,10 @@ const fs = require('node:fs/promises');
     assert.equal(exported.review[unchanged.id].status, 'Park');
     assert(!exported.review['UNKNOWN-999']);
     await page.locator('#clear').click();
-    await page.screenshot({ path: '/tmp/question-atlas-update-desktop.png', fullPage: true });
+    await page.screenshot({ path: path.join(os.tmpdir(), 'question-atlas-update-desktop.png'), fullPage: true });
     await page.setViewportSize({ width: 390, height: 844 });
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
-    await page.screenshot({ path: '/tmp/question-atlas-update-mobile.png', fullPage: true });
+    await page.screenshot({ path: path.join(os.tmpdir(), 'question-atlas-update-mobile.png'), fullPage: true });
     assert.deepEqual(errors, []);
     console.log(JSON.stringify({ candidates: atlas.candidates.length, changes: Object.fromEntries(Object.entries(atlas.changes).map(([k,v]) => [k,v.length])), preserved_v1_reviews: true, export_import: true, mobile_overflow: false, page_errors: errors }));
     await context.close();

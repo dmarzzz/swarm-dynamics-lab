@@ -12,16 +12,17 @@ from collections import Counter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
-GH = "https://github.com/dmarzzz/swarm-lab/blob/main/"
+GH = "https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/"
+LIBRARY = "1-library"  # research-phase layout; the folder was library/ before the move (see scripts/lab.py)
 
 def library_index():
     idx = {}
-    for p in glob.glob(os.path.join(REPO, "library", "*", "*.md")):
+    for p in sorted(glob.glob(os.path.join(REPO, LIBRARY, "*", "*.md"))):
         i = os.path.basename(p)[:-3]
         if i in ("README", "INDEX"):
             continue
         t = re.search(r'^title:\s*"?(.*?)"?\s*$', open(p, encoding="utf-8").read(), re.M)
-        idx[i] = (os.path.relpath(p, REPO), t.group(1) if t else i)
+        idx[i] = (os.path.relpath(p, REPO).replace(os.sep, "/"), t.group(1) if t else i)
     return idx
 
 LIB = library_index()
@@ -176,7 +177,7 @@ tr.det td{background:var(--panel);padding:10px 14px 14px}
 
 JS = r'''
 const C=window.CARDS,tb=document.querySelector('#cards tbody'),q=document.getElementById('q'),fk=document.getElementById('fk'),fo=document.getElementById('fo'),fa=document.getElementById('fa'),fd=document.getElementById('fd'),cnt=document.getElementById('count');
-const GH="https://github.com/dmarzzz/swarm-lab/blob/main/";
+const GH="https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/";
 const e=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let sortK='relevance',sortD=-1,open=null;
 function hay(c){return [c.id,c.title,c.setup,c.attacker_access,c.attacker_knowledge,c.defender_assumptions,c.headline,c.gaps,c.metric,c.attacker_goal].join(' ').toLowerCase()}

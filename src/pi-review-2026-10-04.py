@@ -1,10 +1,25 @@
-"""Build the PI review evidence ledger from a frozen public snapshot and cited records."""
+"""Build the PI review evidence ledger from a frozen public snapshot and cited records.
+
+Reads the frozen hub snapshot `live-state.json` from a local, git-ignored data folder (default
+`data/pi-review-2026-10-04/` under the repo root) and the cited records in the repo, and writes the review canvas
+plus `ingredients.json` beside it.
+
+    python3 src/pi-review-2026-10-04.py [--data DIR] [--out FILE.canvas.tsx]
+"""
+import argparse
 import json
 from pathlib import Path
 
-ROOT = Path('/Users/halcyon/swarm-lab')
-OUT = Path('/Users/halcyon/.cursor/projects/Users-halcyon-swarm-labs-agentops/canvases/research-program-review.canvas.tsx')
-BASE = ROOT / 'data/pi-review-2026-10-04'
+ROOT = Path(__file__).resolve().parents[1]
+parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+parser.add_argument('--data', type=Path, default=ROOT / 'data/pi-review-2026-10-04',
+                    help='folder holding the frozen live-state.json (default: data/pi-review-2026-10-04 in the repo)')
+parser.add_argument('--out', type=Path,
+                    help='canvas file to write (default: research-program-review.canvas.tsx in the data folder); '
+                         'ingredients.json is written beside it')
+args = parser.parse_args()
+BASE = args.data.resolve()
+OUT = (args.out or BASE / 'research-program-review.canvas.tsx').resolve()
 snapshot = json.loads((BASE / 'live-state.json').read_text())
 
 def local(path):
@@ -15,57 +30,57 @@ studies = [
       finding='H4 calibration: false memory and attack-derived parent answers in 11/12 attacked worlds. Four of five correct attacked decisions still passed on poisoned memory.',
       scope='12 calibration worlds; three related templates, one model. The fresh private-control comparison uses six worlds: board target wins 2/6 versus private 4/6, with one invalid board outcome. This does not establish a discussion-dose effect.',
       next='Independently review V3, then test a frozen provenance/coverage intervention on fresh worlds and a second task family. Measure final decisions, false memory, missing facts, grounded parent answers, abstention and cost separately.',
-      sources=[local('researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md'),local('researchers/dmarz/notes/discussion-dose/reviews/pc-H4-a1-post.md'),local('researchers/dmarz/notes/discussion-dose/reviews/v2-s0-H4-post.md')]),
+      sources=[local('5-experiments/studies/dmarz/discussion-dose/V2-ISSUE-REVIEW.md'),local('5-experiments/studies/dmarz/discussion-dose/reviews/pc-H4-a1-post.md'),local('5-experiments/studies/dmarz/discussion-dose/reviews/v2-s0-H4-post.md')]),
  dict(name='Swarm of Theseus',kind='Model pilot',verdict='Promising bounded positive',ids=['swarm-of-theseus'],
       finding='Live S1: 36 completed outcomes across six paired worlds. Mean late-step accuracy: notes 100%, both 100%, mentor 91.7%, neither 52.1%, founders 89.6%, verbatim 100%. Notes alone matches the combined treatment.',
       scope='Three synthetic scenarios × two seeds, one model. Hub accuracy is the prespecified mean of steps 4–5, confirmed against executed commit a773ff5. Inherited seeded procedures; no claim of spontaneous culture or novel feature combinations. Mean convention scores: notes 58.3%, both 55.6%, mentor 22.2%, neither 0%, founders 36.1%, verbatim 100%.',
       next='Replicate using independently authored tasks and corrupted/outdated notes. Compare with ordinary retrieval of a procedure and a single solver. Separate usefulness from arbitrary convention retention.',
-      sources=[local('researchers/vishesh/notes/swarm-of-theseus/reviews/S1-a1-pre.md'),'https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/study.py', 'https://swarm-live.pages.dev/#/x/swarm-of-theseus']),
+      sources=[local('5-experiments/studies/vishesh/swarm-of-theseus/reviews/S1-a1-pre.md'),'https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/study.py', 'https://swarm-live.pages.dev/#/x/swarm-of-theseus']),
  dict(name='Sybil specialists',kind='Model pilot',verdict='Clear conditional tradeoff',ids=['sybil-specialists','sybil-specialists-api'],
       finding='Real synthesizer, informative checks: coverage recovers 34/36 rare facts versus degree 3/36; it admits 8/108 attacker identities versus 4/108. Weak checks admit 87/108 attackers under coverage.',
       scope='192 valid observations, only 12 world clusters. The graph, reports, identity checks and admission policies are simulated; only synthesis is an LLM. No faithful published-defense comparator. The 86.1-point difference has a descriptive world-bootstrap interval of 72.2–97.2 points; not a population guarantee.',
       next='Compare a faithful existing defense, a second graph family and a realistic verifier; report task utility and malicious admission jointly.',
-      sources=[local('researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md'),local('researchers/dmarz/notes/sybil-specialists-api/README.md')]),
+      sources=[local('5-experiments/studies/dmarz/sybil-specialists-api/reviews/s1-001-post.md'),local('5-experiments/studies/dmarz/sybil-specialists-api/README.md')]),
  dict(name='External influence',kind='Model pilot',verdict='Useful adverse finding',ids=['external-influence','external-influence-v2'],
       finding='V2: 50 valid outcomes, 31 wrong. Six targeted-check attack cases still selected the harmful option after receiving correct check results. Targeted checks did not beat random checks in the predeclared misleading cell.',
       scope='Only three independent domain/task draws, with a shared underlying utility structure. Counterfactual deterministic replay is a diagnostic, not a newly tested repair. Earlier 3,024 scripted outcomes do not add model evidence.',
       next='Test whether a fixed decision rule actually uses verified fields, with genuinely different held-out tasks. Preserve beneficial updates and measure checking cost.',
-      sources=[local('researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md')]),
+      sources=[local('5-experiments/studies/vishesh/external-influence-v2/reviews/quality-post.md')]),
  dict(name='Adaptive quorum / Antsy',kind='Model pilot',verdict='Mechanism established locally; no AI gain',ids=['adaptive-quorum','adaptive-quorum-api-v2'],
       finding='Repaired sweep: 384 paired blocks / 2,688 policy outcomes; adaptive helps with late correction and hurts with late misinformation. Every policy choice matches the symbolic baseline.',
       scope='12 synthetic task clusters, 39 physical memoized Laya calls. Ballot reuse and repeated conditions are not independent model replications. A stopping rule on supplied evidence schedules; logical time, not real-time service latency.',
       next='Keep the simple baseline. Test new evidence-arrival and reliability regimes only if they expose a practical decision that the current benchmark cannot settle.',
-      sources=[local('researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md'),local('researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md')]),
+      sources=[local('5-experiments/studies/vishesh/adaptive-quorum-v2/repair-v3/README.md'),local('5-experiments/studies/vishesh/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md')]),
  dict(name='Antsy receipt verification',kind='Qualification / ongoing',verdict='Real-data step; no benefit yet',ids=['antsy-verification-v4'],
       finding='S0, 10 real receipts / 70 arm outcomes: adaptive committee, fixed committee and solo each 48.48% token recall; confidence-only 50.23%, random checks 51.40%. The committee never stopped early. S1 was running at the snapshot.',
       scope='Actual receipt OCR is a useful external-validity improvement. Decisions use coarse summaries and annotation-perfect regional QA; OCR is precomputed. This is verification allocation, not demonstrated end-to-end OCR efficiency or payment safety. Jev receipt qualification attempts failed.',
       next='Finish the prespecified held-out evaluation and allow a no-benefit result to end this policy variant. Measure real review costs before economic claims.',
-      sources=[local('researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md'),local('researchers/vishesh/notes/antsy-verification-v4/README.md')]),
+      sources=[local('5-experiments/studies/vishesh/antsy-verification-v4/reviews/S0-post.md'),local('5-experiments/studies/vishesh/antsy-verification-v4/README.md')]),
  dict(name='Regrowth 200',kind='Model pilot',verdict='Deterministic comparator wins quality',ids=['regrowth-200'],
       finding='One-map pilot: all arms ended with valid routes. Model and hybrid arms reached only 6.5% optimal routes; exact routing reached 100%. Model arms reached their recovery threshold sooner, but at much lower solution quality.',
       scope='One map and seed; 200 agents are interacting members, not 200 replications. Different quality endpoints make a headline speed comparison misleading. A missing pre-run public plan was repaired retrospectively and recorded as a process failure.',
       next='Use equal-quality recovery criteria. Establish a reason to use models over routing algorithms before scaling population.',
-      sources=[local('researchers/vishesh/notes/regrowth-200/README.md'),'https://swarm-live.pages.dev/#/x/regrowth-200']),
+      sources=[local('5-experiments/studies/vishesh/regrowth-200/README.md'),'https://swarm-live.pages.dev/#/x/regrowth-200']),
  dict(name='Immune response',kind='Qualification / ongoing',verdict='Repair efficacy not yet established',ids=['immune-response','immune-response-v3'],
       finding='Historical native V2: eight outcomes, one contract-invalid primary-control outcome and zero complete valid primary pairs. V3: 720 scripted outcomes establish intended rollback, stale-state and selective-repair mechanics.',
       scope='The positive assigned effect reported by the hub cannot establish a reliable model treatment effect. Detection and incident labels are oracle supplied. Native repair qualification remained pending; dashboard completion is not qualification success.',
       next='Qualify the exact native repair implementation, then test incomplete lineage and legitimate new learning with valid paired outcomes.',
-      sources=[local('researchers/vishesh/notes/immune-response-v3/REVIEW.md'),local('researchers/vishesh/notes/immune-response-v3/README.md'),'https://swarm-live.pages.dev/#/r/immune-response%2F4deeb0f2']),
+      sources=[local('5-experiments/studies/vishesh/immune-response-v3/REVIEW.md'),local('5-experiments/studies/vishesh/immune-response-v3/README.md'),'https://swarm-live.pages.dev/#/r/immune-response%2F4deeb0f2']),
  dict(name='Healing Helping Hands',kind='Qualification / ongoing',verdict='Reference controls outrun model qualification',ids=['healing-helping-hands'],
       finding='Pilots 01 and 02 each completed 36 exact-control worlds while 108 model assignments were not run after qualification failures. Pilot 03 reported 72 completed worlds and 108 not-run, with publication/review still underway.',
       scope='No pilot-03 arm effect was inferred from aggregate progress alone. Earlier successes use exact extraction and scripted propagation. A semantic pass was also invalidated by lost option rotation; 200 scouts do not imply independent evidence.',
       next='Verify publication and qualification, then compare against ordinary versioned records and withdrawal propagation at equal information and cost.',
-      sources=[local('researchers/vishesh/notes/healing-helping-hands/README.md'),'https://swarm-live.pages.dev/#/x/healing-helping-hands']),
+      sources=[local('5-experiments/studies/vishesh/healing-helping-hands/README.md'),'https://swarm-live.pages.dev/#/x/healing-helping-hands']),
  dict(name='Influence swarms repair',kind='Qualification / ongoing',verdict='No usable repaired-model result yet',ids=['influence-swarms'],
       finding='Latest snapshot: failed qualification/execution; six model calls, nine invalid outcomes, zero valid outcomes.',
       scope='This successor cannot be cited as empirical validation of the offline architecture repair. The prior external-influence adverse result remains informative.',
       next='Diagnose the contract failure on bounded qualification cases before interpreting efficacy.',
-      sources=[local('researchers/vishesh/notes/influence-swarms/README.md'),'https://swarm-live.pages.dev/#/x/influence-swarms']),
+      sources=[local('5-experiments/studies/vishesh/influence-swarms/README.md'),'https://swarm-live.pages.dev/#/x/influence-swarms']),
  dict(name='Market splitting',kind='Qualification / ongoing',verdict='Incentive exists; model discovery unresolved',ids=['market-split','market-split-api'],
       finding='Scripted policies exploit firm-level regulation while owner aggregation removes the benefit. At the frozen live snapshot only three S1 API bundles were complete, all owner-regulated; each retained one firm.',
       scope='No completed cross-regulator S1 contrast at the snapshot. A forced scripted split verifies an incentive built into this simulator; it does not show autonomous discovery. Qualification tests ordinary production competence.',
       next='Finish the frozen neutral-model pilot. Distinguish recognizing an incentive, discovering the action and executing it profitably; do not infer a result from incomplete arms.',
-      sources=[local('researchers/dmarz/notes/market-split/reviews/s1-fleet-001-post.md'),local('researchers/dmarz/notes/market-split-api/reviews/q0-002-post.md'),'https://swarm-live.pages.dev/#/x/market-split-api']),
+      sources=[local('5-experiments/studies/dmarz/market-split/reviews/s1-fleet-001-post.md'),local('5-experiments/studies/dmarz/market-split-api/reviews/q0-002-post.md'),'https://swarm-live.pages.dev/#/x/market-split-api']),
  dict(name='Capture and memory',kind='Scripted mechanism',verdict='Interesting toy; original endpoint unsupported',ids=['capture-memory'],
       finding='Archived S1 toy result: memory20 minus memory1 original-convention fraction after purge −0.294, task-bootstrap interval [−0.311, −0.277]. But recovery within 50 rounds was zero for bounded-memory conditions, and full-memory populations were never captured.',
       scope='Scripted tanh/FIFO policy, oracle purge, no LLM and no factual truth. Archived record has 9,600 episodes / 100 task clusters; newer live jobs are not pooled into that estimate. A drift endpoint differs from the original recovery prediction.',
@@ -75,17 +90,17 @@ studies = [
       finding='84 completed hub jobs for plurality versus provenance-aware quorum in a toy voting model.',
       scope='Worked example explicitly labeled as a toy, not a research result or independent empirical support.',
       next='Retain as a regression fixture; exclude from counts of scientific confirmations.',
-      sources=[local('templates/experiment-worker/README.md'),'https://swarm-live.pages.dev/#/x/template-quorum']),
+      sources=[local('lab/templates/experiment-worker/README.md'),'https://swarm-live.pages.dev/#/x/template-quorum']),
  dict(name='Collective-sensing teaching harness',kind='Scripted mechanism',verdict='Illustrative source-dependence result',ids=[],
       finding='Scripted majority toy: unique-source dedup accuracy 86.67% versus naive 80.42%; +6.25 points, illustrative cluster interval [1.25, 11.25].',
       scope='960 world outcomes from 60 scenario clusters × four repeats × four conditions. Programmed policies; not LLM evidence or a validated defense.',
       next='Use to teach and test the harness. Any research extension needs a separately justified claim.',
-      sources=[local('tooling/agent-experiments/examples/collective-sensing/RESULTS.md')]),
+      sources=[local('5-experiments/toolkit/agent-experiments/examples/collective-sensing/RESULTS.md')]),
  dict(name='Avalon swarm',kind='Scripted mechanism',verdict='Mechanics demonstration; weak efficacy',ids=[],
       finding='Scripted recovery screen: later mission success 38.0% repair versus 37.3% audit; council wins 16% in both. Contradictory exposures fall, but a reliable performance gain is not established. All 15 v0.2 worlds fail truth-consensus by signal loss.',
       scope='Five paired recovery seeds; scale screen has one seed per condition across 100–2,000 logical agents. No LLM population law or scale advantage.',
       next='Keep failure mechanisms explicit. Demand a meaningful independent-world performance effect before scale claims.',
-      sources=[local('tooling/avalon-swarm/RESULTS.md')]),
+      sources=[local('5-experiments/toolkit/avalon-swarm/RESULTS.md')]),
 ]
 
 program = [
@@ -111,7 +126,7 @@ done=sum(e.get('counts',{}).get('done',0) for e in by_id.values())
 scripted=sum(by_id[k]['counts']['done'] for k in ['capture-memory','template-quorum','sybil-specialists','market-split'])
 assert done==531 and scripted==335
 sources=sorted({src for s in studies for src in s['sources']})
-sources += [local('synthesis/pre-experiment-research.md'),local('synthesis/fork-merge-questions.md'),local('library/INDEX.md'),local('surveys/llm-agent-swarms.md')]
+sources += [local('3-synthesis/pre-experiment-research.md'),local('3-synthesis/fork-merge-questions.md'),local('1-library/INDEX.md'),local('2-surveys/llm-agent-swarms.md')]
 for src in sources:
     if not src.startswith('https://'):
         assert Path(src).is_file(), src
@@ -157,11 +172,12 @@ export default function ResearchProgramReview() {
   <Text>Source access: research repository, recorded analyses and reviews, selected implementation checks, branch material for capture-memory, public dashboard and saved public state. No new model experiment was run; no independent replay of every historical raw trace was performed. Large reported effects remain conditional on their testbeds.</Text>
   <Text>Reporting needs separate fields for execution, qualification and scientific result. For example, Sybil S1 publishes qualification_passed=0 because that field is not applicable there; Q0 actually passed. Immune Response has a done job with zero valid primary pairs. Failure rows also include publication and process failures, so the 25 failed jobs cannot be read as a scientific failure rate.</Text>
   <Text>Novelty requires tighter review: some older synthesis wrongly attributes classical Byzantine thresholds to independent failures, while the later prerequisite note corrects this. The original model allows coordinated adversarial behavior within its fault assumptions.</Text>
-  <Row gap={16} wrap><Link href="https://swarm-live.pages.dev/#/">Live dashboard</Link><Link href="https://lamport.azurewebsites.net/pubs/byz.pdf">Original Byzantine model</Link><Link href="/Users/halcyon/swarm-lab/synthesis/pre-experiment-research.md">Corrected prerequisites</Link><Link href="/Users/halcyon/swarm-lab/data/pi-review-2026-10-04/live-state.json">Frozen public state</Link></Row>
+  <Row gap={16} wrap><Link href="https://swarm-live.pages.dev/#/">Live dashboard</Link><Link href="https://lamport.azurewebsites.net/pubs/byz.pdf">Original Byzantine model</Link><Link href="__PREREQUISITES__">Corrected prerequisites</Link><Link href="__LIVE_STATE__">Frozen public state</Link></Row>
  </Stack>;
 }
 '''
+tsx=tsx.replace('__PREREQUISITES__',local('3-synthesis/pre-experiment-research.md')).replace('__LIVE_STATE__',str(BASE/'live-state.json'))
 tsx=tsx.replace('STUDIES',json.dumps(studies,ensure_ascii=False)).replace('PROGRAM',json.dumps(program,ensure_ascii=False)).replace('PRIORITIES',json.dumps(priorities,ensure_ascii=False))
 OUT.write_text(tsx)
-(BASE / 'ingredients.json').write_text(json.dumps([str(Path(__file__)),str(BASE/'live-state.json')]+sources,indent=2))
+(OUT.parent / 'ingredients.json').write_text(json.dumps([str(Path(__file__).resolve()),str(BASE/'live-state.json')]+sources,indent=2))
 print(f'Wrote {OUT}; {len(studies)} research lines cover all {len(by_id)} live registrations; {done} completed jobs, {scripted} explicitly scripted minimum.')

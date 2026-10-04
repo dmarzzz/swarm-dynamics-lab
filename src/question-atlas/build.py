@@ -1,6 +1,15 @@
 """Validate and render the human-requested, unreviewed research candidate bank.
 
 Run from any directory. No network calls, experiments, or review-state writes.
+
+The atlas inputs (lane files, revision.json, research-delta-v2.json) were written before the repo moved to the
+research-phase layout and are frozen: per-candidate and whole-bank hashes are computed over them, and review
+exports quote the bank hash. They name repo files by their pre-move paths (`researchers/<name>/notes/...`,
+`synthesis/...`, `library/...`). The data written here keeps that vocabulary so the hashes stay reproducible;
+`current_path` resolves a pre-move path to where the file lives now whenever a file is read or a link is emitted.
+
+By default the outputs are written into the study folder beside the inputs. `--out DIR` writes them elsewhere
+(for a dry run) and leaves the study folder untouched.
 """
 from pathlib import Path
 import argparse
@@ -10,21 +19,59 @@ import json
 import re
 import yaml
 
+REPO_URL = 'https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/'
+LIBRARY = '1-library'
+STUDIES = '5-experiments/studies'
+# Pre-move path -> current path. Same table as dashboard/scripts/layout.py; the layout itself is defined in
+# scripts/lab.py. Duplicated so that src/ stays self-contained.
+PREFIXES = (('library/', '1-library/'), ('surveys/', '2-surveys/'), ('reviews/', '2-surveys/reviews/'),
+            ('synthesis/', '3-synthesis/'), ('hypotheses/', '4-hypotheses/'), ('experiments/', '5-experiments/'),
+            ('tooling/', '5-experiments/toolkit/'), ('tasks/', 'lab/tasks/'), ('candidates/', 'lab/candidates/'),
+            ('templates/', 'lab/templates/'))
+EXACT = {'STATUS.md': 'lab/STATUS.md', 'PIPELINE.md': 'lab/PIPELINE.md'}
+STUDY = r'^researchers/([^/]+)/(?:notes/|(?=(?:factory|qa)/))'
+
+
+def current_path(path):
+    """Pre-move repo path -> current path. A path already in the current layout is returned unchanged."""
+    if path in EXACT:
+        return EXACT[path]
+    match = re.match(STUDY, path)
+    if match:
+        return f'{STUDIES}/{match.group(1)}/' + path[match.end():]
+    if path.startswith('researchers/'):
+        return 'lab/' + path
+    for old, new in PREFIXES:
+        if path.startswith(old):
+            return new + path[len(old):]
+    return path
+
+
+def frozen_path(path):
+    """Current path of a library entry -> the pre-move spelling the frozen atlas data uses."""
+    assert path.startswith(LIBRARY + '/'), path
+    return 'library/' + path[len(LIBRARY) + 1:]
+
+
 ROOT = Path(__file__).resolve().parents[2]
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--canvas', type=Path, help='Optional managed canvas projection path')
+parser.add_argument('--out', type=Path, help='Write candidates.json, research-delta-v2.json, README.md and '
+                    'review.html to this folder instead of the study folder')
 args = parser.parse_args()
-OUT = ROOT / 'researchers/dmarz/notes/question-atlas'
-TOPICS = yaml.safe_load((ROOT / 'library/topics.yaml').read_text())
+SRC = ROOT / STUDIES / 'dmarz/question-atlas'
+OUT = args.out or SRC
+OUT.mkdir(parents=True, exist_ok=True)
+TOPICS = yaml.safe_load((ROOT / LIBRARY / 'topics.yaml').read_text())
 AREAS = {t['slug']: t['name'] for t in TOPICS}
 FIELDS = ['id', 'area', 'title', 'question', 'hypothesis', 'test', 'baseline', 'metrics',
           'falsifier', 'confounds', 'prior', 'novelty', 'feasibility', 'needs', 'briefs']
 NOVELTY = {'replication', 'boundary-test', 'extension', 'measurement', 'speculative'}
 FEASIBILITY = {'offline', 'api-small', 'training', 'hardware', 'access-dependent'}
-REVISION = json.loads((OUT / 'revision.json').read_text())
+REVISION = json.loads((SRC / 'revision.json').read_text())
 BASELINE = REVISION['baseline_candidate_sha256']
 records = {}
-for p in (ROOT / 'library').glob('*/*.md'):
+for p in (ROOT / LIBRARY).glob('*/*.md'):
     text = p.read_text()
     if text.startswith('---'):
         fm = yaml.safe_load(text.split('---', 2)[1])
@@ -33,7 +80,7 @@ for p in (ROOT / 'library').glob('*/*.md'):
 
 candidates = []
 for lane in ['physical', 'society', 'security', 'methods', 'budgets', 'markets']:
-    rows = json.loads((OUT / f'{lane}.json').read_text())
+    rows = json.loads((SRC / f'{lane}.json').read_text())
     for row in rows:
         assert all(k in row for k in FIELDS), (lane, row.get('id'), 'missing fields')
         assert all(row[k] for k in FIELDS if k != 'briefs'), row['id']
@@ -52,23 +99,24 @@ for lane in ['physical', 'society', 'security', 'methods', 'budgets', 'markets']
             assert source['relation'].strip(), row['id']
             p, fm = records[source['id']]
             source.update(title=fm.get('title', source['id']),
-                          path=p.relative_to(ROOT).as_posix(),
+                          path=frozen_path(p.relative_to(ROOT).as_posix()),
                           url=fm.get('url', ''),
                           catalogued_depth=fm.get('read_depth', 'unspecified'))
         for brief in row['briefs']:
-            assert (ROOT / brief).is_file(), (row['id'], 'missing brief', brief)
+            assert (ROOT / current_path(brief)).is_file(), (row['id'], 'missing brief', brief)
         candidates.append(row)
 
 assert len({r['id'] for r in candidates}) == len(candidates), 'duplicate ids'
 assert set(BASELINE) <= {r['id'] for r in candidates}, 'existing candidate IDs must be preserved'
 assert len({r['question'].strip().lower() for r in candidates}) == len(candidates), 'duplicate questions'
 assert set(r['area'] for r in candidates) == set(AREAS), 'missing research area'
-briefs = sorted((ROOT / 'researchers/vishesh/notes/project-briefs').glob('*.md'))
+briefs = sorted((ROOT / STUDIES / 'vishesh/project-briefs').glob('*.md'))
+mapped = {r['id']: {current_path(b) for b in r['briefs']} for r in candidates}
 for brief in briefs:
     if brief.name == 'README.md':
         continue
     rel = brief.relative_to(ROOT).as_posix()
-    assert any(rel in r['briefs'] for r in candidates), ('unmapped project brief', rel)
+    assert any(rel in mapped[r['id']] for r in candidates), ('unmapped project brief', rel)
 
 digest = hashlib.sha256(json.dumps(candidates, sort_keys=True).encode()).hexdigest()
 changes = {kind: [r['id'] for r in candidates if r['change'] == kind]
@@ -78,21 +126,20 @@ payload = dict(version=REVISION['version'], date=REVISION['date'], status='Human
                changes=changes, content_sha256=digest, topics=AREAS,
                candidates=candidates)
 (OUT / 'candidates.json').write_text(json.dumps(payload, indent=2, ensure_ascii=False)+'\n')
-delta_path = OUT / 'research-delta-v2.json'
-delta = json.loads(delta_path.read_text())
+delta = json.loads((SRC / 'research-delta-v2.json').read_text())
 for record in delta['records']:
     record['cited_by'] = [r['id'] for r in candidates
                           if any(s['id'] == record['id'] for s in r['prior'])]
-delta_path.write_text(json.dumps(delta, indent=2, ensure_ascii=False)+'\n')
+(OUT / 'research-delta-v2.json').write_text(json.dumps(delta, indent=2, ensure_ascii=False)+'\n')
 
 def link(path):
-    return 'https://github.com/dmarzzz/swarm-lab/blob/main/' + path
+    return REPO_URL + current_path(path)
 
 counts = collections.Counter(r['area'] for r in candidates)
 lines = ['# Research question atlas', '',
          f'{len(candidates)} candidate questions, tentative hypotheses and test sketches across all {len(AREAS)} research areas.', '',
          'Owner: dmarz/question-atlas. Human-requested brainstorming, 2026-10-03. **Every item is an unreviewed hunch.** These are selection materials, not accepted hypotheses, approved protocols, measured effects, or novelty claims.', '',
-         '[Start with the synthesis and review guide](../../../../synthesis/research-question-atlas.md). '
+         '[Start with the synthesis and review guide](../../../../3-synthesis/research-question-atlas.md). '
          '[Open the local review browser](review.html). [Machine-readable bank](candidates.json). '
          '[Review scope and limitations](scope.md).', '',
          f'Update {REVISION["version"]}: **{len(changes["new"])} new, {len(changes["revised"])} revised, '
@@ -126,15 +173,18 @@ lines += ['## Original brief coverage', '']
 for brief in briefs:
     if brief.name == 'README.md': continue
     rel = brief.relative_to(ROOT).as_posix()
-    ids = [f'[{r["id"]}](#{r["id"].lower()})' for r in candidates if rel in r['briefs']]
+    ids = [f'[{r["id"]}](#{r["id"].lower()})' for r in candidates if rel in mapped[r['id']]]
     lines.append(f'- [{brief.stem}]({link(rel)}): '+', '.join(ids))
 (OUT / 'README.md').write_text('\n'.join(lines)+'\n')
 embedded = json.dumps(payload, ensure_ascii=False).replace('<', '\\u003c')
-template = (ROOT / 'src/question-atlas/review-template.html').read_text()
-(OUT / 'review.html').write_text(template.replace('__ATLAS_DATA__', embedded))
-canvas = (ROOT / 'src/question-atlas/canvas-template.txt').read_text()
+# The templates build their links in the browser from the frozen paths, so they get the same table.
+layout = json.dumps(dict(repo=REPO_URL, studies=STUDIES, prefixes=PREFIXES, exact=EXACT, study=STUDY))
+HERE = Path(__file__).resolve().parent
+template = (HERE / 'review-template.html').read_text()
+(OUT / 'review.html').write_text(template.replace('__LAYOUT_MAP__', layout).replace('__ATLAS_DATA__', embedded))
+canvas = (HERE / 'canvas-template.txt').read_text()
 if args.canvas:
-    args.canvas.write_text(canvas.replace('__ATLAS_DATA__', embedded))
+    args.canvas.write_text(canvas.replace('__LAYOUT_MAP__', layout).replace('__ATLAS_DATA__', embedded))
 print(json.dumps(dict(candidates=len(candidates), topics=len(counts),
                       changes={k: len(v) for k, v in changes.items()},
                       unique_sources=len({s['id'] for r in candidates for s in r['prior']}),
