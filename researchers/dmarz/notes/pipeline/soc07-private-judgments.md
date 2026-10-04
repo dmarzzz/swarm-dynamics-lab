@@ -1,6 +1,6 @@
 # soc07-private-judgments: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/orbital-orchestrator (orbital-one), run-queue 141, server sim-dmarz-8, claim `dmarz-soc07-private` to 11:50Z. Not a review. Last updated 2026-10-04T08:25Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/orbital-orchestrator (orbital-one), run-queue 141, server sim-dmarz-8, claim `dmarz-soc07-private` to 11:50Z. Not a review. Last updated 2026-10-04T09:02Z.
 
 ## 1. Results so far
 
@@ -32,16 +32,18 @@ A sub-agent of this lane regenerated both qualification sets from the study's ge
 
 Three cohorts on this gate: Haiku 7 of 12, Sonnet 9 of 12 (both without reasoning, on the unrepaired prompt), Opus 12 of 12 (with reasoning, on the repaired prompt). Model, reasoning and the prompt clause all changed between the second and third, so the improvement cannot be assigned to one of them.
 
-- S1-R: up to 672 calls (480 public, 192 auxiliary), five in flight. Gates: clean competence at least 13 of 16 focal public final answers correct in clean-regime replay episodes, parse-valid at least 95%, truncated at most 5% per phase, budget and timeout failures at most 5%, zero detected leaks. At S1-Q.2's price about USD 3 to 6. Duration not yet measurable; a first reading comes with the next hub update.
-- Forecast for S1-R's clean-competence gate: pass expected, given 12 of 12 in qualification on the same decision rule. The untested parts are the discussion and final phases with their 256 and 64 token visible caps plus the 4,096 reasoning allowance: truncation is the failure to watch.
+**S1-R passed at 08:56:43Z** (run 807dfab8): 192 of 192 episodes, 672 calls, 0 failures, valid rate 1.0, USD 5.24, 32 minutes. Team success 1.00 in the private arm and 1.00 in the public arm; private minus public +0.000. S1-L (`s1l-a1`, run 92e1c0d5) started from the chain at about 08:57Z: 425 calls and 25 episodes by 09:01Z, 0 failures, about 110 calls per minute.
+
+- S1-L forecast: 4,080 calls, end about 09:35Z, about USD 32. Execution risk low (0 failures in 1,100 Opus calls in this study).
+- **Ceiling.** With Opus and a reasoning allowance the focal agent was right in every S1-R episode in both arms, against scripted peers that include stubborn and majority-following policies. The study's primary measure is the difference between arms. At 100% in both there is no room for publication of first answers to hurt, so a zero difference from S1-L would be a property of the task difficulty, not evidence about private first judgments. The hub will show `team_success_private`, `team_success_public` and their difference when S1-L closes; if both are at or near 1.0 the result should be reported as "at ceiling, uninformative", not as a null effect.
 
 ## 3. Next run
 
-**If S1-R passes its gates:** S1-L (up to 4,080 calls: 2,880 public, 1,200 auxiliary), already authorized. At USD 0.0045 to 0.01 per call about USD 18 to 40, inside the USD 500 cap. If the launcher does not start S1-L by itself, that hand-over is the next place the lane can idle.
+**S1-L is the last authorized stage** (S2-L and S3 are closed).
 
-**If S1-R fails clean competence (12 or fewer of 16):** the plan says the team prompts are suspect and S1-L does not start. Read the focal agent's final answers in the failed clean episodes first; the single-solver rule is now known to be answerable (12 of 12), so a failure here is about the team context, not the rule.
-
-**If S1-R fails on truncation:** raise the visible caps for the phase that truncated. That is a manifest change: fresh S0, approval and S1-Q on a new set (about 10 minutes of run time).
+- **If S1-L is at ceiling in both arms (expected):** the next run is a harder instrument on the same model, not another model. Options, in order of cost: (a) a manipulation check from the records already collected: how often do the five first answers disagree, and how often is the majority's first answer wrong, per regime? If first answers are nearly always correct, publication has nothing to anchor on and the regimes are not doing their job at this competence; (b) worlds where the informed minority is smaller or the superseding record is harder to weigh (more records per option, margins of 1 to 2, more than one override); (c) the same worlds with reasoning effort low. Each is a new manifest and a new qualification, with a qualification gate that has an upper bound as well as a lower one (for example 9 to 11 of 12), so a model that is too strong for the instrument is caught in 40 seconds instead of after 4,700 calls.
+- **If the arms differ by a few points with both above 90%:** report the paired difference with its interval and the number of discordant teams; with success this high the contrast rests on a handful of episodes.
+- **If S1-L fails a software gate (truncation over 5% in a phase, parse-valid under 95%):** the 64-token final caps are the likeliest place; that is a manifest change.
 
 ## 4. Design notes for later runs
 
@@ -50,6 +52,8 @@ Three cohorts on this gate: Haiku 7 of 12, Sonnet 9 of 12 (both without reasonin
 - S0 replays 1,500 scripted episodes for every manifest. When an amendment touches only the manifest block and the adapter, a shorter S0 covering those paths would do.
 - Deciding the budget and caps for the whole ladder before the qualification (as A6 did) is the right order; see LESSONS item 1.
 
+- The qualification only has a floor. Haiku and Sonnet failed it from below; Opus with reasoning passes it at 12 of 12 and then sits at 100% in the team stage. A gate with a ceiling as well as a floor would have flagged this before S1-R and S1-L.
+
 ## 5. Cross-lane
 
-See [LESSONS.md](LESSONS.md) items 1, 3 and 6.
+See [LESSONS.md](LESSONS.md) items 1, 3, 6 and 9.
