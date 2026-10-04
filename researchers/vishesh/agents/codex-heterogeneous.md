@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-heterogeneous
 tool: codex
-state: working
-task: qualify-poietic-agents-s0
-doing: Preparing owner-directed S0-02 central dispatch;81 offline checks, retained cumulative budget
+state: blocked
+task: null
+doing: S0-02 prepared and public plan verified;81 checks; awaiting current dispatch coordination
 updated: 2026-10-04T16:20Z
 ---
 
