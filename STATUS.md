@@ -48,7 +48,7 @@
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T04:35Z | Run the revised procurement influence experiment |
 | [phantom-coast-pc2-design](tasks/phantom-coast-pc2-design.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:38Z | Iterate Phantom Coast after the native ceiling result |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | claimed | p1 | survey | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T04:32Z | Complete Quorum prior-art evidence and staged run roadmap |
-| [review-quorum-mirrors-qm3](tasks/review-quorum-mirrors-qm3.md) | claimed | p1 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:36Z | Review Quorum of Mirrors practical value and S1 feasibility design |
+| [review-poietic-agents-design](tasks/review-poietic-agents-design.md) | claimed | p1 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:43Z | Independently review the Poietic Agents prospective design |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:27Z | Deploy and assess the Right Dissenter exploratory live study |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T04:37Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -72,7 +72,6 @@
 | [deploy-hub-replay-json](tasks/deploy-hub-replay-json.md) | open | p1 | admin |  | dmarz |  | Deploy hub change so the public site can serve replay.json (agentops PR |
 | [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | open | p1 | build |  | dmarz | 2026-10-04T03:59Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
-| [review-poietic-agents-design](tasks/review-poietic-agents-design.md) | open | p1 | review |  | dmarz |  | Independently review the Poietic Agents prospective design |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
 | [scan-code-avalon-swarm](tasks/scan-code-avalon-swarm.md) | open | p1 | scan |  | dmarz |  | Catalogue and run Avalon / social-deduction environments we could extend to N seats |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
@@ -186,6 +185,7 @@
 | [review-discussion-dose-v2-fixes](tasks/review-discussion-dose-v2-fixes.md) | done | p1 | review | dmarz/discussion-dose | dmarz | 2026-10-04T01:30Z | Check whether discussion dose v2 addresses the original pilot limitations |
 | [review-influence-q4-dossiers](tasks/review-influence-q4-dossiers.md) | done | p1 | review | vishesh/codex-experiments | dmarz | 2026-10-04T04:16Z | Independently review the four fresh influence qualification dossiers |
 | [review-llm-agent-swarms-vishesh](tasks/review-llm-agent-swarms-vishesh.md) | done | p1 | review | vishesh/codex-independent-reviews | vishesh | 2026-10-04T02:29Z | Independent vishesh check of the revised LLM-agent-swarms survey |
+| [review-quorum-mirrors-qm3](tasks/review-quorum-mirrors-qm3.md) | done | p1 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:42Z | Review Quorum of Mirrors practical value and S1 feasibility design |
 | [review-right-dissenter-rd1](tasks/review-right-dissenter-rd1.md) | done | p1 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:17Z | Review Right Dissenter RD-1 design and offline prototype |
 | [review-swarm-size-qualification](tasks/review-swarm-size-qualification.md) | done | p1 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:17Z | Independently review the optimal swarm-size qualification package |
 | [right-dissenter-design-build](tasks/right-dissenter-design-build.md) | done | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T03:13Z | Build the Right Dissenter exploratory design and scenario harness |
@@ -231,6 +231,7 @@
 | dmarz/soc07-private | done |  | 2026-10-04T04:50Z | Phase 1 complete and handed off. Phase 2 (S1-Q, S1-R, S1-L) is to be launched by dmarz/orbital-orchestrator after the reviewer go; see DEPLOYMENT.md Handoff. No model call was made. |
 | vishesh/codex-theseus | done | theseus-rule-diagnosis | 2026-10-04T04:44Z | Saved-evidence diagnosis complete and published; no additional model calls |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T04:41Z | Iteration 3 matched approval-review diagnostic; 27 tests and 30/30 scripted checks pass; exclusive PR134 allocation, existing quota retained; native deployment underway |
+| dmarz/inbox-design-feedback | working | review-quorum-mirrors-qm3 | 2026-10-04T04:38Z | Reviewing Quorum S1 and Poietic prospective design; no paid execution. |
 | dmarz/pi-completion-audit | done |  | 2026-10-04T04:36Z | Completed read-only portfolio audit; report,223-row ledger and interactive view filed for publication. |
 | vishesh/codex-heterogeneous | done | poietic-agents-design | 2026-10-04T04:35Z | Published and registered Poietic Agents design; review and instrument tasks open |
 | dmarz/cloud-discussion-d1 | working | diagnose-discussion-v3-q0 | 2026-10-04T04:33Z | Publish tested D1 harness; sole paid dispatch remains with local operator. |
@@ -241,7 +242,6 @@
 | dmarz/sybil-specialists | working | sybil-followups | 2026-10-04T04:20Z | Monitoring both frozen S1 studies on separate servers and preparing retained-data audits and result delivery |
 | vishesh/codex-pi-review | done | add-experiment-evidence-metadata | 2026-10-04T04:20Z | Published 45 evidence assessments in 41 documents, templates and CI metadata checks. |
 | vishesh/codex-methods | working | antsy-receipt-v6 | 2026-10-04T04:19Z | Measuring fresh receipt totals with real fallible checkers and stronger evaluator tests |
-| dmarz/inbox-design-feedback | done |  | 2026-10-04T04:18Z | Published four scoped reviews, author feedback, and unchanged v3 vote rescore. |
 | vishesh/codex-runbook | done | institutionalize-experiment-setup | 2026-10-04T04:12Z | Published shared experiment setup instructions and runbook; checks passed |
 | dmarz/private-control | done | build-v3-resample-control | 2026-10-04T04:10Z | resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs |
 | vishesh/codex-local-agents | working |  | 2026-10-04T04:02Z | Owner-authorized local Qwen variant of external influence v2; public plan registered, offline checks passed, preparing Q0 |
