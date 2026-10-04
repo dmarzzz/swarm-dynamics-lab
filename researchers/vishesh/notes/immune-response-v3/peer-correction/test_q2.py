@@ -33,9 +33,15 @@ class Q2Tests(unittest.TestCase):
   for k,v in [('stage','peer-correction-p1'),('campaign_max_calls',232),('funded',False),('infrastructure_reserved_usd',.031)]:
    bad=copy.deepcopy(r);bad[k]=v
    with self.assertRaises(ValueError):a.validate_contract(bad,p,now,'offline')
-  for minutes in (15,21):
+  for minutes in (11,21):
    bad=copy.deepcopy(r);bad['allocation']['expires']=(now+datetime.timedelta(minutes=minutes)).isoformat()
    with self.assertRaises(ValueError):a.validate_contract(bad,p,now,'offline')
   self.assertEqual((48,2.657280,900),relay.limits('peer-contract-q2'))
   with self.assertRaises(ValueError):relay.limits('peer-correction-p1')
+class PublicPlanTest(unittest.TestCase):
+ def test_actual_plan_shape(self):
+  import importlib.util
+  path=Path(__file__).resolve().parent
+  spec=importlib.util.spec_from_file_location('q2_public_test',path.parent.parent/'experiment-documentation/public_plan.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+  module.validate({'id':'immune-response-v3','url':'https://github.com/dmarzzz/swarm-lab/blob/'+'a'*40+'/Q2-PLAN.md','description':'TLDR: qualification'},(path/'Q2-PLAN.md').read_text(),'Q2 explicit existing limits: fixed outcomes and all assigned development worlds.')
 if __name__=='__main__':unittest.main()
