@@ -1,0 +1,57 @@
+id: market-split
+title: Can one owner hide behind many firms?
+description: 'MKT-03 + MKT-11 exploratory qualification. SCRIPTED controls only: not
+  evidence of agent discovery. Capital and capacity are conserved across firm identities.'
+owner: dmarz
+params:
+  stage:
+    type: str
+    role: stage
+  regulator:
+    type: str
+    role: condition
+    value_labels:
+      none: No regulator
+      firm: Firm-based HHI
+      owner: Ownership-aware HHI
+  threshold:
+    type: float
+    role: condition
+  registration_fee:
+    type: float
+    role: condition
+  tasks:
+    type: list
+    role: replicate
+  seeds:
+    type: list
+    role: replicate
+  arms:
+    type: list
+    role: fixed
+  cfg:
+    type: object
+    role: fixed
+  backend:
+    type: str
+    role: fixed
+  attempt_id:
+    type: str
+    role: fixed
+  code:
+    type: str
+    role: fixed
+metrics:
+- evasion_split_control
+- evasion_profit_search
+- profit_merged
+- profit_split_control
+- profit_profit_search
+- profit_lift_split_control
+- invalid
+- episodes
+- fragmentation_merged
+- fragmentation_split_control
+- fragmentation_profit_search
+primary_metric: profit_lift_split_control
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/market-split

@@ -1,0 +1,7 @@
+# S1 attempt 2 pre-run assessment
+
+Status ready for operational recovery. Parent [attempt1 post-mortem](S1-attempt-1-post.md). All scientific protocol, assignments, model, agent and evaluator settings remain exactly as [S1-pre](S1-pre.md); its visualization mapping S1-v1 applies. Q2 remains passed. Only rendering and orchestration change.
+
+Recover 25 saved blocks and 12 valid physical receipts from attempt1; assert actor-source hashes and the complete assignment prefix match. Continue only 359 missing blocks. Restore exact-state/question memoization with original receipt indices and retain their prior invocation audit. Manifest marks reused blocks/calls and parent. The final 384-block data set contains the preserved prefix once. No selective reroll, new scientific sample or changed hypothesis. The new operational run ID ends `S1-attempt-2` and uses a new output directory.
+
+Command: `python src/sweep.py --qualification <Q2-attempt-1> --resume <S1-attempt-1> --attempt 2 --out <new-S1-attempt-2> --report`. Same exclusive sim-vishesh claim and source/version capture. One worker/two threads, zero paid inference, total combined cached receipt cap500, new operational wall cap40min. Refresh claim before launch. Nine regressions pass, including a real seven-frame GIF encode/decode and final2.4s duration. Full outcomes persist before any animation. Artifact failure remains a separately repairable operational defect; preserve raw results.

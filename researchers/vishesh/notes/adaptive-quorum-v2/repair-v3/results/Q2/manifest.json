@@ -1,0 +1,16 @@
+{
+  "stage": "Q2",
+  "code": "6d98eaccab52b77a0f8d4dc36ac14b8b12b858b9",
+  "complete": true,
+  "model": "convaiinnovations/laya",
+  "checkpoint": "55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851",
+  "laya_source": "2e4d9c87e8b1621deb344eac7de5c7258f32f849",
+  "laya_version": "0.3.26",
+  "device": "cpu",
+  "threads": 2,
+  "versions": {
+    "torch": "2.14.1+cpu",
+    "transformers": "4.57.6",
+    "safetensors": "0.8.0"
+  }
+}

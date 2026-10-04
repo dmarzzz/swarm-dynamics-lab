@@ -1,0 +1,45 @@
+version: 1
+status: exploratory
+experiment: sybil-specialists
+questions: [SEC-19, SEC-43]
+backend: scripted
+arms: [no_verification, degree, random, coverage]
+cfg:
+  core: 18
+  community: 9
+  trusted_seeds: 2
+  admission_seats: 18
+  pagerank_restart: 0.20
+  pagerank_iterations: 120
+  honest_check_pass: 0.90
+  skills: 6
+stages:
+  S0:
+    tasks: [100, 101, 102, 103]
+    bridges: [1, 3]
+    attacker_pass: [0.10, 0.90]
+    verification_budget: [0, 4]
+    clean: [true, false]
+  S1:
+    tasks: [200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211]
+    bridges: [1, 3]
+    attacker_pass: [0.10, 0.50, 0.90]
+    verification_budget: [2, 4, 8]
+    clean: [false]
+  S2:
+    enabled: false
+    reason: Reviewed survey, accepted hypothesis, audited published comparators and frozen powered design required
+    reserved_task_range: [10000, 19999]
+primary_contrast:
+  stage: S1
+  compare: [coverage, degree]
+  metric: rare_accuracy
+  bridges: 1
+  attacker_pass: 0.10
+  verification_budget: 4
+  clean: false
+  status: exploratory development contrast; no confirmatory inference
+model_stage:
+  enabled: false
+  role: Optional downstream synthesis of admitted reports; admission stays algorithmic
+  requirements: [scripted_qualification, fixed_model_and_prompt, explicit_budget_cap, credential_alias, pre_run_assessment]

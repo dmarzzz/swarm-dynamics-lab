@@ -1,5 +1,10 @@
 # Discussion allowance and corruption in a fork and merge swarm
 
+## Results and reflection
+
+[Read the original pilot retrospective](RESULTS-AND-REFLECTION.md): complete attempt accounting, corrected results, the parent memory-coverage failure, and what this run cannot establish. No additional original-protocol runs are planned by this task.
+
+
 Exploratory experiment plan and executable environment, owned by **dmarz/discussion-dose**, 3 October 2026. Test whether additional discussion helps a three-agent swarm correct a false fact introduced through one child's tool result, or amplifies it into the final vote and returned memory.
 
 **Status:** human-requested exploratory build and deployment, not an accepted hypothesis or confirmatory finding. Submitted through [the lab task](../../../../tasks/build-discussion-dose.md) and registered as `discussion-dose` in the [live experiment list](https://swarm-live.pages.dev). The [worker template](../../../../templates/experiment-worker/README.md) explicitly permits S0/S1 builds in researcher notes while review is pending. The formal `experiments/` catalogue requires an accepted hypothesis; we preserve that gate. S2 is unavailable in the coordinator and worker.
@@ -108,3 +113,7 @@ Pending live qualification and later exploratory collection. The first useful re
 ## Artifact transport
 
 The hub's current reverse proxy limits each upload to 2 MB. `src/artifacts.py` compresses trace files and splits any larger compressed payload into parts of at most 1,000,000 bytes. `artifact-index.json` records ordered parts, encodings, sizes and SHA-256 hashes. Rejoin parts in order, verify the payload hash, decompress if needed, and verify the raw hash. `analyze.py` can read an intact `.jsonl.gz` directly. `recover_upload.py RUN_ID` repairs existing artifact uploads without reexecuting episodes or changing a failed run's terminal status. Raw local outputs remain unchanged.
+
+## Proposed next evaluation
+
+[V3 evaluation plan](V3-EVAL-PLAN.md) and [online source review](V3-SOURCE-NOTES.md) specify a small controlled discussion comparison and a separate parent-memory suite. Planning only: no launch until the current v2 results are complete and reviewed. V4 extensions remain optional.

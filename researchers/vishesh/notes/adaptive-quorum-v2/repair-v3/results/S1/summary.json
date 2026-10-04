@@ -1,0 +1,64 @@
+{
+  "assigned_blocks": 384,
+  "completed_blocks": 384,
+  "task_clusters": 12,
+  "physical_calls": 39,
+  "logical_predicates": 88128,
+  "encoded_input_tokens": 1677,
+  "inference_wall_s": 26.394105828998363,
+  "elapsed_wall_s": 38.474812040999495,
+  "invalid_outcomes": 0,
+  "blocked_model_acceptances": 0,
+  "symbolic_policy_disagreements": 0,
+  "arms": {
+    "majority": {
+      "assigned": 384,
+      "correct": 288,
+      "violations": 96,
+      "abstentions": 0,
+      "mean_loss": 0.25
+    },
+    "fixed-two": {
+      "assigned": 384,
+      "correct": 288,
+      "violations": 96,
+      "abstentions": 0,
+      "mean_loss": 0.25
+    },
+    "fixed-three": {
+      "assigned": 384,
+      "correct": 48,
+      "violations": 0,
+      "abstentions": 336,
+      "mean_loss": 0.4375
+    },
+    "adaptive": {
+      "assigned": 384,
+      "correct": 288,
+      "violations": 96,
+      "abstentions": 0,
+      "mean_loss": 0.25
+    },
+    "deadline-vote": {
+      "assigned": 384,
+      "correct": 288,
+      "violations": 96,
+      "abstentions": 0,
+      "mean_loss": 0.25
+    },
+    "central-deadline": {
+      "assigned": 384,
+      "correct": 288,
+      "violations": 96,
+      "abstentions": 0,
+      "mean_loss": 0.25
+    },
+    "symbolic-deadline": {
+      "assigned": 384,
+      "correct": 288,
+      "violations": 96,
+      "abstentions": 0,
+      "mean_loss": 0.25
+    }
+  }
+}

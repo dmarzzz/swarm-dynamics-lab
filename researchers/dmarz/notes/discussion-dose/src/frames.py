@@ -59,7 +59,9 @@ class FrameTracker:
         self.flush()
 
     def snapshot(self):
-        self.history.append(self.frame())
+        # Deep copy: frame() shares the live tally dict, so a stored snapshot must not alias it.
+        f = json.loads(json.dumps(self.frame())); f.pop('recent', None)  # per-episode list only needed live
+        self.history.append(f)
         if len(self.history) > MAX_HISTORY: self.history = self.history[::2]; self.thinned += 1
 
     def replay(self):

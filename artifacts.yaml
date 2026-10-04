@@ -75,4 +75,27 @@ artifacts:
           - src/fork-merge-setups/cards/F.json
           - synthesis/fork-merge-questions.md
         commit: 89b3d0693a90b51839c6c448b7f785bd91164190-dirty
+  - id: market-split-scripted-frame
+    category: content
+    type: figure
+    title: One owner and many firms scripted qualification
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/market-split-scripted-frame/market-split-scripted-frame-v1.png
+        built_at: '2026-10-04T01:37:59Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1047e-d018-7200-99d4-ef93e90cd5c4
+        prompt: create an experiment plan and also lets make sure theres some type of visual we show in the UI and make sure
+          to do a scripted version to make sure everything works before we actully use api key and then follow swarm-labs-agentops
+          to deploy the exerpiment and all of that for "Can one owner’s many firms defeat a concentration-based regulator?
+          — MKT-03 + MKT-11" and in particular, Im actually curious if agents will naturally discover the strategy to split
+          apart to avoid the regulator
+        ingredients:
+          - researchers/dmarz/notes/market-split/src/render.py
+          - researchers/dmarz/notes/market-split/src/sim.py
+          - researchers/dmarz/notes/market-split/design.yaml
+          - researchers/dmarz/notes/market-split/results/s0-local-002/cell-01/episodes.jsonl
+        commit: c222a06c99c42b0ad6842bbff15ccf8d2a679e09-dirty
 requires: '1.2'

@@ -1,0 +1,17 @@
+{
+  "assigned": 22,
+  "completed": 22,
+  "core_correct": 16,
+  "core_by_target_out_of_4": {
+    "A": 4,
+    "B": 4,
+    "C": 4,
+    "NONE": 4
+  },
+  "edge_correct_out_of_6": 6,
+  "invalid": 0,
+  "blocked_model_acceptances": 0,
+  "physical_calls": 66,
+  "logical_predicates": 198,
+  "qualification_pass": true
+}

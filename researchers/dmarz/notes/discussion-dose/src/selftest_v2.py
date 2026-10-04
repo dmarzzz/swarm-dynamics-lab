@@ -123,6 +123,7 @@ class TestsV2(unittest.TestCase):
             rows = [json.loads(l) for l in (Path(d) / 'out' / 'episodes.jsonl').read_text().splitlines()]
             replay = json.loads((Path(d) / 'out' / 'replay.json').read_text())
         self.assertEqual(replay['kind'], 'deliberation-replay'); self.assertGreater(len(replay['frames']), 20)
+        self.assertEqual(replay['frames'][0]['tally']['episodes'], 0)  # snapshots must not alias the live tally
         last = replay['frames'][-1]['tally']
         self.assertEqual(last['episodes'], len(rows)); self.assertGreaterEqual(last['invalid'], 1)
         self.assertEqual(last['invalid'], sum(r['evaluation']['invalid'] for r in rows))

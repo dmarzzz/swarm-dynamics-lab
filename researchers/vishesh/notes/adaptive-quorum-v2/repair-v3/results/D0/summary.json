@@ -1,0 +1,37 @@
+{
+  "atomic-accuracy": {
+    "assigned": 8,
+    "correct": 8,
+    "invalid": 0
+  },
+  "atomic-retention_days": {
+    "assigned": 8,
+    "correct": 8,
+    "invalid": 0
+  },
+  "atomic-scanned": {
+    "assigned": 8,
+    "correct": 8,
+    "invalid": 0
+  },
+  "json": {
+    "assigned": 8,
+    "correct": 2,
+    "invalid": 0
+  },
+  "json-tools": {
+    "assigned": 8,
+    "correct": 1,
+    "invalid": 0
+  },
+  "prose": {
+    "assigned": 8,
+    "correct": 3,
+    "invalid": 0
+  },
+  "prose-tools": {
+    "assigned": 8,
+    "correct": 3,
+    "invalid": 0
+  }
+}

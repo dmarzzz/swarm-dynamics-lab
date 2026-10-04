@@ -1,0 +1,67 @@
+version: market-split-v1
+status: exploratory-hunch
+backend: scripted
+api_budget_usd: 0
+arms:
+- merged
+- split_control
+- profit_search
+regulators:
+- none
+- firm
+- owner
+cfg:
+  rounds: 24
+  max_firms: 4
+  start_cash: 20000
+  fine_rate: 0.35
+  overhead: 3
+  registration_fee: 20
+  history_rounds: 6
+  split_round: 4
+splits:
+  dev:
+  - 0
+  - 199
+  holdout:
+  - 1000
+  - 1999
+stages:
+  S0:
+    tasks:
+    - 0
+    - 1
+    seeds:
+    - 11
+    thresholds:
+    - 0.38
+    fees:
+    - 20
+    rounds: 12
+  S1:
+    tasks:
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    seeds:
+    - 21
+    - 22
+    thresholds:
+    - 0.38
+    - 0.46
+    fees:
+    - 20
+    - 2500
+    rounds: 24
+primary_contrast:
+  stage: future model S2, disabled
+  metric: strategic_fragmentation
+  compare:
+  - neutral agent / firm
+  - neutral agent / owner
+  threshold: 0.38
+  registration_fee: 20
+S2_enabled: false
