@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-10-04T04:13:53.150594+00:00",
+  "commit": "d3432148e130b62ce2815333adc5fc187c1bac30",
+  "experiment": "external-influence-v2",
+  "local_plan_sha256": "16b394c8329045afa03ab092d15e5cb63c920a6fc3009578a07721cf9c8eb1f5",
+  "local_plan_url": "https://github.com/dmarzzz/swarm-lab/blob/d3432148e130b62ce2815333adc5fc187c1bac30/researchers/vishesh/notes/external-influence-v2/local-agents/PLAN-v2.md",
+  "plan_sha256": "16b394c8329045afa03ab092d15e5cb63c920a6fc3009578a07721cf9c8eb1f5",
+  "process_compliance": "passed",
+  "registered_tldr": "TLDR: Local-agent variant of the nine-agent external-influence pilot. Qwen3 0.6B failed candidate coverage; 1.7B completed 3/6 teams and chose correctly in 2/6. A prospective 1.7B schema repair now enforces public candidate/citation constraints, measuring validity and correctness on six fresh clean/superior cases before any historical 50-case comparison. Zero API inference spend; exploratory development fixtures and backend differences limit conclusions.",
+  "run_tldr": "TLDR: Q2 tests nine-agent qwen3:1.7b teams on six clean/superior fixtures against exact task truth, measuring valid/correct choices, tokens and latency. Three domain roots; competence screen only, not attack resistance. Plan: https://github.com/dmarzzz/swarm-lab/blob/d3432148e130b62ce2815333adc5fc187c1bac30/researchers/vishesh/notes/external-influence-v2/local-agents/PLAN-v2.md",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/d3432148e130b62ce2815333adc5fc187c1bac30/researchers/vishesh/notes/external-influence-v2/local-agents/PLAN-v2.md"
+}

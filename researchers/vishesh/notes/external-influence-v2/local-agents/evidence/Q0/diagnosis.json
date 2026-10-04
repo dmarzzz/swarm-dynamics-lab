@@ -1,0 +1,100 @@
+{
+  "stage": "Q0",
+  "valid_analyst_responses": 5,
+  "failures": [
+    {
+      "assignment": 3,
+      "phase": "initial",
+      "reason": "candidate coverage",
+      "candidates_returned": [
+        "cedar-json"
+      ],
+      "expected": [
+        "cedar-json",
+        "finch-parse",
+        "juniper-codec",
+        "maple-data"
+      ]
+    },
+    {
+      "assignment": 0,
+      "phase": "initial",
+      "reason": "candidate coverage",
+      "candidates_returned": [
+        "CedarDesk",
+        "FinchSupport",
+        "JuniperHelp"
+      ],
+      "expected": [
+        "CedarDesk",
+        "FinchSupport",
+        "JuniperHelp",
+        "MapleService"
+      ]
+    },
+    {
+      "assignment": 4,
+      "phase": "initial",
+      "reason": "candidate coverage",
+      "candidates_returned": [
+        "Cedar itinerary",
+        "Finch itinerary",
+        "Juniper itinerary"
+      ],
+      "expected": [
+        "Cedar itinerary",
+        "Finch itinerary",
+        "Juniper itinerary",
+        "Maple itinerary"
+      ]
+    },
+    {
+      "assignment": 2,
+      "phase": "initial",
+      "reason": "candidate coverage",
+      "candidates_returned": [
+        "cedar-json",
+        "finch-parse",
+        "juniper-codec"
+      ],
+      "expected": [
+        "cedar-json",
+        "finch-parse",
+        "juniper-codec",
+        "maple-data"
+      ]
+    },
+    {
+      "assignment": 1,
+      "phase": "initial",
+      "reason": "candidate coverage",
+      "candidates_returned": [
+        "CedarDesk"
+      ],
+      "expected": [
+        "CedarDesk",
+        "FinchSupport",
+        "JuniperHelp",
+        "MapleService"
+      ]
+    },
+    {
+      "assignment": 5,
+      "phase": "initial",
+      "reason": "candidate coverage",
+      "candidates_returned": [
+        "Cedar itinerary",
+        "Finch itinerary"
+      ],
+      "expected": [
+        "Cedar itinerary",
+        "Finch itinerary",
+        "Juniper itinerary",
+        "Maple itinerary"
+      ]
+    }
+  ],
+  "failure_counts": {
+    "candidate coverage": 6
+  }
+}

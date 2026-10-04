@@ -1,0 +1,3650 @@
+{
+  "stage": "S1",
+  "origin": "native-jev",
+  "scripted_initial_votes": true,
+  "started_utc": "2026-10-04T04:37:18.364302+00:00",
+  "assignments": [
+    {
+      "case_id": "6aac9088f9c2",
+      "scenario": "bridge",
+      "seed": 1110,
+      "condition": "standard",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "6aac9088f9c2",
+      "scenario": "bridge",
+      "seed": 1110,
+      "condition": "standard",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "6aac9088f9c2",
+      "scenario": "bridge",
+      "seed": 1110,
+      "condition": "standard",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "6aac9088f9c2",
+      "scenario": "bridge",
+      "seed": 1110,
+      "condition": "standard",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "6aac9088f9c2",
+      "scenario": "bridge",
+      "seed": 1110,
+      "condition": "standard",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "6aac9088f9c2",
+      "scenario": "bridge",
+      "seed": 1110,
+      "condition": "standard",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "6aac9088f9c2",
+      "scenario": "bridge",
+      "seed": 1110,
+      "condition": "standard",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "c71fb5f41418",
+      "scenario": "bridge",
+      "seed": 1111,
+      "condition": "content_agrees",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "c71fb5f41418",
+      "scenario": "bridge",
+      "seed": 1111,
+      "condition": "content_agrees",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "c71fb5f41418",
+      "scenario": "bridge",
+      "seed": 1111,
+      "condition": "content_agrees",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "c71fb5f41418",
+      "scenario": "bridge",
+      "seed": 1111,
+      "condition": "content_agrees",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "c71fb5f41418",
+      "scenario": "bridge",
+      "seed": 1111,
+      "condition": "content_agrees",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "c71fb5f41418",
+      "scenario": "bridge",
+      "seed": 1111,
+      "condition": "content_agrees",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "c71fb5f41418",
+      "scenario": "bridge",
+      "seed": 1111,
+      "condition": "content_agrees",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6bc39ce49af5",
+      "scenario": "bridge",
+      "seed": 1112,
+      "condition": "wrong_scope",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6bc39ce49af5",
+      "scenario": "bridge",
+      "seed": 1112,
+      "condition": "wrong_scope",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6bc39ce49af5",
+      "scenario": "bridge",
+      "seed": 1112,
+      "condition": "wrong_scope",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6bc39ce49af5",
+      "scenario": "bridge",
+      "seed": 1112,
+      "condition": "wrong_scope",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6bc39ce49af5",
+      "scenario": "bridge",
+      "seed": 1112,
+      "condition": "wrong_scope",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6bc39ce49af5",
+      "scenario": "bridge",
+      "seed": 1112,
+      "condition": "wrong_scope",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6bc39ce49af5",
+      "scenario": "bridge",
+      "seed": 1112,
+      "condition": "wrong_scope",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "dc594b4c1617",
+      "scenario": "bridge",
+      "seed": 1113,
+      "condition": "noisy_check",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "dc594b4c1617",
+      "scenario": "bridge",
+      "seed": 1113,
+      "condition": "noisy_check",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "dc594b4c1617",
+      "scenario": "bridge",
+      "seed": 1113,
+      "condition": "noisy_check",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "dc594b4c1617",
+      "scenario": "bridge",
+      "seed": 1113,
+      "condition": "noisy_check",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "dc594b4c1617",
+      "scenario": "bridge",
+      "seed": 1113,
+      "condition": "noisy_check",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "dc594b4c1617",
+      "scenario": "bridge",
+      "seed": 1113,
+      "condition": "noisy_check",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "dc594b4c1617",
+      "scenario": "bridge",
+      "seed": 1113,
+      "condition": "noisy_check",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "279845f3e7bc",
+      "scenario": "bridge",
+      "seed": 1114,
+      "condition": "standard",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "279845f3e7bc",
+      "scenario": "bridge",
+      "seed": 1114,
+      "condition": "standard",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "279845f3e7bc",
+      "scenario": "bridge",
+      "seed": 1114,
+      "condition": "standard",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "279845f3e7bc",
+      "scenario": "bridge",
+      "seed": 1114,
+      "condition": "standard",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "279845f3e7bc",
+      "scenario": "bridge",
+      "seed": 1114,
+      "condition": "standard",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "279845f3e7bc",
+      "scenario": "bridge",
+      "seed": 1114,
+      "condition": "standard",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "279845f3e7bc",
+      "scenario": "bridge",
+      "seed": 1114,
+      "condition": "standard",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "2d2552bddbc6",
+      "scenario": "bridge",
+      "seed": 1115,
+      "condition": "content_agrees",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "2d2552bddbc6",
+      "scenario": "bridge",
+      "seed": 1115,
+      "condition": "content_agrees",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "2d2552bddbc6",
+      "scenario": "bridge",
+      "seed": 1115,
+      "condition": "content_agrees",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "2d2552bddbc6",
+      "scenario": "bridge",
+      "seed": 1115,
+      "condition": "content_agrees",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "2d2552bddbc6",
+      "scenario": "bridge",
+      "seed": 1115,
+      "condition": "content_agrees",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "2d2552bddbc6",
+      "scenario": "bridge",
+      "seed": 1115,
+      "condition": "content_agrees",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "2d2552bddbc6",
+      "scenario": "bridge",
+      "seed": 1115,
+      "condition": "content_agrees",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "4eb2664de4a1",
+      "scenario": "bridge",
+      "seed": 1116,
+      "condition": "wrong_scope",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "4eb2664de4a1",
+      "scenario": "bridge",
+      "seed": 1116,
+      "condition": "wrong_scope",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "4eb2664de4a1",
+      "scenario": "bridge",
+      "seed": 1116,
+      "condition": "wrong_scope",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "4eb2664de4a1",
+      "scenario": "bridge",
+      "seed": 1116,
+      "condition": "wrong_scope",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "4eb2664de4a1",
+      "scenario": "bridge",
+      "seed": 1116,
+      "condition": "wrong_scope",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "4eb2664de4a1",
+      "scenario": "bridge",
+      "seed": 1116,
+      "condition": "wrong_scope",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "4eb2664de4a1",
+      "scenario": "bridge",
+      "seed": 1116,
+      "condition": "wrong_scope",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "e21d8195d599",
+      "scenario": "bridge",
+      "seed": 1117,
+      "condition": "noisy_check",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "e21d8195d599",
+      "scenario": "bridge",
+      "seed": 1117,
+      "condition": "noisy_check",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "e21d8195d599",
+      "scenario": "bridge",
+      "seed": 1117,
+      "condition": "noisy_check",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "e21d8195d599",
+      "scenario": "bridge",
+      "seed": 1117,
+      "condition": "noisy_check",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "e21d8195d599",
+      "scenario": "bridge",
+      "seed": 1117,
+      "condition": "noisy_check",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "e21d8195d599",
+      "scenario": "bridge",
+      "seed": 1117,
+      "condition": "noisy_check",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "e21d8195d599",
+      "scenario": "bridge",
+      "seed": 1117,
+      "condition": "noisy_check",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "5dfe85c2cb6c",
+      "scenario": "bridge",
+      "seed": 1118,
+      "condition": "standard",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "5dfe85c2cb6c",
+      "scenario": "bridge",
+      "seed": 1118,
+      "condition": "standard",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "5dfe85c2cb6c",
+      "scenario": "bridge",
+      "seed": 1118,
+      "condition": "standard",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "5dfe85c2cb6c",
+      "scenario": "bridge",
+      "seed": 1118,
+      "condition": "standard",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "5dfe85c2cb6c",
+      "scenario": "bridge",
+      "seed": 1118,
+      "condition": "standard",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "5dfe85c2cb6c",
+      "scenario": "bridge",
+      "seed": 1118,
+      "condition": "standard",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "5dfe85c2cb6c",
+      "scenario": "bridge",
+      "seed": 1118,
+      "condition": "standard",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e11df42ec746",
+      "scenario": "bridge",
+      "seed": 1119,
+      "condition": "content_agrees",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e11df42ec746",
+      "scenario": "bridge",
+      "seed": 1119,
+      "condition": "content_agrees",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e11df42ec746",
+      "scenario": "bridge",
+      "seed": 1119,
+      "condition": "content_agrees",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e11df42ec746",
+      "scenario": "bridge",
+      "seed": 1119,
+      "condition": "content_agrees",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e11df42ec746",
+      "scenario": "bridge",
+      "seed": 1119,
+      "condition": "content_agrees",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e11df42ec746",
+      "scenario": "bridge",
+      "seed": 1119,
+      "condition": "content_agrees",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e11df42ec746",
+      "scenario": "bridge",
+      "seed": 1119,
+      "condition": "content_agrees",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "8e97e403eebd",
+      "scenario": "bridge",
+      "seed": 1120,
+      "condition": "wrong_scope",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "8e97e403eebd",
+      "scenario": "bridge",
+      "seed": 1120,
+      "condition": "wrong_scope",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "8e97e403eebd",
+      "scenario": "bridge",
+      "seed": 1120,
+      "condition": "wrong_scope",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "8e97e403eebd",
+      "scenario": "bridge",
+      "seed": 1120,
+      "condition": "wrong_scope",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "8e97e403eebd",
+      "scenario": "bridge",
+      "seed": 1120,
+      "condition": "wrong_scope",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "8e97e403eebd",
+      "scenario": "bridge",
+      "seed": 1120,
+      "condition": "wrong_scope",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "8e97e403eebd",
+      "scenario": "bridge",
+      "seed": 1120,
+      "condition": "wrong_scope",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "d5c711958ae0",
+      "scenario": "bridge",
+      "seed": 1121,
+      "condition": "noisy_check",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "d5c711958ae0",
+      "scenario": "bridge",
+      "seed": 1121,
+      "condition": "noisy_check",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "d5c711958ae0",
+      "scenario": "bridge",
+      "seed": 1121,
+      "condition": "noisy_check",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "d5c711958ae0",
+      "scenario": "bridge",
+      "seed": 1121,
+      "condition": "noisy_check",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "d5c711958ae0",
+      "scenario": "bridge",
+      "seed": 1121,
+      "condition": "noisy_check",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "d5c711958ae0",
+      "scenario": "bridge",
+      "seed": 1121,
+      "condition": "noisy_check",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "d5c711958ae0",
+      "scenario": "bridge",
+      "seed": 1121,
+      "condition": "noisy_check",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "36a53abc24af",
+      "scenario": "bridge",
+      "seed": 1122,
+      "condition": "standard",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "36a53abc24af",
+      "scenario": "bridge",
+      "seed": 1122,
+      "condition": "standard",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "36a53abc24af",
+      "scenario": "bridge",
+      "seed": 1122,
+      "condition": "standard",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "36a53abc24af",
+      "scenario": "bridge",
+      "seed": 1122,
+      "condition": "standard",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "36a53abc24af",
+      "scenario": "bridge",
+      "seed": 1122,
+      "condition": "standard",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "36a53abc24af",
+      "scenario": "bridge",
+      "seed": 1122,
+      "condition": "standard",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "36a53abc24af",
+      "scenario": "bridge",
+      "seed": 1122,
+      "condition": "standard",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "ea297e846f8c",
+      "scenario": "bridge",
+      "seed": 1123,
+      "condition": "content_agrees",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "ea297e846f8c",
+      "scenario": "bridge",
+      "seed": 1123,
+      "condition": "content_agrees",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "ea297e846f8c",
+      "scenario": "bridge",
+      "seed": 1123,
+      "condition": "content_agrees",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "ea297e846f8c",
+      "scenario": "bridge",
+      "seed": 1123,
+      "condition": "content_agrees",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "ea297e846f8c",
+      "scenario": "bridge",
+      "seed": 1123,
+      "condition": "content_agrees",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "ea297e846f8c",
+      "scenario": "bridge",
+      "seed": 1123,
+      "condition": "content_agrees",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "ea297e846f8c",
+      "scenario": "bridge",
+      "seed": 1123,
+      "condition": "content_agrees",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6464e1dc9a06",
+      "scenario": "bridge",
+      "seed": 1124,
+      "condition": "wrong_scope",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6464e1dc9a06",
+      "scenario": "bridge",
+      "seed": 1124,
+      "condition": "wrong_scope",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6464e1dc9a06",
+      "scenario": "bridge",
+      "seed": 1124,
+      "condition": "wrong_scope",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6464e1dc9a06",
+      "scenario": "bridge",
+      "seed": 1124,
+      "condition": "wrong_scope",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6464e1dc9a06",
+      "scenario": "bridge",
+      "seed": 1124,
+      "condition": "wrong_scope",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6464e1dc9a06",
+      "scenario": "bridge",
+      "seed": 1124,
+      "condition": "wrong_scope",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6464e1dc9a06",
+      "scenario": "bridge",
+      "seed": 1124,
+      "condition": "wrong_scope",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "31625d1ce001",
+      "scenario": "bridge",
+      "seed": 1125,
+      "condition": "noisy_check",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "31625d1ce001",
+      "scenario": "bridge",
+      "seed": 1125,
+      "condition": "noisy_check",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "31625d1ce001",
+      "scenario": "bridge",
+      "seed": 1125,
+      "condition": "noisy_check",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "31625d1ce001",
+      "scenario": "bridge",
+      "seed": 1125,
+      "condition": "noisy_check",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "31625d1ce001",
+      "scenario": "bridge",
+      "seed": 1125,
+      "condition": "noisy_check",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "31625d1ce001",
+      "scenario": "bridge",
+      "seed": 1125,
+      "condition": "noisy_check",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "31625d1ce001",
+      "scenario": "bridge",
+      "seed": 1125,
+      "condition": "noisy_check",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "8df4ec98699f",
+      "scenario": "build",
+      "seed": 1126,
+      "condition": "standard",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "8df4ec98699f",
+      "scenario": "build",
+      "seed": 1126,
+      "condition": "standard",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "8df4ec98699f",
+      "scenario": "build",
+      "seed": 1126,
+      "condition": "standard",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "8df4ec98699f",
+      "scenario": "build",
+      "seed": 1126,
+      "condition": "standard",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "8df4ec98699f",
+      "scenario": "build",
+      "seed": 1126,
+      "condition": "standard",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "8df4ec98699f",
+      "scenario": "build",
+      "seed": 1126,
+      "condition": "standard",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "8df4ec98699f",
+      "scenario": "build",
+      "seed": 1126,
+      "condition": "standard",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "8a81ec8845d3",
+      "scenario": "build",
+      "seed": 1127,
+      "condition": "content_agrees",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "8a81ec8845d3",
+      "scenario": "build",
+      "seed": 1127,
+      "condition": "content_agrees",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "8a81ec8845d3",
+      "scenario": "build",
+      "seed": 1127,
+      "condition": "content_agrees",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "8a81ec8845d3",
+      "scenario": "build",
+      "seed": 1127,
+      "condition": "content_agrees",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "8a81ec8845d3",
+      "scenario": "build",
+      "seed": 1127,
+      "condition": "content_agrees",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "8a81ec8845d3",
+      "scenario": "build",
+      "seed": 1127,
+      "condition": "content_agrees",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "8a81ec8845d3",
+      "scenario": "build",
+      "seed": 1127,
+      "condition": "content_agrees",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "4f58e5e76f4a",
+      "scenario": "build",
+      "seed": 1128,
+      "condition": "wrong_scope",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "4f58e5e76f4a",
+      "scenario": "build",
+      "seed": 1128,
+      "condition": "wrong_scope",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "4f58e5e76f4a",
+      "scenario": "build",
+      "seed": 1128,
+      "condition": "wrong_scope",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "4f58e5e76f4a",
+      "scenario": "build",
+      "seed": 1128,
+      "condition": "wrong_scope",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "4f58e5e76f4a",
+      "scenario": "build",
+      "seed": 1128,
+      "condition": "wrong_scope",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "4f58e5e76f4a",
+      "scenario": "build",
+      "seed": 1128,
+      "condition": "wrong_scope",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "4f58e5e76f4a",
+      "scenario": "build",
+      "seed": 1128,
+      "condition": "wrong_scope",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "5b156bcb1315",
+      "scenario": "build",
+      "seed": 1129,
+      "condition": "noisy_check",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "5b156bcb1315",
+      "scenario": "build",
+      "seed": 1129,
+      "condition": "noisy_check",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "5b156bcb1315",
+      "scenario": "build",
+      "seed": 1129,
+      "condition": "noisy_check",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "5b156bcb1315",
+      "scenario": "build",
+      "seed": 1129,
+      "condition": "noisy_check",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "5b156bcb1315",
+      "scenario": "build",
+      "seed": 1129,
+      "condition": "noisy_check",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "5b156bcb1315",
+      "scenario": "build",
+      "seed": 1129,
+      "condition": "noisy_check",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "5b156bcb1315",
+      "scenario": "build",
+      "seed": 1129,
+      "condition": "noisy_check",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "09bfe2e9cdf4",
+      "scenario": "build",
+      "seed": 1130,
+      "condition": "standard",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "09bfe2e9cdf4",
+      "scenario": "build",
+      "seed": 1130,
+      "condition": "standard",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "09bfe2e9cdf4",
+      "scenario": "build",
+      "seed": 1130,
+      "condition": "standard",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "09bfe2e9cdf4",
+      "scenario": "build",
+      "seed": 1130,
+      "condition": "standard",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "09bfe2e9cdf4",
+      "scenario": "build",
+      "seed": 1130,
+      "condition": "standard",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "09bfe2e9cdf4",
+      "scenario": "build",
+      "seed": 1130,
+      "condition": "standard",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "09bfe2e9cdf4",
+      "scenario": "build",
+      "seed": 1130,
+      "condition": "standard",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "3d53d5c4203f",
+      "scenario": "build",
+      "seed": 1131,
+      "condition": "content_agrees",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "3d53d5c4203f",
+      "scenario": "build",
+      "seed": 1131,
+      "condition": "content_agrees",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "3d53d5c4203f",
+      "scenario": "build",
+      "seed": 1131,
+      "condition": "content_agrees",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "3d53d5c4203f",
+      "scenario": "build",
+      "seed": 1131,
+      "condition": "content_agrees",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "3d53d5c4203f",
+      "scenario": "build",
+      "seed": 1131,
+      "condition": "content_agrees",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "3d53d5c4203f",
+      "scenario": "build",
+      "seed": 1131,
+      "condition": "content_agrees",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "3d53d5c4203f",
+      "scenario": "build",
+      "seed": 1131,
+      "condition": "content_agrees",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "600b1d62ae11",
+      "scenario": "build",
+      "seed": 1132,
+      "condition": "wrong_scope",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "600b1d62ae11",
+      "scenario": "build",
+      "seed": 1132,
+      "condition": "wrong_scope",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "600b1d62ae11",
+      "scenario": "build",
+      "seed": 1132,
+      "condition": "wrong_scope",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "600b1d62ae11",
+      "scenario": "build",
+      "seed": 1132,
+      "condition": "wrong_scope",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "600b1d62ae11",
+      "scenario": "build",
+      "seed": 1132,
+      "condition": "wrong_scope",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "600b1d62ae11",
+      "scenario": "build",
+      "seed": 1132,
+      "condition": "wrong_scope",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "600b1d62ae11",
+      "scenario": "build",
+      "seed": 1132,
+      "condition": "wrong_scope",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "3dd12eac79d5",
+      "scenario": "build",
+      "seed": 1133,
+      "condition": "noisy_check",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "3dd12eac79d5",
+      "scenario": "build",
+      "seed": 1133,
+      "condition": "noisy_check",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "3dd12eac79d5",
+      "scenario": "build",
+      "seed": 1133,
+      "condition": "noisy_check",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "3dd12eac79d5",
+      "scenario": "build",
+      "seed": 1133,
+      "condition": "noisy_check",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "3dd12eac79d5",
+      "scenario": "build",
+      "seed": 1133,
+      "condition": "noisy_check",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "3dd12eac79d5",
+      "scenario": "build",
+      "seed": 1133,
+      "condition": "noisy_check",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "3dd12eac79d5",
+      "scenario": "build",
+      "seed": 1133,
+      "condition": "noisy_check",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "cadab8ee38af",
+      "scenario": "build",
+      "seed": 1134,
+      "condition": "standard",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "cadab8ee38af",
+      "scenario": "build",
+      "seed": 1134,
+      "condition": "standard",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "cadab8ee38af",
+      "scenario": "build",
+      "seed": 1134,
+      "condition": "standard",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "cadab8ee38af",
+      "scenario": "build",
+      "seed": 1134,
+      "condition": "standard",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "cadab8ee38af",
+      "scenario": "build",
+      "seed": 1134,
+      "condition": "standard",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "cadab8ee38af",
+      "scenario": "build",
+      "seed": 1134,
+      "condition": "standard",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "cadab8ee38af",
+      "scenario": "build",
+      "seed": 1134,
+      "condition": "standard",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "e362e6cb3d0a",
+      "scenario": "build",
+      "seed": 1135,
+      "condition": "content_agrees",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e362e6cb3d0a",
+      "scenario": "build",
+      "seed": 1135,
+      "condition": "content_agrees",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e362e6cb3d0a",
+      "scenario": "build",
+      "seed": 1135,
+      "condition": "content_agrees",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e362e6cb3d0a",
+      "scenario": "build",
+      "seed": 1135,
+      "condition": "content_agrees",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e362e6cb3d0a",
+      "scenario": "build",
+      "seed": 1135,
+      "condition": "content_agrees",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e362e6cb3d0a",
+      "scenario": "build",
+      "seed": 1135,
+      "condition": "content_agrees",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e362e6cb3d0a",
+      "scenario": "build",
+      "seed": 1135,
+      "condition": "content_agrees",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "beba1d551406",
+      "scenario": "build",
+      "seed": 1136,
+      "condition": "wrong_scope",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "beba1d551406",
+      "scenario": "build",
+      "seed": 1136,
+      "condition": "wrong_scope",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "beba1d551406",
+      "scenario": "build",
+      "seed": 1136,
+      "condition": "wrong_scope",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "beba1d551406",
+      "scenario": "build",
+      "seed": 1136,
+      "condition": "wrong_scope",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "beba1d551406",
+      "scenario": "build",
+      "seed": 1136,
+      "condition": "wrong_scope",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "beba1d551406",
+      "scenario": "build",
+      "seed": 1136,
+      "condition": "wrong_scope",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "beba1d551406",
+      "scenario": "build",
+      "seed": 1136,
+      "condition": "wrong_scope",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "97d9b9d8d629",
+      "scenario": "build",
+      "seed": 1137,
+      "condition": "noisy_check",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "97d9b9d8d629",
+      "scenario": "build",
+      "seed": 1137,
+      "condition": "noisy_check",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "97d9b9d8d629",
+      "scenario": "build",
+      "seed": 1137,
+      "condition": "noisy_check",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "97d9b9d8d629",
+      "scenario": "build",
+      "seed": 1137,
+      "condition": "noisy_check",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "97d9b9d8d629",
+      "scenario": "build",
+      "seed": 1137,
+      "condition": "noisy_check",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "97d9b9d8d629",
+      "scenario": "build",
+      "seed": 1137,
+      "condition": "noisy_check",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "97d9b9d8d629",
+      "scenario": "build",
+      "seed": 1137,
+      "condition": "noisy_check",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "87a792838663",
+      "scenario": "build",
+      "seed": 1138,
+      "condition": "standard",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "87a792838663",
+      "scenario": "build",
+      "seed": 1138,
+      "condition": "standard",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "87a792838663",
+      "scenario": "build",
+      "seed": 1138,
+      "condition": "standard",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "87a792838663",
+      "scenario": "build",
+      "seed": 1138,
+      "condition": "standard",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "87a792838663",
+      "scenario": "build",
+      "seed": 1138,
+      "condition": "standard",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "87a792838663",
+      "scenario": "build",
+      "seed": 1138,
+      "condition": "standard",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "87a792838663",
+      "scenario": "build",
+      "seed": 1138,
+      "condition": "standard",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "aa0f30f16d52",
+      "scenario": "build",
+      "seed": 1139,
+      "condition": "content_agrees",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "aa0f30f16d52",
+      "scenario": "build",
+      "seed": 1139,
+      "condition": "content_agrees",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "aa0f30f16d52",
+      "scenario": "build",
+      "seed": 1139,
+      "condition": "content_agrees",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "aa0f30f16d52",
+      "scenario": "build",
+      "seed": 1139,
+      "condition": "content_agrees",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "aa0f30f16d52",
+      "scenario": "build",
+      "seed": 1139,
+      "condition": "content_agrees",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "aa0f30f16d52",
+      "scenario": "build",
+      "seed": 1139,
+      "condition": "content_agrees",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "aa0f30f16d52",
+      "scenario": "build",
+      "seed": 1139,
+      "condition": "content_agrees",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "0900b8c58dcb",
+      "scenario": "build",
+      "seed": 1140,
+      "condition": "wrong_scope",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "0900b8c58dcb",
+      "scenario": "build",
+      "seed": 1140,
+      "condition": "wrong_scope",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "0900b8c58dcb",
+      "scenario": "build",
+      "seed": 1140,
+      "condition": "wrong_scope",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "0900b8c58dcb",
+      "scenario": "build",
+      "seed": 1140,
+      "condition": "wrong_scope",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "0900b8c58dcb",
+      "scenario": "build",
+      "seed": 1140,
+      "condition": "wrong_scope",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "0900b8c58dcb",
+      "scenario": "build",
+      "seed": 1140,
+      "condition": "wrong_scope",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "0900b8c58dcb",
+      "scenario": "build",
+      "seed": 1140,
+      "condition": "wrong_scope",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "304938abbf19",
+      "scenario": "build",
+      "seed": 1141,
+      "condition": "noisy_check",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "304938abbf19",
+      "scenario": "build",
+      "seed": 1141,
+      "condition": "noisy_check",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "304938abbf19",
+      "scenario": "build",
+      "seed": 1141,
+      "condition": "noisy_check",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "304938abbf19",
+      "scenario": "build",
+      "seed": 1141,
+      "condition": "noisy_check",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "304938abbf19",
+      "scenario": "build",
+      "seed": 1141,
+      "condition": "noisy_check",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "304938abbf19",
+      "scenario": "build",
+      "seed": 1141,
+      "condition": "noisy_check",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "304938abbf19",
+      "scenario": "build",
+      "seed": 1141,
+      "condition": "noisy_check",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "e17892d37880",
+      "scenario": "bridge",
+      "seed": 1142,
+      "condition": "stale",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e17892d37880",
+      "scenario": "bridge",
+      "seed": 1142,
+      "condition": "stale",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e17892d37880",
+      "scenario": "bridge",
+      "seed": 1142,
+      "condition": "stale",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e17892d37880",
+      "scenario": "bridge",
+      "seed": 1142,
+      "condition": "stale",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e17892d37880",
+      "scenario": "bridge",
+      "seed": 1142,
+      "condition": "stale",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e17892d37880",
+      "scenario": "bridge",
+      "seed": 1142,
+      "condition": "stale",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e17892d37880",
+      "scenario": "bridge",
+      "seed": 1142,
+      "condition": "stale",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "4a6f3914309a",
+      "scenario": "bridge",
+      "seed": 1143,
+      "condition": "no_check",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "4a6f3914309a",
+      "scenario": "bridge",
+      "seed": 1143,
+      "condition": "no_check",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "4a6f3914309a",
+      "scenario": "bridge",
+      "seed": 1143,
+      "condition": "no_check",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "4a6f3914309a",
+      "scenario": "bridge",
+      "seed": 1143,
+      "condition": "no_check",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "4a6f3914309a",
+      "scenario": "bridge",
+      "seed": 1143,
+      "condition": "no_check",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "4a6f3914309a",
+      "scenario": "bridge",
+      "seed": 1143,
+      "condition": "no_check",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "4a6f3914309a",
+      "scenario": "bridge",
+      "seed": 1143,
+      "condition": "no_check",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "0141bf38eff6",
+      "scenario": "bridge",
+      "seed": 1144,
+      "condition": "late",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "0141bf38eff6",
+      "scenario": "bridge",
+      "seed": 1144,
+      "condition": "late",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "0141bf38eff6",
+      "scenario": "bridge",
+      "seed": 1144,
+      "condition": "late",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "0141bf38eff6",
+      "scenario": "bridge",
+      "seed": 1144,
+      "condition": "late",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "0141bf38eff6",
+      "scenario": "bridge",
+      "seed": 1144,
+      "condition": "late",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "0141bf38eff6",
+      "scenario": "bridge",
+      "seed": 1144,
+      "condition": "late",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "0141bf38eff6",
+      "scenario": "bridge",
+      "seed": 1144,
+      "condition": "late",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "337b39f316b4",
+      "scenario": "bridge",
+      "seed": 1145,
+      "condition": "absent",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "337b39f316b4",
+      "scenario": "bridge",
+      "seed": 1145,
+      "condition": "absent",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "337b39f316b4",
+      "scenario": "bridge",
+      "seed": 1145,
+      "condition": "absent",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "337b39f316b4",
+      "scenario": "bridge",
+      "seed": 1145,
+      "condition": "absent",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "337b39f316b4",
+      "scenario": "bridge",
+      "seed": 1145,
+      "condition": "absent",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "337b39f316b4",
+      "scenario": "bridge",
+      "seed": 1145,
+      "condition": "absent",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "337b39f316b4",
+      "scenario": "bridge",
+      "seed": 1145,
+      "condition": "absent",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "135bc7d382ec",
+      "scenario": "bridge",
+      "seed": 1146,
+      "condition": "stale",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "135bc7d382ec",
+      "scenario": "bridge",
+      "seed": 1146,
+      "condition": "stale",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "135bc7d382ec",
+      "scenario": "bridge",
+      "seed": 1146,
+      "condition": "stale",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "135bc7d382ec",
+      "scenario": "bridge",
+      "seed": 1146,
+      "condition": "stale",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "135bc7d382ec",
+      "scenario": "bridge",
+      "seed": 1146,
+      "condition": "stale",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "135bc7d382ec",
+      "scenario": "bridge",
+      "seed": 1146,
+      "condition": "stale",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "135bc7d382ec",
+      "scenario": "bridge",
+      "seed": 1146,
+      "condition": "stale",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "153b8817f1a6",
+      "scenario": "bridge",
+      "seed": 1147,
+      "condition": "no_check",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "153b8817f1a6",
+      "scenario": "bridge",
+      "seed": 1147,
+      "condition": "no_check",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "153b8817f1a6",
+      "scenario": "bridge",
+      "seed": 1147,
+      "condition": "no_check",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "153b8817f1a6",
+      "scenario": "bridge",
+      "seed": 1147,
+      "condition": "no_check",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "153b8817f1a6",
+      "scenario": "bridge",
+      "seed": 1147,
+      "condition": "no_check",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "153b8817f1a6",
+      "scenario": "bridge",
+      "seed": 1147,
+      "condition": "no_check",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "153b8817f1a6",
+      "scenario": "bridge",
+      "seed": 1147,
+      "condition": "no_check",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "f209152dd8a1",
+      "scenario": "bridge",
+      "seed": 1148,
+      "condition": "late",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "f209152dd8a1",
+      "scenario": "bridge",
+      "seed": 1148,
+      "condition": "late",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "f209152dd8a1",
+      "scenario": "bridge",
+      "seed": 1148,
+      "condition": "late",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "f209152dd8a1",
+      "scenario": "bridge",
+      "seed": 1148,
+      "condition": "late",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "f209152dd8a1",
+      "scenario": "bridge",
+      "seed": 1148,
+      "condition": "late",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "f209152dd8a1",
+      "scenario": "bridge",
+      "seed": 1148,
+      "condition": "late",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "f209152dd8a1",
+      "scenario": "bridge",
+      "seed": 1148,
+      "condition": "late",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "eb83e0eaf927",
+      "scenario": "bridge",
+      "seed": 1149,
+      "condition": "absent",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "eb83e0eaf927",
+      "scenario": "bridge",
+      "seed": 1149,
+      "condition": "absent",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "eb83e0eaf927",
+      "scenario": "bridge",
+      "seed": 1149,
+      "condition": "absent",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "eb83e0eaf927",
+      "scenario": "bridge",
+      "seed": 1149,
+      "condition": "absent",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "eb83e0eaf927",
+      "scenario": "bridge",
+      "seed": 1149,
+      "condition": "absent",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "eb83e0eaf927",
+      "scenario": "bridge",
+      "seed": 1149,
+      "condition": "absent",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "eb83e0eaf927",
+      "scenario": "bridge",
+      "seed": 1149,
+      "condition": "absent",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6dadc3e6e349",
+      "scenario": "build",
+      "seed": 1150,
+      "condition": "stale",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6dadc3e6e349",
+      "scenario": "build",
+      "seed": 1150,
+      "condition": "stale",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6dadc3e6e349",
+      "scenario": "build",
+      "seed": 1150,
+      "condition": "stale",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6dadc3e6e349",
+      "scenario": "build",
+      "seed": 1150,
+      "condition": "stale",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6dadc3e6e349",
+      "scenario": "build",
+      "seed": 1150,
+      "condition": "stale",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6dadc3e6e349",
+      "scenario": "build",
+      "seed": 1150,
+      "condition": "stale",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "6dadc3e6e349",
+      "scenario": "build",
+      "seed": 1150,
+      "condition": "stale",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "785c0f6c9ec5",
+      "scenario": "build",
+      "seed": 1151,
+      "condition": "no_check",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "785c0f6c9ec5",
+      "scenario": "build",
+      "seed": 1151,
+      "condition": "no_check",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "785c0f6c9ec5",
+      "scenario": "build",
+      "seed": 1151,
+      "condition": "no_check",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "785c0f6c9ec5",
+      "scenario": "build",
+      "seed": 1151,
+      "condition": "no_check",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "785c0f6c9ec5",
+      "scenario": "build",
+      "seed": 1151,
+      "condition": "no_check",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "785c0f6c9ec5",
+      "scenario": "build",
+      "seed": 1151,
+      "condition": "no_check",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "785c0f6c9ec5",
+      "scenario": "build",
+      "seed": 1151,
+      "condition": "no_check",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "516842d001da",
+      "scenario": "build",
+      "seed": 1152,
+      "condition": "late",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "516842d001da",
+      "scenario": "build",
+      "seed": 1152,
+      "condition": "late",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "516842d001da",
+      "scenario": "build",
+      "seed": 1152,
+      "condition": "late",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "516842d001da",
+      "scenario": "build",
+      "seed": 1152,
+      "condition": "late",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "516842d001da",
+      "scenario": "build",
+      "seed": 1152,
+      "condition": "late",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "516842d001da",
+      "scenario": "build",
+      "seed": 1152,
+      "condition": "late",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "516842d001da",
+      "scenario": "build",
+      "seed": 1152,
+      "condition": "late",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "1e0d31c28926",
+      "scenario": "build",
+      "seed": 1153,
+      "condition": "absent",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "1e0d31c28926",
+      "scenario": "build",
+      "seed": 1153,
+      "condition": "absent",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "1e0d31c28926",
+      "scenario": "build",
+      "seed": 1153,
+      "condition": "absent",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "1e0d31c28926",
+      "scenario": "build",
+      "seed": 1153,
+      "condition": "absent",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "1e0d31c28926",
+      "scenario": "build",
+      "seed": 1153,
+      "condition": "absent",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "1e0d31c28926",
+      "scenario": "build",
+      "seed": 1153,
+      "condition": "absent",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "1e0d31c28926",
+      "scenario": "build",
+      "seed": 1153,
+      "condition": "absent",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "b47e35975e9c",
+      "scenario": "build",
+      "seed": 1154,
+      "condition": "stale",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "b47e35975e9c",
+      "scenario": "build",
+      "seed": 1154,
+      "condition": "stale",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "b47e35975e9c",
+      "scenario": "build",
+      "seed": 1154,
+      "condition": "stale",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "b47e35975e9c",
+      "scenario": "build",
+      "seed": 1154,
+      "condition": "stale",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "b47e35975e9c",
+      "scenario": "build",
+      "seed": 1154,
+      "condition": "stale",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "b47e35975e9c",
+      "scenario": "build",
+      "seed": 1154,
+      "condition": "stale",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "b47e35975e9c",
+      "scenario": "build",
+      "seed": 1154,
+      "condition": "stale",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "46aad9e6601b",
+      "scenario": "build",
+      "seed": 1155,
+      "condition": "no_check",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "46aad9e6601b",
+      "scenario": "build",
+      "seed": 1155,
+      "condition": "no_check",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "46aad9e6601b",
+      "scenario": "build",
+      "seed": 1155,
+      "condition": "no_check",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "46aad9e6601b",
+      "scenario": "build",
+      "seed": 1155,
+      "condition": "no_check",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "46aad9e6601b",
+      "scenario": "build",
+      "seed": 1155,
+      "condition": "no_check",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "46aad9e6601b",
+      "scenario": "build",
+      "seed": 1155,
+      "condition": "no_check",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "46aad9e6601b",
+      "scenario": "build",
+      "seed": 1155,
+      "condition": "no_check",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "c38715e7e3f3",
+      "scenario": "build",
+      "seed": 1156,
+      "condition": "late",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "c38715e7e3f3",
+      "scenario": "build",
+      "seed": 1156,
+      "condition": "late",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "c38715e7e3f3",
+      "scenario": "build",
+      "seed": 1156,
+      "condition": "late",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "c38715e7e3f3",
+      "scenario": "build",
+      "seed": 1156,
+      "condition": "late",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "c38715e7e3f3",
+      "scenario": "build",
+      "seed": 1156,
+      "condition": "late",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "c38715e7e3f3",
+      "scenario": "build",
+      "seed": 1156,
+      "condition": "late",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "c38715e7e3f3",
+      "scenario": "build",
+      "seed": 1156,
+      "condition": "late",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e2555868bfa3",
+      "scenario": "build",
+      "seed": 1157,
+      "condition": "absent",
+      "arm": "pooled",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e2555868bfa3",
+      "scenario": "build",
+      "seed": 1157,
+      "condition": "absent",
+      "arm": "exact-reference",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e2555868bfa3",
+      "scenario": "build",
+      "seed": 1157,
+      "condition": "absent",
+      "arm": "majority",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e2555868bfa3",
+      "scenario": "build",
+      "seed": 1157,
+      "condition": "absent",
+      "arm": "blind-veto",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e2555868bfa3",
+      "scenario": "build",
+      "seed": 1157,
+      "condition": "absent",
+      "arm": "always-check",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e2555868bfa3",
+      "scenario": "build",
+      "seed": 1157,
+      "condition": "absent",
+      "arm": "evidence-gate",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "e2555868bfa3",
+      "scenario": "build",
+      "seed": 1157,
+      "condition": "absent",
+      "arm": "matched-random",
+      "opportunities": 1,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "617a6a49884a",
+      "scenario": "alarm",
+      "seed": 1180,
+      "condition": "standard",
+      "arm": "exact-reference",
+      "opportunities": 3,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "617a6a49884a",
+      "scenario": "alarm",
+      "seed": 1180,
+      "condition": "standard",
+      "arm": "majority",
+      "opportunities": 3,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "617a6a49884a",
+      "scenario": "alarm",
+      "seed": 1180,
+      "condition": "standard",
+      "arm": "blind-veto",
+      "opportunities": 3,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "617a6a49884a",
+      "scenario": "alarm",
+      "seed": 1180,
+      "condition": "standard",
+      "arm": "always-check",
+      "opportunities": 3,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "617a6a49884a",
+      "scenario": "alarm",
+      "seed": 1180,
+      "condition": "standard",
+      "arm": "evidence-gate",
+      "opportunities": 3,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "617a6a49884a",
+      "scenario": "alarm",
+      "seed": 1180,
+      "condition": "standard",
+      "arm": "matched-random",
+      "opportunities": 3,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "617a6a49884a",
+      "scenario": "alarm",
+      "seed": 1180,
+      "condition": "standard",
+      "arm": "pooled",
+      "opportunities": 3,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "066d68cb0ffc",
+      "scenario": "alarm",
+      "seed": 1181,
+      "condition": "standard",
+      "arm": "majority",
+      "opportunities": 3,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "066d68cb0ffc",
+      "scenario": "alarm",
+      "seed": 1181,
+      "condition": "standard",
+      "arm": "blind-veto",
+      "opportunities": 3,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "066d68cb0ffc",
+      "scenario": "alarm",
+      "seed": 1181,
+      "condition": "standard",
+      "arm": "always-check",
+      "opportunities": 3,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "066d68cb0ffc",
+      "scenario": "alarm",
+      "seed": 1181,
+      "condition": "standard",
+      "arm": "evidence-gate",
+      "opportunities": 3,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "066d68cb0ffc",
+      "scenario": "alarm",
+      "seed": 1181,
+      "condition": "standard",
+      "arm": "matched-random",
+      "opportunities": 3,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "066d68cb0ffc",
+      "scenario": "alarm",
+      "seed": 1181,
+      "condition": "standard",
+      "arm": "pooled",
+      "opportunities": 3,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "066d68cb0ffc",
+      "scenario": "alarm",
+      "seed": 1181,
+      "condition": "standard",
+      "arm": "exact-reference",
+      "opportunities": 3,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "a407c3dcf880",
+      "scenario": "alarm",
+      "seed": 1182,
+      "condition": "standard",
+      "arm": "blind-veto",
+      "opportunities": 3,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "a407c3dcf880",
+      "scenario": "alarm",
+      "seed": 1182,
+      "condition": "standard",
+      "arm": "always-check",
+      "opportunities": 3,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "a407c3dcf880",
+      "scenario": "alarm",
+      "seed": 1182,
+      "condition": "standard",
+      "arm": "evidence-gate",
+      "opportunities": 3,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "a407c3dcf880",
+      "scenario": "alarm",
+      "seed": 1182,
+      "condition": "standard",
+      "arm": "matched-random",
+      "opportunities": 3,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "a407c3dcf880",
+      "scenario": "alarm",
+      "seed": 1182,
+      "condition": "standard",
+      "arm": "pooled",
+      "opportunities": 3,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "a407c3dcf880",
+      "scenario": "alarm",
+      "seed": 1182,
+      "condition": "standard",
+      "arm": "exact-reference",
+      "opportunities": 3,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "a407c3dcf880",
+      "scenario": "alarm",
+      "seed": 1182,
+      "condition": "standard",
+      "arm": "majority",
+      "opportunities": 3,
+      "random_check": false,
+      "status": "completed"
+    },
+    {
+      "case_id": "52fbd35127ba",
+      "scenario": "alarm",
+      "seed": 1183,
+      "condition": "standard",
+      "arm": "always-check",
+      "opportunities": 3,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "52fbd35127ba",
+      "scenario": "alarm",
+      "seed": 1183,
+      "condition": "standard",
+      "arm": "evidence-gate",
+      "opportunities": 3,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "52fbd35127ba",
+      "scenario": "alarm",
+      "seed": 1183,
+      "condition": "standard",
+      "arm": "matched-random",
+      "opportunities": 3,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "52fbd35127ba",
+      "scenario": "alarm",
+      "seed": 1183,
+      "condition": "standard",
+      "arm": "pooled",
+      "opportunities": 3,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "52fbd35127ba",
+      "scenario": "alarm",
+      "seed": 1183,
+      "condition": "standard",
+      "arm": "exact-reference",
+      "opportunities": 3,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "52fbd35127ba",
+      "scenario": "alarm",
+      "seed": 1183,
+      "condition": "standard",
+      "arm": "majority",
+      "opportunities": 3,
+      "random_check": true,
+      "status": "completed"
+    },
+    {
+      "case_id": "52fbd35127ba",
+      "scenario": "alarm",
+      "seed": 1183,
+      "condition": "standard",
+      "arm": "blind-veto",
+      "opportunities": 3,
+      "random_check": true,
+      "status": "completed"
+    }
+  ],
+  "assignment_sha256": "d68987fc0568d76e2cf22ce846706c09b085ec43cbee6041a40d26f45b57a18e",
+  "total_opportunities": 420
+}

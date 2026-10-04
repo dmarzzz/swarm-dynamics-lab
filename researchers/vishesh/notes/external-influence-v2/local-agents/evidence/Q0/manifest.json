@@ -1,0 +1,117 @@
+{
+  "assignments": [
+    {
+      "arm": "targeted_check",
+      "domain": "procurement",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 23,
+      "task_id": 7200,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "targeted_check",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 23,
+      "task_id": 7200,
+      "verification": "fresh",
+      "world": "superior"
+    },
+    {
+      "arm": "targeted_check",
+      "domain": "dependency",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 23,
+      "task_id": 7200,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "targeted_check",
+      "domain": "dependency",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 23,
+      "task_id": 7200,
+      "verification": "fresh",
+      "world": "superior"
+    },
+    {
+      "arm": "targeted_check",
+      "domain": "travel",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 23,
+      "task_id": 7200,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "targeted_check",
+      "domain": "travel",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 23,
+      "task_id": 7200,
+      "verification": "fresh",
+      "world": "superior"
+    }
+  ],
+  "capabilities": [
+    "completion",
+    "tools",
+    "thinking"
+  ],
+  "git_commit": "2edd5b0598fa8c14b4670afdc75629865b78d6bd",
+  "hardware": {
+    "chip": "Apple M5 Max",
+    "memory_gb": 128
+  },
+  "inference_api_usd": 0,
+  "max_workers": 4,
+  "model": "qwen3:0.6b",
+  "model_details": {
+    "context_length": 40960,
+    "embedding_length": 1024,
+    "families": [
+      "qwen3"
+    ],
+    "family": "qwen3",
+    "format": "gguf",
+    "parameter_size": "751.63M",
+    "parent_model": "",
+    "quantization_level": "Q4_K_M"
+  },
+  "model_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+  "model_size": 522653767,
+  "ollama": {
+    "version": "0.30.5"
+  },
+  "options": {
+    "num_ctx": 8192,
+    "num_predict": 1024,
+    "seed": 17,
+    "temperature": 0
+  },
+  "plan_url": "https://github.com/dmarzzz/swarm-lab/blob/49e45a7b05e362f5910ad80303148cb6aa162df7/researchers/vishesh/notes/external-influence-v2/local-agents/PLAN.md",
+  "receipt": {
+    "checked_utc": "2026-10-04T04:03:02.093200+00:00",
+    "commit": "49e45a7b05e362f5910ad80303148cb6aa162df7",
+    "experiment": "external-influence-v2",
+    "local_plan_sha256": "7e38da3a88a653a0d27679be167e51adb885f3132e8ca337468d183dc695aa01",
+    "local_plan_url": "https://github.com/dmarzzz/swarm-lab/blob/49e45a7b05e362f5910ad80303148cb6aa162df7/researchers/vishesh/notes/external-influence-v2/local-agents/PLAN.md",
+    "plan_sha256": "3d78288311ee004ae381d6f50c35f57e4db2fc9578b8818677db98981c4f1e0f",
+    "process_compliance": "passed",
+    "registered_tldr": "TLDR: Can nine agents choose correctly when an outsider edits their evidence? Historical Haiku pilot compares private review, discussion, random checks, targeted checks and source lineage. New local-agent variant qualifies Qwen3 0.6B (1.7B fallback) before repeating the same 50 assignments, measuring correctness, harm, invalid outputs and compute. Fictional tasks, three task roots and historical backend comparison limit generalization; qualification is not attack-resistance evidence.",
+    "run_tldr": "TLDR: Q0 tests nine-agent qwen3:0.6b teams on six clean/superior fixtures against exact task truth, measuring valid/correct choices, tokens and latency. Three domain roots; competence screen only, not attack resistance. Plan: https://github.com/dmarzzz/swarm-lab/blob/49e45a7b05e362f5910ad80303148cb6aa162df7/researchers/vishesh/notes/external-influence-v2/local-agents/PLAN.md",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/49e45a7b05e362f5910ad80303148cb6aa162df7/researchers/vishesh/notes/external-influence-v2/README.md"
+  },
+  "source_hash": "5cc00e40a642a1f57dad22f2cdde8237839f96b720135d2d1c6d2bf015105c46",
+  "stage": "Q0",
+  "started_utc": "2026-10-04T04:03:02.370198+00:00",
+  "think": false
+}

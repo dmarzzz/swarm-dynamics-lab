@@ -8,8 +8,8 @@ Question: does targeted candidate approval checking outperform an equally budget
 |---|---|---|
 | G0 | diagnostic-only | Existing reviewed procurement scope; main influence claim unqualified. |
 | G1 | pass | ITERATION-03.md written before implementation. |
-| G2 | pending | Implement matched reviewers, case manifest, leakage/pairing/scoring/visual tests. |
-| G3 | pending | Publish immutable plan; exact deployed source, quota, fresh exclusive fleet allocation and output directory required. |
+| G2 | pass | 27 tests; scripted-D2-02 30/30; deadline fault 30 invalid/zero dispatch; fixture grid reviewed. |
+| G3 | conditional-ready | PR134 exclusive sim-test-01; unreplenished grant has USD7.226604 remaining; entrypoint verifies >=USD5.972 and exact published plan before dispatch. Runtime receipt/manifest bind source and quota. |
 | G4 | fail for S1 | Q4 10/12; D2 cannot unlock S1. |
 | G5 | pending | Reconcile all 30 assignments, complete post-mortem, upload and release. |
 

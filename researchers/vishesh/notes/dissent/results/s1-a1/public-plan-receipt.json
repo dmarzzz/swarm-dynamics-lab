@@ -1,0 +1,9 @@
+{
+  "experiment": "right-dissenter",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/3aaacaeb38c454c8140dba6cc82a7a2a7f677f14/researchers/vishesh/notes/dissent/Q1-PLAN.md",
+  "commit": "3aaacaeb38c454c8140dba6cc82a7a2a7f677f14",
+  "plan_sha256": "a8c306009027194b24c2dd4308f0b9057a8524f6aea3cf021f2094145ac3ef19",
+  "registered_tldr": "TLDR: Can evidence-backed dissent earn a bounded independent check, withdraw when wrong, and reopen on new evidence? Three synthetic scenarios compare Jev admission with majority, veto, always-check, fixed random checking, pooled evidence and an exact rule. Measure correct on-time decisions, harmful reversals, checking cost and recovery. Scripted votes and fixed grammar limit generalization; exploratory study, independent review pending.",
+  "run_tldr": "TLDR: S1-A1 compares qualified Jev evidence-gated dissent with majority, blind veto, always-check, fixed 50 percent random checking, pooled evidence and an exact grammar rule on 52 synthetic roots and 420 assigned decisions. Measure correct on-time commitments, harmful reversals and checks. Scripted votes, shared identical Jev responses and repeated grammar limit claims; descriptive development study only.",
+  "checked_utc": "2026-10-04T04:37:18.353865+00:00"
+}

@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: working
+state: done
 task: theseus-rule-diagnosis
-doing: Publish complete saved-evidence diagnosis and reproducible audit
+doing: Saved-evidence diagnosis complete and published; no additional model calls
 updated: 2026-10-04T04:44Z
 ---
 

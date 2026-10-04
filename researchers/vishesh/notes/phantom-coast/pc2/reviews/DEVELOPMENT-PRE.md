@@ -1,0 +1,5 @@
+# PC-2 development pre-assessment
+
+Status: ready for offline contract implementation; blocked for native dispatch. Read PC-1 S0-A1 post-mortem and the pinned scientific review. Implement only development fixtures under seeds300–307; no qualification/pilot generator access, transport, machine or spending. Validate all-cell action availability, round barriers, no future/evaluator leakage, exactly twelve consumed slots, repeat accounting, audit replacement even on failure, fixed tie order and conservative missing-map metrics. Mutate hidden truth after constructing the same visible ledger to test actor-packet invariance. Deliberately wrong/empty policies must not look correct. This is software validation, not a scripted experimental sweep.
+
+Separately rebuild the PC-1 measured replay from saved native records: six worlds × four communication/state comparisons × three logical steps, with A/B, all three actors and strict-majority maps visible. Use exact saved requests and responses; validate map agreement and error bounds. No new model calls; do not mix PC-2 fixtures with native PC-1 outcomes.

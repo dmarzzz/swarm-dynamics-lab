@@ -1,0 +1,10 @@
+{
+  "stage": "Q2",
+  "frames": 97,
+  "events": 294,
+  "all_terminals_included": true,
+  "all_responses_included": true,
+  "final_valid": 6,
+  "final_correct": 5,
+  "gif_frames": 97
+}

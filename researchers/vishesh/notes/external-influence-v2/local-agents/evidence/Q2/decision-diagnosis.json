@@ -1,0 +1,77 @@
+{
+  "label": "Post-hoc deterministic replay of identical chair-visible inputs; not a model run or measured intervention effect. Truth is only used to score the counterfactual.",
+  "assigned": 6,
+  "valid_chair_cases": 6,
+  "structural_failures": [],
+  "observed_correct_among_valid": 5,
+  "counterfactual_correct_among_valid": 4,
+  "disagreements": 3,
+  "details": [
+    {
+      "assignment": 0,
+      "observed_choice": "CedarDesk",
+      "before_checks_rule_choice": "MapleService",
+      "after_checks_rule_choice": "CedarDesk",
+      "evaluator_best": "CedarDesk",
+      "observed_correct": 1,
+      "counterfactual_correct": 1,
+      "chair_rule_disagreement": 0,
+      "available_checks": 2
+    },
+    {
+      "assignment": 1,
+      "observed_choice": "CedarDesk",
+      "before_checks_rule_choice": "MapleService",
+      "after_checks_rule_choice": "MapleService",
+      "evaluator_best": "MapleService",
+      "observed_correct": 0,
+      "counterfactual_correct": 1,
+      "chair_rule_disagreement": 1,
+      "available_checks": 2
+    },
+    {
+      "assignment": 2,
+      "observed_choice": "cedar-json",
+      "before_checks_rule_choice": "finch-parse",
+      "after_checks_rule_choice": "juniper-codec",
+      "evaluator_best": "cedar-json",
+      "observed_correct": 1,
+      "counterfactual_correct": 0,
+      "chair_rule_disagreement": 1,
+      "available_checks": 2
+    },
+    {
+      "assignment": 3,
+      "observed_choice": "maple-data",
+      "before_checks_rule_choice": "maple-data",
+      "after_checks_rule_choice": "maple-data",
+      "evaluator_best": "maple-data",
+      "observed_correct": 1,
+      "counterfactual_correct": 1,
+      "chair_rule_disagreement": 0,
+      "available_checks": 2
+    },
+    {
+      "assignment": 4,
+      "observed_choice": "Cedar itinerary",
+      "before_checks_rule_choice": "Cedar itinerary",
+      "after_checks_rule_choice": "Finch itinerary",
+      "evaluator_best": "Cedar itinerary",
+      "observed_correct": 1,
+      "counterfactual_correct": 0,
+      "chair_rule_disagreement": 1,
+      "available_checks": 2
+    },
+    {
+      "assignment": 5,
+      "observed_choice": "Juniper itinerary",
+      "before_checks_rule_choice": "Juniper itinerary",
+      "after_checks_rule_choice": "Juniper itinerary",
+      "evaluator_best": "Juniper itinerary",
+      "observed_correct": 1,
+      "counterfactual_correct": 1,
+      "chair_rule_disagreement": 0,
+      "available_checks": 2
+    }
+  ]
+}
