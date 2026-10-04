@@ -8,6 +8,22 @@ from pathlib import Path
 BASE=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(BASE.parent/'src'))
 from provider import AnthropicPolicy
+
+class ScenarioPolicy(AnthropicPolicy):
+    def schema(self,request,fallback):
+        schema=super().schema(request,fallback);obs=request['observation'];props=schema['properties']
+        ids=[obs['document']['id']] if obs['phase']=='check' else [d['id'] for d in obs['documents']]
+        citation={'type':'string','enum':ids}
+        if obs['phase']=='check':props['citation']=citation
+        else:
+            props['choice']={'type':'string','enum':obs['candidates']+['DEFER']}
+            if obs['phase']=='initial':
+                props['findings']['items']['properties']['citations']['items']=citation
+                props['request']['properties']['candidate']={'type':'string','enum':obs['candidates']}
+                props['request']['properties']['kind']={'type':'string','enum':['contract','scope','pilot','rollout']}
+            else:props['citations']['items']=citation
+        return schema
+
 from allocation import require
 from dossier import build,digest
 from study import run
@@ -15,6 +31,7 @@ from render_native import render
 
 ASSIGNMENTS={
  'Q0': [('usage_cliff',4,'clean'),('genuine_value',4,'promotion'),('evidence_gap',4,'clean')],
+ 'Q1': [('usage_cliff',5,'clean'),('genuine_value',5,'promotion'),('evidence_gap',5,'clean')],
  'S1': [(f,p,w) for f in ('usage_cliff','residency_scope','migration_deadline') for p in (0,2) for w in ('clean','omission')],
 }
 def signature(config):
@@ -51,7 +68,7 @@ def collect(stage,out,policy,config,hub=None):
         (out/'outcomes.json').write_text(json.dumps(results,indent=2))
         publish()
     valid=[r for r in results if r['valid']]
-    qualified=stage=='Q0' and len(valid)==len(results) and all(r['evaluation']['acceptable_decision'] for r in valid)
+    qualified=stage in ('Q0','Q1') and len(valid)==len(results) and all(r['evaluation']['acceptable_decision'] for r in valid)
     summary={'stage':stage,'planned':len(assigned)*3,'terminal':len(results),'valid':len(valid),'invalid':len(results)-len(valid),
              'acceptable':sum(r['evaluation']['acceptable_decision'] for r in valid),'qualified':qualified,
              'calls':policy.calls,'input_tokens':policy.input_tokens,'output_tokens':policy.output_tokens,'actual_usd':policy.actual_usd,
@@ -77,14 +94,14 @@ def main():
     with urllib.request.urlopen(args.public_plan,timeout=20) as r:
         if r.status!=200:raise ValueError('public plan unavailable')
     import swarm_report as sr
-    policy=AnthropicPolicy()
+    policy=ScenarioPolicy()
     sr.register('influence-swarms',title='How to win agents and influence swarms',owner='vishesh',
                 description='TLDR: A support-software procurement team reconciles quotes, workload pilots, deployment scope and migration. Compare the same chair evidence with or without preliminary votes, plus a cheaper generalist. Synthetic exploratory scenarios; model decisions remain unmodified.',
                 url=args.public_plan,params={'stage':{'type':'str'},'version':{'type':'str'}},metrics=['valid','acceptable','invalid','actual_usd'],primary_metric='acceptable')
     with sr.start('influence-swarms',params={'stage':args.stage,'version':signature(config)[:12]}) as hub:
         summary=collect(args.stage,args.out,policy,config,hub)
         metrics={k:summary[k] for k in ('valid','acceptable','invalid','actual_usd')}
-        if summary['invalid'] or (args.stage=='Q0' and not summary['qualified']):hub.fail('Qualification or execution issue; all outcomes retained',**metrics)
+        if summary['invalid'] or (args.stage in ('Q0','Q1') and not summary['qualified']):hub.fail('Qualification or execution issue; all outcomes retained',**metrics)
         else:hub.done(message='Complete; model decisions retained. Exploratory synthetic evidence.',**metrics)
         print(json.dumps({'run':hub.id,**summary}),flush=True)
 if __name__=='__main__':main()
