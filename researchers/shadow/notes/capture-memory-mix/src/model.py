@@ -201,7 +201,8 @@ class HTTPPolicy:
     # ---- one request
     def _request(self, user: str) -> dict:
         body = {"model": self.model, "temperature": self.T if self.mode == "sample" else 1.0, "max_tokens": 6,
-                "usage": {"include": True}, "provider": {},
+                "usage": {"include": True},
+                "provider": {"max_price": {"prompt": self.in_rate, "completion": self.out_rate, "request": 0}},
                 "messages": [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]}
         if self.mode == "logprobs":
             body.update({"logprobs": True, "top_logprobs": 20})
@@ -209,7 +210,10 @@ class HTTPPolicy:
         if self.provider_order:
             body["provider"]["order"] = self.provider_order
         raw = json.dumps(body).encode()
-        est = ((len(raw) / 3 + 64) * self.in_rate + 8 * self.out_rate) / 1e6      # generous worst case
+        # Treat every request byte as a token, plus framing allowance. Reserve
+        # twice the bounded prompt rate for cache-write variation, and all output
+        # tokens (with two extra). Provider routing enforces these price ceilings.
+        est = ((len(raw) + 2048) * 2 * self.in_rate + 8 * self.out_rate) / 1e6
         with self._lock:
             if self.calls >= self.max_calls:
                 raise ModelFailure("call budget exhausted")
