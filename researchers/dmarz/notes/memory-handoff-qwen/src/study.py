@@ -354,6 +354,26 @@ def check_invariants():
         target = [r for r in a['packet']['retrieved_records'] if w['key'] in r['facts']]
         return len(target) == 1 and target[0]['facts'][w['key']] == w['false'] and target[0]['id'] == w['ids']['a'] and not has_truth(a)
     checks['false_original_is_retrieved_as_it_is'] = len(fo) == 6 + 24 + 2 and all(false_original_ok(a) for a in fo)
+    def lookups(a):
+        """(registry ids as wanted, retrieved ids as wanted, store) from the state's own records and notes."""
+        w = sim.world(a['root'], c); records, notes, _ = sim.state_world(w, a['state'], c); store = sim.SourceStore(records)
+        cited = [s for n in a['packet']['inherited_memory'] for s in n['sources']]
+        wanted = []
+        for ident in cited:
+            wanted.append(ident); r = store.records[ident]
+            if r['version'] < store.current_version(r['origin']):
+                wanted += [x['id'] for x in store.current(r['origin'])]
+        return cited, list(dict.fromkeys(wanted)), store
+    def registry_exact(a):
+        cited, _, store = lookups(a); entries = a['packet']['source_registry']
+        return ([e['id'] for e in entries] == (cited if a['policy'] in ('metadata', 'content') else [])
+                and all(e == store.registry(e['id']) for e in entries))
+    def retrieved_exact(a):
+        _, wanted, store = lookups(a); got = a['packet']['retrieved_records']
+        return ([r['id'] for r in got] == (wanted if a['policy'] == 'content' else [])
+                and all(r == store.records[r['id']] for r in got))
+    checks['registry_is_exactly_the_cited_records'] = all(registry_exact(a) for a in everything)
+    checks['retrieved_is_exactly_cited_records_plus_current_versions_from_the_store'] = all(retrieved_exact(a) for a in everything)
     texts = [user_text(a['packet']).lower() for a in everything]
     checks['no_label_in_any_message'] = not any(word in t for t in texts for word in FORBIDDEN_PACKET_TEXT)
     checks['packet_keys_fixed'] = all(tuple(a['packet']) == sim.PACKET_KEYS and set(a['packet']['task']) == {'key', 'delta', 'min_origins', 'question'}

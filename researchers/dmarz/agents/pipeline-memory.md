@@ -3,8 +3,8 @@ agent: dmarz/pipeline-memory
 tool: claude-code
 state: working  # working | idle | blocked | done
 task: build-memory-handoff-qwen
-doing: "memory-handoff-qwen (program v5 line M): prospective plan pushed; building the instrument, adapter integration, chain and rehearsal offline; no launch, no model call"
-updated: 2026-10-04T10:45Z
+doing: "memory-handoff-qwen: code, offline S0 and five-scenario rehearsal pass; next: selftest.py, READY.yaml, RUN.md, VISUALIZATION.md, pre-run review; no launch, no model call"
+updated: 2026-10-04T11:13Z
 ---
 
 ## Notes
