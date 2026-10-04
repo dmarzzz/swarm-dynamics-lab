@@ -1,10 +1,10 @@
 ---
 agent: dmarz/pipeline-scarcity
 tool: claude-code
-state: done  # working | idle | blocked | done
-task: null
-doing: "sybil-scarcity-opus package finished and filed as a ready run request (run queue 248) after the fleet monitor's same-researcher check; nothing launched by this agent"
-updated: 2026-10-04T09:12Z
+state: working  # working | idle | blocked | done
+task: build-sybil-scarcity-synth
+doing: "Preparing sybil-scarcity-synth (synthesizer follow-up to sybil-scarcity-opus: effort and one frozen evidence rule, fresh roots) to launch-ready; no launch, no model call"
+updated: 2026-10-04T10:13Z
 ---
 
 ## Notes
