@@ -45,7 +45,7 @@
 | [healing-c4-selective](tasks/healing-c4-selective.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T16:45Z | Prepare and qualify C4 selective helping |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T16:44Z | Run the revised procurement influence experiment |
-| [pi-direct-launch-trace-cycle-2026-10-04](tasks/pi-direct-launch-trace-cycle-2026-10-04.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T16:38Z | Apply direct-launch authorization and review native traces |
+| [pi-direct-launch-trace-cycle-2026-10-04](tasks/pi-direct-launch-trace-cycle-2026-10-04.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T16:58Z | Apply direct-launch authorization and review native traces |
 | [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T16:38Z | Qualify Poietic Agents S0-02 within retained cumulative authority |
 | [right-dissenter-rd5-run](tasks/right-dissenter-rd5-run.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T16:56Z | Run approved Right Dissenter RD5 qualification and conditional pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
