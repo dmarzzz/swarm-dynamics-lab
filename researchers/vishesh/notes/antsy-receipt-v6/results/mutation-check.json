@@ -1,0 +1,36 @@
+{
+  "mutants": [
+    {
+      "mutant": "subtotal_is_total",
+      "test": "test_reject_other_fields",
+      "killed": true
+    },
+    {
+      "mutant": "strip_anything_into_number",
+      "test": "test_reject_unsafe",
+      "killed": true
+    },
+    {
+      "mutant": "abstention_is_correct",
+      "test": "test_abstention_not_accuracy",
+      "killed": true
+    },
+    {
+      "mutant": "leak_reference",
+      "test": "test_actor_whitelist",
+      "killed": true
+    },
+    {
+      "mutant": "ignore_stop",
+      "test": "test_selective_stop",
+      "killed": true
+    },
+    {
+      "mutant": "single_source_is_consensus",
+      "test": "test_agreement_requires_distinct_sources",
+      "killed": true
+    }
+  ],
+  "killed": 6,
+  "survived": 0
+}
