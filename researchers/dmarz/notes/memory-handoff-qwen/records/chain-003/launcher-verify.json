@@ -1,0 +1,164 @@
+{
+  "action": "verify",
+  "exit": 0,
+  "result": {
+    "checks": {
+      "manifest_file_regenerates": true,
+      "status_model_current": true,
+      "status_source_hash_current": true
+    },
+    "manifest_digest": "ddba4753c232062162fc3a55ec520be47e3edaf036f62e6bb947bced9e52df5c",
+    "model": "gpt-6-luna",
+    "ok": true,
+    "stages": {
+      "P0": {
+        "assignments": 1,
+        "checks": {
+          "analysis_recomputed": true,
+          "artifact_checksums": true,
+          "call_cap_respected": true,
+          "every_assignment_has_one_row": true,
+          "fixed_inputs_regenerate": true,
+          "gate_recomputed": true,
+          "hub_has_every_artifact": true,
+          "hub_metrics_match": true,
+          "hub_status_matches": true,
+          "journal_intact": true,
+          "manifest_matches": true,
+          "model_current": true,
+          "passed_recomputed": true,
+          "retrieval_log_matches": true,
+          "rows_regraded": true,
+          "source_hash_current": true,
+          "totals_recomputed": true
+        },
+        "completed": 1,
+        "cost_usd": 0.000156,
+        "failed": 0,
+        "model_calls": 1,
+        "ok": true,
+        "run": "memory-handoff-qwen/922c6ba3",
+        "status": "done"
+      },
+      "Q0": {
+        "assignments": 23,
+        "checks": {
+          "analysis_recomputed": true,
+          "artifact_checksums": true,
+          "call_cap_respected": true,
+          "every_assignment_has_one_row": true,
+          "fixed_inputs_regenerate": true,
+          "gate_recomputed": true,
+          "hub_has_every_artifact": true,
+          "hub_metrics_match": true,
+          "hub_status_matches": true,
+          "journal_intact": true,
+          "manifest_matches": true,
+          "model_current": true,
+          "passed_recomputed": true,
+          "retrieval_log_matches": true,
+          "rows_regraded": true,
+          "source_hash_current": true,
+          "totals_recomputed": true
+        },
+        "completed": 23,
+        "cost_usd": 0.002671,
+        "failed": 0,
+        "model_calls": 23,
+        "ok": true,
+        "run": "memory-handoff-qwen/93ab28b9",
+        "status": "done"
+      },
+      "S0": {
+        "assignments": 192,
+        "checks": {
+          "analysis_recomputed": true,
+          "artifact_checksums": true,
+          "call_cap_respected": true,
+          "every_assignment_has_one_row": true,
+          "fixed_inputs_regenerate": true,
+          "gate_recomputed": true,
+          "hub_has_every_artifact": true,
+          "hub_metrics_match": true,
+          "hub_status_matches": true,
+          "journal_intact": true,
+          "manifest_matches": true,
+          "model_current": true,
+          "passed_recomputed": true,
+          "retrieval_log_matches": true,
+          "rows_regraded": true,
+          "source_hash_current": true,
+          "totals_recomputed": true
+        },
+        "completed": 192,
+        "cost_usd": 0.0,
+        "failed": 0,
+        "model_calls": 0,
+        "ok": true,
+        "run": "memory-handoff-qwen/343255be",
+        "status": "done"
+      },
+      "S1": {
+        "assignments": 576,
+        "checks": {
+          "analysis_recomputed": true,
+          "artifact_checksums": true,
+          "call_cap_respected": true,
+          "every_assignment_has_one_row": true,
+          "fixed_inputs_regenerate": true,
+          "gate_recomputed": true,
+          "hub_has_every_artifact": true,
+          "hub_metrics_match": true,
+          "hub_status_matches": true,
+          "journal_intact": true,
+          "manifest_matches": true,
+          "model_current": true,
+          "passed_recomputed": true,
+          "retrieval_log_matches": true,
+          "rows_regraded": true,
+          "source_hash_current": true,
+          "totals_recomputed": true
+        },
+        "completed": 576,
+        "cost_usd": 0.067623,
+        "failed": 0,
+        "model_calls": 576,
+        "ok": true,
+        "run": "memory-handoff-qwen/0a901a43",
+        "status": "done",
+        "units": {
+          "answered_calls": 576,
+          "answered_within_cap": true,
+          "assigned": 576,
+          "clean_correct": {
+            "content": 1.0,
+            "metadata": 1.0,
+            "raw": 1.0,
+            "reset": 0.0
+          },
+          "completed": 576,
+          "every_unit_exactly_once": true,
+          "failed": 0,
+          "not_started": 0,
+          "primary_assigned_roots": 24,
+          "primary_bounds_all_assigned": [
+            -0.5,
+            -0.5
+          ],
+          "primary_estimate": -0.5,
+          "primary_roots": 24
+        }
+      }
+    },
+    "state": "completed"
+  },
+  "chain_active": false,
+  "worker_active": false,
+  "role": "single",
+  "foreign_workers": 0,
+  "logs": {
+    "chain-f717bb2d-s0-p0-q0-s1.log": "withheld"
+  },
+  "revision": "f717bb2d26b8a9c5ed02825eefa95575effdaacf",
+  "host": "sim-dmarz-9"
+}

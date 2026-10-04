@@ -3,8 +3,8 @@ agent: dmarz/pipeline-memory
 tool: claude-code
 state: working  # working | idle | blocked | done
 task: null
-doing: "memory-handoff-qwen: attempt 002 results on main (RESULTS.md); chain 003 (gpt-6-luna) pinned for the same-researcher check: code commit c2717f74, source hash caf5d773, review reviews/chain-003-pre.md; nothing of chain 003 launched, no model call"
-updated: 2026-10-04T17:56Z
+doing: "memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead"
+updated: 2026-10-04T18:14Z
 ---
 
 ## Notes

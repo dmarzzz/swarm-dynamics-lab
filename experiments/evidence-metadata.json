@@ -3552,6 +3552,34 @@
         "researchers/vishesh/notes/phantom-coast/pc8/results/Q0-A1-retrospective-parser.json": "7dce3fa355ccadaea29f407877a4db0fac35f568379b5c3db89614110b33d4cf",
         "researchers/vishesh/notes/phantom-coast/pc8/results/CLOSEOUT.json": "ad459c0c318b778f9a6d689e2bd523caeefc9422fc0fc09e08c3eab14f85f712"
       }
+    },
+    {
+      "id": "memory-handoff-qwen-gpt-6-luna",
+      "title": "Can successors repair inherited false memory? (gpt-6-luna, chain 003)",
+      "documents": [
+        "researchers/dmarz/notes/memory-handoff-qwen/RESULTS.md"
+      ],
+      "experiment_ids": [
+        "memory-handoff-qwen"
+      ],
+      "registration_paths": [],
+      "assessor": "dmarz/pipeline-memory",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 2,
+        "claim": "A gpt-6-luna successor (reasoning effort low, answer-only format) passes the unrepaired handoff instrument on the 24 requests where Qwen3.7 Flash without reasoning scored 19, and follows the stated source policy on fresh roots: content-bound retrieval removes the misquote and stale errors that metadata-only resolution leaves or turns into abstentions, with clean answers kept.",
+        "rationale": "One complete exploratory run: qualification 24/24 on identical requests (Qwen 19/24), S1 576/576 supported on 24 roots, primary contrast -0.5 in all 24 roots (the reference value, by construction given adherence), launcher verify clean. The instrument is at ceiling for this model; model and reasoning setting are confounded against Qwen; one synthetic task, one handoff, one run, not independently reviewed."
+      },
+      "sample_size_summary": "Observed: 24 independent roots x 6 memory states x 4 handoff policies = 576/576 valid S1 outcomes (394 distinct messages); qualification 24/24 on 6 roots, the same 24 requests as Qwen attempt 001. Roots are the units, not calls; never pooled with the Qwen cohort.",
+      "sources": [
+        "researchers/dmarz/notes/memory-handoff-qwen/RESULTS.md",
+        "researchers/dmarz/notes/memory-handoff-qwen/preregistration.md",
+        "researchers/dmarz/notes/memory-handoff-qwen/design.yaml",
+        "researchers/dmarz/notes/memory-handoff-qwen/reviews/chain-003-pre.md",
+        "researchers/dmarz/notes/memory-handoff-qwen/reviews/chain-003-post.md",
+        "researchers/dmarz/notes/memory-handoff-qwen/records/chain-003/recomputed.json"
+      ],
+      "status_at_assessment": "chain_003_completed_s1_verified"
     }
   ],
   "source_sha256": {

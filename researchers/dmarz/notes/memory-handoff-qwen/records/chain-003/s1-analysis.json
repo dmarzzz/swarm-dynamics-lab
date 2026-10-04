@@ -1,0 +1,3703 @@
+{
+  "assigned": 576,
+  "cells": [
+    {
+      "abstain": 0,
+      "abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "abstain_rate": 0.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 24,
+      "correct_abstain": 0,
+      "correct_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_abstain_rate": 0.0,
+      "correct_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_rate": 1.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "raw",
+      "state": "clean",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 0,
+      "abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "abstain_rate": 0.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 24,
+      "correct_abstain": 0,
+      "correct_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_abstain_rate": 0.0,
+      "correct_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_rate": 1.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "metadata",
+      "state": "clean",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 0,
+      "abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "abstain_rate": 0.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 24,
+      "correct_abstain": 0,
+      "correct_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_abstain_rate": 0.0,
+      "correct_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_rate": 1.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "content",
+      "state": "clean",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 24,
+      "abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "abstain_rate": 1.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 24,
+      "correct_abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_abstain_rate": 1.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 17,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "reset",
+      "state": "clean",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 0,
+      "abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "abstain_rate": 0.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 0,
+      "correct_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_abstain_rate": 0.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 24,
+      "inherited_error_bounds": [
+        1.0,
+        1.0
+      ],
+      "inherited_error_rate": 1.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "raw",
+      "state": "misquote",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 24,
+      "supported_wrong_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_wrong_rate": 1.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 0,
+      "abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "abstain_rate": 0.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 0,
+      "correct_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_abstain_rate": 0.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 24,
+      "inherited_error_bounds": [
+        1.0,
+        1.0
+      ],
+      "inherited_error_rate": 1.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "metadata",
+      "state": "misquote",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 24,
+      "supported_wrong_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_wrong_rate": 1.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 0,
+      "abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "abstain_rate": 0.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 24,
+      "correct_abstain": 0,
+      "correct_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_abstain_rate": 0.0,
+      "correct_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_rate": 1.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "content",
+      "state": "misquote",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 24,
+      "abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "abstain_rate": 1.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 24,
+      "correct_abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_abstain_rate": 1.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 17,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "reset",
+      "state": "misquote",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 0,
+      "abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "abstain_rate": 0.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 0,
+      "correct_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_abstain_rate": 0.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 24,
+      "inherited_error_bounds": [
+        1.0,
+        1.0
+      ],
+      "inherited_error_rate": 1.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "raw",
+      "state": "stale",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 24,
+      "supported_wrong_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_wrong_rate": 1.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 24,
+      "abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "abstain_rate": 1.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 24,
+      "correct_abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_abstain_rate": 1.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "metadata",
+      "state": "stale",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 0,
+      "abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "abstain_rate": 0.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 24,
+      "correct_abstain": 0,
+      "correct_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_abstain_rate": 0.0,
+      "correct_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_rate": 1.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "content",
+      "state": "stale",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 24,
+      "abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "abstain_rate": 1.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 24,
+      "correct_abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_abstain_rate": 1.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 17,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "reset",
+      "state": "stale",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 0,
+      "abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "abstain_rate": 0.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 0,
+      "correct_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_abstain_rate": 0.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 24,
+      "inherited_error_bounds": [
+        1.0,
+        1.0
+      ],
+      "inherited_error_rate": 1.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "raw",
+      "state": "copies",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 24,
+      "supported_wrong_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_wrong_rate": 1.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 24,
+      "abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "abstain_rate": 1.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 24,
+      "correct_abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_abstain_rate": 1.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "metadata",
+      "state": "copies",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 24,
+      "abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "abstain_rate": 1.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 24,
+      "correct_abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_abstain_rate": 1.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "content",
+      "state": "copies",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 24,
+      "abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "abstain_rate": 1.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 24,
+      "correct_abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_abstain_rate": 1.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 17,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "reset",
+      "state": "copies",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 24,
+      "abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "abstain_rate": 1.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 24,
+      "correct_abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_abstain_rate": 1.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "raw",
+      "state": "contradiction",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 24,
+      "abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "abstain_rate": 1.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 24,
+      "correct_abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_abstain_rate": 1.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "metadata",
+      "state": "contradiction",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 24,
+      "abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "abstain_rate": 1.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 24,
+      "correct_abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_abstain_rate": 1.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "content",
+      "state": "contradiction",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 24,
+      "abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "abstain_rate": 1.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 24,
+      "correct_abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_abstain_rate": 1.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 17,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "reset",
+      "state": "contradiction",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 0,
+      "abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "abstain_rate": 0.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 0,
+      "correct_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_abstain_rate": 0.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 24,
+      "inherited_error_bounds": [
+        1.0,
+        1.0
+      ],
+      "inherited_error_rate": 1.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "raw",
+      "state": "false_original",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 24,
+      "supported_wrong_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_wrong_rate": 1.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 0,
+      "abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "abstain_rate": 0.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 0,
+      "correct_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_abstain_rate": 0.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 24,
+      "inherited_error_bounds": [
+        1.0,
+        1.0
+      ],
+      "inherited_error_rate": 1.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "metadata",
+      "state": "false_original",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 24,
+      "supported_wrong_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_wrong_rate": 1.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 0,
+      "abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "abstain_rate": 0.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 0,
+      "correct_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_abstain_rate": 0.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 24,
+      "failed": 0,
+      "inherited_error": 24,
+      "inherited_error_bounds": [
+        1.0,
+        1.0
+      ],
+      "inherited_error_rate": 1.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "content",
+      "state": "false_original",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 24,
+      "supported_wrong_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_wrong_rate": 1.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    },
+    {
+      "abstain": 24,
+      "abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "abstain_rate": 1.0,
+      "assigned": 24,
+      "citation_valid": 24,
+      "citation_valid_bounds": [
+        1.0,
+        1.0
+      ],
+      "citation_valid_rate": 1.0,
+      "correct": 0,
+      "correct_abstain": 24,
+      "correct_abstain_bounds": [
+        1.0,
+        1.0
+      ],
+      "correct_abstain_rate": 1.0,
+      "correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "correct_rate": 0.0,
+      "distinct_packets": 17,
+      "failed": 0,
+      "inherited_error": 0,
+      "inherited_error_bounds": [
+        0.0,
+        0.0
+      ],
+      "inherited_error_rate": 0.0,
+      "not_started": 0,
+      "observed": 24,
+      "other_wrong": 0,
+      "other_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "other_wrong_rate": 0.0,
+      "policy": "reset",
+      "state": "false_original",
+      "supported": 24,
+      "supported_bounds": [
+        1.0,
+        1.0
+      ],
+      "supported_rate": 1.0,
+      "supported_wrong": 0,
+      "supported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "supported_wrong_rate": 0.0,
+      "unnecessary_abstain": 0,
+      "unnecessary_abstain_bounds": [
+        0.0,
+        0.0
+      ],
+      "unnecessary_abstain_rate": 0.0,
+      "unsupported_correct": 0,
+      "unsupported_correct_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_correct_rate": 0.0,
+      "unsupported_wrong": 0,
+      "unsupported_wrong_bounds": [
+        0.0,
+        0.0
+      ],
+      "unsupported_wrong_rate": 0.0
+    }
+  ],
+  "distinct_packets": 394,
+  "failed": 0,
+  "forgetting": {
+    "definition": "clean-memory correct completion under raw minus under reset, paired by root",
+    "raw_minus_reset": {
+      "assigned_roots": 24,
+      "bounds_all_assigned": [
+        1.0,
+        1.0
+      ],
+      "estimate": 1.0,
+      "interval95": [
+        1.0,
+        1.0
+      ],
+      "negative": 0,
+      "positive": 24,
+      "root_values": [
+        {
+          "lower": 1.0,
+          "root": 5401,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5402,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5403,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5404,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5405,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5406,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5407,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5408,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5409,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5410,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5411,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5412,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5413,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5414,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5415,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5416,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5417,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5418,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5419,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5420,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5421,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5422,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5423,
+          "upper": 1.0,
+          "value": 1.0
+        },
+        {
+          "lower": 1.0,
+          "root": 5424,
+          "upper": 1.0,
+          "value": 1.0
+        }
+      ],
+      "roots": 24,
+      "zero": 0
+    },
+    "reset_abstain_rate": 1.0,
+    "reset_inherited_error": 0
+  },
+  "not_started": 0,
+  "observed": 576,
+  "primary": {
+    "assigned_roots": 24,
+    "bounds_all_assigned": [
+      -0.5,
+      -0.5
+    ],
+    "by_state": {
+      "misquote": {
+        "assigned_roots": 24,
+        "bounds_all_assigned": [
+          -1.0,
+          -1.0
+        ],
+        "estimate": -1.0,
+        "interval95": [
+          -1.0,
+          -1.0
+        ],
+        "negative": 24,
+        "positive": 0,
+        "root_values": [
+          {
+            "lower": -1.0,
+            "root": 5401,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5402,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5403,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5404,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5405,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5406,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5407,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5408,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5409,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5410,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5411,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5412,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5413,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5414,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5415,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5416,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5417,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5418,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5419,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5420,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5421,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5422,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5423,
+            "upper": -1.0,
+            "value": -1.0
+          },
+          {
+            "lower": -1.0,
+            "root": 5424,
+            "upper": -1.0,
+            "value": -1.0
+          }
+        ],
+        "roots": 24,
+        "zero": 0
+      },
+      "stale": {
+        "assigned_roots": 24,
+        "bounds_all_assigned": [
+          0.0,
+          0.0
+        ],
+        "estimate": 0.0,
+        "interval95": [
+          0.0,
+          0.0
+        ],
+        "negative": 0,
+        "positive": 0,
+        "root_values": [
+          {
+            "lower": 0.0,
+            "root": 5401,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5402,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5403,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5404,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5405,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5406,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5407,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5408,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5409,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5410,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5411,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5412,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5413,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5414,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5415,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5416,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5417,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5418,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5419,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5420,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5421,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5422,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5423,
+            "upper": 0.0,
+            "value": 0.0
+          },
+          {
+            "lower": 0.0,
+            "root": 5424,
+            "upper": 0.0,
+            "value": 0.0
+          }
+        ],
+        "roots": 24,
+        "zero": 24
+      }
+    },
+    "definition": "inherited error under content minus under metadata, mean of the misquote and stale states within each root",
+    "estimate": -0.5,
+    "interval95": [
+      -0.5,
+      -0.5
+    ],
+    "negative": 24,
+    "positive": 0,
+    "root_values": [
+      {
+        "lower": -0.5,
+        "root": 5401,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5402,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5403,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5404,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5405,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5406,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5407,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5408,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5409,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5410,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5411,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5412,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5413,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5414,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5415,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5416,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5417,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5418,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5419,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5420,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5421,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5422,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5423,
+        "upper": -0.5,
+        "value": -0.5
+      },
+      {
+        "lower": -0.5,
+        "root": 5424,
+        "upper": -0.5,
+        "value": -0.5
+      }
+    ],
+    "roots": 24,
+    "zero": 0
+  },
+  "retrieval": {
+    "content": {
+      "assignments": 144,
+      "bytes": 149128,
+      "cost_usd": 0.023755000000000002,
+      "input_tokens": 163703,
+      "output_tokens": 6457,
+      "records_retrieved": 672,
+      "registry_lookups": 648,
+      "seconds": 0.01732616996014258
+    },
+    "metadata": {
+      "assignments": 144,
+      "bytes": 71568,
+      "cost_usd": 0.017299000000000002,
+      "input_tokens": 134050,
+      "output_tokens": 7652,
+      "records_retrieved": 0,
+      "registry_lookups": 648,
+      "seconds": 0.003771949021029286
+    },
+    "raw": {
+      "assignments": 144,
+      "bytes": 0,
+      "cost_usd": 0.015422,
+      "input_tokens": 107608,
+      "output_tokens": 9166,
+      "records_retrieved": 0,
+      "registry_lookups": 0,
+      "seconds": 0.00019248897297075018
+    },
+    "reset": {
+      "assignments": 144,
+      "bytes": 0,
+      "cost_usd": 0.011147,
+      "input_tokens": 92208,
+      "output_tokens": 3719,
+      "records_retrieved": 0,
+      "registry_lookups": 0,
+      "seconds": 0.00015224400704028085
+    }
+  },
+  "roots": 24,
+  "scope": "one handoff per assignment; not a multi-generation result",
+  "secondary_contrasts": {
+    "content_minus_raw_false_original": {
+      "assigned_roots": 24,
+      "bounds_all_assigned": [
+        0.0,
+        0.0
+      ],
+      "estimate": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "negative": 0,
+      "positive": 0,
+      "root_values": [
+        {
+          "lower": 0.0,
+          "root": 5401,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5402,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5403,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5404,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5405,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5406,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5407,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5408,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5409,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5410,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5411,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5412,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5413,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5414,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5415,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5416,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5417,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5418,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5419,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5420,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5421,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5422,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5423,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5424,
+          "upper": 0.0,
+          "value": 0.0
+        }
+      ],
+      "roots": 24,
+      "zero": 24
+    },
+    "content_minus_raw_misquote_stale": {
+      "assigned_roots": 24,
+      "bounds_all_assigned": [
+        -1.0,
+        -1.0
+      ],
+      "estimate": -1.0,
+      "interval95": [
+        -1.0,
+        -1.0
+      ],
+      "negative": 24,
+      "positive": 0,
+      "root_values": [
+        {
+          "lower": -1.0,
+          "root": 5401,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5402,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5403,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5404,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5405,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5406,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5407,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5408,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5409,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5410,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5411,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5412,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5413,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5414,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5415,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5416,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5417,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5418,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5419,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5420,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5421,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5422,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5423,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5424,
+          "upper": -1.0,
+          "value": -1.0
+        }
+      ],
+      "roots": 24,
+      "zero": 0
+    },
+    "metadata_minus_raw_copies": {
+      "assigned_roots": 24,
+      "bounds_all_assigned": [
+        -1.0,
+        -1.0
+      ],
+      "estimate": -1.0,
+      "interval95": [
+        -1.0,
+        -1.0
+      ],
+      "negative": 24,
+      "positive": 0,
+      "root_values": [
+        {
+          "lower": -1.0,
+          "root": 5401,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5402,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5403,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5404,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5405,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5406,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5407,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5408,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5409,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5410,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5411,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5412,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5413,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5414,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5415,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5416,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5417,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5418,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5419,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5420,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5421,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5422,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5423,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5424,
+          "upper": -1.0,
+          "value": -1.0
+        }
+      ],
+      "roots": 24,
+      "zero": 0
+    },
+    "metadata_minus_raw_stale": {
+      "assigned_roots": 24,
+      "bounds_all_assigned": [
+        -1.0,
+        -1.0
+      ],
+      "estimate": -1.0,
+      "interval95": [
+        -1.0,
+        -1.0
+      ],
+      "negative": 24,
+      "positive": 0,
+      "root_values": [
+        {
+          "lower": -1.0,
+          "root": 5401,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5402,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5403,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5404,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5405,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5406,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5407,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5408,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5409,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5410,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5411,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5412,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5413,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5414,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5415,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5416,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5417,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5418,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5419,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5420,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5421,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5422,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5423,
+          "upper": -1.0,
+          "value": -1.0
+        },
+        {
+          "lower": -1.0,
+          "root": 5424,
+          "upper": -1.0,
+          "value": -1.0
+        }
+      ],
+      "roots": 24,
+      "zero": 0
+    }
+  },
+  "separate_states": {
+    "contradiction": {
+      "content": {
+        "abstain": 1.0,
+        "correct": 0.0,
+        "inherited_error": 0.0,
+        "supported": 1.0,
+        "supported_wrong": 0.0,
+        "unsupported_correct": 0.0,
+        "unsupported_wrong": 0.0
+      },
+      "metadata": {
+        "abstain": 1.0,
+        "correct": 0.0,
+        "inherited_error": 0.0,
+        "supported": 1.0,
+        "supported_wrong": 0.0,
+        "unsupported_correct": 0.0,
+        "unsupported_wrong": 0.0
+      },
+      "raw": {
+        "abstain": 1.0,
+        "correct": 0.0,
+        "inherited_error": 0.0,
+        "supported": 1.0,
+        "supported_wrong": 0.0,
+        "unsupported_correct": 0.0,
+        "unsupported_wrong": 0.0
+      },
+      "reset": {
+        "abstain": 1.0,
+        "correct": 0.0,
+        "inherited_error": 0.0,
+        "supported": 1.0,
+        "supported_wrong": 0.0,
+        "unsupported_correct": 0.0,
+        "unsupported_wrong": 0.0
+      }
+    },
+    "copies": {
+      "content": {
+        "abstain": 1.0,
+        "correct": 0.0,
+        "inherited_error": 0.0,
+        "supported": 1.0,
+        "supported_wrong": 0.0,
+        "unsupported_correct": 0.0,
+        "unsupported_wrong": 0.0
+      },
+      "metadata": {
+        "abstain": 1.0,
+        "correct": 0.0,
+        "inherited_error": 0.0,
+        "supported": 1.0,
+        "supported_wrong": 0.0,
+        "unsupported_correct": 0.0,
+        "unsupported_wrong": 0.0
+      },
+      "raw": {
+        "abstain": 0.0,
+        "correct": 0.0,
+        "inherited_error": 1.0,
+        "supported": 1.0,
+        "supported_wrong": 1.0,
+        "unsupported_correct": 0.0,
+        "unsupported_wrong": 0.0
+      },
+      "reset": {
+        "abstain": 1.0,
+        "correct": 0.0,
+        "inherited_error": 0.0,
+        "supported": 1.0,
+        "supported_wrong": 0.0,
+        "unsupported_correct": 0.0,
+        "unsupported_wrong": 0.0
+      }
+    },
+    "false_original": {
+      "content": {
+        "abstain": 0.0,
+        "correct": 0.0,
+        "inherited_error": 1.0,
+        "supported": 1.0,
+        "supported_wrong": 1.0,
+        "unsupported_correct": 0.0,
+        "unsupported_wrong": 0.0
+      },
+      "metadata": {
+        "abstain": 0.0,
+        "correct": 0.0,
+        "inherited_error": 1.0,
+        "supported": 1.0,
+        "supported_wrong": 1.0,
+        "unsupported_correct": 0.0,
+        "unsupported_wrong": 0.0
+      },
+      "raw": {
+        "abstain": 0.0,
+        "correct": 0.0,
+        "inherited_error": 1.0,
+        "supported": 1.0,
+        "supported_wrong": 1.0,
+        "unsupported_correct": 0.0,
+        "unsupported_wrong": 0.0
+      },
+      "reset": {
+        "abstain": 1.0,
+        "correct": 0.0,
+        "inherited_error": 0.0,
+        "supported": 1.0,
+        "supported_wrong": 0.0,
+        "unsupported_correct": 0.0,
+        "unsupported_wrong": 0.0
+      }
+    }
+  },
+  "unit": "root",
+  "utility_guard": {
+    "by_policy": {
+      "content": {
+        "assigned": 24,
+        "bounds_all_assigned": [
+          1.0,
+          1.0
+        ],
+        "correct": 24,
+        "observed": 24,
+        "rate": 1.0,
+        "wilson95": [
+          0.8620237953250198,
+          1.0
+        ]
+      },
+      "metadata": {
+        "assigned": 24,
+        "bounds_all_assigned": [
+          1.0,
+          1.0
+        ],
+        "correct": 24,
+        "observed": 24,
+        "rate": 1.0,
+        "wilson95": [
+          0.8620237953250198,
+          1.0
+        ]
+      },
+      "raw": {
+        "assigned": 24,
+        "bounds_all_assigned": [
+          1.0,
+          1.0
+        ],
+        "correct": 24,
+        "observed": 24,
+        "rate": 1.0,
+        "wilson95": [
+          0.8620237953250198,
+          1.0
+        ]
+      },
+      "reset": {
+        "assigned": 24,
+        "bounds_all_assigned": [
+          0.0,
+          0.0
+        ],
+        "correct": 0,
+        "observed": 24,
+        "rate": 0.0,
+        "wilson95": [
+          1.3877787807814457e-17,
+          0.13797620467498017
+        ]
+      }
+    },
+    "content_minus_metadata": {
+      "assigned_roots": 24,
+      "bounds_all_assigned": [
+        0.0,
+        0.0
+      ],
+      "estimate": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "negative": 0,
+      "positive": 0,
+      "root_values": [
+        {
+          "lower": 0.0,
+          "root": 5401,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5402,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5403,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5404,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5405,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5406,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5407,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5408,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5409,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5410,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5411,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5412,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5413,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5414,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5415,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5416,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5417,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5418,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5419,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5420,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5421,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5422,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5423,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5424,
+          "upper": 0.0,
+          "value": 0.0
+        }
+      ],
+      "roots": 24,
+      "zero": 24
+    },
+    "content_minus_raw": {
+      "assigned_roots": 24,
+      "bounds_all_assigned": [
+        0.0,
+        0.0
+      ],
+      "estimate": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "negative": 0,
+      "positive": 0,
+      "root_values": [
+        {
+          "lower": 0.0,
+          "root": 5401,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5402,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5403,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5404,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5405,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5406,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5407,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5408,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5409,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5410,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5411,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5412,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5413,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5414,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5415,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5416,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5417,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5418,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5419,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5420,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5421,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5422,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5423,
+          "upper": 0.0,
+          "value": 0.0
+        },
+        {
+          "lower": 0.0,
+          "root": 5424,
+          "upper": 0.0,
+          "value": 0.0
+        }
+      ],
+      "roots": 24,
+      "zero": 24
+    },
+    "definition": "clean state, value equals truth plus delta"
+  },
+  "working_fields": {
+    "all": {
+      "answers": 576,
+      "follows_from_own_listing": 0,
+      "listing_given": 0,
+      "listing_matches_message": 0,
+      "work_before_value": 0,
+      "work_malformed": 0
+    },
+    "content": {
+      "answers": 144,
+      "follows_from_own_listing": 0,
+      "listing_given": 0,
+      "listing_matches_message": 0,
+      "work_before_value": 0,
+      "work_malformed": 0
+    },
+    "metadata": {
+      "answers": 144,
+      "follows_from_own_listing": 0,
+      "listing_given": 0,
+      "listing_matches_message": 0,
+      "work_before_value": 0,
+      "work_malformed": 0
+    },
+    "raw": {
+      "answers": 144,
+      "follows_from_own_listing": 0,
+      "listing_given": 0,
+      "listing_matches_message": 0,
+      "work_before_value": 0,
+      "work_malformed": 0
+    },
+    "reset": {
+      "answers": 144,
+      "follows_from_own_listing": 0,
+      "listing_given": 0,
+      "listing_matches_message": 0,
+      "work_before_value": 0,
+      "work_malformed": 0
+    }
+  }
+}
