@@ -40,6 +40,7 @@
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [antsy-v8-native-qualification](tasks/antsy-v8-native-qualification.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T08:38Z | Prepare and launch fresh Antsy v8 OCR qualification |
 | [build-false-alarm-cascade](tasks/build-false-alarm-cascade.md) | claimed | p1 | build | dmarz/pipeline-alarm | dmarz | 2026-10-04T08:07Z | Prepare the false-alarm cascade experiment (honeypot-vigilance hunch V4) on Opus 5.5 to launch-ready |
+| [build-quota-splitting](tasks/build-quota-splitting.md) | claimed | p1 | build | dmarz/pipeline-quota | dmarz | 2026-10-04T09:27Z | Prepare the quota-splitting experiment (agent-budgets hunch B2) on Opus 5.5 to launch-ready |
 | [build-sybil-split-opus](tasks/build-sybil-split-opus.md) | claimed | p1 | build | dmarz/pipeline-split | dmarz | 2026-10-04T07:52Z | Prepare the identity-splitting experiment with fixed attacker resources on Opus 5.5 to launch-ready |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
@@ -259,6 +260,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/pipeline-quota | working | build-quota-splitting | 2026-10-04T09:26Z | Preparing quota-splitting (agent-budgets hunch B2, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | dmarz/market-split-film | done |  | 2026-10-04T09:25Z | filed v2 of the market-split film, a narrated version (wall of all 36 runs, zoom into market 36, the agent's message and reply, then the result); no model calls |
 | dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T09:23Z | false-alarm-cascade: prospective plan, preregistration, frozen design and setup record pushed; implementing the instrument and offline tests next; no launch, no model call |
 | dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T09:23Z | sybil-split-opus: launch-ready package on main (pinned 0b8a444a, source hash 95889bea, pre-run review ready); waiting for the pipeline lead's review; nothing launched, no model call |
