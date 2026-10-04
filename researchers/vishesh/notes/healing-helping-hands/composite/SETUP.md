@@ -28,3 +28,7 @@ Pending execution, qualification, reconciliation, visual audit, costs, durable u
 ## Cycle closure
 
 C1-S0 qualified, C1-S1 failed, C2-S0 failed before provider dispatch. See RESULTS.md and C2-S0-POST.md. G3 for any new attempt is blocked pending a newly registered prospective transport/recovery plan and current allocation; the repair allowance is consumed. Health preflight fix passes 19 offline checks but has no new native qualification. Preserve original budget and failed reservations. Resource release and teardown follow durable artifact verification.
+
+## C3 continuation
+
+Owner requested another run after C1/C2 closure. Prospective design committed as 289c285f before implementation; see [C3 pre-assessment](C3-PRE.md). Worker-local relay/supervisor replaces the reverse SSH tunnel, checks transport between requests, durably caches validated responses and permits GET-only recovery. Original cumulative budget remains authoritative. [Offline validation](C3-offline-validation.json): 24 composite and 22 practical tests passed. Native qualification and fresh public/resource admission remain outstanding. Current coordinator orbital-one could not be resolved from this operator; no C3 model call or machine allocation has occurred.

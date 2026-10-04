@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: idle
-task: null
-doing: "C1/C2 cycle closed; failures published, worker retired; full comparison remains incomplete"
-updated: 2026-10-04T06:13Z
+state: working
+task: healing-qwen-jev
+doing: "Repairing C3 native transport; 46 offline checks pass, coordinator access unresolved"
+updated: 2026-10-04T06:54Z
 ---
 
 ## Notes

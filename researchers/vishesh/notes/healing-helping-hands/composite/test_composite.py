@@ -9,8 +9,8 @@ from jev_relay import reserve
 class Contract(unittest.TestCase):
  def rows(self):return [{**c,'labels':{a:c['expected'] for a in ARMS}} for c in cases()]
  def test_transport_margin_and_fresh_namespace(self):
-  self.assertGreater(REQUEST_TIMEOUT,UPSTREAM_TIMEOUT+10);self.assertEqual(ATTEMPT,"C2")
-  self.assertTrue(all(x["id"].startswith("C2-") for x in cases()))
+  self.assertGreater(REQUEST_TIMEOUT,UPSTREAM_TIMEOUT+10);self.assertEqual(ATTEMPT,"C3")
+  self.assertTrue(all(x["id"].startswith("C3-") for x in cases()))
  def test_error_diagnostics_exclude_secret_messages(self):
   import urllib.error
   e=urllib.error.URLError(TimeoutError('secret-value-must-not-appear'))
@@ -24,6 +24,53 @@ class Contract(unittest.TestCase):
    with patch('urllib.request.urlopen',return_value=io.BytesIO(json.dumps(bad).encode())),self.assertRaises(ValueError):check_transport('S0')
   with patch('urllib.request.urlopen',side_effect=ConnectionRefusedError),self.assertRaises(ConnectionRefusedError):check_transport('S0')
   with patch('urllib.request.urlopen',return_value=io.BytesIO(json.dumps(good).encode())):self.assertEqual(check_transport('S0'),good)
+ def test_response_cache_settlement_is_atomic(self):
+  from relay import store_response,stored_response
+  from unittest.mock import patch
+  with closing(sqlite3.connect(':memory:')) as db:
+   db.execute('CREATE TABLE calls(hash TEXT PRIMARY KEY,reserved INTEGER,status TEXT,cost REAL)')
+   db.execute('CREATE TABLE composite_responses(hash TEXT PRIMARY KEY,body TEXT NOT NULL)')
+   reserve(db,'request',2179,True)
+   self.assertIsNone(stored_response(db,'request'))
+   with patch('relay.validate',return_value={'cost_usd':.00001}):store_response(db,'request',{'decision':'synthetic'})
+   self.assertEqual(stored_response(db,'request'),{'decision':'synthetic'})
+   self.assertEqual(db.execute('SELECT count(*),status,cost FROM calls').fetchone(),(1,'completed',.00001))
+   self.assertIsNone(stored_response(db,'uncertain'))
+ def test_invalid_response_never_settles_or_caches(self):
+  from relay import store_response,stored_response
+  from unittest.mock import patch
+  with closing(sqlite3.connect(':memory:')) as db:
+   db.execute('CREATE TABLE calls(hash TEXT PRIMARY KEY,reserved INTEGER,status TEXT,cost REAL)')
+   db.execute('CREATE TABLE composite_responses(hash TEXT PRIMARY KEY,body TEXT NOT NULL)')
+   reserve(db,'request',2179,True)
+   with patch('relay.validate',side_effect=ValueError),self.assertRaises(ValueError):store_response(db,'request',{})
+   self.assertIsNone(stored_response(db,'request'))
+   self.assertEqual(db.execute('SELECT status,cost FROM calls').fetchone(),('started',None))
+ def test_supervisor_refuses_disk_credential_before_launch(self):
+  from supervise import main
+  from types import SimpleNamespace
+  from pathlib import Path
+  with self.assertRaises(ValueError):main(SimpleNamespace(credential=Path('/tmp/forbidden-key')))
+ def test_lost_response_recovers_get_only(self):
+  import io,json,urllib.error
+  from unittest.mock import patch
+  from worker import infer_decision
+  calls=[]
+  def response(req,timeout):
+   calls.append(req)
+   if len(calls)==1:raise urllib.error.URLError(TimeoutError())
+   return io.BytesIO(json.dumps({'fixture':True}).encode())
+  with patch('worker.urllib.request.urlopen',side_effect=response),patch('worker.validate',return_value={'label':'SUPPORT'}):
+   result=infer_decision({'fixture':True},90)
+  self.assertTrue(result['recovered_cached_response'])
+  self.assertEqual(calls[0].get_method(),'POST');self.assertTrue(calls[1].startswith('http://127.0.0.1:18443/result/'));self.assertEqual(len(calls),2)
+ def test_uncertain_request_is_not_resent(self):
+  import urllib.error
+  from unittest.mock import patch
+  from worker import infer_decision
+  with patch('worker.urllib.request.urlopen',side_effect=urllib.error.URLError(TimeoutError())) as transport,self.assertRaises(urllib.error.URLError):infer_decision({'fixture':True},90)
+  self.assertEqual(transport.call_count,2)
+  self.assertIsInstance(transport.call_args_list[1].args[0],str)
  def test_balanced_unique(self):
   c=cases();self.assertEqual(len({x['id'] for x in c}),60)
   for k in LABELS:self.assertEqual(sum(x['expected']==k for x in c),20)
