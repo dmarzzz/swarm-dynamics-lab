@@ -1,5 +1,6 @@
 import argparse,copy,hashlib,json,os,random,subprocess,sys,time
 from pathlib import Path
+import controller_contract as controller
 ROOT=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT.parent/'scenario-study'));import study as prior
 sys.path.insert(0,str(ROOT.parent/'evidence-study'));from openrouter_provider import OpenRouterPolicy as TracePolicy
@@ -37,10 +38,15 @@ def reference(o):
  for role,live in o['cached_probe']['live'].items():
   if not live:return action('deploy',aliases[role],o['deployed'][aliases[role]],'Restart the observed failed process without changing configuration')
  return prior.scripted(dict(o,health_probe=o['cached_probe']['checks']))
-def schema(f):
+def legacy_schema(f):
  s=prior.action_schema(f);s['properties']['action']['enum']=['deploy','inspect','refresh','wait']
  s['anyOf']=[{'properties':{'action':{'enum':['inspect','refresh','wait']},'service':{'enum':['none']},'version':{'enum':[0]}}}]+[{'properties':{'action':{'enum':['deploy']},'service':{'enum':[alias]},'version':{'enum':[int(v) for v in f['catalog'][role]]}}} for role,alias in f['alias'].items()]
  return s
+
+def schema(f):return controller.schema(f)
+def controller_request(f,observation):
+ o=copy.deepcopy(observation);o['legal_actions']=controller.legal_actions(f)
+ return {'instructions':INSTRUCTION+controller.INSTRUCTION,'observation':o,'response_schema':schema(f)}
 
 def step(f,s,a):
  before=health(f,s);d0=copy.deepcopy(s['deployed']);l0=copy.deepcopy(s['live']);redundant=restart=config=rejected=0
@@ -66,10 +72,11 @@ class Policy(TracePolicy):
   return super().reserve(encoded)
 
 def execute(out,backend,seed,attempt):
+ if backend!='scripted':raise ValueError('new_controller_contract_requires_native_admission')
  out=Path(out);out.mkdir(parents=True,exist_ok=False);policy=None;rows=[];assigned=[];worlds=list(CASES);random.Random(seed).shuffle(worlds)
  for i,c in enumerate(worlds):
   for arm in (['raw','checked'] if i%2==0 else ['checked','raw']):assigned.append({'case':c,'arm':arm,'seed':seed})
- manifest={'assigned':assigned,'backend':backend,'attempt':attempt,'seed':seed,'max_calls':60,'model':'anthropic/claude-haiku-4.5' if backend=='openrouter' else 'visible-reference','commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'file_hashes':{str(p.relative_to(ROOT.parent)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [Path(__file__),ROOT/'README.md',ROOT/'render.py',ROOT/'worker.py',ROOT/'trace_provider.py',ROOT/'openrouter_provider.py',ROOT/'openrouter_relay.py',ROOT/'launch.py',ROOT/'model-config.json',ROOT/'audit.py',ROOT.parent/'evidence-study/durable_provider.py',ROOT.parent/'scenario-study/study.py',ROOT.parent/'src/provider.py']}}
+ manifest={'assigned':assigned,'backend':backend,'attempt':attempt,'controller_contract':controller.VERSION,'seed':seed,'max_calls':60,'model':'anthropic/claude-haiku-4.5' if backend=='openrouter' else 'visible-reference','commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'file_hashes':{str(p.relative_to(ROOT.parent)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [Path(__file__),ROOT/'README.md',ROOT/'controller_contract.py',ROOT/'CONTROLLER-SCHEMA-REPAIR.md',ROOT/'render.py',ROOT/'worker.py',ROOT/'trace_provider.py',ROOT/'openrouter_provider.py',ROOT/'openrouter_relay.py',ROOT/'launch.py',ROOT/'model-config.json',ROOT/'audit.py',ROOT.parent/'evidence-study/durable_provider.py',ROOT.parent/'scenario-study/study.py',ROOT.parent/'src/provider.py']}}
  (out/'manifest.json').write_text(json.dumps(manifest,indent=2));os.environ.update(SWARM_ATTEMPT_ID=attempt,SWARM_USAGE_LOG=str(out/'usage.jsonl'))
  if backend=='openrouter':policy=Policy()
  with (out/'events.jsonl').open('x') as ef,(out/'episodes.jsonl').open('x') as rf:
@@ -85,8 +92,8 @@ def execute(out,backend,seed,attempt):
     for arm in (['raw','checked'] if i%2==0 else ['checked','raw']):
      s=copy.deepcopy(initial);history=[];trace=[]
      for t in range(1,5):
-      obs=observe(f,s,t,history,advice,arm=='checked');req={'instructions':INSTRUCTION,'observation':obs,'response_schema':schema(f)};start=time.monotonic();a=policy.complete(req,None) if policy else reference(obs)
-      result=step(f,s,a);result.update(tick=t,observation=obs,latency_seconds=time.monotonic()-start);trace.append(result);history.append({'action':a,'result':result['result']});emit({'kind':'decision','case':c,'arm':arm,'request':req,'response':a});emit({'kind':'frame','case':c,'arm':arm,**result})
+      obs=observe(f,s,t,history,advice,arm=='checked');req=controller_request(f,obs);start=time.monotonic();raw=policy.complete(req,None) if policy else controller.encode(f,reference(obs));emit({'kind':'decision_response','case':c,'arm':arm,'tick':t,'request':req,'response':raw});a=controller.decode(f,raw);emit({'kind':'decoded_action','case':c,'arm':arm,'tick':t,'action':a})
+      result=step(f,s,a);result.update(tick=t,observation=req['observation'],raw_response=raw,controller_contract=controller.VERSION,latency_seconds=time.monotonic()-start);trace.append(result);history.append({'action':a,'result':result['result']});emit({'kind':'decision','case':c,'arm':arm,'request':req,'response':a});emit({'kind':'frame','case':c,'arm':arm,**result})
      row={'case':c,'arm':arm,'seed':seed,'initial':initial,'advice':advice,'proposal_hash':digest(advice),'reviewer_epoch_errors':sum(a['observed_epoch']!=initial['probe']['epoch'] for a in advice),'initial_healthy':int(all(health(f,initial).values())),'healthy_ticks':sum(x['healthy'] for x in trace),'final_healthy':trace[-1]['healthy'],'deployments':sum(x['action']['action']=='deploy' for x in trace),'redundant':sum(x['redundant'] for x in trace),'useful_restarts':sum(x['useful_restart'] for x in trace),'lost_health':sum(x['lost_health'] for x in trace),'rejected':sum(x['rejected'] for x in trace),'trace':trace};rows.append(row);rf.write(json.dumps(row)+'\n');rf.flush();os.fsync(rf.fileno());print(json.dumps({'recorded':len(rows),'assigned':12}),flush=True)
   except Exception as exc:emit({'kind':'error','error_type':type(exc).__name__});write_summary(out,rows,policy,False);raise
  write_summary(out,rows,policy,True)

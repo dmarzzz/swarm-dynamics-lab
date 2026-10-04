@@ -9,6 +9,7 @@ def audit(path):
  for r in rows:
   key=(r['case'],r['arm']);assert key not in seen;seen.add(key);assert {'case':r['case'],'arm':r['arm'],'seed':r['seed']} in m['assigned'];f,state=q.f.fixture(r['case'],r['seed']);assert state==r['initial'];assert len(r['trace'])==2
   for x in r['trace']:
+   if x.get('controller_contract')==q.f.controller.VERSION:assert q.f.controller.decode(f,x['raw_response'])==x['action']
    actual=q.f.step(f,state,x['action'])
    for k,v in actual.items():assert x[k]==v
    c=f['catalog'];d=state['deployed'];gateway=c['gateway'][str(d['gateway'])];worker=c['worker'][str(d['worker'])];store=c['store'][str(d['store'])]

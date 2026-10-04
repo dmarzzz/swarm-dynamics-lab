@@ -100,3 +100,7 @@ Offline finalize hook completed for freshness-a6 with native outcome failed and 
 ## A7 reviewed — schema-specific400 reproduced
 
 Owner-requested failure diagnostics completed3/3fixed variants after a preserved zero-request import failure and tested repair. ExactA6wire and complete branches both returned schema-invalid/unsupported400;flatcontrol succeeded on same route/input.29offline/remote tests;6hubhashes verified. [Post-mortem](freshness-study/reviews/a7-post.md), [quality](freshness-study/reviews/a7-quality.json), [reconciliation](freshness-study/reviews/a7-reconciliation.json). No simulator actions or capability claim. OriginalUSD8ledger411calls/USD3.352050reserved;knownnewactualUSD0.001441,twofailedusageunknown. Host released,relay/tunnel stopped;offlinefinalize completed and owning scientific assessment supplied. Nextoffline lossless flat action-ID schema or justified parser discriminator; no automatic model call. Exact rejected rule remains unresolved.
+
+## Controller schema repaired offline after A7
+
+[Repair](freshness-study/CONTROLLER-SCHEMA-REPAIR.md) implements legal-action-id-v1: flat enum plus reason, strict lossless decoding, raw/decoded evidence and contract hashes.34tests pass and6/6scripted qualification episodes reconcile. No native acceptance claim or fresh spending; original411calls/USD3.352050reserved remains. Next: admit bounded native qualification of this new response contract.

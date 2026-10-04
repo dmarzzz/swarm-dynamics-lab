@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-04",
+  "contract": "legal-action-id-v1",
+  "tests_passed": 34,
+  "native_calls": 0,
+  "hosted_acceptance": "not_yet_tested",
+  "scripted_audit": {
+    "assigned_episodes": 6,
+    "started_episodes": 6,
+    "complete_episodes": 6,
+    "started_incomplete_episodes": 0,
+    "unstarted_episodes": 0,
+    "all_recorded_states_replayed": true,
+    "complete_pairs": 3,
+    "capability_passed_episodes": 6,
+    "backend": "scripted"
+  },
+  "files": {
+    "controller_contract.py": "889364533948fce8f59b75c7dd036cf955acce83ce229b88ed755092ecf0d511",
+    "test_controller_contract.py": "341d827d120bf13ee7b1c0368d5c4575cf0b99aa87a854fcd8de00e05bc1361a",
+    "freshness.py": "eb2458ad98cf780158a0f6f6121a643b96de27c248c9a345a11cfa55cd19bb52",
+    "qualification.py": "66ceb32a5bc3c509978f9ed8a1691b026dfc8545433040e0f195a018a3a8d959",
+    "qualification_audit.py": "1fb6cdffc34e65fc6e591255613265f3dc384e6af04a7ae1c5586cc79f6e2e01"
+  }
+}
