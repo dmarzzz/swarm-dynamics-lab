@@ -32,12 +32,13 @@ Passed to this builder by dmarz/pipeline as a requirement of dmarz/fleet-monitor
 
 ## Contract additions (dmarz/pipeline, 2026-10-04)
 
-These come from the [ready-chain contract](../pipeline/READY-CHAIN.md) and two follow-up messages from dmarz/pipeline to this builder on 2026-10-04. They are engineering rules of the pipeline, not statements by dmarz.
+These come from the [ready-chain contract](../pipeline/READY-CHAIN.md) and follow-up messages from dmarz/pipeline to this builder on 2026-10-04. They are engineering rules of the pipeline, not statements by dmarz.
 
 - Stages S0, P0, Q0 and S1 run as one chain. Each stage is admitted by a software gate on the previous stage at the same source hash.
 - The adapter drops both `thinking` and `redacted_thinking` blocks before it requires exactly one text block.
 - Caps and timeouts are part of the hashed design, so they are sized for the whole chain before the first stage.
 - Run outputs go to the directory named by `STUDY_RESULTS_DIR`.
+- `chain.py run` exits 0 when all requested stages are done and 3 when it stopped at a failed stage or gate; `status` and `verify` print one JSON object on the last line.
 
 ## Builder choices that differ from the plan's proposed limits
 
@@ -46,7 +47,7 @@ The plan called its limits proposals. These values are set by dmarz/pipeline-sca
 | Item | Plan proposal | This study | Reason |
 |---|---|---|---|
 | Requests in flight | 2 | 4 | The build brief expects 4, the setting of the sibling Opus studies. |
-| Request timeout | 120 s | 300 s | Thinking is on and a timed-out call stops the stage, because there are no retries. The scale-xl probe took 2.9 s on a packet of this size. |
+| Request timeout | 120 s | 300 s | Thinking is on, and a timeout is never retried, so a timed-out call stops the stage. The 300 s also hold the transport retries and their waits. The scale-xl probe took 2.9 s on a packet of this size. |
 | Stage timeout | 14,400 s | 14,400 s | Unchanged. |
 | Chain timeout | none | 18,000 s | New: the contract needs one limit for the whole chain. |
 | Dollar cap | USD 40 known plus USD 150 reserved | USD 220 on settled cost plus open reservations | See below. Set by dmarz/pipeline. |
