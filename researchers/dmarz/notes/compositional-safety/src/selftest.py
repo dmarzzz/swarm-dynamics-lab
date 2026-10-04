@@ -362,7 +362,7 @@ class ClosedLoop(unittest.TestCase):
         self.assertEqual(diag['max_calls'],len(rows)*d['cfg']['max_steps'])
         self.assertEqual(d['cfg']['max_steps'],40);self.assertEqual(d['cfg']['n'],4)
         # d0-003 ran on design v6 at USD 2 / 10 per million; v7 changed the live rates for q0-006.
-        b=d['budget'];per_call=(b['max_input_bytes']+4096)*2+350*10
+        b=d['budget'];per_call=(16000+4096)*2+350*10
         self.assertEqual(per_call,43692);self.assertAlmostEqual(per_call*diag['max_calls']/1e6,6.99072)
         self.assertEqual(b['retries'],0);self.assertEqual(b['workers'],1)
         bad=copy.deepcopy(d);bad['diagnostics']['d0-003']['conditions']=['clarified','clarified']
@@ -391,14 +391,14 @@ class ClosedLoop(unittest.TestCase):
     def test_current_q0_fresh_structures_and_shape(self):
         rows=assignments('Q0')
         self.assertEqual(len(rows),24);self.assertEqual(len({json.dumps(r,sort_keys=True) for r in rows}),24)
-        self.assertEqual(sorted({r['task_id'] for r in rows}),[257,282,293])
+        self.assertEqual(sorted({r['task_id'] for r in rows}),[243,245,246])
         cells={}
         for r in rows:cells.setdefault((r['domain'],r['arm']),[]).append(r)
         self.assertEqual({k:len(v) for k,v in cells.items()},{(d,a):6 for d in ('D1','D2') for a in ('C','S')})
-        earlier=[200,201,202,210,211,212,220,221,222,230,231,232,240,241,242,244,253,256]
-        seen={(dom,task(t,dom,'risk')['structure_sha256']) for t in earlier for dom in ('D1','D2')}
+        sent=[200,201,202,210,211,212,220,221,222,230,231,232,240,241,242,244,253,256,257,282,293,300]
+        self.assertFalse({r['task_id'] for r in rows}&set(sent))   # roots never sent to a model (structures may repeat; see q0-011-pre)
         fresh={(r['domain'],task(r['task_id'],r['domain'],r['variant'])['structure_sha256']) for r in rows}
-        self.assertEqual(len(fresh),5);self.assertFalse(fresh&seen)
+        self.assertEqual(len(fresh),5)
         for r in rows:
             e=run_episode(task(r['task_id'],r['domain'],r['variant']),0,r['arm'],max_steps=40)
             self.assertTrue(e['validity']['ok']);self.assertEqual(e['evaluation']['completion'],1);self.assertEqual(e['evaluation']['violation'],0)
@@ -409,9 +409,9 @@ class ClosedLoop(unittest.TestCase):
 
     def test_q0_006_call_cap_and_reservation_bound(self):
         d=common.design();b=d['budget']
-        self.assertEqual(call_cap('Q0','q0-006',d),480);self.assertEqual(call_cap('P1','p1-002',d),3360);self.assertEqual(b['stage_timeout_seconds'],14400);self.assertEqual(call_cap('I0','d0-003',d),160);self.assertIsNone(call_cap('S0','s0-x',d))
+        self.assertEqual(call_cap('Q0','q0-006',d),480);self.assertEqual(call_cap('P1','p1-003',d),4500);self.assertEqual(b['stage_timeout_seconds'],21600);self.assertEqual(b['max_input_bytes'],48000);self.assertEqual(call_cap('I0','d0-003',d),160);self.assertIsNone(call_cap('S0','s0-x',d))
         per_call=(b['max_input_bytes']+4096)*b['input_usd_per_million']+b['max_output_tokens']*b['output_usd_per_million']
-        self.assertEqual(b['max_output_tokens'],4096);self.assertEqual(per_call,162304);self.assertAlmostEqual(per_call*480/1e6,77.90592)
+        self.assertEqual(b['max_output_tokens'],4096);self.assertEqual(per_call,290304);self.assertAlmostEqual(per_call*480/1e6,139.34592)
         with tempfile.TemporaryDirectory() as td:
             l=Ledger(Path(td)/'study.jsonl');l.transact(dict(type='reserve',call_id='earlier',micro_usd=5))
             before=l.transact();calls=[]
@@ -439,7 +439,7 @@ class ClosedLoop(unittest.TestCase):
             l.transact(dict(type='reserve',call_id='c',micro_usd=690_000))           # 0.31 + 0.69 = 1.00, allowed
             with self.assertRaisesRegex(CallFailure,'study_settled_cost_cap'):l.transact(dict(type='reserve',call_id='d',micro_usd=1))
             self.assertEqual(l.transact()['attempted_calls'],3)
-        self.assertEqual(common.design()['budget']['study_settled_usd_cap'],75);self.assertNotIn('study_reserved_usd',common.design()['budget'])
+        self.assertEqual(common.design()['budget']['study_settled_usd_cap'],150);self.assertNotIn('study_reserved_usd',common.design()['budget'])
 
     def test_ledger_read_stays_fast_at_p1_scale(self):
         # q0-008 regression: a quadratic settled-cost sum made each ledger read take seconds at about 2,000 calls.
@@ -453,6 +453,25 @@ class ClosedLoop(unittest.TestCase):
             for _ in range(5):totals=l.transact()
             self.assertLess((time.monotonic()-t)/5,0.25)
             self.assertAlmostEqual(totals['settled_usd'],(5400*10+600*100)/1e6)
+
+    def test_p1_long_episode_requests_fit_with_envelopes(self):
+        # p1-002 regression: P went invalid at 15,807 bytes in a 38-turn episode under the 16,000-byte limit.
+        from provider import SYSTEM,SCHEMA
+        b=common.design()['budget'];worst=0
+        for t in (300,301):
+            for d in ('D1','D2'):
+                for arm in ('R','P'):
+                    sizes=[]
+                    def pol(packet,step):
+                        schema={**SCHEMA,'properties':{**SCHEMA['properties'],'action':{'type':'string','enum':packet['actions']}}}
+                        body={'model':'m','max_tokens':b['max_output_tokens'],'system':SYSTEM,'messages':[{'role':'user','content':json.dumps(packet,sort_keys=True)}],'output_config':{'format':{'type':'json_schema','schema':schema},'effort':'high'},'thinking':{'type':'adaptive'}}
+                        sizes.append(len(json.dumps(body).encode()))
+                        a='message' if 'message' in packet['actions'] else 'wait'
+                        return {'action':a,'message':'Status: '+'x'*600},{}
+                    run_episode(task(t,d,'risk'),0,arm,policy=pol,max_steps=40,packet_transform=clarify)
+                    worst=max(worst,max(sizes))
+        self.assertGreater(worst,16000)          # the old limit would fail these long, message-heavy episodes
+        self.assertLess(worst,b['max_input_bytes'])
 
     def test_p1_manifest_shape(self):
         rows=assignments('P1')
