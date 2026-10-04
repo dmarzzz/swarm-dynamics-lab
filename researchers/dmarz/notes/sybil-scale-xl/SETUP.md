@@ -19,7 +19,7 @@ Status: exploratory scale-up; setup record maintained per [the setup runbook](..
 | G2 Instrument and offline checks | pass (selftests); S0 moves to fleet | 11/11 selftests incl. exact equality with the parent simulator at N=36–972; local S0 interrupted by host OOM ([post](reviews/local-s0-001-post.md)) | fleet S0 |
 | G3 Current attempt admission | pending | claim dmarz-sybil-scale-xl on sim-dmarz (agentops PR 176, merged 06:03Z, until ~20:03Z); launcher agentops cc3f862 | pin revision; setup; per-stage pre-run files |
 | G4 Qualification before scientific escalation | pending | Q0 per size | — |
-| G5 Reconciliation and closeout | pending | — | verify, results, post-mortem, release claim |
+| G5 Reconciliation and closeout | partial | s1-a2 reconciled locally; [RESULTS.md](RESULTS.md); [post](reviews/s1-a2-post.md) | dmarz decides A3 (resume 95, ~USD 41) or stop; then hub hash verify with a run filter and claim release |
 
 ## Design and instrument index
 
@@ -59,7 +59,9 @@ Operations entry: manual (private launcher). [Operations guide](../../../../tool
 | s0-a1 (4673b7bd) / fleet-s0-001 | S0 fleet / A1 | [pre](reviews/s0-a1-pre.md) | 72/72/72/72/72 | pass (chain gate) |
 | q0-a1 (a6b2a7b3) / s0-a1 | Q0 Opus / A1 | [pre](reviews/q0-a1-pre.md) | 24/24/24/24/24 | [pass, USD 9.85](reviews/q0-a1-post.md) |
 | s1-a1 (7a32ec63) / q0-a1 | S1 Opus / A1 | [pre](reviews/s1-a1-pre.md) | 576 assigned / 0 started | [stopped in preparation for A2](reviews/s1-a1-post.md) |
-| s0-a2, q0-a2, s1-a2 / q0-a1 | A2 (overload retry) | [pre](reviews/s0-a2-pre.md) | chained | pending |
+| s0-a2 (b7e6407c) / q0-a1 | S0 / A2 | [pre](reviews/s0-a2-pre.md) | 72/72/72/72/72 | pass (chain gate) |
+| q0-a2 (446a38d2) / s0-a2 | Q0 Opus / A2 | [pre](reviews/q0-a2-pre.md) | 24/24/24/24/24 | pass, all sizes (chain gate) |
+| s1-a2 (1a20f29b) / q0-a2 | S1 Opus / A2 | [pre](reviews/s1-a2-pre.md) | 576/482/482/481/481 | [stopped by credit outage (inferred); 94 not started](reviews/s1-a2-post.md); completion proposed as [A3](AMENDMENT-A3-PROPOSED.md) |
 
 ## Closeout
 

@@ -1,0 +1,3722 @@
+{
+  "cells": [
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 21,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.5,
+          "interval": [
+            0.5,
+            0.5
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.11356065059768763,
+          "interval": [
+            0.10297864001567705,
+            0.12551440329218105
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.22712130119537527,
+          "interval": [
+            0.2059572800313541,
+            0.2510288065843621
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.7711150303742895,
+          "interval": [
+            0.7462277091906723,
+            0.7938467568097197
+          ]
+        }
+      },
+      "assigned_accuracy": 0.0,
+      "scripted_accuracy": 0.22222222222222218
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 22,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.5,
+          "interval": [
+            0.5,
+            0.5
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.11578750467639357,
+          "interval": [
+            0.1034418256640479,
+            0.1286943509165731
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.23157500935278713,
+          "interval": [
+            0.2068836513280958,
+            0.2573887018331462
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.765993265993266,
+          "interval": [
+            0.738678451178451,
+            0.792368125701459
+          ]
+        }
+      },
+      "assigned_accuracy": 0.0,
+      "scripted_accuracy": 0.2424242424242424
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 108,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 19,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 1.0,
+          "interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "task_accuracy": {
+          "mean": 1.0,
+          "interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.036387264457439894,
+          "interval": [
+            0.02999783409140135,
+            0.042993285683344165
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.07277452891487979,
+          "interval": [
+            0.0599956681828027,
+            0.08598657136668833
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.6255144032921811,
+          "interval": [
+            0.5990903183885641,
+            0.6510721247563352
+          ]
+        }
+      },
+      "assigned_accuracy": 0.7916666666666666,
+      "scripted_accuracy": 1.0
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 108,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 20,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.15,
+          "interval": [
+            0.03333333333333333,
+            0.2833333333333333
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.575,
+          "interval": [
+            0.5166666666666667,
+            0.6416666666666667
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.214917695473251,
+          "interval": [
+            0.20565843621399177,
+            0.22376543209876537
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.429835390946502,
+          "interval": [
+            0.41131687242798354,
+            0.44753086419753074
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.5718106995884773,
+          "interval": [
+            0.5541152263374485,
+            0.5893004115226337
+          ]
+        }
+      },
+      "assigned_accuracy": 0.125,
+      "scripted_accuracy": 0.4666666666666667
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 23,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.5797101449275363,
+          "interval": [
+            0.4057971014492754,
+            0.753623188405797
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.7898550724637682,
+          "interval": [
+            0.7028985507246376,
+            0.8768115942028986
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.1271247092503131,
+          "interval": [
+            0.11120057255322956,
+            0.14206477008409377
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.2542494185006262,
+          "interval": [
+            0.2224011451064591,
+            0.28412954016818753
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.6260511719448918,
+          "interval": [
+            0.565038468420111,
+            0.6820540347110395
+          ]
+        }
+      },
+      "assigned_accuracy": 0.5555555555555556,
+      "scripted_accuracy": 0.6666666666666667
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 20,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.4166666666666667,
+          "interval": [
+            0.21666666666666665,
+            0.6166666666666667
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.7083333333333333,
+          "interval": [
+            0.6083333333333333,
+            0.8083333333333333
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.17808641975308642,
+          "interval": [
+            0.1397119341563786,
+            0.2168724279835391
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.35617283950617284,
+          "interval": [
+            0.2794238683127572,
+            0.4337448559670782
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.638888888888889,
+          "interval": [
+            0.5652211934156377,
+            0.7063786008230453
+          ]
+        }
+      },
+      "assigned_accuracy": 0.34722222222222227,
+      "scripted_accuracy": 0.4333333333333333
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 108,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 20,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 1.0,
+          "interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "task_accuracy": {
+          "mean": 1.0,
+          "interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.0331275720164609,
+          "interval": [
+            0.025617283950617287,
+            0.04084362139917695
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.0662551440329218,
+          "interval": [
+            0.051234567901234575,
+            0.0816872427983539
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.4882716049382716,
+          "interval": [
+            0.4590534979423869,
+            0.5195473251028806
+          ]
+        }
+      },
+      "assigned_accuracy": 0.8333333333333334,
+      "scripted_accuracy": 1.0
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 108,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 20,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.25,
+          "interval": [
+            0.09999999999999999,
+            0.4333333333333333
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.625,
+          "interval": [
+            0.5499999999999999,
+            0.7166666666666666
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.22520576131687245,
+          "interval": [
+            0.21059670781893,
+            0.23940329218106995
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.4504115226337449,
+          "interval": [
+            0.42119341563786,
+            0.4788065843621399
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.5769547325102881,
+          "interval": [
+            0.5481481481481482,
+            0.6061728395061727
+          ]
+        }
+      },
+      "assigned_accuracy": 0.20833333333333334,
+      "scripted_accuracy": 0.36666666666666664
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 21,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.047619047619047616,
+          "interval": [
+            0.0,
+            0.14285714285714285
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.5238095238095238,
+          "interval": [
+            0.5,
+            0.5714285714285714
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.11565092429289961,
+          "interval": [
+            0.10297864001567705,
+            0.12874779541446207
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.23130184858579922,
+          "interval": [
+            0.2059572800313541,
+            0.25749559082892415
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.76856750930825,
+          "interval": [
+            0.7421124828532236,
+            0.7943040041805474
+          ]
+        }
+      },
+      "assigned_accuracy": 0.041666666666666664,
+      "scripted_accuracy": 0.15873015873015872
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 17,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.0196078431372549,
+          "interval": [
+            0.0,
+            0.058823529411764705
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.5098039215686274,
+          "interval": [
+            0.5,
+            0.5294117647058824
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.10663277656741708,
+          "interval": [
+            0.08084906802227064,
+            0.1294692568385379
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.21326555313483417,
+          "interval": [
+            0.16169813604454128,
+            0.2589385136770758
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.7868151375776647,
+          "interval": [
+            0.7410614863229242,
+            0.8384592108448318
+          ]
+        }
+      },
+      "assigned_accuracy": 0.013888888888888888,
+      "scripted_accuracy": 0.0980392156862745
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 324,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 20,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 1.0,
+          "interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "task_accuracy": {
+          "mean": 1.0,
+          "interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.025651577503429356,
+          "interval": [
+            0.022496570644718793,
+            0.028772290809327843
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.05130315500685871,
+          "interval": [
+            0.044993141289437585,
+            0.05754458161865569
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.6205075445816186,
+          "interval": [
+            0.6055555555555556,
+            0.6364197530864197
+          ]
+        }
+      },
+      "assigned_accuracy": 0.8333333333333334,
+      "scripted_accuracy": 1.0
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 324,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 19,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.2631578947368421,
+          "interval": [
+            0.10526315789473684,
+            0.4385964912280701
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.631578947368421,
+          "interval": [
+            0.5526315789473685,
+            0.7192982456140351
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.21157317161215797,
+          "interval": [
+            0.204641361634539,
+            0.21973232979568266
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.42314634322431594,
+          "interval": [
+            0.409282723269078,
+            0.4394646595913653
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.5644357808100499,
+          "interval": [
+            0.5549779799292469,
+            0.5734603999711211
+          ]
+        }
+      },
+      "assigned_accuracy": 0.20833333333333334,
+      "scripted_accuracy": 0.5964912280701755
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 18,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.5,
+          "interval": [
+            0.2777777777777778,
+            0.7222222222222222
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.75,
+          "interval": [
+            0.6388888888888888,
+            0.8611111111111112
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.1228471269623533,
+          "interval": [
+            0.10364178478890412,
+            0.1438805060204237
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.2456942539247066,
+          "interval": [
+            0.20728356957780825,
+            0.2877610120408474
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.6434994665447341,
+          "interval": [
+            0.5621837372351776,
+            0.7201646090534979
+          ]
+        }
+      },
+      "assigned_accuracy": 0.375,
+      "scripted_accuracy": 0.5555555555555556
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 19,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.42105263157894735,
+          "interval": [
+            0.21052631578947367,
+            0.631578947368421
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.7105263157894737,
+          "interval": [
+            0.6052631578947368,
+            0.8157894736842105
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.14594614107284673,
+          "interval": [
+            0.11688686737419682,
+            0.17594397516424806
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.29189228214569346,
+          "interval": [
+            0.23377373474839364,
+            0.3518879503284961
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.6645729550212981,
+          "interval": [
+            0.5871760161721175,
+            0.7371326980001444
+          ]
+        }
+      },
+      "assigned_accuracy": 0.3333333333333333,
+      "scripted_accuracy": 0.45614035087719296
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 324,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 24,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 1.0,
+          "interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "task_accuracy": {
+          "mean": 1.0,
+          "interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.038380201188843166,
+          "interval": [
+            0.03383630544124371,
+            0.04346707818930042
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.07676040237768633,
+          "interval": [
+            0.06767261088248742,
+            0.08693415637860084
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.4606195701874714,
+          "interval": [
+            0.4426154549611339,
+            0.47885230909922266
+          ]
+        }
+      },
+      "assigned_accuracy": 1.0,
+      "scripted_accuracy": 1.0
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 324,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 20,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.26666666666666666,
+          "interval": [
+            0.1,
+            0.45
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.6333333333333333,
+          "interval": [
+            0.55,
+            0.725
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.21796982167352538,
+          "interval": [
+            0.21131687242798353,
+            0.22472650891632379
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.43593964334705076,
+          "interval": [
+            0.42263374485596705,
+            0.44945301783264757
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.5547325102880658,
+          "interval": [
+            0.5356652949245543,
+            0.5740054869684499
+          ]
+        }
+      },
+      "assigned_accuracy": 0.2222222222222222,
+      "scripted_accuracy": 0.5
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 22,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.5,
+          "interval": [
+            0.5,
+            0.5
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.09829779274223718,
+          "interval": [
+            0.07396989441742528,
+            0.12528577960676726
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.19659558548447437,
+          "interval": [
+            0.14793978883485057,
+            0.2505715592135345
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.8015754250322152,
+          "interval": [
+            0.7475137174211248,
+            0.8503351415388454
+          ]
+        }
+      },
+      "assigned_accuracy": 0.0,
+      "scripted_accuracy": 0.3333333333333333
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 21,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.06349206349206349,
+          "interval": [
+            0.0,
+            0.1746031746031746
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.5317460317460317,
+          "interval": [
+            0.5,
+            0.5873015873015872
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.09251638469745466,
+          "interval": [
+            0.06722625035382238,
+            0.120615324319028
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.1850327693949093,
+          "interval": [
+            0.13445250070764475,
+            0.241230648638056
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.8123761621704008,
+          "interval": [
+            0.7566317199033248,
+            0.8632618067803253
+          ]
+        }
+      },
+      "assigned_accuracy": 0.05555555555555555,
+      "scripted_accuracy": 0.3333333333333333
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 972,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 20,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 1.0,
+          "interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "task_accuracy": {
+          "mean": 1.0,
+          "interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.02661179698216735,
+          "interval": [
+            0.024519890260631,
+            0.028921181984453582
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.0532235939643347,
+          "interval": [
+            0.049039780521262,
+            0.057842363968907164
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.6346822130772748,
+          "interval": [
+            0.6295153177869228,
+            0.6401011659807957
+          ]
+        }
+      },
+      "assigned_accuracy": 0.8333333333333334,
+      "scripted_accuracy": 1.0
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 972,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 19,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.40350877192982454,
+          "interval": [
+            0.21052631578947367,
+            0.5964912280701754
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.7017543859649124,
+          "interval": [
+            0.6052631578947368,
+            0.7982456140350876
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.20831227588862417,
+          "interval": [
+            0.2052075060765769,
+            0.2112362524968113
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.41662455177724833,
+          "interval": [
+            0.4104150121531538,
+            0.4224725049936226
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.578995499723245,
+          "interval": [
+            0.5723533800206965,
+            0.5854938271604938
+          ]
+        }
+      },
+      "assigned_accuracy": 0.3194444444444444,
+      "scripted_accuracy": 0.6140350877192983
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 17,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.3137254901960784,
+          "interval": [
+            0.1568627450980392,
+            0.4906862745097968
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.6568627450980392,
+          "interval": [
+            0.5784313725490196,
+            0.7453431372548984
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.16308937841254473,
+          "interval": [
+            0.11884363484762903,
+            0.20616510664622503
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.32617875682508946,
+          "interval": [
+            0.23768726969525805,
+            0.41233021329245007
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.6747626348207322,
+          "interval": [
+            0.6062831168132548,
+            0.7453159041394336
+          ]
+        }
+      },
+      "assigned_accuracy": 0.2222222222222222,
+      "scripted_accuracy": 0.4117647058823529
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 19,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.2456140350877193,
+          "interval": [
+            0.08771929824561403,
+            0.4385964912280701
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.6228070175438597,
+          "interval": [
+            0.5438596491228069,
+            0.7192982456140351
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.14414121724063245,
+          "interval": [
+            0.1121570644718793,
+            0.17600474093326593
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.2882824344812649,
+          "interval": [
+            0.2243141289437586,
+            0.35200948186653186
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.7657208865785864,
+          "interval": [
+            0.7005968281471855,
+            0.8312065314177074
+          ]
+        }
+      },
+      "assigned_accuracy": 0.19444444444444445,
+      "scripted_accuracy": 0.29824561403508776
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 972,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 19,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 1.0,
+          "interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "task_accuracy": {
+          "mean": 1.0,
+          "interval": [
+            1.0,
+            1.0
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.04129665728106274,
+          "interval": [
+            0.03825235241739464,
+            0.044244699540346065
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.08259331456212549,
+          "interval": [
+            0.07650470483478929,
+            0.08848939908069213
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.4627343392775492,
+          "interval": [
+            0.4500270738574832,
+            0.47493622602459507
+          ]
+        }
+      },
+      "assigned_accuracy": 0.7916666666666666,
+      "scripted_accuracy": 1.0
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 972,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "assigned": 24,
+      "valid": 21,
+      "metrics": {
+        "rare_accuracy": {
+          "mean": 0.2857142857142857,
+          "interval": [
+            0.14285714285714285,
+            0.4444444444444445
+          ]
+        },
+        "task_accuracy": {
+          "mean": 0.6428571428571429,
+          "interval": [
+            0.5714285714285714,
+            0.7222222222222222
+          ]
+        },
+        "bad_seat_share": {
+          "mean": 0.22413830644283317,
+          "interval": [
+            0.22063274326648813,
+            0.22781805909377925
+          ]
+        },
+        "malicious_admission": {
+          "mean": 0.44827661288566634,
+          "interval": [
+            0.44126548653297626,
+            0.4556361181875585
+          ]
+        },
+        "specialist_rejection": {
+          "mean": 0.5638077819147778,
+          "interval": [
+            0.5538136608095456,
+            0.5740414135475863
+          ]
+        }
+      },
+      "assigned_accuracy": 0.25,
+      "scripted_accuracy": 0.3333333333333333
+    }
+  ],
+  "budget_contrasts": [
+    {
+      "n": 972,
+      "arm": "coverage",
+      "attacker_pass": 0.1,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 972,
+      "arm": "degree",
+      "attacker_pass": 0.1,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "attacker_pass": 0.1,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 16,
+      "mean": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ],
+      "per_world": [
+        {
+          "task": 6001,
+          "difference": 1.0
+        },
+        {
+          "task": 6002,
+          "difference": 1.0
+        },
+        {
+          "task": 6004,
+          "difference": 1.0
+        },
+        {
+          "task": 6005,
+          "difference": 1.0
+        },
+        {
+          "task": 6006,
+          "difference": 1.0
+        },
+        {
+          "task": 6007,
+          "difference": 1.0
+        },
+        {
+          "task": 6010,
+          "difference": 1.0
+        },
+        {
+          "task": 6011,
+          "difference": 1.0
+        },
+        {
+          "task": 6012,
+          "difference": 1.0
+        },
+        {
+          "task": 6013,
+          "difference": 1.0
+        },
+        {
+          "task": 6014,
+          "difference": 1.0
+        },
+        {
+          "task": 6015,
+          "difference": 1.0
+        },
+        {
+          "task": 6017,
+          "difference": 1.0
+        },
+        {
+          "task": 6020,
+          "difference": 1.0
+        },
+        {
+          "task": 6021,
+          "difference": 1.0
+        },
+        {
+          "task": 6022,
+          "difference": 1.0
+        }
+      ]
+    },
+    {
+      "n": 972,
+      "arm": "degree",
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 20,
+      "mean": 0.4166666666666667,
+      "interval": [
+        0.23333333333333334,
+        0.6166666666666666
+      ],
+      "per_world": [
+        {
+          "task": 6001,
+          "difference": 1.0
+        },
+        {
+          "task": 6002,
+          "difference": 0.6666666666666667
+        },
+        {
+          "task": 6003,
+          "difference": 0.0
+        },
+        {
+          "task": 6004,
+          "difference": 0.0
+        },
+        {
+          "task": 6005,
+          "difference": 1.0
+        },
+        {
+          "task": 6006,
+          "difference": 1.0
+        },
+        {
+          "task": 6007,
+          "difference": 0.6666666666666667
+        },
+        {
+          "task": 6009,
+          "difference": 1.0
+        },
+        {
+          "task": 6011,
+          "difference": 0.0
+        },
+        {
+          "task": 6012,
+          "difference": 0.0
+        },
+        {
+          "task": 6013,
+          "difference": 0.0
+        },
+        {
+          "task": 6014,
+          "difference": 0.6666666666666667
+        },
+        {
+          "task": 6015,
+          "difference": 0.0
+        },
+        {
+          "task": 6016,
+          "difference": 0.0
+        },
+        {
+          "task": 6018,
+          "difference": 0.0
+        },
+        {
+          "task": 6019,
+          "difference": 0.0
+        },
+        {
+          "task": 6020,
+          "difference": 0.0
+        },
+        {
+          "task": 6021,
+          "difference": 0.6666666666666667
+        },
+        {
+          "task": 6022,
+          "difference": 0.6666666666666667
+        },
+        {
+          "task": 6023,
+          "difference": 1.0
+        }
+      ]
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "attacker_pass": 0.9,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 972,
+      "arm": "degree",
+      "attacker_pass": 0.9,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "attacker_pass": 0.9,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 18,
+      "mean": 0.12962962962962962,
+      "interval": [
+        0.018518518518518517,
+        0.2592592592592593
+      ],
+      "per_world": [
+        {
+          "task": 6000,
+          "difference": 0.0
+        },
+        {
+          "task": 6001,
+          "difference": 0.0
+        },
+        {
+          "task": 6002,
+          "difference": 0.3333333333333333
+        },
+        {
+          "task": 6004,
+          "difference": 0.0
+        },
+        {
+          "task": 6005,
+          "difference": 0.6666666666666666
+        },
+        {
+          "task": 6006,
+          "difference": 1.0
+        },
+        {
+          "task": 6008,
+          "difference": 0.0
+        },
+        {
+          "task": 6009,
+          "difference": 0.3333333333333333
+        },
+        {
+          "task": 6010,
+          "difference": 0.0
+        },
+        {
+          "task": 6012,
+          "difference": 0.0
+        },
+        {
+          "task": 6013,
+          "difference": 0.0
+        },
+        {
+          "task": 6015,
+          "difference": 0.0
+        },
+        {
+          "task": 6016,
+          "difference": 0.0
+        },
+        {
+          "task": 6017,
+          "difference": 0.0
+        },
+        {
+          "task": 6018,
+          "difference": 0.0
+        },
+        {
+          "task": 6019,
+          "difference": 0.0
+        },
+        {
+          "task": 6020,
+          "difference": 0.0
+        },
+        {
+          "task": 6022,
+          "difference": 0.0
+        }
+      ]
+    },
+    {
+      "n": 972,
+      "arm": "degree",
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 16,
+      "mean": -0.10416666666666667,
+      "interval": [
+        -0.4166666666666667,
+        0.20833333333333334
+      ],
+      "per_world": [
+        {
+          "task": 6003,
+          "difference": -0.6666666666666667
+        },
+        {
+          "task": 6004,
+          "difference": -1.0
+        },
+        {
+          "task": 6005,
+          "difference": 0.3333333333333333
+        },
+        {
+          "task": 6007,
+          "difference": -0.3333333333333333
+        },
+        {
+          "task": 6008,
+          "difference": 1.0
+        },
+        {
+          "task": 6009,
+          "difference": 0.0
+        },
+        {
+          "task": 6012,
+          "difference": -0.6666666666666667
+        },
+        {
+          "task": 6013,
+          "difference": 0.0
+        },
+        {
+          "task": 6014,
+          "difference": 0.0
+        },
+        {
+          "task": 6015,
+          "difference": -1.0
+        },
+        {
+          "task": 6016,
+          "difference": -1.0
+        },
+        {
+          "task": 6017,
+          "difference": 0.0
+        },
+        {
+          "task": 6018,
+          "difference": 0.6666666666666667
+        },
+        {
+          "task": 6019,
+          "difference": 1.0
+        },
+        {
+          "task": 6021,
+          "difference": 0.0
+        },
+        {
+          "task": 6022,
+          "difference": 0.0
+        }
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "attacker_pass": 0.1,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 2916,
+      "arm": "degree",
+      "attacker_pass": 0.1,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "attacker_pass": 0.1,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 18,
+      "mean": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ],
+      "per_world": [
+        {
+          "task": 6000,
+          "difference": 1.0
+        },
+        {
+          "task": 6002,
+          "difference": 1.0
+        },
+        {
+          "task": 6005,
+          "difference": 1.0
+        },
+        {
+          "task": 6006,
+          "difference": 1.0
+        },
+        {
+          "task": 6007,
+          "difference": 1.0
+        },
+        {
+          "task": 6008,
+          "difference": 1.0
+        },
+        {
+          "task": 6010,
+          "difference": 1.0
+        },
+        {
+          "task": 6011,
+          "difference": 1.0
+        },
+        {
+          "task": 6012,
+          "difference": 1.0
+        },
+        {
+          "task": 6013,
+          "difference": 1.0
+        },
+        {
+          "task": 6014,
+          "difference": 1.0
+        },
+        {
+          "task": 6015,
+          "difference": 1.0
+        },
+        {
+          "task": 6017,
+          "difference": 1.0
+        },
+        {
+          "task": 6019,
+          "difference": 1.0
+        },
+        {
+          "task": 6020,
+          "difference": 1.0
+        },
+        {
+          "task": 6021,
+          "difference": 1.0
+        },
+        {
+          "task": 6022,
+          "difference": 1.0
+        },
+        {
+          "task": 6023,
+          "difference": 1.0
+        }
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "degree",
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 18,
+      "mean": 0.5,
+      "interval": [
+        0.2777777777777778,
+        0.7222222222222222
+      ],
+      "per_world": [
+        {
+          "task": 6000,
+          "difference": 1.0
+        },
+        {
+          "task": 6001,
+          "difference": 0.0
+        },
+        {
+          "task": 6004,
+          "difference": 0.0
+        },
+        {
+          "task": 6005,
+          "difference": 0.0
+        },
+        {
+          "task": 6006,
+          "difference": 0.0
+        },
+        {
+          "task": 6007,
+          "difference": 1.0
+        },
+        {
+          "task": 6008,
+          "difference": 1.0
+        },
+        {
+          "task": 6009,
+          "difference": 0.0
+        },
+        {
+          "task": 6010,
+          "difference": 0.0
+        },
+        {
+          "task": 6012,
+          "difference": 1.0
+        },
+        {
+          "task": 6013,
+          "difference": 0.0
+        },
+        {
+          "task": 6014,
+          "difference": 1.0
+        },
+        {
+          "task": 6015,
+          "difference": 1.0
+        },
+        {
+          "task": 6017,
+          "difference": 1.0
+        },
+        {
+          "task": 6018,
+          "difference": 1.0
+        },
+        {
+          "task": 6019,
+          "difference": 1.0
+        },
+        {
+          "task": 6022,
+          "difference": 0.0
+        },
+        {
+          "task": 6023,
+          "difference": 0.0
+        }
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "attacker_pass": 0.9,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 2916,
+      "arm": "degree",
+      "attacker_pass": 0.9,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "attacker_pass": 0.9,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 14,
+      "mean": 0.21428571428571427,
+      "interval": [
+        0.023809523809523808,
+        0.40476190476190477
+      ],
+      "per_world": [
+        {
+          "task": 6000,
+          "difference": 0.0
+        },
+        {
+          "task": 6002,
+          "difference": 0.0
+        },
+        {
+          "task": 6003,
+          "difference": -0.3333333333333333
+        },
+        {
+          "task": 6005,
+          "difference": 1.0
+        },
+        {
+          "task": 6008,
+          "difference": 0.6666666666666666
+        },
+        {
+          "task": 6009,
+          "difference": 0.6666666666666666
+        },
+        {
+          "task": 6011,
+          "difference": 0.0
+        },
+        {
+          "task": 6012,
+          "difference": 0.3333333333333333
+        },
+        {
+          "task": 6013,
+          "difference": 0.0
+        },
+        {
+          "task": 6015,
+          "difference": 0.0
+        },
+        {
+          "task": 6016,
+          "difference": 0.6666666666666666
+        },
+        {
+          "task": 6019,
+          "difference": 0.0
+        },
+        {
+          "task": 6020,
+          "difference": 0.0
+        },
+        {
+          "task": 6023,
+          "difference": 0.0
+        }
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "degree",
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 16,
+      "mean": -0.20833333333333334,
+      "interval": [
+        -0.4791666666666667,
+        0.062499999999999986
+      ],
+      "per_world": [
+        {
+          "task": 6000,
+          "difference": 1.0
+        },
+        {
+          "task": 6002,
+          "difference": 0.0
+        },
+        {
+          "task": 6004,
+          "difference": -1.0
+        },
+        {
+          "task": 6006,
+          "difference": -1.0
+        },
+        {
+          "task": 6007,
+          "difference": 0.0
+        },
+        {
+          "task": 6008,
+          "difference": 0.0
+        },
+        {
+          "task": 6009,
+          "difference": -1.0
+        },
+        {
+          "task": 6010,
+          "difference": 0.0
+        },
+        {
+          "task": 6013,
+          "difference": 0.0
+        },
+        {
+          "task": 6014,
+          "difference": 0.0
+        },
+        {
+          "task": 6015,
+          "difference": 0.0
+        },
+        {
+          "task": 6016,
+          "difference": 0.0
+        },
+        {
+          "task": 6017,
+          "difference": 0.3333333333333333
+        },
+        {
+          "task": 6020,
+          "difference": 0.0
+        },
+        {
+          "task": 6021,
+          "difference": -0.6666666666666667
+        },
+        {
+          "task": 6023,
+          "difference": -1.0
+        }
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "attacker_pass": 0.1,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 8748,
+      "arm": "degree",
+      "attacker_pass": 0.1,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "attacker_pass": 0.1,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 18,
+      "mean": 1.0,
+      "interval": [
+        1.0,
+        1.0
+      ],
+      "per_world": [
+        {
+          "task": 6000,
+          "difference": 1.0
+        },
+        {
+          "task": 6001,
+          "difference": 1.0
+        },
+        {
+          "task": 6003,
+          "difference": 1.0
+        },
+        {
+          "task": 6004,
+          "difference": 1.0
+        },
+        {
+          "task": 6005,
+          "difference": 1.0
+        },
+        {
+          "task": 6006,
+          "difference": 1.0
+        },
+        {
+          "task": 6008,
+          "difference": 1.0
+        },
+        {
+          "task": 6009,
+          "difference": 1.0
+        },
+        {
+          "task": 6011,
+          "difference": 1.0
+        },
+        {
+          "task": 6012,
+          "difference": 1.0
+        },
+        {
+          "task": 6014,
+          "difference": 1.0
+        },
+        {
+          "task": 6015,
+          "difference": 1.0
+        },
+        {
+          "task": 6017,
+          "difference": 1.0
+        },
+        {
+          "task": 6019,
+          "difference": 1.0
+        },
+        {
+          "task": 6020,
+          "difference": 1.0
+        },
+        {
+          "task": 6021,
+          "difference": 1.0
+        },
+        {
+          "task": 6022,
+          "difference": 1.0
+        },
+        {
+          "task": 6023,
+          "difference": 1.0
+        }
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "degree",
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 15,
+      "mean": 0.7111111111111111,
+      "interval": [
+        0.5333333333333333,
+        0.8666666666666667
+      ],
+      "per_world": [
+        {
+          "task": 6000,
+          "difference": 0.0
+        },
+        {
+          "task": 6002,
+          "difference": 0.0
+        },
+        {
+          "task": 6005,
+          "difference": 0.33333333333333337
+        },
+        {
+          "task": 6006,
+          "difference": 0.6666666666666667
+        },
+        {
+          "task": 6007,
+          "difference": 1.0
+        },
+        {
+          "task": 6008,
+          "difference": 0.6666666666666667
+        },
+        {
+          "task": 6009,
+          "difference": 1.0
+        },
+        {
+          "task": 6010,
+          "difference": 0.6666666666666667
+        },
+        {
+          "task": 6012,
+          "difference": 1.0
+        },
+        {
+          "task": 6013,
+          "difference": 1.0
+        },
+        {
+          "task": 6016,
+          "difference": 1.0
+        },
+        {
+          "task": 6017,
+          "difference": 1.0
+        },
+        {
+          "task": 6019,
+          "difference": 0.6666666666666667
+        },
+        {
+          "task": 6020,
+          "difference": 1.0
+        },
+        {
+          "task": 6021,
+          "difference": 0.6666666666666667
+        }
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "attacker_pass": 0.9,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 8748,
+      "arm": "degree",
+      "attacker_pass": 0.9,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "attacker_pass": 0.9,
+      "visibility": "masked",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 17,
+      "mean": 0.2549019607843137,
+      "interval": [
+        0.0784313725490196,
+        0.4509803921568627
+      ],
+      "per_world": [
+        {
+          "task": 6002,
+          "difference": 0.3333333333333333
+        },
+        {
+          "task": 6004,
+          "difference": 0.6666666666666666
+        },
+        {
+          "task": 6005,
+          "difference": 0.3333333333333333
+        },
+        {
+          "task": 6006,
+          "difference": -0.3333333333333333
+        },
+        {
+          "task": 6007,
+          "difference": 0.0
+        },
+        {
+          "task": 6008,
+          "difference": 0.0
+        },
+        {
+          "task": 6009,
+          "difference": 1.0
+        },
+        {
+          "task": 6010,
+          "difference": 0.0
+        },
+        {
+          "task": 6012,
+          "difference": 0.0
+        },
+        {
+          "task": 6013,
+          "difference": 0.6666666666666666
+        },
+        {
+          "task": 6015,
+          "difference": 0.0
+        },
+        {
+          "task": 6016,
+          "difference": 1.0
+        },
+        {
+          "task": 6017,
+          "difference": 0.0
+        },
+        {
+          "task": 6018,
+          "difference": 0.6666666666666666
+        },
+        {
+          "task": 6021,
+          "difference": 0.0
+        },
+        {
+          "task": 6022,
+          "difference": 0.0
+        },
+        {
+          "task": 6023,
+          "difference": 0.0
+        }
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "degree",
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 0,
+      "mean": null,
+      "interval": null,
+      "per_world": []
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 17,
+      "mean": 0.0588235294117647,
+      "interval": [
+        -0.23529411764705882,
+        0.3529411764705882
+      ],
+      "per_world": [
+        {
+          "task": 6000,
+          "difference": -0.6666666666666667
+        },
+        {
+          "task": 6002,
+          "difference": -1.0
+        },
+        {
+          "task": 6003,
+          "difference": 0.0
+        },
+        {
+          "task": 6005,
+          "difference": -0.6666666666666666
+        },
+        {
+          "task": 6006,
+          "difference": 1.0
+        },
+        {
+          "task": 6007,
+          "difference": 1.0
+        },
+        {
+          "task": 6008,
+          "difference": 0.0
+        },
+        {
+          "task": 6009,
+          "difference": 0.3333333333333333
+        },
+        {
+          "task": 6010,
+          "difference": 0.0
+        },
+        {
+          "task": 6011,
+          "difference": 0.0
+        },
+        {
+          "task": 6013,
+          "difference": 0.6666666666666666
+        },
+        {
+          "task": 6014,
+          "difference": 0.0
+        },
+        {
+          "task": 6017,
+          "difference": 0.0
+        },
+        {
+          "task": 6020,
+          "difference": 0.3333333333333333
+        },
+        {
+          "task": 6021,
+          "difference": 0.0
+        },
+        {
+          "task": 6022,
+          "difference": -1.0
+        },
+        {
+          "task": 6023,
+          "difference": 1.0
+        }
+      ]
+    }
+  ],
+  "primary": {
+    "n": 8748,
+    "arm": "coverage",
+    "attacker_pass": 0.1,
+    "visibility": "visible",
+    "clusters": 18,
+    "mean": 1.0,
+    "interval": [
+      1.0,
+      1.0
+    ],
+    "per_world": [
+      {
+        "task": 6000,
+        "difference": 1.0
+      },
+      {
+        "task": 6001,
+        "difference": 1.0
+      },
+      {
+        "task": 6003,
+        "difference": 1.0
+      },
+      {
+        "task": 6004,
+        "difference": 1.0
+      },
+      {
+        "task": 6005,
+        "difference": 1.0
+      },
+      {
+        "task": 6006,
+        "difference": 1.0
+      },
+      {
+        "task": 6008,
+        "difference": 1.0
+      },
+      {
+        "task": 6009,
+        "difference": 1.0
+      },
+      {
+        "task": 6011,
+        "difference": 1.0
+      },
+      {
+        "task": 6012,
+        "difference": 1.0
+      },
+      {
+        "task": 6014,
+        "difference": 1.0
+      },
+      {
+        "task": 6015,
+        "difference": 1.0
+      },
+      {
+        "task": 6017,
+        "difference": 1.0
+      },
+      {
+        "task": 6019,
+        "difference": 1.0
+      },
+      {
+        "task": 6020,
+        "difference": 1.0
+      },
+      {
+        "task": 6021,
+        "difference": 1.0
+      },
+      {
+        "task": 6022,
+        "difference": 1.0
+      },
+      {
+        "task": 6023,
+        "difference": 1.0
+      }
+    ]
+  },
+  "execution": {
+    "params": {
+      "stage": "S1",
+      "backend": "anthropic",
+      "batch": "s1-a2",
+      "source_hash": "fd0e7e8a1b7839aed493d49b93c1697a806410ea59e1ad973ec9af86d1f00b1c",
+      "code": "4217f29b8724ceb6c9cb39139c2b6ad5828adf1f"
+    },
+    "planned": 576,
+    "started": 482,
+    "terminal": 576,
+    "graded": 481,
+    "analyzed": 481,
+    "invalid": 95,
+    "not_started": 94,
+    "model_calls": 481,
+    "cost_usd": 194.77958,
+    "input_tokens": 48533965,
+    "output_tokens": 32186,
+    "elapsed_seconds": 5893.040266199998,
+    "qualification": null,
+    "study_accounting": {
+      "attempted_calls": 537,
+      "reserved_usd": 308.562948,
+      "actual_usd": 214.485748,
+      "usage_reported_calls": 537
+    },
+    "initial_study_accounting": {
+      "attempted_calls": 48,
+      "reserved_usd": 27.755256,
+      "actual_usd": 19.706168,
+      "usage_reported_calls": 48
+    },
+    "reporting_errors": [],
+    "visualization": {
+      "mapping": "v1",
+      "frames": 33
+    }
+  },
+  "badge_contrasts": [
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 108,
+      "attacker_pass": 0.1,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 108,
+      "attacker_pass": 0.9,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 108,
+      "attacker_pass": 0.1,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 108,
+      "attacker_pass": 0.9,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 324,
+      "attacker_pass": 0.1,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 324,
+      "attacker_pass": 0.9,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 324,
+      "attacker_pass": 0.1,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 324,
+      "attacker_pass": 0.9,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 972,
+      "attacker_pass": 0.1,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 972,
+      "attacker_pass": 0.9,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 972,
+      "attacker_pass": 0.1,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 972,
+      "attacker_pass": 0.9,
+      "clusters": 0,
+      "mean": null,
+      "interval": null
+    }
+  ],
+  "budget_security_contrasts": [
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 108,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 16,
+      "mean": -0.07510288065843622,
+      "interval": [
+        -0.08809156378600823,
+        -0.06262860082304528
+      ]
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 108,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 18,
+      "mean": 0.09853680841335162,
+      "interval": [
+        0.07887517146776407,
+        0.11705532693187012
+      ]
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 108,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 20,
+      "mean": -0.08693415637860083,
+      "interval": [
+        -0.1050437242798354,
+        -0.06800411522633745
+      ]
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 108,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 16,
+      "mean": 0.0419238683127572,
+      "interval": [
+        -0.009773662551440339,
+        0.09195280349794234
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 324,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 18,
+      "mean": -0.09339277549154093,
+      "interval": [
+        -0.10928212162780064,
+        -0.07830265965554031
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 324,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 14,
+      "mean": 0.10988634136782285,
+      "interval": [
+        0.07671835194983342,
+        0.14667842445620224
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 324,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 18,
+      "mean": -0.08310470964791952,
+      "interval": [
+        -0.10665294924554183,
+        -0.062299954275262914
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 324,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 16,
+      "mean": 0.07214506172839506,
+      "interval": [
+        0.03828017832647463,
+        0.10476680384087791
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 972,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 18,
+      "mean": -0.05970888584057309,
+      "interval": [
+        -0.08355052583447646,
+        -0.03677030940405426
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 972,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 17,
+      "mean": 0.11049248231528551,
+      "interval": [
+        0.07947967938890232,
+        0.13804970547889936
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 972,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 15,
+      "mean": -0.129431489102271,
+      "interval": [
+        -0.1774439871970736,
+        -0.07907254991617134
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 972,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 17,
+      "mean": 0.07346889373033164,
+      "interval": [
+        0.04011337045106108,
+        0.1069693240807983
+      ]
+    }
+  ],
+  "coverage_random_contrasts": [
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_accuracy": {
+        "clusters": 21,
+        "mean": -0.5396825396825398,
+        "interval": [
+          -0.7142857142857143,
+          -0.365079365079365
+        ]
+      },
+      "bad_seat_share": {
+        "clusters": 21,
+        "mean": -0.016656868508720363,
+        "interval": [
+          -0.032630315500685875,
+          -0.000783852635704488
+        ]
+      }
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_accuracy": {
+        "clusters": 18,
+        "mean": -0.4074074074074074,
+        "interval": [
+          -0.6111111111111112,
+          -0.2037037037037037
+        ]
+      },
+      "bad_seat_share": {
+        "clusters": 18,
+        "mean": -0.06127114769090078,
+        "interval": [
+          -0.09910836762688616,
+          -0.025145747599451342
+        ]
+      }
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 108,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_accuracy": {
+        "clusters": 16,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "bad_seat_share": {
+        "clusters": 16,
+        "mean": 0.0037294238683127567,
+        "interval": [
+          -0.008359053497942387,
+          0.015946502057613166
+        ]
+      }
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 108,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_accuracy": {
+        "clusters": 17,
+        "mean": -0.17647058823529413,
+        "interval": [
+          -0.4313725490196078,
+          0.039215686274509796
+        ]
+      },
+      "bad_seat_share": {
+        "clusters": 17,
+        "mean": -0.004720406681190993,
+        "interval": [
+          -0.02384410554345194,
+          0.015008472524812397
+        ]
+      }
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_accuracy": {
+        "clusters": 17,
+        "mean": -0.4117647058823529,
+        "interval": [
+          -0.6470588235294118,
+          -0.17647058823529413
+        ]
+      },
+      "bad_seat_share": {
+        "clusters": 17,
+        "mean": -0.0018962317437262969,
+        "interval": [
+          -0.019002662793512468,
+          0.012829823287339628
+        ]
+      }
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_accuracy": {
+        "clusters": 12,
+        "mean": -0.4166666666666667,
+        "interval": [
+          -0.6666666666666666,
+          -0.16666666666666666
+        ]
+      },
+      "bad_seat_share": {
+        "clusters": 12,
+        "mean": -0.034522176497485145,
+        "interval": [
+          -0.06618655692729768,
+          -0.009602194787379973
+        ]
+      }
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 324,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_accuracy": {
+        "clusters": 20,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "bad_seat_share": {
+        "clusters": 20,
+        "mean": -0.014128943758573386,
+        "interval": [
+          -0.020301783264746225,
+          -0.00847050754458162
+        ]
+      }
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 324,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_accuracy": {
+        "clusters": 15,
+        "mean": -0.044444444444444446,
+        "interval": [
+          -0.3333333333333333,
+          0.22222222222222224
+        ]
+      },
+      "bad_seat_share": {
+        "clusters": 15,
+        "mean": -0.005761316872427983,
+        "interval": [
+          -0.018153863740283497,
+          0.006812985825331509
+        ]
+      }
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_accuracy": {
+        "clusters": 16,
+        "mean": -0.3333333333333333,
+        "interval": [
+          -0.5208333333333333,
+          -0.16666666666666666
+        ]
+      },
+      "bad_seat_share": {
+        "clusters": 16,
+        "mean": -0.07238797439414724,
+        "interval": [
+          -0.11944265832190215,
+          -0.026105609853680843
+        ]
+      }
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_accuracy": {
+        "clusters": 16,
+        "mean": -0.14583333333333331,
+        "interval": [
+          -0.375,
+          0.08333333333333334
+        ]
+      },
+      "bad_seat_share": {
+        "clusters": 16,
+        "mean": -0.04731081390032007,
+        "interval": [
+          -0.08087777206218563,
+          -0.013102637745770467
+        ]
+      }
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 972,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_accuracy": {
+        "clusters": 15,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "bad_seat_share": {
+        "clusters": 15,
+        "mean": -0.01489102270995275,
+        "interval": [
+          -0.017604023776863282,
+          -0.011979881115683584
+        ]
+      }
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 972,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_accuracy": {
+        "clusters": 17,
+        "mean": 0.07843137254901962,
+        "interval": [
+          -0.17647058823529413,
+          0.3137254901960785
+        ]
+      },
+      "bad_seat_share": {
+        "clusters": 17,
+        "mean": -0.014618467414400604,
+        "interval": [
+          -0.019930605987250865,
+          -0.009817370020710618
+        ]
+      }
+    }
+  ],
+  "model_plurality_contrasts": [
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 21,
+      "mean": -0.22222222222222218,
+      "interval": [
+        -0.36507936507936506,
+        -0.09523809523809523
+      ]
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 22,
+      "mean": -0.2424242424242424,
+      "interval": [
+        -0.3939393939393939,
+        -0.10606060606060605
+      ]
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 108,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 19,
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 108,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 20,
+      "mean": -0.31666666666666665,
+      "interval": [
+        -0.5,
+        -0.13333333333333333
+      ]
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 23,
+      "mean": -0.08695652173913043,
+      "interval": [
+        -0.20289855072463772,
+        0.014492753623188404
+      ]
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 20,
+      "mean": -0.01666666666666667,
+      "interval": [
+        -0.08333333333333333,
+        0.03333333333333333
+      ]
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 108,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 20,
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 108,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 20,
+      "mean": -0.11666666666666667,
+      "interval": [
+        -0.2833333333333333,
+        0.01666666666666667
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 21,
+      "mean": -0.11111111111111109,
+      "interval": [
+        -0.2698412698412698,
+        0.04761904761904763
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 17,
+      "mean": -0.0784313725490196,
+      "interval": [
+        -0.17647058823529413,
+        0.0
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 324,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 20,
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 324,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 19,
+      "mean": -0.3333333333333333,
+      "interval": [
+        -0.5614035087719298,
+        -0.10526315789473684
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 18,
+      "mean": -0.05555555555555555,
+      "interval": [
+        -0.14814814814814814,
+        0.0
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 19,
+      "mean": -0.035087719298245605,
+      "interval": [
+        -0.17543859649122806,
+        0.12280701754385966
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 324,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 24,
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 324,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 20,
+      "mean": -0.23333333333333334,
+      "interval": [
+        -0.4666666666666667,
+        0.0
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 22,
+      "mean": -0.3333333333333333,
+      "interval": [
+        -0.4848484848484848,
+        -0.18181818181818182
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 21,
+      "mean": -0.2698412698412698,
+      "interval": [
+        -0.47619047619047616,
+        -0.047619047619047616
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 972,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 20,
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 972,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 19,
+      "mean": -0.21052631578947367,
+      "interval": [
+        -0.45614035087719285,
+        0.03508771929824562
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 17,
+      "mean": -0.09803921568627451,
+      "interval": [
+        -0.25490196078431376,
+        0.058823529411764705
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 19,
+      "mean": -0.05263157894736842,
+      "interval": [
+        -0.19298245614035087,
+        0.07017543859649122
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 972,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "clusters": 19,
+      "mean": 0.0,
+      "interval": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 972,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "clusters": 21,
+      "mean": -0.047619047619047616,
+      "interval": [
+        -0.2698412698412699,
+        0.1746031746031746
+      ]
+    }
+  ],
+  "failure_modes": [
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_fields": 63,
+      "wrong_nonnull": 0,
+      "abstentions": 63
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_fields": 66,
+      "wrong_nonnull": 0,
+      "abstentions": 66
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 108,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_fields": 57,
+      "wrong_nonnull": 0,
+      "abstentions": 0
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 108,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_fields": 60,
+      "wrong_nonnull": 11,
+      "abstentions": 40
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_fields": 69,
+      "wrong_nonnull": 0,
+      "abstentions": 29
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_fields": 60,
+      "wrong_nonnull": 23,
+      "abstentions": 12
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 108,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_fields": 60,
+      "wrong_nonnull": 0,
+      "abstentions": 0
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 108,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_fields": 60,
+      "wrong_nonnull": 22,
+      "abstentions": 23
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_fields": 63,
+      "wrong_nonnull": 0,
+      "abstentions": 60
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_fields": 51,
+      "wrong_nonnull": 2,
+      "abstentions": 48
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 324,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_fields": 60,
+      "wrong_nonnull": 0,
+      "abstentions": 0
+    },
+    {
+      "n": 2916,
+      "arm": "coverage",
+      "checks": 324,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_fields": 57,
+      "wrong_nonnull": 12,
+      "abstentions": 30
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_fields": 54,
+      "wrong_nonnull": 3,
+      "abstentions": 24
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_fields": 57,
+      "wrong_nonnull": 12,
+      "abstentions": 21
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 324,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_fields": 72,
+      "wrong_nonnull": 0,
+      "abstentions": 0
+    },
+    {
+      "n": 2916,
+      "arm": "random",
+      "checks": 324,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_fields": 60,
+      "wrong_nonnull": 9,
+      "abstentions": 35
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_fields": 66,
+      "wrong_nonnull": 12,
+      "abstentions": 54
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_fields": 63,
+      "wrong_nonnull": 5,
+      "abstentions": 54
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 972,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_fields": 60,
+      "wrong_nonnull": 0,
+      "abstentions": 0
+    },
+    {
+      "n": 8748,
+      "arm": "coverage",
+      "checks": 972,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_fields": 57,
+      "wrong_nonnull": 13,
+      "abstentions": 21
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_fields": 51,
+      "wrong_nonnull": 17,
+      "abstentions": 18
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_fields": 57,
+      "wrong_nonnull": 34,
+      "abstentions": 9
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 972,
+      "attacker_pass": 0.1,
+      "visibility": "visible",
+      "rare_fields": 57,
+      "wrong_nonnull": 0,
+      "abstentions": 0
+    },
+    {
+      "n": 8748,
+      "arm": "random",
+      "checks": 972,
+      "attacker_pass": 0.9,
+      "visibility": "visible",
+      "rare_fields": 63,
+      "wrong_nonnull": 21,
+      "abstentions": 24
+    }
+  ],
+  "inputs": {
+    "analysis.json": "cdacf50c6e685930d1bcf35ca74d0e3235fc398a0ff45aeb360cff9d82d6eb20",
+    "assignments.jsonl.gz": "eb73def3f85b2c4ea90679867a28cd1cc5aa919e959155f8bb8ac5844fac453c",
+    "episodes.jsonl.gz": "b3c215f4868ebd762337b9c5c48a74050be2e6cd00cdd484abf58fbb07e0becc",
+    "final_frame.png": "881ae67e5e793864b9703d9d07c3e4ce156f15c0c6c0c48ede985dce92b200d4",
+    "replay.gif": "399cdbd1aa7ffb105cef2970ed52754062cd49aaa9fa9c8caf4c9030f2f533b9",
+    "summary.json": "3b1cbce69d3a0fa7d8f05a7d02a95c820ff696891cbf7d64df2442e2ecc4cf84",
+    "worlds.jsonl.gz": "b059fa1c194ebcb918466d8945279ac08a3142bb47e1d44a08e8247158df70f2"
+  }
+}

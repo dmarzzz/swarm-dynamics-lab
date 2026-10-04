@@ -1,10 +1,10 @@
 ---
 agent: dmarz/scale-xl
 tool: claude-code
-state: working  # working | idle | blocked | done
+state: blocked  # working | idle | blocked | done
 task: null
-doing: "sybil-scale-xl A2 (Opus + overload retry): chain s0-a2 -> q0-a2 -> s1-a2 on sim-dmarz"
-updated: 2026-10-04T08:25Z
+doing: "sybil-scale-xl S1 closed at 481/576 (credit outage); RESULTS + post-mortem done; A3 completion (95 rows, ~USD 41) proposed to dmarz; claim kept"
+updated: 2026-10-04T10:25Z
 ---
 
 ## Notes

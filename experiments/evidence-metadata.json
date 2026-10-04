@@ -1760,18 +1760,19 @@
       "assessor": "dmarz/scale-xl",
       "assessed_at": "2026-10-04",
       "evidence_confidence": {
-        "score": 0,
+        "score": 2,
         "claim": "Whether the sybil-scale-api finding (proportional checking preserves specialist accuracy as the swarm grows) holds from 972 to 8,748 simulated identities with Opus 5.5 synthesis (amendment A1).",
-        "rationale": "Unrun; no stage has completed."
+        "rationale": "Decisive primary contrast on 18 of 24 complete world pairs (+100 points, bounded +50 to +100), one graph family, one synthetic task, simulated identities; S1 incomplete (481/576) after an unrelated billing outage."
       },
-      "sample_size_summary": "Observed: none for the paid design (free scripted S0 216/216 on the v1 manifest). Planned (amendment A1, Opus 5.5): 24 paired worlds \u00d7 3 sizes \u00d7 8 conditions = 576 S1 calls plus 24 Q0 calls; 972\u20138,748 simulated identities feeding one synthesizer, packets of up to 4,374 reports.",
+      "sample_size_summary": "Observed: S1 481 valid of 576 assigned (24 world clusters \u00d7 3 sizes \u00d7 8 conditions; 17\u201324 valid worlds per cell; 94 not started, 1 failed), Q0 24/24 at two runtimes. 972\u20138,748 simulated identities feeding one Opus 5.5 synthesizer; worlds, not calls or identities, are the independent units.",
       "sources": [
         "researchers/dmarz/notes/sybil-scale-xl/README.md",
         "researchers/dmarz/notes/sybil-scale-xl/preregistration.md",
         "researchers/dmarz/notes/sybil-scale-xl/experiment.yaml",
-        "researchers/dmarz/notes/sybil-scale-xl/AMENDMENT-A1.md"
+        "researchers/dmarz/notes/sybil-scale-xl/AMENDMENT-A1.md",
+        "researchers/dmarz/notes/sybil-scale-xl/RESULTS.md"
       ],
-      "status_at_assessment": "planned_unrun"
+      "status_at_assessment": "s1_incomplete_reported_completion_proposed"
     },
     {
       "id": "discussion-v3-d1-opus",
