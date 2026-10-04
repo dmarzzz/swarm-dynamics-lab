@@ -1,0 +1,19 @@
+{
+  "lifetime_provider_calls": 428,
+  "settled_calls": 425,
+  "historical_failed_reserved_calls": 3,
+  "settled_api_usd": 0.01662045,
+  "unresolved_reservations_usd": 0.004032,
+  "committed_api_usd": 0.02065245,
+  "rd4_new_provider_calls": 227,
+  "rd4_settled_api_usd": 0.00922278,
+  "rd4_worker_transport_failures_not_dispatched": 11,
+  "lifetime_call_cap": 500,
+  "rd4_lifetime_stop": 481,
+  "api_cap_usd": 1,
+  "infrastructure_cap_usd": 1,
+  "total_cap_usd": 2,
+  "new_machines_purchased_rd4": 0,
+  "existing_fleet_compute_invoice": "unavailable; no claim of zero operating cost",
+  "historical_wrong_account_compute_estimate_usd": 0.011643
+}

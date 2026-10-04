@@ -1,0 +1,9 @@
+{
+  "experiment": "right-dissenter-rd4",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/96d9943e09085a828b7ea6f15d8191f43040aeb3/researchers/vishesh/notes/dissent/rd4/C2-PLAN.md",
+  "commit": "96d9943e09085a828b7ea6f15d8191f43040aeb3",
+  "plan_sha256": "0697d5f4fae98b3a5cf7734fb87757fe793c02578a5e8567adcc88678cab5008",
+  "registered_tldr": "TLDR: Complete only the 38 remaining RD4 trajectories (152 decisions) after verifying the actual loopback relay before every trajectory. Preserve all 424 prefix decisions and all failures; no model request retried. Same original/symmetric/always-check contrasts and 576-decision denominator; authored synthetic templates limit inference.",
+  "run_tldr": "TLDR: S4-C2 completes only the 38 remaining trajectories, 152 decisions, after an end-to-end relay health probe before each trajectory. Preserve all 424 previous decisions and failures, with no retries. Same qualified core, six policies and 576-decision denominator; report infrastructure failure bounds and finite-template limits.",
+  "checked_utc": "2026-10-04T06:16:11.170324+00:00"
+}

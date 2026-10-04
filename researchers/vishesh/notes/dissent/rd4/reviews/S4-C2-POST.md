@@ -1,0 +1,11 @@
+# S4 C2 closeout assessment
+
+Retrospective, 2026-10-04. C2 completed all 38 remaining trajectories, 152/152 assigned decisions. It made 56 new provider requests, all valid, costing $0.002349438; 72 logical requests used the shared response cache. No inherited request was retried, no parent record changed, and no model criterion or qualified core changed. Native segment elapsed 44.249751505 seconds; this excludes preparation, reporting and artifact transfer.
+
+The end-to-end non-inference relay probe passed before dispatch and at each trajectory boundary. `health_stopped` is false; supervisor receipt recorded the worker's zero exit while relay and tunnel were alive, then cleaned both transports. There were no new failed requests. Source: `11244f8050b09830b659e9ce240b479e85f7f052`.
+
+Qualified core SHA256: `bc0a79cd2f90fb13262a2b625a2e029fc0c01e7b7e51d7870c7550e0fb3dea72`. The prospective [C2 plan](../C2-PLAN.md), pre-assessment and public receipt preceded dispatch. The qualified decision instrument remained unchanged; only the external continuation/readiness wrapper changed after its prospective plan. Eight continuation tests passed; a preparation helper's static message incorrectly printed six, so the actual suite result is authoritative.
+
+Combined S4 has 576/576 decisions and retains all 11 earlier worker transport/stop records. Separate same-author replay reproduced all records exactly without inference. Original and symmetric score 87/96, always-check 88/96; interruption sensitivity intervals overlap. No favorable-ranking conclusion is claimed. The negated alarm's native unresolved decisions and two-check exhaustion remain a substantive open finding, not an execution bug silently repaired after observation.
+
+All four attempts' hub artifacts were downloaded and hash-matched before release; no remote experiment workers remained. The borrowed machine was released, not destroyed. The final raw figure and sampled replay frames matched the saved records. A report derivative corrects the raw replay's overbroad caption about repeats: only resolved closures guarantee no extra check. It also adds explicitly retrospective failure examples, preserving raw visuals. See [report](../REPORT.md), [coverage](../PLAN-COVERAGE.md) and [closeout](../CLOSEOUT.md).

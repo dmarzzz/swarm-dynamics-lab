@@ -1,0 +1,319 @@
+{
+  "exact_replay_rows": 576,
+  "all_match": true,
+  "independent_author": false,
+  "native_calls": 0,
+  "logical_calls": 279,
+  "source_cache_requests": 214,
+  "by_domain_and_regime": {
+    "majority": {
+      "bridge": {
+        "assigned": 32,
+        "correct": 20,
+        "checks": 0
+      },
+      "build": {
+        "assigned": 32,
+        "correct": 20,
+        "checks": 0
+      },
+      "alarm": {
+        "assigned": 32,
+        "correct": 20,
+        "checks": 0
+      },
+      "supported": {
+        "assigned": 24,
+        "correct": 6,
+        "checks": 0
+      },
+      "withdrawn": {
+        "assigned": 24,
+        "correct": 18,
+        "checks": 0
+      },
+      "wrong_scope": {
+        "assigned": 24,
+        "correct": 18,
+        "checks": 0
+      },
+      "absent": {
+        "assigned": 24,
+        "correct": 18,
+        "checks": 0
+      }
+    },
+    "original-gate": {
+      "bridge": {
+        "assigned": 32,
+        "correct": 32,
+        "checks": 12
+      },
+      "build": {
+        "assigned": 32,
+        "correct": 32,
+        "checks": 12
+      },
+      "alarm": {
+        "assigned": 32,
+        "correct": 23,
+        "checks": 9
+      },
+      "supported": {
+        "assigned": 24,
+        "correct": 23,
+        "checks": 11
+      },
+      "withdrawn": {
+        "assigned": 24,
+        "correct": 16,
+        "checks": 10
+      },
+      "wrong_scope": {
+        "assigned": 24,
+        "correct": 24,
+        "checks": 6
+      },
+      "absent": {
+        "assigned": 24,
+        "correct": 24,
+        "checks": 6
+      }
+    },
+    "symmetric-gate": {
+      "bridge": {
+        "assigned": 32,
+        "correct": 32,
+        "checks": 12
+      },
+      "build": {
+        "assigned": 32,
+        "correct": 31,
+        "checks": 12
+      },
+      "alarm": {
+        "assigned": 32,
+        "correct": 24,
+        "checks": 9
+      },
+      "supported": {
+        "assigned": 24,
+        "correct": 22,
+        "checks": 11
+      },
+      "withdrawn": {
+        "assigned": 24,
+        "correct": 17,
+        "checks": 10
+      },
+      "wrong_scope": {
+        "assigned": 24,
+        "correct": 24,
+        "checks": 6
+      },
+      "absent": {
+        "assigned": 24,
+        "correct": 24,
+        "checks": 6
+      }
+    },
+    "always-check": {
+      "bridge": {
+        "assigned": 32,
+        "correct": 32,
+        "checks": 12
+      },
+      "build": {
+        "assigned": 32,
+        "correct": 32,
+        "checks": 12
+      },
+      "alarm": {
+        "assigned": 32,
+        "correct": 24,
+        "checks": 12
+      },
+      "supported": {
+        "assigned": 24,
+        "correct": 24,
+        "checks": 12
+      },
+      "withdrawn": {
+        "assigned": 24,
+        "correct": 16,
+        "checks": 12
+      },
+      "wrong_scope": {
+        "assigned": 24,
+        "correct": 24,
+        "checks": 6
+      },
+      "absent": {
+        "assigned": 24,
+        "correct": 24,
+        "checks": 6
+      }
+    },
+    "pooled": {
+      "bridge": {
+        "assigned": 32,
+        "correct": 21,
+        "checks": 0
+      },
+      "build": {
+        "assigned": 32,
+        "correct": 17,
+        "checks": 0
+      },
+      "alarm": {
+        "assigned": 32,
+        "correct": 21,
+        "checks": 0
+      },
+      "supported": {
+        "assigned": 24,
+        "correct": 17,
+        "checks": 0
+      },
+      "withdrawn": {
+        "assigned": 24,
+        "correct": 6,
+        "checks": 0
+      },
+      "wrong_scope": {
+        "assigned": 24,
+        "correct": 12,
+        "checks": 0
+      },
+      "absent": {
+        "assigned": 24,
+        "correct": 24,
+        "checks": 0
+      }
+    },
+    "exact-reference": {
+      "bridge": {
+        "assigned": 32,
+        "correct": 32,
+        "checks": 12
+      },
+      "build": {
+        "assigned": 32,
+        "correct": 32,
+        "checks": 12
+      },
+      "alarm": {
+        "assigned": 32,
+        "correct": 32,
+        "checks": 12
+      },
+      "supported": {
+        "assigned": 24,
+        "correct": 24,
+        "checks": 12
+      },
+      "withdrawn": {
+        "assigned": 24,
+        "correct": 24,
+        "checks": 12
+      },
+      "wrong_scope": {
+        "assigned": 24,
+        "correct": 24,
+        "checks": 6
+      },
+      "absent": {
+        "assigned": 24,
+        "correct": 24,
+        "checks": 6
+      }
+    }
+  },
+  "failed_request_usage": {
+    "2e3a6e223e1fb4e7416b6b7dfc356bd7b9426b90d42acb902a847b0486abe29d": [
+      {
+        "case_id": "294ed0f1b3dc",
+        "arm": "pooled",
+        "epoch": 3
+      }
+    ],
+    "1b973b9052801174c4fd335b6606d319da770ebe0722bea538f901a15aa8b896": [
+      {
+        "case_id": "13e56b8640a7",
+        "arm": "original-gate",
+        "epoch": 0
+      }
+    ],
+    "8bc2c2aea1712e6e9b390675338af8dc9be54996be42de14bf910469f82ffec7": [
+      {
+        "case_id": "13e56b8640a7",
+        "arm": "original-gate",
+        "epoch": 1
+      }
+    ],
+    "bae3629a0b3af8490f5f7d7370fe331903265a513e583409c8c1d25bc0b91837": [
+      {
+        "case_id": "13e56b8640a7",
+        "arm": "original-gate",
+        "epoch": 2
+      }
+    ],
+    "fe20ae8f2b980d3fe0a46fd12e66c45332371c949f28aff3672720cfba17414d": [
+      {
+        "case_id": "13e56b8640a7",
+        "arm": "original-gate",
+        "epoch": 3
+      }
+    ],
+    "139fb3c2851ff8034cd11d66c2ba7c2e5daf94fd336568375d0765689dc31cd0": [
+      {
+        "case_id": "13e56b8640a7",
+        "arm": "symmetric-gate",
+        "epoch": 0
+      }
+    ],
+    "f4c92e7f27d8be53f788347e45ec1d46f90231c21f1a1fb8f8b6f23abb0de62f": [
+      {
+        "case_id": "13e56b8640a7",
+        "arm": "symmetric-gate",
+        "epoch": 1
+      }
+    ],
+    "ed0db3a05f728878107bdae32c3fbc8aa4d885d44351da3fc48e632517764d22": [
+      {
+        "case_id": "13e56b8640a7",
+        "arm": "symmetric-gate",
+        "epoch": 2
+      }
+    ],
+    "3c728e5fcb536fed119f580c25f8cd4eac225eac3a81499936384ed891ee4482": [
+      {
+        "case_id": "13e56b8640a7",
+        "arm": "symmetric-gate",
+        "epoch": 3
+      }
+    ],
+    "64706e93220baaaf6ed78f14221a1cdd354fe903f3b86d3c3dd92a98ebb20df0": [
+      {
+        "case_id": "13e56b8640a7",
+        "arm": "always-check",
+        "epoch": 0
+      }
+    ],
+    "e6dab863d8cab28c893ce6492b122a6f0c1265881d0fd2c4d62f8185df0da223": [
+      {
+        "case_id": "13e56b8640a7",
+        "arm": "always-check",
+        "epoch": 1
+      }
+    ]
+  },
+  "repeat_checks": {
+    "majority": 0,
+    "original-gate": 1,
+    "symmetric-gate": 2,
+    "always-check": 2,
+    "pooled": 0,
+    "exact-reference": 0
+  }
+}

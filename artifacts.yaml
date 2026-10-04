@@ -1699,4 +1699,68 @@ artifacts:
           - data/influence-native/native-D3-01/outcomes.json
           - data/influence-native/native-D3-01/summary.json
         commit: 8087faf9fd3399c30774ad71e8f95dcdaa576215-dirty
+  - id: right-dissenter-rd4-q4
+    category: content
+    type: figure
+    title: Right Dissenter RD4 qualification
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-rd4-q4/right-dissenter-rd4-q4-v1.png
+        built_at: '2026-10-04T06:25:00Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Improve the design, evaluate against the plan, and resolve gaps identified in previous runs.
+        ingredients:
+          - researchers/vishesh/notes/dissent/src/rd4_render.py
+          - researchers/vishesh/notes/dissent/src/live_render.py
+          - researchers/vishesh/notes/dissent/rd4/results/q4-a1/summary.json
+          - researchers/vishesh/notes/dissent/rd4/results/q4-a1/records.json
+        commit: 2d85cdfbbc6ffc782a2b98ce92e293652ea9c2e5-dirty
+  - id: right-dissenter-rd4-results
+    category: content
+    type: figure
+    title: Right Dissenter RD4 fixed-cohort results and failure sensitivity
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-rd4-results/right-dissenter-rd4-results-v1.png
+        built_at: '2026-10-04T06:25:14Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Make the results more practical, robust, compelling, and interesting.
+        ingredients:
+          - researchers/vishesh/notes/dissent/rd4/render_report.py
+          - researchers/vishesh/notes/dissent/rd4/analyze_saved.py
+          - researchers/vishesh/notes/dissent/src/rd4_render.py
+          - researchers/vishesh/notes/dissent/src/live_render.py
+          - researchers/vishesh/notes/dissent/rd4/continuation.py
+          - researchers/vishesh/notes/dissent/rd4/results/combined/records.json
+          - researchers/vishesh/notes/dissent/rd4/results/combined/summary.json
+          - researchers/vishesh/notes/dissent/rd4/results/combined/analysis.json
+          - https://swarm-live.pages.dev/api/a/right-dissenter-rd4/s4-c2/combined-final_frame.png
+        commit: 2d85cdfbbc6ffc782a2b98ce92e293652ea9c2e5-dirty
+  - id: right-dissenter-rd4-replay
+    category: content
+    type: film
+    title: Right Dissenter RD4 measured replay including preserved failures
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-rd4-replay/right-dissenter-rd4-replay-v1.mp4
+        built_at: '2026-10-04T06:25:15Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Evaluate against the plan and resolve any gaps or failures identified in previous runs.
+        ingredients:
+          - researchers/vishesh/notes/dissent/rd4/render_report.py
+          - researchers/vishesh/notes/dissent/src/live_render.py
+          - researchers/vishesh/notes/dissent/visualization/export_measured.py
+          - researchers/vishesh/notes/dissent/rd4/results/combined/records.json
+          - researchers/vishesh/notes/dissent/rd4/results/combined/summary.json
+          - /private/tmp/rd4-report-visuals/replay.gif
+        commit: 2d85cdfbbc6ffc782a2b98ce92e293652ea9c2e5-dirty
 requires: '1.2'
