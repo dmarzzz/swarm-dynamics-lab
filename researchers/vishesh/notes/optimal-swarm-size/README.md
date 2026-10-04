@@ -3,6 +3,8 @@
 Author: vishesh/codex-idea-scores. Updated 2026-10-04 UTC.
 Status: **user-requested exploratory design draft, not a registered hypothesis or approved protocol**. Extends [EX-25](https://swarm-research.pages.dev/#/contributions?q=EX-25). No experimental implementation, model calls, machine provisioning or runs accompany this document. [design.json](design.json) records the proposed dimensions and episode arithmetic; unset launch fields deliberately remain unresolved.
 
+The [protocol refinement](PROTOCOL.md) specifies proposed coordination, atomic budget admission, disjoint selector fitting/validation, fresh timed policy trials and the replay design. Its additional policy trials revise the planning maximum to 2,512 core episodes (3,792 with the optional extension).
+
 ## Question and decision
 
 Given a task and a specified solution method, how many agents should an operator launch under a deadline, spending cap, memory limits and available hardware? Can a rule using information available before launch make that choice better than always choosing one size?
@@ -70,7 +72,7 @@ Choose D0 from a predeclared development N=1 latency quantile, and B0 from a pre
 
 ## Comparators and sizing rule
 
-Every sweep includes N=1 and all fixed grid sizes. Use these observations to compare:
+Every sweep includes N=1 and all fixed grid sizes. Use the sweep to map outcomes and separately execute the four deployable policy arms below on locked transfer roots, charging their selection overhead. Compare:
 
 1. Always N=1.
 2. The best single fixed N selected from development data only.
@@ -90,9 +92,10 @@ Compare each policy on the same paired root set. A deployable selector must retu
 | Qualification | 2 development families × 2 structures × 5 N × 4 roots × 1 model sample, P0 only. | 80 | Confirm a meaningful quality range and metering; choose a pinned model and freeze calibration rules. |
 | Core map | 2 development families × 2 structures × 4 core profiles × 5 N × 8 roots × 2 samples. | 1,280 | Exploratory response map; use disjoint development/validation roots for selector tuning. |
 | Locked transfer | 1 held-out family × 2 structures × 4 core profiles × 5 N × 8 roots × 2 samples. | 640 | Test frozen sizing rule on an unseen family; also report within-family held-out-root validation. |
+| Locked policy evaluation | 1 held-out family × 2 structures × 4 core profiles × 4 policies × 8 roots × 2 samples. | 512 | Fresh executions charging selection/admission time and cost; transfer sweep remains sealed until completion. |
 | Optional memory/hardware extension | 2 development families × 2 structures × 4 extra profiles × 5 N × 8 roots × 2 samples. | 1,280 | Separate launch decision after a measurable runtime and cost quote exist. |
 
-Qualification + core + transfer = **2,000 episodes**; including the optional extension = **3,280**. These are planning maxima, not authorized spending or a powered confirmatory design. One episode can contain many model invocations. Eight roots per structural cell cannot establish fine-grained optimality or resolve a five-percentage-point tolerance reliably. If uncertainty is broad, report it; do not crown a winner. A confirmatory follow-up needs power/precision planning using pilot variability, a frozen effect size and independent roots.
+Qualification + core + transfer map + transfer policy evaluation = **2,512 episodes**; including the optional extension = **3,792**. These are planning maxima, not authorized spending or a powered confirmatory design. One episode can contain many model invocations. Eight roots per structural cell cannot establish fine-grained optimality or resolve a five-percentage-point tolerance reliably. If uncertainty is broad, report it; do not crown a winner. A confirmatory follow-up needs power/precision planning using pilot variability, a frozen effect size and independent roots.
 
 Before launching any stage, compute its token/call/dollar upper bound including coordinator, retries, evaluation and selection; price the actual pinned model/version, and reserve a shared experiment-level budget. Specify per-episode and stage stop limits. No automatic retries beyond a predeclared capped provider policy; all attempts are retained and charged. An optional equal-per-agent-budget arm must be separately labeled and budgeted because it gives larger swarms more resources.
 

@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-idea-scores
 tool: codex
-state: done  # working | idle | blocked | done
-task: design-conditional-swarm-size
-doing: Completed the EX-25 resource-constrained swarm-size design draft
+state: working  # working | idle | blocked | done
+task: refine-swarm-size-protocol
+doing: Refining EX-25 coordination, overhead accounting and timed policy evaluation
 updated: 2026-10-04T02:50Z
 ---
 
