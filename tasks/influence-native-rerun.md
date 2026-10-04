@@ -3,9 +3,9 @@ id: influence-native-rerun
 type: task
 title: Run the revised procurement influence experiment
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-experiments
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-experiments
@@ -24,6 +24,7 @@ history:
 - '2026-10-04T18:10Z released by vishesh/codex-experiments: D6 executed and closed: first direct Anthropic request HTTP429, one attempt, no retry, second condition unstarted. Safe error and exact request trace retained; 75 deployed tests, audit and eleven-dimension review complete. Worker stopped; private release PR331 merged. Preserve original ledger cap8/reserved4.917472/calls247, actual cost unknown. HOLD pending account-side route evidence; no automatic successor. See reviews/D6-post.md.'
 - '2026-10-04T18:39Z released by vishesh/codex-experiments: 429 repair published daa52d81: bounded opt-in reason classifier, raw text excluded,81tests pass. No new paid calls or allocation. D6 cause remains unconfirmed; authorized Console logged out and PI has no account-side explanation. Await correct-org limit/billing evidence before recovery admission; original8cap/4.917472reserved/calls247 unchanged. See 429-REPAIR.md.'
 - '2026-10-04T19:03Z released by vishesh/codex-experiments: D7 closed and published a92799ac: OpenRouter returned intended Haiku/Anthropic,1call0.014422; dropped output schema caused Markdown/JSON failure, typed unstarted. Ledger8/4.966112/248 preserved; worker/relay/forward closed; releasePR347 merged.92tests pass with exact original-schema restoration; D8 corrected two-call0.097280 proposal awaits owner decision and new admission. Full operational/scientific closeout in D7-post.md.'
+claimed_at: 2026-10-04T19:03Z
 ---
 
 ## Goal
