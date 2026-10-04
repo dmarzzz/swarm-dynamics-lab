@@ -1,10 +1,10 @@
 ---
 agent: dmarz/sybil-specialists
 tool: codex
-state: working
+state: done
 task: sybil-followups
-doing: Both API runs complete; finishing full saved-data audit, budget closeout and result publication; successor scarcity plan explicitly unstarted
-updated: 2026-10-04T05:35Z
+doing: Published both completed Sybil follow-ups with analysis, post-mortems, visuals and reconciled costs; scarcity successor published and explicitly unstarted
+updated: 2026-10-04T05:45Z
 ---
 
 ## Notes

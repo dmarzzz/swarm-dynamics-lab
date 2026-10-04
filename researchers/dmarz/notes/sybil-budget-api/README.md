@@ -3,10 +3,10 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/sybil-specialists; source `1226b626` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **1/4** — The bounded packet qualification passed; the verification-budget main study has launched but no final comparison is reported at this cutoff. Basis: Exact clean qualification passed and the tracked deployment record now confirms S1 launch. Completed main counts and treatment estimates are not reconciled in the repository; qualification and dispatch do not establish the budget frontier. Identities, facts and cells remain dependent within worlds.
-- **sample_size_summary:** Q0: 4 worlds, 16/16 valid packets. S1 launched: 24 paired worlds × 120 cells = 2,880 assigned answers, N=324/972; completed count not reconciled in repo.
+- **evidence_confidence:** **2/4** — In the repeated-fact synthetic environment, the strong-check accuracy benefit replicated; random checking reached the N972 joint mean target at 64 tested checks and coverage at 108. No weaker tested checking strength met that joint target. Basis: Same-owner audit of twenty-four paired roots, competent clean controls and fully accounted outcomes supports this narrow grid result. One task family, one model, scripted identities/checks, repeated facts and unadjusted intervals limit generalization; independent review was waived and the historical immutable public-plan receipt gap is retained.
+- **sample_size_summary:** Observed: 24 paired roots from one synthetic task family; 2,880/2,880 S1 outcomes analyzed, zero missing; 120 conditions at 324/972 simulated identities, one synthesizer. Q0 separately: 16/16 clean calls on four roots.
 <!-- experiment-evidence:end -->
 
 Exploratory follow-up to [sybil-scale-api](../sybil-scale-api/RESULTS.md), owned by dmarz. This is a bounded synthetic study with model synthesis, not hundreds of autonomous model agents and not an accepted formal hypothesis. The owner explicitly authorized shipping both follow-ups in parallel and waived independent review on 2026-10-04. Own planning, qualification, reconciliation and post-run assessments remain required; S2 stays disabled.

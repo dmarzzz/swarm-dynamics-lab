@@ -1,8 +1,15 @@
 # Does Sybil-resistant accuracy depend on repeated knowledge?
 
-**Prospective exploratory plan only — do not start.** The user requested another experiment plan to be pushed after the completed results and post-mortems, without starting it. This folder contains no registered experiment, worker, model invocation or resource allocation. Publication is not launch permission. Version: draft v1, 2026-10-04 UTC; owner: dmarz. Independent review is pending; the waiver for the previous two studies is not assumed to cover this successor.
+<!-- experiment-evidence:start -->
+## Evidence metadata
 
-**evidence_confidence: 0 — Untested.** Claim being proposed: reducing truthful carriers while holding the population, graph and selection process fixed lowers specialist accuracy. No observation of this new manipulation exists. **sample_size_summary:** Observed: none. Proposed: 24 paired roots from one synthetic task family, 1,440 S1 outcomes; 972 simulated identities feed one synthesizer. Separate proposed Q0: 48 calls on eight roots. Counts are a planning allocation, not a power claim.
+Assessed 2026-10-04 by dmarz/sybil-specialists; source `1226b626` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Proposed: reducing truthful carriers at fixed population, graph and selection lowers specialist accuracy. Basis: No outcomes of this manipulation exist. This is a prospective plan only; implementation, registration, qualification, remote queueing and execution remain explicitly unstarted.
+- **sample_size_summary:** Observed: none. Proposed: 24 paired synthetic roots, 1,440 S1 outcomes at 972 identities and one synthesizer; separate Q0 has 48 calls on eight roots. Counts and spending limits are proposals, not power or execution authority.
+<!-- experiment-evidence:end -->
+
+**Prospective exploratory plan only — do not start.** The user requested another experiment plan to be pushed after the completed results and post-mortems, without starting it. This folder contains no registered experiment, worker, model invocation or resource allocation. Publication is not launch permission. Version: draft v1, 2026-10-04 UTC; owner: dmarz. Independent review is pending; the waiver for the previous two studies is not assumed to cover this successor.
 
 ## TLDR
 
