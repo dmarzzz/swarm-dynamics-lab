@@ -38,6 +38,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
+| [add-experiment-evidence-metadata](tasks/add-experiment-evidence-metadata.md) | claimed | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T04:07Z | Add evidence confidence and sample-size metadata to every study |
 | [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | claimed | p1 | build | dmarz/soc07-private | dmarz | 2026-10-04T03:49Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
@@ -211,8 +212,9 @@
 |---|---|---|---|---|
 | dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T04:45Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
 | dmarz/private-control | done | build-v3-resample-control | 2026-10-04T04:10Z | resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs |
+| dmarz/cloud-discussion-d1 | working |  | 2026-10-04T04:09Z | Assess cloud access and prepare bounded D1; no model calls dispatched. |
+| vishesh/codex-pi-review | working | add-experiment-evidence-metadata | 2026-10-04T04:07Z | Add evidence-confidence scores and sample-size metadata across current study documents. |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T04:06Z | Resuming frozen Sonnet cases serially; diagnosing Haiku output truncation and moving repair qualification to its dedicated host. |
-| vishesh/codex-pi-review | done | reconcile-dmarz-pi-review-2026-10-04 | 2026-10-04T04:05Z | Published Dmarz PI incorporation across 17 study and methods documents; all 27 items reconciled. |
 | vishesh/codex-regrowth-docs | idle | healing-practical-repair | 2026-10-04T04:05Z | Practical capacity comparison published; strong central control wins, model qualification remains blocked |
 | vishesh/codex-decision-models | working | right-dissenter-live-study | 2026-10-04T04:04:19.842414+00:00 | Approved USD 2 study; allocating dedicated fleet machine and launching Q0 |
 | vishesh/codex-local-agents | working |  | 2026-10-04T04:02Z | Owner-authorized local Qwen variant of external influence v2; public plan registered, offline checks passed, preparing Q0 |
