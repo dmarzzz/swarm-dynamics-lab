@@ -39,8 +39,14 @@ orp = provider
 D = study.design(); B = D['budget']; MAIN = D['layouts']['main']; ENG = D['layouts']['engineering']
 FROZEN = {  # a change here is a change of the instrument
     'main_layouts': '9a8ee6dfa6a6039d3cffdf016665da1a212c510943f1798a5764685287e589c5',
-    'system_prompt': 'f981dfe98990431b88ef0c4081c9c6a11d48401b20a1354aad99c1a4b6bbe992',
-    'first_main_request': 'e9f6de829af8f2c73aa730f5396ecc35c53a176a1f9f009752e0f09c755619d0'}
+    'system_prompt': 'a9da7293926b0d19d8c40dbc87c4faee6aa89f5e8e72445a76ff0620af0b3030',          # attempt 002
+    'first_main_request': 'de479f87d69738c6ebebef52457073cb3c917830f456147aaca8b2d90c23b560',    # attempt 002
+    # Digests of every request's text up to the ANSWER block, computed from the attempt-001 code at fa61358a:
+    # attempt 002 may differ from attempt 001 only in the system message and the ANSWER block.
+    'attempt_001_main_bodies': '39c3b371b1933047bf47620888b8f194b102139d24ca25360498122482b72014',
+    'attempt_001_set_a_bodies': 'ea9b48c4aee39ff9b8f1f81005f5e45f7cf49fd6aa04dd0343d332ae98f270e6',
+    'attempt_001_set_b_bodies': 'f8f432f78736e05a28dad0f883bec8b34aeeb8793772a1ac49ac906c5ffc4abe',
+    'attempt_001_engineering_bodies': '778de439a5ea7f89237b66d5c4f0f71f095cf7712ba229f0f0725f4a20bbce65'}
 TEST_KEY = 'sk-or-selftest-SECRET-not-a-credential'
 PROGRAM_TEMPLATE = {'model': 'qwen/qwen3.7-flash',
                     'provider': {'only': ['alibaba'], 'allow_fallbacks': False, 'require_parameters': True},
@@ -175,7 +181,8 @@ class Instrument(unittest.TestCase):
                                       'backoff_seconds': [2, 6], 'retry_after_cap_seconds': 20})
         self.assertEqual((B['billing_outage']['retry_every_seconds'], B['billing_outage']['max_wait_seconds']), (60, 1200))
         self.assertGreaterEqual(B['max_transport_attempts'], B['max_attempted_calls'] + 40)
-        self.assertEqual(B['reservation_margin'], 10); self.assertEqual(B['max_attempted_calls'], 600 + 24)     # one repair attempt's 24 qualification calls
+        self.assertEqual(B['reservation_margin'], 10); self.assertEqual(B['max_attempted_calls'], 600)          # attempt 002 is the repair; none remains
+        self.assertEqual((D['attempt'], D['qualification']['set'], D['qualification']['repairs_allowed'], B['max_visible_chars']), ('002', 'b', 0, 4000))
 
     def test_score_reproduces_the_pc5_rule_at_its_two_conditions_and_generalizes(self):
         w = sim.layout(ENG[0]); rc, uc = w['report_cell'], w['unknown_cell']
@@ -217,17 +224,17 @@ class Instrument(unittest.TestCase):
 
     def test_reservation_leaves_a_wide_margin_and_the_cap_holds_every_call_at_its_full_reservation(self):
         """Per call the adapter reserves 10 times the snapshot-price bound (request bytes as input tokens plus the full
-        1,000-token output limit). The expected cost at the planning ratio (2.5 characters per token) and 20 output
-        tokens is far smaller, so a provider-reported cost well above the snapshot does not breach the reservation."""
+        1,000-token output limit). The expected cost at the planning ratio (2.5 characters per token) and a few dozen output
+        tokens (80 here) is far smaller, so a provider-reported cost well above the snapshot does not breach the reservation."""
         largest = 0
         for stage in ('P0', 'Q0', 'S1'):
             for a in study.assignments(stage):
                 body = dict(D['request_template'], messages=[{'role': 'system', 'content': study.SYSTEM}, {'role': 'user', 'content': study.user_for(a)}])
                 size = len(json.dumps(body).encode())
                 reserve = (size * B['input_usd_per_million'] + B['max_output_tokens'] * B['output_usd_per_million']) * B['reservation_margin']
-                expected = a['content_bytes'] / study.CHARS_PER_TOKEN_FLOOR * B['input_usd_per_million'] + 20 * B['output_usd_per_million']
-                self.assertGreater(reserve, 70 * expected); largest = max(largest, reserve)        # millionths of a dollar
-        self.assertLess(largest, 2000)                                                           # under USD 0.002 per call
+                expected = a['content_bytes'] / study.CHARS_PER_TOKEN_FLOOR * B['input_usd_per_million'] + 80 * B['output_usd_per_million']
+                self.assertGreater(reserve, 50 * expected); largest = max(largest, reserve)        # millionths of a dollar
+        self.assertLess(largest, 2200)                                                           # about USD 0.002 per call
         self.assertLess(B['max_attempted_calls'] * largest / 1e6, B['aggregate_usd'])            # all 624 calls at their full reservation fit under the cap
         self.assertLess(B['workers'] * largest / 1e6, 0.01)                                      # at most four reservations are open at once
 
@@ -260,8 +267,9 @@ class Instrument(unittest.TestCase):
                 w = study.layout(a['layout']); text = study.user_for(a)
                 self.assertEqual(sorted(a['legal_cells']), sorted([w['report_cell'], w['unknown_cell']])); self.assertEqual(len(set(a['legal_cells'])), 2)
                 for cell in a['legal_cells']:
-                    self.assertEqual(study.validate({'inspect': cell}, a['legal_cells']), {'inspect': cell})
-                    self.assertIn(f'{{"inspect": "{cell}"}}', text)
+                    self.assertEqual(study.validate({'inspect': cell}, a['legal_cells'])['inspect'], cell)
+                self.assertTrue(text.endswith(f'{{"cost_if_inspect": {{"{a["legal_cells"][0]}": <number>, "{a["legal_cells"][1]}": <number>}}, "inspect": "<cell>"}} '
+                                              f'where <cell> is {a["legal_cells"][0]} or {a["legal_cells"][1]}.'))
                 self.assertEqual({sim.action_of(w, c) for c in a['legal_cells']}, {'check', 'explore'})
 
     def test_the_two_representations_hold_exactly_the_same_facts_and_nothing_more(self):
@@ -334,13 +342,96 @@ class Instrument(unittest.TestCase):
         self.assertEqual(sorted(combos.values()), [6, 6, 6, 6])
         self.assertEqual(len({(study.layout(s)['legal_order'][0] == study.layout(s)['report_cell'], study.layout(s)['report_label']) for s in ENG}), 4)
 
-    def test_local_validation_is_strict(self):
+    def test_attempt_002_changes_only_the_system_message_and_the_answer_block(self):
+        body = lambda a: study.user_for(a).split(study.BLOCK_END)[0]
+        by_id = lambda rows, cut=0: study.digest([[a['id'][cut:], body(a)] for a in sorted(rows, key=lambda a: a['id'])])
+        self.assertEqual(by_id(study.assignments('S1')), FROZEN['attempt_001_main_bodies'])
+        self.assertEqual(by_id(study.fixtures('a'), 3), FROZEN['attempt_001_set_a_bodies'])
+        self.assertEqual(by_id(study.fixtures('b'), 3), FROZEN['attempt_001_set_b_bodies'])      # set b is exactly what attempt 001 froze
+        self.assertEqual(by_id(study.grid('engineering')), FROZEN['attempt_001_engineering_bodies'])
+        a = study.assignments('S1')[0]; first, second = a['legal_cells']; tail = study.user_for(a).split(study.BLOCK_END)[1]
+        self.assertEqual(tail, 'First write the expected total cost of the final map for each allowed action, then your choice. Reply with one JSON object '
+                               f'of exactly this form: {{"cost_if_inspect": {{"{first}": <number>, "{second}": <number>}}, "inspect": "<cell>"}} where <cell> is {first} or {second}.')
+        self.assertLess(study.SYSTEM.index('cost_if_inspect'), study.SYSTEM.index('"inspect"'))          # keys in that order in the instruction
+        self.assertIn('Before choosing, write the expected total cost of the final map for each of the two allowed actions, then choose.', study.SYSTEM)
+        self.assertEqual(D['request_template']['reasoning'], {'enabled': False}); self.assertEqual(D['request_template']['max_tokens'], 1000)
+        self.assertEqual(D['qualification']['fixtures_b'][0], [0.92, 0.08]); self.assertEqual(D['layouts']['qualification_b'], list(range(2900, 2912)))
+        self.assertEqual((D['qualification']['valid_required'], D['qualification']['optimal_required_per_format'], D['qualification']['min_margin']), (24, 11, 0.6))
+
+    def one_call(self, a, text):
+        """The returned text through the adapter and the local validation, as in a paid stage."""
+        with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, {provider.KEY_ENV: TEST_KEY}):
+            def opener(request, timeout):
+                return rehearse.Response(json.dumps({'id': 'gen-1', 'model': D['canonical_model'], 'provider': 'Alibaba',
+                    'choices': [{'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': text}}],
+                    'usage': {'prompt_tokens': 700, 'completion_tokens': 40}}).encode())
+            api = provider.OpenRouter(provider.Ledger(Path(td) / 'l.jsonl', B), study.provider_config(), opener)
+            return api.call(study.SYSTEM, study.user_for(a), 'q0-002:' + a['id'], lambda obj: study.validate(obj, a['legal_cells']))
+
+    def test_every_tolerated_variant_of_a_correct_answer_is_valid_and_graded(self):
+        seen = set()
+        for a in study.fixtures('b')[:4] + study.assignments('S1')[:4]:
+            correct = study.scripted_answer('optimal', a); self.assertEqual(rehearse.reference_answer(study.user_for(a), 'optimal'), correct)
+            for name, text in rehearse.tolerated_variants(correct):
+                answer, account = self.one_call(a, text); grade = study.evaluate(a, answer['inspect'], answer); w = answer['work']; seen.add(name)
+                self.assertEqual(answer['inspect'], correct['inspect'], name); self.assertTrue(grade['optimal'], name); self.assertEqual(grade['expected_regret'], 0)
+                malformed = name in ('cost_object_missing', 'cost_object_partial', 'cost_not_numeric', 'cost_not_an_object')
+                self.assertEqual(w['work_malformed'], malformed, name); self.assertEqual(grade['work']['both_written'], not malformed, name)
+                self.assertEqual(grade['work']['both_correct'], not malformed and name != 'costs_as_integers', name)
+                self.assertFalse(grade['work']['contradicts_own_numbers'], name)
+                self.assertEqual(w['costs_as_strings'], name == 'costs_as_numeric_strings'); self.assertEqual(w['cost_keys_respaced'], name == 'cost_keys_with_spaces')
+                self.assertEqual(bool(w['extra_keys']), name == 'extra_keys'); self.assertEqual(bool(w['cost_extra_keys']), name == 'extra_keys')
+                self.assertEqual(w['cost_before_inspect'], None if name == 'cost_object_missing' else name != 'inspect_before_cost')
+                self.assertEqual(w['inspect_respaced'], name == 'inspect_with_spaces'); self.assertEqual(json.loads(answer['raw']), json.loads(text))
+                stored = json.loads(json.dumps(answer, sort_keys=True))                                    # as a saved row holds it (keys sorted)
+                self.assertEqual(study.validate(json.loads(stored['raw']), a['legal_cells']), answer)      # regrading from the saved object gives the same, key order included
+        self.assertEqual(len(seen), 13)
+
+    def test_every_invalid_form_fails_and_keeps_the_returned_text(self):
+        seen = set()
+        for a in study.fixtures('b')[:2] + study.assignments('S1')[:2]:
+            for name, text, category in rehearse.invalid_forms(study.scripted_answer('optimal', a)):
+                with self.assertRaises(provider.CallFailure) as cm: self.one_call(a, text)
+                self.assertEqual(cm.exception.category, category, name); self.assertEqual(cm.exception.accounting['answer_text'], text[:2000]); seen.add(name)
+        self.assertEqual(len(seen), 13)
         legal = ['3,3', '0,2']
-        self.assertEqual(study.validate({'inspect': '0,2'}, legal), {'inspect': '0,2'})
-        for bad in ({'inspect': '1,1'}, {'inspect': '3, 3'}, {'inspect': ' 3,3'}, {'inspect': [3, 3]}, {'inspect': None}, {'inspect': 33},
-                    {'inspect': '3,3', 'reason': 'x'}, {'Inspect': '3,3'}, {}, ['3,3'], '3,3', None, {'inspect': '3,3', 'inspect2': '0,2'},
-                    {'inspect': 'check'}, {'inspect': True}):
+        for bad in ({'inspect': '1,1'}, {'inspect': '33'}, {'inspect': 33}, {'inspect': True}, {'Inspect': '3,3'}, {}, ['3,3'], '3,3', None,
+                    {'cost_if_inspect': {'3,3': 0.1, '0,2': 0.2}}, {'inspect': '3,3 '.replace('3,3', '3;3')}, {'inspect': ''}):
             with self.assertRaises(ValueError): study.validate(bad, legal)
+        self.assertEqual(study.validate({'inspect': ' 3 ,3\n'}, legal)['inspect'], '3,3')
+        self.assertIsNone(study.number(True)); self.assertIsNone(study.number('nan')); self.assertIsNone(study.number('1e999')); self.assertIsNone(study.number([1]))
+        self.assertEqual((study.number('0.25'), study.number(1), study.number(' 0.5 ')), (0.25, 1.0, 0.5))
+
+    def test_written_costs_are_reported_and_never_gated(self):
+        a = next(x for x in study.assignments('S1') if (x['error'], x['unknown_cost']) == (0.8, 0.25)); w = study.layout(a['layout'])
+        rc, uc = w['report_cell'], w['unknown_cell']                                                    # checking costs 0.25, exploring 0.80
+        def graded(costs, pick):
+            answer = study.validate({'cost_if_inspect': costs, 'inspect': pick}, a['legal_cells']); return study.evaluate(a, answer['inspect'], answer)
+        right = graded({rc: 0.25, uc: 0.8}, rc)
+        self.assertEqual((right['optimal'], right['work']['both_correct'], right['work']['contradicts_own_numbers'], right['work']['own_numbers_favour']), (True, True, False, 'check'))
+        self.assertEqual((right['work']['abs_error_check'], right['work']['abs_error_explore']), (0.0, 0.0))
+        against = graded({rc: 0.25, uc: 0.8}, uc)                    # correct numbers, then the dearer action: wrong choice, and a contradiction
+        self.assertEqual((against['optimal'], against['expected_regret'], against['work']['contradicts_own_numbers']), (False, 0.55, True))
+        swapped = graded({rc: 0.8, uc: 0.25}, uc)                    # wrong numbers followed consistently: wrong choice, no contradiction
+        self.assertEqual((swapped['optimal'], swapped['work']['contradicts_own_numbers'], swapped['work']['both_correct']), (False, False, False))
+        self.assertAlmostEqual(swapped['work']['abs_error_check'], 0.55); self.assertAlmostEqual(swapped['work']['abs_error_explore'], 0.55)
+        lucky = graded({rc: 0.8, uc: 0.25}, rc)                      # wrong numbers, right choice: graded optimal all the same
+        self.assertEqual((lucky['optimal'], lucky['expected_regret'], lucky['work']['contradicts_own_numbers']), (True, 0, True))
+        tie = graded({rc: 0.5, uc: 0.5}, rc); self.assertEqual((tie['work']['own_numbers_favour'], tie['work']['contradicts_own_numbers']), ('tie', False))
+        none = graded({}, rc); self.assertEqual((none['optimal'], none['work']['both_written'], none['work']['contradicts_own_numbers']), (True, False, False))
+        rows = [dict(a, status='completed', answer=study.validate({'cost_if_inspect': c, 'inspect': p}, a['legal_cells'])) for c, p in
+                (({rc: 0.25, uc: 0.8}, rc), ({rc: 0.25, uc: 0.8}, uc), ({rc: 0.8, uc: 0.25}, uc), ({}, rc), ({rc: '0.25', uc: 0.75}, rc))]
+        for r in rows: r['evaluation'] = study.evaluate(a, r['answer']['inspect'], r['answer'])
+        s = analyze.work_summary(rows)
+        self.assertEqual((s['valid'], s['checked'], s['both_written'], s['work_malformed'], s['both_correct'], s['choice_contradicts_own_costs']), (5, 5, 4, 1, 2, 1))
+        self.assertAlmostEqual(s['mean_abs_error_check'], 0.55 / 4); self.assertAlmostEqual(s['mean_abs_error_explore'], (0.55 + 0.05) / 4)
+        self.assertEqual(s['tolerated']['costs_as_strings'], 1); self.assertEqual(s['own_costs_favour_the_optimum'], 3)
+        # the gate looks at `inspect` only: a set whose costs are all missing or wrong still passes when the choices are optimal
+        fx = study.policy_rows(study.fixtures('b'), 'optimal')
+        for r in fx:
+            r['answer'] = study.validate({'cost_if_inspect': {c: 9 for c in r['legal_cells']}, 'inspect': r['answer']['inspect']}, r['legal_cells'])
+            r['evaluation'] = study.evaluate(r, r['answer']['inspect'], r['answer'])
+        self.assertTrue(study.qualification(fx)['passed']); self.assertEqual(analyze.work_summary(fx)['both_correct'], 0)
 
     def test_stage_counts_caps_and_disjoint_splits(self):
         counts = {s: len(study.assignments(s)) for s in study.STAGES}
@@ -373,12 +464,13 @@ class Instrument(unittest.TestCase):
             self.assertEqual([study.evaluate(a, study.policy('optimal', a))['optimal_action'] for a in fx], ['check'] * 12 + ['explore'] * 12)
         pairs = lambda g: {(a['error'], a['unknown_cost']) for a in study.fixtures(g)}
         self.assertFalse(pairs('a') & pairs('b')); self.assertFalse({a['layout'] for a in study.fixtures('a')} & {a['layout'] for a in study.fixtures('b')})
-        self.assertEqual(study.active_set(), 'a'); self.assertEqual(q['repairs_allowed'], 1)
-        self.assertEqual(study.assignments('P0')[0]['id'], study.fixtures('a')[0]['id'])
-        self.assertEqual([a['id'] for a in study.assignments('Q0')], [a['id'] for a in study.fixtures('a')[1:]])
+        self.assertEqual(study.active_set(), 'b'); self.assertEqual(q['repairs_allowed'], 0)
+        self.assertEqual(study.assignments('P0')[0]['id'], study.fixtures('b')[0]['id']); self.assertEqual(study.assignments('P0')[0]['id'], 'qb-2900-e92-u08-prose')
+        self.assertEqual([a['id'] for a in study.assignments('Q0')], [a['id'] for a in study.fixtures('b')[1:]])
+        self.assertFalse({a['layout'] for a in study.assignments('P0') + study.assignments('Q0')} & set(D['layouts']['qualification_a']))
 
     def test_qualification_gate_thresholds(self):
-        fx = lambda name='optimal', g='a': study.policy_rows(study.fixtures(g), name)
+        fx = lambda name='optimal', g='b': study.policy_rows(study.fixtures(g), name)
         ok = study.qualification(fx()); self.assertTrue(ok['passed']); self.assertEqual((ok['prose']['optimal'], ok['table']['optimal'], ok['valid']), (12, 12, 24))
         def miss(rows, rep, n):
             hit = 0
@@ -392,7 +484,7 @@ class Instrument(unittest.TestCase):
         two = study.qualification(miss(fx(), 'table', 2)); self.assertFalse(two['passed']); self.assertEqual(len(two['misses']), 2)
         invalid = fx(); invalid[5].update(status='failed'); self.assertFalse(study.qualification(invalid)['passed'])   # valid structure throughout
         self.assertFalse(study.qualification(fx()[:23])['passed']); self.assertFalse(study.qualification(fx() + fx()[:1])['passed'])
-        self.assertFalse(study.qualification(fx()[:12] + fx(g='b')[12:])['passed'])                  # one set only
+        self.assertFalse(study.qualification(fx()[:12] + fx(g='a')[12:])['passed'])                  # one set only
         for name in study.POLICIES[1:]:
             for g in ('a', 'b'):
                 r = study.qualification(fx(name, g)); self.assertFalse(r['passed']); self.assertEqual((r['prose']['optimal'], r['table']['optimal']), (6, 6))
@@ -436,7 +528,7 @@ class Instrument(unittest.TestCase):
         self.assertIn('order_and_label_not_balanced_over_main_layouts', with_design(lambda d: d['layouts'].update(main=list(range(3000, 3048, 2)))))
         self.assertIn('max_failed_rule', with_design(lambda d: d['budget'].update(max_failed=3)))
         self.assertIn('S1:call_cap_differs_from_assignments', with_design(lambda d: d['budget']['max_calls'].update(S1=600)))
-        self.assertIn('study_call_cap', with_design(lambda d: d['budget'].update(max_attempted_calls=600)))
+        self.assertIn('study_call_cap', with_design(lambda d: d['budget'].update(max_attempted_calls=624)))
         self.assertEqual(study.check_design(), [])
 
     def test_manifest_regenerates_identically(self):
@@ -445,7 +537,7 @@ class Instrument(unittest.TestCase):
         m = json.loads(fresh)
         self.assertEqual({s: (e['assignments'], e['max_calls']) for s, e in m['stages'].items()},
                          {'S0': (144, 0), 'P0': (1, 1), 'Q0': (23, 23), 'S1': (576, 576)})
-        self.assertEqual(m['stages']['S1']['distinct_inputs'], 576); self.assertEqual(m['qualification_set'], 'a')
+        self.assertEqual(m['stages']['S1']['distinct_inputs'], 576); self.assertEqual((m['qualification_set'], m['attempt']), ('b', '002'))
 
     def test_source_hash_covers_code_and_design_only(self):
         names = ['design.yaml', 'experiment.yaml', 'requirements.txt'] + sorted(p.name for p in (study.ROOT / 'src').glob('*.py'))
@@ -453,14 +545,14 @@ class Instrument(unittest.TestCase):
         want = study.digest([(n, hashlib.sha256((study.ROOT / ('src' if n.endswith('.py') else '') / n).read_bytes()).hexdigest()) for n in names])
         self.assertEqual(study.source_hash(), want)
         self.assertEqual({study.params(s)['backend'] for s in ('P0', 'Q0', 'S1')}, {'openrouter'}); self.assertEqual(study.params('S0')['backend'], 'scripted')
-        self.assertEqual([study.batch(s) for s in study.STAGES], ['s0-001', 'p0-001', 'q0-001', 's1-001'])
+        self.assertEqual([study.batch(s) for s in study.STAGES], ['s0-002', 'p0-002', 'q0-002', 's1-002'])
 
     def test_the_stub_derives_the_optimum_from_the_request_text_alone(self):
         for stage in study.STAGES:
             for a in study.assignments(stage):
                 text = study.user_for(a)
-                self.assertEqual(rehearse.reference_answer(text, 'optimal'), {'inspect': study.policy('optimal', a)})
-                self.assertEqual(rehearse.reference_answer(text, 'always_first'), {'inspect': a['legal_cells'][0]})
+                self.assertEqual(rehearse.reference_answer(text, 'optimal'), study.scripted_answer('optimal', a))     # both costs and the choice
+                self.assertEqual(rehearse.reference_answer(text, 'always_first')['inspect'], a['legal_cells'][0])
 
 
 class Analysis(unittest.TestCase):
@@ -535,9 +627,9 @@ class Analysis(unittest.TestCase):
 
     def test_combine_replaces_only_units_left_not_started(self):
         base = rows_for('S1')[:3]; base[1] = dict(base[1], status='not_started'); base[2] = dict(base[2], status='failed')
-        later = [dict(r, batch='s1-001-r1', status='completed') for r in rows_for('S1')[:3]]
+        later = [dict(r, batch='s1-002-r1', status='completed') for r in rows_for('S1')[:3]]
         final = study.combine(base + later)
-        self.assertEqual([r.get('batch') for r in final], [None, 's1-001-r1', None]); self.assertEqual([r['status'] for r in final], ['completed', 'completed', 'failed'])
+        self.assertEqual([r.get('batch') for r in final], [None, 's1-002-r1', None]); self.assertEqual([r['status'] for r in final], ['completed', 'completed', 'failed'])
         self.assertEqual(worker.voided_reservations([dict(base[1], accounting={'attempted': True, 'voided': True}), dict(base[1], accounting={'attempted': False}), base[0]]), 1)
         self.assertEqual(worker.totals([dict(base[1], accounting={'attempted': True, 'voided': True, 'attempts': 21}), dict(base[0], accounting={'attempted': True, 'attempts': 1})], 2)['model_calls'], 1)
 
@@ -595,7 +687,7 @@ class Stage(Env):
         def unnamed(n, payload): payload.pop('provider'); return payload
         def twice(n, payload):
             cell = json.loads(payload['choices'][0]['message']['content'])['inspect']
-            payload['choices'][0]['message']['content'] = '{"inspect": "%s", "inspect": "%s"}' % (cell, cell); return payload
+            payload['choices'][0]['message']['content'] = '{"cost_if_inspect": {}, "inspect": "%s", "inspect": "%s"}' % (cell, cell); return payload
         for mutate, category in ((reasoning, 'unexpected_reasoning_tokens'), (other_model, 'model_mismatch'), (other_provider, 'provider_mismatch'),
                                  (unnamed, 'provider_missing'), (twice, 'invalid_json'),
                                  (cut, 'truncated_output'), (prose, 'invalid_json'), (no_usage, 'missing_usage')):
@@ -619,6 +711,11 @@ class Stage(Env):
     def test_qualification_gate_uses_all_24_rows_and_a_failed_gate_reports_the_misses(self):
         summary, reason, rows, out = self.stage('Q0', rehearse.Stub('optimal'))
         self.assertIsNone(reason); q = summary['qualification']; self.assertEqual((q['assigned'], q['valid'], q['prose']['optimal'], q['table']['optimal']), (24, 24, 12, 12))
+        self.assertEqual({r['set'] for r in rows}, {'b'}); self.assertEqual(summary['work']['both_correct'], 23)
+        # a stub that mixes every tolerated variant of a correct answer passes the same gate; nothing is failed
+        summary, reason, rows, out = self.stage('Q0', rehearse.Stub('variants'), fresh_ledger=True)
+        self.assertIsNone(reason); self.assertEqual((summary['graded'], summary['failed'], summary['qualification_passed']), (23, 0, 1))
+        self.assertGreaterEqual(summary['work_malformed'], 4); self.assertEqual(summary['choice_contradicts_own_costs'], 0)
         summary, reason, rows, out = self.stage('Q0', rehearse.Stub('optimal'), fresh_ledger=True, probe_rows=None)
         self.assertEqual(reason, 'probe_row_unavailable')
         run = FakeRun('x/q0', study.params('Q0'))
@@ -632,12 +729,16 @@ class Stage(Env):
     def test_main_stage_continues_after_failed_calls_and_keeps_their_evidence(self):
         def bad(n, payload):
             if n == 5: payload['choices'][0]['message']['content'] = json.dumps({'inspect': '9,9'})
-            if n == 9: payload['choices'][0]['message']['content'] = json.dumps({'inspect': study.assignments('S1')[8]['legal_cells'][0], 'why': 'x'})
+            if n == 9:        # a harmless extra item: valid, graded and counted (the choice is kept as returned)
+                payload['choices'][0]['message']['content'] = json.dumps(dict(json.loads(payload['choices'][0]['message']['content']), why='cheaper'))
             if n == 11: payload['choices'][0]['message']['content'] = 'not json'
             return payload
         stub = rehearse.Stub('optimal', fail_messages={20}, mutate=bad); run = FakeRun('x/s1', study.params('S1'))
         summary, reason, rows, out = self.stage('S1', stub, run)
-        self.assertIsNone(reason); self.assertTrue(summary['passed']); self.assertEqual((summary['failed'], summary['graded'], summary['not_started']), (4, 572, 0))
+        self.assertIsNone(reason); self.assertTrue(summary['passed']); self.assertEqual((summary['failed'], summary['graded'], summary['not_started']), (3, 573, 0))
+        extra = [r for r in rows if r['status'] == 'completed' and r['answer']['work']['extra_keys']]
+        self.assertEqual(len(extra), 1); self.assertEqual(extra[0]['answer']['work']['extra_keys'], ['why']); self.assertTrue(extra[0]['evaluation']['optimal'])
+        self.assertEqual((summary['work']['both_correct'], summary['work_malformed'], summary['choice_contradicts_own_costs']), (573, 0, 0))
         self.assertEqual(stub.requests, 576)                                        # no answer and no HTTP 500 was re-sent
         failed = {r['failure']: r for r in rows if r['status'] == 'failed'}
         self.assertEqual(sorted(failed), ['http_500', 'invalid_answer', 'invalid_json'])
@@ -646,10 +747,10 @@ class Stage(Env):
         self.assertEqual(failed['invalid_json']['accounting']['answer_text'], 'not json'); self.assertTrue(failed['invalid_json']['accounting']['usage_reported'])
         self.assertNotIn(TEST_KEY, (out / 'episodes.jsonl').read_text()); self.assertNotIn('Bearer', (out / 'episodes.jsonl').read_text())
         self.assertNotIn(TEST_KEY, Path(os.environ[provider.LEDGER_ENV]).read_text())
-        self.assertEqual(run.final[0], 'done'); self.assertEqual((run.final[1]['failed'], run.final[1]['invalid'], run.final[1]['episodes']), (4, 4, 576))
-        self.assertIn('4 failed (limit 6)', run.message)
+        self.assertEqual(run.final[0], 'done'); self.assertEqual((run.final[1]['failed'], run.final[1]['invalid'], run.final[1]['episodes']), (3, 3, 576))
+        self.assertIn('3 failed (limit 6)', run.message); self.assertEqual(run.final[1]['work_malformed'], 0)
         analysis = json.loads((out / 'analysis.json').read_text())
-        self.assertEqual(analysis['failures']['by_category'], {'http_500': 1, 'invalid_answer': 2, 'invalid_json': 1})
+        self.assertEqual(analysis['failures']['by_category'], {'http_500': 1, 'invalid_answer': 1, 'invalid_json': 1})
         self.assertLess(analysis['primary']['layouts'], 24); self.assertEqual(analysis['primary']['assigned_layouts'], 24)
         self.assertLessEqual(analysis['primary']['bounds_all_assigned'][0], 0); self.assertGreaterEqual(analysis['primary']['bounds_all_assigned'][1], 0)
         self.assertEqual(self.ledger()['calls_by_stage'], {'S1': 576}); self.assertEqual(self.ledger()['usage_reported_calls'], 575)
@@ -702,35 +803,35 @@ class Stage(Env):
         self.assertEqual(owner['accounting']['http_status'], 402); self.assertIn('Insufficient credits', owner['accounting']['error_body'])
         # the continuation holds exactly the units left not started and runs inside the exact S1 cap
         units = [r['id'] for r in rows if r['status'] == 'not_started']
-        p = dict(study.params('S1'), batch='s1-001-r1', continuation=1); self.n += 1; out2 = self.dir / 'continuation'
+        p = dict(study.params('S1'), batch='s1-002-r1', continuation=1); self.n += 1; out2 = self.dir / 'continuation'
         cont = worker.execute(p, out2, opener=rehearse.Stub('optimal'), units=units, prior_rows=rows)
         self.assertTrue(cont['passed']); self.assertEqual((cont['planned'], cont['graded'], cont['stage_units']['completed']), (566, 566, 576))
         ledger = self.ledger()
-        self.assertEqual((ledger['calls_by_stage']['S1'], ledger['calls_by_batch']['s1-001']), (576, 576)); self.assertEqual(ledger['usage_reported_calls'], 577)
+        self.assertEqual((ledger['calls_by_stage']['S1'], ledger['calls_by_batch']['s1-002']), (576, 576)); self.assertEqual(ledger['usage_reported_calls'], 577)
         again = [r['id'] for r in chain.read_jsonl(out2 / chain.ROWS)]
         self.assertEqual(sorted(again), sorted(units)); self.assertFalse(set(again) & {r['id'] for r in rows if r['status'] == 'completed'})
 
     def test_answered_plus_open_main_stage_calls_never_exceed_the_cap(self):
         """A reservation voided after a billing stop frees its place for the continuation and nothing more."""
         ledger = provider.Ledger(self.dir / 'cap.jsonl', B)
-        for i in range(576): ledger.transact({'type': 'reserve', 'call_id': f's1-001:{i}', 'micro_usd': 1})
-        with self.assertRaises(provider.CallFailure) as cm: ledger.transact({'type': 'reserve', 'call_id': 's1-001-r1:0', 'micro_usd': 1})
+        for i in range(576): ledger.transact({'type': 'reserve', 'call_id': f's1-002:{i}', 'micro_usd': 1})
+        with self.assertRaises(provider.CallFailure) as cm: ledger.transact({'type': 'reserve', 'call_id': 's1-002-r1:0', 'micro_usd': 1})
         self.assertEqual(cm.exception.category, 'stage_call_cap_reached')                       # a continuation has no allowance of its own
-        for i in range(573): ledger.transact({'type': 'response', 'call_id': f's1-001:{i}', 'actual_micro_usd': 1, 'input_tokens': 1, 'output_tokens': 1})
-        with self.assertRaises(provider.CallFailure): ledger.transact({'type': 'void', 'call_id': 's1-001:0'})      # an answered call cannot be voided
-        for i in (573, 574, 575): ledger.transact({'type': 'void', 'call_id': f's1-001:{i}'})
-        for i in (573, 574, 575): ledger.transact({'type': 'reserve', 'call_id': f's1-001-r1:{i}', 'micro_usd': 1})
-        with self.assertRaises(provider.CallFailure) as cm: ledger.transact({'type': 'reserve', 'call_id': 's1-001-r1:extra', 'micro_usd': 1})
+        for i in range(573): ledger.transact({'type': 'response', 'call_id': f's1-002:{i}', 'actual_micro_usd': 1, 'input_tokens': 1, 'output_tokens': 1})
+        with self.assertRaises(provider.CallFailure): ledger.transact({'type': 'void', 'call_id': 's1-002:0'})      # an answered call cannot be voided
+        for i in (573, 574, 575): ledger.transact({'type': 'void', 'call_id': f's1-002:{i}'})
+        for i in (573, 574, 575): ledger.transact({'type': 'reserve', 'call_id': f's1-002-r1:{i}', 'micro_usd': 1})
+        with self.assertRaises(provider.CallFailure) as cm: ledger.transact({'type': 'reserve', 'call_id': 's1-002-r1:extra', 'micro_usd': 1})
         self.assertEqual(cm.exception.category, 'stage_call_cap_reached')
-        with self.assertRaises(provider.CallFailure) as cm: ledger.transact({'type': 'reserve', 'call_id': 's1-001:573', 'micro_usd': 1})
+        with self.assertRaises(provider.CallFailure) as cm: ledger.transact({'type': 'reserve', 'call_id': 's1-002:573', 'micro_usd': 1})
         self.assertEqual(cm.exception.category, 'duplicate_call_refused')                        # a voided call id is never reused
-        t = ledger.transact(); self.assertEqual((t['calls_by_stage']['S1'], t['calls_by_batch']['s1-001'], t['voided_calls']), (576, 576, 3))
+        t = ledger.transact(); self.assertEqual((t['calls_by_stage']['S1'], t['calls_by_batch']['s1-002'], t['voided_calls']), (576, 576, 3))
         # the one permitted repair attempt has its own qualification allowance in the same ledger, and no main-stage allowance beyond the study cap
         ledger.transact({'type': 'reserve', 'call_id': 'p0-001:a', 'micro_usd': 1}); ledger.transact({'type': 'reserve', 'call_id': 'p0-002:a', 'micro_usd': 1})
         with self.assertRaises(provider.CallFailure): ledger.transact({'type': 'reserve', 'call_id': 'p0-002:b', 'micro_usd': 1})
 
     def test_stage_refuses_a_stale_source_hash_a_wrong_batch_or_unknown_units(self):
-        for change, kw in ((dict(source_hash='0' * 64), {}), (dict(batch='s1-002'), {}), (dict(backend='scripted'), {}), ({}, dict(units=['nope'], prior_rows=[]))):
+        for change, kw in ((dict(source_hash='0' * 64), {}), (dict(batch='s1-003'), {}), (dict(backend='scripted'), {}), ({}, dict(units=['nope'], prior_rows=[]))):
             run = FakeRun('x/s1', study.params('S1')); self.n += 1
             with self.assertRaises(AssertionError):
                 worker.execute(dict(study.params('S1'), **change), self.dir / f'refused-{self.n}', run, opener=rehearse.Stub('optimal'), **kw)
@@ -766,7 +867,7 @@ class Chain(Env):
             self.assertEqual(str(cm.exception), 'batch_exists_no_replay')
         hub = FakeHub(); hub.add('Q0')
         with self.assertRaises(coordinator.GateRefused): coordinator.check_continuation(hub, 1)         # no stopped S1
-        hub.add('S1', status='failed'); self.assertEqual(coordinator.check_continuation(hub, 1)[0]['batch'], 's1-001-r1')
+        hub.add('S1', status='failed'); self.assertEqual(coordinator.check_continuation(hub, 1)[0]['batch'], 's1-002-r1')
         with self.assertRaises(coordinator.GateRefused): coordinator.check_continuation(hub, 2)
         ids = coordinator.enqueue_continuation(hub, 1); self.assertEqual(hub.rows[-1]['params']['continuation'], 1); self.assertEqual(len(ids), 1)
         with self.assertRaises(coordinator.GateRefused): coordinator.check_continuation(hub, 1)
@@ -788,7 +889,7 @@ class Chain(Env):
         self.assertEqual((status['state'], status['all_stages_done'], status['source_hash']), ('completed', True, study.source_hash()))
         self.assertEqual({s: (e['status'], e['calls'], e['valid']) for s, e in status['stages'].items()},
                          {'S0': ('done', 0, 144), 'P0': ('done', 1, 1), 'Q0': ('done', 23, 23), 'S1': ('done', 576, 576)})
-        self.assertEqual([(r['params']['batch'], r['status']) for r in hub.rows], [('s0-001', 'done'), ('p0-001', 'done'), ('q0-001', 'done'), ('s1-001', 'done')])
+        self.assertEqual([(r['params']['batch'], r['status']) for r in hub.rows], [('s0-002', 'done'), ('p0-002', 'done'), ('q0-002', 'done'), ('s1-002', 'done')])
         self.assertEqual(status['ledger']['attempted_calls'], 600); self.assertLess(status['ledger']['committed_usd'], 0.05)
         projection = status['stages']['S1']['projection']
         self.assertTrue(projection['within_cap'] and projection['input_ceiling_ok']); self.assertLess(projection['projected_input_tokens'], 8000)
@@ -800,7 +901,7 @@ class Chain(Env):
         shown = json.loads(out.getvalue().strip().splitlines()[-1]); self.assertEqual(shown['chain']['state'], 'completed'); self.assertEqual(shown['ledger']['attempted_calls'], 600)
         # verify detects a changed saved answer
         s1 = Path(status['stages']['S1']['directory']); rows = chain.read_jsonl(s1 / chain.ROWS)
-        other = next(c for c in rows[0]['legal_cells'] if c != rows[0]['answer']['inspect']); rows[0]['answer'] = {'inspect': other}
+        other = next(c for c in rows[0]['legal_cells'] if c != rows[0]['answer']['inspect']); rows[0]['answer']['inspect'] = other
         with gzip.open(s1 / chain.ROWS, 'wt') as f:
             for r in rows: f.write(json.dumps(r, sort_keys=True) + '\n')
         code, report = self.verify(hub); self.assertEqual(code, 1)
@@ -812,7 +913,7 @@ class Chain(Env):
     def test_chain_stops_at_a_failed_qualification_and_queues_nothing_further(self):
         stub = rehearse.Stub('always_first'); code, hub, last = self.run_chain(stub)
         self.assertEqual(code, 3); self.assertEqual(last, {'state': 'stopped_at_gate', 'stage': 'Q0', 'reason': 'gate_failed'})
-        self.assertEqual([(r['params']['batch'], r['status']) for r in hub.rows], [('s0-001', 'done'), ('p0-001', 'done'), ('q0-001', 'failed')])
+        self.assertEqual([(r['params']['batch'], r['status']) for r in hub.rows], [('s0-002', 'done'), ('p0-002', 'done'), ('q0-002', 'failed')])
         self.assertEqual(stub.requests, 24); status = chain.read_status()
         self.assertEqual((status['state'], status['stopped_stage'], status['reason']), ('stopped_at_gate', 'Q0', 'gate_failed')); self.assertNotIn('S1', status['stages'])
         code, hub, last = self.run_chain(rehearse.Stub('optimal'), ['S1'], hub)
@@ -825,14 +926,14 @@ class Chain(Env):
         self.assertEqual(code, 0)
         code, hub, last = self.run_chain(rehearse.Stub('optimal'), ['Q0'], hub); self.assertEqual(code, 0)      # Q0 finds P0's row by the hub run and its checksum
         honest = copy.deepcopy(hub.rows)
-        hub.row('p0-001')['metrics']['probe_tokens_per_byte'] = 5.0
+        hub.row('p0-002')['metrics']['probe_tokens_per_byte'] = 5.0
         code, hub, last = self.run_chain(rehearse.Stub('optimal'), ['S1'], hub)
         self.assertEqual((code, last['reason']), (3, 'input_ceiling_projection')); self.assertEqual(len(hub.rows), 3)
         self.assertGreater(chain.read_status()['stages']['S1']['projection']['projected_input_tokens'], 8000)
-        hub.rows = copy.deepcopy(honest); hub.row('q0-001')['metrics']['cost_usd'] = 0.09          # USD 0.0039 per call x 576 = USD 2.25
+        hub.rows = copy.deepcopy(honest); hub.row('q0-002')['metrics']['cost_usd'] = 0.09          # USD 0.0039 per call x 576 = USD 2.25
         code, hub, last = self.run_chain(rehearse.Stub('optimal'), ['S1'], hub)
         self.assertEqual((code, last['reason']), (3, 'projection_exceeds_cap')); self.assertEqual(len(hub.rows), 3)
-        hub.rows = copy.deepcopy(honest); del hub.row('q0-001')['metrics']['cost_usd']
+        hub.rows = copy.deepcopy(honest); del hub.row('q0-002')['metrics']['cost_usd']
         code, hub, last = self.run_chain(rehearse.Stub('optimal'), ['S1'], hub); self.assertEqual((code, last['reason']), (3, 'projection_exceeds_cap'))
         hub.rows = copy.deepcopy(honest)
         code, hub, last = self.run_chain(rehearse.Stub('optimal'), ['S1'], hub); self.assertEqual(code, 0)
@@ -853,10 +954,10 @@ class Chain(Env):
         self.assertEqual((first['status'], first['failed'], first['valid'], first['resumable']), ('failed', 0, 100, True))
         with patch('sys.stdout', io.StringIO()): self.assertEqual(chain.resume(sr=hub, opener=rehearse.Stub('optimal', credit_from=201)), 3)   # a second outage
         with patch('sys.stdout', io.StringIO()) as out: self.assertEqual(chain.resume(sr=hub, opener=rehearse.Stub('optimal')), 0)
-        self.assertEqual(json.loads(out.getvalue().strip().splitlines()[-1])['continuation'], 's1-001-r2')
+        self.assertEqual(json.loads(out.getvalue().strip().splitlines()[-1])['continuation'], 's1-002-r2')
         status = chain.read_status(); s1 = status['stages']['S1']
-        self.assertEqual((status['state'], s1['status'], s1['completed_by'], len(s1['continuations'])), ('completed', 'done', 's1-001-r2', 2))
-        self.assertEqual([(r['params']['batch'], r['status']) for r in hub.rows][3:], [('s1-001', 'failed'), ('s1-001-r1', 'failed'), ('s1-001-r2', 'done')])
+        self.assertEqual((status['state'], s1['status'], s1['completed_by'], len(s1['continuations'])), ('completed', 'done', 's1-002-r2', 2))
+        self.assertEqual([(r['params']['batch'], r['status']) for r in hub.rows][3:], [('s1-002', 'failed'), ('s1-002-r1', 'failed'), ('s1-002-r2', 'done')])
         code, report = self.verify(hub); self.assertEqual(code, 0, report)
         u = report['stages']['S1']['units']
         self.assertEqual((u['assigned'], u['completed'], u['failed'], u['not_started'], u['answered_calls']), (576, 576, 0, 0, 576))
