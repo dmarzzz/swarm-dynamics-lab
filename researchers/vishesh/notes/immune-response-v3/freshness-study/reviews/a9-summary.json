@@ -1,0 +1,23 @@
+{
+  "backend": "openrouter",
+  "assigned": 12,
+  "completed": 12,
+  "recorded": 12,
+  "capability_passes": 4,
+  "api_calls": 24,
+  "model_calls": 24,
+  "actual_usd": 0.047212000000000004,
+  "usage_missing": 0,
+  "execution_qualified": true,
+  "qualification_passed": false,
+  "condition_passes": {
+    "plain_solo": 2,
+    "plain_advice": 0,
+    "grounded_solo": 2,
+    "grounded_advice": 0
+  },
+  "native_admitted": true,
+  "advice_sha256": "9eb1b78ba27398eb6c77a08c22ae2ca2f730952d8b02a8f7cce5563103f5e737",
+  "contract": "legal-action-id-v1",
+  "grounding": "visible-evidence-v1"
+}

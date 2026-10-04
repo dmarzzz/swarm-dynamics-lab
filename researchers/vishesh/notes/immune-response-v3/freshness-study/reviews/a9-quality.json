@@ -1,0 +1,177 @@
+{
+  "attempt": "freshness-a9",
+  "date": "2026-10-04",
+  "assessor": "vishesh/codex-immune",
+  "independent_review": false,
+  "decision": "complete_valid_result",
+  "evidence_revision": "22a9ad758ede5cfbeaa70f34bc30490038b9e510",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Approved2x2comparison distinguishes saved erroneous advice exposure and visible grounding within3knownroots.",
+      "evidence": [
+        {
+          "path": "a9-post.md",
+          "sha256": "2de3f3210d3d0c8bd035637e699c6f94bd642ceb0d14af13d6cbf6db60a58556"
+        },
+        {
+          "path": "a9-reconciliation.json",
+          "sha256": "722a8c4845396e87b9386993e270ed859f196e7a113ca1a2024815d0fe0cdf25"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Three familiar repair/restraint cases answer the bounded discriminator; selected erroneous advice and nonproduction realism are disclosed.",
+      "evidence": [
+        {
+          "path": "a9-post.md",
+          "sha256": "2de3f3210d3d0c8bd035637e699c6f94bd642ceb0d14af13d6cbf6db60a58556"
+        },
+        {
+          "path": "a9-reconciliation.json",
+          "sha256": "722a8c4845396e87b9386993e270ed859f196e7a113ca1a2024815d0fe0cdf25"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Same roots,actions,receipts,instructions,horizon andcalls;factorialinputs replayed;token differences disclosed;no extra verifier actionfilter.",
+      "evidence": [
+        {
+          "path": "a9-post.md",
+          "sha256": "2de3f3210d3d0c8bd035637e699c6f94bd642ceb0d14af13d6cbf6db60a58556"
+        },
+        {
+          "path": "a9-reconciliation.json",
+          "sha256": "722a8c4845396e87b9386993e270ed859f196e7a113ca1a2024815d0fe0cdf25"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "No condition recovered the crash;groundedsolo selectedworker3 while reasoning saidrestartworker2;no architecture passesall3.",
+      "evidence": [
+        {
+          "path": "a9-post.md",
+          "sha256": "2de3f3210d3d0c8bd035637e699c6f94bd642ceb0d14af13d6cbf6db60a58556"
+        },
+        {
+          "path": "a9-reconciliation.json",
+          "sha256": "722a8c4845396e87b9386993e270ed859f196e7a113ca1a2024815d0fe0cdf25"
+        }
+      ],
+      "next_action": "Do not advance; if requested,prepareoffline crash-action/tool-effect diagnosis retaining simplerbaseline and negativegrounding result.",
+      "acceptance_check": "Any successor has declaredchangedcontract,unchangedhealthstandards,controlledbaseline andseparateowneradmission;noautorerun."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All24actions/observations/evidence tables andstates replay;gates preserve wrongactions;health contrasts and contradiction separately reported.",
+      "evidence": [
+        {
+          "path": "a9-post.md",
+          "sha256": "2de3f3210d3d0c8bd035637e699c6f94bd642ceb0d14af13d6cbf6db60a58556"
+        },
+        {
+          "path": "a9-reconciliation.json",
+          "sha256": "722a8c4845396e87b9386993e270ed859f196e7a113ca1a2024815d0fe0cdf25"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Three inspected dependent roots,one rollout/cell,no populationconfidence or12independent sampleclaim.",
+      "evidence": [
+        {
+          "path": "a9-post.md",
+          "sha256": "2de3f3210d3d0c8bd035637e699c6f94bd642ceb0d14af13d6cbf6db60a58556"
+        },
+        {
+          "path": "a9-reconciliation.json",
+          "sha256": "722a8c4845396e87b9386993e270ed859f196e7a113ca1a2024815d0fe0cdf25"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "FrozenA8advice,newcontrolledgrounding,all24requests/answersinspected;nooperatorcontext and servedAnthropicrouteverified.",
+      "evidence": [
+        {
+          "path": "a9-post.md",
+          "sha256": "2de3f3210d3d0c8bd035637e699c6f94bd642ceb0d14af13d6cbf6db60a58556"
+        },
+        {
+          "path": "a9-reconciliation.json",
+          "sha256": "722a8c4845396e87b9386993e270ed859f196e7a113ca1a2024815d0fe0cdf25"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "24/24responses/usage,12/12trajectories,9hubhashes,fullrawlocal;no retry or missingcell.",
+      "evidence": [
+        {
+          "path": "a9-post.md",
+          "sha256": "2de3f3210d3d0c8bd035637e699c6f94bd642ceb0d14af13d6cbf6db60a58556"
+        },
+        {
+          "path": "a9-reconciliation.json",
+          "sha256": "722a8c4845396e87b9386993e270ed859f196e7a113ca1a2024815d0fe0cdf25"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "453cumulativecalls/3.700944reserved within8;newactual.047212;token costsbycondition andhistoricaladvicecostdisclosed;hostreleased.",
+      "evidence": [
+        {
+          "path": "a9-post.md",
+          "sha256": "2de3f3210d3d0c8bd035637e699c6f94bd642ceb0d14af13d6cbf6db60a58556"
+        },
+        {
+          "path": "a9-reconciliation.json",
+          "sha256": "722a8c4845396e87b9386993e270ed859f196e7a113ca1a2024815d0fe0cdf25"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Source-pinned request/response provenance,assignment/advicehashes and allstate/observationreplay;no promise of deterministic hosted responses.",
+      "evidence": [
+        {
+          "path": "a9-post.md",
+          "sha256": "2de3f3210d3d0c8bd035637e699c6f94bd642ceb0d14af13d6cbf6db60a58556"
+        },
+        {
+          "path": "a9-reconciliation.json",
+          "sha256": "722a8c4845396e87b9386993e270ed859f196e7a113ca1a2024815d0fe0cdf25"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Fourconditions,threeworlds,threeframes andinteractive evidence replay;complete denominators anddisplayoffsets labeled.",
+      "evidence": [
+        {
+          "path": "a9-post.md",
+          "sha256": "2de3f3210d3d0c8bd035637e699c6f94bd642ceb0d14af13d6cbf6db60a58556"
+        },
+        {
+          "path": "a9-reconciliation.json",
+          "sha256": "722a8c4845396e87b9386993e270ed859f196e7a113ca1a2024815d0fe0cdf25"
+        }
+      ]
+    }
+  ]
+}

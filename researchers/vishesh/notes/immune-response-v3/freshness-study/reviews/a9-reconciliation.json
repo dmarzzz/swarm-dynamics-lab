@@ -1,0 +1,71 @@
+{
+  "assigned": 12,
+  "started": 12,
+  "completed": 12,
+  "started_incomplete": 0,
+  "unstarted": 0,
+  "calls": 24,
+  "responses": 24,
+  "known_actual_usd": 0.047212,
+  "usage_missing": 0,
+  "new_reserved_usd": 0.20874800000000002,
+  "states_actions_observations_replayed": true,
+  "request_usage_hashes_match": true,
+  "conditions": {
+    "plain_solo": {
+      "completed": 3,
+      "passes": 2,
+      "healthy_ticks": 4,
+      "useful_restarts": 0,
+      "lost_health": 0
+    },
+    "plain_advice": {
+      "completed": 3,
+      "passes": 0,
+      "healthy_ticks": 1,
+      "useful_restarts": 0,
+      "lost_health": 2
+    },
+    "grounded_solo": {
+      "completed": 3,
+      "passes": 2,
+      "healthy_ticks": 4,
+      "useful_restarts": 0,
+      "lost_health": 0
+    },
+    "grounded_advice": {
+      "completed": 3,
+      "passes": 0,
+      "healthy_ticks": 1,
+      "useful_restarts": 0,
+      "lost_health": 2
+    }
+  },
+  "cumulative_calls": 453,
+  "cumulative_reserved_usd": 3.700944,
+  "cap_usd": 8,
+  "hub_artifacts_verified": 9,
+  "reviewed_controller_outputs": 24,
+  "tokens_by_condition": {
+    "plain_solo": {
+      "input_tokens": 7865.0,
+      "output_tokens": 470.0,
+      "actual_usd": 0.010215
+    },
+    "plain_advice": {
+      "input_tokens": 9343.0,
+      "output_tokens": 462.0,
+      "actual_usd": 0.011653
+    },
+    "grounded_solo": {
+      "input_tokens": 9245.0,
+      "output_tokens": 516.0,
+      "actual_usd": 0.011825
+    },
+    "grounded_advice": {
+      "input_tokens": 10779.0,
+      "output_tokens": 548.0,
+      "actual_usd": 0.013519
+    }
+  }
+}

@@ -112,3 +112,7 @@ Owner-requested failure diagnostics completed3/3fixed variants after a preserved
 ## Post-A8 grounding and advice-isolation preparation
 
 [Prospective plan](freshness-study/GROUNDING-PLAN.md) and offline implementation now ready: visible-only compatibility table, stale-liveness unknown, unchanged legal actions,2×2grounding/advice conditions using exact retainedA8advice.39tests pass;12/12scripted reference trajectories pass and replay. No newnativecalls/spend/allocation. Proposed24calls/maxUSD0.457728additional withinoriginal8cap require approval of this changed design before nativeadmission. A8negative outcomes remain unchanged;this preparation does not demonstrate improved modelbehavior.
+
+## A9 completed and reviewed — grounding did not protect against advice
+
+[Post-mortem](freshness-study/reviews/a9-post.md), [rubric](freshness-study/reviews/a9-quality.json), [reconciliation](freshness-study/reviews/a9-reconciliation.json).24/24responses,12/12trajectories;plain/groundedsolo2of3gates each,advicearms0of3each. Groundinghealthcontrast0;advicecaused worse observedhealthycaseoutcomes in selectedchallenge. No condition recoveredcrash;groundedsolo action/prose mismatch retained. All24answersinspected,allobservations/actions/statesreplayed,9hubhashesverified. Nativeframe/GIF/replaypublished. Original8cap453calls/USD3.700944reserved;newactualUSD0.047212. Workers/relay/tunnelclosed,claimreleased,operationalfinalize andscientificreviewcomplete. Boundedcomparison is complete_valid_result;largercomparison HOLD, noautonextattempt.
