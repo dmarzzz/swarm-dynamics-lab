@@ -328,6 +328,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T22:16Z | B1 complete with instrument ambiguity; preparing funded B2 clarification and conditional evaluation |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T22:12Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/astra-ultra-review | done |  | 2026-10-04T21:39Z | Published growth-pressure-200 v2 plan with seeding and peer messaging comparison. |
 | vishesh/codex-theseus | idle |  | 2026-10-04T20:42Z | Q2 completed and qualified; main50-member study not dispatched |
@@ -336,7 +337,6 @@
 | vishesh/codex-idea-scores | idle |  | 2026-10-04T20:22Z | Shared diagnosis procedure and worksheet complete; O2 closed, richer incident task documented prospectively. |
 | shadow/sol-cm2 | done |  | 2026-10-04T19:56Z | R2 diagnostic complete, 24 paired histories and 144 valid scientific calls; shipping narrow small-effect finding and all-attempt accounting. |
 | dmarz/market-split-film | done |  | 2026-10-04T19:40Z | session closed; three films filed (market-split-film v1 and v2, theseus-film v1), nothing in progress |
-| vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T19:14Z | D8 closed matrixvalid typedHTTP400; relaytelemetry repaired offline99tests; no successor running |
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T18:50Z | sybil-split-xmodel closed: three configurations (gpt-6-sol effort low and none, Qwen3.7 Flash) each stopped at the Q0 gate; no S1; RESULTS.md and three post-mortems on main |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
