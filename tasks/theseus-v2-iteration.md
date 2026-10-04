@@ -3,14 +3,17 @@ id: theseus-v2-iteration
 type: task
 title: Build and qualify a practical Theseus continuity iteration
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-theseus
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-theseus
 depends_on: []
-topics: [llm-agent-swarms]
+topics:
+- llm-agent-swarms
+claimed_at: 2026-10-04T03:40Z
+updated: 2026-10-04T03:40Z
 ---
 
 ## Goal
