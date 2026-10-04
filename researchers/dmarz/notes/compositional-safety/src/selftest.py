@@ -309,6 +309,33 @@ class Accounting(unittest.TestCase):
                 with self.assertRaises(CallFailure) as caught:Anthropic(Ledger(Path(td)/'l.jsonl'),opener=opener,key='k',workspace='w',sleep=slept.append).call({'actions':['wait']},'c')
             self.assertEqual(caught.exception.category,f'http_{code}');self.assertEqual(len(bodies),1);self.assertEqual(slept,[])
 
+    def test_credit_balance_400_is_a_billing_outage(self):
+        import urllib.error
+        credit=json.dumps({'type':'error','error':{'type':'invalid_request_error','message':'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}}).encode()
+        other=json.dumps({'type':'error','error':{'type':'invalid_request_error','message':'thinking.type.disabled is not supported'}}).encode()
+        ok=json.dumps(dict(model=common.design()['model'],stop_reason='end_turn',content=[dict(type='text',text=json.dumps(dict(action='wait',message='')))],usage=dict(input_tokens=10,output_tokens=5))).encode()
+        def opener_for(n,body):
+            sent=[]
+            def opener(req,timeout):
+                sent.append(req.data)
+                if len(sent)<=n: raise urllib.error.HTTPError(req.full_url,400,'x',{},io.BytesIO(body))
+                return io.BytesIO(ok)
+            return opener,sent
+        opener,sent=opener_for(3,credit);slept=[]
+        with tempfile.TemporaryDirectory() as td:
+            l=Ledger(Path(td)/'l.jsonl')
+            a,acc=Anthropic(l,opener=opener,key='k',workspace='w',sleep=slept.append).call({'actions':['wait']},'c')
+            self.assertEqual(a['action'],'wait');self.assertTrue(acc['billing_outage']);self.assertEqual(acc['billing_wait_seconds'],180);self.assertEqual(len(set(sent)),1)
+            self.assertEqual(l.transact()['attempted_calls'],1)
+        opener,sent=opener_for(10**6,credit);slept=[]
+        with tempfile.TemporaryDirectory() as td:
+            with self.assertRaises(CallFailure) as caught:Anthropic(Ledger(Path(td)/'l.jsonl'),opener=opener,key='k',workspace='w',sleep=slept.append).call({'actions':['wait']},'c')
+        self.assertEqual(caught.exception.category,'billing_outage');self.assertEqual(sum(slept),common.design()['budget']['billing_wait_seconds'])
+        opener,sent=opener_for(1,other);slept=[]
+        with tempfile.TemporaryDirectory() as td:
+            with self.assertRaises(CallFailure) as caught:Anthropic(Ledger(Path(td)/'l.jsonl'),opener=opener,key='k',workspace='w',sleep=slept.append).call({'actions':['wait']},'c')
+        self.assertEqual(caught.exception.category,'http_400');self.assertEqual(slept,[]);self.assertEqual(len(sent),1)
+
     def test_empty_refusal_retains_category_and_cost(self):
         def response(*args,**kwargs):
             return io.BytesIO(json.dumps(dict(model=common.design()['model'],stop_reason='refusal',
@@ -424,14 +451,14 @@ class ClosedLoop(unittest.TestCase):
     def test_current_q0_fresh_structures_and_shape(self):
         rows=assignments('Q0')
         self.assertEqual(len(rows),24);self.assertEqual(len({json.dumps(r,sort_keys=True) for r in rows}),24)
-        self.assertEqual(sorted({r['task_id'] for r in rows}),[247,248,249])
+        self.assertEqual(sorted({r['task_id'] for r in rows}),[248,249,250])
         cells={}
         for r in rows:cells.setdefault((r['domain'],r['arm']),[]).append(r)
         self.assertEqual({k:len(v) for k,v in cells.items()},{(d,a):6 for d in ('D1','D2') for a in ('C','S')})
-        sent=[200,201,202,210,211,212,220,221,222,230,231,232,240,241,242,243,244,245,246,253,256,257,282,293,300]
+        sent=[200,201,202,210,211,212,220,221,222,230,231,232,240,241,242,243,244,245,246,247,253,256,257,282,293,300]
         self.assertFalse({r['task_id'] for r in rows}&set(sent))   # roots never sent to a model (structures may repeat; see q0-011-pre)
         fresh={(r['domain'],task(r['task_id'],r['domain'],r['variant'])['structure_sha256']) for r in rows}
-        self.assertEqual(len(fresh),6)
+        self.assertEqual(len(fresh),5)
         for r in rows:
             e=run_episode(task(r['task_id'],r['domain'],r['variant']),0,r['arm'],max_steps=40)
             self.assertTrue(e['validity']['ok']);self.assertEqual(e['evaluation']['completion'],1);self.assertEqual(e['evaluation']['violation'],0)
