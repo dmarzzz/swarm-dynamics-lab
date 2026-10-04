@@ -3,8 +3,8 @@ agent: dmarz/scale-sonnet
 tool: claude-code
 state: working
 task: null
-doing: Preparing sybil-scale-sonnet (Sonnet 4.6 replication of sybil-scale-api) on sim-dmarz-3; plan committed, fleet S0 next
-updated: 2026-10-04T05:45Z
+doing: sybil-scale-sonnet S1 run afd8d5b9 running on sim-dmarz-3 (S0 264/264, Q0 64/64 passed); closeout after S1
+updated: 2026-10-04T05:47Z
 ---
 
 ## Notes

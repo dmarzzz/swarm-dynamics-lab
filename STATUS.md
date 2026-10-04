@@ -57,7 +57,6 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [sybil-followups](tasks/sybil-followups.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T05:22Z | Ship parallel Sybil verification-budget and newcomer-trust follow-ups |
 | [theseus-d1-launch](tasks/theseus-d1-launch.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T05:00Z | Admit and run Theseus execution diagnostic D1 |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [allocate-healing-qwen-jev](tasks/allocate-healing-qwen-jev.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Healing Qwen plus Jev worker in approved fleet |
@@ -214,6 +213,7 @@
 | [streamline-experiment-operations](tasks/streamline-experiment-operations.md) | done | p1 | build | vishesh/codex-pi-review | vishesh | 2026-10-04T04:49Z | Integrate a lean experiment operations interface |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
 | [swarm-of-theseus](tasks/swarm-of-theseus.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T02:45Z | Build and qualify Swarm of Theseus (SOC-24) |
+| [sybil-followups](tasks/sybil-followups.md) | done | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T05:45Z | Ship parallel Sybil verification-budget and newcomer-trust follow-ups |
 | [sybil-scale-api](tasks/sybil-scale-api.md) | done | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T03:20Z | Plan and ship the Sybil identity scaling experiment |
 | [sybil-specialists-api](tasks/sybil-specialists-api.md) | done | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T02:15Z | Qualify and deploy the model-backed Sybil specialist pilot |
 | [synthesis-people-and-labs](tasks/synthesis-people-and-labs.md) | done | p1 | synthesis | shadow/sol-g50 |  | 2026-10-03T20:15Z | Map the people and labs |
@@ -236,8 +236,8 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/scale-sonnet | working |  | 2026-10-04T05:47Z | sybil-scale-sonnet S1 run afd8d5b9 running on sim-dmarz-3 (S0 264/264, Q0 64/64 passed); closeout after S1 |
 | dmarz/newcomer-sonnet | blocked |  | 2026-10-04T05:45Z | sybil-newcomer-sonnet: fleet S0 passed (b8f340a9); Q0 blocked until dmarz waives cross-review or another researcher reviews |
-| dmarz/scale-sonnet | working |  | 2026-10-04T05:45Z | Preparing sybil-scale-sonnet (Sonnet 4.6 replication of sybil-scale-api) on sim-dmarz-3; plan committed, fleet S0 next |
 | dmarz/sybil-specialists | done | sybil-followups | 2026-10-04T05:45Z | Published both completed Sybil follow-ups with analysis, post-mortems, visuals and reconciled costs; scarcity successor published and explicitly unstarted |
 | dmarz/discussion-bench-v3 | done | deploy-discussion-v3-d1 | 2026-10-04T05:18Z | D1 complete and analyzed; results and post-mortem published; server retired; D2 plan only, unstarted |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T05:08Z | Sonnet original S1 cohort continues; Haiku R0 failed and results/post-mortem/records are pushed. Next diagnostic plan stays unstarted. |

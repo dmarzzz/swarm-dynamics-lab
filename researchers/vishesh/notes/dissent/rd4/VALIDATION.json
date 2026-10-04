@@ -1,6 +1,6 @@
 {
-  "checked_utc": "2026-10-04T05:04:23.599385+00:00",
-  "offline_tests": 66,
+  "checked_utc": "2026-10-04T05:46:02.829180+00:00",
+  "offline_tests": 69,
   "command": "python3 -m unittest discover -s researchers/vishesh/notes/dissent/tests -q",
   "scope": "development-only regression and software fixtures; no native calls or historical holdout",
   "file_sha256": {
@@ -23,7 +23,7 @@
     "researchers/vishesh/notes/dissent/tests/test_protocol.py": "662a1efadeeb851055677b796b3d32afec4ed80fcf43cdd0826d8ce2bd20c2b8",
     "researchers/vishesh/notes/dissent/tests/test_study.py": "f6f68d08f4aa1d8042b702567fccce8ac5f30ab167cc89503e5ebf69d3240f5b",
     "researchers/vishesh/notes/dissent/tests/test_live.py": "7b1b64dd24dd90bbf751c71f217f15c4b7ce6365875c58c452b10c990950497a",
-    "researchers/vishesh/notes/dissent/tests/test_rd4.py": "4a373bcb337d666626a99e88f867d1f2da8a2e9ca7a87b0cfbeade328f041ced"
+    "researchers/vishesh/notes/dissent/tests/test_rd4.py": "4d09c5af78e1a5676ea74f57b6bfbc9fe65706abebb458e926e34e5281abb491"
   },
   "feedback": [
     "RD-R1",

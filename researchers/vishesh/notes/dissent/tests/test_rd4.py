@@ -82,4 +82,25 @@ class RepairTests(unittest.TestCase):
                     p={'task':design.task(domain,'fixture'),'records':[design.record(domain,action,'fixture',0,form=form)]}
                     self.assertEqual(design.GrammarReference()('resolve',p),action)
 
+class WorkerGuardTests(unittest.TestCase):
+    def test_failed_allocation_prevents_qualification_construction(self):
+        import rd4_worker
+        with patch.object(rd4_worker,'assignments',side_effect=AssertionError('reserved touched')):
+            with self.assertRaisesRegex(ValueError,'allocation_identity_mismatch'):
+                rd4_worker.verify({'stage':'Q4','budget_approved':True,'allocation_verified':False},'Q4')
+    def test_no_budget_prevents_all_downstream_work(self):
+        import rd4_worker
+        with patch.object(rd4_worker,'assignments',side_effect=AssertionError('reserved touched')):
+            with self.assertRaisesRegex(ValueError,'launch_config'):rd4_worker.verify({'stage':'Q4'},'Q4')
+    def test_strict_screen_thresholds_include_all_uncertainty_controls(self):
+        import rd4_worker
+        rows=[]
+        for domain in design.DOMAINS:
+            rows.extend(dict(case_id=str(i),scenario=domain,arm='clean',status='completed',correct=True) for i in range(6))
+            rows.extend(dict(case_id='control'+str(i),scenario=domain,arm='uncertainty',status='completed',correct=True) for i in range(2))
+        config={'instrument_sha256':'fixture'}
+        self.assertTrue(rd4_worker.analyze('Q4',rows,[],0,config,0)['qualification_passed'])
+        rows[-1]['correct']=False
+        self.assertFalse(rd4_worker.analyze('Q4',rows,[],0,config,0)['qualification_passed'])
+
 if __name__=='__main__':unittest.main()

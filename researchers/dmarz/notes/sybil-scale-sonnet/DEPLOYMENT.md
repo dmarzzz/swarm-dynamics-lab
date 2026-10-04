@@ -9,3 +9,4 @@ Server sim-dmarz-3 (dmarz fleet), exclusive claim `dmarz-sybil-scale-sonnet` hel
 | 05:35 | fleet S0 launched, run sybil-scale-sonnet/55c86cfa | f18f66da | runtime a1a619f7… (matches local) |
 | 05:37 | fleet S0 done 264/264; publish + verify pass | f18f66da | 10 artifacts verified |
 | 05:39 | Q0 done 64/64, all sizes pass; USD 1.98 actual; publish + verify pass | f18f66da | run 5fe6c41a |
+| 05:40 | S1 launched, run sybil-scale-sonnet/afd8d5b9; 79/2400 valid at 05:45, 0 failed | f18f66da | expected ~20 min, ~USD 50 actual |
