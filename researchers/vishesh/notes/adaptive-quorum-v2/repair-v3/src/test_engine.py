@@ -45,3 +45,29 @@ class Tests(unittest.TestCase):
 
 
 if __name__=='__main__':unittest.main()
+
+class GuardTests(unittest.TestCase):
+    def test_model_false_admission_is_blocked_without_hidden_truth(self):
+        from adapter import Hybrid
+        class Wrong:
+            def __init__(self):self.receipts=[]
+            def choose(self,*args):self.receipts.append({});return 'YES'
+        h=Hybrid(Wrong())
+        rows={k:{'scanned':True,'retention_days':1,'accuracy':95,'price':i+1} for i,k in enumerate(e.OPTIONS)}
+        self.assertEqual(h(rows,{}),'NONE')
+        self.assertEqual(sum(x['blocked'] for x in h.guard_events),3)
+        # A false source can still fool the guard; it reads observations, not truth.
+        rows['A']['retention_days']=0
+        self.assertEqual(h(rows,{}),'A')
+
+    def test_replay_hides_future_decisions(self):
+        # Pure visibility function can be tested without Pillow by AST extraction.
+        import ast
+        from pathlib import Path
+        tree=ast.parse(Path(__file__).with_name('render.py').read_text())
+        fn=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='visible_decisions')
+        ns={};exec(compile(ast.Module(body=[fn],type_ignores=[]),'render.py','exec'),ns)
+        r=e.episode(8000,9,6,'clean','stalled',lambda rows,c:e.symbolic(rows))
+        self.assertEqual(ns['visible_decisions'](r,0),{})
+        self.assertNotIn('adaptive',ns['visible_decisions'](r,5))
+        self.assertIn('adaptive',ns['visible_decisions'](r,6))

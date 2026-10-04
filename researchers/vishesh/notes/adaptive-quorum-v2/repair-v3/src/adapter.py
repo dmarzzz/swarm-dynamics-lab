@@ -1,12 +1,12 @@
 """Declared hybrid: model extracts predicates, deterministic code combines constraints."""
 import hashlib
 import json
-from engine import OPTIONS
+from engine import OPTIONS, eligible
 
 
 class Hybrid:
     def __init__(self,runtime):
-        self.runtime=runtime;self.cache={};self.invocations=[]
+        self.runtime=runtime;self.cache={};self.invocations=[];self.guard_events=[]
 
     def __call__(self,rows,context):
         allowed=[]
@@ -24,5 +24,8 @@ class Hybrid:
                 answer,receipt=self.cache[key]
                 self.invocations.append({'context':context,'provider':k,'predicate':question,'receipt':receipt,'cached':cached})
                 answers.append(answer)
-            if all(a=='YES' for a in answers):allowed.append(k)
+            model_eligible=all(a=='YES' for a in answers)
+            observed_eligible=eligible(row)
+            self.guard_events.append({'context':context,'provider':k,'model_eligible':model_eligible,'observed_eligible':observed_eligible,'blocked':model_eligible and not observed_eligible})
+            if model_eligible and observed_eligible:allowed.append(k)
         return min(allowed,key=lambda k:(rows[k]['price'],k)) if allowed else 'NONE'
