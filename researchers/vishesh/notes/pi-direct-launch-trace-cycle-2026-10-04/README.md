@@ -1,6 +1,6 @@
 # Direct launch and native-trace review cycle
 
-2026-10-04. Work in progress. The owner removed the central-acknowledgment wait for eight prepared Vishesh scopes; direct dispatch still requires the original budget, verified Dmarz account/state, an exclusive allocation, public plan and qualified runtime. No blanket budget increase or deletion of other researchers’ machines is authorized.
+2026-10-04. All admitted native stages are terminal; final Right Dissenter closeout publication is pending at this snapshot. The owner removed the central-acknowledgment wait for eight prepared Vishesh scopes; direct dispatch still requires the original budget, verified Dmarz account/state, an exclusive allocation, public plan and qualified runtime. No blanket budget increase or deletion of other researchers’ machines is authorized.
 
 ## What is implemented
 
@@ -23,7 +23,7 @@ Private operator-session transcript collection is a separate workflow. It is not
 
 Direct dispatch has been exercised. Seven studies reached native execution. Right Dissenter passed its bounded Q5 qualification; the other six attempts did not establish uncontaminated qualification. Released machines have been assigned sequentially. The approved account is at its current droplet quota, so a working credential alone cannot create another machine. No other researcher's claim was released or worker deleted to make room.
 
-Snapshot: **2026-10-04 17:17 UTC**. Counts below are observed, not planned. See [structured status](status.json) for provenance and source-file hashes; an operational report can be newer than its published scientific review.
+Snapshot: **2026-10-04 17:24 UTC**. Counts below are observed, not planned. See [structured status](status.json) for provenance and source-file hashes; an operational report can be newer than its published scientific review.
 
 | Study | Execution / sample observed | Assessment | Next action |
 |---|---|---|---|
@@ -33,7 +33,7 @@ Snapshot: **2026-10-04 17:17 UTC**. Counts below are observed, not planned. See 
 | Poietic | 1 returned answer rejected by parser, 143 unstarted | Reviewed; action-contract failure before environment execution | Explicit prompt, billing retention and diagnostic runner repaired;106 offline tests reported |
 | Healing | 60 reports / 180 calls; Jev60/60, Qwen40/60 each | Reviewed; instrument invalid: expected labels leaked in names | S1 stopped; metadata-blind repair tested and qualification plan prepared |
 | Immune | 1 HTTP429; no response or completed controller episode | Reviewed; transport failure, cause unresolved | Error observability repaired; no repeated probe or A5 |
-| Right Dissenter | Q5:24 valid responses; raw and card12/12 correct | Qualification reviewed and passed; no card advantage at ceiling | H5 has started under the unchanged conditional scope; result pending |
+| Right Dissenter | Q5 passed; H5 completed72 policy decisions /36 model calls | H5 development screen failed: memory-plus-reserve6/24, memory8/24, always-check6/24 | Preserve adverse result; no retry; final closeout publication pending |
 | Optimal Size | No Q-A7 calls or claim; original ledger preserved | Operational hold: repeated direct-route failures | Resume on relevant recovery evidence; first-failure handling fixed offline |
 | Quorum | 48 retained valid historical answers; all 11 graded misses inspected | Old context comparison confounded; simple control solves development set | Acquire a defensible residual task before proposing native evaluation |
 | Phantom | 140 retained request/output pairs; 6 manually inspected S1 cases | Revised decision problem solved by exact Bayes | Define an application-specific model role before spending |
@@ -73,3 +73,11 @@ These are implemented scenario/baseline improvements and revised conditional pla
 | Optimal Size | [Route assessment and repair](../optimal-swarm-size/reviews/q-a7-route-assessment.md) |65 checks reported; HTTP failure during work now stops scheduling as promised. No Q-A7 model call. |
 
 Tests verify the repaired software behavior; they do not establish provider recovery, model capability or scientific efficacy. A material diagnostic or qualification successor remains a concrete owner decision, with the original cumulative budget and unresolved costs carried forward.
+
+## Right Dissenter terminal update
+
+The owning task reports a complete H5 audit: six authored roots, three policies and four epochs yield72 dependent policy decisions, with36 actual model calls and no failed/unstarted cells. Saved-response replay reproduces all rows and requests; independent action/truth arithmetic agrees. B0/B1/B2 each used12 checks and12 calls. Their correct decisions were6/24,8/24 and6/24 respectively. The primary memory-plus-reserve minus memory contrast is **−2 decisions**; the declared development screen fails. This is an adverse bounded result, not a reason to retry for a favorable effect.
+
+No wrong PROCEED, needless HOLD or unjustified commitment was observed; noncompletion dominates. Eight of12 decisive readings were interpreted correctly; four later resume requests returned DEFER. Clean Q5 competence did not establish transfer to history/ballot/time context. The available traces do not separate those factors or hosted response variation causally. Do not attribute the entire adverse difference solely to memory allocation or generalize beyond these six authored roots.
+
+H5 reportedUSD0.001320480; both RD5 stages together60 model calls/USD0.002046618. The original488-call lifetime ledger retainsUSD0.022699069 committed API exposure, including historical uncertainty. Worker/relay stop and artifact readback were reported verified; exclusive release and final scientific publication are being completed by the owning task. Its [current study status](../dissent/rd5/RUN-STATUS.md) is the navigation point. This terminal update cites the owning audit report; it does not claim coordinator inspection of the full unpublished H5 bundle.

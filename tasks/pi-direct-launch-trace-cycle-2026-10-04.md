@@ -31,3 +31,5 @@ Coordinate direct execution of existing admitted study scopes, revise stopped de
 ## Coverage note
 
 Seven studies reached native execution through exclusive direct allocations; Optimal Size is held on actual repeated direct-provider HTTP429 evidence, not central approval. Six native attempts are reviewed and closed (Healing is instrument-invalid despite its numerical score); Right Dissenter's Q5 passed and its already-approved conditional H5 is running in the owning task. The timestamped cycle report preserves that live handoff rather than declaring H5 complete. Quorum/Phantom revisions and all six failure-driven offline repairs are linked. No material successor was launched, budget reset, unrelated claim removed or quota-exceeding machine created.
+
+Later terminal update: H5 completed72 policy decisions and36 model calls with no failed/unstarted cells. Memory-plus-reserve scored6/24 versus memory8/24; the development screen failed. Worker/relay are stopped; final owning-task publication/release is pending. The cycle report records this adverse result and the contextual-transfer limitation without authorizing a retry.

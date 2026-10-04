@@ -1,6 +1,6 @@
 {
-  "assessed_at": "2026-10-04T17:17:15.731511+00:00",
-  "status_kind": "in-progress snapshot; not a terminal cycle verdict",
+  "assessed_at": "2026-10-04T17:24:26.150654+00:00",
+  "status_kind": "All admitted native stages terminal; Right Dissenter final closeout publication pending at this snapshot.",
   "sources": "Published scientific records plus owning-task operational reports. Related revisions may identify an execution, review or repair; exact native execution sources remain in each study record. None is a live admission receipt.",
   "studies": [
     {
@@ -69,14 +69,14 @@
     },
     {
       "study": "Right Dissenter",
-      "status": "q5_reviewed_pass_h5_running",
-      "scientific_evidence": "dissent/rd5/DIRECT-ACTIVATION.md",
-      "evidence_sha256_at_snapshot": "f967b76e1f3478915c3905bc0fcf424aaecb2b06c9cce6fa3ceec62f9086cb26",
-      "observed_or_last_reported": "Q5-A2:24 assigned/started/terminal/valid/graded; raw and card12/12 correct, including6 uncertainty cards. All24 requests/outputs audited; artifact readback matched. Worker and relay stopped. H5 not started yet.",
-      "next_action": "H5 started after scientific Q5 closeout and fresh conditional admission. First reported ledger progress:2 completed calls and1 inflight; maximum36. Owning task monitors and completes post-mortem; no new scope/retries.",
-      "observation_provenance": "Published owning-study evidence and latest owning-task report; coordinator readback scope recorded separately.",
+      "status": "h5_completed_adverse_closeout_publication_pending",
+      "scientific_evidence": "dissent/rd5/RUN-STATUS.md",
+      "evidence_sha256_at_snapshot": "e1647125cb717b56b66c61909d5c031979967366e72a664a77476191a8b736bc",
+      "observed_or_last_reported": "H5:72 assigned/terminal policy decisions,36 valid model calls,0 failed/unstarted; six authored roots. B0 always-check6/24 correct, B1 memory8/24, B2 memory-plus-reserve6/24. All72 rows reproduced by saved-response replay. Worker and relay stopped.",
+      "next_action": "Retain adverse development result; no retry. B2 minus B1 is -2 decisions, not evidence of reserve benefit. Four late-context DEFER misses limit contextual transfer and mechanism inference. Finish final scientific publication and exclusive claim release. RD5 total60 calls/USD0.002046618 measured; lifetime488 calls/USD0.022699069 committed API.",
+      "observation_provenance": "Terminal H5 owning-task audit report; public final post-mortem is being published. Coordinator has read published Q5 evidence, not yet the full H5 bundle.",
       "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report.",
-      "reported_related_revision": "94fcd006"
+      "reported_related_revision": "27d63232559a2b6ccd9e317b1af5786b32c383bc"
     },
     {
       "study": "Optimal Size",
