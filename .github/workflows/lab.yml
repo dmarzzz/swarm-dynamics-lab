@@ -25,6 +25,11 @@ jobs:
         run: |
           python3 scripts/experiment_evidence.py --check
           python3 -m unittest discover -s scripts -p 'test_experiment_evidence.py'
+      - name: Check experiment operations without model calls
+        run: |
+          python3 scripts/experiment.py list
+          python3 -m unittest discover -s scripts -p 'test_experiment_operations.py'
+          python3 -m unittest discover -s scripts -p 'test_experiment_theseus.py'
 
   verify:
     # Every paper added or changed in this push must resolve on Crossref/DataCite with a matching title.

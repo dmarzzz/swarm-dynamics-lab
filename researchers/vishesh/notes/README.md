@@ -6,6 +6,8 @@ This collection documents candidate work on swarm evidence, communication, share
 
 ## Start here
 
+[Experiment operations](../../../tooling/agent-experiments/OPERATIONS.md): one registry and command interface for finding study state, preparing iterations and operating supported adapters. Start with `python3 scripts/experiment.py list`; adapter coverage and current admission remain separate.
+
 [Experiment confidence and sample sizes](../../../experiments/EVIDENCE.md): dated evidence scores and independent sample-size summaries for each study and distinct cohort, with [scoring rules](../../../experiments/EVIDENCE-METADATA.md).
 
 [Principal-investigator project review](pi-review-2026-10-04/README.md): 57 evidence/implementation findings, individual scientific assessments of all ten named projects, 110 scenario/condition assessments, sixteen proposal reviews and agent lifecycle guidance. Dated evidence cutoffs and source availability are explicit. This is an internal PI-style critique, not a formal independent gate review.

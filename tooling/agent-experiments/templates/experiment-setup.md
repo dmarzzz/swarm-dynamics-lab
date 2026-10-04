@@ -40,6 +40,23 @@ Use pending, pass, fail or blocked. Record reviewer and timestamp beside evidenc
 
 ## Current attempt admission
 
+Operations entry: [registry study ID or explicitly manual]. Follow the
+[operations guide](../OPERATIONS.md), correcting this link when copying the template. Reference
+existing records rather than maintaining a second copy of their status.
+
+| Operation | Exact command or unsupported reason | Evidence and last checked revision |
+|---|---|---|
+| Inspect and offline validation | | |
+| Prepare named stage | | |
+| Dispatch named stage | | |
+| Resume interrupted execution | | |
+| Analyze saved evidence and rebuild visuals | | |
+| Stop this study and close out | | |
+
+Keep private configuration, allocation receipts and ledger paths in local context. A registered
+command is not an approved attempt. Record the prepared packet, configuration delta and parent
+attempt when using the shared interface; preserve its consumed/ambiguous state after interruption.
+
 - Attempt / parent / stage / pre-run assessment / status: [fill]
 - Exact immutable public plan URL, revision and expected hash: [fill]
 - Registered experiment TLDR: [question, treatment, comparator, metrics, limitations]
@@ -51,7 +68,8 @@ Use pending, pass, fail or blocked. Record reviewer and timestamp beside evidenc
 - Dedicated exclusive allocation, claim/expiry and workload verification: [approved public metadata only]
 - If provisioning: approved-account match, intended state/project and exact plan verification: [status and private receipt reference only; no account IDs]
 - Deployment/source/dependency/output-destination verification: [receipt]
-- Credentials: [approved alias and availability status only, never values]
+- Credentials: [exact project-specific store alias/account and availability status only, never values]
+- Credential transfer: [Swarm Lab credential policy version, registered destination/access and exclusive claim verified, SSH host identity checked, single-key payload validated, memory-only lifetime/core dumps disabled; no general-key fallback]
 - Frozen assigned manifest and exact execution command: [no secrets in arguments]
 - Go/no-go decision, decision-maker, time and unresolved blockers: [fill]
 

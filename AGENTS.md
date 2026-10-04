@@ -39,6 +39,20 @@ Account for every assigned outcome, retain failed attempts, and complete the pos
 The runbook is a required workflow, not a claim that all launchers enforce it automatically. Resource
 ownership directives retain their stated scope; this requirement grants no new spending or deployment authority.
 
+## Experiment operations
+
+Use `python3 scripts/experiment.py list` and `inspect <study-id>` to locate the current study,
+setup record, post-mortem and supported operations. Follow
+[the operations guide](tooling/agent-experiments/OPERATIONS.md) before preparing an attempt.
+The registry is navigation, not live admission evidence. Only explicitly implemented adapters
+may dispatch through this interface; other studies retain their documented manual workflows.
+
+Keep new designs, configuration iterations, fresh executions, interrupted attempts and saved-data
+reports distinct. Preserve the original budget ledger and attempt lineage. Do not retry ambiguous
+dispatches automatically, turn replayed responses into fresh samples, or copy the operating
+assistant's conversation/memory into experimental-agent context. Reuse unchanged scientific evidence
+only within its recorded scope; refresh operational receipts for each admitted attempt.
+
 ## Quick start
 
 ```bash
@@ -406,3 +420,7 @@ python3 .flightdeck/fd.py check --strict .
 ## Single researcher review for Vishesh's experiments
 
 Owner clarification, 2026-10-04 UTC: require one researcher review, not separate design and dossier sign-offs or approval from both Dmarz and Shadow. For How to win agents and influence swarms, Dmarz's published design feedback satisfies the researcher-review requirement by explicit owner direction. Retire the extra Q4 dossier-review gate. Resolve substantive feedback through the owning agent's implementation and validation; do not automatically request a second researcher review for routine repairs. Keep tests, bounded model qualification, public plans, budget and dedicated-account allocation checks. A completed design review must not be misrepresented as an independent code/arithmetic audit or formal hypothesis acceptance. This clarification supersedes duplicate review requirements in this owner's experiment plans.
+
+## Swarm Lab Anthropic credential transfers
+
+Owner directive, 2026-10-04 UTC: use the standing [Swarm Lab credential-transfer policy](tooling/agent-experiments/SWARM-LAB-CREDENTIALS.md). Only Keychain service `swarm-lab-anthropic`, account `vishesh`, is authorized for this owner’s shared Anthropic experiments. Transfer only that API key through verified encrypted SSH stdin to currently registered, authorized and exclusively claimed Swarm Lab run machines for an admitted, budgeted run; no general/project-other Anthropic fallback, secret bundle or persistent installation. This owner instruction supplies transfer authorization within that scope without a new per-host one-off request. Other launch gates and platform approval enforcement remain in force. Record non-secret provenance and fail closed on ambiguity.
