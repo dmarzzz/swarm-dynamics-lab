@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "date": "2026-10-03",
+  "date": "2026-10-04",
   "status": "Human-requested unreviewed hunches",
-  "source_snapshot": "a860443d09c80fda1d87ddb9fc322811fb6801dd",
+  "source_snapshot": "1fdcc728b53f0c8076d40ffb1cd3d30b84da632d",
   "previous_atlas_commit": "7333ef1",
   "changes": {
     "new": [
@@ -31,6 +31,9 @@
       "SEC-51",
       "SEC-52",
       "SEC-53",
+      "SEC-54",
+      "SEC-55",
+      "SEC-56",
       "MTH-07",
       "MTH-08",
       "MTH-09",
@@ -76,7 +79,9 @@
       "MKT-09",
       "MKT-10",
       "MKT-11",
-      "MKT-12"
+      "MKT-12",
+      "MKT-13",
+      "MKT-14"
     ],
     "revised": [
       "PHY-03",
@@ -226,7 +231,7 @@
       "OPT-06"
     ]
   },
-  "content_sha256": "221d012538054f1770caadee9b63c7681504ec970cb390328e0ad52b345e4fe1",
+  "content_sha256": "02cb5884a12e3ea9becd7097fb6be018dfc6f0673ed35558777e821100de37d3",
   "topics": {
     "collective-motion": "Collective motion models",
     "collective-decision": "Collective decision-making in biology",
@@ -7176,6 +7181,160 @@
       "status": "unreviewed-hunch"
     },
     {
+      "id": "SEC-54",
+      "area": "fork-merge-security",
+      "title": "When permitted specialist actions compose into a forbidden outcome",
+      "question": "Does fragmentation of a task across capability-restricted agents increase prohibited end-to-end outcomes even when each executed step obeys its local rule?",
+      "hypothesis": "Unreviewed hunch: Fragmented intent increases prohibited composition under local-operation helper policies; end-to-end helper policies reduce attempts, while enforced provenance checks reduce realized effects even when upstream agents cooperate.",
+      "test": "Extend the Patchwork reader/packager/courier microbenchmark with synthetic data and simulated exports. Randomize independent episodes across intent visibility, helper-policy scope and host provenance enforcement, then cross chain depth and redundant paths. Keep capabilities, task content, total model tokens and communication allowance matched; pad irrelevant context where needed. Pair benign and prohibited tasks and include isolated specialists and a centralized union-of-capabilities diagnostic. Record every attempted and committed transition, including local-rule violations separately. Analyze episodes, cluster paired tasks, and retain model/runtime failures rather than selecting successful retries.",
+      "baseline": "The original linear-chain factorial, isolated specialists, benign task completion and end-to-end policy without a host guard; centralized union is a labeled diagnostic with different authority.",
+      "metrics": [
+        "Prohibited committed effects per assigned episode",
+        "Locally valid prohibited chains",
+        "Prohibited attempts and guard interventions",
+        "Benign completion and false blocks",
+        "Tokens and latency per episode"
+      ],
+      "falsifier": "At prespecified precision, intent fragmentation produces no meaningful increase under local policies, or host enforcement reduces prohibited effects only by comparably suppressing matched benign work.",
+      "confounds": "Weak local policy is not alignment; a coordinator given a prohibited objective is not spontaneous malicious intent. Chain depth can increase latency or reduce competence. Perfect host provenance is a strong assumption, and five old replicates per cell do not establish an interaction.",
+      "prior": [
+        {
+          "id": "gh-dmarzzz-patchwork",
+          "relation": "Local 80-run extension: 4/5 versus 0/5 prohibited exports in the fragmented/local cell without versus with a host guard; one model and five runs per cell, not a heist-economy result.",
+          "title": "Patchwork Heist — capability-restricted agents and a private-profit economy",
+          "path": "library/code/gh-dmarzzz-patchwork.md",
+          "url": "https://github.com/dmarzzz/patchwork",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "triedman-2025-multi",
+          "relation": "Catalogue describes cross-agent control-flow hijacking. This isolates composition of already-permitted actions from an individual step violating its local policy.",
+          "title": "Multi-Agent Systems Execute Arbitrary Malicious Code",
+          "path": "library/papers/triedman-2025-multi.md",
+          "url": "https://arxiv.org/abs/2503.12188",
+          "catalogued_depth": "full"
+        },
+        {
+          "id": "green-2007-provenance",
+          "relation": "Derivation provenance is established for specified operations; it does not infer semantic dependence inside arbitrary LLM transformations.",
+          "title": "Provenance Semirings",
+          "path": "library/papers/green-2007-provenance.md",
+          "url": "https://www.cs.ucdavis.edu/~green/papers/pods07.pdf",
+          "catalogued_depth": "skim"
+        }
+      ],
+      "novelty": "boundary-test",
+      "feasibility": "api-small",
+      "needs": "Resolve access to and freeze the local Patchwork extension, reproduce benign/prohibited controls, finish the fork-merge prior-art gate and independently review the proposed protocol. Complements SEC-04 without silently changing permissions at return.",
+      "briefs": [
+        "researchers/dmarz/notes/question-atlas/patchwork-addendum.md"
+      ],
+      "candidate_sha256": "40e9cbb15c1f3121c89dd1e58482bf8272980741d19ee67425d423007bcd2dd6",
+      "change": "new",
+      "lane": "security",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "SEC-55",
+      "area": "swarm-detection",
+      "title": "Causal audits when provenance is incomplete",
+      "question": "At a fixed review budget, does tracing cross-agent ancestry still improve safe task completion when dependency edges are missing, spurious or semantically misleading?",
+      "hypothesis": "Unreviewed hunch: A causal audit with explicit unknown-edge handling yields more legitimate completions at a fixed tolerated violation rate than per-agent or recent-window review, but its advantage falls as relevant ancestry becomes unobservable.",
+      "test": "Start from Patchwork-style paired benign/prohibited traces, then hold out whole graph families with branches and multiple effects. Randomize episode-level graph views and missingness processes: random loss, omission near restricted sources, spurious parents and plausible transformations whose logged reads do not prove semantic use. Give each reviewer the same observable event store and total retrieval-plus-model budget. Compare per-agent, recent-window and ancestry retrieval with an explicit insufficient-evidence decision. Separately score classification and policies that quarantine or escalate abstentions under a fixed queue capacity. Tune thresholds only on training families; keep true ancestry evaluator-only.",
+      "baseline": "Matched-budget recent-window and per-agent review, reject-all, allow-all, and complete-provenance exact queries as a privileged diagnostic ceiling.",
+      "metrics": [
+        "Violation recall at fixed benign false-block rate",
+        "Benign completion after abstention handling",
+        "Abstention and review-queue load",
+        "Causal-path localization",
+        "Retrieval and model cost"
+      ],
+      "falsifier": "Ancestry retrieval supplies no useful-completion advantage at matched violation tolerance and total cost, or apparent gains require evaluator-only edges or unbounded escalation.",
+      "confounds": "Missing graph evidence is not proof of safety. Explicit toy labels make judging easier than realistic tool records. Retrieved artifacts do not prove semantic dependence; duplicated views of one trace are not independent samples.",
+      "prior": [
+        {
+          "id": "gh-dmarzzz-patchwork",
+          "relation": "The local semantic pilot detected 10/10 prohibited paths with complete ancestry; per-agent views abstained on all 20 cases. Only ten paired traces and a three-event motif.",
+          "title": "Patchwork Heist — capability-restricted agents and a private-profit economy",
+          "path": "library/code/gh-dmarzzz-patchwork.md",
+          "url": "https://github.com/dmarzzz/patchwork",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "green-2007-provenance",
+          "relation": "Formal derivation provenance supplies a baseline under specified query semantics, not a general LLM dependency oracle.",
+          "title": "Provenance Semirings",
+          "path": "library/papers/green-2007-provenance.md",
+          "url": "https://www.cs.ucdavis.edu/~green/papers/pods07.pdf",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "elnozahy-2002-survey",
+          "relation": "Distributed recovery depends on cross-process dependencies; recovery semantics are distinct from semantic classification.",
+          "title": "A survey of rollback-recovery protocols in message-passing systems",
+          "path": "library/papers/elnozahy-2002-survey.md",
+          "url": "https://www.cs.cornell.edu/lorenzo/papers/SurveyFinal.pdf",
+          "catalogued_depth": "skim"
+        }
+      ],
+      "novelty": "boundary-test",
+      "feasibility": "api-small",
+      "needs": "Freeze observable fields, missingness mechanisms, queue limits and held-out graph families; resolve source access and reproduce the basic instrument. Extends SEC-06 and SEC-30 by testing pre-effect auditing under incomplete observations.",
+      "briefs": [
+        "researchers/dmarz/notes/question-atlas/patchwork-addendum.md"
+      ],
+      "candidate_sha256": "0a67ff5582aac31765a81fa3206440663a3ae157e4f8666cac509ad50c19e16e",
+      "change": "new",
+      "lane": "security",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "SEC-56",
+      "area": "fork-merge-security",
+      "title": "How much finality delay buys containment?",
+      "question": "When does delaying irreversible effects give a swarm auditor enough time to contain violations without losing more legitimate task value than it saves?",
+      "hypothesis": "Unreviewed hunch: Containment tracks the distribution of total detection-and-response latency relative to finality deadlines; a bounded delay can improve useful completion under a violation constraint, but audit congestion erodes that benefit.",
+      "test": "Use a discrete-event simulator extending Patchwork asynchronous traces with benign task deadlines, nonzero audit service times and a finite queue. Randomize independent workload episodes to immediate finality, several fixed delays and a risk-tiered delay policy calibrated on separate traces. Cross audit cadence, service-time variance and arrival load while holding the detector, input traces, reviewer capacity and intervention budget fixed. An alert counts as containment only if cancellation completes strictly before finality; late correction cannot erase an effect. Report utility versus committed harm across the delay sweep rather than choosing a favorable unreported harm price.",
+      "baseline": "Immediate finality, synchronous pre-effect approval, fixed-delay audit and instantaneous complete-provenance detection as a labeled ceiling.",
+      "metrics": [
+        "Irreversible violations per episode",
+        "Detection recall versus actual containment",
+        "Time to effective cancellation",
+        "Legitimate value completed before deadlines",
+        "Audit backlog and blocked duration"
+      ],
+      "falsifier": "No prespecified delay improves the legitimate-value/committed-harm frontier over immediate finality or synchronous approval, or any gain disappears after audit service and cancellation costs are included.",
+      "confounds": "A pure condition that latency precedes a deadline is definitional, not a novel result. Event-count delays do not establish wall-clock performance. Perfect graph detection, arbitrary harm prices and dropping overload episodes can manufacture benefits.",
+      "prior": [
+        {
+          "id": "gh-dmarzzz-patchwork",
+          "relation": "The exact local audit contained no immediately final effects; an eight-event delay gave 100% containment at cadence eight but 50.8% at cadence sixteen under its deterministic motif.",
+          "title": "Patchwork Heist — capability-restricted agents and a private-profit economy",
+          "path": "library/code/gh-dmarzzz-patchwork.md",
+          "url": "https://github.com/dmarzzz/patchwork",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "elnozahy-2002-survey",
+          "relation": "Classical output-commit and rollback boundaries explain why external effects cannot simply be undone.",
+          "title": "A survey of rollback-recovery protocols in message-passing systems",
+          "path": "library/papers/elnozahy-2002-survey.md",
+          "url": "https://www.cs.cornell.edu/lorenzo/papers/SurveyFinal.pdf",
+          "catalogued_depth": "skim"
+        }
+      ],
+      "novelty": "boundary-test",
+      "feasibility": "offline",
+      "needs": "Explicit finality and cancellation state machine, frozen workload/deadline distributions and utility definition, then the relevant survey and review. Extends SEC-49 with an operational delay-versus-cost intervention; no new safety theorem is claimed.",
+      "briefs": [
+        "researchers/dmarz/notes/question-atlas/patchwork-addendum.md"
+      ],
+      "candidate_sha256": "3a1ef01dafe3d0c2d1fc41791d524eb49f5b5ecd0876237ac968cbdbc1c150d2",
+      "change": "new",
+      "lane": "security",
+      "status": "unreviewed-hunch"
+    },
+    {
       "id": "MET-01",
       "area": "criticality-measurement",
       "title": "Criticality beyond a geometric signature",
@@ -10849,6 +11008,115 @@
         "researchers/dmarz/notes/swarm-factory.md"
       ],
       "candidate_sha256": "cbf85d8b634d39b9da29720c212c5c830a0e60c30885fc8e7eae4f200d0b836e",
+      "change": "new",
+      "lane": "markets",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "MKT-13",
+      "area": "sybil-resistance",
+      "title": "Market limits with uncertain ownership and concurrent settlement",
+      "question": "Which aggregate spending and concentration protections survive inaccurate ownership records and concurrent actions that are individually permitted?",
+      "hypothesis": "Unreviewed hunch: Atomic checks over a common resource ledger preserve declared aggregate spending limits under complete mediation, but owner-specific concentration limits fail under missed owner links; conservative grouping trades those failures for false restrictions on independent firms.",
+      "test": "Extend Patchwork market conformance with paired prohibited and benign action sets. Randomize independent market episodes across local checks, per-agent checks, causal provenance and atomic aggregate-state checks. Independently vary proposal concurrency and observed ownership errors: missed same-owner links, false merges of independent firms and unresolved owners. Keep true ownership in the evaluator and identical observed records across comparable policies; oracle ownership is a separate ceiling. First replay fixed scripted proposals to isolate enforcement, then run a separately qualified model pilot with matched total compute per principal and neutral profit objectives. Measure attempted versus committed violations separately; do not infer agent discovery from scripted strategies.",
+      "baseline": "Perfect-owner atomic enforcement, merged firm with the same capital, genuinely independent firms with matched actions, and non-atomic aggregate checks exposed to the same interleavings.",
+      "metrics": [
+        "Committed aggregate-cap breaches",
+        "True-owner concentration violations",
+        "False blocks of independent firms",
+        "Principal profit and legitimate surplus",
+        "Decision latency and unsettled actions"
+      ],
+      "falsifier": "Practical observed-owner policies match the oracle across prespecified missing-link and false-merge conditions with no meaningful utility loss, or causal-only review enforces the chosen aggregate limits without equivalent shared-state accounting.",
+      "confounds": "Knowing beneficial owners solves an identity problem by assumption. Complete mediation and atomic settlement are prerequisites, not model behavior. Conservation alone is not fair allocation; equal per-firm inference can advantage owners with more identities.",
+      "prior": [
+        {
+          "id": "gh-dmarzzz-patchwork",
+          "relation": "Local scripted suite left 200/500 prohibited cases under causal provenance and zero under aggregate invariants; owner labels and settlement were trusted.",
+          "title": "Patchwork Heist — capability-restricted agents and a private-profit economy",
+          "path": "library/code/gh-dmarzzz-patchwork.md",
+          "url": "https://github.com/dmarzzz/patchwork",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "zhu-2026-fault",
+          "relation": "Catalogue records budget conservation under mediation, authentication and crash-fault assumptions; it does not establish resistance to false beneficial-owner labels.",
+          "title": "Fault-Tolerant Budget Conservation in Distributed Multi-Agent Delegation",
+          "path": "library/papers/zhu-2026-fault.md",
+          "url": "https://arxiv.org/abs/2610.00349",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "mazorra-2023-cost",
+          "relation": "False-name mechanism theory motivates matching principal resources; it supplies no general ownership-inference solution.",
+          "title": "The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms",
+          "path": "library/papers/mazorra-2023-cost.md",
+          "url": "https://arxiv.org/pdf/2301.12813",
+          "catalogued_depth": "full"
+        }
+      ],
+      "novelty": "boundary-test",
+      "feasibility": "offline",
+      "needs": "Enumerate the exact invariants and legal observations, freeze ownership-error generation and qualify race controls. Connect to MKT-03/MKT-11 and BUD-08/BUD-09 while keeping enforcement correctness separate from incentives and discovery.",
+      "briefs": [
+        "researchers/dmarz/notes/question-atlas/patchwork-addendum.md",
+        "researchers/dmarz/notes/market-split/README.md"
+      ],
+      "candidate_sha256": "fdac3bbdb4fcb47233cd7e55fcca543bc87e31ec5e6d5d278b6cda7a47aea856",
+      "change": "new",
+      "lane": "markets",
+      "status": "unreviewed-hunch"
+    },
+    {
+      "id": "MKT-14",
+      "area": "llm-agent-swarms",
+      "title": "Evidence royalties versus identity farming",
+      "question": "Can paying for evidence used in a joint opportunity increase useful discovery without making duplicate identities or redundant evidence more profitable?",
+      "hypothesis": "Unreviewed hunch: In repeated private-profit worlds with costly discovery, payments tied to unique evidence actually used increase useful evidence production and producer returns relative to free reuse; payments per publisher instead reward duplicated identities and redundant claims.",
+      "test": "Modify the Patchwork economy to make discovery costly and allow agents to choose whether to search and publish across repeated opportunities. Randomize whole market episodes to free public reuse, a fixed revenue share divided among all publishers, or the same share divided among unique evidence receipts used at settlement. Cross a single owner versus permitted identity splitting at matched capital, total model budget and discovery opportunities; keep evidence visibility and communication channels identical in the main comparison. Preregister how substitutes and complementary evidence share payment and how duplicate receipts are rejected. Observe endogenous discovery as well as completion, owner-level payoffs and unused contributions. A separate matched visibility control should test whether public evidence, rather than chat, carries coordination.",
+      "baseline": "Original free-reuse economy, publisher-count royalties, no-splitting arms and scripted policies showing each payment rule is executable; all transfers come from the same realized revenue, not added subsidy.",
+      "metrics": [
+        "Unique useful evidence produced per opportunity",
+        "Opportunity completion and net external surplus",
+        "Evidence-producer net returns",
+        "Principal gain from identity splitting",
+        "Redundant claims, contracts and payment concentration"
+      ],
+      "falsifier": "At prespecified precision, receipt-based payments do not improve discovery or producer returns, lose comparable net surplus through friction, or permit profitable identity splitting without new useful evidence.",
+      "confounds": "The old nine-case pilot never tested royalties. Recorded use is not causal marginal contribution or moral entitlement; substitute and complementary evidence complicate attribution. An oracle deduplicator hides manipulation, and changing evidence visibility together with payments confounds incentives.",
+      "prior": [
+        {
+          "id": "gh-dmarzzz-patchwork",
+          "relation": "Nine economy cases used no service contracts; four of six sales were solo with freely reusable public evidence. This motivates but does not establish a property-rights mechanism.",
+          "title": "Patchwork Heist — capability-restricted agents and a private-profit economy",
+          "path": "library/code/gh-dmarzzz-patchwork.md",
+          "url": "https://github.com/dmarzzz/patchwork",
+          "catalogued_depth": "skim"
+        },
+        {
+          "id": "piedrahita-2025-corrupted",
+          "relation": "Catalogue documents model-dependent free-riding in public-goods games, a different institution from evidence production; it does not predict this treatment effect.",
+          "title": "Corrupted by Reasoning: Reasoning Language Models Become Free-Riders in Public Goods Games",
+          "path": "library/papers/piedrahita-2025-corrupted.md",
+          "url": "https://arxiv.org/abs/2506.23276",
+          "catalogued_depth": "full"
+        },
+        {
+          "id": "mazorra-2023-cost",
+          "relation": "Shows why counting identities in rewards can introduce false-name incentives; no blanket guarantee transfers to evidence royalties.",
+          "title": "The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms",
+          "path": "library/papers/mazorra-2023-cost.md",
+          "url": "https://arxiv.org/pdf/2301.12813",
+          "catalogued_depth": "full"
+        }
+      ],
+      "novelty": "extension",
+      "feasibility": "api-small",
+      "needs": "Specify discovery costs, payment conservation, observable evidence receipts and a non-oracle deduplication comparator; resolve Patchwork access and complete the relevant survey/review gates. Related to BUD-14, MKT-09 and SEC-14, but tests compensation for information production.",
+      "briefs": [
+        "researchers/dmarz/notes/question-atlas/patchwork-addendum.md"
+      ],
+      "candidate_sha256": "2f5ee5bfba8ef965ba41cdc9cbd53af3847a8cca927b2146c42862f322af18f8",
       "change": "new",
       "lane": "markets",
       "status": "unreviewed-hunch"

@@ -2,7 +2,11 @@
 
 Update 2, 2026-10-03. Owner: dmarz/question-atlas. **Human-requested unreviewed hunches for selection.** No experiments were run or approved by this update.
 
-The bank now contains **202 candidates across 15 areas: 59 new, 36 revised and 107 unchanged**, linked to 301 distinct source records. The refresh retains all 143 original IDs and incorporates research through main `a860443d09c80fda1d87ddb9fc322811fb6801dd`. It includes work that arrived during the refresh: the LLM-swarm survey's response to review and the now-merged simulator survey. The [input inventory](research-delta-v2.json) lists 379 new and 56 edited catalogue records and maps directly cited records to candidate IDs. It records the scope of the comparison, not a claim that every source was read in full or that every new source deserves a new question.
+The original Update 2 snapshot contained **202 candidates across 15 areas: 59 new, 36 revised and 107 unchanged**, linked to 301 distinct source records. The refresh retains all 143 original IDs and incorporates research through main `a860443d09c80fda1d87ddb9fc322811fb6801dd`. It includes work that arrived during the refresh: the LLM-swarm survey's response to review and the now-merged simulator survey. The [input inventory](research-delta-v2.json) lists 379 new and 56 edited catalogue records and maps directly cited records to candidate IDs. It records the scope of the comparison, not a claim that every source was read in full or that every new source deserves a new question.
+
+## Patchwork addendum, 2026-10-04
+
+Five additional unreviewed candidates are now included: **SEC-54–56 and MKT-13–14**. They test composed authority, causal audits with missing provenance, finality delay, aggregate rules under uncertain ownership, and evidence royalties. [The addendum](patchwork-addendum.md) maps them to existing questions and distinguishes local live-model pilots from scripted conformance and untested mechanisms. This is a bounded addition, not a new survey or a blanket refresh of the earlier literature. Existing IDs, editable card content and review fingerprints are preserved.
 
 ## Candidate change inventory
 
