@@ -42,15 +42,14 @@
 | [add-experiment-evidence-metadata](tasks/add-experiment-evidence-metadata.md) | claimed | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T04:07Z | Add evidence confidence and sample-size metadata to every study |
 | [antsy-receipt-v6](tasks/antsy-receipt-v6.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T04:09Z | Build and evaluate real receipt-total checking with fresh data |
 | [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T04:08Z | Ship the compositional safety benchmark and qualification |
-| [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | claimed | p1 | build | dmarz/soc07-private | dmarz | 2026-10-04T03:49Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
+| [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | claimed | p1 | build | dmarz/soc07-private | dmarz | 2026-10-04T04:15Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T04:08Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [phantom-coast-live](tasks/phantom-coast-live.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:04Z | Launch bounded Phantom Coast native pilot |
 | [poietic-agents-design](tasks/poietic-agents-design.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T04:08Z | Design Poietic Agents from the self-differentiating swarm research |
-| [review-influence-q4-dossiers](tasks/review-influence-q4-dossiers.md) | claimed | p1 | review | vishesh/codex-experiments | dmarz | 2026-10-04T04:15Z | Independently review the four fresh influence qualification dossiers |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:04Z | Deploy and assess the Right Dissenter exploratory live study |
-| [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T03:53Z | Ship the neutral-agent market-splitting pilot |
+| [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T04:15Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -60,7 +59,7 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [sybil-followups](tasks/sybil-followups.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T03:51Z | Ship parallel Sybil verification-budget and newcomer-trust follow-ups |
+| [sybil-followups](tasks/sybil-followups.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T04:15Z | Ship parallel Sybil verification-budget and newcomer-trust follow-ups |
 | [theseus-v2-iteration](tasks/theseus-v2-iteration.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T04:04Z | Build and qualify a practical Theseus continuity iteration |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
@@ -174,6 +173,7 @@
 | [review-discussion-benchmark-v3](tasks/review-discussion-benchmark-v3.md) | done | p1 | review | vishesh/codex-independent-reviews |  | 2026-10-04T02:57Z | Independently review the implemented discussion and memory benchmark v3 |
 | [review-discussion-dose](tasks/review-discussion-dose.md) | done | p1 | review | vishesh/codex-independent-reviews |  | 2026-10-04T02:26Z | Review SEC-47 discussion dose tasks and exploratory protocol |
 | [review-discussion-dose-v2-fixes](tasks/review-discussion-dose-v2-fixes.md) | done | p1 | review | dmarz/discussion-dose | dmarz | 2026-10-04T01:30Z | Check whether discussion dose v2 addresses the original pilot limitations |
+| [review-influence-q4-dossiers](tasks/review-influence-q4-dossiers.md) | done | p1 | review | vishesh/codex-experiments | dmarz | 2026-10-04T04:16Z | Independently review the four fresh influence qualification dossiers |
 | [review-llm-agent-swarms-vishesh](tasks/review-llm-agent-swarms-vishesh.md) | done | p1 | review | vishesh/codex-independent-reviews | vishesh | 2026-10-04T02:29Z | Independent vishesh check of the revised LLM-agent-swarms survey |
 | [right-dissenter-design-build](tasks/right-dissenter-design-build.md) | done | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T03:13Z | Build the Right Dissenter exploratory design and scenario harness |
 | [run-discussion-dose-s0](tasks/run-discussion-dose-s0.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T01:21Z | Prepare and run the first real-model discussion-dose qualification |
@@ -214,6 +214,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T04:45Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
+| dmarz/inbox-design-feedback | working | rereview-llm-agent-swarms | 2026-10-04T04:15Z | Reviewing all four requested packages with offline evidence and source checks. |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T04:12Z | Paired diagnostic of missing execution/history semantics on saved stalls; same approved model before fresh qualification |
 | vishesh/codex-runbook | done | institutionalize-experiment-setup | 2026-10-04T04:12Z | Published shared experiment setup instructions and runbook; checks passed |
 | dmarz/private-control | done | build-v3-resample-control | 2026-10-04T04:10Z | resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs |
@@ -228,11 +229,10 @@
 | vishesh/codex-immune | blocked | immune-response-evidence-receipts | 2026-10-04T03:56Z | Wrong-account deployment deleted; tested A3 ready, blocked only on Dmarz provisioning path and verified account allocation |
 | vishesh/codex-theseus | working | theseus-v2-iteration | 2026-10-04T03:56Z | Execute approved v2 qualification and gated pilot on dedicated sim-shadow |
 | dmarz/orbital-orchestrator | idle |  | 2026-10-04T03:55Z | Run orchestrator on orbital-one; verified access, awaiting instructions |
-| dmarz/inbox-design-feedback | done |  | 2026-10-04T03:53Z | Delivered fleet separation reminders and external influence design feedback; market agent acknowledged dispatch hold. |
 | vishesh/codex-heterogeneous | done | heterogeneous-priority-revision | 2026-10-04T03:53Z | Published owner-revised scores and the self-differentiating swarm recommendation |
 | vishesh/codex-methods | done | antsy-verification-v5 | 2026-10-04T03:51Z | Completed Antsy v5 numerical repair and cost-aware diagnostics; practical successor gated |
 | vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T03:46Z | $20 first-attempt API cap authorized and enforced; awaiting independent review and live launch prerequisites |
-| vishesh/codex-experiments | blocked |  | 2026-10-04T03:43Z | Fresh Q4 instrument passes 24 tests and 12 scripted decisions; USD 10 increase approved and recorded; sim-test-01 exclusively allocated and tests pass; native Q4 awaits independent dossier review |
+| vishesh/codex-experiments | idle |  | 2026-10-04T03:43Z | Fresh Q4 instrument passes 24 tests and 12 scripted decisions; USD 10 increase approved and recorded; Single researcher review satisfied; duplicate dossier gate retired; qualification launch preparation remains |
 | shadow/sol-rev | done |  | 2026-10-04T03:20Z | Filed independent review of discussion benchmark v3 (pass-with-fixes); task was user-transferred to vishesh mid-review. |
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
