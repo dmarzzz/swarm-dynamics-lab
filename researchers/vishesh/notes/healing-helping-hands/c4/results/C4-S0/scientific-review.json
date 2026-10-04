@@ -1,0 +1,55 @@
+{
+  "execution": "completed",
+  "numeric_qualification": "passed",
+  "scientific_qualification": "invalid_label_leakage",
+  "S1_admitted": false,
+  "reason": "Evaluator truth appears in all S0 method names; declared family appears in S1 source method names. Both violate declared context exclusion.",
+  "coverage": {
+    "assigned": 60,
+    "complete": 60,
+    "wire_payloads_reconstructed": 180,
+    "raw_responses_retained": 180,
+    "qualification_miss_cases_reviewed": 20,
+    "matched_successes_reviewed": 4
+  },
+  "observed": {
+    "jev_correct": 60,
+    "qwen_a_correct": 40,
+    "qwen_b_correct": 40,
+    "accepted_wrong": 20,
+    "referrals": 0,
+    "transport_failures": 0
+  },
+  "first_observable_divergence": "Scenario serialization exposes expected class in a method identifier before either model responds. Qwen then emits REFUTE on all20SUPPORT reports; raw outputs match parsed labels.",
+  "cause_limits": "Leakage is proven from actual inputs. Whether models used the label token or why Qwen inverted SUPPORT is unknown; do not infer hidden reasoning or clean routing performance.",
+  "reviewed_miss_ids": [
+    "C4-S0-SUPPORT-7",
+    "C4-S0-SUPPORT-6",
+    "C4-S0-SUPPORT-17",
+    "C4-S0-SUPPORT-19",
+    "C4-S0-SUPPORT-12",
+    "C4-S0-SUPPORT-14",
+    "C4-S0-SUPPORT-3",
+    "C4-S0-SUPPORT-15",
+    "C4-S0-SUPPORT-1",
+    "C4-S0-SUPPORT-4",
+    "C4-S0-SUPPORT-11",
+    "C4-S0-SUPPORT-13",
+    "C4-S0-SUPPORT-8",
+    "C4-S0-SUPPORT-18",
+    "C4-S0-SUPPORT-16",
+    "C4-S0-SUPPORT-5",
+    "C4-S0-SUPPORT-2",
+    "C4-S0-SUPPORT-9",
+    "C4-S0-SUPPORT-0",
+    "C4-S0-SUPPORT-10"
+  ],
+  "matched_success_ids": [
+    "C4-S0-REFUTE-2",
+    "C4-S0-REFUTE-10",
+    "C4-S0-UNCERTAIN-19",
+    "C4-S0-UNCERTAIN-4"
+  ],
+  "no_retry": true,
+  "next": "Offline metadata-blind fixture repair and new bounded qualification proposal; no S1 or successor dispatch."
+}

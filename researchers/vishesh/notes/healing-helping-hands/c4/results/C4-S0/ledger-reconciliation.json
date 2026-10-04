@@ -1,0 +1,10 @@
+{
+  "historical_entries_unchanged": 2179,
+  "total_reservations": 2239,
+  "completed_cost_usd": 0.042017472,
+  "uncertain_exposure_usd": 0.001344,
+  "remaining_usd": 0.05663852800000001,
+  "remote_dispatch_disabled": true,
+  "original_local_authority_restored": true,
+  "sha256": "6c2a17f58a26754cf6394d74d867cbad0212fa1025fe9e897f0807c986d5db1f"
+}

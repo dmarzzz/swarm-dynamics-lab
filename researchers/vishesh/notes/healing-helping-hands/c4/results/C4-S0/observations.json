@@ -1,0 +1,782 @@
+[
+  {
+    "id": "C4-S0-SUPPORT-7",
+    "family": "qualification-3",
+    "claim": "Qualification method C4-SUPPORT-7 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-7 outperformed baseline accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-2",
+    "family": "qualification-2",
+    "claim": "Qualification method C4-REFUTE-2 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-2 gave fewer correct answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-6",
+    "family": "qualification-2",
+    "claim": "Qualification method C4-SUPPORT-6 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-6 gave more correct answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-10",
+    "family": "qualification-2",
+    "claim": "Qualification method C4-REFUTE-10 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-10 gave fewer correct answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-19",
+    "family": "qualification-3",
+    "claim": "Qualification method C4-UNCERTAIN-19 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-19 has only a planned accuracy experiment.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-4",
+    "family": "qualification-0",
+    "claim": "Qualification method C4-UNCERTAIN-4 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-4 was never tested for accuracy.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-17",
+    "family": "qualification-1",
+    "claim": "Qualification method C4-SUPPORT-17 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-17 improved measured accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-17",
+    "family": "qualification-1",
+    "claim": "Qualification method C4-REFUTE-17 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-17 did not improve measured accuracy.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-12",
+    "family": "qualification-0",
+    "claim": "Qualification method C4-REFUTE-12 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-12 measured lower accuracy.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-13",
+    "family": "qualification-1",
+    "claim": "Qualification method C4-REFUTE-13 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-13 did not improve measured accuracy.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-18",
+    "family": "qualification-2",
+    "claim": "Qualification method C4-UNCERTAIN-18 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-18 was tested for speed only.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-8",
+    "family": "qualification-0",
+    "claim": "Qualification method C4-REFUTE-8 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-8 measured lower accuracy.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-5",
+    "family": "qualification-1",
+    "claim": "Qualification method C4-REFUTE-5 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-5 did not improve measured accuracy.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-8",
+    "family": "qualification-0",
+    "claim": "Qualification method C4-UNCERTAIN-8 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-8 was never tested for accuracy.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-19",
+    "family": "qualification-3",
+    "claim": "Qualification method C4-SUPPORT-19 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-19 outperformed baseline accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-12",
+    "family": "qualification-0",
+    "claim": "Qualification method C4-SUPPORT-12 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-12 measured higher accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-9",
+    "family": "qualification-1",
+    "claim": "Qualification method C4-REFUTE-9 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-9 did not improve measured accuracy.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-10",
+    "family": "qualification-2",
+    "claim": "Qualification method C4-UNCERTAIN-10 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-10 was tested for speed only.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-7",
+    "family": "qualification-3",
+    "claim": "Qualification method C4-REFUTE-7 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-7 matched baseline accuracy exactly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-5",
+    "family": "qualification-1",
+    "claim": "Qualification method C4-UNCERTAIN-5 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-5 has no accuracy result available.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-2",
+    "family": "qualification-2",
+    "claim": "Qualification method C4-UNCERTAIN-2 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-2 was tested for speed only.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-6",
+    "family": "qualification-2",
+    "claim": "Qualification method C4-REFUTE-6 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-6 gave fewer correct answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-0",
+    "family": "qualification-0",
+    "claim": "Qualification method C4-REFUTE-0 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-0 measured lower accuracy.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-14",
+    "family": "qualification-2",
+    "claim": "Qualification method C4-SUPPORT-14 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-14 gave more correct answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-3",
+    "family": "qualification-3",
+    "claim": "Qualification method C4-SUPPORT-3 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-3 outperformed baseline accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-18",
+    "family": "qualification-2",
+    "claim": "Qualification method C4-REFUTE-18 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-18 gave fewer correct answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-15",
+    "family": "qualification-3",
+    "claim": "Qualification method C4-SUPPORT-15 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-15 outperformed baseline accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-4",
+    "family": "qualification-0",
+    "claim": "Qualification method C4-REFUTE-4 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-4 measured lower accuracy.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-15",
+    "family": "qualification-3",
+    "claim": "Qualification method C4-REFUTE-15 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-15 matched baseline accuracy exactly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-16",
+    "family": "qualification-0",
+    "claim": "Qualification method C4-UNCERTAIN-16 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-16 was never tested for accuracy.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-0",
+    "family": "qualification-0",
+    "claim": "Qualification method C4-UNCERTAIN-0 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-0 was never tested for accuracy.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-16",
+    "family": "qualification-0",
+    "claim": "Qualification method C4-REFUTE-16 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-16 measured lower accuracy.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-12",
+    "family": "qualification-0",
+    "claim": "Qualification method C4-UNCERTAIN-12 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-12 was never tested for accuracy.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-1",
+    "family": "qualification-1",
+    "claim": "Qualification method C4-SUPPORT-1 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-1 improved measured accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-4",
+    "family": "qualification-0",
+    "claim": "Qualification method C4-SUPPORT-4 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-4 measured higher accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-3",
+    "family": "qualification-3",
+    "claim": "Qualification method C4-UNCERTAIN-3 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-3 has only a planned accuracy experiment.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-11",
+    "family": "qualification-3",
+    "claim": "Qualification method C4-SUPPORT-11 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-11 outperformed baseline accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-9",
+    "family": "qualification-1",
+    "claim": "Qualification method C4-UNCERTAIN-9 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-9 has no accuracy result available.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-11",
+    "family": "qualification-3",
+    "claim": "Qualification method C4-REFUTE-11 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-11 matched baseline accuracy exactly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-13",
+    "family": "qualification-1",
+    "claim": "Qualification method C4-SUPPORT-13 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-13 improved measured accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-14",
+    "family": "qualification-2",
+    "claim": "Qualification method C4-UNCERTAIN-14 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-14 was tested for speed only.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-8",
+    "family": "qualification-0",
+    "claim": "Qualification method C4-SUPPORT-8 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-8 measured higher accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-19",
+    "family": "qualification-3",
+    "claim": "Qualification method C4-REFUTE-19 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-19 matched baseline accuracy exactly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-14",
+    "family": "qualification-2",
+    "claim": "Qualification method C4-REFUTE-14 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-14 gave fewer correct answers.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-13",
+    "family": "qualification-1",
+    "claim": "Qualification method C4-UNCERTAIN-13 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-13 has no accuracy result available.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-7",
+    "family": "qualification-3",
+    "claim": "Qualification method C4-UNCERTAIN-7 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-7 has only a planned accuracy experiment.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-6",
+    "family": "qualification-2",
+    "claim": "Qualification method C4-UNCERTAIN-6 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-6 was tested for speed only.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-18",
+    "family": "qualification-2",
+    "claim": "Qualification method C4-SUPPORT-18 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-18 gave more correct answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-11",
+    "family": "qualification-3",
+    "claim": "Qualification method C4-UNCERTAIN-11 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-11 has only a planned accuracy experiment.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-1",
+    "family": "qualification-1",
+    "claim": "Qualification method C4-UNCERTAIN-1 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-1 has no accuracy result available.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-16",
+    "family": "qualification-0",
+    "claim": "Qualification method C4-SUPPORT-16 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-16 measured higher accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-5",
+    "family": "qualification-1",
+    "claim": "Qualification method C4-SUPPORT-5 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-5 improved measured accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-2",
+    "family": "qualification-2",
+    "claim": "Qualification method C4-SUPPORT-2 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-2 gave more correct answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-9",
+    "family": "qualification-1",
+    "claim": "Qualification method C4-SUPPORT-9 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-9 improved measured accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-1",
+    "family": "qualification-1",
+    "claim": "Qualification method C4-REFUTE-1 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-1 did not improve measured accuracy.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "jev": "REFUTE",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-REFUTE-3",
+    "family": "qualification-3",
+    "claim": "Qualification method C4-REFUTE-3 improves accuracy over baseline.",
+    "report": "Qualification method C4-REFUTE-3 matched baseline accuracy exactly.",
+    "expected": "REFUTE",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-17",
+    "family": "qualification-1",
+    "claim": "Qualification method C4-UNCERTAIN-17 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-17 has no accuracy result available.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "jev": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "b": "UNCERTAIN"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-0",
+    "family": "qualification-0",
+    "claim": "Qualification method C4-SUPPORT-0 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-0 measured higher accuracy.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "b": "REFUTE",
+      "a": "REFUTE",
+      "jev": "SUPPORT"
+    }
+  },
+  {
+    "id": "C4-S0-SUPPORT-10",
+    "family": "qualification-2",
+    "claim": "Qualification method C4-SUPPORT-10 improves accuracy over baseline.",
+    "report": "Qualification method C4-SUPPORT-10 gave more correct answers.",
+    "expected": "SUPPORT",
+    "status": "completed",
+    "labels": {
+      "jev": "SUPPORT",
+      "a": "REFUTE",
+      "b": "REFUTE"
+    }
+  },
+  {
+    "id": "C4-S0-UNCERTAIN-15",
+    "family": "qualification-3",
+    "claim": "Qualification method C4-UNCERTAIN-15 improves accuracy over baseline.",
+    "report": "Qualification method C4-UNCERTAIN-15 has only a planned accuracy experiment.",
+    "expected": "UNCERTAIN",
+    "status": "completed",
+    "labels": {
+      "b": "UNCERTAIN",
+      "a": "UNCERTAIN",
+      "jev": "UNCERTAIN"
+    }
+  }
+]

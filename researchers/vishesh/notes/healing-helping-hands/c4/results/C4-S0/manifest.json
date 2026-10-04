@@ -1,0 +1,60 @@
+{
+  "attempt": "C4-S0",
+  "stage": "S0",
+  "status": "completed",
+  "source_hashes": {
+    "researchers/vishesh/notes/healing-helping-hands/c4/runtime.py": "162ad1ce3c2d4330e40c2fedf6388e52ca8584229f91169450c848b76f1e3044",
+    "researchers/vishesh/notes/healing-helping-hands/c4/test_contract.py": "aa46f7bd8323f5bbee42f47902db2275466d7d6680f462cc3b1a893f0605536e",
+    "researchers/vishesh/notes/healing-helping-hands/c4/audit.py": "4888838eab54985e81e18a2710614b70f32fb95a1010be803c2b7f7dd8e01eff",
+    "researchers/vishesh/notes/healing-helping-hands/c4/supervise.py": "0128591caaa8175499e0acef72719ae1228da75976093969b09bb3caedc9e56b",
+    "researchers/vishesh/notes/healing-helping-hands/c4/relay.py": "8d420165554bbe672c4f50b73a010b6b05e5b29778ecce94ed129f6710df93dd",
+    "researchers/vishesh/notes/healing-helping-hands/c4/scenarios.py": "788366224377a75a5a94f055a1aa44e947ef0c8cab77b11c17b7839db808f341",
+    "researchers/vishesh/notes/healing-helping-hands/c4/contract.py": "6e614cf6759797f82405959ac7e9ffb156042267e29c6e9843adeb39a5a508fd",
+    "researchers/vishesh/notes/healing-helping-hands/c4/worker.py": "5e59e220b2d2d376ee8f1486f56eafcb37af15ec1167a65f3a881f252567385a",
+    "researchers/vishesh/notes/healing-helping-hands/c4/render.py": "50bc8c32abb652db58b1c3f3b60702722aff816094a1d8a113395a7af02469db",
+    "researchers/vishesh/notes/healing-helping-hands/c4/test_native.py": "e792d8e194db8c0eb644524b8908e2c6970dc8887ebae492ea9a01900726b8c1",
+    "researchers/vishesh/notes/healing-helping-hands/src/jev.py": "e18030f9a73b409e0b7b2c1c5b5d4e4907b71aa3aaea72cc5ef0ab2cf5298ede",
+    "researchers/vishesh/notes/healing-helping-hands/src/jev_relay.py": "8d9ec958e7f2d63a45cd9e7913a90c17a542adb18cf2765ead9eb8d201cc5ecb",
+    "researchers/vishesh/notes/healing-helping-hands/src/providers.py": "1d020c4509904760a765ed2928ff6965a43b89781ef7a960b02624ccafe8bdee",
+    "researchers/vishesh/notes/healing-helping-hands/practical/reporting.py": "3b75a9f8a7dc12fd9b6822f8f314b1808894f3565ffe2e7b07917a156d8e8528",
+    "researchers/vishesh/notes/experiment-documentation/public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+  },
+  "plan": {
+    "experiment": "healing-helping-hands",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/1adeb586d6cc1965ebedc84561a7881d0a9f0cfd/researchers/vishesh/notes/healing-helping-hands/c4/PLAN.md",
+    "commit": "1adeb586d6cc1965ebedc84561a7881d0a9f0cfd",
+    "plan_sha256": "fb20b2c67f88e41d8c645986074c28e4fbee4cea848e99c392a2890ef4e4e09f",
+    "registered_tldr": "TLDR: C4 qualification is registered prospectively under the approved direct-execution scope. No C4 outcomes are available yet. C4 tests whether Qwen 0.6B option-order disagreement identifies reports needing Jev. Compare the agreement cascade with always-Jev, Qwen alone, and equal-count random referrals. First qualify on 60 fresh cases; only then evaluate 432 reports across 12 authored synthetic families. Measure absolute error, accepted-but-wrong decisions, referrals and actual cost. Derived consultation savings are not production cost savings, two Qwen passes are not independent votes, and 432 reports do not establish powered non-inferiority. C3 negative results and past failures remain preserved.",
+    "run_tldr": "TLDR: C4-S0 option-order agreement referral versus always-Jev, Qwen-only and same-count random referral; measure absolute error, missed errors and derived consultations on synthetic report families.",
+    "checked_utc": "2026-10-04T16:57:05.951616+00:00"
+  },
+  "calls": {
+    "qwen": 120,
+    "jev": 60
+  },
+  "qwen_metadata": {
+    "name": "qwen3:0.6b",
+    "model": "qwen3:0.6b",
+    "modified_at": "2026-10-04T16:55:39.673315845Z",
+    "size": 522653767,
+    "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "751.63M",
+      "quantization_level": "Q4_K_M"
+    }
+  },
+  "seconds": 168.42019677899953,
+  "observation_counts": {
+    "completed": 60
+  },
+  "native_manifest_sha256": "f101e2398bc89d19aa82733c96255cdd8a1487bf2a6c344908db25a9db4bb560",
+  "scientific_status": "invalid_qualification",
+  "next_stage": "withheld",
+  "api_cost_usd": 0.00112665
+}

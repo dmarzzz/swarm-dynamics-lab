@@ -1,0 +1,1451 @@
+{
+  "confusion": {
+    "qwen": {
+      "SUPPORT": {
+        "SUPPORT": 0,
+        "REFUTE": 20,
+        "UNCERTAIN": 0,
+        "MISSING": 0
+      },
+      "REFUTE": {
+        "SUPPORT": 0,
+        "REFUTE": 20,
+        "UNCERTAIN": 0,
+        "MISSING": 0
+      },
+      "UNCERTAIN": {
+        "SUPPORT": 0,
+        "REFUTE": 0,
+        "UNCERTAIN": 20,
+        "MISSING": 0
+      }
+    },
+    "jev": {
+      "SUPPORT": {
+        "SUPPORT": 20,
+        "REFUTE": 0,
+        "UNCERTAIN": 0,
+        "MISSING": 0
+      },
+      "REFUTE": {
+        "SUPPORT": 0,
+        "REFUTE": 20,
+        "UNCERTAIN": 0,
+        "MISSING": 0
+      },
+      "UNCERTAIN": {
+        "SUPPORT": 0,
+        "REFUTE": 0,
+        "UNCERTAIN": 20,
+        "MISSING": 0
+      }
+    },
+    "cascade": {
+      "SUPPORT": {
+        "SUPPORT": 0,
+        "REFUTE": 20,
+        "UNCERTAIN": 0,
+        "MISSING": 0
+      },
+      "REFUTE": {
+        "SUPPORT": 0,
+        "REFUTE": 20,
+        "UNCERTAIN": 0,
+        "MISSING": 0
+      },
+      "UNCERTAIN": {
+        "SUPPORT": 0,
+        "REFUTE": 0,
+        "UNCERTAIN": 20,
+        "MISSING": 0
+      }
+    },
+    "matched": {
+      "SUPPORT": {
+        "SUPPORT": 0,
+        "REFUTE": 20,
+        "UNCERTAIN": 0,
+        "MISSING": 0
+      },
+      "REFUTE": {
+        "SUPPORT": 0,
+        "REFUTE": 20,
+        "UNCERTAIN": 0,
+        "MISSING": 0
+      },
+      "UNCERTAIN": {
+        "SUPPORT": 0,
+        "REFUTE": 0,
+        "UNCERTAIN": 20,
+        "MISSING": 0
+      }
+    }
+  },
+  "assigned": 60,
+  "completed": 60,
+  "missing": 0,
+  "families": {
+    "qualification-0": {
+      "assigned": 15,
+      "completed": 15,
+      "error": {
+        "qwen": 0.3333333333333333,
+        "jev": 0.0,
+        "cascade": 0.3333333333333333,
+        "matched": 0.3333333333333333
+      },
+      "referrals": 0,
+      "avoided": 15,
+      "accepted_wrong": 5,
+      "accepted_wrong_rate": 0.3333333333333333,
+      "error_detection_recall": 0.0,
+      "uniform_random_expected_error": 0.3333333333333333,
+      "safety_delta": 0.3333333333333333,
+      "matched_delta": 0.0,
+      "expected_random_delta": 0.0
+    },
+    "qualification-1": {
+      "assigned": 15,
+      "completed": 15,
+      "error": {
+        "qwen": 0.3333333333333333,
+        "jev": 0.0,
+        "cascade": 0.3333333333333333,
+        "matched": 0.3333333333333333
+      },
+      "referrals": 0,
+      "avoided": 15,
+      "accepted_wrong": 5,
+      "accepted_wrong_rate": 0.3333333333333333,
+      "error_detection_recall": 0.0,
+      "uniform_random_expected_error": 0.3333333333333333,
+      "safety_delta": 0.3333333333333333,
+      "matched_delta": 0.0,
+      "expected_random_delta": 0.0
+    },
+    "qualification-2": {
+      "assigned": 15,
+      "completed": 15,
+      "error": {
+        "qwen": 0.3333333333333333,
+        "jev": 0.0,
+        "cascade": 0.3333333333333333,
+        "matched": 0.3333333333333333
+      },
+      "referrals": 0,
+      "avoided": 15,
+      "accepted_wrong": 5,
+      "accepted_wrong_rate": 0.3333333333333333,
+      "error_detection_recall": 0.0,
+      "uniform_random_expected_error": 0.3333333333333333,
+      "safety_delta": 0.3333333333333333,
+      "matched_delta": 0.0,
+      "expected_random_delta": 0.0
+    },
+    "qualification-3": {
+      "assigned": 15,
+      "completed": 15,
+      "error": {
+        "qwen": 0.3333333333333333,
+        "jev": 0.0,
+        "cascade": 0.3333333333333333,
+        "matched": 0.3333333333333333
+      },
+      "referrals": 0,
+      "avoided": 15,
+      "accepted_wrong": 5,
+      "accepted_wrong_rate": 0.3333333333333333,
+      "error_detection_recall": 0.0,
+      "uniform_random_expected_error": 0.3333333333333333,
+      "safety_delta": 0.3333333333333333,
+      "matched_delta": 0.0,
+      "expected_random_delta": 0.0
+    }
+  },
+  "macro_safety_delta": 0.3333333333333333,
+  "macro_matched_delta": 0.0,
+  "macro_expected_random_delta": 0.0,
+  "jev_calls_avoided_fraction": 1.0,
+  "actual_collection_jev_calls_expected": 60,
+  "counterfactual_cascade_jev_calls": 0,
+  "leave_one_family_out_matched_delta": {
+    "qualification-0": 0.0,
+    "qualification-1": 0.0,
+    "qualification-2": 0.0,
+    "qualification-3": 0.0
+  },
+  "complete_evidence": true,
+  "criteria": {
+    "save_at_least_25_percent": true,
+    "safety_within_2_points": false,
+    "beat_matched_control": false
+  },
+  "useful_descriptive_result": false,
+  "missingness_note": "Missing scores incorrect; safety/matched paired contrasts involving missing outcomes remain unidentified, not observed zero effects.",
+  "paired_delta_missing_bounds": {
+    "lower": 0.0,
+    "upper": 0.0
+  },
+  "details": [
+    {
+      "id": "C4-S0-UNCERTAIN-4",
+      "family": "qualification-0",
+      "curator": 23,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-REFUTE-12",
+      "family": "qualification-0",
+      "curator": 98,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-REFUTE-8",
+      "family": "qualification-0",
+      "curator": 20,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-8",
+      "family": "qualification-0",
+      "curator": 91,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-SUPPORT-12",
+      "family": "qualification-0",
+      "curator": 65,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-REFUTE-0",
+      "family": "qualification-0",
+      "curator": 88,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-REFUTE-4",
+      "family": "qualification-0",
+      "curator": 105,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-16",
+      "family": "qualification-0",
+      "curator": 16,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-0",
+      "family": "qualification-0",
+      "curator": 67,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-REFUTE-16",
+      "family": "qualification-0",
+      "curator": 5,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-12",
+      "family": "qualification-0",
+      "curator": 169,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-SUPPORT-4",
+      "family": "qualification-0",
+      "curator": 81,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-SUPPORT-8",
+      "family": "qualification-0",
+      "curator": 70,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-SUPPORT-16",
+      "family": "qualification-0",
+      "curator": 26,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-SUPPORT-0",
+      "family": "qualification-0",
+      "curator": 175,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-SUPPORT-17",
+      "family": "qualification-1",
+      "curator": 9,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-REFUTE-17",
+      "family": "qualification-1",
+      "curator": 9,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-REFUTE-13",
+      "family": "qualification-1",
+      "curator": 71,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-REFUTE-5",
+      "family": "qualification-1",
+      "curator": 57,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-REFUTE-9",
+      "family": "qualification-1",
+      "curator": 76,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-5",
+      "family": "qualification-1",
+      "curator": 191,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-SUPPORT-1",
+      "family": "qualification-1",
+      "curator": 140,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-9",
+      "family": "qualification-1",
+      "curator": 17,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-SUPPORT-13",
+      "family": "qualification-1",
+      "curator": 41,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-13",
+      "family": "qualification-1",
+      "curator": 33,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-1",
+      "family": "qualification-1",
+      "curator": 187,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-SUPPORT-5",
+      "family": "qualification-1",
+      "curator": 29,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-SUPPORT-9",
+      "family": "qualification-1",
+      "curator": 163,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-REFUTE-1",
+      "family": "qualification-1",
+      "curator": 180,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-17",
+      "family": "qualification-1",
+      "curator": 171,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-REFUTE-2",
+      "family": "qualification-2",
+      "curator": 82,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-SUPPORT-6",
+      "family": "qualification-2",
+      "curator": 13,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-REFUTE-10",
+      "family": "qualification-2",
+      "curator": 146,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-18",
+      "family": "qualification-2",
+      "curator": 172,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-10",
+      "family": "qualification-2",
+      "curator": 59,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-2",
+      "family": "qualification-2",
+      "curator": 127,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-REFUTE-6",
+      "family": "qualification-2",
+      "curator": 176,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-SUPPORT-14",
+      "family": "qualification-2",
+      "curator": 136,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-REFUTE-18",
+      "family": "qualification-2",
+      "curator": 139,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-14",
+      "family": "qualification-2",
+      "curator": 39,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-REFUTE-14",
+      "family": "qualification-2",
+      "curator": 136,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-6",
+      "family": "qualification-2",
+      "curator": 90,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-SUPPORT-18",
+      "family": "qualification-2",
+      "curator": 179,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-SUPPORT-2",
+      "family": "qualification-2",
+      "curator": 136,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-SUPPORT-10",
+      "family": "qualification-2",
+      "curator": 100,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-SUPPORT-7",
+      "family": "qualification-3",
+      "curator": 133,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-19",
+      "family": "qualification-3",
+      "curator": 46,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-SUPPORT-19",
+      "family": "qualification-3",
+      "curator": 128,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-REFUTE-7",
+      "family": "qualification-3",
+      "curator": 88,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-SUPPORT-3",
+      "family": "qualification-3",
+      "curator": 184,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-SUPPORT-15",
+      "family": "qualification-3",
+      "curator": 19,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-REFUTE-15",
+      "family": "qualification-3",
+      "curator": 62,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-3",
+      "family": "qualification-3",
+      "curator": 174,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-SUPPORT-11",
+      "family": "qualification-3",
+      "curator": 1,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "SUPPORT",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": false,
+        "jev": true,
+        "cascade": false,
+        "matched": false
+      },
+      "expected": "SUPPORT"
+    },
+    {
+      "id": "C4-S0-REFUTE-11",
+      "family": "qualification-3",
+      "curator": 130,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-REFUTE-19",
+      "family": "qualification-3",
+      "curator": 187,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-7",
+      "family": "qualification-3",
+      "curator": 18,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-11",
+      "family": "qualification-3",
+      "curator": 31,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    },
+    {
+      "id": "C4-S0-REFUTE-3",
+      "family": "qualification-3",
+      "curator": 151,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "REFUTE",
+        "jev": "REFUTE",
+        "cascade": "REFUTE",
+        "matched": "REFUTE"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "REFUTE"
+    },
+    {
+      "id": "C4-S0-UNCERTAIN-15",
+      "family": "qualification-3",
+      "curator": 164,
+      "complete": true,
+      "referred": false,
+      "matched_referred": false,
+      "predictions": {
+        "qwen": "UNCERTAIN",
+        "jev": "UNCERTAIN",
+        "cascade": "UNCERTAIN",
+        "matched": "UNCERTAIN"
+      },
+      "correct": {
+        "qwen": true,
+        "jev": true,
+        "cascade": true,
+        "matched": true
+      },
+      "expected": "UNCERTAIN"
+    }
+  ]
+}

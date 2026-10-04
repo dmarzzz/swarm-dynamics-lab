@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "study_id": "healing-helping-hands",
+  "attempt": "C4-S0",
+  "assessor": "vishesh/codex-regrowth-docs",
+  "same_author_review": true,
+  "assessed_at": "2026-10-04T17:11:05.250437+00:00",
+  "evidence_revision": "1adeb586d6cc1965ebedc84561a7881d0a9f0cfd",
+  "execution": "completed",
+  "scientific_review": "complete",
+  "qualification": "invalid_label_leakage",
+  "verdict": "repair",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "The prospective routing feasibility question and adverse-result interpretation were explicit.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/PLAN.md",
+          "sha256": "fb20b2c67f88e41d8c645986074c28e4fbee4cea848e99c392a2890ef4e4e09f"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Expected labels appeared in all60qualification method names; S1 source also embeds family names.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-S0/observations.json",
+          "sha256": "2f4f52e5a48a528e3222b4d2d6b3c438da8afb8d34eb8bfa2659980609ce4905"
+        }
+      ],
+      "next_action": "Apply metadata-blind fixture repair, validate complete actor serialization, and seek approval for one fresh bounded qualification; no C4 S1.",
+      "acceptance_check": "Evaluator-metadata counterfactual tests pass; identifiers are independent of label/family; clean prospective qualification and trace review required before any future main stage."
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Both Qwen variants made identical20errors with0referrals; random-referral control degenerates at k=0. Clean routing utility is not established.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-S0/summary.json",
+          "sha256": "a9328f509e1177922df09ff1fbe33f876faade5f1d85b72a8787b45096d0234a"
+        }
+      ],
+      "next_action": "Apply metadata-blind fixture repair, validate complete actor serialization, and seek approval for one fresh bounded qualification; no C4 S1.",
+      "acceptance_check": "Evaluator-metadata counterfactual tests pass; identifiers are independent of label/family; clean prospective qualification and trace review required before any future main stage."
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "Jev60/60 passes numerical floors, but label-contaminated qualification does not establish clean semantic capability.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-S0/qualification.json",
+          "sha256": "533c5c2ec8aec8a9572ac118d6db67bfddba81d82f1ed9f88eb304fdc2d90e32"
+        }
+      ],
+      "next_action": "Apply metadata-blind fixture repair, validate complete actor serialization, and seek approval for one fresh bounded qualification; no C4 S1.",
+      "acceptance_check": "Evaluator-metadata counterfactual tests pass; identifiers are independent of label/family; clean prospective qualification and trace review required before any future main stage."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "180start/terminal pairs, raw-label reconstruction and direct counts agree. Scientific invalidity is recorded separately from numerical qualification.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-S0/audit.json",
+          "sha256": "8e1f4ac6f58f8e6f0a598c3e422f02677bb7adf6a9280e54b3c01f9f3534306b"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "60paired synthetic qualification cases,20/class; repeated surface templates, not independent real-world domains or confirmatory safety evidence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/PLAN.md",
+          "sha256": "fb20b2c67f88e41d8c645986074c28e4fbee4cea848e99c392a2890ef4e4e09f"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "gap",
+      "finding": "The advertised evaluator-metadata exclusion failed in actual serialized claim/report names; response parsers did not create the Qwen errors.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-S0/calls.jsonl",
+          "sha256": "de03d5d228f5d972b5cec4ba5a241322009c889c6456dbf042b5866a177bd461"
+        }
+      ],
+      "next_action": "Apply metadata-blind fixture repair, validate complete actor serialization, and seek approval for one fresh bounded qualification; no C4 S1.",
+      "acceptance_check": "Evaluator-metadata counterfactual tests pass; identifiers are independent of label/family; clean prospective qualification and trace review required before any future main stage."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All60assigned reports and180calls completed; full native archive uploaded and downloaded with matching SHA256. S1 remained ungenerated/unrun.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-S0/archive-receipt.json",
+          "sha256": "5c0e62fd0d838dc0bdbdee7c8eb09f4843c15da7bc31b0b340fed1b2df85d418"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD.00112665 C4 API spend; original2179entries unchanged,2239total; cumulative.042017472paid+.001344held. Worker stopped, ledger restored and allocation released.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-S0/ledger-reconciliation.json",
+          "sha256": "4e290466d84a12a9908bb80ec7b3c7b849465e64ebf69af4e2f92af8c220b94a"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source1adeb586, pinned Qwen/provider snapshot and exact serialized inputs/visible responses retained; regeneration of hosted responses not guaranteed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-S0/manifest.json",
+          "sha256": "63cf1c6bbefa0e809592548ce22fbfb194cc137d15729818a2cae5f4b534dde2"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Measured chart and replay expose60cases,20wrong agreements and explicit INVALID qualification banner; no200-agent cooperation claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-S0/scientific-review.json",
+          "sha256": "044e9fd43b3c416109915ba0fd071242bc05337338ce3a9e11db3f927ba04ff3"
+        }
+      ]
+    }
+  ],
+  "parent_handoff_sha256": "6ecbe8dbb9e1e3d0f6afc4a39eac8d763d31ec52c65d01a79f665e05431a65f4",
+  "outcome_interpretation": "Execution complete but qualification scientifically invalid from evaluator-label leakage; S1 withheld. Preserved contaminated responses diagnose an instrument defect, not clean routing utility."
+}
