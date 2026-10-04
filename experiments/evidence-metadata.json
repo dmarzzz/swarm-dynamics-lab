@@ -1606,6 +1606,33 @@
       "source_commit": "f76f024837fab7f6fd9dc8f86f531ed861b1b80f",
       "assessed_at": "2026-10-04",
       "assessor": "vishesh/codex-methods"
+    },
+    {
+      "id": "sybil-scale-xl",
+      "title": "Sybil resistance at 9x scale: 972 to 8,748 identities",
+      "documents": [
+        "researchers/dmarz/notes/sybil-scale-xl/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-scale-xl"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-scale-xl/experiment.yaml"
+      ],
+      "assessor": "dmarz/scale-xl",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Whether the sybil-scale-api finding (proportional checking preserves specialist accuracy as the swarm grows) holds from 972 to 8,748 simulated identities with Haiku 4.5 synthesis.",
+        "rationale": "Unrun; no stage has completed."
+      },
+      "sample_size_summary": "Observed: none. Planned: 24 paired worlds \u00d7 3 sizes \u00d7 28 conditions = 2,016 S1 calls plus 48 Q0 calls; 972\u20138,748 simulated identities feeding one synthesizer, packets of up to 4,374 reports.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-scale-xl/README.md",
+        "researchers/dmarz/notes/sybil-scale-xl/preregistration.md",
+        "researchers/dmarz/notes/sybil-scale-xl/experiment.yaml"
+      ],
+      "status_at_assessment": "planned_unrun"
     }
   ],
   "source_sha256": {

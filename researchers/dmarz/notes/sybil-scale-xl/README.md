@@ -1,0 +1,54 @@
+# Sybil resistance at 9x scale: 972 to 8,748 identities
+
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by dmarz/scale-xl ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Whether the sybil-scale-api finding (proportional checking preserves specialist accuracy as the swarm grows) holds from 972 to 8,748 simulated identities with Haiku 4.5 synthesis. Basis: unrun; no stage has completed.
+- **sample_size_summary:** Observed: none. Planned: 24 paired worlds × 3 sizes × 28 conditions = 2,016 S1 calls plus 48 Q0 calls; 972–8,748 simulated identities feeding one synthesizer, packets of up to 4,374 reports.
+<!-- experiment-evidence:end -->
+
+Exploratory scale-up of [sybil-scale-api](../sybil-scale-api), owned by dmarz and operated by dmarz/scale-xl on orbital-one. Requested by dmarz on 2026-10-04: "Find one of our experiences which would benefit the most from trying it at a much larger scale and ship it and don't worry about the budget". This is not an accepted formal hypothesis; S2 stays disabled. The files are copied from [sybil-scale-sonnet](../sybil-scale-sonnet), itself a byte-identical copy of the parent's instrument; neither earlier study, its records nor its launcher is modified.
+
+## Why this study
+
+Of the dmarz studies, this is the one whose question is about scale, and its answer is still open at the top of the range it tested. The parent ran 36, 108, 324 and 972 identities and found that checking a fixed 4 identities collapses specialist accuracy once the swarm grows (47.2% at 972), while checking N/9 identities keeps it at 98.6%. Two things could break that result as the swarm keeps growing, and neither can be seen at 972:
+
+1. **The admission mechanism.** Network distances, attacker reporting capacity and the share of core identities all change with N. The parent showed a non-monotonic dip at 108. Proportional checking may stay near ceiling, or a new dip may appear further out.
+2. **The synthesizer.** Admission seats are N/2, so the model reads 486 reports at 972 and 4,374 reports (~157k tokens) at 8,748. The parent found Haiku slightly below simple plurality on the same packets (98.6% versus 100%). If long-packet integration degrades, the model–plurality gap widens even when admission is fine. This is the one place in the study where scale tests the language model itself.
+
+The other dmarz experiments were weaker candidates for scale-up: the discussion and SOC-07 studies have not passed qualification at their current size, the market-split and compositional-safety studies are limited by model capability rather than sample size, and the newcomer and budget studies are being replicated on Sonnet now.
+
+## What changes and what does not
+
+| Item | Parent (sybil-scale-api) | This study |
+|---|---|---|
+| Sizes N | 36, 108, 324, 972 | 972, 2,916, 8,748 |
+| Proportional checks (N/9) | 4, 12, 36, 108 | 108, 324, 972 |
+| S1 packet size (N/2 reports) | 18 to 486 | 486 to 4,374 |
+| Q0 packets | `full` (N reports) and `common_only` (N/2) | `sample` (seeded N/2 of all reports) and `common_only` (N/2): `full` at 8,748 would exceed Haiku's context |
+| Study ledger caps | 2,600 calls, USD 180 reserved | 2,100 calls, USD 500 reserved |
+| Request limits | 240 kB body, 120 s timeout, 4 h stage | 700 kB body, 300 s timeout, 30,000 s stage |
+| Dispatch shuffle seed | `sybil-scale-api-v1` | `sybil-scale-xl-v1` |
+| Simulator speed | serial; every candidate's tie value drawn | worlds prepared in parallel; tie values drawn only among candidates tied on the primary key |
+
+The speed changes are output-identical. A selftest recomputes the parent's frozen simulator for every arm at N = 36, 108, 324 and 972 on four world/attacker combinations and requires identical worlds, admissions, checks and metrics. Model, prompt, schema, temperature, output limit, arms, worlds 6000–6023 (S1), 5000–5003 (Q0), 4900–4901 (engineering), evaluator and analysis are unchanged. At N=972 the S1 assignment ids and packets equal the parent's, so the 972 cells are a paired test–retest anchor.
+
+## Protocol
+
+[Pre-registration](preregistration.md), [design](design.yaml), [runbook](RUN.md), [setup record](SETUP.md), [visual mapping](VISUALIZATION.md), [pre-run and post-run reviews](reviews/), [deployment](DEPLOYMENT.md).
+
+Stages: offline local S0, fleet S0 on the claimed server, Q0 (48 clean qualification calls; every size must pass the unchanged thresholds), then S1 (2,016 calls). No retries; the first failure stops new dispatch and the remaining assignments are recorded as not started.
+
+## Budget
+
+See the [S1 pre-run assessment](reviews/s1-001-pre.md) for the computed reservation and expected spend. dmarz waived the earlier shared USD 500 allowance for this run; the ledger still caps reservations at USD 500 and 2,100 calls, and actual spend is reported in each post-mortem.
+
+## Limits
+
+Inherits every limit of the parent: synthetic identities and checks, one graph family, one fabrication type (+7), attacker resources that scale with N, simulated rather than autonomous identities, one synthesizer call per condition. "9x scale" means nine times as many simulated identities and nine times as many reports per synthesizer call, not 8,748 reasoning agents.
+
+## Results
+
+Not yet collected.

@@ -1,0 +1,30 @@
+id: sybil-scale-xl
+title: Sybil resistance at 9x scale (972 to 8,748 identities)
+description: 972 to 8,748 simulated identities; fixed versus proportional verification;
+  Haiku 4.5 report synthesis over packets of up to 4,374 reports. Exploratory scale-up of sybil-scale-api.
+owner: dmarz
+params:
+  stage:
+    type: str
+    role: stage
+  backend:
+    type: str
+    role: fixed
+  batch:
+    type: str
+    role: replicate
+  source_hash:
+    type: str
+    role: fixed
+  code:
+    type: str
+    role: fixed
+metrics:
+- episodes
+- invalid
+- model_calls
+- cost_usd
+- qualification_passed
+- rare_accuracy
+primary_metric: rare_accuracy
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/sybil-scale-xl
