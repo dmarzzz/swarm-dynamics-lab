@@ -1,7 +1,7 @@
 ---
 id: phantom-coast-pc4-live
 type: task
-title: Critique and run Phantom Coast PC-4 source verification
+title: Run Phantom Coast PC-4 and PC-5 design-review cycles
 kind: experiment
 status: claimed
 priority: p1
@@ -22,3 +22,5 @@ Critique PC-3, publish PC-4 before implementation, test and qualify, run the bou
 ## Done when
 
 - Critique PC-3, publish PC-4 before implementation, test and qualify, run the bounded diagnostic and complete scientific and operational closeout.
+
+PC-4 complete. The owner-requested repeated cycle includes the small prospective PC-5 decision-contract diagnostic, under the same cumulative allowance. Final done condition includes both scientific post-mortems, ledgers, verified artifacts and released claims.

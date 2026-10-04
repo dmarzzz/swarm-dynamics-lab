@@ -1,0 +1,7 @@
+{
+  "python": "3.12.3",
+  "pillow": "12.2.0",
+  "reporter_sha256": "ecd800d0faadfa624122c7acf3e1f96027f388acacd5c26249f0ad460cc790d5",
+  "tests": 10,
+  "source_commit": "1979234ac4b20dc88f732c16d0d79e05b6189b57"
+}

@@ -1,0 +1,8 @@
+{
+  "closeout_status": "written_review_required",
+  "handoff_path": "data/experiment-operations/closeouts/phantom-coast/pc4-s1-a1/f128f0b6bb79e837bc12b7a266f4ad401646bcf55f1c3e9ddbe02bc3e1d1fec0/handoff.json",
+  "handoff_sha256": "0de6f0541910bed326262ff750ad7b3f15e68e5a84287d12b009e6a51c816cc3",
+  "model_calls": 0,
+  "native_outcome": "completed",
+  "status": "finalized"
+}
