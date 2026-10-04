@@ -1,122 +1,99 @@
-#!/usr/bin/env python3
-"""Worker: take queued runs for this experiment from the hub and execute them, until the queue is empty.
-
-    SWARM_SOURCE=<you>/<tool>-<n> python3 src/worker.py            # one process per core: ./run-workers.sh
-    python3 src/worker.py --forever                                # keep polling for new work
-
-One hub run = one block of tasks in one cell (stage x world x dose). For every task and every seed in the
-block, all arms run on the same draws. Output: results/episodes/<run>.jsonl (one JSON line per arm per
-episode, append-only), uploaded to the hub as the run's `episodes.jsonl` artifact plus `summary.json`.
-Failed episodes are recorded and counted; nothing is retried or dropped.
-"""
-from __future__ import annotations
-
-import argparse
-import json
-import os
-import subprocess
-import sys
-import time
+"""Finite concurrent batch; durable assignments, no retries, stop new dispatch on failure."""
+import argparse,gzip,json,os,time
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor,wait,FIRST_COMPLETED
+import provider,study,render,analyze
 
-HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE))
-import sim  # noqa: E402
-
-try:
-    import swarm_report as sr  # preinstalled on every fleet server
-except ImportError:
-    sys.exit("swarm_report not found: run on a fleet server, or copy hub/swarm_report.py from swarm-labs-agentops")
-
-ROOT = HERE.parent
-EXP = None
-
-
-def load_yaml(p: Path):
-    import yaml  # python3-yaml is on every fleet server
-    return yaml.safe_load(p.read_text())
-
-
-def execute(run) -> None:
-    p = run.params
-    lo, hi = (int(x) for x in p["tasks"].split("-"))
-    tasks = list(range(lo, hi + 1))
-    seeds = p["seeds"]
-    arms = p["arms"]
-    total = len(tasks) * len(seeds)
-    out = ROOT / "results" / "episodes" / (run.id.replace("/", "__") + ".jsonl")
-    out.parent.mkdir(parents=True, exist_ok=True)
-    code = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, capture_output=True, text=True).stdout.strip()
-    stats = {a: {"n": 0, "fc": 0, "delay": 0.0, "invalid": 0} for a in arms}
-    done = 0
-    with out.open("a") as f:                                   # append-only
-        for t in tasks:
-            for s in seeds:
-                for rec in sim.run_episode(t, s, p["world"], p["dose"], arms, p["cfg"]):
-                    rec.update({"run": run.id, "attempt": run.attempt, "stage": p["stage"], "split": p["split"],
-                                "prereg": p.get("prereg"), "code": code or None, "worker": os.environ.get("SWARM_SOURCE")})
-                    f.write(json.dumps(rec) + "\n")
-                    a = stats[rec["arm"]]
-                    if rec["validity"]["ok"]:
-                        a["n"] += 1
-                        a["fc"] += rec["evaluation"]["false_commit"]
-                        a["delay"] += rec["decision"]["delay"]
-                    else:
-                        a["invalid"] += 1
-                done += 1
-                run.progress(done, total, **metrics(stats))
-    summary = {"run": run.id, "params": p, "episodes_per_arm": total, "stats": stats, "metrics": metrics(stats),
-               "file": out.name}
-    (out.with_suffix(".summary.json")).write_text(json.dumps(summary, indent=2))
-    res = run.artifact(out, "episodes.jsonl")
-    run.artifact(out.with_suffix(".summary.json"), "summary.json")
-    if res and not res.get("spooled"):
-        # The hub confirmed this file (sha256). recover() checks it is still there on the next start.
-        out.with_suffix(".uploaded").write_text(json.dumps({"run": run.id, "sha256": res.get("sha256")}))
-    run.done(message=f"{total} episodes x {len(arms)} arms", **metrics(stats))
-
-
-def recover() -> None:
-    """Outbox: re-upload results the hub confirmed earlier but no longer has (e.g. it was restored from a
-    backup taken before the upload). Episodes stay on this server's disk, so nothing has to be re-run."""
-    d = ROOT / "results" / "episodes"
-    for marker in sorted(d.glob("*.uploaded")) if d.exists() else []:
+def write_json(path,value):
+    with path.open('x') as f:json.dump(value,f,indent=2);f.flush();os.fsync(f.fileno())
+def upload(run,path):
+    receipt=run.artifact(path,path.name)
+    if not receipt or receipt.get('spooled'):raise RuntimeError('artifact_not_durably_acknowledged')
+def execute(p,out,run=None,backend=None):
+    assert p['source_hash']==study.source_hash(),'runtime_source_mismatch'
+    assert p['backend']==('scripted' if p['stage']=='S0' else 'anthropic')
+    out=Path(out);out.mkdir(parents=True,exist_ok=False)
+    assigned=study.assignments(p['stage'],out);total=len(assigned)
+    with gzip.open(out/'assignments.jsonl.gz','wt') as f:
+        for a in assigned:f.write(json.dumps(a,sort_keys=True)+'\n')
+    ledger=None
+    if p['backend']=='anthropic':
+        path=os.environ.get('SYBIL_API_BUDGET_LEDGER');assert path,'persistent_budget_required'
+        ledger=provider.Ledger(path);backend=backend or provider.Anthropic(ledger)
+    initial=ledger.transact() if ledger else {};start=time.monotonic();rows=[];stopped=False;reporting_errors=[]
+    render.frame([],total,p['stage'],accounting=initial).save(out/'initial_frame.png')
+    if run:upload(run,out/'initial_frame.png')
+    def solve(a):
+        r={k:a[k] for k in ('id','task','n','arm','checks','visibility','attacker_pass','kind','packet_hash')}
+        r.update(run=run.id if run else out.name,stage=p['stage'],backend=p['backend'],code=p['code'],source_hash=p['source_hash'],status='failed')
         try:
-            info = json.loads(marker.read_text())
-            have = {a["name"]: a.get("sha256") for a in sr.get_run(info["run"])["artifacts"]}
-        except (sr.HubError, ValueError, KeyError) as e:
-            print(f"recover: skipped {marker.name} ({e})")
-            continue
-        if have.get("episodes.jsonl") != info.get("sha256"):
-            jsonl = marker.with_suffix(".jsonl")
-            sr.upload(info["run"], jsonl, "episodes.jsonl")
-            sr.upload(info["run"], marker.with_suffix(".summary.json"), "summary.json")
-            print(f"recover: re-uploaded {jsonl.name} to {info['run']}")
-
-
-def metrics(stats: dict) -> dict:
-    m = {}
-    for arm, a in stats.items():
-        if a["n"]:
-            m[f"fc_{arm}"] = round(a["fc"] / a["n"], 4)
-            m[f"delay_{arm}"] = round(a["delay"] / a["n"], 3)
-    if "fc_A0_plurality" in m and "fc_A1_provenance" in m:
-        m["fc_diff"] = round(m["fc_A0_plurality"] - m["fc_A1_provenance"], 4)
-    m["episodes"] = sum(a["n"] + a["invalid"] for a in stats.values())
-    return m
-
+            if time.monotonic()-start>study.design()['budget']['stage_timeout_seconds']:raise provider.CallFailure('stage_deadline')
+            if p['backend']=='scripted':answer=study.scripted(a['packet']);accounting={'attempted':False,'actual_usd':0,'reserved_usd':0}
+            else:answer,accounting=backend.call(a['packet'],p['batch']+':'+a['id'])
+            r.update(answer=answer,accounting=accounting,evaluation=study.evaluate(a,answer),scripted_evaluation=study.evaluate(a,study.scripted(a['packet'])),status='completed')
+        except provider.CallFailure as exc:r.update(error=exc.category,accounting=exc.accounting)
+        except Exception as exc:r.update(error='internal_'+type(exc).__name__)
+        return r
+    with (out/'episodes.jsonl').open('x') as log:
+        def record(r):
+            r.update(completion_index=len(rows)+1,elapsed_seconds=time.monotonic()-start,study_accounting=ledger.transact() if ledger else {})
+            log.write(json.dumps(r,sort_keys=True)+'\n');log.flush();os.fsync(log.fileno());rows.append(r)
+        index=0;last_render=0
+        with ThreadPoolExecutor(max_workers=1 if p['backend']=='scripted' else study.design()['budget']['workers']) as pool:
+            pending={}
+            def fill():
+                nonlocal index
+                while not stopped and index<total and len(pending)<study.design()['budget']['workers']:
+                    a=assigned[index];pending[pool.submit(solve,a)]=a;index+=1
+            fill()
+            while pending:
+                done,_=wait(pending,timeout=5,return_when=FIRST_COMPLETED)
+                if not done:
+                    if run:run.progress(len(rows),total,episodes=len(rows),invalid=int(stopped))
+                    continue
+                for f in done:
+                    pending.pop(f);r=f.result();record(r)
+                    if r['status']!='completed':stopped=True
+                if run:
+                    run.progress(len(rows),total,episodes=len(rows),invalid=sum(r['status']=='failed' for r in rows),
+                        model_calls=sum(r.get('accounting',{}).get('attempted',False) for r in rows),
+                        cost_usd=sum(r.get('accounting',{}).get('actual_usd',0) for r in rows))
+                    if time.monotonic()-last_render>20 or stopped:
+                        try:
+                            render.frame(rows,total,p['stage'],time.monotonic()-start,rows[-1]['study_accounting']).save(out/'progress.png');upload(run,out/'progress.png')
+                        except Exception as exc:reporting_errors.append(type(exc).__name__)
+                        last_render=time.monotonic()
+                fill()
+        for a in assigned[index:]:
+            r={k:a[k] for k in ('id','task','n','arm','checks','visibility','attacker_pass','kind','packet_hash')}
+            r.update(status='not_started',stage=p['stage'],run=run.id if run else out.name,source_hash=p['source_hash'],code=p['code']);record(r)
+    with gzip.open(out/'episodes.jsonl.gz','wb') as f:f.write((out/'episodes.jsonl').read_bytes())
+    q=study.qualification(rows) if p['stage'] in ('S0','Q0') else None
+    good=[r for r in rows if r['status']=='completed']
+    summary={'params':p,'planned':total,'started':sum(r['status']!='not_started' for r in rows),'terminal':len(rows),'graded':len(good),'analyzed':len(good),
+        'invalid':total-len(good),'not_started':sum(r['status']=='not_started' for r in rows),
+        'model_calls':sum(r.get('accounting',{}).get('attempted',False) for r in rows),
+        'cost_usd':sum(r.get('accounting',{}).get('actual_usd',0) for r in rows),
+        'input_tokens':sum(r.get('accounting',{}).get('input_tokens',0) for r in rows),'output_tokens':sum(r.get('accounting',{}).get('output_tokens',0) for r in rows),
+        'elapsed_seconds':time.monotonic()-start,'qualification':q,'study_accounting':ledger.transact() if ledger else {},'initial_study_accounting':initial,
+        'reporting_errors':reporting_errors,'visualization':{'mapping':'v1','frames':render.replay(rows,out,p['stage'],total,initial)}}
+    write_json(out/'summary.json',summary);write_json(out/'analysis.json',analyze.analyze(rows))
+    if run:
+        for name in ('final_frame.png','replay.gif','badges_hidden.png','assignments.jsonl.gz','episodes.jsonl.gz','worlds.jsonl.gz','summary.json','analysis.json','initial_frame.png'):upload(run,out/name)
+    if summary['invalid'] or (q and not q['passed']):raise RuntimeError('qualification_or_execution_failed_preserved')
+    if run:run.done(message=f'{p["stage"]}: {len(good)}/{total} valid, all four sizes; see scaling replay',episodes=total,invalid=0,model_calls=summary['model_calls'],cost_usd=summary['cost_usd'],qualification_passed=int(bool(q and q['passed'])),
+        **({'rare_accuracy':sum(r['evaluation']['rare_accuracy'] for r in good)/len(good)} if p['stage']=='S1' else {}))
+    return summary
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--forever", action="store_true", help="keep polling when the queue is empty")
-    a = ap.parse_args()
-    if not os.environ.get("SWARM_SOURCE"):
-        sys.exit("set SWARM_SOURCE=<you>/<tool>-<n> (e.g. vishesh/codex-1) so runs are attributed")
-    exp = load_yaml(ROOT / "experiment.yaml")["id"]
-    recover()
-    n = sr.work(exp, execute, stop_when_empty=not a.forever)
-    print(f"worker {os.environ['SWARM_SOURCE']}: {n} run(s) for {exp}")
-
-
-if __name__ == "__main__":
-    main()
+    ap=argparse.ArgumentParser();ap.add_argument('--hub',action='store_true');ap.add_argument('--stage',choices=['S0']);ap.add_argument('--attempt');a=ap.parse_args()
+    if a.hub:
+        import swarm_report as sr
+        run=sr.next_run('sybil-scale-api')
+        if run is None:return
+        if run.attempt!=1:raise RuntimeError('automatic_reexecution_forbidden')
+        with run:execute(run.params,study.ROOT/'results'/f'{run.id.replace("/","__")}-attempt-{run.attempt}',run)
+    else:
+        if a.stage!='S0' or not a.attempt or not a.attempt.replace('-','').isalnum():raise SystemExit('Offline S0 requires a fresh attempt name')
+        print(json.dumps(execute(study.params('S0'),study.ROOT/'results'/a.attempt)))
+if __name__=='__main__':main()

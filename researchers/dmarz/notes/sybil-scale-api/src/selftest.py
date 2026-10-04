@@ -1,55 +1,55 @@
-#!/usr/bin/env python3
-"""Offline checks to pass before anything goes to the hub. No network, a few seconds.
-
-    python3 src/selftest.py
-
-1. Determinism: the same (task, seed) gives byte-identical records.
-2. Pairing: every arm in an episode sees the same reports (common random numbers).
-3. Blindness: the rules never receive ground truth (reports carry no a_star).
-4. Clean task: in W0_CLEAN every arm commits and is mostly right (S0's purpose, at small n).
-5. Manipulation check: in W2_FALSE the plurality arm's false-commit rate is higher than in W0_CLEAN.
-6. Splits: dev and holdout task ranges do not overlap; seeds are fixed lists.
-"""
-import json
-import sys
+import importlib.util,json,tempfile,unittest,os
 from pathlib import Path
-
-HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE))
-import sim  # noqa: E402
-import yaml  # noqa: E402
-
-d = yaml.safe_load((HERE.parent / "design.yaml").read_text())
-cfg, arms = d["cfg"], d["arms"]
-fails = []
-
-
-def check(cond, msg):
-    print(("ok   " if cond else "FAIL ") + msg)
-    if not cond:
-        fails.append(msg)
-
-
-a = sim.run_episode(3, 1, "W2_FALSE", 0.4, arms, cfg)
-b = sim.run_episode(3, 1, "W2_FALSE", 0.4, arms, cfg)
-strip = lambda recs: [{k: v for k, v in r.items() if k != "cost_actual"} for r in recs]  # noqa: E731
-check(json.dumps(strip(a)) == json.dumps(strip(b)), "determinism: same task+seed gives identical records")
-check(all(r["reports"] == a[0]["reports"] for r in a), "pairing: all arms see the same reports")
-check(all("a_star" not in json.dumps(r["reports"]) for r in a), "blindness: reports carry no ground truth")
-check(set(arms) <= set(sim.ARMS), f"arms in design.yaml exist in sim.ARMS {sorted(sim.ARMS)}")
-
-
-def rate(world, dose, arm, metric, n=200):
-    recs = [r for t in range(n) for r in sim.run_episode(t, 1, world, dose, [arm], cfg)]
-    return sum(r["evaluation"][metric] for r in recs) / len(recs)
-
-
-for arm in arms:
-    check(rate("W0_CLEAN", 0.0, arm, "committed") > 0.8, f"clean task: {arm} commits in >80% of W0 episodes")
-fc_clean, fc_false = rate("W0_CLEAN", 0.0, arms[0], "false_commit"), rate("W2_FALSE", 0.4, arms[0], "false_commit")
-check(fc_false > fc_clean, f"manipulation check: {arms[0]} false commits W2 {fc_false:.2f} > W0 {fc_clean:.2f}")
-dev, hold = d["splits"]["dev"], d["splits"]["holdout"]
-check(dev[1] < hold[0] or hold[1] < dev[0], "splits: dev and holdout task ids do not overlap")
-check(all(isinstance(st["seeds"], list) and st["seeds"] for st in d["stages"].values()), "seeds: every stage has a fixed list")
-print("\nselftest", "FAILED" if fails else "passed")
-sys.exit(1 if fails else 0)
+import study,sim,provider,render
+class Tests(unittest.TestCase):
+ def test_anchor(self):
+    path=study.ROOT.parent/'sybil-specialists/src/sim.py';spec=importlib.util.spec_from_file_location('oldsim',path);old=importlib.util.module_from_spec(spec);spec.loader.exec_module(old)
+    for task in (4900,4901):
+     for rate in (.1,.9):
+      cfg=study.cfg_for(36);a=old.make_world(task,1,rate,False,cfg);b=sim.make_world(task,1,rate,False,cfg)
+      self.assertEqual(a,b)
+      previous=old.run_episode(a,4,sim.ARMS,cfg)
+      current=sim.checkpoints(b,[4],sim.ARMS,cfg)
+      for x,y in zip(previous,current):self.assertEqual(x['trace'][-1]['admitted'],y['admitted']);self.assertEqual(x['trace'][-1]['metrics'],y['graph_metrics'])
+ def test_graph_scaling(self):
+    for n in study.design()['sizes']:
+     w=sim.make_world(4900,n//36,.1,False,study.cfg_for(n));p=w['public'];adj=p['adj'];truth=w['truth']
+     seen=set(p['trusted']);todo=list(seen)
+     while todo:
+      for v in adj[todo.pop()]:
+       if v not in seen:seen.add(v);todo.append(v)
+     self.assertEqual(len(seen),n);self.assertEqual(len(p['trusted']),2)
+     self.assertEqual(sum(not v['honest'] for v in truth.values()),n//4)
+     for node in adj:self.assertEqual(len(adj[node]),7 if w['groups'][node]==0 else 4)
+     for group in (1,2):
+      nodes=[node for node in adj if w['groups'][node]==group]
+      self.assertEqual(sum(w['groups'][other]==0 for node in nodes for other in adj[node]),2*(n//36))
+     profiles=[]
+     for group in (1,2):profiles.append(sorted((v['skill'],v['age'],v['activity']) for node,v in p['nodes'].items() if w['groups'][node]==group))
+     self.assertEqual(*profiles)
+ def test_blind_packet(self):
+    w=sim.make_world(4900,3,.1,False,study.cfg_for(108));nodes=list(w['public']['nodes'])[:54]
+    a=study.packet(w,nodes,[], 'visible','random');b=study.packet(w,nodes,[],'masked','random')
+    for x,y in zip(a['reports'],b['reports']):
+     self.assertEqual({k:v for k,v in x.items() if k!='verification'},y)
+     self.assertEqual(set(x),{'node','skill','claim','age','activity','verification'})
+ def test_accounting_duplicate_and_cap(self):
+    with tempfile.TemporaryDirectory() as td:
+     ledger=provider.Ledger(Path(td)/'ledger');ledger.transact({'type':'reserve','call_id':'a','micro_usd':1})
+     with self.assertRaises(provider.CallFailure):ledger.transact({'type':'reserve','call_id':'a','micro_usd':1})
+     with self.assertRaises(provider.CallFailure):ledger.transact({'type':'reserve','call_id':'b','micro_usd':181000000})
+ def test_render_pending_and_failure(self):
+    im=render.frame([],2400,'S1');self.assertEqual(im.size,(1800,1200))
+    im=render.frame([{'status':'failed','kind':'pilot','n':36}],2400,'S1');self.assertEqual(im.size,(1800,1200))
+ def test_principal_blind_checks(self):
+    w=sim.make_world(4900,1,.1,False,study.cfg_for(36));p=json.loads(json.dumps(w['public']))
+    expected=sim.select_check(p,'coverage',set(),set(),[],4900,1)
+    for t in w['truth'].values():t['honest']=not t['honest']
+    self.assertEqual(expected,sim.select_check(p,'coverage',set(),set(),[],4900,1))
+ def test_splits(self):
+    d=study.design();groups=[set(d[k]) for k in ('worlds','qualification_worlds','engineering_worlds')]
+    self.assertTrue(all(not a&b for i,a in enumerate(groups) for b in groups[i+1:]));self.assertTrue(max(set.union(*groups))<10000)
+ def test_invalid_answers(self):
+    for vals in ({'0':True},{str(i):True for i in range(6)}):
+     with self.assertRaises(ValueError):study.validate({'values':vals})
+if __name__=='__main__':unittest.main()
