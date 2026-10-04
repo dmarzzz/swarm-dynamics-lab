@@ -66,9 +66,9 @@ def run(c,transport,public_check,report):
  qr=actor.collect([(q['id'],q['packet']) for q in qs]);passed=sum(r['status']=='valid' and abs(r['decision']['p']-q['expected'])<=q['tolerance'] for q,r in zip(qs,qr));qsummary=dict(assigned=32,valid=sum(r['status']=='valid' for r in qr),passed=passed,qualification_passed=passed==32);write(out/'qualification-summary.json',qsummary);report('done','Q0-A1',qsummary)
  if passed!=32:actor.stop=actor.stop or 'qualification_failed'
  for block in range(2):
-  selected=[r for r in rows if r['block']==block]
-  if not actor.stop:report('start',f'B{block+1}-A1',dict(tldr=f'Fresh execution block{block+1}:16 roots,paired flat/linked presentation,truthful/false and single/copied/independent evidence,before/after fixed correction;384calls. No autonomous diffusion or equivalence claim.'))
+  selected=[r for r in rows if r['block']==block];started_stage=not actor.stop
+  if started_stage:report('start',f'B{block+1}-A1',dict(tldr=f'Fresh execution block{block+1}:16 roots,paired flat/linked presentation,truthful/false and single/copied/independent evidence,before/after fixed correction;384calls. No autonomous diffusion or equivalence claim.'))
   actor.collect([(r['id'],r['packet']) for r in selected])
   answers={r['assignment']:r['decision']['p'] for r in actor.records if r['status']=='valid' and r['assignment'].startswith('B')};analysis=summarize(rows,answers);write(out/'analysis.json',analysis)
-  if passed==32:report('done',f'B{block+1}-A1',dict(valid=sum(r['status']=='valid' and r['assignment'].startswith(f'B{block}/') for r in actor.records),assigned=384))
+  if started_stage:report('done',f'B{block+1}-A1',dict(valid=sum(r['status']=='valid' and r['assignment'].startswith(f'B{block}/') for r in actor.records),assigned=384))
  summary=dict(qualification=qsummary,analysis=analysis,stop=actor.stop,started=sum(r['status']!='unstarted' for r in actor.records),valid=sum(r['status']=='valid' for r in actor.records),budget=ledger.summary());write(out/'summary.json',summary);ledger.db.close();return summary
