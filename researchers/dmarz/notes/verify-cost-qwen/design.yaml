@@ -19,6 +19,35 @@ request_template:
   max_tokens: 1000
   response_format: {type: json_object}
 
+# Model ladder (added 2026-10-04 with the second pre-registered model; preregistration, "Second pre-registered
+# model"). The model of a chain comes from STUDY_MODEL and defaults to the first entry. Each model is its own
+# complete chain: own batch names (tag), own S0, P0, Q0 and S1, own ledger file, results directory and dollar
+# cap. Results are never pooled across models. The first model's keys above and the common `budget:` below are
+# exactly attempt 002's; a model's `budget:` here overrides the common one for that model's chain only.
+model_ladder: [qwen/qwen3.7-flash, gpt-6-luna]
+providers: {qwen/qwen3.7-flash: openrouter, gpt-6-luna: openai}
+models:
+  qwen/qwen3.7-flash:
+    tag: ''                              # batches s0-002, p0-002, q0-002, s1-002 (attempt 002, unchanged)
+    answer_schema: cost_then_choice      # attempt 002's repaired answer
+  gpt-6-luna:
+    tag: gpt-6-luna                      # batches s0-002-gpt-6-luna, p0-002-gpt-6-luna, ...
+    answer_schema: choice_only           # attempt 001's original answer {"inspect": "<cell>"}; request text byte-identical to attempt 001
+    request_template:
+      model: gpt-6-luna
+      reasoning_effort: low
+      max_completion_tokens: 1500
+      response_format: {type: json_object}
+    budget:
+      aggregate_usd: 5
+      max_output_tokens: 1500            # visible plus reasoning tokens
+      retry:
+        transport_retries: 2
+        retryable_http_status: [429, 500, 502, 503, 504]
+        backoff_seconds: [2, 6]
+        retry_after_cap_seconds: 20
+      prices: {input: 0.10, cached_input: 0.01, cache_write: 0.125, output: 0.50}   # USD per million tokens, reference table of 2026-10-04
+
 # Source instrument: a dmarz-owned, parameterized copy of the phantom-coast PC5 contract and engine.
 # The originals are not edited, moved or run.
 source_instrument:
@@ -90,10 +119,11 @@ qualification:
   repairs_allowed: 0               # this attempt is the repair; none remains, and a failed repeat ends the line
 
 stages:
+  # backend `provider` means the provider of the chain's model (openrouter for Qwen, openai for gpt-6-luna)
   S0: {backend: scripted, assignments: 144}    # 4 engineering layouts x 24 + both qualification sets (24 + 24)
-  P0: {backend: openrouter, assignments: 1}    # the first qualification fixture of the active set
-  Q0: {backend: openrouter, assignments: 23}   # the other 23; the gate is evaluated over all 24 rows
-  S1: {backend: openrouter, assignments: 576}  # 24 layouts x 12 cases x 2 representations
+  P0: {backend: provider, assignments: 1}      # the first qualification fixture of the active set
+  Q0: {backend: provider, assignments: 23}     # the other 23; the gate is evaluated over all 24 rows
+  S1: {backend: provider, assignments: 576}    # 24 layouts x 12 cases x 2 representations
   S2: {enabled: false}
 
 budget:

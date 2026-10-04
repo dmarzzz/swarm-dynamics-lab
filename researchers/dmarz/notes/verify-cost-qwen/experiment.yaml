@@ -14,6 +14,9 @@ params:
   backend:
     type: str
     role: fixed
+  model:
+    type: str
+    role: condition
   batch:
     type: str
     role: replicate

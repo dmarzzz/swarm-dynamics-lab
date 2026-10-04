@@ -178,7 +178,8 @@ def work_summary(rows):
     analytic expected costs, how often the choice contradicts the model's own two numbers, and the tolerated
     variants of the answer format. Over valid rows; rows without a recorded work check are counted separately."""
     good = [r for r in rows if valid(r)]; checked = [r for r in good if (r.get('evaluation') or {}).get('work')]
-    w = [r['evaluation']['work'] for r in checked]; noted = [r['answer']['work'] for r in checked]
+    w = [r['evaluation']['work'] for r in checked]
+    noted = [r['answer']['work'] for r in good if isinstance(r.get('answer'), dict) and r['answer'].get('work')]
     both = [x for x in w if x['both_written']]
     errors = [x[f'abs_error_{action}'] for x in both for action in sim.ACTIONS]
     return {'valid': len(good), 'checked': len(checked), 'both_written': len(both), 'work_malformed': len(w) - len(both),
@@ -188,10 +189,10 @@ def work_summary(rows):
             'choice_contradicts_own_costs': sum(x['contradicts_own_numbers'] for x in both),
             'own_costs_tied': sum(x['own_numbers_favour'] == 'tie' for x in both),
             'own_costs_favour_the_optimum': sum(x['own_numbers_favour'] == r['evaluation']['optimal_action'] for x, r in zip(w, checked) if x['both_written']),
-            'tolerated': {'costs_as_strings': sum(n['costs_as_strings'] for n in noted), 'cost_keys_respaced': sum(n['cost_keys_respaced'] for n in noted),
-                          'extra_keys': sum(bool(n['extra_keys'] or n['cost_extra_keys']) for n in noted),
-                          'inspect_before_cost': sum(n['cost_before_inspect'] is False for n in noted),
-                          'inspect_respaced': sum(n['inspect_respaced'] for n in noted)}}
+            'tolerated': {'costs_as_strings': sum(bool(n.get('costs_as_strings')) for n in noted), 'cost_keys_respaced': sum(bool(n.get('cost_keys_respaced')) for n in noted),
+                          'extra_keys': sum(bool(n.get('extra_keys') or n.get('cost_extra_keys')) for n in noted),
+                          'inspect_before_cost': sum(n.get('cost_before_inspect') is False for n in noted),
+                          'inspect_respaced': sum(bool(n.get('inspect_respaced')) for n in noted)}}
 
 
 def discrimination(kind='engineering'):

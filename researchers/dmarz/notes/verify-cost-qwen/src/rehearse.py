@@ -4,8 +4,8 @@
 
 No request leaves the machine: the hub is a local process, and the model endpoint is replaced by an
 in-process stub injected as the adapter's opener. A rehearsal answer is never a sample. The adapter's
-clock and sleep are replaced, so backoff and billing waits take no real time. The chain runs six
-times, each in fresh temporary result and ledger directories and on its own hub:
+clock and sleep are replaced, so backoff and billing waits take no real time. The chain runs eight
+times, each in fresh temporary result and ledger directories, and on its own hub except in (g):
   (a) all four stages with a stub that answers by the analytic reference policy, computed from the
       request text alone (it parses the prose or the table it is sent), then `chain verify`;
   (b) with a stub that always picks the first listed cell, which is right in 6 of 12 fixtures per
@@ -22,7 +22,10 @@ times, each in fresh temporary result and ledger directories and on its own hub:
   (f) all four stages with a stub that cycles through every tolerated variant of a correct answer
       (costs as strings, as integers, with more decimals, respaced keys, missing, partial or
       non-numeric costs, extra keys, `inspect` first, a respaced `inspect`, pretty-printed): every call
-      is valid, every choice is graded, the variants are counted; `chain verify`.
+      is valid, every choice is graded, the variants are counted; `chain verify`;
+  (g) the two models of the ladder one after the other on the same hub: the Qwen chain (repaired answer,
+      OpenRouter response shape), then the gpt-6-luna chain (original answer, OpenAI response shape, its
+      own S0, batches, ledger and results directory); eight runs on the hub; `chain verify` for each.
 It refuses to run unless the hub URL host is 127.0.0.1.
 """
 import argparse
@@ -46,6 +49,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import chain     # noqa: E402
 import manifest  # noqa: E402
+import openai_provider  # noqa: E402
 import provider  # noqa: E402
 import study     # noqa: E402
 import worker    # noqa: E402
@@ -72,8 +76,9 @@ class Clock:
 
 
 CREDIT_BODY = json.dumps({'error': {'code': 402, 'message': 'Insufficient credits. Add more using https://openrouter.ai/credits (rehearsal)'}}).encode()
+QUOTA_BODY = json.dumps({'error': {'message': 'You exceeded your current quota, please check your plan and billing details. (rehearsal)',
+                                   'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}).encode()
 ERROR_BODY = json.dumps({'error': {'code': 500, 'message': 'rehearsal injected failure'}}).encode()
-TEMPLATE_KEYS = {'model', 'provider', 'reasoning', 'max_tokens', 'response_format'}
 
 
 def reference_answer(user, mode):
@@ -85,14 +90,22 @@ def reference_answer(user, mode):
     costs = {first: 0.0, second: 0.0}
     for r in records:
         if r['action'] in costs: costs[r['action']] = round(costs[r['action']] + float(r['probability']) * float(r['cost']), 6)
-    return {'cost_if_inspect': costs, 'inspect': first if mode == 'always_first' else min(costs, key=costs.get)}
+    pick = first if mode == 'always_first' else min(costs, key=costs.get)
+    # the request says which answer it wants: the original schema asks for the choice only
+    return {'cost_if_inspect': costs, 'inspect': pick} if 'cost_if_inspect' in user else {'inspect': pick}
 
 
 def tolerated_variants(answer):
     """(name, returned text) for every harmless variant of a correct answer that validation tolerates. Each keeps
     the choice; some spoil or drop the written costs, which is recorded and never a failure."""
-    (a, ca), (b, cb) = answer['cost_if_inspect'].items(); pick = answer['inspect']; dump = json.dumps
-    spaced = lambda cell: cell.replace(',', ' , ')
+    pick = answer['inspect']; dump = json.dumps; spaced = lambda cell: cell.replace(',', ' , ')
+    if 'cost_if_inspect' not in answer:       # the original schema: {"inspect": "<cell>"}
+        return [('canonical', dump(answer)),
+                ('extra_keys', dump({'inspect': pick, 'confidence': 0.9, 'note': 'cheaper action'})),
+                ('extra_cost_object', dump({'cost_if_inspect': {pick: 0.1}, 'inspect': pick})),
+                ('inspect_with_spaces', dump({'inspect': ' ' + spaced(pick) + ' '})),
+                ('pretty_printed', '\n' + json.dumps(answer, indent=2) + '\n')]
+    (a, ca), (b, cb) = answer['cost_if_inspect'].items()
     return [
         ('canonical', dump(answer)),
         ('costs_as_numeric_strings', dump({'cost_if_inspect': {a: f'{ca:.2f}', b: f' {cb} '}, 'inspect': pick})),
@@ -112,7 +125,19 @@ def tolerated_variants(answer):
 
 def invalid_forms(answer):
     """(name, returned text, failure category) for every form that stays invalid."""
-    costs = answer['cost_if_inspect']; pick = answer['inspect']; dump = json.dumps
+    pick = answer['inspect']; dump = json.dumps
+    if 'cost_if_inspect' not in answer:       # the original schema
+        return [('not_json', 'I would inspect ' + pick + '.', 'invalid_json'),
+                ('json_then_text', dump(answer) + ' This minimizes the cost.', 'invalid_json'),
+                ('fenced_json', '```json\n' + dump(answer) + '\n```', 'invalid_json'),
+                ('json_array', dump([answer]), 'invalid_answer'), ('json_string', dump(pick), 'invalid_answer'),
+                ('inspect_missing', dump({'choice': pick}), 'invalid_answer'),
+                ('inspect_other_cell', dump({'inspect': '9,9'}), 'invalid_answer'),
+                ('inspect_action_word', dump({'inspect': 'check'}), 'invalid_answer'),
+                ('inspect_not_a_string', dump({'inspect': [int(x) for x in pick.split(',')]}), 'invalid_answer'),
+                ('inspect_null', dump({'inspect': None}), 'invalid_answer'),
+                ('duplicate_inspect', '{"inspect": "%s", "inspect": "%s"}' % (pick, pick), 'invalid_json')]
+    costs = answer['cost_if_inspect']
     return [
         ('not_json', 'I would inspect ' + pick + '.', 'invalid_json'),
         ('json_then_text', dump(answer) + ' This minimizes the cost.', 'invalid_json'),
@@ -155,29 +180,41 @@ class Stub:
         self.credit_first = credit_first; self.fail_messages = set(fail_messages); self.fail_from = fail_from; self.credit_from = credit_from
 
     def __call__(self, request, timeout=None):
-        if request.full_url != provider.URL: raise AssertionError('the rehearsal stub only answers the chat-completions endpoint')
-        body = json.loads(request.data); template = study.design()['request_template']
-        if tuple(body) != provider.BODY_KEYS or {k: body[k] for k in TEMPLATE_KEYS} != template \
+        """Answers the endpoint of the provider the request is sent to, in that provider's response shape, and
+        rejects a body that is not exactly the frozen template of the chain's model plus messages."""
+        url = request.full_url
+        if url not in (provider.URL, openai_provider.URL): raise AssertionError('the rehearsal stub only answers the two chat-completions endpoints')
+        openai = url == openai_provider.URL
+        if (study.provider_name() == 'openai') != openai: raise AssertionError('request sent to the endpoint of another provider')
+        body = json.loads(request.data); template = study.provider_config()['request_template']
+        if list(body) != list(template) + ['messages'] or {k: body[k] for k in template} != template \
                 or [m['role'] for m in body['messages']] != ['system', 'user']:
-            raise urllib.error.HTTPError(provider.URL, 400, 'Bad Request', {}, io.BytesIO(b'{"error":{"code":400,"message":"unexpected request body"}}'))
+            raise urllib.error.HTTPError(url, 400, 'Bad Request', {}, io.BytesIO(b'{"error":{"code":400,"message":"unexpected request body"}}'))
         with self.lock:
             self.requests += 1
             credit = self.requests <= self.credit_first or (self.credit_from is not None and self.messages + 1 >= self.credit_from)
             if not credit: self.messages += 1
             n = self.messages
+        if credit and openai:       # OpenAI reports an exhausted quota as HTTP 429 insufficient_quota
+            raise urllib.error.HTTPError(url, 429, 'Too Many Requests', {'x-request-id': 'req_rehearsal'}, io.BytesIO(QUOTA_BODY))
         if credit:
-            raise urllib.error.HTTPError(provider.URL, 402, 'Payment Required', {'x-request-id': 'req_rehearsal'}, io.BytesIO(CREDIT_BODY))
+            raise urllib.error.HTTPError(url, 402, 'Payment Required', {'x-request-id': 'req_rehearsal'}, io.BytesIO(CREDIT_BODY))
         if n in self.fail_messages or (self.fail_from is not None and n >= self.fail_from):
-            raise urllib.error.HTTPError(provider.URL, 500, 'Internal Server Error', {'x-request-id': 'req_rehearsal'}, io.BytesIO(ERROR_BODY))
+            raise urllib.error.HTTPError(url, 500, 'Internal Server Error', {'x-request-id': 'req_rehearsal'}, io.BytesIO(ERROR_BODY))
         with self.lock: self.answered += 1
         system, user = (m['content'] for m in body['messages'])
-        tokens = max(1, (len(system) + len(user)) // 3)
-        payload = {
-            'id': 'gen-rehearsal', 'object': 'chat.completion', 'model': study.design()['canonical_model'], 'provider': 'Alibaba',
-            'choices': [{'index': 0, 'finish_reason': 'stop', 'native_finish_reason': 'stop',
-                         'message': {'role': 'assistant', 'content': answer_text(user, self.mode, n), 'refusal': None, 'reasoning': None}}],
-            'usage': {'prompt_tokens': tokens, 'completion_tokens': 30, 'total_tokens': tokens + 30,
-                      'completion_tokens_details': {'reasoning_tokens': 0}}}
+        tokens = max(1, (len(system) + len(user)) // 3); content = answer_text(user, self.mode, n)
+        if openai:      # reasoning tokens are part of completion_tokens; no cost and no provider field
+            payload = {'id': 'chatcmpl-rehearsal', 'object': 'chat.completion', 'model': body['model'], 'system_fingerprint': 'fp_rehearsal',
+                       'choices': [{'index': 0, 'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': content, 'refusal': None}}],
+                       'usage': {'prompt_tokens': tokens, 'completion_tokens': 72, 'total_tokens': tokens + 72,
+                                 'prompt_tokens_details': {'cached_tokens': 0}, 'completion_tokens_details': {'reasoning_tokens': 64}}}
+        else:
+            payload = {'id': 'gen-rehearsal', 'object': 'chat.completion', 'model': study.design()['canonical_model'], 'provider': 'Alibaba',
+                       'choices': [{'index': 0, 'finish_reason': 'stop', 'native_finish_reason': 'stop',
+                                    'message': {'role': 'assistant', 'content': content, 'refusal': None, 'reasoning': None}}],
+                       'usage': {'prompt_tokens': tokens, 'completion_tokens': 30, 'total_tokens': tokens + 30,
+                                 'completion_tokens_details': {'reasoning_tokens': 0}}}
         return Response(json.dumps(self.mutate(n, payload) if self.mutate else payload).encode())
 
 
@@ -202,16 +239,19 @@ def start_hub(hub_dir, data_dir, token):
     return proc, f'http://127.0.0.1:{port}'
 
 
-def chain_once(label, stub, hub_dir, base, sr, resume_with=None, verify=False):
+def chain_once(label, stub, hub_dir, base, sr, resume_with=None, verify=False, model=None, hub=None):
+    """One chain for one model of the ladder (default: the first). `hub` (process, url, token) lets a second
+    chain use the hub of an earlier one; each chain still has its own results directory and ledger file."""
     work = Path(base) / label; work.mkdir()
-    token = 'rehearsal-' + secrets.token_hex(12)
-    proc, url = start_hub(hub_dir, work, token)
+    proc, url, token = hub or (lambda t: start_hub(hub_dir, work, t) + (t,))('rehearsal-' + secrets.token_hex(12))
     os.environ.update(SWARM_HUB_URL=require_local(url), SWARM_HUB_TOKEN=token, SWARM_SOURCE='dmarz/pipeline-verify-rehearsal',
                       SWARM_SPOOL=str(work / 'spool'), STUDY_RESULTS_DIR=str(work / 'results'),
                       STUDY_BUDGET_LEDGER=str(work / 'ledger' / 'ledger.jsonl'))
-    os.environ[provider.KEY_ENV] = 'rehearsal-stub-not-a-credential'
+    for key in ('STUDY_MODEL', 'STUDY_PROVIDER', provider.KEY_ENV, openai_provider.KEY_ENV): os.environ.pop(key, None)
+    if model: os.environ.update(STUDY_MODEL=model, STUDY_PROVIDER=study.provider_name(model))
+    os.environ[worker.adapter().KEY_ENV] = 'rehearsal-stub-not-a-credential'      # only the chain's own provider alias, as the launcher does
     require_local(sr._config().get('SWARM_HUB_URL'))
-    started = time.monotonic(); result = {'label': label, 'stub': stub.mode}
+    started = time.monotonic(); result = {'label': label, 'stub': stub.mode, 'model': study.model(), 'hub': (proc, url, token)}
 
     def snapshot():
         status = chain.read_status(); runs = sr.runs(study.EXPERIMENT, limit=5000); s1 = status['stages'].get('S1') or {}
@@ -226,8 +266,9 @@ def chain_once(label, stub, hub_dir, base, sr, resume_with=None, verify=False):
                    hub_final_metrics_present=all(all(k in (r.get('metrics') or {}) for k in
                        ('episodes', 'invalid', 'model_calls', 'input_tokens', 'output_tokens', 'cost_usd')) for r in runs),
                    ledger=chain.ledger_totals())
-        if s1.get('directory'): out['s1_units'] = chain.units(chain.stage_rows(s1), manifest.load())
+        if s1.get('directory'): out['s1_units'] = chain.units(chain.stage_rows(s1), manifest.reference())
         return out
+    keep_hub = hub is not None or label.endswith('-shared-hub')
     try:
         result['exit'] = chain.run_chain(list(study.STAGES), sr=sr, opener=stub)
         result.update(snapshot(), stub_messages=stub.messages, stub_requests=stub.requests, stub_answered=stub.answered)
@@ -238,11 +279,16 @@ def chain_once(label, stub, hub_dir, base, sr, resume_with=None, verify=False):
         if verify: result['verify_exit'] = chain.verify(sr)
         result['spool_empty'] = not list((work / 'spool').glob('*.json')) if (work / 'spool').exists() else True
     finally:
-        proc.terminate()
-        try: proc.wait(timeout=10)
-        except subprocess.TimeoutExpired: proc.kill()
+        if not keep_hub: stop_hub(proc)
     result['seconds'] = round(time.monotonic() - started, 1)
+    if not keep_hub: result.pop('hub')
     return result
+
+
+def stop_hub(proc):
+    proc.terminate()
+    try: proc.wait(timeout=10)
+    except subprocess.TimeoutExpired: proc.kill()
 
 
 def main():
@@ -259,8 +305,10 @@ def main():
     import swarm_report as sr
     clock = Clock(); worker.CLOCK, worker.SLEEP = clock.now, clock.sleep       # no backoff or billing wait takes real time
     base = tempfile.mkdtemp(prefix='verify-cost-qwen-rehearsal-', dir=a.tmp); started = time.monotonic()
-    budget = study.design()['budget']; total = budget['max_attempted_calls']; limit = budget['max_failed']
+    budget = study.budget(study.design()['model_ladder'][0]); total = budget['max_attempted_calls']; limit = budget['max_failed']
     n_s1 = budget['max_calls']['S1']; first_s1 = 2 + budget['max_calls']['Q0']       # message ordinal of the first S1 call
+    ladder = study.design()['model_ladder']
+    for key in ('STUDY_MODEL', 'STUDY_PROVIDER'): os.environ.pop(key, None)        # chains (a) to (f) are the first model's
     try:
         full = chain_once('a-full-chain', Stub('optimal'), hub_dir, base, sr, verify=True)
         gate = chain_once('b-failed-qualification', Stub('always_first'), hub_dir, base, sr)
@@ -270,6 +318,17 @@ def main():
         bill = chain_once('e-billing-stop-and-resume', Stub('optimal', credit_from=first_s1 + 40), hub_dir, base, sr,
                           resume_with=Stub('optimal'), verify=True)
         mixed = chain_once('f-tolerated-answer-variants', Stub('variants'), hub_dir, base, sr, verify=True)
+        # (g) the two chains of the ladder, one after the other, on the same hub: Qwen with its repaired answer on the
+        # OpenRouter-shaped stub, then gpt-6-luna with the original answer on the OpenAI-shaped stub
+        qwen_chain = chain_once('g-qwen-shared-hub', Stub('optimal'), hub_dir, base, sr, verify=True)
+        shared = qwen_chain.pop('hub')
+        try:
+            luna_chain = chain_once('g-gpt-6-luna', Stub('variants'), hub_dir, base, sr, verify=True, model=ladder[1], hub=shared)
+            luna_chain.pop('hub'); both_runs = sorted(((r.get('params') or {}).get('batch'), (r.get('params') or {}).get('model'), r['status'])
+                                                  for r in sr.runs(study.EXPERIMENT, limit=5000))
+        finally:
+            stop_hub(shared[0])
+        for key in ('STUDY_MODEL', 'STUDY_PROVIDER'): os.environ.pop(key, None)
     finally:
         if not a.keep: shutil.rmtree(base, ignore_errors=True)
     calls = full.get('stages', {}); made = sum((e.get('calls') or 0) for e in calls.values())
@@ -343,11 +402,24 @@ def main():
                                          and (mixed.get('s1_units') or {}).get('choice_contradicts_own_costs') == 0,
         'a_reference_stub_writes_both_costs_correctly': (full.get('s1_units') or {}).get('both_costs_correct') == n_s1
                                                         and (full.get('s1_units') or {}).get('work_malformed') == 0,
-        'no_real_wait': time.monotonic() - started < 600 and len(clock.waits) > 0,
+        'g_both_chains_complete_and_verify': qwen_chain.get('exit') == 0 and luna_chain.get('exit') == 0 and qwen_chain.get('verify_exit') == 0 and luna_chain.get('verify_exit') == 0
+                                             and qwen_chain.get('model') == ladder[0] and luna_chain.get('model') == ladder[1],
+        'g_eight_runs_on_one_hub_with_model_batches': both_runs == sorted(
+            [(study.batch(s, ladder[0]), ladder[0], 'done') for s in study.STAGES] +
+            [(study.batch(s, ladder[1]), ladder[1], 'done') for s in study.STAGES]),
+        'g_second_model_has_its_own_ledger_and_caps': (luna_chain.get('ledger') or {}).get('attempted_calls') == 600
+            and (luna_chain.get('ledger') or {}).get('cap_usd') == study.budget(ladder[1])['aggregate_usd'] == 5
+            and (qwen_chain.get('ledger') or {}).get('cap_usd') == 2 and (qwen_chain.get('ledger') or {}).get('attempted_calls') == 600
+            and set((luna_chain.get('ledger') or {}).get('calls_by_batch') or {}) == {study.batch(s, ladder[1]) for s in ('P0', 'Q0', 'S1')},
+        'g_second_model_valid_and_graded_on_the_original_answer': {s: (e_.get('valid'), e_.get('failed')) for s, e_ in luna_chain.get('stages', {}).items()} ==
+            {'S0': (144, 0), 'P0': (1, 0), 'Q0': (23, 0), 'S1': (n_s1, 0)} and (luna_chain.get('s1_units') or {}).get('regret_table') == 0
+            and (luna_chain.get('s1_units') or {}).get('both_costs_correct') == 0,
+        'no_real_wait': time.monotonic() - started < 900 and len(clock.waits) > 0,
     }
     ok = all(checks.values())
     print(json.dumps({'ok': ok, 'checks': checks, 'full_chain': full, 'failed_qualification': gate, 'one_failed_unit': one,
-                      'over_the_failure_limit': many, 'billing_stop_and_resume': bill, 'tolerated_variants': mixed, 'waits_replaced': len(clock.waits),
+                      'over_the_failure_limit': many, 'billing_stop_and_resume': bill, 'tolerated_variants': mixed,
+                      'two_models_first': qwen_chain, 'two_models_second': luna_chain, 'two_models_hub_runs': both_runs, 'waits_replaced': len(clock.waits),
                       'waited_seconds_replaced': sum(clock.waits), 'seconds': round(time.monotonic() - started, 1),
                       'note': 'stub answers only; nothing here is a sample and nothing left this machine'}, sort_keys=True))
     return 0 if ok else 1

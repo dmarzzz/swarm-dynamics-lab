@@ -62,25 +62,59 @@ def results_dir():
     return Path(os.environ.get('STUDY_RESULTS_DIR') or ROOT / 'results')
 
 
-def batch(stage):
-    return f'{stage.lower()}-{design()["attempt"]}'
+def model():
+    """The model of this chain: STUDY_MODEL, default the first entry of the frozen ladder."""
+    ladder = design()['model_ladder']; chosen = os.environ.get('STUDY_MODEL') or ladder[0]
+    if chosen not in ladder: raise ValueError('model_not_in_ladder')
+    return chosen
+
+
+def provider_name(name=None):
+    return design()['providers'][name or model()]
+
+
+def schema(name=None):
+    """The answer schema of a model's chain: `cost_then_choice` (attempt 002) or `choice_only` (attempt 001's)."""
+    return design()['models'][name or model()]['answer_schema']
+
+
+@functools.lru_cache(maxsize=None)
+def _budget(name):
+    return dict(design()['budget'], **(design()['models'][name].get('budget') or {}))
+
+
+def budget(name=None):
+    """The budget of a model's chain: the common budget with the model's overrides. Cached: do not mutate."""
+    return _budget(name or model())
+
+
+def batch(stage, name=None):
+    """`<stage>-<attempt>` for the first model of the ladder, `<stage>-<attempt>-<tag>` for any other model."""
+    tag = design()['models'][name or model()]['tag']
+    return f'{stage.lower()}-{design()["attempt"]}' + (f'-{tag}' if tag else '')
 
 
 def params(stage):
     if stage not in STAGES: raise ValueError('unknown_stage')
-    return {'stage': stage, 'backend': design()['stages'][stage]['backend'], 'batch': batch(stage),
+    return {'stage': stage, 'backend': 'scripted' if stage == 'S0' else provider_name(), 'model': model(), 'batch': batch(stage),
             'source_hash': source_hash(), 'code': code_revision()}
 
 
-def provider_config():
-    """What the reference adapter needs, taken from the frozen design and nowhere else."""
-    d = design()
-    return {'model': d['model'], 'canonical_model': d['canonical_model'], 'provider': d['provider'],
-            'request_template': d['request_template'], 'budget': d['budget']}
+def provider_config(name=None):
+    """What the model's reference adapter needs, taken from the frozen design and nowhere else."""
+    d = design(); name = name or model()
+    if provider_name(name) == 'openrouter':
+        return {'model': d['model'], 'canonical_model': d['canonical_model'], 'provider': d['provider'],
+                'request_template': d['request_template'], 'budget': budget(name)}
+    return {'model': name, 'request_template': d['models'][name]['request_template'], 'budget': budget(name)}
 
 
 # ------------------------------------------------------------------ the request
 
+SYSTEM_CHOICE_ONLY = ('You decide which one cell of a map to inspect. Read the map, the evidence, the objective and the '
+                      'consequences of each allowed action, then choose. Answer with one JSON object and nothing else, in '
+                      'exactly this shape: {"inspect": "<row>,<column>"}. The value must be one of the two allowed cells, '
+                      'written exactly as listed. Do not add other keys and do not write anything outside the JSON object.')
 SYSTEM = ('You decide which one cell of a map to inspect. Read the map, the evidence, the objective and the '
           'consequences of each allowed action. Before choosing, write the expected total cost of the final map for '
           'each of the two allowed actions, then choose. Answer with one JSON object and nothing else, in '
@@ -215,8 +249,14 @@ def consequence_block(w, error, unknown_cost, representation):
     return RENDER[representation](shown(sim.consequences(w, error, unknown_cost)))
 
 
-def user_text(w, error, unknown_cost, representation):
-    """The whole user message. Everything outside the CONSEQUENCES block is the same for both representations."""
+def system(kind=None):
+    """The system message of an answer schema: attempt 002's for `cost_then_choice`, attempt 001's for `choice_only`."""
+    return {'cost_then_choice': SYSTEM, 'choice_only': SYSTEM_CHOICE_ONLY}[kind or schema()]
+
+
+def user_text(w, error, unknown_cost, representation, kind=None):
+    """The whole user message. Everything outside the CONSEQUENCES block is the same for both representations;
+    everything before the ANSWER block is the same for both answer schemas."""
     f = sim.facts(w, error, unknown_cost); a, b = f['legal_cells']; rep = f['report']
     measurements = '; '.join(f'{c} {label}' for c, label in f['measurements'])
     return ('MAP\n'
@@ -229,11 +269,13 @@ def user_text(w, error, unknown_cost, representation):
             f'You have one inspection. Allowed cells, in this order: {a}; {b}.\n'
             'After the inspection the final map is filled in by the fixed rule under CONSEQUENCES and every cell is scored.\n'
             'Objective: minimize the expected total cost of the final map.'
-            + BLOCK_START + consequence_block(w, error, unknown_cost, representation) + BLOCK_END + answer_block(a, b))
+            + BLOCK_START + consequence_block(w, error, unknown_cost, representation) + BLOCK_END + answer_block(a, b, kind))
 
 
-def answer_block(a, b):
-    """The only part of the user message that differs from attempt 001."""
+def answer_block(a, b, kind=None):
+    """The only part of the user message that differs between the answer schemas."""
+    if (kind or schema()) == 'choice_only':       # attempt 001's line, byte for byte
+        return f'Reply with exactly one of these JSON objects: {{"inspect": "{a}"}} or {{"inspect": "{b}"}}'
     return ('First write the expected total cost of the final map for each allowed action, then your choice. '
             f'Reply with one JSON object of exactly this form: {{"cost_if_inspect": {{"{a}": <number>, "{b}": <number>}}, "inspect": "<cell>"}} '
             f'where <cell> is {a} or {b}.')
@@ -261,8 +303,8 @@ def number(value):
     return out if out == out and abs(out) != float('inf') else None
 
 
-def validate(obj, legal_cells):
-    """The local schema of attempt 002, decided in advance (preregistration, "Attempt 002").
+def validate(obj, legal_cells, kind=None):
+    """The local schema, by answer schema. For `choice_only` see the end of this function. For attempt 002, decided in advance (preregistration, "Attempt 002").
     Valid: one JSON object whose `inspect` is a string naming one of the two legal cells after trimming
     whitespace and removing spaces around the comma. Everything about `cost_if_inspect` and any extra key is
     tolerated and recorded in `work`. (The adapter has already rejected text that is not JSON, and any
@@ -271,6 +313,10 @@ def validate(obj, legal_cells):
     if type(obj) is not dict or 'inspect' not in obj: raise ValueError('answer_object_or_inspect_missing')
     value = obj['inspect']
     if type(value) is not str or squeeze(value) not in legal_cells: raise ValueError('answer_value')
+    if (kind or schema()) == 'choice_only':
+        # The original answer {"inspect": "<cell>"}: same validity rule; extra keys tolerated and recorded; no working field.
+        work = {'extra_keys': [str(k)[:40] for k in obj if k != 'inspect'][:8], 'inspect_respaced': squeeze(value) != value}
+        return {'inspect': squeeze(value), 'work': work, 'raw': json.dumps(obj)}
     key = design()['answer']['work_key']; written = obj.get(key); keys = list(obj)
     costs = {cell: None for cell in legal_cells}; spaced = strings = False; other = []
     if isinstance(written, dict):
@@ -288,8 +334,10 @@ def validate(obj, legal_cells):
 
 
 def scripted_answer(name, a):
-    """The answer object a scripted policy returns: the analytic expected cost of each action, then its choice."""
+    """The answer object a scripted policy returns: the analytic expected cost of each action, then its choice
+    (only the choice in the `choice_only` schema)."""
     w = layout(a['layout'])
+    if schema() == 'choice_only': return {'inspect': policy(name, a)}
     costs = {cell: sim.expected_loss(a['error'], a['unknown_cost'], sim.action_of(w, cell)) for cell in a['legal_cells']}
     return {design()['answer']['work_key']: costs, 'inspect': policy(name, a)}
 
@@ -324,12 +372,13 @@ def cases():
 
 
 def assignment(kind, seed, error, unknown_cost, representation, group=None):
+    """One assignment in the answer schema of the chain's model."""
     w = layout(seed); user = user_text(w, error, unknown_cost, representation)
     prefix = {'engineering': 'g', 'main': 'm', 'qualification': 'q' + str(group)}[kind]
     return {'id': f'{prefix}-{seed}-e{round(error * 100):02d}-u{round(unknown_cost * 100):02d}-{representation}',
             'kind': kind, 'set': group, 'layout': seed, 'error': error, 'unknown_cost': unknown_cost,
             'representation': representation, 'legal_cells': list(w['legal_order']),
-            'input_hash': digest([SYSTEM, user]), 'content_bytes': len(SYSTEM.encode()) + len(user.encode())}
+            'input_hash': digest([system(), user]), 'content_bytes': len(system().encode()) + len(user.encode())}
 
 
 def user_for(a):
@@ -361,12 +410,21 @@ def active_set():
 
 
 @functools.lru_cache(maxsize=None)
-def _assignments(stage):
+def _build(stage, kind):
+    assert kind == schema()
     if stage == 'S0': return grid('engineering') + fixtures('a') + fixtures('b')
     if stage == 'P0': return fixtures(active_set())[:1]
     if stage == 'Q0': return fixtures(active_set())[1:]
     if stage == 'S1': return grid('main')
     raise ValueError('unknown_stage')
+
+
+def _assignments(stage):
+    """The stage's assignments for the chain's model (cached per answer schema)."""
+    return _build(stage, schema())
+
+
+_assignments.cache_clear = _build.cache_clear
 
 
 def assignments(stage):
@@ -388,7 +446,7 @@ def evaluate(a, choice, answer=None):
     """The grade of the choice (only `inspect` is graded) and, when the validated answer is given, the report on
     the written costs."""
     out = sim.score(layout(a['layout']), a['error'], a['unknown_cost'], choice)
-    if answer is not None: out['work'] = work_check(a, answer)
+    if answer is not None and 'costs' in answer['work']: out['work'] = work_check(a, answer)
     return out
 
 
@@ -427,23 +485,24 @@ def scripted_qualification(rows):
 
 
 PROBE_METADATA = ('response_model', 'response_provider', 'response_id', 'finish_reason', 'reasoning_tokens', 'latency_seconds',
-                  'provider_reported_usd', 'computed_usd', 'actual_usd', 'reserved_usd', 'input_tokens', 'output_tokens', 'request_bytes', 'attempts')
+                  'provider_reported_usd', 'computed_usd', 'actual_usd', 'reserved_usd', 'input_tokens', 'output_tokens', 'request_bytes', 'attempts',
+                  'visible_output_tokens', 'cost_source', 'input_pricing', 'cached_tokens', 'system_fingerprint', 'rate_limits')
 
 
 def probe_gate(rows):
     """P0 checks the interface. A completed row means the adapter accepted the response: it parsed, the model
-    slug matched, usage was reported, the finish reason was `stop`, no reasoning tokens were billed, and the
-    answer passed local validation. The adapter accepts a response that names no provider; this gate does
-    not: the response must name the pinned provider. Whether the choice is optimal counts in Q0's gate.
-    The raw response metadata of the one call is returned for the summary."""
+    id matched, usage was reported, the finish reason was `stop`, and the answer passed local validation (on
+    OpenRouter also: no reasoning tokens were billed and the response names the pinned provider, which this
+    gate checks again; OpenAI has no provider routing, so there is nothing to check there). Whether the
+    choice is optimal counts in Q0's gate. The raw response metadata of the one call is returned for the summary."""
     out = {'passed': False}
     if len(rows) != 1 or rows[0]['id'] != _assignments('P0')[0]['id']: return out
     acc = rows[0].get('accounting') or {}
     out.update({k: acc.get(k) for k in PROBE_METADATA}, content_bytes=rows[0]['content_bytes'])
     served = acc.get('response_provider')
-    out['provider_is_pinned'] = isinstance(served, str) and design()['provider'] in served.lower()
+    out['provider_is_pinned'] = (isinstance(served, str) and design()['provider'] in served.lower()) if provider_name() == 'openrouter' else None
     if acc.get('input_tokens'): out['tokens_per_byte'] = acc['input_tokens'] / rows[0]['content_bytes']
-    out['passed'] = bool(rows[0]['status'] == 'completed' and out['provider_is_pinned'])
+    out['passed'] = bool(rows[0]['status'] == 'completed' and out['provider_is_pinned'] is not False)
     return out
 
 
@@ -475,8 +534,8 @@ def numbers(text):
 
 def largest_request_bytes(stage='S1'):
     """Bytes of the largest encoded request body of a stage (template plus both messages)."""
-    t = design()['request_template']; biggest = max(_assignments(stage), key=lambda a: a['content_bytes'])
-    body = dict(t, messages=[{'role': 'system', 'content': SYSTEM}, {'role': 'user', 'content': user_for(biggest)}])
+    t = provider_config()['request_template']; biggest = max(_assignments(stage), key=lambda a: a['content_bytes'])
+    body = dict(t, messages=[{'role': 'system', 'content': system()}, {'role': 'user', 'content': user_for(biggest)}])
     return len(json.dumps(body).encode())
 
 
@@ -487,13 +546,14 @@ def check_request(a):
     if sorted(a['legal_cells']) != sorted([rc, uc]) or rc == uc: out.append(f'{tag}:both_actions_must_be_legal')
     a1, a2 = a['legal_cells']
     if f'Allowed cells, in this order: {a1}; {a2}.' not in text or not text.endswith(answer_block(a1, a2)) \
-            or f'{{"{a1}": <number>, "{a2}": <number>}}' not in text:
+            or (schema() == 'cost_then_choice' and f'{{"{a1}": <number>, "{a2}": <number>}}' not in text) \
+            or (schema() == 'choice_only' and ('cost_if_inspect' in system() + text or not text.endswith(f'{{"inspect": "{a1}"}} or {{"inspect": "{a2}"}}'))):
         out.append(f'{tag}:legal_cells_not_listed_in_order')
-    low = (SYSTEM + '\n' + text).lower()
+    low = (system() + '\n' + text).lower()
     if any(word in low for word in FORBIDDEN) or str(a['layout']) in text: out.append(f'{tag}:forbidden_text')
     f = sim.facts(w, a['error'], a['unknown_cost'])
     if len(f['measurements']) != 34 or any(c in (rc, uc) for c, _ in f['measurements']): out.append(f'{tag}:measurements')
-    if digest([SYSTEM, text]) != a['input_hash']: out.append(f'{tag}:input_hash')
+    if digest([system(), text]) != a['input_hash']: out.append(f'{tag}:input_hash')
     # equal information: the block states exactly the records, and so does the other representation's block
     want = shown(sim.consequences(w, a['error'], a['unknown_cost']))
     head, block, tail = split_block(text)
@@ -545,7 +605,7 @@ def policy_rows(rows, name):
 
 def check_design():
     """Structural facts of the frozen design that make the study informative. Returns violations."""
-    out = []; d = design(); q = d['qualification']; main = cases(); L = d['layouts']
+    out = []; d = design(); q = d['qualification']; main = cases(); L = d['layouts']; b = budget()
     best = [sim.optimal_action(e, u) for e, u in main]
     if len(main) != 12 or best.count('check') != 6 or best.count('explore') != 6: out.append('optimum_must_change_across_the_twelve_cases')
     seeds = [s for k in ('engineering', 'qualification_a', 'qualification_b', 'main') for s in L[k]]
@@ -570,14 +630,19 @@ def check_design():
     for stage in STAGES:
         rows = _assignments(stage)
         if len(rows) != d['stages'][stage]['assignments'] or len({a['id'] for a in rows}) != len(rows): out.append(f'{stage}:assignment_count')
-        if stage != 'S0' and len(rows) != d['budget']['max_calls'][stage]: out.append(f'{stage}:call_cap_differs_from_assignments')
+        if stage != 'S0' and len(rows) != b['max_calls'][stage]: out.append(f'{stage}:call_cap_differs_from_assignments')
     repair = q['repairs_allowed'] * q['valid_required']       # the repair attempt's P0 and Q0 calls, in the same ledger
-    if sum(d['budget']['max_calls'].values()) + repair != d['budget']['max_attempted_calls']: out.append('study_call_cap')
+    if sum(b['max_calls'].values()) + repair != b['max_attempted_calls']: out.append('study_call_cap')
+    ladder = d['model_ladder']; tags = [d['models'][m]['tag'] for m in ladder] if set(d['models']) == set(ladder) else None
+    if ladder[0] != d['model'] or set(d['providers']) != set(ladder) or tags is None or tags[0] != '' or len(set(tags)) != len(tags) \
+            or d['providers'][ladder[0]] != 'openrouter' or any(d['models'][m]['answer_schema'] not in ('cost_then_choice', 'choice_only') for m in ladder):
+        out.append('model_ladder')
+    if 'json' not in (system() + user_for(_assignments('P0')[0])).lower(): out.append('json_mode_needs_the_word_json')
     if {a['id'] for a in _assignments('P0') + _assignments('Q0')} & {a['id'] for a in _assignments('S1')}: out.append('qualification_inside_main')
     biggest = max(largest_request_bytes(s) for s in ('P0', 'Q0', 'S1'))
-    if biggest > d['budget']['max_input_bytes']: out.append('request_larger_than_max_input_bytes')
-    if biggest / CHARS_PER_TOKEN_FLOOR > d['budget']['max_input_tokens']: out.append('request_may_exceed_the_input_ceiling')
-    if d['budget']['max_failed'] != max(3, -(-len(_assignments('S1')) // 100)): out.append('max_failed_rule')
+    if biggest > b['max_input_bytes']: out.append('request_larger_than_max_input_bytes')
+    if biggest / CHARS_PER_TOKEN_FLOOR > b['max_input_tokens']: out.append('request_may_exceed_the_input_ceiling')
+    if b['max_failed'] != max(3, -(-len(_assignments('S1')) // 100)): out.append('max_failed_rule')
     return out
 
 
