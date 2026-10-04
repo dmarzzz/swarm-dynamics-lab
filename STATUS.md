@@ -59,6 +59,7 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
+| [theseus-d2-run](tasks/theseus-d2-run.md) | claimed | p1 | Review D2, implement validated instrumentation, publish admission, execute within existing budget, reconcile evidence and write the postmortem. scan | survey | synthesis | review | build | experiment | admin | question | vishesh/codex-theseus | vishesh | 2026-10-04T08:45Z | Review, implement and execute the Theseus D2 diagnostic |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
@@ -257,7 +258,9 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/pipeline-scarcity | working | build-sybil-scarcity-opus | 2026-10-04T08:50Z | sybil-scarcity-opus package pushed for the lead's review: code pinned at 36a03510 (selftest 33 OK, offline S0 168/168, rehearsal passed), pre-run review chain-001 on main; nothing launched, no model call |
 | dmarz/market-split-film | done |  | 2026-10-04T08:45Z | filed the explainer film for the finished Sonnet market-split pilot s1-002 (reads the filed records only; no model calls, no edits to market-split-api or market-split-opus) |
+| vishesh/codex-theseus | working | theseus-d2-run | 2026-10-04T08:45Z | PI critique, D2 instrument validation and bounded execution |
 | dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T08:40Z | sybil-split-opus: prospective plan and frozen design pushed; implementing code, offline tests, scripted stage and rehearsal; no launch, no model call |
 | vishesh/codex-regrowth-docs | idle | healing-qwen-jev | 2026-10-04T08:36Z | C3 complete: 600 reports, 270 worlds, zero transport failures; measured null composite benefit published; machine stopped |
 | dmarz/v3-d2-opus | done |  | 2026-10-04T08:33Z | D2 v3-d2-a1 complete: 72/72 valid. Opus 5.5 6/6 decisions and 18/18 feasibility checks; Sonnet 4.6 and Haiku 4.5 each 5/6 and 16/18. USD 0.127741. Results and post-run review on main; claim on sim-dmarz-3 released; no successor. |
@@ -267,13 +270,11 @@
 | dmarz/v3-q0-opus | working |  | 2026-10-04T08:15Z | discussion-v3-opus chain v3o-a1 (probe, Q0 636 calls, S1 2,436 calls if Q0 passes) on sim-dmarz-9 |
 | dmarz/d1-opus | done |  | 2026-10-04T08:12Z | D1-Opus d1o-a1 done: fresh gate 12/12, 72/72 valid, $1.495; audited, results + post-mortem pushed, claim released |
 | dmarz/market-split-opus | working |  | 2026-10-04T08:10Z | market-split-opus paid stages admitted by the reviewer (same-researcher check); repeating scripted S0 at the amended USD 160 cap design, then I0, Q0 and S1 chained on software gates |
-| dmarz/pipeline-scarcity | working | build-sybil-scarcity-opus | 2026-10-04T08:10Z | sybil-scarcity-opus: plan documents pushed (README, preregistration, amendments, frozen design, setup record); now implementing code and offline tests; no launch, no model call |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T08:07Z | owner-authorized live D5 queued through orbital-one; dedicated-host and preserved-ledger admission pending; no model call yet |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T08:07Z | Credential resolved and deployed checks passed; awaiting existing central S0 dispatch, no owner input needed |
 | dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T08:06Z | Preparing false-alarm-cascade (honeypot-vigilance hunch V4, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | shadow/sol-goal | done |  | 2026-10-04T08:05Z | GOAL-12H lane done at 08:05Z. capture-memory-mix (heterogeneous memory rescue) on main with scripted M0/M1/M2 and three real-model pilots; hub experiment capture-memory-mix populated. |
 | vishesh/codex-pi-review | done | integrate-run-closeout-cycle | 2026-10-04T08:03Z | Published automatic closeout, quality rubric and owner-approved next-run workflow; offline validation complete. |
-| vishesh/codex-theseus | done | theseus-d2-design | 2026-10-04T08:01Z | Published saved-data interpretation and prospective D2 plan; execution not started |
 | dmarz/results-analyst | working |  | 2026-10-04T07:58Z | Reading dmarz run results as they arrive and keeping next-run decision packages current in researchers/dmarz/notes/pipeline/ |
 | dmarz/pipeline | working |  | 2026-10-04T07:51Z | Pipeline lead: keeps at least three launch-ready run requests prepared for dmarz's experiments (plan, code, offline tests, scripted stage, pre-run review, chained launcher); launches nothing and makes no model calls |
 | dmarz/orbital-orchestrator | working |  | 2026-10-04T07:39Z | sybil-specialists-opus (Opus 5.5 replication of sybil-specialists-api) on sim-dmarz-4; Sonnet version superseded before paid calls |
