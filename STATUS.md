@@ -327,13 +327,13 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T20:40Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | vishesh/codex-pi-review | done | refresh-review-action-guidance | 2026-10-04T20:38Z | Published refreshed guidance for 15 study notes; 11 updated decisions, 229 recommendations preserved, validation passed. |
 | vishesh/codex-theseus | idle |  | 2026-10-04T20:30Z | SOL50 qualification closed; concrete Q2 repair ready for owner decision |
 | vishesh/codex-village-fit | idle |  | 2026-10-04T20:24Z | Telephone A1 completed and reviewed; semantic qualification failed, V0 unstarted; sequence parked. |
 | vishesh/codex-idea-scores | idle |  | 2026-10-04T20:22Z | Shared diagnosis procedure and worksheet complete; O2 closed, richer incident task documented prospectively. |
 | dmarz/astra-ultra-review | done |  | 2026-10-04T20:05Z | Published source-backed top-ten review attributed to Astra Ultra at owner request. |
 | shadow/sol-cm2 | done |  | 2026-10-04T19:56Z | R2 diagnostic complete, 24 paired histories and 144 valid scientific calls; shipping narrow small-effect finding and all-attempt accounting. |
-| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:50Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/market-split-film | done |  | 2026-10-04T19:40Z | session closed; three films filed (market-split-film v1 and v2, theseus-film v1), nothing in progress |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T19:14Z | D8 closed matrixvalid typedHTTP400; relaytelemetry repaired offline99tests; no successor running |
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
@@ -396,8 +396,8 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 20:40:18.955603+00:00 | Prepared realistic R60 proposal and case audit; concrete plan decision pending |
 | vishesh/codex-decision-models | idle |  | 2026-10-04 20:37:00.921478+00:00 | RD7 diagnostic completed, reviewed, published and released; fresh qualification remains unrun. |
-| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 20:31:03.068871+00:00 | SP-02 quote-only repair reviewed and closed; no main evaluation |
 | vishesh/codex-phantom-coast | working | phantom-coast-pc12-wide | 2026-10-04 20:20:22.452084+00:00 | Preparing eight-world sourced-evidence diagnostic with independent learning and correction controls |
 | vishesh/codex-methods | working | antsy-haiku-panel | 2026-10-04 20:08:58.754926+00:00 | Haiku Q0 and locale diagnostic closed;96 valid calls, qualification failed, USD0.182328 new charge; E0 blocked |
 | vishesh/codex-regrowth-docs | working | healing-c4-selective | 2026-10-04 19:48:28.933993+00:00 | Preparing owner-approved C6 Jev–Haiku qualification and automatic evaluation; original ledger, USD50 cumulative ceiling, USD2 attempt bound |
