@@ -6,4 +6,4 @@ Repair: progress now derives usage from the current stage's saved rows, while cu
 
 Post-run publication will create a separate analysis run using the original saved pilot observations and Q0 end-of-stage budget state. It will verify exact evaluator recomputation, preserve every original observation and show the corrected measured replay. Acceptance requires192 unique valid pilot observations,25 decoded analysis GIF frames, final chart agreement with all16 cell means, durable artifact hashes and actual browser playback. No broad stage can launch using the amended runtime without new exact-runtime qualification; this completed pilot keeps its original runtime fingerprint.
 
-Disposition: reporting code regression passed; analysis-publication acceptance pending pilot completion. Not a capability failure or an unfavorable-result rerun.
+Disposition: complete. All192 original observations reconciled;25 analysis GIF frames decode; all26 study/analysis artifacts match hub hashes; corrected initial accounting and actual playback were verified in the browser. Not a capability failure or an unfavorable-result rerun.
