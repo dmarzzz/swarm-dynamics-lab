@@ -1,5 +1,5 @@
 {
-  "version": "2.2",
+  "version": "2.3",
   "population": 200,
   "identity": "one scout per document; claim assignment is agent_id modulo 20",
   "models": {
@@ -41,6 +41,18 @@
       "response": "typed choice with normalized probabilities and argmax validation",
       "max_qualification_calls": 60,
       "max_qualification_usd": 0.1
+    },
+    "jev_reference": {
+      "model": "typesafe/jev-1.13",
+      "required_response_snapshot": "typesafe/jev-1.13-20260917",
+      "provider": "TypeSafe",
+      "provider_route": "typesafe",
+      "fallbacks": false,
+      "role": "Jev-only reference; 200 model-backed scouts after fresh qualification; Qwen-derived conditions stay not-run",
+      "response": "typed choice with normalized probabilities and argmax validation",
+      "max_attempt_calls": 660,
+      "max_cumulative_calls": 720,
+      "max_cumulative_usd": 0.1
     }
   },
   "actions": [

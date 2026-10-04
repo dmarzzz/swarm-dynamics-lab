@@ -18,9 +18,9 @@ def fixtures():
    method=f'protocol Z{i+301}';out.append({'claim':f'{method} improves accuracy.','report':templates[label][i%5].format(m=method),'expected':label})
  random.Random(8600).shuffle(out);return out
 
-def request(obs,index):
+def request(obs,index,scope=None):
  choices=LABELS[index%3:]+LABELS[:index%3]
- return {'model':MODEL,'provider':{'only':['typesafe'],'allow_fallbacks':False},'state':{'claim':obs['claim'],'report':obs['report']},'questions':{'label':{'type':'choice','instructions':'Determine whether the report supports the improvement claim, contradicts it, or provides insufficient evidence. Use only the reported findings; absent measurements are insufficient evidence.','criteria':{k:CRITERIA[k] for k in choices}}}}
+ return {**({'session_id':scope+'-'+str(index)} if scope else {}),'model':MODEL,'provider':{'only':['typesafe'],'allow_fallbacks':False},'state':{'claim':obs['claim'],'report':obs['report']},'questions':{'label':{'type':'choice','instructions':'Determine whether the report supports the improvement claim, contradicts it, or provides insufficient evidence. Use only the reported findings; absent measurements are insufficient evidence.','criteria':{k:CRITERIA[k] for k in choices}}}}
 def validate(data):
  if data.get('model')!=SNAPSHOT or data.get('provider')!=PROVIDER:raise ValueError('route_or_snapshot_mismatch')
  a=data['answers']['label'];label,p=validate_laya(a,LABELS);u=data['usage'];cost=u['cost'];tokens=u['input_tokens'];confidence=a['confidence']
@@ -30,7 +30,8 @@ def validate(data):
  return {'label':label,'probabilities':p,'confidence':confidence,'input_tokens':tokens,'output_tokens':u.get('output_tokens',0),'cost_usd':cost,'served_model':data['model'],'provider':data['provider'],'request_id':data.get('id')}
 class Jev:
  metadata={'requested_model':MODEL,'served_model':SNAPSHOT,'provider':PROVIDER,'input_usd_per_token':RATE,'fallbacks':False}
+ def __init__(self,scope=None):self.scope=scope
  def predict(self,obs,index,timeout):
-  payload=json.dumps(request(obs,index),separators=(',',':')).encode()
+  payload=json.dumps(request(obs,index,self.scope),separators=(',',':')).encode()
   with urllib.request.urlopen(urllib.request.Request('http://127.0.0.1:18443/decision',payload,{'Content-Type':'application/json'}),timeout=timeout) as r:data=json.load(r)
   return validate(data)
