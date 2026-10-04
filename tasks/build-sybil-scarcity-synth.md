@@ -3,7 +3,7 @@ id: build-sybil-scarcity-synth
 type: task
 title: Prepare the scarcity synthesizer follow-up (sybil-scarcity-synth) on Opus 5.5 to launch-ready
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/pipeline-scarcity
 for: dmarz
@@ -14,7 +14,9 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 claimed_at: 2026-10-04T10:13Z
-updated: 2026-10-04T10:13Z
+updated: 2026-10-04T11:19Z
+outputs:
+- researchers/dmarz/notes/sybil-scarcity-synth/reviews/chain-001-pre.md
 ---
 
 ## Goal
