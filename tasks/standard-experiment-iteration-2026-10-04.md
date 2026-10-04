@@ -3,7 +3,7 @@ id: standard-experiment-iteration-2026-10-04
 type: task
 title: Define the standing experiment iteration process
 kind: admin
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-pi-review
 for: vishesh
@@ -12,7 +12,9 @@ created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T17:45Z
-updated: 2026-10-04T17:45Z
+updated: 2026-10-04T17:50Z
+outputs:
+- tooling/agent-experiments/ITERATION.md
 ---
 
 ## Goal
