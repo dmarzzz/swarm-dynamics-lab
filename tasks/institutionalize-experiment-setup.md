@@ -3,14 +3,16 @@ id: institutionalize-experiment-setup
 type: task
 title: Institutionalize the experiment setup runbook
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-runbook
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-runbook
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T04:10Z
+updated: 2026-10-04T04:10Z
 ---
 
 ## Goal
