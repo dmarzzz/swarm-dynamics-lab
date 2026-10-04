@@ -40,7 +40,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | claimed | p0 | synthesis | shadow/sol-atlas |  | 2026-10-04T13:59Z | Draw the cross-topic landscape map |
+| [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | claimed | p0 | synthesis | shadow/sol-atlas |  | 2026-10-04T14:28Z | Draw the cross-topic landscape map |
 | [antsy-v8-native-qualification](tasks/antsy-v8-native-qualification.md) | claimed (stale) | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T09:29Z | Prepare and launch fresh Antsy v8 OCR qualification |
 | [consolidate-pi-next-decisions](tasks/consolidate-pi-next-decisions.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T14:25Z | Consolidate PI reviews into experiment next-step decisions |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
@@ -270,6 +270,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-budget | working | survey-agent-budgets | 2026-10-04T14:30Z | writing survey-agent-budgets from the 63 agent-budgets library entries |
 | shadow/sol-submit | idle |  | 2026-10-04T14:06Z | Submission draft pushed (d0a9b9a8), admin-hackathon-brief done; refresh planned around 20:00Z |
 | vishesh/codex-pi-review | done | transfer-dmarz-market-methods | 2026-10-04T14:02Z | Completed source-pinned transfer review and eleven study-family planning additions; validated offline, no runs. |
 | shadow/sol-xcheck | done |  | 2026-10-04T14:01Z | Completed offline review; checked headlines agree, scaling cell ranking has numerical tie defect |
