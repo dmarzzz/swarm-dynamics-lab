@@ -3,6 +3,8 @@
 > **TLDR**: Twelve readings selected for this note (six papers/preprints, two Anthropic posts, four 2026 agent-incident reports) fetched and summarized against the three shortlisted hackathon projects: Collective Sensing, Quorum, Telephone.
 > **Tags**: multi-agent, swarm, hackathon, grove, ai-village, debate, voting, failure-taxonomy, containment, incident
 
+For a concise terminology primer, see [Agent swarms: definition, uses, and architectural distinctions](agent-swarms-background.md) (2026-10-04 companion brief). The historical twelve-reading synthesis below is preserved.
+
 ## Scope and provenance
 - Written 2026-10-03 as a supplement to the swarm ecology dossier (`swarm-ecology-dossier.html` in this folder). The dossier's 54 source URLs were checked for overlap; overlap with the twelve below is marked per source.
 - Method: three parallel search tracks (papers · preprints and Anthropic posts · incident reports), one note per source in `readings/` on the schema in `readings/_SCHEMA.md`. Every claim carries the URL actually loaded; anything not found says so. Everything was fetched on 2026-10-03; nothing is quoted from memory.
