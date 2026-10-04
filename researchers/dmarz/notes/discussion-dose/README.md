@@ -1,5 +1,7 @@
 # Discussion allowance and corruption in a fork and merge swarm
 
+**Current implementation:** [discussion and memory benchmark v3](benchmark-v3/README.md) is a runnable offline package with evidence-answerability checks, shared-start communication controls, 36 parent-memory fixtures and exact trace replay. No v3 paid run has launched; independent review and model qualification remain pending. The original protocol description below is historical.
+
 ## Results and reflection
 
 [Read the original pilot retrospective](RESULTS-AND-REFLECTION.md): complete attempt accounting, corrected results, the parent memory-coverage failure, and what this run cannot establish. No additional original-protocol runs are planned by this task.
@@ -114,6 +116,6 @@ Pending live qualification and later exploratory collection. The first useful re
 
 The hub's current reverse proxy limits each upload to 2 MB. `src/artifacts.py` compresses trace files and splits any larger compressed payload into parts of at most 1,000,000 bytes. `artifact-index.json` records ordered parts, encodings, sizes and SHA-256 hashes. Rejoin parts in order, verify the payload hash, decompress if needed, and verify the raw hash. `analyze.py` can read an intact `.jsonl.gz` directly. `recover_upload.py RUN_ID` repairs existing artifact uploads without reexecuting episodes or changing a failed run's terminal status. Raw local outputs remain unchanged.
 
-## Proposed next evaluation
+## Next evaluation package
 
-[V3 evaluation plan](V3-EVAL-PLAN.md) and [online source review](V3-SOURCE-NOTES.md) specify a small controlled discussion comparison and a separate parent-memory suite. Planning only: no launch until the current v2 results are complete and reviewed. V4 extensions remain optional.
+[The implemented v3 package](benchmark-v3/README.md) follows the [evaluation plan](V3-EVAL-PLAN.md) and [online source review](V3-SOURCE-NOTES.md), with a dated shared-checkpoint amendment after the v2 private-control results. It is available for offline use and independent review. A separately reviewed model launch remains pending; V4 extensions remain optional.

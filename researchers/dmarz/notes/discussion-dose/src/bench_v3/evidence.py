@@ -41,8 +41,11 @@ def objective(family, v, rules):
 
 
 def domains_from_evidence(task, records):
-    return {k: sorted(resolve(k, records, task['policy'])) or task['domains'][k]
-            for k in task['fact_keys']}
+    result = {}
+    for key in task['fact_keys']:
+        values = resolve(key, records, task['policy'])
+        result[key] = [v for v in values if v in task['domains'][key]] if values else task['domains'][key]
+    return result
 
 
 def possible_decisions(task, records):

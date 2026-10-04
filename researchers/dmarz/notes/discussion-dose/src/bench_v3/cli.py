@@ -4,6 +4,7 @@ from datetime import datetime, timezone
 import hashlib
 import json
 from pathlib import Path
+import platform
 import sys
 from tasks import digest
 from . import VERSION
@@ -26,6 +27,7 @@ def manifest(split, rounds, provider, model_config=None):
     worlds = cases(split)
     assigned, calls = allocation(worlds, rounds)
     return {'schema': VERSION, 'created_utc': datetime.now(timezone.utc).isoformat(), 'split': split,
+            'runtime': {'python': platform.python_version(), 'system': platform.system(), 'machine': platform.machine()},
             'rounds': rounds, 'n_agents': 3, 'worlds': [c['id'] for c in worlds],
             'world_hashes': {str(c['id']): digest(c) for c in worlds},
             'source_hashes': source_hashes(), 'system_hash': digest(SYSTEM), 'provider': provider.name,
@@ -96,7 +98,11 @@ def approved_model_config(path, split, rounds):
         review = (path.parent / proof['path']).resolve()
         if hashlib.sha256(review.read_bytes()).hexdigest() != proof['sha256']:
             raise ValueError('review evidence hash mismatch')
-    return launch['model_config']
+    config = launch['model_config']
+    if type(config) is not dict or set(config) != {'model', 'max_calls', 'max_output_tokens', 'max_input_bytes',
+                                                  'timeout', 'max_cost_usd', 'input_usd_per_million', 'output_usd_per_million'}:
+        raise ValueError('model configuration must contain only the documented nonsecret fields')
+    return config
 
 
 def main(argv=None):
