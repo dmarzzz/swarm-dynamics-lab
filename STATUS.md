@@ -38,6 +38,7 @@
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [antsy-quality-repair](tasks/antsy-quality-repair.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:22Z | Audit and repair Antsy experiment quality and reproducibility |
 | [immune-response-v2](tasks/immune-response-v2.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T00:39Z | Refine and run the exploratory immune-response instrument |
+| [reflect-discussion-dose-pilots](tasks/reflect-discussion-dose-pilots.md) | claimed | p1 | synthesis | dmarz/discussion-dose | dmarz | 2026-10-04T01:23Z | Consolidate discussion dose pilot results before any further launches |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
