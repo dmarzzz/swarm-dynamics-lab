@@ -3,7 +3,7 @@ id: antsy-literal-v2
 type: task
 title: Antsy literal extraction and deterministic normalization native iteration
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,9 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T20:37Z
-updated: 2026-10-04T20:37Z
+updated: 2026-10-04T20:55Z
+outputs:
+- researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md
 ---
 
 ## Goal
