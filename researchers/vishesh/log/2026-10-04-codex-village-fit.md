@@ -11,3 +11,7 @@ Created a dedicated six-document T0 design package and six background source rec
 ## Telephone T1 offline iteration
 
 Prospective plan followed by annotation scorer, private candidate joiner, eight original case roots and full offline closeout. 24 Telephone and 21 shared checks pass; 72 scripted outputs reconcile. Fourteen source joins remain unreviewed development candidates, zero complete episodes. Copy/lookup reaches the fixture ceiling. Added manual registry navigation; HOLD native collection pending complete-window labels and useful baseline task. No model calls, machine or new experiment charges.
+
+## Telephone native preparation
+
+Native launch direction recorded with standing USD2 cap. Verified current source card and read private queue workflow without exposing operational details. Original real-corpus cohort remains unvalidated; asked whether the intended next scope is authored clean-case diagnostic or original Village study. Built pure fresh-context request/response contract and 11 passing tests while scope remains unresolved. No credentials transferred, queue request, allocation or model calls. Native launch remains unfulfilled pending cohort and admission evidence.

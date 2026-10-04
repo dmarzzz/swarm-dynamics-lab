@@ -21,4 +21,4 @@ Prepare Telephone native request contracts and admission evidence after launch d
 
 ## Done when
 
-- [ ] Publish validated native request preparation and record the actual launch disposition.
+- [x] Publish validated native request preparation and record the actual launch disposition.

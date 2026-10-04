@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-village-fit
 tool: codex
-state: working
+state: blocked
 task: null
-doing: Preparing Telephone native request contract and resolving scientific cohort.
+doing: Native contract prepared; awaiting authored diagnostic versus AI Village cohort choice.
 updated: 2026-10-04T18:31Z
 ---
 
