@@ -1,0 +1,15 @@
+{
+  "host": "research-01",
+  "claim": "vishesh-swarm-size-anthropic-q1",
+  "claim_expiry_epoch": 1791102389.0,
+  "experiment_id": "optimal-swarm-size-q1",
+  "source_commit": "1002752f5d95db7ddb27e8186c3e7cc751467df1",
+  "python": "3.12.3",
+  "authorized_total_microdollars": 20000000,
+  "canonical_ledger": "/srv/swarm/optimal-swarm-size-q1-authority/budget.sqlite",
+  "runtime_config_sha256": "c40380b2dd388e4cadd09c2697fe349a1ff60655b4da5120c77d4732e44ff91f",
+  "public_plan_verified": true,
+  "provider_credential_transferred": false,
+  "model_calls": 0,
+  "status": "awaiting explicit credential-transfer approval"
+}
