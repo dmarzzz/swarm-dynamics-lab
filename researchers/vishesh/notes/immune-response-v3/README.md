@@ -9,9 +9,15 @@ Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](..
 - **sample_size_summary:** Engineering:16 task roots × 5 strata × 9 arms =720 outcomes; native task6700 was not run.
 <!-- experiment-evidence:end -->
 
-## Current status — 2026-10-04 UTC
+## Latest results — 2026-10-04 UTC
 
-The latest iteration is the [evidence-checking receipt study](evidence-study/README.md). Its native diagnostic was stopped after a wrong-cloud-account incident: **3 completed, 1 partial and 12 unstarted assignments**. The [interruption post-mortem](evidence-study/reviews/receipt-a2-post.md) preserves all 16 assignments and the remaining account-verification and reporting repairs. There is no completed qualification or treatment-effect claim. Historical allocation and execution descriptions below do not authorize a relaunch.
+- Progression: stronger-controller checks led to the completed Opus verification comparison: **192 calls, 48 episodes, six authored roots in three families**.
+- Each arm proposed **four unnecessary interventions**; the unguarded arm executed four and the guard blocked four.
+- Both arms actually verified **8/12 repairs**. All final states were healthy; healthy final state is not proposal competence.
+- Scope: a small synthetic controller comparison, not evidence of general swarm recovery or production reliability.
+- Next: fallible-repair mechanisms pass offline checks; the peer-correction study is prospective and has not run.
+
+Read the [native results and animation](verification-study/reviews/v1-post.md), [offline controller preparation](verification-loop/README.md), and [prospective peer-correction design](peer-correction/PLAN.md). The older interrupted receipt study and its account incident remain in the [historical post-mortem](evidence-study/reviews/receipt-a2-post.md); they are not the latest run. Historical setup and scoring sections below retain their original scope.
 
 ## Previous scenario iteration
 
