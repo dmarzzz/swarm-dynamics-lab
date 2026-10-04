@@ -2496,6 +2496,36 @@
         "researchers/dmarz/notes/sybil-split-xmodel/experiment.yaml"
       ],
       "status_at_assessment": "planned_unrun"
+    },
+    {
+      "id": "sybil-rules-180",
+      "title": "Will they Sybil under rules? A 180-owner economy with product-licensed firms (research program v5 flagship)",
+      "documents": [
+        "researchers/dmarz/notes/sybil-rules-180/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-rules-180"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-rules-180/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested: in one connected economy of 180 model-controlled owners, an explicit prohibition or owner-level enforcement changes how many owners sustain same-product firm splitting that lowers their own concentration charge.",
+        "rationale": "No main-stage data. Attempt 001 stopped at its one-call probe on an interface defect. Attempt 002 on qwen/qwen3.7-flash with reasoning disabled passed the probe and failed qualification (174 of 185 actions accepted; mechanics probes 11 of 17; flexible-arm profit 0.36 to 0.64 of the scripted reference against a 0.75 gate). A gpt-6-sol configuration is being prepared."
+      },
+      "sample_size_summary": "Observed: scripted S0 8,118 rows; one probe call (attempt 001); one probe call and 185 qualification calls (attempt 002); no economy round with model owners in a main stage. Planned: one economy of 180 owners in 60 markets, 2 warm-up rounds and four 10-round continuations, plus a 192-call cue diagnostic.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-rules-180/README.md",
+        "researchers/dmarz/notes/sybil-rules-180/preregistration.md",
+        "researchers/dmarz/notes/sybil-rules-180/design.yaml",
+        "researchers/dmarz/notes/sybil-rules-180/experiment.yaml",
+        "researchers/dmarz/notes/sybil-rules-180/reviews/chain-001-post.md",
+        "researchers/dmarz/notes/sybil-rules-180/reviews/chain-002-pre.md"
+      ],
+      "status_at_assessment": "qualification_failed_no_main_stage",
+      "assessor": "dmarz/fleet-monitor",
+      "assessed_at": "2026-10-04"
     }
   ],
   "source_sha256": {
