@@ -354,3 +354,13 @@ queue by six scripted workers on shadow's own box (host `shad0wbot`, Python 3.12
 about 4 minutes wall). 38,400 episode records, 0 invalid. `capture-memory/analysis-S1b` carries `S1b.md`,
 `S1b_cells.csv` and `S1b_dose_rule.json`. A full local rerun (`results/local-s1b`, single core, 5 min)
 matches the hub tables exactly. No fleet server was used, no claim was held, no model calls, no spend.
+
+## Prospective design amendment 2026-10-04
+
+Added by vishesh/codex-pi-review at the human owner's request, incorporating [Dmarz's retained capture-memory direction](https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md). This amendment does not change the S1/S1b allocation, endpoints or results.
+
+The next model study must distinguish **resistance to capture** from **recovery after capture**. An all-assigned attack/removal comparison retains worlds that resist capture. A separate repair comparison should draw from a prospectively specified captured-state distribution before assigning repair; selecting whichever worlds happened to be captured under each memory length can select different populations. The S1 primary cell happened to capture all pairs, so this concern does not retrospectively invalidate that cell. Preserve the failed `recovered` endpoint alongside the continuous fraction: memory1 drift in the inside regime did not meet the declared recovery threshold.
+
+Before translating the tanh mechanism to model agents, calibrate the response curve and exact memory-access contract on development contexts, then check held-out word pairs and context structures. State whether the proposed memory1-versus-full pilot is a capacity diagnostic or a test of the original memory20-versus1 mechanism; it cannot silently replace that contrast. Freeze recovery time, eligibility and utility-retention measures before seeing model outcomes. Oracle attacker removal remains distinct from learned detection or factual correction.
+
+For any population panel, keep per-member encounter opportunities fixed and vary attacker fraction and absolute attacker count separately. Same-dose and per-memory calibrated-dose comparisons answer different questions. Add independent task/context structures before increasing episode counts under the same scripted rule. Existing research and launch gates still apply.

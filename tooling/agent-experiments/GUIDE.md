@@ -4,6 +4,8 @@ Research date: 2026-10-03. Companion documents: [evidence and citations](LITERAT
 
 For operational definitions and repeatable initialization, use the [agent lifecycle contract](AGENT-LIFECYCLE.md) and its [research supplement](AGENT-LIFECYCLE-RESEARCH.md). These are recommended contracts, not claims that the current launcher already enforces them.
 
+Prospective methods clarification, 2026-10-04: incorporates [Dmarz's shared design rules](https://github.com/dmarzzz/swarm-lab/blob/e0a3170/researchers/dmarz/notes/next-experiments-2026-10-04/README.md#shared-design-and-decision-rules). Its example sizes and useful-effect margins are planning suggestions, not universal requirements. These documentation changes do not add runtime enforcement.
+
 ## 1. Decide what claim the experiment can establish
 
 An agent can be a research assistant, the experimental subject, or a simulator of another system. These roles require different validation.
@@ -26,6 +28,7 @@ Write a one-sentence estimand: “The mean change in [outcome] caused by [treatm
 | Agent | A decision-making software entity with an observation interface, policy, permitted actions, and state lifecycle. An LLM call can be one policy step; several calls need not imply several agents. |
 | Immutable agent configuration | A versioned, content-addressed specification of model, prompts, tools, memory rules, permissions, decoding and policy. Its definition remains fixed during a confirmatory study. Runtime messages and memory can evolve according to the fixed rules. |
 | Agent instance | One instantiated identity and mutable state, derived from an immutable definition. Two personas on one shared model are not independent training histories. |
+| Identity / worker | A visible identity need not have a separate policy or memory; a worker is an execution resource. Record both the separately stateful roster and concurrent execution slots. Renaming one attacker creates identities, not independent agents or resources. |
 | Task / scenario | The problem specification and environment instance, including initial hidden truth, observations, constraints, disturbances and scoring rule. A scenario family groups related instances. |
 | Episode / run | One execution from a defined reset to a terminal condition. This guide uses these synonymously; separately label model training runs if training is involved. |
 | Treatment | The prespecified intervention or system variant. A prompt, model, topology or memory change is a treatment, not an incidental implementation detail. |
@@ -78,9 +81,13 @@ Budget matching must reflect the question. At fixed **system** budget, additiona
 
 Ablate one mechanism at a time when seeking attribution: memory off, provenance removed, communication off, shuffled identities, alternative topology, no critic or independent verifier. Factorial designs estimate interactions more efficiently than unrelated experiments, but need sufficient replication per cell and a prespecified interaction analysis. If roles, prompts, evidence and budget all change, label the result a bundled comparison.
 
+For a treatment-specific population-scaling claim, prespecify the paired interaction `[treatment − control] at large N − [treatment − control] at small N`; a raw large-versus-small comparison answers a different question. Select one primary contrast or interaction. Interpret it jointly with prespecified clean-utility or safety guardrails: a favorable interaction alone does not establish preserved clean utility or safe completion. Justify margins from task losses, and declare the joint decision and multiplicity rule before qualification.
+
 ## 6. How many agents, scenarios and independent runs?
 
 There is no universal run count. **Agent count is a treatment parameter; scenario count controls task coverage; repeats estimate execution variability.** More agents in one episode do not replace independent worlds. More seeds on one puzzle do not establish generalization to other puzzles.
+
+Record four separate design axes: **N**, the population and its counting rule, including coordinator roles; **G**, full replacement waves or damage incidents, with the chosen meaning and horizon; **S**, independent task-generation/world roots; and **R**, fresh stochastic executions per root and condition. Use “not applicable” where appropriate. Descendants, archive forks, sizes and checkpoints sharing a root remain clustered; multiple calls within one execution are not R. Renamed templates do not establish structural task diversity.
 
 For a first engineering pilot, a practical planning suggestion is 8–12 varied development scenarios, 3–5 fresh paired repetitions, and a small population such as 5 agents. These are debugging and variance-screening numbers, not a claim of adequate statistical power. Select sizes that distinguish the mechanisms: a three-node undirected ring is a complete graph, so it cannot distinguish local from global communication. For a scale study, a prespecified grid such as 1, 3, 5, 9 agents can reveal nonlinearity; verify that each topology is actually distinct at each size.
 
@@ -101,6 +108,8 @@ For nested repetitions use the variance formula, not n=S×R in an independent-pa
 For binary success use paired discordance rates (McNemar design), an appropriate hierarchical logistic model, or simulation of paired Bernoulli outcomes. Avoid applying a normal continuous-outcome calculation without checking its approximation. With zero failures in n genuinely independent comparable trials, the one-sided 95% upper failure-probability bound is `1 − .05^(1/n)` (about 3/n). Zero failures in 30 trials still permits roughly 9.5% failure; clustered tasks weaken simple interpretation. [Lakens](https://doi.org/10.1525/collabra.33267) [[lakens-2022-sample]], [Patterson et al.](https://jmlr.org/papers/v25/23-0183.html) [[patterson-2024-empirical]], [Agarwal et al.](https://arxiv.org/abs/2108.13264) [[agarwal-2021-deep]].
 
 If the available budget is insufficient, narrow the question or report a precision-limited exploratory study. Do not justify a preferred count with retrospective power calculated from the observed effect.
+
+Plan precision for the primary contrast and every co-required utility guardrail using conservative paired root-level variation. A narrow noninferiority margin can determine the sample size even when the main benefit is large; simulate the joint decision under the actual clustered allocation.
 
 ## 7. Outcomes, reliability and evaluators
 
@@ -136,6 +145,10 @@ Fix the sample size or preregister a valid sequential design. Ordinary 95% inter
 Classify every noncompletion: model refusal, invalid action, timeout, budget exhaustion, tool outage, infrastructure crash, human stop or unavailable grade. For operational success, count prespecified noncompletions as failures in the assigned denominator. For time-to-success, a deadline may right-censor time; a timeout is still a failure for “success by deadline.” Informative censoring needs sensitivity analysis. Do not drop difficult runs. Missing outcomes can be bounded by assigning best and worst permissible scores; multiple imputation requires defensible missingness assumptions. Report complete-case analysis only as a labeled sensitivity result.
 
 Infrastructure retries retain the original run ID and attempt lineage. Use a prespecified cap and backoff; classify retries that already consumed useful model output separately. A successful retry cannot erase the cost or first failure. Replacing a failed scenario with a new easy one changes the population. If reproducibility breaks, preserve evidence, quarantine affected blocks and record the protocol amendment.
+
+Separate instrument defects, qualification failures and valid scientific nulls or harms. Leaked truth, a faulty solver or a defective parser require repair and fresh qualification. Failure of a frozen competence gate blocks escalation but does not establish a treatment null. Valid bad decisions under an admissible instrument remain outcomes, including deterioration at large N. A development learnability gate must not exclude individual evaluation lineages that fail to acquire a practice; retain them in assigned-population estimates and label conditional-on-acquisition analyses secondary.
+
+A point estimate below the useful target is insufficient for futility. If the valid uncertainty interval still includes useful benefit, report an inconclusive result. Additional collection must follow the frozen allocation or a valid sequential design; an adequately precise exclusion of useful benefit can narrow the tested implementation, not the entire research question.
 
 ## 9. Validity, security and scientific accountability
 

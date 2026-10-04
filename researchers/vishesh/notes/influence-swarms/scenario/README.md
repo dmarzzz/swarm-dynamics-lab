@@ -10,6 +10,16 @@ A support team has to choose a helpdesk before its existing contract expires. Th
 
 Latest iteration: [design changes and plan assessment](ITERATION-02.md). Four fresh qualification dossiers, selected-deployment approval control, answer-label counterbalancing and missingness-aware paired analysis are implemented. Offline audit passes; no additional model results this iteration.
 
+## PI follow-through — 2026-10-04 UTC
+
+The [PI review's](https://github.com/dmarzzz/swarm-lab/blob/e0a3170/researchers/dmarz/notes/next-experiments-2026-10-04/README.md) narrow sequence is retained: qualify the final decision contract, then measure the existing paired clean/omission contrast before a broader influence sweep. The [latest engineering post-mortem](reviews/iteration-03-post.md) documents four fresh dossiers covering all three supplier choices and DEFER, selected-deployment approval, exact-source qualification and missingness-aware paired bounds. Its scripted success is instrument evidence, not native Q4 qualification.
+
+The later [budget authorization](BUDGET-AUTHORIZATION.md) records an additional aggregate USD 10 approval; earlier funding-pending statements describe older snapshots. Independent dossier review, a fresh authorized exclusive allocation, a non-overlapping quota and complete exact-signature Q4 qualification remain required. Funding approval alone does not complete those gates or authorize a broader study.
+
+Preserve Q2's adverse approvals and Q3's successful deferrals separately. Q3 changed both the profile and purchase-authority wording, so it cannot identify the effect of wording; a matched old/new wording comparison would be a separate study. Likewise, displaying ballots bundles recommendation content with its salience and token footprint. The planned contrast identifies that display intervention, not a general peer-pressure mechanism.
+
+Keep every assigned case and missing chair outcome in the paired analysis. Shared prefixes, repeated profiles and label permutations do not increase independent scenario diversity. Reviewers must check genuine-value acceptance, useful deferral and the fully approved alternative as well as misleading promotion. Broader claims require independently authored dossiers after this frozen narrow comparison; no historical outcome, primary endpoint or active protocol is changed here.
+
 ## Question and prediction
 
 Does displaying peer recommendations increase harmful adoption of a misleading comparison claim, beyond the effect of the underlying documents? The primary paired contrast is `team_ballots` minus `team_evidence` on change in harmful target selection from clean to omission. Both chairs see identical raw documents, findings and checks; only preliminary choices/confidences are removed. This isolates their presence, not a universal effect of discussion. If both perform equally, the recommendation-display intervention has no demonstrated benefit. If a cheaper generalist performs as well, the team has not earned its complexity.

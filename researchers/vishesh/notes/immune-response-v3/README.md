@@ -1,8 +1,12 @@
 # Immune Response
 
-## Current iteration
+## Current status — 2026-10-04 UTC
 
-The [scenario-grounded recovery study](scenario-study/README.md) is the current experiment design. It replaces exact-value ledger copying with dependency compatibility, persistent data, live health checks and consequential repair actions. The earlier instrument below remains historical mechanism evidence. The approved USD 8 grant funded two documented qualifications and one small architecture control on sim-immune-response, totaling USD 0.441259. [The assessment](scenario-study/ASSESSMENT.md) reports mixed results and failed competence controls; robust immunity is not established. The old task-6700 plan was superseded without execution.
+The latest iteration is the [evidence-checking receipt study](evidence-study/README.md). Its native diagnostic was stopped after a wrong-cloud-account incident: **3 completed, 1 partial and 12 unstarted assignments**. The [interruption post-mortem](evidence-study/reviews/receipt-a2-post.md) preserves all 16 assignments and the remaining account-verification and reporting repairs. There is no completed qualification or treatment-effect claim. Historical allocation and execution descriptions below do not authorize a relaunch.
+
+## Previous scenario iteration
+
+The [scenario-grounded recovery study](scenario-study/README.md) preceded the receipt study. It replaces exact-value ledger copying with dependency compatibility, persistent data, live health checks and consequential repair actions. The earlier instrument below remains historical mechanism evidence. The approved USD 8 grant funded two documented qualifications and one small architecture control on sim-immune-response, totaling USD 0.441259. [The assessment](scenario-study/ASSESSMENT.md) reports mixed results and failed competence controls; robust immunity is not established. The old task-6700 plan was superseded without execution.
 
 ## TLDR
 
