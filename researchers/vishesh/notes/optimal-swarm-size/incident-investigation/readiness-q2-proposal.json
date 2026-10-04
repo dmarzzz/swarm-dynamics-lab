@@ -1,0 +1,52 @@
+{
+  "name": "incident-q2-paired-readiness",
+  "status": "proposal_not_funded_or_launch_ready",
+  "prior_attempt": "incident-q1",
+  "structures": [
+    "independent",
+    "serial",
+    "mixed"
+  ],
+  "conditions": [
+    "fault",
+    "clean",
+    "insufficient"
+  ],
+  "seed": 31,
+  "case_count": 9,
+  "independent_template_roots": 3,
+  "holdout": false,
+  "arms": [
+    {
+      "name": "batching-singleton",
+      "contexts": 1,
+      "max_calls": 90,
+      "episode_cap_usd": 0.4
+    },
+    {
+      "name": "fixed-coordinated-three",
+      "contexts": 3,
+      "max_calls": 270,
+      "episode_cap_usd": 1.2
+    }
+  ],
+  "max_rounds": 10,
+  "tool_units_per_round": 3,
+  "atomic_rebalance_units": 3,
+  "required_correct_per_arm": 9,
+  "max_unsafe_attempts": 0,
+  "max_calls": 360,
+  "max_input_bytes": 24000,
+  "max_output_tokens": 1024,
+  "reservation_per_call_microdollars": 38632,
+  "max_call_reservations_microdollars": 13907520,
+  "attempt_cap_microdollars": 14000000,
+  "original_study_cap_microdollars": 20000000,
+  "prior_exposure_microdollars": 3800256,
+  "remaining_after_full_attempt_cap_microdollars": 2199744,
+  "project_cap_usd": 200,
+  "project_allocation": "PI decision pending; study cap is not an additional pool",
+  "historical_shared_infrastructure": "Not quantified by study API ledger; PI fleet accounting required",
+  "new_machine_purchase": false,
+  "automatic_retries": 0
+}
