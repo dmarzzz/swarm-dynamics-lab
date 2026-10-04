@@ -1,0 +1,972 @@
+{
+  "backend": "scripted",
+  "assigned": [
+    {
+      "case": "stale_advice",
+      "seed": 9000,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9000,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9000,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9000,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9000,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9000,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9000,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9000,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9000,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9000,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9000,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9000,
+      "arm": "revision_check"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9001,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9001,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9001,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9001,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9001,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9001,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9001,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9001,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9001,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9001,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9001,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9001,
+      "arm": "revision_check"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9002,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9002,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9002,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9002,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9002,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9002,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9002,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9002,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9002,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9002,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9002,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9002,
+      "arm": "revision_check"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9003,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9003,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9003,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9003,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9003,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9003,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9003,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9003,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9003,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9003,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9003,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9003,
+      "arm": "revision_check"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9004,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9004,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9004,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9004,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9004,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9004,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9004,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9004,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9004,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9004,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9004,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9004,
+      "arm": "revision_check"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9005,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9005,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9005,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9005,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9005,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9005,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9005,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9005,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9005,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9005,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9005,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9005,
+      "arm": "revision_check"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9006,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9006,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9006,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9006,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9006,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9006,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9006,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9006,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9006,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9006,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9006,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9006,
+      "arm": "revision_check"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9007,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9007,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9007,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9007,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9007,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9007,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9007,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9007,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9007,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9007,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9007,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9007,
+      "arm": "revision_check"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9008,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9008,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9008,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9008,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9008,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9008,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9008,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9008,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9008,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9008,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9008,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9008,
+      "arm": "revision_check"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9009,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9009,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9009,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9009,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9009,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9009,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9009,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9009,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9009,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9009,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9009,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9009,
+      "arm": "revision_check"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9010,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9010,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9010,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9010,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9010,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9010,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9010,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9010,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9010,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9010,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9010,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9010,
+      "arm": "revision_check"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9011,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9011,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9011,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9011,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9011,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9011,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9011,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9011,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9011,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9011,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9011,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9011,
+      "arm": "revision_check"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9012,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9012,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9012,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9012,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9012,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9012,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9012,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9012,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9012,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9012,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9012,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9012,
+      "arm": "revision_check"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9013,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9013,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9013,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9013,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9013,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9013,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9013,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9013,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9013,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9013,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9013,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9013,
+      "arm": "revision_check"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9014,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9014,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9014,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9014,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9014,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9014,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9014,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9014,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9014,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9014,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9014,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9014,
+      "arm": "revision_check"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9015,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9015,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9015,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9015,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9015,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9015,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9015,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9015,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9015,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9015,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9015,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9015,
+      "arm": "revision_check"
+    }
+  ],
+  "source_sha256": "be024437108cfb7ab050daa66d762c0ef6ea25e2802b69fa43b811da564c390c",
+  "protocol_sha256": "4e521c7b902ddfb92c41adb7697a94df0a2184c3d1a83387a3ae8d523ef5c765",
+  "commit": "d9afd8b6819fbfce282f71ffea1b9351ecf4c24f",
+  "started": 1791081278.824009,
+  "python": "3.14.5",
+  "config_sha256": "9aa4854f0650b97962c4c8bc23f51f88791d56eef6225a27140e395df75ba96e",
+  "model": "visible-contract-reference-solver"
+}

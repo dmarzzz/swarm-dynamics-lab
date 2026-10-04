@@ -1,0 +1,9 @@
+# S1 reporting visual
+
+Mapping market-split-summary-v1. This is a reporting asset for the existing hub UI, separate from the frozen actor source; it cannot alter model input or dispatch. Run report/src/plot.py on the measured episodes JSONL to generate a 1800×1100 PNG. The live study retains individual market-split-api-v1 replays.
+
+The figure uses only S1 records, rejects duplicate task/seed/regulator/arm identities, and labels incomplete collections PARTIAL / IN PROGRESS. Registration counts use valid flexible episodes with the observed operation; denominator is shown per rule. Evasion uses the unchanged recorded three-round criterion. Profit points pair flexible and locked episodes by task/seed/rule; points can overlap and displayed means summarize those pairs, not a causal effect of actually splitting. No splitting can occur in the locked arm. Firm-count trajectories average observed flexible portfolios per round; coincident lines are shown with different dash styles. Report invalid counts explicitly; never fill missing outcomes with zero.
+
+The footer reports S1 usage only; the full review and ledger separately include qualification and failed work. Source records, analysis JSON, code, input hashes and run receipts remain available. Six small market tasks and one model version are exploratory evidence. A zero-width bootstrap interval when every task has the same binary outcome is a resampling artifact, not proof of zero population probability or universal inability.
+
+Before publishing: compare all displayed counts, means, calls and cost with analysis.json; verify exact replay of actions in the pinned Python3.12 runtime; inspect the generated image; file the finished figure through Flight Deck and upload it as the analysis run's final_frame.png. Retain all individual run images and source JSONL. No partial preview is a final result.

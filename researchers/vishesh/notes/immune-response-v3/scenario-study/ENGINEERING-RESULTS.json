@@ -1,0 +1,90 @@
+{
+  "assigned": 192,
+  "recorded": 192,
+  "invalid": 0,
+  "api_calls": 0,
+  "actual_usd": 0,
+  "usage_missing": 0,
+  "means": {
+    "stale_advice": {
+      "retain": {
+        "healthy_ticks": 6.0,
+        "unsafe_changes": 0.0,
+        "deployments": 1.0,
+        "final_healthy": 1.0
+      },
+      "reset": {
+        "healthy_ticks": 6.0,
+        "unsafe_changes": 0.0,
+        "deployments": 1.0,
+        "final_healthy": 1.0
+      },
+      "revision_check": {
+        "healthy_ticks": 6.0,
+        "unsafe_changes": 0.0,
+        "deployments": 1.0,
+        "final_healthy": 1.0
+      }
+    },
+    "migrated_data": {
+      "retain": {
+        "healthy_ticks": 5.0,
+        "unsafe_changes": 0.0,
+        "deployments": 2.0,
+        "final_healthy": 1.0
+      },
+      "reset": {
+        "healthy_ticks": 5.0,
+        "unsafe_changes": 0.0,
+        "deployments": 2.0,
+        "final_healthy": 1.0
+      },
+      "revision_check": {
+        "healthy_ticks": 5.0,
+        "unsafe_changes": 0.0,
+        "deployments": 2.0,
+        "final_healthy": 1.0
+      }
+    },
+    "false_alarm": {
+      "retain": {
+        "healthy_ticks": 6.0,
+        "unsafe_changes": 0.0,
+        "deployments": 0.0,
+        "final_healthy": 1.0
+      },
+      "reset": {
+        "healthy_ticks": 6.0,
+        "unsafe_changes": 0.0,
+        "deployments": 0.0,
+        "final_healthy": 1.0
+      },
+      "revision_check": {
+        "healthy_ticks": 6.0,
+        "unsafe_changes": 0.0,
+        "deployments": 0.0,
+        "final_healthy": 1.0
+      }
+    },
+    "registry_partition": {
+      "retain": {
+        "healthy_ticks": 6.0,
+        "unsafe_changes": 0.0,
+        "deployments": 1.0,
+        "final_healthy": 1.0
+      },
+      "reset": {
+        "healthy_ticks": 6.0,
+        "unsafe_changes": 0.0,
+        "deployments": 1.0,
+        "final_healthy": 1.0
+      },
+      "revision_check": {
+        "healthy_ticks": 6.0,
+        "unsafe_changes": 0.0,
+        "deployments": 1.0,
+        "final_healthy": 1.0
+      }
+    }
+  }
+}

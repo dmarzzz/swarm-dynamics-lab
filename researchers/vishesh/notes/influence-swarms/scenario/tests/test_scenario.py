@@ -31,6 +31,11 @@ class ScenarioTests(unittest.TestCase):
             self.assertEqual(s['choice']['enum'],c['candidates']+['DEFER'])
             ids=s['findings']['items']['properties']['citations']['items']['enum'] if phase=='initial' else s['citations']['items']['enum']
             self.assertEqual(ids,[d['id'] for d in c['documents']])
+    def test_meaningful_multisource_findings_are_not_style_failures(self):
+        from study import scripted
+        c=build('usage_cliff',6);o={'phase':'initial','brief':c['brief'],'candidates':c['candidates'],'documents':c['documents']}
+        a=scripted(o);a['findings'][0]['claim']='x'*253;a['findings'][0]['citations']=[d['id'] for d in c['documents'][:4]]
+        validate(a,o)
     def test_sensitivity_is_visible(self):
         from sensitivity import audit
         a=audit();self.assertEqual(a['cases'],24);self.assertGreater(a['sensitivity_dependent'],0)

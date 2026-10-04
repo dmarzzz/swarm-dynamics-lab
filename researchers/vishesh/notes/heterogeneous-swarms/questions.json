@@ -1,0 +1,2277 @@
+{
+  "schema": "swarm-lab-heterogeneous-questions-v1",
+  "owner": "vishesh/codex-heterogeneous",
+  "status": "exploratory hunches; no novelty claim",
+  "ideas": [
+    {
+      "id": "HX-01",
+      "title": "Reflexes and deliberation: when does a fast controller destabilize the swarm?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "At what ratio of Jev action frequency to Haiku/Qwen planning latency do stale plans cause oscillation or unsafe actions?",
+      "prediction": "Expiry/version checks reduce stale actions most when planner latency exceeds the time over which task state remains valid.",
+      "comparison": "Cross synchronous versus asynchronous execution with one-to-one versus multi-tick reflex updates. Compare fixed-rate and state-version/expiry-gated Jev actions using the same planner outputs, plus homogeneous and deterministic controllers. Match total memory and add a flat adaptive internal-model controller.",
+      "metrics": [
+        "Correct tasks by deadline",
+        "Stale-plan actions",
+        "Oscillation amplitude",
+        "Tail latency",
+        "Total cost"
+      ],
+      "falsifier": "Reject the coordination claim if version/expiry checks have no advantage at matched action opportunities, or a simple deterministic gate explains all gains.",
+      "confounds": "Service latency, action rate, evidence age and model competence must vary separately. Replay isolates scheduling but cannot replace end-to-end model confirmation. Internal memory can explain apparent hierarchy benefits; multirate architectures already exist.",
+      "delta": "Fast/slow hierarchy and delay failure are established. Test semantic staleness and version-expiry contracts specifically at the Jev/generative boundary, after controlling for memory and deterministic control.",
+      "sources": [
+        "typesafe-2026-introducing",
+        "sun-2026-collaboration",
+        "yao-2026-hieramas",
+        "gh-kuznetsovkarazin-causal-depth-limits",
+        "li-2026-deadline"
+      ],
+      "atlas": [
+        "SOC-04",
+        "SOC-23"
+      ],
+      "briefs": [
+        "coordination",
+        "regrowth",
+        "collective-sensing"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Choose a safe controller/planner update contract before scaling the mixed swarm.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Delayed feedback and separation of control timescales; measure overshoot and settling time rather than claim neural reflex equivalence.",
+      "visualization": "Animate state, delayed plan packets, action timestamps and overshoot on a shared timeline.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Service latency, action rate, evidence age and model competence must vary separately. Replay isolates scheduling but cannot replace end-to-end model confirmation. Internal memory can explain apparent hierarchy benefits; multirate architectures already exist.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 94,
+        "practical": 96,
+        "theory": 94,
+        "novelty": 70
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "coordination": "2026-10-04T02:22:39Z",
+          "regrowth": "2026-10-04T02:22:39Z",
+          "collective-sensing": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 91,
+      "score_rationale": {
+        "visual": "Animate state, delayed plan packets, action timestamps and overshoot on a shared timeline.",
+        "practical": "Choose a safe controller/planner update contract before scaling the mixed swarm.",
+        "theory": "Delayed feedback and separation of control timescales; measure overshoot and settling time rather than claim neural reflex equivalence.",
+        "novelty": "Fast/slow hierarchy and delay failure are established. Test semantic staleness and version-expiry contracts specifically at the Jev/generative boundary, after controlling for memory and deterministic control."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-02",
+      "title": "Adaptive division of labor after a capability shock",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can mixed specialists reassign work after one model loses a tool or becomes unreliable without wasting the swarm budget?",
+      "prediction": "Progress-based reassignment improves post-shock throughput over frozen roles; whether Jev adds value over a deterministic allocator is uncertain.",
+      "comparison": "On paired task graphs, compare frozen roles, Jev allocation, progress-based response thresholds and a trained-router baseline. Introduce identical capability loss halfway through; compare mixed models to same-model role-specialized agents.",
+      "metrics": [
+        "Verified throughput after shock",
+        "Reassignment delay",
+        "Unfinished dependency chains",
+        "Switching cost"
+      ],
+      "falsifier": "Drop the Jev allocation claim if simple progress-based thresholds match it after all profiling and switching costs.",
+      "confounds": "Hold task mix, legal actions and observation access fixed. Changing roles is not model heterogeneity; preserve a same-model specialist control.",
+      "delta": "Adaptive robotics allocation and MasRouter already exist. New target is delayed and misleading progress reports during nonstationary tool/model failure.",
+      "sources": [
+        "emam-2020-adaptive",
+        "amir-2025-when",
+        "yue-2025-masrouter",
+        "gh-svitatlco-jev-skill"
+      ],
+      "atlas": [
+        "SOC-04",
+        "SOC-23"
+      ],
+      "briefs": [
+        "leadership",
+        "coordination",
+        "regrowth"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Determine whether dynamic specialization pays for itself under realistic capability changes.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Response-threshold division of labor with measurable demand, capacity and adaptation rate.",
+      "visualization": "Color agents by model and tasks by skill; show capacity shock, reassignment and queues.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Hold task mix, legal actions and observation access fixed. Changing roles is not model heterogeneity; preserve a same-model specialist control.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 96,
+        "practical": 92,
+        "theory": 94,
+        "novelty": 80
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "leadership": "2026-10-04T02:22:39Z",
+          "coordination": "2026-10-04T02:22:39Z",
+          "regrowth": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 92,
+      "score_rationale": {
+        "visual": "Color agents by model and tasks by skill; show capacity shock, reassignment and queues.",
+        "practical": "Determine whether dynamic specialization pays for itself under realistic capability changes.",
+        "theory": "Response-threshold division of labor with measurable demand, capacity and adaptation rate.",
+        "novelty": "Adaptive robotics allocation and MasRouter already exist. New target is delayed and misleading progress reports during nonstationary tool/model failure."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-03",
+      "title": "Model diversity as a firebreak against correlated errors",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Does a minority of independently failing Jev sentinels stop wrong actions spreading, or does shared evidence defeat model diversity?",
+      "prediction": "Any benefit from mixed-model monitoring shrinks when monitors share the same misleading evidence.",
+      "comparison": "Cross same versus different model monitors with copied versus independent evidence and random versus bridge-node placement. Compare no monitor, deterministic invariant checks and cost-matched extra solver calls; inject bounded false claims in synthetic worlds.",
+      "metrics": [
+        "Wrong-action cascade size",
+        "Co-failure rate",
+        "False quarantine",
+        "Useful work retained",
+        "Review cost"
+      ],
+      "falsifier": "Do not claim a diversity firebreak if gains vanish after matching detector accuracy or if all monitors follow the same poisoned source.",
+      "confounds": "Different vendors are not proof of independence. The intervention is non-destructive synthetic misinformation, with protected truth and equally visible evidence.",
+      "delta": "Cowpox and existing immune-response work already study minority defense. Isolate model-error covariance from evidence ancestry and placement.",
+      "sources": [
+        "wu-2025-cowpox",
+        "teng-2026-which",
+        "gh-shapor-jev-sentinel"
+      ],
+      "atlas": [
+        "SOC-01",
+        "SEC-03",
+        "SEC-06"
+      ],
+      "briefs": [
+        "diversity",
+        "quorum",
+        "regrowth"
+      ],
+      "related": [
+        "PX-01",
+        "PX-02"
+      ],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Decide when heterogeneous monitors are worth buying versus better provenance or simple invariants.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Network epidemic branching with correlated susceptibility; estimate propagation rates from actual event ancestry.",
+      "visualization": "Show a graph with source ancestry, error spread, blocked edges and false-positive isolation.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Different vendors are not proof of independence. The intervention is non-destructive synthetic misinformation, with protected truth and equally visible evidence.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 98,
+        "practical": 93,
+        "theory": 90,
+        "novelty": 65
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "diversity": "2026-10-04T02:22:39Z",
+          "quorum": "2026-10-04T02:22:39Z",
+          "regrowth": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 90,
+      "score_rationale": {
+        "visual": "Show a graph with source ancestry, error spread, blocked edges and false-positive isolation.",
+        "practical": "Decide when heterogeneous monitors are worth buying versus better provenance or simple invariants.",
+        "theory": "Network epidemic branching with correlated susceptibility; estimate propagation rates from actual event ancestry.",
+        "novelty": "Cowpox and existing immune-response work already study minority defense. Isolate model-error covariance from evidence ancestry and placement."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-04",
+      "title": "The option bottleneck: who gives Jev the right action?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "How much hybrid-system failure comes from excluding the correct action before Jev ever sees it?",
+      "prediction": "Cross-model menu repair can improve end-to-end success only when it increases valid-option coverage enough to pay for its cost.",
+      "comparison": "Freeze task state and cross candidate-menu source (Qwen, Haiku, deterministic enumerator) with selector (Jev, each generator, random). Remove valid actions or add plausible decoys at prespecified rates; include explicit abstain and request-more-options actions.",
+      "metrics": [
+        "Menu recall",
+        "Conditional selection accuracy",
+        "End-to-end success",
+        "Abstention utility",
+        "Menu cost"
+      ],
+      "falsifier": "If conditional Jev performance is strong but menu recall explains failures, stop improving the selector and improve proposals. Reject mixed-model value if the enumerator wins at equal coverage and cost.",
+      "confounds": "Menu length, wording, ordering, candidate quality and generator identity must not move together. An oracle-complete menu is a diagnostic ceiling only.",
+      "delta": "Basic Jev missing-option rejection failure is already reported by Zhong et al. Narrow this to cross-model candidate repair on held-out non-arithmetic tasks, with Boolean verification and development-tuned thresholds as mandatory baselines.",
+      "sources": [
+        "typesafe-2026-systemone",
+        "gh-svitatlco-jev-skill",
+        "jiang-2023-llm",
+        "li-2025-rethinking",
+        "zhong-2026-when"
+      ],
+      "atlas": [
+        "SOC-09",
+        "SOC-38"
+      ],
+      "briefs": [
+        "discovery",
+        "diversity",
+        "coordination"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Locate whether integration effort belongs in candidate generation, abstention or selection.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Search and selection bottleneck, analogous to variation and selection only where proposal coverage is explicitly measured.",
+      "visualization": "Animate proposal trees, missing valid actions and selection; keep evaluator-only options in a separate lane.",
+      "literature_overlap": "direct prior result for core premise; replication/control, narrower extension only",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "demote from shortlist; merge with HX-30 as a repair extension",
+        "formal_review": null,
+        "critical_check": "Menu length, wording, ordering, candidate quality and generator identity must not move together. An oracle-complete menu is a diagnostic ceiling only.",
+        "overlap_decision": "direct prior result for core premise; replication/control, narrower extension only"
+      },
+      "score_dimensions": {
+        "visual": 92,
+        "practical": 98,
+        "theory": 76,
+        "novelty": 45
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "discovery": "2026-10-04T02:22:39Z",
+          "diversity": "2026-10-04T02:22:39Z",
+          "coordination": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 83,
+      "score_rationale": {
+        "visual": "Animate proposal trees, missing valid actions and selection; keep evaluator-only options in a separate lane.",
+        "practical": "Locate whether integration effort belongs in candidate generation, abstention or selection.",
+        "theory": "Search and selection bottleneck, analogous to variation and selection only where proposal coverage is explicitly measured.",
+        "novelty": "Basic Jev missing-option rejection failure is already reported by Zhong et al. Narrow this to cross-model candidate repair on held-out non-arithmetic tasks, with Boolean verification and development-tuned thresholds as mandatory baselines."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-05",
+      "title": "A reserve of diverse specialists for recovery",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can a small dormant reserve restore capabilities after a model-family outage better than spending everything on active workers?",
+      "prediction": "Diverse reserves reduce service deficit preferentially under model-family-correlated failures, while reducing clean-world active capacity.",
+      "comparison": "Allocate the same total resource cap between active workers and cold reserves. Compare homogeneous, mixed and role-diverse reserves under family-correlated versus independent outages, including deterministic fallback and equal-cost warm spares.",
+      "metrics": [
+        "Service deficit over time",
+        "Time to restore task coverage",
+        "Cold-start cost",
+        "Clean-world throughput",
+        "Recovery correctness"
+      ],
+      "falsifier": "Reject reserve diversity if it loses to simple redundancy once clean-world opportunity cost and checkpoint loading are charged.",
+      "confounds": "Reserve agents receive only preserved permissible state. Match damage exposure, failure domains, qualification and idle resource accounting.",
+      "delta": "Extends existing regrowth and Theseus work with model-family correlated loss and replacement competence; reserve redundancy itself is established.",
+      "sources": [
+        "emam-2020-adaptive",
+        "teng-2026-which",
+        "yao-2026-hieramas"
+      ],
+      "atlas": [
+        "SOC-22",
+        "SOC-23"
+      ],
+      "briefs": [
+        "regrowth",
+        "memory",
+        "diversity"
+      ],
+      "related": [
+        "PX-04",
+        "PX-03"
+      ],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Choose whether operational resilience warrants idle diverse capacity.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Functional redundancy and response diversity; measure capability coverage and recovery rather than merely restored node count.",
+      "visualization": "Show capability layers fading under correlated outage and reappearing as reserves wake.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Reserve agents receive only preserved permissible state. Match damage exposure, failure domains, qualification and idle resource accounting.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 96,
+        "practical": 87,
+        "theory": 92,
+        "novelty": 65
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "regrowth": "2026-10-04T02:22:39Z",
+          "memory": "2026-10-04T02:22:39Z",
+          "diversity": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 88,
+      "score_rationale": {
+        "visual": "Show capability layers fading under correlated outage and reappearing as reserves wake.",
+        "practical": "Choose whether operational resilience warrants idle diverse capacity.",
+        "theory": "Functional redundancy and response diversity; measure capability coverage and recovery rather than merely restored node count.",
+        "novelty": "Extends existing regrowth and Theseus work with model-family correlated loss and replacement competence; reserve redundancy itself is established."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-06",
+      "title": "Calibration under changing partners",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Does a Jev confidence threshold remain reliable after teammate composition changes?",
+      "prediction": "Frozen confidence thresholds become less reliable under partner shifts than independently recalibrated thresholds.",
+      "comparison": "Fit thresholds on fixed teams, then swap generators and evidence sources; compare frozen, held-out recalibrated and conformal escalation policies at matched escalation budgets.",
+      "metrics": [
+        "Brier score",
+        "Risk-coverage curve",
+        "Error among acted cases",
+        "Recalibration cost"
+      ],
+      "falsifier": "Drop universal-threshold use if conditional error exceeds its predeclared tolerance after swaps.",
+      "confounds": "Threshold selection must not see test labels; marginal conformal coverage is not conditional safety.",
+      "delta": "Conformal Social Choice already tests Haiku/Qwen teams; partner-induced feedback shift is the extension.",
+      "sources": [
+        "wang-2026-debate",
+        "chen-2023-reconcile",
+        "typesafe-2026-introducing"
+      ],
+      "atlas": [
+        "SOC-08",
+        "SOC-38"
+      ],
+      "briefs": [
+        "quorum",
+        "diversity",
+        "institutions"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Determine when to recalibrate escalation thresholds.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Selective prediction under distribution shift, not biological calibration.",
+      "visualization": "Reliability curves by partner and a changing abstention boundary.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Threshold selection must not see test labels; marginal conformal coverage is not conditional safety.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 85,
+        "practical": 97,
+        "theory": 60,
+        "novelty": 82
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "quorum": "2026-10-04T02:22:39Z",
+          "diversity": "2026-10-04T02:22:39Z",
+          "institutions": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 82,
+      "score_rationale": {
+        "visual": "Reliability curves by partner and a changing abstention boundary.",
+        "practical": "Determine when to recalibrate escalation thresholds.",
+        "theory": "Selective prediction under distribution shift, not biological calibration.",
+        "novelty": "Conformal Social Choice already tests Haiku/Qwen teams; partner-induced feedback shift is the extension."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-07",
+      "title": "Does mixed-model conversation erase measured complementarity?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Do models selected for independent error diversity become correlated after sharing memory?",
+      "prediction": "Communication increases co-failure for at least some teams selected for independent complementarity.",
+      "comparison": "Profile without discussion, then cross selected versus quality-only teams with private versus shared memories and controlled discussion dose.",
+      "metrics": [
+        "Accuracy",
+        "Error covariance over rounds",
+        "Correct-to-wrong revisions",
+        "Communication cost"
+      ],
+      "falsifier": "Reject static profiling if rankings invert after interaction on held-out worlds.",
+      "confounds": "Teng already includes held-out shift; novelty must be interaction-induced changes, not merely a new split.",
+      "delta": "Extends C2-MAS from pre-interaction choice profiles to evolving shared-state teams.",
+      "sources": [
+        "teng-2026-which",
+        "chen-2026-diversity",
+        "sun-2026-collaboration"
+      ],
+      "atlas": [
+        "SOC-01",
+        "SOC-38"
+      ],
+      "briefs": [
+        "diversity",
+        "memory",
+        "dissent"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Choose whether team selection must profile communication too.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Coupled-agent dynamics and loss of independence.",
+      "visualization": "Covariance matrix alongside opinion trajectories.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Teng already includes held-out shift; novelty must be interaction-induced changes, not merely a new split.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 90,
+        "practical": 90,
+        "theory": 75,
+        "novelty": 70
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "diversity": "2026-10-04T02:22:39Z",
+          "memory": "2026-10-04T02:22:39Z",
+          "dissent": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 83,
+      "score_rationale": {
+        "visual": "Covariance matrix alongside opinion trajectories.",
+        "practical": "Choose whether team selection must profile communication too.",
+        "theory": "Coupled-agent dynamics and loss of independence.",
+        "novelty": "Extends C2-MAS from pre-interaction choice profiles to evolving shared-state teams."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-08",
+      "title": "Translation contracts between decision and language agents",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Do typed summaries improve cross-model understanding, or remove decisive information?",
+      "prediction": "Typed records reduce composition errors only if decisive qualifiers survive the representation change.",
+      "comparison": "Compare prose and typed state with identical facts; selectively remove qualifiers or provenance; cross generator and receiver models.",
+      "metrics": [
+        "Contract violations",
+        "Retained evidence",
+        "Task accuracy",
+        "Encoding cost"
+      ],
+      "falsifier": "Reject typed superiority if gains disappear with equally explicit prose.",
+      "confounds": "Schema validity and semantic fidelity are distinct; do not reveal truth in fields.",
+      "delta": "Strong-weak mismatch and existing schema-composition questions precede this; focus on the Jev/SLM boundary.",
+      "sources": [
+        "wang-2026-guided",
+        "typesafe-2026-systemone",
+        "shen-2024-small"
+      ],
+      "atlas": [
+        "SOC-31",
+        "SOC-32"
+      ],
+      "briefs": [
+        "telephone",
+        "coordination",
+        "memory"
+      ],
+      "related": [
+        "EX-01"
+      ],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Specify the smallest state representation that preserves decisions.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Information bottleneck with measurable sufficient statistics.",
+      "visualization": "Trace facts and qualifiers through adapter transformations.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Schema validity and semantic fidelity are distinct; do not reveal truth in fields.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 83,
+        "practical": 95,
+        "theory": 50,
+        "novelty": 65
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "telephone": "2026-10-04T02:22:39Z",
+          "coordination": "2026-10-04T02:22:39Z",
+          "memory": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 76,
+      "score_rationale": {
+        "visual": "Trace facts and qualifiers through adapter transformations.",
+        "practical": "Specify the smallest state representation that preserves decisions.",
+        "theory": "Information bottleneck with measurable sufficient statistics.",
+        "novelty": "Strong-weak mismatch and existing schema-composition questions precede this; focus on the Jev/SLM boundary."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-09",
+      "title": "Who pays the cost of saying no?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can asymmetric verifier and proposer budgets cause escalation queues to collapse?",
+      "prediction": "Backpressure reduces rejection/retry amplification near capacity and increases verified deadline completions.",
+      "comparison": "Vary arrival rate and verifier allocation with fixed total spend; compare first-in-first-out, risk-priority and reserved verification capacity.",
+      "metrics": [
+        "Queue delay",
+        "Verified completions",
+        "Unreviewed actions",
+        "Dropped tasks"
+      ],
+      "falsifier": "Drop a policy if throughput gains rely on silently skipping verification.",
+      "confounds": "Count all rejected work and retries; service time differs from model reasoning quality.",
+      "delta": "Routing cost is established; binding queue stability at the decision gate is the target. Deadline-aware resource scheduling already exists; specialize the comparison to endogenously generated proposals and verifier false positives.",
+      "sources": [
+        "ong-2024-routellm",
+        "yue-2025-masrouter",
+        "gh-shapor-jev-sentinel",
+        "li-2026-deadline"
+      ],
+      "atlas": [
+        "BUD-17",
+        "SOC-04"
+      ],
+      "briefs": [
+        "commons",
+        "coordination",
+        "institutions"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Reserve the right amount of verification capacity.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Queue stability and backpressure.",
+      "visualization": "Animate proposal queues, verifier service and overload transitions.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Count all rejected work and retries; service time differs from model reasoning quality.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 92,
+        "practical": 95,
+        "theory": 70,
+        "novelty": 75
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "commons": "2026-10-04T02:22:39Z",
+          "coordination": "2026-10-04T02:22:39Z",
+          "institutions": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 85,
+      "score_rationale": {
+        "visual": "Animate proposal queues, verifier service and overload transitions.",
+        "practical": "Reserve the right amount of verification capacity.",
+        "theory": "Queue stability and backpressure.",
+        "novelty": "Routing cost is established; binding queue stability at the decision gate is the target. Deadline-aware resource scheduling already exists; specialize the comparison to endogenously generated proposals and verifier false positives."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-10",
+      "title": "Placement versus abundance of rare specialists",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Are a few Jev nodes more valuable at network bridges than spread uniformly?",
+      "prediction": "Specialist placement changes containment only when it changes access to the relevant transmission paths.",
+      "comparison": "Randomize sentinel count and degree-matched placement on fixed graphs; include no-communication and extra homogeneous node controls.",
+      "metrics": [
+        "Accuracy",
+        "Cascade size",
+        "Communication distance",
+        "Marginal benefit per specialist"
+      ],
+      "falsifier": "Reject a placement story if degree-matched random assignment performs equally.",
+      "confounds": "Central nodes receive more evidence; equalize visibility or explicitly estimate that mediator.",
+      "delta": "Minority defense and topology optimization already exist; count-by-placement interaction needs a narrow endpoint.",
+      "sources": [
+        "wu-2025-cowpox",
+        "yao-2026-hieramas"
+      ],
+      "atlas": [
+        "SOC-04",
+        "SEC-03"
+      ],
+      "briefs": [
+        "diversity",
+        "collective-sensing",
+        "quorum"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Allocate scarce specialist seats by demonstrated marginal value.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Network controllability and intervention coverage.",
+      "visualization": "Move fixed-count specialists over the graph and replay paired cascades.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Central nodes receive more evidence; equalize visibility or explicitly estimate that mediator.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 94,
+        "practical": 85,
+        "theory": 85,
+        "novelty": 45
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "diversity": "2026-10-04T02:22:39Z",
+          "collective-sensing": "2026-10-04T02:22:39Z",
+          "quorum": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 82,
+      "score_rationale": {
+        "visual": "Move fixed-count specialists over the graph and replay paired cascades.",
+        "practical": "Allocate scarce specialist seats by demonstrated marginal value.",
+        "theory": "Network controllability and intervention coverage.",
+        "novelty": "Minority defense and topology optimization already exist; count-by-placement interaction needs a narrow endpoint."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-11",
+      "title": "Reward design manufactures the diversity advantage",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Does a heterogeneous team win only because the evaluator rewards complementary specialist outputs?",
+      "prediction": "An apparent heterogeneity advantage changes with the evaluator’s reward aggregation rule.",
+      "comparison": "Compare additive, bottleneck and coverage rewards on the same underlying task outcomes; keep the policy-training and test worlds separate.",
+      "metrics": [
+        "Per-task success",
+        "Worst-task success",
+        "Reward sensitivity",
+        "Effort allocation"
+      ],
+      "falsifier": "Drop a universal diversity claim if it reverses under reasonable alternative objectives.",
+      "confounds": "Do not select the reward after seeing which arm wins; report task outcomes before aggregation.",
+      "delta": "Curvature-based heterogeneity gain is already studied; transfer to typed and generative agents is a replication/extension.",
+      "sources": [
+        "amir-2025-when",
+        "emam-2020-adaptive"
+      ],
+      "atlas": [
+        "SOC-01",
+        "SOC-38"
+      ],
+      "briefs": [
+        "diversity",
+        "commons",
+        "coordination"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Avoid building a benchmark that mechanically favors a mixed team.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Reward curvature and division of labor.",
+      "visualization": "Animate allocations with side-by-side reward aggregators.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Do not select the reward after seeing which arm wins; report task outcomes before aggregation.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 88,
+        "practical": 82,
+        "theory": 95,
+        "novelty": 45
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "diversity": "2026-10-04T02:22:39Z",
+          "commons": "2026-10-04T02:22:39Z",
+          "coordination": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 82,
+      "score_rationale": {
+        "visual": "Animate allocations with side-by-side reward aggregators.",
+        "practical": "Avoid building a benchmark that mechanically favors a mixed team.",
+        "theory": "Reward curvature and division of labor.",
+        "novelty": "Curvature-based heterogeneity gain is already studied; transfer to typed and generative agents is a replication/extension."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-12",
+      "title": "Role diversity without model diversity",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can one small model with separate tools and roles match a mixed-vendor team?",
+      "prediction": "Same-model agents with different tools or evidence can recover some benefits attributed to model diversity.",
+      "comparison": "Factor model identity, prompt role and tool access separately under identical total evidence and resource limits.",
+      "metrics": [
+        "Verified success",
+        "Cost",
+        "Error covariance",
+        "Role coverage"
+      ],
+      "falsifier": "Drop model mixing if role/tool specialization explains all benefit.",
+      "confounds": "Homogeneous does not mean identical observations or actions.",
+      "delta": "Direct prerequisite control, not an original heterogeneity result.",
+      "sources": [
+        "shen-2024-small",
+        "amir-2025-when",
+        "li-2025-rethinking"
+      ],
+      "atlas": [
+        "SOC-01",
+        "SOC-38"
+      ],
+      "briefs": [
+        "diversity",
+        "coordination"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Identify the cheapest source of useful specialization.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Functional versus structural diversity.",
+      "visualization": "Capability matrix and role occupancy.",
+      "literature_overlap": "substantial established or team overlap; retained as useful control/replication",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "baseline, replication or merge candidate; do not pitch as new",
+        "formal_review": null,
+        "critical_check": "Homogeneous does not mean identical observations or actions.",
+        "overlap_decision": "substantial established or team overlap; retained as useful control/replication"
+      },
+      "score_dimensions": {
+        "visual": 80,
+        "practical": 93,
+        "theory": 70,
+        "novelty": 30
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "diversity": "2026-10-04T02:22:39Z",
+          "coordination": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 74,
+      "score_rationale": {
+        "visual": "Capability matrix and role occupancy.",
+        "practical": "Identify the cheapest source of useful specialization.",
+        "theory": "Functional versus structural diversity.",
+        "novelty": "Direct prerequisite control, not an original heterogeneity result."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-13",
+      "title": "Make the sentinel blind to proposer prestige",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Does Jev favor a fluent or high-status proposer even when the evidence is unchanged?",
+      "prediction": "Randomized prestige labels may change selector preferences even when evidence is held fixed; a null effect is plausible.",
+      "comparison": "Randomize hidden, correct and swapped model labels while holding proposal content fixed; cross confident prose and terse typed claims.",
+      "metrics": [
+        "Selection accuracy",
+        "Label effect",
+        "Correct minority retention"
+      ],
+      "falsifier": "Reject prestige effects if randomized labels leave decisions unchanged within the precision target.",
+      "confounds": "Identity labels can carry real prior quality; use deliberately randomized labels for the causal test.",
+      "delta": "Authority-driven collapse is known; test typed selectors rather than claim new social bias.",
+      "sources": [
+        "chen-2026-diversity",
+        "jiang-2023-llm"
+      ],
+      "atlas": [
+        "SOC-07",
+        "SOC-10"
+      ],
+      "briefs": [
+        "dissent",
+        "diversity",
+        "leadership"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Decide whether model identity belongs in selector inputs.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Information cascades and status-weighted influence.",
+      "visualization": "Replay identical evidence under changing labels.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Identity labels can carry real prior quality; use deliberately randomized labels for the causal test.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 86,
+        "practical": 87,
+        "theory": 65,
+        "novelty": 75
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "dissent": "2026-10-04T02:22:39Z",
+          "diversity": "2026-10-04T02:22:39Z",
+          "leadership": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 79,
+      "score_rationale": {
+        "visual": "Replay identical evidence under changing labels.",
+        "practical": "Decide whether model identity belongs in selector inputs.",
+        "theory": "Information cascades and status-weighted influence.",
+        "novelty": "Authority-driven collapse is known; test typed selectors rather than claim new social bias."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-14",
+      "title": "Can cheap dissent rescue a stronger planner?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "When is an independent Qwen critic more useful than another Haiku sample?",
+      "prediction": "Independent evidence-seeking critics outperform generic opposition only when their extra information survives integration.",
+      "comparison": "Compare independent evidence-seeking critique, generic opposition and equal-cost extra solver samples with blinded proposer/critic roles.",
+      "metrics": [
+        "Verified corrections",
+        "Harmful reversals",
+        "Extra evidence acquired",
+        "Cost"
+      ],
+      "falsifier": "Reject critics if extra solver samples or deterministic tests provide equal value.",
+      "confounds": "Critic information and compute must be matched; disagreement alone is not quality.",
+      "delta": "ReConcile and existing dissent questions already cover much of this; target capability asymmetry.",
+      "sources": [
+        "chen-2023-reconcile",
+        "li-2025-rethinking",
+        "wang-2026-guided"
+      ],
+      "atlas": [
+        "SOC-09",
+        "SOC-10"
+      ],
+      "briefs": [
+        "dissent",
+        "diversity",
+        "discovery"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Choose a critic only when its independent contribution is demonstrated.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Independent minority information versus conformism.",
+      "visualization": "Show correct and harmful reversals by critic type.",
+      "literature_overlap": "substantial established or team overlap; retained as useful control/replication",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "baseline, replication or merge candidate; do not pitch as new",
+        "formal_review": null,
+        "critical_check": "Critic information and compute must be matched; disagreement alone is not quality.",
+        "overlap_decision": "substantial established or team overlap; retained as useful control/replication"
+      },
+      "score_dimensions": {
+        "visual": 83,
+        "practical": 92,
+        "theory": 62,
+        "novelty": 45
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "dissent": "2026-10-04T02:22:39Z",
+          "diversity": "2026-10-04T02:22:39Z",
+          "discovery": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 75,
+      "score_rationale": {
+        "visual": "Show correct and harmful reversals by critic type.",
+        "practical": "Choose a critic only when its independent contribution is demonstrated.",
+        "theory": "Independent minority information versus conformism.",
+        "novelty": "ReConcile and existing dissent questions already cover much of this; target capability asymmetry."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-15",
+      "title": "Confidence contagion through typed probabilities",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can repeated probability outputs make peers more certain without new evidence?",
+      "prediction": "Naive probability pooling becomes overconfident as copied evidence is repeatedly transmitted.",
+      "comparison": "Replay one uncertain observation through Jev and LLM chains; compare naive pooling, ancestry deduplication and calibrated pooling.",
+      "metrics": [
+        "Calibration drift",
+        "Duplicate evidence weight",
+        "False commitment"
+      ],
+      "falsifier": "Reject a new mechanism if provenance deduplication fully removes the effect.",
+      "confounds": "Probabilities are not independent samples; ensure source ancestry is identical across arms.",
+      "delta": "Extends existing quorum work to numeric probability transmission; confidence aggregation is established.",
+      "sources": [
+        "wang-2026-debate",
+        "chen-2023-reconcile",
+        "typesafe-2026-systemone"
+      ],
+      "atlas": [
+        "SOC-08",
+        "SEC-03"
+      ],
+      "briefs": [
+        "quorum",
+        "telephone",
+        "collective-sensing"
+      ],
+      "related": [
+        "PX-01"
+      ],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Keep evidence ancestry alongside confidence.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Bayesian double-counting and correlated evidence.",
+      "visualization": "Track one source splitting into many numerical endorsements.",
+      "literature_overlap": "substantial established or team overlap; retained as useful control/replication",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "baseline, replication or merge candidate; do not pitch as new",
+        "formal_review": null,
+        "critical_check": "Probabilities are not independent samples; ensure source ancestry is identical across arms.",
+        "overlap_decision": "substantial established or team overlap; retained as useful control/replication"
+      },
+      "score_dimensions": {
+        "visual": 90,
+        "practical": 86,
+        "theory": 75,
+        "novelty": 40
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "quorum": "2026-10-04T02:22:39Z",
+          "telephone": "2026-10-04T02:22:39Z",
+          "collective-sensing": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 78,
+      "score_rationale": {
+        "visual": "Track one source splitting into many numerical endorsements.",
+        "practical": "Keep evidence ancestry alongside confidence.",
+        "theory": "Bayesian double-counting and correlated evidence.",
+        "novelty": "Extends existing quorum work to numeric probability transmission; confidence aggregation is established."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-16",
+      "title": "A swarm immune response can destroy useful diversity",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Do heterogeneous monitors quarantine correct rare specialists along with errors?",
+      "prediction": "Broad quarantine removes more useful rare evidence than evidence-specific correction at comparable error suppression.",
+      "comparison": "Mix rare-but-correct evidence with plausible false claims; compare local quarantine, global overwrite and evidence-specific correction at matched review rates.",
+      "metrics": [
+        "Error removal",
+        "Rare knowledge retained",
+        "Recovery",
+        "False quarantine"
+      ],
+      "falsifier": "Reject safety gains that erase correct minority knowledge or hide abstained cases.",
+      "confounds": "Inject difficulty independently from rarity; do not equate unusual wording with maliciousness.",
+      "delta": "Cowpox and our immune-response design already raise this; isolate model-specific false positives.",
+      "sources": [
+        "wu-2025-cowpox",
+        "chen-2026-diversity",
+        "gh-shapor-jev-sentinel"
+      ],
+      "atlas": [
+        "SEC-06",
+        "SOC-10"
+      ],
+      "briefs": [
+        "regrowth",
+        "dissent",
+        "diversity"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Choose correction granularity without homogenizing the swarm.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Defense-diversity tradeoff and selective suppression.",
+      "visualization": "Overlay useful and harmful claim lineages during repair.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Inject difficulty independently from rarity; do not equate unusual wording with maliciousness.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 95,
+        "practical": 90,
+        "theory": 88,
+        "novelty": 25
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "regrowth": "2026-10-04T02:22:39Z",
+          "dissent": "2026-10-04T02:22:39Z",
+          "diversity": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 81,
+      "score_rationale": {
+        "visual": "Overlay useful and harmful claim lineages during repair.",
+        "practical": "Choose correction granularity without homogenizing the swarm.",
+        "theory": "Defense-diversity tradeoff and selective suppression.",
+        "novelty": "Cowpox and our immune-response design already raise this; isolate model-specific false positives."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-17",
+      "title": "Graceful behavior when Jev is unavailable",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can a mixed swarm degrade safely when its shared selector fails?",
+      "prediction": "Bounded fallback reduces service loss relative to unbounded retries but may sacrifice decision quality.",
+      "comparison": "Inject selector timeout and inconsistent replies; compare retry, deterministic fallback, cached decisions with expiry and alternate model selection.",
+      "metrics": [
+        "Task loss",
+        "Invalid actions",
+        "Recovery time",
+        "Retry cost"
+      ],
+      "falsifier": "Reject fallback if it only hides failures by waiting beyond the deadline.",
+      "confounds": "No cached action without matching state version; endpoint outages differ from wrong answers.",
+      "delta": "Reliability engineering replication tailored to a shared Jev dependency.",
+      "sources": [
+        "gh-svitatlco-jev-skill",
+        "typesafe-2026-systemone"
+      ],
+      "atlas": [
+        "SOC-23",
+        "SOC-32"
+      ],
+      "briefs": [
+        "regrowth",
+        "coordination"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Avoid making the selector the whole swarm’s failure domain.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Single points of failure and redundant control.",
+      "visualization": "Visualize dependency outage and fallback paths.",
+      "literature_overlap": "substantial established or team overlap; retained as useful control/replication",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "baseline, replication or merge candidate; do not pitch as new",
+        "formal_review": null,
+        "critical_check": "No cached action without matching state version; endpoint outages differ from wrong answers.",
+        "overlap_decision": "substantial established or team overlap; retained as useful control/replication"
+      },
+      "score_dimensions": {
+        "visual": 88,
+        "practical": 96,
+        "theory": 60,
+        "novelty": 45
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "regrowth": "2026-10-04T02:22:39Z",
+          "coordination": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 77,
+      "score_rationale": {
+        "visual": "Visualize dependency outage and fallback paths.",
+        "practical": "Avoid making the selector the whole swarm’s failure domain.",
+        "theory": "Single points of failure and redundant control.",
+        "novelty": "Reliability engineering replication tailored to a shared Jev dependency."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-18",
+      "title": "Cross-model memory transplant",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can a replacement model use another family’s compact memory without semantic drift?",
+      "prediction": "Typed handoff records preserve executable constraints better than equally short free summaries when formats differ.",
+      "comparison": "Freeze handoff states and compare verbatim, typed and recipient-specific summaries under matched memory bytes and evidence access.",
+      "metrics": [
+        "Post-handoff success",
+        "Constraint loss",
+        "False memory adoption",
+        "Transfer cost"
+      ],
+      "falsifier": "Reject transplant if restarting from original evidence is cheaper and equally accurate.",
+      "confounds": "Recipient context window, truncation and tool permissions require separate controls.",
+      "delta": "Extends existing Theseus/memory work at a model-family boundary.",
+      "sources": [
+        "yao-2026-hieramas",
+        "wang-2026-guided"
+      ],
+      "atlas": [
+        "SOC-21",
+        "SOC-23"
+      ],
+      "briefs": [
+        "memory",
+        "regrowth",
+        "culture"
+      ],
+      "related": [
+        "PX-03"
+      ],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Specify portable memory fields before hot-swapping models.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "State transfer and functional continuity.",
+      "visualization": "Display preserved constraints and drift after each replacement.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Recipient context window, truncation and tool permissions require separate controls.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 90,
+        "practical": 88,
+        "theory": 75,
+        "novelty": 35
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "memory": "2026-10-04T02:22:39Z",
+          "regrowth": "2026-10-04T02:22:39Z",
+          "culture": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 77,
+      "score_rationale": {
+        "visual": "Display preserved constraints and drift after each replacement.",
+        "practical": "Specify portable memory fields before hot-swapping models.",
+        "theory": "State transfer and functional continuity.",
+        "novelty": "Extends existing Theseus/memory work at a model-family boundary."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-19",
+      "title": "Distillation can erase the diversity we wanted",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Does teaching Qwen from Jev decisions reduce independent error coverage?",
+      "prediction": "Distillation can improve individual accuracy while increasing teacher-student co-failure.",
+      "comparison": "Compare base and decision-distilled Qwen at matched individual accuracy where feasible; measure pairwise failures on unseen task families.",
+      "metrics": [
+        "Accuracy",
+        "Co-failure",
+        "Calibration",
+        "Team uplift"
+      ],
+      "falsifier": "Reject a diversity claim if improvements are wholly explained by individual accuracy.",
+      "confounds": "Teacher contamination, shared training data and unequal fine-tuning compute must be reported.",
+      "delta": "AutoJev supplies a practical precedent; independence after distillation is the narrower question.",
+      "sources": [
+        "gh-denis-pplx-autojev",
+        "teng-2026-which"
+      ],
+      "atlas": [
+        "SOC-01",
+        "SOC-38"
+      ],
+      "briefs": [
+        "diversity",
+        "culture"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Choose whether distilled replicas are useful backups or correlated copies.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Convergence under shared learning versus response diversity.",
+      "visualization": "Before/after error-overlap maps.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Teacher contamination, shared training data and unequal fine-tuning compute must be reported.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 84,
+        "practical": 87,
+        "theory": 80,
+        "novelty": 70
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "diversity": "2026-10-04T02:22:39Z",
+          "culture": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 82,
+      "score_rationale": {
+        "visual": "Before/after error-overlap maps.",
+        "practical": "Choose whether distilled replicas are useful backups or correlated copies.",
+        "theory": "Convergence under shared learning versus response diversity.",
+        "novelty": "AutoJev supplies a practical precedent; independence after distillation is the narrower question."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-20",
+      "title": "Batched Jev calls create a shared failure domain",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Does sharing state across many typed questions couple otherwise separate agents?",
+      "prediction": "Batching can alter outputs when shared state or question interactions create common-mode sensitivity; no effect is also plausible.",
+      "comparison": "Compare one batched call and per-agent calls with identical permitted state; perturb irrelevant neighbor fields and question order.",
+      "metrics": [
+        "Decision invariance",
+        "Co-failure",
+        "Cost",
+        "Latency"
+      ],
+      "falsifier": "Reject batch coupling if outputs remain stable and failures independent under prespecified perturbations.",
+      "confounds": "Batched state can expose extra evidence; equalize information before attributing an API effect.",
+      "delta": "Batching is documented; downstream correlation is not established by speed claims.",
+      "sources": [
+        "typesafe-2026-systemone",
+        "teng-2026-which"
+      ],
+      "atlas": [
+        "SOC-01",
+        "SOC-02"
+      ],
+      "briefs": [
+        "diversity",
+        "coordination",
+        "collective-sensing"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Decide when batching savings warrant shared-state exposure.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Common-mode failure from shared substrate.",
+      "visualization": "One request fan-out with correlated decision changes.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Batched state can expose extra evidence; equalize information before attributing an API effect.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 85,
+        "practical": 94,
+        "theory": 70,
+        "novelty": 78
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "diversity": "2026-10-04T02:22:39Z",
+          "coordination": "2026-10-04T02:22:39Z",
+          "collective-sensing": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 83,
+      "score_rationale": {
+        "visual": "One request fan-out with correlated decision changes.",
+        "practical": "Decide when batching savings warrant shared-state exposure.",
+        "theory": "Common-mode failure from shared substrate.",
+        "novelty": "Batching is documented; downstream correlation is not established by speed claims."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-21",
+      "title": "Energy-aware local/cloud swarms",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Do local Qwen workers remain preferable when energy, queue contention and cloud latency are counted?",
+      "prediction": "Local/cloud rankings change when hardware contention and measured energy are added to inference price.",
+      "comparison": "Measure the same task contracts on local/cloud mixes under fixed deadlines; report actual energy only with suitable instrumentation.",
+      "metrics": [
+        "Quality-cost frontier",
+        "Energy per success",
+        "Tail latency",
+        "Failure rate"
+      ],
+      "falsifier": "Drop energy claims without measured joules and hardware utilization.",
+      "confounds": "Tokens across providers are not a common compute unit; shared hardware and cold starts matter.",
+      "delta": "Existing cost routing is close; energy and contention require real measurement.",
+      "sources": [
+        "ong-2024-routellm",
+        "gh-svitatlco-jev-skill"
+      ],
+      "atlas": [
+        "BUD-17",
+        "SOC-04"
+      ],
+      "briefs": [
+        "commons",
+        "coordination"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Choose deployment mixes using full system costs.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Resource-constrained allocation, with energy as measured physical quantity.",
+      "visualization": "Power and queue traces aligned with verified completions.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Tokens across providers are not a common compute unit; shared hardware and cold starts matter.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 80,
+        "practical": 90,
+        "theory": 75,
+        "novelty": 65
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "commons": "2026-10-04T02:22:39Z",
+          "coordination": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 80,
+      "score_rationale": {
+        "visual": "Power and queue traces aligned with verified completions.",
+        "practical": "Choose deployment mixes using full system costs.",
+        "theory": "Resource-constrained allocation, with energy as measured physical quantity.",
+        "novelty": "Existing cost routing is close; energy and contention require real measurement."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-22",
+      "title": "Tool access creates specialists more reliably than prompts",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Does genuine capability partitioning outperform simply telling identical agents to specialize?",
+      "prediction": "Tool partitioning explains some apparent gains from specialist prompts or mixed model identities.",
+      "comparison": "Factor model family, tool permissions and specialization prompts with identical total available tools.",
+      "metrics": [
+        "Success",
+        "Capability coverage",
+        "Delegation errors",
+        "Coordination cost"
+      ],
+      "falsifier": "Reject prompt-specialist explanations if permission partitions account for gains.",
+      "confounds": "A forbidden action is not inability; allow explicit delegation in every arm.",
+      "delta": "Modular tool agents and robot capability allocation already exist.",
+      "sources": [
+        "shen-2024-small",
+        "emam-2020-adaptive"
+      ],
+      "atlas": [
+        "SOC-01",
+        "SOC-04"
+      ],
+      "briefs": [
+        "diversity",
+        "coordination"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Separate capability engineering from model branding.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Morphological versus behavioral specialization as a carefully bounded analogy.",
+      "visualization": "Tool-capability bipartite graph over execution.",
+      "literature_overlap": "substantial established or team overlap; retained as useful control/replication",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "baseline, replication or merge candidate; do not pitch as new",
+        "formal_review": null,
+        "critical_check": "A forbidden action is not inability; allow explicit delegation in every arm.",
+        "overlap_decision": "substantial established or team overlap; retained as useful control/replication"
+      },
+      "score_dimensions": {
+        "visual": 83,
+        "practical": 90,
+        "theory": 75,
+        "novelty": 40
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "diversity": "2026-10-04T02:22:39Z",
+          "coordination": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 77,
+      "score_rationale": {
+        "visual": "Tool-capability bipartite graph over execution.",
+        "practical": "Separate capability engineering from model branding.",
+        "theory": "Morphological versus behavioral specialization as a carefully bounded analogy.",
+        "novelty": "Modular tool agents and robot capability allocation already exist."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-23",
+      "title": "Private deliberation before shared decisions",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Does protecting cheap agents’ first judgments preserve useful independent evidence?",
+      "prediction": "Private initial judgments preserve more independent information but can also preserve wrong anchors.",
+      "comparison": "Compare immediate broadcast, private-then-share and no discussion for mixed and same-model teams.",
+      "metrics": [
+        "Correct minority retention",
+        "Final success",
+        "Discussion cost"
+      ],
+      "falsifier": "Drop privacy intervention if it merely preserves incorrect anchoring.",
+      "confounds": "Equalize total calls and evidence; record beneficial and harmful revisions.",
+      "delta": "Already central to existing SOC-07 work; heterogeneous replication only.",
+      "sources": [
+        "chen-2026-diversity",
+        "chen-2023-reconcile"
+      ],
+      "atlas": [
+        "SOC-07",
+        "SOC-10"
+      ],
+      "briefs": [
+        "dissent",
+        "collective-sensing"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Test whether mixing models adds anything beyond private judgments.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Information cascades and social coupling.",
+      "visualization": "Opinion traces before and after the first public signal.",
+      "literature_overlap": "substantial established or team overlap; retained as useful control/replication",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "baseline, replication or merge candidate; do not pitch as new",
+        "formal_review": null,
+        "critical_check": "Equalize total calls and evidence; record beneficial and harmful revisions.",
+        "overlap_decision": "substantial established or team overlap; retained as useful control/replication"
+      },
+      "score_dimensions": {
+        "visual": 90,
+        "practical": 82,
+        "theory": 75,
+        "novelty": 20
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "dissent": "2026-10-04T02:22:39Z",
+          "collective-sensing": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 73,
+      "score_rationale": {
+        "visual": "Opinion traces before and after the first public signal.",
+        "practical": "Test whether mixing models adds anything beyond private judgments.",
+        "theory": "Information cascades and social coupling.",
+        "novelty": "Already central to existing SOC-07 work; heterogeneous replication only."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-24",
+      "title": "Hybrid markets and strategic reports",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can agents manipulate a Jev allocator by overstating difficulty or underreporting cost?",
+      "prediction": "Allocation based only on advertised competence is more vulnerable to overclaims than measured-progress allocation.",
+      "comparison": "Use synthetic task auctions with fixed ground truth and bounded messages; compare self-reported bids, measured-progress allocation and audited bids.",
+      "metrics": [
+        "Allocation regret",
+        "Budget loss",
+        "Truthful report rate",
+        "Audit cost"
+      ],
+      "falsifier": "Reject market benefits if a simple scheduler matches them without bid manipulation.",
+      "confounds": "Do not infer intention from a mistaken bid; manipulate reporting incentives separately.",
+      "delta": "Agent markets and CoffeeBench already study economic interaction; focus on allocator evidence. Mittal already frames capability advertising as a lemons market; evaluate its remedies rather than rename the problem.",
+      "sources": [
+        "sakana-2026-coffeebench",
+        "yue-2025-masrouter",
+        "mittal-2026-capability"
+      ],
+      "atlas": [
+        "BUD-17",
+        "SOC-04"
+      ],
+      "briefs": [
+        "commons",
+        "institutions",
+        "leadership"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Decide whether self-reported competence should influence allocation.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Mechanism design under asymmetric information, not biological cooperation proof.",
+      "visualization": "Resource flows and reported versus realized task costs.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Do not infer intention from a mistaken bid; manipulate reporting incentives separately.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 89,
+        "practical": 85,
+        "theory": 72,
+        "novelty": 40
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "commons": "2026-10-04T02:22:39Z",
+          "institutions": "2026-10-04T02:22:39Z",
+          "leadership": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 76,
+      "score_rationale": {
+        "visual": "Resource flows and reported versus realized task costs.",
+        "practical": "Decide whether self-reported competence should influence allocation.",
+        "theory": "Mechanism design under asymmetric information, not biological cooperation proof.",
+        "novelty": "Agent markets and CoffeeBench already study economic interaction; focus on allocator evidence. Mittal already frames capability advertising as a lemons market; evaluate its remedies rather than rename the problem."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-25",
+      "title": "Long-horizon drift in heterogeneous contracts",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Do model-specific summaries gradually change a shared task contract?",
+      "prediction": "Immutable external contracts reduce constraint drift across both mixed and same-model handoff chains.",
+      "comparison": "Alternate model families across handoffs; compare immutable machine-checkable contracts, natural-language reminders and no reminders.",
+      "metrics": [
+        "Constraint survival",
+        "Invalid commitments",
+        "Drift per hop"
+      ],
+      "falsifier": "Reject heterogeneity-specific drift if same-model chains fail identically.",
+      "confounds": "Match compression lengths and context ages; immutable checks are an engineered intervention.",
+      "delta": "Existing telephone and memory designs are closest; isolate the cross-family boundary.",
+      "sources": [
+        "sun-2026-collaboration",
+        "wang-2026-guided"
+      ],
+      "atlas": [
+        "SOC-31",
+        "SOC-21"
+      ],
+      "briefs": [
+        "telephone",
+        "memory",
+        "culture"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Define which constraints must remain outside generated summaries.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Transmission fidelity and cumulative information loss.",
+      "visualization": "Contract fields fading or mutating at each hop.",
+      "literature_overlap": "substantial established or team overlap; retained as useful control/replication",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "baseline, replication or merge candidate; do not pitch as new",
+        "formal_review": null,
+        "critical_check": "Match compression lengths and context ages; immutable checks are an engineered intervention.",
+        "overlap_decision": "substantial established or team overlap; retained as useful control/replication"
+      },
+      "score_dimensions": {
+        "visual": 91,
+        "practical": 87,
+        "theory": 65,
+        "novelty": 35
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "telephone": "2026-10-04T02:22:39Z",
+          "memory": "2026-10-04T02:22:39Z",
+          "culture": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 75,
+      "score_rationale": {
+        "visual": "Contract fields fading or mutating at each hop.",
+        "practical": "Define which constraints must remain outside generated summaries.",
+        "theory": "Transmission fidelity and cumulative information loss.",
+        "novelty": "Existing telephone and memory designs are closest; isolate the cross-family boundary."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-26",
+      "title": "The diversity sweet spot under a hard budget",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "What mixture size maximizes verified success once profiling and coordination are paid for?",
+      "prediction": "Mixed-model gains exhibit diminishing returns under a fixed budget and need not beat repeated samples from the best model.",
+      "comparison": "Sweep small team size and model composition; include single best model, repeated samples and no-communication ensembles on held-out worlds.",
+      "metrics": [
+        "Success per budget",
+        "Tail risk",
+        "Coordination fraction"
+      ],
+      "falsifier": "Reject universal optimum claims if ranking changes across task families.",
+      "confounds": "Fix dollar cap and deadline separately; API prices and tokenizers differ.",
+      "delta": "MoA, Self-MoA and C2-MAS already address much of this; use as a necessary baseline sweep.",
+      "sources": [
+        "wang-2024-mixture",
+        "li-2025-rethinking",
+        "teng-2026-which"
+      ],
+      "atlas": [
+        "SOC-02",
+        "SOC-38"
+      ],
+      "briefs": [
+        "diversity",
+        "commons",
+        "coordination"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Establish a useful baseline before mechanism experiments.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Marginal returns and resource competition.",
+      "visualization": "Quality-cost frontier with coordination overhead bands.",
+      "literature_overlap": "substantial established or team overlap; retained as useful control/replication",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "baseline, replication or merge candidate; do not pitch as new",
+        "formal_review": null,
+        "critical_check": "Fix dollar cap and deadline separately; API prices and tokenizers differ.",
+        "overlap_decision": "substantial established or team overlap; retained as useful control/replication"
+      },
+      "score_dimensions": {
+        "visual": 88,
+        "practical": 94,
+        "theory": 72,
+        "novelty": 25
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "diversity": "2026-10-04T02:22:39Z",
+          "commons": "2026-10-04T02:22:39Z",
+          "coordination": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 76,
+      "score_rationale": {
+        "visual": "Quality-cost frontier with coordination overhead bands.",
+        "practical": "Establish a useful baseline before mechanism experiments.",
+        "theory": "Marginal returns and resource competition.",
+        "novelty": "MoA, Self-MoA and C2-MAS already address much of this; use as a necessary baseline sweep."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-27",
+      "title": "Independent judges for a heterogeneous swarm",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can the apparent winning team change when the judge model changes?",
+      "prediction": "Some team rankings change with the judge; executable ground truth can reveal evaluator affinity.",
+      "comparison": "Score blinded outputs with executable truth, Jev, each generator family and calibrated human audits on a fixed subset.",
+      "metrics": [
+        "Rank reversals",
+        "False acceptance",
+        "Judge agreement",
+        "Cost"
+      ],
+      "falsifier": "Reject a result whose advantage exists only with a related-family judge.",
+      "confounds": "Judges must not see model labels; verbosity and answer order need randomization.",
+      "delta": "Measurement control rather than a new swarm mechanism.",
+      "sources": [
+        "jiang-2023-llm",
+        "typesafe-2026-introducing"
+      ],
+      "atlas": [
+        "SOC-32",
+        "SOC-38"
+      ],
+      "briefs": [
+        "casefile",
+        "discovery"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Prevent evaluator affinity from becoming a fake heterogeneity result.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Measurement invariance.",
+      "visualization": "Judge disagreement heatmap anchored to protected truth.",
+      "literature_overlap": "substantial established or team overlap; retained as useful control/replication",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "baseline, replication or merge candidate; do not pitch as new",
+        "formal_review": null,
+        "critical_check": "Judges must not see model labels; verbosity and answer order need randomization.",
+        "overlap_decision": "substantial established or team overlap; retained as useful control/replication"
+      },
+      "score_dimensions": {
+        "visual": 78,
+        "practical": 97,
+        "theory": 40,
+        "novelty": 50
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "casefile": "2026-10-04T02:22:39Z",
+          "discovery": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 70,
+      "score_rationale": {
+        "visual": "Judge disagreement heatmap anchored to protected truth.",
+        "practical": "Prevent evaluator affinity from becoming a fake heterogeneity result.",
+        "theory": "Measurement invariance.",
+        "novelty": "Measurement control rather than a new swarm mechanism."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-28",
+      "title": "When to replace conversation with deterministic code",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Which coordination failures disappear when arithmetic and invariants leave the agents?",
+      "prediction": "Replacing exact bookkeeping with code removes failures without requiring model diversity.",
+      "comparison": "Hold model composition fixed and replace one coordination step at a time with an exact solver or state machine.",
+      "metrics": [
+        "Success",
+        "Calls removed",
+        "Failure localization",
+        "Cost"
+      ],
+      "falsifier": "Drop model-mixing claims if deterministic coordination explains all benefit.",
+      "confounds": "An exact task solver is a ceiling; distinguish generic invariant checks from answering the task.",
+      "delta": "Established engineering principle; strongest practical falsification control.",
+      "sources": [
+        "typesafe-2026-introducing",
+        "gh-svitatlco-jev-skill"
+      ],
+      "atlas": [
+        "SOC-04",
+        "SOC-32"
+      ],
+      "briefs": [
+        "coordination",
+        "discovery"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Spend model inference only where it adds measurable value.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Mechanistic decomposition rather than an ecological analogy.",
+      "visualization": "Replay the same trace with one stage made exact.",
+      "literature_overlap": "substantial established or team overlap; retained as useful control/replication",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "baseline, replication or merge candidate; do not pitch as new",
+        "formal_review": null,
+        "critical_check": "An exact task solver is a ceiling; distinguish generic invariant checks from answering the task.",
+        "overlap_decision": "substantial established or team overlap; retained as useful control/replication"
+      },
+      "score_dimensions": {
+        "visual": 78,
+        "practical": 98,
+        "theory": 55,
+        "novelty": 25
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "coordination": "2026-10-04T02:22:39Z",
+          "discovery": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 70,
+      "score_rationale": {
+        "visual": "Replay the same trace with one stage made exact.",
+        "practical": "Spend model inference only where it adds measurable value.",
+        "theory": "Mechanistic decomposition rather than an ecological analogy.",
+        "novelty": "Established engineering principle; strongest practical falsification control."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-29",
+      "title": "Heterogeneous teaching without permanent central authority",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can temporary specialist guidance improve weak agents without creating a permanent leader dependency?",
+      "prediction": "Request-triggered guidance improves independence only when useful state persists after teacher removal.",
+      "comparison": "Compare fixed teacher, rotating teacher and request-triggered guidance at equal messages; remove the teacher mid-run.",
+      "metrics": [
+        "Independent completion",
+        "Recovery after teacher loss",
+        "Guidance cost"
+      ],
+      "falsifier": "Reject distributed learning if competence vanishes when the teacher is absent.",
+      "confounds": "Separate retained facts from improved skills; no claim of weight learning without updates.",
+      "delta": "Guided collaboration already exists; persistence after mentor removal is the extension.",
+      "sources": [
+        "wang-2026-guided",
+        "chen-2026-diversity"
+      ],
+      "atlas": [
+        "SOC-23",
+        "SOC-07"
+      ],
+      "briefs": [
+        "leadership",
+        "culture",
+        "regrowth"
+      ],
+      "related": [],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Decide whether guidance builds capacity or just hides a bottleneck.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Temporary scaffolding and dependency formation.",
+      "visualization": "Guidance edges fade as learners operate independently.",
+      "literature_overlap": "focused extension; novelty unconfirmed",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "retain as exploratory comparison",
+        "formal_review": null,
+        "critical_check": "Separate retained facts from improved skills; no claim of weight learning without updates.",
+        "overlap_decision": "focused extension; novelty unconfirmed"
+      },
+      "score_dimensions": {
+        "visual": 90,
+        "practical": 84,
+        "theory": 82,
+        "novelty": 58
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "leadership": "2026-10-04T02:22:39Z",
+          "culture": "2026-10-04T02:22:39Z",
+          "regrowth": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 81,
+      "score_rationale": {
+        "visual": "Guidance edges fade as learners operate independently.",
+        "practical": "Decide whether guidance builds capacity or just hides a bottleneck.",
+        "theory": "Temporary scaffolding and dependency formation.",
+        "novelty": "Guided collaboration already exists; persistence after mentor removal is the extension."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    },
+    {
+      "id": "HX-30",
+      "title": "Can a fixed decision vocabulary adapt to genuinely new tasks?",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "What happens when task novelty requires an action outside Jev’s existing menu?",
+      "prediction": "Controlled option expansion can improve novel-task coverage, but validating new options introduces a second bottleneck.",
+      "comparison": "Introduce held-out task types; compare fixed menu, request-new-option, periodic schema revision and free generation with validation.",
+      "metrics": [
+        "Novel-task completion",
+        "Invalid new options",
+        "Schema revision cost",
+        "Recovery delay"
+      ],
+      "falsifier": "Reject adaptability if new menus only work because the evaluator supplies the answer.",
+      "confounds": "Keep novel tasks distinct from harder familiar tasks; validate generated actions in a bounded sandbox.",
+      "delta": "Typed decisions and generators are already combined; test open-set transition and safe menu growth.",
+      "sources": [
+        "typesafe-2026-systemone",
+        "gh-denis-pplx-autojev",
+        "gh-svitatlco-jev-skill",
+        "zhong-2026-when"
+      ],
+      "atlas": [
+        "SOC-09",
+        "SOC-23"
+      ],
+      "briefs": [
+        "discovery",
+        "regrowth",
+        "diversity"
+      ],
+      "related": [
+        "HX-04"
+      ],
+      "scenario": "Synthetic shared-state service and routing worlds",
+      "decision_value": "Define an escape hatch from an incomplete action vocabulary.",
+      "feasibility": "Design only. Qualify adapters on separate development fixtures, then survey/review/public-plan gates before any model calls.",
+      "source_note": "Fresh primary-source screening; see sources.json and LITERATURE.md for access depth and claim boundaries. No independent replication or certified novelty.",
+      "biophysical_mechanism": "Adaptation constrained by available variation.",
+      "visualization": "New task demands appear outside the current action graph.",
+      "literature_overlap": "overlaps HX-04 and known missing-option rejection; merge before promotion",
+      "review": {
+        "reviewer": "vishesh/codex-heterogeneous",
+        "type": "editorial self-review; not independent approval",
+        "verdict": "merge with HX-04",
+        "formal_review": null,
+        "critical_check": "Keep novel tasks distinct from harder familiar tasks; validate generated actions in a bounded sandbox.",
+        "overlap_decision": "overlaps HX-04 and known missing-option rejection; merge before promotion"
+      },
+      "score_dimensions": {
+        "visual": 93,
+        "practical": 94,
+        "theory": 72,
+        "novelty": 45
+      },
+      "activity": {
+        "added_at": "2026-10-04T02:22:39Z",
+        "tags_added_at": {
+          "discovery": "2026-10-04T02:22:39Z",
+          "regrowth": "2026-10-04T02:22:39Z",
+          "diversity": "2026-10-04T02:22:39Z"
+        }
+      },
+      "score": 81,
+      "score_rationale": {
+        "visual": "New task demands appear outside the current action graph.",
+        "practical": "Define an escape hatch from an incomplete action vocabulary.",
+        "theory": "Adaptation constrained by available variation.",
+        "novelty": "Typed decisions and generators are already combined; test open-set transition and safe menu growth."
+      },
+      "readiness": {
+        "research": "scoping review",
+        "formal_survey_gate": "not passed",
+        "independent_review": "not yet obtained",
+        "implementation": "not started",
+        "execution": "not run",
+        "public_plan_registration": null
+      }
+    }
+  ]
+}

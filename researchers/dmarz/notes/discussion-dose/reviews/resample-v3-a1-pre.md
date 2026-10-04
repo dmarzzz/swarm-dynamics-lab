@@ -29,6 +29,6 @@
 - Assignments and command: 12 worlds x {clean, attack} x {reports, private, resample}, R=3; `python3 resample_v3.py run --backend anthropic --launch-manifest <approved> --output <new dir>` on a claimed box.
 - Limits: 936 calls (`max_calls` must equal the plan); one worker; about $5 within dmarz's $500 budget.
 - Retry/stop: none; failures recorded and kept in denominators (v3 policy).
-- Regression checks: `resample_v3_selftest.py` 9/9 and `bench_v3.selftest` 40/40 at writing; rerun after v3 fixes.
+- Regression checks: `resample_v3_selftest.py` 9/9 and `bench_v3.selftest` pass on post-fix v3 (`d76146b`); the sidecar no longer calls v3 `summarize`, which now requires board arms.
 - Claim/credentials/artifacts: fresh claimed box; key injected by the agentops SOPS path, never stored; raw outputs outside git, summary and post-mortem committed.
 - Gate decision: blocked until all three gates above clear; then update this file to ready with pinned hashes before launch.

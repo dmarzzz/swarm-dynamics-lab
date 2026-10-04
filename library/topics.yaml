@@ -45,3 +45,7 @@
 - slug: agent-budgets
   name: Agent budgets and resource allocation
   description: How LLM agents use, perceive and divide compute, token, tool-call, money and context budgets. Visible versus hidden budgets, budget-aware reasoning and tool use, orchestrator effort scaling, self-allocation among agents, commons and public-goods games, collusion and market division, negotiation over splits, classical market-based allocation, and identity-splitting (Sybil) attacks on per-identity quotas.
+
+- slug: decision-models
+  name: Typed decision models and collective robustness
+  description: Jev and related typed classifiers, choice-set semantics, calibration, abstention, adversarial state, correlated decisions, and biologically motivated collective sensing.

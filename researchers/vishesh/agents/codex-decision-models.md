@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
-tool: TODO claude-code | codex | cursor | other
-state: working  # working | idle | blocked | done
-task: null
-doing: TODO one line
-updated: 2026-10-04T02:16Z
+tool: codex
+state: done  # working | idle | blocked | done
+task: decision-model-research
+doing: Completed initial scan, fifteen scored hunches and five design sketches; formal survey remains in progress
+updated: 2026-10-04T02:38Z
 ---
 
 ## Notes

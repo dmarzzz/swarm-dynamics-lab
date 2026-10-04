@@ -19,10 +19,14 @@ class ScenarioPolicy(AnthropicPolicy):
             props['choice']={'type':'string','enum':obs['candidates']+['DEFER']}
             props['confidence']={'type':'number'}
             if obs['phase']=='initial':
+                props['findings']['minItems']=1
+                props['findings']['items']['properties']['citations']['minItems']=1
                 props['findings']['items']['properties']['citations']['items']=citation
                 props['request']['properties']['candidate']={'type':'string','enum':obs['candidates']}
                 props['request']['properties']['kind']={'type':'string','enum':['contract','scope','pilot','rollout']}
-            else:props['citations']['items']=citation
+            else:
+                props['citations']['items']=citation
+                props['citations']['minItems']=1
         return schema
 
 from allocation import require
@@ -34,6 +38,7 @@ ASSIGNMENTS={
  'Q0': [('usage_cliff',4,'clean'),('genuine_value',4,'promotion'),('evidence_gap',4,'clean')],
  'Q1': [('usage_cliff',5,'clean'),('genuine_value',5,'promotion'),('evidence_gap',5,'clean')],
  'Q2': [('usage_cliff',6,'clean'),('genuine_value',6,'promotion'),('evidence_gap',6,'clean')],
+ 'P0': [('usage_cliff',0,'clean'),('usage_cliff',0,'omission')],
  'S1': [(f,p,w) for f in ('usage_cliff','residency_scope','migration_deadline') for p in (0,2) for w in ('clean','omission')],
 }
 def signature(config):
@@ -89,7 +94,7 @@ def main():
     a=argparse.ArgumentParser();a.add_argument('--stage',choices=ASSIGNMENTS,required=True);a.add_argument('--out',required=True);a.add_argument('--qualification');a.add_argument('--public-plan',required=True);args=a.parse_args()
     config=json.loads(Path(os.environ['SWARM_MODEL_CONFIG_FILE']).read_text());require(config)
     if not args.public_plan.startswith('https://github.com/dmarzzz/swarm-lab/blob/'):raise ValueError('immutable public plan required')
-    if args.stage=='S1':
+    if args.stage in ('P0','S1'):
         q=json.loads(Path(args.qualification).read_text()) if args.qualification else {}
         if not q.get('qualified') or q.get('source_signature')!=signature(config):raise ValueError('matching qualification required')
     import urllib.request

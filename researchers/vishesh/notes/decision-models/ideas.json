@@ -1,0 +1,763 @@
+{
+  "schema": "swarm-decision-model-ideas-v1",
+  "owner": "vishesh/codex-decision-models",
+  "status": "exploratory hunch; not a registered hypothesis",
+  "rubric": {
+    "visual": 0.3,
+    "practical": 0.3,
+    "theory": 0.25,
+    "novelty": 0.15
+  },
+  "ideas": [
+    {
+      "id": "DM-01",
+      "title": "Phantom Coast",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can a few false local reports create a persistent false coastline in a communicating Jev swarm?",
+      "comparison": "Cross localized false reports versus equally sized random errors with independent decisions, neighbor exchange and source-aware exchange; hold distinct evidence and total calls fixed.",
+      "metrics": [
+        "Balanced land/water accuracy",
+        "Wrong-region area and boundary displacement",
+        "Error outside the exposed region",
+        "Recovery after report removal",
+        "Brier score"
+      ],
+      "prediction": "Local communication may amplify a spatially concentrated error; source-aware exchange may contain it.",
+      "falsifier": "Reject the collective-amplification claim if errors do not spread beyond directly exposed cells or are fully predicted by the single-agent dose response.",
+      "confounds": "Memorized geography, spatial autocorrelation, unequal evidence, and an incorrect map definition. A coordinate grid is not an image.",
+      "decision_value": "Tests whether a distributed evidence map needs provenance-aware communication, independent of whether Jev can already recall Earth.",
+      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "sources": [
+        "hu-2026-jevadvbench",
+        "gh-dy-ma-jev-world",
+        "berdahl-2013-emergent"
+      ],
+      "atlas": [
+        "SOC-39"
+      ],
+      "briefs": [
+        "decision-models"
+      ],
+      "scenario": "Typed decisions",
+      "delta": "The visible question is geographic corruption; the scientific extension is propagation and reversibility under fixed exposure. Avoids a one-off jailbreak screenshot.",
+      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "activity": {
+        "added_at": "2026-10-04T02:29:37Z",
+        "tags_added_at": {
+          "decision-models": "2026-10-04T02:29:37Z"
+        }
+      },
+      "assessment": {
+        "dimensions": {
+          "visual": 96,
+          "practical": 86,
+          "theory": 88,
+          "novelty": 80
+        },
+        "weighted_total": 88.6,
+        "score": 89,
+        "rationale": "The visible question is geographic corruption; the scientific extension is propagation and reversibility under fixed exposure. Avoids a one-off jailbreak screenshot.",
+        "assessed_by": "vishesh/codex-decision-models",
+        "assessed_at": "2026-10-04T02:29:37Z"
+      }
+    },
+    {
+      "id": "DM-02",
+      "title": "Quorum of Mirrors",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "How much independent information does a swarm of identical decision models actually contribute?",
+      "comparison": "Compare repeated identical Jev calls, meaning-preserving prompt variants and disjoint evidence packets at equal calls; include a single solver with the union of evidence and dependency-aware aggregation.",
+      "metrics": [
+        "Joint error rate",
+        "Residual error correlation within difficulty strata",
+        "Group accuracy per call",
+        "Coverage",
+        "Shared confident errors"
+      ],
+      "prediction": "Evidence diversity may help more than cosmetic prompt diversity, but pooling can erase that advantage.",
+      "falsifier": "Do not claim useful diversity if gains vanish against a single solver with matched evidence or only arise from more tokens.",
+      "confounds": "Task difficulty creates apparent correlation; repeated calls share weights and data; majority agreement is not correctness.",
+      "decision_value": "Decides whether to pay for more copies, more evidence, or an independent measurement.",
+      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "sources": [
+        "rao-2026-jev",
+        "sasahara-2026-latent",
+        "hu-2026-jevadvbench"
+      ],
+      "atlas": [
+        "SOC-39"
+      ],
+      "briefs": [
+        "decision-models"
+      ],
+      "scenario": "Typed decisions",
+      "delta": "Correlated AI errors are established. The narrower contribution is a Jev-specific evidence-versus-prompt intervention with returned distributions and matched resources.",
+      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "activity": {
+        "added_at": "2026-10-04T02:29:37Z",
+        "tags_added_at": {
+          "decision-models": "2026-10-04T02:29:37Z"
+        }
+      },
+      "assessment": {
+        "dimensions": {
+          "visual": 91,
+          "practical": 94,
+          "theory": 80,
+          "novelty": 72
+        },
+        "weighted_total": 86.3,
+        "score": 86,
+        "rationale": "Correlated AI errors are established. The narrower contribution is a Jev-specific evidence-versus-prompt intervention with returned distributions and matched resources.",
+        "assessed_by": "vishesh/codex-decision-models",
+        "assessed_at": "2026-10-04T02:29:37Z"
+      }
+    },
+    {
+      "id": "DM-03",
+      "title": "Stop-Signal Swarm",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can evidence-backed inhibitory messages stop a wrong decision cascade without silencing a correct minority?",
+      "comparison": "Compare endorsement-only exchange, contradiction-linked stop signals, random throttling and fixed rate limits at the same message budget; include true novel evidence and false alarms.",
+      "metrics": [
+        "Incorrect cascade size",
+        "Correct-minority survival",
+        "Decision latency",
+        "Useful completion",
+        "False inhibition"
+      ],
+      "prediction": "Targeted inhibition may contain bad cascades, but excessive inhibition may suppress valid new information.",
+      "falsifier": "Drop the biological-mechanism claim if random throttling or simple rate limits achieve the same tradeoff.",
+      "confounds": "An oracle contradiction detector would give the answer away; evidence availability and stop-message bandwidth must match.",
+      "decision_value": "Determines whether to implement a distinct evidence-backed stop channel rather than merely slowing communication.",
+      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "sources": [
+        "seeley-2012-stop",
+        "hu-2026-jevadvbench",
+        "lorenz-2011-how"
+      ],
+      "atlas": [
+        "SOC-10"
+      ],
+      "briefs": [
+        "decision-models"
+      ],
+      "scenario": "Typed decisions",
+      "delta": "Honeybee cross-inhibition is direct biological prior. The Jev test concerns model-generated contradiction judgments with non-oracle evidence, beyond generic dissent.",
+      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "activity": {
+        "added_at": "2026-10-04T02:29:37Z",
+        "tags_added_at": {
+          "decision-models": "2026-10-04T02:29:37Z"
+        }
+      },
+      "assessment": {
+        "dimensions": {
+          "visual": 92,
+          "practical": 86,
+          "theory": 97,
+          "novelty": 67
+        },
+        "weighted_total": 87.7,
+        "score": 88,
+        "rationale": "Honeybee cross-inhibition is direct biological prior. The Jev test concerns model-generated contradiction judgments with non-oracle evidence, beyond generic dissent.",
+        "assessed_by": "vishesh/codex-decision-models",
+        "assessed_at": "2026-10-04T02:29:37Z"
+      }
+    },
+    {
+      "id": "DM-04",
+      "title": "Panic Queue",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can uncertainty spread through a decision swarm and exhaust its ability to review legitimate work?",
+      "comparison": "Replay paired clean and bounded-corruption decision streams through a finite reviewer queue; compare fixed confidence thresholds, queue-aware admission and reserved review capacity at equal service capacity.",
+      "metrics": [
+        "Correct on-time completions over all arrivals",
+        "Review queue tail latency",
+        "Escalation rate",
+        "False accepts",
+        "Unserved legitimate tasks"
+      ],
+      "prediction": "A small amount of ambiguous content may increase escalation enough to reduce total useful work even when accepted-answer accuracy looks safe.",
+      "falsifier": "Drop the collective contribution if a standard queue fed the measured single-item escalation rates explains the entire effect and no communication-dependent residual remains.",
+      "confounds": "Arrival rate and reviewer speed can manufacture overload. Include matched load without semantic corruption and score rejected tasks.",
+      "decision_value": "Sets review-capacity and admission policies for fast decision services; distinguishes safer predictions from a functioning system.",
+      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "sources": [
+        "hu-2026-jevadvbench",
+        "geifman-2017-selective",
+        "typesafe-2026-confidence"
+      ],
+      "atlas": [
+        "SOC-43"
+      ],
+      "briefs": [
+        "decision-models"
+      ],
+      "scenario": "Typed decisions",
+      "delta": "Confidence-gate pressure is already reported. New scope is temporal feedback, finite service capacity and a matched-capacity defense. The immune/alarm analogy is limited.",
+      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "activity": {
+        "added_at": "2026-10-04T02:29:37Z",
+        "tags_added_at": {
+          "decision-models": "2026-10-04T02:29:37Z"
+        }
+      },
+      "assessment": {
+        "dimensions": {
+          "visual": 89,
+          "practical": 97,
+          "theory": 78,
+          "novelty": 81
+        },
+        "weighted_total": 87.45,
+        "score": 87,
+        "rationale": "Confidence-gate pressure is already reported. New scope is temporal feedback, finite service capacity and a matched-capacity defense. The immune/alarm analogy is limited.",
+        "assessed_by": "vishesh/codex-decision-models",
+        "assessed_at": "2026-10-04T02:29:37Z"
+      }
+    },
+    {
+      "id": "DM-05",
+      "title": "Menu Parasites",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can harmless-looking changes to a choice menu redirect a collective even when underlying actions and evidence are unchanged?",
+      "comparison": "Hold latent actions fixed while varying aliases, redundant options and order. Compare raw Choice, deduplicated canonical IDs and separate binary judgments with an explicit none/abstain option.",
+      "metrics": [
+        "Action-level invariance",
+        "Wrong-action allocation",
+        "Probability mass per semantic action",
+        "Confidence-gate crossing",
+        "Coordination regret"
+      ],
+      "prediction": "Equivalent option expansions may alter probabilities or downstream allocation; canonicalization may restore invariance.",
+      "falsifier": "If all change is predicted by probability normalization or disappears after aggregating aliases, report a harness arithmetic effect rather than semantic manipulation.",
+      "confounds": "Equivalent alternatives may legitimately split probability. Choice confidence depends on menu size; use a fixed-action null model.",
+      "decision_value": "Tests whether tool registries and shared action catalogs require canonicalization before decision-model calls.",
+      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "sources": [
+        "sun-2026-type",
+        "typesafe-2026-confidence",
+        "gh-willkelly-jev-evaluation"
+      ],
+      "atlas": [
+        "SOC-20"
+      ],
+      "briefs": [
+        "decision-models"
+      ],
+      "scenario": "Typed decisions",
+      "delta": "Label polarity is existing prior. The opening is dynamic semantic-equivalence classes and their downstream collective consequences.",
+      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "activity": {
+        "added_at": "2026-10-04T02:29:37Z",
+        "tags_added_at": {
+          "decision-models": "2026-10-04T02:29:37Z"
+        }
+      },
+      "assessment": {
+        "dimensions": {
+          "visual": 91,
+          "practical": 88,
+          "theory": 72,
+          "novelty": 83
+        },
+        "weighted_total": 84.15,
+        "score": 84,
+        "rationale": "Label polarity is existing prior. The opening is dynamic semantic-equivalence classes and their downstream collective consequences.",
+        "assessed_by": "vishesh/codex-decision-models",
+        "assessed_at": "2026-10-04T02:29:37Z"
+      }
+    },
+    {
+      "id": "DM-06",
+      "title": "Noise Thermostat",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Is a small amount of independent exploration useful when all Jev agents share the same wrong answer?",
+      "comparison": "Vary private versus shared noise at matched marginal error and call budget; compare random exploration with fresh evidence acquisition.",
+      "metrics": [
+        "Recovery probability",
+        "Useful exploration per call",
+        "Clean-task loss"
+      ],
+      "prediction": "Independent exploration may break synchronized errors.",
+      "falsifier": "Drop if extra evidence explains all gains or noise only lowers clean performance.",
+      "confounds": "Randomization can make an attractive animation without improving the task.",
+      "decision_value": "Choose whether to reserve exploration capacity.",
+      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "sources": [
+        "rao-2026-jev",
+        "seeley-2012-stop"
+      ],
+      "atlas": [
+        "SOC-39"
+      ],
+      "briefs": [
+        "decision-models"
+      ],
+      "scenario": "Typed decisions",
+      "delta": "Biological exploration analogy; needs stronger evidence grounding before priority promotion.",
+      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "activity": {
+        "added_at": "2026-10-04T02:29:37Z",
+        "tags_added_at": {
+          "decision-models": "2026-10-04T02:29:37Z"
+        }
+      },
+      "assessment": {
+        "dimensions": {
+          "visual": 90,
+          "practical": 72,
+          "theory": 90,
+          "novelty": 64
+        },
+        "weighted_total": 80.7,
+        "score": 81,
+        "rationale": "Biological exploration analogy; needs stronger evidence grounding before priority promotion.",
+        "assessed_by": "vishesh/codex-decision-models",
+        "assessed_at": "2026-10-04T02:29:37Z"
+      }
+    },
+    {
+      "id": "DM-07",
+      "title": "Memory of a False Map",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Does a false map remain after the misleading source disappears?",
+      "comparison": "Compare fresh-state calls, retained private memory and retained shared memory under the same withdrawal schedule.",
+      "metrics": [
+        "Residual map error",
+        "Recovery time",
+        "Memory provenance"
+      ],
+      "prediction": "Persistence may reside in external memory rather than model weights.",
+      "falsifier": "Merge into existing recovery work if no decision-model-specific mechanism remains.",
+      "confounds": "Confuses persistence in a database with changes to the model.",
+      "decision_value": "Select reset and source-withdrawal policies.",
+      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "sources": [
+        "hu-2026-jevadvbench",
+        "gh-dy-ma-jev-world"
+      ],
+      "atlas": [
+        "SEC-06"
+      ],
+      "briefs": [
+        "decision-models"
+      ],
+      "scenario": "Typed decisions",
+      "delta": "Strong overlap with Healing Helping Hands, Immune Response and Swarm of Theseus; keep as an ablation, not a new flagship.",
+      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "activity": {
+        "added_at": "2026-10-04T02:29:37Z",
+        "tags_added_at": {
+          "decision-models": "2026-10-04T02:29:37Z"
+        }
+      },
+      "assessment": {
+        "dimensions": {
+          "visual": 90,
+          "practical": 81,
+          "theory": 81,
+          "novelty": 45
+        },
+        "weighted_total": 78.3,
+        "score": 78,
+        "rationale": "Strong overlap with Healing Helping Hands, Immune Response and Swarm of Theseus; keep as an ablation, not a new flagship.",
+        "assessed_by": "vishesh/codex-decision-models",
+        "assessed_at": "2026-10-04T02:29:37Z"
+      }
+    },
+    {
+      "id": "DM-08",
+      "title": "Confidence Cartography",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Do confidence contours locate Jev geographic mistakes better than simple coastline distance?",
+      "comparison": "Compare returned probabilities with majority-class, geographic-distance and calibrated baselines on a fixed grid.",
+      "metrics": [
+        "Brier score",
+        "Balanced accuracy",
+        "Coastal error"
+      ],
+      "prediction": "Uncertainty may concentrate at borders.",
+      "falsifier": "Stop after replication if it adds no insight beyond existing coordinate demos.",
+      "confounds": "Unequal-area grid and ambiguous coast resolution.",
+      "decision_value": "A useful qualification instrument rather than the main project.",
+      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "sources": [
+        "gh-dy-ma-jev-world",
+        "guo-2017-calibration"
+      ],
+      "atlas": [
+        "SOC-43"
+      ],
+      "briefs": [
+        "decision-models"
+      ],
+      "scenario": "Typed decisions",
+      "delta": "Known demo extended with ground truth; modest novelty.",
+      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "activity": {
+        "added_at": "2026-10-04T02:29:37Z",
+        "tags_added_at": {
+          "decision-models": "2026-10-04T02:29:37Z"
+        }
+      },
+      "assessment": {
+        "dimensions": {
+          "visual": 93,
+          "practical": 76,
+          "theory": 50,
+          "novelty": 35
+        },
+        "weighted_total": 68.45,
+        "score": 68,
+        "rationale": "Known demo extended with ground truth; modest novelty.",
+        "assessed_by": "vishesh/codex-decision-models",
+        "assessed_at": "2026-10-04T02:29:37Z"
+      }
+    },
+    {
+      "id": "DM-09",
+      "title": "Schema Schism",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can equivalent decision schemas make two Jev teams disagree systematically?",
+      "comparison": "Compare Choice versus Noul formulations with held-out threshold calibration and matched facts.",
+      "metrics": [
+        "Action disagreement",
+        "Calibration transfer",
+        "Decision loss"
+      ],
+      "prediction": "Representation may change decisions.",
+      "falsifier": "Fold into Menu Parasites if disagreements follow thresholds alone.",
+      "confounds": "Different primitives can ask genuinely different questions.",
+      "decision_value": "Define interoperable contracts for decision services.",
+      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "sources": [
+        "sun-2026-type",
+        "typesafe-2026-confidence"
+      ],
+      "atlas": [
+        "SOC-20"
+      ],
+      "briefs": [
+        "decision-models"
+      ],
+      "scenario": "Typed decisions",
+      "delta": "Interface diagnostic; high confounding risk without semantic-equivalence validation.",
+      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "activity": {
+        "added_at": "2026-10-04T02:29:37Z",
+        "tags_added_at": {
+          "decision-models": "2026-10-04T02:29:37Z"
+        }
+      },
+      "assessment": {
+        "dimensions": {
+          "visual": 77,
+          "practical": 88,
+          "theory": 55,
+          "novelty": 61
+        },
+        "weighted_total": 72.4,
+        "score": 72,
+        "rationale": "Interface diagnostic; high confounding risk without semantic-equivalence validation.",
+        "assessed_by": "vishesh/codex-decision-models",
+        "assessed_at": "2026-10-04T02:29:37Z"
+      }
+    },
+    {
+      "id": "DM-10",
+      "title": "Cat/Dog Perception Jury",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can Jev distinguish a false caption from trustworthy visual evidence supplied by another system?",
+      "comparison": "Fix the image and separately vary the frozen perception output and the adversarial caption; include perception-only and text-only baselines.",
+      "metrics": [
+        "Image-grounded accuracy",
+        "Caption influence",
+        "Attribution of errors"
+      ],
+      "prediction": "Caption evidence may override an accurate perception record.",
+      "falsifier": "Defer if the perception system dominates the failure or image licensing is unresolved.",
+      "confounds": "Jev does not see pixels; this is a pipeline experiment.",
+      "decision_value": "Audit a perception-to-decision handoff.",
+      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "sources": [
+        "typesafe-2026-models",
+        "hu-2026-jevadvbench"
+      ],
+      "atlas": [
+        "SOC-20"
+      ],
+      "briefs": [
+        "decision-models"
+      ],
+      "scenario": "Typed decisions",
+      "delta": "Reframes the user example honestly; not direct adversarial vision.",
+      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "activity": {
+        "added_at": "2026-10-04T02:29:37Z",
+        "tags_added_at": {
+          "decision-models": "2026-10-04T02:29:37Z"
+        }
+      },
+      "assessment": {
+        "dimensions": {
+          "visual": 90,
+          "practical": 77,
+          "theory": 45,
+          "novelty": 52
+        },
+        "weighted_total": 69.15,
+        "score": 69,
+        "rationale": "Reframes the user example honestly; not direct adversarial vision.",
+        "assessed_by": "vishesh/codex-decision-models",
+        "assessed_at": "2026-10-04T02:29:37Z"
+      }
+    },
+    {
+      "id": "DM-11",
+      "title": "Batch Isolation",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Does packing unrelated decisions into one Jev state create cross-item contamination?",
+      "comparison": "Compare named isolated records, named batches and positional indexing at fixed items and schemas.",
+      "metrics": [
+        "Cross-item leakage",
+        "Accuracy versus batch size",
+        "Latency and cost"
+      ],
+      "prediction": "Explicit binding should reduce cross-item confusion.",
+      "falsifier": "Treat as replication if existing batching evidence predicts outcomes.",
+      "confounds": "Index resolution rather than collective reasoning may explain errors.",
+      "decision_value": "Qualify efficient request packing.",
+      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "sources": [
+        "gh-willkelly-jev-evaluation"
+      ],
+      "atlas": [
+        "SOC-20"
+      ],
+      "briefs": [
+        "decision-models"
+      ],
+      "scenario": "Typed decisions",
+      "delta": "Already close to public evaluation; engineering prerequisite.",
+      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "activity": {
+        "added_at": "2026-10-04T02:29:37Z",
+        "tags_added_at": {
+          "decision-models": "2026-10-04T02:29:37Z"
+        }
+      },
+      "assessment": {
+        "dimensions": {
+          "visual": 66,
+          "practical": 93,
+          "theory": 35,
+          "novelty": 55
+        },
+        "weighted_total": 64.7,
+        "score": 65,
+        "rationale": "Already close to public evaluation; engineering prerequisite.",
+        "assessed_by": "vishesh/codex-decision-models",
+        "assessed_at": "2026-10-04T02:29:37Z"
+      }
+    },
+    {
+      "id": "DM-12",
+      "title": "Missing Option",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Does a closed choice set create confident wrong actions when the correct choice is absent?",
+      "comparison": "Remove the true option with and without abstention; compare confidence and independent answerability checks.",
+      "metrics": [
+        "False-action rate",
+        "Abstention quality",
+        "Risk\u2013coverage"
+      ],
+      "prediction": "Closed menus may conceal unanswerability.",
+      "falsifier": "Keep as qualification unless a new downstream consequence emerges.",
+      "confounds": "Obvious forced-choice artifact.",
+      "decision_value": "Require an explicit unavailable/unknown branch.",
+      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "sources": [
+        "typesafe-2026-confidence",
+        "geifman-2017-selective",
+        "gh-willkelly-jev-evaluation"
+      ],
+      "atlas": [
+        "SOC-20"
+      ],
+      "briefs": [
+        "decision-models"
+      ],
+      "scenario": "Typed decisions",
+      "delta": "Useful but familiar selective-classification issue.",
+      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "activity": {
+        "added_at": "2026-10-04T02:29:37Z",
+        "tags_added_at": {
+          "decision-models": "2026-10-04T02:29:37Z"
+        }
+      },
+      "assessment": {
+        "dimensions": {
+          "visual": 75,
+          "practical": 95,
+          "theory": 45,
+          "novelty": 62
+        },
+        "weighted_total": 71.55,
+        "score": 72,
+        "rationale": "Useful but familiar selective-classification issue.",
+        "assessed_by": "vishesh/codex-decision-models",
+        "assessed_at": "2026-10-04T02:29:37Z"
+      }
+    },
+    {
+      "id": "DM-13",
+      "title": "Branch Poisoning",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can a mistaken early typed decision prevent the swarm from ever seeing corrective evidence?",
+      "comparison": "Compare hard routing, reversible routing and a small random audit path at matched lookup budget.",
+      "metrics": [
+        "Corrective-evidence reach",
+        "Final correctness",
+        "Recovery cost"
+      ],
+      "prediction": "Early gates may create self-confirming evidence selection.",
+      "falsifier": "Merge with existing influence work unless typed routing creates a distinct measurable boundary.",
+      "confounds": "Routing changes both information and compute.",
+      "decision_value": "Design reversible evidence acquisition.",
+      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "sources": [
+        "hu-2026-jevadvbench",
+        "rao-2026-jev"
+      ],
+      "atlas": [
+        "SOC-43"
+      ],
+      "briefs": [
+        "decision-models"
+      ],
+      "scenario": "Typed decisions",
+      "delta": "Strong overlap with influence and heterogeneous-agent research.",
+      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "activity": {
+        "added_at": "2026-10-04T02:29:37Z",
+        "tags_added_at": {
+          "decision-models": "2026-10-04T02:29:37Z"
+        }
+      },
+      "assessment": {
+        "dimensions": {
+          "visual": 88,
+          "practical": 82,
+          "theory": 77,
+          "novelty": 42
+        },
+        "weighted_total": 76.55,
+        "score": 77,
+        "rationale": "Strong overlap with influence and heterogeneous-agent research.",
+        "assessed_by": "vishesh/codex-decision-models",
+        "assessed_at": "2026-10-04T02:29:37Z"
+      }
+    },
+    {
+      "id": "DM-14",
+      "title": "Protected Dissent",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can reserved independent observations preserve a correct minority under shared evidence pressure?",
+      "comparison": "Reserve a fraction of scouts for private sensing versus allocating the same budget to ordinary social participants.",
+      "metrics": [
+        "Correct-minority retention",
+        "Aggregate correctness",
+        "Coverage"
+      ],
+      "prediction": "Independent evidence may preserve useful disagreement.",
+      "falsifier": "Merge with Stop-Signal Swarm if only generic diversity explains gains.",
+      "confounds": "Protected scouts may simply receive better evidence.",
+      "decision_value": "Choose a sensing-versus-social budget.",
+      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "sources": [
+        "seeley-2012-stop",
+        "rao-2026-jev"
+      ],
+      "atlas": [
+        "SOC-10"
+      ],
+      "briefs": [
+        "decision-models"
+      ],
+      "scenario": "Typed decisions",
+      "delta": "Good companion treatment; overlaps established dissent questions.",
+      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "activity": {
+        "added_at": "2026-10-04T02:29:37Z",
+        "tags_added_at": {
+          "decision-models": "2026-10-04T02:29:37Z"
+        }
+      },
+      "assessment": {
+        "dimensions": {
+          "visual": 86,
+          "practical": 83,
+          "theory": 88,
+          "novelty": 50
+        },
+        "weighted_total": 80.2,
+        "score": 80,
+        "rationale": "Good companion treatment; overlaps established dissent questions.",
+        "assessed_by": "vishesh/codex-decision-models",
+        "assessed_at": "2026-10-04T02:29:37Z"
+      }
+    },
+    {
+      "id": "DM-15",
+      "title": "Decoy Beacon",
+      "status": "exploratory hunch; not a registered hypothesis",
+      "question": "Can a decoy redirect benign target selection on a synthetic screen without changing the legitimate goal?",
+      "comparison": "Use inert shape targets with an exact scene record; compare duplicate labels, spatial distractors and clean views with a deterministic selector.",
+      "metrics": [
+        "Wrong-object selection",
+        "Coordinate error",
+        "Abstention"
+      ],
+      "prediction": "Distractors may redirect semantic target selection.",
+      "falsifier": "Drop if an exact rule solves every case or the error lies in preprocessing.",
+      "confounds": "Jev receives scene text, not the screen.",
+      "decision_value": "Audit harmless UI-object selection.",
+      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "sources": [
+        "typesafe-2026-models",
+        "sun-2026-type"
+      ],
+      "atlas": [
+        "SOC-20"
+      ],
+      "briefs": [
+        "decision-models"
+      ],
+      "scenario": "Typed decisions",
+      "delta": "Visually clear but indirect biological connection and existing classifier prior.",
+      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "activity": {
+        "added_at": "2026-10-04T02:29:37Z",
+        "tags_added_at": {
+          "decision-models": "2026-10-04T02:29:37Z"
+        }
+      },
+      "assessment": {
+        "dimensions": {
+          "visual": 88,
+          "practical": 87,
+          "theory": 56,
+          "novelty": 67
+        },
+        "weighted_total": 76.55,
+        "score": 77,
+        "rationale": "Visually clear but indirect biological connection and existing classifier prior.",
+        "assessed_by": "vishesh/codex-decision-models",
+        "assessed_at": "2026-10-04T02:29:37Z"
+      }
+    }
+  ]
+}

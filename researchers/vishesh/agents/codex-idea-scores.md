@@ -2,9 +2,9 @@
 agent: vishesh/codex-idea-scores
 tool: codex
 state: done  # working | idle | blocked | done
-task: conditional-swarm-size
-doing: Published EX-25 conditional swarm-size question and score
-updated: 2026-10-04T02:15Z
+task: design-conditional-swarm-size
+doing: Completed the EX-25 resource-constrained swarm-size design draft
+updated: 2026-10-04T02:50Z
 ---
 
 ## Notes

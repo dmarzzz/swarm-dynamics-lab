@@ -14,13 +14,14 @@
 | sync-consensus | 255 | 24 | 11 | 17 | 1 | 28 | 336 |
 | criticality-measurement | 194 | 4 | 3 | 23 | 2 | 22 | 248 |
 | marl-emergence | 160 | 60 | 1 | 33 | 2 | 13 | 269 |
-| llm-agent-swarms | 553 | 119 | 106 | 197 | 47 | 14 | 1036 |
+| llm-agent-swarms | 559 | 122 | 110 | 199 | 47 | 14 | 1051 |
 | crowds-and-traffic | 82 | 15 | 1 | 2 | 1 | 8 | 109 |
 | meta | 138 | 39 | 6 | 22 | 1 | 4 | 210 |
 | sybil-resistance | 331 | 66 | 62 | 57 | 8 | 22 | 546 |
 | fork-merge-security | 357 | 47 | 62 | 69 | 8 | 13 | 556 |
 | swarm-detection | 390 | 46 | 80 | 193 | 35 | 11 | 755 |
 | agent-budgets | 53 | 2 | 7 | 0 | 0 | 0 | 62 |
+| decision-models | 6 | 3 | 4 | 2 | 0 | 0 | 15 |
 
 ## Tasks
 
@@ -39,12 +40,11 @@
 | [antsy-verification-v4](tasks/antsy-verification-v4.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T02:19Z | Ground Antsy in measured OCR errors and budgeted verification |
 | [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T02:30Z | Ship the compositional safety benchmark and qualification |
 | [build-v3-resample-control](tasks/build-v3-resample-control.md) | claimed | p1 | build | dmarz/private-control | dmarz | 2026-10-04T02:26Z | Sidecar repeat-vote (resample-only) control for discussion benchmark v3 |
-| [decision-model-research](tasks/decision-model-research.md) | claimed | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T02:37Z | Jev decision boundaries and collective robustness research |
-| [design-conditional-swarm-size](tasks/design-conditional-swarm-size.md) | claimed | p1 | synthesis | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:36Z | Develop the conditional optimal swarm-size study design |
 | [healing-helping-hands-v2](tasks/healing-helping-hands-v2.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T02:19Z | Review and rebuild Healing Helping Hands as an evidence atlas |
 | [heterogeneous-agent-research](tasks/heterogeneous-agent-research.md) | claimed | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T02:35Z | Jev, Haiku and Qwen heterogeneous swarm research and prioritization |
 | [immune-response-v3-native-repair](tasks/immune-response-v3-native-repair.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T02:05Z | Qualify the repaired immune-response contract on a dedicated host |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T02:31Z | Run the revised procurement influence experiment |
+| [launch-discussion-benchmark-v3](tasks/launch-discussion-benchmark-v3.md) | claimed | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T02:38Z | Deploy and start the operator-authorized v3 model qualification |
 | [review-discussion-benchmark-v3](tasks/review-discussion-benchmark-v3.md) | claimed | p1 | review | shadow/sol-rev |  | 2026-10-04T02:17Z | Independently review the implemented discussion and memory benchmark v3 |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T02:29Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -122,7 +122,9 @@
 | [build-sybil-specialists](tasks/build-sybil-specialists.md) | done | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T01:46Z | Plan and deploy a scripted Sybil admission and specialist preservation study |
 | [conditional-swarm-size](tasks/conditional-swarm-size.md) | done | p1 | question | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:19Z | Add conditional optimal swarm-size research question |
 | [contribution-new-badges](tasks/contribution-new-badges.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T23:40Z | Show recent contributions and added project tags |
+| [decision-model-research](tasks/decision-model-research.md) | done | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T02:38Z | Jev decision boundaries and collective robustness research |
 | [design-compositional-safety-study](tasks/design-compositional-safety-study.md) | done | p1 | synthesis | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T02:26Z | Design the Patchwork compositional safety study |
+| [design-conditional-swarm-size](tasks/design-conditional-swarm-size.md) | done | p1 | synthesis | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:40Z | Develop the conditional optimal swarm-size study design |
 | [design-distributed-evidence-suite](tasks/design-distributed-evidence-suite.md) | done | p1 | question | dmarz/decision-suite-plan | dmarz | 2026-10-03T23:06Z | Plan five shared-environment distributed-evidence studies |
 | [design-soc07-private-commitment](tasks/design-soc07-private-commitment.md) | done | p1 | question | dmarz/soc07-plan | dmarz | 2026-10-03T22:35Z | Draft a concrete SOC-07 private-judgment experiment plan |
 | [design-swarm-immune-response](tasks/design-swarm-immune-response.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T22:28Z | Develop an exploratory swarm immune-response design |
@@ -175,16 +177,16 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| dmarz/private-control |  |  |  |  |
+| dmarz/private-control | blocked | build-v3-resample-control | 2026-10-04T03:25Z | v3 resample sidecar built offline and resynced to v3 fixes (9c4c945); staging launch |
+| vishesh/codex-idea-scores | done | design-conditional-swarm-size | 2026-10-04T02:50Z | Completed the EX-25 resource-constrained swarm-size design draft |
+| vishesh/codex-decision-models | done | decision-model-research | 2026-10-04T02:38Z | Completed initial scan, fifteen scored hunches and five design sketches; formal survey remains in progress |
+| vishesh/codex-immune | working | immune-response-v3-native-repair | 2026-10-04T02:38Z | Approved USD 8 grant reserved; scenario-native-a1 running on dedicated sim-immune-response |
 | dmarz/discussion-bench-v3 | done |  | 2026-10-04T02:35Z | Shipped review repairs; 84 checks passed and 636 requests replayed; amended independent review pending |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T02:32Z | Monitoring the deployed 36-episode discovery pilot and auditing saved decisions. |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T02:31Z | Building the SEC-54 simulator and exploratory qualification with enforced research gates |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:31Z | Published original design and survey revision reviews plus static v3 follow-through; full v3 review remains with shadow/sol-rev. |
 | dmarz/sybil-specialists | working | sybil-scale-api | 2026-10-04T02:29Z | Building and validating identity-size follow-up; scripted before API; exclusive fleet deployment |
-| vishesh/codex-immune | blocked | immune-response-v3-native-repair | 2026-10-04T02:20Z | New dedicated sim-immune-response created; native launch awaits approval for USD 8 budget increase |
 | shadow/sol-rev | working | review-discussion-benchmark-v3 | 2026-10-04T02:17Z | Independent adversarial review of the discussion/memory benchmark v3 package (offline, no model calls) |
-| vishesh/codex-decision-models | working |  | 2026-10-04T02:16Z | TODO one line |
-| vishesh/codex-idea-scores | done | conditional-swarm-size | 2026-10-04T02:15Z | Published EX-25 conditional swarm-size question and score |
 | vishesh/codex-methods | working | antsy-verification-v4 | 2026-10-04T02:14Z | Building Antsy from real receipt OCR and budgeted verification |
 | vishesh/codex-heterogeneous | working |  | 2026-10-04T02:11Z | Research heterogeneous Jev and generative-model swarms; curate and score exploratory questions |
 | vishesh/codex-theseus | working | swarm-of-theseus | 2026-10-04T01:27Z | Build and qualify SOC-24 with public preregistration and dedicated allocation |
@@ -281,6 +283,7 @@
 | [llm-agent-swarms](surveys/llm-agent-swarms.md) | shadow | complete | 156 | 0 |
 | [sim-environments](surveys/sim-environments.md) | dmarz | in-progress | 152 | 0 |
 | [sybil-resistance](surveys/sybil-resistance.md) | dmarz | in-progress | 230 | 5 |
+| [vishesh-decision-models](surveys/vishesh-decision-models.md) | vishesh | in-progress | 20 | 9 |
 
 ## Hypotheses
 

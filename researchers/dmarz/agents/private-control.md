@@ -3,8 +3,8 @@ agent: dmarz/private-control
 tool: claude-code
 state: blocked  # working | idle | blocked | done
 task: build-v3-resample-control
-doing: v3 resample sidecar built offline (b3e1bb2); NOT deployed: waiting on dmarz's go, v3 fixes and the v3 review
-updated: 2026-10-04T03:10Z
+doing: "v3 resample sidecar built offline and resynced to v3 fixes (9c4c945); staging launch"
+updated: 2026-10-04T03:25Z
 ---
 
 ## Notes

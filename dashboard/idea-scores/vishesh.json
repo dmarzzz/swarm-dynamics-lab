@@ -3876,6 +3876,591 @@
       "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
       "assessed_at": "2026-10-04",
       "candidate_sha256": "5b6d5a03a3d709f7fcf9b2717ec231981cbcfc5d9fef01a31baf52e299752006"
+    },
+    "DM-01": {
+      "dimensions": {
+        "visual": 96,
+        "practical": 86,
+        "theory": 88,
+        "novelty": 80
+      },
+      "score": 89,
+      "rationale": "The visible question is geographic corruption; the scientific extension is propagation and reversibility under fixed exposure. Avoids a one-off jailbreak screenshot.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "99e677a0706d007890baad2063ef34639041340c2b8e9a55830ea71a2f4dfa9a"
+    },
+    "DM-02": {
+      "dimensions": {
+        "visual": 91,
+        "practical": 94,
+        "theory": 80,
+        "novelty": 72
+      },
+      "score": 86,
+      "rationale": "Correlated AI errors are established. The narrower contribution is a Jev-specific evidence-versus-prompt intervention with returned distributions and matched resources.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "b01ed199fdc92dd2f7bd10d2f8956d3bdc1e99b7c90c7abd2cff2346e28afc8c"
+    },
+    "DM-03": {
+      "dimensions": {
+        "visual": 92,
+        "practical": 86,
+        "theory": 97,
+        "novelty": 67
+      },
+      "score": 88,
+      "rationale": "Honeybee cross-inhibition is direct biological prior. The Jev test concerns model-generated contradiction judgments with non-oracle evidence, beyond generic dissent.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "bfffca246d4422dcfd2cf94763e3a5c88ca8b2c8ba22f31902b0e478097b5b5c"
+    },
+    "DM-04": {
+      "dimensions": {
+        "visual": 89,
+        "practical": 97,
+        "theory": 78,
+        "novelty": 81
+      },
+      "score": 87,
+      "rationale": "Confidence-gate pressure is already reported. New scope is temporal feedback, finite service capacity and a matched-capacity defense. The immune/alarm analogy is limited.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "8e04294f7d499448aee8de413cf957700bb1a2b2e6b09fc4c0a6de974b1a88f8"
+    },
+    "DM-05": {
+      "dimensions": {
+        "visual": 91,
+        "practical": 88,
+        "theory": 72,
+        "novelty": 83
+      },
+      "score": 84,
+      "rationale": "Label polarity is existing prior. The opening is dynamic semantic-equivalence classes and their downstream collective consequences.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "893d4e21842130be7375bc3fb23a73cfba5d230f67a3c17cbe46d932b64344bf"
+    },
+    "DM-06": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 72,
+        "theory": 90,
+        "novelty": 64
+      },
+      "score": 81,
+      "rationale": "Biological exploration analogy; needs stronger evidence grounding before priority promotion.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "94c37cca24dd522f2f0966bb98e2e7ebef9422fdaabaf8de8cd1c2a5100f0502"
+    },
+    "DM-07": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 81,
+        "theory": 81,
+        "novelty": 45
+      },
+      "score": 78,
+      "rationale": "Strong overlap with Healing Helping Hands, Immune Response and Swarm of Theseus; keep as an ablation, not a new flagship.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "3355b6cd965b4026e469f451b1105c5edb983c7d5adb3f40b55758eb00e107ec"
+    },
+    "DM-08": {
+      "dimensions": {
+        "visual": 93,
+        "practical": 76,
+        "theory": 50,
+        "novelty": 35
+      },
+      "score": 68,
+      "rationale": "Known demo extended with ground truth; modest novelty.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "9908aed38b19c61fe958fdba2073dc97cbeb555e8d1e792c5b8082c59f677c5b"
+    },
+    "DM-09": {
+      "dimensions": {
+        "visual": 77,
+        "practical": 88,
+        "theory": 55,
+        "novelty": 61
+      },
+      "score": 72,
+      "rationale": "Interface diagnostic; high confounding risk without semantic-equivalence validation.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "e52c93f20e3ee698b8502887fe391884dad37d0d27191981629d9a81e0ffa605"
+    },
+    "DM-10": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 77,
+        "theory": 45,
+        "novelty": 52
+      },
+      "score": 69,
+      "rationale": "Reframes the user example honestly; not direct adversarial vision.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "fd9cea96e5d0b01efa7dab1b0027eb274a6968f9ef64cb6d5cc56e3f3bf5be61"
+    },
+    "DM-11": {
+      "dimensions": {
+        "visual": 66,
+        "practical": 93,
+        "theory": 35,
+        "novelty": 55
+      },
+      "score": 65,
+      "rationale": "Already close to public evaluation; engineering prerequisite.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "f75dd4c641959548676c4256703c5740c9d0d88fc73fd05dc181396fa49b7acc"
+    },
+    "DM-12": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 95,
+        "theory": 45,
+        "novelty": 62
+      },
+      "score": 72,
+      "rationale": "Useful but familiar selective-classification issue.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "50972e499147a51e7a96dc4b3f3e263ea6aed037b62e1a2881cc9d16064ddbbc"
+    },
+    "DM-13": {
+      "dimensions": {
+        "visual": 88,
+        "practical": 82,
+        "theory": 77,
+        "novelty": 42
+      },
+      "score": 77,
+      "rationale": "Strong overlap with influence and heterogeneous-agent research.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "4722b7edd39d9774eea13c9afc7fa42e0243b6b91cd47e6a9e92fd9bfae3a810"
+    },
+    "DM-14": {
+      "dimensions": {
+        "visual": 86,
+        "practical": 83,
+        "theory": 88,
+        "novelty": 50
+      },
+      "score": 80,
+      "rationale": "Good companion treatment; overlaps established dissent questions.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "7e04d92e1d80fdab6be17de6fa79a5d625d4775a17810fd0a46cecf5458abe31"
+    },
+    "DM-15": {
+      "dimensions": {
+        "visual": 88,
+        "practical": 87,
+        "theory": 56,
+        "novelty": 67
+      },
+      "score": 77,
+      "rationale": "Visually clear but indirect biological connection and existing classifier prior.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "87710e3de2f7b2e0adac1874d41e8daa46a8e0416ae76f82c3507f0df78f316d"
+    },
+    "HX-01": {
+      "dimensions": {
+        "visual": 94,
+        "practical": 96,
+        "theory": 94,
+        "novelty": 70
+      },
+      "score": 91,
+      "rationale": "Animate state, delayed plan packets, action timestamps and overshoot on a shared timeline. Delayed feedback and separation of control timescales; measure overshoot and settling time rather than claim neural reflex equivalence. Fast/slow hierarchy and delay failure are established. Test semantic staleness and version-expiry contracts specifically at the Jev/generative boundary, after controlling for memory and deterministic control.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "2a538975487e2f2cc69c99f0b32236447c99c3698040f5b821afa4df9f4ee3ce"
+    },
+    "HX-02": {
+      "dimensions": {
+        "visual": 96,
+        "practical": 92,
+        "theory": 94,
+        "novelty": 80
+      },
+      "score": 92,
+      "rationale": "Color agents by model and tasks by skill; show capacity shock, reassignment and queues. Response-threshold division of labor with measurable demand, capacity and adaptation rate. Adaptive robotics allocation and MasRouter already exist. New target is delayed and misleading progress reports during nonstationary tool/model failure.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "288c94297bb210299e05d8b95da424c3730287fdcc62160822f97d5f92b243f9"
+    },
+    "HX-03": {
+      "dimensions": {
+        "visual": 98,
+        "practical": 93,
+        "theory": 90,
+        "novelty": 65
+      },
+      "score": 90,
+      "rationale": "Show a graph with source ancestry, error spread, blocked edges and false-positive isolation. Network epidemic branching with correlated susceptibility; estimate propagation rates from actual event ancestry. Cowpox and existing immune-response work already study minority defense. Isolate model-error covariance from evidence ancestry and placement.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "6fa89afaf4ba5e3098ad0953c0c386c9abfcd896b396863288147282bdfbe5db"
+    },
+    "HX-04": {
+      "dimensions": {
+        "visual": 92,
+        "practical": 98,
+        "theory": 76,
+        "novelty": 45
+      },
+      "score": 83,
+      "rationale": "Animate proposal trees, missing valid actions and selection; keep evaluator-only options in a separate lane. Search and selection bottleneck, analogous to variation and selection only where proposal coverage is explicitly measured. Basic Jev missing-option rejection failure is already reported by Zhong et al. Narrow this to cross-model candidate repair on held-out non-arithmetic tasks, with Boolean verification and development-tuned thresholds as mandatory baselines.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "3c7bb8ad6adb5f7671ee5766445ddc1e44b0419f6dca036f0211622923bea692"
+    },
+    "HX-05": {
+      "dimensions": {
+        "visual": 96,
+        "practical": 87,
+        "theory": 92,
+        "novelty": 65
+      },
+      "score": 88,
+      "rationale": "Show capability layers fading under correlated outage and reappearing as reserves wake. Functional redundancy and response diversity; measure capability coverage and recovery rather than merely restored node count. Extends existing regrowth and Theseus work with model-family correlated loss and replacement competence; reserve redundancy itself is established.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "025a934ea45dc11b071f7c29cea6e72df21b4e3b6977b95b0b862a3a61a7ddfd"
+    },
+    "HX-06": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 97,
+        "theory": 60,
+        "novelty": 82
+      },
+      "score": 82,
+      "rationale": "Reliability curves by partner and a changing abstention boundary. Selective prediction under distribution shift, not biological calibration. Conformal Social Choice already tests Haiku/Qwen teams; partner-induced feedback shift is the extension.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "127f57b055863a2d7c8f4d7b2ba2149774c4196b7137b71f2a8fd4795e1f50f4"
+    },
+    "HX-07": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 90,
+        "theory": 75,
+        "novelty": 70
+      },
+      "score": 83,
+      "rationale": "Covariance matrix alongside opinion trajectories. Coupled-agent dynamics and loss of independence. Extends C2-MAS from pre-interaction choice profiles to evolving shared-state teams.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5aed3cd79ca47b80f5cc50ffe3b64ccb54837b09f3b43ee7fec23801f9f9cfeb"
+    },
+    "HX-08": {
+      "dimensions": {
+        "visual": 83,
+        "practical": 95,
+        "theory": 50,
+        "novelty": 65
+      },
+      "score": 76,
+      "rationale": "Trace facts and qualifiers through adapter transformations. Information bottleneck with measurable sufficient statistics. Strong-weak mismatch and existing schema-composition questions precede this; focus on the Jev/SLM boundary.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "a0637bde625de6a5f875ff3731ea17b5205b49feaf50fc776517b2352a3dfa84"
+    },
+    "HX-09": {
+      "dimensions": {
+        "visual": 92,
+        "practical": 95,
+        "theory": 70,
+        "novelty": 75
+      },
+      "score": 85,
+      "rationale": "Animate proposal queues, verifier service and overload transitions. Queue stability and backpressure. Routing cost is established; binding queue stability at the decision gate is the target. Deadline-aware resource scheduling already exists; specialize the comparison to endogenously generated proposals and verifier false positives.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "5c98ebdf977ec192d87034384482c1303d4588e8006bbf114ef34959e789ea9f"
+    },
+    "HX-10": {
+      "dimensions": {
+        "visual": 94,
+        "practical": 85,
+        "theory": 85,
+        "novelty": 45
+      },
+      "score": 82,
+      "rationale": "Move fixed-count specialists over the graph and replay paired cascades. Network controllability and intervention coverage. Minority defense and topology optimization already exist; count-by-placement interaction needs a narrow endpoint.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "6b95fd61be9982d64e9444cf943a4f29917d0cefd9514768dea7270de5df2727"
+    },
+    "HX-11": {
+      "dimensions": {
+        "visual": 88,
+        "practical": 82,
+        "theory": 95,
+        "novelty": 45
+      },
+      "score": 82,
+      "rationale": "Animate allocations with side-by-side reward aggregators. Reward curvature and division of labor. Curvature-based heterogeneity gain is already studied; transfer to typed and generative agents is a replication/extension.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "b4f03fbe9a75f6be668a740c772d22282cc2d2430317011d9c4fe99b6505bec9"
+    },
+    "HX-12": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 93,
+        "theory": 70,
+        "novelty": 30
+      },
+      "score": 74,
+      "rationale": "Capability matrix and role occupancy. Functional versus structural diversity. Direct prerequisite control, not an original heterogeneity result.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "a7d8e6c2237de17e5786d817440442067d8c1c925bfca313620e390977526387"
+    },
+    "HX-13": {
+      "dimensions": {
+        "visual": 86,
+        "practical": 87,
+        "theory": 65,
+        "novelty": 75
+      },
+      "score": 79,
+      "rationale": "Replay identical evidence under changing labels. Information cascades and status-weighted influence. Authority-driven collapse is known; test typed selectors rather than claim new social bias.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e12df05ee4d0860f8d23fa3a842c59f2984179814db8baeab8ea2b3406d2edd0"
+    },
+    "HX-14": {
+      "dimensions": {
+        "visual": 83,
+        "practical": 92,
+        "theory": 62,
+        "novelty": 45
+      },
+      "score": 75,
+      "rationale": "Show correct and harmful reversals by critic type. Independent minority information versus conformism. ReConcile and existing dissent questions already cover much of this; target capability asymmetry.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "038a6ae258fa593776d96654631bafab884414e873eb457054da91b99cc590b5"
+    },
+    "HX-15": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 86,
+        "theory": 75,
+        "novelty": 40
+      },
+      "score": 78,
+      "rationale": "Track one source splitting into many numerical endorsements. Bayesian double-counting and correlated evidence. Extends existing quorum work to numeric probability transmission; confidence aggregation is established.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d453ecbd2b482448834ac38117ac6a76c25251874aea9120461f45bc07eabe97"
+    },
+    "HX-16": {
+      "dimensions": {
+        "visual": 95,
+        "practical": 90,
+        "theory": 88,
+        "novelty": 25
+      },
+      "score": 81,
+      "rationale": "Overlay useful and harmful claim lineages during repair. Defense-diversity tradeoff and selective suppression. Cowpox and our immune-response design already raise this; isolate model-specific false positives.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "153a5e3959de5b9033416e1d05a766187f114f00978f335385fbc24e3ce221a7"
+    },
+    "HX-17": {
+      "dimensions": {
+        "visual": 88,
+        "practical": 96,
+        "theory": 60,
+        "novelty": 45
+      },
+      "score": 77,
+      "rationale": "Visualize dependency outage and fallback paths. Single points of failure and redundant control. Reliability engineering replication tailored to a shared Jev dependency.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "8767ad9a467e11c47b6f8a779879c45f2dc3d9eee5c44c0cf0974f409c31fc0b"
+    },
+    "HX-18": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 88,
+        "theory": 75,
+        "novelty": 35
+      },
+      "score": 77,
+      "rationale": "Display preserved constraints and drift after each replacement. State transfer and functional continuity. Extends existing Theseus/memory work at a model-family boundary.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ac2ac65f75b61c670f7e2650a4aee01f2963f73be8468ddf10a608687722acec"
+    },
+    "HX-19": {
+      "dimensions": {
+        "visual": 84,
+        "practical": 87,
+        "theory": 80,
+        "novelty": 70
+      },
+      "score": 82,
+      "rationale": "Before/after error-overlap maps. Convergence under shared learning versus response diversity. AutoJev supplies a practical precedent; independence after distillation is the narrower question.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "e248cbe201e27a2badd27338cefbf02262228d2805cf91295260faf44c4500c2"
+    },
+    "HX-20": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 94,
+        "theory": 70,
+        "novelty": 78
+      },
+      "score": 83,
+      "rationale": "One request fan-out with correlated decision changes. Common-mode failure from shared substrate. Batching is documented; downstream correlation is not established by speed claims.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d10ac6933c549c4672b2f64e87c698298591cc6e03fc36c84c71306a2942eb2c"
+    },
+    "HX-21": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 90,
+        "theory": 75,
+        "novelty": 65
+      },
+      "score": 80,
+      "rationale": "Power and queue traces aligned with verified completions. Resource-constrained allocation, with energy as measured physical quantity. Existing cost routing is close; energy and contention require real measurement.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "2c71f1c685871340eb81a12905e61329e8ad0dd0b03acd528eba48d899b9e1ac"
+    },
+    "HX-22": {
+      "dimensions": {
+        "visual": 83,
+        "practical": 90,
+        "theory": 75,
+        "novelty": 40
+      },
+      "score": 77,
+      "rationale": "Tool-capability bipartite graph over execution. Morphological versus behavioral specialization as a carefully bounded analogy. Modular tool agents and robot capability allocation already exist.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "1d5e60f98a487761fd26b922392701a29f828aafac87a9f30b64d2b5a8116b67"
+    },
+    "HX-23": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 82,
+        "theory": 75,
+        "novelty": 20
+      },
+      "score": 73,
+      "rationale": "Opinion traces before and after the first public signal. Information cascades and social coupling. Already central to existing SOC-07 work; heterogeneous replication only.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "7c64d369df46a8a19b67fa3a0a659b5f117404818f7bcfd21dd98fc5e6cd38d0"
+    },
+    "HX-24": {
+      "dimensions": {
+        "visual": 89,
+        "practical": 85,
+        "theory": 72,
+        "novelty": 40
+      },
+      "score": 76,
+      "rationale": "Resource flows and reported versus realized task costs. Mechanism design under asymmetric information, not biological cooperation proof. Agent markets and CoffeeBench already study economic interaction; focus on allocator evidence. Mittal already frames capability advertising as a lemons market; evaluate its remedies rather than rename the problem.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "6869c1ae277e07df4e7ff3bcba2f79317c2569c0f5c041d63ebbcd84914bc67f"
+    },
+    "HX-25": {
+      "dimensions": {
+        "visual": 91,
+        "practical": 87,
+        "theory": 65,
+        "novelty": 35
+      },
+      "score": 75,
+      "rationale": "Contract fields fading or mutating at each hop. Transmission fidelity and cumulative information loss. Existing telephone and memory designs are closest; isolate the cross-family boundary.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "ce717a2e334b361a56ac8078cf41a01fee306df46899c51b50aec558db754d05"
+    },
+    "HX-26": {
+      "dimensions": {
+        "visual": 88,
+        "practical": 94,
+        "theory": 72,
+        "novelty": 25
+      },
+      "score": 76,
+      "rationale": "Quality-cost frontier with coordination overhead bands. Marginal returns and resource competition. MoA, Self-MoA and C2-MAS already address much of this; use as a necessary baseline sweep.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "c0eb5e6836c99ad76464b42c53eb1bd793f9f09aabb15f6536f3bdebfbe1c6c2"
+    },
+    "HX-27": {
+      "dimensions": {
+        "visual": 78,
+        "practical": 97,
+        "theory": 40,
+        "novelty": 50
+      },
+      "score": 70,
+      "rationale": "Judge disagreement heatmap anchored to protected truth. Measurement invariance. Measurement control rather than a new swarm mechanism.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "dd4702a881e803eaa90110c268f06e916beabee42f5b36f0735df16df15a8595"
+    },
+    "HX-28": {
+      "dimensions": {
+        "visual": 78,
+        "practical": 98,
+        "theory": 55,
+        "novelty": 25
+      },
+      "score": 70,
+      "rationale": "Replay the same trace with one stage made exact. Mechanistic decomposition rather than an ecological analogy. Established engineering principle; strongest practical falsification control.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d48b95e1e3a81e26278e75dd94d716920ce4a775194fa46b8110a2dde120f878"
+    },
+    "HX-29": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 84,
+        "theory": 82,
+        "novelty": 58
+      },
+      "score": 81,
+      "rationale": "Guidance edges fade as learners operate independently. Temporary scaffolding and dependency formation. Guided collaboration already exists; persistence after mentor removal is the extension.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "c9013c2bae87788d8517c7519de8bb39a87b0b853177aeaac093aae7c4875991"
+    },
+    "HX-30": {
+      "dimensions": {
+        "visual": 93,
+        "practical": 94,
+        "theory": 72,
+        "novelty": 45
+      },
+      "score": 81,
+      "rationale": "New task demands appear outside the current action graph. Adaptation constrained by available variation. Typed decisions and generators are already combined; test open-set transition and safe menu growth.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "616304ca3ee6438b1cfd4d658640769fb0df712a9843b382d8c40193392b834a"
     }
   }
 }

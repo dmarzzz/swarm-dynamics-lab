@@ -77,3 +77,5 @@ Expanded all sixteen briefs; added the external-influence animation and revised 
 - [Experimental question expansion](experimental-expansion/README.md): 24 EX comparisons, count reconciliation and the dashboard contribution-bank contract.
 
 - [Skeptical research context and review](skeptical-review/README.md): three reusable context notes, forty specific critiques across all sixteen briefs, primary-source boundaries and decisions to narrow, merge or revise.
+
+- [Heterogeneous Jev / Haiku / Qwen swarms](heterogeneous-swarms/README.md): 30 source-grounded exploratory comparisons, prior-work exclusions, owner-rubric ratings, editorial reviews and five prospective designs.
