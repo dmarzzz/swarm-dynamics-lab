@@ -219,7 +219,7 @@ def main():
     base = tempfile.mkdtemp(prefix='memory-handoff-rehearsal-', dir=a.tmp)
     if study.ROOT in Path(base).resolve().parents: raise SystemExit('the temporary directory is inside the study tree')
     started = time.monotonic()
-    budget = study.design()['budget']; total = budget['max_attempted_calls']; limit = budget['max_failed']
+    budget = study.design()['budget']; total = sum(budget['max_calls'].values()); limit = budget['max_failed']
     n_s1 = budget['max_calls']['S1']; first_s1 = 2 + budget['max_calls']['Q0']       # request ordinal of the first S1 call
     outage = budget['billing_outage']; near = lambda x, y: x is not None and abs(x - y) < 1.0
     try:
@@ -238,7 +238,7 @@ def main():
     first = bill.get('first_stop', {}); cont = (bill.get('continuations') or [{}])[0]
     fu, cu, eu = full.get('s1_units') or {}, one.get('s1_units') or {}, bill.get('s1_units') or {}
     first_units = first.get('s1_units') or {}; first_s1_stage = first.get('stages', {}).get('S1', {})
-    dangling = (first_s1_stage.get('calls') or 0) - (first_s1_stage.get('answered_calls') or 0)
+    voided = (first.get('ledger') or {}).get('voided_calls') or 0
     checks = {
         'a_exit_0': full.get('exit') == 0, 'a_state_completed': full.get('state') == 'completed',
         'a_four_done_runs': full.get('hub_runs') == done4,
@@ -283,7 +283,8 @@ def main():
             and cont.get('units') == first_units.get('not_started') and eu.get('answered_calls') == n_s1 and eu.get('primary_estimate') == -0.5,
         'e_hub_runs': bill.get('hub_runs') == sorted(done4[:3] + [['s1-001', 'failed'], ['s1-001-r1', 'done']]),
         'e_answered_calls_within_caps': (bill.get('ledger') or {}).get('usage_reported_calls') == total
-            and (bill.get('ledger') or {}).get('attempted_calls') == total + dangling and 0 < dangling <= budget['workers']
+            and (bill.get('ledger') or {}).get('attempted_calls') == total and (bill.get('ledger') or {}).get('calls_by_batch', {}).get('s1-001') == n_s1
+            and (bill.get('ledger') or {}).get('voided_calls') == voided and 0 < voided <= budget['workers']
             and (bill.get('ledger') or {}).get('transport_attempts', 10 ** 9) <= budget['max_transport_attempts'],
         'e_verify_exit_0': bill.get('verify_exit') == 0,
         'no_real_wait': sum(r.get('waits', 0) for r in (one, bill)) > 0 and time.monotonic() - started < 900,

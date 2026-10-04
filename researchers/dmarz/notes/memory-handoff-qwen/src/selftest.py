@@ -1,7 +1,7 @@
 """Offline checks. No network, no model call, no hub. `python3 src/selftest.py` prints the
 standard unittest summary ("Ran N tests ... OK") on stderr.
 
-The 28 tests of the reference adapter (test_openrouter_provider.py, an unmodified copy) run
+The 32 tests of the reference adapter (test_openrouter_provider.py, an unmodified copy) run
 against this study's provider.py as part of the same suite.
 """
 import collections
@@ -189,18 +189,14 @@ class Instrument(unittest.TestCase):
                               ('journal.py', 'journal_sha256'), ('worlds.py', 'worlds_sha256')):
                 self.assertEqual(hashlib.sha256((bench / name).read_bytes()).hexdigest(), D['parent'][key], name)
 
-    def test_adapter_copy_differs_from_the_reference_by_one_documented_change(self):
+    def test_adapter_and_its_tests_are_unchanged_copies_of_the_reference(self):
+        self.assertEqual(hashlib.sha256((study.ROOT / 'src/provider.py').read_bytes()).hexdigest(), D['parent']['adapter_sha256'])
         reference = REPO / D['parent']['adapter']
         if not reference.is_file(): self.skipTest('reference adapter not in this checkout')
-        self.assertEqual(hashlib.sha256(reference.read_bytes()).hexdigest(), D['parent']['adapter_sha256'])
-        diff = list(difflib.unified_diff(reference.read_text().splitlines(), (study.ROOT / 'src/provider.py').read_text().splitlines(), lineterm='', n=0))
-        removed = [l[1:] for l in diff if l.startswith('-') and not l.startswith('---')]
-        added = [l[1:] for l in diff if l.startswith('+') and not l.startswith('+++')]
-        self.assertEqual(removed, ['            obj = json.loads(text)'])
-        self.assertIn('            obj = json.loads(text, object_pairs_hook=_no_duplicate_keys)', added)
-        self.assertTrue(all('json.loads' not in l or '_no_duplicate_keys' in l for l in added))
-        tests = REPO / 'researchers/dmarz/notes/pipeline/reference/test_openrouter_provider.py'
-        self.assertEqual(tests.read_bytes(), (study.ROOT / 'src/test_openrouter_provider.py').read_bytes())
+        if hashlib.sha256(reference.read_bytes()).hexdigest() != D['parent']['adapter_sha256']:
+            self.skipTest('the reference moved on after this study pinned its copy (main 639e9501)')
+        self.assertEqual(reference.read_bytes(), (study.ROOT / 'src/provider.py').read_bytes())
+        self.assertEqual((reference.parent / 'test_openrouter_provider.py').read_bytes(), (study.ROOT / 'src/test_openrouter_provider.py').read_bytes())
 
     def test_worlds_are_deterministic_balanced_and_collision_free(self):
         self.assertEqual(sim.world(5401, C), sim.world(5401, C))
@@ -335,7 +331,8 @@ class Instrument(unittest.TestCase):
 
     def test_stage_counts_caps_and_splits(self):
         self.assertEqual({s: len(study.assignments(s)) for s in study.STAGES}, {'S0': 192, 'P0': 1, 'Q0': 23, 'S1': 576})
-        self.assertEqual(B['max_calls'], {'S0': 0, 'P0': 1, 'Q0': 23, 'S1': 576}); self.assertEqual(B['max_attempted_calls'], 600)
+        self.assertEqual(B['max_calls'], {'S0': 0, 'P0': 1, 'Q0': 23, 'S1': 576}); self.assertEqual(sum(B['max_calls'].values()), 600)
+        self.assertEqual((B['max_attempted_calls'], B['reservation_margin']), (600 + 24, 10))        # the one repair attempt's 24 qualification calls share the ledger
         self.assertEqual((B['max_failed'], B['aggregate_usd'], B['workers'], B['request_timeout_seconds']), (6, 2, 4, 120))
         self.assertEqual(B['max_failed'], max(3, -(-576 // 100)))
         self.assertGreaterEqual(B['max_transport_attempts'] - B['max_attempted_calls'], 40)
@@ -376,7 +373,7 @@ class Instrument(unittest.TestCase):
         wrong = {'value': 4321, 'sources': ['rec-x']}
         row = dict(base, status='completed', answer=wrong, evaluation=study.evaluate(f, wrong), accounting=acc)
         g = study.probe_gate([row]); self.assertTrue(g['passed']); self.assertFalse(g['agrees_with_reference'])
-        for change in ({'response_model': 'qwen/qwen3.7-plus'}, {'response_provider': 'DeepInfra'}, {'finish_reason': 'length'},
+        for change in ({'response_model': 'qwen/qwen3.7-plus'}, {'response_provider': 'DeepInfra'}, {'response_provider': None}, {'finish_reason': 'length'},
                        {'reasoning_tokens': 12}, {'usage_reported': False}):
             self.assertFalse(study.probe_gate([dict(row, accounting=dict(acc, **change))])['passed'], change)
         self.assertFalse(study.probe_gate([dict(row, status='failed')])['passed']); self.assertFalse(study.probe_gate([])['passed'])
@@ -386,7 +383,7 @@ class Instrument(unittest.TestCase):
         self.assertEqual(manifest.render(manifest.build()), manifest.PATH.read_text())
         self.assertLess(manifest.PATH.stat().st_size, 300_000)
         m = manifest.load(); self.assertEqual(m['source_hash'], study.source_hash())
-        self.assertEqual({s: m['stages'][s]['count'] for s in study.STAGES}, B['max_calls'] | {'S0': 192} if hasattr(dict, '__or__') else dict(B['max_calls'], S0=192))
+        self.assertEqual({s: m['stages'][s]['count'] for s in study.STAGES}, dict(B['max_calls'], S0=192))
         self.assertEqual(m['qualification_b_reserved']['count'], 24)
         hashed = sorted(p.name for p in [study.ROOT / 'design.yaml', study.ROOT / 'experiment.yaml', study.ROOT / 'requirements.txt'] + list((study.ROOT / 'src').glob('*.py')))
         self.assertIn('provider.py', hashed); self.assertIn('test_openrouter_provider.py', hashed)
@@ -399,7 +396,7 @@ class Instrument(unittest.TestCase):
         r = yaml.safe_load(path.read_text())
         self.assertEqual((r['contract'], r['study'], r['experiment'], r['stages']), ('ready-chain-v1', study.EXPERIMENT, study.EXPERIMENT, list(study.STAGES)))
         self.assertEqual((r['provider'], r['model'], r['max_calls'], r['max_calls_total'], r['usd_cap'], r['chain_timeout_seconds']),
-                         ('openrouter', D['model'], B['max_calls'], B['max_attempted_calls'], B['aggregate_usd'], B['chain_timeout_seconds']))
+                         ('openrouter', D['model'], B['max_calls'], sum(B['max_calls'].values()), B['aggregate_usd'], B['chain_timeout_seconds']))
         self.assertEqual(r['source_hash'], study.source_hash()); self.assertEqual(r['selftests'], TOTAL['tests'])
 
     def test_no_secret_address_or_token_in_the_package(self):
@@ -418,7 +415,9 @@ class Adapter(unittest.TestCase):
             answer, acct = api.call(study.SYSTEM, study.user_text(a['packet']), 's1-001:' + a['id'], study.validate)
         self.assertEqual(sent[0], study.request_body(a['packet'])); self.assertEqual(tuple(sent[0]), provider.BODY_KEYS)
         self.assertEqual(acct['request_bytes'], a['request_bytes']); self.assertEqual(answer, sim.reference(a['packet']))
-        self.assertGreaterEqual(acct['reserved_usd'] * 1e6, a['request_bytes'] * 0.03 + 1000 * 0.13 - 1e-9)    # byte-based upper bound
+        bound = a['request_bytes'] * 0.03 + 1000 * 0.13                                                      # byte-based upper bound at the frozen prices
+        self.assertTrue(10 * bound <= acct['reserved_usd'] * 1e6 < 10 * bound + 1)                            # reserved with the 10x margin
+        self.assertLess(4 * acct['reserved_usd'], 0.02)                                                       # four open reservations stay far under the cap
         self.assertEqual({k: v for k, v in sent[0].items() if k != 'messages'}, D['request_template'])
 
     def test_duplicate_json_keys_and_invalid_answers_are_failed_calls_with_the_text_kept(self):
@@ -454,7 +453,7 @@ class Adapter(unittest.TestCase):
             self.assertEqual((cm.exception.category, sum(clock.waits)), (provider.BILLING_STOP, 1200))
             with self.assertRaises(provider.CallFailure) as cm: api.call(study.SYSTEM, 'U', 's1-001:b', study.validate)
             self.assertEqual(cm.exception.category, provider.BILLING_STOP); self.assertFalse(cm.exception.accounting['attempted'])
-            self.assertEqual(ledger.transact()['attempted_calls'], 1)
+            t = ledger.transact(); self.assertEqual((t['attempted_calls'], t['voided_calls'], t['committed_usd']), (0, 1, 0.0))   # no model ran: the reservation is voided
 
 
 class Worker(unittest.TestCase):
@@ -486,6 +485,36 @@ class Worker(unittest.TestCase):
             self.assertIsNone(reason); self.assertEqual((len(stub.bodies), summary['model_calls'], summary['qualification_passed']), (1, 1, 1))
             self.assertAlmostEqual(summary['tokens_per_byte_max'], (rows[0]['request_bytes'] // 3) / rows[0]['request_bytes'])
             self.assertIn('tokens_per_byte_max', run.final[1]); self.assertTrue(summary['gate']['probe']['agrees_with_reference'])
+
+    def test_probe_summary_and_hub_metrics_carry_the_raw_response_metadata(self):
+        with Env() as env:
+            run = FakeRun('p0', study.params('P0'))
+            summary, rows, reason, _ = stage('P0', env, rehearse.Stub('reference'), run=run)
+            pr = summary['probe_response']
+            self.assertEqual((pr['response_model'], pr['response_provider'], pr['finish_reason'], pr['reasoning_tokens']), (D['canonical_model'], 'Alibaba', 'stop', 0))
+            self.assertTrue(pr['response_id'].startswith('gen-rehearsal-')); self.assertEqual(pr['input_tokens'], rows[0]['request_bytes'] // 3)
+            for key in ('latency_seconds', 'provider_reported_usd', 'output_tokens', 'tokens_per_byte', 'actual_usd', 'reserved_usd'): self.assertIn(key, pr)
+            metrics = run.final[1]
+            for key in ('probe_input_tokens', 'probe_output_tokens', 'probe_reasoning_tokens', 'probe_latency_seconds', 'probe_tokens_per_byte'): self.assertIn(key, metrics)
+            self.assertTrue(all(isinstance(v, (int, float)) for v in metrics.values()))
+            for text in ('provider Alibaba', D['canonical_model'], 'finish stop', 'gen-rehearsal-'): self.assertIn(text, run.message)
+
+    def test_probe_fails_when_the_response_names_no_provider_or_reports_reasoning(self):
+        class Altered(rehearse.Stub):
+            def __init__(self, change): super().__init__('reference'); self.change = change
+            def __call__(self, request, timeout=None):
+                data = json.loads(super().__call__(request, timeout).getvalue()); self.change(data)
+                return rehearse.Response(json.dumps(data).encode())
+        cases = ((lambda d: d.pop('provider'), 'provider_missing'), (lambda d: d.update(provider='DeepInfra'), 'provider_mismatch'),
+                 (lambda d: d['usage'].update(completion_tokens_details={'reasoning_tokens': 9}), 'unexpected_reasoning_tokens'),
+                 (lambda d: d['choices'][0].update(finish_reason='length'), 'truncated_output'))
+        for change, want in cases:
+            with Env() as env:
+                run = FakeRun('p0', study.params('P0'))
+                summary, rows, reason, _ = stage('P0', env, Altered(change), run=run)
+                self.assertIn(want, reason); self.assertEqual((rows[0]['status'], rows[0]['error']), ('failed', want))
+                self.assertEqual((run.final[0], run.final[1]['qualification_passed'], run.final[1]['model_calls']), ('fail', 0, 1))
+                self.assertEqual(summary['probe_response']['error'], want); self.assertIn('probe_input_tokens', run.final[1])
 
     def test_qualification_reads_the_probe_row_and_fails_without_it_before_any_call(self):
         with Env() as env:
@@ -560,17 +589,25 @@ class Worker(unittest.TestCase):
             self.assertEqual(summary['graded'], 29); self.assertEqual(summary['not_started'], 576 - 29)
             self.assertIn('billing_pauses', run.final[1]); self.assertEqual(run.final[0], 'fail')
             dangling = [r for r in rows if r['status'] == 'not_started' and (r.get('accounting') or {}).get('attempted')]
-            self.assertTrue(0 < len(dangling) <= B['workers']); self.assertTrue(all(r['error'] == provider.BILLING_STOP for r in dangling))
-            self.assertEqual(dangling[0]['accounting'].get('http_status', 402), 402)
+            self.assertTrue(0 < len(dangling) <= B['workers']); self.assertTrue(all(r['error'] == provider.BILLING_STOP and r['accounting']['voided'] for r in dangling))
+            self.assertTrue(any(r['accounting'].get('http_status') == 402 and 'Insufficient credits' in r['accounting']['error_body'] for r in dangling))
+            self.assertEqual((summary['model_calls'], summary['answered_calls'], summary['voided_calls']), (29, 29, len(dangling)))
+            first = provider.Ledger(os.environ[provider.LEDGER_ENV], B).transact()
+            self.assertEqual((first['calls_by_batch'], first['voided_calls']), ({'s1-001': 29}, len(dangling)))
             units = sorted(r['id'] for r in rows if r['status'] == 'not_started')
             params = dict(study.params('S1'), batch='s1-001-r1', continuation=1)
             more, rows2, reason2, out2 = stage('S1', env, rehearse.Stub('reference'), params=params, units=units, prior_rows=rows)
-            self.assertIsNone(reason2); self.assertEqual((more['planned'], more['graded'], more['continuation']['reservation_allowance']), (547, 547, len(dangling)))
+            self.assertIsNone(reason2); self.assertEqual((more['planned'], more['graded'], more['continuation']['units']), (547, 547, 547))
             final = study.combine(rows + rows2)
             self.assertEqual(len(final), 576); self.assertEqual({r['status'] for r in final}, {'completed'}); self.assertEqual(len({r['id'] for r in final}), 576)
             a = json.loads((out2 / 'analysis.json').read_text()); self.assertEqual((a['observed'], a['primary']['estimate']), (576, -0.5))
             ledger = provider.Ledger(os.environ[provider.LEDGER_ENV], B).transact()
-            self.assertEqual((ledger['usage_reported_calls'], ledger['attempted_calls']), (576, 576 + len(dangling)))
+            # answered plus open S1 calls never exceed the exact cap: the continuation shares the batch family's allowance
+            self.assertEqual((ledger['usage_reported_calls'], ledger['attempted_calls'], ledger['calls_by_batch']), (576, 576, {'s1-001': 576}))
+            self.assertEqual(ledger['calls_by_batch']['s1-001'], B['max_calls']['S1'])
+            api = provider.OpenRouter(provider.Ledger(os.environ[provider.LEDGER_ENV], B), study.provider_config(), rehearse.Stub('reference'))
+            with self.assertRaises(provider.CallFailure) as cm: api.call(study.SYSTEM, 'U', 's1-001-r2:one-more', study.validate)
+            self.assertEqual(cm.exception.category, 'stage_call_cap_reached')
             with self.assertRaises(worker.StageFailed):                              # a continuation needs its own batch name
                 worker.execute(study.params('S1'), env.path / 'results' / 'bad', None, opener=rehearse.Stub('reference'), units=units[:2], prior_rows=rows)
 

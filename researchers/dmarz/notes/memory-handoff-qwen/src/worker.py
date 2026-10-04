@@ -64,13 +64,15 @@ def upload(run, path):
 
 
 def totals(rows, planned):
-    """Stage totals. `model_calls` counts calls dispatched (reserved in the ledger); `answered_calls`
-    counts calls for which the provider reported usage."""
+    """Stage totals. `model_calls` counts calls dispatched with a standing reservation in the ledger (a
+    call that a billing stop left unanswered has its reservation voided and is not counted);
+    `answered_calls` counts calls for which the provider reported usage."""
     acct = [r.get('accounting') or {} for r in rows]
     logs = [r.get('retrieval') or {} for r in rows if r['status'] != 'not_started']
     return {'episodes': planned, 'invalid': planned - sum(r['status'] == 'completed' for r in rows),
             'failed': sum(r['status'] == 'failed' for r in rows),
-            'model_calls': sum(bool(a.get('attempted')) for a in acct),
+            'model_calls': sum(bool(a.get('attempted')) and not a.get('voided') for a in acct),
+            'voided_calls': sum(bool(a.get('voided')) for a in acct),
             'answered_calls': sum(bool(a.get('usage_reported')) for a in acct),
             'transport_attempts': sum(a.get('attempts', 0) for a in acct),
             'input_tokens': sum(a.get('input_tokens', 0) for a in acct),
@@ -162,20 +164,12 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
     if invariants is not None and not invariants['passed']:
         log_book.emit('invariants_failed', checks=sorted(k for k, ok in invariants['checks'].items() if not ok))
 
-    ledger = None; allowance = 0
+    ledger = None
     if not scripted:
         path = os.environ.get(provider.LEDGER_ENV)
         if not path: raise RuntimeError('persistent_budget_ledger_required')
         if total > budget['max_calls'][stage]: raise RuntimeError('assignments_exceed_stage_call_cap')
-        # A call that a billing stop left reserved but unanswered never reached the model. Its
-        # continuation needs a second reservation, so the ledger's call caps are raised by exactly
-        # the number of such calls. Answered calls stay within max_calls: each unit is answered once.
-        allowance = sum(1 for r in prior if r['status'] == 'not_started' and (r.get('accounting') or {}).get('attempted'))
-        ledger_budget = budget
-        if allowance:
-            ledger_budget = copy.deepcopy(budget)
-            ledger_budget['max_calls'][stage] += allowance; ledger_budget['max_attempted_calls'] += allowance
-        ledger = provider.Ledger(path, ledger_budget)
+        ledger = provider.Ledger(path, budget)
         if backend is None:
             extra = {k: v for k, v in (('clock', clock), ('sleep', sleep)) if v is not None}
             try:
@@ -278,7 +272,7 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
         with gzip.open(out / (name + '.gz'), 'wb') as f: f.write((out / name).read_bytes())
 
     summary = summarize(p, rows, total, invariants, probe, control, time.monotonic() - start, initial,
-                        ledger.transact() if ledger else {}, billing(), prior, units, allowance)
+                        ledger.transact() if ledger else {}, billing(), prior, units)
     everyone = shown(rows)
     analysis = analyze.analyze(everyone)
     headline = headline_lines(stage, summary, analysis)
@@ -327,7 +321,7 @@ def gate_of(stage, rows, invariants, probe):
     return None, {}
 
 
-def summarize(p, rows, total, invariants, probe, control, elapsed, initial, final, billing, prior, units, allowance=0):
+def summarize(p, rows, total, invariants, probe, control, elapsed, initial, final, billing, prior, units):
     """Everything here except the measured times is recomputable from the saved rows; `chain.py verify` does so."""
     stage = p['stage']; budget = study.design()['budget']; strict = stage in study.STRICT
     t = totals(rows, total); gate, details = gate_of(stage, rows, invariants, probe)
@@ -361,8 +355,19 @@ def summarize(p, rows, total, invariants, probe, control, elapsed, initial, fina
                'cost_per_call_usd': (math.fsum(r['accounting']['actual_usd'] for r in measured) / len(measured)) if measured else None,
                'request_bytes_max': max([r['request_bytes'] for r in rows] or [0]),
                'stage_units': {'assigned': len(everyone), **{s: count(everyone, s) for s in ('completed', 'failed', 'not_started')}},
-               'continuation': None if units is None else {'units': total, 'earlier_rows': len(prior), 'reservation_allowance': allowance},
+               'continuation': None if units is None else {'units': total, 'earlier_rows': len(prior)},
                'study_accounting': final, 'initial_study_accounting': initial}
+    if stage == 'P0' and rows and rows[0].get('accounting'):
+        acc = rows[0]['accounting']       # the raw response metadata of the probe call
+        summary['probe_response'] = {
+            'response_model': acc.get('response_model'), 'response_provider': acc.get('response_provider'),
+            'response_id': acc.get('response_id'), 'finish_reason': acc.get('finish_reason'),
+            'reasoning_tokens': acc.get('reasoning_tokens'), 'latency_seconds': acc.get('latency_seconds'),
+            'provider_reported_usd': acc.get('provider_reported_usd'), 'computed_usd': acc.get('computed_usd'),
+            'actual_usd': acc.get('actual_usd'), 'reserved_usd': acc.get('reserved_usd'),
+            'input_tokens': acc.get('input_tokens'), 'output_tokens': acc.get('output_tokens'),
+            'request_bytes': acc.get('request_bytes'), 'tokens_per_byte': study.tokens_per_byte(rows),
+            'http_status': acc.get('http_status'), 'error': rows[0].get('error')}
     return summary
 
 
@@ -371,6 +376,8 @@ def hub_metrics(summary):
     for k in ('qualification_passed', 'tokens_per_byte_max', 'cost_per_call_usd', 'max_output_tokens_per_call'):
         if summary.get(k) is not None: m[k] = summary[k]
     m.update(summary.get('headline') or {})
+    for k, v in (summary.get('probe_response') or {}).items():       # the hub stores numbers; the names go into the run's message
+        if isinstance(v, (int, float)) and not isinstance(v, bool): m['probe_' + k] = v
     return m
 
 
@@ -390,11 +397,13 @@ def execute(p, out, run=None, backend=None, deadline=None, opener=None, units=No
             if p.get('stage') != 'S1': metrics['qualification_passed'] = 0
             run.fail(f'{p.get("stage")}: {reason}; rows preserved', **metrics)
         raise StageFailed(reason) from exc
-    stage = summary['params']['stage']
+    stage = summary['params']['stage']; pr = summary.get('probe_response')
     message = (f'{stage}: {summary["graded"]}/{summary["planned"]} valid, {summary["failed"]} failed'
                + (f' (limit {summary["max_failed"]})' if summary['max_failed'] is not None else '')
                + f', {summary["not_started"]} not started, {summary["model_calls"]} calls, USD {summary["cost_usd"]:.4f}'
-               + (f', {summary["billing_pauses"]} billing pause(s) of {summary["billing_pause_seconds"]:.0f} s' if summary['billing_pauses'] else ''))
+               + (f', {summary["billing_pauses"]} billing pause(s) of {summary["billing_pause_seconds"]:.0f} s' if summary['billing_pauses'] else '')
+               + (f'; probe response: model {pr.get("response_model")}, provider {pr.get("response_provider")}, id {pr.get("response_id")}, '
+                  f'finish {pr.get("finish_reason")}, reasoning tokens {pr.get("reasoning_tokens")}' if pr else ''))
     if not summary['passed']:
         metrics = hub_metrics(summary)
         if stage != 'S1': metrics['qualification_passed'] = 0

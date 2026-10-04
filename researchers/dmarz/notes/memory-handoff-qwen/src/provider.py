@@ -1,10 +1,5 @@
 """Reference OpenRouter adapter and study ledger for ready-chain studies (program v5, 2026-10-04).
 
-memory-handoff-qwen copy: identical to researchers/dmarz/notes/pipeline/reference/openrouter_provider.py
-(sha256 86d0739e...) except one change, made 2026-10-04 before any run: the answer text is parsed with
-duplicate JSON keys rejected (category invalid_json), as preregistration item 11 requires. The reference
-tests (test_openrouter_provider.py, an unmodified copy) run against this file in src/selftest.py.
-
 Copy this file into a study's `src/` (it is then covered by the study's source hash) and pass the
 study's frozen configuration to it. It imports nothing from a study. Written by dmarz/pipeline at
 dmarz/fleet-monitor's request; tests are in `test_openrouter_provider.py` beside it.
@@ -19,8 +14,8 @@ What it guarantees
 - No answer is ever retried. A request is re-sent only when the provider rejected it before the
   model ran: HTTP 429 and overload statuses (502, 503, 529), at most twice, backoff 2 s then 6 s,
   `retry-after` honoured up to 20 s, all inside the one request timeout.
-- A billing outage is not a model failure: HTTP 402, or any 400/402/403 whose body names credit or
-  balance, pauses dispatch for every thread using this adapter, re-sends the same call every 60 s
+- A billing or limit stop is not a model failure: HTTP 402, or a 400/403/429 whose body names
+  credit, balance, billing, a usage or spend limit, an exceeded limit or insufficient funds, pauses dispatch for every thread using this adapter, re-sends the same call every 60 s
   for up to 20 minutes, and then stops with category `provider_credit_balance_low`.
 - Every failed request keeps its HTTP status, the first 2,000 characters of the response body and
   the request id. Request headers and the key are never stored.
@@ -29,7 +24,14 @@ What it guarantees
   output limit, at the frozen prices. The ledger settles each call at its actual cost: the cost the
   provider reports when present, otherwise tokens times the frozen prices. Both are recorded.
 - The response's model slug must be the requested model or its dated canonical form, and the
-  serving provider, when reported, must be the pinned one. A mismatch is an integrity failure.
+  response must name the serving provider and it must be the pinned one. A missing provider field
+  or a mismatch is an integrity failure (so a probe cannot pass without the provider being named).
+- The per-call reservation carries a wide margin (`reservation_margin`, default 10 times the
+  snapshot-price bound), so a provider-reported cost above the snapshot does not stop a stage over
+  fractions of a cent. The study dollar cap stays the hard guard.
+- A call that a billing stop left unanswered has its reservation voided (no model ran), so it does
+  not count against the call caps or the dollar cap and a continuation batch can run it.
+- Duplicate keys in the answer's JSON object are rejected (`invalid_json`).
 
 Failure categories (CallFailure.category)
   refusal, empty_answer, truncated_output, invalid_json, invalid_answer, answer_too_long,
@@ -38,7 +40,8 @@ Failure categories (CallFailure.category)
   provider_credit_balance_low, missing_credential_alias, input_size_limit,
   and from the ledger: duplicate_call_refused, stage_call_cap_reached, study_call_cap_reached,
   aggregate_budget_exhausted, attempt_without_reservation, transport_attempt_cap_reached,
-  and the integrity failures model_mismatch, provider_mismatch, reservation_bound_breached.
+  and the integrity failures model_mismatch, provider_missing, provider_mismatch,
+  reservation_bound_breached.
 `INTEGRITY` lists the categories that must stop dispatch at once; `BILLING_STOP` is the category
 after which unfinished units are recorded as not started and may be resumed (`chain.py resume`).
 """
@@ -59,18 +62,9 @@ BODY_KEYS = ('model', 'provider', 'reasoning', 'max_tokens', 'response_format', 
 BILLING_STOP = 'provider_credit_balance_low'
 INTEGRITY = ('duplicate_call_refused', 'stage_call_cap_reached', 'study_call_cap_reached',
              'aggregate_budget_exhausted', 'attempt_without_reservation', 'transport_attempt_cap_reached',
-             'model_mismatch', 'provider_mismatch', 'reservation_bound_breached', 'missing_credential_alias')
+             'model_mismatch', 'provider_missing', 'provider_mismatch', 'reservation_bound_breached',
+             'missing_credential_alias')
 BODY_KEPT = 2000
-
-
-def _no_duplicate_keys(pairs):
-    """object_pairs_hook: a JSON object that repeats a key is not a valid answer."""
-    out = {}
-    for key, value in pairs:
-        if key in out:
-            raise ValueError('duplicate JSON key')
-        out[key] = value
-    return out
 
 
 class CallFailure(Exception):
@@ -84,10 +78,24 @@ def stage_of(call_id):
     return call_id.split(':', 1)[0].split('-', 1)[0].upper()
 
 
+BILLING_WORDS = ('credit', 'balance', 'billing', 'usage limit', 'spend limit', 'limit exceeded', 'insufficient')
+
+
+def family_of(call_id):
+    """The batch a call belongs to, without a continuation suffix: 's1-001-r2:<id>' -> 's1-001'.
+    Per-stage call caps apply per family, so a repair attempt ('q0-002') has its own allowance while a
+    continuation after a billing stop shares the allowance of the batch it continues."""
+    import re
+    return re.sub(r'-r\d+$', '', call_id.split(':', 1)[0])
+
+
 def is_billing_error(status, body):
-    """HTTP 402, or a 400/402/403 whose body names the credit balance."""
+    """A provider-side billing or limit stop, never a model failure: HTTP 402 always, and an HTTP
+    400, 403 or 429 whose body names credit, balance, billing, a usage or spend limit, an exceeded
+    limit or insufficient funds (case-insensitive). A 429 without such words is ordinary rate
+    limiting and goes through the transport retry rule."""
     text = (body or '').lower()
-    return status == 402 or (status in (400, 403) and ('credit' in text or 'balance' in text))
+    return status == 402 or (status in (400, 403, 429) and any(word in text for word in BILLING_WORDS))
 
 
 class Ledger:
@@ -95,7 +103,7 @@ class Ledger:
 
     An exclusive file lock spans each read, check, append and fsync; a line that does not parse makes
     every later transaction fail closed. Refuses: a call id seen before; a reservation beyond the
-    stage's `max_calls`, the study's `max_attempted_calls` or the dollar cap (settled actual cost of
+    stage's `max_calls` (counted per batch family, see `family_of`), the study's `max_attempted_calls` or the dollar cap (settled actual cost of
     answered calls plus the full reservation of every call without reported usage); an HTTP attempt
     without a reservation or beyond `max_transport_attempts`."""
 
@@ -111,37 +119,46 @@ class Ledger:
             fcntl.flock(f, fcntl.LOCK_EX)
             f.seek(0)
             events = [json.loads(line) for line in f if line.strip()]
-            reserved = {e['call_id']: e['micro_usd'] for e in events if e['type'] == 'reserve'}
+            voided = {e['call_id'] for e in events if e['type'] == 'void'}
+            seen = {e['call_id'] for e in events if e['type'] == 'reserve'}
+            reserved = {e['call_id']: e['micro_usd'] for e in events if e['type'] == 'reserve' and e['call_id'] not in voided}
             settled = {e['call_id']: e['actual_micro_usd'] for e in events if e['type'] == 'response'}
             attempts = sum(e['type'] == 'attempt' for e in events)
-            by_stage = {}
+            by_stage = {}; by_family = {}
             for call in reserved:
                 by_stage[stage_of(call)] = by_stage.get(stage_of(call), 0) + 1
+                by_family[family_of(call)] = by_family.get(family_of(call), 0) + 1
             committed = sum(settled.get(call, amount) for call, amount in reserved.items())
             if event:
                 kind = event['type']
                 if kind == 'reserve':
                     call = event['call_id']; stage = stage_of(call)
-                    if call in reserved: raise CallFailure('duplicate_call_refused')
-                    if by_stage.get(stage, 0) >= b['max_calls'].get(stage, 0): raise CallFailure('stage_call_cap_reached')
+                    if call in seen: raise CallFailure('duplicate_call_refused')
+                    if by_family.get(family_of(call), 0) >= b['max_calls'].get(stage, 0): raise CallFailure('stage_call_cap_reached')
                     if len(reserved) >= b['max_attempted_calls']: raise CallFailure('study_call_cap_reached')
                     if committed + event['micro_usd'] > int(b['aggregate_usd'] * 1_000_000):
                         raise CallFailure('aggregate_budget_exhausted')
                     reserved[call] = event['micro_usd']; by_stage[stage] = by_stage.get(stage, 0) + 1
+                    by_family[family_of(call)] = by_family.get(family_of(call), 0) + 1
                 elif kind == 'attempt':
                     if event['call_id'] not in reserved: raise CallFailure('attempt_without_reservation')
                     if attempts >= b['max_transport_attempts']: raise CallFailure('transport_attempt_cap_reached')
                     attempts += 1
                 elif kind == 'response':
                     settled[event['call_id']] = event['actual_micro_usd']
+                elif kind == 'void':
+                    # Only a reserved call that never reported usage can be voided (a billing stop: no model ran).
+                    if event['call_id'] not in reserved or event['call_id'] in settled: raise CallFailure('void_refused')
+                    stage = stage_of(event['call_id']); by_stage[stage] -= 1; by_family[family_of(event['call_id'])] -= 1
+                    del reserved[event['call_id']]; voided.add(event['call_id'])
                 else:
                     raise CallFailure('unknown_ledger_event')
                 f.seek(0, 2); f.write(json.dumps(event, sort_keys=True) + '\n'); f.flush(); os.fsync(f.fileno())
                 events.append(event)
                 committed = sum(settled.get(call, amount) for call, amount in reserved.items())
             responses = [e for e in events if e['type'] == 'response']
-            return {'attempted_calls': len(reserved), 'calls_by_stage': by_stage, 'transport_attempts': attempts,
-                    'usage_reported_calls': len(settled),
+            return {'attempted_calls': len(reserved), 'calls_by_stage': by_stage, 'calls_by_batch': by_family, 'transport_attempts': attempts,
+                    'usage_reported_calls': len(settled), 'voided_calls': len(voided),
                     'reserved_usd': sum(reserved.values()) / 1e6, 'actual_usd': sum(settled.values()) / 1e6,
                     'committed_usd': committed / 1e6,
                     'input_tokens': sum(e.get('input_tokens', 0) for e in responses),
@@ -325,8 +342,9 @@ class OpenRouter:
         if len(encoded) > self.b['max_input_bytes']:
             raise CallFailure('input_size_limit', account)
         # Byte-based upper bound: input tokens <= request bytes; the whole output limit priced in full.
-        reserve = len(encoded) * self.b['input_usd_per_million'] + self.b['max_output_tokens'] * self.b['output_usd_per_million']
-        reserve = int(reserve + 0.999999)
+        # times a wide margin, because the provider's reported cost may sit above the snapshot prices.
+        bound = len(encoded) * self.b['input_usd_per_million'] + self.b['max_output_tokens'] * self.b['output_usd_per_million']
+        reserve = int(bound * self.b.get('reservation_margin', 10) + 0.999999)
         account['reserved_usd'] = reserve / 1e6
         try:
             self.ledger.transact({'type': 'reserve', 'call_id': call_id, 'micro_usd': reserve, 'time': time.time()})
@@ -341,7 +359,14 @@ class OpenRouter:
                 raise CallFailure(exc.category, account) from None
             account['attempts'] += 1
         started = self.clock()
-        data = self._post(encoded, account, on_attempt)
+        try:
+            data = self._post(encoded, account, on_attempt)
+        except CallFailure as exc:
+            if exc.category == BILLING_STOP:
+                # No model ran for this call: release its reservation so a continuation can run the unit.
+                self.ledger.transact({'type': 'void', 'call_id': call_id, 'time': time.time()})
+                account['voided'] = True
+            raise
         account['latency_seconds'] = self.clock() - started
         if not isinstance(data, dict):
             raise CallFailure('malformed_provider_response', account)
@@ -368,7 +393,9 @@ class OpenRouter:
         if model not in accepted:
             raise CallFailure('model_mismatch', account)
         served = data.get('provider')
-        if isinstance(served, str) and self.c['provider'] not in served.lower():
+        if not isinstance(served, str) or not served.strip():
+            raise CallFailure('provider_missing', account)
+        if self.c['provider'] not in served.lower():
             raise CallFailure('provider_mismatch', account)
         if tokens_in > self.b['max_input_tokens']:
             raise CallFailure('input_ceiling_exceeded', account)
@@ -391,8 +418,12 @@ class OpenRouter:
             raise CallFailure('nonterminal_output', account)
         if len(text) > self.b['max_visible_chars']:
             raise CallFailure('answer_too_long', account)
+        def no_duplicates(pairs):
+            keys = [k for k, _ in pairs]
+            if len(set(keys)) != len(keys): raise ValueError('duplicate key')
+            return dict(pairs)
         try:
-            obj = json.loads(text, object_pairs_hook=_no_duplicate_keys)
+            obj = json.loads(text, object_pairs_hook=no_duplicates)
         except Exception:
             account['answer_text'] = text[:BODY_KEPT]
             raise CallFailure('invalid_json', account) from None
