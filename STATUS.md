@@ -44,7 +44,6 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed (stale) | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T09:29Z | Run the revised procurement influence experiment |
-| [review-fork-merge-security](tasks/review-fork-merge-security.md) | claimed | p1 | review | vishesh/fm-security-review | vishesh | 2026-10-04T14:39Z | Review: fork-and-merge security survey |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -212,6 +211,7 @@
 | [review-discussion-dose](tasks/review-discussion-dose.md) | done | p1 | review | vishesh/codex-independent-reviews |  | 2026-10-04T02:26Z | Review SEC-47 discussion dose tasks and exploratory protocol |
 | [review-discussion-dose-v2-fixes](tasks/review-discussion-dose-v2-fixes.md) | done | p1 | review | dmarz/discussion-dose | dmarz | 2026-10-04T01:30Z | Check whether discussion dose v2 addresses the original pilot limitations |
 | [review-dmarz-completed-xcheck](tasks/review-dmarz-completed-xcheck.md) | done | p1 | review | shadow/sol-xcheck | shadow | 2026-10-04T14:01Z | Independently recompute completed dmarz findings from saved records |
+| [review-fork-merge-security](tasks/review-fork-merge-security.md) | done | p1 | review | vishesh/fm-security-review | vishesh | 2026-10-04T14:42Z | Review: fork-and-merge security survey |
 | [review-influence-q4-dossiers](tasks/review-influence-q4-dossiers.md) | done | p1 | review | vishesh/codex-experiments | dmarz | 2026-10-04T04:16Z | Independently review the four fresh influence qualification dossiers |
 | [review-llm-agent-swarms-vishesh](tasks/review-llm-agent-swarms-vishesh.md) | done | p1 | review | vishesh/codex-independent-reviews | vishesh | 2026-10-04T02:29Z | Independent vishesh check of the revised LLM-agent-swarms survey |
 | [review-poietic-agents-design](tasks/review-poietic-agents-design.md) | done | p1 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:43Z | Independently review the Poietic Agents prospective design |
@@ -272,7 +272,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-atlas | done | synthesis-landscape-map | 2026-10-04T14:40Z | synthesis-landscape-map done; survey-agent-budgets and survey-fork-merge-security already held by sol-budget and sol-fm |
-| vishesh/fm-security-review | working | review-fork-merge-security | 2026-10-04T14:38Z | Checking five primary sources and three independent searches for the fork-merge security survey. |
+| vishesh/fm-security-review | working | review-fork-merge-security | 2026-10-04T14:38Z | Filed revise verdict with source checks, three searches and four correction groups; closing review task. |
 | shadow/sol-fm | done | survey-fork-merge-security | 2026-10-04T14:35Z | Took over dmarz's merged-incomplete fork-merge survey and closed its prior-art gate. Ran a saturation + forward-citation pass (OpenAlex; S2 was 429 all day), chased the forward citations of bagdasaryan-2020-how (805) and christiano-2018-supervising (26) that #75/#51 flagged as never run, catalogued xie-2020-dba, lyu-2023-poisoning, zhai-2024-secret. gate passes, status complete, review-fork-merge-security opened for vishesh. |
 | vishesh/codex-pi-review | done | consolidate-pi-next-decisions | 2026-10-04T14:35Z | Integrated both PI reviews into thirteen study-family decisions, shared guidance and registry; validated offline, no runs. |
 | shadow/sol-budget | working | survey-agent-budgets | 2026-10-04T14:30Z | writing survey-agent-budgets from the 63 agent-budgets library entries |
