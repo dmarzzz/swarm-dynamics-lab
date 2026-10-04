@@ -1,0 +1,149 @@
+{
+  "schema": "heterogeneous-frontiers-social-v1",
+  "discussions": [
+    {
+      "id": "x-profbuehlermit-2102337582159835512",
+      "url": "https://x.com/ProfBuehlerMIT/status/2102337582159835512",
+      "author_handle": "@ProfBuehlerMIT",
+      "published": "2026-09-22",
+      "accessed": "2026-10-04",
+      "title": "Emergent hubs and brokers in agent ecologies",
+      "project": "agent-ecology",
+      "access_method": "direct browser read",
+      "read_scope": "Expanded root and visible replies; embedded video not analyzed",
+      "evidence_status": "Unverified author demonstration; no opened reproducible paper/code attached to this claim",
+      "summary": "Emergent network structure is a discussion lead, not a model-heterogeneity experiment",
+      "linked_library_ids": [],
+      "full_thread_archived": false,
+      "review": "Source screening only; no independent replication"
+    },
+    {
+      "id": "x-dimitrispapail-2101901206746701880",
+      "url": "https://x.com/DimitrisPapail/status/2101901206746701880",
+      "author_handle": "@DimitrisPapail",
+      "published": "2026-09-20",
+      "accessed": "2026-10-04",
+      "title": "Test-time communication as a capabilities scaling axis",
+      "project": "test-time-communication",
+      "access_method": "direct browser read",
+      "read_scope": "Complete long root and two visible follow-up replies",
+      "evidence_status": "Author discussion of a linked preprint",
+      "summary": "Homogeneous-team communication is prior art, not proof of heterogeneous advantage",
+      "linked_library_ids": [
+        "park-2026-scaling"
+      ],
+      "full_thread_archived": false,
+      "review": "Source screening only; no independent replication"
+    },
+    {
+      "id": "x-teknologyy-2101928663000162759",
+      "url": "https://x.com/TEKnologyy/status/2101928663000162759",
+      "author_handle": "@TEKnologyy",
+      "published": "2026-09-20",
+      "accessed": "2026-10-04",
+      "title": "Heterogeneous agents exchanging transactive memory",
+      "project": "matm",
+      "access_method": "direct browser read",
+      "read_scope": "Complete root",
+      "evidence_status": "Author discussion of a linked preprint",
+      "summary": "Producer-consumer memory markets already exist",
+      "linked_library_ids": [
+        "kim-2026-multi"
+      ],
+      "full_thread_archived": false,
+      "review": "Source screening only; no independent replication"
+    },
+    {
+      "id": "x-hardmaru-2009294780594065555",
+      "url": "https://x.com/hardmaru/status/2009294780594065555",
+      "author_handle": "@hardmaru",
+      "published": "2026-01-08",
+      "accessed": "2026-10-04",
+      "title": "Digital Red Queen program evolution",
+      "project": "drq",
+      "access_method": "direct browser read",
+      "read_scope": "Full long root and two continuation posts",
+      "evidence_status": "Author discussion of a linked preprint and project",
+      "summary": "Generality can improve alongside behavioral convergence",
+      "linked_library_ids": [
+        "kumar-2026-digital"
+      ],
+      "full_thread_archived": false,
+      "review": "Source screening only; no independent replication"
+    },
+    {
+      "id": "x-jack_w_lindsey-2089110178960662719",
+      "url": "https://x.com/Jack_W_Lindsey/status/2089110178960662719",
+      "author_handle": "@Jack_W_Lindsey",
+      "published": "2026-08-16",
+      "accessed": "2026-10-04",
+      "title": "Mind-virus research and current mitigations",
+      "project": "mind-viruses",
+      "access_method": "direct browser read",
+      "read_scope": "Complete root and visible replies; truncated reply portions excluded",
+      "evidence_status": "Author discussion of linked research",
+      "summary": "Propagation is already researched; current-risk judgment is the author’s assessment",
+      "linked_library_ids": [
+        "papadopoulos-2026-mind"
+      ],
+      "full_thread_archived": false,
+      "review": "Source screening only; no independent replication"
+    },
+    {
+      "id": "x-mcn_s7-2089107014526079341",
+      "url": "https://x.com/Mcn_S7/status/2089107014526079341",
+      "author_handle": "@Mcn_S7",
+      "published": "2026-08-16",
+      "accessed": "2026-10-04",
+      "title": "Persistent-file transmission across agent interactions",
+      "project": "mind-viruses",
+      "access_method": "direct browser read",
+      "read_scope": "Root and four visible continuations; not the entire thread",
+      "evidence_status": "Coauthor discussion of same paper as Lindsey",
+      "summary": "Persistent-file contagion is not a new research gap",
+      "linked_library_ids": [
+        "papadopoulos-2026-mind"
+      ],
+      "full_thread_archived": false,
+      "review": "Source screening only; no independent replication"
+    },
+    {
+      "id": "x-eliaseskin-2095532473539051602",
+      "url": "https://x.com/EliasEskin/status/2095532473539051602",
+      "author_handle": "@EliasEskin",
+      "published": "2026-09-03",
+      "accessed": "2026-10-04",
+      "title": "GlossoGen language emergence and transmission",
+      "project": "glossogen",
+      "access_method": "direct browser read",
+      "read_scope": "Full long root; truncated continuation portions excluded",
+      "evidence_status": "Author discussion of linked preprint",
+      "summary": "Weak-model acquisition of a stronger model’s conventions is already demonstrated",
+      "linked_library_ids": [
+        "stengel-eskin-2026-glossogen"
+      ],
+      "full_thread_archived": false,
+      "review": "Source screening only; no independent replication"
+    },
+    {
+      "id": "x-sashaboguraev-2095534354466304029",
+      "url": "https://x.com/SashaBoguraev/status/2095534354466304029",
+      "author_handle": "@SashaBoguraev",
+      "published": "2026-09-03",
+      "accessed": "2026-10-04",
+      "title": "Productive generalization in emergent languages",
+      "project": "glossogen",
+      "access_method": "direct browser read",
+      "read_scope": "Root and four continuation posts",
+      "evidence_status": "Coauthor discussion of same GlossoGen paper",
+      "summary": "Procedural recombination needs held-out tests beyond codebook memorization",
+      "linked_library_ids": [
+        "stengel-eskin-2026-glossogen"
+      ],
+      "full_thread_archived": false,
+      "review": "Source screening only; no independent replication"
+    }
+  ],
+  "distinct_projects": 6,
+  "notes": "Eight read discussions, six projects. Paraphrase archive; partial threads are not labeled full reads."
+}

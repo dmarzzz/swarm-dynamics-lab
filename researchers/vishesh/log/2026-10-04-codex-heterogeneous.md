@@ -11,3 +11,13 @@ No research hypothesis was promoted and no experiment/model call was run. Formal
 Validation completed: 29 export tests, idea-score JavaScript checks, TypeScript and production build passed. Bibliographic verification checked 15 new papers with zero problems. Lab schema check has zero errors and five pre-existing unresolved-link warnings.
 
 Integrated concurrent DM bank/rating additions without replacing them. A concurrent YAML status error was fixed upstream before publication; no other researcher files were modified. The merged export passed all 29 tests (343 total records).
+
+## Biological-frontier revision
+
+The owner found the first shortlist uninteresting and requested deeper X research and biological questions. Read eight substantive X discussions across six projects and followed primary sources. Added HX-31–HX-38, eleven canonical entries, source/access ledgers, per-item editorial reviews, unchanged-rubric scores and five prospective designs.
+
+New subset leaders: HX-31 (93), HX-32 (92), HX-33 (92), HX-35 (91), HX-37 (90); HX-38 also rounds to 90. This is a biologically filtered recommendation, not a rewrite of historical scores. The most consequential new predecessor is Kelley 2026: digital organelles and mutualistic evolutionary constraint already exist. GlossoGen also occupies language invention and weak-model transmission. Narrowed the candidate deltas accordingly.
+
+No inference or experiments launched. Follow-up methods/independent review still required. Nine added paper identifiers passed verification; source summaries and original X URLs replace wholesale thread reproduction. Inaccessible biological sources remain explicit inbox leads rather than phantom catalogue entries.
+
+Published revision d903d00; dashboard workflow 37173891058 succeeded. Rebased concurrent updates while retaining other researchers’ task states and inbox processing. The merged export still passed all 29 tests. Biological-frontier research task marked done; no hypothesis or experiment status was advanced.

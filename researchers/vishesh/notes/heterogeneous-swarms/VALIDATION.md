@@ -13,3 +13,5 @@ Checked 2026-10-04 UTC by vishesh/codex-heterogeneous. Research-only contributio
 Formal gate status: scoping review only, no newly claimed full-paper reads, no saturation, no independent review, no accepted hypotheses. Follow-up task `heterogeneous-methods-review` records the work needed for promotion. Public-plan registration is not applicable to this literature contribution; it is mandatory before any experimental qualification or run.
 
 Final post-commit export verification: **29 tests passed**. Committing the new library files supplied the expected Git-derived timestamps and resolved the initial export-test failure without changing test logic. `git diff --cached --check` also passed. Generated dashboard data and local dependency links are not part of this research commit.
+
+Biological revision validation is recorded separately in [frontiers/VALIDATION.md](frontiers/VALIDATION.md): eight added questions, nine paper identifiers verified, and the same export/score contracts checked. The original scan counts above are historical.

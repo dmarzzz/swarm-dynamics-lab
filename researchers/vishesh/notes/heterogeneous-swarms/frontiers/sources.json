@@ -1,0 +1,263 @@
+{
+  "schema": "heterogeneous-frontiers-sources-v1",
+  "accessed": "2026-10-04",
+  "sources": [
+    {
+      "id": "park-2026-scaling",
+      "title": "Scaling Discovery through Test-Time Communication",
+      "type": "paper",
+      "authors": [
+        "Jongho Park",
+        "Vasilis Kontonis",
+        "Shivam Garg",
+        "Akshay Krishnamurthy",
+        "Dimitris Papailiopoulos"
+      ],
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2609.21032",
+      "arxiv": "2609.21032",
+      "doi": null,
+      "library_path": "library/papers/park-2026-scaling.md",
+      "accessed": "2026-10-04",
+      "read_depth": "abstract",
+      "access_note": "Abstract read; costs and exact experimental matching require full-methods review.",
+      "evidence_status": "author-reported; not independently replicated",
+      "catalogue_action": "new"
+    },
+    {
+      "id": "kim-2026-multi",
+      "title": "Multi-Agent Transactive Memory",
+      "type": "paper",
+      "authors": [
+        "To Eun Kim",
+        "Xuhong He",
+        "Dishank Jain",
+        "Ambuj Agrawal",
+        "Negar Arabzadeh",
+        "Fernando Diaz"
+      ],
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2606.19911",
+      "arxiv": "2606.19911",
+      "doi": null,
+      "library_path": "library/papers/kim-2026-multi.md",
+      "accessed": "2026-10-04",
+      "read_depth": "abstract",
+      "access_note": "Abstract read; does not establish resource-mediated coexistence or reciprocal habitat selection.",
+      "evidence_status": "author-reported; not independently replicated",
+      "catalogue_action": "new"
+    },
+    {
+      "id": "kumar-2026-digital",
+      "title": "Digital Red Queen: Adversarial Program Evolution in Core War with LLMs",
+      "type": "paper",
+      "authors": [
+        "Akarsh Kumar",
+        "Ryan Bahlous-Boldi",
+        "Prafull Sharma",
+        "Phillip Isola",
+        "Sebastian Risi",
+        "Yujin Tang",
+        "David Ha"
+      ],
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2601.03335",
+      "arxiv": "2601.03335",
+      "doi": null,
+      "library_path": "library/papers/kumar-2026-digital.md",
+      "accessed": "2026-10-04",
+      "read_depth": "abstract",
+      "access_note": "Abstract read; programs compete, rather than a persistent mixed-model agent society.",
+      "evidence_status": "author-reported; not independently replicated",
+      "catalogue_action": "new"
+    },
+    {
+      "id": "nisioti-2024-collective",
+      "title": "Collective Innovation in Groups of Large Language Models",
+      "type": "paper",
+      "authors": [
+        "Eleni Nisioti",
+        "Sebastian Risi",
+        "Ida Momennejad",
+        "Pierre-Yves Oudeyer",
+        "Clément Moulin-Frier"
+      ],
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2407.05377",
+      "arxiv": "2407.05377",
+      "doi": null,
+      "library_path": "library/papers/nisioti-2024-collective.md",
+      "accessed": "2026-10-04",
+      "read_depth": "abstract",
+      "access_note": "Abstract read; mixed-model ecological dependence is not established.",
+      "evidence_status": "author-reported; not independently replicated",
+      "catalogue_action": "new"
+    },
+    {
+      "id": "stengel-eskin-2026-glossogen",
+      "title": "GlossoGen: Emergent Language in Complex Multi-Agent LLM Interactions",
+      "type": "paper",
+      "authors": [
+        "Elias Stengel-Eskin",
+        "Newton Sander",
+        "Carlos Bonetti",
+        "Sasha Boguraev",
+        "James Bowler",
+        "Hale Sirin",
+        "Simon Kirby"
+      ],
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2609.01491",
+      "arxiv": "2609.01491",
+      "doi": null,
+      "library_path": "library/papers/stengel-eskin-2026-glossogen.md",
+      "accessed": "2026-10-04",
+      "read_depth": "abstract",
+      "access_note": "Abstract and selected HTML methods read, not the full paper. Novel procedural incompatibility remains untested here.",
+      "evidence_status": "author-reported; not independently replicated",
+      "catalogue_action": "new"
+    },
+    {
+      "id": "el-kandoussi-2026-who",
+      "title": "\"Who Am I, and Who Else Is Here?\" Behavioral Differentiation Without Role Assignment in Multi-Agent LLM Systems",
+      "type": "paper",
+      "authors": [
+        "Houssam EL Kandoussi"
+      ],
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2604.00026",
+      "arxiv": "2604.00026",
+      "doi": null,
+      "library_path": "library/papers/el-kandoussi-2026-who.md",
+      "accessed": "2026-10-04",
+      "read_depth": "abstract",
+      "access_note": "Abstract read; measured discussion behavior is not demonstrated functional specialization.",
+      "evidence_status": "author-reported; not independently replicated",
+      "catalogue_action": "new"
+    },
+    {
+      "id": "lai-2024-evolving",
+      "title": "Evolving AI Collectives to Enhance Human Diversity and Enable Self-Regulation",
+      "type": "paper",
+      "authors": [
+        "Shiyang Lai",
+        "Yujin Potter",
+        "Junsol Kim",
+        "Richard Zhuang",
+        "Dawn Song",
+        "James Evans"
+      ],
+      "year": 2024,
+      "url": "https://arxiv.org/abs/2402.12590",
+      "arxiv": "2402.12590",
+      "doi": null,
+      "library_path": "library/papers/lai-2024-evolving.md",
+      "accessed": "2026-10-04",
+      "read_depth": "abstract",
+      "access_note": "Abstract and selected HTML introduction/methods read; not a full replication assessment.",
+      "evidence_status": "author-reported; not independently replicated",
+      "catalogue_action": "new"
+    },
+    {
+      "id": "morris-2014-coexistence",
+      "title": "Coexistence of evolving bacteria stabilized by a shared Black Queen function",
+      "type": "paper",
+      "authors": [
+        "J Jeffrey Morris",
+        "Spiridon E Papoulis",
+        "Richard E Lenski"
+      ],
+      "year": 2014,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24989794/",
+      "arxiv": null,
+      "doi": "10.1111/evo.12485",
+      "library_path": "library/papers/morris-2014-coexistence.md",
+      "accessed": "2026-10-04",
+      "read_depth": "abstract",
+      "access_note": "Abstract read. Tool-policy pruning is an analogy, not a claim of changing foundation-model weights.",
+      "evidence_status": "author-reported; not independently replicated",
+      "catalogue_action": "new"
+    },
+    {
+      "id": "kelley-2026-endosymbiotic",
+      "title": "Endosymbiotic mutualism can constrain host diversity and evolved complexity",
+      "type": "paper",
+      "authors": [
+        "Delaney Kelley",
+        "Owen Hillary",
+        "Elias Hillman-Emelianoff",
+        "Ahmad Khalili",
+        "Ruoyu Zhang",
+        "Kiara M. Johnson",
+        "Emily Dolson",
+        "Anya E. Vostinar",
+        "Alexander Lalejini"
+      ],
+      "year": 2026,
+      "url": "https://www.researchgate.net/publication/403493351_Endosymbiotic_mutualism_can_constrain_host_diversity_and_evolved_complexity",
+      "arxiv": null,
+      "doi": "10.32942/X2HQ1W",
+      "library_path": "library/papers/kelley-2026-endosymbiotic.md",
+      "accessed": "2026-10-04",
+      "read_depth": "abstract",
+      "access_note": "Abstract, introduction and selected methods read, not full. Trait matching and synergy are explicitly parameterized.",
+      "evidence_status": "author-reported; not independently replicated",
+      "catalogue_action": "new"
+    },
+    {
+      "id": "deepmind-institute-2026-artificial",
+      "title": "Artificial symbiotic intelligence: Agents, AGI and orchestration of many minds",
+      "type": "blog",
+      "authors": [
+        "Benjamin Bratton",
+        "Blaise Agüera y Arcas",
+        "James Manyika"
+      ],
+      "year": 2026,
+      "url": "https://institute.deepmind.com/essays/artificial-symbiotic-intelligence/",
+      "library_path": "library/blogs/deepmind-institute-2026-artificial.md",
+      "accessed": "2026-10-04",
+      "read_depth": "full",
+      "evidence_status": "Opinion and synthesis; the essay disclaims representing an official institutional position.",
+      "catalogue_action": "new"
+    },
+    {
+      "id": "deepmind-institute-2026-cheaters",
+      "title": "Cheaters and whistleblowers in the agent swarm",
+      "type": "blog",
+      "authors": [
+        "Davide Paglieri",
+        "Alexander (Sasha) Vezhnevets"
+      ],
+      "year": 2026,
+      "url": "https://institute.deepmind.com/essays/cheaters-and-whistleblowers-in-the-agent-swarm/",
+      "library_path": "library/blogs/deepmind-institute-2026-cheaters.md",
+      "accessed": "2026-10-04",
+      "read_depth": "full",
+      "evidence_status": "Author research essay reporting a 100-agent Gemini 3.1 scenario; underlying paper methods not read here.",
+      "catalogue_action": "new"
+    },
+    {
+      "id": "vallinder-2024-cultural",
+      "title": "Cultural Evolution of Cooperation among LLM Agents",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2412.10270",
+      "library_path": "library/papers/vallinder-2024-cultural.md",
+      "accessed": "2026-10-04",
+      "read_depth": "abstract",
+      "evidence_status": "Fresh abstract only; existing catalogue deeper read belongs to its original author.",
+      "catalogue_action": "reused"
+    },
+    {
+      "id": "papadopoulos-2026-mind",
+      "title": "Mind Viruses: Self-Propagating Ideas in Multi-Agent LLM Systems",
+      "type": "paper",
+      "url": "https://arxiv.org/abs/2608.10218",
+      "library_path": "library/papers/papadopoulos-2026-mind.md",
+      "accessed": "2026-10-04",
+      "read_depth": "abstract",
+      "evidence_status": "Fresh abstract only; existing catalogue deeper read belongs to its original author.",
+      "catalogue_action": "reused"
+    }
+  ]
+}

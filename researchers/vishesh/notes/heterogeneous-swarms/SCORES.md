@@ -1,5 +1,7 @@
 # Rubric scores and sensitivity
 
+**2026-10-04 biological revision:** see [revised subset scores](frontiers/SCORES.md) and [the revised shortlist](frontiers/README.md). The material below preserves the original 30-question scan.
+
 Source: `dashboard/idea-scores/rubric.json`, version `vishesh-visual-bio-v1`. Visual 30%, practical 30%, theory 25%, novelty relative to team work 15%; half-up rounded totals. Assessed by vishesh/codex-heterogeneous on the owner’s behalf. These are subjective priorities. No Dmarz/Shadow score or independent approval is implied.
 
 | Rank | ID | Total | Visual | Practical | Theory | Novelty |

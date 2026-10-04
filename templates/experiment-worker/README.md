@@ -104,6 +104,7 @@ python3 src/coordinator.py register          # once
 python3 src/coordinator.py stage S0          # clean-task validation
 ./run-workers.sh                             # one self-restarting worker per core, in tmux "workers"
                                              # add --at-boot to bring them back after a reboot
+                                             # model-API-bound work waits on the network: ./run-workers.sh 16 on a 4-vCPU box is fine
 ```
 Watch the hub dashboard. S0 must show the clean task done (both arms commit and are mostly right). If
 not, diagnose the simulator, model, adapter, fixtures and evaluator in the post-mortem. Repair the

@@ -1,0 +1,78 @@
+{
+  "schema": "heterogeneous-frontiers-supplemental-v1",
+  "accessed": "2026-10-04",
+  "sources": [
+    {
+      "title": "What Should Agent Evaluation Measure When Agents Change Their Environments? A Survey of Agent-Environment Co-Evolution",
+      "authors": [
+        "Chenzhi Zheng",
+        "Jingwen Lin",
+        "Jiang-Ming Yang",
+        "Xin Zhang",
+        "Jianshe Li",
+        "Yongqi Tong"
+      ],
+      "year": 2026,
+      "url": "https://www.researchgate.net/publication/405920320_What_Should_Agent_Evaluation_Measure_When_Agents_Change_Their_Environments_A_Survey_of_Agent-Environment_Co-Evolution",
+      "doi": "10.13140/RG.2.2.22606.42563",
+      "status": "opened author-uploaded preprint; bibliographic verification outstanding; not counted in canonical ledger",
+      "read_scope": "Abstract and selected protocol passages",
+      "use": "Close prior art for HX-33; inheritance alone is not novel"
+    },
+    {
+      "title": "SymbulationEmp",
+      "authors": [
+        "Anya E. Vostinar and contributors"
+      ],
+      "url": "https://github.com/anyaevostinar/SymbulationEmp",
+      "additional_url": "https://symbulation.readthedocs.io/en/latest/",
+      "status": "README/documentation opened; not run; code metadata not fully catalogued",
+      "read_scope": "README and documentation landing page",
+      "use": "Artificial-life implementation context; no LLM results inferred"
+    },
+    {
+      "title": "Microbial evolution in a simple unstructured environment: genetic differentiation in Escherichia coli",
+      "authors": [
+        "R F Rosenzweig",
+        "R R Sharp",
+        "D S Treves",
+        "J Adams"
+      ],
+      "year": 1994,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7982572/",
+      "doi": "10.1093/genetics/137.4.903",
+      "status": "indexed primary abstract only; direct reading failed; uncatalogued lead",
+      "read_scope": "Search-result abstract; PubMed returned empty content, PMC challenge, Europe PMC unavailable",
+      "use": "Required cross-feeding methods follow-up for HX-37"
+    },
+    {
+      "title": "Endosymbiosis or Bust: Influence of Ectosymbiosis on Evolution of Obligate Endosymbiosis",
+      "authors": [
+        "Kiara Johnson",
+        "Piper Welch",
+        "Emily Dolson",
+        "Anya E. Vostinar"
+      ],
+      "year": 2022,
+      "url": "https://ecoevorxiv.org/repository/view/3803/",
+      "doi": "10.32942/osf.io/yzce3",
+      "status": "indexed lead; direct source inaccessible; uncatalogued",
+      "read_scope": "No direct methods read",
+      "use": "Older digital-life overlap to resolve before HX-32 promotion"
+    },
+    {
+      "title": "The Black Queen Hypothesis: Evolution of Dependencies through Adaptive Gene Loss",
+      "authors": [
+        "J Jeffrey Morris",
+        "Richard E Lenski",
+        "Erik R Zinser"
+      ],
+      "year": 2012,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3315703/",
+      "doi": "10.1128/mbio.00036-12",
+      "status": "indexed primary abstract only; direct source challenge; uncatalogued lead",
+      "read_scope": "No direct methods read",
+      "use": "Foundational theory follow-up; accessible Morris 2014 experiment is canonical anchor"
+    }
+  ]
+}

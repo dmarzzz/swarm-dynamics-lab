@@ -24,6 +24,10 @@ Qualify the paid model adapter offline, then run bounded neutral-agent competenc
 ## Done when
 
 - [x] Frozen neutral design and durable accounting pass mocked API tests.
-- [ ] Exclusive host and reviewed model qualification pass before discovery.
+- [x] Exclusive host and reviewed model qualification pass before discovery.
 - [ ] Bounded discovery pilot reports all episodes, failures, cost and replay.
 - [ ] Post-mortem, artifact verification and claim release completed.
+
+## Coverage note
+
+2026-10-04: user added a conditional parallel-model request. Sonnet V5 now passes15offline checks,12mockepisodes,6mechanics and4fresh profit episodes;independent Haiku qualification may proceed while Sonnet discovery runs. Both retain separate queues,ledgers and model-specific reports.

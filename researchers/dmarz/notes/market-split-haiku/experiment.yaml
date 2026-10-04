@@ -1,0 +1,69 @@
+id: market-split-haiku
+owner: dmarz
+title: 'Market splitting: Haiku with reasoning'
+description: Independent model comparison to Sonnet. Identical neutral market and
+  action budgets; gates before discovery; all earlier Haiku failures retained in market-split-api.
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/market-split-haiku
+params:
+  stage:
+    type: str
+    role: stage
+    label: Stage
+    value_labels:
+      S0: Scripted checks
+      I0: Action mechanics
+      Q0: Profit qualification
+      S1: Discovery pilot
+  regulator:
+    type: str
+    role: condition
+    label: Regulation
+    value_labels:
+      none: No regulator
+      firm: Firm-based
+      owner: Owner-based
+  task_id:
+    type: int
+    role: replicate
+    label: Market
+  seed:
+    type: int
+    role: replicate
+  backend:
+    type: str
+    role: fixed
+  attempt_id:
+    type: str
+    role: condition
+    label: Version / attempt
+    value_labels:
+      q0-001: Haiku reasoning qualification
+      s1-001: Haiku reasoning discovery pilot
+  code:
+    role: fixed
+  engine_sha256:
+    role: fixed
+  design_sha256:
+    role: fixed
+  model:
+    role: fixed
+  rounds:
+    role: fixed
+  arms:
+    role: fixed
+  threshold:
+    role: fixed
+  registration_fee:
+    role: fixed
+metrics:
+- episodes
+- invalid
+- fragmentation_dynamic
+- fragmentation_locked
+- profit_dynamic
+- profit_locked
+- model_calls
+- api_cost_usd
+- qualification_pass
+- visual_ok
+primary_metric: fragmentation_dynamic
