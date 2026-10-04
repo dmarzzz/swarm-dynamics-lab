@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-phantom-coast
 tool: codex
-state: done
-task: phantom-coast-pc11-sol
-doing: PC11 qualified and120-decision ten-agent pilot reviewed; no spread in one world, exposure1.193795490, allocation released
+state: working
+task: phantom-coast-pc12-wide
+doing: Preparing eight-world sourced-evidence diagnostic with independent learning and correction controls
 updated: 2026-10-04T20:20:22.452084+00:00
 ---
 

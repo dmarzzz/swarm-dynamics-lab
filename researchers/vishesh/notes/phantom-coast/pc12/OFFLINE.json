@@ -1,0 +1,9 @@
+{
+  "evidence_kind": "SCRIPTED\u2014NOT MODEL EVIDENCE",
+  "parameter_combinations": 1728,
+  "independent_world_enumeration_max_error": 2.220446049250313e-16,
+  "faulty_origin_blind_detected_cases": 320,
+  "native_packet_shapes_checked": 656,
+  "max_body_bytes": 1201,
+  "calls": 0
+}
