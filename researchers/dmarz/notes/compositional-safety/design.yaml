@@ -1,4 +1,4 @@
-version: compositional-safety-v1
+version: compositional-safety-v2
 status: exploratory-qualification
 model: claude-haiku-4-5-20251001
 arms:
@@ -38,9 +38,9 @@ stages:
   Q0:
     backend: anthropic
     tasks:
-    - 200
-    - 201
-    - 202
+    - 210
+    - 211
+    - 212
     domains:
     - D1
     - D2

@@ -47,9 +47,10 @@ class Anthropic:
         if not self.key or not self.workspace: raise CallFailure('missing_credential_alias')
 
     def call(self, packet, call_id):
+        schema = {**SCHEMA, 'properties': {**SCHEMA['properties'], 'action': {'type': 'string', 'enum': packet['actions']}}}
         body = {'model': self.d['model'], 'max_tokens': self.b['max_output_tokens'], 'temperature': 0,
                 'system': SYSTEM, 'messages': [{'role': 'user', 'content': json.dumps(packet, sort_keys=True)}],
-                'output_config': {'format': {'type': 'json_schema', 'schema': SCHEMA}}}
+                'output_config': {'format': {'type': 'json_schema', 'schema': schema}}}
         encoded = json.dumps(body).encode()
         if len(encoded) > self.b['max_input_bytes']: raise CallFailure('input_size_limit')
         reserve = (len(encoded)+4096)*self.b['input_usd_per_million'] + self.b['max_output_tokens']*self.b['output_usd_per_million']
@@ -66,19 +67,23 @@ class Anthropic:
         except urllib.error.HTTPError as exc: raise CallFailure('http_'+str(exc.code), acc) from None
         except Exception as exc: raise CallFailure('transport_'+type(exc).__name__, acc) from None
         acc['latency_seconds'] = time.monotonic()-t
+        if not isinstance(data, dict): raise CallFailure('invalid_provider_response', acc)
         usage = data.get('usage', {})
-        if not all(type(usage.get(k)) is int and usage[k] >= 0 for k in ('input_tokens', 'output_tokens')): raise CallFailure('missing_usage', acc)
+        if not isinstance(usage, dict) or not all(type(usage.get(k)) is int and usage[k] >= 0 for k in ('input_tokens', 'output_tokens')): raise CallFailure('missing_usage', acc)
         if usage.get('cache_creation_input_tokens', 0) or usage.get('cache_read_input_tokens', 0): raise CallFailure('unexpected_cache_usage', acc)
         actual = usage['input_tokens']*self.b['input_usd_per_million'] + usage['output_tokens']*self.b['output_usd_per_million']
         self.ledger.transact({'type': 'response', 'call_id': call_id, 'actual_micro_usd': actual, **usage})
         acc.update(usage_reported=True, actual_usd=actual/1e6, input_tokens=usage['input_tokens'], output_tokens=usage['output_tokens'])
         if actual > reserve: raise CallFailure('reservation_bound_breached', acc)
+        content = data.get('content', [])
+        if not isinstance(content, list) or len(content) != 1 or not isinstance(content[0],dict) or content[0].get('type') != 'text': raise CallFailure('unexpected_content', acc)
+        acc['response_text'] = str(content[0].get('text', ''))[:8192]
         if data.get('model') != self.d['model']: raise CallFailure('model_mismatch', acc)
         if data.get('stop_reason') != 'end_turn': raise CallFailure('nonterminal_output', acc)
-        try:
-            content = data['content']
-            if len(content) != 1 or content[0]['type'] != 'text': raise ValueError('content')
-            answer = json.loads(content[0]['text'])
-            if set(answer) != {'action', 'message'} or answer['action'] not in packet['actions'] or not isinstance(answer['message'], str): raise ValueError('answer')
-        except Exception: raise CallFailure('invalid_structured_answer', acc) from None
+        # Preserve task-only generated text when a response is rejected; never HTTP headers or errors.
+        try: answer = json.loads(acc['response_text'])
+        except Exception: raise CallFailure('invalid_structured_json', acc) from None
+        if not isinstance(answer, dict) or set(answer) != {'action', 'message'} or not isinstance(answer['message'], str): raise CallFailure('invalid_structured_schema', acc)
+        if answer['action'] not in packet['actions']: raise CallFailure('invalid_action', acc)
+        del acc['response_text']
         return answer, acc
