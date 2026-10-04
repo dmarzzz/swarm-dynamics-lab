@@ -38,6 +38,10 @@ def fingerprint():
 
 def runtime():
     import importlib.util
+    import cv2
+    from rapidocr import (
+        RapidOCR,
+    )  # Import-only dependency preflight, no engine constructed.
 
     pkg = Path(importlib.util.find_spec("rapidocr").origin).parent
     models = {p.name: sha(p) for p in sorted((pkg / "models").glob("*.onnx"))}
@@ -49,6 +53,16 @@ def runtime():
         name: sha(tessdata / (name + ".traineddata")) for name in ["eng", "ind"]
     }
     return {
+        "system_packages": subprocess.check_output(
+            [
+                "dpkg-query",
+                "-W",
+                "-f=${Package}=${Version}\n",
+                "libgl1",
+                "libglib2.0-0t64",
+            ],
+            text=True,
+        ).splitlines(),
         "tesseract_model_hashes": tessmodels,
         "python": platform.python_version(),
         "packages": {
@@ -157,6 +171,27 @@ def measure(row, ident, split, private, versions):
             "valid": False,
         }
         dest = private / f"{split}-{ident}-{name}.json"
+        ledger = private.parent / "calls.jsonl"
+
+        def event(status, **extra):
+            with ledger.open("a") as f:
+                f.write(
+                    json.dumps(
+                        {
+                            "receipt": ident,
+                            "worker": name,
+                            "status": status,
+                            "utc": datetime.datetime.now(
+                                datetime.timezone.utc
+                            ).isoformat(),
+                            **extra,
+                        }
+                    )
+                    + "\n"
+                )
+                f.flush()
+
+        event("started")
         try:
             subprocess.run(
                 [
@@ -192,6 +227,7 @@ def measure(row, ident, split, private, versions):
                 },
                 error=type(e).__name__,
             )
+        event("valid" if entry["valid"] else "error", error=entry.get("error"))
         entry["wall_s"] = time.monotonic() - start
         result["workers"][name] = entry
     result["gold"] = reference(json.loads(row["ground_truth"]))
@@ -327,6 +363,9 @@ def main():
                 records.append(r)
                 f.write(json.dumps(r) + "\n")
                 f.flush()
+                assert all(w["valid"] for w in r["workers"].values()), (
+                    "worker failure: stop before next receipt"
+                )
                 if a.report:
                     sr.report(
                         "progress",
@@ -435,7 +474,7 @@ def main():
                 }
             )
         )
-    except Exception as e:
+    except BaseException as e:
         manifest.update(error=type(e).__name__, wall_s=time.monotonic() - start)
         save()
         if a.report:

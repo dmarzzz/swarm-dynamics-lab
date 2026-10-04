@@ -40,6 +40,36 @@ def fixture():
 
 
 class StudyTests(unittest.TestCase):
+    def test_failed_workers_have_start_and_terminal_journal(self):
+        import io, json, subprocess
+        from unittest.mock import patch
+        from PIL import Image
+        from study import measure
+
+        buf = io.BytesIO()
+        Image.new("RGB", (4, 4), "white").save(buf, format="PNG")
+        row = {
+            "image": {"bytes": buf.getvalue()},
+            "ground_truth": json.dumps({"gt_parse": {}}),
+        }
+        versions = {"model_hashes": {}, "tesseract_model_hashes": {}}
+        with tempfile.TemporaryDirectory() as td:
+            private = Path(td) / "private"
+            private.mkdir()
+            with patch(
+                "study.subprocess.run",
+                side_effect=subprocess.CalledProcessError(1, "worker"),
+            ):
+                r = measure(row, 1, "train", private, versions)
+            events = [
+                json.loads(x)
+                for x in (Path(td) / "calls.jsonl").read_text().splitlines()
+            ]
+            self.assertEqual(len(events), 10)
+            self.assertEqual(sum(e["status"] == "started" for e in events), 5)
+            self.assertEqual(sum(e["status"] == "error" for e in events), 5)
+            self.assertTrue(all(not w["valid"] for w in r["workers"].values()))
+
     def test_audit_reconciles_and_detects_corruption(self):
         r = fixture()
         o, s = evaluate(r)
