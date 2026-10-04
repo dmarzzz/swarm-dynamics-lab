@@ -1,0 +1,46 @@
+{
+  "assignment_digest": {
+    "openrouter": "edcafa0dc44be6f3513b20625e0f75dd52528727e0a04d04e745354af790b3b5",
+    "pool": "d505749dd4936b7c732e7aa106c50501c84a6ce18a6873762b3c96bbd261e7eb"
+  },
+  "assignment_file_sha256": "803151c95035c87c690a2968dff9a4a293dc67c06b86e18b78765c4550ae1ad2",
+  "created": "2026-10-04T17:28:54.761682+00:00",
+  "deadline": 1791151200.0,
+  "dependency_versions": {
+    "PyYAML": "6.0.2",
+    "tiktoken": "0.12.0"
+  },
+  "factory_max_paid_usd": 20,
+  "max_http_attempts": 151,
+  "max_paid_usd": 4,
+  "memory": "fresh stateless call; no inherited operator context",
+  "prior_factory_paid_liability": 1.806969,
+  "public_plan_url": "https://github.com/dmarzzz/swarm-lab/blob/76f42cddddbffca75ddffb818415182b202e7e7f/researchers/shadow/factory/provenance/SPEC.md",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "qualified": false,
+  "registration_readback": {
+    "id": "shadow-factory-provenance-v1",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/76f42cddddbffca75ddffb818415182b202e7e7f/researchers/shadow/factory/provenance/SPEC.md"
+  },
+  "rendered_page_sha256": "74a0cfaf9efaa0e0a3e75785c0980ce128503eb1024ca012560d92c47495fb78",
+  "routes": [
+    "pool",
+    "openrouter"
+  ],
+  "scope": "Q then conditional M, exact fixed assignment list",
+  "source_revision": "76f42cddddbffca75ddffb818415182b202e7e7f",
+  "source_sha256": {
+    "PRE-RUN.md": "3737b848d52a03877e5390954b3da4065c88c790d71e7cdb0e3245d631120925",
+    "SPEC.md": "9f7064db53c6cb6c052b903922d161ae4d8aa244e1f4e053eb3439ae51c53852",
+    "analyze.py": "8d494cca8efdc0a1aa0e551470f8e29aacee1f986524313322e89e546b6efae2",
+    "durable.py": "07176f1155b3bec37b735142596e24bedd9347c548a380cf7e9ef2305c8ccec0",
+    "instrument.py": "74caa453154ec70be1188a651b7feddc70a2315cdc603c428b35db09a9f4b40c",
+    "recompute.py": "6a18a1fa27846984f6f52898e9d2df1d0bb16d1c1ee05fb4e72e79decae3d65b",
+    "requirements.txt": "d982863f4f870dbc71ce3457926d98aeb279746960e5f24066ad0598cb5f1cd6",
+    "run.py": "64a754bbb3435edc2a8f7a8d9015bf23677033c30e13415d6f5b168ec872f3a0",
+    "test_pilot.py": "a3872e96b6ba76bc793343e9a6c824cdca5f1e1e3c509716e398dca9f7f00303"
+  },
+  "spec_sha256": "9f7064db53c6cb6c052b903922d161ae4d8aa244e1f4e053eb3439ae51c53852",
+  "study": "shadow-factory-provenance-v1",
+  "tokenizer": "tiktoken 0.12.0 cl100k_base"
+}
