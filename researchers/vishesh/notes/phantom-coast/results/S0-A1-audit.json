@@ -1,0 +1,5572 @@
+{
+  "audit": "same-author post-run reference arithmetic; not independent researcher review",
+  "assignment_and_request_hashes_pass": true,
+  "reference_majority_and_scores_pass": true,
+  "reset_groups": [
+    {
+      "seed": 206,
+      "actor": 0,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 206,
+      "actor": 1,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 206,
+      "actor": 2,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 207,
+      "actor": 0,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 207,
+      "actor": 1,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 207,
+      "actor": 2,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 208,
+      "actor": 0,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 208,
+      "actor": 1,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 208,
+      "actor": 2,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 209,
+      "actor": 0,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 209,
+      "actor": 1,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 209,
+      "actor": 2,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 210,
+      "actor": 0,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 210,
+      "actor": 1,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 210,
+      "actor": 2,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 211,
+      "actor": 0,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 211,
+      "actor": 1,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    },
+    {
+      "seed": 211,
+      "actor": 2,
+      "calls": 4,
+      "unique_requests": 1,
+      "valid": 4,
+      "distinct_valid_maps": 1
+    }
+  ],
+  "trajectories": [
+    {
+      "seed": 206,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 206,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 207,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 31,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 0.9722222222222222
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 31,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.96875
+      }
+    },
+    {
+      "seed": 208,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 35,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.9722222222222222
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 31,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.96875
+      }
+    },
+    {
+      "seed": 208,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 31,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 0.9722222222222222
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 31,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.96875
+      }
+    },
+    {
+      "seed": 208,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 31,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 0.9722222222222222
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 31,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.96875
+      }
+    },
+    {
+      "seed": 208,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 208,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 209,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 210,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "A",
+      "communication": "private",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "A",
+      "communication": "private",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "A",
+      "communication": "social",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 4,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.1111111111111111,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 4,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.3333333333333333,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 4,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "A",
+      "communication": "social",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "B",
+      "communication": "private",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "B",
+      "communication": "private",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "B",
+      "communication": "social",
+      "state": "reset",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 0,
+      "whole": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.8888888888888888
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 8,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.6666666666666666
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 1,
+      "whole": {
+        "wrong": 0,
+        "missing": 36,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 12,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 4,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 1.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 32,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 1.0
+      }
+    },
+    {
+      "seed": 211,
+      "history": "B",
+      "communication": "social",
+      "state": "retain",
+      "step": 2,
+      "whole": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 36,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "land": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 12,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "exposed": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 4,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "outside": {
+        "wrong": 0,
+        "missing": 0,
+        "denominator": 32,
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    }
+  ],
+  "clean": [
+    {
+      "id": "206-clean-2",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "206-clean-1",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "206-clean-0",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "207-clean-2",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "207-clean-1",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "207-clean-0",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "208-clean-1",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "208-clean-0",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "208-clean-2",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "209-clean-2",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "209-clean-1",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "209-clean-0",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "210-clean-0",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "210-clean-1",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "210-clean-2",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "211-clean-0",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "211-clean-1",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "id": "211-clean-2",
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 36,
+      "lower": 0.0,
+      "upper": 0.0
+    }
+  ],
+  "history_disagreements": [
+    {
+      "seed": 206,
+      "communication": "private",
+      "state": "reset",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 206,
+      "communication": "private",
+      "state": "retain",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 206,
+      "communication": "social",
+      "state": "reset",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 206,
+      "communication": "social",
+      "state": "retain",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 207,
+      "communication": "private",
+      "state": "reset",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 207,
+      "communication": "private",
+      "state": "retain",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 207,
+      "communication": "social",
+      "state": "reset",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 207,
+      "communication": "social",
+      "state": "retain",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 208,
+      "communication": "private",
+      "state": "reset",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 208,
+      "communication": "private",
+      "state": "retain",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 208,
+      "communication": "social",
+      "state": "reset",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 208,
+      "communication": "social",
+      "state": "retain",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 209,
+      "communication": "private",
+      "state": "reset",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 209,
+      "communication": "private",
+      "state": "retain",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 209,
+      "communication": "social",
+      "state": "reset",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 209,
+      "communication": "social",
+      "state": "retain",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 210,
+      "communication": "private",
+      "state": "reset",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 210,
+      "communication": "private",
+      "state": "retain",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 210,
+      "communication": "social",
+      "state": "reset",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 210,
+      "communication": "social",
+      "state": "retain",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 211,
+      "communication": "private",
+      "state": "reset",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 211,
+      "communication": "private",
+      "state": "retain",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 211,
+      "communication": "social",
+      "state": "reset",
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    {
+      "seed": 211,
+      "communication": "social",
+      "state": "retain",
+      "lower": 0.0,
+      "upper": 0.0
+    }
+  ],
+  "deterministic_endpoint_count": 186,
+  "deterministic_endpoint_max_upper": 0.0,
+  "usage_by_condition": {
+    "swarm/social/reset": {
+      "calls": 108,
+      "input_tokens": 778284,
+      "output_tokens": 156780,
+      "cost_usd": 0.03268792800000001
+    },
+    "swarm/social/retain": {
+      "calls": 108,
+      "input_tokens": 834348,
+      "output_tokens": 156783,
+      "cost_usd": 0.03504261599999998
+    },
+    "pooled/private/retain": {
+      "calls": 36,
+      "input_tokens": 249696,
+      "output_tokens": 52260,
+      "cost_usd": 0.010487232000000003
+    },
+    "swarm/private/retain": {
+      "calls": 108,
+      "input_tokens": 749092,
+      "output_tokens": 156784,
+      "cost_usd": 0.031461863999999985
+    },
+    "pooled/private/reset": {
+      "calls": 36,
+      "input_tokens": 245185,
+      "output_tokens": 52262,
+      "cost_usd": 0.010297770000000001
+    },
+    "swarm/private/reset": {
+      "calls": 108,
+      "input_tokens": 735554,
+      "output_tokens": 156784,
+      "cost_usd": 0.030893267999999967
+    },
+    "clean/None/None": {
+      "calls": 18,
+      "input_tokens": 141102,
+      "output_tokens": 26406,
+      "cost_usd": 0.0059262839999999995
+    }
+  },
+  "latency_seconds": {
+    "n": 522,
+    "median": 0.22889376850025656,
+    "maximum": 0.9586663660002159
+  },
+  "known_stage_cost_usd": 0.15679696199999996,
+  "files": {
+    "config.json": "e9f01ac019e42d1124ad0cee4b5ccb45a0d0e238fffed8ec2548eaafd4794db6",
+    "final_frame.png": "130ce9e215cda12728a920cab97b56c92cdd47f1fa2445384f8f371e7f18f1f7",
+    "manifest.json": "b30972a2fb8789f4e6214f71948962b3b0c940f2c60d648bdc73b184181e6748",
+    "public-plan.json": "9e9f24e713d22bdfe2aa7ec0a6e67b1e5e262a18d1c7ada1955e9d1858c5dcbc",
+    "records.json": "f1c5ed4961ef1ff427b102866ef13ab737181a5f9cdfbc51f83e6ed91ccd0615",
+    "replay-manifest.json": "c82f9808c9788e816cc3dbd11aa9c802641ea980d4fd4fd58c6b558eb4404c73",
+    "replay.gif": "e1549e021f6b335097bccb59d70f38e7cd015bd618349f3f01205ec3aacee433",
+    "route.json": "955813600fd741d97f80cb83e818ff71583fa8d5b73da41421ae408658fefd97",
+    "summary.json": "d774af95a21e44c227f02717f66deccc9b2d9cf0577cd0817e04e2c466b03af5"
+  }
+}

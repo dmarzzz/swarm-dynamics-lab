@@ -12,7 +12,7 @@ def frame(row,stage,total,fixture=False):
         for c in CELLS:
             r,col=map(int,c.split(','));v=mp.get(c,'UNKNOWN');x=x0+col*112;y=200+r*112
             d.rectangle((x,y,x+106,y+106),fill=COLORS[v]);d.text((x+40,y+35),'?' if v=='UNKNOWN' else v[0],fill='white',font_size=25)
-    b=bounds(m,w['truth']);d.text((45,905),f"Whole-map error bounds {b['lower']:.1%}–{b['upper']:.1%}; unresolved {b['missing']}/36. Assigned maps: {total}.",fill='#e9eff1',font_size=24)
+    b=bounds(m,w['truth']);d.text((45,905),f"Whole-map error bounds {b['lower']:.1%} to {b['upper']:.1%}; unresolved {b['missing']}/36. Assigned maps: {total}.",fill='#e9eff1',font_size=24)
     d.text((45,949),'Fixed observations; no adaptive scouting claim. Truth never enters the actor packet.',fill='#afbdc5',font_size=22)
     return im
 
