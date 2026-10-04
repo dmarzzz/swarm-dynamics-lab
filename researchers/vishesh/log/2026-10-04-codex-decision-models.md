@@ -11,3 +11,5 @@ After merging concurrent changes, 29 exporter tests passed again. A newly arrive
 ## Second-pass reimagination
 
 Compared four Phantom variants and four Quorum variants after the owner selected these two. Recommended The Island No One Visits and One Witness, a Hundred Votes; the simpler Two Swarms, One World comparison comes before a closed observation loop. Reframed the remaining three with concrete stories and retained only Stop-Signal as a core recovery treatment. Preserved original scores rather than retrofitting them to the preference. Added two verified-primary reading records, abstract depth. Proposed diagram is explicitly conceptual. No experiment code or model calls.
+
+Validation for the second pass: 8 paper records checked against arXiv/Crossref, zero problems; lab check zero errors with five existing missing-reference warnings; nine memo citation IDs resolved; git diff whitespace check passed. Formal survey remains in progress.

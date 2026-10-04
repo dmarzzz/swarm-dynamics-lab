@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: working
+state: done
 task: decision-model-reimagination
-doing: Comparing causal variants and revising editorial priorities
-updated: 2026-10-04T02:49Z
+doing: Completed second-pass variants, prior-art checks and revised editorial priorities
+updated: 2026-10-04T02:51Z
 ---
 
 ## Notes
