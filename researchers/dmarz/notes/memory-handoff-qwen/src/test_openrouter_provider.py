@@ -112,8 +112,9 @@ class Request(Base):
         self.assertEqual((acct['input_tokens'], acct['output_tokens'], acct['attempts']), (2000, 300, 1))
         self.assertAlmostEqual(acct['computed_usd'], (2000 * 0.03 + 300 * 0.13) / 1e6)
         self.assertEqual(acct['provider_reported_usd'], 0.0001); self.assertEqual(acct['actual_usd'], 0.0001)
-        # Byte-based upper bound: input tokens <= request bytes, full output limit.
-        self.assertGreaterEqual(acct['reserved_usd'] * 1e6, acct['request_bytes'] * 0.03 + 1000 * 0.13 - 1e-9)
+        # Byte-based upper bound (input tokens <= request bytes, full output limit) times the 10x margin.
+        bound = acct['request_bytes'] * 0.03 + 1000 * 0.13
+        self.assertGreaterEqual(acct['reserved_usd'] * 1e6, 10 * bound - 1e-6); self.assertLess(acct['reserved_usd'] * 1e6, 10 * bound + 1)
         self.assertGreater(acct['request_bytes'], 3000)
         t = self.ledger.transact()
         self.assertEqual((t['attempted_calls'], t['usage_reported_calls'], t['transport_attempts']), (1, 1, 1))
@@ -126,6 +127,12 @@ class Request(Base):
         self.assertAlmostEqual(acct['actual_usd'], 29e-6)      # 900*0.03 + 12*0.13 = 28.56 micro-dollars, rounded up to 29
         self.assertGreaterEqual(acct['actual_usd'], acct['computed_usd'] - 1e-12)
 
+    def test_reported_cost_three_times_the_snapshot_is_inside_the_margin(self):
+        # 900 input and 12 output tokens are 28.56 micro-dollars at the snapshot; the provider reports three times that.
+        api = self.adapter([ok(usage={'prompt_tokens': 900, 'completion_tokens': 12, 'cost': 0.0000857})])
+        _, acct = api.call('SYS', 'U' * 900, 's1-001:a', validate)
+        self.assertAlmostEqual(acct['actual_usd'], 0.000086)
+
     def test_reported_cost_above_the_reservation_is_an_integrity_failure(self):
         e = self.failure(self.adapter([ok(usage={'prompt_tokens': 10, 'completion_tokens': 5, 'cost': 1.0})]))
         self.assertEqual(e.category, 'reservation_bound_breached'); self.assertIn(e.category, orp.INTEGRITY)
@@ -133,8 +140,13 @@ class Request(Base):
     def test_model_and_provider_are_checked(self):
         self.assertEqual(self.failure(self.adapter([ok(model='qwen/qwen3.7-plus')])).category, 'model_mismatch')
         self.assertEqual(self.failure(self.adapter([ok(provider='DeepInfra')]), 's1-001:b').category, 'provider_mismatch')
-        api = self.adapter([ok(model='qwen/qwen3.7-flash'), ok(provider=None)])
-        api.call('SYS', 'USER', 's1-001:c', validate); api.call('SYS', 'USER', 's1-001:d', validate)
+        api = self.adapter([ok(model='qwen/qwen3.7-flash')])
+        api.call('SYS', 'USER', 's1-001:c', validate)
+        # A response that does not name its provider fails; a probe cannot pass without it.
+        for i, missing in enumerate((None, '', 17)):
+            e = self.failure(self.adapter([ok(provider=missing)]), f's1-001:m{i}')
+            self.assertEqual(e.category, 'provider_missing'); self.assertIn(e.category, orp.INTEGRITY)
+        self.assertEqual(self.failure(self.adapter([{k: v for k, v in ok().items() if k != 'provider'}]), 's1-001:m9').category, 'provider_missing')
 
     def test_missing_credential(self):
         with patch.dict(os.environ, {orp.KEY_ENV: ''}):
@@ -158,6 +170,7 @@ class Answers(Base):
             'truncated_output': ok(finish='length'),
             'empty_answer': ok(content='   '),
             'invalid_json': ok(content='{"answer": 7'),
+            'invalid_json ': ok(content='{"answer": 7, "answer": 8}'),
             'invalid_answer': ok(content='{"answer": "seven"}'),
             'answer_too_long': ok(content='{"answer": 7}' + ' ' * 5000),
             'nonterminal_output': ok(finish='tool_calls'),
@@ -167,8 +180,8 @@ class Answers(Base):
         }
         for want, response in cases.items():
             self.sent.clear()
-            e = self.category(response, 's1-001:' + want)
-            self.assertEqual(e.category, want); self.assertEqual(len(self.sent), 1, want)
+            e = self.category(response, 's1-001:' + want.replace(' ', '2'))
+            self.assertEqual(e.category, want.strip()); self.assertEqual(len(self.sent), 1, want)
             self.assertEqual(e.accounting['attempts'], 1)
         # More than 8,000 input tokens (the request must be that large for the byte-based reservation to hold).
         api = self.adapter([ok(usage={'prompt_tokens': 8001, 'completion_tokens': 5})])
@@ -258,7 +271,12 @@ class Billing(Base):
         self.assertTrue(orp.is_billing_error(402, ''))
         self.assertTrue(orp.is_billing_error(400, 'Your credit balance is too low'))
         self.assertTrue(orp.is_billing_error(403, 'Key limit exceeded: insufficient Balance'))
-        self.assertFalse(orp.is_billing_error(400, 'invalid request')); self.assertFalse(orp.is_billing_error(429, 'credit'))
+        for status, body in ((400, 'This request would exceed your usage limits'), (429, 'You have reached your spend limit'),
+                             (429, 'Rate limit exceeded: free-models-per-day'), (403, 'Billing is not enabled'),
+                             (400, 'Insufficient funds'), (429, "You're out of usage credits")):
+            self.assertTrue(orp.is_billing_error(status, body), body)
+        self.assertFalse(orp.is_billing_error(400, 'invalid request')); self.assertFalse(orp.is_billing_error(429, 'Too many requests'))
+        self.assertFalse(orp.is_billing_error(500, 'credit')); self.assertFalse(orp.is_billing_error(429, ''))
 
     def test_outage_then_success_is_one_pause_and_no_failed_call(self):
         api = self.adapter([http(402, self.CREDIT)] * 3 + [ok()])
@@ -285,7 +303,21 @@ class Billing(Base):
         before = len(self.sent)
         e2 = self.failure(api, 's1-001:next')                       # nothing further is sent or reserved
         self.assertEqual(e2.category, orp.BILLING_STOP); self.assertEqual(len(self.sent), before)
-        self.assertFalse(e2.accounting['attempted']); self.assertEqual(self.ledger.transact()['attempted_calls'], 1)
+        self.assertFalse(e2.accounting['attempted'])
+        # The unanswered call's reservation is voided: no model ran, so it frees its place under the caps.
+        t = self.ledger.transact()
+        self.assertEqual((t['attempted_calls'], t['voided_calls'], t['calls_by_stage'].get('S1', 0), t['committed_usd']), (0, 1, 0, 0.0))
+        self.assertTrue(e.accounting['voided'])
+        with self.assertRaises(orp.CallFailure) as cm: self.ledger.transact({'type': 'reserve', 'call_id': 's1-001:a', 'micro_usd': 1})
+        self.assertEqual(cm.exception.category, 'duplicate_call_refused')       # the same call id is never reused
+        self.ledger.transact({'type': 'reserve', 'call_id': 's1-001-r1:a', 'micro_usd': 1})   # its continuation is admitted
+
+    def test_a_limit_refusal_on_429_pauses_instead_of_failing_the_call(self):
+        limit = '{"error":{"message":"This request would exceed your usage limits"}}'
+        api = self.adapter([http(429, limit), http(429, limit), http(429, limit), http(429, limit), ok()])
+        _, acct = api.call('SYS', 'USER', 's1-001:a', validate)
+        self.assertEqual(acct['attempts'], 5); self.assertEqual(self.clock.sleeps, [60, 60, 60, 60])
+        self.assertEqual(api.billing['billing_pauses'], 1)
 
     def test_retry_rule_applies_again_after_the_outage(self):
         api = self.adapter([http(402, self.CREDIT), http(429), ok()])
@@ -360,6 +392,30 @@ class LedgerRules(Base):
         self.assertEqual(oct(path.stat().st_mode & 0o777), '0o600')
         with path.open('a') as f: f.write('{"type": "reser')
         with self.assertRaises(Exception): ledger.transact()
+
+    def test_stage_caps_are_per_batch_family_and_the_study_cap_is_global(self):
+        b = json.loads(json.dumps(CONFIG['budget'])); b['max_calls'] = {'P0': 1, 'Q0': 2, 'S1': 3}; b['max_attempted_calls'] = 6
+        ledger = orp.Ledger(Path(self.tmp.name) / 'f.jsonl', b)
+        def reserve(call): return ledger.transact({'type': 'reserve', 'call_id': call, 'micro_usd': 1})
+        def refused(call):
+            with self.assertRaises(orp.CallFailure) as cm: reserve(call)
+            return cm.exception.category
+        reserve('p0-001:a'); reserve('q0-001:a'); reserve('q0-001:b')
+        self.assertEqual(refused('q0-001:c'), 'stage_call_cap_reached')
+        reserve('p0-002:a'); reserve('q0-002:a')                       # a repair attempt has its own allowance
+        self.assertEqual(refused('p0-002:b'), 'stage_call_cap_reached')
+        reserve('q0-002:b')
+        self.assertEqual(refused('s1-002:a'), 'study_call_cap_reached')  # the study cap counts every attempt
+        self.assertEqual(ledger.transact()['calls_by_batch'], {'p0-001': 1, 'q0-001': 2, 'p0-002': 1, 'q0-002': 2})
+        self.assertEqual([orp.family_of(x) for x in ('s1-001:a', 's1-001-r1:a', 's1-001-r12:b', 'q0-002:c')], ['s1-001', 's1-001', 's1-001', 'q0-002'])
+
+    def test_void_rules(self):
+        ledger = orp.Ledger(Path(self.tmp.name) / 'v.jsonl', CONFIG['budget'])
+        ledger.transact({'type': 'reserve', 'call_id': 's1-001:a', 'micro_usd': 5})
+        ledger.transact({'type': 'response', 'call_id': 's1-001:a', 'actual_micro_usd': 2, 'input_tokens': 1, 'output_tokens': 1})
+        for call in ('s1-001:a', 's1-001:never'):                                 # answered or unknown calls cannot be voided
+            with self.assertRaises(orp.CallFailure) as cm: ledger.transact({'type': 'void', 'call_id': call})
+            self.assertEqual(cm.exception.category, 'void_refused')
 
     def test_stage_of(self):
         self.assertEqual([orp.stage_of(x) for x in ('p0-001:a', 'q0-002:b', 's1-001-r2:c')], ['P0', 'Q0', 'S1'])

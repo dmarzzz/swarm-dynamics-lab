@@ -237,7 +237,7 @@ def probe_gate(rows):
     checks = {'one_valid_row': True,
               'usage_reported': bool(acc.get('usage_reported')) and acc.get('input_tokens', 0) > 0,
               'model_matches': acc.get('response_model') in (d['model'], d['canonical_model']),
-              'provider_matches': acc.get('response_provider') is None or d['pinned_provider'] in str(acc.get('response_provider')).lower(),
+              'provider_named_and_matches': isinstance(acc.get('response_provider'), str) and d['pinned_provider'] in acc['response_provider'].lower(),
               'finish_reason_stop': acc.get('finish_reason') == 'stop',
               'no_reasoning_tokens': not acc.get('reasoning_tokens'),
               'valid_structure': rows[0].get('answer') is not None}

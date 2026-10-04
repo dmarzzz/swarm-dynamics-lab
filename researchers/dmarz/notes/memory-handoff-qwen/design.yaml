@@ -32,8 +32,9 @@ parent:
   contracts_sha256: d139a19642a9a8187dad81be9e2f6a8527252b5d9a3d3a447f87b8a4edef28f7
   journal_sha256: 133569662d073f4d461843fea4c8492d863843366e18d6ac8987e65568a89518
   worlds_sha256: 9313b89aa57628d1855e15bf97d879a7609fe631bd57beacf0cce785bb490fe0
-  adapter: researchers/dmarz/notes/pipeline/reference/openrouter_provider.py
-  adapter_sha256: 86d0739e9bf83fcb12c382b5d1844ed7011b56a2bb77baebdcf7ad275b58d789
+  adapter: researchers/dmarz/notes/pipeline/reference/openrouter_provider.py     # copied unchanged at main 639e9501
+  adapter_commit: 639e9501
+  adapter_sha256: 2e98d517bad4cf8d2d9383f3126040e576bd4aa5528e4546639f5aeff03fa982
 
 instrument:
   world_version: memory-handoff-worlds-v1
@@ -84,9 +85,10 @@ stages:
 
 budget:
   max_calls: {S0: 0, P0: 1, Q0: 23, S1: 576}
-  max_attempted_calls: 600
+  max_attempted_calls: 624       # attempt 001 (600) plus the qualification of the one permitted repair attempt (24), same ledger
   max_failed: 6                  # S1 only: larger of 3 and 1% of 576, rounded up
   aggregate_usd: 2
+  reservation_margin: 10         # each open reservation is 10 times the snapshot-price byte bound
   max_output_tokens: 1000
   max_input_tokens: 8000
   max_input_bytes: 16000         # 6,400 tokens at the assumed worst case of 2.5 characters per token
