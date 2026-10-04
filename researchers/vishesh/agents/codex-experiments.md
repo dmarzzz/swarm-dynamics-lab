@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-experiments
 tool: codex
-state: working
+state: done
 task: external-influence-v2
-doing: Expanding external influence to nine agents and three application scenarios; preserving v1 and shared budget
-updated: 2026-10-04T00:42Z
+doing: V2 published and qualified; 50-outcome cross-scenario screen running on dedicated host within shared cap
+updated: 2026-10-04T00:54Z
 ---
 
 ## Notes

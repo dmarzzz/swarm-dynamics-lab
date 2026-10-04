@@ -15,3 +15,5 @@ Owner explicitly requested separate machines. Released sim-test-01 claim and lef
 ## External influence v2 expansion
 
 User requested a stronger application and more agents, then chose procurement plus dependency and travel transfer probes. Created a separate nine-agent instrument with five matched-call protocols, varied truth, citations and peer-conversion traces. Read five primary sources at the depths recorded in RESEARCH.md. Eleven tests and 2,700 scripted outcomes pass; no v2 model results yet. V1 clean model qualification had seven correct/valid outcomes, 67 calls, USD 0.1649 reported usage. Shared cap remains USD 45 API / USD 50 overall. Immune-response is handled in another user session.
+
+V2 source b107b1636c852b946ecf7e7e7383cec8810d0eda deployed to a separate checkout on the dedicated host. S0 d398fe3b passed all four outcomes, 60 calls, USD 0.165916; S1 38908910 launched with 50 outcomes across all three applications. Results pending. No other experiment or server changed.

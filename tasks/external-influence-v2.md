@@ -23,4 +23,4 @@ Expand the external-influence exploratory instrument into nine-agent software pr
 
 - [x] Document prior work and freeze an exploratory protocol.
 - [x] Implement and validate realistic tasks, attacks, controls and analysis.
-- [ ] Publish and deploy bounded qualification with honest scope and costs.
+- [x] Publish and deploy bounded qualification with honest scope and costs.
