@@ -5,7 +5,7 @@ QWEN_DIGEST='7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435'
 LAYA_REV='55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851'
 RULE='Classify the report relative to the claim. SUPPORT means the report says the claim is true. REFUTE means the report says the opposite or says there was no improvement. UNCERTAIN means the report gives no answer about the claim. Use only the report.'
 class Budget:
- def __init__(self,deadline,limits=None):self.deadline=deadline;self.limits=limits or {'qwen':2000,'laya':300};self.attempts={'qwen':0,'laya':0}
+ def __init__(self,deadline,limits=None):self.deadline=deadline;self.limits=limits or {'qwen':2000,'laya':300};self.attempts={k:0 for k in self.limits}
  def reserve(self,model):
   if time.monotonic()>=self.deadline:raise TimeoutError('wall_budget')
   if self.attempts[model]>=self.limits[model]:raise RuntimeError('call_budget')

@@ -1,0 +1,3 @@
+# Experiment revision log
+
+Scenario redesign: audited 31 historical errors (13 recorded-rule recoverable; 18 not), with zero conversions in 20 attack-unexposed observations. Replaced the proposed score-enforcement sweep with procurement dossiers and a matched recommendation-display contrast plus cheaper generalist. 14 scenario and 15 regression tests pass; 288 scripted outcomes reconcile, zero model spend. First development draft was too dominated; a disclosed repair yields 12/24 assumption-dependent acceptable sets. Delivered case explorer and preserved all limitations; no live model result claimed.

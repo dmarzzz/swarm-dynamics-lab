@@ -9,6 +9,9 @@ from study import reference_decision,run,validate
 from run import Scripted
 
 class ScenarioTests(unittest.TestCase):
+    def test_sensitivity_is_visible(self):
+        from sensitivity import audit
+        a=audit();self.assertEqual(a['cases'],24);self.assertGreater(a['sensitivity_dependent'],0)
     def test_worlds_change_only_comparison_text(self):
         for family in FAMILIES:
             for profile in range(4):

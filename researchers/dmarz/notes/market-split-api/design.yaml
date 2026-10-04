@@ -1,4 +1,4 @@
-version: market-split-api-v1
+version: market-split-api-v2
 status: exploratory-hunch
 experiment: market-split-api
 model: claude-haiku-4-5-20251001
@@ -24,8 +24,8 @@ stages:
   S0:
     backend: mock
     tasks:
-    - 20
-    - 21
+    - 22
+    - 23
     seeds:
     - 31
     rounds: 8
@@ -36,8 +36,8 @@ stages:
   Q0:
     backend: anthropic
     tasks:
-    - 20
-    - 21
+    - 22
+    - 23
     seeds:
     - 31
     rounds: 8

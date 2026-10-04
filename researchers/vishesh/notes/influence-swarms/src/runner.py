@@ -98,6 +98,8 @@ def upload(run,out):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('command',choices=['plan','local','register','queue','work','status']);p.add_argument('--stage',choices=['S0','S1','engineering'],default='S0');p.add_argument('--backend',choices=['scripted','anthropic'],default='scripted');p.add_argument('--out');a=p.parse_args()
+    if a.backend=='anthropic' and a.command in ('queue','work'):
+        raise ValueError('quality-01 paid sweep superseded by scenario/PROTOCOL.md; historical engineering remains available')
     params=plan(a.stage,a.backend)
     if a.command=='plan':
         slots=sum(2*(x['n_agents']-3)+3 for x in params['assignments']);print(json.dumps({'episodes':len(params['assignments']),'call_slots':slots,'conservative_usd':slots*.017632}));return

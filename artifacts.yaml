@@ -175,4 +175,23 @@ artifacts:
           - researchers/dmarz/notes/market-split/analysis/s1-reconciliation.json
           - researchers/dmarz/notes/market-split/reviews/s1-fleet-001-post.md
         commit: 52e83f415d91aa79e761d5d9bf82893e1c3807a6-dirty
+  - id: influence-swarms-decision-design
+    category: content
+    type: doc
+    title: 'How to win agents and influence swarms: procurement design explorer'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-swarms-decision-design/influence-swarms-decision-design-v1.html
+        built_at: '2026-10-04T02:22:17Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Come up with a series of improvements both to the design and writing of the experiment that make it more compelling,
+          more well-designed, less grounded simply in our construction, and more grounded in the actual scenario
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/src/build_explorer.py
+          - researchers/vishesh/notes/influence-swarms/scenario/src/explorer.html
+          - researchers/vishesh/notes/influence-swarms/scenario/src/dossier.py
+        commit: 5a5dbdd5cbd3167388c8c13ead34773783fdf374-dirty
 requires: '1.2'

@@ -1,5 +1,9 @@
 # How to win agents and influence swarms
 
+## Follow-up design
+
+The [scenario redesign and candid assessment](../influence-swarms/scenario/README.md) replace the planned scalar-score follow-up with deeper procurement cases, a cheaper generalist baseline and model decision authority. Historical results below remain unchanged.
+
 ## TLDR
 
 **Completed pilot, audited:** 50/50 valid outcomes, 750 model calls, USD 2.002637. Verification evidence often failed to govern the final choice. This is an exploratory result with one fixture per domain, not a robustness estimate. See the [quality assessment](reviews/quality-post.md), [visualization mapping](reviews/visualization-mapping.md), and [prospective repair](../influence-swarms/README.md). The repaired architecture has not yet been qualified live.

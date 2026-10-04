@@ -3,8 +3,8 @@ agent: vishesh/codex-immune
 tool: codex
 state: blocked
 task: immune-response-v3-native-repair
-doing: Exclusive sim-dmarz-3 allocated; native launch awaits approval for USD 8 budget increase
-updated: 2026-10-04T02:06Z
+doing: New dedicated sim-immune-response created; native launch awaits approval for USD 8 budget increase
+updated: 2026-10-04T02:20Z
 ---
 
 ## Notes

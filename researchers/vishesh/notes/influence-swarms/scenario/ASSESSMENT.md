@@ -16,6 +16,8 @@ The previous repair made an enforced scoring rule the final authority. That can 
 
 ## What can we learn from the existing bad decisions?
 
+A reproducible [failure audit](reviews/historical-failures.json) finds 31/50 incorrect choices: 13 become correct under recorded-rule replay and 18 remain wrong. None of the 19 originally correct choices becomes wrong. There are zero recorded target conversions across 20 unexposed-agent observations in misleading/syndication conditions. Across all conditions there are 115 unexposed observations, but most are clean controls and should not be used as the attack denominator. These observations are dependent, not independent agents.
+
 We can establish that correct verification outputs were present in six targeted attack cases and that a deterministic application of those recorded values selected a better option. We cannot infer that the models consciously ignored facts, were persuaded by peers, or would behave similarly on real procurement. The audit's reconstructed choice is a post-hoc counterfactual, not a live defense result.
 
 Classify each mistake in layers: was decisive evidence available; was it extracted accurately; was the annual cost calculated correctly; was the check scoped and current; did the final choice follow the stated rule; and did the evaluator's objective represent the buyer's actual interests? Categories can overlap. A wrong answer alone is not proof of prompt injection. The machine-readable historical failure audit records observable discrepancies without assigning psychological causes.

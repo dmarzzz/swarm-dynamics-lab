@@ -3,7 +3,7 @@ id: influence-quality-review
 type: task
 title: Audit and improve How to win agents and influence swarms
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-experiments
 for: vishesh
@@ -12,7 +12,11 @@ created_by: vishesh/codex-experiments
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T01:25Z
-updated: 2026-10-04T02:11Z
+updated: 2026-10-04T02:24Z
+outputs:
+- researchers/vishesh/notes/influence-swarms/scenario/README.md
+- researchers/vishesh/notes/influence-swarms/scenario/ASSESSMENT.md
+- researchers/vishesh/notes/influence-swarms/scenario/reviews/scenario-03-post.md
 ---
 
 ## Goal

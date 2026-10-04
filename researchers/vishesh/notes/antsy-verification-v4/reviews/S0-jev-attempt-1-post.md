@@ -1,0 +1,7 @@
+# Jev S0 attempt 1 post-mortem: response validation failure
+
+Source 1aa5c42. Five complete receipt blocks are durable; the sixth block is partial. After 66 successful receipt-task responses, the next response caused ValueError in the relay's validation path. The worker stopped immediately and marked the attempt failed. Including J0, the single ledger records 83 reservations, 82 successful responses and one failed/uncertain reservation. No automatic retry or fallback occurred. Its cost remains reserved.
+
+A diagnostic weakness prevents a precise cause claim: the first relay kept the exception class but did not retain the safe response-validation fields or reason. We cannot distinguish route, usage, probability or selected-label rejection from that record. Do not call this a provider outage, bad decision, or proven model error. Successful call receipts and the partial episode are retained; S1 for Jev is blocked pending repair. Laya S1 is unaffected.
+
+Fix the diagnostic record, then make one separately planned call with the failed public numeric payload. Record only safe model/provider-match flags, numeric usage, allowed-label probabilities, selected-label validity and a controlled error code. Never log headers, credentials or raw error bodies. Successful old decisions must be replayed exactly during recovery; a new request is allowed only for the invalid/missing invocation, not to replace unfavorable valid choices.

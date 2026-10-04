@@ -25,3 +25,9 @@ Native repair remains blocked: fleet exclusive-claim checks rejected occupied ho
 ## Exclusive native allocation
 
 Refreshed fleet and claimed sim-dmarz-3 exclusively through merged agentops PR 48 (claim vishesh-immune-native-v3). Previous holder dmarz/discussion-dose released H5 calibration. Host is reachable and reporter exists. Shared budget now has only USD 1.497684 unreserved, below the frozen USD 8 qualification grant. Requested USD 8 additional authorization; no paid run or grant started. See native-repair-a1-pre.md.
+
+## New purpose-specific machine
+
+Owner clarified not to borrow dmarz-owned machines. Released the unused sim-dmarz-3 claim in agentops PR 50. Created new vishesh-owned sim-immune-response with a verified create-only OpenTofu plan, 2 vCPU / 4 GB, expiry October 5; fleet PR 52 and exclusive-claim PR 53 merged. Provisioning state is preserved in owner-only durable local storage. No old machine was modified, no model API calls started, and the additional model-budget question remains pending.
+
+Dedicated host readiness verified: standard Ansible provision exited zero, exact runtime 3db6f44 passed 13 tests, immutable public-plan check passed, rendering dependencies installed, firewall/SSH checks passed and reporting heartbeat is active. Mirrored old release and new claim to hub. Model credential not installed and model calls remain zero pending the separate budget decision.
