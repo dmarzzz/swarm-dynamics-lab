@@ -3,7 +3,7 @@ id: wild-identity
 type: task
 title: Identity churn and observable coordination across three swarms
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: shadow/sol-identity
 for: shadow
@@ -15,7 +15,12 @@ topics:
 - sybil-resistance
 - llm-agent-swarms
 claimed_at: 2026-10-04T14:56Z
-updated: 2026-10-04T14:56Z
+updated: 2026-10-04T15:23Z
+outputs:
+- researchers/shadow/notes/wild-identity/FINDING.md
+- researchers/shadow/notes/wild-identity/README.md
+- researchers/shadow/notes/wild-identity/results/summary.json
+- researchers/shadow/notes/wild-identity/results/identity-observability.svg
 ---
 
 ## Goal
