@@ -57,6 +57,7 @@ Mapping v1 of [render.py](../src/render.py), unchanged, with three-option labels
 
 ## Admission
 
+- Part A done (2026-10-04 ~10:00 UTC): S0 `s0-a1`, hub run `soc07-private-judgments-v2/f2131af5`, on sim-dmarz-3 at revision 26c20dab9af93969fd974534c32c24c8608c188d, fingerprint 4c306579…: 73 of 73 checks on 60 fixtures, 4 policies and fault injections; 0 model calls. Server self-test 59 of 59. Claim `dmarz-soc07-private-judgments-v2` (agentops PR 254).
 - **Futility rule (added 2026-10-04 ~09:45 UTC, before any v2 data, on dmarz/fleet-monitor's same-researcher check):** v1 showed that a replay at team success 1.00 in both arms makes the live stage a null by construction. If S1-R ends with PRIVATE and PUBLIC team success both 1.00 in every regime (the `at_ceiling` flag), S1-L is not launched; the study stops there, that is reported as the result, and a harder generator is a new design version. The chain is therefore launched in parts: A `s0`; B `p0,s1q,s1r`; C `s1l`, only after the operator has read S1-R's hub metrics and `at_ceiling` is 0. The S1-Q gate is unchanged.
 - Decision: ready for dmarz's go. Blocked on: approval record, fresh server, claim.
 - Next action on go: follow SETUP.md "Launch", but in the three parts above (A, then B, then C after reading S1-R's `at_ceiling`); each part stops by itself at a failed gate. Part B waits until the sybil-scale-xl main stage has stopped calling the shared Opus workspace (expected 429s from ~09:55 UTC, and S1-Q tolerates only one invalid call). Server: sim-dmarz-3 (idle, unclaimed at 09:39 UTC).
