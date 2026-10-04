@@ -1,0 +1,96 @@
+{
+  "q01": {
+    "actor": {
+      "records": [
+        {
+          "id": "r1",
+          "time": "09:00",
+          "text": "Deployment policy: RELEASE only with a recorded exception covering the exact requested version and site, two independently acquired passing checks, and tested rollback at that site. HOLD if any known condition fails; otherwise INSUFFICIENT. Missing evidence does not grant permission."
+        },
+        {
+          "id": "r2",
+          "time": "10:00",
+          "text": "For the current staging handoff only: GO if the staging slot is ready, otherwise HOLD. Staging slot is ready."
+        },
+        {
+          "id": "r3",
+          "time": "11:00",
+          "text": "Patch: cache-patch. Earlier development used v1 at East. Later signed scope below supersedes proposals; permission does not transfer across versions or sites."
+        },
+        {
+          "id": "r4",
+          "time": "12:00",
+          "text": "Signed exception: recorded; version=v11; site=Harbor. This is the entire permitted scope; unknown means scope evidence unavailable."
+        },
+        {
+          "id": "r5",
+          "time": "13:00",
+          "text": "Passing checks: two reports; acquisition_ids=A,B; outcomes=passed,passed. Equal acquisition IDs mean reused evidence, not independent checks; unknown means independence unresolved."
+        },
+        {
+          "id": "r6",
+          "time": "14:00",
+          "text": "Rollback evidence: tested_site=Harbor. This is the complete tested-site list; unknown means the coverage record is unavailable. A tested site does not establish coverage elsewhere."
+        },
+        {
+          "id": "r7",
+          "time": "15:00",
+          "text": "The latency limit was corrected from80 to120ms. A100ms read-only probe passed; no write-path result is recorded."
+        },
+        {
+          "id": "r8",
+          "time": "16:00",
+          "text": "A post-release monitor is proposed, not started. Preserve scoped permissions and evidence qualifications for the next colleague."
+        }
+      ]
+    },
+    "question": "Choose RELEASE, HOLD or INSUFFICIENT for deploying cache-patch at version v11 to Harbor now under the recorded deployment policy."
+  },
+  "q02": {
+    "actor": {
+      "records": [
+        {
+          "id": "r3",
+          "time": "11:00",
+          "text": "Patch: cache-patch. Earlier development used v1 at East. Later signed scope below supersedes proposals; permission does not transfer across versions or sites."
+        },
+        {
+          "id": "r4",
+          "time": "12:00",
+          "text": "Signed exception: recorded; version=unknown; site=Harbor. This is the entire permitted scope; unknown means scope evidence unavailable."
+        },
+        {
+          "id": "r5",
+          "time": "13:00",
+          "text": "Passing checks: two reports; acquisition_ids=A,B; outcomes=passed,passed. Equal acquisition IDs mean reused evidence, not independent checks; unknown means independence unresolved."
+        },
+        {
+          "id": "r6",
+          "time": "14:00",
+          "text": "Rollback evidence: tested_site=Harbor. This is the complete tested-site list; unknown means the coverage record is unavailable. A tested site does not establish coverage elsewhere."
+        },
+        {
+          "id": "r7",
+          "time": "15:00",
+          "text": "The latency limit was corrected from80 to120ms. A100ms read-only probe passed; no write-path result is recorded."
+        },
+        {
+          "id": "r8",
+          "time": "16:00",
+          "text": "A post-release monitor is proposed, not started. Preserve scoped permissions and evidence qualifications for the next colleague."
+        },
+        {
+          "id": "r1",
+          "time": "09:00",
+          "text": "Deployment policy: RELEASE only with a recorded exception covering the exact requested version and site, two independently acquired passing checks, and tested rollback at that site. HOLD if any known condition fails; otherwise INSUFFICIENT. Missing evidence does not grant permission."
+        },
+        {
+          "id": "r2",
+          "time": "10:00",
+          "text": "For the current staging handoff only: GO if the staging slot is ready, otherwise HOLD. Staging slot is ready."
+        }
+      ]
+    },
+    "question": "Choose RELEASE, HOLD or INSUFFICIENT for deploying cache-patch at version v11 to Harbor now under the recorded deployment policy."
+  }
+}

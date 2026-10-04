@@ -1,0 +1,143 @@
+{
+  "version_exception-release": {
+    "answer": "RELEASE",
+    "state": {
+      "requested_version": "v3",
+      "requested_site": "West",
+      "exception_version": "v3",
+      "exception_site": "West",
+      "checks": [
+        "A",
+        "B"
+      ],
+      "passed": true,
+      "rollback_site": "West"
+    },
+    "critical_record": "r4"
+  },
+  "version_exception-hold": {
+    "answer": "HOLD",
+    "state": {
+      "requested_version": "v3",
+      "requested_site": "West",
+      "exception_version": "v2",
+      "exception_site": "West",
+      "checks": [
+        "A",
+        "B"
+      ],
+      "passed": true,
+      "rollback_site": "West"
+    },
+    "critical_record": "r4"
+  },
+  "version_exception-insufficient": {
+    "answer": "INSUFFICIENT",
+    "state": {
+      "requested_version": "v3",
+      "requested_site": "West",
+      "exception_version": null,
+      "exception_site": "West",
+      "checks": [
+        "A",
+        "B"
+      ],
+      "passed": true,
+      "rollback_site": "West"
+    },
+    "critical_record": "r4"
+  },
+  "independent_checks-release": {
+    "answer": "RELEASE",
+    "state": {
+      "requested_version": "v5",
+      "requested_site": "North",
+      "exception_version": "v5",
+      "exception_site": "North",
+      "checks": [
+        "A",
+        "B"
+      ],
+      "passed": true,
+      "rollback_site": "North"
+    },
+    "critical_record": "r5"
+  },
+  "independent_checks-hold": {
+    "answer": "HOLD",
+    "state": {
+      "requested_version": "v5",
+      "requested_site": "North",
+      "exception_version": "v5",
+      "exception_site": "North",
+      "checks": [
+        "A",
+        "A"
+      ],
+      "passed": true,
+      "rollback_site": "North"
+    },
+    "critical_record": "r5"
+  },
+  "independent_checks-insufficient": {
+    "answer": "INSUFFICIENT",
+    "state": {
+      "requested_version": "v5",
+      "requested_site": "North",
+      "exception_version": "v5",
+      "exception_site": "North",
+      "checks": null,
+      "passed": true,
+      "rollback_site": "North"
+    },
+    "critical_record": "r5"
+  },
+  "rollback_scope-release": {
+    "answer": "RELEASE",
+    "state": {
+      "requested_version": "v7",
+      "requested_site": "South",
+      "exception_version": "v7",
+      "exception_site": "South",
+      "checks": [
+        "A",
+        "B"
+      ],
+      "passed": true,
+      "rollback_site": "South"
+    },
+    "critical_record": "r6"
+  },
+  "rollback_scope-hold": {
+    "answer": "HOLD",
+    "state": {
+      "requested_version": "v7",
+      "requested_site": "South",
+      "exception_version": "v7",
+      "exception_site": "South",
+      "checks": [
+        "A",
+        "B"
+      ],
+      "passed": true,
+      "rollback_site": "East"
+    },
+    "critical_record": "r6"
+  },
+  "rollback_scope-insufficient": {
+    "answer": "INSUFFICIENT",
+    "state": {
+      "requested_version": "v7",
+      "requested_site": "South",
+      "exception_version": "v7",
+      "exception_site": "South",
+      "checks": [
+        "A",
+        "B"
+      ],
+      "passed": true,
+      "rollback_site": null
+    },
+    "critical_record": "r6"
+  }
+}

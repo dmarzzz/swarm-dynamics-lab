@@ -1,0 +1,18 @@
+{
+  "PLAN.md": "6c79c7bb0f6950b1aa3a2d68741af3f4910d76a4f4965c917bb4c81a47a3c163",
+  "prepared/ablations.json": "89bdd6587a62527a5ea74575eec7e99a31a2bb35ad5ad2ef553242b4a70f03e4",
+  "prepared/actors.json": "88595b37c3205319c8524b8b12a0ba2631c0462eeff3dff80c3902a0d57643f6",
+  "prepared/assignments.json": "2dd1e55a970e6419f144b788a85da1a3065890639bc5a227d4c0b99ea1b7bd33",
+  "prepared/envelope.json": "3bde7b2d004112823e9e1c1d86ef53d49f1296e94e6f0c6a1aa31e567fdc9eac",
+  "prepared/gold.json": "5320e8e24839cedfe9de480a64b049828a797f843f153973c2828fdb97089dbe",
+  "prepared/qualification-gold.json": "2d93670f5505516971b56529158c044649b261da95971a5aef52915fae747bc3",
+  "prepared/qualification.json": "ad0a7c69449a2b161d257c4adf9b379cf227ce3f272aefa38b60374a867c6fb8",
+  "prepared/questions.json": "2ac1917d765b8def56608be08f7d251824fa1e47159e6605b53e32a2998d4085",
+  "prepared/validation.json": "989fdcfe9c7d876535a07ffd34049dcc00326b397b4d624139f69955e3c0705c",
+  "src/contract.py": "b2d91d9b942a7a766858382d85010bbbc4bec6b11d85eed2f2480d3ebdc29aa4",
+  "src/corpus.py": "913d85f7653a7675823f7a6bce4042e14d5dc7e74ac511a8f8532a5acc2952e5",
+  "src/native.py": "f659e204d7e59653ea15a9b6d0a4297425a5e91f418c3d6779adac0f7d3c2601",
+  "src/prepare.py": "a21ebfbb2b384e3cf05d44d7558049261c43953ee7afbc8b8508eae6be73c1e1",
+  "src/report.py": "0cf1a96f59c26bce3161a593b8bae57c679ff605e0dd19372d8663a3ea4b7507",
+  "tests/test_b4r1.py": "24a0c2ce8588c98950ff19789dda4a1c2ff7b1c30f30802b759990a500553481"
+}
