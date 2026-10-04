@@ -45,3 +45,7 @@ The [native runbook](RUNBOOK.md) includes a saved-data `peer_closeout.py` hook f
 The main-stage qualifier parses the hashed scientific receipt and requires exact agreement with the declared passing receipt. It binds saved Q admission, source/packet/contract, original ledger claim and exact four-world trace hash; stale or unrelated hashed evidence and failed saved outcomes are rejected.
 
 Revision3 adds the exact stage-bounded credential-free relay/worker/watchdog and enables the approved scope behind admission. Public reporting publishes the aggregate summary only; raw events, transport, usage, episode responses and private receipts remain private. Source/contract binding is refreshed before the first native qualification.
+
+## Q2 necessary interface diagnostic
+
+[Prospective Q2 plan](Q2-PLAN.md), [Q2-only packet](q2-packet.json), and `q2_*` entry points integrate the visible-constraint candidate into a distinct48-call qualification. The finite diagnostic is approved; live admission still required. No P1 entry point or main comparison is bundled.27tests pass, including preservation of actual Q1-stage rows, refusal of old/main stage IDs,20-minute allocation bounds, existing schema boundaries and complete scripted48-call behavior. Earlier Q1 source/packet and failure are retained; source/runtime/plan are rebound before Q2 dispatch. This is a funded necessary diagnostic, not a new owner-approval request.

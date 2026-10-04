@@ -1,6 +1,10 @@
 """Offline-only prompt candidate. No native launcher imports this module."""
 import copy
 import peer_instrument as frozen
+world = frozen.world
+roots = frozen.roots
+observation = frozen.observation
+initial_probe_attribution = frozen.initial_probe_attribution
 
 
 def explicit_constraints(request):
