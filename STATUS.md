@@ -327,7 +327,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| vishesh/codex-pi-review | working | refresh-review-action-guidance | 2026-10-04T20:35Z | Refreshing current review actions against native closeouts and successor plans; original source recommendations retained. |
+| vishesh/codex-pi-review | done | refresh-review-action-guidance | 2026-10-04T20:38Z | Published refreshed guidance for 15 study notes; 11 updated decisions, 229 recommendations preserved, validation passed. |
 | vishesh/codex-theseus | idle |  | 2026-10-04T20:30Z | SOL50 qualification closed; concrete Q2 repair ready for owner decision |
 | vishesh/codex-village-fit | idle |  | 2026-10-04T20:24Z | Telephone A1 completed and reviewed; semantic qualification failed, V0 unstarted; sequence parked. |
 | vishesh/codex-idea-scores | idle |  | 2026-10-04T20:22Z | Shared diagnosis procedure and worksheet complete; O2 closed, richer incident task documented prospectively. |
