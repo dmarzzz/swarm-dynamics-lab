@@ -21,6 +21,10 @@ Make one experiment iteration a clear evidence-to-action workflow, discoverable 
 
 ## Done when
 
-- [ ] Define trace review, error repair, design improvement, interpretation and ready-run decisions.
-- [ ] Connect the process to existing runbooks, next-run plans and local instructions.
-- [ ] Check links and repository consistency; publish as Cytonomy.
+- [x] Define trace review, error repair, design improvement, interpretation and ready-run decisions.
+- [x] Connect the process to existing runbooks, next-run plans and local instructions.
+- [x] Check links and repository consistency; publish as Cytonomy.
+
+## Coverage note
+
+Canonical process: `tooling/agent-experiments/ITERATION.md`, linked from AGENTS, setup, operations, review, methods index and next-run template. Local workspace instructions and guide mirror point to the same process. Validation:104 repository document links resolve; local process text matches canonical and its links resolve; registry validates all13 studies with zero model calls; lab check reports0 errors and5 pre-existing citation warnings. No runtime, approval schema or native experiment was changed or launched.

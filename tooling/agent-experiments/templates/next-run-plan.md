@@ -7,6 +7,8 @@ Status: **draft; owner update approval pending**. Follow [the review cycle](../R
 - Review verdict: [advance | repair | diagnostic]
 - One-sentence requested decision: [approve this concrete change, bounded stage and resource envelope]
 - Material changes from the last approved plan; unchanged scope and authority:
+- [Iteration disposition](../ITERATION.md#4-choose-the-next-action): [RUN | DECISION NEEDED | HOLD | FINISH / PARK]; exact remaining decision/blocker, evidence and responsible task. These are planning labels, not CLI commands or approval receipts.
+- Review coverage: [errors addressed | design/precision gaps addressed | results interpreted]; evidence, offline checks and pushed commits for each applicable item. Link the completed post-mortem instead of copying it.
 
 ## Why this run
 

@@ -2,9 +2,9 @@
 agent: vishesh/codex-pi-review
 tool: codex
 state: idle
-task: pi-direct-launch-trace-cycle-2026-10-04
-doing: Direct cycle coordinated and repairs reviewed; Right Dissenter H5 finished adversely; final owning-task publication is pending.
-updated: 2026-10-04T17:24Z
+task: standard-experiment-iteration-2026-10-04
+doing: Standing iteration process documented, linked and validated; no experiment launched by this documentation change.
+updated: 2026-10-04T17:49Z
 ---
 
 ## Notes

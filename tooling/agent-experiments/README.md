@@ -8,6 +8,7 @@ For existing studies, use [experiment operations](OPERATIONS.md): `python3 scrip
 
 | Artifact | Purpose |
 | --- | --- |
+| [ITERATION.md](ITERATION.md) | Standing evidence-to-action loop: diagnose, improve, push, run if ready and close out |
 | [OPERATIONS.md](OPERATIONS.md) and [operations.json](operations.json) | Command entry point, study discovery, iteration lineage, implemented boundaries and missing launch evidence |
 | [RUN-REVIEW.md](RUN-REVIEW.md) | Required pre-run assessment, post-mortem and repair/rerun cycle |
 | [Experiment evidence metadata](../../experiments/EVIDENCE-METADATA.md) | Defined 0–4 evidence-confidence scale, independent sample-size summaries and update workflow |

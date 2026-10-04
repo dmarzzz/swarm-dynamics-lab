@@ -1,5 +1,7 @@
 # Runbook: from a new question to an auditable experiment
 
+For a turn of an existing study, start with [the iteration process](ITERATION.md), then use the relevant setup gates below. Keep one authoritative setup record across its attempts.
+
 ## Default experiment spending authorization
 
 Owner directive, 2026-10-04 UTC: when the owner directs launching a Vishesh-owned experiment without specifying a budget, USD 2 total is already approved. Do not ask again for approval of that default amount. An explicit experiment-specific budget takes precedence, including a smaller cap; existing budgets are not reset or topped up. Phantom Coast retains its explicit USD 5 total cap and accumulated spend.

@@ -41,6 +41,8 @@ ownership directives retain their stated scope; this requirement grants no new s
 
 ## Experiment operations
 
+For Vishesh-owned studies, a request to do an experiment iteration invokes [the standing iteration process](tooling/agent-experiments/ITERATION.md): review the latest results and native traces, address errors and quality gaps, interpret findings, prepare and test justified changes, push them, and execute the next useful stage when its scope is authorized and current admission passes. Finish its post-mortem and handoff. Already-approved unchanged scopes do not need another owner decision; material successors retain the existing update-approval rule. Report RUN, DECISION NEEDED, HOLD or FINISH / PARK with evidence and a concrete next action. This defines the workflow, not a new central launcher or blanket approval of future scopes. Other researchers' policies are unchanged.
+
 Use `python3 scripts/experiment.py list` and `inspect <study-id>` to locate the current study,
 setup record, post-mortem and supported operations. Follow
 [the operations guide](tooling/agent-experiments/OPERATIONS.md) before preparing an attempt.

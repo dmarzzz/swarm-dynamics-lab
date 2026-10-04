@@ -1,5 +1,7 @@
 # Run assessment and the next experiment
 
+Start with [one iteration of an experiment](ITERATION.md) for the short decision workflow. This document supplies the detailed review and closeout requirements; use the study's existing records rather than duplicate checklists.
+
 Every attempt ends with a post-mortem, including setup failures, interrupted attempts, diagnostics and successful executions. The next session begins by reading that post-mortem and assessing its suggestions against [what a good run establishes](RUN-QUALITY.md). It does not blindly rerun the experiment.
 
 The cycle is **record the outcome → complete the scientific assessment → choose repairs → write the next-run plan → obtain applicable owner approval → admit and execute the named stage**. A valid null or adverse result can end the cycle. Existing public-plan, qualification, spending, credential and approved-account requirements remain binding.

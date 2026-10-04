@@ -20,6 +20,8 @@ Use [the experiment command](../../scripts/experiment.py) to find a study, prepa
 
 The [setup runbook](EXPERIMENT-SETUP.md) remains the scientific workflow. Maintain its existing [setup record](templates/experiment-setup.md) in the study directory; link plans, reviews and receipts there instead of copying their contents into another checklist. Local access aliases and private infrastructure records stay outside the public repository.
 
+For an end-to-end iteration, follow [the iteration process](ITERATION.md): review traces and results, fix errors and design gaps, validate and push changes, select the next action, execute an authorized ready scope, then close out. The commands below support that workflow; `iterate` alone only writes a configuration delta.
+
 ## Start with inspection
 
 Run from the repository root. These commands do not make provider calls, contact the fleet, claim resources or launch experiments:

@@ -131,3 +131,9 @@ All failed cohorts, unknown reservations and original sources remain. Shared gui
 ## Later H5 terminal evidence
 
 The owning task subsequently reported H5 complete:72 dependent policy decisions on six authored roots and36 model calls, with zero failed/unstarted cells. B0/B1/B2 correct6/8/6 of24; reserve-minus-memory is-2, failing the development screen. Four late-context DEFER answers limit contextual transfer and mechanism attribution. No retry follows. Worker/relay stopped and artifacts verified; final owning publication/release remains pending at the root snapshot. Updated the shared report so its live handoff is not mistaken for a still-running stage.
+
+## Standing iteration process
+
+Defined ITERATION.md as the short entry point for a requested experiment iteration. Errors, quality gaps and uninterpreted results are reviewed together using native traces and the existing quality rubric. Prospective changes precede offline implementation; tested changes and the selected next plan are pushed. Authorized ready work proceeds to machine admission and execution; material successors retain the owner-decision rule. RUN, DECISION NEEDED, HOLD and FINISH / PARK make the next action explicit without adding commands, services, duplicate setup records, a researcher gate or central approval.
+
+Linked shared AGENTS, setup/operations/review guides, methods index and next-run template; mirrored the process and pointers locally without publishing private workspace context. Checked104 repository links, local text/link consistency, all13 registry entries, and lab check (0 errors,5 pre-existing citation warnings). No native calls, allocation, budget change or executable behavior change.
