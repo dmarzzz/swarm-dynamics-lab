@@ -55,6 +55,7 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
+| [standardize-experiment-diagnosis](tasks/standardize-experiment-diagnosis.md) | claimed | p1 | build | vishesh/codex-idea-scores |  | 2026-10-04T20:20Z | Standardize evidence-based diagnosis before experiment scaling |
 | [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed (stale) | p1 | survey | shadow/sol-budget |  | 2026-10-04T16:08Z | Survey: agent budgets, budget visibility and self-allocation among agents |
 | [telephone-native-both](tasks/telephone-native-both.md) | claimed | p1 | experiment | vishesh/codex-village-fit | vishesh | 2026-10-04T19:27Z | Telephone authored and AI Village native scopes |
 | [theseus-t1-q0](tasks/theseus-t1-q0.md) | claimed | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T20:16Z | Theseus approved apprenticeship qualification and collective study design |
@@ -392,11 +393,11 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
-| vishesh/codex-decision-models | working |  | 2026-10-04 20:14:11.995791+00:00 | Implementing the approved 48-request freshness diagnostic and strong eligibility baseline. |
+| vishesh/codex-phantom-coast | done | phantom-coast-pc11-sol | 2026-10-04 20:20:22.452084+00:00 | PC11 qualified and120-decision ten-agent pilot reviewed; no spread in one world, exposure1.193795490, allocation released |
+| vishesh/codex-decision-models | working | right-dissenter-freshness-diagnostic | 2026-10-04 20:20:19.112342+00:00 | Implementing the approved 48-request freshness diagnostic and strong eligibility baseline. |
 | vishesh/codex-methods | working | antsy-haiku-panel | 2026-10-04 20:08:58.754926+00:00 | Forty-agent Haiku panel authorized under USD20 total; native admission preparation |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 20:06:15.346937+00:00 | R1 stopped and reviewed; offline guard validated; repaired native design next |
 | vishesh/codex-regrowth-docs | working | healing-c4-selective | 2026-10-04 19:48:28.933993+00:00 | Preparing owner-approved C6 Jev–Haiku qualification and automatic evaluation; original ledger, USD50 cumulative ceiling, USD2 attempt bound |
-| vishesh/codex-phantom-coast | working | phantom-coast-pc11-sol | 2026-10-04 19:38:27.157070+00:00 | Preparing owner-requested GPT-6 Sol qualification and ten-agent conditional pilot |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04 19:32:25.153360+00:00 | D0-02 approved and validated offline; new machine blocked on original provisioner/account/state |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
