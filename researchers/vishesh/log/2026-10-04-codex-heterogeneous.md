@@ -82,3 +82,7 @@ Owner approved one direct prepared S0-02, including its bounded renewal. Frozenf
 Completed operational finalize and eleven-dimension scientific review. Wrote the prospective repair plan before changing explicit wire-format instructions and worker billing settlement.85offline checks pass; strict outcomes unchanged. Proposed36decision diagnostic/3fresh paired roots is unapproved and requires its own manifest/runner. No extra native collection.
 
 Diagnostic preparation completion: separate manifest/candidate/admission/relay/runner/renewal and frame implemented offline after the prospective plan.106 software checks pass; role-specific formatting and global transport/integrity stops rehearsed. All fixtures development/synthetic. No diagnostic root, native call, new renewal or allocation. Owner reviews a concrete36-decision proposal.
+
+## Formatting and provider-error repair
+
+Implemented a bounded JSON-fence policy with strict downstream validation;121 offline tests and saved-data replay pass. Added safe retry/rate/typed-error metadata and handling for HTTP200 error bodies. Non-billable status reads show current routes/tariffs match and key limit is not exhausted; historical429 source remains unknowable from discarded metadata. Estimated Haiku substitution at about9x token cost, roughly USD0.00674 extra for12calls at the single observed Qwen fetch size, with USD0.14265 maximum extra at declared bounds. No new native call, model selection change or allocation; original budget preserved. See notes/poietic-agents/readiness/format-repair/REPORT.md.

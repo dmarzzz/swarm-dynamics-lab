@@ -114,14 +114,16 @@ class WorkerBoundaryTests(unittest.TestCase):
         self.assertEqual(row['raw_response'], raw)
         self.assertEqual(row['billing_receipt']['cost_usd'], .00004)
 
-    def test_fenced_action_preserves_known_usage_and_strict_failure(self):
+    def test_fenced_nested_action_preserves_known_usage_and_schema_failure(self):
         model = json.loads((BASE/'models.json').read_text())['models']['generalist']
         raw = {'model': model['accepted_response_model_ids'][0], 'provider': model['provider_name'],
                'choices': [{'finish_reason': 'stop', 'message': {
                    'content': '```json\n{"fetch":{"endpoint":"inventory","entities":["fixture"]}}\n```'}}],
                'usage': {'prompt_tokens': 565, 'completion_tokens': 41, 'cost': .00077}}
         row = self.rehearse(raw, 'known', 770000)
-        self.assertEqual(row['failure_code'], 'JSONDecodeError')
+        self.assertEqual(row['status'], 'invalid')
+        self.assertFalse(row['schema_valid'])
+        self.assertTrue(row['checked']['transport_normalization']['removed_json_fence'])
         self.assertEqual(row['raw_response'], raw)
 
     def test_invalid_usage_preserves_full_reservation(self):

@@ -37,3 +37,8 @@ One-shot approved execution at f362 passed81runtimechecks;1 started/143 unstarte
 ## D0-01 completed cycle
 
 One approved diagnostic executed at38544138. Repeated Haiku wrapper failure and QwenHTTP429 stop prevent qualification. Complete private trace audit and public aggregate readback, both original ledgers reconciled, full claim lifetime charged, worker/relay/allocation stopped. The owning scientific review is complete; operational finalize is retained separately. No automatic rerun or efficacy stage.
+
+
+## Offline repair after D0-01
+
+Owner-directed formatting and error diagnosis complete; [prospective repair plan](reviews/D0-01-repair-plan.md), [report](readiness/format-repair/REPORT.md), [121-test validation](readiness/format-repair/validation.json). Bounded JSON-fence normalization, unchanged action/permission checks and allowlisted provider error telemetry are implemented. Current route/tariff and key-status reads pass but do not prove inference recovery or the historic429 source. All40calls and spending are unchanged. No allocation or successor started; Qwen remains the selected cheap generative model. Haiku substitution costs are estimated, not authorized.

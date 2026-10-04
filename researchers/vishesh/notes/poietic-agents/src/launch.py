@@ -15,6 +15,7 @@ from urllib.parse import urlparse
 from pathlib import Path
 from admission import BASE, inventory, verify, verify_public, verify_relay_health
 from budget import Budget
+from provider_diagnostics import FIELDS as ERROR_FIELDS
 from common import append, canonical, digest, save
 from native import request, response, reserve_nano, usage_receipt, verify_catalog
 from qualification import ROLES, assignments, make_case, probe, apply, analyze, complete_records
@@ -123,7 +124,7 @@ def run(config_path,out):
                             budget.settle(physical_id)
                             row['failure_code']='http_'+str(exc.code)
                             try:
-                                detail=json.loads(exc.read(32000));row['relay_diagnostic']={k:detail[k] for k in ('error_type','http_status','diagnostic_code','error_markers') if k in detail}
+                                detail=json.loads(exc.read(32000));row['relay_diagnostic']={k:detail[k] for k in ERROR_FIELDS if k in detail}
                             except Exception:pass
                             # S0-02 admits no retry; preserve every rejection and stop for diagnosis.
                             if exc.code==429:

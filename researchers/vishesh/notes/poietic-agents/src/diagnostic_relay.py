@@ -15,6 +15,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
 from diagnostic_admission import BASE, verify, verify_public
 from budget import Budget
+from provider_diagnostics import safe_error, has_provider_error, ProviderBodyError
 from common import canonical, digest, append
 from native import reserve_nano, usage_receipt, verify_catalog
 from diagnostic import assignments
@@ -79,8 +80,11 @@ def serve(config_path,credential_file,ledger,port_file):
                 budget.reserve(physical_id,digest(data['request']),reserve_nano(c));reserved=True
                 suffix='/api/alpha/decisions' if c['kind']=='decision' else '/api/v1/chat/completions'
                 req=urllib.request.Request('https://openrouter.ai'+suffix,canonical(data['request']).encode(),{'Authorization':'Bearer '+key,'Content-Type':'application/json'})
-                with opener.open(req,timeout=45) as r:raw=json.loads(r.read(1000000))
+                with opener.open(req,timeout=45) as r:
+                    raw=json.loads(r.read(1000000)); response_headers=getattr(r,'headers',{})
                 if key in canonical(raw): raise ValueError('credential_in_provider_response')
+                if has_provider_error(raw):
+                    raise ProviderBodyError(safe_error(200, raw, response_headers, c['provider_name']))
                 result={k:raw[k] for k in ('id','model','provider','choices','answers','usage') if k in raw}
                 append(ledger.parent/'provider-responses.jsonl',dict(id=physical_id,attempt=config['attempt'],utc=time.time(),http_status=200,response=result))
                 # Billing is independent of action/schema validity. Keep the response for worker diagnosis.
@@ -90,13 +94,14 @@ def serve(config_path,credential_file,ledger,port_file):
                 except (ValueError,KeyError,TypeError):
                     budget.settle(physical_id);reserved=False
                 status=200
+            except ProviderBodyError as exc:
+                result=exc.receipt; status=429 if result.get('body_error_status')==429 else 502
+                append(ledger.parent/'provider-responses.jsonl',dict(id=physical_id,attempt=config['attempt'],utc=time.time(),error=result))
             except urllib.error.HTTPError as exc:
                 status=429 if exc.code==429 else 502
-                result={'error_type':'provider_http','http_status':exc.code}
-                try:
-                    error=json.loads(exc.read(32000));message=str(error.get('error',{}).get('message','')).lower()
-                    result['error_markers']=[word for word in ('response_format','json','model','provider','unsupported','not found','credits','quota','rate','max_tokens','authentication','region','parameter','stream','valid') if word in message]
-                except Exception:pass
+                try:error_body=exc.read(32000)
+                except Exception:error_body=b''
+                result=safe_error(exc.code, error_body, exc.headers, c['provider_name'])
                 append(ledger.parent/'provider-responses.jsonl',dict(id=physical_id,attempt=config['attempt'],utc=time.time(),error=result))
             except Exception as exc:
                 safe=str(exc) if isinstance(exc,ValueError) and str(exc).replace('_','').isalnum() else type(exc).__name__

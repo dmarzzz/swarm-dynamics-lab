@@ -1,0 +1,113 @@
+{
+  "checked_utc": "2026-10-04T18:31:03.192941+00:00",
+  "tariff_evidence": "catalog-check.json",
+  "rates_per_million": {
+    "qwen": {
+      "input": 0.117,
+      "output": 0.455
+    },
+    "haiku": {
+      "input": 1,
+      "output": 5
+    }
+  },
+  "scenarios": [
+    {
+      "scenario": "equal_tokens_from_one_observed_Qwen_fetch",
+      "input_tokens": 554,
+      "output_tokens": 16,
+      "qwen_per_call_usd": 7.2098e-05,
+      "haiku_per_call_usd": 0.000634,
+      "ratio": 8.793586507254016,
+      "counts": {
+        "12": {
+          "qwen_usd": 0.000865176,
+          "haiku_usd": 0.007608,
+          "extra_usd": 0.006742824
+        },
+        "48": {
+          "qwen_usd": 0.003460704,
+          "haiku_usd": 0.030432,
+          "extra_usd": 0.026971296
+        },
+        "1000": {
+          "qwen_usd": 0.072098,
+          "haiku_usd": 0.634,
+          "extra_usd": 0.561902
+        }
+      }
+    },
+    {
+      "scenario": "illustrative_moderate_call",
+      "input_tokens": 1000,
+      "output_tokens": 100,
+      "qwen_per_call_usd": 0.0001625,
+      "haiku_per_call_usd": 0.0015,
+      "ratio": 9.23076923076923,
+      "counts": {
+        "12": {
+          "qwen_usd": 0.00195,
+          "haiku_usd": 0.018,
+          "extra_usd": 0.01605
+        },
+        "48": {
+          "qwen_usd": 0.0078,
+          "haiku_usd": 0.072,
+          "extra_usd": 0.0642
+        },
+        "1000": {
+          "qwen_usd": 0.1625,
+          "haiku_usd": 1.5,
+          "extra_usd": 1.3375
+        }
+      }
+    },
+    {
+      "scenario": "maximum_request_envelope",
+      "input_tokens": 8192,
+      "output_tokens": 1024,
+      "qwen_per_call_usd": 0.001424384,
+      "haiku_per_call_usd": 0.013312,
+      "ratio": 9.345794392523365,
+      "counts": {
+        "12": {
+          "qwen_usd": 0.017092608,
+          "haiku_usd": 0.159744,
+          "extra_usd": 0.142651392
+        },
+        "48": {
+          "qwen_usd": 0.068370432,
+          "haiku_usd": 0.638976,
+          "extra_usd": 0.570605568
+        },
+        "1000": {
+          "qwen_usd": 1.424384,
+          "haiku_usd": 13.312,
+          "extra_usd": 11.887616
+        }
+      }
+    }
+  ],
+  "full_three_role_diagnostic_max_api_usd": {
+    "current_qwen": 0.180965376,
+    "haiku_substitution": 0.323616768
+  },
+  "full_three_role_qualification_max_api_usd": {
+    "current_qwen": 0.723861504,
+    "haiku_substitution": 1.294467072
+  },
+  "existing_api_exposure_usd": 0.482269482,
+  "existing_total_exposure_usd": 0.5685608903333335,
+  "api_cap_usd": 1.5,
+  "total_cap_usd": 2,
+  "remaining_api_usd": 1.017730518,
+  "remaining_total_usd": 1.4314391096666665,
+  "swapped_full_qualification_exceeds_current_api_subcap_by_usd": 0.27673655399999997,
+  "limitations": [
+    "Equal-token counterfactual, not measured Haiku tokens or output length on every job.",
+    "One successful Qwen fetch cannot forecast full lifecycle cost.",
+    "No cache discounts, taxes, top-up fees or incremental infrastructure included in token comparisons.",
+    "No model substitution or new run authorized/executed.",
+    "Haiku replacing Qwen removes the cheap-generative-model contrast; cheap function/tool-only roles can remain."
+  ]
+}

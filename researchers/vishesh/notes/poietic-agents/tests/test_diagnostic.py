@@ -100,7 +100,8 @@ class DiagnosticTests(unittest.TestCase):
                     raw.update(answers={'action':{'type':'choice','choice':choice,'probabilities':{k:int(k==choice) for k in packet['choices']}}},
                                usage={'input_tokens':100,'output_tokens':0,'cost':.0000042})
                 if len(dispatches)==1:
-                    if fault=='http':raise urllib.error.HTTPError('http://127.0.0.1:1/invoke',429,'fixture',{},io.BytesIO(b'{"error_type":"provider_http","http_status":429}'))
+                    if fault=='http':raise urllib.error.HTTPError('http://127.0.0.1:1/invoke',429,'fixture',{},io.BytesIO(b'{"error_type":"provider_http","http_status":429,"provider_error_type":"rate_limit_exceeded","retry_after_seconds":12,"rate_remaining":0}'))
+                    if fault=='fenced':raw['choices'][0]['message']['content']='```json\n'+canonical(packet['expected'])+'\n```'
                     if fault=='invalid':raw['choices'][0]['message']['content']='```json\n{"fetch":{}}\n```'
                     if fault=='route':raw['provider']='unexpected'
                     if fault=='usage':raw['usage']['cost']=1
@@ -147,6 +148,14 @@ class DiagnosticTests(unittest.TestCase):
             self.assertEqual(row['checked']['action'],row['expected_action'])
             self.assertEqual(digest(row['action_effect']['definition']),row['definition_sha256'])
 
+    def test_exact_fenced_action_executes_without_changing_engine_checks(self):
+        summary,records,charges,_=self.rehearse('fenced')
+        self.assertTrue(summary['diagnostic_passed']);self.assertEqual(summary['started'],36)
+        self.assertEqual(charges[0][0],'known')
+        self.assertTrue(records[0]['checked']['transport_normalization']['removed_json_fence'])
+        self.assertTrue(records[0]['raw_response']['choices'][0]['message']['content'].startswith('```json'))
+        self.assertTrue(records[0]['action_executed'])
+
     def test_format_failure_stops_role_preserves_known_billing_and_other_roles(self):
         summary,records,charges,done=self.rehearse('invalid')
         self.assertEqual(summary['started'],25);self.assertIsNone(summary['stop_reason'])
@@ -158,6 +167,9 @@ class DiagnosticTests(unittest.TestCase):
         summary,records,charges,done=self.rehearse('http')
         self.assertEqual(summary['started'],1);self.assertEqual(summary['stop_reason'],'transport_or_runtime_failure_guard')
         self.assertEqual(charges,[('uncertain',None)]);self.assertEqual(sum(r['status']=='not_started' for r in records),35)
+        self.assertEqual(records[0]['relay_diagnostic']['retry_after_seconds'],12)
+        self.assertEqual(records[0]['relay_diagnostic']['provider_error_type'],'rate_limit_exceeded')
+        self.assertEqual(records[0]['relay_diagnostic']['rate_remaining'],0)
 
     def test_route_mismatch_stops_all_with_known_bill(self):
         summary,_,charges,_=self.rehearse('route')

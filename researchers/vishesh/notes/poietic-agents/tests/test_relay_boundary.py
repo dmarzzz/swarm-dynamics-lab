@@ -16,15 +16,20 @@ from unittest.mock import patch
 BASE=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(BASE/'src'))
 import relay
+import diagnostic_relay
 from common import canonical
 from native import request
 from qualification import make_case,probe
 
 class RelayBoundaryTests(unittest.TestCase):
-    def run_boundary(self,provider_result):
+    def run_boundary(self,provider_result,relay_module=relay):
+        relay=relay_module
+        diagnostic=relay is diagnostic_relay
+        stage="D0-01" if diagnostic else "S0-02"
+        worker_module="diagnostic_launch" if diagnostic else "launch"
         models=json.loads((BASE/'models.json').read_text())['models']
         state=make_case(0,development=True);packet=probe(state,0,'generalist')
-        payload={'id':'S0-02:generalist:0:0:physical-0','role':'generalist','request':request(models['generalist'],packet['sections'])}
+        payload={'id':stage+':generalist:0:0:physical-0','role':'generalist','request':request(models['generalist'],packet['sections'])}
         current=time.time();deadline=current+120;clock=[current]
         original_server=relay.HTTPServer
         class OneRequest(original_server):
@@ -36,12 +41,12 @@ class RelayBoundaryTests(unittest.TestCase):
                 return io.BytesIO(canonical(provider_result).encode())
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);key=root/'fixture-key';key.write_text('FAKE_UNIT_CREDENTIAL_NOT_USABLE');key.chmod(0o600)
-            config=root/'config.json';config.write_text(json.dumps({'attempt':'S0-02','allocation':{'host':'fixture'},'authorization':{'deadline':deadline}}))
+            config=root/'config.json';config.write_text(json.dumps({'attempt':stage,'allocation':{'host':'fixture'},'authorization':{'deadline':deadline}}))
             port=root/'port';ledger=root/'budget.sqlite';errors=[]
             def target():
                 try:relay.serve(config,key,ledger,port)
                 except BaseException as exc:errors.append(type(exc).__name__)
-            with patch.object(relay,'verify'),patch.object(relay,'verify_public'),patch('launch.source_check'),patch.object(relay,'verify_catalog'),patch('launch.read_json',return_value={}),patch.object(relay.urllib.request,'build_opener',return_value=Provider()),patch.object(relay,'HTTPServer',OneRequest),patch.object(relay.time,'time',side_effect=lambda:clock[0]):
+            with patch.object(relay,'verify'),patch.object(relay,'verify_public'),patch(worker_module+'.source_check'),patch.object(relay,'verify_catalog'),patch(worker_module+'.read_json',return_value={}),patch.object(relay.urllib.request,'build_opener',return_value=Provider()),patch.object(relay,'HTTPServer',OneRequest),patch.object(relay.time,'time',side_effect=lambda:clock[0]):
                 thread=threading.Thread(target=target,daemon=True);thread.start()
                 until=time.monotonic()+3
                 while not port.exists() and time.monotonic()<until and not errors:time.sleep(.01)
@@ -62,5 +67,29 @@ class RelayBoundaryTests(unittest.TestCase):
         failure=urllib.error.HTTPError('https://provider.invalid',400,'rejected',{},io.BytesIO(b'{"error":{"message":"Unsupported response_format parameter"}}'))
         status,body,charge,saved=self.run_boundary(failure)
         self.assertEqual(status,502);self.assertEqual(body['http_status'],400);self.assertIn('response_format',body['error_markers']);self.assertEqual(charge[1],'uncertain');self.assertEqual(saved[0]['error'],body)
+
+    def test_429_metadata_is_safe_and_retains_full_reserve_in_both_relays(self):
+        for module in (relay,diagnostic_relay):
+            with self.subTest(relay=module.__name__):
+                failure=urllib.error.HTTPError('https://provider.invalid',429,'fixture',
+                    {'Retry-After':'12','X-RateLimit-Remaining':'0','Authorization':'DO_NOT_LOG'},
+                    io.BytesIO(b'{"error":{"code":429,"message":"provider DO_NOT_LOG rate limit","metadata":{"error_type":"rate_limit_exceeded","provider_name":"Anthropic","provider_code":"rate_limited","raw":"DO_NOT_LOG"}}}'))
+                status,body,charge,saved=self.run_boundary(failure,module)
+                self.assertEqual(status,429);self.assertEqual(charge,(None,'uncertain'))
+                self.assertEqual(body['retry_after_seconds'],12)
+                self.assertEqual(body['provider_error_type'],'rate_limit_exceeded')
+                self.assertEqual(body['provider_name'],'Anthropic')
+                self.assertEqual(body['rate_remaining'],0)
+                self.assertNotIn('DO_NOT_LOG',canonical(saved));self.assertEqual(len(saved),1)
+
+    def test_http200_provider_error_is_a_transport_failure_not_missing_action(self):
+        for module in (relay,diagnostic_relay):
+            with self.subTest(relay=module.__name__):
+                raw={'error':{'code':429,'message':'private detail','metadata':{'error_type':'rate_limit_exceeded'}}}
+                status,body,charge,saved=self.run_boundary(raw,module)
+                self.assertEqual(status,429);self.assertEqual(body['http_status'],200)
+                self.assertEqual(body['error_type'],'provider_body_error')
+                self.assertEqual(charge,(None,'uncertain'));self.assertEqual(len(saved),1)
+                self.assertNotIn('response',saved[0]);self.assertNotIn('private detail',canonical(saved))
 
 if __name__=='__main__':unittest.main()

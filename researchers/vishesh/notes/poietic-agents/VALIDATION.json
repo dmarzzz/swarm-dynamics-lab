@@ -141,5 +141,11 @@
       "unstarted_count_visible": true,
       "scripted_label_visible": true
     }
+  },
+  "latest_offline_repair": {
+    "tests_passed": 121,
+    "evidence": "readiness/format-repair/validation.json",
+    "new_model_calls": 0,
+    "native_qualification": false
   }
 }

@@ -1,0 +1,30 @@
+{
+  "checked_utc": "2026-10-04T18:31:03.192941+00:00",
+  "native_attempt": "D0-01",
+  "retrospective_development_only": true,
+  "new_model_calls": 0,
+  "replayed_returned_answers": 2,
+  "checks": [
+    {
+      "role": "generalist",
+      "raw_response_sha256": "3d329399e71547783f29f499d7287673c73ea030a076182904c60d81ddfcfdc0",
+      "historical_native_status": "invalid",
+      "retrospective_repair_correct": true,
+      "removed_fence": true,
+      "historical_record_unchanged": true
+    },
+    {
+      "role": "cheap_generative",
+      "raw_response_sha256": "d05e08828eae50bdcd075dac4320a026b4d3cdb394f4e4fd84f768b6f4f8ee7d",
+      "historical_native_status": "valid",
+      "retrospective_repair_correct": true,
+      "removed_fence": false,
+      "historical_record_unchanged": true
+    }
+  ],
+  "provider_error_without_answer": 1,
+  "unchanged_primary_ledger": {
+    "physical_calls": 40,
+    "api_exposure_usd": 0.482269482
+  }
+}

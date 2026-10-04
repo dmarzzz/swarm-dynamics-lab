@@ -1,3 +1,7 @@
+## Current offline update
+
+Read [formatting/error repair and substitution costs](readiness/format-repair/REPORT.md).121 offline checks pass; current main uses `single-json-fence-v1`. Frozen D0-01 remains strict and failed. No new native attempt is approved or model substituted; do not reuse consumed D0 IDs or old admission.
+
 ## Latest handoff: D0-01 closed
 
 Read [D0-01 post-mortem](reviews/D0-01-post.md) and [scientific assessment](reviews/D0-01-scientific.json) before another iteration. Three calls, one correct fetch,33unstarted,36terminal; Haiku wrapper failure and Qwen429. Original authority unchanged,40cumulative calls,USD0.568560890 conservative total, all workers stopped and claim released. Current approval is consumed. Do not execute historical commands below as a new launch. Recommended next work is offline; changed native scope needs an updated owner decision.

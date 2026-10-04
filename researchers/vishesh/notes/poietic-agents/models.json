@@ -1,5 +1,5 @@
 {
-  "version": "0.2",
+  "version": "0.3-offline-repair",
   "checked_utc": "2026-10-04T04:59:59.175360+00:00",
   "identity_limit": "Catalog-reported backend revision; hosted weights are not independently attested. Every response must match the pinned provider and accepted identity.",
   "models": {
@@ -24,7 +24,8 @@
         "allow_fallbacks": false
       },
       "qualification_status": "unqualified",
-      "observed_execution_model": null
+      "observed_execution_model": null,
+      "wire_format_policy": "single-json-fence-v1"
     },
     "cheap_generative": {
       "requested_model_id": "qwen/qwen3-8b",
@@ -47,7 +48,8 @@
         "allow_fallbacks": false
       },
       "qualification_status": "unqualified",
-      "observed_execution_model": null
+      "observed_execution_model": null,
+      "wire_format_policy": "single-json-fence-v1"
     },
     "typed_choice": {
       "requested_model_id": "typesafe/jev-1.13",

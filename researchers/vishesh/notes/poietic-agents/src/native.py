@@ -3,6 +3,7 @@ import json
 import math
 from decimal import Decimal, ROUND_CEILING
 from common import canonical, digest
+from wire_format import parse_chat_action, STRICT
 
 MAX_INPUT, MAX_OUTPUT = 8192, 1024
 
@@ -50,6 +51,7 @@ def response(raw, contract, choices=None):
     if not isinstance(raw,dict) or raw.get('model') not in contract['accepted_response_model_ids'] or raw.get('provider') != contract['provider_name']:
         raise ValueError('actual_route_mismatch')
     measured=usage_receipt(raw,contract)
+    normalization = None
     if contract['kind'] == 'decision':
         if set(raw.get('answers', {})) != {'action'}:
             raise ValueError('answer_set')
@@ -68,11 +70,11 @@ def response(raw, contract, choices=None):
             raise ValueError('incomplete_generation')
         content = candidates[0].get('message', {}).get('content')
         if not isinstance(content,str): raise ValueError('text_response')
-        action=json.loads(content)
+        action, normalization = parse_chat_action(content, contract.get('wire_format_policy', STRICT))
     if not isinstance(action,dict): raise ValueError('action_object')
     return dict(action=action, actual_model=raw['model'], actual_provider=raw['provider'],
                 catalog_backend_revision=contract['backend_revision'], provider_response_hash=digest(raw),
-                usage=measured)
+                usage=measured, transport_normalization=normalization)
 
 
 def verify_catalog(data, contract):

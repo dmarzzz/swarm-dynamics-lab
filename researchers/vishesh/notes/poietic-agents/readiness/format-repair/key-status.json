@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-10-04T18:27:40.398775+00:00",
+  "endpoint": "GET /api/v1/key",
+  "authenticated_read_succeeded": true,
+  "per_key_credit_limit_configured": true,
+  "per_key_limit_exhausted": false,
+  "diagnostic_limit": "Current per-key state only; not account balance, upstream quota or historical cause.",
+  "private_account_fields_retained": false,
+  "model_calls": 0
+}

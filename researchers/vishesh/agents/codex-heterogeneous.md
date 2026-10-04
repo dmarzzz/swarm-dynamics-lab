@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-heterogeneous
 tool: codex
-state: blocked
+state: idle
 task: null
-doing: S0-02 closed; strict format failure; offline repair validated; successor decision pending
-updated: 2026-10-04T17:05Z
+doing: D0 closed; formatting/error repair validated offline; Haiku replacement cost estimated
+updated: 2026-10-04T18:32:55.072393+00:00
 ---
 
-Read Poietic reviews/S0-02-post.md and reviews/S0-02-repair-plan.md. One new native call failed strict JSON/action format; all144 outcomes retained,12 artifacts verified and allocation released. No model qualifies.106 offline repair checks pass; the proposed36decision diagnostic needs an updated owner decision and current admission; dedicated runner is complete offline. No automatic retry or successor. Original USD2 cap and37cumulative calls remain; total conservative exposureUSD0.562186183.
+Read Poietic readiness/format-repair/REPORT.md and reviews/D0-01-post.md. Bounded JSON-fence normalization and allowlisted provider-error telemetry pass121 offline tests; both retained model answers replay correctly without altering native grades. Current non-billable route/key checks pass; exact historical429 cause is unresolved. Qwen remains selected. No successor launched or approved; original40calls and USD0.568560890 cumulative exposure retained.
