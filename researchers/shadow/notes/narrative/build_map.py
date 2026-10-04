@@ -142,6 +142,24 @@ def scientific_status(row):
     return 'gated' if any(x in status for x in ('gate', 'block', 'qualification', 'fail')) else 'designing'
 
 
+def activity_phase(subject):
+    """Explicit commit cues only. Unknown activity is not silently relabeled as design."""
+    subject = subject.lower()
+    if re.search(r'\b(blocked|qualification failed|gate failed|gate failure|http429|http 429)\b', subject):
+        return 'gated'
+    if re.search(r'\b(task: done|closeout|close .+diagnostic|completed)\b', subject):
+        return 'done'
+    if re.search(r'\b(recomput|analy[sz]|audit|review)', subject):
+        return 'analyzing'
+    if re.search(r'\b(design|plan|preregistration|nothing launched|not launched|not started|unrun)\b', subject):
+        return 'designing'
+    if re.search(r'\b(qualification|probe|qualifying)\b', subject):
+        return 'qualifying'
+    if re.search(r'\b(running|launched|started|executing)\b', subject):
+        return 'running (reported)'
+    return 'phase unverified'
+
+
 def score_headline(candidate, nodes, weights):
     evidence = [nodes[k] for k in candidate['evidence_ids'] if k in nodes]
     eligible = [n for n in evidence if n['strength'] > 0]
@@ -304,7 +322,7 @@ def build(args):
         owned = [t for t in tasks if t['agent'] == agent]
         relevant = ' '.join(c['subject'] for c in records[-8:])
         lane_theme = classify(relevant, config['themes'])
-        status = 'gated' if re.search(r'blocked|gate fail|qualification fail', records[-1]['subject'], re.I) else 'designing'
+        status = activity_phase(records[-1]['subject'])
         # Commit language is activity, not a license to mark a scientific result complete.
         label = owned[0]['title'] if owned else agent.split('/', 1)[-1].replace('-', ' ')
         threads.append({'id': 'lane:' + agent, 'agent': agent, 'owner': records[0]['owner'], 'label': label,

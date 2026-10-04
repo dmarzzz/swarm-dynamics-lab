@@ -22,6 +22,13 @@ class UnitTests(unittest.TestCase):
         row['status_at_assessment'] = 'qualification_failed'
         self.assertEqual(build_map.scientific_status(row), 'negative')
 
+    def test_activity_phase_does_not_invent_execution(self):
+        self.assertEqual(build_map.activity_phase('[shadow/a] sync: 1 file'), 'phase unverified')
+        self.assertEqual(build_map.activity_phase('[dmarz/a] design: code ready; nothing launched'), 'designing')
+        self.assertEqual(build_map.activity_phase('[vishesh/a] task: done assay'), 'done')
+        self.assertEqual(build_map.activity_phase('[vishesh/a] qualification failed on fixed fixtures'), 'gated')
+        self.assertEqual(build_map.activity_phase('[shadow/a] audit saved results'), 'analyzing')
+
     def test_score_cannot_use_commit_volume(self):
         candidate = {'evidence_ids': ['a','b','missing'], 'brief_fit': 1, 'readiness': 1}
         nodes = {'a': {'id': 'a', 'strength': .8, 'owner': 'dmarz', 'commits': 1},
