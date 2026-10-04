@@ -47,3 +47,7 @@ A static competence matrix is appropriate for isolated calls: rows are 16 eviden
 ## Freeze and launch receipts
 
 Pin plan URL to the public implementation commit, register experiment ID `quorum-of-mirrors` with a readable TLDR and register this distinct S0 condition/run TLDR. Verify public page content/hash and registration through public_plan.py or equivalent. Record source hashes, assignment hash, exact deployed command, provider metadata check, exclusive allocation expiry and isolated budget receipt. The frozen source must include passing offline tests. This document is launch preparation, not proof those steps happened.
+
+## Public metadata check, 2026-10-04
+
+Freshly opened official [endpoint metadata](https://openrouter.ai/api/v1/models/typesafe/jev-1.13/endpoints) and [Decisions API reference](https://openrouter.ai/docs/api/api-reference/alphadecisions/submit-a-decisions-request). Metadata reports TypeSafe, the specified snapshot, active status, 32,000 context and the planned $0.042/million prompt rate with zero output rate. This is availability metadata, not authenticated qualification; repeat the check immediately before paid dispatch.

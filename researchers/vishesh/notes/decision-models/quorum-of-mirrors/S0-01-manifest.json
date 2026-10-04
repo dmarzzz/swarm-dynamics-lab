@@ -1,0 +1,2762 @@
+{
+  "experiment": "quorum-of-mirrors",
+  "attempt": "QM-S0-01",
+  "stage": "exploratory competence",
+  "assignments": [
+    {
+      "id": "q65-000-r1",
+      "case": "q65-000",
+      "repeat": 1,
+      "q": 0.65,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "1a3fab41189226aa76aae5c477c9fdc4d2509053560193471dc7c0fe83aa12ba"
+    },
+    {
+      "id": "q65-001-r1",
+      "case": "q65-001",
+      "repeat": 1,
+      "q": 0.65,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "4804d542f63cbd4748b3f1e213a9b55c920558d861cc6ab7e27ef57502f80261"
+    },
+    {
+      "id": "q65-010-r1",
+      "case": "q65-010",
+      "repeat": 1,
+      "q": 0.65,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "b3336863e8e19c42eeca777ed93c9fe7512605049737945e3e61218a36437318"
+    },
+    {
+      "id": "q65-011-r1",
+      "case": "q65-011",
+      "repeat": 1,
+      "q": 0.65,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "d5f51189f5c12c1c44d88b1c30220866542aeedc92583914170c8836c27d3b66"
+    },
+    {
+      "id": "q65-100-r1",
+      "case": "q65-100",
+      "repeat": 1,
+      "q": 0.65,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "0907f49c715645b0ea40cfba18180715ae348d38409c24a369941d74b7000aed"
+    },
+    {
+      "id": "q65-101-r1",
+      "case": "q65-101",
+      "repeat": 1,
+      "q": 0.65,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "5a4dcebe7e3becfb37f8ba61227f866331ada83ae798bcd3b0c5868e6a6a57d5"
+    },
+    {
+      "id": "q65-110-r1",
+      "case": "q65-110",
+      "repeat": 1,
+      "q": 0.65,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "3ad1a23dd082b4c669d2ff21a6c24a07dfa787a61939410682a36aca78577f19"
+    },
+    {
+      "id": "q65-111-r1",
+      "case": "q65-111",
+      "repeat": 1,
+      "q": 0.65,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "364047ee714039d72ff27ffd79a1197fc2c41c9e234c52b650d26614ee758a62"
+    },
+    {
+      "id": "q80-000-r1",
+      "case": "q80-000",
+      "repeat": 1,
+      "q": 0.8,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "f29924f6a99868188ae9333ef49d242dbc3b8da51c8c22011cfd1dca05d9b103"
+    },
+    {
+      "id": "q80-001-r1",
+      "case": "q80-001",
+      "repeat": 1,
+      "q": 0.8,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "9df219c8c2501366ac84b50e21f32ea2f4cb8b49224d0d1ff5189feea37073b4"
+    },
+    {
+      "id": "q80-010-r1",
+      "case": "q80-010",
+      "repeat": 1,
+      "q": 0.8,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "885730813fdc9fbebea17857311c76da2b838707678c4442093e8f970bfd0444"
+    },
+    {
+      "id": "q80-011-r1",
+      "case": "q80-011",
+      "repeat": 1,
+      "q": 0.8,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "0a93d5c2ec71e11fc072d9efc6ada9525ea8492fcf649295bae3d7e58dcf52ef"
+    },
+    {
+      "id": "q80-100-r1",
+      "case": "q80-100",
+      "repeat": 1,
+      "q": 0.8,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "4a07007c227ccc1cd0b8a566c23ed0faf2394a2e0dd12675832f06d41aeec4b4"
+    },
+    {
+      "id": "q80-101-r1",
+      "case": "q80-101",
+      "repeat": 1,
+      "q": 0.8,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "2c580c73f4d09d723ff0e82b1cb196e890e261306d4507e913b2f7b554800c76"
+    },
+    {
+      "id": "q80-110-r1",
+      "case": "q80-110",
+      "repeat": 1,
+      "q": 0.8,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "7afa4c389716fea9b1770bd0c6d03f0565a87de1c7f9314ba5a2df637b26ec2f"
+    },
+    {
+      "id": "q80-111-r1",
+      "case": "q80-111",
+      "repeat": 1,
+      "q": 0.8,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "c6fc7eb482b229e4c262844737631997dfc7dd7d01ac7a04773c006befdc9ceb"
+    },
+    {
+      "id": "q65-000-r2",
+      "case": "q65-000",
+      "repeat": 2,
+      "q": 0.65,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "1a3fab41189226aa76aae5c477c9fdc4d2509053560193471dc7c0fe83aa12ba"
+    },
+    {
+      "id": "q65-001-r2",
+      "case": "q65-001",
+      "repeat": 2,
+      "q": 0.65,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "4804d542f63cbd4748b3f1e213a9b55c920558d861cc6ab7e27ef57502f80261"
+    },
+    {
+      "id": "q65-010-r2",
+      "case": "q65-010",
+      "repeat": 2,
+      "q": 0.65,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "b3336863e8e19c42eeca777ed93c9fe7512605049737945e3e61218a36437318"
+    },
+    {
+      "id": "q65-011-r2",
+      "case": "q65-011",
+      "repeat": 2,
+      "q": 0.65,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "d5f51189f5c12c1c44d88b1c30220866542aeedc92583914170c8836c27d3b66"
+    },
+    {
+      "id": "q65-100-r2",
+      "case": "q65-100",
+      "repeat": 2,
+      "q": 0.65,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "0907f49c715645b0ea40cfba18180715ae348d38409c24a369941d74b7000aed"
+    },
+    {
+      "id": "q65-101-r2",
+      "case": "q65-101",
+      "repeat": 2,
+      "q": 0.65,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "5a4dcebe7e3becfb37f8ba61227f866331ada83ae798bcd3b0c5868e6a6a57d5"
+    },
+    {
+      "id": "q65-110-r2",
+      "case": "q65-110",
+      "repeat": 2,
+      "q": 0.65,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "3ad1a23dd082b4c669d2ff21a6c24a07dfa787a61939410682a36aca78577f19"
+    },
+    {
+      "id": "q65-111-r2",
+      "case": "q65-111",
+      "repeat": 2,
+      "q": 0.65,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.65
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.65
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "364047ee714039d72ff27ffd79a1197fc2c41c9e234c52b650d26614ee758a62"
+    },
+    {
+      "id": "q80-000-r2",
+      "case": "q80-000",
+      "repeat": 2,
+      "q": 0.8,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "f29924f6a99868188ae9333ef49d242dbc3b8da51c8c22011cfd1dca05d9b103"
+    },
+    {
+      "id": "q80-001-r2",
+      "case": "q80-001",
+      "repeat": 2,
+      "q": 0.8,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "9df219c8c2501366ac84b50e21f32ea2f4cb8b49224d0d1ff5189feea37073b4"
+    },
+    {
+      "id": "q80-010-r2",
+      "case": "q80-010",
+      "repeat": 2,
+      "q": 0.8,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "885730813fdc9fbebea17857311c76da2b838707678c4442093e8f970bfd0444"
+    },
+    {
+      "id": "q80-011-r2",
+      "case": "q80-011",
+      "repeat": 2,
+      "q": 0.8,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "0a93d5c2ec71e11fc072d9efc6ada9525ea8492fcf649295bae3d7e58dcf52ef"
+    },
+    {
+      "id": "q80-100-r2",
+      "case": "q80-100",
+      "repeat": 2,
+      "q": 0.8,
+      "expected": "ZERO",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "4a07007c227ccc1cd0b8a566c23ed0faf2394a2e0dd12675832f06d41aeec4b4"
+    },
+    {
+      "id": "q80-101-r2",
+      "case": "q80-101",
+      "repeat": 2,
+      "q": 0.8,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 0,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "2c580c73f4d09d723ff0e82b1cb196e890e261306d4507e913b2f7b554800c76"
+    },
+    {
+      "id": "q80-110-r2",
+      "case": "q80-110",
+      "repeat": 2,
+      "q": 0.8,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 0,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "7afa4c389716fea9b1770bd0c6d03f0565a87de1c7f9314ba5a2df637b26ec2f"
+    },
+    {
+      "id": "q80-111-r2",
+      "case": "q80-111",
+      "repeat": 2,
+      "q": 0.8,
+      "expected": "ONE",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "provider": {
+          "only": [
+            "typesafe"
+          ],
+          "allow_fallbacks": false
+        },
+        "state": {
+          "reports": [
+            {
+              "report_id": "p0-0",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-1",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-2",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-3",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-4",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-5",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p0-6",
+              "visible_root": "r0",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p1-0",
+              "visible_root": "r1",
+              "bit": 1,
+              "q": 0.8
+            },
+            {
+              "report_id": "p2-0",
+              "visible_root": "r2",
+              "bit": 1,
+              "q": 0.8
+            }
+          ]
+        },
+        "questions": {
+          "decision": {
+            "type": "choice",
+            "instructions": "Select the more likely hidden binary state. The prior probability of each state is 1/2. Distinct observation roots are independent conditional on the state. Each root reports the true state with its stated probability q. Reports with the same visible_root are copies of one observation and add no independent evidence. Count each observation root once. Select DEFER only if unable to determine the more likely state.",
+            "criteria": {
+              "ZERO": "The hidden binary state is more likely zero.",
+              "ONE": "The hidden binary state is more likely one.",
+              "DEFER": "Unable to determine which state is more likely."
+            }
+          }
+        }
+      },
+      "request_sha256": "c6fc7eb482b229e4c262844737631997dfc7dd7d01ac7a04773c006befdc9ceb"
+    }
+  ],
+  "assignments_sha256": "bc2784f7d20f00432b36bc2d9e76f9cc64b0e087ea69fdeef0add1b888ac27a0",
+  "max_calls": 32,
+  "max_reserved_usd": 0.043008
+}
