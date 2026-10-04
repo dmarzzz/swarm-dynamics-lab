@@ -47,12 +47,14 @@ class Swarm(Engine):
         self.cost_menu={r:{k:c[k] for k in ('kind','input_usd_per_token','output_usd_per_token')} for r,c in models().items()}
     def context(self,actor_id,task):
         p=super().context(actor_id,task);p['sections'].append(copy.deepcopy(CONTRACT))
+        p['sections'].append(dict(own_definition=self.actors[actor_id].definition()))
         while len(canonical(p['sections']).encode())>6200 and p['sections'][3]['own_observations']:
             p['sections'][3]['own_observations'].pop(0);p['omitted_observations']+=1
         if len(canonical(p['sections']).encode())>6200:raise ValueError('context_capacity')
         p['context_sha256']=digest(p['sections']);return p
     def propose(self,actor_id,epoch,transaction,operation,payload,qualified=()):
         validate_action(dict(type='propose',operation=operation,payload=payload))
+        if operation=='switch_model' and payload['model'] not in ROLES:raise ValueError('model_outside_p30_contract')
         key=actor_id+'/'+str(payload.get('name',''))
         if operation=='register_service' and key not in self.services and len(self.services)>=6:raise ValueError('service_directory_capacity')
         return super().propose(actor_id,epoch,transaction,operation,payload,qualified)
