@@ -37,6 +37,21 @@ class InstrumentTests(unittest.TestCase):
             decision='A' if sum(a['world']['values'])>0 else 'B'
             self.assertEqual(ins.score({'decision':decision,'confidence':1},a),{'accuracy':1,'false_confidence':0})
 
+    def test_wire_schema_omits_unsupported_numeric_bounds(self):
+        # Anthropic raw structured-output schemas do not accept these keywords;
+        # SDK transformation normally strips them. Local validation stays strict.
+        unsupported={'minimum','maximum','exclusiveMinimum','exclusiveMaximum','multipleOf'}
+        def visit(node):
+            if isinstance(node,dict):
+                self.assertFalse(unsupported.intersection(node))
+                for value in node.values():visit(value)
+            elif isinstance(node,list):
+                for value in node:visit(value)
+        visit(ins.SCHEMA)
+        self.assertEqual(ins.SCHEMA['properties']['confidence'],{'type':'number'})
+        for value in (-.001,1.001,float('nan'),True):
+            with self.assertRaises(ValueError):ins.validate_answer({'decision':'A','confidence':value})
+
     def test_schema_domain(self):
         for value in [True,-.1,1.1,float('nan'),float('inf'),'0.9']:
             with self.assertRaises(ValueError):ins.validate_answer({'decision':'A','confidence':value})
