@@ -1,0 +1,15 @@
+{
+  "native_attempt": null,
+  "scientific_scope": "saved_trace_audit_and_offline_prototype",
+  "tests": 8,
+  "trace_pairs": 140,
+  "prior_native_wrong": 50,
+  "new_native_calls": 0,
+  "new_spend_usd": 0,
+  "new_allocation": false,
+  "credential_transfer": false,
+  "known_api_usd": 0.845052138,
+  "conservative_exposure_usd": 0.857148138,
+  "decision": "do_not_launch_until_useful_empirical_native_role_and_updated_plan_decision",
+  "raw_provider_body_gap": "retained as unknown, not repaired retrospectively"
+}

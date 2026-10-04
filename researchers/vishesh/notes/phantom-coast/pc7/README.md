@@ -1,5 +1,14 @@
 # PC7: trace audit and finite-history verification prototype
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `40ecd0be` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — A model benefit on finite-history verification is untested; only an exact offline controller and prior-trace audit are complete. Basis: Known-contract information value is verified algebraically, not measured on model calls. No application-specific native role beyond the exact Bayesian policy has been justified.
+- **sample_size_summary:** PC7:0 native outcomes.24 development fixture definitions; proposed8 qualification and48 evaluation roots unopened. Retrospective PC5 audit:12 Q0 choices on4 roots and128 S1 choices on32 roots; no new samples.
+<!-- experiment-evidence:end -->
+
 **Offline revision complete; no native successor recommended yet.** [Prospective plan](PLAN.md), [trace-grounded review](reviews/TRACE-REVIEW.md), [setup](SETUP.md).
 
 The full PC5 trace audit covers12 qualification and128 scientific choices, including all50 valid-but-suboptimal scientific outcomes. Actual prompts were delivered as specified; missing scoring text and malformed outputs do not explain the reliable-source regression. The [trace viewer](results/native-traces.html) exposes every input and retained checked output, including successes. Raw provider bodies and confidence were not saved; that historical gap is explicit. [Audit and source hashes](results/trace-audit.json), [compressed portable traces](results/native-traces.json.gz).

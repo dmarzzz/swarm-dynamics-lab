@@ -49,3 +49,7 @@ Completed owner-requested PI critique → prospective plan → implementation �
 ## 2026-10-04T15:28:26.565921+00:00: PC6 decision-value closeout
 
 Re-audited PC5, recomputed paired strata and Qwen declared-cost reversals separately. Prepared a48-choice screen prospectively, then parked it: pass/fail both select the exact analytic controller. Added tested simple policy, portable analysis and inspected plot. Ten checks passed; no calls/spend/claim/key transfer/provisioning. Original exposure .857148138 and nine uncertain historical charges preserved. No successor queued. Researcher review waived; scientific futility is the reason for stopping, not capacity or approval.
+
+## PC7 trace-grounded revision
+
+Read Dmarz pipeline and historical completion-audit guidance. Audited all140 PC5 request/checked-output pairs and full journals;50 S1 valid-but-wrong, raw bodies/confidence historically absent. Added complete private-operator-free trace viewer/export. Prospective finite-noisy-history scenario precedes exact Bayesian two-step controller implementation; nonmyopic check has lower expected fixture loss than greedy trust, verified by exhaustive policy enumeration. Eight checks pass. Prototype safe trace projection and failure accounting preserve missingness. No empirical model role survives exact-controller baseline yet; no calls/spend/claim/provisioning/key transfer. Original exposure .857148138 retained; concrete proposal is offline, not launch authorization.

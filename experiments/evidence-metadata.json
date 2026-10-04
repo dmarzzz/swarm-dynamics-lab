@@ -7,9 +7,15 @@
     {
       "id": "wild-halflife",
       "title": "Cross-swarm URL adoption timing: wiki versus research git",
-      "documents": ["researchers/shadow/notes/wild-halflife/README.md"],
-      "experiment_ids": ["wild-halflife"],
-      "registration_paths": ["researchers/shadow/notes/wild-halflife/experiment.json"],
+      "documents": [
+        "researchers/shadow/notes/wild-halflife/README.md"
+      ],
+      "experiment_ids": [
+        "wild-halflife"
+      ],
+      "registration_paths": [
+        "researchers/shadow/notes/wild-halflife/experiment.json"
+      ],
       "evidence_confidence": {
         "score": 1,
         "claim": "In these frozen corpora, conditional URL reuse delays and pooled adoption-rate slopes differ; a causal copying mechanism and semantic idea half-life are not identified.",
@@ -3341,6 +3347,39 @@
       "assessor": "shadow/sol-cm2",
       "assessed_at": "2026-10-04",
       "source_commit": "cf36e30fd72c53147afa37f6418b94f6870e0fb2"
+    },
+    {
+      "id": "phantom-coast-pc7",
+      "title": "Phantom Coast PC7: trace-grounded finite-history prototype",
+      "documents": [
+        "researchers/vishesh/notes/phantom-coast/pc7/README.md"
+      ],
+      "experiment_ids": [
+        "phantom-coast-pc7"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "A model benefit on finite-history verification is untested; only an exact offline controller and prior-trace audit are complete.",
+        "rationale": "Known-contract information value is verified algebraically, not measured on model calls. No application-specific native role beyond the exact Bayesian policy has been justified."
+      },
+      "sample_size_summary": "PC7:0 native outcomes.24 development fixture definitions; proposed8 qualification and48 evaluation roots unopened. Retrospective PC5 audit:12 Q0 choices on4 roots and128 S1 choices on32 roots; no new samples.",
+      "sources": [
+        "researchers/vishesh/notes/phantom-coast/pc7/PLAN.md",
+        "researchers/vishesh/notes/phantom-coast/pc7/reviews/TRACE-REVIEW.md",
+        "researchers/vishesh/notes/phantom-coast/pc7/results/trace-audit.json",
+        "researchers/vishesh/notes/phantom-coast/pc7/results/offline-validation.json"
+      ],
+      "status_at_assessment": "offline_prototype_native_not_admitted",
+      "assessor": "vishesh/codex-phantom-coast",
+      "assessed_at": "2026-10-04",
+      "source_commit": "40ecd0be34db0420d85d8907c925b98a14f8f7aa",
+      "source_sha256": {
+        "researchers/vishesh/notes/phantom-coast/pc7/PLAN.md": "e95c167263643fe7ba7331ff61d1d79fe5c768306fd0405b78bf08c3f9605e77",
+        "researchers/vishesh/notes/phantom-coast/pc7/reviews/TRACE-REVIEW.md": "9c13362fd11dd23cde10525898de4d266c0361825c4b04ba62e5800518b0bcca",
+        "researchers/vishesh/notes/phantom-coast/pc7/results/trace-audit.json": "a016a2f686c9a3fe832d85aff013d1b7fcbc5a0b8075275bcf7345a41ea0a5c0",
+        "researchers/vishesh/notes/phantom-coast/pc7/results/offline-validation.json": "580cc22c74fac2d235ab7750436abc6f6bda304bba3a0deea84003df80855256"
+      }
     }
   ],
   "source_sha256": {
