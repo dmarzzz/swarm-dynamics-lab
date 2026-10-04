@@ -15,6 +15,7 @@ from engine import ARMS, World, evaluate, run_episode, task, record_envelope
 from provider import Anthropic, CallFailure, Ledger
 from render import artifacts
 from contract import clarify
+from worker import interface_transform
 
 
 def apply(w,actor,action,arm='F'): return w.apply(actor,dict(action=action,message=''),arm)
@@ -262,6 +263,27 @@ class Accounting(unittest.TestCase):
 
 
 class ClosedLoop(unittest.TestCase):
+    def test_qualification_and_pilot_share_declared_interface(self):
+        config={'interface_contract':'execution-v2'}
+        for domain in ('D1','D2'):
+            for arm in ARMS:
+                packet=World(task(240,domain)).packet(0,arm,0,40)
+                qualification=interface_transform('Q0',{'arm':arm},config)
+                pilot=interface_transform('P1',{'arm':arm},config)
+                self.assertIs(qualification,clarify)
+                self.assertIs(pilot,qualification)
+                self.assertEqual(qualification(packet,arm),pilot(packet,arm))
+        self.assertIs(interface_transform('S0',{},config),clarify)
+        self.assertIsNone(interface_transform('I0',{'condition':'original'},config))
+        self.assertIs(interface_transform('I0',{'condition':'clarified'},config),clarify)
+        self.assertIsNone(interface_transform('I0',{'condition':'original'},{}))
+        for stage in ('Q0','P1'):
+            self.assertIsNone(interface_transform(stage,{}, {'interface_contract':'original'}))
+            with self.assertRaises(ValueError): interface_transform(stage,{}, {})
+        for stage in ('I0','S0','Q0','P1'):
+            with self.assertRaises(ValueError): interface_transform(stage,{'condition':'original'},{'interface_contract':'typo'})
+        with self.assertRaises(ValueError): interface_transform('I0',{'condition':'typo'},config)
+
     def test_delivered_packet_trace_and_world_replay(self):
         received=[]
         def policy(packet,step):

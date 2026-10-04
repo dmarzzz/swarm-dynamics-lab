@@ -25,10 +25,13 @@ Deployed on sim-dmarz. [Live dashboard](https://swarm-live.pages.dev/#/x/composi
 | i0-002 | One-call fallback compatibility check passed | [Diagnostic](reviews/i0-002-post.md) |
 | q0-004 | Failed qualification: 10/24 safe, twelve incomplete, two provider refusals | [Post-mortem](reviews/q0-004-post.md) |
 | i0-003 | Contract clarification: 3/8 advancing versus 0/8 original; diagnostic failed | [Post-mortem](reviews/i0-003-post.md) |
-| i0-004 | Prepared paired model/configuration diagnostic on the same states | [Assessment](reviews/i0-004-pre.md) |
+| i0-004 | Haiku contract clarification: 3/8 advancing versus 0/8 original; diagnostic failed | [Post-mortem](reviews/i0-004-post.md) |
+| d0-001 | Withdrawn before dispatch; zero calls | [Assessment](reviews/d0-001-pre.md) |
+| d0-002 | Both conditions 4/4 safe; clarified 40 versus 60 original turns; diagnostic accepted | [Post-mortem](reviews/d0-002-post.md) |
+| q0-005 | Fresh qualification prepared with accepted contract v2 | [Assessment](reviews/q0-005-pre.md) |
 | P1 | Closed until the current-source qualification passes | 168-episode descriptive pilot |
 
-All completed attempts are reconciled. The user requested immediate repair; controlled diagnostics are testing the interface hypothesis on the existing approved connection before assuming a new provider is necessary. Through i0-003, study usage is 1,626 calls and $5.406371, with $28.393474 retained reservations. The larger study has not started.
+All completed attempts are reconciled. The user requested immediate repair; controlled diagnostics are testing the interface hypothesis on the existing approved connection before assuming a new provider is necessary. Through d0-002, study usage is 1,742 calls and $5.572021, with $29.646810 retained reservations. The larger study has not started.
 
 ## Question
 

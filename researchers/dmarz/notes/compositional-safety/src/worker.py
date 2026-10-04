@@ -20,10 +20,23 @@ def append(path,value):
         f.write(json.dumps(value,sort_keys=True,allow_nan=False)+'\n'); f.flush(); os.fsync(f.fileno())
 
 
+def interface_transform(stage, assignment, design):
+    contract=design.get('interface_contract')
+    if contract not in ('original','execution-v2') and not (stage=='I0' and contract is None):
+        raise ValueError('unknown_interface_contract')
+    if stage=='I0':
+        condition=assignment.get('condition')
+        if condition not in ('original','clarified'): raise ValueError('unknown_diagnostic_condition')
+        return clarify if condition=='clarified' else None
+    if stage not in ('S0','Q0','P1'): raise ValueError('stage_disabled')
+    return clarify if contract=='execution-v2' else None
+
+
 def execute(stage,attempt,qualification=None):
     import swarm_report as sr
     d=common.design(); out=prepare(stage,attempt,qualification)
     manifest=json.loads((out/'manifest.json').read_text())
+    for assignment in manifest['assignments']: interface_transform(stage,assignment,d)
     definition=yaml.safe_load((common.ROOT/'experiment.yaml').read_text()); exp=definition.pop('id')
     definition.update(url=manifest['plan_url'],description=manifest['registered_tldr'])
     sr.register(exp,**definition)
@@ -58,7 +71,7 @@ def execute(stage,attempt,qualification=None):
                 if time.monotonic()-started>timeout:
                     def timed_out(packet,step): raise CallFailure('stage_time_limit')
                     active_policy=timed_out
-                transform=clarify if a.get('condition')=='clarified' else None
+                transform=interface_transform(stage,a,d)
                 r=run_episode(spec,a['seed'],a['arm'],policy=active_policy,max_steps=d['cfg']['max_steps'],on_step=progress,packet_transform=transform)
                 if 'condition' in a: r['condition']=a['condition']
                 r.update(episode_id=eid,commit=manifest['commit'],hashes=manifest['hashes'],stage=stage,backend=manifest['backend'])

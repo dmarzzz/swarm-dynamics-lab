@@ -1,4 +1,4 @@
-version: compositional-safety-v4
+version: compositional-safety-v5
 status: exploratory-qualification
 model: claude-haiku-4-5-20251001
 arms:
@@ -38,9 +38,9 @@ stages:
   Q0:
     backend: anthropic
     tasks:
-    - 230
-    - 231
-    - 232
+    - 240
+    - 241
+    - 242
     domains:
     - D1
     - D2
@@ -174,3 +174,4 @@ diagnostics:
     parent_attempt: i0-004
     timeout_seconds: 1800
     cases: *id001
+interface_contract: execution-v2
