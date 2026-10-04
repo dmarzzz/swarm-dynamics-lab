@@ -1,6 +1,6 @@
 # Experiment setup record: growth-pressure-200 / plan v2
 
-**Status: PLAN ONLY — not launch-ready; no experiment or provider request has run.** Prepared from the [setup record template](../../../../tooling/agent-experiments/templates/experiment-setup.md) under the [setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Owner: dmarz. Planning agent: dmarz/astra-ultra-review (Astra Ultra attribution requested by the owner).
+**Status: PLAN ONLY — not launch-ready; no experiment or provider request has run.** Prepared from the [setup record template](../../../toolkit/agent-experiments/templates/experiment-setup.md) under the [setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Owner: dmarz. Planning agent: dmarz/astra-ultra-review (Astra Ultra attribution requested by the owner).
 
 ## Ownership and question
 
@@ -8,7 +8,7 @@
 - Decision: whether a larger investigation of economic pressure and rule adherence merits further work; a valid negative result remains useful.
 - Research status: prospective exploratory hunch in owner notes. No formal accepted hypothesis or independently reviewed experiment is claimed. Formal survey/hypothesis and applicable review status must be resolved before launch. Historical waivers for predecessor runs are not silently extended.
 - Design review: three parallel subagents of the same dmarz planning session reviewed economics, resource arithmetic and inference. [Original review](reviews/design-review.md) and [v2 review](reviews/design-review-v2.md). This is not a different-researcher review.
-- Prior evidence and diagnosis: [PLAN, Question and prediction](PLAN.md#question-and-prediction), predecessor [results](../sybil-rules-180/RESULTS.md) and [replication post-mortem](../sybil-rules-180/reviews/chain-004-post.md). The former prohibition result did not establish resistance to successful cheating peers; population topology, growing capital and the levy all change here. See also the [diagnosis runbook](../../../../tooling/agent-experiments/DIAGNOSIS.md).
+- Prior evidence and diagnosis: [PLAN, Question and prediction](PLAN.md#question-and-prediction), predecessor [results](../sybil-rules-180/RESULTS.md) and [replication post-mortem](../sybil-rules-180/reviews/chain-004-post.md). The former prohibition result did not establish resistance to successful cheating peers; population topology, growing capital and the levy all change here. See also the [diagnosis runbook](../../../toolkit/agent-experiments/DIAGNOSIS.md).
 - Current stage: publish prospective design and arithmetic, before experimental implementation. Next action: resolve applicable research-review scope, then implement only this design from the worker template and prepare its offline checks. There is no launch command or server allocation in this publication.
 
 ## Gate evidence
@@ -38,12 +38,12 @@ Assessment by dmarz/astra-ultra-review, 2026-10-04. Publication checks are separ
 
 ## Current attempt admission
 
-Operations entry: manual, documentation only. No experiment adapter or hub registration is created. Follow the [operations guide](../../../../tooling/agent-experiments/OPERATIONS.md) when implementing one.
+Operations entry: manual, documentation only. No experiment adapter or hub registration is created. Follow the [operations guide](../../../toolkit/agent-experiments/OPERATIONS.md) when implementing one.
 
 | Operation | Exact command or unsupported reason | Evidence |
 |---|---|---|
-| Inspect and validate this plan | `python3 researchers/dmarz/notes/growth-pressure-200/src/check_plan.py` from repo root | Offline arithmetic/link check; no model calls |
-| Rebuild publication copy | `python3 researchers/dmarz/notes/growth-pressure-200/src/build_plan.py` | Renders the same prose with repository links for a filed document |
+| Inspect and validate this plan | `python3 5-experiments/studies/dmarz/growth-pressure-200/src/check_plan.py` from repo root | Offline arithmetic/link check; no model calls |
+| Rebuild publication copy | `python3 5-experiments/studies/dmarz/growth-pressure-200/src/build_plan.py` | Renders the same prose with repository links for a filed document |
 | Prepare or dispatch a stage | Unsupported: runtime and admission not implemented | No run prepared |
 | Resume interrupted execution | Unsupported: no attempt; future attempts retain ledger and ancestry, never reset clock | No resume command claimed |
 | Analyze model evidence | Unsupported: none collected | No results inferred from this plan |
@@ -72,6 +72,6 @@ No attempts, paid probes, scripted experimental episodes or runtime repairs. v1 
 
 ## Completion and successor handoff
 
-Latest native attempt: none. Operational and scientific post-mortems: not applicable until a run exists. [Run-quality rubric](../../../../tooling/agent-experiments/RUN-QUALITY.md) remains required for future attempts.
+Latest native attempt: none. Operational and scientific post-mortems: not applicable until a run exists. [Run-quality rubric](../../../toolkit/agent-experiments/RUN-QUALITY.md) remains required for future attempts.
 
 Next action: implement the exact prospective contract after resolving G0 scope; complete G2; then prepare a bounded G3 qualification packet. Acceptance: accounting/evaluator/branch isolation and deadline fault tests pass, full packet fits, source/plan/model bindings are immutable, and current resource/budget receipts are present. Only native qualification can determine whether the one-hour main comparison is feasible. Do not launch a reduced or changed study from this handoff without a prospective amendment.

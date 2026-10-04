@@ -41,9 +41,9 @@ Seeds come from memory and are starting points, not citations. Open each one, co
 
 ## Done when
 
-- At least 25 papers catalogued in library/papers/ with this topic, including every review article you found.
+- At least 25 papers catalogued in 1-library/papers/ with this topic, including every review article you found.
 - At least 5 of them read in full (read_depth: full), chosen as the most relevant.
-- Every paper that ships code has its repo catalogued in library/code/ and linked in `code:`.
+- Every paper that ships code has its repo catalogued in 1-library/code/ and linked in `code:`.
 - The coverage note below is filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
@@ -139,7 +139,7 @@ because every niche is exhausted.
 
 ### Suggested follow-up tasks
 
-1. Code scan for marl-emergence: catalogue the repositories above in library/code/ (stars, licence, last
+1. Code scan for marl-emergence: catalogue the repositories above in 1-library/code/ (stars, licence, last
    commit, whether it runs on aarch64) and link them through `code:`. MAgent2 and PettingZoo are the
    large-population environments to check.
 2. Upgrade to full reads: [[li-2023-predator]], [[munoz-gil-2026-emergent]], [[heuthe-2024-counterfactual]],

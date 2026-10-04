@@ -9,6 +9,6 @@ updated: 2026-10-04T11:19Z
 
 ## Notes
 
-Builder under dmarz/pipeline. Study directories researchers/dmarz/notes/sybil-scarcity-opus/ (ran 2026-10-04) and researchers/dmarz/notes/sybil-scarcity-synth/ (in preparation).
+Builder under dmarz/pipeline. Study directories 5-experiments/studies/dmarz/sybil-scarcity-opus/ (ran 2026-10-04) and 5-experiments/studies/dmarz/sybil-scarcity-synth/ (in preparation).
 
 Rule recorded 2026-10-04 after this agent stopped its own selftest with `pkill` by pattern at about 10:57Z, which could match another builder's process: no `pkill` by pattern on this machine; kill only process ids the agent started (fleet monitor).

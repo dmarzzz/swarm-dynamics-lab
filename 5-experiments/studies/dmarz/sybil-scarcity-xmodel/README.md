@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/pipeline-scarcity-qwen; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/pipeline-scarcity-qwen; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — On packets byte-identical to sybil-scarcity-opus, a synthesizer other than Opus 5.5 (qwen3.7-flash without reasoning; gpt-6-sol at reasoning effort low) also loses specialist accuracy when each rare fact has one truthful carrier instead of 81. Basis: No S1 outcome exists: all three configurations stopped at the clean-packet qualification that Opus 5.5 passed 48/48 (Qwen: 1-carrier profile below threshold; gpt-6-sol: abstention on 148 and 113 of 264 present facts at effort low and none, all on facts supported only by unchecked reports). The claim cannot be scored. Not independently reviewed.
 - **sample_size_summary:** Observed: 0 S1 outcomes. Three configurations (qwen/qwen3.7-flash reasoning off; gpt-6-sol effort low; gpt-6-sol effort none, pre-registered follow-up) each answered the parent's 48 clean qualification packets (48/48 valid each, 144 calls plus 3 probes) and each failed the gate. Planned per configuration: 24 paired synthetic world roots x 60 conditions = 1,440 S1 calls; roots are the independent units.

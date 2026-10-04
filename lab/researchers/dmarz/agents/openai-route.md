@@ -9,4 +9,4 @@ updated: 2026-10-04T13:40Z
 
 ## Notes
 
-Builder for dmarz/fleet-monitor. Prices and verification notes: researchers/dmarz/notes/pipeline/reference/README.md, section OpenAI. Makes no model call and launches nothing.
+Builder for dmarz/fleet-monitor. Prices and verification notes: 5-experiments/studies/dmarz/pipeline/reference/README.md, section OpenAI. Makes no model call and launches nothing.

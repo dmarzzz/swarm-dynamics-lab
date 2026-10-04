@@ -27,7 +27,7 @@ outputs:
 
 ## Goal
 
-Implement the already-written prospective design in researchers/vishesh/notes/poietic-agents, beginning with offline instrument checks. Follow RUNBOOK.md, incorporate independent design review, and preserve the distinction between software validation, native qualification and scientific evidence. This task carries no paid-run budget by itself.
+Implement the already-written prospective design in 5-experiments/studies/vishesh/poietic-agents, beginning with offline instrument checks. Follow RUNBOOK.md, incorporate independent design review, and preserve the distinction between software validation, native qualification and scientific evidence. This task carries no paid-run budget by itself.
 
 ## Done when
 

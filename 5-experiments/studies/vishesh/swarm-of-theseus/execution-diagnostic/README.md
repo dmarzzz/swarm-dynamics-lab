@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-theseus; source snapshots shown per cohort ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-theseus; source snapshots shown per cohort ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 **Swarm of Theseus D2 executor confirmation** (`theseus-execution-d2`)
 Source: `66d20ec1`.
@@ -48,7 +48,7 @@ The [deeper D1 interpretation](INTERPRETATION-D1.md) shows that D's seven errors
 From the repository root:
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/tests -v
+python3 -m unittest discover -s 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/tests -v
 ```
 
 No network, credentials or model calls. Python standard library only for these tests. `regressions.json` contains the 13 prior wrong cases solely as development fixtures; new assignments never read it.
@@ -58,7 +58,7 @@ No network, credentials or model calls. Python standard library only for these t
 On the final clean published checkout:
 
 ```sh
-python3 researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/runner.py prepare /tmp/theseus-d1-prepared
+python3 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/src/runner.py prepare /tmp/theseus-d1-prepared
 ```
 
 Use a fresh output directory. This only writes the 144 exact planned requests, assignment/source/instrument hashes and a deliberately blocked admission template. It creates no experiment outcomes and sends no provider requests.
@@ -68,7 +68,7 @@ The operator then resolves applicable independent review, verifies pricing and n
 On that admitted dedicated host, with its existing approved secure credential mechanism populating the worker environment:
 
 ```sh
-python3 researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/runner.py run \
+python3 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/src/runner.py run \
   --admission /srv/swarm/theseus-d1-admission.json \
   --output /srv/swarm/theseus-d1-results/D1
 ```

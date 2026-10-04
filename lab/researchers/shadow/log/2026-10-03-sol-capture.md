@@ -1,8 +1,8 @@
 # 2026-10-03 sol-capture
 
-Built the capture-memory exploratory environment under `researchers/shadow/notes/capture-memory/` as a labelled
-hunch (hypothesis PR 82 is `proposed`, survey review says `revise`, so nothing goes in `experiments/`). Followed
-`templates/experiment-worker/README.md` steps 0 to 7: simulator with the template's contract (deterministic,
+Built the capture-memory exploratory environment under `5-experiments/studies/shadow/capture-memory/` as a labelled
+hunch (hypothesis PR 82 is `proposed`, survey review says `revise`, so nothing goes in `5-experiments/`). Followed
+`lab/templates/experiment-worker/README.md` steps 0 to 7: simulator with the template's contract (deterministic,
 paired across arms and across memory lengths, blind, total), JSON-in-yaml design with a declared primary
 contrast, pre-registration draft, selftest (32 checks, passes), coordinator without S2, hub worker, analysis with
 cluster bootstrap. Scripted tanh-over-memory policy only; the HTTP adapter exists and refuses to start without a

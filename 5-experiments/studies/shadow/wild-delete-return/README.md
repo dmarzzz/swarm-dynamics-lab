@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by shadow/sol-audit-gap; source `47307742` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by shadow/sol-audit-gap; source `47307742` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — The predeclared 30-minute paired windows contain 83 observed saves before and 83 after first deletion on 2,728 eligible pages; 19 pages have a post-guard save. Basis: All 5,144 selected page assignments, exclusions and windows were recomputed by separate same-author code. Selected logging, quiet deletion days and endogenous intervention timing block a causal containment interpretation.
 - **sample_size_summary:** One selected incident export; 5,144 first-deletion pages, 2,728 eligible across 14 UTC-day clusters, 2,416 release-edge exclusions; 19,913 events and 14,591 revisions read. Pages are dependent; 83 before/83 after saves. Zero model calls.

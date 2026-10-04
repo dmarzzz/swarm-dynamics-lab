@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/patchwork-hypotheses; source `a20b97c1` ([registry](../../../../../../experiments/evidence-metadata.json), [rubric](../../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/patchwork-hypotheses; source `a20b97c1` ([registry](../../../../../evidence-metadata.json), [rubric](../../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — The frozen q0-005 Haiku 4.5 configuration with execution-v2 fails the unchanged readiness qualification; receipt-treatment efficacy remains untested. Basis: Frozen-source replay reproduces all 176 observations and events: safe completion is 21/24 (87.5%, below 90%) and D2/S is 4/6 (66.7%, below 80%). Three task-root IDs and five reused shapes provide descriptive qualification evidence, not an independent model comparison, treatment effect or general safety claim.
 - **sample_size_summary:** Observed q0-005: 3 task-root IDs across 2 domains, only 5 structural fingerprints; 24/24 episodes valid (21 safe, 2 approval-reuse violations, 1 stall); 176 model calls, C/S arms. P1 unrun; earlier cohorts separate.

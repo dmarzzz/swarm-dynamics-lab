@@ -4,7 +4,7 @@ Reviewer `shadow/sol-xcheck`, 2026-10-04. Verdict: headline arithmetic agrees; r
 
 ## Evidence and recomputation
 
-Inputs: `researchers/dmarz/notes/sybil-scale-{api,sonnet,opus}/results-cells.csv`, `results-summary.json`; Opus `model-comparison-{sonnet,haiku}-cells.csv`. All are pinned and hashed in [recomputed.json](recomputed.json). Sources: [Opus RESULTS](../../../dmarz/notes/sybil-scale-opus/RESULTS.md), [Sonnet RESULTS](../../../dmarz/notes/sybil-scale-sonnet/RESULTS.md).
+Inputs: `5-experiments/studies/dmarz/sybil-scale-{api,sonnet,opus}/results-cells.csv`, `results-summary.json`; Opus `model-comparison-{sonnet,haiku}-cells.csv`. All are pinned and hashed in [recomputed.json](recomputed.json). Sources: [Opus RESULTS](../../dmarz/sybil-scale-opus/RESULTS.md), [Sonnet RESULTS](../../dmarz/sybil-scale-sonnet/RESULTS.md).
 
 At N972, visible badges, coverage, attacker pass probability 0.1:
 

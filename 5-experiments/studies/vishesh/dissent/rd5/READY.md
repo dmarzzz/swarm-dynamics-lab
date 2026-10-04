@@ -30,9 +30,9 @@ Report all-assigned correct actions /24 per arm; critical/early/late counts; wro
 Run from the public repository:
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/dissent/rd5/tests -v
-python3 researchers/vishesh/notes/dissent/rd5/src/rd5_cli.py prepare --stage Q5 --plan-commit 10e6b4d775c8409c1a9817ad633f0f6f84ae3c40 --output /private/tmp/rd5-Q5-new.json
-python3 researchers/vishesh/notes/dissent/rd5/src/rd5_cli.py prepare --stage H5 --plan-commit 10e6b4d775c8409c1a9817ad633f0f6f84ae3c40 --output /private/tmp/rd5-H5-new.json
+python3 -m unittest discover -s 5-experiments/studies/vishesh/dissent/rd5/tests -v
+python3 5-experiments/studies/vishesh/dissent/rd5/src/rd5_cli.py prepare --stage Q5 --plan-commit 10e6b4d775c8409c1a9817ad633f0f6f84ae3c40 --output /private/tmp/rd5-Q5-new.json
+python3 5-experiments/studies/vishesh/dissent/rd5/src/rd5_cli.py prepare --stage H5 --plan-commit 10e6b4d775c8409c1a9817ad633f0f6f84ae3c40 --output /private/tmp/rd5-H5-new.json
 ```
 
 Preparation refuses overwritten packets, uncommitted instrument source and mismatched immutable plan bytes. Reachable requests are compiled with symbolic choices, not sampled from a model. The packets contain evaluator definitions for the instrument; only the frozen `request` enters Jev. Deploy the exact `source_commit` in the packet, not a later main checkout with hand-edited hashes. Durable packets are retained with the owner's RD5 review copy.
@@ -46,7 +46,7 @@ Go ahead and create and borrow a machine from Dmarz's DigitalOcean machine list 
 Copy the frozen source and non-secret packets. Keep the API key in its approved local file; the relay consumes it and the remote worker uses an encrypted loopback forward. Use the original cumulative ledger; never copy it to create concurrent spending authorities.
 
 ```sh
-python3 researchers/vishesh/notes/dissent/rd5/src/rd5_supervise.py --help
+python3 5-experiments/studies/vishesh/dissent/rd5/src/rd5_supervise.py --help
 ```
 
 The supervisor requires local packet/receipt/credential-file/ledger paths, private SSH configuration and alias, remote frozen checkout/packet/receipt/output paths, and a fresh local output directory. Actual host-specific values are filled after allocation. Both relay and worker enforce admission; H5 additionally audits the source-bound native qualification bundle. The relay enforces maximum 24 Q5 and 36 H5 calls, 60 new total, lifetime stop 488, original $1 API cap, frozen TypeSafe route and 30-minute lease. The current public [Jev metadata](https://openrouter.ai/api/v1/models/typesafe/jev-1.13/endpoints) matches the expected snapshot and $0.000000042/input-token rate; launch rechecks it. No fallback or automatic retry.

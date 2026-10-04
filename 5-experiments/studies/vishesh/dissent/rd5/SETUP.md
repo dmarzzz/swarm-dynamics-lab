@@ -23,7 +23,7 @@ The canonical ledger is now488lifetime calls, including all60approved RD5calls. 
 
 ## Operations
 
-- Offline: `python3 -m unittest discover -s researchers/vishesh/notes/dissent/rd5/tests -v`.
+- Offline: `python3 -m unittest discover -s 5-experiments/studies/vishesh/dissent/rd5/tests -v`.
 - Prepare: `src/rd5_cli.py prepare`; committed source only, no dispatch. Public hashes in [preparation manifest](spec/preparation-manifest.json).
 - Run: `src/rd5_supervise.py`; strict native admission in both relay and worker, actual remote health probe, supervised transport. See READY.md.
 - Report: `src/rd5_cli.py report --results <saved directory>`; no model calls.

@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Adaptive thresholds trade abstention against late correction or misinformation in the guarded factual selector. Basis: Every learned-policy choice matched symbolic control; guarded host logic limits AI claims. Twelve engineered clusters are the task diversity, not 2,688 independent outcomes. Rendering failure and exact-prefix recovery preserved.
 - **sample_size_summary:** S1:12 task clusters × 2 populations × 2 deadlines × 4 worlds × 2 schedules =384 paired blocks;7 policies →2,688 outcomes. Q2:22/22 pass.

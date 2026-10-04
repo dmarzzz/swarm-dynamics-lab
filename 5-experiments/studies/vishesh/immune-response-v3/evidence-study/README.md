@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Untested efficacy question: fact-checking frozen reviewer recommendations improves commander recovery beyond generic caution and identical raw evidence. Basis: Wrong-account interruption is a process failure, preserved separately from three completed outcomes. No treatment effect or resumed authorization follows from partial data; reviewers are shared within raw/checked pairs.
 - **sample_size_summary:** Native diagnostic:16 assigned;3 complete,1 partial,12 unstarted. Four related cases × 2 memory states × 2 paired receipt arms; no completed qualification.
@@ -21,7 +21,7 @@ This is an exploratory diagnostic of a constructed three-service deployment. It 
 
 ## Question and prediction
 
-[Previous assessment](../scenario-study/ASSESSMENT.md) identified three different failures: false readings of current evidence, unsafe intervention on healthy service, and a qualification rule that passed teams which could not recover incidents. The [fresh PI synthesis](../../../../dmarz/notes/next-experiments-2026-10-04/README.md) calls for competence and evidence checking before scaling. Repository feedback was refreshed before planning; unrelated benchmark review comments are not claimed as reviews of this instrument.
+[Previous assessment](../scenario-study/ASSESSMENT.md) identified three different failures: false readings of current evidence, unsafe intervention on healthy service, and a qualification rule that passed teams which could not recover incidents. The [fresh PI synthesis](../../../dmarz/next-experiments-2026-10-04/README.md) calls for competence and evidence checking before scaling. Repository feedback was refreshed before planning; unrelated benchmark review comments are not claimed as reviews of this instrument.
 
 The previous memory reset erased once and later admitted a delayed obsolete handoff. It was not a fully clean competence control. Here `clean` has no handoffs at any tick, while `stale` retains current and obsolete advice and receives the delayed obsolete handoff at tick 4. This changes a control, not the historical findings.
 
@@ -47,9 +47,9 @@ A receipt benefit must coexist with healthy preservation and recovery competence
 
 ## Setup
 
-`python -m unittest discover -s researchers/vishesh/notes/immune-response-v3/evidence-study -p 'test_*.py' -v`
+`python -m unittest discover -s 5-experiments/studies/vishesh/immune-response-v3/evidence-study -p 'test_*.py' -v`
 
-`python researchers/vishesh/notes/immune-response-v3/evidence-study/study_receipts.py --backend scripted --out /tmp/immune-receipt-engineering-a1`
+`python 5-experiments/studies/vishesh/immune-response-v3/evidence-study/study_receipts.py --backend scripted --out /tmp/immune-receipt-engineering-a1`
 
 Native uses the same command with `--backend anthropic`, through `worker.py` and an exclusive fleet receipt. Model: `claude-haiku-4-5-20251001`, temperature 0, maximum 512 output tokens, 16,000 request bytes, 60-second request timeout, pinned configuration. Same persistent USD 8 authorization; no reset. Worst-case new conservative reservation at 120 calls is USD 2.28864, below the previous remaining USD 6.184933. Stop if the persistent ledger refuses a request. One worker, maximum 2.5 hours for the bounded call plan; each step consumes one simulated tick irrespective of wall time. API costs exclude the existing dedicated machine's hourly cost.
 

@@ -32,8 +32,8 @@ All six one-value changes preserve metadata and unrelated facts. These are devel
 Commands from repository root:
 
 ```sh
-python3 researchers/dmarz/notes/discussion-dose/src/selftest.py
-python3 researchers/vishesh/notes/independent-reviews-2026-10-04/check_original.py
+python3 5-experiments/studies/dmarz/discussion-dose/src/selftest.py
+python3 5-experiments/studies/vishesh/independent-reviews-2026-10-04/check_original.py
 ```
 
 The original selftest imports the v2 suite: **34 tests total, 33 initially passed, one localhost socket-bind PermissionError**. Reran only `selftest.Tests.test_http_adapter_and_caps` with localhost access; it passed. Thus all 34 distinct tests passed across the two invocations. Logs retain the initial failure. No external model request, credential use, fleet launch or spending occurred.

@@ -1,6 +1,6 @@
 # Market splitting: independent saved-trace review
 
-Reviewer `shadow/sol-xcheck`, 2026-10-04. Verdict: checked headline arithmetic passes. Post-hoc audit of [Sonnet RESULTS](../../../dmarz/notes/market-split-api/RESULTS.md). Snapshot and input hashes: [README](README.md), [recomputed.json](recomputed.json).
+Reviewer `shadow/sol-xcheck`, 2026-10-04. Verdict: checked headline arithmetic passes. Post-hoc audit of [Sonnet RESULTS](../../dmarz/market-split-api/RESULTS.md). Snapshot and input hashes: [README](README.md), [recomputed.json](recomputed.json).
 
 ## Evidence and method
 

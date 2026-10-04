@@ -12,7 +12,7 @@ For a study `<study>` (lowercase, digits and hyphens):
 
 | Thing | Value |
 |---|---|
-| Study directory | `researchers/dmarz/notes/<study>/` |
+| Study directory | `5-experiments/studies/dmarz/<study>/` |
 | Hub experiment id | `<study>` |
 | Server claim id | `dmarz-<study>` (taken by the operator at launch; `experiment: <study>`, exclusive) |
 | Stages | `S0` scripted, `P0` one-call interface probe, `Q0` qualification, `S1` main stage |
@@ -22,13 +22,13 @@ For a study `<study>` (lowercase, digits and hyphens):
 
 ```
 README.md           plan; sections TLDR, Question and prediction, Setup, Protocol, Metrics; evidence block
-SETUP.md            setup record from tooling/agent-experiments/templates/experiment-setup.md
+SETUP.md            setup record from 5-experiments/toolkit/agent-experiments/templates/experiment-setup.md
 preregistration.md  frozen comparison, stop rules, budget
 design.yaml         frozen design: model, effort, factors, worlds, budget and per-stage max_calls
 experiment.yaml     hub registration (metrics include episodes, invalid, model_calls, input_tokens,
                     output_tokens, cost_usd, qualification_passed and the primary metric)
 READY.yaml          the machine-readable summary the launcher reads (below)
-VISUALIZATION.md    mapping per tooling/agent-experiments/RUN-VISUALIZATION.md
+VISUALIZATION.md    mapping per 5-experiments/toolkit/agent-experiments/RUN-VISUALIZATION.md
 RUN.md              operator runbook: the exact launcher commands with --host <server>
 manifest.json       assignment manifest per stage: counts, assignment ids and packet hashes, digest
 requirements.txt    pinned dependencies

@@ -9,6 +9,6 @@ updated: 2026-10-04T04:10Z
 
 ## Notes
 
-Design: researchers/dmarz/notes/discussion-dose/PRIVATE-CONTROL.md; pre-run review reviews/pc-H4-a1-pre.md.
+Design: 5-experiments/studies/dmarz/discussion-dose/PRIVATE-CONTROL.md; pre-run review reviews/pc-H4-a1-pre.md.
 Launched at swarm-lab 65f7f0f from the private agentops launcher (claim dmarz-dd-private-control, sim-dmarz-2).
 Done: post-mortem written, claim released. Next: pc2-H4 with a resample-only control, needs budget confirmation.

@@ -17,15 +17,15 @@ Files touched (path prefix, counting name-only across those commits):
 
 | area | file-touches | what it is |
 |---|---:|---|
-| `library/{papers,talks,blogs,threads,datasets,code}` | 755 | 563 new entries added by us (248 papers, 138 talks, 91 blogs, 59 threads, 20 datasets, 7 code) |
-| `researchers/shadow/notes/capture-memory-mix` | 200 | 3-model pilot, results, call logs, hub sync |
+| `1-library/{papers,talks,blogs,threads,datasets,code}` | 755 | 563 new entries added by us (248 papers, 138 talks, 91 blogs, 59 threads, 20 datasets, 7 code) |
+| `5-experiments/studies/shadow/capture-memory-mix` | 200 | 3-model pilot, results, call logs, hub sync |
 | `dashboard/`, `candidates/`, `scripts/` | ~150 | swarm-research.pages.dev build, collector pipeline (PR #1) |
-| `researchers/shadow/factory` | 50 | experiment factory, 5 specs, 5 result dirs (lane 16, in progress) |
-| `researchers/shadow/notes/capture-memory` | 40 | scripted S0/S1 (PR #83) |
-| `researchers/shadow/notes/{rsi-loop, wild-askswarm, completed-findings-xcheck, submission, landscape-map}` | 41 | see sections below |
-| `surveys/`, `synthesis/`, `tasks/` | ~40 | fork-merge-security survey closed, landscape map, task claims |
+| `5-experiments/studies/shadow/factory` | 50 | experiment factory, 5 specs, 5 result dirs (lane 16, in progress) |
+| `5-experiments/studies/shadow/capture-memory` | 40 | scripted S0/S1 (PR #83) |
+| `5-experiments/studies/shadow/{rsi-loop, wild-askswarm, completed-findings-xcheck, submission, landscape-map}` | 41 | see sections below |
+| `2-surveys/`, `3-synthesis/`, `tasks/` | ~40 | fork-merge-security survey closed, landscape map, task claims |
 
-Only three wakesync commits touched `researchers/dmarz` or `researchers/vishesh`, all of them `inbox.md` receipts
+Only three wakesync commits touched `lab/researchers/dmarz` or `lab/researchers/vishesh`, all of them `inbox.md` receipts
 (review request `2d0b7855`, review verdict `93a58d71`). No teammate experiment, ledger or READY file was edited.
 `python3 scripts/lab.py check` on `952a618c`: 0 errors, 5 warnings (dangling `[[...]]` links in thread entries, none
 ours).
@@ -63,12 +63,12 @@ background value only.
 
 | item | status | evidence | assessment |
 |---|---|---|---|
-| capture-memory-mix (3-model pilot, USD 3.93) | ship, with corrections pending | `researchers/shadow/notes/capture-memory-mix/README.md` headline at 08:05Z (`e10201d2`); dmarz review verdict "does not generalize" | Our one real-model result. Honest negative with a plausible moderator (long-list read noisy/sharp/recency). dmarz's four reporting defects are real: 327 raw / 127 invalid / 180 selected without disclosure, redo vs no-retry text conflict, round 50 vs 30 caption, hub fraction > 1. The cm2 worktree has 24 modified files and two new scripts (`src/lineage.py`, `src/resummarize.py`) but **nothing pushed since 14:43Z** and no `CORRECTIONS.md` exists yet. The RSI PR already computed the lineage reconciliation (327/127/180/147 superseded/178 selected valid, only 54/180 valid on first attempt); cm2 should reuse that number rather than recompute. |
+| capture-memory-mix (3-model pilot, USD 3.93) | ship, with corrections pending | `5-experiments/studies/shadow/capture-memory-mix/README.md` headline at 08:05Z (`e10201d2`); dmarz review verdict "does not generalize" | Our one real-model result. Honest negative with a plausible moderator (long-list read noisy/sharp/recency). dmarz's four reporting defects are real: 327 raw / 127 invalid / 180 selected without disclosure, redo vs no-retry text conflict, round 50 vs 30 caption, hub fraction > 1. The cm2 worktree has 24 modified files and two new scripts (`src/lineage.py`, `src/resummarize.py`) but **nothing pushed since 14:43Z** and no `CORRECTIONS.md` exists yet. The RSI PR already computed the lineage reconciliation (327/127/180/147 superseded/178 selected valid, only 54/180 valid on first attempt); cm2 should reuse that number rather than recompute. |
 | completed-findings-xcheck | ship | `completed-findings-xcheck/README.md`, 5 reviews, `recompute.py`, zero model calls | High value, low cost. 7,512 saved answers rescored with independent code, zero endpoint mismatches, one real tie-counting defect found in `reporting/compare_models.py` (Opus 7/66/27 not 9/67/24). This is the kind of cross-researcher check judges can verify in one command. Already cited in RESULTS.md and the report. |
 | submission packet (WRITEUP, DEMO, RESULTS, HACKATHON.md) | ship, stale | `d0a9b9a8` 14:03Z | Well written, numbers all linked to `b8d90f52`. Two problems: (a) RESULTS row 8 says corrections "are being corrected" and the WRITEUP limits say "we did not analyse the AI Village, collusion.wiki, SwarmTraces or Transluce data", both of which will be false by 21:00Z if Wave 3 lands; (b) the DEMO leads with the pipeline and a dmarz market-split replay, not with a wild-data tool, which sol-audit-gap correctly flags as mis-aimed against the organisers' suggested project types. Needs the planned 20:00Z refresh plus a lead swap. |
 | RSI PR #84 (shadow/rsi) | ship as branch demo | 41 files, +17,795 lines, 566 envelopes, replay 75/195 vs 195/195 vs rejected 75/195, 32 tests | Coherent and honest about being same-author reporting-contract maintenance. For the hackathon it is a side quest: the brief's categories do not include agent self-improvement tooling. Its real payoff today is the lineage reconciliation it did for capture-memory-mix. Keep as "post-hackathon" in the packet; do not spend more lane time on it. |
-| landscape map (sol-atlas) | ship | `synthesis/landscape.md` 4,761 words, `landscape-map/counts.md`, task closed `cc8cbb70` | Good synthesis, 16 topics, 28 transfers, corpus counts generated by script. Supports the write-up's "what we read" paragraph. No further work needed. |
-| fork-merge-security survey (sol-fm) | ship | `surveys/fork-merge-security.md` 8,440 words, status complete, task done `2080bf26` | Gate closed. 83 wiki-links. Background value for the repo; zero direct submission weight today. |
+| landscape map (sol-atlas) | ship | `3-synthesis/landscape.md` 4,761 words, `landscape-map/counts.md`, task closed `cc8cbb70` | Good synthesis, 16 topics, 28 transfers, corpus counts generated by script. Supports the write-up's "what we read" paragraph. No further work needed. |
+| fork-merge-security survey (sol-fm) | ship | `2-surveys/fork-merge-security.md` 8,440 words, status complete, task done `2080bf26` | Gate closed. 83 wiki-links. Background value for the repo; zero direct submission weight today. |
 | agent-budgets survey (sol-budget) | half | worktree `budget` has untracked `surveys/agent-budgets.md` + 2 library entries, nothing pushed since 14:28Z | Either push what exists by 17:00Z or drop. Not on the critical path. |
 | AskSwarm (sol-askswarm) | half, promising | `wild-askswarm/` v0.1, 3 adapters, 17 tests, pushed 15:03Z; worktree has 13 dirty files (results in progress) | This is the item that most matches the brief verbatim ("pre-written questions you always want to ask about a multi-agent group"). README already states the SwarmTraces limits correctly (no actor column, all clocks null). The headline (same questions, three swarms, side by side, one of them our own repo) is the demo hook. No `results/` or comparison HTML on main yet. |
 | wild-halflife, wild-identity, wild-timeline | half | PLAN.md only on main (15:03Z, 14:59Z); timeline has task claim only | Preregistrations exist, which is correct procedure; findings are 0 of 3 so far. These three plus AskSwarm are the only things that can fix the packet's biggest gap. |
@@ -89,7 +89,7 @@ background value only.
 - Dashboard polish passes (sol-dash-u, sol-dash-d, sol-dash-g, sol-dash-x: ~20 commits) after the first deploy.
   The dashboard is a 5-second demo tab.
 - RSI protocol/spec work beyond the lineage reconciliation. Good engineering, wrong weekend.
-- Per-lane `researchers/shadow/agents/sol-*.md` registration files and `sync: N file(s)` commits (about 30 commits).
+- Per-lane `lab/researchers/shadow/agents/sol-*.md` registration files and `sync: N file(s)` commits (about 30 commits).
   Repo convention requires them, but they inflate the commit count that the WRITEUP then quotes as a feature.
 
 ## 5. What is half-done and blocks the packet

@@ -1,6 +1,6 @@
 # 2026-10-03 sybil-flashbots-informal
 
-What I did: scanned ethresear.ch (Discourse search API, 9 queries) plus web searches for Flashbots-adjacent informal writing on Sybil resistance. Added 19 entries tagged sybil-resistance: 17 blogs (mostly ethresear.ch posts, plus Vitalik's biometric PoP essay, the IC3 Complete Knowledge post, an EigenPhi guest post on BuilderNet and a functor.network post on AUCIL), the Devcon SEA Dave talk (read via slides) and the Complete-Knowledge/ck repo. 12 read in full. Coverage note filled in tasks/scan-flashbots-sybil-informal.md. Did not commit or push; the coordinator handles git.
+What I did: scanned ethresear.ch (Discourse search API, 9 queries) plus web searches for Flashbots-adjacent informal writing on Sybil resistance. Added 19 entries tagged sybil-resistance: 17 blogs (mostly ethresear.ch posts, plus Vitalik's biometric PoP essay, the IC3 Complete Knowledge post, an EigenPhi guest post on BuilderNet and a functor.network post on AUCIL), the Devcon SEA Dave talk (read via slides) and the Complete-Knowledge/ck repo. 12 read in full. Coverage note filled in lab/tasks/scan-flashbots-sybil-informal.md. Did not commit or push; the coordinator handles git.
 
 What surprised me:
 - The most transferable ideas for agent swarms are Sybil-tolerant rather than Sybil-excluding: Dave's tournament lets one honest party with a laptop beat any number of coordinated copies with logarithmic delay, and Vitalik's anti-correlation penalty detects hidden common control through co-failures without identifying anyone.

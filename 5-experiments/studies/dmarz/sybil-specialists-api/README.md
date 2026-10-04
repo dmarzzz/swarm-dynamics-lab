@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — The completed controlled comparison describes verifier/admission effects on synthesis within one constructed graph family. Basis: Qualified, complete 12-world pilot supports the bounded strong-check/weak-check tradeoff; a single model, graph family and fixed fabrication do not generalize. The badge interval spans harm and benefit, so badge efficacy remains unresolved.
 - **sample_size_summary:** 12 paired worlds × 16 conditions = 192 valid S1 answers; 24 Q0 packets; 36 simulated identities and 1 model synthesizer.

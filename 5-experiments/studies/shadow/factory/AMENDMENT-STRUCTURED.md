@@ -11,11 +11,11 @@ Native-schema output is a configuration change. Compared with Dmarz's parent: mo
 Exact launch after committing:
 
 ```sh
-nice -n 10 python3 researchers/shadow/factory/structured.py queue --watch
+nice -n 10 python3 5-experiments/studies/shadow/factory/structured.py queue --watch
 ```
 
 Analysis-only command:
 
 ```sh
-python3 researchers/shadow/factory/structured.py analyze --spec split-sonnet-linked-strong-or-json
+python3 5-experiments/studies/shadow/factory/structured.py analyze --spec split-sonnet-linked-strong-or-json
 ```

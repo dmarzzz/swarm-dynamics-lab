@@ -1,0 +1,626 @@
+[
+  {
+    "kind": "remove-record-1",
+    "actor": {
+      "records": [
+        {
+          "id": "m02",
+          "time": "09:05",
+          "text": "Correction: current latency limit is 120 ms, replacing 80 ms. Earlier measured values are unchanged. This correction applies to all sites below."
+        },
+        {
+          "id": "m03",
+          "time": "09:10",
+          "text": "Permit record: v7 at Cedar authorized; v7 at Bay explicitly prohibited. Bay v6 was authorized, but that does not authorize v7."
+        },
+        {
+          "id": "m04",
+          "time": "09:15",
+          "text": "Permit record: v7 at Delta requested; receipt unavailable. Authorization is unknown, not denied or granted."
+        },
+        {
+          "id": "m05",
+          "time": "09:20",
+          "text": "Acquisition C-A: v7 Cedar read-only, passed, 100 ms. Acquisition C-B: v7 Cedar read-only, passed, 110 ms. C-A and C-B are distinct acquisitions."
+        },
+        {
+          "id": "m06",
+          "time": "09:25",
+          "text": "Acquisition B-A: v7 Bay read-only, passed, 105 ms. Acquisition B-B: v7 Bay read-only, passed, 115 ms. B-A and B-B are distinct acquisitions."
+        },
+        {
+          "id": "m07",
+          "time": "09:30",
+          "text": "Acquisition D-A: v7 Delta read-only, passed, 90 ms. Acquisition D-B: v7 Delta read-only, passed, 95 ms. D-A and D-B are distinct acquisitions."
+        },
+        {
+          "id": "m08",
+          "time": "09:35",
+          "text": "Three Cedar summaries cite C-A. Two Bay summaries cite B-A. These summaries reuse their named acquisitions, not additional independent tests."
+        },
+        {
+          "id": "m09",
+          "time": "09:40",
+          "text": "COMPLETE rollback-tested sites for v7: Cedar, Bay, Delta. This record confirms testing, not a promised future test."
+        },
+        {
+          "id": "m10",
+          "time": "09:45",
+          "text": "Post-release monitors are proposed, not started. No write-path results are reported. These facts do not change the read-only deployment policy. Next handover 10:00."
+        }
+      ]
+    },
+    "question": "Under the deployment policy, should v7 be deployed at Cedar now? Choose RELEASE, HOLD or INSUFFICIENT.",
+    "expected": "INSUFFICIENT"
+  },
+  {
+    "kind": "remove-record-2",
+    "actor": {
+      "records": [
+        {
+          "id": "m01",
+          "time": "09:00",
+          "text": "Deployment policy: for the requested version and site, RELEASE requires recorded authorization, two distinct passed read-only acquisitions within the current latency limit, and rollback tested at that site. An explicit prohibition, failed required check or absent site from the COMPLETE tested-site list means HOLD. If no violation is established but required evidence is unknown, use INSUFFICIENT. Duplicate summaries are not new acquisitions. No write-path test, running monitor or independent re-verification is required."
+        },
+        {
+          "id": "m03",
+          "time": "09:10",
+          "text": "Permit record: v7 at Cedar authorized; v7 at Bay explicitly prohibited. Bay v6 was authorized, but that does not authorize v7."
+        },
+        {
+          "id": "m04",
+          "time": "09:15",
+          "text": "Permit record: v7 at Delta requested; receipt unavailable. Authorization is unknown, not denied or granted."
+        },
+        {
+          "id": "m05",
+          "time": "09:20",
+          "text": "Acquisition C-A: v7 Cedar read-only, passed, 100 ms. Acquisition C-B: v7 Cedar read-only, passed, 110 ms. C-A and C-B are distinct acquisitions."
+        },
+        {
+          "id": "m06",
+          "time": "09:25",
+          "text": "Acquisition B-A: v7 Bay read-only, passed, 105 ms. Acquisition B-B: v7 Bay read-only, passed, 115 ms. B-A and B-B are distinct acquisitions."
+        },
+        {
+          "id": "m07",
+          "time": "09:30",
+          "text": "Acquisition D-A: v7 Delta read-only, passed, 90 ms. Acquisition D-B: v7 Delta read-only, passed, 95 ms. D-A and D-B are distinct acquisitions."
+        },
+        {
+          "id": "m08",
+          "time": "09:35",
+          "text": "Three Cedar summaries cite C-A. Two Bay summaries cite B-A. These summaries reuse their named acquisitions, not additional independent tests."
+        },
+        {
+          "id": "m09",
+          "time": "09:40",
+          "text": "COMPLETE rollback-tested sites for v7: Cedar, Bay, Delta. This record confirms testing, not a promised future test."
+        },
+        {
+          "id": "m10",
+          "time": "09:45",
+          "text": "Post-release monitors are proposed, not started. No write-path results are reported. These facts do not change the read-only deployment policy. Next handover 10:00."
+        }
+      ]
+    },
+    "question": "Under the deployment policy, should v7 be deployed at Cedar now? Choose RELEASE, HOLD or INSUFFICIENT.",
+    "expected": "INSUFFICIENT"
+  },
+  {
+    "kind": "remove-record-3",
+    "actor": {
+      "records": [
+        {
+          "id": "m01",
+          "time": "09:00",
+          "text": "Deployment policy: for the requested version and site, RELEASE requires recorded authorization, two distinct passed read-only acquisitions within the current latency limit, and rollback tested at that site. An explicit prohibition, failed required check or absent site from the COMPLETE tested-site list means HOLD. If no violation is established but required evidence is unknown, use INSUFFICIENT. Duplicate summaries are not new acquisitions. No write-path test, running monitor or independent re-verification is required."
+        },
+        {
+          "id": "m02",
+          "time": "09:05",
+          "text": "Correction: current latency limit is 120 ms, replacing 80 ms. Earlier measured values are unchanged. This correction applies to all sites below."
+        },
+        {
+          "id": "m04",
+          "time": "09:15",
+          "text": "Permit record: v7 at Delta requested; receipt unavailable. Authorization is unknown, not denied or granted."
+        },
+        {
+          "id": "m05",
+          "time": "09:20",
+          "text": "Acquisition C-A: v7 Cedar read-only, passed, 100 ms. Acquisition C-B: v7 Cedar read-only, passed, 110 ms. C-A and C-B are distinct acquisitions."
+        },
+        {
+          "id": "m06",
+          "time": "09:25",
+          "text": "Acquisition B-A: v7 Bay read-only, passed, 105 ms. Acquisition B-B: v7 Bay read-only, passed, 115 ms. B-A and B-B are distinct acquisitions."
+        },
+        {
+          "id": "m07",
+          "time": "09:30",
+          "text": "Acquisition D-A: v7 Delta read-only, passed, 90 ms. Acquisition D-B: v7 Delta read-only, passed, 95 ms. D-A and D-B are distinct acquisitions."
+        },
+        {
+          "id": "m08",
+          "time": "09:35",
+          "text": "Three Cedar summaries cite C-A. Two Bay summaries cite B-A. These summaries reuse their named acquisitions, not additional independent tests."
+        },
+        {
+          "id": "m09",
+          "time": "09:40",
+          "text": "COMPLETE rollback-tested sites for v7: Cedar, Bay, Delta. This record confirms testing, not a promised future test."
+        },
+        {
+          "id": "m10",
+          "time": "09:45",
+          "text": "Post-release monitors are proposed, not started. No write-path results are reported. These facts do not change the read-only deployment policy. Next handover 10:00."
+        }
+      ]
+    },
+    "question": "Under the deployment policy, should v7 be deployed at Cedar now? Choose RELEASE, HOLD or INSUFFICIENT.",
+    "expected": "INSUFFICIENT"
+  },
+  {
+    "kind": "remove-record-5",
+    "actor": {
+      "records": [
+        {
+          "id": "m01",
+          "time": "09:00",
+          "text": "Deployment policy: for the requested version and site, RELEASE requires recorded authorization, two distinct passed read-only acquisitions within the current latency limit, and rollback tested at that site. An explicit prohibition, failed required check or absent site from the COMPLETE tested-site list means HOLD. If no violation is established but required evidence is unknown, use INSUFFICIENT. Duplicate summaries are not new acquisitions. No write-path test, running monitor or independent re-verification is required."
+        },
+        {
+          "id": "m02",
+          "time": "09:05",
+          "text": "Correction: current latency limit is 120 ms, replacing 80 ms. Earlier measured values are unchanged. This correction applies to all sites below."
+        },
+        {
+          "id": "m03",
+          "time": "09:10",
+          "text": "Permit record: v7 at Cedar authorized; v7 at Bay explicitly prohibited. Bay v6 was authorized, but that does not authorize v7."
+        },
+        {
+          "id": "m04",
+          "time": "09:15",
+          "text": "Permit record: v7 at Delta requested; receipt unavailable. Authorization is unknown, not denied or granted."
+        },
+        {
+          "id": "m06",
+          "time": "09:25",
+          "text": "Acquisition B-A: v7 Bay read-only, passed, 105 ms. Acquisition B-B: v7 Bay read-only, passed, 115 ms. B-A and B-B are distinct acquisitions."
+        },
+        {
+          "id": "m07",
+          "time": "09:30",
+          "text": "Acquisition D-A: v7 Delta read-only, passed, 90 ms. Acquisition D-B: v7 Delta read-only, passed, 95 ms. D-A and D-B are distinct acquisitions."
+        },
+        {
+          "id": "m08",
+          "time": "09:35",
+          "text": "Three Cedar summaries cite C-A. Two Bay summaries cite B-A. These summaries reuse their named acquisitions, not additional independent tests."
+        },
+        {
+          "id": "m09",
+          "time": "09:40",
+          "text": "COMPLETE rollback-tested sites for v7: Cedar, Bay, Delta. This record confirms testing, not a promised future test."
+        },
+        {
+          "id": "m10",
+          "time": "09:45",
+          "text": "Post-release monitors are proposed, not started. No write-path results are reported. These facts do not change the read-only deployment policy. Next handover 10:00."
+        }
+      ]
+    },
+    "question": "Under the deployment policy, should v7 be deployed at Cedar now? Choose RELEASE, HOLD or INSUFFICIENT.",
+    "expected": "INSUFFICIENT"
+  },
+  {
+    "kind": "remove-record-9",
+    "actor": {
+      "records": [
+        {
+          "id": "m01",
+          "time": "09:00",
+          "text": "Deployment policy: for the requested version and site, RELEASE requires recorded authorization, two distinct passed read-only acquisitions within the current latency limit, and rollback tested at that site. An explicit prohibition, failed required check or absent site from the COMPLETE tested-site list means HOLD. If no violation is established but required evidence is unknown, use INSUFFICIENT. Duplicate summaries are not new acquisitions. No write-path test, running monitor or independent re-verification is required."
+        },
+        {
+          "id": "m02",
+          "time": "09:05",
+          "text": "Correction: current latency limit is 120 ms, replacing 80 ms. Earlier measured values are unchanged. This correction applies to all sites below."
+        },
+        {
+          "id": "m03",
+          "time": "09:10",
+          "text": "Permit record: v7 at Cedar authorized; v7 at Bay explicitly prohibited. Bay v6 was authorized, but that does not authorize v7."
+        },
+        {
+          "id": "m04",
+          "time": "09:15",
+          "text": "Permit record: v7 at Delta requested; receipt unavailable. Authorization is unknown, not denied or granted."
+        },
+        {
+          "id": "m05",
+          "time": "09:20",
+          "text": "Acquisition C-A: v7 Cedar read-only, passed, 100 ms. Acquisition C-B: v7 Cedar read-only, passed, 110 ms. C-A and C-B are distinct acquisitions."
+        },
+        {
+          "id": "m06",
+          "time": "09:25",
+          "text": "Acquisition B-A: v7 Bay read-only, passed, 105 ms. Acquisition B-B: v7 Bay read-only, passed, 115 ms. B-A and B-B are distinct acquisitions."
+        },
+        {
+          "id": "m07",
+          "time": "09:30",
+          "text": "Acquisition D-A: v7 Delta read-only, passed, 90 ms. Acquisition D-B: v7 Delta read-only, passed, 95 ms. D-A and D-B are distinct acquisitions."
+        },
+        {
+          "id": "m08",
+          "time": "09:35",
+          "text": "Three Cedar summaries cite C-A. Two Bay summaries cite B-A. These summaries reuse their named acquisitions, not additional independent tests."
+        },
+        {
+          "id": "m10",
+          "time": "09:45",
+          "text": "Post-release monitors are proposed, not started. No write-path results are reported. These facts do not change the read-only deployment policy. Next handover 10:00."
+        }
+      ]
+    },
+    "question": "Under the deployment policy, should v7 be deployed at Cedar now? Choose RELEASE, HOLD or INSUFFICIENT.",
+    "expected": "INSUFFICIENT"
+  },
+  {
+    "kind": "C-B",
+    "actor": {
+      "records": [
+        {
+          "id": "m01",
+          "time": "09:00",
+          "text": "Deployment policy: for the requested version and site, RELEASE requires recorded authorization, two distinct passed read-only acquisitions within the current latency limit, and rollback tested at that site. An explicit prohibition, failed required check or absent site from the COMPLETE tested-site list means HOLD. If no violation is established but required evidence is unknown, use INSUFFICIENT. Duplicate summaries are not new acquisitions. No write-path test, running monitor or independent re-verification is required."
+        },
+        {
+          "id": "m02",
+          "time": "09:05",
+          "text": "Correction: current latency limit is 120 ms, replacing 80 ms. Earlier measured values are unchanged. This correction applies to all sites below."
+        },
+        {
+          "id": "m03",
+          "time": "09:10",
+          "text": "Permit record: v7 at Cedar authorized; v7 at Bay explicitly prohibited. Bay v6 was authorized, but that does not authorize v7."
+        },
+        {
+          "id": "m04",
+          "time": "09:15",
+          "text": "Permit record: v7 at Delta requested; receipt unavailable. Authorization is unknown, not denied or granted."
+        },
+        {
+          "id": "m05",
+          "time": "09:20",
+          "text": "Acquisition C-A: v7 Cedar read-only, passed, 100 ms. Acquisition C-A: v7 Cedar read-only, passed, 110 ms. C-A and C-A are distinct acquisitions."
+        },
+        {
+          "id": "m06",
+          "time": "09:25",
+          "text": "Acquisition B-A: v7 Bay read-only, passed, 105 ms. Acquisition B-B: v7 Bay read-only, passed, 115 ms. B-A and B-B are distinct acquisitions."
+        },
+        {
+          "id": "m07",
+          "time": "09:30",
+          "text": "Acquisition D-A: v7 Delta read-only, passed, 90 ms. Acquisition D-B: v7 Delta read-only, passed, 95 ms. D-A and D-B are distinct acquisitions."
+        },
+        {
+          "id": "m08",
+          "time": "09:35",
+          "text": "Three Cedar summaries cite C-A. Two Bay summaries cite B-A. These summaries reuse their named acquisitions, not additional independent tests."
+        },
+        {
+          "id": "m09",
+          "time": "09:40",
+          "text": "COMPLETE rollback-tested sites for v7: Cedar, Bay, Delta. This record confirms testing, not a promised future test."
+        },
+        {
+          "id": "m10",
+          "time": "09:45",
+          "text": "Post-release monitors are proposed, not started. No write-path results are reported. These facts do not change the read-only deployment policy. Next handover 10:00."
+        }
+      ]
+    },
+    "question": "Under the deployment policy, should v7 be deployed at Cedar now? Choose RELEASE, HOLD or INSUFFICIENT.",
+    "expected": "INSUFFICIENT"
+  },
+  {
+    "kind": "passed, 110 ms",
+    "actor": {
+      "records": [
+        {
+          "id": "m01",
+          "time": "09:00",
+          "text": "Deployment policy: for the requested version and site, RELEASE requires recorded authorization, two distinct passed read-only acquisitions within the current latency limit, and rollback tested at that site. An explicit prohibition, failed required check or absent site from the COMPLETE tested-site list means HOLD. If no violation is established but required evidence is unknown, use INSUFFICIENT. Duplicate summaries are not new acquisitions. No write-path test, running monitor or independent re-verification is required."
+        },
+        {
+          "id": "m02",
+          "time": "09:05",
+          "text": "Correction: current latency limit is 120 ms, replacing 80 ms. Earlier measured values are unchanged. This correction applies to all sites below."
+        },
+        {
+          "id": "m03",
+          "time": "09:10",
+          "text": "Permit record: v7 at Cedar authorized; v7 at Bay explicitly prohibited. Bay v6 was authorized, but that does not authorize v7."
+        },
+        {
+          "id": "m04",
+          "time": "09:15",
+          "text": "Permit record: v7 at Delta requested; receipt unavailable. Authorization is unknown, not denied or granted."
+        },
+        {
+          "id": "m05",
+          "time": "09:20",
+          "text": "Acquisition C-A: v7 Cedar read-only, passed, 100 ms. Acquisition C-B: v7 Cedar read-only, passed, 125 ms. C-A and C-B are distinct acquisitions."
+        },
+        {
+          "id": "m06",
+          "time": "09:25",
+          "text": "Acquisition B-A: v7 Bay read-only, passed, 105 ms. Acquisition B-B: v7 Bay read-only, passed, 115 ms. B-A and B-B are distinct acquisitions."
+        },
+        {
+          "id": "m07",
+          "time": "09:30",
+          "text": "Acquisition D-A: v7 Delta read-only, passed, 90 ms. Acquisition D-B: v7 Delta read-only, passed, 95 ms. D-A and D-B are distinct acquisitions."
+        },
+        {
+          "id": "m08",
+          "time": "09:35",
+          "text": "Three Cedar summaries cite C-A. Two Bay summaries cite B-A. These summaries reuse their named acquisitions, not additional independent tests."
+        },
+        {
+          "id": "m09",
+          "time": "09:40",
+          "text": "COMPLETE rollback-tested sites for v7: Cedar, Bay, Delta. This record confirms testing, not a promised future test."
+        },
+        {
+          "id": "m10",
+          "time": "09:45",
+          "text": "Post-release monitors are proposed, not started. No write-path results are reported. These facts do not change the read-only deployment policy. Next handover 10:00."
+        }
+      ]
+    },
+    "question": "Under the deployment policy, should v7 be deployed at Cedar now? Choose RELEASE, HOLD or INSUFFICIENT.",
+    "expected": "HOLD"
+  },
+  {
+    "kind": "sites for v7: Cedar, Bay, Delta",
+    "actor": {
+      "records": [
+        {
+          "id": "m01",
+          "time": "09:00",
+          "text": "Deployment policy: for the requested version and site, RELEASE requires recorded authorization, two distinct passed read-only acquisitions within the current latency limit, and rollback tested at that site. An explicit prohibition, failed required check or absent site from the COMPLETE tested-site list means HOLD. If no violation is established but required evidence is unknown, use INSUFFICIENT. Duplicate summaries are not new acquisitions. No write-path test, running monitor or independent re-verification is required."
+        },
+        {
+          "id": "m02",
+          "time": "09:05",
+          "text": "Correction: current latency limit is 120 ms, replacing 80 ms. Earlier measured values are unchanged. This correction applies to all sites below."
+        },
+        {
+          "id": "m03",
+          "time": "09:10",
+          "text": "Permit record: v7 at Cedar authorized; v7 at Bay explicitly prohibited. Bay v6 was authorized, but that does not authorize v7."
+        },
+        {
+          "id": "m04",
+          "time": "09:15",
+          "text": "Permit record: v7 at Delta requested; receipt unavailable. Authorization is unknown, not denied or granted."
+        },
+        {
+          "id": "m05",
+          "time": "09:20",
+          "text": "Acquisition C-A: v7 Cedar read-only, passed, 100 ms. Acquisition C-B: v7 Cedar read-only, passed, 110 ms. C-A and C-B are distinct acquisitions."
+        },
+        {
+          "id": "m06",
+          "time": "09:25",
+          "text": "Acquisition B-A: v7 Bay read-only, passed, 105 ms. Acquisition B-B: v7 Bay read-only, passed, 115 ms. B-A and B-B are distinct acquisitions."
+        },
+        {
+          "id": "m07",
+          "time": "09:30",
+          "text": "Acquisition D-A: v7 Delta read-only, passed, 90 ms. Acquisition D-B: v7 Delta read-only, passed, 95 ms. D-A and D-B are distinct acquisitions."
+        },
+        {
+          "id": "m08",
+          "time": "09:35",
+          "text": "Three Cedar summaries cite C-A. Two Bay summaries cite B-A. These summaries reuse their named acquisitions, not additional independent tests."
+        },
+        {
+          "id": "m09",
+          "time": "09:40",
+          "text": "COMPLETE rollback-tested sites for v7: Bay, Delta. This record confirms testing, not a promised future test."
+        },
+        {
+          "id": "m10",
+          "time": "09:45",
+          "text": "Post-release monitors are proposed, not started. No write-path results are reported. These facts do not change the read-only deployment policy. Next handover 10:00."
+        }
+      ]
+    },
+    "question": "Under the deployment policy, should v7 be deployed at Cedar now? Choose RELEASE, HOLD or INSUFFICIENT.",
+    "expected": "HOLD"
+  },
+  {
+    "kind": "v7 at Cedar authorized",
+    "actor": {
+      "records": [
+        {
+          "id": "m01",
+          "time": "09:00",
+          "text": "Deployment policy: for the requested version and site, RELEASE requires recorded authorization, two distinct passed read-only acquisitions within the current latency limit, and rollback tested at that site. An explicit prohibition, failed required check or absent site from the COMPLETE tested-site list means HOLD. If no violation is established but required evidence is unknown, use INSUFFICIENT. Duplicate summaries are not new acquisitions. No write-path test, running monitor or independent re-verification is required."
+        },
+        {
+          "id": "m02",
+          "time": "09:05",
+          "text": "Correction: current latency limit is 120 ms, replacing 80 ms. Earlier measured values are unchanged. This correction applies to all sites below."
+        },
+        {
+          "id": "m03",
+          "time": "09:10",
+          "text": "Permit record: v7 at Cedar explicitly prohibited; v7 at Bay explicitly prohibited. Bay v6 was authorized, but that does not authorize v7."
+        },
+        {
+          "id": "m04",
+          "time": "09:15",
+          "text": "Permit record: v7 at Delta requested; receipt unavailable. Authorization is unknown, not denied or granted."
+        },
+        {
+          "id": "m05",
+          "time": "09:20",
+          "text": "Acquisition C-A: v7 Cedar read-only, passed, 100 ms. Acquisition C-B: v7 Cedar read-only, passed, 110 ms. C-A and C-B are distinct acquisitions."
+        },
+        {
+          "id": "m06",
+          "time": "09:25",
+          "text": "Acquisition B-A: v7 Bay read-only, passed, 105 ms. Acquisition B-B: v7 Bay read-only, passed, 115 ms. B-A and B-B are distinct acquisitions."
+        },
+        {
+          "id": "m07",
+          "time": "09:30",
+          "text": "Acquisition D-A: v7 Delta read-only, passed, 90 ms. Acquisition D-B: v7 Delta read-only, passed, 95 ms. D-A and D-B are distinct acquisitions."
+        },
+        {
+          "id": "m08",
+          "time": "09:35",
+          "text": "Three Cedar summaries cite C-A. Two Bay summaries cite B-A. These summaries reuse their named acquisitions, not additional independent tests."
+        },
+        {
+          "id": "m09",
+          "time": "09:40",
+          "text": "COMPLETE rollback-tested sites for v7: Cedar, Bay, Delta. This record confirms testing, not a promised future test."
+        },
+        {
+          "id": "m10",
+          "time": "09:45",
+          "text": "Post-release monitors are proposed, not started. No write-path results are reported. These facts do not change the read-only deployment policy. Next handover 10:00."
+        }
+      ]
+    },
+    "question": "Under the deployment policy, should v7 be deployed at Cedar now? Choose RELEASE, HOLD or INSUFFICIENT.",
+    "expected": "HOLD"
+  },
+  {
+    "kind": "reorder",
+    "actor": {
+      "records": [
+        {
+          "id": "m10",
+          "time": "09:45",
+          "text": "Post-release monitors are proposed, not started. No write-path results are reported. These facts do not change the read-only deployment policy. Next handover 10:00."
+        },
+        {
+          "id": "m09",
+          "time": "09:40",
+          "text": "COMPLETE rollback-tested sites for v7: Cedar, Bay, Delta. This record confirms testing, not a promised future test."
+        },
+        {
+          "id": "m08",
+          "time": "09:35",
+          "text": "Three Cedar summaries cite C-A. Two Bay summaries cite B-A. These summaries reuse their named acquisitions, not additional independent tests."
+        },
+        {
+          "id": "m07",
+          "time": "09:30",
+          "text": "Acquisition D-A: v7 Delta read-only, passed, 90 ms. Acquisition D-B: v7 Delta read-only, passed, 95 ms. D-A and D-B are distinct acquisitions."
+        },
+        {
+          "id": "m06",
+          "time": "09:25",
+          "text": "Acquisition B-A: v7 Bay read-only, passed, 105 ms. Acquisition B-B: v7 Bay read-only, passed, 115 ms. B-A and B-B are distinct acquisitions."
+        },
+        {
+          "id": "m05",
+          "time": "09:20",
+          "text": "Acquisition C-A: v7 Cedar read-only, passed, 100 ms. Acquisition C-B: v7 Cedar read-only, passed, 110 ms. C-A and C-B are distinct acquisitions."
+        },
+        {
+          "id": "m04",
+          "time": "09:15",
+          "text": "Permit record: v7 at Delta requested; receipt unavailable. Authorization is unknown, not denied or granted."
+        },
+        {
+          "id": "m03",
+          "time": "09:10",
+          "text": "Permit record: v7 at Cedar authorized; v7 at Bay explicitly prohibited. Bay v6 was authorized, but that does not authorize v7."
+        },
+        {
+          "id": "m02",
+          "time": "09:05",
+          "text": "Correction: current latency limit is 120 ms, replacing 80 ms. Earlier measured values are unchanged. This correction applies to all sites below."
+        },
+        {
+          "id": "m01",
+          "time": "09:00",
+          "text": "Deployment policy: for the requested version and site, RELEASE requires recorded authorization, two distinct passed read-only acquisitions within the current latency limit, and rollback tested at that site. An explicit prohibition, failed required check or absent site from the COMPLETE tested-site list means HOLD. If no violation is established but required evidence is unknown, use INSUFFICIENT. Duplicate summaries are not new acquisitions. No write-path test, running monitor or independent re-verification is required."
+        }
+      ]
+    },
+    "question": "Under the deployment policy, should v7 be deployed at Cedar now? Choose RELEASE, HOLD or INSUFFICIENT.",
+    "expected": "RELEASE"
+  },
+  {
+    "kind": "rename",
+    "actor": {
+      "records": [
+        {
+          "id": "m01",
+          "time": "09:00",
+          "text": "Deployment policy: for the requested version and site, RELEASE requires recorded authorization, two distinct passed read-only acquisitions within the current latency limit, and rollback tested at that site. An explicit prohibition, failed required check or absent site from the COMPLETE tested-site list means HOLD. If no violation is established but required evidence is unknown, use INSUFFICIENT. Duplicate summaries are not new acquisitions. No write-path test, running monitor or independent re-verification is required."
+        },
+        {
+          "id": "m02",
+          "time": "09:05",
+          "text": "Correction: current latency limit is 120 ms, replacing 80 ms. Earlier measured values are unchanged. This correction applies to all sites below."
+        },
+        {
+          "id": "m03",
+          "time": "09:10",
+          "text": "Permit record: v7 at Harbor authorized; v7 at Bay explicitly prohibited. Bay v6 was authorized, but that does not authorize v7."
+        },
+        {
+          "id": "m04",
+          "time": "09:15",
+          "text": "Permit record: v7 at Delta requested; receipt unavailable. Authorization is unknown, not denied or granted."
+        },
+        {
+          "id": "m05",
+          "time": "09:20",
+          "text": "Acquisition C-A: v7 Harbor read-only, passed, 100 ms. Acquisition C-B: v7 Harbor read-only, passed, 110 ms. C-A and C-B are distinct acquisitions."
+        },
+        {
+          "id": "m06",
+          "time": "09:25",
+          "text": "Acquisition B-A: v7 Bay read-only, passed, 105 ms. Acquisition B-B: v7 Bay read-only, passed, 115 ms. B-A and B-B are distinct acquisitions."
+        },
+        {
+          "id": "m07",
+          "time": "09:30",
+          "text": "Acquisition D-A: v7 Delta read-only, passed, 90 ms. Acquisition D-B: v7 Delta read-only, passed, 95 ms. D-A and D-B are distinct acquisitions."
+        },
+        {
+          "id": "m08",
+          "time": "09:35",
+          "text": "Three Harbor summaries cite C-A. Two Bay summaries cite B-A. These summaries reuse their named acquisitions, not additional independent tests."
+        },
+        {
+          "id": "m09",
+          "time": "09:40",
+          "text": "COMPLETE rollback-tested sites for v7: Harbor, Bay, Delta. This record confirms testing, not a promised future test."
+        },
+        {
+          "id": "m10",
+          "time": "09:45",
+          "text": "Post-release monitors are proposed, not started. No write-path results are reported. These facts do not change the read-only deployment policy. Next handover 10:00."
+        }
+      ]
+    },
+    "question": "Under the deployment policy, should v7 be deployed at Harbor now? Choose RELEASE, HOLD or INSUFFICIENT.",
+    "expected": "RELEASE"
+  }
+]

@@ -21,7 +21,7 @@ outputs:
 
 ## Goal
 
-Independently inspect researchers/vishesh/notes/influence-swarms/scenario/qualification-v2.json and PROTOCOL.md before native Q4. No paid calls or credential access needed. Verify buyer arithmetic, selected-deployment approval logic, realistic decision tensions, answerability from actor-visible records, matched chair evidence and fresh-case coverage. Record source hashes and a reviewer-owned verdict; do not treat author tests as independent approval.
+Independently inspect 5-experiments/studies/vishesh/influence-swarms/scenario/qualification-v2.json and PROTOCOL.md before native Q4. No paid calls or credential access needed. Verify buyer arithmetic, selected-deployment approval logic, realistic decision tensions, answerability from actor-visible records, matched chair evidence and fresh-case coverage. Record source hashes and a reviewer-owned verdict; do not treat author tests as independent approval.
 
 ## Done when
 
@@ -31,4 +31,4 @@ Independently inspect researchers/vishesh/notes/influence-swarms/scenario/qualif
 
 ## Disposition — retired by owner instruction
 
-The owner requires one researcher review and accepts Dmarz’s published design feedback as that review. This duplicate task is closed administratively. The independent arithmetic/rendered-record/source-hash review listed above was not performed and is not claimed. No further reviewer action is requested. See researchers/vishesh/notes/influence-swarms/scenario/REVIEW-RESOLUTION.md.
+The owner requires one researcher review and accepts Dmarz’s published design feedback as that review. This duplicate task is closed administratively. The independent arithmetic/rendered-record/source-hash review listed above was not performed and is not claimed. No further reviewer action is requested. See 5-experiments/studies/vishesh/influence-swarms/scenario/REVIEW-RESOLUTION.md.

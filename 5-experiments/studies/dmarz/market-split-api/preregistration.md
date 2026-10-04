@@ -1,6 +1,6 @@
 # Exploratory development protocol, market-split-api-v1
 
-This is a frozen pilot protocol, not a confirmatory preregistration. No accepted hypothesis exists; S2 is disabled. Parent evidence and limits: ../market-split/reviews/s1-fleet-001-post.md. The owner authorized starting model tests, and the standing shared API budget is documented in researchers/dmarz/README.md.
+This is a frozen pilot protocol, not a confirmatory preregistration. No accepted hypothesis exists; S2 is disabled. Parent evidence and limits: ../market-split/reviews/s1-fleet-001-post.md. The owner authorized starting model tests, and the standing shared API budget is documented in lab/researchers/dmarz/README.md.
 
 Question and primary: Does the neutral dynamic portfolio reach sustained strategic fragmentation more often under firm than owner aggregation? Use the identical evaluator from the scripted qualification and pair by market and shock seed. No-regulation behavior and the locked-one-firm arm are controls; profit, registration timing and brief-note motive annotation are secondary. No hinted arm is part of discovery evidence.
 

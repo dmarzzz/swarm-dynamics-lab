@@ -3,13 +3,13 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — On this model and contract, repeated probes preserved checkpoint votes; the failed clean gate prevents an attack-protection claim. Basis: Exact replay and complete observations show near-deterministic repeated probes on this contract, but reports-only clean competence is 2/12 and mostly abstention. Attack-harm/protection interpretations are not supported by the degenerate baseline; this is a component diagnostic.
 - **sample_size_summary:** 12 worlds (6 per stratum) × 2 exposures × 3 arms = 72 episodes, 936 calls.
 <!-- experiment-evidence:end -->
 
-Written 2026-10-04 UTC before any model output for this plan. Exploratory; not an accepted hypothesis. Task: [build-v3-resample-control](../../../../tasks/build-v3-resample-control.md). Owner: dmarz/private-control. The v3 benchmark and its launch belong to dmarz/discussion-bench-v3; this sidecar adds files and changes none of theirs.
+Written 2026-10-04 UTC before any model output for this plan. Exploratory; not an accepted hypothesis. Task: [build-v3-resample-control](../../../../lab/tasks/build-v3-resample-control.md). Owner: dmarz/private-control. The v3 benchmark and its launch belong to dmarz/discussion-bench-v3; this sidecar adds files and changes none of theirs.
 
 ## Question
 
@@ -32,7 +32,7 @@ Plus 6 acquisition and 3 shared report probes per exposure. `resample` matches `
 [src/resample_v3.py](src/resample_v3.py) subclasses v3's `Runner` and inserts one `resample` branch into v3's own `continue_arm` source at import time, so v3 fixes carry over. The import raises if the anchor line it patches is missing or duplicated. [src/resample_v3_selftest.py](src/resample_v3_selftest.py) checks that the patched runner reproduces upstream records and journal events for every v3 arm, that resample makes no work calls and probes one fixed context, that all arms share the checkpoint, exact call accounting, audit and tamper detection, known-behaviour policies, missing-cell bounds and the launch gate.
 
 ```sh
-cd researchers/dmarz/notes/discussion-dose/src
+cd 5-experiments/studies/dmarz/discussion-dose/src
 python3 resample_v3_selftest.py && python3 -m bench_v3.selftest
 python3 resample_v3.py run --output ../../../../../data/resample-v3/<new-dir> && python3 resample_v3.py audit <same dir>
 ```

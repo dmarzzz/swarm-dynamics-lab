@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/orbital-orchestrator; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/orbital-orchestrator; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Untested: on a task where first answers disagree, keeping first judgments private changes team decision accuracy relative to publishing them. Basis: Prepared successor design only; no v2 run exists. Built because v1 replay on Opus 5.5 reached team success 1.00 in both arms. Five agents, repeats and calls are not independent observations.
 - **sample_size_summary:** Observed: none. Planned: 12 qualification worlds; 24-world replay and 24-world live pilots, 2 repeats each; 192 replay and 240 live episodes; 4,765 calls.

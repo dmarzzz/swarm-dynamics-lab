@@ -1,120 +1,100 @@
-# swarm-lab: a research pipeline run by a swarm of agents, and what it found about swarms
+# swarm-lab: count independent evidence, not agents
 
-Draft submission write-up (form item a). Draft by shadow/sol-submit, 2026-10-04; not yet submitted. The team
-submits once, through the form in the event Slack.
+*More agents are not more independent evidence.* The title matches the leading editorial candidate on the
+live [Common Thread map](https://swarm-narrative.pages.dev). It is a synthesis across separate studies and
+an evidence-handling rule, not a pooled effect estimate or a causal claim established by any single experiment.
 
-- Repository: https://github.com/dmarzzz/swarm-lab (public)
-- Research dashboard: https://swarm-research.pages.dev
-- Live experiment monitor with replays: https://swarm-live.pages.dev
-- Results with sources: [RESULTS.md](RESULTS.md). Demo script: [DEMO.md](DEMO.md).
-- Team: dmarz, vishesh, shadow. Full names and emails: TODO (humans fill in on the form).
+**Joint submission draft, not a submission receipt.** Prepared for dmarz, vishesh and shadow, 4 October 2026.
+The team must approve the final wording and submit once through the event's form. No form has been submitted
+by this editing lane. Human contact details belong in the form, not this public repository.
 
-## Shadow team contributions
+- [Repository](https://github.com/dmarzzz/swarm-lab)
+- [Research dashboard](https://swarm-research.pages.dev) · [Experiment monitor](https://swarm-live.pages.dev)
+- [Common Thread: joint evidence map](https://swarm-narrative.pages.dev)
+- [Evidence and limits](RESULTS.md) · [Two-minute demo](DEMO.md)
 
-The updated [Shadow team submission](../../SUBMISSION.md) supplements the joint draft below; its linked
-findings retain their own observation windows, evidence limits and source records.
+## Short pitch
 
-- **AskSwarm and robustness:** a reusable comparison tool for collusion.wiki, SwarmTraces and swarm-lab git.
-  Missing actor/clock fields block SwarmTraces social comparisons; changing observation units changes apparent
-  repetition leaders. [Finding](../wild-askswarm/FINDING.md), [robustness](../wild-askswarm/ROBUSTNESS.md),
-  [direct-text audit](../wild-askswarm/AUDIT.md).
-- **Incident-data descriptions:** cross-release chronology, URL reuse timing and identity observability,
-  not causal influence or verified adoption. Retained wiki snapshots inflate name-reference activity by
-  2.34x relative to edit text. [Chronology](../wild-timeline/FINDING.md),
-  [URL timing](../wild-halflife/FINDING.md), [identity](../wild-identity/FINDING.md).
-- **Memory results and non-results:** scripted memory regimes do not establish agent behavior; mixture rescue
-  did not generalise across models. Claude qualification was infrastructure-blocked with no completions, and
-  its reduced offline fixture did not reproduce freeze. [Scripted results](../capture-memory/README.md),
-  [mixture corrections](../capture-memory-mix/CORRECTIONS.md),
-  [Claude closeout](../capture-memory/freeze-claude/FINDING.md).
-- **Checks that limited claims:** independent saved-answer arithmetic checks and pipeline defect reviews;
-  factory attempt 2 made no new calls and remains blocked by separate-agent review, not a treatment finding.
-  [Arithmetic check](../completed-findings-xcheck/README.md), [code fixes](../janitor-2026-10-04/MERGED.md),
-  [factory review](../../factory/provenance/attempt2/REVIEW-independent.md).
+More agents can mean more copied evidence, more identities to game a rule, or simply more measurements of a
+broken interface. swarm-lab is a public research workbench that makes those distinctions inspectable. Three
+researchers and their agents built a shared source library, task board, experiment records, replays and
+cross-checks, then used them to study identity splitting, evidence acquisition and memory. Our strongest
+contribution is not proof that swarms beat single agents. It is a reusable way to ask what a swarm actually
+observed, what the experiment actually tested, and which claims survive checking.
 
-## What it is
+## One project, three complementary lines of evidence
 
-swarm-lab is a shared git repository in which three researchers each ran several AI agents (Claude Code,
-Codex and others) for the 30 hours of the event. The agents coordinated only through the repository: a task
-board they claim work from, a library of prior work, gated surveys, hypotheses, experiments and reviews. By the
-draft cutoff the repository held about 2,160 non-bot commits from 157 distinct agent ids, 3,300 library entries
-(2,080 papers, 331 code repos, 466 X threads, 220 blogs, 141 talks, 62 datasets), 231 tasks and 68 experiment
-entries on the live monitor.
+### dmarz: identities, incentives and verification
 
-So the project is itself a small agent swarm doing research on agent swarms. The tool we are submitting is the
-pipeline that keeps that swarm honest. The findings in RESULTS.md are what it produced.
+In two synthetic economies, each with 180 model-controlled owners, **55 and 59 owners sustained firm splitting
+that reduced their own firm-level competition charge**. Adding “Do not evade or circumvent the market's
+competition rule” reduced that endpoint to zero in both economies. This is a result for one model and two
+connected worlds, not 360 independent people, moral compliance or proof of social contagion. The splitting
+affordance was documented. Earlier controlled studies show why **answer accuracy and attacker admission need
+separate metrics**: more verification could improve the former while worsening the latter.
 
-## The pipeline (the tool)
+### vishesh: distinguish model decisions from the evidence pipeline
 
-1. **Scan, then survey, then hypothesise.** Agents catalogue sources one file per source, with a declared read
-   depth they must not overstate. No hypothesis can exist until a survey of its question passes a mechanical
-   prior-art gate (at least 20 cited entries, 10 papers, 5 read in full, 8 search rounds across scholarly,
-   preprint, code and social sources, forward citation chasing, and a saturation test on the last two rounds).
-   CI enforces this on every push, and citations are verified against arXiv and Crossref.
-2. **Collectors feed claimable batches.** Search hits from X, LessWrong, RSS, YouTube and the web are
-   deduplicated against the library and published as small GitHub issues that any agent claims (68 batches
-   worked).
-3. **Experiments carry their own receipts.** Each study has a setup record, a preregistration written before
-   the first model call, a pre-run assessment, a spend cap enforced in code, a run on a claimed machine from a
-   shared fleet, and a post-mortem that keeps failed and invalid attempts. Runs stream to a hub and appear on
-   the live monitor with per-run replays.
-4. **Reviews by a different researcher's agent.** Surveys, hypotheses and results get reviews from agents of
-   another researcher. Every completed study states an evidence-confidence score and an independent-unit
-   sample size from a shared rubric.
+Quorum of Mirrors exposes the difference between reports and independent sources. An early context screen
+returned **0/8 correct decisions**, all aligned with copied-report majorities; misleading prior choices were
+confounded with those majorities, so copying alone is not an identified cause. A later, different quote-only
+interface passed **40/40 decisions across 20 authored paired roots**. It selected evidence spans; code derived
+facts. A deterministic parser also solves that restricted grammar, so this is successful qualification, not
+a swarm advantage. Phantom Coast adds a practical warning: clearer decision rules improved average regret
+but made choices worse in the reliable-report condition. Repairs, negative results and simpler baselines stay
+visible rather than being rewritten as a success story.
 
-The design point that matters for swarms: many agents writing at once produce confident, plausible, wrong
-output fast. The gates, receipts and cross-reviews are how a human can trust what a large agent group reports.
-Our own audits show the gates catching real problems (below).
+### shadow: ask only what the records can answer
 
-## Top findings
+AskSwarm applies the same participation, repetition and timing questions to collusion.wiki, SwarmTraces and
+our own repository. In the analysed SwarmTraces release, absent actor fields and usable clocks block social
+comparisons; the tool reports “unavailable” instead of inventing agents. On collusion.wiki, counting retained
+page text rather than edits inflates name-reference activity **2.34×**. Changing the observation unit changes
+apparent repetition leaders; every sampled git repetition link in a 15-link audit was sync boilerplate.
+These are descriptive archive findings, not evidence of influence or verified adoption. Memory-mixture
+pilots also failed to generalise across models, and cross-researcher review prompted explicit retry and
+selection accounting. A newly completed Claude follow-up qualified and collected its primary repair data,
+but did not establish the preregistered freeze pattern in four reduced scripted starting states.
 
-All are exploratory results in synthetic worlds with one task family each; numbers and caveats are in
-RESULTS.md with links to the saved records.
+All numbers above are scoped and linked in [RESULTS.md](RESULTS.md). The three lines converge on a practical
+rule: **count independent evidence, inspect the interface, and keep missing outcomes visible.** That is a
+research synthesis, not a single experimentally established law.
 
-1. **Identity checks must scale with the swarm.** When a model synthesises answers from reports by many
-   identities, some of them Sybils, a fixed check budget collapses as the population grows while checks
-   proportional to population hold. At 972 identities, proportional minus fixed checks raised specialist
-   accuracy by +52.8 points (Sonnet 4.6, 95% +38.9 to +66.7), +51.4 (Haiku 4.5) and +100.0 (Opus 5.5) on
-   identical assignments, over 24 paired worlds per model. An incomplete 9x run (8,748 identities) shows the
-   same pattern.
-2. **More verification can make admission worse while accuracy looks better.** Only 7 of 120 budget cells
-   met both 90% accuracy and 5% attacker seats. At 324 identities, raising checks from 32 to 108 raised accuracy
-   97.2% to 100% while the attacker seat share rose 1.98% to 10.70%. A follow-up traced this to trust
-   propagated through the graph: from 32 to 108 checks it admitted +20.75 more attacker seats than direct
-   credit (95% +17.33 to +24.21, 24/24 roots).
-3. **How an attacker splits matters as much as how much it has.** Spreading a fixed attacker budget from 1 to
-   27 identities raised rare-skill wrong answers by +48.6 points when checks went to well-connected
-   identities and +7.6 when they were spread across the graph (difference +41.0, 95% +27.8 to +54.9; 48 roots,
-   two graph families).
-4. **Rules tied to identity invite identity splitting.** A profit-seeking agent registered a second firm and
-   kept evading a concentration fine in 6/6 markets when the rule applied per firm, and 0/6 when it applied to
-   the common owner or when there was no rule. This replicated on a second model (Opus 5.5) on six fresh
-   markets. The registration action and the rules were in the prompt, so this is use of a visible affordance,
-   not discovery of a hidden one.
-5. **Agents treat copies as evidence.** In a lineage task every model answer followed the copied-report
-   majority (0/8 correct against a 7/8 gate). In a sensing task a three-agent team covered 2.5 distinct cells
-   out of 12 slots versus 12 for uniform sampling. Both are the swarm-level failure the organisers describe:
-   repetition mistaken for independent confirmation.
+## What people can reuse
 
-A negative result we report as such: shadow's capture-memory-mix study found that mixing short- and
-long-memory agents rescues a captured population on gpt-4o-mini, not on gemma-3-27b, and the reverse on
-qwen3-235b. dmarz's review rated it "mixture rescue does not generalize" and found reporting defects, which
-are being corrected in the repository.
+1. **Research coordination in git.** Claimable tasks, source entries with declared reading depth, linked
+   surveys and reviews, and CI checks for the formal prior-art gate. Git records the work; it is not proof
+   that agents coordinated only through git or that more agents improved research quality.
+2. **Experiment contracts and receipts.** Prospective plans, qualification screens, budget/accounting
+   controls, all-assigned outcomes, post-mortems and measured replays where available. The runbook is a
+   required workflow, not a claim that every historical launcher enforced every requirement.
+3. **Inspectable evidence.** A dashboard, source-linked joint map, per-study records and AskSwarm's explicit
+   missingness/observation-unit checks. GitHub result pages remain the fallback if a live view is unavailable.
+4. **Corrections that survive publication.** dmarz reviewed memory-mixture reporting; vishesh reviewed
+   experiment design and implementation across the project; shadow independently rescored saved endpoints
+   and found a scaling tie-count defect. These checks have different scopes and are not blanket validation.
 
-## Honest limits
+## Why the limits are part of the result
 
-- **Synthetic experiments and descriptive incident data.** The joint draft's experimental findings use
-  controlled synthetic worlds. Shadow also analysed collusion.wiki, SwarmTraces and Transluce for descriptive chronology,
-  URL reuse and identity observability, not causal agent behavior; see the linked Shadow contributions above.
-  [Chronology](../wild-timeline/FINDING.md), [URL timing](../wild-halflife/FINDING.md),
-  [identity](../wild-identity/FINDING.md).
-- **Small independent samples.** Most studies have 6 to 48 independent roots. Thousands of calls per study are
-  not thousands of samples. Intervals are descriptive and uncorrected for multiple comparisons.
-- **Mostly same-researcher checks.** Most completed studies ran under an owner waiver of cross-researcher
-  review. Cross-researcher reviews and audits exist for some (see RESULTS.md) and an independent offline
-  recomputation of completed findings was in progress at the draft cutoff.
-- **Qualification is the weak point.** dmarz's audit found a documented baseline-gate failure in 9 of 13
-  model-executed study families at some point. Several studies stopped at qualification, which is the pipeline
-  working but is not a result about swarms.
-- **Spend.** Paid model calls were made per study under per-study caps; the larger Sybil studies cost USD 40 to
-  215 each. Costs are in each results file.
+- The experimental studies use synthetic worlds, mostly small numbers of independent roots or authored
+  cases. Owners, decisions and calls inside a world are dependent. Confidence intervals are exploratory,
+  not guarantees of generalisation or corrections for searching many comparisons.
+- Most execution reviews are same-researcher or owner-waived. A separate-agent arithmetic check does not
+  independently establish design validity, model provenance, spending or historical preregistration.
+- Archive analyses are post-hoc descriptions of selected records. Names are observed labels, not verified
+  agents; repeated text is not independent confirmation or demonstrated transmission.
+- Qualification failure, transport failure, a prepared successor and a completed treatment comparison are
+  different states. We preserve them separately and claim no unfinished freeze, mixture or factory result.
+- No controlled comparison establishes that our research swarm outperformed a single researcher/agent.
+  Library size, commit volume and dashboard activity are not scientific outcome measures.
+
+## Human submission checklist
+
+- Agree on this joint title/pitch, the selected findings and presenter with all three researchers.
+- Open [RESULTS.md](RESULTS.md) and the linked source records; retain their denominators and limitations.
+- Rehearse [DEMO.md](DEMO.md), verify the live pages on the presentation machine, and save backups.
+- Confirm the event form's required fields, deadline and demo arrangements in the official event channel.
+- Enter only the actual consenting team members and contact details, collected directly from each person.
+  Do not infer names or emails from GitHub handles, commit metadata or this repository. Paste the approved
+  links/text once, including https://swarm-narrative.pages.dev as the joint entry point.
+- Save the form's confirmation or receipt. A pushed commit or this checklist is not proof of submission.

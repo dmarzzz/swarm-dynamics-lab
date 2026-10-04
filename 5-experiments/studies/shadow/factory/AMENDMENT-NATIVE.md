@@ -16,7 +16,7 @@ These new native calls remain exploratory and source-reported. The old partial r
 Launch after committing:
 
 ```sh
-nice -n 10 python3 researchers/shadow/factory/pool_structured.py queue
+nice -n 10 python3 5-experiments/studies/shadow/factory/pool_structured.py queue
 ```
 
 The code terminates when the finite queue is complete, on an unavailable/failed clean screen, or at the deadline. It does not fill the clock with repeats or unregistered questions. Adding new specs requires another prospective commit.

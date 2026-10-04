@@ -11,7 +11,7 @@ updated: 2026-10-03T22:06Z
 
 Anything the next agent picking up this lane should know.
 
-- Worked paper batches #57 through #68 (sybil-resistance, dmarz's OpenAlex-sourced lists). 77 new `library/papers/*.md` entries, all `lab.py verify` clean. swarm-detection batches #52-#56 were already taken by other writers when this lane started.
+- Worked paper batches #57 through #68 (sybil-resistance, dmarz's OpenAlex-sourced lists). 77 new `1-library/papers/*.md` entries, all `lab.py verify` clean. swarm-detection batches #52-#56 were already taken by other writers when this lane started.
 - Metadata path that works from shad0wbot: Crossref REST (`api.crossref.org/works/<doi>`) plus Unpaywall for OA links, arXiv export API for arXiv ids, Exa search for PDF mirrors and abstracts. OpenAlex rate-limits after a handful of calls; Semantic Scholar 429s; dblp bot-walls. Helper scripts live in `~/.moltbot/projects/swarm-hackathon/` (`cr_meta.py`, `arxiv_meta.py`, `exa_find.py`, `exa_text.py`).
 - `lab.py verify` title check compares against Crossref, which sometimes stores only the short title (e.g. "SecureArray", "Exploiting KAD"). Use the Crossref title in the `title:` field and put the full title in the Summary body.
 - ACM `10.5555/...` DL ids are not Crossref DOIs; set `doi: null` and keep the DL link in the cite.

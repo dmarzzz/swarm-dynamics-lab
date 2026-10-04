@@ -28,9 +28,9 @@ The field moves fast and the seminal scan will skew old. Catalogue 2024 to 2026 
 
 ## Done when
 
-- At least 20 papers catalogued in library/papers/ with this topic, including every review article you found.
+- At least 20 papers catalogued in 1-library/papers/ with this topic, including every review article you found.
 - At least 4 of them read in full (read_depth: full), chosen as the most relevant.
-- Every paper that ships code has its repo catalogued in library/code/ and linked in `code:`.
+- Every paper that ships code has its repo catalogued in 1-library/code/ and linked in `code:`.
 - The coverage note below is filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
@@ -96,7 +96,7 @@ Written by dmarz/swarm-robotics-recent on 2026-10-03. Scope: swarm robotics pape
 - https://github.com/Da-Zhao1997/Snail-inspired-robotic-swarms ([[zhao-2024-snail]])
 - https://github.com/MISTLab/Swarm-SLAM (Swarm-SLAM, arXiv:2301.06230; seen in the listing, paper not catalogued)
 - Project pages with code or video links: https://sites.google.com/view/obst-avoid-swarm-rl ([[huang-2024-collision]]), https://sites.google.com/view/pursuit-evasion-rl ([[chen-2025-online]]), https://sites.google.com/view/sync-sbc/home ([[raveendra-2026-syncsbc]]), https://sites.google.com/view/swarmdiscovery-with-rsrs/home ([[mattson-2025-discovery]]). Google Drive code for [[zhang-2026-asymmetric]].
-- Data: the outdoor 10-drone flocking dataset is at https://doi.org/10.5281/zenodo.17902132 ([[verdoucq-2025-flocking]]). The Done-when item "every paper that ships code has its repo catalogued in library/code/" is **not met** by this run: this run's rules forbid creating code entries, so the list above is handed to the code scan.
+- Data: the outdoor 10-drone flocking dataset is at https://doi.org/10.5281/zenodo.17902132 ([[verdoucq-2025-flocking]]). The Done-when item "every paper that ships code has its repo catalogued in 1-library/code/" is **not met** by this run: this run's rules forbid creating code entries, so the list above is handed to the code scan.
 
 ### Notable gaps
 
@@ -108,7 +108,7 @@ Written by dmarz/swarm-robotics-recent on 2026-10-03. Scope: swarm robotics pape
 
 ### Suggested follow-up tasks
 
-1. Code scan: catalogue the repositories above in library/code and link them via `code:` (DiffPhysDrone, LEGO-MARL, GenSwarm and LLM2Swarm first).
+1. Code scan: catalogue the repositories above in 1-library/code and link them via `code:` (DiffPhysDrone, LEGO-MARL, GenSwarm and LLM2Swarm first).
 2. Full reads, if a survey needs them: [[zhang-2025-gcbf]] (GCBF+), [[hou-2025-primitive]], [[zhu-2024-self]] (SoNS, 135 pp.), [[zhao-2026-self]] (aquatic SOC exponents) and [[chiu-2025-learn]].
 3. Dataset task: reanalyse the Verdoucq et al. Zenodo flocking data (polarisation susceptibility vs alignment gain) as a candidate hackathon experiment.
 4. Rerun OpenAlex after reset, for citation counts on all 45 entries and forward-citation chasing of [[zhang-2025-learning]], [[huang-2024-collision]] and [[vasarhelyi-2018-optimized]].

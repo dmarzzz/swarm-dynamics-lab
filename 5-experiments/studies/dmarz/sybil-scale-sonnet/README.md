@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/scale-sonnet; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/scale-sonnet; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — In the repeated-fact synthetic environment, the Haiku population-scaling result replicates with claude-sonnet-4-6 on identical assignments: proportional strong checks raise N972 specialist accuracy by +52.8 pp (Haiku +51.4 pp); Sonnet is more accurate than Haiku in 73 of 100 cells, mainly where fabrications are admitted. Basis: Same-owner audit of 24 paired world roots with all 2,400 outcomes valid and an exact local recomputation; assignments verified identical to the Haiku cohort. One synthetic task family and graph, scripted identities and checks, admission independent of the model, descriptive unadjusted intervals across 100 cells, and an owner waiver in place of independent review limit generalization.
 - **sample_size_summary:** Observed: 24 paired world roots from one synthetic task family; 2,400/2,400 S1 outcomes analyzed, zero missing; 100 conditions at 36-972 simulated identities feeding one synthesizer model. Q0 separately 64/64. Cross-model comparison pairs the same 24 roots with the separate Haiku cohort (sybil-scale-api/56defc84); cohorts not pooled.

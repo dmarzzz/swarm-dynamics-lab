@@ -15,7 +15,7 @@ topics: [llm-agent-swarms, agent-budgets]
 
 ## Goal
 
-Resolve a fresh dedicated allocation for Poietic Agents S0 under the existing Dmarz account/team. The reviewed instrument is in researchers/vishesh/notes/poietic-agents; the operator is vishesh/codex-heterogeneous. The reduced $2 cumulative proposal ($1.50 API/$0.50 infrastructure) still needs explicit user confirmation. Credential selector resolution remains pending.
+Resolve a fresh dedicated allocation for Poietic Agents S0 under the existing Dmarz account/team. The reviewed instrument is in 5-experiments/studies/vishesh/poietic-agents; the operator is vishesh/codex-heterogeneous. The reduced $2 cumulative proposal ($1.50 API/$0.50 infrastructure) still needs explicit user confirmation. Credential selector resolution remains pending.
 
 ## Done when
 

@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-experiments; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-experiments; source `9781739c` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — On five contract-valid inspected development responses, exact-quote failures discarded correct facts and produced false uncertainty. Basis: Native screen5/6valid;180/180correct raw values but98aligned and41/75correct checks. Citation-bound saved-data analysis75/75is retrospective, not native behavior or general robustness. Provider recovery and format repair are separate acquisition evidence.
 - **sample_size_summary:** Six inspected case clusters in initial screen,5valid/1invalid; nine physical calls across acquisition/repair and qualification, not nine independent cases. No chair or broader influence contrast ran.

@@ -17,9 +17,9 @@ The queue request pins the full public source commit. Deploy that same clean com
 From each frozen repository root:
 
 ```sh
-python3 -m pip install -r researchers/vishesh/notes/poietic-agents/requirements.txt
-python3 -m unittest discover -s researchers/vishesh/notes/poietic-agents/tests -q
-python3 researchers/vishesh/notes/poietic-agents/src/prepare.py --out /srv/swarm/poietic/preparation/S0-01
+python3 -m pip install -r 5-experiments/studies/vishesh/poietic-agents/requirements.txt
+python3 -m unittest discover -s 5-experiments/studies/vishesh/poietic-agents/tests -q
+python3 5-experiments/studies/vishesh/poietic-agents/src/prepare.py --out /srv/swarm/poietic/preparation/S0-01
 ```
 
 Use a virtual environment if system Python is externally managed. The exact interpreter used for tests must run the instrument. Preparation writes assignment identifiers and hashes only; it must not open the reserved world fixtures. The candidate remains intentionally non-authorizing. Construct the private admission JSON from that candidate and authentic current receipts, using the exact schema in `src/admission.py`:
@@ -37,7 +37,7 @@ Save `/srv/swarm/poietic/S0-01-admission.json` on both coordinator and worker. N
 On the approved coordinator, start the existing bounded relay using the protected credential selector and a persistent study-wide ledger. Replace angle-bracket path placeholders with verified private paths; never with secret values.
 
 ```sh
-python3 researchers/vishesh/notes/poietic-agents/src/relay.py \
+python3 5-experiments/studies/vishesh/poietic-agents/src/relay.py \
   --config /srv/swarm/poietic/S0-01-admission.json \
   --credential-file <approved-protected-file> \
   --ledger /srv/swarm/poietic-authority/api.sqlite \
@@ -49,7 +49,7 @@ The coordinator is the sole credential-bearing authority. Establish a verified e
 Then invoke on the allocated worker, with the same frozen source and interpreter:
 
 ```sh
-PYTHONPATH=/usr/local/lib/swarm python3 researchers/vishesh/notes/poietic-agents/src/launch.py run \
+PYTHONPATH=/usr/local/lib/swarm python3 5-experiments/studies/vishesh/poietic-agents/src/launch.py run \
   --config /srv/swarm/poietic/S0-01-admission.json \
   --out /srv/swarm/poietic/results/S0-01
 ```

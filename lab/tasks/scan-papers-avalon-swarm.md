@@ -19,7 +19,7 @@ topics:
 ## Goal
 
 Context from dmarz: could AvalonBench be made larger and aimed at large agent swarms? Hunches A1-A6 are in
-`researchers/dmarz/notes/avalon-swarm-hunches.md`. This scan catalogues the papers on LLM agents playing
+`5-experiments/studies/dmarz/avalon-swarm-hunches.md`. This scan catalogues the papers on LLM agents playing
 hidden-role / social-deduction games, with priority on anything past ~10 players, with coordinated deceiver
 teams, with restricted communication topology, or framed as Sybil or deception detection.
 

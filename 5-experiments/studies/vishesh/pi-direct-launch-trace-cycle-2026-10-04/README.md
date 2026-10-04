@@ -5,17 +5,17 @@
 ## What is implemented
 
 - The exact scope is recorded in [AGENTS.md](../../../../AGENTS.md#direct-execution-for-the-current-vishesh-study-cycle). Each owning task is the sole dispatcher; old central requests are fenced first.
-- [Native trace review](../../../../tooling/agent-experiments/RUN-REVIEW.md#review-the-native-traces-before-choosing-a-repair), the quality rubric and post-mortem template now require trace coverage, every qualification miss, the first observable divergence, competing explanations and a discriminating repair. No universal new logger/service was imposed.
+- [Native trace review](../../../toolkit/agent-experiments/RUN-REVIEW.md#review-the-native-traces-before-choosing-a-repair), the quality rubric and post-mortem template now require trace coverage, every qualification miss, the first observable divergence, competing explanations and a discriminating repair. No universal new logger/service was imposed.
 - Quorum and Phantom completed saved-record audits and implemented concrete scenario/baseline revisions. Neither revision yet establishes a useful role for another native model run.
 
 ## Verified source updates
 
 | Source | Revision | Lesson retained | Boundary |
 |---|---|---|---|
-| [Completion audit](../../../dmarz/notes/completion-audit-2026-10-04/README.md) |6e4e879da3f4fe7d3a3186675306249d3506f9a3| Separate execution, validity, completion, refusal and qualification; inspect actual packets/returns | Historical baseline/supplement, not current live status |
-| [Pipeline lessons](../../../dmarz/notes/pipeline/LESSONS.md) |466fe9310aa09a33ecdf598dd1aad9cd7cfa49bc| Read each failed answer before changing models; intermediate fields diagnose without necessarily repairing | Different fixture batches do not identify a paired format effect |
-| [Per-row worked review](../../../dmarz/notes/verify-cost-qwen/reviews/chain-002-post.md) |88e9455c9e745444f93ed8287ea6a5380363ffbe| Join assignments, rendered requests and returned objects; distinguish cost formation from selected action | Written answers are not access to hidden reasoning |
-| [Trace transport](../../../dmarz/notes/discussion-dose/src/artifacts.py) |cf872ef669c7451261bf8d0538c2661bf1607a58| Compressed/chunked artifact index, payload/raw hashes, recovery without rerunning | Study-local implementation; not a new global logger |
+| [Completion audit](../../dmarz/completion-audit-2026-10-04/README.md) |6e4e879da3f4fe7d3a3186675306249d3506f9a3| Separate execution, validity, completion, refusal and qualification; inspect actual packets/returns | Historical baseline/supplement, not current live status |
+| [Pipeline lessons](../../dmarz/pipeline/LESSONS.md) |466fe9310aa09a33ecdf598dd1aad9cd7cfa49bc| Read each failed answer before changing models; intermediate fields diagnose without necessarily repairing | Different fixture batches do not identify a paired format effect |
+| [Per-row worked review](../../dmarz/verify-cost-qwen/reviews/chain-002-post.md) |88e9455c9e745444f93ed8287ea6a5380363ffbe| Join assignments, rendered requests and returned objects; distinguish cost formation from selected action | Written answers are not access to hidden reasoning |
+| [Trace transport](../../dmarz/discussion-dose/src/artifacts.py) |cf872ef669c7451261bf8d0538c2661bf1607a58| Compressed/chunked artifact index, payload/raw hashes, recovery without rerunning | Study-local implementation; not a new global logger |
 
 Private operator-session transcript collection is a separate workflow. It is not required to analyze these native experiment traces and was not invoked here. Exact owner prompts, secrets and private resources are excluded from this public note.
 

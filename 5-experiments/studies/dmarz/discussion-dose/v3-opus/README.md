@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/v3-q0-opus; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/v3-q0-opus; source `9781739c` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — With Claude Opus 5.5 (adaptive thinking, effort high, no temperature) the v3 swarm benchmark passes its unchanged qualification gate, and on 24 fresh worlds public discussion reduces false-memory inheritance relative to reports-only. Basis: Plan only; no swarm model call has been made. Q0 is a 6-world qualification screen and S1 runs only if it passes.
 - **sample_size_summary:** Observed: none. Planned: Q0 6 fresh worlds (96 cases, 636 calls); S1 24 fresh worlds (384 cases, 2,436 calls) only after a Q0 pass. Worlds are the independent units; calls, agents and arms within a world are not independent.

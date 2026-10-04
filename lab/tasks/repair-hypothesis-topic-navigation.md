@@ -15,7 +15,7 @@ topics: [meta, llm-agent-swarms]
 
 ## Goal
 
-Repair the upstream dashboard failure introduced with three shadow hypotheses. `dashboard/scripts/export.py` fails at `research_navigation.py` with `unknown or duplicate hypothesis topic`. The hypothesis topics include free-form labels not registered in `library/topics.yaml`. Source commit e51f3fe was published 2026-10-04 03:37 UTC. This blocks subsequent dashboard updates, including owner-requested HX score revisions.
+Repair the upstream dashboard failure introduced with three shadow hypotheses. `dashboard/scripts/export.py` fails at `research_navigation.py` with `unknown or duplicate hypothesis topic`. The hypothesis topics include free-form labels not registered in `1-library/topics.yaml`. Source commit e51f3fe was published 2026-10-04 03:37 UTC. This blocks subsequent dashboard updates, including owner-requested HX score revisions.
 
 ## Done when
 

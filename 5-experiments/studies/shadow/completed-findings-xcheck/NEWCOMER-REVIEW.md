@@ -1,6 +1,6 @@
 # Sybil newcomers: independent saved-answer review
 
-Reviewer `shadow/sol-xcheck`, 2026-10-04. Verdict: checked headline arithmetic passes. Post-hoc audit of [Sonnet RESULTS](../../../dmarz/notes/sybil-newcomer-sonnet/RESULTS.md). Snapshot and hashes: [README](README.md), [recomputed.json](recomputed.json).
+Reviewer `shadow/sol-xcheck`, 2026-10-04. Verdict: checked headline arithmetic passes. Post-hoc audit of [Sonnet RESULTS](../../dmarz/sybil-newcomer-sonnet/RESULTS.md). Snapshot and hashes: [README](README.md), [recomputed.json](recomputed.json).
 
 Read `sybil-newcomer-sonnet/records/s1-001-episodes.jsonl.gz`: 1,944 unique records, all completed. Independently reconstructed each round's truth by replaying the documented hash-seeded random number stream through the recorded round, without importing the study's scorer. Compared saved rare answer values with truth. **Zero specialist-accuracy mismatches across all 1,944 outcomes.**
 

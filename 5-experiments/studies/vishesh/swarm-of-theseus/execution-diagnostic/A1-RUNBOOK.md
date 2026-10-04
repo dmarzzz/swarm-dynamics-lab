@@ -9,8 +9,8 @@ Deploy the pinned commit from the queue request into a clean source checkout. Re
 From the pinned public repository:
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/a1 -p 'test_*.py' -v
-python3 researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/a1/runner.py prepare /srv/swarm/theseus-a1-prepared
+python3 -m unittest discover -s 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/a1 -p 'test_*.py' -v
+python3 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/a1/runner.py prepare /srv/swarm/theseus-a1-prepared
 ```
 
 The template is intentionally blocked. Fill the receipt from actual evidence; never run using the template. Required exact fields and freshness checks are in a1/admission.py. Stable allocation id is theseus-a1-7300-7305-v1, proposed reserve USD2.60 total. Original authority USD5, prior estimated USD0.8122310437, no unresolved reservations as of R1 closeout. Verify no subsequent dispatch first. The host-wide /srv/swarm/theseus-execution-allocations.sqlite prevents duplicate use of this stable id. Do not delete or reset it.
@@ -26,7 +26,7 @@ Follow the standing Swarm Lab credential-transfer policy: only the owner-designa
 After the orchestrator has established the approved mechanism, execute the bounded worker on the admitted host with only the approved key/routing fields in its environment:
 
 ```sh
-python3 researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/a1/runner.py run --admission /srv/swarm/theseus-a1-private/admission.json --output /srv/swarm/theseus-a1-run
+python3 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/a1/runner.py run --admission /srv/swarm/theseus-a1-private/admission.json --output /srv/swarm/theseus-a1-run
 ```
 
 This is the exact native entry point, not a claim that the fleet's generic launcher currently supports it. Credentials never go in command arguments, logs or files. The worker disables core dumps; no alternate-provider fallback. Stop on provider/usage/reporting failure, deadline, claim or cap. Contract-invalid learners keep their dependent cases assigned and unstarted, with no oracle replacement. A failed allocation insertion must not be retried under a new identity.

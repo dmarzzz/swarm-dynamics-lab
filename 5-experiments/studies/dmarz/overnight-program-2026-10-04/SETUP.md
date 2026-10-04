@@ -1,6 +1,6 @@
 # Setup record: overnight portfolio, proposed v5
 
-Follow the [experiment setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [setup template](../../../../tooling/agent-experiments/templates/experiment-setup.md). This is an owned prospective design, not a launch receipt. No experiments, paid qualification, server claims, five-session loops or automations have started in this task.
+Follow the [experiment setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and [setup template](../../../toolkit/agent-experiments/templates/experiment-setup.md). This is an owned prospective design, not a launch receipt. No experiments, paid qualification, server claims, five-session loops or automations have started in this task.
 
 The user identified a construct problem: offering maintain/register and providing the exact concentration arithmetic does not demonstrate spontaneous discovery. V5 supersedes v4's flagship interface and interpretation. Frozen v4 files remain in inputs and the artifact history; the other three research lines retain their designs.
 

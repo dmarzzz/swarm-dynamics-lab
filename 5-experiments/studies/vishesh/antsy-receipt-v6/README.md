@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Untested application question: fallible OCR checks improve receipt-total acceptance and referral decisions enough to justify their measured cost. Basis: Only a prospective total-amount tool pilot is tracked. Five pipelines share Tesseract, so agreement is correlated. The 50-receipt test evaluation remains unopened; model comparisons require a separate qualification and no results are inherited from v4/v5.
 - **sample_size_summary:** Observed: none. Planned: 20 train receipts for development (5 OCR pipelines, ≤100 calls); then 50 untouched test receipts after freezing policies. Vendor/layout independence unverified; model study separate.

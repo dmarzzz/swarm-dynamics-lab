@@ -6,97 +6,97 @@ The user asked for many questions, related hypotheses and possible tests across 
 
 ## What was inspected
 
-Read `AGENTS.md`, `library/README.md`, `researchers/dmarz/README.md`, the current inbox and topic counts in `STATUS.md`, and `researchers/vishesh/notes/project-briefs/nca-observatory.md`. Used the six topic catalogues to locate foundational and recent work, then inspected selected local record summaries, model descriptions, limitations and code/data notes. The lists below, together with the NCA addendum, name records used by the final bank. It is not a claim to have read all papers in those topic catalogues, and none of the original catalogue read-depth claims was changed or adopted as this agent's own reading depth.
+Read `AGENTS.md`, `1-library/README.md`, `lab/researchers/dmarz/README.md`, the current inbox and topic counts in `lab/STATUS.md`, and `5-experiments/studies/vishesh/project-briefs/nca-observatory.md`. Used the six topic catalogues to locate foundational and recent work, then inspected selected local record summaries, model descriptions, limitations and code/data notes. The lists below, together with the NCA addendum, name records used by the final bank. It is not a claim to have read all papers in those topic catalogues, and none of the original catalogue read-depth claims was changed or adopted as this agent's own reading depth.
 
 ### collective-motion
 
-- [[amichay-2024-revealing]] — `library/papers/amichay-2024-revealing.md`
-- [[amichay-2025-integration]] — `library/papers/amichay-2025-integration.md`
-- [[attanasi-2014-information]] — `library/papers/attanasi-2014-information.md`
-- [[ballerini-2008-interaction]] — `library/papers/ballerini-2008-interaction.md`
-- [[bastien-2020-model]] — `library/papers/bastien-2020-model.md`
-- [[choi-2026-communication]] — `library/papers/choi-2026-communication.md`
-- [[couzin-2005-effective]] — `library/papers/couzin-2005-effective.md`
-- [[hang-2026-self]] — `library/papers/hang-2026-self.md`
-- [[mateo-2017-effect]] — `library/papers/mateo-2017-effect.md`
-- [[strandburg-peshkin-2013-visual]] — `library/papers/strandburg-peshkin-2013-visual.md`
-- [[vicsek-1995-novel]] — `library/papers/vicsek-1995-novel.md`
-- [[wang-2025-collective]] — `library/papers/wang-2025-collective.md`
+- [[amichay-2024-revealing]] — `1-library/papers/amichay-2024-revealing.md`
+- [[amichay-2025-integration]] — `1-library/papers/amichay-2025-integration.md`
+- [[attanasi-2014-information]] — `1-library/papers/attanasi-2014-information.md`
+- [[ballerini-2008-interaction]] — `1-library/papers/ballerini-2008-interaction.md`
+- [[bastien-2020-model]] — `1-library/papers/bastien-2020-model.md`
+- [[choi-2026-communication]] — `1-library/papers/choi-2026-communication.md`
+- [[couzin-2005-effective]] — `1-library/papers/couzin-2005-effective.md`
+- [[hang-2026-self]] — `1-library/papers/hang-2026-self.md`
+- [[mateo-2017-effect]] — `1-library/papers/mateo-2017-effect.md`
+- [[strandburg-peshkin-2013-visual]] — `1-library/papers/strandburg-peshkin-2013-visual.md`
+- [[vicsek-1995-novel]] — `1-library/papers/vicsek-1995-novel.md`
+- [[wang-2025-collective]] — `1-library/papers/wang-2025-collective.md`
 
 ### collective-decision
 
-- [[couzin-2005-effective]] — `library/papers/couzin-2005-effective.md`
-- [[kao-2014-decision]] — `library/papers/kao-2014-decision.md`
-- [[leonard-2012-decision]] — `library/papers/leonard-2012-decision.md`
-- [[leonard-2024-fast]] — `library/papers/leonard-2024-fast.md`
-- [[march-pons-2024-honeybee]] — `library/papers/march-pons-2024-honeybee.md`
-- [[pais-2013-mechanism]] — `library/papers/pais-2013-mechanism.md`
-- [[reina-2017-model]] — `library/papers/reina-2017-model.md`
-- [[seeley-2012-stop]] — `library/papers/seeley-2012-stop.md`
-- [[talamali-2021-when]] — `library/papers/talamali-2021-when.md`
-- [[valentini-2017-best]] — `library/papers/valentini-2017-best.md`
+- [[couzin-2005-effective]] — `1-library/papers/couzin-2005-effective.md`
+- [[kao-2014-decision]] — `1-library/papers/kao-2014-decision.md`
+- [[leonard-2012-decision]] — `1-library/papers/leonard-2012-decision.md`
+- [[leonard-2024-fast]] — `1-library/papers/leonard-2024-fast.md`
+- [[march-pons-2024-honeybee]] — `1-library/papers/march-pons-2024-honeybee.md`
+- [[pais-2013-mechanism]] — `1-library/papers/pais-2013-mechanism.md`
+- [[reina-2017-model]] — `1-library/papers/reina-2017-model.md`
+- [[seeley-2012-stop]] — `1-library/papers/seeley-2012-stop.md`
+- [[talamali-2021-when]] — `1-library/papers/talamali-2021-when.md`
+- [[valentini-2017-best]] — `1-library/papers/valentini-2017-best.md`
 
 ### active-matter
 
-- [[alert-2022-active]] — `library/papers/alert-2022-active.md`
-- [[bauerle-2018-self]] — `library/papers/bauerle-2018-self.md`
-- [[brambilla-2013-swarm]] — `library/papers/brambilla-2013-swarm.md`
-- [[cates-2015-motility]] — `library/papers/cates-2015-motility.md`
-- [[ceron-2023-diverse]] — `library/papers/ceron-2023-diverse.md`
-- [[deblais-2018-boundaries]] — `library/papers/deblais-2018-boundaries.md`
-- [[deseigne-2010-collective]] — `library/papers/deseigne-2010-collective.md`
-- [[fily-2012-athermal]] — `library/papers/fily-2012-athermal.md`
-- [[fruchart-2021-non]] — `library/papers/fruchart-2021-non.md`
-- [[slavkov-2018-morphogenesis]] — `library/papers/slavkov-2018-morphogenesis.md`
-- [[vicsek-1995-novel]] — `library/papers/vicsek-1995-novel.md`
-- [[ziepke-2025-acoustic]] — `library/papers/ziepke-2025-acoustic.md`
+- [[alert-2022-active]] — `1-library/papers/alert-2022-active.md`
+- [[bauerle-2018-self]] — `1-library/papers/bauerle-2018-self.md`
+- [[brambilla-2013-swarm]] — `1-library/papers/brambilla-2013-swarm.md`
+- [[cates-2015-motility]] — `1-library/papers/cates-2015-motility.md`
+- [[ceron-2023-diverse]] — `1-library/papers/ceron-2023-diverse.md`
+- [[deblais-2018-boundaries]] — `1-library/papers/deblais-2018-boundaries.md`
+- [[deseigne-2010-collective]] — `1-library/papers/deseigne-2010-collective.md`
+- [[fily-2012-athermal]] — `1-library/papers/fily-2012-athermal.md`
+- [[fruchart-2021-non]] — `1-library/papers/fruchart-2021-non.md`
+- [[slavkov-2018-morphogenesis]] — `1-library/papers/slavkov-2018-morphogenesis.md`
+- [[vicsek-1995-novel]] — `1-library/papers/vicsek-1995-novel.md`
+- [[ziepke-2025-acoustic]] — `1-library/papers/ziepke-2025-acoustic.md`
 
 ### swarm-robotics
 
-- [[berlinger-2021-implicit]] — `library/papers/berlinger-2021-implicit.md`
-- [[choi-2026-communication]] — `library/papers/choi-2026-communication.md`
-- [[gh-ilpincy-argos3]] — `library/code/gh-ilpincy-argos3.md`
-- [[gh-jic-csb-kilombo]] — `library/code/gh-jic-csb-kilombo.md`
-- [[gh-proroklab-vectorizedmultiagentsimulator]] — `library/code/gh-proroklab-vectorizedmultiagentsimulator.md`
-- [[gil-2015-guaranteeing]] — `library/papers/gil-2015-guaranteeing.md`
-- [[leblanc-2013-resilient]] — `library/papers/leblanc-2013-resilient.md`
-- [[mallmann-trenn-2021-crowd]] — `library/papers/mallmann-trenn-2021-crowd.md`
-- [[pickem-2017-robotarium]] — `library/papers/pickem-2017-robotarium.md`
-- [[rubenstein-2014-programmable]] — `library/papers/rubenstein-2014-programmable.md`
-- [[slavkov-2018-morphogenesis]] — `library/papers/slavkov-2018-morphogenesis.md`
-- [[sun-2023-mean]] — `library/papers/sun-2023-mean.md`
-- [[zhang-2025-learning]] — `library/papers/zhang-2025-learning.md`
+- [[berlinger-2021-implicit]] — `1-library/papers/berlinger-2021-implicit.md`
+- [[choi-2026-communication]] — `1-library/papers/choi-2026-communication.md`
+- [[gh-ilpincy-argos3]] — `1-library/code/gh-ilpincy-argos3.md`
+- [[gh-jic-csb-kilombo]] — `1-library/code/gh-jic-csb-kilombo.md`
+- [[gh-proroklab-vectorizedmultiagentsimulator]] — `1-library/code/gh-proroklab-vectorizedmultiagentsimulator.md`
+- [[gil-2015-guaranteeing]] — `1-library/papers/gil-2015-guaranteeing.md`
+- [[leblanc-2013-resilient]] — `1-library/papers/leblanc-2013-resilient.md`
+- [[mallmann-trenn-2021-crowd]] — `1-library/papers/mallmann-trenn-2021-crowd.md`
+- [[pickem-2017-robotarium]] — `1-library/papers/pickem-2017-robotarium.md`
+- [[rubenstein-2014-programmable]] — `1-library/papers/rubenstein-2014-programmable.md`
+- [[slavkov-2018-morphogenesis]] — `1-library/papers/slavkov-2018-morphogenesis.md`
+- [[sun-2023-mean]] — `1-library/papers/sun-2023-mean.md`
+- [[zhang-2025-learning]] — `1-library/papers/zhang-2025-learning.md`
 
 ### sync-consensus
 
-- [[amichay-2025-integration]] — `library/papers/amichay-2025-integration.md`
-- [[ceron-2023-diverse]] — `library/papers/ceron-2023-diverse.md`
-- [[dorfler-2014-synchronization]] — `library/papers/dorfler-2014-synchronization.md`
-- [[fujiwara-2011-synchronization]] — `library/papers/fujiwara-2011-synchronization.md`
-- [[gh-khev-swarmalators]] — `library/code/gh-khev-swarmalators.md`
-- [[jadbabaie-2003-coordination]] — `library/papers/jadbabaie-2003-coordination.md`
-- [[olfati-saber-2004-consensus]] — `library/papers/olfati-saber-2004-consensus.md`
-- [[olfati-saber-2007-consensus]] — `library/papers/olfati-saber-2007-consensus.md`
-- [[ren-2005-consensus]] — `library/papers/ren-2005-consensus.md`
-- [[sarfati-2021-self]] — `library/papers/sarfati-2021-self.md`
-- [[yoon-2022-sync]] — `library/papers/yoon-2022-sync.md`
+- [[amichay-2025-integration]] — `1-library/papers/amichay-2025-integration.md`
+- [[ceron-2023-diverse]] — `1-library/papers/ceron-2023-diverse.md`
+- [[dorfler-2014-synchronization]] — `1-library/papers/dorfler-2014-synchronization.md`
+- [[fujiwara-2011-synchronization]] — `1-library/papers/fujiwara-2011-synchronization.md`
+- [[gh-khev-swarmalators]] — `1-library/code/gh-khev-swarmalators.md`
+- [[jadbabaie-2003-coordination]] — `1-library/papers/jadbabaie-2003-coordination.md`
+- [[olfati-saber-2004-consensus]] — `1-library/papers/olfati-saber-2004-consensus.md`
+- [[olfati-saber-2007-consensus]] — `1-library/papers/olfati-saber-2007-consensus.md`
+- [[ren-2005-consensus]] — `1-library/papers/ren-2005-consensus.md`
+- [[sarfati-2021-self]] — `1-library/papers/sarfati-2021-self.md`
+- [[yoon-2022-sync]] — `1-library/papers/yoon-2022-sync.md`
 
 ### crowds-and-traffic
 
-- [[bacik-2025-order]] — `library/papers/bacik-2025-order.md`
-- [[data-juelich-crowd-2019]] — `library/datasets/data-juelich-crowd-2019.md`
-- [[deblais-2018-boundaries]] — `library/papers/deblais-2018-boundaries.md`
-- [[fruchart-2021-non]] — `library/papers/fruchart-2021-non.md`
-- [[gh-pedestriandynamics-jupedsim]] — `library/code/gh-pedestriandynamics-jupedsim.md`
-- [[gu-2025-emergence]] — `library/papers/gu-2025-emergence.md`
-- [[helbing-1995-social]] — `library/papers/helbing-1995-social.md`
-- [[karamouzas-2014-universal]] — `library/papers/karamouzas-2014-universal.md`
-- [[moussaid-2011-simple]] — `library/papers/moussaid-2011-simple.md`
-- [[murakami-2021-mutual]] — `library/papers/murakami-2021-mutual.md`
-- [[poissonnier-2019-experimental]] — `library/papers/poissonnier-2019-experimental.md`
-- [[seyfried-2009-new]] — `library/papers/seyfried-2009-new.md`
-- [[stern-2018-dissipation]] — `library/papers/stern-2018-dissipation.md`
-- [[sugiyama-2008-traffic]] — `library/papers/sugiyama-2008-traffic.md`
+- [[bacik-2025-order]] — `1-library/papers/bacik-2025-order.md`
+- [[data-juelich-crowd-2019]] — `1-library/datasets/data-juelich-crowd-2019.md`
+- [[deblais-2018-boundaries]] — `1-library/papers/deblais-2018-boundaries.md`
+- [[fruchart-2021-non]] — `1-library/papers/fruchart-2021-non.md`
+- [[gh-pedestriandynamics-jupedsim]] — `1-library/code/gh-pedestriandynamics-jupedsim.md`
+- [[gu-2025-emergence]] — `1-library/papers/gu-2025-emergence.md`
+- [[helbing-1995-social]] — `1-library/papers/helbing-1995-social.md`
+- [[karamouzas-2014-universal]] — `1-library/papers/karamouzas-2014-universal.md`
+- [[moussaid-2011-simple]] — `1-library/papers/moussaid-2011-simple.md`
+- [[murakami-2021-mutual]] — `1-library/papers/murakami-2021-mutual.md`
+- [[poissonnier-2019-experimental]] — `1-library/papers/poissonnier-2019-experimental.md`
+- [[seyfried-2009-new]] — `1-library/papers/seyfried-2009-new.md`
+- [[stern-2018-dissipation]] — `1-library/papers/stern-2018-dissipation.md`
+- [[sugiyama-2008-traffic]] — `1-library/papers/sugiyama-2008-traffic.md`
 
 ## Primary-source spot checks
 

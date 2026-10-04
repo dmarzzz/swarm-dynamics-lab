@@ -18,7 +18,7 @@ topics:
 ## Goal
 
 Find the codebases a swarm-scale Avalon would be built on (per the sim-env verdict: extend an existing engine,
-do not write one). Context: `researchers/dmarz/notes/avalon-swarm-hunches.md`.
+do not write one). Context: `5-experiments/studies/dmarz/avalon-swarm-hunches.md`.
 
 ## Seeds
 

@@ -1,0 +1,5960 @@
+{
+  "design": {
+    "chair": "summary_only",
+    "competence": {
+      "eps": 0.1,
+      "p_detect": 0.7,
+      "q_trust": 0.6
+    },
+    "decisions_per_config": 96,
+    "families": [
+      "residency_scope",
+      "usage_cliff",
+      "migration_deadline",
+      "ambiguous_tbc"
+    ],
+    "independent_unit": "root",
+    "pool_size": 12,
+    "roots": 24
+  },
+  "dose_band": [
+    {
+      "harmful_target": 0.270833,
+      "k": 1,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.270833,
+      "k": 1,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 1,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 1,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.208333,
+      "k": 3,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.354167,
+      "k": 3,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.28125,
+      "k": 3,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.34375,
+      "k": 3,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.291667,
+      "k": 3,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.270833,
+      "k": 6,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.21875,
+      "k": 6,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.354167,
+      "k": 6,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 6,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.34375,
+      "k": 6,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 6,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.21875,
+      "k": 1,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.333333,
+      "k": 1,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.270833,
+      "k": 1,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.354167,
+      "k": 1,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 1,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.28125,
+      "k": 3,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 3,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 3,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.354167,
+      "k": 6,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.28125,
+      "k": 6,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.291667,
+      "k": 6,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.28125,
+      "k": 6,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.229167,
+      "k": 1,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.333333,
+      "k": 1,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.291667,
+      "k": 1,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.333333,
+      "k": 1,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 1,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 3,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.25,
+      "k": 3,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 3,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.28125,
+      "k": 3,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.291667,
+      "k": 6,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.291667,
+      "k": 6,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.291667,
+      "k": 6,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.229167,
+      "k": 1,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 1,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.291667,
+      "k": 1,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.34375,
+      "k": 1,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 1,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 3,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.270833,
+      "k": 3,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.28125,
+      "k": 3,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 3,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.354167,
+      "k": 6,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.291667,
+      "k": 6,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 6,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 6,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.291667,
+      "k": 1,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.239583,
+      "k": 1,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.354167,
+      "k": 1,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 1,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.34375,
+      "k": 1,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 1,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 3,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 3,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 3,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.28125,
+      "k": 6,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 6,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 6,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.333333,
+      "k": 1,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.270833,
+      "k": 1,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 1,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 1,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.354167,
+      "k": 1,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.291667,
+      "k": 1,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 3,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 3,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 3,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 6,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.291667,
+      "k": 6,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 6,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 1,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.25,
+      "k": 1,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.34375,
+      "k": 1,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 1,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.208333,
+      "k": 3,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.333333,
+      "k": 3,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.28125,
+      "k": 3,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 3,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.25,
+      "k": 6,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.229167,
+      "k": 6,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 6,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 6,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.229167,
+      "k": 1,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.333333,
+      "k": 1,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.270833,
+      "k": 1,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.354167,
+      "k": 1,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.291667,
+      "k": 1,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 3,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.208333,
+      "k": 3,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 3,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 3,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.34375,
+      "k": 6,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 6,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 6,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 6,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.229167,
+      "k": 1,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.34375,
+      "k": 1,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.28125,
+      "k": 1,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.354167,
+      "k": 1,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 1,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.333333,
+      "k": 3,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.28125,
+      "k": 3,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.354167,
+      "k": 3,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 3,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 3,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.34375,
+      "k": 6,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 6,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 6,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 6,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.229167,
+      "k": 1,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.208333,
+      "k": 1,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 1,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 1,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 1,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.302083,
+      "k": 1,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 3,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.270833,
+      "k": 3,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 3,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 3,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 6,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 6,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 6,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.291667,
+      "k": 1,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.239583,
+      "k": 1,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 1,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 1,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.34375,
+      "k": 1,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 1,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 3,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 3,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 3,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 6,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 6,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 6,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 1,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.25,
+      "k": 1,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 1,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.3125,
+      "k": 1,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.354167,
+      "k": 1,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 1,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 3,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 3,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 3,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 3,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 6,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 6,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.364583,
+      "k": 6,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false
+    },
+    {
+      "harmful_target": 0.322917,
+      "k": 6,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false
+    }
+  ],
+  "dose_band_cells": 204,
+  "experiment": "E5 dose-exposure",
+  "label": "SCRIPTED SIMULATION \u2014 NOT MODEL EVIDENCE",
+  "rows": [
+    {
+      "acceptable": 0.760417,
+      "analyst_exposure": 0.085069,
+      "decisions": 96,
+      "harmful_target": 0.177083,
+      "harmful_target_ci": {
+        "ci_hi": 0.239583,
+        "ci_lo": 0.125,
+        "mean": 0.177083,
+        "n_roots": 24
+      },
+      "in_dose_band": false,
+      "k": 1,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.40625
+    },
+    {
+      "acceptable": 0.760417,
+      "analyst_exposure": 0.085069,
+      "decisions": 96,
+      "harmful_target": 0.15625,
+      "harmful_target_ci": {
+        "ci_hi": 0.229167,
+        "ci_lo": 0.083333,
+        "mean": 0.15625,
+        "n_roots": 24
+      },
+      "in_dose_band": false,
+      "k": 1,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.40625
+    },
+    {
+      "acceptable": 0.697917,
+      "analyst_exposure": 0.595486,
+      "decisions": 96,
+      "harmful_target": 0.270833,
+      "harmful_target_ci": {
+        "ci_hi": 0.333333,
+        "ci_lo": 0.208333,
+        "mean": 0.270833,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 0.595486,
+      "decisions": 96,
+      "harmful_target": 0.270833,
+      "harmful_target_ci": {
+        "ci_hi": 0.333333,
+        "ci_lo": 0.208333,
+        "mean": 0.270833,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.260417,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.739583,
+      "analyst_exposure": 0.244792,
+      "decisions": 96,
+      "harmful_target": 0.208333,
+      "harmful_target_ci": {
+        "ci_hi": 0.28125,
+        "ci_lo": 0.145833,
+        "mean": 0.208333,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.833333
+    },
+    {
+      "acceptable": 0.770833,
+      "analyst_exposure": 0.244792,
+      "decisions": 96,
+      "harmful_target": 0.135417,
+      "harmful_target_ci": {
+        "ci_hi": 0.197917,
+        "ci_lo": 0.072917,
+        "mean": 0.135417,
+        "n_roots": 24
+      },
+      "in_dose_band": false,
+      "k": 3,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.833333
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 0.755208,
+      "decisions": 96,
+      "harmful_target": 0.354167,
+      "harmful_target_ci": {
+        "ci_hi": 0.40625,
+        "ci_lo": 0.3125,
+        "mean": 0.354167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.645833,
+      "analyst_exposure": 0.755208,
+      "decisions": 96,
+      "harmful_target": 0.28125,
+      "harmful_target_ci": {
+        "ci_hi": 0.333333,
+        "ci_lo": 0.229167,
+        "mean": 0.28125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.34375,
+      "harmful_target_ci": {
+        "ci_hi": 0.395833,
+        "ci_lo": 0.302083,
+        "mean": 0.34375,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.291667,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.229167,
+        "mean": 0.291667,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.6875,
+      "analyst_exposure": 0.512153,
+      "decisions": 96,
+      "harmful_target": 0.270833,
+      "harmful_target_ci": {
+        "ci_hi": 0.333333,
+        "ci_lo": 0.208333,
+        "mean": 0.270833,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.697917,
+      "analyst_exposure": 0.512153,
+      "decisions": 96,
+      "harmful_target": 0.21875,
+      "harmful_target_ci": {
+        "ci_hi": 0.270833,
+        "ci_lo": 0.166667,
+        "mean": 0.21875,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 0.953125,
+      "decisions": 96,
+      "harmful_target": 0.354167,
+      "harmful_target_ci": {
+        "ci_hi": 0.40625,
+        "ci_lo": 0.3125,
+        "mean": 0.354167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 0.953125,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.260417,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.34375,
+      "harmful_target_ci": {
+        "ci_hi": 0.395833,
+        "ci_lo": 0.302083,
+        "mean": 0.34375,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364844,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.739583,
+      "analyst_exposure": 0.152778,
+      "decisions": 96,
+      "harmful_target": 0.21875,
+      "harmful_target_ci": {
+        "ci_hi": 0.28151,
+        "ci_lo": 0.145833,
+        "mean": 0.21875,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.625
+    },
+    {
+      "acceptable": 0.75,
+      "analyst_exposure": 0.152778,
+      "decisions": 96,
+      "harmful_target": 0.177083,
+      "harmful_target_ci": {
+        "ci_hi": 0.239583,
+        "ci_lo": 0.114583,
+        "mean": 0.177083,
+        "n_roots": 24
+      },
+      "in_dose_band": false,
+      "k": 1,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.625
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 0.798611,
+      "decisions": 96,
+      "harmful_target": 0.333333,
+      "harmful_target_ci": {
+        "ci_hi": 0.395833,
+        "ci_lo": 0.270833,
+        "mean": 0.333333,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.645833,
+      "analyst_exposure": 0.798611,
+      "decisions": 96,
+      "harmful_target": 0.270833,
+      "harmful_target_ci": {
+        "ci_hi": 0.333333,
+        "ci_lo": 0.21875,
+        "mean": 0.270833,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.354167,
+      "harmful_target_ci": {
+        "ci_hi": 0.40625,
+        "ci_lo": 0.302083,
+        "mean": 0.354167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.270833,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.677083,
+      "analyst_exposure": 0.432292,
+      "decisions": 96,
+      "harmful_target": 0.28125,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.208333,
+        "mean": 0.28125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.958333
+    },
+    {
+      "acceptable": 0.708333,
+      "analyst_exposure": 0.432292,
+      "decisions": 96,
+      "harmful_target": 0.197917,
+      "harmful_target_ci": {
+        "ci_hi": 0.270833,
+        "ci_lo": 0.125,
+        "mean": 0.197917,
+        "n_roots": 24
+      },
+      "in_dose_band": false,
+      "k": 3,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.958333
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.916667,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 0.916667,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.25,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.270833,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 0.762153,
+      "decisions": 96,
+      "harmful_target": 0.354167,
+      "harmful_target_ci": {
+        "ci_hi": 0.40625,
+        "ci_lo": 0.302083,
+        "mean": 0.354167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.645833,
+      "analyst_exposure": 0.762153,
+      "decisions": 96,
+      "harmful_target": 0.28125,
+      "harmful_target_ci": {
+        "ci_hi": 0.333333,
+        "ci_lo": 0.229167,
+        "mean": 0.28125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.996528,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 0.996528,
+      "decisions": 96,
+      "harmful_target": 0.291667,
+      "harmful_target_ci": {
+        "ci_hi": 0.333333,
+        "ci_lo": 0.25,
+        "mean": 0.291667,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.28125,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.21875,
+        "mean": 0.28125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.729167,
+      "analyst_exposure": 0.25,
+      "decisions": 96,
+      "harmful_target": 0.229167,
+      "harmful_target_ci": {
+        "ci_hi": 0.291667,
+        "ci_lo": 0.166667,
+        "mean": 0.229167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.822917
+    },
+    {
+      "acceptable": 0.791667,
+      "analyst_exposure": 0.25,
+      "decisions": 96,
+      "harmful_target": 0.114583,
+      "harmful_target_ci": {
+        "ci_hi": 0.1875,
+        "ci_lo": 0.052083,
+        "mean": 0.114583,
+        "n_roots": 24
+      },
+      "in_dose_band": false,
+      "k": 1,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.822917
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 0.907986,
+      "decisions": 96,
+      "harmful_target": 0.333333,
+      "harmful_target_ci": {
+        "ci_hi": 0.385417,
+        "ci_lo": 0.291667,
+        "mean": 0.333333,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 0.907986,
+      "decisions": 96,
+      "harmful_target": 0.291667,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.229167,
+        "mean": 0.291667,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.333333,
+      "harmful_target_ci": {
+        "ci_hi": 0.385417,
+        "ci_lo": 0.28125,
+        "mean": 0.333333,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.25,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.666667,
+      "analyst_exposure": 0.598958,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.239583,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.989583
+    },
+    {
+      "acceptable": 0.666667,
+      "analyst_exposure": 0.598958,
+      "decisions": 96,
+      "harmful_target": 0.25,
+      "harmful_target_ci": {
+        "ci_hi": 0.302083,
+        "ci_lo": 0.208333,
+        "mean": 0.25,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.989583
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.991319,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 0.991319,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.260417,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.322917,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.28125,
+      "harmful_target_ci": {
+        "ci_hi": 0.333333,
+        "ci_lo": 0.21875,
+        "mean": 0.28125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.925347,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 0.925347,
+      "decisions": 96,
+      "harmful_target": 0.291667,
+      "harmful_target_ci": {
+        "ci_hi": 0.34375,
+        "ci_lo": 0.25,
+        "mean": 0.291667,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.998264,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.40651,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 0.998264,
+      "decisions": 96,
+      "harmful_target": 0.291667,
+      "harmful_target_ci": {
+        "ci_hi": 0.34375,
+        "ci_lo": 0.239583,
+        "mean": 0.291667,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.322917,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.291667,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.239583,
+        "mean": 0.291667,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.708333,
+      "analyst_exposure": 0.338542,
+      "decisions": 96,
+      "harmful_target": 0.229167,
+      "harmful_target_ci": {
+        "ci_hi": 0.291667,
+        "ci_lo": 0.15625,
+        "mean": 0.229167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.927083
+    },
+    {
+      "acceptable": 0.708333,
+      "analyst_exposure": 0.338542,
+      "decisions": 96,
+      "harmful_target": 0.197917,
+      "harmful_target_ci": {
+        "ci_hi": 0.260417,
+        "ci_lo": 0.135417,
+        "mean": 0.197917,
+        "n_roots": 24
+      },
+      "in_dose_band": false,
+      "k": 1,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.927083
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.967014,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 0.967014,
+      "decisions": 96,
+      "harmful_target": 0.291667,
+      "harmful_target_ci": {
+        "ci_hi": 0.34375,
+        "ci_lo": 0.239583,
+        "mean": 0.291667,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.34375,
+      "harmful_target_ci": {
+        "ci_hi": 0.40625,
+        "ci_lo": 0.28125,
+        "mean": 0.34375,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.25,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.666667,
+      "analyst_exposure": 0.736111,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.239583,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.65625,
+      "analyst_exposure": 0.736111,
+      "decisions": 96,
+      "harmful_target": 0.270833,
+      "harmful_target_ci": {
+        "ci_hi": 0.333333,
+        "ci_lo": 0.208333,
+        "mean": 0.270833,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.994792,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 0.994792,
+      "decisions": 96,
+      "harmful_target": 0.28125,
+      "harmful_target_ci": {
+        "ci_hi": 0.34375,
+        "ci_lo": 0.21875,
+        "mean": 0.28125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.322917,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.260417,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 0.970486,
+      "decisions": 96,
+      "harmful_target": 0.354167,
+      "harmful_target_ci": {
+        "ci_hi": 0.40625,
+        "ci_lo": 0.302083,
+        "mean": 0.354167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 0.970486,
+      "decisions": 96,
+      "harmful_target": 0.291667,
+      "harmful_target_ci": {
+        "ci_hi": 0.34375,
+        "ci_lo": 0.239583,
+        "mean": 0.291667,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.270833,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.239583,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.677083,
+      "analyst_exposure": 0.534722,
+      "decisions": 96,
+      "harmful_target": 0.291667,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.21875,
+        "mean": 0.291667,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.989583
+    },
+    {
+      "acceptable": 0.666667,
+      "analyst_exposure": 0.534722,
+      "decisions": 96,
+      "harmful_target": 0.239583,
+      "harmful_target_ci": {
+        "ci_hi": 0.302083,
+        "ci_lo": 0.166667,
+        "mean": 0.239583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 0.989583
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 0.996528,
+      "decisions": 96,
+      "harmful_target": 0.354167,
+      "harmful_target_ci": {
+        "ci_hi": 0.40625,
+        "ci_lo": 0.291667,
+        "mean": 0.354167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 0.996528,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.260417,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.34375,
+      "harmful_target_ci": {
+        "ci_hi": 0.395833,
+        "ci_lo": 0.291667,
+        "mean": 0.34375,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.916667,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 0.916667,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.25,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.260417,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.322656,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.239583,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.28125,
+      "harmful_target_ci": {
+        "ci_hi": 0.34375,
+        "ci_lo": 0.21875,
+        "mean": 0.28125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.260417,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.25,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 0.6875,
+      "decisions": 96,
+      "harmful_target": 0.333333,
+      "harmful_target_ci": {
+        "ci_hi": 0.385417,
+        "ci_lo": 0.28125,
+        "mean": 0.333333,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.65625,
+      "analyst_exposure": 0.6875,
+      "decisions": 96,
+      "harmful_target": 0.270833,
+      "harmful_target_ci": {
+        "ci_hi": 0.322917,
+        "ci_lo": 0.21875,
+        "mean": 0.270833,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.25,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.354167,
+      "harmful_target_ci": {
+        "ci_hi": 0.40625,
+        "ci_lo": 0.302083,
+        "mean": 0.354167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.291667,
+      "harmful_target_ci": {
+        "ci_hi": 0.34375,
+        "ci_lo": 0.25,
+        "mean": 0.291667,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.986111,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 0.986111,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.260417,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.375,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.260417,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.291667,
+      "harmful_target_ci": {
+        "ci_hi": 0.333333,
+        "ci_lo": 0.25,
+        "mean": 0.291667,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.354427,
+        "ci_lo": 0.25,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": true,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.760417,
+      "analyst_exposure": 0.107639,
+      "decisions": 96,
+      "harmful_target": 0.1875,
+      "harmful_target_ci": {
+        "ci_hi": 0.25,
+        "ci_lo": 0.135156,
+        "mean": 0.1875,
+        "n_roots": 24
+      },
+      "in_dose_band": false,
+      "k": 1,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.510417
+    },
+    {
+      "acceptable": 0.770833,
+      "analyst_exposure": 0.107639,
+      "decisions": 96,
+      "harmful_target": 0.135417,
+      "harmful_target_ci": {
+        "ci_hi": 0.208333,
+        "ci_lo": 0.0625,
+        "mean": 0.135417,
+        "n_roots": 24
+      },
+      "in_dose_band": false,
+      "k": 1,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.510417
+    },
+    {
+      "acceptable": 0.65625,
+      "analyst_exposure": 0.564236,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.375,
+        "ci_lo": 0.25,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 0.989583
+    },
+    {
+      "acceptable": 0.666667,
+      "analyst_exposure": 0.564236,
+      "decisions": 96,
+      "harmful_target": 0.25,
+      "harmful_target_ci": {
+        "ci_hi": 0.3125,
+        "ci_lo": 0.197917,
+        "mean": 0.25,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 0.989583
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.34375,
+      "harmful_target_ci": {
+        "ci_hi": 0.395833,
+        "ci_lo": 0.291667,
+        "mean": 0.34375,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.25,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.739583,
+      "analyst_exposure": 0.234375,
+      "decisions": 96,
+      "harmful_target": 0.208333,
+      "harmful_target_ci": {
+        "ci_hi": 0.28125,
+        "ci_lo": 0.135417,
+        "mean": 0.208333,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.770833
+    },
+    {
+      "acceptable": 0.78125,
+      "analyst_exposure": 0.234375,
+      "decisions": 96,
+      "harmful_target": 0.135417,
+      "harmful_target_ci": {
+        "ci_hi": 0.197917,
+        "ci_lo": 0.072917,
+        "mean": 0.135417,
+        "n_roots": 24
+      },
+      "in_dose_band": false,
+      "k": 3,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.770833
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 0.763889,
+      "decisions": 96,
+      "harmful_target": 0.333333,
+      "harmful_target_ci": {
+        "ci_hi": 0.395833,
+        "ci_lo": 0.28125,
+        "mean": 0.333333,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 0.763889,
+      "decisions": 96,
+      "harmful_target": 0.28125,
+      "harmful_target_ci": {
+        "ci_hi": 0.333333,
+        "ci_lo": 0.229167,
+        "mean": 0.28125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.25,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.697917,
+      "analyst_exposure": 0.5,
+      "decisions": 96,
+      "harmful_target": 0.25,
+      "harmful_target_ci": {
+        "ci_hi": 0.31276,
+        "ci_lo": 0.177083,
+        "mean": 0.25,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.989583
+    },
+    {
+      "acceptable": 0.6875,
+      "analyst_exposure": 0.5,
+      "decisions": 96,
+      "harmful_target": 0.229167,
+      "harmful_target_ci": {
+        "ci_hi": 0.302083,
+        "ci_lo": 0.15625,
+        "mean": 0.229167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.989583
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.930556,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.930556,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.260417,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.322656,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 1,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.34375,
+        "ci_lo": 0.260417,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 1,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.729167,
+      "analyst_exposure": 0.173611,
+      "decisions": 96,
+      "harmful_target": 0.229167,
+      "harmful_target_ci": {
+        "ci_hi": 0.3125,
+        "ci_lo": 0.145833,
+        "mean": 0.229167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.677083
+    },
+    {
+      "acceptable": 0.729167,
+      "analyst_exposure": 0.173611,
+      "decisions": 96,
+      "harmful_target": 0.177083,
+      "harmful_target_ci": {
+        "ci_hi": 0.229167,
+        "ci_lo": 0.125,
+        "mean": 0.177083,
+        "n_roots": 24
+      },
+      "in_dose_band": false,
+      "k": 1,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.677083
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 0.824653,
+      "decisions": 96,
+      "harmful_target": 0.333333,
+      "harmful_target_ci": {
+        "ci_hi": 0.385417,
+        "ci_lo": 0.28125,
+        "mean": 0.333333,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 0.824653,
+      "decisions": 96,
+      "harmful_target": 0.270833,
+      "harmful_target_ci": {
+        "ci_hi": 0.333333,
+        "ci_lo": 0.197917,
+        "mean": 0.270833,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.354167,
+      "harmful_target_ci": {
+        "ci_hi": 0.40625,
+        "ci_lo": 0.291667,
+        "mean": 0.354167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.291667,
+      "harmful_target_ci": {
+        "ci_hi": 0.34375,
+        "ci_lo": 0.229167,
+        "mean": 0.291667,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.65625,
+      "analyst_exposure": 0.46875,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.25,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.989583
+    },
+    {
+      "acceptable": 0.708333,
+      "analyst_exposure": 0.46875,
+      "decisions": 96,
+      "harmful_target": 0.208333,
+      "harmful_target_ci": {
+        "ci_hi": 0.28125,
+        "ci_lo": 0.145833,
+        "mean": 0.208333,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.989583
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.947917,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.947917,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.260417,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.375,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 0.795139,
+      "decisions": 96,
+      "harmful_target": 0.34375,
+      "harmful_target_ci": {
+        "ci_hi": 0.395833,
+        "ci_lo": 0.291667,
+        "mean": 0.34375,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 0.795139,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.25,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.991319,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.991319,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.375,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 2,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.375,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 2,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.71875,
+      "analyst_exposure": 0.237847,
+      "decisions": 96,
+      "harmful_target": 0.229167,
+      "harmful_target_ci": {
+        "ci_hi": 0.302344,
+        "ci_lo": 0.15625,
+        "mean": 0.229167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.760417
+    },
+    {
+      "acceptable": 0.75,
+      "analyst_exposure": 0.237847,
+      "decisions": 96,
+      "harmful_target": 0.15625,
+      "harmful_target_ci": {
+        "ci_hi": 0.21875,
+        "ci_lo": 0.09375,
+        "mean": 0.15625,
+        "n_roots": 24
+      },
+      "in_dose_band": false,
+      "k": 1,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.760417
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 0.907986,
+      "decisions": 96,
+      "harmful_target": 0.34375,
+      "harmful_target_ci": {
+        "ci_hi": 0.395833,
+        "ci_lo": 0.291667,
+        "mean": 0.34375,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 0.907986,
+      "decisions": 96,
+      "harmful_target": 0.28125,
+      "harmful_target_ci": {
+        "ci_hi": 0.34375,
+        "ci_lo": 0.21875,
+        "mean": 0.28125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.354167,
+      "harmful_target_ci": {
+        "ci_hi": 0.40625,
+        "ci_lo": 0.302083,
+        "mean": 0.354167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.260417,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 0.619792,
+      "decisions": 96,
+      "harmful_target": 0.333333,
+      "harmful_target_ci": {
+        "ci_hi": 0.395833,
+        "ci_lo": 0.270833,
+        "mean": 0.333333,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.635417,
+      "analyst_exposure": 0.619792,
+      "decisions": 96,
+      "harmful_target": 0.28125,
+      "harmful_target_ci": {
+        "ci_hi": 0.34375,
+        "ci_lo": 0.21875,
+        "mean": 0.28125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 0.982639,
+      "decisions": 96,
+      "harmful_target": 0.354167,
+      "harmful_target_ci": {
+        "ci_hi": 0.40625,
+        "ci_lo": 0.302083,
+        "mean": 0.354167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.982639,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.322656,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 0.890625,
+      "decisions": 96,
+      "harmful_target": 0.34375,
+      "harmful_target_ci": {
+        "ci_hi": 0.395833,
+        "ci_lo": 0.302083,
+        "mean": 0.34375,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 0.890625,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.260417,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 3,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 3,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.71875,
+      "analyst_exposure": 0.335069,
+      "decisions": 96,
+      "harmful_target": 0.229167,
+      "harmful_target_ci": {
+        "ci_hi": 0.302083,
+        "ci_lo": 0.166667,
+        "mean": 0.229167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.958333
+    },
+    {
+      "acceptable": 0.697917,
+      "analyst_exposure": 0.335069,
+      "decisions": 96,
+      "harmful_target": 0.208333,
+      "harmful_target_ci": {
+        "ci_hi": 0.28125,
+        "ci_lo": 0.135417,
+        "mean": 0.208333,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.958333
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.972222,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 0.972222,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.270833,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.302083,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.25,
+        "mean": 0.302083,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.645833,
+      "analyst_exposure": 0.717014,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.385417,
+        "ci_lo": 0.260417,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.65625,
+      "analyst_exposure": 0.717014,
+      "decisions": 96,
+      "harmful_target": 0.270833,
+      "harmful_target_ci": {
+        "ci_hi": 0.322917,
+        "ci_lo": 0.21875,
+        "mean": 0.270833,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.994792,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.994792,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.375,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.965278,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.322917,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.965278,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.375,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 4,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 4,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.677083,
+      "analyst_exposure": 0.479167,
+      "decisions": 96,
+      "harmful_target": 0.291667,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.228906,
+        "mean": 0.291667,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.96875
+    },
+    {
+      "acceptable": 0.666667,
+      "analyst_exposure": 0.479167,
+      "decisions": 96,
+      "harmful_target": 0.239583,
+      "harmful_target_ci": {
+        "ci_hi": 0.291667,
+        "ci_lo": 0.177083,
+        "mean": 0.239583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.96875
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.996528,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 0.996528,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.260417,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.625,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.34375,
+      "harmful_target_ci": {
+        "ci_hi": 0.395833,
+        "ci_lo": 0.302083,
+        "mean": 0.34375,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.354167,
+        "ci_lo": 0.270833,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.918403,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.918403,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.375,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.40625,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.375,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364844,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 6,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.375,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 6,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.65625,
+      "analyst_exposure": 0.690972,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.375,
+        "ci_lo": 0.25,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.989583
+    },
+    {
+      "acceptable": 0.666667,
+      "analyst_exposure": 0.690972,
+      "decisions": 96,
+      "harmful_target": 0.25,
+      "harmful_target_ci": {
+        "ci_hi": 0.302344,
+        "ci_lo": 0.1875,
+        "mean": 0.25,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 0.989583
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.3125,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.260417,
+        "mean": 0.3125,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.614583,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.354167,
+      "harmful_target_ci": {
+        "ci_hi": 0.40625,
+        "ci_lo": 0.302083,
+        "mean": 0.354167,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 1,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.979167,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 0.979167,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364844,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 3,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.322917,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.364583,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.3125,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.375,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.364583,
+      "harmful_target_ci": {
+        "ci_hi": 0.416667,
+        "ci_lo": 0.322917,
+        "mean": 0.364583,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 8,
+      "policy": "naive",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    },
+    {
+      "acceptable": 0.604167,
+      "analyst_exposure": 1.0,
+      "decisions": 96,
+      "harmful_target": 0.322917,
+      "harmful_target_ci": {
+        "ci_hi": 0.375,
+        "ci_lo": 0.28125,
+        "mean": 0.322917,
+        "n_roots": 24
+      },
+      "in_dose_band": true,
+      "k": 6,
+      "m": 8,
+      "policy": "provenance",
+      "rho_pos": 1.0,
+      "syndicated": false,
+      "team_exposure": 1.0
+    }
+  ],
+  "saturation": [
+    {
+      "harmful_at_m1": 0.270833,
+      "harmful_at_m8": 0.364583,
+      "k": 1,
+      "m_saturation": 2,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_at_m1": 0.270833,
+      "harmful_at_m8": 0.302083,
+      "k": 1,
+      "m_saturation": 1,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_at_m1": 0.354167,
+      "harmful_at_m8": 0.364583,
+      "k": 3,
+      "m_saturation": 1,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_at_m1": 0.28125,
+      "harmful_at_m8": 0.322917,
+      "k": 3,
+      "m_saturation": 2,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_at_m1": 0.354167,
+      "harmful_at_m8": 0.364583,
+      "k": 6,
+      "m_saturation": 1,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_at_m1": 0.3125,
+      "harmful_at_m8": 0.291667,
+      "k": 6,
+      "m_saturation": 1,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": true
+    },
+    {
+      "harmful_at_m1": 0.3125,
+      "harmful_at_m8": 0.364583,
+      "k": 1,
+      "m_saturation": 2,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_at_m1": 0.25,
+      "harmful_at_m8": 0.3125,
+      "k": 1,
+      "m_saturation": 2,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_at_m1": 0.333333,
+      "harmful_at_m8": 0.364583,
+      "k": 3,
+      "m_saturation": 2,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_at_m1": 0.28125,
+      "harmful_at_m8": 0.322917,
+      "k": 3,
+      "m_saturation": 2,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_at_m1": 0.364583,
+      "harmful_at_m8": 0.364583,
+      "k": 6,
+      "m_saturation": 1,
+      "policy": "naive",
+      "rho_pos": 0.5,
+      "syndicated": false
+    },
+    {
+      "harmful_at_m1": 0.3125,
+      "harmful_at_m8": 0.322917,
+      "k": 6,
+      "m_saturation": 1,
+      "policy": "provenance",
+      "rho_pos": 0.5,
+      "syndicated": false
+    }
+  ],
+  "seed": 20261004,
+  "syndication_contrast": [
+    {
+      "difference": -0.00463,
+      "distinct_roots": 0.303241,
+      "m": 1,
+      "policy": "naive",
+      "syndicated": 0.298611
+    },
+    {
+      "difference": 0.005787,
+      "distinct_roots": 0.25,
+      "m": 1,
+      "policy": "provenance",
+      "syndicated": 0.255787
+    },
+    {
+      "difference": -0.002315,
+      "distinct_roots": 0.335648,
+      "m": 2,
+      "policy": "naive",
+      "syndicated": 0.333333
+    },
+    {
+      "difference": -0.011574,
+      "distinct_roots": 0.28125,
+      "m": 2,
+      "policy": "provenance",
+      "syndicated": 0.269676
+    },
+    {
+      "difference": -0.003472,
+      "distinct_roots": 0.33912,
+      "m": 3,
+      "policy": "naive",
+      "syndicated": 0.335648
+    },
+    {
+      "difference": -0.024306,
+      "distinct_roots": 0.292824,
+      "m": 3,
+      "policy": "provenance",
+      "syndicated": 0.268519
+    },
+    {
+      "difference": -0.005787,
+      "distinct_roots": 0.344907,
+      "m": 4,
+      "policy": "naive",
+      "syndicated": 0.33912
+    },
+    {
+      "difference": -0.016204,
+      "distinct_roots": 0.300926,
+      "m": 4,
+      "policy": "provenance",
+      "syndicated": 0.284722
+    },
+    {
+      "difference": -0.001157,
+      "distinct_roots": 0.354167,
+      "m": 6,
+      "policy": "naive",
+      "syndicated": 0.353009
+    },
+    {
+      "difference": -0.013889,
+      "distinct_roots": 0.311343,
+      "m": 6,
+      "policy": "provenance",
+      "syndicated": 0.297454
+    },
+    {
+      "difference": 0.002315,
+      "distinct_roots": 0.357639,
+      "m": 8,
+      "policy": "naive",
+      "syndicated": 0.359954
+    },
+    {
+      "difference": -0.010417,
+      "distinct_roots": 0.313657,
+      "m": 8,
+      "policy": "provenance",
+      "syndicated": 0.303241
+    }
+  ]
+}

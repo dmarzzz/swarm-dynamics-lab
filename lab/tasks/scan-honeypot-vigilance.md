@@ -23,7 +23,7 @@ outputs:
 
 Context from dmarz: when one agent in a swarm discovers a honeypot, does it, and the swarm, get better at
 telling traps from real resources (d′), or just jumpier (criterion c)? Five hunches V1-V5 are in
-`researchers/dmarz/notes/honeypot-vigilance-hunches.md`. This task is the prior-art pass that decides whether
+`5-experiments/studies/dmarz/honeypot-vigilance-hunches.md`. This task is the prior-art pass that decides whether
 any of them is new enough to carry toward a survey and hypothesis.
 
 Search: in-run belief updating after deception or a detected trap in LLM agents; evaluation and test
@@ -46,4 +46,4 @@ Run on lane/honeypot-vigilance, pushed to main as 3a0db09. 26 new entries (13 ev
 rumour, cascades and neighbouring-field anchors), Notes on 6 existing entries, Gans, Xie and Rouxii read in
 full. All Done-when items met. Not saturated: OpenAlex hit its daily limit and Semantic Scholar returned 429.
 Two papers were seen but not catalogued: arXiv 2606.21037 and 2606.20493. Verdict per hunch is in
-researchers/dmarz/notes/honeypot-vigilance-hunches.md.
+5-experiments/studies/dmarz/honeypot-vigilance-hunches.md.

@@ -4,7 +4,7 @@
 
 **Finish and analyze first; fund a new comparison only when its outcome changes a decision.** Updated 2026-10-04 at `22834c8452473eef61dc16c3b03574ed9d3c103a`. This consolidates the [Dmarz methods review](../dmarz-methods-transfer-2026-10-04/README.md) with the separately supplied portfolio PI review (historical cutoff `7d888ae`, 03:40 UTC). It records accepted, adapted and rejected advice; it is not another experimental plan or launch approval. [Source provenance](sources.json).
 
-Read the study’s native closeout and current SETUP before acting. These are repo-visible statuses, not live infrastructure checks. Existing exact-scope approvals persist; this table neither cancels authorized work nor grants new model calls, infrastructure or budget transfers. The [operations registry](../../../../tooling/agent-experiments/operations.json) remains the CLI navigation source.
+Read the study’s native closeout and current SETUP before acting. These are repo-visible statuses, not live infrastructure checks. Existing exact-scope approvals persist; this table neither cancels authorized work nor grants new model calls, infrastructure or budget transfers. The [operations registry](../../../toolkit/agent-experiments/operations.json) remains the CLI navigation source.
 
 ## Decisions by study
 

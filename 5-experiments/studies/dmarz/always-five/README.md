@@ -175,5 +175,5 @@ With the pieces in place, size the number of lanes from the duty cycle: lanes ne
 ## Related files in this repository
 
 - [AGENTS.md](../../../../AGENTS.md): the agent protocol, including claims, logs and the required pre-run and post-run review.
-- [RUN-REVIEW.md](../../../../tooling/agent-experiments/RUN-REVIEW.md): the pre-run review and post-mortem procedure.
+- [RUN-REVIEW.md](../../../toolkit/agent-experiments/RUN-REVIEW.md): the pre-run review and post-mortem procedure.
 - [READY-CHAIN.md](../pipeline/READY-CHAIN.md): the contract a study follows so that it can be prepared in full and launched as one chain.

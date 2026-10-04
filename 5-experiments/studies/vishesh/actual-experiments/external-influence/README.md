@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Untested efficacy question: decision-focused checking can outperform random checking against externally manipulated evidence. Basis: Native qualification does not measure attack resistance. Scripted effects reflect authored policies; rendering repetitions and five actors are not fresh task roots.
 - **sample_size_summary:** Scripted S1:12 task roots with2 render seeds,9 worlds,2 doses,7 policies =3,024 outcomes. Native:one clean task,7 valid/correct policy outcomes;67 calls.

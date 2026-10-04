@@ -5,10 +5,10 @@
 Use a checkout containing this directory, Python3.12+ and Pillow12.3.0. Copy a published `results/<run>` directory to a temporary directory before regenerating audit/analysis files; keep the committed originals immutable. Run from the repository root:
 
 ```sh
-python -m unittest discover -s researchers/vishesh/notes/antsy-receipt-v6/src -p 'test_*.py'
-python researchers/vishesh/notes/antsy-receipt-v6/src/mutation_check.py
-python researchers/vishesh/notes/antsy-receipt-v6/src/audit.py --run /path/to/copied-run
-python researchers/vishesh/notes/antsy-receipt-v6/src/analyze.py --run /path/to/copied-run
+python -m unittest discover -s 5-experiments/studies/vishesh/antsy-receipt-v6/src -p 'test_*.py'
+python 5-experiments/studies/vishesh/antsy-receipt-v6/src/mutation_check.py
+python 5-experiments/studies/vishesh/antsy-receipt-v6/src/audit.py --run /path/to/copied-run
+python 5-experiments/studies/vishesh/antsy-receipt-v6/src/analyze.py --run /path/to/copied-run
 ```
 
 46 regressions and six targeted fault injections currently pass. Auditing the known invalid E0 attempt1 with the repaired audit should fail: it has zero scorable references. Earlier saved audit receipts establish only their then-current checks, not retrospective approval of a superseded instrument. `audit.py` checks policy decisions against saved candidates; it cannot independently prove those candidates faithfully represented the pixels. Raw OCR replay and contract/schema tests address that separate layer.

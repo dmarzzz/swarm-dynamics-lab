@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/newcomer-sonnet; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/newcomer-sonnet; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — In this synthetic newcomer task, replacing the Haiku 4.5 synthesizer with Sonnet 4.6 on identical assignments did not materially change outcomes: the sleeper attack still sharply reduced specialist accuracy, the policy ranking was unchanged, and renewal minus reputation stayed inconclusive (+11.1 pp, interval -0.0 to +22.2 pp; +2.8 pp more than Haiku, interval -2.8 to +8.3 pp). Basis: Same-owner assessment: twenty-four paired roots, passed qualification, 1,944/1,944 outcomes paired by assignment with the Haiku cohort and fully reconciled. One task family, two models from one provider, scripted actors and descriptive unadjusted intervals limit stronger conclusions. Independent review was waived by the owner.
 - **sample_size_summary:** Observed: 24 paired roots from one synthetic task family; 1,944/1,944 S1 outcomes analyzed, zero missing, each paired by assignment ID with the separate Haiku cohort (not pooled); 24 honest + 1/4/16 controller identities, one synthesizer model. Q0 separately: 36/36 clean calls.

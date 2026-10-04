@@ -13,7 +13,7 @@ from urllib.request import Request, urlopen
 import yaml
 
 HERE = Path(__file__).resolve().parent
-BASE = 'https://github.com/dmarzzz/swarm-lab/blob/'
+BASE = 'https://github.com/dmarzzz/swarm-dynamics-lab/blob/'
 OWNERS = ('dmarz', 'vishesh', 'shadow')
 AUDIT_ROOT = 'researchers/shadow/notes/completed-findings-xcheck/'
 
@@ -268,6 +268,24 @@ def build(args):
             'evidence_score': None, 'strength': .4, 'strength_label': 'diagnostic / descriptive',
             'assessment_status': 'owner-published finding; registry pending', 'assessment_date': now.date().isoformat(),
             'source': {'path': path, 'url': snap.link(path)}, 'support': [], 'audit': None, 'featured': True, 'blockers': [], 'hub': hub.get(rid)}
+    # Late-landing closeouts named explicitly in editorial.json. Text is quoted from each FINDING.md; nothing is pooled or promoted.
+    landed_ids = []
+    for entry in config.get('landed', []):
+        path = entry['path']
+        if path not in snap.paths or entry['id'] in nodes:
+            continue
+        snap.text(path)
+        support = [p for p in entry.get('support', []) if p in snap.paths]
+        for p in support:
+            snap.text(p)
+        nodes[entry['id']] = {'id': entry['id'], 'owner': entry['owner'], 'label': clean(entry['label']), 'title': clean(entry['title']),
+            'type': 'study', 'themes': entry['themes'], 'status': entry['status'], 'claim': clean(entry['claim']),
+            'sample': clean(entry['sample']), 'limits': clean(entry['limits']),
+            'evidence_score': entry.get('evidence_score'), 'strength': entry['strength'], 'strength_label': entry['strength_label'],
+            'assessment_status': 'owner-published closeout; registry pending', 'assessment_date': entry.get('assessed', now.date().isoformat()),
+            'source': {'path': path, 'url': snap.link(path)}, 'support': [{'path': p, 'url': snap.link(p)} for p in support],
+            'audit': None, 'featured': True, 'blockers': [], 'hub': hub.get(entry['id']), 'landed_at': entry.get('landed_at')}
+        landed_ids.append(entry['id'])
     # Audits are nodes, not extra experiments or empirical observations.
     for rid, owner, label, path in [
         ('audit-xcheck', 'shadow', 'Independent endpoint replay', AUDIT_ROOT + 'README.md'),
@@ -311,7 +329,7 @@ def build(args):
             unmapped += not ('bot' in author.lower() or subject.startswith('[bot]'))
             continue
         commits.append({'sha': sha, 'time': timestamp, 'owner': owner, 'agent': agent or owner + '/unprefixed',
-                        'subject': clean(subject), 'url': 'https://github.com/dmarzzz/swarm-lab/commit/' + sha})
+                        'subject': clean(subject), 'url': 'https://github.com/dmarzzz/swarm-dynamics-lab/commit/' + sha})
     threads = []
     by_agent = defaultdict(list)
     for c in commits:
@@ -375,7 +393,7 @@ def build(args):
     paragraphs = {
         'dmarz': ('Identity, admission and incentives are the center of gravity: the Sybil scaling, fixed-resource splitting and market-rule cohorts supply the strongest controlled endpoints. The v5 program points toward a 180-controller economy plus trust, verification-cost and memory-handoff follow-ups. That program is a design, not evidence that 180 agents have completed a run. Cross-researcher reviews connect the controlled work to Vishesh\'s sensing tasks and Shadow\'s memory results.', ['researchers/dmarz/notes/sybil-split-opus/RESULTS.md', 'researchers/dmarz/notes/overnight-program-2026-10-04/program.json', frozen_review_path]),
         'vishesh': ('The work is converging on which evidence a group acquires, preserves and acts on: Phantom Coast, Quorum of Mirrors, dissent, selective checking and inheritance. Saved pilots expose useful failures, including repeated sensing and source dependence, but several broader swarm claims remain behind qualification or interface limits. PI reviews explicitly narrow next steps and transfer Dmarz\'s risk, cost and admission lessons instead of treating every larger run as progress.', ['researchers/vishesh/notes/phantom-coast/pc5/README.md', 'researchers/vishesh/notes/phantom-coast/pc5/DESIGN-TRANSFER.md', 'researchers/vishesh/notes/pi-review-2026-10-04/SCIENTIFIC-REVIEW.md']),
-        'shadow': ('The emphasis is moving from memory-and-capture experiments and literature coverage to tools that question real archives and the lab itself. AskSwarm asks the same questions of three corpora; the identity and evidence-depth analyses expose missingness and inherited-text confounds. Independent replay checks Dmarz\'s saved endpoints. The memory-mixture negative result stays in the story as a model-dependence limit, not a universal rescue mechanism.', ['researchers/shadow/notes/wild-askswarm/FINDING.md', 'researchers/shadow/notes/wild-identity/FINDING.md', 'researchers/shadow/notes/wild-evidence-depth/FINDING.md', AUDIT_ROOT+'README.md', 'researchers/shadow/notes/capture-memory-mix/README.md'])}
+        'shadow': ('The emphasis is moving from memory-and-capture experiments and literature coverage to tools that question real archives and the lab itself. AskSwarm asks the same questions of three corpora; the identity and evidence-depth analyses expose missingness and inherited-text confounds. Independent replay checks Dmarz\'s saved endpoints. The memory-mixture negative result stays in the story as a model-dependence limit, not a universal rescue mechanism. Two late closeouts: the qualified Sonnet 5.5 freeze run did not reproduce freeze (full-memory removal change -0.0833 [-0.1667, 0]; short-memory individuals switched on 18.4% of decisions while the aggregate held; 2 attack endpoints missing; $0.97 for 1,188 requests), and the memory-mix Claude lane closed as blocked (20 failed requests, 0 valid outputs, preregistration and qualification gaps).', ['researchers/shadow/notes/wild-askswarm/FINDING.md', 'researchers/shadow/notes/wild-identity/FINDING.md', 'researchers/shadow/notes/wild-evidence-depth/FINDING.md', AUDIT_ROOT+'README.md', 'researchers/shadow/notes/capture-memory-mix/README.md', 'researchers/shadow/notes/capture-memory/freeze-claude/attempt2/FINDING.md', 'researchers/shadow/notes/capture-memory-mix/claude-pool/FINDING.md'])}
     if 'researchers/dmarz/notes/sybil-rules-180/RESULTS.md' in snap.paths:
         paragraphs['dmarz'] = ('Identity and incentives now connect packet-level Sybil assays to a genuinely interacting 180-owner economy. In the original checkpoint-forked economy, sustained firm-level masking occurred for 55 of 180 owners without a prohibition sentence and zero with it; those 180 owners are dependent, not 180 experimental replications. The older splitting and verification cohorts have scoped external arithmetic checks. Follow-up records probe model/configuration transfer and memory-source adherence, while a failed qualification remains an instrument limit, not a replicated treatment effect.', ['researchers/dmarz/notes/sybil-rules-180/RESULTS.md', 'researchers/dmarz/notes/sybil-split-opus/RESULTS.md', 'researchers/dmarz/notes/memory-handoff-qwen/RESULTS.md', 'researchers/dmarz/notes/sybil-split-xmodel/RESULTS.md', frozen_review_path])
     village = 'researchers/vishesh/notes/ai-village-replay-2026-10-04/README.md'
@@ -411,7 +429,8 @@ def build(args):
             'staleness': 'Git is one immutable source snapshot. Registry and reviews have their own assessment cutoffs and can lag newer closeouts. Hub execution is separately sampled and never upgrades scientific evidence.'},
         'weights': config['weights'], 'researchers': researchers, 'themes': config['themes'],
         'findings': list(nodes.values()), 'threads': threads, 'tasks': tasks, 'commits': commits,
-        'transfers': transfers, 'headlines': headlines, 'hub': hub_receipt,
+        'transfers': transfers, 'headlines': headlines, 'hub': hub_receipt, 'landed': landed_ids,
+        'dashboard_url': 'https://swarm-research.pages.dev',
         'context': [{'path': p, 'url': snap.link(p)} for p in context_paths], 'note_index': note_index,
         'provenance': {'files': snap.used, 'editorial_sha256': hashlib.sha256(Path(args.editorial).read_bytes()).hexdigest(),
             'builder_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), 'model_calls': 0}}

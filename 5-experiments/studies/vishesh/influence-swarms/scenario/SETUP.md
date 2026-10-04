@@ -164,3 +164,14 @@ B2-E0-01 stopped after64reservations/62providerstarts/61valid; one knownlengthfa
 F0 completed12requests/9localvalid,USD.004031895actual under existingUSD.058368reassignment. Original/original,compact/original andcompact/relaxed were3/3valid each; original/relaxed0/3 due overlengthrationale. No whitespacefailure reproduced. Exact12wire/response/ledgerreplay, authoredscientificreview and offlinefinalize complete; see f0/POST-MORTEM.md. Preserve original B2outputcontract.
 
 Prospective e1/PLAN.md implements localformatfailure containment with no retry, globaloperationalstop and assigned-denominator worst-case bounds. Sixoffline tests include1920exactwire fixture,80readiness, localfailurecontainment, globaldrain and atomicbudgetlimit. Proposed80native readiness+conditional1920main needs namedUSD.758784delta funding and currentadmission; not yet launched. Originalledger50/9.965664/942 retained. Publicaggregate only; rawtraces remainprivate.
+
+
+### E1 readiness passed; main running — 2026-10-04 23:02 UTC
+
+The frozen 9eaa1d31 source passed all 80 native readiness calls: 1,440/1,440 checks, 240/240 cost entries, 12/12 acceptable final decisions. No missing usage, retries or formatting failures. Exact-wire replay, operational finalize and owning scientific review completed. See reviews/E1-Q0-01-post.md. Short rationale fragments remain an explanation-quality limitation.
+
+The already-approved E1 main began at 23:00 UTC: 24 authored variants, six families, two repetitions, two contexts and three workflows, maximum 1,920 calls. Source, prompts and cases remain unchanged. Known formatting failures end only their cell; operational faults stop globally. No new effect estimate is claimed while collection is running. Public findings live in LATEST-RESULTS.md; raw responses remain private.
+
+## E1 closeout and R2 preparation — 2026-10-04 23:17 UTC
+
+E1 main reached terminal acquisition, with285/288 observed decisions,1904/1907valid replies and three contained length failures. [Authored scientific closeout](reviews/E1-E0-01-post.md) and [quality rubric](reviews/E1-E0-01-quality-review.json) preserve residual cost/category ambiguity and missingness. Original ledger exposure is19.630432/2929calls under50; actual E1main model charge1.094742225. The [R2 plan](r2/PLAN.md) was published before implementation at036e0a14. Source-union/case tests are underway; no R2native launch or qualification has occurred. Exact contract/runtime/finite-funding gates remain unresolved. Existing allocation may be reused only within its unchanged valid authority.

@@ -12,7 +12,7 @@ Published to main and verified the live browser at https://swarm-research.pages.
 
 ## Compositional safety study plan
 
-User requested an experiment plan aimed at a compelling scaled research result. Published researchers/dmarz/notes/compositional-safety-plan/README.md, design.json and src/check_plan.py; linked it from the Patchwork addendum. This is a requested unreviewed draft, with no hypothesis promotion or experiment launch.
+User requested an experiment plan aimed at a compelling scaled research result. Published 5-experiments/studies/dmarz/compositional-safety-plan/README.md, design.json and src/check_plan.py; linked it from the Patchwork addendum. This is a requested unreviewed draft, with no hypothesis promotion or experiment launch.
 
 Targeted primary-source checking found closer overlap than the original discussion: SafeFlow already covers semantic flow defense, ORBIT supports architecture/defense evaluation, and Li et al. measure ordinary-goal commercial misalignment. The plan therefore centers randomized information fragmentation, matched factual-receipt controls, and held-out family/implementation transfer. It does not claim a new compositional-safety theorem.
 

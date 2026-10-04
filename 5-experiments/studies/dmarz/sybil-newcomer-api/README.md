@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/sybil-specialists; source `1226b626` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/sybil-specialists; source `1226b626` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — In this synthetic task, sleeper attacks sharply reduced specialist accuracy; renewal checking did not establish its planned improvement over reputation or an advantage over equal-cost random checking. Basis: Same-owner assessment: twenty-four paired roots, passed qualification and fully reconciled outcomes support this narrow result. The primary interval spans zero and useful effects; one task family, one model, scripted actors and only twelve warm-up audits limit stronger conclusions. Independent review was waived.
 - **sample_size_summary:** Observed: 24 paired roots from one synthetic task family; 1,944/1,944 S1 outcomes analyzed, zero missing; 24 honest + 1/4/16 controller identities, three model snapshots. Q0 separately: 36/36 clean calls on six roots.

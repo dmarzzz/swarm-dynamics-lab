@@ -34,4 +34,4 @@ Execute the directly owner-approved explicit zero-dispatch Q0-A1 to Q0-A2 replac
 
 ## Outcome
 
-Q0-A2 completed 18/18 valid native responses but failed qualification at 15/18: clean 12/12, current conflicts 3/3, expired evidence 0/3. D0 was correctly left unrun under its 18/18 gate. All traces and charges reconcile; operational and eleven-dimension scientific closeouts are complete, workers/relay stopped and allocation released. The original 506-call ledger and cumulative split cap remain. See researchers/vishesh/notes/dissent/reopening/REPORT.md. No automatic successor.
+Q0-A2 completed 18/18 valid native responses but failed qualification at 15/18: clean 12/12, current conflicts 3/3, expired evidence 0/3. D0 was correctly left unrun under its 18/18 gate. All traces and charges reconcile; operational and eleven-dimension scientific closeouts are complete, workers/relay stopped and allocation released. The original 506-call ledger and cumulative split cap remain. See 5-experiments/studies/vishesh/dissent/reopening/REPORT.md. No automatic successor.

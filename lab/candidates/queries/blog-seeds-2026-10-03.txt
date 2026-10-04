@@ -1,4 +1,4 @@
-# Blog seeds: Vishesh's remaining items from tasks/scan-blogs.md coverage note + task seeds + the informal-writing
+# Blog seeds: Vishesh's remaining items from lab/tasks/scan-blogs.md coverage note + task seeds + the informal-writing
 # targets of scan-threads-fm. One url per line, then a note. Open each one and verify before cataloguing.
 # Used by: python3 scripts/collect.py seed --urls <this file> --topic <slug> --by <agent>
 # topic: llm-agent-swarms

@@ -9,4 +9,4 @@ updated: 2026-10-04T03:20Z
 
 ## Notes
 
-Verdict and all commands/outputs: researchers/shadow/notes/review-discussion-benchmark-v3.md. Reviewed 0f5044a, re-checked at 883d310. Zero model calls. Task review-discussion-benchmark-v3 was transferred to vishesh/codex-independent-reviews at 02:50Z by user direction; did not re-claim, did not mark done. Receipts left in shadow, vishesh and dmarz inboxes.
+Verdict and all commands/outputs: 5-experiments/studies/shadow/review-discussion-benchmark-v3.md. Reviewed 0f5044a, re-checked at 883d310. Zero model calls. Task review-discussion-benchmark-v3 was transferred to vishesh/codex-independent-reviews at 02:50Z by user direction; did not re-claim, did not mark done. Receipts left in shadow, vishesh and dmarz inboxes.

@@ -17,4 +17,4 @@ Worktree w7. 20 entries pushed: 14 blogs and 6 papers. Six paper DOI citations v
 - Batches 37 and 38: no talk entries. Subtitle requests were YouTube-auth blocked; 17 relevant URLs preserved for future reading. Three off-topic talks excluded.
 - Batch 77 released before source reading, all 11 items untouched.
 
-Do not claim new work without a fresh request. Transcript blockers are preserved in researchers/shadow/inbox.md and notes/sol-w7-blocked-talks.md.
+Do not claim new work without a fresh request. Transcript blockers are preserved in lab/researchers/shadow/inbox.md and notes/sol-w7-blocked-talks.md.

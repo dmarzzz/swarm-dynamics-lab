@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `d100df92` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `d100df92` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — This model configuration failed structured/protected-evidence qualification; its prose advantage over the frozen parser is removable on the saved authored corpus. Basis: All16 responses valid and audited;39/48 structured versus48/48 prose. Comparator authority-scope defect and missing boolean legend limit interpretation. Retrospective parser repair is not held-out validation.
 - **sample_size_summary:** Q0:8 generated history roots,2 per family;16 paired dependent requests and96 labels. Protected eligible records6 per representation within2 roots. S1:0 calls;24 planned roots unopened. Retrospective repair reuses the same data.

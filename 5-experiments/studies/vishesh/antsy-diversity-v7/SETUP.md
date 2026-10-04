@@ -31,9 +31,9 @@ Manual native workflow; shared operations adapter is null. Commands run from a c
 
 | Operation | Command or limit |
 |---|---|
-| Inspect / offline validation | `python -m unittest discover -s researchers/vishesh/notes/antsy-diversity-v7/src -p 'test_*.py'` |
+| Inspect / offline validation | `python -m unittest discover -s 5-experiments/studies/vishesh/antsy-diversity-v7/src -p 'test_*.py'` |
 | Prepare | Register experiment and condition TLDR plus immutable PLAN URL via team reporter; verify actual dashboard page; write private admission receipt from fresh exclusive fleet and deployment evidence |
-| Dispatch S0 | `python researchers/vishesh/notes/antsy-diversity-v7/src/study.py --stage S0 --out "$RUN_ROOT/S0-attempt-1" --admission "$ADMISSION" --cache "$TRAIN_CACHE" --report` |
+| Dispatch S0 | `python 5-experiments/studies/vishesh/antsy-diversity-v7/src/study.py --stage S0 --out "$RUN_ROOT/S0-attempt-1" --admission "$ADMISSION" --cache "$TRAIN_CACHE" --report` |
 | Dispatch S1 | Same runner with `--stage S1 --out "$RUN_ROOT/S1-attempt-1" --qualification "$RUN_ROOT/S0-attempt-1" --admission "$ADMISSION" --cache "$TEST_CACHE" --report`, only after qualification pass |
 | Resume | Unsupported: existing output directory is refused; preserve partial run and create a prospectively admitted named repair |
 | Analyze | `core.evaluate`, `core.diversity`, `study.audit`, `visuals.render` consume saved numeric records; analysis must not call workers |

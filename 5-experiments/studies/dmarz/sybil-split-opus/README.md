@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/orchestrator-2; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/orchestrator-2; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — Splitting one attacker's fixed 27 report rows, 27 attachment edges and 27 verification attempts from 1 to 27 identities raises rare-skill wrong answers of an Opus 5.5 synthesizer more under degree-based than under coverage-based admission checks. Basis: One complete exploratory run: 24 paired synthetic roots in each of two graph families, all 2,688 S1 outcomes valid and verified; primary (degree minus coverage change in rare-skill wrong answers from 1 to 27 identities, informative checks, 12 checks) +41.0 pp (descriptive 95% interval +27.8 to +54.9), positive in both families. Exploratory, one population size, one fabrication type, one attachment rule, attacker-internal links free, no published-defense comparator, one model configuration, not independently reviewed.
 - **sample_size_summary:** Observed: 48 independent roots (24 ring + 24 community) x 56 conditions = 2,688 valid S1 outcomes (1,901 distinct packets; 767 packets seen more than once, 727 of them answered identically); Q0 60/60 on 10 roots; P0 1/1. Roots are the independent units; calls, identities and rows are not.

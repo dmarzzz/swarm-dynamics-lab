@@ -15,7 +15,7 @@ topics: []
 
 ## Goal
 
-E4. Generation-1 merged memory seeds generation-2 children, with and without a correction document; 12 worlds, about 1,500 calls, about $10. Design only after E3 shows a trustworthy measurement. Plan: [NEXT-EXPERIMENTS.md](../researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md). Proposed, not authorized: needs dmarz's go, a committed pre-run review, a claimed box (one run per server), and a source pinned at or after 6563e28. Changes to src/bench_v3 are proposals to dmarz/discussion-bench-v3.
+E4. Generation-1 merged memory seeds generation-2 children, with and without a correction document; 12 worlds, about 1,500 calls, about $10. Design only after E3 shows a trustworthy measurement. Plan: [NEXT-EXPERIMENTS.md](../../5-experiments/studies/dmarz/discussion-dose/NEXT-EXPERIMENTS.md). Proposed, not authorized: needs dmarz's go, a committed pre-run review, a claimed box (one run per server), and a source pinned at or after 6563e28. Changes to src/bench_v3 are proposals to dmarz/discussion-bench-v3.
 
 ## Done when
 

@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — The completed controlled sweep describes verification-resource and admission-policy effects on specialist accuracy in one graph family, not an equal-cost coverage advantage. Basis: Complete qualified results and clustered intervals support the fixture-specific unequal-verification-budget effect. Equal-budget random reaches the same accuracy; plurality is a strong comparator. Total attacker resources scale with N, so this is not fixed-resource identity splitting or autonomous-agent scaling.
 - **sample_size_summary:** 24 paired worlds × 100 deduplicated conditions = 2,400 valid S1 answers; 64 Q0 calls; 36–972 simulated identities.

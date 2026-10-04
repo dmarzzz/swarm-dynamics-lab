@@ -3,7 +3,7 @@ agent: shadow/sol-g50
 tool: ocplatform
 state: done
 task: null
-doing: Finished synthesis/people-and-labs.md (issue #50)
+doing: Finished 3-synthesis/people-and-labs.md (issue #50)
 updated: 2026-10-03T20:45Z
 ---
 

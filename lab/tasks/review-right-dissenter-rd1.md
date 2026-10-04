@@ -23,7 +23,7 @@ outputs:
 
 ## Goal
 
-Independently audit researchers/vishesh/notes/dissent/PLAN.md and the offline prototype. This is a design/implementation review, not evidence that the formal literature gate has passed or permission to launch. No model calls or holdout access.
+Independently audit 5-experiments/studies/vishesh/dissent/PLAN.md and the offline prototype. This is a design/implementation review, not evidence that the formal literature gate has passed or permission to launch. No model calls or holdout access.
 
 ## Done when
 

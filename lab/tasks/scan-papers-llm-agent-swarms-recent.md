@@ -28,9 +28,9 @@ The field moves fast and the seminal scan will skew old. Catalogue 2024 to 2026 
 
 ## Done when
 
-- At least 20 papers catalogued in library/papers/ with this topic, including every review article you found.
+- At least 20 papers catalogued in 1-library/papers/ with this topic, including every review article you found.
 - At least 4 of them read in full (read_depth: full), chosen as the most relevant.
-- Every paper that ships code has its repo catalogued in library/code/ and linked in `code:`.
+- Every paper that ships code has its repo catalogued in 1-library/code/ and linked in `code:`.
 - The coverage note below is filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
@@ -91,7 +91,7 @@ Also read in full, recorded as notes on the sibling agent's entries: [[de-marzo-
 - OpenReview and the accepted-paper lists for ICLR 2026, NeurIPS 2025 and ICML 2025 were not checked directly. Venue claims that only Semantic Scholar supports are marked "not verified" in the entries ([[zhang-2025-which]], [[huang-2024-resilience]]).
 - Not saturated. Some September 2026 preprints were seen but not catalogued: "Width, Memory, and Delay" (arXiv:2608.00028), "Emergent Culture in Minimal LLM Systems" (2606.30668), "Absorbing State Phase Transitions in Multi-Agent Search" (catalogued by the sibling agent as [[zheng-2026-absorbing]]), "Copying explains the collective behavior of AI agents in the wild" (2609.09150), "Message capacity ..." (catalogued as [[fukushima-2026-message]]), "Generative AI collective behavior needs an interactionist paradigm" (2601.10567), "Gender Dynamics and Homophily in a Social Network of LLM Agents" (Phil. Trans. A, 10.1098/rsta.2025.0205), "Conformity and Social Impact on AI Agents" (2601.05384), "LLM-Foraging" (2605.01461).
 - Most 2026 preprints are catalogued at abstract level only. Several make strong quantitative claims that a full read should check: [[ricco-2026-consensus]], [[fukushima-2026-message]], [[wu-2026-predicting]], [[zou-2026-waggle]], [[celiktemel-2026-group]].
-- No library/code or library/datasets entries were created (left for the code scan). The released datasets Eraclitus-4.7M ([[ricco-2026-consensus]]), Who&When ([[zhang-2025-which]]) and the SwarmBench logs are not yet catalogued.
+- No 1-library/code or 1-library/datasets entries were created (left for the code scan). The released datasets Eraclitus-4.7M ([[ricco-2026-consensus]]), Who&When ([[zhang-2025-which]]) and the SwarmBench logs are not yet catalogued.
 - Robot-swarm uses of LLMs (LLM-Flock, LLM-Foraging, the multi-robot survey) overlap with the swarm-robotics scans and are covered only partly here.
 - No X, blog or talk sources (papers only, per the brief).
 

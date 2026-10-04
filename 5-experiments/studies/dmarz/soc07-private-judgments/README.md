@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Untested efficacy question: keeping first judgments private improves team decisions without suppressing valid correction. Basis: Only a plan, implementation and S0 pre-review are committed at this cutoff. No completed model evidence is available; illustrative 960-world confirmation remains closed. Five actors, repeated answers and calls are not independent observations.
 - **sample_size_summary:** Planned: 12 qualification worlds; separate 24-world replay and 24-world live pilots, 2 repeats each; 192 and 240 episodes.
@@ -41,7 +41,7 @@ Private first answers are not themselves new. Choi et al.'s debate baseline alre
 
 Shehata's trace-based measure is not a separately elicited private choice. We will measure explicit recorded answers and their changes, not interpret an emitted reasoning trace as inner belief. [[shehata-2026-bystander]]
 
-I used Vishesh's [general experiment guide](../../../../tooling/agent-experiments/GUIDE.md), [harness guide](../../../../tooling/agent-experiments/HARNESS.md), [protocol template](../../../../tooling/agent-experiments/templates/protocol.md), the experimental-design sections of his [SEO-poisoning design](../../../vishesh/notes/seo-poisoning/experimental-design.md), and his [SOC-07 review](../../../vishesh/notes/atlas-review/candidate-review.md). His review specifically asks for equal answer opportunities, a no-extra-computation control, and separate harmful/useful revision rates. [VX-35](../../../vishesh/notes/atlas-review/extension-bank.md#vx-35) motivates fixing evidence access: changing search behavior is a separate future experiment.
+I used Vishesh's [general experiment guide](../../../toolkit/agent-experiments/GUIDE.md), [harness guide](../../../toolkit/agent-experiments/HARNESS.md), [protocol template](../../../toolkit/agent-experiments/templates/protocol.md), the experimental-design sections of his [SEO-poisoning design](../../vishesh/seo-poisoning/experimental-design.md), and his [SOC-07 review](../../vishesh/atlas-review/candidate-review.md). His review specifically asks for equal answer opportunities, a no-extra-computation control, and separate harmful/useful revision rates. [VX-35](../../vishesh/atlas-review/extension-bank.md#vx-35) motivates fixing evidence access: changing search behavior is a separate future experiment.
 
 The plan adopts his paired worlds, protected truth, staged development, full cost accounting and failure denominators. It does **not** adopt the SEO scenario, reward schemes, or treat published recognition percentages and architecture rankings as universal validation thresholds. The source check for this plan covered the relevant primary methods, not independent reproduction of their results.
 
@@ -188,7 +188,7 @@ flowchart TD
 
 The model receives only text built by the context builder. It has no filesystem, vault, evaluator or hub handle. The initial vault is write-once: only the controller, owner-agent context and evaluator may read an agent's private record. Peer visibility is an explicit allowlist; do not publish guessable hashes of binary choices as commitment receipts. The evaluator is outside agent-accessible storage. If tools are later introduced, enforce that separation with process/filesystem permissions, not just a Python class boundary.
 
-Start a real experiment from [the existing worker template](../../../../templates/experiment-worker/README.md) after its research gates pass. A distributed **worker is a job runner**, not one of the five scientific agents. One queued job should contain a paired task/repeat block, with arms executed in randomized order. Keep at most one manifest version in a worker process.
+Start a real experiment from [the existing worker template](../../../../lab/templates/experiment-worker/README.md) after its research gates pass. A distributed **worker is a job runner**, not one of the five scientific agents. One queued job should contain a paired task/repeat block, with arms executed in randomized order. Keep at most one manifest version in a worker process.
 
 | Component | Reuse | SOC-07 work needed |
 | --- | --- | --- |
@@ -274,7 +274,7 @@ During S0, include a scripted always-correct solver, an evidence-following updat
 
 During S1, inspect every rendered context for overflow and all malformed outputs. Require zero detected truth/private-field leaks; investigate rather than discard any affected run. Require at least 95% parse-valid outputs and less than 5% budget/timeout failures before treating effect estimates as useful. Report initial disagreement and initially-wrong opportunity counts by regime. If a regime offers almost no relevant opportunities, revise the generator only on development data and restart the pilot under a new version. No universal minimum conformity rate is imposed, and agents are never prompted to reproduce a hoped-for result.
 
-Before actual collection, complete the repository research gates. At the source snapshot used here, `surveys/llm-agent-swarms.md` is complete but its dmarz review is still `revise`; there is no accepted SOC-07 hypothesis. This note therefore remains in researcher working material. [AGENTS.md](../../../../AGENTS.md) requires: “The hypothesis is `accepted` or later” for an experiment. The plan is fully drafted now; those status changes and cross-researcher review are launch requirements, not claims that this document has already passed them.
+Before actual collection, complete the repository research gates. At the source snapshot used here, `2-surveys/llm-agent-swarms.md` is complete but its dmarz review is still `revise`; there is no accepted SOC-07 hypothesis. This note therefore remains in researcher working material. [AGENTS.md](../../../../AGENTS.md) requires: “The hypothesis is `accepted` or later” for an experiment. The plan is fully drafted now; those status changes and cross-researcher review are launch requirements, not claims that this document has already passed them.
 
 When execution is actually chosen, create the formal experiment, copy the worker scaffold, claim the intended compute resource through agentops, and register/report the run using its reporting guide. Release the compute claim after the run. Do not publish private infrastructure details in the public repository. No such claim or registration is made by this planning task.
 
@@ -285,7 +285,7 @@ A sensible S3 order is: reproduce on a second model family; then test advance di
 From the repository root:
 
 ```sh
-python3 researchers/dmarz/notes/soc07-private-judgments/check_plan.py
+python3 5-experiments/studies/dmarz/soc07-private-judgments/check_plan.py
 python3 scripts/lab.py check
 python3 .flightdeck/fd.py check --strict .
 ```

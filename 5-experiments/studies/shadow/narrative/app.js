@@ -87,6 +87,12 @@ function renderDirections(){
   return `<article class="direction" style="--owner-color:${colors[r.id]}"><div><h3>${esc(r.name)}</h3><p class="meta">${r.active_threads_3h} active lanes / 3h<br>${r.active_threads_12h} active lanes / 12h</p></div><div><p>${esc(r.direction)}</p><div class="source-links">${r.sources.map((s,i)=>safeLink(s.url,`${String(i+1).padStart(2,'0')} / ${short(s.path.split('/').slice(-2).join('/'),36)}`)).join('')}</div><details class="thread-details"><summary>Inspect ${threads.length} recent lanes & their latest receipts</summary><div class="thread-list">${threads.map(t=>`<div class="thread-row"><div>${safeLink(t.latest.url,t.label)}<small>${esc(t.agent)} · ${esc(short(t.latest.subject,130))}</small>${t.blockers.map(b=>`<p>${esc(b)}</p>`).join('')}${t.stale_claim?'<small>Claim update is older than 3h. Not proof of an active worker.</small>':''}</div><span class="mono">${t.commits_3h} / 3h<br>${t.commits_12h} / 12h</span></div>`).join('')}</div></details><p class="caption">${esc(r.direction_kind)}</p></div></article>`;
  }).join('');
 }
+function renderLanded(){
+ const el=$('#landed-cards');if(!el)return;
+ const ns=(D.landed||[]).map(id=>nodeMap.get(id)).filter(Boolean);
+ if(!ns.length){el.innerHTML='<p class="caption">No late closeouts in this snapshot.</p>';return}
+ el.innerHTML=ns.map(n=>`<article class="landed-card" style="--owner-color:${colors[n.owner]}"><p class="eyebrow" style="color:${colors[n.owner]}">${esc(names[n.owner])} / ${esc(n.strength_label)}${n.landed_at?' · landed '+esc(fmtTime(n.landed_at)):''}</p><h3>${esc(n.label)}</h3><div>${statusBadge(n)}</div><p class="claim">${esc(n.claim)}</p><div><span class="label">Units, not activity</span><p>${esc(n.sample)}</p></div><div><span class="label">Keep the limits attached</span><p class="limit">${esc(n.limits)}</p></div><p>${safeLink(n.source.url,'Open FINDING.md')}${n.support.map(p=>' · '+safeLink(p.url,short(p.path.split('/').pop(),28))).join('')}</p></article>`).join('');
+}
 function renderLedger(){
  const term=$('#search').value.toLowerCase().trim();
  const matches=D.findings.filter(n=>n.type!=='thread'&&[n.id,n.title,n.owner,n.claim,...n.themes].join(' ').toLowerCase().includes(term)).sort((a,b)=>b.strength-a.strength||a.owner.localeCompare(b.owner));
@@ -99,10 +105,10 @@ async function init(){
  try{
   const response=await fetch('narrative.json',{cache:'no-store'});if(!response.ok)throw new Error(`Snapshot returned HTTP ${response.status}`);D=await response.json();
   nodeMap=new Map(D.findings.map(n=>[n.id,n]));weights={...D.weights};
-  $('#snapshot-sha').textContent=D.source_commit.slice(0,8);$('#snapshot-sha').href='https://github.com/dmarzzz/swarm-lab/tree/'+D.source_commit;
+  $('#snapshot-sha').textContent=D.source_commit.slice(0,8);$('#snapshot-sha').href='https://github.com/dmarzzz/swarm-dynamics-lab/tree/'+D.source_commit;
   $('#snapshot-time').textContent=fmtTime(D.as_of);
   const age=(Date.now()-Date.parse(D.as_of))/3600000,closed=Date.now()>Date.parse(D.deadline);
-  $('#freshness').textContent=closed?'Archive snapshot · refresh window ended at 23:00 UTC.':age>1.25?'Snapshot older than 75 min. Read source receipts before acting.':'Refresh target / every 45 min · final cutoff 23:00 UTC';
+  $('#freshness').textContent=closed?'Archive snapshot · refresh window ended at 23:00 UTC · post-window closeout update included.':age>1.25?'Snapshot older than 75 min. Read source receipts before acting.':'Refresh target / every 45 min · final cutoff 23:00 UTC';
   if(age>1.25&&!closed)$('#freshness').classList.add('stale');
   $('#formula').textContent=D.method.score_formula;$('#score-warning').textContent=D.method.warning;
   $('#weights').innerHTML=Object.keys(weights).map(k=>`<label>${esc(k.replace('_',' '))}<input type="number" min="0" max="3" step="0.25" value="${weights[k]}" data-weight="${k}" aria-label="${esc(k.replace('_',' '))} weight"></label>`).join('');
@@ -110,11 +116,11 @@ async function init(){
   $('#reset-weights').addEventListener('click',()=>{weights={...D.weights};$$('[data-weight]').forEach(i=>i.value=weights[i.dataset.weight]);renderScores()});
   $('#rubric').innerHTML=Object.entries(D.method.strength_rubric).map(([k,v])=>`<span>${esc(k)} = ${v.toFixed(2)}</span>`).join('');
   $('#transfers').innerHTML=D.transfers.map(t=>`<div class="transfer-item">${safeLink(t.url,t.kind)}<p>${esc(t.note)}</p></div>`).join('');
-  $('#builder-link').href='https://github.com/dmarzzz/swarm-lab/blob/'+D.source_commit+'/researchers/shadow/notes/narrative/README.md';
+  $('#builder-link').href='https://github.com/dmarzzz/swarm-dynamics-lab/blob/'+D.source_commit+'/researchers/shadow/notes/narrative/README.md';
   $('#footer-provenance').textContent=`${Object.keys(D.provenance.files).length} hashed inputs · ${D.provenance.model_calls} model calls`;
   $$('[data-hours]').forEach(b=>b.addEventListener('click',()=>{hours=Number(b.dataset.hours);$$('[data-hours]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});renderTimeline()}));
   $('#show-all').addEventListener('click',()=>{allStudies=!allStudies;renderMap()});$('#search').addEventListener('input',renderLedger);$('#ledger-toggle').addEventListener('click',()=>{ledgerAll=!ledgerAll;renderLedger()});
-  renderFilters();renderTimeline();renderScores();renderDirections();renderLedger();selectNode(nodeMap.has('sybil-split-opus')?'sybil-split-opus':D.findings[0].id);
+  renderFilters();renderTimeline();renderScores();renderLanded();renderDirections();renderLedger();selectNode(nodeMap.has('sybil-split-opus')?'sybil-split-opus':D.findings[0].id);
   window.narrativeReady=true;window.narrativeScores=D.headlines.map(calculate);
  }catch(error){$('#load-error').hidden=false;$('#load-error').textContent='The evidence snapshot could not be loaded. '+error.message+'. The repository remains the source of truth.';$('#lead-title').textContent='Evidence unavailable.'}
 }

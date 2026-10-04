@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-methods; source `5114250e` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-methods; source `5114250e` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Repaired native pilot shows competence mismatch and quorum coverage loss; it does not establish a diversity benefit. Basis: 100/100 valid OCR calls, but best Tesseract worker1/19 correct fails the per-family gate while RapidOCR R0 is11/19. S1 unrun; small dependent qualification outcomes only.
 - **sample_size_summary:** Repaired qualification:20/20 paired receipts,19 scorable,100/100 valid OCR calls,220 policy outcomes; S1 unrun. Parent interrupted after10 recorded receipts,30 valid/20 invalid calls plus uncertain partial work. Vendor independence unknown.

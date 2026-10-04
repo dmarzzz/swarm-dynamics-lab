@@ -29,7 +29,7 @@ Sonnet 4.6 is an intentional compatibility choice, not a claim that it is the la
 
 The selected Q0 responses used 160,270 input and 5,973 output tokens, costing $0.190135 on Haiku. Repeating that exact token usage on both proposed models would cost **$0.760540 total**. This is a planning estimate, not a quote: tokenization and response length can differ. Retain the user's $500 shared research budget and account for other experiments; do not impose a new tiny cap. The 120-call allocation is the primary dispatch bound. Reserve the documented worst-case allowance before launch and report actual usage, including errors. Record Codex orchestration and infrastructure cost separately from experimental model cost.
 
-The [planning receipt](next-run-planning-evidence.json) records all 60 request hashes, answerability checks and a balanced 120-call proposed order. Rebuild it from the retained Q0 records with `python3.12 researchers/dmarz/notes/discussion-dose/src/plan_v3_diagnostic.py data/discussion-v3/v3-q0-a1 researchers/dmarz/notes/discussion-dose/benchmark-v3/next-run-planning-evidence.json`. This command makes zero provider calls and does not generate the reserved fresh worlds.
+The [planning receipt](next-run-planning-evidence.json) records all 60 request hashes, answerability checks and a balanced 120-call proposed order. Rebuild it from the retained Q0 records with `python3.12 5-experiments/studies/dmarz/discussion-dose/src/plan_v3_diagnostic.py data/discussion-v3/v3-q0-a1 5-experiments/studies/dmarz/discussion-dose/benchmark-v3/next-run-planning-evidence.json`. This command makes zero provider calls and does not generate the reserved fresh worlds.
 
 ## Measures and predeclared decisions
 

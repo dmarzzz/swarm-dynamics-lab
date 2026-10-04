@@ -1,0 +1,300 @@
+{
+  "assigned": 12,
+  "noncopy_sonnet_conflicts": 6,
+  "passed": true,
+  "results": [
+    {
+      "choice": 1,
+      "history": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "id": "q-sonnet-0",
+      "model": "sonnet",
+      "request_id": 1,
+      "tanh_p_original": 0.9959298622841039,
+      "unanimous": true,
+      "valid": true,
+      "words": {
+        "-1": "raven",
+        "1": "cedar"
+      }
+    },
+    {
+      "choice": -1,
+      "history": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "id": "q-sonnet-1",
+      "model": "sonnet",
+      "request_id": 2,
+      "tanh_p_original": 0.010986942630593188,
+      "unanimous": true,
+      "valid": true,
+      "words": {
+        "-1": "raven",
+        "1": "cedar"
+      }
+    },
+    {
+      "choice": 1,
+      "history": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "id": "q-sonnet-2",
+      "model": "sonnet",
+      "request_id": 3,
+      "tanh_p_original": 0.9859363729567545,
+      "unanimous": false,
+      "valid": true,
+      "words": {
+        "-1": "raven",
+        "1": "cedar"
+      }
+    },
+    {
+      "choice": -1,
+      "history": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "id": "q-sonnet-3",
+      "model": "sonnet",
+      "request_id": 4,
+      "tanh_p_original": 0.03732688734412948,
+      "unanimous": false,
+      "valid": true,
+      "words": {
+        "-1": "raven",
+        "1": "cedar"
+      }
+    },
+    {
+      "choice": 1,
+      "history": [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "id": "q-sonnet-4",
+      "model": "sonnet",
+      "request_id": 5,
+      "tanh_p_original": 0.9525741268224333,
+      "unanimous": false,
+      "valid": true,
+      "words": {
+        "-1": "raven",
+        "1": "cedar"
+      }
+    },
+    {
+      "choice": -1,
+      "history": [
+        -1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "id": "q-sonnet-5",
+      "model": "sonnet",
+      "request_id": 6,
+      "tanh_p_original": 0.11920292202211757,
+      "unanimous": false,
+      "valid": true,
+      "words": {
+        "-1": "raven",
+        "1": "cedar"
+      }
+    },
+    {
+      "choice": 1,
+      "history": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "id": "q-sonnet-6",
+      "model": "sonnet",
+      "request_id": 7,
+      "tanh_p_original": 0.9924227587321393,
+      "unanimous": false,
+      "valid": true,
+      "words": {
+        "-1": "raven",
+        "1": "cedar"
+      }
+    },
+    {
+      "choice": -1,
+      "history": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "id": "q-sonnet-7",
+      "model": "sonnet",
+      "request_id": 8,
+      "tanh_p_original": 0.02033235334265876,
+      "unanimous": false,
+      "valid": true,
+      "words": {
+        "-1": "raven",
+        "1": "cedar"
+      }
+    },
+    {
+      "choice": 1,
+      "history": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "id": "q-opus-0",
+      "model": "opus",
+      "request_id": 9,
+      "tanh_p_original": 0.9959298622841039,
+      "unanimous": true,
+      "valid": true,
+      "words": {
+        "-1": "raven",
+        "1": "cedar"
+      }
+    },
+    {
+      "choice": -1,
+      "history": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "id": "q-opus-1",
+      "model": "opus",
+      "request_id": 10,
+      "tanh_p_original": 0.010986942630593188,
+      "unanimous": true,
+      "valid": true,
+      "words": {
+        "-1": "raven",
+        "1": "cedar"
+      }
+    },
+    {
+      "choice": 1,
+      "history": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "id": "q-opus-2",
+      "model": "opus",
+      "request_id": 11,
+      "tanh_p_original": 0.9859363729567545,
+      "unanimous": false,
+      "valid": true,
+      "words": {
+        "-1": "raven",
+        "1": "cedar"
+      }
+    },
+    {
+      "choice": -1,
+      "history": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "id": "q-opus-3",
+      "model": "opus",
+      "request_id": 12,
+      "tanh_p_original": 0.03732688734412948,
+      "unanimous": false,
+      "valid": true,
+      "words": {
+        "-1": "raven",
+        "1": "cedar"
+      }
+    }
+  ],
+  "valid": 12
+}

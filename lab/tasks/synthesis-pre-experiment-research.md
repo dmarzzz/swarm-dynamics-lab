@@ -24,7 +24,7 @@ outputs:
 
 ## Goal
 
-Complete a bounded primary-source research pass on evidence provenance, recovery after contamination, causal identification, and attention allocation. Connect findings to existing team work in synthesis/pre-experiment-research.md without promoting a hypothesis or starting experiments.
+Complete a bounded primary-source research pass on evidence provenance, recovery after contamination, causal identification, and attention allocation. Connect findings to existing team work in 3-synthesis/pre-experiment-research.md without promoting a hypothesis or starting experiments.
 
 ## Done when
 

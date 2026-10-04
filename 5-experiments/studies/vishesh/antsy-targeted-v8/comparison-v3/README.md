@@ -9,7 +9,7 @@ The [prospective plan](PLAN.md) defines original primary, repaired primary and s
 - 36 actual pinned CORD receipts:12 inspected development,6 untouched qualification,18 untouched evaluation. The actor sees only pixels. Two evaluation totals are unscorable and remain in the denominator/accounting.
 - 24 parser controls cover8 failure/control families at3 amounts, plus order and layout invariance.
 - A bounded native controller collects paired RapidOCR/EasyOCR observations, calculates all three policies, distinguishes wrong accepts from abstentions and failures, and reports rescues/harm, shared wrong answers and service-time accounting.
-- The standard [shared receipt contract](../../../../../tooling/agent-experiments/TRACE-RECEIPTS.md) is integrated at dispatch: complete roster, durable start state, actual worker configuration declaration, image/output/parser/grade/phase/stream hashes, terminal and unstarted states. Transition/API usage are explicitly not applicable. Raw OCR/runtime paths remain private.
+- The standard [shared receipt contract](../../../../toolkit/agent-experiments/TRACE-RECEIPTS.md) is integrated at dispatch: complete roster, durable start state, actual worker configuration declaration, image/output/parser/grade/phase/stream hashes, terminal and unstarted states. Transition/API usage are explicitly not applicable. Raw OCR/runtime paths remain private.
 - Source/input/context/admission mismatch prevents or stops dispatch; first execution or trace error stops the stage. Interruptions preserve unresolved starts. No automatic retries or evaluation launch. A saved, hash-bound passing qualification is required for the evaluation CLI.
 - A1600×1000 results figure distinguishes correct, wrong, abstained, unscorable and failed/missing outcomes. It is rendered from retained policy rows.
 
@@ -18,7 +18,7 @@ The native worker uses the established cold CPU engines and preserves the origin
 ## Offline validation and reproduce
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/src -p test_comparison.py
+python3 -m unittest discover -s 5-experiments/studies/vishesh/antsy-targeted-v8/comparison-v3/src -p test_comparison.py
 python3 -m unittest discover -s scripts -p test_trace_receipts.py
 python3 -m unittest discover -s scripts -p 'test_experiment_*.py'
 ```

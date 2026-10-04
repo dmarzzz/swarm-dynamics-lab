@@ -54,4 +54,4 @@ Read abstract, introduction, threat-model framing and selected limitations; not 
 
 ## Relevance to us
 
-Decision-model research area: researchers/vishesh/notes/decision-models/README.md.
+Decision-model research area: 5-experiments/studies/vishesh/decision-models/README.md.

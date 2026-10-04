@@ -1,0 +1,15 @@
+{
+  "native_calls": 0,
+  "roots": 1,
+  "writers": 50,
+  "reader_endpoints": 24,
+  "checkpoints": [
+    1,
+    10,
+    25,
+    50
+  ],
+  "controls": 11,
+  "copy_json_bytes": 1779,
+  "max_lossless_request_bound": 6166
+}

@@ -1,5 +1,22 @@
 # Telephone: where evidence changes in an agent swarm
 
+## Remembering facts wasn't enough to make the right call.
+
+- Three handoffs later, readers got just 7 of 18 deployment decisions right.
+- Give them the original source alongside the same handoff: 18 of 18 correct.
+- The damage was hesitation: every legitimate release was withheld. No unsafe release occurred.
+- Scope: a small synthetic test; it does not prove which missing phrase caused each error.
+
+2026-10-04 UTC · [Reviewed results and limitations](native/b4r1/results/POST-MORTEM.md) · [Earlier B2 results](native/b2/results/POST-MORTEM.md) · [Authoritative setup and run history](SETUP.md)
+
+**Progression and status:** B2 hit a copied-answer ceiling; B4R1 tested fresh readers on 9 authored worlds nested in 3 recipes, repeated in 2 blocks. All 6 legitimate-release observations were withheld; 5 explicit denials became unknowns. FINISH bounded diagnostic; the 50-agent chain remains unrun. This was not an error-recovery experiment or a real AI Village evaluation.
+
+Key learning: supporting facts can survive a handoff while the governing rule, evidential threshold or downstream interpretation changes. Source restoration helped on these selected cases; the study does not isolate policy omission, distrust of inherited evidence and added prerequisites as separate causes. These results describe decision answers, not actual deployment actions.
+
+## Original T0 design and historical preparation
+
+The following records describe earlier stages. Their readiness and sample counts are historical; the dated results above are the current summary. Immutable prospective plans and condition registrations remain unchanged.
+
 **Exploratory experimental idea, version T0, 2026-10-04.** Owner: Vishesh. Design author: vishesh/codex-village-fit. No experimental runs, accepted hypothesis, measured benefit or novelty certification. Researcher review is not required by owner direction.
 
 **Question:** when agents relay a claim through conversation and compressed memory, what happens to its evidence, attribution and uncertainty—and can a source-linked handoff preserve meaning better than ordinary prose?
@@ -43,12 +60,12 @@ Telephone measures claim fidelity and its change across hops. Quorum measures so
 
 **Current disposition: PREPARE OFFLINE.** Complete the development casebook, annotation agreement and baseline audit before freezing a costed native packet. This design request did not launch a study or allocate resources.
 
-## Latest iteration: T1 offline preparation
+## Historical T1 offline preparation
 
 [Implementation, cases and closeout](t1/README.md): 24 Telephone tests and 21 shared checks pass. Eight authored roots produce 72 scripted hop outputs. Fourteen private source joins yield zero validated complete episodes. Copy and exact lookup reach the fixture ceiling; model efficacy remains untested. **HOLD native collection** pending coherent development cases and a useful residual task. T0 remains the original prospective design, not a runnable admission packet.
 
 [Top-10 design additions](TOP10-NEXT-STEPS.md) distinguish current A0/V0 handoffs from a possible future sparse-network study.
 
-## Latest native result
+## Historical A1 native result
 
 [A1 completed all72 native calls](native/a1/POST-MORTEM.md): JSON fence repair succeeded, but conservative semantic qualification failed on unsupported scope/status additions. Conditional AI Village V0 did not run. This authored development result is not natural transmission evidence. Full traces, annotations and saved-data replay are linked in the post-mortem; cumulative costUSD0.113744701, allocation released. Current disposition: FINISH / PARK.

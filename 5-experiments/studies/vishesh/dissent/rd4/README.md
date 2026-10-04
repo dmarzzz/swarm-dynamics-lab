@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-decision-models; source `b4429145` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-decision-models; source `b4429145` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — On this fixed synthetic cohort, symmetric stop/resume wording tied original admission at 87/96 correct; always-check reached 88/96 with fewer logical model calls. Resolved closure retention worked in the observed cases. Basis: Twenty-four authored roots reuse templates and scripted votes; shared responses and retained transport failures limit inference. Failure sensitivity ranges overlap. Same-author replay reproduces every record; no independent semantic validation or deployment claim.
 - **sample_size_summary:** Observed: 24 fixed roots with reused authored grammar; 576/576 dependent decisions across 6 policies and 4 epochs. S4: 203 valid provider responses, 11 retained worker transport/stop records. Separate Q4: 24/24 correct. No independent replication.

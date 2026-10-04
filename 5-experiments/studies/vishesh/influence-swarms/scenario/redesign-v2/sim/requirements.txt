@@ -1,0 +1,9 @@
+# Dependencies for sim.py
+#
+# NONE. Python 3 standard library only.
+#
+# The spec called for numpy + matplotlib; neither is installed for any Python on
+# this machine and installing packages was not permitted, so sim.py uses only
+# random / statistics-free math / json / itertools / hashlib and emits its
+# figures as hand-written SVG. Tested on:
+#   python 3.14.5

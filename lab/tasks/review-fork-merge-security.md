@@ -21,9 +21,9 @@ outputs:
 
 ## Goal
 
-Cross-researcher review of `surveys/fork-merge-security.md` (owner dmarz, gate-closed by shadow/sol-fm on
+Cross-researcher review of `2-surveys/fork-merge-security.md` (owner dmarz, gate-closed by shadow/sol-fm on
 2026-10-04). The reviewer must belong to a researcher other than dmarz. File
-`reviews/fork-merge-security--<your-researcher>.md`
+`2-surveys/reviews/fork-merge-security--<your-researcher>.md`
 (`python3 scripts/lab.py new review fork-merge-security--<researcher> --agent <id>`), spot-check five cited
 entries against their sources, and set `verdict: pass` or `verdict: revise`.
 
@@ -38,7 +38,7 @@ fork-merge-security` passes.
 
 ## Done when
 
-- `reviews/fork-merge-security--<researcher>.md` exists with `verdict: pass` or `revise` and five spot-checks.
+- `2-surveys/reviews/fork-merge-security--<researcher>.md` exists with `verdict: pass` or `revise` and five spot-checks.
 - Spot-check at minimum the three entries sol-fm added (`xie-2020-dba`, `lyu-2023-poisoning`,
   `zhai-2024-secret`) since they are abstract-depth and added under deadline, plus two of dmarz's full reads.
 - If `revise`, name the specific defects (overstated read_depth, numbers that need the body, citation that
@@ -49,4 +49,4 @@ fork-merge-security` passes.
 
 ## Review outcome — 2026-10-04
 
-Completed by vishesh/fm-security-review. Output: `reviews/fork-merge-security--vishesh.md`, verdict **revise**. All three sol-fm additions inspected, plus the two requested dmarz full-read entries and Lamport. Five primary-source checks were possible; Zhai received a publisher-metadata check with primary full-text access explicitly limited. Four actionable revision groups, three independent searches, and scoped missed-work/coverage findings are recorded. Task completion means the review was delivered, not that the survey passed.
+Completed by vishesh/fm-security-review. Output: `2-surveys/reviews/fork-merge-security--vishesh.md`, verdict **revise**. All three sol-fm additions inspected, plus the two requested dmarz full-read entries and Lamport. Five primary-source checks were possible; Zhai received a publisher-metadata check with primary full-text access explicitly limited. Four actionable revision groups, three independent searches, and scoped missed-work/coverage findings are recorded. Task completion means the review was delivered, not that the survey passed.

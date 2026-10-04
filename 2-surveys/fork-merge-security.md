@@ -14,8 +14,8 @@ questions:
   - In each community (ML security, distributed systems, cryptography and anonymity, mobile agents, AI control and safety, biology, memory science and counterintelligence), what was measured and what is only argued?
 seminal: [sander-1998-protecting, boneh-2020-single, zhang-2024-badmerging, greenblatt-2023-ai, perez-2022-ignore, buss-1982-somatic, korzhyk-2011-stackelberg]
 search_log:
-  # One row per search round. Built only from the coverage notes in tasks/*fm*.md and
-  # researchers/dmarz/notes/fm-gap-*.md. Lanes ran in parallel; rows are grouped by lane, then the three gap
+  # One row per search round. Built only from the coverage notes in lab/tasks/*fm*.md and
+  # 5-experiments/studies/dmarz/fm-gap-*.md. Lanes ran in parallel; rows are grouped by lane, then the three gap
   # fills, which ran after the lanes. Crossref, Europe PMC, OpenCitations and direct fetches are logged as web.
   - {where: web, query: "Sutton Dwarkesh spawn copies corruption; transcript fetched and grepped (scan-papers-fm-sutton r1)", date: 2026-10-03, results: 10, new: 1}
   - {where: web, query: "incompleteideas.net/Talks list plus 3 Sutton slide PDFs (scan-papers-fm-sutton r2)", date: 2026-10-03, results: 3, new: 1}
@@ -133,11 +133,11 @@ In scope:
 
 The merge object varies by community and the survey keeps all of them: weights and task vectors (model merging, federated learning), gradients and experience (distributed RL), memory entries, summaries and reports (LLM agents), operations on replicated state (CRDTs, supply chains), a migrating program's state (mobile agents), cells (colonial organisms) and testimony (intelligence analysis, memory science).
 
-Out of scope: single-agent jailbreaks with no persistence or propagation, generic multi-agent safety without a merge or reintegration step, and Sybil attacks where the adversary creates parts instead of corrupting the principal's own. The last has its own survey in this repo, surveys/sybil-resistance.md.
+Out of scope: single-agent jailbreaks with no persistence or propagation, generic multi-agent safety without a merge or reintegration step, and Sybil attacks where the adversary creates parts instead of corrupting the principal's own. The last has its own survey in this repo, 2-surveys/sybil-resistance.md.
 
 ## Search log
 
-The survey is assembled from twelve scan lanes run on 2026-10-03 by dmarz/fm-* agents (Sutton and prior framings, merge poisoning, memory injection, Byzantine aggregation, unlinkability, biology, mobile agents, AI control, identity hijack, code and benchmarks, informal writing, contagion) and three gap fills run afterwards by dmarz/fm (distributed RL and model editing; inspection and security games; counterintelligence and memory science). The structured log in the frontmatter is built only from the coverage notes in `tasks/*fm*.md` and `researchers/dmarz/notes/fm-gap-*.md`. Rows are grouped by lane in the order the lanes are listed above and then the gap fills in note order. The lanes ran in parallel, so the order inside the scan phase is not chronological. A row's `results` is the count the note gives (sometimes titles scanned, sometimes relevant hits), and `new` is the count of new library items it produced, or for two rows the count not already in the library as stated by the note.
+The survey is assembled from twelve scan lanes run on 2026-10-03 by dmarz/fm-* agents (Sutton and prior framings, merge poisoning, memory injection, Byzantine aggregation, unlinkability, biology, mobile agents, AI control, identity hijack, code and benchmarks, informal writing, contagion) and three gap fills run afterwards by dmarz/fm (distributed RL and model editing; inspection and security games; counterintelligence and memory science). The structured log in the frontmatter is built only from the coverage notes in `lab/tasks/*fm*.md` and `5-experiments/studies/dmarz/fm-gap-*.md`. Rows are grouped by lane in the order the lanes are listed above and then the gap fills in note order. The lanes ran in parallel, so the order inside the scan phase is not chronological. A row's `results` is the count the note gives (sometimes titles scanned, sometimes relevant hits), and `new` is the count of new library items it produced, or for two rows the count not already in the library as stated by the note.
 
 Rounds that are missing from the structured log and why:
 

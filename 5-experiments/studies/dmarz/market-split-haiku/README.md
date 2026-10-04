@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/market-split; source `5d2042aa` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/market-split; source `5d2042aa` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Haiku V3 passed short mechanics/profit screens but failed full-length reliability on a strict capacity violation; no V3 discovery cohort started. Basis: Exact replay identified upward decimal rounding in one of four attempted episodes. Four more assigned episodes were never started. All calls and failures are retained, but two related development markets and no complete paired regulatory contrast support no discovery-rate or model-comparison estimate.
 - **sample_size_summary:** V3 R0: 2 related markets; 8 assigned episodes, 3 valid complete, 1 invalid partial, 4 unstarted; 94 priced calls. V3 Q0: 2 markets/4 qualified episodes. V2 failures retained separately. V3 discovery: 0 observed; next diagnostic planned, not started.

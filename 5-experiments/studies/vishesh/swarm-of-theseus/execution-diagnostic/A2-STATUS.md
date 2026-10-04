@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-theseus; source `b5484ca0` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-theseus; source `b5484ca0` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — On these fixed cases, acquisition failed while supplied true-policy execution passed; wrong learned policies explain all21 wrong actions. Basis: 6/12 qualified policies; learned67/88 observed, ceiling96/96; all196 traces audited with zero disagreements. Synthetic fixed roots, single model route; no turnover or culture evidence.
 - **sample_size_summary:** Six fixed synthetic roots;12 nested learners,184 observed of192 assigned paired actions;196 total terminal calls of204 assigned. Eight dependent actions unstarted after invalid mapping. Not196 independent samples.

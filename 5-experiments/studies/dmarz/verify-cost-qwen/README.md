@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/pipeline-verify; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/pipeline-verify; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — In a one-step choice between checking a report and exploring an unknown cell, with the outcome, probability and cost of each action stated and no expected loss printed, gpt-6-luna at low reasoning effort chooses the minimum-loss action in both an explicit-prose and an action-consequence-table rendering (575 of 576), so the table-minus-prose expected regret is +0.00087 (95% interval -0.00093 to +0.00266): no measurable effect of the table, at ceiling. Basis: Exploratory. The format contrast was measurable only where both arms were at ceiling, so it does not show whether a table helps a model that struggles; qwen3.7-flash with reasoning disabled failed qualification twice (18 of 24 and 10 of 24 optimal) and its comparison never ran. One model in the main stage, twelve authored cases on synthetic layouts, scripted consequences; the three chains differ in model, provider and reasoning setting and are not pooled. Builder's own assessment; hub comparisons of verify not re-run; not independently reviewed or replicated.
 - **sample_size_summary:** Observed: 24 paired synthetic layouts × 12 authored cases × 2 renderings = 576/576 valid gpt-6-luna choices, 0 failed; separate qualification 24/24 valid and optimal. Qwen3.7 Flash: two qualification-only attempts, 24/24 valid each, 18 and 10 optimal, main stage not run. Layouts are the units, not calls.
@@ -17,7 +17,7 @@ Authority and review status, recorded 2026-10-04 as relayed to this builder by d
 
 Implementation note, 2026-10-04: the program describes five sessions and one shared reservation authority. That arrangement is replaced by the ready-chain: one package per line, one server per line, its own ledger and caps. The program's design for this line (sample, cases, representations, primary measure, qualification thresholds, call counts) is unchanged.
 
-Source instrument: Vishesh's phantom-coast PC5 study, [`researchers/vishesh/notes/phantom-coast/pc5/`](../../../vishesh/notes/phantom-coast/pc5/README.md), copied at commit `61307ac19d9af2d8119736f9886e85683ce7e21d` (`src/contract.py`, `src/design.py`, `src/engine.py`). The copy in `src/` is dmarz-owned and parameterized; nothing in `researchers/vishesh/` was edited, moved or run. PC5's own [next-iteration note](../../../vishesh/notes/phantom-coast/pc5/NEXT-ITERATION.md) proposed this threshold study and did not start it.
+Source instrument: Vishesh's phantom-coast PC5 study, [`5-experiments/studies/vishesh/phantom-coast/pc5/`](../../vishesh/phantom-coast/pc5/README.md), copied at commit `61307ac19d9af2d8119736f9886e85683ce7e21d` (`src/contract.py`, `src/design.py`, `src/engine.py`). The copy in `src/` is dmarz-owned and parameterized; nothing in `lab/researchers/vishesh/` was edited, moved or run. PC5's own [next-iteration note](../../vishesh/phantom-coast/pc5/NEXT-ITERATION.md) proposed this threshold study and did not start it.
 
 ## TLDR
 

@@ -17,12 +17,12 @@ The actual first implementation narrows repository repair to an explicitly descr
 Command from repository root:
 
 ```
-python3 -m unittest discover -s researchers/vishesh/notes/optimal-swarm-size/src -p 'test_*.py' -v
+python3 -m unittest discover -s 5-experiments/studies/vishesh/optimal-swarm-size/src -p 'test_*.py' -v
 ```
 
 Twenty-one test methods cover 80 reference-task variations, all five rosters under scripted transport, malformed and adversarial submissions, equivalent valid repairs, split/input invariants, concurrency/overspending, operational boundaries and refusal of the incomplete launch configuration. Scripted reference answers prove plumbing only; they are not model performance observations. No experimental/model run has occurred.
 
-Read [PRIOR-ART-REVIEW.md](PRIOR-ART-REVIEW.md) for the completed focused author review and its limits. The independent review is requested in `tasks/review-swarm-size-qualification.md` for Shadow; no passing verdict has been received. The focused review does not complete the formal survey/hypothesis gates for a confirmatory study.
+Read [PRIOR-ART-REVIEW.md](PRIOR-ART-REVIEW.md) for the completed focused author review and its limits. The independent review is requested in `lab/tasks/review-swarm-size-qualification.md` for Shadow; no passing verdict has been received. The focused review does not complete the formal survey/hypothesis gates for a confirmatory study.
 
 ## Remaining launch work
 

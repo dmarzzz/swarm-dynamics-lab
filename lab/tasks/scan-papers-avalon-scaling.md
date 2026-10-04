@@ -19,7 +19,7 @@ topics:
 
 ## Goal
 
-The non-LLM side of hunches A1-A5 (`researchers/dmarz/notes/avalon-swarm-hunches.md`): what is known about
+The non-LLM side of hunches A1-A5 (`5-experiments/studies/dmarz/avalon-swarm-hunches.md`): what is known about
 how hidden-role games behave as N grows and the deceiver fraction varies, and the neighbouring literatures the
 swarm variant borrows from.
 

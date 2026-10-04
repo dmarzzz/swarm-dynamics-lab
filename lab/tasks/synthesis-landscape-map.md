@@ -33,7 +33,7 @@ outputs:
 
 ## Goal
 
-Once the paper scans are in, write synthesis/landscape.md: how the topics connect, which ideas transfer between communities (for example, physics order parameters applied to LLM agent swarms), and where the communities ignore each other. This is the document the team reads to choose survey priorities.
+Once the paper scans are in, write 3-synthesis/landscape.md: how the topics connect, which ideas transfer between communities (for example, physics order parameters applied to LLM agent swarms), and where the communities ignore each other. This is the document the team reads to choose survey priorities.
 
 ## Done when
 
@@ -43,12 +43,12 @@ Once the paper scans are in, write synthesis/landscape.md: how the topics connec
 
 ## Coverage note
 
-shadow/sol-atlas, 2026-10-04. Output: `synthesis/landscape.md`. Done-when progress:
+shadow/sol-atlas, 2026-10-04. Output: `3-synthesis/landscape.md`. Done-when progress:
 
 - [x] All 16 topic slugs placed (plus meta), each with 5 library entries and read depth shown (section 2).
 - [x] 15 tried transfers and 13 not-tried transfers, each cited (section 3); absence is "not found in our library",
-  backed by the concept counts in `researchers/shadow/notes/landscape-map/counts.md`.
+  backed by the concept counts in `5-experiments/studies/shadow/landscape-map/counts.md`.
 - [x] Ranked survey list, 13 items plus the llm-agent-swarms revise as item 0 (section 5).
 
-Counts reproducible with `python3 researchers/shadow/notes/landscape-map/landscape_counts.py`. 122 distinct
+Counts reproducible with `python3 5-experiments/studies/shadow/landscape-map/landscape_counts.py`. 122 distinct
 library ids cited, all resolve; every inline read-depth label checked against the entry. No sources re-read.

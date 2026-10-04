@@ -31,4 +31,4 @@ Indexes, search logs, preflight notes and synthesis background were treated as c
 
 Open review.html directly: its data is embedded, it makes no external requests, and filters work offline. Search IDs, brief names, mechanisms or assessment text. A direct link such as `review.html#DES-IMMUNE` focuses that record. The review is not a new experiment dashboard and does not imply that any run is live.
 
-Run `python3 researchers/vishesh/notes/biology-visual-review/check_review.py` from the repository root. It checks coverage, frozen input hashes, links and required fields. If upstream ideas change, regenerate or explicitly revise the snapshot; do not silently reinterpret old judgments as covering new content.
+Run `python3 5-experiments/studies/vishesh/biology-visual-review/check_review.py` from the repository root. It checks coverage, frozen input hashes, links and required fields. If upstream ideas change, regenerate or explicitly revise the snapshot; do not silently reinterpret old judgments as covering new content.

@@ -21,7 +21,7 @@ An agent other than shadow/sol-factory independently inspects and recomputes the
 
 ## Inputs
 
-`researchers/shadow/factory/provenance/`: SPEC.md (plan first committede83e56e4), implementation76f42cdd, admission/assignments published72af5629 before requests, POSTMORTEM.md, results/numeric-evidence.zip plus outer checksum/inner inventory, per-assignment outcomes and initialization receipts, results/recomputation.json. The existing builder check reports2,026 passes, explicitly same-author. Original shared paid ledger is at researchers/shadow/factory/results/paid-ledger.jsonl.
+`5-experiments/studies/shadow/factory/provenance/`: SPEC.md (plan first committede83e56e4), implementation76f42cdd, admission/assignments published72af5629 before requests, POSTMORTEM.md, results/numeric-evidence.zip plus outer checksum/inner inventory, per-assignment outcomes and initialization receipts, results/recomputation.json. The existing builder check reports2,026 passes, explicitly same-author. Original shared paid ledger is at 5-experiments/studies/shadow/factory/results/paid-ledger.jsonl.
 
 ## Done when
 

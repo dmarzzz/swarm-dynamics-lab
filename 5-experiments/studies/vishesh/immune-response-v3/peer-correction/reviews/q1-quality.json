@@ -1,0 +1,136 @@
+{
+  "assessor": "vishesh/codex-immune",
+  "date": "2026-10-04",
+  "attempt": "peer-correction-q1",
+  "decision": "repair",
+  "independent_review": false,
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Basic controller qualification is explicitly upstream of the peer effect; no peer-effect claim is made.",
+      "evidence": [
+        {
+          "path": "q1-metrics.json",
+          "sha256": "66e3eb1053adc36fd5461b31ed56f0063ac3cade8665f5c6de5721b3f24a5d59"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Two authored roots/four truth worlds discriminate restraint from repair offline; zero completed native worlds and limited realism leave behavioral suitability unestablished.",
+      "evidence": [
+        {
+          "path": "q1-metrics.json",
+          "sha256": "66e3eb1053adc36fd5461b31ed56f0063ac3cade8665f5c6de5721b3f24a5d59"
+        }
+      ],
+      "next_action": "Run a separately admitted explicit-contract qualification after finite reservation; preserve failures and unchanged semantic thresholds.",
+      "acceptance_check": "All four complete with valid contracts, correct diagnosis/proposals, actual repair verification/healthy preservation and authored reasons; broader realism needs independent roots."
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "Source advice was omitted as planned; no native tool trajectory or peer treatment occurred. Scripted feasibility does not establish native controls.",
+      "evidence": [
+        {
+          "path": "q1-metrics.json",
+          "sha256": "66e3eb1053adc36fd5461b31ed56f0063ac3cade8665f5c6de5721b3f24a5d59"
+        }
+      ],
+      "next_action": "Run a separately admitted explicit-contract qualification after finite reservation; preserve failures and unchanged semantic thresholds.",
+      "acceptance_check": "All four complete with valid contracts, correct diagnosis/proposals, actual repair verification/healthy preservation and authored reasons; broader realism needs independent roots."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "First diagnosis and proposal were correct, but the action explanation failed the fixed output contract; repair/preservation remain unmeasured.",
+      "evidence": [
+        {
+          "path": "q1-metrics.json",
+          "sha256": "66e3eb1053adc36fd5461b31ed56f0063ac3cade8665f5c6de5721b3f24a5d59"
+        }
+      ],
+      "next_action": "Run a separately admitted explicit-contract qualification after finite reservation; preserve failures and unchanged semantic thresholds.",
+      "acceptance_check": "All four complete with valid contracts, correct diagnosis/proposals, actual repair verification/healthy preservation and authored reasons; broader realism needs independent roots."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Returned/schema-valid/semantic proposal/execution/completed outcomes remain separate; none of four assigned worlds was excluded.",
+      "evidence": [
+        {
+          "path": "q1-metrics.json",
+          "sha256": "66e3eb1053adc36fd5461b31ed56f0063ac3cade8665f5c6de5721b3f24a5d59"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Qualification feasibility only: two roots/four truth worlds, one partial. Two calls are not independent evidence of reliability.",
+      "evidence": [
+        {
+          "path": "q1-metrics.json",
+          "sha256": "66e3eb1053adc36fd5461b31ed56f0063ac3cade8665f5c6de5721b3f24a5d59"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Both effective wires match frozen source, Opus and Anthropic route, no external source or operator history; actual usage/model retained privately.",
+      "evidence": [
+        {
+          "path": "q1-metrics.json",
+          "sha256": "66e3eb1053adc36fd5461b31ed56f0063ac3cade8665f5c6de5721b3f24a5d59"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Two effective requests and native responses replay exactly; both usage records reconcile; zero tool frames, one partial and three unstarted retained.",
+      "evidence": [
+        {
+          "path": "q1-metrics.json",
+          "sha256": "66e3eb1053adc36fd5461b31ed56f0063ac3cade8665f5c6de5721b3f24a5d59"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Two known calls, no missing usage; original711-call ledger preserved. Worker/relay/tunnel stopped; claim released; P1 unstarted.",
+      "evidence": [
+        {
+          "path": "q1-metrics.json",
+          "sha256": "66e3eb1053adc36fd5461b31ed56f0063ac3cade8665f5c6de5721b3f24a5d59"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source, packet, admission, request hashes and private raw evidence retained. Saved Q1 remains invalid under the candidate; native responses are not guaranteed repeatable.",
+      "evidence": [
+        {
+          "path": "q1-metrics.json",
+          "sha256": "66e3eb1053adc36fd5461b31ed56f0063ac3cade8665f5c6de5721b3f24a5d59"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Status matrix shows missingness and first failure; no fabricated repair animation or final health outcome.",
+      "evidence": [
+        {
+          "path": "q1-metrics.json",
+          "sha256": "66e3eb1053adc36fd5461b31ed56f0063ac3cade8665f5c6de5721b3f24a5d59"
+        }
+      ]
+    }
+  ]
+}

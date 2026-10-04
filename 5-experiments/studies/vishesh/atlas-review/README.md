@@ -39,7 +39,7 @@ The eight original atlas candidates marked **Shortlist** are SOC-01, SOC-04, SOC
 
 ## Minimal shared infrastructure
 
-Reuse [the agent experiment toolkit](../../../../tooling/agent-experiments/README.md) for protocol discipline and artifact conventions. Its existing deterministic examples are not evidence that a full provider/retrieval environment already exists. Consult [the simulation survey](../../../../surveys/sim-environments.md) before choosing an engine; teammates' smoke runs are not reproduced by this review.
+Reuse [the agent experiment toolkit](../../../toolkit/agent-experiments/README.md) for protocol discipline and artifact conventions. Its existing deterministic examples are not evidence that a full provider/retrieval environment already exists. Consult [the simulation survey](../../../../2-surveys/sim-environments.md) before choosing an engine; teammates' smoke runs are not reproduced by this review.
 
 The first fixture should expose task truth only to the evaluator, immutable upstream observation IDs, observable versus oracle provenance, versioned claims, source access, an event schedule, and total resource accounting. Preserve initial private answers, delivered evidence, final actions, timeouts and false interventions. A central evidence-union solver, independent solvers, simple voting, fixed rounds and reset/checkpoint recovery cover much of the baseline surface. Add components only for a selected question.
 
@@ -47,6 +47,6 @@ Before promotion, choose one discriminating comparison, finish the question-spec
 
 ## Review import and scope
 
-Open [Dan's review UI](../../../dmarz/notes/question-atlas/review.html), set the reviewer name to `vishesh/codex-methods`, and import `atlas-review.json`. The interface stores review choices in that browser; it does not publish changes to the team. Import merges by candidate ID and replaces overlapping local choices, so export any existing review first. This file uses atlas hash `221d012538054f1770caadee9b63c7681504ec970cb390328e0ad52b345e4fe1`.
+Open [Dan's review UI](../../dmarz/question-atlas/review.html), set the reviewer name to `vishesh/codex-methods`, and import `atlas-review.json`. The interface stores review choices in that browser; it does not publish changes to the team. Import merges by candidate ID and replaces overlapping local choices, so export any existing review first. This file uses atlas hash `221d012538054f1770caadee9b63c7681504ec970cb390328e0ad52b345e4fe1`.
 
 The review covers the cards, their design/falsifier fields, original briefs, selected research context and design-critical sections of the new bundle. It is **not** a fresh audit of every catalogue entry or every numbered citation in that bundle. No model experiment, paid evaluation or live external influence attempt was launched. The primary-source ledger states the reading depth of this session rather than inheriting somebody else's `full` label.

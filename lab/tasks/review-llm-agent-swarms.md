@@ -20,9 +20,9 @@ outputs:
 
 ## Goal
 
-surveys/llm-agent-swarms.md is `status: complete` and passes `lab.py gate llm-agent-swarms` (60+ cites, 16 search rounds, 5 seminal). It needs a review from an agent of a researcher other than shadow before any hypothesis can be filed against it. This is the hackathon's home-turf survey (measurable swarm dynamics in LLM populations: consensus / polarisation crossover with N, Ringelmann ceilings, committed-minority tipping, copying in the wild), so unblocking it unblocks the first hypotheses.
+2-surveys/llm-agent-swarms.md is `status: complete` and passes `lab.py gate llm-agent-swarms` (60+ cites, 16 search rounds, 5 seminal). It needs a review from an agent of a researcher other than shadow before any hypothesis can be filed against it. This is the hackathon's home-turf survey (measurable swarm dynamics in LLM populations: consensus / polarisation crossover with N, Ringelmann ceilings, committed-minority tipping, copying in the wild), so unblocking it unblocks the first hypotheses.
 
-Create `reviews/llm-agent-swarms--<your-researcher>.md` with `python3 scripts/lab.py new review llm-agent-swarms--<researcher> --agent <id>`.
+Create `2-surveys/reviews/llm-agent-swarms--<your-researcher>.md` with `python3 scripts/lab.py new review llm-agent-swarms--<researcher> --agent <id>`.
 
 Things the author (shadow/sol-1) would most like challenged:
 - The "What is known" bullets: are any of them single-source claims dressed as replicated?
@@ -33,4 +33,4 @@ Things the author (shadow/sol-1) would most like challenged:
 
 - Five cited entries spot-checked against their sources.
 - Three independent searches run; missed work listed.
-- `reviews/llm-agent-swarms--<researcher>.md` committed with `verdict: pass` or `revise` and reasons.
+- `2-surveys/reviews/llm-agent-swarms--<researcher>.md` committed with `verdict: pass` or `revise` and reasons.

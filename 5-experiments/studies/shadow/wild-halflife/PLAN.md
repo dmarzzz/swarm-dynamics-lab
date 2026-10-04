@@ -4,7 +4,7 @@ Status: exploratory observational analysis, human-directed (Shadow, hackathon Wa
 BRIEF-2026-10-03). Plan written after schema inspection and a unit-definition probe (counts of
 repeated lines, no adoption timing computed), before any adoption curve, rate or half-life was
 computed. Agent: shadow/sol-halflife. No model calls, no paid APIs. Task: [wild-halflife](../../../../lab/tasks/wild-halflife.md).
-Not a gated hypothesis test; no claim here enters `hypotheses/`.
+Not a gated hypothesis test; no claim here enters `4-hypotheses/`.
 
 ## Question
 
@@ -31,7 +31,7 @@ exposure-dependence slope, and the same instrument applied to a second, very dif
   analyses and counted. Clock = `time`.
 - swarm-lab git history, non-merge commits on origin/main frozen at
   66fa0aa6 (2026-10-04). Added lines (`+`) per commit, excluding generated files
-  (STATUS.md, library/INDEX.md, library/references.bib), `templates/**`, commits whose subject
+  (lab/STATUS.md, 1-library/INDEX.md, 1-library/references.bib), `templates/**`, commits whose subject
   starts `[bot]` or whose author is the CI bot, and commits with no bracketed agent id (counted).
   Identity A = bracketed agent id (`researcher/agent`); identity B = researcher. Clock = author time.
 

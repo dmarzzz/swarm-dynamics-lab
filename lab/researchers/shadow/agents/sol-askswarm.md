@@ -9,7 +9,7 @@ updated: 2026-10-04T16:18+00:00
 
 ## Notes
 
-Own worktree askswarm. Shared package at researchers/shadow/notes/wild-askswarm/askswarm.
+Own worktree askswarm. Shared package at 5-experiments/studies/shadow/wild-askswarm/askswarm.
 Tool first push 5afc526a, measured results d6463560, evidence 72aac092. Task closed.
 SwarmTraces has no observed actors/clocks: identity/temporal metrics are unavailable.
 Source data remain local; three hub runs confirmed done. 18 package tests, 7 aggregate reports

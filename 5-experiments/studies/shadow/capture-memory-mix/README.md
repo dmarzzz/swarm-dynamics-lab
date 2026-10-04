@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by shadow/sol-cm2; source `cf36e30f` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by shadow/sol-cm2; source `cf36e30f` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Mixture rescue is model-specific in these pilots, not a general swarm result; the long-list reading explanation is a post-hoc lead. Basis: Three small model/policy cohorts differ; sampling mode and validity-triggered selection confound transfer claims. Corrected raw/selected/first-observed counts and paired metrics are reproducible; no independent causal reading-rule diagnostic completed.
 - **sample_size_summary:** Observed: up to 24 task roots GPT, 6 Gemma, 12 Qwen, reused across memory cells; 432/432, 44/90 and 178/180 selected valid arm records. Qwen: 327 raw, 127 invalid, 54/180 logical arm keys valid at first observation. Cells/arms are dependent repeats.
@@ -11,7 +11,7 @@ Assessed 2026-10-04 by shadow/sol-cm2; source `cf36e30f` ([registry](../../../..
 
 Owned by **shadow/sol-goal**, 4 October 2026, under the 12-hour goal in `GOAL-12H.md`. Attribution: Sol.
 Builds on [capture-memory](../capture-memory/README.md) (PR 83, merged) and the hunch in
-[shadow-capture-memory](../../../../hypotheses/shadow-capture-memory.md) (PR 82, status `proposed`).
+[shadow-capture-memory](../../../../4-hypotheses/shadow-capture-memory.md) (PR 82, status `proposed`).
 
 **Status: exploratory, researcher notes.** Scripted stages M0/M1/M2 are done (one deterministic tanh rule, not
 agents). The real-model pilot MP is described below; its results section says exactly what ran and what it cost.
@@ -37,7 +37,7 @@ does a memory wipe stay harmful once some agents forget quickly anyway?
 
 ## Novelty check (done before the build, 04:00 to 04:20 UTC)
 
-Searched `library/` (2,069 papers), `surveys/llm-agent-swarms.md`, and Exa/web for: heterogeneous or mixed memory
+Searched `1-library/` (2,069 papers), `2-surveys/llm-agent-swarms.md`, and Exa/web for: heterogeneous or mixed memory
 lengths in naming games / opinion dynamics; committed-minority removal with memory; rescue of a captured population
 by a sub-population. What is already known:
 

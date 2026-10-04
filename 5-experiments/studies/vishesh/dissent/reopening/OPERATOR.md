@@ -2,16 +2,16 @@
 
 **Q0-A2 completed and failed qualification at 15/18; D0 was not run. Operational and owning scientific closeout are complete, and no allocation is held.** The owner-approved zero-dispatch replacement was consumed. Read [RUN-STATUS.md](RUN-STATUS.md) and [the post-mortem](reviews/Q0-A2-POST.md) before using the historical procedure below. The original USD 1 API / USD 1 infrastructure cap remains; the cumulative ledger now has 506 calls, including all 488 historical rows and their unresolved reservations.
 
-Use the [authoritative setup](../rd5/SETUP.md), [runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md), [implementation evidence](IMPLEMENTATION.md) and [new diagnostic assessment](DIAGNOSTIC-REVIEW.json). Historical RD5 completion stays unchanged. No independent researcher sign-off is required. Read local access/account policies before remote access; this public document deliberately contains no private account identity, host allocation or credential path.
+Use the [authoritative setup](../rd5/SETUP.md), [runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md), [implementation evidence](IMPLEMENTATION.md) and [new diagnostic assessment](DIAGNOSTIC-REVIEW.json). Historical RD5 completion stays unchanged. No independent researcher sign-off is required. Read local access/account policies before remote access; this public document deliberately contains no private account identity, host allocation or credential path.
 
 ## Offline commands
 
 From the repository root:
 
 ```sh
-python3 researchers/vishesh/notes/dissent/reopening/prepare_offline.py
-python3 researchers/vishesh/notes/dissent/reopening/native.py prepare --stage Q0 --out /tmp/rd6-q0-packet.json
-python3 researchers/vishesh/notes/dissent/reopening/native.py prepare --stage D0 --out /tmp/rd6-d0-packet.json
+python3 5-experiments/studies/vishesh/dissent/reopening/prepare_offline.py
+python3 5-experiments/studies/vishesh/dissent/reopening/native.py prepare --stage Q0 --out /tmp/rd6-q0-packet.json
+python3 5-experiments/studies/vishesh/dissent/reopening/native.py prepare --stage D0 --out /tmp/rd6-d0-packet.json
 ```
 
 Preparation writes a new packet only; it cannot approve, allocate, read credentials or reserve costs. Do not reuse prepared packets after changing a bound source file. Preserve a committed exact checkout for each future admitted attempt. The shared operations registry continues to use a **manual** adapter; these are separate native entrypoints, not new shared CLI dispatch support.

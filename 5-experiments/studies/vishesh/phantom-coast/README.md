@@ -23,7 +23,7 @@ The assessment below predates S0 and is retained at its stated evidence cutoff; 
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Native Jev passed the clean synthetic mapping screen; the history-persistence effect remains unestablished. Basis: All 18 clean maps were valid and correct across six generated worlds. This qualifies the clean mapping contract only; 648 cell choices and three observers per world are dependent, and no history-persistence cohort result is tracked at this cutoff.
 - **sample_size_summary:** Q0: 6 world roots × 3 observers = 18/18 valid maps, 648/648 cells correct. Gated S0 plans 6 new paired worlds and 522 map requests; no S0 effect result tracked.
@@ -38,8 +38,8 @@ Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](..
 From the repository root:
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/phantom-coast/tests -v
-python3 researchers/vishesh/notes/phantom-coast/src/build_replay.py
+python3 -m unittest discover -s 5-experiments/studies/vishesh/phantom-coast/tests -v
+python3 5-experiments/studies/vishesh/phantom-coast/src/build_replay.py
 ```
 
 Both commands are offline software validation. They make zero model calls. The default generator rejects qualification and holdout seeds. The separate native worker requires explicit stage, spending, source, public-plan and fresh allocation bindings. The replay is a development fixture, not evidence that a model fails or recovers.

@@ -8,7 +8,7 @@ Nothing here has been run. This file is for the operator who takes the request f
 2. Read [reviews/chain-001-pre.md](reviews/chain-001-pre.md). It names the code commit `30e34577…` and the source hash `b37af997…`. [READY.yaml](READY.yaml) carries the same hash, the number of selftests, the call caps, the dollar cap and the chain timeout.
 3. Launch with the commit named in the run request, written `<commit>` below. It is the first commit on main that contains the pre-run review and has the same source hash. Do not launch with the code commit: the launcher reads `READY.yaml`, `README.md` and the review at the commit it is given and refuses a commit without the review.
 4. Take the exclusive server claim `dmarz-sybil-scarcity-opus` (`experiment: sybil-scarcity-opus`).
-5. The server checkout must contain this directory and `researchers/dmarz/notes/sybil-scale-api/src/` (S0 and the selftests compare against the unmodified parent code). Python 3.12 with `requirements.txt`.
+5. The server checkout must contain this directory and `5-experiments/studies/dmarz/sybil-scale-api/src/` (S0 and the selftests compare against the unmodified parent code). Python 3.12 with `requirements.txt`.
 
 ## Commands
 

@@ -27,7 +27,7 @@ games, tacit collusion and market division, and false-name (Sybil) manipulation 
 Search the vocabulary of economics (common-pool resources, false-name-proof mechanisms), operating systems
 (fair queueing, quotas, rate limiting) and RL (constrained and budgeted MDPs) as well as LLM agents.
 
-Candidate experiments B1-B5 are hunches in `researchers/dmarz/notes/agent-budgets-hunches.md`. They become
+Candidate experiments B1-B5 are hunches in `5-experiments/studies/dmarz/agent-budgets-hunches.md`. They become
 hypothesis files only after this survey passes the gate.
 
 ## Done when

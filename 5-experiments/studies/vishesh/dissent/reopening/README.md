@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-decision-models; source `4e830695` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-decision-models; source `4e830695` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — On 18 authored qualification requests, Jev correctly handled all clean and conflicting-current controls but chose PROCEED on all three expired favorable observations; qualification failed. Basis: Q0-A2 completed 18/18 valid native responses and scored 15/18. All traces and original-ledger charges reconcile, with complete operational and owning scientific reviews. The inspected controls share three grammars and do not isolate context mechanisms or estimate a field failure rate. D0 was not run; its causal context and repeat contrasts remain untested. The prior zero-dispatch attempt is preserved.
 - **sample_size_summary:** Observed Q0: 18 authored controls sharing three grammars; 18/18 valid, 15/18 correct (clean 12/12, conflict 3/3, stale 0/3). No independent field sample or holdout. D0: unrun; planned 12 cases × 6 conditions × 2 repeats = 144 dependent requests. Q0-A1: zero dispatch.
@@ -36,7 +36,7 @@ Disposition: **FINISH / PARK — retain the valid negative qualification and lea
 ## Reproduce the offline preparation
 
 ```sh
-python3 researchers/vishesh/notes/dissent/reopening/prepare_offline.py
+python3 5-experiments/studies/vishesh/dissent/reopening/prepare_offline.py
 ```
 
 This runs known-answer/fault checks and exports the authored fixtures. It never starts an experimental worker. The preserved RD5 source, results and qualification are unchanged; 488 is its historical call-count boundary, while the cumulative ledger now has 506 calls.

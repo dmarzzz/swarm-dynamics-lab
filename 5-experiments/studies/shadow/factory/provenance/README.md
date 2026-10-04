@@ -10,9 +10,9 @@ Question: with fixed independent evidence, do 1/4/16 copies change raw synthesis
 
 ```sh
 python3 -m venv /tmp/factory-provenance-venv
-/tmp/factory-provenance-venv/bin/pip install -r researchers/shadow/factory/provenance/requirements.txt
-/tmp/factory-provenance-venv/bin/python -m unittest discover -s researchers/shadow/factory/provenance -p test_pilot.py
-/tmp/factory-provenance-venv/bin/python -O -m unittest discover -s researchers/shadow/factory/provenance -p test_pilot.py
+/tmp/factory-provenance-venv/bin/pip install -r 5-experiments/studies/shadow/factory/provenance/requirements.txt
+/tmp/factory-provenance-venv/bin/python -m unittest discover -s 5-experiments/studies/shadow/factory/provenance -p test_pilot.py
+/tmp/factory-provenance-venv/bin/python -O -m unittest discover -s 5-experiments/studies/shadow/factory/provenance -p test_pilot.py
 ```
 
 Tests use fake responses and temporary files, never model requests. Eighteen tests. The separate `recompute.py` uses only the standard library and does not import the runner, generator or scorer.
@@ -23,13 +23,13 @@ These are **not** permission to launch another pilot. The one prepared scope mus
 
 ```sh
 # Only after source is committed and publicly available:
-/tmp/factory-provenance-venv/bin/python researchers/shadow/factory/provenance/run.py prepare
+/tmp/factory-provenance-venv/bin/python 5-experiments/studies/shadow/factory/provenance/run.py prepare
 # One persisted pool qualification request before the remaining gate/main.
 # At most the specified initial-failure fallback, same existing paid ledger:
-nice -n 10 /tmp/factory-provenance-venv/bin/python researchers/shadow/factory/provenance/run.py run
+nice -n 10 /tmp/factory-provenance-venv/bin/python 5-experiments/studies/shadow/factory/provenance/run.py run
 # Saved numeric data only:
-/tmp/factory-provenance-venv/bin/python researchers/shadow/factory/provenance/analyze.py
-python3 researchers/shadow/factory/provenance/recompute.py
+/tmp/factory-provenance-venv/bin/python 5-experiments/studies/shadow/factory/provenance/analyze.py
+python3 5-experiments/studies/shadow/factory/provenance/recompute.py
 ```
 
 All attempts and outcomes have unique files created atomically without overwrite. Interrupted attempts close out as unknown; they never resume decisions. `run.py closeout` is offline and enumerates missing outcomes. A duplicate `prepare` is rejected. Do not delete admission/outcome files to get another attempt or copy the paid ledger to reset allowance.

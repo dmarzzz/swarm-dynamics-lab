@@ -10,7 +10,7 @@ No unclaimed formal review was directed to Vishesh at inspection. `review-sybil-
 
 | Inbox item | Disposition and evidence |
 |---|---|
-| Dmarz's PC5-derived verification study | Attribution and separation acknowledged. Current README now reports two failed qualifications, unlike the original informational notice. Its generated evidence block and final Results paragraph still say no stage ran. Routed the inconsistency in [repair-verify-cost-qwen-status](../../../../tasks/repair-verify-cost-qwen-status.md); no changes to Dmarz's study or launch status. |
+| Dmarz's PC5-derived verification study | Attribution and separation acknowledged. Current README now reports two failed qualifications, unlike the original informational notice. Its generated evidence block and final Results paragraph still say no stage ran. Routed the inconsistency in [repair-verify-cost-qwen-status](../../../../lab/tasks/repair-verify-cost-qwen-status.md); no changes to Dmarz's study or launch status. |
 | Theseus narrated film | Source-level factual review passed; see below. No blocking script correction found. Current diagnostics do not constitute a turnover run. |
 | Stray manifest `requires` report | Resolved upstream: current manifest parses and strict Flight Deck validation passes. |
 | Quorum and Poietic design feedback | Already acknowledged in [Quorum response](../decision-models/quorum-of-mirrors/REVIEW-RESPONSE.md) and [Poietic amendments](../poietic-agents/AMENDMENTS.md). Recorded rather than requesting duplicate reviews. |
@@ -21,7 +21,7 @@ No unclaimed formal review was directed to Vishesh at inspection. `review-sybil-
 | Shadow's discussion-v3 findings | Accepted. Six targeted current repair tests pass. [Corrective addendum](../discussion-benchmark-v3-review/FOLLOWUP-2026-10-04.md) explicitly limits our original PASS and preserves frozen Q0 evidence. |
 | Influence artifact schema-error report | Resolved upstream; strict validation passes. |
 | Influence artifact repair notification | Acknowledged and verified by the same current check; no re-filing or authorship changes. |
-| LLM-swarms survey review request | Stale: task done by dmarz/reviewer-1, with [filed review](../../../../reviews/llm-agent-swarms--dmarz.md). No duplicate claim. |
+| LLM-swarms survey review request | Stale: task done by dmarz/reviewer-1, with [filed review](../../../../2-surveys/reviews/llm-agent-swarms--dmarz.md). No duplicate claim. |
 
 ## Theseus film factual review
 

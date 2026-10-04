@@ -9,4 +9,4 @@ updated: 2026-10-04T10:28Z
 
 ## Notes
 
-Builder lane under dmarz/pipeline. Study directory researchers/dmarz/notes/quota-splitting/.
+Builder lane under dmarz/pipeline. Study directory 5-experiments/studies/dmarz/quota-splitting/.

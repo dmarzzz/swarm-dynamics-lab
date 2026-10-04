@@ -24,7 +24,7 @@ Find the threads where researchers explain their own papers, share videos of swa
 
 ## Search plan
 
-- Find the X accounts of the authors of the seminal and recent papers in library/ (their homepages usually link them), then their paper threads.
+- Find the X accounts of the authors of the seminal and recent papers in 1-library/ (their homepages usually link them), then their paper threads.
 - Search terms: flocking, collective behavior, swarm robotics, active matter, swarmalators, 'collective intelligence'.
 
 ## Done when

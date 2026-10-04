@@ -1,0 +1,1250 @@
+{
+  "design": {
+    "decisions_per_regime": 448,
+    "families": 7,
+    "independent_unit": "root",
+    "regimes": [
+      "perfect",
+      "pd0.5_eps0.0_q0.3",
+      "pd0.5_eps0.0_q0.6",
+      "pd0.5_eps0.1_q0.3",
+      "pd0.5_eps0.1_q0.6",
+      "pd0.7_eps0.0_q0.3",
+      "pd0.7_eps0.0_q0.6",
+      "pd0.7_eps0.1_q0.3",
+      "pd0.7_eps0.1_q0.6",
+      "pd0.9_eps0.0_q0.3",
+      "pd0.9_eps0.0_q0.6",
+      "pd0.9_eps0.1_q0.3",
+      "pd0.9_eps0.1_q0.6"
+    ],
+    "roots": 32,
+    "worlds": [
+      "clean",
+      "omission_full"
+    ]
+  },
+  "experiment": "E2 max-effect check",
+  "label": "SCRIPTED SIMULATION \u2014 NOT MODEL EVIDENCE",
+  "pair_chair_combinations": 11,
+  "pairs": [
+    {
+      "chair": "full_records",
+      "max_abs_effect_acceptable": 0.0,
+      "max_abs_effect_harmful": 0.0,
+      "pair": "ballots - evidence",
+      "provable_zero": true,
+      "regimes": [
+        {
+          "a_acceptable": 1.0,
+          "b_acceptable": 1.0,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "perfect"
+        }
+      ]
+    },
+    {
+      "chair": "full_records",
+      "max_abs_effect_acceptable": 0.0,
+      "max_abs_effect_harmful": 0.0,
+      "pair": "ballots - evidence",
+      "provable_zero": true,
+      "regimes": [
+        {
+          "a_acceptable": 0.709821,
+          "b_acceptable": 0.709821,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.689732,
+          "b_acceptable": 0.689732,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.725446,
+          "b_acceptable": 0.725446,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.700893,
+          "b_acceptable": 0.700893,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.830357,
+          "b_acceptable": 0.830357,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.808036,
+          "b_acceptable": 0.808036,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.803571,
+          "b_acceptable": 0.803571,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.772321,
+          "b_acceptable": 0.772321,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.944196,
+          "b_acceptable": 0.944196,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.910714,
+          "b_acceptable": 0.910714,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.886161,
+          "b_acceptable": 0.886161,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.857143,
+          "b_acceptable": 0.857143,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.1_q0.6"
+        }
+      ]
+    },
+    {
+      "chair": "full_records",
+      "max_abs_effect_acceptable": 0.0,
+      "max_abs_effect_harmful": 0.0,
+      "pair": "team - generalist",
+      "provable_zero": true,
+      "regimes": [
+        {
+          "a_acceptable": 1.0,
+          "b_acceptable": 1.0,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "perfect"
+        }
+      ]
+    },
+    {
+      "chair": "full_records",
+      "max_abs_effect_acceptable": 0.0,
+      "max_abs_effect_harmful": 0.0,
+      "pair": "team - generalist",
+      "provable_zero": true,
+      "regimes": [
+        {
+          "a_acceptable": 0.709821,
+          "b_acceptable": 0.709821,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.689732,
+          "b_acceptable": 0.689732,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.725446,
+          "b_acceptable": 0.725446,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.700893,
+          "b_acceptable": 0.700893,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.830357,
+          "b_acceptable": 0.830357,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.808036,
+          "b_acceptable": 0.808036,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.803571,
+          "b_acceptable": 0.803571,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.772321,
+          "b_acceptable": 0.772321,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.944196,
+          "b_acceptable": 0.944196,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.910714,
+          "b_acceptable": 0.910714,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.886161,
+          "b_acceptable": 0.886161,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.857143,
+          "b_acceptable": 0.857143,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.1_q0.6"
+        }
+      ]
+    },
+    {
+      "chair": "full_records",
+      "max_abs_effect_acceptable": 0.0,
+      "max_abs_effect_harmful": 0.0,
+      "pair": "targeted - random checks",
+      "provable_zero": true,
+      "regimes": [
+        {
+          "a_acceptable": 1.0,
+          "b_acceptable": 1.0,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "perfect"
+        }
+      ]
+    },
+    {
+      "chair": "full_records",
+      "max_abs_effect_acceptable": 0.0,
+      "max_abs_effect_harmful": 0.0,
+      "pair": "targeted - random checks",
+      "provable_zero": true,
+      "regimes": [
+        {
+          "a_acceptable": 0.709821,
+          "b_acceptable": 0.709821,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.689732,
+          "b_acceptable": 0.689732,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.725446,
+          "b_acceptable": 0.725446,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.700893,
+          "b_acceptable": 0.700893,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.830357,
+          "b_acceptable": 0.830357,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.808036,
+          "b_acceptable": 0.808036,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.803571,
+          "b_acceptable": 0.803571,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.772321,
+          "b_acceptable": 0.772321,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.944196,
+          "b_acceptable": 0.944196,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.910714,
+          "b_acceptable": 0.910714,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.886161,
+          "b_acceptable": 0.886161,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.857143,
+          "b_acceptable": 0.857143,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.1_q0.6"
+        }
+      ]
+    },
+    {
+      "chair": "summary_only",
+      "max_abs_effect_acceptable": 0.0,
+      "max_abs_effect_harmful": 0.0,
+      "pair": "ballots - evidence",
+      "provable_zero": true,
+      "regimes": [
+        {
+          "a_acceptable": 1.0,
+          "b_acceptable": 1.0,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "perfect"
+        }
+      ]
+    },
+    {
+      "chair": "summary_only",
+      "max_abs_effect_acceptable": 0.035714,
+      "max_abs_effect_harmful": 0.040179,
+      "pair": "ballots - evidence",
+      "provable_zero": false,
+      "regimes": [
+        {
+          "a_acceptable": 0.863839,
+          "b_acceptable": 0.892857,
+          "effect_acceptable": -0.029018,
+          "effect_harmful_target": 0.029018,
+          "regime": "pd0.5_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.834821,
+          "b_acceptable": 0.868304,
+          "effect_acceptable": -0.033482,
+          "effect_harmful_target": 0.033482,
+          "regime": "pd0.5_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.770089,
+          "b_acceptable": 0.794643,
+          "effect_acceptable": -0.024554,
+          "effect_harmful_target": 0.022321,
+          "regime": "pd0.5_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.747768,
+          "b_acceptable": 0.783482,
+          "effect_acceptable": -0.035714,
+          "effect_harmful_target": 0.040179,
+          "regime": "pd0.5_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.910714,
+          "b_acceptable": 0.930804,
+          "effect_acceptable": -0.020089,
+          "effect_harmful_target": 0.017857,
+          "regime": "pd0.7_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.890625,
+          "b_acceptable": 0.915179,
+          "effect_acceptable": -0.024554,
+          "effect_harmful_target": 0.022321,
+          "regime": "pd0.7_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.814732,
+          "b_acceptable": 0.839286,
+          "effect_acceptable": -0.024554,
+          "effect_harmful_target": 0.037946,
+          "regime": "pd0.7_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.799107,
+          "b_acceptable": 0.823661,
+          "effect_acceptable": -0.024554,
+          "effect_harmful_target": 0.035714,
+          "regime": "pd0.7_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.962054,
+          "b_acceptable": 0.982143,
+          "effect_acceptable": -0.020089,
+          "effect_harmful_target": 0.020089,
+          "regime": "pd0.9_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.9375,
+          "b_acceptable": 0.964286,
+          "effect_acceptable": -0.026786,
+          "effect_harmful_target": 0.026786,
+          "regime": "pd0.9_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.901786,
+          "b_acceptable": 0.919643,
+          "effect_acceptable": -0.017857,
+          "effect_harmful_target": 0.020089,
+          "regime": "pd0.9_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.879464,
+          "b_acceptable": 0.901786,
+          "effect_acceptable": -0.022321,
+          "effect_harmful_target": 0.026786,
+          "regime": "pd0.9_eps0.1_q0.6"
+        }
+      ]
+    },
+    {
+      "chair": "summary_only",
+      "max_abs_effect_acceptable": 0.0,
+      "max_abs_effect_harmful": 0.0,
+      "pair": "team - generalist",
+      "provable_zero": true,
+      "regimes": [
+        {
+          "a_acceptable": 1.0,
+          "b_acceptable": 1.0,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "perfect"
+        }
+      ]
+    },
+    {
+      "chair": "summary_only",
+      "max_abs_effect_acceptable": 0.122768,
+      "max_abs_effect_harmful": 0.104911,
+      "pair": "team - generalist",
+      "provable_zero": false,
+      "regimes": [
+        {
+          "a_acceptable": 0.863839,
+          "b_acceptable": 0.90625,
+          "effect_acceptable": -0.042411,
+          "effect_harmful_target": 0.037946,
+          "regime": "pd0.5_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.834821,
+          "b_acceptable": 0.90625,
+          "effect_acceptable": -0.071429,
+          "effect_harmful_target": 0.058036,
+          "regime": "pd0.5_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.770089,
+          "b_acceptable": 0.870536,
+          "effect_acceptable": -0.100446,
+          "effect_harmful_target": 0.078125,
+          "regime": "pd0.5_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.747768,
+          "b_acceptable": 0.870536,
+          "effect_acceptable": -0.122768,
+          "effect_harmful_target": 0.104911,
+          "regime": "pd0.5_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.910714,
+          "b_acceptable": 0.933036,
+          "effect_acceptable": -0.022321,
+          "effect_harmful_target": -0.002232,
+          "regime": "pd0.7_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.890625,
+          "b_acceptable": 0.933036,
+          "effect_acceptable": -0.042411,
+          "effect_harmful_target": 0.022321,
+          "regime": "pd0.7_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.814732,
+          "b_acceptable": 0.90625,
+          "effect_acceptable": -0.091518,
+          "effect_harmful_target": 0.051339,
+          "regime": "pd0.7_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.799107,
+          "b_acceptable": 0.90625,
+          "effect_acceptable": -0.107143,
+          "effect_harmful_target": 0.071429,
+          "regime": "pd0.7_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.962054,
+          "b_acceptable": 0.995536,
+          "effect_acceptable": -0.033482,
+          "effect_harmful_target": 0.029018,
+          "regime": "pd0.9_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.9375,
+          "b_acceptable": 0.995536,
+          "effect_acceptable": -0.058036,
+          "effect_harmful_target": 0.053571,
+          "regime": "pd0.9_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.901786,
+          "b_acceptable": 0.919643,
+          "effect_acceptable": -0.017857,
+          "effect_harmful_target": 0.026786,
+          "regime": "pd0.9_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.879464,
+          "b_acceptable": 0.919643,
+          "effect_acceptable": -0.040179,
+          "effect_harmful_target": 0.049107,
+          "regime": "pd0.9_eps0.1_q0.6"
+        }
+      ]
+    },
+    {
+      "chair": "summary_only",
+      "max_abs_effect_acceptable": 0.0,
+      "max_abs_effect_harmful": 0.0,
+      "pair": "targeted - random checks",
+      "provable_zero": true,
+      "regimes": [
+        {
+          "a_acceptable": 1.0,
+          "b_acceptable": 1.0,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "perfect"
+        }
+      ]
+    },
+    {
+      "chair": "summary_only",
+      "max_abs_effect_acceptable": 0.120536,
+      "max_abs_effect_harmful": 0.111607,
+      "pair": "targeted - random checks",
+      "provable_zero": false,
+      "regimes": [
+        {
+          "a_acceptable": 0.863839,
+          "b_acceptable": 0.745536,
+          "effect_acceptable": 0.118304,
+          "effect_harmful_target": -0.100446,
+          "regime": "pd0.5_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.834821,
+          "b_acceptable": 0.714286,
+          "effect_acceptable": 0.120536,
+          "effect_harmful_target": -0.111607,
+          "regime": "pd0.5_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.770089,
+          "b_acceptable": 0.689732,
+          "effect_acceptable": 0.080357,
+          "effect_harmful_target": -0.066964,
+          "regime": "pd0.5_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.747768,
+          "b_acceptable": 0.660714,
+          "effect_acceptable": 0.087054,
+          "effect_harmful_target": -0.075893,
+          "regime": "pd0.5_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.910714,
+          "b_acceptable": 0.841518,
+          "effect_acceptable": 0.069196,
+          "effect_harmful_target": -0.055804,
+          "regime": "pd0.7_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.890625,
+          "b_acceptable": 0.808036,
+          "effect_acceptable": 0.082589,
+          "effect_harmful_target": -0.064732,
+          "regime": "pd0.7_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.814732,
+          "b_acceptable": 0.756696,
+          "effect_acceptable": 0.058036,
+          "effect_harmful_target": -0.026786,
+          "regime": "pd0.7_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.799107,
+          "b_acceptable": 0.738839,
+          "effect_acceptable": 0.060268,
+          "effect_harmful_target": -0.03125,
+          "regime": "pd0.7_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.962054,
+          "b_acceptable": 0.935268,
+          "effect_acceptable": 0.026786,
+          "effect_harmful_target": -0.017857,
+          "regime": "pd0.9_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.9375,
+          "b_acceptable": 0.904018,
+          "effect_acceptable": 0.033482,
+          "effect_harmful_target": -0.024554,
+          "regime": "pd0.9_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.901786,
+          "b_acceptable": 0.888393,
+          "effect_acceptable": 0.013393,
+          "effect_harmful_target": -0.013393,
+          "regime": "pd0.9_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.879464,
+          "b_acceptable": 0.861607,
+          "effect_acceptable": 0.017857,
+          "effect_harmful_target": -0.020089,
+          "regime": "pd0.9_eps0.1_q0.6"
+        }
+      ]
+    },
+    {
+      "chair": "verified_ledger",
+      "max_abs_effect_acceptable": 0.0,
+      "max_abs_effect_harmful": 0.0,
+      "pair": "ballots - evidence",
+      "provable_zero": true,
+      "regimes": [
+        {
+          "a_acceptable": 1.0,
+          "b_acceptable": 1.0,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "perfect"
+        }
+      ]
+    },
+    {
+      "chair": "verified_ledger",
+      "max_abs_effect_acceptable": 0.0,
+      "max_abs_effect_harmful": 0.0,
+      "pair": "ballots - evidence",
+      "provable_zero": true,
+      "regimes": [
+        {
+          "a_acceptable": 0.895089,
+          "b_acceptable": 0.895089,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.892857,
+          "b_acceptable": 0.892857,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.794643,
+          "b_acceptable": 0.794643,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.796875,
+          "b_acceptable": 0.796875,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.930804,
+          "b_acceptable": 0.930804,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.9375,
+          "b_acceptable": 0.9375,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.839286,
+          "b_acceptable": 0.839286,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.837054,
+          "b_acceptable": 0.837054,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.7_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.986607,
+          "b_acceptable": 0.986607,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.986607,
+          "b_acceptable": 0.986607,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.919643,
+          "b_acceptable": 0.919643,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.917411,
+          "b_acceptable": 0.917411,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.9_eps0.1_q0.6"
+        }
+      ]
+    },
+    {
+      "chair": "verified_ledger",
+      "max_abs_effect_acceptable": 0.0,
+      "max_abs_effect_harmful": 0.0,
+      "pair": "team - generalist",
+      "provable_zero": true,
+      "regimes": [
+        {
+          "a_acceptable": 1.0,
+          "b_acceptable": 1.0,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "perfect"
+        }
+      ]
+    },
+    {
+      "chair": "verified_ledger",
+      "max_abs_effect_acceptable": 0.075893,
+      "max_abs_effect_harmful": 0.044643,
+      "pair": "team - generalist",
+      "provable_zero": false,
+      "regimes": [
+        {
+          "a_acceptable": 0.895089,
+          "b_acceptable": 0.90625,
+          "effect_acceptable": -0.011161,
+          "effect_harmful_target": 0.004464,
+          "regime": "pd0.5_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.892857,
+          "b_acceptable": 0.90625,
+          "effect_acceptable": -0.013393,
+          "effect_harmful_target": 0.0,
+          "regime": "pd0.5_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.794643,
+          "b_acceptable": 0.870536,
+          "effect_acceptable": -0.075893,
+          "effect_harmful_target": 0.044643,
+          "regime": "pd0.5_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.796875,
+          "b_acceptable": 0.870536,
+          "effect_acceptable": -0.073661,
+          "effect_harmful_target": 0.040179,
+          "regime": "pd0.5_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.930804,
+          "b_acceptable": 0.933036,
+          "effect_acceptable": -0.002232,
+          "effect_harmful_target": -0.022321,
+          "regime": "pd0.7_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.9375,
+          "b_acceptable": 0.933036,
+          "effect_acceptable": 0.004464,
+          "effect_harmful_target": -0.026786,
+          "regime": "pd0.7_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.839286,
+          "b_acceptable": 0.90625,
+          "effect_acceptable": -0.066964,
+          "effect_harmful_target": 0.011161,
+          "regime": "pd0.7_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.837054,
+          "b_acceptable": 0.90625,
+          "effect_acceptable": -0.069196,
+          "effect_harmful_target": 0.011161,
+          "regime": "pd0.7_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.986607,
+          "b_acceptable": 0.995536,
+          "effect_acceptable": -0.008929,
+          "effect_harmful_target": 0.004464,
+          "regime": "pd0.9_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.986607,
+          "b_acceptable": 0.995536,
+          "effect_acceptable": -0.008929,
+          "effect_harmful_target": 0.004464,
+          "regime": "pd0.9_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.919643,
+          "b_acceptable": 0.919643,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.004464,
+          "regime": "pd0.9_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.917411,
+          "b_acceptable": 0.919643,
+          "effect_acceptable": -0.002232,
+          "effect_harmful_target": 0.004464,
+          "regime": "pd0.9_eps0.1_q0.6"
+        }
+      ]
+    },
+    {
+      "chair": "verified_ledger",
+      "max_abs_effect_acceptable": 0.0,
+      "max_abs_effect_harmful": 0.0,
+      "pair": "targeted - random checks",
+      "provable_zero": true,
+      "regimes": [
+        {
+          "a_acceptable": 1.0,
+          "b_acceptable": 1.0,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "perfect"
+        }
+      ]
+    },
+    {
+      "chair": "verified_ledger",
+      "max_abs_effect_acceptable": 0.118304,
+      "max_abs_effect_harmful": 0.107143,
+      "pair": "targeted - random checks",
+      "provable_zero": false,
+      "regimes": [
+        {
+          "a_acceptable": 0.895089,
+          "b_acceptable": 0.776786,
+          "effect_acceptable": 0.118304,
+          "effect_harmful_target": -0.102679,
+          "regime": "pd0.5_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.892857,
+          "b_acceptable": 0.776786,
+          "effect_acceptable": 0.116071,
+          "effect_harmful_target": -0.107143,
+          "regime": "pd0.5_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.794643,
+          "b_acceptable": 0.71875,
+          "effect_acceptable": 0.075893,
+          "effect_harmful_target": -0.058036,
+          "regime": "pd0.5_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.796875,
+          "b_acceptable": 0.71875,
+          "effect_acceptable": 0.078125,
+          "effect_harmful_target": -0.0625,
+          "regime": "pd0.5_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.930804,
+          "b_acceptable": 0.861607,
+          "effect_acceptable": 0.069196,
+          "effect_harmful_target": -0.049107,
+          "regime": "pd0.7_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.9375,
+          "b_acceptable": 0.861607,
+          "effect_acceptable": 0.075893,
+          "effect_harmful_target": -0.053571,
+          "regime": "pd0.7_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.839286,
+          "b_acceptable": 0.78125,
+          "effect_acceptable": 0.058036,
+          "effect_harmful_target": -0.024554,
+          "regime": "pd0.7_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.837054,
+          "b_acceptable": 0.78125,
+          "effect_acceptable": 0.055804,
+          "effect_harmful_target": -0.024554,
+          "regime": "pd0.7_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.986607,
+          "b_acceptable": 0.959821,
+          "effect_acceptable": 0.026786,
+          "effect_harmful_target": -0.017857,
+          "regime": "pd0.9_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.986607,
+          "b_acceptable": 0.959821,
+          "effect_acceptable": 0.026786,
+          "effect_harmful_target": -0.017857,
+          "regime": "pd0.9_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.919643,
+          "b_acceptable": 0.90625,
+          "effect_acceptable": 0.013393,
+          "effect_harmful_target": -0.013393,
+          "regime": "pd0.9_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.917411,
+          "b_acceptable": 0.90625,
+          "effect_acceptable": 0.011161,
+          "effect_harmful_target": -0.013393,
+          "regime": "pd0.9_eps0.1_q0.6"
+        }
+      ]
+    },
+    {
+      "chair": "(both)",
+      "max_abs_effect_acceptable": 0.0,
+      "max_abs_effect_harmful": 0.0,
+      "pair": "summary_only - full_records",
+      "provable_zero": true,
+      "regimes": [
+        {
+          "a_acceptable": 1.0,
+          "b_acceptable": 1.0,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "perfect"
+        }
+      ]
+    },
+    {
+      "chair": "(both)",
+      "max_abs_effect_acceptable": 0.154018,
+      "max_abs_effect_harmful": 0.100446,
+      "pair": "summary_only - full_records",
+      "provable_zero": false,
+      "regimes": [
+        {
+          "a_acceptable": 0.863839,
+          "b_acceptable": 0.709821,
+          "effect_acceptable": 0.154018,
+          "effect_harmful_target": -0.100446,
+          "regime": "pd0.5_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.834821,
+          "b_acceptable": 0.689732,
+          "effect_acceptable": 0.145089,
+          "effect_harmful_target": -0.100446,
+          "regime": "pd0.5_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.770089,
+          "b_acceptable": 0.725446,
+          "effect_acceptable": 0.044643,
+          "effect_harmful_target": -0.03125,
+          "regime": "pd0.5_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.747768,
+          "b_acceptable": 0.700893,
+          "effect_acceptable": 0.046875,
+          "effect_harmful_target": -0.03125,
+          "regime": "pd0.5_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.910714,
+          "b_acceptable": 0.830357,
+          "effect_acceptable": 0.080357,
+          "effect_harmful_target": -0.073661,
+          "regime": "pd0.7_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.890625,
+          "b_acceptable": 0.808036,
+          "effect_acceptable": 0.082589,
+          "effect_harmful_target": -0.071429,
+          "regime": "pd0.7_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.814732,
+          "b_acceptable": 0.803571,
+          "effect_acceptable": 0.011161,
+          "effect_harmful_target": -0.006696,
+          "regime": "pd0.7_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.799107,
+          "b_acceptable": 0.772321,
+          "effect_acceptable": 0.026786,
+          "effect_harmful_target": -0.017857,
+          "regime": "pd0.7_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.962054,
+          "b_acceptable": 0.944196,
+          "effect_acceptable": 0.017857,
+          "effect_harmful_target": -0.013393,
+          "regime": "pd0.9_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.9375,
+          "b_acceptable": 0.910714,
+          "effect_acceptable": 0.026786,
+          "effect_harmful_target": -0.022321,
+          "regime": "pd0.9_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.901786,
+          "b_acceptable": 0.886161,
+          "effect_acceptable": 0.015625,
+          "effect_harmful_target": -0.006696,
+          "regime": "pd0.9_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.879464,
+          "b_acceptable": 0.857143,
+          "effect_acceptable": 0.022321,
+          "effect_harmful_target": -0.015625,
+          "regime": "pd0.9_eps0.1_q0.6"
+        }
+      ]
+    },
+    {
+      "chair": "(both)",
+      "max_abs_effect_acceptable": 0.0,
+      "max_abs_effect_harmful": 0.0,
+      "pair": "verified_ledger - full_records",
+      "provable_zero": true,
+      "regimes": [
+        {
+          "a_acceptable": 1.0,
+          "b_acceptable": 1.0,
+          "effect_acceptable": 0.0,
+          "effect_harmful_target": 0.0,
+          "regime": "perfect"
+        }
+      ]
+    },
+    {
+      "chair": "(both)",
+      "max_abs_effect_acceptable": 0.203125,
+      "max_abs_effect_harmful": 0.158482,
+      "pair": "verified_ledger - full_records",
+      "provable_zero": false,
+      "regimes": [
+        {
+          "a_acceptable": 0.895089,
+          "b_acceptable": 0.709821,
+          "effect_acceptable": 0.185268,
+          "effect_harmful_target": -0.133929,
+          "regime": "pd0.5_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.892857,
+          "b_acceptable": 0.689732,
+          "effect_acceptable": 0.203125,
+          "effect_harmful_target": -0.158482,
+          "regime": "pd0.5_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.794643,
+          "b_acceptable": 0.725446,
+          "effect_acceptable": 0.069196,
+          "effect_harmful_target": -0.064732,
+          "regime": "pd0.5_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.796875,
+          "b_acceptable": 0.700893,
+          "effect_acceptable": 0.095982,
+          "effect_harmful_target": -0.095982,
+          "regime": "pd0.5_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.930804,
+          "b_acceptable": 0.830357,
+          "effect_acceptable": 0.100446,
+          "effect_harmful_target": -0.09375,
+          "regime": "pd0.7_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.9375,
+          "b_acceptable": 0.808036,
+          "effect_acceptable": 0.129464,
+          "effect_harmful_target": -0.120536,
+          "regime": "pd0.7_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.839286,
+          "b_acceptable": 0.803571,
+          "effect_acceptable": 0.035714,
+          "effect_harmful_target": -0.046875,
+          "regime": "pd0.7_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.837054,
+          "b_acceptable": 0.772321,
+          "effect_acceptable": 0.064732,
+          "effect_harmful_target": -0.078125,
+          "regime": "pd0.7_eps0.1_q0.6"
+        },
+        {
+          "a_acceptable": 0.986607,
+          "b_acceptable": 0.944196,
+          "effect_acceptable": 0.042411,
+          "effect_harmful_target": -0.037946,
+          "regime": "pd0.9_eps0.0_q0.3"
+        },
+        {
+          "a_acceptable": 0.986607,
+          "b_acceptable": 0.910714,
+          "effect_acceptable": 0.075893,
+          "effect_harmful_target": -0.071429,
+          "regime": "pd0.9_eps0.0_q0.6"
+        },
+        {
+          "a_acceptable": 0.919643,
+          "b_acceptable": 0.886161,
+          "effect_acceptable": 0.033482,
+          "effect_harmful_target": -0.029018,
+          "regime": "pd0.9_eps0.1_q0.3"
+        },
+        {
+          "a_acceptable": 0.917411,
+          "b_acceptable": 0.857143,
+          "effect_acceptable": 0.060268,
+          "effect_harmful_target": -0.060268,
+          "regime": "pd0.9_eps0.1_q0.6"
+        }
+      ]
+    }
+  ],
+  "provable_zeros": [
+    {
+      "chair": "full_records",
+      "pair": "ballots - evidence"
+    },
+    {
+      "chair": "full_records",
+      "pair": "team - generalist"
+    },
+    {
+      "chair": "full_records",
+      "pair": "targeted - random checks"
+    },
+    {
+      "chair": "verified_ledger",
+      "pair": "ballots - evidence"
+    }
+  ],
+  "seed": 20261004
+}

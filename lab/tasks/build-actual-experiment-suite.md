@@ -29,4 +29,4 @@ Implement the developed external-influence and immune-response designs, plus Ava
 
 ## Remaining work
 
-Live model qualification is blocked on authorized access to the encrypted per-launch model credential store. No paid runs were queued and no API spend occurred. Avalon deployment is not included pending clarification of the intended third design. See researchers/vishesh/notes/actual-experiments/DEPLOYMENT.md.
+Live model qualification is blocked on authorized access to the encrypted per-launch model credential store. No paid runs were queued and no API spend occurred. Avalon deployment is not included pending clarification of the intended third design. See 5-experiments/studies/vishesh/actual-experiments/DEPLOYMENT.md.

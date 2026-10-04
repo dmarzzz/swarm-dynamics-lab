@@ -1,0 +1,89 @@
+[
+  {
+    "published_at": "2026-10-04T15:59:01.983916+00:00",
+    "source_commit": "48bfcc2c540b0cf90f00198ecc27d18b0a7d2dee",
+    "top_headline": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
+    "score": 49.65,
+    "nodes": 201
+  },
+  {
+    "published_at": "2026-10-04T16:45:18.882676+00:00",
+    "source_commit": "b71be1e4b47532a4b58fc9cb3ab3e75f80939a0d",
+    "top_headline": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
+    "score": 49.65,
+    "nodes": 196
+  },
+  {
+    "published_at": "2026-10-04T17:31:59.183667+00:00",
+    "source_commit": "32a29a741f713d93c6bad941d024aad822892fd0",
+    "top_headline": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
+    "score": 49.65,
+    "nodes": 193
+  },
+  {
+    "published_at": "2026-10-04T18:18:26.785898+00:00",
+    "source_commit": "b36cd7ab921f3fb3d94d4dea4b20f806d214528c",
+    "top_headline": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
+    "score": 49.65,
+    "nodes": 197
+  },
+  {
+    "published_at": "2026-10-04T18:23:33.498918+00:00",
+    "source_commit": "79ad490b78ab30f0749222d4dd8553264b745048",
+    "top_headline": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
+    "score": 49.65,
+    "nodes": 198
+  },
+  {
+    "published_at": "2026-10-04T19:04:52.684181+00:00",
+    "source_commit": "36c08de9aaa5431107a2dd48f56861d86a911a13",
+    "top_headline": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
+    "score": 49.65,
+    "nodes": 198
+  },
+  {
+    "published_at": "2026-10-04T19:52:40.368683+00:00",
+    "source_commit": "32ad01d2c11e1bd997728e04a071ba1b10cc3d0b",
+    "top_headline": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
+    "score": 49.65,
+    "nodes": 200
+  },
+  {
+    "published_at": "2026-10-04T20:41:29.922840+00:00",
+    "source_commit": "459ecc7ad2ebe06c758e35acd8e0a14a88d3baed",
+    "top_headline": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
+    "score": 49.65,
+    "nodes": 207
+  },
+  {
+    "published_at": "2026-10-04T21:27:40.827995+00:00",
+    "source_commit": "e76691d6e66040d8426ecd29e1f1d93470daa63e",
+    "top_headline": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
+    "score": 49.65,
+    "nodes": 212
+  },
+  {
+    "published_at": "2026-10-04T22:13:42.566564+00:00",
+    "source_commit": "074eff22aaf778046b23d2fcb7c5fc671959f7c9",
+    "top_headline": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
+    "score": 49.65,
+    "nodes": 216
+  },
+  {
+    "published_at": "2026-10-04T22:55:10.693815+00:00",
+    "source_commit": "1abdb1d6a962da5696e05792886cab68dfc3cde6",
+    "top_headline": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
+    "score": 49.65,
+    "nodes": 215
+  },
+  {
+    "published_at": "2026-10-04T23:33:00+00:00",
+    "source_commit": "7487599fa4f11b03ab51d62341ed04217d1e7888",
+    "top_headline": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
+    "score": 49.65,
+    "nodes": 222,
+    "note": "Post-window closeout update: two landed findings (freeze-claude attempt 2, memory-mix Claude pool), swarm-dynamics-lab links, live dashboard link. Live narrative.json sha256 matched local output.",
+    "live_sha256": "a19c3703acb39089afe080c3a20469dd1c8fe062a3a03627c6e4510eb0281449",
+    "pages_deployment": "https://245f6e51.swarm-narrative.pages.dev"
+  }
+]

@@ -12,9 +12,9 @@ The [prospective plan](PLAN.md) preceded implementation. This iteration implemen
 ## Reproduce from the repository root
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/telephone/t1/tests -v
-python3 -m unittest discover -s researchers/vishesh/notes/ai-village-replay-2026-10-04/tests -v
-python3 researchers/vishesh/notes/telephone/t1/src/fixtures.py
+python3 -m unittest discover -s 5-experiments/studies/vishesh/telephone/t1/tests -v
+python3 -m unittest discover -s 5-experiments/studies/vishesh/ai-village-replay-2026-10-04/tests -v
+python3 5-experiments/studies/vishesh/telephone/t1/src/fixtures.py
 python3 scripts/experiment.py inspect telephone
 ```
 

@@ -9,4 +9,4 @@ updated: 2026-10-04T11:38Z
 
 ## Notes
 
-Sub-agent of dmarz/fleet-monitor on halcyon, started 2026-10-04. Builders dmarz/pipeline-scarcity and dmarz/pipeline-split each prepare one study. Ready packages are reviewed by dmarz/fleet-monitor (a same-researcher check, not an independent review) and then filed as run requests in the private agentops run queue. Notes and the ready-queue ledger live in researchers/dmarz/notes/pipeline/.
+Sub-agent of dmarz/fleet-monitor on halcyon, started 2026-10-04. Builders dmarz/pipeline-scarcity and dmarz/pipeline-split each prepare one study. Ready packages are reviewed by dmarz/fleet-monitor (a same-researcher check, not an independent review) and then filed as run requests in the private agentops run queue. Notes and the ready-queue ledger live in 5-experiments/studies/dmarz/pipeline/.

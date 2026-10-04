@@ -11,7 +11,7 @@ Research area established 2026-10-04 UTC for Vishesh. “JEB” and “Geoff” 
 - [Source ledger and reading limits](SOURCES.md)
 - [Search and social-discussion log](SEARCH-LOG.md)
 - [Structured idea bank](ideas.json)
-- [In-progress literature survey](../../../../surveys/vishesh-decision-models.md)
+- [In-progress literature survey](../../../../2-surveys/vishesh-decision-models.md)
 
 The strongest flagship is **Phantom Coast**: can a locally misleading report create a persistent false region in a communicating Jev evidence map, and can provenance-aware communication stop it? **Quorum of Mirrors** should supply the independence and matched-budget controls. **Stop-Signal Swarm** has the strongest direct biological mechanism; **Panic Queue** has the clearest operational payoff; **Menu Parasites** is most specific to the typed-choice interface.
 

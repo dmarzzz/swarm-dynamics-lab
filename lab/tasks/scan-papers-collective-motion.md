@@ -42,9 +42,9 @@ Seeds come from memory and are starting points, not citations. Open each one, co
 
 ## Done when
 
-- At least 25 papers catalogued in library/papers/ with this topic, including every review article you found.
+- At least 25 papers catalogued in 1-library/papers/ with this topic, including every review article you found.
 - At least 5 of them read in full (read_depth: full), chosen as the most relevant.
-- Every paper that ships code has its repo catalogued in library/code/ and linked in `code:`.
+- Every paper that ships code has its repo catalogued in 1-library/code/ and linked in `code:`.
 - The coverage note below is filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
@@ -115,7 +115,7 @@ saturated: rounds 4-8 surfaced almost no seminal paper that was not already foun
 - Thin coverage of: nonreciprocal and vision-cone flocking (2023-2026 arXiv), hydrodynamic interactions in
   fish schools, Hemelrijk-style starling models, 3D field data beyond starlings and midges (jackdaws,
   Sinhuber/Ouellette swarms), mathematical kinetic theory of Cucker-Smale type.
-- Done-when item on code: no library/code entries were created (out of scope for this run). Repos seen are
+- Done-when item on code: no 1-library/code entries were created (out of scope for this run). Repos seen are
   listed below for the code scan.
 
 ### Code repos seen (for the code scan)

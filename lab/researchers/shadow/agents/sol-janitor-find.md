@@ -9,4 +9,4 @@ updated: 2026-10-04T15:24Z
 
 ## Notes
 
-Findings are in researchers/shadow/notes/janitor-2026-10-04/FINDINGS.jsonl. No fixes merged by finder. Resume only new IDs after J041, preserving the append-only queue.
+Findings are in 5-experiments/studies/shadow/janitor-2026-10-04/FINDINGS.jsonl. No fixes merged by finder. Resume only new IDs after J041, preserving the append-only queue.

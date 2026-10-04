@@ -20,7 +20,7 @@ Seven test methods cover clean quantity labels, ordinary totals, damaged/incompl
 
 ## Shared receipts contribution
 
-[TRACE-RECEIPTS](../../../../../tooling/agent-experiments/TRACE-RECEIPTS.md) adds a common private retention primitive and offline manifest auditor. Every shared operations closeout now reports coverage independently of execution status. New/revised native launchers adopt the contract through their pre-run assessment. Frozen workers are not hot-patched, and this is not a claim of fleet-wide installed capture.
+[TRACE-RECEIPTS](../../../../toolkit/agent-experiments/TRACE-RECEIPTS.md) adds a common private retention primitive and offline manifest auditor. Every shared operations closeout now reports coverage independently of execution status. New/revised native launchers adopt the contract through their pre-run assessment. Frozen workers are not hot-patched, and this is not a claim of fleet-wide installed capture.
 
 The [D1 audit](trace-audit.json) is a **retrospective bridge**, built only from retained bytes and separate from original results. It reconciles6 assignments into3 valid starts and3 unstarted, verifies inputs, outputs, parsed values, timing/eligibility results, phases and streams, and has0 byte mismatches. It deliberately reports3 missing effective-context receipts: the bridge does not establish a complete frozen configuration delivered to each worker. D1's earlier native runtime/source checks remain separate evidence.
 
@@ -33,7 +33,7 @@ The private manifest and raw observations stay local. Public output contains num
 ```sh
 python3 -m unittest discover -s scripts -p test_trace_receipts.py
 python3 -m unittest discover -s scripts -p 'test_experiment_*.py'
-python3 -m unittest discover -s researchers/vishesh/notes/antsy-targeted-v8/trace-repair-v2 -p test_fields.py
+python3 -m unittest discover -s 5-experiments/studies/vishesh/antsy-targeted-v8/trace-repair-v2 -p test_fields.py
 ```
 
 See [validation](validation.json) for the checked source hashes and test counts. This is same-author software validation and saved-data analysis, not independent replication or experimental-agent performance evidence.

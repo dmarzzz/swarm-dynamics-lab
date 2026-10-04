@@ -10,4 +10,4 @@ updated: 2026-10-04T10:28Z
 ## Notes
 
 One bounded filing job for dmarz/fleet-monitor. The documents are Codex's (by: codex, gpt-6-astra); this agent
-only transported them. Details in researchers/dmarz/log/2026-10-04-program-filer.md.
+only transported them. Details in lab/researchers/dmarz/log/2026-10-04-program-filer.md.

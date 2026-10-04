@@ -516,18 +516,23 @@
         "5-experiments/studies/vishesh/influence-swarms/experiment.yaml"
       ],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Untested efficacy question: displaying preliminary peer recommendations changes harmful selection under misleading outside evidence.",
-        "rationale": "Updated by vishesh/codex-experiments on 2026-10-04: Q4 has two valid team approval errors; D1 report removal did not repair the selected error. These diagnostic findings do not establish external influence. Main comparison remains unrun after failed qualification; dependent cohorts cannot be pooled."
+        "score": 1,
+        "claim": "A peer-influence effect is not established in the authored E1 procurement comparison.",
+        "rationale": "Three missing decisions give prespecified identification bounds [0,.0625], including zero; five unsafe purchases share residual cost interpretation ambiguity. Simple analyst96/96 acceptable is a bounded descriptive result."
       },
-      "sample_size_summary": "Q4:4 authored dossiers \u00d7 3 workflows =12/12 valid,10 acceptable. D1:2 selected Q4 dossiers \u00d7 2 report conditions =4/4 valid,2 acceptable; not independent replication. Q0\u2013Q3 retained separately. Main comparison unrun.",
+      "sample_size_summary": "24 authored variants nested in six families, two fresh repetitions, two framing contexts and three workflows;288 assigned cells,285 observed finals,1904/1907 valid replies. Prior cohorts remain separate.",
       "sources": [
-        "5-experiments/studies/vishesh/influence-swarms/scenario/RESULTS.md",
-        "5-experiments/studies/vishesh/influence-swarms/scenario/README.md",
-        "5-experiments/studies/vishesh/influence-swarms/scenario/RESULTS-Q4-D1.md"
+        "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/E1-E0-01-post.md",
+        "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-E1-E0-01/saved-audit.json"
       ],
-      "status_at_assessment": "qualification_failed_main_unrun",
-      "source_commit": "84ee032eda80360cc54c5234f8ffc3afe3649cec"
+      "status_at_assessment": "e1_terminal_scientifically_reviewed_r2_preparing",
+      "source_commit": "9eaa1d3188128f0411a0d5e10b02181575c90049",
+      "assessor": "vishesh/codex-experiments",
+      "assessed_at": "2026-10-04",
+      "source_sha256": {
+        "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/E1-E0-01-post.md": "5bb23c6bcbc48557d701e8a9e951bbf721b55e25ef2e2dd3a69bb073b04c66f9",
+        "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-E1-E0-01/saved-audit.json": "0e0357619319195f3470152d52289f192ffbeb2286e0b2fabe9fafabcd7da762"
+      }
     },
     {
       "id": "healing-pilot03",
@@ -1663,7 +1668,7 @@
       "source_commit": "1226b626090aee1de5ab113695b3435fd023097a",
       "source_sha256": {
         "5-experiments/studies/dmarz/sybil-scarcity-plan/README.md": "f95b5d32e94d1a03f98ab24cfbb9a5fd7321dd8f63a36b34039cd7e33520623e",
-        "5-experiments/studies/dmarz/sybil-scarcity-plan/SETUP.md": "e1b98b8da2d858515cdcf214dc8e3d845e4358fdea3562bafd70704927272c48",
+        "5-experiments/studies/dmarz/sybil-scarcity-plan/SETUP.md": "5eede01443c5bb8fc66c3273268c29817f17331ec897b8fcc6a8dc6ff217e55d",
         "5-experiments/studies/dmarz/sybil-scarcity-plan/design-plan.yaml": "905b9c1512eee572ebebb9bbccf71c98c578bd04b2492499dfed72b502abaf79"
       }
     },
@@ -3677,7 +3682,7 @@
         "5-experiments/studies/vishesh/dissent/reopening/IMPLEMENTATION.md": "8dc23555ced2caf54f1092bd8632007b6ffdfa2cfbea17d6daab668f64420d8b",
         "5-experiments/studies/vishesh/dissent/reopening/offline/validation.json": "7c4b1fd962af35c169822df6d008828d5ebe36e356d17d8855e85aa042329c24",
         "5-experiments/studies/vishesh/dissent/reopening/next-run-plan.json": "bd030126cd1a021674facfc9b9e1be7ebd8ab9538d6dc6e78b45f1bdc875429d",
-        "5-experiments/studies/vishesh/dissent/reopening/OPERATOR.md": "25e480b2262c4bf5d0286da4ab3035591b9614f42ae6570ef1edbbc725e8a184",
+        "5-experiments/studies/vishesh/dissent/reopening/OPERATOR.md": "efbc27d90644a927d4c1abb3e19fa6c433bc9cbe2bdd3a75444a418504f63809",
         "5-experiments/studies/vishesh/dissent/reopening/DIAGNOSTIC-REVIEW.json": "615132a91be6c25ed5258625ad0508b34d6058760d3a447bf0e7d8ea1425faf6",
         "5-experiments/studies/vishesh/dissent/reopening/RUN-STATUS.md": "6d871aea9b940923c82c67283c8774a9fc73c202a031dbcee02af4d704b4af77",
         "5-experiments/studies/vishesh/dissent/reopening/STARTUP-REPAIR.md": "2d4843c9cb1e38a883b7cfaee7b281d8beb0b6108daa05775f18058761be63a5",
@@ -4302,6 +4307,85 @@
       "assessor": "vishesh/codex-village-fit",
       "assessed_at": "2026-10-04",
       "source_commit": "16d7cb931143aeb44d2b55880a80088b94764b28"
+    },
+    {
+      "id": "theseus-selector-d1",
+      "title": "Theseus D1: single-choice writeback diagnostic",
+      "documents": [
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/D1-POST-MORTEM.md"
+      ],
+      "experiment_ids": [
+        "swarm-of-theseus-r3-d1"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Single-choice selection followed by faithful persistence passed three inspected diagnostic contexts; full native qualification and cultural survival are separate.",
+        "rationale": "Three selected development contexts and scripted witness delivery;18dependent decisions,zero errors,not generalization or proof of native collective transmission."
+      },
+      "sample_size_summary": "Three inspected contexts from two reused qualification worlds;6/6native calls,3/3pairs,18/18decisions,0harm. Scripted witness delivery; no full turnover in D1.",
+      "sources": [
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/D1-AUDIT.json",
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/D1-CLOSEOUT.json",
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/D1-QUALITY.json"
+      ],
+      "status_at_assessment": "completed_reviewed_targeted_diagnostic_pass",
+      "assessor": "vishesh/codex-theseus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "fb0e058e1a8e007116ba3266a7faefdba1ad22ef"
+    },
+    {
+      "id": "theseus-selector-q3a3-p1",
+      "title": "Theseus selector-v2: qualification passed, fresh initial competence failed",
+      "documents": [
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/Q3-A3-P1-POST-MORTEM.md"
+      ],
+      "experiment_ids": [
+        "swarm-of-theseus-r3-q3-a3",
+        "swarm-of-theseus-r3-p1-v2"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Repaired native qualification passed, but one future-timestamp approval failed a fresh initial baseline before turnover.",
+        "rationale": "All255requests replay; three reused qualification worlds and three fresh roots with nested repeats. No completed four-arm turnover contrast; adaptive continuation remains separate."
+      },
+      "sample_size_summary": "Q3:3reused worlds,103calls,144/144decisions. P1:3fresh roots\u00d72repeats,6/6initial assessments,215/216decisions,1harm;152calls,0completed turnover trajectories.",
+      "sources": [
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/Q3-A3-P1-AUDIT.json",
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/Q3-A3-P1-CLOSEOUT.json",
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/Q3-A3-P1-QUALITY.json"
+      ],
+      "status_at_assessment": "completed_reviewed_failed_initial_gate",
+      "assessor": "vishesh/codex-theseus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "1abdb1d6a962da5696e05792886cab68dfc3cde6"
+    },
+    {
+      "id": "theseus-c2",
+      "title": "Theseus C2: correct note, invalid commit schema",
+      "documents": [
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/C2-POST-MORTEM.md"
+      ],
+      "experiment_ids": [
+        "swarm-of-theseus-r3-c2"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Four observed successor commits preserved the inherited pair; one violated the exact output schema and full turnover remained unmeasured.",
+        "rationale": "Adaptive five-of-six eligible cohort across three roots, eight new calls, technical-stop censoring. Correct note content is separate from protocol compliance and cultural survival."
+      },
+      "sample_size_summary": "3 roots; 5 eligible of 6 assigned executions, 128 cached calls, 8 new calls. Four correct notes, 3 valid commits; 0 complete turnover trajectories. Failover has one eligible repeat.",
+      "sources": [
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/C2-AUDIT.json",
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/C2-CLOSEOUT.json",
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/baseline-replication/C2-QUALITY.json"
+      ],
+      "status_at_assessment": "completed_reviewed_output_contract_failure",
+      "assessor": "vishesh/codex-theseus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "bdc613e91b94eb252b4213011d775ab87675caad"
     }
   ],
   "source_sha256": {
@@ -4356,7 +4440,7 @@
     "5-experiments/studies/vishesh/regrowth-200/README.md": "9d9fe78145fda34b4d26ebb19c20b007a5a29054e718702bb5493e7a664278a3",
     "5-experiments/toolkit/avalon-swarm/RESULTS.md": "112f9aa132a92db61a72c77f57d9bb7229d8f068476295545f91a104a6ca2ae9",
     "5-experiments/toolkit/agent-experiments/examples/collective-sensing/RESULTS.md": "e20de7f889b69bebb36c4d712a940785aa8c18d78bc7412c943cce120b8a0e2b",
-    "5-experiments/studies/dmarz/discussion-dose/RESULTS-AND-REFLECTION.md": "8935e4ec3eef43687aade9bd6bd8f0ef6f5c05a5b56bb0513226523b62bf3c89",
+    "5-experiments/studies/dmarz/discussion-dose/RESULTS-AND-REFLECTION.md": "778217e892e3ed1a00b43cf2fda09cde70b7c7dff899ef9e010d80006b699ce4",
     "5-experiments/studies/dmarz/discussion-dose/experiment.yaml": "3264be4dae791b9c26b5c3d1c8eb23e98354d93482eb5f5e894d4e9260bc88e3",
     "5-experiments/studies/dmarz/discussion-dose/RESULTS-V2.md": "99159a73e5435bef057bbefb7bc112e8f08f380b8f8c5219eb3087ccbfca0c0f",
     "5-experiments/studies/dmarz/discussion-dose/V2-ISSUE-REVIEW.md": "3feda52ca8a9e33bcfd3ccbfe8aacf79e7c59506310e7251f9601dca70168b4d",

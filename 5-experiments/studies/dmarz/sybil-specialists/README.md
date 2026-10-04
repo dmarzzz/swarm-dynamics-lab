@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Coverage verification recovers rare expertise at the cost of some malicious admission in a scripted graph. Basis: Reconciled synthetic results show the built-in utility/security tradeoff, but one graph family, programmed reports and an externally supplied verifier limit interpretation. The observed malicious-admission increase exceeds the suggested adoption margin. This supplies no LLM evidence.
 - **sample_size_summary:** S1: 12 paired worlds, 864 scripted arm outcomes across 18 cells; S0: 4 worlds, 256 outcomes; N=36 identities.

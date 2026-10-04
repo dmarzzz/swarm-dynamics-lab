@@ -35,7 +35,7 @@ outputs:
 
 ## Goal
 
-Review the current research, collaborator briefs and GitHub branches; generate a broad, source-linked slate of questions, tentative predictions and discriminating tests. Deliver synthesis/research-question-atlas.md and researchers/dmarz/notes/question-atlas/. The human explicitly requested ideation before selection. These are unreviewed hunches, not formal hypotheses, gate approvals or experiments.
+Review the current research, collaborator briefs and GitHub branches; generate a broad, source-linked slate of questions, tentative predictions and discriminating tests. Deliver 3-synthesis/research-question-atlas.md and 5-experiments/studies/dmarz/question-atlas/. The human explicitly requested ideation before selection. These are unreviewed hunches, not formal hypotheses, gate approvals or experiments.
 
 ## Done when
 

@@ -29,4 +29,4 @@ Separate shared restoration from replay blocking, correct task scoring and run a
 
 ## Execution status
 
-288 scripted outcomes completed without invalid records. Native S0 run 4deeb0f2 completed: eight outcomes, one contract-invalid primary control, no provider failures. Full review and historical trace visualization are in researchers/vishesh/notes/immune-response-v3/REVIEW.md. Native S1 remains locked; v3 native repair qualification requires a dedicated allocation.
+288 scripted outcomes completed without invalid records. Native S0 run 4deeb0f2 completed: eight outcomes, one contract-invalid primary control, no provider failures. Full review and historical trace visualization are in 5-experiments/studies/vishesh/immune-response-v3/REVIEW.md. Native S1 remains locked; v3 native repair qualification requires a dedicated allocation.

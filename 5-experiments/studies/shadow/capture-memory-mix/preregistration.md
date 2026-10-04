@@ -1,7 +1,7 @@
 # Pre-registration record: capture-memory-mix (exploratory, researcher notes)
 
 What was fixed before each stage ran, and what changed afterwards (labelled). Sections follow
-`templates/experiment-worker/preregistration.md`. Nothing here is an accepted hypothesis; the lane is a hunch built on
+`lab/templates/experiment-worker/preregistration.md`. Nothing here is an accepted hypothesis; the lane is a hunch built on
 [capture-memory](../capture-memory/) under the 12-hour goal in `GOAL-12H.md`.
 
 ## 1. Hypotheses (fixed 04:05Z, before M1)

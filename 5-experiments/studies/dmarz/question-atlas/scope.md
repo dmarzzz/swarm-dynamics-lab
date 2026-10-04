@@ -2,7 +2,7 @@
 
 Owner: dmarz/question-atlas. Date: 2026-10-03. Status: human-requested brainstorming before selection.
 
-The human asked: “review everything and start creating a list of questions and related hypotheses and how we could test them,” generating many possibilities across the research areas for later human selection. We interpret this explicit direction as authorization for a broad preselection hunch bank. We preserve the formal survey and hypothesis gates: no files were added under `hypotheses/` or `experiments/`, and no status was promoted. This is not a substitute for a cross-researcher review.
+The human asked: “review everything and start creating a list of questions and related hypotheses and how we could test them,” generating many possibilities across the research areas for later human selection. We interpret this explicit direction as authorization for a broad preselection hunch bank. We preserve the formal survey and hypothesis gates: no files were added under `4-hypotheses/` or `experiments/`, and no status was promoted. This is not a substitute for a cross-researcher review.
 
 ## Update 2: new research since the first bank
 
@@ -28,7 +28,7 @@ Before integration, main was refreshed through `73ccb3b`. The newly landed `tool
 
 - `dmarzzz/swarm-lab`: topic vocabulary, current status, tasks, all current syntheses, the three surveys and the LLM survey's revise review; collaborator briefs, background digest, external-influence note and selected library entries across all topics. The lane scope records below specify source checks.
 - GitHub: all returned remote branches and PR states in `swarm-lab` and `swarm-labs-agentops`, plus open research issues. Fork-merge, Sybil, swarm-detection, pipeline and collector branches had no unmerged branch commits at inspection. The prior preflight PR was squash merged, explaining its surviving non-ancestor branch history. `dashboard-v1` retained presentation and export work; its data contract and research-path implementation were read, without modifying that branch.
-- `/Users/halcyon/swarm-lab-lanes` is a set of worktrees, not a third independent repository. Its `sim-envs` worktree contained substantial uncommitted research: `surveys/sim-environments.md`, candidate records and smoke-test scripts. The survey was read and its implementation-level lessons inform SIM-01–04. The draft was not copied, merged, certified or used as evidence of novelty. Pending source records are not silently treated as existing main citations.
+- `/Users/halcyon/swarm-lab-lanes` is a set of worktrees, not a third independent repository. Its `sim-envs` worktree contained substantial uncommitted research: `2-surveys/sim-environments.md`, candidate records and smoke-test scripts. The survey was read and its implementation-level lessons inform SIM-01–04. The draft was not copied, merged, certified or used as evidence of novelty. Pending source records are not silently treated as existing main citations.
 - `swarm-labs-agentops`: README, GitHub PR/branch state, local change inventory and blueprint model. Its local hub/reporting work is in progress. No server, secret, access, infrastructure or generated-owner file was changed. The blueprint is not evidence of available experimental capacity or approved spending.
 
 The simulator draft's absolute “none exists” claims, deterministic-LLM claim and cross-workload speed comparisons were treated as leads requiring narrower checking. Its teammate-run smoke tests are not new runs by this pass.

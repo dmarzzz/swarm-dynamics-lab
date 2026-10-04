@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-regrowth-docs; source `179b1cca` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-regrowth-docs; source `179b1cca` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — This frozen agreement-only Qwen/Jev router fails its finite-fixture safety criterion despite a small matched-random advantage. Basis: Complete432paired instances, competent Jev control, full trace/label reconstruction and prespecified comparisons; synthetic dependent templates, one configuration and same-author audit limit transfer.
 - **sample_size_summary:** 12 authored semantic families ×36 nested synthetic instances;432/432 main cases,1296 calls,0failures. Separate S0:60instances/180calls. Not432 independent language tasks or200 native cooperating agents.

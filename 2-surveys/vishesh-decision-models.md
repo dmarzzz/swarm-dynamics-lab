@@ -108,7 +108,7 @@ Initial screening of typed text decisions, spatial evidence, dependent errors, c
 
 ## Search log
 
-See researchers/vishesh/notes/decision-models/SEARCH-LOG.md for actual search families and access limitations. Earlier structured counts were not retained. The new 2026-10-04 rounds above have explicit inspected-hit counts; see [research packet](../researchers/vishesh/notes/decision-models/quorum-of-mirrors/RESEARCH-GATES.md) for counting rules, reading attribution, citation trails and unresolved leads. This does not reconstruct missing historical counts.
+See 5-experiments/studies/vishesh/decision-models/SEARCH-LOG.md for actual search families and access limitations. Earlier structured counts were not retained. The new 2026-10-04 rounds above have explicit inspected-hit counts; see [research packet](../5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/RESEARCH-GATES.md) for counting rules, reading attribution, citation trails and unresolved leads. This does not reconstruct missing historical counts.
 
 ## Landscape
 
@@ -130,11 +130,11 @@ Coordinate map reference [[gh-dy-ma-jev-world]], prospectively described evaluat
 
 ## Gaps
 
-Fifteen exploratory questions, overlap assessments and five top-ranked design sketches are in researchers/vishesh/notes/decision-models/. They remain hunches pending substantive methods review, qualified model access and public registered experimental plans. Scores use the existing owner rubric, with no invented peer ratings.
+Fifteen exploratory questions, overlap assessments and five top-ranked design sketches are in 5-experiments/studies/vishesh/decision-models/. They remain hunches pending substantive methods review, qualified model access and public registered experimental plans. Scores use the existing owner rubric, with no invented peer ratings.
 
 ## Second-pass note
 
-The owner preferred Phantom Coast and Quorum of Mirrors. Their stronger variants are documented in researchers/vishesh/notes/decision-models/REIMAGINING.md. Repeated-evidence theory [[hamdi-2013-removal]] and self-confirming learning [[fudenberg-2019-learning]] are newly catalogued antecedents, so the proposed increment must be a tested intervention and identifiable Jev mechanism.
+The owner preferred Phantom Coast and Quorum of Mirrors. Their stronger variants are documented in 5-experiments/studies/vishesh/decision-models/REIMAGINING.md. Repeated-evidence theory [[hamdi-2013-removal]] and self-confirming learning [[fudenberg-2019-learning]] are newly catalogued antecedents, so the proposed increment must be a tested intervention and identifiable Jev mechanism.
 
 ## Saturation
 

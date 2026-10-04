@@ -36,9 +36,9 @@ Status: prepared, not launched. This record follows [the setup runbook](../../..
 
 ### Root-range scan (2026-10-04T08:20Z)
 
-Every text file under `researchers/`, `experiments/`, `hypotheses/`, `tooling/`, `templates/`, `src/`, `scripts/`, `tasks/`, `synthesis/`, `surveys/` and `reviews/` with extension yaml, yml, json, md, py, txt, csv or sh (files over 5 MB skipped) was searched for every four-digit number as a standalone token. A range was accepted only if none of its numbers occurs anywhere.
+Every text file under `lab/researchers/`, `experiments/`, `4-hypotheses/`, `tooling/`, `templates/`, `src/`, `scripts/`, `tasks/`, `3-synthesis/`, `2-surveys/` and `reviews/` with extension yaml, yml, json, md, py, txt, csv or sh (files over 5 MB skipped) was searched for every four-digit number as a standalone token. A range was accepted only if none of its numbers occurs anywhere.
 
-- The draft ranges were rejected. 8200-8223 collides with seeds of `researchers/vishesh/notes/adaptive-quorum-v2/repair-v3` (8200-8212) and `healing-helping-hands` (8201-8203); 5100-5104 and 4950-4965 contain numbers that occur in other studies' records.
+- The draft ranges were rejected. 8200-8223 collides with seeds of `5-experiments/studies/vishesh/adaptive-quorum-v2/repair-v3` (8200-8212) and `healing-helping-hands` (8201-8203); 5100-5104 and 4950-4965 contain numbers that occur in other studies' records.
 - Chosen ranges, zero occurrences each: 4821-4836, 4919-4934, 5139-5148, 8233-8256, 8351-8374.
 - Ranges used by the dmarz Sybil family, for reference: 4900-4901, 5000-5003, 6000-6023 (scale), 6800-6801, 6900-6903, 7000-7023 (budget), 6900-6901, 7000-7005, 7100-7123 (newcomer), 7790-7791, 7800-7823, 7900-7907 (scarcity). No overlap.
 - The scan was repeated at 09:05Z and at the pinned commit after pulling `main`: still no occurrence outside this directory.

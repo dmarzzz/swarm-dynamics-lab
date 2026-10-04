@@ -14,7 +14,7 @@ The case is synthetic, inspected development material. One source root cannot es
 
 ## Offline acceptance
 
-Run `python3 -m unittest discover -s researchers/vishesh/notes/telephone/native/sol50/tests -q` from the repository root: **16 tests passed**. Checks cover actor/gold separation, source controls, output size, exact prior-output forwarding, assignment genealogy, cost preservation, route failure and stopping, mandatory qualification and retention of semantic errors as outcomes. [Validation metadata](VALIDATION.json) records frozen hashes and bounds.
+Run `python3 -m unittest discover -s 5-experiments/studies/vishesh/telephone/native/sol50/tests -q` from the repository root: **16 tests passed**. Checks cover actor/gold separation, source controls, output size, exact prior-output forwarding, assignment genealogy, cost preservation, route failure and stopping, mandatory qualification and retention of semantic errors as outcomes. [Validation metadata](VALIDATION.json) records frozen hashes and bounds.
 
 The collection core is dependency-injected and tested offline. It is not a standalone admitted launcher. At execution preparation, bind the existing private transport and original ledger; collect two real qualification responses and review their decision/uncertainty preservation. An operator-created boolean alone is not evidence: retain response hashes, native route/accounting checks, semantic rationale, packet/source hashes and current runtime identity with the qualification receipt. Validate this binding before chain dispatch.
 

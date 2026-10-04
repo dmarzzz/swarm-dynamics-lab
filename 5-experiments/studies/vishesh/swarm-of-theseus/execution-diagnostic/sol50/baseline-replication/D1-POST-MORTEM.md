@@ -1,5 +1,14 @@
 # D1: one-choice writeback passed the targeted diagnostic
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-theseus; source `fb0e058e` ([registry](../../../../../../../experiments/evidence-metadata.json), [rubric](../../../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Single-choice selection followed by faithful persistence passed three inspected diagnostic contexts; full native qualification and cultural survival are separate. Basis: Three selected development contexts and scripted witness delivery;18dependent decisions,zero errors,not generalization or proof of native collective transmission.
+- **sample_size_summary:** Three inspected contexts from two reused qualification worlds;6/6native calls,3/3pairs,18/18decisions,0harm. Scripted witness delivery; no full turnover in D1.
+<!-- experiment-evidence:end -->
+
 All six GPT-6 Sol/OpenAI calls completed with known usage. The changed failover context chose the new pair and correctly allowed two cases, held one and deferred three. Preserved failover and changed release each also scored six of six. Total3/3native pair choices,18/18decisions,zero harmful approvals. All six raw outputs were inspected and every exact request/result reconstructed with zero disagreements.
 
 This supports removing redundant selector serialization. Persistence equals selection by construction; that equality is software behavior, not model competence. The model still chose the pair and made all decisions without a gold override. Offline wrong-pair tests show wrong choices remain wrong. Q3-A2 remains a failed attempt: it is neither rescored nor erased.

@@ -9,6 +9,6 @@ updated: 2026-10-04T08:05Z
 
 ## Notes
 
-Lane dir: researchers/shadow/notes/capture-memory-mix (README = full writeup, preregistration.md = labelled amendments).
-Log: researchers/shadow/notes/goal-12h-log.md. Spend USD 3.93 of the 10 cap, reconciled to OpenRouter account usage.
+Lane dir: 5-experiments/studies/shadow/capture-memory-mix (README = full writeup, preregistration.md = labelled amendments).
+Log: 5-experiments/studies/shadow/goal-12h-log.md. Spend USD 3.93 of the 10 cap, reconciled to OpenRouter account usage.
 Everything ran locally on shad0wbot (every fleet box was under another claim). Zero Discord posts.

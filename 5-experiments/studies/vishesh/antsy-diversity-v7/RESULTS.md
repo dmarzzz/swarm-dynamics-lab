@@ -2,7 +2,7 @@
 
 **Qualification failed; S1 was not run.** The repaired qualification completed20 assigned receipts and100/100 valid OCR invocations, with19 scorable references and1 unknown. The predeclared requirement that each engine family supply at least two correct totals failed. The stronger RapidOCR worker reached11/19 correct, but the best Tesseract variant reached only1/19. This is a diagnostic result about these pipelines on these receipts, not evidence of a general diversity effect or a qualified swarm comparison.
 
-[Prospective plan](PLAN.md) · [setup and attempt history](SETUP.md) · [shared diversity protocol](../../../../tooling/agent-experiments/WORKER-DIVERSITY.md) · [live run](https://swarm-live.pages.dev/#/r/antsy-diversity-v7%2FS0-repair-1)
+[Prospective plan](PLAN.md) · [setup and attempt history](SETUP.md) · [shared diversity protocol](../../../toolkit/agent-experiments/WORKER-DIVERSITY.md) · [live run](https://swarm-live.pages.dev/#/r/antsy-diversity-v7%2FS0-repair-1)
 
 ## What was changed and measured
 

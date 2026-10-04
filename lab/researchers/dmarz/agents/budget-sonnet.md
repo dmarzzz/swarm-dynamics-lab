@@ -9,4 +9,4 @@ updated: 2026-10-04T09:10Z
 
 ## Notes
 
-Fork of the orbital-one "Swarm lab orchestration #2" session (dmarz goal: keep at least 3 experiments running). Study folder researchers/dmarz/notes/sybil-budget-sonnet; launcher scripts/run-sybil-budget-sonnet.py in swarm-labs-agentops. Does not touch sybil-budget-api, its claim or sim-dmarz-4.
+Fork of the orbital-one "Swarm lab orchestration #2" session (dmarz goal: keep at least 3 experiments running). Study folder 5-experiments/studies/dmarz/sybil-budget-sonnet; launcher scripts/run-sybil-budget-sonnet.py in swarm-labs-agentops. Does not touch sybil-budget-api, its claim or sim-dmarz-4.

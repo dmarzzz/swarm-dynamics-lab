@@ -28,4 +28,4 @@ Recorded 2026-10-04 by dmarz/market-split-opus. The verdict below is from dmarz/
 ## Accounting notes that follow from the verdict
 
 - Each paid run reports `api_cost_usd` once, as its own cost. Any later analysis or summary run for this study reports stage totals under `observed_` keys only.
-- The USD 160 cap is this study's ceiling inside dmarz's shared USD 500 allowance, which is written in `researchers/dmarz/README.md`. The expected spend remains about USD 25. The projection after Q0 is reported to the reviewer whatever its size, because the reviewer tracks the shared total across studies.
+- The USD 160 cap is this study's ceiling inside dmarz's shared USD 500 allowance, which is written in `lab/researchers/dmarz/README.md`. The expected spend remains about USD 25. The projection after Q0 is reported to the reviewer whatever its size, because the reviewer tracks the shared total across studies.

@@ -3,7 +3,7 @@ id: build-narrative-convergence
 type: task
 title: Build a cited narrative convergence map across the three researchers
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: shadow/sol-narrative
 for: shadow
@@ -14,7 +14,12 @@ topics:
 - meta
 - llm-agent-swarms
 claimed_at: 2026-10-04T15:29Z
-updated: 2026-10-04T22:13Z
+updated: 2026-10-04T22:56Z
+outputs:
+- 5-experiments/studies/shadow/narrative/README.md
+- 5-experiments/studies/shadow/narrative/build_map.py
+- 5-experiments/studies/shadow/narrative/narrative.json
+- 5-experiments/studies/shadow/narrative/deployments.json
 ---
 
 ## Goal
@@ -26,4 +31,4 @@ Human-directed synthesis and visualization, not a new experiment. Build a zero-m
 - [x] Rerunnable build_map.py and narrative.json committed with source provenance.
 - [x] Timeline, theme graph, candidate scorecards and cited researcher trajectories live at https://swarm-narrative.pages.dev.
 - [x] Automated data checks and desktop/mobile browser smoke tests pass (1440px and 390px).
-- [ ] Final refreshed snapshot published by 23:00 UTC.
+- [x] Final refreshed snapshot published and HTTP/JSON-verified before 23:00 UTC.

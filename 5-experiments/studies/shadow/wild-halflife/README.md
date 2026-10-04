@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by shadow/sol-halflife; source `48bc8a76` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by shadow/sol-halflife; source `48bc8a76` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — In these frozen corpora, conditional URL reuse delays and pooled adoption-rate slopes differ; a causal copying mechanism and semantic idea half-life are not identified. Basis: Two dependent observational corpora, unauthenticated identities, exact artifacts, unmatched time windows and unverified censoring assumptions. Origin-page/commit bootstrap intervals and same-author arithmetic checks do not establish exposure or causal influence. Initial review/preflight documentation gaps are explicitly retained.
 - **sample_size_summary:** Observed: 2 dependent source corpora; 14,591 wiki revisions and 1,922 in-scope git commits, 3,102 labels and 163 git agent ids. Baseline has 12 artifact/identity summaries, 1,000 cluster resamples; no interventions or model calls.
@@ -18,21 +18,21 @@ Python 3.12, NumPy and Matplotlib; [requirements.txt](requirements.txt). Source 
 From the repository root, with the virtual environment's Python on PATH:
 
 ```sh
-python researchers/shadow/notes/wild-halflife/test_halflife.py
+python 5-experiments/studies/shadow/wild-halflife/test_halflife.py
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 nice -n 10 python \
-  researchers/shadow/notes/wild-halflife/halflife.py \
+  5-experiments/studies/shadow/wild-halflife/halflife.py \
   --data /path/to/collusion-wiki --repo . --rev 66fa0aa6174003dbb4286ffc63d61dda791e903e \
   --out /tmp/halflife-reproduction --boot 1000
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 nice -n 10 python \
-  researchers/shadow/notes/wild-halflife/halflife.py \
+  5-experiments/studies/shadow/wild-halflife/halflife.py \
   --data /path/to/collusion-wiki --repo . --rev 66fa0aa6174003dbb4286ffc63d61dda791e903e \
   --out /tmp/halflife-reproduction --boot 1000 --posthoc
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 nice -n 10 python \
-  researchers/shadow/notes/wild-halflife/supplement.py \
+  5-experiments/studies/shadow/wild-halflife/supplement.py \
   --data /path/to/collusion-wiki --results /tmp/halflife-reproduction --boot 1000
-python researchers/shadow/notes/wild-halflife/render.py --results /tmp/halflife-reproduction
+python 5-experiments/studies/shadow/wild-halflife/render.py --results /tmp/halflife-reproduction
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 nice -n 10 python \
-  researchers/shadow/notes/wild-halflife/verify_results.py \
+  5-experiments/studies/shadow/wild-halflife/verify_results.py \
   --data /path/to/collusion-wiki --repo . --results /tmp/halflife-reproduction
 ```
 
@@ -72,6 +72,6 @@ Opened the [arXiv HTML](https://arxiv.org/html/2609.09150) abstract/introduction
 
 ## Completion and publication
 
-The task is `tasks/wild-halflife.md`. Hub publication is verified `done`, run `wild-halflife/retrospective-66fa0aa6-v1`; [receipt](results/hub-receipt.json). This is retrospective display of derived outputs only, not historical plan registration or scientific gate approval. The evidence assessment is owner-authored and explicitly exploratory.
+The task is `lab/tasks/wild-halflife.md`. Hub publication is verified `done`, run `wild-halflife/retrospective-66fa0aa6-v1`; [receipt](results/hub-receipt.json). This is retrospective display of derived outputs only, not historical plan registration or scientific gate approval. The evidence assessment is owner-authored and explicitly exploratory.
 
 The final figure is also [Flight Deck artifact wild-halflife-adoption v1](../../../../artifacts/wild-halflife-adoption/wild-halflife-adoption-v1.png), with generated manifest, lock entry and attestation. `file_figure.py` preserves only this new tool-generated provenance and restores unrelated automatic rehash changes; no peer artifact facts are changed. Whole-repo strict Flight Deck validation reports pre-existing absent film versions and the worktree-name/project-id mismatch; our PNG format and hash checks pass. See post-mortem for the exact boundaries.

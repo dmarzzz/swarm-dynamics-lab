@@ -15,9 +15,9 @@ topics: [llm-agent-swarms, sync-consensus]
 
 ## Goal
 
-Assess [the imported offline Avalon Swarm prototype](../tooling/avalon-swarm/README.md) as a reusable development resource for the existing Avalon research lane. The source, protocol, thirteen tests, and compact scripted validation results are available; no provider adapter or real-model results exist. This task does not authorize research promotion or replace the existing design-only task.
+Assess [the imported offline Avalon Swarm prototype](../../5-experiments/toolkit/avalon-swarm/README.md) as a reusable development resource for the existing Avalon research lane. The source, protocol, thirteen tests, and compact scripted validation results are available; no provider adapter or real-model results exist. This task does not authorize research promotion or replace the existing design-only task.
 
-Check [integration boundaries](../tooling/avalon-swarm/INTEGRATION.md), threshold calibration, oracle and uninformed controls, and information isolation before recommending reuse. Follow the survey and hypothesis gates before an actual experiment.
+Check [integration boundaries](../../5-experiments/toolkit/avalon-swarm/INTEGRATION.md), threshold calibration, oracle and uninformed controls, and information isolation before recommending reuse. Follow the survey and hypothesis gates before an actual experiment.
 
 ## Done when
 

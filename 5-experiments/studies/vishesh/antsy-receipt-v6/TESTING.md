@@ -3,8 +3,8 @@
 The suite covers three distinct failure classes. Run with Python and Pillow installed:
 
 ```sh
-python -m unittest discover -s researchers/vishesh/notes/antsy-receipt-v6/src -p 'test_*.py'
-python researchers/vishesh/notes/antsy-receipt-v6/src/mutation_check.py
+python -m unittest discover -s 5-experiments/studies/vishesh/antsy-receipt-v6/src -p 'test_*.py'
+python 5-experiments/studies/vishesh/antsy-receipt-v6/src/mutation_check.py
 ```
 
 ## Contract and policy regressions

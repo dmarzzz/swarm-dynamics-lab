@@ -7,7 +7,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/orbital-orchestrator; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/orbital-orchestrator; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Under a stated per-identity compute quota an Opus 5.5 lead agent creates more subagent identities than it creates for the same job with no quota, and so draws more than one quota from a pool shared with three other teams. Basis: Unrun. Launch-ready package (code commit fdd2e579, source hash 09c27648); offline selftest, scripted S0 and a stub rehearsal only; no stage has run on a server and no model call has been made.
 - **sample_size_summary:** Observed: none. Planned: 24 paired roots × 8 conditions × 3 quota sizes = 576 episodes of one model agent, at most 6 calls each (at most 3,456 answered S1 calls; cap 3,552 for a resume); Q0 of 16 episodes on 8 roots; a one-call probe. claude-opus-5-5 by default; claude-opus-5 only under the pre-registered ladder, never pooled. Roots are the independent units.

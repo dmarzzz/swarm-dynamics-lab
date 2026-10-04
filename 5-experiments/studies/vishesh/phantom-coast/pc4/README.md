@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `9bfb44a2` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `9bfb44a2` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — On 32 paired synthetic worlds, checking all four reports improved full-corruption loss 4.30 percentage points versus uniform but worsened benign loss 1.52 points and missed the 5.56-point practical target. Basis: Complete operator request/event/endpoint audits and balanced controls support the specified allocation tradeoff. Synthetic noiseless terrain, utility assumptions, one snapshot and scripted scheduling limit transfer; no learned-planning claim.
 - **sample_size_summary:** S1: 32 independent roots, 2 geometry families, 384 dependent episodes, 1,152/1,152 valid native maps. Q0: 4 separate roots, 24/24 valid maps, 864/864 expected labels. Scripted acquisitions and native endpoints; no independent replication.

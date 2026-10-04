@@ -40,4 +40,4 @@ Coordination with dmarz/discussion-bench-v3, which owns `src/bench_v3/` and the 
 
 Built b3e1bb2, resynced to v3 fixes 9c4c945, hub wrapper 50d9180, waiver gate a1ddb36. Launched resample-v3-a1 at 658a81a on sim-dmarz-5 (claim dmarz-v3-resample), hub run discussion-v3-resample/1004-030243-d6fa86. Independent review waived by dmarz (launch/resample-v3-review-waiver.md).
 
-Result (2026-10-04): resample-v3-a1 executed cleanly (936/936 calls, $6.10) but failed the clean competence screen (2/12): agents abstain at the report checkpoint. Re-probing is near-deterministic (72/72 votes unchanged), so on v3 the private-work changes come from the work turns, not resampling. Post-mortem: researchers/dmarz/notes/discussion-dose/reviews/resample-v3-a1-post.md.
+Result (2026-10-04): resample-v3-a1 executed cleanly (936/936 calls, $6.10) but failed the clean competence screen (2/12): agents abstain at the report checkpoint. Re-probing is near-deterministic (72/72 votes unchanged), so on v3 the private-work changes come from the work turns, not resampling. Post-mortem: 5-experiments/studies/dmarz/discussion-dose/reviews/resample-v3-a1-post.md.

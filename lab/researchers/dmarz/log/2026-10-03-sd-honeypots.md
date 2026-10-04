@@ -2,7 +2,7 @@
 
 Lane: honeypots, honeytokens, canaries, tarpits and deception aimed at AI agents and crawlers (task
 scan-papers-sd-honeypots). Worked on branch lane/sd-honeypots per dmarz's override: no claim/touch/done, no
-edits under tasks/.
+edits under lab/tasks/.
 
 ## What I covered
 

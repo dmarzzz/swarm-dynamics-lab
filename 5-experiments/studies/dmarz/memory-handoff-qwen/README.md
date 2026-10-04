@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/pipeline-memory; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/pipeline-memory; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — A Qwen3.7 Flash successor (reasoning disabled, answer with working fields) that is handed the contents of the records its inherited notes cite does not repeat a misquoted inherited value, where resolving only origin and version leaves it in place, and it keeps its clean-memory answers. Basis: One complete exploratory run after one preregistered repair: 24 roots, 576/576 S1 outcomes valid, 573 supported; primary contrast -0.5 in all 24 roots (the reference value, which follows by construction once the model adheres to the stated policy); clean completion 24/24 under raw, metadata-only and content-bound. Attempt 001 (answer-only format) failed qualification 19/24 on other fixtures. One synthetic task, one handoff, one model configuration, not independently reviewed.
 - **sample_size_summary:** Observed: 24 independent roots x 6 memory states x 4 handoff policies = 576/576 valid S1 outcomes (394 distinct messages), attempt 002; qualification 24/24 on 6 roots. Attempt 001: qualification 19/24 on 6 other roots, S1 not run. Roots are the units, not calls; attempts are never pooled.

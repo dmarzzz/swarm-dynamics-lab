@@ -3,7 +3,7 @@ agent: dmarz/sybil-flashbots
 tool: claude-code  # Claude Code workflow on halcyon (Mac)
 state: done  # working | idle | blocked | done
 task: synthesis-sybil-flashbots
-doing: "Wrote synthesis/sybil-flashbots.md mapping Flashbots Sybil problems and defences to robot-swarm, P2P and LLM-agent analogues, citing 98 library entries"
+doing: "Wrote 3-synthesis/sybil-flashbots.md mapping Flashbots Sybil problems and defences to robot-swarm, P2P and LLM-agent analogues, citing 98 library entries"
 updated: 2026-10-03T18:52Z
 ---
 

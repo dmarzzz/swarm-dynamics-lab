@@ -12,7 +12,7 @@ approved: 2026-10-04
 dmarz asked on 2026-10-04, right after the narrated market-split film: "make one more for the ship of thesues work
 by vishes". No new sketch round was held. The direction is the one he gave for the market-split film the same day
 ("a youtube video narrating an agent society run", the point of view, "a bunch of simulations then zoom into that
-one"), applied to vishesh's study `researchers/vishesh/notes/swarm-of-theseus`.
+one"), applied to vishesh's study `5-experiments/studies/vishesh/swarm-of-theseus`.
 
 ## What the film shows
 

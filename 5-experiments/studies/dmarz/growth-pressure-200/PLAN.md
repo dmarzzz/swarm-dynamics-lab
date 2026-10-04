@@ -114,7 +114,7 @@ Maximum delivered input is 6,144 tokens; maximum completion is 1,024 tokens incl
 
 ### Small qualification stage: avoid a large uninformative run
 
-Before T0, build from [the worker template](../../../../templates/experiment-worker/README.md), implement the growth/levy changes and fail-closed dispatch checks, and pass offline accounting, threshold, fork, scoring, replay and fault fixtures. Verify that off-channel messages cannot arrive, on-channel messages arrive only next round, recipient/cap selection is reproducible, and no branch or private memo leaks into another. Scripted economic episodes and all model/provider probes belong to the admitted qualification stage, not an unreported preliminary search.
+Before T0, build from [the worker template](../../../../lab/templates/experiment-worker/README.md), implement the growth/levy changes and fail-closed dispatch checks, and pass offline accounting, threshold, fork, scoring, replay and fault fixtures. Verify that off-channel messages cannot arrive, on-channel messages arrive only next round, recipient/cap selection is reproducible, and no branch or private memo leaks into another. Scripted economic episodes and all model/provider probes belong to the admitted qualification stage, not an unreported preliminary search.
 
 Qualification uses disjoint fixtures and is capped at **3,096 native decisions**:
 

@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/discussion-bench-v3; source `93b5feab` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/discussion-bench-v3; source `93b5feab` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Untested: compact complete facts and a smaller response contract may repair decision errors seen in D1. Basis: Proposal only; no implementation, queue request or model outcome. Bundles evidence packaging and response-contract changes, so cannot isolate response ordering.
 - **sample_size_summary:** Observed: none. Planned only: 6 reused development world clusters, 2 models, 48 calls (12 canonical decisions + 36 atomic checks); no fresh qualification or holdout.
@@ -16,7 +16,7 @@ call has been created. Q1 and confirmation remain closed.
 
 Read [D1 results](RESULTS-D1.md), [D1 post-mortem](../reviews/v3-d1-a1-post.md),
 [original successor design](NEXT-RUN.md), [SETUP](SETUP.md) and the
-[experiment setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md).
+[experiment setup runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md).
 
 ## Question and decision
 

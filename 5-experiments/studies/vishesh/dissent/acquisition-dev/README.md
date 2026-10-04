@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-decision-models; source `a97976aa` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-decision-models; source `a97976aa` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Whether native challenge framing improves evidence acquisition or recovery over neutral verification remains untested. Basis: Six public development episodes and18counterfactual labels pass20offline checks. The actor-only coverage reference reaches6/6attainable actions versus routine5/6; these are scripted controller outcomes, not native comparative evidence. The270-call candidate is disabled and unfunded.
 - **sample_size_summary:** Observed native:0. Offline:6authored episodes in3shared core-rule clusters;18counterfactual choices. Proposed:6episodes ×3incumbents ×3policies ×3fresh repeats =162dependent trajectories,270maximum calls. No24-family corpus or independent replication.
@@ -39,7 +39,7 @@ Native API integration, response validation/usage envelopes, fresh execution sta
 Reproduce locally, with no external service:
 
 ```sh
-python3 researchers/vishesh/notes/dissent/acquisition-dev/prepare_offline.py
+python3 5-experiments/studies/vishesh/dissent/acquisition-dev/prepare_offline.py
 ```
 
 The preparation command runs tests and rebuilds the public development artifacts and disabled packet. It never dispatches a model or reads the sealed reserve.

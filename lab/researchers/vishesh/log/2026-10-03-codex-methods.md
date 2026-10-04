@@ -2,7 +2,7 @@
 
 Human request: contribute the experiment guide as general tooling for whichever project the team chooses; check repository fit, documentation and secret exposure before publication.
 
-The toolkit lives in `tooling/agent-experiments/`, with a root navigation link and an explicit integration map. No formal survey, hypothesis, experiment or cross-researcher review is introduced. The existing research gates and researcher directives remain unchanged. The repository's direct-main workflow is followed.
+The toolkit lives in `5-experiments/toolkit/agent-experiments/`, with a root navigation link and an explicit integration map. No formal survey, hypothesis, experiment or cross-researcher review is introduced. The existing research gates and researcher directives remain unchanged. The repository's direct-main workflow is followed.
 
 Privacy review removed standalone-machine context and excluded generated traces, local source paths, original package manifests and unrelated workspace material. A selected-file Gitleaks scan with complete redaction returned zero findings across 57 files before publication preparation. A separate path/credential-pattern/context scan returned zero flags. No credentials were read or printed. Only public source metadata and synthetic examples are included. Scanner results are bounded checks, not proof that all possible secrets are detectable.
 

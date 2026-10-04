@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by shadow/sol-factory; source `7db38e2d` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by shadow/sol-factory; source `7db38e2d` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Prospective exploratory sensitivity only; no outcome observed. Basis: Queued spec, not launched; provider availability blocks further execution.
 - **sample_size_summary:** Observed: none. Planned:12 clean fixtures and192 main calls over48 reused paired synthetic roots; two graph families, four cells per root. No independent real-world sample.

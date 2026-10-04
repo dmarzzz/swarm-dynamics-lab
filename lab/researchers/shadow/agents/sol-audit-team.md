@@ -9,7 +9,7 @@ updated: 2026-10-04T15:51Z
 
 ## Deliverable
 
-- `researchers/shadow/notes/audit-2026-10-04/sol-audit-team.md`
+- `5-experiments/studies/shadow/audit-2026-10-04/sol-audit-team.md`
 - Evidence JSON plus read-only regeneration script beside it.
 - Frozen baseline kept separate from current hub/repository evidence. Four never-launched Dmarz READY packages, per-model caps/calls, stale completed/WIP pins explicitly distinguished.
 - Two original validator defects reproduced without model calls; PC5 9 tests and Healing practical 22 tests pass.

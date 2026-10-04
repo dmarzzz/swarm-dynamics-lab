@@ -1,6 +1,6 @@
 # capture-memory-mix: corrections (2026-10-04, shadow/sol-cm2)
 
-Prompted by dmarz's review (`researchers/dmarz/notes/latest-results-review-2026-10-04/evidence.json`, item
+Prompted by dmarz's review (`5-experiments/studies/dmarz/latest-results-review-2026-10-04/evidence.json`, item
 "Capture and memory mix · Qwen MP3", reviewed at ee14e0f3). Every defect it lists was real. This file says what was
 wrong, what changed, and whether any number moved. Short version: the reporting was wrong in four places, the code
 had one real bug (hub capture fraction) and one resume inefficiency, and **no headline number changes**. The

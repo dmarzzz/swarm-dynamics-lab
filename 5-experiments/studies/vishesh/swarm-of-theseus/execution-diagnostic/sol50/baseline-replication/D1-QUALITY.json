@@ -1,7 +1,7 @@
 {
   "attempt": "D1-A1",
   "assessor": "vishesh/codex-theseus;owning agent",
-  "decision": "targeted_pass_full_qualification_required",
+  "decision": "advance",
   "dimensions": [
     {
       "dimension": "question",
@@ -18,7 +18,7 @@
         },
         {
           "path": "D1-POST-MORTEM.md",
-          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+          "sha256": "16b8318b5a587ba79f4d677a249b0ae2d3fa8780a1421c0128b696d7e36f931b"
         }
       ]
     },
@@ -37,7 +37,7 @@
         },
         {
           "path": "D1-POST-MORTEM.md",
-          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+          "sha256": "16b8318b5a587ba79f4d677a249b0ae2d3fa8780a1421c0128b696d7e36f931b"
         }
       ]
     },
@@ -56,7 +56,7 @@
         },
         {
           "path": "D1-POST-MORTEM.md",
-          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+          "sha256": "16b8318b5a587ba79f4d677a249b0ae2d3fa8780a1421c0128b696d7e36f931b"
         }
       ]
     },
@@ -75,7 +75,7 @@
         },
         {
           "path": "D1-POST-MORTEM.md",
-          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+          "sha256": "16b8318b5a587ba79f4d677a249b0ae2d3fa8780a1421c0128b696d7e36f931b"
         }
       ]
     },
@@ -94,7 +94,7 @@
         },
         {
           "path": "D1-POST-MORTEM.md",
-          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+          "sha256": "16b8318b5a587ba79f4d677a249b0ae2d3fa8780a1421c0128b696d7e36f931b"
         }
       ]
     },
@@ -113,7 +113,7 @@
         },
         {
           "path": "D1-POST-MORTEM.md",
-          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+          "sha256": "16b8318b5a587ba79f4d677a249b0ae2d3fa8780a1421c0128b696d7e36f931b"
         }
       ],
       "next_action": "Full Q3 then conditional frozen P1; report n=3worlds and nested repeats honestly.",
@@ -134,7 +134,7 @@
         },
         {
           "path": "D1-POST-MORTEM.md",
-          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+          "sha256": "16b8318b5a587ba79f4d677a249b0ae2d3fa8780a1421c0128b696d7e36f931b"
         }
       ]
     },
@@ -153,7 +153,7 @@
         },
         {
           "path": "D1-POST-MORTEM.md",
-          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+          "sha256": "16b8318b5a587ba79f4d677a249b0ae2d3fa8780a1421c0128b696d7e36f931b"
         }
       ]
     },
@@ -172,7 +172,7 @@
         },
         {
           "path": "D1-POST-MORTEM.md",
-          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+          "sha256": "16b8318b5a587ba79f4d677a249b0ae2d3fa8780a1421c0128b696d7e36f931b"
         }
       ]
     },
@@ -191,7 +191,7 @@
         },
         {
           "path": "D1-POST-MORTEM.md",
-          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+          "sha256": "16b8318b5a587ba79f4d677a249b0ae2d3fa8780a1421c0128b696d7e36f931b"
         }
       ]
     },
@@ -210,9 +210,11 @@
         },
         {
           "path": "D1-POST-MORTEM.md",
-          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+          "sha256": "16b8318b5a587ba79f4d677a249b0ae2d3fa8780a1421c0128b696d7e36f931b"
         }
       ]
     }
-  ]
+  ],
+  "date": "2026-10-04",
+  "evidence_revision": "cc270e2fae0ad7fc8771d3fc0818a1a7ed15379b"
 }

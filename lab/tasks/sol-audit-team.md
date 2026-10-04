@@ -20,6 +20,6 @@ Wave4 item14: compare current teammate evidence with Vishesh's 02:30–03:40Z fr
 
 ## Outcome
 
-Completed within requested 45-minute window. Report: `researchers/shadow/notes/audit-2026-10-04/sol-audit-team.md`. Evidence and read-only regeneration script alongside it. Zero paid calls and no server/queue/claim writes.
+Completed within requested 45-minute window. Report: `5-experiments/studies/shadow/audit-2026-10-04/sol-audit-team.md`. Evidence and read-only regeneration script alongside it. Zero paid calls and no server/queue/claim writes.
 
 Four never-launched READY packages confirmed with owner records and public hub. Legacy validator defects remain; specific newer per-study gates and artifact repairs pass offline checks. Native negative findings and stopped/unstarted operational attempts remain separate.

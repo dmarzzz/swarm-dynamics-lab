@@ -42,9 +42,9 @@ Seeds come from memory and are starting points, not citations. Open each one, co
 
 ## Done when
 
-- At least 25 papers catalogued in library/papers/ with this topic, including every review article you found.
+- At least 25 papers catalogued in 1-library/papers/ with this topic, including every review article you found.
 - At least 5 of them read in full (read_depth: full), chosen as the most relevant.
-- Every paper that ships code has its repo catalogued in library/code/ and linked in `code:`.
+- Every paper that ships code has its repo catalogued in 1-library/code/ and linked in `code:`.
 - The coverage note below is filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
@@ -144,7 +144,7 @@ The hard rules for this run did not allow creating code entries, so these are li
 
 - **25+ papers including every review found:** met (54 new plus 6 pre-existing). The Science Robotics perspective and the TechRxiv review could not be opened.
 - **5+ full reads:** met (7).
-- **Code repos catalogued in library/code/ and linked in `code:`:** not done. This run's rules forbade creating code entries, so the repos are listed above for the code-scan task, and `code:` stays empty.
+- **Code repos catalogued in 1-library/code/ and linked in `code:`:** not done. This run's rules forbade creating code entries, so the repos are listed above for the code-scan task, and `code:` stays empty.
 - **`lab.py check`:** 0 errors. The only 2 warnings come from another agent's notes.
 
 ### Suggested follow-up tasks

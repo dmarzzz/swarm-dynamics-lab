@@ -1,0 +1,11 @@
+{
+  "cap_usd": "10",
+  "cost_usd": "0.968330",
+  "halted": false,
+  "prior_attempt_requests": 8,
+  "qualification_attempts": 12,
+  "requests": 1188,
+  "reserved_usd": "0.00",
+  "time": "2026-10-04T22:58:45.386717+00:00",
+  "unresolved_exposure_usd": "0"
+}

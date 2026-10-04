@@ -15,7 +15,7 @@ Per-attempt records preserve raw wires/responses, validated outputs, original-le
 Run offline runtime tests with:
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/influence-swarms/scenario/b1 -p 'test_runtime.py'
+python3 -m unittest discover -s 5-experiments/studies/vishesh/influence-swarms/scenario/b1 -p 'test_runtime.py'
 ```
 
 No working credentials, private billing/account identifiers, real funding receipts or machine-specific admission files are shipped in the repository.

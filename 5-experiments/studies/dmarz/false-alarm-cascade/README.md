@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/pipeline-alarm; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/pipeline-alarm; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — A false honeypot alarm on a real resource, raised and then retracted by one team member, leaves five gpt-6-sol agents using that resource less in later rounds than in the same world without the alarm (Opus rungs not run). Basis: Unrun. Prospective plan only; no stage has run and no model call has been made.
 - **sample_size_summary:** Observed: none. Planned: 24 paired synthetic world roots × 5 conditions = 120 team episodes of 5 model agents × 6 rounds = 3,600 S1 calls; separate Q0 of 24 calls on 8 roots and a one-call probe. Roots are the independent units, not agents, rounds or calls.

@@ -17,14 +17,14 @@ The excerpt verifier is a synthetic-template parser. It does not prove general l
 From the repository root, use the existing Python environment with Pillow. These commands do not load credentials or import the reporting client:
 
 ```sh
-python -m unittest discover -s researchers/vishesh/notes/influence-swarms/scenario/tests -q
-python researchers/vishesh/notes/influence-swarms/scenario/analysis/typed_diagnostic.py prepare \
+python -m unittest discover -s 5-experiments/studies/vishesh/influence-swarms/scenario/tests -q
+python 5-experiments/studies/vishesh/influence-swarms/scenario/analysis/typed_diagnostic.py prepare \
   --parent data/influence-native/native-D2-01 \
   --out data/influence-native/D5-packet.json
-python researchers/vishesh/notes/influence-swarms/scenario/analysis/typed_diagnostic.py fixture \
+python 5-experiments/studies/vishesh/influence-swarms/scenario/analysis/typed_diagnostic.py fixture \
   --packet data/influence-native/D5-packet.json \
   --out data/influence-native/scripted-D5-01
-python researchers/vishesh/notes/influence-swarms/scenario/analysis/typed_report.py \
+python 5-experiments/studies/vishesh/influence-swarms/scenario/analysis/typed_report.py \
   data/influence-native/scripted-D5-01 \
   data/external-influence-v2/visuals/D5-readiness.html
 ```
@@ -39,7 +39,7 @@ Preparation is complete only after the published-source fixture, source audit, e
 2. Preserve the existing canonical grant and persistent host subledger. Last known values: cap8USD,reserved3.178320,calls198. D5 maximum reservation4.669440USD versus historical remaining4.821680. Recheck current values and prices; any depleted remainder blocks admission, not a reason to reset the ledger or infer a new default allowance. Renew the existing allocation receipt for the new claim without adding budget.
 3. Deploy the packet's exact published source commit and same Python/provider dependencies. Verify the immutable public ITERATION-05.md bytes. The native runner writes its non-secret preflight receipt before starting a hub run.
 4. The secure dispatcher performs the actual inventory/SSH-host identity, merged unexpired exclusive claim and idle-workload checks before reading the single approved Keychain alias. Core dumps disabled; minimal environment; separate exact secret/routing allowlists; verified SSH stdin only. No keys in commands or files.
-5. Supply `SWARM_D5_ADMISSION_RECEIPT`, a non-secret JSON file with exactly: `packet_hash`, `source_commit`, `host`, `claim`, `operator`, `checked_utc`, `inventory_identity_match`, `exclusive_claim_current`, `workload_idle`, `credential_policy`. The three verification booleans must reflect actual checks, operator must be `vishesh/codex-experiments`, and policy must be `tooling/agent-experiments/SWARM-LAB-CREDENTIALS.md`. Receipt age must be0–300seconds. Match host/claim to the current `SWARM_ALLOCATION_RECEIPT`. These are operator attestations, not independently verified by the native process.
+5. Supply `SWARM_D5_ADMISSION_RECEIPT`, a non-secret JSON file with exactly: `packet_hash`, `source_commit`, `host`, `claim`, `operator`, `checked_utc`, `inventory_identity_match`, `exclusive_claim_current`, `workload_idle`, `credential_policy`. The three verification booleans must reflect actual checks, operator must be `vishesh/codex-experiments`, and policy must be `5-experiments/toolkit/agent-experiments/SWARM-LAB-CREDENTIALS.md`. Receipt age must be0–300seconds. Match host/claim to the current `SWARM_ALLOCATION_RECEIPT`. These are operator attestations, not independently verified by the native process.
 6. Set the existing approved runtime variables through the secure dispatcher: config must resolve to `model-config-facts.json`; preserve `SWARM_BUDGET_LEDGER`; provide current allocation and D5 admission receipts. The provider receives only the approved credential and verified workspace route in memory. Then invoke `typed_diagnostic.py run --packet <frozen-packet> --out <new-native-D5-directory> --public-plan <immutable-plan-url>`.
 
 No launch command has been executed during this preparation. No local dispatcher is presented as a fleet authority; refresh/rebuild its host-specific bindings at launch rather than reusing old D3 scripts with stale pins.

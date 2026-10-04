@@ -45,4 +45,4 @@ Abstract and introductory structure inspected; not a full systematic audit of it
 
 ## Relevance to us
 
-Decision-model research area: researchers/vishesh/notes/decision-models/README.md.
+Decision-model research area: 5-experiments/studies/vishesh/decision-models/README.md.

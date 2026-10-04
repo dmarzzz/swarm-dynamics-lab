@@ -18,7 +18,7 @@ Author aliases in git, including merges/sync/task commits:
 
 - Since Oct 3 18:00Z: Dmarz **1,004**, Vishesh **918**, automated bot **728**. These 1,922 teammate commits are not 1,922 experiments.
 - Since Oct 4 03:40Z: Dmarz **488**, Vishesh **579**, bot **352**.
-- Evidence registry and rendered `experiments/EVIDENCE.md` at the pinned `aa01058b` snapshot: **118 rows**, with **48 at 0/4**, **52 at 1/4**, **16 at 2/4**, two unassessed rows, none above 2/4. These are frozen-snapshot counts, not a claim about later main. The 16 include a qualification-only D1 recovery and incomplete sybil-scale-xl, so they are **not sixteen completed scientific findings**. Conversely, several later measurements remain at 1/4 or have stale registry text, so low scores are not equivalent to no execution.
+- Evidence registry and rendered `5-experiments/EVIDENCE.md` at the pinned `aa01058b` snapshot: **118 rows**, with **48 at 0/4**, **52 at 1/4**, **16 at 2/4**, two unassessed rows, none above 2/4. These are frozen-snapshot counts, not a claim about later main. The 16 include a qualification-only D1 recovery and incomplete sybil-scale-xl, so they are **not sixteen completed scientific findings**. Conversely, several later measurements remain at 1/4 or have stale registry text, so low scores are not equivalent to no execution.
 
 Dmarz's dated latest-results review remains frozen at 08:11Z. His four-line program, sidecar readmes and ready queue also lag the hub. The last research/source commits are approximately 12:40Z; there is a later 15:19Z Flight Deck documentation/tooling commit. “Quiet since 12:40Z” is accurate for research output, not literally all git activity.
 
@@ -99,11 +99,11 @@ Scarcity/splitting are narrow successor tests with frozen roots and paired contr
 
 ## 5. Every Dmarz READY.yaml, especially never-launched packages
 
-I enumerated all **11** files under `researchers/dmarz`, checked prefixed experiment IDs as well as exact IDs on the hub, and reconciled absence with owner README/pre-run declarations. Hub `/api/state` has bounded run lists, so absence alone would not justify “never launched.” Here all four unlaunched packages also explicitly say nothing ran/no model call.
+I enumerated all **11** files under `lab/researchers/dmarz`, checked prefixed experiment IDs as well as exact IDs on the hub, and reconciled absence with owner README/pre-run declarations. Hub `/api/state` has bounded run lists, so absence alone would not justify “never launched.” Here all four unlaunched packages also explicitly say nothing ran/no model call.
 
 ### Never launched: four files, five runnable model choices
 
-Paths below share prefix `researchers/dmarz/notes/`; each has its own `READY.yaml` and `RUN.md`.
+Paths below share prefix `5-experiments/studies/dmarz/`; each has its own `READY.yaml` and `RUN.md`.
 
 | Package | Runnable model/provider | Declared cap | Planned normal model calls | Hard call ceiling | Expected cost/time and readiness caveat |
 |---|---|---:|---:|---:|---|

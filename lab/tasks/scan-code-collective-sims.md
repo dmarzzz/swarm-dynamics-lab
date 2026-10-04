@@ -49,7 +49,7 @@ Seeds come from memory and are starting points, not citations. Open each one, co
 
 ## Coverage note
 
-Repos catalogued under collective-motion / active-matter / sync-consensus / crowds-and-traffic in library/code/: gh-mesa-mesa (ran), gh-proroklab-vectorizedmultiagentsimulator (ran, flocking scenario), gh-pmocz-activematter-python (ran, Vicsek), gh-netlogo-netlogo, gh-jax-md-jax-md, gh-khev-swarmalators, gh-than-mark-swarmalators-experiment-mobile, gh-pedestriandynamics-jupedsim, gh-openai-multiagent-particle-envs. That is 9, below the 15 floor. Stars, licence, last commit from the GitHub API on 2026-10-03.
+Repos catalogued under collective-motion / active-matter / sync-consensus / crowds-and-traffic in 1-library/code/: gh-mesa-mesa (ran), gh-proroklab-vectorizedmultiagentsimulator (ran, flocking scenario), gh-pmocz-activematter-python (ran, Vicsek), gh-netlogo-netlogo, gh-jax-md-jax-md, gh-khev-swarmalators, gh-than-mark-swarmalators-experiment-mobile, gh-pedestriandynamics-jupedsim, gh-openai-multiagent-particle-envs. That is 9, below the 15 floor. Stars, licence, last commit from the GitHub API on 2026-10-03.
 
 Three installed and run in a fresh venv with exact commands and outputs in Run notes: mesa 3.5.1 boid flockers (polarisation 0.09 to 0.41 over 100 steps, 10.8k agent-steps/s); vmas 1.5.2 flocking (64 envs x 8 agents, 1,615 agent-steps/s on CPU); pmocz activematter Vicsek (order parameter 1.000 / 0.985 / 0.946 / 0.793 / 0.216 for eta 0.1 / 0.5 / 1 / 2 / 4). All CPU-only, no GPU needed, all run in under a minute.
 

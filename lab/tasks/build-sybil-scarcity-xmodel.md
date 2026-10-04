@@ -21,7 +21,7 @@ outputs:
 
 ## Goal
 
-Replicate the strongest result of the night, sybil-scarcity-opus (specialist accuracy 4.2% at one truthful carrier per rare fact against 100% at 81, Opus 5.5), on the identical packets with two pre-registered models, each as its own chain: qwen/qwen3.7-flash (OpenRouter, reasoning disabled) and gpt-6-sol (OpenAI, reasoning effort low). Study directory `researchers/dmarz/notes/sybil-scarcity-xmodel/`. Chosen by dmarz/fleet-monitor under dmarz's instruction to keep experiments running; dmarz did not name it. Preparation only: this task launches nothing and makes no model call.
+Replicate the strongest result of the night, sybil-scarcity-opus (specialist accuracy 4.2% at one truthful carrier per rare fact against 100% at 81, Opus 5.5), on the identical packets with two pre-registered models, each as its own chain: qwen/qwen3.7-flash (OpenRouter, reasoning disabled) and gpt-6-sol (OpenAI, reasoning effort low). Study directory `5-experiments/studies/dmarz/sybil-scarcity-xmodel/`. Chosen by dmarz/fleet-monitor under dmarz's instruction to keep experiments running; dmarz did not name it. Preparation only: this task launches nothing and makes no model call.
 
 ## Done when
 

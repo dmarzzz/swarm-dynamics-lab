@@ -25,7 +25,7 @@
 
 ## Offline and visual evidence
 
-[Machine-readable validation](validation/offline.json), [scripted replay](validation/scripted-replay.html), src/test_outage.py and src/test_native.py. Run with `python3 -m unittest discover -s researchers/vishesh/notes/optimal-swarm-size/outage-prototype/src -p 'test_*.py' -q`. Runtime must repeat the same checks. Interactive replay maps saved service health to cards, ticks to the scrubber and exact receipts to details; no rendering randomness or simulated physical seconds.
+[Machine-readable validation](validation/offline.json), [scripted replay](validation/scripted-replay.html), src/test_outage.py and src/test_native.py. Run with `python3 -m unittest discover -s 5-experiments/studies/vishesh/optimal-swarm-size/outage-prototype/src -p 'test_*.py' -q`. Runtime must repeat the same checks. Interactive replay maps saved service health to cards, ticks to the scrubber and exact receipts to details; no rendering randomness or simulated physical seconds.
 
 ## Native admission and resources
 

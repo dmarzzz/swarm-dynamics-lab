@@ -148,14 +148,14 @@ Public [histograms](results/replay-input.json) are sufficient to recompute this 
 From the repository root:
 
 ```sh
-python3 researchers/shadow/notes/rsi-loop/test_trace_loop.py
-python3 researchers/shadow/notes/rsi-loop/demo.py
+python3 5-experiments/studies/shadow/rsi-loop/test_trace_loop.py
+python3 5-experiments/studies/shadow/rsi-loop/demo.py
 ```
 
 The second command uses only checked-in derived histograms. For an authorized local extraction:
 
 ```sh
-python3 researchers/shadow/notes/rsi-loop/trace_loop.py --manifest /absolute/private/approved-manifest.json --output /absolute/private/derived-output
+python3 5-experiments/studies/shadow/rsi-loop/trace_loop.py --manifest /absolute/private/approved-manifest.json --output /absolute/private/derived-output
 ```
 
 See the script docstring for the local manifest shape. Never commit that manifest or a raw snapshot. Inspect derived outputs before publication. The current extractor is a parser/projection, not a redactor for arbitrary text exports.

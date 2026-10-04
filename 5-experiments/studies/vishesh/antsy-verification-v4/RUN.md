@@ -4,7 +4,7 @@ Use a fresh dedicated fleet allocation; do not run the model on an unrelated exp
 
 E0 source freeze: e5d684e. Python virtual environment, Tesseract eng/ind language data, pillow, pyarrow, huggingface-hub0.36.2, transformers4.57.6, safetensors, pyyaml and CPU torch. Actual versions are retained in manifests. Install Laya source at the SPEC pin; add its directory to PYTHONPATH because its packaged wheel previously omitted backend modules. Download only the pinned public checkpoint before setting HF_HUB_OFFLINE=1 and TRANSFORMERS_OFFLINE=1. No secret is needed for that public model.
 
-From the repository root, with src below set to researchers/vishesh/notes/antsy-verification-v4/src:
+From the repository root, with src below set to 5-experiments/studies/vishesh/antsy-verification-v4/src:
 
 ```sh
 python "$src/corpus.py" --out /srv/swarm/antsy-v4/E0-attempt-1

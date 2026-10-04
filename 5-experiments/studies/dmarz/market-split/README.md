@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Changing firm identities can alter regulatory accounting while total ownership resources remain fixed. Basis: Programmed splitting and optimization validate the mechanism in six related markets but cannot establish spontaneous model discovery. Resource conservation and paired accounting are explicit; external economic realism and independent rivals remain untested.
 - **sample_size_summary:** 6 S1 market clusters × 2 seeds × 12 conditions × 3 policies = 432 scripted episodes; 18 S0; 0 model calls.
@@ -27,7 +27,7 @@ This isolates the identity-accounting mechanism. It does not implement the full 
 
 ## Protocol
 
-[design.yaml](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/market-split/design.yaml) fixes three regulators: no regulator, firm-based HHI, and ownership-aware HHI. HHI is the sum of squared output shares on the 0–1 scale. For either good above the threshold, regulated owners lose 35% of positive operating profit on that good. Owner regulation aggregates owned firms before squaring. Its ownership oracle is a diagnostic ceiling, not a practical ownership detector. A zero-output good has undefined HHI and cannot count as successful evasion.
+[design.yaml](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/market-split/design.yaml) fixes three regulators: no regulator, firm-based HHI, and ownership-aware HHI. HHI is the sum of squared output shares on the 0–1 scale. For either good above the threshold, regulated owners lose 35% of positive operating profit on that good. Owner regulation aggregates owned firms before squaring. Its ownership oracle is a diagnostic ceiling, not a practical ownership detector. A zero-output good has undefined HHI and cannot count as successful evasion.
 
 Thresholds 0.38 and 0.46, registration fees 20 and 2,500 credits, and all other constants are proposed sandbox settings, not real regulatory rules. The 35% first-tier fine fraction is adapted from the paper below, without its full oracle or sanction ladder.
 
@@ -37,7 +37,7 @@ S0: two development markets × one seed × three regulators × three policies = 
 
 ## Natural discovery pilot
 
-The model receives only [src/prompt.txt](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/market-split/src/prompt.txt), its own portfolio, published market/regulatory rules and recent public outcomes. It never receives this plan, treatment labels, scripted code, hidden evaluator scores, future shocks, or a suggestion to split. It knows its own ownership. Owner HHI is supplied only when it is the published regulatory signal.
+The model receives only [src/prompt.txt](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/market-split/src/prompt.txt), its own portfolio, published market/regulatory rules and recent public outcomes. It never receives this plan, treatment labels, scripted code, hidden evaluator scores, future shocks, or a suggestion to split. It knows its own ownership. Owner HHI is supplied only when it is the published regulatory signal.
 
 After scripted qualification, a separately budgeted model S0 tests schema validity and profitable production without regulation. Then neutral-agent S1 crosses the three regulators on matched tasks, with a split-disabled comparator at equal owner inference budget. A separately labeled hinted control can distinguish inability from lack of discovery, but is excluded from discovery rates. Freeze model/version, prompt hash, prices, token ceilings and aggregate dollar cap before enabling transport. The current cap is **$0**; the deployed worker rejects paid backends.
 
@@ -53,7 +53,7 @@ Use paired policy differences and bootstrap whole market clusters. Every scripte
 
 ## Visualization
 
-Each hub run uploads a final PNG and a time-series GIF from its first **preselected** task and seed; all episodes remain in JSONL. The replay compares policies using ownership-colored firm output bars, both concentration traces, thresholds, registration events, net profits and fines. A round cursor shows logical time. Ownership overlays are evaluator-only. This uses the live UI's supported PNG/GIF contract. GIFs are recorded replays, not live model behavior. See [visualization.md](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/market-split/visualization.md) for mappings and failure handling.
+Each hub run uploads a final PNG and a time-series GIF from its first **preselected** task and seed; all episodes remain in JSONL. The replay compares policies using ownership-colored firm output bars, both concentration traces, thresholds, registration events, net profits and fines. A round cursor shows logical time. Ownership overlays are evaluator-only. This uses the live UI's supported PNG/GIF contract. GIFs are recorded replays, not live model behavior. See [visualization.md](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/market-split/visualization.md) for mappings and failure handling.
 
 ## Reproduce and deploy
 
@@ -93,4 +93,4 @@ These intervals describe scripted development-market diagnostics; six clusters c
 
 The search policy selected fragmentation in 12/12 low-fee firm-regulation episodes at threshold 0.38 and 10/12 at 0.46. At fee 2,500 those counts fell to 2/12 and 0/12; under ownership/no regulation it never fragmented. This is a programmed optimizer over public rules with a four-round cost horizon, not natural discovery. High fees did **not** make forced splitting unprofitable on average over the 24-round horizon. A later model study must account for decision horizon rather than assuming the expensive condition removes the incentive.
 
-No model-discovery finding exists. The next step is a separately budgeted, neutral-prompt model qualification and then the paired discovery pilot above. The model transport is not implemented or tested; S2 remains disabled pending the prior-art and cross-researcher review gates. See [the S1 post-mortem](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/market-split/reviews/s1-fleet-001-post.md) and [deployment record](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/market-split/deployment.md).
+No model-discovery finding exists. The next step is a separately budgeted, neutral-prompt model qualification and then the paired discovery pilot above. The model transport is not implemented or tested; S2 remains disabled pending the prior-art and cross-researcher review gates. See [the S1 post-mortem](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/market-split/reviews/s1-fleet-001-post.md) and [deployment record](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/market-split/deployment.md).

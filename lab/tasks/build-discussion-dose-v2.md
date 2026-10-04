@@ -23,7 +23,7 @@ Real-model v1 episodes so far sit at a ceiling: the false digest is adopted by t
 
 ## Done when
 
-- [x] V2 design and decision rule written (researchers/dmarz/notes/discussion-dose/V2-DESIGN.md).
+- [x] V2 design and decision rule written (5-experiments/studies/dmarz/discussion-dose/V2-DESIGN.md).
 - [x] v2 world generator, runner, scorer and frozen plans implemented without changing the v1 code path.
 - [x] Offline tests pass for v1 and v2; scripted v2 bundles run end to end.
 - [x] Rollout commands documented; nothing enqueued.

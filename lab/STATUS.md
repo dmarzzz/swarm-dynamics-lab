@@ -40,10 +40,9 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T22:13Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [phantom-coast-pc12-wide](tasks/phantom-coast-pc12-wide.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T20:35Z | Wide sourced-evidence diagnostic for Phantom Coast |
+| [phantom-coast-pc12-wide](tasks/phantom-coast-pc12-wide.md) | claimed (stale) | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T20:35Z | Wide sourced-evidence diagnostic for Phantom Coast |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -161,6 +160,7 @@
 | [build-discussion-dose](tasks/build-discussion-dose.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-03T23:39Z | Build and deploy the SEC-47 discussion dose exploratory study |
 | [build-discussion-dose-v2](tasks/build-discussion-dose-v2.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T00:38Z | Build the harder contested-evidence version of discussion-dose (v2), ready to roll out |
 | [build-market-split](tasks/build-market-split.md) | done | p1 | build | dmarz/market-split | dmarz | 2026-10-04T02:02Z | Build and deploy an exploratory owner-splitting market pilot |
+| [build-narrative-convergence](tasks/build-narrative-convergence.md) | done | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T22:56Z | Build a cited narrative convergence map across the three researchers |
 | [build-poietic-agents-instrument](tasks/build-poietic-agents-instrument.md) | done | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T06:38Z | Build the Poietic Agents offline instrument and qualification package |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | done | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T09:03Z | Build and qualify optimal swarm-size generators and launch package |
 | [build-sybil-scarcity-opus](tasks/build-sybil-scarcity-opus.md) | done | p1 | build | dmarz/pipeline-scarcity | dmarz | 2026-10-04T09:12Z | Prepare the Sybil scarcity experiment on Opus 5.5 to launch-ready |
@@ -328,12 +328,14 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-theseus | working |  | 2026-10-04T23:38Z | Preparing actual fifty-member turnover; offline validated, native qualification allocation pending |
+| shadow/sol-dashboard-fix | done |  | 2026-10-04T23:03Z | Repaired invalid hypothesis topic metadata blocking dashboard export; retained strict validation and added regressions. |
+| shadow/sol-narrative | idle |  | 2026-10-04T22:55Z | Completed. Final verified narrative snapshot is live at swarm-narrative.pages.dev. |
+| vishesh/senku-1 | idle |  | 2026-10-04T22:50Z | 2026-10-04 pm: influence-swarms/scenario/redesign-v2 — critique + redesign proposal of the procurement influence study (one registered primary estimand, v2 fixtures, exposure/dose, composition + agent template, two-sided gates, 12 new cases) with a zero-model-call sizing simulation, an independent design review and a numbers check; proposal only, no launch |
 | vishesh/codex-village-fit | idle |  | 2026-10-04T22:46Z | Telephone B4R1 completed and reviewed; source-restored18/18 versus handoff-only7/18; no further run authorized. |
 | dmarz/growth-pressure | done | none | 2026-10-04T22:45Z | growth-pressure-200 chain-001 stopped at Q0 (seeder gate 4/8); post-mortem, RESULTS, records and evidence row pushed; no rerun tonight per dmarz |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T22:16Z | B1 complete with instrument ambiguity; preparing funded B2 clarification and conditional evaluation |
-| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T22:12Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/astra-ultra-review | done |  | 2026-10-04T21:39Z | Published growth-pressure-200 v2 plan with seeding and peer messaging comparison. |
-| vishesh/codex-theseus | idle |  | 2026-10-04T20:42Z | Q2 completed and qualified; main50-member study not dispatched |
 | vishesh/codex-pi-review | done | refresh-review-action-guidance | 2026-10-04T20:38Z | Published refreshed guidance for 15 study notes; 11 updated decisions, 229 recommendations preserved, validation passed. |
 | vishesh/codex-idea-scores | idle |  | 2026-10-04T20:22Z | Shared diagnosis procedure and worksheet complete; O2 closed, richer incident task documented prospectively. |
 | shadow/sol-cm2 | done |  | 2026-10-04T19:56Z | R2 diagnostic complete, 24 paired histories and 144 valid scientific calls; shipping narrow small-effect finding and all-attempt accounting. |
@@ -374,7 +376,7 @@
 | dmarz/v3-q0-opus | working |  | 2026-10-04T08:15Z | discussion-v3-opus chain v3o-a1 (probe, Q0 636 calls, S1 2,436 calls if Q0 passes) on sim-dmarz-9 |
 | dmarz/d1-opus | done |  | 2026-10-04T08:12Z | D1-Opus d1o-a1 done: fresh gate 12/12, 72/72 valid, $1.495; audited, results + post-mortem pushed, claim released |
 | shadow/sol-goal | done |  | 2026-10-04T08:05Z | GOAL-12H lane done at 08:05Z. capture-memory-mix (heterogeneous memory rescue) on main with scripted M0/M1/M2 and three real-model pilots; hub experiment capture-memory-mix populated. |
-| dmarz/results-analyst | working |  | 2026-10-04T07:58Z | Reading dmarz run results as they arrive and keeping next-run decision packages current in researchers/dmarz/notes/pipeline/ |
+| dmarz/results-analyst | working |  | 2026-10-04T07:58Z | Reading dmarz run results as they arrive and keeping next-run decision packages current in 5-experiments/studies/dmarz/pipeline/ |
 | dmarz/orbital-orchestrator | working |  | 2026-10-04T07:39Z | sybil-specialists-opus (Opus 5.5 replication of sybil-specialists-api) on sim-dmarz-4; Sonnet version superseded before paid calls |
 | dmarz/newcomer-sonnet | done |  | 2026-10-04T07:35Z | S1 closed out (1944/1944, $9.17 total); results, Sonnet-minus-Haiku comparison and post-mortem published; claim released |
 | dmarz/scale-sonnet | done |  | 2026-10-04T07:35Z | sybil-scale-sonnet closed out; S1 afd8d5b9 2400/2400 valid, primary +52.8 pp (Haiku +51.4); RESULTS and s1-001-post written; claim released |
@@ -421,11 +423,10 @@
 | dmarz/hf-sweep | done |  | 2026-10-03T22:00Z | HF multi-agent dataset sweep (link + description entries, lane/hf-multiagent) |
 | dmarz/dashboard-questions | done | build-dashboard-questions | 2026-10-03T21:56Z | Questions dashboard tested in PR 81; human subsequently authorized merging and automatic publication. |
 | dmarz/question-atlas | done | synthesis-question-atlas-update | 2026-10-03T21:41Z | Updated 202 candidates across 15 areas; 59 new and 36 revised, with preserved reviews. |
-| vishesh/senku-1 | idle |  | 2026-10-03T21:28Z | 2026-10-03 pm: seo-poisoning experimental-design hunch bundle under notes/seo-poisoning/ (review applied); feedback requested from dmarz + shadow |
 | shadow/sol-aud | done |  | 2026-10-03T20:55Z | Completed 18 full-transcript entries, source QA, and three blocked MARL-talk recoveries |
 | shadow/sol-g74 | done | scan-papers-fm-contagion | 2026-10-03T20:55Z | Completed issue 74 rerun: 21 new entries, 21 correction/verification notes, 4 full readings; saturation gaps disclosed. |
 | shadow/sol-p2 | idle |  | 2026-10-03T20:47Z | wrapped up after batches |
-| shadow/sol-g50 | done |  | 2026-10-03T20:45Z | Finished synthesis/people-and-labs.md (issue |
+| shadow/sol-g50 | done |  | 2026-10-03T20:45Z | Finished 3-synthesis/people-and-labs.md (issue |
 | shadow/sol-w3 | done |  | 2026-10-03T20:34Z | completed assigned collective-motion and active-matter talk batches |
 | dmarz/sd-ai-content | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
 | dmarz/sd-attribution | done |  | 2026-10-03T20:30Z | swarm-detection lane merged to main 2026-10-03 (lane/sd-merge); scans done |
@@ -443,18 +444,18 @@
 | shadow/sol-w1 | idle |  | 2026-10-03T20:00Z | stopped on requester instruction; completed batches 33, 34, 31, 32 and 52 with 17 talks and 7 papers, all remaining items explicitly skipped |
 | shadow/sol-w4 | idle |  | 2026-10-03T19:59Z | done for session; batches |
 | shadow/sol-w7 | idle |  | 2026-10-03T19:58Z | Wrapped up on human stop; batches 48, 46, 53 catalogued; 37 and 38 all-skipped; 77 released untouched |
-| dmarz/fm | done | synthesis-fork-merge-questions | 2026-10-03T19:50Z | wrote synthesis/fork-merge-questions.md: Sutton quote verified, threat model, Q1 hiding, Q2 thresholds, Q3 attacks ranked by evidence, analogues, open questions; 197 cited ids all resolve |
+| dmarz/fm | done | synthesis-fork-merge-questions | 2026-10-03T19:50Z | wrote 3-synthesis/fork-merge-questions.md: Sutton quote verified, threat model, Q1 hiding, Q2 thresholds, Q3 attacks ranked by evidence, analogues, open questions; 197 cited ids all resolve |
 | shadow/sol-w8 | blocked |  | 2026-10-03T19:44Z | Completed X batches 45 and 44; remaining preferred talk batches require readable transcripts. |
 | dmarz/sim-envs | working |  | 2026-10-03T19:40Z | TODO one line |
 | shadow/sol-g49 | done |  | 2026-10-03T19:38Z |  |
 | dmarz/reviewer-1 | done | review-llm-agent-swarms | 2026-10-03T19:27Z | review filed, verdict revise |
 | vishesh/codex-docs | done |  | 2026-10-03T19:14Z | Expanded sixteen briefs, linked research outputs, repaired metadata, and incorporated targeted review corrections. |
 | dmarz/fm-informal | done | scan-threads-fm | 2026-10-03T19:05Z | Catalogued 15 informal blogs/LW posts on fork-merge agent corruption (prompt injection, memory writes, cross-agent escalation, MCP tool poisoning, vendor defences) |
-| shadow/sol-w2 | working |  | 2026-10-03T19:05Z | Writer lane: working candidate batch issues (swarm-detection first), see PIPELINE.md on the pipeline PR branch. |
+| shadow/sol-w2 | working |  | 2026-10-03T19:05Z | Writer lane: working candidate batch issues (swarm-detection first), see lab/PIPELINE.md on the pipeline PR branch. |
 | dmarz/fm-code-bench | done | scan-code-fm | 2026-10-03T19:00Z | catalogued 30 repos and 1 paper on agent injection, merge backdoors, Byzantine aggregation and BFT CRDTs for fork-merge-security; ran ByzFL and bft-json-crdt |
 | dmarz/x-threads | done | scan-threads-x-security | 2026-10-03T18:57Z | 35 X threads catalogued and pushed; task scan-threads-x-security done |
-| dmarz/sybil-flashbots | done | synthesis-sybil-flashbots | 2026-10-03T18:52Z | Wrote synthesis/sybil-flashbots.md mapping Flashbots Sybil problems and defences to robot-swarm, P2P and LLM-agent analogues, citing 98 library entries |
-| dmarz/sybil | done | survey-sybil-resistance | 2026-10-03T18:51Z | wrote surveys/sybil-resistance.md (in-progress) from nine sybil lanes; gate blocked on search-log coverage and saturation |
+| dmarz/sybil-flashbots | done | synthesis-sybil-flashbots | 2026-10-03T18:52Z | Wrote 3-synthesis/sybil-flashbots.md mapping Flashbots Sybil problems and defences to robot-swarm, P2P and LLM-agent analogues, citing 98 library entries |
+| dmarz/sybil | done | survey-sybil-resistance | 2026-10-03T18:51Z | wrote 2-surveys/sybil-resistance.md (in-progress) from nine sybil lanes; gate blocked on search-log coverage and saturation |
 | dmarz/fm-identity-hijack | done | scan-papers-fm-identity-hijack | 2026-10-03T18:48Z | Q3 identity and goal hijack scan done: 26 entries (4 full), notes on 4 existing entries, coverage note filled |
 | dmarz/sybil-foundations | done | scan-papers-sybil-foundations | 2026-10-03T18:47Z | Catalogued 21 foundational Sybil papers (6 read in full) plus notes on 4 existing entries; coverage note filled |
 | dmarz/fm-ai-control | done | scan-papers-fm-ai-control | 2026-10-03T18:43Z | AI-control lane done: 29 entries (23 papers, 3 blogs, 3 code) on control, collusion between copies, distributed attacks, IFC/quarantine merge designs; notes on 4 existing entries |

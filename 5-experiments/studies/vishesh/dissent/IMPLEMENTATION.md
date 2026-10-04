@@ -27,9 +27,9 @@ The first causal comparison uses scripted initial votes and challenges. Private-
 From the repository root:
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/dissent/tests -v
-python3 researchers/vishesh/notes/dissent/src/cli.py requests --out /tmp/right-dissenter-requests.json
-python3 researchers/vishesh/notes/dissent/visualization/build_preview.py --out /tmp/right-dissenter-preview.html
+python3 -m unittest discover -s 5-experiments/studies/vishesh/dissent/tests -v
+python3 5-experiments/studies/vishesh/dissent/src/cli.py requests --out /tmp/right-dissenter-requests.json
+python3 5-experiments/studies/vishesh/dissent/visualization/build_preview.py --out /tmp/right-dissenter-preview.html
 ```
 
 Output commands refuse to overwrite existing files. The `requests` export contains development wire probes, not a run assignment or authorization. `fixtures` exports a software fixture bundle. `replay --tape <path> --snapshot <served-id>` validates an externally supplied response tape; its claimed origin still requires executor provenance. No secret values belong in those files.

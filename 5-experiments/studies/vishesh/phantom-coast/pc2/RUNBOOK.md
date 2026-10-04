@@ -15,10 +15,10 @@ The scientific plan was published before implementation. RUNNER-PRE.md was commi
 From the repository root, with Python and Pillow installed:
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/phantom-coast/pc2/tests -v
+python3 -m unittest discover -s 5-experiments/studies/vishesh/phantom-coast/pc2/tests -v
 mkdir -p data/phantom-coast-pc2
-python3 researchers/vishesh/notes/phantom-coast/pc2/src/run.py prepare --stage Q0 --output data/phantom-coast-pc2/q0-packet.json
-python3 researchers/vishesh/notes/phantom-coast/pc2/src/run.py prepare --stage S1 --output data/phantom-coast-pc2/s1-packet.json
+python3 5-experiments/studies/vishesh/phantom-coast/pc2/src/run.py prepare --stage Q0 --output data/phantom-coast-pc2/q0-packet.json
+python3 5-experiments/studies/vishesh/phantom-coast/pc2/src/run.py prepare --stage S1 --output data/phantom-coast-pc2/s1-packet.json
 ```
 
 Keep packets and private operational evidence outside tracked public files. Preparation freezes assignment IDs and effective instrument hashes; it neither constructs reserved worlds nor contacts a provider. Tests construct only development roots. Scripted unit fixtures are not experimental outcomes.
@@ -39,7 +39,7 @@ The `research_scope` receipt records the operator's intended exploratory experim
 6. Launch Q0 on that host. Analyze the saved qualification result, complete its post-assessment, and obtain a new current S1 admission receipt only if it passes. S1 recomputes Q0 from hash-bound saved records/worlds and requires matching instrument hashes. Different source/config semantics require fresh qualification under a separately amended repair plan; the launcher cannot silently repeat Q0.
 
 ```sh
-python3 researchers/vishesh/notes/phantom-coast/pc2/src/run.py run --config PRIVATE_ADMISSION_JSON --out NEW_ATTEMPT_DIRECTORY --credential-file PRIVATE_CREDENTIAL_PATH
+python3 5-experiments/studies/vishesh/phantom-coast/pc2/src/run.py run --config PRIVATE_ADMISSION_JSON --out NEW_ATTEMPT_DIRECTORY --credential-file PRIVATE_CREDENTIAL_PATH
 ```
 
 The template deliberately contains false/null gates. Do not change them merely to get past a check. Scope, account, rendered-page and exclusivity fields attest to the linked evidence; their truth must be checked by the operator. The live wrapper does not create infrastructure or conduct a review itself.

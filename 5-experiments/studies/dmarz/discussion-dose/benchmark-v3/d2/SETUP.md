@@ -13,7 +13,7 @@ claim is released. No successor is authorized or started. Follows the
   waiver for these runs; it is recorded as waived by owner direction, not as passed or independent.
 - The D2 design was written by `dmarz/discussion-bench-v3` as [D2-PLAN](../D2-PLAN.md) and left unstarted. This
   agent took it over on dmarz's instruction as relayed by `dmarz/fleet-monitor`; the note is in
-  `researchers/dmarz/inbox.md`.
+  `lab/researchers/dmarz/inbox.md`.
 - Question, decision and claim boundary: [PLAN](PLAN.md). Model under test: Claude Opus 5.5. Comparison arms:
   Sonnet 4.6 and Haiku 4.5.
 - Research status: exploratory diagnostic instrument under [SEC-47](../../QUESTION-LINKS.md). No hypothesis

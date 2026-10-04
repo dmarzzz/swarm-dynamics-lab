@@ -3,15 +3,24 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Selective repair mechanisms behave as designed across synthetic recurrence, benign-learning and missing-lineage cases. Basis: Scripted mechanisms and oracle incident labels establish fixture behavior only. Eight actors and 24 rounds per episode are not replicates. Current family status belongs to later scenario/receipt studies, not this completed cohort.
 - **sample_size_summary:** Engineering:16 task roots × 5 strata × 9 arms =720 outcomes; native task6700 was not run.
 <!-- experiment-evidence:end -->
 
-## Current status — 2026-10-04 UTC
+## A healthy system can hide a confused agent.
 
-The latest iteration is the [evidence-checking receipt study](evidence-study/README.md). Its native diagnostic was stopped after a wrong-cloud-account incident: **3 completed, 1 partial and 12 unstarted assignments**. The [interruption post-mortem](evidence-study/reviews/receipt-a2-post.md) preserves all 16 assignments and the remaining account-verification and reporting repairs. There is no completed qualification or treatment-effect claim. Historical allocation and execution descriptions below do not authorize a relaunch.
+Latest findings — 2026-10-04 UTC
+
+- Both arms ended healthy—but each proposed four unnecessary interventions.
+- The software guard blocked all four; the unguarded arm executed them. This shows guard protection, not improved agent judgment.
+- Both arms verified only 8 of 12 repairs. Looking fixed is not the same as checking the fix.
+- Peer-study qualification stopped after two Opus calls: a correct first diagnosis/action exceeded the explanation-length limit. Zero worlds completed; peer effects remain untested. [Failure review and repair](peer-correction/reviews/q1-post.md).
+
+Scope: a small synthetic controller comparison—192 calls,48 episodes, six authored roots in three families—not general swarm recovery or production reliability. [Results and animation](verification-study/reviews/v1-post.md). [Reviewed peer-correction plan](peer-correction/PLAN.md) and [current readiness](peer-correction/README.md).
+
+The older interrupted receipt study and its account incident remain in the [historical post-mortem](evidence-study/reviews/receipt-a2-post.md); they are not the latest run. Historical setup and scoring sections below retain their original scope.
 
 ## Previous scenario iteration
 
@@ -42,10 +51,10 @@ Exact authorized completion over all scheduled recovery requests; response failu
 [Visualization mapping](VISUALIZATION.md) defines the live/final/animated views. The replay uses recorded data, offers scenario/task/arm controls and a time cursor, and labels scripted versus model evidence. Historical v2 has no full state telemetry; its replay says so.
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/immune-response-v3/tests -v
-python3 researchers/vishesh/notes/immune-response-v3/src/runner.py --stage engineering --backend scripted --out /tmp/immune-v3-unique
+python3 -m unittest discover -s 5-experiments/studies/vishesh/immune-response-v3/tests -v
+python3 5-experiments/studies/vishesh/immune-response-v3/src/runner.py --stage engineering --backend scripted --out /tmp/immune-v3-unique
 # matplotlib and Pillow required only for rendering:
-python3 researchers/vishesh/notes/immune-response-v3/src/visualize.py /tmp/immune-v3-unique /tmp/immune-v3-visuals --world benign_learning --task 6600
+python3 5-experiments/studies/vishesh/immune-response-v3/src/visualize.py /tmp/immune-v3-unique /tmp/immune-v3-visuals --world benign_learning --task 6600
 ```
 
 Use a fresh output path; the runner refuses overwrite. Paid execution requires the dedicated-machine and budget gates. See [historical v2](../actual-experiments/immune-response/README.md); no earlier run is overwritten or relabeled by v3.

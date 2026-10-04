@@ -7,16 +7,16 @@ Owner: vishesh/codex-experiments. Started 2026-10-03. These implementations turn
 | [External influence](external-influence/README.md) | Does checking decision-critical evidence improve fictional provider selection? | Independent assessments, discussion, same-source criticism, random checks, focused checks and a visible-root baseline | Provider truth, exposure packets, utility rule, final aggregation, five agents | Harmful target choice, correct choice, regret, abstention, eligibility and changed votes |
 | [Immune response](immune-response/README.md) | Does shared-state restoration add value after private repair? | N, Q00, Q10, Q01, Q11 and clean reference | Eight actors, paired world/checkpoint, 24 rounds, incident window and recurrence/update timing | Useful completion, mock harm, recurrence, update acceptance, retained knowledge and recovery censoring |
 
-The original sixteen briefs and 78 question extensions are not separate implementation commitments. Avalon is being published independently as [existing tooling](../../../../tooling/avalon-swarm/README.md); it will be integrated if included in the confirmed launch set.
+The original sixteen briefs and 78 question extensions are not separate implementation commitments. Avalon is being published independently as [existing tooling](../../../toolkit/avalon-swarm/README.md); it will be integrated if included in the confirmed launch set.
 
 ## Run locally
 
 From the repository root, Python 3.10+ standard library only:
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/actual-experiments/tests -v
-python3 researchers/vishesh/notes/actual-experiments/src/runner.py external-influence local --stage S0 --out /tmp/influence-unique-run
-python3 researchers/vishesh/notes/actual-experiments/src/runner.py immune-response local --stage S0 --out /tmp/immune-unique-run
+python3 -m unittest discover -s 5-experiments/studies/vishesh/actual-experiments/tests -v
+python3 5-experiments/studies/vishesh/actual-experiments/src/runner.py external-influence local --stage S0 --out /tmp/influence-unique-run
+python3 5-experiments/studies/vishesh/actual-experiments/src/runner.py immune-response local --stage S0 --out /tmp/immune-unique-run
 ```
 
 Use a new output directory every time. `plan` prints the frozen assignment. `register`, `queue`, `work` and `status` use the preinstalled `swarm_report` module on the claimed fleet server. The bounded worker exits after one queued batch. Results include an assignment manifest written before execution, per-arm outcomes, policy request/response audit events, failures, summaries and a report. Uploads are compressed and split below the hub proxy limit, with hashes in `artifact-index.json`.
@@ -33,6 +33,6 @@ The native model is `claude-haiku-4-5-20251001`, matching dmarz's latest discuss
 
 ## Provenance and limitations
 
-Built from [the worker template](../../../../templates/experiment-worker/README.md), [the published methods toolkit](../../../../tooling/agent-experiments/README.md), and dmarz's [discussion-dose deployment](../../../dmarz/notes/discussion-dose/DEPLOYMENT.md). Study-specific amendments explicitly narrow the much larger proposed designs. The current external-influence fixture is a controlled-content experiment; it cannot establish organic search exposure or live SEO effectiveness. The immune study is Stage A oracle restoration, not a deployable detector or a biological claim. Scripted outputs describe deterministic policies; real model outputs are labeled separately.
+Built from [the worker template](../../../../lab/templates/experiment-worker/README.md), [the published methods toolkit](../../../toolkit/agent-experiments/README.md), and dmarz's [discussion-dose deployment](../../dmarz/discussion-dose/DEPLOYMENT.md). Study-specific amendments explicitly narrow the much larger proposed designs. The current external-influence fixture is a controlled-content experiment; it cannot establish organic search exposure or live SEO effectiveness. The immune study is Stage A oracle restoration, not a deployable detector or a biological claim. Scripted outputs describe deterministic policies; real model outputs are labeled separately.
 
 All actions remain in fictional task worlds. Provider selection does not purchase or contact a provider. Deployment requests inside the immune world are mock ledger entries, separate from the real worker deployment.

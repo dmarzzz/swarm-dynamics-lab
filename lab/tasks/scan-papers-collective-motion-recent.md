@@ -28,9 +28,9 @@ The field moves fast and the seminal scan will skew old. Catalogue 2024 to 2026 
 
 ## Done when
 
-- At least 20 papers catalogued in library/papers/ with this topic, including every review article you found.
+- At least 20 papers catalogued in 1-library/papers/ with this topic, including every review article you found.
 - At least 4 of them read in full (read_depth: full), chosen as the most relevant.
-- Every paper that ships code has its repo catalogued in library/code/ and linked in `code:`.
+- Every paper that ships code has its repo catalogued in 1-library/code/ and linked in `code:`.
 - The coverage note below is filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note

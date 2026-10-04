@@ -1,0 +1,63 @@
+{
+  "cheapest_config_at_80pct_acceptable": {
+    "N": 1,
+    "acceptable": 0.864286,
+    "architecture": "generalist",
+    "avoidable_deferral": 0.0,
+    "calls": 2,
+    "chair": "summary_only",
+    "checkers": 0,
+    "decisions": 420,
+    "harmful_target": 0.057143,
+    "mix": "all_careful",
+    "p_conform": 0.0,
+    "usd_per_decision": 0.012
+  },
+  "experiment": "E6 unit accounting",
+  "independent_n": {
+    "ci_rule": "every CI in this study bootstraps over the 24 roots, never over the 672 decisions",
+    "decisions_are_not_independent_because": "all 28 decisions inside a root share one buyer profile, one candidate set and one truth table; the two arms additionally share the analyst prefix, so they are paired, not independent.",
+    "independent_n": 24,
+    "independent_unit": "root",
+    "logical_outcomes_per_root": 14
+  },
+  "label": "SCRIPTED SIMULATION \u2014 NOT MODEL EVIDENCE",
+  "power_at_this_n": {
+    "acceptable_delta_0.20_min_roots": 12,
+    "acceptable_delta_0.30_min_roots": 6,
+    "harmful_target_delta_0.20_min_roots": 12,
+    "harmful_target_delta_0.30_min_roots": 6
+  },
+  "recommended_config": {
+    "N": 1,
+    "acceptable": 0.942857,
+    "architecture": "generalist",
+    "avoidable_deferral": 0.0,
+    "calls": 3,
+    "chair": "summary_only",
+    "checkers": 1,
+    "decisions": 420,
+    "harmful_target": 0.042857,
+    "mix": "all_careful",
+    "p_conform": 0.0,
+    "usd_per_decision": 0.0145
+  },
+  "root_count_rule": "smallest tested R at which both metrics reach 0.90 power for a Delta = 0.20 paired effect (E3)",
+  "run_shape": {
+    "arms_per_cell": 2,
+    "calls_per_decision_standalone": 3,
+    "cells_total": 336,
+    "chair_calls_per_cell": 2,
+    "decisions_per_root": 28,
+    "decisions_total": 672,
+    "families_per_root": 7,
+    "model_calls_total": 1344,
+    "roots": 24,
+    "shared_prefix_calls_per_cell": 2,
+    "usd_per_decision_standalone": 0.0145,
+    "usd_per_decision_with_shared_prefix": 0.01125,
+    "usd_total": 7.56,
+    "worlds_per_family": 2
+  },
+  "seed": 20261004
+}

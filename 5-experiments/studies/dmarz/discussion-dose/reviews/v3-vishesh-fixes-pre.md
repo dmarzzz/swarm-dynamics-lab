@@ -22,8 +22,8 @@ Keep the existing six development worlds, 36 memory fixtures, three agents, inde
 Commit code and this assessment before the separate full saved-output check. The run manifest freezes source hashes. Run the extended v3 selftest and existing v1/v2 regression suite, then:
 
 ```sh
-python3 researchers/dmarz/notes/discussion-dose/src/benchmark_v3.py run --output data/discussion-v3/vishesh-fixes-a1
-python3 researchers/dmarz/notes/discussion-dose/src/benchmark_v3.py audit data/discussion-v3/vishesh-fixes-a1
+python3 5-experiments/studies/dmarz/discussion-dose/src/benchmark_v3.py run --output data/discussion-v3/vishesh-fixes-a1
+python3 5-experiments/studies/dmarz/discussion-dose/src/benchmark_v3.py audit data/discussion-v3/vishesh-fixes-a1
 ```
 
 One local worker, scripted evidence policy, maximum 636 policy calls for the separate run, zero network/model calls or spend, zero retries. Unit tests also use bounded scripted fixtures and mocked HTTP only. Stop if invariants fail, preserve output and document any repair before another attempt. No original results or reviews will be overwritten. Successful replay requires all 96 assigned cases, 636 matching requests, complete hash chains and recomputed scores/summary. Passing software tests does not set model-qualified or independently reviewed.

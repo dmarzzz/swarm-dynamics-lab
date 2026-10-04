@@ -37,7 +37,7 @@ Registry/dispatch: **manual exploratory design; not registered as a runnable ada
 | Operation | Current support |
 |---|---|
 | Inspect design | Read this setup and linked package |
-| Validate shared preparation | `python3 -m unittest discover -s researchers/vishesh/notes/ai-village-replay-2026-10-04/tests -v`; software dependencies only |
+| Validate shared preparation | `python3 -m unittest discover -s 5-experiments/studies/vishesh/ai-village-replay-2026-10-04/tests -v`; software dependencies only |
 | Prepare Telephone stage | Unsupported until coherent annotated corpus and native contract exist |
 | Dispatch / resume | Unsupported; no model/worker or preserved interrupted attempt |
 | Analyze outcomes | No outcomes; future raw-to-summary pipeline must implement the frozen rubric |
@@ -124,3 +124,7 @@ Direct owner scientific direction led to a shared-handoff action-consequence tes
 [Reviewed result](native/b4r1/results/POST-MORTEM.md): source-restoredR9/9correct in each fresh block versus P3/9and4/9; P7/18 versusR18/18 overall, nine authored worlds nested in three recipes. Both readers received the same naturally produced handoff. No false authorization occurred: all six allowed releases and five explicit denials became P abstentions; all six truly unknown worlds were correctly abstained on. All36reader outputs and18finalhandoffs audited, with10earlierwriter responses inspected and all90lineages replayed. Policy omission/scope confusion, extra requirements and inherited-evidence skepticism all contribute plausible explanations; no phrase-level mediation or real-action harm claim. Scoped repeated practical baseline achieved, natural-data generalization untested.
 
 **FINISH this bounded diagnostic; no automatic successor.** Original cumulativeUSD0.673196669, zero unknown charges/reservations. Includes failedB4USD0.001976, B4R1APIUSD0.201306 and whole sharedhostingUSD0.019028159 once. Workers/relay/tunnel stopped and claim released. Public raw traces, semantic audit, run-quality assessment and offline replay accompany the authored review; generic operations finalize count0 is not the actual92call count. B3 model authority was withdrawn unstarted; Sol50 remains separate and unrun.
+
+## Sol50R1 preparation — 2026-10-04 UTC
+
+The larger fifty-agent objective is now authorized; concrete plan resolution and finite portfolio allocation proceed through delegated PI. [Sol50R1 plan](native/sol50r1/PLAN.md) replaces the old unrun Sol50 execution proposal with50fresh serial prose-only writers,24fresh checkpoint readers and3qualifiers,77calls maximum. Questions and answers do not flow down the writer chain. [Pre-run assessment](native/sol50r1/PRE-RUN.md) records B4R1 trace diagnosis, case/controller controls,11passing offline tests and conservative copy-fit/budget revision. Additional maximum3.877008077USD including0.25hosting, prior0.673196669USD carried forward, study ceiling50USD. No native calls or allocation yet; next action concrete named PI funding then refreshed admission/qualification. Historical completed stages and immutable plans remain intact.

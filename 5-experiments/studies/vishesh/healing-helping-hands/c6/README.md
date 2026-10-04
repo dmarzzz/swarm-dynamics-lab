@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-regrowth-docs; source `204cfc5e` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-regrowth-docs; source `204cfc5e` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — This fixed synthetic Haiku–Jev agreement policy failed its accuracy, matched-control and total-cost utility conjunction. Basis: Complete qualified paired tapes and reconstructed arithmetic; narrow authored grammar,12ambiguousSUPPORTcells and no independent semantic adjudication limit accuracy/generalization claims.
 - **sample_size_summary:** 12 authored family blocks,432/432 nested main cases and1,296calls;60qualificationcases separate. Two earlier interface failures preserved. No independent real-document sample.

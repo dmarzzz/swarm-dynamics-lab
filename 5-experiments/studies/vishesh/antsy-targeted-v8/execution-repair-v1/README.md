@@ -15,7 +15,7 @@ The wrapper is a development component, **not an admitted experiment launcher**.
 Run the software tests from the repository root:
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/antsy-targeted-v8/execution-repair-v1 -p 'test_*.py' -v
+python3 -m unittest discover -s 5-experiments/studies/vishesh/antsy-targeted-v8/execution-repair-v1 -p 'test_*.py' -v
 ```
 
 No warm-up, altered model, resize or additional receipt is hidden in the tests. All original `src/` and `results/Q0-attempt-1/` files remain unchanged by this repair. [SETUP.md](../SETUP.md) remains the single authoritative study setup record.

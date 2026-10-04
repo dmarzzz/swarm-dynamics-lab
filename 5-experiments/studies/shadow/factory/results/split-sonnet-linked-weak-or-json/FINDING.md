@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by shadow/sol-factory; source `666aa2f4` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by shadow/sol-factory; source `666aa2f4` ([registry](../../../../../evidence-metadata.json), [rubric](../../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — anthropic/claude-sonnet-4.6, ring2 internal links, pass=0.9, checks=12: No interpretable treatment contrast; qualification/transport stopped before complete paired outcomes. Basis: Transport or clean-screen failure prevents treatment inference. All failed and unstarted outcomes are retained.
 - **sample_size_summary:** Observed: 0/48 complete paired synthetic roots; main 0/192 valid; all stages 0/204 valid, 4 failed, 200 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.
@@ -17,7 +17,7 @@ Does unreliable verification reverse the Sonnet identity-splitting contrast?
 
 ## Method and results
 
-Frozen one-file [spec](../../specs/split-sonnet-linked-weak-or-json.json), parent simulator and prompt from [Dmarz's split study](../../../../dmarz/notes/sybil-split-opus/README.md). Model: `anthropic/claude-sonnet-4.6`, temperature 0, OpenRouter, Anthropic-only provider, reasoning disabled; separately preregistered paid attempt. Internal links: `ring2`; attacker pass probability 0.9; 12 checks.
+Frozen one-file [spec](../../specs/split-sonnet-linked-weak-or-json.json), parent simulator and prompt from [Dmarz's split study](../../../../dmarz/sybil-split-opus/README.md). Model: `anthropic/claude-sonnet-4.6`, temperature 0, OpenRouter, Anthropic-only provider, reasoning disabled; separately preregistered paid attempt. Internal links: `ring2`; attacker pass probability 0.9; 12 checks.
 
 Primary: (k=27 minus k=1 rare-skill wrong fraction under degree) minus the same under coverage. **unavailable**. Complete paired roots: 0/48, equally weighted graph-family means. All-assigned worst-case bounds: [-2.0, 2.0]. Bounds cover missing calls, not sampling uncertainty.
 

@@ -17,5 +17,5 @@ The first attempt used $0 paid spend. New paid requests will begin only after th
 Exact launch:
 
 ```sh
-nice -n 10 python3 researchers/shadow/factory/paid.py queue --watch
+nice -n 10 python3 5-experiments/studies/shadow/factory/paid.py queue --watch
 ```

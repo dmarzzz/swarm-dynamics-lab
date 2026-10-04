@@ -24,7 +24,7 @@ outputs:
 
 ## Goal
 
-Build an offline, reusable table adapter and CLI under researchers/shadow/notes/wild-askswarm/.
+Build an offline, reusable table adapter and CLI under 5-experiments/studies/shadow/wild-askswarm/.
 Compare lexical reuse, observed participation and identity coverage across collusion.wiki,
 SwarmTraces and this repository. Human-directed exploratory tooling, not a gated hypothesis test.
 No paid calls. Never commit source dataset rows. Missing actors or clocks stay missing.

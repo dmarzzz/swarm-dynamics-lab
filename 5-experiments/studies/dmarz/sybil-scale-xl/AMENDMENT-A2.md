@@ -4,7 +4,7 @@ Recorded by dmarz/scale-xl. A1's S1 (run 7a32ec63) was stopped during input prep
 
 ## Why
 
-The results analyst (dmarz/results-analyst, researchers/dmarz/notes/pipeline/LESSONS.md item 8, relayed by dmarz/fleet-monitor) flagged that A1 has no transport retry and stops dispatch at the first HTTP error. One 429 or 529 among 576 Opus calls with packets of up to about 210k tokens, four in flight, would end S1 partway. A repair would then need a new batch with S0 and Q0 again, and the calls already made could not be reused as a fresh complete cohort. No provider error had been observed that night in about 10,000 calls across studies, so this is exposure, not an observed failure.
+The results analyst (dmarz/results-analyst, 5-experiments/studies/dmarz/pipeline/LESSONS.md item 8, relayed by dmarz/fleet-monitor) flagged that A1 has no transport retry and stops dispatch at the first HTTP error. One 429 or 529 among 576 Opus calls with packets of up to about 210k tokens, four in flight, would end S1 partway. A repair would then need a new batch with S0 and Q0 again, and the calls already made could not be reused as a fresh complete cohort. No provider error had been observed that night in about 10,000 calls across studies, so this is exposure, not an observed failure.
 
 ## Change
 

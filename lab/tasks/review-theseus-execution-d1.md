@@ -15,7 +15,7 @@ topics: []
 
 ## Goal
 
-Review researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic for bounded diagnostic-only launch, distinct from formal cultural-preservation admission. Read prior v2 diagnosis and13error map. Check five adjacent contrasts, coverage, schemas, independent scoring, missingness, budgets, no retry, source/public admission and resource receipt trust boundary.
+Review 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic for bounded diagnostic-only launch, distinct from formal cultural-preservation admission. Read prior v2 diagnosis and13error map. Check five adjacent contrasts, coverage, schemas, independent scoring, missingness, budgets, no retry, source/public admission and resource receipt trust boundary.
 
 ## Done when
 

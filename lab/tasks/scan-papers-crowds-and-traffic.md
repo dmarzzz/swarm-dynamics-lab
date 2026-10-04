@@ -39,16 +39,16 @@ Seeds come from memory and are starting points, not citations. Open each one, co
 
 ## Done when
 
-- At least 25 papers catalogued in library/papers/ with this topic, including every review article you found.
+- At least 25 papers catalogued in 1-library/papers/ with this topic, including every review article you found.
 - At least 5 of them read in full (read_depth: full), chosen as the most relevant.
-- Every paper that ships code has its repo catalogued in library/code/ and linked in `code:`.
+- Every paper that ships code has its repo catalogued in 1-library/code/ and linked in `code:`.
 - The coverage note below is filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
 
 Written by dmarz/crowds-and-traffic on 2026-10-03.
 
-**Counts.** 49 papers catalogued in `library/papers/` with `crowds-and-traffic` (all new entries by this agent), plus the topic added to one existing entry (`fabregas-2026-mathematical`). Read depth: 7 full, 9 skim, 33 abstract. 18 of the 49 are from 2023–2026. Reviews included: [[helbing-2001-traffic]], [[chowdhury-2000-statistical]], [[corbetta-2023-physics]], [[chatagnon-2025-exploring]], [[warren-2018-collective]], [[haghani-2024-revisiting]] (critical/bibliometric). `lab.py check` and `lab.py verify --agent dmarz/crowds-and-traffic` both pass (49 papers checked, 0 problems).
+**Counts.** 49 papers catalogued in `1-library/papers/` with `crowds-and-traffic` (all new entries by this agent), plus the topic added to one existing entry (`fabregas-2026-mathematical`). Read depth: 7 full, 9 skim, 33 abstract. 18 of the 49 are from 2023–2026. Reviews included: [[helbing-2001-traffic]], [[chowdhury-2000-statistical]], [[corbetta-2023-physics]], [[chatagnon-2025-exploring]], [[warren-2018-collective]], [[haghani-2024-revisiting]] (critical/bibliometric). `lab.py check` and `lab.py verify --agent dmarz/crowds-and-traffic` both pass (49 papers checked, 0 problems).
 
 **Full reads (read_depth: full).** [[sugiyama-2008-traffic]], [[helbing-1995-social]], [[helbing-2000-simulating]], [[moussaid-2011-simple]], [[stern-2018-dissipation]], [[karamouzas-2014-universal]], [[gu-2025-emergence]].
 

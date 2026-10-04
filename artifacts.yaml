@@ -805,29 +805,29 @@ artifacts:
           the live experiment results from https://swarm-live.pages.dev/#/ and do a review of our research program. say where
           it's strong and where it's weak and give an honest assessment of our results right now
         ingredients:
-          - /Users/halcyon/swarm-lab/src/pi-review-2026-10-04.py
-          - /Users/halcyon/swarm-lab/data/pi-review-2026-10-04/live-state.json
-          - /Users/halcyon/swarm-lab/5-experiments/studies/dmarz/discussion-dose/V2-ISSUE-REVIEW.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/dmarz/discussion-dose/reviews/pc-H4-a1-post.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/dmarz/discussion-dose/reviews/v2-s0-H4-post.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/dmarz/market-split-api/reviews/q0-002-post.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/dmarz/market-split/reviews/s1-fleet-001-post.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/dmarz/sybil-specialists-api/README.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/dmarz/sybil-specialists-api/reviews/s1-001-post.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/vishesh/adaptive-quorum-v2/repair-v3/README.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/vishesh/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/vishesh/antsy-verification-v4/README.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/vishesh/antsy-verification-v4/reviews/S0-post.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/vishesh/external-influence-v2/reviews/quality-post.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/vishesh/healing-helping-hands/README.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/vishesh/immune-response-v3/README.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/vishesh/immune-response-v3/REVIEW.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/vishesh/influence-swarms/README.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/vishesh/regrowth-200/README.md
-          - /Users/halcyon/swarm-lab/5-experiments/studies/vishesh/swarm-of-theseus/reviews/S1-a1-pre.md
-          - /Users/halcyon/swarm-lab/lab/templates/experiment-worker/README.md
-          - /Users/halcyon/swarm-lab/5-experiments/toolkit/agent-experiments/examples/collective-sensing/RESULTS.md
-          - /Users/halcyon/swarm-lab/5-experiments/toolkit/avalon-swarm/RESULTS.md
+          - src/pi-review-2026-10-04.py
+          - data/pi-review-2026-10-04/live-state.json
+          - 5-experiments/studies/dmarz/discussion-dose/V2-ISSUE-REVIEW.md
+          - 5-experiments/studies/dmarz/discussion-dose/reviews/pc-H4-a1-post.md
+          - 5-experiments/studies/dmarz/discussion-dose/reviews/v2-s0-H4-post.md
+          - 5-experiments/studies/dmarz/market-split-api/reviews/q0-002-post.md
+          - 5-experiments/studies/dmarz/market-split/reviews/s1-fleet-001-post.md
+          - 5-experiments/studies/dmarz/sybil-specialists-api/README.md
+          - 5-experiments/studies/dmarz/sybil-specialists-api/reviews/s1-001-post.md
+          - 5-experiments/studies/vishesh/adaptive-quorum-v2/repair-v3/README.md
+          - 5-experiments/studies/vishesh/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md
+          - 5-experiments/studies/vishesh/antsy-verification-v4/README.md
+          - 5-experiments/studies/vishesh/antsy-verification-v4/reviews/S0-post.md
+          - 5-experiments/studies/vishesh/external-influence-v2/reviews/quality-post.md
+          - 5-experiments/studies/vishesh/healing-helping-hands/README.md
+          - 5-experiments/studies/vishesh/immune-response-v3/README.md
+          - 5-experiments/studies/vishesh/immune-response-v3/REVIEW.md
+          - 5-experiments/studies/vishesh/influence-swarms/README.md
+          - 5-experiments/studies/vishesh/regrowth-200/README.md
+          - 5-experiments/studies/vishesh/swarm-of-theseus/reviews/S1-a1-pre.md
+          - lab/templates/experiment-worker/README.md
+          - 5-experiments/toolkit/agent-experiments/examples/collective-sensing/RESULTS.md
+          - 5-experiments/toolkit/avalon-swarm/RESULTS.md
           - https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md
           - https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/study.py
           - https://swarm-live.pages.dev/#/r/immune-response%2F4deeb0f2
@@ -838,11 +838,11 @@ artifacts:
           - https://swarm-live.pages.dev/#/x/regrowth-200
           - https://swarm-live.pages.dev/#/x/swarm-of-theseus
           - https://swarm-live.pages.dev/#/x/template-quorum
-          - /Users/halcyon/swarm-lab/3-synthesis/pre-experiment-research.md
-          - /Users/halcyon/swarm-lab/3-synthesis/fork-merge-questions.md
-          - /Users/halcyon/swarm-lab/1-library/INDEX.md
-          - /Users/halcyon/swarm-lab/2-surveys/llm-agent-swarms.md
-          - /Users/halcyon/swarm-lab/data/pi-review-2026-10-04/status-followup.json
+          - 3-synthesis/pre-experiment-research.md
+          - 3-synthesis/fork-merge-questions.md
+          - 1-library/INDEX.md
+          - 2-surveys/llm-agent-swarms.md
+          - data/pi-review-2026-10-04/status-followup.json
           - https://swarm-live.pages.dev/api/state
           - https://lamport.azurewebsites.net/pubs/byz.pdf
         commit: 96d3f96cb5d91d4b6ab204dbfa18b0996d68bb15-dirty

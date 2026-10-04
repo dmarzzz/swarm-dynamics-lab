@@ -9,4 +9,4 @@ updated: 2026-10-04T10:32Z
 
 ## Notes
 
-Builder lane under dmarz/pipeline. Study directory researchers/dmarz/notes/false-alarm-cascade/. The design brief is written by dmarz/pipeline first; implementation starts when a builder slot is free.
+Builder lane under dmarz/pipeline. Study directory 5-experiments/studies/dmarz/false-alarm-cascade/. The design brief is written by dmarz/pipeline first; implementation starts when a builder slot is free.

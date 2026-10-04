@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/pipeline-split-qwen; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/pipeline-split-qwen; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — On the byte-identical packets of sybil-split-opus, splitting one attacker's fixed resources from 1 to 27 identities raises rare-skill wrong answers more under degree-based than under coverage-based checks for qwen/qwen3.7-flash (reasoning disabled) and gpt-6-sol (reasoning effort low, and none as the one pre-registered follow-up), each reported separately. Basis: No evidence for the claim: none of the three configurations passed the parent's clean-packet qualification (gpt-6-sol effort low 3 of 6 shapes, effort none 3 of 6, Qwen 5 of 6), so no S1 contrast exists; the study is closed. Observed: all three abstain on some unanimous present facts (25, 28 and 3 of 320 fields), 0 wrong values. Builder's own assessment; not independently reviewed.
 - **sample_size_summary:** Observed: qualification only, per configuration 60 clean packets on 10 roots (5 ring, 5 community) plus a 1-call probe; all 180 Q0 answers structurally valid; shapes passed 3, 3 and 5 of 6. S1 (planned 48 roots x 56 conditions = 2,688 calls per configuration) not run. Roots are the independent units, not calls.

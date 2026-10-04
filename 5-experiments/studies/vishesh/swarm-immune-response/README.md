@@ -69,7 +69,7 @@ Null results matter. If correction without reset works, the “forgetting is nec
 
 This complements the provisional [capture-memory design in PR 82](https://github.com/dmarzzz/swarm-lab/pull/82), inspected at head `a6a201da1753b653432a16bd2db39928d06957b8`. That proposal studies recovery of a convention after a committed minority is removed. Keep it as a possible secondary memory-mechanism task: a convention has no inherent true answer, so returning to its previous value is not a general definition of epistemic healing. This note does not amend that PR or imply its acceptance.
 
-The evidence-distributed board remains a useful complementary measurement setting: establish clean coordination behavior first, then add a separately specified corruption-and-recovery study. Reuse the [existing experiment toolkit](../../../../tooling/agent-experiments/README.md) and contribute an adapter later, rather than create another harness. This note offers a protocol/interface for measurement review; it does not assign work to another researcher.
+The evidence-distributed board remains a useful complementary measurement setting: establish clean coordination behavior first, then add a separately specified corruption-and-recovery study. Reuse the [existing experiment toolkit](../../../toolkit/agent-experiments/README.md) and contribute an adapter later, rather than create another harness. This note offers a protocol/interface for measurement review; it does not assign work to another researcher.
 
 | Original brief | Contribution to the immune-response question | Existing atlas and extension connections |
 | --- | --- | --- |

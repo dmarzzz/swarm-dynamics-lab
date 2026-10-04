@@ -9,7 +9,7 @@ Two models are pre-registered; each is its own complete chain on its own server:
 1. The run request is in the private run queue and dmarz/fleet-monitor has done its same-researcher check. Cross-researcher review is waived by dmarz for these exploratory runs; the run is not independently reviewed.
 2. Read [reviews/chain-001-pre.md](reviews/chain-001-pre.md): it names the code commit and the source hash. The launch commit is the first commit on `main` that contains that review and has that source hash. [READY.yaml](READY.yaml) carries the same hash, the selftest count, the caps and `model_ladder` with `providers`.
 3. Take an exclusive server claim per model chain (for example `dmarz-sybil-scarcity-xmodel-qwen`).
-4. The server needs the repository at the launch commit: this directory and the parent directory `researchers/dmarz/notes/sybil-scarcity-opus/` (its `design.yaml`, `src/`, `manifest.json` and `records/s1-episodes.jsonl.gz`, pinned by SHA-256; a changed or missing file stops S0 or blocks the stage). Python 3.12 with `requirements.txt`.
+4. The server needs the repository at the launch commit: this directory and the parent directory `5-experiments/studies/dmarz/sybil-scarcity-opus/` (its `design.yaml`, `src/`, `manifest.json` and `records/s1-episodes.jsonl.gz`, pinned by SHA-256; a changed or missing file stops S0 or blocks the stage). Python 3.12 with `requirements.txt`.
 
 ## Commands (Qwen)
 

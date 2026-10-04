@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessment dates and assessors shown per cohort; source snapshots shown per cohort ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessment dates and assessors shown per cohort; source snapshots shown per cohort ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 **Discussion and memory benchmark v3** (`discussion-dose-v3`)
 Source: `9781739c`.
@@ -31,7 +31,7 @@ An implemented, local-first benchmark for **SEC-47: where does the fork-and-retu
 
 **Release scope:** executable benchmark and model adapter. The [first real-model qualification is complete](RESULTS-Q0.md): 636 calls, 96 cases, $4.387237, zero invalid outputs, but failed clean competence (2/6 full-evidence and 1/6 reports-only). Independent instrument review subsequently passed; this model configuration is not qualified for expansion. [Authorization](OPERATOR-AUTHORIZATION.md) preserves that distinction; the confirmation holdout stays closed. This is a focused synthetic benchmark, not an exhaustive security benchmark or a validated real-world task suite. Formal hypothesis and S2 gates remain unchanged.
 
-**Review repairs, 2026-10-04:** [Vishesh's findings are addressed in the successor](VISHESH-REVIEW-RESPONSE.md): stricter assignment/allocation checks, explicit supported versus unsupported parent outcomes, and regression coverage for the existing matched private-work design. Repair-time verification: 84 distinct checks and 636 scripted requests replayed. [Updated evidence](review-fixes-validation.json) supplements the original release record. The [completed independent review](../../../../vishesh/notes/discussion-benchmark-v3-review/REVIEW.md) matches all 15 runtime hashes; [Q0 results](RESULTS-Q0.md) separately report failed model qualification.
+**Review repairs, 2026-10-04:** [Vishesh's findings are addressed in the successor](VISHESH-REVIEW-RESPONSE.md): stricter assignment/allocation checks, explicit supported versus unsupported parent outcomes, and regression coverage for the existing matched private-work design. Repair-time verification: 84 distinct checks and 636 scripted requests replayed. [Updated evidence](review-fixes-validation.json) supplements the original release record. The [completed independent review](../../../vishesh/discussion-benchmark-v3-review/REVIEW.md) matches all 15 runtime hashes; [Q0 results](RESULTS-Q0.md) separately report failed model qualification.
 
 ## Next diagnostic and cloud operation
 
@@ -42,9 +42,9 @@ The [completed D1 comparison](RESULTS-D1.md) used 120 calls for $0.754780 with n
 Python 3.10+ standard library only. Use Python 3.12 for the frozen Q0 exact-summary audit; [the post-mortem](../reviews/v3-q0-a1-post.md) explains cross-version float aggregation differences. From the repository root:
 
 ```sh
-PYTHONPATH=researchers/dmarz/notes/discussion-dose/src python3 -m bench_v3.selftest
-python3 researchers/dmarz/notes/discussion-dose/src/benchmark_v3.py run --output data/discussion-v3/my-first-run
-python3 researchers/dmarz/notes/discussion-dose/src/benchmark_v3.py audit data/discussion-v3/my-first-run
+PYTHONPATH=5-experiments/studies/dmarz/discussion-dose/src python3 -m bench_v3.selftest
+python3 5-experiments/studies/dmarz/discussion-dose/src/benchmark_v3.py run --output data/discussion-v3/my-first-run
+python3 5-experiments/studies/dmarz/discussion-dose/src/benchmark_v3.py audit data/discussion-v3/my-first-run
 ```
 
 Use a new output directory each time. Open `replay.html` in that directory for a stage-by-stage local replay. The runner also writes `manifest.json`, a hash-chained `events.jsonl`, `episodes.json`, and `summary.json`. All policy calls and terminal cases are recorded; validation/provider failures continue through the fixed assigned schedule without retrying. Abrupt termination leaves an incomplete journal and is rejected by the completion audit. Raw outputs belong in ignored `data/`, not public git.
@@ -141,4 +141,4 @@ Only then consider a separately frozen population contrast with fixed total evid
 
 ## Remaining scope limits
 
-Three agents, one merge, short numeric follow-ups and synthetic tasks are deliberate scope limits. There is no independently reviewed real-workflow adapter, adversarial instruction search, adaptive attacker, persistent retrieval, multi-generation inheritance, heterogeneous-model study, scaled-N implementation or exact-token-matched experiment. [V3-SOURCE-NOTES.md](../V3-SOURCE-NOTES.md) records online influences and what was actually inspected. [The review task](../../../../../tasks/review-discussion-benchmark-v3.md) is complete with a pass for the bounded instrument. It does not certify model competence or an expanded scientific sweep.
+Three agents, one merge, short numeric follow-ups and synthetic tasks are deliberate scope limits. There is no independently reviewed real-workflow adapter, adversarial instruction search, adaptive attacker, persistent retrieval, multi-generation inheritance, heterogeneous-model study, scaled-N implementation or exact-token-matched experiment. [V3-SOURCE-NOTES.md](../V3-SOURCE-NOTES.md) records online influences and what was actually inspected. [The review task](../../../../../lab/tasks/review-discussion-benchmark-v3.md) is complete with a pass for the bounded instrument. It does not certify model competence or an expanded scientific sweep.

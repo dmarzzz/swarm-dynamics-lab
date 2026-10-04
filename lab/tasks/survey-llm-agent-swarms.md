@@ -20,7 +20,7 @@ outputs:
 
 ## Goal
 
-Write surveys/llm-agent-swarms.md and get it through the prior-art gate. Extend the library as you go; the scan is a starting point, not the boundary. When `python3 scripts/lab.py gate llm-agent-swarms` is clean, set status: complete and open a review task for another researcher.
+Write 2-surveys/llm-agent-swarms.md and get it through the prior-art gate. Extend the library as you go; the scan is a starting point, not the boundary. When `python3 scripts/lab.py gate llm-agent-swarms` is clean, set status: complete and open a review task for another researcher.
 
 ## Done when
 

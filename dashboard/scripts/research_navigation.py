@@ -37,7 +37,10 @@ def build_navigation(root, atlas, hypotheses, topics, source=None):
 
     def refs(values, known, label):
         require(isinstance(values, list) and all(isinstance(x, str) for x in values), f'invalid {label}')
-        require(len(values) == len(set(values)) and set(values) <= set(known), f'unknown or duplicate {label}')
+        unknown = sorted(set(values) - set(known))
+        duplicates = sorted({value for value in values if values.count(value) > 1})
+        require(not unknown and not duplicates,
+                f'unknown or duplicate {label}: unknown={unknown}, duplicates={duplicates}')
         return values
 
     require(source.get('schema') == 'swarm-lab-research-navigation-v1', 'unsupported schema')
@@ -78,9 +81,9 @@ def build_navigation(root, atlas, hypotheses, topics, source=None):
         tagged_hypotheses.append({'id': ident, 'title': fm.get('title') or ident,
             'path': doc.rel, 'status': fm.get('status') or 'unspecified',
             # Hypothesis `topics` also carry free keywords; only library topic slugs link to a research area.
-            'topics': refs([t for t in dict.fromkeys(fm.get('topics') or []) if t in topics], topics, 'hypothesis topic'),
-            'focus_areas': refs(fm.get('focus_areas') or [], focus_ids, 'hypothesis focus area'),
-            'projects': refs(fm.get('project_briefs') or [], project_ids, 'hypothesis project')})
+            'topics': refs([t for t in dict.fromkeys(fm.get('topics') or []) if t in topics], topics, f'hypothesis topic in {doc.rel}'),
+            'focus_areas': refs(fm.get('focus_areas') or [], focus_ids, f'hypothesis focus area in {doc.rel}'),
+            'projects': refs(fm.get('project_briefs') or [], project_ids, f'hypothesis project in {doc.rel}')})
     return {'schema': source['schema'], 'owner': source['owner'], 'source_path': SOURCE,
             'reviewed_at': source['reviewed_at'],
             'mapping_stale': source['reviewed_atlas_sha256'] != atlas['content_sha256']

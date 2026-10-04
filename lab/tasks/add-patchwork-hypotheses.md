@@ -26,7 +26,7 @@ outputs:
 
 ## Goal
 
-User request: "can u add hypotheses relevant to this to the swarm research page and swarm labs github repo". Add the Patchwork Heist connections as explicitly unreviewed candidates in the existing question atlas. Preserve formal survey/review gates and existing IDs. Record source-access and pilot-evidence limits; publish through the existing dashboard workflow. Owns the Patchwork addendum under researchers/dmarz/notes/question-atlas/ and the necessary atlas source/render updates.
+User request: "can u add hypotheses relevant to this to the swarm research page and swarm labs github repo". Add the Patchwork Heist connections as explicitly unreviewed candidates in the existing question atlas. Preserve formal survey/review gates and existing IDs. Record source-access and pilot-evidence limits; publish through the existing dashboard workflow. Owns the Patchwork addendum under 5-experiments/studies/dmarz/question-atlas/ and the necessary atlas source/render updates.
 
 ## Done when
 

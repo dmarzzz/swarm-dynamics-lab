@@ -6,7 +6,7 @@ Six new papers passed lab.py verify against arXiv/Crossref with zero problems. L
 
 Formal survey remains in progress: gate reports 0/5 full paper reads and missing structured search/citation rounds. Narrative search families do not substitute for measured saturation. Social entries use short excerpts and paraphrases instead of full copyrighted thread archives. No model calls, experiment implementation or launch.
 
-After merging concurrent changes, 29 exporter tests passed again. A newly arrived malformed YAML field in researchers/dmarz/agents/private-control.md causes a repository-wide check error; it is upstream and outside this task. Research additions passed before that merge.
+After merging concurrent changes, 29 exporter tests passed again. A newly arrived malformed YAML field in lab/researchers/dmarz/agents/private-control.md causes a repository-wide check error; it is upstream and outside this task. Research additions passed before that merge.
 
 ## Second-pass reimagination
 
@@ -26,7 +26,7 @@ Created copy-ready Phantom Coast and Quorum handoff briefs; no new Codex tasks c
 
 Published RD-2 and a prospective correction to remove condition-order confounding in the random control. Added research/X source mapping without duplicate catalogue entries; direct X refresh returned 403. Implemented strict frozen-request relay, one transactional budget ledger, remote worker, response caching with paired-policy interpretation, all-assigned accounting and measured PNG/GIF outputs. Forty-nine offline checks pass, including fake-provider integration; no native calls. Registered right-dissenter on Swarm Live, verified the immutable plan via public_plan.py and browser. Dedicated sim-right-dissenter quote is USD 0.03571/hour; original owner infrastructure state and safe helper are available.
 
-Launch is pending the asynchronous USD 2 cap question (USD 1 API plus USD 1 infrastructure, six-hour bound). No machine was created or claimed and no paid call occurred. Authorization receipt /private/tmp/right-dissenter-authorization.json remains approved=false. Do not infer approval from elapsed time. Next: after explicit answer, provision from /private/tmp/swarm-actual-agentops using the guarded /private/tmp/right-dissenter-provision.py, merge exclusive claim, deploy frozen source, verify on-host tests/public plan, run Q0-A1, write its post-mortem, and advance to S1 only if qualification passes. All source and setup records are in researchers/vishesh/notes/dissent/. Formal review remains pending and S2 closed.
+Launch is pending the asynchronous USD 2 cap question (USD 1 API plus USD 1 infrastructure, six-hour bound). No machine was created or claimed and no paid call occurred. Authorization receipt /private/tmp/right-dissenter-authorization.json remains approved=false. Do not infer approval from elapsed time. Next: after explicit answer, provision from /private/tmp/swarm-actual-agentops using the guarded /private/tmp/right-dissenter-provision.py, merge exclusive claim, deploy frozen source, verify on-host tests/public plan, run Q0-A1, write its post-mortem, and advance to S1 only if qualification passes. All source and setup records are in 5-experiments/studies/vishesh/dissent/. Formal review remains pending and S2 closed.
 
 ## Right Dissenter native Q0 and allocation correction
 

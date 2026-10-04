@@ -8,7 +8,8 @@ status: proposed
 created: 2026-10-03
 surveys: [llm-agent-swarms]
 closest_prior: [de-marzo-2026-conformity, magistrali-2026-aligned, hishiki-2026-how, yang-2026-when, flint-2026-group]
-topics: [committed-minority, tipping, hysteresis, memory, reversibility]
+topics: [llm-agent-swarms]
+keywords: [committed-minority, tipping, hysteresis, memory, reversibility]
 ---
 
 <!-- PROPOSAL ONLY. Not accepted, not run. -->

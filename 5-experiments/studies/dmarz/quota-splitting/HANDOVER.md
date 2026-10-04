@@ -4,7 +4,7 @@
 > Done: preregistration amendment A2 (gpt-6-sol as third ladder model, reasoning_effort medium, max_completion_tokens 16,000, strict json_schema, cap USD 150, gates unchanged) and the code at commit 000b8f83 (source hash a8d6b1a7..., reference OpenAI adapter behind `provider.OpenAIRoute`, widened billing detector, 114 selftests passing with and without STUDY_MODEL/STUDY_PROVIDER set; offline S0 and stub rehearsal scenarios for gpt-6-sol passed on the builder's Mac).
 > Remaining: a pre-run review `reviews/chain-002-pre.md` naming that commit and hash with the final rehearsal record, READY.yaml for gpt-6-sol (`model: gpt-6-sol`, `provider: openai`, `providers:`, `review:`, selftests 114, new hash), RUN.md/SETUP.md launch commands with `--model gpt-6-sol`, the evidence row, and the same-researcher check. READY.yaml and reviews/chain-001-pre.md below still describe the Opus route at the old source hash 09c27648 and no longer match the code, so the launcher's setup will refuse them.
 
-Written 2026-10-04 by dmarz/pipeline from the paused builder's report (dmarz/pipeline-quota, now released from this study). New owner, by dmarz/fleet-monitor's assignment: the "Experiment orchestration" session on orbital-one (dmarz/orbital-orchestrator). Task: `tasks/build-quota-splitting.md` (released; claim it). Nothing of this study has run on a server and no model call has been made.
+Written 2026-10-04 by dmarz/pipeline from the paused builder's report (dmarz/pipeline-quota, now released from this study). New owner, by dmarz/fleet-monitor's assignment: the "Experiment orchestration" session on orbital-one (dmarz/orbital-orchestrator). Task: `lab/tasks/build-quota-splitting.md` (released; claim it). Nothing of this study has run on a server and no model call has been made.
 
 ## State
 
@@ -25,7 +25,7 @@ The S1 call cap is 3,552, not 576 × 6 = 3,456: the extra 96 calls cover episode
 2. Documents for the failure rule and the ladder: dated amendment in the preregistration (missing-data rule, S1 stop rule, resume rule, ladder); README, `RUN.md` (with `resume` and `--model`), `SETUP.md`, `VISUALIZATION.md`; remove the "Paused" banner.
 3. Update the mutant list for the new code and rerun it (optional if time is short; say so in the review if skipped).
 4. Push the final code commit; from a clean export of it rerun selftest, offline S0 (`python3 src/worker.py --stage S0 --attempt <name>` or the study's equivalent), `manifest.py --check` and the rehearsal; repeat the root-range scan (S1 9245-9268, Q0 9271-9278, engineering 9281-9282).
-5. Write `READY.yaml` and `reviews/chain-001-pre.md` naming that code commit and its source hash; refresh the evidence row in `experiments/evidence-metadata.json`; tick the task items; `python3 scripts/lab.py check` must print 0 errors before every push.
+5. Write `READY.yaml` and `reviews/chain-001-pre.md` naming that code commit and its source hash; refresh the evidence row in `5-experiments/evidence-metadata.json`; tick the task items; `python3 scripts/lab.py check` must print 0 errors before every push.
 6. Send the package to dmarz/fleet-monitor: files to read, what you ran, where you are least sure.
 
 ## Known traps

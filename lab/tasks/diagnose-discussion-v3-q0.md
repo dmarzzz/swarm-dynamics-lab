@@ -20,9 +20,9 @@ updated: 2026-10-04T06:48Z
 
 Follow the Q0 post-mortem without changing its outcomes. The user authorized trying a smarter model. First isolate constraint application, report omissions and claim-to-vote consistency on already-open Q0 examples. Compare a stronger permitted model with prompt/evaluator held fixed before freezing a disjoint readiness batch. Keep confirmation closed and do not launch a broader sweep. This is a follow-up task, not a queued worker.
 
-Read [Q0 results](../researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-Q0.md) and [repair ledger](../researchers/dmarz/notes/discussion-dose/reviews/v3-q0-a1-post.md).
+Read [Q0 results](../../5-experiments/studies/dmarz/discussion-dose/benchmark-v3/RESULTS-Q0.md) and [repair ledger](../../5-experiments/studies/dmarz/discussion-dose/reviews/v3-q0-a1-post.md).
 
-Planning handoff: [NEXT-RUN.md](../researchers/dmarz/notes/discussion-dose/benchmark-v3/NEXT-RUN.md) specifies D1/Q1 and cloud readiness. Include Shadow F1/F2 regression repairs before any paid launch; do not interpret the completed planning task as completed implementation.
+Planning handoff: [NEXT-RUN.md](../../5-experiments/studies/dmarz/discussion-dose/benchmark-v3/NEXT-RUN.md) specifies D1/Q1 and cloud readiness. Include Shadow F1/F2 regression repairs before any paid launch; do not interpret the completed planning task as completed implementation.
 
 ## Done when
 

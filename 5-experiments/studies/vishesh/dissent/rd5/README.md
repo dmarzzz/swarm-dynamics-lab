@@ -5,7 +5,7 @@ Current execution status: [completed native cycle](RUN-STATUS.md).
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-decision-models; source `cad818c9` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-decision-models; source `cad818c9` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — In this native pilot, a fixed late reserve scored 6/24 correct versus 8/24 for memory alone; four late-resume interpretation misses limit attribution to allocation alone. Basis: Q5 passed at ceiling, but its empty-history qualification did not transfer fully to H5 context. Six fixed authored roots, dependent decisions, one numeric domain and scripted ballots support a descriptive adverse result, not a general swarm or causal allocation claim. Saved-response replay and owning-agent arithmetic checks agree; they are not independent replication.
 - **sample_size_summary:** Observed: 6 fixed authored H5 roots, 18 policy trajectories, 72/72 dependent decisions and 36 valid calls; 0 missing. Separate Q5: 12 authored raw/card pairs, 24/24 correct calls. Historical Q5-A1: 24 unstarted, 0 calls. No population precision claim.

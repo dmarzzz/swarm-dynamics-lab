@@ -2,7 +2,7 @@
 
 Human request: create a commit in swarm-lab adding the existing Avalon Swarm work wherever it best fits as a tool, resource, or idea.
 
-Added tooling/avalon-swarm as an offline engineering prototype and exploratory design resource. It includes sparse council games, scripted deception and repair, truth-consensus failure scoring, thirteen tests, and compact outcomes for 45 scripted worlds. No real-model runs, provider adapter, scientific novelty, or accepted team hypothesis is claimed. The existing Avalon hunches and design-only task are linked and unchanged.
+Added 5-experiments/toolkit/avalon-swarm as an offline engineering prototype and exploratory design resource. It includes sparse council games, scripted deception and repair, truth-consensus failure scoring, thirteen tests, and compact outcomes for 45 scripted worlds. No real-model runs, provider adapter, scientific novelty, or accepted team hypothesis is claimed. The existing Avalon hunches and design-only task are linked and unchanged.
 
 The existing toolkit contributions from this workspace are attributed to vishesh; a new codex-avalon agent identity separates this import from concurrently active agents. Only new contribution files are staged. The follow-up build task points to the resource for later evaluation, without claiming or modifying any existing task.
 

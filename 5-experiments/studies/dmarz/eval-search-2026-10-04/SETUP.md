@@ -2,7 +2,7 @@
 
 Owner: dmarz. User request: “look for those”, referring to defensible existing evaluations before experiment planning.
 
-This is a targeted benchmark and evaluator review, not a new experimental study. See [review.json](review.json) and [fixture-audit.json](fixture-audit.json). The experiment setup runbook remains [EXPERIMENT-SETUP.md](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md).
+This is a targeted benchmark and evaluator review, not a new experimental study. See [review.json](review.json) and [fixture-audit.json](fixture-audit.json). The experiment setup runbook remains [EXPERIMENT-SETUP.md](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md).
 
 Reviewed primary papers, official code/data and selected worked examples for seven external benchmark families, plus three existing local instruments. Offline extracted scorer fixtures are software diagnostics, explicitly not model evidence. No benchmark was deployed, no paid model requests made and no servers claimed. Public example cases inspected here must be treated as exposed development material, never sealed confirmation cases.
 

@@ -1,0 +1,55 @@
+# Telephone Sol50R1: decisions after fifty handoffs
+
+Prospective larger-run revision, 2026-10-04 UTC. This supersedes the unrun Sol50 proposal for execution, without rewriting its immutable history. Scope: fifty distinct fresh-context GPT-6 Sol writers in one serial chain, plus separate evaluation and qualification agents. No experimental calls have occurred for this revision.
+
+## TLDR
+
+Test whether a richer operational packet remains usable after 50 natural prose handoffs. Ask three previously concealed deployment questions at depths1,10,25,50. At every checkpoint/question, two fresh readers receive the identical handoff; one additionally receives the original source. Primary endpoints are action correctness and source-restoration difference; secondary endpoints distinguish withheld releases, explicit denial becoming uncertainty, false authorization and preserved source meaning. One authored root and nested questions/checkpoints provide a descriptive depth trajectory, not population precision or an isolated causal depth effect.
+
+## Diagnosis and intended claim
+
+[B2](../b2/results/POST-MORTEM.md) retained prior answers despite loss of supporting meaning. [B4R1](../b4r1/results/POST-MORTEM.md) removed that endpoint ceiling: source-restored readers18/18correct versus7/18 handoff-only. All six legitimate releases were withheld; five explicit denials became unknown. The native audit found policy omission, added prerequisites and distrust of inherited evidence; important facts often survived. Those mechanisms remain unisolated. A fifty-hop extension asks whether the same practical distinction remains informative at substantially greater serial depth. It does not test whether fifty agents outperform fewer agents.
+
+Writers will receive no deployment question and output no decision field. Reader outputs never enter the writer chain. The source supplies a compact release policy and independently identifiable evidence, not an aggregate assertion that all prerequisites pass. This addresses B4's failed summary-only qualification fixture. Readers still may infer possible future questions from policy records; no claim of entirely unpredictable task discovery.
+
+Population/task scope: a single constructed multi-site engineering release dossier. Environment: text-only evidence transfer, no actual deployments or tools. Model: GPT-6 Sol through the qualified OpenRouter OpenAI standard route, no fallback. Intervention: restore source alongside the same naturally generated handoff. Comparator: handoff-only reader; exact controller and lossless copy offline. Endpoint: RELEASE/HOLD/INSUFFICIENT versus a frozen rule. Independent root count1; three coupled questions and four checkpoints are nested. Favorable evidence establishes a source-restoration benefit on this selected deep trajectory. It cannot establish real-world reliability, fifty-agent superiority, error recovery, a single-phrase mechanism or a population loss rate.
+
+## Cases and counterfactual controls
+
+Construct one packet with dated records: a corrected latency threshold, exact version/site authorization, independent acquisition identities with duplicate summaries, passed read-only checks, a complete rollback-tested site list, and a proposed monitor that is not a release prerequisite. Three site/version requests share the policy but have distinct decisive evidence: all prerequisites satisfied (RELEASE); an explicitly prohibited version despite passing checks/rollback (HOLD); missing authorization receipt despite passing checks/rollback (INSUFFICIENT). The exact policy says an established violation takes precedence over missing evidence. The policy does not require write-path testing, an active post-release monitor, or independent re-verification by the reader.
+
+This adds interacting correction/scope/dependence structure without deliberately deleting text or forcing compression. Require a lossless copy of all source prose to fit the output limit before admission. No length targets or hop-dependent hints. Validate each necessary-condition removal/change, record reordering and consistent renaming against an exact controller. Preserve supporting source spans and explicit critical-target list. Cases are inspected authored development material, not natural AI Village incidents or held-out transfer evidence. No case replacement after qualification or main outputs.
+
+## Agent and context contract
+
+Fifty writers each make one fresh request. Writer1 sees the source packet; writer2–50 see only the prior complete handoff and the same generic faithful-relay instruction. Response schema is exactly {handoff: nonempty prose}. No outer decision, hop ID, gold or evaluation question is carried. Three deployment questions are stored separately and presented only to fresh readers. Each reader returns exactly {answer: RELEASE|HOLD|INSUFFICIENT, evidence: nonempty explanation}. One enclosing JSON fence is allowed; malformed, truncated, extra-field, routing or billing failures stop collection. Semantic drift is retained, never repaired in flight.
+
+Evaluate four frozen checkpoints after the chain completes:1,10,25,50. For each of three questions, P receives checkpoint handoff and question; R receives identical handoff/question plus original source. Alternate P/R order by checkpoint/question. There are24reader calls, no reader feedback, no repeated sampling for favorable answers. Fifty writers plus24readers =74main calls; three full-source qualification readers add3, maximum77distinct physical requests. All contexts reset, no conversation continuation, outside retrieval, tools, shared memory or operator material.
+
+Pin exact served model/provider and metadata at admission. Proposed route openai/gpt-6-sol, provider OpenAI only, reasoning none,3072output tokens,8192conservative input bound (serialized request UTF-8 bytes plus1024), no temperature field if unsupported. Standard price ceiling2USD/M input and10USD/M output; verify current metadata before reservation. Preserve exact actor request/visible response, source and parent hashes, output IDs, usage, latency and errors. No hidden reasoning is requested or claimed.
+
+## Qualification and acceptance
+
+Three separate full-source reader checks using the same production packet schema and a renamed development fixture: one RELEASE, one HOLD, one INSUFFICIENT. All labels and source-grounded rationales must pass authored review before any main call. No main admission from parsing alone. Exact frozen source/controller labels, retained unknown evidence and the absence of extra prerequisites are checked. A native competence failure stops this attempt; preserve raw evidence, no automatic retry.
+
+Predeclared case acceptance: all three source labels correct under exact controller; one-condition mutations change or preserve labels as prescribed; full-copy reader input fits; actor serializers exclude gold/answers/operator context;50unique writer identities and24paired reader assignments; identical parent hash within every reader pair;77-call mocked end-to-end and ledger cap/failure tests pass. These checks establish instrument readiness, not native success.
+
+## Analysis and precision
+
+Primary table:3answers per arm/checkpoint (12perarm), paired action differences and exact answer labels. Report denominators, missing and invalid separately. Source-restored readers must be correct on all3questions at each checkpoint for that checkpoint's restoration contrast to meet the clean-competence screen; retain every failed screen descriptively, never exclude it silently. No repeated-block precision claim. No population confidence interval with one root; depth samples are correlated and the chain is one stochastic realization. A change from hop1 to50 is a trajectory observation, not isolated causal attribution to depth.
+
+Audit every reader explanation and all50writer handoffs against the frozen source targets; disclose same-operator annotation and ambiguous paraphrases. Separate reported fact retention from unsupported added requirements/verification status. Publish a checkpoint decision table and a50-hop retention/alteration trajectory with links to actual spans, never interpolate unobserved outcomes. Offline full-copy and rule-controller baselines establish answerability and a practical exact-storage alternative; they are not equal-cost native treatments. Source restoration adds information/tokens. No coordinated team comparator is needed because no collective superiority claim is made.
+
+Support: source restoration preserves decisions that handoff-only loses, on this trajectory. Null: both remain correct or both agree, with fidelity assessed separately. Adverse: false authorization or source-restored competence failure, fully retained. Technical stop: report available chain prefix and missing checkpoints; never rerun missing descendants automatically. Every outcome can finish the attempt.
+
+## Resources and stopping
+
+Original Telephone cumulative settled cost0.673196669USD, no unknown/reservations at B4R1 closeout; verify live original ledger before admission. Existing promising-study ceiling50USD remains a ceiling, not a new allocation. Prospective maximum77 x0.047104001USD =3.627008077USD API, plus at most0.25USD incremental host lifetime, total additional3.877008077USD; cumulative bound4.550204746USD. Named finite PI portfolio allocation pending. Old Sol50 funding figures are not reused. No paid scorer.
+
+One exclusively claimed existing Dmarz-account CPU host, one physical model request at a time. No fifty-machine fleet. Native deadline30minutes; at most60-minute claim lifetime within0.25USD, including setup/analysis occupancy. Fail before dispatch if source/runtime, route, public registration/readback, original ledger, approved account/state, idle worker or exclusive claim evidence is missing/stale. No calls within60seconds of deadline. One attempt per assignment, no retry/fallback/automatic successor; ambiguous calls retain full reservation until reconciled.
+
+## Publication and closeout
+
+Before dispatch publish immutable prospective plan and condition-specific TLDRs: three qualifiers, writer chain, and P/R at each checkpoint. Keep aggregate public overview results separate from prospective registration. Original ledger retained; reconcile assigned/started/valid/graded/missing, charges and host lifetime once. Preserve raw authored traces privately and publish only under applicable disclosure authorization. Complete operational finalize plus authored scientific/run-quality and case-quality reviews; generated scaffolds alone do not establish review. Stop worker/relay/tunnel, release claim, update dated GitHub and Swarm Live findings, verify actual public readbacks and report to the owning coordination tasks. No owner wording or private context enters public outputs or actors.
+
+Current disposition: PREPARE OFFLINE; owner-authorized larger-run objective, concrete finite plan/allocation resolved through delegated PI, then ordinary admission and qualification. No additional owner approval is sought for the already-authorized objective.

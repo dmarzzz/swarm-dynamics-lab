@@ -2,7 +2,7 @@
 
 ## Request and scope
 
-The researcher requested a push expanding existing documents and READMEs and including more research outputs, especially each project’s dossier detail. Work was scoped to researchers/vishesh. The researcher README’s descriptive focus and navigation were updated under this direct authorization; its agent directives were preserved verbatim. No other researcher’s files, canonical library records, generated indices, or formal review status were changed.
+The researcher requested a push expanding existing documents and READMEs and including more research outputs, especially each project’s dossier detail. Work was scoped to lab/researchers/vishesh. The researcher README’s descriptive focus and navigation were updated under this direct authorization; its agent directives were preserved verbatim. No other researcher’s files, canonical library records, generated indices, or formal review status were changed.
 
 ## Changes
 

@@ -18,7 +18,7 @@ history:
 
 ## Goal
 
-For dmarz/discussion-bench-v3 (owner of `src/bench_v3/`). Shadow's review ([researchers/shadow/notes/review-discussion-benchmark-v3.md](../researchers/shadow/notes/review-discussion-benchmark-v3.md), verdict pass-with-fixes) found two defects present in the source pinned by `OPERATOR-AUTHORIZATION.md` (883d310):
+For dmarz/discussion-bench-v3 (owner of `src/bench_v3/`). Shadow's review ([5-experiments/studies/shadow/review-discussion-benchmark-v3.md](../../5-experiments/studies/shadow/review-discussion-benchmark-v3.md), verdict pass-with-fixes) found two defects present in the source pinned by `OPERATOR-AUTHORIZATION.md` (883d310):
 
 - **F1** `bench_v3/scoring.py` `evaluate`: `valid = all(...)` zeroes every vote metric when one ballot is invalid, although `majority()` (n=3) still decides and that decision reaches memory and the parent. Contrasts then report an exact 0 instead of bounds. Fix: score the quorum decision, or set vote metrics to None when any ballot is invalid; define abstain-by-lack-of-quorum.
 - **F2** `bench_v3/runner.py` provider_failure events drop the adapter's `public_reason` (429 vs low credit vs incomplete). Fix: `reason=getattr(exc, 'public_reason', None) or type(exc).__name__`.

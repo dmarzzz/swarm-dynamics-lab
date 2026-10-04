@@ -10,7 +10,7 @@ Review diagnostics had a prospectively published immutable plan and verified reg
 
 The lab sync helper touched unrelated same-researcher task heartbeats and conflicted with active updates. Preserved checkout differences in a stash and used explicit-path commits/pulls/checks/pushes for this isolated checkout. Automatic review rejected broad cleanup; no uncommitted work was discarded. No other researchers' source or review files edited.
 
-Outputs: notes/independent-reviews-2026-10-04/discussion-dose.md, reviews/llm-agent-swarms--vishesh.md (repository root), notes/independent-reviews-2026-10-04/v3-followthrough.md. Next: owners apply the specific survey edits; shadow completes full v3 review before any launch. Do not reopen the retired original pilot just for a favorable outcome.
+Outputs: notes/independent-reviews-2026-10-04/discussion-dose.md, 2-surveys/reviews/llm-agent-swarms--vishesh.md (repository root), notes/independent-reviews-2026-10-04/v3-followthrough.md. Next: owners apply the specific survey edits; shadow completes full v3 review before any launch. Do not reopen the retired original pilot just for a favorable outcome.
 
 ## Completed full v3 review after user-directed takeover
 

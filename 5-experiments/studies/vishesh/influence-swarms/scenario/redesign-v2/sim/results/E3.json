@@ -1,0 +1,327 @@
+{
+  "curve": [
+    {
+      "baseline_rate": 0.85,
+      "delta": 0.1,
+      "effect_direction": "decrease",
+      "mean_observed_effect": 0.098657,
+      "metric": "acceptable",
+      "power": 0.315833,
+      "roots": 6
+    },
+    {
+      "baseline_rate": 0.85,
+      "delta": 0.1,
+      "effect_direction": "decrease",
+      "mean_observed_effect": 0.10066,
+      "metric": "acceptable",
+      "power": 0.410833,
+      "roots": 12
+    },
+    {
+      "baseline_rate": 0.85,
+      "delta": 0.1,
+      "effect_direction": "decrease",
+      "mean_observed_effect": 0.099983,
+      "metric": "acceptable",
+      "power": 0.613333,
+      "roots": 24
+    },
+    {
+      "baseline_rate": 0.85,
+      "delta": 0.1,
+      "effect_direction": "decrease",
+      "mean_observed_effect": 0.101262,
+      "metric": "acceptable",
+      "power": 0.795,
+      "roots": 36
+    },
+    {
+      "baseline_rate": 0.85,
+      "delta": 0.1,
+      "effect_direction": "decrease",
+      "mean_observed_effect": 0.099893,
+      "metric": "acceptable",
+      "power": 0.875,
+      "roots": 48
+    },
+    {
+      "baseline_rate": 0.85,
+      "delta": 0.2,
+      "effect_direction": "decrease",
+      "mean_observed_effect": 0.197546,
+      "metric": "acceptable",
+      "power": 0.628333,
+      "roots": 6
+    },
+    {
+      "baseline_rate": 0.85,
+      "delta": 0.2,
+      "effect_direction": "decrease",
+      "mean_observed_effect": 0.197419,
+      "metric": "acceptable",
+      "power": 0.8625,
+      "roots": 12
+    },
+    {
+      "baseline_rate": 0.85,
+      "delta": 0.2,
+      "effect_direction": "decrease",
+      "mean_observed_effect": 0.200457,
+      "metric": "acceptable",
+      "power": 0.986667,
+      "roots": 24
+    },
+    {
+      "baseline_rate": 0.85,
+      "delta": 0.2,
+      "effect_direction": "decrease",
+      "mean_observed_effect": 0.199857,
+      "metric": "acceptable",
+      "power": 0.996667,
+      "roots": 36
+    },
+    {
+      "baseline_rate": 0.85,
+      "delta": 0.2,
+      "effect_direction": "decrease",
+      "mean_observed_effect": 0.200937,
+      "metric": "acceptable",
+      "power": 1.0,
+      "roots": 48
+    },
+    {
+      "baseline_rate": 0.85,
+      "delta": 0.3,
+      "effect_direction": "decrease",
+      "mean_observed_effect": 0.300532,
+      "metric": "acceptable",
+      "power": 0.879167,
+      "roots": 6
+    },
+    {
+      "baseline_rate": 0.85,
+      "delta": 0.3,
+      "effect_direction": "decrease",
+      "mean_observed_effect": 0.300613,
+      "metric": "acceptable",
+      "power": 0.9925,
+      "roots": 12
+    },
+    {
+      "baseline_rate": 0.85,
+      "delta": 0.3,
+      "effect_direction": "decrease",
+      "mean_observed_effect": 0.298293,
+      "metric": "acceptable",
+      "power": 1.0,
+      "roots": 24
+    },
+    {
+      "baseline_rate": 0.85,
+      "delta": 0.3,
+      "effect_direction": "decrease",
+      "mean_observed_effect": 0.299545,
+      "metric": "acceptable",
+      "power": 1.0,
+      "roots": 36
+    },
+    {
+      "baseline_rate": 0.85,
+      "delta": 0.3,
+      "effect_direction": "decrease",
+      "mean_observed_effect": 0.29875,
+      "metric": "acceptable",
+      "power": 1.0,
+      "roots": 48
+    },
+    {
+      "baseline_rate": 0.15,
+      "delta": 0.1,
+      "effect_direction": "increase",
+      "mean_observed_effect": 0.105509,
+      "metric": "harmful_target",
+      "power": 0.338333,
+      "roots": 6
+    },
+    {
+      "baseline_rate": 0.15,
+      "delta": 0.1,
+      "effect_direction": "increase",
+      "mean_observed_effect": 0.099815,
+      "metric": "harmful_target",
+      "power": 0.413333,
+      "roots": 12
+    },
+    {
+      "baseline_rate": 0.15,
+      "delta": 0.1,
+      "effect_direction": "increase",
+      "mean_observed_effect": 0.102407,
+      "metric": "harmful_target",
+      "power": 0.649167,
+      "roots": 24
+    },
+    {
+      "baseline_rate": 0.15,
+      "delta": 0.1,
+      "effect_direction": "increase",
+      "mean_observed_effect": 0.099124,
+      "metric": "harmful_target",
+      "power": 0.774167,
+      "roots": 36
+    },
+    {
+      "baseline_rate": 0.15,
+      "delta": 0.1,
+      "effect_direction": "increase",
+      "mean_observed_effect": 0.10072,
+      "metric": "harmful_target",
+      "power": 0.886667,
+      "roots": 48
+    },
+    {
+      "baseline_rate": 0.15,
+      "delta": 0.2,
+      "effect_direction": "increase",
+      "mean_observed_effect": 0.199907,
+      "metric": "harmful_target",
+      "power": 0.6325,
+      "roots": 6
+    },
+    {
+      "baseline_rate": 0.15,
+      "delta": 0.2,
+      "effect_direction": "increase",
+      "mean_observed_effect": 0.197662,
+      "metric": "harmful_target",
+      "power": 0.825833,
+      "roots": 12
+    },
+    {
+      "baseline_rate": 0.15,
+      "delta": 0.2,
+      "effect_direction": "increase",
+      "mean_observed_effect": 0.199971,
+      "metric": "harmful_target",
+      "power": 0.978333,
+      "roots": 24
+    },
+    {
+      "baseline_rate": 0.15,
+      "delta": 0.2,
+      "effect_direction": "increase",
+      "mean_observed_effect": 0.200806,
+      "metric": "harmful_target",
+      "power": 0.998333,
+      "roots": 36
+    },
+    {
+      "baseline_rate": 0.15,
+      "delta": 0.2,
+      "effect_direction": "increase",
+      "mean_observed_effect": 0.201377,
+      "metric": "harmful_target",
+      "power": 0.999167,
+      "roots": 48
+    },
+    {
+      "baseline_rate": 0.15,
+      "delta": 0.3,
+      "effect_direction": "increase",
+      "mean_observed_effect": 0.30463,
+      "metric": "harmful_target",
+      "power": 0.866667,
+      "roots": 6
+    },
+    {
+      "baseline_rate": 0.15,
+      "delta": 0.3,
+      "effect_direction": "increase",
+      "mean_observed_effect": 0.300521,
+      "metric": "harmful_target",
+      "power": 0.9825,
+      "roots": 12
+    },
+    {
+      "baseline_rate": 0.15,
+      "delta": 0.3,
+      "effect_direction": "increase",
+      "mean_observed_effect": 0.297975,
+      "metric": "harmful_target",
+      "power": 1.0,
+      "roots": 24
+    },
+    {
+      "baseline_rate": 0.15,
+      "delta": 0.3,
+      "effect_direction": "increase",
+      "mean_observed_effect": 0.30108,
+      "metric": "harmful_target",
+      "power": 1.0,
+      "roots": 36
+    },
+    {
+      "baseline_rate": 0.15,
+      "delta": 0.3,
+      "effect_direction": "increase",
+      "mean_observed_effect": 0.298235,
+      "metric": "harmful_target",
+      "power": 1.0,
+      "roots": 48
+    }
+  ],
+  "design": {
+    "baseline_rates": {
+      "acceptable": 0.863988,
+      "harmful_target": 0.093915
+    },
+    "beta_concentration": 12.0,
+    "bootstrap_resamples": 400,
+    "decisions_per_root_per_arm": 6,
+    "independent_unit": "root",
+    "note": "studies reduced from the spec's 2,000 to 1200 and bootstrap to 400 resamples to fit a pure-Python runtime budget",
+    "simulated_studies_per_cell": 1200
+  },
+  "experiment": "E3 power / root sizing",
+  "label": "SCRIPTED SIMULATION \u2014 NOT MODEL EVIDENCE",
+  "minimum_roots": [
+    {
+      "delta": 0.1,
+      "max_power_tested": 0.875,
+      "metric": "acceptable",
+      "min_roots_for_80pct_power": 48
+    },
+    {
+      "delta": 0.2,
+      "max_power_tested": 1.0,
+      "metric": "acceptable",
+      "min_roots_for_80pct_power": 12
+    },
+    {
+      "delta": 0.3,
+      "max_power_tested": 1.0,
+      "metric": "acceptable",
+      "min_roots_for_80pct_power": 6
+    },
+    {
+      "delta": 0.1,
+      "max_power_tested": 0.886667,
+      "metric": "harmful_target",
+      "min_roots_for_80pct_power": 48
+    },
+    {
+      "delta": 0.2,
+      "max_power_tested": 0.999167,
+      "metric": "harmful_target",
+      "min_roots_for_80pct_power": 12
+    },
+    {
+      "delta": 0.3,
+      "max_power_tested": 1.0,
+      "metric": "harmful_target",
+      "min_roots_for_80pct_power": 6
+    }
+  ],
+  "seed": 20261004
+}

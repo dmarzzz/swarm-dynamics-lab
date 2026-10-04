@@ -17,7 +17,7 @@ The capture-memory-mix correction lane is already active. Coordinate with that l
 
 ## Offline evidence
 
-`python3 researchers/shadow/notes/janitor-2026-10-04/probes/offline_probes.py` uses synthetic responses and patched transport only. It reads no keys and makes no network calls. Saved [results](probes/offline-results.json) establish:
+`python3 5-experiments/studies/shadow/janitor-2026-10-04/probes/offline_probes.py` uses synthetic responses and patched transport only. It reads no keys and makes no network calls. Saved [results](probes/offline-results.json) establish:
 
 - Wrong returned model is accepted by the old HTTP adapter.
 - Two mocked retry dispatches count as one request against its call cap.
@@ -29,12 +29,12 @@ Static tools were installed in an ephemeral `/tmp/swarm-janitor-tools` virtualen
 
 ## Second offline pass
 
-`python3 researchers/shadow/notes/janitor-2026-10-04/probes/resume_batch_probes.py` establishes J017 and J038-J040 using temporary synthetic records: a higher-liked duplicate raises `KeyError('score')`; changed model resumes silently; duplicate A-arm records skip a missing B-arm; saved USD 0.50 becomes USD 0.00 in the resumed summary. [Saved output](probes/resume-batch-results.json).
+`python3 5-experiments/studies/shadow/janitor-2026-10-04/probes/resume_batch_probes.py` establishes J017 and J038-J040 using temporary synthetic records: a higher-liked duplicate raises `KeyError('score')`; changed model resumes silently; duplicate A-arm records skip a missing B-arm; saved USD 0.50 becomes USD 0.00 in the resumed summary. [Saved output](probes/resume-batch-results.json).
 
 ShellCheck 0.11.0 on local shell orchestration found concrete SC2155 masking at report credential exports, plus lower-value quoting and `cd` warnings ([output](probes/shellcheck.txt)). Only confirmed behavioral defects were promoted. J033-J037 cover alternate metered entry points, import-time dispatch, fail-closed credential loading and alert pagination. J038-J040 cover execution lineage and resume accounting. These are code defects, not edits to existing results.
 
 ## Artifact-registration follow-up
 
-`python3 researchers/shadow/notes/janitor-2026-10-04/probes/artifact_scope_probes.py` invokes the real add command in a temporary synthetic project only. It changes two unrelated historical lock entries, drops a third absent artifact entry, rewrites two unrelated statements, nulls a private ingredient's saved digest and rehashes an edited input into old build provenance. [Saved results](probes/artifact-scope-results.json). This independently supports the rollback reports from sol-identity and sol-askswarm. Proposed fix: selected-key merge into the existing lock plus selected-key statement generation, with all old versions/bundles preserved. No real registry was mutated by this probe.
+`python3 5-experiments/studies/shadow/janitor-2026-10-04/probes/artifact_scope_probes.py` invokes the real add command in a temporary synthetic project only. It changes two unrelated historical lock entries, drops a third absent artifact entry, rewrites two unrelated statements, nulls a private ingredient's saved digest and rehashes an edited input into old build provenance. [Saved results](probes/artifact-scope-results.json). This independently supports the rollback reports from sol-identity and sol-askswarm. Proposed fix: selected-key merge into the existing lock plus selected-key statement generation, with all old versions/bundles preserved. No real registry was mutated by this probe.
 
 No teammates' experiment outcomes were modified. `lab.py check` passed before the initial push (0 errors, 5 preexisting unresolved-link warnings).

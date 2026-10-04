@@ -23,7 +23,7 @@ Instrument must exactly match passing S0-repair hash; changing study/prompt/prov
 
 Maximum612newcalls. Entire study remains bounded by660calls, USD15 additional authority, two concurrent worlds and the original persistent two-hour deadline. No transport/semantic retries, no repeated stage, no S2. Dedicated sim-shadow claim vishesh-theseus-v2 expires2026-10-04T08:05:38Z; reverify its exclusivity and deployment receipt immediately before dispatch. Secrets consumed via approved credential alias only; no values in source/logs/artifacts.
 
-Command: `python3 researchers/vishesh/notes/swarm-of-theseus/v2/src/runner.py --stage S1 --config /srv/swarm/theseus-v2-config.json --receipt /srv/swarm/theseus-v2-deployment-receipt.json --output /srv/swarm/theseus-v2-results/S1 --qualification /srv/swarm/theseus-v2-results/S0-repair`.
+Command: `python3 5-experiments/studies/vishesh/swarm-of-theseus/v2/src/runner.py --stage S1 --config /srv/swarm/theseus-v2-config.json --receipt /srv/swarm/theseus-v2-deployment-receipt.json --output /srv/swarm/theseus-v2-results/S1 --qualification /srv/swarm/theseus-v2-results/S0-repair`.
 
 Stop on resource/process failures; preserve all assigned rows, partial calls and missingness. Null/adverse scientific outcomes complete the pilot. Before launch, write the repair post-mortem, replace this blocker with observed passing gate evidence, publish, redeploy/check frozen instrument, and verify the public page.
 

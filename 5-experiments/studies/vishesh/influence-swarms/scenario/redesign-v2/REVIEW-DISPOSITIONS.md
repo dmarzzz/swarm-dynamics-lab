@@ -1,0 +1,32 @@
+### Design review (reviewer ≠ author): GPT-6 Astra, read-only, 2026-10-04
+
+Verdict returned: **ship with fixes, as a substantially narrower paired pilot.** Full text in the session scratchpad
+(`PROPOSAL-REVIEW-astra.md`, receipt `<local receipt>`). Dispositions of every
+finding against the first draft:
+
+| # | Finding | Disposition in this document |
+|---|---|---|
+| A1 | The propagation contrast varied ballots at two stages (revision and chair), so three mechanisms were confounded; the "identical eight-call prefix" claim did not survive moving checks after revision | **Applied.** §1 draws the branching sequence; the first study varies social content at one stage (the chair) and freezes the check rule from the initial reports; the revision round is dropped from the first study entirely; the result is labelled an explicit-ballot display effect |
+| A2 | "m/k" conflated the assigned pool fraction with realized exposure; identical top-k rules would re-create saturation; the generalist's pages were not matched to the team's | **Applied.** §3 defines M/N (assigned) vs m_i/k_i (realized), assigns differing k and positions with one unexposed analyst, and freezes a common document union for G and the team |
+| A3 | The ledger arm could look successful through systematic deferral; the generic fact record blurred extraction with policy classification | **Applied.** §5 makes the ledger an offline shadow authorizer over the frozen aligned fact package, scored on four separate rows with coverage and avoidable deferral beside refusals; the D5 typed-extraction stages stay separate |
+| A4 | The proposed workload (52–56 calls per dossier) exceeded the remaining reservation envelope (USD 2.55 at USD 0.0486 per attempt); averaging receipts cannot lower a reservation | **Applied.** §6–§7 recompute the envelope from the reservation formula; the two legitimate levers (output cap, smaller serialized observations) are named; the hosted stage is 12 roots × 2 worlds × (G + T3) ≈ 240 attempts, registered as an existence probe; everything else runs locally at USD 0 |
+| A5 | Requiring label invariance across τ ∈ {0, 10}% deletes every near-tie; controls were wrongly subject to the admission gate | **Applied.** §2 freezes labels at the buyer's declared policy and reports the grid as sensitivity; controls are exempt from the gate; the simulation (E7) independently found that H cannot be stabilised by any gap constraint |
+| B | Inventory is 13 primary + 3 pages, not 16 primary; worksheet is populated for operations and the generalist, not only the chair; T3 did not cover pilots; the unified template ignored phase-exact keys and the candidate enum; the EIv2 private control has a revision call; the check rule needs a leader/tie rule; root labels are an idealized ceiling; a second hosted model and Qwen3-8B/Jev are not qualified routes; replicates need `replicate_id`; byte-length equality is a weaker test than the existing one; `ambiguous_tbc`'s acceptable set was a disjunction the evaluator does not accept; the composite case uses pilot + workload, not the quote; the random-check test should test the distribution (P(target touched) = 19/33) | **All applied** in §2, §4, §5, §8 as written |
+| C1 | T6 and T9 were the same configuration | **Applied.** T9 removed |
+| C2 | L did not need its own paid workflow | **Applied.** L is offline |
+| C3 | The first study carried two transfer domains and a broad sweep | **Applied.** First study is one configuration pair, one assigned exposure level, one false clause plus controls; `time_syndication`, MCP, the complexity ladder and larger teams are deferred |
+| D1 | No single primary estimand or inference specification | **Applied.** §1 registers Δ (architecture × content, paired at the dossier, acceptable-set violation primary); §7 lists the pre-registration elements, including that the existing missing-data bounds are identification bounds, not sampling intervals, and that three repeats are a variability diagnostic |
+| D2 | A truthful, recommendation-matched page control was missing | **Applied.** §2 item 6 adds `truthful_recommendation` |
+| E | Freeze a team/generalist × misleading/control comparison on the same union and checks as the primary | **Applied.** This is §1 |
+
+One Astra point is **accepted and implemented differently than it was phrased**: it argued that non-zero clean error should not be inherited as an admission requirement and that controls should be exempt. Both hold here — the S0 gate is a maximum-effect gate under the actor model, not a clean-error gate, and controls are exempt — and the simulation (E1) supplies the supporting fact that a ceiling cell can still show a contamination drop (`ambiguous_tbc` under `full_records`: 0.838 → 0.727).
+
+### Numbers check (second reviewer, reviewer ≠ author), 2026-10-04
+
+Scope: every number in this proposal attributed to the simulation (checked against `RESULTS-SIM.md` and the result JSON), to the current harness (checked against the design digest), or to the design review; the reservation arithmetic recomputed from the harness formula; the call-count tables cross-checked. `python3 sim.py --check` was re-run independently and reproduced all seven result files byte-for-byte.
+
+| claims checked | supported | partial | unsupported |
+|---|---|---|---|
+| 72 | 55 | 12 | 5 |
+
+What it caught, all corrected in the text: the 0.154–0.203 chair contrast had been attributed to a single generalist when E2 measured it on the six-analyst team; two sentences cited an E5 "steering rate" that E5 never computes; the "eight-call prefix exactly as today" sentence did not describe any configuration the first study runs; §7 sized the budget on the full branching sequence while §6 sized it on the first-study shape (both arithmetics correct, the label wrong); USD 0.048640 is the preflight ceiling at the 32,768-byte input cap, not a D7–D9 request size; the 1,024-token output cap was presented as measured when D7–D9 output counts are not in the record; the simulation scored `ambiguous_tbc` with the permissive DEFER-or-alternative rule the design rejects (now flagged as the first S0 action); three E5 figures were quoted without their position-boost slice; the dose grid was written as a range instead of the six-level set; one "measured zero" should read "structural zero under the actor model"; and this review record had labelled an adopted Astra point as declined. The reservation arithmetic itself was verified correct throughout.

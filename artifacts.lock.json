@@ -5365,7 +5365,7 @@
     },
     {
      "mtime": 1791103847,
-     "sha256": "7911a43013940b17f49b8191edd3878a7c0adc9e76cbd3f3e73c2edb525ea681",
+     "sha256": "e90cfb617d6ccd8891d4a3f6b23f2d6cb6a9ba18365af3deb6414aef044aa847",
      "size": 1576,
      "uri": "5-experiments/studies/dmarz/eval-search-2026-10-04/SETUP.md"
     },
@@ -5744,7 +5744,7 @@
     },
     {
      "mtime": 1791148055,
-     "sha256": "7d624a512771079d1dab11c9e19e19fb2cba648d26cbafaeda627177f4f7e38d",
+     "sha256": "d232d3967d083b34fcf34c0d10239c42241d11b81fd054e5c7329b6f209deada",
      "size": 15872,
      "uri": "5-experiments/studies/dmarz/sybil-rules-180/RESULTS.md"
     },
@@ -5789,7 +5789,7 @@
    "ingredients": [
     {
      "mtime": 1791149952,
-     "sha256": "080655398a088e70477b7ba6acd52d08cd777ce1613da91f7706d6097b286b7d",
+     "sha256": "989892e2a27c2c52f914e40364ae10f28a07c4f1579fee4acd1f460aa4bc4e69",
      "size": 36746,
      "uri": "5-experiments/studies/dmarz/growth-pressure-200/PLAN.md"
     },
@@ -5801,7 +5801,7 @@
     },
     {
      "mtime": 1791149952,
-     "sha256": "e710fb91ffc51eb1439e97b6d7d06db5a9b25edbfd3728dd747bdf8a264d2a91",
+     "sha256": "79ef044880a73efe25ebf50e091ef1607910c0f08beef158171333c02a17e691",
      "size": 11384,
      "uri": "5-experiments/studies/dmarz/growth-pressure-200/SETUP.md"
     },
@@ -5837,7 +5837,7 @@
     },
     {
      "mtime": 1791148055,
-     "sha256": "7d624a512771079d1dab11c9e19e19fb2cba648d26cbafaeda627177f4f7e38d",
+     "sha256": "d232d3967d083b34fcf34c0d10239c42241d11b81fd054e5c7329b6f209deada",
      "size": 15872,
      "uri": "5-experiments/studies/dmarz/sybil-rules-180/RESULTS.md"
     },
@@ -6648,7 +6648,7 @@
     },
     {
      "mtime": 1791103194,
-     "sha256": "da0fe31b410d013ca89ee43386168c6beab14307cf78b31315728e0b98c22f2c",
+     "sha256": "059dac6a27bdcc32add8c8a9b117059ac941cc4b70c879413932965ade7f0905",
      "size": 4632,
      "uri": "5-experiments/studies/dmarz/large-swarm-proposal-2026-10-04/SETUP.md"
     },
@@ -9938,7 +9938,7 @@
     },
     {
      "mtime": 1791106311,
-     "sha256": "6c119cd5cee642b0f42a3a3d4f3827e8077a70c82cc2de7bf3a1091a82adeacf",
+     "sha256": "3947f28ce66806beee422182a05df3b71e4c914f522f740f85ce66755b129700",
      "size": 7283,
      "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/SETUP.md"
     },
@@ -12074,7 +12074,7 @@
     },
     {
      "mtime": 1791106311,
-     "sha256": "6c119cd5cee642b0f42a3a3d4f3827e8077a70c82cc2de7bf3a1091a82adeacf",
+     "sha256": "3947f28ce66806beee422182a05df3b71e4c914f522f740f85ce66755b129700",
      "size": 7283,
      "uri": "5-experiments/studies/dmarz/overnight-program-2026-10-04/SETUP.md"
     },
@@ -12728,7 +12728,7 @@
     },
     {
      "mtime": 1791082946,
-     "sha256": "43e9a27db419e9b771067c4df243936ee36a88a3b78f44953f93ffccc93b8ef3",
+     "sha256": "9203b22218b455a08547ac42b3f9522492bdf0da8d2a2f4c1e639c9e538ed1ed",
      "size": 35915,
      "uri": "5-experiments/studies/dmarz/compositional-safety-plan/README.md"
     },
@@ -12954,7 +12954,7 @@
     },
     {
      "mtime": 1791082946,
-     "sha256": "43e9a27db419e9b771067c4df243936ee36a88a3b78f44953f93ffccc93b8ef3",
+     "sha256": "9203b22218b455a08547ac42b3f9522492bdf0da8d2a2f4c1e639c9e538ed1ed",
      "size": 35915,
      "uri": "5-experiments/studies/dmarz/compositional-safety-plan/README.md"
     },
@@ -13086,117 +13086,117 @@
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/src/pi-review-2026-10-04.py"
+     "uri": "src/pi-review-2026-10-04.py"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/data/pi-review-2026-10-04/live-state.json"
+     "uri": "data/pi-review-2026-10-04/live-state.json"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/dmarz/discussion-dose/V2-ISSUE-REVIEW.md"
+     "uri": "5-experiments/studies/dmarz/discussion-dose/V2-ISSUE-REVIEW.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/dmarz/discussion-dose/reviews/pc-H4-a1-post.md"
+     "uri": "5-experiments/studies/dmarz/discussion-dose/reviews/pc-H4-a1-post.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/dmarz/discussion-dose/reviews/v2-s0-H4-post.md"
+     "uri": "5-experiments/studies/dmarz/discussion-dose/reviews/v2-s0-H4-post.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/dmarz/market-split-api/reviews/q0-002-post.md"
+     "uri": "5-experiments/studies/dmarz/market-split-api/reviews/q0-002-post.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/dmarz/market-split/reviews/s1-fleet-001-post.md"
+     "uri": "5-experiments/studies/dmarz/market-split/reviews/s1-fleet-001-post.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/dmarz/sybil-specialists-api/README.md"
+     "uri": "5-experiments/studies/dmarz/sybil-specialists-api/README.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/dmarz/sybil-specialists-api/reviews/s1-001-post.md"
+     "uri": "5-experiments/studies/dmarz/sybil-specialists-api/reviews/s1-001-post.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/vishesh/adaptive-quorum-v2/repair-v3/README.md"
+     "uri": "5-experiments/studies/vishesh/adaptive-quorum-v2/repair-v3/README.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/vishesh/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md"
+     "uri": "5-experiments/studies/vishesh/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/vishesh/antsy-verification-v4/README.md"
+     "uri": "5-experiments/studies/vishesh/antsy-verification-v4/README.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/vishesh/antsy-verification-v4/reviews/S0-post.md"
+     "uri": "5-experiments/studies/vishesh/antsy-verification-v4/reviews/S0-post.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/vishesh/external-influence-v2/reviews/quality-post.md"
+     "uri": "5-experiments/studies/vishesh/external-influence-v2/reviews/quality-post.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/vishesh/healing-helping-hands/README.md"
+     "uri": "5-experiments/studies/vishesh/healing-helping-hands/README.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/vishesh/immune-response-v3/README.md"
+     "uri": "5-experiments/studies/vishesh/immune-response-v3/README.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/vishesh/immune-response-v3/REVIEW.md"
+     "uri": "5-experiments/studies/vishesh/immune-response-v3/REVIEW.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/vishesh/influence-swarms/README.md"
+     "uri": "5-experiments/studies/vishesh/influence-swarms/README.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/vishesh/regrowth-200/README.md"
+     "uri": "5-experiments/studies/vishesh/regrowth-200/README.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/studies/vishesh/swarm-of-theseus/reviews/S1-a1-pre.md"
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/reviews/S1-a1-pre.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/lab/templates/experiment-worker/README.md"
+     "uri": "lab/templates/experiment-worker/README.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/toolkit/agent-experiments/examples/collective-sensing/RESULTS.md"
+     "uri": "5-experiments/toolkit/agent-experiments/examples/collective-sensing/RESULTS.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/5-experiments/toolkit/avalon-swarm/RESULTS.md"
+     "uri": "5-experiments/toolkit/avalon-swarm/RESULTS.md"
     },
     {
      "sha256": null,
@@ -13251,27 +13251,27 @@
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/3-synthesis/pre-experiment-research.md"
+     "uri": "3-synthesis/pre-experiment-research.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/3-synthesis/fork-merge-questions.md"
+     "uri": "3-synthesis/fork-merge-questions.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/1-library/INDEX.md"
+     "uri": "1-library/INDEX.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/2-surveys/llm-agent-swarms.md"
+     "uri": "2-surveys/llm-agent-swarms.md"
     },
     {
      "sha256": null,
      "size": null,
-     "uri": "/Users/halcyon/swarm-lab/data/pi-review-2026-10-04/status-followup.json"
+     "uri": "data/pi-review-2026-10-04/status-followup.json"
     },
     {
      "sha256": null,
@@ -13961,7 +13961,7 @@
     },
     {
      "mtime": 1791088459,
-     "sha256": "23be400060892b8397ff91f75462f5b07c403b3dea21400a828b0053a1df51f8",
+     "sha256": "e4f252059fa320b0700c1bb541c5d2c31c2dc482f139022ff5675e70da195be5",
      "size": 326409,
      "uri": "5-experiments/studies/dmarz/completion-audit-2026-10-04/PORTFOLIO.md"
     },
@@ -14122,7 +14122,7 @@
     },
     {
      "mtime": 1791088459,
-     "sha256": "23be400060892b8397ff91f75462f5b07c403b3dea21400a828b0053a1df51f8",
+     "sha256": "e4f252059fa320b0700c1bb541c5d2c31c2dc482f139022ff5675e70da195be5",
      "size": 326409,
      "uri": "5-experiments/studies/dmarz/completion-audit-2026-10-04/PORTFOLIO.md"
     },
@@ -14283,7 +14283,7 @@
     },
     {
      "mtime": 1791088459,
-     "sha256": "23be400060892b8397ff91f75462f5b07c403b3dea21400a828b0053a1df51f8",
+     "sha256": "e4f252059fa320b0700c1bb541c5d2c31c2dc482f139022ff5675e70da195be5",
      "size": 326409,
      "uri": "5-experiments/studies/dmarz/completion-audit-2026-10-04/PORTFOLIO.md"
     },
@@ -14965,7 +14965,7 @@
    "ingredients": [
     {
      "mtime": 1791107597,
-     "sha256": "adba02eb011dc5d26c5973ff1fd07108cad3af94290bff8d64508dd7bb0706c0",
+     "sha256": "7de15acd26a4f0ed075b128bcc4ff1c2511f865f1176f1f86fdfe16034788c9f",
      "size": 2661,
      "uri": "5-experiments/studies/dmarz/theseus-film/_decision.md"
     },

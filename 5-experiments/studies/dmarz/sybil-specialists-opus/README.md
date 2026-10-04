@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/fleet-monitor; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/fleet-monitor; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Untested: with claude-opus-5-5 as the synthesizer on the Haiku pilot's identical S1 packets, coverage auditing still beats degree auditing on rare-skill accuracy. Basis: Prepared model replication only. The scripted S0 stage ran (216 of 216 valid, zero model calls); no qualification or S1 model call exists. Admission is simulated identically to the Haiku pilot, so only synthesis can differ.
 - **sample_size_summary:** Observed: scripted S0 only, 216 rows, no model outcome. Planned: Q0 on fresh worlds 3100-3105; S1 on the Haiku pilot's 12 worlds (4000-4011), 192 packets; ledger cap 300 calls. Worlds are the independent units.

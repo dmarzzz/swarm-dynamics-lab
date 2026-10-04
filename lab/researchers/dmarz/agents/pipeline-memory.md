@@ -9,4 +9,4 @@ updated: 2026-10-04T18:14Z
 
 ## Notes
 
-Builder lane under dmarz/pipeline for research program v5 (researchers/dmarz/notes/overnight-program-2026-10-04).
+Builder lane under dmarz/pipeline for research program v5 (5-experiments/studies/dmarz/overnight-program-2026-10-04).

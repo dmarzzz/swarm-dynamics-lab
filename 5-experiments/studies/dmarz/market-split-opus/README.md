@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/market-split-opus; source `b097331b` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/market-split-opus; source `b097331b` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — In the completed six-market Opus 5.5 replication, the neutral flexible agent selected sustained firm splitting in 6/6 firm-regulated markets and 0/6 owner-regulated or unregulated markets. Basis: One qualified configuration, paired regulatory controls, all 36 valid outcomes, 902 priced calls and exact trace replay support this narrow comparison. Six fresh draws from the pilot's market generator, one sampling realization per cell, rules stated in the prompt, same-researcher review only and request settings that differ from the Sonnet pilot limit the claim.
 - **sample_size_summary:** Observed: 6 fresh paired market tasks; 36/36 episodes valid, 0 missing/replaced; one Opus owner and two scripted rivals, 864 calls. Separate Q0: 2 markets/4 episodes; I0: 6 calls. Sonnet pilot (6 other tasks) is a separate cohort, not pooled.

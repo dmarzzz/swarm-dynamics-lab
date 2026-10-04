@@ -2,8 +2,8 @@
 
 - Owner: dmarz. Status: **evaluation unresolved; scale recommendation withdrawn**, 2026-10-04.
 - Current decision: whether a defensible evaluation exists for this candidate question. There is no recommended experiment scale, model or server layout.
-- Runbook: [experiment setup](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md).
-- Operations: [operations guide](../../../../tooling/agent-experiments/OPERATIONS.md).
+- Runbook: [experiment setup](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md).
+- Operations: [operations guide](../../../toolkit/agent-experiments/OPERATIONS.md).
 - Current assessment: [proposal.json](proposal.json); rendering source: [build_review.py](src/build_review.py).
 
 ## Owner correction and disposition

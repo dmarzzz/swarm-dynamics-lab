@@ -1,14 +1,14 @@
 # 2026-10-03 dmarz/sd-ai-content
 
 Lane: population-level detection of AI-generated content (scan-papers-sd-ai-content), run as an isolated
-lane on branch lane/sd-ai-content. Per dmarz's override, no claim/touch/done and no edits under tasks/;
+lane on branch lane/sd-ai-content. Per dmarz's override, no claim/touch/done and no edits under lab/tasks/;
 the coverage note below stands in for the task's Coverage note and should be copied there at merge.
 
 ## What I covered
 
 55 new paper entries, all tagged swarm-detection (two also sybil-resistance, one llm-agent-swarms).
 `lab.py verify --agent dmarz/sd-ai-content`: 55 papers, 0 problems. `lab.py check`: 0 errors in my files
-(the only errors on the branch are in library/papers/wu-2024-system.md, which predates this lane).
+(the only errors on the branch are in 1-library/papers/wu-2024-system.md, which predates this lane).
 
 Read in full (5): liang-2024-monitoring (main text and methods, not every appendix table),
 kobak-2024-delving, sun-2024-are, la-cava-2025-machines, hao-2025-do. Everything else is abstract depth.

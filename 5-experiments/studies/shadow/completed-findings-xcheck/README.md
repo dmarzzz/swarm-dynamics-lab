@@ -17,10 +17,10 @@ The raw Sybil scoring checks cover 7,512 recorded answers, not 7,512 independent
 From repository root, with Python and NumPy installed:
 
 ```sh
-nice -n 10 python3 researchers/shadow/notes/completed-findings-xcheck/recompute.py
+nice -n 10 python3 5-experiments/studies/shadow/completed-findings-xcheck/recompute.py
 python3 scripts/lab.py check
 ```
 
 [recompute.py](recompute.py) imports no study implementation. It reconstructs synthetic truth from documented SHA256-seeded random construction, scores saved answer values directly, builds root-paired contrasts, and reconstructs market HHI from firms' saved quantities. Bootstrap uses 10,000 root resamples, seed 20261004; split resamples within each graph family, with ring first to reproduce the published PRNG draw allocation. These are descriptive intervals, not generalization or simultaneous confidence guarantees.
 
-Reviews live in reviewer-owned notes because these exploratory notes studies have no formal `experiments/<id>/README.md` targets accepted by `lab.py`'s `reviews/` schema. No formal hypothesis acceptance or research-gate approval is asserted. The task is [review-dmarz-completed-xcheck](../../../../tasks/review-dmarz-completed-xcheck.md).
+Reviews live in reviewer-owned notes because these exploratory notes studies have no formal `experiments/<id>/README.md` targets accepted by `lab.py`'s `reviews/` schema. No formal hypothesis acceptance or research-gate approval is asserted. The task is [review-dmarz-completed-xcheck](../../../../lab/tasks/review-dmarz-completed-xcheck.md).

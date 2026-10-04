@@ -8,7 +8,7 @@
 - **Zero model requests, zero experiment launches, zero experimental ledger writes.** All additional dispatch exercises used temporary fixtures, dummy credentials, and mocked HTTP transports. No `prepare` or experimental `run` CLI was invoked.
 - Read HANDOFF, SPEC, PRE-RUN, SETUP, HISTORICAL-REVIEW, all seven successor Python source/test files, and the attempt-1 SPEC, POSTMORTEM, admission, assignments, initialization/outcome records, call/paid ledgers, checker, and factory PI review/handoff.
 
-All file/line references below are relative to `researchers/shadow/factory/provenance/attempt2/` at the reviewed PR head unless otherwise specified.
+All file/line references below are relative to `5-experiments/studies/shadow/factory/provenance/attempt2/` at the reviewed PR head unless otherwise specified.
 
 ## Blocking findings
 

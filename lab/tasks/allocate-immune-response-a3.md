@@ -35,4 +35,4 @@ Return only host name, ready/provisioned status, expiry and private verification
 
 ## Related work
 
-Experiment task: immune-response-evidence-receipts. Protocol: researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a3-pre.md. Fourteen tests and all sixteen offline assignments pass; native execution remains blocked only on correct allocation and final transfer checks.
+Experiment task: immune-response-evidence-receipts. Protocol: 5-experiments/studies/vishesh/immune-response-v3/evidence-study/reviews/receipt-a3-pre.md. Fourteen tests and all sixteen offline assignments pass; native execution remains blocked only on correct allocation and final transfer checks.

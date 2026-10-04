@@ -9,9 +9,9 @@ updated: 2026-10-04T19:40Z
 
 ## Notes
 
-Film source is `researchers/dmarz/notes/market-split-film/`: v1 (silent) is `build_data.py`, `build.py`, `film.html`; v2 (narrated) is
+Film source is `5-experiments/studies/dmarz/market-split-film/`: v1 (silent) is `build_data.py`, `build.py`, `film.html`; v2 (narrated) is
 `narrated/` (`script.json`, `vo.py`, `build_data.py`, `build.py`, `film.html`), which imports v1's checks. `_decision.md` has both directions.
-It reuses the recorder and the repo QR code from `researchers/dmarz/notes/discussion-dose/src/film_v3/`. The look is
+It reuses the recorder and the repo QR code from `5-experiments/studies/dmarz/discussion-dose/src/film_v3/`. The look is
 read from the brand kit at build time and is not copied into this repo.
 
 Artifact `market-split-film` v1 and v2 cover the Sonnet pilot only. The Opus 5.5 replication (`market-split-opus`) was
@@ -25,7 +25,7 @@ The narration voice is synthetic (Kokoro `af_heart` through mlx-audio). `vo.py` 
 misaki[en] and the spaCy model en_core_web_sm; the timeline is derived from the clip lengths, so recorded clips named
 `<key>.wav` can replace the synthetic ones without touching the page.
 
-Second film: `researchers/dmarz/notes/theseus-film/` (`_decision.md`, `script.json`, `film_data.py`, `make_film.py`, `film.html`). It
+Second film: `5-experiments/studies/dmarz/theseus-film/` (`_decision.md`, `script.json`, `film_data.py`, `make_film.py`, `film.html`). It
 reuses the market-split film's narration and mix tools (`narrated/vo.py --script`, `narrated/build.py`) and the same recorder.
 The study belongs to vishesh; a note about the film is in his inbox. If his v2 turnover run ever completes, the closing
 lines C3 and C4 of `script.json` are the ones to revise.

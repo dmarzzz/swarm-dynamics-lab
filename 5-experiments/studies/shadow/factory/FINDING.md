@@ -39,4 +39,4 @@ Only synthetic reports are used, no incident-dataset row or private user text. O
 
 ## Reproduce
 
-`python3 researchers/shadow/factory/structured.py analyze --spec <id>` regenerates per-spec estimates from saved terminal records and the pinned generator. `python3 researchers/shadow/factory/report.py` regenerates this report and figure. See [README](README.md), [source specs](specs/), and [Dmarz parent](../../dmarz/sybil-split-opus/RESULTS.md).
+`python3 5-experiments/studies/shadow/factory/structured.py analyze --spec <id>` regenerates per-spec estimates from saved terminal records and the pinned generator. `python3 5-experiments/studies/shadow/factory/report.py` regenerates this report and figure. See [README](README.md), [source specs](specs/), and [Dmarz parent](../../dmarz/sybil-split-opus/RESULTS.md).

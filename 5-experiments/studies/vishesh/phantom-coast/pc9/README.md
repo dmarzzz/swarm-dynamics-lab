@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `3bcc9b8b` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `3bcc9b8b` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Population misinformation spread and acquisition feedback remain untested; Q0 clean-task qualification failed. Basis: Eight valid native calls yielded32/32 correct map labels but4/6 exact optimal inspection proposals. Both private-report cases verified the report rather than an unknown site; actor-versus-team objective ambiguity limits diagnosis. No population effect tested.
 - **sample_size_summary:** Native Q0:8 reachable qualification snapshots,8 valid calls,32 dependent map labels,6 inspection proposals;32/32 labels correct and4/6 optimal actions. No native population episode or S1 pilot. Released Q0 is development evidence.
@@ -27,9 +27,9 @@ This refocuses Phantom on whether a seeded false map spreads and prevents its ow
 From the repository root, using Python3 and the standard library only:
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/phantom-coast/pc9/tests -v
-python3 researchers/vishesh/notes/phantom-coast/pc9/instrument.py fixture --output /tmp/phantom-pc9-fixture
-python3 researchers/vishesh/notes/phantom-coast/pc9/instrument.py audit /tmp/phantom-pc9-fixture/fixture.json
+python3 -m unittest discover -s 5-experiments/studies/vishesh/phantom-coast/pc9/tests -v
+python3 5-experiments/studies/vishesh/phantom-coast/pc9/instrument.py fixture --output /tmp/phantom-pc9-fixture
+python3 5-experiments/studies/vishesh/phantom-coast/pc9/instrument.py audit /tmp/phantom-pc9-fixture/fixture.json
 ```
 
 The fixture command requires a new output directory and cannot dispatch a model. The included fixture exercises a known bad policy and known recovery response. Its positive effect is deliberately engineered to verify scoring/routing; it is not research evidence. The evidence-only control's null and exact-controller reference witnesses are separate unit tests. The public tie order supplies the no-replacement schedule; a future cohort must randomize that order independently of hidden truth before dispatch.

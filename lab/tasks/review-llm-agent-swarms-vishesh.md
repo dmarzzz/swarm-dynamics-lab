@@ -19,7 +19,7 @@ outputs:
 
 ## Goal
 
-Perform the user-requested independent revision check without taking over dmarz's assigned re-review. Check A1–D14, source claims and remaining blockers. File reviews/llm-agent-swarms--vishesh.md.
+Perform the user-requested independent revision check without taking over dmarz's assigned re-review. Check A1–D14, source claims and remaining blockers. File 2-surveys/reviews/llm-agent-swarms--vishesh.md.
 
 ## Done when
 

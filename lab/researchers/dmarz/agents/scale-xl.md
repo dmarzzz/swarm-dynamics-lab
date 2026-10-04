@@ -9,4 +9,4 @@ updated: 2026-10-04T11:45Z
 
 ## Notes
 
-Started by dmarz on 2026-10-04 ("Find one of our experiences which would benefit the most from trying it at a much larger scale and ship it"). Study: researchers/dmarz/notes/sybil-scale-xl. Private launcher: agentops scripts/run-sybil-scale-xl.py. Copies the sybil-scale-sonnet files into new files; does not touch sybil-scale-api, sybil-scale-sonnet or their claims.
+Started by dmarz on 2026-10-04 ("Find one of our experiences which would benefit the most from trying it at a much larger scale and ship it"). Study: 5-experiments/studies/dmarz/sybil-scale-xl. Private launcher: agentops scripts/run-sybil-scale-xl.py. Copies the sybil-scale-sonnet files into new files; does not touch sybil-scale-api, sybil-scale-sonnet or their claims.

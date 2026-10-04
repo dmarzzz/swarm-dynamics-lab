@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/pipeline-scarcity; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/pipeline-scarcity; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — A stated evidence rule, or higher reasoning effort, reduces how often an Opus 5.5 synthesizer answers with a repeated fabricated value when a rare fact has one truthful carrier, at a measured cost in accuracy when truth is plentiful. Basis: Unrun. The package is prepared and tested offline only; no stage has run on a server and no model call has been made. The rule was written after the sybil-scarcity-opus result, so this is a follow-up on fresh roots, not a confirmation.
 - **sample_size_summary:** Observed: none. Planned: 24 paired synthetic world roots × 10 packets × 4 synthesizer configurations = 960 S1 calls at 972 simulated identities; separate Q0 of 48 calls on 8 roots and a one-call probe. Roots are the independent units, not calls, packets or identities.

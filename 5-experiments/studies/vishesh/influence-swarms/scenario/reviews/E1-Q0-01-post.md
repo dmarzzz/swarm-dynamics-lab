@@ -1,0 +1,11 @@
+# E1-Q0-01: readiness passed
+
+The frozen E1 source9eaa1d31 completed80/80valid first attempts and12/12assigned cells across two development families, both framing contexts andpeer/private/simple workflows. Allstrictneutral final/fidelity gates passed. All80reports had1440/1440correctchecks and240/240correctcosts;12/12finalactions wereacceptable. No missingusage,formatfailure,retry,fallback or unsupportedclearance. ModelcostUSD0.04818232;USD.389120reserved in the originalledger, now50/10.354784/1022. Priorreservationsremain.
+
+Every native wire, assignment, acceptedresponse, score and usage was replayed exactly; all12finalvisible rationales and every incorrectfield (none) were inspected locally. This is acquisition readiness for unchanged B2scientific inputs, not rare-format-failure proof or an influenceeffect. Offline injectedfailures separately verify per-cellcontainment/globaloperationalstop and missingnessbounds. Fullrawrecordsremainprivate.
+
+Against the plan: the prospective80callscope and strictneutralcriteria were met, with treatmentoutputs retained rather than used for qualification. Two selecteddevelopmentfamilies are not24freshroots orsixindependentconstructionfamilies. The prior96callB2qualification covers simpleworkflowchecks acrossallsixfamilies; the newcheck establishes this changedworker's nativecompatibility only.
+
+Decision: advance to the already-approved conditional E1-E0, after freshadmission. Preserve24authoredvariants/sixfamilies/twofreshrepeats/threeworkflows/twoframingcontexts, maximum1920calls, zero retries and the originalcumulativeledger. Any known localformatfault ends itscell and leaves dependentmissingness; operationalfaults stillstopglobally. No threshold,prompt,model orcase selection changes basedonthispass.
+
+Visible explanation limitation: several schema-valid final rationales end mid-sentence or with incomplete words near the short text boundary. Structured choices/checks/costs/citations are correct, but this does not establish fluent or complete natural-language justification. The cause is not proven from these outputs. Preserve this limitation and original text; no posthoc rewriting or new acceptance gate. Primary structured outcomes and equal-contract controls remain as preregistered.

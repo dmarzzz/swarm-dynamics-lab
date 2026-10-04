@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — The small board-versus-private diagnostic reports a descriptive contrast; an incremental protective discussion effect remains unresolved. Basis: Clean decisions pass this small screen, but one board episode is invalid and the contrast rests on two worlds. The descriptive interval includes zero; private reflection itself is active and v2 probes were independently sampled. A general peer-effect claim is unresolved.
 - **sample_size_summary:** 6 paired worlds × 2 exposures × 2 modes = 24 episodes; 23 valid, 1,015 calls.
@@ -13,7 +13,7 @@ Written 2026-10-04 UTC, before any model output for this plan. Exploratory; not 
 
 ## Question
 
-When discussion changes the attack outcome in v2, is the cause peer exposure or the extra model calls that discussion rounds buy? The R0-vs-R6 dose contrast in [V2-DESIGN.md](V2-DESIGN.md) cannot separate the two: R6 agents both see peers and think six more times. The [skeptical review](../../../vishesh/notes/skeptical-review/EXPERIMENTS.md) asks for "equally funded private work".
+When discussion changes the attack outcome in v2, is the cause peer exposure or the extra model calls that discussion rounds buy? The R0-vs-R6 dose contrast in [V2-DESIGN.md](V2-DESIGN.md) cannot separate the two: R6 agents both see peers and think six more times. The [skeptical review](../../vishesh/skeptical-review/EXPERIMENTS.md) asks for "equally funded private work".
 
 ## Design
 

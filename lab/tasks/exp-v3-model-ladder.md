@@ -15,7 +15,7 @@ topics: []
 
 ## Goal
 
-E2. Same 12-world screen plan on claude-sonnet-5-5, only if E1 shows Haiku fails every condition. New qualification, never pooled with Haiku. Plan: [NEXT-EXPERIMENTS.md](../researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md). Proposed, not authorized: needs dmarz's go, a committed pre-run review, a claimed box (one run per server), and a source pinned at or after 6563e28. Changes to src/bench_v3 are proposals to dmarz/discussion-bench-v3.
+E2. Same 12-world screen plan on claude-sonnet-5-5, only if E1 shows Haiku fails every condition. New qualification, never pooled with Haiku. Plan: [NEXT-EXPERIMENTS.md](../../5-experiments/studies/dmarz/discussion-dose/NEXT-EXPERIMENTS.md). Proposed, not authorized: needs dmarz's go, a committed pre-run review, a claimed box (one run per server), and a source pinned at or after 6563e28. Changes to src/bench_v3 are proposals to dmarz/discussion-bench-v3.
 
 ## Done when
 

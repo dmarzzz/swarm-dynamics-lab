@@ -26,6 +26,6 @@ Develop owned research notes on containment, repair and durable recovery from co
 
 ## Done when
 
-- [x] Publish a source-grounded concept and controlled comparison plan under researchers/vishesh/notes/swarm-immune-response/.
+- [x] Publish a source-grounded concept and controlled comparison plan under 5-experiments/studies/vishesh/swarm-immune-response/.
 - [x] Specify honest-dissent controls, shared-memory recurrence, recovery metrics and compatibility with the existing experiment toolkit.
 - [x] Link the notes, check references and repository validation, and audit the publication for private context and secrets.

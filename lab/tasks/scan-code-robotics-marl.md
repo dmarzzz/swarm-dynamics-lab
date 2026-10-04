@@ -46,7 +46,7 @@ Seeds come from memory and are starting points, not citations. Open each one, co
 
 ## Coverage note
 
-17 repos under swarm-robotics / marl-emergence in library/code/: gh-proroklab-vectorizedmultiagentsimulator (ran), gh-farama-foundation-pettingzoo, gh-farama-foundation-magent2, gh-google-deepmind-meltingpot, gh-facebookresearch-benchmarl, gh-bold-lab-ai-jaxmarl, gh-instadeepai-jumanji, gh-oxwhirl-pymarl, gh-oxwhirl-smac, gh-openai-multi-agent-emergence-environments, gh-openai-multiagent-particle-envs, gh-ilpincy-argos3, gh-jic-csb-kilombo, gh-buzz-lang-buzz, gh-imrclab-crazyswarm2, gh-usc-actlab-crazyswarm, gh-px4-px4-autopilot. Stars, licence, last commit from the GitHub API on 2026-10-03.
+17 repos under swarm-robotics / marl-emergence in 1-library/code/: gh-proroklab-vectorizedmultiagentsimulator (ran), gh-farama-foundation-pettingzoo, gh-farama-foundation-magent2, gh-google-deepmind-meltingpot, gh-facebookresearch-benchmarl, gh-bold-lab-ai-jaxmarl, gh-instadeepai-jumanji, gh-oxwhirl-pymarl, gh-oxwhirl-smac, gh-openai-multi-agent-emergence-environments, gh-openai-multiagent-particle-envs, gh-ilpincy-argos3, gh-jic-csb-kilombo, gh-buzz-lang-buzz, gh-imrclab-crazyswarm2, gh-usc-actlab-crazyswarm, gh-px4-px4-autopilot. Stars, licence, last commit from the GitHub API on 2026-10-03.
 
 Gap against Done-when: the 15-repo floor is met, but only 1 of the required 3 was run (vmas flocking, 64 envs x 8 agents, 1,615 agent-steps/s CPU). PettingZoo (pip install, mpe environments) and JaxMARL (CPU jax works for small MPE) are the two cheapest ran-upgrades; neither was done. ARGoS and Kilombo need C builds; Crazyswarm/PX4 need ROS 2 and hardware, out of scope for the hackathon. read_depth is skim for 9 and abstract for 7, honest.
 

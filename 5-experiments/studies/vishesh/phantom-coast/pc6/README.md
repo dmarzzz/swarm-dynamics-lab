@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `f635d380` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `f635d380` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — The proposed action-consequence table effect remains untested; PC6 was parked before dispatch for insufficient decision value. Basis: A pass and failure currently leave the same analytic-controller recommendation. Saved-data analysis of PC5 and the separate Qwen cohort is retrospective and does not supply PC6 samples.
 - **sample_size_summary:** PC6 observed: 0 native outcomes; planned 12 paired layouts/48 choices, never dispatched. Retrospective analysis reuses PC5 32 roots/128 choices and separate Qwen 12 roots/24 choices; these are not new samples.
@@ -26,9 +26,9 @@ Practical change: [simple_policy.py](src/simple_policy.py) implements the exact 
 Reproduce from repository root (offline, zero model calls):
 
 ```sh
-python3 researchers/vishesh/notes/phantom-coast/pc6/reporting/analyze_prior.py
-python3 -m unittest discover -s researchers/vishesh/notes/phantom-coast/pc6/tests -q
-python3 researchers/vishesh/notes/phantom-coast/pc6/reporting/plot_prior.py
+python3 5-experiments/studies/vishesh/phantom-coast/pc6/reporting/analyze_prior.py
+python3 -m unittest discover -s 5-experiments/studies/vishesh/phantom-coast/pc6/tests -q
+python3 5-experiments/studies/vishesh/phantom-coast/pc6/reporting/plot_prior.py
 ```
 
 Plotting needs matplotlib. Saved PC5 decisions/worlds are byte-identical to the original audit hashes; the original full trace was re-audited before this portable extraction. Qwen compressed source rows remain in their owner directory. Ten checks pass, including no-dispatch enforcement. This is a same-operator retrospective analysis and offline code update, not an independent replication.

@@ -26,8 +26,8 @@ Analysis displays all roots, six family means, repeated-execution disagreement a
 Run offline checks from the repository root:
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/influence-swarms/scenario/b1 -p 'test_b1.py'
-python3 researchers/vishesh/notes/influence-swarms/scenario/b1/prepare.py
+python3 -m unittest discover -s 5-experiments/studies/vishesh/influence-swarms/scenario/b1 -p 'test_b1.py'
+python3 5-experiments/studies/vishesh/influence-swarms/scenario/b1/prepare.py
 ```
 
 `prepare.py` requires the separate gold table from `cases.py`; it verifies hashes and refuses to silently change already frozen packet/validation files. Preparation is not admission. The next action is PI consideration of **B1-D0 then conditional B1-E0**, followed by the listed runtime, accounting, allocation and public-plan checks if funded. Scientific baseline remains GAP until competent and reproducible native evidence exists.

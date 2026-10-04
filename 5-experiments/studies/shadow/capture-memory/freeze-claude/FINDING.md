@@ -84,7 +84,7 @@ The plotted lines are saved scripted-policy predictions only. The figure explici
 Saved-data only, no credentials, model calls or network access:
 
 ```sh
-cd researchers/shadow/notes/capture-memory/freeze-claude
+cd 5-experiments/studies/shadow/capture-memory/freeze-claude
 python3 analyze.py
 python3 test_instrument.py
 python3 check_saved.py

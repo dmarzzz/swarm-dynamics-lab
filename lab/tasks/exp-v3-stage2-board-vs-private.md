@@ -15,7 +15,7 @@ topics: []
 
 ## Goal
 
-E3. v3's primary contrast on 24 fresh worlds (12 per stratum), F1/F2-fixed source, baseline revised per E1, about 2,450 calls, about $16. Holdout stays closed. Plan: [NEXT-EXPERIMENTS.md](../researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md). Proposed, not authorized: needs dmarz's go, a committed pre-run review, a claimed box (one run per server), and a source pinned at or after 6563e28. Changes to src/bench_v3 are proposals to dmarz/discussion-bench-v3.
+E3. v3's primary contrast on 24 fresh worlds (12 per stratum), F1/F2-fixed source, baseline revised per E1, about 2,450 calls, about $16. Holdout stays closed. Plan: [NEXT-EXPERIMENTS.md](../../5-experiments/studies/dmarz/discussion-dose/NEXT-EXPERIMENTS.md). Proposed, not authorized: needs dmarz's go, a committed pre-run review, a claimed box (one run per server), and a source pinned at or after 6563e28. Changes to src/bench_v3 are proposals to dmarz/discussion-bench-v3.
 
 ## Done when
 

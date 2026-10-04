@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — Neither tested committee improved observed mean recall or saved checks over the no-check confidence router on these 70 receipts; this does not establish general harm or equivalence. Basis: Strong control, held-apart calibration and complete paired data support a limited negative result. Receipt-level descriptive intervals are available, but vendor/layout dependence is unquantified; token recall and flawed regional updates limit practical generalization. Valid null/adverse results do not reduce confidence by themselves.
 - **sample_size_summary:** 70 paired evaluation receipts, excluding 20 calibration and 10 qualification receipts; 700 distinct outcomes after shared-control deduplication. Per backend: 70/70 receipts, 490 rows, 840 calls; vendor/layout dependence is unquantified.

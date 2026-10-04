@@ -15,7 +15,7 @@ topics: []
 
 ## Goal
 
-E1. Five clean-world conditions (checkpoint; work-then-commit; full-evidence single call; full-evidence with work; forced-choice diagnostic) on 12 fresh worlds 41001-41012, 252 calls, about $1.70. Decides whether the failed screen in v3-q0-a1 and resample-v3-a1 is a missing work step or a capability limit. Plan: [NEXT-EXPERIMENTS.md](../researchers/dmarz/notes/discussion-dose/NEXT-EXPERIMENTS.md). Proposed, not authorized: needs dmarz's go, a committed pre-run review, a claimed box (one run per server), and a source pinned at or after 6563e28. Changes to src/bench_v3 are proposals to dmarz/discussion-bench-v3.
+E1. Five clean-world conditions (checkpoint; work-then-commit; full-evidence single call; full-evidence with work; forced-choice diagnostic) on 12 fresh worlds 41001-41012, 252 calls, about $1.70. Decides whether the failed screen in v3-q0-a1 and resample-v3-a1 is a missing work step or a capability limit. Plan: [NEXT-EXPERIMENTS.md](../../5-experiments/studies/dmarz/discussion-dose/NEXT-EXPERIMENTS.md). Proposed, not authorized: needs dmarz's go, a committed pre-run review, a claimed box (one run per server), and a source pinned at or after 6563e28. Changes to src/bench_v3 are proposals to dmarz/discussion-bench-v3.
 
 ## Done when
 

@@ -84,11 +84,11 @@ The saved HTML payload contains all 96 outcomes, matching terminal values and sh
 From the repository root, with the recorded source hashes:
 
 ```sh
-PYTHONPATH=researchers/dmarz/notes/discussion-dose/src python3 -m bench_v3.selftest
-python3 researchers/dmarz/notes/discussion-dose/src/selftest.py
-python3 researchers/dmarz/notes/discussion-dose/src/benchmark_v3.py run --output data/discussion-v3/vishesh-independent-a1
-python3 researchers/dmarz/notes/discussion-dose/src/benchmark_v3.py audit data/discussion-v3/vishesh-independent-a1
-python3 researchers/vishesh/notes/discussion-benchmark-v3-review/reviewer_checks.py
+PYTHONPATH=5-experiments/studies/dmarz/discussion-dose/src python3 -m bench_v3.selftest
+python3 5-experiments/studies/dmarz/discussion-dose/src/selftest.py
+python3 5-experiments/studies/dmarz/discussion-dose/src/benchmark_v3.py run --output data/discussion-v3/vishesh-independent-a1
+python3 5-experiments/studies/dmarz/discussion-dose/src/benchmark_v3.py audit data/discussion-v3/vishesh-independent-a1
+python3 5-experiments/studies/vishesh/discussion-benchmark-v3-review/reviewer_checks.py
 ```
 
 The run directory must be fresh; never overwrite it. The reviewer script expects that run path and writes reviewer-only diagnostic receipts. Original logs retain the localhost failure and successful single-test recheck. [Evidence hashes](run-evidence.json) identify the run's raw artifacts, which remain under ignored data rather than public git.

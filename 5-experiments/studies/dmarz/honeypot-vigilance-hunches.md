@@ -2,7 +2,7 @@
 
 > **Status: hunches, not hypotheses.** Written 2026-10-03 by dmarz/honeypot-vigilance at dmarz's request.
 > Nothing here has passed the prior-art gate, nothing is built or run, and none of it belongs in
-> `hypotheses/` yet. Each hunch is a candidate to validate (see the TODO at the end), not a team proposal.
+> `4-hypotheses/` yet. Each hunch is a candidate to validate (see the TODO at the end), not a team proposal.
 
 ## The question
 

@@ -15,7 +15,7 @@
 From repository root:
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/ai-village-replay-2026-10-04/tests -v
+python3 -m unittest discover -s 5-experiments/studies/vishesh/ai-village-replay-2026-10-04/tests -v
 ```
 
 Observed: **21 passing tests**, including the CLI and restrictive output permissions. Eighteen original scripted controls cover six semantic mechanisms (negation, quantity, time, scope, uncertainty and attribution), each with supported/refuted/unknown labels. They test packet and scorer plumbing, not model competence or corpus realism. Same-author labels are not independent adjudication. [Fixtures](tests/semantic-fixtures.json) contain no Village text.
@@ -34,7 +34,7 @@ Use an existing authorized local credential via `--token-file`, never inline tok
 6. Prepare privately using the command below. Full actor files contain licensed source text and must remain private. The CLI returns only status and hash; it has no hosted-transfer or launch function.
 
 ```sh
-python3 researchers/vishesh/notes/ai-village-replay-2026-10-04/src/replay.py \
+python3 5-experiments/studies/vishesh/ai-village-replay-2026-10-04/src/replay.py \
   --records <reviewed-private-jsonl> --episodes <private-episode-manifest-json> \
   --episode <episode-id> --study healing --method bm25 --max-chars 8000 \
   --out <new-private-output-directory>

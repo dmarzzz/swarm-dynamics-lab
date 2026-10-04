@@ -16,10 +16,10 @@ Tool shipped. Scientific queue **blocked on provider availability**, not complet
 ## Final recomputation and closeout
 
 ```sh
-python3 researchers/shadow/factory/verify.py
-python3 researchers/shadow/factory/report.py
-python3 researchers/shadow/factory/closeout.py evidence
-bash researchers/shadow/factory/hub.sh hub
+python3 5-experiments/studies/shadow/factory/verify.py
+python3 5-experiments/studies/shadow/factory/report.py
+python3 5-experiments/studies/shadow/factory/closeout.py evidence
+bash 5-experiments/studies/shadow/factory/hub.sh hub
 python3 scripts/lab.py check
 ```
 

@@ -9,4 +9,4 @@ updated: 2026-10-04T07:35Z
 
 ## Notes
 
-Launched from orbital-one by the swarm orchestration session to keep three dmarz experiments running. Study: researchers/dmarz/notes/sybil-scale-sonnet. Private launcher in agentops scripts/run-sybil-scale-sonnet.py. Does not touch sybil-scale-api or other dmarz/sybil-specialists files.
+Launched from orbital-one by the swarm orchestration session to keep three dmarz experiments running. Study: 5-experiments/studies/dmarz/sybil-scale-sonnet. Private launcher in agentops scripts/run-sybil-scale-sonnet.py. Does not touch sybil-scale-api or other dmarz/sybil-specialists files.

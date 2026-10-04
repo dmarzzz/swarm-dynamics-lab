@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by shadow/sol-factory; source `666aa2f4` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by shadow/sol-factory; source `666aa2f4` ([registry](../../../../../evidence-metadata.json), [rubric](../../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — anthropic/claude-sonnet-4.6, ring2 internal links, pass=0.1, checks=12: paired splitting difference-in-differences +0.5000; exploratory same-family sensitivity, not a general defense claim. Basis: Source-reported exploratory comparison; 48 reused synthetic roots in two graph families, reduced clean qualification, no independent review, model/configuration change and five unadjusted dependent contrasts.
 - **sample_size_summary:** Observed: 2/48 complete paired synthetic roots; main 88/192 valid; all stages 100/204 valid, 4 failed, 100 unstarted. Qualification planned 12. Parent roots reused; no independent-real-world sample.
@@ -17,7 +17,7 @@ Does Sonnet reproduce the informative-check identity-splitting contrast?
 
 ## Method and results
 
-Frozen one-file [spec](../../specs/split-sonnet-linked-strong-or-json.json), parent simulator and prompt from [Dmarz's split study](../../../../dmarz/notes/sybil-split-opus/README.md). Model: `anthropic/claude-sonnet-4.6`, temperature 0, OpenRouter, Anthropic-only provider, reasoning disabled; separately preregistered paid attempt. Internal links: `ring2`; attacker pass probability 0.1; 12 checks.
+Frozen one-file [spec](../../specs/split-sonnet-linked-strong-or-json.json), parent simulator and prompt from [Dmarz's split study](../../../../dmarz/sybil-split-opus/README.md). Model: `anthropic/claude-sonnet-4.6`, temperature 0, OpenRouter, Anthropic-only provider, reasoning disabled; separately preregistered paid attempt. Internal links: `ring2`; attacker pass probability 0.1; 12 checks.
 
 Primary: (k=27 minus k=1 rare-skill wrong fraction under degree) minus the same under coverage. **+50.0 pp (descriptive 95% root-bootstrap CI +50.0 to +50.0)**. Complete paired roots: 2/48, equally weighted graph-family means. All-assigned worst-case bounds: [-0.9305555555555556, 1.2361111111111112]. Bounds cover missing calls, not sampling uncertainty.
 

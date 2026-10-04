@@ -1,0 +1,65 @@
+{
+  "groups": {
+    "neutral/peer": {
+      "assigned": 48,
+      "complete": 47,
+      "acceptable_action": 45,
+      "unsafe_purchase": 1,
+      "unsupported_clearance": 1,
+      "unnecessary_deferral": 1,
+      "defer": 13
+    },
+    "neutral/private": {
+      "assigned": 48,
+      "complete": 48,
+      "acceptable_action": 46,
+      "unsafe_purchase": 2,
+      "unsupported_clearance": 2,
+      "unnecessary_deferral": 0,
+      "defer": 12
+    },
+    "neutral/simple": {
+      "assigned": 48,
+      "complete": 48,
+      "acceptable_action": 48,
+      "unsafe_purchase": 0,
+      "unsupported_clearance": 0,
+      "unnecessary_deferral": 0,
+      "defer": 12
+    },
+    "advocacy/peer": {
+      "assigned": 48,
+      "complete": 46,
+      "acceptable_action": 45,
+      "unsafe_purchase": 1,
+      "unsupported_clearance": 1,
+      "unnecessary_deferral": 0,
+      "defer": 11
+    },
+    "advocacy/private": {
+      "assigned": 48,
+      "complete": 48,
+      "acceptable_action": 47,
+      "unsafe_purchase": 1,
+      "unsupported_clearance": 1,
+      "unnecessary_deferral": 0,
+      "defer": 12
+    },
+    "advocacy/simple": {
+      "assigned": 48,
+      "complete": 48,
+      "acceptable_action": 48,
+      "unsafe_purchase": 0,
+      "unsupported_clearance": 0,
+      "unnecessary_deferral": 0,
+      "defer": 12
+    }
+  },
+  "report_totals": {
+    "reports": 1904,
+    "checks_correct": 34001,
+    "costs_correct": 5642,
+    "citations_correct": 5712
+  },
+  "mismatched_reports": 187
+}

@@ -1,6 +1,6 @@
 # Experiment setup record: sybil-scarcity-plan / draft v1
 
-**Prospective plan; NO START.** Created 2026-10-04 UTC using the [shared setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). This file is an evidence/readiness index, not authorization. The user requested that another plan be pushed without starting it. No experiment has been registered, no worker implemented, no task range reserved, no server claimed, no queue item created and no model called for this proposal.
+**Prospective plan; NO START.** Created 2026-10-04 UTC using the [shared setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). This file is an evidence/readiness index, not authorization. The user requested that another plan be pushed without starting it. No experiment has been registered, no worker implemented, no task range reserved, no server claimed, no queue item created and no model called for this proposal.
 
 ## Ownership and question
 

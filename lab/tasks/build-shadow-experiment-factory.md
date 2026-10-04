@@ -35,4 +35,4 @@ Under Shadow's explicit Wave 4 instruction, implement a one-file prospective spe
 
 ## Coverage note
 
-The **build** deliverable is complete; the scientific queue is blocked, not complete.152 attempted assignments,100 valid,52 failures (8HTTP429,16HTTP503,20schema-invalid,8HTTP403). Paid ledgerUSD1.189149 settled +USD0.617820 unresolved reservations. Native recovery also stopped atHTTP503. No model jobs remain running. Authorized provider capacity is required before running the still-unstarted frozen specs. See researchers/shadow/factory/HANDOFF.md and CORRECTIONS.md. No scientific finding promoted.
+The **build** deliverable is complete; the scientific queue is blocked, not complete.152 attempted assignments,100 valid,52 failures (8HTTP429,16HTTP503,20schema-invalid,8HTTP403). Paid ledgerUSD1.189149 settled +USD0.617820 unresolved reservations. Native recovery also stopped atHTTP503. No model jobs remain running. Authorized provider capacity is required before running the still-unstarted frozen specs. See 5-experiments/studies/shadow/factory/HANDOFF.md and CORRECTIONS.md. No scientific finding promoted.

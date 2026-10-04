@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/orchestrator-2; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/orchestrator-2; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — On identical assignments, claude-opus-5-5 (effort low, no temperature) reproduces the population-scaling direction (proportional strong checks raise N972 specialist accuracy by +100.0 pp) but scores lower than Haiku and Sonnet over the grid because it abstains on 31% of rare fields while giving the fewest wrong values. Basis: Same-owner audit of 24 paired world roots, 2,400/2,400 valid, exact local recomputation, assignments identical to the Haiku and Sonnet cohorts. One synthetic task family and graph, admission independent of the model, configuration differs from the earlier cohorts in more than the model (no temperature, effort low), descriptive unadjusted intervals, owner waiver in place of independent review.
 - **sample_size_summary:** Observed: 24 paired world roots from one synthetic task family; 2,400/2,400 S1 outcomes analyzed, zero missing; 100 conditions at 36-972 simulated identities feeding one synthesizer. Q0 separately 64/64. Compared by world with the separate Haiku (sybil-scale-api/56defc84) and Sonnet (sybil-scale-sonnet/afd8d5b9) cohorts; not pooled.

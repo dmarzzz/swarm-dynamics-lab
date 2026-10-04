@@ -22,7 +22,7 @@ outputs:
 
 ## Goal
 
-Review researchers/vishesh/notes/poietic-agents/README.md and its linked protocol, configuration, contracts, novelty boundary, visualization mapping and prospective S0 assessment. This is an independent design/measurement critique, not a formal survey/hypothesis pass or permission to spend. No model calls, host deployment or holdout access.
+Review 5-experiments/studies/vishesh/poietic-agents/README.md and its linked protocol, configuration, contracts, novelty boundary, visualization mapping and prospective S0 assessment. This is an independent design/measurement critique, not a formal survey/hypothesis pass or permission to spend. No model calls, host deployment or holdout access.
 
 ## Done when
 

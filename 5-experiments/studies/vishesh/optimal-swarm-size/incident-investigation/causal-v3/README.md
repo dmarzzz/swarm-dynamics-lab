@@ -33,7 +33,7 @@ Case realism is still limited: three structured evidence records per root, ideal
 
 Before funding/dispatch: finish native typed batch schema, exact request builder and bounded relay/ledger/receipt adaptation; test failure capture, owner/context isolation and serialization on worst permitted histories; freeze case/assignment/source hashes and arm order; refresh project/study budget, public immutable plan/TLDR, runtime, approved-account/exclusive allocation and qualification checks. No resource claim is held during preparation. The unchanged Haiku route is recommended because observed defects were contract/measurement/action issues; no evidence justifies a model lottery.
 
-Reproduce offline with `python3 -m unittest discover -s researchers/vishesh/notes/optimal-swarm-size/incident-investigation/causal-v3 -p 'test_*.py'`, then run `validate.py` in that directory. Generated evidence is explicitly marked scripted and never substituted for a native outcome.
+Reproduce offline with `python3 -m unittest discover -s 5-experiments/studies/vishesh/optimal-swarm-size/incident-investigation/causal-v3 -p 'test_*.py'`, then run `validate.py` in that directory. Generated evidence is explicitly marked scripted and never substituted for a native outcome.
 
 ## Native integration checkpoint: funding withdrawn before admission
 

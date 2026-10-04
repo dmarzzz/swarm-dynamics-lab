@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Memory length affects return to a convention after perfect attacker removal under a scripted policy. Basis: The paired scripted mechanism has substantial within-fixture simulation evidence, but no measured LLM response curve and no epistemic truth task. Capture-conditioned estimates select outcomes; different capture doses/horizons change the estimand. Large episode counts are not independent model trials or generality. Task IDs mainly change paired random streams and word labels, not independent semantic problems; S1 and S1b reuse those IDs.
 - **sample_size_summary:** 100 paired RNG/task IDs × 2 seeds on one binary-convention mechanism in two parameter regimes; reused in 9,600 S1 + 38,400 S1b episodes. S0: 600 episodes; N=24; 0 model calls.
@@ -12,9 +12,9 @@ Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](..
 Exploratory build and scripted S0/S1/S1b, owned by **shadow/sol-capture**, 3 to 4 October 2026. Attribution: Sol.
 
 **Status: labelled hunch, not an accepted hypothesis.** The hypothesis text is
-[`hypotheses/shadow-capture-memory.md`](../../../../hypotheses/shadow-capture-memory.md) (merged via PR 82, status
-`proposed`), which rests on `surveys/llm-agent-swarms` (review verdict `revise`, see
-`reviews/llm-agent-swarms--dmarz.md`). Per `templates/experiment-worker/README.md` step 1 this lives in researcher
+[`4-hypotheses/shadow-capture-memory.md`](../../../../4-hypotheses/shadow-capture-memory.md) (merged via PR 82, status
+`proposed`), which rests on `2-surveys/llm-agent-swarms` (review verdict `revise`, see
+`2-surveys/reviews/llm-agent-swarms--dmarz.md`). Per `lab/templates/experiment-worker/README.md` step 1 this lives in researcher
 notes. Scripted S0/S1/S1b describe the tanh rule, not agents. **2026-10-04: one real-model pilot has run** on
 Shadow's GO, `S2_pilot` (12 episodes, llama-3.1-8b, 0.03 USD, dev tasks only): see
 [results/S2.md](results/S2.md). It is a pilot on a hunch, not the S2 of an accepted hypothesis.
@@ -37,7 +37,7 @@ separates a social effect from a label prior.
 
 ## Scope boundary with vishesh's immune-response lane
 
-`researchers/vishesh/notes/swarm-immune-response/` and `researchers/vishesh/notes/actual-experiments/immune-response/`
+`5-experiments/studies/vishesh/swarm-immune-response/` and `5-experiments/studies/vishesh/actual-experiments/immune-response/`
 own **detection, scoped quarantine, repair (private versus shared store), probation and re-entry**, with an
 executable task world, a stale-child return and a benign update. [[zhou-2026-infa-guard]] is their closest
 prior (benign / attacker / infected classes, replace attackers, correct the infected).

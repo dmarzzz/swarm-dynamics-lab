@@ -9,7 +9,7 @@
 - Carried, byte for byte (sha256 compared file by file, 189 files): `artifacts/overnight-research-program-2026-10-04/`
   (v1-v5), `artifacts/overnight-research-canvas-2026-10-04/` (v1-v5), `artifacts/large-swarm-experiment-proposal-2026-10-04/`
   (v1-v2), `artifacts/latest-experiment-results-2026-10-04/` (v1), `artifacts/evaluation-shortlist-2026-10-04/` (v1),
-  their 14 `attestations/*.intoto.json` statements, and the notes folders `researchers/dmarz/notes/overnight-program-2026-10-04/`,
+  their 14 `attestations/*.intoto.json` statements, and the notes folders `5-experiments/studies/dmarz/overnight-program-2026-10-04/`,
   `large-swarm-proposal-2026-10-04/`, `latest-results-review-2026-10-04/` and `eval-search-2026-10-04/`.
 - Registry: the five artifact entries in `artifacts.yaml` and their 14 keys in `artifacts.lock.json` are the ones
   Codex's `fd.py add` runs wrote (on base e4dd48fc). They were appended unchanged to main's current files; every
@@ -21,7 +21,7 @@
   documents to this agent.
 - Left out: `researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__pipeline__READY-CHAIN.md`.
   The pre-commit address scan matched it (two mentions of the loopback address, in the rehearsal paragraph that
-  is also in `researchers/dmarz/notes/pipeline/READY-CHAIN.md` on main). The filing rule was to hold back any
+  is also in `5-experiments/studies/dmarz/pipeline/READY-CHAIN.md` on main). The filing rule was to hold back any
   file with an IP address and report it. The overnight program and canvas versions still list this snapshot as
   an ingredient, with its digest in the lock and statements; the file itself is not in the repo until dmarz
   decides.

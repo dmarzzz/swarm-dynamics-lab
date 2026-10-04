@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-methods; source `fade325f` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-methods; source `fade325f` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Literal+code recovered two baseline errors; checker added no accuracy on four qualification receipts. Basis: Four partly reused receipt units, failed qualification, same-model conditional checker; main evaluation unrun.
 - **sample_size_summary:** 4 paired receipt units,20 Q2 calls; preceding Q1 stopped after1call.

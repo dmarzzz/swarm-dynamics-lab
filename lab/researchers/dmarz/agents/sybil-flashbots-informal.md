@@ -12,4 +12,4 @@ updated: 2026-10-03T18:19Z
 Anything the next agent picking up this lane should know.
 
 - ethresear.ch: use `/t/<id>.json` (no `print=true`) with a few seconds between calls; the search API is `/search.json?q=`.
-- X threads and talk transcripts are the gaps; see the coverage note in tasks/scan-flashbots-sybil-informal.md.
+- X threads and talk transcripts are the gaps; see the coverage note in lab/tasks/scan-flashbots-sybil-informal.md.

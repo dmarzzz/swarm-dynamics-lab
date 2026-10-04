@@ -57,3 +57,11 @@ Implemented durable native reservations/usage receipts, missing-ledger and dupli
 ## Additional review waived
 
 Owner explicitly waived another researcher review for the bounded A3. Recorded OPERATOR-AUTHORIZATION.md and linked it from pre-run assessment. Refreshed both repositories and actual private PR/task: replacement PR116 remains open and provisioning task unclaimed; no replacement inventory, exclusive claim or account receipt exists. Existing preserved budget passes validation. No paid calls started and no additional approval requested; actual infrastructure availability remains the blocker.
+
+## Peer Q1 closeout and visible-contract candidate
+
+Q1 sourceee13a461 ran two Opus/Anthropic calls, then325-character reason violated240maximum before any tool step. Both requests/answers/usage inspected and replayed; first diagnosis/proposal correct, but0/4worlds complete. All assignments and private evidence retained; P1 not run. Original ledger711calls/15.606955conservative; incremental all-in0.027300742, claim released and unused finite grant closed. Offline finalize handoff14110e85251526f225c89fcc603368181a673ed58afeafe205d79c12cf86b20a and authored11dimensionreview complete.
+
+Prospective offline candidate exposes existing string limits/order in instructions, changes no schema/outcome/model, and never truncates or retries.24tests pass; largest checkedwire7020. Saved failure remains invalid. General competence guide gains the same narrowly evidenced lesson. Next: distinct bounded qualification after finite diagnostic reservation and current admission; no peer-effect claim or original-stage reuse.
+
+PI allocated distinct Q2 necessary interface diagnostic only:48calls/2.657280API+.03existinghost20min; no comparison. Integrated only visible existing limits and new stage/admission bindings;27tests pass. Q1 retained; original711/15.606955 ledger baseline enforced. Original unused grant reporting corrected to conservative request-reservation carry-forward, not claimed refund from actual charges.

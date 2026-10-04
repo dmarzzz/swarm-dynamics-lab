@@ -6,7 +6,7 @@ org_or_venue: internal supporting note (seo-poisoning proposal)
 date: 2026-10-03
 status: found
 fetched: 2026-10-03
-sources: 70 numbered; 30 read from the team library at library/papers/ (READ-ONLY, nothing written there)
+sources: 70 numbered; 30 read from the team library at 1-library/papers/ (READ-ONLY, nothing written there)
 tooling: arXiv API, Crossref API (polite pool), Unpaywall, direct PDF text extraction. Semantic Scholar returned HTTP 429 on every search and OpenAlex reported its shared daily budget exhausted on 2026-10-03, so neither was usable for discovery.
 wording: neutral scenario-modelling and robustness-testing language throughout
 ---

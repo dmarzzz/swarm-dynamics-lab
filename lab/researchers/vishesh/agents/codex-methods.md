@@ -7,4 +7,4 @@ doing: Q1/Q2 closed; qualification failed; four receipt units; evaluation unrun;
 updated: 2026-10-04T20:54:36.808713+00:00
 ---
 
-See researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md.
+See 5-experiments/studies/vishesh/antsy-targeted-v8/literal-v2r/POST-MORTEM.md.

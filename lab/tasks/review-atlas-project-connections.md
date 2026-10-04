@@ -24,7 +24,7 @@ outputs:
 
 Review all 214 atlas candidates and the research-area UI; publish source-linked exploratory extensions and a crosswalk to all sixteen original project briefs. This is research context, not a formal survey or hypothesis approval.
 
-Synthesis output: `synthesis/atlas-project-connections.md`, with supporting owned notes under `researchers/vishesh/notes/atlas-review/`.
+Synthesis output: `3-synthesis/atlas-project-connections.md`, with supporting owned notes under `5-experiments/studies/vishesh/atlas-review/`.
 
 ## Done when
 

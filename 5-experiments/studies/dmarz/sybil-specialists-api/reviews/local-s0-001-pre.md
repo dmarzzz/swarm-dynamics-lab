@@ -16,7 +16,7 @@ Test the complete 216-packet instrument before using the API: six clean worlds w
 
 ## Frozen execution plan
 
-Runtime source fingerprint hashes every study Python module, design, registration, dependencies and owned parent simulator; Git revision also recorded. Model/prompt are provider.py and design.yaml but are not invoked here. Python 3.9, Pillow 11.3.0 and PyYAML 6 locally. Command: python3 researchers/dmarz/notes/sybil-specialists-api/src/worker.py --stage S0 --attempt local-s0-001. One process, 30 minutes maximum, zero calls/spend, no retries. Keep every record, stop and preserve full assigned denominator on any error. New selftest: 12 tests passed; parent simulator: 15 tests passed. Fleet deployment will repeat this at the exact runtime fingerprint before 24-call model qualification. This local attempt needs no server claim or credential.
+Runtime source fingerprint hashes every study Python module, design, registration, dependencies and owned parent simulator; Git revision also recorded. Model/prompt are provider.py and design.yaml but are not invoked here. Python 3.9, Pillow 11.3.0 and PyYAML 6 locally. Command: python3 5-experiments/studies/dmarz/sybil-specialists-api/src/worker.py --stage S0 --attempt local-s0-001. One process, 30 minutes maximum, zero calls/spend, no retries. Keep every record, stop and preserve full assigned denominator on any error. New selftest: 12 tests passed; parent simulator: 15 tests passed. Fleet deployment will repeat this at the exact runtime fingerprint before 24-call model qualification. This local attempt needs no server claim or credential.
 
 ## Visualization mapping
 

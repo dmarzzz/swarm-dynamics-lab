@@ -9,7 +9,7 @@ updated: 2026-10-04T05:00Z
 
 ## Notes
 
-- Lane: capture-memory hunch under `researchers/shadow/notes/capture-memory/` (hypothesis shadow-capture-memory on
+- Lane: capture-memory hunch under `5-experiments/studies/shadow/capture-memory/` (hypothesis shadow-capture-memory on
   main, status `proposed`, not accepted). Scripted S0/S1/S1b done. Hub id `capture-memory`.
 - 2026-10-04 04:00Z: Shadow's GO for the costed pilot. Q0 (model qualification) validity 1.00 on the hub; S2_pilot
   queued and running: N 12, W1_INSIDE, memory 1 @ 0.42 and full @ 0.54 (scripted dose-rule doses carried over,

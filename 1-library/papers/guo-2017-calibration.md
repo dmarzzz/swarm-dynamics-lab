@@ -48,4 +48,4 @@ Abstract and publisher citation inspected. It neither evaluates Jev nor guarante
 
 ## Relevance to us
 
-Decision-model research area: researchers/vishesh/notes/decision-models/README.md.
+Decision-model research area: 5-experiments/studies/vishesh/decision-models/README.md.

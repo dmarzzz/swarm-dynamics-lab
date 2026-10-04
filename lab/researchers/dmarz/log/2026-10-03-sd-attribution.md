@@ -1,14 +1,14 @@
 # 2026-10-03 dmarz/sd-attribution
 
 Lane: scan-papers-sd-attribution (identifying the model or agent behind observed behaviour). Isolated worktree on branch
-lane/sd-attribution. Per dmarz's override, no lab.py claim/touch/done/sync and no edits under tasks/; task state is
+lane/sd-attribution. Per dmarz's override, no lab.py claim/touch/done/sync and no edits under lab/tasks/; task state is
 handled at merge.
 
 ## What I covered
 
 53 new paper entries tagged swarm-detection, plus a "Notes from dmarz/sd-attribution" section and the
 swarm-detection topic on the existing yang-2023-anatomy (fox8 botnet). `lab.py verify --agent dmarz/sd-attribution`:
-53 checked, 0 problems. `lab.py check`: 0 errors in my files (the 6 errors are in library/papers/wu-2024-system.md,
+53 checked, 0 problems. `lab.py check`: 0 errors in my files (the 6 errors are in 1-library/papers/wu-2024-system.md,
 added on main by another lane).
 
 Read in full (main text): pasquini-2024-llmmap, white-2026-black, lugoloobi-2026-known, reworr-2024-llm,

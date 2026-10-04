@@ -42,7 +42,7 @@ The team must choose a provider that satisfies all mandatory requirements, then 
 
 Compare the chosen aggregation rule with independent voting and a shared blackboard at equal total resource limits. Report feasible-choice rate, regret, false commitment, delay, justified abstention and all consumed resources. Include true copied evidence, false independent evidence, ties and no-feasible-provider cases. These prevent a rule that simply distrusts repetition from winning by construction. A centralized single-agent baseline receives the same available evidence union under the same total cap; exceeding its capacity is a different, separately labeled question.
 
-Use the [existing external-influence design](../seo-poisoning/experimental-design.md) and [private-judgment design](../../../dmarz/notes/soc07-private-judgments/README.md) where their contrast applies. Do not splice their arms or sample plans into a new purported preregistration.
+Use the [existing external-influence design](../seo-poisoning/experimental-design.md) and [private-judgment design](../../dmarz/soc07-private-judgments/README.md) where their contrast applies. Do not splice their arms or sample plans into a new purported preregistration.
 
 ### Shared-result repair
 
@@ -65,7 +65,7 @@ Start with the corpus in fixtures. A later live-web transfer adds retrieval drif
 1. Freeze the chosen question, its original falsifier, one task contract and the information-access matrix.
 2. Create a few hand-audited fixture worlds covering clean success, plausible failure, missing evidence and an adversarial/rare case. These are debugging cases, not a powered evaluation set.
 3. Implement the deterministic scorer and trivial baselines before calling a model. Confirm that a correct solution is reachable from allowed observations, or label the case intentionally unresolvable.
-4. Adapt the [existing harness contracts](../../../../tooling/agent-experiments/README.md) for IDs, event logs, costs, replay and outcomes. The current toy harness is scripted bookkeeping, not an already implemented API/research/immune agent environment.
+4. Adapt the [existing harness contracts](../../../toolkit/agent-experiments/README.md) for IDs, event logs, costs, replay and outcomes. The current toy harness is scripted bookkeeping, not an already implemented API/research/immune agent environment.
 5. After the applicable survey/hypothesis gates and resource authorization, run a small qualification pilot, freeze independent evaluation worlds and perform the declared comparison. A later sample size must come from the outcome and pilot variance, not the fixture count in this note.
 
 Use whole task worlds or teams as the randomized units; retain failed, interrupted and unfinished trials. Do not let evaluator truth leak through document IDs, source ordering, router inputs, stop rules or UI colors. Show individual trace replays for explanation and all-world outcome distributions for evidence.

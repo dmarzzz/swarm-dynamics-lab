@@ -42,7 +42,7 @@ The 46.2% to 25.9% figures are supported, but “more forks made it worse” cha
 
 ### R3 — Repair the new entries and keep guarantees within checked evidence
 
-**Priority: medium. Locations: `library/papers/zhai-2024-secret.md` lines 8 and 11; `lyu-2023-poisoning.md` line 36; `xie-2020-dba.md` line 27; survey line 163.**
+**Priority: medium. Locations: `1-library/papers/zhai-2024-secret.md` lines 8 and 11; `lyu-2023-poisoning.md` line 36; `xie-2020-dba.md` line 27; survey line 163.**
 
 - Zhai's DOI is valid, but IEEE's deposited Crossref record gives pages **5060-5074**, not 4482-4497, and its full-text link identifies **10504302**, not the stored 10502325. Title, seven authors and year match. Correct the bibliographic record and use the DOI as the stable link. IEEE returned a browser challenge, so this review does not certify the paper's proofs or the survey's transfer of per-leader communication complexity to arbitrary committee-member cost. Preserve abstract-depth qualification and specify communication cost, not unqualified cost. [Publisher-deposited metadata](https://api.crossref.org/works/10.1109/TIFS.2024.3390584), [DOI](https://doi.org/10.1109/TIFS.2024.3390584).
 - Cerberus used two image datasets and LOAN credit-risk data; the entry incorrectly calls all three image benchmarks. Its 3-dataset/13-defense headline and coordinated trigger/model-deviation mechanism are supported. Correct the dataset description. [Primary PDF, Experimental Evaluation/Table 1](https://ojs.aaai.org/index.php/AAAI/article/view/26083/25855).
@@ -79,6 +79,6 @@ All searches ran October 4, 2026 through web search. Counts are not reported as 
 
 ## Seminal coverage and gate evidence
 
-The seven seminal choices cover the declared historical branches. Existing lane records document forward chasing for Sander, SSLE, BadMerging, Greenblatt, Perez, Buss and Korzhyk, with pagination/title-filter limits. Checked evidence resides in `tasks/scan-papers-fm-{mobile-agents,unlinkability,merge-poisoning,ai-control,identity-hijack,biology}.md` and `researchers/dmarz/notes/fm-gap-2.md`. The later Bagdasaryan/Christiano work is in `researchers/shadow/log/2026-10-04-sol-fm.md`. These are recorded searches, not independently reproduced citation counts.
+The seven seminal choices cover the declared historical branches. Existing lane records document forward chasing for Sander, SSLE, BadMerging, Greenblatt, Perez, Buss and Korzhyk, with pagination/title-filter limits. Checked evidence resides in `lab/tasks/scan-papers-fm-{mobile-agents,unlinkability,merge-poisoning,ai-control,identity-hijack,biology}.md` and `5-experiments/studies/dmarz/fm-gap-2.md`. The later Bagdasaryan/Christiano work is in `lab/researchers/shadow/log/2026-10-04-sol-fm.md`. These are recorded searches, not independently reproduced citation counts.
 
 `lab.py gate fork-merge-security` passed. Repository validation before filing reported 0 errors and 5 pre-existing unresolved-reference warnings. A mechanical pass is retained separately from this **revise** verdict. A focused re-review can clear R1-R4 without repeating the entire survey; no new experiment or second unrelated approval is requested.

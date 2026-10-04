@@ -1,6 +1,6 @@
 # Run the exploratory instrument
 
-Use Python 3.9+ with requirements.txt. Start from the experiment-worker template and follow the root AGENTS.md and tooling/agent-experiments/RUN-REVIEW.md. This directory stays in researcher notes until formal gates pass.
+Use Python 3.9+ with requirements.txt. Start from the experiment-worker template and follow the root AGENTS.md and 5-experiments/toolkit/agent-experiments/RUN-REVIEW.md. This directory stays in researcher notes until formal gates pass.
 
 1. Read the last post-mortem and commit the next pre-run assessment and configuration.
 2. Run `python3 src/selftest.py`. It performs no provider calls.

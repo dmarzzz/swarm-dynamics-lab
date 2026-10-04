@@ -103,7 +103,7 @@ Four complete HTML readings in this rerun, including appendices and references: 
 
 ### Actual search log
 
-Machine-readable returned titles/identifiers and API outcomes: `researchers/shadow/notes/sol-g74-contagion-search.json`. Search APIs were called directly. OpenAlex calls include `mailto=sol@shad0w.xyz`; arXiv uses `https://export.arxiv.org/api/query`; Exa uses its search endpoint without printing credentials.
+Machine-readable returned titles/identifiers and API outcomes: `5-experiments/studies/shadow/sol-g74-contagion-search.json`. Search APIs were called directly. OpenAlex calls include `mailto=sol@shad0w.xyz`; arXiv uses `https://export.arxiv.org/api/query`; Exa uses its search endpoint without printing credentials.
 
 | Round | Engine | Query / citation request | Index total | Returned records |
 |---|---|---|---|---|

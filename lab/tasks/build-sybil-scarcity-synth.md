@@ -21,12 +21,12 @@ outputs:
 
 ## Goal
 
-Follow-up to [sybil-scarcity-opus](../../5-experiments/studies/dmarz/sybil-scarcity-opus/RESULTS.md) in `researchers/dmarz/notes/sybil-scarcity-synth/`: on the same kind of packets and fresh roots, vary only the synthesizer (reasoning effort low or high, the original prompt or the original plus one frozen evidence rule) and measure whether it adopts the repeated fabrication less when truth is scarce, and what that costs in accuracy when truth is plentiful. The rule is written after seeing the earlier result, so this is a follow-up, not a confirmation. Exploratory study in researcher notes. Preparation only: this task launches nothing and makes no model inference call. The run itself goes through the private run queue after the fleet monitor's same-researcher check.
+Follow-up to [sybil-scarcity-opus](../../5-experiments/studies/dmarz/sybil-scarcity-opus/RESULTS.md) in `5-experiments/studies/dmarz/sybil-scarcity-synth/`: on the same kind of packets and fresh roots, vary only the synthesizer (reasoning effort low or high, the original prompt or the original plus one frozen evidence rule) and measure whether it adopts the repeated fabrication less when truth is scarce, and what that costs in accuracy when truth is plentiful. The rule is written after seeing the earlier result, so this is a follow-up, not a confirmation. Exploratory study in researcher notes. Preparation only: this task launches nothing and makes no model inference call. The run itself goes through the private run queue after the fleet monitor's same-researcher check.
 
 ## Done when
 
 - [x] Prospective plan with the frozen rule wording on main before any fresh root is generated. (6e07eb51)
 - [x] Code, offline tests and a scripted zero-model-call stage that passes offline. (code commit ea63999a, source hash b75d7b37: selftest 39 OK, offline S0 128/128, rehearsal 38/38)
-- [x] Pre-run review per tooling/agent-experiments/RUN-REVIEW.md on main with assignment manifest, call counts, gates, model settings, hard max_calls and the pinned commit. (reviews/chain-001-pre.md)
-- [x] Chained launch per researchers/dmarz/notes/pipeline/READY-CHAIN.md with the server as a parameter. (src/chain.py; RUN.md)
+- [x] Pre-run review per 5-experiments/toolkit/agent-experiments/RUN-REVIEW.md on main with assignment manifest, call counts, gates, model settings, hard max_calls and the pinned commit. (reviews/chain-001-pre.md)
+- [x] Chained launch per 5-experiments/studies/dmarz/pipeline/READY-CHAIN.md with the server as a parameter. (src/chain.py; RUN.md)
 - [ ] Run request filed in the private run queue after the fleet monitor's go.

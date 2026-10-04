@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Null-neutral updates fix a specific estimator defect and explicit-cost planning changes deterministic check allocation. Basis: Numerical reconstruction supports the narrow repair; saved purchases do not reveal counterfactual model behavior. D1 changes estimator and action allocation together; assumed check price is not measured economics. No fresh efficacy/generalization claim.
 - **sample_size_summary:** Same70 v4 receipts reused as development diagnostics; D0=2,940 rows,D1=1,400 rows;20 historical calibration receipts;0 new model calls or fresh evaluation receipts.
@@ -17,7 +17,7 @@ Can a receipt-processing system choose an OCR output more reliably when verifica
 
 ## Feedback incorporated
 
-Repository refresh: `25531b6`. [Dmarz's conditional successor](../../../dmarz/notes/next-experiments-2026-10-04/README.md) asks for completed parent results, measured ambiguity/headroom, matched resources and a new evaluation sample. V4 is now complete. Its confidence-only baseline outperformed committee means; the adaptive intervention never activated. The v4 post-mortems additionally identify null QA, unequal regional weighting and weak stopping qualification. No new Antsy-specific peer review was found in the refreshed inbox or reviews.
+Repository refresh: `25531b6`. [Dmarz's conditional successor](../../dmarz/next-experiments-2026-10-04/README.md) asks for completed parent results, measured ambiguity/headroom, matched resources and a new evaluation sample. V4 is now complete. Its confidence-only baseline outperformed committee means; the adaptive intervention never activated. The v4 post-mortems additionally identify null QA, unequal regional weighting and weak stopping qualification. No new Antsy-specific peer review was found in the refreshed inbox or reviews.
 
 ## Plan before implementation
 

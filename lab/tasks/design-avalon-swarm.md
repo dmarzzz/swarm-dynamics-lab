@@ -19,7 +19,7 @@ topics:
 
 ## Goal
 
-A one-page design brief in the style of `researchers/dmarz/notes/swarm-factory.md`, written only after the
+A one-page design brief in the style of `5-experiments/studies/dmarz/swarm-factory.md`, written only after the
 survey: which base engine, which of A1-A6 survive the survey, the balance sweep needed per N, cost estimate
 (seats x rounds x messages, local vs frontier split), and the metrics. Do not build the simulation; dmarz
 decides that after reading the brief.

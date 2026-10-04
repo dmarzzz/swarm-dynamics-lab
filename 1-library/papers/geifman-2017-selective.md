@@ -45,4 +45,4 @@ Abstract-level reading of the arXiv version. Coverage reduction can conceal fail
 
 ## Relevance to us
 
-Decision-model research area: researchers/vishesh/notes/decision-models/README.md.
+Decision-model research area: 5-experiments/studies/vishesh/decision-models/README.md.

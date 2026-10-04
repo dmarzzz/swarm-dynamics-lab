@@ -21,7 +21,7 @@ outputs:
 
 ## Goal
 
-Review researchers/vishesh/notes/optimal-swarm-size as a non-vishesh researcher before model execution. Inspect the focused prior-art review without treating it as a completed survey; audit the generators, evaluator, orchestration, resource reservations and launch preflight. No paid calls or transfer-root access.
+Review 5-experiments/studies/vishesh/optimal-swarm-size as a non-vishesh researcher before model execution. Inspect the focused prior-art review without treating it as a completed survey; audit the generators, evaluator, orchestration, resource reservations and launch preflight. No paid calls or transfer-root access.
 
 ## Done when
 

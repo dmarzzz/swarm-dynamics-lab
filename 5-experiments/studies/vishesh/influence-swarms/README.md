@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Untested efficacy question: an explicit ledger and enforced final score rule makes checking affect the committed decision. Basis: Enforced deterministic choice is an engineering intervention, not proof of improved model reasoning.
 - **sample_size_summary:** No live-qualified result; offline score-enforcement branch superseded by procurement scenario study.
@@ -38,8 +38,8 @@ Report committed correctness/harm/regret and chair-proposal correctness/disagree
 ## Reproduce and status
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/influence-swarms/tests -v
-python3 researchers/vishesh/notes/influence-swarms/src/runner.py local --stage engineering --out /tmp/influence-quality-new
+python3 -m unittest discover -s 5-experiments/studies/vishesh/influence-swarms/tests -v
+python3 5-experiments/studies/vishesh/influence-swarms/src/runner.py local --stage engineering --out /tmp/influence-quality-new
 ```
 
 Use a fresh directory. Historical v2 is immutable. Paid execution requires an exclusive machine claim, an enforced non-overlapping quota from the existing shared authority and exact-version public plan; it must not copy the old USD 45 ledger to a new host. No additional spending authorization is assumed.

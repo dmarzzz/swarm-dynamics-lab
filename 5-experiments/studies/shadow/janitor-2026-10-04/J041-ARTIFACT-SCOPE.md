@@ -25,7 +25,7 @@ This is more than formatting churn: ordinary publication can erase hashes, rebin
 Run:
 
 ```sh
-python3 researchers/shadow/notes/janitor-2026-10-04/probes/artifact_scope_probes.py
+python3 5-experiments/studies/shadow/janitor-2026-10-04/probes/artifact_scope_probes.py
 ```
 
 The actual `fd.main(['add', ...])` runs only in a temporary synthetic project. No real artifact/manifest/lock/attestation is changed; no API calls, keys or signing involved. Git/session lookups are mocked. [Saved output](probes/artifact-scope-results.json):

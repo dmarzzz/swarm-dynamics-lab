@@ -9,4 +9,4 @@ updated: 2026-10-03T20:17Z
 
 ## Notes
 
-See synthesis/pre-experiment-research.md and researchers/dmarz/notes/preflight-evidence-log.md. No experiment was run; this is not a survey-gate pass.
+See 3-synthesis/pre-experiment-research.md and 5-experiments/studies/dmarz/preflight-evidence-log.md. No experiment was run; this is not a survey-gate pass.

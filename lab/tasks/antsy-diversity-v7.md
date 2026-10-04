@@ -30,4 +30,4 @@ Implement declared and behavioral worker-diversity profiles, qualify a second OC
 
 ## Disposition
 
-Delivered design, shared diversity guide,24 tests,100-call repaired qualification, charts/replay and audited results. The original aspiration of a held-out efficacy comparison remains unachieved because the competence gate failed; closing this iteration does not assert that gate passed. See researchers/vishesh/notes/antsy-diversity-v7/RESULTS.md for the next design requirements.
+Delivered design, shared diversity guide,24 tests,100-call repaired qualification, charts/replay and audited results. The original aspiration of a held-out efficacy comparison remains unachieved because the competence gate failed; closing this iteration does not assert that gate passed. See 5-experiments/studies/vishesh/antsy-diversity-v7/RESULTS.md for the next design requirements.

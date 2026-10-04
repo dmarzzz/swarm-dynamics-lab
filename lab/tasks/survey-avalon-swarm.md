@@ -23,7 +23,7 @@ topics:
 ## Goal
 
 Turn the three Avalon scans into a prior-art survey that decides, per hunch A1-A6
-(`researchers/dmarz/notes/avalon-swarm-hunches.md`), what has been tested, what the closest attempts found,
+(`5-experiments/studies/dmarz/avalon-swarm-hunches.md`), what has been tested, what the closest attempts found,
 and what is still open.
 
 ## Done when

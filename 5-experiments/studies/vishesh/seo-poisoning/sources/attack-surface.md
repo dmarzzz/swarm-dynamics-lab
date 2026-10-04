@@ -14,7 +14,7 @@ fetched: 2026-10-03
 
 > **Format.** `_SCHEMA.md` is one-file-per-reading; this is a roll-up over 33 readings, so each source gets a
 > compact entry (what it is · what was measured · **boundary of evidence**). **Extends**
-> `researchers/vishesh/notes/agent-swarm-influence-research.md` — only overlap is Nestaas et al., one table row
+> `5-experiments/studies/vishesh/agent-swarm-influence-research.md` — only overlap is Nestaas et al., one table row
 > there, opened out here with measured effect sizes.
 > **Marks.** `[V]` = page fetched this session, numbers read off it. `[L]` = abstract read via the arXiv API
 > *listing* only — weaker, never load-bearing. `unverified` = asserted in a loaded source but sourced to a

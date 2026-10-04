@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-theseus; source `dd09575d` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-theseus; source `dd09575d` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Withheld-policy acquisition remains untested after a provider failure. Basis: First request returnedHTTP429 with no model text/usage;203slots unstarted. This is no evidence of acquisition success/failure or cultural preservation. Prior R1 remains separate.
 - **sample_size_summary:** Planned: six fixed acquisition roots,12learners and96test case/family pairs. Observed:1/204calls endedHTTP429,0valid responses,203unstarted;0executor decisions and no root outcomes. No culture test.

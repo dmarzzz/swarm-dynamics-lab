@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620">
+<rect x="0" y="0" width="1600" height="620" fill="#05090b" />
+<text x="28.00" y="34.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="19" fill="#c8d6d4" text-anchor="start" font-weight="bold" xml:space="preserve">E4  harmful_target by team size x conformity, per chair</text>
+<text x="28.00" y="56.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">n = 20 ROOTS x 7 families x 3 worlds x 3 policy mixes x 3 check counts per cell  |  independent unit = ROOT</text>
+<rect x="28.00" y="80.00" width="500.00" height="420.00" fill="#0a1115" stroke="#152026" stroke-width="1" />
+<text x="40.00" y="100.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#c8d6d4" text-anchor="start" font-weight="bold" xml:space="preserve">A  chair = summary_only</text>
+<text x="40.00" y="117.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">harmful_target</text>
+<text x="188.67" y="190.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve" transform="rotate(-42 188.67 190.00)">p_conform = 0.0</text>
+<text x="318.00" y="190.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve" transform="rotate(-42 318.00 190.00)">p_conform = 0.3</text>
+<text x="447.33" y="190.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve" transform="rotate(-42 447.33 190.00)">p_conform = 0.6</text>
+<text x="116.00" y="237.25" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">N = 1</text>
+<text x="116.00" y="308.75" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">N = 3</text>
+<text x="116.00" y="380.25" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">N = 6</text>
+<text x="116.00" y="451.75" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">N = 9</text>
+<rect x="124.00" y="198.00" width="128.13" height="70.30" fill="#f2635c" />
+<text x="188.67" y="236.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.233</text>
+<rect x="253.33" y="198.00" width="128.13" height="70.30" fill="#f2635c" />
+<text x="318.00" y="236.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.233</text>
+<rect x="382.67" y="198.00" width="128.13" height="70.30" fill="#f2635c" />
+<text x="447.33" y="236.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.233</text>
+<rect x="124.00" y="269.50" width="128.13" height="70.30" fill="#ef7951" />
+<text x="188.67" y="308.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.193</text>
+<rect x="253.33" y="269.50" width="128.13" height="70.30" fill="#ef7951" />
+<text x="318.00" y="308.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.193</text>
+<rect x="382.67" y="269.50" width="128.13" height="70.30" fill="#ef7951" />
+<text x="447.33" y="308.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.193</text>
+<rect x="124.00" y="341.00" width="128.13" height="70.30" fill="#ec894a" />
+<text x="188.67" y="379.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.163</text>
+<rect x="253.33" y="341.00" width="128.13" height="70.30" fill="#ed814e" />
+<text x="318.00" y="379.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.179</text>
+<rect x="382.67" y="341.00" width="128.13" height="70.30" fill="#ee7f4e" />
+<text x="447.33" y="379.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.182</text>
+<rect x="124.00" y="412.50" width="128.13" height="70.30" fill="#ea9743" />
+<text x="188.67" y="451.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.139</text>
+<rect x="253.33" y="412.50" width="128.13" height="70.30" fill="#eb9245" />
+<text x="318.00" y="451.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.146</text>
+<rect x="382.67" y="412.50" width="128.13" height="70.30" fill="#eb9245" />
+<text x="447.33" y="451.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.148</text>
+<rect x="546.00" y="80.00" width="500.00" height="420.00" fill="#0a1115" stroke="#152026" stroke-width="1" />
+<text x="558.00" y="100.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#c8d6d4" text-anchor="start" font-weight="bold" xml:space="preserve">B  chair = full_records  (FLAT by construction)</text>
+<text x="558.00" y="117.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">harmful_target</text>
+<text x="706.67" y="190.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve" transform="rotate(-42 706.67 190.00)">p_conform = 0.0</text>
+<text x="836.00" y="190.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve" transform="rotate(-42 836.00 190.00)">p_conform = 0.3</text>
+<text x="965.33" y="190.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve" transform="rotate(-42 965.33 190.00)">p_conform = 0.6</text>
+<text x="634.00" y="237.25" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">N = 1</text>
+<text x="634.00" y="308.75" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">N = 3</text>
+<text x="634.00" y="380.25" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">N = 6</text>
+<text x="634.00" y="451.75" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">N = 9</text>
+<rect x="642.00" y="198.00" width="128.13" height="70.30" fill="#ec8d48" />
+<text x="706.67" y="236.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.157</text>
+<rect x="771.33" y="198.00" width="128.13" height="70.30" fill="#ec8d48" />
+<text x="836.00" y="236.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.157</text>
+<rect x="900.67" y="198.00" width="128.13" height="70.30" fill="#ec8d48" />
+<text x="965.33" y="236.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.157</text>
+<rect x="642.00" y="269.50" width="128.13" height="70.30" fill="#ec8d48" />
+<text x="706.67" y="308.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.157</text>
+<rect x="771.33" y="269.50" width="128.13" height="70.30" fill="#ec8d48" />
+<text x="836.00" y="308.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.157</text>
+<rect x="900.67" y="269.50" width="128.13" height="70.30" fill="#ec8d48" />
+<text x="965.33" y="308.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.157</text>
+<rect x="642.00" y="341.00" width="128.13" height="70.30" fill="#ec8d48" />
+<text x="706.67" y="379.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.157</text>
+<rect x="771.33" y="341.00" width="128.13" height="70.30" fill="#ec8d48" />
+<text x="836.00" y="379.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.157</text>
+<rect x="900.67" y="341.00" width="128.13" height="70.30" fill="#ec8d48" />
+<text x="965.33" y="379.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.157</text>
+<rect x="642.00" y="412.50" width="128.13" height="70.30" fill="#ec8d48" />
+<text x="706.67" y="451.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.157</text>
+<rect x="771.33" y="412.50" width="128.13" height="70.30" fill="#ec8d48" />
+<text x="836.00" y="451.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.157</text>
+<rect x="900.67" y="412.50" width="128.13" height="70.30" fill="#ec8d48" />
+<text x="965.33" y="451.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.157</text>
+<rect x="1064.00" y="80.00" width="500.00" height="420.00" fill="#0a1115" stroke="#152026" stroke-width="1" />
+<text x="1076.00" y="100.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#c8d6d4" text-anchor="start" font-weight="bold" xml:space="preserve">C  chair = verified_ledger</text>
+<text x="1076.00" y="117.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">harmful_target</text>
+<text x="1224.67" y="190.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve" transform="rotate(-42 1224.67 190.00)">p_conform = 0.0</text>
+<text x="1354.00" y="190.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve" transform="rotate(-42 1354.00 190.00)">p_conform = 0.3</text>
+<text x="1483.33" y="190.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve" transform="rotate(-42 1483.33 190.00)">p_conform = 0.6</text>
+<text x="1152.00" y="237.25" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">N = 1</text>
+<text x="1152.00" y="308.75" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">N = 3</text>
+<text x="1152.00" y="380.25" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">N = 6</text>
+<text x="1152.00" y="451.75" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">N = 9</text>
+<rect x="1160.00" y="198.00" width="128.13" height="70.30" fill="#2f7f72" />
+<text x="1224.67" y="236.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#e7f1f4" text-anchor="middle" font-weight="bold" xml:space="preserve">0.000</text>
+<rect x="1289.33" y="198.00" width="128.13" height="70.30" fill="#2f7f72" />
+<text x="1354.00" y="236.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#e7f1f4" text-anchor="middle" font-weight="bold" xml:space="preserve">0.000</text>
+<rect x="1418.67" y="198.00" width="128.13" height="70.30" fill="#2f7f72" />
+<text x="1483.33" y="236.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#e7f1f4" text-anchor="middle" font-weight="bold" xml:space="preserve">0.000</text>
+<rect x="1160.00" y="269.50" width="128.13" height="70.30" fill="#2f7f72" />
+<text x="1224.67" y="308.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#e7f1f4" text-anchor="middle" font-weight="bold" xml:space="preserve">0.000</text>
+<rect x="1289.33" y="269.50" width="128.13" height="70.30" fill="#2f7f72" />
+<text x="1354.00" y="308.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#e7f1f4" text-anchor="middle" font-weight="bold" xml:space="preserve">0.000</text>
+<rect x="1418.67" y="269.50" width="128.13" height="70.30" fill="#2f7f72" />
+<text x="1483.33" y="308.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#e7f1f4" text-anchor="middle" font-weight="bold" xml:space="preserve">0.000</text>
+<rect x="1160.00" y="341.00" width="128.13" height="70.30" fill="#c89d46" />
+<text x="1224.67" y="379.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.096</text>
+<rect x="1289.33" y="341.00" width="128.13" height="70.30" fill="#c89d46" />
+<text x="1354.00" y="379.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.096</text>
+<rect x="1418.67" y="341.00" width="128.13" height="70.30" fill="#c89d46" />
+<text x="1483.33" y="379.95" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.096</text>
+<rect x="1160.00" y="412.50" width="128.13" height="70.30" fill="#b89a4b" />
+<text x="1224.67" y="451.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.086</text>
+<rect x="1289.33" y="412.50" width="128.13" height="70.30" fill="#b89a4b" />
+<text x="1354.00" y="451.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.086</text>
+<rect x="1418.67" y="412.50" width="128.13" height="70.30" fill="#b89a4b" />
+<text x="1483.33" y="451.45" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#061014" text-anchor="middle" font-weight="bold" xml:space="preserve">0.086</text>
+<rect x="28.00" y="516.00" width="1544.00" height="54.00" fill="#0a1115" stroke="#152026" stroke-width="1.0" />
+<text x="40.00" y="540.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#f2635c" text-anchor="start" font-weight="bold" xml:space="preserve">full_records is EXACTLY FLAT across every N and every p_conform: the team's ballots cannot reach a chair that re-reads every record itself.</text>
+<text x="40.00" y="560.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#7e9099" text-anchor="start" font-weight="normal" xml:space="preserve">summary_only range 0.139-0.233  |  verified_ledger range 0.000-0.096  (0.000 at small N is DEFER, not safety - see avoidable_deferral)</text>
+<rect x="0.00" y="586.00" width="1600.00" height="34.00" fill="#0b1418" />
+<text x="28.00" y="607.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#e8a33d" text-anchor="start" font-weight="bold" xml:space="preserve">SCRIPTED SIMULATION — NOT MODEL EVIDENCE</text>
+<text x="1572.00" y="607.00" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#7e9099" text-anchor="end" font-weight="normal" xml:space="preserve">unit: harmful_target rate (0-1)</text>
+</svg>

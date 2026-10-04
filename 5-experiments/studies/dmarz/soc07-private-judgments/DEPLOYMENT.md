@@ -36,9 +36,9 @@ dmarz/soc07-private built Phase 1 on a machine that is being shut down and will 
 
 | Thing | Location |
 | --- | --- |
-| Study code, plan, amendments, reviews | swarm-lab `researchers/dmarz/notes/soc07-private-judgments/` |
+| Study code, plan, amendments, reviews | swarm-lab `5-experiments/studies/dmarz/soc07-private-judgments/` |
 | Launcher | swarm-labs-agentops `scripts/run-soc07-private.py` (on `main`) |
-| Checkout on sim-dmarz-3 | `/srv/swarm/soc07-private-lab`, detached at `61de92259f045fdd97255317a5f93dd0010119ad`; the study is in `researchers/dmarz/notes/soc07-private-judgments/` inside it |
+| Checkout on sim-dmarz-3 | `/srv/swarm/soc07-private-lab`, detached at `61de92259f045fdd97255317a5f93dd0010119ad`; the study is in `5-experiments/studies/dmarz/soc07-private-judgments/` inside it |
 | Virtual environment on sim-dmarz-3 | `/srv/swarm/soc07-private-venv` (Python 3.12.3, Pillow 11.3.0) |
 | Run outputs on sim-dmarz-3 | `results/<hub run id with __>-attempt-1/` inside the study directory, plus `results/<batch>-worker.log` and `results/worker-pid.json`. Untracked; the two S0 runs are there. |
 | Budget ledger on sim-dmarz-3 | `/srv/swarm/soc07-private-budget/ledger.jsonl`. Does not exist yet; the first paid stage creates it. Never delete or copy it: it is the enforced USD 40 cap. |

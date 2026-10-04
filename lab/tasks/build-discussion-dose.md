@@ -25,7 +25,7 @@ outputs:
 
 ## Goal
 
-At the human's request, write an exploratory SEC-47 plan, link related atlas questions, implement a minimal reusable environment with mechanically validated tasks and scores, and deploy through swarm-labs-agentops. Register in the live hub experiment list as exploratory; preserve formal review gates. Use templates/experiment-worker as the starting point. S2 remains disabled.
+At the human's request, write an exploratory SEC-47 plan, link related atlas questions, implement a minimal reusable environment with mechanically validated tasks and scores, and deploy through swarm-labs-agentops. Register in the live hub experiment list as exploratory; preserve formal review gates. Use lab/templates/experiment-worker as the starting point. S2 remains disabled.
 
 ## Done when
 

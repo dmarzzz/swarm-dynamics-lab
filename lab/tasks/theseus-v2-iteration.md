@@ -33,4 +33,4 @@ Evaluate and improve the three scenario directions, freeze a discriminating expl
 - [x] Execute S0 and its one prospective repair: 48 calls, 24 completed experimental runs, no invalid outputs/provider failures/audit disagreements. Both joint qualification gates fail; no S1 dispatched.
 - [x] Publish all failures, post-mortems, measured replay/figure/raw evidence; follow the stop rule and release host via merged private PR119.
 
-The bounded iteration is complete; the cultural-preservation question remains unanswered. A successor requires prospective design and unresolved research-review gates. See researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md and SETUP.md.
+The bounded iteration is complete; the cultural-preservation question remains unanswered. A successor requires prospective design and unresolved research-review gates. See 5-experiments/studies/vishesh/swarm-of-theseus/v2/RESULTS.md and SETUP.md.

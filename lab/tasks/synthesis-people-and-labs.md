@@ -33,7 +33,7 @@ outputs:
 
 ## Goal
 
-Write synthesis/people-and-labs.md: the groups that produce the seminal and recent work per topic, what each is known for, their key library entries, homepage, and their X or Bluesky handle copied from their own homepage. Never guess a handle.
+Write 3-synthesis/people-and-labs.md: the groups that produce the seminal and recent work per topic, what each is known for, their key library entries, homepage, and their X or Bluesky handle copied from their own homepage. Never guess a handle.
 
 ## Done when
 

@@ -4,7 +4,7 @@ Reviewer: dmarz/inbox-design-feedback. User request: “review it all”. All re
 
 | Item | Verdict | Main feedback |
 | --- | --- | --- |
-| [LLM-agent-swarms survey](../../../../reviews/llm-agent-swarms--dmarz-inbox.md) | REVISE | Separate qualitative evidence from replication of a scaling law; restore attention-theorem assumptions; reconcile Flag Game catalogue numbers. |
+| [LLM-agent-swarms survey](../../../../2-surveys/reviews/llm-agent-swarms--dmarz-inbox.md) | REVISE | Separate qualitative evidence from replication of a scaling law; restore attention-theorem assumptions; reconcile Flag Game catalogue numbers. |
 | [Influence Q4 dossiers](influence-q4-review.md) | PASS, case review | Four independent answers agree. The chair contrast removes ballot fields, not recommendations embedded in shared prose. |
 | [Right Dissenter RD-1](right-dissenter-review.md) | REVISE | Alias multiplicity can consume checks; supported repeats restore old votes. Split reserved qualification fixtures out of ordinary offline discovery. |
 | [Optimal swarm-size Q-A](swarm-size-review.md) | PASS, offline package only | Earlier E1–E3 fixes verified. Runtime/reporting preflight remains; chain scheduling needs resolution before Q-B. |

@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-village-fit; source `272c0544` ([registry](../../../../../../../experiments/evidence-metadata.json), [rubric](../../../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-village-fit; source `272c0544` ([registry](../../../../../../evidence-metadata.json), [rubric](../../../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — On this selected benchmark both information policies preserve the original decision across two fresh three-hop blocks, while some source meaning is lost. Basis: Controlled complete narrow comparison with actual fresh executions, but copied prior answers, authored cases and same-operator semantic labels limit downstream and population inference.
 - **sample_size_summary:** 12 selected authored roots, shared author/format; 144/144 main calls and 2 qualifiers, 2 arms × 3 hops × 2 fresh blocks. No missing calls; repetitions are nested, not extra independent tasks.

@@ -32,7 +32,7 @@ Post-hoc, no model calls, no causal claim about one dataset preceding another.
 
 - Code takes a --data path; raw dataset rows are never committed, only derived daily aggregates.
 - One figure (stacked daily timeline with shaded windows) and one table (shared sources with
-  per-dataset counts and date spans) saved under researchers/shadow/notes/wild-timeline/.
+  per-dataset counts and date spans) saved under 5-experiments/studies/shadow/wild-timeline/.
 - FINDING.md (1 page) with question, data, method, numbers, limits, novelty check against
-  library/ and the prior work list in the brief.
+  1-library/ and the prior work list in the brief.
 - lab.py check passes and deliverables are pushed.

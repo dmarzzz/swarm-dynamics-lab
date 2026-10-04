@@ -37,14 +37,14 @@ The most informative added comparison removes the free attacker-internal links, 
 From repository root, Python 3 plus PyYAML:
 
 ```sh
-python3 researchers/shadow/factory/test_factory.py
+python3 5-experiments/studies/shadow/factory/test_factory.py
 python3 scripts/lab.py check
 # Specs and runner MUST be committed before the following command:
-nice -n 10 python3 researchers/shadow/factory/factory.py queue --watch
+nice -n 10 python3 5-experiments/studies/shadow/factory/factory.py queue --watch
 # Or one fixed spec:
-python3 researchers/shadow/factory/factory.py run --spec split-sonnet-linked-strong
+python3 5-experiments/studies/shadow/factory/factory.py run --spec split-sonnet-linked-strong
 # Deterministic re-analysis, no model calls:
-python3 researchers/shadow/factory/factory.py analyze --spec split-sonnet-linked-strong
+python3 5-experiments/studies/shadow/factory/factory.py analyze --spec split-sonnet-linked-strong
 ```
 
 `--watch` sleeps 60 seconds when the finite queue is done. It does not generate new studies or repeat terminal studies. New prospective specs may be added only after committing them. The dispatcher refuses new calls at **2026-10-04 22:00Z**, even if restarted; in-flight requests have a 90-second timeout. This implementation runs on shad0wbot, four concurrent HTTP requests and negligible CPU, `nice 10`. No nyx-node dependency or production-container operation is needed.
@@ -72,7 +72,7 @@ Every spec gets `results/<id>/records.jsonl`, `dispatch.jsonl`, `provenance.json
 
 This is a qualitative diagnosis from a small operational sample, **not a causal audit of every team commit**. Read at base `66fa0aa6` and subsequent task-claim rebase.
 
-1. **The scan pipeline optimizes a different output.** `PIPELINE.md` explicitly feeds scan only: collectors -> batches -> claimable catalogue issues. It does not promise experiment throughput. `STATUS.md` has hundreds of entries per topic while multiple experiment tasks still await qualification or review. Stop treating catalogue throughput as evidence throughput. Credit: deduplication and ownership made a large literature base tractable.
+1. **The scan pipeline optimizes a different output.** `lab/PIPELINE.md` explicitly feeds scan only: collectors -> batches -> claimable catalogue issues. It does not promise experiment throughput. `lab/STATUS.md` has hundreds of entries per topic while multiple experiment tasks still await qualification or review. Stop treating catalogue throughput as evidence throughput. Credit: deduplication and ownership made a large literature base tractable.
 2. **Every small experiment repeats a large operational package.** The [split pre-run assessment](../../dmarz/sybil-split-opus/reviews/chain-001-pre.md) describes four stages, source/manifest pins, separate launcher, hub gates, 55 selftests, mutation tests, review, fleet reservation and full artifact replay. These safeguards caught genuine risks and its [post-run review](../../dmarz/sybil-split-opus/reviews/chain-001-post.md) reconciles 2,749/2,749 valid calls with saved records. Keep that rigor for large runs, reuse tested infrastructure for small extensions instead of rebuilding it.
 3. **Large all-or-nothing grids are operationally fragile.** The parent pre-run plan halted S1 on its first failed call; subsequent studies added transport retries and missing bounds. Small predeclared contrasts and checkpointed terminal outcomes produce interpretable partial evidence without selecting only successful reruns.
 4. **Design and model-route churn can precede the first observation.** The [program v5 methods review](../../dmarz/overnight-program-2026-10-04/methods-review-v5.json) explicitly calls seven-hour viability conditional on a new instrument. [Scale Opus](../../dmarz/sybil-scale-opus/README.md) documents deferral and resumption around queue/load priorities. Do one clean probe/qualification and a small primary contrast first, then decide whether a larger new design fits the clock.

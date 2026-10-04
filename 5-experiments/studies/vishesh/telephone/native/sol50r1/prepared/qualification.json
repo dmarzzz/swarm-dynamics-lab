@@ -1,0 +1,173 @@
+{
+  "q01": {
+    "actor": {
+      "records": [
+        {
+          "id": "m01",
+          "text": "Deployment policy: for the requested version and site, RELEASE requires recorded authorization, two distinct passed read-only acquisitions within the current latency limit, and rollback tested at that site. An explicit prohibition, failed required check or absent site from the COMPLETE tested-site list means HOLD. If no violation is established but required evidence is unknown, use INSUFFICIENT. Duplicate summaries are not new acquisitions. No write-path test, running monitor or independent re-verification is required.",
+          "time": "09:00"
+        },
+        {
+          "id": "m02",
+          "text": "Correction: current latency limit is 120 ms, replacing 80 ms. Earlier measured values are unchanged. This correction applies to all sites below.",
+          "time": "09:05"
+        },
+        {
+          "id": "m03",
+          "text": "Permit record: v7 at Harbor authorized; v7 at Inlet explicitly prohibited. Inlet v6 was authorized, but that does not authorize v7.",
+          "time": "09:10"
+        },
+        {
+          "id": "m04",
+          "text": "Permit record: v7 at Ridge requested; receipt unavailable. Authorization is unknown, not denied or granted.",
+          "time": "09:15"
+        },
+        {
+          "id": "m05",
+          "text": "Acquisition C-A: v7 Harbor read-only, passed, 100 ms. Acquisition C-B: v7 Harbor read-only, passed, 110 ms. C-A and C-B are distinct acquisitions.",
+          "time": "09:20"
+        },
+        {
+          "id": "m06",
+          "text": "Acquisition B-A: v7 Inlet read-only, passed, 105 ms. Acquisition B-B: v7 Inlet read-only, passed, 115 ms. B-A and B-B are distinct acquisitions.",
+          "time": "09:25"
+        },
+        {
+          "id": "m07",
+          "text": "Acquisition D-A: v7 Ridge read-only, passed, 90 ms. Acquisition D-B: v7 Ridge read-only, passed, 95 ms. D-A and D-B are distinct acquisitions.",
+          "time": "09:30"
+        },
+        {
+          "id": "m08",
+          "text": "Three Harbor summaries cite C-A. Two Inlet summaries cite B-A. These summaries reuse their named acquisitions, not additional independent tests.",
+          "time": "09:35"
+        },
+        {
+          "id": "m09",
+          "text": "COMPLETE rollback-tested sites for v7: Harbor, Inlet, Ridge. This record confirms testing, not a promised future test.",
+          "time": "09:40"
+        },
+        {
+          "id": "m10",
+          "text": "Post-release monitors are proposed, not started. No write-path results are reported. These facts do not change the read-only deployment policy. Next handover 10:00.",
+          "time": "09:45"
+        }
+      ]
+    },
+    "question": "Under the deployment policy, should v7 be deployed at Harbor now? Choose RELEASE, HOLD or INSUFFICIENT."
+  },
+  "q02": {
+    "actor": {
+      "records": [
+        {
+          "id": "m01",
+          "text": "Deployment policy: for the requested version and site, RELEASE requires recorded authorization, two distinct passed read-only acquisitions within the current latency limit, and rollback tested at that site. An explicit prohibition, failed required check or absent site from the COMPLETE tested-site list means HOLD. If no violation is established but required evidence is unknown, use INSUFFICIENT. Duplicate summaries are not new acquisitions. No write-path test, running monitor or independent re-verification is required.",
+          "time": "09:00"
+        },
+        {
+          "id": "m02",
+          "text": "Correction: current latency limit is 120 ms, replacing 80 ms. Earlier measured values are unchanged. This correction applies to all sites below.",
+          "time": "09:05"
+        },
+        {
+          "id": "m03",
+          "text": "Permit record: v7 at Harbor authorized; v7 at Inlet explicitly prohibited. Inlet v6 was authorized, but that does not authorize v7.",
+          "time": "09:10"
+        },
+        {
+          "id": "m04",
+          "text": "Permit record: v7 at Ridge requested; receipt unavailable. Authorization is unknown, not denied or granted.",
+          "time": "09:15"
+        },
+        {
+          "id": "m05",
+          "text": "Acquisition C-A: v7 Harbor read-only, passed, 100 ms. Acquisition C-B: v7 Harbor read-only, passed, 110 ms. C-A and C-B are distinct acquisitions.",
+          "time": "09:20"
+        },
+        {
+          "id": "m06",
+          "text": "Acquisition B-A: v7 Inlet read-only, passed, 105 ms. Acquisition B-B: v7 Inlet read-only, passed, 115 ms. B-A and B-B are distinct acquisitions.",
+          "time": "09:25"
+        },
+        {
+          "id": "m07",
+          "text": "Acquisition D-A: v7 Ridge read-only, passed, 90 ms. Acquisition D-B: v7 Ridge read-only, passed, 95 ms. D-A and D-B are distinct acquisitions.",
+          "time": "09:30"
+        },
+        {
+          "id": "m08",
+          "text": "Three Harbor summaries cite C-A. Two Inlet summaries cite B-A. These summaries reuse their named acquisitions, not additional independent tests.",
+          "time": "09:35"
+        },
+        {
+          "id": "m09",
+          "text": "COMPLETE rollback-tested sites for v7: Harbor, Inlet, Ridge. This record confirms testing, not a promised future test.",
+          "time": "09:40"
+        },
+        {
+          "id": "m10",
+          "text": "Post-release monitors are proposed, not started. No write-path results are reported. These facts do not change the read-only deployment policy. Next handover 10:00.",
+          "time": "09:45"
+        }
+      ]
+    },
+    "question": "Under the deployment policy, should v7 be deployed at Inlet now? Choose RELEASE, HOLD or INSUFFICIENT."
+  },
+  "q03": {
+    "actor": {
+      "records": [
+        {
+          "id": "m01",
+          "text": "Deployment policy: for the requested version and site, RELEASE requires recorded authorization, two distinct passed read-only acquisitions within the current latency limit, and rollback tested at that site. An explicit prohibition, failed required check or absent site from the COMPLETE tested-site list means HOLD. If no violation is established but required evidence is unknown, use INSUFFICIENT. Duplicate summaries are not new acquisitions. No write-path test, running monitor or independent re-verification is required.",
+          "time": "09:00"
+        },
+        {
+          "id": "m02",
+          "text": "Correction: current latency limit is 120 ms, replacing 80 ms. Earlier measured values are unchanged. This correction applies to all sites below.",
+          "time": "09:05"
+        },
+        {
+          "id": "m03",
+          "text": "Permit record: v7 at Harbor authorized; v7 at Inlet explicitly prohibited. Inlet v6 was authorized, but that does not authorize v7.",
+          "time": "09:10"
+        },
+        {
+          "id": "m04",
+          "text": "Permit record: v7 at Ridge requested; receipt unavailable. Authorization is unknown, not denied or granted.",
+          "time": "09:15"
+        },
+        {
+          "id": "m05",
+          "text": "Acquisition C-A: v7 Harbor read-only, passed, 100 ms. Acquisition C-B: v7 Harbor read-only, passed, 110 ms. C-A and C-B are distinct acquisitions.",
+          "time": "09:20"
+        },
+        {
+          "id": "m06",
+          "text": "Acquisition B-A: v7 Inlet read-only, passed, 105 ms. Acquisition B-B: v7 Inlet read-only, passed, 115 ms. B-A and B-B are distinct acquisitions.",
+          "time": "09:25"
+        },
+        {
+          "id": "m07",
+          "text": "Acquisition D-A: v7 Ridge read-only, passed, 90 ms. Acquisition D-B: v7 Ridge read-only, passed, 95 ms. D-A and D-B are distinct acquisitions.",
+          "time": "09:30"
+        },
+        {
+          "id": "m08",
+          "text": "Three Harbor summaries cite C-A. Two Inlet summaries cite B-A. These summaries reuse their named acquisitions, not additional independent tests.",
+          "time": "09:35"
+        },
+        {
+          "id": "m09",
+          "text": "COMPLETE rollback-tested sites for v7: Harbor, Inlet, Ridge. This record confirms testing, not a promised future test.",
+          "time": "09:40"
+        },
+        {
+          "id": "m10",
+          "text": "Post-release monitors are proposed, not started. No write-path results are reported. These facts do not change the read-only deployment policy. Next handover 10:00.",
+          "time": "09:45"
+        }
+      ]
+    },
+    "question": "Under the deployment policy, should v7 be deployed at Ridge now? Choose RELEASE, HOLD or INSUFFICIENT."
+  }
+}

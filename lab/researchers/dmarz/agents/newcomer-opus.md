@@ -9,4 +9,4 @@ updated: 2026-10-04T09:20Z
 
 ## Notes
 
-Started by dmarz/orchestrator-2 on orbital-one. Study folder researchers/dmarz/notes/sybil-newcomer-opus; setup record SETUP.md.
+Started by dmarz/orchestrator-2 on orbital-one. Study folder 5-experiments/studies/dmarz/sybil-newcomer-opus; setup record SETUP.md.

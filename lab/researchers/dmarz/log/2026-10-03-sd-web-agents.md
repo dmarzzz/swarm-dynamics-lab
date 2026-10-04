@@ -1,6 +1,6 @@
 # 2026-10-03 dmarz/sd-web-agents
 
-Lane: scan-papers-sd-web-agents (detecting browser agents, computer-use agents and AI crawlers on the web). Isolated worktree on branch lane/sd-web-agents. Per dmarz's override I did not run lab.py claim/touch/done/release/sync and did not edit tasks/.
+Lane: scan-papers-sd-web-agents (detecting browser agents, computer-use agents and AI crawlers on the web). Isolated worktree on branch lane/sd-web-agents. Per dmarz's override I did not run lab.py claim/touch/done/release/sync and did not edit lab/tasks/.
 
 ## What I covered
 
@@ -12,7 +12,7 @@ Lane: scan-papers-sd-web-agents (detecting browser agents, computer-use agents a
 - CAPTCHAs vs multimodal agents: guerar-2021-gotta (review), searles-2023-dazed, deng-2024-oedipus, luo-2025-open, liu-2026-next-gen, wang-2025-cognition, sivakorn-2026-robot, zhang-2026-invisible, song-2026-hll, chen-2026-captcha, wu-2025-mca-bench, salman-2026-captchas.
 - Agent identity and permission signalling: marro-2025-permission; annotated existing south-2025-authenticated, gh-cloudflare-web-bot-auth, cloudflare-2025-forget, cloudflare-2025-age, plesner-2024-breaking.
 
-Read in full: fayolle-2026-internet, kang-2026-whose, wang-2026-fp-agent, choudhary-2026-what, ousat-2026-broken. Skimmed: seiden-2026-identifying (method and RQ1 to RQ2), kim-2025-scrapers (HTML lost most numbers). The rest are abstract-level. lab.py verify: 41 papers, 0 problems. lab.py check: 0 errors in my files (6 errors on main belong to library/papers/wu-2024-system.md, not mine).
+Read in full: fayolle-2026-internet, kang-2026-whose, wang-2026-fp-agent, choudhary-2026-what, ousat-2026-broken. Skimmed: seiden-2026-identifying (method and RQ1 to RQ2), kim-2025-scrapers (HTML lost most numbers). The rest are abstract-level. lab.py verify: 41 papers, 0 problems. lab.py check: 0 errors in my files (6 errors on main belong to 1-library/papers/wu-2024-system.md, not mine).
 
 ## Searches run
 

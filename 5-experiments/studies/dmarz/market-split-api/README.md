@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/market-split; source `e84428d5` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/market-split; source `e84428d5` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — In the completed six-market Sonnet pilot, the neutral flexible agent selected sustained firm splitting in 6/6 firm-regulated markets and 0/6 owner-regulated or unregulated markets. Basis: A qualified model, paired regulatory controls, all36 valid outcomes, 864 priced calls and exact trace replay support this narrow comparison. Six related tasks, one model realization, prior configuration selection, no independent replication and a missing historical immutable-plan preflight receipt limit the claim.
 - **sample_size_summary:** Observed: 6 related paired market tasks; 36/36 episodes valid, 0 missing/replaced; one Sonnet owner and two scripted rivals, 864 calls. Separate Q0: 2 markets/4 episodes. Earlier Haiku S1:17valid,1invalid,18unstarted; not pooled.
@@ -60,7 +60,7 @@ Mechanics checks use a readable static table because their independent one-actio
 
 ## Authorization, accounting and deployment
 
-The human directive in researchers/dmarz/README.md grants $500 total API spend across dmarz experiments and supersedes earlier per-experiment caps. This is one contribution to that pool. The reviewed aggregate attempted-call cap is 1600, including every prior failure; it was amended from 1100 to permit a fresh complete cohort after a material execution defect. No ledger reset or extra per-host allowance. With Sonnet’s higher rates, the conservative1600-call ceiling is$189.39; expected actual usage is much lower. Before V5 qualification:506 calls, $0.965218, all usage priced.
+The human directive in lab/researchers/dmarz/README.md grants $500 total API spend across dmarz experiments and supersedes earlier per-experiment caps. This is one contribution to that pool. The reviewed aggregate attempted-call cap is 1600, including every prior failure; it was amended from 1100 to permit a fresh complete cohort after a material execution defect. No ledger reset or extra per-host allowance. With Sonnet’s higher rates, the conservative1600-call ceiling is$189.39; expected actual usage is much lower. Before V5 qualification:506 calls, $0.965218, all usage priced.
 
 A locked, fsynced ledger reserves cost before HTTP and retains unknown-billing reservations. Duplicate IDs, corruption and exhausted call capacity fail closed. Actual usage is reported separately from reserved limits and is not an account invoice. Prices checked2026-10-04: Sonnet 4.6$3/M input, $15/M output; earlier Haiku 4.5$1/M input, $5/M output. [Official Sonnet model/prices](https://platform.claude.com/docs/en/models/sonnet-4-6/overview),[structured-output contract](https://platform.claude.com/docs/en/build-with-claude/structured-outputs).
 

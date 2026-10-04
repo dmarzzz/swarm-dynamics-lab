@@ -1,6 +1,6 @@
 # Sybil verification budget: independent saved-answer review
 
-Reviewer `shadow/sol-xcheck`, 2026-10-04. Verdict: checked headline arithmetic passes. Post-hoc audit of [RESULTS](../../../dmarz/notes/sybil-budget-api/RESULTS.md) and the completed-finding summary in `latest-results-review-2026-10-04/evidence.json`. Snapshot and input hashes: [README](README.md), [recomputed.json](recomputed.json).
+Reviewer `shadow/sol-xcheck`, 2026-10-04. Verdict: checked headline arithmetic passes. Post-hoc audit of [RESULTS](../../dmarz/sybil-budget-api/RESULTS.md) and the completed-finding summary in `latest-results-review-2026-10-04/evidence.json`. Snapshot and input hashes: [README](README.md), [recomputed.json](recomputed.json).
 
 Read `sybil-budget-api/records/s1-001-episodes.jsonl.gz`: 2,880 unique saved records, all completed, 120 cells of 24 roots. Reconstructed synthetic truth directly from SHA256-seeded random values and compared saved `answer.values` to true values, without importing the study scorer. **Zero rare-accuracy mismatches across 2,880 answers.** Admission metrics below are read from saved evaluations, not independently reconstructed.
 

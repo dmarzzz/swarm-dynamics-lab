@@ -1,0 +1,114 @@
+{
+  "assessment_date": "2026-10-04",
+  "assessor": "shadow/sol-mix-astra",
+  "cost": {
+    "actual_usd": null,
+    "administrative_nonspendable_hold_usd": 5,
+    "admissible_remaining_usd": 0,
+    "historical_predispatch_reservation_ledger_present": false,
+    "hold_is_verified_billing_upper_bound": false,
+    "input_tokens": null,
+    "output_tokens": null,
+    "recovery_incremental_model_spend_usd": 0,
+    "recovery_lane_cap_usd": 5,
+    "unreceipted_attempts": 20
+  },
+  "disposition": "blocked",
+  "http_attempts": 20,
+  "input_sha256": "d13f55c62f78126d7bc3a8e29a1ab6bad30377677f1a52cc421d68c815d43a6e",
+  "limitations": [
+    "No qualified Claude outcome",
+    "No independent pre-review located",
+    "No prospective dollar ledger",
+    "Historical request log records metadata, not effective serialized payloads",
+    "Historical public-preregistration statement not supported by inspected source commit"
+  ],
+  "native_hashes": {
+    "PREREG.md": "af15d834a4abfcaf26bf8b73694aa15ad84285928ecc9c354b4f9242617e3e96",
+    "STOP.json": "af2ee5e475d43dca6ee7f6eda0a06e285acbab6c5c968e8440c504c1d71d3b19",
+    "qualification.json": "89800b32132d84b2ad2f9bc8b1a8d6e124777e18bb5faa4f8755d6d165ae8fa0",
+    "requests.jsonl": "0fc4dcdc1c66527a1e8858650c1a6d5660b358abd6c0247f98bd952552cdf7d2",
+    "responses.jsonl": "be5e0d93ad97d4f52d6e22bd6112c6785e907ac912cbd1930268e540cb4101d7",
+    "run.py": "73b7fe3704730cde4c5cd8d9b1392bf0892b2597e294320235cf32d3fc71dd10",
+    "scripted-reference.json": "78c628cd4fe61e10fa26143997535147fb1f85c4719502da5b1cfb0f3a4f20be"
+  },
+  "negative_control": {
+    "copier_majority_matches_on_conflicts": 0,
+    "label": "OFFLINE SOFTWARE CHECK, NOT MODEL EVIDENCE",
+    "last_item_copier_parseable": 12,
+    "old_gate_would_pass": true,
+    "opposing_majority_histories": 8
+  },
+  "prereg_present_at_source_commit": false,
+  "provider_route": "historical local Anthropic pool",
+  "qualification": {
+    "assigned": 12,
+    "failed_assignments": 8,
+    "passed": false,
+    "started_assignments": 8,
+    "unstarted": 4,
+    "valid": 0
+  },
+  "recovery_new_model_calls": 0,
+  "recovery_openrouter_calls": 0,
+  "requested_model": "claude-sonnet-5-5",
+  "returned_models": [],
+  "roots": [
+    {
+      "decisions_per_arm": 56,
+      "short_ids": [
+        "3",
+        "4"
+      ],
+      "task_id": 160
+    },
+    {
+      "decisions_per_arm": 60,
+      "short_ids": [
+        "2",
+        "7"
+      ],
+      "task_id": 161
+    },
+    {
+      "decisions_per_arm": 50,
+      "short_ids": [
+        "0",
+        "1"
+      ],
+      "task_id": 162
+    },
+    {
+      "decisions_per_arm": 62,
+      "short_ids": [
+        "8",
+        "11"
+      ],
+      "task_id": 163
+    }
+  ],
+  "scientific": {
+    "ci95": null,
+    "logical_missing_effect_bounds": [
+      -1,
+      1
+    ],
+    "observed_roots": 0,
+    "paired_effect": null,
+    "planned_decisions": 456,
+    "planned_episodes": 8,
+    "planned_roots": 4,
+    "started_episodes": 0,
+    "unstarted_episodes": 8,
+    "valid_decisions": 0
+  },
+  "source_commit": "8c4ce07e1597e9be8316c940ff91027701efbe4f",
+  "statuses": {
+    "429": 8,
+    "503": 12
+  },
+  "terminal_attempts": 20,
+  "time_first_request": "2026-10-04T22:49:11.744114+00:00",
+  "time_last_response": "2026-10-04T22:51:07.656340+00:00",
+  "unresolved_transport_attempts": 0
+}

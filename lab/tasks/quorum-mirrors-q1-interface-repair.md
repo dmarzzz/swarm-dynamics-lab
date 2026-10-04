@@ -22,7 +22,7 @@ outputs:
 
 ## Goal
 
-Repair the interface/observability defect found in QM-Q1-01 without replaying an uncertain call. Follow the exact next operations in researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-01-post.md. Existing owner spending, direct execution and secure credential authority persists; no researcher-review or owner-approval wait.
+Repair the interface/observability defect found in QM-Q1-01 without replaying an uncertain call. Follow the exact next operations in 5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/reviews/Q1-01-post.md. Existing owner spending, direct execution and secure credential authority persists; no researcher-review or owner-approval wait.
 
 ## Done when
 
@@ -34,4 +34,4 @@ Repair the interface/observability defect found in QM-Q1-01 without replaying an
 
 ## Completed
 
-Official endpoint documentation disproved the zero-output assumption. Validator and safe rejected-response billing were repaired; 59 study checks and seven Linux delivery checks passed. The original failed call retains its full reservation with evidence-bound upper-bound settlement and null exact actual. QM-Q1-02 ran on a fresh exclusive approved-account allocation: 16/16 valid, 0/8 full-lineage correct, no failures or missing calls. Actual repair cost $0.00068544. All six artifacts hash-verified, original ledger retained (49 calls/$0.065856 reserved), credentials closed and claim released. No retry or larger-stage escalation. Post-mortem: researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md.
+Official endpoint documentation disproved the zero-output assumption. Validator and safe rejected-response billing were repaired; 59 study checks and seven Linux delivery checks passed. The original failed call retains its full reservation with evidence-bound upper-bound settlement and null exact actual. QM-Q1-02 ran on a fresh exclusive approved-account allocation: 16/16 valid, 0/8 full-lineage correct, no failures or missing calls. Actual repair cost $0.00068544. All six artifacts hash-verified, original ledger retained (49 calls/$0.065856 reserved), credentials closed and claim released. No retry or larger-stage escalation. Post-mortem: 5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md.

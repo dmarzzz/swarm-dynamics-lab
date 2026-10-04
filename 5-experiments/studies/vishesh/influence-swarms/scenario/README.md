@@ -3,15 +3,25 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `84ee032e` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-experiments; source `9eaa1d31` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Untested efficacy question: displaying preliminary peer recommendations changes harmful selection under misleading outside evidence. Basis: Updated by vishesh/codex-experiments on 2026-10-04: Q4 has two valid team approval errors; D1 report removal did not repair the selected error. These diagnostic findings do not establish external influence. Main comparison remains unrun after failed qualification; dependent cohorts cannot be pooled.
-- **sample_size_summary:** Q4:4 authored dossiers × 3 workflows =12/12 valid,10 acceptable. D1:2 selected Q4 dossiers × 2 report conditions =4/4 valid,2 acceptable; not independent replication. Q0–Q3 retained separately. Main comparison unrun.
+- **evidence_confidence:** **1/4** — A peer-influence effect is not established in the authored E1 procurement comparison. Basis: Three missing decisions give prespecified identification bounds [0,.0625], including zero; five unsafe purchases share residual cost interpretation ambiguity. Simple analyst96/96 acceptable is a bounded descriptive result.
+- **sample_size_summary:** 24 authored variants nested in six families, two fresh repetitions, two framing contexts and three workflows;288 assigned cells,285 observed finals,1904/1907 valid replies. Prior cohorts remain separate.
 <!-- experiment-evidence:end -->
 
-**Current status:** [D9 diagnostics are closed](RESULTS-D9.md). Typed acquisition recovered, but the original six-case screen is5/6contract-valid and quotation failures leave41/75checks correct on five valid cases. A citation-bound verifier fixes75/75checks in saved-data reanalysis; that is not new model evidence. The [ten-call matched chair plan](NEXT-RUN-D10.md) and packet are prepared and disabled pending normal admission under standing necessary-diagnostic authorization. No researcher review is pending; the broader influence comparison remains unrun.
+**Five bad purchases. One muddy cost rule.** Updated 2026-10-04 23:17 UTC. [Current findings](LATEST-RESULTS.md).
 
-**Researcher review:** optional under the current [owner runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Existing Dmarz feedback remains evidence; no additional sign-off is pending. Older review-gate statements below are historical and superseded for current work.
+- **The test:** Can a sales pitch hijack a swarm’s procurement judgment?
+- **The finding:** The simple analyst made 96/96 acceptable decisions. Five unsafe purchases in larger workflows all excluded legacy costs in the same scenario.
+- **The lesson:** A muddy cost rule can look like bad judgment; a social hijack is not established.
+- **The limit:** Three decisions are missing, and these are authored cases—not a real-world prevalence estimate.
+- **Next:** Build a tighter team-versus-generalist test with matched truthful/false claims and explicit all-in costs.
+
+## Redesign proposal v2 — 2026-10-04
+
+A critique and proposed iteration of this study — one registered primary estimand (team with a summary-only chair vs a single generalist, misleading vs control page, paired at the dossier), a v2 fixture family with a page pool and document-shaped prose, exposure defined as assigned pool fraction vs realized per-analyst exposure, swarm composition and an agent template on the existing phase-exact contracts, an offline shadow authorizer, two-sided gates, twelve new cases, and a zero-model-call simulation used to size roots, agents and arms — is in [redesign-v2/](redesign-v2/README.md). Under the current full-records chair the simulation finds every contrast this study registers (ballots−evidence, team−generalist, targeted−random checks) to be a provable zero; the chair architecture is the live variable. It is a proposal: no model call, no launch, no change to any recorded result. Independent design review (gpt-6-astra) and a second-reviewer numbers check are included.
+
+**Researcher review:** optional under the current [owner runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Existing Dmarz feedback remains evidence; no additional sign-off is pending. Older review-gate statements below are historical and superseded for current work.
 
 ## TLDR
 
@@ -60,8 +70,8 @@ Results must show clean competence, genuine-value acceptance and useful deferral
 ## Reproduce
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/influence-swarms/scenario/tests -v
-python3 researchers/vishesh/notes/influence-swarms/scenario/src/run.py --out /tmp/influence-scenario-new
+python3 -m unittest discover -s 5-experiments/studies/vishesh/influence-swarms/scenario/tests -v
+python3 5-experiments/studies/vishesh/influence-swarms/scenario/src/run.py --out /tmp/influence-scenario-new
 ```
 
 Choose a new output directory. The runner is offline-only. It saves every request, reply, terminal outcome and failure. Model collection remains gated on scenario review, fresh qualification, a dedicated allocation and a non-overlapping quota under the existing budget. Do not launch the superseded quality-01 score-enforcement comparison as the main experiment.

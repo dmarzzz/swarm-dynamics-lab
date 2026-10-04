@@ -27,7 +27,7 @@ Collect how people measure collective behaviour and score swarms: order paramete
 ## Done when
 
 - synthesis/metrics.md lists each metric with its definition, what it detects, code that computes it, and the library ids that use it.
-- Benchmarks and eval suites are catalogued in library/ (as code or papers).
+- Benchmarks and eval suites are catalogued in 1-library/ (as code or papers).
 - Coverage note filled.
 
 ## Coverage note

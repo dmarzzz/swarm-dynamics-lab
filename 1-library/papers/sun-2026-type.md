@@ -49,4 +49,4 @@ Abstract of version 2 inspected; headline numbers across hosted and open models 
 
 ## Relevance to us
 
-Decision-model research area: researchers/vishesh/notes/decision-models/README.md.
+Decision-model research area: 5-experiments/studies/vishesh/decision-models/README.md.

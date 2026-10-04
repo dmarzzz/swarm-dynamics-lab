@@ -2,7 +2,7 @@
 
 **No new native experiment launched in this pass.** Eight bounded scopes are prepared but still have operational admission blockers; Quorum and Phantom need a decision-relevant new question before more native collection. Quorum's new provenance gate is already implemented. Poietic's bounded renewal now has owner authorization; central acknowledgment remains outstanding.
 
-This is a focused update after the [previous cycle](../pi-cycle-2026-10-04/README.md), not a completed systematic review or a current machine-admission receipt. Scientific status checked on 2026-10-04; private queue metadata refreshed at16:32 UTC (seven request/allocation records; Dissenter wait retained from its owner closeout); evidence revisions/hashes are in [status.json](status.json). Confidence scores remain those of each claim's [evidence metadata](../../../../experiments/EVIDENCE-METADATA.md); literature and unit tests do not increase them. Planned counts below are not observations.
+This is a focused update after the [previous cycle](../pi-cycle-2026-10-04/README.md), not a completed systematic review or a current machine-admission receipt. Scientific status checked on 2026-10-04; private queue metadata refreshed at16:32 UTC (seven request/allocation records; Dissenter wait retained from its owner closeout); evidence revisions/hashes are in [status.json](status.json). Confidence scores remain those of each claim's [evidence metadata](../../../EVIDENCE-METADATA.md); literature and unit tests do not increase them. Planned counts below are not observations.
 
 ## Decisions at a glance
 

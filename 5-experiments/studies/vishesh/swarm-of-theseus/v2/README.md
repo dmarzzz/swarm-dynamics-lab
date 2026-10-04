@@ -5,7 +5,7 @@ Follow-up: [rule-application diagnosis](diagnosis/FINDINGS.md) audits all 288 sa
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — The first v2 native screen failed action competence; procedure-continuity effects remain untested. Basis: Execution completed without invalid or missing responses, but explicit-rule and learner cells failed unchanged competence floors. These are observed rule-application errors, not evidence of cultural loss. A bounded repair on fresh seeds is planned; S1 was not started.
 - **sample_size_summary:** S0: 6 scenario/world roots (2 per 3 scenarios) × 2 readers = 12/12 two-checkpoint runs; 24 calls, 144 dependent decisions. Qualification failed; 24-continuation S1 not started.
@@ -56,7 +56,7 @@ The native provider completed both qualifications without failures, but model co
 From the repository root, using Python with Pillow installed:
 
 ```sh
-python3 -m unittest discover -s researchers/vishesh/notes/swarm-of-theseus/v2/tests -v
+python3 -m unittest discover -s 5-experiments/studies/vishesh/swarm-of-theseus/v2/tests -v
 ```
 
 Optional: set `THESEUS_UNIT_RENDER_DIR` to a fresh local directory to retain the labeled software fixture replay and PNG for visual inspection. It is not a model or scripted experiment run. No credentials or network calls are made by the tests.

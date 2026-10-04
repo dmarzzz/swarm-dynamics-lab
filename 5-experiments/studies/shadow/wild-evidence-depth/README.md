@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by shadow/sol-audit-gap; source `d7301e98` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by shadow/sol-audit-gap; source `d7301e98` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — In this selected release, 7,733/91,037 payload artifacts have a direct response child; response-link coverage varies with artifact length. Basis: Complete corpus census, graph fixtures and separate same-author arithmetic agree. Selection, response semantics and original event independence are unknown; no success rate or causal inference is supported.
 - **sample_size_summary:** Observed: one selected incident corpus; 189,579/189,579 rows analyzed, 91,037 payloads, 7,733 response-linked payloads; zero parse failures/exclusions. Rows are dependent artifacts, not independent trials. Zero model calls.

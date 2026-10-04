@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/d1-opus; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/d1-opus; source `9781739c` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — Under adaptive thinking at effort high with no temperature, Claude Opus 5.5 makes evidence-justified choices on clean full-evidence D1-style decisions where Haiku 4.5 and Sonnet 4.6 failed. Basis: Measured: fresh gate 12/12 evidence-justified and 12/12 valid; 6/6 on the reused worlds versus Haiku 2/6 and Sonnet 3/6 on byte-identical requests; exact-source audit recomputed all 72 outcomes. Limits: model and request configuration changed together; 12 fresh clean worlds only; report packets remain Haiku-generated; all 6 inherited false memory facts were still accepted; no swarm stage.
 - **sample_size_summary:** Observed: 72/72 assigned calls valid and analyzed, 0 refusals, 0 missing usage: 12 fresh clean worlds (gate units), 6 reused development world clusters (6 full-evidence, 18 report ballots), 36 fixed memory fixtures; not 72 independent samples. One model, one attempt.

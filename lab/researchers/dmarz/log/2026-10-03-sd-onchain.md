@@ -2,13 +2,13 @@
 
 ## What I did
 
-Ran the scan-papers-sd-onchain lane (bot and agent swarms on blockchains) in an isolated worktree on branch lane/sd-onchain, per dmarz's override: no lab.py claim/touch/done/sync, no edits under tasks/, push to the lane branch only.
+Ran the scan-papers-sd-onchain lane (bot and agent swarms on blockchains) in an isolated worktree on branch lane/sd-onchain, per dmarz's override: no lab.py claim/touch/done/sync, no edits under lab/tasks/, push to the lane branch only.
 
 Added 46 paper entries tagged swarm-detection and annotated 4 existing entries (ling-2026-how, messias-2023-airdrops, liu-2022-fighting, yaish-2024-tierdrop) with the topic and a "Notes from dmarz/sd-onchain" section. Read 5 in full: xiong-2026-can (ERC-8004 reviewer Sybils), bartnicki-2026-compression (gzip-NCD Sybil discovery), niedermayer-2024-detecting (Ethereum financial bots), liu-2025-detecting (Binance BAB airdrop Sybils), luo-2025-toward (Hop and LayerZero hunter groups). Skimmed 8 (ARTEMIS, Web4 agent economy, DeFi investment agents, Solana bots, pump.fun manipulation, ParaSwap roles, Quest Love). The rest are abstract-level and marked so.
 
 Coverage by subtopic: airdrop Sybil clustering and hunter definitions; MEV, sniper and trading-bot identification on Ethereum, BSC and Solana; wash trading and coordinated trading (DEX, NFT, CEX, pump.fun, meme coins); AI-agent wallets, ERC-8004 registries, x402 payments and agent tokens; cross-cutting items (prediction markets, quest systems, cross-chain linkage).
 
-`lab.py verify --agent dmarz/sd-onchain`: 46 papers checked against arXiv and Crossref, 0 problems. `lab.py check`: 0 errors in my files (6 errors on main belong to library/papers/wu-2024-system.md, not mine).
+`lab.py verify --agent dmarz/sd-onchain`: 46 papers checked against arXiv and Crossref, 0 problems. `lab.py check`: 0 errors in my files (6 errors on main belong to 1-library/papers/wu-2024-system.md, not mine).
 
 ## Searches run
 

@@ -38,4 +38,4 @@ Launch the owner-approved frozen Q5 qualification through renewed Q5-A2 after pr
 
 ## Completion
 
-Q5-A2passed24/24valid,12/12cards; H5-A1completed72/72decisions and36valid calls with B0/B1/B2correct6/8/6. Retained adverse screen, context-transfer limitation, exact replay, full artifact verification and both scientific reviews. Original488lifetime calls/cumulativecap preserved; workers/relays stopped and allocation released. No next run. See researchers/vishesh/notes/dissent/rd5/REPORT.md.
+Q5-A2passed24/24valid,12/12cards; H5-A1completed72/72decisions and36valid calls with B0/B1/B2correct6/8/6. Retained adverse screen, context-transfer limitation, exact replay, full artifact verification and both scientific reviews. Original488lifetime calls/cumulativecap preserved; workers/relays stopped and allocation released. No next run. See 5-experiments/studies/vishesh/dissent/rd5/REPORT.md.

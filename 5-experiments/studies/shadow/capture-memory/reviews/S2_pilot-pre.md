@@ -1,6 +1,6 @@
 # Pre-run assessment: S2_pilot attempt 1 (capture-memory, real model)
 
-- Experiment / owner / stage: capture-memory (hunch, `researchers/shadow/notes/capture-memory/`) / shadow (agent shadow/sol-capture) / S2_pilot, preceded by Q0
+- Experiment / owner / stage: capture-memory (hunch, `5-experiments/studies/shadow/capture-memory/`) / shadow (agent shadow/sol-capture) / S2_pilot, preceded by Q0
 - Parent attempt and previous post-mortem: scripted S1b (results/S1b.md, no post-mortem form, pre-dates the workflow); first real-model attempt
 - Status: ready (Q0 gate passed locally, see below; the hub Q0 is re-run before S2_pilot is queued because the coordinator checks the hub)
 - Question and practical decision this run informs: does one small open model, acting as the honest agents, show the memory-length regimes the scripted tanh-over-memory rule predicts after a perfect purge (memory 1 drifts back, full memory freezes)? Decides whether the full S2 on this hypothesis (if accepted) is worth budgeting on a model at all, and what the real tokens-per-call are.

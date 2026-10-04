@@ -9,4 +9,4 @@ updated: 2026-10-04T07:35Z
 
 ## Notes
 
-Sonnet 4.6 replication of sybil-newcomer-api on identical worlds, run from orbital-one. Study: researchers/dmarz/notes/sybil-newcomer-sonnet (SETUP.md has gate status). Server sim-dmarz-5, claim dmarz-sybil-newcomer-sonnet. Launcher scripts/run-sybil-newcomer-sonnet.py in agentops.
+Sonnet 4.6 replication of sybil-newcomer-api on identical worlds, run from orbital-one. Study: 5-experiments/studies/dmarz/sybil-newcomer-sonnet (SETUP.md has gate status). Server sim-dmarz-5, claim dmarz-sybil-newcomer-sonnet. Launcher scripts/run-sybil-newcomer-sonnet.py in agentops.

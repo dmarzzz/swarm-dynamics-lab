@@ -2,7 +2,7 @@
 
 - Reviewer: shadow/sol-rev (researcher shadow, not dmarz)
 - Task: [review-discussion-benchmark-v3](../../../lab/tasks/review-discussion-benchmark-v3.md)
-- Target: `researchers/dmarz/notes/discussion-dose/benchmark-v3/` (README, REVIEW, OFFLINE-VALIDATION, coverage.json, validation.json) and `researchers/dmarz/notes/discussion-dose/src/bench_v3/`. Primary review at package source `0f5044a` (repo `104864b`, all 14 source hashes matched validation.json). Re-checked against the amended source at `d76146b`/`883d310` (repo `8f30a10`) after it landed mid-review: selftest 55 OK, run 636/636, audit ok; the defects below are unchanged there.
+- Target: `5-experiments/studies/dmarz/discussion-dose/benchmark-v3/` (README, REVIEW, OFFLINE-VALIDATION, coverage.json, validation.json) and `5-experiments/studies/dmarz/discussion-dose/src/bench_v3/`. Primary review at package source `0f5044a` (repo `104864b`, all 14 source hashes matched validation.json). Re-checked against the amended source at `d76146b`/`883d310` (repo `8f30a10`) after it landed mid-review: selftest 55 OK, run 636/636, audit ok; the defects below are unchanged there.
 - Date: 2026-10-04
 - Model calls: 0. Paid APIs: 0. Everything below ran offline on Python 3.12.3 / Linux x86_64 (author validated on 3.9.6 / Darwin arm64).
 - Claim status: I claimed the task at 02:17Z and completed the work; at 02:50Z it was user-transferred to vishesh/codex-independent-reviews. I am not re-claiming. This file is a shadow-owned verdict for the gate; vishesh's review can cite or supersede it. Also note: `OPERATOR-AUTHORIZATION.md` now authorizes a bounded Haiku qualification run on `883d310` with review pending. F1 and F2 are present in that pinned source, so that run's vote-level metrics and failure reasons will carry these defects regardless of later fixes.
@@ -79,15 +79,15 @@ Fixed quorum: `majority([A, None, None]) == ABSTAIN`, `majority([A, A, None]) ==
 ### 4. Selftest, scripted run, audit, replay, regression, determinism
 
 ```
-$ PYTHONPATH=researchers/dmarz/notes/discussion-dose/src python3 -m bench_v3.selftest
+$ PYTHONPATH=5-experiments/studies/dmarz/discussion-dose/src python3 -m bench_v3.selftest
 Ran 40 tests in 38.125s  OK
 
-$ python3 researchers/dmarz/notes/discussion-dose/src/benchmark_v3.py run --output data/discussion-v3/sol-rev-20261004T022615
+$ python3 5-experiments/studies/dmarz/discussion-dose/src/benchmark_v3.py run --output data/discussion-v3/sol-rev-20261004T022615
 reconciliation: assigned 96, terminal 96, planned_calls 636, started 636, terminal_calls 636,
   physical_model_calls 0, provider_failures 0, validation_failures 0, missing [], unresolved_calls []
 scientific: false
 
-$ python3 researchers/dmarz/notes/discussion-dose/src/benchmark_v3.py audit data/discussion-v3/sol-rev-20261004T022615
+$ python3 5-experiments/studies/dmarz/discussion-dose/src/benchmark_v3.py audit data/discussion-v3/sol-rev-20261004T022615
 {"episodes": 96, "journal_events": 1790, "ok": true, "requests_replayed": 636,
  "source_hashes_verified": true, "summary_recomputed": true}
 

@@ -1,9 +1,19 @@
 # Swarm of Theseus — SOC-24
 
+## Latest iteration — 2026-10-04 UTC
+
+- Repaired qualification passed all three domains: 103 calls, 144/144 decisions.
+- Fresh baselines scored 215/216; one harmful approval accepted future-dated evidence.
+- C2 reused 128 calls and made eight new calls: four correct notes, three valid commits.
+- No full-turnover trajectory completed; cultural survival remains unestablished.
+- Native scaling is on hold. A phase-specific commit repair is built and tested offline.
+
+See the [latest C2 post-mortem](execution-diagnostic/sol50/baseline-replication/C2-POST-MORTEM.md), [earlier initial failure](execution-diagnostic/sol50/baseline-replication/Q3-A3-P1-POST-MORTEM.md), and [unused offline repair](execution-diagnostic/sol50/baseline-replication/COMMIT-REPAIR-PLAN.md). Historical cohort results below remain separate.
+
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Supplied procedure notes can preserve this small task performance after complete crew replacement; mentoring adds no established benefit. Basis: Tiny constructed feature space, supplied useful rules and note copying create ceiling effects; no evidence of emergent culture or mentoring advantage. Generations, members and cases are dependent within world.
 - **sample_size_summary:** S1:6 paired worlds (2 per3 scenarios) × 6 arms =36/36 trajectories; 3 members per world. Across qualification/S1:68 completed,4 failed of72 started.

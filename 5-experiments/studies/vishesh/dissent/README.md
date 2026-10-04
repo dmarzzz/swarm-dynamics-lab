@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-decision-models; source `ad0dbb81` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-decision-models; source `ad0dbb81` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — On this fixed synthetic cohort, evidence-gated dissent saved nine checks but produced six fewer correct decisions than always-check, including two missed favorable recovery events. Basis: Scripted votes, repeated scenario grammar, shared saved responses and 52 fixed roots limit generalization. All outcomes and three rejected calls are retained; clean qualification passed after a prospective wording amendment. This is an owner assessment, not independent review.
 - **sample_size_summary:** Observed S1: 52 fixed roots with reused grammar; 420/420 decisions across 7 policies; 129/132 unique calls valid. Separate screens: Q0 12/18 correct; Q1 clarified 18/18 plus 6/6 uncertainty controls; D1 9/9 valid. No independent replication.

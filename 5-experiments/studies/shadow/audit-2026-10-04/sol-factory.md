@@ -1,11 +1,11 @@
 # Factory lane operational diagnosis, 2026-10-04
 
-Owner: shadow/sol-factory. Scope: small qualitative sample, not a count of all team commits. Read `AGENTS.md`, `PIPELINE.md`, `STATUS.md`, the hackathon brief, submission draft, Dmarz split pre/post-run assessments and program-v5 methods critique, plus our capture-memory-mix reporting history. Source base `66fa0aa6`; factory preregistration `577cc1de`, paid-route amendment `952a618c`, schema repair `666aa2f4`.
+Owner: shadow/sol-factory. Scope: small qualitative sample, not a count of all team commits. Read `AGENTS.md`, `lab/PIPELINE.md`, `lab/STATUS.md`, the hackathon brief, submission draft, Dmarz split pre/post-run assessments and program-v5 methods critique, plus our capture-memory-mix reporting history. Source base `66fa0aa6`; factory preregistration `577cc1de`, paid-route amendment `952a618c`, schema repair `666aa2f4`.
 
 ## What is valuable and what slows closure
 
-- `PIPELINE.md` is explicitly a **scan** pipeline. Catalogue commits are valuable inputs, not completed findings. The submission should not imply throughput conversion it has not measured.
-- Dmarz's split package is an example of good closeout: `researchers/dmarz/notes/sybil-split-opus/reviews/chain-001-post.md` reconciles 2,749/2,749 valid calls, costs, root counts and saved records. Credit the result and retain those safeguards.
+- `lab/PIPELINE.md` is explicitly a **scan** pipeline. Catalogue commits are valuable inputs, not completed findings. The submission should not imply throughput conversion it has not measured.
+- Dmarz's split package is an example of good closeout: `5-experiments/studies/dmarz/sybil-split-opus/reviews/chain-001-post.md` reconciles 2,749/2,749 valid calls, costs, root counts and saved records. Credit the result and retain those safeguards.
 - Rebuilding the full four-stage, per-server, manifest/review/replay package for each small model/parameter extension adds setup work that a shared runner could reuse. `chain-001-pre.md` is the concrete example, not proof that any specific gate caused a delay.
 - Large first experiments carry time risk. `overnight-program-2026-10-04/methods-review-v5.json` explicitly makes seven-hour viability conditional on a redesigned instrument. A two-day event rewards completed small contrasts over several unlaunched comprehensive grids.
 - Our own factory immediately demonstrated two different blockers: **20 pool transport failures (8 HTTP429,12 HTTP503)**, then **20 prose-wrapped schema-invalid paid answers**, neither a treatment result. Both are saved. Native strict structured output plus fresh clean roots was prospectively committed; the repaired first study passed 12/12 clean qualification and began main comparisons before 15:20Z. No answer salvage, provider-key changes or quota bypass.

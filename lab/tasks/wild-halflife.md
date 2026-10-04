@@ -36,6 +36,6 @@ No model calls. Never commit source dataset rows; code takes a --data path.
 ## Done when
 
 - [x] PLAN.md committed before outcomes are computed (2cb859a5).
-- [x] Analysis code with seven offline tests under researchers/shadow/notes/wild-halflife/; 12/12 same-author reference checks pass.
+- [x] Analysis code with seven offline tests under 5-experiments/studies/shadow/wild-halflife/; 12/12 same-author reference checks pass.
 - [x] Aggregate JSON, one three-panel figure, FINDING.md with 1,000-resample bootstrap CIs, sensitivity checks, limits and novelty check.
 - [x] Repository check passes, zero errors; draft 48bc8a76 and completed report 6af65898 pushed to main. Hub retrospective display readback done. Whole-repo strict Flight Deck check has pre-existing missing-film/worktree-name errors, disclosed in the post-mortem.

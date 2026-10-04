@@ -8,11 +8,12 @@ status: proposed
 created: 2026-10-03
 surveys: [llm-agent-swarms]
 closest_prior: [bertalanic-2026-ringelmann, begin-2026-preference, zhang-2026-silo, li-2026-diverse, liu-2026-social, rai-2026-when]
-topics: [effective-sample-size, correlated-errors, evidence-aggregation, debate]
+topics: [llm-agent-swarms]
+keywords: [effective-sample-size, correlated-errors, evidence-aggregation, debate]
 ---
 
 <!-- PROPOSAL ONLY. Not accepted, not run. Experiment build: cytonomy (vishesh) is taking the first pass on
-tooling/agent-experiments; this file states the claim and kill criteria so the protocol can be frozen against it. -->
+5-experiments/toolkit/agent-experiments; this file states the claim and kill criteria so the protocol can be frozen against it. -->
 
 ## Claim
 
@@ -71,7 +72,7 @@ answers-only, meaning sharding works through initial-condition diversity and the
 
 ## Minimal experiment
 
-Built on cytonomy's `tooling/agent-experiments` harness (schemas, context-visibility controls,
+Built on cytonomy's `5-experiments/toolkit/agent-experiments` harness (schemas, context-visibility controls,
 preregistration template); the collective-sensing example is the scripted version of this design.
 
 - Task: binary questions with a ground truth recoverable only by pooling shards (synthetic hidden-profile

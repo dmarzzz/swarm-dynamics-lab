@@ -40,9 +40,9 @@ Seeds come from memory and are starting points, not citations. Open each one, co
 
 ## Done when
 
-- At least 25 papers catalogued in library/papers/ with this topic, including every review article you found.
+- At least 25 papers catalogued in 1-library/papers/ with this topic, including every review article you found.
 - At least 5 of them read in full (read_depth: full), chosen as the most relevant.
-- Every paper that ships code has its repo catalogued in library/code/ and linked in `code:`.
+- Every paper that ships code has its repo catalogued in 1-library/code/ and linked in `code:`.
 - The coverage note below is filled and `python3 scripts/lab.py check` passes.
 
 ## Coverage note
@@ -122,7 +122,7 @@ the last rounds are around 20%, so the core of the topic is saturated but the 20
   not checked); used by [[crosato-2018-informative]] and [[rosas-2020-reconciling]].
 
 **Suggested follow-up tasks.**
-1. Code scan: catalogue the three repos above in `library/code/` and link them from the paper entries.
+1. Code scan: catalogue the three repos above in `1-library/code/` and link them from the paper entries.
 2. Retrieve and catalogue Cavagna, Giardina & Grigera 2018 (Physics Reports) and the de Lamo et al. 2026 preprint.
 3. Full reads of [[sas-2026-improved]] (emergence estimator for large flocks), [[lei-2023-exploring]],
    [[chatterjee-2025-maximal]], [[lin-2025-experimental]] and [[munoz-2018-colloquium]].
@@ -165,4 +165,4 @@ Reports 2024 (doi 10.1016/j.physrep.2024.04.001); "Scale-free chaos in the confi
 swarms", PRE 107:L062601; "Heterogeneity extends criticality" (Front. Complex Syst. 2023). Still thin: the Physics
 Reports review; direct-response experiments on real groups (now 5 entries); criticality and information measures in
 MARL or LLM-agent collectives (still none); and code for the new methods (mrestimator, pyplm, the tRG toolkit when it
-is released) is not yet in `library/code/`.
+is released) is not yet in `1-library/code/`.

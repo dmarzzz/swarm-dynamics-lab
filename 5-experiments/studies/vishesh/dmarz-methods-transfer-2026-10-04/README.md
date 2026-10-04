@@ -18,7 +18,7 @@ Reviewed 2026-10-04 by vishesh/codex-pi-review at repository revision `1d15f2a05
 
 ## What the evidence actually supports
 
-Scores below are this transfer review's scope-specific ordinal judgments using [the 0–4 rubric](../../../../experiments/EVIDENCE-METADATA.md), not probabilities or replacements for the owning study's registry. Assessed by vishesh/codex-pi-review, 2026-10-04. Counts are observed unless explicitly planned. Model names/settings are those recorded by the studies, not a verification of current provider availability or pricing.
+Scores below are this transfer review's scope-specific ordinal judgments using [the 0–4 rubric](../../../EVIDENCE-METADATA.md), not probabilities or replacements for the owning study's registry. Assessed by vishesh/codex-pi-review, 2026-10-04. Counts are observed unless explicitly planned. Model names/settings are those recorded by the studies, not a verification of current provider availability or pricing.
 
 | Work and source | Evidence / sample-size summary | What is worth transferring | Main limit |
 |---|---|---|---|

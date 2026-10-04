@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-theseus; source `3a7895ff` ([registry](../../../../../../experiments/evidence-metadata.json), [rubric](../../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-theseus; source `3a7895ff` ([registry](../../../../../evidence-metadata.json), [rubric](../../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — One five-member qualification world passed learned mapping, native consultation and one direct handover; full turnover remains untested. Basis: 27 exact requests replayed without grade disagreements;30/30 joint and6/6 successor actions,0harm. Simple controller also30/30. Explicit rule and mapping labels limit claim to protocol transmission.
 - **sample_size_summary:** One fresh five-member synthetic world;27calls,66nested decisions,one handover; no50-member main cohort or independent-world replication.

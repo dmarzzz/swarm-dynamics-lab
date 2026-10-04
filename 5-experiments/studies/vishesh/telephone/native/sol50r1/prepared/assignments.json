@@ -1,0 +1,668 @@
+[
+  {
+    "id": "w01",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 1,
+    "parent": null
+  },
+  {
+    "id": "w02",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 2,
+    "parent": "w01"
+  },
+  {
+    "id": "w03",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 3,
+    "parent": "w02"
+  },
+  {
+    "id": "w04",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 4,
+    "parent": "w03"
+  },
+  {
+    "id": "w05",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 5,
+    "parent": "w04"
+  },
+  {
+    "id": "w06",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 6,
+    "parent": "w05"
+  },
+  {
+    "id": "w07",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 7,
+    "parent": "w06"
+  },
+  {
+    "id": "w08",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 8,
+    "parent": "w07"
+  },
+  {
+    "id": "w09",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 9,
+    "parent": "w08"
+  },
+  {
+    "id": "w10",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 10,
+    "parent": "w09"
+  },
+  {
+    "id": "w11",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 11,
+    "parent": "w10"
+  },
+  {
+    "id": "w12",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 12,
+    "parent": "w11"
+  },
+  {
+    "id": "w13",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 13,
+    "parent": "w12"
+  },
+  {
+    "id": "w14",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 14,
+    "parent": "w13"
+  },
+  {
+    "id": "w15",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 15,
+    "parent": "w14"
+  },
+  {
+    "id": "w16",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 16,
+    "parent": "w15"
+  },
+  {
+    "id": "w17",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 17,
+    "parent": "w16"
+  },
+  {
+    "id": "w18",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 18,
+    "parent": "w17"
+  },
+  {
+    "id": "w19",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 19,
+    "parent": "w18"
+  },
+  {
+    "id": "w20",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 20,
+    "parent": "w19"
+  },
+  {
+    "id": "w21",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 21,
+    "parent": "w20"
+  },
+  {
+    "id": "w22",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 22,
+    "parent": "w21"
+  },
+  {
+    "id": "w23",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 23,
+    "parent": "w22"
+  },
+  {
+    "id": "w24",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 24,
+    "parent": "w23"
+  },
+  {
+    "id": "w25",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 25,
+    "parent": "w24"
+  },
+  {
+    "id": "w26",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 26,
+    "parent": "w25"
+  },
+  {
+    "id": "w27",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 27,
+    "parent": "w26"
+  },
+  {
+    "id": "w28",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 28,
+    "parent": "w27"
+  },
+  {
+    "id": "w29",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 29,
+    "parent": "w28"
+  },
+  {
+    "id": "w30",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 30,
+    "parent": "w29"
+  },
+  {
+    "id": "w31",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 31,
+    "parent": "w30"
+  },
+  {
+    "id": "w32",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 32,
+    "parent": "w31"
+  },
+  {
+    "id": "w33",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 33,
+    "parent": "w32"
+  },
+  {
+    "id": "w34",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 34,
+    "parent": "w33"
+  },
+  {
+    "id": "w35",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 35,
+    "parent": "w34"
+  },
+  {
+    "id": "w36",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 36,
+    "parent": "w35"
+  },
+  {
+    "id": "w37",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 37,
+    "parent": "w36"
+  },
+  {
+    "id": "w38",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 38,
+    "parent": "w37"
+  },
+  {
+    "id": "w39",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 39,
+    "parent": "w38"
+  },
+  {
+    "id": "w40",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 40,
+    "parent": "w39"
+  },
+  {
+    "id": "w41",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 41,
+    "parent": "w40"
+  },
+  {
+    "id": "w42",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 42,
+    "parent": "w41"
+  },
+  {
+    "id": "w43",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 43,
+    "parent": "w42"
+  },
+  {
+    "id": "w44",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 44,
+    "parent": "w43"
+  },
+  {
+    "id": "w45",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 45,
+    "parent": "w44"
+  },
+  {
+    "id": "w46",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 46,
+    "parent": "w45"
+  },
+  {
+    "id": "w47",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 47,
+    "parent": "w46"
+  },
+  {
+    "id": "w48",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 48,
+    "parent": "w47"
+  },
+  {
+    "id": "w49",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 49,
+    "parent": "w48"
+  },
+  {
+    "id": "w50",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "writer",
+    "arm": "P",
+    "hop": 50,
+    "parent": "w49"
+  },
+  {
+    "id": "h01-Cedar-P",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "reader",
+    "arm": "P",
+    "hop": 1,
+    "parent": "w01"
+  },
+  {
+    "id": "h01-Cedar-R",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "reader",
+    "arm": "R",
+    "hop": 1,
+    "parent": "w01"
+  },
+  {
+    "id": "h01-Bay-R",
+    "chain": "serial50",
+    "case_id": "Bay",
+    "role": "reader",
+    "arm": "R",
+    "hop": 1,
+    "parent": "w01"
+  },
+  {
+    "id": "h01-Bay-P",
+    "chain": "serial50",
+    "case_id": "Bay",
+    "role": "reader",
+    "arm": "P",
+    "hop": 1,
+    "parent": "w01"
+  },
+  {
+    "id": "h01-Delta-P",
+    "chain": "serial50",
+    "case_id": "Delta",
+    "role": "reader",
+    "arm": "P",
+    "hop": 1,
+    "parent": "w01"
+  },
+  {
+    "id": "h01-Delta-R",
+    "chain": "serial50",
+    "case_id": "Delta",
+    "role": "reader",
+    "arm": "R",
+    "hop": 1,
+    "parent": "w01"
+  },
+  {
+    "id": "h10-Cedar-R",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "reader",
+    "arm": "R",
+    "hop": 10,
+    "parent": "w10"
+  },
+  {
+    "id": "h10-Cedar-P",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "reader",
+    "arm": "P",
+    "hop": 10,
+    "parent": "w10"
+  },
+  {
+    "id": "h10-Bay-P",
+    "chain": "serial50",
+    "case_id": "Bay",
+    "role": "reader",
+    "arm": "P",
+    "hop": 10,
+    "parent": "w10"
+  },
+  {
+    "id": "h10-Bay-R",
+    "chain": "serial50",
+    "case_id": "Bay",
+    "role": "reader",
+    "arm": "R",
+    "hop": 10,
+    "parent": "w10"
+  },
+  {
+    "id": "h10-Delta-R",
+    "chain": "serial50",
+    "case_id": "Delta",
+    "role": "reader",
+    "arm": "R",
+    "hop": 10,
+    "parent": "w10"
+  },
+  {
+    "id": "h10-Delta-P",
+    "chain": "serial50",
+    "case_id": "Delta",
+    "role": "reader",
+    "arm": "P",
+    "hop": 10,
+    "parent": "w10"
+  },
+  {
+    "id": "h25-Cedar-P",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "reader",
+    "arm": "P",
+    "hop": 25,
+    "parent": "w25"
+  },
+  {
+    "id": "h25-Cedar-R",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "reader",
+    "arm": "R",
+    "hop": 25,
+    "parent": "w25"
+  },
+  {
+    "id": "h25-Bay-R",
+    "chain": "serial50",
+    "case_id": "Bay",
+    "role": "reader",
+    "arm": "R",
+    "hop": 25,
+    "parent": "w25"
+  },
+  {
+    "id": "h25-Bay-P",
+    "chain": "serial50",
+    "case_id": "Bay",
+    "role": "reader",
+    "arm": "P",
+    "hop": 25,
+    "parent": "w25"
+  },
+  {
+    "id": "h25-Delta-P",
+    "chain": "serial50",
+    "case_id": "Delta",
+    "role": "reader",
+    "arm": "P",
+    "hop": 25,
+    "parent": "w25"
+  },
+  {
+    "id": "h25-Delta-R",
+    "chain": "serial50",
+    "case_id": "Delta",
+    "role": "reader",
+    "arm": "R",
+    "hop": 25,
+    "parent": "w25"
+  },
+  {
+    "id": "h50-Cedar-R",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "reader",
+    "arm": "R",
+    "hop": 50,
+    "parent": "w50"
+  },
+  {
+    "id": "h50-Cedar-P",
+    "chain": "serial50",
+    "case_id": "Cedar",
+    "role": "reader",
+    "arm": "P",
+    "hop": 50,
+    "parent": "w50"
+  },
+  {
+    "id": "h50-Bay-P",
+    "chain": "serial50",
+    "case_id": "Bay",
+    "role": "reader",
+    "arm": "P",
+    "hop": 50,
+    "parent": "w50"
+  },
+  {
+    "id": "h50-Bay-R",
+    "chain": "serial50",
+    "case_id": "Bay",
+    "role": "reader",
+    "arm": "R",
+    "hop": 50,
+    "parent": "w50"
+  },
+  {
+    "id": "h50-Delta-R",
+    "chain": "serial50",
+    "case_id": "Delta",
+    "role": "reader",
+    "arm": "R",
+    "hop": 50,
+    "parent": "w50"
+  },
+  {
+    "id": "h50-Delta-P",
+    "chain": "serial50",
+    "case_id": "Delta",
+    "role": "reader",
+    "arm": "P",
+    "hop": 50,
+    "parent": "w50"
+  }
+]

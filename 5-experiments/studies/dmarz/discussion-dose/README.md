@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 **Discussion allowance and corruption in a fork and merge swarm** (`discussion-dose`)
 
@@ -25,7 +25,7 @@ Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](..
 
 Exploratory experiment plan and executable environment, owned by **dmarz/discussion-dose**, 3 October 2026. Test whether additional discussion helps a three-agent swarm correct a false fact introduced through one child's tool result, or amplifies it into the final vote and returned memory.
 
-**Status:** human-requested exploratory build and deployment, not an accepted hypothesis or confirmatory finding. Submitted through [the lab task](../../../../tasks/build-discussion-dose.md) and registered as `discussion-dose` in the [live experiment list](https://swarm-live.pages.dev). The [worker template](../../../../templates/experiment-worker/README.md) explicitly permits S0/S1 builds in researcher notes while review is pending. The formal `experiments/` catalogue requires an accepted hypothesis; we preserve that gate. S2 is unavailable in the coordinator and worker.
+**Status:** human-requested exploratory build and deployment, not an accepted hypothesis or confirmatory finding. Submitted through [the lab task](../../../../lab/tasks/build-discussion-dose.md) and registered as `discussion-dose` in the [live experiment list](https://swarm-live.pages.dev). The [worker template](../../../../lab/templates/experiment-worker/README.md) explicitly permits S0/S1 builds in researcher notes while review is pending. The formal `experiments/` catalogue requires an accepted hypothesis; we preserve that gate. S2 is unavailable in the coordinator and worker.
 
 **Successor:** [V2-DESIGN.md](V2-DESIGN.md) specifies a harder contested-evidence version (no verification turn, hidden profile, graded cue removal), built while v1 S0 runs, with a predeclared calibration rule. Not yet run with a model.
 
@@ -41,7 +41,7 @@ Related questions in the same [214-question atlas](../question-atlas/README.md):
 
 ## Setup
 
-The source is adapted from [templates/experiment-worker](../../../../templates/experiment-worker/), with methods from [the existing harness guide](../../../../tooling/agent-experiments/HARNESS.md). The local runtime and tests use **Python 3.10+ standard library only**. Fleet execution additionally uses the already-installed `swarm_report` module. JSON syntax is used inside `.yaml` configuration files so the runner needs no YAML library. No LangChain, LangGraph, AutoGen, model SDK, vector database, GPU, browser, or benchmark package is required.
+The source is adapted from [templates/experiment-worker](../../../../lab/templates/experiment-worker/), with methods from [the existing harness guide](../../../toolkit/agent-experiments/HARNESS.md). The local runtime and tests use **Python 3.10+ standard library only**. Fleet execution additionally uses the already-installed `swarm_report` module. JSON syntax is used inside `.yaml` configuration files so the runner needs no YAML library. No LangChain, LangGraph, AutoGen, model SDK, vector database, GPU, browser, or benchmark package is required.
 
 Each child has an LLM policy boundary, private documents, private history and its own tool results. The coordinator, tools, board, tally, memory merge and evaluator are deterministic host code. Models receive serialized observations and can only return JSON requests for the allowlisted document reader. They have no host filesystem, shell or arbitrary network tools. This is an information-access boundary suitable for API models; it is not a sandbox for executing hostile agent code. See [ARCHITECTURE.md](ARCHITECTURE.md).
 

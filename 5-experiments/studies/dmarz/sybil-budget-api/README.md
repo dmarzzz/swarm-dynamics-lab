@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/sybil-specialists; source `1226b626` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/sybil-specialists; source `1226b626` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — In the repeated-fact synthetic environment, the strong-check accuracy benefit replicated; random checking reached the N972 joint mean target at 64 tested checks and coverage at 108. No weaker tested checking strength met that joint target. Basis: Same-owner audit of twenty-four paired roots, competent clean controls and fully accounted outcomes supports this narrow grid result. One task family, one model, scripted identities/checks, repeated facts and unadjusted intervals limit generalization; independent review was waived and the historical immutable public-plan receipt gap is retained.
 - **sample_size_summary:** Observed: 24 paired roots from one synthetic task family; 2,880/2,880 S1 outcomes analyzed, zero missing; 120 conditions at 324/972 simulated identities, one synthesizer. Q0 separately: 16/16 clean calls on four roots.

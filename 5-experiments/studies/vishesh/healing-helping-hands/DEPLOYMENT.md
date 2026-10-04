@@ -8,7 +8,7 @@ Pilot-01 and pilot-02 used the earlier local runtime. The new dedicated-allocati
 
 The public `src/corpus.py`, `src/reference.py` and `src/sim.py` use Python's standard library. Rebuild a corpus with the recorded seed and correct version (`corpus.make` for pilot-01/02; `reference.corpus` for pilot-03), load the saved extraction tape and run `sim.rollout(corpus, tape, policy, scenario)`. Compare all recorded `state_sha256` values, metrics and final memory/notices. Provider sampling need not reproduce exactly; saved tapes are the reproducible intervention inputs. Fixture gold never substitutes for a model tape except in the explicitly exact arm.
 
-Run offline tests with `python -m unittest discover -s researchers/vishesh/notes/healing-helping-hands/tests -q` from the repository root. Twenty-two checks cover state dynamics, faults, terminal assignment accounting, route validation, ordered wire payloads and budget settlement. For a new inference attempt, first commit its plan/source, register that immutable README and verify the public page; `source_check` refuses mismatched tracked files. Do not rerun an old output directory or copy a failed attempt over its previous records.
+Run offline tests with `python -m unittest discover -s 5-experiments/studies/vishesh/healing-helping-hands/tests -q` from the repository root. Twenty-two checks cover state dynamics, faults, terminal assignment accounting, route validation, ordered wire payloads and budget settlement. For a new inference attempt, first commit its plan/source, register that immutable README and verify the public page; `source_check` refuses mismatched tracked files. Do not rerun an old output directory or copy a failed attempt over its previous records.
 
 ## Local models
 

@@ -2,8 +2,11 @@
 
 AI Village x Grove Research: AI Swarm Dynamics Hackathon, 3 and 4 October 2026. Team researcher: shadow (agents
 named `shadow/sol-*`). Part of the joint swarm-lab entry with dmarz and vishesh. Repository:
-https://github.com/dmarzzz/swarm-lab. Draft by shadow/sol-submission, 2026-10-04. Every number below is copied
-from a file on `main` and linked; nothing was recomputed for this page.
+<https://github.com/dmarzzz/swarm-dynamics-lab> (renamed from `swarm-lab`; old links redirect).
+Live research dashboard: <https://swarm-research.pages.dev>. Live narrative site: <https://swarm-narrative.pages.dev>
+([narrative README](../../../5-experiments/studies/shadow/narrative/README.md)). Draft by shadow/sol-submission, reconciled against `main` by
+shadow/sol-submission-reconcile, 2026-10-04. Every number below is copied from a file on `main` and linked;
+nothing was recomputed for this page.
 
 ## Abstract
 
@@ -18,10 +21,13 @@ keeps only 1 of the original top 10 repeated-phrasing leaders, and a 30-link dir
 sampled git link was sync boilerplate. Three companion findings (incident chronology, URL adoption timing,
 identity observability) are descriptive and post-hoc. Separately, a scripted memory model found three regimes
 after an attacker is removed (slow return, stay captured, freeze), a property of the scripted rule rather than
-agent behaviour. The real-model memory-mixture pilot did not generalise; Claude qualification was
-infrastructure-blocked, and its reduced offline fixture did not reproduce freeze. Factory attempt 2 remains
-blocked by independent review, with no new calls or treatment claim. We also report audits and fixes to shared
-pipeline code. Nothing here is a causal claim about agent behaviour in the wild.
+agent behaviour. The real-model memory-mixture pilot did not generalise (negative result). On Claude, the
+unchanged freeze instrument passed qualification and completed 16/16 Sonnet repair episodes, but the
+preregistered freeze classification is inconclusive: operational freeze was not established, and the reduced
+scripted reference itself does not reproduce freeze. The memory-mix check on Claude is blocked, not null: zero
+valid model decisions, no estimate. Factory attempt 2 is blocked by independent review with no experiment run.
+We also report audits and fixes to shared pipeline code. Nothing here is a causal claim about agent behaviour in
+the wild.
 
 ## Contents
 
@@ -31,7 +37,7 @@ pipeline code. Nothing here is a causal claim about agent behaviour in the wild.
 4. [URL adoption timing in two swarms](#4-url-adoption-timing-wild-halflife)
 5. [Identity: retained wiki text inflates name-reference activity](#5-identity-observability-wild-identity)
 6. [Capture and memory (scripted): recover, stay captured, freeze](#6-capture-and-memory-scripted-s1-and-s1b)
-7. [Freeze on Claude (inconclusive, infrastructure-blocked)](#7-freeze-on-claude-inconclusive-infrastructure-blocked)
+7. [Freeze on Claude (qualified; operational freeze not established)](#7-freeze-on-claude-qualified-operational-freeze-not-established)
 8. [Negative and null results](#8-negative-and-null-results)
 9. [Reviews and audits](#9-reviews-and-audits)
 10. [Janitor fixes to shared code](#10-janitor-fixes-prs-85-to-106)
@@ -232,23 +238,55 @@ streams, not semantic problems, so 48,000 episodes are not 48,000 independent te
 answer, so "return" measures hysteresis, not epistemic healing. A same-dose 20-vs-1 contrast is clean. Contrasts
 involving full memory change the dose. `frac_original_T` alone cannot separate "came back" from "never left".
 
-## 7. Freeze on Claude (inconclusive, infrastructure-blocked)
+## 7. Freeze on Claude (qualified; operational freeze not established)
 
-Source: [freeze-claude/FINDING.md](../../../5-experiments/studies/shadow/capture-memory/freeze-claude/FINDING.md),
+Source: [attempt2 finding](../../../5-experiments/studies/shadow/capture-memory/freeze-claude/attempt2/FINDING.md),
 [preregistration](../../../5-experiments/studies/shadow/capture-memory/freeze-claude/PREREG.md),
-[summary.json](../../../5-experiments/studies/shadow/capture-memory/freeze-claude/summary.json).
+[prospective transport amendment](../../../5-experiments/studies/shadow/capture-memory/freeze-claude/AMENDMENT-1.md),
+[attempt2 summary](../../../5-experiments/studies/shadow/capture-memory/freeze-claude/attempt2/summary.json).
 
-**Blocked attempt, not a behavioral null.** Qualification requested `claude-sonnet-5-5` through the authorized
-local Anthropic pool. All 8 HTTP attempts failed: 2 HTTP429 rate limits and 6 HTTP503 broker-unavailable errors.
-There were zero valid model completions, no returned-model identifier, and no attack or repair episodes. No Opus
-request started. These failures neither replicate nor falsify freeze. Dollar charges and token counts are
-unknown, not asserted zero, because no usage or cost receipt was returned.
+Evidence confidence 1/4 (exploratory), assessed by shadow/sol (same author). Attempt 2 (commit `c62a9367`)
+supersedes the infrastructure-blocked attempt 1 as the current result.
 
-**Offline caveat.** The reduced scripted fixture did not reproduce the target freeze regime: full-memory
-removal increased original-convention share by **+0.250, 95% root-bootstrap CI [+0.083,+0.417]**. Even a successful
-model run would therefore have been a standardized-state capacity diagnostic, not a clean replication of S1b.
-Claude freeze remains untested. A relaunch needs scientific reconsideration of the fixture and prospective
-runner corrections, not substitution of these transport failures for a behavioral result.
+**Qualification passed and primary data is complete.** Via OpenRouter (`provider.allow_fallbacks=false`), returned
+model `anthropic/claude-sonnet-5.5` passed the unchanged competence/non-copying gate: 12/12 responses parsed as an
+allowed name, 4/4 unanimous controls correct, and all 6/6 Sonnet conflicting-history choices differed from the
+last list item. No prompt, root, schedule, parser or bootstrap was tuned. **All 16/16 Sonnet repair episodes
+completed** across four paired roots (tasks 160 to 163, N = 12, six survivors, 20 rounds).
+
+**Freeze is NOT established.** Full-memory removal changed original-convention share from 0.0833 to 0, a change of
+**-0.0833, 95% root-bootstrap CI [-0.1667, 0]** (10,000 whole-root resamples, seed 20261004). The mean is inside
+the preregistered freeze band [-0.10, +0.10] but the interval is not wholly inside it and does not exclude it, so
+the preregistered classification is **inconclusive**, with observed behaviour rather than an infrastructure block.
+Memory1 preserved population share while individual agents switched (42/228 = 18.42% member decisions switched in
+each memory1 arm, vs 2/228 = 0.88% for full/removal); the paired memory1-minus-full change was **+0.0833
+[0, +0.1667]**, below the required point contrast of +0.10. The full-memory wipe-minus-removal endpoint was **0
+[0, 0]**, not the predicted harm below -0.10. No Sonnet repair episode recovered (0/4 in every arm). The full
+predicted pattern was not reproduced.
+
+**Limits and retained failures.**
+
+- The same N = 12 scripted reference does not itself reproduce S1b freeze: full/removal goes **+0.250 [+0.083,
+  +0.417]**. Sonnet-minus-scripted full/removal change is -0.3333 [-0.5000, -0.1667]. This is a result for the
+  reduced standardized-state instrument, not a replication of the S1b regime (N = 24, 50 rounds).
+- Floor effect: roots 160 and 161 began at zero original share and stayed there; the average baseline is only
+  1/12, so even complete loss of the original convention produces a mean change inside the nominal band.
+- **Opus caveat.** The two optional `anthropic/claude-opus-5.5` full/removal episodes (116 requests) ran on the
+  two zero-floor roots, stayed at zero (change 0 [0, 0]), and are not pooled with Sonnet. They describe persistence
+  of unanimous capture on those states, not an independent confirmation of freeze.
+- **Attack screen: 2 full-memory episodes missing.** Memory1 captured 2/2 within eight rounds. Both full-memory
+  episodes (dose 0.54) stopped at round 3 on request IDs 993 and 1070: HTTP 200, null final content, finish reason
+  `length`, all 32 completion tokens reported as reasoning tokens under the frozen 32-token output ceiling. Their
+  endpoints are unknown, not scored as resistance or as zero. All-assigned attack capture is bounded [0.5, 1].
+- **Cost and calls.** Execution 22:47:56Z to 22:58:45Z, before the prospectively disclosed 23:30Z cutoff. 1,188
+  HTTP requests made (1,186 valid final names), zero retries, zero fallbacks, all HTTP 200. Returned provider
+  `Claude Platform on AWS` on all 1,188. Response-reported spend **USD 0.968330** (about $0.97) from `usage.cost`
+  receipts, under the USD 10 lane cap. The [8 failed attempt-1 pool attempts](../../../5-experiments/studies/shadow/capture-memory/freeze-claude/FINDING.md)
+  (2 HTTP 429, 6 HTTP 503, zero outputs) remain untouched, count as no behavioural evidence, and have unknown
+  historical dollar cost.
+
+Saved-data reproduction with no model calls: `report.py`, `check_attempt2.py`, `test_transport.py`, and
+`../check_saved.py` in the attempt2 directory ([CHECKS.md](../../../5-experiments/studies/shadow/capture-memory/freeze-claude/attempt2/CHECKS.md)).
 
 ## 8. Negative and null results
 
@@ -307,11 +345,23 @@ direct response child. Dividing all response rows by payload rows gives 25.27%, 
 18,417 parented responses attach to only 7,733 payloads. Response attachment rises from 2.26% (1-255 characters)
 to 39.98% (4096+ characters).
 
-**8g. Factory provenance: no treatment result.** Attempt 1 returned no model answers; attempt 2 made no new
-calls and is blocked by independent review. See [section 11](#11-factory-status).
+**8g. Factory provenance: blocked, no treatment result.** Attempt 1 returned no model answers; attempt 2 made no
+new calls, no experiment ran, and it is blocked by independent review. See [section 11](#11-factory-status).
 
-**8h. Claude freeze: infrastructure-blocked, inconclusive.** No model completion or behavioral estimate exists,
-and the reduced offline fixture did not reproduce freeze. See [section 7](#7-freeze-on-claude-inconclusive-infrastructure-blocked).
+**8h. Claude freeze: inconclusive, not established.** The qualified instrument produced complete primary data
+(16/16 Sonnet repair episodes) but did not establish operational freeze, and the reduced scripted reference does
+not reproduce freeze either. See [section 7](#7-freeze-on-claude-qualified-operational-freeze-not-established).
+
+**8i. Memory-mix rescue on Claude: BLOCKED, not a null.** Source:
+[claude-pool/FINDING.md](../../../5-experiments/studies/shadow/capture-memory-mix/claude-pool/FINDING.md) (commit `c99dbf75`), evidence
+confidence 0/4 (untested). A bounded Claude Sonnet 5.5 check of all-full memory versus one-third short-memory
+survivors did not reach scientific evaluation: all 20 qualification HTTP attempts failed (8 rate limits, 12
+broker-unavailable errors), yielding no valid model decision and 0/4 paired roots. Recovery also found that the
+original parse-only qualification would admit a last-item copier, public preregistration was not established, and
+historical dollar usage was unreceipted. The lane was therefore closed without additional calls rather than
+weakening qualification or reporting a missing comparison as a null. Memory-mixture rescue on Claude remains
+untested. The logical missing-outcome bound on mix-minus-full is [-1, +1], not an empirical interval. The retained
+scripted reference (not Claude) gives -0.0417 [-0.250, +0.125].
 
 ## 9. Reviews and audits
 
@@ -366,9 +416,10 @@ actually happened.
 Sources: [sol-factory.md](../../../5-experiments/studies/shadow/audit-2026-10-04/sol-factory.md), [factory/provenance/README.md](../../../5-experiments/studies/shadow/factory/provenance/README.md),
 [POSTMORTEM.md](../../../5-experiments/studies/shadow/factory/provenance/POSTMORTEM.md), [attempt2 status](../../../5-experiments/studies/shadow/factory/provenance/attempt2/results/FINDING.md),
 [independent review](../../../5-experiments/studies/shadow/factory/provenance/attempt2/REVIEW-independent.md),
-[PR #107](https://github.com/dmarzzz/swarm-lab/pull/107).
+[PR #107](https://github.com/dmarzzz/swarm-dynamics-lab/pull/107).
 
-Honest status: **no factory treatment result exists.**
+Status: **blocked by independent review, code repair in progress, dispatch cutoff passed, no experiment ran.**
+No factory treatment result exists.
 
 - Legacy factory lane: 152 attempted assignments, 100 valid answers, 52 retained failures (20 pool transport
   failures, then 20 schema-invalid paid answers, then 4 HTTP 503). The interrupted main run has only 2 complete
@@ -377,14 +428,17 @@ Honest status: **no factory treatment result exists.**
 - Provenance duplication-invariance pilot, attempt 1: two requests, zero model answers (pool HTTP 400 from
   unsupported schema bounds, paid fallback HTTP 403). Builder defect, fixed in JF002 (#106).
 - Attempt 2: **blocked by independent review**, not a treatment result. The prospective plan preceded any
-  request, but the separate-agent review of [PR #107](https://github.com/dmarzzz/swarm-lab/pull/107) returned
-  **BLOCK**. Direct dispatch can continue after an HTTP400 and run out of the frozen assignment order; the stop
-  rule is not enforced at the shared dispatch boundary. `closeout.py` is absent from the admitted source-hash
-  manifest, and saved-data reporting/check paths do not enforce the reporting freeze. See
-  [REVIEW-independent.md](../../../5-experiments/studies/shadow/factory/provenance/attempt2/REVIEW-independent.md). The supplied offline tests passed
-  but did not cover these failures. Attempt 2 made **0 new HTTP calls**, spent **USD 0**, and makes **no
-  scientific treatment claim**. The blockers require offline fixes and a separate-agent readback before any
-  prospective admission or dispatch.
+  request, but the separate-agent review of [PR #107](https://github.com/dmarzzz/swarm-dynamics-lab/pull/107)
+  (head `3eb852fa`) returned **BLOCK** (R1 high: direct dispatch can continue after an HTTP400 and run out of the
+  frozen assignment order, the stop rule is not enforced at the shared dispatch boundary; R2 medium: `closeout.py`
+  is absent from the admitted source-hash manifest, and saved-data reporting/check paths do not enforce the
+  reporting freeze). See [REVIEW-independent.md](../../../5-experiments/studies/shadow/factory/provenance/attempt2/REVIEW-independent.md). The
+  supplied offline tests passed but did not cover these failures.
+- Code repair against R1 and R2 is in progress on PR #107, which is still open. The factory dispatcher's
+  prospective cutoff (refuse new calls at 2026-10-04 22:00Z, [factory README](../../../5-experiments/studies/shadow/factory/README.md)) has passed, so
+  no attempt 2 dispatch can happen within the hackathon window. Attempt 2 made **0 new HTTP calls**, spent
+  **USD 0**, ran **no experiment**, and makes **no scientific treatment claim**. Any future run needs the offline
+  fixes, a separate-agent readback, and a fresh prospective admission.
 
 ## 12. Limits that apply to everything here
 
@@ -394,7 +448,7 @@ Honest status: **no factory treatment result exists.**
   rule's property. The real-model pilots are small (6 to 24 tasks per cell) and do not replicate one another.
 - Most checks are same-team or same-author. Cross-researcher review exists for capture-memory-mix (dmarz) and for
   the work we reviewed (sections 9 and 10).
-- Evidence-confidence scores are on the shared 0 to 4 rubric ([experiments/EVIDENCE-METADATA.md](../../../5-experiments/EVIDENCE-METADATA.md)).
+- Evidence-confidence scores are on the shared 0 to 4 rubric ([5-experiments/EVIDENCE-METADATA.md](../../../5-experiments/EVIDENCE-METADATA.md)).
   Nothing here is above 2/4.
 - Raw incident rows and identifying labels are not committed. Reproduction commands are in each lane's README or
   FINDING.

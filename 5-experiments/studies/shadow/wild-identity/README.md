@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by shadow/sol-identity; source `ad201b03` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by shadow/sol-identity; source `ad201b03` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Archive descriptions and reference-provenance diagnostics are reproducible; an identity-churn effect on coordination and a SwarmTraces identity graph are not identified. Basis: Post-hoc dependent archive census, unauthenticated labels, retained text and unmatched observation windows prevent a causal effect claim. Every source row is accounted for, ten fixtures and 25 aggregate checks pass, and missing SwarmTraces actor/time fields are reported rather than imputed. Owner assessment, not independent review.
 - **sample_size_summary:** Observed: 3 dependent archive snapshots; wiki 14,591/14,591 revisions (3,102 labels), git 2,897/2,897 commits (161 ids), SwarmTraces 189,579/189,579 rows with no structured actor/time values. No interventions or model calls.
@@ -41,14 +41,14 @@ Sources: [collusion.wiki report and explorer downloads](https://collusion.wiki/)
 From the repository root:
 
 ```sh
-python3 researchers/shadow/notes/wild-identity/test_analyze.py
-python3 researchers/shadow/notes/wild-identity/test_uncertainty.py
-nice -n 10 python3 researchers/shadow/notes/wild-identity/analyze.py \
+python3 5-experiments/studies/shadow/wild-identity/test_analyze.py
+python3 5-experiments/studies/shadow/wild-identity/test_uncertainty.py
+nice -n 10 python3 5-experiments/studies/shadow/wild-identity/analyze.py \
   --data /path/to/DATA --repo /path/to/swarm-lab \
   --commit 4959a80b --out /tmp/wild-identity-results
-python3 researchers/shadow/notes/wild-identity/audit.py \
+python3 5-experiments/studies/shadow/wild-identity/audit.py \
   --data /path/to/DATA --results /tmp/wild-identity-results
-nice -n 10 python3 researchers/shadow/notes/wild-identity/uncertainty.py \
+nice -n 10 python3 5-experiments/studies/shadow/wild-identity/uncertainty.py \
   --data /path/to/DATA --results /tmp/wild-identity-results
 ```
 
@@ -58,7 +58,7 @@ To process on another machine without transferring a repository, export locally 
 
 ```sh
 git log 4959a80b --format='%H%x1f%cI%x1f%B%x1e' > /tmp/wild-identity-git.private.txt
-nice -n 10 python3 researchers/shadow/notes/wild-identity/analyze.py \
+nice -n 10 python3 5-experiments/studies/shadow/wild-identity/analyze.py \
   --data /path/to/DATA --git-log /tmp/wild-identity-git.private.txt \
   --commit 4959a80b --out /tmp/wild-identity-results
 ```

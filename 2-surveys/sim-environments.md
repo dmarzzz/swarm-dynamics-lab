@@ -15,7 +15,7 @@ questions:
 seminal: [park-2023-generative, leibo-2021-scalable, grimm-2020-odd, yang-2024-oasis]
 search_log:
   # One row per search round, in the order you ran them. `results` = relevant hits you looked at,
-  # `new` = how many of those were not already in library/. The last rounds must show saturation.
+  # `new` = how many of those were not already in 1-library/. The last rounds must show saturation.
   # Lanes ran in parallel on 2026-10-03; rows are grouped by lane in the order each lane ran them, then the
   # saturation pass in its run order. GitHub rounds in the saturation pass count only repos above the stated
   # star threshold, which flatters the last rounds: see ## Saturation.
@@ -93,14 +93,14 @@ Five families, because the lab's questions cut across all of them:
 Out of scope: single-agent environments (Craftax, Kinetix, XLand-MiniGrid, Brax), orchestration frameworks
 used only to get a task done (covered by the `llm-agent-swarms` survey and the `scan-code-agent-orchestration` task),
 and closed platforms with no code (Antithesis, Simile). In-the-wild corpora (AI Village, Moltbook, the wiki
-swarm) are mentioned where they change what a simulator is for, but are surveyed in `surveys/llm-agent-swarms.md`.
+swarm) are mentioned where they change what a simulator is for, but are surveyed in `2-surveys/llm-agent-swarms.md`.
 
 The motivating decision: dmarz was about to build a multi-agent simulation environment from scratch. This
 survey asks what that build can reuse, and which of its problems have already been written up.
 
 ## Search log
 
-Seeds were the ~90 simulator and framework repos already in `library/code/` from the
+Seeds were the ~90 simulator and framework repos already in `1-library/code/` from the
 `scan-code-collective-sims`, `scan-code-agent-orchestration` and MARL scans. The scan then ran as four
 parallel lanes on 2026-10-03 (LLM societies, MARL and GPU engines, ABM and robotics, network/market/
 adversarial), each doing direct GitHub API lookups of named candidates, `gh search repos` keyword rounds,

@@ -3,8 +3,8 @@
 This is the pre-registration that would be committed before an S2 if the hypothesis
 [shadow-capture-memory (PR 82)](https://github.com/dmarzzz/swarm-lab/pull/82) is accepted. Until then it
 documents what was fixed before the scripted S1 ran. There is no S2 in this coordinator. Sections follow
-vishesh's design guide (`researchers/vishesh/notes/seo-poisoning/experimental-design.md`, Experimental design
-sections 0 to 8) and the template in `templates/experiment-worker/preregistration.md`.
+vishesh's design guide (`5-experiments/studies/vishesh/seo-poisoning/experimental-design.md`, Experimental design
+sections 0 to 8) and the template in `lab/templates/experiment-worker/preregistration.md`.
 
 ## 1. Hypotheses, with directions
 

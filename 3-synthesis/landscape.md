@@ -2,8 +2,8 @@
 
 Owner: shadow/sol-atlas, holding task `synthesis-landscape-map`. Written 2026-10-04 against library snapshot
 `10be71d5` (3,300 entries). Every count below is reproducible with
-[landscape_counts.py](../researchers/shadow/notes/landscape-map/landscape_counts.py); the output is saved as
-[counts.md](../researchers/shadow/notes/landscape-map/counts.md).
+[landscape_counts.py](../5-experiments/studies/shadow/landscape-map/landscape_counts.py); the output is saved as
+[counts.md](../5-experiments/studies/shadow/landscape-map/counts.md).
 
 This is a map of the catalogue, not a survey. It has not been through the prior-art gate and proposes no
 hypotheses. "Not tried" below means **not found in our library** by tag co-occurrence and text search; it is not a
@@ -344,18 +344,18 @@ catalogued. Each item names the closest work we do have.
 4. **Quorum responses and speed-accuracy tuning** ([[sumpter-2009-quorum]], [[pratt-2006-tunable]],
    [[franks-2003-speed]]) as commit rules for LLM committees. 15 and 11 natural mentions, 0 LLM. The team's own
    attempt is vishesh's adaptive quorum (Antsy), where fixed and adaptive quorums tied on its evidence tapes
-   ([experiments/EVIDENCE.md](../experiments/EVIDENCE.md), `antsy-v1`).
+   ([5-experiments/EVIDENCE.md](../5-experiments/EVIDENCE.md), `antsy-v1`).
 5. **Cross-inhibition and stop signals** ([[seeley-2012-stop]], [[reina-2017-model]]) as a bounded-dissent or
    anti-deadlock mechanism in LLM debate. 13 natural mentions, 0 LLM. The closest LLM work is
    [[mansuri-2026-multi]] (abstract) on withheld dissent; vishesh's Right Dissenter plan cites Seeley as biological
-   motivation ([PLAN](../researchers/vishesh/notes/dissent/PLAN.md)).
+   motivation ([PLAN](../5-experiments/studies/vishesh/dissent/PLAN.md)).
 6. **Uninformed individuals as a defence** ([[couzin-2011-uninformed]]): neutral members return control from an
    opinionated minority to the majority. Never tested against LLM committed minorities or Sybil coalitions. The
    sealed swarm reports exploit spread from 3 informed to 16 uninformed lineages
    ([[gh-killy-netsphere-sealed-swarm-transcripts]]), which is the opposite direction (uninformed agents as carriers).
 7. **Physical and trust-side-channel Sybil defences** ([[gil-2015-guaranteeing]], [[yemini-2021-characterizing]],
    [[mallmann-trenn-2021-crowd]]) applied to software agents. Listed as a gap in the Sybil survey draft
-   (`surveys/sybil-resistance.md`, Gaps). Their guarantees are stated over abstract trust observations, so a
+   (`2-surveys/sybil-resistance.md`, Gaps). Their guarantees are stated over abstract trust observations, so a
    software analogue (attested runtime, metered compute) is a direct substitution.
 8. **A single controlled damper agent** ([[stern-2018-dissipation]]): one automated car removed a stop-and-go wave.
    The analogous LLM question, whether one scripted stabilising agent can dissipate a belief cascade, is untested.
@@ -380,21 +380,21 @@ catalogued. Each item names the closest work we do have.
 
 ## 4. Where the team's experiments sit on this map
 
-Source: [experiments/EVIDENCE.md](../experiments/EVIDENCE.md) and dmarz's
-[latest results review](../researchers/dmarz/notes/latest-results-review-2026-10-04/evidence.json). Numbers are as
+Source: [5-experiments/EVIDENCE.md](../5-experiments/EVIDENCE.md) and dmarz's
+[latest results review](../5-experiments/studies/dmarz/latest-results-review-2026-10-04/evidence.json). Numbers are as
 reported by the owners; independent recomputation is a separate task (`review-dmarz-completed-xcheck`).
 
 - **Sybil resistance and identity splitting (dmarz).** The densest experimental cluster. Examples: proportional
   checks raised Sonnet specialist accuracy by +52.8 pp at 972 identities
-  ([sybil-scale-sonnet](../researchers/dmarz/notes/sybil-scale-sonnet/RESULTS.md)); splitting a fixed attacker
+  ([sybil-scale-sonnet](../5-experiments/studies/dmarz/sybil-scale-sonnet/RESULTS.md)); splitting a fixed attacker
   budget across identities raised rare-skill wrong answers +41.0 pp more under degree-based than coverage-based
-  admission ([sybil-split-opus](../researchers/dmarz/notes/sybil-split-opus/RESULTS.md)); cutting truthful carriers
+  admission ([sybil-split-opus](../5-experiments/studies/dmarz/sybil-split-opus/RESULTS.md)); cutting truthful carriers
   from 81 to 1 dropped accuracy by 95.8 pp
-  ([sybil-scarcity-opus](../researchers/dmarz/notes/sybil-scarcity-opus/RESULTS.md)). Map position: Sybil x
+  ([sybil-scarcity-opus](../5-experiments/studies/dmarz/sybil-scarcity-opus/RESULTS.md)). Map position: Sybil x
   collective-decision x the N_eff transfer (3.1 item 6). The scripted identities feed one model synthesizer, so
   these are admission and aggregation results, not autonomous-swarm results.
 - **Market splitting (dmarz).** A flexible LLM owner split into another firm in 6/6 firm-regulated markets and 0/6
-  owner-regulated markets ([market-split-api](../researchers/dmarz/notes/market-split-api/RESULTS.md)). Map
+  owner-regulated markets ([market-split-api](../5-experiments/studies/dmarz/market-split-api/RESULTS.md)). Map
   position: false-name-proof mechanism design (3.1 item 10) meeting agent budgets.
 - **Quorum of Mirrors, Phantom Coast, Right Dissenter, Antsy (vishesh).** Collective decision under repeated or
   missing evidence. Quorum of Mirrors Q1-02: 0/8 graded full-lineage cases correct; choices tracked the copied
@@ -423,7 +423,7 @@ recommends, it does not reassign.
 
 0. **Answer the narrow llm-agent-swarms revise first.** It is the only complete survey and three hypotheses rest
    on it (`shadow-board-nsweep`, `shadow-capture-memory`, `shadow-neff-evidence-board`). All three review files
-   say `revise`; the latest re-review ([llm-agent-swarms--dmarz-inbox](../reviews/llm-agent-swarms--dmarz-inbox.md))
+   say `revise`; the latest re-review ([llm-agent-swarms--dmarz-inbox](../2-surveys/reviews/llm-agent-swarms--dmarz-inbox.md))
    calls it "revise, narrowly" with the gate passing. This is owner repair work, not a new survey, but no
    hypothesis on it can reach `accepted` until a review passes.
 1. **survey-sybil-resistance** (in progress, dmarz). The largest block of completed experiments depends on it, and

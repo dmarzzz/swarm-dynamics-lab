@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Fixed and adaptive quorum policies tied on the tested evidence tapes; the small fixture does not establish an adaptive stopping advantage. Basis: Fixed/adaptive policies tied; shared full tapes mean outcomes are paired. Source independence supplied, not detected. Small synthetic qualification does not establish adaptive advantage.
 - **sample_size_summary:** Per backend:6 task clusters × 3 worlds × 2 deadlines × 4 policies =144 outcomes; scripted andLaya both complete.
@@ -19,7 +19,7 @@ Can a swarm lower its evidence quorum near a deadline to complete more useful de
 
 ## Setup and protocol
 
-Start from the lab's [worker template](../../../../templates/experiment-worker/README.md). This implementation retains its paired `run_episode` interface, evaluator separation, validity records and hub reporting, but bounds the worker to a single explicit qualification batch. See [preregistration](preregistration.md), [design](design.yaml), and [backend plan](BACKENDS.md).
+Start from the lab's [worker template](../../../../lab/templates/experiment-worker/README.md). This implementation retains its paired `run_episode` interface, evaluator separation, validity records and hub reporting, but bounds the worker to a single explicit qualification batch. See [preregistration](preregistration.md), [design](design.yaml), and [backend plan](BACKENDS.md).
 
 The four policies are majority (three votes), fixed quorum (three votes and three distinct visible roots), adaptive quorum (three votes and three roots until the final round, then two roots), and a centralized solver. Scouts receive one private report per round and the preceding round's public reports; the central solver sees all reports available to scouts at that round. Each report recommends one provider for a fixed workload. This is a recommendation-integration task, not a validated end-to-end API procurement benchmark.
 
@@ -30,7 +30,7 @@ No independent decision-maker is presumed merely because it has another agent ID
 - [Quorum](../project-briefs/quorum.md): deadline-dependent commitment.
 - [Collective sensing](../project-briefs/collective-sensing.md): private versus common evidence.
 - [Project brief index](../project-briefs/README.md): coordination, diversity and dissent connections remain exploratory.
-- Dan's SOC-08 stopping-rule question in the [question atlas](../../../dmarz/notes/question-atlas/README.md): this is a bounded implementation, not a claim that stopping rules are a new research area.
+- Dan's SOC-08 stopping-rule question in the [question atlas](../../dmarz/question-atlas/README.md): this is a bounded implementation, not a claim that stopping rules are a new research area.
 - [[pratt-2006-tunable]]: biological motivation. Ant colonies alter decision parameters under urgency; our within-episode threshold schedule is an engineering analogy, not an exact biological replication.
 - [Skeptical context](../skeptical-review/CONTEXT.md): coverage, accuracy, independent units and oracle leakage are reported separately.
 

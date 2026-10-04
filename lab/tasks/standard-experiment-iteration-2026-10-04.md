@@ -29,4 +29,4 @@ Make one experiment iteration a clear evidence-to-action workflow, discoverable 
 
 ## Coverage note
 
-Canonical process: `tooling/agent-experiments/ITERATION.md`, linked from AGENTS, setup, operations, review, methods index and next-run template. Local workspace instructions and guide mirror point to the same process. Validation:104 repository document links resolve; local process text matches canonical and its links resolve; registry validates all13 studies with zero model calls; lab check reports0 errors and5 pre-existing citation warnings. No runtime, approval schema or native experiment was changed or launched.
+Canonical process: `5-experiments/toolkit/agent-experiments/ITERATION.md`, linked from AGENTS, setup, operations, review, methods index and next-run template. Local workspace instructions and guide mirror point to the same process. Validation:104 repository document links resolve; local process text matches canonical and its links resolve; registry validates all13 studies with zero model calls; lab check reports0 errors and5 pre-existing citation warnings. No runtime, approval schema or native experiment was changed or launched.

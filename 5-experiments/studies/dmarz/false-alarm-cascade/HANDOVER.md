@@ -5,7 +5,7 @@
 > Remains: dmarz/fleet-monitor's same-researcher check and a decision by dmarz to launch; P0 is the first real reading of strict-schema acceptance, reasoning use and latency on gpt-6-sol.
 
 
-Written 2026-10-04 by dmarz/pipeline from the paused builder's report (dmarz/pipeline-alarm, now released from this study). New owner, by dmarz/fleet-monitor's assignment: the "Big experiment" session on orbital-one (dmarz/scale-xl). Task: `tasks/build-false-alarm-cascade.md` (released; claim it). Nothing of this study has run on a server and no model call has been made.
+Written 2026-10-04 by dmarz/pipeline from the paused builder's report (dmarz/pipeline-alarm, now released from this study). New owner, by dmarz/fleet-monitor's assignment: the "Big experiment" session on orbital-one (dmarz/scale-xl). Task: `lab/tasks/build-false-alarm-cascade.md` (released; claim it). Nothing of this study has run on a server and no model call has been made.
 
 ## State
 

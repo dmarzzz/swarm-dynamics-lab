@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="white"/><g font-family="sans-serif" fill="#18212a">
+<text x="55" y="55" font-size="32" font-weight="bold">Freeze on Claude: attempt2</text>
+<text x="55" y="100" font-size="23">inconclusive: interval not contained in or disjoint from freeze band</text>
+<line x1="100" y1="680" x2="1130" y2="680" stroke="#ddd"/><text x="50" y="686" font-size="20">0</text>
+<line x1="100" y1="562.5" x2="1130" y2="562.5" stroke="#ddd"/><text x="50" y="568.5" font-size="20">0.25</text>
+<line x1="100" y1="445.0" x2="1130" y2="445.0" stroke="#ddd"/><text x="50" y="451.0" font-size="20">0.5</text>
+<line x1="100" y1="327.5" x2="1130" y2="327.5" stroke="#ddd"/><text x="50" y="333.5" font-size="20">0.75</text>
+<line x1="100" y1="210" x2="1130" y2="210" stroke="#ddd"/><text x="50" y="216" font-size="20">1</text>
+<text x="100.0" y="720" font-size="20">0</text>
+<text x="357.5" y="720" font-size="20">5</text>
+<text x="615.0" y="720" font-size="20">10</text>
+<text x="872.5" y="720" font-size="20">15</text>
+<text x="1130.0" y="720" font-size="20">20</text>
+<polyline points="100.0,640.8333 151.5,660.4167 203.0,680.0000 254.5,680.0000 306.0,680.0000 357.5,680.0000 409.0,680.0000 460.5,680.0000 512.0,680.0000 563.5,680.0000 615.0,680.0000 666.5,680.0000 718.0,680.0000 769.5,680.0000 821.0,680.0000 872.5,680.0000 924.0,680.0000 975.5,680.0000 1027.0,680.0000 1078.5,680.0000 1130.0,680.0000" fill="none" stroke="#1967a3" stroke-width="5"/>
+<text x="1180" y="250" fill="#1967a3" font-size="19">sonnet/full/removal (n=4)</text>
+<polyline points="100.0,640.8333 151.5,640.8333 203.0,640.8333 254.5,640.8333 306.0,640.8333 357.5,640.8333 409.0,640.8333 460.5,640.8333 512.0,640.8333 563.5,640.8333 615.0,640.8333 666.5,640.8333 718.0,640.8333 769.5,640.8333 821.0,640.8333 872.5,640.8333 924.0,640.8333 975.5,640.8333 1027.0,640.8333 1078.5,640.8333 1130.0,640.8333" fill="none" stroke="#0d8357" stroke-width="5"/>
+<text x="1180" y="295" fill="#0d8357" font-size="19">sonnet/1/removal (n=4)</text>
+<polyline points="100.0,640.8333 151.5,640.8333 203.0,680.0000 254.5,680.0000 306.0,680.0000 357.5,680.0000 409.0,680.0000 460.5,680.0000 512.0,680.0000 563.5,680.0000 615.0,680.0000 666.5,680.0000 718.0,680.0000 769.5,680.0000 821.0,680.0000 872.5,680.0000 924.0,680.0000 975.5,680.0000 1027.0,680.0000 1078.5,680.0000 1130.0,680.0000" fill="none" stroke="#b33d32" stroke-width="5"/>
+<text x="1180" y="340" fill="#b33d32" font-size="19">sonnet/full/wipe (n=4)</text>
+<polyline points="100.0,640.8333 151.5,640.8333 203.0,640.8333 254.5,640.8333 306.0,640.8333 357.5,640.8333 409.0,640.8333 460.5,640.8333 512.0,640.8333 563.5,640.8333 615.0,640.8333 666.5,640.8333 718.0,640.8333 769.5,640.8333 821.0,640.8333 872.5,640.8333 924.0,640.8333 975.5,640.8333 1027.0,640.8333 1078.5,640.8333 1130.0,640.8333" fill="none" stroke="#9b6ab3" stroke-width="5"/>
+<text x="1180" y="385" fill="#9b6ab3" font-size="19">sonnet/1/wipe (n=4)</text>
+<text x="430" y="770" font-size="23">Rounds after removal</text>
+<text x="55" y="830" font-size="21">Model observations only. 1188 HTTP attempts; 1186 valid responses.</text>
+<text x="55" y="868" font-size="20">Y: original-name share. Missing episodes are not plotted as zero. Four roots, not independent agents/calls.</text></g></svg>

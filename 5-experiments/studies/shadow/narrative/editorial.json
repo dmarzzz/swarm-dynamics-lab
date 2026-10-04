@@ -1,69 +1,438 @@
 {
   "schema_version": 1,
-  "weights": {"evidence": 1, "brief_fit": 1, "coverage": 1, "readiness": 1},
+  "weights": {
+    "evidence": 1,
+    "brief_fit": 1,
+    "coverage": 1,
+    "readiness": 1
+  },
   "themes": [
-    {"id": "identity", "label": "Identity & incentives", "question": "Who is behind the names?", "keywords": ["sybil", "market", "identity", "quota", "scarcity", "newcomer"], "brief_fit": "Controlled mechanisms that help interpret identity gaming in incident traces."},
-    {"id": "provenance", "label": "Evidence & provenance", "question": "How many independent observations?", "keywords": ["quorum-of-mirrors", "provenance", "copy", "wild-", "askswarm", "halflife", "evidence-depth", "village", "source", "phantom", "influence"], "brief_fit": "Tracing information spread, forensics beyond transcripts, reusable questions for any swarm."},
-    {"id": "memory", "label": "Memory & repair", "question": "What survives a correction?", "keywords": ["memory", "capture", "theseus", "healing", "immune", "regrowth", "handoff", "false-alarm", "discussion"], "brief_fit": "Trajectory visualization and understanding persistence, repair and inherited errors."},
-    {"id": "verification", "label": "Verification & cost", "question": "When does another check help?", "keywords": ["verif", "budget", "antsy", "dissent", "trust-credit", "sizing", "swarm-size", "receipt", "compositional"], "brief_fit": "Understanding tools that expose costs, failure modes and limitations of swarm decisions."},
-    {"id": "metascience", "label": "The swarm studies itself", "question": "Can we audit the research process?", "keywords": ["audit", "review", "factory", "xcheck", "narrative", "pipeline", "janitor", "rsi", "survey", "synthesis", "library", "dashboard", "report", "submit"], "brief_fit": "Swarm understanding tools and meta-science, demonstrated on the research swarm itself."}
+    {
+      "id": "identity",
+      "label": "Identity & incentives",
+      "question": "Who is behind the names?",
+      "keywords": [
+        "sybil",
+        "market",
+        "identity",
+        "quota",
+        "scarcity",
+        "newcomer"
+      ],
+      "brief_fit": "Controlled mechanisms that help interpret identity gaming in incident traces."
+    },
+    {
+      "id": "provenance",
+      "label": "Evidence & provenance",
+      "question": "How many independent observations?",
+      "keywords": [
+        "quorum-of-mirrors",
+        "provenance",
+        "copy",
+        "wild-",
+        "askswarm",
+        "halflife",
+        "evidence-depth",
+        "village",
+        "source",
+        "phantom",
+        "influence"
+      ],
+      "brief_fit": "Tracing information spread, forensics beyond transcripts, reusable questions for any swarm."
+    },
+    {
+      "id": "memory",
+      "label": "Memory & repair",
+      "question": "What survives a correction?",
+      "keywords": [
+        "memory",
+        "capture",
+        "theseus",
+        "healing",
+        "immune",
+        "regrowth",
+        "handoff",
+        "false-alarm",
+        "discussion"
+      ],
+      "brief_fit": "Trajectory visualization and understanding persistence, repair and inherited errors."
+    },
+    {
+      "id": "verification",
+      "label": "Verification & cost",
+      "question": "When does another check help?",
+      "keywords": [
+        "verif",
+        "budget",
+        "antsy",
+        "dissent",
+        "trust-credit",
+        "sizing",
+        "swarm-size",
+        "receipt",
+        "compositional"
+      ],
+      "brief_fit": "Understanding tools that expose costs, failure modes and limitations of swarm decisions."
+    },
+    {
+      "id": "metascience",
+      "label": "The swarm studies itself",
+      "question": "Can we audit the research process?",
+      "keywords": [
+        "audit",
+        "review",
+        "factory",
+        "xcheck",
+        "narrative",
+        "pipeline",
+        "janitor",
+        "rsi",
+        "survey",
+        "synthesis",
+        "library",
+        "dashboard",
+        "report",
+        "submit"
+      ],
+      "brief_fit": "Swarm understanding tools and meta-science, demonstrated on the research swarm itself."
+    }
   ],
   "featured": [
-    {"id": "sybil-split-opus", "label": "Fixed resources, more identities", "themes": ["identity", "provenance"], "audit": "SPLIT-REVIEW.md", "audit_scope": "2,688 saved answers independently rescored; zero mismatches. Not a new replication."},
-    {"id": "sybil-budget-api", "label": "Accuracy can hide hostile admission", "themes": ["verification", "identity"], "audit": "BUDGET-REVIEW.md", "audit_scope": "2,880 saved answers rescored; admission metrics themselves not independently attested."},
-    {"id": "sybil-scale-opus", "label": "Checks must scale with identities", "themes": ["identity", "verification"], "audit": "SCALE-REVIEW.md", "audit_scope": "Aggregate outputs and saved primary differences only; not raw-answer verification.", "replicated": true},
-    {"id": "sybil-newcomer-sonnet", "label": "Truth access remains the bottleneck", "themes": ["identity", "provenance"], "audit": "NEWCOMER-REVIEW.md", "audit_scope": "1,944 saved answers independently rescored; zero accuracy mismatches. No causal admission-bottleneck claim."},
-    {"id": "market-split-api", "label": "Firm-level rules invite splitting", "themes": ["identity"], "audit": "MARKET-REVIEW.md", "audit_scope": "36 episodes / 864 frames checked; zero endpoint mismatches.", "replicated": true},
-    {"id": "quorum-of-mirrors", "label": "Copies are not independent sources", "themes": ["provenance"], "negative": true},
-    {"id": "phantom-coast-pc2", "label": "Repeated sensing leaves blind spots", "themes": ["provenance", "verification"]},
-    {"id": "phantom-coast-pc5", "label": "Explicit rules help unevenly", "themes": ["verification", "provenance"]},
-    {"id": "right-dissenter-rd4", "label": "Keep valid decisions, price the checks", "themes": ["memory", "verification"]},
-    {"id": "capture-memory-mix", "label": "Memory mixture rescue is model-dependent", "themes": ["memory"], "negative": true},
-    {"id": "wild-identity", "label": "Retained text inflates apparent ties", "themes": ["provenance", "identity"]},
-    {"id": "wild-askswarm", "label": "Same questions, three archives", "themes": ["provenance", "metascience"]},
-    {"id": "wild-evidence-depth", "label": "Response coverage is only 8.49%", "themes": ["provenance", "metascience"]},
-    {"id": "wild-halflife", "label": "Adoption with censoring visible", "themes": ["provenance", "memory"]},
-    {"id": "trust-credit-qwen", "label": "Trust propagation can amplify capture", "themes": ["verification", "identity"]},
-    {"id": "sybil-rules-180", "label": "180 owners, one economy", "themes": ["identity", "metascience"]},
-    {"id": "memory-handoff-qwen-gpt-6-luna", "label": "Read the source, not only its label", "themes": ["memory", "provenance"]}
+    {
+      "id": "sybil-split-opus",
+      "label": "Fixed resources, more identities",
+      "themes": [
+        "identity",
+        "provenance"
+      ],
+      "audit": "SPLIT-REVIEW.md",
+      "audit_scope": "2,688 saved answers independently rescored; zero mismatches. Not a new replication."
+    },
+    {
+      "id": "sybil-budget-api",
+      "label": "Accuracy can hide hostile admission",
+      "themes": [
+        "verification",
+        "identity"
+      ],
+      "audit": "BUDGET-REVIEW.md",
+      "audit_scope": "2,880 saved answers rescored; admission metrics themselves not independently attested."
+    },
+    {
+      "id": "sybil-scale-opus",
+      "label": "Checks must scale with identities",
+      "themes": [
+        "identity",
+        "verification"
+      ],
+      "audit": "SCALE-REVIEW.md",
+      "audit_scope": "Aggregate outputs and saved primary differences only; not raw-answer verification.",
+      "replicated": true
+    },
+    {
+      "id": "sybil-newcomer-sonnet",
+      "label": "Truth access remains the bottleneck",
+      "themes": [
+        "identity",
+        "provenance"
+      ],
+      "audit": "NEWCOMER-REVIEW.md",
+      "audit_scope": "1,944 saved answers independently rescored; zero accuracy mismatches. No causal admission-bottleneck claim."
+    },
+    {
+      "id": "market-split-api",
+      "label": "Firm-level rules invite splitting",
+      "themes": [
+        "identity"
+      ],
+      "audit": "MARKET-REVIEW.md",
+      "audit_scope": "36 episodes / 864 frames checked; zero endpoint mismatches.",
+      "replicated": true
+    },
+    {
+      "id": "quorum-of-mirrors",
+      "label": "Copies are not independent sources",
+      "themes": [
+        "provenance"
+      ],
+      "negative": true
+    },
+    {
+      "id": "phantom-coast-pc2",
+      "label": "Repeated sensing leaves blind spots",
+      "themes": [
+        "provenance",
+        "verification"
+      ]
+    },
+    {
+      "id": "phantom-coast-pc5",
+      "label": "Explicit rules help unevenly",
+      "themes": [
+        "verification",
+        "provenance"
+      ]
+    },
+    {
+      "id": "right-dissenter-rd4",
+      "label": "Keep valid decisions, price the checks",
+      "themes": [
+        "memory",
+        "verification"
+      ]
+    },
+    {
+      "id": "capture-memory-mix",
+      "label": "Memory mixture rescue is model-dependent",
+      "themes": [
+        "memory"
+      ],
+      "negative": true
+    },
+    {
+      "id": "wild-identity",
+      "label": "Retained text inflates apparent ties",
+      "themes": [
+        "provenance",
+        "identity"
+      ]
+    },
+    {
+      "id": "wild-askswarm",
+      "label": "Same questions, three archives",
+      "themes": [
+        "provenance",
+        "metascience"
+      ]
+    },
+    {
+      "id": "wild-evidence-depth",
+      "label": "Response coverage is only 8.49%",
+      "themes": [
+        "provenance",
+        "metascience"
+      ]
+    },
+    {
+      "id": "wild-halflife",
+      "label": "Adoption with censoring visible",
+      "themes": [
+        "provenance",
+        "memory"
+      ]
+    },
+    {
+      "id": "trust-credit-qwen",
+      "label": "Trust propagation can amplify capture",
+      "themes": [
+        "verification",
+        "identity"
+      ]
+    },
+    {
+      "id": "sybil-rules-180",
+      "label": "180 owners, one economy",
+      "themes": [
+        "identity",
+        "metascience"
+      ]
+    },
+    {
+      "id": "memory-handoff-qwen-gpt-6-luna",
+      "label": "Read the source, not only its label",
+      "themes": [
+        "memory",
+        "provenance"
+      ]
+    },
+    {
+      "id": "freeze-claude-attempt2",
+      "label": "Freeze not reproduced on Sonnet 5.5",
+      "themes": [
+        "memory",
+        "provenance"
+      ]
+    },
+    {
+      "id": "capture-memory-mix-claude-pool",
+      "label": "Memory-mix on Claude: blocked, untested",
+      "themes": [
+        "memory",
+        "metascience"
+      ],
+      "negative": true
+    }
   ],
   "headlines": [
     {
-      "id": "independent-evidence", "title": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
+      "id": "independent-evidence",
+      "title": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
       "short": "Count evidence. Not echoes.",
-      "evidence_ids": ["sybil-split-opus", "quorum-of-mirrors", "phantom-coast-pc2", "wild-identity", "wild-askswarm", "wild-evidence-depth", "memory-handoff-qwen-gpt-6-luna"],
-      "brief_fit": 0.98, "readiness": 0.95,
+      "evidence_ids": [
+        "sybil-split-opus",
+        "quorum-of-mirrors",
+        "phantom-coast-pc2",
+        "wild-identity",
+        "wild-askswarm",
+        "wild-evidence-depth",
+        "memory-handoff-qwen-gpt-6-luna"
+      ],
+      "brief_fit": 0.98,
+      "readiness": 0.95,
       "fit_reason": "Pairs the reusable AskSwarm tool and information-provenance forensics with controlled mechanisms from two other researchers. Direct match to several suggested project types, not a published judging rubric.",
       "readiness_reason": "Core artifacts are already saved; a single coherent demo and final source consistency pass remain. No new model run is needed.",
-      "gaps": ["These are convergent examples, not a pooled causal estimate or universal law.", "Quorum of Mirrors is a failed qualification, not a completed swarm-efficacy experiment. The handoff result measures adherence to a supplied source policy; its primary effect follows by construction when that policy is obeyed.", "Retained wiki text and git templates confound semantic adoption. SwarmTraces has neither usable actors nor timestamps."],
-      "land_by_23": ["Show one real-archive AskSwarm report beside a controlled identity/provenance failure.", "Keep the snapshot-versus-new-text audit and unavailable fields visible in the demo.", "Use fixed-resource splitting as the strongest arithmetic-checked mechanism, not a claim about all swarms."]
+      "gaps": [
+        "These are convergent examples, not a pooled causal estimate or universal law.",
+        "Quorum of Mirrors is a failed qualification, not a completed swarm-efficacy experiment. The handoff result measures adherence to a supplied source policy; its primary effect follows by construction when that policy is obeyed.",
+        "Retained wiki text and git templates confound semantic adoption. SwarmTraces has neither usable actors nor timestamps.",
+        "Late closeout, outside the scored set: on Sonnet 5.5 the freeze pattern was not reproduced (full-memory removal change -0.0833 [-0.1667, 0]); short-memory agents switched on 18.4% of decisions while the aggregate held, so a stable population fraction is not evidence of stable individuals."
+      ],
+      "land_by_23": [
+        "Show one real-archive AskSwarm report beside a controlled identity/provenance failure.",
+        "Keep the snapshot-versus-new-text audit and unavailable fields visible in the demo.",
+        "Use fixed-resource splitting as the strongest arithmetic-checked mechanism, not a claim about all swarms."
+      ]
     },
     {
-      "id": "verification", "title": "More checking is not automatically safer: admission, source quality and opportunity cost determine what verification buys.",
+      "id": "verification",
+      "title": "More checking is not automatically safer: admission, source quality and opportunity cost determine what verification buys.",
       "short": "Verify the right thing.",
-      "evidence_ids": ["sybil-budget-api", "sybil-scale-opus", "trust-credit-qwen", "phantom-coast-pc5", "right-dissenter-rd4"],
-      "brief_fit": 0.82, "readiness": 0.98,
+      "evidence_ids": [
+        "sybil-budget-api",
+        "sybil-scale-opus",
+        "trust-credit-qwen",
+        "phantom-coast-pc5",
+        "right-dissenter-rd4"
+      ],
+      "brief_fit": 0.82,
+      "readiness": 0.98,
       "fit_reason": "Strong controlled findings and useful understanding tools; a less direct link to in-the-wild tracing than the first candidate.",
       "readiness_reason": "Saved findings and independent arithmetic checks already exist. Remaining work is a tightly scoped joint figure.",
-      "gaps": ["Most observations are from synthetic families and small independent root samples.", "Higher accuracy can coexist with worse attacker admission; those endpoints must not be collapsed.", "One-step decision diagnostics do not establish multi-agent planning or a cost-optimal policy."],
-      "land_by_23": ["Place accuracy, malicious admission and total resource cost on the same slide.", "Show the reliable-report regression in PC5, not only average regret improvement.", "Label failed verification-cost qualifications as instrument limits, not treatment results."]
+      "gaps": [
+        "Most observations are from synthetic families and small independent root samples.",
+        "Higher accuracy can coexist with worse attacker admission; those endpoints must not be collapsed.",
+        "One-step decision diagnostics do not establish multi-agent planning or a cost-optimal policy."
+      ],
+      "land_by_23": [
+        "Place accuracy, malicious admission and total resource cost on the same slide.",
+        "Show the reliable-report regression in PC5, not only average regret improvement.",
+        "Label failed verification-cost qualifications as instrument limits, not treatment results."
+      ]
     },
     {
-      "id": "self-audit", "title": "A research swarm can inspect its own work: reusable archive questions and independent replay turn activity into auditable claims.",
+      "id": "self-audit",
+      "title": "A research swarm can inspect its own work: reusable archive questions and independent replay turn activity into auditable claims.",
       "short": "The swarm, under inspection.",
-      "evidence_ids": ["wild-askswarm", "wild-identity", "sybil-split-opus", "quorum-of-mirrors", "capture-memory-mix"],
-      "brief_fit": 0.94, "readiness": 0.88,
+      "evidence_ids": [
+        "wild-askswarm",
+        "wild-identity",
+        "sybil-split-opus",
+        "quorum-of-mirrors",
+        "capture-memory-mix"
+      ],
+      "brief_fit": 0.94,
+      "readiness": 0.88,
       "fit_reason": "A working meta-science tool and an unusual self-swarm demonstration. The pipeline alone is not evidence that governance improves science.",
       "readiness_reason": "The archive tool and replay checks have shipped; the submission still needs a compact end-to-end walkthrough and corrected memory captions.",
-      "gaps": ["Commit volume measures production activity, not scientific contribution.", "No randomized comparison shows the research pipeline improves reliability.", "Independent arithmetic checks do not validate model receipts, causal design, or preregistration history."],
-      "land_by_23": ["Demonstrate an actual defect found and corrected with a pinned before/after source.", "Refresh the submission draft so it includes the newly completed real-archive work.", "Keep tool output, reviewer judgment and model-driven scientific claims separate."]
+      "gaps": [
+        "Commit volume measures production activity, not scientific contribution.",
+        "No randomized comparison shows the research pipeline improves reliability.",
+        "Independent arithmetic checks do not validate model receipts, causal design, or preregistration history.",
+        "The memory-mix Claude lane closed as blocked (20 failed requests, 0 valid outputs) with preregistration and qualification gaps; it is a process finding, not a behavioral result."
+      ],
+      "land_by_23": [
+        "Demonstrate an actual defect found and corrected with a pinned before/after source.",
+        "Refresh the submission draft so it includes the newly completed real-archive work.",
+        "Keep tool output, reviewer judgment and model-driven scientific claims separate."
+      ]
     }
   ],
   "transfers": [
-    {"from": "phantom-coast-pc5", "to": "verify-cost-qwen", "kind": "instrument transfer", "source": "researchers/dmarz/notes/verify-cost-qwen/README.md", "note": "Dmarz copied and parameterized Vishesh's PC5 instrument; the follow-up qualification is not an efficacy result."},
-    {"from": "sybil-split-opus", "to": "audit-xcheck", "kind": "independent arithmetic", "source": "researchers/shadow/notes/completed-findings-xcheck/SPLIT-REVIEW.md", "note": "Shadow independently reconstructs the truth and rescored all saved split answers."},
-    {"from": "sybil-budget-api", "to": "phantom-coast-pc5", "kind": "prospective design transfer", "source": "researchers/vishesh/notes/phantom-coast/pc5/DESIGN-TRANSFER.md", "note": "Vishesh explicitly incorporates Dmarz's verification and scarcity lessons into next-design choices. Not a completed empirical replication."},
-    {"from": "quorum-of-mirrors", "to": "audit-dmarz", "kind": "cross-researcher critique", "source": "researchers/dmarz/notes/latest-results-review-2026-10-04/evidence.json", "note": "Dmarz's frozen review distinguishes copied-majority failure from a controlled influence result."},
-    {"from": "capture-memory-mix", "to": "audit-dmarz", "kind": "cross-researcher critique", "source": "researchers/dmarz/notes/latest-results-review-2026-10-04/evidence.json", "note": "Dmarz checked Qwen endpoints, challenged generalization and identified reporting defects."}
+    {
+      "from": "phantom-coast-pc5",
+      "to": "verify-cost-qwen",
+      "kind": "instrument transfer",
+      "source": "researchers/dmarz/notes/verify-cost-qwen/README.md",
+      "note": "Dmarz copied and parameterized Vishesh's PC5 instrument; the follow-up qualification is not an efficacy result."
+    },
+    {
+      "from": "sybil-split-opus",
+      "to": "audit-xcheck",
+      "kind": "independent arithmetic",
+      "source": "researchers/shadow/notes/completed-findings-xcheck/SPLIT-REVIEW.md",
+      "note": "Shadow independently reconstructs the truth and rescored all saved split answers."
+    },
+    {
+      "from": "sybil-budget-api",
+      "to": "phantom-coast-pc5",
+      "kind": "prospective design transfer",
+      "source": "researchers/vishesh/notes/phantom-coast/pc5/DESIGN-TRANSFER.md",
+      "note": "Vishesh explicitly incorporates Dmarz's verification and scarcity lessons into next-design choices. Not a completed empirical replication."
+    },
+    {
+      "from": "quorum-of-mirrors",
+      "to": "audit-dmarz",
+      "kind": "cross-researcher critique",
+      "source": "researchers/dmarz/notes/latest-results-review-2026-10-04/evidence.json",
+      "note": "Dmarz's frozen review distinguishes copied-majority failure from a controlled influence result."
+    },
+    {
+      "from": "capture-memory-mix",
+      "to": "audit-dmarz",
+      "kind": "cross-researcher critique",
+      "source": "researchers/dmarz/notes/latest-results-review-2026-10-04/evidence.json",
+      "note": "Dmarz checked Qwen endpoints, challenged generalization and identified reporting defects."
+    }
+  ],
+  "landed": [
+    {
+      "id": "freeze-claude-attempt2",
+      "owner": "shadow",
+      "label": "Freeze not reproduced on Sonnet 5.5",
+      "title": "Freeze on Claude (attempt 2): qualified, operational freeze not established",
+      "path": "researchers/shadow/notes/capture-memory/freeze-claude/attempt2/FINDING.md",
+      "support": [
+        "researchers/shadow/notes/capture-memory/freeze-claude/attempt2/summary.json",
+        "researchers/shadow/notes/capture-memory/freeze-claude/attempt2/POST-MORTEM.md",
+        "researchers/shadow/notes/capture-memory/freeze-claude/AMENDMENT-1.md"
+      ],
+      "themes": [
+        "memory",
+        "provenance"
+      ],
+      "status": "result",
+      "strength": 0.55,
+      "strength_label": "pilot",
+      "evidence_score": 1,
+      "assessed": "2026-10-04",
+      "landed_at": "2026-10-04T22:58:45+00:00",
+      "claim": "Freeze was NOT reproduced on Sonnet 5.5: preregistered classification inconclusive. Full-memory removal changed original-name share by -0.0833, 95% root-bootstrap CI [-0.1667, 0]; short (memory-1) minus full was +0.0833 [0, +0.1667]. Short-memory individuals switched on 18.4% of decisions (42/228) while the aggregate share held. 2 of 4 attack episodes are missing endpoints (32-token output ceiling), not scored as resistance. $0.97 reported spend for 1,188 requests.",
+      "sample": "Four paired repair roots, 16/16 Sonnet episodes complete, 12/12 qualification decisions valid; attack screen 2/4 complete; optional Opus 2/2 kept separate. Calls are not independent samples.",
+      "limits": "Four roots, strong floor effect (baseline share 1/12), 20-round horizon and a reduced N=12 scripted reference that does not itself reproduce S1b freeze. Stable population fractions are not frozen individuals. No general claim about Claude or S1b."
+    },
+    {
+      "id": "capture-memory-mix-claude-pool",
+      "owner": "shadow",
+      "label": "Memory-mix on Claude: blocked, untested",
+      "title": "Memory-mix on Claude: blocked qualification, no behavioral result",
+      "path": "researchers/shadow/notes/capture-memory-mix/claude-pool/FINDING.md",
+      "support": [
+        "researchers/shadow/notes/capture-memory-mix/claude-pool/recovery-summary.json",
+        "researchers/shadow/notes/capture-memory-mix/claude-pool/POSTMORTEM.md"
+      ],
+      "themes": [
+        "memory",
+        "metascience"
+      ],
+      "status": "negative",
+      "strength": 0,
+      "strength_label": "design / review artifact",
+      "evidence_score": 0,
+      "assessed": "2026-10-04",
+      "landed_at": "2026-10-04T23:05:00+00:00",
+      "claim": "Closed as blocked. All 20 qualification HTTP attempts failed (8 HTTP 429, 12 HTTP 503), 0 valid model outputs, 0/4 paired roots, 0/8 scientific episodes. Recovery also found public preregistration was not established and the parse-only qualification gate would admit a last-item copier. Memory-mixture rescue on Claude remains untested; zero observed roots is not a zero effect.",
+      "sample": "Observed: 0/4 paired roots, 0/8 episodes. Qualification: 12 assigned, 8 attempted, 0 valid, 20 failed attempts. Zero new model calls during recovery.",
+      "limits": "No estimate, no interval, no evidence for or against rescue. Historical dollar usage unreceipted. Same-owner recovery audit, not independent review."
+    }
   ]
 }

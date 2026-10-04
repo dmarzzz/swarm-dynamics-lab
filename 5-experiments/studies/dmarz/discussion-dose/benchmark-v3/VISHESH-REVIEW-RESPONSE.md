@@ -24,10 +24,10 @@ The primary/safety estimands, six development cases, world generator version, pr
 **84 distinct checks passed: 50 v3 tests and 34 existing v1/v2 tests.** The 16 runner/analysis tests were rechecked after the last grouping guard. A fresh default scripted run completed 96/96 cases and 636/636 calls with no invalid/missing/provider-failed outcomes; all 636 saved request bodies, 96 outcomes and the summary reproduced through 1,790 verified journal events. Clean scripted diagnostics and reports-only decisions were each 6/6. `model_qualified` remains false.
 
 ```sh
-PYTHONPATH=researchers/dmarz/notes/discussion-dose/src python3 -m bench_v3.selftest
-python3 researchers/dmarz/notes/discussion-dose/src/selftest.py
-python3 researchers/dmarz/notes/discussion-dose/src/benchmark_v3.py run --output data/discussion-v3/new-review-fixes-check
-python3 researchers/dmarz/notes/discussion-dose/src/benchmark_v3.py audit data/discussion-v3/new-review-fixes-check
+PYTHONPATH=5-experiments/studies/dmarz/discussion-dose/src python3 -m bench_v3.selftest
+python3 5-experiments/studies/dmarz/discussion-dose/src/selftest.py
+python3 5-experiments/studies/dmarz/discussion-dose/src/benchmark_v3.py run --output data/discussion-v3/new-review-fixes-check
+python3 5-experiments/studies/dmarz/discussion-dose/src/benchmark_v3.py audit data/discussion-v3/new-review-fixes-check
 ```
 
 The retained validation bundle is `data/discussion-v3/vishesh-fixes-a1/` (ignored raw outputs). Run and audit using the recorded source revision. Replay payloads and every displayed terminal record match saved metrics; browser playback was not repeated because the renderer is unchanged. [Pre-run assessment](../reviews/v3-vishesh-fixes-pre.md) and [post-mortem](../reviews/v3-vishesh-fixes-post.md) document scope and outcomes. No model endpoint, credits, fleet job or reserved qualification/holdout case was used.

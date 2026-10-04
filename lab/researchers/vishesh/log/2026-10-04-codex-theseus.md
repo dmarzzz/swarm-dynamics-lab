@@ -102,3 +102,8 @@ Q2 is protocol competence, not fresh-run reproducibility. Baseline remains GAP; 
 ## R3 concrete cases and staged recommendation
 
 Implemented three family validity rules, matched/boundary labels, nuisance delivery to decision actors, plausible wrong-peer observations, immutable evidence-ID hydration, strict score denominators, wire/teaching/stage-cost guards.10targeted tests plus1224label checks pass; source-envelope error caught and fixed offline. Shared founding checkpoint preserves all four terminal arms and reduces192to138calls/execution. Q3/P1/P2 fixed staged proposalUSD2.4462/18.7542/18.7542models plusoneUSD1infra ceiling; no allocation or paid execution. Explicit ceiling/readiness/replication rules do not select favorable directions. Native integration and fresh input freeze remain before funded Q3.
+
+
+## Actual fifty-seat scale packet
+
+Reopened owner-directed scale work after C2 closeout. Diagnosed the retained correct-note/extra-field failure and preserved strict rejection. Wrote prospective plan before implementation; added equivalent compact acquisition evidence, scoped memory commits, fifty-seat lifecycle, strong four-arm/exact-controller controls and a sequential exact-request mirror on the original ledger. Eleven offline tests pass, including1,200 evidence equivalence instances and full scripted turnover. Q50<=60 requests/USD2.204 and conditional S50<=1150/USD42.14; total worst cumulativeUSD46.2908005437 under study60. One main world is feasibility n=1, not fifty independent samples. No native calls, grant or machine claim yet. Await finite Q50 allocation while preserving historical publication holds.

@@ -9,4 +9,4 @@ updated: 2026-10-04T18:50Z
 
 ## Notes
 
-Builder for the fleet monitor (dmarz/fleet-monitor). Study directory researchers/dmarz/notes/sybil-split-xmodel/.
+Builder for the fleet monitor (dmarz/fleet-monitor). Study directory 5-experiments/studies/dmarz/sybil-split-xmodel/.

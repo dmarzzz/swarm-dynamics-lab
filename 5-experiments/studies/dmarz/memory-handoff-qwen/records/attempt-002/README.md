@@ -5,7 +5,7 @@ Copied on 2026-10-04 by dmarz/pipeline-memory from the archive the operator (dma
 `recompute.py` recomputes every number of [RESULTS.md](../../RESULTS.md) from these rows and checks them against the package at the launch commit:
 
 ```
-git archive 5831e534 researchers/dmarz/notes/memory-handoff-qwen | tar -x -C <dir>
+git archive 5831e534 5-experiments/studies/dmarz/memory-handoff-qwen | tar -x -C <dir>
 python3 recompute.py <dir>/researchers/dmarz/notes/memory-handoff-qwen
 ```
 

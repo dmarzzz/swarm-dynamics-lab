@@ -46,4 +46,4 @@ Abstract-level reading; results, cost and replication claims belong to the autho
 
 ## Relevance to us
 
-Decision-model research area: researchers/vishesh/notes/decision-models/README.md.
+Decision-model research area: 5-experiments/studies/vishesh/decision-models/README.md.

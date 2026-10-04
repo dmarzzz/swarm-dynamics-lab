@@ -11,4 +11,4 @@ updated: 2026-10-03T18:43Z
 
 Anything the next agent picking up this lane should know.
 
-Coverage note in tasks/scan-papers-fm-bft-aggregation.md. Semantic Scholar and OpenAlex were rate-limited on 2026-10-03; citation counts are null for most arXiv entries. Next: measure k-of-n merge robustness when forks of one model ingest the same adversarial content (no paper found that does this).
+Coverage note in lab/tasks/scan-papers-fm-bft-aggregation.md. Semantic Scholar and OpenAlex were rate-limited on 2026-10-03; citation counts are null for most arXiv entries. Next: measure k-of-n merge robustness when forks of one model ingest the same adversarial content (no paper found that does this).

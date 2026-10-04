@@ -33,7 +33,7 @@ Status: chain-001 completed on 2026-10-04 (see Gate evidence and Closeout). This
 
 ### Root-range scan (2026-10-04T10:42Z)
 
-Every text file under `researchers/`, `experiments/`, `hypotheses/`, `tooling/`, `templates/`, `src/`, `scripts/`, `tasks/`, `synthesis/`, `surveys/` and `reviews/` (yaml, yml, json, md, py, txt, csv, sh; files over 5 MB skipped; 3,880 files) was searched for every four-digit number as a standalone token. The chosen ranges 4481-4488, 4591-4598, 4650-4657 and 9541-9564 do not occur anywhere outside this directory. A first choice for the qualification roots (4533-4540) was dropped because 4540 occurs in an unrelated state snapshot. Repeated at 11:10Z (3,956 files): still no occurrence.
+Every text file under `lab/researchers/`, `experiments/`, `4-hypotheses/`, `tooling/`, `templates/`, `src/`, `scripts/`, `tasks/`, `3-synthesis/`, `2-surveys/` and `reviews/` (yaml, yml, json, md, py, txt, csv, sh; files over 5 MB skipped; 3,880 files) was searched for every four-digit number as a standalone token. The chosen ranges 4481-4488, 4591-4598, 4650-4657 and 9541-9564 do not occur anywhere outside this directory. A first choice for the qualification roots (4533-4540) was dropped because 4540 occurs in an unrelated state snapshot. Repeated at 11:10Z (3,956 files): still no occurrence.
 
 ### Engineering calibration (2026-10-04, no model call)
 

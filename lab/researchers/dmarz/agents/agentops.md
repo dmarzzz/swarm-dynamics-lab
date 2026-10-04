@@ -10,4 +10,4 @@ updated: 2026-10-03T22:05Z
 ## Notes
 
 Infra lane: servers, claims and the hub live in the private dmarzzz/swarm-labs-agentops repo. The distributed
-experiment template is templates/experiment-worker/ (README has the ordered steps).
+experiment template is lab/templates/experiment-worker/ (README has the ordered steps).

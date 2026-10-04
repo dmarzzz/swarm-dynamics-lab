@@ -7,7 +7,7 @@ Disposition: **complete-valid-descriptive-result**. Assessor/operator: shadow/so
 Plan publication `b9eb6c8e`, public HTTP 200 readback 15:06:03Z; implementation and pre-run assessment locally committed at `833e3d3f` before A1. Rebase for concurrent main pushes preserved the exact analyzer bytes and published that instrument as `03704d92`; results landed on main as `d7301e98`. The original local execution commit is retained here as historical lineage, not represented as an immutable public preregistration. Exact command from repository root:
 
 ```sh
-/usr/bin/time -f 'elapsed_seconds=%e max_rss_kb=%M' nice -n 10 python3 researchers/shadow/notes/wild-evidence-depth/analyze.py --data /path/to/redacted.jsonl.gz --out researchers/shadow/notes/wild-evidence-depth/results
+/usr/bin/time -f 'elapsed_seconds=%e max_rss_kb=%M' nice -n 10 python3 5-experiments/studies/shadow/wild-evidence-depth/analyze.py --data /path/to/redacted.jsonl.gz --out 5-experiments/studies/shadow/wild-evidence-depth/results
 ```
 
 All 189,579 assigned source rows read, validated and included; 0 parse failures, 0 excluded rows, 0 missing texts, 0 duplicate ids, 0 orphan parent links and 0 cyclic ancestry. There is one source corpus, not 189,579 independent trials. Missing outcome/clock information is retained as missing, never scored as a failed attack.

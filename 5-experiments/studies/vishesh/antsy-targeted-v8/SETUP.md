@@ -38,7 +38,7 @@ Fresh Q0 train60–79; one proposed repair80–99; S1 test50–99 remains unopen
 
 | Operation | Implementation |
 |---|---|
-| Offline validation |`python -m unittest discover -s researchers/vishesh/notes/antsy-targeted-v8/src -p 'test_*.py'` |
+| Offline validation |`python -m unittest discover -s 5-experiments/studies/vishesh/antsy-targeted-v8/src -p 'test_*.py'` |
 | Saved-data analysis |`src/replay.py --raw <private-saved-OCR> --records <v7-S0-repair-records.jsonl> --out <new-report.json>`; explicit allowlist train40–59; refuses overwrite; no OCR calls |
 | Native prepare/dispatch |Implemented and queued at frozen a3919814; not admitted. Follow private operator packet and current central-dispatch rule; do not infer running from a queue entry |
 | Resume |No native attempt exists; preserve analyses and use a new name for each subsequent report |

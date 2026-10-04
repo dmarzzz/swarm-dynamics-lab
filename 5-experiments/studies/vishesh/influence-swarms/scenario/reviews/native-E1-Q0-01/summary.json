@@ -1,0 +1,1 @@
+{"actual_usd":0.04818232,"all_cells_observed":true,"assigned_cells":12,"attempt":"native-E1-Q0-01","budget_after":[50.0,10.354783999999745,1022],"calls":80,"complete":true,"failure":null,"format_failed_cells":0,"new_reserved_usd":0.38912,"planned_calls":80,"reported_usd":0.04818232,"retries":0,"stage":"E1-Q0","unstarted_calls":0,"usage_missing":0,"valid_calls":80}

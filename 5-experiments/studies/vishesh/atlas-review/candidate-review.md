@@ -26,7 +26,7 @@ Original nearest-prior anchors: [[attanasi-2014-information]], [[hang-2026-self]
 
 [Discuss] [PHY-03](../../dmarz/question-atlas/review.html#PHY-03) · Area: collective-motion
 
-Useful warning against treating order as utility. Prespecify an environment change and score progress, energy and collisions independently; low polarization is not itself a desirable outcome. Connect to quorum and coordination only through the measurement lesson. Related exploratory extensions: VX-27. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Useful warning against treating order as utility. Prespecify an environment change and score progress, energy and collisions independently; low polarization is not itself a desirable outcome. Connect to quorum and coordination only through the measurement lesson. Related exploratory extensions: VX-27. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[mateo-2017-effect]], [[couzin-2005-effective]], [[data-swarmbench-2025]].
 
@@ -74,7 +74,7 @@ Original nearest-prior anchors: [[pais-2013-mechanism]], [[reina-2017-model]], [
 
 [Discuss] [PHY-09](../../dmarz/question-atlas/review.html#PHY-09) · Area: collective-decision
 
-Factor messenger count, upstream observation count and marginal cue accuracy. Calling a concentration index effective sample size requires calibration against empirical error; source labels alone do not establish independence. Connect directly to quorum and diversity. Related exploratory extensions: VX-01, VX-35. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Factor messenger count, upstream observation count and marginal cue accuracy. Calling a concentration index effective sample size requires calibration against empirical error; source labels alone do not establish independence. Connect directly to quorum and diversity. Related exploratory extensions: VX-01, VX-35. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[kao-2014-decision]], [[couzin-2005-effective]], [[valentini-2017-best]].
 
@@ -138,7 +138,7 @@ Original nearest-prior anchors: [[fruchart-2021-non]], [[ceron-2023-diverse]], [
 
 [Discuss] [PHY-17](../../dmarz/question-atlas/review.html#PHY-17) · Area: active-matter
 
-Good bridge to regrowth and NCA: measure restored task function separately from restored shape. Equalize signal budgets and lesion severity; do not describe shape recovery as knowledge recovery. Related exploratory extensions: VX-18. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Good bridge to regrowth and NCA: measure restored task function separately from restored shape. Equalize signal budgets and lesion severity; do not describe shape recovery as knowledge recovery. Related exploratory extensions: VX-18. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[ziepke-2025-acoustic]], [[slavkov-2018-morphogenesis]], [[bauerle-2018-self]].
 
@@ -154,7 +154,7 @@ Original nearest-prior anchors: [[alert-2022-active]], [[fily-2012-athermal]], [
 
 [Discuss] [PHY-19](../../dmarz/question-atlas/review.html#PHY-19) · Area: swarm-robotics
 
-Log raw commands and safety-filter corrections separately. Replay the same raw policy through alternative filters when valid; otherwise co-adaptation confounds attribution. Transfer this control to agent permission brokers and validators. Related exploratory extensions: VX-32. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Log raw commands and safety-filter corrections separately. Replay the same raw policy through alternative filters when valid; otherwise co-adaptation confounds attribution. Transfer this control to agent permission brokers and validators. Related exploratory extensions: VX-32. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[pickem-2017-robotarium]], [[zhang-2025-learning]], [[gh-proroklab-vectorizedmultiagentsimulator]].
 
@@ -202,7 +202,7 @@ Original nearest-prior anchors: [[slavkov-2018-morphogenesis]], [[sun-2023-mean]
 
 [Discuss] [PHY-25](../../dmarz/question-atlas/review.html#PHY-25) · Area: sync-consensus
 
-Preserve contact multiset, duration and delays while permuting order. This bridges SIM-02 and leadership: different temporal reachability can manufacture apparent influence even with identical aggregate graphs. Related exploratory extensions: VX-08, VX-40. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Preserve contact multiset, duration and delays while permuting order. This bridges SIM-02 and leadership: different temporal reachability can manufacture apparent influence even with identical aggregate graphs. Related exploratory extensions: VX-08, VX-40. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[jadbabaie-2003-coordination]], [[ren-2005-consensus]], [[data-social-llm-networks-2026]].
 
@@ -242,7 +242,7 @@ Original nearest-prior anchors: [[yoon-2022-sync]], [[ceron-2023-diverse]], [[do
 
 [Discuss] [PHY-30](../../dmarz/question-atlas/review.html#PHY-30) · Area: sync-consensus
 
-Useful connection to agent budgets and reviewer congestion. Count queueing and stale arrivals outside the nominal swarm boundary, and compare phase spreading to a simple rate limit at equal delivered work. Related exploratory extensions: VX-05, VX-21. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Useful connection to agent budgets and reviewer congestion. Count queueing and stale arrivals outside the nominal swarm boundary, and compare phase spreading to a simple rate limit at equal delivered work. Related exploratory extensions: VX-05, VX-21. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[dorfler-2014-synchronization]], [[sarfati-2021-self]], [[olfati-saber-2004-consensus]].
 
@@ -298,7 +298,7 @@ Original nearest-prior anchors: [[seyfried-2009-new]], [[data-juelich-crowd-2019
 
 [Discuss] [PHY-37](../../dmarz/question-atlas/review.html#PHY-37) · Area: swarm-robotics
 
-Build on the existing NCA repair literature rather than claiming repair itself as novel. Match erased hidden-state mass and progress, include simple checkpoint restoration, and score valid paths/function separately from image similarity. Related exploratory extensions: VX-18. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Build on the existing NCA repair literature rather than claiming repair itself as novel. Match erased hidden-state mass and progress, include simple checkpoint restoration, and score valid paths/function separately from image similarity. Related exploratory extensions: VX-18. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[etcheverry-2026-reasoning]], [[mordvintsev-2020-growing]].
 
@@ -306,7 +306,7 @@ Original nearest-prior anchors: [[etcheverry-2026-reasoning]], [[mordvintsev-202
 
 [Discuss] [PHY-38](../../dmarz/question-atlas/review.html#PHY-38) · Area: swarm-robotics
 
-Masked synchronous updates are not independent clocks. Match expected cell updates and compare synchronous reads with immediate writes explicitly; schedule transfer is distinct from lesion robustness in PHY-37. Related exploratory extensions: VX-19. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Masked synchronous updates are not independent clocks. Match expected cell updates and compare synchronous reads with immediate writes explicitly; schedule transfer is distinct from lesion robustness in PHY-37. Related exploratory extensions: VX-19. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[mordvintsev-2020-growing]], [[etcheverry-2026-reasoning]].
 
@@ -314,7 +314,7 @@ Original nearest-prior anchors: [[mordvintsev-2020-growing]], [[etcheverry-2026-
 
 [Shortlist] [SOC-01](../../dmarz/question-atlas/review.html#SOC-01) · Area: llm-agent-swarms
 
-Use a model-family by evidence-overlap factorial with matched capability, total evidence and cost. Report pre-discussion correlated errors and designated-output accuracy. A win from buying a stronger model is not a diversity effect. Related exploratory extensions: VX-01, VX-20, VX-22, VX-35. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Use a model-family by evidence-overlap factorial with matched capability, total evidence and cost. Report pre-discussion correlated errors and designated-output accuracy. A win from buying a stronger model is not a diversity effect. Related exploratory extensions: VX-01, VX-20, VX-22, VX-35. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[li-2026-diverse]], [[kim-2026-are]], [[rai-2026-when]].
 
@@ -338,7 +338,7 @@ Original nearest-prior anchors: [[zhang-2026-silo]], [[kim-2025-towards]].
 
 [Shortlist] [SOC-04](../../dmarz/question-atlas/review.html#SOC-04) · Area: llm-agent-swarms
 
-Cross direct addressing, expressed need and plan alignment separately, with random routing and a centralized evidence-union baseline. Silo and Proxifield make generic topology comparisons crowded; routing under imperfect evidence provenance is a sharper extension. Related exploratory extensions: VX-25, VX-34. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Cross direct addressing, expressed need and plan alignment separately, with random routing and a centralized evidence-union baseline. Silo and Proxifield make generic topology comparisons crowded; routing under imperfect evidence provenance is a sharper extension. Related exploratory extensions: VX-25, VX-34. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[tambwekar-2026-proxifield]], [[zhang-2024-cut]].
 
@@ -362,7 +362,7 @@ Original nearest-prior anchors: [[yang-2026-when]], [[brockers-2025-disentanglin
 
 [Discuss] [SOC-07](../../dmarz/question-atlas/review.html#SOC-07) · Area: llm-agent-swarms
 
-Private commitments need a no-extra-compute control and equal answer opportunities. Score harmful and useful revisions separately; preserving every initial answer protects initial mistakes as well as independent evidence. Related exploratory extensions: VX-35. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Private commitments need a no-extra-compute control and equal answer opportunities. Score harmful and useful revisions separately; preserving every initial answer protects initial mistakes as well as independent evidence. Related exploratory extensions: VX-35. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[shehata-2026-bystander]], [[choi-2025-debate]], [[ren-2026-sepal]].
 
@@ -370,7 +370,7 @@ Original nearest-prior anchors: [[shehata-2026-bystander]], [[choi-2025-debate]]
 
 [Shortlist] [SOC-08](../../dmarz/question-atlas/review.html#SOC-08) · Area: llm-agent-swarms
 
-Require reachable commit states for correct unanimous evidence before model calls. Compare an evidence checklist with fixed rounds, confidence-only stopping and independent extra search; charge checklist acquisition and late decisions. Related exploratory extensions: VX-03, VX-28. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Require reachable commit states for correct unanimous evidence before model calls. Compare an evidence checklist with fixed rounds, confidence-only stopping and independent extra search; charge checklist acquisition and late decisions. Related exploratory extensions: VX-03, VX-28. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[zhang-2026-silo]], [[choi-2025-debate]].
 
@@ -378,7 +378,7 @@ Original nearest-prior anchors: [[zhang-2026-silo]], [[choi-2025-debate]].
 
 [Shortlist] [SOC-09](../../dmarz/question-atlas/review.html#SOC-09) · Area: llm-agent-swarms
 
-Compare an evidence-seeking critic with an extra solver and the same new evidence delivered neutrally. Separate the benefit of acquiring evidence from the benefit of the dissent role; report false reversals and cost. Related exploratory extensions: VX-04. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Compare an evidence-seeking critic with an extra solver and the same new evidence delivered neutrally. Separate the benefit of acquiring evidence from the benefit of the dissent role; report false reversals and cost. Related exploratory extensions: VX-04. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[du-2023-improving]], [[choi-2025-debate]].
 
@@ -386,7 +386,7 @@ Original nearest-prior anchors: [[du-2023-improving]], [[choi-2025-debate]].
 
 [Discuss] [SOC-10](../../dmarz/question-atlas/review.html#SOC-10) · Area: llm-agent-swarms
 
-Cross critic correctness, confidence and evidential support rather than conflating them. Blind the receiving team to evaluator labels; otherwise the intervention gives away which dissent deserves acceptance. Related exploratory extensions: VX-02, VX-29. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Cross critic correctness, confidence and evidential support rather than conflating them. Blind the receiving team to evaluator labels; otherwise the intervention gives away which dissent deserves acceptance. Related exploratory extensions: VX-02, VX-29. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[kraidia-2026-when]], [[he-2026-minority]], [[shu-2026-forged]].
 
@@ -394,7 +394,7 @@ Original nearest-prior anchors: [[kraidia-2026-when]], [[he-2026-minority]], [[s
 
 [Discuss] [SOC-11](../../dmarz/question-atlas/review.html#SOC-11) · Area: llm-agent-swarms
 
-Use a held-out fact-value evaluator or synthetic ground truth to measure acquisition value. A fluent list of unknowns is not useful uncertainty unless it changes which fact is obtained and improves the final decision. Related exploratory extensions: VX-04, VX-31, VX-34. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Use a held-out fact-value evaluator or synthetic ground truth to measure acquisition value. A fluent list of unknowns is not useful uncertainty unless it changes which fact is obtained and improves the final decision. Related exploratory extensions: VX-04, VX-31, VX-34. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[tambwekar-2026-proxifield]], [[zhang-2026-silo]], [[zhu-2026-demystifying]].
 
@@ -418,7 +418,7 @@ Original nearest-prior anchors: [[kim-2025-towards]], [[pal-2026-swarmworld]].
 
 [Discuss] [SOC-14](../../dmarz/question-atlas/review.html#SOC-14) · Area: llm-agent-swarms
 
-Instrument artifact reads and validated downstream reuse, not only chat edges. Compare immutable snapshots with mutable shared artifacts so hidden feedback does not make a nominal no-communication arm misleading. Related exploratory extensions: VX-10. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Instrument artifact reads and validated downstream reuse, not only chat edges. Compare immutable snapshots with mutable shared artifacts so hidden feedback does not make a nominal no-communication arm misleading. Related exploratory extensions: VX-10. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[pal-2026-swarmworld]], [[park-2023-generative]].
 
@@ -426,7 +426,7 @@ Original nearest-prior anchors: [[pal-2026-swarmworld]], [[park-2023-generative]
 
 [Discuss] [SOC-15](../../dmarz/question-atlas/review.html#SOC-15) · Area: llm-agent-swarms
 
-Randomize external tool latency while preserving response content. Report both deadline success and stale-state errors. Scheduler advantage must not come from extra actions before the deadline or uncontrolled provider concurrency. Related exploratory extensions: VX-33, VX-40. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Randomize external tool latency while preserving response content. Report both deadline success and stale-state errors. Scheduler advantage must not come from extra actions before the deadline or uncontrolled provider concurrency. Related exploratory extensions: VX-33, VX-40. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[zhang-2026-silo]], [[kim-2025-towards]], [[paliskara-2026-worse]].
 
@@ -434,7 +434,7 @@ Original nearest-prior anchors: [[zhang-2026-silo]], [[kim-2025-towards]], [[pal
 
 [Discuss] [SOC-16](../../dmarz/question-atlas/review.html#SOC-16) · Area: llm-agent-swarms
 
-Include a cheap fixed rotation and an oracle assignment upper bound. Charge reassignment messages and unfinished work; successful tasks otherwise make dynamic allocation look prescient through post-hoc bottleneck labels. Related exploratory extensions: VX-21. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Include a cheap fixed rotation and an oracle assignment upper bound. Charge reassignment messages and unfinished work; successful tasks otherwise make dynamic allocation look prescient through post-hoc bottleneck labels. Related exploratory extensions: VX-21. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[pal-2026-swarmworld]], [[cemri-2025-why]], [[amayuelas-2025-self]].
 
@@ -442,7 +442,7 @@ Original nearest-prior anchors: [[pal-2026-swarmworld]], [[cemri-2025-why]], [[a
 
 [Discuss] [SOC-17](../../dmarz/question-atlas/review.html#SOC-17) · Area: llm-agent-swarms
 
-Randomize authority labels, information quality and speaking order independently. Adoption is not leadership value; require correct downstream actions and include confident but incorrect authority. Related exploratory extensions: VX-08. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Randomize authority labels, information quality and speaking order independently. Adoption is not leadership value; require correct downstream actions and include confident but incorrect authority. Related exploratory extensions: VX-08. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[shehata-2026-bystander]], [[yang-2026-when]].
 
@@ -450,7 +450,7 @@ Original nearest-prior anchors: [[shehata-2026-bystander]], [[yang-2026-when]].
 
 [Discuss] [SOC-18](../../dmarz/question-atlas/review.html#SOC-18) · Area: llm-agent-swarms
 
-Use a rotation-by-ledger factorial, including ledger-only continuity. Inject outages independently of performance and measure ordinary-operation overhead; do not credit rotation for the shared state that accompanied it. Related exploratory extensions: VX-15. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Use a rotation-by-ledger factorial, including ledger-only continuity. Inject outages independently of performance and measure ordinary-operation overhead; do not credit rotation for the shared state that accompanied it. Related exploratory extensions: VX-15. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[tambwekar-2026-proxifield]], [[park-2023-generative]].
 
@@ -458,7 +458,7 @@ Original nearest-prior anchors: [[tambwekar-2026-proxifield]], [[park-2023-gener
 
 [Discuss] [SOC-19](../../dmarz/question-atlas/review.html#SOC-19) · Area: llm-agent-swarms
 
-Mask dependency knowledge at several realistic levels. Direct requests may win only with an oracle peer directory; measure missed cross-shard clues as well as delivered-token savings. Related exploratory extensions: VX-25. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Mask dependency knowledge at several realistic levels. Direct requests may win only with an oracle peer directory; measure missed cross-shard clues as well as delivered-token savings. Related exploratory extensions: VX-25. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[tambwekar-2026-proxifield]], [[liu-2026-social]].
 
@@ -466,7 +466,7 @@ Original nearest-prior anchors: [[tambwekar-2026-proxifield]], [[liu-2026-social
 
 [Discuss] [SOC-20](../../dmarz/question-atlas/review.html#SOC-20) · Area: llm-agent-swarms
 
-Include difficult-but-solvable tasks as hard negatives and an explicit repair cost. An audit that abandons hard tasks can raise completed-task accuracy while lowering useful completion over all assignments. Related exploratory extensions: VX-31. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Include difficult-but-solvable tasks as hard negatives and an explicit repair cost. An audit that abandons hard tasks can raise completed-task accuracy while lowering useful completion over all assignments. Related exploratory extensions: VX-31. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[cemri-2025-why]], [[zhang-2026-silo]].
 
@@ -474,7 +474,7 @@ Original nearest-prior anchors: [[cemri-2025-why]], [[zhang-2026-silo]].
 
 [Discuss] [SOC-21](../../dmarz/question-atlas/review.html#SOC-21) · Area: llm-agent-swarms
 
-Freeze memory selection before revealing future questions. Compare recency, random and frequency-based retention with equal storage; count repeated verification cost after removing apparently low-value records. Related exploratory extensions: VX-34. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Freeze memory selection before revealing future questions. Compare recency, random and frequency-based retention with equal storage; count repeated verification cost after removing apparently low-value records. Related exploratory extensions: VX-34. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[park-2023-generative]], [[perez-2024-cultural]].
 
@@ -482,7 +482,7 @@ Original nearest-prior anchors: [[park-2023-generative]], [[perez-2024-cultural]
 
 [Discuss] [SOC-22](../../dmarz/question-atlas/review.html#SOC-22) · Area: llm-agent-swarms
 
-Rare-fact importance must be estimated from available information, with oracle importance only an upper bound. Cross independent versus correlated failures; uniform backup may be sufficient when failures erase an entire shared source domain. Related exploratory extensions: VX-07. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Rare-fact importance must be estimated from available information, with oracle importance only an upper bound. Cross independent versus correlated failures; uniform backup may be sufficient when failures erase an entire shared source domain. Related exploratory extensions: VX-07. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[tambwekar-2026-proxifield]], [[pal-2026-swarmworld]].
 
@@ -490,7 +490,7 @@ Original nearest-prior anchors: [[tambwekar-2026-proxifield]], [[pal-2026-swarmw
 
 [Shortlist] [SOC-23](../../dmarz/question-atlas/review.html#SOC-23) · Area: llm-agent-swarms
 
-Separate surviving-copy retrieval, genuinely lost but externally reacquirable facts, and irrecoverable facts. Full reset and checkpoint recovery are essential baselines. Unsupported plausible reconstruction is a failure, not regrowth. Related exploratory extensions: VX-06, VX-07, VX-10, VX-39. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Separate surviving-copy retrieval, genuinely lost but externally reacquirable facts, and irrecoverable facts. Full reset and checkpoint recovery are essential baselines. Unsupported plausible reconstruction is a failure, not regrowth. Related exploratory extensions: VX-06, VX-07, VX-10, VX-39. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[tambwekar-2026-proxifield]], [[zhang-2026-silo]].
 
@@ -498,7 +498,7 @@ Original nearest-prior anchors: [[tambwekar-2026-proxifield]], [[zhang-2026-silo
 
 [Discuss] [SOC-24](../../dmarz/question-atlas/review.html#SOC-24) · Area: llm-agent-swarms
 
-Counterbalance arbitrary conventions and measure inherited artifacts at each turnover. Stable model priors can imitate culture; persistence without a task benefit is not enough to justify an institution. Related exploratory extensions: VX-16, VX-17. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Counterbalance arbitrary conventions and measure inherited artifacts at each turnover. Stable model priors can imitate culture; persistence without a task benefit is not enough to justify an institution. Related exploratory extensions: VX-16, VX-17. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[perez-2024-cultural]], [[ashery-2024-emergent]].
 
@@ -506,7 +506,7 @@ Original nearest-prior anchors: [[perez-2024-cultural]], [[ashery-2024-emergent]
 
 [Discuss] [SOC-25](../../dmarz/question-atlas/review.html#SOC-25) · Area: llm-agent-swarms
 
-Change task utility while holding convention labels fixed, with unchanged-world controls. Evaluate review-trigger false alarms and restoration cost; adaptation should not mean constantly rewriting a useful rule. Related exploratory extensions: VX-16, VX-25, VX-39. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Change task utility while holding convention labels fixed, with unchanged-world controls. Evaluate review-trigger false alarms and restoration cost; adaptation should not mean constantly rewriting a useful rule. Related exploratory extensions: VX-16, VX-25, VX-39. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[ashery-2024-emergent]], [[perez-2024-cultural]].
 
@@ -522,7 +522,7 @@ Original nearest-prior anchors: [[pal-2026-swarmworld]], [[leibo-2019-autocurric
 
 [Discuss] [SOC-27](../../dmarz/question-atlas/review.html#SOC-27) · Area: llm-agent-swarms
 
-Measure verified marginal contribution and maintenance, with a cheap equal-credit baseline. A stronger verifier can produce the entire gain; do not infer incentive effects from more permissive or costly scoring. Related exploratory extensions: VX-09. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Measure verified marginal contribution and maintenance, with a cheap equal-credit baseline. A stronger verifier can produce the entire gain; do not infer incentive effects from more permissive or costly scoring. Related exploratory extensions: VX-09. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[leibo-2021-scalable]], [[pal-2026-swarmworld]], [[piatti-2024-cooperate]].
 
@@ -530,7 +530,7 @@ Original nearest-prior anchors: [[leibo-2021-scalable]], [[pal-2026-swarmworld]]
 
 [Discuss] [SOC-28](../../dmarz/question-atlas/review.html#SOC-28) · Area: llm-agent-swarms
 
-Randomize verifier funding at a fixed total team budget and count displaced production. Introduce correlated verification failures and free riding; correctness gains alone do not establish positive net public-good value. Related exploratory extensions: VX-04, VX-17, VX-22. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Randomize verifier funding at a fixed total team budget and count displaced production. Introduce correlated verification failures and free riding; correctness gains alone do not establish positive net public-good value. Related exploratory extensions: VX-04, VX-17, VX-22. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[leibo-2021-scalable]], [[cemri-2025-why]], [[piedrahita-2025-corrupted]].
 
@@ -538,7 +538,7 @@ Original nearest-prior anchors: [[leibo-2021-scalable]], [[cemri-2025-why]], [[p
 
 [Discuss] [SOC-29](../../dmarz/question-atlas/review.html#SOC-29) · Area: llm-agent-swarms
 
-Instrument the whole report-to-review-to-remediation chain. Include valid reports that receive no action and false reports that trigger damaging intervention; report count is a weak proxy for safety. Related exploratory extensions: VX-05, VX-24. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Instrument the whole report-to-review-to-remediation chain. Include valid reports that receive no action and false reports that trigger damaging intervention; report count is a weak proxy for safety. Related exploratory extensions: VX-05, VX-24. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[cemri-2025-why]], [[leibo-2021-scalable]].
 
@@ -546,7 +546,7 @@ Original nearest-prior anchors: [[cemri-2025-why]], [[leibo-2021-scalable]].
 
 [Discuss] [SOC-30](../../dmarz/question-atlas/review.html#SOC-30) · Area: llm-agent-swarms
 
-Compare structured appeals with an equally funded independent second review. Measure review load, false reversals and time-to-reinstatement; format advantages can disappear when evidence and reviewer time are matched. Related exploratory extensions: VX-23, VX-24. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Compare structured appeals with an equally funded independent second review. Measure review load, false reversals and time-to-reinstatement; format advantages can disappear when evidence and reviewer time are matched. Related exploratory extensions: VX-23, VX-24. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[cemri-2025-why]], [[leibo-2021-scalable]].
 
@@ -554,7 +554,7 @@ Original nearest-prior anchors: [[cemri-2025-why]], [[leibo-2021-scalable]].
 
 [Shortlist] [SOC-31](../../dmarz/question-atlas/review.html#SOC-31) · Area: llm-agent-swarms
 
-Track claim, uncertainty and upstream observation IDs across compression. Compare structured envelopes with equally long prose and source access. Distinguish faithful repetition of a wrong source from distortion introduced by retelling. Related exploratory extensions: VX-12, VX-38. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Track claim, uncertainty and upstream observation IDs across compression. Compare structured envelopes with equally long prose and source access. Distinguish faithful repetition of a wrong source from distortion introduced by retelling. Related exploratory extensions: VX-12, VX-38. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[perez-2024-cultural]], [[park-2023-generative]].
 
@@ -562,7 +562,7 @@ Original nearest-prior anchors: [[perez-2024-cultural]], [[park-2023-generative]
 
 [Discuss] [SOC-32](../../dmarz/question-atlas/review.html#SOC-32) · Area: llm-agent-swarms
 
-Use controlled missingness plus held-out human-readable cases. Score correctness of reconstructed causal claims, calibrated unknowns and investigator time; a persuasive narrative can improve perceived completeness without improving evidence. Related exploratory extensions: VX-13, VX-30, VX-31. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Use controlled missingness plus held-out human-readable cases. Score correctness of reconstructed causal claims, calibrated unknowns and investigator time; a persuasive narrative can improve perceived completeness without improving evidence. Related exploratory extensions: VX-13, VX-30, VX-31. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[cemri-2025-why]], [[gh-yazandabain-swarmtrace]].
 
@@ -586,7 +586,7 @@ Original nearest-prior anchors: [[de-marzo-2026-copying]], [[li-2026-socializati
 
 [Discuss] [SOC-35](../../dmarz/question-atlas/review.html#SOC-35) · Area: llm-agent-swarms
 
-Validate the surrogate on trajectory distributions, rare failures and intervention rankings, not only next-answer accuracy. Cheap scaling is useful only within a stated transport domain with a failure-triggered fallback. Related exploratory extensions: VX-28. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Validate the surrogate on trajectory distributions, rare failures and intervention rankings, not only next-answer accuracy. Cheap scaling is useful only within a stated transport domain with a failure-triggered fallback. Related exploratory extensions: VX-28. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[itkin-2026-local]], [[fukushima-2026-message]].
 
@@ -594,7 +594,7 @@ Original nearest-prior anchors: [[itkin-2026-local]], [[fukushima-2026-message]]
 
 [Discuss] [SOC-36](../../dmarz/question-atlas/review.html#SOC-36) · Area: llm-agent-swarms
 
-Blind incident review to the ranking method and split by scaffold before development. Include mundane failures and benign anomalies; a visually dramatic cluster can be unhelpful at realistic review prevalence. Related exploratory extensions: VX-37. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Blind incident review to the ranking method and split by scaffold before development. Include mundane failures and benign anomalies; a visually dramatic cluster can be unhelpful at realistic review prevalence. Related exploratory extensions: VX-37. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[gh-yazandabain-swarmtrace]], [[cemri-2025-why]].
 
@@ -602,7 +602,7 @@ Original nearest-prior anchors: [[gh-yazandabain-swarmtrace]], [[cemri-2025-why]
 
 [Discuss] [SOC-37](../../dmarz/question-atlas/review.html#SOC-37) · Area: llm-agent-swarms
 
-Use only controlled local retrieval for the diagnostic. Randomize generic versus profiled content and peer communication; preserve end-to-end assignment as the primary estimate. Conditioning only on retrieved poison can introduce selection bias. Related exploratory extensions: VX-26. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Use only controlled local retrieval for the diagnostic. Randomize generic versus profiled content and peer communication; preserve end-to-end assignment as the primary estimate. Conditioning only on retrieved poison can introduce selection bias. Related exploratory extensions: VX-26. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[nestaas-2024-adversarial]], [[liu-2025-can]].
 
@@ -626,7 +626,7 @@ Original nearest-prior anchors: [[algesheimer-2001-cryptographic]], [[boneh-2020
 
 [Shortlist] [SEC-03](../../dmarz/question-atlas/review.html#SEC-03) · Area: fork-merge-security
 
-Cross actual upstream source correlation with imperfect, absent and oracle source labels. Source-domain voting can suppress useful minority evidence and still overcount copied material on different domains; plot false commits versus useful coverage. Related exploratory extensions: VX-01, VX-02. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Cross actual upstream source correlation with imperfect, absent and oracle source labels. Source-domain voting can suppress useful minority evidence and still overcount copied material on different domains; plot false commits versus useful coverage. Related exploratory extensions: VX-01, VX-02. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[lamport-1982-byzantine]], [[li-2026-benchmark]], [[kim-2025-correlated]].
 
@@ -634,7 +634,7 @@ Original nearest-prior anchors: [[lamport-1982-byzantine]], [[li-2026-benchmark]
 
 [Discuss] [SEC-04](../../dmarz/question-atlas/review.html#SEC-04) · Area: fork-merge-security
 
-Use a non-LLM capability check for the permission boundary and permit benign returned evidence. Signatures identify the sender, not authority to alter policy; report useful work blocked as well as unauthorized actions prevented. Related exploratory extensions: VX-32, VX-36. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Use a non-LLM capability check for the permission boundary and permit benign returned evidence. Signatures identify the sender, not authority to alter policy; report useful work blocked as well as unauthorized actions prevented. Related exploratory extensions: VX-32, VX-36. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[triedman-2025-multi]], [[zha-2026-autonomous]], [[louck-2026-securing]].
 
@@ -642,7 +642,7 @@ Original nearest-prior anchors: [[triedman-2025-multi]], [[zha-2026-autonomous]]
 
 [Discuss] [SEC-05](../../dmarz/question-atlas/review.html#SEC-05) · Area: fork-merge-security
 
-Fix both output length and retrieval access while repeating compaction. Include uncertainty preserved from a false source: fidelity and truth are separate targets. Connect directly to telephone and correction recurrence. Related exploratory extensions: VX-06, VX-12, VX-36, VX-38. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Fix both output length and retrieval access while repeating compaction. Include uncertainty preserved from a false source: fidelity and truth are separate targets. Connect directly to telephone and correction recurrence. Related exploratory extensions: VX-06, VX-12, VX-36, VX-38. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[zerhoudi-2026-compaction]], [[liu-2026-safe]], [[ouyang-2026-memlineage]].
 
@@ -650,7 +650,7 @@ Original nearest-prior anchors: [[zerhoudi-2026-compaction]], [[liu-2026-safe]],
 
 [Shortlist] [SEC-06](../../dmarz/question-atlas/review.html#SEC-06) · Area: fork-merge-security
 
-Add missing and spurious lineage edges independently and compare selective repair with reset/checkpoint baselines. MemTX and MemLineage already occupy much of this space; uncertainty about dependencies and useful retained work define the extension. Related exploratory extensions: VX-11. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Add missing and spurious lineage edges independently and compare selective repair with reset/checkpoint baselines. MemTX and MemLineage already occupy much of this space; uncertainty about dependencies and useful retained work define the extension. Related exploratory extensions: VX-11. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[li-2026-memtx]], [[chen-2026-memsecbench]], [[ouyang-2026-memlineage]].
 
@@ -658,7 +658,7 @@ Original nearest-prior anchors: [[li-2026-memtx]], [[chen-2026-memsecbench]], [[
 
 [Discuss] [SEC-07](../../dmarz/question-atlas/review.html#SEC-07) · Area: fork-merge-security
 
-Deliver stale children after a committed correction at controlled delays. Count reintroduced false claims and useful late facts; epoch rejection is a freshness mechanism, not proof that a semantically new report is safe. Related exploratory extensions: VX-06, VX-23. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Deliver stale children after a committed correction at controlled delays. Count reintroduced false claims and useful late facts; epoch rejection is a freshness mechanism, not proof that a semantically new report is safe. Related exploratory extensions: VX-06, VX-23. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[cai-2026-child]], [[li-2026-memtx]], [[zha-2026-autonomous]].
 
@@ -666,7 +666,7 @@ Original nearest-prior anchors: [[cai-2026-child]], [[li-2026-memtx]], [[zha-202
 
 [Discuss] [SEC-08](../../dmarz/question-atlas/review.html#SEC-08) · Area: fork-merge-security
 
-Match total delivered tokens and reserve capacity for an honest late correction. Also test admission to the reserved lane; an attacker using the same lane defeats a purely nominal channel separation. Related exploratory extensions: VX-05. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Match total delivered tokens and reserve capacity for an honest late correction. Also test admission to the reserved lane; an attacker using the same lane defeats a purely nominal channel separation. Related exploratory extensions: VX-05. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[demers-1989-analysis]], [[triedman-2025-multi]], [[zhou-2025-corba]].
 
@@ -682,7 +682,7 @@ Original nearest-prior anchors: [[zhang-2024-badmerging]], [[li-2026-when]].
 
 [Discuss] [SEC-10](../../dmarz/question-atlas/review.html#SEC-10) · Area: fork-merge-security
 
-Construct useful novel specialist knowledge that disagrees with the parent as a hard negative. Measure safety and learning jointly; agreement-oriented validators otherwise succeed by freezing the initial model's mistakes. Related exploratory extensions: VX-39. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Construct useful novel specialist knowledge that disagrees with the parent as a hard negative. Measure safety and learning jointly; agreement-oriented validators otherwise succeed by freezing the initial model's mistakes. Related exploratory extensions: VX-39. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[li-2026-benchmark]], [[louck-2026-securing]], [[kim-2025-correlated]].
 
@@ -690,7 +690,7 @@ Original nearest-prior anchors: [[li-2026-benchmark]], [[louck-2026-securing]], 
 
 [Discuss] [SEC-11](../../dmarz/question-atlas/review.html#SEC-11) · Area: fork-merge-security
 
-Permute the same report multiset, preserving timestamps and cost. Compare staged adjudication with a deterministic evidence store; stability from ignoring late evidence is not an acceptable improvement. Related exploratory extensions: VX-23, VX-40. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Permute the same report multiset, preserving timestamps and cost. Compare staged adjudication with a deterministic evidence store; stability from ignoring late evidence is not an acceptable improvement. Related exploratory extensions: VX-23, VX-40. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[li-2026-memtx]], [[zerhoudi-2026-compaction]], [[liu-2026-safe]].
 
@@ -698,7 +698,7 @@ Original nearest-prior anchors: [[li-2026-memtx]], [[zerhoudi-2026-compaction]],
 
 [Discuss] [SEC-12](../../dmarz/question-atlas/review.html#SEC-12) · Area: fork-merge-security
 
-Cross model family, evidence access and policy independence. Match reviewer capability and false rejection; differently named validators sharing the same evidence can fail together. Connect to diversity and dissent. Related exploratory extensions: VX-02, VX-17, VX-22, VX-38. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Cross model family, evidence access and policy independence. Match reviewer capability and false rejection; differently named validators sharing the same evidence can fail together. Connect to diversity and dissent. Related exploratory extensions: VX-02, VX-17, VX-22, VX-38. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[greenblatt-2023-ai]], [[kim-2025-correlated]], [[ron-2026-n-version]].
 
@@ -706,7 +706,7 @@ Original nearest-prior anchors: [[greenblatt-2023-ai]], [[kim-2025-correlated]],
 
 [Discuss] [SEC-13](../../dmarz/question-atlas/review.html#SEC-13) · Area: sybil-resistance
 
-Conserve an attacker's total resource budget across identity splits. Report exclusion of honest low-budget specialists; admission pricing is not successful if it prevents both spam and the only correct contribution. Related exploratory extensions: VX-29. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Conserve an attacker's total resource budget across identity splits. Report exclusion of honest low-budget specialists; admission pricing is not successful if it prevents both spam and the only correct contribution. Related exploratory extensions: VX-29. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[demers-1989-analysis]], [[douceur-2002-sybil]], [[crapis-2026-zk]].
 
@@ -730,7 +730,7 @@ Original nearest-prior anchors: [[xia-2026-when]], [[yu-2009-dsybil]].
 
 [Discuss] [SEC-16](../../dmarz/question-atlas/review.html#SEC-16) · Area: sybil-resistance
 
-Match honest entry burden and vary resource inequality independently of dishonesty. Reset penalties can tax recovery from benign failure; report newcomer false exclusion and time to useful participation. Related exploratory extensions: VX-29. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Match honest entry burden and vary resource inequality independently of dishonesty. Reset penalties can tax recovery from benign failure; report newcomer false exclusion and time to useful participation. Related exploratory extensions: VX-29. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[resnick-2023-contingent]], [[mazorra-2023-cost]], [[strobel-2020-blockchain]].
 
@@ -746,7 +746,7 @@ Original nearest-prior anchors: [[barrywhitehat-2019-semaphore]], [[crapis-2026-
 
 [Discuss] [SEC-18](../../dmarz/question-atlas/review.html#SEC-18) · Area: sybil-resistance
 
-Preserve total stake and selected seat count while varying evidence ownership. Identity-invariant lottery weights can still select dependent knowledge; connect to quorum without claiming a failure of stake-splitting invariance. Related exploratory extensions: VX-20. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Preserve total stake and selected seat count while varying evidence ownership. Identity-invariant lottery weights can still select dependent knowledge; connect to quorum without claiming a failure of stake-splitting invariance. Related exploratory extensions: VX-20. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[gilad-2017-algorand]], [[pan-2024-sybil]], [[kim-2025-correlated]].
 
@@ -778,7 +778,7 @@ Original nearest-prior anchors: [[collective-2024-portrait]], [[douceur-2002-syb
 
 [Discuss] [SEC-22](../../dmarz/question-atlas/review.html#SEC-22) · Area: sybil-resistance
 
-Compare explicit allocation to cheap backoff and queues. Count wasted attempts plus slower honest agents' opportunities; a low-spam policy that starves delayed work merely moves the cost outside the metric. Related exploratory extensions: VX-21. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Compare explicit allocation to cheap backoff and queues. Count wasted attempts plus slower honest agents' opportunities; a low-spam policy that starves delayed work merely moves the cost outside the metric. Related exploratory extensions: VX-21. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[mazorra-2026-timing]], [[flashbots-2025-mev]], [[pan-2024-sybil]].
 
@@ -794,7 +794,7 @@ Original nearest-prior anchors: [[gil-2015-guaranteeing]], [[douceur-2002-sybil]
 
 [Discuss] [SEC-24](../../dmarz/question-atlas/review.html#SEC-24) · Area: sybil-resistance
 
-Construct complementary honest teams and circular endorsers with real identities. Evaluate artifact value externally at matched review cost; identity verification alone cannot resolve incentive-induced fake value. Related exploratory extensions: VX-09, VX-20. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Construct complementary honest teams and circular endorsers with real identities. Evaluate artifact value externally at matched review cost; identity verification alone cannot resolve incentive-induced fake value. Related exploratory extensions: VX-09, VX-20. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[glynn-2026-wash]], [[buildernet-2025-refunds]], [[xia-2026-when]].
 
@@ -818,7 +818,7 @@ Original nearest-prior anchors: [[hays-2023-simplistic]], [[ng-2025-are]], [[dat
 
 [Discuss] [SEC-27](../../dmarz/question-atlas/review.html#SEC-27) · Area: swarm-detection
 
-Randomize peer exposure independently of common news. Null effects can mean the intervention failed to induce influence, not that a detector is good; report manipulation checks without conditioning the primary causal estimate on uptake. Related exploratory extensions: VX-26. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Randomize peer exposure independently of common news. Null effects can mean the intervention failed to induce influence, not that a detector is good; report manipulation checks without conditioning the primary causal estimate on uptake. Related exploratory extensions: VX-26. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[shalizi-2011-homophily]], [[aronow-2013-estimating]], [[pante-2025-beyond]].
 
@@ -834,7 +834,7 @@ Original nearest-prior anchors: [[seiden-2026-identifying]], [[farooqi-2020-cana
 
 [Discuss] [SEC-29](../../dmarz/question-atlas/review.html#SEC-29) · Area: swarm-detection
 
-Separate repeated exact probes from repeated probe families, charging detector adaptation cost. A decline in sensitivity can come from task drift as well as test recognition; keep clean capability and false-alert controls. Related exploratory extensions: VX-14. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Separate repeated exact probes from repeated probe families, charging detector adaptation cost. A decline in sensitivity can come from task drift as well as test recognition; keep clean capability and false-alert controls. Related exploratory extensions: VX-14. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[gans-2026-when]], [[seiden-2026-identifying]].
 
@@ -842,7 +842,7 @@ Original nearest-prior anchors: [[gans-2026-when]], [[seiden-2026-identifying]].
 
 [Discuss] [SEC-30](../../dmarz/question-atlas/review.html#SEC-30) · Area: swarm-detection
 
-Choose a review capacity and realistic prevalence range before thresholding. Precision from balanced test data is not a queue forecast; report expected true findings per reviewer-hour and calibration uncertainty. Related exploratory extensions: VX-14, VX-24. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Choose a review capacity and realistic prevalence range before thresholding. Precision from balanced test data is not a queue forecast; report expected true findings per reviewer-hour and calibration uncertainty. Related exploratory extensions: VX-14, VX-24. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[varol-2022-should]], [[hays-2023-simplistic]], [[pante-2025-beyond]].
 
@@ -874,7 +874,7 @@ Original nearest-prior anchors: [[xiong-2026-can]], [[bartnicki-2026-compression
 
 [Discuss] [SEC-34](../../dmarz/question-atlas/review.html#SEC-34) · Area: swarm-detection
 
-Drop failed and low-activity events with controlled selective missingness. Report sensitivity bounds when missingness is unknowable; complete-case ranking can reverse even when the observed detector score is stable. Related exploratory extensions: VX-30. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Drop failed and low-activity events with controlled selective missingness. Report sensitivity bounds when missingness is unknowable; complete-case ranking can reverse even when the observed detector score is stable. Related exploratory extensions: VX-30. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[aronow-2013-estimating]], [[graham-2024-coordination]], [[varol-2022-should]].
 
@@ -906,7 +906,7 @@ Original nearest-prior anchors: [[cavagna-2010-scale]], [[mora-2011-biological]]
 
 [Discuss] [MET-02](../../dmarz/question-atlas/review.html#MET-02) · Area: criticality-measurement
 
-Vary false-alarm and missed-event costs explicitly. Maximal responsiveness is not always maximal utility; compare a simple threshold policy at equal acquisition cost and report the operating regime of any benefit. Related exploratory extensions: VX-27. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Vary false-alarm and missed-event costs explicitly. Maximal responsiveness is not always maximal utility; compare a simple threshold policy at equal acquisition cost and report the operating regime of any benefit. Related exploratory extensions: VX-27. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[poel-2022-subcritical]], [[klamser-2021-collective]].
 
@@ -914,7 +914,7 @@ Original nearest-prior anchors: [[poel-2022-subcritical]], [[klamser-2021-collec
 
 [Discuss] [MET-03](../../dmarz/question-atlas/review.html#MET-03) · Area: criticality-measurement
 
-Cross observation fraction with biased sampling masks. Uniform thinning understates missingness problems in casefiles; report which conclusions remain identifiable rather than promising universal debiasing. Related exploratory extensions: VX-30. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Cross observation fraction with biased sampling masks. Uniform thinning understates missingness problems in casefiles; report which conclusions remain identifiable rather than promising universal debiasing. Related exploratory extensions: VX-30. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[levina-2022-tackling]], [[han-2024-collective]].
 
@@ -930,7 +930,7 @@ Original nearest-prior anchors: [[rosas-2020-reconciling]], [[riedl-2025-emergen
 
 [Discuss] [MET-05](../../dmarz/question-atlas/review.html#MET-05) · Area: criticality-measurement
 
-Shared drive is a central confound for both collective sensing and detection. Randomized edge interventions are stronger evidence than pairwise transfer scores; conditional estimation remains sensitive to unobserved drivers. Related exploratory extensions: VX-26. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Shared drive is a central confound for both collective sensing and detection. Randomized edge interventions are stronger evidence than pairwise transfer scores; conditional estimation remains sensitive to unobserved drivers. Related exploratory extensions: VX-26. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[lizier-2008-local]], [[shalizi-2011-homophily]].
 
@@ -946,7 +946,7 @@ Original nearest-prior anchors: [[vicsek-1995-novel]], [[tunstrom-2013-collectiv
 
 [Discuss] [MET-07](../../dmarz/question-atlas/review.html#MET-07) · Area: criticality-measurement
 
-Evaluate inferred graphs on intervention predictions, not trajectory fit alone. Publish equivalence classes when multiple mechanisms remain plausible; casefile narratives should inherit that uncertainty. Related exploratory extensions: VX-13. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Evaluate inferred graphs on intervention predictions, not trajectory fit alone. Publish equivalence classes when multiple mechanisms remain plausible; casefile narratives should inherit that uncertainty. Related exploratory extensions: VX-13. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[han-2024-collective]], [[gao-2024-learning]].
 
@@ -954,7 +954,7 @@ Original nearest-prior anchors: [[han-2024-collective]], [[gao-2024-learning]].
 
 [Discuss] [MET-08](../../dmarz/question-atlas/review.html#MET-08) · Area: criticality-measurement
 
-Hold out failure mechanisms and report lead time at a fixed false-alert burden. Signals chosen after inspecting the collapse trace cannot serve as prospective early warnings; connect to discovery triage. Related exploratory extensions: VX-14, VX-37. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Hold out failure mechanisms and report lead time at a fixed false-alert burden. Signals chosen after inspecting the collapse trace cannot serve as prospective early warnings; connect to discovery triage. Related exploratory extensions: VX-14, VX-37. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[mora-2011-biological]], [[sooter-2025-defining]].
 
@@ -970,7 +970,7 @@ Original nearest-prior anchors: [[lowe-2017-multi]], [[gh-google-deepmind-meltin
 
 [Discuss] [RL-02](../../dmarz/question-atlas/review.html#RL-02) · Area: marl-emergence
 
-Include a cheap role-conditioned credit baseline and charge critic training. Rare-action recognition can come from privileged critic observations; policy reward improvements alone do not establish fair or causal contribution attribution. Related exploratory extensions: VX-09. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Include a cheap role-conditioned credit baseline and charge critic training. Rare-action recognition can come from privileged critic observations; policy reward improvements alone do not establish fair or causal contribution attribution. Related exploratory extensions: VX-09. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[foerster-2018-counterfactual]], [[rashid-2018-qmix]].
 
@@ -1010,7 +1010,7 @@ Original nearest-prior anchors: [[baker-2020-emergent]], [[gh-proroklab-vectoriz
 
 [Discuss] [RL-07](../../dmarz/question-atlas/review.html#RL-07) · Area: marl-emergence
 
-Score navigation, safety and resource use independently of training reward. Alignment reward can be a proxy; an improvement after changing reward is only useful if held-out task performance improves too. Related exploratory extensions: VX-32. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Score navigation, safety and resource use independently of training reward. Alignment reward can be a proxy; an improvement after changing reward is only useful if held-out task performance improves too. Related exploratory extensions: VX-32. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[durve-2020-learning]], [[brambati-2025-learning]].
 
@@ -1058,7 +1058,7 @@ Original nearest-prior anchors: [[pinnau-2017-consensus]], [[vermetten-2024-larg
 
 [Discuss] [OPT-05](../../dmarz/question-atlas/review.html#OPT-05) · Area: swarm-intelligence
 
-Choose change frequency and stationary intervals before tuning decay. Compare periodic restart and simple change detection; stale collective memory is a bridge to culture, but objective drift is not semantic belief correction. Related exploratory extensions: VX-16. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Choose change frequency and stationary intervals before tuning decay. Compare periodic restart and simple change detection; stale collective memory is a bridge to culture, but objective drift is not semantic belief correction. Related exploratory extensions: VX-16. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[grassi-2021-particle]], [[dorigo-1996-ant]].
 
@@ -1074,7 +1074,7 @@ Original nearest-prior anchors: [[grassi-2021-particle]], [[pinnau-2017-consensu
 
 [Discuss] [MTH-01](../../dmarz/question-atlas/review.html#MTH-01) · Area: meta
 
-Use the randomization unit for uncertainty and model repeated seeds within task worlds. Agents and rounds are not independent replications; validate interval coverage under simulated dependence before interpreting a narrow confidence band. Related exploratory extensions: VX-33. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Use the randomization unit for uncertainty and model repeated seeds within task worlds. Agents and rounds are not independent replications; validate interval coverage under simulated dependence before interpreting a narrow confidence band. Related exploratory extensions: VX-33. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[aronow-2013-estimating]], [[shalizi-2011-homophily]], [[data-swarmworld-2026]].
 
@@ -1082,7 +1082,7 @@ Original nearest-prior anchors: [[aronow-2013-estimating]], [[shalizi-2011-homop
 
 [Discuss] [MTH-02](../../dmarz/question-atlas/review.html#MTH-02) · Area: meta
 
-Retain a metric vector for agreement, correctness, calibration, utility and cost. A single composite can hide consequential tradeoffs; any scalar weighting must be fixed before looking at policy rankings. Related exploratory extensions: VX-03, VX-27, VX-28. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Retain a metric vector for agreement, correctness, calibration, utility and cost. A single composite can hide consequential tradeoffs; any scalar weighting must be fixed before looking at policy rankings. Related exploratory extensions: VX-03, VX-27, VX-28. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[pavlova-2026-flag]], [[zhou-2025-pimmur]], [[data-mallm-debate-2025]].
 
@@ -1098,7 +1098,7 @@ Original nearest-prior anchors: [[zhou-2025-pimmur]], [[elnozahy-2002-survey]], 
 
 [Discuss] [MTH-04](../../dmarz/question-atlas/review.html#MTH-04) · Area: meta
 
-Use a pilot solely to estimate between-world and within-world variance, then freeze allocation. More stochastic seeds cannot compensate for a narrow task distribution; budget both generation and annotation costs. Related exploratory extensions: VX-33. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Use a pilot solely to estimate between-world and within-world variance, then freeze allocation. More stochastic seeds cannot compensate for a narrow task distribution; budget both generation and annotation costs. Related exploratory extensions: VX-33. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[vermetten-2024-large]], [[aronow-2013-estimating]], [[data-agent-town-economy-2026]].
 
@@ -1106,7 +1106,7 @@ Original nearest-prior anchors: [[vermetten-2024-large]], [[aronow-2013-estimati
 
 [Discuss] [MTH-05](../../dmarz/question-atlas/review.html#MTH-05) · Area: meta
 
-Define recovery semantics for pending actions, RNG, event order and shared state. Compare memory-only restoration to full checkpoint replay, and count duplicated side effects as failures even if the final answer matches. Related exploratory extensions: VX-11, VX-15, VX-19. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Define recovery semantics for pending actions, RNG, event order and shared state. Compare memory-only restoration to full checkpoint replay, and count duplicated side effects as failures even if the final answer matches. Related exploratory extensions: VX-11, VX-15, VX-19. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[elnozahy-2002-survey]], [[li-2026-memtx]], [[gh-apromisedland-trustworthy-agent-simulation]].
 
@@ -1114,7 +1114,7 @@ Original nearest-prior anchors: [[elnozahy-2002-survey]], [[li-2026-memtx]], [[g
 
 [Discuss] [MTH-06](../../dmarz/question-atlas/review.html#MTH-06) · Area: meta
 
-Track every tried prompt, seed and threshold, then use a separate confirmation split. The broad question bank creates its own selection opportunity; shortlist decisions must precede confirmatory runs. Related exploratory extensions: VX-37. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Track every tried prompt, seed and threshold, then use a separate confirmation split. The broad question bank creates its own selection opportunity; shortlist decisions must precede confirmatory runs. Related exploratory extensions: VX-37. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[vermetten-2024-large]], [[zhou-2025-pimmur]], [[data-mallm-debate-2025]].
 
@@ -1122,7 +1122,7 @@ Original nearest-prior anchors: [[vermetten-2024-large]], [[zhou-2025-pimmur]], 
 
 [Discuss] [SIM-01](../../dmarz/question-atlas/review.html#SIM-01) · Area: meta
 
-Trace authorized observations end to end, including narrator summaries and shared logs. Test private-fact canaries only in generated local worlds; an apparently decentralized team may have received an omniscient narration. Related exploratory extensions: VX-10, VX-36. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Trace authorized observations end to end, including narrator summaries and shared logs. Test private-fact canaries only in generated local worlds; an apparently decentralized team may have received an omniscient narration. Related exploratory extensions: VX-10, VX-36. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[zhou-2024-is]], [[gh-google-deepmind-concordia]], [[gh-sotopia-lab-sotopia]].
 
@@ -1130,7 +1130,7 @@ Original nearest-prior anchors: [[zhou-2024-is]], [[gh-google-deepmind-concordia
 
 [Discuss] [SIM-02](../../dmarz/question-atlas/review.html#SIM-02) · Area: meta
 
-Treat simultaneous reads, sequential writes, shuffled order and wall-clock async as distinct semantics. Equal action count is necessary but insufficient; record first-mover advantage and stale decisions. Related exploratory extensions: VX-08, VX-19. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Treat simultaneous reads, sequential writes, shuffled order and wall-clock async as distinct semantics. Equal action count is necessary but insufficient; record first-mover advantage and stale decisions. Related exploratory extensions: VX-08, VX-19. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[radax-2010-timing]], [[gh-floriangroetschla-agentsnet]], [[grotschla-2025-agentsnet]].
 
@@ -1154,7 +1154,7 @@ Original nearest-prior anchors: [[gh-mesa-mesa]], [[gh-jofmi-agentpy]], [[grimm-
 
 [Discuss] [SOC-38](../../dmarz/question-atlas/review.html#SOC-38) · Area: llm-agent-swarms
 
-Good advance beyond family labels. Report cold-start and amortized profiling costs separately, with the workload horizon fixed in advance. Overlapping model subsets are paired estimates; use held-out task-family uncertainty rather than treating each selected panel as independent. Related exploratory extensions: VX-20, VX-22. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Good advance beyond family labels. Report cold-start and amortized profiling costs separately, with the workload horizon fixed in advance. Overlapping model subsets are paired estimates; use held-out task-family uncertainty rather than treating each selected panel as independent. Related exploratory extensions: VX-20, VX-22. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[kim-2026-are]], [[teng-2026-which]], [[ali-2026-quantifying]].
 
@@ -1162,7 +1162,7 @@ Original nearest-prior anchors: [[kim-2026-are]], [[teng-2026-which]], [[ali-202
 
 [Discuss] [SOC-39](../../dmarz/question-atlas/review.html#SOC-39) · Area: llm-agent-swarms
 
-A scalar effective-size statistic can miss higher-order co-failure. Start with feasible synthetic joint distributions and a simple subgroup-weighted rule; observed replay establishes a diagnostic limitation, not the cause of real model correlation. Related exploratory extensions: VX-01. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+A scalar effective-size statistic can miss higher-order co-failure. Start with feasible synthetic joint distributions and a simple subgroup-weighted rule; observed replay establishes a diagnostic limitation, not the cause of real model correlation. Related exploratory extensions: VX-01. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[hossain-2026-agreement]], [[shu-2026-blind]].
 
@@ -1170,7 +1170,7 @@ Original nearest-prior anchors: [[hossain-2026-agreement]], [[shu-2026-blind]].
 
 [Discuss] [SOC-40](../../dmarz/question-atlas/review.html#SOC-40) · Area: llm-agent-swarms
 
-Cross subgroup isolation with evidence placement: one essential fact stranded in a subgroup can reverse the result. Charge fusion and compare independent voting; a partition benefit is not established by fewer discussion tokens alone. Related exploratory extensions: VX-35, VX-38. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Cross subgroup isolation with evidence placement: one essential fact stranded in a subgroup can reverse the result. Charge fusion and compare independent voting; a partition benefit is not established by fewer discussion tokens alone. Related exploratory extensions: VX-35, VX-38. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[barrera-lemarchand-2026-wisdom]], [[ren-2026-sepal]].
 
@@ -1186,7 +1186,7 @@ Original nearest-prior anchors: [[rosales-2025-diverse]], [[qian-2026-nous]].
 
 [Discuss] [SOC-42](../../dmarz/question-atlas/review.html#SOC-42) · Area: llm-agent-swarms
 
-Keep candidate coverage and achievable selection accuracy separate. The hidden oracle establishes headroom only; charge the selector's objective check and include episodes with no correct candidate in total utility. Related exploratory extensions: VX-04, VX-22. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Keep candidate coverage and achievable selection accuracy separate. The hidden oracle establishes headroom only; charge the selector's objective check and include episodes with no correct candidate in total utility. Related exploratory extensions: VX-04, VX-22. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[bay-2026-when]], [[liu-2026-llms]].
 
@@ -1194,7 +1194,7 @@ Original nearest-prior anchors: [[bay-2026-when]], [[liu-2026-llms]].
 
 [Discuss] [SOC-43](../../dmarz/question-atlas/review.html#SOC-43) · Area: llm-agent-swarms
 
-Strong connection to Scheme C, but a calibrated confidence floor differs from an upper concentration brake. Compare at matched answer coverage and retain abstentions in total utility. Dependence diagnostics must be estimated without test-label leakage. Related exploratory extensions: VX-02, VX-28. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Strong connection to Scheme C, but a calibrated confidence floor differs from an upper concentration brake. Compare at matched answer coverage and retain abstentions in total utility. Dependence diagnostics must be estimated without test-label leakage. Related exploratory extensions: VX-02, VX-28. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[karge-2026-epistemic]], [[kota-2026-design]], [[zhou-2026-juryprobe]].
 
@@ -1210,7 +1210,7 @@ Original nearest-prior anchors: [[begin-2026-preference]], [[kim-2026-are]].
 
 [Discuss] [SOC-45](../../dmarz/question-atlas/review.html#SOC-45) · Area: llm-agent-swarms
 
-Bound claims to the observed horizon and counterbalanced fictional conventions. A persistent preference is not necessarily an error; separate memory-mediated inheritance from model priors and the supplied scripted pressure. Related exploratory extensions: VX-16. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Bound claims to the observed horizon and counterbalanced fictional conventions. A persistent preference is not necessarily an error; separate memory-mediated inheritance from model priors and the supplied scripted pressure. Related exploratory extensions: VX-16. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[de-marzo-2026-conformity]], [[magistrali-2026-aligned]], [[hishiki-2026-how]].
 
@@ -1266,7 +1266,7 @@ Original nearest-prior anchors: [[lin-2018-sybil-proof]], [[lin-2017-sybil-proof
 
 [Discuss] [SEC-43](../../dmarz/question-atlas/review.html#SEC-43) · Area: sybil-resistance
 
-Connect directly to rare-specialist admission and budget allocation. Verification must reveal only the declared property, not oracle ownership or task value; evaluate admitted networks under the same downstream allocator. Related exploratory extensions: VX-29. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Connect directly to rare-specialist admission and budget allocation. Verification must reveal only the declared property, not oracle ownership or task value; evaluate admitted networks under the same downstream allocator. Related exploratory extensions: VX-29. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[conitzer-2010-false-name-proofness]], [[shi-2013-sybilshield]], [[viswanath-2010-analysis]].
 
@@ -1282,7 +1282,7 @@ Original nearest-prior anchors: [[bachrach-2008-divide]], [[gilad-2017-algorand]
 
 [Discuss] [SEC-45](../../dmarz/question-atlas/review.html#SEC-45) · Area: fork-merge-security
 
-Essential separation of false evidence and unauthorized instruction. Match stimulus plausibility and count exposure, adoption and mock action separately. VX-36 adds the positive controls of true-but-unauthorized and false-but-authorized content. Related exploratory extensions: VX-32, VX-36. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Essential separation of false evidence and unauthorized instruction. Match stimulus plausibility and count exposure, adoption and mock action separately. VX-36 adds the positive controls of true-but-unauthorized and false-but-authorized content. Related exploratory extensions: VX-32, VX-36. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[niu-2026-reliability-contagion]], [[wu-2026-collective]], [[zhou-2025-corba]].
 
@@ -1290,7 +1290,7 @@ Original nearest-prior anchors: [[niu-2026-reliability-contagion]], [[wu-2026-co
 
 [Discuss] [SEC-46](../../dmarz/question-atlas/review.html#SEC-46) · Area: fork-merge-security
 
-Shared stores can reconnect nominally isolated children. Match legitimate cache content and use new children after cleanup; common initial exposure is not onward contagion. Pair this with stale-return/compaction checks rather than creating a duplicate memory project. Related exploratory extensions: VX-06, VX-07, VX-10. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Shared stores can reconnect nominally isolated children. Match legitimate cache content and use new children after cleanup; common initial exposure is not onward contagion. Pair this with stale-return/compaction checks rather than creating a duplicate memory project. Related exploratory extensions: VX-06, VX-07, VX-10. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[le-2026-cross-layer]], [[lee-2026-reproduction]], [[zha-2026-autonomous]].
 
@@ -1298,7 +1298,7 @@ Original nearest-prior anchors: [[le-2026-cross-layer]], [[lee-2026-reproduction
 
 [Discuss] [SEC-47](../../dmarz/question-atlas/review.html#SEC-47) · Area: fork-merge-security
 
-The full pipeline is the right denominator. Keep natural retrieval and preseeded-state diagnostics separate, count all assigned episodes, and label conditional transition rates descriptive unless the stage intervention is randomized. Related exploratory extensions: VX-26. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+The full pipeline is the right denominator. Keep natural retrieval and preseeded-state diagnostics separate, count all assigned episodes, and label conditional transition rates descriptive unless the stage intervention is randomized. Related exploratory extensions: VX-26. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[zhang-2026-agentworm]], [[chen-2026-memsecbench]], [[wu-2026-collective]].
 
@@ -1306,7 +1306,7 @@ Original nearest-prior anchors: [[zhang-2026-agentworm]], [[chen-2026-memsecbenc
 
 [Discuss] [SEC-48](../../dmarz/question-atlas/review.html#SEC-48) · Area: fork-merge-security
 
-Measure clean children falsely quarantined and charge both elapsed opportunity and review work. A silent child is not necessarily repaired; held-out follow-up tasks and constrained authority are distinct interventions that need separate ablations. Related exploratory extensions: VX-05, VX-23. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Measure clean children falsely quarantined and charge both elapsed opportunity and review work. A silent child is not necessarily repaired; held-out follow-up tasks and constrained authority are distinct interventions that need separate ablations. Related exploratory extensions: VX-05, VX-23. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[zha-2026-autonomous]], [[chen-2026-memsecbench]], [[mateo-torrejon-2026-gammaf]].
 
@@ -1314,7 +1314,7 @@ Original nearest-prior anchors: [[zha-2026-autonomous]], [[chen-2026-memsecbench
 
 [Discuss] [SEC-49](../../dmarz/question-atlas/review.html#SEC-49) · Area: fork-merge-security
 
-This already covers the central irreversible-consequence concern in VX-11. Combine the work: retain original harm after compensation and compare cumulative utility with terminal recovery under matched action timing. Related exploratory extensions: VX-11, VX-24. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+This already covers the central irreversible-consequence concern in VX-11. Combine the work: retain original harm after compensation and compare cumulative utility with terminal recovery under matched action timing. Related exploratory extensions: VX-11, VX-24. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[wu-2025-cowpox]], [[elnozahy-2002-survey]], [[lee-2026-reproduction]].
 
@@ -1322,7 +1322,7 @@ Original nearest-prior anchors: [[wu-2025-cowpox]], [[elnozahy-2002-survey]], [[
 
 [Discuss] [SEC-50](../../dmarz/question-atlas/review.html#SEC-50) · Area: swarm-detection
 
-Offline detector accuracy cannot predict the effect of live isolation without a policy experiment. Preserve unique legitimate evidence on suspicious nodes and count all assigned communities, including ones the monitor prevents from completing. Related exploratory extensions: VX-14, VX-24. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Offline detector accuracy cannot predict the effect of live isolation without a policy experiment. Preserve unique legitimate evidence on suspicious nodes and count all assigned communities, including ones the monitor prevents from completing. Related exploratory extensions: VX-14, VX-24. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[mateo-torrejon-2026-gammaf]], [[gh-floriangroetschla-agentsnet]], [[aronow-2013-estimating]].
 
@@ -1330,7 +1330,7 @@ Original nearest-prior anchors: [[mateo-torrejon-2026-gammaf]], [[gh-floriangroe
 
 [Discuss] [SEC-51](../../dmarz/question-atlas/review.html#SEC-51) · Area: fork-merge-security
 
-Convergence can be useful when one strategy is objectively best. Cross evaluator preferences with task structure and keep strategy labels independent of the evaluated judge; compare budget-matched heterogeneous judges and shuffled feedback. Related exploratory extensions: VX-20, VX-38. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Convergence can be useful when one strategy is objectively best. Cross evaluator preferences with task structure and keep strategy labels independent of the evaluated judge; compare budget-matched heterogeneous judges and shuffled feedback. Related exploratory extensions: VX-20, VX-38. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[liu-2026-contagion]], [[ebrahimi-2025-adversary]], [[kim-2025-correlated]].
 
@@ -1338,7 +1338,7 @@ Original nearest-prior anchors: [[liu-2026-contagion]], [[ebrahimi-2025-adversar
 
 [Discuss] [SEC-52](../../dmarz/question-atlas/review.html#SEC-52) · Area: fork-merge-security
 
-Good existing home for repeated-return work. Estimate recurrence by lineage, retain abandoned runs and distinguish inherited false state from repeated independent error. VX-06 narrows this to a correction surviving stale return plus compaction. Related exploratory extensions: VX-06, VX-39. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Good existing home for repeated-return work. Estimate recurrence by lineage, retain abandoned runs and distinguish inherited false state from repeated independent error. VX-06 narrows this to a correction surviving stale return plus compaction. Related exploratory extensions: VX-06, VX-39. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[yang-2026-zombie]], [[zha-2026-autonomous]], [[chen-2026-memsecbench]].
 
@@ -1354,7 +1354,7 @@ Original nearest-prior anchors: [[pecori-2016-s-kademlia]], [[maccari-2009-avoid
 
 [Discuss] [MTH-07](../../dmarz/question-atlas/review.html#MTH-07) · Area: meta
 
-Blind relabeling is useful before ranking debuggers. Map taxonomy versions semantically, preserve null labels as unknown and report human disagreement; an annotated decisive step is not necessarily a causal root cause. Related exploratory extensions: VX-37. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Blind relabeling is useful before ranking debuggers. Map taxonomy versions semantically, preserve null labels as unknown and report human disagreement; an annotated decisive step is not necessarily a causal root cause. Related exploratory extensions: VX-37. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[data-mast-2025]], [[data-trail-2025]], [[data-who-and-when-2025]].
 
@@ -1370,7 +1370,7 @@ Original nearest-prior anchors: [[data-hanabi-llm-logs-2026]], [[data-agent-coll
 
 [Discuss] [MTH-09](../../dmarz/question-atlas/review.html#MTH-09) · Area: meta
 
-Judge avoidability under the acting agent's legal information set. Keep realized bad luck distinct from a poor ex ante decision, and prevent the same annotator from learning hidden state before reviewing the visible-only packet. Related exploratory extensions: VX-13. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Judge avoidability under the acting agent's legal information set. Keep realized bad luck distinct from a poor ex ante decision, and prevent the same annotator from learning hidden state before reviewing the visible-only packet. Related exploratory extensions: VX-13. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[data-hanabi-llm-logs-2026]], [[data-sotopia-2024]], [[zhou-2024-is]].
 
@@ -1386,7 +1386,7 @@ Original nearest-prior anchors: [[data-werewolf-game-reasoning-2025]], [[data-di
 
 [Discuss] [MTH-11](../../dmarz/question-atlas/review.html#MTH-11) · Area: meta
 
-This directly overlaps VX-33's completion-conditioned comparison. Combine the analyses, keeping infrastructure failures, invalid output, resource exhaustion and statistical exclusions separate; all-attempt utility needs prespecified failure costs and sensitivity ranges. Related exploratory extensions: VX-30, VX-33. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+This directly overlaps VX-33's completion-conditioned comparison. Combine the analyses, keeping infrastructure failures, invalid output, resource exhaustion and statistical exclusions separate; all-attempt utility needs prespecified failure costs and sensitivity ranges. Related exploratory extensions: VX-30, VX-33. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[data-agent-town-economy-2026]], [[gh-apromisedland-trustworthy-agent-simulation]].
 
@@ -1410,7 +1410,7 @@ Original nearest-prior anchors: [[data-hanabi-llm-logs-2026]], [[data-c2c-ai-vs-
 
 [Discuss] [MTH-14](../../dmarz/question-atlas/review.html#MTH-14) · Area: meta
 
-Two datasets sharing a crawler are not independent replication. Match immutable entities and eligibility rules, and retain deletion uncertainty; synthetic stationary-network controls can expose collection-induced trends without asserting a real behavioral change. Related exploratory extensions: VX-30. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Two datasets sharing a crawler are not independent replication. Match immutable entities and eligibility rules, and retain deletion uncertainty; synthetic stationary-network controls can expose collection-induced trends without asserting a real behavioral change. Related exploratory extensions: VX-30. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[data-jscmp4-moltbook-2026]], [[data-moltnet-2026]], [[data-moltbook-dataset-2026]].
 
@@ -1482,7 +1482,7 @@ Original nearest-prior anchors: [[anthropic-2026-context]], [[cognition-2025-reb
 
 [Discuss] [BUD-05](../../dmarz/question-atlas/review.html#BUD-05) · Area: agent-budgets
 
-Forecast calibration matters only if it improves held-out portfolio utility after its cost. Stopped-task replays are diagnostic, not online evidence. Measure false abandonment and useful reallocation rather than interval coverage alone. Related exploratory extensions: VX-31. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Forecast calibration matters only if it improves held-out portfolio utility after its cost. Stopped-task replays are diagnostic, not online evidence. Measure false abandonment and useful reallocation rather than interval coverage alone. Related exploratory extensions: VX-31. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[lin-2026-bagen]], [[ding-2026-calibrate]].
 
@@ -1514,7 +1514,7 @@ Original nearest-prior anchors: [[zhu-2026-fault]], [[yokoo-2004-effect]].
 
 [Discuss] [BUD-09](../../dmarz/question-atlas/review.html#BUD-09) · Area: agent-budgets
 
-Conservative escrow buys integrity by sacrificing flexibility during partitions. Keep uncertain effects charged and compare connected allocation as an upper bound, not an equally fault-tolerant peer. Report stranded resources and missed deadlines. Related exploratory extensions: VX-40. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Conservative escrow buys integrity by sacrificing flexibility during partitions. Keep uncertain effects charged and compare connected allocation as an upper bound, not an equally fault-tolerant peer. Report stranded resources and missed deadlines. Related exploratory extensions: VX-40. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[zhu-2026-fault]], [[chevaleyre-2006-issues]].
 
@@ -1538,7 +1538,7 @@ Original nearest-prior anchors: [[amayuelas-2025-self]], [[bianchi-2024-how]].
 
 [Discuss] [BUD-12](../../dmarz/question-atlas/review.html#BUD-12) · Area: agent-budgets
 
-Use a frozen event trigger and delayed progress signals. Per-action planning gets more observations, so separate monitoring from allocation cost; event planning may fail under unobserved bottleneck changes. Related exploratory extensions: VX-21, VX-25. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Use a frozen event trigger and delayed progress signals. Per-action planning gets more observations, so separate monitoring from allocation cost; event planning may fail under unobserved bottleneck changes. Related exploratory extensions: VX-21, VX-25. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[amayuelas-2025-self]], [[dang-2025-multi]].
 
@@ -1546,7 +1546,7 @@ Original nearest-prior anchors: [[amayuelas-2025-self]], [[dang-2025-multi]].
 
 [Discuss] [BUD-13](../../dmarz/question-atlas/review.html#BUD-13) · Area: agent-budgets
 
-A difficulty probe must not leak the eventual answer or use retrospectively selected successes. Compare an informative diagnostic with a shuffled-signal control and charge all probes to the same cap. Related exploratory extensions: VX-34. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+A difficulty probe must not leak the eventual answer or use retrospectively selected successes. Compare an informative diagnostic with a shuffled-signal control and charge all probes to the same cap. Related exploratory extensions: VX-34. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[wang-2026-r3]], [[ding-2026-calibrate]].
 
@@ -1570,7 +1570,7 @@ Original nearest-prior anchors: [[fish-2024-algorithmic]], [[nakamura-2026-colos
 
 [Discuss] [BUD-16](../../dmarz/question-atlas/review.html#BUD-16) · Area: agent-budgets
 
-The label-by-rights factorial separates authority symbolism from actual power. Counterbalance first access within each rights regime and show group utility plus capture; a privileged role can be efficient on unequal tasks. Related exploratory extensions: VX-08, VX-21. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+The label-by-rights factorial separates authority symbolism from actual power. Counterbalance first access within each rights regime and show group utility plus capture; a privileged role can be efficient on unequal tasks. Related exploratory extensions: VX-08, VX-21. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[borah-2026-bosses]], [[piatti-2024-cooperate]].
 
@@ -1578,7 +1578,7 @@ Original nearest-prior anchors: [[borah-2026-bosses]], [[piatti-2024-cooperate]]
 
 [Discuss] [BUD-17](../../dmarz/question-atlas/review.html#BUD-17) · Area: agent-budgets
 
-A protected finalization reserve is directly relevant to verification as a public good. Its opportunity cost comes from reduced exploration; include tasks likely to fail before validation and count all abandoned work. Related exploratory extensions: VX-05, VX-09, VX-17. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+A protected finalization reserve is directly relevant to verification as a public good. Its opportunity cost comes from reduced exploration; include tasks likely to fail before validation and count all abandoned work. Related exploratory extensions: VX-05, VX-09, VX-17. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[liu-2025-budget]], [[lin-2026-bagen]].
 
@@ -1586,7 +1586,7 @@ Original nearest-prior anchors: [[liu-2025-budget]], [[lin-2026-bagen]].
 
 [Discuss] [BUD-18](../../dmarz/question-atlas/review.html#BUD-18) · Area: agent-budgets
 
-Tokens, dollars, wall time and tool capacity are not interchangeable. Keep a common enforced resource vector and vary only the planning representation; a scalar conversion can hide the binding bottleneck. Related exploratory extensions: VX-33. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Tokens, dollars, wall time and tool capacity are not interchangeable. Keep a common enforced resource vector and vary only the planning representation; a scalar conversion can hide the binding bottleneck. Related exploratory extensions: VX-33. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[zhu-2026-fault]], [[liu-2025-costbench]].
 
@@ -1594,7 +1594,7 @@ Original nearest-prior anchors: [[zhu-2026-fault]], [[liu-2025-costbench]].
 
 [Discuss] [BUD-19](../../dmarz/question-atlas/review.html#BUD-19) · Area: agent-budgets
 
-Use the same outer hard cap and account for where unused grace resources go. Otherwise advisory targets simply receive extra resources. Include atomic action lengths and interrupted final actions, not only final answer quality. Related exploratory extensions: VX-33. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Use the same outer hard cap and account for where unused grace resources go. Otherwise advisory targets simply receive extra resources. Include atomic action lengths and interrupted final actions, not only final answer quality. Related exploratory extensions: VX-33. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[anthropic-2026-task]], [[han-2024-token]].
 
@@ -1602,7 +1602,7 @@ Original nearest-prior anchors: [[anthropic-2026-task]], [[han-2024-token]].
 
 [Discuss] [BUD-20](../../dmarz/question-atlas/review.html#BUD-20) · Area: agent-budgets
 
-Keep compaction content identical while changing only the budget display. Correct carry-forward must cover pending reservations and tool-result costs; reset-to-total may cause rejected attempts without violating actual hard metering. Related exploratory extensions: VX-15. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Keep compaction content identical while changing only the budget display. Correct carry-forward must cover pending reservations and tool-result costs; reset-to-total may cause rejected attempts without violating actual hard metering. Related exploratory extensions: VX-15. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[anthropic-2026-task]], [[liu-2025-budget]].
 
@@ -1618,7 +1618,7 @@ Original nearest-prior anchors: [[jin-2025-controlling]], [[dang-2025-multi]].
 
 [Discuss] [BUD-22](../../dmarz/question-atlas/review.html#BUD-22) · Area: agent-budgets
 
-State the acceptable efficiency/fairness tradeoff before choosing a service floor. Include infeasible demand, arrival-order effects and low-budget specialists; equal service need not maximize value, and maximum value need not prevent starvation. Related exploratory extensions: VX-29. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+State the acceptable efficiency/fairness tradeoff before choosing a service floor. Include infeasible demand, arrival-order effects and low-budget specialists; equal service need not maximize value, and maximum value need not prevent starvation. Related exploratory extensions: VX-29. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[chevaleyre-2006-issues]], [[paliskara-2026-worse]].
 
@@ -1642,7 +1642,7 @@ Original nearest-prior anchors: [[keppo-2026-fragility]], [[tolety-2025-tacit]],
 
 [Discuss] [MKT-03](../../dmarz/question-atlas/review.html#MKT-03) · Area: sybil-resistance
 
-Conserve capital, physical capacity and inference, then cross shared objective and private communication. The split-versus-merged arm also changes firm count; report the classical game-theoretic baseline before attributing gains to agent coordination. Related exploratory extensions: VX-21. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Conserve capital, physical capacity and inference, then cross shared objective and private communication. The split-versus-merged arm also changes firm count; report the classical game-theoretic baseline before attributing gains to agent coordination. Related exploratory extensions: VX-21. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[li-2026-emergent]], [[mazorra-2023-cost]], [[lin-2024-strategic]].
 
@@ -1674,7 +1674,7 @@ Original nearest-prior anchors: [[agrawal-2025-evaluating]], [[li-2026-emergent]
 
 [Discuss] [MKT-07](../../dmarz/question-atlas/review.html#MKT-07) · Area: fork-merge-security
 
-Cross inherited task competence, plans and convention-bearing memory separately, preserving split assets. Forking changes population and action opportunities; compare fresh entrants with equal resources and avoid labeling all shared-memory persistence collusion. Related exploratory extensions: VX-16. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Cross inherited task competence, plans and convention-bearing memory separately, preserving split assets. Forking changes population and action opportunities; compare fresh entrants with equal resources and avoid labeling all shared-memory persistence collusion. Related exploratory extensions: VX-16. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[arslan-2026-persistent]], [[tian-2026-prompt]], [[lin-2024-strategic]].
 
@@ -1682,7 +1682,7 @@ Original nearest-prior anchors: [[arslan-2026-persistent]], [[tian-2026-prompt]]
 
 [Discuss] [MKT-08](../../dmarz/question-atlas/review.html#MKT-08) · Area: llm-agent-swarms
 
-Capability-matched models and best-response error are essential. A weak firm that disrupts specialization is not necessarily a useful brake; report principal/consumer outcomes and unequal inference costs alongside concentration. Related exploratory extensions: VX-20. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Capability-matched models and best-response error are essential. A weak firm that disrupts specialization is not necessarily a useful brake; report principal/consumer outcomes and unequal inference costs alongside concentration. Related exploratory extensions: VX-20. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[keppo-2026-fragility]], [[agrawal-2025-evaluating]], [[bracale-syrnikov-2026-institutional]].
 
@@ -1690,7 +1690,7 @@ Original nearest-prior anchors: [[keppo-2026-fragility]], [[agrawal-2025-evaluat
 
 [Discuss] [MKT-09](../../dmarz/question-atlas/review.html#MKT-09) · Area: agent-budgets
 
-An identified production ledger adds attribution, not only length. Compare aggregate totals, anonymized per-firm histories and named histories at fixed context; this connects to BUD-02/BUD-15 without equating spending imitation with market division. Related exploratory extensions: VX-08. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+An identified production ledger adds attribution, not only length. Compare aggregate totals, anonymized per-firm histories and named histories at fixed context; this connects to BUD-02/BUD-15 without equating spending imitation with market division. Related exploratory extensions: VX-08. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[lin-2024-strategic]], [[arslan-2026-persistent]], [[li-2026-emergent]].
 
@@ -1706,7 +1706,7 @@ Original nearest-prior anchors: [[collina-2025-breaking]], [[garra-2026-mitigati
 
 [Discuss] [MKT-11](../../dmarz/question-atlas/review.html#MKT-11) · Area: sybil-resistance
 
-Concentration-triggered fines can be evaded by accounting definitions even without strategic adaptation. Score principal-level outcomes, false penalties on efficient specialization and sensitivity to the fixed trigger; this is a simulated mechanism, not legal antitrust adjudication. Related exploratory extensions: VX-20, VX-29. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+Concentration-triggered fines can be evaded by accounting definitions even without strategic adaptation. Score principal-level outcomes, false penalties on efficient specialization and sensitivity to the fixed trigger; this is a simulated mechanism, not legal antitrust adjudication. Related exploratory extensions: VX-20, VX-29. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[bracale-syrnikov-2026-institutional]], [[mazorra-2023-cost]], [[li-2026-emergent]].
 
@@ -1714,6 +1714,6 @@ Original nearest-prior anchors: [[bracale-syrnikov-2026-institutional]], [[mazor
 
 [Park] [MKT-12](../../dmarz/question-atlas/review.html#MKT-12) · Area: meta
 
-A full factory-game adapter is a substantial dependency. Freeze the selected comparisons before confirmation and include at least a negative or weak-effect control; choosing only the two strongest simulator effects creates winner selection. Validate action and information timing before interpreting transfer failure. Related exploratory extensions: VX-37. See researchers/vishesh/notes/atlas-review/extension-bank.md.
+A full factory-game adapter is a substantial dependency. Freeze the selected comparisons before confirmation and include at least a negative or weak-effect control; choosing only the two strongest simulator effects creates winner selection. Validate action and information timing before interpreting transfer failure. Related exploratory extensions: VX-37. See 5-experiments/studies/vishesh/atlas-review/extension-bank.md.
 
 Original nearest-prior anchors: [[hopkins-2025-factorio]], [[gh-jackhopkins-factorio-learning-environment]], [[zheng-2020-ai]].

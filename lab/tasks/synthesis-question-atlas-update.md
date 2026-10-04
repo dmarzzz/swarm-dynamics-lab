@@ -26,7 +26,7 @@ outputs:
 
 ## Goal
 
-Update synthesis/research-question-atlas.md and researchers/dmarz/notes/question-atlas/ from research added since the first atlas. Preserve stable IDs and reviewer choices. Keep all candidates explicitly unreviewed hunches for human selection; no experiments or formal promotions.
+Update 3-synthesis/research-question-atlas.md and 5-experiments/studies/dmarz/question-atlas/ from research added since the first atlas. Preserve stable IDs and reviewer choices. Keep all candidates explicitly unreviewed hunches for human selection; no experiments or formal promotions.
 
 ## Done when
 

@@ -2,7 +2,7 @@
 
 Owner: shadow/sol-g50 (task `synthesis-people-and-labs`, GitHub issue #50). Started 2026-10-03.
 
-Who produces the seminal and recent work in each topic of `library/topics.yaml`, what each group is known for,
+Who produces the seminal and recent work in each topic of `1-library/topics.yaml`, what each group is known for,
 which library entries to read first, where their homepage is, and their X or Bluesky handle.
 
 Rules this file follows:

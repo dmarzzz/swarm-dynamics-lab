@@ -42,7 +42,7 @@ Explicitly manual saved-data workflow; shared experiment operations dispatch is 
 
 | Operation | Command or reason |
 |---|---|
-| Inspect / offline tests | `python3 researchers/shadow/notes/wild-halflife/test_halflife.py` |
+| Inspect / offline tests | `python3 5-experiments/studies/shadow/wild-halflife/test_halflife.py` |
 | Dispatch model experiment | Unsupported; no model calls authorized or required |
 | Resume | Existing baseline and first sensitivity retained in results; supplement is deterministic and repeatable |
 | Analyze saved evidence | README.md reproduction commands, frozen git revision |

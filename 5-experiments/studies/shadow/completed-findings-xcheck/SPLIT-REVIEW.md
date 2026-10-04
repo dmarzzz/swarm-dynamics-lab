@@ -1,6 +1,6 @@
 # Fixed-resource Sybil splitting: independent saved-answer review
 
-Reviewer `shadow/sol-xcheck`, 2026-10-04. Verdict: checked headline arithmetic passes. Post-hoc review of [sybil-split-opus RESULTS](../../../dmarz/notes/sybil-split-opus/RESULTS.md), not formal hypothesis acceptance. Snapshot and hashes: [README](README.md), [recomputed.json](recomputed.json).
+Reviewer `shadow/sol-xcheck`, 2026-10-04. Verdict: checked headline arithmetic passes. Post-hoc review of [sybil-split-opus RESULTS](../../dmarz/sybil-split-opus/RESULTS.md), not formal hypothesis acceptance. Snapshot and hashes: [README](README.md), [recomputed.json](recomputed.json).
 
 ## What was checked
 

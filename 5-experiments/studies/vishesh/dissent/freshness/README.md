@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-decision-models; source `01cd1984` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-decision-models; source `01cd1984` ([registry](../../../../evidence-metadata.json), [rubric](../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — In this matched development diagnostic, explicit evidence eligibility corrected all12expired responses while preserving all12fresh responses; raw timestamp arms scored12/24overall. Basis: The prospective controlled48-request comparison has competent fresh controls, complete paired outcomes and reconciled native traces. Six authored roots in three shared grammars, one hosted pass and a composite metadata aid limit the finding to this finite contrast; no fresh qualification, field-rate or collective-benefit claim.
 - **sample_size_summary:** Six authored semantic roots in three shared grammars;12task/age cases,48/48valid dependent condition responses,36correct. One stateless native resolver/request;5scripted ballots in context arms. No hosted repeats or field sample;54sealed qualification cases and broader dissent comparison unrun.

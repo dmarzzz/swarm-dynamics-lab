@@ -9,4 +9,4 @@ updated: 2026-10-04T12:17Z
 
 ## Notes
 
-Builder under dmarz/pipeline. Study directories researchers/dmarz/notes/sybil-split-opus/ (filed) and researchers/dmarz/notes/trust-credit-qwen/ (current).
+Builder under dmarz/pipeline. Study directories 5-experiments/studies/dmarz/sybil-split-opus/ (filed) and 5-experiments/studies/dmarz/trust-credit-qwen/ (current).

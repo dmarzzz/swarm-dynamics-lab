@@ -4,7 +4,7 @@
 
 Owner: dmarz/question-atlas. Human-requested brainstorming, 2026-10-03. **Every item is an unreviewed hunch.** These are selection materials, not accepted hypotheses, approved protocols, measured effects, or novelty claims.
 
-[Start with the synthesis and review guide](../../../../synthesis/research-question-atlas.md). [Open the local review browser](review.html). [Machine-readable bank](candidates.json). [Review scope and limitations](scope.md).
+[Start with the synthesis and review guide](../../../../3-synthesis/research-question-atlas.md). [Open the local review browser](review.html). [Machine-readable bank](candidates.json). [Review scope and limitations](scope.md).
 
 Update 2: **76 new, 36 revised, 107 unchanged** candidates. All original IDs are retained. [What changed and why](update-v2.md).
 
@@ -62,9 +62,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[ballerini-2008-interaction]] — [Interaction ruling animal collective behavior depends on topological rather than metric distance: Evidence from a field study](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ballerini-2008-interaction.md). Closest prior compares topological and metric structure, with a perturbation simulation. Catalogue depth: full.
-- [[strandburg-peshkin-2013-visual]] — [Visual sensory networks and effective information transfer in animal groups](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/strandburg-peshkin-2013-visual.md). Closest prior motivates sensory networks; empirical species-specific finding, not universal superiority. Catalogue depth: abstract.
-- [[bastien-2020-model]] — [A model of collective behavior based purely on vision](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bastien-2020-model.md). Related perception-only model; catalogue read only in this pass. Catalogue depth: abstract.
+- [[ballerini-2008-interaction]] — [Interaction ruling animal collective behavior depends on topological rather than metric distance: Evidence from a field study](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ballerini-2008-interaction.md). Closest prior compares topological and metric structure, with a perturbation simulation. Catalogue depth: full.
+- [[strandburg-peshkin-2013-visual]] — [Visual sensory networks and effective information transfer in animal groups](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/strandburg-peshkin-2013-visual.md). Closest prior motivates sensory networks; empirical species-specific finding, not universal superiority. Catalogue depth: abstract.
+- [[bastien-2020-model]] — [A model of collective behavior based purely on vision](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/bastien-2020-model.md). Related perception-only model; catalogue read only in this pass. Catalogue depth: abstract.
 
 <a id="phy-02"></a>
 ### PHY-02 — What mechanism carries a turning wave?
@@ -91,9 +91,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[attanasi-2014-information]] — [Information transfer and behavioural inertia in starling flocks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/attanasi-2014-information.md). Biological turning-wave evidence and inertia interpretation; abstract-level catalogue anchor. Catalogue depth: abstract.
-- [[hang-2026-self]] — [Self-reorganization and information transfer in large-scale models of fish schools](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hang-2026-self.md). Recent simulated front-bias mechanism provides the explicit competing explanation. Catalogue depth: full.
-- [[vicsek-1995-novel]] — [Novel Type of Phase Transition in a System of Self-Driven Particles](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vicsek-1995-novel.md). Overdamped alignment reference model. Catalogue depth: full.
+- [[attanasi-2014-information]] — [Information transfer and behavioural inertia in starling flocks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/attanasi-2014-information.md). Biological turning-wave evidence and inertia interpretation; abstract-level catalogue anchor. Catalogue depth: abstract.
+- [[hang-2026-self]] — [Self-reorganization and information transfer in large-scale models of fish schools](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/hang-2026-self.md). Recent simulated front-bias mechanism provides the explicit competing explanation. Catalogue depth: full.
+- [[vicsek-1995-novel]] — [Novel Type of Phase Transition in a System of Self-Driven Particles](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/vicsek-1995-novel.md). Overdamped alignment reference model. Catalogue depth: full.
 
 <a id="phy-03"></a>
 ### PHY-03 — Polarization versus navigation value
@@ -120,9 +120,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[mateo-2017-effect]] — [Effect of Correlations in Swarms on Collective Response](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mateo-2017-effect.md). Closest prior already predicts a responsiveness trade-off with connectivity. Catalogue depth: abstract.
-- [[couzin-2005-effective]] — [Effective leadership and decision-making in animal groups on the move](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/couzin-2005-effective.md). Informed-minority guidance is an established mechanism. Catalogue depth: abstract.
-- [[data-swarmbench-2025]] — [SwarmBench experiment logs: LLMs as decentralised agents on five 2D-grid swarm tasks (Flocking, Pursuit, Synchronize, Foraging, Transport), 13 models](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-swarmbench-2025.md). LLM-grid analogy for comparing observed coordination with pursuit/transport utility; not continuous heading dynamics. Catalogue depth: skim.
+- [[mateo-2017-effect]] — [Effect of Correlations in Swarms on Collective Response](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/mateo-2017-effect.md). Closest prior already predicts a responsiveness trade-off with connectivity. Catalogue depth: abstract.
+- [[couzin-2005-effective]] — [Effective leadership and decision-making in animal groups on the move](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/couzin-2005-effective.md). Informed-minority guidance is an established mechanism. Catalogue depth: abstract.
+- [[data-swarmbench-2025]] — [SwarmBench experiment logs: LLMs as decentralised agents on five 2D-grid swarm tasks (Flocking, Pursuit, Synchronize, Foraging, Transport), 13 models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-swarmbench-2025.md). LLM-grid analogy for comparing observed coordination with pursuit/transport utility; not continuous heading dynamics. Catalogue depth: skim.
 
 <a id="phy-04"></a>
 ### PHY-04 — Distributed expertise under local failure
@@ -149,9 +149,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[couzin-2005-effective]] — [Effective leadership and decision-making in animal groups on the move](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/couzin-2005-effective.md). Closest established informed-minority mechanism. Catalogue depth: abstract.
-- [[choi-2026-communication]] — [Communication-Free Collective Navigation for a Swarm of UAVs via LiDAR-Based Deep Reinforcement Learning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/choi-2026-communication.md). Recent five-UAV study motivates testing beyond one implicit leader; record reports limited real trials. Catalogue depth: full.
-- [[strandburg-peshkin-2013-visual]] — [Visual sensory networks and effective information transfer in animal groups](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/strandburg-peshkin-2013-visual.md). Sensory networks motivate visibility control. Catalogue depth: abstract.
+- [[couzin-2005-effective]] — [Effective leadership and decision-making in animal groups on the move](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/couzin-2005-effective.md). Closest established informed-minority mechanism. Catalogue depth: abstract.
+- [[choi-2026-communication]] — [Communication-Free Collective Navigation for a Swarm of UAVs via LiDAR-Based Deep Reinforcement Learning](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/choi-2026-communication.md). Recent five-UAV study motivates testing beyond one implicit leader; record reports limited real trials. Catalogue depth: full.
+- [[strandburg-peshkin-2013-visual]] — [Visual sensory networks and effective information transfer in animal groups](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/strandburg-peshkin-2013-visual.md). Sensory networks motivate visibility control. Catalogue depth: abstract.
 
 <a id="phy-05"></a>
 ### PHY-05 — Hydrodynamic breakup beyond a single model
@@ -178,9 +178,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[hang-2026-self]] — [Self-reorganization and information transfer in large-scale models of fish schools](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hang-2026-self.md). Closest recent prior reports size-dependent breakup under far-field dipolar flows. Catalogue depth: full.
-- [[vicsek-1995-novel]] — [Novel Type of Phase Transition in a System of Self-Driven Particles](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vicsek-1995-novel.md). Non-hydrodynamic alignment baseline. Catalogue depth: full.
-- [[strandburg-peshkin-2013-visual]] — [Visual sensory networks and effective information transfer in animal groups](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/strandburg-peshkin-2013-visual.md). Sensory interactions must remain fixed while fluid coupling changes. Catalogue depth: abstract.
+- [[hang-2026-self]] — [Self-reorganization and information transfer in large-scale models of fish schools](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/hang-2026-self.md). Closest recent prior reports size-dependent breakup under far-field dipolar flows. Catalogue depth: full.
+- [[vicsek-1995-novel]] — [Novel Type of Phase Transition in a System of Self-Driven Particles](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/vicsek-1995-novel.md). Non-hydrodynamic alignment baseline. Catalogue depth: full.
+- [[strandburg-peshkin-2013-visual]] — [Visual sensory networks and effective information transfer in animal groups](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/strandburg-peshkin-2013-visual.md). Sensory interactions must remain fixed while fluid coupling changes. Catalogue depth: abstract.
 
 <a id="phy-06"></a>
 ### PHY-06 — Alternating bursts in larger groups
@@ -207,9 +207,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[amichay-2024-revealing]] — [Revealing the mechanism and function underlying pairwise temporal coupling in collective motion](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/amichay-2024-revealing.md). Closest pairwise biological and virtual-reality evidence; scaling is unresolved in the record. Catalogue depth: full.
-- [[wang-2025-collective]] — [Collective phases and long-term dynamics in a fish school model with burst-and-coast swimming](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wang-2025-collective.md). Related asynchronous burst-and-coast school model. Catalogue depth: abstract.
-- [[amichay-2025-integration]] — [On the integration of collective motion and temporal synchrony in animal collectives](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/amichay-2025-integration.md). Conceptual bridge between movement and timing, not empirical proof of this prediction. Catalogue depth: skim.
+- [[amichay-2024-revealing]] — [Revealing the mechanism and function underlying pairwise temporal coupling in collective motion](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/amichay-2024-revealing.md). Closest pairwise biological and virtual-reality evidence; scaling is unresolved in the record. Catalogue depth: full.
+- [[wang-2025-collective]] — [Collective phases and long-term dynamics in a fish school model with burst-and-coast swimming](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/wang-2025-collective.md). Related asynchronous burst-and-coast school model. Catalogue depth: abstract.
+- [[amichay-2025-integration]] — [On the integration of collective motion and temporal synchrony in animal collectives](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/amichay-2025-integration.md). Conceptual bridge between movement and timing, not empirical proof of this prediction. Catalogue depth: skim.
 
 <a id="collective-decision"></a>
 ## Collective decision-making in biology
@@ -239,9 +239,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[talamali-2021-when]] — [When less is more: Robot swarms adapt better to changes with constrained communication](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/talamali-2021-when.md). Closest prior already finds improved adaptation with constrained communication. Catalogue depth: abstract.
-- [[march-pons-2024-honeybee]] — [Honeybee-like collective decision making in a kilobot swarm](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/march-pons-2024-honeybee.md). Motion and density jointly affect robot communication networks. Catalogue depth: abstract.
-- [[valentini-2017-best]] — [The Best-of-n Problem in Robot Swarms: Formalization, State of the Art, and Novel Perspectives](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/valentini-2017-best.md). Best-of-n taxonomy distinguishes changing quality from sampling cost. Catalogue depth: full.
+- [[talamali-2021-when]] — [When less is more: Robot swarms adapt better to changes with constrained communication](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/talamali-2021-when.md). Closest prior already finds improved adaptation with constrained communication. Catalogue depth: abstract.
+- [[march-pons-2024-honeybee]] — [Honeybee-like collective decision making in a kilobot swarm](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/march-pons-2024-honeybee.md). Motion and density jointly affect robot communication networks. Catalogue depth: abstract.
+- [[valentini-2017-best]] — [The Best-of-n Problem in Robot Swarms: Formalization, State of the Art, and Novel Perspectives](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/valentini-2017-best.md). Best-of-n taxonomy distinguishes changing quality from sampling cost. Catalogue depth: full.
 
 <a id="phy-08"></a>
 ### PHY-08 — Finite populations and multi-option deadlock
@@ -268,9 +268,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[pais-2013-mechanism]] — [A Mechanism for Value-Sensitive Decision-Making](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pais-2013-mechanism.md). Two-option value-sensitive cross-inhibition reference. Catalogue depth: full.
-- [[reina-2017-model]] — [Model of the best-of-N nest-site selection process in honeybees](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/reina-2017-model.md). Closest multi-option mean-field result; finite stochastic treatment is an explicit catalogue limitation. Catalogue depth: full.
-- [[seeley-2012-stop]] — [Stop Signals Provide Cross Inhibition in Collective Decision-Making by Honeybee Swarms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/seeley-2012-stop.md). Biological cross-inhibition evidence, not proof of this synthetic policy. Catalogue depth: abstract.
+- [[pais-2013-mechanism]] — [A Mechanism for Value-Sensitive Decision-Making](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pais-2013-mechanism.md). Two-option value-sensitive cross-inhibition reference. Catalogue depth: full.
+- [[reina-2017-model]] — [Model of the best-of-N nest-site selection process in honeybees](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/reina-2017-model.md). Closest multi-option mean-field result; finite stochastic treatment is an explicit catalogue limitation. Catalogue depth: full.
+- [[seeley-2012-stop]] — [Stop Signals Provide Cross Inhibition in Collective Decision-Making by Honeybee Swarms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/seeley-2012-stop.md). Biological cross-inhibition evidence, not proof of this synthetic policy. Catalogue depth: abstract.
 
 <a id="phy-09"></a>
 ### PHY-09 — Group size versus independent evidence
@@ -297,9 +297,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[kao-2014-decision]] — [Decision accuracy in complex environments is often maximized by small group sizes](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kao-2014-decision.md). Closest prior already derives finite optimal groups under correlated cues. Catalogue depth: abstract.
-- [[couzin-2005-effective]] — [Effective leadership and decision-making in animal groups on the move](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/couzin-2005-effective.md). Information distribution within moving groups offers an embodied follow-up. Catalogue depth: abstract.
-- [[valentini-2017-best]] — [The Best-of-n Problem in Robot Swarms: Formalization, State of the Art, and Novel Perspectives](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/valentini-2017-best.md). Formal option-quality comparison context. Catalogue depth: full.
+- [[kao-2014-decision]] — [Decision accuracy in complex environments is often maximized by small group sizes](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kao-2014-decision.md). Closest prior already derives finite optimal groups under correlated cues. Catalogue depth: abstract.
+- [[couzin-2005-effective]] — [Effective leadership and decision-making in animal groups on the move](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/couzin-2005-effective.md). Information distribution within moving groups offers an embodied follow-up. Catalogue depth: abstract.
+- [[valentini-2017-best]] — [The Best-of-n Problem in Robot Swarms: Formalization, State of the Art, and Novel Perspectives](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/valentini-2017-best.md). Formal option-quality comparison context. Catalogue depth: full.
 
 <a id="phy-10"></a>
 ### PHY-10 — Correcting fast-sampling option bias
@@ -326,9 +326,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[valentini-2017-best]] — [The Best-of-n Problem in Robot Swarms: Formalization, State of the Art, and Novel Perspectives](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/valentini-2017-best.md). Closest prior explicitly formalizes antagonistic quality-cost choices. Catalogue depth: full.
-- [[reina-2017-model]] — [Model of the best-of-N nest-site selection process in honeybees](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/reina-2017-model.md). Quality-sensitive recruitment provides a mechanism to compare. Catalogue depth: full.
-- [[march-pons-2024-honeybee]] — [Honeybee-like collective decision making in a kilobot swarm](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/march-pons-2024-honeybee.md). Embodied communication and movement can confound sampling frequency. Catalogue depth: abstract.
+- [[valentini-2017-best]] — [The Best-of-n Problem in Robot Swarms: Formalization, State of the Art, and Novel Perspectives](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/valentini-2017-best.md). Closest prior explicitly formalizes antagonistic quality-cost choices. Catalogue depth: full.
+- [[reina-2017-model]] — [Model of the best-of-N nest-site selection process in honeybees](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/reina-2017-model.md). Quality-sensitive recruitment provides a mechanism to compare. Catalogue depth: full.
+- [[march-pons-2024-honeybee]] — [Honeybee-like collective decision making in a kilobot swarm](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/march-pons-2024-honeybee.md). Embodied communication and movement can confound sampling frequency. Catalogue depth: abstract.
 
 <a id="phy-11"></a>
 ### PHY-11 — When uninformed participants help
@@ -355,9 +355,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[leonard-2012-decision]] — [Decision versus compromise for animal groups in motion](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/leonard-2012-decision.md). Closest prior predicts decision-versus-compromise effects of uninformed groups. Catalogue depth: abstract.
-- [[couzin-2005-effective]] — [Effective leadership and decision-making in animal groups on the move](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/couzin-2005-effective.md). Established informed-minority framework. Catalogue depth: abstract.
-- [[march-pons-2024-honeybee]] — [Honeybee-like collective decision making in a kilobot swarm](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/march-pons-2024-honeybee.md). Motion changes communication structure in an embodied decision system. Catalogue depth: abstract.
+- [[leonard-2012-decision]] — [Decision versus compromise for animal groups in motion](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/leonard-2012-decision.md). Closest prior predicts decision-versus-compromise effects of uninformed groups. Catalogue depth: abstract.
+- [[couzin-2005-effective]] — [Effective leadership and decision-making in animal groups on the move](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/couzin-2005-effective.md). Established informed-minority framework. Catalogue depth: abstract.
+- [[march-pons-2024-honeybee]] — [Honeybee-like collective decision making in a kilobot swarm](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/march-pons-2024-honeybee.md). Motion changes communication structure in an embodied decision system. Catalogue depth: abstract.
 
 <a id="phy-12"></a>
 ### PHY-12 — Reopening a settled decision
@@ -384,9 +384,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[talamali-2021-when]] — [When less is more: Robot swarms adapt better to changes with constrained communication](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/talamali-2021-when.md). Closest prior establishes dynamic adaptation and communication trade-offs. Catalogue depth: abstract.
-- [[leonard-2024-fast]] — [Fast and Flexible Multiagent Decision-Making](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/leonard-2024-fast.md). Related nonlinear opinion dynamics review emphasizes flexibility. Catalogue depth: abstract.
-- [[valentini-2017-best]] — [The Best-of-n Problem in Robot Swarms: Formalization, State of the Art, and Novel Perspectives](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/valentini-2017-best.md). Dynamic option quality is an established best-of-n variant. Catalogue depth: full.
+- [[talamali-2021-when]] — [When less is more: Robot swarms adapt better to changes with constrained communication](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/talamali-2021-when.md). Closest prior establishes dynamic adaptation and communication trade-offs. Catalogue depth: abstract.
+- [[leonard-2024-fast]] — [Fast and Flexible Multiagent Decision-Making](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/leonard-2024-fast.md). Related nonlinear opinion dynamics review emphasizes flexibility. Catalogue depth: abstract.
+- [[valentini-2017-best]] — [The Best-of-n Problem in Robot Swarms: Formalization, State of the Art, and Novel Perspectives](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/valentini-2017-best.md). Dynamic option quality is an established best-of-n variant. Catalogue depth: full.
 
 <a id="swarm-robotics"></a>
 ## Swarm robotics
@@ -416,9 +416,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[pickem-2017-robotarium]] — [The Robotarium: A remotely accessible swarm robotics research testbed](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pickem-2017-robotarium.md). Closest source explicitly uses barrier-certificate command projection. Catalogue depth: skim.
-- [[zhang-2025-learning]] — [Learning vision-based agile flight via differentiable physics](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2025-learning.md). Recent learned communication-free navigation motivates careful attribution. Catalogue depth: full.
-- [[gh-proroklab-vectorizedmultiagentsimulator]] — [VMAS: vectorised differentiable 2D multi-agent simulator in PyTorch with multi-robot scenarios including flocking](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-proroklab-vectorizedmultiagentsimulator.md). Possible batched simulation environment; its physics differs from an aerial robot. Catalogue depth: ran.
+- [[pickem-2017-robotarium]] — [The Robotarium: A remotely accessible swarm robotics research testbed](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pickem-2017-robotarium.md). Closest source explicitly uses barrier-certificate command projection. Catalogue depth: skim.
+- [[zhang-2025-learning]] — [Learning vision-based agile flight via differentiable physics](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhang-2025-learning.md). Recent learned communication-free navigation motivates careful attribution. Catalogue depth: full.
+- [[gh-proroklab-vectorizedmultiagentsimulator]] — [VMAS: vectorised differentiable 2D multi-agent simulator in PyTorch with multi-robot scenarios including flocking](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-proroklab-vectorizedmultiagentsimulator.md). Possible batched simulation environment; its physics differs from an aerial robot. Catalogue depth: ran.
 
 <a id="phy-20"></a>
 ### PHY-20 — When a few messages add value
@@ -445,9 +445,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[zhang-2025-learning]] — [Learning vision-based agile flight via differentiable physics](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2025-learning.md). Closest recent communication-free co-navigation anchor. Catalogue depth: full.
-- [[choi-2026-communication]] — [Communication-Free Collective Navigation for a Swarm of UAVs via LiDAR-Based Deep Reinforcement Learning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/choi-2026-communication.md). Recent implicit leader-following with local LiDAR motivates comparison under constrained sensing. Catalogue depth: full.
-- [[berlinger-2021-implicit]] — [Implicit coordination for 3D underwater collective behaviors in a fish-inspired robot swarm](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/berlinger-2021-implicit.md). Underwater visual coordination illustrates an embodied alternative with different optics. Catalogue depth: abstract.
+- [[zhang-2025-learning]] — [Learning vision-based agile flight via differentiable physics](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhang-2025-learning.md). Closest recent communication-free co-navigation anchor. Catalogue depth: full.
+- [[choi-2026-communication]] — [Communication-Free Collective Navigation for a Swarm of UAVs via LiDAR-Based Deep Reinforcement Learning](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/choi-2026-communication.md). Recent implicit leader-following with local LiDAR motivates comparison under constrained sensing. Catalogue depth: full.
+- [[berlinger-2021-implicit]] — [Implicit coordination for 3D underwater collective behaviors in a fish-inspired robot swarm](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/berlinger-2021-implicit.md). Underwater visual coordination illustrates an embodied alternative with different optics. Catalogue depth: abstract.
 
 <a id="phy-21"></a>
 ### PHY-21 — Correlated disturbances in transfer
@@ -474,9 +474,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[zhang-2025-learning]] — [Learning vision-based agile flight via differentiable physics](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2025-learning.md). Simple-physics sim-to-real policy is the relevant transfer context. Catalogue depth: full.
-- [[sun-2023-mean]] — [Mean-shift exploration in shape assembly of robot swarms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/sun-2023-mean.md). Common reference-frame dependence creates a concrete shared-error pathway. Catalogue depth: full.
-- [[gh-proroklab-vectorizedmultiagentsimulator]] — [VMAS: vectorised differentiable 2D multi-agent simulator in PyTorch with multi-robot scenarios including flocking](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-proroklab-vectorizedmultiagentsimulator.md). Candidate simulation scaffold; no claim that its stock scenarios reproduce either paper. Catalogue depth: ran.
+- [[zhang-2025-learning]] — [Learning vision-based agile flight via differentiable physics](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhang-2025-learning.md). Simple-physics sim-to-real policy is the relevant transfer context. Catalogue depth: full.
+- [[sun-2023-mean]] — [Mean-shift exploration in shape assembly of robot swarms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/sun-2023-mean.md). Common reference-frame dependence creates a concrete shared-error pathway. Catalogue depth: full.
+- [[gh-proroklab-vectorizedmultiagentsimulator]] — [VMAS: vectorised differentiable 2D multi-agent simulator in PyTorch with multi-robot scenarios including flocking](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-proroklab-vectorizedmultiagentsimulator.md). Candidate simulation scaffold; no claim that its stock scenarios reproduce either paper. Catalogue depth: ran.
 
 <a id="phy-22"></a>
 ### PHY-22 — Correlated evidence in physical identity vetting
@@ -503,9 +503,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[mallmann-trenn-2021-crowd]] — [Crowd Vetting: Rejecting Adversaries via Collaboration With Application to Multirobot Flocking](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mallmann-trenn-2021-crowd.md). Closest collaborative vetting prior; record explicitly notes independence and static-membership assumptions. Catalogue depth: full.
-- [[gil-2015-guaranteeing]] — [Guaranteeing Spoof-Resilient Multi-Robot Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/gil-2015-guaranteeing.md). Underlying spatial radio-fingerprint evidence, with physical assumptions. Catalogue depth: skim.
-- [[leblanc-2013-resilient]] — [Resilient Asymptotic Consensus in Robust Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/leblanc-2013-resilient.md). Robust consensus context; graph robustness is not a substitute for a reliable identity signal. Catalogue depth: abstract.
+- [[mallmann-trenn-2021-crowd]] — [Crowd Vetting: Rejecting Adversaries via Collaboration With Application to Multirobot Flocking](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/mallmann-trenn-2021-crowd.md). Closest collaborative vetting prior; record explicitly notes independence and static-membership assumptions. Catalogue depth: full.
+- [[gil-2015-guaranteeing]] — [Guaranteeing Spoof-Resilient Multi-Robot Networks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/gil-2015-guaranteeing.md). Underlying spatial radio-fingerprint evidence, with physical assumptions. Catalogue depth: skim.
+- [[leblanc-2013-resilient]] — [Resilient Asymptotic Consensus in Robust Networks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/leblanc-2013-resilient.md). Robust consensus context; graph robustness is not a substitute for a reliable identity signal. Catalogue depth: abstract.
 
 <a id="phy-23"></a>
 ### PHY-23 — Seed dependence in shape formation
@@ -532,9 +532,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[rubenstein-2014-programmable]] — [Programmable self-assembly in a thousand-robot swarm](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/rubenstein-2014-programmable.md). Closest seeded programmable shape-assembly reference. Catalogue depth: abstract.
-- [[slavkov-2018-morphogenesis]] — [Morphogenesis in robot swarms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/slavkov-2018-morphogenesis.md). Seedless morphogenesis is a contrasting task family, not a drop-in equivalent. Catalogue depth: abstract.
-- [[data-swarmbench-2025]] — [SwarmBench experiment logs: LLMs as decentralised agents on five 2D-grid swarm tasks (Flocking, Pursuit, Synchronize, Foraging, Transport), 13 models](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-swarmbench-2025.md). A shape-formation prompt appears in the Flocking log preview; a coordinate-information analogy only, with task semantics requiring code verification. Catalogue depth: skim.
+- [[rubenstein-2014-programmable]] — [Programmable self-assembly in a thousand-robot swarm](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/rubenstein-2014-programmable.md). Closest seeded programmable shape-assembly reference. Catalogue depth: abstract.
+- [[slavkov-2018-morphogenesis]] — [Morphogenesis in robot swarms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/slavkov-2018-morphogenesis.md). Seedless morphogenesis is a contrasting task family, not a drop-in equivalent. Catalogue depth: abstract.
+- [[data-swarmbench-2025]] — [SwarmBench experiment logs: LLMs as decentralised agents on five 2D-grid swarm tasks (Flocking, Pursuit, Synchronize, Foraging, Transport), 13 models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-swarmbench-2025.md). A shape-formation prompt appears in the Flocking log preview; a coordinate-information analogy only, with task semantics requiring code verification. Catalogue depth: skim.
 
 <a id="phy-24"></a>
 ### PHY-24 — Damage recovery with immobile survivors
@@ -561,11 +561,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[slavkov-2018-morphogenesis]] — [Morphogenesis in robot swarms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/slavkov-2018-morphogenesis.md). Regrowth after removed material motivates the stronger failure model. Catalogue depth: abstract.
-- [[sun-2023-mean]] — [Mean-shift exploration in shape assembly of robot swarms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/sun-2023-mean.md). Shape assembly and cargo transport offer separate geometric and functional outcomes. Catalogue depth: full.
-- [[gh-ilpincy-argos3]] — [ARGoS 3: physics-based multi-robot simulator built for large swarms (multiple physics engines, thousands of robots)](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-ilpincy-argos3.md). Potential embodied simulator, subject to controller and contact-model verification. Catalogue depth: skim.
+- [[slavkov-2018-morphogenesis]] — [Morphogenesis in robot swarms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/slavkov-2018-morphogenesis.md). Regrowth after removed material motivates the stronger failure model. Catalogue depth: abstract.
+- [[sun-2023-mean]] — [Mean-shift exploration in shape assembly of robot swarms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/sun-2023-mean.md). Shape assembly and cargo transport offer separate geometric and functional outcomes. Catalogue depth: full.
+- [[gh-ilpincy-argos3]] — [ARGoS 3: physics-based multi-robot simulator built for large swarms (multiple physics engines, thousands of robots)](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-ilpincy-argos3.md). Potential embodied simulator, subject to controller and contact-model verification. Catalogue depth: skim.
 
-**Related team work:** [nca-observatory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/nca-observatory.md).
+**Related team work:** [nca-observatory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/nca-observatory.md).
 
 <a id="phy-37"></a>
 ### PHY-37 — Neural cellular repair beyond familiar lesion shapes
@@ -592,10 +592,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[etcheverry-2026-reasoning]] — [Reasoning with Neural Cellular Automata](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/etcheverry-2026-reasoning.md). Closest prior already studies maze damage and adaptive updates; the proposed difference is lesion topology. Catalogue depth: skim.
-- [[mordvintsev-2020-growing]] — [Growing Neural Cellular Automata](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mordvintsev-2020-growing.md). Earlier learned regeneration baseline; image recovery alone does not test maze validity. Catalogue depth: skim.
+- [[etcheverry-2026-reasoning]] — [Reasoning with Neural Cellular Automata](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/etcheverry-2026-reasoning.md). Closest prior already studies maze damage and adaptive updates; the proposed difference is lesion topology. Catalogue depth: skim.
+- [[mordvintsev-2020-growing]] — [Growing Neural Cellular Automata](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/mordvintsev-2020-growing.md). Earlier learned regeneration baseline; image recovery alone does not test maze validity. Catalogue depth: skim.
 
-**Related team work:** [nca-observatory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/nca-observatory.md).
+**Related team work:** [nca-observatory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/nca-observatory.md).
 
 <a id="phy-38"></a>
 ### PHY-38 — Masked parallel updates versus independent cell clocks
@@ -622,10 +622,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[mordvintsev-2020-growing]] — [Growing Neural Cellular Automata](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mordvintsev-2020-growing.md). Original learned NCA uses stochastic per-cell masking. Catalogue depth: skim.
-- [[etcheverry-2026-reasoning]] — [Reasoning with Neural Cellular Automata](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/etcheverry-2026-reasoning.md). Reasoning NCA reports dense computation before masking, motivating an execution-semantics boundary test. Catalogue depth: skim.
+- [[mordvintsev-2020-growing]] — [Growing Neural Cellular Automata](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/mordvintsev-2020-growing.md). Original learned NCA uses stochastic per-cell masking. Catalogue depth: skim.
+- [[etcheverry-2026-reasoning]] — [Reasoning with Neural Cellular Automata](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/etcheverry-2026-reasoning.md). Reasoning NCA reports dense computation before masking, motivating an execution-semantics boundary test. Catalogue depth: skim.
 
-**Related team work:** [nca-observatory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/nca-observatory.md).
+**Related team work:** [nca-observatory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/nca-observatory.md).
 
 <a id="swarm-intelligence"></a>
 ## Swarm intelligence algorithms
@@ -655,8 +655,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[kudela-2023-evolutionary]] — [The Evolutionary Computation Methods No One Should Use](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kudela-2023-evolutionary.md). Direct center-bias test predecessor. Catalogue depth: full.
-- [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vermetten-2024-large.md). Broad benchmarking and budget-sensitive rankings. Catalogue depth: full.
+- [[kudela-2023-evolutionary]] — [The Evolutionary Computation Methods No One Should Use](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kudela-2023-evolutionary.md). Direct center-bias test predecessor. Catalogue depth: full.
+- [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/vermetten-2024-large.md). Broad benchmarking and budget-sensitive rankings. Catalogue depth: full.
 
 <a id="opt-02"></a>
 ### OPT-02 — Communication topology under a fair budget
@@ -683,8 +683,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[kennedy-1999-small]] — [Small worlds and mega-minds: effects of neighborhood topology on particle swarm performance](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kennedy-1999-small.md). Direct topology precedent; not a new sparse-swarm idea. Catalogue depth: abstract.
-- [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vermetten-2024-large.md). Benchmarking framework to prevent single-function conclusions. Catalogue depth: full.
+- [[kennedy-1999-small]] — [Small worlds and mega-minds: effects of neighborhood topology on particle swarm performance](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kennedy-1999-small.md). Direct topology precedent; not a new sparse-swarm idea. Catalogue depth: abstract.
+- [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/vermetten-2024-large.md). Benchmarking framework to prevent single-function conclusions. Catalogue depth: full.
 
 <a id="opt-03"></a>
 ### OPT-03 — How much of ant-colony performance is local search?
@@ -711,8 +711,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[dorigo-1997-ant]] — [Ant colony system: a cooperative learning approach to the traveling salesman problem](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/dorigo-1997-ant.md). ACS and ACS with local search are the closest original comparisons. Catalogue depth: abstract.
-- [[camacho-villalon-2023-exposing]] — [Exposing the grey wolf, moth-flame, whale, firefly, bat, and antlion algorithms: six misleading optimization techniques inspired by bestial metaphors](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/camacho-villalon-2023-exposing.md). Component-level analysis motivation, not evidence about this ablation. Catalogue depth: abstract.
+- [[dorigo-1997-ant]] — [Ant colony system: a cooperative learning approach to the traveling salesman problem](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/dorigo-1997-ant.md). ACS and ACS with local search are the closest original comparisons. Catalogue depth: abstract.
+- [[camacho-villalon-2023-exposing]] — [Exposing the grey wolf, moth-flame, whale, firefly, bat, and antlion algorithms: six misleading optimization techniques inspired by bestial metaphors](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/camacho-villalon-2023-exposing.md). Component-level analysis motivation, not evidence about this ablation. Catalogue depth: abstract.
 
 <a id="opt-04"></a>
 ### OPT-04 — Independent evaluations versus noisy consensus
@@ -739,8 +739,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[pinnau-2017-consensus]] — [A consensus-based model for global optimization and its mean-field limit](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pinnau-2017-consensus.md). Weighted collective optimization mechanism to stress under noisy objective values. Catalogue depth: full.
-- [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vermetten-2024-large.md). Budget-aware evaluation precedent; noisy setting is an extension to verify. Catalogue depth: full.
+- [[pinnau-2017-consensus]] — [A consensus-based model for global optimization and its mean-field limit](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pinnau-2017-consensus.md). Weighted collective optimization mechanism to stress under noisy objective values. Catalogue depth: full.
+- [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/vermetten-2024-large.md). Budget-aware evaluation precedent; noisy setting is an extension to verify. Catalogue depth: full.
 
 <a id="opt-05"></a>
 ### OPT-05 — When collective memory becomes stale
@@ -767,8 +767,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[grassi-2021-particle]] — [From particle swarm optimization to consensus based optimization: stochastic modeling and mean-field limit](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/grassi-2021-particle.md). Personal-best memory is explicit in the PSO-to-CBO framing. Catalogue depth: full.
-- [[dorigo-1996-ant]] — [Ant system: optimization by a colony of cooperating agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/dorigo-1996-ant.md). Pheromone persistence/evaporation provides a related memory mechanism. Catalogue depth: abstract.
+- [[grassi-2021-particle]] — [From particle swarm optimization to consensus based optimization: stochastic modeling and mean-field limit](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/grassi-2021-particle.md). Personal-best memory is explicit in the PSO-to-CBO framing. Catalogue depth: full.
+- [[dorigo-1996-ant]] — [Ant system: optimization by a colony of cooperating agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/dorigo-1996-ant.md). Pheromone persistence/evaporation provides a related memory mechanism. Catalogue depth: abstract.
 
 <a id="opt-06"></a>
 ### OPT-06 — Where the small-inertia approximation stops helping
@@ -795,8 +795,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[grassi-2021-particle]] — [From particle swarm optimization to consensus based optimization: stochastic modeling and mean-field limit](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/grassi-2021-particle.md). Direct formal-limit predecessor; replication first. Catalogue depth: full.
-- [[pinnau-2017-consensus]] — [A consensus-based model for global optimization and its mean-field limit](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pinnau-2017-consensus.md). CBO formulation and assumptions. Catalogue depth: full.
+- [[grassi-2021-particle]] — [From particle swarm optimization to consensus based optimization: stochastic modeling and mean-field limit](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/grassi-2021-particle.md). Direct formal-limit predecessor; replication first. Catalogue depth: full.
+- [[pinnau-2017-consensus]] — [A consensus-based model for global optimization and its mean-field limit](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pinnau-2017-consensus.md). CBO formulation and assumptions. Catalogue depth: full.
 
 <a id="active-matter"></a>
 ## Active matter physics
@@ -826,9 +826,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[fily-2012-athermal]] — [Athermal Phase Separation of Self-Propelled Particles with No Alignment](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/fily-2012-athermal.md). Established phase separation without alignment is the competing mechanism. Catalogue depth: full.
-- [[cates-2015-motility]] — [Motility-Induced Phase Separation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/cates-2015-motility.md). Review supplies density-speed feedback context. Catalogue depth: full.
-- [[vicsek-1995-novel]] — [Novel Type of Phase Transition in a System of Self-Driven Particles](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vicsek-1995-novel.md). Alignment reference, requiring additional cohesion or confinement for fair comparison. Catalogue depth: full.
+- [[fily-2012-athermal]] — [Athermal Phase Separation of Self-Propelled Particles with No Alignment](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/fily-2012-athermal.md). Established phase separation without alignment is the competing mechanism. Catalogue depth: full.
+- [[cates-2015-motility]] — [Motility-Induced Phase Separation](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/cates-2015-motility.md). Review supplies density-speed feedback context. Catalogue depth: full.
+- [[vicsek-1995-novel]] — [Novel Type of Phase Transition in a System of Self-Driven Particles](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/vicsek-1995-novel.md). Alignment reference, requiring additional cohesion or confinement for fair comparison. Catalogue depth: full.
 
 <a id="phy-14"></a>
 ### PHY-14 — Wall geometry as a control input
@@ -855,9 +855,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[deblais-2018-boundaries]] — [Boundaries Control Collective Dynamics of Inertial Self-Propelled Robots](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/deblais-2018-boundaries.md). Closest prior already demonstrates surface clusters and arena transport. Catalogue depth: abstract.
-- [[deseigne-2010-collective]] — [Collective Motion of Vibrated Polar Disks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/deseigne-2010-collective.md). Physical bounded polar-disk system illustrates boundary and collision effects. Catalogue depth: full.
-- [[brambilla-2013-swarm]] — [Swarm robotics: a review from the swarm engineering perspective](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/brambilla-2013-swarm.md). Task-oriented robotics context rather than evidence of this trade-off. Catalogue depth: abstract.
+- [[deblais-2018-boundaries]] — [Boundaries Control Collective Dynamics of Inertial Self-Propelled Robots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/deblais-2018-boundaries.md). Closest prior already demonstrates surface clusters and arena transport. Catalogue depth: abstract.
+- [[deseigne-2010-collective]] — [Collective Motion of Vibrated Polar Disks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/deseigne-2010-collective.md). Physical bounded polar-disk system illustrates boundary and collision effects. Catalogue depth: full.
+- [[brambilla-2013-swarm]] — [Swarm robotics: a review from the swarm engineering perspective](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/brambilla-2013-swarm.md). Task-oriented robotics context rather than evidence of this trade-off. Catalogue depth: abstract.
 
 <a id="phy-15"></a>
 ### PHY-15 — Delayed density sensing in motility control
@@ -884,9 +884,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[bauerle-2018-self]] — [Self-organization of active particles by quorum sensing rules](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bauerle-2018-self.md). Closest experimental quorum-motility rule; heading is not directly controlled. Catalogue depth: full.
-- [[cates-2015-motility]] — [Motility-Induced Phase Separation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/cates-2015-motility.md). Density-speed positive feedback explains a plausible instability mechanism. Catalogue depth: full.
-- [[fily-2012-athermal]] — [Athermal Phase Separation of Self-Propelled Particles with No Alignment](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/fily-2012-athermal.md). Constant-rule active-particle baseline. Catalogue depth: full.
+- [[bauerle-2018-self]] — [Self-organization of active particles by quorum sensing rules](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/bauerle-2018-self.md). Closest experimental quorum-motility rule; heading is not directly controlled. Catalogue depth: full.
+- [[cates-2015-motility]] — [Motility-Induced Phase Separation](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/cates-2015-motility.md). Density-speed positive feedback explains a plausible instability mechanism. Catalogue depth: full.
+- [[fily-2012-athermal]] — [Athermal Phase Separation of Self-Propelled Particles with No Alignment](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/fily-2012-athermal.md). Constant-rule active-particle baseline. Catalogue depth: full.
 
 <a id="phy-16"></a>
 ### PHY-16 — Reciprocity and useful collective rotation
@@ -913,9 +913,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[fruchart-2021-non]] — [Non-reciprocal phase transitions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/fruchart-2021-non.md). Closest theoretical framework links non-reciprocity and time-dependent phases. Catalogue depth: abstract.
-- [[ceron-2023-diverse]] — [Diverse behaviors in non-uniform chiral and non-chiral swarmalators](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ceron-2023-diverse.md). Related heterogeneous chiral structures; model-specific offsets need scrutiny. Catalogue depth: full.
-- [[deblais-2018-boundaries]] — [Boundaries Control Collective Dynamics of Inertial Self-Propelled Robots](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/deblais-2018-boundaries.md). Embodied collective transport provides an analogy, not a validation of the chosen interaction law. Catalogue depth: abstract.
+- [[fruchart-2021-non]] — [Non-reciprocal phase transitions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/fruchart-2021-non.md). Closest theoretical framework links non-reciprocity and time-dependent phases. Catalogue depth: abstract.
+- [[ceron-2023-diverse]] — [Diverse behaviors in non-uniform chiral and non-chiral swarmalators](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ceron-2023-diverse.md). Related heterogeneous chiral structures; model-specific offsets need scrutiny. Catalogue depth: full.
+- [[deblais-2018-boundaries]] — [Boundaries Control Collective Dynamics of Inertial Self-Propelled Robots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/deblais-2018-boundaries.md). Embodied collective transport provides an analogy, not a validation of the chosen interaction law. Catalogue depth: abstract.
 
 <a id="phy-17"></a>
 ### PHY-17 — Recovery of shape versus recovery of function
@@ -942,11 +942,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[ziepke-2025-acoustic]] — [Acoustic Signaling Enables Collective Perception and Control in Active Matter Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ziepke-2025-acoustic.md). Closest prior already reports regeneration and acoustic collective functions. Catalogue depth: abstract.
-- [[slavkov-2018-morphogenesis]] — [Morphogenesis in robot swarms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/slavkov-2018-morphogenesis.md). Robot regrowth is an analogous recovery mechanism with different physical assumptions. Catalogue depth: abstract.
-- [[bauerle-2018-self]] — [Self-organization of active particles by quorum sensing rules](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bauerle-2018-self.md). Quorum-controlled shapes offer a different organization baseline. Catalogue depth: full.
+- [[ziepke-2025-acoustic]] — [Acoustic Signaling Enables Collective Perception and Control in Active Matter Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ziepke-2025-acoustic.md). Closest prior already reports regeneration and acoustic collective functions. Catalogue depth: abstract.
+- [[slavkov-2018-morphogenesis]] — [Morphogenesis in robot swarms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/slavkov-2018-morphogenesis.md). Robot regrowth is an analogous recovery mechanism with different physical assumptions. Catalogue depth: abstract.
+- [[bauerle-2018-self]] — [Self-organization of active particles by quorum sensing rules](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/bauerle-2018-self.md). Quorum-controlled shapes offer a different organization baseline. Catalogue depth: full.
 
-**Related team work:** [nca-observatory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/nca-observatory.md).
+**Related team work:** [nca-observatory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/nca-observatory.md).
 
 <a id="phy-18"></a>
 ### PHY-18 — Transport by fluctuating active flows
@@ -973,9 +973,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[alert-2022-active]] — [Active Turbulence](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/alert-2022-active.md). Review context for fluctuating active flows; not evidence of the specific task optimum. Catalogue depth: abstract.
-- [[fily-2012-athermal]] — [Athermal Phase Separation of Self-Propelled Particles with No Alignment](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/fily-2012-athermal.md). Clustering without alignment supplies a contrasting regime. Catalogue depth: full.
-- [[vicsek-1995-novel]] — [Novel Type of Phase Transition in a System of Self-Driven Particles](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vicsek-1995-novel.md). Ordered motion supplies a deliberately different transport baseline. Catalogue depth: full.
+- [[alert-2022-active]] — [Active Turbulence](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/alert-2022-active.md). Review context for fluctuating active flows; not evidence of the specific task optimum. Catalogue depth: abstract.
+- [[fily-2012-athermal]] — [Athermal Phase Separation of Self-Propelled Particles with No Alignment](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/fily-2012-athermal.md). Clustering without alignment supplies a contrasting regime. Catalogue depth: full.
+- [[vicsek-1995-novel]] — [Novel Type of Phase Transition in a System of Self-Driven Particles](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/vicsek-1995-novel.md). Ordered motion supplies a deliberately different transport baseline. Catalogue depth: full.
 
 <a id="sync-consensus"></a>
 ## Synchronisation, consensus and networked control
@@ -1005,9 +1005,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[jadbabaie-2003-coordination]] — [Coordination of groups of mobile autonomous agents using nearest neighbor rules](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/jadbabaie-2003-coordination.md). Established joint-connectivity convergence result, not a finite-time ranking claim. Catalogue depth: full.
-- [[ren-2005-consensus]] — [Consensus seeking in multiagent systems under dynamically changing interaction topologies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ren-2005-consensus.md). Directed switching-network convergence context. Catalogue depth: abstract.
-- [[data-social-llm-networks-2026]] — [Social-LLM-Networks: opinion exchange among LLMs connected over communication networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-social-llm-networks-2026.md). Candidate opinion-exchange traces with topology metadata; temporal exposure reconstruction is an unresolved prerequisite, not established physical consensus evidence. Catalogue depth: skim.
+- [[jadbabaie-2003-coordination]] — [Coordination of groups of mobile autonomous agents using nearest neighbor rules](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/jadbabaie-2003-coordination.md). Established joint-connectivity convergence result, not a finite-time ranking claim. Catalogue depth: full.
+- [[ren-2005-consensus]] — [Consensus seeking in multiagent systems under dynamically changing interaction topologies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ren-2005-consensus.md). Directed switching-network convergence context. Catalogue depth: abstract.
+- [[data-social-llm-networks-2026]] — [Social-LLM-Networks: opinion exchange among LLMs connected over communication networks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-social-llm-networks-2026.md). Candidate opinion-exchange traces with topology metadata; temporal exposure reconstruction is an unresolved prerequisite, not established physical consensus evidence. Catalogue depth: skim.
 
 <a id="phy-26"></a>
 ### PHY-26 — Fast consensus under realistic link delays
@@ -1034,9 +1034,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[olfati-saber-2004-consensus]] — [Consensus Problems in Networks of Agents With Switching Topology and Time-Delays](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/olfati-saber-2004-consensus.md). Closest theoretical anchor links topology, convergence and delay assumptions. Catalogue depth: abstract.
-- [[olfati-saber-2007-consensus]] — [Consensus and Cooperation in Networked Multi-Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/olfati-saber-2007-consensus.md). Review reports shortcut benefits and provides baseline context. Catalogue depth: abstract.
-- [[ren-2005-consensus]] — [Consensus seeking in multiagent systems under dynamically changing interaction topologies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ren-2005-consensus.md). Unreliable directed exchange is related but not automatically the same delay model. Catalogue depth: abstract.
+- [[olfati-saber-2004-consensus]] — [Consensus Problems in Networks of Agents With Switching Topology and Time-Delays](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/olfati-saber-2004-consensus.md). Closest theoretical anchor links topology, convergence and delay assumptions. Catalogue depth: abstract.
+- [[olfati-saber-2007-consensus]] — [Consensus and Cooperation in Networked Multi-Agent Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/olfati-saber-2007-consensus.md). Review reports shortcut benefits and provides baseline context. Catalogue depth: abstract.
+- [[ren-2005-consensus]] — [Consensus seeking in multiagent systems under dynamically changing interaction topologies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ren-2005-consensus.md). Unreliable directed exchange is related but not automatically the same delay model. Catalogue depth: abstract.
 
 <a id="phy-27"></a>
 ### PHY-27 — Movement as a synchronization resource
@@ -1063,9 +1063,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[fujiwara-2011-synchronization]] — [Synchronization in networks of mobile oscillators](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/fujiwara-2011-synchronization.md). Closest prior establishes competition between movement and local synchronization times. Catalogue depth: abstract.
-- [[amichay-2025-integration]] — [On the integration of collective motion and temporal synchrony in animal collectives](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/amichay-2025-integration.md). Review framing highlights interaction-network mixing. Catalogue depth: skim.
-- [[dorfler-2014-synchronization]] — [Synchronization in complex networks of phase oscillators: A survey](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/dorfler-2014-synchronization.md). Synchronization definitions and static-network reference conditions. Catalogue depth: skim.
+- [[fujiwara-2011-synchronization]] — [Synchronization in networks of mobile oscillators](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/fujiwara-2011-synchronization.md). Closest prior establishes competition between movement and local synchronization times. Catalogue depth: abstract.
+- [[amichay-2025-integration]] — [On the integration of collective motion and temporal synchrony in animal collectives](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/amichay-2025-integration.md). Review framing highlights interaction-network mixing. Catalogue depth: skim.
+- [[dorfler-2014-synchronization]] — [Synchronization in complex networks of phase oscillators: A survey](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/dorfler-2014-synchronization.md). Synchronization definitions and static-network reference conditions. Catalogue depth: skim.
 
 <a id="phy-28"></a>
 ### PHY-28 — A useful phase wave without global synchrony
@@ -1092,9 +1092,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[yoon-2022-sync]] — [Sync and Swarm: Solvable Model of Nonidentical Swarmalators](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yoon-2022-sync.md). Closest solvable model already has phase-wave states. Catalogue depth: full.
-- [[ceron-2023-diverse]] — [Diverse behaviors in non-uniform chiral and non-chiral swarmalators](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ceron-2023-diverse.md). Richer spatial and phase patterns reinforce the metric distinction. Catalogue depth: full.
-- [[gh-khev-swarmalators]] — [swarmalators: O'Keeffe's source code for swarmalator models (Mathematica and others) across a dozen papers](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-khev-swarmalators.md). Potential reference implementation; not run in this pass. Catalogue depth: skim.
+- [[yoon-2022-sync]] — [Sync and Swarm: Solvable Model of Nonidentical Swarmalators](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/yoon-2022-sync.md). Closest solvable model already has phase-wave states. Catalogue depth: full.
+- [[ceron-2023-diverse]] — [Diverse behaviors in non-uniform chiral and non-chiral swarmalators](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ceron-2023-diverse.md). Richer spatial and phase patterns reinforce the metric distinction. Catalogue depth: full.
+- [[gh-khev-swarmalators]] — [swarmalators: O'Keeffe's source code for swarmalator models (Mathematica and others) across a dozen papers](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-khev-swarmalators.md). Potential reference implementation; not run in this pass. Catalogue depth: skim.
 
 <a id="phy-29"></a>
 ### PHY-29 — How distribution tails change swarmalator predictions
@@ -1121,9 +1121,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[yoon-2022-sync]] — [Sync and Swarm: Solvable Model of Nonidentical Swarmalators](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yoon-2022-sync.md). Closest analytic result uses Lorentzian heterogeneity for tractability. Catalogue depth: full.
-- [[ceron-2023-diverse]] — [Diverse behaviors in non-uniform chiral and non-chiral swarmalators](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ceron-2023-diverse.md). Related numerical study varies heterogeneity in a different two-dimensional model. Catalogue depth: full.
-- [[dorfler-2014-synchronization]] — [Synchronization in complex networks of phase oscillators: A survey](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/dorfler-2014-synchronization.md). Oscillator-disorder context; no automatic transfer of thresholds. Catalogue depth: skim.
+- [[yoon-2022-sync]] — [Sync and Swarm: Solvable Model of Nonidentical Swarmalators](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/yoon-2022-sync.md). Closest analytic result uses Lorentzian heterogeneity for tractability. Catalogue depth: full.
+- [[ceron-2023-diverse]] — [Diverse behaviors in non-uniform chiral and non-chiral swarmalators](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ceron-2023-diverse.md). Related numerical study varies heterogeneity in a different two-dimensional model. Catalogue depth: full.
+- [[dorfler-2014-synchronization]] — [Synchronization in complex networks of phase oscillators: A survey](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/dorfler-2014-synchronization.md). Oscillator-disorder context; no automatic transfer of thresholds. Catalogue depth: skim.
 
 <a id="phy-30"></a>
 ### PHY-30 — Synchrony versus shared-channel congestion
@@ -1150,9 +1150,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[dorfler-2014-synchronization]] — [Synchronization in complex networks of phase oscillators: A survey](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/dorfler-2014-synchronization.md). Provides oscillator and synchronization terminology, not a congestion result. Catalogue depth: skim.
-- [[sarfati-2021-self]] — [Self-organization in natural swarms of Photinus carolinus synchronous fireflies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/sarfati-2021-self.md). Biological burst synchronization is an analogy, with a very different optical channel. Catalogue depth: skim.
-- [[olfati-saber-2004-consensus]] — [Consensus Problems in Networks of Agents With Switching Topology and Time-Delays](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/olfati-saber-2004-consensus.md). Delay-sensitive consensus motivates the feedback path from queues to coordination. Catalogue depth: abstract.
+- [[dorfler-2014-synchronization]] — [Synchronization in complex networks of phase oscillators: A survey](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/dorfler-2014-synchronization.md). Provides oscillator and synchronization terminology, not a congestion result. Catalogue depth: skim.
+- [[sarfati-2021-self]] — [Self-organization in natural swarms of Photinus carolinus synchronous fireflies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/sarfati-2021-self.md). Biological burst synchronization is an analogy, with a very different optical channel. Catalogue depth: skim.
+- [[olfati-saber-2004-consensus]] — [Consensus Problems in Networks of Agents With Switching Topology and Time-Delays](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/olfati-saber-2004-consensus.md). Delay-sensitive consensus motivates the feedback path from queues to coordination. Catalogue depth: abstract.
 
 <a id="criticality-measurement"></a>
 ## Criticality, information and measurement
@@ -1182,8 +1182,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[cavagna-2010-scale]] — [Scale-free correlations in starling flocks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/cavagna-2010-scale.md). Static correlation precedent; not alone a criticality diagnostic. Catalogue depth: full.
-- [[mora-2011-biological]] — [Are Biological Systems Poised at Criticality?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mora-2011-biological.md). Criticality framework whose signatures require competing explanations. Catalogue depth: full.
+- [[cavagna-2010-scale]] — [Scale-free correlations in starling flocks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/cavagna-2010-scale.md). Static correlation precedent; not alone a criticality diagnostic. Catalogue depth: full.
+- [[mora-2011-biological]] — [Are Biological Systems Poised at Criticality?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/mora-2011-biological.md). Criticality framework whose signatures require competing explanations. Catalogue depth: full.
 
 <a id="met-02"></a>
 ### MET-02 — Sensitivity versus false alarms
@@ -1210,8 +1210,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[poel-2022-subcritical]] — [Subcritical escape waves in schooling fish](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/poel-2022-subcritical.md). Direct closest prior for risk-dependent distance to criticality; this is a replication/transfer test. Catalogue depth: full.
-- [[klamser-2021-collective]] — [Collective predator evasion: Putting the criticality hypothesis to the test](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/klamser-2021-collective.md). Functional criticality comparison in predator evasion. Catalogue depth: full.
+- [[poel-2022-subcritical]] — [Subcritical escape waves in schooling fish](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/poel-2022-subcritical.md). Direct closest prior for risk-dependent distance to criticality; this is a replication/transfer test. Catalogue depth: full.
+- [[klamser-2021-collective]] — [Collective predator evasion: Putting the criticality hypothesis to the test](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/klamser-2021-collective.md). Functional criticality comparison in predator evasion. Catalogue depth: full.
 
 <a id="met-03"></a>
 ### MET-03 — What incomplete observation hides
@@ -1238,8 +1238,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[levina-2022-tackling]] — [Tackling the subsampling problem to infer collective properties from limited data](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/levina-2022-tackling.md). Subsampling problem and candidate corrections; catalogue at abstract depth. Catalogue depth: abstract.
-- [[han-2024-collective]] — [Collective relational inference for learning heterogeneous interactions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/han-2024-collective.md). Interaction inference offers a second target beyond aggregate order. Catalogue depth: full.
+- [[levina-2022-tackling]] — [Tackling the subsampling problem to infer collective properties from limited data](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/levina-2022-tackling.md). Subsampling problem and candidate corrections; catalogue at abstract depth. Catalogue depth: abstract.
+- [[han-2024-collective]] — [Collective relational inference for learning heterogeneous interactions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/han-2024-collective.md). Interaction inference offers a second target beyond aggregate order. Catalogue depth: full.
 
 <a id="met-04"></a>
 ### MET-04 — Does a synergy score predict useful complementarity?
@@ -1266,8 +1266,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[rosas-2020-reconciling]] — [Reconciling emergences: An information-theoretic approach to identify causal emergence in multivariate data](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/rosas-2020-reconciling.md). Information decomposition framework with observational assumptions. Catalogue depth: full.
-- [[riedl-2025-emergent]] — [Emergent Coordination in Multi-Agent Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/riedl-2025-emergent.md). Task-specific collective information measurements; mechanism needs intervention. Catalogue depth: full.
+- [[rosas-2020-reconciling]] — [Reconciling emergences: An information-theoretic approach to identify causal emergence in multivariate data](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/rosas-2020-reconciling.md). Information decomposition framework with observational assumptions. Catalogue depth: full.
+- [[riedl-2025-emergent]] — [Emergent Coordination in Multi-Agent Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/riedl-2025-emergent.md). Task-specific collective information measurements; mechanism needs intervention. Catalogue depth: full.
 
 <a id="met-05"></a>
 ### MET-05 — Information flow under a shared driver
@@ -1294,8 +1294,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[lizier-2008-local]] — [Local information transfer as a spatiotemporal filter for complex systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lizier-2008-local.md). Information-transfer measurement, not automatic intervention identification. Catalogue depth: abstract.
-- [[shalizi-2011-homophily]] — [Homophily and Contagion Are Generically Confounded in Observational Social Network Studies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shalizi-2011-homophily.md). General warning about confounded apparent transmission. Catalogue depth: skim.
+- [[lizier-2008-local]] — [Local information transfer as a spatiotemporal filter for complex systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lizier-2008-local.md). Information-transfer measurement, not automatic intervention identification. Catalogue depth: abstract.
+- [[shalizi-2011-homophily]] — [Homophily and Contagion Are Generically Confounded in Observational Social Network Studies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/shalizi-2011-homophily.md). General warning about confounded apparent transmission. Catalogue depth: skim.
 
 <a id="met-06"></a>
 ### MET-06 — A transition or a slow relaxation?
@@ -1322,8 +1322,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[vicsek-1995-novel]] — [Novel Type of Phase Transition in a System of Self-Driven Particles](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vicsek-1995-novel.md). Order transition reference to reproduce before extension. Catalogue depth: full.
-- [[tunstrom-2013-collective]] — [Collective States, Multistability and Transitional Behavior in Schooling Fish](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tunstrom-2013-collective.md). Collective-state and multistability motivation. Catalogue depth: abstract.
+- [[vicsek-1995-novel]] — [Novel Type of Phase Transition in a System of Self-Driven Particles](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/vicsek-1995-novel.md). Order transition reference to reproduce before extension. Catalogue depth: full.
+- [[tunstrom-2013-collective]] — [Collective States, Multistability and Transitional Behavior in Schooling Fish](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/tunstrom-2013-collective.md). Collective-state and multistability motivation. Catalogue depth: abstract.
 
 <a id="met-07"></a>
 ### MET-07 — Can different mechanisms produce the same trajectories?
@@ -1350,8 +1350,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[han-2024-collective]] — [Collective relational inference for learning heterogeneous interactions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/han-2024-collective.md). Closest interaction-inference method; assumptions on types and neighborhoods need audit. Catalogue depth: full.
-- [[gao-2024-learning]] — [Learning interpretable dynamics of stochastic complex systems from experimental data](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/gao-2024-learning.md). Interpretable stochastic-dynamics inference comparator. Catalogue depth: abstract.
+- [[han-2024-collective]] — [Collective relational inference for learning heterogeneous interactions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/han-2024-collective.md). Closest interaction-inference method; assumptions on types and neighborhoods need audit. Catalogue depth: full.
+- [[gao-2024-learning]] — [Learning interpretable dynamics of stochastic complex systems from experimental data](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/gao-2024-learning.md). Interpretable stochastic-dynamics inference comparator. Catalogue depth: abstract.
 
 <a id="met-08"></a>
 ### MET-08 — Early warnings on genuinely new failures
@@ -1378,8 +1378,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[mora-2011-biological]] — [Are Biological Systems Poised at Criticality?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mora-2011-biological.md). Criticality provides motivation, not evidence for this warning system. Catalogue depth: full.
-- [[sooter-2025-defining]] — [Defining and measuring proximity to criticality](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/sooter-2025-defining.md). Measurement definitions to audit before interpreting proximity to a transition. Catalogue depth: skim.
+- [[mora-2011-biological]] — [Are Biological Systems Poised at Criticality?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/mora-2011-biological.md). Criticality provides motivation, not evidence for this warning system. Catalogue depth: full.
+- [[sooter-2025-defining]] — [Defining and measuring proximity to criticality](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/sooter-2025-defining.md). Measurement definitions to audit before interpreting proximity to a transition. Catalogue depth: skim.
 
 <a id="marl-emergence"></a>
 ## Multi-agent RL and emergent coordination
@@ -1409,8 +1409,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[lowe-2017-multi]] — [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lowe-2017-multi.md). Policy ensembles and centralized training predecessor. Catalogue depth: skim.
-- [[gh-google-deepmind-meltingpot]] — [Melting Pot 2.0: 50+ multi-agent substrates and 256 test scenarios for generalisation to novel social situations](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-google-deepmind-meltingpot.md). Candidate social generalization environment; exact substrate must be selected. Catalogue depth: skim.
+- [[lowe-2017-multi]] — [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lowe-2017-multi.md). Policy ensembles and centralized training predecessor. Catalogue depth: skim.
+- [[gh-google-deepmind-meltingpot]] — [Melting Pot 2.0: 50+ multi-agent substrates and 256 test scenarios for generalisation to novel social situations](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-google-deepmind-meltingpot.md). Candidate social generalization environment; exact substrate must be selected. Catalogue depth: skim.
 
 <a id="rl-02"></a>
 ### RL-02 — Credit for a rare essential contribution
@@ -1437,8 +1437,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[foerster-2018-counterfactual]] — [Counterfactual Multi-Agent Policy Gradients](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/foerster-2018-counterfactual.md). Direct algorithmic precedent; novelty must be in the task boundary. Catalogue depth: abstract.
-- [[rashid-2018-qmix]] — [QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/rashid-2018-qmix.md). Cooperative value-factorization comparison. Catalogue depth: abstract.
+- [[foerster-2018-counterfactual]] — [Counterfactual Multi-Agent Policy Gradients](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/foerster-2018-counterfactual.md). Direct algorithmic precedent; novelty must be in the task boundary. Catalogue depth: abstract.
+- [[rashid-2018-qmix]] — [QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/rashid-2018-qmix.md). Cooperative value-factorization comparison. Catalogue depth: abstract.
 
 <a id="rl-03"></a>
 ### RL-03 — Messages that remain useful under a broken channel
@@ -1465,9 +1465,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[foerster-2016-learning]] — [Learning to Communicate with Deep Multi-Agent Reinforcement Learning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/foerster-2016-learning.md). Learned communication and channel design predecessor. Catalogue depth: abstract.
-- [[gh-farama-foundation-pettingzoo]] — [PettingZoo: multi-agent Gymnasium-style API and environment families (Atari, Butterfly, Classic, MPE, SISL)](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-farama-foundation-pettingzoo.md). Candidate controlled multi-agent environment interface. Catalogue depth: skim.
-- [[zaslavsky-2023-noga]] — [Noga Zaslavsky: Information-constrained Emergent Communication in Multi agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/talks/zaslavsky-2023-noga.md). Talk transcript distinguishes communication complexity, representation distortion and downstream utility; no security guarantee or precise effect size is assumed. Catalogue depth: full.
+- [[foerster-2016-learning]] — [Learning to Communicate with Deep Multi-Agent Reinforcement Learning](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/foerster-2016-learning.md). Learned communication and channel design predecessor. Catalogue depth: abstract.
+- [[gh-farama-foundation-pettingzoo]] — [PettingZoo: multi-agent Gymnasium-style API and environment families (Atari, Butterfly, Classic, MPE, SISL)](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-farama-foundation-pettingzoo.md). Candidate controlled multi-agent environment interface. Catalogue depth: skim.
+- [[zaslavsky-2023-noga]] — [Noga Zaslavsky: Information-constrained Emergent Communication in Multi agent Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/talks/zaslavsky-2023-noga.md). Talk transcript distinguishes communication complexity, representation distortion and downstream utility; no security guarantee or precise effect size is assumed. Catalogue depth: full.
 
 <a id="rl-04"></a>
 ### RL-04 — When a mean neighbor is misleading
@@ -1494,8 +1494,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[yang-2018-mean]] — [Mean Field Multi-Agent Reinforcement Learning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yang-2018-mean.md). Mean-field approximation to audit under heterogeneous interactions. Catalogue depth: full.
-- [[huttenrauch-2019-deep]] — [Deep Reinforcement Learning for Swarm Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/huttenrauch-2019-deep.md). Mean observation embedding is a distinct baseline. Catalogue depth: full.
+- [[yang-2018-mean]] — [Mean Field Multi-Agent Reinforcement Learning](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/yang-2018-mean.md). Mean-field approximation to audit under heterogeneous interactions. Catalogue depth: full.
+- [[huttenrauch-2019-deep]] — [Deep Reinforcement Learning for Swarm Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/huttenrauch-2019-deep.md). Mean observation embedding is a distinct baseline. Catalogue depth: full.
 
 <a id="rl-05"></a>
 ### RL-05 — Size transfer or topology transfer?
@@ -1522,8 +1522,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[huttenrauch-2019-deep]] — [Deep Reinforcement Learning for Swarm Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/huttenrauch-2019-deep.md). Size-invariant observation representation precedent. Catalogue depth: full.
-- [[tolstaya-2020-learning]] — [Learning Decentralized Controllers for Robot Swarms with Graph Neural Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tolstaya-2020-learning.md). Local graph-controller comparison, originally imitation learning. Catalogue depth: abstract.
+- [[huttenrauch-2019-deep]] — [Deep Reinforcement Learning for Swarm Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/huttenrauch-2019-deep.md). Size-invariant observation representation precedent. Catalogue depth: full.
+- [[tolstaya-2020-learning]] — [Learning Decentralized Controllers for Robot Swarms with Graph Neural Networks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/tolstaya-2020-learning.md). Local graph-controller comparison, originally imitation learning. Catalogue depth: abstract.
 
 <a id="rl-06"></a>
 ### RL-06 — Emergent strategy or simulator exploit?
@@ -1550,8 +1550,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[baker-2020-emergent]] — [Emergent Tool Use From Multi-Agent Autocurricula](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/baker-2020-emergent.md). Autocurriculum and simulator-exploit precedent, expensive original setting. Catalogue depth: full.
-- [[gh-proroklab-vectorizedmultiagentsimulator]] — [VMAS: vectorised differentiable 2D multi-agent simulator in PyTorch with multi-robot scenarios including flocking](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-proroklab-vectorizedmultiagentsimulator.md). Possible small simulation substrate, not a reproduced hide-and-seek implementation. Catalogue depth: ran.
+- [[baker-2020-emergent]] — [Emergent Tool Use From Multi-Agent Autocurricula](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/baker-2020-emergent.md). Autocurriculum and simulator-exploit precedent, expensive original setting. Catalogue depth: full.
+- [[gh-proroklab-vectorizedmultiagentsimulator]] — [VMAS: vectorised differentiable 2D multi-agent simulator in PyTorch with multi-robot scenarios including flocking](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-proroklab-vectorizedmultiagentsimulator.md). Possible small simulation substrate, not a reproduced hide-and-seek implementation. Catalogue depth: ran.
 
 <a id="rl-07"></a>
 ### RL-07 — Good reward, bad collective behavior
@@ -1578,8 +1578,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[durve-2020-learning]] — [Learning to flock through reinforcement](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/durve-2020-learning.md). Learning flocking predecessor to audit for reward definition. Catalogue depth: full.
-- [[brambati-2025-learning]] — [Learning to flock in open space by avoiding collisions and staying together](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/brambati-2025-learning.md). Collision and cohesion learning comparator. Catalogue depth: full.
+- [[durve-2020-learning]] — [Learning to flock through reinforcement](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/durve-2020-learning.md). Learning flocking predecessor to audit for reward definition. Catalogue depth: full.
+- [[brambati-2025-learning]] — [Learning to flock in open space by avoiding collisions and staying together](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/brambati-2025-learning.md). Collision and cohesion learning comparator. Catalogue depth: full.
 
 <a id="rl-08"></a>
 ### RL-08 — Coordinating while partners keep learning
@@ -1606,8 +1606,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[lowe-2017-multi]] — [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lowe-2017-multi.md). Nonstationarity in MARL motivation. Catalogue depth: skim.
-- [[gh-bold-lab-ai-jaxmarl]] — [JaxMARL: GPU-vectorised MARL environments (SMAX, MPE, Overcooked, Hanabi, STORM) and baselines in JAX](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-bold-lab-ai-jaxmarl.md). Candidate training suite; no run or speed claim from this pass. Catalogue depth: skim.
+- [[lowe-2017-multi]] — [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lowe-2017-multi.md). Nonstationarity in MARL motivation. Catalogue depth: skim.
+- [[gh-bold-lab-ai-jaxmarl]] — [JaxMARL: GPU-vectorised MARL environments (SMAX, MPE, Overcooked, Hanabi, STORM) and baselines in JAX](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-bold-lab-ai-jaxmarl.md). Candidate training suite; no run or speed claim from this pass. Catalogue depth: skim.
 
 <a id="sim-06"></a>
 ### SIM-06 — When does offline policy evaluation stop ranking policies correctly?
@@ -1634,9 +1634,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[data-og-marl-2024]] — [OG-MARL offline multi-agent RL datasets: SMAC v1/v2, MAMuJoCo, Flatland and RWARE experience, plus re-hosted prior-work datasets](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-og-marl-2024.md). Concrete offline MARL archives; the catalogue’s 74 index rows are not the trajectory count. Catalogue depth: skim.
-- [[ellis-2022-smacv2]] — [SMACv2: An Improved Benchmark for Cooperative Multi-Agent Reinforcement Learning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ellis-2022-smacv2.md). Procedural task variability motivates held-out online validation, without requiring its heavy environment for the initial test. Catalogue depth: full.
-- [[papoudakis-2021-benchmarking]] — [Benchmarking Multi-Agent Deep Reinforcement Learning Algorithms in Cooperative Tasks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/papoudakis-2021-benchmarking.md). Multi-environment cooperative MARL comparison context for baseline and seed discipline. Catalogue depth: skim.
+- [[data-og-marl-2024]] — [OG-MARL offline multi-agent RL datasets: SMAC v1/v2, MAMuJoCo, Flatland and RWARE experience, plus re-hosted prior-work datasets](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-og-marl-2024.md). Concrete offline MARL archives; the catalogue’s 74 index rows are not the trajectory count. Catalogue depth: skim.
+- [[ellis-2022-smacv2]] — [SMACv2: An Improved Benchmark for Cooperative Multi-Agent Reinforcement Learning](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ellis-2022-smacv2.md). Procedural task variability motivates held-out online validation, without requiring its heavy environment for the initial test. Catalogue depth: full.
+- [[papoudakis-2021-benchmarking]] — [Benchmarking Multi-Agent Deep Reinforcement Learning Algorithms in Cooperative Tasks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/papoudakis-2021-benchmarking.md). Multi-environment cooperative MARL comparison context for baseline and seed discipline. Catalogue depth: skim.
 
 <a id="llm-agent-swarms"></a>
 ## LLM agent swarms
@@ -1666,11 +1666,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[li-2026-diverse]] — [Diverse Evidence, Better Forecasts: Multi-Agent Deliberation Under Information Asymmetry](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-diverse.md). Direct evidence-partitioning precedent; this factorial tests added family effects and task transfer. Catalogue depth: abstract.
-- [[kim-2026-are]] — [Are Diversity Metrics Measuring Diversity? A Capability-Controlled Audit of Majority-Vote Gain in LLM Ensembles](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2026-are.md). Capability-controlled audit warns that raw diversity metrics can re-express accuracy. Catalogue depth: abstract.
-- [[rai-2026-when]] — [When Too Many Cooks Spoil the Broth: Three Failure Modes of Multi-Agent LLM Reliability](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/rai-2026-when.md). Reported cross-family co-failure on rare queries cautions against treating vendor labels as independent evidence. Catalogue depth: abstract.
+- [[li-2026-diverse]] — [Diverse Evidence, Better Forecasts: Multi-Agent Deliberation Under Information Asymmetry](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/li-2026-diverse.md). Direct evidence-partitioning precedent; this factorial tests added family effects and task transfer. Catalogue depth: abstract.
+- [[kim-2026-are]] — [Are Diversity Metrics Measuring Diversity? A Capability-Controlled Audit of Majority-Vote Gain in LLM Ensembles](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kim-2026-are.md). Capability-controlled audit warns that raw diversity metrics can re-express accuracy. Catalogue depth: abstract.
+- [[rai-2026-when]] — [When Too Many Cooks Spoil the Broth: Three Failure Modes of Multi-Agent LLM Reliability](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/rai-2026-when.md). Reported cross-family co-failure on rare queries cautions against treating vendor labels as independent evidence. Catalogue depth: abstract.
 
-**Related team work:** [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md), [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md).
+**Related team work:** [diversity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/diversity.md), [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md).
 
 <a id="soc-02"></a>
 ### SOC-02 — Measure effective team size on distributed evidence
@@ -1697,11 +1697,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[bertalanic-2026-ringelmann]] — [The Ringelmann Effect in Multi-Agent LLM Systems: A Scaling Law for Effective Team Size](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bertalanic-2026-ringelmann.md). Supplies a QA-based effective-size model and placebo comparisons. Catalogue depth: full.
-- [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2026-silo.md). Already studies distributed evidence; qualitative overhead is not a new finding. Catalogue depth: full.
-- [[begin-2026-preference]] — [Preference Optimization Drives Monoculture in LLM Prediction Markets](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/begin-2026-preference.md). Already measures effective-size saturation in a prediction market; its Kish proxy is not derived from market dynamics. Catalogue depth: skim.
+- [[bertalanic-2026-ringelmann]] — [The Ringelmann Effect in Multi-Agent LLM Systems: A Scaling Law for Effective Team Size](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/bertalanic-2026-ringelmann.md). Supplies a QA-based effective-size model and placebo comparisons. Catalogue depth: full.
+- [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhang-2026-silo.md). Already studies distributed evidence; qualitative overhead is not a new finding. Catalogue depth: full.
+- [[begin-2026-preference]] — [Preference Optimization Drives Monoculture in LLM Prediction Markets](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/begin-2026-preference.md). Already measures effective-size saturation in a prediction market; its Kish proxy is not derived from market dynamics. Catalogue depth: skim.
 
-**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md), [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md).
+**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md), [diversity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/diversity.md).
 
 <a id="soc-03"></a>
 ### SOC-03 — Distinguish group failure from a strict scoring rule
@@ -1728,10 +1728,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2026-silo.md). Its all-agent success criterion motivates this direct measurement audit. Catalogue depth: full.
-- [[kim-2025-towards]] — [Towards a Science of Scaling Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2025-towards.md). Documents task-dependent scaling rather than a universal population law. Catalogue depth: full.
+- [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhang-2026-silo.md). Its all-agent success criterion motivates this direct measurement audit. Catalogue depth: full.
+- [[kim-2025-towards]] — [Towards a Science of Scaling Agent Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kim-2025-towards.md). Documents task-dependent scaling rather than a universal population law. Catalogue depth: full.
 
-**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md), [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md).
+**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md), [coordination](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/coordination.md).
 
 <a id="soc-04"></a>
 ### SOC-04 — Ablate why semantic routing works
@@ -1758,10 +1758,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[tambwekar-2026-proxifield]] — [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tambwekar-2026-proxifield.md). Closest predecessor; library audit notes missing per-signal ablation. Catalogue depth: full.
-- [[zhang-2024-cut]] — [Cut the Crap: An Economical Communication Pipeline for LLM-based Multi-Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2024-cut.md). Establishes communication pruning as existing work, requiring a strong sparse baseline. Catalogue depth: skim.
+- [[tambwekar-2026-proxifield]] — [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/tambwekar-2026-proxifield.md). Closest predecessor; library audit notes missing per-signal ablation. Catalogue depth: full.
+- [[zhang-2024-cut]] — [Cut the Crap: An Economical Communication Pipeline for LLM-based Multi-Agent Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhang-2024-cut.md). Establishes communication pruning as existing work, requiring a strong sparse baseline. Catalogue depth: skim.
 
-**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md), [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md).
+**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md), [coordination](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/coordination.md).
 
 <a id="soc-05"></a>
 ### SOC-05 — Measure reading capacity separately from wording bias
@@ -1788,10 +1788,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[fukushima-2026-message]] — [Message capacity and claim wording set the transition points of collective truth-finding in language-model networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/fukushima-2026-message.md). Direct prior measuring inbox capacity and claim wording; this is a transfer test. Catalogue depth: abstract.
-- [[liu-2026-social]] — [Social Networks of LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2026-social.md). Attention-based proxy supplies conditional network predictions, not a universal theorem for LLMs. Catalogue depth: skim.
+- [[fukushima-2026-message]] — [Message capacity and claim wording set the transition points of collective truth-finding in language-model networks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/fukushima-2026-message.md). Direct prior measuring inbox capacity and claim wording; this is a transfer test. Catalogue depth: abstract.
+- [[liu-2026-social]] — [Social Networks of LLM Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/liu-2026-social.md). Attention-based proxy supplies conditional network predictions, not a universal theorem for LLMs. Catalogue depth: skim.
 
-**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md), [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md).
+**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md), [quorum](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/quorum.md).
 
 <a id="soc-06"></a>
 ### SOC-06 — Social influence or ordinary anchoring?
@@ -1818,10 +1818,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[yang-2026-when]] — [When Is Emergent Consensus Real? A Measured Coupling Gain and a Validity Diagnostic for LLM Agent Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yang-2026-when.md). Measures coupling and proposes randomized initial-condition diagnostics. Catalogue depth: skim.
-- [[brockers-2025-disentangling]] — [Disentangling Interaction and Bias Effects in Opinion Dynamics of Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/brockers-2025-disentangling.md). Separates interaction from topic, agreement and anchoring biases in dyads. Catalogue depth: abstract.
+- [[yang-2026-when]] — [When Is Emergent Consensus Real? A Measured Coupling Gain and a Validity Diagnostic for LLM Agent Societies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/yang-2026-when.md). Measures coupling and proposes randomized initial-condition diagnostics. Catalogue depth: skim.
+- [[brockers-2025-disentangling]] — [Disentangling Interaction and Bias Effects in Opinion Dynamics of Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/brockers-2025-disentangling.md). Separates interaction from topic, agreement and anchoring biases in dyads. Catalogue depth: abstract.
 
-**Related team work:** [leadership](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/leadership.md), [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md).
+**Related team work:** [leadership](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/leadership.md), [dissent](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/dissent.md).
 
 <a id="soc-07"></a>
 ### SOC-07 — Protect private judgments before public discussion
@@ -1848,11 +1848,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[shehata-2026-bystander]] — [The Bystander Effect in Multi-Agent Reasoning: Quantifying Cognitive Loafing in Collaborative Interactions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shehata-2026-bystander.md). Abstract reports private/public conformity gaps; this design does not assume its internal-state interpretation. Catalogue depth: abstract.
-- [[choi-2025-debate]] — [Debate or Vote: Which Yields Better Decisions in Multi-Agent Large Language Models?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/choi-2025-debate.md). Provides a voting baseline and cautions against attributing gains to interaction alone. Catalogue depth: abstract.
-- [[ren-2026-sepal]] — [SEPAL: Separated Expert Pairs with Answer-Level Fusion for Reliable LLM Collaboration](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ren-2026-sepal.md). Private actor-critic groups with late answer fusion are a direct separation precedent; this card isolates initial commitment. Catalogue depth: abstract.
+- [[shehata-2026-bystander]] — [The Bystander Effect in Multi-Agent Reasoning: Quantifying Cognitive Loafing in Collaborative Interactions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/shehata-2026-bystander.md). Abstract reports private/public conformity gaps; this design does not assume its internal-state interpretation. Catalogue depth: abstract.
+- [[choi-2025-debate]] — [Debate or Vote: Which Yields Better Decisions in Multi-Agent Large Language Models?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/choi-2025-debate.md). Provides a voting baseline and cautions against attributing gains to interaction alone. Catalogue depth: abstract.
+- [[ren-2026-sepal]] — [SEPAL: Separated Expert Pairs with Answer-Level Fusion for Reliable LLM Collaboration](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ren-2026-sepal.md). Private actor-critic groups with late answer fusion are a direct separation precedent; this card isolates initial commitment. Catalogue depth: abstract.
 
-**Related team work:** [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md), [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md).
+**Related team work:** [dissent](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/dissent.md), [diversity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/diversity.md).
 
 <a id="soc-08"></a>
 ### SOC-08 — Stop on evidence sufficiency instead of verbal agreement
@@ -1879,10 +1879,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2026-silo.md). Reports premature submission and distributed integration difficulties. Catalogue depth: full.
-- [[choi-2025-debate]] — [Debate or Vote: Which Yields Better Decisions in Multi-Agent Large Language Models?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/choi-2025-debate.md). Shows aggregation baselines can explain apparent debate benefits. Catalogue depth: abstract.
+- [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhang-2026-silo.md). Reports premature submission and distributed integration difficulties. Catalogue depth: full.
+- [[choi-2025-debate]] — [Debate or Vote: Which Yields Better Decisions in Multi-Agent Large Language Models?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/choi-2025-debate.md). Shows aggregation baselines can explain apparent debate benefits. Catalogue depth: abstract.
 
-**Related team work:** [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md), [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md).
+**Related team work:** [quorum](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/quorum.md), [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md).
 
 <a id="soc-09"></a>
 ### SOC-09 — Evidence-seeking critics versus generic opposition
@@ -1909,10 +1909,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[du-2023-improving]] — [Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/du-2023-improving.md). Introduces debate as a baseline rather than establishing this critic mechanism. Catalogue depth: abstract.
-- [[choi-2025-debate]] — [Debate or Vote: Which Yields Better Decisions in Multi-Agent Large Language Models?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/choi-2025-debate.md). Motivates separating discussion gains from sampling and voting. Catalogue depth: abstract.
+- [[du-2023-improving]] — [Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/du-2023-improving.md). Introduces debate as a baseline rather than establishing this critic mechanism. Catalogue depth: abstract.
+- [[choi-2025-debate]] — [Debate or Vote: Which Yields Better Decisions in Multi-Agent Large Language Models?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/choi-2025-debate.md). Motivates separating discussion gains from sampling and voting. Catalogue depth: abstract.
 
-**Related team work:** [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md).
+**Related team work:** [dissent](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/dissent.md).
 
 <a id="soc-10"></a>
 ### SOC-10 — Test dissent quality rather than dissent quantity
@@ -1939,11 +1939,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[kraidia-2026-when]] — [When collaboration fails: persuasion driven adversarial influence in multi agent large language model debate](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kraidia-2026-when.md). Ordinary persuasive arguments can distort tested debates; effects remain task-specific. Catalogue depth: full.
-- [[he-2026-minority]] — [Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/he-2026-minority.md). Minority-correct cases and a learned overturn rule are direct prior; this factorial isolates evidence from confidence. Catalogue depth: abstract.
-- [[shu-2026-forged]] — [Forged Peer Judgments Mislead Multimodal LLM Judge Panels: Source-Blind Anchoring and Panel-Consensus Verification](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shu-2026-forged.md). Quoted judgments can anchor recipients beyond source labels; here dissent is controlled and benign. Catalogue depth: abstract.
+- [[kraidia-2026-when]] — [When collaboration fails: persuasion driven adversarial influence in multi agent large language model debate](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kraidia-2026-when.md). Ordinary persuasive arguments can distort tested debates; effects remain task-specific. Catalogue depth: full.
+- [[he-2026-minority]] — [Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/he-2026-minority.md). Minority-correct cases and a learned overturn rule are direct prior; this factorial isolates evidence from confidence. Catalogue depth: abstract.
+- [[shu-2026-forged]] — [Forged Peer Judgments Mislead Multimodal LLM Judge Panels: Source-Blind Anchoring and Panel-Consensus Verification](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/shu-2026-forged.md). Quoted judgments can anchor recipients beyond source labels; here dissent is controlled and benign. Catalogue depth: abstract.
 
-**Related team work:** [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md), [whistleblowing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/whistleblowing.md).
+**Related team work:** [dissent](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/dissent.md), [whistleblowing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/whistleblowing.md).
 
 <a id="soc-11"></a>
 ### SOC-11 — Make uncertainty useful without forcing abstention
@@ -1970,11 +1970,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[tambwekar-2026-proxifield]] — [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tambwekar-2026-proxifield.md). Need matching already routes information; candidate tests message semantics and query value. Catalogue depth: full.
-- [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2026-silo.md). Distributed tasks motivate distinguishing information delivery from integration. Catalogue depth: full.
-- [[zhu-2026-demystifying]] — [Demystifying Multi-Agent Debate: The Role of Confidence and Diversity](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhu-2026-demystifying.md). Calibrated-confidence updates are existing intervention prior; missing-evidence requests need an incremental comparison. Catalogue depth: abstract.
+- [[tambwekar-2026-proxifield]] — [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/tambwekar-2026-proxifield.md). Need matching already routes information; candidate tests message semantics and query value. Catalogue depth: full.
+- [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhang-2026-silo.md). Distributed tasks motivate distinguishing information delivery from integration. Catalogue depth: full.
+- [[zhu-2026-demystifying]] — [Demystifying Multi-Agent Debate: The Role of Confidence and Diversity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhu-2026-demystifying.md). Calibrated-confidence updates are existing intervention prior; missing-evidence requests need an incremental comparison. Catalogue depth: abstract.
 
-**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md), [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md), [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md).
+**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md), [quorum](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/quorum.md), [dissent](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/dissent.md).
 
 <a id="soc-12"></a>
 ### SOC-12 — Useful disagreement after a changing task
@@ -2001,10 +2001,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[pavlova-2026-flag]] — [Flag Game: A Toy Model for Mechanistic Swarm Interpretability](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pavlova-2026-flag.md). Measures multiple collective end states; polarization itself is not established as safer. Catalogue depth: full.
-- [[ashery-2024-emergent]] — [Emergent social conventions and collective bias in LLM populations](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ashery-2024-emergent.md). Convention persistence motivates testing adaptation rather than celebrating consensus. Catalogue depth: full.
+- [[pavlova-2026-flag]] — [Flag Game: A Toy Model for Mechanistic Swarm Interpretability](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pavlova-2026-flag.md). Measures multiple collective end states; polarization itself is not established as safer. Catalogue depth: full.
+- [[ashery-2024-emergent]] — [Emergent social conventions and collective bias in LLM populations](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ashery-2024-emergent.md). Convention persistence motivates testing adaptation rather than celebrating consensus. Catalogue depth: full.
 
-**Related team work:** [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md), [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md), [culture](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/culture.md).
+**Related team work:** [diversity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/diversity.md), [dissent](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/dissent.md), [culture](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/culture.md).
 
 <a id="soc-13"></a>
 ### SOC-13 — Separate discovery time from discussion time
@@ -2031,10 +2031,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[kim-2025-towards]] — [Towards a Science of Scaling Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2025-towards.md). Shows architecture benefits depend on task structure; no universal delay rule follows. Catalogue depth: full.
-- [[pal-2026-swarmworld]] — [SwarmWorld: Stigmergic technological evolution in societies of language-model agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pal-2026-swarmworld.md). Separates portfolio benefits from strongest-artifact performance in shared environments. Catalogue depth: abstract.
+- [[kim-2025-towards]] — [Towards a Science of Scaling Agent Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kim-2025-towards.md). Shows architecture benefits depend on task structure; no universal delay rule follows. Catalogue depth: full.
+- [[pal-2026-swarmworld]] — [SwarmWorld: Stigmergic technological evolution in societies of language-model agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pal-2026-swarmworld.md). Separates portfolio benefits from strongest-artifact performance in shared environments. Catalogue depth: abstract.
 
-**Related team work:** [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md), [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md), [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md).
+**Related team work:** [coordination](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/coordination.md), [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md), [diversity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/diversity.md).
 
 <a id="soc-14"></a>
 ### SOC-14 — Treat shared artifacts as a communication channel
@@ -2061,10 +2061,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[pal-2026-swarmworld]] — [SwarmWorld: Stigmergic technological evolution in societies of language-model agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pal-2026-swarmworld.md). Direct stigmergy precedent; this is a task and observability boundary test. Catalogue depth: abstract.
-- [[park-2023-generative]] — [Generative Agents: Interactive Simulacra of Human Behavior](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/park-2023-generative.md). Memory and observation architecture is background, not evidence of functional gains. Catalogue depth: abstract.
+- [[pal-2026-swarmworld]] — [SwarmWorld: Stigmergic technological evolution in societies of language-model agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pal-2026-swarmworld.md). Direct stigmergy precedent; this is a task and observability boundary test. Catalogue depth: abstract.
+- [[park-2023-generative]] — [Generative Agents: Interactive Simulacra of Human Behavior](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/park-2023-generative.md). Memory and observation architecture is background, not evidence of functional gains. Catalogue depth: abstract.
 
-**Related team work:** [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md), [culture](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/culture.md), [commons](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/commons.md).
+**Related team work:** [coordination](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/coordination.md), [culture](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/culture.md), [commons](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/commons.md).
 
 <a id="soc-15"></a>
 ### SOC-15 — Asynchronous teams under uneven tool latency
@@ -2091,11 +2091,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2026-silo.md). Distributed coordination tasks supply a benchmark family, not an asynchronous comparison. Catalogue depth: full.
-- [[kim-2025-towards]] — [Towards a Science of Scaling Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2025-towards.md). Makes coordination overhead a measured cost rather than a universal scaling law. Catalogue depth: full.
-- [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/paliskara-2026-worse.md). Shared-resource teams exhibit participation and coordination failures; does not isolate asynchronous execution. Catalogue depth: full.
+- [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhang-2026-silo.md). Distributed coordination tasks supply a benchmark family, not an asynchronous comparison. Catalogue depth: full.
+- [[kim-2025-towards]] — [Towards a Science of Scaling Agent Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kim-2025-towards.md). Makes coordination overhead a measured cost rather than a universal scaling law. Catalogue depth: full.
+- [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/paliskara-2026-worse.md). Shared-resource teams exhibit participation and coordination failures; does not isolate asynchronous execution. Catalogue depth: full.
 
-**Related team work:** [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md).
+**Related team work:** [coordination](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/coordination.md).
 
 <a id="soc-16"></a>
 ### SOC-16 — Allocate roles by observed bottlenecks
@@ -2122,11 +2122,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[pal-2026-swarmworld]] — [SwarmWorld: Stigmergic technological evolution in societies of language-model agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pal-2026-swarmworld.md). Reports functional differentiation; does not establish this allocation policy. Catalogue depth: abstract.
-- [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/cemri-2025-why.md). Failure taxonomy motivates explicit task alignment and completion checks. Catalogue depth: full.
-- [[amayuelas-2025-self]] — [Self-Resource Allocation in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/amayuelas-2025-self.md). Direct allocation/planner precedent with explicit worker capabilities; novelty requires the changing-bottleneck and hard-cap contrast. Catalogue depth: full.
+- [[pal-2026-swarmworld]] — [SwarmWorld: Stigmergic technological evolution in societies of language-model agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pal-2026-swarmworld.md). Reports functional differentiation; does not establish this allocation policy. Catalogue depth: abstract.
+- [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/cemri-2025-why.md). Failure taxonomy motivates explicit task alignment and completion checks. Catalogue depth: full.
+- [[amayuelas-2025-self]] — [Self-Resource Allocation in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/amayuelas-2025-self.md). Direct allocation/planner precedent with explicit worker capabilities; novelty requires the changing-bottleneck and hard-cap contrast. Catalogue depth: full.
 
-**Related team work:** [leadership](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/leadership.md), [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md).
+**Related team work:** [leadership](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/leadership.md), [coordination](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/coordination.md).
 
 <a id="soc-17"></a>
 ### SOC-17 — Separate a leader's name from its information
@@ -2153,10 +2153,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[shehata-2026-bystander]] — [The Bystander Effect in Multi-Agent Reasoning: Quantifying Cognitive Loafing in Collaborative Interactions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shehata-2026-bystander.md). Abstract suggests anchor identity matters; this is an output-based intervention. Catalogue depth: abstract.
-- [[yang-2026-when]] — [When Is Emergent Consensus Real? A Measured Coupling Gain and a Validity Diagnostic for LLM Agent Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yang-2026-when.md). Anchoring control motivates content-preserving label changes. Catalogue depth: skim.
+- [[shehata-2026-bystander]] — [The Bystander Effect in Multi-Agent Reasoning: Quantifying Cognitive Loafing in Collaborative Interactions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/shehata-2026-bystander.md). Abstract suggests anchor identity matters; this is an output-based intervention. Catalogue depth: abstract.
+- [[yang-2026-when]] — [When Is Emergent Consensus Real? A Measured Coupling Gain and a Validity Diagnostic for LLM Agent Societies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/yang-2026-when.md). Anchoring control motivates content-preserving label changes. Catalogue depth: skim.
 
-**Related team work:** [leadership](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/leadership.md).
+**Related team work:** [leadership](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/leadership.md).
 
 <a id="soc-18"></a>
 ### SOC-18 — Rotate coordination without losing continuity
@@ -2183,10 +2183,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[tambwekar-2026-proxifield]] — [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tambwekar-2026-proxifield.md). Failure robustness is existing prior; its permanent-failure setting differs from role handoff. Catalogue depth: full.
-- [[park-2023-generative]] — [Generative Agents: Interactive Simulacra of Human Behavior](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/park-2023-generative.md). Persistent memory motivates continuity, without demonstrating fault recovery. Catalogue depth: abstract.
+- [[tambwekar-2026-proxifield]] — [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/tambwekar-2026-proxifield.md). Failure robustness is existing prior; its permanent-failure setting differs from role handoff. Catalogue depth: full.
+- [[park-2023-generative]] — [Generative Agents: Interactive Simulacra of Human Behavior](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/park-2023-generative.md). Persistent memory motivates continuity, without demonstrating fault recovery. Catalogue depth: abstract.
 
-**Related team work:** [leadership](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/leadership.md), [regrowth](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/regrowth.md).
+**Related team work:** [leadership](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/leadership.md), [regrowth](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/regrowth.md).
 
 <a id="soc-19"></a>
 ### SOC-19 — Ask a specific peer instead of broadcasting
@@ -2213,10 +2213,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[tambwekar-2026-proxifield]] — [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tambwekar-2026-proxifield.md). Need-matching and direct addressing are existing mechanisms to compare. Catalogue depth: full.
-- [[liu-2026-social]] — [Social Networks of LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2026-social.md). Attention rather than graph edges motivates delivery-aware evaluation. Catalogue depth: skim.
+- [[tambwekar-2026-proxifield]] — [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/tambwekar-2026-proxifield.md). Need-matching and direct addressing are existing mechanisms to compare. Catalogue depth: full.
+- [[liu-2026-social]] — [Social Networks of LLM Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/liu-2026-social.md). Attention rather than graph edges motivates delivery-aware evaluation. Catalogue depth: skim.
 
-**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md), [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md).
+**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md), [coordination](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/coordination.md).
 
 <a id="soc-20"></a>
 ### SOC-20 — Recognize unachievable tasks and request repair
@@ -2243,10 +2243,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/cemri-2025-why.md). Task specification and termination failures motivate a controlled feasibility check. Catalogue depth: full.
-- [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2026-silo.md). Known-answer algorithmic tasks provide an interpretable reachability baseline. Catalogue depth: full.
+- [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/cemri-2025-why.md). Task specification and termination failures motivate a controlled feasibility check. Catalogue depth: full.
+- [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhang-2026-silo.md). Known-answer algorithmic tasks provide an interpretable reachability baseline. Catalogue depth: full.
 
-**Related team work:** [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md), [institutions](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/institutions.md).
+**Related team work:** [coordination](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/coordination.md), [institutions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/institutions.md).
 
 <a id="soc-21"></a>
 ### SOC-21 — Compress memory by information value
@@ -2273,10 +2273,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[park-2023-generative]] — [Generative Agents: Interactive Simulacra of Human Behavior](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/park-2023-generative.md). Provides retrieval and reflection architecture as direct memory background. Catalogue depth: abstract.
-- [[perez-2024-cultural]] — [Cultural evolution in populations of Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/perez-2024-cultural.md). Transformation through repeated transmission motivates measuring retained content. Catalogue depth: abstract.
+- [[park-2023-generative]] — [Generative Agents: Interactive Simulacra of Human Behavior](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/park-2023-generative.md). Provides retrieval and reflection architecture as direct memory background. Catalogue depth: abstract.
+- [[perez-2024-cultural]] — [Cultural evolution in populations of Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/perez-2024-cultural.md). Transformation through repeated transmission motivates measuring retained content. Catalogue depth: abstract.
 
-**Related team work:** [memory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/memory.md), [telephone](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/telephone.md).
+**Related team work:** [memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/memory.md), [telephone](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/telephone.md).
 
 <a id="soc-22"></a>
 ### SOC-22 — Spend redundancy on rare knowledge
@@ -2303,10 +2303,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[tambwekar-2026-proxifield]] — [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tambwekar-2026-proxifield.md). Already evaluates permanent agent failures; selective knowledge retention is the narrower candidate. Catalogue depth: full.
-- [[pal-2026-swarmworld]] — [SwarmWorld: Stigmergic technological evolution in societies of language-model agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pal-2026-swarmworld.md). Persistent shared artifacts motivate distinguishing portfolio survival from visual reconnection. Catalogue depth: abstract.
+- [[tambwekar-2026-proxifield]] — [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/tambwekar-2026-proxifield.md). Already evaluates permanent agent failures; selective knowledge retention is the narrower candidate. Catalogue depth: full.
+- [[pal-2026-swarmworld]] — [SwarmWorld: Stigmergic technological evolution in societies of language-model agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pal-2026-swarmworld.md). Persistent shared artifacts motivate distinguishing portfolio survival from visual reconnection. Catalogue depth: abstract.
 
-**Related team work:** [regrowth](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/regrowth.md), [memory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/memory.md).
+**Related team work:** [regrowth](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/regrowth.md), [memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/memory.md).
 
 <a id="soc-23"></a>
 ### SOC-23 — Recover function after genuine knowledge loss
@@ -2333,10 +2333,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[tambwekar-2026-proxifield]] — [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tambwekar-2026-proxifield.md). Existing robustness work motivates a knowledge-loss-specific boundary. Catalogue depth: full.
-- [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2026-silo.md). Distributed exact-answer tasks support verifiable functional recovery. Catalogue depth: full.
+- [[tambwekar-2026-proxifield]] — [Proxifield: Decentralized Multi-Agent Communication through Semantic Proximity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/tambwekar-2026-proxifield.md). Existing robustness work motivates a knowledge-loss-specific boundary. Catalogue depth: full.
+- [[zhang-2026-silo]] — [Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhang-2026-silo.md). Distributed exact-answer tasks support verifiable functional recovery. Catalogue depth: full.
 
-**Related team work:** [regrowth](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/regrowth.md), [memory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/memory.md).
+**Related team work:** [regrowth](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/regrowth.md), [memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/memory.md).
 
 <a id="soc-24"></a>
 ### SOC-24 — What survives complete population turnover?
@@ -2363,10 +2363,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[perez-2024-cultural]] — [Cultural evolution in populations of Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/perez-2024-cultural.md). Direct precedent for controlled transmission in LLM populations. Catalogue depth: abstract.
-- [[ashery-2024-emergent]] — [Emergent social conventions and collective bias in LLM populations](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ashery-2024-emergent.md). Naming-game conventions establish persistence questions without establishing useful task transfer. Catalogue depth: full.
+- [[perez-2024-cultural]] — [Cultural evolution in populations of Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/perez-2024-cultural.md). Direct precedent for controlled transmission in LLM populations. Catalogue depth: abstract.
+- [[ashery-2024-emergent]] — [Emergent social conventions and collective bias in LLM populations](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ashery-2024-emergent.md). Naming-game conventions establish persistence questions without establishing useful task transfer. Catalogue depth: full.
 
-**Related team work:** [culture](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/culture.md), [memory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/memory.md).
+**Related team work:** [culture](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/culture.md), [memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/memory.md).
 
 <a id="soc-25"></a>
 ### SOC-25 — Retire an obsolete convention after the task changes
@@ -2393,10 +2393,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[ashery-2024-emergent]] — [Emergent social conventions and collective bias in LLM populations](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ashery-2024-emergent.md). Provides convention and minority-tipping precedent rather than a utility-based adaptation result. Catalogue depth: full.
-- [[perez-2024-cultural]] — [Cultural evolution in populations of Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/perez-2024-cultural.md). Transmission framework supports generational controls. Catalogue depth: abstract.
+- [[ashery-2024-emergent]] — [Emergent social conventions and collective bias in LLM populations](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ashery-2024-emergent.md). Provides convention and minority-tipping precedent rather than a utility-based adaptation result. Catalogue depth: full.
+- [[perez-2024-cultural]] — [Cultural evolution in populations of Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/perez-2024-cultural.md). Transmission framework supports generational controls. Catalogue depth: abstract.
 
-**Related team work:** [culture](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/culture.md), [institutions](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/institutions.md).
+**Related team work:** [culture](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/culture.md), [institutions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/institutions.md).
 
 <a id="soc-26"></a>
 ### SOC-26 — Reward a useful portfolio instead of one champion
@@ -2423,10 +2423,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[pal-2026-swarmworld]] — [SwarmWorld: Stigmergic technological evolution in societies of language-model agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pal-2026-swarmworld.md). Direct prior distinguishes portfolio resilience from strongest-artifact performance. Catalogue depth: abstract.
-- [[leibo-2019-autocurricula]] — [Autocurricula and the Emergence of Innovation from Social Interaction: A Manifesto for Multi-Agent Intelligence Research](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/leibo-2019-autocurricula.md). Motivates innovation through interaction as a position paper, not experimental support. Catalogue depth: abstract.
+- [[pal-2026-swarmworld]] — [SwarmWorld: Stigmergic technological evolution in societies of language-model agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pal-2026-swarmworld.md). Direct prior distinguishes portfolio resilience from strongest-artifact performance. Catalogue depth: abstract.
+- [[leibo-2019-autocurricula]] — [Autocurricula and the Emergence of Innovation from Social Interaction: A Manifesto for Multi-Agent Intelligence Research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/leibo-2019-autocurricula.md). Motivates innovation through interaction as a position paper, not experimental support. Catalogue depth: abstract.
 
-**Related team work:** [commons](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/commons.md), [culture](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/culture.md), [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md).
+**Related team work:** [commons](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/commons.md), [culture](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/culture.md), [diversity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/diversity.md).
 
 <a id="soc-27"></a>
 ### SOC-27 — Credit verified contributions instead of message volume
@@ -2453,11 +2453,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[leibo-2021-scalable]] — [Scalable Evaluation of Multi-Agent Reinforcement Learning with Melting Pot](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/leibo-2021-scalable.md). Existing social-dilemma benchmark motivates varied partners and held-out situations. Catalogue depth: abstract.
-- [[pal-2026-swarmworld]] — [SwarmWorld: Stigmergic technological evolution in societies of language-model agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pal-2026-swarmworld.md). Functional artifacts provide a concrete collective-output comparison. Catalogue depth: abstract.
-- [[piatti-2024-cooperate]] — [Cooperate or Collapse: Emergence of Sustainable Cooperation in a Society of LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/piatti-2024-cooperate.md). Commons cooperation has direct simulation precedent; verified research-artifact credit is a domain extension. Catalogue depth: abstract.
+- [[leibo-2021-scalable]] — [Scalable Evaluation of Multi-Agent Reinforcement Learning with Melting Pot](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/leibo-2021-scalable.md). Existing social-dilemma benchmark motivates varied partners and held-out situations. Catalogue depth: abstract.
+- [[pal-2026-swarmworld]] — [SwarmWorld: Stigmergic technological evolution in societies of language-model agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pal-2026-swarmworld.md). Functional artifacts provide a concrete collective-output comparison. Catalogue depth: abstract.
+- [[piatti-2024-cooperate]] — [Cooperate or Collapse: Emergence of Sustainable Cooperation in a Society of LLM Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/piatti-2024-cooperate.md). Commons cooperation has direct simulation precedent; verified research-artifact credit is a domain extension. Catalogue depth: abstract.
 
-**Related team work:** [commons](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/commons.md), [institutions](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/institutions.md).
+**Related team work:** [commons](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/commons.md), [institutions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/institutions.md).
 
 <a id="soc-28"></a>
 ### SOC-28 — Pay for verification as a public good
@@ -2484,11 +2484,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[leibo-2021-scalable]] — [Scalable Evaluation of Multi-Agent Reinforcement Learning with Melting Pot](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/leibo-2021-scalable.md). Social sharing and partner variation are established benchmark concerns. Catalogue depth: abstract.
-- [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/cemri-2025-why.md). Documents verification failures; does not prove subsidies solve them. Catalogue depth: full.
-- [[piedrahita-2025-corrupted]] — [Corrupted by Reasoning: Reasoning Language Models Become Free-Riders in Public Goods Games](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/piedrahita-2025-corrupted.md). Public-goods sanctioning is direct institutional prior; extra sanction budgets and model-family differences require separate controls. Catalogue depth: full.
+- [[leibo-2021-scalable]] — [Scalable Evaluation of Multi-Agent Reinforcement Learning with Melting Pot](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/leibo-2021-scalable.md). Social sharing and partner variation are established benchmark concerns. Catalogue depth: abstract.
+- [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/cemri-2025-why.md). Documents verification failures; does not prove subsidies solve them. Catalogue depth: full.
+- [[piedrahita-2025-corrupted]] — [Corrupted by Reasoning: Reasoning Language Models Become Free-Riders in Public Goods Games](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/piedrahita-2025-corrupted.md). Public-goods sanctioning is direct institutional prior; extra sanction budgets and model-family differences require separate controls. Catalogue depth: full.
 
-**Related team work:** [commons](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/commons.md), [whistleblowing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/whistleblowing.md), [institutions](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/institutions.md).
+**Related team work:** [commons](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/commons.md), [whistleblowing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/whistleblowing.md), [institutions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/institutions.md).
 
 <a id="soc-29"></a>
 ### SOC-29 — Make a report lead to a verifiable response
@@ -2515,10 +2515,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/cemri-2025-why.md). Supports explicit verification and outcome-based failure labels. Catalogue depth: full.
-- [[leibo-2021-scalable]] — [Scalable Evaluation of Multi-Agent Reinforcement Learning with Melting Pot](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/leibo-2021-scalable.md). Partner and scenario variation offer an evaluation precedent for social mechanisms. Catalogue depth: abstract.
+- [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/cemri-2025-why.md). Supports explicit verification and outcome-based failure labels. Catalogue depth: full.
+- [[leibo-2021-scalable]] — [Scalable Evaluation of Multi-Agent Reinforcement Learning with Melting Pot](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/leibo-2021-scalable.md). Partner and scenario variation offer an evaluation precedent for social mechanisms. Catalogue depth: abstract.
 
-**Related team work:** [whistleblowing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/whistleblowing.md), [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md), [institutions](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/institutions.md).
+**Related team work:** [whistleblowing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/whistleblowing.md), [dissent](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/dissent.md), [institutions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/institutions.md).
 
 <a id="soc-30"></a>
 ### SOC-30 — Appeal false rejections without overwhelming review
@@ -2545,10 +2545,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/cemri-2025-why.md). Verification errors motivate evaluating mistaken review as well as mistaken production. Catalogue depth: full.
-- [[leibo-2021-scalable]] — [Scalable Evaluation of Multi-Agent Reinforcement Learning with Melting Pot](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/leibo-2021-scalable.md). Held-out partner scenarios are a useful evaluation pattern, not direct appeal evidence. Catalogue depth: abstract.
+- [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/cemri-2025-why.md). Verification errors motivate evaluating mistaken review as well as mistaken production. Catalogue depth: full.
+- [[leibo-2021-scalable]] — [Scalable Evaluation of Multi-Agent Reinforcement Learning with Melting Pot](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/leibo-2021-scalable.md). Held-out partner scenarios are a useful evaluation pattern, not direct appeal evidence. Catalogue depth: abstract.
 
-**Related team work:** [institutions](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/institutions.md), [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md).
+**Related team work:** [institutions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/institutions.md), [dissent](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/dissent.md).
 
 <a id="soc-31"></a>
 ### SOC-31 — Find where uncertainty disappears in retelling
@@ -2575,10 +2575,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[perez-2024-cultural]] — [Cultural evolution in populations of Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/perez-2024-cultural.md). Direct precedent for transmission and transformation experiments. Catalogue depth: abstract.
-- [[park-2023-generative]] — [Generative Agents: Interactive Simulacra of Human Behavior](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/park-2023-generative.md). Reflection and memory give a natural retelling mechanism, without proving factual fidelity. Catalogue depth: abstract.
+- [[perez-2024-cultural]] — [Cultural evolution in populations of Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/perez-2024-cultural.md). Direct precedent for transmission and transformation experiments. Catalogue depth: abstract.
+- [[park-2023-generative]] — [Generative Agents: Interactive Simulacra of Human Behavior](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/park-2023-generative.md). Reflection and memory give a natural retelling mechanism, without proving factual fidelity. Catalogue depth: abstract.
 
-**Related team work:** [telephone](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/telephone.md), [memory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/memory.md).
+**Related team work:** [telephone](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/telephone.md), [memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/memory.md).
 
 <a id="soc-32"></a>
 ### SOC-32 — Stress-test a casefile when logs are missing
@@ -2605,10 +2605,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/cemri-2025-why.md). Existing failure taxonomy supplies annotation categories, not causal proof. Catalogue depth: full.
-- [[gh-yazandabain-swarmtrace]] — [SwarmTrace: temporal audit of resource targeting in the DseWiki incident (24-hour degree ranking misses all 18 recent multi-writer resources)](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-yazandabain-swarmtrace.md). Existing temporal reconstruction tool requires a concrete increment beyond another graph. Catalogue depth: skim.
+- [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/cemri-2025-why.md). Existing failure taxonomy supplies annotation categories, not causal proof. Catalogue depth: full.
+- [[gh-yazandabain-swarmtrace]] — [SwarmTrace: temporal audit of resource targeting in the DseWiki incident (24-hour degree ranking misses all 18 recent multi-writer resources)](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-yazandabain-swarmtrace.md). Existing temporal reconstruction tool requires a concrete increment beyond another graph. Catalogue depth: skim.
 
-**Related team work:** [casefile](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/casefile.md), [telephone](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/telephone.md).
+**Related team work:** [casefile](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/casefile.md), [telephone](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/telephone.md).
 
 <a id="soc-33"></a>
 ### SOC-33 — Predict unseen agents' choices from one agent
@@ -2635,10 +2635,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[kim-2021-reward]] — [Reward Identification in Inverse Reinforcement Learning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2021-reward.md). Formal identifiability limits prevent equating prediction with recovered rewards. Catalogue depth: full.
-- [[liu-2025-can]] — [Can an Individual Manipulate the Collective Decisions of Multi-Agents?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2025-can.md). One-known-agent collective influence is close prior, but uses optimized adversarial inputs. Catalogue depth: full.
+- [[kim-2021-reward]] — [Reward Identification in Inverse Reinforcement Learning](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kim-2021-reward.md). Formal identifiability limits prevent equating prediction with recovered rewards. Catalogue depth: full.
+- [[liu-2025-can]] — [Can an Individual Manipulate the Collective Decisions of Multi-Agents?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/liu-2025-can.md). One-known-agent collective influence is close prior, but uses optimized adversarial inputs. Catalogue depth: full.
 
-**Related team work:** [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md), [agent-swarm-influence-research](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/agent-swarm-influence-research.md).
+**Related team work:** [diversity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/diversity.md), [agent-swarm-influence-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/agent-swarm-influence-research.md).
 
 <a id="soc-34"></a>
 ### SOC-34 — Separate wording convergence from changed decisions
@@ -2665,11 +2665,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[de-marzo-2026-copying]] — [Copying explains the collective behavior of AI agents in the wild](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/de-marzo-2026-copying.md). One observational episode supports visible convention and wording copying, not universal belief contagion. Catalogue depth: skim.
-- [[li-2026-socialization]] — [Does Socialization Emerge in AI Agent Society? A Case Study of Moltbook](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-socialization.md). Moltbook counterevidence motivates separating semantic stability from mutual influence. Catalogue depth: skim.
-- [[usman-2026-peer-voted]] — [Peer-Voted LLM-Agent Stress Tests Find Feed-Induced Lexical Convergence but No Reliable Matched-Exposure Advantage for Distributed Sources](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/usman-2026-peer-voted.md). Direct matched-exposure lexical-convergence precedent; its feed treatment bundles exposure and ranking. Catalogue depth: abstract.
+- [[de-marzo-2026-copying]] — [Copying explains the collective behavior of AI agents in the wild](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/de-marzo-2026-copying.md). One observational episode supports visible convention and wording copying, not universal belief contagion. Catalogue depth: skim.
+- [[li-2026-socialization]] — [Does Socialization Emerge in AI Agent Society? A Case Study of Moltbook](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/li-2026-socialization.md). Moltbook counterevidence motivates separating semantic stability from mutual influence. Catalogue depth: skim.
+- [[usman-2026-peer-voted]] — [Peer-Voted LLM-Agent Stress Tests Find Feed-Induced Lexical Convergence but No Reliable Matched-Exposure Advantage for Distributed Sources](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/usman-2026-peer-voted.md). Direct matched-exposure lexical-convergence precedent; its feed treatment bundles exposure and ranking. Catalogue depth: abstract.
 
-**Related team work:** [culture](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/culture.md), [telephone](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/telephone.md), [agent-swarm-influence-research](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/agent-swarm-influence-research.md).
+**Related team work:** [culture](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/culture.md), [telephone](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/telephone.md), [agent-swarm-influence-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/agent-swarm-influence-research.md).
 
 <a id="soc-35"></a>
 ### SOC-35 — Validate a cheap surrogate at the collective level
@@ -2696,10 +2696,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[itkin-2026-local]] — [Local Predictability and Collective Fidelity in LLM-Agent Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/itkin-2026-local.md). Direct prior reports transfer limits and unconfirmed earlier history effects. Catalogue depth: skim.
-- [[fukushima-2026-message]] — [Message capacity and claim wording set the transition points of collective truth-finding in language-model networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/fukushima-2026-message.md). Claim-dependent fields show why microscopic weights alone may fail collectively. Catalogue depth: abstract.
+- [[itkin-2026-local]] — [Local Predictability and Collective Fidelity in LLM-Agent Societies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/itkin-2026-local.md). Direct prior reports transfer limits and unconfirmed earlier history effects. Catalogue depth: skim.
+- [[fukushima-2026-message]] — [Message capacity and claim wording set the transition points of collective truth-finding in language-model networks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/fukushima-2026-message.md). Claim-dependent fields show why microscopic weights alone may fail collectively. Catalogue depth: abstract.
 
-**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md), [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md).
+**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md), [coordination](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/coordination.md).
 
 <a id="soc-36"></a>
 ### SOC-36 — Rank trace clusters by useful evidence, not spectacle
@@ -2726,10 +2726,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[gh-yazandabain-swarmtrace]] — [SwarmTrace: temporal audit of resource targeting in the DseWiki incident (24-hour degree ranking misses all 18 recent multi-writer resources)](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-yazandabain-swarmtrace.md). Existing temporal tooling illustrates why current and historical activity differ. Catalogue depth: skim.
-- [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/cemri-2025-why.md). Trace annotation precedent supports explicit evidence categories rather than automatic intent labels. Catalogue depth: full.
+- [[gh-yazandabain-swarmtrace]] — [SwarmTrace: temporal audit of resource targeting in the DseWiki incident (24-hour degree ranking misses all 18 recent multi-writer resources)](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-yazandabain-swarmtrace.md). Existing temporal tooling illustrates why current and historical activity differ. Catalogue depth: skim.
+- [[cemri-2025-why]] — [Why Do Multi-Agent LLM Systems Fail?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/cemri-2025-why.md). Trace annotation precedent supports explicit evidence categories rather than automatic intent labels. Catalogue depth: full.
 
-**Related team work:** [discovery](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/discovery.md), [casefile](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/casefile.md).
+**Related team work:** [discovery](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/discovery.md), [casefile](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/casefile.md).
 
 <a id="soc-37"></a>
 ### SOC-37 — Does profiling improve influence through ordinary retrieval?
@@ -2756,10 +2756,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[nestaas-2024-adversarial]] — [Adversarial Search Engine Optimization for Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/nestaas-2024-adversarial.md). External-content choice influence is established; retrieval access assumptions matter. Catalogue depth: full.
-- [[liu-2025-can]] — [Can an Individual Manipulate the Collective Decisions of Multi-Agents?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2025-can.md). One-known-agent influence precedent uses optimized adversarial inputs, not this framing. Catalogue depth: full.
+- [[nestaas-2024-adversarial]] — [Adversarial Search Engine Optimization for Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/nestaas-2024-adversarial.md). External-content choice influence is established; retrieval access assumptions matter. Catalogue depth: full.
+- [[liu-2025-can]] — [Can an Individual Manipulate the Collective Decisions of Multi-Agents?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/liu-2025-can.md). One-known-agent influence precedent uses optimized adversarial inputs, not this framing. Catalogue depth: full.
 
-**Related team work:** [agent-swarm-influence-research](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/agent-swarm-influence-research.md), [experimental-design](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/seo-poisoning/experimental-design.md).
+**Related team work:** [agent-swarm-influence-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/agent-swarm-influence-research.md), [experimental-design](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/seo-poisoning/experimental-design.md).
 
 <a id="soc-38"></a>
 ### SOC-38 — Select complementary teams on a separate task set
@@ -2786,11 +2786,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[kim-2026-are]] — [Are Diversity Metrics Measuring Diversity? A Capability-Controlled Audit of Majority-Vote Gain in LLM Ensembles](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2026-are.md). Direct capability-confounding audit; does not establish this transfer outcome. Catalogue depth: abstract.
-- [[teng-2026-which]] — [Which Models Work Well Together? Measuring Heterogeneity for LLM Team Selection](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/teng-2026-which.md). Team profiling and complementarity selection are existing methods. Catalogue depth: abstract.
-- [[ali-2026-quantifying]] — [Quantifying Diversity of Thought: A Predictive Law of Weighted LLM Ensemble Lift](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ali-2026-quantifying.md). Rescue/damage decomposition supplies a more informative endpoint than disagreement alone. Catalogue depth: abstract.
+- [[kim-2026-are]] — [Are Diversity Metrics Measuring Diversity? A Capability-Controlled Audit of Majority-Vote Gain in LLM Ensembles](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kim-2026-are.md). Direct capability-confounding audit; does not establish this transfer outcome. Catalogue depth: abstract.
+- [[teng-2026-which]] — [Which Models Work Well Together? Measuring Heterogeneity for LLM Team Selection](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/teng-2026-which.md). Team profiling and complementarity selection are existing methods. Catalogue depth: abstract.
+- [[ali-2026-quantifying]] — [Quantifying Diversity of Thought: A Predictive Law of Weighted LLM Ensemble Lift](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ali-2026-quantifying.md). Rescue/damage decomposition supplies a more informative endpoint than disagreement alone. Catalogue depth: abstract.
 
-**Related team work:** [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md), [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md).
+**Related team work:** [diversity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/diversity.md), [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md).
 
 <a id="soc-39"></a>
 ### SOC-39 — The same average correlation can hide different failures
@@ -2817,10 +2817,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[hossain-2026-agreement]] — [Agreement Overstates Evidence: Error Dependence in LLM Judge Consensus](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hossain-2026-agreement.md). Direct prior says co-error pattern matters beyond average correlation. Catalogue depth: abstract.
-- [[shu-2026-blind]] — [Blind to the Pivotal Vote: Aggregate Independence Metrics Miss Where Verification Actually Helps](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shu-2026-blind.md). Pivotal-vote verification gains can be invisible to aggregate effective-size metrics. Catalogue depth: abstract.
+- [[hossain-2026-agreement]] — [Agreement Overstates Evidence: Error Dependence in LLM Judge Consensus](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/hossain-2026-agreement.md). Direct prior says co-error pattern matters beyond average correlation. Catalogue depth: abstract.
+- [[shu-2026-blind]] — [Blind to the Pivotal Vote: Aggregate Independence Metrics Miss Where Verification Actually Helps](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/shu-2026-blind.md). Pivotal-vote verification gains can be invisible to aggregate effective-size metrics. Catalogue depth: abstract.
 
-**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md), [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md).
+**Related team work:** [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md), [quorum](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/quorum.md).
 
 <a id="soc-40"></a>
 ### SOC-40 — Keep small deliberating groups independent until the end
@@ -2847,10 +2847,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[barrera-lemarchand-2026-wisdom]] — [The Wisdom of Artificial Deliberative Crowds](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/barrera-lemarchand-2026-wisdom.md). Direct small-group deliberation precedent with clone-group counterevidence. Catalogue depth: abstract.
-- [[ren-2026-sepal]] — [SEPAL: Separated Expert Pairs with Answer-Level Fusion for Reliable LLM Collaboration](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ren-2026-sepal.md). Separated expert pairs with late fusion are existing prior, not a new architecture. Catalogue depth: abstract.
+- [[barrera-lemarchand-2026-wisdom]] — [The Wisdom of Artificial Deliberative Crowds](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/barrera-lemarchand-2026-wisdom.md). Direct small-group deliberation precedent with clone-group counterevidence. Catalogue depth: abstract.
+- [[ren-2026-sepal]] — [SEPAL: Separated Expert Pairs with Answer-Level Fusion for Reliable LLM Collaboration](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ren-2026-sepal.md). Separated expert pairs with late fusion are existing prior, not a new architecture. Catalogue depth: abstract.
 
-**Related team work:** [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md), [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md), [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md).
+**Related team work:** [coordination](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/coordination.md), [dissent](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/dissent.md), [diversity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/diversity.md).
 
 <a id="soc-41"></a>
 ### SOC-41 — Diverse interpretations versus diverse personas
@@ -2877,10 +2877,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[rosales-2025-diverse]] — [Diverse LLMs or Diverse Question Interpretations? That is the Ensembling Question](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/rosales-2025-diverse.md). Direct comparison of question-interpretation and model diversity. Catalogue depth: abstract.
-- [[qian-2026-nous]] — [Nous: An Attempt to Extract and Inject the Cognition Behind Prediction-Market Behavior](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/qian-2026-nous.md). Prompted behavioral profiles failed to transfer useful forecast diversity in the reported setting. Catalogue depth: abstract.
+- [[rosales-2025-diverse]] — [Diverse LLMs or Diverse Question Interpretations? That is the Ensembling Question](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/rosales-2025-diverse.md). Direct comparison of question-interpretation and model diversity. Catalogue depth: abstract.
+- [[qian-2026-nous]] — [Nous: An Attempt to Extract and Inject the Cognition Behind Prediction-Market Behavior](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/qian-2026-nous.md). Prompted behavioral profiles failed to transfer useful forecast diversity in the reported setting. Catalogue depth: abstract.
 
-**Related team work:** [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md), [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md).
+**Related team work:** [diversity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/diversity.md), [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md).
 
 <a id="soc-42"></a>
 ### SOC-42 — More correct candidates or a better final selector?
@@ -2907,10 +2907,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[bay-2026-when]] — [When More Sampling Hurts: The Modal Ceiling and Correlation Ceiling of Test-Time Scaling](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bay-2026-when.md). Separates sampling coverage from modal selection and correlation ceilings. Catalogue depth: abstract.
-- [[liu-2026-llms]] — [LLMs as a Jury: Cross-Model Consensus Can Outperform Process Reward Models for LLM Reasoning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2026-llms.md). Cross-model answer selection is existing prior with task-specific claims. Catalogue depth: abstract.
+- [[bay-2026-when]] — [When More Sampling Hurts: The Modal Ceiling and Correlation Ceiling of Test-Time Scaling](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/bay-2026-when.md). Separates sampling coverage from modal selection and correlation ceilings. Catalogue depth: abstract.
+- [[liu-2026-llms]] — [LLMs as a Jury: Cross-Model Consensus Can Outperform Process Reward Models for LLM Reasoning](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/liu-2026-llms.md). Cross-model answer selection is existing prior with task-specific claims. Catalogue depth: abstract.
 
-**Related team work:** [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md), [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md).
+**Related team work:** [quorum](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/quorum.md), [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md).
 
 <a id="soc-43"></a>
 ### SOC-43 — Abstain when confidence is high but errors are shared
@@ -2937,11 +2937,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[karge-2026-epistemic]] — [Epistemic Filtering and Collective Hallucination: A Jury Theorem for Confidence-Calibrated Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/karge-2026-epistemic.md). Confidence-gated jury theory motivates a boundary test of its independence and calibration assumptions. Catalogue depth: abstract.
-- [[kota-2026-design]] — [Design and Evaluation of Multi-Agent AI Oracle Systems for Prediction Market Resolution](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kota-2026-design.md). High-confidence consensus and independent aggregation have direct task-specific precedent. Catalogue depth: abstract.
-- [[zhou-2026-juryprobe]] — [JuryProbe: An Empirical Consensus-Risk Diagnostic for Routing Reference-Free Factuality Judge Panels to Grounded Verification](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2026-juryprobe.md). Dependence-risk routing is existing prior; exact tasks and charged diagnosis are the transfer question. Catalogue depth: abstract.
+- [[karge-2026-epistemic]] — [Epistemic Filtering and Collective Hallucination: A Jury Theorem for Confidence-Calibrated Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/karge-2026-epistemic.md). Confidence-gated jury theory motivates a boundary test of its independence and calibration assumptions. Catalogue depth: abstract.
+- [[kota-2026-design]] — [Design and Evaluation of Multi-Agent AI Oracle Systems for Prediction Market Resolution](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kota-2026-design.md). High-confidence consensus and independent aggregation have direct task-specific precedent. Catalogue depth: abstract.
+- [[zhou-2026-juryprobe]] — [JuryProbe: An Empirical Consensus-Risk Diagnostic for Routing Reference-Free Factuality Judge Panels to Grounded Verification](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhou-2026-juryprobe.md). Dependence-risk routing is existing prior; exact tasks and charged diagnosis are the transfer question. Catalogue depth: abstract.
 
-**Related team work:** [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md), [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md), [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md).
+**Related team work:** [quorum](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/quorum.md), [dissent](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/dissent.md), [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md).
 
 <a id="soc-44"></a>
 ### SOC-44 — Preference optimization and shared mistakes beyond familiar QA
@@ -2968,10 +2968,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[begin-2026-preference]] — [Preference Optimization Drives Monoculture in LLM Prediction Markets](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/begin-2026-preference.md). Direct matched-checkpoint market prior; task and aggregation transfer remains to be checked. Catalogue depth: skim.
-- [[kim-2026-are]] — [Are Diversity Metrics Measuring Diversity? A Capability-Controlled Audit of Majority-Vote Gain in LLM Ensembles](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2026-are.md). Capability confounding requires joint reporting of skill and dependence. Catalogue depth: abstract.
+- [[begin-2026-preference]] — [Preference Optimization Drives Monoculture in LLM Prediction Markets](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/begin-2026-preference.md). Direct matched-checkpoint market prior; task and aggregation transfer remains to be checked. Catalogue depth: skim.
+- [[kim-2026-are]] — [Are Diversity Metrics Measuring Diversity? A Capability-Controlled Audit of Majority-Vote Gain in LLM Ensembles](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kim-2026-are.md). Capability confounding requires joint reporting of skill and dependence. Catalogue depth: abstract.
 
-**Related team work:** [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md), [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md).
+**Related team work:** [diversity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/diversity.md), [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md).
 
 <a id="soc-45"></a>
 ### SOC-45 — Does local memory preserve a convention after pressure ends?
@@ -2998,11 +2998,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[de-marzo-2026-conformity]] — [Conformity Generates Collective Misalignment in AI Agents Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/de-marzo-2026-conformity.md). Direct prior already predicts both persistence and relaxation by regime. Catalogue depth: full.
-- [[magistrali-2026-aligned]] — [Aligned Alone, Misaligned Together: Forecasting Adversarial Capture in LLM Agent Populations](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/magistrali-2026-aligned.md). Local bounded-memory recovery was measured in a single-stable-state regime, not a general reversibility theorem. Catalogue depth: full.
-- [[hishiki-2026-how]] — [How memory can affect collective and cooperative behaviors in an LLM-Based Social Particle Swarm](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hishiki-2026-how.md). Memory alters regimes in an adjacent spatial game; no equivalence is assumed. Catalogue depth: abstract.
+- [[de-marzo-2026-conformity]] — [Conformity Generates Collective Misalignment in AI Agents Societies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/de-marzo-2026-conformity.md). Direct prior already predicts both persistence and relaxation by regime. Catalogue depth: full.
+- [[magistrali-2026-aligned]] — [Aligned Alone, Misaligned Together: Forecasting Adversarial Capture in LLM Agent Populations](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/magistrali-2026-aligned.md). Local bounded-memory recovery was measured in a single-stable-state regime, not a general reversibility theorem. Catalogue depth: full.
+- [[hishiki-2026-how]] — [How memory can affect collective and cooperative behaviors in an LLM-Based Social Particle Swarm](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/hishiki-2026-how.md). Memory alters regimes in an adjacent spatial game; no equivalence is assumed. Catalogue depth: abstract.
 
-**Related team work:** [culture](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/culture.md), [memory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/memory.md), [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md).
+**Related team work:** [culture](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/culture.md), [memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/memory.md), [quorum](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/quorum.md).
 
 <a id="mkt-01"></a>
 ### MKT-01 — Market division when output needs sunk capacity
@@ -3029,11 +3029,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2024-strategic.md). Source result: division in a bare two-good Cournot game without communication. Catalogue depth: full.
-- [[bracale-syrnikov-2026-institutional]] — [Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bracale-syrnikov-2026-institutional.md). Replication with capacity constraints but no build decisions or production chain. Catalogue depth: skim.
-- [[deshpande-2026-strategic]] — [Strategic AI in Cournot Markets](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/deshpande-2026-strategic.md). Adds cost-reducing investment to Cournot; prices up to 200% of Nash in LLM-LLM markets. Not market division across goods. Catalogue depth: skim.
+- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lin-2024-strategic.md). Source result: division in a bare two-good Cournot game without communication. Catalogue depth: full.
+- [[bracale-syrnikov-2026-institutional]] — [Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/bracale-syrnikov-2026-institutional.md). Replication with capacity constraints but no build decisions or production chain. Catalogue depth: skim.
+- [[deshpande-2026-strategic]] — [Strategic AI in Cournot Markets](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/deshpande-2026-strategic.md). Adds cost-reducing investment to Cournot; prices up to 200% of Nash in LLM-LLM markets. Not market division across goods. Catalogue depth: skim.
 
-**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/swarm-factory.md).
 
 <a id="mkt-02"></a>
 ### MKT-02 — Firms per good and the collapse of division
@@ -3060,11 +3060,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[keppo-2026-fragility]] — [On the Fragility of AI Agent Collusion](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/keppo-2026-fragility.md). Pricing game: three sellers can collude, four unstable, five never reach sustained collusion. Catalogue depth: skim.
-- [[tolety-2025-tacit]] — [Tacit Bidder-Side Collusion: Artificial Intelligence in Dynamic Auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tolety-2025-tacit.md). Dutch-auction bidders collude only when few. Catalogue depth: abstract.
-- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2024-strategic.md). Only N = M = 2 tested. Catalogue depth: full.
+- [[keppo-2026-fragility]] — [On the Fragility of AI Agent Collusion](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/keppo-2026-fragility.md). Pricing game: three sellers can collude, four unstable, five never reach sustained collusion. Catalogue depth: skim.
+- [[tolety-2025-tacit]] — [Tacit Bidder-Side Collusion: Artificial Intelligence in Dynamic Auctions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/tolety-2025-tacit.md). Dutch-auction bidders collude only when few. Catalogue depth: abstract.
+- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lin-2024-strategic.md). Only N = M = 2 tested. Catalogue depth: full.
 
-**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/swarm-factory.md).
 
 <a id="mkt-06"></a>
 ### MKT-06 — No channel, public channel, private channel
@@ -3091,11 +3091,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[agrawal-2025-evaluating]] — [Evaluating LLM Agent Collusion in Double Auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/agrawal-2025-evaluating.md). Double auctions: seller communication raises collusion. Catalogue depth: skim.
-- [[li-2026-emergent]] — [Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-emergent.md). Private emails among firms; 12.6% misaligned including price-fixing. Catalogue depth: skim.
-- [[fish-2024-algorithmic]] — [Algorithmic Collusion by Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/fish-2024-algorithmic.md). Price collusion in Bertrand without a channel. Catalogue depth: abstract.
+- [[agrawal-2025-evaluating]] — [Evaluating LLM Agent Collusion in Double Auctions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/agrawal-2025-evaluating.md). Double auctions: seller communication raises collusion. Catalogue depth: skim.
+- [[li-2026-emergent]] — [Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/li-2026-emergent.md). Private emails among firms; 12.6% misaligned including price-fixing. Catalogue depth: skim.
+- [[fish-2024-algorithmic]] — [Algorithmic Collusion by Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/fish-2024-algorithmic.md). Price collusion in Bertrand without a channel. Catalogue depth: abstract.
 
-**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/swarm-factory.md).
 
 <a id="mkt-08"></a>
 ### MKT-08 — Mixed models as a natural brake
@@ -3122,11 +3122,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[keppo-2026-fragility]] — [On the Fragility of AI Agent Collusion](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/keppo-2026-fragility.md). Heterogeneity in patience or data cuts the collusive price lift from 22% to 7-10%. Catalogue depth: skim.
-- [[agrawal-2025-evaluating]] — [Evaluating LLM Agent Collusion in Double Auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/agrawal-2025-evaluating.md). Mixing models in auctions does not reliably reduce collusion. Catalogue depth: skim.
-- [[bracale-syrnikov-2026-institutional]] — [Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bracale-syrnikov-2026-institutional.md). Includes cross-provider duopolies. Catalogue depth: skim.
+- [[keppo-2026-fragility]] — [On the Fragility of AI Agent Collusion](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/keppo-2026-fragility.md). Heterogeneity in patience or data cuts the collusive price lift from 22% to 7-10%. Catalogue depth: skim.
+- [[agrawal-2025-evaluating]] — [Evaluating LLM Agent Collusion in Double Auctions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/agrawal-2025-evaluating.md). Mixing models in auctions does not reliably reduce collusion. Catalogue depth: skim.
+- [[bracale-syrnikov-2026-institutional]] — [Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/bracale-syrnikov-2026-institutional.md). Includes cross-provider duopolies. Catalogue depth: skim.
 
-**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/swarm-factory.md).
 
 <a id="mkt-10"></a>
 ### MKT-10 — One competitive entrant
@@ -3153,11 +3153,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[collina-2025-breaking]] — [Breaking Algorithmic Collusion in Human-AI Ecosystems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/collina-2025-breaking.md). Theory: one defector can break collusion. Catalogue depth: abstract.
-- [[garra-2026-mitigating]] — [Mitigating Emergent Collusion in LLM Pricing Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/garra-2026-mitigating.md). Adding an entrant works better than a prompt warning in an LLM pricing replication. Catalogue depth: abstract.
-- [[nisan-2026-domination-avoiding]] — [Domination-Avoiding Learning Agents Cannot Collude](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/nisan-2026-domination-avoiding.md). A class of learners that provably cannot collude; a clean control firm. Catalogue depth: abstract.
+- [[collina-2025-breaking]] — [Breaking Algorithmic Collusion in Human-AI Ecosystems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/collina-2025-breaking.md). Theory: one defector can break collusion. Catalogue depth: abstract.
+- [[garra-2026-mitigating]] — [Mitigating Emergent Collusion in LLM Pricing Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/garra-2026-mitigating.md). Adding an entrant works better than a prompt warning in an LLM pricing replication. Catalogue depth: abstract.
+- [[nisan-2026-domination-avoiding]] — [Domination-Avoiding Learning Agents Cannot Collude](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/nisan-2026-domination-avoiding.md). A class of learners that provably cannot collude; a clean control firm. Catalogue depth: abstract.
 
-**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/swarm-factory.md).
 
 <a id="mkt-14"></a>
 ### MKT-14 — Evidence royalties versus identity farming
@@ -3184,11 +3184,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[gh-dmarzzz-patchwork]] — [Patchwork Heist — capability-restricted agents and a private-profit economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-dmarzzz-patchwork.md). Nine economy cases used no service contracts; four of six sales were solo with freely reusable public evidence. This motivates but does not establish a property-rights mechanism. Catalogue depth: skim.
-- [[piedrahita-2025-corrupted]] — [Corrupted by Reasoning: Reasoning Language Models Become Free-Riders in Public Goods Games](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/piedrahita-2025-corrupted.md). Catalogue documents model-dependent free-riding in public-goods games, a different institution from evidence production; it does not predict this treatment effect. Catalogue depth: full.
-- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mazorra-2023-cost.md). Shows why counting identities in rewards can introduce false-name incentives; no blanket guarantee transfers to evidence royalties. Catalogue depth: full.
+- [[gh-dmarzzz-patchwork]] — [Patchwork Heist — capability-restricted agents and a private-profit economy](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-dmarzzz-patchwork.md). Nine economy cases used no service contracts; four of six sales were solo with freely reusable public evidence. This motivates but does not establish a property-rights mechanism. Catalogue depth: skim.
+- [[piedrahita-2025-corrupted]] — [Corrupted by Reasoning: Reasoning Language Models Become Free-Riders in Public Goods Games](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/piedrahita-2025-corrupted.md). Catalogue documents model-dependent free-riding in public-goods games, a different institution from evidence production; it does not predict this treatment effect. Catalogue depth: full.
+- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/mazorra-2023-cost.md). Shows why counting identities in rewards can introduce false-name incentives; no blanket guarantee transfers to evidence royalties. Catalogue depth: full.
 
-**Related team work:** [patchwork-addendum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/question-atlas/patchwork-addendum.md).
+**Related team work:** [patchwork-addendum](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/question-atlas/patchwork-addendum.md).
 
 <a id="crowds-and-traffic"></a>
 ## Human crowds and traffic
@@ -3218,9 +3218,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[murakami-2021-mutual]] — [Mutual anticipation can contribute to self-organization in human crowds](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/murakami-2021-mutual.md). Closest controlled human evidence motivates the mechanism separation. Catalogue depth: skim.
-- [[karamouzas-2014-universal]] — [Universal Power Law Governing Pedestrian Interactions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/karamouzas-2014-universal.md). Time-to-collision interaction model supplies an anticipatory alternative. Catalogue depth: full.
-- [[moussaid-2011-simple]] — [How simple rules determine pedestrian behavior and crowd disasters](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/moussaid-2011-simple.md). Vision-based behavioural model gives a contrasting implementation. Catalogue depth: full.
+- [[murakami-2021-mutual]] — [Mutual anticipation can contribute to self-organization in human crowds](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/murakami-2021-mutual.md). Closest controlled human evidence motivates the mechanism separation. Catalogue depth: skim.
+- [[karamouzas-2014-universal]] — [Universal Power Law Governing Pedestrian Interactions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/karamouzas-2014-universal.md). Time-to-collision interaction model supplies an anticipatory alternative. Catalogue depth: full.
+- [[moussaid-2011-simple]] — [How simple rules determine pedestrian behavior and crowd disasters](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/moussaid-2011-simple.md). Vision-based behavioural model gives a contrasting implementation. Catalogue depth: full.
 
 <a id="phy-32"></a>
 ### PHY-32 — Avoiding congestion without hiding the queue
@@ -3247,9 +3247,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[poissonnier-2019-experimental]] — [Experimental investigation of ant traffic under crowded conditions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/poissonnier-2019-experimental.md). Closest biological traffic observation motivates inflow regulation, without proving its isolated causal contribution. Catalogue depth: full.
-- [[seyfried-2009-new]] — [New Insights into Pedestrian Flow Through Bottlenecks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/seyfried-2009-new.md). Bottleneck flow depends strongly on upstream density. Catalogue depth: full.
-- [[gh-pedestriandynamics-jupedsim]] — [JuPedSim: Jülich pedestrian dynamics simulator (collision-free speed and social-force style models, Python API)](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-pedestriandynamics-jupedsim.md). Candidate pedestrian simulator; no execution or model suitability validation in this pass. Catalogue depth: skim.
+- [[poissonnier-2019-experimental]] — [Experimental investigation of ant traffic under crowded conditions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/poissonnier-2019-experimental.md). Closest biological traffic observation motivates inflow regulation, without proving its isolated causal contribution. Catalogue depth: full.
+- [[seyfried-2009-new]] — [New Insights into Pedestrian Flow Through Bottlenecks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/seyfried-2009-new.md). Bottleneck flow depends strongly on upstream density. Catalogue depth: full.
+- [[gh-pedestriandynamics-jupedsim]] — [JuPedSim: Jülich pedestrian dynamics simulator (collision-free speed and social-force style models, Python API)](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-pedestriandynamics-jupedsim.md). Candidate pedestrian simulator; no execution or model suitability validation in this pass. Catalogue depth: skim.
 
 <a id="phy-33"></a>
 ### PHY-33 — Does one smoothing vehicle help beyond a ring?
@@ -3276,8 +3276,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[stern-2018-dissipation]] — [Dissipation of stop-and-go waves via control of autonomous vehicles: Field experiments](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/stern-2018-dissipation.md). Closest field experiment demonstrates smoothing by a single automated vehicle on a ring. Catalogue depth: full.
-- [[sugiyama-2008-traffic]] — [Traffic jams without bottlenecks—experimental evidence for the physical mechanism of the formation of a jam](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/sugiyama-2008-traffic.md). Canonical spontaneous ring-road jam reference. Catalogue depth: full.
+- [[stern-2018-dissipation]] — [Dissipation of stop-and-go waves via control of autonomous vehicles: Field experiments](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/stern-2018-dissipation.md). Closest field experiment demonstrates smoothing by a single automated vehicle on a ring. Catalogue depth: full.
+- [[sugiyama-2008-traffic]] — [Traffic jams without bottlenecks—experimental evidence for the physical mechanism of the formation of a jam](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/sugiyama-2008-traffic.md). Canonical spontaneous ring-road jam reference. Catalogue depth: full.
 
 <a id="phy-34"></a>
 ### PHY-34 — Confinement and collective rotation
@@ -3304,9 +3304,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[gu-2025-emergence]] — [Emergence of collective oscillations in massive human crowds](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/gu-2025-emergence.md). Closest empirical and mechanical-model anchor already proposes confinement-dependent oscillation scaling. Catalogue depth: full.
-- [[fruchart-2021-non]] — [Non-reciprocal phase transitions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/fruchart-2021-non.md). Non-reciprocal transition framework informs the mechanism. Catalogue depth: abstract.
-- [[deblais-2018-boundaries]] — [Boundaries Control Collective Dynamics of Inertial Self-Propelled Robots](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/deblais-2018-boundaries.md). Active-robot boundary effects offer analogy, not human validation. Catalogue depth: abstract.
+- [[gu-2025-emergence]] — [Emergence of collective oscillations in massive human crowds](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/gu-2025-emergence.md). Closest empirical and mechanical-model anchor already proposes confinement-dependent oscillation scaling. Catalogue depth: full.
+- [[fruchart-2021-non]] — [Non-reciprocal phase transitions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/fruchart-2021-non.md). Non-reciprocal transition framework informs the mechanism. Catalogue depth: abstract.
+- [[deblais-2018-boundaries]] — [Boundaries Control Collective Dynamics of Inertial Self-Propelled Robots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/deblais-2018-boundaries.md). Active-robot boundary effects offer analogy, not human validation. Catalogue depth: abstract.
 
 <a id="phy-35"></a>
 ### PHY-35 — Wider crossings with more directional disorder
@@ -3333,9 +3333,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[bacik-2025-order]] — [Order–disorder transition in multidirectional crowds](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bacik-2025-order.md). Closest recent theory, simulation and experiment concern loss of lane order under directional heterogeneity. Catalogue depth: skim.
-- [[helbing-1995-social]] — [Social force model for pedestrian dynamics](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/helbing-1995-social.md). Established lane-forming simulation baseline. Catalogue depth: full.
-- [[gh-pedestriandynamics-jupedsim]] — [JuPedSim: Jülich pedestrian dynamics simulator (collision-free speed and social-force style models, Python API)](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-pedestriandynamics-jupedsim.md). Possible geometry-aware simulation tool; not yet run or checked for this exact model. Catalogue depth: skim.
+- [[bacik-2025-order]] — [Order–disorder transition in multidirectional crowds](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/bacik-2025-order.md). Closest recent theory, simulation and experiment concern loss of lane order under directional heterogeneity. Catalogue depth: skim.
+- [[helbing-1995-social]] — [Social force model for pedestrian dynamics](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/helbing-1995-social.md). Established lane-forming simulation baseline. Catalogue depth: full.
+- [[gh-pedestriandynamics-jupedsim]] — [JuPedSim: Jülich pedestrian dynamics simulator (collision-free speed and social-force style models, Python API)](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-pedestriandynamics-jupedsim.md). Possible geometry-aware simulation tool; not yet run or checked for this exact model. Catalogue depth: skim.
 
 <a id="phy-36"></a>
 ### PHY-36 — Capacity estimates that transfer between bottlenecks
@@ -3362,9 +3362,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[seyfried-2009-new]] — [New Insights into Pedestrian Flow Through Bottlenecks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/seyfried-2009-new.md). Closest empirical source already identifies upstream-density differences and transient limits. Catalogue depth: full.
-- [[data-juelich-crowd-2019]] — [Motion through a dense and stationary crowd](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-juelich-crowd-2019.md). Available trajectory resource is a task-mismatched negative control, with unresolved binary reuse terms. Catalogue depth: ran.
-- [[gh-pedestriandynamics-jupedsim]] — [JuPedSim: Jülich pedestrian dynamics simulator (collision-free speed and social-force style models, Python API)](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-pedestriandynamics-jupedsim.md). Possible simulation intervention route; cannot replace empirical transfer evidence. Catalogue depth: skim.
+- [[seyfried-2009-new]] — [New Insights into Pedestrian Flow Through Bottlenecks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/seyfried-2009-new.md). Closest empirical source already identifies upstream-density differences and transient limits. Catalogue depth: full.
+- [[data-juelich-crowd-2019]] — [Motion through a dense and stationary crowd](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-juelich-crowd-2019.md). Available trajectory resource is a task-mismatched negative control, with unresolved binary reuse terms. Catalogue depth: ran.
+- [[gh-pedestriandynamics-jupedsim]] — [JuPedSim: Jülich pedestrian dynamics simulator (collision-free speed and social-force style models, Python API)](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-pedestriandynamics-jupedsim.md). Possible simulation intervention route; cannot replace empirical transfer evidence. Catalogue depth: skim.
 
 <a id="meta"></a>
 ## Meta and tooling
@@ -3394,9 +3394,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[aronow-2013-estimating]] — [Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/aronow-2013-estimating.md). Assignment and interference framework. Catalogue depth: skim.
-- [[shalizi-2011-homophily]] — [Homophily and Contagion Are Generically Confounded in Observational Social Network Studies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shalizi-2011-homophily.md). Observational confounding is a separate problem from dependence. Catalogue depth: skim.
-- [[data-swarmworld-2026]] — [SwarmWorld paper data: event traces of 50-200 LLM agents discovering and exchanging material technologies in a shared simulated world (60 episodes)](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-swarmworld-2026.md). Concrete matched-episode corpus for unit-of-analysis sensitivity; four discovery seeds do not become hundreds of independent agents. Catalogue depth: skim.
+- [[aronow-2013-estimating]] — [Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/aronow-2013-estimating.md). Assignment and interference framework. Catalogue depth: skim.
+- [[shalizi-2011-homophily]] — [Homophily and Contagion Are Generically Confounded in Observational Social Network Studies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/shalizi-2011-homophily.md). Observational confounding is a separate problem from dependence. Catalogue depth: skim.
+- [[data-swarmworld-2026]] — [SwarmWorld paper data: event traces of 50-200 LLM agents discovering and exchanging material technologies in a shared simulated world (60 episodes)](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-swarmworld-2026.md). Concrete matched-episode corpus for unit-of-analysis sensitivity; four discovery seeds do not become hundreds of independent agents. Catalogue depth: skim.
 
 <a id="mth-02"></a>
 ### MTH-02 — Do outcome labels change the conclusion?
@@ -3423,9 +3423,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[pavlova-2026-flag]] — [Flag Game: A Toy Model for Mechanistic Swarm Interpretability](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pavlova-2026-flag.md). Ground-truth-aware collective task precedent. Catalogue depth: full.
-- [[zhou-2025-pimmur]] — [The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2025-pimmur.md). Measurement validity context; abstract rechecked, methods not fully audited. Catalogue depth: abstract.
-- [[data-mallm-debate-2025]] — [DEBATE: Diverse Multi-Agent Debates, 144 configurations of LLM discussion paradigm, persona and decision protocol (MALLM)](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-mallm-debate-2025.md). Released agreement and decision traces offer a concrete outcome-mismatch audit, not validated correctness labels. Catalogue depth: skim.
+- [[pavlova-2026-flag]] — [Flag Game: A Toy Model for Mechanistic Swarm Interpretability](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pavlova-2026-flag.md). Ground-truth-aware collective task precedent. Catalogue depth: full.
+- [[zhou-2025-pimmur]] — [The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhou-2025-pimmur.md). Measurement validity context; abstract rechecked, methods not fully audited. Catalogue depth: abstract.
+- [[data-mallm-debate-2025]] — [DEBATE: Diverse Multi-Agent Debates, 144 configurations of LLM discussion paradigm, persona and decision protocol (MALLM)](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-mallm-debate-2025.md). Released agreement and decision traces offer a concrete outcome-mismatch audit, not validated correctness labels. Catalogue depth: skim.
 
 <a id="mth-03"></a>
 ### MTH-03 — Does a finding survive a model or runtime change?
@@ -3452,9 +3452,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[zhou-2025-pimmur]] — [The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2025-pimmur.md). Validity motivates explicit implementation controls. Catalogue depth: abstract.
-- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/elnozahy-2002-survey.md). Nondeterminism and replay are conceptual precedents, not LLM-specific evidence. Catalogue depth: skim.
-- [[data-agent-town-economy-2026]] — [Agent Town Economy: 98 runs of a 100-agent LLM economic simulation with a fully ledgered, money-conserving economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-agent-town-economy-2026.md). Concrete runtime-confounding example and failure ledger; released model arms are not a fully crossed causal design. Catalogue depth: skim.
+- [[zhou-2025-pimmur]] — [The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhou-2025-pimmur.md). Validity motivates explicit implementation controls. Catalogue depth: abstract.
+- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/elnozahy-2002-survey.md). Nondeterminism and replay are conceptual precedents, not LLM-specific evidence. Catalogue depth: skim.
+- [[data-agent-town-economy-2026]] — [Agent Town Economy: 98 runs of a 100-agent LLM economic simulation with a fully ledgered, money-conserving economy](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-agent-town-economy-2026.md). Concrete runtime-confounding example and failure ledger; released model arms are not a fully crossed causal design. Catalogue depth: skim.
 
 <a id="mth-04"></a>
 ### MTH-04 — Spend the budget on more seeds or more worlds?
@@ -3481,9 +3481,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vermetten-2024-large.md). Function instances and run budgets motivate the design question. Catalogue depth: full.
-- [[aronow-2013-estimating]] — [Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/aronow-2013-estimating.md). Independent assignment units constrain uncertainty estimates. Catalogue depth: skim.
-- [[data-agent-town-economy-2026]] — [Agent Town Economy: 98 runs of a 100-agent LLM economic simulation with a fully ledgered, money-conserving economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-agent-town-economy-2026.md). Concrete replication-unit caution: the primary card documents two layouts under multiple world IDs. Catalogue depth: skim.
+- [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/vermetten-2024-large.md). Function instances and run budgets motivate the design question. Catalogue depth: full.
+- [[aronow-2013-estimating]] — [Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/aronow-2013-estimating.md). Independent assignment units constrain uncertainty estimates. Catalogue depth: skim.
+- [[data-agent-town-economy-2026]] — [Agent Town Economy: 98 runs of a 100-agent LLM economic simulation with a fully ledgered, money-conserving economy](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-agent-town-economy-2026.md). Concrete replication-unit caution: the primary card documents two layouts under multiple world IDs. Catalogue depth: skim.
 
 <a id="mth-05"></a>
 ### MTH-05 — Can an interrupted run be meaningfully resumed?
@@ -3510,9 +3510,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/elnozahy-2002-survey.md). Classical consistent recovery and nondeterminism logging. Catalogue depth: skim.
-- [[li-2026-memtx]] — [MemTX: Transactional Belief Commit for Stateful Agent Memory](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-memtx.md). Agent-memory repair overlap; this candidate isolates execution reproducibility rather than invalid-claim rollback. Catalogue depth: skim.
-- [[gh-apromisedland-trustworthy-agent-simulation]] — [Trustworthy Agent Simulation (tass): auditable LLM town society on AgentScope + Mesa with replay, resume, policy batches and Streamlit dashboard](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-apromisedland-trustworthy-agent-simulation.md). Released baseline-mode resume/replay harness is a candidate audit substrate; its advertised restoration still needs verification. Catalogue depth: abstract.
+- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/elnozahy-2002-survey.md). Classical consistent recovery and nondeterminism logging. Catalogue depth: skim.
+- [[li-2026-memtx]] — [MemTX: Transactional Belief Commit for Stateful Agent Memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/li-2026-memtx.md). Agent-memory repair overlap; this candidate isolates execution reproducibility rather than invalid-claim rollback. Catalogue depth: skim.
+- [[gh-apromisedland-trustworthy-agent-simulation]] — [Trustworthy Agent Simulation (tass): auditable LLM town society on AgentScope + Mesa with replay, resume, policy batches and Streamlit dashboard](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-apromisedland-trustworthy-agent-simulation.md). Released baseline-mode resume/replay harness is a candidate audit substrate; its advertised restoration still needs verification. Catalogue depth: abstract.
 
 <a id="mth-06"></a>
 ### MTH-06 — How much of a discovery is selecting the best run?
@@ -3539,9 +3539,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vermetten-2024-large.md). Benchmark-design sensitivity motivates selection controls. Catalogue depth: full.
-- [[zhou-2025-pimmur]] — [The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2025-pimmur.md). Methodological audit motivation; this resampling design is a proposed lab audit. Catalogue depth: abstract.
-- [[data-mallm-debate-2025]] — [DEBATE: Diverse Multi-Agent Debates, 144 configurations of LLM discussion paradigm, persona and decision protocol (MALLM)](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-mallm-debate-2025.md). Many released configurations motivate a bounded selection audit; completeness and common task coverage remain to be checked. Catalogue depth: skim.
+- [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/vermetten-2024-large.md). Benchmark-design sensitivity motivates selection controls. Catalogue depth: full.
+- [[zhou-2025-pimmur]] — [The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhou-2025-pimmur.md). Methodological audit motivation; this resampling design is a proposed lab audit. Catalogue depth: abstract.
+- [[data-mallm-debate-2025]] — [DEBATE: Diverse Multi-Agent Debates, 144 configurations of LLM discussion paradigm, persona and decision protocol (MALLM)](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-mallm-debate-2025.md). Many released configurations motivate a bounded selection audit; completeness and common task coverage remain to be checked. Catalogue depth: skim.
 
 <a id="sim-01"></a>
 ### SIM-01 — Private information leaks through the narrator
@@ -3568,9 +3568,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[zhou-2024-is]] — [Is this the real life? Is this just fantasy? The Misleading Success of Simulating Social Interactions With LLMs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2024-is.md). Closest prior already contrasts omniscient Script and private-goal Agents modes; extend to an audited narrator boundary. Catalogue depth: full.
-- [[gh-google-deepmind-concordia]] — [Concordia: generative agent-based modelling with a Game Master that adjudicates natural-language actions](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-google-deepmind-concordia.md). Candidate game-master architecture; no claim that every implementation leaks. Catalogue depth: skim.
-- [[gh-sotopia-lab-sotopia]] — [Sotopia: open-ended social role-play environment with private goals and the SOTOPIA-Eval multi-dimensional judge](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-sotopia-lab-sotopia.md). Concrete private-goal scenario and execution-mode substrate; primarily dyadic. Catalogue depth: skim.
+- [[zhou-2024-is]] — [Is this the real life? Is this just fantasy? The Misleading Success of Simulating Social Interactions With LLMs](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhou-2024-is.md). Closest prior already contrasts omniscient Script and private-goal Agents modes; extend to an audited narrator boundary. Catalogue depth: full.
+- [[gh-google-deepmind-concordia]] — [Concordia: generative agent-based modelling with a Game Master that adjudicates natural-language actions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-google-deepmind-concordia.md). Candidate game-master architecture; no claim that every implementation leaks. Catalogue depth: skim.
+- [[gh-sotopia-lab-sotopia]] — [Sotopia: open-ended social role-play environment with private goals and the SOTOPIA-Eval multi-dimensional judge](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-sotopia-lab-sotopia.md). Concrete private-goal scenario and execution-mode substrate; primarily dyadic. Catalogue depth: skim.
 
 <a id="sim-02"></a>
 ### SIM-02 — The scheduler as an experimental treatment
@@ -3597,9 +3597,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[radax-2010-timing]] — [Timing matters: Lessons From The CA Literature On Updating](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/radax-2010-timing.md). Scheduler sensitivity is established in ABMs; this is a task-specific boundary test, not a new general phenomenon. Catalogue depth: full.
-- [[gh-floriangroetschla-agentsnet]] — [AgentsNet: benchmark of LLM agents on a graph solving distributed-computing tasks (colouring, matching, leader election, consensus, vertex cover) by synchronous message passing](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-floriangroetschla-agentsnet.md). Concrete synchronous message-passing runner; asynchronous modes must be implemented and verified. Catalogue depth: ran.
-- [[grotschla-2025-agentsnet]] — [AgentsNet: Coordination and Collaborative Reasoning in Multi-Agent LLMs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/grotschla-2025-agentsnet.md). Known graph-task scoring and baseline for the adaptation. Catalogue depth: abstract.
+- [[radax-2010-timing]] — [Timing matters: Lessons From The CA Literature On Updating](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/radax-2010-timing.md). Scheduler sensitivity is established in ABMs; this is a task-specific boundary test, not a new general phenomenon. Catalogue depth: full.
+- [[gh-floriangroetschla-agentsnet]] — [AgentsNet: benchmark of LLM agents on a graph solving distributed-computing tasks (colouring, matching, leader election, consensus, vertex cover) by synchronous message passing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-floriangroetschla-agentsnet.md). Concrete synchronous message-passing runner; asynchronous modes must be implemented and verified. Catalogue depth: ran.
+- [[grotschla-2025-agentsnet]] — [AgentsNet: Coordination and Collaborative Reasoning in Multi-Agent LLMs](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/grotschla-2025-agentsnet.md). Known graph-task scoring and baseline for the adaptation. Catalogue depth: abstract.
 
 <a id="sim-03"></a>
 ### SIM-03 — Can the benchmark be solved without observing peers?
@@ -3626,9 +3626,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[ellis-2022-smacv2]] — [SMACv2: An Improved Benchmark for Cooperative Multi-Agent Reinforcement Learning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ellis-2022-smacv2.md). Closest diagnostic already establishes observation-blind policies as a benchmark-validity test. Catalogue depth: full.
-- [[data-swarmbench-2025]] — [SwarmBench experiment logs: LLMs as decentralised agents on five 2D-grid swarm tasks (Flocking, Pursuit, Synchronize, Foraging, Transport), 13 models](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-swarmbench-2025.md). Released per-agent and whole-game logs can identify candidate observation shortcuts. Catalogue depth: skim.
-- [[gh-ruc-gsai-yulan-swarmintell]] — [SwarmBench (YuLan-SwarmIntell): 2D grid benchmark of LLM agents on pursuit, synchronisation, foraging, flocking and transport with local views and local messages](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-ruc-gsai-yulan-swarmintell.md). Concrete LLM-grid runner for prospective masked-observation and randomized-layout tests. Catalogue depth: skim.
+- [[ellis-2022-smacv2]] — [SMACv2: An Improved Benchmark for Cooperative Multi-Agent Reinforcement Learning](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ellis-2022-smacv2.md). Closest diagnostic already establishes observation-blind policies as a benchmark-validity test. Catalogue depth: full.
+- [[data-swarmbench-2025]] — [SwarmBench experiment logs: LLMs as decentralised agents on five 2D-grid swarm tasks (Flocking, Pursuit, Synchronize, Foraging, Transport), 13 models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-swarmbench-2025.md). Released per-agent and whole-game logs can identify candidate observation shortcuts. Catalogue depth: skim.
+- [[gh-ruc-gsai-yulan-swarmintell]] — [SwarmBench (YuLan-SwarmIntell): 2D grid benchmark of LLM agents on pursuit, synchronisation, foraging, flocking and transport with local views and local messages](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-ruc-gsai-yulan-swarmintell.md). Concrete LLM-grid runner for prospective masked-observation and randomized-layout tests. Catalogue depth: skim.
 
 <a id="sim-04"></a>
 ### SIM-04 — Same rules, different engines
@@ -3655,9 +3655,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[gh-mesa-mesa]] — [Mesa: Python agent-based modelling framework (grids, continuous space, schedulers, browser visualisation), with a bundled Boids flocking example](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-mesa-mesa.md). Candidate current Python reference; teammate example run used its own rules. Catalogue depth: ran.
-- [[gh-jofmi-agentpy]] — [AgentPy: Python ABM library integrating model design, experiments and analysis (grid, continuous space with KD-tree, networks)](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-jofmi-agentpy.md). Second implementation route; its teammate boids timing used different weights and is not an equivalence result. Catalogue depth: ran.
-- [[grimm-2020-odd]] — [The ODD Protocol for Describing Agent-Based and Other Simulation Models: A Second Update to Improve Clarity, Replication, and Structural Realism](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/grimm-2020-odd.md). Model-description framework motivates an explicit semantics contract, not empirical validity by documentation alone. Catalogue depth: abstract.
+- [[gh-mesa-mesa]] — [Mesa: Python agent-based modelling framework (grids, continuous space, schedulers, browser visualisation), with a bundled Boids flocking example](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-mesa-mesa.md). Candidate current Python reference; teammate example run used its own rules. Catalogue depth: ran.
+- [[gh-jofmi-agentpy]] — [AgentPy: Python ABM library integrating model design, experiments and analysis (grid, continuous space with KD-tree, networks)](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-jofmi-agentpy.md). Second implementation route; its teammate boids timing used different weights and is not an equivalence result. Catalogue depth: ran.
+- [[grimm-2020-odd]] — [The ODD Protocol for Describing Agent-Based and Other Simulation Models: A Second Update to Improve Clarity, Replication, and Structural Realism](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/grimm-2020-odd.md). Model-description framework motivates an explicit semantics contract, not empirical validity by documentation alone. Catalogue depth: abstract.
 
 <a id="mth-07"></a>
 ### MTH-07 — Do failure rankings survive independent relabelling?
@@ -3684,9 +3684,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[data-mast-2025]] — [MAD: Multi-Agent System Traces Dataset, 1,642 MAS execution traces annotated with the 14 MAST failure modes](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-mast-2025.md). Closest available judge-labelled traces and small human subset; motivates measurement rather than accepting all labels as truth. Catalogue depth: skim.
-- [[data-trail-2025]] — [TRAIL: 148 human-annotated agent traces (GAIA and SWE-bench) for trace reasoning and agentic issue localization](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-trail-2025.md). Human-annotated external corpus with restricted access and redistribution. Catalogue depth: skim.
-- [[data-who-and-when-2025]] — [Who&When: 184 multi-agent failure logs annotated with the responsible agent, the decisive error step and an explanation](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-who-and-when-2025.md). Alternative attribution target; failures-only sampling limits prevalence claims. Catalogue depth: skim.
+- [[data-mast-2025]] — [MAD: Multi-Agent System Traces Dataset, 1,642 MAS execution traces annotated with the 14 MAST failure modes](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-mast-2025.md). Closest available judge-labelled traces and small human subset; motivates measurement rather than accepting all labels as truth. Catalogue depth: skim.
+- [[data-trail-2025]] — [TRAIL: 148 human-annotated agent traces (GAIA and SWE-bench) for trace reasoning and agentic issue localization](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-trail-2025.md). Human-annotated external corpus with restricted access and redistribution. Catalogue depth: skim.
+- [[data-who-and-when-2025]] — [Who&When: 184 multi-agent failure logs annotated with the responsible agent, the decisive error step and an explanation](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-who-and-when-2025.md). Alternative attribution target; failures-only sampling limits prevalence claims. Catalogue depth: skim.
 
 <a id="mth-08"></a>
 ### MTH-08 — Does the split separate new games or just new turns?
@@ -3713,8 +3713,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[data-hanabi-llm-logs-2026]] — [HanabiLogs and HanabiRewards: 92,923 turn-level logs of 17 LLMs playing cooperative Hanabi (2-5 players) under three scaffolds, with LLM-judge move ratings](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-hanabi-llm-logs-2026.md). Turn-level logs need episode reconstruction and scaffold-aware grouping. Catalogue depth: skim.
-- [[data-agent-collusion-2026]] — [Emergent Collusion in Long-Horizon LLM Agent Interaction: 2,650 two-agent trajectories (27,100 episodes) with judge labels](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-agent-collusion-2026.md). Shared base sequences across conditions provide a concrete leakage hazard. Catalogue depth: skim.
+- [[data-hanabi-llm-logs-2026]] — [HanabiLogs and HanabiRewards: 92,923 turn-level logs of 17 LLMs playing cooperative Hanabi (2-5 players) under three scaffolds, with LLM-judge move ratings](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-hanabi-llm-logs-2026.md). Turn-level logs need episode reconstruction and scaffold-aware grouping. Catalogue depth: skim.
+- [[data-agent-collusion-2026]] — [Emergent Collusion in Long-Horizon LLM Agent Interaction: 2,650 two-agent trajectories (27,100 episodes) with judge labels](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-agent-collusion-2026.md). Shared base sequences across conditions provide a concrete leakage hazard. Catalogue depth: skim.
 
 <a id="mth-09"></a>
 ### MTH-09 — Does the evaluator know more than the acting agent?
@@ -3741,9 +3741,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[data-hanabi-llm-logs-2026]] — [HanabiLogs and HanabiRewards: 92,923 turn-level logs of 17 LLMs playing cooperative Hanabi (2-5 players) under three scaffolds, with LLM-judge move ratings](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-hanabi-llm-logs-2026.md). Logs contain prompts, legal moves and raw state; exact visibility remains to be audited. Catalogue depth: skim.
-- [[data-sotopia-2024]] — [SOTOPIA episodes v1: role-played social-interaction episodes between language agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-sotopia-2024.md). Private-goal setting for an external boundary check. Catalogue depth: skim.
-- [[zhou-2024-is]] — [Is this the real life? Is this just fantasy? The Misleading Success of Simulating Social Interactions With LLMs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2024-is.md). Information-asymmetry precedent; evaluator hindsight is distinct from omniscient dialogue generation. Catalogue depth: full.
+- [[data-hanabi-llm-logs-2026]] — [HanabiLogs and HanabiRewards: 92,923 turn-level logs of 17 LLMs playing cooperative Hanabi (2-5 players) under three scaffolds, with LLM-judge move ratings](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-hanabi-llm-logs-2026.md). Logs contain prompts, legal moves and raw state; exact visibility remains to be audited. Catalogue depth: skim.
+- [[data-sotopia-2024]] — [SOTOPIA episodes v1: role-played social-interaction episodes between language agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-sotopia-2024.md). Private-goal setting for an external boundary check. Catalogue depth: skim.
+- [[zhou-2024-is]] — [Is this the real life? Is this just fantasy? The Misleading Success of Simulating Social Interactions With LLMs](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhou-2024-is.md). Information-asymmetry precedent; evaluator hindsight is distinct from omniscient dialogue generation. Catalogue depth: full.
 
 <a id="mth-10"></a>
 ### MTH-10 — Does translation preserve the interaction being measured?
@@ -3770,8 +3770,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[data-werewolf-game-reasoning-2025]] — [Werewolf game dataset: raw 7- and 9-player game records with thinking-process notes, plus SFT instruction sets (Multi-agent KTO)](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-werewolf-game-reasoning-2025.md). Actual paired Chinese and English events and notes; the card identifies an LLM translation process. Catalogue depth: skim.
-- [[data-diplomacy-deception-2020]] — [Diplomacy deception detection: 17,289 pairwise in-game messages from 12 games, labelled truthful/deceptive by sender and receiver](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-diplomacy-deception-2020.md). Analogy for separating communicative intent from receiver interpretation, not a parallel translation corpus. Catalogue depth: skim.
+- [[data-werewolf-game-reasoning-2025]] — [Werewolf game dataset: raw 7- and 9-player game records with thinking-process notes, plus SFT instruction sets (Multi-agent KTO)](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-werewolf-game-reasoning-2025.md). Actual paired Chinese and English events and notes; the card identifies an LLM translation process. Catalogue depth: skim.
+- [[data-diplomacy-deception-2020]] — [Diplomacy deception detection: 17,289 pairwise in-game messages from 12 games, labelled truthful/deceptive by sender and receiver](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-diplomacy-deception-2020.md). Analogy for separating communicative intent from receiver interpretation, not a parallel translation corpus. Catalogue depth: skim.
 
 <a id="mth-11"></a>
 ### MTH-11 — Which system wins when failed runs count?
@@ -3798,8 +3798,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[data-agent-town-economy-2026]] — [Agent Town Economy: 98 runs of a 100-agent LLM economic simulation with a fully ledgered, money-conserving economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-agent-town-economy-2026.md). Release retains quarantined runs and documents serving-stack problems; supports a reliability audit, not clean model attribution. Catalogue depth: skim.
-- [[gh-apromisedland-trustworthy-agent-simulation]] — [Trustworthy Agent Simulation (tass): auditable LLM town society on AgentScope + Mesa with replay, resume, policy batches and Streamlit dashboard](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-apromisedland-trustworthy-agent-simulation.md). Candidate small offline harness with explicit budget and failure logging. Catalogue depth: abstract.
+- [[data-agent-town-economy-2026]] — [Agent Town Economy: 98 runs of a 100-agent LLM economic simulation with a fully ledgered, money-conserving economy](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-agent-town-economy-2026.md). Release retains quarantined runs and documents serving-stack problems; supports a reliability audit, not clean model attribution. Catalogue depth: skim.
+- [[gh-apromisedland-trustworthy-agent-simulation]] — [Trustworthy Agent Simulation (tass): auditable LLM town society on AgentScope + Mesa with replay, resume, policy batches and Streamlit dashboard](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-apromisedland-trustworthy-agent-simulation.md). Candidate small offline harness with explicit budget and failure logging. Catalogue depth: abstract.
 
 <a id="mth-12"></a>
 ### MTH-12 — When does a collection of sessions become a team?
@@ -3826,8 +3826,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[data-agentlogs-2026]] — [AgentLogs: tasks, sessions and 64M session-log entries from GitHub's cloud coding agent across 1.8M public repositories](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-agentlogs-2026.md). Relational task, session and event corpus offers concrete provenance evidence but no automatic collaboration ground truth. Catalogue depth: skim.
-- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/elnozahy-2002-survey.md). Execution-history and causality concepts motivate synthetic known-graph validation. Catalogue depth: skim.
+- [[data-agentlogs-2026]] — [AgentLogs: tasks, sessions and 64M session-log entries from GitHub's cloud coding agent across 1.8M public repositories](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-agentlogs-2026.md). Relational task, session and event corpus offers concrete provenance evidence but no automatic collaboration ground truth. Catalogue depth: skim.
+- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/elnozahy-2002-survey.md). Execution-history and causality concepts motivate synthetic known-graph validation. Catalogue depth: skim.
 
 <a id="mth-13"></a>
 ### MTH-13 — Is there a stable ranking of cooperative ability?
@@ -3854,9 +3854,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[data-hanabi-llm-logs-2026]] — [HanabiLogs and HanabiRewards: 92,923 turn-level logs of 17 LLMs playing cooperative Hanabi (2-5 players) under three scaffolds, with LLM-judge move ratings](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-hanabi-llm-logs-2026.md). Common-payoff coordination corpus with important scaffold variation. Catalogue depth: skim.
-- [[data-c2c-ai-vs-ai-2026]] — [C2C (Cooperate to Compete) AI-vs-AI games: 972 logged four-player LLM conquest-and-negotiation games under six prompt interventions](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-c2c-ai-vs-ai-2026.md). Mixed-motive negotiation comparison with matched board conditions. Catalogue depth: skim.
-- [[data-sotopia-2024]] — [SOTOPIA episodes v1: role-played social-interaction episodes between language agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-sotopia-2024.md). Social-goal corpus requires JSON to retain model and reward metadata. Catalogue depth: skim.
+- [[data-hanabi-llm-logs-2026]] — [HanabiLogs and HanabiRewards: 92,923 turn-level logs of 17 LLMs playing cooperative Hanabi (2-5 players) under three scaffolds, with LLM-judge move ratings](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-hanabi-llm-logs-2026.md). Common-payoff coordination corpus with important scaffold variation. Catalogue depth: skim.
+- [[data-c2c-ai-vs-ai-2026]] — [C2C (Cooperate to Compete) AI-vs-AI games: 972 logged four-player LLM conquest-and-negotiation games under six prompt interventions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-c2c-ai-vs-ai-2026.md). Mixed-motive negotiation comparison with matched board conditions. Catalogue depth: skim.
+- [[data-sotopia-2024]] — [SOTOPIA episodes v1: role-played social-interaction episodes between language agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-sotopia-2024.md). Social-goal corpus requires JSON to retain model and reward metadata. Catalogue depth: skim.
 
 <a id="mth-14"></a>
 ### MTH-14 — Does the apparent trend survive the crawler?
@@ -3883,9 +3883,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[data-jscmp4-moltbook-2026]] — [Moltbook AI Agent Social Media Corpus: 3.2M posts, 15.9M comments and 99,621 agent profiles from daily crawls, Jan 27 to Jul 3, 2026](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-jscmp4-moltbook-2026.md). Longitudinal crawl documents selective comment retrieval and field-regime changes. Catalogue depth: skim.
-- [[data-moltnet-2026]] — [MoltNet: integrated Moltbook corpus of 1.04M posts, 3.16M comments, 149,574 AI-agent profiles and 18,244 communities with longitudinal histories (Jan 27 to Feb 28, 2026)](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-moltnet-2026.md). Merged crawl histories provide provenance checks, with overlapping upstream observations. Catalogue depth: skim.
-- [[data-moltbook-dataset-2026]] — [Moltbook Social Interactions Dataset (takschdube/moltbook-dataset): longitudinal posts, comments, agents, social and reply graphs from the agent-only network Moltbook](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-moltbook-dataset-2026.md). Supplemental crawl documents fetch completeness and a historical reply-graph construction error; source metadata alone is not social ground truth. Catalogue depth: skim.
+- [[data-jscmp4-moltbook-2026]] — [Moltbook AI Agent Social Media Corpus: 3.2M posts, 15.9M comments and 99,621 agent profiles from daily crawls, Jan 27 to Jul 3, 2026](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-jscmp4-moltbook-2026.md). Longitudinal crawl documents selective comment retrieval and field-regime changes. Catalogue depth: skim.
+- [[data-moltnet-2026]] — [MoltNet: integrated Moltbook corpus of 1.04M posts, 3.16M comments, 149,574 AI-agent profiles and 18,244 communities with longitudinal histories (Jan 27 to Feb 28, 2026)](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-moltnet-2026.md). Merged crawl histories provide provenance checks, with overlapping upstream observations. Catalogue depth: skim.
+- [[data-moltbook-dataset-2026]] — [Moltbook Social Interactions Dataset (takschdube/moltbook-dataset): longitudinal posts, comments, agents, social and reply graphs from the agent-only network Moltbook](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-moltbook-dataset-2026.md). Supplemental crawl documents fetch completeness and a historical reply-graph construction error; source metadata alone is not social ground truth. Catalogue depth: skim.
 
 <a id="mth-15"></a>
 ### MTH-15 — Does entropy predict collaboration beyond task difficulty?
@@ -3912,8 +3912,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[data-multiagent-entropy-2026]] — [Raw data for "When Does Multi-Agent Collaboration Help? An Entropy Perspective": token-entropy metrics across 7 MAS architectures](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-multiagent-entropy-2026.md). Concrete released evaluation summaries; raw stage-one traces and token tensors are not included. Catalogue depth: skim.
-- [[zhou-2025-pimmur]] — [The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2025-pimmur.md). Measurement-validity framing, not prior proof that entropy fails. Catalogue depth: abstract.
+- [[data-multiagent-entropy-2026]] — [Raw data for "When Does Multi-Agent Collaboration Help? An Entropy Perspective": token-entropy metrics across 7 MAS architectures](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-multiagent-entropy-2026.md). Concrete released evaluation summaries; raw stage-one traces and token tensors are not included. Catalogue depth: skim.
+- [[zhou-2025-pimmur]] — [The PIMMUR Principles: Ensuring Validity in Collective Behavior of LLM Societies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhou-2025-pimmur.md). Measurement-validity framing, not prior proof that entropy fails. Catalogue depth: abstract.
 
 <a id="sim-05"></a>
 ### SIM-05 — Can the published summary be rebuilt from committed events?
@@ -3940,9 +3940,9 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[data-agent-town-economy-2026]] — [Agent Town Economy: 98 runs of a 100-agent LLM economic simulation with a fully ledgered, money-conserving economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-agent-town-economy-2026.md). Primary card explicitly warns that export-state metrics can drift from authoritative pulse values. Catalogue depth: skim.
-- [[gh-apromisedland-trustworthy-agent-simulation]] — [Trustworthy Agent Simulation (tass): auditable LLM town society on AgentScope + Mesa with replay, resume, policy batches and Streamlit dashboard](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-apromisedland-trustworthy-agent-simulation.md). Concrete committed-snapshot and replay route for a controlled export audit. Catalogue depth: abstract.
-- [[grimm-2020-odd]] — [The ODD Protocol for Describing Agent-Based and Other Simulation Models: A Second Update to Improve Clarity, Replication, and Structural Realism](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/grimm-2020-odd.md). Explicit state and measurement definitions precede cross-implementation comparisons. Catalogue depth: abstract.
+- [[data-agent-town-economy-2026]] — [Agent Town Economy: 98 runs of a 100-agent LLM economic simulation with a fully ledgered, money-conserving economy](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-agent-town-economy-2026.md). Primary card explicitly warns that export-state metrics can drift from authoritative pulse values. Catalogue depth: skim.
+- [[gh-apromisedland-trustworthy-agent-simulation]] — [Trustworthy Agent Simulation (tass): auditable LLM town society on AgentScope + Mesa with replay, resume, policy batches and Streamlit dashboard](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-apromisedland-trustworthy-agent-simulation.md). Concrete committed-snapshot and replay route for a controlled export audit. Catalogue depth: abstract.
+- [[grimm-2020-odd]] — [The ODD Protocol for Describing Agent-Based and Other Simulation Models: A Second Update to Improve Clarity, Replication, and Structural Realism](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/grimm-2020-odd.md). Explicit state and measurement definitions precede cross-implementation comparisons. Catalogue depth: abstract.
 
 <a id="sim-07"></a>
 ### SIM-07 — What does a best-of-many baseline actually buy?
@@ -3969,8 +3969,8 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[data-swarmworld-2026]] — [SwarmWorld paper data: event traces of 50-200 LLM agents discovering and exchanging material technologies in a shared simulated world (60 episodes)](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-swarmworld-2026.md). Release explicitly defines independent search as an endpoint-wise best-of-N envelope and retains member traces. Catalogue depth: skim.
-- [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/vermetten-2024-large.md). Benchmark aggregation and selection sensitivity motivate explicit comparator definitions. Catalogue depth: full.
+- [[data-swarmworld-2026]] — [SwarmWorld paper data: event traces of 50-200 LLM agents discovering and exchanging material technologies in a shared simulated world (60 episodes)](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-swarmworld-2026.md). Release explicitly defines independent search as an endpoint-wise best-of-N envelope and retains member traces. Catalogue depth: skim.
+- [[vermetten-2024-large]] — [Large-Scale Benchmarking of Metaphor-Based Optimization Heuristics](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/vermetten-2024-large.md). Benchmark aggregation and selection sensitivity motivate explicit comparator definitions. Catalogue depth: full.
 
 <a id="mkt-12"></a>
 ### MKT-12 — Does the small simulator predict the real game
@@ -3997,11 +3997,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[hopkins-2025-factorio]] — [Factorio Learning Environment](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hopkins-2025-factorio.md). FLE paper; single-agent experiments only. Catalogue depth: skim.
-- [[gh-jackhopkins-factorio-learning-environment]] — [factorio-learning-environment: Factorio as an LLM-agent eval with lab-play, open-play and a multi-agent mode](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-jackhopkins-factorio-learning-environment.md). Multi-agent mode since v0.2 with messaging and impostor tasks; no markets. Catalogue depth: skim.
-- [[zheng-2020-ai]] — [The AI Economist: Improving Equality and Productivity with AI-Driven Tax Policies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zheng-2020-ai.md). Gather-trade-build economy where agents specialise; RL agents, not LLMs. Catalogue depth: skim.
+- [[hopkins-2025-factorio]] — [Factorio Learning Environment](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/hopkins-2025-factorio.md). FLE paper; single-agent experiments only. Catalogue depth: skim.
+- [[gh-jackhopkins-factorio-learning-environment]] — [factorio-learning-environment: Factorio as an LLM-agent eval with lab-play, open-play and a multi-agent mode](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-jackhopkins-factorio-learning-environment.md). Multi-agent mode since v0.2 with messaging and impostor tasks; no markets. Catalogue depth: skim.
+- [[zheng-2020-ai]] — [The AI Economist: Improving Equality and Productivity with AI-Driven Tax Policies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zheng-2020-ai.md). Gather-trade-build economy where agents specialise; RL agents, not LLMs. Catalogue depth: skim.
 
-**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/swarm-factory.md).
 
 <a id="sybil-resistance"></a>
 ## Sybil resistance and adversarial identity
@@ -4031,11 +4031,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[demers-1989-analysis]] — [Analysis and simulation of a fair queueing algorithm](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/demers-1989-analysis.md). Resource fairness and process-splitting incentive are established. Catalogue depth: skim.
-- [[douceur-2002-sybil]] — [The Sybil Attack](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/douceur-2002-sybil.md). Distinct keys do not establish distinct resource holders. Catalogue depth: full.
-- [[crapis-2026-zk]] — [ZK API Usage Credits: LLMs and Beyond](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/crapis-2026-zk.md). Deposit-bounded usage is a design precedent, not verified implementation evidence. Catalogue depth: skim.
+- [[demers-1989-analysis]] — [Analysis and simulation of a fair queueing algorithm](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/demers-1989-analysis.md). Resource fairness and process-splitting incentive are established. Catalogue depth: skim.
+- [[douceur-2002-sybil]] — [The Sybil Attack](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/douceur-2002-sybil.md). Distinct keys do not establish distinct resource holders. Catalogue depth: full.
+- [[crapis-2026-zk]] — [ZK API Usage Credits: LLMs and Beyond](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/crapis-2026-zk.md). Deposit-bounded usage is a design precedent, not verified implementation evidence. Catalogue depth: skim.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md).
 
 <a id="sec-14"></a>
 ### SEC-14 — Coalition caps with noisy contribution estimates
@@ -4062,11 +4062,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[buildernet-2025-refunds]] — [Refunds](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/buildernet-2025-refunds.md). Published identity constraint motivates transfer; docs say the described implementation is indicative. Catalogue depth: full.
-- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mazorra-2023-cost.md). False-name and commitment games limit broad mechanism claims. Catalogue depth: full.
-- [[todo-2009-characterizing]] — [Characterizing false-name-proof allocation rules in combinatorial auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/todo-2009-characterizing.md). False-name implementability already constrains allocation rules; noisy agent contribution measurement is not a new mechanism-design foundation. Catalogue depth: skim.
+- [[buildernet-2025-refunds]] — [Refunds](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/buildernet-2025-refunds.md). Published identity constraint motivates transfer; docs say the described implementation is indicative. Catalogue depth: full.
+- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/mazorra-2023-cost.md). False-name and commitment games limit broad mechanism claims. Catalogue depth: full.
+- [[todo-2009-characterizing]] — [Characterizing false-name-proof allocation rules in combinatorial auctions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/todo-2009-characterizing.md). False-name implementability already constrains allocation rules; noisy agent contribution measurement is not a new mechanism-design foundation. Catalogue depth: skim.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-15"></a>
 ### SEC-15 — Reputation should not become transferable expertise
@@ -4093,10 +4093,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[xia-2026-when]] — [When Should Agent Trust Be Conditional? Characterizing and Attacking Skill-Conditional Reputation in Agent Swarms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/xia-2026-when.md). Direct reputation-laundering predecessor already tests a zero-evidence gate; this is a boundary study. Catalogue depth: full.
-- [[yu-2009-dsybil]] — [DSybil: Optimal Sybil-Resistance for Recommendation Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yu-2009-dsybil.md). Feedback-based trust offers a different identity-tolerant precedent. Catalogue depth: skim.
+- [[xia-2026-when]] — [When Should Agent Trust Be Conditional? Characterizing and Attacking Skill-Conditional Reputation in Agent Swarms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/xia-2026-when.md). Direct reputation-laundering predecessor already tests a zero-evidence gate; this is a boundary study. Catalogue depth: full.
+- [[yu-2009-dsybil]] — [DSybil: Optimal Sybil-Resistance for Recommendation Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/yu-2009-dsybil.md). Feedback-based trust offers a different identity-tolerant precedent. Catalogue depth: skim.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-16"></a>
 ### SEC-16 — Re-entry penalties versus the newcomer tax
@@ -4123,11 +4123,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[resnick-2023-contingent]] — [Contingent Fees in Order Flow Auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/resnick-2023-contingent.md). Identifies re-entry weaknesses in reputation penalties. Catalogue depth: skim.
-- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mazorra-2023-cost.md). Makes per-identity cost and strategic response explicit. Catalogue depth: full.
-- [[strobel-2020-blockchain]] — [Blockchain Technology Secures Robot Swarms: A Comparison of Consensus Protocols and Their Resilience to Byzantine Robots](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/strobel-2020-blockchain.md). Deposits for readings supply a narrow swarm precedent, not general market evidence. Catalogue depth: full.
+- [[resnick-2023-contingent]] — [Contingent Fees in Order Flow Auctions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/resnick-2023-contingent.md). Identifies re-entry weaknesses in reputation penalties. Catalogue depth: skim.
+- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/mazorra-2023-cost.md). Makes per-identity cost and strategic response explicit. Catalogue depth: full.
+- [[strobel-2020-blockchain]] — [Blockchain Technology Secures Robot Swarms: A Comparison of Consensus Protocols and Their Resilience to Byzantine Robots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/strobel-2020-blockchain.md). Deposits for readings supply a narrow swarm precedent, not general market evidence. Catalogue depth: full.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-17"></a>
 ### SEC-17 — Private rate limits across many credentials
@@ -4154,11 +4154,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[barrywhitehat-2019-semaphore]] — [Semaphore RLN, rate limiting nullifier for spam prevention in anonymous p2p setting](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/barrywhitehat-2019-semaphore.md). RLN explicitly relies on separate admission assumptions. Catalogue depth: skim.
-- [[crapis-2026-zk]] — [ZK API Usage Credits: LLMs and Beyond](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/crapis-2026-zk.md). Anonymous usage-credit proposal specifies deposits, tickets, and refunds. Catalogue depth: skim.
-- [[douceur-2002-sybil]] — [The Sybil Attack](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/douceur-2002-sybil.md). Explains why multiplying accepted identities remains consequential. Catalogue depth: full.
+- [[barrywhitehat-2019-semaphore]] — [Semaphore RLN, rate limiting nullifier for spam prevention in anonymous p2p setting](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/barrywhitehat-2019-semaphore.md). RLN explicitly relies on separate admission assumptions. Catalogue depth: skim.
+- [[crapis-2026-zk]] — [ZK API Usage Credits: LLMs and Beyond](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/crapis-2026-zk.md). Anonymous usage-credit proposal specifies deposits, tickets, and refunds. Catalogue depth: skim.
+- [[douceur-2002-sybil]] — [The Sybil Attack](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/douceur-2002-sybil.md). Explains why multiplying accepted identities remains consequential. Catalogue depth: full.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-18"></a>
 ### SEC-18 — Identity-invariant selection can still concentrate knowledge
@@ -4185,11 +4185,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[gilad-2017-algorand]] — [Algorand: Scaling Byzantine Agreements for Cryptocurrencies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/gilad-2017-algorand.md). Stake-based selection provides an identity-splitting invariant under its assumptions. Catalogue depth: skim.
-- [[pan-2024-sybil]] — [On Sybil-proof Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pan-2024-sybil.md). Allocation tradeoffs depend on explicit private-good and incentive assumptions. Catalogue depth: full.
-- [[kim-2025-correlated]] — [Correlated Errors in Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2025-correlated.md). Nominal model diversity need not supply independent errors. Catalogue depth: full.
+- [[gilad-2017-algorand]] — [Algorand: Scaling Byzantine Agreements for Cryptocurrencies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/gilad-2017-algorand.md). Stake-based selection provides an identity-splitting invariant under its assumptions. Catalogue depth: skim.
+- [[pan-2024-sybil]] — [On Sybil-proof Mechanisms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pan-2024-sybil.md). Allocation tradeoffs depend on explicit private-good and incentive assumptions. Catalogue depth: full.
+- [[kim-2025-correlated]] — [Correlated Errors in Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kim-2025-correlated.md). Nominal model diversity need not supply independent errors. Catalogue depth: full.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-19"></a>
 ### SEC-19 — Do graph defenses mistake new teams for Sybils?
@@ -4216,11 +4216,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[viswanath-2010-analysis]] — [An Analysis of Social Network-Based Sybil Defenses](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/viswanath-2010-analysis.md). Shows several graph defenses behave like local community detection. Catalogue depth: skim.
-- [[shi-2013-sybilshield]] — [SybilShield: An agent-aided social network-based Sybil defense among multiple communities](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shi-2013-sybilshield.md). Already studies multi-community false positives; use this defense as a direct baseline. Catalogue depth: skim.
-- [[conitzer-2010-false-name-proofness]] — [False-Name-Proofness in Social Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/conitzer-2010-false-name-proofness.md). Trusted-seed vertex-cut admission composes with strategy-proof rules only under specified bounded-coalition assumptions. Catalogue depth: skim.
+- [[viswanath-2010-analysis]] — [An Analysis of Social Network-Based Sybil Defenses](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/viswanath-2010-analysis.md). Shows several graph defenses behave like local community detection. Catalogue depth: skim.
+- [[shi-2013-sybilshield]] — [SybilShield: An agent-aided social network-based Sybil defense among multiple communities](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/shi-2013-sybilshield.md). Already studies multi-community false positives; use this defense as a direct baseline. Catalogue depth: skim.
+- [[conitzer-2010-false-name-proofness]] — [False-Name-Proofness in Social Networks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/conitzer-2010-false-name-proofness.md). Trusted-seed vertex-cut admission composes with strategy-proof rules only under specified bounded-coalition assumptions. Catalogue depth: skim.
 
-**Related team work:** [sybil-resistance](https://github.com/dmarzzz/swarm-lab/blob/main/surveys/sybil-resistance.md), [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-resistance](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/2-surveys/sybil-resistance.md), [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-20"></a>
 ### SEC-20 — One human credential does not mean one autonomous agent
@@ -4247,10 +4247,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[adler-2024-personhood]] — [Personhood credentials: Artificial intelligence and the value of privacy-preserving tools to distinguish who is real online](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/adler-2024-personhood.md). Defines credential goals; library entry is abstract-level and not an audited protocol. Catalogue depth: abstract.
-- [[austgen-2024-liquefaction]] — [Liquefaction: Privately Liquefying Blockchain Assets](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/austgen-2024-liquefaction.md). Demonstrates rights delegation can break simple single-owner assumptions. Catalogue depth: full.
+- [[adler-2024-personhood]] — [Personhood credentials: Artificial intelligence and the value of privacy-preserving tools to distinguish who is real online](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/adler-2024-personhood.md). Defines credential goals; library entry is abstract-level and not an audited protocol. Catalogue depth: abstract.
+- [[austgen-2024-liquefaction]] — [Liquefaction: Privately Liquefying Blockchain Assets](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/austgen-2024-liquefaction.md). Demonstrates rights delegation can break simple single-owner assumptions. Catalogue depth: full.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-21"></a>
 ### SEC-21 — Audit what an attestation actually identifies
@@ -4277,11 +4277,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[collective-2024-portrait]] — [Portrait of a TEE: applications and identity](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/collective-2024-portrait.md). Direct analysis of code, CPU, instance, and application identity limits. Catalogue depth: full.
-- [[douceur-2002-sybil]] — [The Sybil Attack](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/douceur-2002-sybil.md). Authentication does not alone establish distinct entities. Catalogue depth: full.
-- [[hashmi-2010-towards]] — [Towards Sybil Resistant Authentication in Mobile Ad Hoc Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hashmi-2010-towards.md). Abstract-level device-identity proposal uses signed mobile code; it is a comparator requiring a malicious-host model, not evidence that code signing authenticates reported hardware. Catalogue depth: abstract.
+- [[collective-2024-portrait]] — [Portrait of a TEE: applications and identity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/collective-2024-portrait.md). Direct analysis of code, CPU, instance, and application identity limits. Catalogue depth: full.
+- [[douceur-2002-sybil]] — [The Sybil Attack](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/douceur-2002-sybil.md). Authentication does not alone establish distinct entities. Catalogue depth: full.
+- [[hashmi-2010-towards]] — [Towards Sybil Resistant Authentication in Mobile Ad Hoc Networks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/hashmi-2010-towards.md). Abstract-level device-identity proposal uses signed mobile code; it is a comparator requiring a malicious-host model, not evidence that code signing authenticates reported hardware. Catalogue depth: abstract.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-22"></a>
 ### SEC-22 — Do agents spam because timing rewards attempts?
@@ -4308,11 +4308,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[mazorra-2026-timing]] — [Timing Games: Probabilistic backrunning and spam](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mazorra-2026-timing.md). Formal backrunning model motivates the timing mechanism under specific assumptions. Catalogue depth: skim.
-- [[flashbots-2025-mev]] — [MEV and the Limits of Scaling](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/flashbots-2025-mev.md). Operational spam measurements motivate pricing attempts, with heuristic labels. Catalogue depth: full.
-- [[pan-2024-sybil]] — [On Sybil-proof Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pan-2024-sybil.md). Allocation incentives need a stated mechanism environment. Catalogue depth: full.
+- [[mazorra-2026-timing]] — [Timing Games: Probabilistic backrunning and spam](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/mazorra-2026-timing.md). Formal backrunning model motivates the timing mechanism under specific assumptions. Catalogue depth: skim.
+- [[flashbots-2025-mev]] — [MEV and the Limits of Scaling](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/flashbots-2025-mev.md). Operational spam measurements motivate pricing attempts, with heuristic labels. Catalogue depth: full.
+- [[pan-2024-sybil]] — [On Sybil-proof Mechanisms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pan-2024-sybil.md). Allocation incentives need a stated mechanism environment. Catalogue depth: full.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-23"></a>
 ### SEC-23 — Physical identity under multiple radios and motion
@@ -4339,11 +4339,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[gil-2015-guaranteeing]] — [Guaranteeing Spoof-Resilient Multi-Robot Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/gil-2015-guaranteeing.md). Spatial fingerprints already defend a specific multi-robot setting. Catalogue depth: skim.
-- [[douceur-2002-sybil]] — [The Sybil Attack](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/douceur-2002-sybil.md). Resource assumptions limit physical tests as identity proofs. Catalogue depth: full.
-- [[renganathan-2022-spoof]] — [Spoof Resilient Coordination in Distributed and Robust Robotic Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/renganathan-2022-spoof.md). Abstract-level journal record already combines physical fingerprints with resilient consensus and moment-based misclassification bounds; this candidate tests operational boundaries, not first composition. Catalogue depth: abstract.
+- [[gil-2015-guaranteeing]] — [Guaranteeing Spoof-Resilient Multi-Robot Networks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/gil-2015-guaranteeing.md). Spatial fingerprints already defend a specific multi-robot setting. Catalogue depth: skim.
+- [[douceur-2002-sybil]] — [The Sybil Attack](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/douceur-2002-sybil.md). Resource assumptions limit physical tests as identity proofs. Catalogue depth: full.
+- [[renganathan-2022-spoof]] — [Spoof Resilient Coordination in Distributed and Robust Robotic Networks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/renganathan-2022-spoof.md). Abstract-level journal record already combines physical fingerprints with resilient consensus and moment-based misclassification bounds; this candidate tests operational boundaries, not first composition. Catalogue depth: abstract.
 
-**Related team work:** [sybil-resistance](https://github.com/dmarzzz/swarm-lab/blob/main/surveys/sybil-resistance.md), [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-resistance](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/2-surveys/sybil-resistance.md), [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-24"></a>
 ### SEC-24 — Stop fake value even when every identity is real
@@ -4370,11 +4370,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[glynn-2026-wash]] — [Wash-building in contribution protocols is not a Sybil problem](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/glynn-2026-wash.md). Direct conceptual predecessor separates false identity from false value; forum evidence requires independent replication. Catalogue depth: full.
-- [[buildernet-2025-refunds]] — [Refunds](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/buildernet-2025-refunds.md). Joint-contribution caps motivate measuring coalition value rather than counting names. Catalogue depth: full.
-- [[xia-2026-when]] — [When Should Agent Trust Be Conditional? Characterizing and Attacking Skill-Conditional Reputation in Agent Swarms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/xia-2026-when.md). Reputation can amplify unverified evidence into routing authority. Catalogue depth: full.
+- [[glynn-2026-wash]] — [Wash-building in contribution protocols is not a Sybil problem](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/glynn-2026-wash.md). Direct conceptual predecessor separates false identity from false value; forum evidence requires independent replication. Catalogue depth: full.
+- [[buildernet-2025-refunds]] — [Refunds](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/buildernet-2025-refunds.md). Joint-contribution caps motivate measuring coalition value rather than counting names. Catalogue depth: full.
+- [[xia-2026-when]] — [When Should Agent Trust Be Conditional? Characterizing and Attacking Skill-Conditional Reputation in Agent Swarms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/xia-2026-when.md). Reputation can amplify unverified evidence into routing authority. Catalogue depth: full.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-37"></a>
 ### SEC-37 — Bundle allocation when tasks complement or interfere
@@ -4401,11 +4401,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[alkalay-houlihan-2014-false-name]] — [False-Name Bidding and Economic Efficiency in Combinatorial Auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/alkalay-houlihan-2014-false-name.md). VCG can retain bounded equilibrium welfare under specified near-submodularity and false-name assumptions; profitable manipulation alone does not establish a worse allocation mechanism. Catalogue depth: skim.
-- [[iwasaki-2010-worst-case]] — [Worst-case efficiency ratio in false-name-proof combinatorial auction mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/iwasaki-2010-worst-case.md). Efficiency bounds have explicit symmetry, determinism, and domain conditions. Catalogue depth: skim.
-- [[wang-2017-robust]] — [Robust Large-Scale Spectrum Auctions against False-Name Bids](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wang-2017-robust.md). Spectrum reuse is a relevant conflict-graph analogue; methods remain abstract-level in the record. Catalogue depth: abstract.
+- [[alkalay-houlihan-2014-false-name]] — [False-Name Bidding and Economic Efficiency in Combinatorial Auctions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/alkalay-houlihan-2014-false-name.md). VCG can retain bounded equilibrium welfare under specified near-submodularity and false-name assumptions; profitable manipulation alone does not establish a worse allocation mechanism. Catalogue depth: skim.
+- [[iwasaki-2010-worst-case]] — [Worst-case efficiency ratio in false-name-proof combinatorial auction mechanisms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/iwasaki-2010-worst-case.md). Efficiency bounds have explicit symmetry, determinism, and domain conditions. Catalogue depth: skim.
+- [[wang-2017-robust]] — [Robust Large-Scale Spectrum Auctions against False-Name Bids](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/wang-2017-robust.md). Spectrum reuse is a relevant conflict-graph analogue; methods remain abstract-level in the record. Catalogue depth: abstract.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-38"></a>
 ### SEC-38 — Can a tiny counterexample invalidate our allocator?
@@ -4432,11 +4432,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[todo-2009-characterizing]] — [Characterizing false-name-proof allocation rules in combinatorial auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/todo-2009-characterizing.md). Uses allocation-rule conditions to invalidate mechanisms previously thought false-name-proof. Catalogue depth: skim.
-- [[yokoo-2003-characterization]] — [Characterization of Strategy/False-name Proof Combinatorial Auction Protocols: Price-oriented, Rationing-free Protocol](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yokoo-2003-characterization.md). Separates allocation feasibility and prices from ordinary truthfulness. Catalogue depth: skim.
-- [[pan-2024-sybil]] — [On Sybil-proof Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pan-2024-sybil.md). Shows the domain and incentive axioms must accompany any robustness claim. Catalogue depth: full.
+- [[todo-2009-characterizing]] — [Characterizing false-name-proof allocation rules in combinatorial auctions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/todo-2009-characterizing.md). Uses allocation-rule conditions to invalidate mechanisms previously thought false-name-proof. Catalogue depth: skim.
+- [[yokoo-2003-characterization]] — [Characterization of Strategy/False-name Proof Combinatorial Auction Protocols: Price-oriented, Rationing-free Protocol](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/yokoo-2003-characterization.md). Separates allocation feasibility and prices from ordinary truthfulness. Catalogue depth: skim.
+- [[pan-2024-sybil]] — [On Sybil-proof Mechanisms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pan-2024-sybil.md). Shows the domain and incentive axioms must accompany any robustness claim. Catalogue depth: full.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-39"></a>
 ### SEC-39 — A queue may reward splitting work or merging it
@@ -4463,10 +4463,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[moulin-2007-scheduling]] — [On Scheduling Fees to Prevent Merging, Splitting, and Transferring of Jobs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/moulin-2007-scheduling.md). Direct prior on incompatible split, merge, and transfer incentives under explicit scheduling assumptions. Catalogue depth: skim.
-- [[demers-1989-analysis]] — [Analysis and simulation of a fair queueing algorithm](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/demers-1989-analysis.md). Fair queueing already depends on the accounting unit. Catalogue depth: skim.
+- [[moulin-2007-scheduling]] — [On Scheduling Fees to Prevent Merging, Splitting, and Transferring of Jobs](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/moulin-2007-scheduling.md). Direct prior on incompatible split, merge, and transfer incentives under explicit scheduling assumptions. Catalogue depth: skim.
+- [[demers-1989-analysis]] — [Analysis and simulation of a fair queueing algorithm](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/demers-1989-analysis.md). Fair queueing already depends on the accounting unit. Catalogue depth: skim.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md).
 
 <a id="sec-40"></a>
 ### SEC-40 — Do small participation costs preserve useful collective choice?
@@ -4493,10 +4493,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[wagman-2008-optimal]] — [Optimal False-Name-Proof Voting Rules with Costly Voting](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wagman-2008-optimal.md). Direct costly-voting and coalition results; primary PDF reopening failed in this update, so full-method verification remains required. Catalogue depth: skim.
-- [[todo-2011-false-name-proof]] — [False-name-proof mechanism design without money](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/todo-2011-false-name-proof.md). Money-free robustness can have strong welfare costs in its facility-location setting. Catalogue depth: skim.
+- [[wagman-2008-optimal]] — [Optimal False-Name-Proof Voting Rules with Costly Voting](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/wagman-2008-optimal.md). Direct costly-voting and coalition results; primary PDF reopening failed in this update, so full-method verification remains required. Catalogue depth: skim.
+- [[todo-2011-false-name-proof]] — [False-name-proof mechanism design without money](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/todo-2011-false-name-proof.md). Money-free robustness can have strong welfare costs in its facility-location setting. Catalogue depth: skim.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-41"></a>
 ### SEC-41 — Fake intermediaries in a chain of trust
@@ -4523,11 +4523,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[resnick-2009-sybilproof]] — [Sybilproof transitive trust protocols](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/resnick-2009-sybilproof.md). Sum-Sybilproof transitive trust already studies an unavoidable friction; abstract-level record only. Catalogue depth: abstract.
-- [[douceur-2002-sybil]] — [The Sybil Attack](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/douceur-2002-sybil.md). Extra identities cannot certify distinct resources. Catalogue depth: full.
-- [[yu-2009-dsybil]] — [DSybil: Optimal Sybil-Resistance for Recommendation Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yu-2009-dsybil.md). Outcome-based trust supplies a different direct-feedback baseline. Catalogue depth: skim.
+- [[resnick-2009-sybilproof]] — [Sybilproof transitive trust protocols](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/resnick-2009-sybilproof.md). Sum-Sybilproof transitive trust already studies an unavoidable friction; abstract-level record only. Catalogue depth: abstract.
+- [[douceur-2002-sybil]] — [The Sybil Attack](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/douceur-2002-sybil.md). Extra identities cannot certify distinct resources. Catalogue depth: full.
+- [[yu-2009-dsybil]] — [DSybil: Optimal Sybil-Resistance for Recommendation Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/yu-2009-dsybil.md). Outcome-based trust supplies a different direct-feedback baseline. Catalogue depth: skim.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-42"></a>
 ### SEC-42 — False availability windows in online task markets
@@ -4554,11 +4554,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[lin-2018-sybil-proof]] — [Sybil-Proof Online Incentive Mechanisms for Crowdsensing](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2018-sybil-proof.md). Direct online false-name mechanism predecessor; details remain abstract-level and require access. Catalogue depth: abstract.
-- [[lin-2017-sybil-proof]] — [Sybil-proof incentive mechanisms for crowdsensing](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2017-sybil-proof.md). Static procurement baseline and domain distinction. Catalogue depth: abstract.
-- [[resnick-2023-contingent]] — [Contingent Fees in Order Flow Auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/resnick-2023-contingent.md). Optional execution can change incentives even without changing identity count. Catalogue depth: skim.
+- [[lin-2018-sybil-proof]] — [Sybil-Proof Online Incentive Mechanisms for Crowdsensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lin-2018-sybil-proof.md). Direct online false-name mechanism predecessor; details remain abstract-level and require access. Catalogue depth: abstract.
+- [[lin-2017-sybil-proof]] — [Sybil-proof incentive mechanisms for crowdsensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lin-2017-sybil-proof.md). Static procurement baseline and domain distinction. Catalogue depth: abstract.
+- [[resnick-2023-contingent]] — [Contingent Fees in Order Flow Auctions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/resnick-2023-contingent.md). Optional execution can change incentives even without changing identity count. Catalogue depth: skim.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-43"></a>
 ### SEC-43 — Who should a trust network verify first?
@@ -4585,11 +4585,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[conitzer-2010-false-name-proofness]] — [False-Name-Proofness in Social Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/conitzer-2010-false-name-proofness.md). Formal admission-mechanism composition and verification selection are direct prior, not novel proposals. Catalogue depth: skim.
-- [[shi-2013-sybilshield]] — [SybilShield: An agent-aided social network-based Sybil defense among multiple communities](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shi-2013-sybilshield.md). Multi-community verification already addresses honest-node exclusion. Catalogue depth: skim.
-- [[viswanath-2010-analysis]] — [An Analysis of Social Network-Based Sybil Defenses](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/viswanath-2010-analysis.md). Local community structure can dominate graph defenses. Catalogue depth: skim.
+- [[conitzer-2010-false-name-proofness]] — [False-Name-Proofness in Social Networks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/conitzer-2010-false-name-proofness.md). Formal admission-mechanism composition and verification selection are direct prior, not novel proposals. Catalogue depth: skim.
+- [[shi-2013-sybilshield]] — [SybilShield: An agent-aided social network-based Sybil defense among multiple communities](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/shi-2013-sybilshield.md). Multi-community verification already addresses honest-node exclusion. Catalogue depth: skim.
+- [[viswanath-2010-analysis]] — [An Analysis of Social Network-Based Sybil Defenses](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/viswanath-2010-analysis.md). Local community structure can dominate graph defenses. Catalogue depth: skim.
 
-**Related team work:** [sybil-resistance](https://github.com/dmarzzz/swarm-lab/blob/main/surveys/sybil-resistance.md), [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-resistance](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/2-surveys/sybil-resistance.md), [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-44"></a>
 ### SEC-44 — Conserved voting weight can still change bargaining power
@@ -4616,11 +4616,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[bachrach-2008-divide]] — [Divide and Conquer: False-Name Manipulations in Weighted Voting Games](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bachrach-2008-divide.md). Direct weighted-voting false-name results distinguish nominal weight from power-index payoff. Catalogue depth: skim.
-- [[gilad-2017-algorand]] — [Algorand: Scaling Byzantine Agreements for Cryptocurrencies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/gilad-2017-algorand.md). Resource-weighted selection gives a contrasting invariant under its assumptions. Catalogue depth: skim.
-- [[buildernet-2025-refunds]] — [Refunds](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/buildernet-2025-refunds.md). Coalition-aware contribution caps concern a different reward object. Catalogue depth: full.
+- [[bachrach-2008-divide]] — [Divide and Conquer: False-Name Manipulations in Weighted Voting Games](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/bachrach-2008-divide.md). Direct weighted-voting false-name results distinguish nominal weight from power-index payoff. Catalogue depth: skim.
+- [[gilad-2017-algorand]] — [Algorand: Scaling Byzantine Agreements for Cryptocurrencies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/gilad-2017-algorand.md). Resource-weighted selection gives a contrasting invariant under its assumptions. Catalogue depth: skim.
+- [[buildernet-2025-refunds]] — [Refunds](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/buildernet-2025-refunds.md). Coalition-aware contribution caps concern a different reward object. Catalogue depth: full.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-53"></a>
 ### SEC-53 — Can reliable service history hide selective routing failure?
@@ -4647,11 +4647,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[pecori-2016-s-kademlia]] — [S-Kademlia: A trust and reputation method to mitigate a Sybil attack in Kademlia](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pecori-2016-s-kademlia.md). Trust-based routing is an established tolerance approach; source methods remain abstract-level. Catalogue depth: abstract.
-- [[maccari-2009-avoiding]] — [Avoiding Eclipse Attacks on Kad/Kademlia: An Identity Based Approach](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/maccari-2009-avoiding.md). Kad simulations show target predictability, placement timing, and honest republication affect eclipse outcomes. Certified random IDs do not establish one identity per operator. Catalogue depth: skim.
-- [[gh-datahop-kademlia-simulator]] — [kademlia-simulator: PeerSim-based Kademlia DHT simulator with malicious-node scenarios (discv5, data availability sampling)](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-datahop-kademlia-simulator.md). Concrete PeerSim discovery-network substrate; README inspected, not executed, transport abstracted and no license stated. Catalogue depth: skim.
+- [[pecori-2016-s-kademlia]] — [S-Kademlia: A trust and reputation method to mitigate a Sybil attack in Kademlia](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pecori-2016-s-kademlia.md). Trust-based routing is an established tolerance approach; source methods remain abstract-level. Catalogue depth: abstract.
+- [[maccari-2009-avoiding]] — [Avoiding Eclipse Attacks on Kad/Kademlia: An Identity Based Approach](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/maccari-2009-avoiding.md). Kad simulations show target predictability, placement timing, and honest republication affect eclipse outcomes. Certified random IDs do not establish one identity per operator. Catalogue depth: skim.
+- [[gh-datahop-kademlia-simulator]] — [kademlia-simulator: PeerSim-based Kademlia DHT simulator with malicious-node scenarios (discv5, data availability sampling)](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-datahop-kademlia-simulator.md). Concrete PeerSim discovery-network substrate; README inspected, not executed, transport abstracted and no license stated. Catalogue depth: skim.
 
-**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md), [sybil-resistance](https://github.com/dmarzzz/swarm-lab/blob/main/surveys/sybil-resistance.md).
+**Related team work:** [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md), [sybil-resistance](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/2-surveys/sybil-resistance.md).
 
 <a id="mkt-03"></a>
 ### MKT-03 — One principal, several firms
@@ -4678,11 +4678,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[li-2026-emergent]] — [Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-emergent.md). Vending-Bench Arena ran team rounds, the closest prior, but left them out of the analysis; environment not public. Catalogue depth: skim.
-- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mazorra-2023-cost.md). Theory of the cost of Sybils and false-name-proof mechanisms; no LLM market test. Catalogue depth: full.
-- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2024-strategic.md). Citation follow-up found no work with one principal controlling several firms in this game. Catalogue depth: full.
+- [[li-2026-emergent]] — [Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/li-2026-emergent.md). Vending-Bench Arena ran team rounds, the closest prior, but left them out of the analysis; environment not public. Catalogue depth: skim.
+- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/mazorra-2023-cost.md). Theory of the cost of Sybils and false-name-proof mechanisms; no LLM market test. Catalogue depth: full.
+- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lin-2024-strategic.md). Citation follow-up found no work with one principal controlling several firms in this game. Catalogue depth: full.
 
-**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/swarm-factory.md).
 
 <a id="mkt-11"></a>
 ### MKT-11 — Sybils against an antitrust regulator
@@ -4709,11 +4709,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[bracale-syrnikov-2026-institutional]] — [Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bracale-syrnikov-2026-institutional.md). Oracle plus fines cuts severe collusion from 50% to 5.6%; no Sybils. Catalogue depth: skim.
-- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mazorra-2023-cost.md). False-name-proof mechanism theory. Catalogue depth: full.
-- [[li-2026-emergent]] — [Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-emergent.md). Team rounds unanalysed. Catalogue depth: skim.
+- [[bracale-syrnikov-2026-institutional]] — [Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/bracale-syrnikov-2026-institutional.md). Oracle plus fines cuts severe collusion from 50% to 5.6%; no Sybils. Catalogue depth: skim.
+- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/mazorra-2023-cost.md). False-name-proof mechanism theory. Catalogue depth: full.
+- [[li-2026-emergent]] — [Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/li-2026-emergent.md). Team rounds unanalysed. Catalogue depth: skim.
 
-**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/swarm-factory.md).
 
 <a id="mkt-13"></a>
 ### MKT-13 — Market limits with uncertain ownership and concurrent settlement
@@ -4740,11 +4740,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[gh-dmarzzz-patchwork]] — [Patchwork Heist — capability-restricted agents and a private-profit economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-dmarzzz-patchwork.md). Local scripted suite left 200/500 prohibited cases under causal provenance and zero under aggregate invariants; owner labels and settlement were trusted. Catalogue depth: skim.
-- [[zhu-2026-fault]] — [Fault-Tolerant Budget Conservation in Distributed Multi-Agent Delegation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhu-2026-fault.md). Catalogue records budget conservation under mediation, authentication and crash-fault assumptions; it does not establish resistance to false beneficial-owner labels. Catalogue depth: skim.
-- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mazorra-2023-cost.md). False-name mechanism theory motivates matching principal resources; it supplies no general ownership-inference solution. Catalogue depth: full.
+- [[gh-dmarzzz-patchwork]] — [Patchwork Heist — capability-restricted agents and a private-profit economy](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-dmarzzz-patchwork.md). Local scripted suite left 200/500 prohibited cases under causal provenance and zero under aggregate invariants; owner labels and settlement were trusted. Catalogue depth: skim.
+- [[zhu-2026-fault]] — [Fault-Tolerant Budget Conservation in Distributed Multi-Agent Delegation](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhu-2026-fault.md). Catalogue records budget conservation under mediation, authentication and crash-fault assumptions; it does not establish resistance to false beneficial-owner labels. Catalogue depth: skim.
+- [[mazorra-2023-cost]] — [The Cost of Sybils, Credible Commitments, and False-Name Proof Mechanisms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/mazorra-2023-cost.md). False-name mechanism theory motivates matching principal resources; it supplies no general ownership-inference solution. Catalogue depth: full.
 
-**Related team work:** [patchwork-addendum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/question-atlas/patchwork-addendum.md), [README](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/market-split/README.md).
+**Related team work:** [patchwork-addendum](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/question-atlas/patchwork-addendum.md), [README](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/market-split/README.md).
 
 <a id="fork-merge-security"></a>
 ## Fork-and-merge agents and corruption on reintegration
@@ -4774,10 +4774,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[boneh-2020-single]] — [Single Secret Leader Election](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/boneh-2020-single.md). Formal hidden-leader precedent, not an agent report protocol. Catalogue depth: full.
-- [[burianova-2025-secret]] — [Secret Leader Election in Ethereum PoS: An Empirical Security Analysis of Whisk and Homomorphic Sortition under DoS on the Leader and Censorship Attacks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/burianova-2025-secret.md). Simulation documents candidate-pool leakage limitations. Catalogue depth: full.
+- [[boneh-2020-single]] — [Single Secret Leader Election](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/boneh-2020-single.md). Formal hidden-leader precedent, not an agent report protocol. Catalogue depth: full.
+- [[burianova-2025-secret]] — [Secret Leader Election in Ethereum PoS: An Empirical Security Analysis of Whisk and Homomorphic Sortition under DoS on the Leader and Censorship Attacks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/burianova-2025-secret.md). Simulation documents candidate-pool leakage limitations. Catalogue depth: full.
 
-**Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md).
+**Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/fork-merge-questions.md).
 
 <a id="sec-02"></a>
 ### SEC-02 — Keep merge decisions outside an untrusted child
@@ -4804,10 +4804,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[algesheimer-2001-cryptographic]] — [Cryptographic Security for Mobile Code](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/algesheimer-2001-cryptographic.md). Mobile-code replay limitations motivate separating host and content attackers. Catalogue depth: skim.
-- [[boneh-2020-single]] — [Single Secret Leader Election](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/boneh-2020-single.md). Defines unpredictability properties; does not establish this simplified protocol. Catalogue depth: full.
+- [[algesheimer-2001-cryptographic]] — [Cryptographic Security for Mobile Code](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/algesheimer-2001-cryptographic.md). Mobile-code replay limitations motivate separating host and content attackers. Catalogue depth: skim.
+- [[boneh-2020-single]] — [Single Secret Leader Election](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/boneh-2020-single.md). Defines unpredictability properties; does not establish this simplified protocol. Catalogue depth: full.
 
-**Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md).
+**Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/fork-merge-questions.md).
 
 <a id="sec-03"></a>
 ### SEC-03 — Count evidence domains rather than returning copies
@@ -4834,11 +4834,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[lamport-1982-byzantine]] — [The Byzantine Generals Problem](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lamport-1982-byzantine.md). Agreement under bounded arbitrary faults is distinct from truth recovery. Catalogue depth: skim.
-- [[li-2026-benchmark]] — [A Benchmark and Diagnostic Study of Epistemic Admission in Shared Agent Memory](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-benchmark.md). Direct shared-memory admission predecessor with authored input lineage. Catalogue depth: skim.
-- [[kim-2025-correlated]] — [Correlated Errors in Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2025-correlated.md). Natural error correlation motivates dependence controls, not attack thresholds. Catalogue depth: full.
+- [[lamport-1982-byzantine]] — [The Byzantine Generals Problem](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lamport-1982-byzantine.md). Agreement under bounded arbitrary faults is distinct from truth recovery. Catalogue depth: skim.
+- [[li-2026-benchmark]] — [A Benchmark and Diagnostic Study of Epistemic Admission in Shared Agent Memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/li-2026-benchmark.md). Direct shared-memory admission predecessor with authored input lineage. Catalogue depth: skim.
+- [[kim-2025-correlated]] — [Correlated Errors in Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kim-2025-correlated.md). Natural error correlation motivates dependence controls, not attack thresholds. Catalogue depth: full.
 
-**Related team work:** [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md), [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md).
+**Related team work:** [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md), [fork-merge-questions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/fork-merge-questions.md).
 
 <a id="sec-04"></a>
 ### SEC-04 — Separate returned evidence from permission changes
@@ -4865,11 +4865,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[triedman-2025-multi]] — [Multi-Agent Systems Execute Arbitrary Malicious Code](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/triedman-2025-multi.md). Measured cross-agent control-flow hijacking is a close boundary failure. Catalogue depth: full.
-- [[zha-2026-autonomous]] — [Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zha-2026-autonomous.md). Direct predecessor combines sealed configuration, typed memory promotion, and capability attenuation; formal protection depends on its conservative taint model. Catalogue depth: abstract.
-- [[louck-2026-securing]] — [Securing LLM-Agent Long-Term Memory Against Poisoning: Non-Malleable, Origin-Bound Authority with Machine-Checked Guarantees](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/louck-2026-securing.md). Origin-bound authority is a direct predecessor, with explicit trusted-principal assumptions. Catalogue depth: skim.
+- [[triedman-2025-multi]] — [Multi-Agent Systems Execute Arbitrary Malicious Code](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/triedman-2025-multi.md). Measured cross-agent control-flow hijacking is a close boundary failure. Catalogue depth: full.
+- [[zha-2026-autonomous]] — [Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zha-2026-autonomous.md). Direct predecessor combines sealed configuration, typed memory promotion, and capability attenuation; formal protection depends on its conservative taint model. Catalogue depth: abstract.
+- [[louck-2026-securing]] — [Securing LLM-Agent Long-Term Memory Against Poisoning: Non-Malleable, Origin-Bound Authority with Machine-Checked Guarantees](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/louck-2026-securing.md). Origin-bound authority is a direct predecessor, with explicit trusted-principal assumptions. Catalogue depth: skim.
 
-**Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md).
+**Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/fork-merge-questions.md).
 
 <a id="sec-05"></a>
 ### SEC-05 — Preserve uncertainty through repeated compaction
@@ -4896,11 +4896,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[zerhoudi-2026-compaction]] — [The Compaction Cliff in Long-Running AI Agent Memory](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zerhoudi-2026-compaction.md). Type-sensitive retention is prior art, not a new idea here. Catalogue depth: full.
-- [[liu-2026-safe]] — [Safe to Check, Unsafe to Use: Relinking at the Compression Boundary of LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2026-safe.md). Compression can create new actionable combinations. Catalogue depth: skim.
-- [[ouyang-2026-memlineage]] — [MemLineage: Lineage-Guided Enforcement for LLM Agent Memory](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ouyang-2026-memlineage.md). Lineage enforcement assumes attributed derivations. Catalogue depth: skim.
+- [[zerhoudi-2026-compaction]] — [The Compaction Cliff in Long-Running AI Agent Memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zerhoudi-2026-compaction.md). Type-sensitive retention is prior art, not a new idea here. Catalogue depth: full.
+- [[liu-2026-safe]] — [Safe to Check, Unsafe to Use: Relinking at the Compression Boundary of LLM Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/liu-2026-safe.md). Compression can create new actionable combinations. Catalogue depth: skim.
+- [[ouyang-2026-memlineage]] — [MemLineage: Lineage-Guided Enforcement for LLM Agent Memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ouyang-2026-memlineage.md). Lineage enforcement assumes attributed derivations. Catalogue depth: skim.
 
-**Related team work:** [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md), [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md).
+**Related team work:** [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md), [fork-merge-questions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/fork-merge-questions.md).
 
 <a id="sec-06"></a>
 ### SEC-06 — Repair when the dependency graph is wrong
@@ -4927,11 +4927,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[li-2026-memtx]] — [MemTX: Transactional Belief Commit for Stateful Agent Memory](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-memtx.md). Direct cascading repair predecessor explicitly limited to recorded provenance. Catalogue depth: skim.
-- [[chen-2026-memsecbench]] — [MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/chen-2026-memsecbench.md). Already evaluates persistence, consequences, and selective repair while preserving benign memory; incomplete cross-fork provenance is the remaining extension. Catalogue depth: abstract.
-- [[ouyang-2026-memlineage]] — [MemLineage: Lineage-Guided Enforcement for LLM Agent Memory](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ouyang-2026-memlineage.md). Trust propagation supplies an adjacent tracked-lineage baseline. Catalogue depth: skim.
+- [[li-2026-memtx]] — [MemTX: Transactional Belief Commit for Stateful Agent Memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/li-2026-memtx.md). Direct cascading repair predecessor explicitly limited to recorded provenance. Catalogue depth: skim.
+- [[chen-2026-memsecbench]] — [MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/chen-2026-memsecbench.md). Already evaluates persistence, consequences, and selective repair while preserving benign memory; incomplete cross-fork provenance is the remaining extension. Catalogue depth: abstract.
+- [[ouyang-2026-memlineage]] — [MemLineage: Lineage-Guided Enforcement for LLM Agent Memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ouyang-2026-memlineage.md). Trust propagation supplies an adjacent tracked-lineage baseline. Catalogue depth: skim.
 
-**Related team work:** [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+**Related team work:** [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md).
 
 <a id="sec-07"></a>
 ### SEC-07 — Stale children can undo a correction
@@ -4958,11 +4958,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[cai-2026-child]] — [When Child Inherits: Modeling and Exploiting Subagent Spawn in Multi-Agent Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/cai-2026-child.md). Reports asynchronous memory divergence in spawned children. Catalogue depth: skim.
-- [[li-2026-memtx]] — [MemTX: Transactional Belief Commit for Stateful Agent Memory](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-memtx.md). Recorded-descendant repair does not automatically repair disconnected old children. Catalogue depth: skim.
-- [[zha-2026-autonomous]] — [Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zha-2026-autonomous.md). Temporal re-entry through persistent carriers is already studied; returning forks after correction require a narrower comparison. Catalogue depth: abstract.
+- [[cai-2026-child]] — [When Child Inherits: Modeling and Exploiting Subagent Spawn in Multi-Agent Networks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/cai-2026-child.md). Reports asynchronous memory divergence in spawned children. Catalogue depth: skim.
+- [[li-2026-memtx]] — [MemTX: Transactional Belief Commit for Stateful Agent Memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/li-2026-memtx.md). Recorded-descendant repair does not automatically repair disconnected old children. Catalogue depth: skim.
+- [[zha-2026-autonomous]] — [Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zha-2026-autonomous.md). Temporal re-entry through persistent carriers is already studied; returning forks after correction require a narrower comparison. Catalogue depth: abstract.
 
-**Related team work:** [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md), [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md).
+**Related team work:** [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md), [fork-merge-questions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/fork-merge-questions.md).
 
 <a id="sec-08"></a>
 ### SEC-08 — Protect the honest return channel
@@ -4989,11 +4989,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[demers-1989-analysis]] — [Analysis and simulation of a fair queueing algorithm](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/demers-1989-analysis.md). Fair resource allocation and per-process splitting are established issues. Catalogue depth: skim.
-- [[triedman-2025-multi]] — [Multi-Agent Systems Execute Arbitrary Malicious Code](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/triedman-2025-multi.md). Cross-agent handoffs motivate preserving control boundaries. Catalogue depth: full.
-- [[zhou-2025-corba]] — [CORBA: Contagious Recursive Blocking Attacks on Multi-Agent Systems Based on Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2025-corba.md). Availability-loss propagation already has blocked-agent and interception metrics; its audit separates these from arbitrary-code execution. Catalogue depth: full.
+- [[demers-1989-analysis]] — [Analysis and simulation of a fair queueing algorithm](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/demers-1989-analysis.md). Fair resource allocation and per-process splitting are established issues. Catalogue depth: skim.
+- [[triedman-2025-multi]] — [Multi-Agent Systems Execute Arbitrary Malicious Code](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/triedman-2025-multi.md). Cross-agent handoffs motivate preserving control boundaries. Catalogue depth: full.
+- [[zhou-2025-corba]] — [CORBA: Contagious Recursive Blocking Attacks on Multi-Agent Systems Based on Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhou-2025-corba.md). Availability-loss propagation already has blocked-agent and interception metrics; its audit separates these from arbitrary-code execution. Catalogue depth: full.
 
-**Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+**Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/fork-merge-questions.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md).
 
 <a id="sec-09"></a>
 ### SEC-09 — Screen the combination, not only each weight update
@@ -5020,10 +5020,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[zhang-2024-badmerging]] — [BadMerging: Backdoor Attacks Against Model Merging](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2024-badmerging.md). Shows one model contribution can survive multiple merge operators. Catalogue depth: full.
-- [[li-2026-when]] — [When Safe Models Merge into Danger: Exploiting Latent Vulnerabilities in LLM Fusion](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-when.md). Composition-only latent vulnerabilities are the closest motivation; entry is skimmed. Catalogue depth: skim.
+- [[zhang-2024-badmerging]] — [BadMerging: Backdoor Attacks Against Model Merging](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhang-2024-badmerging.md). Shows one model contribution can survive multiple merge operators. Catalogue depth: full.
+- [[li-2026-when]] — [When Safe Models Merge into Danger: Exploiting Latent Vulnerabilities in LLM Fusion](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/li-2026-when.md). Composition-only latent vulnerabilities are the closest motivation; entry is skimmed. Catalogue depth: skim.
 
-**Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md).
+**Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/fork-merge-questions.md).
 
 <a id="sec-10"></a>
 ### SEC-10 — Distinguish useful specialization from harmful drift
@@ -5050,11 +5050,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[li-2026-benchmark]] — [A Benchmark and Diagnostic Study of Epistemic Admission in Shared Agent Memory](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-benchmark.md). Admission policy already trades rejection against useful truths. Catalogue depth: skim.
-- [[louck-2026-securing]] — [Securing LLM-Agent Long-Term Memory Against Poisoning: Non-Malleable, Origin-Bound Authority with Machine-Checked Guarantees](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/louck-2026-securing.md). Separates origin authority from persuasive content. Catalogue depth: skim.
-- [[kim-2025-correlated]] — [Correlated Errors in Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2025-correlated.md). Shared model errors make parent agreement an imperfect quality test. Catalogue depth: full.
+- [[li-2026-benchmark]] — [A Benchmark and Diagnostic Study of Epistemic Admission in Shared Agent Memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/li-2026-benchmark.md). Admission policy already trades rejection against useful truths. Catalogue depth: skim.
+- [[louck-2026-securing]] — [Securing LLM-Agent Long-Term Memory Against Poisoning: Non-Malleable, Origin-Bound Authority with Machine-Checked Guarantees](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/louck-2026-securing.md). Separates origin authority from persuasive content. Catalogue depth: skim.
+- [[kim-2025-correlated]] — [Correlated Errors in Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kim-2025-correlated.md). Shared model errors make parent agreement an imperfect quality test. Catalogue depth: full.
 
-**Related team work:** [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md), [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md).
+**Related team work:** [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md), [fork-merge-questions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/fork-merge-questions.md).
 
 <a id="sec-11"></a>
 ### SEC-11 — Does merge order change what the parent believes?
@@ -5081,11 +5081,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[li-2026-memtx]] — [MemTX: Transactional Belief Commit for Stateful Agent Memory](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-memtx.md). Tentative versus committed state motivates explicit staging. Catalogue depth: skim.
-- [[zerhoudi-2026-compaction]] — [The Compaction Cliff in Long-Running AI Agent Memory](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zerhoudi-2026-compaction.md). Repeated compaction can lose constraints. Catalogue depth: full.
-- [[liu-2026-safe]] — [Safe to Check, Unsafe to Use: Relinking at the Compression Boundary of LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2026-safe.md). Compression can change relations among individually safe pieces. Catalogue depth: skim.
+- [[li-2026-memtx]] — [MemTX: Transactional Belief Commit for Stateful Agent Memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/li-2026-memtx.md). Tentative versus committed state motivates explicit staging. Catalogue depth: skim.
+- [[zerhoudi-2026-compaction]] — [The Compaction Cliff in Long-Running AI Agent Memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zerhoudi-2026-compaction.md). Repeated compaction can lose constraints. Catalogue depth: full.
+- [[liu-2026-safe]] — [Safe to Check, Unsafe to Use: Relinking at the Compression Boundary of LLM Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/liu-2026-safe.md). Compression can change relations among individually safe pieces. Catalogue depth: skim.
 
-**Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md).
+**Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/fork-merge-questions.md).
 
 <a id="sec-12"></a>
 ### SEC-12 — What kind of validator diversity actually helps?
@@ -5112,11 +5112,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[greenblatt-2023-ai]] — [AI Control: Improving Safety Despite Intentional Subversion](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/greenblatt-2023-ai.md). AI-control monitoring provides an established comparator family. Catalogue depth: full.
-- [[kim-2025-correlated]] — [Correlated Errors in Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2025-correlated.md). Measured natural error dependence cautions against independence assumptions. Catalogue depth: full.
-- [[ron-2026-n-version]] — [N-Version Programming with Coding Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ron-2026-n-version.md). Diverse coding systems can still fail together. Catalogue depth: skim.
+- [[greenblatt-2023-ai]] — [AI Control: Improving Safety Despite Intentional Subversion](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/greenblatt-2023-ai.md). AI-control monitoring provides an established comparator family. Catalogue depth: full.
+- [[kim-2025-correlated]] — [Correlated Errors in Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kim-2025-correlated.md). Measured natural error dependence cautions against independence assumptions. Catalogue depth: full.
+- [[ron-2026-n-version]] — [N-Version Programming with Coding Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ron-2026-n-version.md). Diverse coding systems can still fail together. Catalogue depth: skim.
 
-**Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+**Related team work:** [fork-merge-questions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/fork-merge-questions.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md).
 
 <a id="sec-45"></a>
 ### SEC-45 — Does a false fact spread like a policy violation?
@@ -5143,11 +5143,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[niu-2026-reliability-contagion]] — [Reliability-Contagion Feasibility in LLM Multi-Agent Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/niu-2026-reliability-contagion.md). Models an externally checkable false claim and explicitly fixes communication-budget conventions. Catalogue depth: abstract.
-- [[wu-2026-collective]] — [Collective Loss of Control in LLM Agent Systems: An Epidemic Account of Mutation, Contagion, and Recovery](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wu-2026-collective.md). Separates modeled collective loss from observed handoff susceptibility. Catalogue depth: abstract.
-- [[zhou-2025-corba]] — [CORBA: Contagious Recursive Blocking Attacks on Multi-Agent Systems Based on Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhou-2025-corba.md). Availability loss is another distinct endpoint, not arbitrary harmful execution. Catalogue depth: full.
+- [[niu-2026-reliability-contagion]] — [Reliability-Contagion Feasibility in LLM Multi-Agent Networks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/niu-2026-reliability-contagion.md). Models an externally checkable false claim and explicitly fixes communication-budget conventions. Catalogue depth: abstract.
+- [[wu-2026-collective]] — [Collective Loss of Control in LLM Agent Systems: An Epidemic Account of Mutation, Contagion, and Recovery](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/wu-2026-collective.md). Separates modeled collective loss from observed handoff susceptibility. Catalogue depth: abstract.
+- [[zhou-2025-corba]] — [CORBA: Contagious Recursive Blocking Attacks on Multi-Agent Systems Based on Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhou-2025-corba.md). Availability loss is another distinct endpoint, not arbitrary harmful execution. Catalogue depth: full.
 
-**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [rigs](https://github.com/dmarzzz/swarm-lab/blob/main/src/fork-merge-setups/rigs.json).
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/lab/tasks/scan-papers-fm-contagion.md), [rigs](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/src/fork-merge-setups/rigs.json).
 
 <a id="sec-46"></a>
 ### SEC-46 — Shared tools can reconnect isolated children
@@ -5174,11 +5174,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[le-2026-cross-layer]] — [Cross-layer contagion of prompt injections in multi-agent swarms: a multiplex microscopic markov chain approach](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/le-2026-cross-layer.md). Multiplex agent/tool contagion is already modeled; primary full methods remain unavailable in this pass. Catalogue depth: abstract.
-- [[lee-2026-reproduction]] — [The Reproduction Number of AI Worms: Epidemic Modeling of Adversarial Attacks in LLM Agent Ecosystems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lee-2026-reproduction.md). Poisoned reservoirs are explicit in the abstract-level epidemic framing. Catalogue depth: abstract.
-- [[zha-2026-autonomous]] — [Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zha-2026-autonomous.md). Persistent carrier re-entry gives a concrete adjacent runtime mechanism. Catalogue depth: abstract.
+- [[le-2026-cross-layer]] — [Cross-layer contagion of prompt injections in multi-agent swarms: a multiplex microscopic markov chain approach](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/le-2026-cross-layer.md). Multiplex agent/tool contagion is already modeled; primary full methods remain unavailable in this pass. Catalogue depth: abstract.
+- [[lee-2026-reproduction]] — [The Reproduction Number of AI Worms: Epidemic Modeling of Adversarial Attacks in LLM Agent Ecosystems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lee-2026-reproduction.md). Poisoned reservoirs are explicit in the abstract-level epidemic framing. Catalogue depth: abstract.
+- [[zha-2026-autonomous]] — [Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zha-2026-autonomous.md). Persistent carrier re-entry gives a concrete adjacent runtime mechanism. Catalogue depth: abstract.
 
-**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/lab/tasks/scan-papers-fm-contagion.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md).
 
 <a id="sec-47"></a>
 ### SEC-47 — Where does the full fork-and-return chain actually fail?
@@ -5205,11 +5205,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[zhang-2026-agentworm]] — [AgentWorm: Self-Propagating Attacks Across LLM Agent Ecosystems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhang-2026-agentworm.md). Audit distinguishes composite laboratory success, retries, persistence, and bounded relay chains. Catalogue depth: full.
-- [[chen-2026-memsecbench]] — [MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/chen-2026-memsecbench.md). Lifecycle checkpoints and conditional repair denominators are direct prior. Catalogue depth: abstract.
-- [[wu-2026-collective]] — [Collective Loss of Control in LLM Agent Systems: An Epidemic Account of Mutation, Contagion, and Recovery](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wu-2026-collective.md). Controlled handoff susceptibility does not alone demonstrate an autonomous cascade. Catalogue depth: abstract.
+- [[zhang-2026-agentworm]] — [AgentWorm: Self-Propagating Attacks Across LLM Agent Ecosystems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhang-2026-agentworm.md). Audit distinguishes composite laboratory success, retries, persistence, and bounded relay chains. Catalogue depth: full.
+- [[chen-2026-memsecbench]] — [MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/chen-2026-memsecbench.md). Lifecycle checkpoints and conditional repair denominators are direct prior. Catalogue depth: abstract.
+- [[wu-2026-collective]] — [Collective Loss of Control in LLM Agent Systems: An Epidemic Account of Mutation, Contagion, and Recovery](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/wu-2026-collective.md). Controlled handoff susceptibility does not alone demonstrate an autonomous cascade. Catalogue depth: abstract.
 
-**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [rigs](https://github.com/dmarzzz/swarm-lab/blob/main/src/fork-merge-setups/rigs.json), [fork-merge-questions](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/fork-merge-questions.md).
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/lab/tasks/scan-papers-fm-contagion.md), [rigs](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/src/fork-merge-setups/rigs.json), [fork-merge-questions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/fork-merge-questions.md).
 
 <a id="sec-48"></a>
 ### SEC-48 — When can an isolated child safely return?
@@ -5236,11 +5236,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[zha-2026-autonomous]] — [Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zha-2026-autonomous.md). Conservative taint persists until external declassification; that authority is an assumption to examine. Catalogue depth: abstract.
-- [[chen-2026-memsecbench]] — [MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/chen-2026-memsecbench.md). Selective repair already requires removal and benign-memory preservation. Catalogue depth: abstract.
-- [[mateo-torrejon-2026-gammaf]] — [GAMMAF: A Common Framework for Graph-Based Anomaly Monitoring Benchmarking in LLM Multi-Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mateo-torrejon-2026-gammaf.md). Live node isolation is established; return criteria extend beyond simply isolating nodes. Catalogue depth: abstract.
+- [[zha-2026-autonomous]] — [Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zha-2026-autonomous.md). Conservative taint persists until external declassification; that authority is an assumption to examine. Catalogue depth: abstract.
+- [[chen-2026-memsecbench]] — [MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/chen-2026-memsecbench.md). Selective repair already requires removal and benign-memory preservation. Catalogue depth: abstract.
+- [[mateo-torrejon-2026-gammaf]] — [GAMMAF: A Common Framework for Graph-Based Anomaly Monitoring Benchmarking in LLM Multi-Agent Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/mateo-torrejon-2026-gammaf.md). Live node isolation is established; return criteria extend beyond simply isolating nodes. Catalogue depth: abstract.
 
-**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/lab/tasks/scan-papers-fm-contagion.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md).
 
 <a id="sec-49"></a>
 ### SEC-49 — Recovery can look good after damage is already done
@@ -5267,11 +5267,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[wu-2025-cowpox]] — [Cowpox: Towards the Immunity of VLM-based Multi-Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wu-2025-cowpox.md). The source audit distinguishes high recovery from substantial cumulative infection and conditional extinction assumptions. Catalogue depth: skim.
-- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/elnozahy-2002-survey.md). External outputs constrain what rollback can undo. Catalogue depth: skim.
-- [[lee-2026-reproduction]] — [The Reproduction Number of AI Worms: Epidemic Modeling of Adversarial Attacks in LLM Agent Ecosystems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lee-2026-reproduction.md). Interception and recovery affect different model parameters; full equations need verification. Catalogue depth: abstract.
+- [[wu-2025-cowpox]] — [Cowpox: Towards the Immunity of VLM-based Multi-Agent Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/wu-2025-cowpox.md). The source audit distinguishes high recovery from substantial cumulative infection and conditional extinction assumptions. Catalogue depth: skim.
+- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/elnozahy-2002-survey.md). External outputs constrain what rollback can undo. Catalogue depth: skim.
+- [[lee-2026-reproduction]] — [The Reproduction Number of AI Worms: Epidemic Modeling of Adversarial Attacks in LLM Agent Ecosystems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lee-2026-reproduction.md). Interception and recovery affect different model parameters; full equations need verification. Catalogue depth: abstract.
 
-**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/lab/tasks/scan-papers-fm-contagion.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md).
 
 <a id="sec-51"></a>
 ### SEC-51 — Can harmless evaluator preferences narrow a swarm's reasoning?
@@ -5298,11 +5298,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[liu-2026-contagion]] — [Contagion Networks: Evaluator Preference Propagation in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2026-contagion.md). Direct evaluator-preference propagation precedent with narrow strategy-orientation meaning. Catalogue depth: abstract.
-- [[ebrahimi-2025-adversary]] — [An Adversary-Resistant Multi-Agent LLM System via Credibility Scoring](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ebrahimi-2025-adversary.md). Trusted-judge and architecture assumptions constrain credibility-based defenses. Catalogue depth: skim.
-- [[kim-2025-correlated]] — [Correlated Errors in Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/kim-2025-correlated.md). Different model identities do not guarantee independent judgments. Catalogue depth: full.
+- [[liu-2026-contagion]] — [Contagion Networks: Evaluator Preference Propagation in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/liu-2026-contagion.md). Direct evaluator-preference propagation precedent with narrow strategy-orientation meaning. Catalogue depth: abstract.
+- [[ebrahimi-2025-adversary]] — [An Adversary-Resistant Multi-Agent LLM System via Credibility Scoring](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ebrahimi-2025-adversary.md). Trusted-judge and architecture assumptions constrain credibility-based defenses. Catalogue depth: skim.
+- [[kim-2025-correlated]] — [Correlated Errors in Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/kim-2025-correlated.md). Different model identities do not guarantee independent judgments. Catalogue depth: full.
 
-**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/lab/tasks/scan-papers-fm-contagion.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md).
 
 <a id="sec-52"></a>
 ### SEC-52 — Do small per-merge failures accumulate across generations?
@@ -5329,11 +5329,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[yang-2026-zombie]] — [Zombie Agents: Persistent Control of Self-Evolving LLM Agents via Self-Reinforcing Injections](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yang-2026-zombie.md). Persistent self-reinforcing control is existing prior; entry remains abstract-level. Catalogue depth: abstract.
-- [[zha-2026-autonomous]] — [Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zha-2026-autonomous.md). Temporal re-entry and scheduled context loading are already studied. Catalogue depth: abstract.
-- [[chen-2026-memsecbench]] — [MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/chen-2026-memsecbench.md). Single-lifecycle repair checkpoints provide a starting comparator, not longitudinal proof. Catalogue depth: abstract.
+- [[yang-2026-zombie]] — [Zombie Agents: Persistent Control of Self-Evolving LLM Agents via Self-Reinforcing Injections](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/yang-2026-zombie.md). Persistent self-reinforcing control is existing prior; entry remains abstract-level. Catalogue depth: abstract.
+- [[zha-2026-autonomous]] — [Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zha-2026-autonomous.md). Temporal re-entry and scheduled context loading are already studied. Catalogue depth: abstract.
+- [[chen-2026-memsecbench]] — [MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/chen-2026-memsecbench.md). Single-lifecycle repair checkpoints provide a starting comparator, not longitudinal proof. Catalogue depth: abstract.
 
-**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [rigs](https://github.com/dmarzzz/swarm-lab/blob/main/src/fork-merge-setups/rigs.json), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/lab/tasks/scan-papers-fm-contagion.md), [rigs](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/src/fork-merge-setups/rigs.json), [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md).
 
 <a id="sec-54"></a>
 ### SEC-54 — When permitted specialist actions compose into a forbidden outcome
@@ -5360,11 +5360,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[gh-dmarzzz-patchwork]] — [Patchwork Heist — capability-restricted agents and a private-profit economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-dmarzzz-patchwork.md). Local 80-run extension: 4/5 versus 0/5 prohibited exports in the fragmented/local cell without versus with a host guard; one model and five runs per cell, not a heist-economy result. Catalogue depth: skim.
-- [[triedman-2025-multi]] — [Multi-Agent Systems Execute Arbitrary Malicious Code](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/triedman-2025-multi.md). Catalogue describes cross-agent control-flow hijacking. This isolates composition of already-permitted actions from an individual step violating its local policy. Catalogue depth: full.
-- [[green-2007-provenance]] — [Provenance Semirings](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/green-2007-provenance.md). Derivation provenance is established for specified operations; it does not infer semantic dependence inside arbitrary LLM transformations. Catalogue depth: skim.
+- [[gh-dmarzzz-patchwork]] — [Patchwork Heist — capability-restricted agents and a private-profit economy](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-dmarzzz-patchwork.md). Local 80-run extension: 4/5 versus 0/5 prohibited exports in the fragmented/local cell without versus with a host guard; one model and five runs per cell, not a heist-economy result. Catalogue depth: skim.
+- [[triedman-2025-multi]] — [Multi-Agent Systems Execute Arbitrary Malicious Code](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/triedman-2025-multi.md). Catalogue describes cross-agent control-flow hijacking. This isolates composition of already-permitted actions from an individual step violating its local policy. Catalogue depth: full.
+- [[green-2007-provenance]] — [Provenance Semirings](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/green-2007-provenance.md). Derivation provenance is established for specified operations; it does not infer semantic dependence inside arbitrary LLM transformations. Catalogue depth: skim.
 
-**Related team work:** [patchwork-addendum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/question-atlas/patchwork-addendum.md).
+**Related team work:** [patchwork-addendum](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/question-atlas/patchwork-addendum.md).
 
 <a id="sec-56"></a>
 ### SEC-56 — How much finality delay buys containment?
@@ -5391,10 +5391,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[gh-dmarzzz-patchwork]] — [Patchwork Heist — capability-restricted agents and a private-profit economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-dmarzzz-patchwork.md). The exact local audit contained no immediately final effects; an eight-event delay gave 100% containment at cadence eight but 50.8% at cadence sixteen under its deterministic motif. Catalogue depth: skim.
-- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/elnozahy-2002-survey.md). Classical output-commit and rollback boundaries explain why external effects cannot simply be undone. Catalogue depth: skim.
+- [[gh-dmarzzz-patchwork]] — [Patchwork Heist — capability-restricted agents and a private-profit economy](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-dmarzzz-patchwork.md). The exact local audit contained no immediately final effects; an eight-event delay gave 100% containment at cadence eight but 50.8% at cadence sixteen under its deterministic motif. Catalogue depth: skim.
+- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/elnozahy-2002-survey.md). Classical output-commit and rollback boundaries explain why external effects cannot simply be undone. Catalogue depth: skim.
 
-**Related team work:** [patchwork-addendum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/question-atlas/patchwork-addendum.md).
+**Related team work:** [patchwork-addendum](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/question-atlas/patchwork-addendum.md).
 
 <a id="mkt-07"></a>
 ### MKT-07 — Forked firms and inherited conventions
@@ -5421,11 +5421,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[arslan-2026-persistent]] — [Persistent Partners Raise Prices Among Learning Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/arslan-2026-persistent.md). Keeping the same partner raises prices even without punishment; persistence, not forking. Catalogue depth: abstract.
-- [[tian-2026-prompt]] — [Prompt Optimization Enables Stable Algorithmic Collusion in LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/tian-2026-prompt.md). A shared optimised prompt for both firms produces stable collusion. Catalogue depth: abstract.
-- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2024-strategic.md). Uses a plans-and-insights memory like the one a fork would copy. Catalogue depth: full.
+- [[arslan-2026-persistent]] — [Persistent Partners Raise Prices Among Learning Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/arslan-2026-persistent.md). Keeping the same partner raises prices even without punishment; persistence, not forking. Catalogue depth: abstract.
+- [[tian-2026-prompt]] — [Prompt Optimization Enables Stable Algorithmic Collusion in LLM Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/tian-2026-prompt.md). A shared optimised prompt for both firms produces stable collusion. Catalogue depth: abstract.
+- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lin-2024-strategic.md). Uses a plans-and-insights memory like the one a fork would copy. Catalogue depth: full.
 
-**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/swarm-factory.md).
 
 <a id="swarm-detection"></a>
 ## Detecting AI agent swarms in the wild
@@ -5455,11 +5455,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[white-2026-black]] — [Black-Box Forensics for Conversational LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/white-2026-black.md). Same-prompt and base-model forensics do not themselves establish common ownership. Catalogue depth: full.
-- [[pasquini-2024-llmmap]] — [LLMmap: Fingerprinting For Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pasquini-2024-llmmap.md). Explicitly targets model identity, supplying a useful separate baseline. Catalogue depth: full.
-- [[park-2026-cross]] — [Cross-Agent Campaign Attribution: Linking Asynchronous Attacks Across LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/park-2026-cross.md). Campaign linking is evaluated on synthetic sessions, motivating held-out design. Catalogue depth: skim.
+- [[white-2026-black]] — [Black-Box Forensics for Conversational LLM Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/white-2026-black.md). Same-prompt and base-model forensics do not themselves establish common ownership. Catalogue depth: full.
+- [[pasquini-2024-llmmap]] — [LLMmap: Fingerprinting For Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pasquini-2024-llmmap.md). Explicitly targets model identity, supplying a useful separate baseline. Catalogue depth: full.
+- [[park-2026-cross]] — [Cross-Agent Campaign Attribution: Linking Asynchronous Attacks Across LLM Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/park-2026-cross.md). Campaign linking is evaluated on synthetic sessions, motivating held-out design. Catalogue depth: skim.
 
-**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/swarm-detection-methods.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md).
 
 <a id="sec-26"></a>
 ### SEC-26 — Measure the simulator fingerprint before measuring swarms
@@ -5486,11 +5486,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[hays-2023-simplistic]] — [Simplistic Collection and Labeling Practices Limit the Utility of Benchmark Datasets for Twitter Bot Detection](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hays-2023-simplistic.md). Direct evidence of dataset construction confounds in bot detection. Catalogue depth: full.
-- [[ng-2025-are]] — [Are LLM-Powered Social Media Bots Realistic?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ng-2025-are.md). Abstract-level realism warning for generated social bots, not audited effect sizes. Catalogue depth: abstract.
-- [[data-agent-collusion-2026]] — [Emergent Collusion in Long-Horizon LLM Agent Interaction: 2,650 two-agent trajectories (27,100 episodes) with judge labels](https://github.com/dmarzzz/swarm-lab/blob/main/library/datasets/data-agent-collusion-2026.md). Available trajectories share 50 task sequences across conditions and include private reflections; split by sequence and restrict features to the monitor view. Catalogue depth: skim.
+- [[hays-2023-simplistic]] — [Simplistic Collection and Labeling Practices Limit the Utility of Benchmark Datasets for Twitter Bot Detection](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/hays-2023-simplistic.md). Direct evidence of dataset construction confounds in bot detection. Catalogue depth: full.
+- [[ng-2025-are]] — [Are LLM-Powered Social Media Bots Realistic?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ng-2025-are.md). Abstract-level realism warning for generated social bots, not audited effect sizes. Catalogue depth: abstract.
+- [[data-agent-collusion-2026]] — [Emergent Collusion in Long-Horizon LLM Agent Interaction: 2,650 two-agent trajectories (27,100 episodes) with judge labels](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/datasets/data-agent-collusion-2026.md). Available trajectories share 50 task sequences across conditions and include private reflections; split by sequence and restrict features to the monitor view. Catalogue depth: skim.
 
-**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md).
+**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/swarm-detection-methods.md).
 
 <a id="sec-27"></a>
 ### SEC-27 — Shared news is not necessarily shared control
@@ -5517,11 +5517,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[shalizi-2011-homophily]] — [Homophily and Contagion Are Generically Confounded in Observational Social Network Studies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/shalizi-2011-homophily.md). Observational patterns can leave contagion unidentified. Catalogue depth: skim.
-- [[aronow-2013-estimating]] — [Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/aronow-2013-estimating.md). Assignment, exposure, and estimand require separate specification. Catalogue depth: skim.
-- [[pante-2025-beyond]] — [Beyond Interaction Patterns: Assessing Claims of Coordinated Inter-State Information Operations on Twitter/X](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pante-2025-beyond.md). Matched organic controls overturn apparent coordination in its setting. Catalogue depth: abstract.
+- [[shalizi-2011-homophily]] — [Homophily and Contagion Are Generically Confounded in Observational Social Network Studies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/shalizi-2011-homophily.md). Observational patterns can leave contagion unidentified. Catalogue depth: skim.
+- [[aronow-2013-estimating]] — [Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/aronow-2013-estimating.md). Assignment, exposure, and estimand require separate specification. Catalogue depth: skim.
+- [[pante-2025-beyond]] — [Beyond Interaction Patterns: Assessing Claims of Coordinated Inter-State Information Operations on Twitter/X](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pante-2025-beyond.md). Matched organic controls overturn apparent coordination in its setting. Catalogue depth: abstract.
 
-**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/swarm-detection-methods.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md).
 
 <a id="sec-28"></a>
 ### SEC-28 — A canary identifies a route, not always an operator
@@ -5548,10 +5548,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[seiden-2026-identifying]] — [Identifying AI Web Scrapers Using Canary Tokens](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/seiden-2026-identifying.md). Primary per-visitor canary study also observes search-mediated reuse and missed emissions. Catalogue depth: full.
-- [[farooqi-2020-canarytrap]] — [CanaryTrap: Detecting Data Misuse by Third-Party Apps on Online Social Networks](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/farooqi-2020-canarytrap.md). Earlier per-counterparty honeytokens rely on observable downstream use; entry abstract-only. Catalogue depth: abstract.
+- [[seiden-2026-identifying]] — [Identifying AI Web Scrapers Using Canary Tokens](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/seiden-2026-identifying.md). Primary per-visitor canary study also observes search-mediated reuse and missed emissions. Catalogue depth: full.
+- [[farooqi-2020-canarytrap]] — [CanaryTrap: Detecting Data Misuse by Third-Party Apps on Online Social Networks](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/farooqi-2020-canarytrap.md). Earlier per-counterparty honeytokens rely on observable downstream use; entry abstract-only. Catalogue depth: abstract.
 
-**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md).
+**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/swarm-detection-methods.md).
 
 <a id="sec-29"></a>
 ### SEC-29 — Does shared memory teach agents to recognize test probes?
@@ -5578,10 +5578,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[gans-2026-when]] — [When Agents Talk: Honeytokens under Shared Memory](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/gans-2026-when.md). Abstract-level theoretical motivation; theorem assumptions need a full read before use. Catalogue depth: abstract.
-- [[seiden-2026-identifying]] — [Identifying AI Web Scrapers Using Canary Tokens](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/seiden-2026-identifying.md). Observable emission is required for this canary family. Catalogue depth: full.
+- [[gans-2026-when]] — [When Agents Talk: Honeytokens under Shared Memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/gans-2026-when.md). Abstract-level theoretical motivation; theorem assumptions need a full read before use. Catalogue depth: abstract.
+- [[seiden-2026-identifying]] — [Identifying AI Web Scrapers Using Canary Tokens](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/seiden-2026-identifying.md). Observable emission is required for this canary family. Catalogue depth: full.
 
-**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md).
+**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/swarm-detection-methods.md).
 
 <a id="sec-30"></a>
 ### SEC-30 — Would the detector produce a useful review queue?
@@ -5608,11 +5608,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[varol-2022-should]] — [Should we agree to disagree about Twitter's bot problem?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/varol-2022-should.md). Prevalence depends on definition, detector, and sampled population; a methods position source. Catalogue depth: abstract.
-- [[hays-2023-simplistic]] — [Simplistic Collection and Labeling Practices Limit the Utility of Benchmark Datasets for Twitter Bot Detection](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hays-2023-simplistic.md). Dataset artifacts can distort measured conditional errors. Catalogue depth: full.
-- [[pante-2025-beyond]] — [Beyond Interaction Patterns: Assessing Claims of Coordinated Inter-State Information Operations on Twitter/X](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pante-2025-beyond.md). Benign controls are essential to interpreting alerts. Catalogue depth: abstract.
+- [[varol-2022-should]] — [Should we agree to disagree about Twitter's bot problem?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/varol-2022-should.md). Prevalence depends on definition, detector, and sampled population; a methods position source. Catalogue depth: abstract.
+- [[hays-2023-simplistic]] — [Simplistic Collection and Labeling Practices Limit the Utility of Benchmark Datasets for Twitter Bot Detection](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/hays-2023-simplistic.md). Dataset artifacts can distort measured conditional errors. Catalogue depth: full.
+- [[pante-2025-beyond]] — [Beyond Interaction Patterns: Assessing Claims of Coordinated Inter-State Information Operations on Twitter/X](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pante-2025-beyond.md). Benign controls are essential to interpreting alerts. Catalogue depth: abstract.
 
-**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md).
+**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/swarm-detection-methods.md).
 
 <a id="sec-31"></a>
 ### SEC-31 — Separate assistance from autonomous action
@@ -5639,10 +5639,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[xu-2026-penny]] — [A Penny for Your Prompts: Experiments Detecting and Mitigating LLM Usage by Survey Respondents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/xu-2026-penny.md). Abstract-level source separates respondent AI use from browser-agent presence. Catalogue depth: abstract.
-- [[wang-2026-towards]] — [Towards Detecting AI-Assisted Responses in Online Surveys](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wang-2026-towards.md). Abstract-level benchmark suggests response-level and behavioral detection differ. Catalogue depth: abstract.
+- [[xu-2026-penny]] — [A Penny for Your Prompts: Experiments Detecting and Mitigating LLM Usage by Survey Respondents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/xu-2026-penny.md). Abstract-level source separates respondent AI use from browser-agent presence. Catalogue depth: abstract.
+- [[wang-2026-towards]] — [Towards Detecting AI-Assisted Responses in Online Surveys](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/wang-2026-towards.md). Abstract-level benchmark suggests response-level and behavioral detection differ. Catalogue depth: abstract.
 
-**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md).
+**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/swarm-detection-methods.md).
 
 <a id="sec-32"></a>
 ### SEC-32 — Are browser detectors detecting the automation library?
@@ -5669,10 +5669,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[choudhary-2026-what]] — [What Does It Take to Detect an AI Agent? Minimal Feature Sets for Behavioral Detection under Browser Automation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/choudhary-2026-what.md). Measured high detection rests on browser-interaction features in a specific setup. Catalogue depth: full.
-- [[hays-2023-simplistic]] — [Simplistic Collection and Labeling Practices Limit the Utility of Benchmark Datasets for Twitter Bot Detection](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hays-2023-simplistic.md). Collection artifacts motivate domain-disjoint validation. Catalogue depth: full.
+- [[choudhary-2026-what]] — [What Does It Take to Detect an AI Agent? Minimal Feature Sets for Behavioral Detection under Browser Automation](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/choudhary-2026-what.md). Measured high detection rests on browser-interaction features in a specific setup. Catalogue depth: full.
+- [[hays-2023-simplistic]] — [Simplistic Collection and Labeling Practices Limit the Utility of Benchmark Datasets for Twitter Bot Detection](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/hays-2023-simplistic.md). Collection artifacts motivate domain-disjoint validation. Catalogue depth: full.
 
-**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md).
+**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/swarm-detection-methods.md).
 
 <a id="sec-33"></a>
 ### SEC-33 — A shared funder may be a service, not a shared owner
@@ -5699,11 +5699,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[xiong-2026-can]] — [Can Trustless Agents Be Trusted? An Empirical Study of the ERC-8004 Decentralized AI Agent Ecosystem](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/xiong-2026-can.md). Shared-funder heuristic is a measurement approach, not verified ownership ground truth. Catalogue depth: full.
-- [[bartnicki-2026-compression]] — [Compression-Based Behavioral Similarity for Open-World Sybil Discovery on Ethereum](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bartnicki-2026-compression.md). Behavioral grammar and label-leakage controls supply relevant baselines. Catalogue depth: full.
-- [[eisenbarth-2022-ethereum]] — [Ethereum's Peer-to-Peer Network Monitoring and Sybil Attack Prevention](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/eisenbarth-2022-ethereum.md). Network identity multiplication has shared-infrastructure explanations; its historical IP thresholds do not establish malicious common ownership. Catalogue depth: skim.
+- [[xiong-2026-can]] — [Can Trustless Agents Be Trusted? An Empirical Study of the ERC-8004 Decentralized AI Agent Ecosystem](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/xiong-2026-can.md). Shared-funder heuristic is a measurement approach, not verified ownership ground truth. Catalogue depth: full.
+- [[bartnicki-2026-compression]] — [Compression-Based Behavioral Similarity for Open-World Sybil Discovery on Ethereum](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/bartnicki-2026-compression.md). Behavioral grammar and label-leakage controls supply relevant baselines. Catalogue depth: full.
+- [[eisenbarth-2022-ethereum]] — [Ethereum's Peer-to-Peer Network Monitoring and Sybil Attack Prevention](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/eisenbarth-2022-ethereum.md). Network identity multiplication has shared-infrastructure explanations; its historical IP thresholds do not establish malicious common ownership. Catalogue depth: skim.
 
-**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md), [sybil-flashbots](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/sybil-flashbots.md).
+**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/swarm-detection-methods.md), [sybil-flashbots](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/sybil-flashbots.md).
 
 <a id="sec-34"></a>
 ### SEC-34 — What disappears when only successful activity is logged?
@@ -5730,11 +5730,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[aronow-2013-estimating]] — [Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/aronow-2013-estimating.md). Exposure and observation assumptions matter for interpretable estimates. Catalogue depth: skim.
-- [[graham-2024-coordination]] — [The coordination network toolkit: a framework for detecting and analysing coordinated behaviour on social media](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/graham-2024-coordination.md). Co-action networks depend on observed time windows and behaviors. Catalogue depth: skim.
-- [[varol-2022-should]] — [Should we agree to disagree about Twitter's bot problem?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/varol-2022-should.md). Population and detector definitions shape prevalence claims. Catalogue depth: abstract.
+- [[aronow-2013-estimating]] — [Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/aronow-2013-estimating.md). Exposure and observation assumptions matter for interpretable estimates. Catalogue depth: skim.
+- [[graham-2024-coordination]] — [The coordination network toolkit: a framework for detecting and analysing coordinated behaviour on social media](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/graham-2024-coordination.md). Co-action networks depend on observed time windows and behaviors. Catalogue depth: skim.
+- [[varol-2022-should]] — [Should we agree to disagree about Twitter's bot problem?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/varol-2022-should.md). Population and detector definitions shape prevalence claims. Catalogue depth: abstract.
 
-**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/pre-experiment-research.md).
+**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/swarm-detection-methods.md), [pre-experiment-research](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/pre-experiment-research.md).
 
 <a id="sec-35"></a>
 ### SEC-35 — How quickly does an attribution detector expire?
@@ -5761,11 +5761,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[pasquini-2024-llmmap]] — [LLMmap: Fingerprinting For Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pasquini-2024-llmmap.md). Model-version fingerprinting motivates testing changes outside the original label set. Catalogue depth: full.
-- [[white-2026-black]] — [Black-Box Forensics for Conversational LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/white-2026-black.md). Prompt and model attribution are separate targets. Catalogue depth: full.
-- [[hays-2023-simplistic]] — [Simplistic Collection and Labeling Practices Limit the Utility of Benchmark Datasets for Twitter Bot Detection](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hays-2023-simplistic.md). Out-of-distribution performance can differ sharply from random splits. Catalogue depth: full.
+- [[pasquini-2024-llmmap]] — [LLMmap: Fingerprinting For Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pasquini-2024-llmmap.md). Model-version fingerprinting motivates testing changes outside the original label set. Catalogue depth: full.
+- [[white-2026-black]] — [Black-Box Forensics for Conversational LLM Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/white-2026-black.md). Prompt and model attribution are separate targets. Catalogue depth: full.
+- [[hays-2023-simplistic]] — [Simplistic Collection and Labeling Practices Limit the Utility of Benchmark Datasets for Twitter Bot Detection](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/hays-2023-simplistic.md). Out-of-distribution performance can differ sharply from random splits. Catalogue depth: full.
 
-**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md).
+**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/swarm-detection-methods.md).
 
 <a id="sec-36"></a>
 ### SEC-36 — Detect coordination with less identifying telemetry
@@ -5792,11 +5792,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[graham-2024-coordination]] — [The coordination network toolkit: a framework for detecting and analysing coordinated behaviour on social media](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/graham-2024-coordination.md). Multi-behavior networks also identify legitimate syndication. Catalogue depth: skim.
-- [[pante-2025-beyond]] — [Beyond Interaction Patterns: Assessing Claims of Coordinated Inter-State Information Operations on Twitter/X](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/pante-2025-beyond.md). Benign controls are needed before interpreting apparent coordination. Catalogue depth: abstract.
-- [[park-2026-cross]] — [Cross-Agent Campaign Attribution: Linking Asynchronous Attacks Across LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/park-2026-cross.md). Proxy-visible timing and structure are candidate signal types, with synthetic evidence limits. Catalogue depth: skim.
+- [[graham-2024-coordination]] — [The coordination network toolkit: a framework for detecting and analysing coordinated behaviour on social media](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/graham-2024-coordination.md). Multi-behavior networks also identify legitimate syndication. Catalogue depth: skim.
+- [[pante-2025-beyond]] — [Beyond Interaction Patterns: Assessing Claims of Coordinated Inter-State Information Operations on Twitter/X](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/pante-2025-beyond.md). Benign controls are needed before interpreting apparent coordination. Catalogue depth: abstract.
+- [[park-2026-cross]] — [Cross-Agent Campaign Attribution: Linking Asynchronous Attacks Across LLM Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/park-2026-cross.md). Proxy-visible timing and structure are candidate signal types, with synthetic evidence limits. Catalogue depth: skim.
 
-**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md).
+**Related team work:** [swarm-detection-methods](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/swarm-detection-methods.md).
 
 <a id="sec-50"></a>
 ### SEC-50 — A detector that isolates nodes changes the evidence
@@ -5823,11 +5823,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[mateo-torrejon-2026-gammaf]] — [GAMMAF: A Common Framework for Graph-Based Anomaly Monitoring Benchmarking in LLM Multi-Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/mateo-torrejon-2026-gammaf.md). Live graph-monitor remediation already exists, so this is a decision-quality boundary test. Catalogue depth: abstract.
-- [[gh-floriangroetschla-agentsnet]] — [AgentsNet: benchmark of LLM agents on a graph solving distributed-computing tasks (colouring, matching, leader election, consensus, vertex cover) by synchronous message passing](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-floriangroetschla-agentsnet.md). Concrete synchronous graph-task harness with task scoring; the cataloguing lane ran one coloring example, but no security intervention was run here. Catalogue depth: ran.
-- [[aronow-2013-estimating]] — [Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/aronow-2013-estimating.md). Interference and policy assignment determine the causal quantity. Catalogue depth: skim.
+- [[mateo-torrejon-2026-gammaf]] — [GAMMAF: A Common Framework for Graph-Based Anomaly Monitoring Benchmarking in LLM Multi-Agent Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/mateo-torrejon-2026-gammaf.md). Live graph-monitor remediation already exists, so this is a decision-quality boundary test. Catalogue depth: abstract.
+- [[gh-floriangroetschla-agentsnet]] — [AgentsNet: benchmark of LLM agents on a graph solving distributed-computing tasks (colouring, matching, leader election, consensus, vertex cover) by synchronous message passing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-floriangroetschla-agentsnet.md). Concrete synchronous graph-task harness with task scoring; the cataloguing lane ran one coloring example, but no security intervention was run here. Catalogue depth: ran.
+- [[aronow-2013-estimating]] — [Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/aronow-2013-estimating.md). Interference and policy assignment determine the causal quantity. Catalogue depth: skim.
 
-**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-lab/blob/main/tasks/scan-papers-fm-contagion.md), [swarm-detection-methods](https://github.com/dmarzzz/swarm-lab/blob/main/synthesis/swarm-detection-methods.md).
+**Related team work:** [scan-papers-fm-contagion](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/lab/tasks/scan-papers-fm-contagion.md), [swarm-detection-methods](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/3-synthesis/swarm-detection-methods.md).
 
 <a id="sec-55"></a>
 ### SEC-55 — Causal audits when provenance is incomplete
@@ -5854,11 +5854,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[gh-dmarzzz-patchwork]] — [Patchwork Heist — capability-restricted agents and a private-profit economy](https://github.com/dmarzzz/swarm-lab/blob/main/library/code/gh-dmarzzz-patchwork.md). The local semantic pilot detected 10/10 prohibited paths with complete ancestry; per-agent views abstained on all 20 cases. Only ten paired traces and a three-event motif. Catalogue depth: skim.
-- [[green-2007-provenance]] — [Provenance Semirings](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/green-2007-provenance.md). Formal derivation provenance supplies a baseline under specified query semantics, not a general LLM dependency oracle. Catalogue depth: skim.
-- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/elnozahy-2002-survey.md). Distributed recovery depends on cross-process dependencies; recovery semantics are distinct from semantic classification. Catalogue depth: skim.
+- [[gh-dmarzzz-patchwork]] — [Patchwork Heist — capability-restricted agents and a private-profit economy](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/code/gh-dmarzzz-patchwork.md). The local semantic pilot detected 10/10 prohibited paths with complete ancestry; per-agent views abstained on all 20 cases. Only ten paired traces and a three-event motif. Catalogue depth: skim.
+- [[green-2007-provenance]] — [Provenance Semirings](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/green-2007-provenance.md). Formal derivation provenance supplies a baseline under specified query semantics, not a general LLM dependency oracle. Catalogue depth: skim.
+- [[elnozahy-2002-survey]] — [A survey of rollback-recovery protocols in message-passing systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/elnozahy-2002-survey.md). Distributed recovery depends on cross-process dependencies; recovery semantics are distinct from semantic classification. Catalogue depth: skim.
 
-**Related team work:** [patchwork-addendum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/question-atlas/patchwork-addendum.md).
+**Related team work:** [patchwork-addendum](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/question-atlas/patchwork-addendum.md).
 
 <a id="mkt-04"></a>
 ### MKT-04 — Telling Sybil firms from tacit colluders
@@ -5885,11 +5885,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[bracale-syrnikov-2026-institutional]] — [Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bracale-syrnikov-2026-institutional.md). Oracle detects coordination from quantities; does not distinguish ownership from tacit collusion. Catalogue depth: skim.
-- [[eschenbaum-2026-auditing]] — [Auditing Algorithmic Collusion from Strategy Graphs](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/eschenbaum-2026-auditing.md). Auditing collusion from queried strategy graphs; no Sybil labels. Catalogue depth: abstract.
-- [[rose-2026-detecting]] — [Detecting Multi-Agent Collusion Through Multi-Agent Interpretability](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/rose-2026-detecting.md). Collusion detection with unknown colluding subgroups, from activations rather than market data. Catalogue depth: skim.
+- [[bracale-syrnikov-2026-institutional]] — [Institutional AI: Governing LLM Collusion in Multi-Agent Cournot Markets via Public Governance Graphs](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/bracale-syrnikov-2026-institutional.md). Oracle detects coordination from quantities; does not distinguish ownership from tacit collusion. Catalogue depth: skim.
+- [[eschenbaum-2026-auditing]] — [Auditing Algorithmic Collusion from Strategy Graphs](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/eschenbaum-2026-auditing.md). Auditing collusion from queried strategy graphs; no Sybil labels. Catalogue depth: abstract.
+- [[rose-2026-detecting]] — [Detecting Multi-Agent Collusion Through Multi-Agent Interpretability](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/rose-2026-detecting.md). Collusion detection with unknown colluding subgroups, from activations rather than market data. Catalogue depth: skim.
 
-**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/swarm-factory.md).
 
 <a id="mkt-05"></a>
 ### MKT-05 — Reading the messages versus reading the market
@@ -5916,11 +5916,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[nakamura-2026-colosseum]] — [Colosseum: Auditing Collusion in Cooperative Multi-Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/nakamura-2026-colosseum.md). Finds 'collusion on paper': agents plan collusion in text but act otherwise. Catalogue depth: abstract.
-- [[lee-2026-faithful]] — [Faithful yet Collusive: Why Chain-of-Thought Monitoring Cannot Detect Collusion in LLM Pricing Agents under Oligopolistic Competition](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lee-2026-faithful.md). Reasoning faithfulness does not predict collusion. Catalogue depth: skim.
-- [[riemer-2026-position]] — [Position: Collusion Risks Among AI Reasoning Agents Justify Certification Requirements for Making Market Decisions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/riemer-2026-position.md). Argues steered collusion cannot be spotted from reasoning text. Catalogue depth: skim.
+- [[nakamura-2026-colosseum]] — [Colosseum: Auditing Collusion in Cooperative Multi-Agent Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/nakamura-2026-colosseum.md). Finds 'collusion on paper': agents plan collusion in text but act otherwise. Catalogue depth: abstract.
+- [[lee-2026-faithful]] — [Faithful yet Collusive: Why Chain-of-Thought Monitoring Cannot Detect Collusion in LLM Pricing Agents under Oligopolistic Competition](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lee-2026-faithful.md). Reasoning faithfulness does not predict collusion. Catalogue depth: skim.
+- [[riemer-2026-position]] — [Position: Collusion Risks Among AI Reasoning Agents Justify Certification Requirements for Making Market Decisions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/riemer-2026-position.md). Argues steered collusion cannot be spotted from reasoning text. Catalogue depth: skim.
 
-**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md).
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/swarm-factory.md).
 
 <a id="agent-budgets"></a>
 ## Agent budgets and resource allocation
@@ -5950,10 +5950,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[liu-2025-budget]] — [Budget-Aware Tool Use Enables Effective Agent Scaling](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2025-budget.md). Single-agent budget tracking supplies a visibility precedent, not a pooling result. Catalogue depth: skim.
-- [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/paliskara-2026-worse.md). Direct shared API-budget coordination precedent; not this visibility factorial. Catalogue depth: full.
+- [[liu-2025-budget]] — [Budget-Aware Tool Use Enables Effective Agent Scaling](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/liu-2025-budget.md). Single-agent budget tracking supplies a visibility precedent, not a pooling result. Catalogue depth: skim.
+- [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/paliskara-2026-worse.md). Direct shared API-budget coordination precedent; not this visibility factorial. Catalogue depth: full.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-02"></a>
 ### BUD-02 — Which parts of peer spending should be visible?
@@ -5980,10 +5980,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[anthropic-2026-patterns]] — [Patterns and problems in emerging multiagent systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/anthropic-2026-patterns.md). Public-board interactions motivate exposure controls; vendor examples do not establish a spending effect. Catalogue depth: full.
-- [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/paliskara-2026-worse.md). Shared-resource teams make coordination overhead a relevant comparator. Catalogue depth: full.
+- [[anthropic-2026-patterns]] — [Patterns and problems in emerging multiagent systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/anthropic-2026-patterns.md). Public-board interactions motivate exposure controls; vendor examples do not establish a spending effect. Catalogue depth: full.
+- [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/paliskara-2026-worse.md). Shared-resource teams make coordination overhead a relevant comparator. Catalogue depth: full.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-03"></a>
 ### BUD-03 — Displayed balance versus the enforced balance
@@ -6010,10 +6010,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[lin-2026-bagen]] — [BAGEN: Are LLM Agents Budget-Aware?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2026-bagen.md). Abstract reports miscalibrated remaining-cost forecasts; not misleading displays in populations. Catalogue depth: abstract.
-- [[cognition-2025-rebuilding]] — [Rebuilding Devin for Claude Sonnet 4.5: Lessons and Challenges](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/cognition-2025-rebuilding.md). Context-anxiety engineering anecdote motivates a contrast but provides no controlled effect estimate. Catalogue depth: full.
+- [[lin-2026-bagen]] — [BAGEN: Are LLM Agents Budget-Aware?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lin-2026-bagen.md). Abstract reports miscalibrated remaining-cost forecasts; not misleading displays in populations. Catalogue depth: abstract.
+- [[cognition-2025-rebuilding]] — [Rebuilding Devin for Claude Sonnet 4.5: Lessons and Challenges](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/cognition-2025-rebuilding.md). Context-anxiety engineering anecdote motivates a contrast but provides no controlled effect estimate. Catalogue depth: full.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-04"></a>
 ### BUD-04 — Context anxiety or spending anxiety?
@@ -6040,11 +6040,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[anthropic-2026-context]] — [Context windows](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/anthropic-2026-context.md). Documents context-awareness signals without a controlled behavioral comparison. Catalogue depth: full.
-- [[cognition-2025-rebuilding]] — [Rebuilding Devin for Claude Sonnet 4.5: Lessons and Challenges](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/cognition-2025-rebuilding.md). Reports context anxiety anecdotally. Catalogue depth: full.
-- [[lin-2026-bagen]] — [BAGEN: Are LLM Agents Budget-Aware?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2026-bagen.md). Separates internal computation from external action costs; not the same resource as context headroom. Catalogue depth: abstract.
+- [[anthropic-2026-context]] — [Context windows](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/anthropic-2026-context.md). Documents context-awareness signals without a controlled behavioral comparison. Catalogue depth: full.
+- [[cognition-2025-rebuilding]] — [Rebuilding Devin for Claude Sonnet 4.5: Lessons and Challenges](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/cognition-2025-rebuilding.md). Reports context anxiety anecdotally. Catalogue depth: full.
+- [[lin-2026-bagen]] — [BAGEN: Are LLM Agents Budget-Aware?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lin-2026-bagen.md). Separates internal computation from external action costs; not the same resource as context headroom. Catalogue depth: abstract.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-05"></a>
 ### BUD-05 — Use cost forecasts to release stranded budget
@@ -6071,10 +6071,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[lin-2026-bagen]] — [BAGEN: Are LLM Agents Budget-Aware?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2026-bagen.md). Defines progressive budget estimation and reports remaining calibration limits. Catalogue depth: abstract.
-- [[ding-2026-calibrate]] — [Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ding-2026-calibrate.md). Calibration before cost-aware exploration is prior art in a different allocation setting. Catalogue depth: skim.
+- [[lin-2026-bagen]] — [BAGEN: Are LLM Agents Budget-Aware?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lin-2026-bagen.md). Defines progressive budget estimation and reports remaining calibration limits. Catalogue depth: abstract.
+- [[ding-2026-calibrate]] — [Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ding-2026-calibrate.md). Calibration before cost-aware exploration is prior art in a different allocation setting. Catalogue depth: skim.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-06"></a>
 ### BUD-06 — Do quotas cause unnecessary spawning?
@@ -6101,10 +6101,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[yokoo-2004-effect]] — [The effect of false-name bids in combinatorial auctions: new fraud in internet auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yokoo-2004-effect.md). False-name bidding establishes a mechanism-design concern, not observed LLM spawning. Catalogue depth: skim.
-- [[anthropic-2025-how]] — [How we built our multi-agent research system](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/anthropic-2025-how.md). Reports over-spawning in engineering practice without a quota manipulation. Catalogue depth: full.
+- [[yokoo-2004-effect]] — [The effect of false-name bids in combinatorial auctions: new fraud in internet auctions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/yokoo-2004-effect.md). False-name bidding establishes a mechanism-design concern, not observed LLM spawning. Catalogue depth: skim.
+- [[anthropic-2025-how]] — [How we built our multi-agent research system](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/anthropic-2025-how.md). Reports over-spawning in engineering practice without a quota manipulation. Catalogue depth: full.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-07"></a>
 ### BUD-07 — Discovering a quota rule
@@ -6131,10 +6131,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[yokoo-2007-making]] — [Making VCG More Robust in Combinatorial Auctions via Submodular Approximation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yokoo-2007-making.md). False-name-resistant mechanism theory supplies context, not a rule-discovery result. Catalogue depth: full.
-- [[hu-2026-dissociative]] — [Dissociative Identity: Language Model Agents Lack Grounding for Reputation Mechanisms](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/hu-2026-dissociative.md). Position paper questions identity-based governance; it is not a theorem forbidding Sybil-proof reputation. Catalogue depth: abstract.
+- [[yokoo-2007-making]] — [Making VCG More Robust in Combinatorial Auctions via Submodular Approximation](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/yokoo-2007-making.md). False-name-resistant mechanism theory supplies context, not a rule-discovery result. Catalogue depth: full.
+- [[hu-2026-dissociative]] — [Dissociative Identity: Language Model Agents Lack Grounding for Reputation Mechanisms](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/hu-2026-dissociative.md). Position paper questions identity-based governance; it is not a theorem forbidding Sybil-proof reputation. Catalogue depth: abstract.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-08"></a>
 ### BUD-08 — Spawn fees versus lineage budgets
@@ -6161,10 +6161,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[zhu-2026-fault]] — [Fault-Tolerant Budget Conservation in Distributed Multi-Agent Delegation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhu-2026-fault.md). Escrow lineage constrains descendant resources under explicit system assumptions; not an incentive study. Catalogue depth: skim.
-- [[yokoo-2004-effect]] — [The effect of false-name bids in combinatorial auctions: new fraud in internet auctions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/yokoo-2004-effect.md). False-name mechanisms motivate evaluating both manipulation resistance and efficiency. Catalogue depth: skim.
+- [[zhu-2026-fault]] — [Fault-Tolerant Budget Conservation in Distributed Multi-Agent Delegation](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhu-2026-fault.md). Escrow lineage constrains descendant resources under explicit system assumptions; not an incentive study. Catalogue depth: skim.
+- [[yokoo-2004-effect]] — [The effect of false-name bids in combinatorial auctions: new fraud in internet auctions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/yokoo-2004-effect.md). False-name mechanisms motivate evaluating both manipulation resistance and efficiency. Catalogue depth: skim.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-09"></a>
 ### BUD-09 — Safe escrow that still gets work done
@@ -6191,10 +6191,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[zhu-2026-fault]] — [Fault-Tolerant Budget Conservation in Distributed Multi-Agent Delegation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhu-2026-fault.md). Direct conservation and partition-preallocation prior; this card tests allocation usefulness instead. Catalogue depth: skim.
-- [[chevaleyre-2006-issues]] — [Issues in Multiagent Resource Allocation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/chevaleyre-2006-issues.md). Resource-allocation survey supplies distinct efficiency and fairness objectives. Catalogue depth: skim.
+- [[zhu-2026-fault]] — [Fault-Tolerant Budget Conservation in Distributed Multi-Agent Delegation](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhu-2026-fault.md). Direct conservation and partition-preallocation prior; this card tests allocation usefulness instead. Catalogue depth: skim.
+- [[chevaleyre-2006-issues]] — [Issues in Multiagent Resource Allocation](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/chevaleyre-2006-issues.md). Resource-allocation survey supplies distinct efficiency and fairness objectives. Catalogue depth: skim.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-10"></a>
 ### BUD-10 — Peers, coordinator, equal shares or auction?
@@ -6221,11 +6221,11 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/paliskara-2026-worse.md). Direct coordinator/team comparison includes shared API budgets. Catalogue depth: full.
-- [[wang-2026-r3]] — [$R^3$-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wang-2026-r3.md). Studies one model allocating across problems, not bargaining peers. Catalogue depth: skim.
-- [[smith-1980-contract]] — [The Contract Net Protocol: High-Level Communication and Control in a Distributed Problem Solver](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/smith-1980-contract.md). Contract-net allocation is established prior art. Catalogue depth: abstract.
+- [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/paliskara-2026-worse.md). Direct coordinator/team comparison includes shared API budgets. Catalogue depth: full.
+- [[wang-2026-r3]] — [$R^3$-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/wang-2026-r3.md). Studies one model allocating across problems, not bargaining peers. Catalogue depth: skim.
+- [[smith-1980-contract]] — [The Contract Net Protocol: High-Level Communication and Control in a Distributed Problem Solver](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/smith-1980-contract.md). Contract-net allocation is established prior art. Catalogue depth: abstract.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-11"></a>
 ### BUD-11 — Can cost bids beat measured capability?
@@ -6252,10 +6252,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[amayuelas-2025-self]] — [Self-Resource Allocation in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/amayuelas-2025-self.md). Explicit capability information and orchestrator/planner allocation are direct precedents. Catalogue depth: full.
-- [[bianchi-2024-how]] — [How Well Can LLMs Negotiate? NegotiationArena Platform and Analysis](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/bianchi-2024-how.md). Negotiation studies motivate controlling framing and order; they do not validate truthful compute bids. Catalogue depth: full.
+- [[amayuelas-2025-self]] — [Self-Resource Allocation in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/amayuelas-2025-self.md). Explicit capability information and orchestrator/planner allocation are direct precedents. Catalogue depth: full.
+- [[bianchi-2024-how]] — [How Well Can LLMs Negotiate? NegotiationArena Platform and Analysis](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/bianchi-2024-how.md). Negotiation studies motivate controlling framing and order; they do not validate truthful compute bids. Catalogue depth: full.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-12"></a>
 ### BUD-12 — Replan on events or every action?
@@ -6282,10 +6282,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[amayuelas-2025-self]] — [Self-Resource Allocation in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/amayuelas-2025-self.md). Planner/orchestrator comparisons are direct prior; their cost analysis is not this hard-cap experiment. Catalogue depth: full.
-- [[dang-2025-multi]] — [Multi-Agent Collaboration via Evolving Orchestration](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/dang-2025-multi.md). Learned orchestration with cost penalties is adjacent; sequential activation differs from concurrent workers. Catalogue depth: skim.
+- [[amayuelas-2025-self]] — [Self-Resource Allocation in Multi-Agent LLM Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/amayuelas-2025-self.md). Planner/orchestrator comparisons are direct prior; their cost analysis is not this hard-cap experiment. Catalogue depth: full.
+- [[dang-2025-multi]] — [Multi-Agent Collaboration via Evolving Orchestration](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/dang-2025-multi.md). Learned orchestration with cost penalties is adjacent; sequential activation differs from concurrent workers. Catalogue depth: skim.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-13"></a>
 ### BUD-13 — Difficulty-aware allocation without hindsight
@@ -6312,10 +6312,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[wang-2026-r3]] — [$R^3$-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/wang-2026-r3.md). Direct shared-budget problem-allocation precedent with retrospective oracle limitations. Catalogue depth: skim.
-- [[ding-2026-calibrate]] — [Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/ding-2026-calibrate.md). Cost-aware exploration after calibration motivates charging information acquisition. Catalogue depth: skim.
+- [[wang-2026-r3]] — [$R^3$-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/wang-2026-r3.md). Direct shared-budget problem-allocation precedent with retrospective oracle limitations. Catalogue depth: skim.
+- [[ding-2026-calibrate]] — [Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/ding-2026-calibrate.md). Cost-aware exploration after calibration motivates charging information acquisition. Catalogue depth: skim.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-14"></a>
 ### BUD-14 — Divide work through a ledger alone
@@ -6342,10 +6342,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2024-strategic.md). Public outcomes support coordination in an economic game, not a compute-ledger test. Catalogue depth: full.
-- [[anthropic-2026-patterns]] — [Patterns and problems in emerging multiagent systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/anthropic-2026-patterns.md). Public-board vendor examples motivate distinguishing environmental observation from direct messages. Catalogue depth: full.
+- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lin-2024-strategic.md). Public outcomes support coordination in an economic game, not a compute-ledger test. Catalogue depth: full.
+- [[anthropic-2026-patterns]] — [Patterns and problems in emerging multiagent systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/anthropic-2026-patterns.md). Public-board vendor examples motivate distinguishing environmental observation from direct messages. Catalogue depth: full.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-15"></a>
 ### BUD-15 — Do peer spending norms increase waste?
@@ -6372,10 +6372,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[fish-2024-algorithmic]] — [Algorithmic Collusion by Large Language Models](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/fish-2024-algorithmic.md). Pricing collusion is an adjacent outcome, not evidence of budget padding. Catalogue depth: abstract.
-- [[nakamura-2026-colosseum]] — [Colosseum: Auditing Collusion in Cooperative Multi-Agent Systems](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/nakamura-2026-colosseum.md). Collusion auditing motivates measuring principal utility and behavior rather than inferring agreement from talk. Catalogue depth: abstract.
+- [[fish-2024-algorithmic]] — [Algorithmic Collusion by Large Language Models](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/fish-2024-algorithmic.md). Pricing collusion is an adjacent outcome, not evidence of budget padding. Catalogue depth: abstract.
+- [[nakamura-2026-colosseum]] — [Colosseum: Auditing Collusion in Cooperative Multi-Agent Systems](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/nakamura-2026-colosseum.md). Collusion auditing motivates measuring principal utility and behavior rather than inferring agreement from talk. Catalogue depth: abstract.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-16"></a>
 ### BUD-16 — Authority, labels and asymmetric spending rights
@@ -6402,10 +6402,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[borah-2026-bosses]] — [Bosses, Kings, and the Commons: Cooperation Under Power Asymmetry in LLM Societies](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/borah-2026-bosses.md). Direct asymmetric-commons prior; finite compute spending is a domain extension. Catalogue depth: skim.
-- [[piatti-2024-cooperate]] — [Cooperate or Collapse: Emergence of Sustainable Cooperation in a Society of LLM Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/piatti-2024-cooperate.md). Renewable commons cooperation motivates group-level utility, not a compute-budget prediction. Catalogue depth: abstract.
+- [[borah-2026-bosses]] — [Bosses, Kings, and the Commons: Cooperation Under Power Asymmetry in LLM Societies](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/borah-2026-bosses.md). Direct asymmetric-commons prior; finite compute spending is a domain extension. Catalogue depth: skim.
+- [[piatti-2024-cooperate]] — [Cooperate or Collapse: Emergence of Sustainable Cooperation in a Society of LLM Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/piatti-2024-cooperate.md). Renewable commons cooperation motivates group-level utility, not a compute-budget prediction. Catalogue depth: abstract.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-17"></a>
 ### BUD-17 — Keep enough budget to finish and verify
@@ -6432,10 +6432,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[liu-2025-budget]] — [Budget-Aware Tool Use Enables Effective Agent Scaling](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2025-budget.md). Tool-budget tracking motivates controlling early stopping and resource use across stages. Catalogue depth: skim.
-- [[lin-2026-bagen]] — [BAGEN: Are LLM Agents Budget-Aware?](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2026-bagen.md). Remaining-cost estimation motivates a progress-based release rule but does not validate it. Catalogue depth: abstract.
+- [[liu-2025-budget]] — [Budget-Aware Tool Use Enables Effective Agent Scaling](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/liu-2025-budget.md). Tool-budget tracking motivates controlling early stopping and resource use across stages. Catalogue depth: skim.
+- [[lin-2026-bagen]] — [BAGEN: Are LLM Agents Budget-Aware?](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lin-2026-bagen.md). Remaining-cost estimation motivates a progress-based release rule but does not validate it. Catalogue depth: abstract.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-18"></a>
 ### BUD-18 — Tokens, money or a resource vector?
@@ -6462,10 +6462,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[zhu-2026-fault]] — [Fault-Tolerant Budget Conservation in Distributed Multi-Agent Delegation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/zhu-2026-fault.md). Resource-vector accounting is existing systems prior, not proof of allocator quality. Catalogue depth: skim.
-- [[liu-2025-costbench]] — [CostBench: Evaluating Multi-Turn Cost-Optimal Planning and Adaptation in Dynamic Environments for LLM Tool-Use Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2025-costbench.md). Synthetic costed tool planning supplies exact-cost evaluation ideas. Catalogue depth: abstract.
+- [[zhu-2026-fault]] — [Fault-Tolerant Budget Conservation in Distributed Multi-Agent Delegation](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/zhu-2026-fault.md). Resource-vector accounting is existing systems prior, not proof of allocator quality. Catalogue depth: skim.
+- [[liu-2025-costbench]] — [CostBench: Evaluating Multi-Turn Cost-Optimal Planning and Adaptation in Dynamic Environments for LLM Tool-Use Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/liu-2025-costbench.md). Synthetic costed tool planning supplies exact-cost evaluation ideas. Catalogue depth: abstract.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-19"></a>
 ### BUD-19 — Advisory targets inside a hard cap
@@ -6492,10 +6492,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[anthropic-2026-task]] — [Task budgets](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/anthropic-2026-task.md). Documents advisory loop targets and separate enforced per-request limits; no controlled efficacy estimate. Catalogue depth: full.
-- [[han-2024-token]] — [Token-Budget-Aware LLM Reasoning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/han-2024-token.md). Prompted token-budget behavior motivates checking nonlinear responses to tight targets. Catalogue depth: skim.
+- [[anthropic-2026-task]] — [Task budgets](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/anthropic-2026-task.md). Documents advisory loop targets and separate enforced per-request limits; no controlled efficacy estimate. Catalogue depth: full.
+- [[han-2024-token]] — [Token-Budget-Aware LLM Reasoning](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/han-2024-token.md). Prompted token-budget behavior motivates checking nonlinear responses to tight targets. Catalogue depth: skim.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-20"></a>
 ### BUD-20 — Budget accounting across tools and compaction
@@ -6522,10 +6522,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[anthropic-2026-task]] — [Task budgets](https://github.com/dmarzzz/swarm-lab/blob/main/library/blogs/anthropic-2026-task.md). Documents loop counting and carrying remaining budget through client compaction. Catalogue depth: full.
-- [[liu-2025-budget]] — [Budget-Aware Tool Use Enables Effective Agent Scaling](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/liu-2025-budget.md). Budget tracking supplies a behavioral precedent, not a compaction test. Catalogue depth: skim.
+- [[anthropic-2026-task]] — [Task budgets](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/blogs/anthropic-2026-task.md). Documents loop counting and carrying remaining budget through client compaction. Catalogue depth: full.
+- [[liu-2025-budget]] — [Budget-Aware Tool Use Enables Effective Agent Scaling](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/liu-2025-budget.md). Budget tracking supplies a behavioral precedent, not a compaction test. Catalogue depth: skim.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-21"></a>
 ### BUD-21 — Train for a penalty or a strict budget?
@@ -6552,10 +6552,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[jin-2025-controlling]] — [Controlling Performance and Budget of a Centralized Multi-agent LLM System with Reinforcement Learning](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/jin-2025-controlling.md). Budget-penalized expert control motivates the terminal-cliff comparator. Catalogue depth: full.
-- [[dang-2025-multi]] — [Multi-Agent Collaboration via Evolving Orchestration](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/dang-2025-multi.md). Learned cost-aware orchestration is prior art; different activation rules require harmonization. Catalogue depth: skim.
+- [[jin-2025-controlling]] — [Controlling Performance and Budget of a Centralized Multi-agent LLM System with Reinforcement Learning](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/jin-2025-controlling.md). Budget-penalized expert control motivates the terminal-cliff comparator. Catalogue depth: full.
+- [[dang-2025-multi]] — [Multi-Agent Collaboration via Evolving Orchestration](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/dang-2025-multi.md). Learned cost-aware orchestration is prior art; different activation rules require harmonization. Catalogue depth: skim.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="bud-22"></a>
 ### BUD-22 — Efficiency and starvation in shared budgets
@@ -6582,10 +6582,10 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[chevaleyre-2006-issues]] — [Issues in Multiagent Resource Allocation](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/chevaleyre-2006-issues.md). Classical allocation distinguishes utilitarian, egalitarian and other welfare criteria. Catalogue depth: skim.
-- [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/paliskara-2026-worse.md). Multi-user shared-resource settings motivate keeping individual and group outcomes separate. Catalogue depth: full.
+- [[chevaleyre-2006-issues]] — [Issues in Multiagent Resource Allocation](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/chevaleyre-2006-issues.md). Classical allocation distinguishes utilitarian, egalitarian and other welfare criteria. Catalogue depth: skim.
+- [[paliskara-2026-worse]] — [Worse Together: How Performance Breaks Down in Multi-User Multi-Agent Teams](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/paliskara-2026-worse.md). Multi-user shared-resource settings motivate keeping individual and group outcomes separate. Catalogue depth: full.
 
-**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 <a id="mkt-09"></a>
 ### MKT-09 — Public production ledger
@@ -6612,27 +6612,27 @@ API tests need matched inference and communication budgets. Training tests need 
 
 **Closest prior and evidence limits:**
 
-- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/lin-2024-strategic.md). Agents see only own quantity, price, share and profit. Catalogue depth: full.
-- [[arslan-2026-persistent]] — [Persistent Partners Raise Prices Among Learning Agents](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/arslan-2026-persistent.md). Prices rise even when rival prices are hidden. Catalogue depth: abstract.
-- [[li-2026-emergent]] — [Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce](https://github.com/dmarzzz/swarm-lab/blob/main/library/papers/li-2026-emergent.md). Firms see competitors' prices and stock. Catalogue depth: skim.
+- [[lin-2024-strategic]] — [Strategic Collusion of LLM Agents: Market Division in Multi-Commodity Competitions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/lin-2024-strategic.md). Agents see only own quantity, price, share and profit. Catalogue depth: full.
+- [[arslan-2026-persistent]] — [Persistent Partners Raise Prices Among Learning Agents](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/arslan-2026-persistent.md). Prices rise even when rival prices are hidden. Catalogue depth: abstract.
+- [[li-2026-emergent]] — [Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/1-library/papers/li-2026-emergent.md). Firms see competitors' prices and stock. Catalogue depth: skim.
 
-**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/swarm-factory.md), [agent-budgets-hunches](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/agent-budgets-hunches.md).
+**Related team work:** [swarm-factory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/swarm-factory.md), [agent-budgets-hunches](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/dmarz/agent-budgets-hunches.md).
 
 ## Original brief coverage
 
-- [casefile](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/casefile.md): [SOC-32](#soc-32), [SOC-36](#soc-36)
-- [collective-sensing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/collective-sensing.md): [SOC-01](#soc-01), [SOC-02](#soc-02), [SOC-03](#soc-03), [SOC-04](#soc-04), [SOC-05](#soc-05), [SOC-08](#soc-08), [SOC-11](#soc-11), [SOC-13](#soc-13), [SOC-19](#soc-19), [SOC-35](#soc-35), [SOC-38](#soc-38), [SOC-39](#soc-39), [SOC-41](#soc-41), [SOC-42](#soc-42), [SOC-43](#soc-43), [SOC-44](#soc-44)
-- [commons](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/commons.md): [SOC-14](#soc-14), [SOC-26](#soc-26), [SOC-27](#soc-27), [SOC-28](#soc-28)
-- [coordination](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/coordination.md): [SOC-03](#soc-03), [SOC-04](#soc-04), [SOC-13](#soc-13), [SOC-14](#soc-14), [SOC-15](#soc-15), [SOC-16](#soc-16), [SOC-19](#soc-19), [SOC-20](#soc-20), [SOC-35](#soc-35), [SOC-40](#soc-40)
-- [culture](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/culture.md): [SOC-12](#soc-12), [SOC-14](#soc-14), [SOC-24](#soc-24), [SOC-25](#soc-25), [SOC-26](#soc-26), [SOC-34](#soc-34), [SOC-45](#soc-45)
-- [discovery](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/discovery.md): [SOC-36](#soc-36)
-- [dissent](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/dissent.md): [SOC-06](#soc-06), [SOC-07](#soc-07), [SOC-09](#soc-09), [SOC-10](#soc-10), [SOC-11](#soc-11), [SOC-12](#soc-12), [SOC-29](#soc-29), [SOC-30](#soc-30), [SOC-40](#soc-40), [SOC-43](#soc-43)
-- [diversity](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/diversity.md): [SOC-01](#soc-01), [SOC-02](#soc-02), [SOC-07](#soc-07), [SOC-12](#soc-12), [SOC-13](#soc-13), [SOC-26](#soc-26), [SOC-33](#soc-33), [SOC-38](#soc-38), [SOC-40](#soc-40), [SOC-41](#soc-41), [SOC-44](#soc-44)
-- [institutions](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/institutions.md): [SOC-20](#soc-20), [SOC-25](#soc-25), [SOC-27](#soc-27), [SOC-28](#soc-28), [SOC-29](#soc-29), [SOC-30](#soc-30)
-- [leadership](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/leadership.md): [SOC-06](#soc-06), [SOC-16](#soc-16), [SOC-17](#soc-17), [SOC-18](#soc-18)
-- [memory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/memory.md): [SOC-21](#soc-21), [SOC-22](#soc-22), [SOC-23](#soc-23), [SOC-24](#soc-24), [SOC-31](#soc-31), [SOC-45](#soc-45)
-- [nca-observatory](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/nca-observatory.md): [PHY-17](#phy-17), [PHY-24](#phy-24), [PHY-37](#phy-37), [PHY-38](#phy-38)
-- [quorum](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/quorum.md): [SOC-05](#soc-05), [SOC-08](#soc-08), [SOC-11](#soc-11), [SOC-39](#soc-39), [SOC-42](#soc-42), [SOC-43](#soc-43), [SOC-45](#soc-45)
-- [regrowth](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/regrowth.md): [SOC-18](#soc-18), [SOC-22](#soc-22), [SOC-23](#soc-23)
-- [telephone](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/telephone.md): [SOC-21](#soc-21), [SOC-31](#soc-31), [SOC-32](#soc-32), [SOC-34](#soc-34)
-- [whistleblowing](https://github.com/dmarzzz/swarm-lab/blob/main/researchers/vishesh/notes/project-briefs/whistleblowing.md): [SOC-10](#soc-10), [SOC-28](#soc-28), [SOC-29](#soc-29)
+- [casefile](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/casefile.md): [SOC-32](#soc-32), [SOC-36](#soc-36)
+- [collective-sensing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/collective-sensing.md): [SOC-01](#soc-01), [SOC-02](#soc-02), [SOC-03](#soc-03), [SOC-04](#soc-04), [SOC-05](#soc-05), [SOC-08](#soc-08), [SOC-11](#soc-11), [SOC-13](#soc-13), [SOC-19](#soc-19), [SOC-35](#soc-35), [SOC-38](#soc-38), [SOC-39](#soc-39), [SOC-41](#soc-41), [SOC-42](#soc-42), [SOC-43](#soc-43), [SOC-44](#soc-44)
+- [commons](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/commons.md): [SOC-14](#soc-14), [SOC-26](#soc-26), [SOC-27](#soc-27), [SOC-28](#soc-28)
+- [coordination](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/coordination.md): [SOC-03](#soc-03), [SOC-04](#soc-04), [SOC-13](#soc-13), [SOC-14](#soc-14), [SOC-15](#soc-15), [SOC-16](#soc-16), [SOC-19](#soc-19), [SOC-20](#soc-20), [SOC-35](#soc-35), [SOC-40](#soc-40)
+- [culture](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/culture.md): [SOC-12](#soc-12), [SOC-14](#soc-14), [SOC-24](#soc-24), [SOC-25](#soc-25), [SOC-26](#soc-26), [SOC-34](#soc-34), [SOC-45](#soc-45)
+- [discovery](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/discovery.md): [SOC-36](#soc-36)
+- [dissent](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/dissent.md): [SOC-06](#soc-06), [SOC-07](#soc-07), [SOC-09](#soc-09), [SOC-10](#soc-10), [SOC-11](#soc-11), [SOC-12](#soc-12), [SOC-29](#soc-29), [SOC-30](#soc-30), [SOC-40](#soc-40), [SOC-43](#soc-43)
+- [diversity](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/diversity.md): [SOC-01](#soc-01), [SOC-02](#soc-02), [SOC-07](#soc-07), [SOC-12](#soc-12), [SOC-13](#soc-13), [SOC-26](#soc-26), [SOC-33](#soc-33), [SOC-38](#soc-38), [SOC-40](#soc-40), [SOC-41](#soc-41), [SOC-44](#soc-44)
+- [institutions](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/institutions.md): [SOC-20](#soc-20), [SOC-25](#soc-25), [SOC-27](#soc-27), [SOC-28](#soc-28), [SOC-29](#soc-29), [SOC-30](#soc-30)
+- [leadership](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/leadership.md): [SOC-06](#soc-06), [SOC-16](#soc-16), [SOC-17](#soc-17), [SOC-18](#soc-18)
+- [memory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/memory.md): [SOC-21](#soc-21), [SOC-22](#soc-22), [SOC-23](#soc-23), [SOC-24](#soc-24), [SOC-31](#soc-31), [SOC-45](#soc-45)
+- [nca-observatory](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/nca-observatory.md): [PHY-17](#phy-17), [PHY-24](#phy-24), [PHY-37](#phy-37), [PHY-38](#phy-38)
+- [quorum](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/quorum.md): [SOC-05](#soc-05), [SOC-08](#soc-08), [SOC-11](#soc-11), [SOC-39](#soc-39), [SOC-42](#soc-42), [SOC-43](#soc-43), [SOC-45](#soc-45)
+- [regrowth](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/regrowth.md): [SOC-18](#soc-18), [SOC-22](#soc-22), [SOC-23](#soc-23)
+- [telephone](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/telephone.md): [SOC-21](#soc-21), [SOC-31](#soc-31), [SOC-32](#soc-32), [SOC-34](#soc-34)
+- [whistleblowing](https://github.com/dmarzzz/swarm-dynamics-lab/blob/main/5-experiments/studies/vishesh/project-briefs/whistleblowing.md): [SOC-10](#soc-10), [SOC-28](#soc-28), [SOC-29](#soc-29)

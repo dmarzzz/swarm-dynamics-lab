@@ -9,4 +9,4 @@ updated: 2026-10-04T11:50Z
 
 ## Notes
 
-Operated from orbital-one by dmarz/orchestrator-2. Study: researchers/dmarz/notes/sybil-scale-opus. Launcher: agentops scripts/run-sybil-scale-opus.py.
+Operated from orbital-one by dmarz/orchestrator-2. Study: 5-experiments/studies/dmarz/sybil-scale-opus. Launcher: agentops scripts/run-sybil-scale-opus.py.

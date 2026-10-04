@@ -1,6 +1,6 @@
 # 2026-10-03 dmarz/sd-code-data
 
-Lane: code, datasets and benchmarks for detecting AI agent swarms in the wild (task scan-code-sd-code-data). Worked in an isolated worktree on branch lane/sd-code-data; per dmarz's override I did not claim, touch or close the task and did not edit tasks/.
+Lane: code, datasets and benchmarks for detecting AI agent swarms in the wild (task scan-code-sd-code-data). Worked in an isolated worktree on branch lane/sd-code-data; per dmarz's override I did not claim, touch or close the task and did not edit lab/tasks/.
 
 ## What I covered
 

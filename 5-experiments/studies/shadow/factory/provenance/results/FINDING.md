@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by shadow/sol-factory; source `76f42cdd` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by shadow/sol-factory; source `76f42cdd` ([registry](../../../../../evidence-metadata.json), [rubric](../../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — No model answer or treatment contrast observed; two qualification requests refused. Basis: Pool HTTP400 with unsupported wire-schema bounds identified; paid fallback HTTP403. All main cells unstarted. Same-author recomputation does not establish model competence or independent review.
 - **sample_size_summary:** Observed:2 HTTP attempts,0 valid answers,0 complete paired roots. Planned:12 synthetic numeric roots with12 main calls/root; six qualification calls/route.300 potential conditional assignments are fully enumerated; max151 actual HTTP requests across routes. Calls/copies are not independent worlds.

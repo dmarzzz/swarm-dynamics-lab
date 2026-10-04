@@ -32,4 +32,4 @@ Audit design, measurement, agent reproducibility, scenarios, execution and visua
 
 ## Result
 
-Audit, repair source, 15 tests, 1,200 scripted outcomes, measured visualization and public rename completed. Live repair qualification remains blocked pending a fresh exclusive idle fleet allocation; see researchers/vishesh/notes/influence-swarms/reviews/quality-01-engineering-post.md for exact resume gates. No new model spend.
+Audit, repair source, 15 tests, 1,200 scripted outcomes, measured visualization and public rename completed. Live repair qualification remains blocked pending a fresh exclusive idle fleet allocation; see 5-experiments/studies/vishesh/influence-swarms/reviews/quality-01-engineering-post.md for exact resume gates. No new model spend.

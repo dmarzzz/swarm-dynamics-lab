@@ -33,8 +33,8 @@ The design deliberately excludes extra models, a large parameter sweep and mecha
 From the repository root:
 
 ```sh
-python3 researchers/dmarz/notes/growth-pressure-200/src/check_plan.py
-python3 researchers/dmarz/notes/growth-pressure-200/src/build_plan.py
+python3 5-experiments/studies/dmarz/growth-pressure-200/src/check_plan.py
+python3 5-experiments/studies/dmarz/growth-pressure-200/src/build_plan.py
 ```
 
 These commands check arithmetic and render the document; they do not launch a simulation, contact a model provider or provision resources. Evidence metadata describes the unrun hypothesis, not the predecessor's results.

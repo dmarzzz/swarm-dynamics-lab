@@ -31,8 +31,8 @@ Source inspection separately confirms the Poietic range mismatch and Healing’s
 Run locally from the repo root:
 
 ```sh
-python3 researchers/vishesh/notes/external-study-review-2026-10-04/check_revised_counts.py
-python3 researchers/vishesh/notes/external-study-review-2026-10-04/validate.py
+python3 5-experiments/studies/vishesh/external-study-review-2026-10-04/check_revised_counts.py
+python3 5-experiments/studies/vishesh/external-study-review-2026-10-04/validate.py
 ```
 
 ## Complete revision coverage

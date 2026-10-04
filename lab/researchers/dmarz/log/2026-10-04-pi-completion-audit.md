@@ -12,4 +12,4 @@ Used fd-add to file report,ledger andcanvas with inputs and source scripts. Its 
 
 Used explicit scoped commits/push instead of broad lab.py sync: the latter refreshes unrelated active dmarz task claims and can scoop unrelated concurrent work. No task-board claim was needed for this user-directed retrospective audit. New experiment setup/registry requirements do not turn this read-only audit into a model experiment.
 
-Deliverable entry: researchers/dmarz/notes/completion-audit-2026-10-04/README.md. Followups are bounded offline accounting/interface/evaluator diagnostics and unchanged fresh qualification only with separate experiment authorization. Keep valid adverse/null findings.
+Deliverable entry: 5-experiments/studies/dmarz/completion-audit-2026-10-04/README.md. Followups are bounded offline accounting/interface/evaluator diagnostics and unchanged fresh qualification only with separate experiment authorization. Keep valid adverse/null findings.
