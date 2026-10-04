@@ -64,17 +64,19 @@ class Runner:
     def call(self,phase,agent,context,round_no=0):
         req={'phase':phase,'context':copy.deepcopy(context)}
         self.emit('call_start',agent=agent,phase=phase,round=round_no,request=req)
-        start=time.monotonic()
+        start=time.monotonic();validating=False
         try:
             raw=self.provider.complete(req)
             # Preserve raw structured output before validation; no hidden repair or retries.
             self.emit('call_response',agent=agent,phase=phase,round=round_no,response=raw,
                       latency_seconds=round(time.monotonic()-start,4),usage=getattr(self.provider,'last_usage',{}))
+            validating=True
             return validate_response(raw,phase,context,self.cfg)
         except Exception as e:
-            # Only exception class is public. Provider/body/URL errors can contain secrets.
+            # Local validator reasons are fixed literals. Never expose provider/body/URL errors.
             self.emit('call_failure',agent=agent,phase=phase,round=round_no,error=type(e).__name__,
-                      provider_reason=e.public_reason if isinstance(e,ProviderFailure) else None)
+                      provider_reason=e.public_reason if isinstance(e,ProviderFailure) else None,
+                      validation_reason=str(e) if validating and isinstance(e,ValueError) else None)
             raise
     def acquire(self,world,seed,attack):
         n=self.cfg['n_agents']; assignments,exposed=allocation(world,n,seed)

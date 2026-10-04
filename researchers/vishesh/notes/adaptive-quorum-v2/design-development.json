@@ -1,0 +1,31 @@
+{
+  "status": "planned; not executed; qualification and review required",
+  "tasks": [
+    7301,
+    7300,
+    7302,
+    7303
+  ],
+  "agents": [
+    9
+  ],
+  "deadlines": [
+    3,
+    6
+  ],
+  "worlds": [
+    "clean",
+    "misleading-newer"
+  ],
+  "timings": [
+    "late",
+    "stalled"
+  ],
+  "seed": 1,
+  "task_clusters": 4,
+  "blocks": 32,
+  "arm_outcomes": 224,
+  "purpose": "discriminating development only; not powered confirmation",
+  "automatic_launch": false,
+  "max_physical_model_calls": 1392
+}

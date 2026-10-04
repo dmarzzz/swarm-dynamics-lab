@@ -14,6 +14,7 @@ from providers import Scripted,HTTP,Anthropic,ProviderFailure,phase_schema
 from analyze import summarize,contrast
 from worker import execute_bundle
 from artifacts import prepare_artifacts
+from selftest_v2 import TestsV2  # noqa: F401  (collected here so CI runs v2 too)
 
 class Tests(unittest.TestCase):
     def test_worlds(self):
@@ -169,6 +170,29 @@ class Tests(unittest.TestCase):
             self.assertEqual(model.usage_missing_calls,1)
             self.assertEqual(model.calls,3)
             with self.assertRaisesRegex(ProviderFailure,'call budget'): model.complete({'phase':'parent','context':{}})
+
+    def test_validation_failure_reason_is_recorded(self):
+        class BadKey(Scripted):
+            def complete(self,request):
+                result=super().complete(request)
+                if request['phase']=='ballot':result['claims'].append({'key':'B.base+freight','value':62,'sources':['registry-B']})
+                return result
+        rows=run_episode(4,1,'',1,arms_for(),{},BadKey())
+        self.assertTrue(all(not row['validity']['ok'] for row in rows))
+        failures=[e for row in rows for e in row['acquisition_events'] if e['kind']=='call_failure']
+        self.assertTrue(failures)
+        self.assertTrue(all(e['validation_reason']=='invalid or duplicate claim key' for e in failures))
+
+    def test_native_schema_enforces_declared_identifiers(self):
+        ctx={'task':task_view(make_world(4))}
+        schema=phase_schema('ballot',ctx)
+        claim=schema['properties']['claims']['items']['properties']
+        self.assertEqual(set(claim['key']['enum']),set(ctx['task']['fact_keys']))
+        self.assertNotIn('B.base+freight',claim['key']['enum'])
+        self.assertEqual(set(claim['sources']['items']['enum']),{d['id'] for d in ctx['task']['catalog']})
+        self.assertEqual(phase_schema('verify',ctx)['properties']['read']['items'],claim['sources']['items'])
+        # Numeric facts remain unconstrained by hidden truth, so corruption stays measurable.
+        self.assertEqual(claim['value'],{'type':'integer'})
 
     def test_offline_replay_and_tamper_detection(self):
         from audit import audit

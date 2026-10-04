@@ -45,7 +45,10 @@ class Scripted:
             except KeyError: pass
         def objective(o):
             v={k.split('.')[1]:c['value'] for k,c in known.items() if k.startswith(o+'.')}
-            return (-v['power'] if family=='capacity' else v['base']+v['freight'] if family=='total_cost' else v['transfer'],o)
+            # A missing objective field ranks last (partial evidence; v2 hidden profiles reach this, v1 did not).
+            try: score=-v['power'] if family=='capacity' else v['base']+v['freight'] if family=='total_cost' else v['transfer']
+            except KeyError: score=float('inf')
+            return (score,o)
         vote=min(choices,key=objective) if choices else 'ABSTAIN'
         if phase == 'ballot': return {'vote':vote,'claims':list(known.values())}
         return {'message':'Review canonical evidence and apply the stated constraints.', 'claims':list(known.values())}
@@ -100,11 +103,15 @@ parent: {"value":integer or null}. Answer the requested addition using only the 
 Use only allowed fact keys and source IDs. An ID identifies a source, not proof it supports a claim. Never claim a fact merely to force agreement. The phase is supplied in the request.'''
 
 
-def phase_schema(phase):
+def phase_schema(phase, context=None):
     def obj(properties):
         return {'type':'object','properties':properties,'required':list(properties),'additionalProperties':False}
-    strings={'type':'array','items':{'type':'string'}}
-    claims={'type':'array','items':obj({'key':{'type':'string'},'value':{'type':'integer'},'sources':strings})}
+    task=(context or {}).get('task',{})
+    source={'type':'string'};key={'type':'string'}
+    if task.get('catalog'): source['enum']=sorted(d['id'] for d in task['catalog'])
+    if task.get('fact_keys'): key['enum']=sorted(task['fact_keys'])
+    strings={'type':'array','items':source}
+    claims={'type':'array','items':obj({'key':key,'value':{'type':'integer'},'sources':strings})}
     if phase=='verify': return obj({'read':strings})
     if phase=='parent': return obj({'value':{'type':['integer','null']}})
     if phase=='ballot': return obj({'vote':{'type':'string','enum':['A','B','C','ABSTAIN']},'claims':claims})
@@ -128,7 +135,7 @@ class Anthropic(HTTP):
         if len(content.encode()) > self.max_input_bytes: raise ProviderFailure('input byte budget exceeded')
         body={'model':self.model,'system':SYSTEM,'messages':[{'role':'user','content':content}],
               'temperature':0,'max_tokens':self.max_output_tokens,
-              'output_config':{'format':{'type':'json_schema','schema':phase_schema(request['phase'])}}}
+              'output_config':{'format':{'type':'json_schema','schema':phase_schema(request['phase'],request['context'])}}}
         encoded=json.dumps(body).encode()
         reservation=((len(encoded)+512)*self.input_rate+self.max_output_tokens*self.output_rate)/1_000_000
         if self.reserved_usd+reservation > self.max_cost_usd: raise ProviderFailure('dollar reservation exhausted')

@@ -1,0 +1,158 @@
+{
+  "task_clusters": 6,
+  "target_counts": {
+    "C": 3,
+    "A": 2,
+    "NONE": 1
+  },
+  "missing_target_labels": [
+    "B"
+  ],
+  "adaptive_minus_fixed": [
+    {
+      "task": 7200,
+      "agents": 5,
+      "deadline": 3,
+      "loss_difference": 0
+    },
+    {
+      "task": 7200,
+      "agents": 5,
+      "deadline": 6,
+      "loss_difference": 0
+    },
+    {
+      "task": 7200,
+      "agents": 9,
+      "deadline": 3,
+      "loss_difference": 0
+    },
+    {
+      "task": 7200,
+      "agents": 9,
+      "deadline": 6,
+      "loss_difference": 0
+    },
+    {
+      "task": 7201,
+      "agents": 5,
+      "deadline": 3,
+      "loss_difference": 0
+    },
+    {
+      "task": 7201,
+      "agents": 5,
+      "deadline": 6,
+      "loss_difference": 0
+    },
+    {
+      "task": 7201,
+      "agents": 9,
+      "deadline": 3,
+      "loss_difference": 0
+    },
+    {
+      "task": 7201,
+      "agents": 9,
+      "deadline": 6,
+      "loss_difference": 0
+    },
+    {
+      "task": 7202,
+      "agents": 5,
+      "deadline": 3,
+      "loss_difference": 0
+    },
+    {
+      "task": 7202,
+      "agents": 5,
+      "deadline": 6,
+      "loss_difference": 0
+    },
+    {
+      "task": 7202,
+      "agents": 9,
+      "deadline": 3,
+      "loss_difference": 0
+    },
+    {
+      "task": 7202,
+      "agents": 9,
+      "deadline": 6,
+      "loss_difference": 0
+    },
+    {
+      "task": 7203,
+      "agents": 5,
+      "deadline": 3,
+      "loss_difference": 0
+    },
+    {
+      "task": 7203,
+      "agents": 5,
+      "deadline": 6,
+      "loss_difference": 0
+    },
+    {
+      "task": 7203,
+      "agents": 9,
+      "deadline": 3,
+      "loss_difference": 0
+    },
+    {
+      "task": 7203,
+      "agents": 9,
+      "deadline": 6,
+      "loss_difference": 0
+    },
+    {
+      "task": 7204,
+      "agents": 5,
+      "deadline": 3,
+      "loss_difference": 0
+    },
+    {
+      "task": 7204,
+      "agents": 5,
+      "deadline": 6,
+      "loss_difference": 0
+    },
+    {
+      "task": 7204,
+      "agents": 9,
+      "deadline": 3,
+      "loss_difference": -0.25
+    },
+    {
+      "task": 7204,
+      "agents": 9,
+      "deadline": 6,
+      "loss_difference": 0.0
+    },
+    {
+      "task": 7205,
+      "agents": 5,
+      "deadline": 3,
+      "loss_difference": 0
+    },
+    {
+      "task": 7205,
+      "agents": 5,
+      "deadline": 6,
+      "loss_difference": 0
+    },
+    {
+      "task": 7205,
+      "agents": 9,
+      "deadline": 3,
+      "loss_difference": 0
+    },
+    {
+      "task": 7205,
+      "agents": 9,
+      "deadline": 6,
+      "loss_difference": 0
+    }
+  ],
+  "all_assigned_outcomes": 168
+}
