@@ -9,6 +9,6 @@
 - Export includes **219 atlas + 132 contributed = 351 records**, with all 38 HX questions. Other contributor banks remain present. Counts are this local snapshot, not a permanent global total.
 - All eight new Vishesh ratings match current content fingerprints; Dmarz and Shadow ratings remain null. Rubric weights unchanged. Frontier relative document links resolve.
 - Idea-score JavaScript checks passed. The checkout has an upstream-tracked dependency symlink that points through a self-referential link in another checkout, so ordinary package resolution failed. The check was rerun with a temporary Node resolver pointing only `typescript` at an existing local installation. No dependency link or UI source was changed.
-- Full export contract tests will be recorded after committing the new library files so their Git publication timestamps exist.
+- Post-commit export contract tests: **29 passed**. New library records have Git-derived publication timestamps; no test logic was altered.
 
 No full-paper reads, formal prior-art gate, saturation, independent approval or measured biological outcomes are claimed. The five designs are prospective notes, not public-plan registrations.

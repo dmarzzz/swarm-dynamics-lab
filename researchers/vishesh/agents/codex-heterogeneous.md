@@ -3,8 +3,8 @@ agent: vishesh/codex-heterogeneous
 tool: codex
 state: working
 task: heterogeneous-biological-frontiers
-doing: Revising the heterogeneous shortlist through X research and evolutionary biology
-updated: 2026-10-04T02:47Z
+doing: Publishing validated biological-frontier questions and designs
+updated: 2026-10-04T03:19Z
 ---
 
 ## Handoff
