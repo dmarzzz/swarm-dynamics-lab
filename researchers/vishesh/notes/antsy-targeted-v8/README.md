@@ -9,7 +9,11 @@ Assessed 2026-10-04 by vishesh/codex-methods; source `f76f0248` ([registry](../.
 - **sample_size_summary:** 20 reused receipts, 19 scorable; 100 saved OCR observations replayed twice, not 40 independent receipts. Zero new native calls. Fresh Q0 and held-out S1 unrun.
 <!-- experiment-evidence:end -->
 
-Exploratory development and next-study design. **Fresh qualification has not run.**
+Exploratory study. **Fresh Q0 stopped on a checker timeout: 6 calls started, 5 valid, 1 timed out, 34 unstarted; only2/20 complete pairs. Qualification is incomplete.**
+
+- [Native Q0 post-mortem and next decision](reviews/Q0-attempt-1-post.md)
+- [Complete assignment plot](results/Q0-attempt-1/closeout.png) and [audited results](results/Q0-attempt-1/audit.json)
+- [Public native run](https://swarm-live.pages.dev/#/r/antsy-targeted-v8%2FQ0-attempt-1)
 
 - [Latest readiness review and exact dispatch blocker](reviews/Q0-readiness-review.md)
 - [Next native Q0 plan](NATIVE-Q0.md) and [pre-run assessment](reviews/Q0-pre.md)
@@ -18,7 +22,7 @@ Exploratory development and next-study design. **Fresh qualification has not run
 - [Authoritative setup and next gates](SETUP.md)
 - [Tested field/policy prototype](src/fields.py) and [EasyOCR output adapter](src/adapter.py)
 
-Native Q0 runner and operator packet are implemented; 31 offline checks include successful mocked dispatch, first-error stop and duplicate-run refusal. Actual runtime/model staging, exclusive fleet admission and fresh qualification remain pending through the orbital run queue. No old v7 qualification, used-data gain or passing unit test substitutes for fresh Q0.
+The frozen Q0 ran on the existing team fleet after verified admission and runtime staging. The checker exceeded its45-second cold-call limit on train62. The two completed pairs were correct for both readers, but there is no estimate of correction benefit or error independence. Saved-data audits reproduce all five retained outputs. Artifacts are backed up, the host is released, and no retry or S1 was launched. The next changed execution plan requires owner approval.
 
 ## Design transfer — 2026-10-04
 

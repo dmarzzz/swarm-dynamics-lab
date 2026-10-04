@@ -2,7 +2,20 @@
 
 Owner/operator: vishesh/codex-methods. Same-author assessment. Exploratory owned notes; no accepted hypothesis or independent review claimed. Researcher review optional under owner directive. Follow [setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [operations](../../../../tooling/agent-experiments/OPERATIONS.md).
 
-## Gate evidence
+## Current gate evidence — native Q0 closeout
+
+The historical preparation sections below are retained as provenance. This section supersedes their unrun/central-wait status.
+
+| Gate | Current status | Evidence |
+|---|---|---|
+| G0/G1 | scoped question and prospective plan satisfied | Frozen a3919814 and public plan verified before launch |
+| G2/G3 | admitted and dispatched | Exact packages/models inspected;31 host offline tests passed; scoped owner direct-launch authority; exclusive approved-team allocation and zero new charge verified |
+| G4 | incomplete, not passed | 6/40 calls started;5 valid;1 checker timeout;2/20 complete pairs |
+| G5 | attempt reviewed and closed | [Scientific post-mortem](reviews/Q0-attempt-1-post.md), [quality evidence](reviews/Q0-attempt-1-quality.json), [saved results](results/Q0-attempt-1/closeout.json); original artifacts read back, traces backed up, workers stopped and claim released |
+
+Next action: offline trace-preserving execution repair and concrete owner-reviewed diagnostic proposal. No automatic retry, replacement qualification, S1 or new allocation. Original cumulative budget is unchanged. Local operational finalize uses lowercase alias q0-attempt-1; native identity remains Q0-attempt-1.
+
+## Historical gate evidence
 
 | Gate | Status | Evidence / next action |
 |---|---|---|

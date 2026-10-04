@@ -11,3 +11,8 @@ Next action: follow the run-queue acceptance/result, resolve any actual setup fa
 ## Reconciliation after portfolio continuation
 
 The existing request is still open and unacknowledged; live hub inspection found no v8 run. sim-vishesh is now an already-trusted idle candidate, subject to refreshed exclusive allocation by the dispatcher. No first-use key acceptance, new machine or duplicate request is needed. Central orbital dispatch remains required. See [readiness review](reviews/Q0-readiness-review.md) and [sanitized reconciliation](results/dispatch-reconciliation.json). Six additional offline audit tests pass; the frozen execution revision is unchanged.
+
+
+## Closed native attempt — 2026-10-04
+
+The owner-authorized direct route superseded the historical central-only wait for this exact scope. The pending central request was fenced before Q0-attempt-1 dispatch at frozen a3919814. Q0 failed on a checker timeout;6starts/5valid/1timeout/34unstarted. Artifacts and private traces retained, worker stop verified, allocation released. Read the [post-mortem](reviews/Q0-attempt-1-post.md). No replacement attempt or S1 is authorized by this closeout.

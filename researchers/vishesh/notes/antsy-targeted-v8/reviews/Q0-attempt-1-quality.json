@@ -1,0 +1,196 @@
+{
+  "attempt": "Q0-attempt-1",
+  "assessed_at": "2026-10-04",
+  "assessor": "vishesh/codex-methods",
+  "same_author": true,
+  "execution_source": "a3919814c9b6ed6cec4b7d4b6fb801d190620ba1",
+  "decision": "repair",
+  "decision_scope": "Offline preparation only; no successor authorized; no S1.",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "The prospective Q0 asks whether a replacement checker is competent enough to test useful correction; this is not yet a diversity-benefit test.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/NATIVE-Q0.md",
+          "sha256": "1c5a30f4210ae253077bc70e7350192c87a81fb5c6b3986d289ac4e0a976b44a"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/reviews/Q0-pre.md",
+          "sha256": "2b3d8e0a416d2018c1b9db2a38041cf0cd7e6060210cdc6e7fbab73551b50325"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Receipt tasks exercise actual field extraction, but only two pairs completed; the larger third image exposed an unqualified runtime range.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/trace-audit.json",
+          "sha256": "ef2f4d642c66c66f8fe87cf9843ee6d0d7a6c2cdb53b553f04b122c558914f34"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/assignments.json",
+          "sha256": "898797dbe067dba9113a47e011f5339bb9afc61906941f79add732024fff41b0"
+        }
+      ],
+      "next_action": "Prepare trace-preserving execution diagnosis and a concrete changed plan for owner review; preserve this failed cohort.",
+      "acceptance_check": "New plan distinguishes reused diagnostic inputs from fresh qualification, binds sample and cost limits, retains phase/timeout traces, and requires unchanged competence thresholds plus full reconciliation before advancement."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Paired singleton readers and fixed policy comparators use identical pixels; no peer output or evaluator reference enters workers. Pass is limited to this feasibility contrast, not collective causality.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/src/native_worker.py",
+          "sha256": "9d2041f6dfb4415137ecd9eebcde6880793f8b8931b72fa9fe77980d25fdc819"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/src/native.py",
+          "sha256": "e81805f38d845f6a8ff57f760511dd948e4783f11ba0b3e54ba16f47061bde04"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/records.jsonl",
+          "sha256": "53b961910cfeee2ea37aaecd47224c1ba8dbd9b9bcda67465904893d6324fc8f"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "The checker timed out on its third receipt; qualification is incomplete. Two correct answers cannot establish the required full clean execution.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/partial-record.json",
+          "sha256": "9979b7e542b8be8f793e3b11e3eba703735b9de49790ff3d4f70a59e8ceffec5"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/summary.json",
+          "sha256": "833f417f438bccf2eccd41bde55f3fc0fbd3970c05a4e013f486273ed34d9c59"
+        }
+      ],
+      "next_action": "Prepare trace-preserving execution diagnosis and a concrete changed plan for owner review; preserve this failed cohort.",
+      "acceptance_check": "New plan distinguishes reused diagnostic inputs from fresh qualification, binds sample and cost limits, retains phase/timeout traces, and requires unchanged competence thresholds plus full reconciliation before advancement."
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "Separate audit agrees with observed tallies, but rescue denominators are zero and partial-case native cost is omitted from policy summaries. Efficacy and error correlation are not estimable.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/audit.json",
+          "sha256": "b0757566cce928b08efe6e4aba58e0ebfba5c4169d633ce47592a8e4317ba97b"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/calls.jsonl",
+          "sha256": "6e2e6238e562ab3595bd6e692981e0d1358eed305902620b66b15c44415fee39"
+        }
+      ],
+      "next_action": "Prepare trace-preserving execution diagnosis and a concrete changed plan for owner review; preserve this failed cohort.",
+      "acceptance_check": "New plan distinguishes reused diagnostic inputs from fresh qualification, binds sample and cost limits, retains phase/timeout traces, and requires unchanged competence thresholds plus full reconciliation before advancement."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "20 paired receipt units planned; 2 complete, 1 partial and17 untouched. Calls are not independent samples; stopping and unknown layout dependence prevent population inference.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/assignments.json",
+          "sha256": "898797dbe067dba9113a47e011f5339bb9afc61906941f79add732024fff41b0"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/audit.json",
+          "sha256": "b0757566cce928b08efe6e4aba58e0ebfba5c4169d633ce47592a8e4317ba97b"
+        }
+      ],
+      "next_action": "Prepare trace-preserving execution diagnosis and a concrete changed plan for owner review; preserve this failed cohort.",
+      "acceptance_check": "New plan distinguishes reused diagnostic inputs from fresh qualification, binds sample and cost limits, retains phase/timeout traces, and requires unchanged competence thresholds plus full reconciliation before advancement."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Pinned deterministic OCR workers receive only pixels, fresh process/reset and fixed parser. No LLM conversation or peer context; no hosted fallback.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/src/native_worker.py",
+          "sha256": "9d2041f6dfb4415137ecd9eebcde6880793f8b8931b72fa9fe77980d25fdc819"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/manifest.json",
+          "sha256": "967caa736c23ea3a1a8db63d8ca65b4148d7c2b2466e00bd38ede567854810cb"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "gap",
+      "finding": "All40 call assignments reconcile and five valid outputs replay exactly. Timeout intermediate output and stderr were not retained; its internal phase cannot be reconstructed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/trace-audit.json",
+          "sha256": "ef2f4d642c66c66f8fe87cf9843ee6d0d7a6c2cdb53b553f04b122c558914f34"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/assignments.json",
+          "sha256": "898797dbe067dba9113a47e011f5339bb9afc61906941f79add732024fff41b0"
+        }
+      ],
+      "next_action": "Prepare trace-preserving execution diagnosis and a concrete changed plan for owner review; preserve this failed cohort.",
+      "acceptance_check": "New plan distinguishes reused diagnostic inputs from fresh qualification, binds sample and cost limits, retains phase/timeout traces, and requires unchanged competence thresholds plus full reconciliation before advancement."
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "6/40 starts, serial CPU execution, zero hosted calls or new charges; no retry or S1. Worker-stop and artifact readback preceded release. Historical cumulative exposure remains unchanged.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/manifest.json",
+          "sha256": "967caa736c23ea3a1a8db63d8ca65b4148d7c2b2466e00bd38ede567854810cb"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/closeout.json",
+          "sha256": "cfce48f6fc87ed16ee00e7c7899022f76a7c7f0b5174ad1851384bae5f2556bd"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "gap",
+      "finding": "Frozen source, package/model/input hashes and five raw-output hashes retained. Timeout phase evidence is absent; private raw OCR is not included in the public reproducibility bundle.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/manifest.json",
+          "sha256": "967caa736c23ea3a1a8db63d8ca65b4148d7c2b2466e00bd38ede567854810cb"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/trace-audit.json",
+          "sha256": "ef2f4d642c66c66f8fe87cf9843ee6d0d7a6c2cdb53b553f04b122c558914f34"
+        }
+      ],
+      "next_action": "Prepare trace-preserving execution diagnosis and a concrete changed plan for owner review; preserve this failed cohort.",
+      "acceptance_check": "New plan distinguishes reused diagnostic inputs from fresh qualification, binds sample and cost limits, retains phase/timeout traces, and requires unchanged competence thresholds plus full reconciliation before advancement."
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Original complete-case plot shows2/20; supplementary saved-data assignment plot exposes5valid/1timeout/34unstarted. Native3-frame GIF decoded and both final figures visually inspected.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/final_frame.png",
+          "sha256": "49da7b0ac525da294f047b123d4493bcd450eaec0d2f75c9b0085bde3984b39f"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/closeout.png",
+          "sha256": "6ed41f2d644352ebbc0060574ad3a9010faa88d3998edffaa717a969125836bf"
+        },
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/assignments.json",
+          "sha256": "898797dbe067dba9113a47e011f5339bb9afc61906941f79add732024fff41b0"
+        }
+      ]
+    }
+  ]
+}

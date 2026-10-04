@@ -1,0 +1,66 @@
+{
+  "assigned": 20,
+  "completed": 2,
+  "scorable": 2,
+  "started": 6,
+  "valid": 5,
+  "unstarted": 34,
+  "qualified": false,
+  "checks": {
+    "all_assigned": false,
+    "unique_journal": false,
+    "no_execution_errors": false,
+    "reference_coverage": false,
+    "primary_competence": true,
+    "checker_competence": true
+  },
+  "arms": {
+    "primary": {
+      "correct": 2,
+      "wrong": 0,
+      "refer": 0,
+      "unknown_accepted": 0,
+      "checker_uses": 0,
+      "replayed_worker_seconds": 10.19607536199328
+    },
+    "checker": {
+      "correct": 2,
+      "wrong": 0,
+      "refer": 0,
+      "unknown_accepted": 0,
+      "checker_uses": 2,
+      "replayed_worker_seconds": 42.08839573300065
+    },
+    "targeted-fallback": {
+      "correct": 2,
+      "wrong": 0,
+      "refer": 0,
+      "unknown_accepted": 0,
+      "checker_uses": 0,
+      "replayed_worker_seconds": 10.19607536199328
+    },
+    "always-fallback": {
+      "correct": 2,
+      "wrong": 0,
+      "refer": 0,
+      "unknown_accepted": 0,
+      "checker_uses": 2,
+      "replayed_worker_seconds": 52.28447109499393
+    },
+    "agreement": {
+      "correct": 2,
+      "wrong": 0,
+      "refer": 0,
+      "unknown_accepted": 0,
+      "checker_uses": 2,
+      "replayed_worker_seconds": 52.28447109499393
+    }
+  },
+  "paired": {
+    "scorable": 2,
+    "same_wrong": 0,
+    "checker_rescue_primary_missing": 0,
+    "checker_correct_primary_wrong": 0,
+    "shared_missing": 0
+  }
+}
