@@ -28,7 +28,7 @@ topics:
 claimed_at: 2026-10-04T13:59Z
 updated: 2026-10-04T14:29Z
 outputs:
-- synthesis/landscape.md
+- 3-synthesis/landscape.md
 ---
 
 ## Goal

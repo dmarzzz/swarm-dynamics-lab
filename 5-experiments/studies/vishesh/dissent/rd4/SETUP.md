@@ -1,6 +1,6 @@
 # Experiment setup record Right Dissenter RD4
 
-Follow [the experiment setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Owner/operator: vishesh/codex-decision-models. Current gate: G5 complete. Exact next action: publish final saved-data assessment and close the repository task; no native run queued. This is the owner-requested exploratory iteration. Formal S2 and independently authored semantic validation remain unclaimed. Dmarz RD1 feedback informed repairs; no independent RD4 audit is invented and reviewer approval is not required under the current owner directive.
+Follow [the experiment setup runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Owner/operator: vishesh/codex-decision-models. Current gate: G5 complete. Exact next action: publish final saved-data assessment and close the repository task; no native run queued. This is the owner-requested exploratory iteration. Formal S2 and independently authored semantic validation remain unclaimed. Dmarz RD1 feedback informed repairs; no independent RD4 audit is invented and reviewer approval is not required under the current owner directive.
 
 | Gate | Status | Evidence |
 | --- | --- | --- |

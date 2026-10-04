@@ -2,8 +2,8 @@
 
 Owner/operator: shadow/sol-askswarm. Review independence: none claimed.
 Status: authorized offline saved-data sensitivity and direct-text review, not a model experiment.
-Runbook: [EXPERIMENT-SETUP](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md).
-Operations guide: [OPERATIONS](../../../../tooling/agent-experiments/OPERATIONS.md).
+Runbook: [EXPERIMENT-SETUP](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md).
+Operations guide: [OPERATIONS](../../../toolkit/agent-experiments/OPERATIONS.md).
 
 ## Ownership and question
 

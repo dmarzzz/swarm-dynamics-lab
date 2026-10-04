@@ -1,8 +1,8 @@
 # Experiment worker template
 
-This is a distributed **scripted toy**, useful for learning the hub registration, queue, worker and analysis interfaces. Copying it does not satisfy the lab's research gates or make a production launcher. Start a new question or material revision with [the setup runbook](../../tooling/agent-experiments/EXPERIMENT-SETUP.md), write the prospective plan before experimental implementation, and maintain the linked setup record in the owned study directory.
+This is a distributed **scripted toy**, useful for learning the hub registration, queue, worker and analysis interfaces. Copying it does not satisfy the lab's research gates or make a production launcher. Start a new question or material revision with [the setup runbook](../../../5-experiments/toolkit/agent-experiments/EXPERIMENT-SETUP.md), write the prospective plan before experimental implementation, and maintain the linked setup record in the owned study directory.
 
-For discovery and supported study adapters, use [experiment operations](../../tooling/agent-experiments/OPERATIONS.md). This template is not a registered native adapter. The private `swarm-labs-agentops` repository defines infrastructure ownership, claims and the reporting contract; access to the template is not authority to provision or spend.
+For discovery and supported study adapters, use [experiment operations](../../../5-experiments/toolkit/agent-experiments/OPERATIONS.md). This template is not a registered native adapter. The private `swarm-labs-agentops` repository defines infrastructure ownership, claims and the reporting contract; access to the template is not authority to provision or spend.
 
 The toy compares plurality quorum, which counts votes, with provenance-aware quorum, which counts distinct evidence roots. Agents select among K options while some copy one upstream source. Its outcomes demonstrate the programmed mechanism, not an LLM result or general swarm advantage.
 
@@ -27,14 +27,14 @@ The worker's append-only output and reporting recovery help preserve artifacts, 
 ## Adapt the template in order
 
 1. **Establish the research scope.** Follow root `AGENTS.md` for the applicable survey, hypothesis and different-researcher review gates. Label exploratory notes honestly. S0/S1 names do not exempt an exploratory run from review, public-plan, qualification, budget or allocation requirements. For Vishesh's studies, follow the owner's single researcher-review instruction; routine implementation repairs do not automatically require another sign-off.
-2. **Write the design before implementation.** Create `SETUP.md` from the [setup template](../../tooling/agent-experiments/templates/experiment-setup.md), referencing the plan, preceding post-mortem and exact next action. Freeze independent units, controls, treatment, primary endpoint, missingness, seed/task splits, resource limits and claim boundaries. Define what each stage means in this study; the toy uses S1 for development and S2 for its held-out comparison.
+2. **Write the design before implementation.** Create `SETUP.md` from the [setup template](../../../5-experiments/toolkit/agent-experiments/templates/experiment-setup.md), referencing the plan, preceding post-mortem and exact next action. Freeze independent units, controls, treatment, primary endpoint, missingness, seed/task splits, resource limits and claim boundaries. Define what each stage means in this study; the toy uses S1 for development and S2 for its held-out comparison.
 3. **Copy into the permitted study location.** Formal experiments use `scripts/lab.py new experiment`; owned exploratory notes remain explicitly exploratory. Set registration owner/ID and replace template placeholders. Copying does not register a public plan or reserve infrastructure.
 4. **Implement and check the instrument.** Adapt the simulator contract below, complete the agent/context/run specifications, and run appropriate offline fixtures. Preserve truth separation, treatment fidelity, all-assigned denominators and actual context records. Test missing/duplicate outcomes, changed source/configuration, timeouts, uncertain calls, exhausted budget and reporting failure before native execution.
 5. **Wire admission into the actual dispatch path.** Before every attempt and stage, read the preceding post-mortem and commit the pre-run assessment. Publish and verify the exact immutable plan, experiment TLDR and condition-specific TLDRs. Require current qualification, source/dependency match, cumulative spending authority and fresh exclusive allocation. Before new provisioning for Vishesh, verify Dmarz's approved account identity and authoritative state/project privately. Missing or stale evidence must stop queueing/model loading/calls, not merely emit a warning.
 6. **Run only the admitted stage.** Use a finite worker with declared calls, tokens, dollars, time and concurrency limits. Reserve before dispatch, retain uncertain charges and all failures, and keep qualification and scientific conclusions separate. No automatic S0-to-S1 or S1-to-S2 escalation follows from a successful exit. Preserve holdout protection; amendments and repairs receive explicit lineage rather than overwriting old outcomes.
 7. **Reconcile, report and release.** Audit assigned → started → terminal → graded → analyzed; retain unstarted and partial units. Recompute from saved raw decisions, check the visualization, record actual versus reserved cost, complete the post-mortem and verify durable artifact readback. Stop only the owning experiment's workers and release its claim through the applicable infrastructure workflow.
 
-For a real launcher, use the [lifecycle contract](../../tooling/agent-experiments/AGENT-LIFECYCLE.md) and record which requirements are implemented versus still manual. This README corrects the operating guidance; the template runtime has not been retrofitted with those gates.
+For a real launcher, use the [lifecycle contract](../../../5-experiments/toolkit/agent-experiments/AGENT-LIFECYCLE.md) and record which requirements are implemented versus still manual. This README corrects the operating guidance; the template runtime has not been retrofitted with those gates.
 
 ## Manual command reference
 
@@ -45,10 +45,10 @@ Create the formal study only after its applicable research gate, then copy the t
 ```sh
 export SWARM_SOURCE=<researcher>/<agent-name>
 python3 scripts/lab.py new experiment <id> --agent "$SWARM_SOURCE"
-cp -r templates/experiment-worker/{experiment.yaml,design.yaml,preregistration.md,src,run-workers.sh} experiments/<id>/
+cp -r lab/templates/experiment-worker/{experiment.yaml,design.yaml,preregistration.md,src,run-workers.sh} 5-experiments/<id>/
 ```
 
-In the authorized private operations checkout, inspect current allocations before obtaining the experiment's exclusive claim. Keep account verification and private inventory there. For Vishesh, follow the [machine workflow](../../researchers/vishesh/notes/experiment-machine-workflow.md); an unavailable authorized allocation is a blocker, not permission to use the local default cloud account.
+In the authorized private operations checkout, inspect current allocations before obtaining the experiment's exclusive claim. Keep account verification and private inventory there. For Vishesh, follow the [machine workflow](../../../5-experiments/studies/vishesh/experiment-machine-workflow.md); an unavailable authorized allocation is a blocker, not permission to use the local default cloud account.
 
 ```sh
 python3 scripts/agentops.py claims
@@ -90,11 +90,11 @@ Rename worlds, arms, parameters and metrics consistently. The template's `worker
 
 ## Reporting and evidence metadata
 
-Complete the [visualization mapping](../../tooling/agent-experiments/templates/visualization-mapping.md) before collection. Bind events, units, denominators, missing states and evaluator reveal to recorded evidence. Test the renderer using fixtures marked **SCRIPTED — NOT MODEL EVIDENCE**. The worker does not implement a study-specific replay automatically.
+Complete the [visualization mapping](../../../5-experiments/toolkit/agent-experiments/templates/visualization-mapping.md) before collection. Bind events, units, denominators, missing states and evaluator reveal to recorded evidence. Test the renderer using fixtures marked **SCRIPTED — NOT MODEL EVIDENCE**. The worker does not implement a study-specific replay automatically.
 
-Every study README needs `evidence_confidence` and `sample_size_summary` under the [shared rubric](../../experiments/EVIDENCE-METADATA.md). Register the assessment in `experiments/evidence-metadata.json` and render with `python3 scripts/experiment_evidence.py --write`. Give the claim, rationale and source date; distinguish independent task roots from calls and repeated outcomes. These fields describe evidence, not launch permission or automatic hub display.
+Every study README needs `evidence_confidence` and `sample_size_summary` under the [shared rubric](../../../5-experiments/EVIDENCE-METADATA.md). Register the assessment in `5-experiments/evidence-metadata.json` and render with `python3 scripts/experiment_evidence.py --write`. Give the claim, rationale and source date; distinguish independent task roots from calls and repeated outcomes. These fields describe evidence, not launch permission or automatic hub display.
 
-Use the [pre-run assessment](../../tooling/agent-experiments/templates/pre-run.md) before each attempt and the [post-mortem](../../tooling/agent-experiments/templates/post-mortem.md) afterward, including failures. A valid adverse result is reported; a defect receives a bounded repair with acceptance evidence. Publication, process compliance and scientific interpretation remain separate.
+Use the [pre-run assessment](../../../5-experiments/toolkit/agent-experiments/templates/pre-run.md) before each attempt and the [post-mortem](../../../5-experiments/toolkit/agent-experiments/templates/post-mortem.md) afterward, including failures. A valid adverse result is reported; a defect receives a bounded repair with acceptance evidence. Publication, process compliance and scientific interpretation remain separate.
 
 ## What the toy demonstrates
 

@@ -19,10 +19,10 @@ def validate_entries(root, entries, issue):
     contents = []
     for entry in entries:
         path = Path(entry)
-        if (path.is_absolute() or path.parts[:2] != ("library", folder)
+        if (path.is_absolute() or path.parts[:2] != (lab.LIBRARY, folder)
                 or len(path.parts) != 3 or path.suffix != ".md"
                 or not lab.ID_RE.fullmatch(path.stem)):
-            raise ValueError(f"not a {kind} library entry: {entry}")
+            raise ValueError(f"not a {kind} library entry under {lab.LIBRARY}/{folder}/: {entry}")
         local = root / path
         if local.exists() or local.is_symlink():
             if not local.is_file() or local.is_symlink() or local.resolve() != root.resolve() / path:

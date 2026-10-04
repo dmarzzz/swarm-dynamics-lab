@@ -45,7 +45,7 @@ Before implementing a material successor, the owning task writes the prospective
 
 ## Top-10 review: scale and evaluation
 
-2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../../tooling/agent-experiments/SCALE-AND-CLAIMS.md).
+2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../toolkit/agent-experiments/SCALE-AND-CLAIMS.md).
 
 **Already incorporated in the owner-approved 40-Haiku panel.** It compares 20 homogeneous readers with 20 readers assigned four checking roles; each sees the same raw receipt in a fresh isolated context. It is a decision panel without peer interaction.
 

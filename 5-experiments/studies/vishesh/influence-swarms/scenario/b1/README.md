@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-experiments; source `d187d69a` ([registry](../../../../../../experiments/evidence-metadata.json), [rubric](../../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-experiments; source `d187d69a` ([registry](../../../../../evidence-metadata.json), [rubric](../../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — B1 development traces expose an eligible-supplier price-benchmark ambiguity; comparative influence resistance remains unestablished. Basis: All240answers and costs replay, but frozen neutral qualification fails in all arms. Five families support two admissible price-policy readings; two numeric-cost errors remain. No evaluation or population inference.
 - **sample_size_summary:** Six authored development families;36/36cells and240/240valid calls. Earlier public-preflight attempt:0calls. No B1 holdout evaluation;1/6acceptable neutral finals per arm under an ambiguous price-policy scorer.

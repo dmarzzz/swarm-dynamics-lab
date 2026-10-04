@@ -17,9 +17,9 @@ topics:
 claimed_at: 2026-10-04T02:12Z
 updated: 2026-10-04T02:41Z
 outputs:
-- researchers/vishesh/notes/heterogeneous-swarms/README.md
-- researchers/vishesh/notes/heterogeneous-swarms/questions.json
-- researchers/vishesh/notes/heterogeneous-swarms/DESIGNS.md
+- 5-experiments/studies/vishesh/heterogeneous-swarms/README.md
+- 5-experiments/studies/vishesh/heterogeneous-swarms/questions.json
+- 5-experiments/studies/vishesh/heterogeneous-swarms/DESIGNS.md
 - dashboard/contribution-banks.json
 - dashboard/idea-scores/vishesh.json
 ---

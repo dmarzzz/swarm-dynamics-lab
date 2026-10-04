@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T04:09Z
 updated: 2026-10-04T04:48Z
 outputs:
-- researchers/vishesh/notes/antsy-receipt-v6/RESULTS.md
+- 5-experiments/studies/vishesh/antsy-receipt-v6/RESULTS.md
 ---
 
 ## Goal
@@ -30,4 +30,4 @@ Replace ideal QA and regional recall with real OCR checker outputs, exact total 
 
 ## Results
 
-[Completed assessment](../researchers/vishesh/notes/antsy-receipt-v6/RESULTS.md): final50 assigned receipts,47 scorable,250 valid OCR calls,0 execution errors.46 tests and six mutation checks pass. Preserved three instrument defects and targeted repairs. Selective9 correct/1 wrong/37 refer;80 checks versus100 always. Zero model calls. Host released through agentops PR140; no active workers.
+[Completed assessment](../../5-experiments/studies/vishesh/antsy-receipt-v6/RESULTS.md): final50 assigned receipts,47 scorable,250 valid OCR calls,0 execution errors.46 tests and six mutation checks pass. Preserved three instrument defects and targeted repairs. Selective9 correct/1 wrong/37 refer;80 checks versus100 always. Zero model calls. Host released through agentops PR140; no active workers.

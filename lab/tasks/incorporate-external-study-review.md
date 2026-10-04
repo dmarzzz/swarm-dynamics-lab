@@ -14,9 +14,9 @@ topics: []
 claimed_at: 2026-10-04T19:51Z
 updated: 2026-10-04T20:01Z
 outputs:
-- researchers/vishesh/notes/external-study-review-2026-10-04/README.md
-- researchers/vishesh/notes/external-study-review-2026-10-04/recommendations.json
-- tooling/agent-experiments/RUN-QUALITY.md
+- 5-experiments/studies/vishesh/external-study-review-2026-10-04/README.md
+- 5-experiments/studies/vishesh/external-study-review-2026-10-04/recommendations.json
+- 5-experiments/toolkit/agent-experiments/RUN-QUALITY.md
 ---
 
 ## Goal

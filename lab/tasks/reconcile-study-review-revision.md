@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T20:19Z
 updated: 2026-10-04T20:24Z
 outputs:
-- researchers/vishesh/notes/external-study-review-2026-10-04/REVISION-2.md
+- 5-experiments/studies/vishesh/external-study-review-2026-10-04/REVISION-2.md
 ---
 
 ## Goal

@@ -1,6 +1,6 @@
 # Experiment setup record: sybil-budget-sonnet / v1
 
-Status: prospective setup record, started before any run of this study. Follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Historical receipts and attempts are preserved below.
+Status: prospective setup record, started before any run of this study. Follows [the setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Historical receipts and attempts are preserved below.
 
 ## Ownership and question
 
@@ -33,7 +33,7 @@ Status: prospective setup record, started before any run of this study. Follows 
 
 ## Current attempt admission
 
-Operations entry: manual (not in the `scripts/experiment.py` registry). See [operations guide](../../../../tooling/agent-experiments/OPERATIONS.md).
+Operations entry: manual (not in the `scripts/experiment.py` registry). See [operations guide](../../../toolkit/agent-experiments/OPERATIONS.md).
 
 | Operation | Exact command | Evidence |
 |---|---|---|

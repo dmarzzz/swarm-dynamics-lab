@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T06:12Z
 updated: 2026-10-04T06:13Z
 outputs:
-- researchers/vishesh/notes/healing-helping-hands/composite/DEPLOYMENT.md
+- 5-experiments/studies/vishesh/healing-helping-hands/composite/DEPLOYMENT.md
 ---
 
 ## Goal

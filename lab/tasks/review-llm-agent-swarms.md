@@ -15,7 +15,7 @@ topics:
 claimed_at: 2026-10-03T19:19Z
 updated: 2026-10-03T19:27Z
 outputs:
-- reviews/llm-agent-swarms--dmarz.md
+- 2-surveys/reviews/llm-agent-swarms--dmarz.md
 ---
 
 ## Goal

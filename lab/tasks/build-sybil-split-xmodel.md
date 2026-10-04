@@ -16,7 +16,7 @@ topics:
 claimed_at: 2026-10-04T12:21Z
 updated: 2026-10-04T12:37Z
 outputs:
-- researchers/dmarz/notes/sybil-split-xmodel/reviews/chain-001-pre.md
+- 5-experiments/studies/dmarz/sybil-split-xmodel/reviews/chain-001-pre.md
 ---
 
 ## Goal

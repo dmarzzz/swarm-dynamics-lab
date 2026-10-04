@@ -16,9 +16,9 @@ claimed_at: 2026-10-04T13:53Z
 updated: 2026-10-04T14:04Z
 outputs:
 - HACKATHON.md
-- researchers/shadow/notes/submission/WRITEUP.md
-- researchers/shadow/notes/submission/DEMO.md
-- researchers/shadow/notes/submission/RESULTS.md
+- 5-experiments/studies/shadow/submission/WRITEUP.md
+- 5-experiments/studies/shadow/submission/DEMO.md
+- 5-experiments/studies/shadow/submission/RESULTS.md
 ---
 
 ## Goal

@@ -14,9 +14,9 @@ topics: []
 claimed_at: 2026-10-04T05:01Z
 updated: 2026-10-04T05:53Z
 outputs:
-- researchers/vishesh/notes/pi-review-guide-2026-10-04/README.md
-- researchers/vishesh/notes/pi-review-guide-2026-10-04/index.html
-- researchers/vishesh/notes/pi-review-guide-2026-10-04/checks.json
+- 5-experiments/studies/vishesh/pi-review-guide-2026-10-04/README.md
+- 5-experiments/studies/vishesh/pi-review-guide-2026-10-04/index.html
+- 5-experiments/studies/vishesh/pi-review-guide-2026-10-04/checks.json
 ---
 
 ## Goal

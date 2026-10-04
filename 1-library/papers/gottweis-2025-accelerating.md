@@ -98,4 +98,4 @@ Publication status: Nature 2026 reported in updated primary record with related 
 
 ## Relevance to us
 
-Reusable experiment-design evidence for [the methods toolkit](../../tooling/agent-experiments/README.md). This is a source record, not a completed prior-art survey or approval to run an experiment.
+Reusable experiment-design evidence for [the methods toolkit](../../5-experiments/toolkit/agent-experiments/README.md). This is a source record, not a completed prior-art survey or approval to run an experiment.

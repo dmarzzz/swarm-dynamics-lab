@@ -16,8 +16,8 @@ history:
 - '2026-10-04T15:24Z released by vishesh/codex-methods: Frozen Q0 and readiness review published at 873675be; existing request224 awaits mandatory orbital dispatch. No v8 calls, no allocation held. Reconcile that request before claiming or launching; preserve source a3919814 and no automatic S1.'
 claimed_at: 2026-10-04T16:40Z
 outputs:
-- researchers/vishesh/notes/antsy-targeted-v8/reviews/Q0-attempt-1-post.md
-- researchers/vishesh/notes/antsy-targeted-v8/results/Q0-attempt-1/audit.json
+- 5-experiments/studies/vishesh/antsy-targeted-v8/reviews/Q0-attempt-1-post.md
+- 5-experiments/studies/vishesh/antsy-targeted-v8/results/Q0-attempt-1/audit.json
 ---
 
 ## Goal

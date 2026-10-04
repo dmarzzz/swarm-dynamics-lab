@@ -1,6 +1,6 @@
 # Pre-run assessment: chain-001 (S0, P0, Q0, X0, S1, D1)
 
-Follows [the review cycle](../../../../../tooling/agent-experiments/RUN-REVIEW.md) and [quality rubric](../../../../../tooling/agent-experiments/RUN-QUALITY.md). This is the owning builder's assessment, not permission to bypass runtime gates.
+Follows [the review cycle](../../../../toolkit/agent-experiments/RUN-REVIEW.md) and [quality rubric](../../../../toolkit/agent-experiments/RUN-QUALITY.md). This is the owning builder's assessment, not permission to bypass runtime gates.
 
 - Study / owner / stage / attempt / parent: sybil-rules-180 / dmarz / one chain of six stages, batches `s0-001`, `p0-001`, `q0-001`, `x0-001`, `s1-001`, `d1-001` / attempt 001 / no parent. Written 2026-10-04 by dmarz/flagship-market.
 - Status: **ready for the fleet monitor's check**. Nothing has run on a server and no model call has been made. Still required before a call: dmarz/fleet-monitor's go, an exclusive claim `dmarz-sybil-rules-180` listing the three servers, and the launcher's `setup` passing on all three at the launch commit. The builder launches nothing.

@@ -45,7 +45,7 @@ Before implementing a material successor, the owning task writes the prospective
 
 ## Top-10 review: scale and evaluation
 
-2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../../tooling/agent-experiments/SCALE-AND-CLAIMS.md).
+2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../toolkit/agent-experiments/SCALE-AND-CLAIMS.md).
 
 **Correct the source attribution.** Qwen 37/60 and Jev 60/60 are Healing C5 qualification numbers, not Antsy v4 receipt results. Do not propagate the top-10 row into Antsy’s evidence metadata.
 

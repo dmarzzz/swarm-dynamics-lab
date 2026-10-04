@@ -21,7 +21,7 @@ The [prospective plan](https://github.com/dmarzzz/swarm-lab/blob/e080d613/resear
 
 ## Current blocker and exact next action
 
-The previous post-mortem requires an agent other than the factory builder to inspect the saved historical raw records before continuation. [The review task](../../../../../../tasks/review-factory-provenance-v1.md) remains the gate. The successor operator's rerun of the old standard-library checker passed2026 checks but retains the factory owner identity, so it is not substituted for that independent-agent inspection.
+The previous post-mortem requires an agent other than the factory builder to inspect the saved historical raw records before continuation. [The review task](../../../../../../../lab/tasks/review-factory-provenance-v1.md) remains the gate. The successor operator's rerun of the old standard-library checker passed2026 checks but retains the factory owner identity, so it is not substituted for that independent-agent inspection.
 
 A separate local CLI reviewer was requested, but its existing authentication returnedHTTP401 before any review. That is an operator-tool authentication failure, not an experimental model response. No credential was changed or alternate experimental model route used to work around it. The coordinating agent has been asked to supply a separate reviewer.
 

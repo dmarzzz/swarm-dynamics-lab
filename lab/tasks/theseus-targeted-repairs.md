@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T04:46Z
 updated: 2026-10-04T04:55Z
 outputs:
-- researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/README.md
+- 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/README.md
 ---
 
 ## Goal

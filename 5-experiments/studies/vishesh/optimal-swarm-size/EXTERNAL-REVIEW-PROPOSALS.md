@@ -46,7 +46,7 @@ Before implementing a material successor, the owning task writes the prospective
 
 ## Top-10 review: scale and evaluation
 
-2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../../tooling/agent-experiments/SCALE-AND-CLAIMS.md).
+2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../toolkit/agent-experiments/SCALE-AND-CLAIMS.md).
 
 **Already incorporated in O2; preserve its bounded scope.** O1 exposed duplicated work and contraction even in the stable case. Q-A7 repaired arithmetic more than source support; neither establishes an optimal N.
 

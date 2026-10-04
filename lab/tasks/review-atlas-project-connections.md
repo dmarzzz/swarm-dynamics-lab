@@ -14,10 +14,10 @@ topics: []
 claimed_at: 2026-10-03T21:34Z
 updated: 2026-10-03T22:17Z
 outputs:
-- synthesis/atlas-project-connections.md
-- researchers/vishesh/notes/atlas-review/README.md
-- researchers/vishesh/notes/atlas-review/atlas-review.json
-- researchers/vishesh/notes/atlas-review/project-crosswalk.json
+- 3-synthesis/atlas-project-connections.md
+- 5-experiments/studies/vishesh/atlas-review/README.md
+- 5-experiments/studies/vishesh/atlas-review/atlas-review.json
+- 5-experiments/studies/vishesh/atlas-review/project-crosswalk.json
 ---
 
 ## Goal

@@ -68,4 +68,4 @@
 - [ ] Compare effect direction, magnitude and interval to the original; do not require identical p-values.
 - [ ] Publish null and failed replications with enough provenance to diagnose disagreement.
 
-- [ ] Update `evidence_confidence` and `sample_size_summary` using the [shared rubric](../../experiments/EVIDENCE-METADATA.md); retain independent units, planned/observed counts, cohort boundaries and assessment provenance.
+- [ ] Update `evidence_confidence` and `sample_size_summary` using the [shared rubric](../../EVIDENCE-METADATA.md); retain independent units, planned/observed counts, cohort boundaries and assessment provenance.

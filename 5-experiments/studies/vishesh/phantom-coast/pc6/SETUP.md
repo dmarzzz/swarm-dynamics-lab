@@ -1,6 +1,6 @@
 # PC6 authoritative setup and handoff
 
-Owner Vishesh; operator codex-phantom-coast. Status **parked before native dispatch; saved-data review complete**. Follow [setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [PI post-mortem](reviews/PI-POST.md). Latest executed cohort remains PC5 Q0/S1; PC6 is not an attempt.
+Owner Vishesh; operator codex-phantom-coast. Status **parked before native dispatch; saved-data review complete**. Follow [setup runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and [PI post-mortem](reviews/PI-POST.md). Latest executed cohort remains PC5 Q0/S1; PC6 is not an attempt.
 
 G0: PC4/PC5 postmortems, PC5 DESIGN-TRANSFER, PI-next-decisions, and Dmarz verify-cost chain001/002 assessed. New analysis reproduces the paired regression and cost reversals; no broad literature/independent-review claim.
 G1: prospective48-choice PLAN published at5d21cf06 before implementation, retained unchanged. PI reassessment rejects its current decision value.

@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T17:45Z
 updated: 2026-10-04T17:50Z
 outputs:
-- tooling/agent-experiments/ITERATION.md
+- 5-experiments/toolkit/agent-experiments/ITERATION.md
 ---
 
 ## Goal

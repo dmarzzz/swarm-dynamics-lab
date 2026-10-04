@@ -15,7 +15,7 @@ topics:
 claimed_at: 2026-10-04T10:30Z
 updated: 2026-10-04T11:38Z
 outputs:
-- researchers/dmarz/notes/memory-handoff-qwen/reviews/chain-001-pre.md
+- 5-experiments/studies/dmarz/memory-handoff-qwen/reviews/chain-001-pre.md
 ---
 
 ## Goal

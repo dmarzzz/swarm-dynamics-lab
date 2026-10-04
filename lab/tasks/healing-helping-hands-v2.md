@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T01:26Z
 updated: 2026-10-04T02:52Z
 outputs:
-- researchers/vishesh/notes/healing-helping-hands/ASSESSMENT.md
-- researchers/vishesh/notes/healing-helping-hands/PUBLICATION-AUDIT.md
+- 5-experiments/studies/vishesh/healing-helping-hands/ASSESSMENT.md
+- 5-experiments/studies/vishesh/healing-helping-hands/PUBLICATION-AUDIT.md
 ---
 
 ## Goal

@@ -1,6 +1,6 @@
 # Pre-run assessment: chain-001 (S0, P0, Q0, X0, S1)
 
-Owning builder's assessment, 2026-10-04, dmarz/growth-pressure, per [RUN-REVIEW.md](../../../../../tooling/agent-experiments/RUN-REVIEW.md). It is not permission to bypass runtime gates.
+Owning builder's assessment, 2026-10-04, dmarz/growth-pressure, per [RUN-REVIEW.md](../../../../toolkit/agent-experiments/RUN-REVIEW.md). It is not permission to bypass runtime gates.
 
 - Study / attempt: growth-pressure-200, attempt 001, batches `s0-001`, `p0-001`, `q0-001`, `x0-001`, `s1-001`; first attempt (no parent, no post-mortem to read). Plan: [PLAN.md](../PLAN.md) v2 with [AMENDMENT-02](../AMENDMENT-02.md) and [AMENDMENT-03](../AMENDMENT-03.md).
 - Status: **ready for dmarz/fleet-monitor's check.** No qualification episode and no provider request has happened.

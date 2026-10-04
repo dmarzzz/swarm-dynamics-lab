@@ -1,6 +1,6 @@
 # Experiment setup record: market-split-opus v1
 
-Status: complete, 2026-10-04. This record is not launch authorization for a paid stage. It follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [the operations guide](../../../../tooling/agent-experiments/OPERATIONS.md). Written before implementation was run on the server and updated as gates produce evidence.
+Status: complete, 2026-10-04. This record is not launch authorization for a paid stage. It follows [the setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and [the operations guide](../../../toolkit/agent-experiments/OPERATIONS.md). Written before implementation was run on the server and updated as gates produce evidence.
 
 ## Ownership and question
 

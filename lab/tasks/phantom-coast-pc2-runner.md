@@ -14,9 +14,9 @@ topics: []
 claimed_at: 2026-10-04T04:56Z
 updated: 2026-10-04T05:04Z
 outputs:
-- researchers/vishesh/notes/phantom-coast/pc2/RUNBOOK.md
-- researchers/vishesh/notes/phantom-coast/pc2/RUNNER-VALIDATION.json
-- researchers/vishesh/notes/phantom-coast/pc2/src/run.py
+- 5-experiments/studies/vishesh/phantom-coast/pc2/RUNBOOK.md
+- 5-experiments/studies/vishesh/phantom-coast/pc2/RUNNER-VALIDATION.json
+- 5-experiments/studies/vishesh/phantom-coast/pc2/src/run.py
 ---
 
 ## Goal

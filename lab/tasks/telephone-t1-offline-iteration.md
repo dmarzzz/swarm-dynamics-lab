@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T19:09Z
 updated: 2026-10-04T19:15Z
 outputs:
-- researchers/vishesh/notes/telephone/t1/README.md
-- researchers/vishesh/notes/telephone/t1/POST-MORTEM.md
+- 5-experiments/studies/vishesh/telephone/t1/README.md
+- 5-experiments/studies/vishesh/telephone/t1/POST-MORTEM.md
 ---
 
 ## Goal

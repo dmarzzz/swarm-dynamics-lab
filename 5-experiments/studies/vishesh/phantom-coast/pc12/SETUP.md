@@ -1,6 +1,6 @@
 # Phantom authoritative setup: PC12
 
-Owner Vishesh; operator vishesh/codex-phantom-coast. Use [setup](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [diagnosis](../../../../../tooling/agent-experiments/DIAGNOSIS.md). Prior [PC11 post-mortem](../pc11/S1-A1-POST.md) retained.
+Owner Vishesh; operator vishesh/codex-phantom-coast. Use [setup](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and [diagnosis](../../../../toolkit/agent-experiments/DIAGNOSIS.md). Prior [PC11 post-mortem](../pc11/S1-A1-POST.md) retained.
 
 G0: native prior traces identify an uninformative bare-map channel, categorical endpoint and absent correction. G1: PLAN.md prospectively specifies owner-approved five design changes and8world diagnostic. G2:13tests and1,728software parameter combinations pass, independent arithmetic and broken-policy sensitivity; PRE.md/OFFLINE.json. G3: pending fresh public/source/runtime/resource/budget checks. G4: pending16case native positive-control qualification; repeated-copy outcome is not a gate. G5: pending native closeout. Researcher review not required.
 

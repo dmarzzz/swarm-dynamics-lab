@@ -14,9 +14,9 @@ topics: []
 claimed_at: 2026-10-04T14:25Z
 updated: 2026-10-04T14:39Z
 outputs:
-- researchers/vishesh/notes/pi-next-decisions-2026-10-04/README.md
-- tooling/agent-experiments/RUN-REVIEW.md
-- tooling/agent-experiments/operations.json
+- 5-experiments/studies/vishesh/pi-next-decisions-2026-10-04/README.md
+- 5-experiments/toolkit/agent-experiments/RUN-REVIEW.md
+- 5-experiments/toolkit/agent-experiments/operations.json
 ---
 
 ## Goal

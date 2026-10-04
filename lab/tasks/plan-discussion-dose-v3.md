@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T01:32Z
 updated: 2026-10-04T01:36Z
 outputs:
-- researchers/dmarz/notes/discussion-dose/V3-EVAL-PLAN.md
-- researchers/dmarz/notes/discussion-dose/V3-SOURCE-NOTES.md
+- 5-experiments/studies/dmarz/discussion-dose/V3-EVAL-PLAN.md
+- 5-experiments/studies/dmarz/discussion-dose/V3-SOURCE-NOTES.md
 ---
 
 ## Goal

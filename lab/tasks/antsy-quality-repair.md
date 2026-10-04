@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T01:22Z
 updated: 2026-10-04T01:47Z
 outputs:
-- researchers/vishesh/notes/adaptive-quorum-v2/repair-v3
+- 5-experiments/studies/vishesh/adaptive-quorum-v2/repair-v3
 ---
 
 ## Goal

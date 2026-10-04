@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T03:45Z
 updated: 2026-10-04T03:50Z
 outputs:
-- researchers/vishesh/notes/pi-review-2026-10-04
-- tooling/agent-experiments/AGENT-LIFECYCLE.md
+- 5-experiments/studies/vishesh/pi-review-2026-10-04
+- 5-experiments/toolkit/agent-experiments/AGENT-LIFECYCLE.md
 ---
 
 ## Goal

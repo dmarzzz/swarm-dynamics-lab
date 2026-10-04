@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T19:43Z
 updated: 2026-10-04T19:55Z
 outputs:
-- researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/README.md
-- researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/validation.json
+- 5-experiments/studies/vishesh/antsy-targeted-v8/comparison-v3/README.md
+- 5-experiments/studies/vishesh/antsy-targeted-v8/comparison-v3/validation.json
 ---
 
 ## Goal

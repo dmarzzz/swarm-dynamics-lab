@@ -1,6 +1,6 @@
 # PC9 authoritative setup and handoff
 
-Owner Vishesh; operator vishesh/codex-phantom-coast. **Q0 execution and scientific review complete; qualification FAILED. HOLD pilot.** User approved refocusing Phantom and building the population exploration instrument. [Setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md), [iteration process](../../../../../tooling/agent-experiments/ITERATION.md), [case-quality rubric](../../../../../tooling/agent-experiments/TEST-CASE-QUALITY.md). The latest native attempt is [PC9 Q0-A1](reviews/Q0-A1-POST.md):8 valid calls,32/32 map labels and4/6 optimal inspections. Frozen qualification failed; S1 stays unrun. Historical PC8 remains closed.
+Owner Vishesh; operator vishesh/codex-phantom-coast. **Q0 execution and scientific review complete; qualification FAILED. HOLD pilot.** User approved refocusing Phantom and building the population exploration instrument. [Setup runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md), [iteration process](../../../../toolkit/agent-experiments/ITERATION.md), [case-quality rubric](../../../../toolkit/agent-experiments/TEST-CASE-QUALITY.md). The latest native attempt is [PC9 Q0-A1](reviews/Q0-A1-POST.md):8 valid calls,32/32 map labels and4/6 optimal inspections. Frozen qualification failed; S1 stays unrun. Historical PC8 remains closed.
 
 | Gate | Current evidence |
 |---|---|

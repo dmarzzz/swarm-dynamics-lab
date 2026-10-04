@@ -19,10 +19,10 @@ history:
 - '2026-10-04T15:32Z released by vishesh/codex-decision-models: One continuation cycle completed through blocked closeout: reconciled expired A1 to 24 unstarted requests and zero RD5 calls; released claim; fixed duplicate-safe A2 activation wrapper; 61 scientific plus 5 activation checks passed; published operational/scientific post-mortem, status figure/readback and confidence0 metadata. Approved Q5/conditional H5 unchanged. Exact blocker is authorized central acknowledgement before fresh allocation/relay; no direct-launch exception inferred.'
 claimed_at: 2026-10-04T16:56Z
 outputs:
-- researchers/vishesh/notes/dissent/rd5/REPORT.md
-- researchers/vishesh/notes/dissent/rd5/reviews/Q5-A2-POST.md
-- researchers/vishesh/notes/dissent/rd5/reviews/H5-A1-POST.md
-- researchers/vishesh/notes/dissent/rd5/NEXT-QUESTION.md
+- 5-experiments/studies/vishesh/dissent/rd5/REPORT.md
+- 5-experiments/studies/vishesh/dissent/rd5/reviews/Q5-A2-POST.md
+- 5-experiments/studies/vishesh/dissent/rd5/reviews/H5-A1-POST.md
+- 5-experiments/studies/vishesh/dissent/rd5/NEXT-QUESTION.md
 ---
 
 ## Goal

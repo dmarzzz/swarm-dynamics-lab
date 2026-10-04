@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T02:17Z
 updated: 2026-10-04T02:19Z
 outputs:
-- researchers/vishesh/notes/experimental-expansion/questions.json
+- 5-experiments/studies/vishesh/experimental-expansion/questions.json
 ---
 
 ## Goal

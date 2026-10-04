@@ -1,6 +1,6 @@
 # Experiment setup record: memory-handoff-qwen / attempts 001 and 002
 
-Status: all three chains have run (attempt 001 stopped at the qualification gate; attempt 002 and chain 003 on gpt-6-luna completed; results in RESULTS.md). No further run is prepared. This record is not launch authorization. Maintained per [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and the [ready-chain contract](../pipeline/READY-CHAIN.md). Created 2026-10-04 by dmarz/pipeline-memory.
+Status: all three chains have run (attempt 001 stopped at the qualification gate; attempt 002 and chain 003 on gpt-6-luna completed; results in RESULTS.md). No further run is prepared. This record is not launch authorization. Maintained per [the setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and the [ready-chain contract](../pipeline/READY-CHAIN.md). Created 2026-10-04 by dmarz/pipeline-memory.
 
 ## Ownership and question
 
@@ -36,7 +36,7 @@ Status: all three chains have run (attempt 001 stopped at the qualification gate
 
 ## Current attempt admission
 
-Operations entry: manual, through the generic private launcher named in [RUN.md](RUN.md). [Operations guide](../../../../tooling/agent-experiments/OPERATIONS.md).
+Operations entry: manual, through the generic private launcher named in [RUN.md](RUN.md). [Operations guide](../../../toolkit/agent-experiments/OPERATIONS.md).
 
 | Operation | Exact command or unsupported reason | Evidence and last checked revision |
 |---|---|---|

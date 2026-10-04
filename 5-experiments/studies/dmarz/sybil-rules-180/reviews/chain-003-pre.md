@@ -1,6 +1,6 @@
 # Pre-run assessment: chain-003, attempt 002 with gpt-6-sol (S0, P0, Q0, X0, S1, D1)
 
-Follows [the review cycle](../../../../../tooling/agent-experiments/RUN-REVIEW.md). Owning builder's assessment, written 2026-10-04 by dmarz/flagship-market. It amends [chain-002-pre.md](chain-002-pre.md), which still holds for everything not named here (design, units, endpoints, void limits, gates, transport, visualization, limits of interpretation).
+Follows [the review cycle](../../../../toolkit/agent-experiments/RUN-REVIEW.md). Owning builder's assessment, written 2026-10-04 by dmarz/flagship-market. It amends [chain-002-pre.md](chain-002-pre.md), which still holds for everything not named here (design, units, endpoints, void limits, gates, transport, visualization, limits of interpretation).
 
 - Study / stage / attempt: sybil-rules-180, attempt 002, model `gpt-6-sol` (OpenAI), batches `s0-002-gpt-6-sol`, `p0-002-gpt-6-sol`, `q0-002-gpt-6-sol`, `x0-002-gpt-6-sol`, `s1-002-gpt-6-sol`, `d1-002-gpt-6-sol`.
 - Status: **ready for dmarz/fleet-monitor's check.** No gpt-6-sol call has been made by this study.

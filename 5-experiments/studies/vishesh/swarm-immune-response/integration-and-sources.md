@@ -4,15 +4,15 @@
 
 ## Reuse the existing toolkit
 
-Use [tooling/agent-experiments](../../../../tooling/agent-experiments/README.md), its [harness contract](../../../../tooling/agent-experiments/HARNESS.md) and [protocol template](../../../../tooling/agent-experiments/templates/protocol.md). The published example uses scripted agents. An LLM adapter, state-store repair and production checkpoint support require separate implementation and tests.
+Use [tooling/agent-experiments](../../../toolkit/agent-experiments/README.md), its [harness contract](../../../toolkit/agent-experiments/HARNESS.md) and [protocol template](../../../toolkit/agent-experiments/templates/protocol.md). The published example uses scripted agents. An LLM adapter, state-store repair and production checkpoint support require separate implementation and tests.
 
-The current [event schema](../../../../tooling/agent-experiments/schemas/event.schema.json) has five permitted top-level types: `run_start`, `observation`, `decision`, `evaluation`, `run_end`. Keep that envelope and hash chain. Put proposed semantics in `payload.kind`, such as `claim_admitted`, `quarantine_decision`, `repair_applied`, `reentry_attempt` and `probation_result`; do not add incompatible top-level event types.
+The current [event schema](../../../toolkit/agent-experiments/schemas/event.schema.json) has five permitted top-level types: `run_start`, `observation`, `decision`, `evaluation`, `run_end`. Keep that envelope and hash chain. Put proposed semantics in `payload.kind`, such as `claim_admitted`, `quarantine_decision`, `repair_applied`, `reentry_attempt` and `probation_result`; do not add incompatible top-level event types.
 
 Each intervention payload should record target scope and identifier, visible evidence references, authority/policy version, old/new state hashes, reason, resource cost and release criteria. Use a versioned payload contract in the future adapter. Multiple claim dependencies need an explicit `payload.parent_event_ids` or equivalent lineage list: the existing single `parent_seq` cannot express the full dependency graph. Hashes establish recorded integrity, not truth or completeness of provenance.
 
 Keep evaluator-only labels, planted-source identity and hidden task facts in separate artifacts with explicit access controls. A policy event may contain its own suspicion score; it must not receive an oracle label through a conveniently shared event log. Public examples should contain synthetic data only.
 
-The strict [outcome schema](../../../../tooling/agent-experiments/schemas/outcome.schema.json) does not permit arbitrary extra fields. Preserve it and put longitudinal metrics in a separate, versioned `immune-outcomes.json` sidecar keyed by study/run/scenario/replicate/condition, with schema identifier, event-log hash, evaluator version, trajectories, denominators and censoring indicators. This is a suggested filename and contract, not an existing supported output. A future schema change requires explicit versioning and consumer migration.
+The strict [outcome schema](../../../toolkit/agent-experiments/schemas/outcome.schema.json) does not permit arbitrary extra fields. Preserve it and put longitudinal metrics in a separate, versioned `immune-outcomes.json` sidecar keyed by study/run/scenario/replicate/condition, with schema identifier, event-log hash, evaluator version, trajectories, denominators and censoring indicators. This is a suggested filename and contract, not an existing supported output. A future schema change requires explicit versioning and consumer migration.
 
 ## Checkpoint inventory and implementation acceptance
 

@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-03T23:42Z
 updated: 2026-10-03T23:48Z
 outputs:
-- researchers/vishesh/notes/skeptical-review/README.md
-- researchers/vishesh/notes/skeptical-review/critiques.json
+- 5-experiments/studies/vishesh/skeptical-review/README.md
+- 5-experiments/studies/vishesh/skeptical-review/critiques.json
 ---
 
 ## Goal

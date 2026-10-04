@@ -2,7 +2,7 @@
 
 Status: plan, source, offline checks, server rehearsal and the one-call interface probe done (1 paid call,
 $0.022468); **the 72-call run has not started and awaits dmarz's go-ahead.** Follows
-[the setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Historical
+[the setup runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Historical
 receipts and attempts are preserved below.
 
 ## Ownership and question

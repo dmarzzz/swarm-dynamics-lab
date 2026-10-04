@@ -1,6 +1,6 @@
 # Experiment setup record: sybil-rules-180 / attempts 001 and 002
 
-Status: preparation only. Nothing has run; this record is not launch authorization. Maintained per [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and the [ready-chain contract](../pipeline/READY-CHAIN.md). Created 2026-10-04 by dmarz/flagship-market (started by an earlier model under the same agent id, finished by Claude Opus 5.5 after the first was cut off at about 10:58 UTC).
+Status: preparation only. Nothing has run; this record is not launch authorization. Maintained per [the setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and the [ready-chain contract](../pipeline/READY-CHAIN.md). Created 2026-10-04 by dmarz/flagship-market (started by an earlier model under the same agent id, finished by Claude Opus 5.5 after the first was cut off at about 10:58 UTC).
 
 ## Ownership and question
 

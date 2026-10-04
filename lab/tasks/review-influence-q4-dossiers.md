@@ -16,7 +16,7 @@ history:
 - 2026-10-04T03:56Z reassigned for: shadow -> dmarz at the request of vishesh (task creator side), via Discord
 claimed_at: 2026-10-04T04:15Z
 outputs:
-- researchers/vishesh/notes/influence-swarms/scenario/REVIEW-RESOLUTION.md
+- 5-experiments/studies/vishesh/influence-swarms/scenario/REVIEW-RESOLUTION.md
 ---
 
 ## Goal

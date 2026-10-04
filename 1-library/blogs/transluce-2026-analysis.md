@@ -27,4 +27,4 @@ Developer demonstration, not an independent validation of claim-lineage accuracy
 
 ## Relevance to us
 
-[Telephone research](../../researchers/vishesh/notes/telephone/BACKGROUND.md); [[data-ai-village-2026]].
+[Telephone research](../../5-experiments/studies/vishesh/telephone/BACKGROUND.md); [[data-ai-village-2026]].

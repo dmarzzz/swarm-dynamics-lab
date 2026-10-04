@@ -17,10 +17,10 @@ topics:
 claimed_at: 2026-10-03T23:24Z
 updated: 2026-10-03T23:39Z
 outputs:
-- researchers/dmarz/notes/discussion-dose/README.md
-- researchers/dmarz/notes/discussion-dose/ARCHITECTURE.md
-- researchers/dmarz/notes/discussion-dose/TASKS-AND-EVALS.md
-- researchers/dmarz/notes/discussion-dose/VALIDATION.md
+- 5-experiments/studies/dmarz/discussion-dose/README.md
+- 5-experiments/studies/dmarz/discussion-dose/ARCHITECTURE.md
+- 5-experiments/studies/dmarz/discussion-dose/TASKS-AND-EVALS.md
+- 5-experiments/studies/dmarz/discussion-dose/VALIDATION.md
 ---
 
 ## Goal

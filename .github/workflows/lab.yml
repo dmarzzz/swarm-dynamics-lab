@@ -53,7 +53,7 @@ jobs:
           python3 scripts/lab.py verify --since "$BASE"
 
   index:
-    # Rebuild the generated dashboard even when the check fails, so STATUS.md stays current.
+    # Rebuild the generated dashboard even when the check fails, so lab/STATUS.md stays current.
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     # serialise only the index rebuild; checks run for every push
     concurrency:
@@ -66,7 +66,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install pyyaml
-      - name: Rebuild STATUS.md and library/INDEX.md and push
+      - name: Rebuild lab/STATUS.md and 1-library/INDEX.md and push
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -75,9 +75,9 @@ jobs:
           for i in 1 2 3 4 5; do
             git pull --rebase origin main
             python3 scripts/lab.py index
-            git add STATUS.md library/INDEX.md
+            git add lab/STATUS.md 1-library/INDEX.md
             if git diff --cached --quiet; then echo "index unchanged"; exit 0; fi
-            git commit -m "[bot] index: rebuild STATUS.md and library/INDEX.md [skip ci]"
+            git commit -m "[bot] index: rebuild lab/STATUS.md and 1-library/INDEX.md [skip ci]"
             if git push origin HEAD:main; then exit 0; fi
             git reset --hard origin/main
             sleep $((i * 3))

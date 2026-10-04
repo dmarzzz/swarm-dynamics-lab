@@ -1,6 +1,6 @@
 # Phantom authoritative setup: PC11
 
-Owner Vishesh; operator vishesh/codex-phantom-coast. [Setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Prior [PC10 negative result](../pc10/Q1-A1-POST.md) retained unchanged.
+Owner Vishesh; operator vishesh/codex-phantom-coast. [Setup runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Prior [PC10 negative result](../pc10/Q1-A1-POST.md) retained unchanged.
 
 | Gate | Evidence |
 |---|---|

@@ -1,6 +1,6 @@
 # Immune Response — setup record
 
-Owner/operator: vishesh/codex-immune. This record consolidates existing evidence on 2026-10-04; it is not a retrospective claim of preregistration. Follow the [setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Current stage: receipt-native-a3, bounded exploratory qualification, not a formal accepted hypothesis or production demonstration.
+Owner/operator: vishesh/codex-immune. This record consolidates existing evidence on 2026-10-04; it is not a retrospective claim of preregistration. Follow the [setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Current stage: receipt-native-a3, bounded exploratory qualification, not a formal accepted hypothesis or production demonstration.
 
 ## Question and evidence
 

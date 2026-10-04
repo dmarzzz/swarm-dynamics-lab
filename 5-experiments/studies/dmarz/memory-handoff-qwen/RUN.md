@@ -49,7 +49,7 @@ Limits in the hashed design: 4 requests in flight; 120 s per request; 6,000 s pe
 
 1. `status`, then `verify`. Keep both outputs. Deliver the results directories (without images) as for attempt 002.
 2. Do not rerun a stage. A batch name is refused the second time.
-3. Post-mortem per [RUN-REVIEW.md](../../../../tooling/agent-experiments/RUN-REVIEW.md); RESULTS.md gets a gpt-6-luna section beside the Qwen results, never pooled.
+3. Post-mortem per [RUN-REVIEW.md](../../../toolkit/agent-experiments/RUN-REVIEW.md); RESULTS.md gets a gpt-6-luna section beside the Qwen results, never pooled.
 4. Confirm the chain process has exited and uploads are verified, then release the claim. Do not destroy the server.
 
 ## Offline checks (no server, no model call)

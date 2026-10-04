@@ -18,8 +18,8 @@ topics:
 claimed_at: 2026-10-03T20:18Z
 updated: 2026-10-03T20:24Z
 outputs:
-- synthesis/pre-experiment-research.md
-- researchers/dmarz/notes/preflight-evidence-log.md
+- 3-synthesis/pre-experiment-research.md
+- 5-experiments/studies/dmarz/preflight-evidence-log.md
 ---
 
 ## Goal

@@ -6,7 +6,7 @@ Status: retrospective operational audit, not a new experiment or a repaired-runt
 
 ## Sources and credit
 
-Read Vishesh's [guide README](../../vishesh/notes/pi-review-guide-2026-10-04/README.md), [review guide](../../vishesh/notes/pi-review-guide-2026-10-04/review-guide.json), [project-quality table](../../vishesh/notes/pi-review-guide-2026-10-04/project-quality.json), and [57 findings](../../vishesh/notes/pi-review-2026-10-04/FINDINGS.md). The frozen gray/unrun labels describe the review cutoff, not current availability. Also checked the newer [research refresh](../../vishesh/notes/pi-research-refresh-2026-10-04/status.json), current task records and a read-only hub snapshot.
+Read Vishesh's [guide README](../../vishesh/pi-review-guide-2026-10-04/README.md), [review guide](../../vishesh/pi-review-guide-2026-10-04/review-guide.json), [project-quality table](../../vishesh/pi-review-guide-2026-10-04/project-quality.json), and [57 findings](../../vishesh/pi-review-2026-10-04/FINDINGS.md). The frozen gray/unrun labels describe the review cutoff, not current availability. Also checked the newer [research refresh](../../vishesh/pi-research-refresh-2026-10-04/status.json), current task records and a read-only hub snapshot.
 
 Credit: Vishesh identified the three operational red areas and mechanism-first decision rule. Dmarz supplied the completed identity-splitting study, generator and comparator that the existing factory reused. Neither author's studies or ledgers were changed or launched by this response.
 

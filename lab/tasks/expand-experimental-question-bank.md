@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-03T23:26Z
 updated: 2026-10-03T23:37Z
 outputs:
-- researchers/vishesh/notes/experimental-expansion/README.md
+- 5-experiments/studies/vishesh/experimental-expansion/README.md
 - dashboard/src/views/Contributions.tsx
 ---
 

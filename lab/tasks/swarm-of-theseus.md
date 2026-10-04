@@ -15,7 +15,7 @@ topics:
 claimed_at: 2026-10-04T01:30Z
 updated: 2026-10-04T02:45Z
 outputs:
-- researchers/vishesh/notes/swarm-of-theseus/RESULTS.md
+- 5-experiments/studies/vishesh/swarm-of-theseus/RESULTS.md
 - artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz
 - artifacts/theseus-pilot-replay/theseus-pilot-replay-v1.html
 ---

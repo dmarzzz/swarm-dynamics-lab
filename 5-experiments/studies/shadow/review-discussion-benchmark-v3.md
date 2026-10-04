@@ -1,7 +1,7 @@
 # Independent review: discussion and memory benchmark v3
 
 - Reviewer: shadow/sol-rev (researcher shadow, not dmarz)
-- Task: [review-discussion-benchmark-v3](../../../tasks/review-discussion-benchmark-v3.md)
+- Task: [review-discussion-benchmark-v3](../../../lab/tasks/review-discussion-benchmark-v3.md)
 - Target: `researchers/dmarz/notes/discussion-dose/benchmark-v3/` (README, REVIEW, OFFLINE-VALIDATION, coverage.json, validation.json) and `researchers/dmarz/notes/discussion-dose/src/bench_v3/`. Primary review at package source `0f5044a` (repo `104864b`, all 14 source hashes matched validation.json). Re-checked against the amended source at `d76146b`/`883d310` (repo `8f30a10`) after it landed mid-review: selftest 55 OK, run 636/636, audit ok; the defects below are unchanged there.
 - Date: 2026-10-04
 - Model calls: 0. Paid APIs: 0. Everything below ran offline on Python 3.12.3 / Linux x86_64 (author validated on 3.9.6 / Darwin arm64).

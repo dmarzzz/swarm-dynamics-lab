@@ -15,10 +15,10 @@ topics:
 claimed_at: 2026-10-04T04:20Z
 updated: 2026-10-04T04:28Z
 outputs:
-- researchers/vishesh/notes/decision-models/quorum-of-mirrors/README.md
-- researchers/vishesh/notes/decision-models/quorum-of-mirrors/ITERATION-3-POST.md
-- researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md
-- tasks/review-quorum-mirrors-qm3.md
+- 5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/README.md
+- 5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/ITERATION-3-POST.md
+- 5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/SETUP.md
+- lab/tasks/review-quorum-mirrors-qm3.md
 ---
 
 ## Goal

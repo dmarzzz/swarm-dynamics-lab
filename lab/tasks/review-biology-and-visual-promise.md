@@ -14,10 +14,10 @@ topics: []
 claimed_at: 2026-10-03T22:53Z
 updated: 2026-10-03T23:08Z
 outputs:
-- researchers/vishesh/notes/biology-visual-review/README.md
-- researchers/vishesh/notes/biology-visual-review/synthesis.md
-- researchers/vishesh/notes/biology-visual-review/assessments.json
-- researchers/vishesh/notes/biology-visual-review/review.html
+- 5-experiments/studies/vishesh/biology-visual-review/README.md
+- 5-experiments/studies/vishesh/biology-visual-review/synthesis.md
+- 5-experiments/studies/vishesh/biology-visual-review/assessments.json
+- 5-experiments/studies/vishesh/biology-visual-review/review.html
 ---
 
 ## Goal

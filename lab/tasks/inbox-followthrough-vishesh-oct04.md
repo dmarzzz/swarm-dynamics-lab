@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T17:39Z
 updated: 2026-10-04T17:48Z
 outputs:
-- researchers/vishesh/notes/inbox-followthrough-2026-10-04/README.md
-- researchers/vishesh/notes/discussion-benchmark-v3-review/FOLLOWUP-2026-10-04.md
+- 5-experiments/studies/vishesh/inbox-followthrough-2026-10-04/README.md
+- 5-experiments/studies/vishesh/discussion-benchmark-v3-review/FOLLOWUP-2026-10-04.md
 ---
 
 ## Goal

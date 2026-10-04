@@ -46,15 +46,16 @@ class OperationsTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name).resolve()
-        self.entry = {"id": "test-study", "title": "Test", "owner": "alice", "study_path": "researchers/alice/notes/study",
+        self.entry = {"id": "test-study", "title": "Test", "owner": "alice", "study_path": "5-experiments/studies/alice/study",
                       "setup_path": None, "postmortem_path": None, "adapter": "theseus-v2", "checked_at": "2026-10-04",
                       "checked_commit": "a" * 40, "next_action": "Read setup"}
         (self.root / self.entry["study_path"]).mkdir(parents=True)
+        (self.root / "lab/researchers/alice").mkdir(parents=True)
         self.put(core.REGISTRY, json.dumps({"schema_version": 1, "studies": [self.entry]}))
-        self.put("tooling/agent-experiments/templates/experiment-setup.md", "# [study ID / version]\n[Runbook](../EXPERIMENT-SETUP.md)\n[Operations](../OPERATIONS.md)\n[fill]\n")
-        self.put("tooling/agent-experiments/templates/protocol.md", "# Protocol\n[fill]\n")
+        self.put("5-experiments/toolkit/agent-experiments/templates/experiment-setup.md", "# [study ID / version]\n[Runbook](../EXPERIMENT-SETUP.md)\n[Operations](../OPERATIONS.md)\n[fill]\n")
+        self.put("5-experiments/toolkit/agent-experiments/templates/protocol.md", "# Protocol\n[fill]\n")
         for name in ("agent-definition.json", "context-access.json", "run-config.json"):
-            self.put("tooling/agent-experiments/templates/" + name, '{}')
+            self.put("5-experiments/toolkit/agent-experiments/templates/" + name, '{}')
         self.put("instrument.py", "# frozen instrument\n")
         self.put("receipt.json", '{"admission":"fixture-only"}')
         for relative in ("scripts/experiment.py", "scripts/experiment_ops/__init__.py", "scripts/experiment_ops/core.py", "scripts/experiment_ops/theseus.py", "scripts/experiment_ops/closeout.py", "scripts/experiment_ops/iteration.py"):
@@ -80,11 +81,11 @@ class OperationsTests(unittest.TestCase):
         for value in ("../outside", "/tmp/outside", "one/../two", "one//two", "one/./two", "one\\two"):
             with self.subTest(value=value), self.assertRaises(core.OperationError):
                 core.safe_path(self.root, value)
-        (self.root / "linked").symlink_to(self.root / "researchers", target_is_directory=True)
+        (self.root / "linked").symlink_to(self.root / "lab/researchers", target_is_directory=True)
         with self.assertRaises(core.OperationError):
             core.safe_path(self.root, "linked/alice")
         with self.assertRaises(core.OperationError):
-            core.artifact_path(self.root, "researchers/alice/receipt.json")
+            core.artifact_path(self.root, "lab/researchers/alice/receipt.json")
         self.assertEqual(core.artifact_path(self.root, core.STATE + "/receipt.json"), self.root / core.STATE / "receipt.json")
 
     def test_prepare_freezes_inputs_and_does_not_call_run(self):
@@ -215,8 +216,9 @@ class OperationsTests(unittest.TestCase):
             result = core.scaffold(self.root, "new-study", "alice", "New study")
             self.assertEqual(result["model_calls"], 0)
             setup = (self.root / result["study_path"] / "SETUP.md").read_text()
-            self.assertIn("../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md", setup)
-            self.assertIn("../../../../tooling/agent-experiments/OPERATIONS.md", setup)
+            self.assertEqual(result["study_path"], "5-experiments/studies/alice/new-study")
+            self.assertIn("../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md", setup)
+            self.assertIn("../../../toolkit/agent-experiments/OPERATIONS.md", setup)
             self.assertEqual(core.read_json(self.root / result["study_path"] / "spec/run-config.json")["execution"]["request_retries"], 0)
             saved = self.put("saved.json", '{"result":"already acquired"}')
             with contextlib.redirect_stdout(output):

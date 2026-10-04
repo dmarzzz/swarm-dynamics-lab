@@ -44,7 +44,7 @@ Before implementing a material successor, the owning task writes the prospective
 
 ## Top-10 review: scale and evaluation
 
-2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../../../tooling/agent-experiments/SCALE-AND-CLAIMS.md).
+2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../../toolkit/agent-experiments/SCALE-AND-CLAIMS.md).
 
 **Already incorporated in the staged scale-up plan; do not replace it with the source’s many-team suggestion.** D10 first tests ten chair decisions over five saved cases. The existing plan then qualifies models before paired 10-Sol/50-cheaper-agent configurations within the original USD8 ledger.
 

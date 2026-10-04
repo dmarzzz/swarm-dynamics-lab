@@ -1,7 +1,7 @@
 # Experiment setup record: discussion-v3-opus / v3o-a1
 
 Status: plan, source, offline checks and launch record committed; server rehearsal, probe and chain launch follow
-on `sim-dmarz-9`. Follows [the setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md).
+on `sim-dmarz-9`. Follows [the setup runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md).
 
 ## Ownership and question
 

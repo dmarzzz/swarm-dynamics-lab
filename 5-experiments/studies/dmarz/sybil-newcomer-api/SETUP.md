@@ -1,6 +1,6 @@
 # Experiment setup record: sybil-newcomer-api / v1
 
-**Retrospective evidence index, created 2026-10-04 UTC after S1 launch.** The [shared setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and its template arrived after this experiment's current S1 run had started. This file links existing evidence; it is not a prospective registration, a new launch authorization, or proof that every newly consolidated check ran historically. Original plans, assessments, receipts and results retain their own dates and revisions.
+**Retrospective evidence index, created 2026-10-04 UTC after S1 launch.** The [shared setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and its template arrived after this experiment's current S1 run had started. This file links existing evidence; it is not a prospective registration, a new launch authorization, or proof that every newly consolidated check ran historically. Original plans, assessments, receipts and results retain their own dates and revisions.
 
 ## Ownership and question
 

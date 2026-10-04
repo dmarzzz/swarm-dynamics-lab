@@ -14,9 +14,9 @@ topics: []
 claimed_at: 2026-10-04T03:32Z
 updated: 2026-10-04T09:03Z
 outputs:
-- researchers/vishesh/notes/optimal-swarm-size/reviews/q-a5-post.md
-- researchers/vishesh/notes/optimal-swarm-size/reviews/q-a6-post.md
-- researchers/vishesh/notes/optimal-swarm-size/results/q-a6/analysis.json
+- 5-experiments/studies/vishesh/optimal-swarm-size/reviews/q-a5-post.md
+- 5-experiments/studies/vishesh/optimal-swarm-size/reviews/q-a6-post.md
+- 5-experiments/studies/vishesh/optimal-swarm-size/results/q-a6/analysis.json
 ---
 
 ## Goal

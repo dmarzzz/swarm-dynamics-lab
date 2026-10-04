@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T19:05Z
 updated: 2026-10-04T19:26Z
 outputs:
-- researchers/vishesh/notes/ready-launch-wave-2026-10-04/README.md
+- 5-experiments/studies/vishesh/ready-launch-wave-2026-10-04/README.md
 ---
 
 ## Goal

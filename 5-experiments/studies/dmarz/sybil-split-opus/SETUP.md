@@ -1,6 +1,6 @@
 # Experiment setup record: sybil-split-opus v1
 
-Status: prepared, not launched. This record follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and is not launch authorization. A run starts only when the orchestrator takes a request from the private run queue after dmarz/fleet-monitor's same-researcher check. Nothing has run on a server and no model call has been made.
+Status: prepared, not launched. This record follows [the setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and is not launch authorization. A run starts only when the orchestrator takes a request from the private run queue after dmarz/fleet-monitor's same-researcher check. Nothing has run on a server and no model call has been made.
 
 ## Ownership and question
 
@@ -96,7 +96,7 @@ Under plurality the model cannot change who is admitted. What S1 adds is what th
 
 ## Current attempt admission
 
-Operations entry: manual, through the generic private launcher `scripts/run-ready-chain.py` in the agentops repository (commands in [RUN.md](RUN.md)). [Operations guide](../../../../tooling/agent-experiments/OPERATIONS.md).
+Operations entry: manual, through the generic private launcher `scripts/run-ready-chain.py` in the agentops repository (commands in [RUN.md](RUN.md)). [Operations guide](../../../toolkit/agent-experiments/OPERATIONS.md).
 
 | Operation | Exact command or unsupported reason | Evidence and last checked revision |
 |---|---|---|

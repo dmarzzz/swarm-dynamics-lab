@@ -47,7 +47,7 @@ Before implementing a material successor, the owning task writes the prospective
 
 ## Top-10 review: scale and evaluation
 
-2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../../tooling/agent-experiments/SCALE-AND-CLAIMS.md).
+2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../toolkit/agent-experiments/SCALE-AND-CLAIMS.md).
 
 **Already incorporated in T1; scale generations and transmission difficulty, not decorative population N.** T1-Q0 is the approved 72-call acquisition/teaching qualification; the six-member collective design is a separate comparison. The current cumulative authority is USD25, not the old USD5.
 

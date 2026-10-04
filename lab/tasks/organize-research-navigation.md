@@ -15,7 +15,7 @@ claimed_at: 2026-10-03T22:29Z
 updated: 2026-10-03T22:37Z
 outputs:
 - dashboard/RESEARCH-AREAS.md
-- researchers/vishesh/notes/research-navigation/navigation.json
+- 5-experiments/studies/vishesh/research-navigation/navigation.json
 - dashboard/src/views/Questions.tsx
 - dashboard/src/components/ResearchConnections.tsx
 ---

@@ -1,6 +1,6 @@
 # Visualization mapping v1: sybil-split-opus
 
-Follows [RUN-VISUALIZATION.md](../../../../tooling/agent-experiments/RUN-VISUALIZATION.md). Renderer: `src/render.py` (PIL only, 1800×1200 RGB). Nothing has been rendered from a model run; the frames checked so far come from the scripted stage and say so.
+Follows [RUN-VISUALIZATION.md](../../../toolkit/agent-experiments/RUN-VISUALIZATION.md). Renderer: `src/render.py` (PIL only, 1800×1200 RGB). Nothing has been rendered from a model run; the frames checked so far come from the scripted stage and say so.
 
 - Mapping version / source: v1, part of the hashed source (`src/render.py`); pinned commit and source hash are in [reviews/chain-001-pre.md](reviews/chain-001-pre.md). No parent mapping.
 - Run binding: one hub run per stage, `sybil-split-opus/<run id>`, params `stage`, `batch` (`s0-001`, `p0-001`, `q0-001`, `s1-001`), `source_hash`, `code`. Each row binds graph family, root, identity count k, policy, check budget and attacker pass rate.

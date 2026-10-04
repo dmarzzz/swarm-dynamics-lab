@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T20:03Z
 updated: 2026-10-04T20:32Z
 outputs:
-- researchers/vishesh/notes/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md
+- 5-experiments/studies/vishesh/antsy-targeted-v8/haiku-normalization-d1/POST-MORTEM.md
 ---
 
 ## Goal

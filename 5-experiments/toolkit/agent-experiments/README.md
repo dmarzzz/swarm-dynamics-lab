@@ -1,6 +1,6 @@
 # A practical research guide to experiments with AI agents
 
-Research cutoff: **3 October 2026 (UTC)**. Reusable methods and offline tooling for swarm-lab research. This is a reusable methods package, not a gate-passing survey, accepted hypothesis, or executed LLM experiment. Read [swarm-lab integration](INTEGRATION.md) before adapting it to a research project.
+Research cutoff: **3 October 2026 (UTC)**. Reusable methods and offline tooling for swarm-dynamics-lab research. This is a reusable methods package, not a gate-passing survey, accepted hypothesis, or executed LLM experiment. Read [swarm-dynamics-lab integration](INTEGRATION.md) before adapting it to a research project.
 
 For new studies, start with [the setup runbook](EXPERIMENT-SETUP.md) and copy [the setup record](templates/experiment-setup.md). Then use [the main guide](GUIDE.md), copy [the preregistration template](templates/protocol.md), and adapt [the worked collective-sensing example](examples/collective-sensing/PROTOCOL.md). The [literature review](LITERATURE.md) distinguishes verified research findings, authors' proposals, and this guide's recommendations. [Search notes](SEARCH-LOG.md) document coverage and limits.
 
@@ -11,7 +11,7 @@ For existing studies, use [experiment operations](OPERATIONS.md): `python3 scrip
 | [ITERATION.md](ITERATION.md) | Standing evidence-to-action loop: diagnose, improve, push, run if ready and close out |
 | [OPERATIONS.md](OPERATIONS.md) and [operations.json](operations.json) | Command entry point, study discovery, iteration lineage, implemented boundaries and missing launch evidence |
 | [RUN-REVIEW.md](RUN-REVIEW.md) | Required pre-run assessment, post-mortem and repair/rerun cycle |
-| [Experiment evidence metadata](../../experiments/EVIDENCE-METADATA.md) | Defined 0–4 evidence-confidence scale, independent sample-size summaries and update workflow |
+| [Experiment evidence metadata](../../EVIDENCE-METADATA.md) | Defined 0–4 evidence-confidence scale, independent sample-size summaries and update workflow |
 | [GUIDE.md](GUIDE.md) | Definitions, study lifecycle, statistical design, reliability, and replication |
 | [WORKER-DIVERSITY.md](WORKER-DIVERSITY.md) | Declared differences, evidence overlap, shared errors, complementarity and cost-aware decision value |
 | [AGENT-LIFECYCLE.md](AGENT-LIFECYCLE.md) | Agent identity, actual initialization receipts, context, memory, reset and fork semantics; recommended production contract |

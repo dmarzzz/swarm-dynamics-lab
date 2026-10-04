@@ -3,13 +3,13 @@
 # requires-python = ">=3.9"
 # dependencies = ["pyyaml"]
 # ///
-"""lab.py: the swarm-lab tool. Validates the repo, enforces the prior-art gate, scaffolds entries,
-claims tasks atomically through git, and rebuilds STATUS.md and library/INDEX.md.
+"""lab.py: the swarm-dynamics-lab tool. Validates the repo, enforces the prior-art gate, scaffolds entries,
+claims tasks atomically through git, and rebuilds lab/STATUS.md and 1-library/INDEX.md.
 
   python3 scripts/lab.py check [--urls]            validate everything (run before every push)
-  python3 scripts/lab.py index                     rebuild STATUS.md and library/INDEX.md (CI does this)
+  python3 scripts/lab.py index                     rebuild lab/STATUS.md and 1-library/INDEX.md (CI does this)
   python3 scripts/lab.py find <text>               search the library by id, title, url, doi, arxiv
-  python3 scripts/lab.py new <kind> <id> --agent A scaffold an entry from templates/ (kinds below)
+  python3 scripts/lab.py new <kind> <id> --agent A scaffold an entry from lab/templates/ (kinds below)
   python3 scripts/lab.py claim <task> --agent A    claim an open or stale task (pulls, commits, pushes)
   python3 scripts/lab.py touch <task> --agent A    heartbeat on a task you hold
   python3 scripts/lab.py done <task> --agent A [--output path ...]
@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import posixpath
 import re
 import subprocess
 import sys
@@ -37,6 +38,24 @@ except ImportError:  # pragma: no cover
     sys.exit("lab.py needs PyYAML: pip install pyyaml   (or: uv run scripts/lab.py ...)")
 
 ROOT = Path(__file__).resolve().parent.parent
+
+# Repo layout. Every path below is relative to ROOT; change the layout here, not in the code.
+LIBRARY = "1-library"
+SURVEYS = "2-surveys"
+REVIEWS = "2-surveys/reviews"
+SYNTHESIS = "3-synthesis"
+HYPOTHESES = "4-hypotheses"
+EXPERIMENTS = "5-experiments"            # formal experiments: 5-experiments/<id>/README.md
+STUDIES = "5-experiments/studies"        # 5-experiments/studies/<researcher>/: that researcher's working studies
+TOOLKIT = "5-experiments/toolkit"
+RESEARCHERS = "lab/researchers"          # lab/researchers/<researcher>/: agents/, log/, inbox.md, README.md
+TASKS = "lab/tasks"
+CANDIDATES = "lab/candidates"
+TEMPLATES = "lab/templates"
+STATUS = "lab/STATUS.md"
+PIPELINE = "lab/PIPELINE.md"
+NOT_EXPERIMENTS = {Path(STUDIES).name, Path(TOOLKIT).name}  # folders in EXPERIMENTS that are not experiment ids
+REPO = "dmarzzz/swarm-dynamics-lab"
 
 # ---------------------------------------------------------------------------------------------------------------
 # The prior-art gate. These floors are the quality bar. Raise them if surveys come in thin; lower them only by
@@ -165,24 +184,25 @@ def md_files(d: Path, pattern="*.md"):
 
 class Lab:
     def __init__(self):
-        self.researchers = sorted(p.name for p in (ROOT / "researchers").iterdir()
+        self.researchers = sorted(p.name for p in (ROOT / RESEARCHERS).iterdir()
                                   if p.is_dir() and (p / "README.md").exists())
-        self.topics = {t["slug"]: t for t in (yaml.safe_load((ROOT / "library/topics.yaml").read_text()) or [])}
+        self.topics = {t["slug"]: t for t in (yaml.safe_load((ROOT / LIBRARY / "topics.yaml").read_text()) or [])}
         self.library: dict[str, Doc] = {}
         self.lib_dupes: list[tuple[str, Doc]] = []
         for d in LIB_DIRS:
-            for p in md_files(ROOT / "library" / d):
+            for p in md_files(ROOT / LIBRARY / d):
                 doc = Doc(p)
                 if p.stem in self.library:
                     self.lib_dupes.append((p.stem, doc))
                 self.library[p.stem] = doc
-        self.surveys = {p.stem: Doc(p) for p in md_files(ROOT / "surveys")}
-        self.hypotheses = {p.stem: Doc(p) for p in md_files(ROOT / "hypotheses")}
-        self.experiments = {p.parent.name: Doc(p) for p in sorted((ROOT / "experiments").glob("*/README.md"))}
-        self.reviews = {p.stem: Doc(p) for p in md_files(ROOT / "reviews")}
-        self.tasks = {p.stem: Doc(p) for p in md_files(ROOT / "tasks")}
+        self.surveys = {p.stem: Doc(p) for p in md_files(ROOT / SURVEYS)}
+        self.hypotheses = {p.stem: Doc(p) for p in md_files(ROOT / HYPOTHESES)}
+        self.experiments = {p.parent.name: Doc(p) for p in sorted((ROOT / EXPERIMENTS).glob("*/README.md"))
+                            if p.parent.name not in NOT_EXPERIMENTS}
+        self.reviews = {p.stem: Doc(p) for p in md_files(ROOT / REVIEWS)}
+        self.tasks = {p.stem: Doc(p) for p in md_files(ROOT / TASKS)}
         self.agents = {f"{p.parent.parent.name}/{p.stem}": Doc(p)
-                       for p in sorted((ROOT / "researchers").glob("*/agents/*.md"))}
+                       for p in sorted((ROOT / RESEARCHERS).glob("*/agents/*.md"))}
 
     # ------------------------------------------------------------------ derived state
     def passing_reviews(self, target: str, owner_researcher: str | None) -> list[Doc]:
@@ -216,7 +236,7 @@ class Lab:
         known = [c for c in cites if c in self.library]
         unknown = [c for c in cites if c not in self.library]
         if unknown:
-            probs.append(f"cites ids not in library/: {', '.join(unknown)}")
+            probs.append(f"cites ids not in {LIBRARY}/: {', '.join(unknown)}")
         types = [self.library[c].get("type") for c in known]
         cnt = lambda pred: sum(1 for t in types if pred(t))  # noqa: E731
         checks = [
@@ -325,7 +345,7 @@ def check(lab: Lab, urls=False) -> tuple[list[str], list[str]]:
     def topics_ok(d):
         for t in d.get("topics") or []:
             if t not in lab.topics:
-                err(d, f"unknown topic '{t}': add it to library/topics.yaml first")
+                err(d, f"unknown topic '{t}': add it to {LIBRARY}/topics.yaml first")
 
     # ---- library
     for stem, d in lab.lib_dupes:
@@ -449,7 +469,7 @@ def check(lab: Lab, urls=False) -> tuple[list[str], list[str]]:
             if not secs.get(name):
                 err(d, f"section '## {name}' is missing or empty")
         if st in HYP_NEEDS_REVIEW and not lab.passing_reviews(stem, d.get("owner")):
-            err(d, f"status '{st}' needs a passing review from another researcher in reviews/")
+            err(d, f"status '{st}' needs a passing review from another researcher in {REVIEWS}/")
 
     # ---- experiments
     for stem, d in lab.experiments.items():
@@ -499,7 +519,7 @@ def check(lab: Lab, urls=False) -> tuple[list[str], list[str]]:
             err(d, d.error)
             continue
         if d.get("agent") != key:
-            err(d, f"agent must be '{key}' (matches researchers/<name>/agents/<file>.md)")
+            err(d, f"agent must be '{key}' (matches {RESEARCHERS}/<name>/agents/<file>.md)")
 
     # ---- ids are unique across kinds
     for coll in (lab.surveys, lab.hypotheses, lab.experiments, lab.reviews, lab.tasks):
@@ -539,7 +559,7 @@ def esc(s) -> str:
 
 def build_index(lab: Lab):
     gen = "<!-- generated by scripts/lab.py index; do not edit by hand -->"
-    # library/INDEX.md
+    # 1-library/INDEX.md (links are relative to the library folder)
     L = [gen, "", "# Library index", "", f"{len(lab.library)} entries.", ""]
     for d_name, kind in LIB_DIRS.items():
         docs = [d for d in lab.library.values() if d.path.parent.name == d_name and not d.error]
@@ -554,10 +574,11 @@ def build_index(lab: Lab):
                      f"| {esc(d.get('relevance'))} | {esc(d.get('read_depth'))} | "
                      f"{esc(', '.join(d.get('topics') or []))} | {esc(d.get('added_by'))} |")
         L.append("")
-    (ROOT / "library/INDEX.md").write_text("\n".join(L), encoding="utf-8")
+    (ROOT / LIBRARY / "INDEX.md").write_text("\n".join(L), encoding="utf-8")
     build_bib(lab)
 
-    # STATUS.md
+    # lab/STATUS.md (links are relative to the folder STATUS.md sits in)
+    link = lambda rel: posixpath.relpath(rel, posixpath.dirname(STATUS))  # noqa: E731
     S = [gen, "", "# Status", ""]
     S += ["## Library by topic", "", "| topic | papers | code | blogs | threads | datasets | talks | total |",
           "|---|---|---|---|---|---|---|---|"]
@@ -579,7 +600,7 @@ def build_index(lab: Lab):
         status = d.get("status")
         if status == "claimed" and is_stale(d):
             status = "claimed (stale)"
-        S.append(f"| [{d.get('id')}](tasks/{d.path.name}) | {status} | {d.get('priority')} | {d.get('kind')} | "
+        S.append(f"| [{d.get('id')}]({link(d.rel)}) | {status} | {d.get('priority')} | {d.get('kind')} | "
                  f"{esc(d.get('owner') or '')} | {esc(d.get('for') or '')} | "
                  f"{esc(d.get('updated') or d.get('claimed_at') or '')} | {esc(d.get('title'))} |")
     S.append("")
@@ -601,7 +622,7 @@ def build_index(lab: Lab):
         S += ["| survey | owner | state | cited | gate problems |", "|---|---|---|---|---|"]
         for sid, d in lab.surveys.items():
             probs = lab.gate_problems(d) if not d.error else ["unparseable"]
-            S.append(f"| [{sid}](surveys/{d.path.name}) | {esc(d.get('owner'))} | {lab.survey_state(sid)} | "
+            S.append(f"| [{sid}]({link(d.rel)}) | {esc(d.get('owner'))} | {lab.survey_state(sid)} | "
                      f"{len([c for c in d.cites() if c in lab.library])} | {len(probs)} |")
     else:
         S.append("None yet. Hypotheses are blocked until a survey passes the gate.")
@@ -611,7 +632,7 @@ def build_index(lab: Lab):
     if lab.hypotheses:
         S += ["| hypothesis | owner | status | surveys | title |", "|---|---|---|---|---|"]
         for hid, d in lab.hypotheses.items():
-            S.append(f"| [{hid}](hypotheses/{d.path.name}) | {esc(d.get('owner'))} | {esc(d.get('status'))} | "
+            S.append(f"| [{hid}]({link(d.rel)}) | {esc(d.get('owner'))} | {esc(d.get('status'))} | "
                      f"{esc(', '.join(d.get('surveys') or []))} | {esc(d.get('title'))} |")
     else:
         S.append("None yet.")
@@ -621,19 +642,19 @@ def build_index(lab: Lab):
     if lab.experiments:
         S += ["| experiment | owner | status | hypothesis |", "|---|---|---|---|"]
         for eid, d in lab.experiments.items():
-            S.append(f"| [{eid}](experiments/{eid}/README.md) | {esc(d.get('owner'))} | {esc(d.get('status'))} | "
+            S.append(f"| [{eid}]({link(d.rel)}) | {esc(d.get('owner'))} | {esc(d.get('status'))} | "
                      f"{esc(d.get('hypothesis'))} |")
     else:
         S.append("None yet.")
     S.append("")
-    (ROOT / "STATUS.md").write_text("\n".join(S), encoding="utf-8")
+    (ROOT / STATUS).write_text("\n".join(S), encoding="utf-8")
 
 
 def batch_section() -> list[str]:
-    """Candidate batches (GitHub issues labelled `batch`, see PIPELINE.md). Skipped quietly without gh or network."""
+    """Candidate batches (GitHub issues labelled `batch`, see lab/PIPELINE.md). Skipped quietly without gh or network."""
     import json
     try:
-        r = subprocess.run(["gh", "issue", "list", "-R", "dmarzzz/swarm-lab", "--label", "batch", "--state", "all",
+        r = subprocess.run(["gh", "issue", "list", "-R", REPO, "--label", "batch", "--state", "all",
                             "--limit", "500", "--json", "number,state,labels,title,updatedAt"],
                            capture_output=True, text=True, timeout=60)
         issues = json.loads(r.stdout) if r.returncode == 0 else None
@@ -646,11 +667,11 @@ def batch_section() -> list[str]:
     closed = [i for i in issues if i["state"] != "OPEN"]
     S = ["## Candidate batches", "",
          f"{len(free)} free, {len(claimed)} claimed, {len(closed)} done. Claim with "
-         "`python3 scripts/batches.py claim <n> --agent <id>` (PIPELINE.md).", ""]
+         f"`python3 scripts/batches.py claim <n> --agent <id>` ({posixpath.basename(PIPELINE)}).", ""]
     if claimed or free:
         S += ["| issue | state | updated | batch |", "|---|---|---|---|"]
         for i in sorted(claimed, key=lambda i: i["number"]) + sorted(free, key=lambda i: i["number"])[:15]:
-            S.append(f"| [#{i['number']}](https://github.com/dmarzzz/swarm-lab/issues/{i['number']}) | "
+            S.append(f"| [#{i['number']}](https://github.com/{REPO}/issues/{i['number']}) | "
                      f"{'claimed' if i in claimed else 'free'} | {i['updatedAt'][:16]}Z | {esc(i['title'])} |")
         if len(free) > 15:
             S.append(f"| | | | {len(free) - 15} more free batches |")
@@ -659,7 +680,7 @@ def batch_section() -> list[str]:
 
 
 def build_bib(lab: Lab):
-    """library/references.bib: one BibTeX record per paper and talk, keyed by library id."""
+    """1-library/references.bib: one BibTeX record per paper and talk, keyed by library id."""
     out = ["% generated by scripts/lab.py index; do not edit by hand", ""]
     for stem in sorted(lab.library):
         d = lab.library[stem]
@@ -674,14 +695,14 @@ def build_bib(lab: Lab):
             "doi": str(d.get("doi") or ""),
             "eprint": str(d.get("arxiv") or ""),
             "url": str(d.get("url") or ""),
-            "note": "library/" + d.rel.split("library/", 1)[-1],
+            "note": d.rel,
         }
         if fields["eprint"]:
             fields["archiveprefix"] = "arXiv"
         kind = "misc" if d.get("type") == "talk" or not d.get("venue") else "article"
         body = ",\n".join(f"  {k} = {{{v}}}" for k, v in fields.items() if v and v != "{}")
         out.append(f"@{kind}{{{stem},\n{body}\n}}\n")
-    (ROOT / "library/references.bib").write_text("\n".join(out), encoding="utf-8")
+    (ROOT / LIBRARY / "references.bib").write_text("\n".join(out), encoding="utf-8")
 
 
 def _norm_title(s) -> str:
@@ -709,7 +730,7 @@ def cmd_verify(a, lab):
 
     only = None
     if a.since:
-        r = git("diff", "--name-only", "--diff-filter=AM", a.since, "HEAD", "--", "library/papers")
+        r = git("diff", "--name-only", "--diff-filter=AM", a.since, "HEAD", "--", f"{LIBRARY}/papers")
         if r.returncode != 0:
             print(f"cannot diff against {a.since}; verifying everything")
         else:
@@ -775,7 +796,7 @@ def git(*args, check=False) -> subprocess.CompletedProcess:
 
 
 def mutate_task(task_id: str, agent: str, fn, verb: str) -> int:
-    path = ROOT / "tasks" / f"{task_id}.md"
+    path = ROOT / TASKS / f"{task_id}.md"
     rel = path.relative_to(ROOT).as_posix()
     for attempt in range(6):
         p = git("pull", "--rebase", "--autostash")
@@ -783,7 +804,7 @@ def mutate_task(task_id: str, agent: str, fn, verb: str) -> int:
             print(f"git pull failed:\n{p.stderr}", file=sys.stderr)
             return 1
         if not path.exists():
-            print(f"no task '{task_id}' in tasks/", file=sys.stderr)
+            print(f"no task '{task_id}' in {TASKS}/", file=sys.stderr)
             return 1
         d = Doc(path)
         problem = fn(d)
@@ -889,17 +910,19 @@ def cmd_new(a, lab):
         sys.exit("id must be lowercase a-z, 0-9 and hyphens")
     needs_agent = True
     if kind in LIB_KIND_DIR:
-        dest = ROOT / "library" / LIB_KIND_DIR[kind] / f"{ident}.md"
+        dest = ROOT / LIBRARY / LIB_KIND_DIR[kind] / f"{ident}.md"
     elif kind == "survey":
-        dest = ROOT / "surveys" / f"{ident}.md"
+        dest = ROOT / SURVEYS / f"{ident}.md"
     elif kind == "hypothesis":
-        dest = ROOT / "hypotheses" / f"{ident}.md"
+        dest = ROOT / HYPOTHESES / f"{ident}.md"
     elif kind == "experiment":
-        dest = ROOT / "experiments" / ident / "README.md"
+        if ident in NOT_EXPERIMENTS:
+            sys.exit(f"'{ident}' is a reserved folder in {EXPERIMENTS}/, not an experiment id")
+        dest = ROOT / EXPERIMENTS / ident / "README.md"
     elif kind == "review":
-        dest = ROOT / "reviews" / f"{ident}.md"
+        dest = ROOT / REVIEWS / f"{ident}.md"
     elif kind == "task":
-        dest = ROOT / "tasks" / f"{ident}.md"
+        dest = ROOT / TASKS / f"{ident}.md"
     elif kind == "agent":
         dest = None
     else:
@@ -908,15 +931,15 @@ def cmd_new(a, lab):
         require_agent(lab, a.agent)
     researcher, agent_name = a.agent.split("/")
     if kind == "agent":
-        dest = ROOT / "researchers" / researcher / "agents" / f"{agent_name}.md"
+        dest = ROOT / RESEARCHERS / researcher / "agents" / f"{agent_name}.md"
     else:
         hit = [p for p in ROOT.glob(f"**/{ident}.md") if ".git" not in p.parts] + \
-              ([ROOT / "experiments" / ident] if (ROOT / "experiments" / ident).exists() else [])
+              ([ROOT / EXPERIMENTS / ident] if (ROOT / EXPERIMENTS / ident).exists() else [])
         if hit:
             sys.exit(f"'{ident}' already exists: {hit[0].relative_to(ROOT)}. Extend it instead of duplicating.")
     if dest.exists():
         sys.exit(f"{dest.relative_to(ROOT)} already exists")
-    tpl = (ROOT / "templates" / f"{kind}.md").read_text(encoding="utf-8")
+    tpl = (ROOT / TEMPLATES / f"{kind}.md").read_text(encoding="utf-8")
     for k, v in {"id": ident, "agent": a.agent, "researcher": researcher, "date": today(), "now": now(),
                  "agent_name": agent_name}.items():
         tpl = tpl.replace("{{" + k + "}}", v)
@@ -930,16 +953,18 @@ def cmd_add_researcher(a, lab):
     name = a.name.lower()
     if not re.match(r"^[a-z0-9_-]+$", name):
         sys.exit("researcher name must be lowercase a-z, 0-9, _ or -")
-    d = ROOT / "researchers" / name
-    if d.exists():
-        sys.exit(f"{d.relative_to(ROOT)} already exists")
-    for sub in ("agents", "log", "notes"):
-        (d / sub).mkdir(parents=True)
-        (d / sub / ".gitkeep").write_text("")
+    d = ROOT / RESEARCHERS / name
+    studies = ROOT / STUDIES / name
+    for existing in (d, studies):
+        if existing.exists():
+            sys.exit(f"{existing.relative_to(ROOT)} already exists")
+    for sub in (d / "agents", d / "log", studies):
+        sub.mkdir(parents=True)
+        (sub / ".gitkeep").write_text("")
     for f in ("README.md", "inbox.md"):
-        src = (ROOT / "templates" / "researcher" / f).read_text(encoding="utf-8")
+        src = (ROOT / TEMPLATES / "researcher" / f).read_text(encoding="utf-8")
         (d / f).write_text(src.replace("{{researcher}}", name), encoding="utf-8")
-    print(f"created researchers/{name}/")
+    print(f"created {RESEARCHERS}/{name}/ and {STUDIES}/{name}/")
     return 0
 
 
@@ -953,7 +978,7 @@ def cmd_find(a, lab):
             print(f"{d.rel}  [{d.get('type')}, rel {d.get('relevance')}, {d.get('read_depth')}]  {d.get('title')}")
             hits += 1
     if not hits:
-        print("no match in library/ (also try the arXiv id, DOI, repo owner/name or a title word)")
+        print(f"no match in {LIBRARY}/ (also try the arXiv id, DOI, repo owner/name or a title word)")
     return 0
 
 
@@ -972,9 +997,18 @@ def cmd_gate(a, lab):
     return 0
 
 
-GENERATED = {"STATUS.md", "library/INDEX.md", "library/references.bib"}
+GENERATED = {STATUS, f"{LIBRARY}/INDEX.md", f"{LIBRARY}/references.bib"}
 PROTECTED = ("AGENTS.md", "CLAUDE.md", "README.md", "project.yaml", "artifacts.yaml", "artifacts.lock.json",
-             "scripts/", "templates/", ".github/", ".flightdeck/", ".claude/", ".agents/", ".codex/", ".cursor/")
+             "scripts/", f"{TEMPLATES}/", ".github/", ".flightdeck/", ".claude/", ".agents/", ".codex/", ".cursor/")
+
+
+def area_owner(path: str) -> str | None:
+    """The researcher whose own area holds this repo-relative path, or None for shared files.
+    A researcher's area is both lab/researchers/<name>/ and 5-experiments/studies/<name>/."""
+    for base in (RESEARCHERS, STUDIES):
+        if path.startswith(base + "/"):
+            return path[len(base) + 1:].split("/")[0]
+    return None
 
 
 def tree_errors(rev: str) -> set[str]:
@@ -1043,8 +1077,8 @@ def sync_once(agent: str, include_protected=False) -> int:
             continue
         if not include_protected and path.startswith(PROTECTED):
             skipped.append((path, "protected (pass --include-protected only with human approval)"))
-        elif path.startswith("researchers/") and path.split("/")[1] != researcher:
-            skipped.append((path, f"belongs to researcher {path.split('/')[1]}"))
+        elif area_owner(path) not in (None, researcher):
+            skipped.append((path, f"belongs to researcher {area_owner(path)}"))
         elif path in failing:
             skipped.append((path, "fails `lab.py check`; fix it and the next sync picks it up"))
         else:
@@ -1060,7 +1094,7 @@ def sync_once(agent: str, include_protected=False) -> int:
         by = {}
         for s in stage:
             fp = ROOT / s
-            if s.startswith("library/") and fp.exists():
+            if s.startswith(LIBRARY + "/") and fp.exists():
                 a = Doc(fp).get("added_by") or "?"
                 by[a] = by.get(a, 0) + 1
         body = "\n".join(f"{n:4d} library entries by {a}" for a, n in sorted(by.items(), key=lambda kv: -kv[1]))

@@ -1,6 +1,6 @@
 # Setup record: wild-evidence-depth / v1
 
-Owner/operator/assessor: shadow/sol-audit-gap. No independent reviewer is claimed. This adapted setup record follows [EXPERIMENT-SETUP](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Scope is **analyze saved data**, not a new experimental dispatch. The formal survey/hypothesis gates remain unchanged and no accepted hypothesis is asserted.
+Owner/operator/assessor: shadow/sol-audit-gap. No independent reviewer is claimed. This adapted setup record follows [EXPERIMENT-SETUP](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Scope is **analyze saved data**, not a new experimental dispatch. The formal survey/hypothesis gates remain unchanged and no accepted hypothesis is asserted.
 
 ## Ownership and question
 

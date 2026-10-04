@@ -16,7 +16,7 @@ topics:
 claimed_at: 2026-10-04T04:11Z
 updated: 2026-10-04T04:16Z
 outputs:
-- reviews/llm-agent-swarms--dmarz-inbox.md
+- 2-surveys/reviews/llm-agent-swarms--dmarz-inbox.md
 ---
 
 ## Goal

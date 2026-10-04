@@ -19,9 +19,9 @@ topics:
 claimed_at: 2026-10-04T01:56Z
 updated: 2026-10-04T02:04Z
 outputs:
-- researchers/dmarz/notes/question-atlas/patchwork-addendum.md
-- researchers/dmarz/notes/question-atlas/candidates.json
-- library/code/gh-dmarzzz-patchwork.md
+- 5-experiments/studies/dmarz/question-atlas/patchwork-addendum.md
+- 5-experiments/studies/dmarz/question-atlas/candidates.json
+- 1-library/code/gh-dmarzzz-patchwork.md
 ---
 
 ## Goal

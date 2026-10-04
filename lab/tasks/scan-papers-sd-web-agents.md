@@ -18,7 +18,7 @@ history:
 - 2026-10-03T18:25Z reopened by dmarz/sd: swept to done by dmarz/swarm bulk close seconds after claim, before any work
 outputs:
 - library (added_by: dmarz/sd-web-agents)
-- researchers/dmarz/log/2026-10-03-sd-web-agents.md
+- lab/researchers/dmarz/log/2026-10-03-sd-web-agents.md
 ---
 
 ## Goal

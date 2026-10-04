@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""batches.py: candidate batches <-> GitHub issues. One issue per candidates/<source>/<batch-id>.jsonl.
-Needs the `gh` CLI, logged in with push or triage on the repo. See PIPELINE.md.
+"""batches.py: candidate batches <-> GitHub issues. One issue per lab/candidates/<source>/<batch-id>.jsonl.
+Needs the `gh` CLI, logged in with push or triage on the repo. See lab/PIPELINE.md.
 
   python3 scripts/batches.py setup                       create the labels (idempotent)
   python3 scripts/batches.py publish [--batch <id> ...]  one issue per batch that has none yet
@@ -25,11 +25,12 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-CAND = ROOT / "candidates"
+LIBRARY = "1-library"  # repo layout, as in lab.py
+CAND = ROOT / "lab" / "candidates"
 MAP = CAND / "ISSUES.tsv"  # batch-id \t issue-number \t issue-url
-REPO = "dmarzzz/swarm-lab"
+REPO = "dmarzzz/swarm-dynamics-lab"
 STALE_MIN = 90  # touch every 30 min; three missed touches and the batch is up for grabs
-LIB_DIR = {"x": "library/threads/", "blog": "library/blogs/", "web": "library/blogs/", "code": "library/code/", "paper": "library/papers/", "talk": "library/talks/"}
+LIB_DIR = {src: f"{LIBRARY}/{folder}/" for src, folder in {"x": "threads", "blog": "blogs", "web": "blogs", "code": "code", "paper": "papers", "talk": "talks"}.items()}
 NEW_KIND = {"x": "thread", "blog": "blog", "web": "blog", "code": "code", "paper": "paper", "talk": "talk"}
 
 
@@ -46,7 +47,7 @@ def gh_json(*args):
 
 def topics() -> list[str]:
     import yaml
-    return [t["slug"] for t in yaml.safe_load((ROOT / "library/topics.yaml").read_text())]
+    return [t["slug"] for t in yaml.safe_load((ROOT / LIBRARY / "topics.yaml").read_text())]
 
 
 def read_map() -> dict[str, tuple[str, str]]:
@@ -112,17 +113,17 @@ def now_utc() -> dt.datetime:
 
 # ------------------------------------------------------------------------------------------------ setup
 def cmd_setup(a):
-    want = {"batch": ("0E8A16", "a claimable batch of source candidates (see PIPELINE.md)"),
+    want = {"batch": ("0E8A16", "a claimable batch of source candidates (see lab/PIPELINE.md)"),
             "claimed": ("FBCA04", "an agent is working this batch; stale after 90 min without a comment"),
             "needs-review": ("D93F0B", "entries written but something is off; a second agent should look"),
-            "source:x": ("1D76DB", "X posts and threads -> library/threads"),
-            "source:blog": ("1D76DB", "blogs and long-form web -> library/blogs"),
+            "source:x": ("1D76DB", f"X posts and threads -> {LIBRARY}/threads"),
+            "source:blog": ("1D76DB", f"blogs and long-form web -> {LIBRARY}/blogs"),
             "source:web": ("1D76DB", "other web pages"),
-            "source:code": ("1D76DB", "repos -> library/code"),
-            "source:paper": ("1D76DB", "papers -> library/papers"),
-            "source:talk": ("1D76DB", "recorded talks and lectures -> library/talks")}
+            "source:code": ("1D76DB", f"repos -> {LIBRARY}/code"),
+            "source:paper": ("1D76DB", f"papers -> {LIBRARY}/papers"),
+            "source:talk": ("1D76DB", f"recorded talks and lectures -> {LIBRARY}/talks")}
     for t in topics():
-        want[f"topic:{t}"] = ("5319E7", f"topic slug {t} from library/topics.yaml")
+        want[f"topic:{t}"] = ("5319E7", f"topic slug {t} from {LIBRARY}/topics.yaml")
     have = {l["name"] for l in gh_json("label", "list", "-R", REPO, "--limit", "200", "--json", "name")}
     for name, (color, desc) in want.items():
         if name in have:
@@ -135,11 +136,11 @@ def cmd_setup(a):
 
 # ------------------------------------------------------------------------------------------------ publish
 def issue_body(bid: str, src: str, topic: str, items: list[dict]) -> str:
-    lib = LIB_DIR.get(src, "library/")
+    lib = LIB_DIR.get(src, f"{LIBRARY}/")
     kind = NEW_KIND.get(src, "blog")
-    lines = [f"Batch `{bid}`: {len(items)} {src} candidates, topic `{topic}`. File: `candidates/{src}/{bid}.jsonl` "
+    lines = [f"Batch `{bid}`: {len(items)} {src} candidates, topic `{topic}`. File: `{CAND.relative_to(ROOT).as_posix()}/{src}/{bid}.jsonl` "
              f"on `main`.", "",
-             "**How to work it** (full flow in `PIPELINE.md`):", "",
+             "**How to work it** (full flow in `lab/PIPELINE.md`):", "",
              f"1. `python3 scripts/batches.py claim {{this-issue}} --agent <researcher>/<agent>` (assigns you, labels `claimed`).",
              f"2. For each item: open the source, `python3 scripts/lab.py find \"<url or id>\"`, then "
              f"`python3 scripts/lab.py new {kind} <id> --agent <id>` into `{lib}` and fill every TODO to the AGENTS.md bar "

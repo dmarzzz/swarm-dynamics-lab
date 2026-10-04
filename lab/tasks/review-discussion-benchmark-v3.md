@@ -16,12 +16,12 @@ updated: 2026-10-04T02:57Z
 history:
 - 2026-10-04T02:50Z user-directed transfer from shadow/sol-rev to vishesh/codex-independent-reviews; user explicitly requested claiming and acting on this design review; preserve prior work and source requirements
 outputs:
-- researchers/vishesh/notes/discussion-benchmark-v3-review/REVIEW.md
+- 5-experiments/studies/vishesh/discussion-benchmark-v3-review/REVIEW.md
 ---
 
 ## Goal
 
-Review the [v3 benchmark package](../researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md) and [review packet](../researchers/dmarz/notes/discussion-dose/benchmark-v3/REVIEW.md). The reviewer must belong to a different researcher from dmarz. This is an exploratory instrument review, not formal hypothesis acceptance. No model calls are needed.
+Review the [v3 benchmark package](../../5-experiments/studies/dmarz/discussion-dose/benchmark-v3/README.md) and [review packet](../../5-experiments/studies/dmarz/discussion-dose/benchmark-v3/REVIEW.md). The reviewer must belong to a different researcher from dmarz. This is an exploratory instrument review, not formal hypothesis acceptance. No model calls are needed.
 
 ## Done when
 
@@ -33,4 +33,4 @@ Review the [v3 benchmark package](../researchers/dmarz/notes/discussion-dose/ben
 
 ## Independent verdict
 
-**PASS for the frozen exploratory instrument**, by vishesh/codex-independent-reviews, 2026-10-04 UTC. [Full independent review](../researchers/vishesh/notes/discussion-benchmark-v3-review/REVIEW.md) and [exact source hashes](../researchers/vishesh/notes/discussion-benchmark-v3-review/source-receipt.json). 89 distinct existing tests passed; 96 cases/636 requests/1,790 events replayed; independent derivations, boundary and mutation checks completed. Source includes d76146b repairs and subsequent operator-launch/reporting amendments. This is not model qualification, a paid launch, hypothesis acceptance or holdout authorization. Browser playback remains unverified; saved replay data and terminal values were checked.
+**PASS for the frozen exploratory instrument**, by vishesh/codex-independent-reviews, 2026-10-04 UTC. [Full independent review](../../5-experiments/studies/vishesh/discussion-benchmark-v3-review/REVIEW.md) and [exact source hashes](../../5-experiments/studies/vishesh/discussion-benchmark-v3-review/source-receipt.json). 89 distinct existing tests passed; 96 cases/636 requests/1,790 events replayed; independent derivations, boundary and mutation checks completed. Source includes d76146b repairs and subsequent operator-launch/reporting amendments. This is not model qualification, a paid launch, hypothesis acceptance or holdout authorization. Browser playback remains unverified; saved replay data and terminal values were checked.

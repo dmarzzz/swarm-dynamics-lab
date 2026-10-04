@@ -16,7 +16,7 @@ topics:
 claimed_at: 2026-10-04T01:27Z
 updated: 2026-10-04T02:02Z
 outputs:
-- researchers/dmarz/notes/market-split
+- 5-experiments/studies/dmarz/market-split
 - artifacts/market-split-experiment-plan/market-split-experiment-plan-v1.md
 - artifacts/market-split-scripted-frame/market-split-scripted-frame-v1.png
 ---

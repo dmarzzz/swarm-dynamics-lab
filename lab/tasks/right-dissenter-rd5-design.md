@@ -16,13 +16,13 @@ topics:
 claimed_at: 2026-10-04T06:40Z
 updated: 2026-10-04T06:50Z
 outputs:
-- researchers/vishesh/notes/dissent/rd5/PLAN.md
-- researchers/vishesh/notes/dissent/rd5/FAILURE-ANALYSIS.md
-- researchers/vishesh/notes/dissent/rd5/IMPROVEMENTS.md
-- researchers/vishesh/notes/dissent/rd5/RESEARCH-QUESTIONS.md
-- researchers/vishesh/notes/dissent/rd5/analysis/rd4-failure-decomposition.json
-- library/papers/hay-2012-selecting.md
-- library/papers/tan-2016-honey.md
+- 5-experiments/studies/vishesh/dissent/rd5/PLAN.md
+- 5-experiments/studies/vishesh/dissent/rd5/FAILURE-ANALYSIS.md
+- 5-experiments/studies/vishesh/dissent/rd5/IMPROVEMENTS.md
+- 5-experiments/studies/vishesh/dissent/rd5/RESEARCH-QUESTIONS.md
+- 5-experiments/studies/vishesh/dissent/rd5/analysis/rd4-failure-decomposition.json
+- 1-library/papers/hay-2012-selecting.md
+- 1-library/papers/tan-2016-honey.md
 ---
 
 ## Goal

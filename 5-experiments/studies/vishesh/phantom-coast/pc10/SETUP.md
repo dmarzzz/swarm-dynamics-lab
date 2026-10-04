@@ -1,6 +1,6 @@
 # Phantom authoritative setup: PC10
 
-Owner Vishesh; operator vishesh/codex-phantom-coast. Latest native: PC10 Q1,16valid calls; both wordings32/32 maps and4/6 optimal proposals, zero paired action changes; clarified qualification failed. [Post-mortem](Q1-A1-POST.md). Follow [setup](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [iteration](../../../../../tooling/agent-experiments/ITERATION.md) runbooks.
+Owner Vishesh; operator vishesh/codex-phantom-coast. Latest native: PC10 Q1,16valid calls; both wordings32/32 maps and4/6 optimal proposals, zero paired action changes; clarified qualification failed. [Post-mortem](Q1-A1-POST.md). Follow [setup](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and [iteration](../../../../toolkit/agent-experiments/ITERATION.md) runbooks.
 
 | Gate | Evidence |
 |---|---|

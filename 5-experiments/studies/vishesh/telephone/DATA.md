@@ -1,6 +1,6 @@
 # AI Village: Telephone's primary dataset resource
 
-Canonical shared library resource: **[[data-ai-village-2026]]**, [entry](../../../../library/datasets/data-ai-village-2026.md). Source: [AI Digest / AI Village on Hugging Face](https://huggingface.co/datasets/aidigestorg/ai-village).
+Canonical shared library resource: **[[data-ai-village-2026]]**, [entry](../../../../1-library/datasets/data-ai-village-2026.md). Source: [AI Digest / AI Village on Hugging Face](https://huggingface.co/datasets/aidigestorg/ai-village).
 
 Pinned source revision: `838b4150303ca8228e8edb432d8b8ccae353d258`. Use its [schema](https://huggingface.co/datasets/aidigestorg/ai-village/blob/838b4150303ca8228e8edb432d8b8ccae353d258/SCHEMA.md), [changelog](https://huggingface.co/datasets/aidigestorg/ai-village/blob/838b4150303ca8228e8edb432d8b8ccae353d258/CHANGELOG.md), and [manifest](https://huggingface.co/datasets/aidigestorg/ai-village/blob/838b4150303ca8228e8edb432d8b8ccae353d258/manifest.json). Future refreshes are separate versions; never silently move a sealed cohort to latest.
 

@@ -15,8 +15,8 @@ topics: []
 claimed_at: 2026-10-04T02:05Z
 updated: 2026-10-04T02:54Z
 outputs:
-- researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md
-- researchers/vishesh/notes/immune-response-v3/scenario-study/EXECUTION.md
+- 5-experiments/studies/vishesh/immune-response-v3/scenario-study/ASSESSMENT.md
+- 5-experiments/studies/vishesh/immune-response-v3/scenario-study/EXECUTION.md
 ---
 
 ## Goal

@@ -7,12 +7,12 @@ each batch becomes a GitHub issue; any agent on the team claims an issue and tur
 entries to the normal AGENTS.md quality bar.
 
 It feeds the `scan` phase. It does not replace the task board, the survey gate or anything else in
-`AGENTS.md`. A batch issue is a unit of scan work, nothing more.
+[`AGENTS.md`](../AGENTS.md). A batch issue is a unit of scan work, nothing more.
 
 ```
 collect.py x-search / apify / seed      ->  data/candidates-raw/*.jsonl      (local, git-ignored)
 collect.py links                        ->  blog/code/paper urls out of the posts
-collect.py batch                        ->  candidates/<source>/<batch-id>.jsonl + candidates/SEEN.txt  (committed)
+collect.py batch                        ->  lab/candidates/<source>/<batch-id>.jsonl + lab/candidates/SEEN.txt  (committed)
 batches.py publish                      ->  one GitHub issue per batch, labels batch / source:* / topic:*
 batches.py claim <n>                    ->  assignee + `claimed` label + comment
   your agent writes library entries, lab.py sync --every 180 pushes them to main
@@ -27,7 +27,7 @@ Secrets never live in the repo. Put them in env (`X_BEARER_TOKEN`, `APIFY_TOKEN`
 ```bash
 # X search (recent = last 7 days; --archive = full archive, needs Pro access). One query per line in the file,
 # `<topic-slug><TAB><query>`. --threads N also fetches the author's self-replies for the N strongest roots.
-python3 scripts/collect.py x-search --queries candidates/queries/x-informal-2026-10-03.txt \
+python3 scripts/collect.py x-search --queries lab/candidates/queries/x-informal-2026-10-03.txt \
         --by shadow/sol-2 --max 40 --archive --threads 2
 
 # Apify (metered, $5/month hard cap on the free plan). Checks spend before and after, refuses past --hard-cap.
@@ -57,10 +57,10 @@ python3 scripts/collect.py lesswrong --site alignmentforum --by <id> --tags ai-c
         --min-karma 25 --keywords "collusion,untrusted,multi-agent,injection,merge" --search data/lw-search.txt
 
 # RSS / Atom (plain xml.etree, feedparser not needed): `topic<TAB>url[<TAB>kw1,kw2]`, word-start match on title + lede.
-python3 scripts/collect.py rss --feeds candidates/queries/rss-feeds-2026-10-03.txt --by <id>
+python3 scripts/collect.py rss --feeds lab/candidates/queries/rss-feeds-2026-10-03.txt --by <id>
 
-# Talks: yt-dlp flat search, no download. Rows land as source `talk` -> candidates/talk/ -> library/talks/.
-python3 scripts/collect.py ytsearch --queries candidates/queries/talks-2026-10-03.txt --by <id> --n 12 --min-minutes 10
+# Talks: yt-dlp flat search, no download. Rows land as source `talk` -> lab/candidates/talk/ -> 1-library/talks/.
+python3 scripts/collect.py ytsearch --queries lab/candidates/queries/talks-2026-10-03.txt --by <id> --n 12 --min-minutes 10
 
 # Page text through r.jina.ai for blog rows that only have a url (links pass, seeds). Dead / empty pages score 0; --prune drops them.
 python3 scripts/collect.py jina --by <id> --max 60 --prune
@@ -79,20 +79,20 @@ python3 scripts/collect.py status
 ```
 
 `batch` reads everything in `data/candidates-raw/`, drops anything whose id or normalised url is already in
-`library/` (same `norm_url` as `lab.py`), already in `candidates/SEEN.txt`, or scored below `--min-score`
+`1-library/` (same `norm_url` as `lab.py`), already in `lab/candidates/SEEN.txt`, or scored below `--min-score`
 (0 to 5: engagement, length, has links or thread, topic keyword hits, reply penalty). Survivors are grouped by
 `(source, topic)`, sorted by score, cut into chunks of `--size` (default 10, tail merged if small), written to
-`candidates/<source>/<source>-<topic>-<yyyymmdd>-<nn>.jsonl`, and appended to `SEEN.txt` so no later run
+`lab/candidates/<source>/<source>-<topic>-<yyyymmdd>-<nn>.jsonl`, and appended to `SEEN.txt` so no later run
 re-emits them. Groups smaller than `--min-batch` (3) stay in raw until more arrive.
 
-Commit `candidates/` with the normal prefix: `[<agent-id>] candidates: 6 batches from x-search`.
-`lab.py check` ignores `candidates/` (it only validates the documented folders).
+Commit `lab/candidates/` with the normal prefix: `[<agent-id>] candidates: 6 batches from x-search`.
+`lab.py check` ignores `lab/candidates/` (it only validates the documented folders).
 
 ## 3. Publish
 
 ```bash
 python3 scripts/batches.py setup       # once: creates labels batch, claimed, needs-review, source:*, topic:* (idempotent)
-python3 scripts/batches.py publish     # one issue per batch without one; records batch -> issue in candidates/ISSUES.tsv
+python3 scripts/batches.py publish     # one issue per batch without one; records batch -> issue in lab/candidates/ISSUES.tsv
 python3 scripts/batches.py list --free
 ```
 
@@ -117,7 +117,7 @@ Then for each item in the issue:
    verify against the live page and copy the handle from the page). Blogs: fill Evidence quality honestly.
    `read_depth` must be true. Tag the batch topic plus any other that applies. Link related entries `[[id]]`.
 4. Tick the checkbox on the issue. `python3 scripts/batches.py touch 42 --agent <id>` every 30 minutes.
-5. When the list is done: `python3 scripts/batches.py done 42 --agent <id> --entries library/threads/x-....md ...`
+5. When the list is done: `python3 scripts/batches.py done 42 --agent <id> --entries 1-library/threads/x-....md ...`
    (`--skipped "3: dead link; 7: duplicate of [[x-...]]"`). Cannot finish: `release 42 --agent <id> --note "..."`.
 
 Stale rule: a `claimed` issue with no comment, edit or ticked box for **90 minutes** may be reclaimed by anyone
@@ -133,18 +133,18 @@ Ten good entries beat ten stubs; skipping an item with a reason is fine.
 ## Paste-in prompt for a researcher's agent
 
 ```text
-Also work the candidate batches. In the swarm-lab repo read PIPELINE.md. Loop: `python3 scripts/batches.py list --free`,
+Also work the candidate batches. In the swarm-dynamics-lab repo read lab/PIPELINE.md. Loop: `python3 scripts/batches.py list --free`,
 claim one with `python3 scripts/batches.py claim <n> --agent <your-agent-id>`, write a library entry for every item to the
 AGENTS.md bar (open each source yourself, no phantom entries, archive thread text, tag the batch topic), keep
 `python3 scripts/lab.py sync --agent <id> --every 180` running, tick items on the issue, then
 `python3 scripts/batches.py done <n> --agent <id> --entries <paths>`. Prefer batches whose topic matches my directives.
-Still obey AGENTS.md and my researchers/<me>/README.md; batches are scan work, not a replacement for the task board.
+Still obey AGENTS.md and my lab/researchers/<me>/README.md; batches are scan work, not a replacement for the task board.
 ```
 
 ## Files
 
 ```
-candidates/
+lab/candidates/
   queries/*.txt                 X query files (topic<TAB>query per line), committed so others can rerun or extend
   <source>/<batch-id>.jsonl     one candidate per line, committed, small
   SEEN.txt                      global ledger: id<TAB>batch<TAB>found_by; batch never re-emits an id listed here

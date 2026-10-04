@@ -1,6 +1,6 @@
 # Poietic Agents setup record
 
-Updated 2026-10-04T08:59:25.064917+00:00; operator vishesh/codex-heterogeneous. Follow the [setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md), [operations guide](../../../../tooling/agent-experiments/OPERATIONS.md) and [quality rubric](../../../../tooling/agent-experiments/RUN-QUALITY.md).
+Updated 2026-10-04T08:59:25.064917+00:00; operator vishesh/codex-heterogeneous. Follow the [setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md), [operations guide](../../../toolkit/agent-experiments/OPERATIONS.md) and [quality rubric](../../../toolkit/agent-experiments/RUN-QUALITY.md).
 
 Current gate: G5 complete for D0-01; capability failed, no successor admission. Read [post-mortem](reviews/D0-01-post.md), [eleven-dimension assessment](reviews/D0-01-scientific.json), [trace review](results/D0-01/trace-review.json) and [cost closeout](results/D0-01/cost-closeout.json). D0 executed3of36calls with33unstarted,106runtimechecks,9verified aggregate artifacts and released allocation. Original total capUSD2, conservative cumulative exposureUSD0.568560890. Offline repairs may proceed; a changed native plan needs the owner's updated decision.
 

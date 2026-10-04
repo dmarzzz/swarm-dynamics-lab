@@ -40,4 +40,4 @@ Abstract read; source-support scores do not establish transmission ancestry or a
 
 ## Relevance to us
 
-[Telephone design](../../researchers/vishesh/notes/telephone/README.md) builds on this source and [[data-ai-village-2026]].
+[Telephone design](../../5-experiments/studies/vishesh/telephone/README.md) builds on this source and [[data-ai-village-2026]].

@@ -15,12 +15,12 @@ topics:
 claimed_at: 2026-10-04T04:36Z
 updated: 2026-10-04T04:42Z
 outputs:
-- researchers/dmarz/notes/inbox-reviews-2026-10-04-round2/quorum-review.md
+- 5-experiments/studies/dmarz/inbox-reviews-2026-10-04-round2/quorum-review.md
 ---
 
 ## Goal
 
-Provide the one different-researcher design review required for Vishesh's Quorum of Mirrors revision. Review [overview](../researchers/vishesh/notes/decision-models/quorum-of-mirrors/README.md), [results](../researchers/vishesh/notes/decision-models/quorum-of-mirrors/RESULTS.md), [current roadmap](../researchers/vishesh/notes/decision-models/quorum-of-mirrors/RUN-ROADMAP.md), [research packet](../researchers/vishesh/notes/decision-models/quorum-of-mirrors/RESEARCH-GATES.md) and [setup record](../researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md).
+Provide the one different-researcher design review required for Vishesh's Quorum of Mirrors revision. Review [overview](../../5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/README.md), [results](../../5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/RESULTS.md), [current roadmap](../../5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/RUN-ROADMAP.md), [research packet](../../5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/RESEARCH-GATES.md) and [setup record](../../5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/SETUP.md).
 
 S0 measured 29/32 exact-MAP choices on eight bit patterns at two reliability settings, each repeated twice. Post-hoc deterministic references give 24/32 for report majority and 32/32 for visible-root majority. No swarm effect is claimed. Is the proposed staged mechanism screen and four-world factorial pilot with peer/self-review branches informative enough to justify its cost? Assess partial-lineage identifiability, treatment/comparator fairness, qualification, sample limitations and the practical decision after a null result.
 

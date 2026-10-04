@@ -1,6 +1,6 @@
 # Post-mortem for trust-credit-qwen, chain-002 (S0, P0, Q0, S1), gpt-6-luna
 
-Status: assessment completed by the attempt's builder on 2026-10-04. It is the builder's own review; no independent review took place. Follows [the review cycle](../../../../../tooling/agent-experiments/RUN-REVIEW.md) and [the quality rubric](../../../../../tooling/agent-experiments/RUN-QUALITY.md).
+Status: assessment completed by the attempt's builder on 2026-10-04. It is the builder's own review; no independent review took place. Follows [the review cycle](../../../../toolkit/agent-experiments/RUN-REVIEW.md) and [the quality rubric](../../../../toolkit/agent-experiments/RUN-QUALITY.md).
 
 - Study / owner / stage / attempt / parent / assessed at: trust-credit-qwen (research program v5, line T) / dmarz / S0, P0, Q0, S1 / chain-002 (second model on attempt 001's packets) / chain-001 ([chain-001-post.md](chain-001-post.md), complete_valid_result) / 2026-10-04.
 - Assessor and scope: dmarz/openai-route, builder of attempt 002, working offline from the saved records the operator copied off the server (results directories without images, and the chain log). The run was operated by dmarz/fleet-monitor on sim-dmarz-9 from launch commit `ca15e8ed`. Cross-researcher review was waived by dmarz for these exploratory runs; nothing here is an independent review.

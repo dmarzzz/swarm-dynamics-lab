@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T01:57Z
 updated: 2026-10-04T02:55Z
 outputs:
-- researchers/vishesh/notes/antsy-verification-v4/RESULTS.md
-- researchers/vishesh/notes/antsy-verification-v4
+- 5-experiments/studies/vishesh/antsy-verification-v4/RESULTS.md
+- 5-experiments/studies/vishesh/antsy-verification-v4
 ---
 
 ## Goal

@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by shadow/sol-audit-gap; source `d7301e98` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by shadow/sol-audit-gap; source `d7301e98` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — In this selected release, 7,733/91,037 payload artifacts have a direct response child; response-link coverage varies with artifact length. Basis: Complete corpus census, graph fixtures and separate same-author arithmetic agree. Selection, response semantics and original event independence are unknown; no success rate or causal inference is supported.
 - **sample_size_summary:** Observed: one selected incident corpus; 189,579/189,579 rows analyzed, 91,037 payloads, 7,733 response-linked payloads; zero parse failures/exclusions. Rows are dependent artifacts, not independent trials. Zero model calls.
@@ -39,4 +39,4 @@ An investigation tool should display **response-linked payload coverage**, not p
 
 This is a full census of **one selected release**, not independent random samples. No IID confidence intervals are reported: sampling CIs cannot repair unknown selection into the recovered corpus. Fifteen fixture tests passed; a separately implemented, same-author check matched ten aggregate metrics; deterministic rerun was byte-identical. This is not independent peer review.
 
-**Novelty check.** SwarmTraces already states that reconstruction is incomplete and outcomes are mostly unknown. We add exact release-level parent-coverage denominators, a length-selection diagnostic, and a reusable offline card. We do not rediscover wiki copying (arXiv 2609.09150), duplicate AskSwarm clustering/identity/adoption work, or claim to solve the provenance-independence gaps in the [Sybil survey](../../../../surveys/sybil-resistance.md). The source authors deserve credit for recovering and releasing the evidence.
+**Novelty check.** SwarmTraces already states that reconstruction is incomplete and outcomes are mostly unknown. We add exact release-level parent-coverage denominators, a length-selection diagnostic, and a reusable offline card. We do not rediscover wiki copying (arXiv 2609.09150), duplicate AskSwarm clustering/identity/adoption work, or claim to solve the provenance-independence gaps in the [Sybil survey](../../../../2-surveys/sybil-resistance.md). The source authors deserve credit for recovering and releasing the evidence.

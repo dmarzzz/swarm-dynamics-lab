@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T20:37Z
 updated: 2026-10-04T20:55Z
 outputs:
-- researchers/vishesh/notes/antsy-targeted-v8/literal-v2r/POST-MORTEM.md
+- 5-experiments/studies/vishesh/antsy-targeted-v8/literal-v2r/POST-MORTEM.md
 ---
 
 ## Goal

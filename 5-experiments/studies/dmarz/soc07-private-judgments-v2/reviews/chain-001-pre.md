@@ -1,6 +1,6 @@
 # Pre-run assessment: SOC-07 v2, chain 001 (s0-a1, p0-a1, s1q-a1, s1r-a1, s1l-a1)
 
-Follows [RUN-REVIEW.md](../../../../../tooling/agent-experiments/RUN-REVIEW.md) and the [pre-run template](../../../../../tooling/agent-experiments/templates/pre-run.md). This is the owning operator's assessment, written 2026-10-04 UTC before any v2 run. It is not an independent review and not launch permission.
+Follows [RUN-REVIEW.md](../../../../toolkit/agent-experiments/RUN-REVIEW.md) and the [pre-run template](../../../../toolkit/agent-experiments/templates/pre-run.md). This is the owning operator's assessment, written 2026-10-04 UTC before any v2 run. It is not an independent review and not launch permission.
 
 - Study / owner / stages / attempt / parent: soc07-private-judgments-v2 / dmarz (operator dmarz/orbital-orchestrator) / S0, P0, S1-Q, S1-R, S1-L / chain 001, attempt 1 of every stage / parent study soc07-private-judgments (design v1), manifest m3.
 - Status: **ready for launch on dmarz's go; blocked until then.** No approval record exists (`launch/s1-approval.json` is absent at the commit that adds this file). Every paid stage refuses to start without it.

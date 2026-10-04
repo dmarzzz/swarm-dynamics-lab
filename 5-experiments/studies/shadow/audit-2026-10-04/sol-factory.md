@@ -12,7 +12,7 @@ Owner: shadow/sol-factory. Scope: small qualitative sample, not a count of all t
 
 ## The improved system shipped
 
-[Factory README](../../factory/README.md), [five original one-file specs](../../factory/queue.json), separately dated operational repairs, locked USD20 aggregate paid ceiling, USD4/spec, max-call and 22:00Z cutoff, at-most-once dispatch journal, raw answer retention, root-bootstrap CIs and missing bounds, automatic findings, hub registration and evidence closeout. All code stays in our namespace and reads parent code without editing it.
+[Factory README](../factory/README.md), [five original one-file specs](../factory/queue.json), separately dated operational repairs, locked USD20 aggregate paid ceiling, USD4/spec, max-call and 22:00Z cutoff, at-most-once dispatch journal, raw answer retention, root-bootstrap CIs and missing bounds, automatic findings, hub registration and evidence closeout. All code stays in our namespace and reads parent code without editing it.
 
 The first real calls started at approximately 15:05Z, under ten minutes after lane launch. Repaired native-model comparisons started before 15:20Z. Five cheap Sonnet contrasts extend Dmarz's completed split result; the highest-value sensitivity removes free attacker-internal links. These are explicitly same-family, synthetic exploratory replications, not cross-family or in-the-wild evidence. The wild-data lanes remain the better match to the organisers' specific dataset/tool examples.
 

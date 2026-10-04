@@ -1,6 +1,6 @@
 # C4 setup and runbook handoff
 
-Required workflow: [experiment setup](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md), [review cycle](../../../../../tooling/agent-experiments/RUN-REVIEW.md), [machine allocation](../../experiment-machine-workflow.md).
+Required workflow: [experiment setup](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md), [review cycle](../../../../toolkit/agent-experiments/RUN-REVIEW.md), [machine allocation](../../experiment-machine-workflow.md).
 
 Current state: **approved; native integration complete, current deployment admission pending**. This is not an experimental attempt or failed run. There is no claimed machine, loaded model, copied credential, provider probe or paid call. C3 remains the latest completed run. Independent-researcher review is waived, not passed.
 

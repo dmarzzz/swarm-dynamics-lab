@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T02:38Z
 updated: 2026-10-04T02:58Z
 outputs:
-- researchers/dmarz/notes/discussion-dose/benchmark-v3/DEPLOYMENT.md
-- researchers/dmarz/notes/discussion-dose/benchmark-v3/launches/v3-q0-a1-start.json
+- 5-experiments/studies/dmarz/discussion-dose/benchmark-v3/DEPLOYMENT.md
+- 5-experiments/studies/dmarz/discussion-dose/benchmark-v3/launches/v3-q0-a1-start.json
 ---
 
 ## Goal
@@ -32,4 +32,4 @@ The user requested starting experiments after documenting Vishesh's fixes. Ship 
 
 ## Launch evidence
 
-[Deployment and next decision](../researchers/dmarz/notes/discussion-dose/benchmark-v3/DEPLOYMENT.md), [initial live snapshot](../researchers/dmarz/notes/discussion-dose/benchmark-v3/launches/v3-q0-a1-start.json). Source `883d310`; server-side tests passed, real model responses and public frames verified. This task completes the launch, not the independent review or result analysis.
+[Deployment and next decision](../../5-experiments/studies/dmarz/discussion-dose/benchmark-v3/DEPLOYMENT.md), [initial live snapshot](../../5-experiments/studies/dmarz/discussion-dose/benchmark-v3/launches/v3-q0-a1-start.json). Source `883d310`; server-side tests passed, real model responses and public frames verified. This task completes the launch, not the independent review or result analysis.

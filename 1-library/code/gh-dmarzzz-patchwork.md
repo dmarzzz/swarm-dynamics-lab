@@ -24,7 +24,7 @@ Patchwork is a seven-agent spatial heist simulator with separate agent histories
 
 ## What it can do for us
 
-Provides candidate baselines for locally permitted actions that compose into a prohibited result, aggregate limits across identities, delayed containment, and compensation for evidence producers. The public [Patchwork addendum](../../researchers/dmarz/notes/question-atlas/patchwork-addendum.md) records the inspected evidence, access limits, and new candidate IDs SEC-54–56 and MKT-13–14. Related prior includes [[triedman-2025-multi]], [[green-2007-provenance]], [[elnozahy-2002-survey]], [[zhu-2026-fault]] and [[mazorra-2023-cost]].
+Provides candidate baselines for locally permitted actions that compose into a prohibited result, aggregate limits across identities, delayed containment, and compensation for evidence producers. The public [Patchwork addendum](../../5-experiments/studies/dmarz/question-atlas/patchwork-addendum.md) records the inspected evidence, access limits, and new candidate IDs SEC-54–56 and MKT-13–14. Related prior includes [[triedman-2025-multi]], [[green-2007-provenance]], [[elnozahy-2002-survey]], [[zhu-2026-fault]] and [[mazorra-2023-cost]].
 
 ## Run notes
 

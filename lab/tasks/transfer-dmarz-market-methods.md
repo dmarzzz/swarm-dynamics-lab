@@ -14,9 +14,9 @@ topics: []
 claimed_at: 2026-10-04T13:53Z
 updated: 2026-10-04T14:03Z
 outputs:
-- researchers/vishesh/notes/dmarz-methods-transfer-2026-10-04/README.md
-- tooling/agent-experiments/RUN-QUALITY.md
-- tooling/agent-experiments/templates/next-run-plan.md
+- 5-experiments/studies/vishesh/dmarz-methods-transfer-2026-10-04/README.md
+- 5-experiments/toolkit/agent-experiments/RUN-QUALITY.md
+- 5-experiments/toolkit/agent-experiments/templates/next-run-plan.md
 ---
 
 ## Goal

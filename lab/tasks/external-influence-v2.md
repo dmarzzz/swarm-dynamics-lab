@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T00:34Z
 updated: 2026-10-04T00:54Z
 outputs:
-- researchers/vishesh/notes/external-influence-v2/README.md
-- researchers/vishesh/notes/external-influence-v2/DEPLOYMENT.md
+- 5-experiments/studies/vishesh/external-influence-v2/README.md
+- 5-experiments/studies/vishesh/external-influence-v2/DEPLOYMENT.md
 ---
 
 ## Goal

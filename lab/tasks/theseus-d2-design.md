@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T07:57Z
 updated: 2026-10-04T08:04Z
 outputs:
-- researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/INTERPRETATION-D1.md
-- researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/D2-PLAN.md
+- 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/INTERPRETATION-D1.md
+- 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/D2-PLAN.md
 ---
 
 ## Goal

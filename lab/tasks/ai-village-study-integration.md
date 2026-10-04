@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T18:08Z
 updated: 2026-10-04T18:16Z
 outputs:
-- researchers/vishesh/notes/ai-village-replay-2026-10-04/FIT.md
-- researchers/vishesh/notes/ai-village-replay-2026-10-04/IMPLEMENTATION.md
+- 5-experiments/studies/vishesh/ai-village-replay-2026-10-04/FIT.md
+- 5-experiments/studies/vishesh/ai-village-replay-2026-10-04/IMPLEMENTATION.md
 ---
 
 ## Goal

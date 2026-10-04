@@ -5,8 +5,8 @@ Committed before the first S2 run. `coordinator.py stage S2` refuses to queue wh
 every S2 run. Later changes go under **Amendments** with a date, and a changed design gets a new experiment id.
 
 This file is filled in for the toy so you can see what "complete" looks like. Replace every section for
-your experiment. The section numbers follow vishesh's design guide (`researchers/vishesh/notes/seo-poisoning/experimental-design.md`,
-*Experimental design* §0–§8), and the headings map onto `templates/hypothesis.md` and `templates/experiment.md`.
+your experiment. The section numbers follow vishesh's design guide (`5-experiments/studies/vishesh/seo-poisoning/experimental-design.md`,
+*Experimental design* §0–§8), and the headings map onto `lab/templates/hypothesis.md` and `lab/templates/experiment.md`.
 
 ## 1. Hypotheses, with directions
 

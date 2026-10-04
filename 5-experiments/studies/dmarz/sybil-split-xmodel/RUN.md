@@ -68,7 +68,7 @@ Wall times are not measured.
 
 1. Run `status`, `verify` and `summarize`, and keep their outputs.
 2. Do not rerun a stage: a batch name is refused the second time.
-3. Write the post-mortem per [RUN-REVIEW.md](../../../../tooling/agent-experiments/RUN-REVIEW.md) for each model. Reconcile the rows, compare the frames with `analysis.json`, and report calls, tokens, dollars, failed calls with their evidence, and billing pauses. Report `versus_parent` and `test_retest` as descriptive secondaries, never pooled.
+3. Write the post-mortem per [RUN-REVIEW.md](../../../toolkit/agent-experiments/RUN-REVIEW.md) for each model. Reconcile the rows, compare the frames with `analysis.json`, and report calls, tokens, dollars, failed calls with their evidence, and billing pauses. Report `versus_parent` and `test_retest` as descriptive secondaries, never pooled.
 4. Update the evidence registry row and the README's results section.
 5. Confirm the chain process has exited and the uploads are verified, then release the claim.
 

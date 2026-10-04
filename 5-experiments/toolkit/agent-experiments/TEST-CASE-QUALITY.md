@@ -43,4 +43,4 @@ Use these within the existing dimensions, without adding another approval stage:
 - **Validate the delivered contract.** Compare declared split/seed ranges with generated assignments and inspect effective requests after adapters. An upstream log containing a field does not prove the model received it. Include nested action/value schemas; define literal equality versus acceptable operational equivalence before grading.
 - **Disclose baseline fitting.** A parser fitted after inspecting test templates is a development result. Retain that useful ceiling reference, freeze selection before fresh evaluation, and test on appropriate held-out families before generalizing. Zero new model calls does not mean zero total resource cost.
 
-[Revision evidence and study applications](../../researchers/vishesh/notes/external-study-review-2026-10-04/REVISION-2.md) distinguish saved-data checks from source-reported claims.
+[Revision evidence and study applications](../../studies/vishesh/external-study-review-2026-10-04/REVISION-2.md) distinguish saved-data checks from source-reported claims.

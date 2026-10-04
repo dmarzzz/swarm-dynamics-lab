@@ -48,11 +48,11 @@ Distinguish raw retrieved text → Jev, cheap-LLM extracted state → Jev, and e
 
 The bundle itself estimates 50–72 builder-hours and offers a smaller fallback. Treat those as planning estimates, not measured costs. The first useful slice is a deterministic evidence fixture with a simple baseline, an observable-provenance rule, an oracle-provenance upper bound and a budget-matched independent-check arm. Validate truth isolation, commit reachability, trace completeness and recovery semantics before adding a learned surrogate, adaptive attacker or larger model ladder.
 
-The [published experiment toolkit](../../../../tooling/agent-experiments/README.md) supplies reusable discipline and examples; it is not a completed retrieval/provider experiment. The [simulation survey](../../../../surveys/sim-environments.md) records others' smoke checks; this review did not rerun them. These readiness limits are separate from whether the research question is interesting.
+The [published experiment toolkit](../../../toolkit/agent-experiments/README.md) supplies reusable discipline and examples; it is not a completed retrieval/provider experiment. The [simulation survey](../../../../2-surveys/sim-environments.md) records others' smoke checks; this review did not rerun them. These readiness limits are separate from whether the research question is interesting.
 
 ## Keep the fork merge regimes separate
 
-The [nine setup families](../../../../src/fork-merge-setups/rigs.json), [source batches](../../../../src/fork-merge-setups/cards/) and [fork-merge questions](../../../../synthesis/fork-merge-questions.md) are useful inherited research context. Their aggregate claims were inspected as summaries, not independently re-audited source by source. In particular, statements that a mechanism was “never” tested should be read as limits of that scan, not global absence proofs.
+The [nine setup families](../../../../src/fork-merge-setups/rigs.json), [source batches](../../../../src/fork-merge-setups/cards/) and [fork-merge questions](../../../../3-synthesis/fork-merge-questions.md) are useful inherited research context. Their aggregate claims were inspected as summaries, not independently re-audited source by source. In particular, statements that a mechanism was “never” tested should be read as limits of that scan, not global absence proofs.
 
 | Setup families | Useful transfer | Boundary to retain | Relevant review links |
 | --- | --- | --- | --- |

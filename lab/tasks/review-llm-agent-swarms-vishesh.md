@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T02:27Z
 updated: 2026-10-04T02:29Z
 outputs:
-- reviews/llm-agent-swarms--vishesh.md
+- 2-surveys/reviews/llm-agent-swarms--vishesh.md
 ---
 
 ## Goal
@@ -29,4 +29,4 @@ Perform the user-requested independent revision check without taking over dmarz'
 
 ## Outcome
 
-[Independent review](../reviews/llm-agent-swarms--vishesh.md): revise on two specific scope corrections. Original dmarz task remains assigned to dmarz; no hypothesis gate changed.
+[Independent review](../../2-surveys/reviews/llm-agent-swarms--vishesh.md): revise on two specific scope corrections. Original dmarz task remains assigned to dmarz; no hypothesis gate changed.

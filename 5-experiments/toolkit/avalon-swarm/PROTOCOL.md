@@ -100,7 +100,7 @@ The original version 0.1 source and results are preserved under results/referenc
 
 ## Prospective design amendment 2026-10-04
 
-Incorporating [Dmarz's Avalon recommendation](https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md), the next scientific comparison should establish a useful coordination mechanism before expanding logical population. This is a future-design clarification; it does not change the v0.1/v0.2 fixtures, defaults, endpoints or recorded failures.
+Incorporating [Dmarz's Avalon recommendation](https://github.com/dmarzzz/swarm-dynamics-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md), the next scientific comparison should establish a useful coordination mechanism before expanding logical population. This is a future-design clarification; it does not change the v0.1/v0.2 fixtures, defaults, endpoints or recorded failures.
 
 Partial information is already present. The unresolved step is to qualify a policy that uses it competently and test whether communication or repair improves consequential mission choices at matched information and resource opportunities. Include a competent deterministic/inference comparator, a model controller with the same union of authorized observations when feasible, and the existing audit-versus-repair distinction. The union-evidence controller is an explicit aggregation advantage, not an identical-observation actor. Supplied audit labels must stay distinct from learned detection.
 

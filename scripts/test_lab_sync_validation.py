@@ -6,12 +6,14 @@ import lab
 
 
 class SyncValidationTest(unittest.TestCase):
-    def run_sync(self, results, reject_first=False):
+    def run_sync(self, results, reject_first=False, changed=('5-experiments/studies/shadow/test.md',), staged=None):
         events = []
         def git(*args):
             events.append(args[0])
             if args[0] == 'status':
-                return subprocess.CompletedProcess([], 0, ' M researchers/shadow/notes/test.md\n', '')
+                return subprocess.CompletedProcess([], 0, ''.join(f' M {path}\n' for path in changed), '')
+            if args[0] == 'add' and staged is not None:
+                staged.extend(args[args.index('--') + 1:])
             code = int(args[0] == 'push' and reject_first and events.count('push') == 1)
             return subprocess.CompletedProcess([], code, '', '')
         remaining = iter(results)
@@ -43,6 +45,19 @@ class SyncValidationTest(unittest.TestCase):
         self.assertEqual(code, 1)
         self.assertEqual(events.count('push'), 1)
         self.assertEqual(events[-2:], ['pull', 'validate'])
+
+    def test_stages_only_own_researcher_areas(self):
+        staged = []
+        code, _ = self.run_sync([set(), set(), set()], staged=staged, changed=(
+            '5-experiments/studies/shadow/own/README.md', 'lab/researchers/shadow/log/today.md',
+            '5-experiments/studies/dmarz/other/README.md', 'lab/researchers/vishesh/inbox.md',
+            '5-experiments/toolkit/shared.md', '1-library/papers/x.md', 'lab/STATUS.md', 'lab/templates/task.md'))
+        self.assertEqual(code, 0)
+        self.assertEqual(staged, ['5-experiments/studies/shadow/own/README.md', 'lab/researchers/shadow/log/today.md',
+                                  '5-experiments/toolkit/shared.md', '1-library/papers/x.md'])
+        self.assertEqual(lab.area_owner('5-experiments/studies/dmarz/other/README.md'), 'dmarz')
+        self.assertEqual(lab.area_owner('lab/researchers/vishesh/inbox.md'), 'vishesh')
+        self.assertIsNone(lab.area_owner('5-experiments/EVIDENCE.md'))
 
     def test_checker_failure_propagates_before_push(self):
         with self.assertRaises(RuntimeError):

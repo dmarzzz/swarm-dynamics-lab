@@ -17,9 +17,9 @@ topics:
 claimed_at: 2026-10-04T02:20Z
 updated: 2026-10-04T02:26Z
 outputs:
-- researchers/dmarz/notes/compositional-safety-plan/README.md
-- researchers/dmarz/notes/compositional-safety-plan/design.json
-- researchers/dmarz/notes/compositional-safety-plan/src/check_plan.py
+- 5-experiments/studies/dmarz/compositional-safety-plan/README.md
+- 5-experiments/studies/dmarz/compositional-safety-plan/design.json
+- 5-experiments/studies/dmarz/compositional-safety-plan/src/check_plan.py
 ---
 
 ## Goal

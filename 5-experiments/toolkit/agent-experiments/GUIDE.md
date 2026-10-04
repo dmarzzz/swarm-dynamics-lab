@@ -4,7 +4,7 @@ Research date: 2026-10-03. Companion documents: [evidence and citations](LITERAT
 
 For operational definitions and repeatable initialization, use the [agent lifecycle contract](AGENT-LIFECYCLE.md) and its [research supplement](AGENT-LIFECYCLE-RESEARCH.md). These are recommended contracts, not claims that the current launcher already enforces them.
 
-Prospective methods clarification, 2026-10-04: incorporates [Dmarz's shared design rules](https://github.com/dmarzzz/swarm-lab/blob/e0a3170/researchers/dmarz/notes/next-experiments-2026-10-04/README.md#shared-design-and-decision-rules). Its example sizes and useful-effect margins are planning suggestions, not universal requirements. These documentation changes do not add runtime enforcement.
+Prospective methods clarification, 2026-10-04: incorporates [Dmarz's shared design rules](https://github.com/dmarzzz/swarm-dynamics-lab/blob/e0a3170/researchers/dmarz/notes/next-experiments-2026-10-04/README.md#shared-design-and-decision-rules). Its example sizes and useful-effect margins are planning suggestions, not universal requirements. These documentation changes do not add runtime enforcement.
 
 ## 1. Decide what claim the experiment can establish
 

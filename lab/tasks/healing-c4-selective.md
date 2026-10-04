@@ -16,7 +16,7 @@ history:
 - '2026-10-04T15:35Z released by vishesh/codex-regrowth-docs: Approved C4 integrated,20 native offline tests and2 dispatch-origin tests pass; frozen source94147dc7. Queue297 blocked on orbital-one and approved credential/original-ledger handoff. No model calls or ledger changes. Runtime stopped, machine release PR298 merged. Resume from c4/ADMISSION-POST.md; no generic approval question.'
 claimed_at: 2026-10-04T16:45Z
 outputs:
-- researchers/vishesh/notes/healing-helping-hands/c5/PLAN.md
+- 5-experiments/studies/vishesh/healing-helping-hands/c5/PLAN.md
 ---
 
 ## Goal
@@ -33,4 +33,4 @@ Review C3 and prepare the concrete C4 selective-referral revision, preserving ne
 
 ## C5 automatic continuation closeout
 
-The separately approved C5 continuation is complete: [main post-mortem](../researchers/vishesh/notes/healing-helping-hands/c5/S1-POST.md), [qualification](../researchers/vishesh/notes/healing-helping-hands/c5/S0-POST.md), [resource reconciliation](../researchers/vishesh/notes/healing-helping-hands/c5/RESOURCE-CLOSEOUT.json). All492cases/1476calls completed; the routing criterion failed. FINISH / PARK; no successor.
+The separately approved C5 continuation is complete: [main post-mortem](../../5-experiments/studies/vishesh/healing-helping-hands/c5/S1-POST.md), [qualification](../../5-experiments/studies/vishesh/healing-helping-hands/c5/S0-POST.md), [resource reconciliation](../../5-experiments/studies/vishesh/healing-helping-hands/c5/RESOURCE-CLOSEOUT.json). All492cases/1476calls completed; the routing criterion failed. FINISH / PARK; no successor.

@@ -19,11 +19,11 @@ topics:
 claimed_at: 2026-10-04T14:21Z
 updated: 2026-10-04T14:34Z
 outputs:
-- surveys/fork-merge-security.md
-- library/papers/xie-2020-dba.md
-- library/papers/lyu-2023-poisoning.md
-- library/papers/zhai-2024-secret.md
-- tasks/review-fork-merge-security.md
+- 2-surveys/fork-merge-security.md
+- 1-library/papers/xie-2020-dba.md
+- 1-library/papers/lyu-2023-poisoning.md
+- 1-library/papers/zhai-2024-secret.md
+- lab/tasks/review-fork-merge-security.md
 ---
 
 ## Goal

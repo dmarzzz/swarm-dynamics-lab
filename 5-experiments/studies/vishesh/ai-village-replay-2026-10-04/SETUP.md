@@ -2,7 +2,7 @@
 
 Status: exploratory preparation, not launch-ready. Owner: Vishesh; operator/assessor: vishesh/codex-pi-review, 2026-10-04. One authoritative record for this proposed dataset lane. It does not replace the existing Theseus or Dissenter setup records.
 
-Runbook: [experiment setup](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Operating process: [iteration](../../../../tooling/agent-experiments/ITERATION.md). Evidence: [source assessment](README.md), [prospective plan](PLAN.md), [access inventory](access-summary.json).
+Runbook: [experiment setup](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Operating process: [iteration](../../../toolkit/agent-experiments/ITERATION.md). Evidence: [source assessment](README.md), [prospective plan](PLAN.md), [access inventory](access-summary.json).
 
 ## Ownership and question
 

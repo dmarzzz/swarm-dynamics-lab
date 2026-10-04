@@ -16,12 +16,12 @@ topics:
 claimed_at: 2026-10-04T07:52Z
 updated: 2026-10-04T09:28Z
 outputs:
-- researchers/dmarz/notes/sybil-split-opus/reviews/chain-001-pre.md
+- 5-experiments/studies/dmarz/sybil-split-opus/reviews/chain-001-pre.md
 ---
 
 ## Goal
 
-Design and build successor 3 of [the next-experiments note](../researchers/dmarz/notes/next-experiments-2026-10-04/README.md) in `researchers/dmarz/notes/sybil-split-opus/`: one attacker's fixed resources split across 1, 3, 9 or 27 identities, admission policies compared at equal check budgets, Opus 5.5 synthesis, extending the sybil-scale-api instrument. Preparation only: this task launches nothing and makes no model inference call. The run itself goes through the private run queue after the fleet monitor's same-researcher check.
+Design and build successor 3 of [the next-experiments note](../../5-experiments/studies/dmarz/next-experiments-2026-10-04/README.md) in `researchers/dmarz/notes/sybil-split-opus/`: one attacker's fixed resources split across 1, 3, 9 or 27 identities, admission policies compared at equal check budgets, Opus 5.5 synthesis, extending the sybil-scale-api instrument. Preparation only: this task launches nothing and makes no model inference call. The run itself goes through the private run queue after the fleet monitor's same-researcher check.
 
 ## Done when
 

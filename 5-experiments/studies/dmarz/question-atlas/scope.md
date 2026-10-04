@@ -48,7 +48,7 @@ The methods lane inspected catalogue summaries and limitations for MARL, optimiz
 - [Large-scale optimizer benchmarking](https://arxiv.org/abs/2402.09800), [center-bias audit](https://arxiv.org/abs/2301.01984), [PSO to CBO](https://arxiv.org/abs/2012.05613).
 - [Information-theoretic emergence](https://arxiv.org/abs/2004.08220), [subsampling](https://arxiv.org/abs/2209.05548), [PIMMUR](https://arxiv.org/abs/2509.18052).
 
-New predictions are our tentative inferences, not findings from those papers. Source relationships are written beside each candidate. The earlier [preflight synthesis](../../../../synthesis/pre-experiment-research.md) provides the provenance/recovery cautions; its CPB/MemLineage/MemTX comparisons are not repeated as new discoveries.
+New predictions are our tentative inferences, not findings from those papers. Source relationships are written beside each candidate. The earlier [preflight synthesis](../../../../3-synthesis/pre-experiment-research.md) provides the provenance/recovery cautions; its CPB/MemLineage/MemTX comparisons are not repeated as new discoveries.
 
 An editorial audit across lanes checked overlap, coverage and directional consistency. It identified and corrected several falsifiers that would have supported the hypothesis instead of contradicting it, and prompted additional NCA and external-influence coverage. Parallel assistants are all working for dmarz in this task; this audit does not count as another researcher's formal approval.
 

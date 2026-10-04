@@ -1,6 +1,6 @@
 # Visualization mapping v1: sybil-split-xmodel
 
-Follows [RUN-VISUALIZATION.md](../../../../tooling/agent-experiments/RUN-VISUALIZATION.md). Renderer: `src/render.py` (PIL only, 1800×1200 RGB). Nothing has been rendered from a model run; the frames checked so far come from the scripted stage and say so.
+Follows [RUN-VISUALIZATION.md](../../../toolkit/agent-experiments/RUN-VISUALIZATION.md). Renderer: `src/render.py` (PIL only, 1800×1200 RGB). Nothing has been rendered from a model run; the frames checked so far come from the scripted stage and say so.
 
 - Mapping version / source: v1, part of the hashed source (`src/render.py`); pinned commit and source hash are in [reviews/chain-001-pre.md](reviews/chain-001-pre.md). It is the parent's mapping ([sybil-split-opus VISUALIZATION.md](../sybil-split-opus/VISUALIZATION.md)) unchanged except the run binding and the header label, which names the model and its route.
 - Run binding: one hub run per stage and model, `sybil-split-xmodel/<run id>`, params `stage`, `batch` (`s0-001-<tag>`, `p0-001-<tag>`, `q0-001-<tag>`, `s1-001-<tag>`, tag `qwen` or `sol`), `model`, `source_hash`, `code`. Frames of the two models are separate runs and are never combined in one image. Each row binds graph family, root, identity count k, policy, check budget and attacker pass rate.

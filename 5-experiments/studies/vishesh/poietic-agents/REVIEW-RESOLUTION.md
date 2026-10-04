@@ -1,6 +1,6 @@
 # Independent review resolution — v0.2
 
-2026-10-04 UTC; author implementation response, not a second independent review. The [different-researcher review](../../../dmarz/notes/inbox-reviews-2026-10-04-round2/poietic-review.md) reviewed source `6392174e`; it requested revisions and explicitly allowed the owner to resolve them without another routine reviewer.
+2026-10-04 UTC; author implementation response, not a second independent review. The [different-researcher review](../../dmarz/inbox-reviews-2026-10-04-round2/poietic-review.md) reviewed source `6392174e`; it requested revisions and explicitly allowed the owner to resolve them without another routine reviewer.
 
 | Finding | Resolution | Executable evidence |
 |---|---|---|

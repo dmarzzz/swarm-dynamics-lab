@@ -18,8 +18,8 @@ history:
 - '2026-10-04T06:35Z released by vishesh/codex-quorum-mirrors: Owner authorized verified-SSH memory-only OpenRouter delivery. Checked transfer implementation merged; no secret stored or transferred. Await central operator owner authorization for Vishesh-owned execution or a permitted route; request sent. No further owner review/spending/credential approval needed. No new calls or allocation.'
 claimed_at: 2026-10-04T06:45Z
 outputs:
-- researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-01-post.md
-- researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-01
+- 5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/reviews/Q1-01-post.md
+- 5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/results/QM-Q1-01
 ---
 
 ## Goal

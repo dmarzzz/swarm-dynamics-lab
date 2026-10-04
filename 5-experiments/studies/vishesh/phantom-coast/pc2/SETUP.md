@@ -1,6 +1,6 @@
 # Experiment setup record: Phantom Coast PC-2
 
-Prospective record created before implementation. [Setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Owner/operator/self-reviewer: vishesh/codex-phantom-coast; researcher review not required by owner direction. Research status: exploratory native pilot; qualification passed, pilot completed; no formal accepted hypothesis.
+Prospective record created before implementation. [Setup runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Owner/operator/self-reviewer: vishesh/codex-phantom-coast; researcher review not required by owner direction. Research status: exploratory native pilot; qualification passed, pilot completed; no formal accepted hypothesis.
 
 ## Ownership and question
 

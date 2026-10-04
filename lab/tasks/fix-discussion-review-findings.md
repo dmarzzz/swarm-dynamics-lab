@@ -14,13 +14,13 @@ topics: []
 claimed_at: 2026-10-04T02:28Z
 updated: 2026-10-04T02:34Z
 outputs:
-- researchers/dmarz/notes/discussion-dose/benchmark-v3/VISHESH-REVIEW-RESPONSE.md
-- researchers/dmarz/notes/discussion-dose/benchmark-v3/review-fixes-validation.json
+- 5-experiments/studies/dmarz/discussion-dose/benchmark-v3/VISHESH-REVIEW-RESPONSE.md
+- 5-experiments/studies/dmarz/discussion-dose/benchmark-v3/review-fixes-validation.json
 ---
 
 ## Goal
 
-Implement the user-requested repairs from Vishesh's [retrospective review](../researchers/vishesh/notes/independent-reviews-2026-10-04/discussion-dose.md) in the current v3 successor. Preserve retired v1/v2 code/results and the independent review record. No model run or deployment is requested.
+Implement the user-requested repairs from Vishesh's [retrospective review](../../5-experiments/studies/vishesh/independent-reviews-2026-10-04/discussion-dose.md) in the current v3 successor. Preserve retired v1/v2 code/results and the independent review record. No model run or deployment is requested.
 
 ## Done when
 

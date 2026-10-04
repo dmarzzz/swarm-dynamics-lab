@@ -16,9 +16,9 @@ topics:
 claimed_at: 2026-10-04T03:40Z
 updated: 2026-10-04T03:53Z
 outputs:
-- researchers/vishesh/notes/heterogeneous-swarms/frontiers/PRIORITIES.md
-- researchers/vishesh/notes/heterogeneous-swarms/frontiers/SCORES.md
-- researchers/vishesh/notes/heterogeneous-swarms/frontiers/priority-revision.json
+- 5-experiments/studies/vishesh/heterogeneous-swarms/frontiers/PRIORITIES.md
+- 5-experiments/studies/vishesh/heterogeneous-swarms/frontiers/SCORES.md
+- 5-experiments/studies/vishesh/heterogeneous-swarms/frontiers/priority-revision.json
 ---
 
 ## Goal

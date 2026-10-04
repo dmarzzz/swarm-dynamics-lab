@@ -44,22 +44,22 @@ class WorktreeDoneTest(unittest.TestCase):
             git(writer, 'checkout', '-b', 'main')
             git(writer, 'config', 'user.name', 'Test')
             git(writer, 'config', 'user.email', 'test@example.com')
-            (writer / 'library/blogs').mkdir(parents=True)
-            (writer / 'library/topics.yaml').write_text('- slug: meta\n')
-            (writer / 'researchers/test').mkdir(parents=True)
-            (writer / 'researchers/test/README.md').write_text('test')
+            (writer / '1-library/blogs').mkdir(parents=True)
+            (writer / '1-library/topics.yaml').write_text('- slug: meta\n')
+            (writer / 'lab/researchers/test').mkdir(parents=True)
+            (writer / 'lab/researchers/test/README.md').write_text('test')
             git(writer, 'add', '.')
             git(writer, 'commit', '-m', 'seed')
             git(writer, 'push', 'origin', 'main')
             git(root, 'clone', '--branch', 'main', str(remote), str(reader))
-            (writer / 'library/blogs/published.md').write_text(entry_text('published'))
+            (writer / '1-library/blogs/published.md').write_text(entry_text('published'))
             git(writer, 'add', '.')
             git(writer, 'commit', '-m', 'another worktree writes entry')
             git(writer, 'push', 'origin', 'main')
-            (reader / 'library/blogs').mkdir(exist_ok=True)
-            local = reader / 'library/blogs/local.md'
+            (reader / '1-library/blogs').mkdir(exist_ok=True)
+            local = reader / '1-library/blogs/local.md'
             local.write_text(entry_text('local'))
-            args = argparse.Namespace(entries=['library/blogs/published.md', 'library/blogs/local.md'],
+            args = argparse.Namespace(entries=['1-library/blogs/published.md', '1-library/blogs/local.md'],
                                       force=False, agent='test/worker', issue='1', skipped=None)
             claimed = {'state': 'OPEN', 'labels': [{'name': name} for name in
                        ('claimed', 'source:blog', 'topic:meta')], 'comments': [
@@ -68,15 +68,15 @@ class WorktreeDoneTest(unittest.TestCase):
                  patch.object(batches, 'gh') as gh, patch.object(batches, 'issue', return_value=claimed):
                 self.assertEqual(batches.cmd_done(args), 0)
                 self.assertEqual(gh.call_count, 3)
-                self.assertFalse((reader / 'library/blogs/published.md').exists())
-                for entry in ['library/blogs/missing.md', 'library/topics.yaml',
-                              '../outside.md', str(local), 'library/talks/local.md']:
+                self.assertFalse((reader / '1-library/blogs/published.md').exists())
+                for entry in ['1-library/blogs/missing.md', '1-library/topics.yaml',
+                              '../outside.md', str(local), '1-library/talks/local.md']:
                     args.entries = [entry]
                     args.force = True
                     with self.subTest(entry=entry), self.assertRaises(SystemExit):
                         batches.cmd_done(args)
                     self.assertEqual(gh.call_count, 3)
-                args.entries = ['library/blogs/local.md']
+                args.entries = ['1-library/blogs/local.md']
                 for text in [entry_text('local').replace('topics: [meta]', 'topics: [other]'),
                              entry_text('local').replace('type: blog', 'type: talk'),
                              entry_text('local').replace('## Summary', '## Not summary'),
@@ -85,13 +85,13 @@ class WorktreeDoneTest(unittest.TestCase):
                     with self.assertRaises(SystemExit):
                         batches.cmd_done(args)
                     self.assertEqual(gh.call_count, 3)
-                link = reader / 'library/blogs/link.md'
+                link = reader / '1-library/blogs/link.md'
                 link.symlink_to(local)
-                args.entries = ['library/blogs/link.md']
+                args.entries = ['1-library/blogs/link.md']
                 with self.assertRaises(SystemExit):
                     batches.cmd_done(args)
                 link.unlink()
-                args.entries = ['library/blogs/local.md']
+                args.entries = ['1-library/blogs/local.md']
                 local.unlink()
                 local.mkdir()
                 with self.assertRaises(SystemExit):

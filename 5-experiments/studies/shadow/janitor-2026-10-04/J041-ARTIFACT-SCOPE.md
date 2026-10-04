@@ -6,8 +6,8 @@ Shared tool owner: **dmarz (@dmarzzz)**. Commit `48160f9f` introduced the Flight
 
 ## Observed publication blockers
 
-- `sol-identity` documents rollback in [README](../wild-identity/README.md) and [log](../../log/2026-10-04-sol-identity.md), published in `a21ab708` (15:22:56Z). Its worktree lacked private inputs and existing videos; filing changed other researchers' provenance. All unrelated writes were restored.
-- `sol-askswarm` [log](../../log/2026-10-04-sol-askswarm.md), present at `a72ec009` (15:26Z), reports **40+ unrelated attestations** and **approximately 5,600 lockfile lines** rewritten by `fd.py add`. All those changes were restored. These counts are lane-reported, not independently measured from retained rollback diffs.
+- `sol-identity` documents rollback in [README](../wild-identity/README.md) and [log](../../../../lab/researchers/shadow/log/2026-10-04-sol-identity.md), published in `a21ab708` (15:22:56Z). Its worktree lacked private inputs and existing videos; filing changed other researchers' provenance. All unrelated writes were restored.
+- `sol-askswarm` [log](../../../../lab/researchers/shadow/log/2026-10-04-sol-askswarm.md), present at `a72ec009` (15:26Z), reports **40+ unrelated attestations** and **approximately 5,600 lockfile lines** rewritten by `fd.py add`. All those changes were restored. These counts are lane-reported, not independently measured from retained rollback diffs.
 - Worktree/project-name and media checks are separate blockers. Moving to the canonical checkout is not a scoped-code fix and does not protect historical ingredient digests from subsequent edits.
 
 ## Exact code path

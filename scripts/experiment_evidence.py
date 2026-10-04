@@ -11,9 +11,18 @@ import posixpath
 import re
 import sys
 
-REGISTRY = "experiments/evidence-metadata.json"
-RUBRIC = "experiments/EVIDENCE-METADATA.md"
-INDEX = "experiments/EVIDENCE.md"
+EXPERIMENTS = "5-experiments"
+STUDIES = EXPERIMENTS + "/studies"
+TOOLKIT = EXPERIMENTS + "/toolkit"
+REGISTRY = EXPERIMENTS + "/evidence-metadata.json"
+RUBRIC = EXPERIMENTS + "/EVIDENCE-METADATA.md"
+INDEX = EXPERIMENTS + "/EVIDENCE.md"
+# Where things sat before the phase layout (scripts/migrate_layout.sh), most specific first. Study documents
+# are hash-pinned, so a block rendered there before the move, whose registry and rubric links still follow
+# the old paths, is accepted unchanged; --relink rewrites those links for the current layout.
+LEGACY = ((STUDIES + "/shadow/factory/", "researchers/shadow/factory/"),
+          (STUDIES + "/shadow/qa/", "researchers/shadow/qa/"),
+          (TOOLKIT + "/", "tooling/"))
 START, END = "<!-- experiment-evidence:start -->", "<!-- experiment-evidence:end -->"
 
 
@@ -85,11 +94,12 @@ def validate(root, data):
         registrations.update(row["registration_paths"])
         documents.update(row["documents"])
     discovered = {p.relative_to(root).as_posix() for pattern in ("experiment.yaml", "experiment.json")
-                  for p in root.glob(f"researchers/*/notes/**/{pattern}")
+                  for p in root.glob(f"{STUDIES}/*/**/{pattern}")
                   if not any(part.startswith("pi-review-") for part in p.parts)}
     missing = sorted(discovered - registrations)
     require(not missing, "uncovered experiment registrations: " + ", ".join(missing))
-    formal = {p.relative_to(root).as_posix() for p in root.glob("experiments/*/README.md")}
+    formal = {p.relative_to(root).as_posix() for p in root.glob(f"{EXPERIMENTS}/*/README.md")
+              if not p.relative_to(root).as_posix().startswith((STUDIES + "/", TOOLKIT + "/"))}
     require(not formal - documents, "uncovered formal experiments: " + ", ".join(sorted(formal - documents)))
 
 
@@ -102,7 +112,21 @@ def relative(document, target):
     return posixpath.relpath(target, posixpath.dirname(document))
 
 
-def block(document, rows, data):
+def legacy(path):
+    """The pre-move location of a current repository path."""
+    for new, old in LEGACY:
+        if path.startswith(new):
+            return old + path[len(new):]
+    if path.startswith(STUDIES + "/"):
+        researcher, _, rest = path[len(STUDIES) + 1:].partition("/")
+        return f"researchers/{researcher}/notes/{rest}"
+    if path.startswith(EXPERIMENTS + "/"):
+        return "experiments/" + path[len(EXPERIMENTS) + 1:]
+    return path
+
+
+def block(document, rows, data, old_layout=False):
+    place = legacy if old_layout else str
     commits = {row.get("source_commit", data["source_commit"]) for row in rows}
     assessments = {(row.get("assessed_at", data["assessed_at"]),
                     row.get("assessor", data["assessor"])) for row in rows}
@@ -115,7 +139,8 @@ def block(document, rows, data):
                    else "source snapshots shown per cohort")
     lines = [START, "## Evidence metadata", "",
              f"{assessment_note}; {source_note} "
-             f"([registry]({relative(document, REGISTRY)}), [rubric]({relative(document, RUBRIC)})). "
+             f"([registry]({relative(place(document), place(REGISTRY))}), "
+             f"[rubric]({relative(place(document), place(RUBRIC))})). "
              "Scores describe evidence for the stated claim, not a probability of truth."]
     for row in rows:
         confidence = row["evidence_confidence"]
@@ -169,7 +194,7 @@ def index_text(data):
     return "\n".join(lines) + "\n"
 
 
-def outputs(root, data):
+def outputs(root, data, relink=False):
     validate(root, data)
     by_document = defaultdict(list)
     for row in data["studies"]:
@@ -180,6 +205,8 @@ def outputs(root, data):
         original = (root / document).read_bytes().decode("utf-8")
         try:
             result[document] = update_document(original, block(document, rows, data))
+            if not relink and update_document(original, block(document, rows, data, old_layout=True)) == original:
+                result[document] = original  # current apart from pre-move links: leave the file untouched
         except ValueError as error:
             raise ValueError(f"{document}: {error}") from error
     result[INDEX] = index_text(data)
@@ -191,12 +218,14 @@ def main(argv=None):
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--check", action="store_true", help="validate and check rendered metadata (default)")
     mode.add_argument("--write", action="store_true", help="refresh only metadata blocks and the evidence index")
+    parser.add_argument("--relink", action="store_true",
+                        help="treat blocks whose registry/rubric links predate the layout move as stale")
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--registry", default=REGISTRY)
     args = parser.parse_args(argv)
     try:
         data = json.loads(repo_file(args.root, args.registry).read_text(encoding="utf-8"))
-        rendered = outputs(args.root, data)
+        rendered = outputs(args.root, data, args.relink)
         stale = [path for path, content in rendered.items() if not (args.root / path).exists()
                  or (args.root / path).read_bytes() != content.encode("utf-8")]
         if args.write:

@@ -17,12 +17,12 @@ topics:
 claimed_at: 2026-10-04T02:20Z
 updated: 2026-10-04T02:26Z
 outputs:
-- researchers/vishesh/notes/independent-reviews-2026-10-04/discussion-dose.md
+- 5-experiments/studies/vishesh/independent-reviews-2026-10-04/discussion-dose.md
 ---
 
 ## Goal
 
-Review the [exploratory discussion-dose plan](../researchers/dmarz/notes/discussion-dose/README.md), task generator, rendered evidence, independent answer checker, injected counterfactual, all-assigned scoring and architecture. A different researcher should perform this review. This task does not claim the survey or formal hypothesis gate has passed. Formal review records need a formal target before promotion.
+Review the [exploratory discussion-dose plan](../../5-experiments/studies/dmarz/discussion-dose/README.md), task generator, rendered evidence, independent answer checker, injected counterfactual, all-assigned scoring and architecture. A different researcher should perform this review. This task does not claim the survey or formal hypothesis gate has passed. Formal review records need a formal target before promotion.
 
 ## Done when
 
@@ -34,4 +34,4 @@ Review the [exploratory discussion-dose plan](../researchers/dmarz/notes/discuss
 
 ## Review outcome
 
-Independent retrospective review by vishesh/codex-independent-reviews: [verdict and reproductions](../researchers/vishesh/notes/independent-reviews-2026-10-04/discussion-dose.md). Adequate for the retired engineering pilot; revise before scientific reuse. No new model run or v3 approval.
+Independent retrospective review by vishesh/codex-independent-reviews: [verdict and reproductions](../../5-experiments/studies/vishesh/independent-reviews-2026-10-04/discussion-dose.md). Adequate for the retired engineering pilot; revise before scientific reuse. No new model run or v3 approval.

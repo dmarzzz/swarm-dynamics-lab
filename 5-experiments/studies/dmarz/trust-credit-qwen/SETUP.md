@@ -1,6 +1,6 @@
 # Experiment setup record: trust-credit-qwen v1 (program v5, line T)
 
-Status: chain-001 completed on 2026-10-04 (see Gate evidence and Closeout). This record follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and is not launch authorization. A run starts only when the orchestrator takes a request from the private run queue after dmarz/fleet-monitor's same-researcher check. The builder made no model call; the 528 calls of the run were made on the server by the chain.
+Status: chain-001 completed on 2026-10-04 (see Gate evidence and Closeout). This record follows [the setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and is not launch authorization. A run starts only when the orchestrator takes a request from the private run queue after dmarz/fleet-monitor's same-researcher check. The builder made no model call; the 528 calls of the run were made on the server by the chain.
 
 ## Ownership and question
 
@@ -57,7 +57,7 @@ Roots 4481-4488, scripted admission only. Each number is a mean over the 8 roots
 
 ## Current attempt admission
 
-Operations entry: manual, through the generic private launcher `scripts/run-ready-chain.py` in the agentops repository. [Operations guide](../../../../tooling/agent-experiments/OPERATIONS.md).
+Operations entry: manual, through the generic private launcher `scripts/run-ready-chain.py` in the agentops repository. [Operations guide](../../../toolkit/agent-experiments/OPERATIONS.md).
 
 | Operation | Exact command or unsupported reason | Evidence and last checked revision |
 |---|---|---|

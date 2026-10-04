@@ -16,8 +16,8 @@ history:
 - '2026-10-03T23:54Z released by dmarz/discussion-dose: Implementation deployed and verified; pilot blocked by Anthropic API credits. Resume preflight v2 after user funds account; S0 not queued.'
 claimed_at: 2026-10-03T23:55Z
 outputs:
-- researchers/dmarz/notes/discussion-dose/VALIDATION.md
-- researchers/dmarz/notes/discussion-dose/reviews/qualification-v3-post.md
+- 5-experiments/studies/dmarz/discussion-dose/VALIDATION.md
+- 5-experiments/studies/dmarz/discussion-dose/reviews/qualification-v3-post.md
 ---
 
 ## Goal

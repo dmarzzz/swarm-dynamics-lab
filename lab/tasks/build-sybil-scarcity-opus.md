@@ -16,12 +16,12 @@ topics:
 claimed_at: 2026-10-04T07:52Z
 updated: 2026-10-04T09:12Z
 outputs:
-- researchers/dmarz/notes/sybil-scarcity-opus/reviews/chain-001-pre.md
+- 5-experiments/studies/dmarz/sybil-scarcity-opus/reviews/chain-001-pre.md
 ---
 
 ## Goal
 
-Turn [the scarcity plan](../researchers/dmarz/notes/sybil-scarcity-plan/README.md) into a launch-ready package in `researchers/dmarz/notes/sybil-scarcity-opus/`: the plan's design with Opus 5.5 as synthesizer (dated amendment; dmarz said Opus for every paid stage on 2026-10-04), reusing the sybil-scale-api instrument. Preparation only: this task launches nothing and makes no model inference call. The run itself goes through the private run queue after the fleet monitor's same-researcher check.
+Turn [the scarcity plan](../../5-experiments/studies/dmarz/sybil-scarcity-plan/README.md) into a launch-ready package in `researchers/dmarz/notes/sybil-scarcity-opus/`: the plan's design with Opus 5.5 as synthesizer (dated amendment; dmarz said Opus for every paid stage on 2026-10-04), reusing the sybil-scale-api instrument. Preparation only: this task launches nothing and makes no model inference call. The run itself goes through the private run queue after the fleet monitor's same-researcher check.
 
 ## Done when
 

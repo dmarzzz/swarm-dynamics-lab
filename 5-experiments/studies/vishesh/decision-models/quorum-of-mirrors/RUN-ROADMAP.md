@@ -75,4 +75,4 @@ The next possible research extension is independently acquired evidence versus c
 
 ## Researcher review amendment
 
-The required different-researcher [review](../../../../dmarz/notes/inbox-reviews-2026-10-04-round2/quorum-review.md) arrived during publication. Its verdict is REVISE on the previous S1 draft; [REVIEW-RESPONSE.md](REVIEW-RESPONSE.md) records the Q1–Q3 amendments. The review requirement is fulfilled; formal survey/hypothesis gates remain unresolved. No new routine review is requested.
+The required different-researcher [review](../../../dmarz/inbox-reviews-2026-10-04-round2/quorum-review.md) arrived during publication. Its verdict is REVISE on the previous S1 draft; [REVIEW-RESPONSE.md](REVIEW-RESPONSE.md) records the Q1–Q3 amendments. The review requirement is fulfilled; formal survey/hypothesis gates remain unresolved. No new routine review is requested.

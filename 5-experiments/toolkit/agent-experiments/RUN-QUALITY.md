@@ -15,7 +15,7 @@ Each dimension records `dimension`, `status`, `finding` and `evidence` reference
 | `unknown` | Available records do not resolve the requirement. Missing evidence is not a pass or a numerical zero. |
 | `not_applicable` | The requirement does not apply to this scoped question; explain why in `finding`. |
 
-Every `gap` or `unknown` needs a `next_action` and an `acceptance_check`. Distinguish directly observed facts, plausible causes and verified causes. Record the assessor, date, attempt and evidence revision. A count of green cells is not an experiment-quality score or launch authorization. Keep the existing [evidence confidence and independent sample-size metadata](../../experiments/EVIDENCE-METADATA.md) current after analysis; these dimension checks complement those fields rather than replacing them.
+Every `gap` or `unknown` needs a `next_action` and an `acceptance_check`. Distinguish directly observed facts, plausible causes and verified causes. Record the assessor, date, attempt and evidence revision. A count of green cells is not an experiment-quality score or launch authorization. Keep the existing [evidence confidence and independent sample-size metadata](../../EVIDENCE-METADATA.md) current after analysis; these dimension checks complement those fields rather than replacing them.
 
 ## Eleven checks
 
@@ -45,7 +45,7 @@ The next session must assess earlier suggestions against this rubric, accepting,
 
 ## Lessons from the market and decision studies
 
-[The pinned Dmarz transfer review](../../researchers/vishesh/notes/dmarz-methods-transfer-2026-10-04/README.md) supplies concrete checks for the existing dimensions, not new universal thresholds:
+[The pinned Dmarz transfer review](../../studies/vishesh/dmarz-methods-transfer-2026-10-04/README.md) supplies concrete checks for the existing dimensions, not new universal thresholds:
 
 | Check | What to record | Avoid |
 |---|---|---|
@@ -68,7 +68,7 @@ Use [TEST-CASE-QUALITY.md](TEST-CASE-QUALITY.md) to assess answerability, labels
 
 ## Mechanism checks from the external study review
 
-The [2026-10-04 recommendation dispositions](../../researchers/vishesh/notes/external-study-review-2026-10-04/README.md) give study-specific proposals and limits. Before adopting an older recommendation, read the linked current post-mortem. These checks refine existing rubric dimensions; they add no reviewer, launcher or universal sample-size gate.
+The [2026-10-04 recommendation dispositions](../../studies/vishesh/external-study-review-2026-10-04/README.md) give study-specific proposals and limits. Before adopting an older recommendation, read the linked current post-mortem. These checks refine existing rubric dimensions; they add no reviewer, launcher or universal sample-size gate.
 
 - **Can the treatment matter?** Audit actor-visible information, reachable actions, aggregation/tie-break rules and trigger rates. Demonstrate a treatment-sensitive case and an invariant control offline. Equal perfect-play answers do not prove equal model behavior; information and presentation effects are different questions.
 - **Where does the first error occur?** Separate received evidence, extraction, source support, policy judgment and executed outcome. Preserve transport/format/schema/semantic status independently. Correct final answers can conceal wrong intermediate facts.

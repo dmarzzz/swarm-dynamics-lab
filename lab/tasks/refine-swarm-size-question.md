@@ -14,9 +14,9 @@ topics: []
 claimed_at: 2026-10-04T18:07Z
 updated: 2026-10-04T18:11Z
 outputs:
-- researchers/vishesh/notes/optimal-swarm-size/design-refresh-2026-10-04/README.md
-- researchers/vishesh/notes/optimal-swarm-size/design-refresh-2026-10-04/CASES.md
-- researchers/vishesh/notes/optimal-swarm-size/design-refresh-2026-10-04/SOURCES.md
+- 5-experiments/studies/vishesh/optimal-swarm-size/design-refresh-2026-10-04/README.md
+- 5-experiments/studies/vishesh/optimal-swarm-size/design-refresh-2026-10-04/CASES.md
+- 5-experiments/studies/vishesh/optimal-swarm-size/design-refresh-2026-10-04/SOURCES.md
 ---
 
 ## Goal

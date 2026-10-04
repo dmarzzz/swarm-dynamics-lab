@@ -1,6 +1,6 @@
 # Pre-run assessment for memory-handoff-qwen, chain 001 (S0, P0, Q0, S1)
 
-Follows [the review cycle](../../../../../tooling/agent-experiments/RUN-REVIEW.md) and the [ready-chain contract](../../pipeline/READY-CHAIN.md). This is the owning builder's assessment, written 2026-10-04 by dmarz/pipeline-memory. It is not an independent review and it launches nothing. Nothing has run: no stage on a server, no model call.
+Follows [the review cycle](../../../../toolkit/agent-experiments/RUN-REVIEW.md) and the [ready-chain contract](../../pipeline/READY-CHAIN.md). This is the owning builder's assessment, written 2026-10-04 by dmarz/pipeline-memory. It is not an independent review and it launches nothing. Nothing has run: no stage on a server, no model call.
 
 - Study / owner / stage / attempt / parent: memory-handoff-qwen / dmarz / S0, P0, Q0 and S1 as one chain / attempt 001 / no parent attempt. Line M of [research program v5](../../overnight-program-2026-10-04/program.json).
 - Status: **ready for the fleet monitor's same-researcher check**, then the private run queue. Not launched by this builder.

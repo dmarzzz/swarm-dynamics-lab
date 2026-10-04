@@ -14,11 +14,11 @@ topics: []
 claimed_at: 2026-10-04T04:10Z
 updated: 2026-10-04T04:12Z
 outputs:
-- tooling/agent-experiments/EXPERIMENT-SETUP.md
-- tooling/agent-experiments/templates/experiment-setup.md
+- 5-experiments/toolkit/agent-experiments/EXPERIMENT-SETUP.md
+- 5-experiments/toolkit/agent-experiments/templates/experiment-setup.md
 - AGENTS.md
 - README.md
-- templates/experiment.md
+- lab/templates/experiment.md
 ---
 
 ## Goal

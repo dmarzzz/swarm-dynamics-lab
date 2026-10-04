@@ -44,7 +44,7 @@ Before implementing a material successor, the owning task writes the prospective
 
 ## Top-10 review: scale and evaluation
 
-2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../../tooling/agent-experiments/SCALE-AND-CLAIMS.md).
+2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../toolkit/agent-experiments/SCALE-AND-CLAIMS.md).
 
 **Superseded: A8 fixes the interface but fails capability.** All 18 responses, six episodes and 12 decoded actions completed; only one of six capability checks passed, neither crash arm restarted the worker, and three of four initially healthy episodes were damaged.
 

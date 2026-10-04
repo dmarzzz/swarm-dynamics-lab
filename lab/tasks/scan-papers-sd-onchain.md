@@ -16,7 +16,7 @@ claimed_at: 2026-10-03T18:20Z
 updated: 2026-10-03T19:40Z
 outputs:
 - library (added_by: dmarz/sd-onchain)
-- researchers/dmarz/log/2026-10-03-sd-onchain.md
+- lab/researchers/dmarz/log/2026-10-03-sd-onchain.md
 ---
 
 ## Goal

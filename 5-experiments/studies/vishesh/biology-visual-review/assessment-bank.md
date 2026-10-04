@@ -6,7 +6,7 @@ Scientific category and visual value are separate qualitative judgments. Each vi
 
 ## PHY-01 — Neighbour rules under actual visibility
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Observation-limited neighbor selection is a sharper comparison than claiming topological superiority; equalize what each rule can see.
 
@@ -22,7 +22,7 @@ Observation-limited neighbor selection is a sharper comparison than claiming top
 
 ## PHY-02 — What mechanism carries a turning wave?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 A turning wave can reflect geometry or response delay; causal perturbation is more useful than a visually coherent flock.
 
@@ -38,7 +38,7 @@ A turning wave can reflect geometry or response delay; causal perturbation is mo
 
 ## PHY-03 — Polarization versus navigation value
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Alignment without successful navigation is a decisive failure case and an accessible bridge to agreement without truth.
 
@@ -54,7 +54,7 @@ Alignment without successful navigation is a decisive failure case and an access
 
 ## PHY-04 — Distributed expertise under local failure
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 The location of informed agents may matter as much as their number; preserve information quantity across placements.
 
@@ -70,7 +70,7 @@ The location of informed agents may matter as much as their number; preserve inf
 
 ## PHY-05 — Hydrodynamic breakup beyond a single model
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Coupling-driven fragmentation requires a physical baseline; generic flock language hides the actual interaction law.
 
@@ -86,7 +86,7 @@ Coupling-driven fragmentation requires a physical baseline; generic flock langua
 
 ## PHY-06 — Alternating bursts in larger groups
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Burst synchrony can be mistaken for alignment improvement; isolate timing from steering content.
 
@@ -102,7 +102,7 @@ Burst synchrony can be mistaken for alignment improvement; isolate timing from s
 
 ## PHY-07 — Why can less communication help adaptation?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Communication should beat an equally costly independent sample before it is called collective sensing.
 
@@ -118,7 +118,7 @@ Communication should beat an equally costly independent sample before it is call
 
 ## PHY-08 — Finite populations and multi-option deadlock
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Finite-size deadlock is an interpretable threshold question; report unresolved trials rather than dropping them.
 
@@ -134,7 +134,7 @@ Finite-size deadlock is an interpretable threshold question; report unresolved t
 
 ## PHY-09 — Group size versus independent evidence
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Repeated cues and independent cues must occupy separate experimental factors; this directly informs source-aware quorum.
 
@@ -150,7 +150,7 @@ Repeated cues and independent cues must occupy separate experimental factors; th
 
 ## PHY-10 — Correcting fast-sampling option bias
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Sampling cadence can manufacture apparent dynamics; an observation audit is prerequisite to a biological interpretation.
 
@@ -166,7 +166,7 @@ Sampling cadence can manufacture apparent dynamics; an observation audit is prer
 
 ## PHY-11 — When uninformed participants help
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Uninformed connectors may help transport without contributing evidence; distinguish bridging from dilution.
 
@@ -182,7 +182,7 @@ Uninformed connectors may help transport without contributing evidence; distingu
 
 ## PHY-12 — Reopening a settled decision
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Reinspection tests whether consensus can recover when the world changes; measure adaptation delay and unnecessary checking.
 
@@ -198,7 +198,7 @@ Reinspection tests whether consensus can recover when the world changes; measure
 
 ## PHY-13 — Same cluster, different mechanism
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Density clustering does not establish alignment; use separate motility and orientation interventions.
 
@@ -214,7 +214,7 @@ Density clustering does not establish alignment; use separate motility and orien
 
 ## PHY-14 — Wall geometry as a control input
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Wall effects are a strong falsification control for claims of spontaneous collective structure.
 
@@ -230,7 +230,7 @@ Wall effects are a strong falsification control for claims of spontaneous collec
 
 ## PHY-15 — Delayed density sensing in motility control
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Delayed density feedback creates a concrete stability question; define observed density and actuation delay.
 
@@ -246,7 +246,7 @@ Delayed density feedback creates a concrete stability question; define observed 
 
 ## PHY-16 — Reciprocity and useful collective rotation
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Rotational patterns are promising if asymmetry is manipulated rather than inferred from a movie.
 
@@ -262,7 +262,7 @@ Rotational patterns are promising if asymmetry is manipulated rather than inferr
 
 ## PHY-17 — Recovery of shape versus recovery of function
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 A restored outline may conceal lost function; make the functional readout independent of image similarity.
 
@@ -278,7 +278,7 @@ A restored outline may conceal lost function; make the functional readout indepe
 
 ## PHY-18 — Transport by fluctuating active flows
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Disordered motion may transport better than order; this is useful precisely because visual neatness can mislead.
 
@@ -294,7 +294,7 @@ Disordered motion may transport better than order; this is useful precisely beca
 
 ## PHY-19 — Who creates the observed coordination?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Safety filters can create coordination effects themselves; compare intervention frequency at equal task difficulty.
 
@@ -310,7 +310,7 @@ Safety filters can create coordination effects themselves; compare intervention 
 
 ## PHY-20 — When a few messages add value
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Communication value depends on environmental ambiguity; avoid a single favorable arena.
 
@@ -326,7 +326,7 @@ Communication value depends on environmental ambiguity; avoid a single favorable
 
 ## PHY-21 — Correlated disturbances in transfer
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Common-mode perturbations are a clean stress test for apparent swarm robustness.
 
@@ -342,7 +342,7 @@ Common-mode perturbations are a clean stress test for apparent swarm robustness.
 
 ## PHY-22 — Correlated evidence in physical identity vetting
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
 
 Radio identity does not identify an independent controller; the useful contribution is threat-model separation.
 
@@ -358,7 +358,7 @@ Radio identity does not identify an independent controller; the useful contribut
 
 ## PHY-23 — Seed dependence in shape formation
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Shared coordinate seeds may silently supply coordination; treat them as an information channel.
 
@@ -374,7 +374,7 @@ Shared coordinate seeds may silently supply coordination; treat them as an infor
 
 ## PHY-24 — Damage recovery with immobile survivors
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 A damaged immobile member can be obstacle, missing worker or corrupted signal; separate these mechanisms.
 
@@ -390,7 +390,7 @@ A damaged immobile member can be obstacle, missing worker or corrupted signal; s
 
 ## PHY-25 — The order of communication opportunities
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Static degree is insufficient when contacts are time ordered; temporal reachability is the discriminating observable.
 
@@ -406,7 +406,7 @@ Static degree is insufficient when contacts are time ordered; temporal reachabil
 
 ## PHY-26 — Fast consensus under realistic link delays
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Long links trade connectivity for delay and cost; compare against local links with equal resources.
 
@@ -422,7 +422,7 @@ Long links trade connectivity for delay and cost; compare against local links wi
 
 ## PHY-27 — Movement as a synchronization resource
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Mixing and phase coupling are separable causes of synchrony; control mobility while testing oscillators.
 
@@ -438,7 +438,7 @@ Mixing and phase coupling are separable causes of synchrony; control mobility wh
 
 ## PHY-28 — A useful phase wave without global synchrony
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Traveling phase waves need task consequences to become more than a pattern demonstration.
 
@@ -454,7 +454,7 @@ Traveling phase waves need task consequences to become more than a pattern demon
 
 ## PHY-29 — How distribution tails change swarmalator predictions
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Rare frequency outliers can dominate a synchronization result; inspect distribution tails and finite size.
 
@@ -470,7 +470,7 @@ Rare frequency outliers can dominate a synchronization result; inspect distribut
 
 ## PHY-30 — Synchrony versus shared-channel congestion
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Synchronization can overload a shared bottleneck; performance may favor staggered demand.
 
@@ -486,7 +486,7 @@ Synchronization can overload a shared bottleneck; performance may favor staggere
 
 ## PHY-31 — Anticipation versus slower walking
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 A distraction manipulation should change observation or response, not both invisibly.
 
@@ -502,7 +502,7 @@ A distraction manipulation should change observation or response, not both invis
 
 ## PHY-32 — Avoiding congestion without hiding the queue
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 An external queue may relocate congestion rather than resolve it; include system-wide waiting.
 
@@ -518,7 +518,7 @@ An external queue may relocate congestion rather than resolve it; include system
 
 ## PHY-33 — Does one smoothing vehicle help beyond a ring?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 An open-road control is needed to isolate controller benefit from intersection geometry.
 
@@ -534,7 +534,7 @@ An open-road control is needed to isolate controller benefit from intersection g
 
 ## PHY-34 — Confinement and collective rotation
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Confinement can cause apparent crowd order; boundary manipulation is more informative than density alone.
 
@@ -550,7 +550,7 @@ Confinement can cause apparent crowd order; boundary manipulation is more inform
 
 ## PHY-35 — Wider crossings with more directional disorder
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Crossing angle offers an interpretable geometry intervention; transfer to agent communication is only speculative.
 
@@ -566,7 +566,7 @@ Crossing angle offers an interpretable geometry intervention; transfer to agent 
 
 ## PHY-36 — Capacity estimates that transfer between bottlenecks
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Capacity claims must distinguish arrival demand from discharge ability and transient storage.
 
@@ -582,7 +582,7 @@ Capacity claims must distinguish arrival demand from discharge ability and trans
 
 ## PHY-37 — Neural cellular repair beyond familiar lesion shapes
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Lesion-front repair can test local recovery rather than mere replay of a memorized target.
 
@@ -598,7 +598,7 @@ Lesion-front repair can test local recovery rather than mere replay of a memoriz
 
 ## PHY-38 — Masked parallel updates versus independent cell clocks
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Clock robustness is a meaningful extension beyond masked parallel NCA updates if stale reads are explicit.
 
@@ -614,7 +614,7 @@ Clock robustness is a meaningful extension beyond masked parallel NCA updates if
 
 ## SOC-01 — Separate information diversity from model diversity
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Evidence diversity and model diversity are different interventions; their interaction is more informative than a mixed-model win.
 
@@ -630,7 +630,7 @@ Evidence diversity and model diversity are different interventions; their intera
 
 ## SOC-02 — Measure effective team size on distributed evidence
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Effective team size needs uncertainty and assumptions; one correlation statistic cannot summarize all failure dependence.
 
@@ -646,7 +646,7 @@ Effective team size needs uncertainty and assumptions; one correlation statistic
 
 ## SOC-03 — Distinguish group failure from a strict scoring rule
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 All-correct scoring changes the estimand and difficulty; apparent collaboration gains may be aggregation artifacts.
 
@@ -662,7 +662,7 @@ All-correct scoring changes the estimand and difficulty; apparent collaboration 
 
 ## SOC-04 — Ablate why semantic routing works
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Semantic routing is useful only if decision-relevant delivery explains benefit beyond extra computation.
 
@@ -678,7 +678,7 @@ Semantic routing is useful only if decision-relevant delivery explains benefit b
 
 ## SOC-05 — Measure reading capacity separately from wording bias
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Access structure and persuasive wording should be crossed rather than bundled; this isolates the channel.
 
@@ -694,7 +694,7 @@ Access structure and persuasive wording should be crossed rather than bundled; t
 
 ## SOC-06 — Social influence or ordinary anchoring?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Peer labels can alter authority independently of answer content; preserve identical evidence and anchors.
 
@@ -710,7 +710,7 @@ Peer labels can alter authority independently of answer content; preserve identi
 
 ## SOC-07 — Protect private judgments before public discussion
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Private initial judgments are a strong near-term comparison, but preparation and token advantages require controls.
 
@@ -726,7 +726,7 @@ Private initial judgments are a strong near-term comparison, but preparation and
 
 ## SOC-08 — Stop on evidence sufficiency instead of verbal agreement
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Evidence sufficiency is more defensible than verbal agreement if completeness is observable without revealing the answer.
 
@@ -742,7 +742,7 @@ Evidence sufficiency is more defensible than verbal agreement if completeness is
 
 ## SOC-09 — Evidence-seeking critics versus generic opposition
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 A critic should acquire or test evidence rather than merely disagree; equalize the extra solver budget.
 
@@ -758,7 +758,7 @@ A critic should acquire or test evidence rather than merely disagree; equalize t
 
 ## SOC-10 — Test dissent quality rather than dissent quantity
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Protecting a correct minority and amplifying a false minority must be scored together.
 
@@ -774,7 +774,7 @@ Protecting a correct minority and amplifying a false minority must be scored tog
 
 ## SOC-11 — Make uncertainty useful without forcing abstention
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Uncertainty is useful only if it selects productive follow-up; calibration alone is insufficient.
 
@@ -790,7 +790,7 @@ Uncertainty is useful only if it selects productive follow-up; calibration alone
 
 ## SOC-12 — Useful disagreement after a changing task
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Minority adaptation must preserve useful information rather than maximize conformity speed.
 
@@ -806,7 +806,7 @@ Minority adaptation must preserve useful information rather than maximize confor
 
 ## SOC-13 — Separate discovery time from discussion time
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Discovery and discussion compete for budget; a fixed total makes their marginal values interpretable.
 
@@ -822,7 +822,7 @@ Discovery and discussion compete for budget; a fixed total makes their marginal 
 
 ## SOC-14 — Treat shared artifacts as a communication channel
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Artifact-mediated communication is a computational mechanism; biological stigmergy remains a separate prior-art lead.
 
@@ -838,7 +838,7 @@ Artifact-mediated communication is a computational mechanism; biological stigmer
 
 ## SOC-15 — Asynchronous teams under uneven tool latency
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Asynchrony should be measured through evidence age and causal order, not wall-clock speed alone.
 
@@ -854,7 +854,7 @@ Asynchrony should be measured through evidence age and causal order, not wall-cl
 
 ## SOC-16 — Allocate roles by observed bottlenecks
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Roles can improve skill matching while creating bottlenecks; capacity and expertise need separate factors.
 
@@ -870,7 +870,7 @@ Roles can improve skill matching while creating bottlenecks; capacity and expert
 
 ## SOC-17 — Separate a leader's name from its information
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Authority labels may override otherwise useful information; keep actual expertise constant.
 
@@ -886,7 +886,7 @@ Authority labels may override otherwise useful information; keep actual expertis
 
 ## SOC-18 — Rotate coordination without losing continuity
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Leader rotation may distribute load or discard context; compare both under matched handoff cost.
 
@@ -902,7 +902,7 @@ Leader rotation may distribute load or discard context; compare both under match
 
 ## SOC-19 — Ask a specific peer instead of broadcasting
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Targeted requests should outperform broadcast at equal useful exposure, not simply reduce message volume.
 
@@ -918,7 +918,7 @@ Targeted requests should outperform broadcast at equal useful exposure, not simp
 
 ## SOC-20 — Recognize unachievable tasks and request repair
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Impossible tasks and difficult tasks need distinct stopping targets; abstention can be correct.
 
@@ -934,7 +934,7 @@ Impossible tasks and difficult tasks need distinct stopping targets; abstention 
 
 ## SOC-21 — Compress memory by information value
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Retention should be evaluated by future decision utility rather than compression or recall alone.
 
@@ -950,7 +950,7 @@ Retention should be evaluated by future decision utility rather than compression
 
 ## SOC-22 — Spend redundancy on rare knowledge
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Rare facts may need replication without allowing copied evidence to gain extra voting weight.
 
@@ -966,7 +966,7 @@ Rare facts may need replication without allowing copied evidence to gain extra v
 
 ## SOC-23 — Recover function after genuine knowledge loss
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Recovery after genuine loss is stronger than reconstruction from hidden backups; enumerate all surviving state.
 
@@ -982,7 +982,7 @@ Recovery after genuine loss is stronger than reconstruction from hidden backups;
 
 ## SOC-24 — What survives complete population turnover?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Turnover can test convention persistence if model priors and carried artifacts are controlled.
 
@@ -998,7 +998,7 @@ Turnover can test convention persistence if model priors and carried artifacts a
 
 ## SOC-25 — Retire an obsolete convention after the task changes
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 A convention should survive stability and change when obsolete; persistence alone is not adaptive culture.
 
@@ -1014,7 +1014,7 @@ A convention should survive stability and change when obsolete; persistence alon
 
 ## SOC-26 — Reward a useful portfolio instead of one champion
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Portfolio rewards alter incentives and risk exposure together; disentangle credit from diversification.
 
@@ -1030,7 +1030,7 @@ Portfolio rewards alter incentives and risk exposure together; disentangle credi
 
 ## SOC-27 — Credit verified contributions instead of message volume
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Verification-based credit can reward easy-to-check work at the expense of valuable work; test that allocation bias.
 
@@ -1046,7 +1046,7 @@ Verification-based credit can reward easy-to-check work at the expense of valuab
 
 ## SOC-28 — Pay for verification as a public good
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Verification is a public good only if costs and shared benefits are explicit; measure free riding operationally.
 
@@ -1062,7 +1062,7 @@ Verification is a public good only if costs and shared benefits are explicit; me
 
 ## SOC-29 — Make a report lead to a verifiable response
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Reports are useful when they cause justified correction; separate noticing, reporting and response.
 
@@ -1078,7 +1078,7 @@ Reports are useful when they cause justified correction; separate noticing, repo
 
 ## SOC-30 — Appeal false rejections without overwhelming review
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Appeals protect useful contributors only if review capacity and finalization rules are bounded.
 
@@ -1094,7 +1094,7 @@ Appeals protect useful contributors only if review capacity and finalization rul
 
 ## SOC-31 — Find where uncertainty disappears in retelling
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Uncertainty loss during retelling can alter action while factual words survive; score both semantics and decisions.
 
@@ -1110,7 +1110,7 @@ Uncertainty loss during retelling can alter action while factual words survive; 
 
 ## SOC-32 — Stress-test a casefile when logs are missing
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Missing logs can make a coherent casefile wrong; distinguish unknown evidence from evidence of absence.
 
@@ -1126,7 +1126,7 @@ Missing logs can make a coherent casefile wrong; distinguish unknown evidence fr
 
 ## SOC-33 — Predict unseen agents' choices from one agent
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Choice prediction does not establish policy transfer; use held-out interventions rather than matching prose.
 
@@ -1142,7 +1142,7 @@ Choice prediction does not establish policy transfer; use held-out interventions
 
 ## SOC-34 — Separate wording convergence from changed decisions
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Stated cooperation and consequential decisions can diverge; behavioral endpoints should dominate.
 
@@ -1158,7 +1158,7 @@ Stated cooperation and consequential decisions can diverge; behavioral endpoints
 
 ## SOC-35 — Validate a cheap surrogate at the collective level
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 A surrogate needs validation on collective outcomes, not just individual imitation.
 
@@ -1174,7 +1174,7 @@ A surrogate needs validation on collective outcomes, not just individual imitati
 
 ## SOC-36 — Rank trace clusters by useful evidence, not spectacle
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
 
 Trace-based triage is useful if it improves case selection under realistic missingness and review limits.
 
@@ -1190,7 +1190,7 @@ Trace-based triage is useful if it improves case selection under realistic missi
 
 ## SOC-37 — Does profiling improve influence through ordinary retrieval?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 External influence should be separated from compromised insiders; attribution does not follow from matching behavior.
 
@@ -1206,7 +1206,7 @@ External influence should be separated from compromised insiders; attribution do
 
 ## SOC-38 — Select complementary teams on a separate task set
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Complementary-team selection can overfit calibration worlds; hold out whole problem families and charge profiling.
 
@@ -1222,7 +1222,7 @@ Complementary-team selection can overfit calibration worlds; hold out whole prob
 
 ## SOC-39 — The same average correlation can hide different failures
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Equal pairwise correlation can hide different catastrophic tails; this is a high-value challenge to a single effective-size metric.
 
@@ -1238,7 +1238,7 @@ Equal pairwise correlation can hide different catastrophic tails; this is a high
 
 ## SOC-40 — Keep small deliberating groups independent until the end
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Separating groups may preserve independent search or merely duplicate cost; match total acquisition capacity.
 
@@ -1254,7 +1254,7 @@ Separating groups may preserve independent search or merely duplicate cost; matc
 
 ## SOC-41 — Diverse interpretations versus diverse personas
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Interpretation diversity needs a controlled evidence set; persona variety alone is not a mechanism.
 
@@ -1270,7 +1270,7 @@ Interpretation diversity needs a controlled evidence set; persona variety alone 
 
 ## SOC-42 — More correct candidates or a better final selector?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Generation and selection quality can trade off; oracle selection is a ceiling, not a deployable baseline.
 
@@ -1286,7 +1286,7 @@ Generation and selection quality can trade off; oracle selection is a ceiling, n
 
 ## SOC-43 — Abstain when confidence is high but errors are shared
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Confident shared mistakes are a stronger stress test than average confidence calibration.
 
@@ -1302,7 +1302,7 @@ Confident shared mistakes are a stronger stress test than average confidence cal
 
 ## SOC-44 — Preference optimization and shared mistakes beyond familiar QA
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Preference training may redistribute errors without improving independence; separate marginal skill from joint failures.
 
@@ -1318,7 +1318,7 @@ Preference training may redistribute errors without improving independence; sepa
 
 ## SOC-45 — Does local memory preserve a convention after pressure ends?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Metastable conventions need perturbations and dwell-time evidence; a persistent transcript alone is insufficient.
 
@@ -1334,7 +1334,7 @@ Metastable conventions need perturbations and dwell-time evidence; a persistent 
 
 ## SEC-01 — Does hiding the returning fork survive metadata?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Hiding a returning component is meaningful only if metadata cannot reveal it; biology does not supply cryptographic anonymity.
 
@@ -1350,7 +1350,7 @@ Hiding a returning component is meaningful only if metadata cannot reveal it; bi
 
 ## SEC-02 — Keep merge decisions outside an untrusted child
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Post-commit selection changes attacker timing; freeze exactly what can be chosen after observation.
 
@@ -1366,7 +1366,7 @@ Post-commit selection changes attacker timing; freeze exactly what can be chosen
 
 ## SEC-03 — Count evidence domains rather than returning copies
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Provenance-aware quorum is promising when observable ancestry is imperfect; an oracle grouping is only a ceiling.
 
@@ -1382,7 +1382,7 @@ Provenance-aware quorum is promising when observable ancestry is imperfect; an o
 
 ## SEC-04 — Separate returned evidence from permission changes
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Truth and permission are distinct admission criteria; a correct statement can still request an unauthorized action.
 
@@ -1398,7 +1398,7 @@ Truth and permission are distinct admission criteria; a correct statement can st
 
 ## SEC-05 — Preserve uncertainty through repeated compaction
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Compaction may erase uncertainty while preserving claims; test downstream consequences, not summary fluency.
 
@@ -1414,7 +1414,7 @@ Compaction may erase uncertainty while preserving claims; test downstream conseq
 
 ## SEC-06 — Repair when the dependency graph is wrong
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Repair should invalidate conclusions that depend on a corrected premise; local text replacement is insufficient.
 
@@ -1430,7 +1430,7 @@ Repair should invalidate conclusions that depend on a corrected premise; local t
 
 ## SEC-07 — Stale children can undo a correction
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Stale children can reintroduce repaired content; test state versions and reentry rules explicitly.
 
@@ -1446,7 +1446,7 @@ Stale children can reintroduce repaired content; test state versions and reentry
 
 ## SEC-08 — Protect the honest return channel
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Attention exhaustion is harmful even when bad content is rejected; include lost legitimate service.
 
@@ -1462,7 +1462,7 @@ Attention exhaustion is harmful even when bad content is rejected; include lost 
 
 ## SEC-09 — Screen the combination, not only each weight update
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Combining learned updates may introduce interactions absent in each update alone; compare order and compatibility.
 
@@ -1478,7 +1478,7 @@ Combining learned updates may introduce interactions absent in each update alone
 
 ## SEC-10 — Distinguish useful specialization from harmful drift
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Specialization can resemble drift; evaluate retained common capabilities and task-specific gains separately.
 
@@ -1494,7 +1494,7 @@ Specialization can resemble drift; evaluate retained common capabilities and tas
 
 ## SEC-11 — Does merge order change what the parent believes?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Merge order can expose noncommutativity in state updates; deterministic replay makes a cheap decisive test.
 
@@ -1510,7 +1510,7 @@ Merge order can expose noncommutativity in state updates; deterministic replay m
 
 ## SEC-12 — What kind of validator diversity actually helps?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Independent validators may share one bad source; cross validator diversity with evidence diversity.
 
@@ -1526,7 +1526,7 @@ Independent validators may share one bad source; cross validator diversity with 
 
 ## SEC-13 — Budget useful attention when identities are cheap
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Cheap identities can consume review without winning votes; distinguish influence from resource denial.
 
@@ -1542,7 +1542,7 @@ Cheap identities can consume review without winning votes; distinguish influence
 
 ## SEC-14 — Coalition caps with noisy contribution estimates
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
 
 Coalition caps depend on observable grouping accuracy; legitimate coalitions can be collateral damage.
 
@@ -1558,7 +1558,7 @@ Coalition caps depend on observable grouping accuracy; legitimate coalitions can
 
 ## SEC-15 — Reputation should not become transferable expertise
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Reputation can encode skill on old tasks without current trustworthiness; introduce controlled domain shift.
 
@@ -1574,7 +1574,7 @@ Reputation can encode skill on old tasks without current trustworthiness; introd
 
 ## SEC-16 — Re-entry penalties versus the newcomer tax
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 A newcomer tax may deter attacks and block useful entrants; separate those outcomes by base rate.
 
@@ -1590,7 +1590,7 @@ A newcomer tax may deter attacks and block useful entrants; separate those outco
 
 ## SEC-17 — Private rate limits across many credentials
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
 
 Multiple credentials do not necessarily mean multiple owners; the mapping assumption needs explicit tests.
 
@@ -1606,7 +1606,7 @@ Multiple credentials do not necessarily mean multiple owners; the mapping assump
 
 ## SEC-18 — Identity-invariant selection can still concentrate knowledge
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Stake and evidence concentration can reinforce each other; test ownership and information concentration independently.
 
@@ -1622,7 +1622,7 @@ Stake and evidence concentration can reinforce each other; test ownership and in
 
 ## SEC-19 — Do graph defenses mistake new teams for Sybils?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Legitimate modular teams can resemble Sybils; behavior-only defenses need a false-positive benchmark.
 
@@ -1638,7 +1638,7 @@ Legitimate modular teams can resemble Sybils; behavior-only defenses need a fals
 
 ## SEC-20 — One human credential does not mean one autonomous agent
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
 
 Delegation changes what a credential attests; identity checks must preserve the authority chain.
 
@@ -1654,7 +1654,7 @@ Delegation changes what a credential attests; identity checks must preserve the 
 
 ## SEC-21 — Audit what an attestation actually identifies
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
 
 Attestation may identify a device or execution rather than a controlling entity; state the exact guarantee.
 
@@ -1670,7 +1670,7 @@ Attestation may identify a device or execution rather than a controlling entity;
 
 ## SEC-22 — Do agents spam because timing rewards attempts?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Polling spam is a scheduling attack even without false information; queue policy is the useful intervention.
 
@@ -1686,7 +1686,7 @@ Polling spam is a scheduling attack even without false information; queue policy
 
 ## SEC-23 — Physical identity under multiple radios and motion
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
 
 Radio observations can establish channel properties without unique ownership; avoid an identity claim from fingerprints alone.
 
@@ -1702,7 +1702,7 @@ Radio observations can establish channel properties without unique ownership; av
 
 ## SEC-24 — Stop fake value even when every identity is real
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Verified identities can still coordinate harmful behavior; identity assurance and collusion detection are separate tests.
 
@@ -1718,7 +1718,7 @@ Verified identities can still coordinate harmful behavior; identity assurance an
 
 ## SEC-25 — Separate model, prompt, scaffold, and operator attribution
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
 
 Model fingerprints are not owner fingerprints; shared models are a natural negative control.
 
@@ -1734,7 +1734,7 @@ Model fingerprints are not owner fingerprints; shared models are a natural negat
 
 ## SEC-26 — Measure the simulator fingerprint before measuring swarms
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Simulator fingerprints can leak labels into detection; hold out engines and rendering choices.
 
@@ -1750,7 +1750,7 @@ Simulator fingerprints can leak labels into detection; hold out engines and rend
 
 ## SEC-27 — Shared news is not necessarily shared control
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Common exposure can mimic influence; randomized exposure or valid temporal interventions are necessary.
 
@@ -1766,7 +1766,7 @@ Common exposure can mimic influence; randomized exposure or valid temporal inter
 
 ## SEC-28 — A canary identifies a route, not always an operator
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 A canary can reveal a route without proving who controlled it; distinguish telemetry from attribution.
 
@@ -1782,7 +1782,7 @@ A canary can reveal a route without proving who controlled it; distinguish telem
 
 ## SEC-29 — Does shared memory teach agents to recognize test probes?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Probes can train the subject and change the measurement; include fresh and repeatedly probed cohorts.
 
@@ -1798,7 +1798,7 @@ Probes can train the subject and change the measurement; include fresh and repea
 
 ## SEC-30 — Would the detector produce a useful review queue?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Rare attacks make false alarms operationally dominant; precision must use realistic prevalence.
 
@@ -1814,7 +1814,7 @@ Rare attacks make false alarms operationally dominant; precision must use realis
 
 ## SEC-31 — Separate assistance from autonomous action
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
 
 Assistance and autonomy are different operational claims; define intervention availability before scoring.
 
@@ -1830,7 +1830,7 @@ Assistance and autonomy are different operational claims; define intervention av
 
 ## SEC-32 — Are browser detectors detecting the automation library?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
 
 Browser-stack fingerprints can cluster infrastructure rather than intent; shared-stack benign controls are essential.
 
@@ -1846,7 +1846,7 @@ Browser-stack fingerprints can cluster infrastructure rather than intent; shared
 
 ## SEC-33 — A shared funder may be a service, not a shared owner
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **Medium**
 
 Shared funding is evidence of a relationship, not proof of coordinated actions; preserve alternative explanations.
 
@@ -1862,7 +1862,7 @@ Shared funding is evidence of a relationship, not proof of coordinated actions; 
 
 ## SEC-34 — What disappears when only successful activity is logged?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Success-only logs bias both attack and defense claims; complete denominators are foundational.
 
@@ -1878,7 +1878,7 @@ Success-only logs bias both attack and defense claims; complete denominators are
 
 ## SEC-35 — How quickly does an attribution detector expire?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Attribution should decay when control can change; evaluate expiry against takeover and legitimate turnover.
 
@@ -1894,7 +1894,7 @@ Attribution should decay when control can change; evaluate expiry against takeov
 
 ## SEC-36 — Detect coordination with less identifying telemetry
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Coarse telemetry trades observability for cost and privacy; quantify which distinctions become unidentifiable.
 
@@ -1910,7 +1910,7 @@ Coarse telemetry trades observability for cost and privacy; quantify which disti
 
 ## SEC-37 — Bundle allocation when tasks complement or interfere
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 False bids in bundles may exploit complementarity rather than identity count; preserve economic feasibility.
 
@@ -1926,7 +1926,7 @@ False bids in bundles may exploit complementarity rather than identity count; pr
 
 ## SEC-38 — Can a tiny counterexample invalidate our allocator?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Exact counterexamples can expose a defense boundary cheaply; failure search and prevalence estimation are distinct.
 
@@ -1942,7 +1942,7 @@ Exact counterexamples can expose a defense boundary cheaply; failure search and 
 
 ## SEC-39 — A queue may reward splitting work or merging it
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Split and merge behavior can manipulate queues without changing work; charge or schedule at the right unit.
 
@@ -1958,7 +1958,7 @@ Split and merge behavior can manipulate queues without changing work; charge or 
 
 ## SEC-40 — Do small participation costs preserve useful collective choice?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Vote cost can produce wealth-weighted influence; test redistribution and truth sensitivity separately.
 
@@ -1974,7 +1974,7 @@ Vote cost can produce wealth-weighted influence; test redistribution and truth s
 
 ## SEC-41 — Fake intermediaries in a chain of trust
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 A trusted intermediary can become a single failure point; test availability and compromise independently.
 
@@ -1990,7 +1990,7 @@ A trusted intermediary can become a single failure point; test availability and 
 
 ## SEC-42 — False availability windows in online task markets
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Availability windows can confer influence unrelated to expertise; simulate timing independently of quality.
 
@@ -2006,7 +2006,7 @@ Availability windows can confer influence unrelated to expertise; simulate timin
 
 ## SEC-43 — Who should a trust network verify first?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Verification bridges may reduce errors or bottleneck review; evaluate both transport and scrutiny.
 
@@ -2022,7 +2022,7 @@ Verification bridges may reduce errors or bottleneck review; evaluate both trans
 
 ## SEC-44 — Conserved voting weight can still change bargaining power
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Voting power and bargaining power are different channels; a mechanism can equalize one while preserving the other.
 
@@ -2038,7 +2038,7 @@ Voting power and bargaining power are different channels; a mechanism can equali
 
 ## SEC-45 — Does a false fact spread like a policy violation?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 False facts and policy violations require different responses; a single badness score obscures valid actions.
 
@@ -2054,7 +2054,7 @@ False facts and policy violations require different responses; a single badness 
 
 ## SEC-46 — Shared tools can reconnect isolated children
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 A shared cache can bypass message defenses; enumerate acquisition paths before claiming containment.
 
@@ -2070,7 +2070,7 @@ A shared cache can bypass message defenses; enumerate acquisition paths before c
 
 ## SEC-47 — Where does the full fork-and-return chain actually fail?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 The full acquisition chain is necessary to test end-to-end defense; component success rates need not compose.
 
@@ -2086,7 +2086,7 @@ The full acquisition chain is necessary to test end-to-end defense; component su
 
 ## SEC-48 — When can an isolated child safely return?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Quarantine and safe reentry form a control loop; replay and correct-minority cases are essential.
 
@@ -2102,7 +2102,7 @@ Quarantine and safe reentry form a control loop; replay and correct-minority cas
 
 ## SEC-49 — Recovery can look good after damage is already done
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Individually tolerated changes can accumulate harm; compare per-event and cumulative state checks.
 
@@ -2118,7 +2118,7 @@ Individually tolerated changes can accumulate harm; compare per-event and cumula
 
 ## SEC-50 — A detector that isolates nodes changes the evidence
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 An observer can change the swarm it measures; the effect belongs in the estimand.
 
@@ -2134,7 +2134,7 @@ An observer can change the swarm it measures; the effect belongs in the estimand
 
 ## SEC-51 — Can harmless evaluator preferences narrow a swarm's reasoning?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Benign judges can share a systematic error; malicious-majority assumptions are too narrow.
 
@@ -2150,7 +2150,7 @@ Benign judges can share a systematic error; malicious-majority assumptions are t
 
 ## SEC-52 — Do small per-merge failures accumulate across generations?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Multigeneration failures test whether repair survives turnover; hidden surviving state must be audited.
 
@@ -2166,7 +2166,7 @@ Multigeneration failures test whether repair survives turnover; hidden surviving
 
 ## SEC-53 — Can reliable service history hide selective routing failure?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Withholding changes what cannot be inferred; completeness claims need explicit observable contracts.
 
@@ -2182,7 +2182,7 @@ Withholding changes what cannot be inferred; completeness claims need explicit o
 
 ## MET-01 — Criticality beyond a geometric signature
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Apparent criticality needs finite-size, null-model and sampling controls before a biological interpretation.
 
@@ -2198,7 +2198,7 @@ Apparent criticality needs finite-size, null-model and sampling controls before 
 
 ## MET-02 — Sensitivity versus false alarms
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Sensitivity and false alarms answer different questions; higher alert rates alone are not improvement.
 
@@ -2214,7 +2214,7 @@ Sensitivity and false alarms answer different questions; higher alert rates alon
 
 ## MET-03 — What incomplete observation hides
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Biased observation can manufacture collective structure; specify the sampling mechanism.
 
@@ -2230,7 +2230,7 @@ Biased observation can manufacture collective structure; specify the sampling me
 
 ## MET-04 — Does a synergy score predict useful complementarity?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Information synergy need not improve task utility; evaluate both on the same held-out worlds.
 
@@ -2246,7 +2246,7 @@ Information synergy need not improve task utility; evaluate both on the same hel
 
 ## MET-05 — Information flow under a shared driver
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Common drivers can create apparent coordination; causal claims require interventions or justified identification.
 
@@ -2262,7 +2262,7 @@ Common drivers can create apparent coordination; causal claims require intervent
 
 ## MET-06 — A transition or a slow relaxation?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Slow relaxation can mimic hysteresis; vary dwell time before claiming memory of a transition.
 
@@ -2278,7 +2278,7 @@ Slow relaxation can mimic hysteresis; vary dwell time before claiming memory of 
 
 ## MET-07 — Can different mechanisms produce the same trajectories?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Different interaction rules may be observationally equivalent; identify interventions that separate them.
 
@@ -2294,7 +2294,7 @@ Different interaction rules may be observationally equivalent; identify interven
 
 ## MET-08 — Early warnings on genuinely new failures
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Early-warning signals need held-out failure types and false-alarm costs; retrospective alignment is weak evidence.
 
@@ -2310,7 +2310,7 @@ Early-warning signals need held-out failure types and false-alarm costs; retrosp
 
 ## RL-01 — Skills with unfamiliar partners
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 New-partner transfer tests flexible coordination rather than memorized team conventions.
 
@@ -2326,7 +2326,7 @@ New-partner transfer tests flexible coordination rather than memorized team conv
 
 ## RL-02 — Credit for a rare essential contribution
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Rare contributions can be undercredited; test value attribution independently of frequency.
 
@@ -2342,7 +2342,7 @@ Rare contributions can be undercredited; test value attribution independently of
 
 ## RL-03 — Messages that remain useful under a broken channel
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Channel failure is a useful robustness intervention if agents cannot infer privileged failure labels.
 
@@ -2358,7 +2358,7 @@ Channel failure is a useful robustness intervention if agents cannot infer privi
 
 ## RL-04 — When a mean neighbor is misleading
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Mean reward can hide rare catastrophic failures; tail outcomes need explicit sampling and intervals.
 
@@ -2374,7 +2374,7 @@ Mean reward can hide rare catastrophic failures; tail outcomes need explicit sam
 
 ## RL-05 — Size transfer or topology transfer?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Topology transfer should hold task difficulty and capacity fixed; graph size alone is not a fair comparison.
 
@@ -2390,7 +2390,7 @@ Topology transfer should hold task difficulty and capacity fixed; graph size alo
 
 ## RL-06 — Emergent strategy or simulator exploit?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Simulator exploitation invalidates biological or real-world transfer claims; cross-engine tests are essential.
 
@@ -2406,7 +2406,7 @@ Simulator exploitation invalidates biological or real-world transfer claims; cro
 
 ## RL-07 — Good reward, bad collective behavior
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Reward gaming requires a separate task-success measure; increasing reward is not evidence of cooperation.
 
@@ -2422,7 +2422,7 @@ Reward gaming requires a separate task-success measure; increasing reward is not
 
 ## RL-08 — Coordinating while partners keep learning
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Learning partners create nonstationarity; distinguish adaptation from chasing noise.
 
@@ -2438,7 +2438,7 @@ Learning partners create nonstationarity; distinguish adaptation from chasing no
 
 ## OPT-01 — Performance after shifting and rotating the problem
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Rotation invariance is a clean implementation check; coordinate-dependent success should not be called swarm intelligence.
 
@@ -2454,7 +2454,7 @@ Rotation invariance is a clean implementation check; coordinate-dependent succes
 
 ## OPT-02 — Communication topology under a fair budget
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Topology improvements should survive equal evaluation and communication budgets.
 
@@ -2470,7 +2470,7 @@ Topology improvements should survive equal evaluation and communication budgets.
 
 ## OPT-03 — How much of ant-colony performance is local search?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Pheromone language can hide ordinary local search; ablate external memory while preserving search effort.
 
@@ -2486,7 +2486,7 @@ Pheromone language can hide ordinary local search; ablate external memory while 
 
 ## OPT-04 — Independent evaluations versus noisy consensus
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 One noisy best solution can synchronize errors; separate shared noise from useful information sharing.
 
@@ -2502,7 +2502,7 @@ One noisy best solution can synchronize errors; separate shared noise from usefu
 
 ## OPT-05 — When collective memory becomes stale
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Stale memory can trap a swarm after objective change; retention and forgetting require separate controls.
 
@@ -2518,7 +2518,7 @@ Stale memory can trap a swarm after objective change; retention and forgetting r
 
 ## OPT-06 — Where the small-inertia approximation stops helping
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 A small-inertia approximation needs an error boundary; elegant reduced dynamics can fail near transitions.
 
@@ -2534,7 +2534,7 @@ A small-inertia approximation needs an error boundary; elegant reduced dynamics 
 
 ## MTH-01 — How much certainty comes from counting the wrong units?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Agents within one world are dependent samples; the whole randomized world or team is the inferential unit.
 
@@ -2550,7 +2550,7 @@ Agents within one world are dependent samples; the whole randomized world or tea
 
 ## MTH-02 — Do outcome labels change the conclusion?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Outcome definitions can decide which protocol wins; freeze labels and adjudication before comparison.
 
@@ -2566,7 +2566,7 @@ Outcome definitions can decide which protocol wins; freeze labels and adjudicati
 
 ## MTH-03 — Does a finding survive a model or runtime change?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Version changes create a transfer problem; one model snapshot cannot establish a durable mechanism.
 
@@ -2582,7 +2582,7 @@ Version changes create a transfer problem; one model snapshot cannot establish a
 
 ## MTH-04 — Spend the budget on more seeds or more worlds?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 More seeds on one world do not replace diverse worlds; report the two variance components.
 
@@ -2598,7 +2598,7 @@ More seeds on one world do not replace diverse worlds; report the two variance c
 
 ## MTH-05 — Can an interrupted run be meaningfully resumed?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Resume behavior can silently change the experiment; audit state and random streams at interruption boundaries.
 
@@ -2614,7 +2614,7 @@ Resume behavior can silently change the experiment; audit state and random strea
 
 ## MTH-06 — How much of a discovery is selecting the best run?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Best-run selection exaggerates performance; retain all attempts and selection costs.
 
@@ -2630,7 +2630,7 @@ Best-run selection exaggerates performance; retain all attempts and selection co
 
 ## SIM-01 — Private information leaks through the narrator
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Narrator access can create apparent collective intelligence; restrict observation to the declared interface.
 
@@ -2646,7 +2646,7 @@ Narrator access can create apparent collective intelligence; restrict observatio
 
 ## SIM-02 — The scheduler as an experimental treatment
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Scheduler order can determine outcomes; test fairness, staleness and determinism separately.
 
@@ -2662,7 +2662,7 @@ Scheduler order can determine outcomes; test fairness, staleness and determinism
 
 ## SIM-03 — Can the benchmark be solved without observing peers?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Peer-observation ablation tests whether interaction is necessary; an animation alone cannot establish emergence.
 
@@ -2678,7 +2678,7 @@ Peer-observation ablation tests whether interaction is necessary; an animation a
 
 ## SIM-04 — Same rules, different engines
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Engine equivalence requires behavioral invariants, not identical screenshots.
 
@@ -2694,7 +2694,7 @@ Engine equivalence requires behavioral invariants, not identical screenshots.
 
 ## MTH-07 — Do failure rankings survive independent relabelling?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Independent outcome labels are needed when evaluator and solver share biases.
 
@@ -2710,7 +2710,7 @@ Independent outcome labels are needed when evaluator and solver share biases.
 
 ## MTH-08 — Does the split separate new games or just new turns?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Turn-level splits leak game context; hold out entire games and related templates.
 
@@ -2726,7 +2726,7 @@ Turn-level splits leak game context; hold out entire games and related templates
 
 ## MTH-09 — Does the evaluator know more than the acting agent?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 A privileged evaluator can leak the answer into the protocol; isolate information flows.
 
@@ -2742,7 +2742,7 @@ A privileged evaluator can leak the answer into the protocol; isolate informatio
 
 ## MTH-10 — Does translation preserve the interaction being measured?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Translation may alter difficulty rather than just surface form; validate semantic equivalence independently.
 
@@ -2758,7 +2758,7 @@ Translation may alter difficulty rather than just surface form; validate semanti
 
 ## MTH-11 — Which system wins when failed runs count?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Failed runs belong in ranking denominators; missingness may be protocol dependent.
 
@@ -2774,7 +2774,7 @@ Failed runs belong in ranking denominators; missingness may be protocol dependen
 
 ## MTH-12 — When does a collection of sessions become a team?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Repeated sessions are not necessarily independent teams; identify shared memory and initialization.
 
@@ -2790,7 +2790,7 @@ Repeated sessions are not necessarily independent teams; identify shared memory 
 
 ## MTH-13 — Is there a stable ranking of cooperative ability?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 A cooperation ranking depends on incentives and metrics; seek stability across consequential measures.
 
@@ -2806,7 +2806,7 @@ A cooperation ranking depends on incentives and metrics; seek stability across c
 
 ## MTH-14 — Does the apparent trend survive the crawler?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Crawler changes can shift the input distribution; archive acquisition metadata and compare fixed corpora.
 
@@ -2822,7 +2822,7 @@ Crawler changes can shift the input distribution; archive acquisition metadata a
 
 ## MTH-15 — Does entropy predict collaboration beyond task difficulty?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **Medium**
 
 Entropy and difficulty differ; a varied answer distribution can still be easy.
 
@@ -2838,7 +2838,7 @@ Entropy and difficulty differ; a varied answer distribution can still be easy.
 
 ## SIM-05 — Can the published summary be rebuilt from committed events?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Ledger replay tests whether recorded events determine the state; unlogged state is a reproducibility failure.
 
@@ -2854,7 +2854,7 @@ Ledger replay tests whether recorded events determine the state; unlogged state 
 
 ## SIM-06 — When does offline policy evaluation stop ranking policies correctly?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Offline coverage of individual actions may miss joint combinations; quantify unsupported team behavior.
 
@@ -2870,7 +2870,7 @@ Offline coverage of individual actions may miss joint combinations; quantify uns
 
 ## SIM-07 — What does a best-of-many baseline actually buy?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Foundation** · Visualization: **High**
 
 Best-of-many with oracle choice is a ceiling; compare a real selector and charge all candidates.
 
@@ -2886,7 +2886,7 @@ Best-of-many with oracle choice is a ceiling; compare a real selector and charge
 
 ## BUD-01 — Visible budgets in private and shared pools
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Pool visibility and pooling rights are distinct mechanisms; cross them under an enforced total cap.
 
@@ -2902,7 +2902,7 @@ Pool visibility and pooling rights are distinct mechanisms; cross them under an 
 
 ## BUD-02 — Which parts of peer spending should be visible?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Spend visibility can coordinate or anchor agents; match actual available resources.
 
@@ -2918,7 +2918,7 @@ Spend visibility can coordinate or anchor agents; match actual available resourc
 
 ## BUD-03 — Displayed balance versus the enforced balance
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 False balance reports isolate reaction to a signal from true scarcity; keep hard limits unchanged.
 
@@ -2934,7 +2934,7 @@ False balance reports isolate reaction to a signal from true scarcity; keep hard
 
 ## BUD-04 — Context anxiety or spending anxiety?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Context availability and spending concern can be confounded; manipulate each independently.
 
@@ -2950,7 +2950,7 @@ Context availability and spending concern can be confounded; manipulate each ind
 
 ## BUD-05 — Use cost forecasts to release stranded budget
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Cost forecasts are useful if they improve decisions under misspecification; compare against simple reserves.
 
@@ -2966,7 +2966,7 @@ Cost forecasts are useful if they improve decisions under misspecification; comp
 
 ## BUD-06 — Do quotas cause unnecessary spawning?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Identity quotas are a mechanism-design choice, not a biological individuality result.
 
@@ -2982,7 +2982,7 @@ Identity quotas are a mechanism-design choice, not a biological individuality re
 
 ## BUD-07 — Discovering a quota rule
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Learning a quota consumes resources and changes policy; distinguish discovery cost from later efficiency.
 
@@ -2998,7 +2998,7 @@ Learning a quota consumes resources and changes policy; distinguish discovery co
 
 ## BUD-08 — Spawn fees versus lineage budgets
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Spawn fees may suppress useful specialization as well as identity abuse; measure both.
 
@@ -3014,7 +3014,7 @@ Spawn fees may suppress useful specialization as well as identity abuse; measure
 
 ## BUD-09 — Safe escrow that still gets work done
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Escrow partitions protect reserves but can strand capacity; vary transfer and release rules.
 
@@ -3030,7 +3030,7 @@ Escrow partitions protect reserves but can strand capacity; vary transfer and re
 
 ## BUD-10 — Peers, coordinator, equal shares or auction?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 An allocator must outperform simple rules after its own overhead; oracle demand knowledge is a ceiling.
 
@@ -3046,7 +3046,7 @@ An allocator must outperform simple rules after its own overhead; oracle demand 
 
 ## BUD-11 — Can cost bids beat measured capability?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Bids may reflect strategy rather than capability; independently measure skill and incentive response.
 
@@ -3062,7 +3062,7 @@ Bids may reflect strategy rather than capability; independently measure skill an
 
 ## BUD-12 — Replan on events or every action?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Event-triggered replanning can save resources if missed-change costs are included.
 
@@ -3078,7 +3078,7 @@ Event-triggered replanning can save resources if missed-change costs are include
 
 ## BUD-13 — Difficulty-aware allocation without hindsight
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Online difficulty estimates need out-of-distribution calibration; retrospective labels cannot guide deployed allocation.
 
@@ -3094,7 +3094,7 @@ Online difficulty estimates need out-of-distribution calibration; retrospective 
 
 ## BUD-14 — Divide work through a ledger alone
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 A ledger may enable coordination or performative spending; action quality must be scored separately.
 
@@ -3110,7 +3110,7 @@ A ledger may enable coordination or performative spending; action quality must b
 
 ## BUD-15 — Do peer spending norms increase waste?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Spending norms need persistence and adaptation tests; shared prompts can imitate cultural transmission.
 
@@ -3126,7 +3126,7 @@ Spending norms need persistence and adaptation tests; shared prompts can imitate
 
 ## BUD-16 — Authority, labels and asymmetric spending rights
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Resource knowledge does not confer spending authority; separate information and control rights.
 
@@ -3142,7 +3142,7 @@ Resource knowledge does not confer spending authority; separate information and 
 
 ## BUD-17 — Keep enough budget to finish and verify
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Verification reserves are a practical first comparison; a nominal budget is not executable headroom.
 
@@ -3158,7 +3158,7 @@ Verification reserves are a practical first comparison; a nominal budget is not 
 
 ## BUD-18 — Tokens, money or a resource vector?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Money, latency and context form different constraints; reducing them to one scalar may misallocate effort.
 
@@ -3174,7 +3174,7 @@ Money, latency and context form different constraints; reducing them to one scal
 
 ## BUD-19 — Advisory targets inside a hard cap
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Soft targets and hard caps induce different behaviors; preserve total capacity while testing signals.
 
@@ -3190,7 +3190,7 @@ Soft targets and hard caps induce different behaviors; preserve total capacity w
 
 ## BUD-20 — Budget accounting across tools and compaction
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Compaction can erase accounting history without replenishing capacity; test ledger consistency explicitly.
 
@@ -3206,7 +3206,7 @@ Compaction can erase accounting history without replenishing capacity; test ledg
 
 ## BUD-21 — Train for a penalty or a strict budget?
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Reward penalties do not enforce a hard constraint; compare violation tails rather than means alone.
 
@@ -3222,7 +3222,7 @@ Reward penalties do not enforce a hard constraint; compare violation tails rathe
 
 ## BUD-22 — Efficiency and starvation in shared budgets
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Minimum service protects neglected work but can reserve resources for low-value demand; evaluate the tradeoff.
 
@@ -3238,7 +3238,7 @@ Minimum service protects neglected work but can reserve resources for low-value 
 
 ## MKT-01 — Market division when output needs sunk capacity
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Sunk capacity makes timing and irreversibility central; a biological resource analogy does not establish collusion.
 
@@ -3254,7 +3254,7 @@ Sunk capacity makes timing and irreversibility central; a biological resource an
 
 ## MKT-02 — Firms per good and the collapse of division
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 More firms and more goods change different dimensions; hold production feasibility and demand explicit.
 
@@ -3270,7 +3270,7 @@ More firms and more goods change different dimensions; hold production feasibili
 
 ## MKT-03 — One principal, several firms
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 One owner operating several firms is an ownership intervention; count controllers separately from participants.
 
@@ -3286,7 +3286,7 @@ One owner operating several firms is an ownership intervention; count controller
 
 ## MKT-04 — Telling Sybil firms from tacit colluders
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Identity multiplication and coordinated pricing are distinct threats; a crossed design prevents conflation.
 
@@ -3302,7 +3302,7 @@ Identity multiplication and coordinated pricing are distinct threats; a crossed 
 
 ## MKT-05 — Reading the messages versus reading the market
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Prioritize** · Visualization: **High**
 
 Talk of cooperation does not demonstrate collusion; consequential price and output responses matter.
 
@@ -3318,7 +3318,7 @@ Talk of cooperation does not demonstrate collusion; consequential price and outp
 
 ## MKT-06 — No channel, public channel, private channel
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Communication channels change coordination opportunity; preserve all other market information.
 
@@ -3334,7 +3334,7 @@ Communication channels change coordination opportunity; preserve all other marke
 
 ## MKT-07 — Forked firms and inherited conventions
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Forked market culture may persist through artifacts or prompts rather than learned convention.
 
@@ -3350,7 +3350,7 @@ Forked market culture may persist through artifacts or prompts rather than learn
 
 ## MKT-08 — Mixed models as a natural brake
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Model mixing changes skill, strategy and error structure; equalize capability before claiming ecological diversity gains.
 
@@ -3366,7 +3366,7 @@ Model mixing changes skill, strategy and error structure; equalize capability be
 
 ## MKT-09 — Public production ledger
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Public ledgers can inform competition or facilitate coordination; direction must remain an empirical question.
 
@@ -3382,7 +3382,7 @@ Public ledgers can inform competition or facilitate coordination; direction must
 
 ## MKT-10 — One competitive entrant
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 A competitive entrant perturbs an incumbent system; measure entry barriers and response over time.
 
@@ -3398,7 +3398,7 @@ A competitive entrant perturbs an incumbent system; measure entry barriers and r
 
 ## MKT-11 — Sybils against an antitrust regulator
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Develop** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Develop** · Visualization: **High**
 
 Regulator Sybil attacks require an explicit authority model; biological immunity supplies no ownership guarantee.
 
@@ -3414,7 +3414,7 @@ Regulator Sybil attacks require an explicit authority model; biological immunity
 
 ## MKT-12 — Does the small simulator predict the real game
 
-[Atlas candidate](../../../../researchers/dmarz/notes/question-atlas/candidates.json) · **Defer** · Visualization: **High**
+[Atlas candidate](../../dmarz/question-atlas/candidates.json) · **Defer** · Visualization: **High**
 
 Factorio transfer is visually attractive but expensive and heavily confounded; establish a small economic mechanism first.
 
@@ -3430,7 +3430,7 @@ Factorio transfer is visually attractive but expensive and heavily confounded; e
 
 ## VX-01 — Root identity at the observation level
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Observation ancestry is a better candidate unit than domain identity; inferred ancestry must be tested with errors.
 
@@ -3446,7 +3446,7 @@ Observation ancestry is a better candidate unit than domain identity; inferred a
 
 ## VX-02 — Asymmetric errors in provenance
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 False merges and false splits of provenance have asymmetric consequences; separate them before tuning a threshold.
 
@@ -3462,7 +3462,7 @@ False merges and false splits of provenance have asymmetric consequences; separa
 
 ## VX-03 — Reachability of a correct commit
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 A correct commitment may be unreachable under the allowed evidence paths; distinguish epistemic failure from bad aggregation.
 
@@ -3478,7 +3478,7 @@ A correct commitment may be unreachable under the allowed evidence paths; distin
 
 ## VX-04 — Separate dissent from newly purchased evidence
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Disagreement and new evidence are not interchangeable; the latter should explain a critic’s value.
 
@@ -3494,7 +3494,7 @@ Disagreement and new evidence are not interchangeable; the latter should explain
 
 ## VX-05 — Quarantine consumes the correction window
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 A quarantine window can block both contamination and its correction; prioritize this cost of containment.
 
@@ -3510,7 +3510,7 @@ A quarantine window can block both contamination and its correction; prioritize 
 
 ## VX-06 — Correction survives a returning child
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Returning children test whether the repair boundary includes forks; local cleanup is insufficient.
 
@@ -3526,7 +3526,7 @@ Returning children test whether the repair boundary includes forks; local cleanu
 
 ## VX-07 — Backup versus reacquisition under common loss
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Backup restoration and independent reacquisition have different failure assumptions; neither alone proves regeneration.
 
@@ -3542,7 +3542,7 @@ Backup restoration and independent reacquisition have different failure assumpti
 
 ## VX-08 — The first observer becomes the apparent leader
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Develop** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Develop** · Visualization: **High**
 
 First-observer leadership may reward timing rather than competence; randomize observation arrival.
 
@@ -3558,7 +3558,7 @@ First-observer leadership may reward timing rather than competence; randomize ob
 
 ## VX-09 — Credit for work whose benefit arrives later
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Develop** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Develop** · Visualization: **High**
 
 Delayed credit can miss an early essential contribution; compare causal contribution and immediate visibility.
 
@@ -3574,7 +3574,7 @@ Delayed credit can miss an early essential contribution; compare causal contribu
 
 ## VX-10 — Apparent regrowth through undeclared artifacts
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Hidden backups make apparent regrowth uninterpretable; lesion all declared channels or label what survives.
 
@@ -3590,7 +3590,7 @@ Hidden backups make apparent regrowth uninterpretable; lesion all declared chann
 
 ## VX-11 — Rollback after an irreversible action
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Rollback cannot reverse every real action; recovery claims should include irreversible consequences.
 
@@ -3606,7 +3606,7 @@ Rollback cannot reverse every real action; recovery claims should include irreve
 
 ## VX-12 — Faithful retelling of a false source
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Develop** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Develop** · Visualization: **High**
 
 Faithful retelling of a false source preserves misinformation; fidelity and truth need separate scores.
 
@@ -3622,7 +3622,7 @@ Faithful retelling of a false source preserves misinformation; fidelity and trut
 
 ## VX-13 — Alternative explanations change the next action
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 An alternative explanation matters when it changes a decision or distinguishes interventions.
 
@@ -3638,7 +3638,7 @@ An alternative explanation matters when it changes a decision or distinguishes i
 
 ## VX-14 — The detector changes the swarm it observes
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 A detector may alter behavior and resource use; quantify the intervention burden itself.
 
@@ -3654,7 +3654,7 @@ A detector may alter behavior and resource use; quantify the intervention burden
 
 ## VX-15 — Continuity belongs to the ledger or the leader
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Develop** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Develop** · Visualization: **High**
 
 Leader continuity may come from a shared ledger rather than the leader; cross handoff and ledger persistence.
 
@@ -3670,7 +3670,7 @@ Leader continuity may come from a shared ledger rather than the leader; cross ha
 
 ## VX-16 — Retiring culture without erasing safety knowledge
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Retiring an obsolete convention while keeping a valid safeguard is more informative than simple forgetting.
 
@@ -3686,7 +3686,7 @@ Retiring an obsolete convention while keeping a valid safeguard is more informat
 
 ## VX-17 — Delegated verification across generations
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Develop** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Develop** · Visualization: **High**
 
 Delegated verification transfers authority and may concentrate dependence; inspect the delegation chain.
 
@@ -3702,7 +3702,7 @@ Delegated verification transfers authority and may concentrate dependence; inspe
 
 ## VX-18 — Hidden state repair without visible damage
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Visible repairs may leave hidden state corrupted; define an independent functional challenge.
 
@@ -3718,7 +3718,7 @@ Visible repairs may leave hidden state corrupted; define an independent function
 
 ## VX-19 — Checkpoint recovery under a new update schedule
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Develop** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Develop** · Visualization: **High**
 
 Checkpoint frequency trades overhead against lost work; compare under matched failure hazards.
 
@@ -3734,7 +3734,7 @@ Checkpoint frequency trades overhead against lost work; compare under matched fa
 
 ## VX-20 — Diverse contributors with one evidence supplier
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Different agents using one supplier may share failures; diversity labels cannot substitute for exposure tracing.
 
@@ -3750,7 +3750,7 @@ Different agents using one supplier may share failures; diversity labels cannot 
 
 ## VX-21 — Urgency claims redirect shared budgets
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Urgency changes the value of deliberation; compare resource allocation at fixed deadline and evidence quality.
 
@@ -3766,7 +3766,7 @@ Urgency changes the value of deliberation; compare resource allocation at fixed 
 
 ## VX-22 — Buy validator diversity or buy source diversity
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Validator diversity and source diversity need independent manipulations; this directly tests monoculture failure.
 
@@ -3782,7 +3782,7 @@ Validator diversity and source diversity need independent manipulations; this di
 
 ## VX-23 — Appeals can revive already corrected claims
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Appeal-based revival can restore good contributors or reopen a harmful path; both determine usefulness.
 
@@ -3798,7 +3798,7 @@ Appeal-based revival can restore good contributors or reopen a harmful path; bot
 
 ## VX-24 — The cost of a false accusation depends on timing
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Develop** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Develop** · Visualization: **High**
 
 False accusations can exploit timing even when adjudication is accurate; measure deadlines and service loss.
 
@@ -3814,7 +3814,7 @@ False accusations can exploit timing even when adjudication is accurate; measure
 
 ## VX-25 — Routing with an obsolete expertise directory
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Develop** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Develop** · Visualization: **High**
 
 An expertise directory becomes a liability after skill drift; compare refresh policies and routing errors.
 
@@ -3830,7 +3830,7 @@ An expertise directory becomes a liability after skill drift; compare refresh po
 
 ## VX-26 — Separate retrieval exposure from peer amplification
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Retrieval can amplify one source rather than add knowledge; separate repeated access from independent evidence.
 
@@ -3846,7 +3846,7 @@ Retrieval can amplify one source rather than add knowledge; separate repeated ac
 
 ## VX-27 — Transfer the control principle rather than the metaphor
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Foundation** · Visualization: **Medium**
+[VX extension](../atlas-review/extensions.json) · **Foundation** · Visualization: **Medium**
 
 A control should eliminate a causal alternative; a biological resemblance is not itself a test.
 
@@ -3862,7 +3862,7 @@ A control should eliminate a causal alternative; a biological resemblance is not
 
 ## VX-28 — Option sets change reported decision confidence
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Develop** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Develop** · Visualization: **High**
 
 Changing the option set can alter confidence without new evidence; keep source quality fixed.
 
@@ -3878,7 +3878,7 @@ Changing the option set can alter confidence without new evidence; keep source q
 
 ## VX-29 — Scarce attention can suppress the only correct newcomer
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Develop** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Develop** · Visualization: **High**
 
 Attention allocated to newcomers is a scarce resource; test beneficial entry and spam separately.
 
@@ -3894,7 +3894,7 @@ Attention allocated to newcomers is a scarce resource; test beneficial entry and
 
 ## VX-30 — Missing logs can hide the verifier's failures
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Foundation** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Foundation** · Visualization: **High**
 
 Missing verifier logs can hide both successful checks and silent failures; report identifiability limits.
 
@@ -3910,7 +3910,7 @@ Missing verifier logs can hide both successful checks and silent failures; repor
 
 ## VX-31 — Abstention should purchase information or close the case
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Abstention may communicate uncertainty rather than merely remove a vote; test how recipients use it.
 
@@ -3926,7 +3926,7 @@ Abstention may communicate uncertainty rather than merely remove a vote; test ho
 
 ## VX-32 — Permission filters can impersonate coordination
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Develop** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Develop** · Visualization: **High**
 
 Permission filters can impair coordination by blocking legitimate paths; record useful work prevented.
 
@@ -3942,7 +3942,7 @@ Permission filters can impair coordination by blocking legitimate paths; record 
 
 ## VX-33 — Budget exhaustion changes the causal estimand
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Foundation** · Visualization: **Medium**
+[VX extension](../atlas-review/extensions.json) · **Foundation** · Visualization: **Medium**
 
 Budget exhaustion changes which tasks receive outcomes; unfinished tasks need a declared estimand.
 
@@ -3958,7 +3958,7 @@ Budget exhaustion changes which tasks receive outcomes; unfinished tasks need a 
 
 ## VX-34 — Route facts by value without learning the answer key
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 A router should select useful evidence without privileged answers; use observable task requirements.
 
@@ -3974,7 +3974,7 @@ A router should select useful evidence without privileged answers; use observabl
 
 ## VX-35 — Evidence collection reacts to the current majority
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Develop** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Develop** · Visualization: **High**
 
 Evidence collection can follow an early majority and reinforce it; intervene on acquisition policy.
 
@@ -3990,7 +3990,7 @@ Evidence collection can follow an early majority and reinforce it; intervene on 
 
 ## VX-36 — Truth and authorization need separate admission tests
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Truth and authority answer different questions; trustworthy content can still lack action permission.
 
@@ -4006,7 +4006,7 @@ Truth and authority answer different questions; trustworthy content can still la
 
 ## VX-37 — Discovery selection needs a confirmatory budget
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Discovery and confirmation need separate resource accounting; adaptive stopping otherwise rewards luck.
 
@@ -4022,7 +4022,7 @@ Discovery and confirmation need separate resource accounting; adaptive stopping 
 
 ## VX-38 — Independent review can share a poisoned summary
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 A reviewer fed a poisoned summary is not an independent barrier; restore access to original evidence.
 
@@ -4038,7 +4038,7 @@ A reviewer fed a poisoned summary is not an independent barrier; restore access 
 
 ## VX-39 — Repair preserves constraints across a changing task
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Prioritize** · Visualization: **High**
 
 Restoring an old state may be wrong after constraints change; recovery must target current function.
 
@@ -4054,7 +4054,7 @@ Restoring an old state may be wrong after constraints change; recovery must targ
 
 ## VX-40 — Queue position should not decide which evidence is true
 
-[VX extension](../../../../researchers/vishesh/notes/atlas-review/extensions.json) · **Develop** · Visualization: **High**
+[VX extension](../atlas-review/extensions.json) · **Develop** · Visualization: **High**
 
 Queue position can determine which truth is heard; randomize order independently of evidence quality.
 
@@ -4070,7 +4070,7 @@ Queue position can determine which truth is heard; randomize order independently
 
 ## PX-01 — Separate novelty of wording from novelty of evidence
 
-[PX extension](../../../../researchers/vishesh/notes/priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
+[PX extension](../priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
 
 Novel wording and independent evidence can move in opposite directions; content novelty needs an ancestry control.
 
@@ -4086,7 +4086,7 @@ Novel wording and independent evidence can move in opposite directions; content 
 
 ## PX-02 — Track conclusions that depend on something being absent
 
-[PX extension](../../../../researchers/vishesh/notes/priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
+[PX extension](../priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
 
 Negative premises create hidden dependencies; repair must invalidate conclusions based on an absence claim.
 
@@ -4102,7 +4102,7 @@ Negative premises create hidden dependencies; repair must invalidate conclusions
 
 ## PX-03 — Test correction visibility independently of correction storage
 
-[PX extension](../../../../researchers/vishesh/notes/priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
+[PX extension](../priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
 
 A correct edit has no effect if downstream agents never see it; visibility belongs in the repair outcome.
 
@@ -4118,7 +4118,7 @@ A correct edit has no effect if downstream agents never see it; visibility belon
 
 ## PX-04 — Evaluate safe return over a continuation sequence
 
-[PX extension](../../../../researchers/vishesh/notes/priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
+[PX extension](../priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
 
 A one-time reentry check may miss a sequence-dependent failure; use withheld post-return challenges.
 
@@ -4134,7 +4134,7 @@ A one-time reentry check may miss a sequence-dependent failure; use withheld pos
 
 ## PX-05 — Distinguish missing knowledge from missing retrieval keys
 
-[PX extension](../../../../researchers/vishesh/notes/priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
+[PX extension](../priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
 
 Facts can survive while retrieval keys fail; measure storage and accessibility separately.
 
@@ -4150,7 +4150,7 @@ Facts can survive while retrieval keys fail; measure storage and accessibility s
 
 ## PX-06 — Give an omission detector a bounded completeness contract
 
-[PX extension](../../../../researchers/vishesh/notes/priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
+[PX extension](../priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
 
 Completeness contracts can support justified abstention without revealing the answer; test missing requirements.
 
@@ -4166,7 +4166,7 @@ Completeness contracts can support justified abstention without revealing the an
 
 ## PX-07 — Measure independence before intervention and after attrition
 
-[PX extension](../../../../researchers/vishesh/notes/priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
+[PX extension](../priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
 
 Attrition can remove independence disproportionately; retain ancestry while varying which agents fail.
 
@@ -4182,7 +4182,7 @@ Attrition can remove independence disproportionately; retain ancestry while vary
 
 ## PX-08 — Protect a rare view without rewarding a wrong view
 
-[PX extension](../../../../researchers/vishesh/notes/priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
+[PX extension](../priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
 
 Protect rare correct evidence without elevating rare errors; rarity alone is a poor policy target.
 
@@ -4198,7 +4198,7 @@ Protect rare correct evidence without elevating rare errors; rarity alone is a p
 
 ## PX-09 — Require evidence before compressing examples into a rule
 
-[PX extension](../../../../researchers/vishesh/notes/priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
+[PX extension](../priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
 
 Remembering examples does not establish a transferable rule; hold out structural cases after turnover.
 
@@ -4214,7 +4214,7 @@ Remembering examples does not establish a transferable rule; hold out structural
 
 ## PX-10 — Route messages by decision change without rewarding disruption
 
-[PX extension](../../../../researchers/vishesh/notes/priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
+[PX extension](../priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
 
 Route by expected decision change rather than conversational relevance; selector overhead must be charged.
 
@@ -4230,7 +4230,7 @@ Route by expected decision change rather than conversational relevance; selector
 
 ## PX-11 — Separate a reporting receipt from completed remediation
 
-[PX extension](../../../../researchers/vishesh/notes/priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
+[PX extension](../priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
 
 An acknowledged report is not remediation; record the full correction path and remaining damage.
 
@@ -4246,7 +4246,7 @@ An acknowledged report is not remediation; record the full correction path and r
 
 ## PX-12 — Cross finalization reserves with actual execution headroom
 
-[PX extension](../../../../researchers/vishesh/notes/priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
+[PX extension](../priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
 
 A reserve protects completion only if capacity remains executable at the right phase.
 
@@ -4262,7 +4262,7 @@ A reserve protects completion only if capacity remains executable at the right p
 
 ## PX-13 — Abstain from selecting a team when profiling is inconclusive
 
-[PX extension](../../../../researchers/vishesh/notes/priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
+[PX extension](../priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
 
 An inconclusive team-selection result should change selection policy rather than become a winner narrative.
 
@@ -4278,7 +4278,7 @@ An inconclusive team-selection result should change selection policy rather than
 
 ## PX-14 — Separate backup diversity from observation diversity
 
-[PX extension](../../../../researchers/vishesh/notes/priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
+[PX extension](../priority-research-expansion/ideas.json) · **Prioritize** · Visualization: **High**
 
 Redundant storage protects availability; independent evidence protects against shared wrongness. Cross these factors.
 
@@ -4294,7 +4294,7 @@ Redundant storage protects availability; independent evidence protects against s
 
 ## BR-casefile — Casefile
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/casefile.md) · **Foundation** · Visualization: **High**
+[Original brief](../project-briefs/casefile.md) · **Foundation** · Visualization: **High**
 
 A reliable evidence viewer has immediate value; biological lineage reconstruction is only an unverified methodological search lead.
 
@@ -4310,7 +4310,7 @@ A reliable evidence viewer has immediate value; biological lineage reconstructio
 
 ## BR-collective-sensing — Collective sensing
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/collective-sensing.md) · **Prioritize** · Visualization: **High**
+[Original brief](../project-briefs/collective-sensing.md) · **Prioritize** · Visualization: **High**
 
 Best shared testbed: fix the union of evidence and vary access, copying and communication. A beautiful flock view is secondary to correct aggregation.
 
@@ -4326,7 +4326,7 @@ Best shared testbed: fix the union of evidence and vary access, copying and comm
 
 ## BR-commons — Commons
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/commons.md) · **Develop** · Visualization: **High**
+[Original brief](../project-briefs/commons.md) · **Develop** · Visualization: **High**
 
 Verified shared knowledge is a sharper contribution than another generic harvest game; jointly score useful production, verification cost and free riding.
 
@@ -4342,7 +4342,7 @@ Verified shared knowledge is a sharper contribution than another generic harvest
 
 ## BR-coordination — Coordination
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/coordination.md) · **Prioritize** · Visualization: **High**
+[Original brief](../project-briefs/coordination.md) · **Prioritize** · Visualization: **High**
 
 A cost–quality frontier can guide actual team design if duplicate work and waiting are measured consistently.
 
@@ -4358,7 +4358,7 @@ A cost–quality frontier can guide actual team design if duplicate work and wai
 
 ## BR-culture — Culture
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/culture.md) · **Develop** · Visualization: **High**
+[Original brief](../project-briefs/culture.md) · **Develop** · Visualization: **High**
 
 Turnover and obsolete-rule tests make transmission falsifiable; inherited instructions must be separated from interaction.
 
@@ -4374,7 +4374,7 @@ Turnover and obsolete-rule tests make transmission falsifiable; inherited instru
 
 ## BR-discovery — Discovery
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/discovery.md) · **Develop** · Visualization: **High**
+[Original brief](../project-briefs/discovery.md) · **Develop** · Visualization: **High**
 
 Treat trace clustering as review triage, not attribution. Biology adds no established shortcut to intent or ownership.
 
@@ -4390,7 +4390,7 @@ Treat trace clustering as review triage, not attribution. Biology adds no establ
 
 ## BR-dissent — Dissent
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/dissent.md) · **Prioritize** · Visualization: **High**
+[Original brief](../project-briefs/dissent.md) · **Prioritize** · Visualization: **High**
 
 Evidence-conditioned dissent is more defensible than compulsory opposition; measure harm to correct majorities.
 
@@ -4406,7 +4406,7 @@ Evidence-conditioned dissent is more defensible than compulsory opposition; meas
 
 ## BR-diversity — Diversity
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/diversity.md) · **Prioritize** · Visualization: **High**
+[Original brief](../project-briefs/diversity.md) · **Prioritize** · Visualization: **High**
 
 Prioritize failure complementarity over role labels; include common supplier and shared-blind-spot controls.
 
@@ -4422,7 +4422,7 @@ Prioritize failure complementarity over role labels; include common supplier and
 
 ## BR-institutions — Institutions
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/institutions.md) · **Prioritize** · Visualization: **High**
+[Original brief](../project-briefs/institutions.md) · **Prioritize** · Visualization: **High**
 
 One challenge-and-appeal rule is enough for a meaningful experiment; bound review costs and count useful work delayed.
 
@@ -4438,7 +4438,7 @@ One challenge-and-appeal rule is enough for a meaningful experiment; bound revie
 
 ## BR-leadership — Leadership
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/leadership.md) · **Develop** · Visualization: **High**
+[Original brief](../project-briefs/leadership.md) · **Develop** · Visualization: **High**
 
 Separate proposal adoption, expertise and causal influence. Message centrality alone does not identify a leader.
 
@@ -4454,7 +4454,7 @@ Separate proposal adoption, expertise and causal influence. Message centrality a
 
 ## BR-memory — Memory
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/memory.md) · **Prioritize** · Visualization: **High**
+[Original brief](../project-briefs/memory.md) · **Prioritize** · Visualization: **High**
 
 Correction persistence is practical and testable; appending a correction may leave the old claim reachable.
 
@@ -4470,7 +4470,7 @@ Correction persistence is practical and testable; appending a correction may lea
 
 ## BR-nca-observatory — Nca observatory
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/nca-observatory.md) · **Develop** · Visualization: **High**
+[Original brief](../project-briefs/nca-observatory.md) · **Develop** · Visualization: **High**
 
 Highest immediate visual appeal, but growth-and-repair is established. A functional or update-clock boundary is needed for scientific added value.
 
@@ -4486,7 +4486,7 @@ Highest immediate visual appeal, but growth-and-repair is established. A functio
 
 ## BR-quorum — Quorum
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/quorum.md) · **Prioritize** · Visualization: **High**
+[Original brief](../project-briefs/quorum.md) · **Prioritize** · Visualization: **High**
 
 The repeated-source versus independent-evidence comparison is compact and falsifiable; provenance uncertainty is the useful extension.
 
@@ -4502,7 +4502,7 @@ The repeated-source versus independent-evidence comparison is compact and falsif
 
 ## BR-regrowth — Regrowth
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/regrowth.md) · **Prioritize** · Visualization: **High**
+[Original brief](../project-briefs/regrowth.md) · **Prioritize** · Visualization: **High**
 
 Strong mechanism if loss is real and restoration targets current task function. Separate redundancy, reacquisition and reconstruction.
 
@@ -4518,7 +4518,7 @@ Strong mechanism if loss is real and restoration targets current task function. 
 
 ## BR-telephone — Telephone
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/telephone.md) · **Prioritize** · Visualization: **High**
+[Original brief](../project-briefs/telephone.md) · **Prioritize** · Visualization: **High**
 
 A claim-lineage inspector can be useful even without a new contagion theory; validate links against annotated episodes.
 
@@ -4534,7 +4534,7 @@ A claim-lineage inspector can be useful even without a new contagion theory; val
 
 ## BR-whistleblowing — Whistleblowing
 
-[Original brief](../../../../researchers/vishesh/notes/project-briefs/whistleblowing.md) · **Prioritize** · Visualization: **High**
+[Original brief](../project-briefs/whistleblowing.md) · **Prioritize** · Visualization: **High**
 
 Reporting is a detection-to-remediation process, not a count of accusations. The immune analogy suggests measuring collateral interruption.
 
@@ -4550,7 +4550,7 @@ Reporting is a detection-to-remediation process, not a count of accusations. The
 
 ## B1 — Budget visibility × pooling
 
-[Budget hunch](../../../../researchers/dmarz/notes/agent-budgets-hunches.md) · **Prioritize** · Visualization: **High**
+[Budget hunch](../../dmarz/agent-budgets-hunches.md) · **Prioritize** · Visualization: **High**
 
 Visibility and pooling form a clean factorial; front-loaded spending is a prediction to test, not an assumed commons law.
 
@@ -4566,7 +4566,7 @@ Visibility and pooling form a clean factorial; front-loaded spending is a predic
 
 ## B2 — Identity splitting for quota
 
-[Budget hunch](../../../../researchers/dmarz/notes/agent-budgets-hunches.md) · **Develop** · Visualization: **High**
+[Budget hunch](../../dmarz/agent-budgets-hunches.md) · **Develop** · Visualization: **High**
 
 Quota splitting is actionable mechanism design; legitimate task decomposition must be a control for excess spawning.
 
@@ -4582,7 +4582,7 @@ Quota splitting is actionable mechanism design; legitimate task decomposition mu
 
 ## B3 — Who divides the budget
 
-[Budget hunch](../../../../researchers/dmarz/notes/agent-budgets-hunches.md) · **Prioritize** · Visualization: **High**
+[Budget hunch](../../dmarz/agent-budgets-hunches.md) · **Prioritize** · Visualization: **High**
 
 Compare peers, coordinator, rule and market after charging negotiation costs; demand heterogeneity should be explicit.
 
@@ -4598,7 +4598,7 @@ Compare peers, coordinator, rule and market after charging negotiation costs; de
 
 ## B4 — Tacit budget cartels
 
-[Budget hunch](../../../../researchers/dmarz/notes/agent-budgets-hunches.md) · **Develop** · Visualization: **High**
+[Budget hunch](../../dmarz/agent-budgets-hunches.md) · **Develop** · Visualization: **High**
 
 Public ledgers may improve coordination or waste resources; synchronized spending alone does not prove a cartel.
 
@@ -4614,7 +4614,7 @@ Public ledgers may improve coordination or waste resources; synchronized spendin
 
 ## B5 — Misreported population budgets
 
-[Budget hunch](../../../../researchers/dmarz/notes/agent-budgets-hunches.md) · **Prioritize** · Visualization: **High**
+[Budget hunch](../../dmarz/agent-budgets-hunches.md) · **Prioritize** · Visualization: **High**
 
 Misreported balance isolates signal response while holding true capacity fixed; useful as a control-system probe.
 
@@ -4630,7 +4630,7 @@ Misreported balance isolates signal response while holding true capacity fixed; 
 
 ## V1 — Vigilance after discovery
 
-[Vigilance hunch](../../../../researchers/dmarz/notes/honeypot-vigilance-hunches.md) · **Prioritize** · Visualization: **High**
+[Vigilance hunch](../../dmarz/honeypot-vigilance-hunches.md) · **Prioritize** · Visualization: **High**
 
 Post-discovery vigilance must improve discrimination rather than merely raise suspicion; include clean opportunities.
 
@@ -4646,7 +4646,7 @@ Post-discovery vigilance must improve discrimination rather than merely raise su
 
 ## V2 — Spread of vigilance
 
-[Vigilance hunch](../../../../researchers/dmarz/notes/honeypot-vigilance-hunches.md) · **Develop** · Visualization: **High**
+[Vigilance hunch](../../dmarz/honeypot-vigilance-hunches.md) · **Develop** · Visualization: **High**
 
 Hop-dependent spread is informative only when exposure paths are observed; shared context is a competing explanation.
 
@@ -4662,7 +4662,7 @@ Hop-dependent spread is informative only when exposure paths are observed; share
 
 ## V3 — Discovery versus hearsay
 
-[Vigilance hunch](../../../../researchers/dmarz/notes/honeypot-vigilance-hunches.md) · **Prioritize** · Visualization: **High**
+[Vigilance hunch](../../dmarz/honeypot-vigilance-hunches.md) · **Prioritize** · Visualization: **High**
 
 Direct discovery and hearsay may differ because of evidence quality; match content while varying experience.
 
@@ -4678,7 +4678,7 @@ Direct discovery and hearsay may differ because of evidence quality; match conte
 
 ## V4 — False-alarm cascades
 
-[Vigilance hunch](../../../../researchers/dmarz/notes/honeypot-vigilance-hunches.md) · **Develop** · Visualization: **High**
+[Vigilance hunch](../../dmarz/honeypot-vigilance-hunches.md) · **Develop** · Visualization: **High**
 
 False-alarm persistence is a testable prediction, not an established asymmetry. Counterevidence timing must be controlled.
 
@@ -4694,7 +4694,7 @@ False-alarm persistence is a testable prediction, not an established asymmetry. 
 
 ## V5 — Awareness of being tested
 
-[Vigilance hunch](../../../../researchers/dmarz/notes/honeypot-vigilance-hunches.md) · **Develop** · Visualization: **High**
+[Vigilance hunch](../../dmarz/honeypot-vigilance-hunches.md) · **Develop** · Visualization: **High**
 
 Test awareness can change behavior; separate evaluator cues from the underlying incident signal.
 
@@ -4710,7 +4710,7 @@ Test awareness can change behavior; separate evaluator cues from the underlying 
 
 ## DES-SOC07 — Private judgments before discussion
 
-[Standalone design](../../../../researchers/dmarz/notes/soc07-private-judgments/README.md) · **Prioritize** · Visualization: **High**
+[Standalone design](../../dmarz/soc07-private-judgments/README.md) · **Prioritize** · Visualization: **High**
 
 The staged private-judgment design is a good first protocol if NEVER, PREPARE and VOTE controls separate exposure, preparation and aggregation.
 
@@ -4726,7 +4726,7 @@ The staged private-judgment design is a good first protocol if NEVER, PREPARE an
 
 ## DES-FACTORY — Swarm factory
 
-[Standalone design](../../../../researchers/dmarz/notes/swarm-factory.md) · **Defer** · Visualization: **High**
+[Standalone design](../../dmarz/swarm-factory.md) · **Defer** · Visualization: **High**
 
 The small economic model should precede Factorio integration; ownership, market structure and communication are already enough factors.
 
@@ -4742,7 +4742,7 @@ The small economic model should precede Factorio integration; ownership, market 
 
 ## DES-INFLUENCE — External influence through acquired content
 
-[Standalone design](../../../../researchers/vishesh/notes/seo-poisoning/experimental-design.md) · **Prioritize** · Visualization: **High**
+[Standalone design](../seo-poisoning/experimental-design.md) · **Prioritize** · Visualization: **High**
 
 The external-content design can connect evidence ancestry, dissent and commitment. Biological best-of-N rates must not supply unvalidated effect sizes.
 
@@ -4758,7 +4758,7 @@ The external-content design can connect evidence ancestry, dissent and commitmen
 
 ## DES-IMMUNE — Durable recovery after bounded contamination
 
-[Standalone design](../../../../researchers/vishesh/notes/swarm-immune-response/experiment-design.md) · **Prioritize** · Visualization: **High**
+[Standalone design](../swarm-immune-response/experiment-design.md) · **Prioritize** · Visualization: **High**
 
 The strongest integrated narrative is durable recovery with clean controls, correct minorities and stale reentry. Keep it distinct from merely detecting a payload.
 
@@ -4774,7 +4774,7 @@ The strongest integrated narrative is durable recovery with clean controls, corr
 
 ## FM-Q1 — Hiding which fork returns
 
-[Fork-merge question](../../../../synthesis/fork-merge-questions.md) · **Develop** · Visualization: **High**
+[Fork-merge question](../../../../3-synthesis/fork-merge-questions.md) · **Develop** · Visualization: **High**
 
 Hidden return selection is useful only with an attacker timing constraint and controlled metadata leakage; no verified biological analogue establishes its guarantee.
 
@@ -4790,7 +4790,7 @@ Hidden return selection is useful only with an attacker timing constraint and co
 
 ## FM-Q2 — Corruption thresholds
 
-[Fork-merge question](../../../../synthesis/fork-merge-questions.md) · **Prioritize** · Visualization: **High**
+[Fork-merge question](../../../../3-synthesis/fork-merge-questions.md) · **Prioritize** · Visualization: **High**
 
 Correct the premise: classical Byzantine agreement bounds arbitrary faulty participants rather than assuming independent faults. Shared wrong evidence raises a separate truth problem.
 
@@ -4806,7 +4806,7 @@ Correct the premise: classical Byzantine agreement bounds arbitrary faulty parti
 
 ## FM-Q3 — Composed corruption and merge sequence
 
-[Fork-merge question](../../../../synthesis/fork-merge-questions.md) · **Prioritize** · Visualization: **High**
+[Fork-merge question](../../../../3-synthesis/fork-merge-questions.md) · **Prioritize** · Visualization: **High**
 
 End-to-end takeover claims need the whole sequence tested under one capability model; individual attack demonstrations do not prove composition.
 

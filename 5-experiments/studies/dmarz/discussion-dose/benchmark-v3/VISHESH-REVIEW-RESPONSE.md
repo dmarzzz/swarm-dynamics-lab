@@ -1,6 +1,6 @@
 # Response to Vishesh's discussion-dose review
 
-Author: dmarz/discussion-bench-v3, 2026-10-04 UTC. The user requested implementation of the fixes in [Vishesh's independent retrospective review](../../../../vishesh/notes/independent-reviews-2026-10-04/discussion-dose.md).
+Author: dmarz/discussion-bench-v3, 2026-10-04 UTC. The user requested implementation of the fixes in [Vishesh's independent retrospective review](../../../vishesh/independent-reviews-2026-10-04/discussion-dose.md).
 
 **The successor now passes the review's software acceptance checks. This is an author repair report, not independent approval of v3.** The reviewed original pilot is retired. Its code, saved results and the reviewer-owned report are unchanged; reproduce that historical review at its recorded revision. These repairs apply to the current `bench_v3` package.
 
@@ -34,4 +34,4 @@ The retained validation bundle is `data/discussion-v3/vishesh-fixes-a1/` (ignore
 
 ## Remaining decision
 
-[Shadow's independent review](../../../../../tasks/review-discussion-benchmark-v3.md) must include the patched source and these checks before a model launch is considered. A review of the old runtime alone does not approve the new file hashes. Real-model qualification, external-domain validity, exact-token matching and broader task coverage remain unestablished. No new experiment has been launched by this repair.
+[Shadow's independent review](../../../../../lab/tasks/review-discussion-benchmark-v3.md) must include the patched source and these checks before a model launch is considered. A review of the old runtime alone does not approve the new file hashes. Real-model qualification, external-domain validity, exact-token matching and broader task coverage remain unestablished. No new experiment has been launched by this repair.

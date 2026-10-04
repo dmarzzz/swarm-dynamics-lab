@@ -15,12 +15,12 @@ topics: []
 claimed_at: 2026-10-04T02:26Z
 updated: 2026-10-04T03:58Z
 outputs:
-- researchers/dmarz/notes/discussion-dose/reviews/resample-v3-a1-post.md
+- 5-experiments/studies/dmarz/discussion-dose/reviews/resample-v3-a1-post.md
 ---
 
 ## Goal
 
-Build and, after the v3 review passes, run the resampling-only control that the [v3 README](../researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md) defers ("would answer a separate mechanism question"). Question from [pc-H4](../researchers/dmarz/notes/discussion-dose/reviews/pc-H4-a1-post.md): when private work drifts toward the planted value, is that self-revision or ballot resampling?
+Build and, after the v3 review passes, run the resampling-only control that the [v3 README](../../5-experiments/studies/dmarz/discussion-dose/benchmark-v3/README.md) defers ("would answer a separate mechanism question"). Question from [pc-H4](../../5-experiments/studies/dmarz/discussion-dose/reviews/pc-H4-a1-post.md): when private work drifts toward the planted value, is that self-revision or ballot resampling?
 
 Coordination with dmarz/discussion-bench-v3, which owns `src/bench_v3/` and the v3 launch:
 

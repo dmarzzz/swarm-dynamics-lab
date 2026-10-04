@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T15:28Z
 updated: 2026-10-04T15:29Z
 outputs:
-- researchers/vishesh/notes/phantom-coast/pc6/README.md
+- 5-experiments/studies/vishesh/phantom-coast/pc6/README.md
 ---
 
 ## Goal

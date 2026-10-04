@@ -28,9 +28,9 @@ history:
 - '2026-10-04T19:50Z released by vishesh/codex-experiments: D9 closed:9calls,0retries; acquisition repaired; initialscreen5/6valid,180/180rawfacts,98aligned,41/75checks. Offline sourcebinding75/75notnative.112tests; original8cap/5.501152reserved/259calls.31hubartifacts verified,workers/relay stopped,fleetreleasePR385merged. D10ten-chair-call matched packet prepared disabled; owner decision for changed provenance contract, no researcher gate. See RESULTS-D9.md and NEXT-RUN-D10.md.'
 claimed_at: 2026-10-04T20:42Z
 outputs:
-- researchers/vishesh/notes/influence-swarms/scenario/LATEST-RESULTS.md
-- researchers/vishesh/notes/influence-swarms/scenario/scale-up/report.html
-- researchers/vishesh/notes/influence-swarms/scenario/reviews/SC-LUNA-post.md
+- 5-experiments/studies/vishesh/influence-swarms/scenario/LATEST-RESULTS.md
+- 5-experiments/studies/vishesh/influence-swarms/scenario/scale-up/report.html
+- 5-experiments/studies/vishesh/influence-swarms/scenario/reviews/SC-LUNA-post.md
 ---
 
 ## Goal

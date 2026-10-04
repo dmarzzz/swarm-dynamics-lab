@@ -17,10 +17,10 @@ topics:
 claimed_at: 2026-10-04T04:08Z
 updated: 2026-10-04T04:35Z
 outputs:
-- researchers/vishesh/notes/poietic-agents/README.md
-- researchers/vishesh/notes/poietic-agents/PROTOCOL.md
-- researchers/vishesh/notes/poietic-agents/launch-state.json
-- researchers/vishesh/notes/poietic-agents/VALIDATION.json
+- 5-experiments/studies/vishesh/poietic-agents/README.md
+- 5-experiments/studies/vishesh/poietic-agents/PROTOCOL.md
+- 5-experiments/studies/vishesh/poietic-agents/launch-state.json
+- 5-experiments/studies/vishesh/poietic-agents/VALIDATION.json
 ---
 
 ## Goal

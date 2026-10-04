@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T03:55Z
 updated: 2026-10-04T04:00Z
 outputs:
-- researchers/dmarz/notes/discussion-dose/benchmark-v3/NEXT-RUN.md
-- researchers/dmarz/notes/discussion-dose/benchmark-v3/next-run-planning-evidence.json
+- 5-experiments/studies/dmarz/discussion-dose/benchmark-v3/NEXT-RUN.md
+- 5-experiments/studies/dmarz/discussion-dose/benchmark-v3/next-run-planning-evidence.json
 ---
 
 ## Goal
@@ -31,4 +31,4 @@ Verify Q0 results are on main, write a bounded next-run diagnostic plan linked t
 
 ## Output
 
-[Next-run plan](../researchers/dmarz/notes/discussion-dose/benchmark-v3/NEXT-RUN.md), [planning evidence](../researchers/dmarz/notes/discussion-dose/benchmark-v3/next-run-planning-evidence.json). Planning complete; paid launch and cloud access remain unconfigured. Implementation belongs to diagnose-discussion-v3-q0.
+[Next-run plan](../../5-experiments/studies/dmarz/discussion-dose/benchmark-v3/NEXT-RUN.md), [planning evidence](../../5-experiments/studies/dmarz/discussion-dose/benchmark-v3/next-run-planning-evidence.json). Planning complete; paid launch and cloud access remain unconfigured. Implementation belongs to diagnose-discussion-v3-q0.

@@ -1,6 +1,6 @@
 # Experiment setup record: wild-halflife / saved-data analysis v1
 
-This record is **retrospective**, created during continuation on 2026-10-04. It follows the headings of the [setup template](../../../../tooling/agent-experiments/templates/experiment-setup.md) and [setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). It is not launch authorization, independent review or retrospective preregistration.
+This record is **retrospective**, created during continuation on 2026-10-04. It follows the headings of the [setup template](../../../toolkit/agent-experiments/templates/experiment-setup.md) and [setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). It is not launch authorization, independent review or retrospective preregistration.
 
 ## Ownership and question
 

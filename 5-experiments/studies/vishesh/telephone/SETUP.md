@@ -2,7 +2,7 @@
 
 **Authoritative Telephone setup record**, created 2026-10-04. Owner Vishesh; operator/design assessor vishesh/codex-village-fit. Exploratory idea, not formal accepted hypothesis or launch authorization. The earlier shared Telephone sketch is now a historical pointer; the shared AI Village record continues to own common preparation tooling and the separate memory pilot.
 
-Runbook: [EXPERIMENT-SETUP](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Process: [ITERATION](../../../../tooling/agent-experiments/ITERATION.md). Closeout: [RUN-REVIEW](../../../../tooling/agent-experiments/RUN-REVIEW.md), [RUN-QUALITY](../../../../tooling/agent-experiments/RUN-QUALITY.md).
+Runbook: [EXPERIMENT-SETUP](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Process: [ITERATION](../../../toolkit/agent-experiments/ITERATION.md). Closeout: [RUN-REVIEW](../../../toolkit/agent-experiments/RUN-REVIEW.md), [RUN-QUALITY](../../../toolkit/agent-experiments/RUN-QUALITY.md).
 
 ## Ownership and question
 

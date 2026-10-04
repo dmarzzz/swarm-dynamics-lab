@@ -57,7 +57,7 @@ Read every failing answer first (the rows keep `answer` or `accounting.answer_te
 
 1. `status`, `verify`, `summarize`. Keep the outputs.
 2. Do not rerun a stage. A batch name is refused the second time.
-3. Write the post-mortem per [RUN-REVIEW.md](../../../../tooling/agent-experiments/RUN-REVIEW.md): reconcile assigned, started, terminal, graded and analyzed rows; compare the frames with `analysis.json`; report actual calls, transport attempts, tokens, dollars, failed calls with their evidence, and any billing pause.
+3. Write the post-mortem per [RUN-REVIEW.md](../../../toolkit/agent-experiments/RUN-REVIEW.md): reconcile assigned, started, terminal, graded and analyzed rows; compare the frames with `analysis.json`; report actual calls, transport attempts, tokens, dollars, failed calls with their evidence, and any billing pause.
 4. Update the evidence registry row and the README's results section from the saved analysis.
 5. Confirm the chain process has exited and uploads are verified, then release the claim. Do not destroy the server.
 

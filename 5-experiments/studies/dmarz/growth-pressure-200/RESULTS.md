@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/growth-pressure; source `558579f5` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/growth-pressure; source `558579f5` ([registry](../../../evidence-metadata.json), [rubric](../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **0/4** — Untested main question: whether assigned rival evasion changes sustained levy avoidance by ordinary owners, and whether peer messaging changes that effect. Basis: Chain-001 stopped at qualification: the seeder execution gate passed 4 of 8 fixtures (needs 6), so neither the throughput check nor the scientific comparison ran; mechanics comprehension passed 48 of 48. The qualification records describe the assigned-evader role under one overlay and a six-decision fixture, not ordinary agents.
 - **sample_size_summary:** Observed: qualification only, 96 gpt-6-sol calls (1 probe, 47 mechanics, 8 seeder fixtures x 6 decisions); 0 of the planned independent paired markets. Planned: 4N paired markets (N = 1 to 3 by measured throughput, Amendment 03).

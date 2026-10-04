@@ -14,10 +14,10 @@ topics: []
 claimed_at: 2026-10-03T22:22Z
 updated: 2026-10-03T22:28Z
 outputs:
-- researchers/vishesh/notes/swarm-immune-response/README.md
-- researchers/vishesh/notes/swarm-immune-response/experiment-design.md
-- researchers/vishesh/notes/swarm-immune-response/protocol.md
-- researchers/vishesh/notes/swarm-immune-response/integration-and-sources.md
+- 5-experiments/studies/vishesh/swarm-immune-response/README.md
+- 5-experiments/studies/vishesh/swarm-immune-response/experiment-design.md
+- 5-experiments/studies/vishesh/swarm-immune-response/protocol.md
+- 5-experiments/studies/vishesh/swarm-immune-response/integration-and-sources.md
 ---
 
 ## Goal

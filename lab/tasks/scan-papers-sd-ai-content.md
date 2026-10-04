@@ -16,7 +16,7 @@ claimed_at: 2026-10-03T18:19Z
 updated: 2026-10-03T19:40Z
 outputs:
 - library (added_by: dmarz/sd-ai-content)
-- researchers/dmarz/log/2026-10-03-sd-ai-content.md
+- lab/researchers/dmarz/log/2026-10-03-sd-ai-content.md
 ---
 
 ## Goal

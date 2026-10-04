@@ -16,9 +16,9 @@ history:
 - '2026-10-04T15:32Z released by vishesh/codex-theseus: Offline A1 plan/instrument/15 checks and blocked scientific closeout published. Native0; private queue295 must resolve orbital-one credential/dispatch compatibility, then current admission. Preserve original USD5.'
 claimed_at: 2026-10-04T16:44Z
 outputs:
-- researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A1.md
-- researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/TRACE-REVIEW.md
-- researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-SETUP.md
+- 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/RESULTS-A1.md
+- 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/results/A1/TRACE-REVIEW.md
+- 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/A1-SETUP.md
 ---
 
 ## Goal

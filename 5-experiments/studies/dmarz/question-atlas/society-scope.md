@@ -54,23 +54,23 @@ Each row credits Vishesh's original direction. Candidate ordering is topical, no
 
 | Original brief | Society cards |
 |---|---|
-| [casefile](../../../vishesh/notes/project-briefs/casefile.md) | SOC-32, SOC-36 |
-| [collective-sensing](../../../vishesh/notes/project-briefs/collective-sensing.md) | SOC-01, SOC-02, SOC-03, SOC-04, SOC-05, SOC-08, SOC-11, SOC-13, SOC-19, SOC-35, SOC-38, SOC-41, SOC-42, SOC-43, SOC-44 |
-| [commons](../../../vishesh/notes/project-briefs/commons.md) | SOC-14, SOC-26, SOC-27, SOC-28 |
-| [coordination](../../../vishesh/notes/project-briefs/coordination.md) | SOC-03, SOC-04, SOC-13, SOC-14, SOC-15, SOC-16, SOC-19, SOC-20, SOC-35, SOC-40 |
-| [culture](../../../vishesh/notes/project-briefs/culture.md) | SOC-12, SOC-14, SOC-24, SOC-25, SOC-26, SOC-34, SOC-45 |
-| [discovery](../../../vishesh/notes/project-briefs/discovery.md) | SOC-36 |
-| [dissent](../../../vishesh/notes/project-briefs/dissent.md) | SOC-06, SOC-07, SOC-09, SOC-10, SOC-11, SOC-12, SOC-29, SOC-30, SOC-40, SOC-43 |
-| [diversity](../../../vishesh/notes/project-briefs/diversity.md) | SOC-01, SOC-02, SOC-07, SOC-12, SOC-13, SOC-26, SOC-33, SOC-38, SOC-40, SOC-41, SOC-44 |
-| [institutions](../../../vishesh/notes/project-briefs/institutions.md) | SOC-20, SOC-25, SOC-27, SOC-28, SOC-29, SOC-30 |
-| [leadership](../../../vishesh/notes/project-briefs/leadership.md) | SOC-06, SOC-16, SOC-17, SOC-18 |
-| [memory](../../../vishesh/notes/project-briefs/memory.md) | SOC-21, SOC-22, SOC-23, SOC-24, SOC-31, SOC-45 |
-| [nca-observatory](../../../vishesh/notes/project-briefs/nca-observatory.md) | Physical lane; read here only for scope boundaries |
-| [quorum](../../../vishesh/notes/project-briefs/quorum.md) | SOC-05, SOC-08, SOC-11, SOC-39, SOC-42, SOC-43, SOC-45 |
-| [regrowth](../../../vishesh/notes/project-briefs/regrowth.md) | SOC-18, SOC-22, SOC-23 |
-| [telephone](../../../vishesh/notes/project-briefs/telephone.md) | SOC-21, SOC-31, SOC-32, SOC-34 |
-| [whistleblowing](../../../vishesh/notes/project-briefs/whistleblowing.md) | SOC-10, SOC-28, SOC-29 |
-| [External influence](../../../vishesh/notes/agent-swarm-influence-research.md) | SOC-33, SOC-34, SOC-37; any hostile-content follow-up requires separate scoping |
+| [casefile](../../vishesh/project-briefs/casefile.md) | SOC-32, SOC-36 |
+| [collective-sensing](../../vishesh/project-briefs/collective-sensing.md) | SOC-01, SOC-02, SOC-03, SOC-04, SOC-05, SOC-08, SOC-11, SOC-13, SOC-19, SOC-35, SOC-38, SOC-41, SOC-42, SOC-43, SOC-44 |
+| [commons](../../vishesh/project-briefs/commons.md) | SOC-14, SOC-26, SOC-27, SOC-28 |
+| [coordination](../../vishesh/project-briefs/coordination.md) | SOC-03, SOC-04, SOC-13, SOC-14, SOC-15, SOC-16, SOC-19, SOC-20, SOC-35, SOC-40 |
+| [culture](../../vishesh/project-briefs/culture.md) | SOC-12, SOC-14, SOC-24, SOC-25, SOC-26, SOC-34, SOC-45 |
+| [discovery](../../vishesh/project-briefs/discovery.md) | SOC-36 |
+| [dissent](../../vishesh/project-briefs/dissent.md) | SOC-06, SOC-07, SOC-09, SOC-10, SOC-11, SOC-12, SOC-29, SOC-30, SOC-40, SOC-43 |
+| [diversity](../../vishesh/project-briefs/diversity.md) | SOC-01, SOC-02, SOC-07, SOC-12, SOC-13, SOC-26, SOC-33, SOC-38, SOC-40, SOC-41, SOC-44 |
+| [institutions](../../vishesh/project-briefs/institutions.md) | SOC-20, SOC-25, SOC-27, SOC-28, SOC-29, SOC-30 |
+| [leadership](../../vishesh/project-briefs/leadership.md) | SOC-06, SOC-16, SOC-17, SOC-18 |
+| [memory](../../vishesh/project-briefs/memory.md) | SOC-21, SOC-22, SOC-23, SOC-24, SOC-31, SOC-45 |
+| [nca-observatory](../../vishesh/project-briefs/nca-observatory.md) | Physical lane; read here only for scope boundaries |
+| [quorum](../../vishesh/project-briefs/quorum.md) | SOC-05, SOC-08, SOC-11, SOC-39, SOC-42, SOC-43, SOC-45 |
+| [regrowth](../../vishesh/project-briefs/regrowth.md) | SOC-18, SOC-22, SOC-23 |
+| [telephone](../../vishesh/project-briefs/telephone.md) | SOC-21, SOC-31, SOC-32, SOC-34 |
+| [whistleblowing](../../vishesh/project-briefs/whistleblowing.md) | SOC-10, SOC-28, SOC-29 |
+| [External influence](../../vishesh/agent-swarm-influence-research.md) | SOC-33, SOC-34, SOC-37; any hostile-content follow-up requires separate scoping |
 
 The v1 structural pass checked its 74 society source pointers and all brief paths. The v2 check below supersedes that count; path validation does not certify source conclusions or experimental readiness.
 

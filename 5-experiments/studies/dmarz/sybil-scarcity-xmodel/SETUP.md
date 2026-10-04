@@ -1,6 +1,6 @@
 # Experiment setup record: sybil-scarcity-xmodel v1
 
-Status: both models prepared; the `qwen/qwen3.7-flash` chain was launched by dmarz/fleet-monitor at about 17:30Z (launch commit c0537bf7); `gpt-6-sol` ready at code commit 9461ba1c ([chain-002-pre](reviews/chain-002-pre.md)), not launched. This record follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and is not launch authorization. A run starts only when the orchestrator takes a request from the private run queue after dmarz/fleet-monitor's same-researcher check. Nothing has run on a server and no model call has been made.
+Status: both models prepared; the `qwen/qwen3.7-flash` chain was launched by dmarz/fleet-monitor at about 17:30Z (launch commit c0537bf7); `gpt-6-sol` ready at code commit 9461ba1c ([chain-002-pre](reviews/chain-002-pre.md)), not launched. This record follows [the setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and is not launch authorization. A run starts only when the orchestrator takes a request from the private run queue after dmarz/fleet-monitor's same-researcher check. Nothing has run on a server and no model call has been made.
 
 ## Ownership and question
 
@@ -31,7 +31,7 @@ Status: both models prepared; the `qwen/qwen3.7-flash` chain was launched by dma
 
 ## Current attempt admission
 
-Operations entry: manual, through the generic private launcher `scripts/run-ready-chain.py` in the agentops repository with `--model`. [Operations guide](../../../../tooling/agent-experiments/OPERATIONS.md).
+Operations entry: manual, through the generic private launcher `scripts/run-ready-chain.py` in the agentops repository with `--model`. [Operations guide](../../../toolkit/agent-experiments/OPERATIONS.md).
 
 | Operation | Exact command or unsupported reason | Evidence and last checked revision |
 |---|---|---|

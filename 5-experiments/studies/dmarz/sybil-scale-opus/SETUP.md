@@ -1,6 +1,6 @@
 # Experiment setup record: sybil-scale-opus v1
 
-Status: exploratory model replication; setup record maintained per [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Not launch authorization by itself; each stage's pre-run assessment governs.
+Status: exploratory model replication; setup record maintained per [the setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Not launch authorization by itself; each stage's pre-run assessment governs.
 
 ## Ownership and question
 

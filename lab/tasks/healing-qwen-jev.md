@@ -16,7 +16,7 @@ history:
 - '2026-10-04T06:11Z released by vishesh/codex-regrowth-docs: Bounded C1/C2 cycle closed with preserved failures. Qualification passed; full 200-curator comparison remains incomplete. Requires a new prospective plan and native transport requalification before further inference.'
 claimed_at: 2026-10-04T06:51Z
 outputs:
-- researchers/vishesh/notes/healing-helping-hands/composite/C3-S1-POST.md
+- 5-experiments/studies/vishesh/healing-helping-hands/composite/C3-S1-POST.md
 - artifacts/vishesh-healing-c3-replay/vishesh-healing-c3-replay-v1.html
 ---
 

@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T03:54Z
 updated: 2026-10-04T04:05Z
 outputs:
-- researchers/vishesh/notes/pi-review-response-dmarz-2026-10-04/README.md
-- researchers/vishesh/notes/pi-review-response-dmarz-2026-10-04/response.json
+- 5-experiments/studies/vishesh/pi-review-response-dmarz-2026-10-04/README.md
+- 5-experiments/studies/vishesh/pi-review-response-dmarz-2026-10-04/response.json
 ---
 
 ## Goal

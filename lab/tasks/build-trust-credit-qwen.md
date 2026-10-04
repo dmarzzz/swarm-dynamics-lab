@@ -16,7 +16,7 @@ topics:
 claimed_at: 2026-10-04T10:30Z
 updated: 2026-10-04T11:37Z
 outputs:
-- researchers/dmarz/notes/trust-credit-qwen/reviews/chain-001-pre.md
+- 5-experiments/studies/dmarz/trust-credit-qwen/reviews/chain-001-pre.md
 ---
 
 ## Goal

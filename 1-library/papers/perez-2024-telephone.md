@@ -40,4 +40,4 @@ Current title/authors from v4 abstract; methods skim is v1, not a full latest-ve
 
 ## Relevance to us
 
-[Telephone design](../../researchers/vishesh/notes/telephone/README.md) builds on this source and [[data-ai-village-2026]].
+[Telephone design](../../5-experiments/studies/vishesh/telephone/README.md) builds on this source and [[data-ai-village-2026]].

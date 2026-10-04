@@ -1,6 +1,6 @@
 # Experiment evidence metadata
 
-Every experiment entry should expose **evidence_confidence** and **sample_size_summary** near its title. These fields help readers judge what an experiment establishes without mistaking agents, messages or calls for independent samples. Use the same fields for exploratory studies in researcher notes and accepted experiments under `experiments/`.
+Every experiment entry should expose **evidence_confidence** and **sample_size_summary** near its title. These fields help readers judge what an experiment establishes without mistaking agents, messages or calls for independent samples. Use the same fields for exploratory studies under `5-experiments/studies/` and accepted experiments under `5-experiments/<id>/`.
 
 The [evidence index](EVIDENCE.md) summarizes the current assessments. The editable source is [evidence-metadata.json](evidence-metadata.json); `python3 scripts/experiment_evidence.py --write` updates its marked document blocks and index. `--check` validates metadata, registration coverage and rendered consistency. The existing lab CI check runs the metadata validator and its offline tests, so a newly added registration or stale generated block is visible in review. These commands read documents and write metadata only; they do not launch experiments, change run configurations or update the external live hub.
 

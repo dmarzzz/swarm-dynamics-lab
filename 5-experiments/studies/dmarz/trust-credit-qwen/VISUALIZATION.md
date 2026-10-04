@@ -1,6 +1,6 @@
 # Visualization mapping v1: trust-credit-qwen
 
-Follows [RUN-VISUALIZATION.md](../../../../tooling/agent-experiments/RUN-VISUALIZATION.md). Renderer: `src/render.py` (PIL only, 1800×1200 RGB). Nothing has been rendered from a model run; the frames checked so far come from the scripted stage and say so.
+Follows [RUN-VISUALIZATION.md](../../../toolkit/agent-experiments/RUN-VISUALIZATION.md). Renderer: `src/render.py` (PIL only, 1800×1200 RGB). Nothing has been rendered from a model run; the frames checked so far come from the scripted stage and say so.
 
 - Mapping version / source: v1, part of the hashed source; code commit and source hash in [reviews/chain-001-pre.md](reviews/chain-001-pre.md).
 - Run binding: one hub run per stage, `trust-credit-qwen/<run id>`, params `stage`, `batch`, `source_hash`, `code`; a continuation after a billing stop is its own run (`s1-001-r1`) and its frames show the original run's rows and its own together. Each row binds root, rule, check budget and check strength.

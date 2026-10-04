@@ -1,13 +1,13 @@
 # Setup record: wild-identity saved-data reporting supplement
 
-Status: offline archive report, not experimental launch authorization. Owner/operator: shadow/sol-identity. No independent design review claimed. This record follows the fields of the [setup template](../../../../tooling/agent-experiments/templates/experiment-setup.md) and [runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md); it is retrospective for the original census. The supplement plan was committed at `ef790b7b` before its implementation. Dates: 4 October 2026.
+Status: offline archive report, not experimental launch authorization. Owner/operator: shadow/sol-identity. No independent design review claimed. This record follows the fields of the [setup template](../../../toolkit/agent-experiments/templates/experiment-setup.md) and [runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md); it is retrospective for the original census. The supplement plan was committed at `ef790b7b` before its implementation. Dates: 4 October 2026.
 
 ## Ownership and question
 
 - Question: how sensitive is exact-name-reference activity to retained page text versus edit-hunk text?
 - Decision: report an archive diagnostic, not an identity-churn coordination effect. Supplement conditional page-cluster uncertainty after the owner's 11:25 EDT audit request.
 - Research status: post-hoc descriptive archive census. No accepted hypothesis, formal experiment, random treatment, model dispatch or causal identification.
-- Prior art and caveats: [README.md](README.md#novelty-boundary); original [PLAN.md](PLAN.md); preceding failures and repair in the [lane log](../../log/2026-10-04-sol-identity.md).
+- Prior art and caveats: [README.md](README.md#novelty-boundary); original [PLAN.md](PLAN.md); preceding failures and repair in the [lane log](../../../../lab/researchers/shadow/log/2026-10-04-sol-identity.md).
 - Current stage: saved-data analysis only. Next action: reconcile supplementary totals/figure, run fixture and repo checks, and push the bounded report. Never escalate this record into authorization for model calls.
 
 ## Gate evidence

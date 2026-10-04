@@ -16,10 +16,10 @@ topics:
 claimed_at: 2026-10-04T07:53Z
 updated: 2026-10-04T08:16Z
 outputs:
-- researchers/vishesh/notes/dissent/rd5/READY.md
-- researchers/vishesh/notes/dissent/rd5/spec/preparation-manifest.json
-- researchers/vishesh/notes/dissent/rd5/spec/next-run-plan.json
-- researchers/vishesh/notes/dissent/rd5/validation/VALIDATION.json
+- 5-experiments/studies/vishesh/dissent/rd5/READY.md
+- 5-experiments/studies/vishesh/dissent/rd5/spec/preparation-manifest.json
+- 5-experiments/studies/vishesh/dissent/rd5/spec/next-run-plan.json
+- 5-experiments/studies/vishesh/dissent/rd5/validation/VALIDATION.json
 ---
 
 ## Goal

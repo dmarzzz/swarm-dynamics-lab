@@ -15,8 +15,8 @@ topics:
 claimed_at: 2026-10-04T03:04Z
 updated: 2026-10-04T03:06Z
 outputs:
-- researchers/vishesh/notes/swarm-of-theseus/redesign/SOCIAL-GROUNDING.md
-- researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md
+- 5-experiments/studies/vishesh/swarm-of-theseus/redesign/SOCIAL-GROUNDING.md
+- 5-experiments/studies/vishesh/swarm-of-theseus/redesign/DESIGN.md
 ---
 
 ## Goal

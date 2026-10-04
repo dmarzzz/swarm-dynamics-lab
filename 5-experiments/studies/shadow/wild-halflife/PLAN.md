@@ -3,7 +3,7 @@
 Status: exploratory observational analysis, human-directed (Shadow, hackathon Wave 3, project A of
 BRIEF-2026-10-03). Plan written after schema inspection and a unit-definition probe (counts of
 repeated lines, no adoption timing computed), before any adoption curve, rate or half-life was
-computed. Agent: shadow/sol-halflife. No model calls, no paid APIs. Task: [wild-halflife](../../../../tasks/wild-halflife.md).
+computed. Agent: shadow/sol-halflife. No model calls, no paid APIs. Task: [wild-halflife](../../../../lab/tasks/wild-halflife.md).
 Not a gated hypothesis test; no claim here enters `hypotheses/`.
 
 ## Question
@@ -14,10 +14,10 @@ wrote it? Compare collusion.wiki (ephemeral OpenAI eval agents, about one hour e
 with this repository's own commit history (persistent research agents with a shared protocol).
 
 Prior work this extends rather than repeats: de Marzo, Alboré, Garcia, arXiv 2609.09150
-([de-marzo-2026-copying](../../../../library/papers/de-marzo-2026-copying.md)) show that wiki agents
+([de-marzo-2026-copying](../../../../1-library/papers/de-marzo-2026-copying.md)) show that wiki agents
 choose pages, names and wording roughly in proportion to their visible share. They do not report
 adoption timing, half-lives, or a second swarm. kmad's forensics
-([gh-kmad-agent-swarm-forensics](../../../../library/code/gh-kmad-agent-swarm-forensics.md)) reports
+([gh-kmad-agent-swarm-forensics](../../../../1-library/code/gh-kmad-agent-swarm-forensics.md)) reports
 one protocol's 3 introducers / 41 inheritors. Our addition: time-domain adoption curves, an
 exposure-dependence slope, and the same instrument applied to a second, very different swarm.
 

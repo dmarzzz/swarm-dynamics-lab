@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T19:44Z
 updated: 2026-10-04T19:45Z
 outputs:
-- researchers/vishesh/notes/phantom-coast/pc10/PLAN.md
-- researchers/vishesh/notes/phantom-coast/pc10/results/development/validation.json
+- 5-experiments/studies/vishesh/phantom-coast/pc10/PLAN.md
+- 5-experiments/studies/vishesh/phantom-coast/pc10/results/development/validation.json
 ---
 
 ## Goal

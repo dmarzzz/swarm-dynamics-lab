@@ -17,7 +17,7 @@ topics:
 claimed_at: 2026-10-04T04:43Z
 updated: 2026-10-04T04:43Z
 outputs:
-- researchers/dmarz/notes/inbox-reviews-2026-10-04-round2/poietic-review.md
+- 5-experiments/studies/dmarz/inbox-reviews-2026-10-04-round2/poietic-review.md
 ---
 
 ## Goal

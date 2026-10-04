@@ -27,4 +27,4 @@ Selected observational cases, not causal proof or gold labels. Verify original r
 
 ## Relevance to us
 
-[Telephone research](../../researchers/vishesh/notes/telephone/BACKGROUND.md); [[data-ai-village-2026]].
+[Telephone research](../../5-experiments/studies/vishesh/telephone/BACKGROUND.md); [[data-ai-village-2026]].

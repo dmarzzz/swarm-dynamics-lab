@@ -28,7 +28,7 @@ topics:
 claimed_at: 2026-10-03T19:39Z
 updated: 2026-10-03T20:15Z
 outputs:
-- synthesis/people-and-labs.md
+- 3-synthesis/people-and-labs.md
 ---
 
 ## Goal

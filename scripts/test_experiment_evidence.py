@@ -15,8 +15,8 @@ class EvidenceTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        self.document = "researchers/alice/notes/study/README.md"
-        self.registration = "researchers/alice/notes/study/experiment.yaml"
+        self.document = "5-experiments/studies/alice/study/README.md"
+        self.registration = "5-experiments/studies/alice/study/experiment.yaml"
         self.original = "---\ntitle: 'Keep: punctuation'\n---\n\n# Study\n\nOriginal **prose**.\n"
         self.put(self.document, self.original)
         self.put(self.registration, "id: study\n")
@@ -64,15 +64,34 @@ class EvidenceTests(unittest.TestCase):
                 evidence.validate(self.root, self.data)
 
     def test_covers_registrations_and_formal_experiments_but_not_snapshots(self):
-        self.put("researchers/alice/notes/pi-review-2026-10-04/source/experiment.json", "{}")
+        self.put("5-experiments/studies/alice/pi-review-2026-10-04/source/experiment.json", "{}")
         evidence.validate(self.root, self.data)
-        self.put("researchers/alice/notes/another/experiment.json", "{}")
+        self.put("5-experiments/studies/alice/another/experiment.json", "{}")
         with self.assertRaisesRegex(ValueError, "uncovered experiment registrations"):
             evidence.validate(self.root, self.data)
-        (self.root / "researchers/alice/notes/another/experiment.json").unlink()
-        self.put("experiments/formal/README.md", "# Formal\n")
+        (self.root / "5-experiments/studies/alice/another/experiment.json").unlink()
+        self.put("5-experiments/formal/README.md", "# Formal\n")
         with self.assertRaisesRegex(ValueError, "uncovered formal"):
             evidence.validate(self.root, self.data)
+        (self.root / "5-experiments/formal/README.md").unlink()
+        for shared in ("studies", "toolkit"):  # folder guides, not formal experiments
+            self.put(f"5-experiments/{shared}/README.md", "# Guide\n")
+        evidence.validate(self.root, self.data)
+
+    def test_block_rendered_before_layout_move_is_left_untouched_unless_relinked(self):
+        self.assertEqual(evidence.legacy(self.document), "researchers/alice/notes/study/README.md")
+        self.assertEqual(evidence.legacy("5-experiments/studies/shadow/factory/a.md"), "researchers/shadow/factory/a.md")
+        self.assertEqual(evidence.legacy("5-experiments/toolkit/kit/README.md"), "tooling/kit/README.md")
+        self.assertEqual(evidence.legacy("5-experiments/formal/README.md"), "experiments/formal/README.md")
+        current = evidence.outputs(self.root, self.data)[self.document]
+        self.assertIn("[registry](../../../evidence-metadata.json)", current)
+        old = current.replace("](../../../evidence-metadata.json)", "](../../../../experiments/evidence-metadata.json)") \
+                     .replace("](../../../EVIDENCE-METADATA.md)", "](../../../../experiments/EVIDENCE-METADATA.md)")
+        self.put(self.document, old)
+        self.assertEqual(evidence.outputs(self.root, self.data)[self.document], old)
+        self.assertEqual(evidence.outputs(self.root, self.data, relink=True)[self.document], current)
+        self.put(self.document, old.replace("**1/4**", "**4/4**"))  # stale content is still rewritten in full
+        self.assertEqual(evidence.outputs(self.root, self.data)[self.document], current)
 
     def test_preserves_content_line_endings_and_is_idempotent(self):
         for newline in ("\n", "\r\n"):

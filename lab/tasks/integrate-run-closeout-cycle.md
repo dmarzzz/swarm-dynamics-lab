@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T07:50Z
 updated: 2026-10-04T08:03Z
 outputs:
-- tooling/agent-experiments/RUN-REVIEW.md
-- tooling/agent-experiments/RUN-QUALITY.md
+- 5-experiments/toolkit/agent-experiments/RUN-REVIEW.md
+- 5-experiments/toolkit/agent-experiments/RUN-QUALITY.md
 - scripts/experiment_ops/closeout.py
 - scripts/experiment_ops/iteration.py
 ---

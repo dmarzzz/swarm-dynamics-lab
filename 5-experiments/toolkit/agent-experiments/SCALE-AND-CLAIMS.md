@@ -26,8 +26,8 @@ Use actual observed outcomes. Label fixtures, simulations, animations, extrapola
 | Decision | Evidence that belongs in it |
 |---|---|
 | Scientific priority | Unresolved useful question, informative contrast, evidence gap, feasible next test and expected decision value |
-| Evidence confidence | Existing [confidence metadata](../../experiments/EVIDENCE-METADATA.md), current sampled units and limitations; never visual quality or commit count |
+| Evidence confidence | Existing [confidence metadata](../../EVIDENCE-METADATA.md), current sampled units and limitations; never visual quality or commit count |
 | Presentation order | Clarity, verified visuals and audience fit; explicitly editorial, with honest captions |
 | Dispatch | Applicable authority plus current study-specific admission; neither rank nor a polished chart grants permission |
 
-The [top-10 review integration](../../researchers/vishesh/notes/top10-integration-2026-10-04/README.md) illustrates the distinctions. Reuse strong controls from neighboring studies, but preserve their ownership, model/task limits and immutable results. Generalize their method only after checking that its information and resource assumptions fit the new question.
+The [top-10 review integration](../../studies/vishesh/top10-integration-2026-10-04/README.md) illustrates the distinctions. Reuse strong controls from neighboring studies, but preserve their ownership, model/task limits and immutable results. Generalize their method only after checking that its information and resource assumptions fit the new question.

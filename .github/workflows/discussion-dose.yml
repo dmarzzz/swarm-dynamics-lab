@@ -3,11 +3,11 @@ on:
   push:
     branches: [main]
     paths:
-      - 'researchers/dmarz/notes/discussion-dose/**'
+      - '5-experiments/studies/dmarz/discussion-dose/**'
       - '.github/workflows/discussion-dose.yml'
   pull_request:
     paths:
-      - 'researchers/dmarz/notes/discussion-dose/**'
+      - '5-experiments/studies/dmarz/discussion-dose/**'
       - '.github/workflows/discussion-dose.yml'
   workflow_dispatch:
 permissions:
@@ -26,4 +26,4 @@ jobs:
       - name: Check task truth, access isolation, lifecycle scoring and mock adapter
         env:
           PYTHONDONTWRITEBYTECODE: '1'
-        run: python3 researchers/dmarz/notes/discussion-dose/src/selftest.py
+        run: python3 5-experiments/studies/dmarz/discussion-dose/src/selftest.py

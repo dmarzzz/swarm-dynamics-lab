@@ -16,10 +16,10 @@ topics:
 claimed_at: 2026-10-04T01:54Z
 updated: 2026-10-04T02:15Z
 outputs:
-- researchers/dmarz/notes/sybil-specialists-api/README.md
-- researchers/dmarz/notes/sybil-specialists-api/results-summary.json
-- researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md
-- researchers/dmarz/notes/sybil-specialists-api/deployment.json
+- 5-experiments/studies/dmarz/sybil-specialists-api/README.md
+- 5-experiments/studies/dmarz/sybil-specialists-api/results-summary.json
+- 5-experiments/studies/dmarz/sybil-specialists-api/reviews/s1-001-post.md
+- 5-experiments/studies/dmarz/sybil-specialists-api/deployment.json
 ---
 
 ## Goal

@@ -16,7 +16,7 @@ topics:
 claimed_at: 2026-10-03T23:09Z
 updated: 2026-10-03T23:28Z
 outputs:
-- researchers/dmarz/notes/honeypot-vigilance-hunches.md
+- 5-experiments/studies/dmarz/honeypot-vigilance-hunches.md
 ---
 
 ## Goal

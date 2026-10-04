@@ -14,9 +14,9 @@ topics: []
 claimed_at: 2026-10-04T04:07Z
 updated: 2026-10-04T04:20Z
 outputs:
-- experiments/EVIDENCE.md
-- experiments/evidence-metadata.json
-- experiments/EVIDENCE-METADATA.md
+- 5-experiments/EVIDENCE.md
+- 5-experiments/evidence-metadata.json
+- 5-experiments/EVIDENCE-METADATA.md
 ---
 
 ## Goal

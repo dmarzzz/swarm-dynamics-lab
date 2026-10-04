@@ -3,10 +3,10 @@
 # requires-python = ">=3.9"
 # dependencies = ["pyyaml"]
 # ///
-"""collect.py: source discovery for swarm-lab. Collectors pull raw candidates (X posts, blog URLs) into
-data/candidates-raw/ (git-ignored), `batch` dedups them against the library and candidates/SEEN.txt and cuts
-them into small single-topic batches under candidates/<source>/<batch-id>.jsonl (committed). batches.py then
-turns each batch into a claimable GitHub issue. See PIPELINE.md.
+"""collect.py: source discovery for swarm-dynamics-lab. Collectors pull raw candidates (X posts, blog URLs) into
+data/candidates-raw/ (git-ignored), `batch` dedups them against the library and lab/candidates/SEEN.txt and cuts
+them into small single-topic batches under lab/candidates/<source>/<batch-id>.jsonl (committed). batches.py then
+turns each batch into a claimable GitHub issue. See lab/PIPELINE.md.
 
   python3 scripts/collect.py x-search --queries <file> --by <agent-id> [--max 30] [--archive] [--threads]
   python3 scripts/collect.py apify --actor <id> --input <json-file> --by <agent-id> --max-usd 0.50 [--topic t]
@@ -41,10 +41,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from lab import LIB_DIRS, Doc, md_files, norm_url  # noqa: E402
+from lab import CANDIDATES, LIB_DIRS, LIBRARY, Doc, md_files, norm_url  # noqa: E402
 
 RAW = ROOT / "data" / "candidates-raw"
-CAND = ROOT / "candidates"
+CAND = ROOT / CANDIDATES
 SEEN = CAND / "SEEN.txt"
 XLOG = ROOT / "data" / "x-api-calls.log"
 TOPIC_KEYWORDS = {
@@ -147,7 +147,7 @@ def guess_topic(text: str, default: str | None) -> str:
 def library_seen() -> set[str]:
     out = set()
     for d in LIB_DIRS:
-        for p in md_files(ROOT / "library" / d):
+        for p in md_files(ROOT / LIBRARY / d):
             doc = Doc(p)
             for k in ("url", "repo"):
                 if doc.get(k):
@@ -363,7 +363,7 @@ def cmd_links(a):
 # Three collectors that cost nothing: LessWrong/Alignment Forum GraphQL (tag feeds + search), plain RSS/Atom feeds,
 # and yt-dlp search for talks. Plus `jina`, which fetches clean markdown for blog candidates through r.jina.ai so
 # the batcher can score them on real text instead of a bare url.
-UA = {"User-Agent": "swarm-lab-collector (github.com/dmarzzz/swarm-lab)"}
+UA = {"User-Agent": "swarm-lab-collector (github.com/dmarzzz/swarm-dynamics-lab)"}
 LW_SITES = {"lesswrong": "https://www.lesswrong.com", "alignmentforum": "https://www.alignmentforum.org"}
 
 
@@ -622,9 +622,13 @@ def _title_key(t: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", (t or "").lower()).strip()[:120]
 
 
+PAPER_DIRS = (f"{LIBRARY}/papers", "library/papers")  # current layout, then the pre-move layout of old lanes
+
+
 def known_papers(refs: list[str]) -> tuple[set[str], set[str], dict[str, dict]]:
-    """dois, normalised titles and {library id: frontmatter} for library/papers in the working tree plus each git
-    ref (e.g. origin/lane/*), so unmerged lanes count as already catalogued."""
+    """dois, normalised titles and {library id: frontmatter} for 1-library/papers in the working tree plus each git
+    ref (e.g. origin/lane/*), so unmerged lanes count as already catalogued. A lane that has not been moved to
+    the phase layout yet still keeps its papers in library/papers; both locations are read."""
     import subprocess
     dois, titles, byid = set(), set(), {}
 
@@ -640,13 +644,14 @@ def known_papers(refs: list[str]) -> tuple[set[str], set[str], dict[str, dict]]:
             titles.add(_title_key(fm["title"]))
         byid.setdefault(lid, fm)
 
-    for p in (ROOT / "library" / "papers").glob("*.md"):
+    for p in (ROOT / LIBRARY / "papers").glob("*.md"):
         take(p.stem, p.read_text(encoding="utf-8", errors="replace")[:3000])
     for ref in refs:
         r = subprocess.run(["git", "-C", str(ROOT), "grep", "-h", "--no-color", "-E", "-e", "^(doi|url|title):",
-                            "-e", "^id:", ref, "--", "library/papers"], capture_output=True, text=True)
-        names = subprocess.run(["git", "-C", str(ROOT), "ls-tree", "--name-only", f"{ref}:library/papers"],
-                               capture_output=True, text=True).stdout.split()
+                            "-e", "^id:", ref, "--", *PAPER_DIRS], capture_output=True, text=True)
+        names = [n for d in PAPER_DIRS
+                 for n in subprocess.run(["git", "-C", str(ROOT), "ls-tree", "--name-only", f"{ref}:{d}"],
+                                         capture_output=True, text=True).stdout.split()]
         for line in r.stdout.splitlines():
             k, _, v = line.partition(":")
             v = v.strip().strip("'\"")
@@ -663,8 +668,9 @@ def _lib_fm(lid: str, byid: dict) -> dict:
     import subprocess
     fm = byid.get(lid) or {}
     if fm.get("_ref"):
-        text = subprocess.run(["git", "-C", str(ROOT), "show", f"{fm['_ref']}:library/papers/{lid}.md"],
-                              capture_output=True, text=True).stdout[:3000]
+        text = next((t for t in (subprocess.run(["git", "-C", str(ROOT), "show", f"{fm['_ref']}:{d}/{lid}.md"],
+                                                capture_output=True, text=True).stdout[:3000]
+                                 for d in PAPER_DIRS) if t), "")
         fm = {}
         for k in ("doi", "url", "title"):
             m = re.search(rf"^{k}:\s*(.+)$", text, re.M)
@@ -738,7 +744,7 @@ def cmd_openalex(a):
     """--seeds file: `<topic><TAB><fwd|back|both><TAB><seed>[<TAB>kw1,kw2]` per line. Seed = library id (resolved
     from main or any --refs lane), doi:..., arxiv:..., W123 or an exact title. Forward = works citing the seed,
     newest relevant first; back = the seed's references. Rows with no keyword hit get seed_score 0 (dropped by
-    `batch`). Rows already in library/ (by doi or title, across --refs) are dropped here."""
+    `batch`). Rows already in 1-library/ (by doi or title, across --refs) are dropped here."""
     import subprocess
     refs = []
     for pat in a.refs or []:
@@ -1005,7 +1011,7 @@ def main(argv=None):
     p.add_argument("--prune", action="store_true", help="drop rows whose page is dead or empty")
     p = sub.add_parser("openalex", help="forward/backward citation chasing via OpenAlex: `topic<TAB>fwd|back|both<TAB>seed[<TAB>kws]`")
     p.add_argument("--seeds", required=True); p.add_argument("--by", required=True); p.add_argument("--max", type=int, default=600)
-    p.add_argument("--refs", nargs="*", default=["refs/remotes/origin/lane/*"], help="git refs whose library/papers count as known")
+    p.add_argument("--refs", nargs="*", default=["refs/remotes/origin/lane/*"], help="git refs whose 1-library/papers count as known")
     p = sub.add_parser("oa-locate", help="find free copies of named papers via OpenAlex: `topic<TAB>seed[<TAB>note]`")
     p.add_argument("--list", required=True); p.add_argument("--by", required=True)
     sub.add_parser("status")

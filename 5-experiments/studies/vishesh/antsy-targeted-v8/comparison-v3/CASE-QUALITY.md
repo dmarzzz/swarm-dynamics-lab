@@ -1,6 +1,6 @@
 # Case quality assessment
 
-Scope: same-author offline construction/validation, prior to any native comparison call. [PLAN](PLAN.md) precedes implementation. Apply the shared [case rubric](../../../../../tooling/agent-experiments/TEST-CASE-QUALITY.md).
+Scope: same-author offline construction/validation, prior to any native comparison call. [PLAN](PLAN.md) precedes implementation. Apply the shared [case rubric](../../../../toolkit/agent-experiments/TEST-CASE-QUALITY.md).
 
 | Dimension | Assessment | Evidence and limitation |
 |---|---|---|

@@ -16,7 +16,7 @@ topics:
 claimed_at: 2026-10-03T23:02Z
 updated: 2026-10-03T23:06Z
 outputs:
-- researchers/dmarz/notes/distributed-evidence-suite/README.md
+- 5-experiments/studies/dmarz/distributed-evidence-suite/README.md
 ---
 
 ## Goal

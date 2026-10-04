@@ -12,7 +12,7 @@ questions:
 seminal: []  # library ids of the foundational works; each must be cited below
 search_log:
   # One row per search round, in the order you ran them. `results` = relevant hits you looked at,
-  # `new` = how many of those were not already in library/. The last rounds must show saturation.
+  # `new` = how many of those were not already in 1-library/. The last rounds must show saturation.
   # where: semantic-scholar google-scholar openalex dblp pubmed arxiv biorxiv openreview github
   #        papers-with-code huggingface x bluesky hn reddit lesswrong web youtube
   #        citations-backward citations-forward

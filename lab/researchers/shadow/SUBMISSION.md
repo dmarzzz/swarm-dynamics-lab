@@ -42,9 +42,9 @@ pipeline code. Nothing here is a causal claim about agent behaviour in the wild.
 
 ## 1. AskSwarm: same questions, three swarms
 
-Source: [notes/wild-askswarm/FINDING.md](notes/wild-askswarm/FINDING.md), code in
-[notes/wild-askswarm/askswarm/](notes/wild-askswarm/askswarm/), [README](notes/wild-askswarm/README.md),
-[comparison.html](notes/wild-askswarm/results/comparison.html), [validation.json](notes/wild-askswarm/results/validation.json).
+Source: [notes/wild-askswarm/FINDING.md](../../../5-experiments/studies/shadow/wild-askswarm/FINDING.md), code in
+[notes/wild-askswarm/askswarm/](../../../5-experiments/studies/shadow/wild-askswarm/askswarm/), [README](../../../5-experiments/studies/shadow/wild-askswarm/README.md),
+[comparison.html](../../../5-experiments/studies/shadow/wild-askswarm/results/comparison.html), [validation.json](../../../5-experiments/studies/shadow/wild-askswarm/results/validation.json).
 
 **Claim.** A reusable table interface can measure lexical reuse, observed participation and temporal adoption
 on incident datasets and on the research swarm that built it. A complete three-way social comparison is not
@@ -73,14 +73,14 @@ half-lives. Wiki snapshots retain earlier editors' words and git repeats templat
 adoption without any idea being transmitted. Cluster counts are not stable semantic units. No IID confidence
 intervals are given, because a record bootstrap would ignore the dependence. Prior work already models wiki
 copying ([[de-marzo-2026-copying]]); the contribution is the tool, the explicit missingness and applying it to our
-own swarm ([NOVELTY.md](notes/wild-askswarm/NOVELTY.md)).
+own swarm ([NOVELTY.md](../../../5-experiments/studies/shadow/wild-askswarm/NOVELTY.md)).
 
 ## 2. AskSwarm robustness and the blind 30-link audit
 
-Sources: [ROBUSTNESS.md](notes/wild-askswarm/ROBUSTNESS.md), [AUDIT.md](notes/wild-askswarm/AUDIT.md),
-[locked blind judgments](notes/wild-askswarm/results/robustness-v1/blind-judgments.json),
-[audit.json](notes/wild-askswarm/results/robustness-v1/audit.json),
-[robustness validation](notes/wild-askswarm/results/robustness-v1/validation.json).
+Sources: [ROBUSTNESS.md](../../../5-experiments/studies/shadow/wild-askswarm/ROBUSTNESS.md), [AUDIT.md](../../../5-experiments/studies/shadow/wild-askswarm/AUDIT.md),
+[locked blind judgments](../../../5-experiments/studies/shadow/wild-askswarm/results/robustness-v1/blind-judgments.json),
+[audit.json](../../../5-experiments/studies/shadow/wild-askswarm/results/robustness-v1/audit.json),
+[robustness validation](../../../5-experiments/studies/shadow/wild-askswarm/results/robustness-v1/validation.json).
 
 **Claim.** AskSwarm's descriptive answers depend on the unit of observation, and what it finds is repeated text,
 not verified adoption.
@@ -116,9 +116,9 @@ or causal uncertainty. So the credit table cannot be read as an influence rankin
 
 ## 3. Incident chronology (wild-timeline)
 
-Source: [notes/wild-timeline/FINDING.md](notes/wild-timeline/FINDING.md), [summary.json](notes/wild-timeline/summary.json),
-[validation.json](notes/wild-timeline/validation.json), [timeline figure](notes/wild-timeline/timeline.png),
-[shared-source panels](notes/wild-timeline/shared.png).
+Source: [notes/wild-timeline/FINDING.md](../../../5-experiments/studies/shadow/wild-timeline/FINDING.md), [summary.json](../../../5-experiments/studies/shadow/wild-timeline/summary.json),
+[validation.json](../../../5-experiments/studies/shadow/wild-timeline/validation.json), [timeline figure](../../../5-experiments/studies/shadow/wild-timeline/timeline.png),
+[shared-source panels](../../../5-experiments/studies/shadow/wild-timeline/shared.png).
 
 **Claim.** Most Transluce urlquery reports fall inside the report-defined wiki window, none fall inside the July
 METR board window, and only three explicitly mapped task families appear on both sides.
@@ -143,9 +143,9 @@ reproducible cross-release census and an honest figure of which records have tim
 
 ## 4. URL adoption timing (wild-halflife)
 
-Source: [notes/wild-halflife/FINDING.md](notes/wild-halflife/FINDING.md), [summary.json](notes/wild-halflife/results/summary.json),
-[verification.json](notes/wild-halflife/results/verification.json), [posthoc.json](notes/wild-halflife/results/posthoc.json),
-[supplement.json](notes/wild-halflife/results/supplement.json), [PLAN.md](notes/wild-halflife/PLAN.md).
+Source: [notes/wild-halflife/FINDING.md](../../../5-experiments/studies/shadow/wild-halflife/FINDING.md), [summary.json](../../../5-experiments/studies/shadow/wild-halflife/results/summary.json),
+[verification.json](../../../5-experiments/studies/shadow/wild-halflife/results/verification.json), [posthoc.json](../../../5-experiments/studies/shadow/wild-halflife/results/posthoc.json),
+[supplement.json](../../../5-experiments/studies/shadow/wild-halflife/results/supplement.json), [PLAN.md](../../../5-experiments/studies/shadow/wild-halflife/PLAN.md).
 
 **Claim.** After a URL first appears, collusion.wiki reaches a second identity faster, but swarm-lab git reuses a
 larger share of URLs. A high pooled rate-vs-prior-adopters slope does not show accelerating copying.
@@ -172,8 +172,8 @@ definition. This does not replicate the source paper's population.
 
 ## 5. Identity observability (wild-identity)
 
-Source: [notes/wild-identity/FINDING.md](notes/wild-identity/FINDING.md), [summary.json](notes/wild-identity/results/summary.json),
-[uncertainty.json](notes/wild-identity/results/uncertainty.json), [figure](notes/wild-identity/results/reference-uncertainty.svg).
+Source: [notes/wild-identity/FINDING.md](../../../5-experiments/studies/shadow/wild-identity/FINDING.md), [summary.json](../../../5-experiments/studies/shadow/wild-identity/results/summary.json),
+[uncertainty.json](../../../5-experiments/studies/shadow/wild-identity/results/uncertainty.json), [figure](../../../5-experiments/studies/shadow/wild-identity/results/reference-uncertainty.svg).
 
 **Claim.** In collusion.wiki, retained full-page snapshots inflate apparent name-reference activity compared with
 the text an editor actually inserted. Whether longer-lived names coordinate more is not identified.
@@ -200,9 +200,9 @@ unequal (wiki 39.49 days, git 21.93 hours). This is not a discovery of copying o
 
 ## 6. Capture and memory (scripted, S1 and S1b)
 
-Source: [notes/capture-memory/README.md](notes/capture-memory/README.md), [S1.md](notes/capture-memory/results/S1.md),
-[S1b.md](notes/capture-memory/results/S1b.md), [S1b_dose_rule.json](notes/capture-memory/results/S1b_dose_rule.json),
-[design.yaml](notes/capture-memory/design.yaml). Evidence confidence 1/4 (assessed by vishesh/codex-pi-review).
+Source: [notes/capture-memory/README.md](../../../5-experiments/studies/shadow/capture-memory/README.md), [S1.md](../../../5-experiments/studies/shadow/capture-memory/results/S1.md),
+[S1b.md](../../../5-experiments/studies/shadow/capture-memory/results/S1b.md), [S1b_dose_rule.json](../../../5-experiments/studies/shadow/capture-memory/results/S1b_dose_rule.json),
+[design.yaml](../../../5-experiments/studies/shadow/capture-memory/design.yaml). Evidence confidence 1/4 (assessed by vishesh/codex-pi-review).
 
 **Claim.** In a scripted model, memory length alone decides what happens after a committed minority is removed
 perfectly. With one-slot memory the population slowly returns. With 5 or 20 slots it stays captured. With
@@ -234,9 +234,9 @@ involving full memory change the dose. `frac_original_T` alone cannot separate "
 
 ## 7. Freeze on Claude (inconclusive, infrastructure-blocked)
 
-Source: [freeze-claude/FINDING.md](notes/capture-memory/freeze-claude/FINDING.md),
-[preregistration](notes/capture-memory/freeze-claude/PREREG.md),
-[summary.json](notes/capture-memory/freeze-claude/summary.json).
+Source: [freeze-claude/FINDING.md](../../../5-experiments/studies/shadow/capture-memory/freeze-claude/FINDING.md),
+[preregistration](../../../5-experiments/studies/shadow/capture-memory/freeze-claude/PREREG.md),
+[summary.json](../../../5-experiments/studies/shadow/capture-memory/freeze-claude/summary.json).
 
 **Blocked attempt, not a behavioral null.** Qualification requested `claude-sonnet-5-5` through the authorized
 local Anthropic pool. All 8 HTTP attempts failed: 2 HTTP429 rate limits and 6 HTTP503 broker-unavailable errors.
@@ -255,9 +255,9 @@ runner corrections, not substitution of these transport failures for a behaviora
 These are reported as results, not hidden.
 
 **8a. Memory-mixture rescue does not generalise across models (capture-memory-mix).**
-Source: [README.md](notes/capture-memory-mix/README.md), [CORRECTIONS.md](notes/capture-memory-mix/CORRECTIONS.md),
-[MP.md](notes/capture-memory-mix/results/MP.md), [MP2.md](notes/capture-memory-mix/results/MP2.md),
-[MP3.md](notes/capture-memory-mix/results/MP3.md). Evidence confidence 1/4.
+Source: [README.md](../../../5-experiments/studies/shadow/capture-memory-mix/README.md), [CORRECTIONS.md](../../../5-experiments/studies/shadow/capture-memory-mix/CORRECTIONS.md),
+[MP.md](../../../5-experiments/studies/shadow/capture-memory-mix/results/MP.md), [MP2.md](../../../5-experiments/studies/shadow/capture-memory-mix/results/MP2.md),
+[MP3.md](../../../5-experiments/studies/shadow/capture-memory-mix/results/MP3.md). Evidence confidence 1/4.
 Question: after a perfect purge, does mixing short-memory (L = 1) and full-memory agents restart the return?
 N = 16, dose 8/16, scored at round 30. Total real-model spend USD 3.93 of a USD 10 cap.
 - gpt-4o-mini (logprobs): full recovery only in interior mixtures, 9/60 episodes at f in {5/8, 3/4, 7/8} vs 0/81
@@ -270,7 +270,7 @@ dmarz's review verdict, accepted: "mixture rescue does not generalize". The long
 post-hoc lead from three confounded model and policy cohorts.
 
 **8b. Corrections to 8a (found by dmarz's cross-researcher review, all fixed).** Source:
-[CORRECTIONS.md](notes/capture-memory-mix/CORRECTIONS.md). Attempt lineage was not disclosed. qwen MP3 had 327 raw
+[CORRECTIONS.md](../../../5-experiments/studies/shadow/capture-memory-mix/CORRECTIONS.md). Attempt lineage was not disclosed. qwen MP3 had 327 raw
 arm records, 127 invalid, 147 superseded, 180 selected, 178 selected valid, and only 54/180 logical arm keys were
 valid on first observation. A "no retries" statement contradicted redone episodes. Pilot captions said round 50
 where the config says round 30. A hub capture fraction above 1 came from a code bug (for example MP3 f = 3/4
@@ -279,8 +279,8 @@ p changed, because the corrected selection rule picks exactly the same records (
 for all three pilots).
 
 **8c. Reading-rule diagnostic: the model just used the last event it was given.** Source:
-[reading-rule/FINDING.md](notes/capture-memory-mix/reading-rule/FINDING.md), [AMENDMENT-R2.md](notes/capture-memory-mix/reading-rule/AMENDMENT-R2.md),
-[summary.json](notes/capture-memory-mix/reading-rule/results-r2/summary.json). Evidence confidence 2/4. Model:
+[reading-rule/FINDING.md](../../../5-experiments/studies/shadow/capture-memory-mix/reading-rule/FINDING.md), [AMENDMENT-R2.md](../../../5-experiments/studies/shadow/capture-memory-mix/reading-rule/AMENDMENT-R2.md),
+[summary.json](../../../5-experiments/studies/shadow/capture-memory-mix/reading-rule/results-r2/summary.json). Evidence confidence 2/4. Model:
 `openai/gpt-4o-mini` via OpenRouter.
 Across 24 frozen synthetic histories, reversing the raw display changed majority-name probability by 0.000183 on
 average (95% history-bootstrap interval 0.000002 to 0.000532), against a prespecified notable-change threshold of
@@ -291,18 +291,18 @@ recovery, and it does not explain 8a. The first attempt (v1) stopped at one HTTP
 kept in the accounting (157 calls across both attempts, 156 valid).
 
 **8d. Real-model S2 pilot on capture-memory: nothing distinguishable from zero.** Source:
-[capture-memory/results/S2.md](notes/capture-memory/results/S2.md). llama-3.1-8b-instruct, 12 episodes on 6 tasks,
+[capture-memory/results/S2.md](../../../5-experiments/studies/shadow/capture-memory/results/S2.md). llama-3.1-8b-instruct, 12 episodes on 6 tasks,
 24/24 arm records valid, 10,384 calls. Full minus memory 1 under A1_purge (4 tasks): `frac_original_T` -0.089
 [-0.27, +0.18]. Purge minus no purge: memory 1 +0.107 [+0.00, +0.21], full +0.033 [-0.13, +0.20].
 
 **8e. Deletion-return on collusion.wiki: descriptive null.** Source:
-[wild-delete-return/FINDING.md](notes/wild-delete-return/FINDING.md). On 2,728 eligible deleted pages, 30-minute
+[wild-delete-return/FINDING.md](../../../5-experiments/studies/shadow/wild-delete-return/FINDING.md). On 2,728 eligible deleted pages, 30-minute
 windows hold 83 observed saves before and 83 after first deletion. Mean paired change 0.00000, deletion-day
 cluster-bootstrap 95% interval [-0.01824, +0.02252]. 19/2,728 pages (0.696%) have a post-guard save. This does not
 show whether deletion works or fails.
 
 **8f. Evidence depth in SwarmTraces (descriptive, not a success rate).** Source:
-[wild-evidence-depth/FINDING.md](notes/wild-evidence-depth/FINDING.md). 7,733/91,037 payloads (8.49%) have a
+[wild-evidence-depth/FINDING.md](../../../5-experiments/studies/shadow/wild-evidence-depth/FINDING.md). 7,733/91,037 payloads (8.49%) have a
 direct response child. Dividing all response rows by payload rows gives 25.27%, nearly three times that, because
 18,417 parented responses attach to only 7,733 payloads. Response attachment rises from 2.26% (1-255 characters)
 to 39.98% (4096+ characters).
@@ -315,38 +315,38 @@ and the reduced offline fixture did not reproduce freeze. See [section 7](#7-fre
 
 ## 9. Reviews and audits
 
-**Review of dmarz's discussion benchmark v3** ([review-discussion-benchmark-v3.md](notes/review-discussion-benchmark-v3.md)).
+**Review of dmarz's discussion benchmark v3** ([review-discussion-benchmark-v3.md](../../../5-experiments/studies/shadow/review-discussion-benchmark-v3.md)).
 Verdict pass-with-fixes. Zero model calls. Two blocking defects were found before a paid run. F1: vote-level
 metrics erase a real fixed-quorum decision when one ballot is invalid (two target votes plus one failed ballot
 scored as `vote_target=0`). F2: `provider_failure` journal events drop the failure reason, so rate limits cannot
 be told apart from credit exhaustion. Also verified: six development cases by hand, 36 memory keys by hand, 636
 journal requests scanned with an independent walker, and 60/60 adversarial checks passing.
 
-**Independent arithmetic check of dmarz's completed findings** ([completed-findings-xcheck/README.md](notes/completed-findings-xcheck/README.md)).
+**Independent arithmetic check of dmarz's completed findings** ([completed-findings-xcheck/README.md](../../../5-experiments/studies/shadow/completed-findings-xcheck/README.md)).
 7,512 saved Sybil answers rescored with code that imports no study implementation, with zero endpoint
 mismatches. Split primary +40.97 points (interval +27.78 to +54.86) agrees. Exactly 7/120 budget cells meet the
 joint target. Market split: firm regulation 6/6, owner and none 0/6. One real reporting defect: floating-point
 cancellation turned exact ties into wins and losses (correct Opus counts 7/66/27 vs Sonnet, not 9/67/24).
 
-**Audit 1, our own lanes** ([sol-audit-ours.md](notes/audit-2026-10-04/sol-audit-ours.md)). 286 wakesync commits in
+**Audit 1, our own lanes** ([sol-audit-ours.md](../../../5-experiments/studies/shadow/audit-2026-10-04/sol-audit-ours.md)). 286 wakesync commits in
 the window, about 70% of them library writing in two Saturday hours. 230/230 paper entries we added with a DOI or
 arXiv id resolve with matching titles (zero hallucinated ids). A 20-entry random sample was all verified. The
 audit called the library context rather than a result, and redirected effort to the incident-data lanes,
 capture-memory-mix corrections and a packet refresh.
 
-**Audit 2, the team delta** ([sol-audit-team.md](notes/audit-2026-10-04/sol-audit-team.md), [evidence JSON](notes/audit-2026-10-04/sol-audit-team-evidence.json)).
+**Audit 2, the team delta** ([sol-audit-team.md](../../../5-experiments/studies/shadow/audit-2026-10-04/sol-audit-team.md), [evidence JSON](../../../5-experiments/studies/shadow/audit-2026-10-04/sol-audit-team-evidence.json)).
 Evidence registry at `aa01058b`: 118 rows, 48 at 0/4, 52 at 1/4, 16 at 2/4, none above 2/4. Four of the five gray
 projects acquired native measurements. Two original public-code defects reproduce offline (EP-01 legacy immune
 `act()` mutates memory before validating; ADD-T-01 legacy Theseus accepts `ILLEGAL` labels). Exactly 4 of 11 dmarz
 READY.yaml packages have never launched.
 
-Also: [sol-audit-gap.md](notes/audit-2026-10-04/sol-audit-gap.md) (strategy audit that produced 8e and 8f) and
-[sol-factory.md](notes/audit-2026-10-04/sol-factory.md) (section 11).
+Also: [sol-audit-gap.md](../../../5-experiments/studies/shadow/audit-2026-10-04/sol-audit-gap.md) (strategy audit that produced 8e and 8f) and
+[sol-factory.md](../../../5-experiments/studies/shadow/audit-2026-10-04/sol-factory.md) (section 11).
 
 ## 10. Janitor fixes (PRs #85 to #106)
 
-Sources: [janitor README](notes/janitor-2026-10-04/README.md), [FINDINGS.jsonl](notes/janitor-2026-10-04/FINDINGS.jsonl)
-(41 findings), [MERGED.md](notes/janitor-2026-10-04/MERGED.md), [offline probes](notes/janitor-2026-10-04/probes/).
+Sources: [janitor README](../../../5-experiments/studies/shadow/janitor-2026-10-04/README.md), [FINDINGS.jsonl](../../../5-experiments/studies/shadow/janitor-2026-10-04/FINDINGS.jsonl)
+(41 findings), [MERGED.md](../../../5-experiments/studies/shadow/janitor-2026-10-04/MERGED.md), [offline probes](../../../5-experiments/studies/shadow/janitor-2026-10-04/probes/).
 
 A finder agent filed 41 code findings offline, with no model calls. Saved probes show the old HTTP adapter
 accepting a wrong returned model, two retry dispatches counted as one against a call cap, negative ledger
@@ -363,9 +363,9 @@ actually happened.
 
 ## 11. Factory status
 
-Sources: [sol-factory.md](notes/audit-2026-10-04/sol-factory.md), [factory/provenance/README.md](factory/provenance/README.md),
-[POSTMORTEM.md](factory/provenance/POSTMORTEM.md), [attempt2 status](factory/provenance/attempt2/results/FINDING.md),
-[independent review](factory/provenance/attempt2/REVIEW-independent.md),
+Sources: [sol-factory.md](../../../5-experiments/studies/shadow/audit-2026-10-04/sol-factory.md), [factory/provenance/README.md](../../../5-experiments/studies/shadow/factory/provenance/README.md),
+[POSTMORTEM.md](../../../5-experiments/studies/shadow/factory/provenance/POSTMORTEM.md), [attempt2 status](../../../5-experiments/studies/shadow/factory/provenance/attempt2/results/FINDING.md),
+[independent review](../../../5-experiments/studies/shadow/factory/provenance/attempt2/REVIEW-independent.md),
 [PR #107](https://github.com/dmarzzz/swarm-lab/pull/107).
 
 Honest status: **no factory treatment result exists.**
@@ -381,7 +381,7 @@ Honest status: **no factory treatment result exists.**
   **BLOCK**. Direct dispatch can continue after an HTTP400 and run out of the frozen assignment order; the stop
   rule is not enforced at the shared dispatch boundary. `closeout.py` is absent from the admitted source-hash
   manifest, and saved-data reporting/check paths do not enforce the reporting freeze. See
-  [REVIEW-independent.md](factory/provenance/attempt2/REVIEW-independent.md). The supplied offline tests passed
+  [REVIEW-independent.md](../../../5-experiments/studies/shadow/factory/provenance/attempt2/REVIEW-independent.md). The supplied offline tests passed
   but did not cover these failures. Attempt 2 made **0 new HTTP calls**, spent **USD 0**, and makes **no
   scientific treatment claim**. The blockers require offline fixes and a separate-agent readback before any
   prospective admission or dispatch.
@@ -394,7 +394,7 @@ Honest status: **no factory treatment result exists.**
   rule's property. The real-model pilots are small (6 to 24 tasks per cell) and do not replicate one another.
 - Most checks are same-team or same-author. Cross-researcher review exists for capture-memory-mix (dmarz) and for
   the work we reviewed (sections 9 and 10).
-- Evidence-confidence scores are on the shared 0 to 4 rubric ([experiments/EVIDENCE-METADATA.md](../../experiments/EVIDENCE-METADATA.md)).
+- Evidence-confidence scores are on the shared 0 to 4 rubric ([experiments/EVIDENCE-METADATA.md](../../../5-experiments/EVIDENCE-METADATA.md)).
   Nothing here is above 2/4.
 - Raw incident rows and identifying labels are not committed. Reproduction commands are in each lane's README or
   FINDING.

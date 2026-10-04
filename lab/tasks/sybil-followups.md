@@ -16,11 +16,11 @@ topics:
 claimed_at: 2026-10-04T03:31Z
 updated: 2026-10-04T05:45Z
 outputs:
-- researchers/dmarz/notes/sybil-budget-api/RESULTS.md
-- researchers/dmarz/notes/sybil-budget-api/reviews/s1-001-post.md
-- researchers/dmarz/notes/sybil-newcomer-api/RESULTS.md
-- researchers/dmarz/notes/sybil-newcomer-api/reviews/s1-001-post.md
-- researchers/dmarz/notes/sybil-scarcity-plan/README.md
+- 5-experiments/studies/dmarz/sybil-budget-api/RESULTS.md
+- 5-experiments/studies/dmarz/sybil-budget-api/reviews/s1-001-post.md
+- 5-experiments/studies/dmarz/sybil-newcomer-api/RESULTS.md
+- 5-experiments/studies/dmarz/sybil-newcomer-api/reviews/s1-001-post.md
+- 5-experiments/studies/dmarz/sybil-scarcity-plan/README.md
 ---
 
 ## Goal

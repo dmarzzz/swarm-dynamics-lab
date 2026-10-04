@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T01:29Z
 updated: 2026-10-04T01:30Z
 outputs:
-- researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md
+- 5-experiments/studies/dmarz/discussion-dose/V2-ISSUE-REVIEW.md
 ---
 
 ## Goal

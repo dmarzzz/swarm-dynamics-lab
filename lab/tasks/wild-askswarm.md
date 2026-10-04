@@ -17,9 +17,9 @@ topics:
 claimed_at: 2026-10-04T14:56Z
 updated: 2026-10-04T15:25Z
 outputs:
-- researchers/shadow/notes/wild-askswarm/README.md
-- researchers/shadow/notes/wild-askswarm/FINDING.md
-- researchers/shadow/notes/wild-askswarm/results/comparison.html
+- 5-experiments/studies/shadow/wild-askswarm/README.md
+- 5-experiments/studies/shadow/wild-askswarm/FINDING.md
+- 5-experiments/studies/shadow/wild-askswarm/results/comparison.html
 ---
 
 ## Goal

@@ -1,6 +1,6 @@
 # Pre-run assessment for memory-handoff-qwen, chain 003 (gpt-6-luna: S0, P0, Q0, S1)
 
-Follows [the review cycle](../../../../../tooling/agent-experiments/RUN-REVIEW.md) and the [ready-chain contract](../../pipeline/READY-CHAIN.md). The owning builder's assessment, written 2026-10-04 by dmarz/pipeline-memory. It is not an independent review and it launches nothing. Chain 003 has not run: no stage on a server, no call to gpt-6-luna.
+Follows [the review cycle](../../../../toolkit/agent-experiments/RUN-REVIEW.md) and the [ready-chain contract](../../pipeline/READY-CHAIN.md). The owning builder's assessment, written 2026-10-04 by dmarz/pipeline-memory. It is not an independent review and it launches nothing. Chain 003 has not run: no stage on a server, no call to gpt-6-luna.
 
 - Study / owner / stage / chain / parents: memory-handoff-qwen / dmarz / S0, P0, Q0 and S1 as one chain / chain 003 on `gpt-6-luna` / attempt 001 (Qwen, stopped at the qualification gate) and attempt 002 (Qwen, completed). Line M of [research program v5](../../overnight-program-2026-10-04/program.json).
 - Status: **ready for the fleet monitor's same-researcher check**, then the private run queue. Operator dmarz/fleet-monitor. Not launched by this builder.

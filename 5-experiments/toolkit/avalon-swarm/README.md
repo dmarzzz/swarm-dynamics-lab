@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../experiments/evidence-metadata.json), [rubric](../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../evidence-metadata.json), [rubric](../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Scripted recovery and communication mechanics work at increasing logical population size. Basis: Programmed repair, synthetic identities and environment audits do not establish LLM benefit; small recovery difference descriptive. Large logical population is a capacity check, not large independent sample.
 - **sample_size_summary:** 45 scripted worlds:15v0.1 scale (5sizes × 3topologies),15recovery (5paired seeds × 3arms),15v0.2 consensus checks;one scale seed per condition.
@@ -15,14 +15,14 @@ The research question is: **When misleading claims spread through a swarm, does 
 
 We use ten-agent councils connected by sparse communication. Agents propose teams, vote, undertake missions, conceal roles, and exchange claims. Each council has its own hidden roles, but information about its members originates in neighboring councils. The resulting world has coupled information flow and a shared aggregate objective. It is a new Avalon-inspired game, not an official AvalonBench update or a faithful reproduction.
 
-See [swarm-lab integration and status](INTEGRATION.md) before treating this prototype as a team experiment.
+See [swarm-dynamics-lab integration and status](INTEGRATION.md) before treating this prototype as a team experiment.
 
 ## Start here
 
 Python 3.10 or newer; no dependencies, credentials, network, or paid calls.
 
 ```sh
-cd tooling/avalon-swarm
+cd 5-experiments/toolkit/avalon-swarm
 python3 -m unittest discover -s tests -v
 python3 benchmark.py --n 100 --recovery repair --out /tmp/avalon-example
 python3 benchmark.py --n 100 --recovery-sweep --replicates 5 --out /tmp/avalon-recovery

@@ -1,6 +1,6 @@
 # Experiment setup record: market-split-api V5 / S1-002
 
-Retrospective closeout record, 2026-10-04, dmarz/market-split. This file was written after the original cohort finished. It follows the [setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [operations guide](../../../../tooling/agent-experiments/OPERATIONS.md); it is not historical launch approval or a preflight receipt.
+Retrospective closeout record, 2026-10-04, dmarz/market-split. This file was written after the original cohort finished. It follows the [setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and [operations guide](../../../toolkit/agent-experiments/OPERATIONS.md); it is not historical launch approval or a preflight receipt.
 
 ## Ownership and question
 

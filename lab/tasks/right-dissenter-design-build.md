@@ -16,11 +16,11 @@ topics:
 claimed_at: 2026-10-04T02:58Z
 updated: 2026-10-04T03:13Z
 outputs:
-- researchers/vishesh/notes/dissent/README.md
-- researchers/vishesh/notes/dissent/PLAN.md
-- researchers/vishesh/notes/dissent/IMPLEMENTATION.md
-- researchers/vishesh/notes/decision-models/handoffs/PHANTOM-COAST.md
-- researchers/vishesh/notes/decision-models/handoffs/QUORUM-OF-MIRRORS.md
+- 5-experiments/studies/vishesh/dissent/README.md
+- 5-experiments/studies/vishesh/dissent/PLAN.md
+- 5-experiments/studies/vishesh/dissent/IMPLEMENTATION.md
+- 5-experiments/studies/vishesh/decision-models/handoffs/PHANTOM-COAST.md
+- 5-experiments/studies/vishesh/decision-models/handoffs/QUORUM-OF-MIRRORS.md
 ---
 
 ## Goal

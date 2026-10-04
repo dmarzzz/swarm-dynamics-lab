@@ -10,7 +10,7 @@ class DestinationTest(unittest.TestCase):
         self.assertEqual(set(batches.LIB_DIR), set(batches.NEW_KIND))
         for source, kind in batches.NEW_KIND.items():
             with self.subTest(source=source):
-                destination = f"library/{folders[kind]}/"
+                destination = f"1-library/{folders[kind]}/"
                 self.assertEqual(batches.LIB_DIR[source], destination)
                 body = batches.issue_body("example", source, "meta", [])
                 self.assertIn(f"lab.py new {kind} <id>", body)

@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T16:56Z
 updated: 2026-10-04T17:01Z
 outputs:
-- researchers/vishesh/notes/antsy-targeted-v8/execution-repair-v1/PLAN.md
-- researchers/vishesh/notes/antsy-targeted-v8/execution-repair-v1/validation.json
+- 5-experiments/studies/vishesh/antsy-targeted-v8/execution-repair-v1/PLAN.md
+- 5-experiments/studies/vishesh/antsy-targeted-v8/execution-repair-v1/validation.json
 ---
 
 ## Goal

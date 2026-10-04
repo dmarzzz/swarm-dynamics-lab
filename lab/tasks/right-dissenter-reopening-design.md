@@ -16,10 +16,10 @@ topics:
 claimed_at: 2026-10-04T18:12Z
 updated: 2026-10-04T18:24Z
 outputs:
-- researchers/vishesh/notes/dissent/reopening/PLAN.md
-- researchers/vishesh/notes/dissent/reopening/DRAFT-REVIEW.md
-- researchers/vishesh/notes/dissent/reopening/IMPLEMENTATION.md
-- researchers/vishesh/notes/dissent/reopening/offline/validation.json
+- 5-experiments/studies/vishesh/dissent/reopening/PLAN.md
+- 5-experiments/studies/vishesh/dissent/reopening/DRAFT-REVIEW.md
+- 5-experiments/studies/vishesh/dissent/reopening/IMPLEMENTATION.md
+- 5-experiments/studies/vishesh/dissent/reopening/offline/validation.json
 ---
 
 ## Goal

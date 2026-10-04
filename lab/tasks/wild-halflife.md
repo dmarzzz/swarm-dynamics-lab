@@ -16,11 +16,11 @@ topics:
 claimed_at: 2026-10-04T15:03Z
 updated: 2026-10-04T16:07Z
 outputs:
-- researchers/shadow/notes/wild-halflife/FINDING.md
-- researchers/shadow/notes/wild-halflife/README.md
-- researchers/shadow/notes/wild-halflife/results/summary.json
-- researchers/shadow/notes/wild-halflife/results/supplement.json
-- researchers/shadow/notes/wild-halflife/results/fig-adoption.png
+- 5-experiments/studies/shadow/wild-halflife/FINDING.md
+- 5-experiments/studies/shadow/wild-halflife/README.md
+- 5-experiments/studies/shadow/wild-halflife/results/summary.json
+- 5-experiments/studies/shadow/wild-halflife/results/supplement.json
+- 5-experiments/studies/shadow/wild-halflife/results/fig-adoption.png
 ---
 
 ## Goal

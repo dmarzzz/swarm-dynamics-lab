@@ -1,6 +1,6 @@
 # Antsy v7 setup and evidence record
 
-Owner/operator/design assessor: vishesh/codex-methods. Same-author review, not independent. Exploratory instrument; no accepted-hypothesis or LLM-swarm efficacy claim. Researcher review is optional under the current Vishesh owner directive. [Setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md).
+Owner/operator/design assessor: vishesh/codex-methods. Same-author review, not independent. Exploratory instrument; no accepted-hypothesis or LLM-swarm efficacy claim. Researcher review is optional under the current Vishesh owner directive. [Setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md).
 
 ## Gates and intended decision
 

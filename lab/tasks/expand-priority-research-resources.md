@@ -14,9 +14,9 @@ topics: []
 claimed_at: 2026-10-03T22:40Z
 updated: 2026-10-03T22:51Z
 outputs:
-- researchers/vishesh/notes/priority-research-expansion/README.md
-- researchers/vishesh/notes/priority-research-expansion/idea-bank.md
-- researchers/vishesh/notes/priority-research-expansion/source-ledger.md
+- 5-experiments/studies/vishesh/priority-research-expansion/README.md
+- 5-experiments/studies/vishesh/priority-research-expansion/idea-bank.md
+- 5-experiments/studies/vishesh/priority-research-expansion/source-ledger.md
 ---
 
 ## Goal

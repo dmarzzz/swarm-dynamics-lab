@@ -9,7 +9,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [collective-sensing](../project-briefs/collective-sensing.md), [quorum](../project-briefs/quorum.md), [diversity](../project-briefs/diversity.md).
 
-**Existing candidates:** [PHY-09](../../../dmarz/notes/question-atlas/review.html#PHY-09), [SOC-01](../../../dmarz/notes/question-atlas/review.html#SOC-01), [SEC-03](../../../dmarz/notes/question-atlas/review.html#SEC-03), [SOC-39](../../../dmarz/notes/question-atlas/review.html#SOC-39).
+**Existing candidates:** [PHY-09](../../dmarz/question-atlas/review.html#PHY-09), [SOC-01](../../dmarz/question-atlas/review.html#SOC-01), [SEC-03](../../dmarz/question-atlas/review.html#SEC-03), [SOC-39](../../dmarz/question-atlas/review.html#SOC-39).
 
 **Nearest catalogued work:** [[kim-2025-correlated]], [[zhang-2026-silo]].
 
@@ -30,7 +30,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [quorum](../project-briefs/quorum.md), [dissent](../project-briefs/dissent.md), [institutions](../project-briefs/institutions.md).
 
-**Existing candidates:** [SEC-03](../../../dmarz/notes/question-atlas/review.html#SEC-03), [SEC-12](../../../dmarz/notes/question-atlas/review.html#SEC-12), [SOC-10](../../../dmarz/notes/question-atlas/review.html#SOC-10), [SOC-43](../../../dmarz/notes/question-atlas/review.html#SOC-43).
+**Existing candidates:** [SEC-03](../../dmarz/question-atlas/review.html#SEC-03), [SEC-12](../../dmarz/question-atlas/review.html#SEC-12), [SOC-10](../../dmarz/question-atlas/review.html#SOC-10), [SOC-43](../../dmarz/question-atlas/review.html#SOC-43).
 
 **Nearest catalogued work:** [[kim-2025-correlated]], [[li-2026-benchmark]].
 
@@ -51,7 +51,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [quorum](../project-briefs/quorum.md), [coordination](../project-briefs/coordination.md).
 
-**Existing candidates:** [SOC-08](../../../dmarz/notes/question-atlas/review.html#SOC-08), [MTH-02](../../../dmarz/notes/question-atlas/review.html#MTH-02).
+**Existing candidates:** [SOC-08](../../dmarz/question-atlas/review.html#SOC-08), [MTH-02](../../dmarz/question-atlas/review.html#MTH-02).
 
 **Nearest catalogued work:** [[blanchard-2017-byzantine]], [[el-mhamdi-2018-hidden]].
 
@@ -72,7 +72,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [dissent](../project-briefs/dissent.md), [commons](../project-briefs/commons.md), [quorum](../project-briefs/quorum.md).
 
-**Existing candidates:** [SOC-09](../../../dmarz/notes/question-atlas/review.html#SOC-09), [SOC-11](../../../dmarz/notes/question-atlas/review.html#SOC-11), [SOC-28](../../../dmarz/notes/question-atlas/review.html#SOC-28), [SOC-42](../../../dmarz/notes/question-atlas/review.html#SOC-42).
+**Existing candidates:** [SOC-09](../../dmarz/question-atlas/review.html#SOC-09), [SOC-11](../../dmarz/question-atlas/review.html#SOC-11), [SOC-28](../../dmarz/question-atlas/review.html#SOC-28), [SOC-42](../../dmarz/question-atlas/review.html#SOC-42).
 
 **Nearest catalogued work:** [[choi-2025-debate]], [[cemri-2025-why]].
 
@@ -93,7 +93,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [memory](../project-briefs/memory.md), [whistleblowing](../project-briefs/whistleblowing.md), [institutions](../project-briefs/institutions.md).
 
-**Existing candidates:** [SEC-08](../../../dmarz/notes/question-atlas/review.html#SEC-08), [SOC-29](../../../dmarz/notes/question-atlas/review.html#SOC-29), [PHY-30](../../../dmarz/notes/question-atlas/review.html#PHY-30), [SEC-48](../../../dmarz/notes/question-atlas/review.html#SEC-48), [BUD-17](../../../dmarz/notes/question-atlas/review.html#BUD-17).
+**Existing candidates:** [SEC-08](../../dmarz/question-atlas/review.html#SEC-08), [SOC-29](../../dmarz/question-atlas/review.html#SOC-29), [PHY-30](../../dmarz/question-atlas/review.html#PHY-30), [SEC-48](../../dmarz/question-atlas/review.html#SEC-48), [BUD-17](../../dmarz/question-atlas/review.html#BUD-17).
 
 **Nearest catalogued work:** [[li-2026-memtx]], [[cemri-2025-why]].
 
@@ -114,7 +114,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [memory](../project-briefs/memory.md), [regrowth](../project-briefs/regrowth.md), [telephone](../project-briefs/telephone.md).
 
-**Existing candidates:** [SEC-05](../../../dmarz/notes/question-atlas/review.html#SEC-05), [SEC-07](../../../dmarz/notes/question-atlas/review.html#SEC-07), [SOC-23](../../../dmarz/notes/question-atlas/review.html#SOC-23), [SEC-46](../../../dmarz/notes/question-atlas/review.html#SEC-46), [SEC-52](../../../dmarz/notes/question-atlas/review.html#SEC-52).
+**Existing candidates:** [SEC-05](../../dmarz/question-atlas/review.html#SEC-05), [SEC-07](../../dmarz/question-atlas/review.html#SEC-07), [SOC-23](../../dmarz/question-atlas/review.html#SOC-23), [SEC-46](../../dmarz/question-atlas/review.html#SEC-46), [SEC-52](../../dmarz/question-atlas/review.html#SEC-52).
 
 **Nearest catalogued work:** [[li-2026-memtx]], [[ouyang-2026-memlineage]], [[elnozahy-2002-survey]].
 
@@ -135,7 +135,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [regrowth](../project-briefs/regrowth.md), [memory](../project-briefs/memory.md), [diversity](../project-briefs/diversity.md).
 
-**Existing candidates:** [SOC-22](../../../dmarz/notes/question-atlas/review.html#SOC-22), [SOC-23](../../../dmarz/notes/question-atlas/review.html#SOC-23), [SEC-46](../../../dmarz/notes/question-atlas/review.html#SEC-46).
+**Existing candidates:** [SOC-22](../../dmarz/question-atlas/review.html#SOC-22), [SOC-23](../../dmarz/question-atlas/review.html#SOC-23), [SEC-46](../../dmarz/question-atlas/review.html#SEC-46).
 
 **Nearest catalogued work:** [[elnozahy-2002-survey]], [[zhang-2026-silo]].
 
@@ -156,7 +156,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [leadership](../project-briefs/leadership.md), [collective-sensing](../project-briefs/collective-sensing.md), [coordination](../project-briefs/coordination.md).
 
-**Existing candidates:** [SOC-17](../../../dmarz/notes/question-atlas/review.html#SOC-17), [PHY-25](../../../dmarz/notes/question-atlas/review.html#PHY-25), [SIM-02](../../../dmarz/notes/question-atlas/review.html#SIM-02), [BUD-16](../../../dmarz/notes/question-atlas/review.html#BUD-16), [MKT-09](../../../dmarz/notes/question-atlas/review.html#MKT-09).
+**Existing candidates:** [SOC-17](../../dmarz/question-atlas/review.html#SOC-17), [PHY-25](../../dmarz/question-atlas/review.html#PHY-25), [SIM-02](../../dmarz/question-atlas/review.html#SIM-02), [BUD-16](../../dmarz/question-atlas/review.html#BUD-16), [MKT-09](../../dmarz/question-atlas/review.html#MKT-09).
 
 **Nearest catalogued work:** [[tambwekar-2026-proxifield]], [[shalizi-2011-homophily]].
 
@@ -177,7 +177,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [commons](../project-briefs/commons.md), [institutions](../project-briefs/institutions.md), [coordination](../project-briefs/coordination.md).
 
-**Existing candidates:** [SOC-27](../../../dmarz/notes/question-atlas/review.html#SOC-27), [RL-02](../../../dmarz/notes/question-atlas/review.html#RL-02), [SEC-24](../../../dmarz/notes/question-atlas/review.html#SEC-24), [BUD-17](../../../dmarz/notes/question-atlas/review.html#BUD-17).
+**Existing candidates:** [SOC-27](../../dmarz/question-atlas/review.html#SOC-27), [RL-02](../../dmarz/question-atlas/review.html#RL-02), [SEC-24](../../dmarz/question-atlas/review.html#SEC-24), [BUD-17](../../dmarz/question-atlas/review.html#BUD-17).
 
 **Nearest catalogued work:** [[leibo-2021-scalable]], [[cemri-2025-why]].
 
@@ -198,7 +198,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [regrowth](../project-briefs/regrowth.md), [casefile](../project-briefs/casefile.md), [coordination](../project-briefs/coordination.md).
 
-**Existing candidates:** [SOC-14](../../../dmarz/notes/question-atlas/review.html#SOC-14), [SOC-23](../../../dmarz/notes/question-atlas/review.html#SOC-23), [SIM-01](../../../dmarz/notes/question-atlas/review.html#SIM-01), [SEC-46](../../../dmarz/notes/question-atlas/review.html#SEC-46).
+**Existing candidates:** [SOC-14](../../dmarz/question-atlas/review.html#SOC-14), [SOC-23](../../dmarz/question-atlas/review.html#SOC-23), [SIM-01](../../dmarz/question-atlas/review.html#SIM-01), [SEC-46](../../dmarz/question-atlas/review.html#SEC-46).
 
 **Nearest catalogued work:** [[zhang-2026-silo]], [[elnozahy-2002-survey]].
 
@@ -219,7 +219,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [memory](../project-briefs/memory.md), [institutions](../project-briefs/institutions.md), [casefile](../project-briefs/casefile.md).
 
-**Existing candidates:** [SEC-06](../../../dmarz/notes/question-atlas/review.html#SEC-06), [MTH-05](../../../dmarz/notes/question-atlas/review.html#MTH-05), [SEC-49](../../../dmarz/notes/question-atlas/review.html#SEC-49).
+**Existing candidates:** [SEC-06](../../dmarz/question-atlas/review.html#SEC-06), [MTH-05](../../dmarz/question-atlas/review.html#MTH-05), [SEC-49](../../dmarz/question-atlas/review.html#SEC-49).
 
 **Nearest catalogued work:** [[li-2026-memtx]], [[elnozahy-2002-survey]].
 
@@ -240,7 +240,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [telephone](../project-briefs/telephone.md), [quorum](../project-briefs/quorum.md), [casefile](../project-briefs/casefile.md).
 
-**Existing candidates:** [SOC-31](../../../dmarz/notes/question-atlas/review.html#SOC-31), [SEC-05](../../../dmarz/notes/question-atlas/review.html#SEC-05).
+**Existing candidates:** [SOC-31](../../dmarz/question-atlas/review.html#SOC-31), [SEC-05](../../dmarz/question-atlas/review.html#SEC-05).
 
 **Nearest catalogued work:** [[perez-2024-cultural]], [[ouyang-2026-memlineage]].
 
@@ -261,7 +261,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [casefile](../project-briefs/casefile.md), [discovery](../project-briefs/discovery.md), [whistleblowing](../project-briefs/whistleblowing.md).
 
-**Existing candidates:** [SOC-32](../../../dmarz/notes/question-atlas/review.html#SOC-32), [MET-07](../../../dmarz/notes/question-atlas/review.html#MET-07), [MTH-09](../../../dmarz/notes/question-atlas/review.html#MTH-09).
+**Existing candidates:** [SOC-32](../../dmarz/question-atlas/review.html#SOC-32), [MET-07](../../dmarz/question-atlas/review.html#MET-07), [MTH-09](../../dmarz/question-atlas/review.html#MTH-09).
 
 **Nearest catalogued work:** [[cemri-2025-why]], [[shalizi-2011-homophily]].
 
@@ -282,7 +282,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [discovery](../project-briefs/discovery.md), [whistleblowing](../project-briefs/whistleblowing.md), [culture](../project-briefs/culture.md).
 
-**Existing candidates:** [SEC-29](../../../dmarz/notes/question-atlas/review.html#SEC-29), [SEC-30](../../../dmarz/notes/question-atlas/review.html#SEC-30), [MET-08](../../../dmarz/notes/question-atlas/review.html#MET-08), [SEC-50](../../../dmarz/notes/question-atlas/review.html#SEC-50).
+**Existing candidates:** [SEC-29](../../dmarz/question-atlas/review.html#SEC-29), [SEC-30](../../dmarz/question-atlas/review.html#SEC-30), [MET-08](../../dmarz/question-atlas/review.html#MET-08), [SEC-50](../../dmarz/question-atlas/review.html#SEC-50).
 
 **Nearest catalogued work:** [[shalizi-2011-homophily]], [[cemri-2025-why]].
 
@@ -303,7 +303,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [leadership](../project-briefs/leadership.md), [memory](../project-briefs/memory.md), [coordination](../project-briefs/coordination.md).
 
-**Existing candidates:** [SOC-18](../../../dmarz/notes/question-atlas/review.html#SOC-18), [MTH-05](../../../dmarz/notes/question-atlas/review.html#MTH-05), [BUD-20](../../../dmarz/notes/question-atlas/review.html#BUD-20).
+**Existing candidates:** [SOC-18](../../dmarz/question-atlas/review.html#SOC-18), [MTH-05](../../dmarz/question-atlas/review.html#MTH-05), [BUD-20](../../dmarz/question-atlas/review.html#BUD-20).
 
 **Nearest catalogued work:** [[elnozahy-2002-survey]], [[cemri-2025-why]].
 
@@ -324,7 +324,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [culture](../project-briefs/culture.md), [memory](../project-briefs/memory.md), [institutions](../project-briefs/institutions.md).
 
-**Existing candidates:** [SOC-24](../../../dmarz/notes/question-atlas/review.html#SOC-24), [SOC-25](../../../dmarz/notes/question-atlas/review.html#SOC-25), [OPT-05](../../../dmarz/notes/question-atlas/review.html#OPT-05), [SOC-45](../../../dmarz/notes/question-atlas/review.html#SOC-45), [MKT-07](../../../dmarz/notes/question-atlas/review.html#MKT-07).
+**Existing candidates:** [SOC-24](../../dmarz/question-atlas/review.html#SOC-24), [SOC-25](../../dmarz/question-atlas/review.html#SOC-25), [OPT-05](../../dmarz/question-atlas/review.html#OPT-05), [SOC-45](../../dmarz/question-atlas/review.html#SOC-45), [MKT-07](../../dmarz/question-atlas/review.html#MKT-07).
 
 **Nearest catalogued work:** [[perez-2024-cultural]], [[li-2026-memtx]].
 
@@ -345,7 +345,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [culture](../project-briefs/culture.md), [commons](../project-briefs/commons.md), [dissent](../project-briefs/dissent.md).
 
-**Existing candidates:** [SOC-24](../../../dmarz/notes/question-atlas/review.html#SOC-24), [SOC-28](../../../dmarz/notes/question-atlas/review.html#SOC-28), [SEC-12](../../../dmarz/notes/question-atlas/review.html#SEC-12), [BUD-17](../../../dmarz/notes/question-atlas/review.html#BUD-17).
+**Existing candidates:** [SOC-24](../../dmarz/question-atlas/review.html#SOC-24), [SOC-28](../../dmarz/question-atlas/review.html#SOC-28), [SEC-12](../../dmarz/question-atlas/review.html#SEC-12), [BUD-17](../../dmarz/question-atlas/review.html#BUD-17).
 
 **Nearest catalogued work:** [[perez-2024-cultural]], [[leibo-2021-scalable]].
 
@@ -366,7 +366,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [nca-observatory](../project-briefs/nca-observatory.md), [regrowth](../project-briefs/regrowth.md).
 
-**Existing candidates:** [PHY-17](../../../dmarz/notes/question-atlas/review.html#PHY-17), [PHY-37](../../../dmarz/notes/question-atlas/review.html#PHY-37).
+**Existing candidates:** [PHY-17](../../dmarz/question-atlas/review.html#PHY-17), [PHY-37](../../dmarz/question-atlas/review.html#PHY-37).
 
 **Nearest catalogued work:** [[mordvintsev-2020-growing]], [[etcheverry-2026-reasoning]].
 
@@ -387,7 +387,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [nca-observatory](../project-briefs/nca-observatory.md), [memory](../project-briefs/memory.md).
 
-**Existing candidates:** [PHY-38](../../../dmarz/notes/question-atlas/review.html#PHY-38), [MTH-05](../../../dmarz/notes/question-atlas/review.html#MTH-05), [SIM-02](../../../dmarz/notes/question-atlas/review.html#SIM-02).
+**Existing candidates:** [PHY-38](../../dmarz/question-atlas/review.html#PHY-38), [MTH-05](../../dmarz/question-atlas/review.html#MTH-05), [SIM-02](../../dmarz/question-atlas/review.html#SIM-02).
 
 **Nearest catalogued work:** [[mordvintsev-2020-growing]], [[elnozahy-2002-survey]].
 
@@ -408,7 +408,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [diversity](../project-briefs/diversity.md), [commons](../project-briefs/commons.md), [quorum](../project-briefs/quorum.md).
 
-**Existing candidates:** [SOC-01](../../../dmarz/notes/question-atlas/review.html#SOC-01), [SEC-18](../../../dmarz/notes/question-atlas/review.html#SEC-18), [SEC-24](../../../dmarz/notes/question-atlas/review.html#SEC-24), [SEC-51](../../../dmarz/notes/question-atlas/review.html#SEC-51), [SOC-38](../../../dmarz/notes/question-atlas/review.html#SOC-38), [MKT-08](../../../dmarz/notes/question-atlas/review.html#MKT-08), [MKT-11](../../../dmarz/notes/question-atlas/review.html#MKT-11).
+**Existing candidates:** [SOC-01](../../dmarz/question-atlas/review.html#SOC-01), [SEC-18](../../dmarz/question-atlas/review.html#SEC-18), [SEC-24](../../dmarz/question-atlas/review.html#SEC-24), [SEC-51](../../dmarz/question-atlas/review.html#SEC-51), [SOC-38](../../dmarz/question-atlas/review.html#SOC-38), [MKT-08](../../dmarz/question-atlas/review.html#MKT-08), [MKT-11](../../dmarz/question-atlas/review.html#MKT-11).
 
 **Nearest catalogued work:** [[kim-2025-correlated]], [[leibo-2021-scalable]].
 
@@ -429,7 +429,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [coordination](../project-briefs/coordination.md), [institutions](../project-briefs/institutions.md), [whistleblowing](../project-briefs/whistleblowing.md).
 
-**Existing candidates:** [SOC-16](../../../dmarz/notes/question-atlas/review.html#SOC-16), [SEC-22](../../../dmarz/notes/question-atlas/review.html#SEC-22), [PHY-30](../../../dmarz/notes/question-atlas/review.html#PHY-30), [BUD-12](../../../dmarz/notes/question-atlas/review.html#BUD-12), [BUD-16](../../../dmarz/notes/question-atlas/review.html#BUD-16), [MKT-03](../../../dmarz/notes/question-atlas/review.html#MKT-03).
+**Existing candidates:** [SOC-16](../../dmarz/question-atlas/review.html#SOC-16), [SEC-22](../../dmarz/question-atlas/review.html#SEC-22), [PHY-30](../../dmarz/question-atlas/review.html#PHY-30), [BUD-12](../../dmarz/question-atlas/review.html#BUD-12), [BUD-16](../../dmarz/question-atlas/review.html#BUD-16), [MKT-03](../../dmarz/question-atlas/review.html#MKT-03).
 
 **Nearest catalogued work:** [[cemri-2025-why]], [[leibo-2021-scalable]].
 
@@ -450,7 +450,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [diversity](../project-briefs/diversity.md), [dissent](../project-briefs/dissent.md), [commons](../project-briefs/commons.md).
 
-**Existing candidates:** [SEC-12](../../../dmarz/notes/question-atlas/review.html#SEC-12), [SOC-01](../../../dmarz/notes/question-atlas/review.html#SOC-01), [SOC-28](../../../dmarz/notes/question-atlas/review.html#SOC-28), [SOC-38](../../../dmarz/notes/question-atlas/review.html#SOC-38), [SOC-42](../../../dmarz/notes/question-atlas/review.html#SOC-42).
+**Existing candidates:** [SEC-12](../../dmarz/question-atlas/review.html#SEC-12), [SOC-01](../../dmarz/question-atlas/review.html#SOC-01), [SOC-28](../../dmarz/question-atlas/review.html#SOC-28), [SOC-38](../../dmarz/question-atlas/review.html#SOC-38), [SOC-42](../../dmarz/question-atlas/review.html#SOC-42).
 
 **Nearest catalogued work:** [[kim-2025-correlated]], [[choi-2025-debate]].
 
@@ -471,7 +471,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [institutions](../project-briefs/institutions.md), [memory](../project-briefs/memory.md), [whistleblowing](../project-briefs/whistleblowing.md).
 
-**Existing candidates:** [SOC-30](../../../dmarz/notes/question-atlas/review.html#SOC-30), [SEC-07](../../../dmarz/notes/question-atlas/review.html#SEC-07), [SEC-11](../../../dmarz/notes/question-atlas/review.html#SEC-11), [SEC-48](../../../dmarz/notes/question-atlas/review.html#SEC-48).
+**Existing candidates:** [SOC-30](../../dmarz/question-atlas/review.html#SOC-30), [SEC-07](../../dmarz/question-atlas/review.html#SEC-07), [SEC-11](../../dmarz/question-atlas/review.html#SEC-11), [SEC-48](../../dmarz/question-atlas/review.html#SEC-48).
 
 **Nearest catalogued work:** [[li-2026-memtx]], [[cemri-2025-why]].
 
@@ -492,7 +492,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [whistleblowing](../project-briefs/whistleblowing.md), [institutions](../project-briefs/institutions.md), [commons](../project-briefs/commons.md).
 
-**Existing candidates:** [SOC-29](../../../dmarz/notes/question-atlas/review.html#SOC-29), [SOC-30](../../../dmarz/notes/question-atlas/review.html#SOC-30), [SEC-30](../../../dmarz/notes/question-atlas/review.html#SEC-30), [SEC-49](../../../dmarz/notes/question-atlas/review.html#SEC-49), [SEC-50](../../../dmarz/notes/question-atlas/review.html#SEC-50).
+**Existing candidates:** [SOC-29](../../dmarz/question-atlas/review.html#SOC-29), [SOC-30](../../dmarz/question-atlas/review.html#SOC-30), [SEC-30](../../dmarz/question-atlas/review.html#SEC-30), [SEC-49](../../dmarz/question-atlas/review.html#SEC-49), [SEC-50](../../dmarz/question-atlas/review.html#SEC-50).
 
 **Nearest catalogued work:** [[cemri-2025-why]], [[leibo-2021-scalable]].
 
@@ -513,7 +513,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [collective-sensing](../project-briefs/collective-sensing.md), [leadership](../project-briefs/leadership.md), [culture](../project-briefs/culture.md).
 
-**Existing candidates:** [SOC-04](../../../dmarz/notes/question-atlas/review.html#SOC-04), [SOC-19](../../../dmarz/notes/question-atlas/review.html#SOC-19), [SOC-25](../../../dmarz/notes/question-atlas/review.html#SOC-25), [BUD-12](../../../dmarz/notes/question-atlas/review.html#BUD-12).
+**Existing candidates:** [SOC-04](../../dmarz/question-atlas/review.html#SOC-04), [SOC-19](../../dmarz/question-atlas/review.html#SOC-19), [SOC-25](../../dmarz/question-atlas/review.html#SOC-25), [BUD-12](../../dmarz/question-atlas/review.html#BUD-12).
 
 **Nearest catalogued work:** [[tambwekar-2026-proxifield]], [[zhang-2026-silo]].
 
@@ -534,7 +534,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [collective-sensing](../project-briefs/collective-sensing.md), [quorum](../project-briefs/quorum.md), [telephone](../project-briefs/telephone.md).
 
-**Existing candidates:** [SOC-37](../../../dmarz/notes/question-atlas/review.html#SOC-37), [SEC-27](../../../dmarz/notes/question-atlas/review.html#SEC-27), [MET-05](../../../dmarz/notes/question-atlas/review.html#MET-05), [SEC-47](../../../dmarz/notes/question-atlas/review.html#SEC-47).
+**Existing candidates:** [SOC-37](../../dmarz/question-atlas/review.html#SOC-37), [SEC-27](../../dmarz/question-atlas/review.html#SEC-27), [MET-05](../../dmarz/question-atlas/review.html#MET-05), [SEC-47](../../dmarz/question-atlas/review.html#SEC-47).
 
 **Nearest catalogued work:** [[nestaas-2024-adversarial]], [[aronow-2013-estimating]].
 
@@ -555,7 +555,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [collective-sensing](../project-briefs/collective-sensing.md), [coordination](../project-briefs/coordination.md), [nca-observatory](../project-briefs/nca-observatory.md).
 
-**Existing candidates:** [PHY-03](../../../dmarz/notes/question-atlas/review.html#PHY-03), [MET-02](../../../dmarz/notes/question-atlas/review.html#MET-02), [MTH-02](../../../dmarz/notes/question-atlas/review.html#MTH-02).
+**Existing candidates:** [PHY-03](../../dmarz/question-atlas/review.html#PHY-03), [MET-02](../../dmarz/question-atlas/review.html#MET-02), [MTH-02](../../dmarz/question-atlas/review.html#MTH-02).
 
 **Nearest catalogued work:** [[mordvintsev-2020-growing]], [[zhang-2026-silo]].
 
@@ -576,7 +576,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [quorum](../project-briefs/quorum.md), [dissent](../project-briefs/dissent.md), [diversity](../project-briefs/diversity.md).
 
-**Existing candidates:** [SOC-08](../../../dmarz/notes/question-atlas/review.html#SOC-08), [SOC-35](../../../dmarz/notes/question-atlas/review.html#SOC-35), [MTH-02](../../../dmarz/notes/question-atlas/review.html#MTH-02), [SOC-43](../../../dmarz/notes/question-atlas/review.html#SOC-43).
+**Existing candidates:** [SOC-08](../../dmarz/question-atlas/review.html#SOC-08), [SOC-35](../../dmarz/question-atlas/review.html#SOC-35), [MTH-02](../../dmarz/question-atlas/review.html#MTH-02), [SOC-43](../../dmarz/question-atlas/review.html#SOC-43).
 
 **Nearest catalogued work:** [[choi-2025-debate]], [[kim-2025-correlated]].
 
@@ -597,7 +597,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [institutions](../project-briefs/institutions.md), [commons](../project-briefs/commons.md), [dissent](../project-briefs/dissent.md).
 
-**Existing candidates:** [SEC-13](../../../dmarz/notes/question-atlas/review.html#SEC-13), [SEC-16](../../../dmarz/notes/question-atlas/review.html#SEC-16), [SOC-10](../../../dmarz/notes/question-atlas/review.html#SOC-10), [SEC-43](../../../dmarz/notes/question-atlas/review.html#SEC-43), [BUD-22](../../../dmarz/notes/question-atlas/review.html#BUD-22), [MKT-11](../../../dmarz/notes/question-atlas/review.html#MKT-11).
+**Existing candidates:** [SEC-13](../../dmarz/question-atlas/review.html#SEC-13), [SEC-16](../../dmarz/question-atlas/review.html#SEC-16), [SOC-10](../../dmarz/question-atlas/review.html#SOC-10), [SEC-43](../../dmarz/question-atlas/review.html#SEC-43), [BUD-22](../../dmarz/question-atlas/review.html#BUD-22), [MKT-11](../../dmarz/question-atlas/review.html#MKT-11).
 
 **Nearest catalogued work:** [[leibo-2021-scalable]], [[kim-2025-correlated]].
 
@@ -618,7 +618,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [casefile](../project-briefs/casefile.md), [discovery](../project-briefs/discovery.md), [whistleblowing](../project-briefs/whistleblowing.md).
 
-**Existing candidates:** [SEC-34](../../../dmarz/notes/question-atlas/review.html#SEC-34), [SOC-32](../../../dmarz/notes/question-atlas/review.html#SOC-32), [MET-03](../../../dmarz/notes/question-atlas/review.html#MET-03), [MTH-11](../../../dmarz/notes/question-atlas/review.html#MTH-11), [MTH-14](../../../dmarz/notes/question-atlas/review.html#MTH-14).
+**Existing candidates:** [SEC-34](../../dmarz/question-atlas/review.html#SEC-34), [SOC-32](../../dmarz/question-atlas/review.html#SOC-32), [MET-03](../../dmarz/question-atlas/review.html#MET-03), [MTH-11](../../dmarz/question-atlas/review.html#MTH-11), [MTH-14](../../dmarz/question-atlas/review.html#MTH-14).
 
 **Nearest catalogued work:** [[cemri-2025-why]], [[shalizi-2011-homophily]].
 
@@ -639,7 +639,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [casefile](../project-briefs/casefile.md), [dissent](../project-briefs/dissent.md), [coordination](../project-briefs/coordination.md).
 
-**Existing candidates:** [SOC-11](../../../dmarz/notes/question-atlas/review.html#SOC-11), [SOC-20](../../../dmarz/notes/question-atlas/review.html#SOC-20), [SOC-32](../../../dmarz/notes/question-atlas/review.html#SOC-32), [BUD-05](../../../dmarz/notes/question-atlas/review.html#BUD-05).
+**Existing candidates:** [SOC-11](../../dmarz/question-atlas/review.html#SOC-11), [SOC-20](../../dmarz/question-atlas/review.html#SOC-20), [SOC-32](../../dmarz/question-atlas/review.html#SOC-32), [BUD-05](../../dmarz/question-atlas/review.html#BUD-05).
 
 **Nearest catalogued work:** [[cemri-2025-why]], [[zhang-2026-silo]].
 
@@ -660,7 +660,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [coordination](../project-briefs/coordination.md), [institutions](../project-briefs/institutions.md), [leadership](../project-briefs/leadership.md).
 
-**Existing candidates:** [PHY-19](../../../dmarz/notes/question-atlas/review.html#PHY-19), [SEC-04](../../../dmarz/notes/question-atlas/review.html#SEC-04), [RL-07](../../../dmarz/notes/question-atlas/review.html#RL-07), [SEC-45](../../../dmarz/notes/question-atlas/review.html#SEC-45).
+**Existing candidates:** [PHY-19](../../dmarz/question-atlas/review.html#PHY-19), [SEC-04](../../dmarz/question-atlas/review.html#SEC-04), [RL-07](../../dmarz/question-atlas/review.html#RL-07), [SEC-45](../../dmarz/question-atlas/review.html#SEC-45).
 
 **Nearest catalogued work:** [[cemri-2025-why]], [[li-2026-memtx]].
 
@@ -681,7 +681,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [coordination](../project-briefs/coordination.md), [commons](../project-briefs/commons.md), [diversity](../project-briefs/diversity.md).
 
-**Existing candidates:** [MTH-01](../../../dmarz/notes/question-atlas/review.html#MTH-01), [MTH-04](../../../dmarz/notes/question-atlas/review.html#MTH-04), [SOC-15](../../../dmarz/notes/question-atlas/review.html#SOC-15), [MTH-11](../../../dmarz/notes/question-atlas/review.html#MTH-11), [BUD-18](../../../dmarz/notes/question-atlas/review.html#BUD-18), [BUD-19](../../../dmarz/notes/question-atlas/review.html#BUD-19).
+**Existing candidates:** [MTH-01](../../dmarz/question-atlas/review.html#MTH-01), [MTH-04](../../dmarz/question-atlas/review.html#MTH-04), [SOC-15](../../dmarz/question-atlas/review.html#SOC-15), [MTH-11](../../dmarz/question-atlas/review.html#MTH-11), [BUD-18](../../dmarz/question-atlas/review.html#BUD-18), [BUD-19](../../dmarz/question-atlas/review.html#BUD-19).
 
 **Nearest catalogued work:** [[aronow-2013-estimating]], [[cemri-2025-why]].
 
@@ -702,7 +702,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [collective-sensing](../project-briefs/collective-sensing.md), [discovery](../project-briefs/discovery.md), [coordination](../project-briefs/coordination.md).
 
-**Existing candidates:** [SOC-04](../../../dmarz/notes/question-atlas/review.html#SOC-04), [SOC-11](../../../dmarz/notes/question-atlas/review.html#SOC-11), [SOC-21](../../../dmarz/notes/question-atlas/review.html#SOC-21), [BUD-13](../../../dmarz/notes/question-atlas/review.html#BUD-13).
+**Existing candidates:** [SOC-04](../../dmarz/question-atlas/review.html#SOC-04), [SOC-11](../../dmarz/question-atlas/review.html#SOC-11), [SOC-21](../../dmarz/question-atlas/review.html#SOC-21), [BUD-13](../../dmarz/question-atlas/review.html#BUD-13).
 
 **Nearest catalogued work:** [[tambwekar-2026-proxifield]], [[zhang-2026-silo]].
 
@@ -723,7 +723,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [collective-sensing](../project-briefs/collective-sensing.md), [diversity](../project-briefs/diversity.md), [quorum](../project-briefs/quorum.md).
 
-**Existing candidates:** [SOC-01](../../../dmarz/notes/question-atlas/review.html#SOC-01), [SOC-07](../../../dmarz/notes/question-atlas/review.html#SOC-07), [PHY-09](../../../dmarz/notes/question-atlas/review.html#PHY-09), [SOC-40](../../../dmarz/notes/question-atlas/review.html#SOC-40).
+**Existing candidates:** [SOC-01](../../dmarz/question-atlas/review.html#SOC-01), [SOC-07](../../dmarz/question-atlas/review.html#SOC-07), [PHY-09](../../dmarz/question-atlas/review.html#PHY-09), [SOC-40](../../dmarz/question-atlas/review.html#SOC-40).
 
 **Nearest catalogued work:** [[kim-2025-correlated]], [[shalizi-2011-homophily]].
 
@@ -744,7 +744,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [memory](../project-briefs/memory.md), [telephone](../project-briefs/telephone.md), [institutions](../project-briefs/institutions.md).
 
-**Existing candidates:** [SEC-04](../../../dmarz/notes/question-atlas/review.html#SEC-04), [SEC-05](../../../dmarz/notes/question-atlas/review.html#SEC-05), [SIM-01](../../../dmarz/notes/question-atlas/review.html#SIM-01), [SEC-45](../../../dmarz/notes/question-atlas/review.html#SEC-45).
+**Existing candidates:** [SEC-04](../../dmarz/question-atlas/review.html#SEC-04), [SEC-05](../../dmarz/question-atlas/review.html#SEC-05), [SIM-01](../../dmarz/question-atlas/review.html#SIM-01), [SEC-45](../../dmarz/question-atlas/review.html#SEC-45).
 
 **Nearest catalogued work:** [[ouyang-2026-memlineage]], [[li-2026-memtx]].
 
@@ -765,7 +765,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [discovery](../project-briefs/discovery.md), [casefile](../project-briefs/casefile.md), [institutions](../project-briefs/institutions.md).
 
-**Existing candidates:** [SOC-36](../../../dmarz/notes/question-atlas/review.html#SOC-36), [MTH-06](../../../dmarz/notes/question-atlas/review.html#MTH-06), [MET-08](../../../dmarz/notes/question-atlas/review.html#MET-08), [MTH-07](../../../dmarz/notes/question-atlas/review.html#MTH-07), [MKT-12](../../../dmarz/notes/question-atlas/review.html#MKT-12).
+**Existing candidates:** [SOC-36](../../dmarz/question-atlas/review.html#SOC-36), [MTH-06](../../dmarz/question-atlas/review.html#MTH-06), [MET-08](../../dmarz/question-atlas/review.html#MET-08), [MTH-07](../../dmarz/question-atlas/review.html#MTH-07), [MKT-12](../../dmarz/question-atlas/review.html#MKT-12).
 
 **Nearest catalogued work:** [[cemri-2025-why]], [[aronow-2013-estimating]].
 
@@ -786,7 +786,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [dissent](../project-briefs/dissent.md), [telephone](../project-briefs/telephone.md), [diversity](../project-briefs/diversity.md).
 
-**Existing candidates:** [SEC-05](../../../dmarz/notes/question-atlas/review.html#SEC-05), [SEC-12](../../../dmarz/notes/question-atlas/review.html#SEC-12), [SOC-31](../../../dmarz/notes/question-atlas/review.html#SOC-31), [SEC-51](../../../dmarz/notes/question-atlas/review.html#SEC-51), [SOC-40](../../../dmarz/notes/question-atlas/review.html#SOC-40).
+**Existing candidates:** [SEC-05](../../dmarz/question-atlas/review.html#SEC-05), [SEC-12](../../dmarz/question-atlas/review.html#SEC-12), [SOC-31](../../dmarz/question-atlas/review.html#SOC-31), [SEC-51](../../dmarz/question-atlas/review.html#SEC-51), [SOC-40](../../dmarz/question-atlas/review.html#SOC-40).
 
 **Nearest catalogued work:** [[kim-2025-correlated]], [[ouyang-2026-memlineage]].
 
@@ -807,7 +807,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [regrowth](../project-briefs/regrowth.md), [memory](../project-briefs/memory.md), [culture](../project-briefs/culture.md).
 
-**Existing candidates:** [SOC-23](../../../dmarz/notes/question-atlas/review.html#SOC-23), [SOC-25](../../../dmarz/notes/question-atlas/review.html#SOC-25), [SEC-10](../../../dmarz/notes/question-atlas/review.html#SEC-10), [SEC-52](../../../dmarz/notes/question-atlas/review.html#SEC-52).
+**Existing candidates:** [SOC-23](../../dmarz/question-atlas/review.html#SOC-23), [SOC-25](../../dmarz/question-atlas/review.html#SOC-25), [SEC-10](../../dmarz/question-atlas/review.html#SEC-10), [SEC-52](../../dmarz/question-atlas/review.html#SEC-52).
 
 **Nearest catalogued work:** [[li-2026-memtx]], [[elnozahy-2002-survey]].
 
@@ -828,7 +828,7 @@ Use the [project crosswalk](project-crosswalk.md) to select a brief and the [sho
 
 **Original briefs:** [quorum](../project-briefs/quorum.md), [coordination](../project-briefs/coordination.md), [leadership](../project-briefs/leadership.md).
 
-**Existing candidates:** [SEC-11](../../../dmarz/notes/question-atlas/review.html#SEC-11), [SOC-15](../../../dmarz/notes/question-atlas/review.html#SOC-15), [PHY-25](../../../dmarz/notes/question-atlas/review.html#PHY-25), [BUD-09](../../../dmarz/notes/question-atlas/review.html#BUD-09).
+**Existing candidates:** [SEC-11](../../dmarz/question-atlas/review.html#SEC-11), [SOC-15](../../dmarz/question-atlas/review.html#SOC-15), [PHY-25](../../dmarz/question-atlas/review.html#PHY-25), [BUD-09](../../dmarz/question-atlas/review.html#BUD-09).
 
 **Nearest catalogued work:** [[zhang-2026-silo]], [[aronow-2013-estimating]].
 

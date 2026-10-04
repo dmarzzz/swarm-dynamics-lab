@@ -1,6 +1,6 @@
 # Experiment setup record: sybil-newcomer-sonnet v1
 
-Status: S0 passed on the fleet; cross-researcher review waived by dmarz 2026-10-04 (see G0); Q0 admitted. Follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Historical receipts and attempts are preserved below.
+Status: S0 passed on the fleet; cross-researcher review waived by dmarz 2026-10-04 (see G0); Q0 admitted. Follows [the setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Historical receipts and attempts are preserved below.
 
 ## Ownership and question
 

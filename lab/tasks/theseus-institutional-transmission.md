@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T19:23Z
 updated: 2026-10-04T19:29Z
 outputs:
-- researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/PLAN.md
+- 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/transmission/PLAN.md
 ---
 
 ## Goal

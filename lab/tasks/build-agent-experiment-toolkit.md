@@ -16,8 +16,8 @@ topics:
 claimed_at: 2026-10-03T20:40Z
 updated: 2026-10-03T20:44Z
 outputs:
-- tooling/agent-experiments
-- tooling/README.md
+- 5-experiments/toolkit/agent-experiments
+- 5-experiments/toolkit/README.md
 - .github/workflows/agent-experiment-toolkit.yml
 ---
 

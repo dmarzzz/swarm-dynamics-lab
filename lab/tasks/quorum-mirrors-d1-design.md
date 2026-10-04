@@ -15,8 +15,8 @@ topics:
 claimed_at: 2026-10-04T08:32Z
 updated: 2026-10-04T08:45Z
 outputs:
-- researchers/vishesh/notes/decision-models/quorum-of-mirrors/d1/RUNBOOK.md
-- researchers/vishesh/notes/decision-models/quorum-of-mirrors/d1/VALIDATION.json
+- 5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/d1/RUNBOOK.md
+- 5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/d1/VALIDATION.json
 ---
 
 ## Goal

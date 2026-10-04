@@ -16,10 +16,10 @@ topics:
 claimed_at: 2026-10-04T15:00Z
 updated: 2026-10-04T15:47Z
 outputs:
-- researchers/shadow/factory/README.md
-- researchers/shadow/factory/FINDING.md
-- researchers/shadow/factory/HANDOFF.md
-- researchers/shadow/notes/audit-2026-10-04/sol-factory.md
+- 5-experiments/studies/shadow/factory/README.md
+- 5-experiments/studies/shadow/factory/FINDING.md
+- 5-experiments/studies/shadow/factory/HANDOFF.md
+- 5-experiments/studies/shadow/audit-2026-10-04/sol-factory.md
 ---
 
 ## Goal

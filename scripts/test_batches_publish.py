@@ -13,7 +13,7 @@ class PublishTest(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        self.cand = self.root / 'candidates'
+        self.cand = self.root / 'lab/candidates'
         (self.cand / 'blog').mkdir(parents=True)
         (self.cand / 'blog/demo.jsonl').write_text('{"url":"https://example.org","topic":"meta"}\n')
         for name, value in [('ROOT', self.root), ('CAND', self.cand), ('MAP', self.cand / 'ISSUES.tsv')]:

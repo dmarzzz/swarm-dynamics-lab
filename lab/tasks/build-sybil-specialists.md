@@ -16,9 +16,9 @@ topics:
 claimed_at: 2026-10-04T01:28Z
 updated: 2026-10-04T01:46Z
 outputs:
-- researchers/dmarz/notes/sybil-specialists/README.md
-- researchers/dmarz/notes/sybil-specialists/reviews/fleet-s1-001-post.md
-- researchers/dmarz/notes/sybil-specialists/deployment.json
+- 5-experiments/studies/dmarz/sybil-specialists/README.md
+- 5-experiments/studies/dmarz/sybil-specialists/reviews/fleet-s1-001-post.md
+- 5-experiments/studies/dmarz/sybil-specialists/deployment.json
 ---
 
 ## Goal

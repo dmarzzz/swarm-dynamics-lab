@@ -1,6 +1,6 @@
 # Visualization mapping v1: sybil-scarcity-xmodel
 
-Follows [RUN-VISUALIZATION.md](../../../../tooling/agent-experiments/RUN-VISUALIZATION.md). Renderer: `src/render.py` (PIL only, 1800×1200 RGB). Nothing has been rendered from a model run; frames checked so far come from the scripted stage and the stubbed rehearsal.
+Follows [RUN-VISUALIZATION.md](../../../toolkit/agent-experiments/RUN-VISUALIZATION.md). Renderer: `src/render.py` (PIL only, 1800×1200 RGB). Nothing has been rendered from a model run; frames checked so far come from the scripted stage and the stubbed rehearsal.
 
 - Mapping version / source: v1, part of the hashed source; code commit and source hash in [reviews/chain-001-pre.md](reviews/chain-001-pre.md). Adapted from the parent's mapping (carrier count on the x axis).
 - Run binding: one hub run per stage under the model's hub experiment, `sybil-scarcity-xmodel-<tag>/<run id>`; params `stage`, `backend`, `model`, `batch`, `source_hash`, `code`. Each row binds root, policy, checks, attacker pass rate and carriers, and carries its model.

@@ -1,6 +1,6 @@
 # Experiment setup record: Phantom Coast PC-1L
 
-Retrospective index created during S0-A1 on 2026-10-04 UTC. This index is not preregistration. Follow the [setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). The runbook requirement landed in commit 64a663a6 at 04:12:39 UTC, after Q0 completed and before S0 dispatch; it was noticed during S0 closeout preparation. The missing centralized setup record is a process gap, not a missing public plan or grounds to relabel observed responses. Future launches must include this record at admission.
+Retrospective index created during S0-A1 on 2026-10-04 UTC. This index is not preregistration. Follow the [setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). The runbook requirement landed in commit 64a663a6 at 04:12:39 UTC, after Q0 completed and before S0 dispatch; it was noticed during S0 closeout preparation. The missing centralized setup record is a process gap, not a missing public plan or grounds to relabel observed responses. Future launches must include this record at admission.
 
 ## Ownership and question
 

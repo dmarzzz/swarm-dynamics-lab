@@ -17,8 +17,8 @@ topics:
 claimed_at: 2026-10-04T02:17Z
 updated: 2026-10-04T02:38Z
 outputs:
-- researchers/vishesh/notes/decision-models/README.md
-- researchers/vishesh/notes/decision-models/TOP-FIVE.md
+- 5-experiments/studies/vishesh/decision-models/README.md
+- 5-experiments/studies/vishesh/decision-models/TOP-FIVE.md
 ---
 
 ## Goal

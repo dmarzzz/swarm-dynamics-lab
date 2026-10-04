@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T20:05Z
 updated: 2026-10-04T20:13Z
 outputs:
-- researchers/vishesh/notes/top10-integration-2026-10-04/README.md
-- tooling/agent-experiments/SCALE-AND-CLAIMS.md
+- 5-experiments/studies/vishesh/top10-integration-2026-10-04/README.md
+- 5-experiments/toolkit/agent-experiments/SCALE-AND-CLAIMS.md
 ---
 
 ## Goal

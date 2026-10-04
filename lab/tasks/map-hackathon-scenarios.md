@@ -14,10 +14,10 @@ topics: []
 claimed_at: 2026-10-03T23:10Z
 updated: 2026-10-03T23:21Z
 outputs:
-- researchers/vishesh/notes/hackathon-scenarios/README.md
-- researchers/vishesh/notes/hackathon-scenarios/ranked-map.md
-- researchers/vishesh/notes/hackathon-scenarios/scenario-map.json
-- researchers/vishesh/notes/hackathon-scenarios/review.html
+- 5-experiments/studies/vishesh/hackathon-scenarios/README.md
+- 5-experiments/studies/vishesh/hackathon-scenarios/ranked-map.md
+- 5-experiments/studies/vishesh/hackathon-scenarios/scenario-map.json
+- 5-experiments/studies/vishesh/hackathon-scenarios/review.html
 ---
 
 ## Goal

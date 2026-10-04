@@ -2,7 +2,7 @@
 
 Status: proposed worker instructions, not a new system policy, evaluation rubric, launch permission or budget. No deployment to shared agents has occurred. The parser part of L0 was replay-tested; behavior from this brief has not been measured.
 
-Use the existing task brief and [run-review cycle](../../../../tooling/agent-experiments/RUN-REVIEW.md). Keep this addendum small enough to falsify as one candidate policy bundle.
+Use the existing task brief and [run-review cycle](../../../toolkit/agent-experiments/RUN-REVIEW.md). Keep this addendum small enough to falsify as one candidate policy bundle.
 
 1. Before work, record the assigned task ID, source commit, brief version, artifact destination and frozen acceptance criteria. Do not change the question, denominator, reviewer, scorer or qualification floor to get a pass. If the assignment lacks them, mark the missing fields rather than inventing authority.
 2. Inspect terminal tool results, including typed shell/process exit codes. A wrapper without `isError` does not establish command success. Distinguish running, clean terminal, explicit nonzero and unknown. Classify nonzero outcomes in context: a negative control or grep miss may be expected. Never rerun a valid adverse scientific outcome as though it were a broken tool.

@@ -49,6 +49,6 @@ The scripted policy is an engineering fixture. It reads supplied documents and p
 
 Before S1 LLM collection, pin a model and run S0 with all eight conditions. Show clean accuracy and invalid rates per family; manually inspect every failure in those six worlds. Add a full-information single-model check if clean performance is poor, to separate reasoning difficulty from report loss. Do not select worlds by attack success.
 
-Before confirmation, a different researcher should inspect rendered examples, answer derivations, the intervention diff and scorer mutations. The [review task](../../../../tasks/review-discussion-dose.md) records this unmet requirement. Expand into a second independently designed task family or a fully audited AgentDojo adapter before claiming broader agent-workflow relevance. Three semantic wrappers or paraphrases do not constitute held-out domains.
+Before confirmation, a different researcher should inspect rendered examples, answer derivations, the intervention diff and scorer mutations. The [review task](../../../../lab/tasks/review-discussion-dose.md) records this unmet requirement. Expand into a second independently designed task family or a fully audited AgentDojo adapter before claiming broader agent-workflow relevance. Three semantic wrappers or paraphrases do not constitute held-out domains.
 
 No holdout task data are generated or opened by the stage coordinator. S2 is disabled. Any future held-out set needs frozen distinct templates as well as distinct task IDs if the claim concerns transfer beyond these three rules.

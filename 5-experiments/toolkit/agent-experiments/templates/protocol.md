@@ -10,7 +10,7 @@ Status: DRAFT — replace every bracketed field before freezing. Record amendmen
 - Prior evidence, competing explanations and proposed novelty: [citations]
 - Primary estimand in one sentence, including population and failure treatment: [fill]
 - Claim boundaries: [models, tasks, time, resource constraints, domains not represented]
-- Evidence metadata: [evidence_confidence score or unassessed, scoped claim/rationale, assessment date/source; sample_size_summary separating observed from planned independent units and outcomes; use the shared experiments/EVIDENCE-METADATA.md rubric]
+- Evidence metadata: [evidence_confidence score or unassessed, scoped claim/rationale, assessment date/source; sample_size_summary separating observed from planned independent units and outcomes; use the shared 5-experiments/EVIDENCE-METADATA.md rubric]
 
 ## Hypotheses and design
 

@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T16:38Z
 updated: 2026-10-04T17:18Z
 outputs:
-- researchers/vishesh/notes/pi-direct-launch-trace-cycle-2026-10-04/README.md
+- 5-experiments/studies/vishesh/pi-direct-launch-trace-cycle-2026-10-04/README.md
 ---
 
 ## Goal

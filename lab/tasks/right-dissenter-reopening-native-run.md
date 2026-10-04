@@ -16,11 +16,11 @@ topics:
 claimed_at: 2026-10-04T19:08Z
 updated: 2026-10-04T19:44Z
 outputs:
-- researchers/vishesh/notes/dissent/reopening/RUN-STATUS.md
-- researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-POST.md
-- researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-QUALITY.json
-- researchers/vishesh/notes/dissent/reopening/STARTUP-REPAIR.md
-- researchers/vishesh/notes/dissent/reopening/offline/validation.json
+- 5-experiments/studies/vishesh/dissent/reopening/RUN-STATUS.md
+- 5-experiments/studies/vishesh/dissent/reopening/reviews/Q0-A1-POST.md
+- 5-experiments/studies/vishesh/dissent/reopening/reviews/Q0-A1-QUALITY.json
+- 5-experiments/studies/vishesh/dissent/reopening/STARTUP-REPAIR.md
+- 5-experiments/studies/vishesh/dissent/reopening/offline/validation.json
 ---
 
 ## Goal

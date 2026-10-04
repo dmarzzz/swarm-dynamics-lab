@@ -2,7 +2,7 @@
 id: template-quorum
 title: "Template: provenance-aware quorum vs plurality"
 description: >-
-  Worked example for the distributed-worker template (templates/experiment-worker in swarm-lab).
+  Worked example for the distributed-worker template (lab/templates/experiment-worker in swarm-dynamics-lab).
   N agents vote among K options; a fraction (dose) copy one shared upstream source. Plurality quorum
   counts votes; provenance-aware quorum counts distinct evidence roots. Measures false commits vs delay.
   Toy model, not a result.
@@ -15,4 +15,4 @@ params:
   seeds: {type: list, description: pre-registered seed list}
 metrics: [fc_A0_plurality, fc_A1_provenance, fc_diff, delay_A0_plurality, delay_A1_provenance, episodes]
 primary_metric: fc_diff
-url: https://github.com/dmarzzz/swarm-lab/tree/main/templates/experiment-worker
+url: https://github.com/dmarzzz/swarm-dynamics-lab/tree/main/lab/templates/experiment-worker

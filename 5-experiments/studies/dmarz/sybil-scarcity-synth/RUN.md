@@ -67,7 +67,7 @@ S0 already passed and is model-free, so it is not run again. The second model ge
 1. `status`, then `verify`. Keep both outputs.
 2. Do not rerun a stage. A batch name is refused the second time. A repair is a new attempt number in `design.yaml`, which changes the source hash, and needs its own pre-run review and, after a failed Q0, fresh qualification roots.
 3. If Q0 stopped: before anything else read every miss (fixture type, configuration, returned and expected values); see the README, "What a Q0 stop means and triggers".
-4. Write the post-mortem per [RUN-REVIEW.md](../../../../tooling/agent-experiments/RUN-REVIEW.md): reconcile assigned, started, terminal, graded and analyzed rows; compare the frames with the saved analysis; report actual calls, tokens and dollars by effort, failed calls with their evidence, count fallbacks and billing pauses.
+4. Write the post-mortem per [RUN-REVIEW.md](../../../toolkit/agent-experiments/RUN-REVIEW.md): reconcile assigned, started, terminal, graded and analyzed rows; compare the frames with the saved analysis; report actual calls, tokens and dollars by effort, failed calls with their evidence, count fallbacks and billing pauses.
 5. Confirm the chain process has exited and uploads are verified, then release the claim. Do not destroy the server.
 
 ## Offline checks (no server, no model call)

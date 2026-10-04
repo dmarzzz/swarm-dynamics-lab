@@ -16,9 +16,9 @@ topics:
 claimed_at: 2026-10-03T22:32Z
 updated: 2026-10-03T22:35Z
 outputs:
-- researchers/dmarz/notes/soc07-private-judgments/README.md
-- researchers/dmarz/notes/soc07-private-judgments/design.json
-- researchers/dmarz/notes/soc07-private-judgments/check_plan.py
+- 5-experiments/studies/dmarz/soc07-private-judgments/README.md
+- 5-experiments/studies/dmarz/soc07-private-judgments/design.json
+- 5-experiments/studies/dmarz/soc07-private-judgments/check_plan.py
 ---
 
 ## Goal

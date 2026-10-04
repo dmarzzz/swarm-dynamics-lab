@@ -15,8 +15,8 @@ topics:
 claimed_at: 2026-10-04T02:50Z
 updated: 2026-10-04T02:53Z
 outputs:
-- researchers/vishesh/notes/swarm-of-theseus/redesign/REVIEW.md
-- researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md
+- 5-experiments/studies/vishesh/swarm-of-theseus/redesign/REVIEW.md
+- 5-experiments/studies/vishesh/swarm-of-theseus/redesign/DESIGN.md
 ---
 
 ## Goal

@@ -16,7 +16,7 @@ topics:
 claimed_at: 2026-10-04T02:48Z
 updated: 2026-10-04T02:52Z
 outputs:
-- researchers/vishesh/notes/decision-models/REIMAGINING.md
+- 5-experiments/studies/vishesh/decision-models/REIMAGINING.md
 ---
 
 ## Goal

@@ -16,9 +16,9 @@ topics:
 claimed_at: 2026-10-04T21:39Z
 updated: 2026-10-04T21:40Z
 outputs:
-- researchers/vishesh/notes/dissent/acquisition-dev/README.md
-- researchers/vishesh/notes/dissent/acquisition-dev/offline/validation.json
-- researchers/vishesh/notes/dissent/acquisition-dev/PACKET-PROPOSAL.md
+- 5-experiments/studies/vishesh/dissent/acquisition-dev/README.md
+- 5-experiments/studies/vishesh/dissent/acquisition-dev/offline/validation.json
+- 5-experiments/studies/vishesh/dissent/acquisition-dev/PACKET-PROPOSAL.md
 ---
 
 ## Goal

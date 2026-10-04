@@ -4,11 +4,11 @@ on:
   push:
     branches: [main]
     paths:
-      - 'tooling/agent-experiments/**'
+      - '5-experiments/toolkit/agent-experiments/**'
       - '.github/workflows/agent-experiment-toolkit.yml'
   pull_request:
     paths:
-      - 'tooling/agent-experiments/**'
+      - '5-experiments/toolkit/agent-experiments/**'
       - '.github/workflows/agent-experiment-toolkit.yml'
   workflow_dispatch:
 
@@ -26,4 +26,4 @@ jobs:
       - name: Validate templates, pairing, replay and integrity without provider calls
         env:
           PYTHONDONTWRITEBYTECODE: '1'
-        run: python3 tooling/agent-experiments/scripts/validate.py
+        run: python3 5-experiments/toolkit/agent-experiments/scripts/validate.py

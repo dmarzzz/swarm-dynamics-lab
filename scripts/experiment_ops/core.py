@@ -11,11 +11,15 @@ import importlib
 import json
 import os
 from pathlib import Path, PurePosixPath
+import posixpath
 import re
 import sqlite3
 
 
-REGISTRY = "tooling/agent-experiments/operations.json"
+TOOLKIT = "5-experiments/toolkit/agent-experiments"
+STUDIES = "5-experiments/studies"
+RESEARCHERS = "lab/researchers"
+REGISTRY = TOOLKIT + "/operations.json"
 STATE = "data/experiment-operations"
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 SHA256 = re.compile(r"[0-9a-f]{64}\Z")
@@ -188,16 +192,17 @@ def journal_status(root, study_id):
 def scaffold(root, study_id, owner, title):
     if not SLUG.fullmatch(study_id) or not SLUG.fullmatch(owner) or not title.strip() or "\n" in title:
         raise OperationError("new requires slug identifiers and a one-line title")
-    if not safe_path(root, "researchers/" + owner, exists=True).is_dir():
+    if not safe_path(root, RESEARCHERS + "/" + owner, exists=True).is_dir():
         raise OperationError("researcher must already exist")
-    relative = f"researchers/{owner}/notes/{study_id}"
+    relative = f"{STUDIES}/{owner}/{study_id}"
     destination = safe_path(root, relative)
-    template = safe_path(root, "tooling/agent-experiments/templates/experiment-setup.md", exists=True).read_text()
-    runbook = "../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md"
+    template = safe_path(root, TOOLKIT + "/templates/experiment-setup.md", exists=True).read_text()
+    toolkit = posixpath.relpath(TOOLKIT, relative)
+    runbook = toolkit + "/EXPERIMENT-SETUP.md"
     template = template.replace("[study ID / version]", study_id, 1)
-    template = re.sub(r"\]\(\.\./([^)]+)\)", r"](../../../../tooling/agent-experiments/\1)", template)
-    protocol = safe_path(root, "tooling/agent-experiments/templates/protocol.md", exists=True).read_text()
-    specifications = {name: read_json(safe_path(root, "tooling/agent-experiments/templates/" + name, exists=True))
+    template = re.sub(r"\]\(\.\./([^)]+)\)", lambda link: f"]({toolkit}/{link.group(1)})", template)
+    protocol = safe_path(root, TOOLKIT + "/templates/protocol.md", exists=True).read_text()
+    specifications = {name: read_json(safe_path(root, TOOLKIT + "/templates/" + name, exists=True))
                       for name in ("agent-definition.json", "context-access.json", "run-config.json")}
     specifications["run-config.json"].setdefault("execution", {}).update({"request_retries": 0, "resume_policy": "unsupported until implemented and verified"})
     try:

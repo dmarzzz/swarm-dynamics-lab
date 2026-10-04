@@ -17,10 +17,10 @@ topics:
 claimed_at: 2026-10-04T14:56Z
 updated: 2026-10-04T15:23Z
 outputs:
-- researchers/shadow/notes/wild-identity/FINDING.md
-- researchers/shadow/notes/wild-identity/README.md
-- researchers/shadow/notes/wild-identity/results/summary.json
-- researchers/shadow/notes/wild-identity/results/identity-observability.svg
+- 5-experiments/studies/shadow/wild-identity/FINDING.md
+- 5-experiments/studies/shadow/wild-identity/README.md
+- 5-experiments/studies/shadow/wild-identity/results/summary.json
+- 5-experiments/studies/shadow/wild-identity/results/identity-observability.svg
 ---
 
 ## Goal

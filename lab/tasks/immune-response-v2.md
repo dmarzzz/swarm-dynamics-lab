@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T00:39Z
 updated: 2026-10-04T01:57Z
 outputs:
-- researchers/vishesh/notes/immune-response-v3/REVIEW.md
-- researchers/vishesh/notes/immune-response-v3/reviews/engineering-a1-post.md
+- 5-experiments/studies/vishesh/immune-response-v3/REVIEW.md
+- 5-experiments/studies/vishesh/immune-response-v3/reviews/engineering-a1-post.md
 ---
 
 ## Goal

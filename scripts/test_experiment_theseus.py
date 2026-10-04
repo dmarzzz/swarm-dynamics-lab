@@ -38,9 +38,9 @@ class TheseusAdapterTests(unittest.TestCase):
         head = adapter._head(self.root)
         cfg = {'model': 'claude-haiku-4-5-20251001', 'input_rate': 1, 'output_rate': 5,
                'max_output_tokens': 900, 'max_input_bytes': 18000, 'pricing_verified_epoch': time.time(),
-               'source_commit': head, 'plan_url': 'https://github.com/dmarzzz/swarm-lab/blob/' + head + '/' + adapter.STUDY + '/PLAN.md',
+               'source_commit': head, 'plan_url': 'https://github.com/dmarzzz/swarm-dynamics-lab/blob/' + head + '/' + adapter.STUDY + '/PLAN.md',
                'plan_sha256': adapter._hash(self.study / 'PLAN.md'),
-               'pre_run_review_url': 'https://github.com/dmarzzz/swarm-lab/blob/' + head + '/' + adapter.STUDY + '/reviews/S0-pre.md',
+               'pre_run_review_url': 'https://github.com/dmarzzz/swarm-dynamics-lab/blob/' + head + '/' + adapter.STUDY + '/reviews/S0-pre.md',
                'pre_run_review_sha256': 'a' * 64}
         self.config.write_text(json.dumps(cfg))
 

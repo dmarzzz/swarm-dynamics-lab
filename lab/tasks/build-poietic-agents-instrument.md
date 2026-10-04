@@ -17,12 +17,12 @@ topics:
 claimed_at: 2026-10-04T04:50Z
 updated: 2026-10-04T06:38Z
 outputs:
-- researchers/vishesh/notes/poietic-agents/README.md
-- researchers/vishesh/notes/poietic-agents/SETUP.md
-- researchers/vishesh/notes/poietic-agents/RUNBOOK.md
-- researchers/vishesh/notes/poietic-agents/VALIDATION.json
-- researchers/vishesh/notes/poietic-agents/models.json
-- researchers/vishesh/notes/poietic-agents/REVIEW-RESOLUTION.md
+- 5-experiments/studies/vishesh/poietic-agents/README.md
+- 5-experiments/studies/vishesh/poietic-agents/SETUP.md
+- 5-experiments/studies/vishesh/poietic-agents/RUNBOOK.md
+- 5-experiments/studies/vishesh/poietic-agents/VALIDATION.json
+- 5-experiments/studies/vishesh/poietic-agents/models.json
+- 5-experiments/studies/vishesh/poietic-agents/REVIEW-RESOLUTION.md
 ---
 
 ## Goal

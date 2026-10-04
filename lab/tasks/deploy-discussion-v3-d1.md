@@ -15,16 +15,16 @@ topics: []
 claimed_at: 2026-10-04T04:18Z
 updated: 2026-10-04T05:19Z
 outputs:
-- researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-D1.md
-- researchers/dmarz/notes/discussion-dose/reviews/v3-d1-a1-post.md
-- researchers/dmarz/notes/discussion-dose/benchmark-v3/D2-PLAN.md
+- 5-experiments/studies/dmarz/discussion-dose/benchmark-v3/RESULTS-D1.md
+- 5-experiments/studies/dmarz/discussion-dose/reviews/v3-d1-a1-post.md
+- 5-experiments/studies/dmarz/discussion-dose/benchmark-v3/D2-PLAN.md
 ---
 
 ## Goal
 
 The user requested a stronger-model diagnostic as soon as possible. Coordinate with dmarz/cloud-discussion-d1, which owns the public harness and offline repairs, to deploy exactly one frozen v3-d1-a1 batch through the established operator-controlled fleet. The operator owns paid dispatch; the cloud task must not duplicate it.
 
-Use the [committed next-run plan](../researchers/dmarz/notes/discussion-dose/benchmark-v3/NEXT-RUN.md), [Q0 post-mortem](../researchers/dmarz/notes/discussion-dose/reviews/v3-q0-a1-post.md) and [setup runbook](../tooling/agent-experiments/EXPERIMENT-SETUP.md). D1 is 120 paired calls on already-open examples, not fresh qualification. Holdout, D2, Q1 and larger sweeps remain closed.
+Use the [committed next-run plan](../../5-experiments/studies/dmarz/discussion-dose/benchmark-v3/NEXT-RUN.md), [Q0 post-mortem](../../5-experiments/studies/dmarz/discussion-dose/reviews/v3-q0-a1-post.md) and [setup runbook](../../5-experiments/toolkit/agent-experiments/EXPERIMENT-SETUP.md). D1 is 120 paired calls on already-open examples, not fresh qualification. Holdout, D2, Q1 and larger sweeps remain closed.
 
 ## Done when
 

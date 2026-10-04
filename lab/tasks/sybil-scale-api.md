@@ -17,9 +17,9 @@ topics:
 claimed_at: 2026-10-04T02:30Z
 updated: 2026-10-04T03:20Z
 outputs:
-- researchers/dmarz/notes/sybil-scale-api/RESULTS.md
-- researchers/dmarz/notes/sybil-scale-api/results-summary.json
-- researchers/dmarz/notes/sybil-scale-api/DEPLOYMENT.md
+- 5-experiments/studies/dmarz/sybil-scale-api/RESULTS.md
+- 5-experiments/studies/dmarz/sybil-scale-api/results-summary.json
+- 5-experiments/studies/dmarz/sybil-scale-api/DEPLOYMENT.md
 - artifacts/sybil-scale-api-visible/sybil-scale-api-visible-v1.png
 - artifacts/sybil-scale-api-hidden/sybil-scale-api-hidden-v1.png
 ---

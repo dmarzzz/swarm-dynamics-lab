@@ -1,6 +1,6 @@
 # Antsy v8 setup record
 
-Owner/operator: vishesh/codex-methods. Same-author assessment. Exploratory owned notes; no accepted hypothesis or independent review claimed. Researcher review optional under owner directive. Follow [setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [operations](../../../../tooling/agent-experiments/OPERATIONS.md).
+Owner/operator: vishesh/codex-methods. Same-author assessment. Exploratory owned notes; no accepted hypothesis or independent review claimed. Researcher review optional under owner directive. Follow [setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and [operations](../../../toolkit/agent-experiments/OPERATIONS.md).
 
 ## Current gate evidence — native Q0 closeout
 

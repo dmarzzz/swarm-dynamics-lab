@@ -1,6 +1,6 @@
 # Experiment setup record: sybil-newcomer-opus v1
 
-Status: offline checks pass; fleet S0 → P0 probe → Q0 → S1 admitted stage by stage under the owner's standing instruction (G0). Follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md).
+Status: offline checks pass; fleet S0 → P0 probe → Q0 → S1 admitted stage by stage under the owner's standing instruction (G0). Follows [the setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md).
 
 ## Ownership and question
 

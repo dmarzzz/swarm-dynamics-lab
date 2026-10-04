@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T03:37Z
 updated: 2026-10-04T03:50Z
 outputs:
-- researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-Q0.md
-- researchers/dmarz/notes/discussion-dose/reviews/v3-q0-a1-post.md
+- 5-experiments/studies/dmarz/discussion-dose/benchmark-v3/RESULTS-Q0.md
+- 5-experiments/studies/dmarz/discussion-dose/reviews/v3-q0-a1-post.md
 ---
 
 ## Goal

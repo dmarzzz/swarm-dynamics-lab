@@ -15,8 +15,8 @@ claimed_at: 2026-10-04T05:50Z
 updated: 2026-10-04T05:51Z
 outputs:
 - AGENTS.md
-- researchers/vishesh/notes/phantom-coast/pc2/src/admission.py
-- researchers/vishesh/notes/phantom-coast/pc2/reviews/REVIEW-POLICY-POST.md
+- 5-experiments/studies/vishesh/phantom-coast/pc2/src/admission.py
+- 5-experiments/studies/vishesh/phantom-coast/pc2/reviews/REVIEW-POLICY-POST.md
 ---
 
 ## Goal

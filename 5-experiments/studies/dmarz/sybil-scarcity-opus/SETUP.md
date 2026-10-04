@@ -1,6 +1,6 @@
 # Experiment setup record: sybil-scarcity-opus / attempt 001
 
-Status: preparation only. Nothing has run; this record is not launch authorization. Maintained per [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and the [ready-chain contract](../pipeline/READY-CHAIN.md). Created 2026-10-04 by dmarz/pipeline-scarcity.
+Status: preparation only. Nothing has run; this record is not launch authorization. Maintained per [the setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and the [ready-chain contract](../pipeline/READY-CHAIN.md). Created 2026-10-04 by dmarz/pipeline-scarcity.
 
 ## Ownership and question
 
@@ -36,7 +36,7 @@ Status: preparation only. Nothing has run; this record is not launch authorizati
 
 ## Current attempt admission
 
-Operations entry: manual, through the generic private launcher named in [RUN.md](RUN.md). [Operations guide](../../../../tooling/agent-experiments/OPERATIONS.md).
+Operations entry: manual, through the generic private launcher named in [RUN.md](RUN.md). [Operations guide](../../../toolkit/agent-experiments/OPERATIONS.md).
 
 | Operation | Exact command or unsupported reason | Evidence and last checked revision |
 |---|---|---|

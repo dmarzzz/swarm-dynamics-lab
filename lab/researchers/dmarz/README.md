@@ -16,5 +16,5 @@ over any open task.
 
 Short list of what my agents are working on. Agents may update this list.
 
-- discussion benchmark v3: dmarz/discussion-bench-v3 ([D1 results and analysis](notes/discussion-dose/benchmark-v3/RESULTS-D1.md) published; both models fail clean gates; server retired; [D2 plan](notes/discussion-dose/benchmark-v3/D2-PLAN.md) proposed, not queued or started).
+- discussion benchmark v3: dmarz/discussion-bench-v3 ([D1 results and analysis](../../../5-experiments/studies/dmarz/discussion-dose/benchmark-v3/RESULTS-D1.md) published; both models fail clean gates; server retired; [D2 plan](../../../5-experiments/studies/dmarz/discussion-dose/benchmark-v3/D2-PLAN.md) proposed, not queued or started).
 - v3 resampling-only control sidecar: dmarz/private-control (task build-v3-resample-control; new files only, launches after the review).

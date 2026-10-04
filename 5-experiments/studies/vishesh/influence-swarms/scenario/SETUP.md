@@ -56,7 +56,7 @@ Original capUSD8, cumulative reservationUSD4.917472/calls247; USD3.082528 unrese
 
 # Current setup: D5 not started; dispatch blocked
 
-[Runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) · [D5 plan](ITERATION-05.md) · [pre-assessment](reviews/native-D5-01-pre.md) · [operator handoff](RUN-D5.md) · [previous post-mortem](reviews/native-D3-01-post.md).
+[Runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) · [D5 plan](ITERATION-05.md) · [pre-assessment](reviews/native-D5-01-pre.md) · [operator handoff](RUN-D5.md) · [previous post-mortem](reviews/native-D3-01-post.md).
 
 The owner approved unchanged D5 live execution. Reconciliation confirms no D5 native dispatch or model call. The expired allocation has been released; current central dispatch and runtime admission are missing. The separate direct-dispatch exception remains unresolved. Researcher review is optional. [Current handoff](RUN-HANDOFF.md), [not-started closeout](reviews/D5-not-started-post.md), [D3 scientific assessment](reviews/D3-quality-review.md).
 
@@ -75,9 +75,9 @@ Keep the original USD8 subledger and cumulative reservations. D5’s conservativ
 
 ### Experiment setup record: influence-swarms / iteration 3
 
-Exploratory diagnostic, owner/operator vishesh/codex-experiments, 2026-10-04. Follow the [setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). This is a bounded repair study, not formal hypothesis acceptance.
+Exploratory diagnostic, owner/operator vishesh/codex-experiments, 2026-10-04. Follow the [setup runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). This is a bounded repair study, not formal hypothesis acceptance.
 
-Question: does targeted candidate approval checking outperform an equally budgeted general second look? Decision: retain or reject that proposed workflow repair. [Plan](ITERATION-03.md); previous [Q4](reviews/native-Q4-01-post.md) and [D1](reviews/native-D1-01-post.md) post-mortems. Independent reviewer dmarz/inbox-design-feedback: [Q4 answerability PASS](../../../../dmarz/notes/inbox-reviews-2026-10-04/influence-q4-review.md). Owner's single-review rule applies; this is not an audit of the new diagnostic cases.
+Question: does targeted candidate approval checking outperform an equally budgeted general second look? Decision: retain or reject that proposed workflow repair. [Plan](ITERATION-03.md); previous [Q4](reviews/native-Q4-01-post.md) and [D1](reviews/native-D1-01-post.md) post-mortems. Independent reviewer dmarz/inbox-design-feedback: [Q4 answerability PASS](../../../dmarz/inbox-reviews-2026-10-04/influence-q4-review.md). Owner's single-review rule applies; this is not an audit of the new diagnostic cases.
 
 | Gate | Status | Evidence / next action |
 |---|---|---|

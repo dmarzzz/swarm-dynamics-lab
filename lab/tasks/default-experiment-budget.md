@@ -15,8 +15,8 @@ claimed_at: 2026-10-04T05:52Z
 updated: 2026-10-04T05:52Z
 outputs:
 - AGENTS.md
-- tooling/agent-experiments/EXPERIMENT-SETUP.md
-- tooling/agent-experiments/OPERATIONS.md
+- 5-experiments/toolkit/agent-experiments/EXPERIMENT-SETUP.md
+- 5-experiments/toolkit/agent-experiments/OPERATIONS.md
 ---
 
 ## Goal

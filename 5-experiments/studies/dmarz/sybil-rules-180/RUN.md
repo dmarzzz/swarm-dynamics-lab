@@ -33,7 +33,7 @@ python3 scripts/run-ready-chain.py sybil-rules-180 <commit> verify --host $H    
 
 ## After it ends
 
-`verify`, then the post-mortem `reviews/chain-001-post.md` per [RUN-REVIEW.md](../../../../tooling/agent-experiments/RUN-REVIEW.md), then release the claim after the uploads are verified. A billing stop (`provider_credit_balance_low`) ends the attempt; the pre-registered resume is attempt 002 from the stopped stage after a fresh check ([preregistration.md](preregistration.md)).
+`verify`, then the post-mortem `reviews/chain-001-post.md` per [RUN-REVIEW.md](../../../toolkit/agent-experiments/RUN-REVIEW.md), then release the claim after the uploads are verified. A billing stop (`provider_credit_balance_low`) ends the attempt; the pre-registered resume is attempt 002 from the stopped stage after a fresh check ([preregistration.md](preregistration.md)).
 
 ## Offline checks (no network, no model call)
 

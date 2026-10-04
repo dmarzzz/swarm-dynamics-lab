@@ -19,7 +19,9 @@ import sys
 import tempfile
 import time
 
-STUDY = 'researchers/vishesh/notes/swarm-of-theseus/v2'
+STUDY = '5-experiments/studies/vishesh/swarm-of-theseus/v2'
+# Documents pinned at commits before the layout move and repository rename keep their old immutable URLs.
+LEGACY_STUDY = 'researchers/vishesh/notes/swarm-of-theseus/v2'
 STAGES = ('S0', 'S0-repair', 'S1')
 MODULES = ('analyze', 'domain', 'engine', 'preflight', 'presentation', 'provider', 'runner', 'render')
 CONFIG_KEYS = {'model', 'input_rate', 'output_rate', 'max_output_tokens', 'max_input_bytes',
@@ -143,7 +145,8 @@ def _config(root, path):
                 'max_output_tokens': 900, 'max_input_bytes': 18000}
     if any(config.get(k) != v for k, v in expected.items()):
         _fail('native_model_or_bounds_mismatch')
-    prefix = r'https://github\.com/dmarzzz/swarm-lab/blob/[0-9a-f]{40}/' + re.escape(STUDY)
+    prefix = (r'https://github\.com/dmarzzz/swarm-(?:dynamics-)?lab/blob/[0-9a-f]{40}/(?:'
+              + re.escape(STUDY) + '|' + re.escape(LEGACY_STUDY) + ')')
     for name, suffix in (('plan_url', r'/PLAN\.md'), ('pre_run_review_url', r'/reviews/[A-Za-z0-9_-]+-pre\.md'), ('prospective_repair_review_url', r'/reviews/[A-Za-z0-9_-]+-pre\.md')):
         if name in config and (not isinstance(config[name], str) or not re.fullmatch(prefix + suffix, config[name])):
             _fail('immutable_native_document_required')

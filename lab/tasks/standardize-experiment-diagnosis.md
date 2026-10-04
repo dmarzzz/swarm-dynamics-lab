@@ -14,9 +14,9 @@ topics: []
 claimed_at: 2026-10-04T20:20Z
 updated: 2026-10-04T20:22Z
 outputs:
-- tooling/agent-experiments/DIAGNOSIS.md
-- tooling/agent-experiments/templates/diagnosis.md
-- researchers/vishesh/notes/optimal-swarm-size/reviews/diagnosis-standard-application.md
+- 5-experiments/toolkit/agent-experiments/DIAGNOSIS.md
+- 5-experiments/toolkit/agent-experiments/templates/diagnosis.md
+- 5-experiments/studies/vishesh/optimal-swarm-size/reviews/diagnosis-standard-application.md
 ---
 
 ## Goal

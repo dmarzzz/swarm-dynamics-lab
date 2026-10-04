@@ -1,6 +1,6 @@
 # Experiment setup record: Phantom Coast PC-3
 
-Owner/operator/self-assessor vishesh/codex-phantom-coast. Exploratory engineering study; no accepted formal hypothesis or independent review claimed. [Setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md), [operations](../../../../../tooling/agent-experiments/OPERATIONS.md), [previous post-mortem](../pc2/reviews/S1-A1-POST.md).
+Owner/operator/self-assessor vishesh/codex-phantom-coast. Exploratory engineering study; no accepted formal hypothesis or independent review claimed. [Setup runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md), [operations](../../../../toolkit/agent-experiments/OPERATIONS.md), [previous post-mortem](../pc2/reviews/S1-A1-POST.md).
 
 ## Gate evidence
 

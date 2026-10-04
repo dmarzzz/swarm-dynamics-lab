@@ -1,6 +1,6 @@
 # Right Dissenter RD5 setup record
 
-**RD5 is complete and scientifically reviewed: Q5 passed; H5 returned a valid adverse result. See [current status](RUN-STATUS.md) and [report](REPORT.md). This remains the authoritative Right Dissenter setup record.** Owner/operator/assessor: vishesh/codex-decision-models. Exploratory scope, tagged dissent and decision models. Follow the [setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [operations guide](../../../../../tooling/agent-experiments/OPERATIONS.md).
+**RD5 is complete and scientifically reviewed: Q5 passed; H5 returned a valid adverse result. See [current status](RUN-STATUS.md) and [report](REPORT.md). This remains the authoritative Right Dissenter setup record.** Owner/operator/assessor: vishesh/codex-decision-models. Exploratory scope, tagged dissent and decision models. Follow the [setup runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and [operations guide](../../../../toolkit/agent-experiments/OPERATIONS.md).
 
 Question: when does remembering unresolved evidence and protecting a future check help, and when does it delay an urgent decision? Primary B2 reserve versus B1 memory; secondary B1 versus B0 bounded always-check. [Plan](PLAN.md), [amendment](AMENDMENT-01.md), [ready package](READY.md), [previous cohort](../rd4/REPORT.md).
 

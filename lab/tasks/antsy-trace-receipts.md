@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T19:27Z
 updated: 2026-10-04T19:33Z
 outputs:
-- tooling/agent-experiments/TRACE-RECEIPTS.md
-- researchers/vishesh/notes/antsy-targeted-v8/trace-repair-v2/README.md
+- 5-experiments/toolkit/agent-experiments/TRACE-RECEIPTS.md
+- 5-experiments/studies/vishesh/antsy-targeted-v8/trace-repair-v2/README.md
 ---
 
 ## Goal

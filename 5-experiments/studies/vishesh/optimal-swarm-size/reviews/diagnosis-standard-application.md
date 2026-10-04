@@ -1,6 +1,6 @@
 # Applying the shared diagnosis step to Optimal Swarm Size
 
-Status: prospective task-design application; no new native attempt, implementation claim or budget change. [Shared procedure](../../../../../tooling/agent-experiments/DIAGNOSIS.md), [O2 closeout](outage-o2-post.md).
+Status: prospective task-design application; no new native attempt, implementation claim or budget change. [Shared procedure](../../../../toolkit/agent-experiments/DIAGNOSIS.md), [O2 closeout](outage-o2-post.md).
 
 ## Diagnosis
 

@@ -14,9 +14,9 @@ topics: []
 claimed_at: 2026-10-04T02:54Z
 updated: 2026-10-04T02:56Z
 outputs:
-- researchers/vishesh/notes/optimal-swarm-size/TASK-CONTRACTS.md
-- researchers/vishesh/notes/optimal-swarm-size/design.json
-- researchers/vishesh/notes/optimal-swarm-size/README.md
+- 5-experiments/studies/vishesh/optimal-swarm-size/TASK-CONTRACTS.md
+- 5-experiments/studies/vishesh/optimal-swarm-size/design.json
+- 5-experiments/studies/vishesh/optimal-swarm-size/README.md
 ---
 
 ## Goal

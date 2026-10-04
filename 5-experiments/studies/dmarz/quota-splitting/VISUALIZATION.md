@@ -1,6 +1,6 @@
 # Visualization mapping v1: quota-splitting
 
-Follows [RUN-VISUALIZATION.md](../../../../tooling/agent-experiments/RUN-VISUALIZATION.md). Renderer: `src/render.py` (PIL only, 1800×1200 RGB). Nothing has been rendered from a model run; the frames checked so far come from the scripted stage and say so. Every frame and replay names the attempt's model in its header (`claude-opus-5-5`, or `claude-opus-5` under the model ladder of amendment A1); frames of the two models are never combined.
+Follows [RUN-VISUALIZATION.md](../../../toolkit/agent-experiments/RUN-VISUALIZATION.md). Renderer: `src/render.py` (PIL only, 1800×1200 RGB). Nothing has been rendered from a model run; the frames checked so far come from the scripted stage and say so. Every frame and replay names the attempt's model in its header (`claude-opus-5-5`, or `claude-opus-5` under the model ladder of amendment A1); frames of the two models are never combined.
 
 - Mapping version / source: v1, part of the hashed source (`src/render.py`); the code commit and source hash are in [reviews/chain-001-pre.md](reviews/chain-001-pre.md). No parent mapping.
 - Run binding: one hub run per stage, `quota-splitting/<run id>`, params `stage`, `batch` (`s0-001`, `p0-001`, `q0-001`, `s1-001`), `source_hash`, `code`. Each episode row binds root, condition, pressure and, in the scripted stage, the planner.

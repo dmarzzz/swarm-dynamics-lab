@@ -1,6 +1,6 @@
 # D1 setup and closeout
 
-Owner/operator: vishesh/codex-theseus. Exploratory rule-execution diagnostic. Follow the [setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md).
+Owner/operator: vishesh/codex-theseus. Exploratory rule-execution diagnostic. Follow the [setup runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md).
 
 G0 researcher review: not required by owner direction; no independent sign-off claimed. G1 prospective plan: PLAN.md predates implementation; current D1-PRE.md and immutable plan were published before model calls. G2 instrument: all 19 offline checks passed locally and on the remote host. G3 runtime admission: exact public-plan/hash and visual page checks, source/runtime verification, exclusive claim, designated project credential route and one authorized USD5 allocation passed. G4 execution: all 144 calls completed, all 480 assigned decisions accounted for, zero retries/provider errors/missing usage/score-audit disagreements. G5 closeout: worker exited, model ledger settled at USD0.178341, evidence and six presentation/record files uploaded and read back with matching hashes, claim released. Temporary machine retirement is confirmed by provider readback; estimated infrastructure cost USD0.007116, total USD0.185457. See results/D1/closeout.json.
 

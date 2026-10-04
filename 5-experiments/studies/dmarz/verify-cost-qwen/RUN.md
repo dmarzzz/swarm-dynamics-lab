@@ -46,7 +46,7 @@ Limits in the hashed design: 4 requests in flight; 120 s per request; 5,400 s pe
 
 1. `status`, then `verify`. Keep both outputs.
 2. Do not rerun a stage. A batch name is refused the second time. There is no repair attempt for this chain: if its qualification fails, that is reported as the result for `gpt-6-luna`. Thresholds are never lowered. Attempt 001, attempt 002 and chain 003 are three separate records and are never pooled.
-3. Write the post-mortem per [RUN-REVIEW.md](../../../../tooling/agent-experiments/RUN-REVIEW.md): reconcile assigned, started, terminal, graded and analyzed rows; compare the frames with the saved analysis; report actual calls, tokens and dollars; report P0's raw response metadata (`summary.json` `probe`) and, next to this chain's qualification table, Qwen's attempt-001 answers to the same 24 requests (descriptive, never pooled).
+3. Write the post-mortem per [RUN-REVIEW.md](../../../toolkit/agent-experiments/RUN-REVIEW.md): reconcile assigned, started, terminal, graded and analyzed rows; compare the frames with the saved analysis; report actual calls, tokens and dollars; report P0's raw response metadata (`summary.json` `probe`) and, next to this chain's qualification table, Qwen's attempt-001 answers to the same 24 requests (descriptive, never pooled).
 4. Confirm the chain process has exited and uploads are verified, then release the claim. Do not destroy the server.
 
 ## Offline checks (no server, no model call)

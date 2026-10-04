@@ -28,7 +28,7 @@ These are curated lessons, not model-generated ground truth. A lesson is a hypot
 
 ## L3: qualification failure is not a null hypothesis result
 
-- Evidence: [next-experiments reconciliation](../../../dmarz/notes/next-experiments-2026-10-04/README.md), especially the market and native influence cohorts; [run assessment and repair cycle](../../../../tooling/agent-experiments/RUN-REVIEW.md).
+- Evidence: [next-experiments reconciliation](../../dmarz/next-experiments-2026-10-04/README.md), especially the market and native influence cohorts; [run assessment and repair cycle](../../../toolkit/agent-experiments/RUN-REVIEW.md).
 - Candidate change: brief must distinguish execution complete, instrument qualified, valid negative result and remaining repair. Preserve every assigned attempt across model/prompt changes.
 - Counterexample: a valid adverse model decision is not a parser bug and must not be tuned away on evaluation data.
 - Acceptance: independent blind review of new analysis tasks, with equal credit for warranted null and positive conclusions. Not run here.

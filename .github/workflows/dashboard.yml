@@ -3,13 +3,13 @@ on:
   push:
     branches: [main, dashboard-v1]
     paths:
-      - 'library/**'
-      - 'tasks/**'
-      - 'surveys/**'
-      - 'researchers/**'
-      - 'candidates/**'
-      - 'hypotheses/**'
-      - 'experiments/**'
+      - '1-library/**'
+      - '2-surveys/**'
+      - '4-hypotheses/**'
+      - '5-experiments/**'
+      - 'lab/tasks/**'
+      - 'lab/researchers/**'
+      - 'lab/candidates/**'
       - 'dashboard/**'
       - '.github/workflows/dashboard.yml'
   schedule:

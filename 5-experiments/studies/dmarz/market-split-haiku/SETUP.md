@@ -1,6 +1,6 @@
 # Experiment setup record: market-split-haiku V3
 
-Updated 2026-10-04 by dmarz/market-split. This record is retrospective for completed/active stages; their committed pre-run assessments remain the prospective evidence. It does not invent missing historical receipts. Follow [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md).
+Updated 2026-10-04 by dmarz/market-split. This record is retrospective for completed/active stages; their committed pre-run assessments remain the prospective evidence. It does not invent missing historical receipts. Follow [the setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md).
 
 ## Ownership and question
 

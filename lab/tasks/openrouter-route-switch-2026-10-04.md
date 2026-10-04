@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T18:43Z
 updated: 2026-10-04T18:44Z
 outputs:
-- tooling/agent-experiments/SWARM-LAB-CREDENTIALS.md
+- 5-experiments/toolkit/agent-experiments/SWARM-LAB-CREDENTIALS.md
 ---
 
 ## Goal

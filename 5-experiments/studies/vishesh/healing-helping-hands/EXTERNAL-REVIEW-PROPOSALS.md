@@ -44,7 +44,7 @@ Before implementing a material successor, the owning task writes the prospective
 
 ## Top-10 review: scale and evaluation
 
-2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../../tooling/agent-experiments/SCALE-AND-CLAIMS.md).
+2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../toolkit/agent-experiments/SCALE-AND-CLAIMS.md).
 
 **Superseded: do not rerun leaked C4 or describe C5 as pending.** C5 S1 completed 432 cases / 1,296 calls across 12 authored semantic families. Agreement routing accepted 234 wrong agreements and scored 198/432 against Jev 432/432; the safety criterion failed.
 

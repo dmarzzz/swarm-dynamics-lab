@@ -17,7 +17,7 @@ topics:
 claimed_at: 2026-10-03T19:05Z
 updated: 2026-10-03T19:05Z
 outputs:
-- library/threads
+- 1-library/threads
 ---
 
 ## Goal

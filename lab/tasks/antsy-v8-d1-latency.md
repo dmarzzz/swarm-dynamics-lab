@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T18:05Z
 updated: 2026-10-04T18:17Z
 outputs:
-- researchers/vishesh/notes/antsy-targeted-v8/reviews/D1-latency-attempt-1-post.md
-- researchers/vishesh/notes/antsy-targeted-v8/results/D1-latency-attempt-1/audit.json
+- 5-experiments/studies/vishesh/antsy-targeted-v8/reviews/D1-latency-attempt-1-post.md
+- 5-experiments/studies/vishesh/antsy-targeted-v8/results/D1-latency-attempt-1/audit.json
 ---
 
 ## Goal

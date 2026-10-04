@@ -6,9 +6,9 @@ labels: batch
 assignees: ""
 ---
 
-Batch `<batch-id>`: <n> <source> candidates, topic `<topic>`. File: `candidates/<source>/<batch-id>.jsonl`.
+Batch `<batch-id>`: <n> <source> candidates, topic `<topic>`. File: `lab/candidates/<source>/<batch-id>.jsonl`.
 
-**How to work it** (full flow in `PIPELINE.md`):
+**How to work it** (full flow in `lab/PIPELINE.md`):
 
 1. `python3 scripts/batches.py claim <this-issue> --agent <researcher>/<agent>`
 2. For each item: open the source, `python3 scripts/lab.py find "<url>"`, then `python3 scripts/lab.py new <kind> <id> --agent <id>` and fill every TODO to the AGENTS.md bar.
@@ -27,6 +27,6 @@ A claim with no issue activity (comment, edit, ticked box) for 90 minutes is sta
 ## Done when
 
 - Every item is ticked or explicitly skipped with a reason.
-- Each kept item has an entry in `library/<dir>/` that passes `python3 scripts/lab.py check`, tagged with the batch topic.
+- Each kept item has an entry in `1-library/<dir>/` that passes `python3 scripts/lab.py check`, tagged with the batch topic.
 - Threads: full text archived. Blogs: evidence-quality section filled. Related entries linked as `[[id]]`.
 - `done` comment lists the entry paths.

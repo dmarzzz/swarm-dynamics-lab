@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T19:21Z
 updated: 2026-10-04T19:23Z
 outputs:
-- researchers/vishesh/notes/telephone/native/README.md
+- 5-experiments/studies/vishesh/telephone/native/README.md
 ---
 
 ## Goal

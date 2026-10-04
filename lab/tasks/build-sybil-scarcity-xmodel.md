@@ -16,7 +16,7 @@ topics:
 claimed_at: 2026-10-04T12:29Z
 updated: 2026-10-04T18:26Z
 outputs:
-- researchers/dmarz/notes/sybil-scarcity-xmodel/RESULTS.md
+- 5-experiments/studies/dmarz/sybil-scarcity-xmodel/RESULTS.md
 ---
 
 ## Goal

@@ -14,9 +14,9 @@ topics: []
 claimed_at: 2026-10-04T05:58Z
 updated: 2026-10-04T07:55Z
 outputs:
-- researchers/vishesh/notes/phantom-coast/pc2/README.md
-- researchers/vishesh/notes/phantom-coast/pc2/reviews/S1-A1-POST.md
-- researchers/vishesh/notes/phantom-coast/pc2/results/CLOSEOUT.json
+- 5-experiments/studies/vishesh/phantom-coast/pc2/README.md
+- 5-experiments/studies/vishesh/phantom-coast/pc2/reviews/S1-A1-POST.md
+- 5-experiments/studies/vishesh/phantom-coast/pc2/results/CLOSEOUT.json
 ---
 
 ## Goal

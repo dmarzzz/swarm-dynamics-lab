@@ -10,7 +10,7 @@ Order reflects a balance of discriminating power, reusable infrastructure and fe
 |---|---|---|---|---|
 | 1 | [Immune design](../swarm-immune-response/experiment-design.md), SEC-06/07/48, PX-02/03/04 | Containment and functional repair; computational local-state restoration | Corruption dependency cone, correction frontier and reentry timeline | Does targeted repair outperform restart or quarantine at equal resources? Hidden backups and oracle contamination labels can invalidate the comparison. |
 | 2 | SOC-01/02/39, SEC-03, VX-01/20/22 | Independent information and heterogeneous failures; quorum commitment | Agent–evidence ancestry graph beside joint-error tails | Should the harness count sources, observations or validators? Pairwise correlation alone can miss catastrophic joint errors. |
-| 3 | [Private judgments design](../../../dmarz/notes/soc07-private-judgments/README.md), SOC-07/09/10, PX-08 | Selective inhibition is a lead; private elicitation is the actual computational intervention | Initial-to-final belief transitions with correct and incorrect revisions | Does protected initial evidence help after equalizing preparation and tokens? Harm to initially correct agents matters as much as correction. |
+| 3 | [Private judgments design](../../dmarz/soc07-private-judgments/README.md), SOC-07/09/10, PX-08 | Selective inhibition is a lead; private elicitation is the actual computational intervention | Initial-to-final belief transitions with correct and incorrect revisions | Does protected initial evidence help after equalizing preparation and tokens? Harm to initially correct agents matters as much as correction. |
 | 4 | SOC-08, SEC-53, PX-06 | Commitment thresholds under urgency; explicit completeness constraints | Requirement-coverage grid beside agreement and stopping time | Can the system abstain for a valid missing requirement without access to the answer? An oracle checklist would trivialize the problem. |
 | 5 | SOC-21/23/31, PX-05/09/14 | Persistent state and functional recovery; distinction between stored facts and accessible facts | Claim/memory lineage with retrieval keys and later actions | Which repair target matters: content, index, rule or redundancy? High recall can coexist with wrong decisions. |
 | 6 | BUD-03/10/17/18, PX-12; B1/B3/B5 | Resource allocation, reserve states and feedback | Reported versus actual balance, resource waterfall and quality–cost frontier | Which simple allocation rule preserves completion? Metaphorical homeostasis must not replace an enforced ledger. |
@@ -34,7 +34,7 @@ The useful operation is to translate a mechanism into variables and competing pr
 
 ### Fork-merge Q2: distinguish bounded faults from probabilistic independence
 
-The frozen [fork-merge synthesis](../../../../synthesis/fork-merge-questions.md), in its opening summary and section 3.2 framing, treats classical Byzantine thresholds as requiring independent failures. That is too broad. Lamport, Shostak and Pease quantify over arbitrary behavior by a bounded set of traitors under communication assumptions; their agreement result is not conditioned on statistical independence. [[lamport-1982-byzantine]] [Primary paper](https://lamport.azurewebsites.net/pubs/byz.pdf).
+The frozen [fork-merge synthesis](../../../../3-synthesis/fork-merge-questions.md), in its opening summary and section 3.2 framing, treats classical Byzantine thresholds as requiring independent failures. That is too broad. Lamport, Shostak and Pease quantify over arbitrary behavior by a bounded set of traitors under communication assumptions; their agreement result is not conditioned on statistical independence. [[lamport-1982-byzantine]] [Primary paper](https://lamport.azurewebsites.net/pubs/byz.pdf).
 
 The useful replacement framing is: **common causes can exceed the fault bound, and honest agreement on bad external evidence is a different problem from protocol agreement**. Independence assumptions must be checked theorem by theorem for stochastic aggregation results. Do not transfer one interpretation across Byzantine agreement, robust gradients, weight merging and semantic voting. This correction is recorded in owned notes; it does not silently rewrite another researcher's synthesis or assert a full audit of every cited theorem.
 
@@ -54,7 +54,7 @@ Budget B4's coordinated spending should not be called a cartel solely because ex
 
 ## Visual design that can distinguish explanations
 
-Use one shared trace schema wherever possible, adapting the existing [agent-experiment tooling](../../../../tooling/agent-experiments/README.md). These are instrumentation requirements, not a request for another runtime:
+Use one shared trace schema wherever possible, adapting the existing [agent-experiment tooling](../../../toolkit/agent-experiments/README.md). These are instrumentation requirements, not a request for another runtime:
 
 | View | Minimum recorded fields | Necessary comparison | Visual failure to avoid |
 |---|---|---|---|

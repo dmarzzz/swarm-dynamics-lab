@@ -45,7 +45,7 @@ Limits in the hashed design: 4 requests in flight; 180 s per request; 21,600 s p
 
 1. `status`, then `verify`. Keep both outputs.
 2. Do not rerun a stage. A batch name is refused the second time, and a stage is refused while any run of this experiment is still planned, assigned or running on the hub. A repair is a new attempt with a changed design (new batch number, fresh qualification roots), which changes the source hash, and needs its own pre-run review.
-3. Write the post-mortem per [RUN-REVIEW.md](../../../../tooling/agent-experiments/RUN-REVIEW.md): reconcile assigned, started, terminal, graded and analyzed rows; compare the frames with the saved analysis; report actual calls, transport attempts, tokens and dollars; report how many packets were repeated within a root and how often the answers agreed.
+3. Write the post-mortem per [RUN-REVIEW.md](../../../toolkit/agent-experiments/RUN-REVIEW.md): reconcile assigned, started, terminal, graded and analyzed rows; compare the frames with the saved analysis; report actual calls, transport attempts, tokens and dollars; report how many packets were repeated within a root and how often the answers agreed.
 4. Update the evidence registry row and the README's results section from the saved analysis. A failed or incomplete S1 is diagnostic, not a result.
 5. Confirm the chain process has exited and uploads are verified, then release the claim. Do not destroy the server.
 

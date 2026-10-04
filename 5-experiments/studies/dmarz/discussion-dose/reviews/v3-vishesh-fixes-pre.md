@@ -3,7 +3,7 @@
 - Owner/stage: dmarz/discussion-bench-v3; offline instrument regression, 2026-10-04 UTC.
 - Parent attempt: [v3 offline release](v3-offline-post.md), runtime `0f5044a`.
 - Status: diagnostic-only. The user requested implementation of Vishesh's fixes. No model execution, fleet deployment or new scientific result is authorized by this attempt.
-- Decision: whether the v3 successor satisfies the acceptance checks in [Vishesh's retrospective review](../../../../vishesh/notes/independent-reviews-2026-10-04/discussion-dose.md). This is an author response; Shadow's independent review remains separate.
+- Decision: whether the v3 successor satisfies the acceptance checks in [Vishesh's retrospective review](../../../vishesh/independent-reviews-2026-10-04/discussion-dose.md). This is an author response; Shadow's independent review remains separate.
 
 ## Design and changes
 

@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T06:54Z
 updated: 2026-10-04T07:03Z
 outputs:
-- researchers/vishesh/notes/antsy-targeted-v8/README.md
+- 5-experiments/studies/vishesh/antsy-targeted-v8/README.md
 ---
 
 ## Goal

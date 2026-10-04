@@ -16,10 +16,10 @@ topics:
 claimed_at: 2026-10-04T02:08Z
 updated: 2026-10-04T06:58Z
 outputs:
-- researchers/dmarz/notes/market-split-api/RESULTS.md
-- researchers/dmarz/notes/market-split-api/reviews/s1-002-post.md
-- researchers/dmarz/notes/market-split-api/report/s1-002/closeout.json
-- researchers/dmarz/notes/market-split-haiku/NEXT-EXPERIMENT.md
+- 5-experiments/studies/dmarz/market-split-api/RESULTS.md
+- 5-experiments/studies/dmarz/market-split-api/reviews/s1-002-post.md
+- 5-experiments/studies/dmarz/market-split-api/report/s1-002/closeout.json
+- 5-experiments/studies/dmarz/market-split-haiku/NEXT-EXPERIMENT.md
 ---
 
 ## Goal

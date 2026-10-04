@@ -1,6 +1,6 @@
 # PC7 setup and next-session handoff
 
-Owner Vishesh; operator codex-phantom-coast; exploratory instrument, not accepted hypothesis. Follow [setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Predecessor: [PC6 PI closeout](../pc6/reviews/PI-POST.md); latest native attempts remain PC5 Q0/S1. Current assessment: [trace review](reviews/TRACE-REVIEW.md).
+Owner Vishesh; operator codex-phantom-coast; exploratory instrument, not accepted hypothesis. Follow [setup runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Predecessor: [PC6 PI closeout](../pc6/reviews/PI-POST.md); latest native attempts remain PC5 Q0/S1. Current assessment: [trace review](reviews/TRACE-REVIEW.md).
 
 | Gate | Status | Evidence / exact next action |
 |---|---|---|

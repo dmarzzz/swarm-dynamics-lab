@@ -17,9 +17,9 @@ topics:
 claimed_at: 2026-10-03T17:54Z
 updated: 2026-10-03T17:57Z
 outputs:
-- library/code/gh-mesa-mesa.md
-- library/code/gh-pmocz-activematter-python.md
-- library/code/gh-proroklab-vectorizedmultiagentsimulator.md
+- 1-library/code/gh-mesa-mesa.md
+- 1-library/code/gh-pmocz-activematter-python.md
+- 1-library/code/gh-proroklab-vectorizedmultiagentsimulator.md
 ---
 
 ## Goal

@@ -28,9 +28,9 @@ topics:
 claimed_at: 2026-10-03T20:34Z
 updated: 2026-10-03T20:46Z
 outputs:
-- synthesis/research-question-atlas.md
-- researchers/dmarz/notes/question-atlas/README.md
-- researchers/dmarz/notes/question-atlas/review.html
+- 3-synthesis/research-question-atlas.md
+- 5-experiments/studies/dmarz/question-atlas/README.md
+- 5-experiments/studies/dmarz/question-atlas/review.html
 ---
 
 ## Goal

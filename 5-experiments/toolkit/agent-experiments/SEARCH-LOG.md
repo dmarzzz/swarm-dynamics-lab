@@ -32,7 +32,7 @@ Publication status was verified where visible in primary records or proceedings;
 
 For an update: repeat the date-bounded topic searches; check each arXiv version history and publisher correction page; add contradictory evidence; record changed recommendations; refresh framework pins and model availability before execution. Never silently replace a citation version in an already registered protocol.
 
-## swarm-lab contribution reconciliation
+## swarm-dynamics-lab contribution reconciliation
 
 On 2026-10-03, primary arXiv abstract pages, Crossref records, the JMLR article page and the PMLR proceedings page were reopened for the 29-reference set. Three canonical records already existed and were reused; 26 new records were added with conservative `read_depth: abstract`. Automated `lab.py verify --agent vishesh/codex-methods` resolved 24 new records with zero metadata problems. JMLR and PMLR records have no arXiv/DOI field established here and were checked directly at their publication pages; the verifier explicitly warns that those two are URL-only. No fabricated identifiers were added to silence those warnings.
 

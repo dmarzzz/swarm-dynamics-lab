@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T04:36Z
 updated: 2026-10-04T04:39Z
 outputs:
-- researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/FINDINGS.md
+- 5-experiments/studies/vishesh/swarm-of-theseus/v2/diagnosis/FINDINGS.md
 ---
 
 ## Goal

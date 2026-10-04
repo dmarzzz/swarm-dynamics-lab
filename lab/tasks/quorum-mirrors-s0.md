@@ -15,9 +15,9 @@ topics:
 claimed_at: 2026-10-04T03:46Z
 updated: 2026-10-04T04:02Z
 outputs:
-- researchers/vishesh/notes/decision-models/quorum-of-mirrors/RESULTS.md
-- researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/S0-02-post.md
-- researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-S0-02
+- 5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/RESULTS.md
+- 5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/reviews/S0-02-post.md
+- 5-experiments/studies/vishesh/decision-models/quorum-of-mirrors/results/QM-S0-02
 ---
 
 ## Goal

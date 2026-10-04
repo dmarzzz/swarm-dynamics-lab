@@ -49,7 +49,7 @@ Before implementing a material successor, the owning task writes the prospective
 
 ## Top-10 review: scale and evaluation
 
-2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../../../tooling/agent-experiments/SCALE-AND-CLAIMS.md).
+2026-10-04, reconciled against repository `d2b33c0c`. [Portfolio dispositions](../../top10-integration-2026-10-04/README.md) · [Scale and claim checklist](../../../../toolkit/agent-experiments/SCALE-AND-CLAIMS.md).
 
 **Adapt; use the existing R1, not the old sealed cohort.** PQ-04 interface success did not validate opening 96 packets under a changed contract. The current robustness plan defines its own 10 qualification + 40 comparison calls.
 

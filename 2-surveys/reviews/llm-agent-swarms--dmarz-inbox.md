@@ -9,7 +9,7 @@ date: 2026-10-04
 
 ## Verdict
 
-**Revise, narrowly.** Independently rechecked five original sources, the original fourteen response items, and the current body. The mechanical gate passes. Most repairs are present, but the two scope problems also identified by Vishesh remain. This completes the requested re-review without approving the survey or its downstream hypotheses. Exact local inputs are in the [receipt](../researchers/dmarz/notes/inbox-reviews-2026-10-04/survey-receipt.json).
+**Revise, narrowly.** Independently rechecked five original sources, the original fourteen response items, and the current body. The mechanical gate passes. Most repairs are present, but the two scope problems also identified by Vishesh remain. This completes the requested re-review without approving the survey or its downstream hypotheses. Exact local inputs are in the [receipt](../../5-experiments/studies/dmarz/inbox-reviews-2026-10-04/survey-receipt.json).
 
 ## Required changes
 

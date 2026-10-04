@@ -62,7 +62,7 @@ Do not select an arbitrary large n or infer independence from more agents, seeds
 - Absolute harm and useful service beside change scores; strongest equal-budget simple/random baseline:
 - Independent roots versus nested calls/repeats; same-packet replication versus fresh-task generalization:
 
-These are prompts within the existing controls/measurement/sample sections, not requirements to build new infrastructure. See the [source-pinned examples](../../../researchers/vishesh/notes/dmarz-methods-transfer-2026-10-04/README.md).
+These are prompts within the existing controls/measurement/sample sections, not requirements to build new infrastructure. See the [source-pinned examples](../../../studies/vishesh/dmarz-methods-transfer-2026-10-04/README.md).
 
 ## Implementation and acceptance
 

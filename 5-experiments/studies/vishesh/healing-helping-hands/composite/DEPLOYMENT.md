@@ -16,7 +16,7 @@ Tested source and current registered plan: 2a1453a3f4befaf86006dcb04bdfe6aafdb3c
 
 ## Capacity escalation correction
 
-The user directed resolving fleet capacity rather than stopping at claimed machines. The Mac fallback is withdrawn. New capacity is requested through the authoritative Dmarz provisioner in [allocate-healing-qwen-jev](../../../../../tasks/allocate-healing-qwen-jev.md): a concrete CPU worker specification, expiry, exclusive allocation and account/state/budget checks. This workspace has no dmarz state or approved provisioner credential; only the fleet owner executor may perform creation. No deployment or execution is claimed by filing that request.
+The user directed resolving fleet capacity rather than stopping at claimed machines. The Mac fallback is withdrawn. New capacity is requested through the authoritative Dmarz provisioner in [allocate-healing-qwen-jev](../../../../../lab/tasks/allocate-healing-qwen-jev.md): a concrete CPU worker specification, expiry, exclusive allocation and account/state/budget checks. This workspace has no dmarz state or approved provisioner credential; only the fleet owner executor may perform creation. No deployment or execution is claimed by filing that request.
 
 ## Authorized dedicated capacity, 2026-10-04 UTC
 

@@ -43,7 +43,7 @@ Limits (hashed): 2 requests in flight; 180 s per request; 14,400 s per stage; 18
 
 1. `status`, `verify`, and on the server `python src/chain.py summarize` (S1 headline incl. the parent's primary recomputed from its pinned rows: −95.8 pp). Keep the outputs.
 2. Do not rerun a stage. A batch name is refused the second time.
-3. Post-mortem per [RUN-REVIEW.md](../../../../tooling/agent-experiments/RUN-REVIEW.md); README results and the evidence row from the saved analysis, per model, never pooled.
+3. Post-mortem per [RUN-REVIEW.md](../../../toolkit/agent-experiments/RUN-REVIEW.md); README results and the evidence row from the saved analysis, per model, never pooled.
 4. Confirm the chain process has exited and uploads are verified, then release the claim.
 
 ## Offline checks (no server, no model call)

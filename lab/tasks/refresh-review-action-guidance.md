@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T20:33Z
 updated: 2026-10-04T20:38Z
 outputs:
-- researchers/vishesh/notes/external-study-review-2026-10-04/README.md
-- researchers/vishesh/notes/external-study-review-2026-10-04/freshness.json
+- 5-experiments/studies/vishesh/external-study-review-2026-10-04/README.md
+- 5-experiments/studies/vishesh/external-study-review-2026-10-04/freshness.json
 ---
 
 ## Goal

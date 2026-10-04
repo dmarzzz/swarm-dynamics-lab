@@ -16,9 +16,9 @@ topics:
 claimed_at: 2026-10-04T18:35Z
 updated: 2026-10-04T19:02Z
 outputs:
-- researchers/vishesh/notes/dissent/reopening/IMPLEMENTATION.md
-- researchers/vishesh/notes/dissent/reopening/OPERATOR.md
-- researchers/vishesh/notes/dissent/reopening/offline/validation.json
+- 5-experiments/studies/vishesh/dissent/reopening/IMPLEMENTATION.md
+- 5-experiments/studies/vishesh/dissent/reopening/OPERATOR.md
+- 5-experiments/studies/vishesh/dissent/reopening/offline/validation.json
 ---
 
 ## Goal

@@ -15,8 +15,8 @@ claimed_at: 2026-10-04T04:40Z
 updated: 2026-10-04T04:49Z
 outputs:
 - scripts/experiment.py
-- tooling/agent-experiments/OPERATIONS.md
-- tooling/agent-experiments/operations.json
+- 5-experiments/toolkit/agent-experiments/OPERATIONS.md
+- 5-experiments/toolkit/agent-experiments/operations.json
 - scripts/test_experiment_operations.py
 - scripts/test_experiment_theseus.py
 ---

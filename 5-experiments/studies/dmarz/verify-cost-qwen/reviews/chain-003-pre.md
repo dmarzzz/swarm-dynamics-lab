@@ -1,6 +1,6 @@
 # Pre-run assessment: chain 003 (gpt-6-luna, the second pre-registered model: S0, P0, Q0, S1)
 
-Follows [the review cycle](../../../../../tooling/agent-experiments/RUN-REVIEW.md). This is the owning builder's assessment. It is not an independent review and not permission to bypass a runtime gate.
+Follows [the review cycle](../../../../toolkit/agent-experiments/RUN-REVIEW.md). This is the owning builder's assessment. It is not an independent review and not permission to bypass a runtime gate.
 
 - Study / owner / stages: verify-cost-qwen / dmarz / one chain of four stages on `gpt-6-luna` (provider OpenAI). Batches `s0-002-gpt-6-luna`, `p0-002-gpt-6-luna`, `q0-002-gpt-6-luna`, `s1-002-gpt-6-luna`; none exists on the hub. READY.yaml names `provider: openai`, `model: gpt-6-luna` alone, so the launcher sets `STUDY_MODEL=gpt-6-luna` and sends only the OpenAI credential. Written 2026-10-04 by the builder, dmarz/pipeline-verify. Operator: dmarz/fleet-monitor.
 - Earlier attempts and their post-mortems (both read before this was built or pinned):

@@ -1,6 +1,6 @@
 # Experiment setup record: soc07-private-judgments-v2 (design v2)
 
-Copied from [the setup template](../../../../tooling/agent-experiments/templates/experiment-setup.md) and filled for this study. Runbook: [EXPERIMENT-SETUP.md](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Status: prepared; not launched; not launch authorization.
+Copied from [the setup template](../../../toolkit/agent-experiments/templates/experiment-setup.md) and filled for this study. Runbook: [EXPERIMENT-SETUP.md](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Status: prepared; not launched; not launch authorization.
 
 ## Ownership and question
 

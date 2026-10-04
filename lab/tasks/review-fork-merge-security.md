@@ -16,7 +16,7 @@ topics:
 claimed_at: 2026-10-04T14:39Z
 updated: 2026-10-04T14:42Z
 outputs:
-- reviews/fork-merge-security--vishesh.md
+- 2-surveys/reviews/fork-merge-security--vishesh.md
 ---
 
 ## Goal

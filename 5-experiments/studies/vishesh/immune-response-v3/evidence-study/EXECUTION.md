@@ -43,7 +43,7 @@ Follow-up investigation located the preexisting local agentops checkout. It cont
 
 ### Authorized owner-provisioner request sent
 
-The user explicitly authorized borrowing what is needed from Dmarz's existing provisioning setup. [Task allocate-immune-response-a3](../../../../../tasks/allocate-immune-response-a3.md) and an inbox request now ask the infrastructure owner to apply private fleet PR 116 through that original environment; the PR is ready for review and the owner was notified there. Credentials/state are to remain with the provisioner. Native dispatch remains owned by vishesh/codex-immune to avoid duplicate launches.
+The user explicitly authorized borrowing what is needed from Dmarz's existing provisioning setup. [Task allocate-immune-response-a3](../../../../../lab/tasks/allocate-immune-response-a3.md) and an inbox request now ask the infrastructure owner to apply private fleet PR 116 through that original environment; the PR is ready for review and the owner was notified there. Credentials/state are to remain with the provisioner. Native dispatch remains owned by vishesh/codex-immune to avoid duplicate launches.
 
 The backed-up SQLite authority was rechecked: integrity check passes; cap USD 8, 267 reserved requests, USD 2.059367 conservative reservations, SHA256 `bb610d0eabc3c40dd5b8aec8d558ae77064c6b337cfbe1f4dbb5a13190adf243`. No new model call was made. A local read-only readiness checker now requires the Dmarz-owned fleet entry, generated owner inventory, one exclusive experiment claim, unchanged preserved ledger and a private account-verification receipt. Merely opening or merging the fleet PR does not satisfy creation/readiness.
 

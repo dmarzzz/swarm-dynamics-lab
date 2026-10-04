@@ -33,7 +33,7 @@ published" rather than guessed.
   explaining the project, (b) a link to the GitHub repository with the code, (c) optionally, a write-up of
   real results found using the tool, (d) names and emails of all teammates. In-person demos Sunday 18:00 to
   19:00 PT, about 2 minutes per team, run from one shared machine, so everything must be pushed to GitHub
-  beforehand. Team draft of the packet: `researchers/shadow/notes/submission/`.
+  beforehand. Team draft of the packet: `5-experiments/studies/shadow/submission/`.
 - Submission deadline: Sunday 4 October 2026, 17:00 PT (00:00 UTC 5 October), for everyone including
   online teams.
 
@@ -41,7 +41,7 @@ published" rather than guessed.
 
 - Allowed prior work and code: the site sets no restriction on prior work or reuse of existing code. Our
   own convention: everything built for the event lives in this repository from 2026-10-03 onward, and reused
-  outside code is catalogued in `library/code/` with its licence.
+  outside code is catalogued in `1-library/code/` with its licence.
 - Compute available to the team: each researcher's own API accounts (Anthropic, OpenAI, OpenRouter) under
   the per-researcher budget rules in AGENTS.md; dmarz's approved cloud fleet (registered in the private
   `swarm-labs-agentops` repository, claimed per experiment); shadow's workstation for offline analysis.

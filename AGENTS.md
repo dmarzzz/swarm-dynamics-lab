@@ -4,29 +4,52 @@ This file is the operating manual for every AI agent working in this repository.
 first commit. If anything here conflicts with a general habit of yours, this file wins. If it conflicts with
 a direct instruction from your human, your human wins, and you note the conflict in your log.
 
+The layout is phase-ordered: the research lives in the numbered folders `1-library/` to `5-experiments/`, and
+the coordination machinery (task board, researcher directives, inboxes, agent status files, intake pipeline)
+lives under `lab/`. See [Layout](#layout).
+
 ## What this repo is
 
-swarm-lab is a shared research workspace for a team working on swarm dynamics at a hackathon. Several humans
+swarm-dynamics-lab is a shared research workspace for a team working on swarm dynamics at a hackathon. Several humans
 each run several agents, and all of those agents read and write here at the same time. The repo holds
 everything: the catalogue of prior work, the surveys built from it, hypotheses, experiments, results, and
 the task board that coordinates who does what.
 
 The work runs in phases, and the order is enforced:
 
-1. **Scan.** Catalogue existing work: papers, blogs, X threads, code, datasets, talks. Goes in `library/`.
-2. **Survey.** Turn the catalogue into a prior-art survey per topic or question. Goes in `surveys/`.
-3. **Hypothesise.** Only after a survey passes the prior-art gate. Goes in `hypotheses/`.
-4. **Experiment.** Only for a hypothesis another researcher has reviewed. Goes in `experiments/`.
-5. **Analyse and ship.** Results, write-ups and synthesis. Goes in `experiments/<id>/` and `synthesis/`.
+1. **Scan.** Catalogue existing work: papers, blogs, X threads, code, datasets, talks. Goes in `1-library/`.
+2. **Survey.** Turn the catalogue into a prior-art survey per topic or question. Goes in `2-surveys/`.
+3. **Hypothesise.** Only after a survey passes the prior-art gate. Goes in `4-hypotheses/`.
+4. **Experiment.** Only for a hypothesis another researcher has reviewed. Goes in `5-experiments/`.
+5. **Analyse and ship.** Results, write-ups and synthesis. Goes in `5-experiments/<id>/` and `3-synthesis/`.
 
 Phases overlap across topics: one topic can be in experiments while another is still being scanned. Within a
 topic, the order holds. The tool `scripts/lab.py` and CI enforce it.
 
+## Layout
+
+The numbered folders follow the reading order of the research. The folder numbers are not the step numbers in
+the list above: `3-synthesis/` holds cross-cutting documents and sits between surveys and hypotheses.
+
+| Path | What it holds |
+|---|---|
+| `1-library/` | One entry per source: `papers/`, `blogs/`, `threads/`, `code/`, `datasets/`, `talks/`, plus `topics.yaml`, generated `INDEX.md` and `references.bib`. |
+| `2-surveys/` | Prior-art surveys, one file per topic or question. Reviews of surveys, hypotheses and experiments are in `2-surveys/reviews/`. |
+| `3-synthesis/` | Cross-cutting documents: landscape, people and labs, question atlas. |
+| `4-hypotheses/` | Hypotheses that passed the prior-art gate. |
+| `5-experiments/` | Registered experiments (`5-experiments/<id>/`), the evidence registry (`EVIDENCE.md`, `EVIDENCE-METADATA.md`, `evidence-metadata.json`), the shared toolkit (`5-experiments/toolkit/`), and each researcher's studies and working notes (`5-experiments/studies/<name>/`). |
+| `artifacts/`, `artifacts.yaml`, `attestations/` | Finished deliverables and their provenance (see Deliverables). |
+| `lab/` | Coordination: `lab/tasks/` (task board), `lab/researchers/<name>/` (directives `README.md`, `inbox.md`, `agents/` status files, `log/`), `lab/candidates/` and `lab/PIPELINE.md` (source intake), `lab/templates/`, generated `lab/STATUS.md`. |
+| `scripts/`, `src/`, `dashboard/` | The `lab.py` tool and other scripts, shared source, and the dashboard. |
+| `agentops/` | A scrubbed template of the fleet and infrastructure setup that ran the agents. |
+
+A researcher's own area is two folders: `lab/researchers/<name>/` and `5-experiments/studies/<name>/`.
+
 ## Required setup workflow for new experiments
 
 When a session starts work on a new experimental question, thesis, study or material revision, read
-[the experiment setup runbook](tooling/agent-experiments/EXPERIMENT-SETUP.md) before implementation.
-Copy its [setup record](tooling/agent-experiments/templates/experiment-setup.md) into the owned study
+[the experiment setup runbook](5-experiments/toolkit/agent-experiments/EXPERIMENT-SETUP.md) before implementation.
+Copy its [setup record](5-experiments/toolkit/agent-experiments/templates/experiment-setup.md) into the owned study
 directory as `SETUP.md`, fix the copied links, and maintain evidence for each gate. Include the runbook,
 setup record, current gate and exact next action in experiment handoffs so the next session resumes the
 same process. This applies to exploratory setup as well as formal experiments; existing prior-art,
@@ -41,11 +64,11 @@ ownership directives retain their stated scope; this requirement grants no new s
 
 ## Experiment operations
 
-For Vishesh-owned studies, a request to do an experiment iteration invokes [the standing iteration process](tooling/agent-experiments/ITERATION.md): review the latest results and native traces, address errors and quality gaps, interpret findings, prepare and test justified changes, push them, and execute the next useful stage when its scope is authorized and current admission passes. Finish its post-mortem and handoff. Already-approved unchanged scopes do not need another owner decision; material successors retain the existing update-approval rule. Report RUN, DECISION NEEDED, HOLD or FINISH / PARK with evidence and a concrete next action. This defines the workflow, not a new central launcher or blanket approval of future scopes. Other researchers' policies are unchanged.
+For Vishesh-owned studies, a request to do an experiment iteration invokes [the standing iteration process](5-experiments/toolkit/agent-experiments/ITERATION.md): review the latest results and native traces, address errors and quality gaps, interpret findings, prepare and test justified changes, push them, and execute the next useful stage when its scope is authorized and current admission passes. Finish its post-mortem and handoff. Already-approved unchanged scopes do not need another owner decision; material successors retain the existing update-approval rule. Report RUN, DECISION NEEDED, HOLD or FINISH / PARK with evidence and a concrete next action. This defines the workflow, not a new central launcher or blanket approval of future scopes. Other researchers' policies are unchanged.
 
 Use `python3 scripts/experiment.py list` and `inspect <study-id>` to locate the current study,
 setup record, post-mortem and supported operations. Follow
-[the operations guide](tooling/agent-experiments/OPERATIONS.md) before preparing an attempt.
+[the operations guide](5-experiments/toolkit/agent-experiments/OPERATIONS.md) before preparing an attempt.
 The registry is navigation, not live admission evidence. Only explicitly implemented adapters
 may dispatch through this interface; other studies retain their documented manual workflows.
 
@@ -58,7 +81,7 @@ only within its recorded scope; refresh operational receipts for each admitted a
 ## Quick start
 
 ```bash
-git clone https://github.com/dmarzzz/swarm-lab && cd swarm-lab
+git clone https://github.com/dmarzzz/swarm-dynamics-lab && cd swarm-dynamics-lab
 pip install pyyaml                                   # or use `uv run scripts/lab.py ...` everywhere below
 python3 scripts/lab.py new agent --agent <researcher>/<agent-name>   # registers you; commit it
 python3 scripts/lab.py check                         # must pass before every push
@@ -66,8 +89,8 @@ python3 scripts/lab.py sync --agent <id> --every 600 >> /tmp/swarm-lab-sync.log 
 ```
 
 Your **agent id** is `<researcher>/<agent-name>`, for example `vishesh/claude-2` or `shadow/codex-1`. The
-researcher part must be a folder in `researchers/`. Pick an agent name that is unique among your human's
-agents; check `researchers/<you>/agents/` first. Use the same id for your whole session.
+researcher part must be a folder in `lab/researchers/`. Pick an agent name that is unique among your human's
+agents; check `lab/researchers/<you>/agents/` first. Use the same id for your whole session.
 
 ## The sync timer
 
@@ -81,7 +104,9 @@ Every 10 minutes it commits and pushes every changed file in your clone that pas
 re-checking the exact commit on a clean checkout. It also refreshes the claim on any task held by an agent of
 your researcher whose status file says `state: working`, so a running timer is your heartbeat. It skips
 files that still fail (half-written entries stay local until they are fixed), generated files, protected
-files and other researchers' folders, and prints what it skipped. Your work reaches the team within 10
+files and other researchers' areas, and prints what it skipped. Your own area is both
+`lab/researchers/<you>/` and `5-experiments/studies/<you>/`; the same two folders under another researcher's
+name are theirs. Your work reaches the team within 10
 minutes without anyone pushing broken files.
 
 - Claude Code: launch it with the Bash tool's background option, or as above with `&`. Other harnesses: any
@@ -98,18 +123,18 @@ minutes without anyone pushing broken files.
 Repeat this loop until your human stops you or there is nothing left you can do.
 
 1. **Sync.** `git pull --rebase --autostash`.
-2. **Orient.** Read, in order: `researchers/<you>/README.md` (your human's directives override the task board),
-   `researchers/<you>/inbox.md`, `STATUS.md`, and the task you hold if any.
+2. **Orient.** Read, in order: `lab/researchers/<you>/README.md` (your human's directives override the task
+   board), `lab/researchers/<you>/inbox.md`, `lab/STATUS.md`, and the task you hold if any.
 3. **Pick work.** Priority order: your human's directives; unprocessed items in your inbox; a task you
    already hold; open tasks with `for:` set to your researcher; open `p0`, then `p1`, then `p2` tasks whose
    `depends_on` are done. Prefer tasks that match your human's focus. For scan work, candidate batches published
-   as GitHub issues labelled `batch` are pre-deduplicated sources ready to catalogue: see `PIPELINE.md`.
+   as GitHub issues labelled `batch` are pre-deduplicated sources ready to catalogue: see `lab/PIPELINE.md`.
 4. **Claim.** `python3 scripts/lab.py claim <task-id> --agent <id>`. This pulls, edits the task, commits and
    pushes atomically. If it says someone else holds the task, pick another. Never edit claim fields by hand.
    Hold one task at a time.
 5. **Work.** Follow the rules for the task kind below. The sync timer pushes your passing files every 10
    minutes; you can also run `lab.py sync --agent <id>` yourself after a batch.
-6. **Heartbeat.** Keep `researchers/<you>/agents/<agent-name>.md` current (`state`, `task`, `doing`,
+6. **Heartbeat.** Keep `lab/researchers/<you>/agents/<agent-name>.md` current (`state`, `task`, `doing`,
    `updated`). While it says `state: working` and its `updated` is under 3 hours old, the sync timer refreshes your task
    claim. Without a timer, run
    `python3 scripts/lab.py touch <task-id> --agent <id>` at least once an hour. A claim with no heartbeat for
@@ -117,8 +142,8 @@ Repeat this loop until your human stops you or there is nothing left you can do.
 7. **Finish.** Fill the task's Done-when items, then
    `python3 scripts/lab.py done <task-id> --agent <id> --output <paths>`. If you cannot finish, release it:
    `python3 scripts/lab.py release <task-id> --agent <id> --note "<where you got to>"`.
-8. **Log.** Append a few lines to `researchers/<you>/log/<YYYY-MM-DD>-<agent-name>.md`: what you did, what you
-   found that surprised you, what you would do next.
+8. **Log.** Append a few lines to `lab/researchers/<you>/log/<YYYY-MM-DD>-<agent-name>.md`: what you did, what
+   you found that surprised you, what you would do next.
 
 When you discover work nobody has listed (a subtopic the scan missed, a review that is needed, a question for
 another researcher), create a task: `python3 scripts/lab.py new task <id> --agent <id>`, fill it, commit it.
@@ -130,18 +155,18 @@ clobbering each other.
 
 | Path | Who writes |
 |---|---|
-| `researchers/<you>/**` | You and your human. `README.md` directives are your human's; do not edit them. |
-| `researchers/<other>/**` | Nobody but that researcher's agents. To reach them, add a line to their `inbox.md` under New, or open a task with `for: <them>`. |
-| `library/<type>/<id>.md` | Anyone creates. The adder owns the entry. Others may append under a `## Notes from <agent-id>` heading at the end, and may add a topic slug to `topics:`; never edit the rest. |
-| `library/topics.yaml` | Append a topic in its own small commit, only if no existing slug fits. |
-| `surveys/<id>.md`, `hypotheses/<id>.md`, `experiments/<id>/` | The owner's agents only. |
-| `reviews/<target>--<researcher>.md` | The reviewing agent, which must belong to a different researcher than the target's owner. |
-| `tasks/<id>.md` | Claim fields only through `lab.py`. The holder may fill Coverage note and Done-when progress. Anyone may create new tasks. |
-| `synthesis/<file>.md` | The agent holding the synthesis task that names it. |
-| `STATUS.md`, `library/INDEX.md` | Nobody. CI regenerates them on every push. |
+| `lab/researchers/<you>/**`, `5-experiments/studies/<you>/**` | You and your human. `README.md` directives in `lab/researchers/<you>/` are your human's; do not edit them. |
+| `lab/researchers/<other>/**`, `5-experiments/studies/<other>/**` | Nobody but that researcher's agents. To reach them, add a line to their `inbox.md` under New, or open a task with `for: <them>`. |
+| `1-library/<type>/<id>.md` | Anyone creates. The adder owns the entry. Others may append under a `## Notes from <agent-id>` heading at the end, and may add a topic slug to `topics:`; never edit the rest. |
+| `1-library/topics.yaml` | Append a topic in its own small commit, only if no existing slug fits. |
+| `2-surveys/<id>.md`, `4-hypotheses/<id>.md`, `5-experiments/<id>/` | The owner's agents only. |
+| `2-surveys/reviews/<target>--<researcher>.md` | The reviewing agent, which must belong to a different researcher than the target's owner. |
+| `lab/tasks/<id>.md` | Claim fields only through `lab.py`. The holder may fill Coverage note and Done-when progress. Anyone may create new tasks. |
+| `3-synthesis/<file>.md` | The agent holding the synthesis task that names it. |
+| `lab/STATUS.md`, `1-library/INDEX.md` | Nobody. CI regenerates them on every push. |
 | `artifacts/`, `artifacts.yaml`, `artifacts.lock.json` | Only through `.flightdeck/fd.py add` (see Deliverables). Never by hand. |
 | `data/` | Local inputs. Git-ignored; never committed. |
-| `AGENTS.md`, `project.yaml`, `scripts/`, `templates/`, `.github/`, `.flightdeck/` | Humans, or agents with explicit human instruction. |
+| `AGENTS.md`, `project.yaml`, `scripts/`, `lab/templates/`, `.github/`, `.flightdeck/` | Humans, or agents with explicit human instruction. |
 
 ## Git rules
 
@@ -161,7 +186,7 @@ clobbering each other.
 
 ## Library entries
 
-One file per source in `library/papers|blogs|threads|code|datasets|talks/`. Create with
+One file per source in `1-library/papers|blogs|threads|code|datasets|talks/`. Create with
 `python3 scripts/lab.py new <paper|blog|thread|code|dataset|talk> <id> --agent <id>` and fill every TODO.
 
 **Check before you add.** `python3 scripts/lab.py find "<arXiv id | DOI | owner/repo | title word>"`. The
@@ -190,7 +215,7 @@ fabricated or misattributed citation is the worst error an agent can make here, 
 `ran`: you installed and ran the code or loaded the dataset. Downgrade if unsure.
 
 **cite** (papers) is the full formatted reference: all authors (or the first ten and "et al."), year, title,
-venue, volume, issue and pages, copied from the publisher or arXiv page. `library/references.bib` is generated
+venue, volume, issue and pages, copied from the publisher or arXiv page. `1-library/references.bib` is generated
 from the entries. After adding papers, run `python3 scripts/lab.py verify --agent <id>`: it checks every arXiv
 id and DOI against arXiv and Crossref and flags titles that do not match. CI runs the same check on every
 paper added or changed in each push: a red `verify` job means a citation did not resolve or its title does not
@@ -202,7 +227,7 @@ match. Fix the metadata from the real source, or delete the entry if the paper d
 **Summary in your own words**, at least 25 words, with the specific result and numbers where the source gives
 them. Separate what the source measured from what it speculates.
 
-**Topics** come from `library/topics.yaml`. Tag every topic that genuinely applies.
+**Topics** come from `1-library/topics.yaml`. Tag every topic that genuinely applies.
 
 **Link generously.** Mention related entries as `[[id]]`. Link papers to their code (`code:` field) and code
 to its papers (`papers:` field).
@@ -229,10 +254,10 @@ to its papers (`papers:` field).
 
 No agent proposes a hypothesis until a survey of the existing work on that question passes the gate. The
 point is simple: an idea is only worth testing if we know it has not already been tested, and what the
-closest attempts found. Hunches are welcome before that, in `researchers/<you>/notes/`, clearly labelled as
-hunches. They do not go in `hypotheses/`.
+closest attempts found. Hunches are welcome before that, in `5-experiments/studies/<you>/`, clearly labelled
+as hunches. They do not go in `4-hypotheses/`.
 
-A survey is `surveys/<id>.md` (`python3 scripts/lab.py new survey <id> --agent <id>`). It starts as
+A survey is `2-surveys/<id>.md` (`python3 scripts/lab.py new survey <id> --agent <id>`). It starts as
 `status: in-progress`. It may be set to `status: complete` only when `python3 scripts/lab.py gate <id>`
 reports nothing missing. CI rejects a complete survey that fails the gate. The mechanical floors (tunable in
 `scripts/lab.py`, `GATE`):
@@ -261,7 +286,7 @@ The floors are mechanical. The judgement the floors cannot check is your respons
 - Prefer primary sources over reviews for any load-bearing claim.
 
 **Review.** A complete survey becomes `reviewed` when an agent of a different researcher files
-`reviews/<survey-id>--<their-researcher>.md` with `verdict: pass`
+`2-surveys/reviews/<survey-id>--<their-researcher>.md` with `verdict: pass`
 (`python3 scripts/lab.py new review <survey-id>--<researcher> --agent <id>`). The reviewer spot-checks five
 cited sources against their entries, runs three searches of their own, and lists missed work. `revise` sends
 it back. When you complete a survey, open a review task with `for:` set to another researcher.
@@ -282,8 +307,8 @@ Statuses: `draft`, `proposed` (ready for review), `accepted`, `testing`, `suppor
 
 ## Experiments
 
-`python3 scripts/lab.py new experiment <id> --agent <id>` creates `experiments/<id>/README.md`. Code goes in
-`experiments/<id>/src/`, small outputs in `experiments/<id>/results/`. Requirements:
+`python3 scripts/lab.py new experiment <id> --agent <id>` creates `5-experiments/<id>/README.md`. Code goes in
+`5-experiments/<id>/src/`, small outputs in `5-experiments/<id>/results/`. Requirements:
 
 - The hypothesis is `accepted` or later.
 - `## Protocol` and `## Metrics` are written and committed **before** the first real run. Changing them
@@ -294,12 +319,12 @@ Statuses: `draft`, `proposed` (ready for review), `accepted`, `testing`, `suppor
 
 ### Experiment evidence metadata
 
-Owner requirement, 2026-10-04: every experiment entry, including exploratory studies in researcher notes, must expose `evidence_confidence` and `sample_size_summary` using [the shared rubric](experiments/EVIDENCE-METADATA.md). State the claim, rationale, assessor/date and supporting evidence; distinguish independent sample units from agents/calls and planned counts from observed outcomes. Keep redesigned or model-specific cohorts separate. Update the editable registry and render the fields after analysis; do not modify frozen execution inputs to add reporting metadata. These scores do not replace qualification, uncertainty estimates or research gates.
+Owner requirement, 2026-10-04: every experiment entry, including exploratory studies under `5-experiments/studies/`, must expose `evidence_confidence` and `sample_size_summary` using [the shared rubric](5-experiments/EVIDENCE-METADATA.md). State the claim, rationale, assessor/date and supporting evidence; distinguish independent sample units from agents/calls and planned counts from observed outcomes. Keep redesigned or model-specific cohorts separate. Update the editable registry and render the fields after analysis; do not modify frozen execution inputs to add reporting metadata. These scores do not replace qualification, uncertainty estimates or research gates.
 
 ### Required pre-run and post-run review
 
 For every experiment attempt (including exploratory S0/S1 work), follow
-[`tooling/agent-experiments/RUN-REVIEW.md`](tooling/agent-experiments/RUN-REVIEW.md).
+[`5-experiments/toolkit/agent-experiments/RUN-REVIEW.md`](5-experiments/toolkit/agent-experiments/RUN-REVIEW.md).
 Commit a pre-run planning/design assessment, then write a post-mortem covering results, experiment
 quality, failures, causes and the next run. Read the previous post-mortem before launching again.
 Continue diagnosing, repairing and rerunning material execution, design and qualification failures
@@ -314,7 +339,7 @@ Use the linked pre-run and post-mortem templates; existing survey/hypothesis gat
 Owner preference recorded 2026-10-04 UTC: use frames to make run performance visible, and prefer
 an embedded time-series animation/replay that shows how the run evolves. Before each run, define
 its **Visualization mapping** in the pre-run assessment using
-[the mapping template](tooling/agent-experiments/templates/visualization-mapping.md).
+[the mapping template](5-experiments/toolkit/agent-experiments/templates/visualization-mapping.md).
 Tailor the signals and visual encodings to the experiment (for example convergence, damage and
 repair, or consensus); do not force every study into the same graphic. Resolve the mapping for each
 run ID/arm/seed, version it with the source/configuration, and retain the time history needed for replay.
@@ -325,7 +350,7 @@ and a time-series animation/replay when temporal behavior is meaningful. A stati
 needs a stated reason and a supported fallback in the mapping. Check visual artifacts against recorded
 metrics and report their availability in the post-mortem. Visualization must use measured events,
 show missing/failed observations honestly, keep evaluator-only truth out of actor inputs, and never
-expose secrets. Follow [RUN-VISUALIZATION.md](tooling/agent-experiments/RUN-VISUALIZATION.md).
+expose secrets. Follow [RUN-VISUALIZATION.md](5-experiments/toolkit/agent-experiments/RUN-VISUALIZATION.md).
 This is a required planning/reporting practice; existing workers do not acquire rendering support
 merely because this instruction was added.
 
@@ -367,7 +392,7 @@ never publish account identifiers or secrets. Do not relaunch the mistaken deplo
 unused sim-dmarz-3 claim and the mistaken sim-immune-response deployment remain historical records.
 
 The detailed launch checklist is
-[researchers/vishesh/notes/experiment-machine-workflow.md](researchers/vishesh/notes/experiment-machine-workflow.md).
+[5-experiments/studies/vishesh/experiment-machine-workflow.md](5-experiments/studies/vishesh/experiment-machine-workflow.md).
 This directive supersedes older instructions in vishesh's notes to use a shared test server or a
 single multi-experiment machine. Other researchers retain their own allocation directives.
 
@@ -381,7 +406,7 @@ Flight Deck tool, which records provenance:
 ```bash
 python3 .flightdeck/fd.py add <file> --id <artifact-id> --type figure \
   --prompt "<what your human asked for, in their words>" \
-  --ingredient experiments/<id>/src/plot.py --ingredient experiments/<id>/results/metrics.csv
+  --ingredient 5-experiments/<id>/src/plot.py --ingredient 5-experiments/<id>/results/metrics.csv
 python3 .flightdeck/fd.py check --strict .
 ```
 
@@ -401,7 +426,7 @@ python3 .flightdeck/fd.py check --strict .
   set `state: blocked` in your agent file with the question in `doing`, and move on to other work.
 - **To another researcher's agents:** a task with `for: <researcher>`, or a line in their `inbox.md`.
 - **To everyone:** a task. Tasks are the only broadcast channel; do not create ad hoc shared files.
-- Read `STATUS.md` to see who is doing what before starting something big, so two agents do not duplicate a
+- Read `lab/STATUS.md` to see who is doing what before starting something big, so two agents do not duplicate a
   scan. If a similar task is claimed, coordinate through a task rather than starting a parallel one.
 
 ## Writing style for everything in this repo
@@ -414,7 +439,7 @@ python3 .flightdeck/fd.py check --strict .
 ## Things that get an agent's work reverted
 
 - A library entry for a source the agent did not open, or with invented details.
-- A hypothesis written around the gate, for example in `notes/` but presented as a team proposal.
+- A hypothesis written around the gate, for example in `5-experiments/studies/<you>/` but presented as a team proposal.
 - Edits to another researcher's files, to generated files, or to claim fields by hand.
 - Force pushes, history rewrites, or committing large binaries.
 - Marking `read_depth: full` or `ran` without doing it.
@@ -425,7 +450,7 @@ Owner clarification, 2026-10-04 UTC: require one researcher review, not separate
 
 ## Swarm Lab Anthropic credential transfers
 
-Owner directive, 2026-10-04 UTC: use the standing [Swarm Lab credential-transfer policy](tooling/agent-experiments/SWARM-LAB-CREDENTIALS.md). Only Keychain service `swarm-lab-anthropic`, account `vishesh`, is authorized for this owner’s shared Anthropic experiments. Transfer only that API key through verified encrypted SSH stdin to currently registered, authorized and exclusively claimed Swarm Lab run machines for an admitted, budgeted run; no general/project-other Anthropic fallback, secret bundle or persistent installation. This owner instruction supplies transfer authorization within that scope without a new per-host one-off request. Other launch gates and platform approval enforcement remain in force. Record non-secret provenance and fail closed on ambiguity.
+Owner directive, 2026-10-04 UTC: use the standing [Swarm Lab credential-transfer policy](5-experiments/toolkit/agent-experiments/SWARM-LAB-CREDENTIALS.md). Only Keychain service `swarm-lab-anthropic`, account `vishesh`, is authorized for this owner’s shared Anthropic experiments. Transfer only that API key through verified encrypted SSH stdin to currently registered, authorized and exclusively claimed Swarm Lab run machines for an admitted, budgeted run; no general/project-other Anthropic fallback, secret bundle or persistent installation. This owner instruction supplies transfer authorization within that scope without a new per-host one-off request. Other launch gates and platform approval enforcement remain in force. Record non-secret provenance and fail closed on ambiguity.
 
 ## Researcher review is optional for Vishesh-owned experiments
 
@@ -448,7 +473,7 @@ This policy supplies budget authority only. It does not start experiments, autho
 
 ## Completion and owner-approved next iterations
 
-Owner directive, 2026-10-04 UTC, for Vishesh-owned studies: finishing an attempt includes its post-mortem. Retain execution, qualification, scientific interpretation, reporting and cost status separately. The supported operations runner automatically writes an evidence-based operational post-mortem and next-session handoff; the owning session must complete the scientific assessment against [the run-quality rubric](tooling/agent-experiments/RUN-QUALITY.md) before calling the overall attempt reviewed. A generated scaffold, process exit or hub status is insufficient. Failed, interrupted and valid negative attempts all receive a closeout.
+Owner directive, 2026-10-04 UTC, for Vishesh-owned studies: finishing an attempt includes its post-mortem. Retain execution, qualification, scientific interpretation, reporting and cost status separately. The supported operations runner automatically writes an evidence-based operational post-mortem and next-session handoff; the owning session must complete the scientific assessment against [the run-quality rubric](5-experiments/toolkit/agent-experiments/RUN-QUALITY.md) before calling the overall attempt reviewed. A generated scaffold, process exit or hub status is insufficient. Failed, interrupted and valid negative attempts all receive a closeout.
 
 The next session reads the latest native attempt records, post-mortem and handoff, checks them against the run-quality rubric, and evaluates suggested changes rather than adopting them blindly. Draft the prospective improvement plan before experimental implementation; complete offline repairs and checks so the owner reviews a concrete update. Specify independent sample units/counts and precision rationale, scenario construction/challenge/realism and holdouts, controls, data collection and missingness, scoring/analysis/stopping, acceptance checks, cumulative cost and machine needs.
 
@@ -472,7 +497,7 @@ Owner direction, 2026-10-04 UTC: when an iteration finds test cases insufficient
 
 ## Well-scoped experimental claims
 
-Owner direction, 2026-10-04: define each claim prospectively and match its population, mechanism, comparator, sample unit and precision to the actual design. Distinguish execution, acquisition, continuity and comparative benefit. Apply [CLAIM-SCOPE.md](tooling/agent-experiments/CLAIM-SCOPE.md); unsupported broad claims require better evidence, not stronger wording.
+Owner direction, 2026-10-04: define each claim prospectively and match its population, mechanism, comparator, sample unit and precision to the actual design. Distinguish execution, acquisition, continuity and comparative benefit. Apply [CLAIM-SCOPE.md](5-experiments/toolkit/agent-experiments/CLAIM-SCOPE.md); unsupported broad claims require better evidence, not stronger wording.
 
 
 ## Evaluate test-case quality during iteration
@@ -501,4 +526,4 @@ Ask only for genuinely new authority: increased spending, a different account or
 
 ## Standard diagnosis before experiment scaling
 
-Owner direction, 2026-10-04: for Vishesh-owned experiments, apply [the shared diagnosis step](tooling/agent-experiments/DIAGNOSIS.md) during iteration before choosing a repair or increasing scale. Connect native evidence to the practical bottleneck, qualify strong simple and coordinated baselines, improve realistic discriminating cases, and distinguish fixed-resource from added-capacity comparisons. Embed findings in the existing review/plan; implement and validate feasible offline improvements. Preserve useful negative results, original evidence and all scope/budget/admission rules. This is a shared workflow improvement, not a new reviewer gate, automatic paid run or claim that existing launchers enforce it. Other researchers retain their policies.
+Owner direction, 2026-10-04: for Vishesh-owned experiments, apply [the shared diagnosis step](5-experiments/toolkit/agent-experiments/DIAGNOSIS.md) during iteration before choosing a repair or increasing scale. Connect native evidence to the practical bottleneck, qualify strong simple and coordinated baselines, improve realistic discriminating cases, and distinguish fixed-resource from added-capacity comparisons. Embed findings in the existing review/plan; implement and validate feasible offline improvements. Preserve useful negative results, original evidence and all scope/budget/admission rules. This is a shared workflow improvement, not a new reviewer gate, automatic paid run or claim that existing launchers enforce it. Other researchers retain their policies.

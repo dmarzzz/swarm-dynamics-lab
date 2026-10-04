@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-village-fit; source `16d7cb93` ([registry](../../../../../../../experiments/evidence-metadata.json), [rubric](../../../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-village-fit; source `16d7cb93` ([registry](../../../../../../evidence-metadata.json), [rubric](../../../../../../EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **2/4** — On nine selected authored worlds repeated twice, restoring original source to the same final handoff improves rollout-action correctness; handoff-only errors are conservative abstentions, not false authorization. Basis: Complete paired shared-parent contrast with fresh blocks, all endpoint audit and trace replay; three shared scenario recipes, same-operator semantic labels and unisolated omission/interpretation mechanisms limit broader claims.
 - **sample_size_summary:** 9authored worlds nested in3recipes;2fresh blocks;54sharedwriter+36reader calls,2qualifiers. R18/18correct; P7/18. No missing. Repeats/counterparts are nested, not90independenttasks.

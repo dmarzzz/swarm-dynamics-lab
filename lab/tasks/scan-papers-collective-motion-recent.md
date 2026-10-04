@@ -14,7 +14,7 @@ topics:
 claimed_at: 2026-10-03T17:01Z
 updated: 2026-10-03T18:18Z
 outputs:
-- library/papers
+- 1-library/papers
 ---
 
 ## Goal

@@ -1,7 +1,7 @@
 # Inbox: {{researcher}}
 
 Paste raw links, screenshots, half-thoughts and tweet text here. Agents working for {{researcher}} process
-items top to bottom: catalogue each source into library/, then move the line to Processed with the library id.
+items top to bottom: catalogue each source into 1-library/, then move the line to Processed with the library id.
 
 ## New
 

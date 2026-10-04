@@ -6,15 +6,15 @@ This collection documents candidate work on swarm evidence, communication, share
 
 ## Start here
 
-[Telephone: where evidence changes in an agent swarm](telephone/README.md) — new exploratory design page, focused background research, prospective three-hop comparison, annotation specification and setup record. [AI Village dataset resource](../../../library/datasets/data-ai-village-2026.md) and [study data guide](telephone/DATA.md). No Telephone outcomes or launch claimed.
+[Telephone: where evidence changes in an agent swarm](telephone/README.md) — new exploratory design page, focused background research, prospective three-hop comparison, annotation specification and setup record. [AI Village dataset resource](../../../1-library/datasets/data-ai-village-2026.md) and [study data guide](telephone/DATA.md). No Telephone outcomes or launch claimed.
 
-[Run completion and improvement cycle](../../../tooling/agent-experiments/RUN-REVIEW.md): automatic operational post-mortem, scientific quality assessment, concrete next-run plan, owner approval, then allocation and launch. [Quality rubric](../../../tooling/agent-experiments/RUN-QUALITY.md).
+[Run completion and improvement cycle](../../toolkit/agent-experiments/RUN-REVIEW.md): automatic operational post-mortem, scientific quality assessment, concrete next-run plan, owner approval, then allocation and launch. [Quality rubric](../../toolkit/agent-experiments/RUN-QUALITY.md).
 
 [PI review decision guide](pi-review-guide-2026-10-04/README.md): dark visual overview of all ten projects, explicit green/yellow/red judgments, concise limitations and three next-step options per project. Full scientific assessments remain available in the same page.
 
-[Experiment operations](../../../tooling/agent-experiments/OPERATIONS.md): one registry and command interface for finding study state, preparing iterations and operating supported adapters. Start with `python3 scripts/experiment.py list`; adapter coverage and current admission remain separate.
+[Experiment operations](../../toolkit/agent-experiments/OPERATIONS.md): one registry and command interface for finding study state, preparing iterations and operating supported adapters. Start with `python3 scripts/experiment.py list`; adapter coverage and current admission remain separate.
 
-[Experiment confidence and sample sizes](../../../experiments/EVIDENCE.md): dated evidence scores and independent sample-size summaries for each study and distinct cohort, with [scoring rules](../../../experiments/EVIDENCE-METADATA.md).
+[Experiment confidence and sample sizes](../../EVIDENCE.md): dated evidence scores and independent sample-size summaries for each study and distinct cohort, with [scoring rules](../../EVIDENCE-METADATA.md).
 
 [Principal-investigator project review](pi-review-2026-10-04/README.md): 57 evidence/implementation findings, individual scientific assessments of all ten named projects, 110 scenario/condition assessments, sixteen proposal reviews and agent lifecycle guidance. Dated evidence cutoffs and source availability are explicit. This is an internal PI-style critique, not a formal independent gate review.
 
@@ -23,7 +23,7 @@ This collection documents candidate work on swarm evidence, communication, share
 | Reader’s task | Read | What to expect |
 | --- | --- | --- |
 | Launch an experiment on its own machine | [Dedicated-machine workflow](experiment-machine-workflow.md) | Select from Dmarz's fleet, claim exclusively, verify the deployment and shared budget, and release after artifact upload. |
-| Design a run visualization | [Run visualization workflow](../../../tooling/agent-experiments/RUN-VISUALIZATION.md) | Per-run signal-to-view mapping, live frames, dynamic time-series replay, event markers and validation. |
+| Design a run visualization | [Run visualization workflow](../../toolkit/agent-experiments/RUN-VISUALIZATION.md) | Per-run signal-to-view mapping, live frames, dynamic time-series replay, event markers and validation. |
 | Inspect immune-response evidence and replay | [Immune-response v3 review and results](immune-response-v3/README.md) | Native failure diagnosis, agent contract, five-scenario robustness suite, time-series replay, and remaining native qualification gate. |
 | Choose a direction | [Project briefs](project-briefs/README.md) | All sixteen questions, design sketches, measures, controls, scope, and risks. |
 | Connect our briefs to the team question atlas | [Atlas review and project connections](atlas-review/README.md) | Review of all 214 candidates, 40 exploratory extensions, a 16-brief crosswalk, design findings, primary-source checks and importable review JSON. |

@@ -31,7 +31,7 @@ The upload issue was a transport failure, not a policy failure. It is recorded i
 
 ## Remaining scientific qualification
 
-Paid model runs are deferred at the user's request. The compatible HTTP adapter has only been tested against a local mock server. A real endpoint/model, source/model pricing and run limits must be pinned and qualified before S1. The independent task-review request remains [open](../../../../tasks/review-discussion-dose.md). Formal hypothesis acceptance and confirmatory S2 remain pending; this deployment is an exploratory environment.
+Paid model runs are deferred at the user's request. The compatible HTTP adapter has only been tested against a local mock server. A real endpoint/model, source/model pricing and run limits must be pinned and qualified before S1. The independent task-review request remains [open](../../../../lab/tasks/review-discussion-dose.md). Formal hypothesis acceptance and confirmatory S2 remain pending; this deployment is an exploratory environment.
 
 
 ## First native Anthropic attempt, 2026-10-03

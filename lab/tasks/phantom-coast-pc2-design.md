@@ -14,9 +14,9 @@ topics: []
 claimed_at: 2026-10-04T04:38Z
 updated: 2026-10-04T04:49Z
 outputs:
-- researchers/vishesh/notes/phantom-coast/ITERATION-02.md
-- researchers/vishesh/notes/phantom-coast/pc2/README.md
-- researchers/vishesh/notes/phantom-coast/visualization/native-replay.html
+- 5-experiments/studies/vishesh/phantom-coast/ITERATION-02.md
+- 5-experiments/studies/vishesh/phantom-coast/pc2/README.md
+- 5-experiments/studies/vishesh/phantom-coast/visualization/native-replay.html
 ---
 
 ## Goal

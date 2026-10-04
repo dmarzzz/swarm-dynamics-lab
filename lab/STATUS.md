@@ -492,19 +492,19 @@
 
 | survey | owner | state | cited | gate problems |
 |---|---|---|---|---|
-| [fork-merge-security](surveys/fork-merge-security.md) | dmarz | complete | 283 | 0 |
-| [llm-agent-swarms](surveys/llm-agent-swarms.md) | shadow | complete | 156 | 0 |
-| [sim-environments](surveys/sim-environments.md) | dmarz | in-progress | 152 | 0 |
-| [sybil-resistance](surveys/sybil-resistance.md) | dmarz | in-progress | 230 | 5 |
-| [vishesh-decision-models](surveys/vishesh-decision-models.md) | vishesh | in-progress | 32 | 1 |
+| [fork-merge-security](../2-surveys/fork-merge-security.md) | dmarz | complete | 283 | 0 |
+| [llm-agent-swarms](../2-surveys/llm-agent-swarms.md) | shadow | complete | 156 | 0 |
+| [sim-environments](../2-surveys/sim-environments.md) | dmarz | in-progress | 152 | 0 |
+| [sybil-resistance](../2-surveys/sybil-resistance.md) | dmarz | in-progress | 230 | 5 |
+| [vishesh-decision-models](../2-surveys/vishesh-decision-models.md) | vishesh | in-progress | 32 | 1 |
 
 ## Hypotheses
 
 | hypothesis | owner | status | surveys | title |
 |---|---|---|---|---|
-| [shadow-board-nsweep](hypotheses/shadow-board-nsweep.md) | shadow | proposed | llm-agent-swarms | A persistent shared board moves the wrong-consensus to polarisation crossover to larger N than pairwise exchange |
-| [shadow-capture-memory](hypotheses/shadow-capture-memory.md) | shadow | proposed | llm-agent-swarms | Memory length decides whether committed-minority capture reverses after the minority leaves |
-| [shadow-neff-evidence-board](hypotheses/shadow-neff-evidence-board.md) | shadow | proposed | llm-agent-swarms | Splitting evidence across agents lifts the N_eff ceiling only when peers carry evidence, not just answers |
+| [shadow-board-nsweep](../4-hypotheses/shadow-board-nsweep.md) | shadow | proposed | llm-agent-swarms | A persistent shared board moves the wrong-consensus to polarisation crossover to larger N than pairwise exchange |
+| [shadow-capture-memory](../4-hypotheses/shadow-capture-memory.md) | shadow | proposed | llm-agent-swarms | Memory length decides whether committed-minority capture reverses after the minority leaves |
+| [shadow-neff-evidence-board](../4-hypotheses/shadow-neff-evidence-board.md) | shadow | proposed | llm-agent-swarms | Splitting evidence across agents lifts the N_eff ceiling only when peers carry evidence, not just answers |
 
 ## Experiments
 

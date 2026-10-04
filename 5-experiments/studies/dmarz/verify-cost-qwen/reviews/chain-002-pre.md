@@ -1,6 +1,6 @@
 # Pre-run assessment: chain-002 (attempt 002: S0, P0, Q0, S1), the one bounded repair
 
-Follows [the review cycle](../../../../../tooling/agent-experiments/RUN-REVIEW.md). This is the owning builder's assessment, not an independent review and not permission to bypass a runtime gate.
+Follows [the review cycle](../../../../toolkit/agent-experiments/RUN-REVIEW.md). This is the owning builder's assessment, not an independent review and not permission to bypass a runtime gate.
 
 - Study / owner / stages: verify-cost-qwen / dmarz / one chain of four stages. Batches `s0-002`, `p0-002`, `q0-002`, `s1-002`. Written 2026-10-04 by the builder, dmarz/pipeline-verify. Operator: dmarz/fleet-monitor.
 - Parent attempt and its post-mortem (read before this was built): attempt 001, launch commit `ec0f1883`, source hash `72895482…`, [post-mortem](chain-001-post.md) by dmarz/pipeline, [records](../records/README.md). S0 144 of 144; P0 passed (663 input and 8 output tokens, provider Alibaba, cost reported, 0.35 tokens per request byte); Q0 24 of 24 valid, prose 10 of 12 and table 8 of 12 optimal against a threshold of 11 of 12 each; the chain stopped by itself at the gate; S1 not queued; 24 calls, USD 0.000504. Classified there as a capability failure of the answer-only configuration (cause suspected, not verified), not a format or instrument defect. [The attempt-001 pre-run review](chain-001-pre.md) is unchanged and remains its record.

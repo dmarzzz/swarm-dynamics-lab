@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T01:05Z
 updated: 2026-10-04T01:15Z
 outputs:
-- researchers/vishesh/notes/regrowth-200/README.md
-- researchers/vishesh/notes/experiment-documentation/README.md
+- 5-experiments/studies/vishesh/regrowth-200/README.md
+- 5-experiments/studies/vishesh/experiment-documentation/README.md
 ---
 
 ## Goal

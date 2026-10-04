@@ -14,9 +14,9 @@ topics: []
 claimed_at: 2026-10-04T01:51Z
 updated: 2026-10-04T02:09Z
 outputs:
-- researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md
-- researchers/dmarz/notes/discussion-dose/benchmark-v3/OFFLINE-VALIDATION.md
-- researchers/dmarz/notes/discussion-dose/src/bench_v3
+- 5-experiments/studies/dmarz/discussion-dose/benchmark-v3/README.md
+- 5-experiments/studies/dmarz/discussion-dose/benchmark-v3/OFFLINE-VALIDATION.md
+- 5-experiments/studies/dmarz/discussion-dose/src/bench_v3
 ---
 
 ## Goal

@@ -37,4 +37,4 @@ The operational target is conditional complementarity: among cases where the exi
 
 Add exact model/prompt/context manifests, independent initial judgments, repeated identical-input calls, and a matched-call same-model control. Compare same model/same evidence; different model/same evidence; same model/different evidence; and different model/different evidence. Hold budget and available task information fixed where the contrast requires it. Label model-capability effects separately from source-diversity effects. Jev can replace a decision backend when securely configured and prospectively budgeted; it is not part of this OCR run.
 
-Worked implementation: [Antsy v7](../../researchers/vishesh/notes/antsy-diversity-v7/README.md). Qualification and result status are recorded there; this methods document is not evidence of an efficacy result.
+Worked implementation: [Antsy v7](../../studies/vishesh/antsy-diversity-v7/README.md). Qualification and result status are recorded there; this methods document is not evidence of an efficacy result.

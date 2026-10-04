@@ -16,9 +16,9 @@ topics:
 claimed_at: 2026-10-04T20:14Z
 updated: 2026-10-04T20:36Z
 outputs:
-- researchers/vishesh/notes/dissent/freshness/REPORT.md
-- researchers/vishesh/notes/dissent/freshness/reviews/F0-A1-POST.md
-- researchers/vishesh/notes/dissent/freshness/reviews/F0-A1-QUALITY.json
+- 5-experiments/studies/vishesh/dissent/freshness/REPORT.md
+- 5-experiments/studies/vishesh/dissent/freshness/reviews/F0-A1-POST.md
+- 5-experiments/studies/vishesh/dissent/freshness/reviews/F0-A1-QUALITY.json
 ---
 
 ## Goal

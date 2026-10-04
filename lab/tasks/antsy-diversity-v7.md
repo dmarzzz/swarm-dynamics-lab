@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T05:58Z
 updated: 2026-10-04T06:29Z
 outputs:
-- researchers/vishesh/notes/antsy-diversity-v7/RESULTS.md
-- tooling/agent-experiments/WORKER-DIVERSITY.md
+- 5-experiments/studies/vishesh/antsy-diversity-v7/RESULTS.md
+- 5-experiments/toolkit/agent-experiments/WORKER-DIVERSITY.md
 ---
 
 ## Goal

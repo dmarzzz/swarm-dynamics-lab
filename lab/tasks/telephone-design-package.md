@@ -14,8 +14,8 @@ topics: []
 claimed_at: 2026-10-04T18:25Z
 updated: 2026-10-04T18:31Z
 outputs:
-- researchers/vishesh/notes/telephone/README.md
-- library/datasets/data-ai-village-2026.md
+- 5-experiments/studies/vishesh/telephone/README.md
+- 1-library/datasets/data-ai-village-2026.md
 ---
 
 ## Goal

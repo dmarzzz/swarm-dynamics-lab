@@ -1,14 +1,14 @@
 # Experiment setup record: discussion-dose-v3 / D1
 
 Status: D1 completed and audited; both clean diagnostic gates failed. The local operator launched exactly 120 calls; the cloud coordinator dispatched none. Results and post-mortem are published with this update; owner cleanup remains recorded in the lifecycle receipt. D2 is a plan only, not authorized to start. Follow the
-[shared setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md).
+[shared setup runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md).
 
 ## Ownership and question
 
 Instrument coordinator: dmarz/cloud-discussion-d1. Sole deployment/paid launch owner:
 dmarz/discussion-bench-v3 in the existing local operator environment. Independent
-design reviews: [Vishesh](../../../../vishesh/notes/discussion-benchmark-v3-review/REVIEW.md)
-and [Shadow](../../../../shadow/notes/review-discussion-benchmark-v3.md). This agent's
+design reviews: [Vishesh](../../../vishesh/discussion-benchmark-v3-review/REVIEW.md)
+and [Shadow](../../../shadow/review-discussion-benchmark-v3.md). This agent's
 regression checks are engineering verification, not a new independent review.
 
 Question/decision: [SEC-47](../QUESTION-LINKS.md), model-only constraint/evidence

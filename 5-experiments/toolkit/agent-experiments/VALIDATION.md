@@ -1,10 +1,10 @@
 # Validation and publication review
 
-Date: 2026-10-03. Scope: this methods/tooling contribution and its new canonical source records. The original standalone guide was adapted to swarm-lab's ownership, citation, research-gate and generated-data conventions.
+Date: 2026-10-03. Scope: this methods/tooling contribution and its new canonical source records. The original standalone guide was adapted to swarm-dynamics-lab's ownership, citation, research-gate and generated-data conventions.
 
 ## Local checks
 
-Run `PYTHONDONTWRITEBYTECODE=1 python3 tooling/agent-experiments/scripts/validate.py` from the repository root. It executes 960 scripted worlds twice, verifies 12,480 events per execution, and checks pairing, score replay, reset isolation, known-answer behavior, invalid-config rejection, integrity detection, overwrite rejection and local Markdown links. The compact reference summary is retained; full traces are regenerated under ignored `data/`.
+Run `PYTHONDONTWRITEBYTECODE=1 python3 5-experiments/toolkit/agent-experiments/scripts/validate.py` from the repository root. It executes 960 scripted worlds twice, verifies 12,480 events per execution, and checks pairing, score replay, reset isolation, known-answer behavior, invalid-config rejection, integrity detection, overwrite rejection and local Markdown links. The compact reference summary is retained; full traces are regenerated under ignored `data/`.
 
 The first standalone version was checked on Python 3.14.5. The contribution adds a Python 3.12 CI check. Exact-byte replay is tested within a runtime, not claimed across arbitrary Python versions. No model provider, network call, credential or paid action is used by the harness or its tests.
 

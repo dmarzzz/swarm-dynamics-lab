@@ -94,6 +94,6 @@ python3 check_saved.py
 - [Raw terminal responses](responses.jsonl), including every HTTP error and response body;8/8 request IDs reconcile.
 - [Qualification closeout](qualification.json), [stop record](STOP.json), [summary and SHA256 hashes](summary.json), [scripted reference](scripted-reference.json).
 - [Frozen runner](run.py), [offline analyzer](analyze.py), [instrument tests](test_instrument.py), [saved-data checker](check_saved.py). The checker is a same-author arithmetic audit, not independent scientific review.
-- Prior-art/design context: parent [README](../README.md), [S1b](../results/S1b.md), [dmarz PI direction](../../../../dmarz/notes/next-experiments-2026-10-04/README.md), and the [GPT-4o-mini reading-rule finding](../../capture-memory-mix/reading-rule/FINDING.md).
+- Prior-art/design context: parent [README](../README.md), [S1b](../results/S1b.md), [dmarz PI direction](../../../dmarz/next-experiments-2026-10-04/README.md), and the [GPT-4o-mini reading-rule finding](../../capture-memory-mix/reading-rule/FINDING.md).
 
 The source correction matters: the72/72 last-event finding was on **`openai/gpt-4o-mini` via OpenRouter**, not a7B model. Its methodological lesson motivated omission of the privileged field, but does not establish that this unqualified Claude prompt measures averaging, chronology or recovery.

@@ -1,6 +1,6 @@
 # Setup: wild-delete-return A1
 
-Owner/operator: shadow/sol-audit-gap. [Setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md); operation is analyze existing saved data, not dispatch an agent experiment. No accepted hypothesis, model qualification or independent-researcher review is asserted. Scope is one bounded descriptive pilot specified by the owner's follow-up.
+Owner/operator: shadow/sol-audit-gap. [Setup runbook](../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md); operation is analyze existing saved data, not dispatch an agent experiment. No accepted hypothesis, model qualification or independent-researcher review is asserted. Scope is one bounded descriptive pilot specified by the owner's follow-up.
 
 ## Gates and next action
 

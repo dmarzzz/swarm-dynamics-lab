@@ -1,6 +1,6 @@
 # Experiment setup record: healing-qwen-jev / C1
 
-Follow [the setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Owner/operator/self-assessor vishesh/codex-regrowth-docs; no independent review claimed. User-authorized exploratory composite qualification; formal novelty/confirmation gates not satisfied.
+Follow [the setup runbook](../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md). Owner/operator/self-assessor vishesh/codex-regrowth-docs; no independent review claimed. User-authorized exploratory composite qualification; formal novelty/confirmation gates not satisfied.
 
 ## Gate evidence
 

@@ -16,9 +16,9 @@ topics:
 claimed_at: 2026-10-04T02:47Z
 updated: 2026-10-04T03:22Z
 outputs:
-- researchers/vishesh/notes/heterogeneous-swarms/frontiers/README.md
-- researchers/vishesh/notes/heterogeneous-swarms/frontiers/DESIGNS.md
-- researchers/vishesh/notes/heterogeneous-swarms/questions.json
+- 5-experiments/studies/vishesh/heterogeneous-swarms/frontiers/README.md
+- 5-experiments/studies/vishesh/heterogeneous-swarms/frontiers/DESIGNS.md
+- 5-experiments/studies/vishesh/heterogeneous-swarms/questions.json
 ---
 
 ## Goal

@@ -16,9 +16,9 @@ topics:
 claimed_at: 2026-10-04T15:30Z
 updated: 2026-10-04T15:52Z
 outputs:
-- researchers/shadow/notes/wild-delete-return/FINDING.md
-- researchers/shadow/notes/wild-delete-return/results/A1/summary.json
-- researchers/shadow/notes/wild-delete-return/results/A1/reference-check.json
+- 5-experiments/studies/shadow/wild-delete-return/FINDING.md
+- 5-experiments/studies/shadow/wild-delete-return/results/A1/summary.json
+- 5-experiments/studies/shadow/wild-delete-return/results/A1/reference-check.json
 ---
 
 ## Goal

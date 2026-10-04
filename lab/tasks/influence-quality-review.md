@@ -14,9 +14,9 @@ topics: []
 claimed_at: 2026-10-04T01:25Z
 updated: 2026-10-04T02:24Z
 outputs:
-- researchers/vishesh/notes/influence-swarms/scenario/README.md
-- researchers/vishesh/notes/influence-swarms/scenario/ASSESSMENT.md
-- researchers/vishesh/notes/influence-swarms/scenario/reviews/scenario-03-post.md
+- 5-experiments/studies/vishesh/influence-swarms/scenario/README.md
+- 5-experiments/studies/vishesh/influence-swarms/scenario/ASSESSMENT.md
+- 5-experiments/studies/vishesh/influence-swarms/scenario/reviews/scenario-03-post.md
 ---
 
 ## Goal

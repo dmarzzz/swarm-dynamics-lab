@@ -3,8 +3,8 @@
 Status, 2026-10-04 08:40 UTC: **complete.** The 72-call run finished with 72 valid answers at the pinned commit
 `aef218e8`; [results](RESULTS.md) and the [post-run review](../../reviews/v3-d2-a1-post.md) are published and the
 claim is released. No successor is authorized or started. Follows the
-[shared setup runbook](../../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and the
-[run review cycle](../../../../../../tooling/agent-experiments/RUN-REVIEW.md).
+[shared setup runbook](../../../../../toolkit/agent-experiments/EXPERIMENT-SETUP.md) and the
+[run review cycle](../../../../../toolkit/agent-experiments/RUN-REVIEW.md).
 
 ## Ownership and question
 

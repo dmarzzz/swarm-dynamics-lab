@@ -1,6 +1,6 @@
 # Next run: isolate model capability before another swarm sweep
 
-Planning revision: 2026-10-04 UTC, dmarz/discussion-bench-v3. Parent: `v3-q0-a1`. **Plan committed, not launched.** No executable launch manifest or cloud access readiness is claimed. [Q0 results](RESULTS-Q0.md) and their sanitized tables are already on remote `main` (report commit `7fddf3d4`, table commit `eaa7f587`). Implementation follows [diagnose-discussion-v3-q0](../../../../../tasks/diagnose-discussion-v3-q0.md).
+Planning revision: 2026-10-04 UTC, dmarz/discussion-bench-v3. Parent: `v3-q0-a1`. **Plan committed, not launched.** No executable launch manifest or cloud access readiness is claimed. [Q0 results](RESULTS-Q0.md) and their sanitized tables are already on remote `main` (report commit `7fddf3d4`, table commit `eaa7f587`). Implementation follows [diagnose-discussion-v3-q0](../../../../../lab/tasks/diagnose-discussion-v3-q0.md).
 
 > Status update, 2026-10-04: D1 is now [completed and audited](RESULTS-D1.md). Neither model passed its gates. The next proposal is [D2](D2-PLAN.md), which must remain unstarted. The prospective planning text below is retained as history.
 
@@ -53,7 +53,7 @@ This is a new manifested schedule, not a reuse of the 636-call launcher with ski
 
 ## Required repairs and checks before D1
 
-Read both [Vishesh's pass](../../../../vishesh/notes/discussion-benchmark-v3-review/REVIEW.md) and [Shadow's pass-with-fixes](../../../../shadow/notes/review-discussion-benchmark-v3.md). Review is not a pending permission gate; the actual failure-path defects must be repaired and verified.
+Read both [Vishesh's pass](../../../vishesh/discussion-benchmark-v3-review/REVIEW.md) and [Shadow's pass-with-fixes](../../../shadow/review-discussion-benchmark-v3.md). Review is not a pending permission gate; the actual failure-path defects must be repaired and verified.
 
 1. **Failed-ballot scoring:** compute the actual fixed-quorum decision from observed valid votes. Two equal votes still form a majority at N=3 with one invalid ballot. Where missing votes could change a no-quorum outcome, retain an explicit incomplete/no-quorum state and unidentified counterfactual bounds. Keep full-response validity separate. Exhaustively test all three-ballot combinations over A/B/C/ABSTAIN/invalid, including poisoned memory with two matching votes. This does not change any fully valid Q0 vote.
 2. **Failure reasons:** retain only an allowlisted public provider reason, HTTP status class and dispatch/usage state; never raw exception bodies, credentials or private URLs. Test timeout, rate limit, credit, HTTP error, schema refusal and malformed output. Q0 had zero provider failures, so no lost reason changes its counts.

@@ -14,7 +14,7 @@ topics: []
 claimed_at: 2026-10-04T01:23Z
 updated: 2026-10-04T01:25Z
 outputs:
-- researchers/dmarz/notes/discussion-dose/RESULTS-AND-REFLECTION.md
+- 5-experiments/studies/dmarz/discussion-dose/RESULTS-AND-REFLECTION.md
 ---
 
 ## Goal

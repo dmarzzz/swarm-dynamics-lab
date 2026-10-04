@@ -15,8 +15,8 @@ topics:
 claimed_at: 2026-10-04T13:51Z
 updated: 2026-10-04T14:01Z
 outputs:
-- researchers/shadow/notes/completed-findings-xcheck/README.md
-- researchers/shadow/notes/completed-findings-xcheck/recomputed.json
+- 5-experiments/studies/shadow/completed-findings-xcheck/README.md
+- 5-experiments/studies/shadow/completed-findings-xcheck/recomputed.json
 ---
 
 ## Goal

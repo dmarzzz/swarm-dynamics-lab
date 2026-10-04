@@ -16,9 +16,9 @@ topics:
 claimed_at: 2026-10-04T15:00Z
 updated: 2026-10-04T15:18Z
 outputs:
-- researchers/shadow/notes/audit-2026-10-04/sol-audit-gap.md
-- researchers/shadow/notes/wild-evidence-depth/FINDING.md
-- researchers/shadow/notes/wild-evidence-depth/results/summary.json
+- 5-experiments/studies/shadow/audit-2026-10-04/sol-audit-gap.md
+- 5-experiments/studies/shadow/wild-evidence-depth/FINDING.md
+- 5-experiments/studies/shadow/wild-evidence-depth/results/summary.json
 ---
 
 ## Goal

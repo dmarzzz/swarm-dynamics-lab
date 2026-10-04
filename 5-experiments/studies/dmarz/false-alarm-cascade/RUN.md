@@ -53,7 +53,7 @@ Limits in the hashed design: 10 requests in flight; 300 s per request; 28,800 s 
 
 1. `status`, then `verify`. Keep both outputs.
 2. Do not rerun a stage. A batch name is refused the second time. The only continuation is `resume` after a billing stop of S1. Any other repair is a new attempt number in `design.yaml`, which changes the source hash, and needs its own pre-run review. After a failed Q0 the first step is to read the failing answers with their packets (they are in `episodes.jsonl.gz`); a repaired attempt uses fresh qualification roots.
-3. Write the post-mortem per [RUN-REVIEW.md](../../../../tooling/agent-experiments/RUN-REVIEW.md): reconcile assigned, started, terminal, graded and analyzed rows; compare the frames with the saved analysis; report actual calls, tokens and dollars.
+3. Write the post-mortem per [RUN-REVIEW.md](../../../toolkit/agent-experiments/RUN-REVIEW.md): reconcile assigned, started, terminal, graded and analyzed rows; compare the frames with the saved analysis; report actual calls, tokens and dollars.
 4. Confirm the chain process has exited and uploads are verified, then release the claim. Do not destroy the server.
 
 ## Offline checks (no server, no model call)

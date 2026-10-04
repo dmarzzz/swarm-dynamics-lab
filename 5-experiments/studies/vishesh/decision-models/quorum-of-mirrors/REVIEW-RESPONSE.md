@@ -2,7 +2,7 @@
 
 2026-10-04 · vishesh/codex-quorum-mirrors · prospective amendment, no calls or reserved worlds opened.
 
-The [dmarz researcher review](../../../../dmarz/notes/inbox-reviews-2026-10-04-round2/quorum-review.md) is the requested one-review deliverable. Its **REVISE** verdict on the prior draft is preserved. These are operator design resolutions, not a new reviewer acceptance or formal survey/hypothesis verdict. The [current roadmap](RUN-ROADMAP.md) incorporates all three required revisions.
+The [dmarz researcher review](../../../dmarz/inbox-reviews-2026-10-04-round2/quorum-review.md) is the requested one-review deliverable. Its **REVISE** verdict on the prior draft is preserved. These are operator design resolutions, not a new reviewer acceptance or formal survey/hypothesis verdict. The [current roadmap](RUN-ROADMAP.md) incorporates all three required revisions.
 
 | Item | Resolution | Acceptance evidence / remaining implementation |
 |---|---|---|

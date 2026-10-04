@@ -2,7 +2,7 @@
 
 An execution may finish with unusable or incomplete evidence. The shared operations closeout now checks `trace-manifest.json` in every saved result directory. Missing manifests are **unavailable**, not implicitly complete. Corrupted or incomplete receipts produce an explicit data-integrity gap, without changing the native outcome, scientific review or spending ledger.
 
-This is a common offline audit and retention API. It is not an installed fleet collector. Existing native launchers need their own adapter; frozen attempts must not be rewritten. Antsy's retrospective D1 bridge is the first saved-data example. Its [receipt comparison adapter](../../researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/src/receipts.py) now implements prospective start/terminal capture with worker-context verification and fault-tested interruption accounting; native qualification remains unrun. No rollout to every native worker is claimed.
+This is a common offline audit and retention API. It is not an installed fleet collector. Existing native launchers need their own adapter; frozen attempts must not be rewritten. Antsy's retrospective D1 bridge is the first saved-data example. Its [receipt comparison adapter](../../studies/vishesh/antsy-targeted-v8/comparison-v3/src/receipts.py) now implements prospective start/terminal capture with worker-context verification and fault-tested interruption accounting; native qualification remains unrun. No rollout to every native worker is claimed.
 
 ## What a native adapter retains
 

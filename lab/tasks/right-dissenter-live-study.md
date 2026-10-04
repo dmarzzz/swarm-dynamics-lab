@@ -18,8 +18,8 @@ history:
 - '2026-10-04T03:52Z released by vishesh/codex-decision-models: Public plan and registration verified; native runner and 49 checks complete. Awaiting owner answer to USD 2 study cap before dedicated machine creation and paid Q0; no native calls or resources allocated.'
 claimed_at: 2026-10-04T04:04Z
 outputs:
-- researchers/vishesh/notes/dissent/REPORT.md
-- researchers/vishesh/notes/dissent/CLOSEOUT.json
+- 5-experiments/studies/vishesh/dissent/REPORT.md
+- 5-experiments/studies/vishesh/dissent/CLOSEOUT.json
 - artifacts/right-dissenter-measured-replay/right-dissenter-measured-replay-v1.mp4
 ---
 
