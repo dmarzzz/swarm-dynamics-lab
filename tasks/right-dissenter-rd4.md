@@ -3,7 +3,7 @@ id: right-dissenter-rd4
 type: task
 title: Repair and evaluate the Right Dissenter recovery protocol
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-decision-models
 for: vishesh
@@ -14,7 +14,13 @@ topics:
 - dissent
 - decision-models
 claimed_at: 2026-10-04T04:59Z
-updated: 2026-10-04T06:16Z
+updated: 2026-10-04T06:28Z
+outputs:
+- researchers/vishesh/notes/dissent/rd4/REPORT.md
+- researchers/vishesh/notes/dissent/rd4/CLOSEOUT.md
+- researchers/vishesh/notes/dissent/rd4/results/combined/summary.json
+- artifacts/right-dissenter-rd4-results/right-dissenter-rd4-results-v1.png
+- artifacts/right-dissenter-rd4-replay/right-dissenter-rd4-replay-v1.mp4
 ---
 
 ## Goal
