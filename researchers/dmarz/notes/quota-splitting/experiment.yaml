@@ -33,6 +33,11 @@ metrics:
 - cost_usd
 - qualification_passed
 - max_output_tokens_per_call
+- failed
+- count_fallbacks
+- billing_pauses
+- billing_pause_seconds
+- billing_affected_calls
 - excess_identities
 - units_beyond_share
 - job_completion

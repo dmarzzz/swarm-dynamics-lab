@@ -32,6 +32,7 @@ FROZEN = {  # sha256 of json.dumps(sort_keys=True); a change here is a change of
 D = study.design(); CFG = D['world']; CONDITIONS = list(D['conditions']); PRESSURES = D['pressures']; TOP = max(PRESSURES)
 ENG = D['roots']['engineering']; SCRATCH = list(range(300, 312))      # scratch roots are in no split of the design
 _cache = {}
+KEY, WORKSPACE = 'selftest-key-not-a-credential', 'selftest-workspace-id'
 
 
 def scripted_rows(stage):
@@ -60,9 +61,14 @@ def message(answer=None, **over):
     data.update(over); return data
 
 
-def http_error(code, retry_after=None):
+def http_error(code, retry_after=None, body=b'{}', request_id=None):
     headers = {'retry-after': str(retry_after)} if retry_after is not None else {}
-    return urllib.error.HTTPError(provider.MESSAGES_URL, code, 'error', headers, io.BytesIO(b'{}'))
+    if request_id: headers['request-id'] = request_id
+    return urllib.error.HTTPError(provider.MESSAGES_URL, code, 'error', headers, io.BytesIO(body))
+
+
+def credit_error(code=400):
+    return http_error(code, body=rehearse.CREDIT_BODY, request_id='req_credit')
 
 
 class Script:
@@ -88,7 +94,7 @@ class Clock:
 
 def adapter(td, script, clock=None, budget=None):
     clock = clock or Clock()
-    with patch.dict(os.environ, {'SWARM_MODEL_API_KEY': 'k', 'SWARM_MODEL_WORKSPACE_ID': 'w'}):
+    with patch.dict(os.environ, {'SWARM_MODEL_API_KEY': KEY, 'SWARM_MODEL_WORKSPACE_ID': WORKSPACE}):
         ledger = provider.Ledger(Path(td) / 'ledger', budget)
         return provider.Anthropic(ledger, script, clock.now, clock.sleep), ledger, clock
 
@@ -97,15 +103,21 @@ OBS = sim.Episode(study.world(ENG[0], TOP), study.rules('B', study.world(ENG[0],
 
 
 class FakeRun:
-    def __init__(self, run_id, params): self.id, self.params, self.attempt = run_id, params, 1; self.final = None; self.uploads = []
+    def __init__(self, run_id, params, row=None):
+        self.id, self.params, self.attempt = run_id, params, 1; self.final = None; self.uploads = []; self.row = row; self.messages = []
     def __enter__(self): return self
     def __exit__(self, et, ev, tb):
-        if self.final is None: self.final = ('fail', {}) if et else ('done', {})
+        if self.final is None: self.close('fail' if et else 'done', None, {})
         return False
-    def progress(self, *a, **k): return True
+    def progress(self, *a, **k):
+        if k.get('message'): self.messages.append(k['message'])
+        return True
     def artifact(self, path, name=None): self.uploads.append(name or Path(path).name); return {'name': name}
-    def done(self, message=None, **metrics): self.final = ('done', metrics)
-    def fail(self, message=None, **metrics): self.final = ('fail', metrics)
+    def close(self, kind, message, metrics):
+        self.final = (kind, metrics); self.message = message
+        if self.row is not None: self.row.update(status='done' if kind == 'done' else 'failed', metrics=metrics)
+    def done(self, message=None, **metrics): self.close('done', message, metrics)
+    def fail(self, message=None, **metrics): self.close('fail', message, metrics)
 
 
 class FakeHub:
@@ -121,9 +133,7 @@ class FakeHub:
     def next_run(self, experiment=None):
         if not self.queue: return None
         rid = self.queue.pop(0); row = next(r for r in self.rows if r['run'] == rid); row['status'] = 'running'
-        run = FakeRun(rid, row['params']); self.live = (run, row); return run
-    def settle(self):
-        run, row = self.live; row['status'] = 'done' if run.final[0] == 'done' else 'failed'; row['metrics'] = run.final[1]
+        return FakeRun(rid, row['params'], row)
     def add(self, stage, status='done', invalid=0, passed=1, source_hash=None):
         p = study.params(stage); p['source_hash'] = source_hash or p['source_hash']
         self.rows.append({'run': f'x/{stage}{len(self.rows)}', 'status': status, 'params': p,
@@ -132,12 +142,15 @@ class FakeHub:
 
 
 class Failing:
-    """A backend that answers by the parallel planner and fails its n-th call."""
-    def __init__(self, fail_at): self.fail_at = fail_at; self.calls = []
+    """A backend that answers by the parallel planner and fails the calls whose ordinal is in
+    `fail_at` (a number, a set, or a predicate), with the given failure category."""
+    def __init__(self, fail_at, category='injected_failure'):
+        self.fail_at = fail_at if callable(fail_at) else (lambda n, f=fail_at: n in (f if isinstance(f, (set, tuple, list)) else {f}))
+        self.category = category; self.calls = []; self.lock = __import__('threading').Lock()
     def call(self, condition, obs, call_id):
-        self.calls.append(call_id)
-        if len(self.calls) == self.fail_at:
-            raise provider.CallFailure('injected_failure', {'attempted': True, 'attempts': 1, 'usage_reported': False})
+        with self.lock: self.calls.append(call_id); n = len(self.calls)
+        if self.fail_at(n):
+            raise provider.CallFailure(self.category, {'attempted': True, 'attempts': 1, 'usage_reported': False})
         rules = {'quota': 'none', 'spawn': obs['max_subagents'] > 0, 'fee': 0, 'max_subagents': obs['max_subagents']}
         return sim.plan(obs, rules, 'parallel'), {'attempted': True, 'attempts': 1, 'actual_usd': 0.01, 'input_tokens': 900, 'output_tokens': 200}
 
@@ -428,9 +441,12 @@ class Tests(unittest.TestCase):
     def test_stage_counts_and_caps(self):
         b = D['budget']; counts = {s: len(study.cells(s)) for s in study.STAGES}
         self.assertEqual(counts, {'S0': 193, 'P0': 1, 'Q0': 16, 'S1': 576}); self.assertEqual(24 * 8 * 3, 576)
-        self.assertEqual(b['max_calls'], {'S0': 0, 'P0': 1, 'Q0': 16 * CFG['rounds'], 'S1': 576 * CFG['rounds']})
+        self.assertEqual(b['max_calls'], {'S0': 0, 'P0': 1, 'Q0': 16 * CFG['rounds'], 'S1': 576 * CFG['rounds'] + 96})   # 96: replays after a billing stop
         self.assertEqual(b['max_attempted_calls'], sum(b['max_calls'].values()))
-        for stage in ('P0', 'Q0', 'S1'): self.assertEqual(sum(c[5] for c in study.cells(stage)), b['max_calls'][stage])
+        self.assertEqual([sum(c[5] for c in study.cells(stage)) for stage in ('P0', 'Q0', 'S1')], [1, 96, 3456])
+        self.assertEqual(b['max_failed'], max(3, -(-576 // 100))); self.assertEqual(b['max_failed'], 6)
+        self.assertEqual(b['billing_outage'], {'http_status': [400, 402, 403], 'match': 'credit balance', 'retry_every_seconds': 60, 'max_wait_seconds': 1200})
+        self.assertGreaterEqual(b['max_transport_attempts'] - b['max_attempted_calls'], 8 * 21 + 40)      # room for re-sends during a billing outage
         self.assertLessEqual(b['workers'], 8); self.assertEqual((D['model'], D['effort'], b['max_output_tokens']), ('claude-opus-5-5', 'medium', 8000))
         p = study.assignments('P0')[0]; self.assertEqual((p['kind'], p['root'], p['condition'], p['max_turns']), ('probe', ENG[0], 'N', 1))
         q = study.assignments('Q0'); self.assertEqual(sorted({(a['condition'], a['pressure']) for a in q}), [('A', 0.8), ('N', 0.8)])
@@ -619,7 +635,8 @@ class Tests(unittest.TestCase):
             clock.t = 0.0; api.b = dict(api.b, request_timeout_seconds=30)
             with self.assertRaises(provider.CallFailure) as ctx: api.call('B', OBS, 's1-001:e1:r1')
             self.assertEqual((ctx.exception.category, ctx.exception.accounting['attempts'], clock.waits), ('http_429', 2, [20]))
-        self.assertEqual(D['budget']['retry'], {'transport_retries': 2, 'retryable_http_status': [429, 529], 'backoff_seconds': [2, 6], 'retry_after_cap_seconds': 20})
+        self.assertEqual(D['budget']['retry'], {'transport_retries': 2, 'retryable_http_status': [429, 529], 'backoff_seconds': [2, 6], 'retry_after_cap_seconds': 20,
+                                                'count_resend_seconds': 2})
         self.assertEqual(D['budget']['answer_retries'], 0)
 
     def test_transport_attempt_cap_refuses(self):
@@ -630,15 +647,87 @@ class Tests(unittest.TestCase):
             self.assertEqual((ctx.exception.category, len(script.message_requests())), ('transport_attempt_cap_reached', 2))
             with self.assertRaises(provider.CallFailure): ledger.transact({'type': 'attempt', 'call_id': 'never-reserved', 'n': 1})
 
-    def test_count_tokens_follows_the_same_retry_rule(self):
-        with tempfile.TemporaryDirectory() as td:
+    def test_count_tokens_follows_the_same_retry_rule_and_never_fails_a_call(self):
+        with tempfile.TemporaryDirectory() as td:       # 529 on the counting request: the 429/529 rule
             script = Script([message()], [http_error(529), {'input_tokens': 1000}]); api, ledger, clock = adapter(td, script)
             answer, acct = api.call('B', OBS, 's1-001:e1:r1'); self.assertEqual((acct['count_attempts'], acct['attempts'], clock.waits), (2, 1, [2]))
+            self.assertNotIn('count_errors', acct)
+        with tempfile.TemporaryDirectory() as td:       # any other failure: one re-send after 2 s, then the call proceeds
+            script = Script([message()], [http_error(400, body=b'{"error": "bad"}', request_id='req_9')]); api, ledger, clock = adapter(td, script)
+            answer, acct = api.call('B', OBS, 's1-001:e1:r1')
+            self.assertEqual((acct['count_attempts'], acct['counted_input_tokens'], clock.waits, acct.get('count_fallback')), (2, 1000, [2], None))
+            self.assertEqual(acct['count_errors'], [{'category': 'count_http_400', 'http_status': 400, 'error_body': '{"error": "bad"}', 'request_id': 'req_9'}])
+        for failures in ([http_error(400), http_error(500)], [socket.timeout('t'), {'no_tokens': 1}], [{'input_tokens': 0}, [1, 2]],
+                         [http_error(429), http_error(429), http_error(429), http_error(503)]):
+            with tempfile.TemporaryDirectory() as td:   # two failed rounds: the byte count of the request is the reservation's input
+                script = Script([message()], list(failures)); api, ledger, clock = adapter(td, script)
+                answer, acct = api.call('B', OBS, 's1-001:e1:r1'); body_bytes = len(json.dumps(api.body('B', OBS)).encode())
+                self.assertEqual((acct['count_fallback'], acct['counted_input_tokens'], acct['request_bytes'], len(acct['count_errors'])), (True, body_bytes, body_bytes, 2))
+                self.assertTrue(acct['usage_reported']); self.assertEqual(ledger.transact()['usage_reported_calls'], 1)
+                self.assertEqual(acct['reserved_usd'], ((int(body_bytes * 1.02) + 64) * 4 + 8000 * 20) / 1e6)
+                self.assertGreaterEqual(acct['reserved_usd'], ((int(1000 * 1.02) + 64) * 4 + 8000 * 20) / 1e6)      # at least the counted reservation
+                self.assertEqual(clock.waits[-1] if len(failures) == 2 else clock.waits, 2 if len(failures) == 2 else [2, 6, 2])
+        self.assertEqual(D['budget']['retry']['count_resend_seconds'], 2)
+
+    def test_failed_requests_keep_status_body_and_request_id_and_no_credential(self):
+        leak = ('{"type":"error","error":{"type":"invalid_request_error","message":"bad request for key %s in workspace %s"}}' % (KEY, WORKSPACE)).encode()
         with tempfile.TemporaryDirectory() as td:
-            script = Script([message()], [http_error(500)]); api, ledger, clock = adapter(td, script)
+            script = Script([http_error(400, body=leak + b' ' * 5000, request_id='req_abc')]); api, ledger, clock = adapter(td, script)
             with self.assertRaises(provider.CallFailure) as ctx: api.call('B', OBS, 's1-001:e1:r1')
-            self.assertEqual(ctx.exception.category, 'count_http_500'); self.assertFalse(ctx.exception.accounting['attempted'])
-            self.assertEqual(ledger.transact()['attempted_calls'], 0); self.assertEqual(script.message_requests(), [])
+        acct = ctx.exception.accounting
+        self.assertEqual((ctx.exception.category, acct['http_status'], acct['request_id'], len(acct['error_body'])), ('http_400', 400, 'req_abc', 2000))
+        self.assertIn('bad request for key [removed] in workspace [removed]', acct['error_body'])
+        for secret in (KEY, WORKSPACE, 'x-api-key', 'anthropic-workspace-id'): self.assertNotIn(secret, json.dumps(acct))
+        with tempfile.TemporaryDirectory() as td:       # after the 429 rule is used up, the last response is what is kept
+            script = Script([http_error(429), http_error(429), http_error(429, body=b'slow down')]); api, ledger, clock = adapter(td, script)
+            with self.assertRaises(provider.CallFailure) as ctx: api.call('B', OBS, 's1-001:e1:r1')
+            self.assertEqual((ctx.exception.accounting['http_status'], ctx.exception.accounting['error_body'], ctx.exception.accounting['attempts']), (429, 'slow down', 3))
+        with tempfile.TemporaryDirectory() as td:       # a timeout has no response to keep
+            api, ledger, clock = adapter(td, Script([socket.timeout('t')]))
+            with self.assertRaises(provider.CallFailure) as ctx: api.call('B', OBS, 's1-001:e1:r1')
+            self.assertNotIn('http_status', ctx.exception.accounting)
+
+    def test_credit_balance_error_pauses_and_resends_the_same_call(self):
+        for where in ('count', 'messages'):
+            with tempfile.TemporaryDirectory() as td:
+                errors = [credit_error(), credit_error(403), credit_error(402)]
+                script = Script(errors + [message()] if where == 'messages' else [message()], errors if where == 'count' else ())
+                api, ledger, clock = adapter(td, script); seen = []
+                real_sleep = api.sleep
+                def sleep(seconds, api=api, seen=seen, real_sleep=real_sleep): seen.append(api.gate.paused()); real_sleep(seconds)
+                api.sleep = sleep
+                answer, acct = api.call('B', OBS, 's1-001:e1:r1')
+                self.assertEqual(clock.waits, [60, 60, 60]); self.assertEqual(seen, [True, True, True]); self.assertFalse(api.gate.paused())
+                self.assertEqual(api.gate.stats(), {'billing_pauses': 1, 'billing_pause_seconds': 180, 'billing_affected_calls': 1})
+                self.assertEqual((acct['billing_resends'], acct['billing_wait_seconds'], acct['billing_error']['http_status'], acct['usage_reported']), (3, 180, 400, True))
+                self.assertIn('credit balance', acct['billing_error']['error_body']); self.assertEqual(acct['billing_error']['request_id'], 'req_credit')
+                t = ledger.transact(); self.assertEqual((t['attempted_calls'], t['usage_reported_calls']), (1, 1))      # one reservation, one answer
+                self.assertEqual((t['transport_attempts'], acct['attempts']), (4, 4) if where == 'messages' else (1, 1))  # every message re-send is a ledger attempt
+                bodies = [json.dumps(b, sort_keys=True) for url, b, _ in script.sent if url == (provider.MESSAGES_URL if where == 'messages' else provider.COUNT_URL)]
+                self.assertEqual(len(set(bodies)), 1); self.assertEqual(len(bodies), 4)                                   # the same request, four times
+        for code, body, category in ((400, b'{"error":{"message":"max_tokens too large"}}', 'http_400'), (403, b'forbidden', 'http_403'),
+                                     (500, rehearse.CREDIT_BODY, 'http_500')):      # not a credit-balance error: an ordinary failure, no pause
+            with tempfile.TemporaryDirectory() as td:
+                api, ledger, clock = adapter(td, Script([http_error(code, body=body), message()]))
+                with self.assertRaises(provider.CallFailure) as ctx: api.call('B', OBS, 's1-001:e1:r1')
+                self.assertEqual((ctx.exception.category, api.gate.stats()['billing_pauses'], clock.waits), (category, 0, []))
+
+    def test_billing_outage_that_outlasts_its_limit_stops_every_later_call(self):
+        with tempfile.TemporaryDirectory() as td:
+            script = Script([credit_error() for _ in range(40)]); api, ledger, clock = adapter(td, script)
+            with self.assertRaises(provider.CallFailure) as ctx: api.call('B', OBS, 's1-001:e1:r1')
+            acct = ctx.exception.accounting
+            self.assertEqual((ctx.exception.category, acct['billing_stop'], acct['attempted'], acct['usage_reported']), (provider.CREDIT, True, True, False))
+            self.assertEqual(clock.waits, [60] * 20); self.assertEqual(len(script.message_requests()), 21)       # at 0 s and every 60 s up to 1,200 s
+            self.assertEqual(api.gate.stats(), {'billing_pauses': 1, 'billing_pause_seconds': 1200, 'billing_affected_calls': 1})
+            self.assertEqual(ledger.transact()['transport_attempts'], 21); self.assertTrue(api.gate.dead)
+            with self.assertRaises(provider.CallFailure) as ctx: api.call('B', OBS, 's1-001:e2:r1')              # refused before any request
+            self.assertEqual((ctx.exception.category, ctx.exception.accounting['attempted'], len(script.sent)), (provider.CREDIT, False, 22))
+            self.assertEqual(ledger.transact()['attempted_calls'], 1)
+        with tempfile.TemporaryDirectory() as td:       # an ordinary failure on a re-send ends the pause and the call
+            api, ledger, clock = adapter(td, Script([credit_error(), http_error(500)]))
+            with self.assertRaises(provider.CallFailure) as ctx: api.call('B', OBS, 's1-001:e1:r1')
+            self.assertEqual((ctx.exception.category, api.gate.paused(), api.gate.dead, api.gate.stats()['billing_pause_seconds']), ('http_500', False, False, 60))
 
     def test_missing_credentials_fail_closed(self):
         with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, {}, clear=True):
@@ -696,7 +785,8 @@ class Tests(unittest.TestCase):
         run = FakeRun('x/1', study.params(stage)); out = {}
         budget = dict(D['budget'], workers=workers) if workers else D['budget']
         with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, {'STUDY_BUDGET_LEDGER': str(Path(td) / 'ledger'),
-                'SWARM_MODEL_API_KEY': 'k', 'SWARM_MODEL_WORKSPACE_ID': 'w'}), patch.dict(D, {'budget': budget}):
+                'SWARM_MODEL_API_KEY': KEY, 'SWARM_MODEL_WORKSPACE_ID': WORKSPACE}), patch.dict(D, {'budget': budget}), \
+                patch.object(provider, 'SLEEP', lambda seconds: None):
             patcher = patch.object(study, 'assignments', return_value=assignments) if assignments is not None else patch.object(study, 'ROOT', study.ROOT)
             with patcher:
                 try: worker.execute(study.params(stage), Path(td) / 'out', run, backend=backend, opener=opener); out['raised'] = None
@@ -708,12 +798,11 @@ class Tests(unittest.TestCase):
         out['run'] = run
         return out
 
-    def test_first_failed_call_stops_the_stage_and_every_episode_is_recorded(self):
-        backend = Failing(fail_at=9); assigned = [a for a in study.assignments('S1')][:20]
-        out = self.run_paid('S1', backend=backend, assignments=assigned, workers=4); s = out['summary']; rows = out['rows']
-        self.assertEqual(out['raised'], 'invalid_rows'); self.assertEqual((s['terminal'], s['planned'], s['passed'], s['reason']), (20, 20, False, 'invalid_rows'))
-        self.assertEqual(len({r['id'] for r in rows}), 20); self.assertEqual(s['failed'], 1); self.assertEqual(s['errors'], ['injected_failure'])
-        self.assertEqual(s['failed'] + s['interrupted'] + s['not_started'] + s['graded'], 20); self.assertGreaterEqual(s['not_started'], 16)
+    def test_strict_stage_stops_at_the_first_failed_call_and_every_episode_is_recorded(self):
+        backend = Failing(fail_at=9); out = self.run_paid('Q0', backend=backend, workers=4); s = out['summary']; rows = out['rows']
+        self.assertEqual(out['raised'], 'invalid_rows'); self.assertEqual((s['terminal'], s['planned'], s['passed'], s['stop_reason']), (16, 16, False, 'invalid_rows'))
+        self.assertEqual(len({r['id'] for r in rows}), 16); self.assertEqual((s['failed'], s['errors'], s['max_failed']), (1, ['injected_failure'], None))
+        self.assertEqual(s['failed'] + s['interrupted'] + s['not_started'] + s['graded'], 16); self.assertEqual(s['not_started'], 12)
         self.assertLessEqual(len(backend.calls), 9 + 3)          # the failing call, and at most the three calls then in flight
         failed = next(r for r in rows if r['status'] == 'failed')
         self.assertEqual(failed['error'], 'injected_failure'); self.assertIn('round', failed['failed_turn']); self.assertNotIn('outcome', failed)
@@ -722,19 +811,64 @@ class Tests(unittest.TestCase):
             if r['status'] == 'interrupted': self.assertTrue(r['turns']); self.assertEqual(r['turns_not_started_max'], 6 - len(r['turns']))
             if r['status'] == 'not_started': self.assertEqual((r['turns'], r['turns_not_started_max']), ([], 6))
         self.assertEqual(s['turns_completed'] + 1, len(backend.calls)); self.assertEqual(len(out['calls']), len(backend.calls))
-        self.assertEqual(s['model_calls'], len(backend.calls)); self.assertEqual(s['invalid'], 20 - s['graded'])
+        self.assertEqual(s['model_calls'], len(backend.calls)); self.assertEqual(s['invalid'], 16 - s['graded'])
         kind, metrics = out['run'].final; self.assertEqual(kind, 'fail')
-        for key in ('episodes', 'invalid', 'model_calls', 'input_tokens', 'output_tokens', 'cost_usd'): self.assertIn(key, metrics)
-        self.assertEqual((metrics['episodes'], metrics['invalid'], metrics['model_calls']), (20, s['invalid'], len(backend.calls)))
+        for key in ('episodes', 'invalid', 'failed', 'model_calls', 'input_tokens', 'output_tokens', 'cost_usd'): self.assertIn(key, metrics)
+        self.assertEqual((metrics['episodes'], metrics['invalid'], metrics['model_calls']), (16, s['invalid'], len(backend.calls)))
 
-    def test_a_failure_in_a_later_turn_keeps_the_turns_before_it(self):
+    def test_main_stage_continues_after_a_failed_call_and_keeps_the_turns_before_it(self):
         backend = Failing(fail_at=4); assigned = [a for a in study.assignments('S1') if a['condition'] == 'N'][:3]
-        out = self.run_paid('S1', backend=backend, assignments=assigned, workers=1); rows = out['rows']
-        self.assertEqual([r['status'] for r in rows], ['failed', 'not_started', 'not_started'])
+        out = self.run_paid('S1', backend=backend, assignments=assigned, workers=1); rows = out['rows']; s = out['summary']
+        self.assertEqual([r['status'] for r in rows], ['failed', 'completed', 'completed'])        # the failure ends its episode, not the stage
         self.assertEqual((len(rows[0]['turns']), rows[0]['failed_turn']['round'], rows[0]['turns_not_started_max']), (3, 4, 2))
-        self.assertEqual([c['status'] for c in out['calls']], ['completed'] * 3 + ['failed'])
-        self.assertEqual(backend.calls, [f's1-001:{assigned[0]["id"]}:r{n}' for n in (1, 2, 3, 4)])     # one call per round, in order
-        self.assertEqual((out['summary']['model_calls'], out['summary']['turns_not_started_max']), (4, 2 + 6 + 6))
+        self.assertEqual([c['status'] for c in out['calls']][:4], ['completed'] * 3 + ['failed'])
+        self.assertEqual(backend.calls[:5], [f's1-001:{assigned[0]["id"]}:r{n}' for n in (1, 2, 3, 4)] + [f's1-001:{assigned[1]["id"]}:r1'])   # one call per round, in order
+        self.assertEqual((out['raised'], s['passed'], s['failed'], s['invalid'], s['max_failed'], s['stop_reason'], s['turns_not_started_max']), (None, True, 1, 1, 6, None, 2))
+        kind, metrics = out['run'].final
+        self.assertEqual((kind, metrics['invalid'], metrics['failed'], metrics['episodes']), ('done', 1, 1, 3)); self.assertIn('1 failed (limit 6)', out['run'].message)
+        self.assertEqual(s['stage_episodes'], {'assigned': 3, 'completed': 2, 'failed': 1, 'interrupted': 0, 'not_started': 0})
+
+    def test_main_stage_stops_when_failed_episodes_exceed_the_limit(self):
+        assigned = study.assignments('S1')[:30]
+        within = self.run_paid('S1', backend=Failing(lambda n: n in (1, 8, 15, 22, 29, 36)), assignments=assigned, workers=1)      # six failed episodes
+        self.assertEqual((within['raised'], within['summary']['failed'], within['summary']['graded'], within['summary']['not_started']), (None, 6, 24, 0))
+        over = self.run_paid('S1', backend=Failing(lambda n: True), assignments=assigned, workers=1); s = over['summary']          # the seventh stops dispatch
+        self.assertEqual((over['raised'], s['failed'], s['not_started'], s['graded'], s['stop_reason'], s['passed'], s['resumable']), ('failed_units_over_limit', 7, 23, 0, 'failed_units_over_limit', False, False))
+        self.assertEqual((over['run'].final[0], over['run'].final[1]['failed'], over['run'].final[1]['invalid']), ('fail', 7, 30))
+        self.assertEqual(len(over['calls']), 7)
+
+    def test_integrity_failures_stop_the_main_stage_at_once(self):
+        assigned = study.assignments('S1')[:12]
+        for category in provider.INTEGRITY:
+            out = self.run_paid('S1', backend=Failing(2, category), assignments=assigned, workers=1); s = out['summary']
+            self.assertEqual((out['raised'], s['failed'], s['not_started'], s['stop_reason'], len(out['calls'])), ('integrity_failure', 1, 11, 'integrity_failure', 2), category)
+        self.assertEqual(set(provider.INTEGRITY), {'duplicate_call_refused', 'stage_call_cap_reached', 'study_call_cap_reached', 'aggregate_budget_exhausted',
+                                                   'attempt_without_reservation', 'transport_attempt_cap_reached', 'reservation_bound_breached', 'model_mismatch',
+                                                   'stage_deadline', 'input_size_limit'})
+        for category in ('refusal', 'timeout', 'http_500', 'invalid_structured_answer', 'missing_usage', 'nonterminal_output', 'answer_too_long'):
+            out = self.run_paid('S1', backend=Failing(2, category), assignments=assigned, workers=1)
+            self.assertEqual((out['raised'], out['summary']['failed'], out['summary']['graded']), (None, 1, 11), category)
+        class Broken:
+            def call(self, condition, obs, call_id): raise KeyError('bug')
+        out = self.run_paid('S1', backend=Broken(), assignments=assigned, workers=1)        # an internal error is not a model outcome: stop
+        self.assertEqual((out['raised'], out['summary']['failed'], out['summary']['not_started'], out['summary']['errors']), ('integrity_failure', 1, 11, ['internal_KeyError']))
+
+    def test_billing_stop_fails_nothing_and_is_resumable_and_a_short_outage_is_only_a_pause(self):
+        assigned = study.assignments('S1')[:10]
+        stub = rehearse.Stub('parallel', credit_from=9); out = self.run_paid('S1', opener=stub, assignments=assigned, workers=2); s = out['summary']; rows = out['rows']
+        self.assertEqual((out['raised'], s['stop_reason'], s['failed'], s['resumable'], s['passed'], s['errors']), (provider.CREDIT, provider.CREDIT, 0, True, False, []))
+        self.assertEqual({r['status'] for r in rows}, {'interrupted', 'not_started'}); self.assertEqual(s['interrupted'] + s['not_started'], 10)
+        self.assertEqual((s['billing_pauses'], s['billing_pause_seconds']), (1, 1200)); self.assertIn(s['billing_affected_calls'], (1, 2))
+        hit = [r for r in rows if r.get('billing_turn')]; self.assertTrue(hit); self.assertNotIn('failed_turn', json.dumps(rows))
+        self.assertTrue(any(r['billing_turn']['accounting'].get('billing_stop') for r in hit))
+        kind, metrics = out['run'].final
+        self.assertEqual((kind, metrics['failed'], metrics['invalid'], metrics['billing_pauses'], metrics['billing_pause_seconds']), ('fail', 0, 10, 1, 1200))
+        self.assertIn(provider.CREDIT, out['run'].message); self.assertEqual(stub.answered, 8)
+        short = rehearse.Stub('parallel', credit_count=(5, 3)); out = self.run_paid('S1', opener=short, assignments=assigned, workers=1); s = out['summary']
+        self.assertEqual((out['raised'], s['failed'], s['graded'], s['billing_pauses'], s['billing_pause_seconds'], s['billing_affected_calls'], s['passed']), (None, 0, 10, 1, 180, 1, True))
+        self.assertEqual(out['run'].final[1]['billing_pauses'], 1); self.assertIn('1 billing pause(s) of 180 s', out['run'].message)
+        strict = self.run_paid('Q0', opener=rehearse.Stub('parallel', credit_from=20), workers=1)           # a strict stage is not resumable
+        self.assertEqual((strict['raised'], strict['summary']['resumable'], strict['summary']['failed']), (provider.CREDIT, False, 0))
 
     def test_later_inputs_depend_on_earlier_answers(self):
         a = next(x for x in study.assignments('Q0') if x['condition'] == 'N'); seen = {}
@@ -755,7 +889,8 @@ class Tests(unittest.TestCase):
             stub = rehearse.Stub(mode); out = self.run_paid('Q0', opener=stub); s = out['summary']
             self.assertEqual(out['raised'], None if want == 'done' else 'gate_failed')
             kind, metrics = out['run'].final; self.assertEqual(kind, want)
-            self.assertEqual((metrics['episodes'], metrics['invalid'], metrics['model_calls'], metrics['transport_attempts']), (16, 0, 96, 96))
+            self.assertEqual((metrics['episodes'], metrics['invalid'], metrics['failed'], metrics['model_calls'], metrics['transport_attempts']), (16, 0, 0, 96, 96))
+            self.assertEqual((metrics['count_fallbacks'], metrics['billing_pauses'], metrics['billing_pause_seconds'], metrics['billing_affected_calls']), (0, 0, 0, 0))
             self.assertEqual(metrics['qualification_passed'], 1 if want == 'done' else 0); self.assertEqual(metrics['max_output_tokens_per_call'], 120)
             self.assertGreater(metrics['input_tokens'], 0); self.assertEqual(metrics['output_tokens'], 96 * 120)
             self.assertAlmostEqual(metrics['cost_usd'], (metrics['input_tokens'] * 4 + metrics['output_tokens'] * 20) / 1e6)
@@ -829,15 +964,15 @@ class Tests(unittest.TestCase):
 
     def chain_with(self, outcomes, stages=('S0', 'P0', 'Q0', 'S1'), q0_metrics=None):
         hub = FakeHub(); executed = []
-        def fake_execute(p, out, run=None, backend=None, deadline=None, opener=None):
+        def fake_execute(p, out, run=None, backend=None, deadline=None, opener=None, units=None, prior_rows=None):
             executed.append(p['stage']); out = Path(out); out.mkdir(parents=True)
             ok = outcomes.get(p['stage'], 'done') == 'done'
             metrics = {'episodes': 1, 'invalid': 0, 'model_calls': 96, 'transport_attempts': 96, 'input_tokens': 120000, 'output_tokens': 60000,
                        'cost_usd': 1.68, 'max_output_tokens_per_call': 1500, 'qualification_passed': int(ok)}
             if p['stage'] == 'Q0' and q0_metrics: metrics.update(q0_metrics)
             (out / 'summary.json').write_text(json.dumps(dict(metrics, planned=1, graded=1, not_started=0, errors=[])))
-            if outcomes.get(p['stage']) == 'crash': run.fail('x', **metrics); hub.settle(); raise RuntimeError('boom')
-            (run.done if ok else run.fail)('x', **metrics); hub.settle()
+            if outcomes.get(p['stage']) == 'crash': run.fail('x', **metrics); raise RuntimeError('boom')
+            (run.done if ok else run.fail)('x', **metrics)
             if not ok: raise worker.StageFailed('gate_failed')
         with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, {'STUDY_RESULTS_DIR': td}), patch.object(worker, 'execute', fake_execute), \
                 patch('sys.stdout', io.StringIO()):
@@ -852,7 +987,7 @@ class Tests(unittest.TestCase):
         self.assertEqual((code, status['state'], executed), (0, 'completed', ['S0', 'P0', 'Q0', 'S1']))
         self.assertTrue(status['all_stages_done']); p = status['stages']['S1']['projection']
         self.assertTrue(p['within_cap']); self.assertTrue(p['output_room_ok'])
-        self.assertAlmostEqual(p['projected_usd'], 1.68 / 96 * 1.25 * 3456); self.assertEqual(p['output_tokens_allowed_in_q0'], 6000)
+        self.assertAlmostEqual(p['projected_usd'], 1.68 / 96 * 1.25 * 3552); self.assertEqual(p['output_tokens_allowed_in_q0'], 6000)
         for stage in study.STAGES:
             e = status['stages'][stage]
             for key in ('run', 'status', 'calls', 'input_tokens', 'output_tokens', 'cost_usd', 'started', 'ended'): self.assertIn(key, e)
@@ -881,12 +1016,12 @@ class Tests(unittest.TestCase):
         self.assertEqual(kept['stages']['S0']['run'], 'old/1')
 
     def test_projection_gate_stops_before_s1(self):
-        # Q0 at USD 0.06 per call: 0.06 x 1.25 x 3,456 = USD 259 > USD 210
+        # Q0 at USD 0.06 per call: 0.06 x 1.25 x 3,552 = USD 266 > USD 210
         code, status, executed, hub = self.chain_with({}, q0_metrics={'cost_usd': 5.76})
         self.assertEqual((code, status['state'], status['stopped_stage'], status['reason']), (3, 'stopped_at_gate', 'S1', 'projection_exceeds_cap'))
         self.assertEqual(executed, ['S0', 'P0', 'Q0']); self.assertEqual([r['params']['stage'] for r in hub.rows], ['S0', 'P0', 'Q0'])
-        p = status['stages']['S1']['projection']; self.assertGreater(p['projected_usd'], p['remaining_usd']); self.assertAlmostEqual(p['projected_usd'], 259.2)
-        code, status, executed, hub = self.chain_with({}, q0_metrics={'cost_usd': 4.6})      # USD 207 fits under USD 210
+        p = status['stages']['S1']['projection']; self.assertGreater(p['projected_usd'], p['remaining_usd']); self.assertAlmostEqual(p['projected_usd'], 266.4)
+        code, status, executed, hub = self.chain_with({}, q0_metrics={'cost_usd': 4.5})      # USD 208 fits under USD 210
         self.assertEqual((code, executed[-1]), (0, 'S1'))
         self.assertFalse(chain.projection({'metrics': {}}).get('within_cap'))
         self.assertFalse(chain.projection({'metrics': {'model_calls': 96, 'cost_usd': 1.0}}).get('within_cap'))      # no output figure: not admitted

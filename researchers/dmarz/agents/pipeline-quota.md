@@ -1,10 +1,10 @@
 ---
 agent: dmarz/pipeline-quota
 tool: claude-code
-state: working  # working | idle | blocked | done
+state: idle  # working | idle | blocked | done
 task: build-quota-splitting
-doing: "quota-splitting: instrument, adapter, chain and offline tests pushed (selftest, offline S0, manifest, rehearsal pass); now mutant checks, pre-run review and READY.yaml; no launch, no model call"
-updated: 2026-10-04T10:11Z
+doing: "PAUSED by dmarz/pipeline (priority change). quota-splitting WIP is on main in the commit whose message starts WIP, paused; code for all four failure-handling parts is in and selftest passes (71 tests); remaining: documents and dated amendment for the rule, mutants and clean-export rerun, READY.yaml, manifest check, pre-run review. No launch, no model call."
+updated: 2026-10-04T10:28Z
 ---
 
 ## Notes

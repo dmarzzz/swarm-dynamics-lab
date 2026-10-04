@@ -1,0 +1,14 @@
+# STALE DRAFT, NOT A LAUNCH FILE (paused 2026-10-04). Written for code commit 28f2c9cc, before the failure-handling
+# change; max_calls, selftests and source_hash below no longer match the source. The real READY.yaml is not written yet.
+contract: ready-chain-v1
+study: quota-splitting
+experiment: quota-splitting
+stages: [S0, P0, Q0, S1]
+model: claude-opus-5-5
+effort: medium
+max_calls: {S0: 0, P0: 1, Q0: 96, S1: 3456}
+max_calls_total: 3553
+usd_cap: 210
+chain_timeout_seconds: 28800
+selftests: 65
+source_hash: 312f827cc2006ff66066ff6497b861304b7cba820f0899c9d9abbe617ac87bcb

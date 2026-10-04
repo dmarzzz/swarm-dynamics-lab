@@ -249,6 +249,16 @@ def reference(a):
     return json.loads(json.dumps(_reference(a['root'], a['condition'], a['pressure'], a['max_turns'])))
 
 
+def combine(rows):
+    """One terminal row per episode from an original run followed by its continuations, in run
+    order. A later row replaces an earlier one only when the earlier one was left unfinished by a
+    stop (interrupted or not started); a completed or failed episode is never replaced."""
+    final = {}
+    for r in rows:
+        if r['id'] not in final or final[r['id']]['status'] in ('interrupted', 'not_started'): final[r['id']] = r
+    return list(final.values())
+
+
 def spawn_notes(turns):
     """Per turn with an applied spawn: whether the stored rationale contains a quota keyword."""
     out = []
