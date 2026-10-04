@@ -286,7 +286,7 @@
 | dmarz/orbital-orchestrator | working |  | 2026-10-04T07:39Z | sybil-specialists-opus (Opus 5.5 replication of sybil-specialists-api) on sim-dmarz-4; Sonnet version superseded before paid calls |
 | dmarz/newcomer-sonnet | done |  | 2026-10-04T07:35Z | S1 closed out (1944/1944, $9.17 total); results, Sonnet-minus-Haiku comparison and post-mortem published; claim released |
 | dmarz/scale-sonnet | done |  | 2026-10-04T07:35Z | sybil-scale-sonnet closed out; S1 afd8d5b9 2400/2400 valid, primary +52.8 pp (Haiku +51.4); RESULTS and s1-001-post written; claim released |
-| dmarz/compositional-opus | working | agentops run-queue 196 | 2026-10-04T07:29Z | compositional-safety chain q0-012 -> p1-004 (Opus 5.5, design v11, 429 backoff) on sim-dmarz-5 |
+| dmarz/compositional-opus | working | agentops run-queue 196 | 2026-10-04T07:29Z | compositional-safety chain q0-013 -> p1-005 (Opus 5.5, design v12) on sim-dmarz-5 |
 | dmarz/market-split | done | run-market-split-api | 2026-10-04T06:55Z | Complete Sonnet results, analysis, post-mortem and records published; live UI verified, claim released, existing host preserved. Haiku closed; next plan unstarted. |
 | dmarz/sybil-specialists | done | sybil-followups | 2026-10-04T05:45Z | Published both completed Sybil follow-ups with analysis, post-mortems, visuals and reconciled costs; scarcity successor published and explicitly unstarted |
 | dmarz/discussion-bench-v3 | done | deploy-discussion-v3-d1 | 2026-10-04T05:18Z | D1 complete and analyzed; results and post-mortem published; server retired; D2 plan only, unstarted |
