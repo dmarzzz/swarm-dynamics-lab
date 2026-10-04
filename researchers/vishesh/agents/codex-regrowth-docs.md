@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: working  # working | idle | blocked | done
+state: done
 task: regrowth-plan-registration
-doing: Repair missing plan registration and publish public experimental-design summaries
+doing: Published six TLDRs and immutable plans; recorded Regrowth process failure; verified public page
 updated: 2026-10-04T01:03Z
 ---
 

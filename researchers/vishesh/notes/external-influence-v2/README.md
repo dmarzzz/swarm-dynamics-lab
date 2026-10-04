@@ -1,5 +1,9 @@
 # External influence v2
 
+## TLDR
+
+Can nine agents choose correctly when an outsider edits the evidence they read? Compare private review, discussion, random checks, targeted checks and source-lineage handling at matched call slots. Procurement is primary; dependency selection and travel are transfer probes. Measure harmful choices, correctness and regret on fictional fixtures. Qualification and scripted runs do not establish attack resistance.
+
 A working nine-agent, three-application exploratory experiment. Procurement is the main test; software dependency selection and travel planning are transfer probes. The outside attacker edits evidence, while every team member retains the legitimate user goal. All candidates, documents, quotes and scores are fictional fixtures.
 
 The original [v1 instrument](../actual-experiments/external-influence/) tested invoice-provider selection. Its first live run was only a clean qualification: seven valid/correct outcomes from 67 calls, approximately USD 0.1649 reported usage. It did not measure live attack resistance. V2 has a new experiment ID and does not rewrite those results.
@@ -17,3 +21,19 @@ python3 researchers/vishesh/notes/external-influence-v2/src/runner.py local --st
 Use a new output directory; overwrites are refused. Model workers use an in-memory credential supplied by the approved credential store, the pinned model-config.json, and the existing shared spending ledger. The native S1 gate requires an exact-source valid S0. Scripted outputs are engineering checks, never LLM results. S2 is unavailable.
 
 [Live experiment](https://swarm-live.pages.dev/#/x/external-influence-v2). Source and preregistration are committed before model execution. Raw synthetic calls, private commitments, citations, verification selections and outcomes are uploaded as compressed artifacts with a checksum index. No organization ID, workspace ID, API key or private infrastructure address belongs in this public directory.
+
+## Question and prediction
+
+Does decision-focused independent checking reduce harmful choices more than discussion or random checking? Treat any directional prediction and qualification gate as specified in the linked preregistration; this summary adds no new preregistered claim.
+
+## Setup
+
+Nine agents comprise six analysts, two check interpreters and one chair. Fictional procurement is the main application; dependency and travel tasks probe transfer.
+
+## Protocol
+
+Hold the underlying task and external evidence exposure fixed across policies. Compare private review, discussion, random verification, targeted verification and source lineage with 15 call slots per arm. S0 qualifies clean task competence before S1. See design.yaml for exact assignments.
+
+## Metrics
+
+Report harmful target selection, correct legitimate choice, utility regret, invalid outcomes and actual cost. Keep procurement primary and transfer results separate; count tasks rather than agents as independent units.

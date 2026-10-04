@@ -1,5 +1,9 @@
 # Adaptive quorum under urgency
 
+## TLDR
+
+When should five scouts commit to an API choice as a deadline approaches? Compare majority, fixed evidence quorum, a reduced final-round quorum and a central solver on shared recommendation tapes. Measure correctness, false commitment and delay. This tests a stopping rule on a fixed evidence schedule, not autonomous API research; a tied pilot does not show an adaptive advantage.
+
 **Exploratory hunch and S0 instrument. Not an accepted hypothesis or a confirmatory experiment.**
 
 Can a swarm lower its evidence quorum near a deadline to complete more useful decisions, without paying too much in false commitments? Five scouts choose a fictional API provider using distributed benchmark recommendations. The first version isolates the stopping rule; it does not simulate autonomous search or recruitment.
@@ -35,3 +39,19 @@ Output directories must be new; existing assignments are never overwritten or si
 ## Results
 
 [S0 completed](results/S0.md): 144 scripted and 144 local Laya outcomes; zero invalid; clean-task screen passed. Fixed and adaptive policies tied. [Live hub](https://swarm-live.pages.dev/#/x/adaptive-quorum) holds the reported runs and artifacts. This is qualification, not confirmation.
+
+## Question and prediction
+
+Can a reduced final-round quorum reduce delay or abstention without too many false commitments? The first pilot tests stopping policies on supplied recommendations, not research or evidence acquisition.
+
+## Setup
+
+Five scouts receive distributed, root-labelled benchmark recommendations for a fictional API choice. A centralized comparator sees the union of available reports.
+
+## Protocol
+
+Compare majority, fixed quorum, adaptive quorum and a central solver on a fixed evidence schedule. Fixed requires a majority and three visible roots; adaptive reduces the root floor to two at the deadline. Model qualification and scripted checks are separate.
+
+## Metrics
+
+Measure correct and false commitments, abstention, decision round and resources. Report fixed/adaptive ties directly. Root labels are fixture metadata, not independently discovered source trust.

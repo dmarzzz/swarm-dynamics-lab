@@ -3,7 +3,7 @@ id: regrowth-plan-registration
 type: task
 title: Repair missing Regrowth plan registration and publish experiment TLDRs
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-regrowth-docs
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-regrowth-docs
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T01:05Z
-updated: 2026-10-04T01:05Z
+updated: 2026-10-04T01:15Z
+outputs:
+- researchers/vishesh/notes/regrowth-200/README.md
+- researchers/vishesh/notes/experiment-documentation/README.md
 ---
 
 ## Goal
@@ -21,6 +24,6 @@ Record the missing Regrowth plan URL as a process failure; publish a retrospecti
 
 ## Done when
 
-- [ ] Publish retrospective Regrowth plan and process incident.
-- [ ] Add public design TLDRs and a future-run registration check.
-- [ ] Verify live plan link, descriptions and process-failure record.
+- [x] Publish retrospective Regrowth plan and process incident.
+- [x] Add public design TLDRs and a future-run registration check.
+- [x] Verify live plan link, descriptions and process-failure record.
