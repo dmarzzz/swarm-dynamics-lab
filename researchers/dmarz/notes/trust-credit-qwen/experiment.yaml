@@ -1,0 +1,29 @@
+id: trust-credit-qwen
+title: When verification amplifies capture (program v5, line T)
+description: One frozen coverage audit per root replayed under three admission rules that differ only in where
+  the credit of a passed check goes (propagated to neighbours, direct only, anchors only); 324 scripted identities,
+  162 seats, 32, 64 or 108 checks, strong or weak checks; qwen3.7-flash answers each admitted packet. The primary
+  outcome (attacker seats) comes from scripted admission. Exploratory.
+owner: dmarz
+params:
+  stage: {type: str, role: stage}
+  backend: {type: str, role: fixed}
+  batch: {type: str, role: replicate}
+  source_hash: {type: str, role: fixed}
+  code: {type: str, role: fixed}
+metrics:
+- episodes
+- invalid
+- failed
+- model_calls
+- transport_attempts
+- input_tokens
+- output_tokens
+- cost_usd
+- qualification_passed
+- billing_pauses
+- primary_contrast
+- rare_correct
+- rare_wrong
+primary_metric: primary_contrast
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/trust-credit-qwen

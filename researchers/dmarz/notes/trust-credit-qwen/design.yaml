@@ -1,0 +1,89 @@
+version: 1
+experiment: trust-credit-qwen
+program: research program v5, line T (2026-10-04)
+status: exploratory
+attempt: '001'
+model: qwen/qwen3.7-flash
+canonical_model: qwen/qwen3.7-flash-20260727
+provider: alibaba
+request_template:
+  model: qwen/qwen3.7-flash
+  provider:
+    only: [alibaba]
+    allow_fallbacks: false
+    require_parameters: true
+  reasoning:
+    enabled: false
+  max_tokens: 1000
+  response_format:
+    type: json_object
+rules:
+- propagated
+- direct
+- anchors
+check_budgets: [32, 64, 108]
+attacker_pass: [0.1, 0.9]
+clean:
+  checks: 108
+  attacker_pass: 0.9
+cfg:
+  core: 162
+  community: 81
+  trusted_seeds: 2
+  admission_seats: 162
+  pagerank_restart: 0.2
+  pagerank_iterations: 120
+  honest_check_pass: 0.9
+  skills: 6
+roots:
+  engineering: [4481, 4482, 4483, 4484, 4485, 4486, 4487, 4488]
+  qualification: [4591, 4592, 4593, 4594, 4595, 4596, 4597, 4598]
+  qualification_b: [4650, 4651, 4652, 4653, 4654, 4655, 4656, 4657]
+  comparison: [9541, 9542, 9543, 9544, 9545, 9546, 9547, 9548, 9549, 9550, 9551, 9552, 9553, 9554, 9555, 9556, 9557, 9558, 9559, 9560, 9561, 9562, 9563, 9564]
+  reserved_holdout: [10000, 19999]
+qualification:
+  fixtures: 24
+  passed_badges: 30
+  answerable_min_correct: 7
+  missing_min_abstained: 8
+  repair_attempts: 1
+stages:
+  S0: {backend: scripted}
+  P0: {backend: openrouter}
+  Q0: {backend: openrouter}
+  S1: {backend: openrouter}
+  S2: {enabled: false}
+budget:
+  max_calls: {S0: 0, P0: 1, Q0: 23, S1: 504}
+  max_attempted_calls: 528
+  max_failed: 6
+  aggregate_usd: 2
+  max_output_tokens: 1000
+  max_input_tokens: 8000
+  max_input_bytes: 7600
+  max_visible_chars: 2000
+  request_timeout_seconds: 120
+  stage_timeout_seconds: 3600
+  chain_timeout_seconds: 7200
+  workers: 4
+  answer_retries: 0
+  retry:
+    transport_retries: 2
+    retryable_http_status: [429, 502, 503, 529]
+    backoff_seconds: [2, 6]
+    retry_after_cap_seconds: 20
+  billing_outage:
+    retry_every_seconds: 60
+    max_wait_seconds: 1200
+  max_transport_attempts: 640
+  input_usd_per_million: 0.03
+  output_usd_per_million: 0.13
+primary_contrast:
+  outcome: attacker_seats
+  definition: (propagated at 108 minus propagated at 32) minus (direct at 108 minus direct at 32)
+  attacker_pass: 0.1
+  unit: root
+  status: exploratory
+analysis:
+  bootstrap_draws: 10000
+  bootstrap_seed: 20261004
