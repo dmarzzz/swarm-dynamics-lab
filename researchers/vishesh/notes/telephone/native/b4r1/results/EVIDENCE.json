@@ -1,0 +1,12 @@
+{
+  "runtime_revision": "16d7cb931143aeb44d2b55880a80088b94764b28",
+  "manifest_sha256": "7bd33cdfb80e6b230824d29f11ac7b4045dd3bcc568362d4bbff1f3b8d8398c4",
+  "physical_worker_relay_hash_matches": 92,
+  "distinct_generation_ids": 92,
+  "model": "openai/gpt-6-sol",
+  "provider": "OpenAI",
+  "public_plan_readback": true,
+  "workers_stopped": true,
+  "claim_released": true,
+  "source_available_competence_all_family_blocks_passed": true
+}

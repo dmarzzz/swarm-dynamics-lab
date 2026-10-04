@@ -1,0 +1,131 @@
+{
+  "assessor": "vishesh/codex-village-fit",
+  "date": "2026-10-04",
+  "attempt": "b4-qualification-20261004",
+  "runtime_revision": "bb93020d5e1762644d27382ffe5c6460c6a665e0",
+  "decision": "qualification_stopped_fixture_repair",
+  "baseline": "GAP; zero main case observations",
+  "checks": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "The proposed natural-loss/action question and same-handoff source restoration are explicit; native main not run.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION.json",
+          "sha256": "5a90a2b0f95981728a67a273c77f6836a5ed99a1e3a18f4f1e6412ba44566b08"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Main cases passed offline controls, but the separate compact RELEASE qualifier lacked individual supporting records.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION.json",
+          "sha256": "5a90a2b0f95981728a67a273c77f6836a5ed99a1e3a18f4f1e6412ba44566b08"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Missing-evidence qualifier passed; intended positive qualification fixture was defective under the evidence standard.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION.json",
+          "sha256": "5a90a2b0f95981728a67a273c77f6836a5ed99a1e3a18f4f1e6412ba44566b08"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Two valid interface outputs do not establish main-case capability; refusing inadequate evidence is defensible.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION.json",
+          "sha256": "5a90a2b0f95981728a67a273c77f6836a5ed99a1e3a18f4f1e6412ba44566b08"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "Frozen qualification expectation scores1/2; fixture-label defect prevents interpreting q01 as a model action failure.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION.json",
+          "sha256": "5a90a2b0f95981728a67a273c77f6836a5ed99a1e3a18f4f1e6412ba44566b08"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Only2interface calls; zero main worlds/trajectories. Planned9worlds/3recipes remain unobserved.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION.json",
+          "sha256": "5a90a2b0f95981728a67a273c77f6836a5ed99a1e3a18f4f1e6412ba44566b08"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Actual frozen qualifier requests were isolated; no owner or operator history entered inputs.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION.json",
+          "sha256": "5a90a2b0f95981728a67a273c77f6836a5ed99a1e3a18f4f1e6412ba44566b08"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Both raw responses retained, relay/worker hashes checked,90unstarted reservations released without erasing rows.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION.json",
+          "sha256": "5a90a2b0f95981728a67a273c77f6836a5ed99a1e3a18f4f1e6412ba44566b08"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Worker/relay/tunnel stopped; modelUSD0.001976 reconciled. Shared hosting remains one active reservation pending final claim release.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION.json",
+          "sha256": "5a90a2b0f95981728a67a273c77f6836a5ed99a1e3a18f4f1e6412ba44566b08"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "gap",
+      "finding": "Requests, raw outputs, frozen source and actual costs retained; no fresh main block or claimed replication.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION.json",
+          "sha256": "5a90a2b0f95981728a67a273c77f6836a5ed99a1e3a18f4f1e6412ba44566b08"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Two-case trace table is sufficient; no fabricated trajectory or natural-loss curve is plotted.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION.json",
+          "sha256": "5a90a2b0f95981728a67a273c77f6836a5ed99a1e3a18f4f1e6412ba44566b08"
+        }
+      ]
+    }
+  ]
+}

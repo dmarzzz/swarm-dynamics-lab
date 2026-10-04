@@ -4,5 +4,7 @@
   "unstarted_reservations_released": 90,
   "unresolved_model_calls": 0,
   "shared_host_reserve_nano": 35715001,
-  "hosting_final_settlement_pending": true
+  "hosting_final_settlement_pending": false,
+  "whole_shared_host_actual_nano": 19028159,
+  "hosting_counted_once_in": "B4R1 shared-cycle reconciliation"
 }

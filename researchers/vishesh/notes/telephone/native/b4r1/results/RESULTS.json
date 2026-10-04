@@ -1,0 +1,49 @@
+{
+  "execution": "completed",
+  "qualification": "2/2 passed repaired explicit-evidence controls",
+  "main_valid": 90,
+  "main_assigned": 90,
+  "physical_calls": 92,
+  "worlds": 9,
+  "shared_recipes": 3,
+  "fresh_blocks": 2,
+  "reader_endpoints": 36,
+  "correct": {
+    "P": 7,
+    "R": 18
+  },
+  "assigned_readers_each_arm": 18,
+  "block_correct": {
+    "P": [
+      3,
+      4
+    ],
+    "R": [
+      9,
+      9
+    ]
+  },
+  "false_authorizations": 0,
+  "P_release_world_abstentions": 6,
+  "P_hold_world_abstentions": 5,
+  "P_correct_unknown_worlds": 6,
+  "P_correct_hold_worlds": 1,
+  "paired_accuracy_difference_points_each_block": [
+    66.66666666666667,
+    55.55555555555556
+  ],
+  "overall_selected_world_difference_points": 61.111111111111114,
+  "native_main_wall_seconds": 63.40832471847534,
+  "semantic_reviewed_reader_outputs": 36,
+  "semantic_reviewed_last_handoffs": 18,
+  "additional_earlier_writer_outputs_inspected": 10,
+  "independent_raters": 1,
+  "B4R1_model_cost_nano": 201306000,
+  "B4_failed_qualifier_model_cost_nano": 1976000,
+  "hosting_counted_once_nano": 19028159,
+  "cumulative_nano": 673196669,
+  "unknown_cost": 0,
+  "outstanding_reservations": 0,
+  "main_source_and_assignment_unchanged_from_B4": true,
+  "causal_scope": "Paired source-restoration effect on these synthetic cases, not proof of phrase-level mediation, unsafe authorization, actual deployment harm or population generalization."
+}

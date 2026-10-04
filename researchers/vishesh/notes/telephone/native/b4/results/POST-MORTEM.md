@@ -9,3 +9,9 @@ Execution and route/accounting passed for2calls; qualification failed1/2 against
 Question and paired same-handoff design remain useful; main-case capability, native source competence, natural context-loss measurement, action-error frequency, fresh replication and broader usefulness remain untested. Offline case/controller and fork checks passed, but the qualifier was not built through that same source grammar, allowing the source-evidence mismatch to escape. Sample and interpretation are limited to these two interface records; no population or action-harm claim is supported.
 
 Prospective repair: construct both qualifiers through the production corpus and source-rule controller, with a new explicit version/site, signed exception, distinct acquisition IDs/pass outcomes and complete rollback coverage. Preserve every main actor packet, question, label, assignment and analysis endpoint byte-for-byte. The [B4R1 plan](../../b4r1/PLAN.md) records this finite repair and carries prior costs forward. A new named allocation is required; no automatic retry, model change, forced omission or main-case selection occurred. Operational finalize and final shared-host reconciliation are reported separately from this authored scientific assessment.
+
+
+The offline operations finalize hook ran for b4-qualification-20261004. Its manual-adapter scaffold reports model_calls=0 and written_review_required because it does not parse this native format; actual calls are2, documented here and in QUALIFICATION.json. RUN-QUALITY.json supplies the authored eleven-dimension review. This does not settle shared hosting or claim a successful qualification.
+
+
+Final shared-claim reconciliation: the whole hosting lifetime settled once atUSD0.019028159 after B4R1 finished; cumulative TelephoneUSD0.673196669, zero unknown/reservations. See the B4R1 COST.json; do not add the hosting charge a second time to this failed attempt.

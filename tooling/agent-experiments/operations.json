@@ -177,11 +177,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/telephone",
       "setup_path": "researchers/vishesh/notes/telephone/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/telephone/native/b2/results/POST-MORTEM.md",
+      "postmortem_path": "researchers/vishesh/notes/telephone/native/b4r1/results/POST-MORTEM.md",
       "adapter": null,
       "checked_at": "2026-10-04T19:47:25.079176+00:00",
       "checked_commit": "9f4ede00d1cf2e76580e31d9690339dd5434b651",
-      "next_action": "B2 reviewed:146 valid calls, decision continuity at ceiling with meaning losses; downstream reconstruction remains GAP. CumulativeUSD0.450886510,0 reservations; claim released. B3 packet prepared offline:24 worlds/eight shared families,two policies/two blocks,386 maxcalls; named PI allocation and live admission pending. Separate Sol50 topology pending; no successor launched.",
+      "next_action": "FINISH B4R1:92valid calls/90main; shared-parent source-restored18/18correct versus handoff-only7/18 across9worlds/3recipes/2freshblocks. No false authorization; conservative errors and policy/context drift. All36reader endpoints audited, all90lineages replayed. CumulativeUSD0.673196669,0unknown/reservations; claim released. B3withdrawnunrun; Sol50unrun; no automatic successor.",
       "next_run_approval": "owner"
     }
   ]

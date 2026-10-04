@@ -1,0 +1,12 @@
+{
+  "claim_released": true,
+  "worker_stopped": true,
+  "credential_relay_stopped": true,
+  "shared_B3_B4_B4R1_infrastructure_nano": 19028159,
+  "basis": "exclusive claim lifetime at verified hourly rate; allocation-cost estimate, not invoice",
+  "cumulative_nano": 673196669,
+  "model_nano": 579544000,
+  "B4R1_model_nano": 201306000,
+  "unknown_charges": 0,
+  "outstanding_reservations": 0
+}

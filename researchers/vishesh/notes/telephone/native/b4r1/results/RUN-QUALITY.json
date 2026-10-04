@@ -1,0 +1,175 @@
+{
+  "assessor": "vishesh/codex-village-fit",
+  "date": "2026-10-04",
+  "attempt": "b4r1-actions-20261004",
+  "runtime_revision": "16d7cb931143aeb44d2b55880a80088b94764b28",
+  "decision": "FINISH bounded action diagnostic",
+  "baseline": "Scoped repeated practical-decision baseline achieved; natural-data generalization and phrase-level causal mediation untested.",
+  "checks": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Fresh readers choose concrete rollout actions after natural handoffs; source restoration uses the identical parent message.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "df9cd4932e09548803754a5eb0cf1cfc9380fe56bb59b656ae8fa126141d3f62"
+        },
+        {
+          "path": "SEMANTIC-AUDIT.json",
+          "sha256": "3fccb5683124643178ca4b4c31e60a8a8edd68ba346087b9f525f984933b9dd4"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Nine balanced worlds nested in three explicit version/evidence/rollback recipes; answer-changing counterparts and27offline omission controls. Synthetic development support only.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "df9cd4932e09548803754a5eb0cf1cfc9380fe56bb59b656ae8fa126141d3f62"
+        },
+        {
+          "path": "SEMANTIC-AUDIT.json",
+          "sha256": "3fccb5683124643178ca4b4c31e60a8a8edd68ba346087b9f525f984933b9dd4"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Exact-rule/full-copy controls pass; source-restored readers18/18correct. Shared-parent hashes match; source access adds information and is not a singleton control.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "df9cd4932e09548803754a5eb0cf1cfc9380fe56bb59b656ae8fa126141d3f62"
+        },
+        {
+          "path": "SEMANTIC-AUDIT.json",
+          "sha256": "3fccb5683124643178ca4b4c31e60a8a8edd68ba346087b9f525f984933b9dd4"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Two explicit-evidence qualifiers pass; source-restored3/3 in each recipe/block. Failed B4 summary-only qualifier preserved separately.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "df9cd4932e09548803754a5eb0cf1cfc9380fe56bb59b656ae8fa126141d3f62"
+        },
+        {
+          "path": "SEMANTIC-AUDIT.json",
+          "sha256": "3fccb5683124643178ca4b4c31e60a8a8edd68ba346087b9f525f984933b9dd4"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All90requests/parents replay;36readers+18finalhandoffs manually audited with ambiguity. Full-source action error distinguished from rational refusal given missing handoff policy and from actual deployment harm.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "df9cd4932e09548803754a5eb0cf1cfc9380fe56bb59b656ae8fa126141d3f62"
+        },
+        {
+          "path": "SEMANTIC-AUDIT.json",
+          "sha256": "3fccb5683124643178ca4b4c31e60a8a8edd68ba346087b9f525f984933b9dd4"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Two fresh blocks on9selectedworlds/3sharedrecipes support only finite diagnostic comparison. No population CI or independent90-call sample claim.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "df9cd4932e09548803754a5eb0cf1cfc9380fe56bb59b656ae8fa126141d3f62"
+        },
+        {
+          "path": "SEMANTIC-AUDIT.json",
+          "sha256": "3fccb5683124643178ca4b4c31e60a8a8edd68ba346087b9f525f984933b9dd4"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Writers never receive follow-up questions; readers receive raw parent prose without prior decision fields; no operator context, tools or memory.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "df9cd4932e09548803754a5eb0cf1cfc9380fe56bb59b656ae8fa126141d3f62"
+        },
+        {
+          "path": "SEMANTIC-AUDIT.json",
+          "sha256": "3fccb5683124643178ca4b4c31e60a8a8edd68ba346087b9f525f984933b9dd4"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "92distinct generation IDs and92worker/relay request-response hash matches;90/90main valid, zero missing/fallback/retry.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "df9cd4932e09548803754a5eb0cf1cfc9380fe56bb59b656ae8fa126141d3f62"
+        },
+        {
+          "path": "SEMANTIC-AUDIT.json",
+          "sha256": "3fccb5683124643178ca4b4c31e60a8a8edd68ba346087b9f525f984933b9dd4"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Model0.201306, failedpriorqualification0.001976 and whole sharedhosting0.019028159 retained; cumulative0.673196669, zero unknown/reservations, worker/relay stopped and claim released.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "df9cd4932e09548803754a5eb0cf1cfc9380fe56bb59b656ae8fa126141d3f62"
+        },
+        {
+          "path": "SEMANTIC-AUDIT.json",
+          "sha256": "3fccb5683124643178ca4b4c31e60a8a8edd68ba346087b9f525f984933b9dd4"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Fresh blocks reproduce descriptive restoration benefit; frozen packets, all raw traces, annotations and offline replay published. Provider model alias is not an immutable model snapshot.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "df9cd4932e09548803754a5eb0cf1cfc9380fe56bb59b656ae8fa126141d3f62"
+        },
+        {
+          "path": "SEMANTIC-AUDIT.json",
+          "sha256": "3fccb5683124643178ca4b4c31e60a8a8edd68ba346087b9f525f984933b9dd4"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Block comparison table, per-world action report and exact source/handoff/reader audit make denominators and mechanisms inspectable without a fabricated loss curve.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "df9cd4932e09548803754a5eb0cf1cfc9380fe56bb59b656ae8fa126141d3f62"
+        },
+        {
+          "path": "SEMANTIC-AUDIT.json",
+          "sha256": "3fccb5683124643178ca4b4c31e60a8a8edd68ba346087b9f525f984933b9dd4"
+        }
+      ]
+    }
+  ]
+}

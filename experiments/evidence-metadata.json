@@ -4274,6 +4274,34 @@
       "assessor": "vishesh/codex-village-fit",
       "assessed_at": "2026-10-04",
       "source_commit": "272c05441a4ba909841348fb3e3e41739eeed534"
+    },
+    {
+      "id": "telephone-b4r1",
+      "title": "Telephone B4R1: deployment decisions after natural handoffs",
+      "documents": [
+        "researchers/vishesh/notes/telephone/native/b4r1/results/POST-MORTEM.md"
+      ],
+      "experiment_ids": [
+        "telephone"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 2,
+        "claim": "On nine selected authored worlds repeated twice, restoring original source to the same final handoff improves rollout-action correctness; handoff-only errors are conservative abstentions, not false authorization.",
+        "rationale": "Complete paired shared-parent contrast with fresh blocks, all endpoint audit and trace replay; three shared scenario recipes, same-operator semantic labels and unisolated omission/interpretation mechanisms limit broader claims."
+      },
+      "sample_size_summary": "9authored worlds nested in3recipes;2fresh blocks;54sharedwriter+36reader calls,2qualifiers. R18/18correct; P7/18. No missing. Repeats/counterparts are nested, not90independenttasks.",
+      "sources": [
+        "researchers/vishesh/notes/telephone/native/b4r1/results/RESULTS.json",
+        "researchers/vishesh/notes/telephone/native/b4r1/results/RUN-QUALITY.json",
+        "researchers/vishesh/notes/telephone/native/b4r1/results/AUTHORED-TRACE-AUDIT.json",
+        "researchers/vishesh/notes/telephone/native/b4r1/results/SEMANTIC-AUDIT.json",
+        "researchers/vishesh/notes/telephone/native/b4r1/results/COST.json"
+      ],
+      "status_at_assessment": "reviewed_repeated_action_diagnostic_complete_no_successor",
+      "assessor": "vishesh/codex-village-fit",
+      "assessed_at": "2026-10-04",
+      "source_commit": "16d7cb931143aeb44d2b55880a80088b94764b28"
     }
   ],
   "source_sha256": {
@@ -4372,7 +4400,12 @@
     "researchers/shadow/notes/capture-memory/design.yaml": "e232f30ebbceb9c38d7d3934585dcb7d85162afad11a6c100d3569da9e04bc41",
     "researchers/shadow/notes/capture-memory/results/S1.md": "4dbc8ba7c108e51b2133c386fe47dce5398e775af25d4a2393982d00e6fd5c2c",
     "researchers/shadow/notes/capture-memory/results/S1b.md": "325136e04f9db41620481c2e91ed107b33ddeabee36c7c73142aea3cdf2604e9",
-    "researchers/shadow/notes/capture-memory/experiment.yaml": "d857fad461e997312436b6ec6469c690c4987d2b14848fa6572f25cb8206de28"
+    "researchers/shadow/notes/capture-memory/experiment.yaml": "d857fad461e997312436b6ec6469c690c4987d2b14848fa6572f25cb8206de28",
+    "researchers/vishesh/notes/telephone/native/b4r1/results/RESULTS.json": "df9cd4932e09548803754a5eb0cf1cfc9380fe56bb59b656ae8fa126141d3f62",
+    "researchers/vishesh/notes/telephone/native/b4r1/results/RUN-QUALITY.json": "cde95b44bf80533ef8fc51dc18dc571ca34ae910244b1f3c3feb25affabcbd47",
+    "researchers/vishesh/notes/telephone/native/b4r1/results/AUTHORED-TRACE-AUDIT.json": "dd22bdf6e8565062c42ab371249aac5d0e9bafef0ebfbd19f23aade7a0f26d16",
+    "researchers/vishesh/notes/telephone/native/b4r1/results/SEMANTIC-AUDIT.json": "3fccb5683124643178ca4b4c31e60a8a8edd68ba346087b9f525f984933b9dd4",
+    "researchers/vishesh/notes/telephone/native/b4r1/results/COST.json": "741a349a0fd51ed4844946142d14226e6743598c5504e6c6585a1c4f9652a507"
   },
   "scope_note": "33 registered or implemented study IDs, with separate version/cohort entries, one scripted methods example and two unrun design entries. All researcher registration files are covered; additional code-registered studies are listed explicitly. Initial assessments pin 9781739c; materially updated rows pin b51e3f1f. These source-reported assessments are not live job status or independent replication."
 }
