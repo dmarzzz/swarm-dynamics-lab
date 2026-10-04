@@ -127,3 +127,32 @@ selection, clustering and identity uncertainty are not captured by a naive row b
 
 No new claim of wiki copying relative to arXiv 2609.09150 or village persuasion/cascade work.
 The tool and explicit cross-corpus answerability map are the contribution.
+
+## Robustness API (v0.2, for halflife and identity)
+
+```python
+from askswarm.robustness import (
+    variants, exact_deduplicate, aggregate_roots, root_ids,
+    exclude_imputed, rank_change, robustness,
+)
+# Same Event schema; stable unique event_id required.
+arms, receipts = variants(list(wiki('/path/to/collusion-wiki')))
+# Each arm is an ordinary list[Event], so use your own scorer or AskSwarm:
+result = robustness(list(wiki('/path/to/collusion-wiki')), name='wiki')
+```
+
+Arms: baseline, exact_dedup, root_aggregate, exclude_imputed, combined. Byte-identical
+nonempty text dedup is GLOBAL and keeps the earliest observed row; it intentionally removes
+true repeats too. Root aggregation retains the earliest actual row per wiki page or recursively
+resolved artifact parent; it does not invent a composite actor. Git commits are singleton roots,
+NOT all descendants of the first repository commit. Generic tables may supply `root_id`,
+`parent_id`, `time_imputed`, `time_grade` metadata columns. `thread` alone is not automatically
+a provenance root. Cycles and duplicate row IDs fail closed. Missing clocks stay missing.
+The conservative wiki clock arm removes non-`reqlog` rows (rclog/write_date fallbacks), which
+does not assert those times are actually wrong. Missing clock provenance in generic data means
+imputation status is unverified, not certified. All transformations change the observation unit;
+they are sensitivities, not ground truth. See [prospective amendment](ROBUSTNESS-PLAN.md).
+
+**Copied text is not endorsement. Absent outcomes are not failures. Synthetic identity counts
+are not autonomous agent counts.** In particular, collusion.wiki labels and SwarmTraces names
+are self-asserted strings; this package does not extract SwarmTraces names from payload text.

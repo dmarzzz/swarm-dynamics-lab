@@ -11,7 +11,7 @@ import unicodedata
 import numpy as np
 from .adapters import Event, iso_time
 
-VERSION = "0.1.1"
+VERSION = "0.2.0"
 DISSENT = re.compile(r"\b(disagree|disagreement|dissent|reject|rejected|incorrect|false|refute|refuted|not true)\b", re.I)
 REVERT = re.compile(r"\b(revert|reverted|reverting|rollback|roll back|undo|undid)\b", re.I)
 
@@ -100,7 +100,7 @@ def quantiles(values):
             "p90": values[math.ceil(.9 * len(values)) - 1], "max": values[-1]}
 
 
-def analyze(events, name="swarm", threshold=.7, window=100, k_values=(2, 3, 5, 10)):
+def analyze(events, name="swarm", threshold=.7, window=100, k_values=(2, 3, 5, 10), include_evidence=False):
     if window < 1 or not k_values or any(k < 2 for k in k_values):
         raise ValueError("window must be positive and adopter targets >=2")
     events = list(events)
@@ -130,6 +130,7 @@ def analyze(events, name="swarm", threshold=.7, window=100, k_values=(2, 3, 5, 1
             members[cluster].append((index, event))
     clusters = []
     influence = Counter()
+    reuse_links = []
     reached = {str(k): [] for k in k_values}
     adoption_curve = Counter()
     temporal_clusters = 0
@@ -167,13 +168,18 @@ def analyze(events, name="swarm", threshold=.7, window=100, k_values=(2, 3, 5, 1
             while previous and boundary - previous[0][0] > window:
                 previous.popleft()
             if event.agent_id not in seen:
-                prior = {actor for old_index, time, actor in previous
+                prior = {actor for old_index, time, actor, _ in previous
                          if time < event.time and 0 < boundary - old_index <= window and actor != event.agent_id}
                 if prior:
                     for actor in sorted(prior):
                         influence[actor] += 1 / len(prior)
+                        if include_evidence:
+                            prior_id = next(old_id for old_index, time, old_actor, old_id in reversed(previous)
+                                            if old_actor == actor and time < event.time and 0 < boundary - old_index <= window)
+                            reuse_links.append({"prior_event": prior_id, "later_event": event.event_id,
+                                                "credit": 1 / len(prior)})
                 seen.add(event.agent_id)
-            previous.append((boundary, event.time, event.agent_id))
+            previous.append((boundary, event.time, event.agent_id, event.event_id))
     lifetimes = [max(times) - min(times) for times in actor_times.values()]
     total = len(events)
     summary = {"records": total, "nonempty_text_records": text_count, "identities": len(activity),
@@ -189,7 +195,7 @@ def analyze(events, name="swarm", threshold=.7, window=100, k_values=(2, 3, 5, 1
                "time_to_k": {str(k): {"reached": len(reached[str(k)]), "at_risk_clusters": temporal_clusters,
                                           "not_observed_to_reach": temporal_clusters - len(reached[str(k)]),
                                           "seconds_among_reached": quantiles(reached[str(k)])} for k in k_values}}
-    return {"schema_version": VERSION, "name": name, "summary": summary,
+    result = {"schema_version": VERSION, "name": name, "summary": summary,
             "parameters": {"jaccard_threshold": threshold, "minhash_permutations": 64, "lsh_bands": 16,
                            "shingle_cap": 512, "seed": 20261004, "influence_step_window": window},
             "diagnostics": {"long_unique_texts_sampled": clusterer.long_texts,
@@ -207,4 +213,11 @@ def analyze(events, name="swarm", threshold=.7, window=100, k_values=(2, 3, 5, 1
                        "Missing clocks/identities are not imputed. Identity spans are observation-window censored.",
                        "Fixed-representative LSH can miss near duplicates; long texts use sampled shingles.",
                        "Dissent/revert are unvalidated English lexical markers, not behavioral outcomes.",
+                       "Copied text is not endorsement. Absent outcomes are not failures.",
+                       "Synthetic identity counts are not autonomous agent counts: collusion.wiki labels and SwarmTraces names are unverified handles, not verified actors.",
                        "Full-corpus descriptive statistics have no IID confidence interval."]}
+
+    if include_evidence:
+        result["_membership"] = {e.event_id: cluster for cluster, rows in members.items() for _, e in rows}
+        result["_reuse_links"] = reuse_links
+    return result

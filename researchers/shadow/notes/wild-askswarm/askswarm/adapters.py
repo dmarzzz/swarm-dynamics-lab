@@ -80,7 +80,8 @@ def table(path) -> Iterator[Event]:
             if not all(key in row for key in ("agent_id", "time", "text")):
                 raise ValueError(f"Row {number} requires agent_id, time, text")
             yield Event(identity(row["agent_id"]), parse_time(row["time"]), str(row["text"] or ""),
-                        identity(row.get("thread")), str(row.get("event_id", number)), str(row.get("kind", "record")))
+                        identity(row.get("thread")), str(row.get("event_id", number)), str(row.get("kind", "record")),
+                        {key: row[key] for key in ("root_id", "parent_id", "time_imputed", "time_grade") if key in row})
 
 
 def wiki(path, identity_field="label") -> Iterator[Event]:
@@ -94,7 +95,8 @@ def wiki(path, identity_field="label") -> Iterator[Event]:
         yield Event(identity(row.get(identity_field)), parse_time(row.get("time")), str(row.get("body") or ""),
                     identity(row.get("page_id")), str(row.get("rev_id", "")), "revision",
                     {"identity_basis": identity_field, "time_grade": row.get("time_grade"),
-                     "uncertainty_seconds": row.get("uncertainty_seconds"), "seq": row.get("seq")})
+                     "uncertainty_seconds": row.get("uncertainty_seconds"), "seq": row.get("seq"),
+                     "root_id": row.get("page_id"), "root_basis": "wiki_page"})
 
 
 def swarmtraces(path) -> Iterator[Event]:
@@ -105,7 +107,7 @@ def swarmtraces(path) -> Iterator[Event]:
     for row in json_rows(path):
         yield Event(identity(row.get("agent_id")), parse_time(row.get("time_utc")), str(row.get("text") or ""),
                     identity(row.get("parent_id")), str(row.get("id", "")), str(row.get("kind", "artifact")),
-                    {"identity_basis": "explicit_top_level_agent_id_only"})
+                    {"identity_basis": "explicit_top_level_agent_id_only", "parent_id": row.get("parent_id"), "root_basis": "artifact_parent_chain"})
 
 
 AGENT = re.compile(r"^\[([a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+)\]\s*")
@@ -126,7 +128,7 @@ def git_log(repo, ref="HEAD") -> Iterator[Event]:
         text = subject[match.end():] if match else subject
         task = TASK.match(text)
         yield Event(actor, parse_time(timestamp), text, task[2] if task else None, commit,
-                    "task_" + task[1].lower() if task else "commit", {"identity_basis": "bracketed_agent_prefix"})
+                    "task_" + task[1].lower() if task else "commit", {"identity_basis": "bracketed_agent_prefix", "root_id": commit, "root_basis": "commit_no_artifact_parent"})
 
 
 def task_events(repo, ref="HEAD") -> Iterator[Event]:
