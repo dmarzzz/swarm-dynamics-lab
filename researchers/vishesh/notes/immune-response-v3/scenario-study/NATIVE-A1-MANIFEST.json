@@ -1,0 +1,72 @@
+{
+  "backend": "anthropic",
+  "assigned": [
+    {
+      "case": "stale_advice",
+      "seed": 9100,
+      "arm": "retain"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9100,
+      "arm": "reset"
+    },
+    {
+      "case": "stale_advice",
+      "seed": 9100,
+      "arm": "revision_check"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9100,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9100,
+      "arm": "reset"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9100,
+      "arm": "revision_check"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9100,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9100,
+      "arm": "reset"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9100,
+      "arm": "revision_check"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9100,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9100,
+      "arm": "reset"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9100,
+      "arm": "revision_check"
+    }
+  ],
+  "source_sha256": "be024437108cfb7ab050daa66d762c0ef6ea25e2802b69fa43b811da564c390c",
+  "protocol_sha256": "4e521c7b902ddfb92c41adb7697a94df0a2184c3d1a83387a3ae8d523ef5c765",
+  "commit": "18fcd223d0618e32c8e58466a179198a4830e248",
+  "started": 1791081372.7891374,
+  "python": "3.12.3",
+  "config_sha256": "9aa4854f0650b97962c4c8bc23f51f88791d56eef6225a27140e395df75ba96e",
+  "model": "claude-haiku-4-5-20251001"
+}

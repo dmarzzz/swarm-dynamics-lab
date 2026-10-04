@@ -6,6 +6,12 @@ The service is down. Yesterday's recovery note says to roll back everything. Tod
 
 This is an exploratory executable incident exercise, not a production deployment, accepted hypothesis, incident recreation or demonstration of autonomous immunity. Earlier ledger results remain preserved. Their twelve records were facts, not twelve realistic tasks. This scenario pilot prospectively replaces the not-yet-run task-6700 qualification; the owner's additional USD 8 authorization covers this bounded pilot and any separately documented repair, not USD 8 per retry.
 
+## Dated amendment: scenario a2
+
+A1 (runtime 18fcd22) finished all 12 episodes and 108 calls with no invalid responses for USD 0.169049, but failed the healthy-system control. It remains in NATIVE-A1-RESULTS.json and its public run. Native explanations repeatedly conflated feature number, data format and RPC version, sometimes contradicting live checks. This is observed decision error; representation/prompt causation is an inference, not proven by those explanations.
+
+Before a2, replace overloaded integer protocol/schema/feature labels with distinct named domains and use service names consistent with their roles. Keep binary versions numeric. Ask reviewers to assess whether a problem exists; allow no action needed explicitly. No evaluator health rule, feasible bundle, treatment rule or intervention outcome is changed. A2 combines presentation changes, so improvement cannot identify which change helped. All arms receive the same clarification. The old numeric rendering and source remain immutable in Git. New a2 native seed 9101 and engineering seeds 9020–9035 were unopened before this amendment; they change only service suffixes. This is a bounded competence repair, not an independent operational replication or a favorable-result retry. A second competence failure stops escalation for redesign rather than indefinite retries.
+
 ## Question and prediction
 
 When stored operational advice conflicts with current dependency and data constraints, does revising memory improve recovery without damaging an already healthy system? Predictable engineering facts establish what is feasible; whether the agents notice them, use tools, or follow an obsolete handoff is the empirical uncertainty.
@@ -24,17 +30,17 @@ We model compatibility and irreversible persisted format with executable constra
 
 ## Setup
 
-Three services form a dependency chain: gateway → worker → store. Gateway versions require different worker RPC protocols; worker versions can read different data formats. Version 2 of the worker bridges both formats. Store binaries must match persisted data. A requested feature can forbid an otherwise compatible old gateway. Several bundles may be feasible: there is no single answer string.
+Three services form a dependency chain: gateway → worker → store. Gateway versions require named RPC protocols (`rpc-classic` or `rpc-batch`); worker versions can read named data schemas (`schema-legacy` or `schema-expanded`). Features are independent capability names (`checkout`, `bulk_checkout`), not numeric format requirements. Version 2 of the worker bridges both formats. Store binaries must match persisted data. A requested feature can forbid an otherwise compatible old gateway. Several bundles may be feasible: there is no single answer string.
 
 The catalog and current health checks are available to every arm. The team has three advisory roles (compatibility, data safety, customer impact) and one commander. Advisors make one recommendation each, not eight repetitive endorsements every round. The commander makes six consequential tool choices: deploy one component, fetch the operator recommendation, or wait. Bookkeeping and evaluation are deterministic. Tools are simulated; no real service is modified.
 
 ## Protocol
 
-Four cases: stale_advice starts with an incompatible worker but permits multiple safe recovery bundles; migrated_data makes the old snapshot incompatible with persistent format 2; false_alarm starts healthy and requires feature 2, exposing unnecessary repair; registry_partition denies refresh for the first three ticks while local compatibility contracts remain available. The commander does not receive case or arm labels. It does receive the operational evidence needed to solve the task; uncertainty is in decision behavior, not intentionally impossible information access.
+Four cases: stale_advice starts with an incompatible worker but permits multiple safe recovery bundles; migrated_data makes the old snapshot incompatible with the expanded persistent schema; false_alarm starts healthy and requires bulk_checkout, exposing unnecessary repair; registry_partition denies refresh for the first three ticks while local compatibility contracts remain available. The commander does not receive case or arm labels. It does receive the operational evidence needed to solve the task; uncertainty is in decision behavior, not intentionally impossible information access.
 
 All arms start from exactly the same deployment, catalog, handoff and schedule. Retain keeps both notes. Reset clears notes once before advice, but can learn again. Revision_check exposes only notes matching the observed epoch; this rule uses public metadata, not evaluator damage labels. At tick 4 an obsolete note returns in all arms, including reset. No memory arm secretly repairs the actual deployment. Advice is fixed after the initial consultation; later tool observations can contradict it. This tests a small team architecture, not the causal advantage of a swarm over a single agent.
 
-Development tests use seeds 8900–8903. Engineering uses 9000–9015: four scenarios × three arms × 16 service-alias permutations = 192 episodes. These permutations test label sensitivity, not 192 independent operational situations. Native qualification uses seed 9100 in all four cases and all three arms: 12 episodes × (three advisory calls + six commander calls) = 108 calls maximum. No automatic retries or fallback-to-scripted native decisions. A model error is preserved and consumes its scheduled slot. Holdout seeds 9200–9215 stay unopened.
+Development tests use seeds 8900–8903. A2 engineering uses 9020–9035: four scenarios × three arms × 16 service-name suffixes = 192 episodes. These names test presentation consistency, not 192 independent operational situations. A2 native qualification uses seed 9101 in all four cases and all three arms: 12 episodes × (three advisory calls + six commander calls) = 108 calls maximum. No automatic retries or fallback-to-scripted native decisions. A model error is preserved and consumes its scheduled slot. Holdout seeds 9200–9215 stay unopened.
 
 ## Metrics
 
