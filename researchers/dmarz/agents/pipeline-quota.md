@@ -3,8 +3,8 @@ agent: dmarz/pipeline-quota
 tool: claude-code
 state: working  # working | idle | blocked | done
 task: build-quota-splitting
-doing: "Preparing quota-splitting (agent-budgets hunch B2, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call"
-updated: 2026-10-04T09:26Z
+doing: "quota-splitting: prospective plan pushed (README, preregistration, design, setup record); now implementing the instrument, adapter, chain and offline tests; no launch, no model call"
+updated: 2026-10-04T09:58Z
 ---
 
 ## Notes
