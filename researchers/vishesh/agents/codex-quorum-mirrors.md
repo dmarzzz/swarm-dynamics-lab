@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-quorum-mirrors
 tool: codex
-state: blocked
+state: done
 task: quorum-mirrors-s0
-doing: S0 plan publicly verified; 32-request package and 23 checks prepared; awaiting separate budget before allocation and native setup
-updated: 2026-10-04T03:48:53.029072+00:00
+doing: "S0 complete and qualified: 29/32 correct, 32 valid; artifacts preserved and worker released"
+updated: 2026-10-04T04:00:42.508828+00:00
 ---
 
 ## Notes
