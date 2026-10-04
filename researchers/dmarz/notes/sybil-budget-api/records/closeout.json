@@ -1,0 +1,36 @@
+{
+  "host": "sim-dmarz-4",
+  "worker_active": false,
+  "claim": "dmarz-sybil-followups",
+  "claim_status": "done",
+  "claim_release_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/167",
+  "hub_release_event": 38372,
+  "active_claim_absent": true,
+  "destroyed": false,
+  "host_disposition": "Existing host retained for owner lifecycle management; this experiment released its allocation and runs no worker.",
+  "accounting_archive": {
+    "study-ledger.jsonl": {
+      "sha256": "6ea542e8688b739dd993c4f798ce81b1227cd6f5ea56b882c7e0bf62c439588f",
+      "bytes": 703005
+    },
+    "shared-ledger.jsonl": {
+      "sha256": "5c08074802cc102ce0969d08c1c7bd80bcb7f41de2b701a25b9bb44bbcdae10e",
+      "bytes": 720035
+    },
+    "allocation.json": {
+      "sha256": "0530932af6ef397a04df542cd40a24d1d793a05e0f7df19487f06f5a49170838",
+      "bytes": 452
+    }
+  },
+  "model_calls": 2896,
+  "actual_usd": 39.672176,
+  "unknown_usage_calls": 0,
+  "scope": "Budget study Q0 and S1; model calls exclude scripted stages and saved-data audits.",
+  "successor": "Prospective scarcity plan only; no registration, queue, allocation, implementation or run.",
+  "accounting_archive_github": {
+    "repository": "dmarzzz/swarm-labs-agentops",
+    "path": "records/sybil-followups-2026-10-04/sybil-budget-api",
+    "commit": "e1c2592bd6a897af16ab626533a37bc53c013372",
+    "pull_request": "https://github.com/dmarzzz/swarm-labs-agentops/pull/166"
+  }
+}

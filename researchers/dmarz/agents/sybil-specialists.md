@@ -3,8 +3,8 @@ agent: dmarz/sybil-specialists
 tool: codex
 state: working
 task: sybil-followups
-doing: Newcomer results and post-mortem pushed; monitoring frozen budget S1; scarcity successor plan prepared but explicitly unstarted
-updated: 2026-10-04T04:52Z
+doing: Both API runs complete; finishing full saved-data audit, budget closeout and result publication; successor scarcity plan explicitly unstarted
+updated: 2026-10-04T05:35Z
 ---
 
 ## Notes

@@ -817,6 +817,148 @@
    "sha256": "262ffa494a9fd97b61f148bfa909e261aea2dc01c6acb4510456267785667cab",
    "size_bytes": 11521
   },
+  "market-split-haiku-r0-001-records@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791089533,
+     "sha256": "c0a6a74ec361b40f144c7547059c8c1950462042a684178138f40116a0c89cbf",
+     "size": 7089,
+     "uri": "researchers/dmarz/notes/market-split-api/report/src/archive.py"
+    },
+    {
+     "mtime": 1791089480,
+     "sha256": "f12de067ad70379a36d937b825486c10c011b2968f88bb7c7d7a5bfa1607a748",
+     "size": 5625,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/r0-001-verified.json"
+    },
+    {
+     "mtime": 1791089355,
+     "sha256": "b2b2f00cb038e53da29ca4b0f0b5d6bd89f3bea71713fdc46cbcf54775c54a1d",
+     "size": 118584,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/progress.png"
+    },
+    {
+     "mtime": 1791089375,
+     "sha256": "8d844da577e0fa28dfc9659f024a00395b9929f09b95dbb1bb4ef99c7529eda2",
+     "size": 121263,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/final_frame.png"
+    },
+    {
+     "mtime": 1791089389,
+     "sha256": "9f398eb73c9bbf83eb066e040b9b28821b8e33d6d9120902c683e52e9d25baab",
+     "size": 796223,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/replay.gif"
+    },
+    {
+     "mtime": 1791089375,
+     "sha256": "77341ee8cdbace6b94abcdb3fc13ba96e98d4f411e5d1dc20d309a5b2d0ac220",
+     "size": 55518,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/episodes.jsonl"
+    },
+    {
+     "mtime": 1791089375,
+     "sha256": "f5bd096bafd6363cc144ec4b076f6a255039be17f8357100b449925a03b6de96",
+     "size": 141279,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/calls.jsonl"
+    },
+    {
+     "mtime": 1791089389,
+     "sha256": "2b6b073b802fefe245d28c9d721c88d01949d40435c35db999499f91c67ca15a",
+     "size": 1166,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/summary.json"
+    },
+    {
+     "mtime": 1791089389,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/visualization-errors.json"
+    },
+    {
+     "mtime": 1791088715,
+     "sha256": "3f3a39532c7519daeec8e8a375b01f706e503e38ce1698622311cedcf0e08209",
+     "size": 120191,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/progress.png"
+    },
+    {
+     "mtime": 1791088716,
+     "sha256": "4d81e300193ae171a24d3abb86874bf2bf0e21d5282fa9d20eb411546eeb4999",
+     "size": 118538,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/final_frame.png"
+    },
+    {
+     "mtime": 1791088731,
+     "sha256": "3e4f4fbaed74b3c790d91dadd01454ec7eeb3c2bd1667bc3ad207d3fd140aee0",
+     "size": 759560,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/replay.gif"
+    },
+    {
+     "mtime": 1791088715,
+     "sha256": "36fe3678d56b972dc4229e0517c5543fa88efd9fe1c62978a75089ba0f48eaf5",
+     "size": 53614,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/episodes.jsonl"
+    },
+    {
+     "mtime": 1791088715,
+     "sha256": "3f442be38b4965d9d34cf4695e8e09755439b5765dad88c03e82b6f86f0b6ac4",
+     "size": 138229,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/calls.jsonl"
+    },
+    {
+     "mtime": 1791088731,
+     "sha256": "8149c6d8c9a1cbfcfa19be29fa218fb0d6250230ebb64e37d2b39e9dec193ee3",
+     "size": 1166,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/summary.json"
+    },
+    {
+     "mtime": 1791088731,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/visualization-errors.json"
+    }
+   ],
+   "mime": "application/zip",
+   "mtime": 1791089602,
+   "path": "artifacts/market-split-haiku-r0-001-records/market-split-haiku-r0-001-records-v1.zip",
+   "prompt_sha256": "a6ef1e2cb8a19f069f5925692829adab1804d6930fb433484952219a824d0594",
+   "sha256": "1951dda6a01eebf278617e07355f72cec55071d2bfcdb1542774a8f8c0060f01",
+   "size_bytes": 36558
+  },
+  "market-split-haiku-r0-001@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791089635,
+     "sha256": "b7f940fe3708af9f9bdee89cc578c1331d3f5bfb32fdf14cfa3226e1acb02bef",
+     "size": 3242,
+     "uri": "researchers/dmarz/notes/market-split-api/report/src/qualification_plot.py"
+    },
+    {
+     "mtime": 1791089602,
+     "sha256": "1c220b4e126bcae589a14949b690bca59feb70b7903f9d99bf74da11c97b1a0c",
+     "size": 776,
+     "uri": "researchers/dmarz/notes/market-split-haiku/report/r0-001/episode-results.csv"
+    },
+    {
+     "mtime": 1791089602,
+     "sha256": "b5d4abbd80ec5e1dbb285130915675cef6e7e248ba3e7c1f2de3a11b9ef3fdd9",
+     "size": 5625,
+     "uri": "researchers/dmarz/notes/market-split-haiku/report/r0-001/run-receipts.json"
+    },
+    {
+     "mtime": 1791089602,
+     "sha256": "cc8292fd5cdc3c7c4d2f5faa9bfa75309f0c5fe28863d26daccad27c651558f8",
+     "size": 934,
+     "uri": "researchers/dmarz/notes/market-split-haiku/report/r0-001/usage.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791089636,
+   "path": "artifacts/market-split-haiku-r0-001/market-split-haiku-r0-001-v1.png",
+   "prompt_sha256": "a6ef1e2cb8a19f069f5925692829adab1804d6930fb433484952219a824d0594",
+   "sha256": "f2921cea04b9a058f93966c8a6304b243fdae8eadf6362ad2ecac246e97a634c",
+   "size_bytes": 148661
+  },
   "market-split-scripted-frame@1": {
    "host": "halcyons-macbook-pro-4",
    "ingredients": [
@@ -2157,6 +2299,136 @@
    "prompt_sha256": "11b9ec3477d33ef3d92d8e2a58175318dc9070da2d09bf35192cf9413db940ab",
    "sha256": "845ca47d4da1d159b3cc2f3749e087fc3a0f024235772b79d9069d76972d2e9a",
    "size_bytes": 834476
+  },
+  "sybil-budget-api-s1-retention@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791085306,
+     "sha256": "637fa48c20b937a9ef0ce798c4fefbcf046fb24e8f89823cb88063e9a92508af",
+     "size": 5339,
+     "uri": "researchers/dmarz/notes/sybil-budget-api/src/render.py"
+    },
+    {
+     "mtime": 1791085306,
+     "sha256": "77664ba3d9d454e6b3c3b3afaa34ba977ecca9926567a8134a1f020ad951f875",
+     "size": 4251,
+     "uri": "researchers/dmarz/notes/sybil-budget-api/src/analyze.py"
+    },
+    {
+     "mtime": 1791085306,
+     "sha256": "aeb4100b710c40495d64e6f9c7ff044bbdeb75151caca4209467ecabd31f5ce4",
+     "size": 6600,
+     "uri": "researchers/dmarz/notes/sybil-budget-api/src/study.py"
+    },
+    {
+     "mtime": 1791085306,
+     "sha256": "f9222f8d5f9e56a48ba4fb96664e76b5e3012b283c9c13a27ce95a863b296398",
+     "size": 8891,
+     "uri": "researchers/dmarz/notes/sybil-budget-api/src/sim.py"
+    },
+    {
+     "mtime": 1791085306,
+     "sha256": "7ece847fa6dbb18ad831c7e8e4cbd18efccc1bef7ce3fda68382d89523268c9f",
+     "size": 2101,
+     "uri": "researchers/dmarz/notes/sybil-budget-api/design.yaml"
+    },
+    {
+     "mtime": 1791085306,
+     "sha256": "a9a8538e6cf3103128e66e399310c8242e714de4d1e3f1b59e82ffd0460c54ce",
+     "size": 42,
+     "uri": "researchers/dmarz/notes/sybil-budget-api/requirements.txt"
+    },
+    {
+     "mtime": 1791090587,
+     "sha256": "d1ba1907bd5eb5ca51e9198ae0db760479120ba29864a4639b08c02ecb761822",
+     "size": 505067,
+     "uri": "data/sybil-followups/budget-s1/episodes.jsonl.gz"
+    },
+    {
+     "mtime": 1791090577,
+     "sha256": "6b93848f7e1cd8bbe557d2b1aaa8e8f5a73dd1e1a9e589f4240ed0b29e0ab5d3",
+     "size": 928,
+     "uri": "data/sybil-followups/budget-s1/summary.json"
+    },
+    {
+     "mtime": 1788431650,
+     "sha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9",
+     "size": 773236,
+     "uri": "/System/Library/Fonts/Supplemental/Arial.ttf"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791090875,
+   "path": "artifacts/sybil-budget-api-s1-retention/sybil-budget-api-s1-retention-v1.png",
+   "prompt_sha256": "a6ef1e2cb8a19f069f5925692829adab1804d6930fb433484952219a824d0594",
+   "sha256": "09b2de95645ebeb13de416a3e006a09b1ee149229689519e795e26e748375ee3",
+   "size_bytes": 364976
+  },
+  "sybil-budget-api-s1@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791085306,
+     "sha256": "637fa48c20b937a9ef0ce798c4fefbcf046fb24e8f89823cb88063e9a92508af",
+     "size": 5339,
+     "uri": "researchers/dmarz/notes/sybil-budget-api/src/render.py"
+    },
+    {
+     "mtime": 1791085306,
+     "sha256": "77664ba3d9d454e6b3c3b3afaa34ba977ecca9926567a8134a1f020ad951f875",
+     "size": 4251,
+     "uri": "researchers/dmarz/notes/sybil-budget-api/src/analyze.py"
+    },
+    {
+     "mtime": 1791085306,
+     "sha256": "aeb4100b710c40495d64e6f9c7ff044bbdeb75151caca4209467ecabd31f5ce4",
+     "size": 6600,
+     "uri": "researchers/dmarz/notes/sybil-budget-api/src/study.py"
+    },
+    {
+     "mtime": 1791085306,
+     "sha256": "f9222f8d5f9e56a48ba4fb96664e76b5e3012b283c9c13a27ce95a863b296398",
+     "size": 8891,
+     "uri": "researchers/dmarz/notes/sybil-budget-api/src/sim.py"
+    },
+    {
+     "mtime": 1791085306,
+     "sha256": "7ece847fa6dbb18ad831c7e8e4cbd18efccc1bef7ce3fda68382d89523268c9f",
+     "size": 2101,
+     "uri": "researchers/dmarz/notes/sybil-budget-api/design.yaml"
+    },
+    {
+     "mtime": 1791085306,
+     "sha256": "a9a8538e6cf3103128e66e399310c8242e714de4d1e3f1b59e82ffd0460c54ce",
+     "size": 42,
+     "uri": "researchers/dmarz/notes/sybil-budget-api/requirements.txt"
+    },
+    {
+     "mtime": 1791090587,
+     "sha256": "d1ba1907bd5eb5ca51e9198ae0db760479120ba29864a4639b08c02ecb761822",
+     "size": 505067,
+     "uri": "data/sybil-followups/budget-s1/episodes.jsonl.gz"
+    },
+    {
+     "mtime": 1791090577,
+     "sha256": "6b93848f7e1cd8bbe557d2b1aaa8e8f5a73dd1e1a9e589f4240ed0b29e0ab5d3",
+     "size": 928,
+     "uri": "data/sybil-followups/budget-s1/summary.json"
+    },
+    {
+     "mtime": 1788431650,
+     "sha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9",
+     "size": 773236,
+     "uri": "/System/Library/Fonts/Supplemental/Arial.ttf"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791090849,
+   "path": "artifacts/sybil-budget-api-s1/sybil-budget-api-s1-v1.png",
+   "prompt_sha256": "a6ef1e2cb8a19f069f5925692829adab1804d6930fb433484952219a824d0594",
+   "sha256": "f087b1cbe8c8dcb45343793ef201f6b8bcafd0a6912efc9e3c457cc6726cb2dd",
+   "size_bytes": 344147
   },
   "sybil-newcomer-api-s1@1": {
    "host": "halcyons-macbook-pro-4",
@@ -4743,151 +5015,9 @@
    "prompt_sha256": "6872cb407834d8a9d6ad298d6435ad9eb89c1fc29b24839b99ced5c52508dc0e",
    "sha256": "ea4ec1019cee0eabd0176e6326993c227d797117492198050c5c619e4d7e9587",
    "size_bytes": 1542505
-  },
-  "market-split-haiku-r0-001@1": {
-   "host": "halcyons-macbook-pro-4",
-   "ingredients": [
-    {
-     "mtime": 1791089635,
-     "sha256": "b7f940fe3708af9f9bdee89cc578c1331d3f5bfb32fdf14cfa3226e1acb02bef",
-     "size": 3242,
-     "uri": "researchers/dmarz/notes/market-split-api/report/src/qualification_plot.py"
-    },
-    {
-     "mtime": 1791089602,
-     "sha256": "1c220b4e126bcae589a14949b690bca59feb70b7903f9d99bf74da11c97b1a0c",
-     "size": 776,
-     "uri": "researchers/dmarz/notes/market-split-haiku/report/r0-001/episode-results.csv"
-    },
-    {
-     "mtime": 1791089602,
-     "sha256": "b5d4abbd80ec5e1dbb285130915675cef6e7e248ba3e7c1f2de3a11b9ef3fdd9",
-     "size": 5625,
-     "uri": "researchers/dmarz/notes/market-split-haiku/report/r0-001/run-receipts.json"
-    },
-    {
-     "mtime": 1791089602,
-     "sha256": "cc8292fd5cdc3c7c4d2f5faa9bfa75309f0c5fe28863d26daccad27c651558f8",
-     "size": 934,
-     "uri": "researchers/dmarz/notes/market-split-haiku/report/r0-001/usage.json"
-    }
-   ],
-   "mime": "image/png",
-   "mtime": 1791089636,
-   "path": "artifacts/market-split-haiku-r0-001/market-split-haiku-r0-001-v1.png",
-   "prompt_sha256": "a6ef1e2cb8a19f069f5925692829adab1804d6930fb433484952219a824d0594",
-   "sha256": "f2921cea04b9a058f93966c8a6304b243fdae8eadf6362ad2ecac246e97a634c",
-   "size_bytes": 148661
-  },
-  "market-split-haiku-r0-001-records@1": {
-   "host": "halcyons-macbook-pro-4",
-   "ingredients": [
-    {
-     "mtime": 1791089533,
-     "sha256": "c0a6a74ec361b40f144c7547059c8c1950462042a684178138f40116a0c89cbf",
-     "size": 7089,
-     "uri": "researchers/dmarz/notes/market-split-api/report/src/archive.py"
-    },
-    {
-     "mtime": 1791089480,
-     "sha256": "f12de067ad70379a36d937b825486c10c011b2968f88bb7c7d7a5bfa1607a748",
-     "size": 5625,
-     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/r0-001-verified.json"
-    },
-    {
-     "mtime": 1791089355,
-     "sha256": "b2b2f00cb038e53da29ca4b0f0b5d6bd89f3bea71713fdc46cbcf54775c54a1d",
-     "size": 118584,
-     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/progress.png"
-    },
-    {
-     "mtime": 1791089375,
-     "sha256": "8d844da577e0fa28dfc9659f024a00395b9929f09b95dbb1bb4ef99c7529eda2",
-     "size": 121263,
-     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/final_frame.png"
-    },
-    {
-     "mtime": 1791089389,
-     "sha256": "9f398eb73c9bbf83eb066e040b9b28821b8e33d6d9120902c683e52e9d25baab",
-     "size": 796223,
-     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/replay.gif"
-    },
-    {
-     "mtime": 1791089375,
-     "sha256": "77341ee8cdbace6b94abcdb3fc13ba96e98d4f411e5d1dc20d309a5b2d0ac220",
-     "size": 55518,
-     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/episodes.jsonl"
-    },
-    {
-     "mtime": 1791089375,
-     "sha256": "f5bd096bafd6363cc144ec4b076f6a255039be17f8357100b449925a03b6de96",
-     "size": 141279,
-     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/calls.jsonl"
-    },
-    {
-     "mtime": 1791089389,
-     "sha256": "2b6b073b802fefe245d28c9d721c88d01949d40435c35db999499f91c67ca15a",
-     "size": 1166,
-     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/summary.json"
-    },
-    {
-     "mtime": 1791089389,
-     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-     "size": 3,
-     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/visualization-errors.json"
-    },
-    {
-     "mtime": 1791088715,
-     "sha256": "3f3a39532c7519daeec8e8a375b01f706e503e38ce1698622311cedcf0e08209",
-     "size": 120191,
-     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/progress.png"
-    },
-    {
-     "mtime": 1791088716,
-     "sha256": "4d81e300193ae171a24d3abb86874bf2bf0e21d5282fa9d20eb411546eeb4999",
-     "size": 118538,
-     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/final_frame.png"
-    },
-    {
-     "mtime": 1791088731,
-     "sha256": "3e4f4fbaed74b3c790d91dadd01454ec7eeb3c2bd1667bc3ad207d3fd140aee0",
-     "size": 759560,
-     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/replay.gif"
-    },
-    {
-     "mtime": 1791088715,
-     "sha256": "36fe3678d56b972dc4229e0517c5543fa88efd9fe1c62978a75089ba0f48eaf5",
-     "size": 53614,
-     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/episodes.jsonl"
-    },
-    {
-     "mtime": 1791088715,
-     "sha256": "3f442be38b4965d9d34cf4695e8e09755439b5765dad88c03e82b6f86f0b6ac4",
-     "size": 138229,
-     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/calls.jsonl"
-    },
-    {
-     "mtime": 1791088731,
-     "sha256": "8149c6d8c9a1cbfcfa19be29fa218fb0d6250230ebb64e37d2b39e9dec193ee3",
-     "size": 1166,
-     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/summary.json"
-    },
-    {
-     "mtime": 1791088731,
-     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-     "size": 3,
-     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/visualization-errors.json"
-    }
-   ],
-   "mime": "application/zip",
-   "mtime": 1791089602,
-   "path": "artifacts/market-split-haiku-r0-001-records/market-split-haiku-r0-001-records-v1.zip",
-   "prompt_sha256": "a6ef1e2cb8a19f069f5925692829adab1804d6930fb433484952219a824d0594",
-   "sha256": "1951dda6a01eebf278617e07355f72cec55071d2bfcdb1542774a8f8c0060f01",
-   "size_bytes": 36558
   }
  },
- "generated": "2026-10-03T21:54:20-0700",
+ "generated": "2026-10-03T22:41:11-0700",
  "lock": 1,
  "project": "Swarm Lab"
 }

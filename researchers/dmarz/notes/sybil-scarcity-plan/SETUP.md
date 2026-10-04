@@ -8,16 +8,16 @@ Owner: dmarz. Drafting agent: same-owner implementation/research assistant. Futu
 
 Question: at the original 972-identity graph and matched selection resources, does reducing truthful carriers from 81 to one per rare fact lower final specialist accuracy? The primary contrast is c=1 minus c=81 at random auditing, 108 checks and attacker check-pass probability 0.1. The practical marker is a ten-percentage-point decline. Scope: one synthetic information-routing task and a pinned model synthesizer, not a general Sybil-resistance claim.
 
-Research status: exploratory proposal. No complete novelty survey or accepted/reviewed hypothesis is claimed. Closest local evidence is [sybil-scale-api](../sybil-scale-api/RESULTS.md) and [sybil-newcomer-api](../sybil-newcomer-api/RESULTS.md). The pending budget follow-up's final result will be added only after verified completion. The scale source confirms 243 honest outside identities evenly covering three rare skills, hence 81 truthful carriers per fact. The proposed new manipulation has zero observed outcomes: evidence_confidence 0 (Untested).
+Research status: exploratory proposal. No complete novelty survey or accepted/reviewed hypothesis is claimed. Closest local evidence is [sybil-scale-api](../sybil-scale-api/RESULTS.md) and [sybil-newcomer-api](../sybil-newcomer-api/RESULTS.md). The completed [budget follow-up](../sybil-budget-api/RESULTS.md) is now summarized in the plan: 24 paired roots, 2,880 valid outcomes, strong-check random auditing with 108 checks at 100% accuracy and coverage auditing with 108 checks at 97.2%. The scale source confirms 243 honest outside identities evenly covering three rare skills, hence 81 truthful carriers per fact. The proposed new manipulation has zero observed outcomes: evidence_confidence 0 (Untested).
 
 ## Gate evidence
 
 | Gate | Status | Evidence and assessor, 2026-10-04 UTC | Next action / blocker |
 |---|---|---|---|
 | G0 Question and applicable research gates | Pending | [README](README.md) gives local anchors, source-based count check and narrow question; same-owner assessment | Resolve prior-art/research status and required successor review before later experimental work |
-| G1 Prospective design | Draft for review | [README](README.md), [design-plan.yaml](design-plan.yaml); prospective, no new outcomes observed | Parent incorporates the verified budget result anchor and publishes plan; resolve any review amendments before freezing |
+| G1 Prospective design | Draft for review | [README](README.md), [design-plan.yaml](design-plan.yaml); prospective, no new outcomes observed | Completed budget result anchor incorporated; publish plan and resolve any independent review amendments before freezing |
 | G2 Instrument and offline readiness | Pending, unimplemented | Proposed invariants, controls and visualization mapping are in README | No implementation or scripted experiment may begin under current NO START instruction |
-| G3 Stage admission | Blocked: explicit NO START | No registry row, launch receipt, runtime hash, queue item, resource claim or approved spend | Later explicit instruction, review/gate completion, immutable public plan verification, exact reservation and approved remote queue are all required |
+| G3 Stage admission | Blocked: explicit NO START | No hub registration, launch receipt, runtime hash, queue item, resource claim or approved spend | Later explicit instruction, review/gate completion, immutable public plan verification, exact reservation and approved remote queue are all required |
 | G4 Qualification | Not run | Proposed 168 scripted S0 outputs and 48 clean API Q0 calls | No pass claim; clean thresholds must be frozen before future responses |
 | G5 Reconciliation and closeout | Not applicable yet | No experimental run exists | When authorized later, retain every attempted/assigned outcome, publish analysis/post-mortem and release resources |
 
@@ -62,4 +62,4 @@ No experimental attempts exist. Changes below concern the plan only.
 - Execution / validity / qualification / scientific interpretation: not run, not assessed, not passed, no result.
 - Process status: future review and setup gates pending; current user authorization is drafting and publication only.
 - Spend, calls, resources and artifacts: zero new experimental calls/spend, no claim or server, no runtime/registration, no empirical figure or dataset generated.
-- Next action: parent reviews the three draft files, adds the verified budget follow-up result anchor and pushes the plan to GitHub; notify the user that it was pushed and **not started**. Publication alone must not create a queue item, claim a machine, run scripted experiments, load a model or dispatch calls.
+- Next action: parent publishes the three prospectively assessed files with the completed budget follow-up anchor to GitHub; notify the user that it was pushed and **not started**. Publication alone must not create a queue item, claim a machine, run scripted experiments, load a model or dispatch calls.

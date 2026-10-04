@@ -1,0 +1,27 @@
+{
+  "cohorts": [
+    {
+      "experiment": "sybil-budget-api",
+      "model_calls": 2896,
+      "usage_reported_calls": 2896,
+      "unknown_usage_calls": 0,
+      "actual_usd": 39.672176,
+      "actual_micro_usd": 39672176,
+      "ledger_sha256": "6ea542e8688b739dd993c4f798ce81b1227cd6f5ea56b882c7e0bf62c439588f"
+    },
+    {
+      "experiment": "sybil-newcomer-api",
+      "model_calls": 1980,
+      "usage_reported_calls": 1980,
+      "unknown_usage_calls": 0,
+      "actual_usd": 3.132219,
+      "actual_micro_usd": 3132219,
+      "ledger_sha256": "6bd6ab15d1addbe5512b00701a3dd3cd6ff03cb7840dd6707bfba70ac4fb4c52"
+    }
+  ],
+  "model_calls": 4876,
+  "actual_usd": 42.804395,
+  "unknown_usage_calls": 0,
+  "scope": "The two follow-ups, Q0 and S1 only; parent studies and other owner experiments excluded.",
+  "method": "Each closed per-study ledger counted once. Shared copied checkpoints and fixed peer-allocation holds excluded."
+}

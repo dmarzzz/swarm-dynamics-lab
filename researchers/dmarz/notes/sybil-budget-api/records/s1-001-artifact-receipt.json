@@ -1,0 +1,100 @@
+{
+  "run": "sybil-budget-api/46ebda03",
+  "status": "done",
+  "attempts": 1,
+  "params": {
+    "stage": "S1",
+    "backend": "anthropic",
+    "batch": "s1-001",
+    "source_hash": "66ea4fe1465678ff66d099eec14ea11dbf5bc69063c00e3cc57249e06db98f08",
+    "code": "e9db4c58a8847d2f54d60a8ff3cc70f81f58263e"
+  },
+  "metrics": {
+    "episodes": 2880,
+    "invalid": 0,
+    "model_calls": 2880,
+    "cost_usd": 39.349188,
+    "qualification_passed": 1,
+    "rare_accuracy": 0.5995370370370371
+  },
+  "progress": {
+    "completed": 2880,
+    "failed": 0,
+    "errors": []
+  },
+  "verified_artifacts": [
+    "assignments.jsonl.gz",
+    "episodes.jsonl.gz",
+    "worlds.jsonl.gz",
+    "summary.json",
+    "analysis.json",
+    "final_frame.png",
+    "replay.gif",
+    "retention.png",
+    "progress.png",
+    "initial_frame.png"
+  ],
+  "verified_images": {
+    "initial_frame.png": {
+      "width": 1920,
+      "height": 1440,
+      "frames": 1
+    },
+    "final_frame.png": {
+      "width": 1920,
+      "height": 1440,
+      "frames": 1
+    },
+    "replay.gif": {
+      "width": 1920,
+      "height": 1440,
+      "frames": 25
+    }
+  },
+  "worker_active": false,
+  "study_accounting": {
+    "attempted_calls": 2896,
+    "reserved_usd": 130.754844,
+    "actual_usd": 39.672176,
+    "usage_reported_calls": 2896
+  },
+  "guard_checkpoint": {
+    "actual_usd": 39.715736,
+    "held_usd": 10.0,
+    "committed_usd": 49.715736,
+    "reservations": 2933,
+    "settled": 2932,
+    "cap_usd": 60.0
+  },
+  "allocation_hold_note": "The $10 held value is the permanent peer-host allocation, not API spend or an unpriced request.",
+  "public_visual_audit": {
+    "verified_by": "dmarz/sybil-specialists, same-owner operator",
+    "final_counts": [
+      2880,
+      2880
+    ],
+    "failed": 0,
+    "not_started": 0,
+    "final_heatmap_matches_analysis": true,
+    "retention_companion_matches_analysis": true,
+    "replay_playback_observed_completed_counts": [
+      0,
+      1080
+    ],
+    "replay_meaning": "Measured call completion progress; not agent interaction."
+  },
+  "resource_release": {
+    "status": "done",
+    "claim_release_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/167",
+    "hub_release_event": 38372,
+    "active_claim_absent": true,
+    "receipt": "closeout.json"
+  },
+  "retained_data_sha256": {
+    "summary.json": "6b93848f7e1cd8bbe557d2b1aaa8e8f5a73dd1e1a9e589f4240ed0b29e0ab5d3",
+    "episodes.jsonl.gz": "d1ba1907bd5eb5ca51e9198ae0db760479120ba29864a4639b08c02ecb761822",
+    "assignments.jsonl.gz": "5539fe02bcbba3e19d6437ef83a6eee24577a67528cfe4e5282b8ad03fd56925",
+    "worlds.jsonl.gz": "e5ba100b3d90cc59dccf207db78ae04531819533c80c99883609394bdbb398b4",
+    "analysis.json": "758e10bd01c82a1930e215ff7f53bf772a564de0eb6af9f280707eea6fcbd694"
+  }
+}

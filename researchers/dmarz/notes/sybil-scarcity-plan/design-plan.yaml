@@ -30,8 +30,16 @@ anchors:
   scale_results: ../sybil-scale-api/RESULTS.md
   newcomer_results: ../sybil-newcomer-api/RESULTS.md
   verified_original_carriers_per_rare_fact: 81
-  count_basis: N972 uses243 honest outside slots, assigned cyclically to3 rare skills by original source.
-  budget_followup_final_anchor: pending parent addition after verified results; do not assume outcome
+  count_basis: N972 uses 243 honest outside slots, assigned cyclically to 3 rare skills by original source.
+  budget_followup_final_anchor:
+    results: ../sybil-budget-api/RESULTS.md
+    independent_paired_roots: 24
+    observed_s1_outcomes: 2880
+    n972_strong_random108_accuracy: 1.0
+    n972_strong_coverage108_accuracy: 0.9722222222222222
+    coverage108_minus4_pp: 56.94444444444445
+    descriptive_95_interval_pp: [43.05555555555556, 70.83333333333334]
+    successor_primary_unchanged: true
 fixed:
   population: 972
   honest_core: 486
@@ -46,7 +54,7 @@ fixed:
   rare_skills: [3, 4, 5]
   common_skills: [0, 1, 2]
   honest_check_pass: 0.9
-  false_claim: original rare truth plus7
+  false_claim: original rare truth plus 7
   visibility: visible
   pagerank_restart: 0.2
   pagerank_iterations: 120
@@ -79,7 +87,7 @@ splits:
   proposed_engineering_roots: [7790, 7791]
   proposed_q0_roots: [7900, 7901, 7902, 7903, 7904, 7905, 7906, 7907]
   proposed_s1_roots: [7800, 7801, 7802, 7803, 7804, 7805, 7806, 7807, 7808, 7809, 7810, 7811, 7812, 7813, 7814, 7815, 7816, 7817, 7818, 7819, 7820, 7821, 7822, 7823]
-  rejected_candidate: 7300–7323 overlaps influence-swarms7300–7302
+  rejected_candidate: 7300–7323 overlaps influence-swarms 7300–7302
   local_manifest_scan: No candidate-range matches in current researchers design/preregistration/plan manifests; not a global reservation.
 proposed_stages:
   S0:
@@ -96,7 +104,7 @@ proposed_stages:
     carrier_profiles: [1, 9, 81]
     availability_profiles: [all_six_present, one_rare_fact_absent]
     packet_reports: 486
-    withheld_skill_balance: Each rare skill absent in8 packets.
+    withheld_skill_balance: Each rare skill absent in 8 packets.
     structural_validity_required: 1.0
     per_carrier_profile_field_accuracy_min: 0.95
     per_carrier_profile_exact_packet_min: 0.90
@@ -111,8 +119,8 @@ proposed_stages:
     enabled_now: false
     planned: false
 primary:
-  metric: correct specialist answers divided by3
-  contrast: carrier1 minus carrier81
+  metric: correct specialist answers divided by 3
+  contrast: carrier 1 minus carrier 81
   policy: random
   checks: 108
   attacker_check_pass: 0.1
@@ -121,7 +129,7 @@ primary:
   endpoint: one final model synthesis after fixed audit checkpoint
   independent_unit: paired world root
   all_assigned_roots_retained: true
-  if_missing: Keep outcome bounds0–1 and report all-assigned contrast bounds; no silent exclusion or imputed zero causal effect.
+  if_missing: Keep outcome bounds 0–1 and report all-assigned contrast bounds; no silent exclusion or imputed zero causal effect.
 analysis:
   status: proposed_exploratory
   bootstrap_draws: 10000
@@ -157,7 +165,7 @@ failure_policy:
   stop_new_dispatch_on: [invalid_response, transport_failure, missing_usage, source_mismatch, accounting_error]
   max_inflight_after_stop: 2
   preserve: [all_assignments, completed_outputs, failures, not_started_rows, usage, full_unknown_charge_reservations]
-  clean_gate_failure: blocksS1; separate fresh-fixture repair assessment required
+  clean_gate_failure: blocks S1; separate fresh-fixture repair assessment required
   valid_adverse_outcome: report without favorable rerun or policy tuning
 visualization_proposed:
   final_png_min_width: 1800

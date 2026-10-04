@@ -25,5 +25,11 @@
   },
   "model_calls": 1980,
   "actual_usd": 3.132219,
-  "unknown_usage_calls": 0
+  "unknown_usage_calls": 0,
+  "accounting_archive_github": {
+    "repository": "dmarzzz/swarm-labs-agentops",
+    "path": "records/sybil-followups-2026-10-04/sybil-newcomer-api",
+    "commit": "e1c2592bd6a897af16ab626533a37bc53c013372",
+    "pull_request": "https://github.com/dmarzzz/swarm-labs-agentops/pull/166"
+  }
 }

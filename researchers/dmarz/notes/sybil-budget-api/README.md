@@ -11,6 +11,8 @@ Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](..
 
 Exploratory follow-up to [sybil-scale-api](../sybil-scale-api/RESULTS.md), owned by dmarz. This is a bounded synthetic study with model synthesis, not hundreds of autonomous model agents and not an accepted formal hypothesis. The owner explicitly authorized shipping both follow-ups in parallel and waived independent review on 2026-10-04. Own planning, qualification, reconciliation and post-run assessments remain required; S2 stays disabled.
 
+**Current status, 2026-10-04:** S1 completed all 2,880 outcomes in 120 cells on 24 paired world clusters, with zero invalid or missing outcomes. See [results and analysis](RESULTS.md), [S1 post-mortem](reviews/s1-001-post.md), [verification receipt](verification-summary.json) and [deployment closeout](DEPLOYMENT.md). Main S1 cost $39.349188; Q0 plus S1 cost $39.672176. The dated allocation and readiness entries below preserve what was planned at those earlier snapshots.
+
 ## Question
 
 How many identity checks are needed to preserve specialist information while keeping attacker admission low, and when do unreliable checks make more verification ineffective or harmful?
@@ -23,7 +25,7 @@ The previous graph generator, initial trust, task, fabrication, check policy, mo
 
 Python 3.12 and pinned dependencies in `requirements.txt` match the prior deployed runtime. Operator deployment record supplies the source revision, host name, exclusive claim and output location. Credentials enter by alias through the private launcher only.
 
-**Allocation correction, 2026-10-04, before S1:** the owner now requires one active experiment per host. Both Q0 stages are complete and their workers stopped. The planned S1 allocation keeps this budget study alone on `sim-dmarz-4`, with `dmarz-sybil-followups` narrowed to this experiment. The newcomer study will move to dedicated `sim-dmarz-sybil-newcomer`. These are planned deployment actions, not a claim that S1 has started. The two studies can still run in parallel on separate hosts. A $50/$10 budget partition preserves the combined $60 allowance using identical settled ledger checkpoints and persistent peer-allocation holds; details are in [RUN.md](RUN.md) and [DEPLOYMENT.md](DEPLOYMENT.md). Scientific conditions and the frozen runtime are unchanged; the newcomer host receives setup selftests, with no new API qualification required solely for relocation.
+**Historical allocation correction, 2026-10-04, before S1:** the owner now requires one active experiment per host. Both Q0 stages are complete and their workers stopped. The planned S1 allocation keeps this budget study alone on `sim-dmarz-4`, with `dmarz-sybil-followups` narrowed to this experiment. The newcomer study will move to dedicated `sim-dmarz-sybil-newcomer`. These are planned deployment actions, not a claim that S1 has started. The two studies can still run in parallel on separate hosts. A $50/$10 budget partition preserves the combined $60 allowance using identical settled ledger checkpoints and persistent peer-allocation holds; details are in [RUN.md](RUN.md) and [DEPLOYMENT.md](DEPLOYMENT.md). Scientific conditions and the frozen runtime are unchanged; the newcomer host receives setup selftests, with no new API qualification required solely for relocation.
 
 ## Protocol
 
@@ -47,4 +49,10 @@ This maps an engineering frontier inside the existing fixture. It does not estab
 
 ## Results
 
-No paid results at planning time. The completed stage will publish heatmaps, a measured completion replay, all-cell tables, paired contrasts, endpoint comparisons and a post-mortem. Report execution quality separately from scientific findings.
+The fresh-world primary result reproduced: at 972 identities and 10% attacker pass probability, 108 versus four coverage checks increased specialist accuracy by 56.9 percentage points (descriptive paired 95% interval +43.1 to +70.8). Seven of 120 cells met the joint mean target, all at 10% attacker pass. The frontier was nonmonotone: 324-identity coverage passed at 32 checks, then failed at 64 and 108 because attacker seat share rose.
+
+At 972 identities and 64 strong checks, random checking achieved 100% accuracy, 4.82% attacker seats and 52.9% specialist retention; coverage achieved 86.1%, 0.63% and 5.9%, respectively. Random's seat-share interval crossed the 5% target. Accuracy therefore cannot substitute for attacker exclusion, specialist inclusion or a safety guarantee. See [the complete analysis](RESULTS.md), [all 120 cells](results-cells.csv), [paired statistics](results-summary.json), [raw synthetic outcomes](records/s1-001-episodes.jsonl.gz) and [post-mortem](reviews/s1-001-post.md).
+
+The public [final heatmap](https://swarm-live.pages.dev/api/a/sybil-budget-api/46ebda03/final_frame.png), [retention view](https://swarm-live.pages.dev/api/a/sybil-budget-api/46ebda03/retention.png) and [recorded completion replay](https://swarm-live.pages.dev/api/a/sybil-budget-api/46ebda03/replay.gif) are available. The replay depicts real collection progress only.
+
+The later setup audit records a historical immutable-public-plan receipt failure; it does not relabel the run as formally preregistered or independently reviewed. Formal S2 and the reserved holdout remain closed. Any successor remains a plan until separately admitted; this completion authorizes no further run.

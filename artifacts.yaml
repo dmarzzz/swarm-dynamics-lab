@@ -1621,4 +1621,58 @@ artifacts:
           - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/summary.json
           - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/visualization-errors.json
         commit: 5a281b08afa25e4509eadd8df262baa8a08f74f3-dirty
+  - id: sybil-budget-api-s1
+    category: content
+    type: figure
+    title: 'Verification budget: measured S1 accuracy and attacker admission'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/sybil-budget-api-s1/sybil-budget-api-s1-v1.png
+        built_at: '2026-10-04T05:40:12Z'
+        note: Frozen-source local rendering of all 2,880 observed S1 outcomes; 24 paired worlds, one synthetic task family.
+          Same-owner saved-data audit; no new API calls.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10476-dbdf-7a10-829c-804fe9b3a8f5
+        prompt: when ur done with a run please push the results to github and a postmoterm and include analysis with the results
+          and let me know when u have also pushed another wxperiment plan but dont start
+        ingredients:
+          - researchers/dmarz/notes/sybil-budget-api/src/render.py
+          - researchers/dmarz/notes/sybil-budget-api/src/analyze.py
+          - researchers/dmarz/notes/sybil-budget-api/src/study.py
+          - researchers/dmarz/notes/sybil-budget-api/src/sim.py
+          - researchers/dmarz/notes/sybil-budget-api/design.yaml
+          - researchers/dmarz/notes/sybil-budget-api/requirements.txt
+          - data/sybil-followups/budget-s1/episodes.jsonl.gz
+          - data/sybil-followups/budget-s1/summary.json
+          - /System/Library/Fonts/Supplemental/Arial.ttf
+        commit: e2a0135c148f811ae95d74b56a844f7a5978e611-dirty
+  - id: sybil-budget-api-s1-retention
+    category: content
+    type: figure
+    title: 'Verification budget: honest specialist retention across the tested grid'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/sybil-budget-api-s1-retention/sybil-budget-api-s1-retention-v1.png
+        built_at: '2026-10-04T05:41:06Z'
+        note: Frozen-source local rendering of all 2,880 observed S1 outcomes; 24 paired worlds, one synthetic task family.
+          Same-owner saved-data audit; no new API calls.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10476-dbdf-7a10-829c-804fe9b3a8f5
+        prompt: when ur done with a run please push the results to github and a postmoterm and include analysis with the results
+          and let me know when u have also pushed another wxperiment plan but dont start
+        ingredients:
+          - researchers/dmarz/notes/sybil-budget-api/src/render.py
+          - researchers/dmarz/notes/sybil-budget-api/src/analyze.py
+          - researchers/dmarz/notes/sybil-budget-api/src/study.py
+          - researchers/dmarz/notes/sybil-budget-api/src/sim.py
+          - researchers/dmarz/notes/sybil-budget-api/design.yaml
+          - researchers/dmarz/notes/sybil-budget-api/requirements.txt
+          - data/sybil-followups/budget-s1/episodes.jsonl.gz
+          - data/sybil-followups/budget-s1/summary.json
+          - /System/Library/Fonts/Supplemental/Arial.ttf
+        commit: e2a0135c148f811ae95d74b56a844f7a5978e611-dirty
 requires: '1.2'
