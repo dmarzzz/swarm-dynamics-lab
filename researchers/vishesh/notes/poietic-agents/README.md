@@ -57,7 +57,7 @@ S0-02 executed once at frozen f362 source after81 runtime checks and complete ad
 
 D0-01 executed the owner-approved36-decision screen at frozen38544138 after106runtime checks. It stopped after3calls:Haiku returned the correct flat fetch inside a rejected Markdown fence;Qwen executed a correct fetch then receivedHTTP429;Jev was unstarted. All36outcomes are terminal,33unstarted,9aggregate artifacts verified. No role passes the diagnostic or qualifies. Cumulative conservative exposureUSD0.568560890 ofUSD2; worker/relay and allocation released. See [post-mortem](reviews/D0-01-post.md), [scientific review](reviews/D0-01-scientific.json) and [aggregate evidence](results/D0-01/summary.json). Raw traces remain private. Next work is offline interface/transport diagnosis; no successor is authorized or running andS1/S2 remain closed.
 
-The subsequent [offline repair and cost review](readiness/format-repair/REPORT.md) implements a bounded JSON-fence adapter and safe provider-error metadata;121 tests pass. The retained Haiku action executes in retrospective replay. No new native call or model substitution has occurred; this source needs fresh qualification.
+The subsequent [offline repair and cost review](readiness/format-repair/REPORT.md) implements a bounded JSON-fence adapter and safe provider-error metadata; 121 tests pass. The retained Haiku action executes in retrospective replay. No new native call or model substitution has occurred; this source needs fresh qualification.
 
 Read the [full protocol](PROTOCOL.md), [machine-readable design](design.yaml), [agent and context contracts](contracts.json), [visualization mapping](VISUALIZATION.md), [first qualification assessment](reviews/S0-01-pre.md), and [execution handoff](RUNBOOK.md).
 

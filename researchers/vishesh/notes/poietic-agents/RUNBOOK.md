@@ -1,6 +1,6 @@
 ## Current offline update
 
-Read [formatting/error repair and substitution costs](readiness/format-repair/REPORT.md).121 offline checks pass; current main uses `single-json-fence-v1`. Frozen D0-01 remains strict and failed. No new native attempt is approved or model substituted; do not reuse consumed D0 IDs or old admission.
+Read [formatting/error repair and substitution costs](readiness/format-repair/REPORT.md). 121 offline checks pass; current main uses `single-json-fence-v1`. Frozen D0-01 remains strict and failed. No new native attempt is approved or model substituted; do not reuse consumed D0 IDs or old admission.
 
 ## Latest handoff: D0-01 closed
 
