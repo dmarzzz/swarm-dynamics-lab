@@ -6,9 +6,10 @@ class Launch(unittest.TestCase):
     def test_draft_cannot_launch(self):
         cfg=json.loads((Path(__file__).parent.parent/'qualification-config.json').read_text())
         errors=launch_errors(cfg)
-        for key in ('independent_review_commit','exclusive_machine_claim','public_plan_receipt'):
+        for key in ('exclusive_machine_claim','public_plan_receipt'):
             self.assertIn('missing:'+key,errors)
         self.assertIn('config_not_ready',errors)
+        self.assertEqual(len(cfg['independent_review_commit']),40)
         self.assertNotIn('missing:spending_authorization',errors)
         self.assertEqual(cfg['stage_cap_microdollars'],20_000_000)
         self.assertEqual(cfg['episode_cap_microdollars'],2_000_000)
