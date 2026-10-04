@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "study_id": "influence-swarms",
+  "attempt": "native-d6-01",
+  "native_attempt_id": "native-D6-01",
+  "assessor": "vishesh/codex-experiments",
+  "assessed_at": "2026-10-04T18:08:55.980631+00:00",
+  "verdict": "complete_valid_result",
+  "outcome_interpretation": "Informative acquisition diagnostic: firstHTTP429,executionfailed,secondconditionunstarted. HOLD; no scientific behavioral comparison or automatic successor.",
+  "parent_handoff_sha256": "d00aa6d25b185287c6faa6086ac5f4a2d96110bf9f53c96dde250ddff7b3581c",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Current direct-route acquisition is rejected with429; the diagnostic observes that before a second request.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-audit.json",
+          "sha256": "f9c11cfdcfb6d43769dcad455332f7f536efe5d9e3baab37b9343570f879d8cd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-post.md",
+          "sha256": "7b608a52fbf7f42d7925b47988803b81541c49ec3d2e1571eecadae2d4fb3ec9"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "not_applicable",
+      "finding": "One inspected procurement case is an acquisition stimulus, not a realistic-scenario generalization test.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-audit.json",
+          "sha256": "f9c11cfdcfb6d43769dcad455332f7f536efe5d9e3baab37b9343570f879d8cd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-post.md",
+          "sha256": "7b608a52fbf7f42d7925b47988803b81541c49ec3d2e1571eecadae2d4fb3ec9"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Exact published first wire hash matches retained bytes; second condition remains unstarted, no format comparison claimed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-audit.json",
+          "sha256": "f9c11cfdcfb6d43769dcad455332f7f536efe5d9e3baab37b9343570f879d8cd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-post.md",
+          "sha256": "7b608a52fbf7f42d7925b47988803b81541c49ec3d2e1571eecadae2d4fb3ec9"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "No model answer. Neither native reasoning nor typed schema completion is established.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-audit.json",
+          "sha256": "f9c11cfdcfb6d43769dcad455332f7f536efe5d9e3baab37b9343570f879d8cd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-post.md",
+          "sha256": "7b608a52fbf7f42d7925b47988803b81541c49ec3d2e1571eecadae2d4fb3ec9"
+        }
+      ],
+      "next_action": "Await account-side route evidence and a bounded future decision; do not launch now.",
+      "acceptance_check": "Any future live contract check obtains complete response and usage without altering the original ledger or silently changing model/provider."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "HTTP429, one physical attempt, no retry, missing usage and unstarted second assignment are recorded distinctly.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-audit.json",
+          "sha256": "f9c11cfdcfb6d43769dcad455332f7f536efe5d9e3baab37b9343570f879d8cd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-post.md",
+          "sha256": "7b608a52fbf7f42d7925b47988803b81541c49ec3d2e1571eecadae2d4fb3ec9"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "One request is sufficient to detect this current refusal; it does not estimate recovery probability, error prevalence or behavior.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-audit.json",
+          "sha256": "f9c11cfdcfb6d43769dcad455332f7f536efe5d9e3baab37b9343570f879d8cd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-post.md",
+          "sha256": "7b608a52fbf7f42d7925b47988803b81541c49ec3d2e1571eecadae2d4fb3ec9"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Exact frozen synthetic reviewer request only; no operator context or evaluator answer added.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-audit.json",
+          "sha256": "f9c11cfdcfb6d43769dcad455332f7f536efe5d9e3baab37b9343570f879d8cd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-post.md",
+          "sha256": "7b608a52fbf7f42d7925b47988803b81541c49ec3d2e1571eecadae2d4fb3ec9"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Request/artifact hashes and stopped journal reconcile. No response or unstarted request was fabricated.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-audit.json",
+          "sha256": "f9c11cfdcfb6d43769dcad455332f7f536efe5d9e3baab37b9343570f879d8cd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-post.md",
+          "sha256": "7b608a52fbf7f42d7925b47988803b81541c49ec3d2e1571eecadae2d4fb3ec9"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "One0.048640reservation retained;4.917472of8cumulative,actualunknown. Worker stopped and exclusive capacity released.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-audit.json",
+          "sha256": "f9c11cfdcfb6d43769dcad455332f7f536efe5d9e3baab37b9343570f879d8cd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-post.md",
+          "sha256": "7b608a52fbf7f42d7925b47988803b81541c49ec3d2e1571eecadae2d4fb3ec9"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Source/wire/plan pinned;75offline tests passed in deployed runtime. Observedstatus is time-specific, not guaranteed reproducible.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-audit.json",
+          "sha256": "f9c11cfdcfb6d43769dcad455332f7f536efe5d9e3baab37b9343570f879d8cd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-post.md",
+          "sha256": "7b608a52fbf7f42d7925b47988803b81541c49ec3d2e1571eecadae2d4fb3ec9"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "not_applicable",
+      "finding": "Two-stage diagnostic needs an explicit attempted/unstarted status table; no fabricated agent animation is warranted.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-audit.json",
+          "sha256": "f9c11cfdcfb6d43769dcad455332f7f536efe5d9e3baab37b9343570f879d8cd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-post.md",
+          "sha256": "7b608a52fbf7f42d7925b47988803b81541c49ec3d2e1571eecadae2d4fb3ec9"
+        }
+      ]
+    }
+  ]
+}

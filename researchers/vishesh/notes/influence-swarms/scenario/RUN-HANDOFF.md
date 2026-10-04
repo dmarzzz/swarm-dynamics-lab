@@ -1,3 +1,11 @@
+# Current handoff: D6 diagnostic complete; HOLD native collection
+
+Read [D6 post-mortem](reviews/D6-post.md), [eleven-dimension review](reviews/D6-quality-review.json) and [audit](reviews/D6-audit.json). One first-callHTTP429; no retries, no response; second condition unstarted. The direct route has not recovered. Do not reinterpret the refusal as a model reasoning or schema failure.
+
+Original ledger now cap8/reserved4.917472/calls247; USD3.082528 remains. Usage for D6 is unknown; prior D5 uncertain reservations remain. Worker exited and allocation released. Next action is account-side diagnosis/resolution of the direct-route rejection. No endpoint polling, credential/provider switch or successor is authorized. Any later attempt requires its own bounded decision and fresh admission.
+
+## Previous handoff (historical)
+
 # Current handoff: D5 failed and closed; no successor launched
 
 D5 executed once and failed before any usable response. Read [D5 post-mortem](reviews/D5-post.md), [quality review](reviews/D5-quality-review.json), [all-assignment audit](reviews/D5-failure-audit.json) and [latest results](LATEST-RESULTS.md).24 assignments,48 failed transports,0valid decisions,48 missing usage records. Scientific comparisons are unavailable. Preserve the original ledger: cap8,reserved4.868832,calls246; remaining3.131168. No automatic replacement attempt. Full prior D5 worst-case envelope4.669440 no longer fits.

@@ -1,0 +1,29 @@
+{
+  "attempt": "native-D6-01",
+  "assigned": 2,
+  "started": 1,
+  "failed": 1,
+  "unstarted": 1,
+  "responses": 0,
+  "physical_attempts": 1,
+  "retries": 0,
+  "http_status": 429,
+  "retry_after_seconds": null,
+  "request_hash_matches_frozen_wire": true,
+  "usage_missing": 1,
+  "actual_usd": null,
+  "new_reserved_usd": 0.04864,
+  "cumulative_reserved_usd": 4.917472,
+  "remaining_usd": 3.082528,
+  "scientific_behavior_assessed": false,
+  "worker_stopped": true,
+  "hub_status": "failed",
+  "both_condition_tldr_verified": true,
+  "source_commit": "c0f3d096aa6e98b93dd6b8f09f71c4f1becf415b",
+  "evidence_hashes": {
+    "01-request.bin": "7949d468028fe0252e5c07e59fca4c71a224ff780239a2892933a14c54da47a3",
+    "events.jsonl": "225e9571300cf0ae878aa1512ca972c4f569cd8a006907f619aebe381c34b63b",
+    "state.json": "0b461c5dc3d80d0b6ea847d5892a2a82afccdd436099359d9900658a044972c2",
+    "summary.json": "890043efff65965383a3009f78de13f19fedd15264e49284c15bf01109785aed"
+  }
+}

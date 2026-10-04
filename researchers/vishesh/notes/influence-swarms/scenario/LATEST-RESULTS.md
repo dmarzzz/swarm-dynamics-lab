@@ -1,3 +1,9 @@
+# Latest diagnostic: D6 confirms direct API HTTP429
+
+**HOLD.** [D6 post-mortem](reviews/D6-post.md) · [exact audit](reviews/D6-audit.json) · [native run](https://swarm-live.pages.dev/#/r/influence-swarms%2F1004-180640-faf466).
+
+One request was attempted and rejected with HTTP429; the circuit stopped with no retry. The second reviewer format stayed unstarted. No model response, schema result or behavioral comparison was obtained. Actual charges are unknown; USD0.048640 newly reserved, USD4.917472 cumulative of8, USD3.082528 unreserved. Worker stopped and allocation released.
+
 # Latest attempt: D5 acquisition failed; D3 remains the latest behavioral evidence
 
 [Full D5 post-mortem](reviews/D5-post.md) · [Trace audit](reviews/D5-failure-audit.json) · [Reviewed replay](reviews/D5-failure-replay.html) · [Native run](https://swarm-live.pages.dev/#/r/influence-swarms%2F1004-164820-b6f158).

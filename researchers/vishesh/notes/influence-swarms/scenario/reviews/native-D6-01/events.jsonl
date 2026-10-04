@@ -1,0 +1,4 @@
+{"kind": "session", "maximum_attempts": 2, "retries": 0}
+{"kind": "request_artifact", "attempt": 1, "name": "01-request.bin", "bytes": 19288, "sha256": "7949d468028fe0252e5c07e59fca4c71a224ff780239a2892933a14c54da47a3"}
+{"kind": "attempt_start", "attempt": 1, "reserved_usd": 0.04864, "retry_permitted": false, "request": {"name": "01-request.bin", "bytes": 19288, "sha256": "7949d468028fe0252e5c07e59fca4c71a224ff780239a2892933a14c54da47a3"}}
+{"kind": "failure", "attempt": 1, "category": "http", "http_status": 429, "retry_after_seconds": null, "request_id": "req_011CfheB84WdagHH3byqtB6P", "retry_permitted": false, "usage_known": false, "actual_usd": null}

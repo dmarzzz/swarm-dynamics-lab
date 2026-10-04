@@ -1,0 +1,44 @@
+{
+  "stage": "D6",
+  "attempt": "native-D6-01",
+  "planned": 2,
+  "started": 1,
+  "terminal": 1,
+  "valid": 0,
+  "failed": 1,
+  "unstarted": 1,
+  "calls": 1,
+  "usage_missing": 1,
+  "observed_usage_cost_usd": 0,
+  "actual_usd": null,
+  "new_reserved_usd": 0.04864,
+  "qualified": false,
+  "failures": [
+    {
+      "kind": "failure",
+      "attempt": 1,
+      "category": "http",
+      "http_status": 429,
+      "retry_after_seconds": null,
+      "request_id": "req_011CfheB84WdagHH3byqtB6P",
+      "retry_permitted": false,
+      "usage_known": false,
+      "actual_usd": null
+    }
+  ],
+  "assignments": [
+    {
+      "arm": "matrix_inherited",
+      "status": "failed",
+      "category": "http"
+    },
+    {
+      "arm": "typed_inherited",
+      "status": "unstarted"
+    }
+  ],
+  "run": "influence-swarms/1004-180640-faf466",
+  "source_commit": "c0f3d096aa6e98b93dd6b8f09f71c4f1becf415b",
+  "packet_sha256": "50f20bc6cfe868e694172c1ff7c307855fcc1112f8e13cc25744680f835b4e41",
+  "public_plan": "https://github.com/dmarzzz/swarm-lab/blob/c0f3d096aa6e98b93dd6b8f09f71c4f1becf415b/researchers/vishesh/notes/influence-swarms/scenario/ITERATION-06-PREP.md"
+}

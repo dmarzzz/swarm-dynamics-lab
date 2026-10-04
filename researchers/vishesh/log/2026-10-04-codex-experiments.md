@@ -46,3 +46,6 @@ Read current local operations/access, RUN-QUALITY, study DESIGN-TRANSFER and con
 
 
 D5 native attempt executed under later direct-launch owner scope.24terminal/0valid,48failedtransports,48missingusage. Observed USD0 subtotal is not known zero cost. Cumulative reservations4.868832 of8; no refund/reset. Frozen request/outcome hashes and all72events reconciled; no architecture effect estimable. Native worker exited and allocation released; no successor. Published post-mortem, eleven-dimension quality review, raw native archive and honest failure replay.62 tests pass.
+
+
+Owner-approved D6 ran at c0f3d096 after75 deployedoffline tests. FirstHTTP429 recorded;onecall,noretry,secondconditionunstarted. Newreservation0.048640,actualunknown;originalledger8/4.917472/247. Fullrequesthash/circuit/accounting audit and11-dimension review complete. Workerexited,dedicatedallocationreleased;HOLD pendingaccount-side routeevidence. No behavioralconclusion or automaticnextattempt.

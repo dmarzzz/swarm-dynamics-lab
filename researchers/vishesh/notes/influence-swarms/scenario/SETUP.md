@@ -68,3 +68,8 @@ Prospective ITERATION-06-PREP.md preceded a separately versioned acquisition pri
 ### D6 approved execution preparation — 2026-10-04
 
 Owner approved the prepared two-request acquisition diagnostic, maximum USD0.097280, zero retries and first-failure stop. Exact packet and method unchanged. Added narrow manual runner after prospective binding addendum: immutable plan/source/wire/packet, current private host admission, original ledger floor and exact untouched D6 output; scoped memory-only stdin credential.75 offline tests pass, including full two-contract fixture and first429retaining unstarted second condition. Existing idle approved-account capacity verified; no new machine. Native result is still unobserved at this preparation step. Current pricing checked against official Haiku4.5 documentation (USD1/M input,5/M output). No follow-up study is authorized.
+
+
+### D6 completed diagnostic — 2026-10-04
+
+Owner-approved D6 executed at pinned c0f3d096. First request returnedHTTP429 and stopped; secondunstarted,zero retries,one missingusage. Both conditionTLDRs and immutable plan verified on hub; requesthash/counter/circuit audit passed. Ledgercap8/reserved4.917472/calls247. Worker stopped, dedicated allocation released; no additionalrun. Offline finalize and owning-agent11-dimension review complete; see reviews/D6-post.md. HOLD pending account-side evidence, not another researcher review.
