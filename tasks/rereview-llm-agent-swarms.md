@@ -3,7 +3,7 @@ id: rereview-llm-agent-swarms
 type: task
 title: 'Re-review survey: llm agent swarms (after revise)'
 kind: review
-status: claimed
+status: done
 priority: p0
 owner: dmarz/inbox-design-feedback
 for: dmarz
@@ -14,7 +14,9 @@ depends_on:
 topics:
 - llm-agent-swarms
 claimed_at: 2026-10-04T04:11Z
-updated: 2026-10-04T04:11Z
+updated: 2026-10-04T04:16Z
+outputs:
+- reviews/llm-agent-swarms--dmarz-inbox.md
 ---
 
 ## Goal
