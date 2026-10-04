@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: working
+state: done
 task: right-dissenter-reopening-design
-doing: "Drafting the RD5 successor on reliable reopening and validating context controls offline; no native dispatch."
-updated: 2026-10-04T18:12:07.337384+00:00
+doing: "Reopening design draft published; 23 offline tests pass, 162 prospective requests, zero native calls. RD5 remains complete. Changed scope/call-ceiling decision and native integration remain before launch."
+updated: 2026-10-04T18:24:17.580511+00:00
 ---
 
 ## Notes
