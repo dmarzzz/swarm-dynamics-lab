@@ -37,6 +37,7 @@
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [immune-response-v2](tasks/immune-response-v2.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T00:39Z | Refine and run the exploratory immune-response instrument |
+| [regrowth-plan-registration](tasks/regrowth-plan-registration.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T01:05Z | Repair missing Regrowth plan registration and publish experiment TLDRs |
 | [run-discussion-dose-s0](tasks/run-discussion-dose-s0.md) | claimed | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T00:54Z | Prepare and run the first real-model discussion-dose qualification |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -145,6 +146,8 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/private-control | working |  | 2026-10-04T01:03Z | TODO one line |
+| vishesh/codex-regrowth-docs | working | regrowth-plan-registration | 2026-10-04T01:03Z | Repair missing plan registration and publish public experimental-design summaries |
 | vishesh/codex-experiments | done | external-influence-v2 | 2026-10-04T00:54Z | V2 published and qualified; 50-outcome cross-scenario screen running on dedicated host within shared cap |
 | vishesh/codex-immune | working | immune-response-v2 | 2026-10-04T00:45Z | V2 scripted qualification passed; deploying isolated native S0 within shared budget |
 | vishesh/codex-methods | done | adaptive-quorum-api-v2 | 2026-10-04T00:39Z | Published factual API v2; 168 local Laya outcomes failed clean competence, no S1 |

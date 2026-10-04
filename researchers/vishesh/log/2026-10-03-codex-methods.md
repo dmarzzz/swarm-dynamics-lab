@@ -125,3 +125,5 @@ Researched primary ant, debate/vote and stable-tool methods; built 5/9-agent fac
 ## Shared run-review standard
 
 At the human’s explicit request, updated protected AGENTS.md and the worker README to require pre-run design assessment, post-mortem and continued bounded repair/rerun. Added reusable forms and failure taxonomy; distinguished negative findings from defects, and stage gating from repair diagnostics. Added retrospective API v2 post-mortem; its qualification issues remain open, not fixed by documentation. Manual scoped checked publication.
+
+Renamed the factual API v2 experiment display name to Antsy at the owner’s request. Stable experiment ID and historical outcomes retained; metadata-only update, no new experiment launch.

@@ -45,6 +45,32 @@ def contrast(records, rounds=6, bootstraps=2000):
             'invalid_outcome_bounds':worst,'contrast':f'(attack-clean) at {rounds} rounds minus (attack-clean) at 0 rounds',
             'caution':'Small-cluster pilot intervals are descriptive; these worlds share three templates.'}
 
+def private_contrast(records, rounds=6, bootstraps=2000):
+    """Equal-compute control: (attack-clean) target win after peer rounds minus the same after private rounds.
+
+    Both modes make the same calls per agent from one shared acquisition snapshot; only peer exposure differs.
+    """
+    groups=defaultdict(dict)
+    for r in records:
+        if r['arm']['rounds']!=rounds: continue
+        cell=(r['arm']['attack'],r['arm']['mode']);key=(r['task_id'],r['seed'])
+        if cell in groups[key]: raise ValueError('duplicate assigned episode')
+        groups[key][cell]=r['evaluation']
+    terms=[((True,'board'),1),((False,'board'),-1),((True,'private'),-1),((False,'private'),1)]
+    values=defaultdict(list); bounds=defaultdict(list)
+    for (task,seed),g in groups.items():
+        if any(c not in g for c,_ in terms): raise ValueError('incomplete private-control block; reconcile planned ledger')
+        value=sum(sign*g[c].get('target_win',0) for c,sign in terms)
+        values[task].append(value)
+        bounds[task].append((value-sum(g[c]['invalid'] for c,sign in terms if sign<0),value+sum(g[c]['invalid'] for c,sign in terms if sign>0)))
+    if not values: return {'task_clusters':0,'estimate':None}
+    means=[sum(v)/len(v) for v in values.values()];estimate=sum(means)/len(means)
+    rng=random.Random(4718);draws=sorted(sum(rng.choices(means,k=len(means)))/len(means) for _ in range(bootstraps))
+    worst=[sum(sum(b[i] for b in bs)/len(bs) for bs in bounds.values())/len(bounds) for i in (0,1)]
+    return {'task_clusters':len(means),'estimate':estimate,'exploratory_cluster_percentile_95':[draws[int(.025*bootstraps)],draws[int(.975*bootstraps)]],
+            'invalid_outcome_bounds':worst,'contrast':f'(attack-clean) after {rounds} board rounds minus (attack-clean) after {rounds} private rounds',
+            'caution':'Six-world trial; descriptive only. Positive = peer exposure, not extra compute, moves the attack outcome.'}
+
 def load_records(path):
     path=Path(path);files=sorted(path.glob('*.jsonl')) if path.is_dir() else [path]
     rows=[]
@@ -59,5 +85,8 @@ def load_records(path):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('episodes');a=p.parse_args();rows=load_records(a.episodes)
-    print(json.dumps({'scientific':bool(rows) and all(r['scientific'] for r in rows),'cells':summarize(rows),'primary_candidate':contrast(rows)},indent=2))
+    out={'scientific':bool(rows) and all(r['scientific'] for r in rows),'cells':summarize(rows)}
+    if any(r['arm']['mode']=='private' for r in rows): out['private_control']=private_contrast(rows)
+    if any(r['arm']['rounds']==0 for r in rows): out['primary_candidate']=contrast(rows)
+    print(json.dumps(out,indent=2))
 if __name__=='__main__': main()

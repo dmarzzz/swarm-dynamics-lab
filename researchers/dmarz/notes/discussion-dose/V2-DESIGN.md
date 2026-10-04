@@ -85,6 +85,8 @@ python3 scripts/run-discussion-dose.py <rev> --plan s1-<level>   # refused unles
 
 The launcher refuses `s0-*` until all four calibration batches have finished, and refuses `s1-*` until the matching S0 passed. About $4.08 of the $20 credit is spent (preflight $0.62, S0 $3.47). v1 qualification v3 should cost about $3.50, leaving roughly $12: enough for v2 calibration plus S0 (about $8), not S1.
 
+An exploratory equal-compute private-reflection control (plan `pc-H4`, fresh worlds 230-235) is specified separately in [PRIVATE-CONTROL.md](PRIVATE-CONTROL.md). It does not change the S0/S1 plans above.
+
 ## Limitations
 
 - Same three fictional rule templates as v1. A harder evidence structure is not a new domain.

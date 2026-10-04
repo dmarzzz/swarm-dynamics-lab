@@ -1,4 +1,6 @@
-# API procurement under urgency: adaptive quorum v2
+# Antsy
+
+API selection under deadline pressure.
 
 **Exploratory instrument, not an accepted hypothesis.** Replaces the recommendation-counting task in [v1](../adaptive-quorum/README.md) with choosing a document-extraction API from factual evidence. No real documents or customer data are sent to providers. Laya runs locally; Jev via OpenRouter remains deferred.
 
@@ -49,3 +51,5 @@ All-assigned correct selection, loss, constraint violations, abstentions, false 
 ## Run review and repair status
 
 [Retrospective S0 post-mortem](reviews/S0-attempt-1-post.md) tracks unresolved capability and design issues. Publication completed; qualification remains failed. Future attempts follow the shared pre-run/post-run repair cycle and preserve this attempt.
+
+Display name: **Antsy**. Stable experiment ID `adaptive-quorum-api-v2` retains the existing runs and links.
