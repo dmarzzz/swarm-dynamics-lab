@@ -3,14 +3,18 @@ id: right-dissenter-design-build
 type: task
 title: Build the Right Dissenter exploratory design and scenario harness
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-decision-models
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-decision-models
 depends_on: []
-topics: [decision-models, collective-decision]
+topics:
+- decision-models
+- collective-decision
+claimed_at: 2026-10-04T02:58Z
+updated: 2026-10-04T02:58Z
 ---
 
 ## Goal
