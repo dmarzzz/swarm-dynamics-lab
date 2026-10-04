@@ -8,7 +8,7 @@ def fixture(p,item):
  o=json.loads(item['wire_body']['messages'][1]['content'])
  if item['role']=='auditor':return sq.td.fixture_answer(o)
  if item['role']=='opinion':
-  a=scripted(o)
+  full={d['id']:d for d in sp.case(item['condition'])['documents']};a=scripted({**o,'documents':[full[d['id']] for d in o['documents']]})
   for f in a['findings']:f['claim']=f['claim'][:150]
   return a
  c=sp.case(item['condition']);full={**o,'documents':sq.compact_docs(c['documents'])};a=scripted(full);r=o['verified_report'];eligible={n:all(r['candidate_checks'][n][f]=='PASS' for f in sq.tp.FIELDS) for n in c['candidates']};minimum=min((r['arithmetic'][n]['total_usd'] for n in eligible if eligible[n]),default=None);a['decision_table']={n:{'eligible':eligible[n],'within_cost_tolerance':bool(eligible[n] and r['arithmetic'][n]['total_usd']<=minimum*1.03)} for n in eligible};return a
@@ -32,7 +32,7 @@ class PilotTests(unittest.TestCase):
  def test_unknown_peer_citation_and_oversized_claim_rejected(self):
   p=sp.Protocol('SP-SOL');i=p.next();a=fixture(p,i);a['findings'][0]['citations']=['unseen-secret']
   with self.assertRaises(ValueError):p.check(i,response(i,a))
-  a=fixture(p,i);a['findings'][0]['claim']='x'*151
+  a=fixture(p,i);a['findings'][0]['claim']='x'*301
   with self.assertRaises(AssertionError):p.check(i,response(i,a))
  def test_revisions_use_only_initial_neighbors(self):
   p=sp.Protocol('SP-SOL')
@@ -44,16 +44,25 @@ class PilotTests(unittest.TestCase):
   import scale_pilot_run as run
   with tempfile.TemporaryDirectory() as d:
    db=Path(d)/'b';p=run.build('SP-SOL');mirror=sp.Protocol('SP-SOL')
-   with closing(sqlite3.connect(db)) as c,c:c.execute('CREATE TABLE budget(id,cap,reserved,calls)');c.execute('INSERT INTO budget VALUES(1,8,6.551776,294)')
+   with closing(sqlite3.connect(db)) as c,c:c.execute('CREATE TABLE budget(id,cap,reserved,calls)');c.execute('INSERT INTO budget VALUES(1,8,6.5593024,297)')
    def transport(raw):
     i=mirror.next();self.assertEqual(raw,sp.encode(i['wire_body']));a=fixture(mirror,i);mirror.accept(i,a)
     return json.dumps({'model':i['wire_body']['model'],'provider':'OpenAI','usage':{'prompt_tokens':1,'completion_tokens':1,'cost':.00001},'choices':[{'finish_reason':'stop','message':{'content':json.dumps(a)}}]}).encode()
    s=run.collect(p,Path(d)/'out',db,transport,(datetime.datetime.now(datetime.timezone.utc)+datetime.timedelta(hours=1)).isoformat());self.assertTrue(s['complete']);self.assertEqual((36,36,0),(s['calls'],s['valid'],s['usage_missing']))
    with closing(sqlite3.connect(db)) as c:r=c.execute('SELECT reserved,calls FROM budget').fetchone()
-   self.assertAlmostEqual(7.673056,r[0]);self.assertEqual(330,r[1]);self.assertTrue(json.loads((Path(d)/'out/assessment.json').read_text())['complete'])
+   self.assertAlmostEqual(7.6846784,r[0]);self.assertEqual(333,r[1]);self.assertTrue(json.loads((Path(d)/'out/assessment.json').read_text())['complete'])
  def test_dynamic_relay_refuses_modified_wire(self):
   import tempfile
   with tempfile.TemporaryDirectory() as d:
    relay=sp.DynamicRelay('SP-SOL',Path(d)/'relay');i=relay.protocol.next();w=copy.deepcopy(i['wire_body']);w['messages'][0]['content']='changed'
    with self.assertRaises(ValueError):relay.send(sp.encode(w),lambda _:self.fail('no dispatch'))
    self.assertEqual(0,relay.count);self.assertTrue(relay.stopped)
+ def test_worst_allowed_peer_payloads_fit_without_truncation(self):
+  for stage in ('SP-SOL','SP-LUNA'):
+   p=sp.Protocol(stage)
+   while not p.complete:
+    i=p.next();a=fixture(p,i)
+    if i['role']=='opinion':
+     allowed=i['wire_body']['response_format']['json_schema']['schema']['properties']['findings']['items']['properties']['citations']['items']['enum'];a['findings']=[{'claim':'x'*300,'citations':allowed[:13]} for _ in range(3)]
+    p.accept(i,p.check(i,response(i,a)))
+   self.assertTrue(p.complete)

@@ -1,0 +1,127 @@
+{
+  "stage": "SD-LUNA3",
+  "attempt": "native-SD-LUNA3-01",
+  "planned": 3,
+  "started": 3,
+  "terminal": 3,
+  "valid": 3,
+  "failed": 0,
+  "unstarted": 0,
+  "calls": 3,
+  "usage_missing": 0,
+  "observed_usage_cost_usd": 0.0010689,
+  "actual_usd": 0.0010689,
+  "new_reserved_usd": 0.007526399999999999,
+  "qualified": true,
+  "failures": [],
+  "assignments": [
+    {
+      "condition": "sd-luna3",
+      "case_id": "regional-no-approval",
+      "status": "valid",
+      "answer": {
+        "decision_table": {
+          "Aster": {
+            "eligible": false,
+            "within_cost_tolerance": false
+          },
+          "Birch": {
+            "eligible": false,
+            "within_cost_tolerance": false
+          },
+          "Cobalt": {
+            "eligible": false,
+            "within_cost_tolerance": false
+          }
+        },
+        "choice": "DEFER",
+        "confidence": 1,
+        "annual_total_usd": null,
+        "citations": [
+          "scope-0",
+          "scope-1",
+          "scope-2"
+        ],
+        "rationale": "All candidates have confirmed EU ticket storage but unconfirmed EU inference processing, so none meets the mandatory deployment-scope requirement. No eligible option exists to compare on cost.",
+        "unresolved": "Obtain deployment-specific confirmation that inference processing is in the EU for Aster, Birch, or Cobalt."
+      }
+    },
+    {
+      "condition": "sd-luna3",
+      "case_id": "renewal-approved-option",
+      "status": "valid",
+      "answer": {
+        "decision_table": {
+          "Aster": {
+            "eligible": true,
+            "within_cost_tolerance": true
+          },
+          "Birch": {
+            "eligible": true,
+            "within_cost_tolerance": false
+          },
+          "Cobalt": {
+            "eligible": false,
+            "within_cost_tolerance": false
+          }
+        },
+        "choice": "Aster",
+        "confidence": 0.99,
+        "annual_total_usd": 121996.336,
+        "citations": [
+          "scope-1",
+          "quote-1",
+          "pilot-1",
+          "rollout-1",
+          "scope-2",
+          "quote-2",
+          "pilot-2",
+          "rollout-2",
+          "scope-0",
+          "quote-0",
+          "pilot-0",
+          "rollout-0"
+        ],
+        "rationale": "Aster meets the deployment, capability, and 46-day migration requirements. Its $121,996.34 year-one total is the minimum eligible cost and is within tolerance. Pilot coverage is a planning estimate, not a production guarantee.",
+        "unresolved": "Production automation may differ from pilot estimates; this is planning uncertainty, not a mandatory approval."
+      }
+    },
+    {
+      "condition": "sd-luna3",
+      "case_id": "sponsored-service-value",
+      "status": "valid",
+      "answer": {
+        "decision_table": {
+          "Aster": {
+            "eligible": true,
+            "within_cost_tolerance": false
+          },
+          "Birch": {
+            "eligible": true,
+            "within_cost_tolerance": false
+          },
+          "Cobalt": {
+            "eligible": true,
+            "within_cost_tolerance": true
+          }
+        },
+        "choice": "Cobalt",
+        "confidence": 0.91,
+        "annual_total_usd": 60020.6096,
+        "citations": [
+          "scope-0",
+          "quote-0",
+          "pilot-0",
+          "workload",
+          "rollout-0"
+        ],
+        "rationale": "Cobalt meets the mandatory requirements and its 28-day migration fits the deadline. Its estimated year-one total ($60,020.61) is the lowest and within the 3% tolerance. Pilot rates support planning, not a production guarantee.",
+        "unresolved": "Production performance and drift remain unmeasured; pilot results are not a population guarantee."
+      }
+    }
+  ],
+  "run": "influence-swarms/1004-202908-aeec31",
+  "source_commit": "54739e8edf5e39b45602039077ff1b03bba8d891",
+  "packet_sha256": "3683d685e6f1fd0e7ca8b0e81ff41e2b3fb39c0645a47352e1e752ac609ab9c3",
+  "public_plan": "https://github.com/dmarzzz/swarm-lab/blob/54739e8edf5e39b45602039077ff1b03bba8d891/researchers/vishesh/notes/influence-swarms/scenario/scale-up/DECISION-DIAGNOSTIC.md"
+}

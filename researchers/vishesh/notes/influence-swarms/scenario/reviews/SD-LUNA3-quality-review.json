@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "study_id": "influence-swarms",
+  "attempt": "native-sd-luna3-01",
+  "native_attempt_id": "native-SD-LUNA3-01",
+  "assessor": "vishesh/codex-experiments",
+  "assessed_at": "2026-10-04T20:30:39.081411+00:00",
+  "verdict": "complete_valid_result",
+  "outcome_interpretation": "QualificationTrue;3/3chair decisions acceptable. Full-scale admission not implied.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "See evidence-linked role assessment and retained exact requests/responses; isolated development qualification only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SD-LUNA3-post.md",
+          "sha256": "86a9c9c71885c3c30c1af9c5c703a0192f61b23c9103cbfd0c9c1d55868f36cb"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/assessment.json",
+          "sha256": "f833e5e27257859bc9c91f9a1cd1c71446a8f750a91afb363a5771e4ba1a4f42"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/summary.json",
+          "sha256": "27833258945f9d42e35a024f14c4cbe088e3c5cfc3bb641dabed25491b3c6a12"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Three inspected synthetic development roots; no generalization claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SD-LUNA3-post.md",
+          "sha256": "86a9c9c71885c3c30c1af9c5c703a0192f61b23c9103cbfd0c9c1d55868f36cb"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/assessment.json",
+          "sha256": "f833e5e27257859bc9c91f9a1cd1c71446a8f750a91afb363a5771e4ba1a4f42"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/summary.json",
+          "sha256": "27833258945f9d42e35a024f14c4cbe088e3c5cfc3bb641dabed25491b3c6a12"
+        }
+      ],
+      "next_action": "Analyze failed chair reasoning and prospectively qualify a bounded explicit eligibility/cost decision contract.",
+      "acceptance_check": "No invented blocker, correct within-tolerance membership and correct authorization on all declared diagnostic cases before scale."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Frozen independent role requests, primary evidence and exact route/settings.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SD-LUNA3-post.md",
+          "sha256": "86a9c9c71885c3c30c1af9c5c703a0192f61b23c9103cbfd0c9c1d55868f36cb"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/assessment.json",
+          "sha256": "f833e5e27257859bc9c91f9a1cd1c71446a8f750a91afb363a5771e4ba1a4f42"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/summary.json",
+          "sha256": "27833258945f9d42e35a024f14c4cbe088e3c5cfc3bb641dabed25491b3c6a12"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "3/3correct chairs; source-bound facts/checks separately retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SD-LUNA3-post.md",
+          "sha256": "86a9c9c71885c3c30c1af9c5c703a0192f61b23c9103cbfd0c9c1d55868f36cb"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/assessment.json",
+          "sha256": "f833e5e27257859bc9c91f9a1cd1c71446a8f750a91afb363a5771e4ba1a4f42"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/summary.json",
+          "sha256": "27833258945f9d42e35a024f14c4cbe088e3c5cfc3bb641dabed25491b3c6a12"
+        }
+      ],
+      "next_action": "Analyze failed chair reasoning and prospectively qualify a bounded explicit eligibility/cost decision contract.",
+      "acceptance_check": "No invented blocker, correct within-tolerance membership and correct authorization on all declared diagnostic cases before scale."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "See evidence-linked role assessment and retained exact requests/responses; isolated development qualification only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SD-LUNA3-post.md",
+          "sha256": "86a9c9c71885c3c30c1af9c5c703a0192f61b23c9103cbfd0c9c1d55868f36cb"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/assessment.json",
+          "sha256": "f833e5e27257859bc9c91f9a1cd1c71446a8f750a91afb363a5771e4ba1a4f42"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/summary.json",
+          "sha256": "27833258945f9d42e35a024f14c4cbe088e3c5cfc3bb641dabed25491b3c6a12"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "See evidence-linked role assessment and retained exact requests/responses; isolated development qualification only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SD-LUNA3-post.md",
+          "sha256": "86a9c9c71885c3c30c1af9c5c703a0192f61b23c9103cbfd0c9c1d55868f36cb"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/assessment.json",
+          "sha256": "f833e5e27257859bc9c91f9a1cd1c71446a8f750a91afb363a5771e4ba1a4f42"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/summary.json",
+          "sha256": "27833258945f9d42e35a024f14c4cbe088e3c5cfc3bb641dabed25491b3c6a12"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "See evidence-linked role assessment and retained exact requests/responses; isolated development qualification only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SD-LUNA3-post.md",
+          "sha256": "86a9c9c71885c3c30c1af9c5c703a0192f61b23c9103cbfd0c9c1d55868f36cb"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/assessment.json",
+          "sha256": "f833e5e27257859bc9c91f9a1cd1c71446a8f750a91afb363a5771e4ba1a4f42"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/summary.json",
+          "sha256": "27833258945f9d42e35a024f14c4cbe088e3c5cfc3bb641dabed25491b3c6a12"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "3valid/3planned;0missing usage.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SD-LUNA3-post.md",
+          "sha256": "86a9c9c71885c3c30c1af9c5c703a0192f61b23c9103cbfd0c9c1d55868f36cb"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/assessment.json",
+          "sha256": "f833e5e27257859bc9c91f9a1cd1c71446a8f750a91afb363a5771e4ba1a4f42"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/summary.json",
+          "sha256": "27833258945f9d42e35a024f14c4cbe088e3c5cfc3bb641dabed25491b3c6a12"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "0.007526399999999999reserved;0.0010689reported; no retry or new allowance.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SD-LUNA3-post.md",
+          "sha256": "86a9c9c71885c3c30c1af9c5c703a0192f61b23c9103cbfd0c9c1d55868f36cb"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/assessment.json",
+          "sha256": "f833e5e27257859bc9c91f9a1cd1c71446a8f750a91afb363a5771e4ba1a4f42"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/summary.json",
+          "sha256": "27833258945f9d42e35a024f14c4cbe088e3c5cfc3bb641dabed25491b3c6a12"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "See evidence-linked role assessment and retained exact requests/responses; isolated development qualification only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SD-LUNA3-post.md",
+          "sha256": "86a9c9c71885c3c30c1af9c5c703a0192f61b23c9103cbfd0c9c1d55868f36cb"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/assessment.json",
+          "sha256": "f833e5e27257859bc9c91f9a1cd1c71446a8f750a91afb363a5771e4ba1a4f42"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/summary.json",
+          "sha256": "27833258945f9d42e35a024f14c4cbe088e3c5cfc3bb641dabed25491b3c6a12"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "See evidence-linked role assessment and retained exact requests/responses; isolated development qualification only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SD-LUNA3-post.md",
+          "sha256": "86a9c9c71885c3c30c1af9c5c703a0192f61b23c9103cbfd0c9c1d55868f36cb"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/assessment.json",
+          "sha256": "f833e5e27257859bc9c91f9a1cd1c71446a8f750a91afb363a5771e4ba1a4f42"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-SD-LUNA3-01/summary.json",
+          "sha256": "27833258945f9d42e35a024f14c4cbe088e3c5cfc3bb641dabed25491b3c6a12"
+        }
+      ]
+    }
+  ]
+}

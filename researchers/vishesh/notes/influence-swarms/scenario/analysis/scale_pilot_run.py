@@ -14,14 +14,14 @@ from scale_pilot import Protocol,manifest,assessment,encode,CONFIGS
 from scale_qualification import MODELS as ROLE_MODELS
 MODELS=CONFIGS
 def build(stage):
-    p=manifest(stage);floor={"SP-SOL":(6.551776,294),"SP-LUNA":(7.673056,330)}[stage]
+    p=manifest(stage);floor={"SP-SOL":(6.5593024,297),"SP-LUNA":(7.6846784,333)}[stage]
     p.update(expected_budget={"cap":8,"reserved":floor[0],"calls":floor[1]},launch_enabled=True,requests=[])
     return p
 
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 def verify_packet(packet):
     assert packet==build(packet['stage']),'packet_source_mismatch'
-    for stage in ('SD-SOL','SD-LUNA2'):
+    for stage in ('SD-SOL','SD-LUNA3'):
         receipt=json.loads((BASE/f'reviews/native-{stage}-01/assessment.json').read_text());assert receipt['qualified'] is True and len(receipt['rows'])==3
     for stage in ('SQ-SOL','SQ-LUNA'):
         receipt=json.loads((BASE/f'reviews/native-{stage}-01/assessment.json').read_text());assert len(receipt['rows'])==9 and all(r['status']=='valid' for r in receipt['rows']);aud=[r for r in receipt['rows'] if r['role']=='auditor'];assert len(aud)==3 and all(r['passes'] for r in aud)
@@ -50,13 +50,13 @@ def prepare(admission_path,out):
     assert not subprocess.check_output(['docker','ps','-q'],text=True).strip()
     with closing(sqlite3.connect('file:'+a['ledger']+'?mode=ro',uri=True)) as db:budget=db.execute('SELECT cap,reserved,calls FROM budget WHERE id=1').fetchone()
     expected=p['expected_budget'];assert budget[0]==8 and abs(budget[1]-expected['reserved'])<1e-8 and budget[2]==expected['calls']
-    assert budget[1]>=5.501152-1e-9 and budget[2]>=259 and budget[2]+p['maximum_transport_attempts']<=526
-    assert budget[1]+p['maximum_total_reservation_usd']<=7.946208+1e-9
+    assert budget[1]>=5.501152-1e-9 and budget[2]>=259 and budget[2]+p['maximum_transport_attempts']<=529
+    assert budget[1]+p['maximum_total_reservation_usd']<=7.9603392+1e-9
     return a,p,budget
 
 
 def collect(packet,out,ledger,transport,until,hub=None):
-    protocol=Protocol(packet['stage']);session=Session(out,ledger,maximum_requests=packet['maximum_transport_attempts'],reserved_ceiling=7.946208,calls_ceiling=526,http_error_adapter=safe_relay_error);rows=[];started=time.monotonic();failure=None
+    protocol=Protocol(packet['stage']);session=Session(out,ledger,maximum_requests=packet['maximum_transport_attempts'],reserved_ceiling=7.9603392,calls_ceiling=529,http_error_adapter=safe_relay_error);rows=[];started=time.monotonic();failure=None
     try:
         while not protocol.complete:
             if time.monotonic()-started>2700 or datetime.datetime.now(datetime.timezone.utc)+datetime.timedelta(seconds=90)>datetime.datetime.fromisoformat(until):raise AcquisitionStopped('deadline_or_allocation')

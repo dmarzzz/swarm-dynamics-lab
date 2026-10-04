@@ -99,13 +99,13 @@
   "ordinary_calls": 34,
   "auditor_calls": 2,
   "maximum_transport_attempts": 36,
-  "maximum_total_reservation_usd": 1.12128,
+  "maximum_total_reservation_usd": 1.125376,
   "retries": 0,
   "tldr": "10 openai/gpt-6-sol agents, one paired authored procurement world: clean versus misleading comparison page. Measure initial/revised preferences, source ancestry, raw choice and guard. One world; model and size jointly vary; no general effect estimate.",
   "expected_budget": {
     "cap": 8,
-    "reserved": 6.551776,
-    "calls": 294
+    "reserved": 6.5593024,
+    "calls": 297
   },
   "launch_enabled": true,
   "requests": []

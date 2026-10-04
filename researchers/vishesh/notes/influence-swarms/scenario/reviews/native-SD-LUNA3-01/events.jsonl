@@ -1,0 +1,16 @@
+{"kind": "session", "maximum_attempts": 3, "retries": 0}
+{"kind": "request_artifact", "attempt": 1, "name": "01-request.bin", "bytes": 8429, "sha256": "6ccaa715de7de83846933ebce69e442ec5c20a34050e8fb1567640adb425b334"}
+{"kind": "attempt_start", "attempt": 1, "reserved_usd": 0.0025088, "retry_permitted": false, "request": {"name": "01-request.bin", "bytes": 8429, "sha256": "6ccaa715de7de83846933ebce69e442ec5c20a34050e8fb1567640adb425b334"}}
+{"kind": "response_artifact", "attempt": 1, "name": "01-response.bin", "bytes": 3976, "sha256": "3dcf27df9d7ee023577cf64b6513427c78fd2d8895e9b6eacb448c07ad138c1b"}
+{"kind": "usage", "attempt": 1, "usage_known": true, "tokens": {"input_tokens": 1693, "output_tokens": 270}, "reported_usd": 0.00034655}
+{"kind": "response_validated", "attempt": 1, "usage_known": true, "actual_usd": 0.00034655}
+{"kind": "request_artifact", "attempt": 2, "name": "02-request.bin", "bytes": 8402, "sha256": "5093e1ee80f1cd67d6cfde72c632f6b7e049a3ba1bfa1616ecbfeb636139426c"}
+{"kind": "attempt_start", "attempt": 2, "reserved_usd": 0.0025088, "retry_permitted": false, "request": {"name": "02-request.bin", "bytes": 8402, "sha256": "5093e1ee80f1cd67d6cfde72c632f6b7e049a3ba1bfa1616ecbfeb636139426c"}}
+{"kind": "response_artifact", "attempt": 2, "name": "02-response.bin", "bytes": 3932, "sha256": "216664bb2824e5b9e70a772a2232e77657c48fcee7cd31c426eb1dc2d27f9ed7"}
+{"kind": "usage", "attempt": 2, "usage_known": true, "tokens": {"input_tokens": 1689, "output_tokens": 326}, "reported_usd": 0.00037405}
+{"kind": "response_validated", "attempt": 2, "usage_known": true, "actual_usd": 0.00037405}
+{"kind": "request_artifact", "attempt": 3, "name": "03-request.bin", "bytes": 8388, "sha256": "58c7cb75108f1968ed83b20c5a1d383c022bc2bdf0f8b02b37db8e9fc245356e"}
+{"kind": "attempt_start", "attempt": 3, "reserved_usd": 0.0025088, "retry_permitted": false, "request": {"name": "03-request.bin", "bytes": 8388, "sha256": "58c7cb75108f1968ed83b20c5a1d383c022bc2bdf0f8b02b37db8e9fc245356e"}}
+{"kind": "response_artifact", "attempt": 3, "name": "03-response.bin", "bytes": 3754, "sha256": "ef0ac0f870a031060f22d21c3d368a9920912271297545ec4e710c12a21da21c"}
+{"kind": "usage", "attempt": 3, "usage_known": true, "tokens": {"input_tokens": 1683, "output_tokens": 276}, "reported_usd": 0.0003483}
+{"kind": "response_validated", "attempt": 3, "usage_known": true, "actual_usd": 0.0003483}
