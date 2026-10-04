@@ -1,0 +1,7 @@
+{
+  "cutoff_utc": "2026-10-04T03:40:18.974165+00:00",
+  "source": "phantom-coast-lab/researchers/vishesh/notes/phantom-coast/PLAN.md",
+  "frozen_copy": "review-2026-10-04/scientific-sources-live/phantom-coast-PLAN.md",
+  "sha256": "9248fd3b3cb5f62b36f86a2748bb885379b241ab8ea7b000487c1c97ba2abd42",
+  "scope": "Full plan read only. Concurrent instrument source/tests and the newly cloned whole repository are not audited by this scientific delta. No native run or result established."
+}

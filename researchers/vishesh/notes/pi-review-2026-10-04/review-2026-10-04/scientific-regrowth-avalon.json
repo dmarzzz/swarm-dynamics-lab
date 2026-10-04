@@ -1,0 +1,256 @@
+{
+  "scope": "PI scientific assessment; evidence frozen in prior audit, current amended documents checked; proposals are prospective, no new runs.",
+  "reviews": [
+    {
+      "id": "SCI-REG",
+      "name": "Regrowth: distributed route repair and attached decision heads",
+      "evidence_class": "One-map exploratory model pilot; four preserved development failures, six completed worlds; public documentation was retrospective.",
+      "decision": "Retain the negative pilot and reusable instrument. Stop increasing model calls on numeric minimum selection; qualify a specific error-propagation mechanism before a semantic successor.",
+      "interest": {
+        "judgment": "The resilience question is worthwhile; the present model task has limited research depth.",
+        "why": "Local mistakes can produce globally valid but inefficient systems. That distinction is useful. Here the controller supplies path certificates, loop exclusion and synchronization, while the model mostly chooses the smallest displayed integer.",
+        "novelty_boundary": "This is neither learned NCA regeneration nor evidence of emergent cooperation. Novelty would require a distinct, identified result about error structure, recovery or information loss; visual resemblance and 200 identities are insufficient."
+      },
+      "robustness": {
+        "supported": "All 486 frames reconstruct exactly. Algorithm ends 100% shortest; Qwen/hybrid end 6.5% shortest despite 100% certificate validity. Hybrid gives no final endpoint benefit; its two distinct overrides do not select a minimum.",
+        "unsupported": "General resilience, diversity advantage, packet-delivery recovery, or superiority of 4-round model recovery over 18-round algorithm recovery.",
+        "unit": "A complete map-and-damage world, with paired conditions.",
+        "independent_variation": "One hard-coded map, one damage location/time, fixed head placement; qualification fixtures were adapted. Six arms are not six independent scenarios.",
+        "assessment": "Strong trace integrity and candid limitations; weak identification beyond this implementation. Model detours lower damage exposure, so recovery speeds compare differently damaged initial route systems."
+      },
+      "scenario_quality": {
+        "size": "200 cells/199 decision makers is enough to expose propagation; it adds no replication. Increase map diversity before population.",
+        "challenge": "Numerically trivial local task with a meaningful distributed consistency problem; difficulty comes primarily from model arithmetic errors and stale state.",
+        "complexity": "Two partitions, one closed door and one erased patch; two damage mechanisms are bundled. No congestion, capacity, deadlines or changing costs.",
+        "realism": "Useful routing abstraction, weak evacuation model: no moving packets or competing traffic. Shared stateless model calls are controller-managed identities.",
+        "definition": "Certificate scoring is precise; current next-hop forwarding is a different outcome. Memory erasure clears route state, not the decision cache."
+      },
+      "scenarios": [
+        {
+          "name": "Development: v1, v1-attempt2, v2, v3; v4 qualification",
+          "assessment": "Zero worlds before v4. Import repair, prompt changes and tied-optimum correction are legitimate development; passing adapted ten-case fixtures is not held-out capability validation.",
+          "improvement": "Freeze disjoint decision fixtures spanning candidate counts, near ties and route lengths; qualify the interface separately from scientific endpoints."
+        },
+        {
+          "name": "Undamaged establishment: algorithm-control, qwen-control, hybrid-control",
+          "assessment": "All reach valid certificates, but algorithmic optimality and model detours sharply separate usefulness. A final snapshot hides persistent route-quality oscillation.",
+          "improvement": "Report acquisition time, trajectory-average excess hops and stability alongside final validity; retain this control for every damage experiment."
+        },
+        {
+          "name": "Combined disturbance: algorithm-damage, qwen-damage, hybrid-damage",
+          "assessment": "Closing the second-partition upper door plus erasing 16 paths at tick 40 confounds topology repair with memory reconstruction. Before any repair update, validity is 54.5% for algorithm versus 80% for model arms.",
+          "improvement": "Separate door-only and erasure-only diagnosis before their combination; start policy comparisons from the same certified routes when estimating recovery mechanism."
+        },
+        {
+          "name": "Hybrid attachment across both scenarios",
+          "assessment": "Twenty fixed head locations, extra compute and visibility of Qwen proposals prevent a diversity interpretation. Two identical override patterns recur across damage/control.",
+          "improvement": "For a later model study randomize attachment locations, blind the second assessment and compare a same-model second call; first show useful conditional corrections."
+        }
+      ],
+      "controls": {
+        "retain": [
+          "Exact local path-vector algorithm",
+          "Undamaged paired world",
+          "Preserved qualification failures and complete traces"
+        ],
+        "missing": [
+          "Matched-rate scripted error policy to expose controller contribution",
+          "Identical pre-damage routing state for mechanism comparisons",
+          "Separate damage components; later blinded and same-model extra-call controls"
+        ],
+        "confounds": [
+          "Unequal damage exposure due to pre-existing detours",
+          "Additional compute, anchoring and fixed attachment placement",
+          "Certificate recovery presented alongside current forwarding paths"
+        ]
+      },
+      "parameters": [
+        {
+          "parameter": "Damage mechanism/exposure",
+          "current": "One door plus 16-cell erasure at tick 40",
+          "priority": "Essential identification",
+          "proposed_variation": "Diagnose door-only and erasure-only on matched starting routes; keep intensity fixed initially.",
+          "reason": "Separates what is repaired from how much was damaged."
+        },
+        {
+          "parameter": "Local error dependence",
+          "current": "Shared deterministic model, cached per-cell choices",
+          "priority": "Essential for recommended first study",
+          "proposed_variation": "Independent versus spatially clustered wrong choices with matched eligible error counts.",
+          "reason": "Tests collective amplification rather than merely worse local accuracy."
+        },
+        {
+          "parameter": "World geometry",
+          "current": "Single 20×10 map",
+          "priority": "Essential replication",
+          "proposed_variation": "Held-out connected layouts with specified bottleneck/distance strata.",
+          "reason": "One favorable damage placement cannot establish resilience."
+        },
+        {
+          "parameter": "Head identity/placement",
+          "current": "Laya on fixed 10%, observes Qwen",
+          "priority": "Essential only if pursuing diversity",
+          "proposed_variation": "Blinded heterogeneous versus same-model second head, randomized matched placements.",
+          "reason": "Separates model identity from compute and location."
+        },
+        {
+          "parameter": "Scale, traffic and timing",
+          "current": "Fixed size; synchronous; no traffic",
+          "priority": "Later stress tests",
+          "proposed_variation": "Vary diameter, update delay and then capacity separately.",
+          "reason": "Adds realism after the basic estimand is interpretable."
+        }
+      ],
+      "next_study": {
+        "question": "At matched local error frequency, does spatial error correlation amplify post-damage functional loss?",
+        "primary_contrast": "Clustered versus independently located scripted errors, with identical legal error-choice rule.",
+        "endpoint": "Post-damage area under a prespecified delivery-loss curve; report certificate loss and route stretch separately.",
+        "unit": "Paired independently generated map/damage world.",
+        "design": "Register a small scripted mechanism study first. Use the same algorithm-established initial paths, one damage type, matched error counts per round and exact/undamaged references. Separate development layouts from held-out evaluation. Determine study size from meaningful loss and paired world variability, not cell count.",
+        "go_no_go": "Proceed only if the evaluator distinguishes certificate validity from delivery, manipulation checks confirm matched exposure/error counts, and controls behave as expected. A model extension needs a capability that the integer-minimum algorithm cannot already supply."
+      },
+      "sources": [
+        {
+          "path": "regrowth-200/PROTOCOL.md",
+          "detail": "Task, controls, qualification amendments and exploratory limits."
+        },
+        {
+          "path": "regrowth-200/RESULTS.md",
+          "detail": "Six completed conditions and route-quality results."
+        },
+        {
+          "path": "review-2026-10-04/regrowth-avalon-verification.json",
+          "detail": "Independent frame/usage reconstruction, damage exposure and head overrides."
+        }
+      ]
+    },
+    {
+      "id": "SCI-AV",
+      "name": "Avalon Swarm: evidence circulation, audit and repair",
+      "evidence_class": "Scripted engineering benchmark: 15 scale worlds, 15 recovery worlds and 15 consensus-mechanics worlds; no LLM evidence.",
+      "decision": "Advance a narrow memory-repair mechanism at 100 agents. Defer population expansion and paid agents until useful evidence and consensus controls discriminate.",
+      "interest": {
+        "judgment": "Potentially strong, provided verified correction improves decisions beyond mechanically suppressing claims.",
+        "why": "Audit availability and downstream repair are separated, making persistent misinformation testable. Team proposals and mission consequences provide task utility beyond agreement.",
+        "novelty_boundary": "This is an independent Avalon-inspired game, not AvalonBench comparability or autonomous deception detection. Existing scripted repair demonstrates an implemented rule, not learned institutional behavior."
+      },
+      "robustness": {
+        "supported": "All 45 outcomes/source identities validate; 15 event chains verify. Repair reduces audited-contradiction exposures 79.6→54.8 on average. Later mission success rises 37.3%→38.0%, exactly one additional mission across five paired seeds; council wins are unchanged.",
+        "unsupported": "Reliable repair efficacy, scaling intelligence, LLM throughput, autonomous malicious-agent detection or universal swarm collapse.",
+        "unit": "Complete connected world; councils communicate and are not independent replicates.",
+        "independent_variation": "Five paired seeds for recovery at 100 agents; one seed per size/topology for each scale sweep.",
+        "assessment": "Clear scoring and reproducible mechanics; limited behavioral diversity. Counts of repeated messages inflate apparent evidence volume without adding independent information."
+      },
+      "scenario_quality": {
+        "size": "100–2, 000 agents means 10–200 fixed ten-member councils. LargerN replicates a local game more than it increases individual reasoning complexity.",
+        "challenge": "Hidden roles and coupled evidence create genuine uncertainty, but weak heuristics, mandatory sabotage and random assassination dominate current difficulty.",
+        "complexity": "Five missions, bounded messages/memory and a ring are tractable. Each target has one noisy original signal; copying is not corroboration.",
+        "realism": "Useful controlled misinformation abstraction. Perfect environment audits, numeric claims and programmed repair are far from contested institutional evidence.",
+        "definition": "Game rules are explicit and differ openly from standard Avalon. Consensus starts before knowledge acquisition, so failure can mean never learning rather than losing established knowledge."
+      },
+      "scenarios": [
+        {
+          "name": "v0.1 scale-final: each N∈{100, 200, 500, 1000, 2000} × {none,local,federated}; repair",
+          "assessment": "Fifteen engineering checks support bounded routing/runtime accounting. Local-only agents never receive task-relevant initial signals, because signals concern the next council; federated also increases degree 9→11.",
+          "improvement": "Label this a channel-access sweep. Compare degree/budget-matched graphs with equal relevant evidence before drawing topology conclusions."
+        },
+        {
+          "name": "v0.1 recovery-pilot: 100 agents, federated provenance policy, seeds 0–4 × {none,audit,repair}",
+          "assessment": "Repair-minus-audit is the right basic comparison. Lower exposure is partly built into the repair rule; the tiny mission difference does not establish utility. Both policies overwrite audited beliefs with truth.",
+          "improvement": "Measure unaudited decisions and retained useful evidence; isolate memory-capacity effects and split random streams by phase so pruning cannot change unrelated proposal randomness."
+        },
+        {
+          "name": "v0.2 consensus: all five sizes × three topologies; repair/default thresholds",
+          "assessment": "All 15 fail signal_loss at round 5. This validates the gate, not a failure-rate estimate. Prior.4 plus one positive.8 signal averages.6, below confidence.7 before later evidence.",
+          "improvement": "Calibrate attainability with oracle, uninformed and stronger local-inference controls. Distinguish acquisition latency, loss after established consensus and post-audit recovery."
+        },
+        {
+          "name": "Prospective classic/institutional/real-model tracks",
+          "assessment": "Compatibility, cross-council institutions and live model behavior remain unimplemented. Neither scripted scale nor rule-based correction validates them.",
+          "improvement": "Choose one extension after the federated mechanism qualifies; specify agent context, update rules, tools and resource accounting before substitution."
+        }
+      ],
+      "controls": {
+        "retain": [
+          "None/audit/repair distinction",
+          "Paired role/signal scenarios",
+          "World-level outcomes and unchanged mission horizon after consensus failure"
+        ],
+        "missing": [
+          "Oracle and stronger role-constrained inference baselines",
+          "Uninformed and confidently wrong consensus controls",
+          "Memory-capacity ablation; useful-evidence retention measurements"
+        ],
+        "confounds": [
+          "One 56%-correct marginal signal after adversarial reversal; topology changes its accessibility",
+          "Discussion shuffles and later choices share treatment-dependent RNG consumption",
+          "Audit mechanically fixes one belief; exposure count depends on communication opportunities"
+        ]
+      },
+      "parameters": [
+        {
+          "parameter": "Repair × memory capacity",
+          "current": "Contradiction removal; 32-claim deque, up to 44 arrivals/tick",
+          "priority": "Essential first mechanism axis",
+          "proposed_variation": "Audit/repair at current capacity and a declared no-eviction capacity.",
+          "reason": "Tests whether utility comes from freeing scarce memory rather than merely deleting counted messages."
+        },
+        {
+          "parameter": "Evidence accessibility/redundancy",
+          "current": "One nonlocal source per target",
+          "priority": "Essential for later topology claims",
+          "proposed_variation": "Hold useful inputs fixed; vary independent sources separately from copied claims.",
+          "reason": "Separates information gain from repetition or connectivity."
+        },
+        {
+          "parameter": "Audit coverage/timing",
+          "current": "One random target/council after mission 2",
+          "priority": "Hold fixed first; later stress test",
+          "proposed_variation": "Sweep disclosure fraction or delay individually after repair is useful.",
+          "reason": "Avoids conflating evidence supply with correction policy."
+        },
+        {
+          "parameter": "Consensus thresholds/horizon",
+          "current": ".7 confidence,.8 quorum/coverage,patience 5,stability 2",
+          "priority": "Essential endpoint calibration",
+          "proposed_variation": "Freeze thresholds after development controls; account for 4-versus 5 eligible observers.",
+          "reason": "Avoids floor effects and a hidden unanimity requirement for some targets."
+        },
+        {
+          "parameter": "Population, graph, adversary sophistication",
+          "current": "Fixed council size; ring; scripted signal reversal",
+          "priority": "Later separate stress tests",
+          "proposed_variation": "Degree-matched overlays, then population, then strategic opponents.",
+          "reason": "One large factorial would obscure which mechanism fails."
+        }
+      ],
+      "next_study": {
+        "question": "Does audited-contradiction removal improve subsequent decisions by preserving useful evidence under memory pressure?",
+        "primary_contrast": "Repair-minus-audit, compared between bounded and no-eviction memory.",
+        "endpoint": "Paired world difference in missions 3–5 success; unaudited-target Brier and retained useful-source coverage explain the mechanism.",
+        "unit": "Complete paired 100-agent world/seed block.",
+        "design": "Keep federation, audit schedule, scripted policies and evidence fixed; use four conditions from two repair policies and two capacities. Freeze phase-keyed randomness and memory ordering first. Qualify scoring with oracle/uninformed controls, then size a held-out seed study from useful improvement and pilot variability. Do not pool population sizes or claim LLM generalization.",
+        "go_no_go": "Continue only if controls show attainable utility variation and retained-evidence measures explain more than mechanically lower exposure. If differences vanish with controlled randomness or only reflect audit truth, report that boundary before adding models."
+      },
+      "sources": [
+        {
+          "path": "avalon-swarm/PROTOCOL.md",
+          "detail": "Game, sweeps, observer denominators, analysis and staged scope."
+        },
+        {
+          "path": "avalon-swarm/RESULTS.md",
+          "detail": "All three archived experimental sets."
+        },
+        {
+          "path": "avalon-swarm/benchmark.py",
+          "detail": "Evidence locality, memory, policy random streams and consensus implementation."
+        },
+        {
+          "path": "review-2026-10-04/regrowth-avalon-verification.json",
+          "detail": "Validated conditions and exact paired recovery differences."
+        }
+      ]
+    }
+  ],
+  "length_note": "Qualitative judgments; parameter priorities distinguish identification from later robustness tests."
+}

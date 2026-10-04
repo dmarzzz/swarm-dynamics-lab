@@ -1,0 +1,170 @@
+{
+  "schema": "swarm-size-design-draft-v3",
+  "status": "exploratory design; not approved or registered for execution",
+  "question": "EX-25",
+  "owner": "vishesh/codex-idea-scores",
+  "sizes": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "roster_includes_coordinator": true,
+  "primary_outcome": "verified success by deadline within enforced resource caps",
+  "proposed_near_optimal_tolerance": 0.05,
+  "core_profiles": [
+    "P0",
+    "P1",
+    "P2",
+    "P3"
+  ],
+  "optional_profiles": [
+    "M1",
+    "M2",
+    "M3",
+    "H1"
+  ],
+  "stages": [
+    {
+      "id": "qualification",
+      "families": 2,
+      "structures": 2,
+      "profiles": 1,
+      "sizes": 5,
+      "roots": 4,
+      "samples": 1,
+      "episodes": 80
+    },
+    {
+      "id": "core",
+      "families": 2,
+      "structures": 2,
+      "profiles": 4,
+      "sizes": 5,
+      "roots": 8,
+      "samples": 2,
+      "episodes": 1280
+    },
+    {
+      "id": "transfer",
+      "families": 1,
+      "structures": 2,
+      "profiles": 4,
+      "sizes": 5,
+      "roots": 8,
+      "samples": 2,
+      "episodes": 640
+    },
+    {
+      "id": "transfer-policy-evaluation",
+      "families": 1,
+      "structures": 2,
+      "profiles": 4,
+      "policies": 4,
+      "roots": 8,
+      "samples": 2,
+      "episodes": 512
+    },
+    {
+      "id": "optional-memory-hardware",
+      "families": 2,
+      "structures": 2,
+      "profiles": 4,
+      "sizes": 5,
+      "roots": 8,
+      "samples": 2,
+      "episodes": 1280
+    }
+  ],
+  "core_total_episodes": 2512,
+  "with_optional_total_episodes": 3792,
+  "launch": {
+    "authorized": false,
+    "model": null,
+    "runtime": null,
+    "absolute_deadlines": null,
+    "budget_caps": null,
+    "hardware": null,
+    "immutable_public_plan_url": null,
+    "independent_review": null,
+    "machine_claim": null
+  },
+  "limits": [
+    "Counts are planning maxima, not spending authorization.",
+    "Model invocations per episode are not fixed by these counts.",
+    "Eight roots per cell are exploratory, not powered confirmation of a five-point tolerance.",
+    "API client memory is not provider VRAM."
+  ],
+  "protocol_addendum": "PROTOCOL.md",
+  "core_root_split": {
+    "fit_per_family_structure": 4,
+    "validation_per_family_structure": 4,
+    "refit_after_validation": false
+  },
+  "coordination": {
+    "architecture": "centralized with working coordinator",
+    "roster_fixed": true,
+    "scheduler": "stable ready-item order; no hidden reasoning",
+    "aggregate_budget_atomic": true,
+    "planning_repair_attempts_max": 1,
+    "turn_output_ceiling": null,
+    "tool_limits": null,
+    "tool_concurrency": null,
+    "work_item_limit": null,
+    "ledger_retrieval_limit": null,
+    "initialization_requirements": null,
+    "integration_time_reserve": null,
+    "integration_token_reserve": null,
+    "context_truncation_policy": null
+  },
+  "policy_evaluation": {
+    "arms": [
+      "single-agent",
+      "development-best-fixed",
+      "capacity-heuristic",
+      "conditional-selector"
+    ],
+    "fresh_execution": true,
+    "clock_starts_before_selection": true,
+    "refusals_in_denominator": true,
+    "transfer_sweep_sealed_until_policies_complete": true
+  },
+  "task_contracts": "TASK-CONTRACTS.md",
+  "qualification": {
+    "purpose": "engineering qualification; not a matched size-effect comparison",
+    "calibration_episodes": 16,
+    "multiroster_episodes": 64,
+    "screening_deadline": null,
+    "screening_spending_cap": null,
+    "calibration_quantile": 0.75,
+    "quantile_method": "nearest rank",
+    "deadline_headroom_factor": 1.5,
+    "budget_headroom_factor": 1.5,
+    "calibration_subset": "contract-valid successful Q-A episodes; failures retained and reported",
+    "minimum_successes_per_family_structure": 2,
+    "minimum_successes_total": 8,
+    "calibration_choices_ratified": false,
+    "automatic_repeats": false
+  },
+  "task_families": [
+    {
+      "id": "evidence",
+      "role": "development",
+      "primary_checker": "exact field values and declared admissible proof sets",
+      "quality": "fraction of fields correct and grounded"
+    },
+    {
+      "id": "repository",
+      "role": "development",
+      "primary_checker": "patch validity, permitted scope, all hidden behavioral categories and regression invariants",
+      "quality": "fraction of behavioral categories passed; invalid scope scores zero"
+    },
+    {
+      "id": "triage",
+      "role": "locked-transfer",
+      "primary_checker": "permitted repair sequence reaches healthy simulated state and preserves safety invariants",
+      "quality": "restored service fraction; forbidden sequence scores zero"
+    }
+  ]
+}

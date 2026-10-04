@@ -1,0 +1,42 @@
+{
+  "links_checked": 2046,
+  "broken_local_links_or_anchors": [],
+  "private_task_href_count": 0,
+  "secret_scans": [
+    {
+      "scope": "researchers/vishesh/notes/pi-review-2026-10-04",
+      "exit_code": 0,
+      "findings": []
+    },
+    {
+      "scope": "tooling/agent-experiments",
+      "exit_code": 0,
+      "findings": []
+    }
+  ],
+  "repo_check": "0 errors, 5 pre-existing citation warnings",
+  "publication_browser_check": {
+    "named_project_cards": 10,
+    "study_reviews": 21,
+    "proposal_reviews": 16,
+    "areas": 8,
+    "broken_internal_anchors": [],
+    "filters": true,
+    "deep_links": true,
+    "empty_state": true,
+    "mobile_overflow": false,
+    "original_report_link": true,
+    "js_errors": []
+  },
+  "scientific_scope": "Frozen review cutoffs unchanged; no new model calls, experiments or deployment.",
+  "original_audit_browser_check": {
+    "findings": 57,
+    "priority_filter": true,
+    "project_filter": true,
+    "text_search": true,
+    "deep_links": true,
+    "mobile_overflow": false,
+    "coverage_search": true,
+    "js_errors": []
+  }
+}

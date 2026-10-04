@@ -1,0 +1,1835 @@
+[
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-exact-evidence+withdrawals-combined.json",
+    "bytes": 307266,
+    "sha256": "c6be2ec464d9a6f07a252e7260cbf61830a453bed86a4fbaed853dd53c809a32",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-exact-evidence+withdrawals-erasure.json",
+    "bytes": 275955,
+    "sha256": "521e97090ad78f9742cf963045f73e10cfb1f834136e66a5ce06f8027ad23698",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-exact-evidence+withdrawals-none.json",
+    "bytes": 275943,
+    "sha256": "f5f9e83238a04c4d28f79ffdfe84d3e014067b0b420a5dd5e0d7732e9cd74f8c",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-exact-evidence-only-combined.json",
+    "bytes": 277734,
+    "sha256": "c415d5456730f212af5ed0f2aae99632e7991ce72838c9b3e8a23cc45a9fe33c",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-exact-evidence-only-erasure.json",
+    "bytes": 275941,
+    "sha256": "f9fea241ab3cd9332a37e48787b31e55648830dda6ad467563448fb740262add",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-exact-evidence-only-withdrawal.json",
+    "bytes": 277757,
+    "sha256": "99160277e9fd027917caa6a20cf8eff8373658c1052875d89cc73bae058c6294",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-exact-none-combined.json",
+    "bytes": 135876,
+    "sha256": "b56b7443d8e53097580f97ff8d526123a55978c220b5fa2c2a10269c1a99d346",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-exact-none-none.json",
+    "bytes": 134202,
+    "sha256": "4d3bad6bccc8e41171520f296adc28546b87be14132fac3081ba9ff787e9ace2",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-exact-none-withdrawal.json",
+    "bytes": 135143,
+    "sha256": "2a4ed84db235483e8c9f062eab34abe615861f295dab6b18ddc007f2bc8e8e0c",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-jev-evidence+withdrawals-combined.json",
+    "bytes": 307262,
+    "sha256": "378ddf740f16ffe5a4921294be9dd475c99036a824d956539a24e3560a3804b2",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-jev-evidence+withdrawals-none.json",
+    "bytes": 275939,
+    "sha256": "61d7dcc49aa95cfb26f6b83afbccc3a5f52e2129c808659d8e5ea43167f4f694",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-jev-evidence-only-erasure.json",
+    "bytes": 275937,
+    "sha256": "f36cb3691bf56ea06ea7b4ea5e2f1b7ac5aac882b8c17d5e6eedd10f212775d4",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-jev-evidence-only-withdrawal.json",
+    "bytes": 277753,
+    "sha256": "bd5662300c850521203b031977e2003334502873fd5eae0ecd42ac5205c76229",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-jev-none-combined.json",
+    "bytes": 135872,
+    "sha256": "ccbb59f51af4b928711ed7a816c92d389217547e871093ff4462f80c317d730f",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-jev-none-erasure.json",
+    "bytes": 135090,
+    "sha256": "618a7b1a4393783870527451c9fd6c31c4582f611f852511ed52c285702b3a5b",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-jev-none-none.json",
+    "bytes": 134198,
+    "sha256": "77f7b5dd8a05ff29284fbbeb632bb5413413a5e704e105257567d5b134860f21",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-jev-none-withdrawal.json",
+    "bytes": 135139,
+    "sha256": "90b1f13d6963c34ecc6dcf3ad70a3f2f4f7e42b47963fe6cd9db697c0ef3dc64",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-evidence+withdrawals-combined.json",
+    "bytes": 191,
+    "sha256": "df22e057a6549b98e285cf3c084b238c511be8f63b290c6fa097302e86374340",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-evidence+withdrawals-erasure.json",
+    "bytes": 189,
+    "sha256": "c23e930bb02c502309afd237048a661e92216000546fc279d41988a415e1eb9f",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-evidence+withdrawals-none.json",
+    "bytes": 183,
+    "sha256": "60e2b158c1a7ec736a700115418b73664ea160c5c922976127537f0b202de0f9",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-evidence-only-combined.json",
+    "bytes": 177,
+    "sha256": "f3aa870cd7889043f4bbdcd154d7c3830c9a3cd0d3094413e357cd5bb2e1336b",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-none-combined.json",
+    "bytes": 159,
+    "sha256": "dfdeba5cce29e0e5aa69ce4493099a36e884aac5471a3bc166780feb7263447d",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-none-erasure.json",
+    "bytes": 157,
+    "sha256": "d596d2e5b455783d70d4202cbe1629d4d5fbb085885d3e8732ebfafbb13566fc",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-none-none.json",
+    "bytes": 151,
+    "sha256": "8964fab38431497d2e39b685f4ea85aee1357ed51b0a45b5c190358b7ceb618d",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-none-withdrawal.json",
+    "bytes": 163,
+    "sha256": "aac61c37f1b2e10d29d3751962ff7edbeab448e6647d0e8b7ea3f139a94e8aba",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen+qwen-evidence+withdrawals-combined.json",
+    "bytes": 191,
+    "sha256": "1c41e0efafdb61f7320d36d725384d1f93d8504d7c90d3de6e60f02dc9f44328",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen+qwen-evidence+withdrawals-erasure.json",
+    "bytes": 189,
+    "sha256": "fa1e3b15133deb515ea1579b9a2788c440267badfd1b6ed061774a82d328b8e2",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen+qwen-evidence-only-erasure.json",
+    "bytes": 175,
+    "sha256": "2943cfc2be5ac43c1bc626909aad5faddb3e8d2e96358a358582ee043f9182a4",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen+qwen-evidence-only-withdrawal.json",
+    "bytes": 181,
+    "sha256": "7be2896bb64b2e1c61a96d2ef02ac1a9d0d1af5f80c9c28dd61c1ebc08ee0567",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen+qwen-none-combined.json",
+    "bytes": 159,
+    "sha256": "5e1f9115b02036c3fb5a63dfbb0be8cd1fe24bd14f58b5df0b4c2e614af417ea",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen+qwen-none-erasure.json",
+    "bytes": 157,
+    "sha256": "fc64b68ca2098de1ba660d12763e7696a2056430bde9672aadcbda2538ea5d93",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen+qwen-none-withdrawal.json",
+    "bytes": 163,
+    "sha256": "df156c9c16ef69b40126c64f66d9d9c87ca8a691ada3ce1418008fe3ab1a3e7f",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen-evidence+withdrawals-combined.json",
+    "bytes": 181,
+    "sha256": "e29ba7519a39b9c3484c2643afb6f8f73b5e1241a09d92c8f0069f259e9aaa02",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen-evidence+withdrawals-withdrawal.json",
+    "bytes": 185,
+    "sha256": "180872f364b1944f0c74bb8b1f6089f9cb9e8248b2fbca4c2b772d25e32a9b6c",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen-evidence-only-combined.json",
+    "bytes": 167,
+    "sha256": "3ddf648af5ecdada4e7ebd95b1cc26f23b19c97a7f892246adb0bc4cba3e64f2",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen-evidence-only-withdrawal.json",
+    "bytes": 171,
+    "sha256": "9736f643a9f6cce64f545b453f1c68047bcf2846006f4e4a82e1b3d47da9f4a0",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen-none-combined.json",
+    "bytes": 149,
+    "sha256": "1734c4224c293eb945578573cf393c01cce499e2e05351b35602c3892b9e62d6",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen-none-erasure.json",
+    "bytes": 147,
+    "sha256": "eb3f7de0883bf0c457dbeea1400a6c203afe0d20a0e6354b0ebd8747953413af",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen-none-none.json",
+    "bytes": 141,
+    "sha256": "572ac4b1324c5a6410357a8839e37b91ff34f7d12b53834b988e7c5cd3e7306b",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8701-qwen-none-withdrawal.json",
+    "bytes": 153,
+    "sha256": "802d6477f1bc0618b12c0883e1b977051fa3a44da3ae6e963604f557a854adb4",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-exact-evidence+withdrawals-combined.json",
+    "bytes": 306507,
+    "sha256": "b4ea06094c4881ab11db04dbb8e27b2176a78bdbc88d7b90334f4158111dc951",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-exact-evidence+withdrawals-withdrawal.json",
+    "bytes": 306546,
+    "sha256": "528469aeeb9579f332004c4fbaa0c3128007d4ced86a143c56de1ec8c8abc7aa",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-exact-evidence-only-combined.json",
+    "bytes": 277244,
+    "sha256": "a5bc4398bcb07fcb1efb753a497a2f28bcfecab46028f9e76de75241ffbab8c4",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-exact-evidence-only-erasure.json",
+    "bytes": 275630,
+    "sha256": "68e36d02b89d7d455c4c2a0813c5c930fc3266e6f029cca29d526763d7870c85",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-exact-none-combined.json",
+    "bytes": 135941,
+    "sha256": "9246447dbab79c698fe50af73eb75b4984f502e7e07dcb0ec9cfb112a6cf0a7a",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-exact-none-erasure.json",
+    "bytes": 135144,
+    "sha256": "8b25ab1a9c4d33dc55b85f5ba20b5a287b1598c840d520ff3f01ed41328f5473",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-exact-none-none.json",
+    "bytes": 134202,
+    "sha256": "c01566c38d3f426e9ff9f67b21b97a8dbe8750c26c06511c7dfb699c884adf7f",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-exact-none-withdrawal.json",
+    "bytes": 135113,
+    "sha256": "707b3da055493d1506d75dc023d63aa7e0bdca198f9b3b8a1db464d26d927a0a",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-jev-evidence+withdrawals-combined.json",
+    "bytes": 306503,
+    "sha256": "18347c6d22e59e4a6bdcfb149c3d2e7fd564a4fea52921f0672f66cf0d7d0818",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-jev-evidence+withdrawals-none.json",
+    "bytes": 275616,
+    "sha256": "8a19e24f73419135addca4a54c44975481fefb88e5203777a14cd133f8b313a7",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-jev-evidence+withdrawals-withdrawal.json",
+    "bytes": 306542,
+    "sha256": "8e3bf9797b54f158e6db4204a9cb85fd6693902cbbff93e8259b89323a1a418b",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-jev-evidence-only-combined.json",
+    "bytes": 277240,
+    "sha256": "3fd0528f385ffd473d86ed56e8a426ed306902c5d0805b573b1d2a825bdd8068",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-jev-evidence-only-none.json",
+    "bytes": 275602,
+    "sha256": "b3ed472dd1a11a056ebb39b99d009f4e92cf9a8f2086abd9f2c815c2ca0b3ffb",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-jev-none-combined.json",
+    "bytes": 135937,
+    "sha256": "6365ffeb0c7392d7e29fcdf846878f0dd5cc7953317ddbb2cba46cf373b303c8",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-jev-none-erasure.json",
+    "bytes": 135140,
+    "sha256": "e464551a1f000f6a5415c92ddd1b1c42f3958e3af20f568ca6791b5e3c85d7a7",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-jev-none-none.json",
+    "bytes": 134198,
+    "sha256": "5d078f1755a64e0ae871d8ce70a3dba9cca68eef2c5d9ee587a0a48465c00e83",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+laya-evidence+withdrawals-combined.json",
+    "bytes": 191,
+    "sha256": "c8cf8ea6f4330d8295a35928dc951571ea9d9f4d666838a621e43ff2758f0ad4",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+laya-evidence-only-none.json",
+    "bytes": 169,
+    "sha256": "52b493ebb47b77748ef49ab0abb01f86b2e5a4b8dbfd96602841cf7681f0ce1c",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+laya-evidence-only-withdrawal.json",
+    "bytes": 181,
+    "sha256": "3d34af3f7588431ee3d645140c91eedfdd679d957dff0a948b50e279e6ae0245",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+laya-none-erasure.json",
+    "bytes": 157,
+    "sha256": "91074779f9441fd2bf0d4914c7ecab6c412cb94bc0dba107dff26bcf9d42737b",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+laya-none-none.json",
+    "bytes": 151,
+    "sha256": "a253a2220542ba7c373ee70931bef6e555e15ff91b946f0d513680d8388f8790",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+laya-none-withdrawal.json",
+    "bytes": 163,
+    "sha256": "c54d5541c4c6da92b557b52dee5f9ba3d8303a5e51a709bb8f07f575f16794ac",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence+withdrawals-combined.json",
+    "bytes": 191,
+    "sha256": "c5ec55b7192345d56f1ec4eed52576067aaa8a895a21f1c095729985c309af22",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence+withdrawals-erasure.json",
+    "bytes": 189,
+    "sha256": "82a5b9ac9db1d8f91cce92a7b1fa4ba542eb45231718e322bba99cf6e47130a6",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence+withdrawals-none.json",
+    "bytes": 183,
+    "sha256": "f1ff321b29fdba57f93d385251c2dabdd2161f28615f24446f836a547d53f161",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence+withdrawals-withdrawal.json",
+    "bytes": 195,
+    "sha256": "a434f438fcb1d1ea626a5ecb04ee0c98879a119c0cf2c3d6e8afeb8a469074e4",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence-only-combined.json",
+    "bytes": 177,
+    "sha256": "3faf3a5bb73c7a6105d45e1d7aef6c685d8faf26132750e899a21f9c3a196242",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence-only-erasure.json",
+    "bytes": 175,
+    "sha256": "da99fd0ad8f930846af030735893db40e3a45e4716a5ef5368071a048790e285",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence-only-none.json",
+    "bytes": 169,
+    "sha256": "c07acd32eb5cf20bf477c0d5191daa2bc8520fef79a440ced6b828b87f8e247e",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence-only-withdrawal.json",
+    "bytes": 181,
+    "sha256": "b0b9b1dde65e52b07b854a9eea45bb36c946548d5266cf084cf7b23f371b2c84",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-none-combined.json",
+    "bytes": 159,
+    "sha256": "639bc092ab727ed209877c400d9274199b3653fe2f733ad4ccea9c32b10d85cb",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-none-erasure.json",
+    "bytes": 157,
+    "sha256": "a7ca1d8564d433b70c4b7012f5126fdf314a26282b1224c8df0d6432bfd61d0a",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-none-withdrawal.json",
+    "bytes": 163,
+    "sha256": "3de3d483b5766db94f73ca35fe276aa631d5adac870e4558417d3af623073740",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen-evidence+withdrawals-combined.json",
+    "bytes": 181,
+    "sha256": "577d38604b5b103547de71da5af97a1757a9a1bafbd137f4dbe7eb35a0913216",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen-evidence+withdrawals-none.json",
+    "bytes": 173,
+    "sha256": "38cda960a2858df300391d4b693cfaf7bda9c34471676f5fe7acf5c98a6b504d",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen-evidence-only-combined.json",
+    "bytes": 167,
+    "sha256": "66a8d4180b23bf1c8e4f8d8f4e69cb8d09a0559f1519c19794be5e08105567fd",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen-evidence-only-erasure.json",
+    "bytes": 165,
+    "sha256": "3a6ee14f84b3e3f5bdfd1f7191d6349d93a30ec02a992c5c9dc664101ef349e7",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen-evidence-only-none.json",
+    "bytes": 159,
+    "sha256": "7319589ef222f65694d3393a16b5619c4520e036ef999bc650fad74927412daf",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen-none-combined.json",
+    "bytes": 149,
+    "sha256": "dfe4a62c0d69ae16f457affe4f4d9328a4d6f40a17a73022a580703017dccf47",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen-none-erasure.json",
+    "bytes": 147,
+    "sha256": "54c1da3c8996c31aaddfe5527c968801c1f0509dcf3b7d5aada5db85f97850b7",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen-none-none.json",
+    "bytes": 141,
+    "sha256": "40d8bd8b33a340eb1152d71bebac9ecee9b68d75c8afaeeb7ef5be8e3f70fdd3",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8702-qwen-none-withdrawal.json",
+    "bytes": 153,
+    "sha256": "7d39c14f2935a5c15358df0871b73412e1f686879d4267008574e64304e5301a",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-exact-evidence+withdrawals-combined.json",
+    "bytes": 305859,
+    "sha256": "6cc281145c57ffc5418006c3bd934323bfaaeee32ddc9f70e443cc24c3a102f0",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-exact-evidence+withdrawals-erasure.json",
+    "bytes": 275743,
+    "sha256": "5a2d89c0be8732d97378a882739003d1acba10987f8cbd65939846a4370337bd",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-exact-evidence+withdrawals-none.json",
+    "bytes": 275723,
+    "sha256": "d044450b9085412fa1678fcff8d6a88e65526c8a0286c1a0d9f4ab54cbf3751b",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-exact-evidence-only-combined.json",
+    "bytes": 277059,
+    "sha256": "736d2e7491e431a592ab8419469f603d696f0ca4992cfc731c588d261bfc940c",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-exact-evidence-only-erasure.json",
+    "bytes": 275729,
+    "sha256": "367105838b4a64365e5971a3ee7255a08cc9bdff8f564312097bb5e4aba3e28d",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-exact-evidence-only-none.json",
+    "bytes": 275709,
+    "sha256": "9445694a3c1de8e64ebdc89a58b01295aba53ac8ce29a87ba8ee7a8f47d71be0",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-exact-evidence-only-withdrawal.json",
+    "bytes": 277086,
+    "sha256": "307b1af4b2069da3d90d0f1efdc698fe95fc4c39b0f77a911bc928b528c60ad8",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-exact-none-withdrawal.json",
+    "bytes": 135276,
+    "sha256": "c161446669cbe95f48f768ed685510649bef9de77251a3db2b0a1e8a17e53260",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-jev-evidence+withdrawals-combined.json",
+    "bytes": 305855,
+    "sha256": "ba3e3009084640f0eb0d9900f3c130b84001d1fcfabc2c88a967f48c386a657e",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-jev-evidence+withdrawals-none.json",
+    "bytes": 275719,
+    "sha256": "25b5a3d55ad21ed65d5b42f3e5be3b76e43b0eda8fb369e4142b24666deb4f41",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-jev-evidence+withdrawals-withdrawal.json",
+    "bytes": 305870,
+    "sha256": "14ea4a99af20136a44590b2b9eae2ed6227fc03f9f241e546539b689a2b24200",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-jev-evidence-only-combined.json",
+    "bytes": 277055,
+    "sha256": "a157cc8ede3e3f0253ea31af6363a6eaceb67b171891130b811be8f4ad9c640e",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-jev-evidence-only-none.json",
+    "bytes": 275705,
+    "sha256": "50f57a574b0f109dd6e115ee7c6fca2d3de7a8927bab0ef8a026f67aecc5d368",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-jev-none-erasure.json",
+    "bytes": 135105,
+    "sha256": "25dbab173409dab55abcd7ade7f1a482c798baf794fab99d4d3eb526b41ab8f8",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-jev-none-withdrawal.json",
+    "bytes": 135272,
+    "sha256": "645f50d6fea33cddb0fb910eeac38a38355b3c7f3d73a637cc3d4bc4eafc7aed",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-evidence+withdrawals-combined.json",
+    "bytes": 191,
+    "sha256": "eb69a5aff0d6efbd4709542f1699bfdb23e1ae614c93106c27f22292a7188083",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-evidence+withdrawals-erasure.json",
+    "bytes": 189,
+    "sha256": "ab8c06d979ad4eab13ac738278ac3b1c0905489e7b1aec98e4550a9be55da539",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-evidence+withdrawals-withdrawal.json",
+    "bytes": 195,
+    "sha256": "fba329d49cce8dca5616b4ff3d826834154b41385f7598ca5955c6d17f650b52",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-evidence-only-erasure.json",
+    "bytes": 175,
+    "sha256": "20244b03bf6b108df301f159bac3e6865d4fd9d0df9e4b8db2adf9cec952b9ea",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-evidence-only-withdrawal.json",
+    "bytes": 181,
+    "sha256": "d107e99e05465c47acb410852f19490f000839a79389a2eda2201e0d469e3957",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-none-erasure.json",
+    "bytes": 157,
+    "sha256": "70363b604ab12446e6aa1c345f7277fb0f91bb4c130561e7bc7a4c2807bbea39",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-none-none.json",
+    "bytes": 151,
+    "sha256": "d840c19817436a6ee26ed7d9bb283c515e2e7775b0a7a334e0a890f23e3ca117",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-none-withdrawal.json",
+    "bytes": 163,
+    "sha256": "0b49a096b45e69755063edbea632db413ddc9d2fdbdb3d095b027f4d44f92b3f",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen+qwen-evidence+withdrawals-erasure.json",
+    "bytes": 189,
+    "sha256": "3f833f37c5bd4eb93acc8155acf63709c3265af291695cc679f31ce21fe228b1",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen+qwen-evidence+withdrawals-none.json",
+    "bytes": 183,
+    "sha256": "37652de6cfe19178784f1d541223c52a5d05caa2436734bb4906d7582eb39f7b",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen+qwen-evidence+withdrawals-withdrawal.json",
+    "bytes": 195,
+    "sha256": "e8f14122ab6b8571073a80a6f000a0f2be4e4e4111ddbe257aa9fd44524788d7",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen+qwen-evidence-only-erasure.json",
+    "bytes": 175,
+    "sha256": "a8982ae65a4a7f311b0e1e758f6641a4baf404b30df3d97de40a4434b5c5fb80",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen+qwen-none-combined.json",
+    "bytes": 159,
+    "sha256": "2ca9a959b600dc739fe9a2c0cbf892133839d00d1d0f675ec148787be040a372",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen+qwen-none-none.json",
+    "bytes": 151,
+    "sha256": "6f65a102ade096261755ff5275643953b6f4f60de11bc72e3589b3b0d3aa62b8",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen+qwen-none-withdrawal.json",
+    "bytes": 163,
+    "sha256": "cdcea0d14c01fce5fd5ea85640579ac717af2f90ce89d9ee47bd365abb3c2173",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen-evidence+withdrawals-combined.json",
+    "bytes": 181,
+    "sha256": "1d0520bdf0303e5a59186f5699046b7de82fbda65f700f906c5fb557c40f7a1f",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen-evidence+withdrawals-erasure.json",
+    "bytes": 179,
+    "sha256": "b92a0e555d8948339c5034e4297427b70d83a022d9c00532a485d692d460c895",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen-evidence+withdrawals-withdrawal.json",
+    "bytes": 185,
+    "sha256": "6259d894f82983c200de592a1b82776d36608365604c56805720be88c1fa50cf",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen-evidence-only-erasure.json",
+    "bytes": 165,
+    "sha256": "7eb56032bd5efe4cb7cfd08b5e7f8576e51afdb971b6ae0fc8f2a6f7a5377801",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen-evidence-only-none.json",
+    "bytes": 159,
+    "sha256": "b2d1450baab7bf3c7282e681417049ce2f62097c01b33dee61d46b532fd3cadf",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen-none-none.json",
+    "bytes": 141,
+    "sha256": "fb9c3aa517b39478304782e669850219d2e3e07f65361eff3ccd9ce066450a87",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/8703-qwen-none-withdrawal.json",
+    "bytes": 153,
+    "sha256": "1a421a450e91219d3781973eb3796077e92173bcfa3eead430ea1e519f907d6d",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/audit.json",
+    "bytes": 7415,
+    "sha256": "1b8e0bda1ade6c15ebf7913964f488a9ed70ce45e06e22d0b029c70c224b8b3c",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/calls.jsonl",
+    "bytes": 413716,
+    "sha256": "d069665f834f6f28e55c32bc0900a185f79d54efb1b303ccd4b4d128c614df8c",
+    "mode": "every call record parsed; sequence, assignments, outputs, usage and source-tape reconciliation",
+    "hash_matches_inventory": true,
+    "records": 1320
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/corpus-8702.json",
+    "bytes": 40529,
+    "sha256": "82404b4cc59b2f32cb9ea976bef1d0504e38f0cef47d9d736228d49df6888c61",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/corpus-8703.json",
+    "bytes": 40482,
+    "sha256": "90ff153a55ae6f7c791e78d77a30f2d98aca47a1664bd2470886724be1bd86a4",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/manifest.json",
+    "bytes": 36759,
+    "sha256": "dbb3d44dba6628cf47ac6f1f806c18a99aea416f8e51d8794a5075fc12138ad4",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/plan-receipt.json",
+    "bytes": 1085,
+    "sha256": "b28b55d664f5964780c46a8c396f340ccdb1914856487663323f66a3e510b88d",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/progress.json",
+    "bytes": 62,
+    "sha256": "d3990e97527a746c9e1d891ed3a73055a1e1e111e84e932f7b9da22cbd2f75bb",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/qualification-fixtures.json",
+    "bytes": 8377,
+    "sha256": "477c4eee5cca2d967e245bb199162653ca152d11f534c4dbe08930daa2a83c0f",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/tapes-8701.json",
+    "bytes": 4419,
+    "sha256": "5932581de296baf24c37d1d060681350aaf6ad4aba27d408590f999aeea8f068",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/results/pilot-03/tapes-8702.json",
+    "bytes": 4419,
+    "sha256": "aa1e04c2368917f43c1938f1a27a489f37b13460b309d9f606f4b8be1a137679",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/site/artifact-manifest.json",
+    "bytes": 1694,
+    "sha256": "5c60e6efb502d9dd1d18d775486a12363caa0ab667098b7a6fd06b836975985d",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/site/data.js",
+    "bytes": 10009546,
+    "sha256": "ffe38576d649ae733f22a6b6b69892fbe578c7bb9d9ba9f2ae16de69a167d021",
+    "mode": "embedded dataset fully parsed and compared with all raw worlds",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/site/event.png",
+    "bytes": 71398,
+    "sha256": "0fa46338c629b2d8adeeb6e5ca9c17386fb7d82ac75f55879e1d6e18eb838434",
+    "mode": "visually inspected plus signature, dimensions and hash",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      980
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/final.png",
+    "bytes": 66208,
+    "sha256": "61a9a6213743b19869bef3667820c457b514f50fd5d08e87bc47858f4b21eeb4",
+    "mode": "visually inspected plus signature, dimensions and hash",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      980
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/index.html",
+    "bytes": 14349,
+    "sha256": "4052725ec51ba836024b9fd6f291fc6f51d2a4abc1b719549383aeb181c0f5be",
+    "mode": "full template read; diff review, labels and data contract; no browser interaction",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/site/initial.png",
+    "bytes": 65437,
+    "sha256": "6bae0246bba3cc08693b37115533670b193a315b22da5efcfa51897f3df5b9d1",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      980
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/outcomes.png",
+    "bytes": 135398,
+    "sha256": "1f26170b0be62beff88944dd2aa0b4f3e097c09aeb36bea330d8d0eecd03e21a",
+    "mode": "visually inspected plus signature, dimensions and hash",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      2210,
+      650
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/paired-effects.json",
+    "bytes": 6398,
+    "sha256": "17eea6f0bf8645e6ae4a542506f78fbfd19af4f6d10d114743f6042537d56d0d",
+    "mode": "full parse and family-specific reconciliation",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/site/recovery.gif",
+    "bytes": 501634,
+    "sha256": "5b12c7c12ca428d4d1f28015eaed859826ff0c4d6e5f803c874d11adcea3323d",
+    "mode": "signature, dimensions, hash; playback not inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      980
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/recovery.mp4",
+    "bytes": 364541,
+    "sha256": "b40219f9e07f34f7bab852f4d11cb7cb258c8a89b662e1f550f2d8fba560bad7",
+    "mode": "MP4 container signature/hash only; not played",
+    "hash_matches_inventory": true
+  },
+  {
+    "path": "healing-helping-hands/site/replay.zip",
+    "bytes": 940453,
+    "sha256": "7d6514db45fe2db8500dd72a1481f731600ba55521aa6484219f9591b737544e",
+    "mode": "every archive member CRC and path inspected; embedded replay files compared with exported site",
+    "hash_matches_inventory": true,
+    "archive_members": [
+      {
+        "name": "index.html",
+        "bytes": 14349,
+        "crc": 4196241580
+      },
+      {
+        "name": "data.js",
+        "bytes": 10009546,
+        "crc": 369623669
+      },
+      {
+        "name": "recovery.gif",
+        "bytes": 501634,
+        "crc": 665908134
+      },
+      {
+        "name": "outcomes.png",
+        "bytes": 135398,
+        "crc": 2507496324
+      },
+      {
+        "name": "paired-effects.json",
+        "bytes": 6398,
+        "crc": 87348966
+      },
+      {
+        "name": "artifact-manifest.json",
+        "bytes": 1694,
+        "crc": 3926310462
+      }
+    ],
+    "crc_failure": null
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-and-withdrawals-combined.png",
+    "bytes": 71102,
+    "sha256": "6b8a9d585b562c1c1dd18cb2240bc610ab604209d4da7746b10c7cadc9b15e23",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-and-withdrawals-erasure.png",
+    "bytes": 69759,
+    "sha256": "98b201cb532287e96a10a2de6595420f4f33247eeda72c3bd98d2b84ae3114a5",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-and-withdrawals-none.png",
+    "bytes": 69570,
+    "sha256": "155a6013f984a11c4fa2117839cfec4790e3720b64edc535fbfd0db01d806239",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-and-withdrawals-withdrawal.png",
+    "bytes": 70403,
+    "sha256": "ef0ad2bc1a512522c0cfbb9c69062db665a4bf4ef2b312870d13f5a7b13b39e9",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-only-combined.png",
+    "bytes": 75673,
+    "sha256": "e0e5f0c44f8ecb4b9cb20fb0279470c58e62ca5f9326cb1684de69687a5c3a71",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-only-erasure.png",
+    "bytes": 69493,
+    "sha256": "4eb4dce9aca39d64603c8807922822fdf29024ef08fb362e59d856eb3a9a1a3e",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-only-none.png",
+    "bytes": 69029,
+    "sha256": "5a70e23929be861e96a6232f3f100687ade322155fd4a49a9464e72acb224560",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-only-withdrawal.png",
+    "bytes": 75516,
+    "sha256": "cb5da48d4a51f4570f17b80fc3b2cac9dbec1bfce905c8839765150f554ad3c7",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-exact-none-combined.png",
+    "bytes": 74748,
+    "sha256": "de8b7a55051fffd2ae264e6a66d2ffe99786491c84d7ce2e1ef6eb5bcea42fbe",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-exact-none-erasure.png",
+    "bytes": 73349,
+    "sha256": "a2fba74acf1422388c6c22c06db2f668435a5633cefe4f245d6e58c327ebd73a",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-exact-none-none.png",
+    "bytes": 72474,
+    "sha256": "0003cf6e03512a9bd7ef21a5c595226781398931aae1533d6f857f3c70f30c19",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-exact-none-withdrawal.png",
+    "bytes": 74324,
+    "sha256": "f938b56bbe1a5b3417c6ce3bacca460c1820a99cace38cfe2d8e59590df51a28",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-and-withdrawals-combined.png",
+    "bytes": 70744,
+    "sha256": "faa2db47e6fe08198a0d08c9f5732129335b1ce48b4275195cfb5c2fad1898bc",
+    "mode": "visually inspected plus signature, dimensions and hash",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-and-withdrawals-erasure.png",
+    "bytes": 69391,
+    "sha256": "1042e09cca6bdf6eb9ffe44aea367f5926dc59da5b62b64783542e2a80fcb4ee",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-and-withdrawals-none.png",
+    "bytes": 69180,
+    "sha256": "a0c4bc52bc94e1fb1cb4738b9d9040decb8487df0c61785d2b3d747a677a8158",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-and-withdrawals-withdrawal.png",
+    "bytes": 70052,
+    "sha256": "ca3ba25c80f768a76150025aaab5398fbc1ec9fa989d9a710b032cdfdacbc225",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-only-combined.png",
+    "bytes": 74985,
+    "sha256": "c2e5c5cb57da7e6fe587f7c2e696892aca00b94aa902f4977bd10c8933e05c23",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-only-erasure.png",
+    "bytes": 69044,
+    "sha256": "659a45547fb4399a55493614667e27500dcecc28b2295533af9e77d0bd9a0a9b",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-only-none.png",
+    "bytes": 68271,
+    "sha256": "d67620bed62b4a5a36b24f2fc652011af17a047473e7ed86164edd072c2fe1f6",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-only-withdrawal.png",
+    "bytes": 75149,
+    "sha256": "21cba8521cb564d0e1fe6137a41a200ab1f27c8a330ce1fa722d83e610077e23",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-jev-none-combined.png",
+    "bytes": 74379,
+    "sha256": "71e13c10e03b1261455984caba23d126b40718608017eb7d44c48aecc0952b8b",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-jev-none-erasure.png",
+    "bytes": 73003,
+    "sha256": "ab10dc12c50d18624ca36509b3ffa66e95a641af4cf24bbecbff0f73c971d753",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-jev-none-none.png",
+    "bytes": 71917,
+    "sha256": "a36876d3e4ab8b08c1541442b77569a3c70f778503a7cb3abf0835f39a155844",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8701-jev-none-withdrawal.png",
+    "bytes": 74049,
+    "sha256": "a7c610e08a82242fdb402c5ebaee1e9faeb93c624860db5bd37a7ad2c315c143",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-and-withdrawals-combined.png",
+    "bytes": 71772,
+    "sha256": "273f6924df2b94f31abcfa36a5164f67e4bbd7a00ef4eb5b4e748bae4457e926",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-and-withdrawals-erasure.png",
+    "bytes": 69586,
+    "sha256": "a85e0a93bcd38d0d4b6dab12c5bae5319ed9f3b316676e7e4323488418d84037",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-and-withdrawals-none.png",
+    "bytes": 69403,
+    "sha256": "462ba179ec57c95294fd41a29f937ef505510d80c7bdc39425a4eaf30e1cc5b5",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-and-withdrawals-withdrawal.png",
+    "bytes": 71155,
+    "sha256": "c081a0a02b61d6d37d486af21fa064b26c19cf41b833224706bc044f53d77115",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-only-combined.png",
+    "bytes": 75579,
+    "sha256": "db9ebd33f7c1edfe1a827d7facc407570f8fc9e68aeb12943dbf6ee6622f17a6",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-only-erasure.png",
+    "bytes": 69309,
+    "sha256": "1591018b59cfea730391936971af73dba43f2e127211b223617dfff4afd593c1",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-only-none.png",
+    "bytes": 68857,
+    "sha256": "68c6ecad9c52f737c559e7b8a6829b86cf093aa6e5d438060c3c93987c122de7",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-only-withdrawal.png",
+    "bytes": 75470,
+    "sha256": "34cd752fd6aec6d43df738508173d89b09067e0c6e6ef523f090ba55271d92b0",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-exact-none-combined.png",
+    "bytes": 74679,
+    "sha256": "a1ea628c5f6ede5a7a0e0a754734a464864f48ef9182a84ebc4c9cf06431d1ae",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-exact-none-erasure.png",
+    "bytes": 73645,
+    "sha256": "a9a8bf467aa7a4929e9abbba7b9a5116f2271a5949db2efcb95cf7948483ad22",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-exact-none-none.png",
+    "bytes": 72983,
+    "sha256": "d33377cff67064a5f947cee8dfcaabdc2d190f63356e3e38a7fe93e9850c7769",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-exact-none-withdrawal.png",
+    "bytes": 74420,
+    "sha256": "a8c89df1b7aa8134afff236aa41904cd437d4ba82ec13e5c2bf9048d15b5b912",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-and-withdrawals-combined.png",
+    "bytes": 71401,
+    "sha256": "c54f5a0290a863677af90fd9a32ad149b877bb54ec20c90778ca582012371357",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-and-withdrawals-erasure.png",
+    "bytes": 69206,
+    "sha256": "c204f653a9e3c33e664377b5fe47a6044472e240d802014e56ec465987c2e57e",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-and-withdrawals-none.png",
+    "bytes": 69001,
+    "sha256": "2e7202035f02674d47328efdefbe9b7d9af18644c7b228e1c52decdcc417755e",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-and-withdrawals-withdrawal.png",
+    "bytes": 70791,
+    "sha256": "8cbaae5f20ec170605576ebca3cfe43aa1d2a9db18b4d967c2d28d20ecce1ae5",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-only-combined.png",
+    "bytes": 74890,
+    "sha256": "021eeb4f67df6786d7fe2cef11f7568c97ed07be9b670e016732e31d2a94d7c8",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-only-erasure.png",
+    "bytes": 68855,
+    "sha256": "e41181a98cf1b596158ec86026a322d081bf46c2009fe5e273a9ffee5ce1abbe",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-only-none.png",
+    "bytes": 68092,
+    "sha256": "a00cb068c1632a7ee5ddde75234767a4c2fbf0f986add19f9247d789ce4f7258",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-only-withdrawal.png",
+    "bytes": 75104,
+    "sha256": "7307589087347424588e163c15c2c6331a0544d8900b955f84ba4d6188ba2490",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-jev-none-combined.png",
+    "bytes": 74299,
+    "sha256": "05c5985dab197fe4057252d38c0d7ba59a889e9457f634435b7ed0f339bece28",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-jev-none-erasure.png",
+    "bytes": 73289,
+    "sha256": "5538370762b9fcbbc82ec6591010ee5a6e8b852354c9e64126f56c6ecd4ad094",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-jev-none-none.png",
+    "bytes": 72419,
+    "sha256": "7baa839cf9de081b29efa8d5b0d0a517bd54247382b7781d7f9a69df464b42af",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8702-jev-none-withdrawal.png",
+    "bytes": 74140,
+    "sha256": "a1e25345a1e84136bb7481fc736727c55545d5457560225295bc13539fa705aa",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-and-withdrawals-combined.png",
+    "bytes": 71030,
+    "sha256": "a97c9fd53c2afec9bfd487d51a26773e719f40d8da654fb3db4bc293a0bee712",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-and-withdrawals-erasure.png",
+    "bytes": 69576,
+    "sha256": "c67df54392bb8193c8fc80f53ee0694daa563d8be3dd446bb53c974685b62d2b",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-and-withdrawals-none.png",
+    "bytes": 69379,
+    "sha256": "cd063c0ecd8792b694bdb395b44476b8c5af6ed401450c7273be650162b62571",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-and-withdrawals-withdrawal.png",
+    "bytes": 70319,
+    "sha256": "ffc976bf3734204a46cebff54b74f18303cddeab73325b79ed8aa505572cc078",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-only-combined.png",
+    "bytes": 75490,
+    "sha256": "f98cf10d47c0efcfdc74f23d43ac1fec0c4642c7dd3f2208f02c7648574500fc",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-only-erasure.png",
+    "bytes": 69307,
+    "sha256": "78db2e00d222db7c50ef0e95df8277ce766e9350277e846e6745d9174e99e572",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-only-none.png",
+    "bytes": 68801,
+    "sha256": "796c7acf0fa17fe5891d1a19eaf7e5812b29575e30224522f152b259bc9bc831",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-only-withdrawal.png",
+    "bytes": 75330,
+    "sha256": "b8bc5c6958500fdcbd7bc85fd2084fca219ee4da508f165515f00b36dc007aaf",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-exact-none-combined.png",
+    "bytes": 74464,
+    "sha256": "8dfdf8e1aedae71aa0bf629085b2867bfb36143cb01e2163100793807af74e52",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-exact-none-erasure.png",
+    "bytes": 73137,
+    "sha256": "05ca13e63fa62dbcc079b3613bed0c1a86aa528180df788e3783a8c5ac414477",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-exact-none-none.png",
+    "bytes": 72636,
+    "sha256": "9e82229c08e319c69ec6f016762701e29050691773a75d318d5b07eaefe718c2",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-exact-none-withdrawal.png",
+    "bytes": 74568,
+    "sha256": "2412becbcb47dd52d07fd3f6f0137bbc10ea1edc133383767b1e7b73dc56bb4f",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-and-withdrawals-combined.png",
+    "bytes": 70624,
+    "sha256": "8612b2c8ea63f0eba618fb34ca1e077d2fd2df2238607332e3c89ce7bec31337",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-and-withdrawals-erasure.png",
+    "bytes": 69199,
+    "sha256": "073838fac355d2ae1b9b30b98b3e1a1cd59ef41213806755023adaa332dc2f66",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-and-withdrawals-none.png",
+    "bytes": 68982,
+    "sha256": "50bce8f279b80901d3e2869164cbffaa74e5fa91849d673cf478d4730f8a94de",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-and-withdrawals-withdrawal.png",
+    "bytes": 69953,
+    "sha256": "9bdb2b71b49b7c1f8229c42caabb4ee2fa53cebcf3d357e8314ee15cef32351f",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-only-combined.png",
+    "bytes": 74822,
+    "sha256": "40f22f434ce616f5afc114ab6f1fdbf9e96b0c45a2b9d576c0857436358d09bd",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-only-erasure.png",
+    "bytes": 68858,
+    "sha256": "32127706a5bc9b8e412dbcfcfbc13533a48921b1ed8bcd16f665292c0291cd4d",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-only-none.png",
+    "bytes": 68044,
+    "sha256": "6f49bf6e102283a22e272b034d7fa43d2771df749683e1e2f80a50d3643e8a7f",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-only-withdrawal.png",
+    "bytes": 74992,
+    "sha256": "c2a3738ab83c695d4a5744f32b7d92ff7510d656ef2bca62d1a255b2f8c787b1",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-jev-none-combined.png",
+    "bytes": 74038,
+    "sha256": "231118af351c131202adf33b27dcc7dbcce47332251411ef44326fd2f5467d4b",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-jev-none-erasure.png",
+    "bytes": 72790,
+    "sha256": "e3e87f9befdb2ca56dea1aee2bc3b23df7533f4661efb54d2720e9a65c654346",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-jev-none-none.png",
+    "bytes": 72041,
+    "sha256": "64d77f8e0b58a08743f89a07b57fb41400939e6f52ae68a44679616af5e90b53",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/site/world-frames/8703-jev-none-withdrawal.png",
+    "bytes": 74290,
+    "sha256": "19e77d3c4faa67c72d2c3f7aed47d41a3d2fbc552239aa8d252f8be950e1ae4b",
+    "mode": "signature, dimensions, hash; not visually inspected",
+    "hash_matches_inventory": true,
+    "dimensions": [
+      1600,
+      820
+    ]
+  },
+  {
+    "path": "healing-helping-hands/visualization/world_frames.py",
+    "bytes": 2701,
+    "sha256": "b4f74d5211877c75a86c26c7be0db7e16e3443cc70590e96e121c7c49fb58b47",
+    "mode": "full source review",
+    "hash_matches_inventory": true
+  }
+]

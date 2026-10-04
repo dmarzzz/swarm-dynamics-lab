@@ -1,0 +1,10 @@
+{
+  "findings": 57,
+  "priority_filter": true,
+  "project_filter": true,
+  "text_search": true,
+  "deep_links": true,
+  "mobile_overflow": false,
+  "coverage_search": true,
+  "js_errors": []
+}

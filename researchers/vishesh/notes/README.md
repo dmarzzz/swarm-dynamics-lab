@@ -6,6 +6,8 @@ This collection documents candidate work on swarm evidence, communication, share
 
 ## Start here
 
+[Principal-investigator project review](pi-review-2026-10-04/README.md): 57 evidence/implementation findings, individual scientific assessments of all ten named projects, 110 scenario/condition assessments, sixteen proposal reviews and agent lifecycle guidance. Dated evidence cutoffs and source availability are explicit. This is an internal PI-style critique, not a formal independent gate review.
+
 | Reader’s task | Read | What to expect |
 | --- | --- | --- |
 | Launch an experiment on its own machine | [Dedicated-machine workflow](experiment-machine-workflow.md) | Select from Dmarz's fleet, claim exclusively, verify the deployment and shared budget, and release after artifact upload. |

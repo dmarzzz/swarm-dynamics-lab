@@ -1,0 +1,847 @@
+[
+  {
+    "id": "SCI-ANTSY-V3",
+    "name": "Antsy v1\u2013v3: adaptive quorum under changing evidence",
+    "evidence_class": "Completed synthetic mechanism studies with model-assisted predicates; remote result arithmetic not newly replayed.",
+    "decision": "Retain as a transparent policy demonstration. Stop enlarging this synthetic matrix; carry its conditional failure modes into v4.",
+    "interest": {
+      "judgment": "Moderate mechanistic interest; limited model-science contribution.",
+      "why": "The design makes a useful tradeoff visible: waiting helps if the next evidence corrects the world model and hurts if it corrupts it.",
+      "novelty_boundary": "A deadline-dependent quorum is not itself a novel intelligence result. The meaningful contribution would be predicting when to wait from observable reliability, provenance and delay\u2014not choosing a threshold after inspecting a hand-authored outcome table."
+    },
+    "robustness": {
+      "supported": "v1 reports 144 scripted and 144 Laya outcomes, with tied fixed/adaptive performance. v2 failed semantic qualification despite schema validity. Repaired v3 reports 384 matched blocks and 2,688 policy outcomes with zero actor errors; all model-assisted policies match the corresponding symbolic decisions. Fixed-three abstains in 336/384 outcomes, whereas several other policies have 96/384 violations.",
+      "unsupported": "A general adaptive-quorum advantage, independent multi-agent reasoning, learned consensus, broad API-selection competence or real-time latency savings.",
+      "unit": "Twelve authored task clusters crossed with controlled worlds, arrival schedules, populations and cutoffs; 384 blocks are not 384 independent task draws.",
+      "independent_variation": "Repeated symbolic predicates are memoized: 39 distinct physical model calls, including 12 restored calls, supply 88,128 logical invocations. Changing the population does not create new independent model minds.",
+      "assessment": "Useful internally auditable boundary cases. The pooled loss ranking depends on authored world frequencies and violation/abstention utilities. Qualification repair changed the architecture and must remain versioned; failed v2 evidence cannot be merged into a clean confirmatory sample."
+    },
+    "scenario_quality": {
+      "size": "Five and nine agents suffice to exercise threshold arithmetic; neither population tests a scaling law.",
+      "challenge": "Atomic typed predicates plus hard constraint guards are largely solved by exact rules.",
+      "complexity": "Evidence arrival and revision are meaningful; agent cognition and information diversity are limited.",
+      "realism": "Provider-selection stories use synthetic prices, claims and times. Logical ticks are not measured service latency.",
+      "definition": "Worlds and policies are explicit. Distinguish independent roots from copies and later versions; an observable root label does not certify truthful independence."
+    },
+    "scenarios": [
+      {
+        "name": "Clean late and stalled evidence",
+        "assessment": "Clean-stalled separates fixed-three abstention from fixed-two/adaptive commitments; clean-late is a competence control, not evidence of adaptive superiority.",
+        "improvement": "Preserve these fixtures; quantify the practical cost of delay and abstention before pooling them."
+      },
+      {
+        "name": "Early wrong evidence, late correction",
+        "assessment": "At nine agents/cutoff six, adaptive makes 12 correct choices where fixed-two makes 12 violations and fixed-three abstains 12 times. This shows an authored favorable timing regime.",
+        "improvement": "Use observable reliability cues and uncertain correction arrival, with conditions fixed before seeing outcomes."
+      },
+      {
+        "name": "Late misinformation",
+        "assessment": "Adaptive incurs 12 violations in the matched late-arrival cell while fixed-two is correct. Early-wrong stalled evidence also defeats adaptation.",
+        "improvement": "Make the symmetric harmful case prominent and vary evidence quality independently of arrival time."
+      },
+      {
+        "name": "Copied roots",
+        "assessment": "Repeated endorsements test accounting, but exact lineage labels make deduplication easy.",
+        "improvement": "Introduce incomplete or erroneous lineage only after exact ancestry behavior is established; retain an oracle-ancestry upper bound."
+      }
+    ],
+    "controls": {
+      "retain": [
+        "Fixed-two, fixed-three, deadline and symbolic policies",
+        "Matched evidence tapes across conditions",
+        "Failed qualification and recovered-prefix provenance"
+      ],
+      "missing": [
+        "A reliability-aware deterministic stopping rule with the same observations",
+        "Sensitivity of utility rankings to world mixture and abstention costs",
+        "Measured latency and information-acquisition costs for a deployment claim"
+      ],
+      "confounds": [
+        "Threshold, final deadline and information arrival jointly determine the answer",
+        "Hard constraint guards can account for all apparent model competence",
+        "Memoization induces shared decisions across nominal agents"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "Evidence reliability \u00d7 arrival",
+        "current": "Four authored worlds; late or stalled schedule",
+        "priority": "Essential identification",
+        "proposed_variation": "Vary arrival delay independently of correct/incorrect evidence and informative reliability cues",
+        "reason": "Tests whether a policy can choose its tradeoff rather than inherit a favorable world mixture."
+      },
+      {
+        "parameter": "Decision loss",
+        "current": "Fixed violation/abstention loss",
+        "priority": "Essential identification",
+        "proposed_variation": "Report the Pareto frontier and a small range of declared loss ratios",
+        "reason": "Pooled ranking can reverse when abstention is cheaper."
+      },
+      {
+        "parameter": "Lineage visibility",
+        "current": "Known roots and copies",
+        "priority": "Later stress test",
+        "proposed_variation": "Exact, partial and misleading ancestry with evaluator truth hidden",
+        "reason": "Tests operational provenance limits."
+      },
+      {
+        "parameter": "Agent count",
+        "current": "5/9 with shared predicates",
+        "priority": "Low priority",
+        "proposed_variation": "Increase only if private information or coordination demands grow",
+        "reason": "Duplicating the same answer is not a larger scientific test."
+      }
+    ],
+    "next_study": {
+      "question": "Can an observable evidence-quality rule outperform a fixed threshold under both late corrections and late misinformation?",
+      "primary_contrast": "Reliability-aware stopping versus a matched deterministic fixed/deadline rule.",
+      "endpoint": "Correct commitments by deadline, harmful commitments and abstentions reported separately, then cost-sensitive utility.",
+      "unit": "Independently authored task/evidence stream.",
+      "design": "Use the old exact matrix as regression fixtures. Develop one realistic acquisition task with uncertain observation quality; freeze a small paired held-out comparison before expanding headcount.",
+      "go_no_go": "Continue only if the realistic task discriminates policies and offers residual benefit beyond exact predicates. Otherwise retain the symbolic rule and report the negative result."
+    },
+    "sources": [
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/adaptive-quorum/README.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/adaptive-quorum-v2/README.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/SPEC.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/AUDIT.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      }
+    ]
+  },
+  {
+    "id": "SCI-ANTSY-V4",
+    "name": "Antsy v4: selecting OCR with bounded verification",
+    "evidence_class": "Completed Laya and Jev model studies on externally authored receipt images; full result/specification review, without new raw replay.",
+    "decision": "Retain the negative result. Repair the verification estimator and operational outcome before testing larger swarms.",
+    "interest": {
+      "judgment": "High practical measurement value; currently a negative gate for this committee design.",
+      "why": "Real OCR alternatives and external receipts make failure consequential and inspectable. A cheap baseline beats both committees, which is more useful than an unchallenged toy win.",
+      "novelty_boundary": "The open question is cost-effective verification allocation, not whether five prompts can vote. The current actors select among OCR outputs from numeric summaries; they do not read images or repair text."
+    },
+    "robustness": {
+      "supported": "Reported split: 20 calibration, 10 qualification and 70 evaluation receipts from the 100-receipt CORD-v2 validation split; official test remains unopened. Mean token recall: confidence alone 56.78%, Laya committee 56.30%, Jev committee 55.72%; oracle selection 60.96%. Reported paired differences versus confidence are \u22120.48 percentage points (interval \u22122.50 to +0.98) and \u22121.06 (\u22122.60 to +0.11). Neither adaptive committee stopped early. Both studies completed without invalid calls.",
+      "unsupported": "Swarm benefit, early-stop efficiency, document understanding, OCR correction, general superiority of one model, or operational savings from avoiding OCR runs.",
+      "unit": "Seventy paired receipt units. Across both model studies there are 700 distinct policy/receipt conditions after common controls are counted once; 980 displayed rows are not independent trials.",
+      "independent_variation": "One receipt corpus and three Tesseract modes; fixed/adaptive policies share potential ballots, four controls recur across studies, and all candidate OCR outputs were computed in advance.",
+      "assessment": "Stronger input diversity than most local pilots, but one corpus limits transfer. Confidence already captures most selection headroom. The negative result should survive publication even if the estimator is later repaired."
+    },
+    "scenario_quality": {
+      "size": "Seventy held-out receipts can expose gross failure modes; uncertainty remains wide for small gains and field-specific strata.",
+      "challenge": "Selecting among three outputs has only 4.18 percentage points of oracle headroom after confidence. A five-voter design adds overhead to a small decision.",
+      "complexity": "Three private configuration roles plus two union-view roles provide some information partitioning, but little complementary expertise or interaction.",
+      "realism": "Real CORD-v2 receipts processed with Indonesian and English OCR models are a substantial improvement. Oracle annotation-based region checks are an idealized QA service; token recall is an incomplete business objective.",
+      "definition": "Two checks maximum, deterministic region selection and estimator updates are specified. Null/no-target checks and region weighting are a substantive validity problem."
+    },
+    "scenarios": [
+      {
+        "name": "Confidence and fixed OCR baselines",
+        "assessment": "Confidence alone outperforms fixed selection and both committees; this is the primary practical benchmark.",
+        "improvement": "Keep it, and add a calibrated expected-value-of-information rule that gets exactly the same check interface."
+      },
+      {
+        "name": "Random and deterministic verification",
+        "assessment": "Verification is not automatically useful: random checks yield 54.33% and the deterministic rule 56.64% versus confidence 56.78%.",
+        "improvement": "Separate check-value estimation from final OCR selection. Audit each update against the declared target quantity."
+      },
+      {
+        "name": "Single controller versus fixed/adaptive committee",
+        "assessment": "Laya single reaches 55.88%, Jev single 55.42%; committees reach 56.30%/55.72%, with no adaptive check saving. Sharing ballots is valid for policy comparison but not a fresh independent replication.",
+        "improvement": "Compare total useful gain per actual call/check under matched information; qualify both STOP and CONTINUE cases on development data."
+      },
+      {
+        "name": "Empty region and harmful update audit",
+        "assessment": "87/140 Laya checks and 94/140 Jev checks hit regions with no annotated target. An estimator omits an empty region only for the checked configuration, which can change rankings without a quality observation. A documented Jev sequence loses about 32 percentage points.",
+        "improvement": "Specify when an empty observation contains evidence about the target; use a null-safe, consistently weighted estimator. Reanalyze saved observations descriptively, then test fresh receipts."
+      }
+    ],
+    "controls": {
+      "retain": [
+        "Externally authored inputs and disjoint calibration/qualification/evaluation",
+        "Fixed, confidence, random, deterministic, single-controller and oracle references",
+        "Matched potential checks and paired receipt comparisons"
+      ],
+      "missing": [
+        "Operational review cost and false-accept/abstain outcomes",
+        "Null-safe estimator versus old estimator on frozen traces, labeled retrospective",
+        "Fresh corpus/layout transfer and field-level evaluation"
+      ],
+      "confounds": [
+        "Unweighted region estimates target a token-weighted endpoint imperfectly",
+        "Annotation-backed QA is stronger than a noisy deployed checker",
+        "Common ballots, shared controls and one model checkpoint per study reduce independent variation",
+        "Elapsed runtime differs with service conditions and is not a controlled model-speed comparison"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "Check semantics and estimator",
+        "current": "Two region checks; empty regions handled asymmetrically",
+        "priority": "Fix before inference",
+        "proposed_variation": "Define null behavior and token/field weighting consistently",
+        "reason": "A check can harm through implementation even if policy selection is sensible."
+      },
+      {
+        "parameter": "Operational objective",
+        "current": "Whole-receipt token recall",
+        "priority": "Essential redesign",
+        "proposed_variation": "Exact amount/date/vendor extraction, human review cost, missed-field and false-accept loss",
+        "reason": "Aligns the task with practical use."
+      },
+      {
+        "parameter": "Information complementarity",
+        "current": "Three private summaries and two union summaries",
+        "priority": "Essential identification",
+        "proposed_variation": "Homogeneous versus complementary evidence with the same information union and total budget",
+        "reason": "Identifies whether committee structure adds value."
+      },
+      {
+        "parameter": "Verification reliability/cost",
+        "current": "Annotation-derived recall; all OCR outputs prepaid",
+        "priority": "Later stress test",
+        "proposed_variation": "Noisy checks, explicit human/check cost, then actual staged OCR acquisition",
+        "reason": "Supports genuine efficiency claims."
+      },
+      {
+        "parameter": "Corpus and role assignments",
+        "current": "One external corpus, fixed roles",
+        "priority": "Later transfer",
+        "proposed_variation": "Unseen layouts/languages and counterbalanced roles",
+        "reason": "Prevents overgeneralizing receipt-specific calibration."
+      }
+    ],
+    "next_study": {
+      "question": "Does verification improve field-level decisions enough to justify its cost after estimator repair?",
+      "primary_contrast": "A simple expected-value verification policy versus confidence-only, before adding a committee.",
+      "endpoint": "Correct accepted fields and harmful accepted errors by deadline, with coverage and all-in cost.",
+      "unit": "Independent receipt, grouped by source/vendor where dependence exists.",
+      "design": "First perform a clearly retrospective estimator audit. On fresh development receipts qualify meaningful stop/continue behavior and operational scoring; then freeze one paired evaluation. Add committee/single only if the check itself has positive value.",
+      "go_no_go": "Stop scaling if a corrected simple policy captures the available gain or if verification cannot beat confidence at the chosen cost. Do not tune the next headline on the 70 already inspected receipts."
+    },
+    "sources": [
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/antsy-verification-v4/README.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/antsy-verification-v4/SPEC.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/antsy-verification-v4/RESULTS.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      }
+    ]
+  },
+  {
+    "id": "SCI-INFLUENCE-V2",
+    "name": "How to win agents and influence swarms: historical external-influence studies",
+    "evidence_class": "Completed model qualification and v2 fixture studies; published results reviewed, not newly recomputed.",
+    "decision": "Keep as failure diagnosis. Do not claim broad contagion or targeted-verification superiority; use the revised procurement task.",
+    "interest": {
+      "judgment": "Important problem, but the present effects do not identify the advertised social mechanism.",
+      "why": "A chair can ignore correct verification evidence and choose a promoted option. That is a useful decision-integration failure even when no unexposed agent converts.",
+      "novelty_boundary": "Persuasion, retrieval poisoning and instruction attacks overlap substantially. A new contribution needs to separate evidence corruption, actor targeting, peer influence and final decision policy."
+    },
+    "robustness": {
+      "supported": "v2 reports 50 outcomes, 750 calls and about $2.003. Clean procurement is correct 5/5, dependency/travel 4/5 each. Misleading and syndicated material often induces wrong choices; six targeted-check cases contain correct verification values yet end wrong. A mechanical replay fixes those six using the same observed inputs. No target conversions occur in 20 unexposed attack observations, and targeted-check-minus-random-check harmful-selection difference is zero in each misleading domain.",
+      "unsupported": "A reliably superior targeted-verification policy, demonstrated contagion, efficacy of the newly proposed repaired chair, or broad cross-domain generalization. A post-hoc deterministic replay is not a prospective model-policy trial.",
+      "unit": "Three underlying domain fixtures with repeated protocol/world conditions at one S1 seed; 50 outcomes are not 50 independently authored tasks.",
+      "independent_variation": "Procurement, dependency and travel largely share a four-option scalar-utility construction. Historical v1 clean qualification and v2 results serve different purposes and cannot be pooled.",
+      "assessment": "The failures are concrete but narrow. Weak clean competence in two domains, no native ineligible-target coverage and high attack dose weaken causal attribution."
+    },
+    "scenario_quality": {
+      "size": "Nine actors and 15 calls per outcome are enough to study a chair pathway; too few independent problems support general claims.",
+      "challenge": "Strong poisoning of tiny option tables can overwhelm the task; apparent severity need not show realistic persuasion.",
+      "complexity": "Six analysts, two check interpreters and one chair expose a decision pipeline, but simple utility tables make much of it unnecessary.",
+      "realism": "Three domain names do not create three distinct reasoning mechanisms. Realistic constraints, uncertain checks and source-document space are missing.",
+      "definition": "Schema validity is separate from semantic competence. Exact target eligibility and use of correct verification must be specified before interpreting influence."
+    },
+    "scenarios": [
+      {
+        "name": "Clean and direct instruction worlds",
+        "assessment": "Procurement clean and instruction worlds are correct 5/5, while other clean domains reach 4/5. This supports partial competence, not a universally qualified baseline.",
+        "improvement": "Use disjoint clean cases in every retained domain and keep wrong-valid outputs in denominators."
+      },
+      {
+        "name": "Misleading report and syndication",
+        "assessment": "Procurement is correct 0/5 under misleading content and 1/5 under syndication; dependency/travel are 0/5 in both. Repetition and information distortion are bundled.",
+        "improvement": "Match total length, source count and truthful promotional content; manipulate ancestry separately."
+      },
+      {
+        "name": "Targeted versus random verification",
+        "assessment": "Targeted checking has zero observed harmful-selection advantage over random checking in each misleading domain. Separately, no target conversions appear among unexposed analysts. These are negative findings about verification allocation and social propagation, respectively; attack exposure was fixed.",
+        "improvement": "Keep the same verification-package menu and check budget; qualify eligible and ineligible promoted candidates, and measure direct exposure versus downstream conversion separately."
+      },
+      {
+        "name": "Mechanical integration replay",
+        "assessment": "Across 50 outcomes, the replay fixes 13 of 31 wrong choices and harms none of 19 initially correct choices; 18 remain wrong.",
+        "improvement": "Label it a retrospective explanatory baseline. Prospectively compare an implementable evidence-constrained chair with the same observed information."
+      }
+    ],
+    "controls": {
+      "retain": [
+        "Random verification and clean worlds",
+        "Fixed actor/call structure",
+        "Observed-evidence mechanical replay and retained failures"
+      ],
+      "missing": [
+        "Truthful promotion matched for salience",
+        "Information-equated pooled controller",
+        "Lower dose and independently varied source ancestry",
+        "Qualified clean performance across actual task families"
+      ],
+      "confounds": [
+        "Wrapper domains share the same underlying numerical decision",
+        "No native ineligible-target coverage and weak baseline competence",
+        "Score enforcement changes the decision rule directly",
+        "Attack damage is not proof of social transmission"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "Exposure and promoted-candidate eligibility",
+        "current": "Nine fixed roles, strong fixed document exposure and eligible promoted candidates only",
+        "priority": "Essential identification",
+        "proposed_variation": "Vary document exposure and eligible/ineligible promoted candidates while retaining the same verification menu",
+        "reason": "Separates direct content effects, social propagation and constraint handling; targeted/random checking remains a verification-allocation contrast."
+      },
+      {
+        "parameter": "Attack content and dose",
+        "current": "High-dose misleading/syndicated/instruction worlds",
+        "priority": "Essential identification",
+        "proposed_variation": "Truthful promotion, misleading omission, repeated same-root evidence at matched volume",
+        "reason": "Separates persuasion, information corruption and repetition."
+      },
+      {
+        "parameter": "Final decision policy",
+        "current": "Chair may disregard verified values",
+        "priority": "Essential identification",
+        "proposed_variation": "Standard versus evidence-constrained chair with matched inputs",
+        "reason": "Tests the diagnosed integration mechanism."
+      },
+      {
+        "parameter": "Verification",
+        "current": "Correct values in some failed outcomes",
+        "priority": "Later stress test",
+        "proposed_variation": "Noisy, unavailable and costly checks",
+        "reason": "Maps a deployable defense boundary."
+      }
+    ],
+    "next_study": {
+      "question": "Does showing peer votes increase harmful selection beyond the same contaminated documents and checks?",
+      "primary_contrast": "Ballots visible versus omitted, crossed with clean versus misleading information.",
+      "endpoint": "Difference in harmful authorization, with clean competence, deferral and cost.",
+      "unit": "Independently authored decision dossier, not chair calls.",
+      "design": "Use the revised scenario suite described separately, freeze purchase semantics and pass fresh qualification before expanding. Preserve historical failures as diagnostics.",
+      "go_no_go": "No claim of contagious influence without an effect in actors or decisions beyond direct exposure. If the chair alone explains damage, state that and study it directly."
+    },
+    "sources": [
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/actual-experiments/README.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/external-influence-v2/README.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      },
+      {
+        "path": "https://github.com/dmarzzz/swarm-lab/blob/2d8034005a572f272e612e9e93198f98740cedaf/researchers/vishesh/notes/external-influence-v2/preregistration.md",
+        "detail": "Independent fact-check read the original protocol in /private/tmp/swarm-decision-models. Bytes match this immutable commit reachable from origin/main; SHA256 8635260760340c45d286c2d54584940a23d606548b326fb103877f2f67b0ebde. Arms route verification packages, not attack exposure; historical result figures remain author-reported."
+      }
+    ]
+  },
+  {
+    "id": "SCI-INFLUENCE-SCENARIO",
+    "name": "How to win agents and influence swarms: consequential procurement redesign",
+    "evidence_class": "Defined scenario suite, scripted engineering matrix and native qualification/diagnostics; main influence comparison not run.",
+    "decision": "Promising redesign. Freeze action semantics and requalify before the primary influence study.",
+    "interest": {
+      "judgment": "High practical relevance and a much stronger scenario construction.",
+      "why": "Supplier choice now depends on cost, scope, migration timing and mandatory approval. The vote-display fork isolates a plausible chair failure pathway while holding raw evidence and checks fixed.",
+      "novelty_boundary": "A useful result would concern collective decision integration under explicit business constraints. Merely finding that promotional material changes a choice is insufficient."
+    },
+    "robustness": {
+      "supported": "The design contains 24 development dossiers from six tensions \u00d7 four buyer profiles, four information worlds and three terminal policies (288 scripted outcomes). Native Q0 is 0/9 valid, Q1 2/9 valid, Q2 9/9 valid with 7 acceptable choices; Q3 is a three-decision fresh-profile diagnostic. Across attempts, 78 calls and about $0.223 are reported. Q2 chairs both chose a supplier despite missing approval; the generalist deferred. The two chairs agreed in all three Q2 cases.",
+      "unsupported": "A peer-vote influence effect, robustness across procurement cases, a causal benefit of the revised wording, or success of the full 288-outcome native comparison.",
+      "unit": "Independent dossier lineage; family is the conservative transfer unit. Shared eight-call prefixes make the two chairs paired, not independent replications.",
+      "independent_variation": "Six authored tensions and four profile variants; qualification used only three Q2 cases. Q3 changed both wording and buyer profile.",
+      "assessment": "The diagnostic is valuable precisely because valid outputs still make consequential errors. 'Nine decisions completed' must not be presented as nine scientific successes or as completion of the primary study."
+    },
+    "scenario_quality": {
+      "size": "Six tension families are enough to begin distinguishing mechanisms; four profiles within each are limited independent diversity.",
+      "challenge": "Constraints create genuine tradeoffs, but competence must be demonstrated on approval, timing and genuine-value cases before adversarial treatment.",
+      "complexity": "Six specialists and two checks create a clear pipeline. Whether it needs a swarm remains open against the generalist.",
+      "realism": "More realistic than scalar toys: dollars, labor, deployment approvals and migration deadlines matter. Documents and ground truth remain authored rather than independently sourced operational records.",
+      "definition": "Selecting a supplier originally differed from authorizing a purchase now. The revised action contract is critical; Q3 did not yet establish it across conditions."
+    },
+    "scenarios": [
+      {
+        "name": "Usage charges versus headline price",
+        "assessment": "Tests arithmetic and salient price framing; risks being solved by a cost table alone.",
+        "improvement": "Keep an exact total-cost control and counterbalance which supplier benefits from omitted fees."
+      },
+      {
+        "name": "Storage versus processing scope",
+        "assessment": "Tests applying a claim to the correct capability rather than copying a favorable number.",
+        "improvement": "Include truthful but irrelevant claims and explicit unresolved scope; independent adjudication should verify the gold choice."
+      },
+      {
+        "name": "Migration deadline",
+        "assessment": "Adds a hard temporal feasibility constraint, improving consequential realism.",
+        "improvement": "Vary slack around a fixed feasibility boundary; distinguish impossible deployment from expensive deployment."
+      },
+      {
+        "name": "Workload versus demonstration",
+        "assessment": "Tests extrapolating beyond a vendor demo, a plausible procurement failure.",
+        "improvement": "Specify uncertainty and acceptable evidence; avoid evaluator truth that no buyer could infer."
+      },
+      {
+        "name": "Genuine value",
+        "assessment": "Essential counterexample: sponsored content can be truthful and lead to the best option.",
+        "improvement": "Treat blanket suspicion as a failure here; balance promoted-supplier identity."
+      },
+      {
+        "name": "Evidence gap / missing approval",
+        "assessment": "The most informative native diagnostic. Both Q2 chairs acknowledged the gap yet selected a supplier; generalist deferred.",
+        "improvement": "Freeze immediate-authorization semantics and qualify this case alongside ordinary and genuine-value cases on fresh profiles."
+      }
+    ],
+    "controls": {
+      "retain": [
+        "Identical six-specialist/two-check prefix forked to ballots-visible and ballots-omitted chairs",
+        "Truthful promotion, misleading omission and same-publisher syndication",
+        "Cheap generalist and independently computed feasible-cost references",
+        "Zero/3/10% acceptability-band and labor-cost sensitivity"
+      ],
+      "missing": [
+        "Fresh comprehensive qualification after action-contract change",
+        "Independent gold review blind to intended attack outcome",
+        "Token/salience-matched neutral ballot-display control if claiming conformity specifically",
+        "New dossier families withheld from authoring and qualification"
+      ],
+      "confounds": [
+        "Ballot display changes tokens and salience as well as social information",
+        "Generalist has four calls versus nine per team decision path; practical efficiency comparison is intentionally unequal",
+        "Q3 changes profile and wording together",
+        "Acceptable supplier changes across sensitivity settings in 12/24 dossiers; a single gold label can hide preference dependence"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "Action meaning and feasibility",
+        "current": "Q2 selection versus Q3 immediate purchase clarification",
+        "priority": "Fix before inference",
+        "proposed_variation": "One frozen authorization/DEFER contract with explicit mandatory constraints",
+        "reason": "Without it, task error and instruction ambiguity are inseparable."
+      },
+      {
+        "parameter": "Peer votes \u00d7 information world",
+        "current": "Four worlds; primary native contrast absent",
+        "priority": "Essential identification",
+        "proposed_variation": "Predeclare ballots-visible/omitted \u00d7 clean/misleading difference-in-differences",
+        "reason": "Separates social display effects from document corruption."
+      },
+      {
+        "parameter": "Economic preferences",
+        "current": "3% band; labor-price sensitivity",
+        "priority": "Essential reporting",
+        "proposed_variation": "Show results at declared band/cost ranges and flag label instability",
+        "reason": "Prevents arbitrary preferences becoming apparent reasoning truth."
+      },
+      {
+        "parameter": "Dose and lineage",
+        "current": "Three same-publisher syndicated copies",
+        "priority": "Later stress test",
+        "proposed_variation": "Matched token budgets, source independence and incomplete lineage",
+        "reason": "Tests whether repetition is the operative cause."
+      },
+      {
+        "parameter": "Task diversity",
+        "current": "Six authored tensions, four profiles each",
+        "priority": "Later transfer",
+        "proposed_variation": "Fresh independently authored dossiers and at least one different consequential decision family",
+        "reason": "Profile reskins do not establish broad transfer."
+      }
+    ],
+    "next_study": {
+      "question": "After clean competence, do peer ballots amplify harmful authorization under misleading evidence?",
+      "primary_contrast": "Ballot-display effect in misleading worlds minus its effect in clean worlds, paired at dossier level.",
+      "endpoint": "Harmful immediate authorization, with acceptable choice, deferral, missed opportunities and total cost separate.",
+      "unit": "Dossier lineage with clustered uncertainty by tension family.",
+      "design": "Freeze the contract, qualify ordinary/genuine-value/evidence-gap/migration cases, then run a small paired clean/misleading comparison over fresh dossiers. Reserve truthful promotion and syndication as explanatory follow-ups if the main effect exists.",
+      "go_no_go": "Do not expand if either chair remains unable to defer under clear mandatory constraints. If ballots do not matter, publish that boundary and focus on the evidence-integration policy rather than claim swarm contagion."
+    },
+    "sources": [
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/influence-swarms/scenario/README.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/influence-swarms/scenario/PROTOCOL.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/influence-swarms/scenario/ASSESSMENT.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      }
+    ]
+  },
+  {
+    "id": "SCI-RD",
+    "name": "Right Dissenter: bounded evidence challenges, withdrawal and reopening",
+    "evidence_class": "Prospective native experiment with implemented offline state machine and explicitly scripted local fixtures.",
+    "decision": "Advance a small identifying study after semantic qualification; avoid a large suite before it beats always-check and deterministic rules.",
+    "interest": {
+      "judgment": "One of the strongest prospective mechanisms, if it protects correct decisions as well as repairs wrong ones.",
+      "why": "A minority earns a bounded check instead of a permanent veto. Withdrawal, expiration and reopening make the protocol more useful than simply encouraging disagreement.",
+      "novelty_boundary": "Minority correction and biological stop signals already have substantial prior art. Novelty must come from an implementable evidence-admission/cost tradeoff under noisy checks; the local literature gate remains incomplete."
+    },
+    "robustness": {
+      "supported": "A plan, factor ledger, state machine and fixture viewer exist. The local viewer contains 25 fixture episodes across three scenario families, including injected failure. They exercise six displayed policies and repeated case roots; the prospective plan includes seven arms. The task reports 41 offline tests, which are software validation rather than native efficacy evidence.",
+      "unsupported": "Native model competence, minority emergence, useful correction rates, superior cost-effectiveness, or realistic team behavior. No native experiment has run.",
+      "unit": "Independent world/case lineage; the full temporal alarm sequence is one unit. Policies, repeated frames and fixture copies are dependent.",
+      "independent_variation": "The local preview has four underlying case IDs plus a failure variant. Most voting and semantic evidence are authored fixtures.",
+      "assessment": "Conceptually well specified and honestly labeled. Its exact parser can solve the controlled grammar, so a model contribution remains unestablished."
+    },
+    "scenario_quality": {
+      "size": "Three families are sufficient for a first causal screen. Twenty-five fixtures are not a substantive behavioral sample, and 100 voters are unnecessary.",
+      "challenge": "Typed scope/version/TTL checks are useful engineering but easy for code. A native task must leave a real semantic judgment after deterministic validation.",
+      "complexity": "Correction, harmful reversal, blocked checks, stale scope and temporal reopening are distinct mechanisms. Natural dissent formation is correctly deferred.",
+      "realism": "Bridge inspection and build verification are plausible; independent noisy observations and actual task artifacts would improve transfer.",
+      "definition": "PROCEED/HOLD/DEFER and challenge fields are explicit. Close a protocol claim, not an agent's private belief. Freeze exact qualification assignments and count uncertainty around the proposed percentage gates."
+    },
+    "scenarios": [
+      {
+        "name": "The Missing Bridge",
+        "assessment": "One fresh inspection confronts four endorsements copied from an old survey. Good source-independence instrument, but evaluator-authored right dissent makes correction easy.",
+        "improvement": "Include fresh incorrect inspections, uncertain age and verifier failure; compare source deduplication and always-check."
+      },
+      {
+        "name": "The Passing Build",
+        "assessment": "A relevant failing test should outweigh a green summary, while wrong-platform/stale/optional failures should not. This can become a realistic task with executable artifacts.",
+        "improvement": "Use actual small build/test records with independently checked relevance, and reserve a semantic ambiguity stratum beyond exact metadata."
+      },
+      {
+        "name": "The Alarm That Became True",
+        "assessment": "Best distinctive scenario: withdrawing a disproved alarm must not permanently discredit a source after the world changes.",
+        "improvement": "Separate new evidence from repeated old evidence, vary delay/change detection, and score useful reopening plus unnecessary repeated interruptions."
+      },
+      {
+        "name": "Unavailable verification and injected failure",
+        "assessment": "Unresolved checks produce explicit deferral rather than a hidden majority fallback. This is necessary failure handling, not beneficial performance by itself.",
+        "improvement": "Include deadline utility of deferral and outage-correlated checks in later stress tests; never drop failed assignments."
+      }
+    ],
+    "controls": {
+      "retain": [
+        "Majority, blind veto, always-check, evidence gate, pooled solver, deterministic reference and planned matched-random admission",
+        "Common potential observations, fixed deadlines and explicit verification costs",
+        "Correct and incorrect dissent, withdrawal and new-evidence reopening"
+      ],
+      "missing": [
+        "Semantic cases where exact metadata does not already determine the result",
+        "A development-fixed verification quota for matched-random admission",
+        "Concrete qualification assignment counts and uncertainty around percentage gates; the plan already defines the all-assigned primary endpoint",
+        "Natural-minority formation on unselected cases as a separate later study"
+      ],
+      "confounds": [
+        "Hardcoded initial minority is an intervention, not emergent dissent",
+        "Admission, extra evidence, model calls and latency can all change together",
+        "Always-check can dominate if checks are cheap and reliable",
+        "Illustrative loss values encode preferences, not universal safety truth"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "Majority \u00d7 minority correctness",
+        "current": "Both favorable and harmful correction planned",
+        "priority": "Essential identification",
+        "proposed_variation": "Cross correct/wrong majority with correct/wrong dissent on matched cases",
+        "reason": "Prevents counting correction while hiding corruption."
+      },
+      {
+        "parameter": "Verification quality, cost and delay",
+        "current": "Small fixed budgets and logical deadline",
+        "priority": "Essential identification",
+        "proposed_variation": "Start with reliable/low-cost versus fallible/scarce checks; hold potential tapes fixed",
+        "reason": "Establishes when selective admission is useful relative to always-check."
+      },
+      {
+        "parameter": "Scope, freshness and ancestry",
+        "current": "Exact structured fields",
+        "priority": "Essential instrument, then stress",
+        "proposed_variation": "Validate exact fields first; later test partial lineage and ambiguous applicability",
+        "reason": "Distinguishes protocol plumbing from reasoning."
+      },
+      {
+        "parameter": "Withdrawal and reopening",
+        "current": "Three-step alarm fixture",
+        "priority": "Essential for temporal claim",
+        "proposed_variation": "New-world evidence versus repeated old claim, with varied timing",
+        "reason": "Tests selective trust rather than permanent source blacklisting."
+      },
+      {
+        "parameter": "Dissent formation and model diversity",
+        "current": "Authored minority; intended Jev adapter",
+        "priority": "Later separate study",
+        "proposed_variation": "Unselected natural discussions retaining unanimous and unhelpful-minority cases",
+        "reason": "Avoids selection on a right dissenter."
+      }
+    ],
+    "next_study": {
+      "question": "Can bounded evidence admission preserve useful corrections while reducing harmful reversals and unnecessary checks?",
+      "primary_contrast": "Evidence gate versus always-check, with majority and exact rules as necessary references.",
+      "endpoint": "Correct on-time commitments across all assignments, accompanied by correction, corruption, deferral and check-cost components.",
+      "unit": "Independent case lineage; paired policy forks and alarm sequences clustered together.",
+      "design": "Qualify one Passing Build semantic task plus small bridge/alarm mechanism checks. Freeze a compact check-quality/cost contrast on fresh cases. Match available information and show resource tradeoffs instead of pretending every policy uses identical information after choosing to check.",
+      "go_no_go": "Continue if the model gate adds value beyond exact rules and has acceptable harmful-reversal cost. If deterministic scope checks solve the problem, recommend them. Do not call a high correction rate a success if the protocol also corrupts correct majorities."
+    },
+    "sources": [
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/dissent/PLAN.md",
+        "detail": "Full pinned plan read; prospective outcomes distinguished from local fixtures."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/dissent/PARAMETERS.md",
+        "detail": "Full factor ledger read."
+      },
+      {
+        "path": "right-dissenter-preview.html",
+        "detail": "Embedded replay inspected: 25 scripted fixture episodes, six displayed policy arms, three scenario families."
+      },
+      {
+        "path": "https://github.com/dmarzzz/swarm-lab/blob/771b254f99fd5b53471f2f0ea8d98bfc710fe4fd/researchers/vishesh/notes/dissent/REPORT.md",
+        "detail": "Original task-worktree report read; no native results. Independent fact-check verified /private/tmp/swarm-decision-models report bytes against this commit, reachable from origin/main; SHA256 fe04d1622a1515f4b0615d6e83a5c902a8cc2680912faaf6537afb8343d38380. The previously cited f027940 commit does not contain this file. Forty-one tests remain author-reported; this audit separately confirmed 25 embedded scripted episodes and six displayed arms."
+      }
+    ]
+  },
+  {
+    "id": "SCI-DECISION-RESERVE",
+    "name": "Decision-model reserve ideas: Stop Signal, Panic Queue and Menu Parasites",
+    "evidence_class": "Research sketches; no empirical outcomes. Phantom Coast and Quorum of Mirrors have separate full reviews.",
+    "decision": "Fold Stop Signal into Right Dissenter; reserve Panic Queue and Menu Parasites as narrow ablations.",
+    "interest": {
+      "judgment": "Potentially useful diagnostics, with weaker standalone novelty than the three primary decision projects.",
+      "why": "Each isolates a distinct bottleneck\u2014interruption, overload or choice representation\u2014but obvious non-model explanations are strong.",
+      "novelty_boundary": "Editorial shortlist scores are prioritization preferences, not measured quality. The existing abstract-led source collection is not a completed prior-art survey."
+    },
+    "robustness": {
+      "supported": "Named sketches and reframings exist, with explicit failure conditions.",
+      "unsupported": "Any behavioral effect, optimal policy, phase transition, or novel swarm principle.",
+      "unit": "Independent task/arrival process or latent decision problem, not repeated calls or aliases.",
+      "independent_variation": "None measured. Proposed nominal variants must be tied to independent generating processes.",
+      "assessment": "Worth retaining as a source of small controls; not three more full programmes before a mechanism survives its simplest alternative."
+    },
+    "scenario_quality": {
+      "size": "Small bounded tasks suffice; numerical scale is not the missing ingredient.",
+      "challenge": "Difficulty must remain after exact queueing, scope and canonicalization controls.",
+      "complexity": "One mechanism per ablation is clearer than a combined social-ecological story.",
+      "realism": "Queues and duplicated options are practical, but illustrative labels need operational budgets and outcomes.",
+      "definition": "Specify latent actions separately from displayed menu items and all arrived work separately from accepted work."
+    },
+    "scenarios": [
+      {
+        "name": "Stop Signal Swarm",
+        "assessment": "Evidence-based interruption substantially overlaps the Right Dissenter design.",
+        "improvement": "Treat it as a rate-limit/random-suppression control within dissent; stopping every action cannot count as successful inhibition."
+      },
+      {
+        "name": "Panic Queue",
+        "assessment": "False alarms and verification queues can overload capacity. Ordinary queueing may explain the entire effect.",
+        "improvement": "Compare a measured single-item service-time tape and matched-capacity queue before adding model feedback. Score all arriving work completed correctly by deadline, not accuracy among admitted items."
+      },
+      {
+        "name": "Menu Parasites",
+        "assessment": "Aliases can redistribute probability over displayed choices without changing latent preferences. A normalized concentration score can shift purely because menu size changes.",
+        "improvement": "Keep latent actions/utilities fixed; counterbalance order/labels, sum mass over aliases and compare canonical menus, binary choices and exact rules. Freeze interface/version semantics; do not infer internal preferences from raw menu probabilities."
+      }
+    ],
+    "controls": {
+      "retain": [
+        "Explicit honest-failure criteria in revised sketches",
+        "Deterministic and pooled references"
+      ],
+      "missing": [
+        "Capacity-matched ordinary queueing baseline",
+        "Alias-collapsed scoring and fixed latent action set",
+        "Matched interruption cost with random suppression"
+      ],
+      "confounds": [
+        "Selective denominators after dropping/defering hard work",
+        "Queue arrival/service changes bundled with agent changes",
+        "Choice count changes score arithmetic directly"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "Queue load \u00d7 feedback",
+        "current": "Proposed only",
+        "priority": "Essential for Panic Queue",
+        "proposed_variation": "Arrival rate, verification capacity and feedback independently varied",
+        "reason": "Separates ordinary overload from additional collective effects."
+      },
+      {
+        "parameter": "Latent action \u00d7 aliases",
+        "current": "Proposed only",
+        "priority": "Essential for Menu Parasites",
+        "proposed_variation": "Fixed utility/action set, aliases/order/labels crossed",
+        "reason": "Identifies representational rather than task changes."
+      },
+      {
+        "parameter": "Interruption admission",
+        "current": "Proposed only",
+        "priority": "Fold into dissent",
+        "proposed_variation": "Evidence-based versus matched random interruption",
+        "reason": "Prevents double counting the same research question."
+      }
+    ],
+    "next_study": {
+      "question": "Is there residual model-mediated behavior after the exact non-model explanation?",
+      "primary_contrast": "Model policy versus the corresponding queue, canonical-menu or scope reference.",
+      "endpoint": "Correct useful work per budget/deadline or probability on the correct latent action.",
+      "unit": "Independent arrival process or decision problem.",
+      "design": "Develop one cheap offline counterexample/reference per sketch. Advance only the one that shows an unresolved, useful mechanism in a qualified model task.",
+      "go_no_go": "Archive a sketch if exact accounting explains it. That is a useful engineering conclusion, not a reason to create a larger factorial."
+    },
+    "sources": [
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/decision-models/README.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/decision-models/TOP-FIVE.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/decision-models/REIMAGINING.md",
+        "detail": "Full pinned design/results document read; numerical claims are author-reported, not independently replayed in this addendum."
+      }
+    ]
+  },
+  {
+    "id": "SCI-INFLUENCE-GUIDES",
+    "name": "Influence and SEO guides: explanatory models and proposed profiling studies",
+    "evidence_class": "Illustrations, numerical surrogates and proposals; no observed attack-efficacy experiment in these pages.",
+    "decision": "Keep as teaching material. Remove any visual ambiguity between invented counts and empirical evidence; consolidate future experiments with the influence programme.",
+    "interest": {
+      "judgment": "Useful communication and threat-model work; weak standalone evidence.",
+      "why": "The guides expose retrieval, aggregation and behavioral targeting pathways in an accessible form.",
+      "novelty_boundary": "A persuasive animation or hypothetical thousand-task chart cannot establish an attack result. Personality/profiling claims require measured prediction beyond simpler observable features."
+    },
+    "robustness": {
+      "supported": "The first review traced the guides' declared invented counts and numeric surrogate, and found the SEO update reaches a fixed point after one update. Source and illustration labels are present but should remain adjacent to striking figures.",
+      "unsupported": "Reported-looking success percentages as real efficacy, multi-round emergent dynamics, personalized targeting superiority, or the proposed large model-study outcome.",
+      "unit": "Future independent task and target-agent lineage, grouped by task/source family.",
+      "independent_variation": "Current pages generate examples rather than independent model responses.",
+      "assessment": "Do not aggregate illustrative counts into the project result inventory or treat proposal episode budgets as completed evidence."
+    },
+    "scenario_quality": {
+      "size": "A proposed very large episode matrix is premature without qualification and a measured effect.",
+      "challenge": "Synthetic utility scores and deterministic updates bypass the language/verification problems that matter.",
+      "complexity": "Retrieval, private scoring, communication and aggregation are currently mixed in explanations.",
+      "realism": "SEO poisoning is plausible, but results need actual retrieved documents and realistic source selection.",
+      "definition": "Mean-score argmax and plurality voting differ; changing both information exchange and aggregation confounds the mechanism."
+    },
+    "scenarios": [
+      {
+        "name": "Behavioral profiling and target selection",
+        "assessment": "Separates a useful hypothesis about target susceptibility from unsupported synthetic success rates. Accurate profile prediction and successful intervention are distinct outcomes.",
+        "improvement": "Compare random targeting, simple role/exposure heuristics and a held-out learned profile under identical attack budgets. Prevent profiling examples from leaking into evaluation."
+      },
+      {
+        "name": "SEO numeric surrogate",
+        "assessment": "The three-round narrative overstates dynamics when the update has already stabilized after the first step.",
+        "improvement": "Label it a one-step illustration or change the proposed model to allow genuinely new evidence; do not manufacture iterative behavior just for animation."
+      },
+      {
+        "name": "Proposed retrieval/aggregation experiment",
+        "assessment": "A potentially identifying study is obscured if discussion and voting rule change together.",
+        "improvement": "Hold the aggregator fixed when testing information exchange; independently manipulate source poisoning and use clean, truthful-promotion and duplicate-source controls."
+      }
+    ],
+    "controls": {
+      "retain": [
+        "Visible source-versus-proposal-versus-illustration labels",
+        "Clean and random-target references"
+      ],
+      "missing": [
+        "Fixed aggregator for exchange comparison",
+        "Information-equated solo baseline",
+        "Held-out profiling evaluation and simple observable heuristics"
+      ],
+      "confounds": [
+        "Illustrative values visually resemble measured summaries",
+        "Changed aggregation rule can explain treatment effects",
+        "Repeated deterministic updates are not independent rounds"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "Aggregator \u00d7 communication",
+        "current": "Mean score versus plurality appears across explanations",
+        "priority": "Essential identification",
+        "proposed_variation": "Hold one fixed while varying the other",
+        "reason": "Identifies discussion effect."
+      },
+      {
+        "parameter": "Target selection",
+        "current": "Hypothetical profiles",
+        "priority": "Essential identification",
+        "proposed_variation": "Random, role/exposure heuristic, held-out profile",
+        "reason": "Tests incremental value of profiling."
+      },
+      {
+        "parameter": "Retrieval dose and source ancestry",
+        "current": "Illustrative material",
+        "priority": "Later stress test",
+        "proposed_variation": "Matched evidence volume, poisoned fraction and independent roots",
+        "reason": "Separates exposure from repetition."
+      }
+    ],
+    "next_study": {
+      "question": "Does a measured targeting policy add harm beyond random targeting at the same exposure and attack budget?",
+      "primary_contrast": "Frozen profiling policy versus simple heuristic and random targeting.",
+      "endpoint": "Incremental harmful decisions among all assigned tasks, with clean competence and direct/downstream effects.",
+      "unit": "Independent task/target lineage.",
+      "design": "First qualify a small realistic decision task in the current influence programme. Estimate a usable effect before considering the proposed large episode count.",
+      "go_no_go": "Do not scale if profiling merely predicts existing role/exposure or clean competence fails. Keep the guides explicitly educational."
+    },
+    "sources": [
+      {
+        "path": "swarm-influence-guide.html",
+        "detail": "Full first-pass review; illustrative counts and proposed profiling design."
+      },
+      {
+        "path": "swarm-seo-poisoning-mega-guide.html",
+        "detail": "Full first-pass review and numeric surrogate inspection."
+      },
+      {
+        "path": "review-2026-10-04/root-review.json",
+        "detail": "Initial finding evidence and precise original source locations."
+      }
+    ]
+  }
+]

@@ -1,0 +1,790 @@
+{
+  "review": "PI audit of evidence projects",
+  "date_utc": "2026-10-04",
+  "scope": "886 files in frozen workspace snapshot; external source dependencies fetched read-only at recorded commits",
+  "scope_paths": [
+    "healing-helping-hands/",
+    "swarm-of-theseus/",
+    "immune-response-review/"
+  ],
+  "snapshot": "/tmp/grove-review-2026-10-04-snapshot",
+  "no_new_experiments": true,
+  "no_provider_calls": true,
+  "original_files_modified": false,
+  "coverage_file": "review-2026-10-04/evidence-projects-coverage.json",
+  "computed_checks_file": "review-2026-10-04/evidence-projects-checks.json",
+  "coverage": {
+    "local_files": 886,
+    "external_pinned_files": 58,
+    "external_source_coverage": [
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/DEPLOYMENT.md",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "08b3c71484b2ec1f4b30d8d5d0f881da80363f0277d1936602bd451b51325d02",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/README.md",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "0c69fa227a6ff3fd914b48bc625e4796d297cc7b9d732cfb6484404a6747faa4",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/design.yaml",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "f9b2c293775a375ee23892c7083e08e72b0fb70e6908e65f7e1c6df832aecedc",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/experiment.yaml",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "6144b32a8c4657f6e77e4ec77fb264737900645f123c30eb95b020c1435d5edb",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/model-config.json",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "4b36fd0932680b861f11711321121fc17639c1033286f0ae2b703273bbc53bf0",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/ATTEMPT-01-REVIEW.md",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "6671db190822ab1efb7bee24b2b83df4be52fe9d4675cf33005fc62ad67d420a",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/README.md",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "6571d20aaa618682474d2c042a441a8ab15531d89a744b80335d3f6c734dfcda",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/REVIEW.md",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "d25ba3bb3358987e1bd675e78ed276370e1d6e479fe04e515e88f1c27e6e211f",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/agent-definitions.json",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "d3e45146afb3692cd7422d1024516f55aaaf950362d85d805b0c9a3aac1b3c56",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/reviews/S0-a1-post.md",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "bc8c03db97927a886c84fb57c4d81c3922aa17e98be4d4b23b0c71d02e01c39f",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/reviews/S0-a1-pre.md",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "6e75ac9f6655cd526fa6ffb89741a35909a71de02b6212797c1708fb82449c57",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/reviews/S0-a2-post.md",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "e2af7b1a87a3484ca90417d1eee0ef82992d1efc812d0dbe7629a2873d85b1b1",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/reviews/S0-a2-pre.md",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "8ed197b5770e5dfb99ea621c98333550e15ba6f3888cc33e46baf40f58315a20",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/reviews/S0-a3-post.md",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "ace8e4aa86a06933b26c43193a54e8527bcf95a94afbfd335756ad420a9e859f",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/reviews/S0-a3-pre.md",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "87daa9c11c59a0701ec676b4294670110f17bfe6cd0300beea0a7ffdf9bbb1c8",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/reviews/S0-a4-post.md",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "f9721246c556ed48368bae5752630386b71bb11dae5e9b3b9c4f2a4ea8b42aab",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/reviews/S0-a4-pre.md",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "47d0f9d211f01a6ac1e5d975df1e3c54697b4061cf1f2dad8a4daf31621e6dc6",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/reviews/S1-a1-pre.md",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "7020cb8863383c9974a95f2c55e54be3bc691f63e75c306ea3dd3514584af83c",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/tests/test_instrument.py",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "d39728de264bc78bd764f82786560a55b840a415b9507bbeb8a8ba1c19e9d873",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/tests/test_jev.py",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "1ffaade905f51afefdb62e6a8c40bbdb470c0d49b608b44018b33c1b87a3738a",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/analyze.py",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "0ca0740ba06634bc760a10084f7e36288d93b4b05db7451de34113eab9e70e76",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/audit.py",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "90377e26cf3bd71e61d3d0c0387788863544b8e3d6584cab31f54ab21bc98a4e",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/provider.py",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "8c81e139784f6c42a24962ac156bbcbe99115d895bb94ed142c867065da65510",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/public_plan.py",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "12ec7225603e928124e4c7f2db94fe923852d41ccebbf4512985de18313a7934",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/render.py",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "9e0b3f42c93bdbcd0b3f1d1f9c36eddb7ebed5120007bdc50f50b8c2c2acd976",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/runner.py",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "7586498b7e82d7f4ce0236c58a523f2eb73fad8a3214eaa21b5568c2f6dd5ad3",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/study.py",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "950b8d9c5b0d230f4657f625b15da57ac30352a0fbce0142c7da2f4403ad0e9b",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/summary_figure.py",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "c5fc78ca6b31432761f93ad01cbb50560a65d1760810274e7ec35fcbfa2d29a3",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/reviews/diagnostic-03-post.md",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "fbb95cd193f60fdfdbfc9177c6a205920929c20c8e3dbd8514fe236392e8e326",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/reviews/diagnostic-03-pre.md",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "5d0c524327fb65ba07b59a71e086c40fd6a4628ca1518039251f63aacb9a0b21",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/reviews/diagnostic-04-pre.md",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "9ada480e81c8f697c4e93c3d5955e83ddeaee9bd8edfe66b40087313e8726117",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/reviews/jev-qualification-01-pre.md",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "cb522c5c055f269065c685cd8d0b48dbad44f593846d79244eb7442ba2f28898",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/reviews/pilot-02-post.md",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "efd0f94f22bc100f78a85df5934952574bc6c95acb3291f39b73728d3184dc26",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/src/corpus.py",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "c1d8bc0f1c96ae8703c9aadc1384b2b8871ac8ae1ade4f72c4ecd037d2acf479",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/src/diagnose.py",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "ef5e5e5f152971c9d87d58c394f1ac2eef42b88d7ff57fd01b1f0b3804085a24",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/src/jev.py",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "45638c18c649c9436609092063b757a579400ed45e150aab796bd604bc2e887a",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/src/jev_relay.py",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "2ae3e9675344f41910b2ecfe7ba07dec25c3593d3957c4d9caad87dc008b67d9",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/src/providers.py",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "d8e3e8800f481b1343ac66cd532e85a929cab396dd97f009f45e735b39013f12",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/src/qualify_jev.py",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "f90f1e156d02420fc76ee2c621566e78773010b93d22b159ccb97b4dd567b216",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/src/run.py",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "4f3150f1efc06cb9d7171137a3e936059e68c3df76803701fe7705016fdda460",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/src/sim.py",
+        "commit": "8be7fece2b16035609fde1d4832c1320aab5f0a0",
+        "sha256": "f1069df08a747e780cb4604c07c3df2fa3bf13c03cf179eade86b6cf829d84e3",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/AGENT-SPEC.md",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "0dbc1a0412b1d5657f61878455cb889be026ee9bc4a81746d69f115287ab4bba",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/README.md",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "714eb46d3e2689f8b6f1435ad8234f309cbddc042daa1d2005adc55ec90e5000",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/REVIEW.md",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "36822379f0cd9cc2fb9591f37c562d042287add0cef4839bd73a1bb066f4dda4",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/VISUALIZATION.md",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "b4368b3bf53e7dcd15afd30a9d35435d39a377bcb5f89a8714fba3b997a6adae",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/design.json",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "649cd64bd71e16976903fac35ff3c79782f33c9466815fcbf081a29810936bd6",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/model-config.json",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "d9cbf5ecea190687f2d5c8922c87e60eccd2537c3fcf1b80a6bb4024fc71a266",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/preregistration.md",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "7222587e67f4ec265a9cad56863982bede7a821a06ca879573b60bf0a6e368df",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/tests/test_study.py",
+        "commit": "a773ff5410442fcf351cfc817550b3fc92a88994",
+        "sha256": "ea2bffbcf690581cd5a375f5d96844ba0aee8359a4ac6e72651c0f3059ca2413",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/src/analyze.py",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "43be7372db8d9e415bb307216aaf6693a5d7eb7b55ec1628b5bc3a68a170670f",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/src/common.py",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "4e38ddde3974a27e8370366a49decaa87c5054b722596106008b26659443bb41",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/src/immune.py",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "9f2dd054d5f0e20c5363d0006cfdfcb153a5c56ba56da19de6c7fdf393ad96ce",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/src/provider.py",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "0a7e30efa5093de623afcc9e964adc22e3d1f608990976e8d24b7290c6c81e6f",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/src/replay.html",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "69b8dc5fe1913ace59e92da47e55080dedaea31d31d53ba80fefa167a3ddc926",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/src/runner.py",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "83da9fece8c4b8f312f22b517ddb38f1948a1ff7472f6813964f10745996083e",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/src/visualize.py",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "07df0eaf5149269a19b90d8c5bea20bdafbd1514460c5f97afe5f1bdef013218",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/tests/test_immune.py",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "673b5958c5edf1b70069838e7763b5f247e490dc2e4a6a63963be99f01b2957c",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      },
+      {
+        "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/reviews/engineering-a1-pre.md",
+        "commit": "e3c40b027313ccc6985f36fa63bab6ff221cc1c1",
+        "sha256": "d1dfd7fd6238a366a2f2ee00bea242bcd345a62cf3b651d6b3896caa522887c3",
+        "mode": "pinned external source/protocol/review fetched and reviewed; source hashes matched matching recorded manifests where available"
+      }
+    ],
+    "visual_inspection": [
+      "swarm-of-theseus/summary.png",
+      "healing-helping-hands/site/outcomes.png",
+      "immune-response-review/engineering-v3/final_frame.png"
+    ],
+    "visual_limits": "Other PNGs/GIFs checked for signature/dimensions/hash only; GIFs not played, interactive UI not browser-tested."
+  },
+  "findings": [
+    {
+      "id": "EP-01",
+      "severity": "P1",
+      "title": "Validate the entire response before committing agent memory",
+      "project": "immune-response-review",
+      "evidence": [
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/src/immune.py",
+          "line": 94,
+          "detail": "act() validates only choices, then mutates memory; it does not validate the coordinator plan, constraints, action or extra fields."
+        },
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/src/immune.py",
+          "line": 227,
+          "detail": "Validity is determined from exceptions/failed slots; malformed coordinator plans handled as zero utility are not counted as response failures."
+        },
+        {
+          "path": "immune-response-review/AGENT-SPEC.md",
+          "line": 11,
+          "detail": "The specification promises atomic choice validation, but broader native acceptance requires zero malformed outputs."
+        }
+      ],
+      "impact": "A syntactically malformed coordinator response can alter private state and remain validity.ok=true / execution_qualified=true. A direct isolated scorer probe returning valid choices plus plan=[] was accepted and cleared memory; no model calls or episodes were run. Structured provider output reduces likelihood but does not replace local validation.",
+      "recommendation": "Validate the full role-specific schema and semantic domains before any memory mutation. Keep a valid but wrong integer plan as a scientific failure; classify malformed keys/types/actions as response-contract failure with old memory preserved. Add one malformed coordinator regression and one valid-wrong-answer regression.",
+      "confidence": "high"
+    },
+    {
+      "id": "EP-02",
+      "severity": "P1",
+      "title": "Bind the actual runtime model configuration to the qualified agent",
+      "project": "swarm-of-theseus",
+      "evidence": [
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/provider.py",
+          "line": 23,
+          "detail": "Provider loads an arbitrary environment-selected config."
+        },
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/runner.py",
+          "line": 41,
+          "detail": "Manifest hardcodes the declared model and hashes ROOT/model-config.json rather than the actual resolved provider config."
+        },
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/runner.py",
+          "line": 26,
+          "detail": "S1 checks local study/provider/model-config hashes, which do not constrain a different environment-selected config file."
+        }
+      ],
+      "impact": "Changing SWARM_MODEL_CONFIG_FILE can change model, context/output limits or pricing while the manifest still declares the qualified pinned agent. There is no evidence that the archived runs did this; the launcher permits it and undermines reliable repeatable spin-up.",
+      "recommendation": "Resolve the approved config once, compare its canonical hash to qualification, pass that object directly into the provider, and write that same hash/config into the manifest. Record served model when available and reject unapproved routing changes. Apply the same pattern to immune v3, whose config is also environment-selected.",
+      "confidence": "high"
+    },
+    {
+      "id": "EP-03",
+      "severity": "P1",
+      "title": "Reporting failures can invalidate valid numerical runs",
+      "project": "swarm-of-theseus",
+      "evidence": [
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/runner.py",
+          "line": 56,
+          "detail": "Rendering and hub progress/artifact uploads execute synchronously inside the event callback called by run_world."
+        },
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/runner.py",
+          "line": 63,
+          "detail": "An exception from that callback is caught as failed experimental execution; later final rendering/upload exceptions can escape the worker and prevent aggregate completion."
+        },
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/src/runner.py",
+          "line": 25,
+          "detail": "The immune progress callback is likewise inside scientific execution; a callback failure can replace the entire task/world batch with zero-utility error outcomes."
+        }
+      ],
+      "impact": "A temporary image dependency, disk/report error or hub outage can change the reported scientific denominator and stop other terminal records from being written, despite completed decisions. This contradicts the documented separation between rendering failure and numerical evidence.",
+      "recommendation": "Write numeric events/outcomes first. Catch and record rendering/upload/progress failures separately as reporting_status; retry publication from recorded traces, never model decisions. Ensure each submitted assignment gets a terminal execution record even if reporting fails. A fake failing reporter is a meaningful regression test.",
+      "confidence": "high"
+    },
+    {
+      "id": "EP-04",
+      "severity": "P2",
+      "title": "Knowledge retention counts obsolete values as desirable",
+      "project": "immune-response-review",
+      "evidence": [
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/src/immune.py",
+          "line": 159,
+          "detail": "retained compares every private store with fx[facts], the original truth, even after legitimate round-5 learning and round-18 updates."
+        },
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/src/immune.py",
+          "line": 160,
+          "detail": "Sentinel retention uses the original value even when the sentinel is the legitimate update target."
+        },
+        {
+          "path": "immune-response-review/engineering-v3/replay.html",
+          "line": 13,
+          "detail": "Recomputed embedded engineering data: all 80 CLEAN outcomes have all eight actors at 12/12 current facts, while retained is 11/12 for 64 and 10/12 for 16; sentinel_retained is zero for 10 CLEAN outcomes."
+        }
+      ],
+      "impact": "A perfectly updated clean swarm appears to forget useful knowledge. The metric confounds successful revision with damage, and could reward retaining stale copies.",
+      "recommendation": "Rename the historical field original_value_retention if retained for provenance. Add current_truth_retention and stable_fact_retention excluding facts legitimately updated; evaluate sentinel against current truth or restrict it to unchanged facts. Preserve historical fields and version corrected derived metrics.",
+      "confidence": "high"
+    },
+    {
+      "id": "EP-05",
+      "severity": "P1",
+      "title": "Make public-plan verification unavoidable at the execution boundary",
+      "project": "immune-response-review",
+      "evidence": [
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/src/runner.py",
+          "line": 10,
+          "detail": "The pinned execution function directly creates a scripted/native policy with no public-plan receipt or allocation preflight."
+        },
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/src/runner.py",
+          "line": 48,
+          "detail": "A direct native-repair CLI path exists."
+        },
+        {
+          "path": "immune-response-review/README.md",
+          "line": 46,
+          "detail": "Later documentation describes a gated hub wrapper, but the wrapper is not in this exported evidence bundle."
+        }
+      ],
+      "impact": "The core launcher can bypass the owner-required public plan gate if invoked directly; receipts are absent from the engineering export. This establishes a bypass and unverified process compliance, not proof that the historical engineering execution was unregistered. Its 720 scripted execution outcomes remain valid as recorded engineering evidence.",
+      "recommendation": "Require an already-verified plan receipt at execute() before policy creation and bind it to protocol/source hashes. Route every public named run through that same check; keep ordinary unit/scorer tests separately labeled. Record process_compliance independently from execution_qualified, and label any later public plan retrospective.",
+      "confidence": "high"
+    },
+    {
+      "id": "EP-06",
+      "severity": "P2",
+      "title": "The local evidence bundle is not yet self-contained",
+      "project": "cross-project",
+      "evidence": [
+        {
+          "path": "immune-response-review/README.md",
+          "line": 17,
+          "detail": "Five local documentation links are missing: design.json, two engineering reviews, VISUALIZATION.md, and historical README. Reproduction commands reference source paths outside this workspace."
+        },
+        {
+          "path": "swarm-of-theseus/RESULTS.md",
+          "line": 71,
+          "detail": "Local result prose references missing deployment/source materials; pinned external source can be fetched but is not packaged."
+        },
+        {
+          "path": "healing-helping-hands/results/pilot-03/summary.json",
+          "line": 1,
+          "detail": "Snapshot summary contains 72 completed worlds but 48 lack raw world files; only 61 total world files are present (24 completed/37 not-run). Manifest, plan receipt and call journal are absent."
+        }
+      ],
+      "impact": "A reviewer can reconstruct much of the evidence, but cannot reproduce all runs from this checkout. Pilot-03 was actively being copied during review: incomplete export is not an execution failure and cannot establish missing registration. Its aggregate summary is lower-confidence evidence until the export finishes.",
+      "recommendation": "Complete a small immutable evidence export with the matching manifest, plan receipt, recorded tapes, outcomes and a pinned source archive or exact external source links. Fix local links or replace them with immutable external URLs. Add a single completeness manifest; no new workflow service is needed.",
+      "confidence": "high"
+    },
+    {
+      "id": "EP-07",
+      "severity": "P2",
+      "title": "Bootstrap precision exceeds the independent variation in the Theseus pilot",
+      "project": "swarm-of-theseus",
+      "evidence": [
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/study.py",
+          "line": 18,
+          "detail": "Every even seed uses one label mapping/convention, every odd seed the other; the same four binary feature combinations recur every step."
+        },
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/analyze.py",
+          "line": 21,
+          "detail": "Bootstrap resamples the two observed worlds inside each of only three fixed scenarios."
+        },
+        {
+          "path": "swarm-of-theseus/RESULTS.md",
+          "line": 26,
+          "detail": "The reported +47.92 pp mean and +22.92 to +72.92 interval are arithmetically reproducible, but there is one run per counterbalanced mapping per scenario."
+        }
+      ],
+      "impact": "The interval is a sensitivity summary over six specific runs, not a calibrated confidence statement about task families, mappings or repeated model draws. The prose already acknowledges weak precision, which should be retained; the prominent 95% label still encourages stronger interpretation.",
+      "recommendation": "Lead with all six paired differences and their scenario means. Label the existing interval as conditional exploratory bootstrap sensitivity. For a new study, sample distinct task instances within each mapping block and resample whole paired worlds within those blocks; separate scenario generalization from provider variation.",
+      "confidence": "high"
+    },
+    {
+      "id": "EP-08",
+      "severity": "P2",
+      "title": "Notes and mentoring vary information amount and access structure together",
+      "project": "swarm-of-theseus",
+      "evidence": [
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/study.py",
+          "line": 95,
+          "detail": "Notes provide the entire prior three-agent archive; mentoring gives one outgoing agent message capped at 300 characters."
+        },
+        {
+          "path": "swarm-of-theseus/RESULTS.md",
+          "line": 63,
+          "detail": "Recorded totals: notes 6,756 bytes, mentor 5,746, both 12,530. Notes/both both reach 100% task accuracy; no added mentoring benefit demonstrated."
+        }
+      ],
+      "impact": "This is a valid comparison of these implemented packages, but not a clean mechanism estimate for conversation versus written storage. Notes have access to three memories and mentoring one; both also transmits more information.",
+      "recommendation": "In a new compact study, compare the same outgoing notebook as written handoff, read-only copy, and bounded interactive Q&A with a matched available-information budget. Include a no-inheritance arm and a verbatim competence ceiling. Keep procedure accuracy and arbitrary phrase retention separate; do not turn the current ceiling result into a mentoring claim.",
+      "confidence": "high"
+    },
+    {
+      "id": "EP-09",
+      "severity": "P2",
+      "title": "Memory-erasure controls barely perturb the measured task",
+      "project": "healing-helping-hands",
+      "evidence": [
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/src/sim.py",
+          "line": 51,
+          "detail": "Erasure occurs before the same round neighbor exchange, and only the post-exchange state is recorded in pilot-01/02."
+        },
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/src/corpus.py",
+          "line": 22,
+          "detail": "Forty scattered identities lose memory after evidence has already spread redundantly."
+        },
+        {
+          "path": "healing-helping-hands/results/pilot-02/summary.json",
+          "line": 1,
+          "detail": "Across both pilot-01 and pilot-02, all 12 paired sharing-policy comparisons of erasure versus no-event have exactly zero additional integrated atlas error."
+        }
+      ],
+      "impact": "Those runs demonstrate notice propagation and redundant storage, but cannot support a strong recovery-from-memory-loss claim when the measured task never loses accuracy. The later diagnostic review recognizes this, and partial pilot-03 introduces event_snapshot telemetry, so this is a historical limitation with repair underway.",
+      "recommendation": "Preserve original outcomes. Require a measurable pre-exchange damage check and report absolute post-erasure loss before recovery speed. Preregister one contiguous erasure block and one irreversible-source-loss negative control; use a small severity sweep only after the basic manipulation has measurable impact.",
+      "confidence": "high"
+    },
+    {
+      "id": "EP-10",
+      "severity": "P2",
+      "title": "Qualification cases are mostly repeated templates, not broad semantic coverage",
+      "project": "healing-helping-hands",
+      "evidence": [
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/src/corpus.py",
+          "line": 31,
+          "detail": "The 60-case pilot-02 screen has four phrasings per label repeated across method names."
+        },
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/src/jev.py",
+          "line": 17,
+          "detail": "Jev has five phrasings per class repeated with renamed methods: 15 semantic templates, 60 text instances."
+        },
+        {
+          "path": "healing-helping-hands/results/jev-qualification-01/qualification.json",
+          "line": 1,
+          "detail": "Jev 60/60 is correctly recorded, but other model screens used different fixtures."
+        }
+      ],
+      "impact": "Passing 60/60 shows narrow interface competence, not 60 independent semantic successes or model superiority. Small models repeatedly fail negation/unknown cases; exact/qualifying decisions should not hide this. The current docs mostly state these limits accurately.",
+      "recommendation": "Freeze a shared small evaluation panel for every candidate, split by linguistic template family rather than method name, and include scope negation, no significant gain, unavailable measurement, contradictory sentences, and changed claims. Report per-family errors and paired case differences. Select one frozen model/interface before downstream comparison.",
+      "confidence": "high"
+    },
+    {
+      "id": "EP-11",
+      "severity": "P2",
+      "title": "The archived S1 receipt points to the previous README revision",
+      "project": "swarm-of-theseus",
+      "evidence": [
+        {
+          "path": "swarm-of-theseus/results/S1-a1/seed-bank-both-200/public-plan-receipt.json",
+          "line": 4,
+          "detail": "All 36 S1 receipts retain commit 586c4768, while execution source/README is a773ff54."
+        },
+        {
+          "path": "swarm-of-theseus/results/S1-a1/manifest.json",
+          "line": 4,
+          "detail": "Source manifest differs from receipt source; all 36 plan hashes differ from the current manifest README hash."
+        },
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/public_plan.py",
+          "line": 24,
+          "detail": "Preflight verifies the public page but does not bind it to the running README."
+        }
+      ],
+      "impact": "Direct comparison of the two pinned READMEs shows only the added qualification-success/S1-ready section, not a changed scientific design. Thus this is a provenance/process ambiguity, not evidence of post hoc treatment changes or invalid numerical results.",
+      "recommendation": "Record plan_revision and implementation_revision as distinct fields, plus an explicit authorized amendment record when they differ. If the current procedure requires exact source-plan matching, reject mismatch; otherwise document why the prior immutable plan still covers the run instead of claiming an identical registered source.",
+      "confidence": "high"
+    },
+    {
+      "id": "EP-12",
+      "severity": "P3",
+      "title": "Static failure graphics omit the promised visible missing steps",
+      "project": "swarm-of-theseus",
+      "evidence": [
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/render.py",
+          "line": 16,
+          "detail": "Static PNG draws only retained frames; missing steps are blank rather than explicit grey gaps. HTML replay explicitly draws missing markers."
+        },
+        {
+          "path": "swarm-of-theseus/results/S0-a2/audit.json",
+          "line": 4,
+          "detail": "S0-a2 has 61 of 72 frames, so this affects actual archived failure evidence."
+        }
+      ],
+      "impact": "The more polished aggregate graphic is readable, but a failed individual PNG can make a missing observation difficult to distinguish from an omitted axis category. HTML controls also lack explicit labels and canvas has no equivalent numeric table.",
+      "recommendation": "Render all six scheduled step slots with a grey missing marker, keep numeric values in an accessible table, and label replay selector/slider. Show tiny-n per-world dots next to aggregate means. Preserve the current strong separation of task accuracy and convention retention.",
+      "confidence": "high"
+    },
+    {
+      "id": "EP-13",
+      "severity": "P2",
+      "title": "Head blindness should not be described as independent errors",
+      "project": "healing-helping-hands",
+      "evidence": [
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/src/run.py",
+          "line": 74,
+          "detail": "The repeated Qwen check changes option order/seed on the same report with the same model at temperature zero; both heads are blind to the other answer."
+        },
+        {
+          "path": "https://github.com/dmarzzz/swarm-lab/blob/8be7fece2b16035609fde1d4832c1320aab5f0a0/researchers/vishesh/notes/healing-helping-hands/src/providers.py",
+          "line": 25,
+          "detail": "Shared deterministic model/weights and highly repeated language do not produce statistically independent error mechanisms."
+        }
+      ],
+      "impact": "The implemented blinding is valuable. It does not by itself make the second head an independent error source, and agreement can replicate systematic misclassification. No heterogeneous-head efficacy estimate exists in pilot-01/02 because Qwen failed qualification; pilot-03 appears to be Jev-only plus exact, not the originally proposed heterogeneous treatment.",
+      "recommendation": "Use the term blinded second assessment. Preregister conditional error correlation, accuracy among first-head errors, and abstention/cost changes on identical cases. Compare Qwen repeat and heterogeneous head with matched extra call slots while reporting tokens separately. Keep new base-model conditions explicitly separate from the original heterogeneity question.",
+      "confidence": "high"
+    }
+  ],
+  "verified_positive_findings": [
+    "Recomputed all 421 retained Theseus scored frames from raw actor cases/answers, checked 5,052 individual labels, all summaries and 1,697-call usage accounting: no score discrepancies. The 36 S1 outcomes support the narrow +47.92 pp feasibility effect on six paired worlds.",
+    "Every Theseus launched outcome has a condition-specific immutable-plan receipt preceding its manifest timestamp. Earlier failures remain visible; 68/72 started world-arm outcomes completed, four failed, separate from the setup-only S0-a1.",
+    "HHH pilot-01/02 retain all 288 assigned world records, with 72 exact worlds complete and 216 model worlds explicitly not run. All 330 qualification/diagnostic/JeV call starts match terminals in the exported five call journals. HHH model failures are not disguised as successful swarm interventions.",
+    "Parsed all 728 immune replay outcomes and 17,472 measured frames; utility, validity accounting, state count denominators, engineering cell means and paired contrasts reconcile. 720 v3 outcomes are scripted; native v2 has seven valid and one invalid outcome.",
+    "Source/config hashes for retrieved Theseus S1 and HHH Jev source match recorded manifests. Immune engineering source, design and protocol hashes also match the exact downloaded pinned source.",
+    "HHH site embedded data exactly matches pilot-02 raw outcomes; all eight listed artifact hashes match. Visuals explicitly distinguish exact/scripted from model evidence and do not invent historical immune private state.",
+    "Theseus recorded notebook continuity checked against previous same-agent response prefix: {'solve_requests': 1269, 'solve_responses': 1265, 'notebook_over_600': 42, 'continuations_checked': 911}; zero mismatches."
+  ],
+  "agent_lifecycle_recommendations": [
+    {
+      "project": "theseus",
+      "current_contract": "Identical pinned-model actors, seeded founder notes, newcomer private note empty, arrival-only archive/mentor access, stateless provider calls, notebook replaces prior memory, deterministic majority evaluator.",
+      "next_change": "One resolved agent config and schema ID; state-before/state-after memory hashes and exact truncation bytes; same outgoing knowledge budget across handoff arms; enforce allowed labels locally and distinguish wrong answers from malformed contract."
+    },
+    {
+      "project": "healing",
+      "current_contract": "One report extraction per scout followed by deterministic graph propagation; frozen tape shared across paired counterfactual worlds. No LLM context progresses during the animation.",
+      "next_change": "Store exact extraction request/schema ID with tape provenance, preserve first and second head raw labels before agreement collapse, explicitly model blinded-repeat versus heterogeneous assessor; no claim of autonomous 200-agent reasoning."
+    },
+    {
+      "project": "immune",
+      "current_contract": "Specialists see private records and previous shared snapshot; coordinator sees current shared store. Common C3/C6 checkpoints deep copied into branches; repair controller has oracle knowledge.",
+      "next_change": "Validate full response before commit, current-truth metrics, fail-closed core preflight, and context receipts recording visible record IDs/schema with no oracle labels. If testing realistic immunity later, cross detector accuracy with repair strategy rather than hiding an oracle behind the agent label."
+    }
+  ],
+  "next_experiments": [
+    {
+      "project": "theseus",
+      "question": "Does interactive mentoring help when information supply is held fixed and procedures require transfer beyond four repeated inputs?",
+      "design": "Fresh family-blocked pilot with 2 task families x 4 sampled worlds x written handoff/interactive handoff/no inheritance, plus a small verbatim competence screen. Use equal available outgoing memory and capped handoff tokens; all arms paired on task, turnover, mapping and model.",
+      "primary": "World-level final task accuracy after full turnover; handoff contrast within family. Secondary retention and adaptation shown separately.",
+      "limits": "Feasibility pilot; no calibrated population CI until enough independent worlds/families exist. Publish new plan and budget before implementation/run."
+    },
+    {
+      "project": "healing",
+      "question": "Does notice propagation repair genuinely damaged knowledge when classification quality is controlled?",
+      "design": "Freeze one qualified extractor on shared unseen template families, replay its tape on three paired corpora with no event, contiguous erasure, withdrawal and irreversible loss. Record before-event, immediately-after-event, and post-exchange states.",
+      "primary": "Within-corpus integrated post-event error for propagated versus local notices, with manipulation-check loss reported first.",
+      "limits": "Programmed memory mechanism, not autonomous researchers. Do not include paid calls or a new model comparison without a new plan."
+    },
+    {
+      "project": "immune",
+      "question": "Does selective restoration still improve useful completion with imperfect incident localization?",
+      "design": "After existing native contract qualification passes, use a small new native sample with broad/selective/no repair across correct localization and one predeclared false-positive/missing-lineage condition; share real pre-intervention checkpoints.",
+      "primary": "All-assigned paired utility; collateral loss of stable facts and preserved legitimate updates, with execution validity independent.",
+      "limits": "Keep oracle and noisy-detector cases labeled. The existing three-outcome qualification is an engineering gate, not an efficacy or generalization study. New sample requires separately published plan and budget."
+    }
+  ],
+  "writing_and_aesthetics": [
+    "Lead each project with one bounded result and an evidence tier: programmed mechanism, native qualification, or replicated model effect. Theseus and immune already do this fairly well; retain their candid failure ledgers.",
+    "Replace repeated long amendment prose with a compact chronological attempt table plus immutable links, while preserving historical documents. Give every plotted mean its number of independent worlds and distinguish missing values from zeros.",
+    "Keep the restrained dark palette and clear event markers. Show effect dots per world and direct annotations rather than more decorative swarm motion. The immune overlaid cumulative lines need selectable highlights or small multiples because multiple arms lie exactly on top of each other."
+  ],
+  "limitations": [
+    "No live model calls, experimental launches, fleet allocation or publication performed. Isolated pure-function probe only; original artifacts unchanged.",
+    "Historical public-page availability was accessed via GitHub connector for pinned sources; contemporaneous registration cannot be inferred solely from current availability.",
+    "Partial pilot-03 export limits provenance/replay verification; it is not classified as a failed execution.",
+    "No independent native-v2 request transcript export was present in this directory; native-v2 utility reconciled to embedded trajectories but 1,137-call cost claim not independently rederived here."
+  ],
+  "agent_lifecycle_matrix": [
+    {
+      "project": "Swarm of Theseus",
+      "initialization": "Same model/system prompt for all; founders get exact seeded rule and receipt; incoming member has empty notebook plus assigned channel only. World seed fixes cases, label mapping, receipt and scheduling.",
+      "model_session": "Stateless native API calls; temperature zero; no provider seed; no conversation session across calls. Runtime config loaded via env path (gap).",
+      "context_and_memory": "Private notebook is sole continuing agent state, overwritten with returned prefix of 600 characters. Notes arm gets prior three-member archive at arrival; mentor gets outgoing 300-character message; both gets both; incumbents get neither onboarding stream.",
+      "within_run_variation": "New task cases each step, changing membership, model-written notes/handoff, explicit bulletin at steps4/5 in repair dock. Identical weights; roles differ by inherited context, not different cognition.",
+      "verification": "Recomputed all raw scores; checked all recorded same-agent notebook continuations against prior response prefix, zero mismatch. Source gate verifies local model-config but does not bind actual environment config.",
+      "main_gap": "Resolve one actual model configuration; validate full output domains; make context and truncation receipt explicit; separate reporting errors from outcomes."
+    },
+    {
+      "project": "Healing Helping Hands",
+      "initialization": "200 document/scout identities on fixed 20x10 graph; one initial document each, claim=i mod20; seeded corpus, source withdrawal, erasure and second-head positions.",
+      "model_session": "One local semantic extraction per document, then frozen tape; Qwen pinned digest and temperature0, Laya pinned weights/source. Jev qualification verifies dated served snapshot/provider.",
+      "context_and_memory": "Extraction receives one report/claim (some diagnostics report-only), no neighbor context or prior answers. Subsequent memories are document-ID sets plus authenticated withdrawal IDs; no further LLM context windows.",
+      "within_run_variation": "Deterministic synchronous union of prior neighbor memories; notices forwarded only by assigned policy; erasure and source invalidation at round10. Second head is blinded, not guaranteed statistically independent.",
+      "verification": "All five call journals match starts/terminals; 72 complete pilot01/02 worlds rederived from recorded tapes; all 144 pilot02 site worlds match raw data.",
+      "main_gap": "Source bundle and partial pilot03 export; qualification by independent language families; stronger measurable erasure; preserve actual first/second-head outputs to quantify error correlation."
+    },
+    {
+      "project": "Immune response",
+      "initialization": "Seeded twelve-record fixture distributed among seven specialists; empty coordinator/shared store initially. Real common C3/C6 state is deep-copied into treatment branches; clean forks C3.",
+      "model_session": "Stateless pinned-model native requests or explicit scripted highest-version policy. Arm-order seed is not a provider seed.",
+      "context_and_memory": "Specialists see own records plus previous shared snapshot; coordinator sees own records plus current shared store. Choices resolve to supplied immutable record IDs; selected records replace private memory. Controller/evaluator has oracle labels excluded from acting observations.",
+      "within_run_variation": "Memory endorsement, source contamination4-6, revocation/repair7, replay13, valid update18; scenario-specific legitimate learning5 and lineage availability. Q arms remove source actor, no replacement.",
+      "verification": "All 720 scripted and eight native outcome trajectories numerically reconciled; pinned source/design/protocol hashes match. Native-v2 raw API events not exported here.",
+      "main_gap": "Full response validation before mutation; current-truth retention; gate core execution on plan receipt; native qualification before model-effect claims."
+    }
+  ]
+}
