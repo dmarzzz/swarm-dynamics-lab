@@ -97,3 +97,9 @@ Render after round barriers and at terminal failure, using logical rounds as the
 No live adapter or runnable native study is delivered in this revision. Before any run: complete applicable research gates, independent review, pre-run assessment, immutable readable public plan, condition-specific TLDR registration and public-page verification, exact frozen assignment manifest, exclusive authorized host and experiment-specific spending authorization. Default paid budget is zero. Publication is not registration. Offline tests need no fleet allocation. Future implementation must refuse dispatch on absent or mismatched receipts and retain failures and previous attempts.
 
 A condition TLDR must spell out question; standard/source-aware instruction; balanced/skewed repetition; full/partial ancestry; comparator; all-assigned accuracy and wrong commitments; and synthetic-task/unknown-lineage limitations. Eight condition-specific registrations may reference one immutable plan, but cannot share a generic TLDR that hides the treatment.
+
+## S0 preparation amendment, 2026-10-04
+
+The shared worker template explicitly allows exploratory S0/S1 under owned notes before formal gate completion; S2 remains closed. The owner requested that established drill. [QM-S0-01](reviews/S0-01-pre.md) is the first bounded competence screen and supersedes this document's blanket statement that all native diagnostics wait for the survey gate. Public registration, allocation and separate budget requirements remain. No result or independent review is implied.
+
+The inspected Jev native interface returns probabilities over typed choices, including DEFER. Such a score is not a binary-world posterior. For this backend, preserve raw choice scores and use them only as diagnostics; defer the proposed Brier/calibration endpoint until a separately validated binary probability elicitation contract exists. S0 uses exact MAP choice correctness and repeat agreement.

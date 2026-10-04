@@ -19,3 +19,9 @@ python3 -m unittest discover -s researchers/vishesh/notes/decision-models/quorum
 ```
 
 No model calls, external services, experiment assignments or credential access occur. The first live screen still needs completed research/review gates, a frozen provider/assignment contract, verified public-plan registration, exclusive allocation and a separate authorized budget. Paid budget is zero until authorized. A public design document alone does not satisfy these gates.
+
+## S0 preparation update
+
+The QM-2 design is published. The owner requested continuing through the shared worker workflow. The prospective [S0 plan](reviews/S0-01-pre.md), [request/scoring implementation](qualification.py), and [additional tests](test_qualification.py) prepare a 32-call Jev competence matrix. Twenty-three offline tests now pass. `qualification.py --prepare PATH` writes the exact manifest without model calls; `--analyze MANIFEST --receipts JOURNAL` checks saved outcomes. No live dispatcher or credential relay is included yet.
+
+Exploratory S0/S1 are allowed under the worker template while the formal survey remains open; S2 waits. The requested isolated budget is $1 API plus $1 dedicated infrastructure for at most six hours, pending owner approval. No allocation or paid request has occurred. Qualification labels are exact MAP answers, not sampled world truth; native API choice scores are not presented as calibrated beliefs.

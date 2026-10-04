@@ -50,7 +50,9 @@ def render(out):
         for epoch in range(max(len(v) for v in arm_rows.values())):
             pairs={a:v[epoch] if epoch<len(v) else None for a,v in arm_rows.items()}
             for idx in range(max(len(r['events']) if r else 1 for r in pairs.values())):
-                im,d=base('The Right Dissenter | measured replay',f'{scenario.title()} | decision epoch {epoch+1} | event {idx+1} | scripted initial votes; real Jev decisions')
+                title='The Right Dissenter | software fixture' if s.get('software_fixture') else 'The Right Dissenter | measured replay'
+                provenance='no model observations' if s.get('software_fixture') else 'scripted initial votes; real Jev decisions'
+                im,d=base(title,f'{scenario.title()} | decision epoch {epoch+1} | event {idx+1} | {provenance}')
                 for ai,(arm,row) in enumerate(pairs.items()):
                     x=70+ai*860;d.text((x,210),arm,font=font(38),fill=GREEN if ai==0 else BLUE)
                     if row is None:d.text((x,290),'Missing observation',font=font(30),fill=RED);continue
@@ -59,6 +61,18 @@ def render(out):
                     if event.get('record'):details.extend(textwrap.wrap(event['record']['text'],48))
                     if event.get('closure'):details.append('Closure: '+event['closure'])
                     for li,line in enumerate(details):d.text((x,300+li*57),line,font=font(28),fill=FG)
+                    # The flow is driven by saved phases, not inferred model reasoning.
+                    visible=events[:min(idx+1,len(events))]
+                    phases={e['phase'] for e in visible}
+                    steps=[('initial','Votes'),('challenge','Objection'),('verification','Check'),('resolution','Decision')]
+                    d.line((x+35,700,x+695,700),fill=MUTED,width=3)
+                    for ni,(phase,label) in enumerate(steps):
+                        nx=x+35+220*ni;active=phase in phases
+                        color=(GREEN if ai==0 else BLUE) if active else '#253642'
+                        d.ellipse((nx-14,686,nx+14,714),fill=color,outline=MUTED,width=2)
+                        d.text((nx-30,734),label,font=font(23),fill=FG if active else MUTED)
+                    initial=events[0]
+                    d.text((x,627),f"{len(initial.get('votes',[]))} votes / {initial.get('unique_sources','?')} original sources",font=font(24),fill=MUTED)
                     d.text((x,800),'Evaluator-only truth: '+row['evaluator']['gold_action'],font=font(28),fill=GOLD)
                     if idx>=len(events)-1:d.text((x,857),'Correct on time: '+str(row['correct_completion']),font=font(28),fill=GREEN if row['correct_completion'] else RED)
                 d.text((70,990),'Fixed trace selection; no replacement of failed or adverse cases. Gold is never sent to the actor.',font=font(24),fill=MUTED)

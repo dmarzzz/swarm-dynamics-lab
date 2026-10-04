@@ -20,6 +20,19 @@ class Reservations(unittest.TestCase):
             with self.assertRaises(ValueError):b.settle(call,0)
             with self.assertRaises(ValueError):b.reserve('more','episode',40,100)
             with self.assertRaises(ValueError):b.reserve('more','episode',10,200)
+    def test_twenty_dollars_shared_across_stages(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path=Path(temp)/'budget.sqlite'
+            bank=Budget(path,20_000_000)
+            for i in range(10):
+                bank.reserve(str(i),'Q-A/'+str(i),2_000_000,2_000_000)
+                bank.settle(str(i),1_950_000)
+            # New stage and a reopened connection retain all $19.50 of previous usage.
+            next_stage=Budget(path,20_000_000)
+            with self.assertRaises(ValueError):next_stage.reserve('next','Q-B/0',500_001,2_000_000)
+            next_stage.reserve('last','Q-B/0',500_000,2_000_000)
+            with self.assertRaises(ValueError):next_stage.reserve('over','Q-B/1',1,2_000_000)
+            with self.assertRaises(ValueError):Budget(path,40_000_000)
     def test_shared_stage_cap_and_overrun(self):
         with tempfile.TemporaryDirectory() as temp:
             b=Budget(Path(temp)/'budget.sqlite',100)

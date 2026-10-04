@@ -20,13 +20,13 @@ Command from repository root:
 python3 -m unittest discover -s researchers/vishesh/notes/optimal-swarm-size/src -p 'test_*.py' -v
 ```
 
-Eighteen test methods cover 80 reference-task variations, all five rosters under scripted transport, malformed and adversarial submissions, equivalent valid repairs, split/input invariants, concurrency/overspending, operational boundaries and refusal of the incomplete launch configuration. Scripted reference answers prove plumbing only; they are not model performance observations. No experimental/model run has occurred.
+Twenty-one test methods cover 80 reference-task variations, all five rosters under scripted transport, malformed and adversarial submissions, equivalent valid repairs, split/input invariants, concurrency/overspending, operational boundaries and refusal of the incomplete launch configuration. Scripted reference answers prove plumbing only; they are not model performance observations. No experimental/model run has occurred.
 
 Read [PRIOR-ART-REVIEW.md](PRIOR-ART-REVIEW.md) for the completed focused author review and its limits. The independent review is requested in `tasks/review-swarm-size-qualification.md` for Shadow; no passing verdict has been received. The focused review does not complete the formal survey/hypothesis gates for a confirmatory study.
 
 ## Remaining launch work
 
-1. Obtain the user's total API cap (asked in the task); choose an episode cap within it. User intent to launch is recorded, but no numeric spending allowance was supplied.
+1. **Resolved:** the user authorized $20 total for the first qualification attempt, shared across Q-A/Q-B and failed calls. SPENDING-AUTHORIZATION.json records the authorization. The config uses a $2 per-episode sublimit. Reopening the same ledger preserves usage; config changes cannot enlarge the recorded authorization. No model spend has occurred.
 2. Review and pin the served model/provider route and the price/accounting bound. Public OpenRouter model metadata on 2026-10-04 listed `openai/gpt-4.1-mini` with input $0.40/M tokens and output $1.60/M tokens. These are observed quotes, not a contract or spending authorization. The draft conservatively reserves 1,047,576 context tokens plus 4,096 output tokens per call: $0.425585 rounded upward. Nineteen calls per episode gives a very loose upper bound of $8.086115 per episode, $129.37784 for Q-A and $646.8892 for all 80. Actual prompt/output usage would normally be much smaller, but it is unmeasured. A smaller authorized cap may stop execution early; tighter reservations need verified tokenization rather than optimistic guesses.
 3. Obtain independent package review and address findings. Confirm the permitted exploratory S0/S1 route; keep core/transfer locked behind the research gates.
 4. Validate the implemented hub reporting/transport and standalone replay on the selected host; register and verify an immutable public plan and condition-specific TLDR before model execution. Existing public proxy problems must not be treated as a successful public preflight.
@@ -38,3 +38,7 @@ The launch check currently exits 2 with missing fields. This is an explicit not-
 ## Visualization delivery
 
 Live qualification uses textual progress and measured item counts. Final `replay.html` displays recorded service intervals with a scrubber and static table; it is a downloadable hub artifact because the public proxy does not serve arbitrary HTML. `trace.jsonl` preserves event history. There is no flock animation or manufactured physical trajectory, and no claim that an interval plot measures provider GPU activity. Browser validation and transport integration are outstanding review checks; offline replay checks cover interval lengths, missing ends and HTML escaping.
+
+## Authorization update
+
+The $20 cap is now authorized, not pending. Provider requests include price ceilings matching the reviewed quote and disallow per-request charges and fallback routes. Budget tests verify exhaustion at exactly $20, retention across Q-A/Q-B and rejection of cap resets. Route pinning, live integration/public preflight and independent review remain incomplete; the Shadow review task was still open and unclaimed at this check. No machine is reserved while these prerequisites remain unresolved.

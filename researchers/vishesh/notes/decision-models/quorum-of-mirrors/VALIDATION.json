@@ -1,22 +1,25 @@
 {
-  "kind": "offline unit validation, not an experiment run",
-  "date_utc": "2026-10-04T03:39:05.889213+00:00",
-  "tests": 14,
-  "passed": 14,
-  "command": "python3 -m unittest discover -s researchers/vishesh/notes/decision-models/quorum-of-mirrors -p 'test_*.py' -v",
+  "kind": "offline unit validation; no experiment execution",
+  "date_utc": "2026-10-04T03:47:54.783936+00:00",
+  "tests": 23,
+  "passed": 23,
   "exit_code": 0,
+  "command": "python3 -m unittest discover -s researchers/vishesh/notes/decision-models/quorum-of-mirrors -p 'test_*.py' -v",
   "model_calls": 0,
   "spend": 0,
-  "initial_upstream": "c1aca0b29b7f5fca0e84f32aef0373563341fde3",
   "plan_before_implementation_commit": "5cca365",
+  "s0_plan_before_implementation_commit": "c9e6118 (local pre-rebase commit; resolve public ancestor by commit subject)",
   "sha256": {
-    "PLAN.md": "520269fdc361d176ae32d2cea84fd0b3c29282a3f70ad527fbab63fc14066d00",
+    "PLAN.md": "2d289f3546f33d720043c91f0c2ddfd2577df6bd689565404932c5395939d45d",
     "reference.py": "6e0e7cd4f24251401f4ba9a22b53e6f736543de8c9df0e8e016ed161220f54c9",
     "test_reference.py": "74e0778fa596656faa09167cf506d754c3e5e4f107a96ee40e4602423623f0e0",
-    "README.md": "f311fe499d61020f277cae7970cef3d0a88c4c0dc681474987b7ce01daaf80b4",
-    "REVIEW.md": "4372ead2ac201d87a173876f5aaeb19957658704cfd355dbd023e3bde7d3c6ca"
+    "README.md": "80331cd17697cef4616dbec33e4992bda5df9fa8fe1f5bbadbe740dbfe6cfa5f",
+    "REVIEW.md": "b82b57989b00045c809ac30cd8611dbd4fe74ebc0360873fada2feee06fbee21",
+    "qualification.py": "e5bfff79e4f506a42c4e10ba78b3d1c34fa762722fa283fab0d352195af7905c",
+    "test_qualification.py": "23e758693d30281669ae3259384a79f5a78f1c5cb0547dfa8117cc2c4db67e1f",
+    "S0-01-manifest.json": "97d5562553313bfbb1c5e9b10c9a3da279d033b7afd01d3372ca7fd46cf7034d",
+    "reviews/S0-01-pre.md": "5716b10b12a0e2d97f3edfbf710da91ae42b288e93ec544d7316e0560c62d6f4"
   },
-  "native_qualification": "not attempted",
-  "research_gate": "incomplete",
-  "public_run_registration": "not performed"
+  "public_run_registration": "pending",
+  "budget_authorization": "pending"
 }
