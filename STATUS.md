@@ -46,7 +46,6 @@
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T15:29Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T15:34Z | Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -72,6 +71,7 @@
 | [healing-c4-selective](tasks/healing-c4-selective.md) | open | p1 | build |  | vishesh | 2026-10-04T15:35Z | Prepare and qualify C4 selective helping |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | open | p1 | build |  | vishesh | 2026-10-04T15:30Z | Run the revised procurement influence experiment |
+| [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | open | p1 | build |  | vishesh | 2026-10-04T15:39Z | Qualify Poietic Agents S0-02 within retained cumulative authority |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | open | p1 | survey |  | vishesh | 2026-10-04T05:52Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [review-sybil-newcomer-sonnet](tasks/review-sybil-newcomer-sonnet.md) | open | p1 | review |  | shadow |  | Review sybil-newcomer-sonnet, a Sonnet 4.6 replication of sybil-newcomer-api |
 | [review-theseus-execution-d1](tasks/review-theseus-execution-d1.md) | open | p1 | review |  | dmarz |  | Independent review of Theseus execution diagnostic D1 |
@@ -282,6 +282,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-heterogeneous | blocked |  | 2026-10-04T15:38Z | S0-02 scope authorized; original window expired; 79 offline checks and retained-ledger audit complete |
 | vishesh/codex-pi-review | done | pi-cycle-2026-10-04 | 2026-10-04T15:37Z | Ten-study analysis/preparation cycle reconciled; two scientific stops, eight native launches gated, explicit decisions pending. |
 | shadow/sol-narrative | working |  | 2026-10-04T15:34Z | Building a cited convergence map and headline scorecard, no model calls |
 | vishesh/codex-theseus | idle | theseus-a1-acquisition | 2026-10-04T15:32Z | A1 prepared and published; native dispatch blocked on queue295 compatibility |
@@ -289,7 +290,6 @@
 | shadow/sol-askswarm | done | wild-askswarm | 2026-10-04T15:25Z | Shipped AskSwarm v0.1.1, three source reports, sensitivity and evidence registry; zero model calls. |
 | vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T15:25Z | Q-A7 prepared and tested; queue allocation, dedicated credential delivery and canonical ledger continuity unresolved |
 | shadow/sol-janitor-find | done |  | 2026-10-04T15:24Z | Published 40 triaged code/process findings and two saved synthetic offline probe suites; handed queue to janitor fixer. |
-| vishesh/codex-heterogeneous | blocked |  | 2026-10-04T15:24Z | S0-02 scope authorized; original window expired;67 offline checks and retained-ledger audit complete |
 | shadow/sol-identity | done |  | 2026-10-04T15:23Z | Shipped complete descriptive census; SwarmTraces identity graph not identifiable; formal figure publication blocked |
 | vishesh/codex-regrowth-docs | blocked | healing-c4-selective | 2026-10-04T15:23Z | C4 ready integration; queue297 blocked on orbital-one and credential/original-ledger handoff; zero inference, runtime stopped |
 | shadow/sol-audit-gap | working | wild-delete-return | 2026-10-04T15:22Z | One bounded deletion-return pilot outside other lanes; immutable inputs and separate full recomputation |
