@@ -9,6 +9,29 @@ submits once, through the form in the event Slack.
 - Results with sources: [RESULTS.md](RESULTS.md). Demo script: [DEMO.md](DEMO.md).
 - Team: dmarz, vishesh, shadow. Full names and emails: TODO (humans fill in on the form).
 
+## Shadow team contributions
+
+The updated [Shadow team submission](../../SUBMISSION.md) supplements the joint draft below; its linked
+findings retain their own observation windows, evidence limits and source records.
+
+- **AskSwarm and robustness:** a reusable comparison tool for collusion.wiki, SwarmTraces and swarm-lab git.
+  Missing actor/clock fields block SwarmTraces social comparisons; changing observation units changes apparent
+  repetition leaders. [Finding](../wild-askswarm/FINDING.md), [robustness](../wild-askswarm/ROBUSTNESS.md),
+  [direct-text audit](../wild-askswarm/AUDIT.md).
+- **Incident-data descriptions:** cross-release chronology, URL reuse timing and identity observability,
+  not causal influence or verified adoption. Retained wiki snapshots inflate name-reference activity by
+  2.34x relative to edit text. [Chronology](../wild-timeline/FINDING.md),
+  [URL timing](../wild-halflife/FINDING.md), [identity](../wild-identity/FINDING.md).
+- **Memory results and non-results:** scripted memory regimes do not establish agent behavior; mixture rescue
+  did not generalise across models. Claude qualification was infrastructure-blocked with no completions, and
+  its reduced offline fixture did not reproduce freeze. [Scripted results](../capture-memory/README.md),
+  [mixture corrections](../capture-memory-mix/CORRECTIONS.md),
+  [Claude closeout](../capture-memory/freeze-claude/FINDING.md).
+- **Checks that limited claims:** independent saved-answer arithmetic checks and pipeline defect reviews;
+  factory attempt 2 made no new calls and remains blocked by separate-agent review, not a treatment finding.
+  [Arithmetic check](../completed-findings-xcheck/README.md), [code fixes](../janitor-2026-10-04/MERGED.md),
+  [factory review](../../factory/provenance/attempt2/REVIEW-independent.md).
+
 ## What it is
 
 swarm-lab is a shared git repository in which three researchers each ran several AI agents (Claude Code,
@@ -80,9 +103,11 @@ are being corrected in the repository.
 
 ## Honest limits
 
-- **Synthetic, not in the wild.** Every finding comes from controlled synthetic worlds with scripted actors
-  and one model in the loop. We did not analyse the AI Village, collusion.wiki, SwarmTraces or Transluce data
-  for this submission.
+- **Synthetic experiments and descriptive incident data.** The joint draft's experimental findings use
+  controlled synthetic worlds. Shadow also analysed collusion.wiki, SwarmTraces and Transluce for descriptive chronology,
+  URL reuse and identity observability, not causal agent behavior; see the linked Shadow contributions above.
+  [Chronology](../wild-timeline/FINDING.md), [URL timing](../wild-halflife/FINDING.md),
+  [identity](../wild-identity/FINDING.md).
 - **Small independent samples.** Most studies have 6 to 48 independent roots. Thousands of calls per study are
   not thousands of samples. Intervals are descriptive and uncorrected for multiple comparisons.
 - **Mostly same-researcher checks.** Most completed studies ran under an owner waiver of cross-researcher

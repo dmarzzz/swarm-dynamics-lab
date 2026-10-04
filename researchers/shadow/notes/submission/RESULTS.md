@@ -7,6 +7,29 @@ completed dmarz findings is running in task
 [review-dmarz-completed-xcheck](https://github.com/dmarzzz/swarm-lab/blob/b8d90f52/tasks/review-dmarz-completed-xcheck.md)
 and will be linked here when it lands.
 
+## Shadow team contributions
+
+The updated [Shadow team submission](../../SUBMISSION.md) supplements the joint draft below; its linked
+findings retain their own observation windows, evidence limits and source records.
+
+- **AskSwarm and robustness:** a reusable comparison tool for collusion.wiki, SwarmTraces and swarm-lab git.
+  Missing actor/clock fields block SwarmTraces social comparisons; changing observation units changes apparent
+  repetition leaders. [Finding](../wild-askswarm/FINDING.md), [robustness](../wild-askswarm/ROBUSTNESS.md),
+  [direct-text audit](../wild-askswarm/AUDIT.md).
+- **Incident-data descriptions:** cross-release chronology, URL reuse timing and identity observability,
+  not causal influence or verified adoption. Retained wiki snapshots inflate name-reference activity by
+  2.34x relative to edit text. [Chronology](../wild-timeline/FINDING.md),
+  [URL timing](../wild-halflife/FINDING.md), [identity](../wild-identity/FINDING.md).
+- **Memory results and non-results:** scripted memory regimes do not establish agent behavior; mixture rescue
+  did not generalise across models. Claude qualification was infrastructure-blocked with no completions, and
+  its reduced offline fixture did not reproduce freeze. [Scripted results](../capture-memory/README.md),
+  [mixture corrections](../capture-memory-mix/CORRECTIONS.md),
+  [Claude closeout](../capture-memory/freeze-claude/FINDING.md).
+- **Checks that limited claims:** independent saved-answer arithmetic checks and pipeline defect reviews;
+  factory attempt 2 made no new calls and remains blocked by separate-agent review, not a treatment finding.
+  [Arithmetic check](../completed-findings-xcheck/README.md), [code fixes](../janitor-2026-10-04/MERGED.md),
+  [factory review](../../factory/provenance/attempt2/REVIEW-independent.md).
+
 How to read the table:
 
 - **Unit** is the independent sample unit. Model calls, identities and rows are not independent samples; the
@@ -47,8 +70,11 @@ How to read the table:
 
 ## What is not here
 
-- No result from the in-the-wild datasets the organisers pointed at (AI Village, collusion.wiki, SwarmTraces,
-  Transluce). The team built and used a controlled-experiment pipeline instead.
+- The synthetic-results table above does not include incident-data analyses. Shadow's descriptive work on
+  collusion.wiki, SwarmTraces and Transluce is linked in the Shadow contributions section and
+  [SUBMISSION.md](../../SUBMISSION.md): [chronology](../wild-timeline/FINDING.md),
+  [URL timing](../wild-halflife/FINDING.md), [identity](../wild-identity/FINDING.md).
+  These are not causal in-the-wild findings.
 - Several runs were still collecting at this draft (see [STATUS.md](https://github.com/dmarzzz/swarm-lab/blob/main/STATUS.md)
   and [swarm-live](https://swarm-live.pages.dev)). Partial results are not listed.
 - Costs: per-study model spend is in each results file (for example market-split-opus USD 14.95 for S1,

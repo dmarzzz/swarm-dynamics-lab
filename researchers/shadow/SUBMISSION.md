@@ -17,8 +17,10 @@ retained wiki page text inflates name-reference activity by 2.34x, counting page
 keeps only 1 of the original top 10 repeated-phrasing leaders, and a 30-link direct-text audit found that every
 sampled git link was sync boilerplate. Three companion findings (incident chronology, URL adoption timing,
 identity observability) are descriptive and post-hoc. Separately, a scripted memory model found three regimes
-after an attacker is removed (slow return, stay captured, freeze). A three-model pilot did not generalise, and a
-follow-up diagnostic came back negative. We also report two audits of our own work and 21 merged fixes to shared
+after an attacker is removed (slow return, stay captured, freeze), a property of the scripted rule rather than
+agent behaviour. The real-model memory-mixture pilot did not generalise; Claude qualification was
+infrastructure-blocked, and its reduced offline fixture did not reproduce freeze. Factory attempt 2 remains
+blocked by independent review, with no new calls or treatment claim. We also report audits and fixes to shared
 pipeline code. Nothing here is a causal claim about agent behaviour in the wild.
 
 ## Contents
@@ -29,7 +31,7 @@ pipeline code. Nothing here is a causal claim about agent behaviour in the wild.
 4. [URL adoption timing in two swarms](#4-url-adoption-timing-wild-halflife)
 5. [Identity: retained wiki text inflates name-reference activity](#5-identity-observability-wild-identity)
 6. [Capture and memory (scripted): recover, stay captured, freeze](#6-capture-and-memory-scripted-s1-and-s1b)
-7. [Freeze on Claude (running)](#7-freeze-on-claude-running)
+7. [Freeze on Claude (inconclusive, infrastructure-blocked)](#7-freeze-on-claude-inconclusive-infrastructure-blocked)
 8. [Negative and null results](#8-negative-and-null-results)
 9. [Reviews and audits](#9-reviews-and-audits)
 10. [Janitor fixes to shared code](#10-janitor-fixes-prs-85-to-106)
@@ -230,13 +232,23 @@ streams, not semantic problems, so 48,000 episodes are not 48,000 independent te
 answer, so "return" measures hysteresis, not epistemic healing. A same-dose 20-vs-1 contrast is clean. Contrasts
 involving full memory change the dose. `frac_original_T` alone cannot separate "came back" from "never left".
 
-## 7. Freeze on Claude (running)
+## 7. Freeze on Claude (inconclusive, infrastructure-blocked)
 
-> **PLACEHOLDER. Not yet a result.** A real-model check of the S1b freeze regime (unbounded memory stays where
-> capture left it after purge) on a Claude model is running and is due by 19:15 EDT (23:15Z). This section will be
-> replaced with: model and route, preregistration link, the exact cells run, valid/assigned counts, the
-> `frac_original_T` and change-since-removal numbers with intervals, cost, and limits. If it does not land or does
-> not qualify, this section will say so and report the blocked or failed attempt, not a result.
+Source: [freeze-claude/FINDING.md](notes/capture-memory/freeze-claude/FINDING.md),
+[preregistration](notes/capture-memory/freeze-claude/PREREG.md),
+[summary.json](notes/capture-memory/freeze-claude/summary.json).
+
+**Blocked attempt, not a behavioral null.** Qualification requested `claude-sonnet-5-5` through the authorized
+local Anthropic pool. All 8 HTTP attempts failed: 2 HTTP429 rate limits and 6 HTTP503 broker-unavailable errors.
+There were zero valid model completions, no returned-model identifier, and no attack or repair episodes. No Opus
+request started. These failures neither replicate nor falsify freeze. Dollar charges and token counts are
+unknown, not asserted zero, because no usage or cost receipt was returned.
+
+**Offline caveat.** The reduced scripted fixture did not reproduce the target freeze regime: full-memory
+removal increased original-convention share by **+0.250, 95% root-bootstrap CI [+0.083,+0.417]**. Even a successful
+model run would therefore have been a standardized-state capacity diagnostic, not a clean replication of S1b.
+Claude freeze remains untested. A relaunch needs scientific reconsideration of the fixture and prospective
+runner corrections, not substitution of these transport failures for a behavioral result.
 
 ## 8. Negative and null results
 
@@ -295,7 +307,11 @@ direct response child. Dividing all response rows by payload rows gives 25.27%, 
 18,417 parented responses attach to only 7,733 payloads. Response attachment rises from 2.26% (1-255 characters)
 to 39.98% (4096+ characters).
 
-**8g. Factory provenance pilot, attempt 1: no answers.** See section 11.
+**8g. Factory provenance: no treatment result.** Attempt 1 returned no model answers; attempt 2 made no new
+calls and is blocked by independent review. See [section 11](#11-factory-status).
+
+**8h. Claude freeze: infrastructure-blocked, inconclusive.** No model completion or behavioral estimate exists,
+and the reduced offline fixture did not reproduce freeze. See [section 7](#7-freeze-on-claude-inconclusive-infrastructure-blocked).
 
 ## 9. Reviews and audits
 
@@ -348,7 +364,9 @@ actually happened.
 ## 11. Factory status
 
 Sources: [sol-factory.md](notes/audit-2026-10-04/sol-factory.md), [factory/provenance/README.md](factory/provenance/README.md),
-[POSTMORTEM.md](factory/provenance/POSTMORTEM.md), [attempt2 status](factory/provenance/attempt2/results/FINDING.md).
+[POSTMORTEM.md](factory/provenance/POSTMORTEM.md), [attempt2 status](factory/provenance/attempt2/results/FINDING.md),
+[independent review](factory/provenance/attempt2/REVIEW-independent.md),
+[PR #107](https://github.com/dmarzzz/swarm-lab/pull/107).
 
 Honest status: **no factory treatment result exists.**
 
@@ -358,11 +376,15 @@ Honest status: **no factory treatment result exists.**
   dispatch is now held (JF001, #102).
 - Provenance duplication-invariance pilot, attempt 1: two requests, zero model answers (pool HTTP 400 from
   unsupported schema bounds, paid fallback HTTP 403). Builder defect, fixed in JF002 (#106).
-- Attempt 2: prospective plan committed before any request. Successor source is in
-  [PR #107](https://github.com/dmarzzz/swarm-lab/pull/107) (open). 16 offline tests pass. 0 HTTP attempts, USD 0
-  spent. **Gated on an independent separate-agent review**
-  ([tasks/review-factory-provenance-v1.md](../../tasks/review-factory-provenance-v1.md), open). A requested CLI
-  reviewer failed authentication (HTTP 401) before reviewing. New dispatch must stop by 19:00 EDT.
+- Attempt 2: **blocked by independent review**, not a treatment result. The prospective plan preceded any
+  request, but the separate-agent review of [PR #107](https://github.com/dmarzzz/swarm-lab/pull/107) returned
+  **BLOCK**. Direct dispatch can continue after an HTTP400 and run out of the frozen assignment order; the stop
+  rule is not enforced at the shared dispatch boundary. `closeout.py` is absent from the admitted source-hash
+  manifest, and saved-data reporting/check paths do not enforce the reporting freeze. See
+  [REVIEW-independent.md](factory/provenance/attempt2/REVIEW-independent.md). The supplied offline tests passed
+  but did not cover these failures. Attempt 2 made **0 new HTTP calls**, spent **USD 0**, and makes **no
+  scientific treatment claim**. The blockers require offline fixes and a separate-agent readback before any
+  prospective admission or dispatch.
 
 ## 12. Limits that apply to everything here
 
