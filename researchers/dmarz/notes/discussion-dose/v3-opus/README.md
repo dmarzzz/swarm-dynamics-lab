@@ -50,9 +50,23 @@ did in 4 of 6. Public discussion reduces false-memory inheritance relative to re
 ## Protocol
 
 One command starts the chain in the background on the server: (1) a one-call interface probe (a parent-phase
-memory fixture, scored nowhere); stop if it does not return a parsed answer. (2) Q0, 636 calls, exact-source
-replay audit, upload. (3) Software gate: `model_qualified` from the frozen analysis. Fail: stop, S1 never starts.
-Pass: (4) S1, 2,436 calls, audit, upload. No retries or restarts; any interruption leaves the ledger for audit.
+memory fixture, scored nowhere); stop if it does not return a parsed answer. (2) Q0, 636 calls, dispatched
+**clean-first**: for each of the 6 worlds the clean acquisition, clean report snapshot, clean reports-only arm and
+clean full-evidence diagnostic (11 calls per world, 66 in all) run before anything else. Both competence counts
+are then known, and an early gate (at least 5/6 clean diagnostics, at least 5/6 clean reports-only votes, zero
+call failures so far) stops the stage if it fails; the other 570 calls are then not dispatched. If it passes, the
+remaining clean arms, the attacked exposures and the memory fixtures follow, then the exact-source replay audit and
+upload. Dispatch order changes no request content or record; replay reproduces it. (3) Software gate: the frozen
+`model_qualified`. Fail: stop, S1 never starts. Pass: (4) S1, 2,436 calls (same clean-first order, no early stop),
+audit, upload. Transport retries: at most two per logical call and only for HTTP 429 or 529, where the provider did
+not run the model, within the 600 s request timeout; every attempt is reserved in the ledger and counted against an
+attempt cap (planned calls plus the larger of 10 and 10%). Model answers, including refusals and truncations, are
+never retried. No restarts; any interruption leaves the ledger for audit.
+
+Dispatch-order rationale (results analyst, relayed by fleet-monitor): in D1-Opus all 8 abstentions on saved
+reports were incomplete-claim ballots, none contradicted the agent's own claims and none was a wrong vote, so the
+at-risk gate (reports-only 5/6) turns on whether Opus-written reports carry every needed value. Clean-first decides
+it in the first 66 calls.
 Hard caps: Q0 636 calls and a USD 400 reservation ceiling; S1 2,436 calls and a USD 1,500 reservation ceiling.
 Reservations assume every call spends the full 16,000 output tokens and are never credited back, so the ceilings
 are far above expected spend (about USD 13 for Q0 and USD 50 for S1 at D1-Opus's USD 0.021 per call).

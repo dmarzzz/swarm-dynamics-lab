@@ -16,6 +16,7 @@ import os
 from pathlib import Path
 import platform
 import sys
+import time
 import urllib.error
 import urllib.request
 
@@ -23,8 +24,12 @@ from tasks import digest
 from providers import Anthropic, ProviderFailure
 from bench_v3 import VERSION as BENCH_VERSION
 from bench_v3.contracts import SYSTEM, schema, strict_json
-from bench_v3.worlds import make_case, memory_fixtures, SPLITS
-from bench_v3.runner import Runner, allocation
+from bench_v3.worlds import make_case, memory_fixtures, SPLITS, validate_case
+from bench_v3.scoring import parent_score
+from bench_v3.runner import Runner, allocation, ARMS
+from bench_v3.evidence import possible_decisions
+from bench_v3.worlds import documents
+from tasks import rng_for
 from bench_v3.journal import Journal, Replay, read_events
 from bench_v3.policies import Scripted
 from bench_v3.analysis import summarize
@@ -50,7 +55,11 @@ STAGES = {
 CONFIG = {'model': MODEL, 'temperature': 'omitted: rejected by claude-opus-5-5',
           'thinking': 'adaptive (cannot be disabled on claude-opus-5-5)', 'effort': EFFORT,
           'max_output_tokens': MAX_OUTPUT_TOKENS, 'visible_answer_max_chars': VISIBLE_ANSWER_MAX_CHARS,
-          'max_input_bytes': 60000, 'timeout': 600, 'transport_retries': 0, 'server_fallbacks': 'disabled',
+          'max_input_bytes': 60000, 'timeout': 600,
+          'transport_retries': 'at most 2 per logical call, only HTTP 429/529 (model not run), within the 600 s request timeout; every attempt reserved and counted against the attempt cap; model answers never retried',
+          'attempt_cap': 'planned calls + max(10, planned calls // 10)',
+          'dispatch_order': 'clean-first: per world clean acquisition, report snapshot, reports-only arm and clean full-evidence diagnostic; early gate after those 66 calls; then remaining clean arms, attacked exposures, memory fixtures',
+          'server_fallbacks': 'disabled',
           'refusal': 'stop_reason refusal counted separately (public reason provider_schema_refusal)',
           'input_usd_per_million': RATES[0], 'output_usd_per_million': RATES[1]}
 
@@ -79,6 +88,34 @@ class Opus(Anthropic):
                          timeout=CONFIG['timeout'], max_cost_usd=max_cost_usd,
                          input_usd_per_million=RATES[0], output_usd_per_million=RATES[1])
         self.refusals = 0; self.model_mismatches = 0; self.last_stop_reason = None
+        self.attempts = 0; self.max_attempts = max_calls + max(10, max_calls // 10); self.transport_retries = 0
+        self.sleep = time.sleep
+
+    RETRYABLE = (429, 529)
+    MAX_RETRIES = 2
+
+    def send(self, encoded, reservation, headers):
+        """Dispatch with at most two retries, only for HTTP 429/529 (the provider did not run the model)."""
+        started = time.monotonic(); retries = 0
+        while True:
+            if self.attempts >= self.max_attempts: raise ProviderFailure('attempt cap exhausted', 'provider_local_limit')
+            if self.reserved_usd + reservation > self.max_cost_usd: raise ProviderFailure('dollar reservation exhausted', 'provider_local_limit')
+            remaining = self.timeout - (time.monotonic() - started)
+            if remaining <= 1: raise ProviderFailure('request timeout window exhausted', 'provider_timeout')
+            self.reserved_usd += reservation; self.attempts += 1
+            req = urllib.request.Request(self.base + '/messages', data=encoded, headers=headers)
+            try:
+                with urllib.request.urlopen(req, timeout=remaining) as r: return r.read(4_000_001)
+            except urllib.error.HTTPError as e:
+                if e.code in self.RETRYABLE and retries < self.MAX_RETRIES:
+                    wait = min(2.0 * (2 ** retries), 20.0)
+                    try:
+                        after = float(e.headers.get('retry-after')) if e.headers and e.headers.get('retry-after') else None
+                        if after is not None: wait = min(max(after, 0.5), 30.0)
+                    except Exception: pass
+                    if time.monotonic() - started + wait < self.timeout - 1:
+                        retries += 1; self.transport_retries += 1; self.sleep(wait); continue
+                raise
 
     def request_body(self, request):
         return {'model': self.model, 'system': self.system_prompt,
@@ -97,10 +134,9 @@ class Opus(Anthropic):
         if self.reserved_usd + reservation > self.max_cost_usd: raise ProviderFailure('dollar reservation exhausted', 'provider_local_limit')
         headers = {'Content-Type': 'application/json', 'x-api-key': self.key, 'anthropic-version': '2023-06-01'}
         if self.workspace: headers['anthropic-workspace-id'] = self.workspace
-        req = urllib.request.Request(self.base + '/messages', data=encoded, headers=headers)
-        self.reserved_usd += reservation; self.calls += 1; self.usage_missing_calls += 1
+        self.calls += 1; self.usage_missing_calls += 1
         try:
-            with urllib.request.urlopen(req, timeout=self.timeout) as r: raw = r.read(4_000_001)
+            raw = self.send(encoded, reservation, headers)
             if len(raw) > 4_000_000: raise ProviderFailure('response too large', 'provider_incomplete')
             response = json.loads(raw); usage = response.get('usage', {})
             self.last_model = response.get('model'); self.last_stop_reason = response.get('stop_reason')
@@ -140,7 +176,81 @@ class Opus(Anthropic):
         return {'calls': self.calls, 'input_tokens': self.input_tokens, 'output_tokens': self.output_tokens,
                 'cost_usd': round(self.actual_cost_usd, 6), 'reserved_usd': round(self.reserved_usd, 6),
                 'usage_missing_calls': self.usage_missing_calls, 'refusals': self.refusals,
-                'model_mismatches': self.model_mismatches}
+                'model_mismatches': self.model_mismatches, 'attempts': self.attempts,
+                'max_attempts': self.max_attempts, 'transport_retries': self.transport_retries}
+
+
+class GateStop(Exception):
+    """The clean-first early gate failed; the remaining assignments are deliberately not dispatched."""
+    def __init__(self, rows, gate):
+        super().__init__('early gate failed'); self.rows = rows; self.gate = gate
+
+
+def early_gate(rows, failures):
+    clean_full = [r for r in rows if r['kind'] == 'diagnostic' and not r['attack']]
+    clean_reports = [r for r in rows if r['kind'] == 'swarm' and r['arm'] == 'reports' and not r['attack']]
+    diag = sum(r['evaluation']['justified'] for r in clean_full)
+    rep = sum(r['evaluation']['vote_correct'] for r in clean_reports)
+    return {'clean_full_evidence_correct': diag, 'clean_reports_correct': rep, 'assigned_each': len(clean_full),
+            'call_failures_so_far': failures, 'passed': len(clean_full) == len(clean_reports) == 6 and diag >= 5 and rep >= 5 and failures == 0}
+
+
+class CleanFirstRunner(Runner):
+    """bench_v3 Runner with clean-first dispatch (same calls and records, different order).
+
+    Phase 1, per world: clean acquisition, clean report snapshot, clean reports-only arm, clean full-evidence
+    diagnostic (11 calls/world). With early_gate=True the Q0 competence gate is decided after phase 1 and a failure
+    stops dispatch. Phase 2: remaining clean arms. Phase 3: attacked exposures (all arms + diagnostic). Phase 4:
+    memory fixtures. The order is deterministic, so exact-source replay reproduces it.
+    """
+    def __init__(self, provider, journal, rounds=3, early=False):
+        super().__init__(provider, journal, rounds); self.early = early
+
+    def execute(self, cases, assignments):
+        if len({case['id'] for case in cases}) != len(cases): raise ValueError('duplicate world identifiers')
+        planned, _ = allocation(cases, self.rounds)
+        if digest(sorted(assignments, key=lambda a: a['id'])) != digest(sorted(planned, key=lambda a: a['id'])):
+            raise ValueError('assignments differ from frozen allocation')
+        for case in cases: validate_case(case)
+        rows = []; expected = {r['id'] for r in assignments}
+        def terminal(row):
+            if row['id'] not in expected: raise ValueError('unassigned terminal record')
+            expected.remove(row['id']); rows.append(row); self.journal.emit('terminal', record=row)
+        def diagnostic(case, attack):
+            label = f'{case["id"]}:{int(attack)}:diagnostic'
+            corpus = documents(case, attack)
+            context = {'task': case['task'], 'documents': corpus, 'read_ledger': [d['id'] for d in corpus],
+                       'reports': [], 'board': [], 'private_history': []}
+            answer = self.call('diagnostic', context, label, 'single')
+            possibilities = possible_decisions(case['task'], corpus)
+            expected_answer = possibilities[0] if len(possibilities) == 1 else 'ABSTAIN'
+            terminal({'id': label, 'kind': 'diagnostic', 'world': case['id'], 'family': case['family'],
+                      'stratum': case['stratum'], 'attack': attack, 'status': 'completed', 'answer': answer,
+                      'evaluation': {'invalid': int(answer is None), 'justified': int(answer is not None and answer['vote'] == expected_answer)}})
+        def arm_order(case, attack):
+            arms = [a for a in ARMS if a != 'reports']; rng_for(BENCH_VERSION, case['id'], attack, 'arm-order').shuffle(arms)
+            return arms
+        clean = {}
+        for case in cases:
+            clean[case['id']] = self.prepare_reports(case, False, self.acquire(case, False))
+            terminal(self.continue_arm(case, False, 'reports', clean[case['id']]))
+            diagnostic(case, False)
+        gate = early_gate(rows, self.failures)
+        self.journal.emit('early_gate', **gate)
+        if self.early and not gate['passed']: raise GateStop(rows, gate)
+        for case in cases:
+            for arm in arm_order(case, False): terminal(self.continue_arm(case, False, arm, clean[case['id']]))
+        for case in cases:
+            snapshot = self.prepare_reports(case, True, self.acquire(case, True))
+            for arm in ['reports'] + arm_order(case, True): terminal(self.continue_arm(case, True, arm, snapshot))
+            diagnostic(case, True)
+        for fixture in memory_fixtures():
+            answer = self.call('parent', fixture['context'], fixture['id'], 'parent')
+            score = parent_score(fixture['context'], answer, fixture['truth_answer'])
+            terminal({'id': fixture['id'], 'kind': 'memory', 'family': fixture['family'], 'state': fixture['state'],
+                      'variant': fixture['variant'], 'status': 'completed', 'answer': answer, 'evaluation': score})
+        if expected: raise ValueError('missing terminal assignments')
+        return rows
 
 
 def write_json(path, value):
@@ -172,7 +282,19 @@ def run_stage(destination, stage, provider, observer=None, launch_record=None):
     journal = Journal(destination / 'events.jsonl', observer=observer)
     try:
         journal.emit('manifest', manifest_hash=digest(frozen))
-        rows = Runner(provider, journal, ROUNDS).execute(worlds, frozen['assignments'])
+        try:
+            rows = CleanFirstRunner(provider, journal, ROUNDS, early=(stage == 'q0')).execute(worlds, frozen['assignments'])
+        except GateStop as stop:
+            journal.emit('early_stop', **stop.gate, terminal_rows=len(stop.rows))
+            write_json(destination / 'episodes-partial.json', stop.rows)
+            summary = {'schema': frozen['schema'], 'scientific': frozen['scientific'], 'early_stop': True,
+                       'qualification': {'execution_complete': False, 'early_stop': True, 'model_qualified': False,
+                                         'competence_screen_pass': False, 'required_each': 5, **stop.gate},
+                       'reconciliation': {'planned_calls': frozen['planned_calls'], 'terminal_rows': len(stop.rows),
+                                          'assigned_rows': len(frozen['assignments'])}}
+            write_json(destination / 'summary.json', summary)
+            render(journal.events, stop.rows, destination / 'replay.html')
+            return summary
         journal.emit('complete', episodes=len(rows))
         write_json(destination / 'episodes.json', rows)
         summary = summarize(frozen, rows, journal.events)
@@ -192,7 +314,7 @@ def audit(directory):
     saved = strict_json((directory / 'episodes.json').read_text())
     if [e['record'] for e in events if e['kind'] == 'terminal'] != saved: raise ValueError('terminal records differ from saved episodes')
     playback = Replay(events)
-    regenerated = Runner(playback, Journal(), frozen['rounds']).execute(stage_cases(frozen['stage']), frozen['assignments'])
+    regenerated = CleanFirstRunner(playback, Journal(), frozen['rounds'], early=False).execute(stage_cases(frozen['stage']), frozen['assignments'])
     playback.finish()
     if regenerated != saved: raise ValueError('saved-response outcome replay mismatch')
     summary = summarize(frozen, regenerated, events)
@@ -260,6 +382,16 @@ def execute_stage(sr, stage, launch, destination, batch, provider):
     try:
         summary = run_stage(destination, stage, provider, observer=tracker, launch_record=launch)
         tracker.finish()
+        if summary.get('early_stop'):
+            acct = provider.accounting() if hasattr(provider, 'accounting') else {'calls': provider.calls}
+            write_json(destination / 'accounting.json', acct)
+            publish(inner, destination)
+            q = summary['qualification']
+            metrics = tracker.metrics(); metrics['cost_usd'] = metrics['model_cost_usd']
+            inner.done(message=(f'{stage.upper()} stopped early at the clean-first gate: clean diagnostic {q["clean_full_evidence_correct"]}/6, '
+                                f'clean reports {q["clean_reports_correct"]}/6, call failures {q["call_failures_so_far"]}; remaining assignments not dispatched by design. Review waived by owner.'),
+                       **metrics, refusals=acct.get('refusals', 0), qualification_passed=0, execution_complete=0)
+            return summary
         checked = audit(destination); write_json(destination / 'audit.json', checked)
         acct = provider.accounting() if hasattr(provider, 'accounting') else {'calls': provider.calls}
         write_json(destination / 'accounting.json', acct)

@@ -24,6 +24,18 @@ invalid. (3) Refusal is possible but unlikely on fictional logistics tasks; coun
 
 Relative to `v3-q0-a1`: model (Haiku 4.5 to Opus 5.5) and request configuration (no temperature; adaptive
 thinking; effort high; 16,000-token ceiling; visible 8,000-character cap; 600 s timeout) and fresh world ids.
+
+Two operational changes, both binding inputs from the results analyst relayed by fleet-monitor before launch:
+(1) **Clean-first dispatch.** Per world, clean acquisition, clean report snapshot, clean reports-only arm and clean
+full-evidence diagnostic run first (66 calls); an early gate (5/6 and 5/6, zero failures so far) stops Q0 if it
+fails, leaving the other 570 assignments undispatched by design. Rationale: in D1-Opus all 8 saved-report
+abstentions were incomplete-claim ballots (no contradiction of own claims, no wrong vote), so the reports-only gate
+turns on whether Opus-written reports carry every needed value; this decides it in about the first 66 calls.
+Request contents, records and scoring are unchanged; the order is deterministic and reproduced by replay.
+(2) **Transport retry (SOC-07 rule).** At most two retries per logical call, only for HTTP 429 and 529 where the
+provider did not run the model, only while the 600 s request window lasts; every attempt is reserved in the ledger
+and counted against an attempt cap (planned calls + max(10, 10%)). Model answers are never retried. Tested offline
+(`test_transport_retry_rules`, `test_clean_first_order`, early-stop chain test).
 Instrument source otherwise byte-identical (bench_v3, tasks.py, providers.py at this commit, including the F1/F2
 fixes). Not pooled with Haiku.
 
@@ -32,7 +44,8 @@ fixes). Not pooled with Haiku.
 Source pinned to the commit that adds this file; the launch record `../launches/v3o-a1.json` carries every source
 hash and is validated in-process before any call. Hard caps: probe 1 call (USD 1 ceiling), Q0 636 calls
 (USD 400 reservation ceiling), S1 2,436 calls (USD 1,500 reservation ceiling); actual spend expected about
-USD 13 and USD 50. No retries, restarts or fallbacks; the chain stops at the first failed gate. Credentials enter
+USD 13 and USD 50. No restarts or fallbacks; transport retries only as above; the chain stops at the first failed gate, including the
+Q0 clean-first early gate. Credentials enter
 by SOPS -> ssh stdin -> process environment only. Every stage reports `cost_usd` to the hub.
 
 ## Visualization mapping

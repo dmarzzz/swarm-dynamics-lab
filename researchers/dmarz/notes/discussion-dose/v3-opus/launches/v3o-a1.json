@@ -1,5 +1,7 @@
 {
   "configuration": {
+    "attempt_cap": "planned calls + max(10, planned calls // 10)",
+    "dispatch_order": "clean-first: per world clean acquisition, report snapshot, reports-only arm and clean full-evidence diagnostic; early gate after those 66 calls; then remaining clean arms, attacked exposures, memory fixtures",
     "effort": "high",
     "input_usd_per_million": 4,
     "max_input_bytes": 60000,
@@ -11,7 +13,7 @@
     "temperature": "omitted: rejected by claude-opus-5-5",
     "thinking": "adaptive (cannot be disabled on claude-opus-5-5)",
     "timeout": 600,
-    "transport_retries": 0,
+    "transport_retries": "at most 2 per logical call, only HTTP 429/529 (model not run), within the 600 s request timeout; every attempt reserved and counted against the attempt cap; model answers never retried",
     "visible_answer_max_chars": 8000
   },
   "experiment": "discussion-v3-opus",
@@ -36,7 +38,7 @@
     "bench_v3/scoring.py": "6481964b2143fd8d5e1151781267eb88389b28a307510abecdc2bd60932b23c4",
     "bench_v3/selftest.py": "12b8b2d94696322fbb5f38bdf407a868525641745ed73388110d6af86cccec48",
     "bench_v3/worlds.py": "9313b89aa57628d1855e15bf97d879a7609fe631bd57beacf0cce785bb490fe0",
-    "bench_v3_opus.py": "fcdb8fb731249a543afc9c4f28bd02838e2336f7f21a888015e4e5760f707106",
+    "bench_v3_opus.py": "cdc1fad0f10bafa95e29848ef7d48acf3c2df5f016474f12bf75236a674657b7",
     "providers.py": "22a2e672aeb168ab630bcc65ca2eb9838be910f332820b221720ffa09d82d500",
     "tasks.py": "6ba495eff0fe959af41ade1ebcf4ff8fd9c5e32580d8c67558f54b7e5a32e4c0"
   },

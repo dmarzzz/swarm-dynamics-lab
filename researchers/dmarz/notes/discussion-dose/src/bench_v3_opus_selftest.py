@@ -106,6 +106,59 @@ class Tests(unittest.TestCase):
         with self.assertRaises(ProviderFailure) as ctx: p.complete(request)
         self.assertEqual(ctx.exception.public_reason, 'provider_local_limit')
 
+    def test_transport_retry_rules(self):
+        request, _ = bo.probe_request()
+        def http(code, retry_after=None):
+            headers = {'retry-after': retry_after} if retry_after else {}
+            return urllib.error.HTTPError('u', code, 'x', headers, io.BytesIO(b'{}'))
+        ok = lambda: reply([{'type': 'text', 'text': '{"value": 1}'}])
+        # 429 then success: one retry, two attempts reserved, one logical call.
+        p = bo.Opus(5, 10.0); p.sleep = lambda s: None
+        with mock.patch('urllib.request.urlopen', side_effect=[http(429, '1'), ok()]):
+            self.assertEqual(p.complete(request), {'value': 1})
+        a = p.accounting(); self.assertEqual((a['calls'], a['attempts'], a['transport_retries']), (1, 2, 1))
+        one = p.reserved_usd / 2
+        self.assertGreater(one, 0)
+        # 529 three times: two retries then fail closed.
+        p = bo.Opus(5, 10.0); p.sleep = lambda s: None
+        with mock.patch('urllib.request.urlopen', side_effect=[http(529), http(529), http(529), ok()]):
+            with self.assertRaises(ProviderFailure) as ctx: p.complete(request)
+        self.assertEqual(ctx.exception.public_reason, 'provider_http_529'); self.assertEqual(p.attempts, 3)
+        # 500 and 400 are never retried.
+        for code in (500, 400, 408):
+            p = bo.Opus(5, 10.0); p.sleep = lambda s: None
+            with mock.patch('urllib.request.urlopen', side_effect=[http(code), ok()]):
+                with self.assertRaises(ProviderFailure): p.complete(request)
+            self.assertEqual(p.attempts, 1)
+        # A model answer (refusal, truncation) is never retried.
+        p = bo.Opus(5, 10.0); p.sleep = lambda s: None
+        with mock.patch('urllib.request.urlopen', side_effect=[reply([{'type': 'text', 'text': '{}'}], stop='refusal'), ok()]):
+            with self.assertRaises(ProviderFailure): p.complete(request)
+        self.assertEqual(p.attempts, 1)
+        # Attempt cap binds retries.
+        p = bo.Opus(5, 10.0); p.sleep = lambda s: None; p.max_attempts = 1
+        with mock.patch('urllib.request.urlopen', side_effect=[http(429), ok()]):
+            with self.assertRaises(ProviderFailure) as ctx: p.complete(request)
+        self.assertEqual(p.attempts, 1)
+        # Retry must fit inside the request timeout window.
+        p = bo.Opus(5, 10.0); p.sleep = lambda s: None; p.timeout = 2
+        with mock.patch('urllib.request.urlopen', side_effect=[http(429, '30'), ok()]):
+            with self.assertRaises(ProviderFailure): p.complete(request)
+        self.assertEqual(p.attempts, 1)
+
+    def test_clean_first_order(self):
+        with tempfile.TemporaryDirectory() as d:
+            out = Path(d) / 'q0'
+            bo.run_stage(out, 'q0', bo.Scripted())
+            events = [json.loads(l) for l in (out / 'events.jsonl').read_text().splitlines()]
+            starts = [e['label'] for e in events if e['kind'] == 'call_start']
+            gate_index = next(i for i, e in enumerate(events) if e['kind'] == 'early_gate')
+            before = [e['label'] for e in events[:gate_index] if e['kind'] == 'call_start']
+            self.assertEqual(len(before), 66)
+            self.assertTrue(all(l.split(':')[1] == '0' and l.split(':')[2] in ('acquisition', 'report_snapshot', 'reports', 'diagnostic') for l in before))
+            self.assertEqual(len(starts), 636)
+            self.assertTrue(events[gate_index]['passed'])
+
     def test_scripted_q0_runs_and_audits(self):
         with tempfile.TemporaryDirectory() as d:
             out = Path(d) / 'q0'
@@ -137,8 +190,10 @@ class Tests(unittest.TestCase):
                 state = bo.chain(hub, launch, Path(d) / 'out', 'test')
             self.assertEqual(state['stopped'], 'Q0 gate failed; S1 not started')
             self.assertNotIn('s1', state['stages'])
-            self.assertEqual(state['stages']['q0']['accounting']['refusals'], 636)
-            self.assertEqual(calls['n'], 637)
+            # Clean-first: the gate is decided after 66 calls and the rest is never dispatched.
+            self.assertEqual(state['stages']['q0']['accounting']['refusals'], 66)
+            self.assertEqual(calls['n'], 67)
+            self.assertTrue(any(e[0] == 'done' and 'stopped early' in e[2]['message'] for e in hub.events))
 
     def launch(self, folder):
         evidence = folder / 'auth.md'; evidence.write_text('owner waiver')
