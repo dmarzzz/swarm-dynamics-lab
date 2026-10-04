@@ -2255,7 +2255,7 @@
     },
     {
       "id": "false-alarm-cascade",
-      "title": "Does a false honeypot alarm outlive its correction in a small Opus 5.5 team?",
+      "title": "Does a false honeypot alarm outlive its correction in a small team of model agents?",
       "documents": [
         "researchers/dmarz/notes/false-alarm-cascade/README.md"
       ],
@@ -2269,7 +2269,7 @@
       "assessed_at": "2026-10-04",
       "evidence_confidence": {
         "score": 0,
-        "claim": "A false honeypot alarm on a real resource, raised and then retracted by one team member, leaves five Opus 5.5 agents using that resource less in later rounds than in the same world without the alarm.",
+        "claim": "A false honeypot alarm on a real resource, raised and then retracted by one team member, leaves five gpt-6-sol agents using that resource less in later rounds than in the same world without the alarm (Opus rungs not run).",
         "rationale": "Unrun. Prospective plan only; no stage has run and no model call has been made."
       },
       "sample_size_summary": "Observed: none. Planned: 24 paired synthetic world roots \u00d7 5 conditions = 120 team episodes of 5 model agents \u00d7 6 rounds = 3,600 S1 calls; separate Q0 of 24 calls on 8 roots and a one-call probe. Roots are the independent units, not agents, rounds or calls.",

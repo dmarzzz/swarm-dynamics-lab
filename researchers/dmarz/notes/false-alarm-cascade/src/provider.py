@@ -1,4 +1,10 @@
-"""Native Messages API adapter for claude-opus-5-5 with a durable study ledger.
+"""Model adapters of the study and its durable ledger: the native Messages API adapter for the
+Anthropic rungs (claude-opus-5-5, claude-opus-5) below, and for gpt-6-sol the reviewed reference
+OpenAI adapter (`openai_provider.py`, an unchanged copy of pipeline/reference/openai_provider.py)
+behind `OpenAIStudy`. `make_backend` picks the adapter from the attempt's model (STUDY_MODEL) and its
+pre-registered provider; both write the same ledger events into the same `Ledger` class.
+
+What follows describes the Anthropic adapter.
 
 No answer is ever retried. Transport retry rule (ready-chain contract): at most 2 retries per
 request, only for HTTP 429 and 529 (the provider rejected the request before running the model),
@@ -36,6 +42,7 @@ import threading
 import time
 import urllib.error
 import urllib.request
+import openai_provider
 import study
 
 MESSAGES_URL = 'https://api.anthropic.com/v1/messages'
@@ -43,6 +50,12 @@ COUNT_URL = 'https://api.anthropic.com/v1/messages/count_tokens'
 REQUEST_KEYS = ('model', 'max_tokens', 'system', 'messages', 'output_config')
 LEDGER_ENV = 'STUDY_BUDGET_LEDGER'
 CREDIT_STOP = 'provider_credit_balance_low'
+# The billing-stop category of each adapter. Either one leaves the unfinished rows not started, counts
+# nothing as a failed unit, and is the only stop after which `chain.py resume` may continue S1.
+BILLING_STOPS = (CREDIT_STOP, openai_provider.BILLING_STOP)
+# Credential aliases each provider's paid stages need (the launcher sends only the chosen model's).
+PAID_ENVIRONMENT = {'anthropic': ('SWARM_MODEL_API_KEY', 'SWARM_MODEL_WORKSPACE_ID'),
+                    'openai': (openai_provider.KEY_ENV,)}
 CREDIT_STATUS = (400, 402, 403)
 EVIDENCE_CHARS = 2000
 # Failures that mean the run itself cannot be trusted or may not continue. They stop dispatch at
@@ -51,17 +64,26 @@ INTEGRITY = frozenset((
     'duplicate_call_refused', 'unknown_stage_refused', 'stage_call_cap_exhausted', 'study_call_cap_exhausted',
     'aggregate_budget_exhausted', 'attempt_without_reservation', 'transport_attempt_cap_exhausted',
     'unknown_ledger_event', 'ledger_partial_write', 'ledger_unreadable', 'void_refused',
-    'reservation_bound_breached', 'model_mismatch', 'stage_deadline', 'input_size_limit', 'missing_credential_alias'))
+    'reservation_bound_breached', 'model_mismatch', 'stage_deadline', 'input_size_limit', 'missing_credential_alias',
+    'output_ceiling_exceeded'))
+
+
+def is_billing_stop(category):
+    return category in BILLING_STOPS
+
+
+def paid_environment():
+    """Credential aliases the attempt's model needs."""
+    return PAID_ENVIRONMENT[study.provider_name()]
 
 
 def is_integrity(category):
     return category in INTEGRITY or str(category).startswith('internal_')
 
 
-class CallFailure(Exception):
-    def __init__(self, category, accounting=None):
-        super().__init__(category)
-        self.category, self.accounting = category, accounting or {}
+# One failure class for both adapters, so a ledger refusal raised inside the OpenAI adapter is seen
+# there as its own CallFailure (same category, never `transport_CallFailure`).
+CallFailure = openai_provider.CallFailure
 
 
 def stage_of(call_id):
@@ -131,7 +153,7 @@ class Ledger:
             raise CallFailure('unknown_ledger_event')
 
     def transact(self, event=None):
-        budget = study.design()['budget']
+        budget = study.budget()          # the attempt model's dollar cap; call caps are shared
         with self._guard, self.path.open('ab+') as f:
             os.chmod(self.path, 0o600)
             fcntl.flock(f, fcntl.LOCK_EX)
@@ -424,3 +446,75 @@ class Anthropic:
             account['answer_text'] = self.scrub(text)       # the failing answer is kept for reading
             raise CallFailure('invalid_structured_answer', account) from None
         return answer, account
+
+
+def openai_config(m=None):
+    """The configuration the reference adapter checks (`openai_provider.check_config`): the frozen
+    request template of the model, with the study's answer schema as a strict JSON schema, and the
+    shared budget with the model's overrides."""
+    m = m or study.model()
+    entry = study.design()['models'][m]
+    t = dict(entry['request_template'])
+    assert t.pop('response_format') == 'strict_json_schema'
+    template = {'model': t['model'], 'reasoning_effort': t['reasoning_effort'], 'max_completion_tokens': t['max_completion_tokens'],
+                'response_format': {'type': 'json_schema', 'json_schema': {'name': 'answer', 'schema': study.schema(), 'strict': True}}}
+    return {'model': m, 'request_template': template, 'budget': study.budget(m)}
+
+
+class OpenAIStudy(openai_provider.OpenAI):
+    """The reference OpenAI adapter, called the way the worker calls the Anthropic adapter:
+    `call(packet, call_id)` sends the study's system prompt and the packet's text, and accepts only an
+    answer that passes the study's own validator (`study.validate`, then `study.normalize`).
+
+    Additions, none of which changes a request or a decision: the call that leads a billing pause
+    records `billing_pauses_led` and its `billing_wait_seconds`, and every call that met a billing
+    error records `billing_rejections` (pauses it entered; re-sends are in `attempts`), so the worker reports the same billing metrics on both paths;
+    `billing_state()` for the progress note. With an injected `sleep` (tests and rehearsal only) the
+    adapter's clock advances by the slept time, so the 60 s / 1,200 s schedule is followed without waiting."""
+
+    def __init__(self, ledger, opener=None, sleep=None, clock=None):
+        self._lead = threading.local()
+        if sleep is not None and clock is None:
+            offset = [0.0]
+            real_sleep = sleep
+
+            def sleep(seconds):
+                offset[0] += seconds
+                real_sleep(seconds)
+            clock = lambda: time.monotonic() + offset[0]
+        super().__init__(ledger, openai_config(), opener=opener, clock=clock or time.monotonic, sleep=sleep or time.sleep)
+
+    def _begin_pause(self, account):
+        account['billing_rejections'] = account.get('billing_rejections', 0) + 1
+        owner = super()._begin_pause(account)
+        if owner:
+            account['billing_pauses_led'] = account.get('billing_pauses_led', 0) + 1
+            self._lead.account = account
+        return owner
+
+    def _end_pause(self, started, stopped):
+        account = getattr(self._lead, 'account', None)
+        if account is not None:
+            account['billing_wait_seconds'] = account.get('billing_wait_seconds', 0) + max(0.0, self.clock() - started)
+            self._lead.account = None
+        super()._end_pause(started, stopped)
+
+    def billing_state(self):
+        with self._state:
+            return 'stopped' if self._stopped else 'paused' if self._paused else None
+
+    def call(self, packet, call_id):
+        try:
+            return super().call(study.SYSTEM, study.actor_text(packet), call_id,
+                                lambda obj: study.normalize(study.validate(obj)))
+        except CallFailure as exc:
+            if exc.accounting.get('voided'):
+                exc.accounting['attempted'] = False     # no model ran: as on the Anthropic path, not a model call
+            raise
+
+
+def make_backend(ledger, opener=None, sleep=None):
+    """The adapter of the attempt's model: OpenAIStudy for an openai rung, Anthropic otherwise."""
+    if study.provider_name() == 'openai':
+        return OpenAIStudy(ledger, opener, sleep=sleep)
+    return Anthropic(ledger, opener, sleep=sleep)

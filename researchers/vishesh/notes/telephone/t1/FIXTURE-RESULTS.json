@@ -1,0 +1,371 @@
+{
+  "scope": "fixed authored software acceptance fixtures; no experimental sweep or native outcome",
+  "roots": 8,
+  "trajectories": 24,
+  "hop_outputs": 72,
+  "source_copy_terminal_retention": 1.0,
+  "reference_lookup_matches_copy": true,
+  "results": [
+    {
+      "component": "dev-00",
+      "fixture_condition": "faithful",
+      "hop_retention": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 1.0
+    },
+    {
+      "component": "dev-00",
+      "fixture_condition": "distorted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        1,
+        1
+      ],
+      "terminal_retention": 0.6666666666666666
+    },
+    {
+      "component": "dev-00",
+      "fixture_condition": "omitted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 0.6666666666666666
+    },
+    {
+      "component": "dev-01",
+      "fixture_condition": "faithful",
+      "hop_retention": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 1.0
+    },
+    {
+      "component": "dev-01",
+      "fixture_condition": "distorted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        1,
+        1
+      ],
+      "terminal_retention": 0.6666666666666666
+    },
+    {
+      "component": "dev-01",
+      "fixture_condition": "omitted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 0.6666666666666666
+    },
+    {
+      "component": "dev-02",
+      "fixture_condition": "faithful",
+      "hop_retention": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 1.0
+    },
+    {
+      "component": "dev-02",
+      "fixture_condition": "distorted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        1,
+        1
+      ],
+      "terminal_retention": 0.6666666666666666
+    },
+    {
+      "component": "dev-02",
+      "fixture_condition": "omitted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 0.6666666666666666
+    },
+    {
+      "component": "dev-03",
+      "fixture_condition": "faithful",
+      "hop_retention": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 1.0
+    },
+    {
+      "component": "dev-03",
+      "fixture_condition": "distorted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        1,
+        1
+      ],
+      "terminal_retention": 0.6666666666666666
+    },
+    {
+      "component": "dev-03",
+      "fixture_condition": "omitted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 0.6666666666666666
+    },
+    {
+      "component": "dev-04",
+      "fixture_condition": "faithful",
+      "hop_retention": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 1.0
+    },
+    {
+      "component": "dev-04",
+      "fixture_condition": "distorted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        1,
+        1
+      ],
+      "terminal_retention": 0.6666666666666666
+    },
+    {
+      "component": "dev-04",
+      "fixture_condition": "omitted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 0.6666666666666666
+    },
+    {
+      "component": "dev-05",
+      "fixture_condition": "faithful",
+      "hop_retention": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 1.0
+    },
+    {
+      "component": "dev-05",
+      "fixture_condition": "distorted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        1,
+        1
+      ],
+      "terminal_retention": 0.6666666666666666
+    },
+    {
+      "component": "dev-05",
+      "fixture_condition": "omitted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 0.6666666666666666
+    },
+    {
+      "component": "dev-06",
+      "fixture_condition": "faithful",
+      "hop_retention": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 1.0
+    },
+    {
+      "component": "dev-06",
+      "fixture_condition": "distorted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        1,
+        1
+      ],
+      "terminal_retention": 0.6666666666666666
+    },
+    {
+      "component": "dev-06",
+      "fixture_condition": "omitted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 0.6666666666666666
+    },
+    {
+      "component": "dev-07",
+      "fixture_condition": "faithful",
+      "hop_retention": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 1.0
+    },
+    {
+      "component": "dev-07",
+      "fixture_condition": "distorted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        1,
+        1
+      ],
+      "terminal_retention": 0.6666666666666666
+    },
+    {
+      "component": "dev-07",
+      "fixture_condition": "omitted",
+      "hop_retention": [
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "contradicted_assertions": [
+        0,
+        0,
+        0
+      ],
+      "terminal_retention": 0.6666666666666666
+    }
+  ],
+  "model_calls": 0
+}

@@ -1,5 +1,10 @@
 # Handover: false-alarm-cascade
 
+> **gpt-6-sol port, paused 2026-10-04 about 19:20 UTC on dmarz's instruction to start no further experiments; not reviewed, not launchable, nothing has run.**
+> Done: amendment A2 (`3bf7648f`), code `73ff2751` (source `0947408b…`), documents and [chain-002 pre-run review](reviews/chain-002-pre.md); builder's offline checks passed (selftest 49/49 with and without launcher env, offline S0, manifest, rehearsal 59/59).
+> Remains: dmarz/fleet-monitor's same-researcher check and a decision by dmarz to launch; P0 is the first real reading of strict-schema acceptance, reasoning use and latency on gpt-6-sol.
+
+
 Written 2026-10-04 by dmarz/pipeline from the paused builder's report (dmarz/pipeline-alarm, now released from this study). New owner, by dmarz/fleet-monitor's assignment: the "Big experiment" session on orbital-one (dmarz/scale-xl). Task: `tasks/build-false-alarm-cascade.md` (released; claim it). Nothing of this study has run on a server and no model call has been made.
 
 ## State
@@ -59,6 +64,8 @@ Written 2026-10-04 by dmarz/pipeline from the paused builder's report (dmarz/pip
 Launcher side of the ladder (already implemented and tested): `--model claude-opus-5` sets `STUDY_MODEL`, and points `STUDY_BUDGET_LEDGER` at `accounting/ledger-opus-5.jsonl` and `STUDY_RESULTS_DIR` at `results-opus-5`; the default model uses `accounting/ledger.jsonl` and `results`. `READY.yaml` needs `model: claude-opus-5-5` and `model_ladder: [claude-opus-5-5, claude-opus-5]`.
 
 - 2026-10-04 11:50Z dmarz/scale-xl: added the model ladder (code af115c44, source 7803e3b8; selftest 41, offline S0, manifest, rehearsal 57/57 all pass) and rewrote the documents and pre-run review (7f5ecb0a). Next: dmarz/fleet-monitor's same-researcher check, then the run request. Task returned to dmarz/pipeline.
+
+- 2026-10-04 evening dmarz/pipeline-alarm-oai: the Anthropic organisation hit its monthly limit (until 2026-11-01). Pre-registration amendment A2 (`3bf7648f`) and code `73ff2751` (source `0947408b…`) put gpt-6-sol first in the ladder through the reference OpenAI adapter; new pre-run review [chain-002-pre.md](reviews/chain-002-pre.md), READY.yaml `review:` points at it. Gates, caps and analysis unchanged. Open for any later Opus launch: the 11:20Z addendum's wider billing detector is still not in the Opus adapter.
 
 ## Addendum, 2026-10-04 about 11:20Z (dmarz/fleet-monitor's requirement for every package not yet pinned)
 

@@ -244,6 +244,8 @@ def analyze(rows):
     model = by_actor.get('model')
     return {
         'unit': 'world root', 'rows': len(rows), 'episode_rows': len(episode_rows),
+        # The model the rows belong to; one model per attempt, never pooled (amendments A1, A2).
+        'models': sorted({r['model'] for r in rows if r.get('model') and r.get('model') != 'scripted'}),
         'actors': by_actor,
         'primary': model['primary'] if model else None,
         'qualification': study.qualification(rows) if any(r['kind'] == 'qualification' for r in rows) else None,
@@ -253,6 +255,7 @@ def analyze(rows):
                       'output_tokens': sum(r.get('accounting', {}).get('output_tokens', 0) for r in rows),
                       'cost_usd': math.fsum(r.get('accounting', {}).get('actual_usd', 0) for r in rows),
                       'mean_latency_seconds': mean(latency),
+                      'reasoning_tokens': sum(r.get('accounting', {}).get('reasoning_tokens') or 0 for r in rows),
                       'input_tokens_by_round': {str(t): mean(r['accounting']['input_tokens'] for r in good
                                                              if r['round'] == t and r.get('accounting', {}).get('input_tokens'))
                                                 for t in sorted({r['round'] for r in good})}},

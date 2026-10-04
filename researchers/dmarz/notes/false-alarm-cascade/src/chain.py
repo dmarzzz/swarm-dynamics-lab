@@ -1,7 +1,8 @@
 """Chain driver: queue each stage behind its software gate and execute it in this process.
 
     python src/chain.py run --stages S0,P0,Q0,S1     exit 0 done, 3 stopped at a stage or gate, else internal error
-    python src/chain.py resume                       only after S1 stopped with provider_credit_balance_low:
+    python src/chain.py resume                       only after S1 stopped with provider_credit_balance_low
+                                                     (Anthropic) or provider_billing_stopped (OpenAI):
                                                      queue and run a continuation with exactly the rows not started
     python src/chain.py status                       chain-status.json plus ledger totals (one JSON line)
     python src/chain.py verify                       hub checksums, regraded rows, recomputed analysis (one JSON line)
@@ -29,7 +30,6 @@ import worker
 
 EXIT_DONE, EXIT_INTERNAL, EXIT_STOPPED = 0, 1, 3
 STATUS_FILE = 'chain-status.json'
-PAID_ENVIRONMENT = ('SWARM_MODEL_API_KEY', 'SWARM_MODEL_WORKSPACE_ID')
 DRAIN_SECONDS = 600     # kept free at the end of the chain limit for in-flight calls, frames and uploads
 
 
@@ -72,7 +72,7 @@ def read_status(root):
 def projection_check(q0_mean_cost_usd, committed_usd):
     """Before S1: S1 calls x Q0's measured mean actual cost per call x the growth factor for longer
     boards must fit in the remaining cap."""
-    budget = study.design()['budget']
+    budget = study.budget()             # the attempt model's dollar cap
     remaining = budget['aggregate_usd'] - committed_usd
     growth = budget['projection_growth_factor']
     projected = budget['max_calls']['S1'] * q0_mean_cost_usd * growth
@@ -112,7 +112,7 @@ def run_chain(stages, sr, results_root=None, ledger_path=None, opener=None, slee
 
 
 def _run_chain(stages, sr, root, ledger_path, opener, sleep=None):
-    budget = study.design()['budget']
+    budget = study.budget()
     ledger_path = ledger_path or os.environ.get(provider.LEDGER_ENV)
     previous = read_status(root) or {}
     status = {'experiment': study.EXPERIMENT, 'state': 'running', 'requested': stages, 'started': now(),
@@ -131,7 +131,7 @@ def _run_chain(stages, sr, root, ledger_path, opener, sleep=None):
 
     # Fail before anything is queued if a paid stage could not run.
     if any(s != 'S0' for s in stages):
-        missing = [name for name in PAID_ENVIRONMENT if not os.environ.get(name)]
+        missing = [name for name in provider.paid_environment() if not os.environ.get(name)]
         if not ledger_path:
             missing.append(provider.LEDGER_ENV)
         if missing:
@@ -217,15 +217,15 @@ def resume_chain(sr, results_root=None, ledger_path=None, opener=None, sleep=Non
         print(f'chain resume refused: {reason}', file=sys.stderr)
         return EXIT_STOPPED
     if not status or status.get('state') != 'stopped_at_gate' or status.get('stopped_stage') != 'S1' \
-            or status.get('reason') != provider.CREDIT_STOP:
+            or not provider.is_billing_stop(status.get('reason')):
         return refuse('last_stop_was_not_a_credit_stop_of_S1')
     if status.get('source_hash') != study.source_hash():
         return refuse('source_hash_changed')
-    missing = [name for name in PAID_ENVIRONMENT if not os.environ.get(name)] + ([] if ledger_path else [provider.LEDGER_ENV])
+    missing = [name for name in provider.paid_environment() if not os.environ.get(name)] + ([] if ledger_path else [provider.LEDGER_ENV])
     if missing:
         return refuse('missing_environment:' + ','.join(missing))
     entries = stage_entries(status, 'S1')
-    if not entries or entries[-1].get('reason') != provider.CREDIT_STOP or not all(e.get('results_dir') for e in entries):
+    if not entries or not provider.is_billing_stop(entries[-1].get('reason')) or not all(e.get('results_dir') for e in entries):
         return refuse('no_interrupted_S1_run')
     k = len(entries)
     p = study.params('S1', k)
@@ -344,7 +344,7 @@ def replay(units, by_id):
                 if 'packet' in r:
                     packet = ep.packet(m, t)
                     packets_ok &= r['packet'] == _plain(packet) and study.digest(packet) == r['packet_hash']
-                    packets_ok &= r['status'] != 'not_started' or r.get('interrupted') == provider.CREDIT_STOP
+                    packets_ok &= r['status'] != 'not_started' or provider.is_billing_stop(r.get('interrupted'))
                     if r['status'] == 'completed':
                         grades_ok &= _plain(study.evaluate(context, packet, r['answer'])) == r['evaluation']
                         answers[m] = r['answer']

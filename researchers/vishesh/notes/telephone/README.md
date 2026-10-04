@@ -42,3 +42,7 @@ Telephone measures claim fidelity and its change across hops. Quorum measures so
 **sample_size_summary:** observed Telephone task components 0, adjudicated claims 0, model calls 0. Proposed 8 development, 8 qualification and 24 evaluation components, conditional on coherent independent groups. Claims, agents, hops and calls are nested observations, not independent samples.
 
 **Current disposition: PREPARE OFFLINE.** Complete the development casebook, annotation agreement and baseline audit before freezing a costed native packet. This design request did not launch a study or allocate resources.
+
+## Latest iteration: T1 offline preparation
+
+[Implementation, cases and closeout](t1/README.md): 24 Telephone tests and 21 shared checks pass. Eight authored roots produce 72 scripted hop outputs. Fourteen private source joins yield zero validated complete episodes. Copy and exact lookup reach the fixture ceiling; model efficacy remains untested. **HOLD native collection** pending coherent development cases and a useful residual task. T0 remains the original prospective design, not a runnable admission packet.

@@ -15,6 +15,12 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+# The suite tests the code, not the chain it runs in: the launcher's setup step sets STUDY_MODEL,
+# STUDY_PROVIDER (and STUDY_REPLICATION in other studies) for the chosen model before it runs this
+# file, and the tests must give the same result with and without them. Each test sets the model it means.
+for _name in ('STUDY_MODEL', 'STUDY_PROVIDER', 'STUDY_REPLICATION'):
+    os.environ.pop(_name, None)
+
 import yaml
 from PIL import Image
 
@@ -22,6 +28,7 @@ import analyze
 import chain
 import coordinator
 import manifest
+import openai_provider
 import provider
 import rehearse
 import render
@@ -33,6 +40,8 @@ D = study.design()
 W = D['world']
 IDS = study.ids()
 ENV = {'SWARM_MODEL_API_KEY': 'selftest-not-a-key', 'SWARM_MODEL_WORKSPACE_ID': 'selftest-not-a-workspace'}
+SOL_ENV = {'SWARM_OPENAI_API_KEY': 'selftest-not-a-key', 'STUDY_MODEL': 'gpt-6-sol'}
+OPUS = 'claude-opus-5-5'
 CREDIT = json.loads(rehearse.CREDIT_BODY)
 ANSWER = {'decisions': {x: 'skip' for x in IDS}, 'claims': [], 'rationale': 'none'}
 
@@ -46,7 +55,7 @@ class Resp(io.BytesIO):
 
 
 def message(text=None, model=None, stop='end_turn', content=None, usage=None):
-    return {'id': 'msg_test', 'type': 'message', 'role': 'assistant', 'model': model or D['model'], 'stop_reason': stop,
+    return {'id': 'msg_test', 'type': 'message', 'role': 'assistant', 'model': model or OPUS, 'stop_reason': stop,
             'usage': {'input_tokens': 1000, 'output_tokens': 300} if usage is None else usage,
             'content': content if content is not None else [
                 {'type': 'thinking', 'thinking': '', 'signature': 'x'},
@@ -198,6 +207,13 @@ def lose(row):
 
 
 class Tests(unittest.TestCase):
+    """The instrument and the Anthropic path. Unless a test sets another, the model is claude-opus-5-5,
+    the rung these tests were written for; the gpt-6-sol path is tested in SolTests."""
+    def setUp(self):
+        env = patch.dict(os.environ, {'STUDY_MODEL': OPUS})
+        env.start()
+        self.addCleanup(env.stop)
+
     @classmethod
     def setUpClass(cls):
         cls.s1 = scripted_rows(D['worlds'])                      # scripted play of the S1 roots, for analysis tests
@@ -575,11 +591,11 @@ class Tests(unittest.TestCase):
         self.assertEqual(b['max_attempted_calls'], 3625)
         self.assertEqual(sum(b['max_calls'].values()), b['max_attempted_calls'])
         self.assertEqual({s: D['stages'][s]['rows'] for s in ('P0', 'Q0', 'S1')}, {'P0': 1, 'Q0': 24, 'S1': 3600})
-        price = D['models'][D['model']]
-        self.assertEqual((D['model'], D['effort'], b['max_output_tokens'], price['input_usd_per_million'], price['output_usd_per_million']),
-                         ('claude-opus-5-5', 'medium', 8000, 4, 20))
-        self.assertEqual(D['model_ladder'], ['claude-opus-5-5', 'claude-opus-5'])
-        self.assertEqual(D['models']['claude-opus-5'], {'input_usd_per_million': 5, 'output_usd_per_million': 25})
+        price = D['models'][OPUS]
+        self.assertEqual((D['effort'], b['max_output_tokens'], price['input_usd_per_million'], price['output_usd_per_million']),
+                         ('medium', 8000, 4, 20))
+        self.assertEqual((D['model'], D['model_ladder']), ('gpt-6-sol', ['gpt-6-sol', 'claude-opus-5-5', 'claude-opus-5']))
+        self.assertEqual(study.prices('claude-opus-5'), {'input_usd_per_million': 5, 'output_usd_per_million': 25})
         self.assertEqual(D['model'], D['model_ladder'][0])
         self.assertNotIn('input_usd_per_million', b)        # prices live per model, never in the shared budget
         self.assertEqual(b['aggregate_usd'], 450)           # sized for the dearer rung
@@ -613,9 +629,24 @@ class Tests(unittest.TestCase):
 
     def test_model_ladder_default_override_and_refusal(self):
         with patch.dict(os.environ, {'STUDY_MODEL': ''}):
-            self.assertEqual(study.model(), 'claude-opus-5-5')
+            self.assertEqual(study.model(), 'gpt-6-sol')            # the first rung since the 2026-10-04 amendment
+            self.assertEqual([study.params(s)['batch'] for s in study.STAGES], ['s0-001', 'p0-001-gpt-6-sol', 'q0-001-gpt-6-sol', 's1-001-gpt-6-sol'])
+            self.assertEqual([study.params(s)['model'] for s in study.STAGES], ['scripted'] + ['gpt-6-sol'] * 3)
+            self.assertEqual([study.params(s)['backend'] for s in study.STAGES], ['scripted'] + ['openai'] * 3)
+            self.assertEqual(study.params('S1', 1)['batch'], 's1-001-gpt-6-sol-r1')
+            self.assertEqual(study.continuation_index('S1', 's1-001-gpt-6-sol-r3'), 3)
+        with patch.dict(os.environ, {'STUDY_MODEL': OPUS}):
             self.assertEqual([study.params(s)['batch'] for s in study.STAGES], ['s0-001', 'p0-001', 'q0-001', 's1-001'])
-            self.assertEqual([study.params(s)['model'] for s in study.STAGES], ['scripted'] + ['claude-opus-5-5'] * 3)
+            self.assertEqual([study.params(s)['backend'] for s in study.STAGES], ['scripted'] + ['anthropic'] * 3)
+        # STUDY_PROVIDER, set by the launcher, must be the model's pre-registered provider.
+        for model, prov, ok in (('gpt-6-sol', 'openai', True), ('gpt-6-sol', 'anthropic', False), (OPUS, 'openai', False),
+                                (OPUS, 'anthropic', True), ('', 'openai', True), ('', 'openrouter', False)):
+            with patch.dict(os.environ, {'STUDY_MODEL': model, 'STUDY_PROVIDER': prov}):
+                if ok:
+                    self.assertEqual(study.provider_name(), prov)
+                else:
+                    with self.assertRaises(ValueError):
+                        study.params('P0')
         with patch.dict(os.environ, {'STUDY_MODEL': 'claude-opus-5'}):
             self.assertEqual(study.model(), 'claude-opus-5')
             self.assertEqual([study.params(s)['batch'] for s in study.STAGES], ['s0-001', 'p0-001-opus-5', 'q0-001-opus-5', 's1-001-opus-5'])
@@ -649,8 +680,14 @@ class Tests(unittest.TestCase):
             coordinator.gate(second, 'Q0', study.params('Q0'))
             with self.assertRaises(ValueError):
                 coordinator.gate(second, 'S1', study.params('S1'))
-        with patch.dict(os.environ, {'STUDY_MODEL': ''}):
-            coordinator.gate(first, 'S1', study.params('S1'))           # the first rung is unaffected
+        with patch.dict(os.environ, {'STUDY_MODEL': OPUS}):
+            coordinator.gate(first, 'S1', study.params('S1'))           # the Opus 5.5 rung is unaffected
+        with patch.dict(os.environ, {'STUDY_MODEL': 'gpt-6-sol'}):
+            # gpt-6-sol is qualified by nothing the Opus rungs did.
+            for stage in ('Q0', 'S1'):
+                with self.assertRaises(ValueError):
+                    coordinator.gate(second, stage, study.params(stage))
+            coordinator.gate(first, 'P0', study.params('P0'))
 
     def test_prices_follow_the_attempt_model(self):
         packet = study.probe_fixture()['packet']
@@ -692,7 +729,7 @@ class Tests(unittest.TestCase):
         self.assertEqual(list(count_body), ['model', 'system', 'messages', 'output_config'])
         self.assertEqual((count_url, url), (provider.COUNT_URL, provider.MESSAGES_URL))
         self.assertEqual({k.lower() for k in headers}, {'content-type', 'x-api-key', 'anthropic-version', 'anthropic-workspace-id'})
-        price, b = D['models'][D['model']], D['budget']
+        price, b = D['models'][OPUS], D['budget']
         self.assertEqual(account['actual_usd'], (1000 * price['input_usd_per_million'] + 300 * price['output_usd_per_million']) / 1e6)
         self.assertEqual(account['reserved_usd'], ((int(1000 * 1.02) + 64) * 4 + 8000 * 20) / 1e6)
         self.assertEqual((account['attempts'], account['count_attempts'], account['usage_reported']), (1, 1, True))
@@ -1644,16 +1681,21 @@ class Tests(unittest.TestCase):
     def test_ready_file_matches_design_and_source(self):
         ready = yaml.safe_load((study.ROOT / 'READY.yaml').read_text())
         b = D['budget']
-        self.assertEqual(set(ready), {'contract', 'study', 'experiment', 'stages', 'model', 'model_ladder', 'effort', 'max_calls',
-                                      'max_calls_total', 'usd_cap', 'chain_timeout_seconds', 'selftests', 'source_hash'})
+        self.assertEqual(set(ready), {'contract', 'study', 'experiment', 'stages', 'provider', 'model', 'model_ladder', 'providers',
+                                      'review', 'effort', 'max_calls', 'max_calls_total', 'usd_cap', 'chain_timeout_seconds',
+                                      'selftests', 'source_hash'})
         self.assertEqual(ready['model_ladder'], D['model_ladder'])
+        self.assertEqual(ready['providers'], {m: D['models'][m]['provider'] for m in D['model_ladder']})
+        self.assertEqual(ready['provider'], D['models'][ready['model']]['provider'])
+        self.assertTrue((study.ROOT / ready['review']).is_file())
+        self.assertIn(study.source_hash(), (study.ROOT / ready['review']).read_text())
         self.assertEqual((ready['contract'], ready['study'], ready['experiment']), ('ready-chain-v1', study.EXPERIMENT, study.EXPERIMENT))
         self.assertEqual(ready['stages'], list(study.STAGES))
         self.assertEqual((ready['model'], ready['effort']), (D['model'], D['effort']))
         self.assertEqual((ready['max_calls'], ready['max_calls_total']), (b['max_calls'], b['max_attempted_calls']))
-        self.assertEqual((ready['usd_cap'], ready['chain_timeout_seconds']), (b['aggregate_usd'], b['chain_timeout_seconds']))
+        self.assertEqual((ready['usd_cap'], ready['chain_timeout_seconds']), (study.budget(ready['model'])['aggregate_usd'], b['chain_timeout_seconds']))
         self.assertEqual(ready['source_hash'], study.source_hash())
-        self.assertEqual(ready['selftests'], unittest.defaultTestLoader.loadTestsFromTestCase(Tests).countTestCases())
+        self.assertEqual(ready['selftests'], sum(unittest.defaultTestLoader.loadTestsFromTestCase(c).countTestCases() for c in (Tests, SolTests)))
         experiment = yaml.safe_load((study.ROOT / 'experiment.yaml').read_text())
         self.assertEqual(experiment['id'], study.EXPERIMENT)
         self.assertTrue(set(worker.REQUIRED_METRICS) | {'qualification_passed', experiment['primary_metric']} <= set(experiment['metrics']))
@@ -1671,6 +1713,259 @@ class Tests(unittest.TestCase):
                 self.assertIsNone(re.search(r'sk-ant-[A-Za-z0-9]', text), path)
                 for address in re.findall(r'\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b', text):
                     self.assertEqual(address, '127.0.0.1', path)
+
+
+# ---------------------------------------------------------------- gpt-6-sol (OpenAI) path
+
+def completion(text=None, finish='stop', model='gpt-6-sol', usage=None, refusal=None):
+    return {'id': 'chatcmpl_test', 'object': 'chat.completion', 'model': model,
+            'choices': [{'index': 0, 'finish_reason': finish,
+                         'message': {'role': 'assistant', 'refusal': refusal,
+                                     'content': text if text is not None else json.dumps(ANSWER)}}],
+            'usage': usage if usage is not None else {
+                'prompt_tokens': 3000, 'completion_tokens': 1200,
+                'prompt_tokens_details': {'cached_tokens': 0, 'cache_write_tokens': 3000},
+                'completion_tokens_details': {'reasoning_tokens': 1000}}}
+
+
+def sol_error(code, body, retry_after=None):
+    headers = {'x-request-id': 'req_sol_test'}
+    if retry_after is not None:
+        headers['retry-after'] = str(retry_after)
+    return urllib.error.HTTPError(openai_provider.URL, code, 'error', headers, io.BytesIO(json.dumps(body).encode()))
+
+
+QUOTA = {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.',
+                   'type': 'insufficient_quota', 'code': 'insufficient_quota'}}
+RATE = {'error': {'message': 'Rate limit reached for gpt-6-sol on tokens per min (TPM). Please try again in 2s.',
+                  'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+
+def sol_api(td, outcomes):
+    clock = Clock()
+    opener = Script(outcomes)
+    ledger = provider.Ledger(Path(td) / 'ledger')
+    return provider.OpenAIStudy(ledger, opener, clock=clock, sleep=clock.sleep), opener, clock, ledger
+
+
+class SolTests(unittest.TestCase):
+    """The gpt-6-sol rung: provider selection, the exact request, prices, failure categories, the billing
+    stop and resume, and the gates. The model is gpt-6-sol unless a test sets another."""
+    def setUp(self):
+        env = patch.dict(os.environ, SOL_ENV)
+        env.start()
+        self.addCleanup(env.stop)
+
+    def test_sol_settings_budget_and_prices(self):
+        entry, shared, b = D['models']['gpt-6-sol'], D['budget'], study.budget('gpt-6-sol')
+        self.assertEqual((entry['provider'], entry['tag']), ('openai', 'gpt-6-sol'))
+        self.assertEqual(entry['request_template'], {'model': 'gpt-6-sol', 'reasoning_effort': 'medium',
+                                                     'max_completion_tokens': 16000, 'response_format': 'strict_json_schema'})
+        self.assertEqual(b['prices'], openai_provider.PRICES['gpt-6-sol'])
+        self.assertEqual(b['prices'], {'input': 2.00, 'cached_input': 0.20, 'cache_write': 2.50, 'output': 10.00})
+        self.assertEqual((b['aggregate_usd'], b['max_output_tokens'], b['max_visible_chars']), (120, 16000, shared['max_answer_chars']))
+        self.assertEqual(b['retry']['retryable_http_status'], [429, 500, 502, 503, 504])
+        self.assertEqual((b['retry']['transport_retries'], b['retry']['backoff_seconds'], b['retry']['retry_after_cap_seconds']), (2, [2, 6], 20))
+        # Nothing that defines the experiment differs from the Opus rungs.
+        for key in ('max_calls', 'max_attempted_calls', 'max_failed', 'episode_workers', 'fixture_workers', 'workers',
+                    'billing_outage', 'stage_timeout_seconds', 'chain_timeout_seconds', 'max_transport_attempts',
+                    'request_timeout_seconds', 'max_input_bytes', 'projection_growth_factor'):
+            self.assertEqual(b[key], shared[key], key)
+        self.assertEqual(study.budget(OPUS), shared)
+        self.assertEqual(openai_provider.check_config(provider.openai_config())['model'], 'gpt-6-sol')
+        self.assertEqual(provider.paid_environment(), ('SWARM_OPENAI_API_KEY',))
+        with tempfile.TemporaryDirectory() as td:
+            self.assertIsInstance(provider.make_backend(provider.Ledger(Path(td) / 'l')), provider.OpenAIStudy)
+            with patch.dict(os.environ, ENV, STUDY_MODEL=OPUS):
+                self.assertIsInstance(provider.make_backend(provider.Ledger(Path(td) / 'l')), provider.Anthropic)
+            with patch.dict(os.environ, {'SWARM_OPENAI_API_KEY': ''}):
+                with self.assertRaises(provider.CallFailure):
+                    provider.make_backend(provider.Ledger(Path(td) / 'l'))
+
+    def test_sol_request_body_has_exactly_the_intended_keys(self):
+        packet = study.probe_fixture()['packet']
+        with tempfile.TemporaryDirectory() as td:
+            client, opener, _, ledger = sol_api(td, [completion()])
+            answer, account = client.call(packet, 'p0-001-gpt-6-sol:a')
+            totals = ledger.transact()
+        self.assertEqual(answer, study.normalize(ANSWER))
+        ((url, body, headers),) = opener.sent
+        self.assertEqual(url, 'https://api.openai.com/v1/chat/completions')
+        self.assertEqual(list(body), ['model', 'reasoning_effort', 'max_completion_tokens', 'response_format', 'messages'])
+        for forbidden in ('temperature', 'top_p', 'max_tokens', 'tools', 'tool_choice', 'stream', 'n', 'seed', 'logprobs', 'output_config', 'system'):
+            self.assertNotIn(forbidden, body)
+        self.assertEqual((body['model'], body['reasoning_effort'], body['max_completion_tokens']), ('gpt-6-sol', 'medium', 16000))
+        self.assertEqual(body['response_format'], {'type': 'json_schema', 'json_schema': {'name': 'answer', 'schema': study.schema(), 'strict': True}})
+        self.assertEqual(body['messages'], [{'role': 'system', 'content': study.SYSTEM}, {'role': 'user', 'content': study.actor_text(packet)}])
+        self.assertEqual({k.lower() for k in headers}, {'content-type', 'authorization'})
+        # The schema is the one the Opus rungs receive, and strict mode's rules hold for it: every object
+        # closed and every property required.
+        def closed(node):
+            if isinstance(node, dict):
+                if node.get('type') == 'object':
+                    self.assertIs(node['additionalProperties'], False)
+                    self.assertEqual(sorted(node['required']), sorted(node['properties']))
+                for v in node.values():
+                    closed(v)
+        closed(study.schema())
+        # Price arithmetic (USD per million): 3,000 prompt tokens all written to the cache at 2.50,
+        # 1,200 completion tokens (1,000 of them reasoning) at 10.00.
+        self.assertEqual(account['actual_usd'], (3000 * 2.50 + 1200 * 10.00) / 1e6)
+        self.assertEqual((account['reasoning_tokens'], account['visible_output_tokens'], account['input_pricing']), (1000, 200, 'cache_write_reported'))
+        size = len(json.dumps(body).encode())
+        self.assertEqual(account['reserved_usd'], int((size * 2.50 + 16000 * 10.00) * 10 + 0.999999) / 1e6)
+        self.assertEqual((totals['attempted_calls'], totals['calls_by_stage'], totals['actual_usd'], totals['cap_usd']), (1, {'P0': 1}, 0.0195, 120))
+        # Cached prompt tokens at 0.20: 2,000 cached, 1,000 written, 1,200 out.
+        usage = {'prompt_tokens': 3000, 'completion_tokens': 1200,
+                 'prompt_tokens_details': {'cached_tokens': 2000, 'cache_write_tokens': 1000}, 'completion_tokens_details': {'reasoning_tokens': 900}}
+        with tempfile.TemporaryDirectory() as td:
+            client, _, _, _ = sol_api(td, [completion(usage=usage)])
+            _, account = client.call(packet, 'p0-001-gpt-6-sol:a')
+        self.assertEqual(account['actual_usd'], (2000 * 0.20 + 1000 * 2.50 + 1200 * 10.00) / 1e6)
+
+    def test_sol_failures_have_their_own_category_and_length_is_a_failed_call(self):
+        packet = study.probe_fixture()['packet']
+        bad = dict(ANSWER, decisions={x: 'use' for x in IDS[:11]})
+        for outcome, category in ((completion(finish='length'), 'truncated_output'),
+                                  (completion(text='', finish='length'), 'truncated_output'),
+                                  (completion(refusal='no'), 'refusal'),
+                                  (completion(finish='content_filter'), 'refusal'),
+                                  (completion(text='not json'), 'invalid_json'),
+                                  (completion(text=json.dumps(bad)), 'invalid_answer'),
+                                  (completion(text=json.dumps(dict(ANSWER, extra=1))), 'invalid_answer'),
+                                  (completion(model='gpt-6-luna'), 'model_mismatch'),
+                                  (completion(usage={}), 'missing_usage'),
+                                  (sol_error(400, {'error': {'message': 'Invalid schema for response_format'}}), 'http_400')):
+            with tempfile.TemporaryDirectory() as td:
+                client, opener, _, _ = sol_api(td, [outcome])
+                with self.assertRaises(provider.CallFailure) as caught:
+                    client.call(packet, 'p0-001-gpt-6-sol:a')
+                self.assertEqual(caught.exception.category, category)
+                self.assertEqual(len(opener.sent), 1)                       # never re-sent
+        self.assertTrue(provider.is_integrity('model_mismatch') and provider.is_integrity('output_ceiling_exceeded'))
+        self.assertFalse(provider.is_integrity('truncated_output') or provider.is_integrity('invalid_answer'))
+        # The evidence of a rejected request is kept.
+        with tempfile.TemporaryDirectory() as td:
+            client, _, _, _ = sol_api(td, [sol_error(400, {'error': {'message': 'Invalid schema'}})])
+            with self.assertRaises(provider.CallFailure) as caught:
+                client.call(packet, 'p0-001-gpt-6-sol:a')
+            acc = caught.exception.accounting
+            self.assertEqual((acc['http_status'], acc['request_id']), (400, 'req_sol_test'))
+            self.assertIn('Invalid schema', acc['error_body'])
+            self.assertNotIn('selftest-not-a-key', json.dumps(acc))
+        # Re-sent only on 429 (without billing words) and 5xx, at most twice.
+        for codes, ok in (([500, 503], True), ([429], True), ([502, 504, 500], False)):
+            with tempfile.TemporaryDirectory() as td:
+                errors = [sol_error(c, RATE if c == 429 else {'error': {'message': 'server'}}) for c in codes]
+                client, opener, clock, _ = sol_api(td, errors + [completion()])
+                if ok:
+                    _, account = client.call(packet, 's1-001-gpt-6-sol:a')
+                    self.assertEqual(account['attempts'], len(codes) + 1)
+                    self.assertEqual(clock.sleeps, [2, 6][:len(codes)])
+                else:
+                    with self.assertRaises(provider.CallFailure) as caught:
+                        client.call(packet, 's1-001-gpt-6-sol:a')
+                    self.assertEqual((caught.exception.category, len(opener.sent)), ('http_500', 3))
+
+    def test_sol_billing_error_pauses_resends_and_stops(self):
+        packet = study.probe_fixture()['packet']
+        self.assertTrue(openai_provider.is_billing_error(429, json.dumps(QUOTA)))
+        self.assertFalse(openai_provider.is_billing_error(429, json.dumps(RATE)))
+        with tempfile.TemporaryDirectory() as td:
+            client, opener, clock, ledger = sol_api(td, [sol_error(429, QUOTA) for _ in range(3)] + [completion()])
+            _, account = client.call(packet, 's1-001-gpt-6-sol:a')
+            self.assertEqual((account['attempts'], account['billing_rejections'], account['billing_pauses_led']), (4, 1, 1))
+            self.assertEqual(clock.sleeps, [60, 60, 60])
+            self.assertEqual(account['billing_wait_seconds'], 180)
+            self.assertEqual(ledger.transact()['transport_attempts'], 4)
+        with tempfile.TemporaryDirectory() as td:
+            client, opener, clock, ledger = sol_api(td, [sol_error(429, QUOTA) for _ in range(30)])
+            with self.assertRaises(provider.CallFailure) as caught:
+                client.call(packet, 's1-001-gpt-6-sol:a')
+            self.assertEqual(caught.exception.category, 'provider_billing_stopped')
+            self.assertTrue(provider.is_billing_stop(caught.exception.category))
+            acc = caught.exception.accounting
+            self.assertEqual((acc['voided'], acc['attempted'], acc['billing_wait_seconds']), (True, False, 1200))
+            self.assertEqual(sum(clock.sleeps), 1200)
+            totals = ledger.transact()
+            self.assertEqual((totals['attempted_calls'], totals['voided_calls'], totals['transport_attempts']), (0, 1, 21))
+            self.assertEqual(client.billing_state(), 'stopped')
+            with self.assertRaises(provider.CallFailure) as caught:      # nothing new starts after the stop
+                client.call(packet, 's1-001-gpt-6-sol:b')
+            self.assertEqual(caught.exception.category, 'provider_billing_stopped')
+
+    def test_sol_failed_q0_refuses_s1(self):
+        with tempfile.TemporaryDirectory() as td:
+            root, ledger, hub, stub = Path(td) / 'results', Path(td) / 'l.jsonl', FakeHub(), rehearse.Stub('jumpy')
+            self.assertEqual(chain.run_chain(['S0', 'P0', 'Q0', 'S1'], hub, root, ledger, opener=stub), chain.EXIT_STOPPED)
+            status = chain.read_status(root)
+            self.assertEqual((status['state'], status['stopped_stage'], status['reason'], status['model']),
+                             ('stopped_at_gate', 'Q0', 'qualification_failed', 'gpt-6-sol'))
+            self.assertEqual([r['params']['batch'] for r in hub.record.values()], ['s0-001', 'p0-001-gpt-6-sol', 'q0-001-gpt-6-sol'])
+            self.assertEqual(stub.models, {'gpt-6-sol'})
+            self.assertEqual(stub.message_calls, 25)
+            # S1 alone is refused: its Q0 failed; nothing is queued.
+            self.assertEqual(chain.run_chain(['S1'], hub, root, ledger, opener=stub), chain.EXIT_STOPPED)
+            self.assertEqual(chain.read_status(root)['reason'], 'projection_needs_exactly_one_passed_q0')
+            with self.assertRaises(ValueError):
+                coordinator.gate(hub.runs(), 'S1', study.params('S1'))
+            self.assertEqual(len(hub.record), 3)
+            # Missing credential: refused before anything is queued.
+            with patch.dict(os.environ, {'SWARM_OPENAI_API_KEY': ''}):
+                self.assertEqual(chain.run_chain(['P0'], FakeHub(), Path(td) / 'r2', ledger, opener=stub), chain.EXIT_STOPPED)
+                self.assertEqual(chain.read_status(Path(td) / 'r2')['reason'], 'missing_environment:SWARM_OPENAI_API_KEY')
+
+    def test_sol_billing_stop_then_resume_runs_exactly_the_rows_not_started(self):
+        no_wait = rehearse.no_wait
+        with tempfile.TemporaryDirectory() as td:
+            root, ledger, hub = Path(td) / 'results', Path(td) / 'l.jsonl', FakeHub()
+            stub = rehearse.Stub('private', credit=lambda n: n >= 25 + 333)
+            self.assertEqual(chain.run_chain(['S0', 'P0', 'Q0', 'S1'], hub, root, ledger, opener=stub, sleep=no_wait), chain.EXIT_STOPPED)
+            status = chain.read_status(root)
+            self.assertEqual((status['stopped_stage'], status['reason']), ('S1', 'provider_billing_stopped'))
+            rows = analyze.read_rows(Path(status['stages']['S1']['results_dir']) / 'episodes.jsonl.gz')
+            interrupted = [r for r in rows if r.get('interrupted')]
+            self.assertEqual((len(rows), sum(r['status'] == 'failed' for r in rows)), (3600, 0))
+            self.assertTrue(interrupted and all(r['status'] == 'not_started' and r['interrupted'] == 'provider_billing_stopped' for r in interrupted))
+            run = [r for r in hub.record.values() if r['params']['batch'] == 's1-001-gpt-6-sol'][0]
+            self.assertEqual((run['status'], run['metrics']['billing_stop'], run['metrics']['failed_episodes']), ('failed', 1, 0))
+            self.assertEqual(run['metrics']['model_calls'], sum(r['status'] == 'completed' for r in rows))   # voided calls are not model calls
+            self.assertTrue(chain.verify(hub, root)['ok'])
+            todo = sorted(r['id'] for r in rows if r['status'] == 'not_started')
+            healthy = rehearse.Stub('private')
+            self.assertEqual(chain.resume_chain(hub, root, ledger, opener=healthy, sleep=no_wait), chain.EXIT_DONE)
+            status = chain.read_status(root)
+            cont = status['stages']['S1']['continuations']
+            self.assertEqual(([c['batch'] for c in cont], status['state']), (['s1-001-gpt-6-sol-r1'], 'completed'))
+            resumed = analyze.read_rows(Path(cont[0]['results_dir']) / 'episodes.jsonl.gz')
+            self.assertEqual(sorted(r['id'] for r in resumed), todo)
+            self.assertEqual(healthy.message_calls, len(todo))
+            merged = chain.saved_rows(chain.stage_entries(status, 'S1'))
+            self.assertEqual((len(merged), sum(r['status'] == 'completed' for r in merged)), (3600, 3600))
+            totals = provider.Ledger(ledger).transact()
+            self.assertEqual((totals['attempted_calls'], totals['calls_by_stage']['S1'], totals['cap_usd']), (3625, 3600, 120))
+            self.assertTrue(chain.verify(hub, root)['ok'])
+            self.assertEqual(chain.resume_chain(hub, root, ledger, opener=healthy, sleep=no_wait), chain.EXIT_STOPPED)
+
+    def test_sol_projection_uses_its_own_cap(self):
+        with patch.dict(os.environ, {'STUDY_MODEL': 'gpt-6-sol'}):
+            ok = chain.projection_check(0.02, 1.0)
+            self.assertEqual((ok['projected_s1_usd'], ok['remaining_cap_usd'], ok['passed']), (3600 * 0.02 * 1.25, 119.0, True))
+            self.assertFalse(chain.projection_check(0.027, 0.0)['passed'])       # 3,600 x 0.027 x 1.25 = 121.5 > 120
+        with patch.dict(os.environ, {'STUDY_MODEL': OPUS}):
+            self.assertTrue(chain.projection_check(0.027, 0.0)['passed'])        # the Opus rungs keep USD 450
+
+    def test_results_do_not_depend_on_the_launcher_environment(self):
+        confs = ({}, {'STUDY_MODEL': 'gpt-6-sol', 'STUDY_PROVIDER': 'openai'}, {'STUDY_MODEL': OPUS, 'STUDY_PROVIDER': 'anthropic'},
+                 {'STUDY_MODEL': 'claude-opus-5', 'STUDY_PROVIDER': 'anthropic', 'STUDY_REPLICATION': 'r1'})
+        seen = set()
+        for conf in confs:
+            with patch.dict(os.environ, conf, clear=False):
+                for k in ('STUDY_MODEL', 'STUDY_PROVIDER', 'STUDY_REPLICATION'):
+                    if k not in conf:
+                        os.environ.pop(k, None)
+                seen.add((study.source_hash(), study.digest(study.plan('Q0')['units']), study.digest(study.schema()), study.SYSTEM))
+        self.assertEqual(len(seen), 1)
 
 
 if __name__ == '__main__':

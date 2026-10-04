@@ -1,0 +1,15 @@
+{
+  "experiment": "quorum-of-mirrors",
+  "attempt": "QM-PQ-02",
+  "authority": "Owner approved implementing the proposed semantic extraction/comparison fixes and launching a cheap follow-up in the owning task on 2026-10-04, with USD2 additional cumulative budget.",
+  "original_api_cap_usd": 1,
+  "original_infrastructure_cap_usd": 1,
+  "additional_usd": 2,
+  "cumulative_api_cap_usd": 3,
+  "cumulative_infrastructure_cap_usd": 1,
+  "cumulative_total_cap_usd": 4,
+  "max_new_calls": 24,
+  "max_new_reserved_usd": 1.44,
+  "retains_original_calls_and_uncertainty": true,
+  "automatic_retry_or_evaluation": false
+}

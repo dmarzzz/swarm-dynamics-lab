@@ -4,15 +4,40 @@ experiment: false-alarm-cascade
 status: exploratory
 source: ../honeypot-vigilance-hunches.md   # hunch V4
 attempt: '001'
-model: claude-opus-5-5          # default model = first rung of the ladder
-model_ladder:                   # one model per attempt, chosen by STUDY_MODEL (launcher --model)
+model: gpt-6-sol                # default model = first rung of the ladder (amendment 2026-10-04 evening: the Anthropic organisation is at its monthly limit)
+model_ladder:                   # one model per attempt, chosen by STUDY_MODEL (launcher --model); results never pooled
+- gpt-6-sol
 - claude-opus-5-5
 - claude-opus-5
-models:                         # per-model prices (official pricing page, read 2026-10-04); same request body for both
+models:                         # per model: provider, batch tag, prices and request settings
+  gpt-6-sol:
+    provider: openai
+    tag: gpt-6-sol              # batches p0-001-gpt-6-sol, q0-001-gpt-6-sol, s1-001-gpt-6-sol(-r<k>)
+    # OpenAI Chat Completions through src/openai_provider.py (copy of pipeline/reference/openai_provider.py).
+    request_template:
+      model: gpt-6-sol
+      reasoning_effort: medium
+      max_completion_tokens: 16000      # reasoning plus answer; finish_reason length is a failed call (truncated_output)
+      response_format: strict_json_schema   # built from study.schema(): {type: json_schema, json_schema: {name: answer, schema, strict: true}}
+    budget:                     # overrides of the shared budget below for this model only
+      prices: {input: 2.00, cached_input: 0.20, cache_write: 2.50, output: 10.00}   # = openai_provider.PRICES['gpt-6-sol']
+      aggregate_usd: 120        # this model's ledger; expected about USD 57, see reviews/chain-002-pre.md
+      max_output_tokens: 16000
+      max_visible_chars: 12000  # = max_answer_chars
+      max_input_tokens: 30000   # largest request is about 8,900 bytes
+      retry:
+        transport_retries: 2
+        retryable_http_status: [429, 500, 502, 503, 504]
+        backoff_seconds: [2, 6]
+        retry_after_cap_seconds: 20
   claude-opus-5-5:
+    provider: anthropic
+    tag: ''                     # the original first rung keeps its batch names (p0-001, s1-001)
     input_usd_per_million: 4
     output_usd_per_million: 20
   claude-opus-5:
+    provider: anthropic
+    tag: opus-5
     input_usd_per_million: 5
     output_usd_per_million: 25
 effort: medium
@@ -143,13 +168,13 @@ stages:
     backend: scripted
     rows: 1225       # 4 scripted actors x 2 roots x 5 conditions x 5 agents x 6 rounds, 24 qualification fixtures, 1 probe fixture
   P0:
-    backend: anthropic
+    backend: model   # the provider of the attempt's model (anthropic or openai)
     rows: 1
   Q0:
-    backend: anthropic
+    backend: model   # the provider of the attempt's model (anthropic or openai)
     rows: 24
   S1:
-    backend: anthropic
+    backend: model   # the provider of the attempt's model (anthropic or openai)
     rows: 3600       # 24 roots x 5 conditions x 5 agents x 6 rounds
     episodes: 120
   S2:
@@ -164,7 +189,7 @@ budget:
     Q0: 24
     S1: 3600
   max_attempted_calls: 3625
-  aggregate_usd: 450             # per model ledger; sized for the dearer rung (claude-opus-5: USD 360 x 1.25)
+  aggregate_usd: 450             # per model ledger, Anthropic rungs; sized for the dearer rung (claude-opus-5: USD 360 x 1.25). gpt-6-sol: models.gpt-6-sol.budget
   projection_growth_factor: 1.25
   max_output_tokens: 8000
   max_answer_chars: 12000

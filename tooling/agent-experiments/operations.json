@@ -169,6 +169,19 @@
       "checked_at": "2026-10-04T18:17:30.538850+00:00",
       "checked_commit": "385441384fe4875609f369bcf6c15ebc94092abd",
       "next_action": "D0-01 closed and scientifically reviewed:3nativecalls,36terminal,9artifactsverified,USD0.568560890cumulativeupper. Offline wrapper/429 diagnosis; no successor authorization or allocation."
+    },
+    {
+      "id": "telephone",
+      "title": "Telephone",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/telephone",
+      "setup_path": "researchers/vishesh/notes/telephone/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/telephone/t1/POST-MORTEM.md",
+      "adapter": null,
+      "checked_at": "2026-10-04T19:14:42.356828+00:00",
+      "checked_commit": "9f4ede00d1cf2e76580e31d9690339dd5434b651",
+      "next_action": "HOLD native collection. T1 offline preparation closeout only; no native attempt. Complete-window development labels and strong baseline audit next; no dispatch adapter or admitted successor.",
+      "next_run_approval": "owner"
     }
   ]
 }

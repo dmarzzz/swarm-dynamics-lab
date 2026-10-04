@@ -10,8 +10,8 @@ Failure-handling rule (required by dmarz/fleet-monitor, 2026-10-04):
   and dispatch continues. Dispatch stops when failed episodes exceed `budget.max_failed`.
 - An integrity failure (ledger refusal, reservation bound, model mismatch, deadline, internal
   error) stops dispatch at once in every stage.
-- A billing outage that outlasts its wait stops the stage as `provider_credit_balance_low`: the
-  affected calls and everything unfinished are recorded as not started, nothing counts as a failed
+- A billing outage that outlasts its wait stops the stage as `provider_credit_balance_low`
+  (Anthropic) or `provider_billing_stopped` (OpenAI): the affected calls and everything unfinished are recorded as not started, nothing counts as a failed
   unit, and `chain.py resume` may run exactly those rows later at the same source hash.
 
 The hub run ends `done` when S0, P0 or Q0 passed its gate with every row valid, or when S1
@@ -74,7 +74,7 @@ def usage_metrics(rows, total):
             'billing_pauses': sum(a.get('billing_pauses_led', 0) for a in acc),
             'billing_pause_seconds': sum(a.get('billing_wait_seconds', 0) for a in acc),
             'billing_affected_calls': sum(bool(a.get('billing_rejections')) for a in acc),
-            'billing_stop': int(any(r.get('interrupted') == provider.CREDIT_STOP for r in rows))}
+            'billing_stop': int(any(provider.is_billing_stop(r.get('interrupted')) for r in rows))}
 
 
 def execute(p, out, run=None, backend=None, ledger_path=None, opener=None, deadline=None, prior=None, sleep=None):
@@ -116,7 +116,7 @@ def _execute(p, out, run, backend, ledger_path, opener, deadline, rows, prior, s
     stage = p['stage']
     if p['source_hash'] != study.source_hash():
         raise RuntimeError('runtime_source_mismatch')
-    if stage not in study.STAGES or p['backend'] != ('scripted' if stage == 'S0' else 'anthropic'):
+    if stage not in study.STAGES or p['backend'] != ('scripted' if stage == 'S0' else study.provider_name()):
         raise RuntimeError('stage_backend_mismatch')
     continuation = study.continuation_index(stage, p['batch'])      # raises on any other batch name
     if bool(continuation) != (prior is not None):
@@ -150,7 +150,7 @@ def _execute(p, out, run, backend, ledger_path, opener, deadline, rows, prior, s
         if not path:
             raise RuntimeError('persistent_budget_ledger_required')
         ledger = provider.Ledger(path)
-        backend = backend or provider.Anthropic(ledger, opener, sleep=sleep)
+        backend = backend or provider.make_backend(ledger, opener, sleep=sleep)
     initial = ledger.transact() if ledger else {}
     reporting_errors = []
     render.frame([], total, stage, accounting=initial).save(out / 'initial_frame.png')
@@ -198,7 +198,7 @@ def _execute(p, out, run, backend, ledger_path, opener, deadline, rows, prior, s
             r.update(answer=answer, accounting=accounting, evaluation=study.evaluate(context, packet, answer),
                      status='completed')
         except provider.CallFailure as exc:
-            if exc.category == provider.CREDIT_STOP:
+            if provider.is_billing_stop(exc.category):
                 # A billing outage: not an outcome. The row is not started and may be resumed.
                 r.update(status='not_started', interrupted=exc.category, accounting=exc.accounting)
             else:
@@ -286,7 +286,7 @@ def _execute(p, out, run, backend, ledger_path, opener, deadline, rows, prior, s
                         seen = snapshot()
                         m = usage_metrics(seen, len(seen))
                         billing = backend.billing_state() if hasattr(backend, 'billing_state') else None
-                        note = {'message': 'Paused: provider credit balance low; the same call is re-sent on the slow schedule'} if billing == 'paused' else {}
+                        note = {'message': 'Paused: provider billing or usage limit; the same call is re-sent on the slow schedule'} if billing == 'paused' else {}
                         run.progress(len(seen), total, episodes=len(seen), invalid=m['invalid'], model_calls=m['model_calls'],
                                      input_tokens=m['input_tokens'], output_tokens=m['output_tokens'], cost_usd=m['cost_usd'],
                                      billing_pauses=m['billing_pauses'], **note)
@@ -387,7 +387,8 @@ def summarize(p, rows, total, invariants, elapsed, initial, final, prior_failed=
         gate = {'passed': None}
     failure = None
     if billing_stop:
-        failure = provider.CREDIT_STOP                  # a billing outage outlasted its wait: resumable in S1
+        # A billing outage outlasted its wait: resumable in S1. The category is the adapter's own.
+        failure = next(r['interrupted'] for r in rows if provider.is_billing_stop(r.get('interrupted')))
     elif stage == 'S1':
         # A failed call ends its episode; the stage is done while failed episodes stay within the limit.
         stray = any(r['status'] == 'not_started' and study.unit_of(r) not in failed_here for r in rows)
@@ -421,7 +422,9 @@ def summarize(p, rows, total, invariants, elapsed, initial, final, prior_failed=
         acc = rows[0]['accounting']
         calls = budget['max_attempted_calls']
         summary['probe_measurement'] = {
-            'input_tokens': acc['input_tokens'], 'counted_input_tokens': acc['counted_input_tokens'],
+            'input_tokens': acc['input_tokens'], 'counted_input_tokens': acc.get('counted_input_tokens'),
+            'request_bytes': acc.get('request_bytes'), 'reasoning_tokens': acc.get('reasoning_tokens'),
+            'finish_reason': acc.get('finish_reason'), 'response_model': acc.get('response_model'),
             'output_tokens': acc['output_tokens'], 'latency_seconds': acc.get('latency_seconds'),
             'cost_usd': acc['actual_usd'], 'reserved_usd': acc['reserved_usd'],
             'chain_projection_usd_at_probe_cost': acc['actual_usd'] * calls,

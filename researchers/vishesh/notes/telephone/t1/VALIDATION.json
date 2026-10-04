@@ -1,0 +1,90 @@
+{
+  "assessor": "vishesh/codex-village-fit",
+  "date": "2026-10-04",
+  "scope": "offline software checks; no native attempt",
+  "python": "3.14.5 (main, May 10 2026, 10:21:34) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "telephone_tests": 24,
+  "shared_tests": 21,
+  "fixture_replay_matches": true,
+  "model_calls": 0,
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "researchers/vishesh/notes/telephone/t1/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_duplicate_input_ids_refused (test_candidates.CandidateTests.test_duplicate_input_ids_refused) ... ok\ntest_existing_destination_refused (test_candidates.CandidateTests.test_existing_destination_refused) ... ok\ntest_metadata_summary_and_private_bundles (test_candidates.CandidateTests.test_metadata_summary_and_private_bundles) ... ok\ntest_actor_projection_ignores_evaluator_metadata (test_scoring.ScoringTests.test_actor_projection_ignores_evaluator_metadata) ... ok\ntest_chain_rejects_numeric_missing_or_invalid_score (test_scoring.ScoringTests.test_chain_rejects_numeric_missing_or_invalid_score) ... ok\ntest_citation_id_not_primary_advantage (test_scoring.ScoringTests.test_citation_id_not_primary_advantage) ... ok\ntest_correct_and_wrong_same_obligation_fails (test_scoring.ScoringTests.test_correct_and_wrong_same_obligation_fails) ... ok\ntest_critical_addition_requires_boolean (test_scoring.ScoringTests.test_critical_addition_requires_boolean) ... ok\ntest_duplicate_assertions_do_not_raise_retention (test_scoring.ScoringTests.test_duplicate_assertions_do_not_raise_retention) ... ok\ntest_empty_scored_output_is_zero (test_scoring.ScoringTests.test_empty_scored_output_is_zero) ... ok\ntest_failed_parent_cannot_have_scored_descendant (test_scoring.ScoringTests.test_failed_parent_cannot_have_scored_descendant) ... ok\ntest_full_fixture_matrix (test_scoring.ScoringTests.test_full_fixture_matrix) ... ok\ntest_gold_hash_tampering_refused (test_scoring.ScoringTests.test_gold_hash_tampering_refused) ... ok\ntest_inconsistent_duplicate_judgment_refused (test_scoring.ScoringTests.test_inconsistent_duplicate_judgment_refused) ... ok\ntest_invalid_pair_assignments_refused (test_scoring.ScoringTests.test_invalid_pair_assignments_refused) ... ok\ntest_missing_and_unreviewed_are_not_zero (test_scoring.ScoringTests.test_missing_and_unreviewed_are_not_zero) ... ok\ntest_no_complete_pairs_stay_unknown (test_scoring.ScoringTests.test_no_complete_pairs_stay_unknown) ... ok\ntest_order_and_evaluator_id_invariance (test_scoring.ScoringTests.test_order_and_evaluator_id_invariance) ... ok\ntest_output_hash_tampering_refused (test_scoring.ScoringTests.test_output_hash_tampering_refused) ... ok\ntest_paired_bounds_use_all_assignments (test_scoring.ScoringTests.test_paired_bounds_use_all_assignments) ... ok\ntest_reference_lookup_requires_unique_resolvable_ids (test_scoring.ScoringTests.test_reference_lookup_requires_unique_resolvable_ids) ... ok\ntest_unknown_obligation_mapping_refused (test_scoring.ScoringTests.test_unknown_obligation_mapping_refused) ... ok\ntest_unmapped_addition_reported_without_retention_gain (test_scoring.ScoringTests.test_unmapped_addition_reported_without_retention_gain) ... ok\ntest_unreviewed_assertions_refused (test_scoring.ScoringTests.test_unreviewed_assertions_refused) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 0.023s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "researchers/vishesh/notes/ai-village-replay-2026-10-04/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_authored_semantic_controls_and_citation_scoring (test_replay.IntegrationTests.test_authored_semantic_controls_and_citation_scoring) ... ok\ntest_cli_retains_unicode_line_separator_inside_json_string (test_replay.IntegrationTests.test_cli_retains_unicode_line_separator_inside_json_string) ... ok\ntest_every_profile_requires_its_evidence_roles (test_replay.IntegrationTests.test_every_profile_requires_its_evidence_roles) ... ok\ntest_normalizer_never_grants_visibility (test_replay.IntegrationTests.test_normalizer_never_grants_visibility) ... ok\ntest_ambiguous_order_quarantined (test_replay.ReplayTests.test_ambiguous_order_quarantined) ... ok\ntest_bm25_query_match_and_determinism (test_replay.ReplayTests.test_bm25_query_match_and_determinism) ... ok\ntest_component_and_shared_artifact_leakage (test_replay.ReplayTests.test_component_and_shared_artifact_leakage) ... ok\ntest_duplicate_refused (test_replay.ReplayTests.test_duplicate_refused) ... ok\ntest_evaluator_metadata_does_not_change_payload (test_replay.ReplayTests.test_evaluator_metadata_does_not_change_payload) ... ok\ntest_future_update_and_boundary_are_excluded (test_replay.ReplayTests.test_future_update_and_boundary_are_excluded) ... ok\ntest_missing_is_not_wrong (test_replay.ReplayTests.test_missing_is_not_wrong) ... ok\ntest_missing_record_refused (test_replay.ReplayTests.test_missing_record_refused) ... ok\ntest_naive_timestamp_and_reverse_time_refused (test_replay.ReplayTests.test_naive_timestamp_and_reverse_time_refused) ... ok\ntest_projection_excludes_provider_messages_and_commands (test_replay.ReplayTests.test_projection_excludes_provider_messages_and_commands) ... ok\ntest_recent_complete_record_ceiling (test_replay.ReplayTests.test_recent_complete_record_ceiling) ... ok\ntest_redaction_unknown_and_present_excluded (test_replay.ReplayTests.test_redaction_unknown_and_present_excluded) ... ok\ntest_source_mutation_refused (test_replay.ReplayTests.test_source_mutation_refused) ... ok\ntest_truth_requires_evidence (test_replay.ReplayTests.test_truth_requires_evidence) ... ok\ntest_unreviewed_record_excluded (test_replay.ReplayTests.test_unreviewed_record_excluded) ... ok\ntest_valid_id_wrong_label_and_invented_citation_fail (test_replay.ReplayTests.test_valid_id_wrong_label_and_invented_citation_fail) ... ok\ntest_visibility_is_not_inferred (test_replay.ReplayTests.test_visibility_is_not_inferred) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 0.037s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/experiment.py",
+        "inspect",
+        "telephone"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"adapter\": null,\n  \"capabilities\": {\n    \"finalize\": \"implemented; offline operational record, scientific review still required\",\n    \"prepare\": \"manual\",\n    \"report\": \"manual\",\n    \"resume\": \"unsupported\",\n    \"run\": \"manual\",\n    \"validate\": \"manual\"\n  },\n  \"checked_at\": \"2026-10-04T19:14:42.356828+00:00\",\n  \"checked_commit\": \"9f4ede00d1cf2e76580e31d9690339dd5434b651\",\n  \"history_warning\": \"check native history; an empty local journal does not prove a first run\",\n  \"id\": \"telephone\",\n  \"latest_completion\": null,\n  \"local_attempts\": [],\n  \"next_action\": \"HOLD native collection. T1 offline preparation closeout only; no native attempt. Complete-window development labels and strong baseline audit next; no dispatch adapter or admitted successor.\",\n  \"next_run_approval\": \"owner\",\n  \"operational_state\": \"unverified; registry is historical navigation, not launch admission\",\n  \"owner\": \"vishesh\",\n  \"postmortem_path\": \"researchers/vishesh/notes/telephone/t1/POST-MORTEM.md\",\n  \"setup_path\": \"researchers/vishesh/notes/telephone/SETUP.md\",\n  \"study_path\": \"researchers/vishesh/notes/telephone\",\n  \"title\": \"Telephone\"\n}\n"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "researchers/vishesh/notes/telephone/t1/CANDIDATE-COVERAGE.json",
+      "sha256": "7eef04dd67830e932226583b47da6d23261906f23e336fc8a7f926de2f56fe01"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/t1/CASE-QUALITY.md",
+      "sha256": "e16008d290a0ab1248f5b0aab438a71dcc8a4f80d3dc070ee6e3bbfcfb0daaa7"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/t1/CASEBOOK.md",
+      "sha256": "d5e5aec817d19c78d47245c0e2d3180f16b73e95eb7e90c461a90586365fd85f"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/t1/FIXTURE-RESULTS.json",
+      "sha256": "a9c778b373f4bf01f8c7f0e8631f8b8a4afa036e3de05e2be307ce426d22adb1"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/t1/PLAN.md",
+      "sha256": "750e9780fc654643e7d802620711b7b86fb960616cd0b0c15721e75683771dc6"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/t1/src/candidates.py",
+      "sha256": "132e4c914ccf5f1baea8f0b7e580dab975059f08cf1b959babd4d5bc18238efa"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/t1/src/fixtures.py",
+      "sha256": "f8788a45a1c93c801e2581ee7008beb296cb229c3de0ae1f9e8675bc29d3c46b"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/t1/src/scoring.py",
+      "sha256": "1a9c1d353c3b1e3e6938edcce5232d7076106ccd19d3305a423821a88b08a89d"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/t1/tests/test_candidates.py",
+      "sha256": "6ea1e358767fcacd3d57232d27d47998afddefe5a3b921aadb7d98db269610ad"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/t1/tests/test_scoring.py",
+      "sha256": "c4938dde9c5cb2a03d5290386008fbb0a9685b786b47fc811cacc827b7a8096d"
+    }
+  ]
+}

@@ -2,12 +2,18 @@ contract: ready-chain-v1
 study: false-alarm-cascade
 experiment: false-alarm-cascade
 stages: [S0, P0, Q0, S1]
-model: claude-opus-5-5
-model_ladder: [claude-opus-5-5, claude-opus-5]
+# Amendment A2 (2026-10-04 evening): gpt-6-sol first; the Anthropic organisation is at its monthly limit until
+# 2026-11-01. The Opus rungs stay in the ladder for later (--model claude-opus-5-5 / claude-opus-5).
+provider: openai
+model: gpt-6-sol
+model_ladder: [gpt-6-sol, claude-opus-5-5, claude-opus-5]
+providers: {gpt-6-sol: openai, claude-opus-5-5: anthropic, claude-opus-5: anthropic}
+review: reviews/chain-002-pre.md
 effort: medium
 max_calls: {S0: 0, P0: 1, Q0: 24, S1: 3600}
 max_calls_total: 3625
-usd_cap: 450
+# Dollar cap of the gpt-6-sol ledger (design.yaml models.gpt-6-sol.budget); each Opus ledger has USD 450.
+usd_cap: 120
 chain_timeout_seconds: 32400
-selftests: 41
-source_hash: 7803e3b8b8cbf93ddf99cdd7151e49ead8d440d0fba8b69f663e9f6d429ac599
+selftests: 49
+source_hash: 0947408b186386656be794d9dc9d65246461c88aa3c598bde063fe349296e4fd

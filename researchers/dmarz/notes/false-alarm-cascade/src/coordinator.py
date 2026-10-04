@@ -3,7 +3,8 @@ at the same source hash, and a batch name is never queued twice (no replay).
 
 One more door, for the billing-outage rule: a continuation of S1 (batch `s1-001-r<k>`) is queued
 only when S1 and every earlier continuation at this source hash ended `failed` with the hub metric
-`billing_stop == 1`, that is, stopped by `provider_credit_balance_low` and by nothing else."""
+`billing_stop == 1`, that is, stopped by a billing stop (`provider_credit_balance_low` on Anthropic,
+`provider_billing_stopped` on OpenAI) and by nothing else."""
 import yaml
 
 import study
