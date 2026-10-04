@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: done
+state: working
 task: null
-doing: Published PI review and lifecycle guidance in baaccc0; task complete, no experiments launched.
-updated: 2026-10-04T03:50Z
+doing: Reconcile Dmarz PI review e0a3170 and incorporate current methods improvements.
+updated: 2026-10-04T03:54Z
 ---
 
 ## Notes
