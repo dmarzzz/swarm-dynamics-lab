@@ -1,0 +1,31 @@
+{
+  "kind": "offline software evidence; synthetic transports, no native calls",
+  "tests_passed": 60,
+  "native_calls": 0,
+  "requests": 48,
+  "semantic_roots": 6,
+  "task_age_cases": 12,
+  "literal_reference_correct": 48,
+  "gate_plus_literal_correct": 48,
+  "gate_without_model_deferrals": 24,
+  "maximum_request_bytes": 2495,
+  "source_hashes": {
+    "researchers/vishesh/notes/dissent/freshness/CONTRACT.json": "dcaf3e0180d690ba5a48635ff87bb3a8379993245c0ca9a61c6aba92733c9082",
+    "researchers/vishesh/notes/dissent/freshness/DIAGNOSTIC-REVIEW.json": "3abb6672a859fc183a7721679ae68515f387d00f17693bee1d4ca6527ca37cd9",
+    "researchers/vishesh/notes/dissent/freshness/PLAN.md": "e45dd6c4a16f196f5b64a7d3b3d56d8be8c093bc3bf3da27de53be72d4499299",
+    "researchers/vishesh/notes/dissent/freshness/cases.py": "cbed278bb7d8f536a5b82919f67722624179f8fc5d799fdfa44148499302a472",
+    "researchers/vishesh/notes/dissent/freshness/native.py": "46715c6fee8a1a944bfb950384dae182ab40c3e8cd00dd519e119aaf9fdaa36a",
+    "researchers/vishesh/notes/dissent/freshness/native_budget.py": "f589cd0f57f2c33852dbe75c607be317a001263092740f5150126bc665119542",
+    "researchers/vishesh/notes/dissent/freshness/native_gates.py": "21ddf517c2a924f70ac4102b5e841f7da65001fe684c995f7ec16c0de6af3ff2",
+    "researchers/vishesh/notes/dissent/freshness/native_operator.py": "d87bed5e81912df5e7742286749ed93b93a8f41bcbfa298685cd47b6930b7a01",
+    "researchers/vishesh/notes/dissent/freshness/native_report.py": "1c59820f49af24fc2d45785e107b0e1f24dcb2d0470d23856a5a64b7d4761e48",
+    "researchers/vishesh/notes/dissent/rd5/src/common.py": "13580885955a4eb290553b0ceec9c65624411d76ab1c5bca8581ef55b5885248",
+    "researchers/vishesh/notes/dissent/rd5/src/rd5_core.py": "aebd8afb934d3bbeac376d338e7987d7bbc73f0d38947d7592b0907339c75af6",
+    "researchers/vishesh/notes/dissent/reopening/cases.py": "e0f8cde22f962a436bc1ed7c29ca23d89ab3e87749397c9281cf56806f57cde8",
+    "researchers/vishesh/notes/dissent/src/jev.py": "d288f630c2241ef0062886fc66b87c31d834ca9f52b744e0cd3bdd9aad89e9dc"
+  },
+  "manifest_sha256": "2debe8425d670019fc41f2b66e5d72b7fb61e6345eb64a86a9568daf0138c6ea",
+  "boundary_corpus": "54 generated cases on a public test seed check inside/at/outside TTL, future, wrong scope/revision, stale contradiction/current conflict/missing evidence; separate private reserve created after freeze.",
+  "original_ledger": "untouched by tests; synthetic disposable database only",
+  "scope": "Owning-agent verification, not independent audit or native qualification."
+}

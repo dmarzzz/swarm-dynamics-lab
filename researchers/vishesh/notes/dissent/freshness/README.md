@@ -5,3 +5,5 @@ The owner approved a 48-request diagnostic comparing raw timestamps with explici
 [Prospective plan](PLAN.md) · [Predecessor result](../reopening/REPORT.md) · [Authoritative setup](../rd5/SETUP.md).
 
 Current disposition: RUN after offline preparation and fresh admission. No native RD7 evidence yet.
+
+The eligibility controller and 48-cell design are implemented; [60 offline checks](offline/validation.json) pass. [Case quality](CASE-QUALITY.md), [native integration](IMPLEMENTATION.md) and [reserved qualification manifest](QUALIFICATION-RESERVE.json) document readiness and limits. Native launch admission is being refreshed.

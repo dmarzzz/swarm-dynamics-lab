@@ -1,0 +1,10 @@
+{
+  "reserve_id": "right-dissenter-freshness-v1",
+  "cases": 54,
+  "corpus_sha256": "dd45fdd132efa5969df97d6bbda49a0ab4f2d6648672ac7a2895c5e4477dbeb8",
+  "instrument_sha256_at_reservation": "e013ba9e89fb1d91cbcebbc908ea1cd7826653e0675779aa05d18fed52a81977",
+  "automated_label_checks": 54,
+  "operator_individual_case_inspections": 0,
+  "native_requests": 0,
+  "scope": "Generated same-grammar reserve, not independent real-world generalization; public test seed cases are separate."
+}

@@ -2,9 +2,9 @@
 agent: vishesh/codex-decision-models
 tool: codex
 state: working
-task: null
+task: right-dissenter-freshness-diagnostic
 doing: "Implementing the approved 48-request freshness diagnostic and strong eligibility baseline."
-updated: 2026-10-04T20:14:11.995791+00:00
+updated: 2026-10-04T20:20:19.112342+00:00
 ---
 
 ## Notes

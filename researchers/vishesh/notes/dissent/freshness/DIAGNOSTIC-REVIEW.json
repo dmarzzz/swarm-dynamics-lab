@@ -1,0 +1,221 @@
+{
+  "study_id": "right-dissenter",
+  "verdict": "diagnostic",
+  "assessor": "vishesh/codex-decision-models",
+  "parent_attempt": "rd6-q0-a2",
+  "parent_handoff_sha256": "a5493a765b57b14270a6e3a4ea893162fe5809e5cbcf6f12bc79fbf4c90316a9",
+  "researcher_review": "not_required_by_owner_direction",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "The approved finite contrast separates explicit eligibility assistance from context presence; broader dissent benefit remains a later question.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/PLAN.md",
+          "sha256": "e45dd6c4a16f196f5b64a7d3b3d56d8be8c093bc3bf3da27de53be72d4499299"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-QUALITY.json",
+          "sha256": "2f2584f9fabbe9b87a30fe8c21a262e2998e0475ab6837b73b4fea3086698867"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Six inspected semantic roots across three domains and two valences, each fresh/expired, cover the failure without creating a purported holdout.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/PLAN.md",
+          "sha256": "e45dd6c4a16f196f5b64a7d3b3d56d8be8c093bc3bf3da27de53be72d4499299"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-QUALITY.json",
+          "sha256": "2f2584f9fabbe9b87a30fe8c21a262e2998e0475ab6837b73b4fea3086698867"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Raw/explicit and context off/on cells preserve text, timestamps, choice order and provider. Fresh positive and negative controls reject all-deferral.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/PLAN.md",
+          "sha256": "e45dd6c4a16f196f5b64a7d3b3d56d8be8c093bc3bf3da27de53be72d4499299"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-QUALITY.json",
+          "sha256": "2f2584f9fabbe9b87a30fe8c21a262e2998e0475ab6837b73b4fea3086698867"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "RD6 expired-evidence competence failed. This diagnostic studies that gap and does not require or claim a prior passing freshness screen.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/PLAN.md",
+          "sha256": "e45dd6c4a16f196f5b64a7d3b3d56d8be8c093bc3bf3da27de53be72d4499299"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-QUALITY.json",
+          "sha256": "2f2584f9fabbe9b87a30fe8c21a262e2998e0475ab6837b73b4fea3086698867"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        }
+      ],
+      "next_action": "Run the approved bounded diagnostic after offline and current operational admission; do not unlock D0.",
+      "acceptance_check": "Complete 48 assigned cells or preserve incomplete outcomes; inspect every miss and keep fresh qualification separate."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Per-case corrected/harmed pairs, all-assignment missingness bounds and separate harmful commitment/deferral endpoints are prospectively defined.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/PLAN.md",
+          "sha256": "e45dd6c4a16f196f5b64a7d3b3d56d8be8c093bc3bf3da27de53be72d4499299"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-QUALITY.json",
+          "sha256": "2f2584f9fabbe9b87a30fe8c21a262e2998e0475ab6837b73b4fea3086698867"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "48 dependent requests describe 12 task/age cases and six semantic roots; finite diagnosis without population precision or hosted repeat reliability.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/PLAN.md",
+          "sha256": "e45dd6c4a16f196f5b64a7d3b3d56d8be8c093bc3bf3da27de53be72d4499299"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-QUALITY.json",
+          "sha256": "2f2584f9fabbe9b87a30fe8c21a262e2998e0475ab6837b73b4fea3086698867"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "One stateless native resolver with frozen source-only or scripted context; eligibility is actor-visible metadata, never evaluator labels or operator memory.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/PLAN.md",
+          "sha256": "e45dd6c4a16f196f5b64a7d3b3d56d8be8c093bc3bf3da27de53be72d4499299"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-QUALITY.json",
+          "sha256": "2f2584f9fabbe9b87a30fe8c21a262e2998e0475ab6837b73b4fea3086698867"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Fresh namespace and append-only original-ledger reservations preserve RD6. Single attempt, ordered byte hashes and original relay/worker reconciliation required.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/PLAN.md",
+          "sha256": "e45dd6c4a16f196f5b64a7d3b3d56d8be8c093bc3bf3da27de53be72d4499299"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-QUALITY.json",
+          "sha256": "2f2584f9fabbe9b87a30fe8c21a262e2998e0475ab6837b73b4fea3086698867"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Original split cap and 506-call baseline retained; at most 48 calls, 554 lifetime, 60-minute exclusive allocation and 30-minute stage. No automatic successor.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/PLAN.md",
+          "sha256": "e45dd6c4a16f196f5b64a7d3b3d56d8be8c093bc3bf3da27de53be72d4499299"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-QUALITY.json",
+          "sha256": "2f2584f9fabbe9b87a30fe8c21a262e2998e0475ab6837b73b4fea3086698867"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen cases/source, retained native requests/responses and repaired saved-data finalize are required; native runtime remains an admission gate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/PLAN.md",
+          "sha256": "e45dd6c4a16f196f5b64a7d3b3d56d8be8c093bc3bf3da27de53be72d4499299"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-QUALITY.json",
+          "sha256": "2f2584f9fabbe9b87a30fe8c21a262e2998e0475ab6837b73b4fea3086698867"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Full 48-cell native replay and all-assigned table planned; fixture and native evidence explicitly separated. Rendering checked during closeout.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/freshness/PLAN.md",
+          "sha256": "e45dd6c4a16f196f5b64a7d3b3d56d8be8c093bc3bf3da27de53be72d4499299"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-QUALITY.json",
+          "sha256": "2f2584f9fabbe9b87a30fe8c21a262e2998e0475ab6837b73b4fea3086698867"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/results/q0-a2/trace-audit.json",
+          "sha256": "2a76abf9220b5b07c990a3ceb6129da05e5ee752ad6803effe982c68dff1e61e"
+        }
+      ]
+    }
+  ]
+}

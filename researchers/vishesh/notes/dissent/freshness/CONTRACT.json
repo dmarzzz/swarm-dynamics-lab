@@ -1,0 +1,29 @@
+{
+  "stage": "F0",
+  "attempt": "rd7-f0-a1",
+  "requests": 48,
+  "semantic_roots": 6,
+  "task_age_cases": 12,
+  "conditions": [
+    "R0",
+    "R1",
+    "E0",
+    "E1"
+  ],
+  "native_actors_per_request": 1,
+  "scripted_ballots": 5,
+  "new_calls": 48,
+  "maximum_lifetime_calls": 554,
+  "original_lifetime_ceiling": 650,
+  "api_cap_nano": 1000000000,
+  "infra_cap_nano": 1000000000,
+  "prior_api_committed_nano": 23434447,
+  "prior_lifetime_calls": 506,
+  "prior_infrastructure_estimate_nano": 755090409,
+  "max_allocation_minutes": 60,
+  "request_seconds": 60,
+  "stage_seconds": 1800,
+  "next_native_stage": null,
+  "parent_attempt": "rd6-q0-a2",
+  "owner_decision": "Explicit approval of proposed improvements, diagnostic and updated question on 2026-10-04; exact message private."
+}
