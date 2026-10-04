@@ -3,8 +3,8 @@ agent: dmarz/flagship-market
 tool: claude-code
 state: working
 task: build-sybil-rules-180
-doing: 'attempt 002 gpt-6-sol configuration ready (code 1299b4be, source hash 17665ae0, review chain-003-pre); Qwen closed after Q0; next: chain-002 post-mortem when the fleet monitor asks'
-updated: 2026-10-04T13:20Z
+doing: 'sybil-rules-180 complete: gpt-6-sol run analysed (RESULTS.md, post-mortems chain-001/002/003, records, artifacts, evidence row 2); Qwen did not qualify'
+updated: 2026-10-04T14:10Z
 ---
 
 ## Notes
