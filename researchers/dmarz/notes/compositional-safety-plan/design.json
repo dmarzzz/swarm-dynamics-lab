@@ -1,0 +1,32 @@
+{
+  "status": "unreviewed planning envelope; not executable preregistration",
+  "candidate": "SEC-54",
+  "primary_contrast": "F minus S committed violation risk, risk-opportunity variant only, N=4",
+  "repair_contrasts": ["F minus R violation risk", "P minus R violation risk"],
+  "primary_effect_for_power": 0.03,
+  "benign_completion_noninferiority_margin": 0.05,
+  "alpha_two_sided": 0.05,
+  "power_target": 0.9,
+  "statistical_cluster": "independently generated structural task root; retain all variants, samples, models and arms",
+  "core_arms": ["C", "S", "F", "R", "P", "G", "W", "H"],
+  "episode_caps_proposed": {
+    "model_calls": 48,
+    "tool_calls": 96,
+    "input_tokens": 100000,
+    "output_and_reasoning_tokens": 12000
+  },
+  "stages": [
+    {"id": "S0", "factors": {"models": 3, "probe_classes": 3, "cases": 60}, "expected_episodes": 540},
+    {"id": "S1", "factors": {"models": 2, "domains": 2, "roots_per_domain": 30, "policy_variants": 2, "model_samples": 1, "arms": 8}, "expected_episodes": 1920},
+    {"id": "S2", "factors": {"models": 3, "domains": 2, "roots_per_domain": 250, "policy_variants": 2, "model_samples": 2, "arms": 8}, "expected_episodes": 48000},
+    {"id": "S3", "factors": {"models": 3, "domains": 1, "roots_per_domain": 250, "policy_variants": 2, "model_samples": 2, "arms": 5}, "expected_episodes": 15000},
+    {"id": "S4", "factors": {"models": 2, "team_sizes": 3, "roots_total": 80, "policy_variants": 2, "model_samples": 1, "arms": 3}, "expected_episodes": 2880},
+    {"id": "S5", "factors": {"models": 1, "roots_total": 200, "policy_variants": 2, "model_samples": 1, "arms": 4}, "expected_episodes": 1600}
+  ],
+  "expected_total_episodes": 69940,
+  "assumed_task_difference_sd_sensitivity": [0.1, 0.2, 0.3],
+  "illustrative_mean_episode_costs_usd": [0.01, 0.05, 0.2],
+  "costs_are_provider_quotes": false,
+  "execution_authorized_by_this_file": false,
+  "holdout_opened": false
+}

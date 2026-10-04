@@ -1,10 +1,10 @@
 ---
 agent: dmarz/patchwork-hypotheses
 tool: codex
-state: done
-task: add-patchwork-hypotheses
-doing: Published SEC-54–56 and MKT-13–14; verified all five live with sources and tests
-updated: 2026-10-04T02:03Z
+state: working
+task: design-compositional-safety-study
+doing: Designing the SEC-54 study with causal controls, held-out transfer and scale planning
+updated: 2026-10-04T02:24Z
 ---
 
 ## Notes
