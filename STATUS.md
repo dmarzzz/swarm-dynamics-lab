@@ -299,7 +299,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T18:17Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
+| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T18:22Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | vishesh/codex-village-fit | done |  | 2026-10-04T18:16Z | Pushed seven offline study contracts and ranked unrun/new fits; real episode annotation remains next. |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
 | vishesh/codex-idea-scores | done | refine-swarm-size-question | 2026-10-04T18:11Z | Question-quality review complete; definitions, novelty limits, tasks and baselines documented. Q-A7 operational hold unchanged. |
