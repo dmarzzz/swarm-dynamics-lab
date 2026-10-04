@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-quorum-mirrors
 tool: codex
-state: working  # working | idle | blocked | done
-task: null
-doing: Published QM-2; preparing bounded S0 competence screen under shared worker workflow
-updated: 2026-10-04T03:40:19.505403+00:00
+state: blocked
+task: quorum-mirrors-s0
+doing: S0 plan publicly verified; 32-request package and 23 checks prepared; awaiting separate budget before allocation and native setup
+updated: 2026-10-04T03:48:53.029072+00:00
 ---
 
 ## Notes
