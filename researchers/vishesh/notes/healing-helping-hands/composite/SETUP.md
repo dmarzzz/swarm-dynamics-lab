@@ -8,8 +8,8 @@ Follow [the setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-S
 |---|---|---|---|
 | G0 | pass for bounded instrument scope | User directive and PLAN.md scope; previous practical/POST-02.md | No formal promotion |
 | G1 | pass | PLAN.md written before composite implementation, 2026-10-04 UTC | Commit |
-| G2 | pending | Implementation and offline checks outstanding | Build and verify |
-| G3 S0 | pending | Public registration, claim, budget and source receipts outstanding | Register then verify |
+| G2 | pass, runtime checks pending | 16 composite + 44 existing offline checks; S0-PRE.md | Verify deployed runtime |
+| G3 S0 | blocked | Initial public C1 plan/TLDR verified; allocation refused due existing claim; S0-PRE.md | Resolve exclusive allocation, freeze/register instrument |
 | G4 | pending | No composite observations yet | Run S0 after G3 |
 | G5 | pending | No execution yet | Reconcile and close |
 

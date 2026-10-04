@@ -71,5 +71,17 @@
   "tools": [],
   "cache": "one frozen extraction tape per seed and arm, reused across paired counterfactual worlds",
   "evaluator_access": false,
-  "global_corpus_access": false
+  "global_corpus_access": false,
+  "active_revision": {
+    "version": "C1",
+    "definition": "composite/agent-definition.json",
+    "plan": "composite/PLAN.md",
+    "arms": [
+      "qwen",
+      "jev",
+      "qwen+jev"
+    ],
+    "status": "qualification pending",
+    "legacy_fields_below": "Historical v2.3 definitions; not active C1 assignments"
+  }
 }

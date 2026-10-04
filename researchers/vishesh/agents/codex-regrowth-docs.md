@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: idle
-task: healing-practical-repair
-doing: Practical capacity comparison published; strong central control wins, model qualification remains blocked
-updated: 2026-10-04T04:05Z
+state: working
+task: healing-qwen-jev
+doing: Registered Qwen plus Jev C1; instrument tests pass; resolving exclusive fleet allocation before launch
+updated: 2026-10-04T04:21Z
 ---
 
 ## Notes

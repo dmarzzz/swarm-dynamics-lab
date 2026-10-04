@@ -1,0 +1,33 @@
+{
+  "version": "C1",
+  "population": 200,
+  "arms": [
+    "qwen",
+    "jev",
+    "qwen+jev"
+  ],
+  "historical_only": [
+    "laya",
+    "qwen+laya"
+  ],
+  "identity": "stable curator ID 0..199; query claim ID modulo 20",
+  "composite": {
+    "proposal": "qwen3:0.6b",
+    "decision_head": "typesafe/jev-1.13",
+    "attachment": "one Jev decision head on every curator",
+    "visible_to_head": [
+      "claim",
+      "original report",
+      "fallible Qwen label"
+    ],
+    "decision": "Jev final label; may override Qwen",
+    "shared_qwen_call": "same measured proposal supplies paired Qwen-only control",
+    "memory": "stateless extraction; deterministic source records and withdrawal notices during propagation"
+  },
+  "generation": "qwen_trace.py copies frozen provider prompt/options and adds raw provenance",
+  "context": "original source only; no evaluator truth, future observations or peer proposals during extraction",
+  "communication": "practical/engine.py previous-round four-neighbor packets, cap16",
+  "agent_steps": "one model-backed extraction per document, followed by 30 programmed communication rounds",
+  "qualification": "complete composite and Jev-only >=85% overall and >=70% each class; Qwen-only descriptive control",
+  "reset": "fresh per-report request and attempt namespace, no in-place failed-attempt resume"
+}
