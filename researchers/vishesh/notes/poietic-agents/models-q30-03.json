@@ -1,0 +1,52 @@
+{
+  "version": "Q30-03-prospective",
+  "checked_utc": "2026-10-04T20:37:00Z",
+  "models": {
+    "generalist": {
+      "requested_model_id": "openai/gpt-oss-120b",
+      "backend_revision": "openai/gpt-oss-120b",
+      "catalog_name": "DeepInfra | openai/gpt-oss-120b",
+      "provider_tag": "deepinfra/bf16",
+      "provider_name": "DeepInfra",
+      "accepted_response_model_ids": [
+        "openai/gpt-oss-120b"
+      ],
+      "kind": "chat",
+      "input_usd_per_token": 3.7e-08,
+      "output_usd_per_token": 1.7e-07,
+      "catalog_url": "https://openrouter.ai/api/v1/models/openai/gpt-oss-120b/endpoints",
+      "settings": {
+        "max_input_tokens": 8192,
+        "max_output_tokens": 1024,
+        "allow_fallbacks": false,
+        "temperature": 0,
+        "reasoning_effort": "low"
+      },
+      "qualification_status": "unqualified",
+      "wire_format_policy": "single-json-fence-v1"
+    },
+    "cheap_generative": {
+      "requested_model_id": "openai/gpt-oss-20b",
+      "backend_revision": "openai/gpt-oss-20b",
+      "catalog_name": "DeepInfra | openai/gpt-oss-20b",
+      "provider_tag": "deepinfra/bf16",
+      "provider_name": "DeepInfra",
+      "accepted_response_model_ids": [
+        "openai/gpt-oss-20b"
+      ],
+      "kind": "chat",
+      "input_usd_per_token": 3e-08,
+      "output_usd_per_token": 1.4e-07,
+      "catalog_url": "https://openrouter.ai/api/v1/models/openai/gpt-oss-20b/endpoints",
+      "settings": {
+        "max_input_tokens": 8192,
+        "max_output_tokens": 1024,
+        "allow_fallbacks": false,
+        "temperature": 0,
+        "reasoning_effort": "low"
+      },
+      "qualification_status": "unqualified",
+      "wire_format_policy": "single-json-fence-v1"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "claim_lifetime_seconds": 321.0,
+  "allocated_usd_per_hour": 0.07143,
+  "new_infrastructure_usd": 0.0063691749999999995,
+  "cumulative_infrastructure_usd": 0.10724420833333334,
+  "new_api_exposure_usd": 0.000552611,
+  "new_known_api_usd": 0.000552611,
+  "cumulative_api_exposure_usd": 0.499883132,
+  "calls_total": 89,
+  "new_calls": 10,
+  "new_uncertain_calls": 0,
+  "unresolved_historical_calls": 38,
+  "owner_cumulative_study_cap_usd": 10,
+  "prior_history_preserved": true,
+  "claim_released": true,
+  "machine_destroyed": false,
+  "cumulative_total_exposure_usd": 0.6071273403333334
+}

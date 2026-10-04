@@ -1,11 +1,11 @@
 {
   "schema": "poietic-launch-state-v0.2",
-  "updated_utc": "2026-10-04T20:39:10.738922+00:00",
+  "updated_utc": "2026-10-04T20:47:45.856611+00:00",
   "study": "poietic-agents",
   "design_status": "D0-02 closed; requested 30-member cheap-model feasibility plan in preparation",
   "implementation_status": "131 runtime checks; original history retained",
-  "execution_status": "Q30-01 completed and reviewed; Q30-02 prepared, not launched",
-  "qualification_status": "Q30-01 both candidate contracts failed",
+  "execution_status": "Q30-02 completed and reviewed; Q30-03 prepared",
+  "qualification_status": "Both Q30-02 models failed schema",
   "scientific_conclusion": "No30-member swarm efficacy result; candidate readiness failed.",
   "process_compliance": "D0 admitted; original authority unchanged; trace/cost/artifact closeout and scientific review complete",
   "publication": {
@@ -39,7 +39,7 @@
   "authorized_infrastructure_usd": 0.5,
   "planned_run_count": 3,
   "started_run_count": 9,
-  "next_action": "Admit fresh GPT-OSS120B/20B qualification after149offline tests; preserve79-call original authority.",
+  "next_action": "Admit prompt-only Q30-03 diagnostic; main remains blocked.",
   "evidence": {
     "confidence": 0,
     "scale_max": 4,
@@ -62,8 +62,8 @@
     "A2 development selection and construction receipt",
     "S1 budget and stage admission"
   ],
-  "observed_model_calls": 79,
-  "actual_poietic_api_spend_usd": 0.017249753,
+  "observed_model_calls": 89,
+  "actual_poietic_api_spend_usd": 0.017802364,
   "host_claimed": false,
   "authorized_total_cumulative_usd": 10,
   "allocation_preparation": {
@@ -76,15 +76,15 @@
     "model_calls_observed": 40
   },
   "unresolved_api_exposure_usd": 0.482080768,
-  "allocated_infrastructure_usd": 0.10087503333333334,
-  "cumulative_cost_upper_usd": 0.6002055543333333,
+  "allocated_infrastructure_usd": 0.10724420833333334,
+  "cumulative_cost_upper_usd": 0.6071273403333334,
   "successor_scope_approved": true,
   "deadline_renewal_approved": true,
   "deadline_renewal_applied": true,
-  "known_settled_api_usd": 0.017249753,
+  "known_settled_api_usd": 0.017802364,
   "diagnostic_passed": false,
   "scientific_review_complete": true,
   "D0_deadline_renewal_applied": false,
   "operational_finalize": "completed offline; immutable handoff retained privately; separate owning scientific review complete",
-  "latest_preparation": "Q30-02-PLAN.md"
+  "latest_preparation": "Q30-03-PLAN.md"
 }

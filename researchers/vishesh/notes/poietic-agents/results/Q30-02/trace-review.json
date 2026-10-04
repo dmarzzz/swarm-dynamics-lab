@@ -1,0 +1,73 @@
+{
+  "attempt": "Q30-02",
+  "assigned": 96,
+  "started": 10,
+  "terminal": 96,
+  "unstarted": 86,
+  "reviewed_started": 10,
+  "complete_saved_trace_replay": true,
+  "summary_recomputed": true,
+  "checks": [
+    {
+      "id": "Q30-02:generalist:0:0",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-02:generalist:0:1",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-02:generalist:0:2",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-02:generalist:0:3",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-02:generalist:1:0",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-02:generalist:1:1",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-02:cheap_generative:0:0",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-02:cheap_generative:0:1",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-02:cheap_generative:0:2",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-02:cheap_generative:0:3",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "billing_replayed": true
+    }
+  ],
+  "review_scope": "All10visible outputs and effective contexts; no hidden reasoning claim; same-author audit."
+}

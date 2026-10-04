@@ -62,3 +62,7 @@ The owner approved reuse of sim-vishesh, increased the cumulative study ceiling 
 ## Q30-01 closeout and Q30-02 preparation —2026-10-04
 
 Q30-01 reviewed:25native starts,96terminal, both roles failed. [Post-mortem](reviews/Q30-01-post.md), [eleven-dimension assessment](reviews/Q30-01-scientific.json), [cost](results/Q30-01/cost-closeout.json). Original79calls preserved; conservative cumulativeUSD0.6002055543333333/10. Claim released, noworker. Necessary next diagnostic [Q30-02](Q30-02-PLAN.md) tests a different cheap reasoning family; no threshold relaxation and no swarm result.
+
+## Q30-02 reviewed / Q30-03 prospective repair
+
+[Closeout](reviews/Q30-02-post.md) and [scientific assessment](reviews/Q30-02-scientific.json):10native starts,96terminal, both roles fail schema. Alltraces replay;USD0.6071273403333334 cumulative,89calls retained; claim426released431. [Q30-03](Q30-03-PLAN.md) targets the repeated all-task output and wrong proposal wrapper, same models and gate, no main admission.
