@@ -3,15 +3,15 @@ id: influence-native-rerun
 type: task
 title: Run the revised procurement influence experiment
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-experiments
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-experiments
 depends_on: []
 topics: []
-updated: 2026-10-04T15:30Z
+updated: 2026-10-04T16:44Z
 history:
 - '2026-10-04T02:51Z released by vishesh/codex-experiments: Native Q0-Q3 attempts, measured replays and post-mortems published. Q2 fully valid but failed competence; Q3 diagnostic passed without opening comparison gate. Full fresh qualification and paired comparison require additional authorized budget. Dedicated claim released in agentops PR 64; no workers remain.'
 - '2026-10-04T03:43Z released by vishesh/codex-experiments: Iteration 2 implemented and offline validated: 24 tests, 12/12 scripted decisions, zero paid calls. Q4 native run awaits additional authorized shared budget, review-influence-q4-dossiers and fresh exclusive fleet allocation. See scenario/ITERATION-02.md.'
@@ -20,6 +20,7 @@ history:
 - '2026-10-04T05:57Z released by vishesh/codex-experiments: D3 completed and published:complete90/90 candidate checks but76 correct,all arms4/6;typed-fact policy comparison remains next prospective design. D4 and S1 unrun. Dedicated fleet PR171 released;24 hub artifacts verified;no worker running. See RESULTS-D3.md and native-D3-01-post.md.'
 - '2026-10-04T06:28Z released by vishesh/codex-experiments: D5 prepared, not launched: source 528c4f70; 59 tests and 24/24 scripted decisions pass, zero model calls. See RUN-D5.md and reviews/D5-readiness.json. No machine held; fresh preserved-budget and dedicated-host admission needed at future launch. Researcher review optional.'
 - '2026-10-04T15:30Z released by vishesh/codex-experiments: Published e65be088: completed D3 eleven-dimension scientific review and reproducible six-case transition audit; D5 confirmed not started, zero new model calls/spend, unchanged budget. Expired idle allocation released; authorized central dispatch unavailable and specific direct exception unresolved. See scenario/RUN-HANDOFF.md and D5-not-started-post.md. Frozen D5 scope preserved; no successor or broader comparison launched.'
+claimed_at: 2026-10-04T16:44Z
 ---
 
 ## Goal
