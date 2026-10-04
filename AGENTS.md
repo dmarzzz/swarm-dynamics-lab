@@ -318,9 +318,16 @@ satisfy this requirement. Offline local unit tests do not need a fleet allocatio
   verify uploads, then release; the owner handles teardown of temporary machines through agentops.
   Do not interrupt or move existing runs merely to apply this new rule retroactively.
 
-Owner clarification, 2026-10-04 UTC: for Immune Response, provision a new `sim-immune-response`
-machine owned by vishesh. Do not allocate an existing dmarz-owned or dmarz-named machine merely
-because it is free. The prior sim-dmarz-3 claim was released without running an experiment.
+Owner correction, 2026-10-04 UTC: Immune Response needs its own dedicated machine within
+Dmarz's existing DigitalOcean account/team and Swarm Lab provisioning setup. Do not borrow an
+existing dmarz-named machine or provision through the user's personal/default DigitalOcean account.
+The earlier interpretation that researcher ownership authorized a different billing account was wrong.
+Before any create/apply, match the credential's actual account/team to an explicit approved identity
+from the established Swarm Lab provisioner, verify the infrastructure state/project and exact resource
+plan, and fail closed if identity or authorized access is unavailable. A fleet owner field, host name,
+working credential or local default context is not account authorization. Record verification privately;
+never publish account identifiers or secrets. Do not relaunch the mistaken deployment. The original
+unused sim-dmarz-3 claim and the mistaken sim-immune-response deployment remain historical records.
 
 The detailed launch checklist is
 [researchers/vishesh/notes/experiment-machine-workflow.md](researchers/vishesh/notes/experiment-machine-workflow.md).
