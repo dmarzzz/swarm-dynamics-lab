@@ -1,0 +1,62 @@
+# Pre-run assessment: chain-002 (S0, P0, Q0, S1), gpt-6-luna on attempt 001's packets
+
+- Experiment / owner / stage: trust-credit-qwen (research program v5, line T) / dmarz (attempt 002 built by dmarz/openai-route for dmarz/fleet-monitor; operator: dmarz/fleet-monitor) / one chain of four stages, batches `s0-002`, `p0-002`, `q0-002`, `s1-002`.
+- Parent attempt and previous post-mortem: attempt 001 (`qwen/qwen3.7-flash` via OpenRouter; code `d3219ceb`, source hash `e24e85f5…`) ran once on 2026-10-04: S0 216/216, P0 1/1, Q0 23/23, S1 504/504, no failed call, USD 0.052; post-run review [chain-001-post.md](chain-001-post.md) (`complete_valid_result`). Nothing in that post-mortem asks for a repair. This attempt is not the repair: it is a second model on the identical packets, the plan in the pre-registration's section "Attempt 002: gpt-6-luna" (written before this code) with its dated implementation note. Its review is this file; [chain-001-pre.md](chain-001-pre.md) stays as the record of attempt 001.
+- Why: dmarz, 2026-10-04 12:00Z, asked for experiments on "opus 5 or an oai model" while the Anthropic organisation is at its monthly usage limit (relayed by dmarz/fleet-monitor); Opus 5 is refused by the same limit.
+- Status: **ready** for dmarz/fleet-monitor's same-researcher check and for queueing. Not launched by this assessment; no model call has been made for this attempt.
+- Review status: cross-researcher review is waived by dmarz for these exploratory runs; dmarz/fleet-monitor's check is a same-researcher check and nothing more; the run is not independently reviewed. This assessment is the builder's own.
+- Question and decision: the scripted primary is identical by construction (+20.75 seats; not a new observation). What this attempt measures is gpt-6-luna's answers per cell (rare skill correct, wrong, abstained; wrong equal to the fabricated value) and, after the run, the paired differences gpt-6-luna minus `qwen/qwen3.7-flash` by root and cell. Never pooled.
+- Uninformative if: gpt-6-luna fails Q0 (S1 is then not run; the failing answers are read and the attempt ends), or the interface probe fails.
+
+## Changes and unresolved issues
+
+| Issue / prior evidence | Change or diagnostic | Expected effect | Acceptance check | Owner |
+|---|---|---|---|---|
+| Anthropic organisation at its monthly limit; attempt 001 is finished | second model: `gpt-6-luna` via OpenAI Chat Completions, adapter `src/provider.py` = pipeline reference `openai_provider.py` (swarm-lab main 8290d7ad), copied unchanged | runs on an available provider | sha256 pinned by a selftest and compared with the reference file when present; the adapter's 28 tests | builder |
+| Pairing with Qwen needs identical inputs | same simulator, roots, audits, admission, packets and instruction text | answers pair by assignment id | test: P0, Q0, S1 (and S0, set b) stage digests equal attempt 001's manifest (`7ff52043`, `03800f82`, `1afebafd`) | builder |
+| Attempt 002 was mapped to repair set b | `qualification.set: a` in the design: the same 24 clean fixtures as attempt 001 (a different model needs its own qualification on them); set b stays frozen and unused | gpt-6-luna is qualified on the same test Qwen passed | test asserts set a and P0 = first fixture of set a | builder |
+| JSON-object mode requires the word "json" in the messages | the frozen instruction already says "JSON object"; no prompt change | instruction byte-identical to attempt 001 (hash pinned) | test; adapter refuses before reserving otherwise | builder |
+| Reasoning tokens count against `max_completion_tokens` | 1,500 at effort `low`; a response cut by the limit is `truncated_output` with its reasoning count kept | room for reasoning plus a ~60-character answer | adapter tests; P0 reports reasoning tokens | chain |
+| OpenAI reports no cost | cost computed from the pinned gpt-6-luna price row; uncached input of prompts ≥ 1,024 tokens priced at the cache-write price (upper bound) | ledger never under-counts | design prices = adapter `PRICES` row (checked at start) | builder |
+| A 429 can be a quota stop, not a rate limit | `insufficient_quota`/billing words pause 60 s steps up to 1,200 s, then `provider_billing_stopped`; `chain.py resume` accepts it (and attempt 001's `provider_credit_balance_low`) | outage is not a failed call | rehearsal chain (c) | builder |
+| Server without attempt 001's ledger | `READY.yaml` `ledger: fresh`: this attempt runs on a fresh ledger of its own, with its own cap; paid runs at attempt 001's source hash are not this attempt's | launcher admits the attempt on sim-dmarz-9 | launcher 7560167 rule | operator |
+| Launcher could start this code for another model | worker asserts `STUDY_MODEL` (if set) is `gpt-6-luna` and `STUDY_PROVIDER` is `openai` | a wrong `--model` stops before any call | selftest | builder |
+| Live behaviour unverified: exact `insufficient_quota` body, cache-write usage field name, rate-limit header names | P0 is one call | first real observation costs one call | P0 gate and probe metadata | operator |
+| One existing strict-stage test was timing-sensitive (a freed slot can take one more unit before the failure is seen) | tolerance widened from `23 - workers` to `23 - 2 × workers` not-started rows; the stop rule itself is unchanged | setup's selftest does not fail on a race | 4 consecutive full runs OK | builder |
+
+## Frozen execution plan
+
+- Code commit: `2c399a6ae3d1158287e786c76ddb24b34ace75ca` on `main`. Source hash: `5155d2c6ec89a232db0c46bd025f2dfba5759991cac1b0c6a27b806d916f4b84` (`study.source_hash()`: design.yaml, experiment.yaml, requirements.txt and every `src/*.py`). `READY.yaml` carries the same hash and `selftests: 71`.
+- Launch commit: the commit named in the run request, the first commit on `main` that contains this review and has this source hash. No launch hash is written in this file.
+- Model settings: `gpt-6-luna`, OpenAI Chat Completions; body exactly `model`, `reasoning_effort: low`, `max_completion_tokens: 1500`, `response_format: {type: json_object}`, `messages` (system instruction, user packet); no temperature or top_p. Accepted response model: `gpt-6-luna` or its dated form `gpt-6-luna-YYYY-MM-DD`. Prices (Standard tier, USD per million, from developers.openai.com/api/docs/pricing retrieved 2026-10-04 12:10Z): input 0.10, cached input 0.01, cache write 0.125, output 0.50.
+- Assignment manifest: `manifest.json`, digest `e09119d1f0fcad81876d7b87cf94cf639725f026aa20007f8eea9be4a0129f50`, identical to attempt 001's (ids and packet hashes); only `attempt` and the request byte counts (new body shape) changed.
+
+| Stage | Batch | Assignments | Hard `max_calls` | Largest request (bytes) | Stage digest (first 12) |
+|---|---|---|---|---|---|
+| S0 | `s0-002` | 216 | 0 | 5,875 | `d973fce7881b` |
+| P0 | `p0-002` | 1 (first fixture of set a) | 1 | 5,846 | `7ff52043f055` |
+| Q0 | `q0-002` | 23 (set a) | 23 | 5,875 | `03800f8242fa` |
+| S1 | `s1-002` | 504 (432 attacked + 72 clean) | 504 | 5,870 | `1afebafd4185` |
+
+- Ledger: fresh ledger. This attempt's ledger file is its own (`STUDY_BUDGET_LEDGER` set by the launcher on the new server); it never mixes with attempt 001's. Study cap `max_attempted_calls` 552 as before; this attempt's total is 528 (`READY.yaml` `max_calls_total`). `max_failed` 6.
+- Gates: as attempt 001 (see [chain-001-pre.md](chain-001-pre.md)), except P0 checks the model id instead of a named provider (OpenAI has no provider routing), and reasoning tokens are expected and reported, not refused. Thresholds unchanged: Q0 over all 24 fixtures, every structure valid, at least 7 of 8 exact in `full` and in `sparse`, null on the withheld fact in 8 of 8 `missing`; input-ceiling projection 8,000 tokens; S1 cost projection within the cap.
+- Failure rule: part 1 yes; part 2 not applicable (no token-counting endpoint; byte bound); part 3 yes (`max_failed` 6 in S1, integrity failures stop at once, S0/P0/Q0 strict); part 4 yes with the OpenAI detector (HTTP 402, or 400/403/429 whose code or message names insufficient_quota, quota, billing, credit, balance, insufficient, a usage, spend or hard limit), resumable with `python src/chain.py resume` (batch `s1-002-r1`) inside the unchanged S1 cap. Transport re-send: HTTP 429 (rate limit), 500, 502, 503, 504, at most twice, 2 s then 6 s, `retry-after` up to 20 s.
+- Exact command (agentops launcher): `python3 scripts/run-ready-chain.py trust-credit-qwen <launch commit> setup --host sim-dmarz-9`, then `... chain --host sim-dmarz-9 --confirm-paid`, `... status`, `... verify`. The launcher sends `SWARM_OPENAI_API_KEY` only. On the server: `python src/chain.py run --stages S0,P0,Q0,S1`.
+- Maximum calls, time, spend, workers:
+  - 528 calls; 640 transport attempts; 4 in flight.
+  - Dollar cap USD 5 on settled cost plus open reservations. Upper bound on settled spend: the 528 paid requests total 3,084,696 bytes, so input ≤ USD 0.39 even with every byte a token at the cache-write price; output ≤ 528 × 1,500 × 0.50 / 10^6 = USD 0.40; at most USD 0.79. Expected at about 0.45 tokens per byte (attempt 001's measured ratio on the same packets) and a few hundred output tokens: USD 0.2 to 0.4 (the stub rehearsal settled USD 0.24 at 240 output tokens per call). One reservation is (5,875 × 0.125 + 1,500 × 0.50) × 10 = 14,844 millionths of a dollar; at most 4 in flight plus 6 failed without usage are open, under USD 0.16.
+  - Request load: at 4 in flight and 3 to 10 s per call, 24 to 80 requests per minute and at most 0.5 million input tokens per minute by the byte bound, against the organisation's 10,000 requests and 10,000,000 tokens per minute for gpt-6-luna.
+  - Time: 120 s per request; 3,600 s per stage; 7,200 s for the chain. S1 is 126 calls per worker: under the stage limit while the mean call takes less than 28 s.
+- Missing-data policy: unchanged; every assignment ends completed, failed or not started; model outcomes complete-case with denominators and bounds; the primary does not depend on model calls.
+- Checks run offline on the code commit, 2026-10-04 (builder's Mac, Python 3.9, no network, no model call):
+  - `python3 src/selftest.py`: `Ran 71 tests ... OK` (about 50 s), including the adapter's 28 tests, the attempt-001 packet-identity test and the launcher model/provider guard. Four consecutive full runs passed after the tolerance change above.
+  - `python3 src/worker.py --stage S0 --attempt a002-offline`: 216 of 216 rows valid, 0 violations, both fixture sets pass under the reference, primary +23.375 seats on the engineering roots, 0 calls.
+  - `python3 src/manifest.py --check`: current, digest as above.
+  - `python3 src/rehearse.py --hub-dir <local hub copy>` (throwaway hub on 127.0.0.1, endpoint replaced by an in-process stub in the OpenAI response shape, 200 reasoning tokens per answer), 98 s: (a) reference stub: S0, P0, Q0, S1 `done` with 0 / 1 / 23 / 504 calls, ledger 528 calls, `chain verify` exit 0; (b) never-abstaining stub: exit 3, `stopped_at_gate` at Q0 (`gate_failed`), no S1 run on the hub, 24 calls; (c) a 429 `insufficient_quota` after 150 S1 answers that does not clear: S1 stops with `provider_billing_stopped`, 150 valid, 0 failed, 354 not started, one pause, 4 reservations voided; then `chain resume` runs `s1-002-r1` with the 354 remaining units, every unit answered exactly once, ledger 504 calls in batch family `s1-002` (the exact cap) and 528 in total, `chain verify` exit 0. All 20 rehearsal checks true.
+  - Not tested: the live OpenAI route; the full suite under Python 3.12 (the launcher's setup runs it on the server).
+- Server claim, credentials, artifacts: exclusive claim `dmarz-trust-credit-qwen` for sim-dmarz-9, taken by the operator. `SWARM_OPENAI_API_KEY` in memory from the launcher. Results under `STUDY_RESULTS_DIR` outside the checkout; artifacts on the hub under `trust-credit-qwen/<run>`.
+- Gate decision and next action if this attempt fails: ready. If P0 fails on the interface, read the kept HTTP status and body; an adapter defect goes to dmarz/openai-route. If Q0 fails, read every failing answer; the attempt ends (no repair is planned here). If S1 stops on a billing outage, resume; otherwise write the post-mortem with the bounds.
+
+## Visualization mapping
+
+Mapping v1 in [VISUALIZATION.md](../VISUALIZATION.md), unchanged; the run id of each stage binds it. Frames, encodings and validation as in [chain-001-pre.md](chain-001-pre.md).

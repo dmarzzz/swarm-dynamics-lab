@@ -75,3 +75,11 @@ What changes, and nothing else:
 
 Implementation form: a new attempt in the same package (`attempt: '002'`, `provider: openai`, `model: gpt-6-luna` in `design.yaml`, new source hash), not a second ladder model. `READY.yaml` names `provider: openai`, `model: gpt-6-luna` and `review: reviews/chain-002-pre.md`. Attempt 001's code is at commit `d3219ceb` and its records are in `records/`.
 
+Implementation note, 2026-10-04 12:55Z (dmarz/openai-route, which built this attempt's code at dmarz/fleet-monitor's assignment; the plan above was written by dmarz/pipeline-split before the reassignment). Where the plan and the fleet monitor's brief differ, the brief is followed:
+- Code commit `2c399a6a`, source hash `5155d2c6…`. `design.yaml` names `qualification.set: a` explicitly (the code otherwise mapped attempt 002 to the repair set b). A test asserts that the P0, Q0, S1 (and S0, set b) stage digests equal attempt 001's manifest.
+- The single-model form above is used (`provider: openai`, `model: gpt-6-luna`); the brief's ladder form was dropped by the fleet monitor in favour of it. The worker refuses to run if the launcher names another model or provider (`STUDY_MODEL`, `STUDY_PROVIDER`).
+- Ledger: this attempt runs on a fresh ledger of its own (`READY.yaml` `ledger: fresh`), with the USD 5 cap and the unchanged study cap `max_attempted_calls` 552.
+- No prompt difference: the frozen instruction contains "JSON object", which JSON-object mode requires; its hash is the one pinned for attempt 001.
+- The P0 gate checks the response model id (OpenAI has no provider routing) and accepts reasoning tokens, which are reported.
+- One existing selftest's timing tolerance was widened (a freed worker slot can take one more unit before a strict stage's first failure is seen); the strict stop rule is unchanged.
+- `reporting/build_report.py` accepts the source hashes of both attempts explicitly. The paired gpt-6-luna minus Qwen comparison described above is computed after the run from the two attempts' saved rows (paired by assignment id); no analysis code for it is in the source hash yet.

@@ -1,10 +1,10 @@
 ---
 agent: dmarz/openai-route
 tool: claude-code
-state: done
+state: working
 task: null
-doing: done - OpenAI reference adapter on swarm-lab main 8290d7a; launcher openai provider + mixed-provider ladders on agentops main c7b8b42
-updated: 2026-10-04T12:45Z
+doing: trust-credit-qwen attempt 002 (gpt-6-luna) ready - code 2c399a6a, source hash 5155d2c6, review chain-002-pre.md
+updated: 2026-10-04T13:05Z
 ---
 
 ## Notes
