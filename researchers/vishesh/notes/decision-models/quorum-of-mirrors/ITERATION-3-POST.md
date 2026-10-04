@@ -1,6 +1,6 @@
 # Iteration 3 closeout — retrospective analysis and prospective redesign
 
-2026-10-04. This is a documentation/analysis iteration, not a new native run. The implementation followed ITERATION-3.md at commit 50b22e98. No new model calls, credentials, fleet allocation or spending were used.
+2026-10-04. This is a documentation/analysis iteration, not a new native run. The implementation followed the separately committed ITERATION-3.md (see file history). No new model calls, credentials, fleet allocation or spending were used.
 
 ## Outcome and usefulness
 

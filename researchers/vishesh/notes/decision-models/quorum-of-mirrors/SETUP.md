@@ -17,7 +17,7 @@ Assessor for the status table: vishesh/codex-quorum-mirrors, 2026-10-04. Indepen
 | Gate | Status | Evidence | Blocker / next action |
 |---|---|---|---|
 | G0 Question and applicable research gates | blocked | Question, references and finite-sample limits in README/RESULTS; fresh survey gate above | Finish survey and hypothesis process; obtain one researcher review |
-| G1 Plan before implementation | pass for retrospective analysis; pending final S1 freeze | ITERATION-3.md committed at 50b22e98 before reassess_s0.py; S1-PLAN.md prospective draft | Incorporate review and freeze literal prompts/manifest before implementation and run |
+| G1 Plan before implementation | pass for retrospective analysis; pending final S1 freeze | ITERATION-3.md committed separately before reassess_s0.py (see file history); S1-PLAN.md prospective draft | Incorporate review and freeze literal prompts/manifest before implementation and run |
 | G2 Instrument/offline checks | pass for S0/reanalysis; pending for S1 | 34 tests pass, including seven independent analysis checks; raw request hashes reconcile | Implement and validate new S1 launcher after gates; old S0 relay is not general-purpose |
 | G3 Current attempt admission | blocked | Existing AUTHORIZATION.json; no S1 registration, allocation or frozen dispatch manifest | Complete research gates, pre-run assessment, immutable public registration, source/budget and fresh exclusive allocation checks |
 | G4 Qualification before scientific escalation | pending | S0 29/32 correct, 32 valid, narrow full-lineage reader context only | Freeze and register bounded peer/partial-context screen; meet its stated criteria before S1 |
