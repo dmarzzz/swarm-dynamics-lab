@@ -1199,4 +1199,46 @@ artifacts:
           - data/sybil-followups/newcomer-s1/summary.json
           - /System/Library/Fonts/Supplemental/Arial.ttf
         commit: e2d7b6a577f8c3b938eaccfe2778e0de8742ba78-dirty
+  - id: vishesh-theseus-rule-audit
+    category: content
+    type: dataset
+    title: Theseus saved-evidence rule application audit
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-rule-audit/vishesh-theseus-rule-audit-v1.json
+        built_at: '2026-10-04T04:38:50Z'
+        note: vishesh/codex-theseus; retrospective audit of 48 saved calls; zero additional model calls.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Okay then, diagnose and dive into the rule application errors. You already identified that as the next useful
+          step. Why are you not just doing it and telling me?
+        ingredients:
+          - artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
+          - artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
+          - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/audit.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/ceiling-error-annotations.json
+        commit: 063f8ce933809fca994a8ef8e51b8d7712ed3347-dirty
+  - id: vishesh-theseus-rule-diagnosis
+    category: content
+    type: doc
+    title: Theseus rule application diagnosis
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-rule-diagnosis/vishesh-theseus-rule-diagnosis-v1.md
+        built_at: '2026-10-04T04:38:51Z'
+        note: vishesh/codex-theseus; retrospective audit of 48 saved calls; zero additional model calls.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Okay then, diagnose and dive into the rule application errors. You already identified that as the next useful
+          step. Why are you not just doing it and telling me?
+        ingredients:
+          - artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
+          - artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
+          - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/audit.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/ceiling-error-annotations.json
+        commit: 063f8ce933809fca994a8ef8e51b8d7712ed3347-dirty
 requires: '1.2'

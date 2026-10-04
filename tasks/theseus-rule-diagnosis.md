@@ -21,4 +21,4 @@ Audit all saved qualification decisions, exact prompts, scoring and systematic e
 
 ## Done when
 
-- Reconcile all 288 saved decisions, check input fidelity and evaluator agreement, document identifiable errors and limits, publish reproducible diagnostic report.
+- [x] Reconcile all 288 saved decisions, check input fidelity and evaluator agreement, document identifiable errors and limits, publish reproducible diagnostic report.

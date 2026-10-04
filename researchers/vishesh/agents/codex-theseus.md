@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: done
-task: theseus-v2-iteration
-doing: Bounded iteration complete; joint qualification failed, S1 blocked
-updated: 2026-10-04T04:29Z
+state: working
+task: theseus-rule-diagnosis
+doing: Publish complete saved-evidence diagnosis and reproducible audit
+updated: 2026-10-04T04:44Z
 ---
 
-48 calls across S0 and repair completed; both joint gates failed. No S1. USD0.165211 estimated API cost. Exclusive host released via merged PR119. Final strict validation: 34 artifacts, zero errors/warnings. No cultural-preservation or novelty result.
+Audited48calls/288decisions. All scores and144 repaired rows agree.13 repaired ceiling errors include false evidence, incorrect application and unpropagated notebook corrections.7/20 equivalent-input ceiling groups inconsistent. Verified ceiling learner-framing mismatch and zero stale ledger/canary qualification rows. No new model calls; causal attribution remains untested. Full findings in v2/diagnosis/FINDINGS.md.

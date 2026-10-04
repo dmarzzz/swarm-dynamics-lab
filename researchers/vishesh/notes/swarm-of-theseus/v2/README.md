@@ -1,5 +1,7 @@
 # Swarm of Theseus v2
 
+Follow-up: [rule-application diagnosis](diagnosis/FINDINGS.md) audits all 288 saved decisions. It identifies inconsistent actions, false evidence statements, a ceiling instruction mismatch and incomplete freshness coverage; no additional model calls.
+
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 

@@ -1,0 +1,187 @@
+{
+  "method": "Same-author manual textual classification; not internal reasoning or causal labels. Exhaustive repaired ceiling errors.",
+  "cases": [
+    {
+      "case_id": "incident:302:qualification:0:A:0",
+      "run": "S0-repair-incident-302-ceiling",
+      "step": 0,
+      "category": "no_specific_case_level_diagnosis",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "truth": "canary",
+      "action": "none",
+      "recorded_notebook": "Class A governed by CANARY source: apply canary precaution when CANARY signal=YES, else none. Class B governed by LEDGER source: apply ledger precaution when LEDGER signal=YES, else none. Summary, queue, and freshness are ignored per rule. All six cases processed: A cases use CANARY signal (YES\u2192canary, NO\u2192none); B cases use LEDGER signal (YES\u2192ledger, NO\u2192none)."
+    },
+    {
+      "case_id": "incident:302:qualification:5:B:2",
+      "run": "S0-repair-incident-302-ceiling",
+      "step": 5,
+      "category": "no_specific_case_level_diagnosis",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "truth": "none",
+      "action": "ledger",
+      "recorded_notebook": "Applied rule: Class A uses probe precaution when PROBE signal=YES, else none. Class B uses ledger precaution when LEDGER signal=YES, else none. Summary, queue, canary, and freshness are ignored per instructions. All six cases evaluated independently against their governing source signals."
+    },
+    {
+      "case_id": "migration:302:qualification:0:A:0",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 0,
+      "category": "false_evidence_or_condition_statement",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "truth": "ship",
+      "action": "hold",
+      "recorded_notebook": "Class A governed by CANARY source: ship only when canary signal=true AND fresh=true. Class B governed by LEDGER source: ship only when ledger signal=true AND fresh=true. Case A:2 ships (canary YES+YES). Cases A:1, A:0 hold (canary signal or fresh missing). Cases B:2, B:0, B:1 hold (ledger fresh missing or signal missing). Summary and queue ignored per rule."
+    },
+    {
+      "case_id": "migration:302:qualification:0:B:0",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 0,
+      "category": "false_evidence_or_condition_statement",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "truth": "ship",
+      "action": "hold",
+      "recorded_notebook": "Class A governed by CANARY source: ship only when canary signal=true AND fresh=true. Class B governed by LEDGER source: ship only when ledger signal=true AND fresh=true. Case A:2 ships (canary YES+YES). Cases A:1, A:0 hold (canary signal or fresh missing). Cases B:2, B:0, B:1 hold (ledger fresh missing or signal missing). Summary and queue ignored per rule."
+    },
+    {
+      "case_id": "migration:302:qualification:0:B:1",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 0,
+      "category": "false_evidence_or_condition_statement",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "truth": "ship",
+      "action": "hold",
+      "recorded_notebook": "Class A governed by CANARY source: ship only when canary signal=true AND fresh=true. Class B governed by LEDGER source: ship only when ledger signal=true AND fresh=true. Case A:2 ships (canary YES+YES). Cases A:1, A:0 hold (canary signal or fresh missing). Cases B:2, B:0, B:1 hold (ledger fresh missing or signal missing). Summary and queue ignored per rule."
+    },
+    {
+      "case_id": "migration:302:qualification:5:B:1",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 5,
+      "category": "false_evidence_or_condition_statement",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "truth": "ship",
+      "action": "hold",
+      "recorded_notebook": "Class A governed by CANARY; Class B governed by LEDGER. Ship only when governing source has both signal=true AND fresh=true. A:1 ships (CANARY: signal YES, fresh YES). A:2 holds (CANARY: signal NO). A:0 holds (CANARY: fresh NO). B:0,B:1,B:2 all hold (LEDGER signal YES but B:0 fresh NO; B:1,B:2 signal NO). Summary and queue ignored per rule."
+    },
+    {
+      "case_id": "migration:302:qualification:5:B:2",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 5,
+      "category": "false_evidence_or_condition_statement",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "truth": "ship",
+      "action": "hold",
+      "recorded_notebook": "Class A governed by CANARY; Class B governed by LEDGER. Ship only when governing source has both signal=true AND fresh=true. A:1 ships (CANARY: signal YES, fresh YES). A:2 holds (CANARY: signal NO). A:0 holds (CANARY: fresh NO). B:0,B:1,B:2 all hold (LEDGER signal YES but B:0 fresh NO; B:1,B:2 signal NO). Summary and queue ignored per rule."
+    },
+    {
+      "case_id": "migration:302:qualification:5:A:0",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 5,
+      "category": "false_evidence_or_condition_statement",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "truth": "ship",
+      "action": "hold",
+      "recorded_notebook": "Class A governed by CANARY; Class B governed by LEDGER. Ship only when governing source has both signal=true AND fresh=true. A:1 ships (CANARY: signal YES, fresh YES). A:2 holds (CANARY: signal NO). A:0 holds (CANARY: fresh NO). B:0,B:1,B:2 all hold (LEDGER signal YES but B:0 fresh NO; B:1,B:2 signal NO). Summary and queue ignored per rule."
+    },
+    {
+      "case_id": "migration:303:qualification:0:B:0",
+      "run": "S0-repair-migration-303-ceiling",
+      "step": 0,
+      "category": "no_specific_case_level_diagnosis",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "truth": "ship",
+      "action": "hold",
+      "recorded_notebook": "Class A governed by PROBE (signal+fresh). Class B governed by CANARY (signal+fresh). Applied rule: ship only when governing source has both signal=true AND fresh=true. All other cases held. Summary, queue, and ledger ignored per rule. No anomalies detected."
+    },
+    {
+      "case_id": "release:302:qualification:0:B:0",
+      "run": "S0-repair-release-302-ceiling",
+      "step": 0,
+      "category": "correct_evidence_wrong_action",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "truth": "ship",
+      "action": "hold",
+      "recorded_notebook": "Class A governed by CANARY; Class B governed by LEDGER. Ship only when governing source has signal=true AND fresh=true. A:2 (canary NO/YES)\u2192hold; B:0 (ledger YES/YES but class B uses ledger, not canary)\u2192hold; A:0 (canary NO/YES)\u2192hold; B:2 (ledger NO/YES)\u2192hold; B:1 (ledger NO/YES)\u2192hold; A:1 (canary YES/YES)\u2192ship. Correction: B:1 ledger is NO/YES, not both true\u2192hold. A:1 canary YES/YES\u2192ship."
+    },
+    {
+      "case_id": "release:302:qualification:0:B:1",
+      "run": "S0-repair-release-302-ceiling",
+      "step": 0,
+      "category": "notebook_command_disagreement",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "truth": "hold",
+      "action": "ship",
+      "recorded_notebook": "Class A governed by CANARY; Class B governed by LEDGER. Ship only when governing source has signal=true AND fresh=true. A:2 (canary NO/YES)\u2192hold; B:0 (ledger YES/YES but class B uses ledger, not canary)\u2192hold; A:0 (canary NO/YES)\u2192hold; B:2 (ledger NO/YES)\u2192hold; B:1 (ledger NO/YES)\u2192hold; A:1 (canary YES/YES)\u2192ship. Correction: B:1 ledger is NO/YES, not both true\u2192hold. A:1 canary YES/YES\u2192ship."
+    },
+    {
+      "case_id": "release:302:qualification:5:B:0",
+      "run": "S0-repair-release-302-ceiling",
+      "step": 5,
+      "category": "false_evidence_or_condition_statement",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "truth": "ship",
+      "action": "hold",
+      "recorded_notebook": "Class A governed by PROBE source: ship only when probe signal=YES AND fresh=YES. Class B governed by LEDGER source: ship only when ledger signal=YES AND fresh=YES. Applied rule strictly without summary or queue influence. A:2 ships (probe YES+YES). A:0 holds (probe YES but fresh NO). A:1 holds (probe NO). B:0 holds (ledger YES but fresh NO). B:1 ships (ledger YES+YES). B:2 holds (ledger NO)."
+    },
+    {
+      "case_id": "release:303:qualification:0:A:1",
+      "run": "S0-repair-release-303-ceiling",
+      "step": 0,
+      "category": "no_specific_case_level_diagnosis",
+      "source": "probe",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "truth": "ship",
+      "action": "hold",
+      "recorded_notebook": "Class A governed by PROBE source; Class B governed by CANARY source. Ship only when governing source has both signal=true AND fresh=true. Case B:1 ships (CANARY: YES+YES). Case B:2 ships (CANARY: YES+YES). All others hold due to missing dual-true condition on their governing source. Summary and other sources ignored per rule."
+    }
+  ]
+}
