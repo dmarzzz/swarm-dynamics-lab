@@ -1,0 +1,113 @@
+{
+  "scope": "retrospective inspected development; 8 outputs from 3 receipts, no new OCR or efficacy estimate",
+  "image_reading_62": {
+    "value": "3600000.00",
+    "basis": "same-author visual reading, not independently retrieved dataset gold"
+  },
+  "rows": [
+    {
+      "observation": "Q0-60-C",
+      "old_status": "ok",
+      "old_value": "161000.00",
+      "new_status": "ok",
+      "new_value": "161000.00",
+      "native_candidate_reproduced": true,
+      "normalization": {
+        "original_sha256": "08db3bc3857fe012f3e5e3c5b706f2568958832a63a597a1d6d8004c714076f2",
+        "normalized_sha256": "08db3bc3857fe012f3e5e3c5b706f2568958832a63a597a1d6d8004c714076f2",
+        "quantity_labels_removed": 0
+      }
+    },
+    {
+      "observation": "Q0-60-P",
+      "old_status": "ok",
+      "old_value": "161000.00",
+      "new_status": "ok",
+      "new_value": "161000.00",
+      "native_candidate_reproduced": true,
+      "normalization": {
+        "original_sha256": "677f0ffbe0b4f0952370a4a2ede3979faed86fd318809674f477c469c3347397",
+        "normalized_sha256": "677f0ffbe0b4f0952370a4a2ede3979faed86fd318809674f477c469c3347397",
+        "quantity_labels_removed": 0
+      }
+    },
+    {
+      "observation": "Q0-61-C",
+      "old_status": "ok",
+      "old_value": "17000.00",
+      "new_status": "ok",
+      "new_value": "17000.00",
+      "native_candidate_reproduced": true,
+      "normalization": {
+        "original_sha256": "b4868af9b7d53eb2324fd83edfb41873b8d4064654515f0a9fded0771f89ad19",
+        "normalized_sha256": "b4868af9b7d53eb2324fd83edfb41873b8d4064654515f0a9fded0771f89ad19",
+        "quantity_labels_removed": 0
+      }
+    },
+    {
+      "observation": "Q0-61-P",
+      "old_status": "ok",
+      "old_value": "17000.00",
+      "new_status": "ok",
+      "new_value": "17000.00",
+      "native_candidate_reproduced": true,
+      "normalization": {
+        "original_sha256": "08e42dce8094a5528288700e04b418dc1493b40d84e954a09120276c98068276",
+        "normalized_sha256": "08e42dce8094a5528288700e04b418dc1493b40d84e954a09120276c98068276",
+        "quantity_labels_removed": 0
+      }
+    },
+    {
+      "observation": "Q0-62-P",
+      "old_status": "missing",
+      "old_value": null,
+      "new_status": "ok",
+      "new_value": "3600000.00",
+      "native_candidate_reproduced": true,
+      "normalization": {
+        "original_sha256": "26875e14e12070487dbcbb1d2e83a6f4dc70df9bd6b1f6699658974c65a3a3db",
+        "normalized_sha256": "0a1333c82869cbc014501baf4a0e7bbb83dbce151f0648a9dbd78c6dda08945e",
+        "quantity_labels_removed": 1
+      }
+    },
+    {
+      "observation": "D1-60-C",
+      "old_status": "ok",
+      "old_value": "161000.00",
+      "new_status": "ok",
+      "new_value": "161000.00",
+      "native_candidate_reproduced": true,
+      "normalization": {
+        "original_sha256": "08db3bc3857fe012f3e5e3c5b706f2568958832a63a597a1d6d8004c714076f2",
+        "normalized_sha256": "08db3bc3857fe012f3e5e3c5b706f2568958832a63a597a1d6d8004c714076f2",
+        "quantity_labels_removed": 0
+      }
+    },
+    {
+      "observation": "D1-61-C",
+      "old_status": "ok",
+      "old_value": "17000.00",
+      "new_status": "ok",
+      "new_value": "17000.00",
+      "native_candidate_reproduced": true,
+      "normalization": {
+        "original_sha256": "b4868af9b7d53eb2324fd83edfb41873b8d4064654515f0a9fded0771f89ad19",
+        "normalized_sha256": "b4868af9b7d53eb2324fd83edfb41873b8d4064654515f0a9fded0771f89ad19",
+        "quantity_labels_removed": 0
+      }
+    },
+    {
+      "observation": "D1-62-C",
+      "old_status": "missing",
+      "old_value": null,
+      "new_status": "missing",
+      "new_value": null,
+      "native_candidate_reproduced": true,
+      "normalization": {
+        "original_sha256": "aea81198bbfc4948b9f995ce03208267461f0fef7c43f25e7ee4677fbec89331",
+        "normalized_sha256": "aea81198bbfc4948b9f995ce03208267461f0fef7c43f25e7ee4677fbec89331",
+        "quantity_labels_removed": 0
+      }
+    }
+  ]
+}

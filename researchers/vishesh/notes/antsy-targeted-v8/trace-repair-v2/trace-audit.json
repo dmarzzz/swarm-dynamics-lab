@@ -1,0 +1,110 @@
+{
+  "status": "gaps",
+  "manifest_sha256": "734583094622a853dfb273dcf54d5c056ffcb3f4dacfd22d6fb4cc5f2a88e75b",
+  "assignment_count": 6,
+  "distinct_unit_labels": 3,
+  "counts": {
+    "unstarted": 3,
+    "started": 0,
+    "valid": 3,
+    "failed": 0,
+    "interrupted": 0
+  },
+  "started_count": 3,
+  "coverage": {
+    "input": {
+      "verified": 3,
+      "missing": 0,
+      "mismatch": 0,
+      "not_collected": 0,
+      "not_applicable": 0,
+      "not_reached": 0,
+      "legacy_missing": 0
+    },
+    "context": {
+      "verified": 0,
+      "missing": 0,
+      "mismatch": 0,
+      "not_collected": 0,
+      "not_applicable": 0,
+      "not_reached": 0,
+      "legacy_missing": 3
+    },
+    "response": {
+      "verified": 3,
+      "missing": 0,
+      "mismatch": 0,
+      "not_collected": 0,
+      "not_applicable": 0,
+      "not_reached": 0,
+      "legacy_missing": 0
+    },
+    "parsed": {
+      "verified": 3,
+      "missing": 0,
+      "mismatch": 0,
+      "not_collected": 0,
+      "not_applicable": 0,
+      "not_reached": 0,
+      "legacy_missing": 0
+    },
+    "transition": {
+      "verified": 0,
+      "missing": 0,
+      "mismatch": 0,
+      "not_collected": 0,
+      "not_applicable": 3,
+      "not_reached": 0,
+      "legacy_missing": 0
+    },
+    "grade": {
+      "verified": 3,
+      "missing": 0,
+      "mismatch": 0,
+      "not_collected": 0,
+      "not_applicable": 0,
+      "not_reached": 0,
+      "legacy_missing": 0
+    },
+    "usage": {
+      "verified": 0,
+      "missing": 0,
+      "mismatch": 0,
+      "not_collected": 0,
+      "not_applicable": 3,
+      "not_reached": 0,
+      "legacy_missing": 0
+    },
+    "phases": {
+      "verified": 3,
+      "missing": 0,
+      "mismatch": 0,
+      "not_collected": 0,
+      "not_applicable": 0,
+      "not_reached": 0,
+      "legacy_missing": 0
+    },
+    "stdout": {
+      "verified": 3,
+      "missing": 0,
+      "mismatch": 0,
+      "not_collected": 0,
+      "not_applicable": 0,
+      "not_reached": 0,
+      "legacy_missing": 0
+    },
+    "stderr": {
+      "verified": 3,
+      "missing": 0,
+      "mismatch": 0,
+      "not_collected": 0,
+      "not_applicable": 0,
+      "not_reached": 0,
+      "legacy_missing": 0
+    }
+  },
+  "unresolved_started": 0,
+  "missing_artifacts": 3,
+  "mismatched_artifacts": 0,
+  "scope": "declared_local_bytes_only_not_provider_delivery_or_scientific_validation"
+}

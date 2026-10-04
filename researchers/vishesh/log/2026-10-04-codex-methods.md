@@ -46,3 +46,5 @@ Published D1 latency plan before implementation. Separate versioned worker recor
 ## Approved D1 native diagnostic
 
 Published1dea9b40 and ran exact D1 after public page/runtime/allocation checks.3valid calls;third46.25s triggered prespecified stop,3unstarted. Imports4.37s/init4.07s/OCR36.63s;candidate abstained on quantity-containing total row. All3output/phase/stream traces retained/hash-audited;native5artifact readback matched. Host released and next holder notified. Zero hosted calls/new charges;qualification remains closed. Operational finalize plus full scientific post-mortem;no automatic successor.
+
+Trace receipt repair: inspected saved train62 image and8 Q0/D1 outputs; strict quantity-label candidate recovers only primary62, noisy checker abstains. Common private byte retention/manifest audit integrated into shared closeout; new/revised native adoption documented, no fleet-wide capture claim.14 receipt tests,60 operations tests,7 field tests pass. D1 retrospective bridge reports3 missing effective-context receipts rather than synthesizing them. No native calls, allocation or spend.

@@ -7,7 +7,7 @@ import os
 from pathlib import Path
 import tempfile
 
-from . import core
+from . import core, trace_receipts
 
 
 OUTCOMES = {"completed", "failed", "blocked", "ambiguous"}
@@ -151,6 +151,10 @@ def rubric(analysis, context):
         by_dimension["resources"].update(status="gap", finding="Saved call records contain uncertain completion or missing usage; retain reservations and reconcile exposure.")
     if analysis.get("instrument_binding") == "differs_from_prepared":
         by_dimension["reproducibility"].update(status="gap", finding="Saved-data analysis used a different instrument fingerprint; identify it as a revised analysis, not the original run result.")
+    trace = analysis.get("trace_receipts", {})
+    if trace and trace.get("status") != "verified_declared_coverage":
+        by_dimension["data_integrity"].update(status="gap", trace_status=trace.get("status", "unavailable"))
+        by_dimension["data_integrity"]["next_action"] += " Inspect trace_receipts coverage; missing manifests are not complete tracing."
     # Other dimensions remain unknown; passing these mechanical checks alone
     # does not establish scenario quality, causal validity or a scientific pass.
     return rows
@@ -248,6 +252,7 @@ def finalize(root, entry, attempt, result_path=None, outcome=None, worker_stoppe
             context = saved_context(json.loads(context_json or "{}"))
             before = inventory(result_path)
             analysis = saved_analysis(root, entry, result_path)
+            analysis["trace_receipts"] = trace_receipts.audit(result_path, study=entry["id"], attempt=attempt)
             if analysis.get("analysis_instrument_sha256") and context.get("instrument_sha256"):
                 analysis["instrument_binding"] = "matches_prepared" if analysis["analysis_instrument_sha256"] == context["instrument_sha256"] else "differs_from_prepared"
             else:

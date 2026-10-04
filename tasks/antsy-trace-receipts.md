@@ -21,4 +21,4 @@ Offline field diagnosis and common trace evidence checks; preserve historical ru
 
 ## Done when
 
-- Test and publish shared receipt audit, closeout integration and saved Antsy diagnosis.
+- [x] Test and publish shared receipt audit, closeout integration and saved Antsy diagnosis.

@@ -29,6 +29,10 @@ The **owning session must then finish the analytical post-mortem**, using [the t
 
 Do not report the run's overall work as done while scientific review is unresolved. Execution can be complete while closeout is pending. If evidence or access prevents the assessment, retain `unknown`, the exact blocker and a named next action. A finished post-mortem may document open defects and a `repair` or `blocked` verdict; it does not relabel the attempt as successful.
 
+## Shared trace coverage check
+
+Follow [TRACE-RECEIPTS.md](TRACE-RECEIPTS.md) for new or materially revised native launchers. Shared `finalize` audits declared trace receipts for every result directory; absent manifests remain an explicit evidence gap. Native adapters must adopt capture prospectively. This does not retroactively instrument frozen runs or replace scientific review.
+
 ## Review the native traces before choosing a repair
 
 A result table locates a problem; the retained request, response and action trace establishes what was observed. Apply [Dmarz's failing-answer lesson](../../researchers/dmarz/notes/pipeline/LESSONS.md#6-read-the-failing-answers-before-changing-the-model) and [worked per-row review](../../researchers/dmarz/notes/verify-cost-qwen/reviews/chain-002-post.md) within the current study's scope. Do not change a model, prompt or scenario solely from an aggregate failure rate. The [completion audit](../../researchers/dmarz/notes/completion-audit-2026-10-04/README.md) additionally distinguishes returned-but-incomplete actions, explicit refusal, parser rejection and missing records; its historical cutoff must not overwrite newer study evidence.

@@ -49,6 +49,8 @@ class CloseoutTests(unittest.TestCase):
             self.assertEqual(result["closeout_status"], "written_review_required")
             handoff = core.read_json(self.root / result["closeout"]["handoff_path"])
             self.assertEqual(handoff["scientific_review"], "unresolved")
+            self.assertEqual(handoff["saved_analysis"]["trace_receipts"]["status"], "unavailable")
+            self.assertEqual(next(r for r in handoff["rubric"] if r["dimension"] == "data_integrity")["status"], "gap")
             self.assertEqual(handoff["saved_analysis"]["qualification_passed"], False)
             self.assertNotIn("FAKE_PRIVATE_MARKER", json.dumps(result) + json.dumps(handoff) + stdout.getvalue())
             postmortem = (self.root / handoff["postmortem_path"]).read_text()

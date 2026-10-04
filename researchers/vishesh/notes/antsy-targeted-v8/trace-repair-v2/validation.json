@@ -1,0 +1,22 @@
+{
+  "scope": "offline software fixtures and saved-data replay, no native calls",
+  "tests": {
+    "shared_trace_receipts": 14,
+    "experiment_operations_regression": 60,
+    "quantity_field_candidate": 7
+  },
+  "saved_outputs": 8,
+  "distinct_receipts": 3,
+  "changed_candidates": 1,
+  "original_native_candidates_reproduced": 8,
+  "source_sha256": {
+    "scripts/experiment_ops/trace_receipts.py": "90748e506edef5452e59b80c59e719d80d427ce039509b3e2e884e3a4d6a8aa1",
+    "scripts/experiment_ops/closeout.py": "87770492548d806b26f1922f968ed0ff10031442254dfa51e5e6858d1e9ef4cc",
+    "scripts/test_trace_receipts.py": "8b352f241c39a631dbfb5f1fa24d3a28ba5d60529b431defed9c40290d8e889e",
+    "scripts/test_experiment_closeout.py": "b8c61579fcbd3bf3ae037f9303e4f732cc5871688354e4dec944e5b55a366d82",
+    "researchers/vishesh/notes/antsy-targeted-v8/trace-repair-v2/bridge_d1.py": "fe9dfbc9ca0985f45fd6e19e5805ad79ea0b8cf938847c08383172755d0c5703",
+    "researchers/vishesh/notes/antsy-targeted-v8/trace-repair-v2/fields.py": "c6f67baef37cb1ccfaafe6ff018e1820afa08260dd92c3addf50fce4f6973586",
+    "researchers/vishesh/notes/antsy-targeted-v8/trace-repair-v2/replay.py": "d4afa213e2645bc662edc8430b1412cc8d3d4aa73a88336e8c40e5b19afb3e63",
+    "researchers/vishesh/notes/antsy-targeted-v8/trace-repair-v2/test_fields.py": "8d6754e82e4b2428d25f4b6348175455a567740c3a4dd89de2642ece7d048f74"
+  }
+}

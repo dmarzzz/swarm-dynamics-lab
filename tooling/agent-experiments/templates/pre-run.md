@@ -57,3 +57,7 @@ Owner approval of the update does not reset the budget or establish a current ma
 - Admission decision, assessor/time, unresolved blockers and exact next action on failure:
 
 An exit code of zero does not finish closeout. The owning session must reconcile the attempt and complete its scientific post-mortem before reporting the run's overall work done.
+
+## Trace receipts
+
+For a new or revised native launcher, link the [trace contract](../TRACE-RECEIPTS.md), adapter fault tests and retained-artifact policy. State which categories are not applicable and why. Bind the frozen assignment list, effective inputs/configuration, physical call IDs and usage receipts. Check timeout/error retention and all assigned/unstarted rows before native admission. A logger stores experimental observations only, never operator history or secrets. Historical absent manifests remain gaps; do not invent them.

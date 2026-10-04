@@ -130,3 +130,8 @@ The next action should name a concrete operation and its missing evidence. For t
 | Missing report artifact | Check local terminal outcomes, saved traces and upload/readback receipts | Repair or replay reporting from saved evidence; do not recollect model outputs to fix delivery |
 
 Existing [Theseus preflight](../../researchers/vishesh/notes/swarm-of-theseus/v2/src/preflight.py), [Optimal Size reservations](../../researchers/vishesh/notes/optimal-swarm-size/src/budget.py) and [Immune Response interruption post-mortem](../../researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md) illustrate these distinct evidence checks. Their historical settings and permissions do not transfer to a new attempt.
+
+
+## Trace evidence coverage
+
+Every shared closeout now reports [trace receipt coverage](TRACE-RECEIPTS.md) independently of native execution status. Native launchers without the manifest remain explicitly uninstrumented for this check; use a retrospective bridge only for bytes actually retained.
