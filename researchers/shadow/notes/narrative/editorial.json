@@ -3,7 +3,7 @@
   "weights": {"evidence": 1, "brief_fit": 1, "coverage": 1, "readiness": 1},
   "themes": [
     {"id": "identity", "label": "Identity & incentives", "question": "Who is behind the names?", "keywords": ["sybil", "market", "identity", "quota", "scarcity", "newcomer"], "brief_fit": "Controlled mechanisms that help interpret identity gaming in incident traces."},
-    {"id": "provenance", "label": "Evidence & provenance", "question": "How many independent observations?", "keywords": ["quorum-of-mirrors", "provenance", "copy", "wild-", "askswarm", "halflife", "evidence-depth", "source", "phantom", "influence"], "brief_fit": "Tracing information spread, forensics beyond transcripts, reusable questions for any swarm."},
+    {"id": "provenance", "label": "Evidence & provenance", "question": "How many independent observations?", "keywords": ["quorum-of-mirrors", "provenance", "copy", "wild-", "askswarm", "halflife", "evidence-depth", "village", "source", "phantom", "influence"], "brief_fit": "Tracing information spread, forensics beyond transcripts, reusable questions for any swarm."},
     {"id": "memory", "label": "Memory & repair", "question": "What survives a correction?", "keywords": ["memory", "capture", "theseus", "healing", "immune", "regrowth", "handoff", "false-alarm", "discussion"], "brief_fit": "Trajectory visualization and understanding persistence, repair and inherited errors."},
     {"id": "verification", "label": "Verification & cost", "question": "When does another check help?", "keywords": ["verif", "budget", "antsy", "dissent", "trust-credit", "sizing", "swarm-size", "receipt", "compositional"], "brief_fit": "Understanding tools that expose costs, failure modes and limitations of swarm decisions."},
     {"id": "metascience", "label": "The swarm studies itself", "question": "Can we audit the research process?", "keywords": ["audit", "review", "factory", "xcheck", "narrative", "pipeline", "janitor", "rsi", "survey", "synthesis", "library", "dashboard", "report", "submit"], "brief_fit": "Swarm understanding tools and meta-science, demonstrated on the research swarm itself."}
@@ -23,17 +23,19 @@
     {"id": "wild-askswarm", "label": "Same questions, three archives", "themes": ["provenance", "metascience"]},
     {"id": "wild-evidence-depth", "label": "Response coverage is only 8.49%", "themes": ["provenance", "metascience"]},
     {"id": "wild-halflife", "label": "Adoption with censoring visible", "themes": ["provenance", "memory"]},
-    {"id": "trust-credit-qwen", "label": "Trust propagation can amplify capture", "themes": ["verification", "identity"]}
+    {"id": "trust-credit-qwen", "label": "Trust propagation can amplify capture", "themes": ["verification", "identity"]},
+    {"id": "sybil-rules-180", "label": "180 owners, one economy", "themes": ["identity", "metascience"]},
+    {"id": "memory-handoff-qwen-gpt-6-luna", "label": "Read the source, not only its label", "themes": ["memory", "provenance"]}
   ],
   "headlines": [
     {
       "id": "independent-evidence", "title": "Count independent evidence, not agents: controlled tests and incident archives expose the cost of mistaking repetition for support.",
       "short": "Count evidence. Not echoes.",
-      "evidence_ids": ["sybil-split-opus", "quorum-of-mirrors", "phantom-coast-pc2", "wild-identity", "wild-askswarm", "wild-evidence-depth"],
+      "evidence_ids": ["sybil-split-opus", "quorum-of-mirrors", "phantom-coast-pc2", "wild-identity", "wild-askswarm", "wild-evidence-depth", "memory-handoff-qwen-gpt-6-luna"],
       "brief_fit": 0.98, "readiness": 0.95,
       "fit_reason": "Pairs the reusable AskSwarm tool and information-provenance forensics with controlled mechanisms from two other researchers. Direct match to several suggested project types, not a published judging rubric.",
       "readiness_reason": "Core artifacts are already saved; a single coherent demo and final source consistency pass remain. No new model run is needed.",
-      "gaps": ["These are convergent examples, not a pooled causal estimate or universal law.", "Quorum of Mirrors is a failed qualification, not a completed swarm-efficacy experiment.", "Retained wiki text and git templates confound semantic adoption. SwarmTraces has neither usable actors nor timestamps."],
+      "gaps": ["These are convergent examples, not a pooled causal estimate or universal law.", "Quorum of Mirrors is a failed qualification, not a completed swarm-efficacy experiment. The handoff result measures adherence to a supplied source policy; its primary effect follows by construction when that policy is obeyed.", "Retained wiki text and git templates confound semantic adoption. SwarmTraces has neither usable actors nor timestamps."],
       "land_by_23": ["Show one real-archive AskSwarm report beside a controlled identity/provenance failure.", "Keep the snapshot-versus-new-text audit and unavailable fields visible in the demo.", "Use fixed-resource splitting as the strongest arithmetic-checked mechanism, not a claim about all swarms."]
     },
     {
