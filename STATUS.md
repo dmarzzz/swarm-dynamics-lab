@@ -55,7 +55,6 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [transfer-dmarz-market-methods](tasks/transfer-dmarz-market-methods.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T13:53Z | Transfer useful methods from recent Dmarz market and pipeline studies |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
 | [allocate-poietic-agents-s0](tasks/allocate-poietic-agents-s0.md) | open | p1 | admin |  | dmarz |  | Identify an idle approved-fleet allocation for Poietic Agents qualification |
@@ -258,6 +257,7 @@
 | [theseus-social-grounding](tasks/theseus-social-grounding.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T03:06Z | Ground Theseus scenario selection in X discussions and practical failures |
 | [theseus-targeted-repairs](tasks/theseus-targeted-repairs.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T04:55Z | Build targeted Theseus execution diagnostic repairs |
 | [theseus-v2-iteration](tasks/theseus-v2-iteration.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T04:27Z | Build and qualify a practical Theseus continuity iteration |
+| [transfer-dmarz-market-methods](tasks/transfer-dmarz-market-methods.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T14:03Z | Transfer useful methods from recent Dmarz market and pipeline studies |
 | [scan-honeypot-vigilance](tasks/scan-honeypot-vigilance.md) | done | p2 | scan | dmarz/honeypot-vigilance | dmarz | 2026-10-03T23:28Z | Prior-art pass: do agents (and swarms) update after discovering a honeypot? |
 
 ## Candidate batches
@@ -269,8 +269,10 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-pi-review | done | transfer-dmarz-market-methods | 2026-10-04T14:02Z | Completed source-pinned transfer review and eleven study-family planning additions; validated offline, no runs. |
+| shadow/sol-xcheck | done |  | 2026-10-04T14:01Z | Completed offline review; checked headlines agree, scaling cell ranking has numerical tie defect |
+| shadow/sol-submit | working | admin-hackathon-brief | 2026-10-04T14:00Z | Filling HACKATHON.md and drafting the submission packet (WRITEUP, DEMO, RESULTS) in researchers/shadow/notes/submission/; does not submit |
 | shadow/sol-atlas | working |  | 2026-10-04T13:58Z | TODO one line |
-| shadow/sol-xcheck | working |  | 2026-10-04T13:48Z | Independent offline arithmetic and trace review of completed dmarz studies |
 | dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T13:20Z | attempt 002 gpt-6-sol configuration ready (code 1299b4be, source hash 17665ae0, review chain-003-pre); Qwen closed after Q0; next: chain-002 post-mortem when the fleet monitor asks |
 | dmarz/openai-route | working |  | 2026-10-04T13:05Z | trust-credit-qwen attempt 002 (gpt-6-luna) ready - code 2c399a6a, source hash 5155d2c6, review chain-002-pre.md |
 | dmarz/pipeline-scarcity-qwen | working | build-sybil-scarcity-xmodel | 2026-10-04T13:05Z | sybil-scarcity-xmodel: Qwen chain ready (code 2753b03d, source hash 06cbd97e, review reviews/chain-001-pre.md); next: gpt-6-sol path (reference OpenAI adapter, price row, tests, own review); no launch, no model call. |
@@ -299,7 +301,6 @@
 | dmarz/v3-q0-opus | working |  | 2026-10-04T08:15Z | discussion-v3-opus chain v3o-a1 (probe, Q0 636 calls, S1 2,436 calls if Q0 passes) on sim-dmarz-9 |
 | dmarz/d1-opus | done |  | 2026-10-04T08:12Z | D1-Opus d1o-a1 done: fresh gate 12/12, 72/72 valid, $1.495; audited, results + post-mortem pushed, claim released |
 | shadow/sol-goal | done |  | 2026-10-04T08:05Z | GOAL-12H lane done at 08:05Z. capture-memory-mix (heterogeneous memory rescue) on main with scripted M0/M1/M2 and three real-model pilots; hub experiment capture-memory-mix populated. |
-| vishesh/codex-pi-review | done | integrate-run-closeout-cycle | 2026-10-04T08:03Z | Published automatic closeout, quality rubric and owner-approved next-run workflow; offline validation complete. |
 | dmarz/results-analyst | working |  | 2026-10-04T07:58Z | Reading dmarz run results as they arrive and keeping next-run decision packages current in researchers/dmarz/notes/pipeline/ |
 | dmarz/orbital-orchestrator | working |  | 2026-10-04T07:39Z | sybil-specialists-opus (Opus 5.5 replication of sybil-specialists-api) on sim-dmarz-4; Sonnet version superseded before paid calls |
 | dmarz/newcomer-sonnet | done |  | 2026-10-04T07:35Z | S1 closed out (1944/1944, $9.17 total); results, Sonnet-minus-Haiku comparison and post-mortem published; claim released |
