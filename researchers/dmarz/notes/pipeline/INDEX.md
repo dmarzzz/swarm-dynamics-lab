@@ -2,7 +2,7 @@
 
 Maintained by dmarz/results-analyst (sub-agent of dmarz/fleet-monitor). Built from the hub, the study folders on main and the run queue. Nothing here is a review, and nothing here launches or changes a run. Times are UTC on 2026-10-04.
 
-Last updated 08:15Z. Running now: 4 lanes (sybil-budget-sonnet S1, sybil-scale-xl S1 input preparation, market-split-opus S1, compositional-safety q0-008). Waiting on a decision: sybil-specialists-opus, soc07 (approval). Idle with no successor written: discussion-v3-d1-opus. Being built: discussion v3 D2, sybil-newcomer-opus. Hub-reported spend across dmarz experiments: about USD 200.
+Last updated 08:20Z. Running now: 4 lanes (sybil-budget-sonnet S1, sybil-scale-xl S1 input preparation, market-split-opus S1, compositional-safety q0-008). Waiting on a decision: sybil-specialists-opus, soc07 (approval). Idle with no successor written: discussion-v3-d1-opus. Being built: discussion v3 D2, sybil-newcomer-opus. Hub-reported spend across dmarz experiments: about USD 200.
 
 | Lane | Current run | Forecast end | Next run if pass | Next run if fail | Blocked on |
 |---|---|---|---|---|---|
@@ -15,7 +15,7 @@ Last updated 08:15Z. Running now: 4 lanes (sybil-budget-sonnet S1, sybil-scale-x
 | [soc07-private-judgments](soc07-private-judgments.md) | Manifest m3 (Opus) with the deadline clause added (71717def). S0 s0-a5 running since 08:10:47Z | S0 about 08:17Z; S1-Q.2 under 1 min after approval | S1-R (672 calls) chained under its gates, then S1-L (4,080) | Read the miss text before any further change | Approval record for m3 |
 | [discussion-dose-v3 D2](discussion-dose-v3.md) | none; v3-d2-a1 being built (72 calls, three models) | 5-10 min once started | Explains Haiku and Sonnet failures; Opus arm no longer on the critical path | Atomic fails: instrument. Canonical fails: response contract | Operator: pre-run review; then reviewer's go |
 | sybil-scarcity-opus (new, no package yet) | Plan and frozen design committed 08:09Z by dmarz/pipeline-scarcity; nothing run | not started | n/a | n/a | Preparation |
-| sybil-newcomer-opus (new, no package yet) | Planned 07:59Z as a chain: S0, probe, Q0 (36), S1 (1,944) on sim-dmarz-13 | not started | chain runs through S1 | chain stops at the failed gate | Nothing seen |
+| [sybil-newcomer-opus](sybil-newcomer-opus.md) | Chain S0, probe, Q0, S1 on sim-dmarz-13. Q0 (36 calls) running at 08:14Z | Q0 a few minutes; S1 (1,944 calls) 1-1.5 h, about USD 11 | S1 starts from the chain; no further stage after it | Effort medium as a new batch | Nothing |
 | [closed lanes](closed-lanes.md) | sybil-scale-sonnet, sybil-newcomer-sonnet, market-split-api, sybil-budget-api, sybil-specialists-sonnet, market-split-haiku, D1 | ended | Proposal 3 (identity splitting, fixed attacker resources): no study folder yet | n/a | Nobody is writing the successor |
 
-[LESSONS.md](LESSONS.md): cross-lane lessons (hashed caps, reservation ledgers, Opus request shape, waits, model swaps in the sybil family, reading failing answers, small gates).
+[LESSONS.md](LESSONS.md): cross-lane lessons (hashed caps, reservation ledgers, Opus request shape, waits, model swaps in the sybil family, reading failing answers, small gates, stop-on-first-error with no retry).

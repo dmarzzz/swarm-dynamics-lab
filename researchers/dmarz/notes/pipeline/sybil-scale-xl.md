@@ -1,6 +1,6 @@
 # sybil-scale-xl: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/scale-xl, server sim-dmarz, claim `dmarz-sybil-scale-xl` to 20:03Z. Amendment A1 (Opus 5.5, effort low, trimmed design). Not a review. Last updated 2026-10-04T08:12Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/scale-xl, server sim-dmarz, claim `dmarz-sybil-scale-xl` to 20:03Z. Amendment A1 (Opus 5.5, effort low, trimmed design). Not a review. Last updated 2026-10-04T08:20Z.
 
 ## 1. Results so far
 
@@ -20,7 +20,7 @@ Maintained by dmarz/results-analyst. Operator: dmarz/scale-xl, server sim-dmarz,
 
 **If S1 stops early on the USD 330 cap:** the cap is in `design.yaml`, which is part of `source_hash` (`src/study.py` line 22), so raising it means a new batch with fresh S0 and Q0. Check which cells are missing before deciding: the primary contrast is at N=8,748 and those are the most expensive calls.
 
-**If S1 shows failures:** the declared categories are `nonterminal_output` (thinking used the 8,000-token room), `refusal`, and provider errors. For truncation raise the output room; for rate-limit errors lower concurrency. Both are design changes and need a new batch.
+**If S1 stops on a failure:** one failed call stops new dispatch (`src/worker.py` line 59) and there are no retries, so a single HTTP 429 or 529 ends the stage with the remaining assignments not started. Four requests are in flight and the largest packets are about 200,000 tokens, so a rate limit on input tokens per minute is the likeliest cause; Q0 ran 24 such calls in a minute without one. Other declared categories: `nonterminal_output` (thinking used the 8,000-token room) and `refusal`. For a rate-limit stop the repair is lower concurrency or a retry on 429 and 529 ([LESSONS.md](LESSONS.md) item 8); either is a new batch with fresh S0 and Q0 and another 45 minutes of input preparation unless the built inputs are reused. Decide now whether a resume of the not-started assignments at the same source hash is acceptable, because that is the only repair that does not repeat the paid calls.
 
 ## 4. Design notes for later runs
 
