@@ -1,6 +1,9 @@
-# External influence v2
+# How to win agents and influence swarms
 
 ## TLDR
+
+**Completed pilot, audited:** 50/50 valid outcomes, 750 model calls, USD 2.002637. Verification evidence often failed to govern the final choice. This is an exploratory result with one fixture per domain, not a robustness estimate. See the [quality assessment](reviews/quality-post.md), [visualization mapping](reviews/visualization-mapping.md), and [prospective repair](../influence-swarms/README.md). The repaired architecture has not yet been qualified live.
+
 
 Can nine agents choose correctly when an outsider edits the evidence they read? Compare private review, discussion, random checks, targeted checks and source-lineage handling at matched call slots. Procurement is primary; dependency selection and travel are transfer probes. Measure harmful choices, correctness and regret on fictional fixtures. Qualification and scripted runs do not establish attack resistance.
 

@@ -22,7 +22,11 @@ def execute(out,stage,backend,progress=lambda *args:None):
                 def emit(event):
                     event.update(task_id=task,world=world,seed=1)
                     journal.write(json.dumps(event,sort_keys=True)+'\n');journal.flush()
-                    if 'score' in event:os.fsync(journal.fileno());progress(event,len(rows),len(assigned))
+                    if 'score' in event:
+                        os.fsync(journal.fileno())
+                        try:progress(event,len(rows),len(assigned))
+                        except Exception as exc:
+                            journal.write(json.dumps({'kind':'reporting_failure','error_type':type(exc).__name__})+'\n');journal.flush()
                 class Audited:
                     def complete(self,request,fallback):
                         if backend!='scripted':emit({'kind':'policy_request','request':request})

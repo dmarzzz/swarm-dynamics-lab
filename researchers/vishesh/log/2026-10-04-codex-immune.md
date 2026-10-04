@@ -13,3 +13,11 @@ At the owner's explicit request, added a standing requirement for fresh exclusiv
 ## Visualization workflow preference
 
 Recorded the owner's preference for live frames and dynamic time-series animations as a standard per-run visualization-mapping process. Added a mapping template, pre/post-run sections, experiment-specific examples and worker launch guidance. Documented the current spatial frame/image contract and fallback for unsupported replay surfaces. This is workflow documentation; no existing worker or active run was changed or claimed to have new visual artifacts.
+
+## Completed assessment, prospective v3 and visual evidence
+
+Pulled current main, audited all eight native v2 outcomes and traced its one invalid primary control to duplicate fact-key endorsement. All 1,137 provider calls returned; this was a response-contract failure, not a transport failure. Complete-valid primary pairs: zero. Published a prospective v3 instrument with keyed record choices, strict scoring, actual clean recovery, selective rollback, varied targets and five scenarios. Frozen engineering a1 at e3c40b0 recorded all 720 assigned outcomes with zero invalid and no API cost. Thirteen current regression tests pass. Broad rollback loses legitimate learning; selective rollback preserves it in the fixture. Missing lineage defeats known-lineage filtering. These are scripted findings.
+
+Added historical/native and engineering final frames, 24-frame animations and interactive replay; checked state cells, selectors, playback and live dashboard image loads. Public run: https://swarm-live.pages.dev/#/r/immune-response-v3%2Fengineering-a1-5409a091 . Detailed assessment and post-mortem are in notes/immune-response-v3. Registered immutable public protocol; imported original evidence, without rerunning. Added prospective gated native worker and per-round reporting.
+
+Native repair remains blocked: fleet exclusive-claim checks rejected occupied hosts. Requested a dedicated or released machine from the owner; no conflicting machine or extra budget was used. Next: verify a real exclusive claim, reserve USD 8 from the existing shared ledger, deploy exact committed runtime, and execute frozen task 6700. Do not claim the model failure repaired until that qualification passes. Native S1 and holdout remain locked.
