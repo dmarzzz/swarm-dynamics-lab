@@ -5,6 +5,29 @@
   "source_commit": "9781739cd06e0c9606ed0ed053bf91b5e2a42b57",
   "studies": [
     {
+      "id": "wild-identity",
+      "title": "Observable names and reference provenance across three swarm archives",
+      "documents": ["researchers/shadow/notes/wild-identity/README.md"],
+      "experiment_ids": ["wild-identity"],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Archive descriptions and reference-provenance diagnostics are reproducible; an identity-churn effect on coordination and a SwarmTraces identity graph are not identified.",
+        "rationale": "Post-hoc dependent archive census, unauthenticated labels, retained text and unmatched observation windows prevent a causal effect claim. Every source row is accounted for, ten fixtures and 25 aggregate checks pass, and missing SwarmTraces actor/time fields are reported rather than imputed. Owner assessment, not independent review."
+      },
+      "sample_size_summary": "Observed: 3 dependent archive snapshots; wiki 14,591/14,591 revisions (3,102 labels), git 2,897/2,897 commits (161 ids), SwarmTraces 189,579/189,579 rows with no structured actor/time values. No interventions or model calls.",
+      "sources": [
+        "researchers/shadow/notes/wild-identity/PLAN.md",
+        "researchers/shadow/notes/wild-identity/FINDING.md",
+        "researchers/shadow/notes/wild-identity/results/summary.json",
+        "researchers/shadow/notes/wild-identity/results/audit.json"
+      ],
+      "status_at_assessment": "descriptive_complete_coordination_effect_not_identified",
+      "assessor": "shadow/sol-identity",
+      "assessed_at": "2026-10-04",
+      "source_commit": "ad201b0303bdd3e27a727957128bab754922a6fb"
+    },
+    {
       "id": "quorum-of-mirrors",
       "title": "Quorum of Mirrors \u2014 repeated reports versus independent sources",
       "documents": [

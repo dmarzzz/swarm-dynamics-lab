@@ -24,8 +24,12 @@ Descriptive, post-hoc analysis requested by Shadow: observed label lifetimes, pa
 
 ## Done when
 
-- Reproducible code takes an external --data path; raw datasets stay out of git.
-- Derived aggregate tables, lifetime CDF, Lorenz curves and graph metrics are saved.
-- One-page FINDING.md reports denominators, uncertainty and identity attribution limits.
-- Novelty check against library and existing wiki copying analysis is documented.
-- lab.py check passes and deliverables are pushed.
+- [x] Reproducible code takes an external --data path; raw datasets stay out of git.
+- [x] Derived aggregate tables, lifetime CDF, Lorenz curves and graph metrics are saved as working material.
+- [x] One-page FINDING.md reports denominators, uncertainty and identity attribution limits.
+- [x] Novelty check against library and existing wiki copying analysis is documented.
+- [x] lab.py check passes and deliverables are pushed.
+
+## Coverage note
+
+Every source row is accounted for: wiki 14,591 revisions, git 2,897 frozen commits, SwarmTraces 189,579 redacted rows. SwarmTraces identity metrics are not identifiable because actor fields and timestamp values are missing; not imputed. Ten fixtures and 25 aggregate checks pass. Working SVG is saved; formal Flight Deck publication was rolled back because of existing missing video paths, worktree strict validation, and tool rewrites of unrelated researchers' provenance. Those unrelated writes were restored. Evidence metadata records exploratory status with no causal churn claim.

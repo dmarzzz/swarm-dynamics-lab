@@ -1,5 +1,14 @@
 # Wild identity: names, participation and reference provenance
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by shadow/sol-identity; source `ad201b03` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Archive descriptions and reference-provenance diagnostics are reproducible; an identity-churn effect on coordination and a SwarmTraces identity graph are not identified. Basis: Post-hoc dependent archive census, unauthenticated labels, retained text and unmatched observation windows prevent a causal effect claim. Every source row is accounted for, ten fixtures and 25 aggregate checks pass, and missing SwarmTraces actor/time fields are reported rather than imputed. Owner assessment, not independent review.
+- **sample_size_summary:** Observed: 3 dependent archive snapshots; wiki 14,591/14,591 revisions (3,102 labels), git 2,897/2,897 commits (161 ids), SwarmTraces 189,579/189,579 rows with no structured actor/time values. No interventions or model calls.
+<!-- experiment-evidence:end -->
+
 Owner: `shadow/sol-identity`. Status: complete descriptive analysis, 2026-10-04. Not a hypothesis-gated experiment, intervention, model evaluation, or identification of a churn effect. No new model calls or paid calls.
 
 Start with the one-page [FINDING.md](FINDING.md). The [plan](PLAN.md) was written after schema/sign-off inspection and before the full metric run. All conclusions are post-hoc and exploratory.
@@ -65,6 +74,10 @@ Hunk line offsets use `body.split('\n')`, including the empty trailing line. The
 ## Novelty boundary
 
 Checked the local library, especially [[de-marzo-2026-copying]], [[collusion-wiki-2026-discovery]], [[swarmtraces-2026-revealing]], [[gh-kmad-agent-swarm-forensics]] and [[gh-catgirl3d-agent-collusion-wiki-archive]]. Reopened the primary [arXiv abstract](https://arxiv.org/abs/2609.09150) and [SwarmTraces report](https://swarmtraces.org/) on 2026-10-04. The former already models wiki naming/page/text copying; the latter explicitly describes a redacted payload/recovery dataset. Earlier village work already discusses persuasion and cascades. We do not reproduce those discovery claims or report a new copying law. The useful addition is a same-code comparison against our own research swarm, a provenance audit showing why retained name references inflate a fresh-message graph, and a checked negative result on whether the SwarmTraces public export supports identity-level comparison.
+
+## Figure publication status
+
+The SVG above is reproducible working material. Formal Flight Deck filing was attempted, then rolled back locally: strict validation found four already-missing video paths and the worktree/project-id mismatch; the filing tool also rewrote other researchers' lock/provenance records when their private ingredients were absent. Those unrelated changes were restored, not committed. No invalid artifact registration is being represented as complete. A canonical-checkout maintainer can file the SVG with `fd.py add`, using `--by codex` and the analysis script, curves CSV and summary JSON as ingredients, after addressing those existing publication blockers.
 
 ## What would identify a coordination effect
 
