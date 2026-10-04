@@ -1,6 +1,6 @@
 {
   "kind": "offline software checks; not an experimental run",
-  "test_methods": 21,
+  "test_methods": 23,
   "passed": true,
   "model_calls": 0,
   "files": {
@@ -10,7 +10,7 @@
     "src/provider.py": "2d0386e8fa71ca8c3c170140ed628753c555931dd33c6f07f40eb38a36680961",
     "src/register.py": "7e740510431ceb06e0ee30d07a7ac85618196805caff19b3d5a3f8592f7bbfa5",
     "src/replay.py": "2cc57e9600a598bde6d184d003300e8761f00d793372c309e3e470ed02ce68f0",
-    "src/reporting.py": "34696f9bffd5e1ab7a5a200d192fe5eed1a5fa8d02a5ce748ea45e2ad0c4910e",
+    "src/reporting.py": "84c7c4a8dadd3fc0d0674124fd8b4faede16c9080056d7192deb07219b837f93",
     "src/run_qualification.py": "834cfcb92657ce9547616269ce555d5836803d13017d558b48f4115a5f40e88b",
     "src/tasks.py": "aebcc37c36af3cfa4f38b2a58ba3808145475d7047e85c5c81eed8f57fddc14a",
     "src/test_budget.py": "405be35713f879ecf9f9cacef012d7598c0f741ef4559a8317bdc59398dc099f",
@@ -18,6 +18,7 @@
     "src/test_launch.py": "9ed770c505771149dbf4662ebb74a2f8af211e44a13929db12b0f8cd52de3571",
     "src/test_provider.py": "69c65e4d3168534bdf659dde9b2ee3272fbf04495342b98998955abbabd60062",
     "src/test_replay.py": "f2581e553095420d4a72874406ff5ce4eff3c537c5916adbd78474727f315b37",
+    "src/test_reporting.py": "b469fd7d57e4d92643d0c28bde7bcf222f821d65b34813123fba364993a6d746",
     "src/test_tasks.py": "c28dbd1b1a3cd8a2daab8e009b49bc69844c3f09ce3501d202475fe2ff70af49"
   },
   "unverified": [
