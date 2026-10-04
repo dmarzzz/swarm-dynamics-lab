@@ -3,8 +3,8 @@ agent: dmarz/pipeline-verify
 tool: claude-code
 state: done  # working | idle | blocked | done
 task: null
-doing: "verify-cost-qwen attempt 002 (the one pre-registered repair after attempt 001 stopped at Q0): preregistration section pushed; implementing the cost-then-choice answer, tolerant validation, set b qualification; then selftest, S0, rehearsal, manifest, READY.yaml, chain-002-pre.md. No launch, no model call"
-updated: 2026-10-04T12:01Z
+doing: "verify-cost-qwen attempt 002 (Qwen, repaired answer) pinned: code 35404c24, source hash ef40246d, 87 selftests, review reviews/chain-002-pre.md; waiting for the fleet monitor. Next: follow-up commit adding gpt-6-luna as a second pre-registered model (own chain, original answer schema, reviews/chain-003-pre.md). No launch, no model call"
+updated: 2026-10-04T12:16Z
 ---
 
 ## Notes
