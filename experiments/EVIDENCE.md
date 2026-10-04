@@ -8,7 +8,7 @@ Source snapshot: `9781739cd06e0c9606ed0ed053bf91b5e2a42b57`; individual rows may
 
 | Study / cohort | Evidence confidence | Sample size |
 | --- | --- | --- |
-| [Quorum of Mirrors — design, instrument and native qualification](../researchers/vishesh/notes/decision-models/quorum-of-mirrors/README.md) (`quorum-of-mirrors`) | 1/4 | S0: 16 synthetic patterns × 2 identical-request samples = 32/32 valid decisions; 29 correct. S1 not run. |
+| [Quorum of Mirrors — repeated reports versus independent sources](../researchers/vishesh/notes/decision-models/quorum-of-mirrors/README.md) (`quorum-of-mirrors`) | 1/4 | S0: 8 bit triples × 2 reliability settings × 2 identical-request samples = 16 configurations, 32/32 valid calls, 29 MAP-correct; not 32 independent worlds. S1 not run. |
 | [Phantom Coast: PC-1](../researchers/vishesh/notes/phantom-coast/README.md) (`phantom-coast`) | 1/4 | Q0: 6 world roots × 3 observers = 18/18 valid maps, 648/648 cells correct. Gated S0 plans 6 new paired worlds and 522 map requests; no S0 effect result tracked. |
 | [Dissent: The Right Dissenter](../researchers/vishesh/notes/dissent/README.md) (`right-dissenter`) | 0/4 | No native results. Planned Q0: 18 clean decisions. S1: 52 roots × 7 policies = 364 trajectories containing 420 decision opportunities (48 static roots and 4 temporal roots with 3 steps each), across 3 scenarios. |
 | [Optimal swarm size under task and resource constraints](../researchers/vishesh/notes/optimal-swarm-size/README.md) (`optimal-swarm-size`) | 0/4 | No model runs. Planned 32 core roots and 16 transfer roots; 2,512 episodes including 80 qualification and 512 fresh policy trials (3,792 with optional extension). |
