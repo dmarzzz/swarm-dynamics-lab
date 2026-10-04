@@ -1,0 +1,44 @@
+{
+  "model_config": {
+    "input_usd_per_million": 1,
+    "max_calls": 936,
+    "max_cost_usd": 93.6,
+    "max_input_bytes": 60000,
+    "max_output_tokens": 1500,
+    "model": "claude-haiku-4-5-20251001",
+    "output_usd_per_million": 5,
+    "timeout": 120
+  },
+  "review_waiver": {
+    "path": "resample-v3-review-waiver.md",
+    "sha256": "b7ba2fc97f885e50348e533cad346dfe70ef1bc5df37ca701e3210ac57a1405f"
+  },
+  "rounds": 3,
+  "source_hashes": {
+    "sidecar": {
+      "resample_v3.py": "ac07f27794a24e4637a5e40f1c1a3b74909f89c0edeae09516249d10ac5f93dc"
+    },
+    "v3": {
+      "bench_v3/__init__.py": "3c5fe43228d361bcf91c582c907545ba65ce7badf65b29f6941beb628e633d72",
+      "bench_v3/analysis.py": "375ffd16ebbc37d4b5f75d7351bdf8587e30f4f9a1a3a32fd3f7ecb7b1c2a626",
+      "bench_v3/cli.py": "70fb2a4118671eb3605a84aab0f3779dc521714eef646a975115a21531559248",
+      "bench_v3/contracts.py": "d139a19642a9a8187dad81be9e2f6a8527252b5d9a3d3a447f87b8a4edef28f7",
+      "bench_v3/evidence.py": "f6b6aa14467053f7b8e28fea44113e9f4fd4a26d35f44fe72aad6e3720fd9acc",
+      "bench_v3/hub_worker.py": "74ba406c142c5786b0e9c473020d39fb69552c30051c2572fbc7e236ab3e6d47",
+      "bench_v3/journal.py": "133569662d073f4d461843fea4c8492d863843366e18d6ac8987e65568a89518",
+      "bench_v3/policies.py": "7eb0ddb3e8d520754aac18eb62fb96714ee28829bc9139f516c50d69198e3cd9",
+      "bench_v3/replay_view.py": "ff5a658976e685cb5bc1f5be0828a585849c934e0b07b2db195b0d8f51a241e1",
+      "bench_v3/runner.py": "1e4c61caf5bb6c9897341119ac0a541b5e5e9033c4a66bc4cabd819178b28495",
+      "bench_v3/scoring.py": "8d27d82be02cdce99031447f661466ac85847d24ec005402684dd4c5a9a3d256",
+      "bench_v3/selftest.py": "e0f7b8adc214b0459de8ee8ef3543eb1d9ee157820f40ce9f67cb9fcfd3f40c3",
+      "bench_v3/worlds.py": "9313b89aa57628d1855e15bf97d879a7609fe631bd57beacf0cce785bb490fe0",
+      "providers.py": "3ba5279e2b8065ef036e489352dea9d6c69d8a35a97260eb626260e71df7c897",
+      "tasks.py": "6ba495eff0fe959af41ade1ebcf4ff8fd9c5e32580d8c67558f54b7e5a32e4c0"
+    }
+  },
+  "status": "approved",
+  "v2_results_review": {
+    "path": "../reviews/pc-H4-a1-post.md",
+    "sha256": "fb83c64fc54d9585b5374ee322db5343cde21dd4a5af156761e5058d68af92c6"
+  }
+}

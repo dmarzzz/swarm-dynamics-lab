@@ -45,3 +45,5 @@ Readout: self-revision near zero and resample drift similar to private drift mea
 ## Gates
 
 Launch only after (1) dmarz says go, (2) dmarz/discussion-bench-v3's pending fixes are on main and this sidecar is resynced and retested against them, and (3) `review-discussion-benchmark-v3` has passed. Paid runs need an approved launch manifest hashing the passed review and these source hashes (`approved_model_config`). Separate box and hub batch from the v3 launch. Qualification: complete accounting, zero malformed or provider-failed calls, complete usage, clean reports correct in at least 10/12 worlds.
+
+2026-10-04 amendment, before any model output: dmarz waived gate (3) ("just ship it and ignore the reviews"). The launch record uses `review_waiver`, not `independent_review`: [launch/resample-v3-review-waiver.md](launch/resample-v3-review-waiver.md), [launch/resample-v3-a1.json](launch/resample-v3-a1.json). Results are unreviewed exploratory measurements.

@@ -2,7 +2,7 @@
 
 - Experiment / owner / stage: v3 resampling-only control sidecar ([../RESAMPLE-CONTROL.md](../RESAMPLE-CONTROL.md)), dmarz/private-control, exploratory.
 - Parent attempt and previous post-mortem: first attempt. Prior evidence: [pc-H4-a1-post.md](pc-H4-a1-post.md) (private drift), v3 offline qualification in [../benchmark-v3/](../benchmark-v3/).
-- Status: **blocked**: waiting on dmarz's go, dmarz/discussion-bench-v3's pending fixes (resync and retest after they land), and the passed independent v3 review.
+- Status: **ready**. dmarz gave the go and waived the independent review (2026-10-04, [../launch/resample-v3-review-waiver.md](../launch/resample-v3-review-waiver.md)). v3 review fixes (`d76146b`) are in; the sidecar is resynced and retested.
 - Question and practical decision this run informs: is private-work drift self-revision or resampling? Decides whether v3's analysis must caveat its private comparator.
 - Expected finding, plausible negative result, uninformative cases: either reading is informative. Uninformative if qualification fails, if attack effects sit at floor or ceiling in all arms, or if invalid calls make most contrasts unidentified.
 
@@ -25,10 +25,10 @@
 
 ## Frozen execution plan
 
-- Versions: to be pinned at launch (swarm-lab commit, `resample_v3.py` and v3 source hashes from `resample_v3.py plan`); model `claude-haiku-4-5-20251001`.
+- Versions: sidecar code `a1ddb36`; source hashes (v3 + sidecar) and model config pinned in [../launch/resample-v3-a1.json](../launch/resample-v3-a1.json); model `claude-haiku-4-5-20251001`, 1,500 output tokens, 60,000 input bytes, 120 s timeout.
 - Assignments and command: 12 worlds x {clean, attack} x {reports, private, resample}, R=3; `python3 resample_v3.py run --backend anthropic --launch-manifest <approved> --output <new dir>` on a claimed box.
 - Limits: 936 calls (`max_calls` must equal the plan); one worker; about $5 within dmarz's $500 budget.
 - Retry/stop: none; failures recorded and kept in denominators (v3 policy).
 - Regression checks: `resample_v3_selftest.py` 9/9 and `bench_v3.selftest` pass on post-fix v3 (`d76146b`); the sidecar no longer calls v3 `summarize`, which now requires board arms.
 - Claim/credentials/artifacts: fresh claimed box; key injected by the agentops SOPS path, never stored; raw outputs outside git, summary and post-mortem committed.
-- Gate decision: blocked until all three gates above clear; then update this file to ready with pinned hashes before launch.
+- Gate decision: ready under the recorded review waiver. Box `sim-dmarz-5`, claim `dmarz-v3-resample`, hub experiment `discussion-v3-resample`. If this attempt fails: post-mortem, repair, new attempt id.
