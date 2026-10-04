@@ -54,7 +54,10 @@ class Provider:
         if remaining<=0:raise TimeoutError('deadline_before_dispatch')
         payload={'model':cfg['model'],'messages':messages,'max_tokens':cfg['max_output_tokens'],
                  'temperature':0,'stream':False,'response_format':{'type':'json_object'},
-                 'provider':{'only':[cfg['provider_slug']],'allow_fallbacks':False,'require_parameters':True},
+                 'provider':{'only':[cfg['provider_slug']],'allow_fallbacks':False,'require_parameters':True,
+                             'max_price':{'prompt':float(Decimal(str(cfg['input_usd_per_token']))*1000000),
+                                          'completion':float(Decimal(str(cfg['output_usd_per_token']))*1000000),
+                                          'request':0}},
                  'plugins':[]}
         ctx=multiprocessing.get_context('spawn');parent,child=ctx.Pipe(duplex=False)
         proc=ctx.Process(target=request_child,args=(child,payload,remaining),daemon=True)

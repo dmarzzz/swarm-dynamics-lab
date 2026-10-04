@@ -1,0 +1,9 @@
+{
+  "authorization_id": "optimal-swarm-size-q1-usd20",
+  "authorized_total_usd": 20,
+  "authorized_total_microdollars": 20000000,
+  "scope": "First qualification attempt, Q-A and Q-B combined, including planning, workers, synthesis, failed calls and any permitted retries. No replenishment or automatic new attempt.",
+  "user_authorization": "Okay fine, you can have $20.",
+  "recorded_utc": "2026-10-04T03:45:31.736913+00:00",
+  "model_calls_so_far": 0
+}

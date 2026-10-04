@@ -24,7 +24,7 @@ Store source records/file snapshots in the actor-facing object; store expected v
 
 ## Metrics
 
-Offline checks cover deterministic regeneration, root separation, roster-invariant task hashes, parallel/chain contrasts, correct and incorrect evidence, missing/extra citations, malformed outputs, forbidden repair syntax, wrong repairs, equivalent repairs and outcome boundary conditions. No offline unit test is uploaded as a model experiment. All genuine runs require a frozen source, complete model/runtime/limits, public-plan registration, condition-specific TLDR and dedicated allocation. Spending authorization is pending an explicit amount.
+Offline checks cover deterministic regeneration, root separation, roster-invariant task hashes, parallel/chain contrasts, correct and incorrect evidence, missing/extra citations, malformed outputs, forbidden repair syntax, wrong repairs, equivalent repairs and outcome boundary conditions. No offline unit test is uploaded as a model experiment. All genuine runs require a frozen source, complete model/runtime/limits, public-plan registration, condition-specific TLDR and dedicated allocation. The subsequent user authorization is $20 total for this first attempt; see SPENDING-AUTHORIZATION.json. The other launch prerequisites remain in force.
 
 ## Visualization mapping
 

@@ -3,8 +3,8 @@ agent: vishesh/codex-idea-scores
 tool: codex
 state: blocked  # working | idle | blocked | done
 task: build-swarm-size-qualification
-doing: Awaiting numeric API cap and independent review; live integration, route pin and public preflight precede launch
-updated: 2026-10-04T03:38Z
+doing: $20 first-attempt API cap authorized and enforced; awaiting independent review and live launch prerequisites
+updated: 2026-10-04T03:46Z
 ---
 
 ## Notes
