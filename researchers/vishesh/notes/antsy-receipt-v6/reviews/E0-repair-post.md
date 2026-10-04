@@ -1,6 +1,6 @@
 # E0 attempt2 post-mortem and fresh-test decision
 
-Instrument qualification passes:20/20 assigned/scorable train receipts,100/100 valid OCR calls,100 policy outcomes,0 model calls. Independent classification tally and decision replay pass. All20 normalized references match the structured totals checked against development annotation lines. The prior invalid attempt remains preserved and publicly failed. Actual SVG/PNG is not a required format; the generated PNG and all GIF frames decode and the numeric figure counts match saved summaries.
+Instrument qualification passes:20/20 assigned/scorable train receipts,100/100 valid OCR calls,100 policy outcomes,0 model calls. Independent classification tally and decision replay pass. All20 normalized references match the structured totals checked against development annotation lines. The prior invalid attempt remains preserved and publicly failed. the generated PNG and all GIF frames decode and the numeric figure counts match saved summaries.
 
 | Policy | Correct / wrong / refer | Checks | Total measured tool seconds |
 |---|---|---:|---:|

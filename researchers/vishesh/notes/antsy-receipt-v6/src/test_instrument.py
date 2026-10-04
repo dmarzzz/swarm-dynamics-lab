@@ -29,6 +29,38 @@ class InstrumentTests(unittest.TestCase):
         (p / "outcomes.json").write_text(json.dumps(rows))
         return p
 
+    def test_reparse_preserves_parent_and_measured_cost(self):
+        from reparse import reparse
+        from unittest.mock import patch
+
+        p = self.fixture()
+        m = json.loads((p / "manifest.json").read_text())
+        m["source"] = "original-source"
+        (p / "manifest.json").write_text(json.dumps(m))
+        rs = [json.loads(x) for x in (p / "records.jsonl").read_text().splitlines()]
+        (p / "private").mkdir()
+        for r in rs:
+            r["split"] = "train"
+            for tool in "ABCDE":
+                (p / "private" / f"train-{r['id']}-{tool}.tsv").write_text(
+                    "left\ttop\theight\tconf\ttext\n0\t0\t10\t90\tSUB-TOTAL\n100\t0\t10\t90\t1\n"
+                )
+        (p / "records.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rs))
+        before = (p / "records.jsonl").read_bytes()
+        with patch("reparse.render"):
+            result = reparse(p, p / "repaired")
+        self.assertEqual(result["new_ocr_calls"], 0)
+        self.assertEqual(result["candidate_changes"], 15)
+        self.assertEqual((p / "records.jsonl").read_bytes(), before)
+        fixed = [
+            json.loads(x)
+            for x in (p / "repaired/records.jsonl").read_text().splitlines()
+        ]
+        self.assertEqual(fixed[0]["pipelines"]["A"]["wall_s"], 0.5)
+        self.assertIsNone(fixed[0]["pipelines"]["A"]["candidate"]["value"])
+        with self.assertRaises(FileExistsError):
+            reparse(p, p / "repaired")
+
     def test_all_unscorable_cannot_pass(self):
         p = self.fixture()
         rs = [json.loads(x) for x in (p / "records.jsonl").read_text().splitlines()]

@@ -62,6 +62,13 @@ class ContractTests(unittest.TestCase):
         ]:
             self.assertEqual(c.extract(lines(s))["status"], "missing")
 
+    def test_hyphenated_subtotal_cannot_be_total(self):
+        for label in ["SUB-TOTAL", "SUB–TOTAL", "SUB—TOTAL", "SUB - TOTAL"]:
+            self.assertEqual(c.extract(lines(label + " 100"))["status"], "missing")
+        self.assertEqual(
+            c.extract(lines("SUB-TOTAL 100", "TOTAL 120"))["value"], "120.00"
+        )
+
     def test_conflicts_abstain(self):
         self.assertEqual(
             c.extract(lines("TOTAL 100", "TOTAL 200"))["status"], "ambiguous"

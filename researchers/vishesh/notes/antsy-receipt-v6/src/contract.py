@@ -27,7 +27,7 @@ def amount(text):
 
 ANCHOR = re.compile(r"\b(?:grand\s+total|total\s+bayar|jumlah\s+bayar|total)\b", re.I)
 EXCLUDE = re.compile(
-    r"\b(?:sub\s*total|subtotal|qty|quantity|items?|cash|change|kembali|tunai|tax|pajak|service)\b",
+    r"\b(?:sub[\s\-‐‑–—]*total|subtotal|qty|quantity|items?|cash|change|kembali|tunai|tax|pajak|service)\b",
     re.I,
 )
 NUMBER = re.compile(r"(?<![\w.,-])(?:Rp\.?\s*)?\d[\d.,]*(?![\w.,])", re.I)
