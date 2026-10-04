@@ -41,6 +41,7 @@
 | [antsy-v8-native-qualification](tasks/antsy-v8-native-qualification.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T09:29Z | Prepare and launch fresh Antsy v8 OCR qualification |
 | [build-false-alarm-cascade](tasks/build-false-alarm-cascade.md) | claimed | p1 | build | dmarz/pipeline-alarm | dmarz | 2026-10-04T08:07Z | Prepare the false-alarm cascade experiment (honeypot-vigilance hunch V4) on Opus 5.5 to launch-ready |
 | [build-quota-splitting](tasks/build-quota-splitting.md) | claimed | p1 | build | dmarz/pipeline-quota | dmarz | 2026-10-04T09:27Z | Prepare the quota-splitting experiment (agent-budgets hunch B2) on Opus 5.5 to launch-ready |
+| [build-sybil-scarcity-synth](tasks/build-sybil-scarcity-synth.md) | claimed | p1 | build | dmarz/pipeline-scarcity | dmarz | 2026-10-04T10:13Z | Prepare the scarcity synthesizer follow-up (sybil-scarcity-synth) on Opus 5.5 to launch-ready |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T09:29Z | Run the revised procurement influence experiment |
@@ -261,12 +262,12 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/market-split-film | done |  | 2026-10-04T10:35Z | filed a narrated film of vishesh's Swarm of Theseus pilot S1-a1 as artifact theseus-film v1 (reads his committed results and evidence archive only; no model calls), after the two market-split films |
+| dmarz/pipeline-scarcity | working | build-sybil-scarcity-synth | 2026-10-04T10:13Z | Preparing sybil-scarcity-synth (synthesizer follow-up to sybil-scarcity-opus: effort and one frozen evidence rule, fresh roots) to launch-ready; no launch, no model call |
 | dmarz/pipeline-quota | working | build-quota-splitting | 2026-10-04T10:11Z | quota-splitting: instrument, adapter, chain and offline tests pushed (selftest, offline S0, manifest, rehearsal pass); now mutant checks, pre-run review and READY.yaml; no launch, no model call |
 | dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T10:10Z | false-alarm-cascade: code, manifest and READY file pushed (selftest 35 OK, offline S0 1225/1225, rehearsal passed); writing the pre-run review pinned to the code commit; no launch, no model call |
 | dmarz/pipeline-split | done |  | 2026-10-04T09:28Z | sybil-split-opus package finished and filed as a ready run request (run queue 252) after the fleet monitor's same-researcher check; nothing launched by this agent |
 | vishesh/codex-theseus | done | theseus-d2-run | 2026-10-04T09:25Z | D2 and single R1 repair complete; F qualified, postmortems and next proposal published |
 | dmarz/newcomer-opus | done |  | 2026-10-04T09:20Z | sybil-newcomer-opus S1 closed out: RESULTS.md and s1-001-post.md pushed; claim released |
-| dmarz/pipeline-scarcity | done |  | 2026-10-04T09:12Z | sybil-scarcity-opus package finished and filed as a ready run request (run queue 248) after the fleet monitor's same-researcher check; nothing launched by this agent |
 | dmarz/budget-sonnet | done |  | 2026-10-04T09:10Z | S1 done 2880/2880, USD 118.85 study total; results, post-mortem and paired Haiku comparison pushed; claim released |
 | vishesh/codex-idea-scores | idle | build-swarm-size-qualification | 2026-10-04T09:02Z | Q-A5/Q-A6 cycle closed; adverse matched pilot analyzed, allocation released; no successor queued |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T08:59Z | S0-01 failed and closed; S0-02 repair 63 tests passed; awaiting concrete owner update decision |
